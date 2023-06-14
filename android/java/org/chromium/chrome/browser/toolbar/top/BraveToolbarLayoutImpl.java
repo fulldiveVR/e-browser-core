@@ -164,6 +164,8 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
     private static final int PLAYLIST_MEDIA_COUNT_LIMIT = 3;
 
+    public static boolean mShouldShowPlaylistMenu = false;
+
     private PlaylistServiceObserverImpl mPlaylistServiceObserver;
 
     private DatabaseHelper mDatabaseHelper = DatabaseHelper.getInstance();
@@ -590,6 +592,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
     }
 
     private void hidePlaylistButton() {
+        mShouldShowPlaylistMenu = false;
         try {
             ViewGroup viewGroup =
                     BraveActivity.getBraveActivity().getWindow().getDecorView().findViewById(
@@ -687,6 +690,11 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                         } else if (playlistOptionsModel.getOptionType()
                                 == PlaylistOptionsEnum.PLAYLIST_SETTINGS) {
                             BraveActivity.getBraveActivity().openBravePlaylistSettings();
+                        } else if (playlistOptionsModel.getOptionType()
+                                == PlaylistOptionsEnum.PLAYLIST_HIDE) {
+                            hidePlaylistButton();
+                            SharedPreferencesManager.getInstance().writeBoolean(
+                                    BravePlaylistPreferences.PREF_ADD_TO_PLAYLIST_BUTTON, false);
                         }
                     };
             if (!isPlaylistButtonVisible()) {
@@ -738,7 +746,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         });
     }
 
-    private void addMediaToPlaylist() {
+    public void addMediaToPlaylist() {
         Tab currentTab = getToolbarDataProvider().getTab();
         if (mPlaylistService == null || currentTab == null) {
             return;
@@ -1701,6 +1709,10 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         if (currentTab == null || !pageUrl.url.equals(currentTab.getUrl().getSpec())) {
             return;
         }
-        showPlaylistButton(items);
+        mShouldShowPlaylistMenu = true;
+        if (SharedPreferencesManager.getInstance().readBoolean(
+                    BravePlaylistPreferences.PREF_ADD_TO_PLAYLIST_BUTTON, true)) {
+            showPlaylistButton(items);
+        }
     }
 }
