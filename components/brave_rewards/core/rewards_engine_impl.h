@@ -17,6 +17,7 @@
 #include "brave/components/brave_rewards/common/mojom/rewards_engine.mojom.h"
 #include "brave/components/brave_rewards/core/api/api.h"
 #include "brave/components/brave_rewards/core/bitflyer/bitflyer.h"
+#include "brave/components/brave_rewards/core/common/callback_scope.h"
 #include "brave/components/brave_rewards/core/contribution/contribution.h"
 #include "brave/components/brave_rewards/core/database/database.h"
 #include "brave/components/brave_rewards/core/gemini/gemini.h"
@@ -27,6 +28,7 @@
 #include "brave/components/brave_rewards/core/recovery/recovery.h"
 #include "brave/components/brave_rewards/core/report/report.h"
 #include "brave/components/brave_rewards/core/rewards_callbacks.h"
+#include "brave/components/brave_rewards/core/rewards_engine_context.h"
 #include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/uphold/uphold.h"
 #include "brave/components/brave_rewards/core/wallet/wallet.h"
@@ -61,6 +63,9 @@ class RewardsEngineImpl : public mojom::RewardsEngine {
   RewardsEngineImpl(const RewardsEngineImpl&) = delete;
 
   RewardsEngineImpl& operator=(const RewardsEngineImpl&) = delete;
+
+  RewardsEngineContext& context() { return context_; }
+  const RewardsEngineContext& context() const { return context_; }
 
   // mojom::RewardsEngine implementation begin (in the order of appearance in
   // Mojom)
@@ -366,38 +371,22 @@ class RewardsEngineImpl : public mojom::RewardsEngine {
 
   zebpay::ZebPay* zebpay() { return &zebpay_; }
 
-  bool IsShuttingDown() const;
-
   // This method is virtualised for test-only purposes.
   virtual database::Database* database();
 
   bool IsReady() const;
 
  private:
-  enum class ReadyState {
-    kUninitialized,
-    kInitializing,
-    kReady,
-    kShuttingDown
-  };
+  bool IsShuttingDown() const;
 
-  bool IsUninitialized() const;
+  void OnInitializationComplete(InitializeCallback callback, bool success);
 
-  virtual void InitializeDatabase(ResultCallback callback);
-
-  void OnDatabaseInitialized(ResultCallback callback, mojom::Result result);
-
-  void OnStateInitialized(ResultCallback callback, mojom::Result result);
-
-  void OnInitialized(ResultCallback callback, mojom::Result result);
-
-  void StartServices();
-
-  void OnAllDone(mojom::Result result, LegacyResultCallback callback);
+  void OnShutdownComplete(ShutdownCallback callback, bool success);
 
   template <typename T>
   void WhenReady(T callback);
 
+  RewardsEngineContext context_{*this};
   mojo::AssociatedRemote<mojom::RewardsEngineClient> client_;
 
   promotion::Promotion promotion_;
@@ -419,7 +408,7 @@ class RewardsEngineImpl : public mojom::RewardsEngine {
   uint64_t last_tab_active_time_ = 0;
   uint32_t last_shown_tab_id_ = -1;
   base::OneShotEvent ready_event_;
-  ReadyState ready_state_ = ReadyState::kUninitialized;
+  CallbackScope callback_;
 };
 
 }  // namespace brave_rewards::internal
