@@ -20,6 +20,7 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
+import com.brave.playlist.model.PlaylistItemModel;
 import com.brave.playlist.util.ConstantUtils;
 import com.brave.playlist.util.HLSParsingUtil;
 import com.brave.playlist.util.MediaUtils;
@@ -56,6 +57,7 @@ import java.util.Map;
 import java.util.Queue;
 
 public class DownloadServiceImpl extends DownloadService.Impl implements ConnectionErrorHandler {
+    private static final String TAG = "Playlist.DownloadServiceImpl";
     private final IBinder mBinder = new LocalBinder();
     private static final int BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID = 901;
     private Context mContext = ContextUtils.getApplicationContext();
@@ -83,37 +85,49 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // new Thread() {
-        //     @Override
-        //     public void run() {
-        //         try {
-        // downloadHlsContent();
-        //         } catch (Exception e) {
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // }.start();
-        DownloadUtils.downloadFile(mPlaylistService,
-                "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-                new DownloadUtils.PlaylistDownloadDelegate() {
-                    @Override
-                    public void onDownloadStarted(String url, long contentLength) {
-                        getService().startForeground(BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID,
-                                getDownloadNotification("", false, 0, 0));
-                    }
+        String playlistItemId = intent.getStringExtra("id");
+        if (mPlaylistService != null) {
+            mPlaylistService.getPlaylistItem(playlistItemId, playlistItem -> {
+                final PlaylistItemModel playlistItemModel = new PlaylistItemModel(playlistItem.id,
+                        ConstantUtils.DEFAULT_PLAYLIST, playlistItem.name,
+                        playlistItem.pageSource.url, playlistItem.mediaPath.url,
+                        playlistItem.mediaSource.url, playlistItem.thumbnailPath.url,
+                        playlistItem.author, playlistItem.duration, playlistItem.lastPlayedPosition,
+                        playlistItem.cached, false, 0);
+                String parentPath = new File(playlistItem.mediaPath.url).getParent();
+                final String manifestUrl =
+                        HLSParsingUtil.getContentManifestUrl(mContext, playlistItemModel);
+                DownloadUtils.downloadFile(mPlaylistService, parentPath, true, manifestUrl,
+                        new DownloadUtils.PlaylistDownloadDelegate() {
+                            @Override
+                            public void onDownloadStarted(String url, long contentLength) {
+                                Log.e(TAG, "onDownloadStarted : ");
+                                getService().startForeground(
+                                        BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID,
+                                        getDownloadNotification("", false, 0, 0));
+                            }
 
-                    @Override
-                    public void onDownloadProgress(long totalBytes, long downloadedSofar) {
-                        updateDownloadNotification(
-                                "Progress", true, (int) totalBytes, (int) downloadedSofar);
-                    }
+                            @Override
+                            public void onDownloadProgress(long totalBytes, long downloadedSofar) {
+                                Log.e(TAG, "onDownloadProgress : ");
+                                updateDownloadNotification(
+                                        "Progress", true, (int) totalBytes, (int) downloadedSofar);
+                            }
 
-                    @Override
-                    public void onDownloadCompleted() {
-                        getService().stopForeground(true);
-                        getService().stopSelf();
-                    }
-                });
+                            @Override
+                            public void onDownloadCompleted(String mediaPath) {
+                                Log.e(TAG, "onDownloadCompleted : " + mediaPath);
+                                org.chromium.url.mojom.Url contentUrl =
+                                        new org.chromium.url.mojom.Url();
+                                contentUrl.url = mediaPath;
+                                playlistItem.mediaPath = contentUrl;
+                                mPlaylistService.updateItem(playlistItem);
+                                getService().stopForeground(true);
+                                getService().stopSelf();
+                            }
+                        });
+            });
+        }
         return Service.START_NOT_STICKY;
     }
 
@@ -171,91 +185,6 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
         NotificationManager mNotificationManager =
                 (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID, notification);
-    }
-
-    private void downloadHlsContent() {
-        // String extension = playlistItemModel.getMediaPath().substring(
-        //         playlistItemModel.getMediaPath().lastIndexOf("."));
-        // Log.e("data_source", "extension : " + extension);
-        // // if (playlistItemModel.isCached() && extension == ".m3u8") {
-        // final String manifestUrl =
-        //         HLSParsingUtil.getContentManifestUrl(PlaylistHostActivity.this,
-        //         playlistItemModel);
-        String url = "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4";
-        Log.e("DownloadService", "queryPrompt : " + url);
-        if (mPlaylistService != null) {
-            mPlaylistService.queryPrompt(url, "GET");
-            PlaylistStreamingObserver playlistStreamingObserverImpl =
-                    new PlaylistStreamingObserver() {
-                        long fileLength = 0l;
-                        long downloadedSofar = 0l;
-                        @Override
-                        public void onResponseStarted(String url, long contentLength) {
-                            fileLength = contentLength;
-                            try {
-                                Log.e("DownloadService", "onResponseStarted : " + url);
-                                File mediaFile = new File(
-                                        MediaUtils.getTempFile(ContextUtils.getApplicationContext())
-                                                .getAbsolutePath());
-                                if (mediaFile.exists()) {
-                                    mediaFile.delete();
-                                }
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
-                        }
-
-                        @Override
-                        public void onDataReceived(byte[] response) {
-                            Log.e("DownloadService", "onDataReceived : " + response.length);
-                            downloadedSofar = downloadedSofar + response.length;
-                            try {
-                                MediaUtils.writeToFile(response,
-                                        MediaUtils.getTempFile(ContextUtils.getApplicationContext())
-                                                .getAbsolutePath());
-                                updateDownloadNotification(
-                                        "Progress", true, (int) fileLength, (int) downloadedSofar);
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
-                        }
-
-                        @Override
-                        public void onDataCompleted() {
-                            Log.e("DownloadService", "onDataCompleted : ");
-                            try {
-                                // List<Segment> segments = HLSParsingUtil.getContentSegments(
-                                //         MediaUtils.getTempManifestFile(PlaylistHostActivity.this)
-                                //                 .getAbsolutePath(),
-                                //         manifestUrl);
-                                // for (Segment segment : segments) {
-                                //     // Log.e("data_source",
-                                //     //         "segment.url : " +
-                                //     //         UriUtil.resolve(manifestUrl,
-                                //     //         segment.url));
-                                //     segmentsQueue.add(segment);
-                                // }
-                                // mPlaylistService.clearObserverForStreaming();
-                                // Segment segment = segmentsQueue.poll();
-                                // if (segment != null) {
-                                //     downalodHLSFile(manifestUrl, segment);
-                                // }
-                                getService().stopForeground(true);
-                                getService().stopSelf();
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                            }
-                        }
-
-                        @Override
-                        public void close() {}
-
-                        @Override
-                        public void onConnectionError(MojoException e) {}
-                    };
-
-            mPlaylistService.addObserverForStreaming(playlistStreamingObserverImpl);
-        }
     }
 
     @Override
