@@ -57,6 +57,9 @@ import org.chromium.base.ContextUtils;
 import org.chromium.base.IntentUtils;
 import org.chromium.base.Log;
 import org.chromium.base.ThreadUtils;
+import org.chromium.base.PathUtils;
+import org.chromium.base.annotations.JNINamespace;
+import org.chromium.base.annotations.NativeMethods;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.UnownedUserDataSupplier;
 import org.chromium.base.task.PostTask;
@@ -935,6 +938,16 @@ public abstract class BraveActivity extends ChromeActivity
         super.finishNativeInitialization();
         BraveSearchEngineUtils.initializeBraveSearchEngineStates(
                 (TabModelSelector) getTabModelSelectorSupplier().get());
+
+        Log.e("PathUtils", "PathUtils.getDataDirectory()" + PathUtils.getDataDirectory());
+        Log.e("PathUtils", "PathUtils.getCacheDirectory()" + PathUtils.getCacheDirectory());
+        Log.e("PathUtils",
+                "PathUtils.getExternalStorageDirectory()"
+                        + PathUtils.getExternalStorageDirectory());
+        Log.e("PathUtils", "PathUtils.getDownloadsDirectory()" + PathUtils.getDownloadsDirectory());
+        Log.e("PathUtils",
+                "PathUtils.getAllPrivateDownloadsDirectories()"
+                        + PathUtils.getAllPrivateDownloadsDirectories());
 
         BraveVpnNativeWorker.getInstance().reloadPurchasedState();
 
