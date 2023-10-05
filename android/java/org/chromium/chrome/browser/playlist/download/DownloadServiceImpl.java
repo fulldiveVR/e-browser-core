@@ -24,13 +24,14 @@ import androidx.core.app.NotificationCompat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.brave.playlist.enums.DownloadStatus;
 import com.brave.playlist.local_database.PlaylistRepository;
 import com.brave.playlist.model.DownloadQueueModel;
 import com.brave.playlist.model.PlaylistItemModel;
 import com.brave.playlist.util.ConstantUtils;
 import com.brave.playlist.util.HLSParsingUtil;
-import com.brave.playlist.util.MediaUtils;
 import com.brave.playlist.util.PlaylistUtils;
+import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.Segment;
 
 import org.chromium.base.BraveFeatureList;
 import org.chromium.base.ContextUtils;
@@ -74,12 +75,6 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
     private Context mContext = ContextUtils.getApplicationContext();
     private PlaylistService mPlaylistService;
 
-    private MutableLiveData mutablePlaylistItemData = new MutableLiveData<PlaylistItem>();
-    private LiveData<PlaylistItem> playlistItemData = mutablePlaylistItemData;
-    private void setPlaylistItem(PlaylistItem playlistItem) {
-        mutablePlaylistItemData.setValue(playlistItem);
-    }
-
     class LocalBinder extends Binder {
         DownloadServiceImpl getService() {
             return DownloadServiceImpl.this;
@@ -97,27 +92,21 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
         super.onCreate();
         if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
             initPlaylistService();
-            LiveDataUtil.observeOnce(playlistItemData, playlistItem -> {
-                if (mPlaylistService == null) {
-                    return;
-                }
-                Log.e(TAG, "playlistItemData.observe : ");
-                // mPlaylistService.UpdateItemMediaFilePath(playlistItem);
-            });
         }
     }
 
     private DownloadQueueModel getFirstPlaylistItemToDownload() {
+        // DownloadQueueModel downloadQueueModel = null;
         PlaylistRepository playlistRepository = new PlaylistRepository(mContext);
-        // PostTask.postTask(
-        //         TaskTraits.BEST_EFFORT_MAY_BLOCK, () -> {
-        if (playlistRepository.getAllDownloadQueueModel() != null
-                && playlistRepository.getAllDownloadQueueModel().size() > 0) {
-            return playlistRepository.getAllDownloadQueueModel().get(0);
-        } else {
-            return null;
-        }
-        // });
+        // Log.e("playlist", "getFirstPlaylistItemToDownload : 1");
+        // if (playlistRepository.getAllDownloadQueueModel() != null
+        //         && playlistRepository.getAllDownloadQueueModel().size() > 0) {
+        //     Log.e("playlist", "getFirstPlaylistItemToDownload : 2");
+        //     downloadQueueModel = playlistRepository.getAllDownloadQueueModel().get(0);
+        // }
+        // Log.e("playlist", "getFirstPlaylistItemToDownload : 3");
+        // // playlistRepository.closeRepository();
+        return playlistRepository.getFirstDownloadQueueModel();
     }
 
     private void deletePlaylistItemFromDownloadQueue(DownloadQueueModel downloadQueueModel) {
@@ -126,6 +115,7 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
             if (playlistRepository != null) {
                 playlistRepository.deleteDownloadQueueModel(downloadQueueModel);
             }
+            // playlistRepository.closeRepository();
         });
     }
 
@@ -133,64 +123,75 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
         PostTask.postTask(TaskTraits.BEST_EFFORT_MAY_BLOCK, () -> {
             DownloadQueueModel downloadQueueModel = getFirstPlaylistItemToDownload();
             if (mPlaylistService != null && downloadQueueModel != null) {
+                getService().startForeground(BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID,
+                        getDownloadNotification("", false, 0, 0));
                 String playlistItemId = downloadQueueModel.getPlaylistItemId();
                 mPlaylistService.getPlaylistItem(playlistItemId, playlistItem -> {
-                    String mediaPath = new File(PathUtils.getDataDirectory() + File.separator,
-                            "Default" + File.separator + "playlist" + File.separator
-                                    + playlistItem.id + File.separator + "media_file.mp4")
-                                               .getAbsolutePath();
-                    String hlsManifestFilePath =
-                            new File(PathUtils.getDataDirectory() + File.separator,
-                                    "Default" + File.separator + "playlist" + File.separator
-                                            + playlistItem.id + File.separator + "index.m3u8")
-                                    .getAbsolutePath();
-                    final String manifestUrl = HLSParsingUtil.getContentManifestUrl(
-                            mContext, playlistItem.mediaSource.url, playlistItem.mediaPath.url);
-                    DownloadUtils.downloadFile(mPlaylistService, mediaPath, hlsManifestFilePath,
-                            true, manifestUrl, new DownloadUtils.PlaylistDownloadDelegate() {
+                    DownloadUtils.downloadManifestFile(mContext, mPlaylistService, playlistItem,
+                            new DownloadUtils.HlsManifestDownloadDelegate() {
                                 @Override
-                                public void onDownloadStarted(String url, long contentLength) {
-                                    Log.e(TAG, "onDownloadStarted : ");
-                                    getService().startForeground(
-                                            BRAVE_PLAYLIST_DOWNLOAD_NOTIFICATION_ID,
-                                            getDownloadNotification("", false, 0, 0));
-                                }
+                                public void onHlsManifestDownloadCompleted(
+                                        Queue<Segment> segmentsQueue) {
+                                    int total = segmentsQueue.size();
+                                    String hlsMediaFilePath =
+                                            DownloadUtils.getHlsMediaFilePath(playlistItem);
+                                    DownloadUtils.deleteFileIfExist(hlsMediaFilePath);
+                                    DownloadUtils.downalodHLSFile(mContext, mPlaylistService,
+                                            playlistItem, segmentsQueue,
+                                            new DownloadUtils.HlsFileDownloadDelegate() {
+                                                @Override
+                                                public void onDownloadProgress(
+                                                        int downloadedSofar) {
+                                                    updateDownloadNotification(playlistItem.name,
+                                                            true, total, downloadedSofar);
+                                                }
 
-                                // @Override
-                                // public void onDownloadProgress(long totalBytes, long
-                                // downloadedSofar) {
-                                //     Log.e(TAG, "onDownloadProgress : totalBytes : "+ totalBytes +
-                                //     " downloadedSofar : "+downloadedSofar);
-                                //     updateDownloadNotification(
-                                //             "Progress", true, (int) totalBytes, (int)
-                                //             downloadedSofar);
-                                // }
-
-                                @Override
-                                public void onDownloadProgress(int total, int downloadedSofar) {
-                                    Log.e(TAG,
-                                            "onDownloadProgress : total : " + total
-                                                    + " downloadedSofar : " + downloadedSofar);
-                                    updateDownloadNotification(
-                                            playlistItem.name, true, total, downloadedSofar);
-                                }
-
-                                @Override
-                                public void onDownloadCompleted(String mediaPath) {
-                                    Log.e(TAG, "onDownloadCompleted : " + mediaPath);
-                                    new Handler(Looper.getMainLooper()).post(() -> {
-                                        // org.chromium.url.mojom.Url contentUrl =
-                                        //         new org.chromium.url.mojom.Url();
-                                        // contentUrl.url = mediaPath;
-                                        // playlistItem.mediaPath = contentUrl;
-                                        Log.e(TAG, "playlistItem.mediaPath : ");
-                                        mPlaylistService.updateItemMediaFilePath(
-                                                playlistItem.id, mediaPath);
-                                        deletePlaylistItemFromDownloadQueue(downloadQueueModel);
-                                        // setPlaylistItem(playlistItem);
-                                    });
-                                    getService().stopForeground(true);
-                                    getService().stopSelf();
+                                                @Override
+                                                public void onDownloadCompleted(String mediaPath) {
+                                                    // new Handler(Looper.getMainLooper()).post(()
+                                                    // -> {
+                                                    PostTask.postTask(
+                                                            TaskTraits.BEST_EFFORT_MAY_BLOCK,
+                                                            () -> {
+                                                                PlaylistRepository playlistRepository =
+                                                                        new PlaylistRepository(
+                                                                                mContext);
+                                                                if (playlistRepository != null) {
+                                                                    mPlaylistService
+                                                                            .updateItemHlsMediaFilePath(
+                                                                                    playlistItem.id,
+                                                                                    mediaPath);
+                                                                    playlistRepository.updateDownloadQueueModel(
+                                                                            new DownloadQueueModel(
+                                                                                    playlistItem.id,
+                                                                                    DownloadStatus
+                                                                                            .DOWNLOADING
+                                                                                            .name()));
+                                                                    getService().stopForeground(
+                                                                            true);
+                                                                    getService().stopSelf();
+                                                                }
+                                                                // playlistRepository.closeRepository();
+                                                            });
+                                                    // mPlaylistService.updateItemHlsMediaFilePath(
+                                                    //         playlistItem.id, mediaPath);
+                                                    // deletePlaylistItemFromDownloadQueue(
+                                                    //         downloadQueueModel);
+                                                    // });
+                                                    // Log.e("playlist", "startDownloadFromQueue :
+                                                    // 1"); DownloadQueueModel downloadQueue =
+                                                    // getFirstPlaylistItemToDownload();
+                                                    // Log.e("playlist", "startDownloadFromQueue :
+                                                    // 2"+ downloadQueue); if (downloadQueue !=
+                                                    // null) {
+                                                    //     Log.e("playlist", "startDownloadFromQueue
+                                                    //     : 3"); startDownloadFromQueue();
+                                                    // } else {
+                                                    // getService().stopForeground(true);
+                                                    // getService().stopSelf();
+                                                    // }
+                                                }
+                                            });
                                 }
                             });
                 });
@@ -263,6 +264,9 @@ public class DownloadServiceImpl extends DownloadService.Impl implements Connect
 
     @Override
     public void onDestroy() {
+        Log.e("playlist", "DownloadServiceImpl onDestroy");
+        Intent intent = new Intent(mContext, DownloadService.class);
+        mContext.startService(intent);
         super.onDestroy();
     }
 }

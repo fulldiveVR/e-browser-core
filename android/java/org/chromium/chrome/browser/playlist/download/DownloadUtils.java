@@ -16,7 +16,6 @@ import android.text.TextUtils;
 import android.util.Pair;
 
 import com.brave.playlist.enums.DownloadStatus;
-import com.brave.playlist.local_database.PlaylistRepository;
 import com.brave.playlist.model.DownloadQueueModel;
 import com.brave.playlist.model.PlaylistItemModel;
 import com.brave.playlist.util.HLSParsingUtil;
@@ -26,9 +25,11 @@ import com.google.android.exoplayer2.util.UriUtil;
 
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
+import org.chromium.base.PathUtils;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
 import org.chromium.mojo.system.MojoException;
+import org.chromium.playlist.mojom.PlaylistItem;
 import org.chromium.playlist.mojom.PlaylistService;
 import org.chromium.playlist.mojom.PlaylistStreamingObserver;
 
@@ -42,61 +43,32 @@ import java.util.Random;
 public class DownloadUtils {
     private static final String GET_METHOD = "GET";
     private static final String TAG = "Playlist.DownloadUtils";
-    public interface PlaylistDownloadDelegate {
-        default void onDownloadStarted(String url, long contentLength) {}
-        // default void onDownloadProgress(long totalBytes, long downloadedSofar) {}
+    public interface HlsManifestDownloadDelegate {
+        default void onHlsManifestDownloadCompleted(Queue<Segment> segmentsQueue) {}
+    }
+    public interface HlsFileDownloadDelegate {
+        // default void onDownloadStarted() {}
+        default void onDownloadProgress(int downloadedSofar) {}
         default void onDownloadCompleted(String filePath) {}
-        default void onDownloadProgress(int total, int downloadedSofar) {}
     }
 
-    private static long totalBytesForHls = 0l;
-    private static long receivedBytesForHls = 0l;
-
-    private static int total = 0;
     private static int downloadedSofar = 0;
 
-    // private static String mediaPath =
-    //         MediaUtils.getTempFile(ContextUtils.getApplicationContext()).getAbsolutePath();
-    // private static String hlsManifestFilePath =
-    //         MediaUtils.getTempManifestFile(ContextUtils.getApplicationContext()).getAbsolutePath();
-
-    // private static String mediaPath = new File(PathUtils.getDataDirectory() + File.separator,
-    // "embedded-data-directory-for-test"); private static String hlsManifestFilePath =
-    //         MediaUtils.getTempManifestFile(ContextUtils.getApplicationContext()).getAbsolutePath();
-
-    public static void downloadFile(PlaylistService playlistService, String mediaPath,
-            String hlsManifestFilePath, boolean isManifestFile, String url,
-            DownloadUtils.PlaylistDownloadDelegate playlistDownloadDelegate) {
-        Log.e(TAG, "queryPrompt : " + url);
-        // String mediaPath = new
-        // File(MediaUtils.getTempFile(ContextUtils.getApplicationContext)).getAbsolutePath() // new
-        // File(parentPath, "index.mp4").getAbsolutePath(); String hlsManifestFilePath = new
-        // File(MediaUtils.getTempManifestFile(ContextUtils.getApplicationContext)).getAbsolutePath()
-        // //new File(parentPath, "index.m3u8").getAbsolutePath();
-
-        Log.e(TAG, "mediaPath : " + mediaPath);
-        Log.e(TAG, "hlsManifestFilePath : " + hlsManifestFilePath);
+    public static void downloadManifestFile(Context context, PlaylistService playlistService,
+            PlaylistItem playlistItem,
+            DownloadUtils.HlsManifestDownloadDelegate hlsManifestDownloadDelegate) {
+        String mediaPath = getHlsMediaFilePath(playlistItem);
+        String hlsManifestFilePath = getHlsManifestFilePath(playlistItem);
+        final String manifestUrl = getHlsResolutionManifestUrl(context, playlistItem);
         if (playlistService != null) {
-            playlistService.queryPrompt(url, GET_METHOD);
+            Log.e("playlist", "manifestUrl : " + manifestUrl);
+            playlistService.queryPrompt(manifestUrl, GET_METHOD);
             PlaylistStreamingObserver playlistStreamingObserverImpl =
                     new PlaylistStreamingObserver() {
-                        long totalBytes = 0l;
-                        long downloadedSofar = 0l;
                         @Override
                         public void onResponseStarted(String url, long contentLength) {
-                            totalBytes = contentLength;
                             try {
-                                File mediaFile =
-                                        new File(isManifestFile ? hlsManifestFilePath : mediaPath);
-                                if (mediaFile.exists()) {
-                                    mediaFile.delete();
-                                }
-                                if (!isManifestFile) {
-                                    if (playlistDownloadDelegate != null) {
-                                        playlistDownloadDelegate.onDownloadStarted(
-                                                url, contentLength);
-                                    }
-                                }
+                                deleteFileIfExist(hlsManifestFilePath);
                             } catch (Exception ex) {
                                 ex.printStackTrace();
                             }
@@ -104,16 +76,8 @@ public class DownloadUtils {
 
                         @Override
                         public void onDataReceived(byte[] response) {
-                            downloadedSofar = downloadedSofar + response.length;
                             try {
-                                MediaUtils.writeToFile(
-                                        response, isManifestFile ? hlsManifestFilePath : mediaPath);
-                                // if (!isManifestFile) {
-                                //     if (playlistDownloadDelegate != null) {
-                                //         playlistDownloadDelegate.onDownloadProgress(
-                                //                 totalBytes, downloadedSofar);
-                                //     }
-                                // }
+                                MediaUtils.writeToFile(response, hlsManifestFilePath);
                             } catch (Exception ex) {
                                 ex.printStackTrace();
                             }
@@ -123,36 +87,11 @@ public class DownloadUtils {
                         public void onDataCompleted() {
                             try {
                                 playlistService.clearObserverForStreaming();
-                                if (isManifestFile) {
-                                    Queue<Segment> segmentsQueue =
-                                            HLSParsingUtil.getContentSegments(
-                                                    hlsManifestFilePath, url);
-                                    // Queue<Segment> segmentsQueue = new LinkedList<Segment>();
-                                    // totalBytesForHls = 0l;
-                                    // for (Segment segment : segments) {
-                                    //     Log.e(TAG,
-                                    //             "onDataCompleted : segment byteRangeLength : " +
-                                    //             segment.byteRangeLength);
-                                    //     totalBytesForHls =
-                                    //             totalBytesForHls + segment.byteRangeLength;
-                                    //     segmentsQueue.add(segment);
-                                    // }
-                                    total = segmentsQueue.size();
-                                    File mediaFile = new File(mediaPath);
-                                    if (mediaFile.exists()) {
-                                        mediaFile.delete();
-                                    }
-                                    downalodHLSFile(playlistService, url, segmentsQueue, mediaPath,
-                                            playlistDownloadDelegate);
-                                    if (playlistDownloadDelegate != null) {
-                                        playlistDownloadDelegate.onDownloadStarted(
-                                                url, totalBytesForHls);
-                                    }
-                                } else {
-                                    if (playlistDownloadDelegate != null) {
-                                        playlistDownloadDelegate.onDownloadCompleted(mediaPath);
-                                    }
-                                }
+                                Queue<Segment> segmentsQueue = HLSParsingUtil.getContentSegments(
+                                        hlsManifestFilePath, manifestUrl);
+                                hlsManifestDownloadDelegate.onHlsManifestDownloadCompleted(
+                                        segmentsQueue);
+                                downloadedSofar = 0;
                             } catch (Exception ex) {
                                 ex.printStackTrace();
                             }
@@ -169,62 +108,52 @@ public class DownloadUtils {
         }
     }
 
-    private static void downalodHLSFile(PlaylistService playlistService, String manifestUrl,
-            Queue<Segment> segmentsQueue, String mediaPath,
-            DownloadUtils.PlaylistDownloadDelegate playlistDownloadDelegate) {
+    public static void downalodHLSFile(Context context, PlaylistService playlistService,
+            PlaylistItem playlistItem, Queue<Segment> segmentsQueue,
+            DownloadUtils.HlsFileDownloadDelegate hlsFileDownloadDelegate) {
         if (playlistService != null) {
             Segment segment = segmentsQueue.poll();
             if (segment == null) {
                 return;
             }
-            Log.e(TAG, "queryPrompt : " + UriUtil.resolve(manifestUrl, segment.url));
+            String mediaPath = getHlsMediaFilePath(playlistItem);
+            final String manifestUrl = getHlsResolutionManifestUrl(context, playlistItem);
             playlistService.queryPrompt(UriUtil.resolve(manifestUrl, segment.url), GET_METHOD);
             PlaylistStreamingObserver playlistStreamingObserverImpl =
                     new PlaylistStreamingObserver() {
                         @Override
                         public void onResponseStarted(String url, long contentLength) {
-                            Log.e(TAG, "onResponseStarted : " + url);
+                            Log.e("playlist", "onResponseStarted : " + url);
                         }
 
                         @Override
                         public void onDataReceived(byte[] response) {
-                            Log.e(TAG, "onDataReceived : ");
                             try {
                                 MediaUtils.writeToFile(response, mediaPath);
-                                // receivedBytesForHls = receivedBytesForHls + response.length;
-                                // if (playlistDownloadDelegate != null) {
-                                //     playlistDownloadDelegate.onDownloadProgress(
-                                //             totalBytesForHls, receivedBytesForHls);
-                                // }
                             } catch (Exception ex) {
                                 ex.printStackTrace();
-                                receivedBytesForHls = 0l;
                             }
                         }
 
                         @Override
                         public void onDataCompleted() {
-                            Log.e(TAG, "segment Url onDataCompleted : ");
                             try {
                                 playlistService.clearObserverForStreaming();
                                 downloadedSofar++;
                                 Segment newSegment = segmentsQueue.peek();
                                 if (newSegment != null) {
-                                    Log.e(TAG, "newSegment : ");
-                                    if (playlistDownloadDelegate != null) {
-                                        playlistDownloadDelegate.onDownloadProgress(
-                                                total, downloadedSofar);
+                                    if (hlsFileDownloadDelegate != null) {
+                                        hlsFileDownloadDelegate.onDownloadProgress(downloadedSofar);
                                     }
-                                    downalodHLSFile(playlistService, manifestUrl, segmentsQueue,
-                                            mediaPath, playlistDownloadDelegate);
+                                    downalodHLSFile(context, playlistService, playlistItem,
+                                            segmentsQueue, hlsFileDownloadDelegate);
                                 } else {
-                                    if (playlistDownloadDelegate != null) {
-                                        playlistDownloadDelegate.onDownloadCompleted(mediaPath);
+                                    if (hlsFileDownloadDelegate != null) {
+                                        hlsFileDownloadDelegate.onDownloadCompleted(mediaPath);
                                     }
                                 }
                             } catch (Exception ex) {
                                 ex.printStackTrace();
-                                receivedBytesForHls = 0l;
                             }
                         }
 
@@ -239,10 +168,40 @@ public class DownloadUtils {
         }
     }
 
-    public static void insertDonwloadQueue(DownloadQueueModel downloadQueueModel) {
-        PlaylistRepository playlistRepository =
-                new PlaylistRepository(ContextUtils.getApplicationContext());
-        PostTask.postTask(TaskTraits.BEST_EFFORT_MAY_BLOCK,
-                () -> { playlistRepository.insertDownloadQueueModel(downloadQueueModel); });
+    private static String getPlaylistIdFromFile(PlaylistItem playlistItem) {
+        String playlistId = "Default";
+        if (playlistItem != null && playlistItem.cached) {
+            String playlistItemMediaPath = playlistItem.mediaPath.url;
+            String[] paths = playlistItem.mediaPath.url.split(File.separator);
+            if (playlistItem.id.equals(paths[paths.length - 2])
+                    && paths[paths.length - 4] != null) {
+                playlistId = paths[paths.length - 4];
+            }
+        }
+        return playlistId;
+    }
+
+    public static String getHlsMediaFilePath(PlaylistItem playlistItem) {
+        return PathUtils.getDataDirectory() + File.separator + getPlaylistIdFromFile(playlistItem)
+                + File.separator + "playlist" + File.separator + playlistItem.id + File.separator
+                + "media_file.mp4";
+    }
+
+    public static String getHlsManifestFilePath(PlaylistItem playlistItem) {
+        return PathUtils.getDataDirectory() + File.separator + getPlaylistIdFromFile(playlistItem)
+                + File.separator + "playlist" + File.separator + playlistItem.id + File.separator
+                + "index.m3u8";
+    }
+
+    public static String getHlsResolutionManifestUrl(Context context, PlaylistItem playlistItem) {
+        return HLSParsingUtil.getContentManifestUrl(
+                context, playlistItem.mediaSource.url, playlistItem.mediaPath.url);
+    }
+
+    public static void deleteFileIfExist(String filePath) {
+        File mediaFile = new File(filePath);
+        if (mediaFile.exists()) {
+            mediaFile.delete();
+        }
     }
 }
