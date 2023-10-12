@@ -635,7 +635,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                             android.R.id.content);
             PlaylistOptionsListener playlistOptionsListener = new PlaylistOptionsListener() {
                 @Override
-                public void onOptionClicked(PlaylistOptionsModel playlistOptionsModel) {
+                public void onPlaylistOptionClicked(PlaylistOptionsModel playlistOptionsModel) {
                     try {
                         if (playlistOptionsModel.getOptionType() == PlaylistOptionsEnum.ADD_MEDIA) {
                             int mediaCount = SharedPreferencesManager.getInstance().readInt(
