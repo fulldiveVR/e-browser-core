@@ -1238,5 +1238,11 @@ provideStrings({
     'Brave works with a partner to provide this service. ' +
     'By enabling, you agree to share unsigned transactions ' +
     'and their DApp URLs with our partner.',
-  braveWalletChangeAnytimeInSettings: 'Change anytime in $1Settings$2.'
+  
+  // Settings
+  braveWalletChangeAnytimeInSettings: 'Change anytime in $1Settings$2.',
+
+  // Explore
+  braveWalletWeb3: 'Web3',
+  braveWalletTopNavExplore: 'Explore'
 })

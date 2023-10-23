@@ -346,7 +346,6 @@ function AssetSelection({ isAndroid }: Props) {
         cardHeader={
           <PageTitleHeader
             title={pageTitle}
-            showBackButton
             onBack={() => setShowFiatSelection(false)}
           />
         }
@@ -481,10 +480,12 @@ function AssetSelection({ isAndroid }: Props) {
 
 function PurchaseOptionSelection({ isAndroid }: Props) {
   // routing
+  const history = useHistory()
   const params = useParams<{
     currencyCode: string
     buyAmount: string
   }>()
+
   // redux
   const selectedOnRampAssetId = useSelector(
     WalletSelectors.selectedOnRampAssetId
@@ -687,8 +688,7 @@ function PurchaseOptionSelection({ isAndroid }: Props) {
       cardHeader={
         <PageTitleHeader
           title={pageTitle}
-          showBackButton
-          onBack={() => history.back()}
+          onBack={history.goBack}
         />
       }
     >
@@ -700,7 +700,7 @@ function PurchaseOptionSelection({ isAndroid }: Props) {
           // Creates wallet Account if needed
           <CreateAccountTab
             network={assetNetwork}
-            onCancel={() => history.back()}
+            onCancel={history.goBack}
             onCreated={setSelectedAccount}
           />
         ) : showAccountSearch || !selectedAccount ? (

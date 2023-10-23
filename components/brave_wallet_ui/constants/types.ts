@@ -624,9 +624,16 @@ export enum WalletRoutes {
   DepositFundsPage = '/crypto/deposit-funds',
   DepositFundsAccountPage = '/crypto/deposit-funds/account',
 
+  // explore
+  Explore = '/crypto/explore',
+
   // market
-  Market = '/crypto/market',
-  MarketSub = '/crypto/market/:chainIdOrMarketSymbol?',
+  Market = '/crypto/explore/market',
+  MarketSub = '/crypto/explore/market/:chainIdOrMarketSymbol?',
+
+  // Web3
+  Web3 = '/crypto/explore/web3',
+  Web3DappDetails = '/crypto/explore/web3/:dappId',
 
   // accounts
   Accounts = '/crypto/accounts',
@@ -961,6 +968,8 @@ export type NavIDTypes =
   | 'transactions'
   | 'my_assets'
   | 'available_assets'
+  | 'explore'
+  | 'web3'
 
 export type AccountPageTabs =
   (typeof AccountPageTabs)[keyof typeof AccountPageTabs]

@@ -110,12 +110,15 @@ export const Row = styled.div<
     padding?: number | string
     width?: '100%' | 'unset'
     marginBottom?: number | string
+    flexWrap?: CSSProperties['flexWrap']
   }
 >`
+  cursor: ${(p) => (p.onClick ? 'pointer' : 'unset')};
   font-family: 'Poppins';
   display: flex;
   flex-direction: row;
   flex: ${(p) => p.flex ?? 'unset'};
+  flex-wrap: ${(p) => p.flexWrap ?? 'unset'};
   align-items: ${(p) => p.alignItems ?? 'center'};
   justify-content: ${(p) => p.justifyContent ?? 'center'};
   gap: ${(p) => p.gap ?? 'unset'};

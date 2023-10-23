@@ -33,7 +33,7 @@ export function isPersistableSessionRoute(
     route.includes(WalletRoutes.PortfolioAssets) ||
     route.includes(WalletRoutes.PortfolioNFTs) ||
     route.includes(WalletRoutes.PortfolioNFTAsset) ||
-    route.includes(WalletRoutes.Market) ||
+    route.includes(WalletRoutes.Explore) ||
     route.includes(WalletRoutes.Swap) ||
     route.includes(WalletRoutes.Send) ||
     route.includes(WalletRoutes.LocalIpfsNode) ||
@@ -181,13 +181,21 @@ export const makeSendRoute = (
   return `${WalletRoutes.Send}?${params.toString()}${SendPageTabHashes.token}`
 }
 
+export const makeDappDetailsRoute = (dappId: string) => {
+  return WalletRoutes.Web3DappDetails.replace(':dappId', dappId?.toString())
+}
+
 // Tabs
-function openTab(url: string) {
-  chrome.tabs.create({ url }, () => {
-    if (chrome.runtime.lastError) {
-      console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
-    }
-  })
+export function openTab(url: string) {
+  try {
+    chrome.tabs.create({ url }, () => {
+      if (chrome.runtime.lastError) {
+        console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
+      }
+    })
+  } catch (err) {
+    window.open(url, '_blank', 'noreferrer noopener')
+  }
 }
 
 // Wallet Page Tabs

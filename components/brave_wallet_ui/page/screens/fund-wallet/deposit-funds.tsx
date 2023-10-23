@@ -136,7 +136,6 @@ export const DepositFundsScreen = ({ isAndroid }: Props) => {
           cardHeader={
             <PageTitleHeader
               title={getLocale('braveWalletDepositCryptoButton')}
-              showBackButton
               onBack={() => {
                 dispatch(WalletActions.selectOnRampAssetId(undefined))
                 history.goBack()
