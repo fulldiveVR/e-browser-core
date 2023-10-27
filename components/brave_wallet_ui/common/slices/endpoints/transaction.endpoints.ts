@@ -1060,7 +1060,9 @@ export const transactionEndpoints = ({
         }
       },
       invalidatesTags: (res, err, arg) =>
-        err ? [TX_CACHE_TAGS.TXS_LIST] : [TX_CACHE_TAGS.ID(arg.txMetaId)]
+        err
+          ? [TX_CACHE_TAGS.TXS_LIST]
+          : [TX_CACHE_TAGS.ID(arg.txMetaId), 'GasEstimation1559']
     }),
 
     updateUnapprovedTransactionSpendAllowance: mutation<
