@@ -42,12 +42,9 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.widget.ImageViewCompat;
 
-import com.brave.playlist.enums.DownloadStatus;
 import com.brave.playlist.enums.PlaylistOptionsEnum;
 import com.brave.playlist.listener.PlaylistOnboardingActionClickListener;
 import com.brave.playlist.listener.PlaylistOptionsListener;
-import com.brave.playlist.model.DownloadQueueModel;
-import com.brave.playlist.model.PlaylistItemModel;
 import com.brave.playlist.model.PlaylistOptionsModel;
 import com.brave.playlist.model.SnackBarActionModel;
 import com.brave.playlist.util.ConnectionUtils;
@@ -92,7 +89,6 @@ import org.chromium.chrome.browser.playlist.PlaylistServiceFactoryAndroid;
 import org.chromium.chrome.browser.playlist.PlaylistServiceObserverImpl;
 import org.chromium.chrome.browser.playlist.PlaylistServiceObserverImpl.PlaylistServiceObserverImplDelegate;
 import org.chromium.chrome.browser.playlist.PlaylistWarningDialogFragment.PlaylistWarningDialogListener;
-import org.chromium.chrome.browser.playlist.download.DownloadUtils;
 import org.chromium.chrome.browser.playlist.settings.BravePlaylistPreferences;
 import org.chromium.chrome.browser.preferences.BravePrefServiceBridge;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
@@ -130,7 +126,6 @@ import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.content_public.browser.NavigationHandle;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
-import org.chromium.playlist.mojom.PlaylistEvent;
 import org.chromium.playlist.mojom.PlaylistItem;
 import org.chromium.playlist.mojom.PlaylistService;
 import org.chromium.ui.UiUtils;
@@ -734,8 +729,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             }
             if (playlistItems.size() > 0) {
                 mPlaylistService.addMediaFiles(playlistItems.toArray(new PlaylistItem[0]),
-                        ConstantUtils.DEFAULT_PLAYLIST, shouldCacheMediaFilesForPlaylist(),
-                        addedItems -> {});
+                        ConstantUtils.DEFAULT_PLAYLIST, true, addedItems -> {});
                 int mediaCount = SharedPreferencesManager.getInstance().readInt(
                         PlaylistPreferenceUtils.ADD_MEDIA_COUNT);
                 if (mediaCount < PLAYLIST_MEDIA_COUNT_LIMIT) {
@@ -756,7 +750,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         org.chromium.url.mojom.Url contentUrl = new org.chromium.url.mojom.Url();
         contentUrl.url = currentTab.getUrl().getSpec();
         mPlaylistService.addMediaFilesFromPageToPlaylist(
-                ConstantUtils.DEFAULT_PLAYLIST, contentUrl, shouldCacheMediaFilesForPlaylist());
+                ConstantUtils.DEFAULT_PLAYLIST, contentUrl, true);
     }
 
     private void showAddedToPlaylistSnackBar() {
@@ -806,28 +800,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             Log.e(TAG, "showAddedToPlaylistSnackBar " + e);
         }
     }
-
-    private boolean shouldCacheMediaFilesForPlaylist() {
-        boolean shouldCacheOnlyOnWifi =
-                (ChromeSharedPreferences.getInstance()
-                                        .readInt(
-                                                BravePlaylistPreferences
-                                                        .PREF_AUTO_SAVE_MEDIA_FOR_OFFLINE,
-                                                0)
-                                == 2
-                        && ConnectionUtils.isWifiAvailable(getContext()));
-
-        boolean shouldCache =
-                ChromeSharedPreferences.getInstance()
-                                        .readInt(
-                                                BravePlaylistPreferences
-                                                        .PREF_AUTO_SAVE_MEDIA_FOR_OFFLINE,
-                                                0)
-                                == 0
-                        || shouldCacheOnlyOnWifi;
-        return shouldCache;
-    }
-
+    
     private void checkForTooltip(Tab tab) {
         try {
             if (!BraveShieldsUtils.isTooltipShown
