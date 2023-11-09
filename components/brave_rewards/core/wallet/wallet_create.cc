@@ -137,6 +137,7 @@ void WalletCreate::OnResult(CreateRewardsWalletCallback callback,
       engine_->state()->SetPromotionCorruptedMigrated(true);
     }
     engine_->state()->SetCreationStamp(util::GetCurrentTimeStamp());
+    engine_->linkage_checker().Start();
   }
 
   std::move(callback).Run(mojom::CreateRewardsWalletResult::kSuccess);

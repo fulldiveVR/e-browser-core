@@ -30,6 +30,8 @@
 #include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/uphold/uphold.h"
 #include "brave/components/brave_rewards/core/wallet/wallet.h"
+#include "brave/components/brave_rewards/core/wallet_provider/linkage_checker.h"
+#include "brave/components/brave_rewards/core/wallet_provider/solana/solana_wallet_provider.h"
 #include "brave/components/brave_rewards/core/zebpay/zebpay.h"
 #include "mojo/public/cpp/bindings/associated_remote.h"
 #include "mojo/public/cpp/bindings/pending_associated_remote.h"
@@ -366,6 +368,13 @@ class RewardsEngineImpl : public mojom::RewardsEngine {
 
   zebpay::ZebPay* zebpay() { return &zebpay_; }
 
+  SolanaWalletProvider& solana_provider() { return solana_provider_; }
+
+  LinkageChecker& linkage_checker() { return linkage_checker_; }
+
+  wallet_provider::WalletProvider* GetExternalWalletProvider(
+      const std::string& wallet_type);
+
   bool IsShuttingDown() const;
 
   // This method is virtualised for test-only purposes.
@@ -414,6 +423,8 @@ class RewardsEngineImpl : public mojom::RewardsEngine {
   gemini::Gemini gemini_;
   uphold::Uphold uphold_;
   zebpay::ZebPay zebpay_;
+  SolanaWalletProvider solana_provider_;
+  LinkageChecker linkage_checker_;
 
   std::map<uint32_t, mojom::VisitData> current_pages_;
   uint64_t last_tab_active_time_ = 0;
