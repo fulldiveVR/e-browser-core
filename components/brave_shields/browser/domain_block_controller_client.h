@@ -56,7 +56,7 @@ class DomainBlockControllerClient
   void Proceed() override;
 
  private:
-  void ReloadPage();
+  void ReloadPage(bool is_1pes_enabled);
   void OnCanEnable1PESForUrl(bool can_enable_1pes);
 
   const GURL request_url_;

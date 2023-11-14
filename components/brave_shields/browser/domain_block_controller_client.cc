@@ -67,11 +67,11 @@ void DomainBlockControllerClient::Proceed() {
         base::BindOnce(&DomainBlockControllerClient::ReloadPage,
                        weak_ptr_factory_.GetWeakPtr()));
   } else {
-    ReloadPage();
+    ReloadPage(false);
   }
 }
 
-void DomainBlockControllerClient::ReloadPage() {
+void DomainBlockControllerClient::ReloadPage(bool is_1pes_enabled) {
   web_contents_->GetController().Reload(content::ReloadType::NORMAL, false);
 }
 

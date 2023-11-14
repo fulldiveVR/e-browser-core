@@ -16,7 +16,6 @@
 #include "content/public/browser/content_browser_client.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "services/metrics/public/cpp/ukm_source_id.h"
-#include "third_party/blink/public/mojom/loader/referrer.mojom.h"
 
 class PrefChangeRegistrar;
 
@@ -66,6 +65,10 @@ class BraveContentBrowserClient : public ChromeContentBrowserClient {
       content::RenderFrameHost* initiator_document,
       mojo::PendingRemote<network::mojom::URLLoaderFactory>* out_factory)
       override;
+
+  std::optional<base::UnguessableToken> GetEphemeralStorageNonce(
+      content::RenderFrameHost* render_frame_host,
+      const url::Origin& origin) override;
 
   bool AllowWorkerFingerprinting(
       const GURL& url,

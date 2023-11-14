@@ -54,7 +54,7 @@ class RequestOTRControllerClient
   void Proceed() override;
 
  private:
-  void ReloadPage();
+  void ReloadPage(bool is_1pes_enabled);
 
   const GURL request_url_;
   bool dont_warn_again_;

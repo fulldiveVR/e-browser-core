@@ -13,6 +13,8 @@
 #include "content/public/browser/browsing_data_remover.h"
 #include "content/public/browser/dom_storage_context.h"
 #include "net/base/features.h"
+#include "net/base/schemeful_site.h"
+#include "url/origin.h"
 
 namespace ephemeral_storage {
 
@@ -38,10 +40,43 @@ void BraveEphemeralStorageServiceDelegate::CleanupTLDEphemeralArea(
   filter->ephemeral_storage_domain = key.first;
   storage_partition->GetCookieManagerForBrowserProcess()->DeleteCookies(
       std::move(filter), base::NullCallback());
-  for (const auto& opaque_origin :
-       cookie_settings_->TakeEphemeralStorageOpaqueOrigins(key.first)) {
-    storage_partition->GetDOMStorageContext()->DeleteLocalStorage(
-        blink::StorageKey::CreateFirstParty(opaque_origin), base::DoNothing());
+
+  if (base::FeatureList::IsEnabled(
+          net::features::kThirdPartyStoragePartitioning)) {
+    content::BrowsingDataRemover::DataType data_to_remove =
+        content::BrowsingDataRemover::DATA_TYPE_CACHE |
+        content::BrowsingDataRemover::DATA_TYPE_MEDIA_LICENSES |
+        content::BrowsingDataRemover::DATA_TYPE_DOM_STORAGE |
+        content::BrowsingDataRemover::DATA_TYPE_ATTRIBUTION_REPORTING |
+        content::BrowsingDataRemover::DATA_TYPE_PRIVACY_SANDBOX |
+        content::BrowsingDataRemover::DATA_TYPE_PRIVACY_SANDBOX_INTERNAL |
+        chrome_browsing_data_remover::DATA_TYPE_SITE_DATA;
+
+    content::BrowsingDataRemover::OriginType origin_type =
+        content::BrowsingDataRemover::ORIGIN_TYPE_UNPROTECTED_WEB |
+        content::BrowsingDataRemover::ORIGIN_TYPE_PROTECTED_WEB;
+
+    data_to_remove &= ~content::BrowsingDataRemover::DATA_TYPE_COOKIES;
+
+    auto filter_builder = content::BrowsingDataFilterBuilder::Create(
+        content::BrowsingDataFilterBuilder::Mode::kDelete,
+        content::BrowsingDataFilterBuilder::OriginMatchingMode::
+            kThirdPartiesOnly);
+    filter_builder->AddOrigin(
+        url::Origin::Create(GURL(base::StrCat({"https://", key.first}))));
+    filter_builder->AddOrigin(
+        url::Origin::Create(GURL(base::StrCat({"http://", key.first}))));
+
+    content::BrowsingDataRemover* remover = context_->GetBrowsingDataRemover();
+    remover->RemoveWithFilter(base::Time(), base::Time::Max(), data_to_remove,
+                              origin_type, std::move(filter_builder));
+  } else {
+    for (const auto& opaque_origin :
+         cookie_settings_->TakeEphemeralStorageOpaqueOrigins(key.first)) {
+      storage_partition->GetDOMStorageContext()->DeleteLocalStorage(
+          blink::StorageKey::CreateFirstParty(opaque_origin),
+          base::DoNothing());
+    }
   }
 }
 
@@ -49,7 +84,9 @@ void BraveEphemeralStorageServiceDelegate::CleanupFirstPartyStorageArea(
     const std::string& registerable_domain) {
   DVLOG(1) << __func__ << " " << registerable_domain;
   DCHECK(base::FeatureList::IsEnabled(
-      net::features::kBraveForgetFirstPartyStorage));
+             net::features::kBraveForgetFirstPartyStorage) ||
+         base::FeatureList::IsEnabled(
+             net::features::kThirdPartyStoragePartitioning));
 
   content::BrowsingDataRemover::DataType data_to_remove =
       content::BrowsingDataRemover::DATA_TYPE_COOKIES |

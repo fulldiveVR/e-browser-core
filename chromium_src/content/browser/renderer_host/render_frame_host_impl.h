@@ -14,8 +14,16 @@
       override;                                                                \
   void CopyImageAt
 
+#define embedding_token_                                              \
+  embedding_token_;                                                   \
+                                                                      \
+  absl::optional<base::UnguessableToken> ephemeral_storage_nonce_;    \
+  void SetEphemeralStorageNonce(const url::Origin& top_frame_origin); \
+  absl::optional<base::UnguessableToken> GetEphemeralStorageNonce() const
+
 #include "src/content/browser/renderer_host/render_frame_host_impl.h"  // IWYU pragma: export
 
+#undef embedding_token_
 #undef CopyImageAt
 
 #endif  // BRAVE_CHROMIUM_SRC_CONTENT_BROWSER_RENDERER_HOST_RENDER_FRAME_HOST_IMPL_H_

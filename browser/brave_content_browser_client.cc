@@ -28,6 +28,7 @@
 #include "brave/browser/brave_wallet/tx_service_factory.h"
 #include "brave/browser/debounce/debounce_service_factory.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_service_factory.h"
+#include "brave/browser/ephemeral_storage/ephemeral_storage_tab_helper.h"
 #include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/browser/net/brave_proxying_url_loader_factory.h"
 #include "brave/browser/net/brave_proxying_web_socket.h"
@@ -580,6 +581,29 @@ void BraveContentBrowserClient::RegisterWebUIInterfaceBrokers(
         .Add<brave_news::mojom::BraveNewsController>();
   }
 #endif
+}
+
+std::optional<base::UnguessableToken>
+BraveContentBrowserClient::GetEphemeralStorageNonce(
+    content::RenderFrameHost* render_frame_host,
+    const url::Origin& origin) {
+  DCHECK(render_frame_host);
+  if (render_frame_host != render_frame_host->GetMainFrame()) {
+    return std::nullopt;
+  }
+
+  auto* wc = content::WebContents::FromRenderFrameHost(render_frame_host);
+  if (!wc) {
+    return std::nullopt;
+  }
+
+  auto* es_tab_helper =
+      ephemeral_storage::EphemeralStorageTabHelper::FromWebContents(wc);
+  if (!es_tab_helper) {
+    return std::nullopt;
+  }
+
+  return es_tab_helper->GetEphemeralStorageNonce(origin);
 }
 
 bool BraveContentBrowserClient::AllowWorkerFingerprinting(

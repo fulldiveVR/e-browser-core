@@ -5,21 +5,15 @@
 
 #include "brave/browser/ephemeral_storage/ephemeral_storage_browsertest.h"
 
-#include "base/strings/strcat.h"
 #include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "chrome/browser/content_settings/cookie_settings_factory.h"
-#include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/tabs/tab_enums.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/content_settings/core/browser/cookie_settings.h"
 #include "components/content_settings/core/browser/host_content_settings_map.h"
-#include "components/content_settings/core/common/content_settings_pattern.h"
-#include "content/public/browser/storage_partition.h"
 #include "content/public/test/browser_test.h"
 #include "net/base/features.h"
-#include "services/network/public/mojom/cookie_manager.mojom.h"
 
 using content::RenderFrameHost;
 using content::WebContents;
@@ -160,26 +154,49 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
-                       IndexedDbUnavailableInES) {
+                       IndexedDbAvailabilityInES) {
   SetCookieSetting(a_site_ephemeral_storage_url_, CONTENT_SETTING_SESSION_ONLY);
   SetCookieSetting(b_site_ephemeral_storage_url_, CONTENT_SETTING_SESSION_ONLY);
 
   WebContents* site_a = LoadURLInNewTab(a_site_ephemeral_storage_url_);
   WebContents* site_b = LoadURLInNewTab(b_site_ephemeral_storage_url_);
 
-  // Main frame and 1p frame.
-  EXPECT_FALSE(SetIDBValue(site_a->GetPrimaryMainFrame()));
-  EXPECT_FALSE(
-      SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 2)));
-  // 3p frames.
-  EXPECT_FALSE(
-      SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 0)));
-  EXPECT_FALSE(
-      SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 1)));
+  if (base::FeatureList::IsEnabled(
+          net::features::kThirdPartyStoragePartitioning)) {
+    // Main frame and 1p frame. Access is forbidden, because permission is not
+    // granted.
+    EXPECT_NE("", SetIDBValue(site_a->GetPrimaryMainFrame()).error);
+    EXPECT_NE(
+        "", SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 2))
+                .error);
+    // 3p frames.
+    EXPECT_EQ(true, SetIDBValue(content::ChildFrameAt(
+                        site_a->GetPrimaryMainFrame(), 0)));
+    EXPECT_EQ(true, SetIDBValue(content::ChildFrameAt(
+                        site_a->GetPrimaryMainFrame(), 1)));
 
-  // 3p frame.
-  EXPECT_FALSE(
-      SetIDBValue(content::ChildFrameAt(site_b->GetPrimaryMainFrame(), 2)));
+    // 3p frame.
+    EXPECT_EQ(true, SetIDBValue(content::ChildFrameAt(
+                        site_b->GetPrimaryMainFrame(), 2)));
+  } else {
+    // Main frame and 1p frame.
+    EXPECT_NE("", SetIDBValue(site_a->GetPrimaryMainFrame()).error);
+    EXPECT_NE(
+        "", SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 2))
+                .error);
+    // 3p frames.
+    EXPECT_NE(
+        "", SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 0))
+                .error);
+    EXPECT_NE(
+        "", SetIDBValue(content::ChildFrameAt(site_a->GetPrimaryMainFrame(), 1))
+                .error);
+
+    // 3p frame.
+    EXPECT_NE(
+        "", SetIDBValue(content::ChildFrameAt(site_b->GetPrimaryMainFrame(), 2))
+                .error);
+  }
 }
 
 IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
@@ -334,21 +351,22 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
       ui_test_utils::NavigateToURL(browser(), a_site_ephemeral_storage_url_));
 
   RenderFrameHost* site_a_main_frame = web_contents->GetPrimaryMainFrame();
-  RenderFrameHost* nested_frames_tab =
+  RenderFrameHost* third_party_nested_bcom_frames =
       content::ChildFrameAt(site_a_main_frame, 3);
-  ASSERT_NE(nested_frames_tab, nullptr);
-  RenderFrameHost* first_party_nested_acom =
-      content::ChildFrameAt(nested_frames_tab, 2);
-  ASSERT_NE(first_party_nested_acom, nullptr);
+  ASSERT_NE(third_party_nested_bcom_frames, nullptr);
+  RenderFrameHost* third_party_nested_bcom_nested_acom =
+      content::ChildFrameAt(third_party_nested_bcom_frames, 2);
+  ASSERT_NE(third_party_nested_bcom_nested_acom, nullptr);
 
   WebContents* site_b_tab = LoadURLInNewTab(b_site_ephemeral_storage_url_);
   RenderFrameHost* site_b_main_frame = site_b_tab->GetPrimaryMainFrame();
   RenderFrameHost* third_party_nested_acom =
       content::ChildFrameAt(site_b_main_frame, 2);
-  ASSERT_NE(first_party_nested_acom, nullptr);
+  ASSERT_NE(third_party_nested_acom, nullptr);
 
   ASSERT_EQ("name=acom", GetCookiesInFrame(site_a_main_frame));
-  ASSERT_EQ("name=acom", GetCookiesInFrame(first_party_nested_acom));
+  ASSERT_EQ("name=acom",
+            GetCookiesInFrame(third_party_nested_bcom_nested_acom));
   ASSERT_EQ("", GetCookiesInFrame(third_party_nested_acom));
 
   SetValuesInFrame(site_a_main_frame, "first-party-a.com",
@@ -356,11 +374,12 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
   SetValuesInFrame(third_party_nested_acom, "third-party-a.com",
                    "name=third-party-a.com");
 
-  ValuesFromFrame first_party_values =
-      GetValuesFromFrame(first_party_nested_acom);
-  EXPECT_EQ("first-party-a.com", first_party_values.local_storage);
-  EXPECT_EQ("first-party-a.com", first_party_values.session_storage);
-  EXPECT_EQ("name=first-party-a.com", first_party_values.cookies);
+  // Values in a.com (main) -> b.com -> a.com frame.
+  ValuesFromFrame cross_site_acom_values =
+      GetValuesFromFrame(third_party_nested_bcom_nested_acom);
+  EXPECT_EQ("first-party-a.com", cross_site_acom_values.local_storage);
+  EXPECT_EQ("first-party-a.com", cross_site_acom_values.session_storage);
+  EXPECT_EQ("name=first-party-a.com", cross_site_acom_values.cookies);
 
   ValuesFromFrame third_party_values =
       GetValuesFromFrame(third_party_nested_acom);

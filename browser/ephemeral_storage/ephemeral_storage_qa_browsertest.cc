@@ -144,7 +144,9 @@ std::string AsString(StorageType t) {
 class EphemeralStorageTest : public InProcessBrowserTest {
  public:
   EphemeralStorageTest() : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
-    feature_list_.InitAndEnableFeature(net::features::kBraveEphemeralStorage);
+    feature_list_.InitWithFeatures(
+        {net::features::kBraveEphemeralStorage},
+        {net::features::kThirdPartyStoragePartitioning});
   }
 
   void SetUpOnMainThread() override {
@@ -268,6 +270,8 @@ class EphemeralStorageTest : public InProcessBrowserTest {
   void CheckStorageResults(content::WebContents* contents,
                            StorageType storage_type,
                            const StorageResult expected[4]) {
+    SCOPED_TRACE(::testing::Message()
+                 << "StorageType: " << static_cast<int>(storage_type));
     ASSERT_EQ(AsNumber(expected[0]),
               EvalJs(contents,
                      "window.generateStorageReport().then(report => report['" +
@@ -711,7 +715,9 @@ class EphemeralStorageDisabledTest : public EphemeralStorageTest {
  public:
   EphemeralStorageDisabledTest() {
     feature_list_.Reset();
-    feature_list_.InitAndDisableFeature(net::features::kBraveEphemeralStorage);
+    feature_list_.InitWithFeatures(
+        {}, {net::features::kBraveEphemeralStorage,
+             net::features::kThirdPartyStoragePartitioning});
   }
 };
 

@@ -67,7 +67,7 @@ void RequestOTRControllerClient::Proceed() {
     }
   }
 
-  ReloadPage();
+  ReloadPage(false);
 }
 
 void RequestOTRControllerClient::ProceedOTR() {
@@ -88,7 +88,7 @@ void RequestOTRControllerClient::ProceedOTR() {
                      weak_ptr_factory_.GetWeakPtr()));
 }
 
-void RequestOTRControllerClient::ReloadPage() {
+void RequestOTRControllerClient::ReloadPage(bool is_1pes_enabled) {
   web_contents_->GetController().Reload(content::ReloadType::NORMAL, false);
 }
 

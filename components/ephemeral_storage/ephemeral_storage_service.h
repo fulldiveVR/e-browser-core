@@ -18,6 +18,7 @@
 #include "base/observer_list.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"
+#include "base/unguessable_token.h"
 #include "brave/components/ephemeral_storage/ephemeral_storage_service_delegate.h"
 #include "brave/components/ephemeral_storage/ephemeral_storage_service_observer.h"
 #include "components/content_settings/core/common/content_settings.h"
@@ -66,6 +67,7 @@ class EphemeralStorageService : public KeyedService {
   // Enables 1PES for url if nothing is stored for |url|.
   void Enable1PESForUrlIfPossible(const GURL& url,
                                   base::OnceCallback<void(bool)> on_ready);
+  std::optional<base::UnguessableToken> Get1PESToken(const url::Origin& origin);
 
   void TLDEphemeralLifetimeCreated(
       const std::string& ephemeral_domain,
@@ -120,6 +122,7 @@ class EphemeralStorageService : public KeyedService {
   base::TimeDelta first_party_storage_startup_cleanup_delay_;
   std::map<TLDEphemeralAreaKey, std::unique_ptr<base::OneShotTimer>>
       tld_ephemeral_areas_to_cleanup_;
+  std::map<std::string, base::UnguessableToken> fpes_tokens_;
   base::Value::List first_party_storage_areas_to_cleanup_on_startup_;
   base::OneShotTimer first_party_storage_areas_startup_cleanup_timer_;
 
