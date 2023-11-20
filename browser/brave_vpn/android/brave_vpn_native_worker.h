@@ -11,7 +11,6 @@
 
 #include "base/android/jni_weak_ref.h"
 #include "base/memory/weak_ptr.h"
-#include "services/data_decoder/public/cpp/data_decoder.h"
 
 namespace chrome {
 namespace android {

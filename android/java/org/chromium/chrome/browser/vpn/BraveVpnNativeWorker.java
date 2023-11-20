@@ -13,27 +13,23 @@ import org.chromium.base.annotations.NativeMethods;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Semaphore;
 
 @JNINamespace("chrome::android")
 public class BraveVpnNativeWorker {
     private long mNativeBraveVpnNativeWorker;
-    private static final Object sLock = new Object();
-    private static BraveVpnNativeWorker sInstance;
-
-    public static Semaphore sMutex;
+    private static final Object mLock = new Object();
+    private static BraveVpnNativeWorker mInstance;
 
     private List<BraveVpnObserver> mObservers;
 
     public static BraveVpnNativeWorker getInstance() {
-        synchronized (sLock) {
-            if (sInstance == null) {
-                sInstance = new BraveVpnNativeWorker();
-                sInstance.init();
+        synchronized (mLock) {
+            if (mInstance == null) {
+                mInstance = new BraveVpnNativeWorker();
+                mInstance.init();
             }
         }
-        sMutex = new Semaphore(1);
-        return sInstance;
+        return mInstance;
     }
 
     private BraveVpnNativeWorker() {
@@ -59,13 +55,13 @@ public class BraveVpnNativeWorker {
     }
 
     public void addObserver(BraveVpnObserver observer) {
-        synchronized (sLock) {
+        synchronized (mLock) {
             mObservers.add(observer);
         }
     }
 
     public void removeObserver(BraveVpnObserver observer) {
-        synchronized (sLock) {
+        synchronized (mLock) {
             mObservers.remove(observer);
         }
     }

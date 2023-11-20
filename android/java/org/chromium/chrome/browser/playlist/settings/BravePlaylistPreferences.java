@@ -6,7 +6,6 @@
 package org.chromium.chrome.browser.playlist.settings;
 
 import android.os.Bundle;
-import android.os.Handler;
 
 import androidx.preference.Preference;
 
