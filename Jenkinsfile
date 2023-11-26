@@ -81,7 +81,7 @@ pipeline {
                                                 credentials('brave-builds-github-token-for-pr-builder')
                                                 github('brave/devops', 'https')
                                             }
-                                            branch('wknapik-is-ci-feature-supported')
+                                            branch('wknapik-ci-features-without-checkout')
                                         }
                                     }
                                     scriptPath("jenkins/jobs/browser/pr-brave-browser-${PLATFORM}.Jenkinsfile")
