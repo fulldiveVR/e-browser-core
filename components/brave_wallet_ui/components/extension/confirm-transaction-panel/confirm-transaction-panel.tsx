@@ -63,7 +63,7 @@ import {
   WarningBox,
   WarningTitle,
   LearnMoreButton,
-  WarningBoxTitleRow,
+  WarningBoxTitleRow
 } from '../shared-panel-styles'
 import {
   StyledWrapper,
@@ -93,11 +93,14 @@ const NftAssetIconWithPlaceholder = withPlaceholderIcon(NftIcon, ICON_CONFIG)
 
 const onClickLearnMore = () => {
   // TODO: link broken
-  chrome.tabs.create({ url: 'https://support.brave.com/hc/en-us/articles/5546517853325' }, () => {
-    if (chrome.runtime.lastError) {
-      console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
+  chrome.tabs.create(
+    { url: 'https://support.brave.com/hc/en-us/articles/5546517853325' },
+    () => {
+      if (chrome.runtime.lastError) {
+        console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
+      }
     }
-  })
+  )
 }
 
 /**
@@ -389,29 +392,36 @@ export const ConfirmTransactionPanel = ({
         )}
       </TabRow>
 
-      <MessageBox isDetails={selectedTab === 'details'}>
-        {selectedTab === 'transaction' ? (
-          <>
-            {isERC20Approve && (
-              <Erc20ApproveTransactionInfo
-                onToggleEditGas={onToggleEditGas}
-                isCurrentAllowanceUnlimited={isCurrentAllowanceUnlimited}
-                currentTokenAllowance={currentTokenAllowance}
-                transactionDetails={transactionDetails}
-                transactionsNetwork={transactionsNetwork}
-                gasFee={gasFee}
-                insufficientFundsError={insufficientFundsError}
-                insufficientFundsForGasError={insufficientFundsForGasError}
-              />
-            )}
-            {!isERC20Approve && (
-              <TransactionInfo onToggleEditGas={onToggleEditGas} />
-            )}
-          </>
-        ) : (
-          <TransactionDetailBox transactionInfo={selectedPendingTransaction} />
-        )}
-      </MessageBox>
+      <Column
+        padding={'0px 5%'}
+        fullWidth
+      >
+        <MessageBox isDetails={selectedTab === 'details'}>
+          {selectedTab === 'transaction' ? (
+            <>
+              {isERC20Approve && (
+                <Erc20ApproveTransactionInfo
+                  onToggleEditGas={onToggleEditGas}
+                  isCurrentAllowanceUnlimited={isCurrentAllowanceUnlimited}
+                  currentTokenAllowance={currentTokenAllowance}
+                  transactionDetails={transactionDetails}
+                  transactionsNetwork={transactionsNetwork}
+                  gasFee={gasFee}
+                  insufficientFundsError={insufficientFundsError}
+                  insufficientFundsForGasError={insufficientFundsForGasError}
+                />
+              )}
+              {!isERC20Approve && (
+                <TransactionInfo onToggleEditGas={onToggleEditGas} />
+              )}
+            </>
+          ) : (
+            <TransactionDetailBox
+              transactionInfo={selectedPendingTransaction}
+            />
+          )}
+        </MessageBox>
+      </Column>
 
       <NetworkFeeRow>
         <PendingTransactionNetworkFeeAndSettings
@@ -421,9 +431,7 @@ export const ConfirmTransactionPanel = ({
       </NetworkFeeRow>
 
       {retrySimulation && (
-        <TxSimulationFailedWarning
-          retrySimulation={retrySimulation}
-        />
+        <TxSimulationFailedWarning retrySimulation={retrySimulation} />
       )}
 
       <Footer />
