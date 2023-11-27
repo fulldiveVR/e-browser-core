@@ -29,8 +29,44 @@ export const TransactionDetailBox = (props: Props) => {
   const { transactionInfo } = props
   const { txArgs, txParams, txType } = transactionInfo
   const data = transactionInfo.txDataUnion.ethTxData1559?.baseData.data || []
+  const sendOptions = transactionInfo.txDataUnion.solanaTxData?.sendOptions
+
+  // render
   return (
     <>
+      {sendOptions && (
+        <>
+          {!!Number(sendOptions?.maxRetries?.maxRetries) && (
+            <DetailColumn key={'maxRetries'}>
+              <TransactionText>
+                {getLocale('braveWalletSolanaMaxRetries')}:
+              </TransactionText>
+              <DetailText>{sendOptions?.maxRetries?.maxRetries}</DetailText>
+            </DetailColumn>
+          )}
+
+          {sendOptions?.preflightCommitment && (
+            <DetailColumn key={'preflightCommitment'}>
+              <TransactionText>
+                {getLocale('braveWalletSolanaPreflightCommitment')}:
+              </TransactionText>
+              <DetailText>{sendOptions?.preflightCommitment}</DetailText>
+            </DetailColumn>
+          )}
+
+          {sendOptions?.skipPreflight && (
+            <DetailColumn key={'skipPreflight'}>
+              <TransactionText>
+                {getLocale('braveWalletSolanaSkipPreflight')}:
+              </TransactionText>
+              <DetailText>
+                {sendOptions.skipPreflight.skipPreflight.toString()}
+              </DetailText>
+            </DetailColumn>
+          )}
+        </>
+      )}
+
       {data.length === 0 ? (
         <CodeSnippet>
           <code>
@@ -47,6 +83,7 @@ export const TransactionDetailBox = (props: Props) => {
             </TransactionText>
             <DetailText>{txKeys[txType]}</DetailText>
           </DetailColumn>
+
           {txType !== BraveWallet.TransactionType.Other &&
             txParams.map((param, i) => (
               <CodeSnippet key={i}>
