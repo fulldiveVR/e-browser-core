@@ -47,8 +47,8 @@ import { Erc20ApproveTransactionInfo } from './erc-twenty-transaction-info'
 import { TransactionInfo } from './transaction-info'
 import { NftIcon } from '../../shared/nft-icon/nft-icon'
 import {
-  TxSimulationFailedWarning //
-} from './common/tx_simulation_failed_warning'
+  TxWarningBanner //
+} from './common/tx_warning_banner'
 
 // Styled Components
 import { Column, Row } from '../../shared/style'
@@ -430,9 +430,7 @@ export const ConfirmTransactionPanel = ({
         />
       </NetworkFeeRow>
 
-      {retrySimulation && (
-        <TxSimulationFailedWarning retrySimulation={retrySimulation} />
-      )}
+      {retrySimulation && <TxWarningBanner retrySimulation={retrySimulation} />}
 
       <Footer />
     </StyledWrapper>

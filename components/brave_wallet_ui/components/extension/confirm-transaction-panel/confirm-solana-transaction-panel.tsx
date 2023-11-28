@@ -29,8 +29,8 @@ import { SolanaTransactionDetailBox } from '../transaction-box/solana-transactio
 import { TransactionQueueSteps } from './common/queue'
 import { Footer } from './common/footer'
 import {
-  TxSimulationFailedWarning //
-} from './common/tx_simulation_failed_warning'
+  TxWarningBanner //
+} from './common/tx_warning_banner'
 
 // Styles
 import { Column, Row } from '../../shared/style'
@@ -258,9 +258,7 @@ export const ConfirmSolanaTransactionPanel = ({
         </MessageBox>
       </Column>
 
-      {retrySimulation && (
-        <TxSimulationFailedWarning retrySimulation={retrySimulation} />
-      )}
+      {retrySimulation && <TxWarningBanner retrySimulation={retrySimulation} />}
 
       <Footer />
     </StyledWrapper>
