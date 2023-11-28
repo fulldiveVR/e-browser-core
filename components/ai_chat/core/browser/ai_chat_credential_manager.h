@@ -56,12 +56,14 @@ class AIChatCredentialManager {
   void OnCredentialSummary(
       ai_chat::mojom::PageHandler::GetPremiumStatusCallback callback,
       const std::string& domain,
+      const bool credential_in_cache,
       const std::string& summary_string);
 
   void OnGetPremiumStatus(
       base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>
           callback,
-      ai_chat::mojom::PremiumStatus);
+      ai_chat::mojom::PremiumStatus,
+      ai_chat::mojom::PremiumInfoPtr);
 
   void OnPrepareCredentialsPresentation(
       base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>

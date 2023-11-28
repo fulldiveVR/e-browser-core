@@ -9,10 +9,12 @@
 #include <utility>
 #include <vector>
 
+#include "base/i18n/time_formatting.h"
 #include "base/json/json_reader.h"
 #include "base/json/values_util.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
+#include "base/time/time.h"
 #include "brave/brave_domains/service_domains.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom-shared.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
@@ -43,6 +45,7 @@ void AIChatCredentialManager::GetPremiumStatus(
     ai_chat::mojom::PageHandler::GetPremiumStatusCallback callback) {
   base::Time now = base::Time::Now();
   // First check for a valid credential in the cache.
+  bool credential_in_cache = false;
   const auto& cached_creds_dict =
       prefs_service_->GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
   for (const auto [credential, expires_at_value] : cached_creds_dict) {
@@ -52,41 +55,55 @@ void AIChatCredentialManager::GetPremiumStatus(
     }
 
     if (*expires_at > now) {
-      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active);
-      return;
+      credential_in_cache = true;
+      break;
     }
   }
 
   const std::string leo_sku_domain =
       brave_domains::GetServicesDomain(kLeoSkuHostnamePart);
 
-  // If there aren't any valid in the cache, we must check the CredentialSummary
-  // from from the SKU service.
+  // Check the CredentialSummary to get the number of remaining credentials
+  // and time when next batch is active.
   if (!EnsureMojoConnected()) {
     // This profile can't check skus
     // TODO(petemill): Pass the original profile skus service from
     // the incognito profile.
-    std::move(callback).Run(mojom::PremiumStatus::Inactive);
+    std::move(callback).Run(mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
+
   DCHECK(skus_service_);
   skus_service_->CredentialSummary(
       leo_sku_domain,
       base::BindOnce(&AIChatCredentialManager::OnCredentialSummary,
                      weak_ptr_factory_.GetWeakPtr(), std::move(callback),
-                     leo_sku_domain));
+                     leo_sku_domain, credential_in_cache));
 }
 
 void AIChatCredentialManager::OnCredentialSummary(
     ai_chat::mojom::PageHandler::GetPremiumStatusCallback callback,
     const std::string& domain,
+    const bool credential_in_cache,
     const std::string& summary_string) {
+  ai_chat::mojom::PremiumInfoPtr premium_info =
+      ai_chat::mojom::PremiumInfo::New();
+  if (credential_in_cache) {
+    premium_info->remaining_credential_count = 1;
+  }
+  premium_info->next_batch_active_at = std::nullopt;
+
   std::string summary_string_trimmed;
   base::TrimWhitespaceASCII(summary_string, base::TrimPositions::TRIM_ALL,
                             &summary_string_trimmed);
-
   if (summary_string_trimmed.empty()) {
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive);
+    if (credential_in_cache) {
+      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+                              std::move(premium_info));
+      return;
+    }
+
+    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
@@ -94,30 +111,54 @@ void AIChatCredentialManager::OnCredentialSummary(
       summary_string, base::JSONParserOptions::JSON_PARSE_RFC);
 
   if (!records_v || !records_v->is_dict()) {
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive);
+    if (credential_in_cache) {
+      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+                              std::move(premium_info));
+      return;
+    }
+    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
   const auto& records_dict = records_v->GetDict();
   // Empty dict - "{}" - all credentials are expired or it's a new user.
   if (records_dict.empty()) {
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive);
+    if (credential_in_cache) {
+      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+                              std::move(premium_info));
+      return;
+    }
+
+    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
-  int remaining_count =
+  premium_info->remaining_credential_count +=
       records_dict.FindInt("remaining_credential_count").value_or(0);
+  const std::string* next_batch_active_at =
+      records_dict.FindString("next_batch_active_at");
+  if (next_batch_active_at) {
+    base::Time next_batch_active_at_v;
+    if (base::Time::FromUTCString(next_batch_active_at->c_str(),
+                                  &next_batch_active_at_v)) {
+      premium_info->next_batch_active_at = next_batch_active_at_v;
+    }
+  }
+
   const std::string* expires_at = records_dict.FindString("expires_at");
   // If the user has no more credentials AND expires_at is empty, then
   // the user is disconnected (needs to refresh). If expires_at is not empty,
   // the user has just run out of credentials, and they need to wait until a
   // refresh is available.
-  if (remaining_count == 0 && (!expires_at || expires_at->empty())) {
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::ActiveDisconnected);
+  if (premium_info->remaining_credential_count == 0 &&
+      (!expires_at || expires_at->empty())) {
+    std::move(callback).Run(ai_chat::mojom::PremiumStatus::ActiveDisconnected,
+                            std::move(premium_info));
     return;
   }
 
-  std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active);
+  std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+                          std::move(premium_info));
 }
 
 void AIChatCredentialManager::FetchPremiumCredential(
@@ -181,7 +222,8 @@ void AIChatCredentialManager::FetchPremiumCredential(
 void AIChatCredentialManager::OnGetPremiumStatus(
     base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>
         callback,
-    ai_chat::mojom::PremiumStatus status) {
+    ai_chat::mojom::PremiumStatus status,
+    ai_chat::mojom::PremiumInfoPtr info) {
   if (status != ai_chat::mojom::PremiumStatus::Active) {
     std::move(callback).Run(std::nullopt);
     return;

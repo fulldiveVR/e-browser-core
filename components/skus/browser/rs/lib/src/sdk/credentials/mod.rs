@@ -1,7 +1,7 @@
 mod fetch;
 mod present;
 
-use chrono::Utc;
+use chrono::{NaiveDateTime, Utc};
 use tracing::{error, instrument};
 
 use crate::errors::{InternalError, SkusError};
@@ -49,6 +49,7 @@ where
                         .await?
                         .map(|cred| cred.valid_to)
                         .or(expires_at);
+
                     if let Some(creds) = self.matching_time_limited_v2_credential(&item.id).await? {
                         let unblinded_creds =
                             creds.unblinded_creds.ok_or(InternalError::NotFound)?;
@@ -56,11 +57,14 @@ where
                             unblinded_creds.into_iter().filter(|cred| !cred.spent).count();
 
                         let active = remaining_credential_count > 0;
+
+                        let next_batch_active_at = self.next_batch_active_at(&item.id).await?;
                         return Ok(Some(CredentialSummary {
                             order,
                             remaining_credential_count, // number unspent
                             expires_at,
                             active,
+                            next_batch_active_at,
                         }));
                     }
 
@@ -82,6 +86,7 @@ where
                             remaining_credential_count,
                             expires_at,
                             active,
+                            next_batch_active_at: None,
                         }));
                     } else {
                         continue;
@@ -100,6 +105,7 @@ where
                             remaining_credential_count: 1,
                             expires_at,
                             active: true,
+                            next_batch_active_at: None,
                         }));
                     }
 
@@ -120,6 +126,39 @@ where
                 Utc::now().naive_utc() < cred.valid_to && Utc::now().naive_utc() > cred.valid_from
             })
         }))
+    }
+
+    #[instrument]
+    pub async fn next_batch_active_at(
+        &self,
+        item_id: &str,
+    ) -> Result<Option<NaiveDateTime>, SkusError> {
+        let now = Utc::now().naive_utc();
+        let creds = self.client.get_time_limited_v2_creds(item_id).await?;
+
+        match creds {
+            Some(tlv2_creds) => {
+                // Check if unblinded_creds is present and filter out unspent credentials with
+                // valid_from greater than now
+                let next_valid_from = tlv2_creds
+                    .unblinded_creds
+                    .unwrap_or_default()
+                    .into_iter()
+                    .filter_map(|tlv2_cred| {
+                        tlv2_cred
+                            .unblinded_creds
+                            .unwrap_or_default()
+                            .into_iter()
+                            .filter(|single_cred| !single_cred.spent && tlv2_cred.valid_from > now)
+                            .map(|_| tlv2_cred.valid_from)
+                            .next()
+                    })
+                    .min(); // Find the smallest valid_from among them
+
+                Ok(next_valid_from)
+            }
+            None => Ok(None), // No credentials found for the item
+        }
     }
 
     #[instrument]
@@ -184,6 +223,7 @@ where
                                 remaining_credential_count: 0,
                                 expires_at: None,
                                 active: false,
+                                next_batch_active_at: None,
                             }));
                         }
                     }
