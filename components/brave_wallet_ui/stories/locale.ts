@@ -589,7 +589,8 @@ provideStrings({
   braveWalletSignTransactionButton: 'Sign',
   braveWalletApproveTransaction: 'Approve transaction',
   braveWalletRiskOfLossAction: 'Unsafe action with risk of loss',
-  braveWalletBraveWalletUntrustedRequestWarning: 'This request appears unstable or malicious, and may leave you vulnerable to theft. Do not continue unless you trust the app.',
+  braveWalletUntrustedRequestWarning:
+    'This request appears unstable or malicious, and may leave you vulnerable to theft. Do not continue unless you trust the app.',
 
   // Sign in with Ethereum
   braveWalletSignInWithBraveWallet: 'Sign in with Brave Wallet',
@@ -774,7 +775,7 @@ provideStrings({
   // Transaction Simulation
   braveWalletScanningTransaction: 'Scanning transaction',
   braveWalletTransactionPreviewFailed: 'Transaction preview failed',
-  
+
   // Transaction Simulation Event Grouping Headers
   braveWalletEstimatedBalanceChange: 'Estimated balance change',
   braveWalletApprovalDetails: 'Approval details',
@@ -839,8 +840,7 @@ provideStrings({
     'Transaction is likely to fail and revert. ' +
     'Attempting will still incur gas costs.',
   braveWalletSimulationUnexpectedError:
-    'Unexpected error with transaction preview. ' +
-    'Approving may be unsafe.',
+    'Unexpected error with transaction preview. ' + 'Approving may be unsafe.',
 
   // Asset Detail Accounts (Empty)
   braveWalletNoAccountsWithABalance: 'No available accounts',
