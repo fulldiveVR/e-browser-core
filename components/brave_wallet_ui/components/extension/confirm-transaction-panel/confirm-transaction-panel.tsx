@@ -392,36 +392,29 @@ export const ConfirmTransactionPanel = ({
         )}
       </TabRow>
 
-      <Column
-        padding={'0px 5%'}
-        fullWidth
-      >
-        <MessageBox isDetails={selectedTab === 'details'}>
-          {selectedTab === 'transaction' ? (
-            <>
-              {isERC20Approve && (
-                <Erc20ApproveTransactionInfo
-                  onToggleEditGas={onToggleEditGas}
-                  isCurrentAllowanceUnlimited={isCurrentAllowanceUnlimited}
-                  currentTokenAllowance={currentTokenAllowance}
-                  transactionDetails={transactionDetails}
-                  transactionsNetwork={transactionsNetwork}
-                  gasFee={gasFee}
-                  insufficientFundsError={insufficientFundsError}
-                  insufficientFundsForGasError={insufficientFundsForGasError}
-                />
-              )}
-              {!isERC20Approve && (
-                <TransactionInfo onToggleEditGas={onToggleEditGas} />
-              )}
-            </>
-          ) : (
-            <TransactionDetailBox
-              transactionInfo={selectedPendingTransaction}
-            />
-          )}
-        </MessageBox>
-      </Column>
+      <MessageBox isDetails={selectedTab === 'details'}>
+        {selectedTab === 'transaction' ? (
+          <>
+            {isERC20Approve && (
+              <Erc20ApproveTransactionInfo
+                onToggleEditGas={onToggleEditGas}
+                isCurrentAllowanceUnlimited={isCurrentAllowanceUnlimited}
+                currentTokenAllowance={currentTokenAllowance}
+                transactionDetails={transactionDetails}
+                transactionsNetwork={transactionsNetwork}
+                gasFee={gasFee}
+                insufficientFundsError={insufficientFundsError}
+                insufficientFundsForGasError={insufficientFundsForGasError}
+              />
+            )}
+            {!isERC20Approve && (
+              <TransactionInfo onToggleEditGas={onToggleEditGas} />
+            )}
+          </>
+        ) : (
+          <TransactionDetailBox transactionInfo={selectedPendingTransaction} />
+        )}
+      </MessageBox>
 
       <NetworkFeeRow>
         <PendingTransactionNetworkFeeAndSettings

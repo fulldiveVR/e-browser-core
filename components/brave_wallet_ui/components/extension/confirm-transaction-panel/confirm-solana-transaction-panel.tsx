@@ -33,7 +33,7 @@ import {
 } from './common/tx_warning_banner'
 
 // Styles
-import { Column, Row } from '../../shared/style'
+import { Row } from '../../shared/style'
 import {
   TabRow,
   URLText,
@@ -241,22 +241,17 @@ export const ConfirmSolanaTransactionPanel = ({
         />
       </TabRow>
 
-      <Column
-        padding={'0px 5%'}
-        fullWidth
-      >
-        <MessageBox isDetails={selectedTab === 'details'}>
-          {selectedTab === 'transaction' ? (
-            <TransactionInfo />
-          ) : (
-            <SolanaTransactionDetailBox
-              data={selectedPendingTransaction?.txDataUnion?.solanaTxData}
-              instructions={transactionDetails.instructions}
-              txType={selectedPendingTransaction.txType}
-            />
-          )}
-        </MessageBox>
-      </Column>
+      <MessageBox isDetails={selectedTab === 'details'}>
+        {selectedTab === 'transaction' ? (
+          <TransactionInfo />
+        ) : (
+          <SolanaTransactionDetailBox
+            data={selectedPendingTransaction?.txDataUnion?.solanaTxData}
+            instructions={transactionDetails.instructions}
+            txType={selectedPendingTransaction.txType}
+          />
+        )}
+      </MessageBox>
 
       {retrySimulation && <TxWarningBanner retrySimulation={retrySimulation} />}
 
