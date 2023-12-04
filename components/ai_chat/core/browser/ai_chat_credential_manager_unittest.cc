@@ -183,12 +183,11 @@ class AIChatCredentialManagerUnitTest : public testing::Test {
             EXPECT_EQ(info->remaining_credential_count,
                       expected_info->remaining_credential_count);
 
-            if (expected_info->next_batch_active_at) {
-              ASSERT_TRUE(info->next_batch_active_at);
-              EXPECT_EQ(info->next_batch_active_at,
-                        expected_info->next_batch_active_at);
+            if (expected_info->next_active_at) {
+              ASSERT_TRUE(info->next_active_at);
+              EXPECT_EQ(info->next_active_at, expected_info->next_active_at);
             } else {
-              EXPECT_FALSE(info->next_batch_active_at);
+              EXPECT_FALSE(info->next_active_at);
             }
           } else {
             ASSERT_FALSE(info);
@@ -270,7 +269,7 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   TestGetPremiumStatus(mojom::PremiumStatus::Inactive, nullptr);
 
   // Add valid credential to the cache with an empty SkusState, GetPremiumStatus
-  // should return Active status, but next_batch_active_at is null.
+  // should return Active status, but next_active_at is null.
   entry.expires_at = base::Time::Now() + base::Hours(1);  // Valid
   ai_chat_credential_manager_->PutCredentialInCache(entry);
   mojom::PremiumInfoPtr expected_premium_info =
@@ -279,7 +278,7 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
                        std::move(expected_premium_info));
 
   // Add a valid SKUs state, which has 2 valid credentials. Including the 1 in
-  // the cache, there should be 3 total. next_batch_active_at should be the
+  // the cache, there should be 3 total. next_active_at should be the
   // second batch valid_from.
   base::Time start_time = base::Time::Now();
   base::Time::Exploded exploded;
@@ -291,23 +290,21 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   std::string skusStateValue = formatSkusStateValue(start_time);
   state.Set("skus:production", skusStateValue);
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));
-  base::Time expected_next_batch_active_at = start_time + base::Days(2);
-  expected_premium_info =
-      mojom::PremiumInfo::New(3, expected_next_batch_active_at);
+  base::Time expected_next_active_at = start_time + base::Days(2);
+  expected_premium_info = mojom::PremiumInfo::New(3, expected_next_active_at);
   TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // Remove the valid credential from the cache, and check status again.
-  // next_batch_active_at should be the same, but remaining_credential_count
+  // next_active_at should be the same, but remaining_credential_count
   // should be one less.
   TestFetchPremiumCredential(entry);
-  expected_premium_info =
-      mojom::PremiumInfo::New(2, expected_next_batch_active_at);
+  expected_premium_info = mojom::PremiumInfo::New(2, expected_next_active_at);
   TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // Set the SKUs state to be on the final batch. There will be remaining valid
-  // credentials, but next_batch_active_at will be null.
+  // credentials, but next_active_at will be null.
   skusStateValue = formatSkusStateValue(start_time, -2);
   state.Set("skus:production", skusStateValue);
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));

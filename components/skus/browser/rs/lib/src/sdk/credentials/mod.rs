@@ -63,13 +63,13 @@ where
 
                         let active = remaining_credential_count > 0;
 
-                        let next_batch_active_at = self.next_batch_active_at(&item.id).await?;
+                        let next_active_at = self.next_active_at(&item.id).await?;
                         return Ok(Some(CredentialSummary {
                             order,
                             remaining_credential_count, // number unspent
                             expires_at,
                             active,
-                            next_batch_active_at,
+                            next_active_at,
                         }));
                     }
 
@@ -91,7 +91,7 @@ where
                             remaining_credential_count,
                             expires_at,
                             active,
-                            next_batch_active_at: None,
+                            next_active_at: None,
                         }));
                     } else {
                         continue;
@@ -110,7 +110,7 @@ where
                             remaining_credential_count: 1,
                             expires_at,
                             active: true,
-                            next_batch_active_at: None,
+                            next_active_at: None,
                         }));
                     }
 
@@ -134,10 +134,7 @@ where
     }
 
     #[instrument]
-    pub async fn next_batch_active_at(
-        &self,
-        item_id: &str,
-    ) -> Result<Option<NaiveDateTime>, SkusError> {
+    pub async fn next_active_at(&self, item_id: &str) -> Result<Option<NaiveDateTime>, SkusError> {
         let now = Utc::now().naive_utc();
         let creds = self.client.get_time_limited_v2_creds(item_id).await?;
 
@@ -228,7 +225,7 @@ where
                                 remaining_credential_count: 0,
                                 expires_at: None,
                                 active: false,
-                                next_batch_active_at: None,
+                                next_active_at: None,
                             }));
                         }
                     }

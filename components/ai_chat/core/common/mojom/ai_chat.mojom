@@ -48,7 +48,7 @@ struct PremiumInfo {
 
   // When their next batch of credentials is active. If null, there is no
   // next batch.
-  mojo_base.mojom.Time? next_batch_active_at;
+  mojo_base.mojom.Time? next_active_at;
 };
 
 enum SuggestionGenerationStatus {

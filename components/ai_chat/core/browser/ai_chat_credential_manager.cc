@@ -90,7 +90,7 @@ void AIChatCredentialManager::OnCredentialSummary(
   if (credential_in_cache) {
     premium_info->remaining_credential_count = 1;
   }
-  premium_info->next_batch_active_at = std::nullopt;
+  premium_info->next_active_at = std::nullopt;
 
   std::string summary_string_trimmed;
   base::TrimWhitespaceASCII(summary_string, base::TrimPositions::TRIM_ALL,
@@ -134,13 +134,11 @@ void AIChatCredentialManager::OnCredentialSummary(
 
   premium_info->remaining_credential_count +=
       records_dict.FindInt("remaining_credential_count").value_or(0);
-  const std::string* next_batch_active_at =
-      records_dict.FindString("next_batch_active_at");
-  if (next_batch_active_at) {
-    base::Time next_batch_active_at_v;
-    if (base::Time::FromUTCString(next_batch_active_at->c_str(),
-                                  &next_batch_active_at_v)) {
-      premium_info->next_batch_active_at = next_batch_active_at_v;
+  const std::string* next_active_at = records_dict.FindString("next_active_at");
+  if (next_active_at) {
+    base::Time next_active_at_v;
+    if (base::Time::FromUTCString(next_active_at->c_str(), &next_active_at_v)) {
+      premium_info->next_active_at = next_active_at_v;
     }
   }
 

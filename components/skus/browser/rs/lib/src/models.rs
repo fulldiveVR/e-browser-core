@@ -170,7 +170,7 @@ pub struct CredentialSummary {
     pub remaining_credential_count: usize,
     pub expires_at: Option<NaiveDateTime>,
     pub active: bool,
-    pub next_batch_active_at: Option<NaiveDateTime>,
+    pub next_active_at: Option<NaiveDateTime>,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
