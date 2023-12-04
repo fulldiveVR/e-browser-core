@@ -44,7 +44,7 @@ export default function ModelIntro () {
           {formatMessage(getLocale('modelNameSyntax'), {
             placeholders: {
               $1: model.displayName,
-              $2: <span className={styles.maker}>{model.displayMaker}</span>
+              $2: model.displayMaker
             }
           })}
         </h3>
