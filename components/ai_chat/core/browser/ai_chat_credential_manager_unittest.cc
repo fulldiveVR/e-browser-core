@@ -150,7 +150,7 @@ class AIChatCredentialManagerUnitTest : public testing::Test {
 
   void SetUp() override {
     auto* registry = prefs_service_.registry();
-    ai_chat::prefs::RegisterLocalStatePrefs(registry);
+    prefs::RegisterLocalStatePrefs(registry);
     skus::RegisterLocalStatePrefs(registry);
     shared_url_loader_factory_ =
         base::MakeRefCounted<network::WeakWrapperSharedURLLoaderFactory>(
@@ -172,12 +172,11 @@ class AIChatCredentialManagerUnitTest : public testing::Test {
         ->MakeRemote();
   }
 
-  void TestGetPremiumStatus(ai_chat::mojom::PremiumStatus expected_status,
-                            ai_chat::mojom::PremiumInfoPtr expected_info) {
+  void TestGetPremiumStatus(mojom::PremiumStatus expected_status,
+                            mojom::PremiumInfoPtr expected_info) {
     base::RunLoop run_loop;
-    ai_chat_credential_manager_->GetPremiumStatus(
-        base::BindLambdaForTesting([&](ai_chat::mojom::PremiumStatus status,
-                                       ai_chat::mojom::PremiumInfoPtr info) {
+    ai_chat_credential_manager_->GetPremiumStatus(base::BindLambdaForTesting(
+        [&](mojom::PremiumStatus status, mojom::PremiumInfoPtr info) {
           EXPECT_EQ(status, expected_status);
           if (expected_info) {
             ASSERT_TRUE(info);
@@ -232,9 +231,8 @@ class AIChatCredentialManagerUnitTest : public testing::Test {
 
 TEST_F(AIChatCredentialManagerUnitTest, CacheDefault) {
   // Should be an empty dictionary by default
-  EXPECT_EQ(
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache),
-      base::Value::Dict());
+  EXPECT_EQ(prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache),
+            base::Value::Dict());
 }
 
 TEST_F(AIChatCredentialManagerUnitTest, PutCredentialInCache) {
@@ -243,41 +241,41 @@ TEST_F(AIChatCredentialManagerUnitTest, PutCredentialInCache) {
   entry.expires_at = base::Time::Now();
   ai_chat_credential_manager_->PutCredentialInCache(entry);
   const auto& cached_creds_dict =
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache);
   EXPECT_EQ(cached_creds_dict.size(), 1u);
   EXPECT_EQ(base::ValueToTime(*(cached_creds_dict.Find("credential"))),
             entry.expires_at);
 }
 TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusInactive) {
   // By default there should be no credentials.
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+  TestGetPremiumStatus(mojom::PremiumStatus::Inactive, nullptr);
 
   // Add an expired credential to the cache, should return false.
   CredentialCacheEntry entry;
   entry.credential = "credential";
   entry.expires_at = base::Time::Now() - base::Hours(1);  // Expired
   ai_chat_credential_manager_->PutCredentialInCache(entry);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+  TestGetPremiumStatus(mojom::PremiumStatus::Inactive, nullptr);
 }
 
 TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   // By default there should be no credentials.
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+  TestGetPremiumStatus(mojom::PremiumStatus::Inactive, nullptr);
 
   // Add an expired credential to the cache, status should be Inactive
   CredentialCacheEntry entry;
   entry.credential = "credential";
   entry.expires_at = base::Time::Now() - base::Hours(1);  // Expired
   ai_chat_credential_manager_->PutCredentialInCache(entry);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+  TestGetPremiumStatus(mojom::PremiumStatus::Inactive, nullptr);
 
   // Add valid credential to the cache with an empty SkusState, GetPremiumStatus
   // should return Active status, but next_batch_active_at is null.
   entry.expires_at = base::Time::Now() + base::Hours(1);  // Valid
   ai_chat_credential_manager_->PutCredentialInCache(entry);
-  ai_chat::mojom::PremiumInfoPtr expected_premium_info =
-      ai_chat::mojom::PremiumInfo::New(1, std::nullopt);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Active,
+  mojom::PremiumInfoPtr expected_premium_info =
+      mojom::PremiumInfo::New(1, std::nullopt);
+  TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // Add a valid SKUs state, which has 2 valid credentials. Including the 1 in
@@ -295,8 +293,8 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));
   base::Time expected_next_batch_active_at = start_time + base::Days(2);
   expected_premium_info =
-      ai_chat::mojom::PremiumInfo::New(3, expected_next_batch_active_at);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Active,
+      mojom::PremiumInfo::New(3, expected_next_batch_active_at);
+  TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // Remove the valid credential from the cache, and check status again.
@@ -304,8 +302,8 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   // should be one less.
   TestFetchPremiumCredential(entry);
   expected_premium_info =
-      ai_chat::mojom::PremiumInfo::New(2, expected_next_batch_active_at);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Active,
+      mojom::PremiumInfo::New(2, expected_next_batch_active_at);
+  TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // Set the SKUs state to be on the final batch. There will be remaining valid
@@ -313,8 +311,8 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   skusStateValue = formatSkusStateValue(start_time, -2);
   state.Set("skus:production", skusStateValue);
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));
-  expected_premium_info = ai_chat::mojom::PremiumInfo::New(2, std::nullopt);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Active,
+  expected_premium_info = mojom::PremiumInfo::New(2, std::nullopt);
+  TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 
   // ActiveDisconnected
@@ -322,16 +320,16 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActive) {
   skusStateValue = formatSkusStateValue(start_time);
   state.Set("skus:production", skusStateValue);
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));
-  expected_premium_info = ai_chat::mojom::PremiumInfo::New(0, std::nullopt);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::ActiveDisconnected,
+  expected_premium_info = mojom::PremiumInfo::New(0, std::nullopt);
+  TestGetPremiumStatus(mojom::PremiumStatus::ActiveDisconnected,
                        std::move(expected_premium_info));
 
   // Add a credential to the cache - would other wise be ActiveDisconnected
   // state based on the SKUs state, however, since there's a credential in the
   // cache, it's Active.
   ai_chat_credential_manager_->PutCredentialInCache(entry);
-  expected_premium_info = ai_chat::mojom::PremiumInfo::New(1, std::nullopt);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::Active,
+  expected_premium_info = mojom::PremiumInfo::New(1, std::nullopt);
+  TestGetPremiumStatus(mojom::PremiumStatus::Active,
                        std::move(expected_premium_info));
 }
 
@@ -343,9 +341,9 @@ TEST_F(AIChatCredentialManagerUnitTest, GetPremiumStatusActiveDisconnected) {
       formatSkusStateValue(base::Time::Now() + base::Days(30));
   state.Set("skus:production", skusStateValue);
   prefs()->SetDict(skus::prefs::kSkusState, std::move(state));
-  ai_chat::mojom::PremiumInfoPtr expected_premium_info =
-      ai_chat::mojom::PremiumInfo::New(0, std::nullopt);
-  TestGetPremiumStatus(ai_chat::mojom::PremiumStatus::ActiveDisconnected,
+  mojom::PremiumInfoPtr expected_premium_info =
+      mojom::PremiumInfo::New(0, std::nullopt);
+  TestGetPremiumStatus(mojom::PremiumStatus::ActiveDisconnected,
                        std::move(expected_premium_info));
 }
 
@@ -360,11 +358,11 @@ TEST_F(AIChatCredentialManagerUnitTest, FetchPremiumCredential) {
   entry.expires_at = base::Time::Now() - base::Hours(1);
   ai_chat_credential_manager_->PutCredentialInCache(entry);
   const auto& cached_creds_dict =
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache);
   EXPECT_EQ(cached_creds_dict.size(), 1u);
   TestFetchPremiumCredential(std::nullopt);
   const auto& cached_creds_list2 =
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache);
   EXPECT_EQ(cached_creds_list2.size(), 0u);
 
   // Add a valid credential to the cache. FetchPremiumCredential should
@@ -373,7 +371,7 @@ TEST_F(AIChatCredentialManagerUnitTest, FetchPremiumCredential) {
   ai_chat_credential_manager_->PutCredentialInCache(entry);
   TestFetchPremiumCredential(entry);
   const auto& cached_creds_list3 =
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache);
   EXPECT_EQ(cached_creds_list3.size(), 0u);
 
   // Add two valid credentials to the cache. FetchPremiumCredential should
@@ -385,7 +383,7 @@ TEST_F(AIChatCredentialManagerUnitTest, FetchPremiumCredential) {
   ai_chat_credential_manager_->PutCredentialInCache(entry2);
   TestFetchPremiumCredential(entry2);
   const auto& cached_creds_list4 =
-      prefs_service_.GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_.GetDict(prefs::kBraveChatPremiumCredentialCache);
   EXPECT_EQ(cached_creds_list4.size(), 1u);
   TestFetchPremiumCredential(entry);
 

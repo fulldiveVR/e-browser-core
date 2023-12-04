@@ -42,12 +42,12 @@ AIChatCredentialManager::AIChatCredentialManager(
 AIChatCredentialManager::~AIChatCredentialManager() = default;
 
 void AIChatCredentialManager::GetPremiumStatus(
-    ai_chat::mojom::PageHandler::GetPremiumStatusCallback callback) {
+    mojom::PageHandler::GetPremiumStatusCallback callback) {
   base::Time now = base::Time::Now();
   // First check for a valid credential in the cache.
   bool credential_in_cache = false;
   const auto& cached_creds_dict =
-      prefs_service_->GetDict(ai_chat::prefs::kBraveChatPremiumCredentialCache);
+      prefs_service_->GetDict(prefs::kBraveChatPremiumCredentialCache);
   for (const auto [credential, expires_at_value] : cached_creds_dict) {
     std::optional<base::Time> expires_at = base::ValueToTime(expires_at_value);
     if (!expires_at) {
@@ -82,12 +82,11 @@ void AIChatCredentialManager::GetPremiumStatus(
 }
 
 void AIChatCredentialManager::OnCredentialSummary(
-    ai_chat::mojom::PageHandler::GetPremiumStatusCallback callback,
+    mojom::PageHandler::GetPremiumStatusCallback callback,
     const std::string& domain,
     const bool credential_in_cache,
     const std::string& summary_string) {
-  ai_chat::mojom::PremiumInfoPtr premium_info =
-      ai_chat::mojom::PremiumInfo::New();
+  mojom::PremiumInfoPtr premium_info = mojom::PremiumInfo::New();
   if (credential_in_cache) {
     premium_info->remaining_credential_count = 1;
   }
@@ -98,12 +97,12 @@ void AIChatCredentialManager::OnCredentialSummary(
                             &summary_string_trimmed);
   if (summary_string_trimmed.empty()) {
     if (credential_in_cache) {
-      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+      std::move(callback).Run(mojom::PremiumStatus::Active,
                               std::move(premium_info));
       return;
     }
 
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+    std::move(callback).Run(mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
@@ -112,11 +111,11 @@ void AIChatCredentialManager::OnCredentialSummary(
 
   if (!records_v || !records_v->is_dict()) {
     if (credential_in_cache) {
-      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+      std::move(callback).Run(mojom::PremiumStatus::Active,
                               std::move(premium_info));
       return;
     }
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+    std::move(callback).Run(mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
@@ -124,12 +123,12 @@ void AIChatCredentialManager::OnCredentialSummary(
   // Empty dict - "{}" - all credentials are expired or it's a new user.
   if (records_dict.empty()) {
     if (credential_in_cache) {
-      std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+      std::move(callback).Run(mojom::PremiumStatus::Active,
                               std::move(premium_info));
       return;
     }
 
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::Inactive, nullptr);
+    std::move(callback).Run(mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
@@ -152,12 +151,12 @@ void AIChatCredentialManager::OnCredentialSummary(
   // refresh is available.
   if (premium_info->remaining_credential_count == 0 &&
       (!expires_at || expires_at->empty())) {
-    std::move(callback).Run(ai_chat::mojom::PremiumStatus::ActiveDisconnected,
+    std::move(callback).Run(mojom::PremiumStatus::ActiveDisconnected,
                             std::move(premium_info));
     return;
   }
 
-  std::move(callback).Run(ai_chat::mojom::PremiumStatus::Active,
+  std::move(callback).Run(mojom::PremiumStatus::Active,
                           std::move(premium_info));
 }
 
@@ -168,7 +167,7 @@ void AIChatCredentialManager::FetchPremiumCredential(
   // there is more than one valid credential, use the one that is expiring
   // soonest. Also, remove any expired credentials as we go.
   ScopedDictPrefUpdate update(prefs_service_,
-                              ai_chat::prefs::kBraveChatPremiumCredentialCache);
+                              prefs::kBraveChatPremiumCredentialCache);
   base::Value::Dict& dict = update.Get();
   base::Time now = base::Time::Now();
   CredentialCacheEntry valid_credential;
@@ -222,9 +221,9 @@ void AIChatCredentialManager::FetchPremiumCredential(
 void AIChatCredentialManager::OnGetPremiumStatus(
     base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>
         callback,
-    ai_chat::mojom::PremiumStatus status,
-    ai_chat::mojom::PremiumInfoPtr info) {
-  if (status != ai_chat::mojom::PremiumStatus::Active) {
+    mojom::PremiumStatus status,
+    mojom::PremiumInfoPtr info) {
+  if (status != mojom::PremiumStatus::Active) {
     std::move(callback).Run(std::nullopt);
     return;
   }
@@ -298,7 +297,7 @@ void AIChatCredentialManager::OnPrepareCredentialsPresentation(
 void AIChatCredentialManager::PutCredentialInCache(
     CredentialCacheEntry credential) {
   ScopedDictPrefUpdate update(prefs_service_,
-                              ai_chat::prefs::kBraveChatPremiumCredentialCache);
+                              prefs::kBraveChatPremiumCredentialCache);
   base::Value::Dict& dict = update.Get();
   dict.Set(credential.credential, base::TimeToValue(credential.expires_at));
 }
