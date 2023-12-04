@@ -6,8 +6,6 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_SERVING_ELIGIBLE_ADS_PRIORITY_PRIORITY_UTIL_H_
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_SERVING_ELIGIBLE_ADS_PRIORITY_PRIORITY_UTIL_H_
 
-#include <utility>
-
 #include "base/check.h"
 #include "base/containers/flat_map.h"
 #include "base/ranges/algorithm.h"
@@ -37,15 +35,16 @@ SortCreativeAdsIntoPrioritizedBuckets(const T& creative_ads) {
 }
 
 template <typename T>
-std::pair</*priority*/ int, /*creative_ads*/ T> GetHighestPriorityBucket(
-    const base::flat_map<int, T>& buckets) {
+T GetHighestPriorityBucket(const base::flat_map<int, T>& buckets) {
   CHECK(!buckets.empty());
 
   const auto iter = base::ranges::min_element(
       buckets,
       [](const auto& lhs, const auto& rhs) { return lhs.first < rhs.first; });
 
-  return *iter;
+  const auto& [_, bucket] = *iter;
+
+  return bucket;
 }
 
 }  // namespace brave_ads

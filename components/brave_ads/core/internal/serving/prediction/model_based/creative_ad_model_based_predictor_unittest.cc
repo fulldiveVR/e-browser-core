@@ -10,6 +10,7 @@
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_info.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_notification_ad_model_based_predictor_feature.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/latent_interest/latent_interest_user_model_info.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
@@ -56,9 +57,9 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorTest, DoNotPredictCreativeAd) {
        {"parent_latent_interest_segment_predictor_weight", "0.0"},
        {"child_interest_segment_predictor_weight", "0.0"},
        {"parent_interest_segment_predictor_weight", "0.0"},
+       {"untargeted_segment_predictor_weight", "0.0"},
        {"last_seen_ad_predictor_weight", "0.0"},
-       {"last_seen_advertiser_predictor_weight", "0.0"},
-       {"priority_predictor_weight", "0.0"}});
+       {"last_seen_advertiser_predictor_weight", "0.0"}});
 
   CreativeNotificationAdList creative_ads;
   const CreativeNotificationAdInfo creative_ad =
@@ -67,9 +68,10 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorTest, DoNotPredictCreativeAd) {
   creative_ads.push_back(creative_ad);
 
   const UserModelInfo user_model{
-      IntentUserModelInfo{SegmentList{"parent-child"}},
-      LatentInterestUserModelInfo{SegmentList{"parent-child"}},
-      InterestUserModelInfo{SegmentList{"parent-child"},
+      IntentUserModelInfo{SegmentList{"parent-child", kUntargetedSegment}},
+      LatentInterestUserModelInfo{
+          SegmentList{"parent-child", kUntargetedSegment}},
+      InterestUserModelInfo{SegmentList{"parent-child", kUntargetedSegment},
                             TextEmbeddingHtmlEventList{}}};
 
   AdEventList ad_events;

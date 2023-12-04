@@ -10,6 +10,8 @@
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_info.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/creative_ad_model_based_predictor_input_variable.h"
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/creative_ad_model_based_predictor_input_variable_info.h"
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/weight/creative_ad_model_based_predictor_weights_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/weight/segment/creative_ad_model_based_predictor_segment_weight_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
@@ -47,7 +49,7 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorScoringTest,
           test::BuildCreativeAdModelBasedPredictorWeights());
 
   // Act & Assert
-  EXPECT_DOUBLE_EQ(4.083333333333333,
+  EXPECT_DOUBLE_EQ(3.583333333333333,
                    ComputeCreativeAdModelBasedPredictorScore(input_variable));
 }
 
@@ -73,7 +75,8 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorScoringTest,
 
   const CreativeAdModelBasedPredictorInputVariableInfo input_variable =
       ComputeCreativeAdModelBasedPredictorInputVariable(
-          creative_ad, user_model, ad_events, /*weights=*/{});
+          creative_ad, user_model, ad_events,
+          CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Act & Assert
   EXPECT_DOUBLE_EQ(0.0,

@@ -6,7 +6,6 @@
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/scoring/creative_ad_model_based_predictor_scoring_util.h"
 
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/last_seen/creative_ad_model_based_predictor_last_seen_input_variable_info.h"
-#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/priority/creative_ad_model_based_predictor_priority_input_variable_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/segment/creative_ad_model_based_predictor_segment_input_variables_info.h"
 
 namespace brave_ads {
@@ -14,6 +13,10 @@ namespace brave_ads {
 double ComputeSegmentScore(
     const CreativeAdModelBasedPredictorSegmentInputVariablesInfo&
         segment_input_variable) {
+  if (segment_input_variable.untargeted_matches.value) {
+    return segment_input_variable.untargeted_matches.weight;
+  }
+
   if (segment_input_variable.child_matches.value) {
     return segment_input_variable.child_matches.weight;
   }
@@ -40,14 +43,6 @@ double ComputeLastSeenScore(
   }
 
   return weight;
-}
-
-double ComputePriorityScore(
-    const CreativeAdModelBasedPredictorPriorityInputVariableInfo&
-        priority_input_variable) {
-  return priority_input_variable.value == 0
-             ? 0.0
-             : priority_input_variable.weight / priority_input_variable.value;
 }
 
 }  // namespace brave_ads

@@ -17,6 +17,7 @@
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/exclusion_rules_util.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/notification_ads/notification_ad_exclusion_rules.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/pacing/pacing.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/priority/priority.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_ad_model_based_predictor.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
 #include "brave/components/brave_ads/core/internal/targeting/behavioral/anti_targeting/resource/anti_targeting_resource.h"
@@ -129,7 +130,9 @@ CreativeNotificationAdList EligibleNotificationAdsV2::FilterCreativeAds(
   eligible_creative_ads = ApplyExclusionRules(
       eligible_creative_ads, last_served_ad_, &exclusion_rules);
 
-  return PaceCreativeAds(eligible_creative_ads);
+  eligible_creative_ads = PaceCreativeAds(eligible_creative_ads);
+
+  return PrioritizeCreativeAds(eligible_creative_ads);
 }
 
 }  // namespace brave_ads

@@ -14,6 +14,9 @@ struct CreativeAdModelBasedPredictorSegmentInputVariablesInfo final {
   bool operator==(const CreativeAdModelBasedPredictorSegmentInputVariablesInfo&)
       const = default;
 
+  bool MatchesAny() const;
+
+  CreativeAdModelBasedPredictorSegmentInputVariableInfo untargeted_matches;
   CreativeAdModelBasedPredictorSegmentInputVariableInfo child_matches;
   CreativeAdModelBasedPredictorSegmentInputVariableInfo parent_matches;
 };

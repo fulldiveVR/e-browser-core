@@ -80,6 +80,11 @@ TEST_F(BraveAdsEligibleInlineContentAdsV2Test, GetAdsForNoSegments) {
   creative_ad_2.segment = "foo-bar";
   creative_ads.push_back(creative_ad_2);
 
+  CreativeInlineContentAdInfo creative_ad_3 =
+      test::BuildCreativeInlineContentAd(/*should_use_random_uuids=*/true);
+  creative_ad_3.segment = "untargeted";
+  creative_ads.push_back(creative_ad_3);
+
   database::SaveCreativeInlineContentAds(creative_ads);
 
   // Act & Assert

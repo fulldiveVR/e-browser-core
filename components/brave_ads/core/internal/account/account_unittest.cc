@@ -36,6 +36,7 @@
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_info.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ads_database_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/settings/settings_unittest_util.h"
 #include "net/http/http_status_code.h"
 
@@ -297,8 +298,8 @@ TEST_F(BraveAdsAccountTest, DepositForNonCash) {
   EXPECT_CALL(observer_mock_, OnFailedToProcessDeposit).Times(0);
   EXPECT_CALL(*ads_observer_mock_, OnAdRewardsDidChange);
 
-  account_->Deposit(kCreativeInstanceId, kSegment, AdType::kNotificationAd,
-                    ConfirmationType::kClicked);
+  account_->Deposit(kCreativeInstanceId, kUntargetedSegment,
+                    AdType::kNotificationAd, ConfirmationType::kClicked);
 }
 
 TEST_F(BraveAdsAccountTest, DoNotDepositCashIfCreativeInstanceIdDoesNotExist) {
@@ -314,7 +315,7 @@ TEST_F(BraveAdsAccountTest, DoNotDepositCashIfCreativeInstanceIdDoesNotExist) {
   EXPECT_CALL(observer_mock_, OnFailedToProcessDeposit);
   EXPECT_CALL(*ads_observer_mock_, OnAdRewardsDidChange).Times(0);
 
-  account_->Deposit(kMissingCreativeInstanceId, kSegment,
+  account_->Deposit(kMissingCreativeInstanceId, kUntargetedSegment,
                     AdType::kNotificationAd, ConfirmationType::kViewed);
 }
 

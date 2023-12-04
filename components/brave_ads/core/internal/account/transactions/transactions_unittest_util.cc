@@ -13,6 +13,7 @@
 #include "brave/components/brave_ads/core/internal/account/transactions/transactions_database_table.h"
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/public/ad_units/ad_type.h"
 
 namespace brave_ads::test {
@@ -38,7 +39,7 @@ TransactionInfo BuildTransaction(const double value,
           ? base::Uuid::GenerateRandomV4().AsLowercaseString()
           : kCreativeInstanceId;
   transaction.value = value;
-  transaction.segment = "untargeted";
+  transaction.segment = kUntargetedSegment;
   transaction.ad_type = AdType::kNotificationAd;
   transaction.confirmation_type = confirmation_type;
   transaction.reconciled_at = reconciled_at;

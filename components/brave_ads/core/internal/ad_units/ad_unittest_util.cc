@@ -7,6 +7,7 @@
 
 #include "base/uuid.h"
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/public/ad_units/ad_info.h"
 #include "url/gurl.h"
 
@@ -38,7 +39,7 @@ AdInfo BuildAd(AdType ad_type, const bool should_use_random_uuids) {
                          ? base::Uuid::GenerateRandomV4().AsLowercaseString()
                          : kAdvertiserId;
 
-  ad.segment = kSegment;
+  ad.segment = kUntargetedSegment;
 
   ad.target_url = GURL("https://brave.com");
 

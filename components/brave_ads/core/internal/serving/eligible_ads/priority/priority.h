@@ -31,8 +31,7 @@ T PrioritizeCreativeAds(const T& creative_ads) {
     bucket_number++;
   }
 
-  const auto& [_, bucket] = GetHighestPriorityBucket(buckets);
-  return bucket;
+  return GetHighestPriorityBucket(buckets);
 }
 
 }  // namespace brave_ads

@@ -34,8 +34,6 @@ inline constexpr char kMissingAdvertiserId[] =
     "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 inline constexpr char kInvalidAdvertiserId[] = "";
 
-inline constexpr char kSegment[] = "untargeted";
-
 }  // namespace brave_ads
 
 #endif  // BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_AD_UNITS_AD_UNITTEST_CONSTANTS_H_

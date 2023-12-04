@@ -188,7 +188,7 @@ void EligibleNotificationAdsV1::GetForUntargeted(
 
   const database::table::CreativeNotificationAds database_table;
   database_table.GetForSegments(
-      {kUntargeted},
+      {kUntargetedSegment},
       base::BindOnce(&EligibleNotificationAdsV1::GetForUntargetedCallback,
                      weak_factory_.GetWeakPtr(), ad_events, browsing_history,
                      std::move(callback)));

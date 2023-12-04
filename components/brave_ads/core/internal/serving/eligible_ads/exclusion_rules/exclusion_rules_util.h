@@ -31,7 +31,6 @@ T ApplyExclusionRules(const T& creative_ads,
       ShouldCapLastServedCreativeAd(creative_ads);
 
   T filtered_creative_ads;
-
   base::ranges::copy_if(
       creative_ads, std::back_inserter(filtered_creative_ads),
       [exclusion_rules, &last_served_ad,

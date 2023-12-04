@@ -5,11 +5,11 @@
 
 #include "brave/components/brave_ads/core/internal/history/ad_content_util.h"
 
-#include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_info.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/notification_ad_builder.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_info.h"
 
@@ -40,7 +40,7 @@ TEST_F(BraveAdsAdContentUtilTest, Build) {
   expected_ad_content.creative_set_id = ad.creative_set_id;
   expected_ad_content.campaign_id = ad.campaign_id;
   expected_ad_content.advertiser_id = ad.advertiser_id;
-  expected_ad_content.segment = kSegment;
+  expected_ad_content.segment = kUntargetedSegment;
   expected_ad_content.brand = kTitle;
   expected_ad_content.brand_info = kDescription;
   expected_ad_content.brand_display_url = ad.target_url.host();

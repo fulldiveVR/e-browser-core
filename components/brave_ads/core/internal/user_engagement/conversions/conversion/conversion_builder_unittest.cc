@@ -9,6 +9,7 @@
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_builder.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/actions/conversion_action_types.h"
@@ -34,7 +35,7 @@ TEST(BraveAdsConversionBuilderTest, BuildConversion) {
   expected_conversion.creative_set_id = kCreativeSetId;
   expected_conversion.campaign_id = kCampaignId;
   expected_conversion.advertiser_id = kAdvertiserId;
-  expected_conversion.segment = kSegment;
+  expected_conversion.segment = kUntargetedSegment;
   expected_conversion.action_type = ConversionActionType::kViewThrough;
   EXPECT_EQ(expected_conversion,
             BuildConversion(BuildAdEvent(ad, ConfirmationType::kViewed,
@@ -54,7 +55,7 @@ TEST(BraveAdsConversionBuilderTest, BuildVerifiableConversion) {
   expected_conversion.creative_set_id = kCreativeSetId;
   expected_conversion.campaign_id = kCampaignId;
   expected_conversion.advertiser_id = kAdvertiserId;
-  expected_conversion.segment = kSegment;
+  expected_conversion.segment = kUntargetedSegment;
   expected_conversion.action_type = ConversionActionType::kViewThrough;
   expected_conversion.verifiable = VerifiableConversionInfo{
       kVerifiableConversionId, kVerifiableConversionAdvertiserPublicKey};

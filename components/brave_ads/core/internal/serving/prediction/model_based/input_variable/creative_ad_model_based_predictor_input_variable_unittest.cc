@@ -9,6 +9,7 @@
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_info.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/creative_ad_model_based_predictor_input_variable_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/weight/creative_ad_model_based_predictor_weights_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/weight/segment/creative_ad_model_based_predictor_segment_weight_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
@@ -41,22 +42,26 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorInputVariableTest,
                          /*should_use_random_uuids=*/true);
   ad_events.push_back(ad_event);
 
+  // Act
   const CreativeAdModelBasedPredictorInputVariableInfo input_variable =
       ComputeCreativeAdModelBasedPredictorInputVariable(
           creative_ad, user_model, ad_events,
           test::BuildCreativeAdModelBasedPredictorWeights());
 
-  // Act & Assert
+  // Assert
   CreativeAdModelBasedPredictorInputVariableInfo expected_input_variable;
+  expected_input_variable.intent_segment.untargeted_matches.value = false;
   expected_input_variable.intent_segment.child_matches.value = true;
   expected_input_variable.intent_segment.parent_matches.value = true;
+  expected_input_variable.latent_interest_segment.untargeted_matches.value =
+      false;
   expected_input_variable.latent_interest_segment.child_matches.value = false;
   expected_input_variable.latent_interest_segment.parent_matches.value = false;
+  expected_input_variable.interest_segment.untargeted_matches.value = false;
   expected_input_variable.interest_segment.child_matches.value = false;
   expected_input_variable.interest_segment.parent_matches.value = true;
   expected_input_variable.last_seen_ad.value = base::Hours(7);
   expected_input_variable.last_seen_advertiser.value = base::Hours(7);
-  expected_input_variable.priority.value = 2;
   EXPECT_EQ(expected_input_variable, input_variable);
 }
 

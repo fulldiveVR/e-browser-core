@@ -7,7 +7,6 @@
 
 #include "base/time/time.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/last_seen/creative_ad_model_based_predictor_last_seen_input_variable_info.h"
-#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/priority/creative_ad_model_based_predictor_priority_input_variable_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/segment/creative_ad_model_based_predictor_segment_input_variables_info.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
@@ -72,28 +71,6 @@ TEST(BraveAdsCreativeAdModelBasedPredictorScoringUtilTest,
 
   // Act & Assert
   EXPECT_DOUBLE_EQ(1.0, ComputeLastSeenScore(last_seen_input_variable));
-}
-
-TEST(BraveAdsCreativeAdModelBasedPredictorScoringUtilTest,
-     ComputePriorityScore) {
-  // Arrange
-  CreativeAdModelBasedPredictorPriorityInputVariableInfo
-      priority_input_variable;
-  priority_input_variable.value = 5;
-
-  // Act & Assert
-  EXPECT_DOUBLE_EQ(0.2, ComputePriorityScore(priority_input_variable));
-}
-
-TEST(BraveAdsCreativeAdModelBasedPredictorScoringUtilTest,
-     ComputeZeroPriorityScore) {
-  // Arrange
-  CreativeAdModelBasedPredictorPriorityInputVariableInfo
-      priority_input_variable;
-  priority_input_variable.value = 0;
-
-  // Act & Assert
-  EXPECT_DOUBLE_EQ(0.0, ComputePriorityScore(priority_input_variable));
 }
 
 }  // namespace brave_ads

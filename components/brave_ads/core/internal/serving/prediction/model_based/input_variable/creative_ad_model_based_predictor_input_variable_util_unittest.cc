@@ -8,6 +8,8 @@
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/last_seen/creative_ad_model_based_predictor_last_seen_input_variable_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/segment/creative_ad_model_based_predictor_segment_input_variables_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/weight/creative_ad_model_based_predictor_weights_info.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
@@ -22,6 +24,26 @@ class BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest
 
 TEST_F(
     BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
+    ComputeCreativeAdModelBasedPredictorMatchingUntargetedIntentSegmentInputVariable) {
+  // Arrange
+  UserModelInfo user_model;
+  user_model.intent.segments = {"parent-child", "xyzzy-thud"};
+
+  // Act
+  const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
+      intent_segment_input_variable =
+          ComputeCreativeAdModelBasedPredictorIntentSegmentInputVariable(
+              user_model, kUntargetedSegment,
+              CreativeAdModelBasedPredictorWeightsInfo{});
+
+  // Assert
+  EXPECT_TRUE(intent_segment_input_variable.untargeted_matches.value);
+  EXPECT_FALSE(intent_segment_input_variable.child_matches.value);
+  EXPECT_FALSE(intent_segment_input_variable.parent_matches.value);
+}
+
+TEST_F(
+    BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
     ComputeCreativeAdModelBasedPredictorMatchingChildIntentSegmentInputVariable) {
   // Arrange
   UserModelInfo user_model;
@@ -31,9 +53,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       intent_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorIntentSegmentInputVariable(
-              user_model, "parent-child", /*weights=*/{});
+              user_model, "parent-child",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(intent_segment_input_variable.untargeted_matches.value);
   EXPECT_TRUE(intent_segment_input_variable.child_matches.value);
   EXPECT_TRUE(intent_segment_input_variable.parent_matches.value);
 }
@@ -49,9 +73,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       intent_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorIntentSegmentInputVariable(
-              user_model, "parent-foo", /*weights=*/{});
+              user_model, "parent-foo",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(intent_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(intent_segment_input_variable.child_matches.value);
   EXPECT_TRUE(intent_segment_input_variable.parent_matches.value);
 }
@@ -67,11 +93,33 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       intent_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorIntentSegmentInputVariable(
-              user_model, "foo-bar", /*weights=*/{});
+              user_model, "foo-bar",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(intent_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(intent_segment_input_variable.child_matches.value);
   EXPECT_FALSE(intent_segment_input_variable.parent_matches.value);
+}
+
+TEST_F(
+    BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
+    ComputeCreativeAdModelBasedPredictorMatchingUntargetedLatentInterestSegmentInputVariable) {
+  // Arrange
+  UserModelInfo user_model;
+  user_model.latent_interest.segments = {"parent-child", "xyzzy-thud"};
+
+  // Act
+  const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
+      latent_interest_segment_input_variable =
+          ComputeCreativeAdModelBasedPredictorLatentInterestSegmentInputVariable(
+              user_model, kUntargetedSegment,
+              CreativeAdModelBasedPredictorWeightsInfo{});
+
+  // Assert
+  EXPECT_TRUE(latent_interest_segment_input_variable.untargeted_matches.value);
+  EXPECT_FALSE(latent_interest_segment_input_variable.child_matches.value);
+  EXPECT_FALSE(latent_interest_segment_input_variable.parent_matches.value);
 }
 
 TEST_F(
@@ -85,9 +133,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       latent_interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorLatentInterestSegmentInputVariable(
-              user_model, "parent-child", /*weights=*/{});
+              user_model, "parent-child",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(latent_interest_segment_input_variable.untargeted_matches.value);
   EXPECT_TRUE(latent_interest_segment_input_variable.child_matches.value);
   EXPECT_TRUE(latent_interest_segment_input_variable.parent_matches.value);
 }
@@ -103,9 +153,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       latent_interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorLatentInterestSegmentInputVariable(
-              user_model, "parent-foo", /*weights=*/{});
+              user_model, "parent-foo",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(latent_interest_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(latent_interest_segment_input_variable.child_matches.value);
   EXPECT_TRUE(latent_interest_segment_input_variable.parent_matches.value);
 }
@@ -121,11 +173,33 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       latent_interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorLatentInterestSegmentInputVariable(
-              user_model, "foo-bar", /*weights=*/{});
+              user_model, "foo-bar",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(latent_interest_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(latent_interest_segment_input_variable.child_matches.value);
   EXPECT_FALSE(latent_interest_segment_input_variable.parent_matches.value);
+}
+
+TEST_F(
+    BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
+    ComputeCreativeAdModelBasedPredictorMatchingUntargetedInterestSegmentInputVariable) {
+  // Arrange
+  UserModelInfo user_model;
+  user_model.interest.segments = {"parent-child", "xyzzy-thud"};
+
+  // Act
+  const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
+      interest_segment_input_variable =
+          ComputeCreativeAdModelBasedPredictorInterestSegmentInputVariable(
+              user_model, kUntargetedSegment,
+              CreativeAdModelBasedPredictorWeightsInfo{});
+
+  // Assert
+  EXPECT_TRUE(interest_segment_input_variable.untargeted_matches.value);
+  EXPECT_FALSE(interest_segment_input_variable.child_matches.value);
+  EXPECT_FALSE(interest_segment_input_variable.parent_matches.value);
 }
 
 TEST_F(
@@ -139,9 +213,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorInterestSegmentInputVariable(
-              user_model, "parent-child", /*weights=*/{});
+              user_model, /*segment=*/"parent-child",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(interest_segment_input_variable.untargeted_matches.value);
   EXPECT_TRUE(interest_segment_input_variable.child_matches.value);
   EXPECT_TRUE(interest_segment_input_variable.parent_matches.value);
 }
@@ -157,9 +233,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorInterestSegmentInputVariable(
-              user_model, "parent-foo", /*weights=*/{});
+              user_model, /*segment=*/"parent-foo",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(interest_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(interest_segment_input_variable.child_matches.value);
   EXPECT_TRUE(interest_segment_input_variable.parent_matches.value);
 }
@@ -175,9 +253,11 @@ TEST_F(
   const CreativeAdModelBasedPredictorSegmentInputVariablesInfo
       interest_segment_input_variable =
           ComputeCreativeAdModelBasedPredictorInterestSegmentInputVariable(
-              user_model, "foo-bar", /*weights=*/{});
+              user_model, /*segment=*/"foo-bar",
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
   // Assert
+  EXPECT_FALSE(interest_segment_input_variable.untargeted_matches.value);
   EXPECT_FALSE(interest_segment_input_variable.child_matches.value);
   EXPECT_FALSE(interest_segment_input_variable.parent_matches.value);
 }
@@ -195,12 +275,14 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
                          /*should_use_random_uuids=*/true);
   ad_events.push_back(ad_event);
 
+  // Act
   const CreativeAdModelBasedPredictorLastSeenInputVariableInfo
       last_seen_ad_input_variable =
           ComputeCreativeAdModelBasedPredictorLastSeenAdInputVariable(
-              creative_ad, ad_events, /*weights=*/{});
+              creative_ad, ad_events,
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
-  // Act & Assert
+  // Assert
   EXPECT_EQ(base::Hours(7), last_seen_ad_input_variable.value);
 }
 
@@ -210,12 +292,14 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
   const CreativeAdInfo creative_ad =
       test::BuildCreativeAd(/*should_use_random_uuids=*/true);
 
+  // Act
   const CreativeAdModelBasedPredictorLastSeenInputVariableInfo
       last_seen_ad_input_variable =
           ComputeCreativeAdModelBasedPredictorLastSeenAdInputVariable(
-              creative_ad, /*ad_events=*/{}, /*weights=*/{});
+              creative_ad, AdEventList{},
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
-  // Act & Assert
+  // Assert
   EXPECT_FALSE(last_seen_ad_input_variable.value);
 }
 
@@ -232,12 +316,14 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
                          /*should_use_random_uuids=*/true);
   ad_events.push_back(ad_event);
 
+  // Act
   const CreativeAdModelBasedPredictorLastSeenInputVariableInfo
       last_seen_advertiser_input_variable =
           ComputeCreativeAdModelBasedPredictorLastSeenAdvertiserInputVariable(
-              creative_ad, ad_events, /*weights=*/{});
+              creative_ad, ad_events,
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
-  // Act & Assert
+  // Assert
   EXPECT_EQ(base::Hours(3), last_seen_advertiser_input_variable.value);
 }
 
@@ -248,28 +334,15 @@ TEST_F(
   const CreativeAdInfo creative_ad =
       test::BuildCreativeAd(/*should_use_random_uuids=*/true);
 
+  // Act
   const CreativeAdModelBasedPredictorLastSeenInputVariableInfo
       last_seen_advertiser_input_variable =
           ComputeCreativeAdModelBasedPredictorLastSeenAdvertiserInputVariable(
-              creative_ad, /*ad_events=*/{}, /*weights=*/{});
+              creative_ad, AdEventList{},
+              CreativeAdModelBasedPredictorWeightsInfo{});
 
-  // Act & Assert
+  // Assert
   EXPECT_FALSE(last_seen_advertiser_input_variable.value);
-}
-
-TEST_F(BraveAdsCreativeAdModelBasedPredictorInputVariableUtilTest,
-       ComputeCreativeAdModelBasedPredictorPriorityInputVariable) {
-  // Arrange
-  const CreativeAdInfo creative_ad =
-      test::BuildCreativeAd(/*should_use_random_uuids=*/true);
-
-  const CreativeAdModelBasedPredictorPriorityInputVariableInfo
-      priority_input_variable =
-          ComputeCreativeAdModelBasedPredictorPriorityInputVariable(
-              creative_ad, /*weights=*/{});
-
-  // Act & Assert
-  EXPECT_EQ(2, priority_input_variable.value);
 }
 
 }  // namespace brave_ads

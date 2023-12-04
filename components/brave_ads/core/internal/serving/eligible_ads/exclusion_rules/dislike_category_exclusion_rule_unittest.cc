@@ -5,9 +5,9 @@
 
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/dislike_category_exclusion_rule.h"
 
-#include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/deprecated/client/client_state_manager.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
 #include "brave/components/brave_ads/core/public/history/category_content_info.h"
 
@@ -23,7 +23,7 @@ class BraveAdsDislikeCategoryExclusionRuleTest : public UnitTestBase {
 TEST_F(BraveAdsDislikeCategoryExclusionRuleTest, ShouldInclude) {
   // Arrange
   CreativeAdInfo creative_ad;
-  creative_ad.segment = kSegment;
+  creative_ad.segment = kUntargetedSegment;
 
   // Act & Assert
   EXPECT_TRUE(exclusion_rule_.ShouldInclude(creative_ad).has_value());
@@ -32,7 +32,7 @@ TEST_F(BraveAdsDislikeCategoryExclusionRuleTest, ShouldInclude) {
 TEST_F(BraveAdsDislikeCategoryExclusionRuleTest, ShouldExclude) {
   // Arrange
   CreativeAdInfo creative_ad;
-  creative_ad.segment = kSegment;
+  creative_ad.segment = kUntargetedSegment;
 
   CategoryContentInfo category_content;
   category_content.category = creative_ad.segment;

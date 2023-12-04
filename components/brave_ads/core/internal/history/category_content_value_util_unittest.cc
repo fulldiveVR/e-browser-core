@@ -6,9 +6,9 @@
 #include "brave/components/brave_ads/core/public/history/category_content_value_util.h"
 
 #include "base/test/values_test_util.h"
-#include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/history/category_content_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/public/history/category_content_info.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
@@ -33,12 +33,14 @@ TEST_F(BraveAdsCategoryContentValueUtilTest, FromValue) {
   const base::Value::Dict dict = base::test::ParseJsonDict(kJson);
 
   // Act & Assert
-  EXPECT_EQ(BuildCategoryContent(kSegment), CategoryContentFromValue(dict));
+  EXPECT_EQ(BuildCategoryContent(kUntargetedSegment),
+            CategoryContentFromValue(dict));
 }
 
 TEST_F(BraveAdsCategoryContentValueUtilTest, ToValue) {
   // Arrange
-  const CategoryContentInfo category_content = BuildCategoryContent(kSegment);
+  const CategoryContentInfo category_content =
+      BuildCategoryContent(kUntargetedSegment);
 
   // Act & Assert
   EXPECT_EQ(base::test::ParseJsonDict(kJson),

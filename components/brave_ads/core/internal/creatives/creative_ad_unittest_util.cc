@@ -9,6 +9,7 @@
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_info.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "url/gurl.h"
 
 namespace brave_ads::test {
@@ -53,7 +54,7 @@ CreativeAdInfo BuildCreativeAd(const bool should_use_random_uuids) {
 
   creative_ad.value = 1.0;
 
-  creative_ad.segment = "untargeted";
+  creative_ad.segment = kUntargetedSegment;
 
   creative_ad.split_test_group = "";
 

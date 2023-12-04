@@ -6,6 +6,7 @@
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/scoring/creative_ad_model_based_predictor_scoring.h"
 
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/creative_ad_model_based_predictor_input_variable_info.h"
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/input_variable/segment/creative_ad_model_based_predictor_segment_input_variables_info.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/scoring/creative_ad_model_based_predictor_scoring_util.h"
 
 namespace brave_ads {
@@ -18,10 +19,13 @@ double ComputeCreativeAdModelBasedPredictorScore(
   score += ComputeSegmentScore(input_variable.latent_interest_segment);
   score += ComputeSegmentScore(input_variable.interest_segment);
 
-  score += ComputeLastSeenScore(input_variable.last_seen_ad);
-  score += ComputeLastSeenScore(input_variable.last_seen_advertiser);
-
-  score += ComputePriorityScore(input_variable.priority);
+  // TODO(tmancey): Discuss with Terry James.
+  if (input_variable.intent_segment.MatchesAny() ||
+      input_variable.latent_interest_segment.MatchesAny() ||
+      input_variable.interest_segment.MatchesAny()) {
+    score += ComputeLastSeenScore(input_variable.last_seen_ad);
+    score += ComputeLastSeenScore(input_variable.last_seen_advertiser);
+  }
 
   return score;
 }

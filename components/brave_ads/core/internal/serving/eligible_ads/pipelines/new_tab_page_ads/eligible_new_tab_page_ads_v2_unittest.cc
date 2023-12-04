@@ -77,6 +77,11 @@ TEST_F(BraveAdsEligibleNewTabPageAdsV2Test, GetAdsForNoSegments) {
   creative_ad_2.segment = "foo-bar";
   creative_ads.push_back(creative_ad_2);
 
+  CreativeNewTabPageAdInfo creative_ad_3 =
+      test::BuildCreativeNewTabPageAd(/*should_use_random_uuids=*/true);
+  creative_ad_3.segment = "untargeted";
+  creative_ads.push_back(creative_ad_3);
+
   database::SaveCreativeNewTabPageAds(creative_ads);
 
   // Act & Assert

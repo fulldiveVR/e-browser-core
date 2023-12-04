@@ -188,7 +188,7 @@ void EligibleNewTabPageAdsV1::GetForUntargeted(
 
   const database::table::CreativeNewTabPageAds database_table;
   database_table.GetForSegments(
-      {kUntargeted},
+      {kUntargetedSegment},
       base::BindOnce(&EligibleNewTabPageAdsV1::GetForUntargetedCallback,
                      weak_factory_.GetWeakPtr(), ad_events, browsing_history,
                      std::move(callback)));

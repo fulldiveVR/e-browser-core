@@ -22,11 +22,11 @@ BuildCreativeAdModelBasedPredictorWeights() {
   weights.interest_segment.child = 1.0;
   weights.interest_segment.parent = 1.0;
 
+  weights.untargeted_segment = 1.0;
+
   weights.last_seen_ad = 1.0;
 
   weights.last_seen_advertiser = 1.0;
-
-  weights.priority = 1.0;
 
   return weights;
 }

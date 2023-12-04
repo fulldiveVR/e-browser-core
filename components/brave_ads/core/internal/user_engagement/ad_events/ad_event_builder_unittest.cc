@@ -9,6 +9,7 @@
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_util.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
 #include "brave/components/brave_ads/core/public/ad_units/ad_info.h"
 
@@ -32,7 +33,7 @@ TEST_F(BraveAdsAdEventBuilderTest, BuildAdEvent) {
   expected_ad_event.creative_set_id = kCreativeSetId;
   expected_ad_event.campaign_id = kCampaignId;
   expected_ad_event.advertiser_id = kAdvertiserId;
-  expected_ad_event.segment = kSegment;
+  expected_ad_event.segment = kUntargetedSegment;
   expected_ad_event.created_at = Now();
   EXPECT_EQ(expected_ad_event,
             BuildAdEvent(ad, ConfirmationType::kViewed, /*created_at=*/Now()));
@@ -55,7 +56,7 @@ TEST_F(BraveAdsAdEventBuilderTest, RebuildAdEvent) {
   expected_rebuilt_ad_event.creative_set_id = kCreativeSetId;
   expected_rebuilt_ad_event.campaign_id = kCampaignId;
   expected_rebuilt_ad_event.advertiser_id = kAdvertiserId;
-  expected_rebuilt_ad_event.segment = kSegment;
+  expected_rebuilt_ad_event.segment = kUntargetedSegment;
   expected_rebuilt_ad_event.created_at = DistantFuture();
   EXPECT_EQ(expected_rebuilt_ad_event,
             RebuildAdEvent(ad_event, ConfirmationType::kConversion,

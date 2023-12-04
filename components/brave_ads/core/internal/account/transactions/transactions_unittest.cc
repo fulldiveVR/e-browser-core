@@ -12,6 +12,7 @@
 #include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
 #include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
@@ -26,9 +27,10 @@ TEST_F(BraveAdsTransactionsTest, Add) {
               Run(/*success=*/true, /*transaction=*/::testing::_));
 
   // Act
-  const TransactionInfo transaction = AddTransaction(
-      kCreativeInstanceId, kSegment, /*value=*/0.01, AdType::kNotificationAd,
-      ConfirmationType::kViewed, add_transaction_callback.Get());
+  const TransactionInfo transaction =
+      AddTransaction(kCreativeInstanceId, kUntargetedSegment, /*value=*/0.01,
+                     AdType::kNotificationAd, ConfirmationType::kViewed,
+                     add_transaction_callback.Get());
 
   // Assert
   base::MockCallback<database::table::GetTransactionsCallback> callback;
