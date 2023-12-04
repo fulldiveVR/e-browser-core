@@ -39,7 +39,6 @@ enum ModelCategory {
 enum PremiumStatus {
   Inactive,
   Active,
-  // When user has an active subscription, but has zero remaining credentials
   ActiveDisconnected,
 };
 
