@@ -1232,7 +1232,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         // We need to enable the promo for later release.
         // Delay showing the panel. Otherwise there are ANRs on holding onUrlFocusChange
         /* PostTask.postTask(TaskTraits.UI_DEFAULT, () -> {
-            int appOpenCountForWidgetPromo = SharedPreferencesManager.getInstance().readInt(
+            int appOpenCountForWidgetPromo = ChromeSharedPreferences.getInstance().readInt(
                     BravePreferenceKeys.BRAVE_APP_OPEN_COUNT_FOR_WIDGET_PROMO);
             if (hasFocus
                     && appOpenCountForWidgetPromo >= BraveActivity.APP_OPEN_COUNT_FOR_WIDGET_PROMO)
@@ -1633,7 +1633,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             return;
         }
         mShouldShowPlaylistMenu = true;
-        if (SharedPreferencesManager.getInstance()
+        if (ChromeSharedPreferences.getInstance()
                 .readBoolean(BravePlaylistPreferences.PREF_ADD_TO_PLAYLIST_BUTTON, true)) {
             showPlaylistButton(items);
         }
