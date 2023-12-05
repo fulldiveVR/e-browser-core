@@ -124,6 +124,8 @@ static constexpr auto kScopedQueryStringTrackers =
         // https://github.com/brave/brave-browser/issues/26966
         {"ref_src", "twitter.com"},
         {"ref_url", "twitter.com"},
+        // https://github.com/brave/brave-browser/issues/34719
+        {"si", "youtube.com"},
     });
 
 // Remove tracking query parameters from a GURL, leaving all
