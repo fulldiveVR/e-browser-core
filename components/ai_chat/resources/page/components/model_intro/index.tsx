@@ -39,7 +39,7 @@ export default function ModelIntro () {
         <Icon name='product-brave-leo' />
       </div>
       <div className={styles.meta}>
-        <h2 className={styles.category}>{getCategoryName(model.category)}</h2>
+        <h4 className={styles.category}>{getCategoryName(model.category)}</h4>
         <h3 className={styles.name}>
           {formatMessage(getLocale('modelNameSyntax'), {
             placeholders: {
