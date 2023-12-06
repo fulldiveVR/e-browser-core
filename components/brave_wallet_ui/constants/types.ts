@@ -222,12 +222,7 @@ export interface WalletState {
   isAnkrBalancesFeatureEnabled: boolean
   hidePortfolioGraph: boolean
   hidePortfolioBalances: boolean
-  removedFungibleTokenIds: string[]
-  removedNonFungibleTokenIds: string[]
-  deletedNonFungibleTokenIds: string[]
   hidePortfolioNFTsTab: boolean
-  removedNonFungibleTokens: BraveWallet.BlockchainToken[]
-  deletedNonFungibleTokens: BraveWallet.BlockchainToken[]
   filteredOutPortfolioNetworkKeys: string[]
   filteredOutPortfolioAccountAddresses: string[]
   hidePortfolioSmallBalances: boolean
