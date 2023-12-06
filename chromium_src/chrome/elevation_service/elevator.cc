@@ -7,7 +7,7 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/wireguard/win/wireguard_utils_win.h"
-#include "brave/installer/util/brave_vpn_helper_utils.h"
+#include "brave/installer/win/util/brave_vpn_helper_utils.h"
 #endif
 
 #include "src/chrome/elevation_service/elevator.cc"

@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-#include "brave/installer/util/brave_vpn_helper_utils.h"
+#include "brave/installer/win/util/brave_vpn_helper_utils.h"
 
 #include "base/files/file_util.h"
 #include "base/functional/callback_helpers.h"
@@ -22,7 +22,7 @@
 #include "brave/components/brave_vpn/common/wireguard/win/service_constants.h"
 #include "brave/components/brave_vpn/common/wireguard/win/service_details.h"
 #include "brave/components/brave_vpn/common/wireguard/win/wireguard_utils_win.h"
-#include "brave/installer/util/brave_vpn_helper_constants.h"
+#include "brave/installer/win/util/brave_vpn_helper_constants.h"
 #include "chrome/elevation_service/elevation_service_idl.h"
 #include "chrome/install_static/install_modes.h"
 #include "chrome/install_static/install_util.h"

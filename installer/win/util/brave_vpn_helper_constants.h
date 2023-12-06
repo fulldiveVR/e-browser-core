@@ -3,8 +3,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#ifndef BRAVE_INSTALLER_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_
-#define BRAVE_INSTALLER_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_
+#ifndef BRAVE_INSTALLER_WIN_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_
+#define BRAVE_INSTALLER_WIN_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_
 
 #include <guiddef.h>
 
@@ -92,4 +92,4 @@ inline constexpr GUID kVpnDnsSublayerGUID = {
 #endif
 }  // namespace brave_vpn
 
-#endif  // BRAVE_INSTALLER_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_
+#endif  // BRAVE_INSTALLER_WIN_UTIL_BRAVE_VPN_HELPER_CONSTANTS_H_

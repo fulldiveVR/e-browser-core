@@ -32,7 +32,7 @@ if (enable_brave_vpn) {
       "//brave/browser:browser_process",
       "//brave/components/brave_vpn/common/win",
       "//brave/components/brave_vpn/common/wireguard/win",
-      "//brave/installer/util:vpn_utils",
+      "//brave/installer/win/util:vpn_utils",
       "//chrome/common:constants",
       "//components/prefs",
       "//net",

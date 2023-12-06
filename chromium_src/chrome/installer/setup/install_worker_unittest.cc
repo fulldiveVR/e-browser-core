@@ -17,7 +17,7 @@
 #include "testing/gtest/include/gtest/gtest.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/installer/util/brave_vpn_helper_constants.h"
+#include "brave/installer/win/util/brave_vpn_helper_constants.h"
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
 using ::testing::NiceMock;

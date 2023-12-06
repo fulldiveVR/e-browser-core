@@ -15,7 +15,7 @@ source_set("unit_tests") {
     "//base",
     "//base/test:test_support",
     "//brave/components/brave_vpn/common/buildflags:buildflags",
-    "//brave/installer/util:vpn_utils",
+    "//brave/installer/win/util:vpn_utils",
     "//chrome/chrome_elf:nt_registry",
     "//chrome/installer/setup:lib",
     "//chrome/installer/util:with_no_strings",

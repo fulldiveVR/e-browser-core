@@ -11,6 +11,6 @@ brave_elevation_service_lib_deps =
 if (is_win && enable_brave_vpn) {
   brave_elevation_service_lib_deps += [
     "//brave/components/brave_vpn/common/wireguard/win",
-    "//brave/installer/util:vpn_utils",
+    "//brave/installer/win/util:vpn_utils",
   ]
 }

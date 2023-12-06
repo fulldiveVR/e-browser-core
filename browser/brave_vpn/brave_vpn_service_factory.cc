@@ -30,7 +30,7 @@
 #include "brave/browser/brave_vpn/dns/brave_vpn_dns_observer_service_win.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_observer_factory_win.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_observer_service_win.h"
-#include "brave/installer/util/brave_vpn_helper_utils.h"
+#include "brave/installer/win/util/brave_vpn_helper_utils.h"
 #endif
 
 namespace brave_vpn {
