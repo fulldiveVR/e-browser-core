@@ -58,8 +58,8 @@ void BraveVpnHandler::RegisterMessages() {
       base::BindRepeating(&BraveVpnHandler::HandleRegisterWireguardService,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
-      "isWireguardServiceRegistered",
-      base::BindRepeating(&BraveVpnHandler::HandleIsWireguardServiceRegistered,
+      "isWireguardServiceInstalled",
+      base::BindRepeating(&BraveVpnHandler::HandleIsWireguardServiceInstalled,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
       "isBraveVpnConnected",
@@ -91,13 +91,13 @@ void BraveVpnHandler::OnWireguardServiceRegistered(
   ResolveJavascriptCallback(callback_id, base::Value(success));
 }
 
-void BraveVpnHandler::HandleIsWireguardServiceRegistered(
+void BraveVpnHandler::HandleIsWireguardServiceInstalled(
     const base::Value::List& args) {
   AllowJavascript();
 
   ResolveJavascriptCallback(
       args[0],
-      base::Value(brave_vpn::wireguard::IsWireguardServiceRegistered()));
+      base::Value(brave_vpn::wireguard::IsWireguardServiceInstalled()));
 }
 
 void BraveVpnHandler::HandleIsBraveVpnConnected(const base::Value::List& args) {
