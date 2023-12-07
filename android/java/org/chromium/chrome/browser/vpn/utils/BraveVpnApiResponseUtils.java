@@ -14,6 +14,7 @@ import android.util.Pair;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import org.chromium.base.Log;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.util.LiveDataUtil;
 import org.chromium.chrome.browser.vpn.BraveVpnNativeWorker;
@@ -57,6 +58,7 @@ public class BraveVpnApiResponseUtils {
 
     public static void handleOnGetTimezonesForRegions(Activity activity,
             BraveVpnPrefModel braveVpnPrefModel, String jsonTimezones, boolean isSuccess) {
+        Log.e("VPN", "jsonTimezones : " + jsonTimezones);
         if (isSuccess) {
             String region = BraveVpnUtils.getRegionForTimeZone(
                     jsonTimezones, TimeZone.getDefault().getID());
@@ -91,6 +93,7 @@ public class BraveVpnApiResponseUtils {
 
     public static Pair<String, String> handleOnGetHostnamesForRegion(Activity activity,
             BraveVpnPrefModel braveVpnPrefModel, String jsonHostNames, boolean isSuccess) {
+        Log.e("VPN", "hostNames : " + jsonHostNames);
         Pair<String, String> host = new Pair<String, String>("", "");
         if (isSuccess && braveVpnPrefModel != null) {
             host = BraveVpnUtils.getHostnameForRegion(jsonHostNames);
