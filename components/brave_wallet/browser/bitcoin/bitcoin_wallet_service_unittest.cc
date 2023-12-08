@@ -45,7 +45,14 @@ bool operator==(const UnspentOutput& l, const UnspentOutput& r) {
 
 }  // namespace bitcoin_rpc
 
-// TOOD(apaymyshev): cover failure scenarios for BitcoinWalletService with tests
+namespace mojom {
+void PrintTo(const BitcoinBalancePtr& balance, ::std::ostream* os) {
+  *os << balance->total_balance << "/" << balance->available_balance << "/"
+      << balance->pending_balance;
+}
+}  // namespace mojom
+
+// TODO(apaymyshev): cover failure scenarios for BitcoinWalletService with tests
 class BitcoinWalletServiceUnitTest : public testing::Test {
  public:
   BitcoinWalletServiceUnitTest()
@@ -118,6 +125,9 @@ TEST_F(BitcoinWalletServiceUnitTest, GetBalance) {
   expected_balance->balances[address_6] = 100000 - 50000 + 88888 - 22222;
   expected_balance->total_balance = expected_balance->balances[address_0] +
                                     expected_balance->balances[address_6];
+  expected_balance->available_balance =
+      10000 + 100000 - 5000 - 50000 - 2222 - 22222;
+  expected_balance->pending_balance = 8888 + 88888 - 2222 - 22222;
   EXPECT_CALL(callback,
               Run(EqualsMojo(expected_balance), std::optional<std::string>()));
   bitcoin_wallet_service_->GetBalance(account_id(), callback.Get());
