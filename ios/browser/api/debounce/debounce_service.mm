@@ -23,10 +23,10 @@
 
 - (instancetype)initWithDebounceService:
     (debounce::DebounceService*)debounceService {
-  self = [super init];
-  if (self) {
+  if ((self = [super init])) {
     debounceService_ = debounceService;
   }
+
   return self;
 }
 

@@ -12,11 +12,13 @@ source_set("debounce") {
   deps = [
     "//base",
     "//brave/components/debounce/core/browser",
+    "//brave/components/debounce/core/common",
     "//brave/ios/browser/api/debounce",
     "//brave/ios/browser/application_context",
     "//brave/ios/browser/keyed_service",
     "//components/keyed_service/core",
     "//components/keyed_service/ios:ios",
+    "//components/user_prefs:user_prefs",
     "//ios/chrome/browser/shared/model/application_context",
     "//ios/chrome/browser/shared/model/browser_state",
   ]
