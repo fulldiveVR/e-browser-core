@@ -30,6 +30,11 @@
   return self;
 }
 
+- (bool)isDebounceEnabled {
+  DCHECK(debounceService_);
+  return debounceService_->IsEnabled();
+}
+
 - (nullable NSURL*)debounceURL:(NSURL*)url {
   DCHECK(debounceService_);
   GURL gurl = net::GURLWithNSURL(url);

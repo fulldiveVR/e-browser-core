@@ -15,6 +15,11 @@ OBJC_EXPORT
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
+ True or false if debounce is enabled
+ */
+- (bool)isDebounceEnabled;
+
+/**
  Debounces the given URL.
 
  @param url The URL to be debounced.
