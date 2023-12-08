@@ -381,9 +381,10 @@ void AIChatUIPageHandler::GetPremiumStatus(GetPremiumStatusCallback callback) {
 
 void AIChatUIPageHandler::OnGetPremiumStatus(
     GetPremiumStatusCallback callback,
-    ai_chat::mojom::PremiumStatus status) {
+    ai_chat::mojom::PremiumStatus status,
+    ai_chat::mojom::PremiumInfoPtr info) {
   if (page_.is_bound()) {
-    std::move(callback).Run(status);
+    std::move(callback).Run(status, std::move(info));
   }
 }
 

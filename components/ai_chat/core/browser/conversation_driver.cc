@@ -771,7 +771,8 @@ void ConversationDriver::OnPremiumStatusReceived(
   }
   last_premium_status_ = premium_status;
   if (HasUserOptedIn()) {
-    ai_chat_metrics_->OnPremiumStatusUpdated(false, premium_status);
+    ai_chat_metrics_->OnPremiumStatusUpdated(false, premium_status,
+                                             std::move(premium_info));
   }
   std::move(parent_callback).Run(premium_status, std::move(premium_info));
 }
