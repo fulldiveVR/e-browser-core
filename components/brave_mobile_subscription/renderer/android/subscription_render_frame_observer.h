@@ -11,6 +11,7 @@
 
 #include "base/gtest_prod_util.h"
 #include "base/memory/weak_ptr.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "content/public/renderer/render_frame.h"
 #include "content/public/renderer/render_frame_observer.h"
@@ -19,6 +20,9 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/mojom/brave_vpn.mojom.h"
+#endif
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #endif
 
 namespace brave_subscription {
@@ -34,11 +38,11 @@ namespace brave_subscription {
 class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
  public:
   explicit SubscriptionRenderFrameObserver(content::RenderFrame* render_frame,
-                                  int32_t world_id);
-  SubscriptionRenderFrameObserver(
-    const SubscriptionRenderFrameObserver&) = delete;
+                                           int32_t world_id);
+  SubscriptionRenderFrameObserver(const SubscriptionRenderFrameObserver&) =
+      delete;
   SubscriptionRenderFrameObserver& operator=(
-    const SubscriptionRenderFrameObserver&) = delete;
+      const SubscriptionRenderFrameObserver&) = delete;
   ~SubscriptionRenderFrameObserver() override;
 
   // RenderFrameObserver implementation.
@@ -47,9 +51,10 @@ class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
 
  private:
   FRIEND_TEST_ALL_PREFIXES(SubscriptionRenderFrameObserverBrowserTest,
-    IsAllowed);
+                           IsAllowed);
   FRIEND_TEST_ALL_PREFIXES(SubscriptionRenderFrameObserverTest, ExtractParam);
   FRIEND_TEST_ALL_PREFIXES(SubscriptionRenderFrameObserverTest, IsValueAllowed);
+  enum Product { kNone = 0, kVPN = 1, kLeo = 2 };
 
   bool EnsureConnected();
   void OnGetPurchaseToken(const std::string& purchase_token);
@@ -62,8 +67,12 @@ class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
   bool IsAllowed();
 
   int32_t world_id_;
+  Product product_ = Product::kNone;
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   mojo::Remote<brave_vpn::mojom::ServiceHandler> vpn_service_;
+#endif
+#if BUILDFLAG(ENABLE_AI_CHAT)
+  mojo::Remote<ai_chat::mojom::IAPSubscription> ai_chat_subscription_;
 #endif
   base::WeakPtrFactory<SubscriptionRenderFrameObserver> weak_factory_{this};
 };
