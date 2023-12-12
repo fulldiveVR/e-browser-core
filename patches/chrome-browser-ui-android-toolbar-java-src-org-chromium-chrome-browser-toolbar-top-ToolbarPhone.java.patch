@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/ToolbarPhone.java b/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/ToolbarPhone.java
-index c5e9b7d76fd7edaa10e6765cfd408ebdefd5591e..5e8db13c592266cf67f4f9b8244b3a6c75be8547 100644
+index f448ee3de15cb1875d9f2552e89b39cfe9a3e858..ee1f151231211fa334d132d15b97d78ec429490b 100644
 --- a/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/ToolbarPhone.java
 +++ b/chrome/browser/ui/android/toolbar/java/src/org/chromium/chrome/browser/toolbar/top/ToolbarPhone.java
-@@ -444,6 +444,7 @@ public class ToolbarPhone extends ToolbarLayout
+@@ -442,6 +442,7 @@ public class ToolbarPhone extends ToolbarLayout
          if (mOptionalButtonCoordinator != null) {
              mOptionalButtonCoordinator.setBackgroundColorFilter(color);
          }
@@ -10,7 +10,7 @@ index c5e9b7d76fd7edaa10e6765cfd408ebdefd5591e..5e8db13c592266cf67f4f9b8244b3a6c
      }
  
      private void updateModernLocationBarCorners() {
-@@ -618,6 +619,7 @@ public class ToolbarPhone extends ToolbarLayout
+@@ -616,6 +617,7 @@ public class ToolbarPhone extends ToolbarLayout
                          .notifyEvent(EventConstants.PARTNER_HOME_PAGE_BUTTON_PRESSED);
              }
          }
@@ -18,7 +18,7 @@ index c5e9b7d76fd7edaa10e6765cfd408ebdefd5591e..5e8db13c592266cf67f4f9b8244b3a6c
      }
  
      @Override
-@@ -1112,6 +1114,7 @@ public class ToolbarPhone extends ToolbarLayout
+@@ -1110,6 +1112,7 @@ public class ToolbarPhone extends ToolbarLayout
       * New Tab Page.
       */
      private void updateLocationBarLayoutForExpansionAnimation() {
@@ -26,7 +26,7 @@ index c5e9b7d76fd7edaa10e6765cfd408ebdefd5591e..5e8db13c592266cf67f4f9b8244b3a6c
          TraceEvent.begin("ToolbarPhone.updateLocationBarLayoutForExpansionAnimation");
          if (isInTabSwitcherMode()) return;
  
-@@ -1562,6 +1565,7 @@ public class ToolbarPhone extends ToolbarLayout
+@@ -1560,6 +1563,7 @@ public class ToolbarPhone extends ToolbarLayout
              canvas.restore();
          }
  
@@ -34,7 +34,7 @@ index c5e9b7d76fd7edaa10e6765cfd408ebdefd5591e..5e8db13c592266cf67f4f9b8244b3a6c
          // Draw the tab stack button and associated text if necessary.
          if (mTabSwitcherAnimationTabStackDrawable != null
                  && mToggleTabStackButton != null
-@@ -2405,6 +2409,7 @@ public class ToolbarPhone extends ToolbarLayout
+@@ -2402,6 +2406,7 @@ public class ToolbarPhone extends ToolbarLayout
          } else {
              populateUrlClearExpansionAnimatorSet(animators);
          }
