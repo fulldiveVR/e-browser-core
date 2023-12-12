@@ -137,7 +137,9 @@ where
     pub async fn next_active_at(&self, item_id: &str) -> Result<Option<NaiveDateTime>, SkusError> {
         let now = Utc::now().naive_utc();
         let creds = self.client.get_time_limited_v2_creds(item_id).await?;
-
+        // Of the TimeLimitedV2Credentials, find the TimeLimitedV2Credential that has
+        // the smallest valid_from that's greater than the current time, and also
+        // has at least one unspent SingleUseCredential.
         match creds {
             Some(tlv2_creds) => {
                 // Check if unblinded_creds is present and filter out unspent credentials with
