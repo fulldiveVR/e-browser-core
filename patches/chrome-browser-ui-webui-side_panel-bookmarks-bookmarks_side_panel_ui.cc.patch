@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/ui/webui/side_panel/bookmarks/bookmarks_side_panel_ui.cc b/chrome/browser/ui/webui/side_panel/bookmarks/bookmarks_side_panel_ui.cc
+index 91684b89987325fce483bd27997645a64e5f7c3b..2c3681ba7a8a62af050c3eba3dfbea817f7052b7 100644
+--- a/chrome/browser/ui/webui/side_panel/bookmarks/bookmarks_side_panel_ui.cc
++++ b/chrome/browser/ui/webui/side_panel/bookmarks/bookmarks_side_panel_ui.cc
+@@ -91,6 +91,8 @@ BookmarksSidePanelUI::BookmarksSidePanelUI(content::WebUI* web_ui)
+       {"sortReverseAlphabetically", IDS_BOOKMARKS_SORT_REVERSE_ALPHABETICALLY},
+       {"sortLastOpened", IDS_BOOKMARKS_SORT_LAST_OPENED},
+       {"sortLastOpenedLower", IDS_BOOKMARKS_SORT_LAST_OPENED_LOWER},
++      {"sortCustom", IDS_BOOKMARKS_SORT_CUSTOM},
++      {"sortCustomLower", IDS_BOOKMARKS_SORT_CUSTOM_LOWER},
+       {"visualView", IDS_BOOKMARKS_VISUAL_VIEW},
+       {"compactView", IDS_BOOKMARKS_COMPACT_VIEW},
+       {"sortMenuA11yLabel", IDS_BOOKMARKS_SORT_MENU_A11Y_LABEL},
