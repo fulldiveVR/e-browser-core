@@ -31,29 +31,52 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setIsSubscriptionActive(boolean value) {
-        UserPrefs.get(BraveLeoPrefUtils.getProfile())
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.setIsSubscriptionActive profile is null");
+            return;
+        }
+        UserPrefs.get(profileToUse)
                 .setBoolean(BravePref.BRAVE_CHAT_SUBSCRIPTION_ACTIVE_ANDROID, value);
     }
 
     public static boolean getIsSubscriptionActive(Profile profile) {
-        return UserPrefs.get(profile == null ? BraveLeoPrefUtils.getProfile() : profile)
+        Profile profileToUse = profile == null ? BraveLeoPrefUtils.getProfile() : profile;
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.getIsSubscriptionActive profile is null");
+            return false;
+        }
+        return UserPrefs.get(profileToUse)
                 .getBoolean(BravePref.BRAVE_CHAT_SUBSCRIPTION_ACTIVE_ANDROID);
     }
 
     public static void setChatPurchaseToken(String token) {
-        UserPrefs.get(BraveLeoPrefUtils.getProfile())
-                .setString(BravePref.BRAVE_CHAT_PURCHASE_TOKEN_ANDROID, token);
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.setChatPurchaseToken profile is null");
+            return;
+        }
+        UserPrefs.get(profileToUse).setString(BravePref.BRAVE_CHAT_PURCHASE_TOKEN_ANDROID, token);
     }
 
     public static void setChatPackageName() {
-        UserPrefs.get(BraveLeoPrefUtils.getProfile())
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.setChatPackageName profile is null");
+            return;
+        }
+        UserPrefs.get(profileToUse)
                 .setString(
                         BravePref.BRAVE_CHAT_PACKAGE_NAME_ANDROID,
                         ContextUtils.getApplicationContext().getPackageName());
     }
 
     public static void setChatProductId(String productId) {
-        UserPrefs.get(BraveLeoPrefUtils.getProfile())
-                .setString(BravePref.BRAVE_CHAT_PRODUCT_ID_ANDROID, productId);
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.setChatProductId profile is null");
+            return;
+        }
+        UserPrefs.get(profileToUse).setString(BravePref.BRAVE_CHAT_PRODUCT_ID_ANDROID, productId);
     }
 }

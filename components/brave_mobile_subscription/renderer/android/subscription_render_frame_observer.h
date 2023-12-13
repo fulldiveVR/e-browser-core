@@ -54,7 +54,7 @@ class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
                            IsAllowed);
   FRIEND_TEST_ALL_PREFIXES(SubscriptionRenderFrameObserverTest, ExtractParam);
   FRIEND_TEST_ALL_PREFIXES(SubscriptionRenderFrameObserverTest, IsValueAllowed);
-  enum Product { kNone = 0, kVPN = 1, kLeo = 2 };
+  enum class Product { kNone = 0, kVPN = 1, kLeo = 2 };
 
   bool EnsureConnected();
   void OnGetPurchaseToken(const std::string& purchase_token);

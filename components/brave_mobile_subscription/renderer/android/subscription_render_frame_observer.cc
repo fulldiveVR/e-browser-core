@@ -25,6 +25,10 @@
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
 #endif
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/common/features.h"
+#endif
+
 namespace brave_subscription {
 
 namespace {
@@ -52,14 +56,16 @@ bool SubscriptionRenderFrameObserver::EnsureConnected() {
     render_frame()->GetBrowserInterfaceBroker()->GetInterface(
         vpn_service_.BindNewPipeAndPassReceiver());
   }
-  bound = vpn_service_.is_bound();
+  bound |= vpn_service_.is_bound();
 #endif
 #if BUILDFLAG(ENABLE_AI_CHAT)
-  if (!ai_chat_subscription_.is_bound()) {
-    render_frame()->GetBrowserInterfaceBroker()->GetInterface(
-        ai_chat_subscription_.BindNewPipeAndPassReceiver());
+  if (ai_chat::features::IsAIChatHistoryEnabled()) {
+    if (!ai_chat_subscription_.is_bound()) {
+      render_frame()->GetBrowserInterfaceBroker()->GetInterface(
+          ai_chat_subscription_.BindNewPipeAndPassReceiver());
+    }
+    bound |= ai_chat_subscription_.is_bound();
   }
-  bound = ai_chat_subscription_.is_bound();
 #endif
   return bound;
 }
@@ -84,16 +90,20 @@ void SubscriptionRenderFrameObserver::DidCreateScriptContext(
   switch (product_) {
     case Product::kVPN:
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-      vpn_service_->GetPurchaseToken(base::BindOnce(
-          &SubscriptionRenderFrameObserver::OnGetPurchaseToken,
-          weak_factory_.GetWeakPtr()));
+      if (vpn_service_.is_bound()) {
+        vpn_service_->GetPurchaseToken(
+            base::BindOnce(&SubscriptionRenderFrameObserver::OnGetPurchaseToken,
+                           weak_factory_.GetWeakPtr()));
+      }
 #endif
       break;
     case Product::kLeo:
 #if BUILDFLAG(ENABLE_AI_CHAT)
-      ai_chat_subscription_->GetPurchaseToken(base::BindOnce(
-          &SubscriptionRenderFrameObserver::OnGetPurchaseToken,
-          weak_factory_.GetWeakPtr()));
+      if (ai_chat_subscription_.is_bound()) {
+        ai_chat_subscription_->GetPurchaseToken(
+            base::BindOnce(&SubscriptionRenderFrameObserver::OnGetPurchaseToken,
+                           weak_factory_.GetWeakPtr()));
+      }
 #endif
       break;
     default:
@@ -110,7 +120,7 @@ void SubscriptionRenderFrameObserver::OnGetPurchaseToken(
   if (frame) {
     if (IsValueAllowed(purchase_token)) {
       DCHECK(product_ != Product::kNone);
-      std::string receipt_var_name;
+      std::string_view receipt_var_name;
       switch (product_) {
         case Product::kVPN:
           receipt_var_name = "braveVpn.receipt";
@@ -121,10 +131,9 @@ void SubscriptionRenderFrameObserver::OnGetPurchaseToken(
         default:
           NOTREACHED();
       }
-      std::u16string set_local_storage =
-          base::StrCat({u"window.localStorage.setItem(\"",
-                        base::UTF8ToUTF16(receipt_var_name), u"\", \"",
-                        base::UTF8ToUTF16(purchase_token), u"\");"});
+      std::u16string set_local_storage = base::UTF8ToUTF16(
+          base::StrCat({"window.localStorage.setItem(\"", receipt_var_name,
+                        "\", \"", purchase_token, "\");"}));
       frame->ExecuteJavaScript(set_local_storage);
     }
   }
