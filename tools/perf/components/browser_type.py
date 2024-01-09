@@ -215,7 +215,7 @@ class BraveBrowserTypeImpl(BrowserType):
             tag, f'BraveBrowserStandaloneSilent{self.channel}Setup.exe')
       return _DownloadWinInstallerAndExtract(out_dir, url,
                                              self._GetWinInstallPath(),
-                                             'brave.exe')
+                                             'aiwize.exe')
     if target_os == 'android':
       if url is None:
         url = _GetBraveDownloadUrl(tag, 'BraveMonoarm64.apk')
