@@ -21,12 +21,11 @@ import {
 // Types and constants
 import {
   QuoteOption,
-  GasFeeOption,
   GasEstimate,
   SwapParams,
   SwapValidationErrorType
 } from '../constants/types'
-import { BraveWallet } from '../../../../constants/types'
+import { BraveWallet, GasFeeOption } from '../../../../constants/types'
 
 // Utils
 import { getLocale } from '$web-common/locale'
@@ -131,8 +130,6 @@ export const useSwap = () => {
   const [selectingFromOrTo, setSelectingFromOrTo] = useState<
     'from' | 'to' | undefined
   >(undefined)
-  const [selectedQuoteOptionIndex, setSelectedQuoteOptionIndex] =
-    useState<number>(0)
   const [selectedSwapAndSendOption, setSelectedSwapAndSendOption] =
     useState<string>(SwapAndSendOptions[0].name)
   const [swapAndSendSelected, setSwapAndSendSelected] = useState<boolean>(false)
@@ -182,7 +179,7 @@ export const useSwap = () => {
     fromAmount,
     toAmount: '',
     slippageTolerance,
-    fromAddress: selectedAccount?.address,
+    fromAccount: selectedAccount,
     spotPrices: spotPriceRegistry
   })
   const zeroEx = useZeroEx({
@@ -193,7 +190,7 @@ export const useSwap = () => {
     fromToken,
     toToken,
     slippageTolerance,
-    fromAddress: selectedAccount?.address,
+    fromAccount: selectedAccount,
     spotPrices: spotPriceRegistry
   })
 
@@ -208,21 +205,17 @@ export const useSwap = () => {
   const onSelectQuoteOption = useCallback(
     (index: number) => {
       const option = quoteOptions[index]
-      if (selectedNetwork?.coin === BraveWallet.CoinType.SOL) {
-        if (jupiter.quote && jupiter.quote.routes.length > index && toToken) {
-          const route = jupiter.quote.routes[index]
-          jupiter.setSelectedRoute(route)
-          setToAmount(option.toAmount.format(6))
-        }
-      } else if (selectedNetwork?.coin === BraveWallet.CoinType.ETH) {
-        if (zeroEx.quote && toToken) {
-          setToAmount(option.toAmount.format(6))
-        }
+      if (!option) {
+        return
       }
 
-      setSelectedQuoteOptionIndex(index)
+      if (!toToken) {
+        return
+      }
+
+      setToAmount(option.toAmount.format(6))
     },
-    [quoteOptions, selectedNetwork?.coin, jupiter, toToken, zeroEx.quote]
+    [quoteOptions, toToken]
   )
 
   // Methods
@@ -235,9 +228,9 @@ export const useSwap = () => {
 
       if (overrides.fromAmount === '') {
         const token = overrides.fromToken || fromToken
-        if (token && quote.routes.length > 0) {
+        if (token) {
           setFromAmount(
-            new Amount(quote.routes[0].inAmount.toString())
+            new Amount(quote.inAmount)
               .divideByDecimals(token.decimals)
               .format(6)
           )
@@ -246,9 +239,9 @@ export const useSwap = () => {
 
       if (overrides.toAmount === '') {
         const token = overrides.toToken || toToken
-        if (token && quote.routes.length > 0) {
+        if (token) {
           setToAmount(
-            new Amount(quote.routes[0].outAmount.toString())
+            new Amount(quote.outAmount)
               .divideByDecimals(token.decimals)
               .format(6)
           )
@@ -577,7 +570,7 @@ export const useSwap = () => {
       if (selectedNetwork?.coin === BraveWallet.CoinType.SOL) {
         if (
           jupiter.error?.isInsufficientLiquidity ||
-          jupiter.quote?.routes?.length === 0
+          jupiter.quote?.routePlan?.length === 0
         ) {
           return 'insufficientLiquidity'
         }
@@ -738,7 +731,7 @@ export const useSwap = () => {
     fiatValue,
     isFetchingQuote: zeroEx.loading || jupiter.loading,
     quoteOptions,
-    selectedQuoteOptionIndex,
+    selectedQuoteOptionIndex: 0,
     selectingFromOrTo,
     swapAndSendSelected,
     selectedSwapAndSendOption,

@@ -66,6 +66,8 @@ class AIChatUIPageHandler : public ai_chat::mojom::PageHandler,
   void SetShouldSendPageContents(bool should_send) override;
   void GetShouldSendPageContents(
       GetShouldSendPageContentsCallback callback) override;
+  void GoPremium() override;
+  void RefreshPremiumSession() override;
   void ClearConversationHistory() override;
   void RetryAPIRequest() override;
   void GetAPIResponseError(GetAPIResponseErrorCallback callback) override;
@@ -94,12 +96,12 @@ class AIChatUIPageHandler : public ai_chat::mojom::PageHandler,
       mojom::SuggestionGenerationStatus suggestion_generation_status) override;
   void OnFaviconImageDataChanged() override;
   void OnPageHasContent(mojom::SiteInfoPtr site_info) override;
-  void OnConversationEntryPending() override;
 
   void GetFaviconImageData(GetFaviconImageDataCallback callback) override;
 
   void OnGetPremiumStatus(GetPremiumStatusCallback callback,
-                          ai_chat::mojom::PremiumStatus status);
+                          ai_chat::mojom::PremiumStatus status,
+                          ai_chat::mojom::PremiumInfoPtr info);
 
   mojo::Remote<ai_chat::mojom::ChatUIPage> page_;
 

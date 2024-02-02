@@ -15,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Browser;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.browser.customtabs.CustomTabsIntent;
@@ -31,7 +32,11 @@ import org.chromium.ui.util.ColorUtils;
 public class BraveLeoActivity extends TranslucentCustomTabActivity {
     // The Activity could be 50% or 100% of the screen. That number
     // indicates that we want it to be 50% on a first start.
-    static final int INITIAL_ACTIVITY_HEIGHT_PX = 300;
+    private static final int INITIAL_ACTIVITY_HEIGHT_PX = 300;
+
+    private static final int DRAG_BAR_Y_DELTA_TOLERANCE = 300;
+    private int mLastMotionEventAction;
+    private boolean mDragInProgress;
 
     @Override
     public boolean supportsAppMenu() {
@@ -47,6 +52,8 @@ public class BraveLeoActivity extends TranslucentCustomTabActivity {
     public void performPostInflationStartup() {
         super.performPostInflationStartup();
 
+        mLastMotionEventAction = -1;
+        mDragInProgress = false;
         View toolbarContainer = findViewById(R.id.toolbar_container);
         if (toolbarContainer != null) {
             toolbarContainer.setVisibility(View.GONE);
@@ -73,5 +80,38 @@ public class BraveLeoActivity extends TranslucentCustomTabActivity {
         IntentUtils.addTrustedIntentExtras(intent);
 
         context.startActivity(intent);
+    }
+
+    private void maybeRedirectToDragBar(MotionEvent ev) {
+        View dragBar = findViewById(R.id.drag_bar);
+        assert dragBar != null;
+
+        int dragBarLocation[] = new int[2];
+        dragBar.getLocationOnScreen(dragBarLocation);
+        int dragBarYDelta = (int) ev.getRawY() - dragBarLocation[1];
+        if (dragBarYDelta < DRAG_BAR_Y_DELTA_TOLERANCE || mDragInProgress) {
+            dragBar.dispatchTouchEvent(ev);
+            mDragInProgress = true;
+        } else {
+            mDragInProgress = false;
+        }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        boolean skipDrag = false;
+        if (ev.getActionMasked() == MotionEvent.ACTION_DOWN
+                || mLastMotionEventAction == MotionEvent.ACTION_DOWN
+                        && ev.getActionMasked() == MotionEvent.ACTION_UP) {
+            skipDrag = true;
+        }
+        if (!skipDrag && getActivityTab() != null) {
+            maybeRedirectToDragBar(ev);
+        }
+        mLastMotionEventAction = ev.getActionMasked();
+        if (mLastMotionEventAction != MotionEvent.ACTION_MOVE) {
+            mDragInProgress = false;
+        }
+        return super.dispatchTouchEvent(ev);
     }
 }

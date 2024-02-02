@@ -11,9 +11,9 @@
 #include "brave/components/brave_ads/core/internal/client/ads_client_util.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/new_tab_page_ads/creative_new_tab_page_ads_database_table.h"
+#include "brave/components/brave_ads/core/internal/segments/segment_constants.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/allocation/seen_ads.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/allocation/seen_advertisers.h"
-#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_feature.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/exclusion_rules_util.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/new_tab_page_ads/new_tab_page_ad_exclusion_rules.h"
@@ -188,7 +188,7 @@ void EligibleNewTabPageAdsV1::GetForUntargeted(
 
   const database::table::CreativeNewTabPageAds database_table;
   database_table.GetForSegments(
-      {kUntargeted},
+      {kUntargetedSegment},
       base::BindOnce(&EligibleNewTabPageAdsV1::GetForUntargetedCallback,
                      weak_factory_.GetWeakPtr(), ad_events, browsing_history,
                      std::move(callback)));
@@ -225,22 +225,29 @@ CreativeNewTabPageAdList EligibleNewTabPageAdsV1::FilterCreativeAds(
     return {};
   }
 
-  NewTabPageAdExclusionRules exclusion_rules(ad_events, *subdivision_targeting_,
-                                             *anti_targeting_resource_,
-                                             browsing_history);
-
   CreativeNewTabPageAdList eligible_creative_ads =
-      ApplyExclusionRules(creative_ads, last_served_ad_, &exclusion_rules);
-
-  eligible_creative_ads = FilterSeenAdvertisersAndRoundRobinIfNeeded(
-      eligible_creative_ads, AdType::kNewTabPageAd);
+      FilterSeenAdvertisersAndRoundRobinIfNeeded(creative_ads,
+                                                 AdType::kNewTabPageAd);
 
   eligible_creative_ads = FilterSeenAdsAndRoundRobinIfNeeded(
       eligible_creative_ads, AdType::kNewTabPageAd);
 
-  eligible_creative_ads = PaceCreativeAds(eligible_creative_ads);
+  NewTabPageAdExclusionRules exclusion_rules(ad_events, *subdivision_targeting_,
+                                             *anti_targeting_resource_,
+                                             browsing_history);
+  ApplyExclusionRules(eligible_creative_ads, last_served_ad_, &exclusion_rules);
 
-  return PrioritizeCreativeAds(eligible_creative_ads);
+  PaceCreativeAds(eligible_creative_ads);
+
+  const PrioritizedCreativeAdBuckets<CreativeNewTabPageAdList> buckets =
+      SortCreativeAdsIntoBucketsByPriority(eligible_creative_ads);
+  if (buckets.empty()) {
+    return {};
+  }
+
+  LogNumberOfCreativeAdsPerBucket(buckets);
+
+  return buckets.cbegin()->second;
 }
 
 }  // namespace brave_ads

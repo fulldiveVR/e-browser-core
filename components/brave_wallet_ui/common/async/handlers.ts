@@ -249,10 +249,17 @@ handler.on(
   WalletActions.setUserAssetVisible.type,
   async (store: Store, payload: SetUserAssetVisiblePayloadType) => {
     const { braveWalletService } = getAPIProxy()
-    await braveWalletService.setUserAssetVisible(
+
+    const { success } = await braveWalletService.setUserAssetVisible(
       payload.token,
       payload.isVisible
     )
+
+    if (!success) {
+      // token is probably not in the core-side assets list
+      // try adding it to the user tokens list
+      store.dispatch(WalletActions.addUserAsset(payload.token))
+    }
   }
 )
 
@@ -260,13 +267,6 @@ handler.on(
   WalletActions.refreshBalancesAndPriceHistory.type,
   async (store: Store) => {
     await refreshBalancesPricesAndHistory(store)
-  }
-)
-
-handler.on(
-  WalletActions.selectPortfolioTimeline.type,
-  async (store: Store, payload: BraveWallet.AssetPriceTimeframe) => {
-    store.dispatch(WalletActions.portfolioTimelineUpdated(payload))
   }
 )
 

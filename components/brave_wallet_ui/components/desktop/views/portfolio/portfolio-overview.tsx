@@ -13,10 +13,10 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import {
   useSafeWalletSelector,
   useUnsafeWalletSelector,
-  useSafePageSelector,
-  useUnsafePageSelector
+  useUnsafePageSelector,
+  useSafeUISelector
 } from '../../../../common/hooks/use-safe-selector'
-import { WalletSelectors } from '../../../../common/selectors'
+import { UISelectors, WalletSelectors } from '../../../../common/selectors'
 import { PageSelectors } from '../../../../page/selectors'
 
 // hooks
@@ -28,15 +28,12 @@ import {
 import {
   BraveWallet,
   UserAssetInfoType,
-  WalletRoutes
+  WalletRoutes,
+  WalletStatus
 } from '../../../../constants/types'
-import {
-  LOCAL_STORAGE_KEYS //
-} from '../../../../common/constants/local-storage-keys'
-import { WalletStatus } from '../../../../common/async/brave_rewards_api_proxy'
+import { emptyRewardsInfo } from '../../../../common/async/base-query-cache'
 
 // actions
-import { WalletActions } from '../../../../common/actions'
 import { WalletPageActions } from '../../../../page/actions'
 
 // Utils
@@ -52,12 +49,11 @@ import {
   networkEntityAdapter //
 } from '../../../../common/slices/entities/network.entity'
 import { networkSupportsAccount } from '../../../../utils/network-utils'
+import { getIsRewardsToken } from '../../../../utils/rewards_utils'
 import {
-  getIsRewardsToken,
-  getNormalizedExternalRewardsNetwork,
-  getNormalizedExternalRewardsWallet,
-  getRewardsBATToken
-} from '../../../../utils/rewards_utils'
+  getStoredPortfolioTimeframe //
+} from '../../../../utils/local-storage-utils'
+import { makePortfolioAssetRoute } from '../../../../utils/routes-utils'
 
 // Options
 import { PortfolioNavOptions } from '../../../../options/nav-options'
@@ -69,7 +65,7 @@ import {
 import { LoadingSkeleton } from '../../../shared/loading-skeleton/index'
 import {
   SegmentedControl //
-} from '../../../shared/segmented-control/segmented-control'
+} from '../../../shared/segmented_control/segmented_control'
 import { PortfolioAssetItem } from '../../portfolio-asset-item/index'
 import { TokenLists } from './components/token-lists/token-list'
 import {
@@ -81,9 +77,6 @@ import {
   BuySendSwapDepositNav //
 } from './components/buy-send-swap-deposit-nav/buy-send-swap-deposit-nav'
 import {
-  LineChartControls //
-} from '../../line-chart/line-chart-controls/line-chart-controls'
-import {
   PortfolioFiltersModal //
 } from '../../popup-modals/filter-modals/portfolio-filters-modal'
 
@@ -92,10 +85,11 @@ import {
   BalanceText,
   PercentBubble,
   FiatChange,
-  SelectTimelineWrapper,
   ControlsRow,
   BalanceAndButtonsWrapper,
-  BalanceAndChangeWrapper
+  BalanceAndChangeWrapper,
+  BackgroundWatermark,
+  BalanceAndLineChartWrapper
 } from './style'
 import { Column, Row, HorizontalSpace } from '../../../shared/style'
 
@@ -106,9 +100,7 @@ import {
   useGetTokenSpotPricesQuery,
   useReportActiveWalletsToP3AMutation,
   useGetDefaultFiatCurrencyQuery,
-  useGetRewardsEnabledQuery,
-  useGetRewardsBalanceQuery,
-  useGetExternalRewardsWalletQuery
+  useGetRewardsInfoQuery
 } from '../../../../common/slices/api.slice'
 import { useAccountsQuery } from '../../../../common/slices/api.slice.extra'
 import {
@@ -121,14 +113,9 @@ export const PortfolioOverview = () => {
 
   // redux
   const dispatch = useDispatch()
-
   const userVisibleTokensInfo = useUnsafeWalletSelector(
     WalletSelectors.userVisibleTokensInfo
   )
-  const selectedPortfolioTimeline = useSafeWalletSelector(
-    WalletSelectors.selectedPortfolioTimeline
-  )
-  const selectedTimeline = useSafePageSelector(PageSelectors.selectedTimeline)
   const nftMetadata = useUnsafePageSelector(PageSelectors.nftMetadata)
   const hidePortfolioGraph = useSafeWalletSelector(
     WalletSelectors.hidePortfolioGraph
@@ -142,8 +129,8 @@ export const PortfolioOverview = () => {
   const filteredOutPortfolioNetworkKeys = useUnsafeWalletSelector(
     WalletSelectors.filteredOutPortfolioNetworkKeys
   )
-  const filteredOutPortfolioAccountAddresses = useUnsafeWalletSelector(
-    WalletSelectors.filteredOutPortfolioAccountAddresses
+  const filteredOutPortfolioAccountIds = useUnsafeWalletSelector(
+    WalletSelectors.filteredOutPortfolioAccountIds
   )
   const hidePortfolioSmallBalances = useSafeWalletSelector(
     WalletSelectors.hidePortfolioSmallBalances
@@ -151,43 +138,40 @@ export const PortfolioOverview = () => {
   const selectedGroupAssetsByItem = useSafeWalletSelector(
     WalletSelectors.selectedGroupAssetsByItem
   )
+  const isPanel = useSafeUISelector(UISelectors.isPanel)
 
   // queries
   const { accounts } = useAccountsQuery()
   const { data: networks } = useGetVisibleNetworksQuery()
   const { data: defaultFiat } = useGetDefaultFiatCurrencyQuery()
-  const { data: isRewardsEnabled } = useGetRewardsEnabledQuery()
-  const { data: rewardsBalance } = useGetRewardsBalanceQuery()
-  const { data: externalRewardsInfo } = useGetExternalRewardsWalletQuery()
+  const {
+    data: {
+      balance: rewardsBalance,
+      provider: externalRewardsProvider,
+      rewardsToken,
+      status: rewardsStatus,
+      rewardsAccount: externalRewardsAccount,
+      rewardsNetwork: externalRewardsNetwork
+    } = emptyRewardsInfo
+  } = useGetRewardsInfoQuery()
 
   // State
   const [showPortfolioSettings, setShowPortfolioSettings] =
     React.useState<boolean>(false)
+  const [selectedTimeframe, setSelectedTimeframe] =
+    React.useState<BraveWallet.AssetPriceTimeframe>(getStoredPortfolioTimeframe)
 
   // Computed & Memos
-  const externalRewardsProvider = externalRewardsInfo?.provider ?? undefined
-
-  const displayRewardsInPortolfio =
-    isRewardsEnabled && externalRewardsInfo?.status === WalletStatus.kConnected
-
-  const rewardsToken = getRewardsBATToken(externalRewardsProvider)
+  const displayRewardsInPortfolio = rewardsStatus === WalletStatus.kConnected
 
   const userTokensWithRewards = React.useMemo(() => {
-    return displayRewardsInPortolfio && rewardsToken
+    return displayRewardsInPortfolio && rewardsToken
       ? [rewardsToken, ...userVisibleTokensInfo]
       : userVisibleTokensInfo
-  }, [displayRewardsInPortolfio, rewardsToken, userVisibleTokensInfo])
-
-  const externalRewardsAccount = displayRewardsInPortolfio
-    ? getNormalizedExternalRewardsWallet(externalRewardsProvider)
-    : undefined
-
-  const externalRewardsNetwork = displayRewardsInPortolfio
-    ? getNormalizedExternalRewardsNetwork(externalRewardsProvider)
-    : undefined
+  }, [displayRewardsInPortfolio, rewardsToken, userVisibleTokensInfo])
 
   const displayRewardAccount =
-    displayRewardsInPortolfio &&
+    displayRewardsInPortfolio &&
     externalRewardsNetwork &&
     externalRewardsAccount &&
     !filteredOutPortfolioNetworkKeys.includes(
@@ -197,9 +181,9 @@ export const PortfolioOverview = () => {
   const usersFilteredAccounts = React.useMemo(() => {
     return accounts.filter(
       (account) =>
-        !filteredOutPortfolioAccountAddresses.includes(account.address)
+        !filteredOutPortfolioAccountIds.includes(account.accountId.uniqueKey)
     )
-  }, [accounts, filteredOutPortfolioAccountAddresses])
+  }, [accounts, filteredOutPortfolioAccountIds])
 
   const accountsListWithRewards = React.useMemo(() => {
     return displayRewardAccount
@@ -230,10 +214,10 @@ export const PortfolioOverview = () => {
   }, [visibleTokensForFilteredChains])
 
   const networksList = React.useMemo(() => {
-    return displayRewardsInPortolfio && externalRewardsNetwork
+    return displayRewardsInPortfolio && externalRewardsNetwork
       ? [externalRewardsNetwork, ...networks]
       : networks
-  }, [displayRewardsInPortolfio, externalRewardsNetwork, networks])
+  }, [displayRewardsInPortfolio, externalRewardsNetwork, networks])
 
   const visiblePortfolioNetworks = React.useMemo(() => {
     return networksList.filter(
@@ -292,11 +276,10 @@ export const PortfolioOverview = () => {
   // each asset
   const userAssetList: UserAssetInfoType[] = React.useMemo(() => {
     return visibleTokensForFilteredChains.map((asset) => {
-      const isRewardsToken = getIsRewardsToken(asset)
       return {
         asset: asset,
         assetBalance:
-          isRewardsToken && rewardsBalance
+          getIsRewardsToken(asset) && rewardsBalance
             ? new Amount(rewardsBalance)
                 .multiplyByDecimals(asset.decimals)
                 .format()
@@ -330,7 +313,7 @@ export const PortfolioOverview = () => {
 
   const tokenBalancesRegistryWithRewards = React.useMemo(() => {
     if (
-      displayRewardsInPortolfio &&
+      displayRewardsInPortfolio &&
       rewardsToken &&
       externalRewardsProvider &&
       rewardsBalance
@@ -348,7 +331,7 @@ export const PortfolioOverview = () => {
     }
     return tokenBalancesRegistry
   }, [
-    displayRewardsInPortolfio,
+    displayRewardsInPortfolio,
     rewardsToken,
     tokenBalancesRegistry,
     rewardsBalance,
@@ -364,7 +347,7 @@ export const PortfolioOverview = () => {
       defaultFiat
       ? {
           tokens: visibleTokensForFilteredChains,
-          timeframe: selectedPortfolioTimeline,
+          timeframe: selectedTimeframe,
           vsAsset: defaultFiat,
           tokenBalancesRegistry: tokenBalancesRegistryWithRewards
         }
@@ -467,55 +450,20 @@ export const PortfolioOverview = () => {
   const isPortfolioDown = new Amount(percentageChange).lt(0)
 
   // methods
-  const onChangeTimeline = React.useCallback(
-    (id: BraveWallet.AssetPriceTimeframe) => {
-      window.localStorage.setItem(
-        LOCAL_STORAGE_KEYS.PORTFOLIO_TIME_LINE_OPTION,
-        id.toString()
-      )
-      dispatch(WalletActions.selectPortfolioTimeline(id))
-    },
-    []
-  )
-
   const onSelectAsset = React.useCallback(
     (asset: BraveWallet.BlockchainToken) => {
-      if (asset.contractAddress === '') {
-        history.push(
-          `${
-            WalletRoutes.PortfolioAssets //
-          }/${
-            asset.chainId //
-          }/${asset.symbol}`
-        )
-        return
-      }
-      if (asset.isErc721 || asset.isNft || asset.isErc1155) {
-        history.push(
-          `${
-            WalletRoutes.PortfolioNFTs //
-          }/${
-            asset.chainId //
-          }/${
-            asset.contractAddress //
-          }/${asset.tokenId}`
-        )
-      } else {
-        history.push(
-          `${
-            WalletRoutes.PortfolioAssets //
-          }/${
-            asset.chainId //
-          }/${asset.contractAddress}`
-        )
-      }
-      dispatch(WalletPageActions.selectPriceTimeframe(selectedTimeline))
       if ((asset.isErc721 || asset.isNft) && nftMetadata) {
         // reset nft metadata
         dispatch(WalletPageActions.updateNFTMetadata(undefined))
       }
+      history.push(
+        makePortfolioAssetRoute(
+          asset.isErc721 || asset.isNft || asset.isErc1155,
+          getAssetIdKey(asset)
+        )
+      )
     },
-    [selectedTimeline]
+    []
   )
 
   const tokenLists = React.useMemo(() => {
@@ -585,19 +533,15 @@ export const PortfolioOverview = () => {
     isLoadingBalances
   ])
 
-  // effects
-  React.useEffect(() => {
-    dispatch(WalletPageActions.selectPriceTimeframe(selectedTimeline))
-  }, [selectedTimeline])
-
   // render
   return (
     <>
-      <Column
+      <BalanceAndLineChartWrapper
         fullWidth={true}
         justifyContent='flex-start'
         margin={hidePortfolioNFTsTab ? '0px 0px 15px 0px' : '0px'}
       >
+        {isPanel && <BackgroundWatermark />}
         <BalanceAndButtonsWrapper
           fullWidth={true}
           alignItems='center'
@@ -654,16 +598,9 @@ export const PortfolioOverview = () => {
           <BuySendSwapDepositNav />
         </BalanceAndButtonsWrapper>
         <ColumnReveal hideContent={hidePortfolioGraph}>
-          <SelectTimelineWrapper
-            padding='0px 32px'
-            marginBottom={8}
-          >
-            <LineChartControls
-              onSelectTimeline={onChangeTimeline}
-              selectedTimeline={selectedPortfolioTimeline}
-            />
-          </SelectTimelineWrapper>
           <PortfolioOverviewChart
+            timeframe={selectedTimeframe}
+            onTimeframeChanged={setSelectedTimeframe}
             hasZeroBalance={fullPortfolioFiatBalance.isZero()}
             portfolioPriceHistory={portfolioPriceHistory}
             isLoading={
@@ -671,7 +608,7 @@ export const PortfolioOverview = () => {
             }
           />
         </ColumnReveal>
-      </Column>
+      </BalanceAndLineChartWrapper>
 
       {!hidePortfolioNFTsTab && (
         <ControlsRow>

@@ -15,13 +15,18 @@ const MAX_AGE_FOR_LOCAL_STORAGE_FEED = 1000 * 60 * 60
 const feedTypeToFeedView = (type: FeedV2Type | undefined): FeedView => {
   if (type?.channel) return `channels/${type.channel.channel}`
   if (type?.publisher) return `publishers/${type.publisher.publisherId}`
+  if (type?.following) return `following`
   return 'all'
 }
 
 const FEED_KEY = 'feedV2'
 const localCache: { [feedView: string]: FeedV2 } = {}
 const saveFeed = (feed?: FeedV2) => {
-  if (!feed) return
+  if (!feed || !feed.items.length) {
+    sessionStorage.removeItem(FEED_KEY)
+    localStorage.removeItem(FEED_KEY)
+    return
+  }
 
   localCache[feedTypeToFeedView(feed.type)] = feed
 
@@ -29,8 +34,18 @@ const saveFeed = (feed?: FeedV2) => {
   const data = JSON.stringify(feed, (_, value) => typeof value === "bigint"
     ? value.toString()
     : value);
-  sessionStorage.setItem(FEED_KEY, data)
-  localStorage.setItem(FEED_KEY, data)
+
+  try {
+    sessionStorage.setItem(FEED_KEY, data)
+  } catch (err) {
+    console.log(err)
+  }
+
+  try {
+    localStorage.setItem(FEED_KEY, data)
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 const maybeLoadFeed = (view?: FeedView) => {
@@ -57,6 +72,11 @@ const maybeLoadFeed = (view?: FeedView) => {
   if (fromLocalStorage
     && BigInt(feed.constructTime.internalValue) + BigInt(MAX_AGE_FOR_LOCAL_STORAGE_FEED) < Date.now()) {
     localStorage.removeItem(FEED_KEY)
+    return undefined
+  }
+
+  // Don't load errored feeds.
+  if (typeof feed.error === 'number') {
     return undefined
   }
 
@@ -104,18 +124,32 @@ addFeedListener(latestHash => {
   }
 })
 
-export const useFeedV2 = () => {
+export const useFeedV2 = (enabled: boolean) => {
   const [feedV2, setFeedV2] = useState<FeedV2 | undefined>(maybeLoadFeed())
   const [feedView, setFeedView] = useState<FeedView>(feedTypeToFeedView(feedV2?.type))
   const [hash, setHash] = useState<string>()
 
-  // Add a listener for the latest hash.
+  // Add a listener for the latest hash if Brave News is enabled. Note: We need
+  // to re-add the listener when the enabled state changes because the backing
+  // FeedV2Builder is created/destroyed.
   useEffect(() => {
+    if (!enabled) return
+
+    let cancelled = false
     // Note: A new feed listener will be notified with the latest hash.
-    addFeedListener(setHash)
-  }, [])
+    addFeedListener(newHash => {
+      if (cancelled) return
+      setHash(newHash)
+    })
+
+    return () => { cancelled = true }
+  }, [enabled])
 
   useEffect(() => {
+    if (!enabled) return
+
+    setFeedV2(undefined)
+
     const cachedFeed = maybeLoadFeed(feedView)
     if (cachedFeed) {
       setFeedV2(cachedFeed)
@@ -128,7 +162,7 @@ export const useFeedV2 = () => {
       setFeedV2(feed)
     })
     return () => { cancelled = true }
-  }, [feedView])
+  }, [feedView, enabled])
 
   const refresh = useCallback(() => {
     // Set the feed to undefined - this will trigger the loading indicator.
@@ -140,7 +174,6 @@ export const useFeedV2 = () => {
   // Updates are available if we've been told the latest hash, we have a feed
   // and the hashes don't match.
   const updatesAvailable = !!(hash && feedV2 && hash !== feedV2.sourceHash)
-  console.log("Latest hash: ", hash, "Current hash:", feedV2?.sourceHash)
   return {
     feedV2,
     feedView,

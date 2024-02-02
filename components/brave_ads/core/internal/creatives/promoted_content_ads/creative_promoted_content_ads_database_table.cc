@@ -6,6 +6,7 @@
 #include "brave/components/brave_ads/core/internal/creatives/promoted_content_ads/creative_promoted_content_ads_database_table.h"
 
 #include <cinttypes>
+#include <cstddef>
 #include <map>
 #include <utility>
 
@@ -84,7 +85,7 @@ size_t BindParameters(mojom::DBCommandInfo* command,
     BindString(command, index++, creative_ad.title);
     BindString(command, index++, creative_ad.description);
 
-    count++;
+    ++count;
   }
 
   return count;
@@ -354,7 +355,7 @@ void CreativePromotedContentAds::GetForSegments(
   int index = 0;
   for (const auto& segment : segments) {
     BindString(&*command, index, segment);
-    index++;
+    ++index;
   }
 
   transaction->commands.push_back(std::move(command));
@@ -402,10 +403,10 @@ void CreativePromotedContentAds::Create(mojom::DBTransactionInfo* transaction) {
   mojom::DBCommandInfoPtr command = mojom::DBCommandInfo::New();
   command->type = mojom::DBCommandInfo::Type::EXECUTE;
   command->sql =
-      "CREATE TABLE creative_promoted_content_ads "
-      "(creative_instance_id TEXT NOT NULL PRIMARY KEY UNIQUE ON CONFLICT "
-      "REPLACE, creative_set_id TEXT NOT NULL, campaign_id TEXT NOT NULL, "
-      "title TEXT NOT NULL, description TEXT NOT NULL);";
+      "CREATE TABLE creative_promoted_content_ads (creative_instance_id TEXT "
+      "NOT NULL PRIMARY KEY UNIQUE ON CONFLICT REPLACE, creative_set_id TEXT "
+      "NOT NULL, campaign_id TEXT NOT NULL, title TEXT NOT NULL, description "
+      "TEXT NOT NULL);";
   transaction->commands.push_back(std::move(command));
 }
 

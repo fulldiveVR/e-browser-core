@@ -12,7 +12,10 @@ from threading import Timer
 from typing import List, Optional, Tuple
 from urllib.request import urlopen
 
-from lib.util import extract_zip
+import components.path_util as path_util
+
+with path_util.SysPath(path_util.GetBraveScriptDir(), 0):
+  from lib.util import extract_zip
 
 
 def ToChromiumPlatformName(target_os: str) -> str:
@@ -27,6 +30,18 @@ def ToChromiumPlatformName(target_os: str) -> str:
   raise RuntimeError('Platform is not supported')
 
 
+def ToBravePlatformName(target_os: str) -> str:
+  if target_os == 'mac':
+    return 'darwin-arm64' if platform.processor() == 'arm' else 'darwin-x64'
+  if target_os == 'windows':
+    return 'win32-x64'
+  if target_os == 'linux':
+    return 'linux-x64'
+  if target_os == 'android':
+    return 'android-arm64'
+  raise RuntimeError('Platform is not supported')
+
+
 def TerminateProcess(p):
   logging.error('terminating process by timeout %r', p.args)
   p.terminate()
@@ -35,6 +50,7 @@ def TerminateProcess(p):
 def GetProcessOutput(args: List[str],
                      cwd: Optional[str] = None,
                      check=False,
+                     output_to_debug=True,
                      timeout: Optional[int] = None) -> Tuple[bool, str]:
   if logging.root.isEnabledFor(logging.DEBUG):
     logging.debug('Run binary: %s, cwd = %s  output:', ' '.join(args), cwd)
@@ -57,7 +73,8 @@ def GetProcessOutput(args: List[str],
         line = process.stdout.readline()
         if line:
           output += line
-          logging.debug(line.rstrip())
+          if output_to_debug:
+            logging.debug(line.rstrip())
         if not line and process.poll() is not None:
           break
     finally:
@@ -80,15 +97,19 @@ def GetProcessOutput(args: List[str],
                                      universal_newlines=True)
     return True, output
   except subprocess.CalledProcessError as e:
-    logging.error(e.output)
+    if output_to_debug:
+      logging.error(e.output)
     if check:
       raise
     return False, e.output
 
 
 def DownloadFile(url: str, output: str):
-  logging.debug('Downloading %s', url)
-  f = urlopen(url)
+  logging.info('Downloading %s to %s', url, output)
+  try:
+    f = urlopen(url)
+  except Exception as e:
+    raise RuntimeError(f'Can\'t download {url}') from e
   data = f.read()
   with open(output, 'wb') as output_file:
     output_file.write(data)
@@ -98,3 +119,12 @@ def DownloadArchiveAndUnpack(output_directory: str, url: str):
   _, f = tempfile.mkstemp(dir=output_directory)
   DownloadFile(url, f)
   extract_zip(f, output_directory)
+
+
+def GetFileAtRevision(filepath: str, revision: str) -> Optional[str]:
+  if os.path.isabs(filepath):
+    filepath = os.path.relpath(filepath, path_util.GetBraveDir())
+  success, content = GetProcessOutput(['git', 'show', f'{revision}:{filepath}'],
+                                      cwd=path_util.GetBraveDir(),
+                                      output_to_debug=False)
+  return content if success else None

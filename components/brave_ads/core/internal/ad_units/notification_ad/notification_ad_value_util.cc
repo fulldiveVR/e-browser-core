@@ -32,6 +32,7 @@ base::Value::Dict NotificationAdToValue(const NotificationAdInfo& ad) {
 base::Value::List NotificationAdsToValue(
     const base::circular_deque<NotificationAdInfo>& ads) {
   base::Value::List list;
+  list.reserve(ads.size());
 
   for (const auto& ad : ads) {
     list.Append(NotificationAdToValue(ad));
@@ -44,7 +45,7 @@ NotificationAdInfo NotificationAdFromValue(const base::Value::Dict& dict) {
   NotificationAdInfo ad;
 
   if (const auto* const value = dict.FindString(kTypeKey)) {
-    ad.type = ParseAdType(*value);
+    ad.type = ToAdType(*value);
   }
 
   if (const auto* const value =

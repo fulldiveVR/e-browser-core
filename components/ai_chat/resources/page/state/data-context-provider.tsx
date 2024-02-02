@@ -9,9 +9,6 @@ import { loadTimeData } from '$web-common/loadTimeData'
 import getPageHandlerInstance, * as mojom from '../api/page_handler'
 import DataContext, { AIChatContext } from './context'
 
-// TODO(petemill): Build account urls in the browser
-const URL_REFRESH_PREMIUM_SESSION = 'https://account.brave.com/?intent=recover&product=leo'
-const URL_GO_PREMIUM = 'https://account.brave.com/account/?intent=checkout&product=leo'
 const URL_MANAGE_PREMIUM = 'https://account.brave.com/'
 
 function toBlobURL(data: number[] | null) {
@@ -70,13 +67,21 @@ function DataContextProvider (props: DataContextProviderProps) {
   const isPremiumUser = premiumStatus !== undefined && premiumStatus !== mojom.PremiumStatus.Inactive
 
   const apiHasError = (currentError !== mojom.APIError.None)
-  const shouldDisableUserInput = !!(apiHasError || isGenerating || (!isPremiumUser && currentModel?.isPremium))
+  const shouldDisableUserInput = !!(apiHasError || isGenerating || (!isPremiumUser && currentModel?.access === mojom.ModelAccess.PREMIUM))
 
   const getConversationHistory = () => {
     getPageHandlerInstance()
       .pageHandler.getConversationHistory()
       .then((res) => setConversationHistory(res.conversationHistory))
   }
+
+  // If a conversation entry is submitted but we haven't yet
+  // accepted the policy, show the policy.
+  React.useEffect(() => {
+    if (conversationHistory.length && !hasAcceptedAgreement) {
+      setShowAgreementModal(true)
+    }
+  }, [conversationHistory?.length, hasAcceptedAgreement])
 
   const getSuggestedQuestions = () => {
     getPageHandlerInstance()
@@ -128,9 +133,9 @@ function DataContextProvider (props: DataContextProviderProps) {
     setCanShowPremiumPrompt(false)
   }
 
-  const switchToDefaultModel = () => {
+  const switchToBasicModel = () => {
     // Select the first non-premium model
-    const nonPremium = allModels.find(m => !m.isPremium)
+    const nonPremium = allModels.find(m => m.access === mojom.ModelAccess.BASIC)
     if (!nonPremium) {
       console.error('Could not find a non-premium model!')
       return
@@ -140,13 +145,14 @@ function DataContextProvider (props: DataContextProviderProps) {
 
   const updateCurrentPremiumStatus = async () => {
     console.debug('Getting premium status...')
-    const premiumStatus = await getPageHandlerInstance().pageHandler.getPremiumStatus()
-    console.debug('got premium status: ', premiumStatus.result)
-    setPremiumStatus(premiumStatus.result)
+    const { status } = await getPageHandlerInstance()
+      .pageHandler.getPremiumStatus()
+    console.debug('got premium status: ', status)
+    setPremiumStatus(status)
   }
 
   const userRefreshPremiumSession = () => {
-    getPageHandlerInstance().pageHandler.openURL({ url: URL_REFRESH_PREMIUM_SESSION })
+    getPageHandlerInstance().pageHandler.refreshPremiumSession()
   }
 
   const updateShouldSendPageContents = (shouldSend: boolean) => {
@@ -198,9 +204,7 @@ function DataContextProvider (props: DataContextProviderProps) {
   }
 
   const goPremium = () => {
-    getPageHandlerInstance().pageHandler.openURL({
-      url: URL_GO_PREMIUM
-    })
+    getPageHandlerInstance().pageHandler.goPremium()
   }
 
   const managePremium = () => {
@@ -255,12 +259,6 @@ function DataContextProvider (props: DataContextProviderProps) {
       setCurrentModelKey(modelKey)
     })
 
-    getPageHandlerInstance().callbackRouter.onConversationEntryPending.addListener(() => {
-      if (!hasAcceptedAgreement) {
-        setShowAgreementModal(true)
-      }
-    })
-
     // Since there is no server-side event for premium status changing,
     // we should check often. And since purchase or login is performed in
     // a separate WebContents, we can check when focus is returned here.
@@ -297,7 +295,7 @@ function DataContextProvider (props: DataContextProviderProps) {
     showAgreementModal,
     shouldSendPageContents: shouldSendPageContents && siteInfo?.isContentAssociationPossible,
     setCurrentModel,
-    switchToDefaultModel,
+    switchToBasicModel,
     goPremium,
     managePremium,
     generateSuggestedQuestions,

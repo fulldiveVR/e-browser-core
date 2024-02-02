@@ -10,6 +10,9 @@ import { useHistory } from 'react-router'
 import {
   HIDE_SMALL_BALANCES_FIAT_THRESHOLD //
 } from '../../../../../../common/constants/magics'
+import {
+  emptyRewardsInfo //
+} from '../../../../../../common/async/base-query-cache'
 
 // Selectors
 import {
@@ -72,7 +75,7 @@ import {
 // Queries
 import {
   useGetDefaultFiatCurrencyQuery,
-  useGetExternalRewardsWalletQuery
+  useGetRewardsInfoQuery
 } from '../../../../../../common/slices/api.slice'
 import {
   TokenBalancesRegistry //
@@ -87,7 +90,7 @@ import {
 } from '../../../../../shared/style'
 import {
   FilterTokenRow,
-  CircleButton,
+  PortfolioActionButton,
   ButtonIcon,
   SearchBarWrapper,
   ControlBarWrapper,
@@ -145,10 +148,8 @@ export const TokenLists = ({
   const isPanel = useSafeUISelector(UISelectors.isPanel)
 
   // queries
-  const { data: externalRewardsInfo } = useGetExternalRewardsWalletQuery()
-
-  // computed
-  const externalRewardsProvider = externalRewardsInfo?.provider ?? undefined
+  const { data: { provider: externalRewardsProvider } = emptyRewardsInfo } =
+    useGetRewardsInfoQuery()
 
   // state
   const [searchValue, setSearchValue] = React.useState<string>('')
@@ -316,6 +317,15 @@ export const TokenLists = ({
     ]
   )
 
+  const doesNetworkHaveBalance = React.useCallback(
+    (network: BraveWallet.NetworkInfo) => {
+      return getAssetsByNetwork(network).some((asset) =>
+        new Amount(asset.assetBalance).gt(0)
+      )
+    },
+    [getAssetsByNetwork]
+  )
+
   // Returns a list of assets based on provided coin type
   const getAssetsByCoin = React.useCallback(
     (account: BraveWallet.AccountInfo) => {
@@ -427,6 +437,15 @@ export const TokenLists = ({
     [getSortedAssetsByAccount, filteredAssetList]
   )
 
+  const doesAccountHaveBalance = React.useCallback(
+    (account: BraveWallet.AccountInfo) => {
+      return getFilteredOutAssetsByAccount(account).some((asset) => {
+        return new Amount(asset.assetBalance).gt(0)
+      })
+    },
+    [getFilteredOutAssetsByAccount]
+  )
+
   const onCloseSearchBar = React.useCallback(() => {
     setShowSearchBar(false)
     setSearchValue('')
@@ -440,16 +459,29 @@ export const TokenLists = ({
     if (noNetworks) {
       return undefined
     }
-    return [...networks]
-      .filter((network) => {
-        return getNetworkFiatValue(network).gt(0)
-      })
-      .sort((a, b) => {
-        const aBalance = getNetworkFiatValue(a)
-        const bBalance = getNetworkFiatValue(b)
-        return bBalance.minus(aBalance).toNumber()
-      })
-  }, [networks, noNetworks, getNetworkFiatValue])
+    if (hideSmallBalances) {
+      return networks
+        .filter((network) => {
+          return getNetworkFiatValue(network).gt(0)
+        })
+        .sort((a, b) => {
+          const aBalance = getNetworkFiatValue(a)
+          const bBalance = getNetworkFiatValue(b)
+          return bBalance.minus(aBalance).toNumber()
+        })
+    }
+    return networks.filter(doesNetworkHaveBalance).sort((a, b) => {
+      const aBalance = getNetworkFiatValue(a)
+      const bBalance = getNetworkFiatValue(b)
+      return bBalance.minus(aBalance).toNumber()
+    })
+  }, [
+    networks,
+    noNetworks,
+    getNetworkFiatValue,
+    hideSmallBalances,
+    doesNetworkHaveBalance
+  ])
 
   const listUiByNetworks = React.useMemo(() => {
     if (showEmptyState) {
@@ -510,16 +542,29 @@ export const TokenLists = ({
     if (noAccounts) {
       return undefined
     }
-    return [...accounts]
-      .filter((account) => {
-        return getAccountFiatValue(account).gt(0)
-      })
-      .sort((a, b) => {
-        const aBalance = getAccountFiatValue(a)
-        const bBalance = getAccountFiatValue(b)
-        return bBalance.minus(aBalance).toNumber()
-      })
-  }, [accounts, noAccounts, getAccountFiatValue])
+    if (hideSmallBalances) {
+      return accounts
+        .filter((account) => {
+          return getAccountFiatValue(account).gt(0)
+        })
+        .sort((a, b) => {
+          const aBalance = getAccountFiatValue(a)
+          const bBalance = getAccountFiatValue(b)
+          return bBalance.minus(aBalance).toNumber()
+        })
+    }
+    return accounts.filter(doesAccountHaveBalance).sort((a, b) => {
+      const aBalance = getAccountFiatValue(a)
+      const bBalance = getAccountFiatValue(b)
+      return bBalance.minus(aBalance).toNumber()
+    })
+  }, [
+    accounts,
+    noAccounts,
+    getAccountFiatValue,
+    hideSmallBalances,
+    doesAccountHaveBalance
+  ])
 
   const listUiByAccounts = React.useMemo(() => {
     if (showEmptyState) {
@@ -675,33 +720,32 @@ export const TokenLists = ({
             )}
             {showSearchBar && (
               <Row width='unset'>
-                <CircleButton onClick={onCloseSearchBar}>
+                <PortfolioActionButton onClick={onCloseSearchBar}>
                   <ButtonIcon name='close' />
-                </CircleButton>
+                </PortfolioActionButton>
               </Row>
             )}
             {!showSearchBar && (
-              <Row width='unset'>
+              <Row
+                width='unset'
+                gap='12px'
+              >
                 {!showEmptyState && (
                   <SearchButtonWrapper width='unset'>
-                    <CircleButton
-                      marginRight={12}
+                    <PortfolioActionButton
                       onClick={() => setShowSearchBar(true)}
                     >
                       <ButtonIcon name='search' />
-                    </CircleButton>
+                    </PortfolioActionButton>
                   </SearchButtonWrapper>
                 )}
-                <CircleButton
-                  marginRight={12}
-                  onClick={showAddAssetsModal}
-                >
+                <PortfolioActionButton onClick={showAddAssetsModal}>
                   <ButtonIcon name='list-settings' />
-                </CircleButton>
+                </PortfolioActionButton>
 
-                <CircleButton onClick={onShowPortfolioSettings}>
+                <PortfolioActionButton onClick={onShowPortfolioSettings}>
                   <ButtonIcon name='filter-settings' />
-                </CircleButton>
+                </PortfolioActionButton>
               </Row>
             )}
           </Row>

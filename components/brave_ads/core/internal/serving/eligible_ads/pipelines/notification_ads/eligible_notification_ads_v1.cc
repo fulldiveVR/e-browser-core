@@ -11,9 +11,9 @@
 #include "brave/components/brave_ads/core/internal/client/ads_client_util.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ads_database_table.h"
+#include "brave/components/brave_ads/core/internal/segments/segment_constants.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/allocation/seen_ads.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/allocation/seen_advertisers.h"
-#include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_constants.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/eligible_ads_feature.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/exclusion_rules_util.h"
 #include "brave/components/brave_ads/core/internal/serving/eligible_ads/exclusion_rules/notification_ads/notification_ad_exclusion_rules.h"
@@ -188,7 +188,7 @@ void EligibleNotificationAdsV1::GetForUntargeted(
 
   const database::table::CreativeNotificationAds database_table;
   database_table.GetForSegments(
-      {kUntargeted},
+      {kUntargetedSegment},
       base::BindOnce(&EligibleNotificationAdsV1::GetForUntargetedCallback,
                      weak_factory_.GetWeakPtr(), ad_events, browsing_history,
                      std::move(callback)));
@@ -229,23 +229,29 @@ CreativeNotificationAdList EligibleNotificationAdsV1::FilterCreativeAds(
     return {};
   }
 
-  CreativeNotificationAdList eligible_creative_ads = creative_ads;
-
-  NotificationAdExclusionRules exclusion_rules(
-      ad_events, *subdivision_targeting_, *anti_targeting_resource_,
-      browsing_history);
-  eligible_creative_ads = ApplyExclusionRules(
-      eligible_creative_ads, last_served_ad_, &exclusion_rules);
-
-  eligible_creative_ads = FilterSeenAdvertisersAndRoundRobinIfNeeded(
-      eligible_creative_ads, AdType::kNotificationAd);
+  CreativeNotificationAdList eligible_creative_ads =
+      FilterSeenAdvertisersAndRoundRobinIfNeeded(creative_ads,
+                                                 AdType::kNotificationAd);
 
   eligible_creative_ads = FilterSeenAdsAndRoundRobinIfNeeded(
       eligible_creative_ads, AdType::kNotificationAd);
 
-  eligible_creative_ads = PaceCreativeAds(eligible_creative_ads);
+  NotificationAdExclusionRules exclusion_rules(
+      ad_events, *subdivision_targeting_, *anti_targeting_resource_,
+      browsing_history);
+  ApplyExclusionRules(eligible_creative_ads, last_served_ad_, &exclusion_rules);
 
-  return PrioritizeCreativeAds(eligible_creative_ads);
+  PaceCreativeAds(eligible_creative_ads);
+
+  const PrioritizedCreativeAdBuckets<CreativeNotificationAdList> buckets =
+      SortCreativeAdsIntoBucketsByPriority(eligible_creative_ads);
+  if (buckets.empty()) {
+    return {};
+  }
+
+  LogNumberOfCreativeAdsPerBucket(buckets);
+
+  return buckets.cbegin()->second;
 }
 
 }  // namespace brave_ads

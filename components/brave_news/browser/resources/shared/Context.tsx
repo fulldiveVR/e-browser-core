@@ -41,7 +41,8 @@ interface BraveNewsContext {
   isShowOnNTPPrefEnabled: boolean | undefined
   toggleBraveNewsOnNTP: (enabled: boolean) => void
   openArticlesInNewTab: boolean,
-  setOpenArticlesInNewTab: (newTab: boolean) => void
+  setOpenArticlesInNewTab: (newTab: boolean) => void,
+  reportSessionStart: () => void
 }
 
 export const BraveNewsContext = React.createContext<BraveNewsContext>({
@@ -64,7 +65,8 @@ export const BraveNewsContext = React.createContext<BraveNewsContext>({
   isShowOnNTPPrefEnabled: undefined,
   toggleBraveNewsOnNTP: (enabled: boolean) => { },
   openArticlesInNewTab: true,
-  setOpenArticlesInNewTab: () => { }
+  setOpenArticlesInNewTab: () => { },
+  reportSessionStart: () => { }
 })
 
 export const publishersCache = new PublishersCachingWrapper()
@@ -73,6 +75,7 @@ export const configurationCache = new ConfigurationCachingWrapper()
 
 export function BraveNewsContextProvider(props: { children: React.ReactNode }) {
   const [locale, setLocale] = useState('')
+  const [configuration, setConfiguration] = useState<Configuration>(configurationCache.value)
 
   // Note: It's okay to fetch the FeedV2 even when the feature isn't enabled
   // because the controller will just return an empty feed.
@@ -81,13 +84,12 @@ export function BraveNewsContextProvider(props: { children: React.ReactNode }) {
     feedView,
     setFeedView,
     refresh: refreshFeedV2
-  } = useFeedV2()
+  } = useFeedV2(configuration.isOptedIn && configuration.showOnNTP)
 
   const [customizePage, setCustomizePage] = useState<NewsPage>(null)
   const [channels, setChannels] = useState<Channels>({})
   const [publishers, setPublishers] = useState<Publishers>({})
   const [suggestedPublisherIds, setSuggestedPublisherIds] = useState<string[]>([])
-  const [configuration, setConfiguration] = useState<Configuration>(configurationCache.value)
 
   // Get the default locale on load.
   useEffect(() => {
@@ -146,6 +148,10 @@ export function BraveNewsContextProvider(props: { children: React.ReactNode }) {
     configurationCache.set({ openArticlesInNewTab: inNewTab })
   }, [])
 
+  const reportSessionStart = () => {
+    getBraveNewsController().onInteractionSessionStarted()
+  }
+
   const context = useMemo<BraveNewsContext>(() => ({
     locale,
     feedView,
@@ -166,7 +172,8 @@ export function BraveNewsContextProvider(props: { children: React.ReactNode }) {
     isShowOnNTPPrefEnabled: configuration.showOnNTP,
     toggleBraveNewsOnNTP,
     openArticlesInNewTab: configuration.openArticlesInNewTab,
-    setOpenArticlesInNewTab
+    setOpenArticlesInNewTab,
+    reportSessionStart
   }), [customizePage, setFeedView, feedV2, feedV2UpdatesAvailable, channels, publishers, suggestedPublisherIds, updateSuggestedPublisherIds, configuration, toggleBraveNewsOnNTP])
 
   return <BraveNewsContext.Provider value={context}>

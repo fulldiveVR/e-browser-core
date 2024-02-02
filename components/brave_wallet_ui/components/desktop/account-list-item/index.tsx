@@ -11,6 +11,9 @@ import { useDispatch } from 'react-redux'
 // actions
 import { AccountsTabActions } from '../../../page/reducers/accounts-tab-reducer'
 
+// constants
+import { emptyRewardsInfo } from '../../../common/async/base-query-cache'
+
 // utils
 import { reduceAddress } from '../../../utils/reduce-address'
 import { getAccountTypeDescription } from '../../../utils/account-utils'
@@ -20,7 +23,6 @@ import Amount from '../../../utils/amount'
 import {
   getIsRewardsAccount,
   getIsRewardsToken,
-  getRewardsBATToken,
   getRewardsTokenDescription
 } from '../../../utils/rewards_utils'
 import { getLocale } from '../../../../common/locale'
@@ -41,8 +43,7 @@ import {
 } from '../../../common/slices/entities/token-balance.entity'
 import {
   useGetDefaultFiatCurrencyQuery,
-  useGetExternalRewardsWalletQuery,
-  useGetRewardsBalanceQuery
+  useGetRewardsInfoQuery
 } from '../../../common/slices/api.slice'
 
 // types
@@ -50,9 +51,9 @@ import {
   BraveWallet,
   AccountButtonOptionsObjectType,
   AccountModalTypes,
-  SpotPriceRegistry
+  SpotPriceRegistry,
+  WalletStatus
 } from '../../../constants/types'
-import { WalletStatus } from '../../../common/async/brave_rewards_api_proxy'
 
 // options
 import { AccountButtonOptions } from '../../../options/account-list-button-options'
@@ -126,8 +127,15 @@ export const AccountListItem = ({
 
   // queries
   const { data: defaultFiatCurrency = 'usd' } = useGetDefaultFiatCurrencyQuery()
-  const { data: rewardsBalance } = useGetRewardsBalanceQuery()
-  const { data: externalRewardsInfo } = useGetExternalRewardsWalletQuery()
+
+  const {
+    data: {
+      balance: rewardsBalance,
+      provider,
+      status: rewardsStatus,
+      rewardsToken
+    } = emptyRewardsInfo
+  } = useGetRewardsInfoQuery()
 
   // state
   const [showAccountMenu, setShowAccountMenu] = React.useState<boolean>(false)
@@ -184,13 +192,9 @@ export const AccountListItem = ({
   const isRewardsAccount = getIsRewardsAccount(account.accountId)
 
   const isDisconnectedRewardsAccount =
-    isRewardsAccount && externalRewardsInfo?.status === WalletStatus.kLoggedOut
+    isRewardsAccount && rewardsStatus === WalletStatus.kLoggedOut
 
-  const externalProvider = isRewardsAccount
-    ? externalRewardsInfo?.provider
-    : undefined
-
-  const rewardsToken = getRewardsBATToken(externalProvider)
+  const externalProvider = isRewardsAccount ? provider : undefined
 
   const accountsFungibleTokens = React.useMemo(() => {
     if (isRewardsAccount && rewardsToken) {
@@ -259,7 +263,7 @@ export const AccountListItem = ({
 
     const reducedAmounts = amounts.reduce(function (a, b) {
       return a.plus(b)
-    })
+    }, Amount.empty())
 
     return !reducedAmounts.isUndefined() ? reducedAmounts : Amount.empty()
   }, [
@@ -275,19 +279,29 @@ export const AccountListItem = ({
 
   const buttonOptions = React.useMemo((): AccountButtonOptionsObjectType[] => {
     // We are not able to remove a Derived account so we filter out this option.
-    if (account.accountId.kind === BraveWallet.AccountKind.kDerived) {
-      return AccountButtonOptions.filter(
-        (option: AccountButtonOptionsObjectType) => option.id !== 'remove'
-      )
-    }
+    const canRemove =
+      account.accountId.kind !== BraveWallet.AccountKind.kDerived
+
     // We are not able to fetch Private Keys for a Hardware account so we filter
-    // out this option.
-    if (account.accountId.kind === BraveWallet.AccountKind.kHardware) {
-      return AccountButtonOptions.filter(
-        (option: AccountButtonOptionsObjectType) => option.id !== 'privateKey'
-      )
+    // out this option. Also PK export is allowed only for ETH, SOL and FIL.
+    const canExportPrivateKey =
+      [
+        // TODO(apaymyshev): support BTC and ZEC
+        BraveWallet.CoinType.ETH,
+        BraveWallet.CoinType.SOL,
+        BraveWallet.CoinType.FIL
+      ].includes(account.accountId.coin) &&
+      account.accountId.kind !== BraveWallet.AccountKind.kHardware
+
+    let options = [...AccountButtonOptions]
+
+    if (!canRemove) {
+      options = options.filter((option) => option.id !== 'remove')
     }
-    return AccountButtonOptions
+    if (!canExportPrivateKey) {
+      options = options.filter((option) => option.id !== 'privateKey')
+    }
+    return options
   }, [account])
 
   // render
@@ -395,7 +409,7 @@ export const AccountListItem = ({
       {isDisconnectedRewardsAccount && (
         <>
           <VerticalSpacer space='12px' />
-          <RewardsLogin externalRewardsInfo={externalRewardsInfo} />
+          <RewardsLogin provider={provider} />
         </>
       )}
     </StyledWrapper>

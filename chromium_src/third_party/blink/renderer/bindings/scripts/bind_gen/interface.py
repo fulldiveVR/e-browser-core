@@ -14,10 +14,10 @@ import override_utils
 SCRIPTS_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 sys.path.insert(1, SCRIPTS_DIR)
 
-from bind_gen.code_node import SymbolNode, TextNode  # pylint: disable=import-error,wrong-import-position
-from bind_gen.codegen_accumulator import CodeGenAccumulator  # pylint: disable=import-error,wrong-import-position
-from bind_gen.codegen_context import CodeGenContext  # pylint: disable=import-error,wrong-import-position
-from bind_gen.codegen_format import format_template as _format  # pylint: disable=import-error,wrong-import-position
+from bind_gen.code_node import SymbolNode, TextNode
+from bind_gen.codegen_accumulator import CodeGenAccumulator
+from bind_gen.codegen_context import CodeGenContext
+from bind_gen.codegen_format import format_template as _format
 
 # Get gn arg to enable WebAPI probes.
 _IS_PG_WEBAPI_PROBES_ENABLED = override_utils.get_gn_arg(
@@ -216,10 +216,12 @@ def _append_report_page_graph_api_call_event(cg_context, expr):
         exception_state = "nullptr"
 
     # Extract return value. See `bind_return_value` in upstream interface.py.
-    is_return_type_void = ((not cg_context.return_type
-                            or cg_context.return_type.unwrap().is_void)
-                           and not cg_context.does_override_idl_return_type)
-    if is_return_type_void or hasattr(cg_context, _IS_OBSERVABLE_ARRAY_SETTER):
+    is_return_type_undefined = (
+        (not cg_context.return_type
+         or cg_context.return_type.unwrap().is_undefined)
+        and not cg_context.does_override_idl_return_type)
+    if is_return_type_undefined or hasattr(cg_context,
+                                           _IS_OBSERVABLE_ARRAY_SETTER):
         return_value = "std::nullopt"
     else:
         return_value = _to_page_graph_blink_arg("return_value")

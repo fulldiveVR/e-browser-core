@@ -38,6 +38,12 @@
 
 namespace {
 constexpr uint32_t kDesiredFaviconSizePixels = 32;
+constexpr char kURLRefreshPremiumSession[] =
+    "https://account.brave.com/?intent=recover&product=leo";
+#if !BUILDFLAG(IS_ANDROID)
+constexpr char kURLGoPremium[] =
+    "https://account.brave.com/account/?intent=checkout&product=leo";
+#endif
 }  // namespace
 
 namespace ai_chat {
@@ -91,7 +97,7 @@ void AIChatUIPageHandler::SetClientPage(
   // ex. A user may ask a question from the location bar
   if (active_chat_tab_helper_ &&
       active_chat_tab_helper_->HasPendingConversationEntry()) {
-    OnConversationEntryPending();
+    OnHistoryUpdate();
   }
 }
 
@@ -112,10 +118,12 @@ void AIChatUIPageHandler::ChangeModel(const std::string& model_key) {
 
 void AIChatUIPageHandler::SubmitHumanConversationEntry(
     const std::string& input) {
+  DCHECK(!active_chat_tab_helper_->IsRequestInProgress())
+      << "Should not be able to submit more"
+      << "than a single human conversation turn at a time.";
   mojom::ConversationTurn turn = {CharacterType::HUMAN,
                                   ConversationTurnVisibility::VISIBLE, input};
-  active_chat_tab_helper_->MakeAPIRequestWithConversationHistoryUpdate(
-      std::move(turn));
+  active_chat_tab_helper_->SubmitHumanConversationEntry(std::move(turn));
 }
 
 void AIChatUIPageHandler::SubmitSummarizationRequest() {
@@ -200,6 +208,21 @@ void AIChatUIPageHandler::OpenURL(const GURL& url) {
   // are done.
   return;
 #endif
+}
+
+void AIChatUIPageHandler::GoPremium() {
+#if !BUILDFLAG(IS_ANDROID)
+  OpenURL(GURL(kURLGoPremium));
+#else
+  auto* contents_to_navigate = (active_chat_tab_helper_)
+                                   ? active_chat_tab_helper_->web_contents()
+                                   : web_contents();
+  ai_chat::GoPremium(contents_to_navigate);
+#endif
+}
+
+void AIChatUIPageHandler::RefreshPremiumSession() {
+  OpenURL(GURL(kURLRefreshPremiumSession));
 }
 
 void AIChatUIPageHandler::SetShouldSendPageContents(bool should_send) {
@@ -318,12 +341,6 @@ void AIChatUIPageHandler::OnPageHasContent(mojom::SiteInfoPtr site_info) {
   }
 }
 
-void AIChatUIPageHandler::OnConversationEntryPending() {
-  if (page_.is_bound()) {
-    page_->OnConversationEntryPending();
-  }
-}
-
 void AIChatUIPageHandler::GetFaviconImageData(
     GetFaviconImageDataCallback callback) {
   if (!active_chat_tab_helper_) {
@@ -368,7 +385,7 @@ void AIChatUIPageHandler::OnVisibilityChanged(content::Visibility visibility) {
 void AIChatUIPageHandler::GetPremiumStatus(GetPremiumStatusCallback callback) {
   if (!active_chat_tab_helper_) {
     VLOG(2) << "Chat tab helper is not set";
-    std::move(callback).Run(mojom::PremiumStatus::Inactive);
+    std::move(callback).Run(mojom::PremiumStatus::Inactive, nullptr);
     return;
   }
 
@@ -381,9 +398,10 @@ void AIChatUIPageHandler::GetPremiumStatus(GetPremiumStatusCallback callback) {
 
 void AIChatUIPageHandler::OnGetPremiumStatus(
     GetPremiumStatusCallback callback,
-    ai_chat::mojom::PremiumStatus status) {
+    ai_chat::mojom::PremiumStatus status,
+    ai_chat::mojom::PremiumInfoPtr info) {
   if (page_.is_bound()) {
-    std::move(callback).Run(status);
+    std::move(callback).Run(status, std::move(info));
   }
 }
 

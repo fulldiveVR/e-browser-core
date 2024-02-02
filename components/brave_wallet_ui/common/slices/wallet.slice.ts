@@ -4,10 +4,16 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import {
+  createAction,
+  createSlice,
+  PayloadAction,
+  EntityId
+} from '@reduxjs/toolkit'
+
+import {
   BraveWallet,
   WalletState,
   WalletInitializedPayload,
-  SolFeeEstimates,
   NetworkFilterType,
   RefreshOpts
 } from '../../constants/types'
@@ -30,33 +36,21 @@ import { HighToLowAssetsFilterOption } from '../../options/asset-filter-options'
 import { NoneGroupByOption } from '../../options/group-assets-by-options'
 import { AllNetworksOptionDefault } from '../../options/network-filter-options'
 import { AllAccountsOptionUniqueKey } from '../../options/account-filter-options'
-import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const defaultState: WalletState = {
   hasInitialized: false,
-  allowNewWalletFilecoinAccount: true,
+  allowedNewWalletAccountTypeNetworkIds: [],
   isBitcoinEnabled: false,
   isZCashEnabled: false,
   isWalletCreated: false,
   isWalletLocked: true,
   userVisibleTokensInfo: [],
   fullTokenList: [],
-  selectedPortfolioTimeline:
-    window.localStorage.getItem(
-      LOCAL_STORAGE_KEYS.PORTFOLIO_TIME_LINE_OPTION
-    ) !== undefined
-      ? Number(
-          window.localStorage.getItem(
-            LOCAL_STORAGE_KEYS.PORTFOLIO_TIME_LINE_OPTION
-          )
-        )
-      : BraveWallet.AssetPriceTimeframe.OneDay,
   addUserAssetError: false,
   activeOrigin: {
     eTldPlusOne: '',
     originSpec: ''
   },
-  gasEstimates: undefined,
   selectedNetworkFilter: parseJSONFromLocalStorage(
     'PORTFOLIO_NETWORK_FILTER_OPTION',
     AllNetworksOptionDefault
@@ -69,8 +63,6 @@ const defaultState: WalletState = {
     window.localStorage.getItem(LOCAL_STORAGE_KEYS.GROUP_PORTFOLIO_ASSETS_BY) ||
     NoneGroupByOption.id,
   selectedAccountFilter: AllAccountsOptionUniqueKey,
-  solFeeEstimates: undefined,
-  selectedDepositAssetId: undefined,
   passwordAttempts: 0,
   assetAutoDiscoveryCompleted: true,
   isNftPinningFeatureEnabled: false,
@@ -105,8 +97,8 @@ const defaultState: WalletState = {
     'FILTERED_OUT_PORTFOLIO_NETWORK_KEYS',
     makeInitialFilteredOutNetworkKeys()
   ),
-  filteredOutPortfolioAccountAddresses: parseJSONFromLocalStorage(
-    'FILTERED_OUT_PORTFOLIO_ACCOUNT_ADDRESSES',
+  filteredOutPortfolioAccountIds: parseJSONFromLocalStorage(
+    'FILTERED_OUT_PORTFOLIO_ACCOUNT_IDS',
     []
   ),
   hidePortfolioSmallBalances:
@@ -139,9 +131,6 @@ export const WalletAsyncActions = {
   unlocked: createAction('unlocked'),
   backedUp: createAction('backedUp'),
   getAllTokensList: createAction('getAllTokensList'),
-  selectPortfolioTimeline: createAction<BraveWallet.AssetPriceTimeframe>(
-    'selectPortfolioTimeline'
-  ),
   defaultBaseCurrencyChanged: createAction<DefaultBaseCurrencyChanged>(
     'defaultBaseCurrencyChanged'
   ), // refreshWalletInfo
@@ -199,13 +188,6 @@ export const createWalletSlice = (initialState: WalletState = defaultState) => {
           payload.walletInfo.isAnkrBalancesFeatureEnabled
       },
 
-      portfolioTimelineUpdated(
-        state: WalletState,
-        { payload }: PayloadAction<BraveWallet.AssetPriceTimeframe>
-      ) {
-        state.selectedPortfolioTimeline = payload
-      },
-
       setAllTokensList: (
         state: WalletState,
         { payload }: PayloadAction<BraveWallet.BlockchainToken[]>
@@ -218,21 +200,6 @@ export const createWalletSlice = (initialState: WalletState = defaultState) => {
         { payload }: PayloadAction<boolean>
       ) {
         state.assetAutoDiscoveryCompleted = payload
-      },
-
-      selectOnRampAssetId(
-        state: WalletState,
-        { payload }: PayloadAction<string | undefined>
-      ) {
-        state.selectedDepositAssetId = payload
-      },
-
-      setGasEstimates(
-        state: WalletState,
-        { payload }: PayloadAction<BraveWallet.GasEstimation1559>
-      ) {
-        state.hasFeeEstimatesError = false
-        state.gasEstimates = payload
       },
 
       setPasswordAttempts(
@@ -305,11 +272,11 @@ export const createWalletSlice = (initialState: WalletState = defaultState) => {
         state.filteredOutPortfolioNetworkKeys = payload
       },
 
-      setFilteredOutPortfolioAccountAddresses(
+      setFilteredOutPortfolioAccountIds(
         state: WalletState,
         { payload }: PayloadAction<string[]>
       ) {
-        state.filteredOutPortfolioAccountAddresses = payload
+        state.filteredOutPortfolioAccountIds = payload
       },
 
       setHidePortfolioSmallBalances(
@@ -340,21 +307,6 @@ export const createWalletSlice = (initialState: WalletState = defaultState) => {
         state.hidePortfolioNFTsTab = payload
       },
 
-      setSolFeeEstimates(
-        state: WalletState,
-        { payload }: PayloadAction<SolFeeEstimates>
-      ) {
-        state.hasFeeEstimatesError = false
-        state.solFeeEstimates = payload
-      },
-
-      setHasFeeEstimatesError: (
-        state: WalletState,
-        { payload }: PayloadAction<boolean>
-      ) => {
-        state.hasFeeEstimatesError = payload
-      },
-
       setVisibleTokensInfo: (
         state: WalletState,
         { payload }: PayloadAction<BraveWallet.BlockchainToken[]>
@@ -369,11 +321,11 @@ export const createWalletSlice = (initialState: WalletState = defaultState) => {
         state.isRefreshingNetworksAndTokens = payload
       },
 
-      setAllowNewWalletFilecoinAccount(
+      setAllowedNewWalletAccountTypeNetworkIds(
         state: WalletState,
-        { payload }: PayloadAction<boolean>
+        { payload }: PayloadAction<EntityId[]>
       ) {
-        state.allowNewWalletFilecoinAccount = payload
+        state.allowedNewWalletAccountTypeNetworkIds = payload
       }
     },
     extraReducers: (builder) => {

@@ -8,10 +8,7 @@ import { mapLimit } from 'async'
 import {
   HardwareWalletConnectOpts //
 } from '../../components/desktop/popup-modals/add-account-modal/hardware-wallet-connect/types'
-import {
-  BraveWallet,
-  SolanaSerializedTransactionParams
-} from '../../constants/types'
+import { BraveWallet } from '../../constants/types'
 import * as WalletActions from '../actions/wallet_actions'
 
 // Utils
@@ -49,7 +46,6 @@ import {
   isIpfs,
   stripERC20TokenImageURL
 } from '../../utils/string-utils'
-import { toTxDataUnion } from '../../utils/tx-utils'
 
 export const onConnectHardwareWallet = (
   opts: HardwareWalletConnectOpts
@@ -138,8 +134,6 @@ export function refreshVisibleTokenInfo(
     const networkList = await getVisibleNetworksList(api)
 
     async function inner(network: BraveWallet.NetworkInfo) {
-      const nativeAsset = makeNetworkAsset(network)
-
       // Get a list of user tokens for each coinType and network.
       const getTokenList = await braveWalletService.getUserAssets(
         network.chainId,
@@ -151,7 +145,16 @@ export function refreshVisibleTokenInfo(
         ...token,
         logo: `chrome://erc-token-images/${token.logo}`
       })) as BraveWallet.BlockchainToken[]
-      return tokenList.length === 0 ? [nativeAsset] : tokenList
+
+      if (tokenList.length === 0) {
+        // user has hidden all tokens for the network
+        // we should still include the native asset, but as hidden
+        const nativeAsset = makeNetworkAsset(network)
+        nativeAsset.visible = false
+        return [nativeAsset]
+      }
+
+      return tokenList
     }
 
     const visibleAssets = targetNetwork
@@ -176,33 +179,6 @@ export function refreshVisibleTokenInfo(
     await dispatch(WalletActions.setVisibleTokensInfo(userVisibleTokensInfo))
     await dispatch(WalletActions.setRemovedNonFungibleTokens(removedNfts))
   }
-}
-
-export async function sendSolanaSerializedTransaction(
-  payload: SolanaSerializedTransactionParams
-) {
-  const { solanaTxManagerProxy, txService } = getAPIProxy()
-  const result =
-    await solanaTxManagerProxy.makeTxDataFromBase64EncodedTransaction(
-      payload.encodedTransaction,
-      payload.txType,
-      payload.sendOptions || null
-    )
-  if (result.error !== BraveWallet.ProviderError.kSuccess) {
-    console.error(`Failed to sign Solana message: ${result.errorMessage}`)
-    return { success: false, errorMessage: result.errorMessage, txMetaId: '' }
-  }
-
-  return await txService.addUnapprovedTransaction(
-    toTxDataUnion({ solanaTxData: result.txData ?? undefined }),
-    payload.chainId,
-    payload.accountId
-  )
-}
-
-export function getSwapService() {
-  const { swapService } = getAPIProxy()
-  return swapService
 }
 
 export async function getNFTMetadata(token: BraveWallet.BlockchainToken) {

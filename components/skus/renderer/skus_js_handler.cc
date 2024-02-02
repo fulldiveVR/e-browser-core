@@ -28,6 +28,10 @@
 #include "third_party/blink/public/web/web_local_frame.h"
 #include "third_party/blink/public/web/web_script_source.h"
 
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
+#endif
+
 namespace skus {
 
 gin::WrapperInfo SkusJSHandler::kWrapperInfo = {gin::kEmbedderNativeGin};
@@ -44,11 +48,13 @@ bool SkusJSHandler::EnsureConnected() {
   }
   bool result = skus_service_.is_bound();
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  if (!vpn_service_.is_bound()) {
-    render_frame_->GetBrowserInterfaceBroker()->GetInterface(
-        vpn_service_.BindNewPipeAndPassReceiver());
+  if (brave_vpn::IsBraveVPNFeatureEnabled()) {
+    if (!vpn_service_.is_bound()) {
+      render_frame_->GetBrowserInterfaceBroker()->GetInterface(
+          vpn_service_.BindNewPipeAndPassReceiver());
+    }
+    result = result && vpn_service_.is_bound();
   }
-  result = result && vpn_service_.is_bound();
 #endif
 
   return result;
@@ -195,10 +201,14 @@ void SkusJSHandler::OnFetchOrderCredentials(
                                  v8::MicrotasksScope::kDoNotRunMicrotasks);
 
   v8::Local<v8::Promise::Resolver> resolver = promise_resolver.Get(isolate);
-  v8::Local<v8::String> result;
-  result = v8::String::NewFromUtf8(isolate, response.c_str()).ToLocalChecked();
+  v8::Local<v8::String> result =
+      v8::String::NewFromUtf8(isolate, response.c_str()).ToLocalChecked();
 
-  std::ignore = resolver->Resolve(context, result);
+  if (response.empty()) {
+    std::ignore = resolver->Resolve(context, result);
+  } else {
+    std::ignore = resolver->Reject(context, result);
+  }
 }
 
 // window.chrome.braveSkus.prepare_credentials_presentation
@@ -308,7 +318,9 @@ void SkusJSHandler::OnCredentialSummary(
     return;
   }
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  vpn_service_->LoadPurchasedState(domain);
+  if (vpn_service_.is_bound()) {
+    vpn_service_->LoadPurchasedState(domain);
+  }
 #endif
   v8::Local<v8::Value> local_result =
       content::V8ValueConverter::Create()->ToV8Value(*result_dict, context);

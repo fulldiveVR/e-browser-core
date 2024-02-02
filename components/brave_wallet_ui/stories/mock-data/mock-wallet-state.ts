@@ -14,8 +14,8 @@ import { AllAccountsOptionUniqueKey } from '../../options/account-filter-options
 import { AccountsGroupByOption } from '../../options/group-assets-by-options'
 
 // mocks
-import { LAMPORTS_PER_SOL } from '../../common/constants/solana'
 import { mockMoonCatNFT, mockErc20TokensList } from './mock-asset-options'
+import { networkEntityAdapter } from '../../common/slices/entities/network.entity'
 
 export const mockWalletState: WalletState = {
   activeOrigin: {
@@ -24,18 +24,46 @@ export const mockWalletState: WalletState = {
   },
   addUserAssetError: false,
   fullTokenList: mockErc20TokensList,
-  gasEstimates: undefined,
   hasInitialized: true,
   isBitcoinEnabled: false,
   isZCashEnabled: false,
   isAnkrBalancesFeatureEnabled: false,
-  solFeeEstimates: {
-    fee: (0.000005 * LAMPORTS_PER_SOL) as unknown as bigint
-  },
-  allowNewWalletFilecoinAccount: true,
+  allowedNewWalletAccountTypeNetworkIds: [
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.FILECOIN_MAINNET,
+      coin: BraveWallet.CoinType.FIL
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.FILECOIN_TESTNET,
+      coin: BraveWallet.CoinType.FIL
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.BITCOIN_MAINNET,
+      coin: BraveWallet.CoinType.BTC
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.BITCOIN_TESTNET,
+      coin: BraveWallet.CoinType.BTC
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.Z_CASH_MAINNET,
+      coin: BraveWallet.CoinType.ZEC
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.Z_CASH_TESTNET,
+      coin: BraveWallet.CoinType.ZEC
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.SOLANA_MAINNET,
+      coin: BraveWallet.CoinType.SOL
+    }),
+    networkEntityAdapter.selectId({
+      chainId: BraveWallet.MAINNET_CHAIN_ID,
+      coin: BraveWallet.CoinType.ETH
+    })
+  ],
   isWalletCreated: false,
   isWalletLocked: false,
-  selectedPortfolioTimeline: BraveWallet.AssetPriceTimeframe.OneDay,
   userVisibleTokensInfo: [
     {
       coingeckoId: '',
@@ -122,7 +150,7 @@ export const mockWalletState: WalletState = {
   deletedNonFungibleTokens: [],
   hidePortfolioNFTsTab: false,
   filteredOutPortfolioNetworkKeys: [],
-  filteredOutPortfolioAccountAddresses: [],
+  filteredOutPortfolioAccountIds: [],
   hidePortfolioSmallBalances: false,
   selectedGroupAssetsByItem: AccountsGroupByOption.id,
   showNetworkLogoOnNfts: false,

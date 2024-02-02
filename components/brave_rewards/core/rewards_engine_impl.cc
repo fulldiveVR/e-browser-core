@@ -5,40 +5,58 @@
 
 #include "brave/components/brave_rewards/core/rewards_engine_impl.h"
 
-#include <memory>
-#include <optional>
 #include <vector>
 
 #include "base/task/thread_pool/thread_pool_instance.h"
-#include "brave/components/brave_rewards/core/common/legacy_callback_helpers.h"
-#include "brave/components/brave_rewards/core/common/security_util.h"
+#include "brave/components/brave_rewards/core/api/api.h"
+#include "brave/components/brave_rewards/core/bitflyer/bitflyer.h"
+#include "brave/components/brave_rewards/core/common/callback_helpers.h"
+#include "brave/components/brave_rewards/core/common/signer.h"
 #include "brave/components/brave_rewards/core/common/time_util.h"
+#include "brave/components/brave_rewards/core/common/url_loader.h"
+#include "brave/components/brave_rewards/core/contribution/contribution.h"
+#include "brave/components/brave_rewards/core/database/database.h"
+#include "brave/components/brave_rewards/core/gemini/gemini.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
+#include "brave/components/brave_rewards/core/initialization_manager.h"
+#include "brave/components/brave_rewards/core/legacy/media/media.h"
 #include "brave/components/brave_rewards/core/legacy/static_values.h"
-#include "brave/components/brave_rewards/core/publisher/publisher_status_helper.h"
+#include "brave/components/brave_rewards/core/promotion/promotion.h"
+#include "brave/components/brave_rewards/core/publisher/publisher.h"
+#include "brave/components/brave_rewards/core/recovery/recovery.h"
+#include "brave/components/brave_rewards/core/report/report.h"
+#include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
-
-using std::placeholders::_1;
+#include "brave/components/brave_rewards/core/uphold/uphold.h"
+#include "brave/components/brave_rewards/core/wallet/wallet.h"
+#include "brave/components/brave_rewards/core/wallet_provider/linkage_checker.h"
+#include "brave/components/brave_rewards/core/wallet_provider/solana/solana_wallet_provider.h"
+#include "brave/components/brave_rewards/core/wallet_provider/wallet_provider.h"
+#include "brave/components/brave_rewards/core/zebpay/zebpay.h"
 
 namespace brave_rewards::internal {
 
 RewardsEngineImpl::RewardsEngineImpl(
     mojo::PendingAssociatedRemote<mojom::RewardsEngineClient> client_remote)
     : client_(std::move(client_remote)),
-      promotion_(*this),
-      publisher_(*this),
-      media_(*this),
-      contribution_(*this),
-      wallet_(*this),
-      database_(*this),
-      report_(*this),
-      state_(*this),
-      api_(*this),
-      recovery_(*this),
-      bitflyer_(*this),
-      gemini_(*this),
-      uphold_(*this),
-      zebpay_(*this) {
+      helpers_(std::make_unique<InitializationManager>(*this),
+               std::make_unique<URLLoader>(*this),
+               std::make_unique<LinkageChecker>(*this),
+               std::make_unique<SolanaWalletProvider>(*this)),
+      promotion_(std::make_unique<promotion::Promotion>(*this)),
+      publisher_(std::make_unique<publisher::Publisher>(*this)),
+      media_(std::make_unique<Media>(*this)),
+      contribution_(std::make_unique<contribution::Contribution>(*this)),
+      wallet_(std::make_unique<wallet::Wallet>(*this)),
+      database_(std::make_unique<database::Database>(*this)),
+      report_(std::make_unique<report::Report>(*this)),
+      state_(std::make_unique<state::State>(*this)),
+      api_(std::make_unique<api::API>(*this)),
+      recovery_(std::make_unique<recovery::Recovery>(*this)),
+      bitflyer_(std::make_unique<bitflyer::Bitflyer>(*this)),
+      gemini_(std::make_unique<gemini::Gemini>(*this)),
+      uphold_(std::make_unique<uphold::Uphold>(*this)),
+      zebpay_(std::make_unique<zebpay::ZebPay>(*this)) {
   DCHECK(base::ThreadPoolInstance::Get());
   set_client_for_logging(client_.get());
 }
@@ -50,13 +68,9 @@ RewardsEngineImpl::~RewardsEngineImpl() {
 // mojom::RewardsEngine implementation begin (in the order of appearance in
 // Mojom)
 void RewardsEngineImpl::Initialize(InitializeCallback callback) {
-  if (ready_state_ != ReadyState::kUninitialized) {
-    BLOG(0, "Already initializing");
-    return std::move(callback).Run(mojom::Result::FAILED);
-  }
-
-  ready_state_ = ReadyState::kInitializing;
-  InitializeDatabase(std::move(callback));
+  Get<InitializationManager>().Initialize(
+      base::BindOnce(&RewardsEngineImpl::OnInitializationComplete,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
 }
 
 void RewardsEngineImpl::GetEnvironment(GetEnvironmentCallback callback) {
@@ -81,7 +95,7 @@ void RewardsEngineImpl::GetRewardsParameters(
     if (params->rate == 0.0) {
       // A rate of zero indicates that the rewards parameters have
       // not yet been successfully initialized from the server.
-      BLOG(1, "Rewards parameters not set - fetching from server");
+      Log(FROM_HERE) << "Rewards parameters not set - fetching from server";
       api()->FetchParameters(std::move(callback));
       return;
     }
@@ -279,6 +293,15 @@ void RewardsEngineImpl::RestorePublishers(RestorePublishersCallback callback) {
 }
 
 void RewardsEngineImpl::FetchPromotions(FetchPromotionsCallback callback) {
+  // The promotion endpoint is no longer supported. The endpoint implementation,
+  // the interface method, and all calling code will be removed when the
+  // "grandfathered" vBAT state is removed from the codebase. Browser tests that
+  // assume vBAT contributions will also need to be modified.
+  if (!is_testing) {
+    std::move(callback).Run(mojom::Result::OK, {});
+    return;
+  }
+
   WhenReady([this, callback = std::move(callback)]() mutable {
     promotion()->Fetch(std::move(callback));
   });
@@ -388,29 +411,22 @@ void RewardsEngineImpl::GetRewardsInternalsInfo(
   WhenReady([this, callback = std::move(callback)]() mutable {
     auto info = mojom::RewardsInternalsInfo::New();
 
-    mojom::RewardsWalletPtr wallet = wallet_.GetWallet();
-    if (!wallet) {
-      BLOG(0, "Wallet is null");
+    mojom::RewardsWalletPtr rewards_wallet = wallet()->GetWallet();
+    if (!rewards_wallet) {
+      LogError(FROM_HERE) << "Wallet is null";
       std::move(callback).Run(std::move(info));
       return;
     }
 
     // Retrieve the payment id.
-    info->payment_id = wallet->payment_id;
+    info->payment_id = rewards_wallet->payment_id;
 
     // Retrieve the boot stamp.
     info->boot_stamp = state()->GetCreationStamp();
 
     // Retrieve the key info seed and validate it.
-    if (!util::Security::IsSeedValid(wallet->recovery_seed)) {
-      info->is_key_info_seed_valid = false;
-    } else {
-      std::vector<uint8_t> secret_key =
-          util::Security::GetHKDF(wallet->recovery_seed);
-      std::vector<uint8_t> public_key;
-      std::vector<uint8_t> new_secret_key;
-      info->is_key_info_seed_valid = util::Security::GetPublicKeyFromSeed(
-          secret_key, &public_key, &new_secret_key);
+    if (Signer::FromRecoverySeed(rewards_wallet->recovery_seed)) {
+      info->is_key_info_seed_valid = true;
     }
 
     std::move(callback).Run(std::move(info));
@@ -563,30 +579,14 @@ void RewardsEngineImpl::FetchBalance(FetchBalanceCallback callback) {
 
 void RewardsEngineImpl::GetExternalWallet(GetExternalWalletCallback callback) {
   WhenReady([this, callback = std::move(callback)]() mutable {
-    auto wallet_type = GetState<std::string>(state::kExternalWalletType);
-    if (wallet_type.empty()) {
-      std::move(callback).Run(nullptr);
-      return;
-    }
-
     mojom::ExternalWalletPtr wallet;
-
-    if (wallet_type == constant::kWalletBitflyer) {
-      wallet = bitflyer()->GetWallet();
-    } else if (wallet_type == constant::kWalletGemini) {
-      wallet = gemini()->GetWallet();
-    } else if (wallet_type == constant::kWalletUphold) {
-      wallet = uphold()->GetWallet();
-    } else if (wallet_type == constant::kWalletZebPay) {
-      wallet = zebpay()->GetWallet();
-    } else {
-      NOTREACHED() << "Unknown external wallet type!";
+    auto wallet_type = GetState<std::string>(state::kExternalWalletType);
+    if (auto* provider = GetExternalWalletProvider(wallet_type)) {
+      wallet = provider->GetWallet();
+      if (wallet && (wallet->status == mojom::WalletStatus::kNotConnected)) {
+        wallet = nullptr;
+      }
     }
-
-    if (wallet && wallet->status == mojom::WalletStatus::kNotConnected) {
-      wallet = nullptr;
-    }
-
     std::move(callback).Run(std::move(wallet));
   });
 }
@@ -595,24 +595,12 @@ void RewardsEngineImpl::BeginExternalWalletLogin(
     const std::string& wallet_type,
     BeginExternalWalletLoginCallback callback) {
   WhenReady([this, wallet_type, callback = std::move(callback)]() mutable {
-    if (wallet_type == constant::kWalletBitflyer) {
-      return bitflyer()->BeginLogin(std::move(callback));
+    if (auto* provider = GetExternalWalletProvider(wallet_type)) {
+      provider->BeginLogin(std::move(callback));
+    } else {
+      LogError(FROM_HERE) << "Invalid external wallet type";
+      std::move(callback).Run(nullptr);
     }
-
-    if (wallet_type == constant::kWalletGemini) {
-      return gemini()->BeginLogin(std::move(callback));
-    }
-
-    if (wallet_type == constant::kWalletUphold) {
-      return uphold()->BeginLogin(std::move(callback));
-    }
-
-    if (wallet_type == constant::kWalletZebPay) {
-      return zebpay()->BeginLogin(std::move(callback));
-    }
-
-    NOTREACHED() << "Unknown external wallet type!";
-    std::move(callback).Run(nullptr);
   });
 }
 
@@ -620,28 +608,15 @@ void RewardsEngineImpl::ConnectExternalWallet(
     const std::string& wallet_type,
     const base::flat_map<std::string, std::string>& args,
     ConnectExternalWalletCallback callback) {
-  WhenReady(
-      [this, wallet_type, args, callback = std::move(callback)]() mutable {
-        if (wallet_type == constant::kWalletBitflyer) {
-          return bitflyer()->ConnectWallet(args, std::move(callback));
-        }
-
-        if (wallet_type == constant::kWalletGemini) {
-          return gemini()->ConnectWallet(args, std::move(callback));
-        }
-
-        if (wallet_type == constant::kWalletUphold) {
-          return uphold()->ConnectWallet(args, std::move(callback));
-        }
-
-        if (wallet_type == constant::kWalletZebPay) {
-          return zebpay()->ConnectWallet(args, std::move(callback));
-        }
-
-        NOTREACHED() << "Unknown external wallet type!";
-        std::move(callback).Run(
-            mojom::ConnectExternalWalletResult::kUnexpected);
-      });
+  WhenReady([this, wallet_type, args,
+             callback = std::move(callback)]() mutable {
+    if (auto* provider = GetExternalWalletProvider(wallet_type)) {
+      provider->ConnectWallet(args, std::move(callback));
+    } else {
+      LogError(FROM_HERE) << "Invalid external wallet type";
+      std::move(callback).Run(mojom::ConnectExternalWalletResult::kUnexpected);
+    }
+  });
 }
 
 void RewardsEngineImpl::GetTransactionReport(
@@ -694,16 +669,9 @@ void RewardsEngineImpl::GetAllPromotions(GetAllPromotionsCallback callback) {
 }
 
 void RewardsEngineImpl::Shutdown(ShutdownCallback callback) {
-  if (!IsReady()) {
-    return std::move(callback).Run(mojom::Result::FAILED);
-  }
-
-  ready_state_ = ReadyState::kShuttingDown;
-  client_->ClearAllNotifications();
-
-  database()->FinishAllInProgressContributions(
-      std::bind(&RewardsEngineImpl::OnAllDone, this, _1,
-                ToLegacyCallback(std::move(callback))));
+  Get<InitializationManager>().Shutdown(
+      base::BindOnce(&RewardsEngineImpl::OnShutdownComplete,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
 }
 
 void RewardsEngineImpl::GetEventLogs(GetEventLogsCallback callback) {
@@ -754,6 +722,14 @@ mojom::ClientInfoPtr RewardsEngineImpl::GetClientInfo() {
   return info;
 }
 
+RewardsLogStream RewardsEngineImpl::Log(base::Location location) {
+  return RewardsLogStream(*client_, location, 1);
+}
+
+RewardsLogStream RewardsEngineImpl::LogError(base::Location location) {
+  return RewardsLogStream(*client_, location, 0);
+}
+
 std::optional<std::string> RewardsEngineImpl::EncryptString(
     const std::string& value) {
   std::optional<std::string> result;
@@ -774,102 +750,51 @@ mojom::RewardsEngineClient* RewardsEngineImpl::client() {
 }
 
 database::Database* RewardsEngineImpl::database() {
-  return &database_;
+  return database_.get();
 }
 
-bool RewardsEngineImpl::IsShuttingDown() const {
-  return ready_state_ == ReadyState::kShuttingDown;
-}
-
-bool RewardsEngineImpl::IsUninitialized() const {
-  return ready_state_ == ReadyState::kUninitialized;
+wallet_provider::WalletProvider* RewardsEngineImpl::GetExternalWalletProvider(
+    const std::string& wallet_type) {
+  if (wallet_type == constant::kWalletBitflyer) {
+    return bitflyer_.get();
+  }
+  if (wallet_type == constant::kWalletGemini) {
+    return gemini_.get();
+  }
+  if (wallet_type == constant::kWalletUphold) {
+    return uphold_.get();
+  }
+  if (wallet_type == constant::kWalletZebPay) {
+    return zebpay_.get();
+  }
+  if (wallet_type == constant::kWalletSolana) {
+    return &Get<SolanaWalletProvider>();
+  }
+  return nullptr;
 }
 
 bool RewardsEngineImpl::IsReady() const {
-  return ready_state_ == ReadyState::kReady;
+  return Get<InitializationManager>().is_ready();
 }
 
-void RewardsEngineImpl::InitializeDatabase(ResultCallback callback) {
-  DCHECK(ready_state_ == ReadyState::kInitializing);
-
-  auto finish_callback =
-      base::BindOnce(&RewardsEngineImpl::OnInitialized, base::Unretained(this),
-                     std::move(callback));
-
-  auto database_callback =
-      base::BindOnce(&RewardsEngineImpl::OnDatabaseInitialized,
-                     base::Unretained(this), std::move(finish_callback));
-
-  database()->Initialize(std::move(database_callback));
-}
-
-void RewardsEngineImpl::OnDatabaseInitialized(ResultCallback callback,
-                                              mojom::Result result) {
-  DCHECK(ready_state_ == ReadyState::kInitializing);
-
-  if (result != mojom::Result::OK) {
-    BLOG(0, "Database could not be initialized. Error: " << result);
-    return std::move(callback).Run(result);
-  }
-
-  state()->Initialize(base::BindOnce(&RewardsEngineImpl::OnStateInitialized,
-                                     base::Unretained(this),
-                                     std::move(callback)));
-}
-
-void RewardsEngineImpl::OnStateInitialized(ResultCallback callback,
-                                           mojom::Result result) {
-  DCHECK(ready_state_ == ReadyState::kInitializing);
-
-  if (result != mojom::Result::OK) {
-    BLOG(0, "Failed to initialize state");
-    return std::move(callback).Run(result);
-  }
-
-  std::move(callback).Run(mojom::Result::OK);
-}
-
-void RewardsEngineImpl::OnInitialized(ResultCallback callback,
-                                      mojom::Result result) {
-  DCHECK(ready_state_ == ReadyState::kInitializing);
-
-  if (result == mojom::Result::OK) {
-    StartServices();
-  } else {
-    BLOG(0, "Failed to initialize wallet " << result);
-  }
-
-  ready_state_ = ReadyState::kReady;
+void RewardsEngineImpl::OnInitializationComplete(InitializeCallback callback,
+                                                 bool success) {
   ready_event_.Signal();
-
-  std::move(callback).Run(result);
+  std::move(callback).Run(success ? mojom::Result::OK : mojom::Result::FAILED);
 }
 
-void RewardsEngineImpl::StartServices() {
-  DCHECK(ready_state_ == ReadyState::kInitializing);
-
-  publisher()->SetPublisherServerListTimer();
-  contribution()->SetAutoContributeTimer();
-  contribution()->SetMonthlyContributionTimer();
-  promotion()->Refresh(false);
-  contribution()->Initialize();
-  promotion()->Initialize();
-  api()->Initialize();
-  recovery_.Check();
-}
-
-void RewardsEngineImpl::OnAllDone(mojom::Result result,
-                                  LegacyResultCallback callback) {
-  database()->Close(std::move(callback));
+void RewardsEngineImpl::OnShutdownComplete(ShutdownCallback callback,
+                                           bool success) {
+  std::move(callback).Run(success ? mojom::Result::OK : mojom::Result::FAILED);
 }
 
 template <typename T>
 void RewardsEngineImpl::WhenReady(T callback) {
-  switch (ready_state_) {
-    case ReadyState::kReady:
+  switch (Get<InitializationManager>().state()) {
+    case InitializationManager::State::kReady:
       callback();
       break;
-    case ReadyState::kShuttingDown:
+    case InitializationManager::State::kShuttingDown:
       NOTREACHED();
       break;
     default:

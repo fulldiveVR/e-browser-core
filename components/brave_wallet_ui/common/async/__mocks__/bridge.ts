@@ -11,12 +11,7 @@ import { createStore, combineReducers } from 'redux'
 import { createWalletReducer } from '../../slices/wallet.slice'
 
 // types
-import {
-  BraveWallet,
-  SafeBlowfishEvmResponse,
-  SafeBlowfishSolanaResponse,
-  TxSimulationOptInStatus
-} from '../../../constants/types'
+import { BraveWallet, TxSimulationOptInStatus } from '../../../constants/types'
 import { WalletActions } from '../../actions'
 import type WalletApiProxy from '../../wallet_api_proxy'
 
@@ -48,7 +43,9 @@ import {
   mockBasicAttentionToken,
   mockErc20TokensList,
   mockErc721Token,
-  mockSplNft
+  mockSplBat,
+  mockSplNft,
+  mockSplUSDC
 } from '../../../stories/mock-data/mock-asset-options'
 import {
   mockFilSendTransaction,
@@ -63,6 +60,7 @@ import {
   coinMarketMockData //
 } from '../../../stories/mock-data/mock-coin-market-data'
 import { mockOriginInfo } from '../../../stories/mock-data/mock-origin-info'
+import { WalletApiDataOverrides } from '../../../constants/testing_types'
 
 export const makeMockedStoreWithSpy = () => {
   const store = createStore(
@@ -84,29 +82,6 @@ export const makeMockedStoreWithSpy = () => {
   }
 
   return { store }
-}
-
-export interface WalletApiDataOverrides {
-  selectedCoin?: BraveWallet.CoinType
-  selectedAccountId?: BraveWallet.AccountId
-  chainIdsForCoins?: Record<BraveWallet.CoinType, string>
-  networks?: BraveWallet.NetworkInfo[]
-  defaultBaseCurrency?: string
-  transactionInfos?: BraveWallet.TransactionInfo[]
-  blockchainTokens?: BraveWallet.BlockchainToken[]
-  userAssets?: BraveWallet.BlockchainToken[]
-  accountInfos?: BraveWallet.AccountInfo[]
-  nativeBalanceRegistry?: NativeAssetBalanceRegistry
-  tokenBalanceRegistry?: TokenBalanceRegistry
-  simulationOptInStatus?: TxSimulationOptInStatus
-  evmSimulationResponse?:
-    | BraveWallet.EVMSimulationResponse
-    | SafeBlowfishEvmResponse
-    | null
-  svmSimulationResponse?:
-    | BraveWallet.SolanaSimulationResponse
-    | SafeBlowfishSolanaResponse
-    | null
 }
 
 export class MockedWalletApiProxy {
@@ -140,20 +115,16 @@ export class MockedWalletApiProxy {
   blockchainTokens: BraveWallet.BlockchainToken[] = [
     ...mockErc20TokensList,
     mockErc721Token,
-    mockSplNft
+    mockSplNft,
+    mockSplBat,
+    mockSplUSDC
   ]
 
   userAssets: BraveWallet.BlockchainToken[] = mockAccountAssetOptions
 
-  evmSimulationResponse:
-    | BraveWallet.EVMSimulationResponse
-    | SafeBlowfishEvmResponse
-    | null = null
+  evmSimulationResponse: BraveWallet.EVMSimulationResponse | null = null
 
-  svmSimulationResponse:
-    | BraveWallet.SolanaSimulationResponse
-    | SafeBlowfishSolanaResponse
-    | null = null
+  svmSimulationResponse: BraveWallet.SolanaSimulationResponse | null = null
 
   txSimulationOptInStatus: TxSimulationOptInStatus = 'allowed'
 
@@ -176,7 +147,7 @@ export class MockedWalletApiProxy {
     }
   }
 
-  mockQuote = {
+  mockZeroExQuote = {
     price: '1705.399509',
     guaranteedPrice: '',
     to: '',
@@ -201,7 +172,7 @@ export class MockedWalletApiProxy {
     }
   }
 
-  mockTransaction = {
+  mockZeroExTransaction = {
     allowanceTarget: '',
     price: '',
     guaranteedPrice: '',
@@ -405,40 +376,74 @@ export class MockedWalletApiProxy {
       return {
         requests: [{ origin: mockOriginInfo, token: mockBasicAttentionToken }]
       }
+    },
+    removeUserAsset: async (token) => {
+      const tokenId = getAssetIdKey(token)
+      this.userAssets = this.userAssets.filter(
+        (t) => getAssetIdKey(t) !== tokenId
+      )
+      return {
+        success: true
+      }
+    },
+    addUserAsset: async (token) => {
+      this.userAssets = this.userAssets.concat(token)
+      return {
+        success: true
+      }
     }
   }
 
   swapService: Partial<InstanceType<typeof BraveWallet.SwapServiceInterface>> =
     {
-      getTransactionPayload: async ({
-        buyAmount,
-        buyToken,
-        sellAmount,
-        sellToken
-      }: BraveWallet.SwapParams): Promise<{
-        response: BraveWallet.SwapResponse
-        errorResponse: BraveWallet.SwapErrorResponse
+      getTransaction: async (
+        params: BraveWallet.SwapTransactionParamsUnion
+      ): Promise<{
+        response: BraveWallet.SwapTransactionUnion | null
+        error: BraveWallet.SwapErrorUnion | null
+        errorString: string
+      }> => {
+        const { zeroExTransactionParams } = params
+        if (!zeroExTransactionParams) {
+          return {
+            response: null,
+            error: null,
+            errorString: 'missing params'
+          }
+        }
+
+        const { fromToken, toToken, fromAmount, toAmount } =
+          zeroExTransactionParams
+
+        return {
+          error: null,
+          response: {
+            zeroExTransaction: {
+              ...this.mockZeroExQuote,
+              buyTokenAddress: toToken,
+              sellTokenAddress: fromToken,
+              buyAmount: toAmount || '',
+              sellAmount: fromAmount || '',
+              price: '1'
+            },
+            jupiterTransaction: undefined
+          },
+          errorString: ''
+        }
+      },
+
+      getQuote: async (
+        params: BraveWallet.SwapQuoteParams
+      ): Promise<{
+        response: BraveWallet.SwapQuoteUnion | null
+        error: BraveWallet.SwapErrorUnion | null
         errorString: string
       }> => ({
-        errorResponse: {
-          code: 0,
-          isInsufficientLiquidity: false,
-          reason: '',
-          validationErrors: []
-        },
         response: {
-          ...this.mockQuote,
-          buyTokenAddress: buyToken,
-          sellTokenAddress: sellToken,
-          buyAmount: buyAmount || '',
-          sellAmount: sellAmount || '',
-          price: '1'
+          zeroExQuote: this.mockZeroExQuote,
+          jupiterQuote: undefined
         },
-        errorString: ''
-      }),
-      getPriceQuote: async () => ({
-        response: this.mockTransaction,
-        errorResponse: null,
+        error: null,
         errorString: ''
       })
     }
@@ -980,12 +985,12 @@ export class MockedWalletApiProxy {
     }
   }
 
-  setMockedQuote(newQuote: typeof this.mockQuote) {
-    this.mockQuote = newQuote
+  setMockedQuote(newQuote: typeof this.mockZeroExQuote) {
+    this.mockZeroExQuote = newQuote
   }
 
-  setMockedTransactionPayload(newTx: typeof this.mockQuote) {
-    this.mockTransaction = newTx
+  setMockedTransactionPayload(newTx: typeof this.mockZeroExQuote) {
+    this.mockZeroExTransaction = newTx
   }
 
   setMockedStore = (newStore: typeof this.store) => {
@@ -1008,8 +1013,10 @@ export function getMockedAPIProxy(): WalletApiProxy & MockedWalletApiProxy {
   return getAPIProxy() as unknown as WalletApiProxy & MockedWalletApiProxy
 }
 
-export function resetMockedAPIProxy() {
-  apiProxy = undefined
+export function resetAPIProxy(overrides?: WalletApiDataOverrides | undefined) {
+  apiProxy = new MockedWalletApiProxy(
+    overrides
+  ) as unknown as Partial<WalletApiProxy> & MockedWalletApiProxy
 }
 
 export default getAPIProxy

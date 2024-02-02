@@ -28,6 +28,13 @@ const char* Uphold::WalletType() const {
   return constant::kWalletUphold;
 }
 
+void Uphold::AssignWalletLinks(mojom::ExternalWallet& external_wallet) {
+  external_wallet.account_url = GetAccountUrl();
+  external_wallet.activity_url = external_wallet.address.empty()
+                                     ? ""
+                                     : GetActivityUrl(external_wallet.address);
+}
+
 void Uphold::FetchBalance(
     base::OnceCallback<void(mojom::Result, double)> callback) {
   auto wallet = GetWalletIf({mojom::WalletStatus::kConnected});
@@ -44,6 +51,10 @@ void Uphold::FetchBalance(
 
 std::string Uphold::GetFeeAddress() const {
   return uphold::GetFeeAddress();
+}
+
+void Uphold::CheckEligibility() {
+  static_cast<ConnectUpholdWallet*>(connect_wallet_.get())->CheckEligibility();
 }
 
 }  // namespace brave_rewards::internal::uphold

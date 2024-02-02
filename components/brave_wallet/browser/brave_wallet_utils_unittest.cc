@@ -43,6 +43,18 @@ using testing::ElementsAreArray;
 
 namespace brave_wallet {
 
+// DEPRECATED 01/2024. For migration only.
+std::string GetSolanaSubdomainForKnownChainId(const std::string& chain_id);
+std::string GetFilecoinSubdomainForKnownChainId(const std::string& chain_id);
+std::string GetBitcoinSubdomainForKnownChainId(const std::string& chain_id);
+std::string GetKnownEthNetworkId(const std::string& chain_id);
+std::string GetKnownSolNetworkId(const std::string& chain_id);
+std::string GetKnownFilNetworkId(const std::string& chain_id);
+std::string GetKnownBtcNetworkId(const std::string& chain_id);
+std::string GetNetworkId(PrefService* prefs,
+                         mojom::CoinType coin,
+                         const std::string& chain_id);
+
 namespace {
 
 void UpdateCustomNetworks(PrefService* prefs,
@@ -950,18 +962,6 @@ TEST(BraveWalletUtilsUnitTest, GetChain) {
   EXPECT_TRUE(AllCoinsTested());
 }
 
-TEST(BraveWalletUtilsUnitTest, GetAllKnownEthNetworkIds) {
-  const std::vector<std::string> expected_network_ids(
-      {"mainnet", mojom::kAuroraMainnetChainId, mojom::kPolygonMainnetChainId,
-       mojom::kBinanceSmartChainMainnetChainId, mojom::kOptimismMainnetChainId,
-       mojom::kAvalancheMainnetChainId, mojom::kFilecoinEthereumMainnetChainId,
-       mojom::kNeonEVMMainnetChainId, "goerli", "sepolia",
-       mojom::kFilecoinEthereumTestnetChainId, "http://localhost:7545/"});
-  ASSERT_EQ(GetAllKnownChains(nullptr, mojom::CoinType::ETH).size(),
-            expected_network_ids.size());
-  EXPECT_EQ(GetAllKnownEthNetworkIds(), expected_network_ids);
-}
-
 TEST(BraveWalletUtilsUnitTest, GetKnownEthNetworkId) {
   EXPECT_EQ(GetKnownEthNetworkId(mojom::kLocalhostChainId),
             "http://localhost:7545/");
@@ -1026,7 +1026,7 @@ TEST(BraveWalletUtilsUnitTest, AddCustomNetwork) {
   TestingPrefServiceSimple prefs;
   prefs.registry()->RegisterDictionaryPref(kBraveWalletCustomNetworks);
   prefs.registry()->RegisterBooleanPref(kSupportEip1559OnLocalhostChain, false);
-  prefs.registry()->RegisterDictionaryPref(kBraveWalletUserAssets);
+  prefs.registry()->RegisterListPref(kBraveWalletUserAssetsList);
 
   mojom::NetworkInfo chain1 = GetTestNetworkInfo1();
   mojom::NetworkInfo chain2 = GetTestNetworkInfo2();
@@ -1042,36 +1042,34 @@ TEST(BraveWalletUtilsUnitTest, AddCustomNetwork) {
 
   // Asset list of new custom chains should have native asset in
   // kBraveWalletUserAssets.
-  const auto& assets_pref = prefs.GetDict(kBraveWalletUserAssets);
-  const base::Value* list1 = assets_pref.FindByDottedPath("ethereum.chain_id");
-  ASSERT_TRUE(list1->is_list());
-  const base::Value::List& asset_list1 = list1->GetList();
-  ASSERT_EQ(asset_list1.size(), 1u);
+  const auto& asset_list = prefs.GetList(kBraveWalletUserAssetsList);
+  ASSERT_EQ(asset_list.size(), 2u);
 
-  EXPECT_EQ(*asset_list1[0].GetDict().FindString("address"), "");
-  EXPECT_EQ(*asset_list1[0].GetDict().FindString("name"), "symbol_name");
-  EXPECT_EQ(*asset_list1[0].GetDict().FindString("symbol"), "symbol");
-  EXPECT_EQ(*asset_list1[0].GetDict().FindBool("is_erc20"), false);
-  EXPECT_EQ(*asset_list1[0].GetDict().FindBool("is_erc721"), false);
-  EXPECT_EQ(*asset_list1[0].GetDict().FindBool("is_erc1155"), false);
-  EXPECT_EQ(*asset_list1[0].GetDict().FindInt("decimals"), 11);
-  EXPECT_EQ(*asset_list1[0].GetDict().FindString("logo"), "https://url1.com");
-  EXPECT_EQ(*asset_list1[0].GetDict().FindBool("visible"), true);
+  EXPECT_EQ(*asset_list[0].GetDict().FindInt("coin"),
+            static_cast<int>(mojom::CoinType::ETH));
+  EXPECT_EQ(*asset_list[0].GetDict().FindString("chain_id"), "chain_id");
+  EXPECT_EQ(*asset_list[0].GetDict().FindString("address"), "");
+  EXPECT_EQ(*asset_list[0].GetDict().FindString("name"), "symbol_name");
+  EXPECT_EQ(*asset_list[0].GetDict().FindString("symbol"), "symbol");
+  EXPECT_EQ(*asset_list[0].GetDict().FindBool("is_erc20"), false);
+  EXPECT_EQ(*asset_list[0].GetDict().FindBool("is_erc721"), false);
+  EXPECT_EQ(*asset_list[0].GetDict().FindBool("is_erc1155"), false);
+  EXPECT_EQ(*asset_list[0].GetDict().FindInt("decimals"), 11);
+  EXPECT_EQ(*asset_list[0].GetDict().FindString("logo"), "https://url1.com");
+  EXPECT_EQ(*asset_list[0].GetDict().FindBool("visible"), true);
 
-  const base::Value* list2 = assets_pref.FindByDottedPath("ethereum.chain_id2");
-  ASSERT_TRUE(list2->is_list());
-  const base::Value::List& asset_list2 = list2->GetList();
-  ASSERT_EQ(asset_list2.size(), 1u);
-
-  EXPECT_EQ(*asset_list2[0].GetDict().FindString("address"), "");
-  EXPECT_EQ(*asset_list2[0].GetDict().FindString("name"), "symbol_name2");
-  EXPECT_EQ(*asset_list2[0].GetDict().FindString("symbol"), "symbol2");
-  EXPECT_EQ(*asset_list2[0].GetDict().FindBool("is_erc20"), false);
-  EXPECT_EQ(*asset_list2[0].GetDict().FindBool("is_erc721"), false);
-  EXPECT_EQ(*asset_list2[0].GetDict().FindBool("is_erc1155"), false);
-  EXPECT_EQ(*asset_list2[0].GetDict().FindInt("decimals"), 22);
-  EXPECT_EQ(*asset_list2[0].GetDict().FindString("logo"), "");
-  EXPECT_EQ(*asset_list2[0].GetDict().FindBool("visible"), true);
+  EXPECT_EQ(*asset_list[1].GetDict().FindInt("coin"),
+            static_cast<int>(mojom::CoinType::ETH));
+  EXPECT_EQ(*asset_list[1].GetDict().FindString("chain_id"), "chain_id2");
+  EXPECT_EQ(*asset_list[1].GetDict().FindString("address"), "");
+  EXPECT_EQ(*asset_list[1].GetDict().FindString("name"), "symbol_name2");
+  EXPECT_EQ(*asset_list[1].GetDict().FindString("symbol"), "symbol2");
+  EXPECT_EQ(*asset_list[1].GetDict().FindBool("is_erc20"), false);
+  EXPECT_EQ(*asset_list[1].GetDict().FindBool("is_erc721"), false);
+  EXPECT_EQ(*asset_list[1].GetDict().FindBool("is_erc1155"), false);
+  EXPECT_EQ(*asset_list[1].GetDict().FindInt("decimals"), 22);
+  EXPECT_EQ(*asset_list[1].GetDict().FindString("logo"), "");
+  EXPECT_EQ(*asset_list[1].GetDict().FindBool("visible"), true);
 
   {
     mojom::NetworkInfo chain_fil =
@@ -1104,7 +1102,7 @@ TEST(BraveWalletUtilsUnitTest, CustomNetworkMatchesKnownNetwork) {
   TestingPrefServiceSimple prefs;
   prefs.registry()->RegisterDictionaryPref(kBraveWalletCustomNetworks);
   prefs.registry()->RegisterBooleanPref(kSupportEip1559OnLocalhostChain, false);
-  prefs.registry()->RegisterDictionaryPref(kBraveWalletUserAssets);
+  prefs.registry()->RegisterListPref(kBraveWalletUserAssetsList);
 
   auto get_polygon_from_all = [&] {
     for (const auto& chain : GetAllChains(&prefs, mojom::CoinType::ETH)) {
@@ -1149,7 +1147,7 @@ TEST(BraveWalletUtilsUnitTest, RemoveCustomNetwork) {
   TestingPrefServiceSimple prefs;
   prefs.registry()->RegisterDictionaryPref(kBraveWalletCustomNetworks);
   prefs.registry()->RegisterBooleanPref(kSupportEip1559OnLocalhostChain, false);
-  prefs.registry()->RegisterDictionaryPref(kBraveWalletUserAssets);
+  prefs.registry()->RegisterListPref(kBraveWalletUserAssetsList);
 
   mojom::NetworkInfo chain = GetTestNetworkInfo1();
 
@@ -1441,15 +1439,16 @@ TEST(BraveWalletUtilsUnitTest, GetChainIdByNetworkId) {
         nid = chain->chain_id;
         // GetNetworkId supports only ETH for custom networks atm.
         if (chain->coin != mojom::CoinType::ETH) {
-          ASSERT_FALSE(GetChainIdByNetworkId(&prefs, coin_type, nid));
+          ASSERT_FALSE(
+              GetChainIdByNetworkId_DEPRECATED(&prefs, coin_type, nid));
           continue;
         }
       }
-      auto chain_id = GetChainIdByNetworkId(&prefs, coin_type, nid);
+      auto chain_id = GetChainIdByNetworkId_DEPRECATED(&prefs, coin_type, nid);
       ASSERT_TRUE(chain_id.has_value());
       EXPECT_EQ(chain->chain_id, chain_id.value());
     }
-    ASSERT_FALSE(GetChainIdByNetworkId(&prefs, coin_type, ""));
+    ASSERT_FALSE(GetChainIdByNetworkId_DEPRECATED(&prefs, coin_type, ""));
   };
 
   for (auto coin : kAllCoins) {

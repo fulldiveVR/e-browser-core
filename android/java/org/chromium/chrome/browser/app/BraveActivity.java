@@ -88,8 +88,11 @@ import org.chromium.chrome.browser.IntentHandler;
 import org.chromium.chrome.browser.InternetConnection;
 import org.chromium.chrome.browser.LaunchIntentDispatcher;
 import org.chromium.chrome.browser.app.domain.WalletModel;
+import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
+import org.chromium.chrome.browser.billing.PurchaseModel;
 import org.chromium.chrome.browser.bookmarks.TabBookmarker;
 import org.chromium.chrome.browser.brave_leo.BraveLeoActivity;
+import org.chromium.chrome.browser.brave_leo.BraveLeoUtils;
 import org.chromium.chrome.browser.brave_news.BraveNewsConnectionErrorHandler;
 import org.chromium.chrome.browser.brave_news.BraveNewsControllerFactory;
 import org.chromium.chrome.browser.brave_news.BraveNewsUtils;
@@ -129,8 +132,6 @@ import org.chromium.chrome.browser.onboarding.v2.HighlightDialogFragment;
 import org.chromium.chrome.browser.onboarding.v2.HighlightItem;
 import org.chromium.chrome.browser.onboarding.v2.HighlightView;
 import org.chromium.chrome.browser.playlist.PlaylistHostActivity;
-import org.chromium.chrome.browser.playlist.PlaylistWarningDialogFragment;
-import org.chromium.chrome.browser.playlist.PlaylistWarningDialogFragment.PlaylistWarningDialogListener;
 import org.chromium.chrome.browser.playlist.settings.BravePlaylistPreferences;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.BravePrefServiceBridge;
@@ -156,10 +157,10 @@ import org.chromium.chrome.browser.settings.SettingsLauncherImpl;
 import org.chromium.chrome.browser.settings.developer.BraveQAPreferences;
 import org.chromium.chrome.browser.share.ShareDelegate;
 import org.chromium.chrome.browser.share.ShareDelegate.ShareOrigin;
+import org.chromium.chrome.browser.shields.ContentFilteringFragment;
 import org.chromium.chrome.browser.site_settings.BraveWalletEthereumConnectedSites;
 import org.chromium.chrome.browser.speedreader.BraveSpeedReaderUtils;
 import org.chromium.chrome.browser.tab.Tab;
-import org.chromium.chrome.browser.tab.TabImpl;
 import org.chromium.chrome.browser.tab.TabLaunchType;
 import org.chromium.chrome.browser.tab.TabSelectionType;
 import org.chromium.chrome.browser.tabmodel.TabModel;
@@ -176,10 +177,9 @@ import org.chromium.chrome.browser.util.UsageMonitor;
 import org.chromium.chrome.browser.vpn.BraveVpnNativeWorker;
 import org.chromium.chrome.browser.vpn.BraveVpnObserver;
 import org.chromium.chrome.browser.vpn.activities.BraveVpnProfileActivity;
-import org.chromium.chrome.browser.vpn.billing.InAppPurchaseWrapper;
-import org.chromium.chrome.browser.vpn.billing.PurchaseModel;
 import org.chromium.chrome.browser.vpn.fragments.BraveVpnCalloutDialogFragment;
 import org.chromium.chrome.browser.vpn.fragments.LinkVpnSubscriptionDialogFragment;
+import org.chromium.chrome.browser.vpn.models.BraveVpnServerRegion;
 import org.chromium.chrome.browser.vpn.timer.TimerDialogFragment;
 import org.chromium.chrome.browser.vpn.utils.BraveVpnApiResponseUtils;
 import org.chromium.chrome.browser.vpn.utils.BraveVpnPrefUtils;
@@ -239,6 +239,7 @@ public abstract class BraveActivity extends ChromeActivity
     private static final int DAYS_1 = 1;
     private static final int DAYS_4 = 4;
     private static final int DAYS_5 = 5;
+    private static final int DAYS_7 = 7;
     private static final int DAYS_12 = 12;
 
     public static final int MAX_FAILED_CAPTCHA_ATTEMPTS = 10;
@@ -342,7 +343,7 @@ public abstract class BraveActivity extends ChromeActivity
 
     @Override
     public boolean onMenuOrKeyboardAction(int id, boolean fromMenu) {
-        final TabImpl currentTab = (TabImpl) getActivityTab();
+        final Tab currentTab = getActivityTab();
         // Handle items replaced by Brave.
         if (id == R.id.info_menu_id && currentTab != null) {
             ShareDelegate shareDelegate = (ShareDelegate) getShareDelegateSupplier().get();
@@ -369,6 +370,11 @@ public abstract class BraveActivity extends ChromeActivity
             openBraveWallet(false, false, false);
         } else if (id == R.id.brave_playlist_id) {
             openPlaylist(true);
+        } else if (id == R.id.add_to_playlist_id) {
+            BraveToolbarLayoutImpl layout = getBraveToolbarLayout();
+            if (layout != null) {
+                layout.addMediaToPlaylist();
+            }
         } else if (id == R.id.brave_news_id) {
             openBraveNewsSettings();
         } else if (id == R.id.request_brave_vpn_id || id == R.id.request_brave_vpn_check_id) {
@@ -387,7 +393,8 @@ public abstract class BraveActivity extends ChromeActivity
                             BraveVpnUtils.openBraveVpnProfileActivity(BraveActivity.this);
                         }
                     } else {
-                        BraveVpnUtils.showProgressDialog(BraveActivity.this,
+                        BraveVpnUtils.showProgressDialog(
+                                BraveActivity.this,
                                 getResources().getString(R.string.vpn_connect_text));
                         if (BraveVpnPrefUtils.isSubscriptionPurchase()) {
                             verifySubscription();
@@ -398,6 +405,8 @@ public abstract class BraveActivity extends ChromeActivity
                     }
                 }
             }
+        } else if (id == R.id.request_vpn_location_id || id == R.id.request_vpn_location_icon_id) {
+            BraveVpnUtils.openVpnServerSelectionActivity(BraveActivity.this);
         } else if (id == R.id.brave_speedreader_id) {
             enableSpeedreaderMode();
         } else if (id == R.id.brave_leo_id) {
@@ -651,7 +660,8 @@ public abstract class BraveActivity extends ChromeActivity
     private void verifySubscription() {
         MutableLiveData<PurchaseModel> _activePurchases = new MutableLiveData();
         LiveData<PurchaseModel> activePurchases = _activePurchases;
-        InAppPurchaseWrapper.getInstance().queryPurchases(_activePurchases);
+        InAppPurchaseWrapper.getInstance()
+                .queryPurchases(_activePurchases, InAppPurchaseWrapper.SubscriptionProduct.VPN);
         LiveDataUtil.observeOnce(
                 activePurchases, activePurchaseModel -> {
                     if (activePurchaseModel != null) {
@@ -926,8 +936,12 @@ public abstract class BraveActivity extends ChromeActivity
     @Override
     public void finishNativeInitialization() {
         super.finishNativeInitialization();
+
+        boolean isFirstInstall = PackageUtils.isFirstInstall(this);
+
         BraveSearchEngineUtils.initializeBraveSearchEngineStates(
                 (TabModelSelector) getTabModelSelectorSupplier().get());
+
         BraveVpnNativeWorker.getInstance().reloadPurchasedState();
 
         BraveHelper.maybeMigrateSettings();
@@ -977,7 +991,7 @@ public abstract class BraveActivity extends ChromeActivity
         ChromeSharedPreferences.getInstance()
                 .writeInt(BravePreferenceKeys.BRAVE_APP_OPEN_COUNT, appOpenCount + 1);
 
-        if (PackageUtils.isFirstInstall(this) && appOpenCount == 0) {
+        if (isFirstInstall && appOpenCount == 0) {
             checkForYandexSE();
         }
 
@@ -1051,8 +1065,7 @@ public abstract class BraveActivity extends ChromeActivity
         }
         BraveSyncAccountDeletedInformer.show();
 
-        if (!OnboardingPrefManager.getInstance().isOneTimeNotificationStarted()
-                && PackageUtils.isFirstInstall(this)) {
+        if (!OnboardingPrefManager.getInstance().isOneTimeNotificationStarted() && isFirstInstall) {
             RetentionNotificationUtil.scheduleNotification(this, RetentionNotificationUtil.HOUR_3);
             RetentionNotificationUtil.scheduleNotification(this, RetentionNotificationUtil.HOUR_24);
             RetentionNotificationUtil.scheduleNotification(this, RetentionNotificationUtil.DAY_6);
@@ -1065,7 +1078,7 @@ public abstract class BraveActivity extends ChromeActivity
             OnboardingPrefManager.getInstance().setOneTimeNotificationStarted(true);
         }
 
-        if (PackageUtils.isFirstInstall(this)
+        if (isFirstInstall
                 && ChromeSharedPreferences.getInstance()
                                 .readInt(BravePreferenceKeys.BRAVE_APP_OPEN_COUNT)
                         == 1) {
@@ -1079,15 +1092,20 @@ public abstract class BraveActivity extends ChromeActivity
             BraveSetDefaultBrowserUtils.checkSetDefaultBrowserModal(this);
         }
 
-        checkFingerPrintingOnUpgrade();
-        checkForVpnCallout();
+        checkFingerPrintingOnUpgrade(isFirstInstall);
+        checkForVpnCallout(isFirstInstall);
+        if (!isFirstInstall
+                && !BraveVpnPrefUtils.isIsoCodeUpgradeDone()
+                && BraveVpnPrefUtils.isSubscriptionPurchase()) {
+            BraveVpnNativeWorker.getInstance().getAllServerRegions();
+        }
 
         if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_VPN_LINK_SUBSCRIPTION_ANDROID_UI)
                 && BraveVpnPrefUtils.isSubscriptionPurchase()
                 && !BraveVpnPrefUtils.isLinkSubscriptionDialogShown()) {
             showLinkVpnSubscriptionDialog();
         }
-        if (PackageUtils.isFirstInstall(this)
+        if (isFirstInstall
                 && (OnboardingPrefManager.getInstance().isDormantUsersEngagementEnabled()
                         || getPackageName().equals(BraveConstants.BRAVE_PRODUCTION_PACKAGE_NAME))) {
             OnboardingPrefManager.getInstance().setDormantUsersPrefs();
@@ -1106,7 +1124,7 @@ public abstract class BraveActivity extends ChromeActivity
                         .readBoolean(BravePreferenceKeys.BRAVE_AD_FREE_CALLOUT_DIALOG, true)
                 && getActivityTab() != null
                 && getActivityTab().getUrl().getSpec() != null
-                && UrlUtilities.isNTPUrl(getActivityTab().getUrl().getSpec())
+                && UrlUtilities.isNtpUrl(getActivityTab().getUrl().getSpec())
                 && (ChromeSharedPreferences.getInstance()
                                 .readBoolean(BravePreferenceKeys.BRAVE_OPENED_YOUTUBE, false)
                         || ChromeSharedPreferences.getInstance()
@@ -1128,13 +1146,14 @@ public abstract class BraveActivity extends ChromeActivity
             handleDeepLinkVpn();
         } else if (!mIsDeepLink
                 && OnboardingPrefManager.getInstance().isOnboardingSearchBoxTooltip()
-                && getActivityTab() != null && getActivityTab().getUrl().getSpec() != null
-                && UrlUtilities.isNTPUrl(getActivityTab().getUrl().getSpec())) {
+                && getActivityTab() != null
+                && getActivityTab().getUrl().getSpec() != null
+                && UrlUtilities.isNtpUrl(getActivityTab().getUrl().getSpec())) {
             showSearchBoxTooltip();
         }
 
         // Added to reset app links settings for upgrade case
-        if (!PackageUtils.isFirstInstall(this)
+        if (!isFirstInstall
                 && !ChromeSharedPreferences.getInstance()
                         .readBoolean(BravePrivacySettings.PREF_APP_LINKS, true)
                 && ChromeSharedPreferences.getInstance()
@@ -1144,6 +1163,32 @@ public abstract class BraveActivity extends ChromeActivity
             ChromeSharedPreferences.getInstance()
                     .writeBoolean(BravePrivacySettings.PREF_APP_LINKS_RESET, false);
         }
+
+        if (isFirstInstall
+                && ChromeSharedPreferences.getInstance()
+                                .readInt(BravePreferenceKeys.BRAVE_APP_OPEN_COUNT)
+                        == 1) {
+            Calendar calender = Calendar.getInstance();
+            calender.setTime(new Date());
+            calender.add(Calendar.DATE, DAYS_7);
+            BraveRewardsHelper.setRewardsOnboardingIconTiming(calender.getTimeInMillis());
+        }
+    }
+
+    @Override
+    public void onGetAllServerRegions(String jsonResponse, boolean isSuccess) {
+        if (isSuccess) {
+            List<BraveVpnServerRegion> braveVpnServerRegions =
+                    BraveVpnUtils.getServerLocations(jsonResponse);
+            for (BraveVpnServerRegion braveVpnServerRegion : braveVpnServerRegions) {
+                if (braveVpnServerRegion.getName().equals(BraveVpnPrefUtils.getServerRegion())) {
+                    BraveVpnPrefUtils.setServerIsoCode(braveVpnServerRegion.getCountryIsoCode());
+                    BraveVpnPrefUtils.setServerNamePretty(braveVpnServerRegion.getNamePretty());
+                    BraveVpnPrefUtils.setIsoCodeUpgrade(true);
+                    break;
+                }
+            }
+        }
     }
 
     private void handleDeepLinkVpn() {
@@ -1151,7 +1196,7 @@ public abstract class BraveActivity extends ChromeActivity
         BraveVpnUtils.openBraveVpnPlansActivity(this);
     }
 
-    private void checkForVpnCallout() {
+    private void checkForVpnCallout(boolean isFirstInstall) {
         String countryCode = Locale.getDefault().getCountry();
 
         if (!countryCode.equals(BraveConstants.INDIA_COUNTRY_CODE)
@@ -1163,11 +1208,11 @@ public abstract class BraveActivity extends ChromeActivity
                                                             BravePreferenceKeys
                                                                     .BRAVE_APP_OPEN_COUNT)
                                             == 1
-                                    && !PackageUtils.isFirstInstall(this))
+                                    && !isFirstInstall)
                     || (ChromeSharedPreferences.getInstance()
                                             .readInt(BravePreferenceKeys.BRAVE_APP_OPEN_COUNT)
                                     == 7
-                            && PackageUtils.isFirstInstall(this))) {
+                            && isFirstInstall)) {
                 showVpnCalloutDialog();
             }
 
@@ -1290,17 +1335,6 @@ public abstract class BraveActivity extends ChromeActivity
         context.startActivity(playlistActivityIntent);
     }
 
-    public void showPlaylistWarningDialog(
-            PlaylistWarningDialogListener playlistWarningDialogListener) {
-        PlaylistWarningDialogFragment playlistWarningDialogFragment =
-                new PlaylistWarningDialogFragment();
-        playlistWarningDialogFragment.setCancelable(false);
-        playlistWarningDialogFragment.setPlaylistWarningDialogListener(
-                playlistWarningDialogListener);
-        playlistWarningDialogFragment.show(
-                getSupportFragmentManager(), "PlaylistWarningDialogFragment");
-    }
-
     private void showVpnCalloutDialog() {
         try {
             BraveVpnCalloutDialogFragment braveVpnCalloutDialogFragment =
@@ -1340,8 +1374,8 @@ public abstract class BraveActivity extends ChromeActivity
         }
     }
 
-    private void checkFingerPrintingOnUpgrade() {
-        if (!PackageUtils.isFirstInstall(this)
+    private void checkFingerPrintingOnUpgrade(boolean isFirstInstall) {
+        if (!isFirstInstall
                 && ChromeSharedPreferences.getInstance()
                                 .readInt(BravePreferenceKeys.BRAVE_APP_OPEN_COUNT)
                         == 0) {
@@ -1370,12 +1404,10 @@ public abstract class BraveActivity extends ChromeActivity
         settingsLauncher.launchSettingsActivity(this, BraveNewsPreferencesV2.class);
     }
 
-    // TODO: Once we have a ready for https://github.com/brave/brave-browser/issues/33015, We'll use
-    // this code
-    /*public void openBraveContentFilteringSettings() {
+    public void openBraveContentFilteringSettings() {
         SettingsLauncher settingsLauncher = new SettingsLauncherImpl();
         settingsLauncher.launchSettingsActivity(this, ContentFilteringFragment.class);
-    }*/
+    }
 
     public void openBraveWalletSettings() {
         SettingsLauncher settingsLauncher = new SettingsLauncherImpl();
@@ -1447,8 +1479,9 @@ public abstract class BraveActivity extends ChromeActivity
                     checkForBraveStats();
                     break;
                 case RetentionNotificationUtil.DAY_6:
-                    if (getActivityTab() != null && getActivityTab().getUrl().getSpec() != null
-                            && !UrlUtilities.isNTPUrl(getActivityTab().getUrl().getSpec())) {
+                    if (getActivityTab() != null
+                            && getActivityTab().getUrl().getSpec() != null
+                            && !UrlUtilities.isNtpUrl(getActivityTab().getUrl().getSpec())) {
                         getTabCreator(false).launchUrl(
                                 UrlConstants.NTP_URL, TabLaunchType.FROM_CHROME_UI);
                     }
@@ -1481,8 +1514,9 @@ public abstract class BraveActivity extends ChromeActivity
         if (OnboardingPrefManager.getInstance().isBraveStatsEnabled()) {
             BraveStatsUtil.showBraveStats();
         } else {
-            if (getActivityTab() != null && getActivityTab().getUrl().getSpec() != null
-                    && !UrlUtilities.isNTPUrl(getActivityTab().getUrl().getSpec())) {
+            if (getActivityTab() != null
+                    && getActivityTab().getUrl().getSpec() != null
+                    && !UrlUtilities.isNtpUrl(getActivityTab().getUrl().getSpec())) {
                 OnboardingPrefManager.getInstance().setFromNotification(true);
                 if (getTabCreator(false) != null) {
                     getTabCreator(false).launchUrl(
@@ -1782,7 +1816,8 @@ public abstract class BraveActivity extends ChromeActivity
         }
     }
 
-    private void openBraveLeo() {
+    public void openBraveLeo() {
+        BraveLeoUtils.verifySubscription(null);
         BraveLeoActivity.showPage(this, BRAVE_AI_CHAT_URL);
     }
 

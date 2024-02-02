@@ -99,7 +99,7 @@
 }
 
 - (void)submitHumanConversationEntry:(NSString*)text {
-  driver_->MakeAPIRequestWithConversationHistoryUpdate(
+  driver_->SubmitHumanConversationEntry(
       {ai_chat::mojom::CharacterType::HUMAN,
        ai_chat::mojom::ConversationTurnVisibility::VISIBLE,
        base::SysNSStringToUTF8(text)});
@@ -160,7 +160,8 @@
 - (void)getPremiumStatus:(void (^)(AiChatPremiumStatus))completion {
   driver_->GetPremiumStatus(base::BindOnce(
       [](void (^completion)(AiChatPremiumStatus),
-         ai_chat::mojom::PremiumStatus status) {
+         ai_chat::mojom::PremiumStatus status,
+         ai_chat::mojom::PremiumInfoPtr info) {
         if (completion) {
           completion(static_cast<AiChatPremiumStatus>(status));
         }

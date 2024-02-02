@@ -253,11 +253,23 @@ void SpeedreaderTabHelper::ReloadContents() {
 }
 
 void SpeedreaderTabHelper::ProcessNavigation(
-    content::NavigationHandle* navigation_handle) {
+    content::NavigationHandle* navigation_handle,
+    bool finish_navigation) {
   if (!navigation_handle->IsInPrimaryMainFrame() ||
       navigation_handle->IsSameDocument() ||
       MaybeUpdateCachedState(navigation_handle)) {
     UpdateUI();
+    return;
+  }
+
+  if (finish_navigation) {
+    if (navigation_handle->IsErrorPage() ||
+        web_contents()->GetPrimaryMainFrame()->IsErrorDocument()) {
+      TransitStateTo(
+          DistillStates::ViewOriginal(
+              DistillStates::ViewOriginal::Reason::kNotDistillable, false),
+          true);
+    }
     return;
   }
 
@@ -275,7 +287,8 @@ void SpeedreaderTabHelper::ProcessNavigation(
   auto* nav_entry = navigation_handle->GetNavigationEntry();
 
   const bool url_looks_readable =
-      nav_entry && !nav_entry->IsViewSourceMode() && rewriter_service &&
+      rewriter_service && nav_entry &&
+      nav_entry->GetVirtualURL().SchemeIsHTTPOrHTTPS() &&
       rewriter_service->URLLooksReadable(navigation_handle->GetURL());
 
   const bool enabled_for_site =
@@ -330,6 +343,11 @@ void SpeedreaderTabHelper::DidStartNavigation(
 void SpeedreaderTabHelper::DidRedirectNavigation(
     content::NavigationHandle* navigation_handle) {
   ProcessNavigation(navigation_handle);
+}
+
+void SpeedreaderTabHelper::DidFinishNavigation(
+    content::NavigationHandle* navigation_handle) {
+  ProcessNavigation(navigation_handle, true);
 }
 
 void SpeedreaderTabHelper::DidStopLoading() {

@@ -19,22 +19,23 @@ import { getPriceIdForToken } from '../../utils/api-utils'
 import { isHardwareAccount } from '../../utils/account-utils'
 import { getLocale } from '../../../common/locale'
 import { getCoinFromTxDataUnion } from '../../utils/network-utils'
-import { UISelectors, WalletSelectors } from '../selectors'
+import { UISelectors } from '../selectors'
 import {
   accountHasInsufficientFundsForGas,
   accountHasInsufficientFundsForTransaction,
   getTransactionGasFee,
-  isSolanaTransaction,
   parseTransactionWithPrices,
   findTransactionToken,
-  isEthereumTransaction
+  isEthereumTransaction,
+  isZCashTransaction,
+  isBitcoinTransaction
 } from '../../utils/tx-utils'
 import { makeNetworkAsset } from '../../options/asset-options'
 
 // Custom Hooks
 import useGetTokenInfo from './use-get-token-info'
 import { useAccountOrb, useAddressOrb } from './use-orb'
-import { useSafeUISelector, useSafeWalletSelector } from './use-safe-selector'
+import { useSafeUISelector } from './use-safe-selector'
 import {
   useGetAccountInfosRegistryQuery,
   useGetAccountTokenCurrentBalanceQuery,
@@ -95,9 +96,6 @@ export const usePendingTransactions = () => {
   const selectedPendingTransactionId = useSafeUISelector(
     UISelectors.selectedPendingTransactionId
   )
-  const hasFeeEstimatesError = useSafeWalletSelector(
-    WalletSelectors.hasFeeEstimatesError
-  )
 
   // mutations
   const [rejectTransactions] = useRejectTransactionsMutation()
@@ -123,8 +121,6 @@ export const usePendingTransactions = () => {
     )
   }, [pendingTransactions, selectedPendingTransactionId])
 
-  const txToken = findTransactionToken(transactionInfo, combinedTokensList)
-
   const txCoinType = transactionInfo
     ? getCoinFromTxDataUnion(transactionInfo.txDataUnion)
     : undefined
@@ -142,6 +138,8 @@ export const usePendingTransactions = () => {
     return makeNetworkAsset(transactionsNetwork)
   }, [transactionsNetwork])
 
+  const txToken = findTransactionToken(transactionInfo, combinedTokensList)
+
   const tokenPriceIds = React.useMemo(
     () =>
       [txToken, networkAsset]
@@ -157,18 +155,22 @@ export const usePendingTransactions = () => {
     querySubscriptionOptions60s
   )
 
-  const { data: gasEstimates, isLoading: isLoadingGasEstimates } =
-    useGetGasEstimation1559Query(
-      transactionInfo && txCoinType === BraveWallet.CoinType.ETH
-        ? transactionInfo.chainId
-        : skipToken,
-      defaultQuerySubscriptionOptions
-    )
+  const {
+    data: gasEstimates,
+    isLoading: isLoadingGasEstimates,
+    isError: hasEvmFeeEstimatesError
+  } = useGetGasEstimation1559Query(
+    transactionInfo && txCoinType === BraveWallet.CoinType.ETH
+      ? transactionInfo.chainId
+      : skipToken,
+    defaultQuerySubscriptionOptions
+  )
 
   const {
     data: solFeeEstimate,
     isLoading: isLoadingSolFeeEstimates = txCoinType ===
-      BraveWallet.CoinType.SOL
+      BraveWallet.CoinType.SOL,
+    isError: hasSolFeeEstimatesError
   } = useGetSolanaEstimatedFeeQuery(
     txCoinType === BraveWallet.CoinType.SOL &&
       transactionInfo?.chainId &&
@@ -296,7 +298,7 @@ export const usePendingTransactions = () => {
           sellTokenBalance: sellTokenBalance || '',
           tx: transactionInfo
         })
-      : undefined
+      : false
   }, [
     gasFee,
     nativeBalance,
@@ -338,22 +340,17 @@ export const usePendingTransactions = () => {
   const isERC721TransferFrom =
     transactionInfo?.txType === BraveWallet.TransactionType.ERC721TransferFrom
 
-  const isSolanaTxn = transactionInfo && isSolanaTransaction(transactionInfo)
-  const isSolanaDappTransaction =
-    transactionInfo?.txType &&
-    [
-      BraveWallet.TransactionType.SolanaDappSignAndSendTransaction,
-      BraveWallet.TransactionType.SolanaDappSignTransaction
-    ].includes(transactionInfo.txType)
+  const isSolanaDappTransaction = transactionInfo?.txType
+    ? [
+        BraveWallet.TransactionType.SolanaDappSignAndSendTransaction,
+        BraveWallet.TransactionType.SolanaDappSignTransaction
+      ].includes(transactionInfo.txType)
+    : false
 
   const isAssociatedTokenAccountCreation =
     transactionInfo?.txType ===
     BraveWallet.TransactionType
       .SolanaSPLTokenTransferWithAssociatedTokenAccountCreation
-
-  const isFilecoinTransaction =
-    transactionInfo?.txType === BraveWallet.TransactionType.Other &&
-    transactionInfo?.txDataUnion?.filTxData
 
   // methods
   const onEditAllowanceSave = React.useCallback(
@@ -523,6 +520,11 @@ export const usePendingTransactions = () => {
     assertNotReached(`Unknown coin ${txCoinType}`)
   }, [txCoinType, isLoadingSolFeeEstimates, gasFee, isLoadingGasEstimates])
 
+  const hasFeeEstimatesError =
+    txCoinType === BraveWallet.CoinType.SOL
+      ? hasSolFeeEstimatesError
+      : hasEvmFeeEstimatesError
+
   const isConfirmButtonDisabled = React.useMemo(() => {
     if (hasFeeEstimatesError || isLoadingGasFee) {
       return true
@@ -532,14 +534,12 @@ export const usePendingTransactions = () => {
       return true
     }
 
-    return (
-      !!transactionDetails?.sameAddressError ||
-      !!transactionDetails?.contractAddressError ||
-      insufficientFundsForGasError === undefined ||
-      insufficientFundsError === undefined ||
-      !!insufficientFundsForGasError ||
-      !!insufficientFundsError ||
-      !!transactionDetails?.missingGasLimitError
+    return Boolean(
+      transactionDetails?.sameAddressError ||
+        transactionDetails?.contractAddressError ||
+        insufficientFundsForGasError ||
+        insufficientFundsError ||
+        transactionDetails?.missingGasLimitError
     )
   }, [
     transactionDetails,
@@ -597,9 +597,9 @@ export const usePendingTransactions = () => {
     isERC721SafeTransferFrom,
     isERC721TransferFrom,
     isSolanaDappTransaction,
-    isSolanaTransaction: isSolanaTxn,
+    isSolanaTransaction: transactionDetails?.isSolanaTransaction || false,
     isAssociatedTokenAccountCreation,
-    isFilecoinTransaction,
+    isFilecoinTransaction: transactionDetails?.isFilecoinTransaction || false,
     onEditAllowanceSave,
     queueNextTransaction,
     rejectAllTransactions,
@@ -620,6 +620,8 @@ export const usePendingTransactions = () => {
     onConfirm,
     onReject,
     insufficientFundsError,
-    insufficientFundsForGasError
+    insufficientFundsForGasError,
+    isZCashTransaction: isZCashTransaction(transactionInfo),
+    isBitcoinTransaction: isBitcoinTransaction(transactionInfo)
   }
 }

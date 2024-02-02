@@ -73,10 +73,6 @@
 #include "brave/components/brave_webtorrent/browser/webtorrent_util.h"
 #endif
 
-#if BUILDFLAG(ENABLE_WIDEVINE)
-#include "brave/browser/widevine/widevine_utils.h"
-#endif
-
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
 #include "brave/components/brave_wayback_machine/pref_names.h"
 #endif
@@ -144,10 +140,6 @@ namespace brave {
 
 void RegisterProfilePrefsForMigration(
     user_prefs::PrefRegistrySyncable* registry) {
-#if BUILDFLAG(ENABLE_WIDEVINE)
-  RegisterWidevineProfilePrefsForMigration(registry);
-#endif
-
   dark_mode::RegisterBraveDarkModePrefsForMigration(registry);
 #if !BUILDFLAG(IS_ANDROID)
   new_tab_page::RegisterNewTabPagePrefsForMigration(registry);
@@ -420,6 +412,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->SetDefaultPrefValue(prefs::kPrivacySandboxApisEnabled,
                                 base::Value(false));
   registry->SetDefaultPrefValue(prefs::kPrivacySandboxApisEnabledV2,
+                                base::Value(false));
+
+  // Disable ScrollToText (Copy link to text).
+  registry->SetDefaultPrefValue(prefs::kScrollToTextFragmentEnabled,
                                 base::Value(false));
 
   // Importer: selected data types

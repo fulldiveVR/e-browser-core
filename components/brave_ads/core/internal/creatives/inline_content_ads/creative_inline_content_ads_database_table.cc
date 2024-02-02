@@ -6,6 +6,7 @@
 #include "brave/components/brave_ads/core/internal/creatives/inline_content_ads/creative_inline_content_ads_database_table.h"
 
 #include <cinttypes>
+#include <cstddef>
 #include <map>
 #include <utility>
 #include <vector>
@@ -92,7 +93,7 @@ size_t BindParameters(mojom::DBCommandInfo* command,
     BindString(command, index++, creative_ad.dimensions);
     BindString(command, index++, creative_ad.cta_text);
 
-    count++;
+    ++count;
   }
 
   return count;
@@ -388,8 +389,7 @@ void CreativeInlineContentAds::GetForSegmentsAndDimensions(
 
   int index = 0;
   for (const auto& segment : segments) {
-    BindString(&*command, index, segment);
-    index++;
+    BindString(&*command, index++, segment);
   }
 
   transaction->commands.push_back(std::move(command));
