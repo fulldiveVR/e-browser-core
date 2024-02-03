@@ -2,8 +2,8 @@ diff --git a/build/toolchain/win/midl.py b/build/toolchain/win/midl.py
 old mode 100755
 new mode 100644
 index 9c0d0a4..774d306
---- a/midl.py
-+++ b/midl.py
+--- a/build/toolchain/win/midl.py
++++ b/build/toolchain/win/midl.py 
 @@ -448,6 +448,8 @@ def main(arch, gendir, outdir, dynamic_guids, tlb, h, dlldata, iid, proxy,
    _, mismatch, errors = filecmp.cmpfiles(midl_output_dir, outdir, common_files)
    assert not errors

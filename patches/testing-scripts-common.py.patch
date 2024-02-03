@@ -1,7 +1,7 @@
 diff --git a/testing/scripts/common.py b/testing/scripts/common.py
 index 70ea232..09d66b9 100755
---- a/common.py
-+++ b/common.py
+--- a/testing/scripts/common.py
++++ b/testing/scripts/common.py
 @@ -71,6 +71,7 @@ def set_lpac_acls(acl_dir, is_test_script=False):
    try:
      existing_acls = subprocess.check_output(['icacls', acl_dir],
