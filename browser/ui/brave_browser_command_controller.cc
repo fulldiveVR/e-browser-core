@@ -176,9 +176,11 @@ void BraveBrowserCommandController::InitBraveCommandState() {
     if (brave_rewards::IsSupported(browser_->profile()->GetPrefs())) {
       UpdateCommandForBraveRewards();
     }
+#ifndef AIWIZE_BROWSER
     if (brave_wallet::IsAllowed(browser_->profile()->GetPrefs())) {
       UpdateCommandForBraveWallet();
     }
+#endif
     if (syncer::IsSyncAllowedByFlag()) {
       UpdateCommandForBraveSync();
     }

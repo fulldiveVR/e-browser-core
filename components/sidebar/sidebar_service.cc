@@ -584,13 +584,18 @@ SidebarItem SidebarService::GetBuiltInItemForType(
     SidebarItem::BuiltInItemType type) const {
   switch (type) {
     case SidebarItem::BuiltInItemType::kBraveTalk:
+#ifdef AIWIZE_BROWSER
+      return SidebarItem();
+#else
       return SidebarItem::Create(GURL(kBraveTalkURL),
                                  brave_l10n::GetLocalizedResourceUTF16String(
                                      IDS_SIDEBAR_BRAVE_TALK_ITEM_TITLE),
                                  SidebarItem::Type::kTypeBuiltIn,
                                  SidebarItem::BuiltInItemType::kBraveTalk,
                                  /* open_in_panel = */ false);
+#endif
     case SidebarItem::BuiltInItemType::kWallet: {
+#ifndef AIWIZE_BROWSER
       if (brave_wallet::IsAllowed(prefs_)) {
         return SidebarItem::Create(GURL("chrome://wallet/"),
                                    brave_l10n::GetLocalizedResourceUTF16String(
@@ -599,7 +604,9 @@ SidebarItem SidebarService::GetBuiltInItemForType(
                                    SidebarItem::BuiltInItemType::kWallet,
                                    /* open_in_panel = */ false);
       }
+#else
       return SidebarItem();
+#endif
     }
     case SidebarItem::BuiltInItemType::kBookmarks:
       return SidebarItem::Create(brave_l10n::GetLocalizedResourceUTF16String(

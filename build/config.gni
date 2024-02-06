@@ -19,6 +19,8 @@ declare_args() {
   enable_sparkle = !is_component_build && is_mac
   build_sparkle = false
 
+  aiwize_browser = true
+
   sparkle_dsa_private_key_file = ""
   sparkle_eddsa_private_key = ""
   sparkle_eddsa_public_key = ""
