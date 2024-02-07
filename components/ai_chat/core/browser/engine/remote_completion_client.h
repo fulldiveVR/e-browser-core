@@ -55,16 +55,8 @@ class RemoteCompletionClient {
  private:
   void OnQueryDataReceived(EngineConsumer::GenerationDataCallback callback,
                            base::expected<base::Value, std::string> result);
-  void OnQueryCompleted(std::optional<CredentialCacheEntry> credential,
-                        EngineConsumer::GenerationCompletedCallback callback,
+  void OnQueryCompleted(EngineConsumer::GenerationCompletedCallback callback,
                         APIRequestResult result);
-
-  void OnFetchPremiumCredential(
-      const std::string& prompt,
-      const std::vector<std::string> extra_stop_sequences,
-      EngineConsumer::GenerationCompletedCallback data_completed_callback,
-      EngineConsumer::GenerationDataCallback data_received_callback,
-      std::optional<CredentialCacheEntry> credential);
 
   const std::string model_name_;
   const base::flat_set<std::string_view> stop_sequences_;

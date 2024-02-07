@@ -55,14 +55,6 @@ export default function FeatureMenu() {
                 {getLocale(`braveLeoModelSubtitle-${model.key}`)}
               </p>
             </div>
-            {model.isPremium && (
-              <Icon
-                className={classnames({
-                  [styles.lockOpen]: context.isPremiumUser
-                })}
-                name={context.isPremiumUser ? 'lock-open' : 'lock-plain'}
-              />
-            )}
           </div>
         </leo-menu-item>
       ))}
@@ -75,24 +67,6 @@ export default function FeatureMenu() {
           <span className={styles.menuText}>{getLocale('menuNewChat')}</span>
         </div>
       </leo-menu-item>
-
-      {!context.isPremiumUser &&
-      <leo-menu-item onClick={context.goPremium}>
-        <div className={classnames(styles.menuItemWithIcon, styles.menuItemMainItem)}>
-          <Icon name='lock-open' />
-          <span className={styles.menuText}>{getLocale('menuGoPremium')}</span>
-        </div>
-      </leo-menu-item>
-      }
-
-      {context.isPremiumUser &&
-      <leo-menu-item onClick={context.managePremium}>
-        <div className={classnames(styles.menuItemWithIcon, styles.menuItemMainItem)}>
-          <Icon name='lock-open' />
-          <span className={styles.menuText}>{getLocale('menuManageSubscription')}</span>
-        </div>
-      </leo-menu-item>
-      }
 
       <leo-menu-item onClick={handleSettingsClick}>
         <div className={classnames(styles.menuItemWithIcon, styles.menuItemMainItem)}>

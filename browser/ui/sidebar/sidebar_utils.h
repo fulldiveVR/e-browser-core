@@ -39,6 +39,7 @@ std::optional<SidebarItem> AddItemForSidePanelIdIfNeeded(Browser* browser,
 
 bool IsDisabledItemForPrivate(SidebarItem::BuiltInItemType type);
 bool IsDisabledItemForGuest(SidebarItem::BuiltInItemType type);
+bool IsDisabledItemByDefault(SidebarItem::BuiltInItemType type);
 }  // namespace sidebar
 
 #endif  // BRAVE_BROWSER_UI_SIDEBAR_SIDEBAR_UTILS_H_

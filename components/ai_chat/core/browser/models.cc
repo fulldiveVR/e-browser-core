@@ -34,23 +34,23 @@ namespace ai_chat {
 
 const base::flat_map<std::string_view, mojom::Model> kAllModels = {
     {"chat-default",
-     {"chat-default", "llama-2-13b-chat", "llama2 13b", "Meta",
+     {"chat-default", "gpt-3.5-turbo", "AI Wize Chat", "OpenAI",
       mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT, false,
       9000, 9700}},
-    {"chat-leo-expanded",
-     {"chat-leo-expanded", "llama-2-70b-chat", "llama2 70b", "Meta",
-      mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT, true,
-      9000, 9700}},
-    {"chat-claude-instant",
-     {"chat-claude-instant", "claude-instant-v1", "Claude Instant", "Anthropic",
-      mojom::ModelEngineType::CLAUDE_REMOTE, mojom::ModelCategory::CHAT, true,
-      200000, 320000}},
+    // {"chat-leo-expanded",
+    //  {"chat-leo-expanded", "llama-2-70b-chat", "llama2 70b", "Meta",
+    //   mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT, true,
+    //   9000, 9700}},
+    // {"chat-claude-instant",
+    //  {"chat-claude-instant", "claude-instant-v1", "Claude Instant", "Anthropic",
+    //   mojom::ModelEngineType::CLAUDE_REMOTE, mojom::ModelCategory::CHAT, true,
+    //   200000, 320000}},
 };
 
 const std::vector<std::string_view> kAllModelKeysDisplayOrder = {
     "chat-default",
-    "chat-leo-expanded",
-    "chat-claude-instant",
+    // "chat-leo-expanded",
+    // "chat-claude-instant",
 };
 
 }  // namespace ai_chat

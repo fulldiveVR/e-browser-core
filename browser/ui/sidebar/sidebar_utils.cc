@@ -229,4 +229,18 @@ bool IsDisabledItemForGuest(SidebarItem::BuiltInItemType type) {
   return false;
 }
 
+bool IsDisabledItemByDefault(SidebarItem::BuiltInItemType type) {
+  switch (type) {
+    case SidebarItem::BuiltInItemType::kBraveTalk:
+    case SidebarItem::BuiltInItemType::kWallet:
+    case SidebarItem::BuiltInItemType::kReadingList:
+    case SidebarItem::BuiltInItemType::kPlaylist:
+      return true;
+    default:
+      break;
+  }
+  return false;
+}
+
+
 }  // namespace sidebar

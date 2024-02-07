@@ -123,59 +123,66 @@ void AIChatCredentialManager::OnCredentialSummary(
 void AIChatCredentialManager::FetchPremiumCredential(
     base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>
         callback) {
-  // Loop through credentials looking for a valid credential and remove it. If
-  // there is more than one valid credential, use the one that is expiring
-  // soonest. Also, remove any expired credentials as we go.
-  ScopedDictPrefUpdate update(prefs_service_,
-                              ai_chat::prefs::kBraveChatPremiumCredentialCache);
-  base::Value::Dict& dict = update.Get();
-  base::Time now = base::Time::Now();
-  CredentialCacheEntry valid_credential;
-  bool found_valid_credential = false;
-  base::Time nearest_expiration = base::Time::Max();
 
-  // Collect keys of credentials to be removed.
-  std::vector<std::string> keys_to_erase;
+  VLOG(2) << "FetchPremiumCredential";
+  CredentialCacheEntry entry;
+  entry.credential = "credential";
+  entry.expires_at = base::Time::Now();
+  std::move(callback).Run(entry);
 
-  for (auto it = dict.begin(); it != dict.end(); ++it) {
-    base::Value& expires_at_value = it->second;
-    std::optional<base::Time> expires_at = base::ValueToTime(expires_at_value);
+  // // Loop through credentials looking for a valid credential and remove it. If
+  // // there is more than one valid credential, use the one that is expiring
+  // // soonest. Also, remove any expired credentials as we go.
+  // ScopedDictPrefUpdate update(prefs_service_,
+  //                             ai_chat::prefs::kBraveChatPremiumCredentialCache);
+  // base::Value::Dict& dict = update.Get();
+  // base::Time now = base::Time::Now();
+  // CredentialCacheEntry valid_credential;
+  // bool found_valid_credential = false;
+  // base::Time nearest_expiration = base::Time::Max();
 
-    // Remove expired credentials from the cache.
-    if (!expires_at || *expires_at < now) {
-      keys_to_erase.push_back(it->first);
-      continue;
-    }
+  // // Collect keys of credentials to be removed.
+  // std::vector<std::string> keys_to_erase;
 
-    // Check if this credential is closer to expiration than the current
-    // nearest.
-    if (*expires_at < nearest_expiration) {
-      nearest_expiration = *expires_at;
-      valid_credential.credential = it->first;
-      valid_credential.expires_at = *expires_at;
-      found_valid_credential = true;
-    }
-  }
+  // for (auto it = dict.begin(); it != dict.end(); ++it) {
+  //   base::Value& expires_at_value = it->second;
+  //   std::optional<base::Time> expires_at = base::ValueToTime(expires_at_value);
 
-  if (found_valid_credential) {
-    keys_to_erase.push_back(valid_credential.credential);
-  }
+  //   // Remove expired credentials from the cache.
+  //   if (!expires_at || *expires_at < now) {
+  //     keys_to_erase.push_back(it->first);
+  //     continue;
+  //   }
 
-  // Erase invalid and nearest credentials.
-  for (const auto& key : keys_to_erase) {
-    dict.Remove(key);
-  }
+  //   // Check if this credential is closer to expiration than the current
+  //   // nearest.
+  //   if (*expires_at < nearest_expiration) {
+  //     nearest_expiration = *expires_at;
+  //     valid_credential.credential = it->first;
+  //     valid_credential.expires_at = *expires_at;
+  //     found_valid_credential = true;
+  //   }
+  // }
 
-  // Use credential from the cache if it existed.
-  if (found_valid_credential) {
-    std::move(callback).Run(valid_credential);
-    return;
-  }
+  // if (found_valid_credential) {
+  //   keys_to_erase.push_back(valid_credential.credential);
+  // }
 
-  // Otherwise, fetch a fresh credential using the SKUs SDK.
-  GetPremiumStatus(base::BindOnce(&AIChatCredentialManager::OnGetPremiumStatus,
-                                  weak_ptr_factory_.GetWeakPtr(),
-                                  std::move(callback)));
+  // // Erase invalid and nearest credentials.
+  // for (const auto& key : keys_to_erase) {
+  //   dict.Remove(key);
+  // }
+
+  // // Use credential from the cache if it existed.
+  // if (found_valid_credential) {
+  //   std::move(callback).Run(valid_credential);
+  //   return;
+  // }
+
+  // // Otherwise, fetch a fresh credential using the SKUs SDK.
+  // GetPremiumStatus(base::BindOnce(&AIChatCredentialManager::OnGetPremiumStatus,
+  //                                 weak_ptr_factory_.GetWeakPtr(),
+  //                                 std::move(callback)));
 }
 
 void AIChatCredentialManager::OnGetPremiumStatus(

@@ -51,6 +51,9 @@ SidebarServiceFactory::GetBuiltInItemTypesForProfile(Profile* profile) const {
       continue;
     }
 
+    if (IsDisabledItemByDefault(type)) {
+      continue;
+    }
     types.push_back(type);
   }
 

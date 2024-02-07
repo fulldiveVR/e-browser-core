@@ -58,8 +58,7 @@ std::string GetEnvironmentForDomain(const std::string& domain) {
     return kEnvStaging;
   if (base_domain == "brave.software")
     return kEnvDevelopment;
-  NOTIMPLEMENTED();
-  return "";
+  return kEnvProduction;
 }
 
 void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {

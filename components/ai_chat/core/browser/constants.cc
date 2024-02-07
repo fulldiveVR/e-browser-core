@@ -74,6 +74,7 @@ base::span<const webui::LocalizedString> GetLocalizedStrings() {
       {"optionOther", IDS_CHAT_UI_OPTION_OTHER},
       {"feedbackError", IDS_CHAT_UI_FEEDBACK_SUBMIT_ERROR},
       {"ratingError", IDS_CHAT_UI_RATING_ERROR},
+      {"braveLeoModelSubtitle-", IDS_CHAT_UI_CHAT_DEFAULT_SUBTITLE},
       {"braveLeoModelSubtitle-chat-default", IDS_CHAT_UI_CHAT_DEFAULT_SUBTITLE},
       {"braveLeoModelSubtitle-chat-leo-expanded",
        IDS_CHAT_UI_CHAT_LEO_EXPANDED_SUBTITLE},
