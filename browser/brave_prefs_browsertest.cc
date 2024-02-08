@@ -127,8 +127,6 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
   EXPECT_EQ(brave_wallet::GetDefaultSolanaWallet(
                 chrome_test_utils::GetProfile(this)->GetPrefs()),
             brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension);
-  EXPECT_TRUE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
-      kShowWalletIconOnToolbar));
   EXPECT_FALSE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       kMRUCyclingEnabled));
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)

@@ -460,14 +460,8 @@ void BraveBrowserView::ShowPlaylistBubble() {
 }
 #endif
 
-WalletButton* BraveBrowserView::GetWalletButton() {
-  return static_cast<BraveToolbarView*>(toolbar())->wallet_button();
-}
-
 views::View* BraveBrowserView::GetWalletButtonAnchorView() {
-  return static_cast<BraveToolbarView*>(toolbar())
-      ->wallet_button()
-      ->GetAsAnchorView();
+  return nullptr;
 }
 
 void BraveBrowserView::OnAcceleratorsChanged(
@@ -509,22 +503,6 @@ void BraveBrowserView::OnAcceleratorsChanged(
       focus_manager->UnregisterAccelerator(old_accelerator, this);
       accelerator_table_.erase(old_accelerator);
     }
-  }
-}
-
-void BraveBrowserView::CreateWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowWalletBubble();
-}
-
-void BraveBrowserView::CreateApproveWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowApproveWalletBubble();
-}
-
-void BraveBrowserView::CloseWalletBubble() {
-  if (GetWalletButton()) {
-    GetWalletButton()->CloseWalletBubble();
   }
 }
 

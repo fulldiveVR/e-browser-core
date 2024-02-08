@@ -44,11 +44,11 @@ export class WelcomeBrowserProxyImpl implements WelcomeBrowserProxy {
   }
 
   setP3AEnabled (enabled: boolean) {
-    chrome.send('setP3AEnabled', [enabled])
+    chrome.send('setP3AEnabled', [false])
   }
 
   setMetricsReportingEnabled (enabled: boolean) {
-    chrome.send('setMetricsReportingEnabled', [enabled])
+    chrome.send('setMetricsReportingEnabled', [false])
   }
 
   openSettingsPage () {

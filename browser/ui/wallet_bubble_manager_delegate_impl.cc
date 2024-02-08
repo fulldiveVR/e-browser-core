@@ -195,12 +195,8 @@ WalletBubbleManagerDelegateImpl::WalletBubbleManagerDelegateImpl(
   DCHECK(browser);
 
   views::View* anchor_view;
-  if (browser->is_type_normal()) {
-    anchor_view = static_cast<BraveBrowserView*>(browser->window())
-                      ->GetWalletButtonAnchorView();
-  } else {
-    anchor_view = static_cast<BrowserView*>(browser->window())->top_container();
-  }
+  
+  anchor_view = static_cast<BrowserView*>(browser->window())->top_container();
 
   DCHECK(anchor_view);
   webui_bubble_manager_ = std::make_unique<WalletWebUIBubbleManager>(

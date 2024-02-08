@@ -1103,7 +1103,6 @@ test("brave_browser_tests") {
       "//brave/browser/ui/views/tabs/vertical_tab_strip_browsertest.cc",
       "//brave/browser/ui/views/toolbar/brave_app_menu_browsertest.cc",
       "//brave/browser/ui/views/toolbar/brave_toolbar_view_browsertest.cc",
-      "//brave/browser/ui/views/toolbar/wallet_button_browsertest.cc",
     ]
     deps += [
       "//brave/browser/ui/sidebar",

@@ -80,20 +80,13 @@ export class SettingsBraveVpnPageElement
   }
 
   private getCurrentPrefValue(): boolean {
-    return this.getPref('brave.brave_vpn.wireguard_enabled').value
+    return false
   }
 
   private updateState() {
-    this.toggleWireguardSubLabel_ = this.braveVpnConnected_ ?
-      this.i18n('sublabelVpnConnected') : this.i18n('sublabelVpnDisconnected')
-    this.shouldShowRestart_ =
-        (this.initialProtocolValue_ !== this.getCurrentPrefValue()) &&
-        !this.braveVpnConnected_;
   }
 
   private resetToInitialValue() {
-    this.setPrefValue('brave.brave_vpn.wireguard_enabled',
-      this.initialProtocolValue_)
   }
 
   private isWireguardServiceRegistered(success: boolean) {

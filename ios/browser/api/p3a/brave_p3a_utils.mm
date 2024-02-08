@@ -57,12 +57,10 @@ NSString* const P3ACreativeMetricPrefix =
 }
 
 - (bool)isP3AEnabled {
-  return _localState->GetBoolean(p3a::kP3AEnabled);
+  return false;
 }
 
 - (void)setIsP3AEnabled:(bool)isP3AEnabled {
-  _localState->SetBoolean(p3a::kP3AEnabled, isP3AEnabled);
-  _localState->CommitPendingWrite();
 }
 
 - (bool)isNoticeAcknowledged {

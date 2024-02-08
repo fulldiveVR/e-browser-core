@@ -88,7 +88,7 @@ P3AService::~P3AService() = default;
 
 void P3AService::RegisterPrefs(PrefRegistrySimple* registry, bool first_run) {
   MessageManager::RegisterPrefs(registry);
-  registry->RegisterBooleanPref(kP3AEnabled, true);
+  registry->RegisterBooleanPref(kP3AEnabled, false);
 
   // New users are shown the P3A notice via the welcome page.
   registry->RegisterBooleanPref(kP3ANoticeAcknowledged, first_run);
@@ -175,7 +175,7 @@ void P3AService::UpdateMetricValueForSingleFormat(
 }
 
 bool P3AService::IsP3AEnabled() const {
-  return local_state_->GetBoolean(kP3AEnabled);
+  return false;
 }
 
 void P3AService::Init(

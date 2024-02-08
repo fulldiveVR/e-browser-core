@@ -141,8 +141,6 @@ void BraveVpnFallbackDialogView::OnClosing() {
 }
 
 void BraveVpnFallbackDialogView::OnAccept() {
-  g_browser_process->local_state()->SetBoolean(prefs::kBraveVPNWireguardEnabled,
-                                               false);
   chrome::AttemptRestart();
 }
 

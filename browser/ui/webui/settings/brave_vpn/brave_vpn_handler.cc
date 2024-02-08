@@ -44,10 +44,6 @@ BraveVpnHandler::BraveVpnHandler(Profile* profile) : profile_(profile) {
   Observe(service);
 
   pref_change_registrar_.Init(g_browser_process->local_state());
-  pref_change_registrar_.Add(
-      brave_vpn::prefs::kBraveVPNWireguardEnabled,
-      base::BindRepeating(&BraveVpnHandler::OnProtocolChanged,
-                          base::Unretained(this)));
 }
 
 BraveVpnHandler::~BraveVpnHandler() = default;

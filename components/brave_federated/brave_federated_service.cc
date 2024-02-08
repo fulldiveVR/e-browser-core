@@ -51,10 +51,6 @@ void BraveFederatedService::Init(const base::FilePath& browser_context_path) {
   VLOG(1) << "Initialising federated service";
 
   local_state_change_registrar_.Init(local_state_);
-  local_state_change_registrar_.Add(
-      p3a::kP3AEnabled,
-      base::BindRepeating(&BraveFederatedService::OnPreferenceChanged,
-                          base::Unretained(this)));
 
   base::FilePath db_path(browser_context_path.AppendASCII("data_store.sqlite"));
   data_store_service_ = std::make_unique<DataStoreService>(db_path);
@@ -69,9 +65,6 @@ void BraveFederatedService::Init(const base::FilePath& browser_context_path) {
 }
 
 void BraveFederatedService::OnPreferenceChanged(const std::string& pref_name) {
-  if (pref_name == p3a::kP3AEnabled) {
-    MaybeStartOrStopOperationalPatterns();
-  }
 }
 
 bool BraveFederatedService::IsFederatedLearningEnabled() {
@@ -83,11 +76,11 @@ bool BraveFederatedService::IsOperationalPatternsEnabled() {
 }
 
 bool BraveFederatedService::IsP3AEnabled() {
-  return local_state_->GetBoolean(p3a::kP3AEnabled);
+  return false;
 }
 
 bool BraveFederatedService::ShouldStartOperationalPatterns() {
-  return IsP3AEnabled() && IsOperationalPatternsEnabled();
+  return false;
 }
 
 void BraveFederatedService::MaybeStartOrStopOperationalPatterns() {

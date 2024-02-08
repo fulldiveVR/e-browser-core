@@ -94,14 +94,9 @@ class WalletButtonMenuModel : public ui::SimpleMenuModel,
 
   // ui::SimpleMenuModel::Delegate override:
   void ExecuteCommand(int command_id, int event_flags) override {
-    if (command_id == HideBraveWalletIcon) {
-      prefs_->SetBoolean(kShowWalletIconOnToolbar, false);
-    }
   }
 
   void Build() {
-    AddItemWithStringId(HideBraveWalletIcon,
-                        IDS_HIDE_BRAVE_WALLET_ICON_ON_TOOLBAR);
   }
 
   raw_ptr<PrefService> prefs_ = nullptr;
@@ -130,10 +125,6 @@ WalletButton::WalletButton(View* backup_anchor_view, Profile* profile)
       prefs_(profile->GetPrefs()),
       backup_anchor_view_(backup_anchor_view) {
   pref_change_registrar_.Init(prefs_);
-  pref_change_registrar_.Add(
-      kShowWalletIconOnToolbar,
-      base::BindRepeating(&WalletButton::OnPreferenceChanged,
-                          base::Unretained(this)));
   SetTooltipText(
       brave_l10n::GetLocalizedResourceUTF16String(IDS_TOOLTIP_WALLET));
 
@@ -243,7 +234,6 @@ void WalletButton::UpdateImageAndText(bool activated) {
 }
 
 void WalletButton::UpdateVisibility() {
-  SetVisible(prefs_->GetBoolean(kShowWalletIconOnToolbar));
 }
 
 void WalletButton ::OnPreferenceChanged() {
@@ -279,9 +269,6 @@ bool WalletButton::IsBubbleClosedForTesting() {
 
 views::View* WalletButton::GetAsAnchorView() {
   View* anchor_view = this;
-  if (!prefs_->GetBoolean(kShowWalletIconOnToolbar)) {
-    anchor_view = backup_anchor_view_;
-  }
   return anchor_view;
 }
 

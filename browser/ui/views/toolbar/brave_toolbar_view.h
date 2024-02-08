@@ -14,7 +14,6 @@
 #include "components/prefs/pref_member.h"
 
 class BookmarkButton;
-class WalletButton;
 
 class BraveToolbarView : public ToolbarView,
                          public ProfileAttributesStorage::Observer {
@@ -23,7 +22,6 @@ class BraveToolbarView : public ToolbarView,
   ~BraveToolbarView() override;
 
   BookmarkButton* bookmark_button() const { return bookmark_; }
-  WalletButton* wallet_button() const { return wallet_; }
 
   void UpdateHorizontalPadding();
 
@@ -52,8 +50,6 @@ class BraveToolbarView : public ToolbarView,
   raw_ptr<BookmarkButton> bookmark_ = nullptr;
   // Tracks the preference to determine whether bookmark editing is allowed.
   BooleanPrefMember edit_bookmarks_enabled_;
-
-  raw_ptr<WalletButton> wallet_ = nullptr;
 
   BooleanPrefMember show_bookmarks_button_;
 

@@ -249,7 +249,7 @@ void MessageManager::OnRandomnessServerInfoReady(
 
 void MessageManager::StartScheduledUpload(bool is_constellation,
                                           MetricLogType log_type) {
-  bool p3a_enabled = local_state_->GetBoolean(p3a::kP3AEnabled);
+  bool p3a_enabled = false;
   if (!p3a_enabled) {
     return;
   }
@@ -305,7 +305,7 @@ void MessageManager::StartScheduledUpload(bool is_constellation,
 
 void MessageManager::StartScheduledConstellationPrep(MetricLogType log_type) {
   CHECK(features::IsConstellationEnabled());
-  bool p3a_enabled = local_state_->GetBoolean(p3a::kP3AEnabled);
+  bool p3a_enabled = false;
   if (!p3a_enabled) {
     return;
   }

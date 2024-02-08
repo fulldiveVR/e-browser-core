@@ -189,16 +189,6 @@ void BraveToolbarView::Init() {
                                       ui::EF_MIDDLE_MOUSE_BUTTON);
   bookmark_->UpdateImageAndText();
 
-  if (brave_wallet::IsNativeWalletEnabled() &&
-      brave_wallet::IsAllowedForContext(profile)) {
-    wallet_ = container_view->AddChildViewAt(
-        std::make_unique<WalletButton>(GetAppMenuButton(), profile),
-        *container_view->GetIndexOf(GetAppMenuButton()) - 1);
-    wallet_->SetTriggerableEventFlags(ui::EF_LEFT_MOUSE_BUTTON |
-                                      ui::EF_MIDDLE_MOUSE_BUTTON);
-    wallet_->UpdateImageAndText();
-  }
-
   // Make sure that avatar button should be located right before the app menu.
   if (auto* avatar = GetAvatarToolbarButton()) {
     container_view->ReorderChildView(
@@ -236,8 +226,6 @@ void BraveToolbarView::OnThemeChanged() {
 
   if (display_mode_ == DisplayMode::NORMAL && bookmark_)
     bookmark_->UpdateImageAndText();
-  if (display_mode_ == DisplayMode::NORMAL && wallet_)
-    wallet_->UpdateImageAndText();
 }
 
 void BraveToolbarView::OnProfileAdded(const base::FilePath& profile_path) {
@@ -253,8 +241,6 @@ void BraveToolbarView::LoadImages() {
   ToolbarView::LoadImages();
   if (bookmark_)
     bookmark_->UpdateImageAndText();
-  if (wallet_)
-    wallet_->UpdateImageAndText();
 }
 
 void BraveToolbarView::Update(content::WebContents* tab) {

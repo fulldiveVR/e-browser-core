@@ -32,10 +32,6 @@ inline constexpr char kBraveVPNShowNotificationDialog[] =
 inline constexpr char kBraveVPNWireguardFallbackDialog[] =
     "brave.brave_vpn.show_wireguard_fallback_dialog";
 #endif  // BUILDFLAG(IS_WIN)
-#if BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
-inline constexpr char kBraveVPNWireguardEnabled[] =
-    "brave.brave_vpn.wireguard_enabled";
-#endif
 inline constexpr char kBraveVPNWireguardProfileCredentials[] =
     "brave.brave_vpn.wireguard.profile_credentials";
 inline constexpr char kBraveVPNEnvironment[] = "brave.brave_vpn.env";

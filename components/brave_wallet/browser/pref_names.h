@@ -16,8 +16,6 @@ inline constexpr char kDefaultBaseCurrency[] =
 inline constexpr char kDefaultBaseCryptocurrency[] =
     "brave.wallet.default_base_cryptocurrency";
 inline constexpr char kBraveWalletTransactions[] = "brave.wallet.transactions";
-inline constexpr char kShowWalletIconOnToolbar[] =
-    "brave.wallet.show_wallet_icon_on_toolbar";
 inline constexpr char kBraveWalletLastUnlockTime[] =
     "brave.wallet.wallet_last_unlock_time_v2";
 inline constexpr char kBraveWalletPingReportedUnlockTime[] =

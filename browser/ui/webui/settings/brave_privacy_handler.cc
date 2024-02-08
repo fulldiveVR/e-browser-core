@@ -36,10 +36,6 @@ BravePrivacyHandler::BravePrivacyHandler() {
       kStatsReportingEnabled,
       base::BindRepeating(&BravePrivacyHandler::OnStatsUsagePingEnabledChanged,
                           base::Unretained(this)));
-  local_state_change_registrar_.Add(
-      p3a::kP3AEnabled,
-      base::BindRepeating(&BravePrivacyHandler::OnP3AEnabledChanged,
-                          base::Unretained(this)));
 }
 
 BravePrivacyHandler::~BravePrivacyHandler() {
@@ -152,9 +148,6 @@ void BravePrivacyHandler::GetP3AEnabled(const base::Value::List& args) {
 
 void BravePrivacyHandler::OnP3AEnabledChanged() {
   if (IsJavascriptAllowed()) {
-    PrefService* local_state = g_browser_process->local_state();
-    bool enabled = local_state->GetBoolean(p3a::kP3AEnabled);
-
-    FireWebUIListener("p3a-enabled-changed", base::Value(enabled));
+    FireWebUIListener("p3a-enabled-changed", base::Value(false));
   }
 }
