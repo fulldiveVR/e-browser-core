@@ -144,13 +144,6 @@ void BraveContentRendererClient::RenderFrameCreated(
     new skus::SkusRenderFrameObserver(render_frame);
   }
 
-#if BUILDFLAG(IS_ANDROID)
-  if (brave_vpn::IsBraveVPNFeatureEnabled()) {
-    new brave_vpn::VpnRenderFrameObserver(render_frame,
-                                          content::ISOLATED_WORLD_ID_GLOBAL);
-  }
-#endif
-
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   if (base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature)) {
     new speedreader::SpeedreaderRenderFrameObserver(

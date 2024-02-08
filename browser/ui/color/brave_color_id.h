@@ -78,8 +78,6 @@
 #define BRAVE_SPEEDREADER_COLOR_IDS
 #endif
 
-#define BRAVE_VPN_COLOR_IDS
-
 // Unfortunately, we can't have a defined(TOOLKIT_VIEWS) guard here
 // as brave_color_mixer depends on this without deps to //ui/views:flags.
 // But it's safe have without the guard as this file is included only when
@@ -111,7 +109,6 @@
     BRAVE_SEARCH_CONVERSION_COLOR_IDS \
     BRAVE_SIDEBAR_COLOR_IDS           \
     BRAVE_SPEEDREADER_COLOR_IDS       \
-    BRAVE_VPN_COLOR_IDS               \
     BRAVE_VERTICAL_TAB_COLOR_IDS      \
     BRAVE_PLAYLIST_COLOR_IDS          \
     BRAVE_OMNIBOX_COLOR_IDS

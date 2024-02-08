@@ -149,8 +149,6 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   skus::RegisterLocalStatePrefs(registry);
 #endif
 
-  registry->RegisterStringPref(::prefs::kBraveVpnDnsConfig, std::string());
-
   ntp_background_images::NTPP3AHelperImpl::RegisterLocalStatePrefs(registry);
 
   brave_wallet::RegisterLocalStatePrefs(registry);

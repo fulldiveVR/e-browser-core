@@ -36,7 +36,6 @@ class WebcompatReportUploader {
                     const std::string& ad_block_list_names,
                     const std::string& languages,
                     const bool language_farbling,
-                    const bool brave_vpn_connected,
                     const base::Value& details,
                     const base::Value& contact);
 

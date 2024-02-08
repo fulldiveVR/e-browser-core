@@ -113,9 +113,6 @@ void ShowBraveVPNBubble(Browser* browser) {
   static_cast<BraveBrowserWindow*>(browser->window())->ShowBraveVPNBubble();
 }
 
-void ToggleBraveVPNTrayIcon() {
-}
-
 void OpenIpfsFilesWebUI(Browser* browser) {
 #if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
   auto* prefs = browser->profile()->GetPrefs();
@@ -127,9 +124,6 @@ void OpenIpfsFilesWebUI(Browser* browser) {
   auto target_url = gateway.ReplaceComponents(replacements);
   chrome::AddTabAt(browser, GURL(target_url), -1, true);
 #endif
-}
-
-void OpenBraveVPNUrls(Browser* browser, int command_id) {
 }
 
 void ShowWalletBubble(Browser* browser) {

@@ -325,27 +325,6 @@
   <message name="IDS_IDC_CLOSE_BRAVE_WALLET_PANEL">
     Close AI Wize Wallet panel
   </message>
-  <message name="IDS_IDC_SHOW_BRAVE_VPN_PANEL">
-    Show AI Wize VPN panel
-  </message>
-  <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON">
-    Toggle AI Wize VPN toolbar button
-  </message>
-  <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TRAY_ICON">
-    Toggle AI Wize VPN tray icon
-  </message>
-  <message name="IDS_IDC_SEND_BRAVE_VPN_FEEDBACK">
-    Send AI Wize VPN feedback
-  </message>
-  <message name="IDS_IDC_ABOUT_BRAVE_VPN">
-    About AI Wize VPN
-  </message>
-  <message name="IDS_IDC_MANAGE_BRAVE_VPN_PLAN">
-    Manage AI Wize VPN plan
-  </message>
-  <message name="IDS_IDC_TOGGLE_BRAVE_VPN">
-    Toggle AI Wize VPN
-  </message>
   <message name="IDS_IDC_TOGGLE_TAB_MUTE">
     Toggle tab mute
   </message>

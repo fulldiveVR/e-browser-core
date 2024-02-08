@@ -55,7 +55,6 @@ class WebcompatReporterDOMHandler : public content::WebUIMessageHandler {
   std::string ad_block_list_names_;
   std::string languages_;
   bool language_farbling_enabled_ = true;
-  bool brave_vpn_connected_ = false;
 };
 
 WebcompatReporterDOMHandler::WebcompatReporterDOMHandler(Profile* profile)
@@ -142,7 +141,7 @@ void WebcompatReporterDOMHandler::HandleSubmitReport(
 
   uploader_->SubmitReport(GURL(url), shields_enabled, ad_block_setting,
                           fp_block_setting, ad_block_list_names_, languages_,
-                          language_farbling_enabled_, brave_vpn_connected_,
+                          language_farbling_enabled_,
                           details, contact);
 }
 

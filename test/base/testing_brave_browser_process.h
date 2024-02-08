@@ -22,10 +22,6 @@ namespace brave_shields {
 class AdBlockService;
 }
 
-namespace brave_vpn {
-class BraveVPNOSConnectionAPI;
-}
-
 class TestingBraveBrowserProcess : public BraveBrowserProcess {
  public:
   // Initializes |g_brave_browser_process| with a new

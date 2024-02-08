@@ -42,7 +42,6 @@ void WebcompatReportUploader::SubmitReport(
     const std::string& ad_block_list_names,
     const std::string& languages,
     const bool language_farbling,
-    const bool brave_vpn_connected,
     const base::Value& details,
     const base::Value& contact) {
   std::string api_key = brave_stats::GetAPIKey();
@@ -63,7 +62,6 @@ void WebcompatReportUploader::SubmitReport(
   post_data_obj.Set(kAdBlockListsField, ad_block_list_names);
   post_data_obj.Set(kLanguagesField, languages);
   post_data_obj.Set(kLanguageFarblingField, language_farbling);
-  post_data_obj.Set(kBraveVPNEnabledField, brave_vpn_connected);
 
   post_data_obj.Set(kApiKeyField, base::Value(api_key));
 

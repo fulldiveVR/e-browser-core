@@ -32,7 +32,6 @@
     BRAVE_AI_CHAT_FLAG                                                  \
     &brave_rewards::features::kBraveRewards,                            \
     &brave_search_conversion::features::kOmniboxBanner,                 \
-    &brave_vpn::features::kBraveVPNLinkSubscriptionAndroidUI,           \
     &brave_wallet::features::kNativeBraveWalletFeature,                 \
     &playlist::features::kPlaylist,                                     \
     &preferences::features::kBraveBackgroundVideoPlayback,              \

@@ -355,15 +355,6 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
     case IDC_CLOSE_BRAVE_WALLET_PANEL:
       brave::CloseWalletBubble(&*browser_);
       break;
-    case IDC_SHOW_BRAVE_VPN_PANEL:
-      break;
-    case IDC_TOGGLE_BRAVE_VPN_TRAY_ICON:
-      break;
-    case IDC_SEND_BRAVE_VPN_FEEDBACK:
-    case IDC_ABOUT_BRAVE_VPN:
-    case IDC_MANAGE_BRAVE_VPN_PLAN:
-      brave::OpenBraveVPNUrls(&*browser_, id);
-      break;
     case IDC_SIDEBAR_TOGGLE_POSITION:
       brave::ToggleSidebarPosition(&*browser_);
       break;

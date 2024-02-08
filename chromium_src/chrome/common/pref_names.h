@@ -8,14 +8,6 @@
 
 #include "build/build_config.h"
 
-namespace prefs {
-// Used by BraveVpnDnsObserverService to set cloudflare server url when
-// BraveVPN is connected, otherwise this pref is empty. Final decision
-// about whether or not to override actual DNS state will be made in
-// stub_resolver_config_reader.
-inline constexpr char kBraveVpnDnsConfig[] = "brave.brave_vpn.dns_config";
-}  // namespace prefs
-
 #include "src/chrome/common/pref_names.h"  // IWYU pragma: export
 
 #endif  // BRAVE_CHROMIUM_SRC_CHROME_COMMON_PREF_NAMES_H_
