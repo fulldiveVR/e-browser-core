@@ -51,7 +51,6 @@
 #include "brave/components/brave_shields/browser/domain_block_navigation_throttle.h"
 #include "brave/components/brave_shields/common/brave_shield_constants.h"
 #include "brave/components/brave_shields/common/features.h"
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_p3a_private.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
@@ -189,13 +188,6 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
 #include "brave/browser/brave_drm_tab_helper.h"
-#endif
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
-#include "brave/browser/ui/webui/brave_vpn/vpn_panel_ui.h"
-#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#include "brave/components/brave_vpn/common/mojom/brave_vpn.mojom.h"
 #endif
 
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
@@ -449,15 +441,6 @@ void BindBraveSearchDefaultHost(
   }
 }
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-void MaybeBindBraveVpnImpl(
-    content::RenderFrameHost* const frame_host,
-    mojo::PendingReceiver<brave_vpn::mojom::ServiceHandler> receiver) {
-  auto* context = frame_host->GetBrowserContext();
-  brave_vpn::BraveVpnServiceFactory::BindForContext(context,
-                                                    std::move(receiver));
-}
-#endif
 void MaybeBindSkusSdkImpl(
     content::RenderFrameHost* const frame_host,
     mojo::PendingReceiver<skus::mojom::SkusService> receiver) {
@@ -549,12 +532,6 @@ void BraveContentBrowserClient::
 void BraveContentBrowserClient::RegisterWebUIInterfaceBrokers(
     content::WebUIBrowserInterfaceBrokerRegistry& registry) {
   ChromeContentBrowserClient::RegisterWebUIInterfaceBrokers(registry);
-#if BUILDFLAG(ENABLE_BRAVE_VPN) && !BUILDFLAG(IS_ANDROID)
-  if (brave_vpn::IsBraveVPNFeatureEnabled()) {
-    registry.ForWebUI<VPNPanelUI>()
-        .Add<brave_vpn::mojom::PanelHandlerFactory>();
-  }
-#endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {
@@ -700,10 +677,6 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
 
   map->Add<skus::mojom::SkusService>(
       base::BindRepeating(&MaybeBindSkusSdkImpl));
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  map->Add<brave_vpn::mojom::ServiceHandler>(
-      base::BindRepeating(&MaybeBindBraveVpnImpl));
-#endif
 
 #if BUILDFLAG(IS_ANDROID)
   content::RegisterWebUIControllerInterfaceBinder<

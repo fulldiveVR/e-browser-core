@@ -6,7 +6,6 @@
 #ifndef BRAVE_BROWSER_UI_COLOR_BRAVE_COLOR_ID_H_
 #define BRAVE_BROWSER_UI_COLOR_BRAVE_COLOR_ID_H_
 
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 
@@ -79,24 +78,7 @@
 #define BRAVE_SPEEDREADER_COLOR_IDS
 #endif
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#define BRAVE_VPN_COLOR_IDS                        \
-    E_CPONLY(kColorBraveVpnButtonErrorBorder)      \
-    E_CPONLY(kColorBraveVpnButtonBorder)           \
-    E_CPONLY(kColorBraveVpnButtonText)    \
-    E_CPONLY(kColorBraveVpnButtonTextError)    \
-    E_CPONLY(kColorBraveVpnButtonIconConnected)    \
-    E_CPONLY(kColorBraveVpnButtonIconDisconnected) \
-    E_CPONLY(kColorBraveVpnButtonIconError) \
-    E_CPONLY(kColorBraveVpnButtonBackgroundNormal) \
-    E_CPONLY(kColorBraveVpnButtonBackgroundHover)  \
-    E_CPONLY(kColorBraveVpnButtonErrorBackgroundNormal) \
-    E_CPONLY(kColorBraveVpnButtonErrorBackgroundHover)  \
-    E_CPONLY(kColorBraveVpnButtonIconInner) \
-    E_CPONLY(kColorBraveVpnButtonIconErrorInner)
-#else
 #define BRAVE_VPN_COLOR_IDS
-#endif
 
 // Unfortunately, we can't have a defined(TOOLKIT_VIEWS) guard here
 // as brave_color_mixer depends on this without deps to //ui/views:flags.

@@ -16,7 +16,6 @@
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/debounce/browser/debounce_service.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
@@ -62,20 +61,6 @@
 #include "brave/browser/tor/tor_profile_service_factory.h"
 #include "brave/components/tor/tor_profile_service.h"
 #endif
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
-#include "brave/components/brave_vpn/browser/brave_vpn_service.h"
-#include "brave/components/brave_vpn/common/brave_vpn_constants.h"
-#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#include "brave/components/brave_vpn/common/pref_names.h"
-
-#if BUILDFLAG(IS_WIN)
-#include "brave/components/brave_vpn/common/wireguard/win/storage_utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/wireguard_utils_win.h"
-#endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
-
-#endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
 #if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
 #include "brave/components/ipfs/ipfs_utils.h"
@@ -129,12 +114,6 @@ void ShowBraveVPNBubble(Browser* browser) {
 }
 
 void ToggleBraveVPNTrayIcon() {
-#if BUILDFLAG(ENABLE_BRAVE_VPN) && BUILDFLAG(IS_WIN)
-  brave_vpn::EnableVPNTrayIcon(!brave_vpn::IsVPNTrayIconEnabled());
-  if (brave_vpn::IsVPNTrayIconEnabled()) {
-    brave_vpn::wireguard::ShowBraveVpnStatusTrayIcon();
-  }
-#endif
 }
 
 void OpenIpfsFilesWebUI(Browser* browser) {
@@ -151,28 +130,6 @@ void OpenIpfsFilesWebUI(Browser* browser) {
 }
 
 void OpenBraveVPNUrls(Browser* browser, int command_id) {
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  brave_vpn::BraveVpnService* vpn_service =
-      brave_vpn::BraveVpnServiceFactory::GetForProfile(browser->profile());
-  CHECK(vpn_service);
-  std::string target_url;
-  switch (command_id) {
-    case IDC_SEND_BRAVE_VPN_FEEDBACK:
-      target_url = brave_vpn::kFeedbackUrl;
-      break;
-    case IDC_ABOUT_BRAVE_VPN:
-      target_url = brave_vpn::kAboutUrl;
-      break;
-    case IDC_MANAGE_BRAVE_VPN_PLAN:
-      target_url =
-          brave_vpn::GetManageUrl(vpn_service->GetCurrentEnvironment());
-      break;
-    default:
-      NOTREACHED();
-  }
-
-  chrome::AddTabAt(browser, GURL(target_url), -1, true);
-#endif
 }
 
 void ShowWalletBubble(Browser* browser) {

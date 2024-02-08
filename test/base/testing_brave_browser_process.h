@@ -86,11 +86,6 @@ class TestingBraveBrowserProcess : public BraveBrowserProcess {
 #endif
   brave_ads::ResourceComponent* resource_component() override;
   brave::BraveFarblingService* brave_farbling_service() override;
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  brave_vpn::BraveVPNOSConnectionAPI* brave_vpn_os_connection_api() override;
-  void SetBraveVPNOSConnectionAPIForTesting(
-      std::unique_ptr<brave_vpn::BraveVPNOSConnectionAPI> api);
-#endif
   misc_metrics::ProcessMiscMetrics* process_misc_metrics() override;
 
   // Populate the mock process with services. Consumer is responsible for
@@ -107,10 +102,6 @@ class TestingBraveBrowserProcess : public BraveBrowserProcess {
 
   std::unique_ptr<brave_shields::AdBlockService> ad_block_service_;
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  std::unique_ptr<brave_vpn::BraveVPNOSConnectionAPI>
-      brave_vpn_os_connection_api_;
-#endif
 };
 
 class TestingBraveBrowserProcessInitializer {

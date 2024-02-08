@@ -10,7 +10,6 @@ import("//build/config/ui.gni")
 group("ui") {
   deps = [
     "//brave/components/brave_player/common/buildflags",
-    "//brave/components/brave_vpn/common/buildflags",
   ]
 
   if (toolkit_views) {

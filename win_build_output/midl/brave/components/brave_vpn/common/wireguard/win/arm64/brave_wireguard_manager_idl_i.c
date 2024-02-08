@@ -1,23 +1,5 @@
 
 
-/* this ALWAYS GENERATED file contains the IIDs and CLSIDs */
-
-/* link this file in with the server and any clients */
-
-
- /* File created by MIDL compiler version 8.xx.xxxx */
-/* at a redacted point in time
- */
-/* Compiler settings for ../../brave/components/brave_vpn/common/wireguard/win/brave_wireguard_manager_idl.idl:
-    Oicf, W1, Zp8, env=Win64 (32b run), target_arch=ARM64 8.01.0628 
-    protocol : dce , ms_ext, c_ext, robust
-    error checks: allocation ref bounds_check enum stub_data 
-    VC __declspec() decoration level: 
-         __declspec(uuid()), __declspec(selectany), __declspec(novtable)
-         DECLSPEC_UUID(), MIDL_INTERFACE()
-*/
-/* @@MIDL_FILE_HEADING(  ) */
-
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 

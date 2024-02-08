@@ -11,7 +11,6 @@
 #include "brave/components/brave_rewards/common/features.h"
 #include "brave/components/brave_search_conversion/features.h"
 #include "brave/components/brave_shields/common/features.h"
-#include "brave/components/brave_vpn/common/features.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/debounce/common/features.h"
 #include "brave/components/google_sign_in_permission/features.h"

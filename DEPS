@@ -97,18 +97,6 @@ hooks = [
     'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', '-U', '-t', 'third_party/cryptography', '--only-binary', 'cryptography', 'cryptography==37.0.4'],
   },
   {
-    'name': 'wireguard_nt',
-    'pattern': '.',
-    'condition': 'checkout_win',
-    'action': ['vpython3', 'build/win/download_brave_vpn_wireguard_binaries.py', '0.10.1', 'brave-vpn-wireguard-nt-dlls'],
-  },
-  {
-    'name': 'wireguard_tunnel',
-    'pattern': '.',
-    'condition': 'checkout_win',
-    'action': ['vpython3', 'build/win/download_brave_vpn_wireguard_binaries.py', 'v0.5.3', 'brave-vpn-wireguard-tunnel-dlls'],
-  },
-  {
     # Install Web Discovery Project dependencies for Windows, Linux, and macOS
     'name': 'web_discovery_project_npm_deps',
     'pattern': '.',

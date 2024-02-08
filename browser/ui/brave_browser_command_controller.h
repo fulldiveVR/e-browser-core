@@ -10,7 +10,6 @@
 #include <string>
 
 #include "base/memory/raw_ref.h"
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "components/prefs/pref_change_registrar.h"

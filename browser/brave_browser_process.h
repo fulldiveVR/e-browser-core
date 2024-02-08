@@ -11,7 +11,6 @@
 #ifndef BRAVE_BROWSER_BRAVE_BROWSER_PROCESS_H_
 #define BRAVE_BROWSER_BRAVE_BROWSER_PROCESS_H_
 
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/greaselion/browser/buildflags/buildflags.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
@@ -25,12 +24,6 @@ class BraveReferralsService;
 class BraveFarblingService;
 class URLSanitizerComponentInstaller;
 }  // namespace brave
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-namespace brave_vpn {
-class BraveVPNOSConnectionAPI;
-}  // namespace brave_vpn
-#endif
 
 namespace brave_component_updater {
 class LocalDataFilesService;
@@ -139,9 +132,6 @@ class BraveBrowserProcess {
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   virtual speedreader::SpeedreaderRewriterService*
   speedreader_rewriter_service() = 0;
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  virtual brave_vpn::BraveVPNOSConnectionAPI* brave_vpn_os_connection_api() = 0;
 #endif
   virtual brave_ads::ResourceComponent* resource_component() = 0;
   virtual brave::BraveFarblingService* brave_farbling_service() = 0;

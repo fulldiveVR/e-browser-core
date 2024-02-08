@@ -16,10 +16,6 @@ index 948fc15a146b85f8e4b91e677e54ac2ae77bbabe..db4b1186e95d0407af7495ad1057cc47
  # Chrome version dir entries, sorted alphabetically.
  #
 +brave.exe.sig: %(VersionDir)s\
-+brave_vpn_helper.exe: %(VersionDir)s\
-+brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
-+tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\
-+wireguard.dll: %(VersionDir)s\BraveVpnWireguardService\
  chrome.dll: %(VersionDir)s\
 +chrome.dll.sig: %(VersionDir)s\
 +brave_resources.pak: %(VersionDir)s\

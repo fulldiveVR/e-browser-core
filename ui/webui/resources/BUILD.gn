@@ -3,7 +3,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/common/typescript.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//tools/grit/preprocess_if_expr.gni")
@@ -349,25 +348,6 @@ leo_icons = [
   "window.svg",
   "windows-open.svg",
 ]
-
-if (enable_brave_vpn_panel) {
-  leo_icons += [
-    "country-au.svg",
-    "country-br.svg",
-    "country-ca.svg",
-    "country-ch.svg",
-    "country-de.svg",
-    "country-es.svg",
-    "country-fr.svg",
-    "country-gb.svg",
-    "country-it.svg",
-    "country-jp.svg",
-    "country-mx.svg",
-    "country-nl.svg",
-    "country-sg.svg",
-    "country-us.svg",
-  ]
-}
 
 if (enable_speedreader) {
   leo_icons += [

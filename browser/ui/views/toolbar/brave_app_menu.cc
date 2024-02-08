@@ -10,7 +10,6 @@
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
-#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/misc_metrics/menu_metrics.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "ui/base/models/menu_model.h"

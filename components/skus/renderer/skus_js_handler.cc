@@ -43,13 +43,6 @@ bool SkusJSHandler::EnsureConnected() {
         skus_service_.BindNewPipeAndPassReceiver());
   }
   bool result = skus_service_.is_bound();
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  if (!vpn_service_.is_bound()) {
-    render_frame_->GetBrowserInterfaceBroker()->GetInterface(
-        vpn_service_.BindNewPipeAndPassReceiver());
-  }
-  result = result && vpn_service_.is_bound();
-#endif
 
   return result;
 }
@@ -307,9 +300,6 @@ void SkusJSHandler::OnCredentialSummary(
     std::ignore = resolver->Reject(context, result);
     return;
   }
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  vpn_service_->LoadPurchasedState(domain);
-#endif
   v8::Local<v8::Value> local_result =
       content::V8ValueConverter::Create()->ToV8Value(*result_dict, context);
   std::ignore = resolver->Resolve(context, local_result);

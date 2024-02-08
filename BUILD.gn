@@ -3,10 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import(
-    "//brave/browser/brave_vpn/win/brave_vpn_wireguard_service/allowlist.gni")
 import("//brave/build/config.gni")
-import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//build/config/locales.gni")
 import("//build/config/zip.gni")
 import("//extensions/buildflags/buildflags.gni")
@@ -193,7 +190,6 @@ if (is_android) {
       "//brave/android/java/org/chromium/chrome/browser/onboarding/animations/save_data_and_battery.json",
       "//brave/android/java/org/chromium/chrome/browser/onboarding/animations/website_loads_faster.json",
       "//brave/android/java/org/chromium/chrome/browser/shields/disconnect_entitylist.json",
-      "//brave/android/java/org/chromium/chrome/browser/vpn/brave_vpn_confirm.json",
     ]
     disable_compression = false
   }
@@ -662,7 +658,6 @@ if (is_win && enable_resource_allowlist_generation) {
   # wireguard resources in pak files.
   action("merge_allowlists") {
     deps = [
-      "//brave/browser/brave_vpn/win/brave_vpn_wireguard_service:wireguard_resource_allowlist",
       "//chrome:resource_allowlist",
     ]
 
@@ -671,8 +666,6 @@ if (is_win && enable_resource_allowlist_generation) {
     args = [
       "--repack_allowlist",
       rebase_path(source_allowlist, root_build_dir),
-      "--brave_allowlist",
-      rebase_path(wireguard_resource_allowlist_file, root_build_dir),
       "--output",
       rebase_path(brave_allowlist_file, root_build_dir),
     ]
