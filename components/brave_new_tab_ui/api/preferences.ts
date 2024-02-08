@@ -33,11 +33,6 @@ export function saveBrandedWallpaperOptIn (value: boolean): void {
 export function saveIsBrandedWallpaperNotificationDismissed (value: boolean): void {
   sendSavePref('isBrandedWallpaperNotificationDismissed', value)
 }
-
-export function saveSetAllStackWidgets (visible: boolean): void {
-  sendSavePref('hideAllWidgets', !visible)
-}
-
 export function addChangeListener (listener: PreferencesUpdatedHandler): void {
   addWebUiListener('preferences-changed', listener)
 }

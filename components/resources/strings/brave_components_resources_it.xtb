@@ -1999,7 +1999,7 @@ Abbiamo bloccato <ph name="NUMBER"/> contenuti tra sistemi di tracciamento, annu
 <translation id="1097073572755862978">In caso di arresto anomalo o blocco, invia dei resoconti diagnostici. <ph name="LINK_BEFORE"/>Scopri di più.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Condividi informazioni di prodotto totalmente private e anonime per farci sapere quali sono le funzioni usate dagli utenti di Brave. <ph name="LINK_BEFORE"/>Scopri di più.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Configurazione completata</translation>
-<translation id="3141206739023333979">Puoi modificare queste impostazioni quando vuoi su Brave andando su <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Puoi modificare queste impostazioni quando vuoi su Brave andando su <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Leggi per intero l’<ph name="LINK_BEFORE"/>informativa sulla privacy<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Scegli il tuo tema</translation>
 <translation id="6262510489122516114">Puoi modificare questa selezione in qualsiasi momento nelle impostazioni di Brave.</translation>
@@ -2066,7 +2066,7 @@ Abbiamo però notato che questo servizio non sta funzionando, e non vogliamo las
 <translation id="5004375364898143117">Sembra ci siano problemi con la connessione WireGuard. Vuoi attivare la riserva IKEv2 per un VPN affidabile? Basta riavviare il tuo browser.
 
 Hai bisogno di aiuto per la compatibilità o la configurazione? Contatta il nostro team di supporto, siamo sempre pronti ad aiutarti.
-Se vuoi, puoi sempre tornare a WireGuard su brave://settings/system.
+Se vuoi, puoi sempre tornare a WireGuard su aiwize://settings/system.
 
 Ti aiutiamo a connetterti!
 

@@ -2006,7 +2006,7 @@ pravila o privatnosti
 <translation id="1097073572755862978">Pošaljite nam dijagnostički izveštaj u slučaju da dođe do pada ili kočenja programa. <ph name="LINK_BEFORE"/>Saznajte više.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Podelite potpuno privatna i anonimna saznanja o proizvodu što se tiče funkcija koje upotrebljavaju Brave korisnici. <ph name="LINK_BEFORE"/>Saznajte više.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Konfigurisanje je dovršeno</translation>
-<translation id="3141206739023333979">Ove opcije možete promeniti u svakom trenutku u pregledaču Brave tako što idete na <ph name="LINK_BEFORE1"/>brave://podešavanja/privatnost<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Ove opcije možete promeniti u svakom trenutku u pregledaču Brave tako što idete na <ph name="LINK_BEFORE1"/>aiwize://podešavanja/privatnost<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Pročitajte u celosti našu <ph name="LINK_BEFORE"/>politiku privatnosti<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Odaberite temu</translation>
 <translation id="6262510489122516114">Ovo uvek možete da promenite u podešavanjima pregledača Brave.</translation>
@@ -2073,7 +2073,7 @@ Međutim, primetili smo da ova pomoćna usluga ne radi - a ne želimo da ostenet
 <translation id="5004375364898143117">Izgleda da postoje neki problemi sa WireGuard vezom. Da li želite da omogućite povratak na IKEv2 u slučaju neispravnosti za pouzdani VPN? Jednostavno ponovo pokrenite pregledač.
 
 Da li vam je potrebna pomoć za kompatibilnost ili konfiguraciju? Kontaktirajte naš prijateljski tim za podršku.
-Uvek možete da se vratite na WireGuard na brave://settings/system.
+Uvek možete da se vratite na WireGuard na aiwize://settings/system.
 
 Hajde da vas povežemo!
 

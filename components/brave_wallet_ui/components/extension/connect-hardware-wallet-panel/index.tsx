@@ -179,7 +179,7 @@ export const ConnectHardwareWalletPanel = ({
 
   React.useEffect(() => {
     // After Panel V2 this is needed to reset the origin
-    // back to brave://wallet-panel.top-chrome/ without any
+    // back to aiwize://wallet-panel.top-chrome/ without any
     // params. Otherwise hardware authorization will fail.
     history.push('')
   }, [])

@@ -74,7 +74,6 @@ export const Regular = () => {
       actions={getActions()}
       saveShowBackgroundImage={doNothing}
       saveBrandedWallpaperOptIn={onShowBrandedImageChanged}
-      saveSetAllStackWidgets={doNothing}
       getBraveNewsDisplayAd={getBraveNewsDisplayAd}
       setBraveBackground={onUseBraveBackground}
       chooseNewCustomBackgroundImage={doNothing}

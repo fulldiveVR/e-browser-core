@@ -23,7 +23,7 @@ inline constexpr char kIPNSScheme[] = "ipns";
 inline constexpr char kDefaultIPFSGateway[] = "https://dweb.link";
 inline constexpr char kDefaultIPFSNFTGateway[] = "https://nftstorage.link";
 inline constexpr char kDefaultIPFSLocalGateway[] = "http://localhost";
-inline constexpr char kIPFSSettingsURL[] = "brave://settings/ipfs";
+inline constexpr char kIPFSSettingsURL[] = "aiwize://settings/ipfs";
 inline constexpr char16_t kIPFSLearnMorePrivacyURL[] =
     u"https://support.aiwize.com/hc/en-us/articles/"
     u"360051406452-How-does-IPFS-Impact-my-Privacy-";

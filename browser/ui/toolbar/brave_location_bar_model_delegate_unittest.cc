@@ -16,26 +16,26 @@ TEST_F(BraveLocationBarModelDelegateTest, ResolvesEthereumRemoteClient) {
   GURL url(kEthereumRemoteClientBaseUrl);
   std::u16string formatted_url = base::UTF8ToUTF16(url.spec());
   BraveLocationBarModelDelegate::FormattedStringFromURL(url, &formatted_url);
-  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "brave://wallet");
+  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "aiwize://wallet");
 }
 TEST_F(BraveLocationBarModelDelegateTest,
     ResolvesEthereumRemoteClientPhishingRoute) {
   GURL url(kEthereumRemoteClientPhishingUrl);
   std::u16string formatted_url = base::UTF8ToUTF16(url.spec());
   BraveLocationBarModelDelegate::FormattedStringFromURL(url, &formatted_url);
-  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "brave://wallet");
+  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "aiwize://wallet");
 }
 TEST_F(BraveLocationBarModelDelegateTest,
     ResolvesEthereumRemoteClientENSRoute) {
   GURL url(kEthereumRemoteClientEnsRedirectUrl);
   std::u16string formatted_url = base::UTF8ToUTF16(url.spec());
   BraveLocationBarModelDelegate::FormattedStringFromURL(url, &formatted_url);
-  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "brave://wallet");
+  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "aiwize://wallet");
 }
 
 TEST_F(BraveLocationBarModelDelegateTest, ResolvesChromeSchemeToBrave) {
   GURL url("chrome://sync/");
   std::u16string formatted_url = base::UTF8ToUTF16(url.spec());
   BraveLocationBarModelDelegate::FormattedStringFromURL(url, &formatted_url);
-  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "brave://sync/");
+  ASSERT_STREQ(base::UTF16ToASCII(formatted_url).c_str(), "aiwize://sync/");
 }

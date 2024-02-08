@@ -54,7 +54,6 @@ interface Props {
   getBraveNewsDisplayAd: GetDisplayAdContent
   saveShowBackgroundImage: (value: boolean) => void
   saveBrandedWallpaperOptIn: (value: boolean) => void
-  saveSetAllStackWidgets: (value: boolean) => void
   chooseNewCustomBackgroundImage: () => void
   setCustomImageBackground: (selectedBackground: string) => void
   removeCustomImageBackground: (background: string) => void
@@ -366,10 +365,6 @@ class NewTabPage extends React.Component<Props, State> {
     brandedWallpaperLogoClicked(this.props.newTabData.brandedWallpaper)
   }
 
-  openSettingsEditCards = () => {
-    this.openSettings(SettingsTabType.Cards)
-  }
-
   setForegroundStackWidget = (widget: NewTab.StackWidget) => {
     this.props.actions.setForegroundStackWidget(widget)
   }
@@ -595,7 +590,6 @@ class NewTabPage extends React.Component<Props, State> {
           allowBackgroundCustomization={allowBackgroundCustomization}
           todayPublishers={this.props.todayData.publishers}
           cardsHidden={this.allWidgetsHidden()}
-          toggleCards={this.props.saveSetAllStackWidgets}
           newTabData={this.props.newTabData}
         />
         {

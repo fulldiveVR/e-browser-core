@@ -21,7 +21,7 @@ provideStrings({
   braveWelcomeSetDefaultButtonLabel: 'Set AI Wize as default browser',
   braveWelcomeSelectAllButtonLabel: 'Select All',
   braveWelcomeSetupCompleteLabel: 'Setup complete',
-  braveWelcomeChangeSettingsNote: ' Change these choices at any time in AI Wize at $1brave://settings/privacy$2.',
+  braveWelcomeChangeSettingsNote: ' Change these choices at any time in AI Wize at $1aiwize://settings/privacy$2.',
   braveWelcomePrivacyPolicyNote: 'Read our full $1Privacy Policy$2',
   braveWelcomeSelectThemeLabel: 'Choose your theme',
   braveWelcomeSelectThemeNote: 'You can change this at any time in AI Wize settings.',

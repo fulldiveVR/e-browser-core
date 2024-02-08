@@ -109,7 +109,7 @@ export default function Advert(props: Props) {
   return <Container ref={setAdEl} onClick={onDisplayAdVisited}>
     <LargeImage src={imageUrl} />
     <MetaInfoContainer>
-      <BatAdLabel onClick={e => e.stopPropagation()} href="brave://rewards">{getLocale('braveNewsAdvertBadge')}</BatAdLabel>
+      <BatAdLabel onClick={e => e.stopPropagation()} href="aiwize://rewards">{getLocale('braveNewsAdvertBadge')}</BatAdLabel>
       •
       {' ' + advert.description}
     </MetaInfoContainer>

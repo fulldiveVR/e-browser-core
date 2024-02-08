@@ -28,7 +28,6 @@ import { CloseStrokeIcon } from 'brave-ui/components/icons'
 import BackgroundImageIcon from './settings/icons/backgroundImage.svg'
 import TodayIcon from './settings/icons/braveNews.svg'
 import BraveStatsIcon from './settings/icons/braveStats.svg'
-import CardsIcon from './settings/icons/cards.svg'
 import ClockIcon from './settings/icons/clock.svg'
 import TopSitesIcon from './settings/icons/topSites.svg'
 
@@ -54,7 +53,6 @@ export interface Props {
   toggleShowTopSites: () => void
   setMostVisitedSettings: (show: boolean, customize: boolean) => void
   toggleBrandedWallpaperOptIn: () => void
-  toggleCards: (show: boolean) => void
   chooseNewCustomImageBackground: () => void
   setCustomImageBackground: (selectedBackground: string) => void
   removeCustomImageBackground: (background: string) => void
@@ -76,7 +74,6 @@ export enum TabType {
   TopSites = 'topSites',
   BraveNews = 'braveNews',
   Clock = 'clock',
-  Cards = 'cards'
 }
 
 interface State {
@@ -203,9 +200,6 @@ export default class Settings extends React.PureComponent<Props, State> {
       case TabType.Clock:
         srcUrl = ClockIcon
         break
-      case TabType.Cards:
-        srcUrl = CardsIcon
-        break
       default:
         srcUrl = BackgroundImageIcon
         break
@@ -225,8 +219,6 @@ export default class Settings extends React.PureComponent<Props, State> {
         return 'braveNewsTitle'
       case TabType.Clock:
         return 'clockTitle'
-      case TabType.Cards:
-        return 'cards'
       default:
         return ''
     }

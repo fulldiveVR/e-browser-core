@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_CONSTANTS_URL_CONSTANTS_H_
 
 inline constexpr char kChromeExtensionScheme[] = "chrome-extension";
-inline constexpr char kBraveUIScheme[] = "brave";
+inline constexpr char kBraveUIScheme[] = "aiwize";
 inline constexpr char kMagnetScheme[] = "magnet";
 inline constexpr char kWidevineTOS[] = "https://policies.google.com/terms";
 inline constexpr char kRewardsUpholdSupport[] =
@@ -42,6 +42,6 @@ inline constexpr char kDevChannelDeprecationLearnMoreUrl[] =
 // |kDownloadChromeUrl| couldn't be replaced with char array because array
 // should be initialized with initialize list or string literal.
 // So, this macro is used.
-#define kDownloadBraveUrl "https://www.brave.com/download"
+#define kDownloadBraveUrl "https://www.aiwize.com/download"
 
 #endif  // BRAVE_COMPONENTS_CONSTANTS_URL_CONSTANTS_H_

@@ -61,8 +61,8 @@ bool DoesSupportUrl(const GURL& url) {
     return true;
   }
 
-  // We must replace the brave:// scheme with chrome:// due to GURL not parsing
-  // brave:// schemes.
+  // We must replace the aiwize:// scheme with chrome:// due to GURL not parsing
+  // aiwize:// schemes.
   const GURL modified_url = ReplaceUrlBraveHostWithChromeHost(url);
   if (!modified_url.SchemeIs(kChromeScheme)) {
     return false;
