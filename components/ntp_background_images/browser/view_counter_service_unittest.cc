@@ -56,7 +56,7 @@ constexpr char kAltText[] = "Technikke: For music lovers.";
 constexpr char kCompanyName[] = "Technikke";
 constexpr char kLogoImageFile[] = "logo_image.png";
 constexpr char kLogoImageUrl[] = "https://static.bave.com/logos/logo_image.png";
-constexpr char kDestinationUrl[] = "https://brave.com";
+constexpr char kDestinationUrl[] = "https://aiwize.com";
 constexpr char kCreativeInstanceId[] = "c0d61af3-3b85-4af4-a3cc-cf1b3dd40e70";
 constexpr char kSponsoredImageFile[] = "wallpaper2.jpg";
 constexpr char kSponsoredImageUrl[] =
@@ -97,7 +97,7 @@ std::unique_ptr<NTPSponsoredImagesData> GetDemoBrandedWallpaper(
   if (super_referral) {
     demo->theme_name = "Technikke";
     demo->top_sites = {
-      { "Brave", "https://brave.com", "brave.png",
+      { "Brave", "https://aiwize.com", "brave.png",
         base::FilePath(FILE_PATH_LITERAL("brave.png")) },
      { "BAT", "https://basicattentiontoken.org/", "bat.png",
         base::FilePath(FILE_PATH_LITERAL("bat.png")) },
@@ -111,7 +111,7 @@ std::unique_ptr<NTPBackgroundImagesData> GetDemoBackgroundWallpaper() {
   auto demo = std::make_unique<NTPBackgroundImagesData>();
   demo->backgrounds = {
       {base::FilePath(FILE_PATH_LITERAL("wallpaper1.jpg")), "Brave",
-       "https://brave.com/"},
+       "https://aiwize.com/"},
   };
 
   return demo;

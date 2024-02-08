@@ -386,7 +386,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would block brave.com with any protocol and port.
   cookie_settings.CheckSettingsWouldBlock(url);
   cookie_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  cookie_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  cookie_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Check that settings would allow allow.brave.com with any protocol and port.
   cookie_settings.CheckSettingsWouldAllow(url2);
   cookie_settings.CheckSettingsWouldAllow(GURL("https://allowed.brave.com"));
@@ -400,7 +400,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would allow brave.com with any protocol and port.
   fp_settings.CheckSettingsWouldAllow(url);
   fp_settings.CheckSettingsWouldAllow(GURL("http://brave.com:5555"));
-  fp_settings.CheckSettingsWouldAllow(GURL("https://brave.com"));
+  fp_settings.CheckSettingsWouldAllow(GURL("https://aiwize.com"));
   // Would not allow a different domain.
   fp_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
@@ -415,7 +415,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would allow brave.com with any protocol and port.
   ads_settings.CheckSettingsWouldAllow(url);
   ads_settings.CheckSettingsWouldAllow(GURL("http://brave.com:5555"));
-  ads_settings.CheckSettingsWouldAllow(GURL("https://brave.com"));
+  ads_settings.CheckSettingsWouldAllow(GURL("https://aiwize.com"));
   // Would not allow a different domain.
   ads_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
@@ -423,7 +423,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would block brave.com with any protocol and port.
   httpse_settings.CheckSettingsWouldBlock(url);
   httpse_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  httpse_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  httpse_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Would not block a different domain.
   httpse_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
@@ -431,7 +431,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would block brave.com with any protocol and port.
   script_settings.CheckSettingsWouldBlock(url);
   script_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  script_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  script_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Would not block a different domain.
   script_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 

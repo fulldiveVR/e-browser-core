@@ -106,7 +106,7 @@ TEST_F(BraveShieldsUtilTest, GetPatternFromURL) {
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com")));
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com/path1")));
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com/path2")));
-  EXPECT_TRUE(pattern.Matches(GURL("https://brave.com")));
+  EXPECT_TRUE(pattern.Matches(GURL("https://aiwize.com")));
   EXPECT_TRUE(pattern.Matches(GURL("ftp://brave.com")));
   EXPECT_FALSE(pattern.Matches(GURL("http://subdomain.brave.com")));
   EXPECT_FALSE(pattern.Matches(GURL("http://brave2.com")));
@@ -126,8 +126,8 @@ TEST_F(BraveShieldsUtilTest, GetPatternFromURL) {
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com:8080/path1")));
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com:8080/path2")));
   EXPECT_TRUE(pattern.Matches(GURL("http://brave.com:5555")));
-  EXPECT_TRUE(pattern.Matches(GURL("https://brave.com")));
-  EXPECT_TRUE(pattern.Matches(GURL("https://brave.com:8080")));
+  EXPECT_TRUE(pattern.Matches(GURL("https://aiwize.com")));
+  EXPECT_TRUE(pattern.Matches(GURL("https://aiwize.com:8080")));
   EXPECT_FALSE(pattern.Matches(GURL("http://subdomain.brave.com")));
   EXPECT_FALSE(pattern.Matches(GURL("http://brave2.com")));
 
@@ -166,7 +166,7 @@ TEST_F(BraveShieldsUtilTest, SetBraveShieldsEnabled_ForOrigin) {
   EXPECT_EQ(CONTENT_SETTING_BLOCK, setting);
 
   // setting should apply to different scheme
-  setting = map->GetContentSetting(GURL("https://brave.com"), GURL(),
+  setting = map->GetContentSetting(GURL("https://aiwize.com"), GURL(),
                                    ContentSettingsType::BRAVE_SHIELDS);
   EXPECT_EQ(CONTENT_SETTING_BLOCK, setting);
 
@@ -284,7 +284,7 @@ TEST_F(BraveShieldsUtilTest, GetBraveShieldsEnabled_ForOrigin) {
       brave_shields::GetBraveShieldsEnabled(map, GURL("http://brave.com"));
   EXPECT_EQ(true, setting);
   setting =
-      brave_shields::GetBraveShieldsEnabled(map, GURL("https://brave.com"));
+      brave_shields::GetBraveShieldsEnabled(map, GURL("https://aiwize.com"));
   EXPECT_EQ(true, setting);
 
   /* BLOCK */
@@ -297,7 +297,7 @@ TEST_F(BraveShieldsUtilTest, GetBraveShieldsEnabled_ForOrigin) {
   EXPECT_EQ(false, setting);
   // https in unchanged
   setting =
-      brave_shields::GetBraveShieldsEnabled(map, GURL("https://brave.com"));
+      brave_shields::GetBraveShieldsEnabled(map, GURL("https://aiwize.com"));
   EXPECT_EQ(true, setting);
   // default is unchanged
   setting = brave_shields::GetBraveShieldsEnabled(map, GURL());
@@ -359,7 +359,7 @@ TEST_F(BraveShieldsUtilTest, SetAdControlType_ForOrigin) {
   EXPECT_EQ(CONTENT_SETTING_ALLOW, setting);
 
   // setting should also apply to different scheme
-  setting = map->GetContentSetting(GURL("https://brave.com"), GURL(),
+  setting = map->GetContentSetting(GURL("https://aiwize.com"), GURL(),
                                    ContentSettingsType::BRAVE_ADS);
   EXPECT_EQ(CONTENT_SETTING_ALLOW, setting);
 
@@ -397,7 +397,7 @@ TEST_F(BraveShieldsUtilTest, GetAdControlType_ForOrigin) {
   EXPECT_EQ(ControlType::BLOCK, setting);
   setting = brave_shields::GetAdControlType(map, GURL("http://brave.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
-  setting = brave_shields::GetAdControlType(map, GURL("https://brave.com"));
+  setting = brave_shields::GetAdControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
 
   /* ALLOW */
@@ -409,7 +409,7 @@ TEST_F(BraveShieldsUtilTest, GetAdControlType_ForOrigin) {
   EXPECT_EQ(ControlType::ALLOW, setting);
 
   // https in unchanged
-  setting = brave_shields::GetAdControlType(map, GURL("https://brave.com"));
+  setting = brave_shields::GetAdControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
   // default is unchanged
   setting = brave_shields::GetAdControlType(map, GURL());
@@ -422,7 +422,7 @@ TEST_F(BraveShieldsUtilTest, GetAdControlType_ForOrigin) {
       ContentSettingsType::BRAVE_ADS, CONTENT_SETTING_ALLOW);
   setting = brave_shields::GetAdControlType(map, GURL("http://brave.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
-  setting = brave_shields::GetAdControlType(map, GURL("https://brave.com"));
+  setting = brave_shields::GetAdControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
   setting = brave_shields::GetAdControlType(map, GURL());
   EXPECT_EQ(ControlType::ALLOW, setting);
@@ -435,7 +435,7 @@ TEST_F(BraveShieldsUtilTest, GetAdControlType_ForOrigin) {
   setting = brave_shields::GetAdControlType(map, GURL("http://brave.com/*"));
   EXPECT_EQ(ControlType::BLOCK, setting);
   // https in unchanged
-  setting = brave_shields::GetAdControlType(map, GURL("https://brave.com"));
+  setting = brave_shields::GetAdControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
   // default is unchanged
   setting = brave_shields::GetAdControlType(map, GURL());
@@ -731,7 +731,7 @@ TEST_F(BraveShieldsUtilTest, SetFingerprintingControlType_ForOrigin) {
   EXPECT_EQ(ControlType::ALLOW, type);
   // override should also apply to different scheme
   type = brave_shields::GetFingerprintingControlType(map,
-                                                     GURL("https://brave.com"));
+                                                     GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::ALLOW, type);
 
   brave_shields::SetFingerprintingControlType(map, ControlType::BLOCK,
@@ -741,7 +741,7 @@ TEST_F(BraveShieldsUtilTest, SetFingerprintingControlType_ForOrigin) {
   EXPECT_EQ(ControlType::BLOCK, type);
   // override should also apply to different scheme
   type = brave_shields::GetFingerprintingControlType(map,
-                                                     GURL("https://brave.com"));
+                                                     GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::BLOCK, type);
 
   // override should not apply to default
@@ -794,7 +794,7 @@ TEST_F(BraveShieldsUtilTest, SetNoScriptControlType_ForOrigin) {
   EXPECT_EQ(CONTENT_SETTING_BLOCK, setting);
 
   // setting should also apply to different scheme
-  setting = map->GetContentSetting(GURL("https://brave.com"), GURL(),
+  setting = map->GetContentSetting(GURL("https://aiwize.com"), GURL(),
                                    ContentSettingsType::JAVASCRIPT);
   EXPECT_EQ(CONTENT_SETTING_BLOCK, setting);
 
@@ -834,7 +834,7 @@ TEST_F(BraveShieldsUtilTest, GetNoScriptControlType_ForOrigin) {
       brave_shields::GetNoScriptControlType(map, GURL("http://brave.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
   setting =
-      brave_shields::GetNoScriptControlType(map, GURL("https://brave.com"));
+      brave_shields::GetNoScriptControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
 
   /* BLOCK */
@@ -848,7 +848,7 @@ TEST_F(BraveShieldsUtilTest, GetNoScriptControlType_ForOrigin) {
   EXPECT_EQ(ControlType::BLOCK, setting);
   // https in unchanged
   setting =
-      brave_shields::GetNoScriptControlType(map, GURL("https://brave.com"));
+      brave_shields::GetNoScriptControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::ALLOW, setting);
   // default is unchanged
   setting = brave_shields::GetNoScriptControlType(map, GURL());
@@ -863,7 +863,7 @@ TEST_F(BraveShieldsUtilTest, GetNoScriptControlType_ForOrigin) {
       brave_shields::GetNoScriptControlType(map, GURL("http://brave.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
   setting =
-      brave_shields::GetNoScriptControlType(map, GURL("https://brave.com"));
+      brave_shields::GetNoScriptControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
   setting = brave_shields::GetNoScriptControlType(map, GURL());
   EXPECT_EQ(ControlType::BLOCK, setting);
@@ -878,7 +878,7 @@ TEST_F(BraveShieldsUtilTest, GetNoScriptControlType_ForOrigin) {
 
   // https in unchanged
   setting =
-      brave_shields::GetNoScriptControlType(map, GURL("https://brave.com"));
+      brave_shields::GetNoScriptControlType(map, GURL("https://aiwize.com"));
   EXPECT_EQ(ControlType::BLOCK, setting);
   // default is unchanged
   setting = brave_shields::GetNoScriptControlType(map, GURL());
@@ -887,14 +887,14 @@ TEST_F(BraveShieldsUtilTest, GetNoScriptControlType_ForOrigin) {
 
 // Should not do domain blocking if domain blocking feature is disabled
 TEST_F(BraveShieldsUtilDomainBlockFeatureTest, GetDomainBlockingType) {
-  ExpectDomainBlockingType(GURL("https://brave.com"),
+  ExpectDomainBlockingType(GURL("https://aiwize.com"),
                            DomainBlockingType::kNone);
 }
 
 // Should not do domain blocking if Brave Shields is down
 TEST_F(BraveShieldsUtilTest, GetDomainBlockingType_ShieldsDown) {
   auto* map = HostContentSettingsMapFactory::GetForProfile(profile());
-  GURL url = GURL("https://brave.com");
+  GURL url = GURL("https://aiwize.com");
   brave_shields::SetBraveShieldsEnabled(map, false, url);
   ExpectDomainBlockingType(url, DomainBlockingType::kNone);
 }
@@ -909,7 +909,7 @@ TEST_F(BraveShieldsUtilTest, GetDomainBlockingType_IsNotHttpHttps) {
 // Should not do domain blocking unless ad blocking is "aggressive"
 TEST_F(BraveShieldsUtilTest, GetDomainBlockingType_ControlTypes) {
   auto* map = HostContentSettingsMapFactory::GetForProfile(profile());
-  const GURL url = GURL("https://brave.com");
+  const GURL url = GURL("https://aiwize.com");
 
   const struct TestCase {
     ControlType ad_control_type;
@@ -940,6 +940,6 @@ TEST_F(BraveShieldsUtilTest, GetDomainBlockingType_ControlTypes) {
 
 // Should do 1PES domain blocking if domain blocking feature is enabled.
 TEST_F(BraveShieldsUtilTest, GetDomainBlockingType) {
-  ExpectDomainBlockingType(GURL("https://brave.com"),
+  ExpectDomainBlockingType(GURL("https://aiwize.com"),
                            DomainBlockingType::k1PES);
 }

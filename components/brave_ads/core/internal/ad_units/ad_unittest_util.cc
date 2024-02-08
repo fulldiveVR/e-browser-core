@@ -40,7 +40,7 @@ AdInfo BuildAd(AdType ad_type, const bool should_use_random_uuids) {
 
   ad.segment = kSegment;
 
-  ad.target_url = GURL("https://brave.com");
+  ad.target_url = GURL("https://aiwize.com");
 
   return ad;
 }

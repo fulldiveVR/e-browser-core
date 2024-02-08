@@ -64,7 +64,7 @@ export default class ModalReset extends React.PureComponent<Props, State> {
 
   getReset = () => {
     const visitSupportURL = (event: React.UIEvent) => {
-      window.open('https://support.brave.com/hc/en-us/articles/10007969237901', '_blank', 'noopener')
+      window.open('https://support.aiwize.com/hc/en-us/articles/10007969237901', '_blank', 'noopener')
       event.stopPropagation()
     }
 

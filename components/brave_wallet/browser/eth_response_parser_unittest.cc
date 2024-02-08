@@ -586,7 +586,7 @@ TEST(EthResponseParserUnitTest, ParseDataURIAndExtractJSON) {
   // Invalid URL
   EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL(""), &json));
   // Valid URL, incorrect scheme
-  EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL("https://brave.com"),
+  EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL("https://aiwize.com"),
                                           &json));  // Incorrect scheme
   // Valid URL and scheme, invalid mime_type
   EXPECT_FALSE(ParseDataURIAndExtractJSON(

@@ -168,7 +168,7 @@ const char interface_not_supported_response[] = R"({
       "result":"0x0000000000000000000000000000000000000000000000000000000000000000"
   })";
 
-constexpr char kBraveUrl[] = "https://brave.com";
+constexpr char kBraveUrl[] = "https://aiwize.com";
 
 class MockDataRemovalObserver : public StoragePartition::DataRemovalObserver {
  public:
@@ -1880,7 +1880,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddPreloadingNetworks) {
           "decimals":18,
           "is_erc20":true,
           "is_erc721":false,
-          "logo":"https://brave.com/logo.jpg",
+          "logo":"https://aiwize.com/logo.jpg",
           "name":"WTRTL",
           "symbol":"WTRTL",
           "token_id":"",
@@ -1899,7 +1899,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddPreloadingNetworks) {
 
   auto wtrtl = mojom::BlockchainToken::New(
       "0x6a31Aca4d2f7398F04d9B6ffae2D898d9A8e7938", "WTRTL",
-      "https://brave.com/logo.jpg", true, false, false, false, false, "WTRTL",
+      "https://aiwize.com/logo.jpg", true, false, false, false, false, "WTRTL",
       18, true, "", "", mojom::kFantomMainnetChainId, mojom::CoinType::ETH);
   for (const auto& chain : GetAllKnownChains(nullptr, mojom::CoinType::ETH)) {
     auto native_asset = mojom::BlockchainToken::New(
@@ -1967,7 +1967,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsNFT) {
           "decimals": 18,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "MATIC",
           "symbol": "MATIC",
           "token_id": "",
@@ -1983,7 +1983,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsNFT) {
           "decimals": 9,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "Solana",
           "symbol": "SOL",
           "visible": true
@@ -2049,7 +2049,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsSpam) {
           "decimals": 18,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "MATIC",
           "symbol": "MATIC",
           "token_id": "",
@@ -2065,7 +2065,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsSpam) {
           "decimals": 9,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "Solana",
           "symbol": "SOL",
           "visible": true
@@ -2172,7 +2172,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsERC1155) {
           "decimals": 18,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "MATIC",
           "symbol": "MATIC",
           "token_id": "",
@@ -2188,7 +2188,7 @@ TEST_F(BraveWalletServiceUnitTest, MigrateUserAssetsAddIsERC1155) {
           "decimals": 9,
           "is_erc20": false,
           "is_erc721": false,
-          "logo": "https://brave.com/logo.jpg",
+          "logo": "https://aiwize.com/logo.jpg",
           "name": "Solana",
           "symbol": "SOL",
           "visible": true
@@ -2410,7 +2410,7 @@ TEST_F(BraveWalletServiceUnitTest, SignMessageHardware) {
   SetupWallet();
 
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   std::string expected_signature = std::string("0xSiGnEd");
   // That should be hw account per test name.
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
@@ -2474,7 +2474,7 @@ TEST_F(BraveWalletServiceUnitTest, SignMessage) {
   SetupWallet();
 
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   std::string expected_signature = std::string("0xSiGnEd");
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
   std::string domain = "{}";
@@ -2716,7 +2716,7 @@ TEST_F(BraveWalletServiceUnitTest, Reset) {
   EXPECT_TRUE(GetPrefs()->HasPrefPath(kDefaultBaseCurrency));
   EXPECT_TRUE(GetPrefs()->HasPrefPath(kDefaultBaseCryptocurrency));
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
   std::string domain = "{}";
   std::string message = "0xAB";

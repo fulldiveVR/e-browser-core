@@ -25,10 +25,10 @@ inline constexpr char kDefaultIPFSNFTGateway[] = "https://nftstorage.link";
 inline constexpr char kDefaultIPFSLocalGateway[] = "http://localhost";
 inline constexpr char kIPFSSettingsURL[] = "brave://settings/ipfs";
 inline constexpr char16_t kIPFSLearnMorePrivacyURL[] =
-    u"https://support.brave.com/hc/en-us/articles/"
+    u"https://support.aiwize.com/hc/en-us/articles/"
     u"360051406452-How-does-IPFS-Impact-my-Privacy-";
 inline constexpr char kIPFSLearnMoreURL[] =
-    "https://support.brave.com/hc/en-us/sections/"
+    "https://support.aiwize.com/hc/en-us/sections/"
     "360010974932-InterPlanetary-File-System-IPFS-";
 inline constexpr char kRepoStatsPath[] = "/api/v0/repo/stat";
 inline constexpr char kRepoStatsHumanReadableParamName[] = "human";

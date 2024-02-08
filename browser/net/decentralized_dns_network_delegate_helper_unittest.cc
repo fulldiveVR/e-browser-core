@@ -156,7 +156,7 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
       {"https://brave.bitcoin", true},
       {"https://brave.zil", true},
       {"https://brave", false},
-      {"https://brave.com", false},
+      {"https://aiwize.com", false},
       {"", false},
   };
 
@@ -193,12 +193,12 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
   test_url_loader_factory().SimulateResponseForPendingRequest(
       polygon_spec,
       brave_wallet::MakeJsonRpcStringArrayResponse(
-          {"", "", "", "", "", "https://brave.com"}),
+          {"", "", "", "", "", "https://aiwize.com"}),
       net::HTTP_REQUEST_TIMEOUT);
   test_url_loader_factory().SimulateResponseForPendingRequest(
       eth_spec,
       brave_wallet::MakeJsonRpcStringArrayResponse(
-          {"", "", "", "", "", "https://brave.com"}),
+          {"", "", "", "", "", "https://aiwize.com"}),
       net::HTTP_REQUEST_TIMEOUT);
   base::RunLoop().RunUntilIdle();
   EXPECT_TRUE(brave_request_info->new_url_spec.empty());
@@ -210,7 +210,7 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
   test_url_loader_factory().SimulateResponseForPendingRequest(
       polygon_spec,
       brave_wallet::MakeJsonRpcStringArrayResponse(
-          {"", "", "", "", "", "https://brave.com"}),
+          {"", "", "", "", "", "https://aiwize.com"}),
       net::HTTP_OK);
   test_url_loader_factory().SimulateResponseForPendingRequest(
       eth_spec,
@@ -218,7 +218,7 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
           {"hash", "", "", "", "", ""}),
       net::HTTP_OK);
   base::RunLoop().RunUntilIdle();
-  EXPECT_EQ(brave_request_info->new_url_spec, "https://brave.com/");
+  EXPECT_EQ(brave_request_info->new_url_spec, "https://aiwize.com/");
 
   // Eth result.
   EXPECT_EQ(net::ERR_IO_PENDING,
@@ -322,9 +322,9 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest, SnsRedirectWork) {
 
   // Redirect for valid url.
   OnBeforeURLRequest_SnsRedirectWork(
-      base::DoNothing(), brave_request_info, GURL("https://brave.com"),
+      base::DoNothing(), brave_request_info, GURL("https://aiwize.com"),
       brave_wallet::mojom::SolanaProviderError::kSuccess, "");
-  EXPECT_EQ(brave_request_info->new_url_spec, GURL("https://brave.com"));
+  EXPECT_EQ(brave_request_info->new_url_spec, GURL("https://aiwize.com"));
 
   EXPECT_FALSE(brave_request_info->pending_error.has_value());
 }

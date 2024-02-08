@@ -106,7 +106,7 @@ TEST(BraveSiteHacksNetworkDelegateHelperTest, OnionReferrerStripped) {
   const GURL original_referrer(
       "https://"
       "brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/");
-  const GURL destination("https://brave.com");
+  const GURL destination("https://aiwize.com");
 
   // Cross-origin request from a .onion gets empty referrer.
   auto url1 = net::URLRequestJob::ComputeReferrerForPolicy(

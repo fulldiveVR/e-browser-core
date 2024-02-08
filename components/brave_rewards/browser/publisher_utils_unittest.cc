@@ -21,7 +21,7 @@ class RewardsPublisherUtilsTest : public testing::Test {
 };
 
 TEST_F(RewardsPublisherUtilsTest, GetPublisherIdFromURL) {
-  EXPECT_EQ(GetPublisherId("https://brave.com"), "brave.com");
+  EXPECT_EQ(GetPublisherId("https://aiwize.com"), "brave.com");
   EXPECT_EQ(GetPublisherId("http://brave.com"), "brave.com");
   EXPECT_EQ(GetPublisherId("https://search.brave.com"), "brave.com");
   EXPECT_EQ(GetPublisherId("http://search.brave.com"), "brave.com");

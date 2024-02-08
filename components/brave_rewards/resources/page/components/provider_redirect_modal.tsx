@@ -48,7 +48,7 @@ export function ProviderRedirectModal () {
           id={'redirect-modal-device-limit-reached'}
           errorText={[getString('redirectModalDeviceLimitReachedText')]}
           titleText={getString('redirectModalDeviceLimitReachedTitle')}
-          learnMore={'https://support.brave.com/hc/en-us/articles/360056508071'}
+          learnMore={'https://support.aiwize.com/hc/en-us/articles/360056508071'}
           buttonText={getString('redirectModalClose')}
           walletType={walletType}
           onClick={actions.hideRedirectModal}
@@ -63,7 +63,7 @@ export function ProviderRedirectModal () {
             getString('redirectModalFlaggedWalletText2'),
             getString('redirectModalFlaggedWalletText3'),
             getString('redirectModalFlaggedWalletText4')]}
-          errorTextLink={'https://support.brave.com/hc/en-us/articles/4494596374925'}
+          errorTextLink={'https://support.aiwize.com/hc/en-us/articles/4494596374925'}
           titleText={getString('redirectModalFlaggedWalletTitle')}
           buttonText={getString('redirectModalClose')}
           walletType={walletType}
@@ -87,7 +87,7 @@ export function ProviderRedirectModal () {
           id={'redirect-modal-mismatched-countries'}
           errorText={[getString('redirectModalMismatchedCountriesText').replace('$1', providerName)]}
           titleText={getString('redirectModalMismatchedCountriesTitle')}
-          learnMore={'https://support.brave.com/hc/en-us/articles/9809690466061'}
+          learnMore={'https://support.aiwize.com/hc/en-us/articles/9809690466061'}
           buttonText={getString('redirectModalClose')}
           walletType={walletType}
           onClick={actions.hideRedirectModal}
@@ -99,7 +99,7 @@ export function ProviderRedirectModal () {
           id={'redirect-modal-mismatched-provider-accounts'}
           errorText={[getString('redirectModalMismatchedProviderAccountsText').replace('$1', providerName)]}
           titleText={getString('redirectModalMismatchedProviderAccountsTitle')}
-          learnMore={'https://support.brave.com/hc/en-us/articles/360034841711-What-is-a-verified-wallet-'}
+          learnMore={'https://support.aiwize.com/hc/en-us/articles/360034841711-What-is-a-verified-wallet-'}
           buttonText={getString('redirectModalClose')}
           walletType={walletType}
           onClick={actions.hideRedirectModal}
@@ -127,7 +127,7 @@ export function ProviderRedirectModal () {
             getString('redirectModalRegionNotSupportedText1').replaceAll('$1', providerName),
             getString('redirectModalRegionNotSupportedText2')]}
           titleText={getString('redirectModalRegionNotSupportedTitle')}
-          errorTextLink={'https://support.brave.com/hc/en-us/articles/6539887971469'}
+          errorTextLink={'https://support.aiwize.com/hc/en-us/articles/6539887971469'}
           buttonText={getString('redirectModalClose')}
           walletType={walletType}
           onClick={actions.hideRedirectModal}

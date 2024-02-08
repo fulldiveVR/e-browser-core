@@ -20,7 +20,7 @@ constexpr char kHeadlineText[] = "headline";
 constexpr char kDescription[] = "description";
 constexpr int kValue = 1.0;
 
-constexpr char kConversionUrlPattern[] = "https://brave.com/*";
+constexpr char kConversionUrlPattern[] = "https://aiwize.com/*";
 constexpr base::TimeDelta kConversionObservationWindow = base::Days(3);
 
 }  // namespace
@@ -50,7 +50,7 @@ mojom::SearchResultAdInfoPtr BuildSearchResultAd(
                           ? base::Uuid::GenerateRandomV4().AsLowercaseString()
                           : kAdvertiserId;
 
-  ad->target_url = GURL("https://brave.com");
+  ad->target_url = GURL("https://aiwize.com");
 
   ad->headline_text = kHeadlineText;
 

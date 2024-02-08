@@ -230,10 +230,10 @@ public abstract class BraveActivity extends ChromeActivity
     public static final String REWARDS_AC_SETTINGS_URL = "brave://rewards/contribute";
     public static final String BRAVE_AI_CHAT_URL = "chrome-untrusted://chat";
     public static final String REWARDS_LEARN_MORE_URL =
-            "https://brave.com/faq-rewards/#unclaimed-funds";
+            "https://aiwize.com/faq-rewards/#unclaimed-funds";
     public static final String BRAVE_TERMS_PAGE =
             "https://basicattentiontoken.org/user-terms-of-service/";
-    public static final String BRAVE_PRIVACY_POLICY = "https://brave.com/privacy/browser/#rewards";
+    public static final String BRAVE_PRIVACY_POLICY = "https://aiwize.com/privacy/browser/#rewards";
     public static final String OPEN_URL = "open_url";
 
     private static final int DAYS_1 = 1;

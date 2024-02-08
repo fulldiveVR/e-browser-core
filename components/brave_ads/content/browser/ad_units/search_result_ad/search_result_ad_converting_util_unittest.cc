@@ -39,7 +39,7 @@ void CheckRequiredAttributes(
   EXPECT_EQ(search_result_ad->advertiser_id, "value3");
   EXPECT_EQ(search_result_ad->headline_text, "value4");
   EXPECT_EQ(search_result_ad->description, "value5");
-  EXPECT_EQ(search_result_ad->target_url, GURL("https://brave.com"));
+  EXPECT_EQ(search_result_ad->target_url, GURL("https://aiwize.com"));
   EXPECT_EQ(search_result_ad->value, 0.5);
 }
 
