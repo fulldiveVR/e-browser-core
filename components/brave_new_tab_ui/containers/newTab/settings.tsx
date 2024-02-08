@@ -37,7 +37,6 @@ const BackgroundImageSettings = React.lazy(() => import('./settings/backgroundIm
 const BraveStatsSettings = React.lazy(() => import('./settings/braveStats'))
 const TopSitesSettings = React.lazy(() => import('./settings/topSites'))
 const ClockSettings = React.lazy(() => import('./settings/clock'))
-const CardsSettings = React.lazy(() => import('./settings/cards'))
 
 // Types
 import { NewTabActions } from '../../constants/new_tab_types'
@@ -54,8 +53,6 @@ export interface Props {
   toggleShowBackgroundImage: () => void
   toggleShowTopSites: () => void
   setMostVisitedSettings: (show: boolean, customize: boolean) => void
-  toggleShowRewards: () => void
-  toggleShowBraveTalk: () => void
   toggleBrandedWallpaperOptIn: () => void
   toggleCards: (show: boolean) => void
   chooseNewCustomImageBackground: () => void
@@ -63,16 +60,11 @@ export interface Props {
   removeCustomImageBackground: (background: string) => void
   setBraveBackground: (selectedBackground: string) => void
   setColorBackground: (color: string, useRandomColor: boolean) => void
-  onEnableRewards: () => void
   showBackgroundImage: boolean
   showTopSites: boolean
   customLinksEnabled: boolean
   brandedWallpaperOptIn: boolean
   allowBackgroundCustomization: boolean
-  showRewards: boolean
-  showBraveTalk: boolean
-  braveRewardsSupported: boolean
-  braveTalkSupported: boolean
   todayPublishers?: Publishers
   setActiveTab?: TabType
   cardsHidden: boolean
@@ -246,21 +238,12 @@ export default class Settings extends React.PureComponent<Props, State> {
       showSettingsMenu,
       toggleShowTopSites,
       setMostVisitedSettings,
-      toggleShowRewards,
-      toggleShowBraveTalk,
       toggleBrandedWallpaperOptIn,
       showBackgroundImage,
       featureCustomBackgroundEnabled,
       showTopSites,
       customLinksEnabled,
-      showRewards,
-      showBraveTalk,
       brandedWallpaperOptIn,
-      braveRewardsSupported,
-      braveTalkSupported,
-      toggleCards,
-      cardsHidden,
-      onEnableRewards
     } = this.props
     const { activeTab } = this.state
 
@@ -328,8 +311,6 @@ export default class Settings extends React.PureComponent<Props, State> {
                     brandedWallpaperOptIn={brandedWallpaperOptIn}
                     showBackgroundImage={showBackgroundImage}
                     featureCustomBackgroundEnabled={featureCustomBackgroundEnabled}
-                    onEnableRewards={onEnableRewards}
-                    braveRewardsSupported={braveRewardsSupported}
                   />
                 ) : null
               }
@@ -346,21 +327,6 @@ export default class Settings extends React.PureComponent<Props, State> {
                   ) : null
               }
               {activeTab === TabType.Clock && <ClockSettings />}
-              {
-                activeTab === TabType.Cards
-                  ? (
-                    <CardsSettings
-                      toggleCards={toggleCards}
-                      cardsHidden={cardsHidden}
-                      toggleShowBraveTalk={toggleShowBraveTalk}
-                      showBraveTalk={showBraveTalk}
-                      braveTalkSupported={braveTalkSupported}
-                      toggleShowRewards={toggleShowRewards}
-                      braveRewardsSupported={braveRewardsSupported}
-                      showRewards={showRewards}
-                    />
-                  ) : null
-              }
               </React.Suspense>
             </SettingsFeatureBody>
           </SettingsContent>

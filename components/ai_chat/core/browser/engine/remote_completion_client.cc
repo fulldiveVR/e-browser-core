@@ -198,7 +198,7 @@ void RemoteCompletionClient::QueryPrompt(
 
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
-  headers.emplace("Authorization", "Bearer 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");
+  headers.emplace("Authorization", "Bearer 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");
   headers.emplace("Accept", "text/event-stream");
 
   const bool is_sse_enabled =

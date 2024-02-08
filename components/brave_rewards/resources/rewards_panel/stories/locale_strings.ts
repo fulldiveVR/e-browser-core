@@ -18,7 +18,7 @@ export const localeStrings = {
   connectContributeNoProviders: 'To send on-demand contributions, users must connect a custodial account to Brave Rewards. Unfortunately, there’s no custodian available in your region, so sending isn’t available. In the meantime, you’re still automatically supporting creators.',
   learnMore: 'Learn more',
   publisherCountText: 'This month, you\'ve visited $1 creators supported by Brave Rewards',
-  headerTitle: 'Brave Rewards',
+  headerTitle: 'Brave Rewards headerTitle',
   headerText: 'You are helping support content creators',
   rewardsSettings: 'Rewards settings',
   learnMoreAboutBAT: 'Learn more about earning BAT',

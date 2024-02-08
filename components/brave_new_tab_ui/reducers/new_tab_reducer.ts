@@ -43,8 +43,6 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         ...initialDataPayload.preferences,
         stats: initialDataPayload.stats,
         ...initialDataPayload.privateTabData,
-        braveRewardsSupported: initialDataPayload.braveRewardsSupported,
-        braveTalkSupported: initialDataPayload.braveTalkSupported,
         searchPromotionEnabled: initialDataPayload.searchPromotionEnabled,
         customImageBackgrounds: initialDataPayload.customImageBackgrounds
       }
@@ -92,7 +90,6 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
       })
 
       state = storage.addNewStackWidget(state)
-      state = storage.replaceStackWidgets(state)
 
       break
 

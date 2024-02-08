@@ -7,7 +7,7 @@
   Lorem ipsum
   </message>
   <message name="IDS_COMPOSE_SUGGESTION_LABEL" desc="The label beneath the main text in the Autofill suggestion that a user sees adter interacting with a supported text element." translateable="false">
-  Powered by Brave
+  Powered by AI Wize
   </message>
   <message name="IDS_COMPOSE_SUGGESTION_SAVED_TEXT" desc="The main text displayed in the Autofill suggestion that a user sees after interacting with a supported text element, indicating that user state was saved." translateable="false">
   Progress saved

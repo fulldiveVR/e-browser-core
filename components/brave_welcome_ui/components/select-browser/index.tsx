@@ -93,7 +93,7 @@ function SelectBrowser () {
 
   const handleImport = () => {
     if (!currentSelectedBrowser || !filteredProfiles) return
-    let phase = P3APhase.Consent;
+    let phase = P3APhase.Finished;
     if (filteredProfiles.length > 1) {
       // If there are multiple profiles, we handle it in a different view
       setViewType(ViewType.ImportSelectProfile)
@@ -108,8 +108,10 @@ function SelectBrowser () {
 
   const handleSkip = () => {
     scenes?.s2.play() // play the final animation on skip
-    setViewType(ViewType.HelpImprove)
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Consent)
+    window.open('chrome://newtab', '_self')
+    WelcomeBrowserProxyImpl.getInstance().setP3AEnabled(false)
+    WelcomeBrowserProxyImpl.getInstance().setMetricsReportingEnabled(false)
+    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Finished)
   }
 
   React.useEffect(() => {
@@ -149,7 +151,7 @@ function SelectBrowser () {
           onClick={handleSkip}
           scale="jumbo"
         >
-          {getLocale('braveWelcomeSkipButtonLabel')}
+          {getLocale('braveWelcomeFinishButtonLabel')}
         </Button>
           <Button
             isPrimary={true}

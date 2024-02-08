@@ -37,23 +37,10 @@ class NTPUtilsTest : public ::testing::Test {
 TEST_F(NTPUtilsTest, MigratesHideWidgetTrue) {
   // Manually turn all off
   auto* prefs = GetPrefs();
-  prefs->SetBoolean(kNewTabPageShowRewards, false);
-  prefs->SetBoolean(kNewTabPageShowBraveTalk, false);
   // Migrate
   new_tab_page::MigrateNewTabPagePrefs(GetPrefs());
   // Expect migrated to off
   EXPECT_TRUE(prefs->GetBoolean(kNewTabPageHideAllWidgets));
-}
-
-TEST_F(NTPUtilsTest, MigratesHideWidgetFalse) {
-  // Manually turn some off
-  auto* prefs = GetPrefs();
-  prefs->SetBoolean(kNewTabPageShowRewards, false);
-  prefs->SetBoolean(kNewTabPageShowBraveTalk, true);
-  // Migrate
-  new_tab_page::MigrateNewTabPagePrefs(GetPrefs());
-  // Expect not migrated
-  EXPECT_FALSE(prefs->GetBoolean(kNewTabPageHideAllWidgets));
 }
 
 TEST_F(NTPUtilsTest, MigratesHideWidgetFalseDefault) {

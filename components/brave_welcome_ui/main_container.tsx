@@ -9,7 +9,6 @@ import DataContext from './state/context'
 import { shouldPlayAnimations } from './state/hooks'
 import { ViewType } from './state/component_types'
 
-import HelpImprove from './components/help-improve'
 import ImportInProgress from './components/import-in-progress'
 import Background from './components/background'
 import Welcome from './components/welcome'
@@ -47,10 +46,6 @@ function MainContainer () {
 
   if (viewType === ViewType.ImportFailed) {
     mainEl = <p>Failed...</p>
-  }
-
-  if (viewType === ViewType.HelpImprove) {
-    mainEl = <HelpImprove />
   }
 
   if (viewType === ViewType.DefaultBrowser) {

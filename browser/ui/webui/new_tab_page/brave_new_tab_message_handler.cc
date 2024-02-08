@@ -84,13 +84,11 @@ base::Value::Dict GetPreferencesDictionary(PrefService* prefs) {
   pref_data.Set("showStats", prefs->GetBoolean(kNewTabPageShowStats));
   pref_data.Set("showToday",
                 prefs->GetBoolean(brave_news::prefs::kNewTabPageShowToday));
-  pref_data.Set("showRewards", prefs->GetBoolean(kNewTabPageShowRewards));
   pref_data.Set("isBrandedWallpaperNotificationDismissed",
                 prefs->GetBoolean(kBrandedWallpaperNotificationDismissed));
   pref_data.Set("isBraveNewsOptedIn",
                 prefs->GetBoolean(brave_news::prefs::kBraveNewsOptedIn));
   pref_data.Set("hideAllWidgets", prefs->GetBoolean(kNewTabPageHideAllWidgets));
-  pref_data.Set("showBraveTalk", prefs->GetBoolean(kNewTabPageShowBraveTalk));
   return pref_data;
 }
 
@@ -297,15 +295,7 @@ void BraveNewTabMessageHandler::OnJavascriptAllowed() {
       base::BindRepeating(&BraveNewTabMessageHandler::OnPreferencesChanged,
                           base::Unretained(this)));
   pref_change_registrar_.Add(
-      kNewTabPageShowRewards,
-      base::BindRepeating(&BraveNewTabMessageHandler::OnPreferencesChanged,
-                          base::Unretained(this)));
-  pref_change_registrar_.Add(
       kBrandedWallpaperNotificationDismissed,
-      base::BindRepeating(&BraveNewTabMessageHandler::OnPreferencesChanged,
-                          base::Unretained(this)));
-  pref_change_registrar_.Add(
-      kNewTabPageShowBraveTalk,
       base::BindRepeating(&BraveNewTabMessageHandler::OnPreferencesChanged,
                           base::Unretained(this)));
   pref_change_registrar_.Add(
@@ -413,14 +403,10 @@ void BraveNewTabMessageHandler::HandleSaveNewTabPagePref(
     settingsKey = brave_news::prefs::kNewTabPageShowToday;
   } else if (settingsKeyInput == "isBraveNewsOptedIn") {
     settingsKey = brave_news::prefs::kBraveNewsOptedIn;
-  } else if (settingsKeyInput == "showRewards") {
-    settingsKey = kNewTabPageShowRewards;
   } else if (settingsKeyInput == "isBrandedWallpaperNotificationDismissed") {
     settingsKey = kBrandedWallpaperNotificationDismissed;
   } else if (settingsKeyInput == "hideAllWidgets") {
     settingsKey = kNewTabPageHideAllWidgets;
-  } else if (settingsKeyInput == "showBraveTalk") {
-    settingsKey = kNewTabPageShowBraveTalk;
   } else {
     LOG(ERROR) << "Invalid setting key";
     return;

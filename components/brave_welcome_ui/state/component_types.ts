@@ -12,8 +12,7 @@ export enum ViewType {
   ImportSelectProfile,
   ImportInProgress,
   ImportSucceeded,
-  ImportFailed,
-  HelpImprove,
+  ImportFailed
 }
 
 export enum BrowserType {

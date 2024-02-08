@@ -14,7 +14,6 @@ namespace brave {
 
 void ShowBraveAdblock(Browser* browser);
 void ShowWebcompatReporter(Browser* browser);
-void ShowBraveRewards(Browser* browser);
 void ShowBraveWallet(Browser* browser);
 void ShowBraveWalletOnboarding(Browser* browser);
 void ShowBraveWalletAccountCreation(Browser* browser,
@@ -24,7 +23,6 @@ void ShowWalletSettings(Browser* browser);
 void ShowSync(Browser* browser);
 void ShowBraveNewsConfigure(Browser* browser);
 void ShowShortcutsPage(Browser* browser);
-void ShowBraveTalk(Browser* browser);
 
 }  // namespace brave
 

@@ -29,12 +29,6 @@ async function updateNewTabAdsData (data: newTabAdsDataAPI.NewTabAdsData) {
   getActions().newTabAdsDataUpdated(data)
 }
 
-function onRewardsToggled (prefData: NewTab.Preferences): void {
-  if (prefData.showRewards) {
-    rewardsInitData()
-  }
-}
-
 async function onMostVisitedInfoChanged (topSites: topSitesAPI.MostVisitedInfoChanged) {
   getActions().tilesUpdated(topSites.tiles)
   getActions().topSitesStateUpdated(topSites.visible, topSites.custom_links_enabled, topSites.custom_links_num)
@@ -54,16 +48,12 @@ export function wireApiEventsToStore () {
   // Get initial data and dispatch to store
   getInitialData()
   .then((initialData) => {
-    if (initialData.preferences.showRewards) {
-      rewardsInitData()
-    }
     getActions().setInitialData(initialData)
     // Listen for API changes and dispatch to store
     topSitesAPI.addMostVistedInfoChangedListener(onMostVisitedInfoChanged)
     topSitesAPI.updateMostVisitedInfo()
     statsAPI.addChangeListener(updateStats)
     preferencesAPI.addChangeListener(updatePreferences)
-    preferencesAPI.addChangeListener(onRewardsToggled)
     privateTabDataAPI.addChangeListener(updatePrivateTabData)
     newTabAdsDataAPI.addChangeListener(updateNewTabAdsData)
     backgroundData.updateImages(initialData.braveBackgrounds)

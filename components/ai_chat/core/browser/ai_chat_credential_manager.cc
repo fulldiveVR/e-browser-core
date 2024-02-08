@@ -125,10 +125,6 @@ void AIChatCredentialManager::FetchPremiumCredential(
         callback) {
 
   VLOG(2) << "FetchPremiumCredential";
-  CredentialCacheEntry entry;
-  entry.credential = "credential";
-  entry.expires_at = base::Time::Now();
-  std::move(callback).Run(entry);
 
   // // Loop through credentials looking for a valid credential and remove it. If
   // // there is more than one valid credential, use the one that is expiring

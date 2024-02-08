@@ -25,14 +25,11 @@ import {
   HistoryIcon
 } from 'brave-ui/components/icons'
 
-import BraveTalkIcon from './braveTalkIcon'
-
 // Helpers
 import { getLocale } from '../../../../common/locale'
 
 export interface Props {
   textDirection: string
-  supportsBraveTalk: boolean
   backgroundImageInfo: NewTab.BackgroundWallpaper | undefined
   showPhotoInfo: boolean
   onClickSettings: () => any
@@ -42,7 +39,6 @@ export default class FooterInfo extends React.PureComponent<Props, {}> {
   render () {
     const {
       textDirection,
-      supportsBraveTalk,
       backgroundImageInfo,
       showPhotoInfo,
       onClickSettings
@@ -82,11 +78,6 @@ export default class FooterInfo extends React.PureComponent<Props, {}> {
             <IconLink title={getLocale('historyPageTitle')} href='chrome://history'>
               <HistoryIcon />
             </IconLink>
-            { supportsBraveTalk &&
-              <IconLink title={getLocale('braveTalkPromptTitle')} href='https://talk.brave.com/widget'>
-                <BraveTalkIcon />
-              </IconLink>
-            }
           </Navigation>
         </S.GridItemNavigation>
       </>

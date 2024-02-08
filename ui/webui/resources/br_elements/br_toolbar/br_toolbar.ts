@@ -90,15 +90,6 @@ Polymer({
       reflectToAttribute: true,
     },
 
-    shouldShowRewardsButton_: {
-      type: Boolean,
-      value: true,
-    },
-
-    isBraveWalletAllowed_: {
-      type: Boolean,
-      value: true,
-    },
   },
 
   /** @return {!CrToolbarSearchFieldElement} */
@@ -213,16 +204,10 @@ Polymer({
     this.settingsTitle = this.getLoadTimeDataString('brToolbarSettingsTitle')
     this.bookmarksTitle = this.getLoadTimeDataString('brToolbarBookmarksTitle')
     this.downloadsTitle = this.getLoadTimeDataString('brToolbarDownloadsTitle')
-    this.braveRewardsTitle = this.getLoadTimeDataString('brToolbarRewardsTitle')
-    this.walletsTitle = this.getLoadTimeDataString('brToolbarWalletsTitle')
   },
 
   /** @override */
   attached: function () {
-    this.shouldShowRewardsButton_ =
-      this.getLoadTimeDataBoolean('brToolbarShowRewardsButton')
-    this.isBraveWalletAllowed_ =
-      this.getLoadTimeDataBoolean('isBraveWalletAllowed')
     this.initSlotFilledDetection()
     this.initStrings()
     this.initFontLoadDetection()

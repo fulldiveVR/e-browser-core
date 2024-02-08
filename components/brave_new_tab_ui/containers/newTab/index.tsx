@@ -10,7 +10,7 @@ import getNTPBrowserAPI from '../../api/background'
 import { addNewTopSite, editTopSite } from '../../api/topSites'
 import { brandedWallpaperLogoClicked } from '../../api/wallpaper'
 import {
-  BraveTalkWidget as BraveTalk, Clock, EditCards, EditTopSite, OverrideReadabilityColor, RewardsWidget as Rewards, SearchPromotion
+  Clock, EditTopSite, OverrideReadabilityColor, SearchPromotion
 } from '../../components/default'
 import BrandedWallpaperLogo from '../../components/default/brandedWallpaper/logo'
 import BraveNews, { GetDisplayAdContent } from '../../components/default/braveNews'
@@ -39,10 +39,9 @@ import BraveNewsHint from '../../components/default/braveNews/hint'
 import SponsoredImageClickArea from '../../components/default/sponsoredImage/sponsoredImageClickArea'
 import GridWidget from './gridWidget'
 
-import Icon, { setIconBasePath } from '@brave/leo/react/icon'
+import { setIconBasePath } from '@brave/leo/react/icon'
 setIconBasePath('chrome://resources/brave-icons')
 
-import * as style from './style'
 import { defaultState } from '../../storage/new_tab_storage'
 
 const BraveNewsPeek =  React.lazy(() => import('../../../brave_news/browser/resources/Peek'))
@@ -54,8 +53,6 @@ interface Props {
   actions: NewTabActions
   getBraveNewsDisplayAd: GetDisplayAdContent
   saveShowBackgroundImage: (value: boolean) => void
-  saveShowRewards: (value: boolean) => void
-  saveShowBraveTalk: (value: boolean) => void
   saveBrandedWallpaperOptIn: (value: boolean) => void
   saveSetAllStackWidgets: (value: boolean) => void
   chooseNewCustomBackgroundImage: () => void
@@ -303,14 +300,6 @@ class NewTabPage extends React.Component<Props, State> {
     this.props.actions.setMostVisitedSettings(showTopSites, customLinksEnabled)
   }
 
-  toggleShowRewards = () => {
-    this.props.saveShowRewards(!this.props.newTabData.showRewards)
-  }
-
-  toggleShowBraveTalk = () => {
-    this.props.saveShowBraveTalk(!this.props.newTabData.showBraveTalk)
-  }
-
   disableBrandedWallpaper = () => {
     this.props.saveBrandedWallpaperOptIn(false)
   }
@@ -319,10 +308,6 @@ class NewTabPage extends React.Component<Props, State> {
     this.props.saveBrandedWallpaperOptIn(
       !this.props.newTabData.brandedWallpaperOptIn
     )
-  }
-
-  startRewards = () => {
-    chrome.braveRewards.openRewardsPanel()
   }
 
   dismissBrandedWallpaperNotification = (isUserAction: boolean) => {
@@ -389,85 +374,16 @@ class NewTabPage extends React.Component<Props, State> {
     this.props.actions.setForegroundStackWidget(widget)
   }
 
-  learnMoreRewards = () => {
-    window.open('https://brave.com/brave-rewards/', '_blank', 'noopener')
-  }
-
   getCryptoContent () {
-    if (this.props.newTabData.hideAllWidgets) {
       return null
-    }
-    const {
-      widgetStackOrder,
-      braveRewardsSupported,
-      braveTalkSupported,
-      showRewards,
-      showBraveTalk
-    } = this.props.newTabData
-    const lookup = {
-      'rewards': {
-        display: braveRewardsSupported && showRewards,
-        render: this.renderRewardsWidget.bind(this)
-      },
-      'braveTalk': {
-        display: braveTalkSupported && showBraveTalk,
-        render: this.renderBraveTalkWidget.bind(this)
-      }
-    }
-
-    const widgetList = widgetStackOrder.filter((widget: NewTab.StackWidget) => {
-      if (!lookup.hasOwnProperty(widget)) {
-        return false
-      }
-
-      return lookup[widget].display
-    })
-
-    return (
-      <>
-        {widgetList.map((widget: NewTab.StackWidget, i: number) => {
-          const isForeground = i === widgetList.length - 1
-          return (
-            <div key={`widget-${widget}`}>
-              {lookup[widget].render(isForeground, i)}
-            </div>
-          )
-        })}
-      </>
-    )
   }
 
   allWidgetsHidden = () => {
-    const {
-      braveRewardsSupported,
-      braveTalkSupported,
-      showRewards,
-      showBraveTalk,
-      hideAllWidgets
-    } = this.props.newTabData
-    return hideAllWidgets || [
-      braveRewardsSupported && showRewards,
-      braveTalkSupported && showBraveTalk
-    ].every((widget: boolean) => !widget)
+    return true
   }
 
   renderCryptoContent () {
-    const { newTabData } = this.props
-    const { widgetStackOrder } = newTabData
-    const allWidgetsHidden = this.allWidgetsHidden()
-
-    if (!widgetStackOrder.length) {
-      return null
-    }
-
-    return (
-      <Page.GridItemWidgetStack>
-        {this.getCryptoContent()}
-        {!allWidgetsHidden &&
-          <EditCards onEditCards={this.openSettingsEditCards} />
-        }
-      </Page.GridItemWidgetStack>
-    )
+    return null
   }
 
   renderSearchPromotion () {
@@ -489,76 +405,7 @@ class NewTabPage extends React.Component<Props, State> {
       return null
     }
 
-    // Previously the NTP would show a Rewards tooltip on top of a sponsored
-    // image under certain conditions. We no longer show that tooltip, and there
-    // are currently no other "branded wallpaper notifications" defined.
     return null
-  }
-
-  renderRewardsWidget (showContent: boolean, position: number) {
-    const { rewardsState, showRewards, textDirection, braveRewardsSupported } = this.props.newTabData
-    if (!braveRewardsSupported || !showRewards) {
-      return null
-    }
-
-    const customMenuItems = [
-      {
-        label: 'rewardsOpenPanel',
-        renderIcon: () => {
-          return (
-            <style.batIcon>
-              <Icon name='product-bat-outline' />
-            </style.batIcon>
-          )
-        },
-        onClick: () => { chrome.braveRewards.openRewardsPanel() }
-      }
-    ]
-
-    return (
-      <Rewards
-        {...rewardsState}
-        widgetTitle={getLocale('rewardsWidgetBraveRewards')}
-        onLearnMore={this.learnMoreRewards}
-        menuPosition={'left'}
-        isCrypto={true}
-        paddingType={'none'}
-        isCryptoTab={!showContent}
-        isForeground={showContent}
-        stackPosition={position}
-        textDirection={textDirection}
-        preventFocus={false}
-        hideWidget={this.toggleShowRewards}
-        showContent={showContent}
-        onShowContent={this.setForegroundStackWidget.bind(this, 'rewards')}
-        onDismissNotification={this.dismissNotification}
-        customMenuItems={customMenuItems}
-      />
-    )
-  }
-
-  renderBraveTalkWidget (showContent: boolean, position: number) {
-    const { newTabData } = this.props
-    const { showBraveTalk, textDirection, braveTalkSupported } = newTabData
-
-    if (!showBraveTalk || !braveTalkSupported) {
-      return null
-    }
-
-    return (
-      <BraveTalk
-        isCrypto={true}
-        paddingType={'none'}
-        menuPosition={'left'}
-        widgetTitle={getLocale('braveTalkWidgetTitle')}
-        isForeground={showContent}
-        stackPosition={position}
-        textDirection={textDirection}
-        hideWidget={this.toggleShowBraveTalk}
-        showContent={showContent}
-        onShowContent={this.setForegroundStackWidget.bind(this, 'braveTalk')}
-      />
-    )
   }
 
   render () {
@@ -683,7 +530,6 @@ class NewTabPage extends React.Component<Props, State> {
                   </Page.GridItemBrandedLogo>}
                 <FooterInfo
                   textDirection={newTabData.textDirection}
-                  supportsBraveTalk={newTabData.braveTalkSupported}
                   backgroundImageInfo={newTabData.backgroundWallpaper}
                   showPhotoInfo={!isShowingBrandedWallpaper && hasWallpaperInfo && newTabData.showBackgroundImage}
                   onClickSettings={this.openSettings}
@@ -745,19 +591,12 @@ class NewTabPage extends React.Component<Props, State> {
           showBackgroundImage={newTabData.showBackgroundImage}
           showTopSites={newTabData.showTopSites}
           customLinksEnabled={newTabData.customLinksEnabled}
-          showRewards={newTabData.showRewards}
-          braveRewardsSupported={newTabData.braveRewardsSupported}
           brandedWallpaperOptIn={newTabData.brandedWallpaperOptIn}
           allowBackgroundCustomization={allowBackgroundCustomization}
-          toggleShowRewards={this.toggleShowRewards}
-          braveTalkSupported={newTabData.braveTalkSupported}
-          toggleShowBraveTalk={this.toggleShowBraveTalk}
-          showBraveTalk={newTabData.showBraveTalk}
           todayPublishers={this.props.todayData.publishers}
           cardsHidden={this.allWidgetsHidden()}
           toggleCards={this.props.saveSetAllStackWidgets}
           newTabData={this.props.newTabData}
-          onEnableRewards={this.startRewards}
         />
         {
           showEditTopSite

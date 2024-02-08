@@ -21,7 +21,7 @@ export const localeStrings = {
   rewardsLearnMore: 'Learn more',
   rewardsTokenGrantTitle: 'A token grant is available!',
 
-  braveRewards: 'Brave Rewards',
+  braveRewards: 'Brave Rewards braveRewards',
   pendingContributions: 'Pending Contributions',
   donationAbility: 'Show Tip buttons on sites',
   donationTitle: 'Contributions',

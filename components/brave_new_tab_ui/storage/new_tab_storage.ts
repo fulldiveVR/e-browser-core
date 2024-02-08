@@ -25,16 +25,12 @@ export const defaultState: NewTab.State = {
   showTopSites: false,
   customLinksEnabled: false,
   customLinksNum: 0,
-  showRewards: false,
-  showBraveTalk: false,
   showBitcoinDotCom: false,
   hideAllWidgets: false,
   brandedWallpaperOptIn: false,
   isBrandedWallpaperNotificationDismissed: true,
   isBraveNewsOptedIn: false,
   showEmptyPage: false,
-  braveRewardsSupported: false,
-  braveTalkSupported: false,
   bitcoinDotComSupported: false,
   isIncognito: chrome.extension.inIncognitoContext,
   useAlternativePrivateSearchEngine: false,
@@ -105,33 +101,6 @@ export const addNewStackWidget = (state: NewTab.State) => {
   return state
 }
 
-// Replaces any stack widgets that were improperly removed
-// as a result of https://github.com/brave/brave-browser/issues/10067
-export const replaceStackWidgets = (state: NewTab.State) => {
-  const {
-    showRewards,
-    showBraveTalk,
-    braveRewardsSupported,
-    braveTalkSupported
-  } = state
-  const displayLookup = {
-    'rewards': {
-      display: braveRewardsSupported && showRewards
-    },
-    'braveTalk': {
-      display: braveTalkSupported && showBraveTalk
-    }
-  }
-  for (const key in displayLookup) {
-    const widget = key as NewTab.StackWidget
-    if (!state.widgetStackOrder.includes(widget) &&
-        displayLookup[widget].display) {
-      state.widgetStackOrder.unshift(widget)
-    }
-  }
-  return state
-}
-
 const cleanData = (state: NewTab.State) => {
   const { rewardsState } = state
 
@@ -191,8 +160,6 @@ export const debouncedSave = debounce<NewTab.State>((data: NewTab.State) => {
     // fix errors related to properties which shouldn't be defined as persistant
     // (or are obsolete).
     const dataToSave = {
-      braveRewardsSupported: data.braveRewardsSupported,
-      braveTalkSupported: data.braveTalkSupported,
       bitcoinDotComSupported: data.bitcoinDotComSupported,
       rewardsState: data.rewardsState,
       removedStackWidgets: data.removedStackWidgets,

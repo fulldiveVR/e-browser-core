@@ -10,9 +10,6 @@ import { getLocale } from '$web-common/locale'
 import classnames from '$web-common/classnames'
 import Button from '$web-components/button'
 
-import DataContext from '../../state/context'
-import { ViewType } from '../../state/component_types'
-
 interface ThemeModeItemProps {
   themeType: chrome.braveTheme.ThemeType
   title: string
@@ -62,7 +59,6 @@ function ThemeModeItem (props: ThemeModeItemProps) {
 }
 
 function SelectTheme () {
-  const { setViewType, scenes } = React.useContext(DataContext)
   const [currentSelectedTheme, setCurrentTheme] = React.useState<chrome.braveTheme.ThemeType>('System')
 
   const handleSelectionChange = (themeType: chrome.braveTheme.ThemeType) => {
@@ -70,14 +66,14 @@ function SelectTheme () {
   }
 
   const handleSkip = () => {
-    setViewType(ViewType.HelpImprove)
-    scenes?.s2.play()
+    window.open('chrome://newtab', '_self')
+    // scenes?.s2.play()
   }
 
   const handleNext = () => {
     chrome.braveTheme.setBraveThemeType(currentSelectedTheme)
-    setViewType(ViewType.HelpImprove)
-    scenes?.s2.play()
+    window.open('chrome://newtab', '_self')
+    // scenes?.s2.play()
   }
 
   return (

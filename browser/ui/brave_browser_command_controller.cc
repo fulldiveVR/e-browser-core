@@ -389,7 +389,6 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       NewIncognitoWindow(browser_->profile()->GetOriginalProfile());
       break;
     case IDC_SHOW_BRAVE_REWARDS:
-      brave::ShowBraveRewards(&*browser_);
       break;
     case IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER:
       brave::ShowWebcompatReporter(&*browser_);
@@ -462,7 +461,6 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       brave::ShowShortcutsPage(&*browser_);
       break;
     case IDC_SHOW_BRAVE_TALK:
-      brave::ShowBraveTalk(&*browser_);
       break;
     case IDC_TOGGLE_SHIELDS:
       brave::ToggleShieldsEnabled(&*browser_);

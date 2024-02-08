@@ -1,4 +1,4 @@
-// Copyright (c) 2022 The Brave Authors. All rights reserved.
+// Copyright (c) 2022 The AI Wize Authors. All rights reserved.
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // you can obtain one at https://mozilla.org/MPL/2.0/.
@@ -7,7 +7,7 @@ import { provideStrings } from '../../../.storybook/locale'
 
 provideStrings({
   braveWelcomeTitle: 'Privacy. By Default.',
-  braveWelcomeDesc: 'Get Brave protection on every link you click. Just set Brave as default and browse. Privately.',
+  braveWelcomeDesc: 'Get AI Wize protection on every link you click. Just set AI Wize as default and browse. Privately.',
   braveWelcomeImportSettingsTitle: 'Import Settings',
   braveWelcomeImportSettingsDesc: 'Easily import bookmarks, extensions, even saved passwords from your old browser.',
   braveWelcomeSelectProfileLabel: 'Select profile to import',
@@ -18,16 +18,13 @@ provideStrings({
   braveWelcomeBackButtonLabel: 'Back',
   braveWelcomeNextButtonLabel: 'Next',
   braveWelcomeFinishButtonLabel: 'Finish',
-  braveWelcomeSetDefaultButtonLabel: 'Set Brave as default browser',
+  braveWelcomeSetDefaultButtonLabel: 'Set AI Wize as default browser',
   braveWelcomeSelectAllButtonLabel: 'Select All',
-  braveWelcomeHelpImproveBraveTitle: 'Help make Brave better.',
-  braveWelcomeSendReportsLabel: 'Send diagnostic reports if you experience a crash or freeze. $1Learn more.$2',
-  braveWelcomeSendInsightsLabel: 'Share completely private and anonymous product insights about what features are being used by Brave\'s users. $1Learn more.$2',
   braveWelcomeSetupCompleteLabel: 'Setup complete',
-  braveWelcomeChangeSettingsNote: ' Change these choices at any time in Brave at $1brave://settings/privacy$2.',
+  braveWelcomeChangeSettingsNote: ' Change these choices at any time in AI Wize at $1brave://settings/privacy$2.',
   braveWelcomePrivacyPolicyNote: 'Read our full $1Privacy Policy$2',
   braveWelcomeSelectThemeLabel: 'Choose your theme',
-  braveWelcomeSelectThemeNote: 'You can change this at any time in Brave settings.',
+  braveWelcomeSelectThemeNote: 'You can change this at any time in AI Wize settings.',
   braveWelcomeSelectThemeSystemLabel: 'Match system setting',
   braveWelcomeSelectThemeLightLabel: 'Light mode',
   braveWelcomeSelectThemeDarkLabel: 'Dark mode'

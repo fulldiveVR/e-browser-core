@@ -101,8 +101,6 @@ declare namespace NewTab {
   }
 
   export interface PersistentState {
-    braveRewardsSupported: boolean
-    braveTalkSupported: boolean
     bitcoinDotComSupported: boolean
     showEmptyPage: boolean
     rewardsState: RewardsWidgetState
@@ -119,8 +117,6 @@ declare namespace NewTab {
     showClock: boolean
     clockFormat: string
     showTopSites: boolean
-    showRewards: boolean
-    showBraveTalk: boolean
     hideAllWidgets: boolean
     isBraveNewsOptedIn: boolean
     isBrandedWallpaperNotificationDismissed: boolean

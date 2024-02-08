@@ -83,7 +83,7 @@ function SelectProfile () {
     } else {
       ImportDataBrowserProxyImpl.getInstance().importDataBulk(entries, defaultImportTypes)
     }
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Consent)
+    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Finished)
   }
   const getImportEntryName = (entry: any) => {
     let name = entry.name

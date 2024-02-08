@@ -20,10 +20,6 @@
 
 namespace brave {
 
-void ShowBraveRewards(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIRewardsURL));
-}
-
 void ShowBraveAdblock(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIAdblockURL));
 }
@@ -40,10 +36,6 @@ void ShowBraveNewsConfigure(Browser* browser) {
 
 void ShowShortcutsPage(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kShortcutsURL));
-}
-
-void ShowBraveTalk(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(sidebar::kBraveTalkURL));
 }
 
 void ShowWebcompatReporter(Browser* browser) {

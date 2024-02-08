@@ -59,10 +59,6 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
      IDS_BRAVE_WELCOME_SET_DEFAULT_BUTTON_LABEL},
     {"braveWelcomeSelectAllButtonLabel",
      IDS_BRAVE_WELCOME_SELECT_ALL_BUTTON_LABEL},
-    {"braveWelcomeHelpImproveBraveTitle",
-     IDS_BRAVE_WELCOME_HELP_IMPROVE_BRAVE_TITLE},
-    {"braveWelcomeSendReportsLabel", IDS_BRAVE_WELCOME_SEND_REPORTS_LABEL},
-    {"braveWelcomeSendInsightsLabel", IDS_BRAVE_WELCOME_SEND_INSIGHTS_LABEL},
     {"braveWelcomeSetupCompleteLabel", IDS_BRAVE_WELCOME_SETUP_COMPLETE_LABEL},
     {"braveWelcomeChangeSettingsNote", IDS_BRAVE_WELCOME_CHANGE_SETTINGS_NOTE},
     {"braveWelcomePrivacyPolicyNote", IDS_BRAVE_WELCOME_PRIVACY_POLICY_NOTE},
@@ -147,9 +143,9 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, const std::string& name)
 
   // Variables considered when determining which onboarding cards to show
   source->AddString("countryString", CountryIDToCountryString(country_id));
-  source->AddBoolean(
-      "showRewardsCard",
-      base::FeatureList::IsEnabled(brave_welcome::features::kShowRewardsCard));
+  // source->AddBoolean(
+  //     "showRewardsCard",
+  //     base::FeatureList::IsEnabled(brave_welcome::features::kShowRewardsCard));
 
   source->AddBoolean(
       "hardwareAccelerationEnabledAtStartup",

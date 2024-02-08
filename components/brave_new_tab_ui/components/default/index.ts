@@ -7,8 +7,6 @@ export * from './settings'
 import { AddSiteTile, AddSiteTileImage, Tile, TileActionsContainer, TileAction, TileFavicon, TileMenu, TileMenuItem, TileTitle } from './gridSites'
 import { SiteRemovalNotification, SiteRemovalText, SiteRemovalAction } from './notification'
 import { Clock } from './clock'
-import { RewardsWidget } from './rewards'
-import { BraveTalkWidget } from './braveTalk'
 import EditCards from './editCards'
 import EditTopSite from './editTopSite'
 import SearchPromotion from './searchPromotion'
@@ -32,8 +30,6 @@ export {
   SiteRemovalText,
   SiteRemovalAction,
   Clock,
-  RewardsWidget,
-  BraveTalkWidget,
   EditCards,
   createWidget,
   EditTopSite,

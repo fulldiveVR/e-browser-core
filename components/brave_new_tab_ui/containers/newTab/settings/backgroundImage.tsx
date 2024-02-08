@@ -25,7 +25,6 @@ import { getLocale } from '../../../../common/locale'
 
 import BackgroundChooser from './backgroundChooser'
 import { defaultSolidBackgroundColor, solidColorsForBackground, gradientColorsForBackground, defaultGradientColor } from '../../../data/backgrounds'
-import SponsoredImageToggle from './sponsoredImagesToggle'
 
 import { RANDOM_SOLID_COLOR_VALUE, RANDOM_GRADIENT_COLOR_VALUE, MAX_CUSTOM_IMAGE_BACKGROUNDS } from 'gen/brave/components/brave_new_tab_ui/brave_new_tab_page.mojom.m.js'
 import BackgroundImageTiles from './backgroundImageTiles'
@@ -42,8 +41,6 @@ interface Props {
   brandedWallpaperOptIn: boolean
   showBackgroundImage: boolean
   featureCustomBackgroundEnabled: boolean
-  onEnableRewards: () => void
-  braveRewardsSupported: boolean
 }
 
 enum Location {
@@ -116,12 +113,8 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
     const {
       newTabData,
       toggleShowBackgroundImage,
-      toggleBrandedWallpaperOptIn,
-      brandedWallpaperOptIn,
       showBackgroundImage,
       featureCustomBackgroundEnabled,
-      onEnableRewards,
-      braveRewardsSupported
     } = this.props
 
     const usingCustomImageBackground = newTabData.backgroundWallpaper?.type === 'image'
@@ -189,18 +182,6 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
               </StyledCustomBackgroundSettings>
             )}
             <div style={{ height: '16px' }}/>
-            {braveRewardsSupported && !this.props.newTabData.rewardsState.isUnsupportedRegion && (
-              <SettingsRow>
-                <SponsoredImageToggle
-                  onChange={toggleBrandedWallpaperOptIn}
-                  onEnableRewards={onEnableRewards}
-                  checked={showBackgroundImage && brandedWallpaperOptIn}
-                  disabled={!showBackgroundImage /* This option can only be enabled if users opt in for background images */}
-                  rewardsEnabled={this.props.newTabData.rewardsState.rewardsEnabled}
-                  isExternalWalletConnected={
-                    Boolean(this.props.newTabData.rewardsState.externalWallet)} />
-              </SettingsRow>
-            )}
           </div>
         )}
         {this.state.location === Location.SOLID_COLORS &&

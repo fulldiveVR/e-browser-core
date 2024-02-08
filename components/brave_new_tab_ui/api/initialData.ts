@@ -17,8 +17,6 @@ export type InitialData = {
   wallpaperData?: NewTab.Wallpaper
   braveBackgrounds: NewTab.BraveBackground[]
   customImageBackgrounds: NewTab.ImageBackground[]
-  braveRewardsSupported: boolean
-  braveTalkSupported: boolean
   searchPromotionEnabled: boolean
 }
 
@@ -51,11 +49,9 @@ export async function getInitialData (): Promise<InitialData> {
       stats,
       privateTabData,
       wallpaperData,
-      braveRewardsSupported,
-      braveTalkSupported,
-      searchPromotionEnabled,
       braveBackgrounds,
-      customImageBackgrounds
+      customImageBackgrounds,
+      searchPromotionEnabled
     ] = await Promise.all([
       preferencesAPI.getPreferences(),
       statsAPI.getStats(),
@@ -92,8 +88,6 @@ export async function getInitialData (): Promise<InitialData> {
       wallpaperData,
       braveBackgrounds,
       customImageBackgrounds,
-      braveRewardsSupported,
-      braveTalkSupported,
       searchPromotionEnabled
     } as InitialData
   } catch (e) {

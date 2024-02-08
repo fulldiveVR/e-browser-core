@@ -19,9 +19,6 @@ void ClearNewTabPageProfilePrefs(PrefService* prefs) {
   prefs->ClearPref(kNewTabPageShowTopSites);
 }
 
-const char* const kWidgetPrefNames[] = {kNewTabPageShowRewards,
-                                        kNewTabPageShowBraveTalk};
-
 }  // namespace
 
 namespace new_tab_page {
@@ -44,35 +41,8 @@ void MigrateNewTabPagePrefs(PrefService* prefs) {
       prefs->FindPreference(kNewTabPageHideAllWidgets);
   if (!hide_widgets_pref->HasUserSetting()) {
     VLOG(1) << "Migrating hide widget pref...";
-    // If all the widgets are off, assume user wants no future widgets.
     bool all_were_off = true;
-    for (auto* const pref_name : kWidgetPrefNames) {
-      auto* pref = prefs->FindPreference(pref_name);
-      // Do not assume default is for pref to be on, so make
-      // sure user has overriden pref value and it is false,
-      // since that's what the previous version of the
-      // "turn off all widgets" toggle did.
-      bool user_turned_off = pref->HasUserSetting() &&
-          (pref->GetValue()->GetIfBool().value_or(true) == false);
-      VLOG(1) << "Setting: " << pref_name <<
-          ", was off? " << user_turned_off;
-      if (user_turned_off == false) {
-        all_were_off = false;
-        break;
-      }
-    }
-    if (all_were_off) {
-      // Turn the widgets back on so that when user "un-hides all", they
-      // will show. This replicates the previous functionality, for the first
-      // time the user re-enables. After that, the new functionality will
-      // take effect, whereby each widget's show/hide setting is remembered
-      // individually.
-      prefs->SetBoolean(kNewTabPageShowRewards, true);
-      prefs->SetBoolean(kNewTabPageShowBraveTalk, true);
-    }
-    // Record whether this has been migrated by setting an explicit
-    // value for the HideAllWidgets pref.
-    prefs->SetBoolean(kNewTabPageHideAllWidgets, all_were_off);
+    prefs->SetBoolean(kNewTabPageHideAllWidgets, true);
     VLOG(1) << "Done migrating hide widget pref: " << all_were_off;
   }
 
