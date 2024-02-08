@@ -70,11 +70,6 @@
 #include "ui/views/event_monitor.h"
 #include "ui/views/layout/fill_layout.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/ui/views/toolbar/brave_vpn_button.h"
-#include "brave/components/brave_vpn/common/pref_names.h"
-#endif
-
 #if BUILDFLAG(ENABLE_SPARKLE)
 #include "brave/browser/ui/views/update_recommended_message_box_mac.h"
 #endif
@@ -229,13 +224,6 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
   brave_shields::CookieListOptInBubbleHost::MaybeCreateForBrowser(
       browser_.get());
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  pref_change_registrar_.Add(
-      brave_vpn::prefs::kBraveVPNShowButton,
-      base::BindRepeating(&BraveBrowserView::OnPreferenceChanged,
-                          base::Unretained(this)));
-#endif
-
   // Only normal window (tabbed) should have sidebar.
   const bool can_have_sidebar = sidebar::CanUseSidebar(browser_.get());
   if (can_have_sidebar) {
@@ -290,13 +278,6 @@ void BraveBrowserView::OnPreferenceChanged(const std::string& pref_name) {
     UpdateSideBarHorizontalAlignment();
     return;
   }
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  if (pref_name == brave_vpn::prefs::kBraveVPNShowButton) {
-    vpn_panel_controller_.ResetBubbleManager();
-    return;
-  }
-#endif
 }
 
 void BraveBrowserView::UpdateSideBarHorizontalAlignment() {
@@ -336,25 +317,6 @@ sidebar::Sidebar* BraveBrowserView::InitSidebar() {
 
 void BraveBrowserView::ToggleSidebar() {
   SidePanelUI::GetSidePanelUIForBrowser(browser_.get())->Toggle();
-}
-
-void BraveBrowserView::ShowBraveVPNBubble() {
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  vpn_panel_controller_.ShowBraveVPNPanel();
-#endif
-}
-
-views::View* BraveBrowserView::GetAnchorViewForBraveVPNPanel() {
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  auto* vpn_button =
-      static_cast<BraveToolbarView*>(toolbar())->brave_vpn_button();
-  if (vpn_button->GetVisible()) {
-    return vpn_button;
-  }
-  return toolbar()->app_menu_button();
-#else
-  return nullptr;
-#endif
 }
 
 gfx::Rect BraveBrowserView::GetShieldsBubbleRect() {

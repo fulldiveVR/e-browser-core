@@ -163,14 +163,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[prefs::kShowFullscreenToolbar] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
 #endif
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  (*s_brave_allowlist)[brave_vpn::prefs::kBraveVPNShowButton] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-#if BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
-  (*s_brave_allowlist)[brave_vpn::prefs::kBraveVPNWireguardEnabled] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-#endif
-#endif
 #if defined(TOOLKIT_VIEWS)
   (*s_brave_allowlist)[sidebar::kSidebarShowOption] =
       settings_api::PrefType::PREF_TYPE_NUMBER;

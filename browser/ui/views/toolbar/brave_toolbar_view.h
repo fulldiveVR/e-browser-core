@@ -13,10 +13,6 @@
 #include "chrome/browser/ui/views/toolbar/toolbar_view.h"
 #include "components/prefs/pref_member.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-class BraveVPNButton;
-#endif
-
 class BookmarkButton;
 class WalletButton;
 
@@ -28,12 +24,6 @@ class BraveToolbarView : public ToolbarView,
 
   BookmarkButton* bookmark_button() const { return bookmark_; }
   WalletButton* wallet_button() const { return wallet_; }
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  BraveVPNButton* brave_vpn_button() const { return brave_vpn_; }
-  bool IsBraveVPNButtonVisible() const;
-  void OnVPNButtonVisibilityChanged();
-#endif
 
   void UpdateHorizontalPadding();
 
@@ -64,12 +54,6 @@ class BraveToolbarView : public ToolbarView,
   BooleanPrefMember edit_bookmarks_enabled_;
 
   raw_ptr<WalletButton> wallet_ = nullptr;
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  raw_ptr<BraveVPNButton> brave_vpn_ = nullptr;
-  BooleanPrefMember show_brave_vpn_button_;
-  BooleanPrefMember hide_brave_vpn_button_by_policy_;
-#endif
 
   BooleanPrefMember show_bookmarks_button_;
 

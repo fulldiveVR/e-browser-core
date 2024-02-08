@@ -49,7 +49,6 @@ class BraveAppMenuModel : public AppMenuModel {
 
   void BuildTabsAndWindowsSection();
 
-  // Leo(not yet added), Wallet, VPN and IPFS.
   void BuildBraveProductsSection();
   size_t GetNextIndexOfBraveProductsSection() const;
 

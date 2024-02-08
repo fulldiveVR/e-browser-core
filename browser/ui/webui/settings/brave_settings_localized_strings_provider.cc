@@ -195,15 +195,15 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"appearanceSettingsSidebarDisabledDesc",
      IDS_SETTINGS_APPEARANCE_SETTINGS_SIDEBAR_DISABLED_DESC},
 #endif  // defined(TOOLKIT_VIEWS)
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-    {"showBraveVPNButton", IDS_SETTINGS_SHOW_VPN_BUTTON},
-    {"showBraveVPNButtonSubLabel", IDS_SETTINGS_SHOW_VPN_BUTTON_SUB_LABEL},
-    {"vpnPageTitle", IDS_SETTINGS_VPN_PAGE_TITLE},
-    {"useWireguardLabel", IDS_SETTINGS_VPN_PAGE_USE_WIREGUARD_TITLE},
-    {"sublabelVpnConnected", IDS_SETTINGS_VPN_PAGE_SUBLABEL_VPN_CONNECTED},
-    {"sublabelVpnDisconnected",
-     IDS_SETTINGS_VPN_PAGE_SUBLABEL_VPN_DISCONNECTED},
-#endif
+// #if BUILDFLAG(ENABLE_BRAVE_VPN)
+//     {"showBraveVPNButton", IDS_SETTINGS_SHOW_VPN_BUTTON},
+//     {"showBraveVPNButtonSubLabel", IDS_SETTINGS_SHOW_VPN_BUTTON_SUB_LABEL},
+//     {"vpnPageTitle", IDS_SETTINGS_VPN_PAGE_TITLE},
+//     {"useWireguardLabel", IDS_SETTINGS_VPN_PAGE_USE_WIREGUARD_TITLE},
+//     {"sublabelVpnConnected", IDS_SETTINGS_VPN_PAGE_SUBLABEL_VPN_CONNECTED},
+//     {"sublabelVpnDisconnected",
+//      IDS_SETTINGS_VPN_PAGE_SUBLABEL_VPN_DISCONNECTED},
+// #endif
 #if BUILDFLAG(IS_MAC)
     {"showToolbarInFullScreen", IDS_SHOW_TOOLBAR_IN_FULL_SCREEN},
 #endif

@@ -137,14 +137,6 @@ void ToggleBraveVPNTrayIcon() {
 #endif
 }
 
-void ToggleBraveVPNButton(Browser* browser) {
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  auto* prefs = browser->profile()->GetPrefs();
-  const bool show = prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton);
-  prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, !show);
-#endif
-}
-
 void OpenIpfsFilesWebUI(Browser* browser) {
 #if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
   auto* prefs = browser->profile()->GetPrefs();

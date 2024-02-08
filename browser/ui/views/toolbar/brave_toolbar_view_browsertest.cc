@@ -40,20 +40,9 @@
 #include "content/public/test/test_utils.h"
 #include "ui/views/view.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/ui/views/toolbar/brave_vpn_button.h"
-#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#include "brave/components/brave_vpn/common/features.h"
-#include "brave/components/brave_vpn/common/pref_names.h"
-#endif
-
 class BraveToolbarViewTest : public InProcessBrowserTest {
  public:
   BraveToolbarViewTest() {
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-    scoped_feature_list_.InitWithFeatures(
-        {skus::features::kSkusFeature, brave_vpn::features::kBraveVPN}, {});
-#endif
   }
   BraveToolbarViewTest(const BraveToolbarViewTest&) = delete;
   BraveToolbarViewTest& operator=(const BraveToolbarViewTest&) = delete;
@@ -62,26 +51,6 @@ class BraveToolbarViewTest : public InProcessBrowserTest {
   // InProcessBrowserTest override
   void SetUpOnMainThread() override { Init(browser()); }
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  void SetUpInProcessBrowserTestFixture() override {
-    InProcessBrowserTest::SetUpInProcessBrowserTestFixture();
-    provider_.SetDefaultReturns(
-        /*is_initialization_complete_return=*/true,
-        /*is_first_policy_load_complete_return=*/true);
-    policy::BrowserPolicyConnector::SetPolicyProviderForTesting(&provider_);
-  }
-
-  void BlockVPNByPolicy(bool value) {
-    policy::PolicyMap policies;
-    policies.Set(policy::key::kBraveVPNDisabled, policy::POLICY_LEVEL_MANDATORY,
-                 policy::POLICY_SCOPE_MACHINE, policy::POLICY_SOURCE_PLATFORM,
-                 base::Value(value), nullptr);
-    provider_.UpdateChromePolicy(policies);
-    EXPECT_EQ(
-        brave_vpn::IsBraveVPNDisabledByPolicy(browser()->profile()->GetPrefs()),
-        value);
-  }
-#endif
   void Init(Browser* browser) {
     BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(browser);
     ASSERT_NE(browser_view, nullptr);
@@ -109,41 +78,7 @@ class BraveToolbarViewTest : public InProcessBrowserTest {
   raw_ptr<ToolbarButtonProvider> toolbar_button_provider_ = nullptr;
   raw_ptr<BraveToolbarView> toolbar_view_ = nullptr;
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  testing::NiceMock<policy::MockConfigurationPolicyProvider> provider_;
-  base::test::ScopedFeatureList scoped_feature_list_;
-#endif
 };
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest, VPNButtonVisibility) {
-  auto* browser_view = static_cast<BraveBrowserView*>(
-      BrowserView::GetBrowserViewForBrowser(browser()));
-  auto* toolbar = static_cast<BraveToolbarView*>(browser_view->toolbar());
-  auto* prefs = browser()->profile()->GetPrefs();
-
-  // Button is visible by default.
-  EXPECT_TRUE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
-  EXPECT_TRUE(toolbar->brave_vpn_button()->GetVisible());
-  EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
-            toolbar->brave_vpn_button());
-
-  // Hide button.
-  prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, false);
-  EXPECT_FALSE(toolbar->brave_vpn_button()->GetVisible());
-  EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
-            static_cast<views::View*>(toolbar->app_menu_button()));
-  // Show button.
-  prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, true);
-  EXPECT_TRUE(toolbar->brave_vpn_button()->GetVisible());
-  BlockVPNByPolicy(true);
-  EXPECT_FALSE(toolbar->brave_vpn_button()->GetVisible());
-  EXPECT_TRUE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
-  BlockVPNByPolicy(false);
-  EXPECT_TRUE(toolbar->brave_vpn_button()->GetVisible());
-  EXPECT_TRUE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
-}
-#endif
 
 IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest,
                        AvatarButtonNotShownSingleProfile) {

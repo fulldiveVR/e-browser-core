@@ -23,10 +23,6 @@
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "ui/base/accelerators/accelerator.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/ui/views/toolbar/brave_vpn_panel_controller.h"
-#endif
-
 #if BUILDFLAG(ENABLE_SPEEDREADER)
 #include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
 #endif
@@ -74,7 +70,6 @@ class BraveBrowserView : public BrowserView,
   // BrowserView overrides:
   void Layout() override;
   void StartTabCycling() override;
-  views::View* GetAnchorViewForBraveVPNPanel();
   gfx::Rect GetShieldsBubbleRect() override;
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   speedreader::SpeedreaderBubbleView* ShowSpeedreaderBubble(
@@ -129,7 +124,6 @@ class BraveBrowserView : public BrowserView,
       TabStripModel* tab_strip_model,
       const TabStripModelChange& change,
       const TabStripSelectionChange& selection) override;
-  void ShowBraveVPNBubble() override;
   views::CloseRequestResult OnWindowCloseRequested() override;
   void ConfirmBrowserCloseWithPendingDownloads(
       int download_count,
@@ -169,10 +163,6 @@ class BraveBrowserView : public BrowserView,
 
 #if defined(USE_AURA)
   raw_ptr<views::View> sidebar_host_view_ = nullptr;
-#endif
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  BraveVPNPanelController vpn_panel_controller_{this};
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)

@@ -99,16 +99,6 @@ class VPNButtonMenuModel : public ui::SimpleMenuModel,
     // Clear all menu items and re-build as purchased state can be updated
     // during the runtime.
     Clear();
-    AddItemWithStringId(IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON,
-                        IDS_BRAVE_VPN_HIDE_VPN_BUTTON_MENU_ITEM);
-    if (purchased) {
-      AddItemWithStringId(IDC_SEND_BRAVE_VPN_FEEDBACK,
-                          IDS_BRAVE_VPN_SHOW_FEEDBACK_MENU_ITEM);
-      AddItemWithStringId(IDC_ABOUT_BRAVE_VPN,
-                          IDS_BRAVE_VPN_ABOUT_VPN_MENU_ITEM);
-      AddItemWithStringId(IDC_MANAGE_BRAVE_VPN_PLAN,
-                          IDS_BRAVE_VPN_MANAGE_MY_PLAN_MENU_ITEM);
-    }
   }
 
   raw_ptr<Browser> browser_ = nullptr;

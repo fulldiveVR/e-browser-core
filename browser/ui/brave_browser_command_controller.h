@@ -15,10 +15,6 @@
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "components/prefs/pref_change_registrar.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/components/brave_vpn/browser/brave_vpn_service_observer.h"
-#endif
-
 class BraveAppMenuBrowserTest;
 class BraveAppMenuModelBrowserTest;
 class BraveBrowserCommandControllerTest;
@@ -32,10 +28,6 @@ class WebContents;
 namespace chrome {
 
 class BraveBrowserCommandController : public chrome::BrowserCommandController
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-    ,
-                                      public brave_vpn::BraveVPNServiceObserver
-#endif
 {
  public:
   explicit BraveBrowserCommandController(Browser* browser);
@@ -77,13 +69,6 @@ class BraveBrowserCommandController : public chrome::BrowserCommandController
   void RemoveCommandObserver(CommandObserver* observer) override;
   bool UpdateCommandEnabled(int id, bool state) override;
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  // brave_vpn::BraveVPNServiceObserver overrides:
-  void OnPurchasedStateChanged(
-      brave_vpn::mojom::PurchasedState state,
-      const std::optional<std::string>& description) override;
-#endif
-
   void InitBraveCommandState();
   void UpdateCommandForBraveRewards();
   void UpdateCommandForWebcompatReporter();
@@ -100,9 +85,6 @@ class BraveBrowserCommandController : public chrome::BrowserCommandController
   bool ExecuteBraveCommandWithDisposition(int id,
                                           WindowOpenDisposition disposition,
                                           base::TimeTicks time_stamp);
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  PrefChangeRegistrar brave_vpn_pref_change_registrar_;
-#endif
   const raw_ref<Browser> browser_;
 
   CommandUpdaterImpl brave_command_updater_;

@@ -53,17 +53,7 @@ void RegisterVPNLocalStatePrefs(PrefRegistrySimple* registry) {
 }  // namespace
 
 bool IsBraveVPNWireguardEnabled(PrefService* local_state) {
-  DCHECK(IsBraveVPNFeatureEnabled());
-#if BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
-  auto enabled = local_state->GetBoolean(prefs::kBraveVPNWireguardEnabled);
-#if BUILDFLAG(IS_MAC)
-  enabled = enabled && base::FeatureList::IsEnabled(
-                           brave_vpn::features::kBraveVPNEnableWireguardForOSX);
-#endif  // BUILDFLAG(IS_MAC)
-  return enabled;
-#else
   return false;
-#endif
 }
 #if BUILDFLAG(IS_WIN)
 void MigrateWireguardFeatureFlag(PrefService* local_prefs) {
@@ -78,41 +68,6 @@ void MigrateWireguardFeatureFlag(PrefService* local_prefs) {
 }
 #endif  // BUILDFLAG(IS_WIN)
 void MigrateVPNSettings(PrefService* profile_prefs, PrefService* local_prefs) {
-  if (local_prefs->GetBoolean(prefs::kBraveVPNLocalStateMigrated)) {
-    return;
-  }
-
-  if (!profile_prefs->HasPrefPath(prefs::kBraveVPNRootPref)) {
-    local_prefs->SetBoolean(prefs::kBraveVPNLocalStateMigrated, true);
-    return;
-  }
-  base::Value::Dict obsolete_pref =
-      profile_prefs->GetDict(prefs::kBraveVPNRootPref).Clone();
-  base::Value::Dict result;
-  if (local_prefs->HasPrefPath(prefs::kBraveVPNRootPref)) {
-    result = local_prefs->GetDict(prefs::kBraveVPNRootPref).Clone();
-    auto& result_dict = result;
-    result_dict.Merge(std::move(obsolete_pref));
-  } else {
-    result = std::move(obsolete_pref);
-  }
-  // Do not migrate brave_vpn::prefs::kBraveVPNShowButton, we want it to be
-  // inside the profile preferences.
-  auto tokens =
-      base::SplitString(brave_vpn::prefs::kBraveVPNShowButton, ".",
-                        base::TRIM_WHITESPACE, base::SPLIT_WANT_NONEMPTY);
-  if (result.FindBool(tokens.back())) {
-    result.Remove(tokens.back());
-  }
-  local_prefs->Set(prefs::kBraveVPNRootPref, base::Value(std::move(result)));
-  local_prefs->SetBoolean(prefs::kBraveVPNLocalStateMigrated, true);
-
-  bool show_button =
-      profile_prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton);
-  profile_prefs->ClearPref(prefs::kBraveVPNRootPref);
-  // Set kBraveVPNShowButton back, it is only one per profile preference for
-  // now.
-  profile_prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, show_button);
 }
 
 bool IsBraveVPNDisabledByPolicy(PrefService* prefs) {
@@ -184,7 +139,6 @@ std::string GetBraveVPNPaymentsEnv(const std::string& env) {
 void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(prefs::kManagedBraveVPNDisabled, false);
   registry->RegisterDictionaryPref(prefs::kBraveVPNRootPref);
-  registry->RegisterBooleanPref(prefs::kBraveVPNShowButton, true);
 #if BUILDFLAG(IS_WIN)
   registry->RegisterBooleanPref(prefs::kBraveVPNShowNotificationDialog, true);
   registry->RegisterBooleanPref(prefs::kBraveVPNWireguardFallbackDialog, true);

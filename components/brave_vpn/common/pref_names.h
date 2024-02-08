@@ -16,7 +16,6 @@ inline constexpr char kManagedBraveVPNDisabled[] =
 inline constexpr char kBraveVPNLocalStateMigrated[] =
     "brave.brave_vpn.migrated";
 inline constexpr char kBraveVPNRootPref[] = "brave.brave_vpn";
-inline constexpr char kBraveVPNShowButton[] = "brave.brave_vpn.show_button";
 inline constexpr char kBraveVPNRegionList[] = "brave.brave_vpn.region_list";
 // Cached fetched date for trying to refresh region_list once per day
 inline constexpr char kBraveVPNRegionListFetchedDate[] =

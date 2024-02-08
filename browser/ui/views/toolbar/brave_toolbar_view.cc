@@ -35,13 +35,6 @@
 #include "ui/events/event.h"
 #include "ui/views/window/hit_test_utils.h"
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/browser/brave_vpn/vpn_utils.h"
-#include "brave/browser/ui/views/toolbar/brave_vpn_button.h"
-#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#include "brave/components/brave_vpn/common/pref_names.h"
-#endif
-
 #if BUILDFLAG(IS_LINUX)
 #include "chrome/common/pref_names.h"
 #endif
@@ -206,23 +199,6 @@ void BraveToolbarView::Init() {
     wallet_->UpdateImageAndText();
   }
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  if (brave_vpn::IsAllowedForContext(profile)) {
-    brave_vpn_ = container_view->AddChildViewAt(
-        std::make_unique<BraveVPNButton>(browser()),
-        *container_view->GetIndexOf(GetAppMenuButton()) - 1);
-    show_brave_vpn_button_.Init(
-        brave_vpn::prefs::kBraveVPNShowButton, profile->GetPrefs(),
-        base::BindRepeating(&BraveToolbarView::OnVPNButtonVisibilityChanged,
-                            base::Unretained(this)));
-    hide_brave_vpn_button_by_policy_.Init(
-        brave_vpn::prefs::kManagedBraveVPNDisabled, profile->GetPrefs(),
-        base::BindRepeating(&BraveToolbarView::OnVPNButtonVisibilityChanged,
-                            base::Unretained(this)));
-    brave_vpn_->SetVisible(IsBraveVPNButtonVisible());
-  }
-#endif
-
   // Make sure that avatar button should be located right before the app menu.
   if (auto* avatar = GetAvatarToolbarButton()) {
     container_view->ReorderChildView(
@@ -232,17 +208,6 @@ void BraveToolbarView::Init() {
   brave_initialized_ = true;
   UpdateHorizontalPadding();
 }
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-bool BraveToolbarView::IsBraveVPNButtonVisible() const {
-  return show_brave_vpn_button_.GetValue() &&
-         !hide_brave_vpn_button_by_policy_.GetValue();
-}
-void BraveToolbarView::OnVPNButtonVisibilityChanged() {
-  DCHECK(brave_vpn_);
-  brave_vpn_->SetVisible(IsBraveVPNButtonVisible());
-}
-#endif
 
 void BraveToolbarView::OnEditBookmarksEnabledChanged() {
   DCHECK_EQ(DisplayMode::NORMAL, display_mode_);
