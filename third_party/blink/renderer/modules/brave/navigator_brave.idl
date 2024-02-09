@@ -6,5 +6,5 @@
 [
     ImplementedAs=Brave
 ] partial interface Navigator {
-    readonly attribute AI Wiz brave;
+    readonly attribute Brave brave;
 };
