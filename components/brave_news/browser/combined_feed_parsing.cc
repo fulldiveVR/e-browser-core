@@ -50,7 +50,7 @@ base::expected<mojom::FeedItemPtr, std::string> ParseFeedItem(
         base::StrCat({"Item url was not HTTP or HTTPS: url=", url.spec()}));
   }
 
-  // FeedV2 supports articles with no images, such as the ones from Brave Blog.
+  // FeedV2 supports articles with no images, such as the ones from AI Wiz Blog.
   if (!base::FeatureList::IsEnabled(
           brave_news::features::kBraveNewsFeedUpdate)) {
     if (feed_item.padded_img.empty()) {

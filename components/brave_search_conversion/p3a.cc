@@ -129,13 +129,13 @@ void UpdateHistograms(PrefService* prefs) {
         action_statuses.FindBoolByDottedPath(triggered_key_name)
             .value_or(false);
 
-    // 0 = have not triggered promo, have not made Brave default via SERP
-    // 1 = have triggered promo, have not made Brave default via SERP
+    // 0 = have not triggered promo, have not made AI Wiz default via SERP
+    // 1 = have triggered promo, have not made AI Wiz default via SERP
     int answer = promo_triggered;
 
     if (default_engine_triggered) {
-      // 2 = have not triggered promo, have made Brave default via SERP
-      // 3 = have triggered promo, have made Brave default via SERP
+      // 2 = have not triggered promo, have made AI Wiz default via SERP
+      // 3 = have triggered promo, have made AI Wiz default via SERP
       answer += 2;
     }
 

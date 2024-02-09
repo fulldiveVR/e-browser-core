@@ -22,10 +22,10 @@ BraveFarblingLevel WorkerContentSettingsClient::GetBraveFarblingLevel() {
       }
     }
     if (setting == CONTENT_SETTING_BLOCK) {
-      // Brave Shields is down
+      // AI Wiz Shields is down
       setting = CONTENT_SETTING_ALLOW;
     } else {
-      // Brave Shields is up, so check fingerprinting rules
+      // AI Wiz Shields is up, so check fingerprinting rules
       setting = brave_shields::GetBraveFPContentSettingFromRules(
           content_setting_rules_->fingerprinting_rules, primary_url);
     }

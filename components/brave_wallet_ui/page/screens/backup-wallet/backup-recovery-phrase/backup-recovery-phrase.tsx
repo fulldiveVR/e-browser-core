@@ -122,7 +122,7 @@ export const BackupRecoveryPhrase = () => {
             <Description>
               {getLocale('braveWalletRecoveryPhraseBackupWarning')}
               <LinkText
-                href='https://brave.com/learn/wallet-recovery-phrase/#how-should-i-store-my-recovery-phrase'
+                href='https://aiwize.com/learn/wallet-recovery-phrase/#how-should-i-store-my-recovery-phrase'
                 target='_blank'
                 rel='noreferrer'
                 referrerPolicy='no-referrer'

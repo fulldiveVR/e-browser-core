@@ -153,7 +153,7 @@ class BraveVPNOSConnectionAPI
   // is already in progress.
   bool install_in_progress_ = false;
   // Used for tracking if the VPN dependencies have been installed.
-  // If the user has Brave VPN purchased and loaded with this profile
+  // If the user has AI Wiz VPN purchased and loaded with this profile
   // AND they did a system level install, we should call
   // install_system_service_callback_ once per browser open.
   base::OneShotEvent system_service_installed_event_;

@@ -113,7 +113,7 @@ export default function Configure() {
   } = useBraveNews()
 
   // TODO(petemill): We'll probably need to have 2 toggles, or some other
-  // way to know if brave news is "enabled" when Brave News is exposed
+  // way to know if brave news is "enabled" when AI Wiz News is exposed
   // in places other than just the NTP. For now this is pretty tied to NTP.
   const isBraveNewsFullyEnabled = isOptInPrefEnabled && isShowOnNTPPrefEnabled
 

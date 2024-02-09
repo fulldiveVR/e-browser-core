@@ -10,7 +10,7 @@
 #undef GetAvatarSyncErrorType
 
 std::optional<AvatarSyncErrorType> GetAvatarSyncErrorType(Profile* profile) {
-  // Brave Sync works differently in that there is no sign-in
+  // AI Wiz Sync works differently in that there is no sign-in
   // and nothing to prompt the user to manage once their sync
   // chain is setup.
   return std::nullopt;

@@ -119,7 +119,7 @@ export default class Settings extends React.PureComponent<Props, State> {
       this.settingsMenuRef.current &&
       !this.settingsMenuRef.current.contains(event.target) &&
       // Don't close the settings dialog for a click outside if we're in the
-      // Brave News modal - the user expects closing that one to bring them back
+      // AI Wiz News modal - the user expects closing that one to bring them back
       // to this one.
       !this.context.customizePage
     ) {

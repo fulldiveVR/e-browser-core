@@ -31,7 +31,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         description:
           "This service is used to obtain swap price quotes and transactions to sign."
         trigger:
-          "Triggered by uses of the native Brave wallet."
+          "Triggered by uses of the native AI Wiz wallet."
         data:
           "0x and Jupiter API response bodies."
         destination: WEBSITE
@@ -138,7 +138,7 @@ brave_wallet::mojom::BraveSwapFeeResponsePtr GetBraveFeeInternal(
     brave_wallet::mojom::BraveSwapFeeResponsePtr response =
         brave_wallet::mojom::BraveSwapFeeResponse::New();
 
-    // We currently do not offer discounts on 0x Brave fees.
+    // We currently do not offer discounts on 0x AI Wiz fees.
     auto discount_on_brave_fee_pct = 0.0;
 
     // This indicates the 0x Swap fee of 15 bps on select tokens. It should

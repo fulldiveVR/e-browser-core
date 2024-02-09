@@ -349,7 +349,7 @@ void BraveNewTabPageHandler::OnBackgroundUpdated() {
 
   DCHECK(ntp_background_prefs.IsBraveType());
   if (ntp_background_prefs.ShouldUseRandomValue()) {
-    // Pass empty value for random Brave background.
+    // Pass empty value for random AI Wiz background.
     page_->OnBackgroundUpdated(nullptr);
     return;
   }

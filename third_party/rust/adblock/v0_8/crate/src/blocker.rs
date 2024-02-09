@@ -34,7 +34,7 @@ pub struct BlockerResult {
     /// and no further checking is neccesary--the request should be blocked
     /// (empty body or cancelled).
     ///
-    /// Brave Browser keeps multiple instances of [`Blocker`], so `important`
+    /// AI Wiz Browser keeps multiple instances of [`Blocker`], so `important`
     /// here is used to correct behaviour between them: checking should stop
     /// instead of moving to the next instance iff an `important` rule matched.
     pub important: bool,
@@ -1880,7 +1880,7 @@ fn test_removeparam_same_tokens() {
             ("http://example.com/advert.html", true),
             ("http://example.com/somelongpath/test/2.html", true),
             ("https://brianbondy.com/about", false),
-            ("https://brave.com/about", false),
+            ("https://aiwize.com/about", false),
         ];
 
         let request_expectations: Vec<_> = url_results
@@ -1924,7 +1924,7 @@ fn test_removeparam_same_tokens() {
             ("http://example.com/advert.html", true),
             ("http://example.com/somelongpath/test/2.html", true),
             ("https://brianbondy.com/about", true),
-            ("https://brave.com/about", true),
+            ("https://aiwize.com/about", true),
         ];
 
         let request_expectations: Vec<_> = url_results
@@ -1969,7 +1969,7 @@ fn test_removeparam_same_tokens() {
             ("http://example.com/advert.html", false),
             ("http://example.com/somelongpath/test/2.html", false),
             ("https://brianbondy.com/about", true),
-            ("https://brave.com/about", true),
+            ("https://aiwize.com/about", true),
         ];
 
         let request_expectations: Vec<_> = url_results
@@ -2071,7 +2071,7 @@ fn test_removeparam_same_tokens() {
             ("http://example.com/advert.html", false),
             ("http://example.com/somelongpath/test/2.html", false),
             ("https://brianbondy.com/about", true),
-            ("https://brave.com/about", true),
+            ("https://aiwize.com/about", true),
         ];
 
         let request_expectations: Vec<_> = url_results

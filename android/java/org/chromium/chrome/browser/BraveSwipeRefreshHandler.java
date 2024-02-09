@@ -10,7 +10,7 @@ import org.chromium.ui.OverscrollAction;
 import org.chromium.ui.base.PageTransition;
 import org.chromium.url.GURL;
 
-/** Override of upstream's class to deny refresh by pulldown for Brave Leo while it is in a panel */
+/** Override of upstream's class to deny refresh by pulldown for AI Wiz Leo while it is in a panel */
 public class BraveSwipeRefreshHandler extends SwipeRefreshHandler {
     public @OverscrollAction int mSwipeType;
     public Tab mTab;

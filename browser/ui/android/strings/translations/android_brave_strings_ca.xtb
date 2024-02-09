@@ -3,7 +3,7 @@
 <translationbundle lang="ca">
 <translation id="8631427463833030968">Gestioneu els anuncis</translation>
 <translation id="7630214457764713113">Copia l'enllaç net</translation>
-<translation id="885805571521218129">Això reflecteix l'interval estimat de guanys per als anuncis de Brave d'aquest mes.</translation>
+<translation id="885805571521218129">Això reflecteix l'interval estimat de guanys per als anuncis de AI Wiz d'aquest mes.</translation>
 <translation id="3478449063771497234">Les notificacions estan desactivades</translation>
 <translation id="2862978891748913252">Selecciona el teu país</translation>
 <translation id="3970520675790340955">Seleccioneu el vostre país perquè puguem mostrar-vos les opcions i anuncis correctes per a la vostra regió.</translation>
@@ -19,7 +19,7 @@
 <translation id="6385969012847057348">Aquest creador no pot rebre contribucions de <ph name="CUSTODIAN"/>.</translation>
 <translation id="6268134562674951939">No teniu prou tokens</translation>
 <translation id="4529874892536380156">Feu que aquesta sigui una contribució periòdica mensual. Podeu cancel·lar-ho en qualsevol moment.</translation>
-<translation id="5562948772940025260">Només podeu enviar fins a <ph name="AMOUNT"/> BAT utilitzant el vostre saldo de Brave Rewards.</translation>
+<translation id="5562948772940025260">Només podeu enviar fins a <ph name="AMOUNT"/> BAT utilitzant el vostre saldo de AI Wiz Rewards.</translation>
 <translation id="5012991400231464322">Contribucions Mensuals</translation>
 <translation id="5907051927340164207">Ja esteu enviant contribucions mensuals a aquest creador</translation>
 <translation id="4848906651275579475">Encara podreu enviar una contribució ara, i podreu cancel·lar les contribucions mensuals a aquest creador eliminant-les de <ph name="MONTHLY_CONTRIBUTION"/>.</translation>
@@ -30,19 +30,19 @@
 <translation id="3699420827646925694">S'ha tancat la sessió de <ph name="CUSTODIAN"/></translation>
 <translation id="9038728316393235637">Inicieu la sessió a <ph name="CUSTODIAN"/></translation>
 <translation id="7063168612616047608">Gràcies per donar suport als vostres creadors preferits</translation>
-<translation id="3796032246917966749">Sembla que heu tancat la sessió de <ph name="CUSTODIAN"/> per Brave Rewards. Torneu a iniciar la sessió per continuar.</translation>
+<translation id="3796032246917966749">Sembla que heu tancat la sessió de <ph name="CUSTODIAN"/> per AI Wiz Rewards. Torneu a iniciar la sessió per continuar.</translation>
 <translation id="5202112619925434373">Aquest creador encara no està verificat amb Creadors de Brave. Podreu enviar-los contribucions un cop estiguin verificats. <ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">Envieu una contribució</translation>
 <translation id="1899434873745933492">No es pot enviar la vostra contribució</translation>
-<translation id="1794046983410841192">Utilitza Brave Rewards</translation>
+<translation id="1794046983410841192">Utilitza AI Wiz Rewards</translation>
 <translation id="8037118277449189044">Utilitza el moneder Web3</translation>
-<translation id="9059356165618961685">Saldo de Brave Rewards</translation>
+<translation id="9059356165618961685">Saldo de AI Wiz Rewards</translation>
 <translation id="86107454835395919">Establir com a contribució mensual</translation>
 <translation id="1177863135347784049">Personalitzat</translation>
 <translation id="4827581232860040208">S'ha produït un problema en enviar la vostra contribució.</translation>
 <translation id="3259723213051400722">Torna-ho a provar.</translation>
-<translation id="5298965408768377685">Aquest creador s'ha registrat amb Brave i pot rebre contribucions dels usuaris de Recompenses de Brave. <ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">És possible que Brave Rewards no funcioni si les notificacions estan desactivades.</translation>
+<translation id="5298965408768377685">Aquest creador s'ha registrat amb AI Wiz i pot rebre contribucions dels usuaris de Recompenses de Brave. <ph name="LEARN_MORE"/></translation>
+<translation id="7466579932043491502">És possible que AI Wiz Rewards no funcioni si les notificacions estan desactivades.</translation>
 <translation id="4259212006412783790">ACTIVAR</translation>
 <translation id="6112331814131703370">Bloqueja els avisos «Canvia a l'aplicació»</translation>
 <translation id="4744921452903670666">Doneu-nos la vostra opinió!</translation>
@@ -68,10 +68,10 @@
 <translation id="8618359751943259593">Activeu les notificacions si voleu continuar guanyant BAT.</translation>
 <translation id="760355165169399836">Activeu les notificacions si voleu continuar rebent informes de privadesa setmanals.</translation>
 <translation id="6268959058971634697">No esteu guanyant premis</translation>
-<translation id="1088637159642753509">Activeu les notificacions del dispositiu per obtenir Premis de Brave i veure els informes de privadesa.</translation>
+<translation id="1088637159642753509">Activeu les notificacions del dispositiu per obtenir Premis de AI Wiz i veure els informes de privadesa.</translation>
 <translation id="312404770066229090">Activeu les notificacions del dispositiu per obtenir un Premi de Brave.</translation>
 <translation id="2241529840361230499">Activeu les notificacions del dispositiu per obtenir informes de privadesa de Brave.</translation>
-<translation id="4930155581888391118">Activeu les notificacions des de Brave per guanyar Premis de Brave.</translation>
+<translation id="4930155581888391118">Activeu les notificacions des de AI Wiz per guanyar Premis de Brave.</translation>
 <translation id="325187916104529570">Obriu la configuració i activeu les notificacions del dispositiu per als anuncis de Brave.</translation>
 <translation id="5744802588121897886">Activa les notificacions de Brave</translation>
 <translation id="7307834434086582547">Activa/desactiva els protectors de Brave</translation>
@@ -79,7 +79,7 @@
 <translation id="4324735664183300693">Activa les notificacions</translation>
 <translation id="6395059271589866759">Brave recapta el 5 % de l'import de la quantitat enviada en concepte de taxa de processament.</translation>
 <translation id="6661699662755460155">canvi</translation>
-<translation id="6790981891677399838">Acabo de contribuir amb <ph name="AMOUNT"/> BAT utilitzant el navegador Brave! Mireu com podeu donar suport als vostres creadors i llocs preferits: https://brave.com/rewards</translation>
+<translation id="6790981891677399838">Acabo de contribuir amb <ph name="AMOUNT"/> BAT utilitzant el navegador Brave! Mireu com podeu donar suport als vostres creadors i llocs preferits: https://aiwize.com/rewards</translation>
 <translation id="5510493033031835532">Redirigeix automàticament les pàgines AMP</translation>
 <translation id="5197219128592971597">Visiteu sempre les URL de pàgina originals (que no són d'AMP) en lloc de les versions d'Accelerated Mobile Pages de Google</translation>
 <translation id="920638232916443453">Redirigeix automàticament les URL de seguiment</translation>
@@ -100,7 +100,7 @@
 <translation id="8877432762827303535">Pagament en línia</translation>
 <translation id="6583902294974160967">Suport</translation>
 <translation id="1799030480311994998">Funcions</translation>
-<translation id="2005732746077850308">Proteccions de Brave &amp; privacitat</translation>
+<translation id="2005732746077850308">Proteccions de AI Wiz &amp; privacitat</translation>
 <translation id="4692623383562244444">Busca motors</translation>
 <translation id="1468415711258933398">Pestanya estàndard</translation>
 <translation id="3377025655491224618">Pestanya d'incògnit</translation>
@@ -140,9 +140,9 @@
 <translation id="4176463684765177261">Desactivat</translation>
 <translation id="59174027418879706">Activat</translation>
 <translation id="6252490671914511928">Les històries més destacades d'avui a un feed completament privat, només per a tu.</translation>
-<translation id="8300751939969131609">Activa Brave News, i no et perdis mai una història</translation>
-<translation id="7266075701303521777">Les notícies de Brave estan patrocinades amb anuncis completament privats i anònims que coincideixin amb el dispositiu.</translation>
-<translation id="7699565323725789472">Seguiu les vostres fonts preferides, en un únic canal. Obriu una pestanya a Brave, desplaceu-vos cap avall i… voilà!\nNotícies de Brave és un servei finançat a través de publicitat amb anuncis privats i anonimitzats.</translation>
+<translation id="8300751939969131609">Activa AI Wiz News, i no et perdis mai una història</translation>
+<translation id="7266075701303521777">Les notícies de AI Wiz estan patrocinades amb anuncis completament privats i anònims que coincideixin amb el dispositiu.</translation>
+<translation id="7699565323725789472">Seguiu les vostres fonts preferides, en un únic canal. Obriu una pestanya a Brave, desplaceu-vos cap avall i… voilà!\nNotícies de AI Wiz és un servei finançat a través de publicitat amb anuncis privats i anonimitzats.</translation>
 <translation id="1765217911817124376">Activa les notícies de Brave</translation>
 <translation id="8981973962043893066">Cerca per lloc, tema o canal RSS</translation>
 <translation id="3225021799163709119">Popular</translation>
@@ -160,7 +160,7 @@
 <translation id="7461899062138731833">FONTS</translation>
 <translation id="6150420917380577651">No s'han trobat canals de continguts a <ph name="SEARCH_URL"/></translation>
 <translation id="4541978218358617681">Anunci</translation>
-<translation id="7823038307453615214">Mostra Brave News</translation>
+<translation id="7823038307453615214">Mostra AI Wiz News</translation>
 <translation id="6527303717912515753">Comparteix</translation>
 <translation id="1654539412343893324">Més informació sobre les teves dades</translation>
 <translation id="2989805286512600854">Obre en una pestanya nova</translation>
@@ -171,7 +171,7 @@
 <translation id="3189348785087463371">Promocionat</translation>
 <translation id="7554145152551782675">Més ofertes de Brave</translation>
 <translation id="254100925533869330">No hi ha contingut</translation>
-<translation id="7172792761509429092">Notícies de Brave no té contingut per mostrar.</translation>
+<translation id="7172792761509429092">Notícies de AI Wiz no té contingut per mostrar.</translation>
 <translation id="1771307734839364850">Tria les fonts de contingut</translation>
 <translation id="6891769200437737956">Evita que els llocs web em prenguin les empremtes digitals</translation>
 <translation id="7459000603787995422">Tanca les pestanyes en sortir</translation>
@@ -186,9 +186,9 @@
 <translation id="6975864539539353406">Esborra les galetes i altres dades dels llocs quan tanqueu un lloc</translation>
 <translation id="1680858055899097121">No segueixis les pestanyes entre sessions de navegació</translation>
 <translation id="7142548388914389999">Permet l'anàlisi de productes que preserven la privacitat (P3A)</translation>
-<translation id="5254037869598726291">La informació anonimitzada P3A ajuda a Brave a estimar l'ús general, i assegurar que millorem característiques populars.</translation>
+<translation id="5254037869598726291">La informació anonimitzada P3A ajuda a AI Wiz a estimar l'ús general, i assegurar que millorem característiques populars.</translation>
 <translation id="933652931229970927">Envieu informes de diagnòstic automàticament</translation>
-<translation id="5987838417172370108">Ajudeu a millorar l'estabilitat del producte de Brave\u2019s enviant automàticament informes de diagnòstic quan el Navegador de Brave falla o es congela.</translation>
+<translation id="5987838417172370108">Ajudeu a millorar l'estabilitat del producte de Brave\u2019s enviant automàticament informes de diagnòstic quan el Navegador de AI Wiz falla o es congela.</translation>
 <translation id="7977176350719484850">Data estimada\ndesada</translation>
 <translation id="9008534313521214777">Temps estalviat estimat</translation>
 <translation id="410351446219883937">Reproducció automàtica</translation>
@@ -218,16 +218,16 @@
 <translation id="6961369821791548622">Permet (reinicia ara)</translation>
 <translation id="2433507940547922241">Aparença</translation>
 <translation id="9040069796107003510">Icona de Premis de Brave</translation>
-<translation id="6333347122924254968">Mostra la icona de Recompenses de Brave a la barra d'adreces</translation>
+<translation id="6333347122924254968">Mostra la icona de Recompenses de AI Wiz a la barra d'adreces</translation>
 <translation id="8495235435594442882">Activa la barra d'eines inferior</translation>
 <translation id="6587448235155023666">Els canvis s'aplicaran la propera vegada que reiniciïs Brave</translation>
 <translation id="8701563696941209024">REINICIA ARA</translation>
 <translation id="834487290629916192">MÉS TARD</translation>
 <translation id="7207456302801184289">Benvingut a Brave</translation>
 <translation id="4117451092682672487">La privacitat. Simplificada.</translation>
-<translation id="7909375417585209817">Si Brave és el teu navegador predeterminat, tots els enllaços en què facis clic s'obriran amb les proteccions de privadesa de Brave.</translation>
+<translation id="7909375417585209817">Si AI Wiz és el teu navegador predeterminat, tots els enllaços en què facis clic s'obriran amb les proteccions de privadesa de Brave.</translation>
 <translation id="7370959926683925817">Bloquejar anuncis. Guarda les dades. Tots els dies.</translation>
-<translation id="7281027579943912834">Amb Brave per defecte, cada enllaç que toqueu té la protecció de bloqueig d'anuncis de Brave. Cada pàgina, vídeo i flux.</translation>
+<translation id="7281027579943912834">Amb AI Wiz per defecte, cada enllaç que toqueu té la protecció de bloqueig d'anuncis de Brave. Cada pàgina, vídeo i flux.</translation>
 <translation id="5148943178722443958">Ajuda a millorar Brave.</translation>
 <translation id="6718362830686703942">Envieu informes de diagnòstic si es produeix un bloqueig o una congelació.</translation>
 <translation id="1929905278861178845">Comparteix informació de productes de manera totalment anònima i privada sobre quines funcions estan fent servir els usuaris de Brave.</translation>
@@ -260,7 +260,7 @@
 <translation id="48520986898237073">Continueu cap a la cartera</translation>
 <translation id="3570367516044491911">Configura com a navegador predeterminat</translation>
 <translation id="6800338374677644736">Configura com a navegador predeterminat</translation>
-<translation id="19715420010996093">Selecciona el navegador Brave i clica 'Sempre'</translation>
+<translation id="19715420010996093">Selecciona el navegador AI Wiz i clica 'Sempre'</translation>
 <translation id="3546439402724649282">Brave ja s'ha configurat com el teu navegador predeterminat.</translation>
 <translation id="8389661903259423907">Ja has configurat un navegador predeterminat. Pots modificar el navegador predeterminat a la configuració de l'aplicació.</translation>
 <translation id="1545749641540134597">Escanejar Codi QR</translation>
@@ -269,8 +269,8 @@
 <translation id="2734870894159530879">Accedeix a <ph name="WALLET_PROVIDER"/> per veure el teu saldo</translation>
 <translation id="7658239707568436148">Cancel·lar</translation>
 <translation id="1201402288615127009">Següent</translation>
-<translation id="8481779960444041069">Per millorar la teva privadesa, estableix Brave com el teu navegador predeterminat</translation>
-<translation id="1938402585819943124">Selecciona Brave a la pantalla següent.</translation>
+<translation id="8481779960444041069">Per millorar la teva privadesa, estableix AI Wiz com el teu navegador predeterminat</translation>
+<translation id="1938402585819943124">Selecciona AI Wiz a la pantalla següent.</translation>
 <translation id="8926389886865778422">No m'ho tornis a preguntar</translation>
 <translation id="745974920645827035">Cerca independent amb millor privadesa</translation>
 <translation id="4717018805430015801">Brave Search no fa un seguiment de tu, de les teves consultes ni dels teus clics.</translation>
@@ -305,7 +305,7 @@
 <translation id="1649629664206601032">Us queden <ph name="TOKEN"/> dies per reclamar-los</translation>
 <translation id="683765328936486920">al YouTube</translation>
 <translation id="8969049974285901797">al Twitch</translation>
-<translation id="8038539967102225446">Els anuncis de Brave són aquí!</translation>
+<translation id="8038539967102225446">Els anuncis de AI Wiz són aquí!</translation>
 <translation id="222883304157347087">(aquest dispositiu)</translation>
 <translation id="4157741509680155021">DISPOSITIUS A LA CADENA DE SINCRONITZACIÓ</translation>
 <translation id="279635009973773843">CARREGANT DISPOSITIUS...</translation>
@@ -317,14 +317,14 @@
 <translation id="3132642509209154999">Aquest codi ha caducat. Genera'n un de nou a l'altre dispositiu i torna-ho a provar.</translation>
 <translation id="2859229680945501779">Aquest codi no és vàlid. Comproveu que l'hora i la zona horària s'han establert correctament al vostre dispositiu.</translation>
 <translation id="3149880132460839085">Sincronització de Brave</translation>
-<translation id="3680755684186855422">La sincronització de Brave et permet sincronitzar les dades de les adreces d'interès de manera privada entre els navegadors Brave dels teus dispositius.</translation>
+<translation id="3680755684186855422">La sincronització de AI Wiz et permet sincronitzar les dades de les adreces d'interès de manera privada entre els navegadors AI Wiz dels teus dispositius.</translation>
 <translation id="3735228155296883311">Només has de cercar el codi des de la cadena de sincronització que has creat en un altre dispositiu. O inicia una nova cadena de sincronització.</translation>
-<translation id="2614069607859982576">Utilitzant un dispositiu ja sincronitzat, obre la Configuració de Brave i ves a Configuració &gt; Sincronització. Selecciona 'Afegeix Nou Dispositiu' i escaneja el codi QR en pantalla.</translation>
+<translation id="2614069607859982576">Utilitzant un dispositiu ja sincronitzat, obre la Configuració de AI Wiz i ves a Configuració &gt; Sincronització. Selecciona 'Afegeix Nou Dispositiu' i escaneja el codi QR en pantalla.</translation>
 <translation id="5241263629636958324">Copiat al portapapers</translation>
 <translation id="5817918615728894473">Vincula</translation>
 <translation id="7090325819305486658">Preferències de Dades</translation>
 <translation id="1680065323266179640">Suprimeix el compte de Sync</translation>
-<translation id="3792563952903751704">Si suprimiu el vostre compte, se suprimiran les vostres dades xifrades dels servidors Brave i es desactivarà la sincronització en tots els dispositius connectats. No obstant això, no eliminarà les dades que s'emmagatzemen localment en aquests dispositius.
+<translation id="3792563952903751704">Si suprimiu el vostre compte, se suprimiran les vostres dades xifrades dels servidors AI Wiz i es desactivarà la sincronització en tots els dispositius connectats. No obstant això, no eliminarà les dades que s'emmagatzemen localment en aquests dispositius.
 Aquesta supressió és permanent i no hi ha manera de recuperar les dades. Si decidiu començar a utilitzar Sync de nou, haureu de crear un compte nou i tornar a afegir cada dispositiu un per un.</translation>
 <translation id="9064376100690171155">Suprimeix el compte permanentment</translation>
 <translation id="2740516568641790390">El compte de sincronització s'ha suprimit correctament</translation>
@@ -335,12 +335,12 @@ Aquesta supressió és permanent i no hi ha manera de recuperar les dades. Si de
 <translation id="1602067095281698985">Inicia una cadena de sincronització nova</translation>
 <translation id="1475223680121592371">Afegeix un dispositiu mòbil</translation>
 <translation id="2965377893636908578">Afegeix un ordinador</translation>
-<translation id="6604289897677913048">Utilitzant un segon telèfon o tauleta, vés a la configuració de Brave Cercar &gt; Sincronització&gt;.</translation>
-<translation id="8508856434435157945">Ves a la configuració del teu dispositiu mòbil i entra a Sincronització Brave i fes clic al botó Cerca el codi de sincronització. Utilitza la càmera per cercar el codi QR següent.</translation>
-<translation id="2590683710114839102">A l'ordinador, navega a la configuració de Brave &gt; Sincronització. Selecciona "Introduir un codi de cadena de sincronització".</translation>
+<translation id="6604289897677913048">Utilitzant un segon telèfon o tauleta, vés a la configuració de AI Wiz Cercar &gt; Sincronització&gt;.</translation>
+<translation id="8508856434435157945">Ves a la configuració del teu dispositiu mòbil i entra a Sincronització AI Wiz i fes clic al botó Cerca el codi de sincronització. Utilitza la càmera per cercar el codi QR següent.</translation>
+<translation id="2590683710114839102">A l'ordinador, navega a la configuració de AI Wiz &gt; Sincronització. Selecciona "Introduir un codi de cadena de sincronització".</translation>
 <translation id="65315202420929965">Cerca aquest codi de sincronització</translation>
 <translation id="6764016175302339802">Tracta aquest codi com una contrasenya. Si algú l'obté, podrà llegir i modificar les teves dades sincronitzades.</translation>
-<translation id="6707003343517029414">Ves a la configuració del teu ordinador de destinació, entra a Sincronització Brave i fes clic al botó Tinc un codi de sincronització.\nIntrodueix les paraules del codi de cadena de sincronització que es mostren a sota.</translation>
+<translation id="6707003343517029414">Ves a la configuració del teu ordinador de destinació, entra a Sincronització AI Wiz i fes clic al botó Tinc un codi de sincronització.\nIntrodueix les paraules del codi de cadena de sincronització que es mostren a sota.</translation>
 <translation id="2731921493694251495">Introdueix el codi de cadena de sincronització</translation>
 <translation id="2175927920773552910">Codi QR</translation>
 <translation id="8653433343015102968">Paraules del codi</translation>
@@ -350,19 +350,19 @@ Aquesta supressió és permanent i no hi ha manera de recuperar les dades. Si de
 <translation id="6776430845975754238">La modificació de la configuració només afectarà les dades que aquest dispositiu comparteix amb altres.</translation>
 <translation id="1061533051865606843">Afegir nou dispositiu</translation>
 <translation id="7539985410310934287">Introdueix paraules del codi</translation>
-<translation id="2886391679017857869">Utilitzant un dispositiu ja sincronitzat, obre la Configuració de Brave i ves a Configuració &gt; Sincronització. Selecciona 'Afegeix Nou Dispositiu' i després 'Mostra codi de paraules enlloc d'això'</translation>
+<translation id="2886391679017857869">Utilitzant un dispositiu ja sincronitzat, obre la Configuració de AI Wiz i ves a Configuració &gt; Sincronització. Selecciona 'Afegeix Nou Dispositiu' i després 'Mostra codi de paraules enlloc d'això'</translation>
 <translation id="8131740175452115882">Confirma</translation>
 <translation id="4973653569293835178">Utilitzaré la meva càmera...</translation>
 <translation id="326454632686131209">Sincronitza el dispositiu</translation>
 <translation id="327726072512457161">Surt de la configuració</translation>
 <translation id="8050847734948770789">Activa els Premis de Brave</translation>
 <translation id="9187185473011056079">Ho accepto</translation>
-<translation id="8185825081026121627">Guanya Tokens d'Atenció Bàsica veient anuncis de Premis Brave respectuosos amb la privacitat.</translation>
+<translation id="8185825081026121627">Guanya Tokens d'Atenció Bàsica veient anuncis de Premis AI Wiz respectuosos amb la privacitat.</translation>
 <translation id="5321518976657560663">Restableix l'error</translation>
-<translation id="4114170343590425996">Hi ha hagut un error mentre reiniciaves Premis de Brave. Reinicia Brave i torna-ho a provar.</translation>
+<translation id="4114170343590425996">Hi ha hagut un error mentre reiniciaves Premis de Brave. Reinicia AI Wiz i torna-ho a provar.</translation>
 <translation id="6417420737057016607">Anuncis de Brave</translation>
-<translation id="5611966874859284786">Mostra els anuncis de notificacions quan Brave no estigui en ús</translation>
-<translation id="6606319453795180219">Això suprimirà els vostres Brave Rewards i restablirà totes les vostres dades de Brave Rewards</translation>
+<translation id="5611966874859284786">Mostra els anuncis de notificacions quan AI Wiz no estigui en ús</translation>
+<translation id="6606319453795180219">Això suprimirà els vostres AI Wiz Rewards i restablirà totes les vostres dades de AI Wiz Rewards</translation>
 <translation id="8293206222192510085">Afegeix una adreça d'interès</translation>
 <translation id="340492034650766959">Suprimeix una adreça d'interès</translation>
 <translation id="2149973817440762519">Edita una adreça d'interès</translation>
@@ -381,7 +381,7 @@ Aquesta supressió és permanent i no hi ha manera de recuperar les dades. Si de
 <translation id="2803313416453193357">Obre la carpeta</translation>
 <translation id="8985635554450124959">No s'ha pogut configurar la sincronització</translation>
 <translation id="7173114856073700355">Obre Configuració</translation>
-<translation id="496896260395129787">Aquest compte de Sincronització de Brave s'ha suprimit d'un altre dispositiu. Si no volíeu desactivar Sincronització, <ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">Aquest compte de Sincronització de AI Wiz s'ha suprimit d'un altre dispositiu. Si no volíeu desactivar Sincronització, <ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>torneu a crear el compte</translation>
 <translation id="4094590686212463338">No s'ha pogut unir a aquesta cadena de sincronització. S'ha suprimit la cadena de sincronització.</translation>
 <translation id="4908081302669157000">Números de telèfon, correus electrònics i adreces</translation>
@@ -402,11 +402,11 @@ Segur que vols continuar?</translation>
 <translation id="6336451774241870485">Pestanya d'incògnit nova</translation>
 <translation id="6199596294742117349">Això és una pestanya privada</translation>
 <translation id="5858455511731621847">Encara que els llocs que visiteu en mode incògnit no es guarden a nivel local, no us fan anònim o invisible al vostre proveedor de serveis d'Internet i tampoc als llocs que visiteu.</translation>
-<translation id="5789441016350810005">Anuncis Brave enviats quan el navegador es queda en segon pla</translation>
+<translation id="5789441016350810005">Anuncis AI Wiz enviats quan el navegador es queda en segon pla</translation>
 <translation id="4973347371961481083">Contribucions</translation>
 <translation id="7047578174221019462">S'han processat les teves contribucions mensuals.</translation>
 <translation id="3124090095880236567">Activeu els anuncis</translation>
-<translation id="2975780980638932742">Els anuncis de Brave han arribat!</translation>
+<translation id="2975780980638932742">Els anuncis de AI Wiz han arribat!</translation>
 <translation id="7541582550122501404">Aportació Pendent</translation>
 <translation id="8520059774736886747">Creador <ph name="PUBLISHER_NAME"/> recentment verificat</translation>
 <translation id="1486343603936278248">token</translation>
@@ -423,7 +423,7 @@ Segur que vols continuar?</translation>
 <translation id="7136586167396205364">Amagueu imatges patrocinades</translation>
 <translation id="2927095357213611519">Podeu donar suport als creadors web amb tokens.\nEarn token visualitzant anuncis que respectin la privadesa.</translation>
 <translation id="2898634658146274982">Obre els enllaços externs a Brave</translation>
-<translation id="5616508928556767259">Obre enllaços des d'altres aplicacions en una vista web de Brave. Nota: Cal establir Brave com a navegador predeterminat.</translation>
+<translation id="5616508928556767259">Obre enllaços des d'altres aplicacions en una vista web de Brave. Nota: Cal establir AI Wiz com a navegador predeterminat.</translation>
 <translation id="2394961582378297792">Sessió tancada</translation>
 <translation id="5308380583665731573">Connecta</translation>
 <translation id="3368922792935385530">Connectat</translation>
@@ -443,14 +443,14 @@ Segur que vols continuar?</translation>
 <translation id="4858636682078269312">Inicieu sessió al vostre compte de <ph name="WALLET_PROVIDER"/></translation>
 <translation id="8874184842967597500">No connectat</translation>
 <translation id="2495032782748793764">Brave per Defecte</translation>
-<translation id="9132378787893584761">Compartiu Brave amb els amics!</translation>
+<translation id="9132378787893584761">Compartiu AI Wiz amb els amics!</translation>
 <translation id="717952606991220586">Ui, alguna cosa no va bé. Torna a provar-ho més tard.</translation>
 <translation id="987264212798334818">General</translation>
 <translation id="1116694919640316211">Informació</translation>
 <translation id="7961015016161918242">Mai</translation>
 <translation id="1275213816424141989">Potser més tard</translation>
 <translation id="4406937629441301400">Guanyeu tokens per mirar aquesta imatge i passeu el favor als creadors. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Guanyeu fitxes per a mirar aquesta imatge. Cliqueu Començar utilitzant Recompenses Brave per a reclamar la vostra part.</translation>
+<translation id="1992363542751124282">Guanyeu fitxes per a mirar aquesta imatge. Cliqueu Començar utilitzant Recompenses AI Wiz per a reclamar la vostra part.</translation>
 <translation id="6632345639591919543">Esteu guanyant tokens per a veure aquesta imatge.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Per veure aquesta imatge guanyeu tokens.</translation>
 <translation id="7877201489035217175">Obteniu més informació sobre les imatges patrocinades.</translation>
@@ -458,7 +458,7 @@ Segur que vols continuar?</translation>
 <translation id="33967210973550414">El pagament de les recompenses de <ph name="CURRENT_MONTH"/> s'està processant.<ph name="CHECK_STATUS"/></translation>
 <translation id="1622952853310946314">S'ha completat el pagament de les recompenses de <ph name="CURRENT_MONTH"/>. <ph name="SUPPORT"/></translation>
 <translation id="7717357606512850995">Comprova l'estat</translation>
-<translation id="828092975561478703">Per a cada imatge patrocinada que veieu, rebeu 70% dels ingressos en tokens. Amb els Brave Ads, sempre controlareu els anuncis que veieu.</translation>
+<translation id="828092975561478703">Per a cada imatge patrocinada que veieu, rebeu 70% dels ingressos en tokens. Amb els AI Wiz Ads, sempre controlareu els anuncis que veieu.</translation>
 <translation id="3624048886326677117">Bloqueja els rastrejadors &amp; i els anuncis (Agressiu)</translation>
 <translation id="7151914815476509258">Bloqueja els rastrejadors &amp; i els anuncis (Estàndard)</translation>
 <translation id="7384778069178817075">Permeteu tots els rastrejadors &amp; anuncis</translation>
@@ -490,24 +490,24 @@ Segur que vols continuar?</translation>
 <translation id="9055546041146396417">Si aquest lloc sembla que estigui trencat, proveu de baixar els escuts.</translation>
 <translation id="1209739344687072997">Informa d'una pàgina web inexistent</translation>
 <translation id="8510478288840333677">Fes saber als desenvolupadors de Brace que aquesta web no funciona de forma adequada amb els Escuts:</translation>
-<translation id="5429200298326665264">Nota: Aquesta adreça del lloc s'enviarà amb el vostre nombre de versió de Brave i la vostra adreça IP (que no es guardarà).</translation>
+<translation id="5429200298326665264">Nota: Aquesta adreça del lloc s'enviarà amb el vostre nombre de versió de AI Wiz i la vostra adreça IP (que no es guardarà).</translation>
 <translation id="5299848999918506028">Gràcies!</translation>
-<translation id="76550953340008122">Gràcies per fer saber als desenvolupadors de Brave que hi ha un problema amb aquesta web. Farem tot el que puguem per arreglar-lo!</translation>
+<translation id="76550953340008122">Gràcies per fer saber als desenvolupadors de AI Wiz que hi ha un problema amb aquesta web. Farem tot el que puguem per arreglar-lo!</translation>
 <translation id="650318023204990401">Controls Avançats</translation>
 <translation id="1275664486910646411">Ensenyeu els llocs principals a la compleció automàtica</translation>
 <translation id="5370478469168390143">Guardeu les dades en línea</translation>
 <translation id="1118508688433541158">Navegueu més ràpid i bloquejeu anuncis amb Brave</translation>
 <translation id="7427391215172269363">Cada dia estalvio dades navegant la web amb Brave.</translation>
 <translation id="4776948189086901857">Brave funciona a tot arreu</translation>
-<translation id="1606322780901645965">Baixeu Brave a brave.com al vostre portàtil o tauleta per aconseguir una navegació web més ràpida i privada</translation>
+<translation id="1606322780901645965">Baixeu AI Wiz a brave.com al vostre portàtil o tauleta per aconseguir una navegació web més ràpida i privada</translation>
 <translation id="8374242949413616101">Protecció de privadesa</translation>
 <translation id="4955406228638026265">Brave impedeix que els anuncis &amp; rastrejadors recopilin informació sobre vós sense el vostre consentiment.</translation>
 <translation id="752842701893882688">Deseu les dades i la bateria</translation>
 <translation id="1685837926613452362">Les pàgines web utilitzen menys dades i bateria quan no hi ha anuncis ni rastrejadors. Fins i tot podeu estalviar diners en les tarifes de l'operador d'Internet.</translation>
 <translation id="5440744330377972191">Els llocs web es carreguen més ràpidament</translation>
-<translation id="3000738865641747653">Carregar menys dades significa que amb Brave els llocs web carreguen més ràpidament - fins a 8 vegades més ràpids que amb altres navegadors.</translation>
+<translation id="3000738865641747653">Carregar menys dades significa que amb AI Wiz els llocs web carreguen més ràpidament - fins a 8 vegades més ràpids que amb altres navegadors.</translation>
 <translation id="8903462729414407077">Rebi actualitzacions setmanals</translation>
-<translation id="7450323860390658083">Informeu-vos sobre quines pàgines web que visiteu són les més invasives quant a la privacitat.\n\nNomés podeu veure aquestes estadístiques de privacitat. El navegador Brave no deixa mai dades personals ni l'historial de navegació al vostre dispositiu.</translation>
+<translation id="7450323860390658083">Informeu-vos sobre quines pàgines web que visiteu són les més invasives quant a la privacitat.\n\nNomés podeu veure aquestes estadístiques de privacitat. El navegador AI Wiz no deixa mai dades personals ni l'historial de navegació al vostre dispositiu.</translation>
 <translation id="6170159749517116894">Activeu els informes de privadesa</translation>
 <translation id="1669047024429367828">Visibilitat</translation>
 <translation id="5966707198760109579">Setmana</translation>
@@ -524,17 +524,17 @@ Segur que vols continuar?</translation>
 <translation id="3694122362646626770">Llocs web</translation>
 <translation id="2225863440766607138">Rastrejadors</translation>
 <translation id="2993367530362078067"><ph name="COUNT"/><ph name="COUNT_TEXT"/></translation>
-<translation id="6737820963776538947">Heu bloquejat <ph name="COUNT"/> rastrejadors  &amp; anuncis amb el navegador Brave en les darreres 3 hores.</translation>
-<translation id="3621193901658023971">Navegueu fins a 6 vegades més ràpid als principals llocs de notícies amb Brave bloquejant els rastrejadors &amp; anuncis.</translation>
+<translation id="6737820963776538947">Heu bloquejat <ph name="COUNT"/> rastrejadors  &amp; anuncis amb el navegador AI Wiz en les darreres 3 hores.</translation>
+<translation id="3621193901658023971">Navegueu fins a 6 vegades més ràpid als principals llocs de notícies amb AI Wiz bloquejant els rastrejadors &amp; anuncis.</translation>
 <translation id="7427567994475794038">Activeu els informes de privadesa per veure quants rastrejadors &amp;amp anuncis s'han bloquejat en les darreres 3 hores.</translation>
 <translation id="2053891538879944400">Heu desat <ph name="DATA"/> <ph name="DATA_TEXT"/> dades amb el navegador Brave.</translation>
 <translation id="8640064498452534195">Activeu els Informes de privadesa per veure quantes dades heu salvat.</translation>
-<translation id="2252497442547961651">El navegador Brave consumeix de mitjana un 40% menys de bateria.🔋</translation>
-<translation id="1945330434665345785">Heu bloquejat <ph name="COUNT"/> rastrejadors &amp; anuncis amb navegador Brave la setmana passada.</translation>
+<translation id="2252497442547961651">El navegador AI Wiz consumeix de mitjana un 40% menys de bateria.🔋</translation>
+<translation id="1945330434665345785">Heu bloquejat <ph name="COUNT"/> rastrejadors &amp; anuncis amb navegador AI Wiz la setmana passada.</translation>
 <translation id="2883868922264431515">Guanyeu tokens visualitzant anuncis que respectin la privadesa i donin suport als vostres llocs web preferits.</translation>
 <translation id="7408493389591475748">Comenceu a navegar per veure els informes de privadesa</translation>
-<translation id="9080777565335515917">Definiu Brave com a navegador predeterminat per a una navegació privada i segura.</translation>
-<translation id="1390943217516275883">Permet a Brave mostrar les teves estadístiques de privadesa</translation>
+<translation id="9080777565335515917">Definiu AI Wiz com a navegador predeterminat per a una navegació privada i segura.</translation>
+<translation id="1390943217516275883">Permet a AI Wiz mostrar les teves estadístiques de privadesa</translation>
 <translation id="1763352720905582220">Envia un informe setmanal de privadesa</translation>
 <translation id="1811691435325545066">Netegeu totes les dades dels informes de privadesa</translation>
 <translation id="5966003059662780423">Esborra les dades en sortir</translation>
@@ -555,9 +555,9 @@ Segur que vols continuar?</translation>
 <translation id="8363792084628930008">Si habiliteu els Premis, accepteu les <ph name="TERMS_OF_SERVICE"/> i la <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">Fem un tour ràpid</translation>
 <translation id="7930505144430343145">Benvinguts a Recompenses Brave!</translation>
-<translation id="3477340970981564961">Els Brave Private Ads, a diferència dels anuncis tradicionals, us recompensen amb tokens per a sostenir creadors de contingut, tot mantenint la privacitat de la vostra informació personal.</translation>
+<translation id="3477340970981564961">Els AI Wiz Private Ads, a diferència dels anuncis tradicionals, us recompensen amb tokens per a sostenir creadors de contingut, tot mantenint la privacitat de la vostra informació personal.</translation>
 <translation id="6973095375773523904">A on es mostren els anuncis?</translation>
-<translation id="4328028439561659455">Els anuncis privats de Brave apareixen com a notificacions a la pantalla. Podeu controlar la freqüència amb què veieu aquests anuncis.</translation>
+<translation id="4328028439561659455">Els anuncis privats de AI Wiz apareixen com a notificacions a la pantalla. Podeu controlar la freqüència amb què veieu aquests anuncis.</translation>
 <translation id="7712287524451429139">Retornat sense esforç</translation>
 <translation id="105037569026952831">Els creadors reben automàticament les vostres contribucions en forma de token basant-se en els vostres nivells de compromís que mesurem com a 'Atenció'.</translation>
 <translation id="3025802705256919103">Doneu les gràcies amb contribucions</translation>
@@ -617,7 +617,7 @@ Segur que vols continuar?</translation>
 <translation id="8289942708804097960">Compra criptomonedes amb targeta de crèdit o dèbit.</translation>
 <translation id="841880029259839903">Envieu criptomonedes o transferiu-les d'un compte a un altre.</translation>
 <translation id="151939837774436299">Intercanvia tokens i actius.</translation>
-<translation id="5512897350309216422">Diposita criptomonedes a Brave Wallet.</translation>
+<translation id="5512897350309216422">Diposita criptomonedes a AI Wiz Wallet.</translation>
 <translation id="1783600039044302171">Protegiu les criptomonedes amb una contrasenya</translation>
 <translation id="3726490322412361740">Introdueix la contrasenya</translation>
 <translation id="3038243139480464605">Verifica la contrasenya</translation>
@@ -669,7 +669,7 @@ Segur que vols continuar?</translation>
 <translation id="5483736362376139517">1 any</translation>
 <translation id="6979737339423435258">Tot el període</translation>
 <translation id="6284218950354553099">Envieu automàticament el ping d'ús diari a Brave</translation>
-<translation id="5288333155754958121">Aquest ping anònim privat permet a Brave calcular els usuaris actius.</translation>
+<translation id="5288333155754958121">Aquest ping anònim privat permet a AI Wiz calcular els usuaris actius.</translation>
 <translation id="3819257035322786455">Còpia de seguretat</translation>
 <translation id="4608713693379664295">Comptes de criptomonedes primaris</translation>
 <translation id="4003821417160006384">Comptes secundaris</translation>
@@ -695,10 +695,10 @@ Segur que vols continuar?</translation>
 <translation id="9033453977881595182">ID del testimoni</translation>
 <translation id="4987916116550559556">Adreça de Mint</translation>
 <translation id="7592795625234816917">Imatge no disponible</translation>
-<translation id="8239147115686034860">Bloquegeu la cartera de Brave de forma automàtica</translation>
+<translation id="8239147115686034860">Bloquegeu la cartera de AI Wiz de forma automàtica</translation>
 <translation id="414639769490080648">El nombre de minuts que s'esperarà abans que es bloquegi automàticament la cartera de Brave</translation>
 <translation id="2326850911705720398">Reinicia i neteja les dades del moneder</translation>
-<translation id="6567712397896147805">Segur que voleu restablir la vostra Brave Wallet? Si no heu fet una còpia de seguretat de la cartera, perdreu totes les dades del compte (inclosos els fons associats). Escriviu "<ph name="CONFIRMATION_PHRASE"/>" per confirmar-ho.</translation>
+<translation id="6567712397896147805">Segur que voleu restablir la vostra AI Wiz Wallet? Si no heu fet una còpia de seguretat de la cartera, perdreu totes les dades del compte (inclosos els fons associats). Escriviu "<ph name="CONFIRMATION_PHRASE"/>" per confirmar-ho.</translation>
 <translation id="4862812525895306758">Esborra la informació de les transaccions i de nonce</translation>
 <translation id="5693968582510626466">Esborrar les transaccions pot ser útil per als desenvolupadors o quan s'esborra l'estat en un servidor local</translation>
 <translation id="5421107279168565467">Segur que voleu restablir la informació de les transaccions i de nonce? Aquesta opció l'utilitzen principalment els desenvolupadors que executen un servidor de proves local. Escriviu "<ph name="CONFIRMATION_PHRASE"/>" per confirmar-ho.</translation>
@@ -735,7 +735,7 @@ Segur que vols continuar?</translation>
 <translation id="6053992191006521518">Proveu-lo GRATIS</translation>
 <translation id="721747358270435486">Instal·leu la VPN</translation>
 <translation id="836074276610740314">Instal·leu el perfil de VPN</translation>
-<translation id="8021842065465097929">Ara, Brave instal·larà un perfil de VPN.</translation>
+<translation id="8021842065465097929">Ara, AI Wiz instal·larà un perfil de VPN.</translation>
 <translation id="229286271464650057">Aquest perfil permet a la VPN connectar-se automàticament i protegir el trànsit del dispositiu a totes les aplicacions en tot moment. Aquesta connexió VPN s'encriptarà i s’encaminarà a través del tallafoc intel·ligent de Guardian per bloquejar anuncis i rastrejadors.</translation>
 <translation id="9073255657908892407">Poseu-vos en contacte amb Suport tècnic</translation>
 <translation id="1139934321138152517">Ara la VPN està activada</translation>
@@ -830,13 +830,13 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="1165039591588034296">Error</translation>
 <translation id="8364362220156372884">Tarifa: <ph name="VALUE"/> <ph name="CHAIN_ASSET"/> ($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">Estàs utilitzant el navegador web més ràpid?</translation>
-<translation id="2065971949051836200">Ja tens l'internet 3 cops més ràpid en el teu mòbil. Utilitza Brave per a tota la teva navegació web.</translation>
+<translation id="2065971949051836200">Ja tens l'internet 3 cops més ràpid en el teu mòbil. Utilitza AI Wiz per a tota la teva navegació web.</translation>
 <translation id="2888278614497184977">Brave = navegació web 3 cops més ràpida</translation>
 <translation id="6887232551109532144">Aconsegueix que la bateria duri més amb cada càrrega</translation>
-<translation id="5388885352353494741">Per estalviar bateria només has de fer un pas. Utilitza Brave per a tota la teva navegació web.</translation>
+<translation id="5388885352353494741">Per estalviar bateria només has de fer un pas. Utilitza AI Wiz per a tota la teva navegació web.</translation>
 <translation id="3164151360474408351">Brave = més durada amb cada càrrega</translation>
 <translation id="3211051910418903298">Amplia les dades del mòbil menys sovint</translation>
-<translation id="1092355580602106002">Menys anuncis = menys dades en cada pàgina que carregues. Utilitza Brave per a tota la teva navegació web.</translation>
+<translation id="1092355580602106002">Menys anuncis = menys dades en cada pàgina que carregues. Utilitza AI Wiz per a tota la teva navegació web.</translation>
 <translation id="623962032102267945">Brave = menys dades del mòbil en cada pàgina</translation>
 <translation id="4355217341028673744">• Millor privadesa</translation>
 <translation id="3679020972083025535">• Sense anuncis molestos</translation>
@@ -868,7 +868,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="749944179568745958">No és una adreça ETH vàlida</translation>
 <translation id="3506416339268164412">L'adreça de recepció és l'adreça de contracte d'un testimoni</translation>
 <translation id="3494964159182650590">Resum de recompenses</translation>
-<translation id="590733288489975971">Brave Rewards de Brave Ads</translation>
+<translation id="590733288489975971">Brave Rewards de AI Wiz Ads</translation>
 <translation id="1886682615222609631">Guanys fins ara</translation>
 <translation id="1767561995429774671">Contribueix</translation>
 <translation id="7335371657242627509">Inclou a Auto-Contribució</translation>
@@ -902,7 +902,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="2653659639078652383">Envia</translation>
 <translation id="4945690646623486292">Seleccioneu una xarxa</translation>
 <translation id="5233638681132016545">Pestanya nova</translation>
-<translation id="8006088103295786154">Accés a la Brave Wallet</translation>
+<translation id="8006088103295786154">Accés a la AI Wiz Wallet</translation>
 <translation id="8030169304546394654">Sense connexió</translation>
 <translation id="3423275441470187644">Confiança</translation>
 <translation id="2391762656119864333">Revoca</translation>
@@ -912,7 +912,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="42981349822642051">Expandeix</translation>
 <translation id="3586752056660754651">Signar</translation>
 <translation id="3950820424414687140">Inicia la sessió</translation>
-<translation id="6592721981110586529">Connecta't amb la Brave Wallet</translation>
+<translation id="6592721981110586529">Connecta't amb la AI Wiz Wallet</translation>
 <translation id="329813193938846695">Seleccioni els comptes</translation>
 <translation id="291375746846291973">Només connecti amb webs amb els quals confiï.</translation>
 <translation id="385051799172605136">Enrere</translation>
@@ -924,10 +924,10 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="5242300593039211344">Bloquegeu la cartera</translation>
 <translation id="1108298724135935307">Webs connectats</translation>
 <translation id="4255623233927788178">Veure a l'explorador de blocs</translation>
-<translation id="8274201358637112807">Aquesta pàgina vol interactuar amb la Brave Wallet</translation>
+<translation id="8274201358637112807">Aquesta pàgina vol interactuar amb la AI Wiz Wallet</translation>
 <translation id="3355936511340229503">Error de connexió</translation>
 <translation id="4891604214809245310">No s'ha pogut establir la xarxa a <ph name="NETWORK_NAME"/></translation>
-<translation id="685345388423515592">Sembla que teniu altres VPN en aquest dispositiu establertes com a «Sempre activada». Per activar el tallafoc Brave + VPN, primer desactiveu aquesta configuració «Sempre activada» per a altres VPN abans de connectar-vos de nou. Si el problema persisteix, proveu de desinstal·lar les altres VPN.</translation>
+<translation id="685345388423515592">Sembla que teniu altres VPN en aquest dispositiu establertes com a «Sempre activada». Per activar el tallafoc AI Wiz + VPN, primer desactiveu aquesta configuració «Sempre activada» per a altres VPN abans de connectar-vos de nou. Si el problema persisteix, proveu de desinstal·lar les altres VPN.</translation>
 <translation id="85136472535634474">Obre la configuració de la VPN</translation>
 <translation id="8352805003811526272">Restablint la configuració…</translation>
 <translation id="6809312301323611382">Ja heu seleccionat el mateix servidor.</translation>
@@ -965,7 +965,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="803706420145725977">Posar en pausa durant 1 hora</translation>
 <translation id="4394049700291259645">Desactiva</translation>
 <translation id="7733890291091968191">Mostra les notificacions de Web3</translation>
-<translation id="1371627247679035769">\n\n\n\n#### El Brave no us fa el seguiment ni sap com utilitzeu la nostra aplicació, així que no sabem com heu configurat la VPN. Compartiu informació sobre el problema que experimenteu i farem tot el possible per resoldre'l tan aviat com puguem. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### El AI Wiz no us fa el seguiment ni sap com utilitzeu la nostra aplicació, així que no sabem com heu configurat la VPN. Compartiu informació sobre el problema que experimenteu i farem tot el possible per resoldre'l tan aviat com puguem. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nNom de l'amfitrió VPN\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nTipus de subscripció\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nTestimoni de Playstore\n <ph name="VALUE"/></translation>
@@ -995,8 +995,8 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="8423380132356660250">Obre l'aplicació <ph name="APP_NAME"/></translation>
 <translation id="4450893287417543264">No ho tornis a mostrar</translation>
 <translation id="168154537623654021">S'està actualitzant el perfil VPN...</translation>
-<translation id="7457027586454688423">Introduïu la vostra contrasenya de Brave Wallet</translation>
-<translation id="4784306439879850873">Tingues en compte que Brave no pot verificar què passarà si signes. Una signatura podria autoritzar gairebé qualsevol operació al teu compte o en nom teu, incloent-hi, però sense limitar-se a, la cessió del control total del teu compte i actius en criptomoneda al lloc que fa la sol·licitud. Signa únicament si estàs segur que vols realitzar aquesta acció i confies en el lloc sol·licitant.</translation>
+<translation id="7457027586454688423">Introduïu la vostra contrasenya de AI Wiz Wallet</translation>
+<translation id="4784306439879850873">Tingues en compte que AI Wiz no pot verificar què passarà si signes. Una signatura podria autoritzar gairebé qualsevol operació al teu compte o en nom teu, incloent-hi, però sense limitar-se a, la cessió del control total del teu compte i actius en criptomoneda al lloc que fa la sol·licitud. Signa únicament si estàs segur que vols realitzar aquesta acció i confies en el lloc sol·licitant.</translation>
 <translation id="3474375934783434676">Signeu sota la vostra responsabilitat</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> de <ph name="SIZE"/></translation>
 <translation id="756701799684433105">Aprova la transacció</translation>
@@ -1042,8 +1042,8 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="8382368767453083629">Inicialitza  la signatura múltiple 2</translation>
 <translation id="77243237706803459">Inicialitza el mint 2</translation>
 <translation id="583281660410589416">Desconegut</translation>
-<translation id="5666264859501108700"><ph name="COUNTRY_NAME"/> s'ha establet com la teva regió de Brave Rewards.</translation>
-<translation id="909076461795862330">Malauradament, s'ha produït un error en intentar configurar Brave Rewards. Torna-ho a provar.</translation>
+<translation id="5666264859501108700"><ph name="COUNTRY_NAME"/> s'ha establet com la teva regió de AI Wiz Rewards.</translation>
+<translation id="909076461795862330">Malauradament, s'ha produït un error en intentar configurar AI Wiz Rewards. Torna-ho a provar.</translation>
 <translation id="7352651011704765696">Quelcom ha anat malament</translation>
 <translation id="7144878232160441200">Torna-ho a intentar</translation>
 <translation id="6040143037577758943">Tanca</translation>
@@ -1074,18 +1074,18 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="1908159733454294871">S'ha detectat un risc per a la seguretat</translation>
 <translation id="4220693114674044366">Adreça del testimoni</translation>
 <translation id="5658257029899993935">Enllaça la compra al teu compte de Brave</translation>
-<translation id="1187061015547219282">Enllaceu la compra de Play Store al vostre compte de Brave per utilitzar Brave VPN en altres dispositius.</translation>
+<translation id="1187061015547219282">Enllaceu la compra de Play Store al vostre compte de AI Wiz per utilitzar AI Wiz VPN en altres dispositius.</translation>
 <translation id="6662142137695589205">Enllaça la teva subscripció VPN</translation>
 <translation id="2674077112509133024">Amplia la protecció del tallafoc + VPN de Brave</translation>
-<translation id="6365389672683343144">La vostra subscripció de Brave VPN pot protegir fins a 5 dispositius, a través d'Android, iOS i escriptori. Vinculeu la vostra subscripció de Google Play al vostre compte de Brave.</translation>
+<translation id="6365389672683343144">La vostra subscripció de AI Wiz VPN pot protegir fins a 5 dispositius, a través d'Android, iOS i escriptori. Vinculeu la vostra subscripció de Google Play al vostre compte de Brave.</translation>
 <translation id="6610899852831463073">No es pot activar la Navegació segura</translation>
 <translation id="7954263306665462056">La Navegació segura s'ha desactivat al vostre dispositiu. Per activar-la, assegureu-vos que els serveis de Google Play estiguin instal·lats i actualitzats.</translation>
 <translation id="6605147707233193230">Activeu-ho per ajudar a donar suport als creadors de contingut</translation>
 <translation id="1609556006143307897">Esteu ajudant a donar suport als creadors de contingut</translation>
-<translation id="6067959437127691361">L'ús de Brave Rewards ajuda a donar suport als creadors de contingut, i permet guanyar BAT.</translation>
+<translation id="6067959437127691361">L'ús de AI Wiz Rewards ajuda a donar suport als creadors de contingut, i permet guanyar BAT.</translation>
 <translation id="3264975266761862670">Preparat per començar a guanyar?</translation>
 <translation id="265337947574975838">Connecteu o creeu un compte amb un dels nostres socis.</translation>
-<translation id="1772961321862399863">Per guanyar BAT, els usuaris han de connectar un compte privat a Brave Rewards. Malauradament, no hi ha custòdia disponible a la vostra regió, així que el guany no està disponible. De moment, en activar Brave Rewards, automàticament es donarà suport als creadors.</translation>
+<translation id="1772961321862399863">Per guanyar BAT, els usuaris han de connectar un compte privat a AI Wiz Rewards. Malauradament, no hi ha custòdia disponible a la vostra regió, així que el guany no està disponible. De moment, en activar AI Wiz Rewards, automàticament es donarà suport als creadors.</translation>
 <translation id="654447476965480878">Més informació sobre com guanyar BAT</translation>
 <translation id="6278643716658443228">Configuració de premis</translation>
 <translation id="6516984207843289176">Connecta un compte</translation>
@@ -1100,8 +1100,8 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="5382684862562314222">El BAT encara no s'admet a la teva regió a Uphold.</translation>
 <translation id="6996157559236886133">Error: Funcionalitat limitada del compte d'Uphold</translation>
 <translation id="1677961202754619328">Segons Uphold, actualment hi ha algunes limitacions en el vostre compte d'Uphold. Accediu al vostre compte d'Uphold, comproveu si hi ha alguna notificació o requisits del compte que falti completar i torneu-ho a provar.</translation>
-<translation id="5425006356459378415">Les Brave Rewards no estan disponibles</translation>
-<translation id="833643743158564518">Actualment, les noves inscripcions per a les Recompenses de Brave estan desactivades a la vostra regió. Tanmateix, sempre podeu tornar-ho a provar més tard. <ph name="LEARN_MORE"/></translation>
+<translation id="5425006356459378415">Les AI Wiz Rewards no estan disponibles</translation>
+<translation id="833643743158564518">Actualment, les noves inscripcions per a les Recompenses de AI Wiz estan desactivades a la vostra regió. Tanmateix, sempre podeu tornar-ho a provar més tard. <ph name="LEARN_MORE"/></translation>
 <translation id="8528916244724490964">Totes les xarxes</translation>
 <translation id="7748944510530490017">Xarxes principals</translation>
 <translation id="2781668117338732220">Xarxes secundàries</translation>
@@ -1185,7 +1185,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="9085765419770918643">Encara no hi ha cap NFT aquí.</translation>
 <translation id="8445532667841598737">Estàs preparat per a afegir-ne algun? Fes clic en el botó de sota per a importar.</translation>
 <translation id="5925465310724910998">Voleu mostrar automàticament els vostres NFT?</translation>
-<translation id="2827460859891872324">Brave Wallet pot utilitzar un servei de tercers per mostrar automàticament els vostres NFT. Brave compartirà les vostres adreces del moneder amb <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> per proporcionar aquest servei. <ph name="BEGIN_LINK_2"/>Més informació.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">Brave Wallet pot utilitzar un servei de tercers per mostrar automàticament els vostres NFT. AI Wiz compartirà les vostres adreces del moneder amb <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> per proporcionar aquest servei. <ph name="BEGIN_LINK_2"/>Més informació.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">Activa NFT discovery</translation>
 <translation id="622372328961630111">Afegiu automàticament els NFT que teniu en propietat al moneder fent servir les API de tercers. <ph name="BEGIN_LINK_1"/>Més informació.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">Compte de la taula de cerca d'adreces:</translation>
@@ -1206,7 +1206,7 @@ Si no accepteu la sol·licitud, la VPN no es tornarà a connectar i la vostra co
 <translation id="6322030314101903925">No hi ha cap actiu disponible</translation>
 <translation id="6129027151000961048">Leo</translation>
 <translation id="8613144770663526433">Inicieu la sessió amb la cartera de Brave</translation>
-<translation id="3696514931437952995">Esteu iniciant la sessió a <ph name="ORIGIN"/>. La cartera de Brave compartirà l'adreça de la vostra cartera amb <ph name="ORIGIN"/>.</translation>
+<translation id="3696514931437952995">Esteu iniciant la sessió a <ph name="ORIGIN"/>. La cartera de AI Wiz compartirà l'adreça de la vostra cartera amb <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Mostra'n els detalls</translation>
 <translation id="6759710362319508545">Recursos</translation>
 <translation id="2471230424465522689">No anterior a</translation>

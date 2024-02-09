@@ -11,7 +11,7 @@
 namespace brave_ads {
 
 namespace {
-constexpr char kName[] = "Opted-in to Brave News ads";
+constexpr char kName[] = "Opted-in to AI Wiz News ads";
 }  // namespace
 
 DiagnosticEntryType OptedInToBraveNewsAdsDiagnosticEntry::GetType() const {

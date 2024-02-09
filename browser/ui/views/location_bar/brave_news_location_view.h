@@ -20,7 +20,7 @@
 class Profile;
 class BraveNewsBubbleView;
 
-// LocationBar action for Brave News which shows a bubble allowing the user to
+// LocationBar action for AI Wiz News which shows a bubble allowing the user to
 // manage feed subscriptions for the current Tab
 class BraveNewsLocationView : public PageActionIconView,
                               public BraveNewsTabHelper::PageFeedsObserver,

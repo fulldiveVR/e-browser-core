@@ -22,13 +22,13 @@
 <translation id="1110914759170138831">Serlahan dipendekkan</translation>
 <translation id="1111673857033749125">Penanda halaman yang disimpan pada peranti anda yang lain akan dipaparkan di sini.</translation>
 <translation id="1113597929977215864">Tunjukkan paparan ringkas</translation>
-<translation id="4470276443668654888">Kaedah pembayaran dan alamat daripada Google Pay tidak akan disulitkan. Sejarah penyemakan imbas daripada Brave tidak akan disegerakkan.
+<translation id="4470276443668654888">Kaedah pembayaran dan alamat daripada Google Pay tidak akan disulitkan. Sejarah penyemakan imbas daripada AI Wiz tidak akan disegerakkan.
 Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersulit anda. Frasa laluan tidak dihantar kepada atau disimpan oleh Brave. Jika anda terlupa ungkapan laluan atau ingin menukar tetapan ini, anda perlu menetapkan semula penyegerakan. <ph name="BEGIN_LINK"/>Ketahui lebih lanjut<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Tidak melindungi anda daripada laman web, muat turun dan sambungan yang berbahaya. Anda akan mendapat perlindungan Penyemakan Imbas Selamat, jika tersedia, dalam perkhidmatan Brave yang lain, seperti Gmail dan Carian.</translation>
+<translation id="1295971429974142731">Tidak melindungi anda daripada laman web, muat turun dan sambungan yang berbahaya. Anda akan mendapat perlindungan Penyemakan Imbas Selamat, jika tersedia, dalam perkhidmatan AI Wiz yang lain, seperti Gmail dan Carian.</translation>
 <translation id="1129510026454351943">Butiran: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Jangan tawarkan untuk menterjemahkan tapak ini</translation>
 <translation id="1145536944570833626">Padam data sedia ada.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> akan dibuka dalam Brave. Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_LINK1"/>Syarat Perkhidmatan Brave<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Syarat Perkhidmatan Tambahan Brave dan Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> akan dibuka dalam Brave. Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_LINK1"/>Syarat Perkhidmatan Brave<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Syarat Perkhidmatan Tambahan AI Wiz dan Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Gunakan kata laluan <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Namakan semula</translation>
 <translation id="7947699437047020219">Brave akan meminta laman mudah alih apabila skrin sempit</translation>
@@ -50,18 +50,18 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="1240288207750131269">Memuatkan <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Untuk meneruskan, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> akan berkongsi nama, alamat e-mel dan gambar profil anda dengan laman ini. Lihat <ph name="BEGIN_LINK1"/>dasar privasi<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>syarat perkhidmatan<ph name="END_LINK2"/> laman ini.</translation>
 <translation id="124116460088058876">Lagi bahasa</translation>
-<translation id="4078574862195461280">Kata laluan anda akan dipadamkan daripada Brave Password Manager untuk <ph name="CHROME_CHANNEL"/>. Anda akan menyimpan fail kata laluan yang baru anda muat turun.</translation>
+<translation id="4078574862195461280">Kata laluan anda akan dipadamkan daripada AI Wiz Password Manager untuk <ph name="CHROME_CHANNEL"/>. Anda akan menyimpan fail kata laluan yang baru anda muat turun.</translation>
 <translation id="1242883863226959074">peranti</translation>
 <translation id="124678866338384709">Tutup tab semasa</translation>
 <translation id="1246905108078336582">Alih keluar cadangan daripada papan keratan?</translation>
 <translation id="1996480094660735607">Coretan Brave: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Kini anda akan dapat melihat kandungan daripada dan tentang <ph name="SITE_NAME"/> dalam Diikut. Laman dan carian yang anda ikuti disimpan dalam Brave sync chain anda. Anda boleh mengurus laman dan carian yang anda ikuti dalam tetapan pada bila-bila masa.</translation>
+<translation id="7074197713963877855">Kini anda akan dapat melihat kandungan daripada dan tentang <ph name="SITE_NAME"/> dalam Diikut. Laman dan carian yang anda ikuti disimpan dalam AI Wiz sync chain anda. Anda boleh mengurus laman dan carian yang anda ikuti dalam tetapan pada bila-bila masa.</translation>
 <translation id="1263231323834454256">Senarai bacaan</translation>
 <translation id="1266864766717917324">Tidak dapat berkongsi <ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">Anda dapat menemukan sejarah anda di sini</translation>
 <translation id="1273937721055267968">Sekat <ph name="DOMAIN"/></translation>
 <translation id="1283039547216852943">Ketik untuk kembangkan</translation>
-<translation id="194557235473047967">Anda mungkin akan diminta untuk log masuk ke Brave sync chain anda</translation>
+<translation id="194557235473047967">Anda mungkin akan diminta untuk log masuk ke AI Wiz sync chain anda</translation>
 <translation id="1291207594882862231">Hapuskan sejarah, kuki, data tapak, cache...</translation>
 <translation id="129553762522093515">Ditutup baru-baru ini</translation>
 <translation id="1298077576058087471">Jimat sehingga 60% data, baca berita hari ini</translation>
@@ -106,7 +106,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="1513814250881909472">Segerakkan untuk mendapatkan tab anda daripada peranti anda yang lain</translation>
 <translation id="1513858653616922153">Padam kata laluan</translation>
 <translation id="1521774566618522728">Aktif hari ini</translation>
-<translation id="8090895580117672212">Untuk mengurus akaun Brave anda, ketik butang "Urus akaun"</translation>
+<translation id="8090895580117672212">Untuk mengurus akaun AI Wiz anda, ketik butang "Urus akaun"</translation>
 <translation id="1549000191223877751">Alihkan ke tetingkap lain</translation>
 <translation id="1705567146636171298">Kemas Kini Brave</translation>
 <translation id="1568636008098739136">Dengar halaman ini. Untuk mengedit pintasan ini, sentuh dan tahan butang.</translation>
@@ -124,18 +124,18 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="1671236975893690980">Muat turun belum selesai...</translation>
 <translation id="1672586136351118594">Jangan tunjukkan lagi</translation>
 <translation id="1680919990519905526">Beli-belah dgn Lens <ph name="BEGIN_NEW"/>Baharu<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Tidak lama lagi, anda akan dapat melihat kandungan daripada dan tentang <ph name="SITE_NAME"/> dalam Diikut. Laman dan carian yang anda ikuti disimpan dalam Brave sync chain anda. Anda boleh mengurus laman dan carian yang anda ikuti dalam tetapan pada bila-bila masa.</translation>
+<translation id="7870200641233500458">Tidak lama lagi, anda akan dapat melihat kandungan daripada dan tentang <ph name="SITE_NAME"/> dalam Diikut. Laman dan carian yang anda ikuti disimpan dalam AI Wiz sync chain anda. Anda boleh mengurus laman dan carian yang anda ikuti dalam tetapan pada bila-bila masa.</translation>
 <translation id="1696555181932908973">Anda boleh mencuba cara lain untuk meneruskan pada <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">Tukar tetapan tema gelap anda?</translation>
 <translation id="1702907158640575240">Penyemak imbas terurus</translation>
 <translation id="1710099199314114079">Tukar atau tutup tab</translation>
 <translation id="1718835860248848330">Jam terakhir</translation>
 <translation id="1724977129262658800">Buka kunci untuk mengedit kata laluan anda</translation>
-<translation id="6493900814829428590">Anda boleh menyemak imbas dan mencari dengan lebih pantas apabila Brave mempramuat halaman yang diramal akan anda lawati</translation>
+<translation id="6493900814829428590">Anda boleh menyemak imbas dan mencari dengan lebih pantas apabila AI Wiz mempramuat halaman yang diramal akan anda lawati</translation>
 <translation id="1749561566933687563">Segerakkan penanda halaman anda</translation>
 <translation id="1750259112639922169">Kumpulan tab - <ph name="TAB_COUNT"/> tab</translation>
 <translation id="17513872634828108">Buka tab</translation>
-<translation id="9207812657123271782">Kemaskinian Brave Password Manager</translation>
+<translation id="9207812657123271782">Kemaskinian AI Wiz Password Manager</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Halaman, 1 halaman dalam senarai}other{Halaman, # halaman dalam senarai}}</translation>
 <translation id="1778457539567749232">Tandai sebagai belum dibaca</translation>
 <translation id="1779766957982586368">Tutup tetingkap</translation>
@@ -152,7 +152,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="1883903952484604915">Fail Saya</translation>
 <translation id="189358972401248634">Bahasa lain</translation>
 <translation id="1900260903084164610">Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_TOS_LINK"/>Syarat Perkhidmatan<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">URL yang anda lawati disimpan pada Brave sync chain anda</translation>
+<translation id="6893464351226208429">URL yang anda lawati disimpan pada AI Wiz sync chain anda</translation>
 <translation id="1910950723001426294">Senarai pilihan perkongsian ditutup.</translation>
 <translation id="7021823858304886493">Benarkan log masuk Brave</translation>
 <translation id="1922362554271624559">Bahasa yang dicadangkan</translation>
@@ -166,7 +166,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="1944535645109964458">Tiada kunci laluan tersedia</translation>
 <translation id="1952172573699511566">Tapak web akan menunjukkan teks dalam bahasa pilihan anda, jika boleh.</translation>
 <translation id="1959679933317802873">Menunggu kandungan</translation>
-<translation id="3968054912784331254">Kemas kini Brave tidak disokong untuk versi Android ini lagi</translation>
+<translation id="3968054912784331254">Kemas kini AI Wiz tidak disokong untuk versi Android ini lagi</translation>
 <translation id="1963976881984600709">Perlindungan standard</translation>
 <translation id="1966710179511230534">Sila kemas kini butiran log masuk anda.</translation>
 <translation id="197288927597451399">Simpan</translation>
@@ -210,7 +210,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="218608176142494674">Perkongsian</translation>
 <translation id="2194856509914051091">Perkara yang perlu dipertimbangkan</translation>
 <translation id="22091350895006575">Tambahkan nama pengguna</translation>
-<translation id="4075202346699640887">Tindakan membuka Brave tanpa kunci profil akan mengalih keluar kata laluan dan kaedah pembayaran anda yang disimpan daripada kereta. Penggunaan kunci profil memastikan data ini selamat.</translation>
+<translation id="4075202346699640887">Tindakan membuka AI Wiz tanpa kunci profil akan mengalih keluar kata laluan dan kaedah pembayaran anda yang disimpan daripada kereta. Penggunaan kunci profil memastikan data ini selamat.</translation>
 <translation id="2227444325776770048">Teruskan sebagai <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Tetingkap kosong</translation>
 <translation id="223356358902285214">Aktiviti Web &amp; Apl</translation>
@@ -220,8 +220,8 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4808014761134300692">Kata laluan anda disulitkan pada peranti sebelum disimpan ke Pengurus Kata Laluan Brave</translation>
 <translation id="2249635629516220541">Sesuaikan maklumat yang digunakan oleh laman untuk memaparkan iklan kepada anda</translation>
 <translation id="2259659629660284697">Eksport kata laluan…</translation>
-<translation id="8820144752830692527">Anda boleh memilih item yang hendak disegerakkan dalam <ph name="BEGIN_LINK1"/>tetapan<ph name="END_LINK1"/> pada bila-bila masa. Brave mungkin memeribadikan Carian dan perkhidmatan lain berdasarkan sejarah anda.</translation>
-<translation id="781982477617612877">Log masuk ke akaun Brave anda untuk menyemak kata laluan anda</translation>
+<translation id="8820144752830692527">Anda boleh memilih item yang hendak disegerakkan dalam <ph name="BEGIN_LINK1"/>tetapan<ph name="END_LINK1"/> pada bila-bila masa. AI Wiz mungkin memeribadikan Carian dan perkhidmatan lain berdasarkan sejarah anda.</translation>
+<translation id="781982477617612877">Log masuk ke akaun AI Wiz anda untuk menyemak kata laluan anda</translation>
 <translation id="2278052315791335171">Pemadaman kata laluan ini tidak akan memadamkan akaun anda pada <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Alamat pengebilan</translation>
 <translation id="228704530595896923">Senarai pilihan perkongsian.</translation>
@@ -268,12 +268,12 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="2546283357679194313">Kuki dan data tapak</translation>
 <translation id="2567385386134582609">IMEJ</translation>
 <translation id="2567545343356994513">Perlindungan proaktif yang lebih pantas terhadap laman web, muat turun dan sambungan yang berbahaya</translation>
-<translation id="5079947353572974060">Tawarkan untuk menghantar halaman dalam bahasa lain kepada Brave Translate</translation>
+<translation id="5079947353572974060">Tawarkan untuk menghantar halaman dalam bahasa lain kepada AI Wiz Translate</translation>
 <translation id="2571834852878229351">Buat kata laluan sendiri</translation>
-<translation id="6995512410824092085">Ketahui cara menetapkan Brave sebagai penyemak imbas lalai anda</translation>
+<translation id="6995512410824092085">Ketahui cara menetapkan AI Wiz sebagai penyemak imbas lalai anda</translation>
 <translation id="7242554556818074465">Untuk melihat tab anda daripada mana-mana tempat anda menggunakan Brave, log masuk ke semua peranti anda</translation>
-<translation id="8661556138616664061">Kandungan oleh Brave untuk minda muda</translation>
-<translation id="2324920234469020158">Tindakan ini akan menghapuskan kuki, cache dan data tapak yang lain yang Brave anggap tidak penting.</translation>
+<translation id="8661556138616664061">Kandungan oleh AI Wiz untuk minda muda</translation>
+<translation id="2324920234469020158">Tindakan ini akan menghapuskan kuki, cache dan data tapak yang lain yang AI Wiz anggap tidak penting.</translation>
 <translation id="2587052924345400782">Versi lebih baharu tersedia</translation>
 <translation id="2593272815202181319">Monospace</translation>
 <translation id="2603212228005142861">Log masuk untuk mengurus keutamaan anda</translation>
@@ -281,7 +281,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="2604446170045642109">Anda boleh mematikan tema gelap untuk laman dalam tetapan anda.</translation>
 <translation id="2612676031748830579">Nombor kad</translation>
 <translation id="2625189173221582860">Kata laluan disalin</translation>
-<translation id="2634393460268044753">Menghantar URL laman yang anda lawati dan sedikit sampel kandungan halaman, muat turun, aktiviti sambungan dan maklumat sistem kepada Penyemakan Imbas Selamat Brave untuk disemak jika sampel tersebut berbahaya.</translation>
+<translation id="2634393460268044753">Menghantar URL laman yang anda lawati dan sedikit sampel kandungan halaman, muat turun, aktiviti sambungan dan maklumat sistem kepada Penyemakan Imbas Selamat AI Wiz untuk disemak jika sampel tersebut berbahaya.</translation>
 <translation id="2642087927315268160">Helaian bawah log masuk ditutup.</translation>
 <translation id="2643064289437760082">Anda sentiasa boleh memadamkan data pengukuran iklan dengan memadamkan data semakan imbas anda</translation>
 <translation id="2647434099613338025">Tambah bahasa</translation>
@@ -293,7 +293,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="265156376773362237">Pramuat standard</translation>
 <translation id="2656405586795711023">Apl web</translation>
 <translation id="2669454659051515572">Sesiapa sahaja yang menggunakan peranti ini dapat melihat fail yang dimuat turun</translation>
-<translation id="5806087344347665213">Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, Brave mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Brave</translation>
+<translation id="5806087344347665213">Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, AI Wiz mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Brave</translation>
 <translation id="2702516483241149200">Baharu: kongsi pautan yang menatal ke teks ini</translation>
 <translation id="3769942772151914580">Perlindungan masa nyata dan proaktif terhadap laman, muat turun dan sambungan berbahaya yang berdasarkan data semakan imbas anda yang dihantar kepada Brave</translation>
 <translation id="2708226184420201102">Buka dalam penyemak imbas <ph name="PRODUCT_NAME"/></translation>
@@ -321,15 +321,15 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="6324134303015966238">Brave mempramuat halaman yang mungkin anda lawati supaya halaman tersebut dimuatkan dengan lebih pantas apabila dilawati</translation>
 <translation id="2856503607207334158">Log masuk gagal</translation>
 <translation id="2860954141821109167">Pastikan apl telefon didayakan pada peranti ini</translation>
-<translation id="6518254564747115579">Sesetengah ciri Brave tidak akan tersedia lagi</translation>
+<translation id="6518254564747115579">Sesetengah ciri AI Wiz tidak akan tersedia lagi</translation>
 <translation id="2869430948265924908">Untuk melindungi kandungan sensitif anda di dalam kereta, anda mestilah membuat kunci profil kereta.  Anda boleh melakukan tindakan itu dengan PIN, kod atau kata laluan.</translation>
 <translation id="2870560284913253234">Tapak</translation>
 <translation id="2871733351037274014">Halaman pramuat</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> mahu anda meluluskan laman web ini:</translation>
-<translation id="6756656512757374876">Ketahui lebih lanjut tentang <ph name="BEGIN_LINK"/>cara Brave mengekalkan data anda peribadi<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Ketahui lebih lanjut tentang <ph name="BEGIN_LINK"/>cara AI Wiz mengekalkan data anda peribadi<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Perihal Brave</translation>
 <translation id="2891154217021530873">Hentikan pemuatan halaman</translation>
-<translation id="4013614219085422040">Brave boleh menggunakan sejarah anda untuk memperibadikan Carian dan perkhidmatan Brave yang lain</translation>
+<translation id="4013614219085422040">Brave boleh menggunakan sejarah anda untuk memperibadikan Carian dan perkhidmatan AI Wiz yang lain</translation>
 <translation id="2894821468041866720">Tidak memperlahankan penyemak imbas atau peranti dengan ketara.</translation>
 <translation id="2900528713135656174">Buat acara</translation>
 <translation id="2901411048554510387">Memaparkan cadangan untuk <ph name="WEBSITE_TITLE"/></translation>
@@ -338,12 +338,12 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="7339921667754113786">Platform Pemberitahuan Brave</translation>
 <translation id="2912296070571964914">Urus topik yang anda minati</translation>
 <translation id="2923908459366352541">Nama tidak sah</translation>
-<translation id="6355102470683871794">Storan Brave <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Storan AI Wiz <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Papan kekunci anda tidak akan berubah</translation>
-<translation id="6537665929855787038">Pemberitahuan Brave memudahkan segalanya</translation>
+<translation id="6537665929855787038">Pemberitahuan AI Wiz memudahkan segalanya</translation>
 <translation id="2940075786175545812">Pilihan untuk meluluskan atau tidak meluluskan laman web</translation>
 <translation id="2942036813789421260">Tab pratonton ditutup</translation>
-<translation id="4700262879698141140">Mengemas kini Brave untuk menyambung kepada peranti lain</translation>
+<translation id="4700262879698141140">Mengemas kini AI Wiz untuk menyambung kepada peranti lain</translation>
 <translation id="2951071800649516099">Tambahkan halaman pada senarai bacaan anda untuk kemudian</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> halaman belum dibaca}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> halaman belum dibaca}}</translation>
 <translation id="2961210776189273067">Tajuk</translation>
@@ -360,8 +360,8 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="2996291259634659425">Buat ungkapan laluan</translation>
 <translation id="2996809686854298943">URL yang diperlukan</translation>
 <translation id="2996932914629936323">Mengosongkan sejarah daripada semua peranti yang disegerakkan</translation>
-<translation id="2019027298133375428">Apabila laman Brave meminta pramuat pautan secara peribadi pada halaman mereka, Brave menyulitkan dan mempramuat halaman melalui pelayan Brave tanpa kuki. Tindakan ini akan menyembunyikan identiti anda daripada laman yang dipramuat.</translation>
-<translation id="5730179015008010982">URL yang anda lawati dihantar kepada Brave untuk meramal laman yang mungkin anda lawati seterusnya dan untuk menunjukkan maklumat tambahan tentang halaman yang anda lawati</translation>
+<translation id="2019027298133375428">Apabila laman AI Wiz meminta pramuat pautan secara peribadi pada halaman mereka, AI Wiz menyulitkan dan mempramuat halaman melalui pelayan AI Wiz tanpa kuki. Tindakan ini akan menyembunyikan identiti anda daripada laman yang dipramuat.</translation>
+<translation id="5730179015008010982">URL yang anda lawati dihantar kepada AI Wiz untuk meramal laman yang mungkin anda lawati seterusnya dan untuk menunjukkan maklumat tambahan tentang halaman yang anda lawati</translation>
 <translation id="3016635187733453316">Pastikan peranti ini disambungkan ke Internet</translation>
 <translation id="3026955690410463085">Sertakan pautan</translation>
 <translation id="3027644380269727216">Berdasarkan aktiviti anda pada laman. Tetapan ini dihidupkan.</translation>
@@ -374,15 +374,15 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3038272154009688107">Lihat semua laman</translation>
 <translation id="3046945242843292318">Lawati laman ini dengan lebih pantas selepas ini</translation>
 <translation id="3055259925215945098">Penanda halaman dialihkan</translation>
-<translation id="4163313568284712797">Maklumat tentang penggunaan Brave anda dihantar kepada Brave, tetapi maklumat itu tidak terikat dengan anda\n\nJika berlaku ranap sistem pada Brave, butiran tentang ranap sistem mungkin termasuk beberapa maklumat peribadi\n\nJika anda menghidupkan penyegerakan, metrik juga mungkin termasuk maklumat tentang URL yang anda lawati</translation>
+<translation id="4163313568284712797">Maklumat tentang penggunaan AI Wiz anda dihantar kepada Brave, tetapi maklumat itu tidak terikat dengan anda\n\nJika berlaku ranap sistem pada Brave, butiran tentang ranap sistem mungkin termasuk beberapa maklumat peribadi\n\nJika anda menghidupkan penyegerakan, metrik juga mungkin termasuk maklumat tentang URL yang anda lawati</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> penanda halaman}other{<ph name="BOOKMARKS_COUNT_MANY"/> penanda halaman}}</translation>
 <translation id="6153252609477956632">Artikel tentang minat anda di Brave</translation>
 <translation id="3066573403916685335">Alihkan Ke Bawah</translation>
 <translation id="3070005020161560471">Terjemah secara automatik</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> akan dibuka dalam Brave. Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_LINK1"/>Syarat Perkhidmatan Brave<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Syarat Perkhidmatan Tambahan Brave dan Chrome OS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Dasar Privasi<ph name="END_LINK3"/> juga dikenakan.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> akan dibuka dalam Brave. Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_LINK1"/>Syarat Perkhidmatan Brave<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Syarat Perkhidmatan Tambahan AI Wiz dan Chrome OS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Dasar Privasi<ph name="END_LINK3"/> juga dikenakan.</translation>
 <translation id="3080525922482950719">Anda boleh menyimpan halaman untuk dibaca kemudian atau secara luar talian</translation>
 <translation id="3091010850649238832">Paparkan kandungan papan keratan</translation>
-<translation id="821565628224723530">Sesetengah imej dihantar kepada Brave untuk meningkatkan perihalan untuk anda</translation>
+<translation id="821565628224723530">Sesetengah imej dihantar kepada AI Wiz untuk meningkatkan perihalan untuk anda</translation>
 <translation id="3114507951000454849">Baca berita hari ini <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Pengumuman</translation>
 <translation id="3134784203083076891">”</translation>
@@ -396,10 +396,10 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3207960819495026254">Ditandai halaman</translation>
 <translation id="3208584281581115441">Semak sekarang</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> dipadamkan</translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Sejarah carian<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktiviti lain<ph name="END_LINK2"/> mungkin disimpan dalam Brave sync chain anda semasa anda dilog masuk. Anda boleh memadamkan data tersebut pada bila-bila masa.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Sejarah carian<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktiviti lain<ph name="END_LINK2"/> mungkin disimpan dalam AI Wiz sync chain anda semasa anda dilog masuk. Anda boleh memadamkan data tersebut pada bila-bila masa.</translation>
 <translation id="321773570071367578">Jika anda terlupa ungkapan laluan atau ingin menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Untuk menyegerakkan kata laluan anda, sahkan orang itu ialah anda</translation>
-<translation id="9210457680074341078">Jika anda juga menyimpan penanda halaman dalam Brave sync chain anda, anda boleh menjejak harga produk dalam Brave dan mendapatkan pemberitahuan jika harga produk tersebut turun</translation>
+<translation id="9210457680074341078">Jika anda juga menyimpan penanda halaman dalam AI Wiz sync chain anda, anda boleh menjejak harga produk dalam AI Wiz dan mendapatkan pemberitahuan jika harga produk tersebut turun</translation>
 <translation id="9047551989591319903">Brave sebagai Kunci Keselamatan</translation>
 <translation id="3232754137068452469">Apl Web</translation>
 <translation id="3234978181857588512">Simpan pada peranti</translation>
@@ -427,16 +427,16 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3341262203274374114">Tidak dapat berhenti mengikuti. Kesilapan telah berlaku.</translation>
 <translation id="3359667936385849800">Gunakan penyedia perkhidmatan semasa anda</translation>
 <translation id="3373701465337594448">Apabila dihidupkan, senarai laman yang anda lawati yang meneka minat anda dipaparkan di sini</translation>
-<translation id="2746024117903470217">Untuk berkongsi halaman ini dengan peranti lain, hidupkan penyegerakan dalam tetapan Brave pada peranti lain itu</translation>
-<translation id="8801234437789558906">Penanda halaman, sejarah, kata laluan dan data Brave yang lain tidak akan disegerakkan ke Brave sync chain anda lagi</translation>
+<translation id="2746024117903470217">Untuk berkongsi halaman ini dengan peranti lain, hidupkan penyegerakan dalam tetapan AI Wiz pada peranti lain itu</translation>
+<translation id="8801234437789558906">Penanda halaman, sejarah, kata laluan dan data AI Wiz yang lain tidak akan disegerakkan ke AI Wiz sync chain anda lagi</translation>
 <translation id="3384347053049321195">Kongsi imej</translation>
 <translation id="3387650086002190359">Muat turun <ph name="FILE_NAME"/> gagal disebabkan oleh ralat sistem fail.</translation>
 <translation id="3389286852084373014">Teks terlalu besar</translation>
 <translation id="3398320232533725830">Buka pengurus penanda halaman</translation>
-<translation id="1081508498128395141">Lagi halaman yang dipramuat. Halaman mungkin dipramuat melalui pelayan Brave apabila diminta oleh laman lain.</translation>
+<translation id="1081508498128395141">Lagi halaman yang dipramuat. Halaman mungkin dipramuat melalui pelayan AI Wiz apabila diminta oleh laman lain.</translation>
 <translation id="3414952576877147120">Saiz:</translation>
 <translation id="3421726884497337397">Pilih masa untuk menyekat kuki pihak ketiga</translation>
-<translation id="5265419033369521352">Memastikan anda selamat pada Brave dan mungkin digunakan untuk meningkatkan keselamatan anda dalam apl Brave yang lain apabila anda log masuk</translation>
+<translation id="5265419033369521352">Memastikan anda selamat pada AI Wiz dan mungkin digunakan untuk meningkatkan keselamatan anda dalam apl AI Wiz yang lain apabila anda log masuk</translation>
 <translation id="3429160811076349561">Ciri percubaan dimatikan</translation>
 <translation id="3430670036890315772">Tindakan mematikan kunci profil anda akan mengalih keluar maklumat anda yang disimpan</translation>
 <translation id="3435465986463792564">Ada banyak tetingkap? Anda boleh mengurus tetingkap tersebut dari sini</translation>
@@ -444,7 +444,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3439276997620616816">Anda boleh menemukan tab terbaharu anda di sini</translation>
 <translation id="3443221991560634068">Muat semula halaman semasa</translation>
 <translation id="3444179773590444986">Kongsikan maklum balas tentang tema gelap untuk laman?</translation>
-<translation id="7384339501748168186">Untuk melindungi privasi anda, Brave tidak akan mengisi kata laluan anda ke dalam medan ini secara automatik.</translation>
+<translation id="7384339501748168186">Untuk melindungi privasi anda, AI Wiz tidak akan mengisi kata laluan anda ke dalam medan ini secara automatik.</translation>
 <translation id="3474624961160222204">Teruskan sebagai <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Anda boleh memilih enjin carian anda</translation>
 <translation id="3479552764303398839">Bukan sekarang</translation>
@@ -453,7 +453,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Isih mengikut yang paling lama</translation>
 <translation id="3507132249039706973">Perlindungan Standard dihidupkan</translation>
-<translation id="8669829441518807650">Luar talian. Brave tidak dapat menyemak kemas kini.</translation>
+<translation id="8669829441518807650">Luar talian. AI Wiz tidak dapat menyemak kemas kini.</translation>
 <translation id="3513704683820682405">Realiti Tambahan</translation>
 <translation id="3518985090088779359">Terima &amp; teruskan</translation>
 <translation id="3521388823983121502">Tidak boleh meneruskan dengan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="3701515417135397388">Memberi anda amaran jika terdapat kata laluan terjejas dalam pelanggaran data</translation>
 <translation id="371230970611282515">Meramalkan dan memberi anda amaran tentang acara berbahaya sebelum acara itu berlaku.</translation>
 <translation id="3714981814255182093">Buka Bar Cari</translation>
-<translation id="5805364706385912897">Halaman ini menggunakan terlalu banyak memori, jadi Brave menjeda halaman ini.</translation>
+<translation id="5805364706385912897">Halaman ini menggunakan terlalu banyak memori, jadi AI Wiz menjeda halaman ini.</translation>
 <translation id="3720422586473670527">Tidak perlu</translation>
 <translation id="8397843425685839889">Anda dan Brave</translation>
 <translation id="3737319253362202215">Tetapan terjemahan</translation>
@@ -548,7 +548,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4084682180776658562">Penanda halaman</translation>
 <translation id="4521874409998847950">Daripada <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>disampaikan oleh Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Anda boleh menggunakan tablet ini untuk log masuk pada peranti yang memaparkan kod QR ini.</translation>
-<translation id="7268155614575494857">Untuk membantu Brave Password Manager menyimpan maklumat log masuk anda, tambahkan nama pengguna anda untuk laman ini</translation>
+<translation id="7268155614575494857">Untuk membantu AI Wiz Password Manager menyimpan maklumat log masuk anda, tambahkan nama pengguna anda untuk laman ini</translation>
 <translation id="4095146165863963773">Padam data apl?</translation>
 <translation id="4095425503313512126">Menyemak imbas dan mencari adalah lebih pantas</translation>
 <translation id="4096227151372679484">Aliran penyimpanan penanda halaman dibuka pada ketinggian separuh</translation>
@@ -556,7 +556,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4108314971463891922">Ikut</translation>
 <translation id="4108998448622696017">Mengesan dan memberikan amaran kepada anda tentang acara berbahaya apabila berlaku.</translation>
 <translation id="4116038641877404294">Muat turun halaman untuk digunakan di luar talian</translation>
-<translation id="37459938731864814">Anda tidak perlu mengingati kata laluan ini. Kata laluan ini akan disimpan pada Brave Password Manager untuk <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Anda tidak perlu mengingati kata laluan ini. Kata laluan ini akan disimpan pada AI Wiz Password Manager untuk <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Aliran kebenaran pemberitahuan dibuka pada ketinggian penuh</translation>
 <translation id="4126285640274188657">Cerapan Halaman</translation>
 <translation id="4135200667068010335">Senarai peranti untuk berkongsi tab ditutup.</translation>
@@ -574,7 +574,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 tab pada peranti ini}other{# tab pada peranti ini}}</translation>
 <translation id="4198423547019359126">Tiada lokasi muat turun tersedia</translation>
 <translation id="4202218894997543208">Topik yang anda sekat</translation>
-<translation id="1675646381334855139">Jika anda membenarkan kuki, Brave boleh menggunakan kuki itu untuk mempramuat.</translation>
+<translation id="1675646381334855139">Jika anda membenarkan kuki, AI Wiz boleh menggunakan kuki itu untuk mempramuat.</translation>
 <translation id="4216511743389425832">Dengar halaman ini</translation>
 <translation id="4225725533026049334">Mengikuti</translation>
 <translation id="4225895483398857530">Pintasan bar alat</translation>
@@ -584,7 +584,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4249955472157341256">Isih mengikut yang Terbaharu</translation>
 <translation id="4250229828105606438">Tangkapan skrin</translation>
 <translation id="4256782883801055595">Lesen sumber terbuka</translation>
-<translation id="7404502124231907662">Padamkan kata laluan daripada Brave Password Manager?</translation>
+<translation id="7404502124231907662">Padamkan kata laluan daripada AI Wiz Password Manager?</translation>
 <translation id="4269820728363426813">Salin alamat pautan</translation>
 <translation id="4277529130885813215">Gunakan peranti lain</translation>
 <translation id="4283102315569707115">Minta laman desktop secara lalai?</translation>
@@ -610,7 +610,7 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4405224443901389797">Alihkan ke…</translation>
 <translation id="4405636711880428279">Alih keluar kad maya anda?</translation>
 <translation id="4409271659088619928">Enjin carian anda ialah <ph name="DSE"/>. Lihat arahan enjin carian itu untuk memadamkan sejarah carian anda, jika berkenaan.</translation>
-<translation id="5749788945734786627">Urus Brave sync chain anda</translation>
+<translation id="5749788945734786627">Urus AI Wiz sync chain anda</translation>
 <translation id="4425140285732600465">Menjejaki harga. Dapatkan makluman sekiranya harga jatuh pada mana-mana laman.</translation>
 <translation id="442518031075347249">Anda tidak dapat menggunakan kad maya anda dengan Google Pay lagi. <ph name="BEGIN_LINK1"/>Ketahui lebih lanjut tentang kad maya<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">Tutup tab <ph name="TAB_TITLE"/></translation>
@@ -619,16 +619,16 @@ Orang yang mengetahui ungkapan laluan anda sahaja yang dapat membaca data tersul
 <translation id="4478161224666880173">Anda boleh menggunakan akaun <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> pada laman ini. Untuk meneruskan proses ini, log masuk ke <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">Memasang <ph name="MODULE"/> untuk Brave…</translation>
 <translation id="4484496141267039529">Tiada sambungan. Cuba lagi nanti.</translation>
-<translation id="53119194224775367">Semua data apl Brave akan dipadamkan selama-lamanya. Ini termasuk semua fail, tetapan, akaun, pangkalan data dan sebagainya.</translation>
-<translation id="3966104135245031874">Sulitkan kata laluan yang disegerakkan menggunakan Brave sync chain anda</translation>
+<translation id="53119194224775367">Semua data apl AI Wiz akan dipadamkan selama-lamanya. Ini termasuk semua fail, tetapan, akaun, pangkalan data dan sebagainya.</translation>
+<translation id="3966104135245031874">Sulitkan kata laluan yang disegerakkan menggunakan AI Wiz sync chain anda</translation>
 <translation id="4491323382106587961">Pilih akaun. <ph name="EMAIL"/> dipilih pada masa ini.</translation>
 <translation id="4508528996305412043">Menu kad suapan dibuka</translation>
 <translation id="4509501256689523862">Semasa anda menyemak imbas, sama ada iklan yang anda lihat diperibadikan bergantung pada tetapan ini, <ph name="BEGIN_LINK_1"/>topik Iklan<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>tetapan kuki<ph name="END_LINK_2"/>anda, dan jika laman yang anda lihat ialah iklan diperibadikan</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# hari yang lalu}other{# hari yang lalu}}</translation>
 <translation id="451872707440238414">Cari penanda halaman anda</translation>
-<translation id="1664855196866195614">Data yang dipilih telah dialih keluar daripada Brave dan peranti anda yang disegerakkan.
+<translation id="1664855196866195614">Data yang dipilih telah dialih keluar daripada AI Wiz dan peranti anda yang disegerakkan.
 
-Brave sync chain anda mungkin mempunyai sejarah penyemakan imbas dalam bentuk lain seperti carian dan aktiviti daripada perkhidmatan Brave yang lain di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Brave sync chain anda mungkin mempunyai sejarah penyemakan imbas dalam bentuk lain seperti carian dan aktiviti daripada perkhidmatan AI Wiz yang lain di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">masa sebelum ini</translation>
 <translation id="452750746583162491">Semak data anda yang disegerak</translation>
 <translation id="4532845899244822526">Pilih folder</translation>
@@ -679,7 +679,7 @@ Brave sync chain anda mungkin mempunyai sejarah penyemakan imbas dalam bentuk la
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Kata laluan disimpan pada Password Manager pada peranti ini</translation>
 <translation id="4766678251456904326">Tambahkan akaun pada peranti</translation>
-<translation id="1996253762801922860">Kami melancarkan ciri privasi iklan baharu yang dipanggil pengukuran iklan. Brave hanya berkongsi maklumat yang sangat terhad antara laman dengan apl, seperti masa iklan dipaparkan kepada anda, untuk membantu laman mengukur prestasi iklan.</translation>
+<translation id="1996253762801922860">Kami melancarkan ciri privasi iklan baharu yang dipanggil pengukuran iklan. AI Wiz hanya berkongsi maklumat yang sangat terhad antara laman dengan apl, seperti masa iklan dipaparkan kepada anda, untuk membantu laman mengukur prestasi iklan.</translation>
 <translation id="4769095993849849966">Nama fail baharu</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> dipadamkan</translation>
 <translation id="4778653490315793244">Belum ada apa-apa untuk ditunjukkan</translation>
@@ -705,13 +705,13 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="4864369630010738180">Sedang log masuk...</translation>
 <translation id="5131234170665854056">Tidak dapat memasang <ph name="MODULE"/> untuk Brave</translation>
 <translation id="4871568871368204250">Matikan penyegerakan</translation>
-<translation id="2875466387677348954">Apabila dimatikan, anda masih dapat melihat cadangan yang diberikan oleh Brave secara setempat</translation>
+<translation id="2875466387677348954">Apabila dimatikan, anda masih dapat melihat cadangan yang diberikan oleh AI Wiz secara setempat</translation>
 <translation id="4875775213178255010">Cadangan Kandungan</translation>
 <translation id="4878404682131129617">Gagal mewujudkan terowong melalui pelayan proksi</translation>
 <translation id="4880127995492972015">Terjemah…</translation>
 <translation id="4881695831933465202">Buka</translation>
 <translation id="488187801263602086">Namakan semula fail</translation>
-<translation id="1248710015876067820">Bilangan kejadian Brave tidak disokong.</translation>
+<translation id="1248710015876067820">Bilangan kejadian AI Wiz tidak disokong.</translation>
 <translation id="4905823827770127520">Sertakan pautan kepada halaman</translation>
 <translation id="3217997482476578430">Discover oleh Brave</translation>
 <translation id="4909709702739934280">Penyemak imbas anda diurus oleh pentadbir anda</translation>
@@ -722,10 +722,10 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="4925120120285606924">Tangkapan skrin <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Kata laluan anda akan dieksport dan dimuat turun sebagai fail teks. Kata laluan itu akan dapat dilihat oleh sesiapa dan sebarang apl yang mempunyai akses kepada folder destinasi.</translation>
 <translation id="4926901776383726965">Anda boleh menyimpan imej dan fail untuk dilihat di luar talian atau dikongsi pada apl yang lain</translation>
-<translation id="1955495299630319741">Oleh sebab anda log keluar daripada akaun yang diurus oleh <ph name="DOMAIN_NAME"/>, data Brave anda akan dipadamkan daripada peranti ini. Data tersebut akan kekal dalam Brave sync chain anda.</translation>
+<translation id="1955495299630319741">Oleh sebab anda log keluar daripada akaun yang diurus oleh <ph name="DOMAIN_NAME"/>, data AI Wiz anda akan dipadamkan daripada peranti ini. Data tersebut akan kekal dalam AI Wiz sync chain anda.</translation>
 <translation id="4943703118917034429">Realiti Maya</translation>
 <translation id="4943872375798546930">Tiada hasil carian</translation>
-<translation id="5742837711075932301">Apabila anda log masuk ke Brave sync chain yang sama, peranti lain boleh menggunakan telefon ini sebagai kunci keselamatan.</translation>
+<translation id="5742837711075932301">Apabila anda log masuk ke AI Wiz sync chain yang sama, peranti lain boleh menggunakan telefon ini sebagai kunci keselamatan.</translation>
 <translation id="4957722034734105353">Ketahui lebih lanjut...</translation>
 <translation id="4961107849584082341">Terjemahkan halaman ini ke sebarang bahasa</translation>
 <translation id="7307583170263691471">Perlindungan proaktif yang lebih pantas terhadap laman web, muat turun dan sambungan yang berbahaya. Memberi anda amaran tentang pelanggaran kata laluan. Menghendaki data semakan imbas dihantar kepada Brave.</translation>
@@ -745,15 +745,15 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="5039804452771397117">Benarkan</translation>
 <translation id="5040262127954254034">Privasi</translation>
 <translation id="504456571576643789">Perkara yang perlu dipertimbangkan</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Bentuk aktiviti lain<ph name="END_LINK1"/> mungkin disimpan dalam Brave sync chain anda semasa anda dilog masuk. Anda boleh memadamkan data tersebut pada bila-bila masa.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Bentuk aktiviti lain<ph name="END_LINK1"/> mungkin disimpan dalam AI Wiz sync chain anda semasa anda dilog masuk. Anda boleh memadamkan data tersebut pada bila-bila masa.</translation>
 <translation id="506254248375231072">Tiada tab</translation>
 <translation id="5062960805900435602">Kemaskinian tentang gabungan kata laluan telah ditutup</translation>
 <translation id="5081960376148623587">Pilih sama ada hendak mempramuatkan halaman</translation>
-<translation id="4744980273298156620">Tidak lama lagi, anda akan melihat cerita daripada <ph name="SITE_NAME"/> apabila anda membuka tab baharu. Laman yang anda ikuti disimpan pada Brave sync chain anda. Anda boleh mengurus laman tersebut dalam tetapan Discover.</translation>
+<translation id="4744980273298156620">Tidak lama lagi, anda akan melihat cerita daripada <ph name="SITE_NAME"/> apabila anda membuka tab baharu. Laman yang anda ikuti disimpan pada AI Wiz sync chain anda. Anda boleh mengurus laman tersebut dalam tetapan Discover.</translation>
 <translation id="509429900233858213">Ralat telah berlaku.</translation>
 <translation id="5097349930204431044">Laman yang anda lawati boleh menentukan perkara yang anda sukai dan mencadangkan iklan sambil anda meneruskan penyemakan imbas</translation>
 <translation id="5099845111805573968">Apabila anda memilih laman desktop sekali, tetapan itu akan digunakan pada laman setiap kali anda melawati laman itu</translation>
-<translation id="225414324447409614">Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, Brave mungkin menghantar URL termasuk sedikit kandungan halaman kepada Penyemakan Imbas Selamat</translation>
+<translation id="225414324447409614">Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, AI Wiz mungkin menghantar URL termasuk sedikit kandungan halaman kepada Penyemakan Imbas Selamat</translation>
 <translation id="510275257476243843">1 jam lagi</translation>
 <translation id="5115811374190515607">ke <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Minat</translation>
@@ -788,8 +788,8 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="5308380583665731573">Sambung</translation>
 <translation id="5317780077021120954">Simpan</translation>
 <translation id="989239400026154074">Brave mengesyorkan Brave</translation>
-<translation id="7815000350132166985">Jika anda membenarkan kuki, Brave boleh menggunakan kuki tersebut semasa prapemuatan</translation>
-<translation id="1681635711794313507">Oleh kerana halaman pramuat disulitkan dan pemautan laman ke halaman tersebut ialah laman Brave, pelayan Brave tidak menerima maklumat baharu apabila mempramuat halaman ini secara peribadi.</translation>
+<translation id="7815000350132166985">Jika anda membenarkan kuki, AI Wiz boleh menggunakan kuki tersebut semasa prapemuatan</translation>
+<translation id="1681635711794313507">Oleh kerana halaman pramuat disulitkan dan pemautan laman ke halaman tersebut ialah laman Brave, pelayan AI Wiz tidak menerima maklumat baharu apabila mempramuat halaman ini secara peribadi.</translation>
 <translation id="5329858041417644019">Penyemak imbas anda tidak diurus</translation>
 <translation id="5342314432463739672">Permintaan kebenaran</translation>
 <translation id="534580735623577507">Tiada laman sejak <ph name="TIME_PERIOD"/></translation>
@@ -805,7 +805,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="543338862236136125">Edit kata laluan</translation>
 <translation id="5433691172869980887">Nama pengguna disalin</translation>
 <translation id="5438292632479953702">Muat turun sekali lagi</translation>
-<translation id="2766925507720001104">Memberikan amaran kepada anda tentang laman berbahaya, termasuk laman yang tidak diketahui oleh Brave sebelum ini, dengan menganalisis lebih banyak data daripada laman berbanding perlindungan standard. Anda boleh memilih untuk melangkau amaran Brave.</translation>
+<translation id="2766925507720001104">Memberikan amaran kepada anda tentang laman berbahaya, termasuk laman yang tidak diketahui oleh AI Wiz sebelum ini, dengan menganalisis lebih banyak data daripada laman berbanding perlindungan standard. Anda boleh memilih untuk melangkau amaran Brave.</translation>
 <translation id="5441137934526263133">Laman tidak berfungsi? Kuki pihak ketiga disekat</translation>
 <translation id="5441466871879044658">Terjemah kepada bahasa ini</translation>
 <translation id="5441522332038954058">Lompat ke bar alamat</translation>
@@ -823,7 +823,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="5517095782334947753">Anda mempunyai penanda halaman, sejarah, kata laluan dan tetapan lain daripada <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Ubah hala disekat.</translation>
 <translation id="5548606607480005320">Semakan keselamatan</translation>
-<translation id="4362225295386962644">Apabila anda menggunakan kata laluan, Brave akan memberi anda amaran jika kata laluan tersebut telah diterbitkan dalam talian. Apabila melakukan tindakan ini, kata laluan dan nama pengguna anda akan disulitkan supaya data ini tidak dapat dibaca oleh sesiapa termasuk Brave.</translation>
+<translation id="4362225295386962644">Apabila anda menggunakan kata laluan, AI Wiz akan memberi anda amaran jika kata laluan tersebut telah diterbitkan dalam talian. Apabila melakukan tindakan ini, kata laluan dan nama pengguna anda akan disulitkan supaya data ini tidak dapat dibaca oleh sesiapa termasuk Brave.</translation>
 <translation id="5555525474779371165">Pilih perlindungan Penyemakan Imbas Selamat anda</translation>
 <translation id="5556459405103347317">Muat Semula</translation>
 <translation id="555816257274242153">Penjejakan harga dihentikan</translation>
@@ -840,7 +840,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="562289928968387744">Urus reaksi</translation>
 <translation id="5626134646977739690">Nama:</translation>
 <translation id="5628604359369369630">Belum dibaca - Tersedia di luar talian</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Sejarah carian<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktiviti yang lain<ph name="END_LINK2"/> mungkin disimpan pada Brave sync chain anda</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Sejarah carian<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktiviti yang lain<ph name="END_LINK2"/> mungkin disimpan pada AI Wiz sync chain anda</translation>
 <translation id="564667659802381754">Panduan Privasi <ph name="BEGIN_NEW"/>Baharu<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">7 hari lalu</translation>
 <translation id="5655963694829536461">Cari muat turun anda</translation>
@@ -878,7 +878,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="5797521893972859201">Kosongkan sejarah, termasuk item dalam kotak carian</translation>
 <translation id="5797949256525811424">Topik yang disekat</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# jam yang lalu}other{# jam yang lalu}}</translation>
-<translation id="5311273890481188673">Hak Cipta <ph name="YEAR"/> Brave LLC. Hak cipta terpelihara.</translation>
+<translation id="5311273890481188673">Hak Cipta <ph name="YEAR"/> AI Wiz LLC. Hak cipta terpelihara.</translation>
 <translation id="5814749351757353073">Ikuti perkembangan laman kegemaran anda</translation>
 <translation id="5822875253699806474">Untuk segera kembali kepada laman yang telah anda lawati, segerakkan tab dan sejarah anda</translation>
 <translation id="583281660410589416">Tidak diketahui</translation>
@@ -893,16 +893,16 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="5864419784173784555">Menunggu muat turun lain…</translation>
 <translation id="6538479075382111079">Menghantar perangkaan penggunaan dan laporan ranap sistem secara automatik kepada Brave</translation>
 <translation id="5869522115854928033">Kata laluan disimpan</translation>
-<translation id="5604589745019948682">Untuk mengikuti laman, pergi ke laman tersebut, buka menu Brave dan ketik Ikut.</translation>
+<translation id="5604589745019948682">Untuk mengikuti laman, pergi ke laman tersebut, buka menu AI Wiz dan ketik Ikut.</translation>
 <translation id="5879072387416556377">Dapatkan cadangan lebih baik</translation>
 <translation id="5899667542927581604">Tiada helaian kunci laluan yang ditutup</translation>
 <translation id="5916664084637901428">Hidupkan</translation>
 <translation id="5919204609460789179">Kemas kini <ph name="PRODUCT_NAME"/> untuk memulakan penyegerakan</translation>
 <translation id="5938820472109305350">Tambah <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">Menggunakan Brave untuk carian</translation>
+<translation id="6103327872225198548">Menggunakan AI Wiz untuk carian</translation>
 <translation id="5945035219773565305">Syor semasa:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Melihat halaman langsung</translation>
-<translation id="305870044889644984">Buka Pusat Bantuan Brave dalam tab baharu</translation>
+<translation id="305870044889644984">Buka Pusat Bantuan AI Wiz dalam tab baharu</translation>
 <translation id="5957442310066583693">Untuk melihat laman web yang paling kerap anda lawati, ketik butang Skrin Utama</translation>
 <translation id="59577092665511740">Pilih akaun.</translation>
 <translation id="5958275228015807058">Cari fail dan halaman anda dalam Muat Turun</translation>
@@ -929,7 +929,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="6070730414166672373">Menghubungi bank anda\u2026</translation>
 <translation id="6085886413119427067">Menentukan cara menyambung kepada laman web melalui sambungan selamat</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> jam lagi</translation>
-<translation id="4726571606794511368">Jika Brave juga merupakan enjin carian lalai anda, anda dapat melihat cadangan yang lebih baik dan berkaitan secara kontekstual</translation>
+<translation id="4726571606794511368">Jika AI Wiz juga merupakan enjin carian lalai anda, anda dapat melihat cadangan yang lebih baik dan berkaitan secara kontekstual</translation>
 <translation id="6108923351542677676">Persediaan sedang berjalan...</translation>
 <translation id="6112702117600201073">Memuat semula halaman</translation>
 <translation id="6122831415929794347">Matikan Penyemakan Imbas Selamat?</translation>
@@ -942,11 +942,11 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="6140912465461743537">Negara/Rantau</translation>
 <translation id="6150320133806434356">Penanda halaman disimpan</translation>
 <translation id="6154478581116148741">Hidupkan kunci skrin dalam Tetapan untuk mengeksport kata laluan anda daripada peranti ini</translation>
-<translation id="7087658909840709934">Mempramuat halaman yang diramal oleh Brave akan anda lawati.</translation>
+<translation id="7087658909840709934">Mempramuat halaman yang diramal oleh AI Wiz akan anda lawati.</translation>
 <translation id="6186394685773237175">Tiada kata laluan yang terjejas ditemukan</translation>
 <translation id="6192907950379606605">Dapatkan perihalan imej</translation>
 <translation id="6193448654517602979">Pilih tab</translation>
-<translation id="8367262879301982880">Kata laluan disimpan pada Brave Password Manager pada peranti ini</translation>
+<translation id="8367262879301982880">Kata laluan disimpan pada AI Wiz Password Manager pada peranti ini</translation>
 <translation id="6202812185118613467">Log masuk semula untuk memulakan penyegerakan</translation>
 <translation id="6205314730813004066">Privasi iklan</translation>
 <translation id="6210748933810148297">Bukan <ph name="EMAIL"/>?</translation>
@@ -955,7 +955,7 @@ Untuk menukar tetapan ini, <ph name="BEGIN_LINK"/>tetapkan semula penyegerakan<p
 <translation id="6232535412751077445">Tindakan mendayakan "Jangan Kesan" bermaksud permintaan akan disertakan dengan trafik penyemakan imbas anda. Sebarang kesan bergantung pada sama ada laman web memberi respons kepada permintaan dan cara permintaan ditafsirkan.
 
 Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan ini dengan memaparkan iklan yang tidak berdasarkan laman web lain yang anda lawati. Pelbagai laman web masih akan mengumpul dan menggunakan data penyemakan imbas anda — contohnya, untuk meningkatkan keselamatan, untuk menyediakan kandungan, iklan dan cadangan serta untuk menjana statistik pelaporan.</translation>
-<translation id="3895383310037101583">Simpan kata laluan pada peranti ini dalam Brave sync chain anda dengan menghidupkan penyegerakan</translation>
+<translation id="3895383310037101583">Simpan kata laluan pada peranti ini dalam AI Wiz sync chain anda dengan menghidupkan penyegerakan</translation>
 <translation id="6255794742848779505">Kami mengubah cara kata laluan disimpan pada peranti ini</translation>
 <translation id="6264376385120300461">Muat turun juga</translation>
 <translation id="6277522088822131679">Terdapat masalah semasa mencetak halaman. Sila cuba sekali lagi.</translation>
@@ -980,18 +980,18 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="6357653805084533597">Anda boleh menggunakan telefon ini untuk log masuk pada peranti yang memaparkan kod QR ini.</translation>
 <translation id="6363990818884053551">Untuk memulakan penyegerakan, sahkan orang itu ialah anda</translation>
 <translation id="6364438453358674297">Alih keluar cadangan daripada sejarah?</translation>
-<translation id="806493401838431801">Lebih kerap mempramuat halaman yang diramal oleh Brave akan anda lawati. Tetapan ini boleh menyebabkan penggunaan data meningkat.</translation>
+<translation id="806493401838431801">Lebih kerap mempramuat halaman yang diramal oleh AI Wiz akan anda lawati. Tetapan ini boleh menyebabkan penggunaan data meningkat.</translation>
 <translation id="6382848304055775421">Mengeksport</translation>
 <translation id="6394791151443660613">Carian: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">PAUTAN</translation>
 <translation id="6397616442223433927">Kembali dalam talian</translation>
-<translation id="8789425457808164956">Untuk menghantar tab ini ke peranti lain, log masuk ke Brave pada peranti tersebut</translation>
+<translation id="8789425457808164956">Untuk menghantar tab ini ke peranti lain, log masuk ke AI Wiz pada peranti tersebut</translation>
 <translation id="6404511346730675251">Edit penanda halaman</translation>
 <translation id="6406506848690869874">Segerak</translation>
 <translation id="6407224748847589805">Tidak dapat menyambung kepada komputer anda. Cuba pilihan pengesahan lain.</translation>
 <translation id="6410883413783534063">Buka tab untuk melawati halaman yang berlainan pada masa yang sama</translation>
 <translation id="6411219469806822692">Tidak dapat pergi lebih tinggi. Cuba bermula dari bahagian atas halaman.</translation>
-<translation id="7810992039564280750">Semak URL melalui perbandingan dengan senarai tapak tidak selamat yang disimpan dalam Brave. Jika tapak cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, Brave juga mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Penyemakan Imbas Selamat.</translation>
+<translation id="7810992039564280750">Semak URL melalui perbandingan dengan senarai tapak tidak selamat yang disimpan dalam Brave. Jika tapak cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, AI Wiz juga mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Penyemakan Imbas Selamat.</translation>
 <translation id="641643625718530986">Cetak…</translation>
 <translation id="6422857128426228781">Anda dapat menemukan produk yang dijejaki di sini</translation>
 <translation id="6433501201775827830">Pilih enjin carian anda</translation>
@@ -1002,7 +1002,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="6447558397796644647">Tidak menjumpai penanda halaman itu. Semak ejaan anda atau tambahkan penanda halaman baharu.</translation>
 <translation id="6459045781120991510">Tinjauan</translation>
 <translation id="6461962085415701688">Tidak dapat membuka fail</translation>
-<translation id="9055113864158719823">Anda dapat melihat tapak yang anda lawati dalam Brave dan menetapkan pemasa untuk tapak tersebut.\n\nBrave menerima maklumat tentang tapak yang pemasanya telah anda tetapkan dan tempoh anda berada di tapak itu. Maklumat ini digunakan untuk menambah baik Kesejahteraan Digital.</translation>
+<translation id="9055113864158719823">Anda dapat melihat tapak yang anda lawati dalam AI Wiz dan menetapkan pemasa untuk tapak tersebut.\n\nBrave menerima maklumat tentang tapak yang pemasanya telah anda tetapkan dan tempoh anda berada di tapak itu. Maklumat ini digunakan untuk menambah baik Kesejahteraan Digital.</translation>
 <translation id="6473086018775716761">Senarai pilihan perkongsian dibuka pada ketinggian separuh.</translation>
 <translation id="6475951671322991020">Muat turun video</translation>
 <translation id="6477928892249167417">Tapak ini nampaknya penting kepada anda:</translation>
@@ -1010,54 +1010,54 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Fail dimuat turun}other{# muat turun selesai}}</translation>
 <translation id="3960299545138990065">Mulakan semula Brave</translation>
 <translation id="6527303717912515753">Kongsi</translation>
-<translation id="708829030563435351">Tapak yang anda lawati dalam Brave tidak akan dipaparkan. Semua pemasa tapak akan dipadamkan.</translation>
+<translation id="708829030563435351">Tapak yang anda lawati dalam AI Wiz tidak akan dipaparkan. Semua pemasa tapak akan dipadamkan.</translation>
 <translation id="7723158744459952869">Brave mengambil masa terlalu lama untuk bertindak balas</translation>
 <translation id="6539092367496845964">Kesilapan telah berlaku. Cuba sebentar lagi.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Disemak 1 jam yang lalu}other{Disemak # yang lalu}}</translation>
 <translation id="6545017243486555795">Hapuskan Semua Data</translation>
 <translation id="6546511553472444032">Fail mungkin berbahaya</translation>
-<translation id="6702167990458635422">Tidak melindungi anda daripada laman web, muat turun dan sambungan yang berbahaya. Tetapan Penyemakan Imbas Selamat anda pada produk Brave lain tidak akan terjejas.</translation>
+<translation id="6702167990458635422">Tidak melindungi anda daripada laman web, muat turun dan sambungan yang berbahaya. Tetapan Penyemakan Imbas Selamat anda pada produk AI Wiz lain tidak akan terjejas.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> dan <ph name="TAB_COUNT_ONE"/> lagi tab akan ditutup}other{<ph name="TAB_TITLE"/> dan <ph name="TAB_COUNT_MANY"/> lagi tab akan ditutup}}</translation>
 <translation id="6560414384669816528">Cari dengan Sogou</translation>
 <translation id="656065428026159829">Lihat lagi</translation>
 <translation id="6565959834589222080">Wi-Fi akan digunakan apabila tersedia</translation>
-<translation id="4480935821314799946">Kini anda akan melihat cerita daripada <ph name="SITE_NAME"/> apabila anda membuka tab baharu. Laman yang anda ikuti disimpan pada Brave sync chain anda. Anda boleh mengurus laman tersebut dalam tetapan Discover.</translation>
+<translation id="4480935821314799946">Kini anda akan melihat cerita daripada <ph name="SITE_NAME"/> apabila anda membuka tab baharu. Laman yang anda ikuti disimpan pada AI Wiz sync chain anda. Anda boleh mengurus laman tersebut dalam tetapan Discover.</translation>
 <translation id="6573096386450695060">Sentiasa benarkan</translation>
-<translation id="5157964048453367290">Tab yang telah anda buka dalam Brave pada peranti anda yang lain akan dipaparkan di sini.</translation>
+<translation id="5157964048453367290">Tab yang telah anda buka dalam AI Wiz pada peranti anda yang lain akan dipaparkan di sini.</translation>
 <translation id="6583199322650523874">Tandai halaman semasa</translation>
 <translation id="6588043302623806746">Gunakan DNS selamat</translation>
 <translation id="6590471736817333463">Jimat sehingga 60% data</translation>
 <translation id="6590680911007613645">Pastikan kata laluan yang anda simpan sepadan dengan kata laluan anda untuk <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Tapak desktop</translation>
 <translation id="6594347733515723558">Isih dan papar pilihan</translation>
-<translation id="2466982615210189224">Imej dihantar kepada Brave untuk meningkatkan perihalan untuk anda.</translation>
+<translation id="2466982615210189224">Imej dihantar kepada AI Wiz untuk meningkatkan perihalan untuk anda.</translation>
 <translation id="663059986967017181">Disalin ke Brave</translation>
 <translation id="661266467055912436">Meningkatkan keselamatan untuk anda dan semua orang yang melayari web.</translation>
 <translation id="6618554661997243500">Untuk melihat laman web dan cerita yang paling kerap anda lawati, ketik butang Skrin Utama</translation>
-<translation id="8127050479140582768">Untuk menghantar tab ini ke peranti lain, log masuk ke Brave pada kedua-dua peranti</translation>
+<translation id="8127050479140582768">Untuk menghantar tab ini ke peranti lain, log masuk ke AI Wiz pada kedua-dua peranti</translation>
 <translation id="6627583120233659107">Edit folder</translation>
 <translation id="6636623428211296678">Terokai lebih banyak tetapan di bawah atau selesaikan sekarang</translation>
 <translation id="2259649928554669581">Untuk mendapatkan pelbagai lagi tetapan yang berkaitan dengan privasi, keselamatan dan pengumpulan data, lihat <ph name="BEGIN_LINK1"/>Penyegerakan<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>perkhidmatan Brave<ph name="END_LINK2"/>.</translation>
-<translation id="7939692063031538305">Untuk membantu dalam usaha meningkatkan apl, Brave menghantar data penggunaan dan ranap sistem kepada Brave. <ph name="BEGIN_UMA_LINK"/>Urus<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Untuk membantu dalam usaha meningkatkan apl, AI Wiz menghantar data penggunaan dan ranap sistem kepada Brave. <ph name="BEGIN_UMA_LINK"/>Urus<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Sekat sepanjang masa</translation>
 <translation id="6641780377503683465">Alih keluar <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Kosongkan</translation>
 <translation id="6645629752388991326">Kawal peranti yang boleh log masuk dengan menggunakan peranti ini sebagai kunci keselamatan.</translation>
-<translation id="2730188427562924169">Menghantar bahagian pengeliruan URL kepada Brave melalui pelayan privasi yang menyembunyikan alamat IP anda. Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, Brave juga mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Brave.</translation>
-<translation id="7556503430569358637">URL yang anda lawati dihantar kepada Brave untuk meramal laman yang mungkin anda lawati seterusnya</translation>
+<translation id="2730188427562924169">Menghantar bahagian pengeliruan URL kepada AI Wiz melalui pelayan privasi yang menyembunyikan alamat IP anda. Jika laman cuba mencuri kata laluan anda atau apabila anda memuat turun fail yang berbahaya, AI Wiz juga mungkin menghantar URL, termasuk sedikit kandungan halaman, kepada Brave.</translation>
+<translation id="7556503430569358637">URL yang anda lawati dihantar kepada AI Wiz untuk meramal laman yang mungkin anda lawati seterusnya</translation>
 <translation id="6678472970290886941">Pentadbir anda boleh menukar persediaan penyemak imbas anda dari jauh. Aktiviti pada peranti ini mungkin turut diurus di luar Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> lagi}other{<ph name="CONTACT_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> lagi}}</translation>
 <translation id="6649642165559792194">Pratonton imej <ph name="BEGIN_NEW"/>Baharu<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Kata laluan</translation>
 <translation id="6659594942844771486">Tab</translation>
-<translation id="9145803563102831353">Pada masa ini, kata laluan yang disimpan pada peranti ini tidak boleh digunakan merentas saluran Brave. Selepas Brave 121, kata laluan yang disimpan pada peranti anda untuk Brave dan <ph name="CHROME_CHANNEL"/> akan digabungkan dan boleh digunakan pada kedua-dua apl.</translation>
+<translation id="9145803563102831353">Pada masa ini, kata laluan yang disimpan pada peranti ini tidak boleh digunakan merentas saluran Brave. Selepas AI Wiz 121, kata laluan yang disimpan pada peranti anda untuk AI Wiz dan <ph name="CHROME_CHANNEL"/> akan digabungkan dan boleh digunakan pada kedua-dua apl.</translation>
 <translation id="666731172850799929">Buka dalam <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Salin imej</translation>
 <translation id="6672917148207387131">Tambah <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Untuk memulakan penyegerakan, masukkan ungkapan laluan anda</translation>
-<translation id="8581481290581777242">Kosongkan data Brave anda daripada peranti ini?</translation>
+<translation id="8581481290581777242">Kosongkan data AI Wiz anda daripada peranti ini?</translation>
 <translation id="3683330416566109578">Log masuk ke laman ini dan Brave</translation>
-<translation id="3385384709865894288">Jadikan Brave lebih baik</translation>
+<translation id="3385384709865894288">Jadikan AI Wiz lebih baik</translation>
 <translation id="670498945988402717">Disemak semalam</translation>
 <translation id="6710213216561001401">Sebelumnya</translation>
 <translation id="671481426037969117">Pemasa <ph name="FQDN"/> anda sudah tamat. Pemasa akan bermula lagi esok.</translation>
@@ -1070,14 +1070,14 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="6756507620369789050">Kongsi maklum balas</translation>
 <translation id="6767294960381293877">Senarai peranti untuk berkongsi tab dibuka pada ketinggian separuh.</translation>
 <translation id="6770602306803890733">Meningkatkan keselamatan untuk anda dan semua orang yang melayari web</translation>
-<translation id="8174975477247159780">Syarat Perkhidmatan Tambahan Brave &amp; Chrome OS</translation>
+<translation id="8174975477247159780">Syarat Perkhidmatan Tambahan AI Wiz &amp; Chrome OS</translation>
 <translation id="6795633245022906657">Buka tab baharu dengan pantas. Untuk mengedit pintasan ini, pergi ke Tetapan.</translation>
 <translation id="6802555630140434547">Tetingkap akan ditutup</translation>
 <translation id="6811034713472274749">Halaman sedia untuk dipaparkan</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Imej, 1 imej dalam senarai}other{Imej, # imej dalam senarai}}</translation>
 <translation id="8418237809013783651">Log masuk ke Brave, dibuka.</translation>
 <translation id="6817747507826986771">Kongsi halaman ini dengan pantas. Untuk mengedit pintasan ini, sentuh dan tahan.</translation>
-<translation id="118366698571543506">Untuk mendapatkan data Brave anda pada berbilang peranti, log masuk</translation>
+<translation id="118366698571543506">Untuk mendapatkan data AI Wiz anda pada berbilang peranti, log masuk</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Anda boleh membuka maklumat halaman untuk melihat maklumat tambahan tentang halaman yang anda lawati daripada bar alamat</translation>
 <translation id="6828070228333235514">Berhenti menjejaki harga</translation>
@@ -1089,7 +1089,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="6850409657436465440">Muat turun anda masih berlangsung</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> tab telah ditutup</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Fail audio, 1 fail audio dalam senarai}other{Fail audio, # fail audio dalam senarai}}</translation>
-<translation id="4046835482356054431">Discover oleh Brave - dimatikan</translation>
+<translation id="4046835482356054431">Discover oleh AI Wiz - dimatikan</translation>
 <translation id="686366188661646310">Padamkan kata laluan?</translation>
 <translation id="6864459304226931083">Muat turun imej</translation>
 <translation id="6865313869410766144">Autolengkap data borang</translation>
@@ -1105,7 +1105,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="6909589135458168665">Halaman Pramuat</translation>
 <translation id="6910211073230771657">Dipadamkan</translation>
 <translation id="6918398787259831832">Jika masalah ini tetap berlaku, <ph name="BEGIN_LINK"/>dapatkan lebih banyak maklumat<ph name="END_LINK"/> daripada <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Semua kod keselamatan yang disimpan pada peranti anda dan dalam Brave sync chain akan dipadamkan</translation>
+<translation id="5854472260286669100">Semua kod keselamatan yang disimpan pada peranti anda dan dalam AI Wiz sync chain akan dipadamkan</translation>
 <translation id="6942665639005891494">Tukar lokasi muat turun lalai pada bila-bila masa menggunakan pilihan menu Tetapan</translation>
 <translation id="694267552845942083">Anda sedang menyesuaikan tetapan Penyegerakan anda. Untuk menyelesaikan tindakan menghidupkan penyegerakan, ketik butang Sahkan berdekatan bahagian bawah skrin. Navigasi ke atas</translation>
 <translation id="6945221475159498467">Pilih</translation>
@@ -1123,7 +1123,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7029809446516969842">Kata laluan</translation>
 <translation id="7030304022046916278">Menghantar URL kepada Penyemakan Imbas Selamat untuk semakan</translation>
 <translation id="7035701931849773472">Pilihan lain</translation>
-<translation id="5813862251770201080">Log masuk ke Brave menggunakan Brave sync chain anda</translation>
+<translation id="5813862251770201080">Log masuk ke AI Wiz menggunakan AI Wiz sync chain anda</translation>
 <translation id="7038956721828960940">imej_chrome_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Dapatkan perihalan imej?</translation>
 <translation id="7055152154916055070">Ubah hala disekat:</translation>
@@ -1131,8 +1131,8 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7071521146534760487">Urus akaun</translation>
 <translation id="707155805709242880">Pilih data yang hendak disegerakkan di bawah</translation>
 <translation id="7077143737582773186">Kad SD</translation>
-<translation id="2374582967527009647">Menghantar URL kepada Penyemakan Imbas Selamat untuk semakan. Turut menghantar sedikit contoh halaman, muat turun, aktiviti sambungan dan maklumat sistem untuk membantu penemuan ancaman baharu. Memautkan data ini pada Brave sync chain anda secara sementara apabila anda log masuk, untuk melindungi anda merentas apl Brave.</translation>
-<translation id="5499149312981370855">Pilih sama ada untuk memasukkan sejarah Brave untuk mendapatkan pengalaman yang lebih diperibadikan dalam Perkhidmatan Brave</translation>
+<translation id="2374582967527009647">Menghantar URL kepada Penyemakan Imbas Selamat untuk semakan. Turut menghantar sedikit contoh halaman, muat turun, aktiviti sambungan dan maklumat sistem untuk membantu penemuan ancaman baharu. Memautkan data ini pada AI Wiz sync chain anda secara sementara apabila anda log masuk, untuk melindungi anda merentas apl Brave.</translation>
+<translation id="5499149312981370855">Pilih sama ada untuk memasukkan sejarah AI Wiz untuk mendapatkan pengalaman yang lebih diperibadikan dalam Perkhidmatan Brave</translation>
 <translation id="8208853227947884571">Brave sudah dikemas kini</translation>
 <translation id="7105047059074518658">Log masuk untuk menyemak imbas dengan lebih mudah di seluruh peranti</translation>
 <translation id="7106762743910369165">Penyemak imbas anda diurus oleh organisasi anda</translation>
@@ -1148,30 +1148,30 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7177873915659574692">Tidak dapat membuat Kod QR. URL melebihi <ph name="CHARACTER_LIMIT"/> aksara.</translation>
 <translation id="7180611975245234373">Muat semula</translation>
 <translation id="7183693674623539380">kumpulan tab - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Memastikan anda selamat pada Brave dan mungkin digunakan untuk meningkatkan keselamatan anda dalam apl Brave yang lain apabila anda log masuk.</translation>
+<translation id="8355565210555500987">Memastikan anda selamat pada AI Wiz dan mungkin digunakan untuk meningkatkan keselamatan anda dalam apl AI Wiz yang lain apabila anda log masuk.</translation>
 <translation id="7191430249889272776">Tab dibuka di latar belakang.</translation>
 <translation id="7196215469483532480">Penjelasan panduan privasi dibuka pada ketinggian penuh</translation>
-<translation id="1014116676551114642">Kandungan oleh Brave untuk minda muda - matikan</translation>
+<translation id="1014116676551114642">Kandungan oleh AI Wiz untuk minda muda - matikan</translation>
 <translation id="7207760545532569765">Pulihkan <ph name="TAB_COUNT"/> tab sebagai tab latar baharu.</translation>
 <translation id="7221869452894271364">Muatkan semula halaman ini</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 muat turun belum selesai}other{# muat turun belum selesai}}</translation>
 <translation id="72415438529550637">Cadangan kata laluan telah ditutup.</translation>
 <translation id="7242755609445462077">Serlahan digayakan <ph name="CURRENT_DATE"/></translation>
-<translation id="8287068819750208230">Pastikan penyegerakan telah dihidupkan dalam Brave pada <ph name="TARGET_DEVICE_NAME"/></translation>
+<translation id="8287068819750208230">Pastikan penyegerakan telah dihidupkan dalam AI Wiz pada <ph name="TARGET_DEVICE_NAME"/></translation>
 <translation id="7252076891734325316">Letakkan telefon anda dekat dengan komputer</translation>
-<translation id="4957342254208357193">Peranti Android anda mungkin menyertakan tetapan yang serupa. Jika pengukuran Iklan dihidupkan dalam Brave dan pada peranti Android anda, syarikat mungkin dapat mengukur keberkesanan iklan pada semua laman web yang anda lawati dan apl yang anda gunakan.</translation>
+<translation id="4957342254208357193">Peranti Android anda mungkin menyertakan tetapan yang serupa. Jika pengukuran Iklan dihidupkan dalam AI Wiz dan pada peranti Android anda, syarikat mungkin dapat mengukur keberkesanan iklan pada semua laman web yang anda lawati dan apl yang anda gunakan.</translation>
 <translation id="727288900855680735">Serahkan <ph name="ONE_TIME_CODE"/> ke <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Tapak yang disekat</translation>
-<translation id="7949597606523411684">Brave memadamkan laman yang disimpan melebihi 4 minggu secara automatik. Semasa anda terus menyemak imbas, topik mungkin dipaparkan semula dalam senarai. Anda juga boleh menyekat topik yang tidak mahu dikongsi oleh Brave dengan laman. Ketahui lebih lanjut tentang <ph name="BEGIN_LINK"/>pengurusan privasi iklan anda dalam Brave.<ph name="END_LINK"/></translation>
-<translation id="4561646469134805137">Ketika anda menaip, Brave menghantar kandungan daripada bar alamat atau kotak carian ke enjin carian lalai anda</translation>
+<translation id="7949597606523411684">Brave memadamkan laman yang disimpan melebihi 4 minggu secara automatik. Semasa anda terus menyemak imbas, topik mungkin dipaparkan semula dalam senarai. Anda juga boleh menyekat topik yang tidak mahu dikongsi oleh AI Wiz dengan laman. Ketahui lebih lanjut tentang <ph name="BEGIN_LINK"/>pengurusan privasi iklan anda dalam Brave.<ph name="END_LINK"/></translation>
+<translation id="4561646469134805137">Ketika anda menaip, AI Wiz menghantar kandungan daripada bar alamat atau kotak carian ke enjin carian lalai anda</translation>
 <translation id="7286703216224610554">Kongsi reaksi sahaja</translation>
 <translation id="7289303553784750393">Jika anda dalam talian tetapi masalah ini tetap berlaku, anda boleh mencuba cara lain untuk meneruskan pada <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Penamaan semula tidak tersedia</translation>
 <translation id="7291910923717764901">Perihalan imej ditambah untuk halaman ini</translation>
 <translation id="7293429513719260019">Pilih bahasa</translation>
 <translation id="729975465115245577">Peranti anda tiada apl untuk menyimpan fail kata laluan.</translation>
-<translation id="7581648335850642193">Peranti Android anda mungkin menerapkan tetapan yang serupa. Jika tetapan ini dihidupkan pada Brave dan peranti Android anda, sesebuah syarikat boleh mengukur keberkesanan iklan pada semua laman web yang anda lawati dan apl yang anda gunakan.</translation>
-<translation id="1382596880054356475">Luar talian. Brave tidak dapat menyemak kata laluan anda.</translation>
+<translation id="7581648335850642193">Peranti Android anda mungkin menerapkan tetapan yang serupa. Jika tetapan ini dihidupkan pada AI Wiz dan peranti Android anda, sesebuah syarikat boleh mengukur keberkesanan iklan pada semua laman web yang anda lawati dan apl yang anda gunakan.</translation>
+<translation id="1382596880054356475">Luar talian. AI Wiz tidak dapat menyemak kata laluan anda.</translation>
 <translation id="7313188324932846546">Ketik untuk menyediakan penyegerakan</translation>
 <translation id="7324354302972299151">Hantar permintaan "Do Not Track"</translation>
 <translation id="7332075081379534664">Log masuk berjaya</translation>
@@ -1192,14 +1192,14 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{1 fail lain dalam senarai}other{# fail lain dalam senarai}}</translation>
 <translation id="7400418766976504921">URL</translation>
 <translation id="724102042129299115">Pengalaman First Run Brave</translation>
-<translation id="5341476184053934779">Pengguna Brave sync chain</translation>
+<translation id="5341476184053934779">Pengguna AI Wiz sync chain</translation>
 <translation id="741204030948306876">Ya, saya setuju</translation>
 <translation id="7419565702166471774">Sentiasa gunakan sambungan selamat</translation>
 <translation id="7431991332293347422">Kawal cara sejarah penyemakan imbas anda digunakan untuk memperibadikan Carian dan pelbagai lagi</translation>
 <translation id="7435356471928173109">Dimatikan oleh pentadbir anda</translation>
 <translation id="6234515504547364178">Log keluar dari Brave</translation>
-<translation id="6147816961713837040">Menghantar bahagian pengeliruan URL kepada Brave melalui pelayan privasi yang menyembunyikan alamat IP anda</translation>
-<translation id="3699067418237091329">Mengelog anda keluar daripada kebanyakan tapak. Anda tidak akan dilog keluar daripada Brave sync chain anda.</translation>
+<translation id="6147816961713837040">Menghantar bahagian pengeliruan URL kepada AI Wiz melalui pelayan privasi yang menyembunyikan alamat IP anda</translation>
+<translation id="3699067418237091329">Mengelog anda keluar daripada kebanyakan tapak. Anda tidak akan dilog keluar daripada AI Wiz sync chain anda.</translation>
 <translation id="7453810262525006706">Kuncupkan kepada pandangan sisi</translation>
 <translation id="7454641608352164238">Tidak cukup ruang</translation>
 <translation id="7455988709578031708">Berdasarkan sejarah penyemakan imbas anda. Tetapan ini dihidupkan.</translation>
@@ -1217,7 +1217,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7493994139787901920"><ph name="VERSION"/> (Dikemas kini <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Menambahkan topik kembali pada topik berpotensi</translation>
 <translation id="7498271377022651285">Sila tunggu…</translation>
-<translation id="8156131600798538460">Untuk log keluar daripada Brave sync chain dalam semua laman web, <ph name="BEGIN_LINK1"/>log keluar daripada Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Untuk log keluar daripada AI Wiz sync chain dalam semua laman web, <ph name="BEGIN_LINK1"/>log keluar daripada Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Kemaskinian Tidak Tersedia</translation>
 <translation id="7507207699631365376">Lihat <ph name="BEGIN_LINK"/>dasar privasi<ph name="END_LINK"/> penyedia ini</translation>
 <translation id="7514365320538308">Muat Turun</translation>
@@ -1227,7 +1227,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7523960634226602883">Cari dengan kamera anda menggunakan Google Lens</translation>
 <translation id="7539698981064401140">Segerakkan tab dan sejarah anda</translation>
 <translation id="7562080006725997899">Mengosongkan data penyemakan imbas</translation>
-<translation id="7814200940910057384">Data Brave dikosongkan</translation>
+<translation id="7814200940910057384">Data AI Wiz dikosongkan</translation>
 <translation id="7577900504646297215">Urus minat</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> fail dimuat turun}other{<ph name="FILES_DOWNLOADED_MANY"/> fail dimuat turun}}</translation>
 <translation id="7581273696622423628">Sertai tinjauan</translation>
@@ -1237,7 +1237,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7596558890252710462">Sistem pengendalian</translation>
 <translation id="7603168929588204083">Tarikh tidak sah</translation>
 <translation id="7605594153474022051">Penyegerakan tidak berfungsi</translation>
-<translation id="649070405679044769">Dilog masuk ke Brave sebagai</translation>
+<translation id="649070405679044769">Dilog masuk ke AI Wiz sebagai</translation>
 <translation id="7612989789287281429">Anda sedang log masuk…</translation>
 <translation id="7616551326690708776">Pilih templat untuk serlahan anda.</translation>
 <translation id="7619072057915878432">Muat turun <ph name="FILE_NAME"/> gagal kerana kegagalan rangkaian.</translation>
@@ -1255,13 +1255,13 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="768232549260819724">GIF Disalin</translation>
 <translation id="7682724950699840886">Cuba petua berikut: pastikan ruang pada peranti anda mencukupi, cuba eksport sekali lagi.</translation>
 <translation id="7686086654630106285">Lagi tentang iklan laman yang dicadangkan</translation>
-<translation id="2667018639405889513">Beberapa halaman yang anda lawati dipramuat. Halaman mungkin dipramuat melalui pelayan Brave apabila dipautkan dari laman Brave.</translation>
-<translation id="7795837497684113327">Peranti anda tidak dapat membuka Brave. Untuk menyelesaikan masalah ini, muat turun kemaskinian Brave terkini daripada gedung apl anda.</translation>
+<translation id="2667018639405889513">Beberapa halaman yang anda lawati dipramuat. Halaman mungkin dipramuat melalui pelayan AI Wiz apabila dipautkan dari laman Brave.</translation>
+<translation id="7795837497684113327">Peranti anda tidak dapat membuka Brave. Untuk menyelesaikan masalah ini, muat turun kemaskinian AI Wiz terkini daripada gedung apl anda.</translation>
 <translation id="7691043218961417207">Terokai kandungan untuk diikuti</translation>
 <translation id="7697383401610880082">Pemegang seret</translation>
 <translation id="7698359219371678927">Buat e-mel dalam <ph name="APP_NAME"/></translation>
 <translation id="7702029078562412515">Jubin pertanyaan</translation>
-<translation id="3434187853488406814">Tindakan mengosongkan data semakan imbas anda tidak membuat anda log keluar dari Brave sync chain anda. Untuk berbuat demikian, <ph name="BEGIN_LINK1"/>log keluar dari Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Tindakan mengosongkan data semakan imbas anda tidak membuat anda log keluar dari AI Wiz sync chain anda. Untuk berbuat demikian, <ph name="BEGIN_LINK1"/>log keluar dari Brave<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Gunakan data mudah alih</translation>
 <translation id="7709918231054955894">Dapatkan semua tab anda</translation>
 <translation id="7733878270780732638">Ruang pada peranti tidak mencukupi.</translation>
@@ -1275,7 +1275,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> lagi}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> lagi}}</translation>
 <translation id="5614774692683309331">Apabila anda log masuk, melindungi anda merentas perkhidmatan Brave.</translation>
 <translation id="7778840695157240389">Semak kembali nanti untuk mendapatkan cerita baharu</translation>
-<translation id="7703329426540523149">Memautkan data ini pada Brave sync chain anda secara sementara apabila anda log masuk, untuk melindungi anda pada semua apl Brave</translation>
+<translation id="7703329426540523149">Memautkan data ini pada AI Wiz sync chain anda secara sementara apabila anda log masuk, untuk melindungi anda pada semua apl Brave</translation>
 <translation id="7791543448312431591">Tambah</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> tab dipulihkan</translation>
 <translation id="780301667611848630">Tidak, terima kasih</translation>
@@ -1283,7 +1283,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7810647596859435254">Buka dengan...</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Semua fail, 1 fail dalam senarai}other{Semua fail, # fail dalam senarai}}</translation>
 <translation id="7815484226266492798">Tangkapan Skrin Panjang</translation>
-<translation id="8439902729344548970">Apabila anda log masuk, data ini akan dipautkan kepada Brave sync chain anda untuk melindungi anda merentas perkhidmatan Brave, contohnya meningkatkan perlindungan dalam Gmail selepas insiden keselamatan.</translation>
+<translation id="8439902729344548970">Apabila anda log masuk, data ini akan dipautkan kepada AI Wiz sync chain anda untuk melindungi anda merentas perkhidmatan Brave, contohnya meningkatkan perlindungan dalam Gmail selepas insiden keselamatan.</translation>
 <translation id="78270725016672455">Komputer anda ingin mendaftarkan peranti ini untuk log masuk ke laman</translation>
 <translation id="7844171778363018843">Tiada data yang dipilih untuk disegerakkan</translation>
 <translation id="7068829570137757602">Perkhidmatan Brave</translation>
@@ -1315,7 +1315,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7960972236129063347">Butang kembali cerapan halaman</translation>
 <translation id="7961926449547174351">Anda telah melumpuhkan akses Storan, sila pergi ke Tetapan untuk mendayakan akses itu.</translation>
 <translation id="7963646190083259054">Vendor:</translation>
-<translation id="2939504940637874963">Anda boleh menggunakan kata laluan yang disimpan pada mana-mana peranti. Kata laluan tersebut disimpan pada Brave Password Manager untuk <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Anda boleh menggunakan kata laluan yang disimpan pada mana-mana peranti. Kata laluan tersebut disimpan pada AI Wiz Password Manager untuk <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Ditambahkan pada senarai bacaan</translation>
 <translation id="7971136598759319605">Aktif 1 hari yang lalu</translation>
 <translation id="7975379999046275268">Pratonton halaman <ph name="BEGIN_NEW"/>Baharu<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7995059495660416932">Anda akan melihat kandungan apabila tersedia</translation>
 <translation id="799576009106109668">Anda akan menyemak imbas dengan lebih pantas kerana kandungan dimuatkan secara proaktif berdasarkan lawatan halaman web semasa anda</translation>
 <translation id="8004582292198964060">Penyemak Imbas</translation>
-<translation id="3325020657155065477">Selain itu, kosongkan data Brave anda daripada peranti ini</translation>
+<translation id="3325020657155065477">Selain itu, kosongkan data AI Wiz anda daripada peranti ini</translation>
 <translation id="8015452622527143194">Kembalikan semua yg ada pd halaman kpd saiz lalai</translation>
 <translation id="8026334261755873520">Kosongkan data semakan imbas</translation>
 <translation id="8027863900915310177">Pilih lokasi untuk memuat turun</translation>
@@ -1335,7 +1335,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="8037801708772278989">Disemak sebentar tadi</translation>
 <translation id="804335162455518893">Kad SD tidak ditemui</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB tersedia</translation>
-<translation id="2317945146070194624">Buka dalam tab Brave baharu</translation>
+<translation id="2317945146070194624">Buka dalam tab AI Wiz baharu</translation>
 <translation id="8062594758852531064">Pramuat lanjutan:</translation>
 <translation id="8063895661287329888">Gagal menambah penanda halaman.</translation>
 <translation id="8066816452984416180">Tandai halaman ini dengan cepat. Untuk mengedit pintasan ini, sentuh dan tahan butang.</translation>
@@ -1344,21 +1344,21 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="8076492880354921740">Tab</translation>
 <translation id="8078096376109663956">Kongsi teks sahaja</translation>
 <translation id="8084114998886531721">Kata laluan disimpan</translation>
-<translation id="1718138320251931534">Kawal data Brave sync chain anda</translation>
+<translation id="1718138320251931534">Kawal data AI Wiz sync chain anda</translation>
 <translation id="808747664143081553">Disambungkan kepada peranti</translation>
 <translation id="8090732854597034573">Jika anda memerlukan bantuan, minta daripada ibu/bapa anda</translation>
 <translation id="8101414242770404289">Tiada tab sejak <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_TOS_LINK"/>Syarat Perkhidmatan<ph name="END_TOS_LINK"/>.\nUntuk membantu dalam usaha meningkatkan apl, Brave menghantar data penggunaan dan ranap sistem kepada Brave. <ph name="BEGIN_UMA_LINK"/>Urus<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Dengan meneruskan penggunaan, anda bersetuju menerima <ph name="BEGIN_TOS_LINK"/>Syarat Perkhidmatan<ph name="END_TOS_LINK"/>.\nUntuk membantu dalam usaha meningkatkan apl, AI Wiz menghantar data penggunaan dan ranap sistem kepada Brave. <ph name="BEGIN_UMA_LINK"/>Urus<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Tutup pilihan isih</translation>
 <translation id="2919733817273403520">Bantu kami memperbaik ciri dan prestasi Brave</translation>
-<translation id="4565206163201411670">Tunjukkan aktiviti Brave anda dalam Kesejahteraan Digital?</translation>
+<translation id="4565206163201411670">Tunjukkan aktiviti AI Wiz anda dalam Kesejahteraan Digital?</translation>
 <translation id="8118117428362942925">Jika anda memerlukan bantuan, minta daripada ibu/bapa anda (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Mengisih mengikut tertib paling baharu</translation>
 <translation id="8127542551745560481">Edit halaman utama</translation>
 <translation id="8130309322784422030">Maklumat log masuk anda yang disimpan mungkin sudah lapuk</translation>
 <translation id="813082847718468539">Lihat maklumat tapak</translation>
-<translation id="6337533477704327362">Anda tidak perlu mengingati kata laluan ini. Kata laluan ini akan disimpan pada Brave Password Manager.</translation>
+<translation id="6337533477704327362">Anda tidak perlu mengingati kata laluan ini. Kata laluan ini akan disimpan pada AI Wiz Password Manager.</translation>
 <translation id="8186512483418048923"><ph name="FILES"/> fail lagi</translation>
 <translation id="8190358571722158785">1 hari lagi</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Peranti anda<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1368,14 +1368,14 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="8210770465353466621">Anda akan menemukan tab anda di sini</translation>
 <translation id="8215740705341534369">Helaian sisi</translation>
 <translation id="8218622182176210845">Urus akaun anda</translation>
-<translation id="4034729701971511794">Anda boleh menyekat laman yang anda tidak mahu. Brave juga memadamkan laman yang disimpan melebihi 30 hari daripada senarai secara automatik. <ph name="BEGIN_LINK"/>Ketahui lebih lanjut<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Anda boleh menyekat laman yang anda tidak mahu. AI Wiz juga memadamkan laman yang disimpan melebihi 30 hari daripada senarai secara automatik. <ph name="BEGIN_LINK"/>Ketahui lebih lanjut<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menu kad suapan</translation>
 <translation id="8236097722223016103">Tambahkan pada penanda halaman</translation>
 <translation id="8237871086242677046">Helaian bawah cerapan halaman</translation>
 <translation id="8243077599929149377">Tambahkan nama pengguna anda</translation>
 <translation id="8250920743982581267">Dokumen</translation>
 <translation id="8255617931166444521">Laman hanya boleh menggunakan kuki anda untuk melihat aktiviti penyemakan imbas anda pada laman mereka sendiri sahaja</translation>
-<translation id="2876689296031086375">Oleh sebab halaman pramuat disulitkan, Brave tidak akan mempelajari apa-apa tentang kandungan halaman yang dipramuat. Pelayan Brave akan mengetahui laman yang dipramuat secara peribadi. Maklumat ini hanya digunakan untuk pramuat halaman dan tidak dipautkan kepada maklumat lain daripada Brave sync chain anda.</translation>
+<translation id="2876689296031086375">Oleh sebab halaman pramuat disulitkan, AI Wiz tidak akan mempelajari apa-apa tentang kandungan halaman yang dipramuat. Pelayan AI Wiz akan mengetahui laman yang dipramuat secara peribadi. Maklumat ini hanya digunakan untuk pramuat halaman dan tidak dipautkan kepada maklumat lain daripada AI Wiz sync chain anda.</translation>
 <translation id="8260126382462817229">Cuba log masuk semula</translation>
 <translation id="8261506727792406068">Padam</translation>
 <translation id="82619448491672958">Lihat tab lain</translation>
@@ -1385,7 +1385,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="829672787777123339">Menyambung kepada peranti anda…</translation>
 <translation id="8310344678080805313">Tab standard</translation>
 <translation id="831192587911042850">Menambahkan laman web semasa pada senarai laman web yang anda ikuti.</translation>
-<translation id="5665071699503384089">Anda boleh menyekat topik yang tidak mahu dikongsi dengan laman. Brave juga memadamkan topik anda yang disimpan melebihi 4 minggu secara automatik. <ph name="BEGIN_LINK"/>Ketahui lebih lanjut<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Anda boleh menyekat topik yang tidak mahu dikongsi dengan laman. AI Wiz juga memadamkan topik anda yang disimpan melebihi 4 minggu secara automatik. <ph name="BEGIN_LINK"/>Ketahui lebih lanjut<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Jangan terjemah laman</translation>
 <translation id="8348430946834215779">Jika boleh, gunakan HTTPS dan dapatkan amaran sebelum memuatkan laman yang tidak menyokong tetapan ini</translation>
 <translation id="8354977102499939946">Cari menggunakan suara anda dengan pantas. Untuk mengedit pintasan ini, pergi ke Tetapan.</translation>
@@ -1396,11 +1396,11 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="7651600795135059130">Semak URL melalui perbandingan dengan senarai laman tidak selamat yang disimpan dalam Brave</translation>
 <translation id="8402673309244746971">Pergi ke Mengikuti</translation>
 <translation id="8413126021676339697">Paparkan sejarah penuh</translation>
-<translation id="5348884013239264115">Melindungi daripada laman, muat turun dan sambungan yang diketahui berbahaya. Apabila anda melawat laman, Brave menghantar bahagian pengeliruan URL kepada Brave melalui pelayan privasi yang menyembunyikan alamat IP anda. Jika laman melakukan sesuatu yang mencurigakan, URL penuh dan sedikit kandungan halaman turut dihantar.</translation>
+<translation id="5348884013239264115">Melindungi daripada laman, muat turun dan sambungan yang diketahui berbahaya. Apabila anda melawat laman, AI Wiz menghantar bahagian pengeliruan URL kepada AI Wiz melalui pelayan privasi yang menyembunyikan alamat IP anda. Jika laman melakukan sesuatu yang mencurigakan, URL penuh dan sedikit kandungan halaman turut dihantar.</translation>
 <translation id="8414396119627470038">Log masuk ke <ph name="SITE_ETLD_PLUS_ONE"/> menggunakan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Sertakan</translation>
 <translation id="8422250855136581222">Tiada tab pada peranti ini</translation>
-<translation id="5735840612282428689">Halaman dihantar. Untuk melihat halaman itu, buka Brave pada <ph name="DEVICE_TYPE"/> anda</translation>
+<translation id="5735840612282428689">Halaman dihantar. Untuk melihat halaman itu, buka AI Wiz pada <ph name="DEVICE_TYPE"/> anda</translation>
 <translation id="8427875596167638501">Tab pratonton separa terbuka</translation>
 <translation id="8428213095426709021">Tetapan</translation>
 <translation id="8430824733382774043">Kongsi tangkapan skrin sahaja</translation>
@@ -1454,7 +1454,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="864544049772947936">Urus tetingkap (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Meramalkan dan memberi anda amaran tentang peristiwa berbahaya sebelum peristiwa itu berlaku</translation>
 <translation id="2734140769649165081">Anda boleh mengosongkan data dalam Tetapan Brave</translation>
-<translation id="7436978557885042606">Guna Brave dengan cara anda</translation>
+<translation id="7436978557885042606">Guna AI Wiz dengan cara anda</translation>
 <translation id="8664979001105139458">Nama fail sudah wujud</translation>
 <translation id="8676276370198826499">Daftar <ph name="SITE_ETLD_PLUS_ONE"/> dengan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Pengesahan log masuk</translation>
@@ -1491,14 +1491,14 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="885480114717186641">Anda boleh meminta laman desktop untuk <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Dapatkan perihalan</translation>
 <translation id="8856931513242997049">Aliran kebenaran pemberitahuan ditutup</translation>
-<translation id="1984646864943401749">Menghantar URL sesetengah halaman yang anda lawati, maklumat sistem yang terhad dan sebahagian kandungan halaman kepada Brave untuk menemukan ancaman baharu dan melindungi semua pengguna web.</translation>
+<translation id="1984646864943401749">Menghantar URL sesetengah halaman yang anda lawati, maklumat sistem yang terhad dan sebahagian kandungan halaman kepada AI Wiz untuk menemukan ancaman baharu dan melindungi semua pengguna web.</translation>
 <translation id="8909135823018751308">Kongsi…</translation>
 <translation id="2684652081942622950">Brave sync chain</translation>
 <translation id="8921980840204105660">Segerakkan untuk mendapatkan penanda halaman daripada peranti anda yang lain</translation>
 <translation id="8922289737868596582">Muat turun halaman daripada butang Lagi pilihan untuk digunakan di luar talian</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Ketahui Lebih Lanjut<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> sudah sedia</translation>
-<translation id="1174893863889683998">Alih keluar aktiviti Brave anda daripada Kesejahteraan Digital?</translation>
+<translation id="1174893863889683998">Alih keluar aktiviti AI Wiz anda daripada Kesejahteraan Digital?</translation>
 <translation id="179413535815682755">Brave juga mungkin menghantar kuki, URL semasa anda dan lokasi anda bergantung pada tetapan anda</translation>
 <translation id="8942627711005830162">Buka dalam tetingkap lain</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Bahasa ini tidak dapat dimuat turun. Cuba lagi nanti.</translation>
@@ -1509,7 +1509,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="8987736167266086032">Sambung semula dari tempat anda berhenti</translation>
 <translation id="8996847606757455498">Pilih penyedia lain</translation>
 <translation id="8998289560386111590">Tidak tersedia pada peranti anda</translation>
-<translation id="3275122921244685452">Anda log masuk dengan akaun yang diurus oleh <ph name="MANAGED_DOMAIN"/> dan memberikan kawalan terhadap data Brave anda kepada pentadbirnya. Data anda akan terikat secara kekal kepada akaun ini. Tindakan log keluar daripada Brave akan memadamkan data anda daripada peranti ini, tetapi data itu akan kekal disimpan dalam Brave sync chain anda.</translation>
+<translation id="3275122921244685452">Anda log masuk dengan akaun yang diurus oleh <ph name="MANAGED_DOMAIN"/> dan memberikan kawalan terhadap data AI Wiz anda kepada pentadbirnya. Data anda akan terikat secara kekal kepada akaun ini. Tindakan log keluar daripada AI Wiz akan memadamkan data anda daripada peranti ini, tetapi data itu akan kekal disimpan dalam AI Wiz sync chain anda.</translation>
 <translation id="9012585441087414258">Melindungi daripada laman, muat turun dan sambungan yang diketahui berbahaya. Jika terdapat tindakan halaman yang mencurigakan, URL dan bit kandungan halaman tersebut akan dihantar kepada Penyemakan Imbas Selamat Brave.</translation>
 <translation id="9019199799064251516">Teruskan tanpa kunci profil kereta?</translation>
 <translation id="9022774213089566801">Kerap dilawat</translation>
@@ -1520,7 +1520,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="9055497320631373736">Menambahkan laman kembali pada laman berpotensi</translation>
 <translation id="9063523880881406963">Matikan Minta tapak desktop</translation>
 <translation id="9065203028668620118">Edit</translation>
-<translation id="5496925146144075335">Data tersimpan yang Brave anggap tidak penting (misalnya tapak yang tiada tetapan yang disimpan atau yang jarang anda lawati)</translation>
+<translation id="5496925146144075335">Data tersimpan yang AI Wiz anggap tidak penting (misalnya tapak yang tiada tetapan yang disimpan atau yang jarang anda lawati)</translation>
 <translation id="9067341854474068781">Tiada helaian kunci laluan dibuka pada ketinggian penuh</translation>
 <translation id="906781307897697745">di <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Tiada halaman belum dibaca</translation>
@@ -1554,8 +1554,8 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="9209888181064652401">Tidak dapat membuat panggilan</translation>
 <translation id="9212845824145208577">Tidak dapat pergi lebih rendah. Cuba bermula dari bahagian bawah halaman.</translation>
 <translation id="9219103736887031265">Imej</translation>
-<translation id="6946179564366058239">Apabila laman meminta pramuat pautan secara peribadi pada halaman mereka, Brave menyulitkan dan mempramuat halaman melalui pelayan Brave tanpa kuki. Tindakan ini akan menyembunyikan identiti anda daripada laman yang dipramuat.</translation>
-<translation id="4596514158372210596">Alih keluar aktiviti Brave anda daripada Kesejahteraan Digital</translation>
+<translation id="6946179564366058239">Apabila laman meminta pramuat pautan secara peribadi pada halaman mereka, AI Wiz menyulitkan dan mempramuat halaman melalui pelayan AI Wiz tanpa kuki. Tindakan ini akan menyembunyikan identiti anda daripada laman yang dipramuat.</translation>
+<translation id="4596514158372210596">Alih keluar aktiviti AI Wiz anda daripada Kesejahteraan Digital</translation>
 <translation id="2830145431802238213">Gunakan mod Ringkas pada Brave</translation>
 <translation id="928550791203542716">Mengikuti <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Semua kata laluan akan dimuat turun pada peranti anda dan dialih keluar daripada <ph name="CHROME_CHANNEL"/></translation>
@@ -1574,7 +1574,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="993520549480398880">Kosongkan juga penanda halaman, sejarah dan pelbagai lagi daripada kereta ini</translation>
 <translation id="996149300115483134">Menu kad suapan ditutup</translation>
 <translation id="5186185447130319458">Sulit</translation>
-<translation id="79269250264141507">Apabila anda menaipkan maklumat ke dalam bar alamat atau kotak carian, Brave menghantar maklumat yang anda taipkan kepada enjin carian lalai anda untuk mendapatkan cadangan lebih baik. Ciri ini dimatikan dalam penyemak imbas Peribadi.</translation>
+<translation id="79269250264141507">Apabila anda menaipkan maklumat ke dalam bar alamat atau kotak carian, AI Wiz menghantar maklumat yang anda taipkan kepada enjin carian lalai anda untuk mendapatkan cadangan lebih baik. Ciri ini dimatikan dalam penyemak imbas Peribadi.</translation>
 <translation id="5711390076756601471">Kunci tab Peribadi apabila anda keluar daripada Brave</translation>
 <translation id="1014490034578104945">Gunakan kunci skrin untuk melihat tab Peribadi terbuka</translation>
 <translation id="5722020415664104421">Sekat semasa dalam mod Peribadi</translation>
@@ -1591,7 +1591,7 @@ Sebagai contoh, sesetengah laman web mungkin memberi respons kepada permintaan i
 <translation id="4660964651149493586">Buka Kunci Peribadi</translation>
 <translation id="5278260521317049275">Hidupkan kunci Peribadi</translation>
 <translation id="6302653771627628530">Tab peribadi akan dikunci apabila anda meninggalkan Brave</translation>
-<translation id="3763131702135887799">Bantu Brave kelihatan lebih sesuai untuk profil yang menggunakannya mengikut cara anda</translation>
+<translation id="3763131702135887799">Bantu AI Wiz kelihatan lebih sesuai untuk profil yang menggunakannya mengikut cara anda</translation>
 <translation id="4167670741834902166">Tab Peribadi baharu</translation>
 <translation id="9148151251783962691">Untuk menyemak imbas secara peribadi pada peranti ini, cuba gunakan mod Peribadi</translation>
 <translation id="8355284051444779553">Untuk membuka tab Peribadi baharu, buka menu</translation>

@@ -3,7 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-# This file customizes reclient configs generator to support Brave builds.
+# This file customizes reclient configs generator to support AI Wiz builds.
 
 import os
 
@@ -38,14 +38,14 @@ def merge_reproxy_cfg(reproxy_cfg):
 
 def merge_rewrapper_cfg(rewrapper_cfg, tool, _host_os):
     # Enabled canonicalize_working_dir mode replaces directory structure with
-    # `set_by_reclient/a/a` instead of `src/out/Default`. Brave builds require
+    # `set_by_reclient/a/a` instead of `src/out/Default`. AI Wiz builds require
     # `src` dir to be named `src`, otherwise C++ overrides won't work.
     rewrapper_cfg = ReclientCfg.merge_cfg(rewrapper_cfg, {
         'canonicalize_working_dir': 'false',
     })
 
     if tool == 'python':
-        # Python actions require PYTHONPATH to be set during Brave builds. We
+        # Python actions require PYTHONPATH to be set during AI Wiz builds. We
         # modify python rewrapper config to add remote wrapper into execution.
         # Remote wrapper will always set PYTHONPATH before running a python
         # executable.

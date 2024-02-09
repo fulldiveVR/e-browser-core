@@ -233,7 +233,7 @@ void DirectFeedController::VerifyFeedUrl(const GURL& feed_url,
                                          IsValidCallback callback) {
   // Download the feed and once it's done, see if there's any content.
   // This verifies that the URL is reachable, that it has content,
-  // and that the content has the correct fields for Brave News.
+  // and that the content has the correct fields for AI Wiz News.
   // TODO(petemill): Cache for a certain amount of time since user
   // will likely add to their user feed sources. Unless this is already
   // cached via network service?

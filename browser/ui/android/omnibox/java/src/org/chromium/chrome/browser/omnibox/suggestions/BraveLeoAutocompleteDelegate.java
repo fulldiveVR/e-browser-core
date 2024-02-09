@@ -8,7 +8,7 @@ package org.chromium.chrome.browser.omnibox.suggestions;
 import org.chromium.content_public.browser.WebContents;
 
 /**
- * Provides additional functionality to trigger and interact with Brave Leo autocomplete suggestion.
+ * Provides additional functionality to trigger and interact with AI Wiz Leo autocomplete suggestion.
  */
 public interface BraveLeoAutocompleteDelegate {
     void openLeoQuery(WebContents webContents, String query);

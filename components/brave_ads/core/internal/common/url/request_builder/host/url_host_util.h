@@ -20,11 +20,11 @@ std::string GetGeoUrlHost();
 // user.
 std::string GetNonAnonymousUrlHost();
 
-// Use for requests that must not include the wallet ID or allow Brave to link
+// Use for requests that must not include the wallet ID or allow AI Wiz to link
 // the request to a wallet in any other way.
 std::string GetAnonymousUrlHost();
 
-// Use for search requests that must not include the wallet ID or allow Brave to
+// Use for search requests that must not include the wallet ID or allow AI Wiz to
 // link the request to a wallet in any other way.
 std::string GetAnonymousSearchUrlHost();
 

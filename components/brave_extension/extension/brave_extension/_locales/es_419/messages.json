@@ -29,7 +29,7 @@
   },
   "reportBrokenSite": {
     "message": "Informar sobre un sitio roto",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wiz developers"
   },
   "itemsBlocked": {
     "message": "Elementos bloqueados",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Los sitios suelen incluir cookies y scripts que intentan identificarte e identificar tu dispositivo (a menudo integrados en anuncios). Quieren saber quién eres y te siguen por toda la Web registrando lo que haces en cada sitio. Brave bloquea todo esto, para que puedas navegar sin que nadie te persiga.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Los sitios suelen incluir cookies y scripts que intentan identificarte e identificar tu dispositivo (a menudo integrados en anuncios). Quieren saber quién eres y te siguen por toda la Web registrando lo que haces en cada sitio. AI Wiz bloquea todo esto, para que puedas navegar sin que nadie te persiga.",
+    "description": "Message in read-only view explaining what AI Wiz Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Bloquear rastreadores entre sitios y otras cosas raras",

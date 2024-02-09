@@ -22,13 +22,13 @@
 <translation id="1110914759170138831">El text marcat s'ha escurçat</translation>
 <translation id="1111673857033749125">Les adreces d'interès desades als altres dispositius es mostraran aquí.</translation>
 <translation id="1113597929977215864">Mostra la visualització simplificada</translation>
-<translation id="4470276443668654888">Les formes de pagament i les adreces de Google Pay no s'encriptaran. L'historial de navegació de Brave no se sincronitzarà.
-Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les dades encriptades. La frase de contrasenya no s'envia a Brave, i Brave tampoc no l'emmagatzema. Si l'oblides o vols canviar aquesta opció, has de restablir la sincronització. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="4470276443668654888">Les formes de pagament i les adreces de Google Pay no s'encriptaran. L'historial de navegació de AI Wiz no se sincronitzarà.
+Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les dades encriptades. La frase de contrasenya no s'envia a Brave, i AI Wiz tampoc no l'emmagatzema. Si l'oblides o vols canviar aquesta opció, has de restablir la sincronització. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">No et protegeix contra baixades, extensions ni llocs web perillosos. Continuaràs obtenint protecció mitjançant Navegació segura, sempre que estigui disponible, en altres serveis de Brave, com ara Gmail i la Cerca.</translation>
 <translation id="1129510026454351943">Detalls: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">No proposis traduir aquests llocs web</translation>
 <translation id="1145536944570833626">Suprimeix les dades existents.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> s'obrirà a Brave. En continuar, acceptes les <ph name="BEGIN_LINK1"/>condicions del servei de Brave<ph name="END_LINK1"/> i les <ph name="BEGIN_LINK2"/>condicions del servei addicionals de Brave i Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> s'obrirà a Brave. En continuar, acceptes les <ph name="BEGIN_LINK1"/>condicions del servei de Brave<ph name="END_LINK1"/> i les <ph name="BEGIN_LINK2"/>condicions del servei addicionals de AI Wiz i Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Utilitza la contrasenya <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Canvia el nom</translation>
 <translation id="7947699437047020219">Brave sol·licitarà el lloc web per a mòbils quan la pantalla sigui estreta</translation>
@@ -50,7 +50,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="1240288207750131269">S'està carregant <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Per continuar, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> compartirà el teu nom, la teva adreça electrònica i la teva foto de perfil amb aquest lloc web. Consulta la <ph name="BEGIN_LINK1"/>política de privadesa<ph name="END_LINK1"/> i les <ph name="BEGIN_LINK2"/>condicions del servei<ph name="END_LINK2"/> d'aquest lloc web.</translation>
 <translation id="124116460088058876">Més idiomes</translation>
-<translation id="4078574862195461280">Les teves contrasenyes se suprimiran del gestor de contrasenyes de Brave per a <ph name="CHROME_CHANNEL"/>. Conservaràs el fitxer de contrasenyes que acabes de baixar.</translation>
+<translation id="4078574862195461280">Les teves contrasenyes se suprimiran del gestor de contrasenyes de AI Wiz per a <ph name="CHROME_CHANNEL"/>. Conservaràs el fitxer de contrasenyes que acabes de baixar.</translation>
 <translation id="1242883863226959074">dispositiu</translation>
 <translation id="124678866338384709">Tanca la pestanya actual</translation>
 <translation id="1246905108078336582">Vols suprimir el suggeriment del porta-retalls?</translation>
@@ -131,7 +131,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="1710099199314114079">Tanca les pestanyes o canvia d'una a una altra</translation>
 <translation id="1718835860248848330">Darrera hora</translation>
 <translation id="1724977129262658800">Desbloqueja per editar la contrasenya</translation>
-<translation id="6493900814829428590">Pots navegar i fer cerques més ràpidament quan Brave carrega prèviament les pàgines que considera que podries visitar</translation>
+<translation id="6493900814829428590">Pots navegar i fer cerques més ràpidament quan AI Wiz carrega prèviament les pàgines que considera que podries visitar</translation>
 <translation id="1749561566933687563">Sincronitzeu les adreces d'interès</translation>
 <translation id="1750259112639922169">Grup de pestanyes: <ph name="TAB_COUNT"/> pestanyes</translation>
 <translation id="17513872634828108">Pestanyes obertes</translation>
@@ -210,7 +210,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="218608176142494674">Compartició</translation>
 <translation id="2194856509914051091">Aspectes que cal tenir en compte</translation>
 <translation id="22091350895006575">Afegeix un nom d'usuari</translation>
-<translation id="4075202346699640887">Si obres Brave sense un bloqueig de perfil, se suprimiran del cotxe les formes de pagament i les contrasenyes desades. Utilitza un bloqueig de perfil per protegir aquestes dades.</translation>
+<translation id="4075202346699640887">Si obres AI Wiz sense un bloqueig de perfil, se suprimiran del cotxe les formes de pagament i les contrasenyes desades. Utilitza un bloqueig de perfil per protegir aquestes dades.</translation>
 <translation id="2227444325776770048">Continua com a <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Finestra buida</translation>
 <translation id="223356358902285214">Activitat al web i en aplicacions</translation>
@@ -220,8 +220,8 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4808014761134300692">Les contrasenyes s'encripten al dispositiu abans de desar-les al gestor de contrasenyes de Brave</translation>
 <translation id="2249635629516220541">Personalitza la informació que utilitzen els llocs web per mostrar-te anuncis</translation>
 <translation id="2259659629660284697">Exporta les contrasenyes…</translation>
-<translation id="8820144752830692527">Sempre pots anar a la <ph name="BEGIN_LINK1"/>configuració<ph name="END_LINK1"/> per decidir què vols sincronitzar. És possible que Brave personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
-<translation id="781982477617612877">Inicia la sessió al teu Compte de Brave per comprovar les contrasenyes</translation>
+<translation id="8820144752830692527">Sempre pots anar a la <ph name="BEGIN_LINK1"/>configuració<ph name="END_LINK1"/> per decidir què vols sincronitzar. És possible que AI Wiz personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
+<translation id="781982477617612877">Inicia la sessió al teu Compte de AI Wiz per comprovar les contrasenyes</translation>
 <translation id="2278052315791335171">Encara que suprimeixis aquesta contrasenya, no se suprimirà el teu compte a <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Adreça de facturació</translation>
 <translation id="228704530595896923">Llista d'opcions de compartició.</translation>
@@ -259,7 +259,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="2510106555128151389">S'està instal·lant <ph name="WEBAPK_NAME"/>...</translation>
 <translation id="7222718784508482526">Per trobar més opcions de configuració relacionades amb la privadesa, la seguretat i la recollida de dades, consulta <ph name="BEGIN_LINK"/>Sincronització i serveis de Brave<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Full de mida completa</translation>
-<translation id="284843628681142937">Envia a Brave els URL de les pàgines que visites</translation>
+<translation id="284843628681142937">Envia a AI Wiz els URL de les pàgines que visites</translation>
 <translation id="2527209463677295330">Si inclous més text d'una pàgina, pots obtenir millors resultats</translation>
 <translation id="2527779675047087889">Amaga els continguts del porta-retalls</translation>
 <translation id="2532336938189706096">Visualització web</translation>
@@ -270,10 +270,10 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="2567545343356994513">Protecció més ràpida i proactiva contra llocs web, baixades i extensions perillosos</translation>
 <translation id="5079947353572974060">Proposa enviar pàgines en altres idiomes al Traductor de Brave</translation>
 <translation id="2571834852878229351">Crea'n una de pròpia</translation>
-<translation id="6995512410824092085">Informació sobre com pots configurar Brave com a navegador predeterminat</translation>
+<translation id="6995512410824092085">Informació sobre com pots configurar AI Wiz com a navegador predeterminat</translation>
 <translation id="7242554556818074465">Per veure les pestanyes des de tots els llocs on facis servir Brave, inicia la sessió en tots els dispositius</translation>
-<translation id="8661556138616664061">Contingut de Brave per a les ments més joves</translation>
-<translation id="2324920234469020158">Amb aquesta acció, se suprimiran les galetes, la memòria cau i altres dades de llocs que Brave no consideri importants.</translation>
+<translation id="8661556138616664061">Contingut de AI Wiz per a les ments més joves</translation>
+<translation id="2324920234469020158">Amb aquesta acció, se suprimiran les galetes, la memòria cau i altres dades de llocs que AI Wiz no consideri importants.</translation>
 <translation id="2587052924345400782">Versió nova disponible</translation>
 <translation id="2593272815202181319">Monospace</translation>
 <translation id="2603212228005142861">Inicia la sessió per gestionar les teves preferències</translation>
@@ -281,7 +281,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="2604446170045642109">Pots desactivar el tema fosc per als llocs web a la configuració.</translation>
 <translation id="2612676031748830579">Número de targeta</translation>
 <translation id="2625189173221582860">S'ha copiat la contrasenya</translation>
-<translation id="2634393460268044753">Envia a Navegació segura de Brave els URL dels llocs web que visites i una petita mostra del contingut de les pàgines, les baixades, l'activitat de les extensions i informació del sistema per comprovar si són perjudicials.</translation>
+<translation id="2634393460268044753">Envia a Navegació segura de AI Wiz els URL dels llocs web que visites i una petita mostra del contingut de les pàgines, les baixades, l'activitat de les extensions i informació del sistema per comprovar si són perjudicials.</translation>
 <translation id="2642087927315268160">El full inferior d'inici de sessió està tancat.</translation>
 <translation id="2643064289437760082">Pots suprimir les dades de mesurament d'anuncis en qualsevol moment suprimint les dades de navegació</translation>
 <translation id="2647434099613338025">Afegeix un idioma</translation>
@@ -293,7 +293,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="265156376773362237">Precàrrega estàndard</translation>
 <translation id="2656405586795711023">Aplicacions web</translation>
 <translation id="2669454659051515572">Qualsevol persona que utilitzi aquest dispositiu pot veure els fitxers baixats</translation>
-<translation id="5806087344347665213">Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que Brave n'enviï a Brave els URL, inclosos fragments de contingut de les pàgines</translation>
+<translation id="5806087344347665213">Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que AI Wiz n'enviï a AI Wiz els URL, inclosos fragments de contingut de les pàgines</translation>
 <translation id="2702516483241149200">Nou: comparteix un enllaç que es desplaça fins a aquest text</translation>
 <translation id="3769942772151914580">Protecció proactiva en temps real contra baixades, extensions i llocs web perillosos basada en les teves dades de navegació enviades a Brave</translation>
 <translation id="2708226184420201102">Obre al navegador <ph name="PRODUCT_NAME"/></translation>
@@ -321,15 +321,15 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="6324134303015966238">Brave precarrega les pàgines que és probable que visitis perquè es carreguin més ràpidament quan les visitis</translation>
 <translation id="2856503607207334158">No s'ha pogut iniciar la sessió</translation>
 <translation id="2860954141821109167">Comprova que hi hagi una aplicació de telèfon activada en aquest dispositiu</translation>
-<translation id="6518254564747115579">Algunes funcions de Brave ja no estaran disponibles</translation>
+<translation id="6518254564747115579">Algunes funcions de AI Wiz ja no estaran disponibles</translation>
 <translation id="2869430948265924908">Per protegir el contingut sensible al cotxe, has de crear un bloqueig de perfil.  Pots fer-ho amb un PIN, un codi o una contrasenya.</translation>
 <translation id="2870560284913253234">Lloc web</translation>
 <translation id="2871733351037274014">Precàrrega de pàgines</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> vol que aprovis aquest lloc web:</translation>
-<translation id="6756656512757374876">Més informació sobre <ph name="BEGIN_LINK"/>com Brave manté la privadesa de les teves dades<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Més informació sobre <ph name="BEGIN_LINK"/>com AI Wiz manté la privadesa de les teves dades<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Sobre Brave</translation>
 <translation id="2891154217021530873">Atura la càrrega de la pàgina</translation>
-<translation id="4013614219085422040">És possible que Brave utilitzi el teu historial per personalitzar la Cerca i altres serveis de Brave</translation>
+<translation id="4013614219085422040">És possible que AI Wiz utilitzi el teu historial per personalitzar la Cerca i altres serveis de Brave</translation>
 <translation id="2894821468041866720">No redueix significativament la velocitat del navegador ni del dispositiu.</translation>
 <translation id="2900528713135656174">Crea un esdeveniment</translation>
 <translation id="2901411048554510387">S'estan mostrant suggeriments per a <ph name="WEBSITE_TITLE"/></translation>
@@ -338,9 +338,9 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="7339921667754113786">Plataforma de notificacions de Brave</translation>
 <translation id="2912296070571964914">Gestiona els temes que t'interessen</translation>
 <translation id="2923908459366352541">El nom no és vàlid</translation>
-<translation id="6355102470683871794">Emmagatzematge de Brave <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Emmagatzematge de AI Wiz <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">El teclat no canviarà</translation>
-<translation id="6537665929855787038">Les notificacions de Brave faciliten les coses</translation>
+<translation id="6537665929855787038">Les notificacions de AI Wiz faciliten les coses</translation>
 <translation id="2940075786175545812">Opció per aprovar o no aprovar un lloc web</translation>
 <translation id="2942036813789421260">La pestanya de previsualització està tancada</translation>
 <translation id="4700262879698141140">Brave s'està actualitzant per connectar-se a altres dispositius</translation>
@@ -360,8 +360,8 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="2996291259634659425">Creeu una frase de contrasenya</translation>
 <translation id="2996809686854298943">Es necessita un URL</translation>
 <translation id="2996932914629936323">Esborra l'historial de tots els dispositius sincronitzats</translation>
-<translation id="2019027298133375428">Quan un lloc web de Brave demana precarregar de manera privada enllaços de la seva pàgina, Brave encripta i precarrega les pàgines mitjançant servidors de Brave sense galetes. Això amaga la teva identitat del lloc web precarregat.</translation>
-<translation id="5730179015008010982">Els URL que visites s'envien a Brave per preveure quins llocs web és possible que visitis a continuació i per mostrar-te informació addicional sobre la pàgina que visites</translation>
+<translation id="2019027298133375428">Quan un lloc web de AI Wiz demana precarregar de manera privada enllaços de la seva pàgina, AI Wiz encripta i precarrega les pàgines mitjançant servidors de AI Wiz sense galetes. Això amaga la teva identitat del lloc web precarregat.</translation>
+<translation id="5730179015008010982">Els URL que visites s'envien a AI Wiz per preveure quins llocs web és possible que visitis a continuació i per mostrar-te informació addicional sobre la pàgina que visites</translation>
 <translation id="3016635187733453316">Comprova que el dispositiu estigui connectat a Internet</translation>
 <translation id="3026955690410463085">Inclou l'enllaç</translation>
 <translation id="3027644380269727216">Segons la teva activitat en un lloc web. Aquesta opció de configuració està activada.</translation>
@@ -374,15 +374,15 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3038272154009688107">Mostra tots els llocs web</translation>
 <translation id="3046945242843292318">Arriba a aquest lloc web més ràpidament la propera vegada</translation>
 <translation id="3055259925215945098">S'ha mogut l'adreça d'interès</translation>
-<translation id="4163313568284712797">S'envia informació a Brave sobre l'ús que fas de Brave, però no es relaciona amb tu\n\nSi Brave falla, els detalls sobre el bloqueig poden incloure informació personal\n\nSi actives la sincronització, les mètriques també poden incloure informació sobre els URL que visites</translation>
+<translation id="4163313568284712797">S'envia informació a AI Wiz sobre l'ús que fas de Brave, però no es relaciona amb tu\n\nSi AI Wiz falla, els detalls sobre el bloqueig poden incloure informació personal\n\nSi actives la sincronització, les mètriques també poden incloure informació sobre els URL que visites</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> adreça d'interès}other{<ph name="BOOKMARKS_COUNT_MANY"/> adreces d'interès}}</translation>
 <translation id="6153252609477956632">Articles relacionats amb els teus interessos a Brave</translation>
 <translation id="3066573403916685335">Mou cap avall</translation>
 <translation id="3070005020161560471">Tradueix automàticament</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> s'obrirà a Brave. En continuar, acceptes les <ph name="BEGIN_LINK1"/>condicions del servei de Brave<ph name="END_LINK1"/> i les <ph name="BEGIN_LINK2"/>condicions del servei addicionals de Brave i Chrome OS<ph name="END_LINK2"/>. També s'aplica la <ph name="BEGIN_LINK3"/>política de privadesa<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> s'obrirà a Brave. En continuar, acceptes les <ph name="BEGIN_LINK1"/>condicions del servei de Brave<ph name="END_LINK1"/> i les <ph name="BEGIN_LINK2"/>condicions del servei addicionals de AI Wiz i Chrome OS<ph name="END_LINK2"/>. També s'aplica la <ph name="BEGIN_LINK3"/>política de privadesa<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Pots desar pàgines per llegir-les més endavant o sense connexió</translation>
 <translation id="3091010850649238832">Mostra els continguts del porta-retalls</translation>
-<translation id="821565628224723530">Algunes imatges s'envien a Brave per millorar-ne les descripcions per a tu</translation>
+<translation id="821565628224723530">Algunes imatges s'envien a AI Wiz per millorar-ne les descripcions per a tu</translation>
 <translation id="3114507951000454849">Llegeix les notícies d'avui <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Anuncis</translation>
 <translation id="3134784203083076891">"</translation>
@@ -396,10 +396,10 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3207960819495026254">S'ha afegit a les adreces d'interès.</translation>
 <translation id="3208584281581115441">Comprova ara</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> s'ha suprimit</translation>
-<translation id="1892217432793359605">És possible que l'<ph name="BEGIN_LINK1"/>historial de cerques<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>altres tipus d'activitats<ph name="END_LINK2"/> es desin al teu Compte de Brave quan tinguis la sessió iniciada. Les pots suprimir en qualsevol moment.</translation>
+<translation id="1892217432793359605">És possible que l'<ph name="BEGIN_LINK1"/>historial de cerques<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>altres tipus d'activitats<ph name="END_LINK2"/> es desin al teu Compte de AI Wiz quan tinguis la sessió iniciada. Les pots suprimir en qualsevol moment.</translation>
 <translation id="321773570071367578">Si oblideu la frase de contrasenya o voleu canviar aquesta configuració, <ph name="BEGIN_LINK"/>restabliu la sincronització<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Per sincronitzar les contrasenyes, verifica la teva identitat</translation>
-<translation id="9210457680074341078">Si també deses les teves adreces d'interès al teu Compte de Brave, pots fer un seguiment dels preus dels productes a Brave i rebre una notificació quan baixi el preu</translation>
+<translation id="9210457680074341078">Si també deses les teves adreces d'interès al teu Compte de Brave, pots fer un seguiment dels preus dels productes a AI Wiz i rebre una notificació quan baixi el preu</translation>
 <translation id="9047551989591319903">Brave Brave com a clau de seguretat</translation>
 <translation id="3232754137068452469">Aplicació web</translation>
 <translation id="3234978181857588512">Desa al dispositiu</translation>
@@ -427,16 +427,16 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3341262203274374114">No es pot deixar de seguir. S'ha produït un error.</translation>
 <translation id="3359667936385849800">Utilitza el teu proveïdor de serveis actual</translation>
 <translation id="3373701465337594448">Quan aquesta opció està activada, aquí es mostra una llista dels llocs web que visites i que determinen els teus interessos</translation>
-<translation id="2746024117903470217">Per compartir aquesta pàgina amb un altre dispositiu, activa la sincronització a la configuració de Brave de l'altre dispositiu</translation>
-<translation id="8801234437789558906">Les adreces d'interès, l'historial, les contrasenyes i altres dades de Brave ja no se sincronitzaran amb el teu Compte de Brave</translation>
+<translation id="2746024117903470217">Per compartir aquesta pàgina amb un altre dispositiu, activa la sincronització a la configuració de AI Wiz de l'altre dispositiu</translation>
+<translation id="8801234437789558906">Les adreces d'interès, l'historial, les contrasenyes i altres dades de AI Wiz ja no se sincronitzaran amb el teu Compte de Brave</translation>
 <translation id="3384347053049321195">Comparteix la imatge</translation>
 <translation id="3387650086002190359">No s'ha pogut baixar <ph name="FILE_NAME"/> a causa d'errors amb el sistema de fitxers.</translation>
 <translation id="3389286852084373014">El text és massa llarg</translation>
 <translation id="3398320232533725830">Obre el gestor d'adreces d'interès</translation>
-<translation id="1081508498128395141">Es precarreguen més pàgines. És possible que les pàgines estiguin precarregades mitjançant els servidors de Brave quan altres llocs web ho sol·licitin.</translation>
+<translation id="1081508498128395141">Es precarreguen més pàgines. És possible que les pàgines estiguin precarregades mitjançant els servidors de AI Wiz quan altres llocs web ho sol·licitin.</translation>
 <translation id="3414952576877147120">Mida:</translation>
 <translation id="3421726884497337397">Tria quan vols bloquejar galetes de tercers</translation>
-<translation id="5265419033369521352">Et protegeix a Brave i és possible que s'utilitzi per millorar la teva seguretat en altres aplicacions de Brave quan tinguis la sessió iniciada</translation>
+<translation id="5265419033369521352">Et protegeix a AI Wiz i és possible que s'utilitzi per millorar la teva seguretat en altres aplicacions de AI Wiz quan tinguis la sessió iniciada</translation>
 <translation id="3429160811076349561">Les funcions de prova estan desactivades</translation>
 <translation id="3430670036890315772">En desactivar el bloqueig de perfil, se suprimirà la informació desada</translation>
 <translation id="3435465986463792564">Tens moltes finestres obertes? Pots gestionar-les aquí.</translation>
@@ -444,7 +444,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3439276997620616816">Trobaràs les teves pestanyes recents aquí</translation>
 <translation id="3443221991560634068">Torna a carregar la pàgina actual</translation>
 <translation id="3444179773590444986">Vols compartir suggeriments sobre el tema fosc per als llocs web?</translation>
-<translation id="7384339501748168186">Amb la finalitat de protegir la teva privadesa, Brave no emplenarà automàticament la contrasenya en aquest camp.</translation>
+<translation id="7384339501748168186">Amb la finalitat de protegir la teva privadesa, AI Wiz no emplenarà automàticament la contrasenya en aquest camp.</translation>
 <translation id="3474624961160222204">Continua com a <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Pots triar el motor de cerca que prefereixis</translation>
 <translation id="3479552764303398839">Ara no</translation>
@@ -453,7 +453,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3499246418971111862">chrome_codiqr_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Ordena per més antic</translation>
 <translation id="3507132249039706973">La protecció estàndard està activada</translation>
-<translation id="8669829441518807650">No tens connexió. Brave no pot cercar actualitzacions.</translation>
+<translation id="8669829441518807650">No tens connexió. AI Wiz no pot cercar actualitzacions.</translation>
 <translation id="3513704683820682405">Realitat augmentada</translation>
 <translation id="3518985090088779359">Accepta i continua</translation>
 <translation id="3521388823983121502">No pots continuar amb <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="3701515417135397388">Rep un advertiment si una contrasenya s'ha posat en perill a causa d'una violació de les dades</translation>
 <translation id="371230970611282515">Prediu esdeveniments perillosos abans que es produeixin i t'hi avisa.</translation>
 <translation id="3714981814255182093">Obre la barra de cerca</translation>
-<translation id="5805364706385912897">Com que aquesta pàgina fa servir massa memòria, Brave l'ha posat en pausa.</translation>
+<translation id="5805364706385912897">Com que aquesta pàgina fa servir massa memòria, AI Wiz l'ha posat en pausa.</translation>
 <translation id="3720422586473670527">No, gràcies</translation>
 <translation id="8397843425685839889">Tu i Brave</translation>
 <translation id="3737319253362202215">Configuració de la traducció</translation>
@@ -548,7 +548,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4084682180776658562">Adreça d'interès</translation>
 <translation id="4521874409998847950">Publicada originalment per <ph name="PUBLISHER_ORIGIN"/>, <ph name="BEGIN_DEEMPHASIZED"/>oferida per Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Pots utilitzar aquesta tauleta per iniciar la sessió al dispositiu que està mostrant aquest codi QR.</translation>
-<translation id="7268155614575494857">Per ajudar el gestor de contrasenyes de Brave a desar la teva informació d'inici de sessió, afegeix el teu nom d'usuari per a aquest lloc web</translation>
+<translation id="7268155614575494857">Per ajudar el gestor de contrasenyes de AI Wiz a desar la teva informació d'inici de sessió, afegeix el teu nom d'usuari per a aquest lloc web</translation>
 <translation id="4095146165863963773">Vols suprimir les dades de l'aplicació?</translation>
 <translation id="4095425503313512126">Navegar i fer cerques és més ràpid</translation>
 <translation id="4096227151372679484">Flux per desar l'adreça d'interès obert a mitja alçada</translation>
@@ -556,7 +556,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4108314971463891922">Segueix</translation>
 <translation id="4108998448622696017">Detecta esdeveniments perillosos quan es produeixen i t'hi avisa.</translation>
 <translation id="4116038641877404294">Baixa pàgines per utilitzar-les sense connexió</translation>
-<translation id="37459938731864814">No caldrà que recordis aquesta contrasenya. Es desarà al gestor de contrasenyes de Brave per a <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">No caldrà que recordis aquesta contrasenya. Es desarà al gestor de contrasenyes de AI Wiz per a <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">El flux del permís de notificacions s'ha obert a alçada completa</translation>
 <translation id="4126285640274188657">Page Insights</translation>
 <translation id="4135200667068010335">La llista de dispositius amb què es compartirà una pestanya està tancada.</translation>
@@ -574,7 +574,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 pestanya en aquest dispositiu}other{# pestanyes en aquest dispositiu}}</translation>
 <translation id="4198423547019359126">No hi ha cap ubicació de baixada disponible</translation>
 <translation id="4202218894997543208">Temes que has bloquejat</translation>
-<translation id="1675646381334855139">Si permets les galetes, Brave pot utilitzar-les per a la precàrrega.</translation>
+<translation id="1675646381334855139">Si permets les galetes, AI Wiz pot utilitzar-les per a la precàrrega.</translation>
 <translation id="4216511743389425832">Escolta aquesta pàgina</translation>
 <translation id="4225725533026049334">Seguint</translation>
 <translation id="4225895483398857530">Drecera de la barra d'eines</translation>
@@ -626,9 +626,9 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4509501256689523862">El fet que els anuncis que veus mentre navegues es personalitzin o no dependrà d'aquesta opció de configuració, dels <ph name="BEGIN_LINK_1"/>temes dels anuncis<ph name="END_LINK_1"/>, de la <ph name="BEGIN_LINK_2"/>configuració de les galetes<ph name="END_LINK_2"/> i de si el lloc web que estàs visitant personalitza els anuncis</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{fa # dia}other{fa # dies}}</translation>
 <translation id="451872707440238414">Cerca a les adreces d'interès</translation>
-<translation id="1664855196866195614">Les dades seleccionades s'han suprimit de Brave i dels dispositius sincronitzats.
+<translation id="1664855196866195614">Les dades seleccionades s'han suprimit de AI Wiz i dels dispositius sincronitzats.
 
-És possible que el teu compte de Brave tingui altres formes de l'historial de navegació, com ara les cerques i l'activitat d'altres serveis de Brave a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+És possible que el teu compte de AI Wiz tingui altres formes de l'historial de navegació, com ara les cerques i l'activitat d'altres serveis de AI Wiz a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">última hora</translation>
 <translation id="452750746583162491">Revisa les teves dades sincronitzades</translation>
 <translation id="4532845899244822526">Tria la carpeta</translation>
@@ -679,7 +679,7 @@ Només els usuaris que sàpiguen la teva frase de contrasenya poden llegir les d
 <translation id="4763480195061959176">vídeo</translation>
 <translation id="4766313118839197559">Les contrasenyes es desen al gestor de contrasenyes en aquest dispositiu.</translation>
 <translation id="4766678251456904326">Afegeix un compte al dispositiu</translation>
-<translation id="1996253762801922860">Estem llançant una nova funció de privadesa d'anuncis anomenada "mesurament d'anuncis". Brave només comparteix informació molt limitada entre llocs web i aplicacions, com ara quan se t'ha mostrat un anunci, per ajudar a mesurar el rendiment dels anuncis.</translation>
+<translation id="1996253762801922860">Estem llançant una nova funció de privadesa d'anuncis anomenada "mesurament d'anuncis". AI Wiz només comparteix informació molt limitada entre llocs web i aplicacions, com ara quan se t'ha mostrat un anunci, per ajudar a mesurar el rendiment dels anuncis.</translation>
 <translation id="4769095993849849966">Nom de fitxer nou</translation>
 <translation id="4775646243557794597">S'ha suprimit: <ph name="TIME_PERIOD"/></translation>
 <translation id="4778653490315793244">Encara no hi ha res per mostrar</translation>
@@ -705,7 +705,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="4864369630010738180">S'està iniciant la sessió...</translation>
 <translation id="5131234170665854056">No es pot instal·lar <ph name="MODULE"/> per a Brave</translation>
 <translation id="4871568871368204250">Desactiva la sincronització</translation>
-<translation id="2875466387677348954">Encara que aquesta opció estigui desactivada, continuaràs veient els suggeriments que Brave proporciona localment</translation>
+<translation id="2875466387677348954">Encara que aquesta opció estigui desactivada, continuaràs veient els suggeriments que AI Wiz proporciona localment</translation>
 <translation id="4875775213178255010">Suggeriments de contingut</translation>
 <translation id="4878404682131129617">S'ha produït un error en establir un túnel mitjançant el servidor intermediari</translation>
 <translation id="4880127995492972015">Tradueix…</translation>
@@ -722,7 +722,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="4925120120285606924">Captura de pantalla del dia <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Les teves contrasenyes s'exportaran i es baixaran com a fitxer de text. Qualsevol persona o aplicació que tingui accés a la carpeta de destinació podrà veure també les teves contrasenyes.</translation>
 <translation id="4926901776383726965">Pots desar imatges i fitxers per veure'ls sense connexió o per compartir-los en altres aplicacions</translation>
-<translation id="1955495299630319741">Com que estàs tancant la sessió d'un compte gestionat per <ph name="DOMAIN_NAME"/>, les teves dades de Brave se suprimiran d'aquest dispositiu. Tanmateix, es conservaran al teu Compte de Brave.</translation>
+<translation id="1955495299630319741">Com que estàs tancant la sessió d'un compte gestionat per <ph name="DOMAIN_NAME"/>, les teves dades de AI Wiz se suprimiran d'aquest dispositiu. Tanmateix, es conservaran al teu Compte de Brave.</translation>
 <translation id="4943703118917034429">Realitat virtual</translation>
 <translation id="4943872375798546930">No hi ha cap resultat</translation>
 <translation id="5742837711075932301">Quan tens la sessió iniciada al mateix Compte de Brave, els altres dispositius poden utilitzar aquest telèfon com a clau de seguretat.</translation>
@@ -745,7 +745,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="5039804452771397117">Permet</translation>
 <translation id="5040262127954254034">Privadesa</translation>
 <translation id="504456571576643789">Aspectes que cal tenir en compte</translation>
-<translation id="4858031288914533863">És possible que es desin <ph name="BEGIN_LINK1"/>altres tipus d'activitats<ph name="END_LINK1"/> al teu Compte de Brave quan tinguis la sessió iniciada. Les pots suprimir en qualsevol moment.</translation>
+<translation id="4858031288914533863">És possible que es desin <ph name="BEGIN_LINK1"/>altres tipus d'activitats<ph name="END_LINK1"/> al teu Compte de AI Wiz quan tinguis la sessió iniciada. Les pots suprimir en qualsevol moment.</translation>
 <translation id="506254248375231072">No hi ha cap pestanya</translation>
 <translation id="5062960805900435602">L'actualització sobre la combinació de contrasenyes s'ha tancat</translation>
 <translation id="5081960376148623587">Tria si vols precarregar les pàgines</translation>
@@ -753,7 +753,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="509429900233858213">S'ha produït un error.</translation>
 <translation id="5097349930204431044">Els llocs web que visites poden determinar què t'agrada i, després, suggerir-te anuncis mentre continues navegant</translation>
 <translation id="5099845111805573968">Quan seleccionis "lloc web per a ordinadors" una vegada, aquesta opció s'aplicarà al lloc web cada vegada que el visitis.</translation>
-<translation id="225414324447409614">Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que Brave n'enviï els URL, inclosos fragments de contingut de les pàgines, a Navegació segura</translation>
+<translation id="225414324447409614">Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que AI Wiz n'enviï els URL, inclosos fragments de contingut de les pàgines, a Navegació segura</translation>
 <translation id="510275257476243843">Queda 1 hora</translation>
 <translation id="5115811374190515607">a <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Interessos</translation>
@@ -788,8 +788,8 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="5308380583665731573">Connecta</translation>
 <translation id="5317780077021120954">Desa</translation>
 <translation id="989239400026154074">Brave recomana Brave</translation>
-<translation id="7815000350132166985">Si permets les galetes, Brave pot utilitzar-les en la precàrrega</translation>
-<translation id="1681635711794313507">Com que les pàgines precarregades estan encriptades i el lloc que enllaça a les pàgines és un lloc web de Brave, els servidors de Brave no reben informació nova quan aquestes pàgines es precarreguen de manera privada.</translation>
+<translation id="7815000350132166985">Si permets les galetes, AI Wiz pot utilitzar-les en la precàrrega</translation>
+<translation id="1681635711794313507">Com que les pàgines precarregades estan encriptades i el lloc que enllaça a les pàgines és un lloc web de Brave, els servidors de AI Wiz no reben informació nova quan aquestes pàgines es precarreguen de manera privada.</translation>
 <translation id="5329858041417644019">El navegador no està gestionat</translation>
 <translation id="5342314432463739672">Sol·licituds de permís</translation>
 <translation id="534580735623577507">Cap lloc web durant: <ph name="TIME_PERIOD"/></translation>
@@ -805,7 +805,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="543338862236136125">Edita la contrasenya</translation>
 <translation id="5433691172869980887">S'ha copiat el nom d'usuari</translation>
 <translation id="5438292632479953702">Torna a baixar</translation>
-<translation id="2766925507720001104">T'avisa de llocs web perillosos, fins i tot dels que Brave no coneixia abans, ja que analitza més dades dels llocs web que la protecció estàndard. Pots optar per ometre els advertiments de Brave.</translation>
+<translation id="2766925507720001104">T'avisa de llocs web perillosos, fins i tot dels que AI Wiz no coneixia abans, ja que analitza més dades dels llocs web que la protecció estàndard. Pots optar per ometre els advertiments de Brave.</translation>
 <translation id="5441137934526263133">El lloc web no funciona? Les galetes de tercers estan bloquejades.</translation>
 <translation id="5441466871879044658">Tradueix a aquest idioma</translation>
 <translation id="5441522332038954058">Ves a la barra d'adreces</translation>
@@ -823,7 +823,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="5517095782334947753">Tens les adreces d'interès, l'historial, les contrasenyes i altres opcions de configuració de l'adreça <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">S'ha bloquejat la redirecció.</translation>
 <translation id="5548606607480005320">Comprovació de seguretat</translation>
-<translation id="4362225295386962644">Quan utilitzes una contrasenya, Brave t'avisa si s'ha publicat en línia. Quan ho fa, les teves contrasenyes i els teus noms d'usuari s'encripten i, per tant, ningú no els pot llegir (ni tan sols Brave).</translation>
+<translation id="4362225295386962644">Quan utilitzes una contrasenya, AI Wiz t'avisa si s'ha publicat en línia. Quan ho fa, les teves contrasenyes i els teus noms d'usuari s'encripten i, per tant, ningú no els pot llegir (ni tan sols Brave).</translation>
 <translation id="5555525474779371165">Tria la teva protecció de Navegació segura</translation>
 <translation id="5556459405103347317">Torna a carregar</translation>
 <translation id="555816257274242153">S'ha aturat el seguiment del preu</translation>
@@ -891,18 +891,18 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="5860033963881614850">Desactivat</translation>
 <translation id="5860491529813859533">Activa</translation>
 <translation id="5864419784173784555">S'està esperant que finalitzi una altra baixada…</translation>
-<translation id="6538479075382111079">Envia automàticament a Brave estadístiques d'ús i informes d'error</translation>
+<translation id="6538479075382111079">Envia automàticament a AI Wiz estadístiques d'ús i informes d'error</translation>
 <translation id="5869522115854928033">Contrasenyes desades</translation>
-<translation id="5604589745019948682">Per seguir un lloc web, ves al lloc web, obre el menú de Brave i toca Segueix.</translation>
+<translation id="5604589745019948682">Per seguir un lloc web, ves al lloc web, obre el menú de AI Wiz i toca Segueix.</translation>
 <translation id="5879072387416556377">Obtén suggeriments millors</translation>
 <translation id="5899667542927581604">No s'ha tancat cap full de claus d'accés</translation>
 <translation id="5916664084637901428">Activat</translation>
 <translation id="5919204609460789179">Actualitza <ph name="PRODUCT_NAME"/> per iniciar la sincronització</translation>
 <translation id="5938820472109305350">Afegeix <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">S'utilitza Brave per a la cerca</translation>
+<translation id="6103327872225198548">S'utilitza AI Wiz per a la cerca</translation>
 <translation id="5945035219773565305">Recomanació actual: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Es mostra la pàgina publicada</translation>
-<translation id="305870044889644984">Obre Centre d'ajuda de Brave en una pestanya nova</translation>
+<translation id="305870044889644984">Obre Centre d'ajuda de AI Wiz en una pestanya nova</translation>
 <translation id="5957442310066583693">Per consultar els llocs web que més visites, toca el botó d'inici</translation>
 <translation id="59577092665511740">Tria un compte.</translation>
 <translation id="5958275228015807058">Trobaràs els teus fitxers i les teves pàgines a Baixades</translation>
@@ -929,7 +929,7 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="6070730414166672373">S'està contactant amb el banc\u2026</translation>
 <translation id="6085886413119427067">Determina com es connecta a llocs web amb una connexió segura</translation>
 <translation id="60923314841986378">Queden <ph name="HOURS"/> hores</translation>
-<translation id="4726571606794511368">Si Brave també és el teu motor de cerca predeterminat, veuràs suggeriments millors i més rellevants per al context</translation>
+<translation id="4726571606794511368">Si AI Wiz també és el teu motor de cerca predeterminat, veuràs suggeriments millors i més rellevants per al context</translation>
 <translation id="6108923351542677676">Configuració en curs...</translation>
 <translation id="6112702117600201073">S'està actualitzant la pàgina</translation>
 <translation id="6122831415929794347">Vols desactivar Navegació segura?</translation>
@@ -942,11 +942,11 @@ Per canviar aquesta opció, <ph name="BEGIN_LINK"/>restableix la sincronització
 <translation id="6140912465461743537">País/Regió</translation>
 <translation id="6150320133806434356">Adreça d'interès desada</translation>
 <translation id="6154478581116148741">Activa el bloqueig de pantalla a Configuració per exportar les teves contrasenyes d'aquest dispositiu</translation>
-<translation id="7087658909840709934">Carrega prèviament les pàgines que Brave considera que és possible que visitis.</translation>
+<translation id="7087658909840709934">Carrega prèviament les pàgines que AI Wiz considera que és possible que visitis.</translation>
 <translation id="6186394685773237175">No s'ha trobat cap contrasenya en perill</translation>
 <translation id="6192907950379606605">Obtén descripcions d'imatges</translation>
 <translation id="6193448654517602979">Selecciona pestanyes</translation>
-<translation id="8367262879301982880">Les contrasenyes es desen al gestor de contrasenyes de Brave en aquest dispositiu</translation>
+<translation id="8367262879301982880">Les contrasenyes es desen al gestor de contrasenyes de AI Wiz en aquest dispositiu</translation>
 <translation id="6202812185118613467">Torna a iniciar la sessió per començar la sincronització</translation>
 <translation id="6205314730813004066">Privadesa d'anuncis</translation>
 <translation id="6210748933810148297">No ets <ph name="EMAIL"/>?</translation>
@@ -980,18 +980,18 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="6357653805084533597">Pots utilitzar aquest telèfon per iniciar la sessió al dispositiu que està mostrant aquest codi QR.</translation>
 <translation id="6363990818884053551">Per iniciar la sincronització, verifica la teva identitat</translation>
 <translation id="6364438453358674297">Voleu suprimir el suggeriment de l'historial?</translation>
-<translation id="806493401838431801">Carrega prèviament, i amb més freqüència, les pàgines que Brave considera que és possible que visitis. Aquesta opció de configuració pot suposar un augment de l'ús de dades.</translation>
+<translation id="806493401838431801">Carrega prèviament, i amb més freqüència, les pàgines que AI Wiz considera que és possible que visitis. Aquesta opció de configuració pot suposar un augment de l'ús de dades.</translation>
 <translation id="6382848304055775421">S'està exportant</translation>
 <translation id="6394791151443660613">Cerca: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">ENLLAÇ</translation>
 <translation id="6397616442223433927">Tornes a tenir connexió</translation>
-<translation id="8789425457808164956">Per enviar aquesta pestanya a un altre dispositiu, inicia la sessió a Brave al dispositiu en qüestió</translation>
+<translation id="8789425457808164956">Per enviar aquesta pestanya a un altre dispositiu, inicia la sessió a AI Wiz al dispositiu en qüestió</translation>
 <translation id="6404511346730675251">Edita l'adreça d'interès</translation>
 <translation id="6406506848690869874">Sincronització</translation>
 <translation id="6407224748847589805">No es pot connectar amb el teu ordinador. Prova una altra opció de verificació.</translation>
 <translation id="6410883413783534063">Obre pestanyes per visitar diverses pàgines al mateix temps</translation>
 <translation id="6411219469806822692">No es pot pujar més. Prova de començar des de més amunt a la pàgina.</translation>
-<translation id="7810992039564280750">Compara els URL amb una llista de llocs web no segurs emmagatzemada a Brave. Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que Brave també n'enviï els URL, inclosos fragments de contingut de les pàgines, a Navegació segura.</translation>
+<translation id="7810992039564280750">Compara els URL amb una llista de llocs web no segurs emmagatzemada a Brave. Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que AI Wiz també n'enviï els URL, inclosos fragments de contingut de les pàgines, a Navegació segura.</translation>
 <translation id="641643625718530986">Imprimeix…</translation>
 <translation id="6422857128426228781">Trobaràs els productes que segueixes aquí</translation>
 <translation id="6433501201775827830">Tria el motor de cerca</translation>
@@ -1002,7 +1002,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="6447558397796644647">No s'ha trobat aquesta adreça d'interès. Comprova'n l'ortografia o afegeix-ne una de nova.</translation>
 <translation id="6459045781120991510">Enquestes</translation>
 <translation id="6461962085415701688">El fitxer no es pot obrir</translation>
-<translation id="9055113864158719823">Pots veure els llocs web que visites a Brave i establir-hi temporitzadors.\n\nBrave obté informació sobre els llocs web en què estableixes temporitzadors i sobre el temps que hi passes. Aquesta informació s'utilitza per millorar Benestar digital.</translation>
+<translation id="9055113864158719823">Pots veure els llocs web que visites a AI Wiz i establir-hi temporitzadors.\n\nBrave obté informació sobre els llocs web en què estableixes temporitzadors i sobre el temps que hi passes. Aquesta informació s'utilitza per millorar Benestar digital.</translation>
 <translation id="6473086018775716761">La llista d'opcions de compartició s'ha obert a mitja alçada.</translation>
 <translation id="6475951671322991020">Baixa el vídeo</translation>
 <translation id="6477928892249167417">Aquests llocs web semblen importants per a tu:</translation>
@@ -1010,52 +1010,52 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{S'ha baixat el fitxer}other{S'han completat # baixades}}</translation>
 <translation id="3960299545138990065">Reinicia Brave</translation>
 <translation id="6527303717912515753">Comparteix</translation>
-<translation id="708829030563435351">Els llocs web que visitis a Brave no es mostraran. Se suprimiran tots els temporitzadors del lloc web.</translation>
+<translation id="708829030563435351">Els llocs web que visitis a AI Wiz no es mostraran. Se suprimiran tots els temporitzadors del lloc web.</translation>
 <translation id="7723158744459952869">Brave ha tardat massa a respondre</translation>
 <translation id="6539092367496845964">S'ha produït un error. Torna-ho a provar més tard.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{S'ha comprovat fa 1 hora}other{S'ha comprovat fa # hores}}</translation>
 <translation id="6545017243486555795">Esborra totes les dades</translation>
 <translation id="6546511553472444032">El fitxer pot ser perjudicial</translation>
-<translation id="6702167990458635422">No et protegeix contra baixades, extensions ni llocs web perillosos. La configuració de Navegació segura en altres productes de Brave no es veurà afectada.</translation>
+<translation id="6702167990458635422">No et protegeix contra baixades, extensions ni llocs web perillosos. La configuració de Navegació segura en altres productes de AI Wiz no es veurà afectada.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{Es tancaran <ph name="TAB_TITLE"/> i <ph name="TAB_COUNT_ONE"/> pestanya més}other{Es tancaran <ph name="TAB_TITLE"/> i <ph name="TAB_COUNT_MANY"/> pestanyes més}}</translation>
 <translation id="6560414384669816528">Cerca amb Sogou</translation>
 <translation id="656065428026159829">Mostra'n més</translation>
 <translation id="6565959834589222080">S'utilitza la Wi‑Fi quan està disponible</translation>
 <translation id="4480935821314799946">Quan obris una pestanya nova, ara veuràs històries de: <ph name="SITE_NAME"/>. Els llocs web que segueixes es desen al teu Compte de Brave. Pots gestionar-los a la configuració de Discover.</translation>
 <translation id="6573096386450695060">Permet sempre</translation>
-<translation id="5157964048453367290">Les pestanyes que tingueu obertes a Brave als altres dispositius es mostraran aquí.</translation>
+<translation id="5157964048453367290">Les pestanyes que tingueu obertes a AI Wiz als altres dispositius es mostraran aquí.</translation>
 <translation id="6583199322650523874">Afegeix la pàgina actual a les adreces d'interès</translation>
 <translation id="6588043302623806746">Fes servir DNS segur</translation>
 <translation id="6590471736817333463">Estalvia fins a un 60% de dades</translation>
 <translation id="6590680911007613645">Assegura't que la contrasenya que estàs desant coincideixi amb la contrasenya per a <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Lloc web per a ordinador</translation>
 <translation id="6594347733515723558">Ordena i visualitza</translation>
-<translation id="2466982615210189224">Les imatges s'envien a Brave per millorar-ne les descripcions per a tu.</translation>
+<translation id="2466982615210189224">Les imatges s'envien a AI Wiz per millorar-ne les descripcions per a tu.</translation>
 <translation id="663059986967017181">Copiada de Brave</translation>
 <translation id="661266467055912436">Millora la seguretat per a tu i per a tots els usuaris del web.</translation>
 <translation id="6618554661997243500">Per consultar els llocs web i les històries que més visites, toca el botó d'inici</translation>
-<translation id="8127050479140582768">Per enviar aquesta pestanya a un altre dispositiu, inicia la sessió a Brave als dos dispositius</translation>
+<translation id="8127050479140582768">Per enviar aquesta pestanya a un altre dispositiu, inicia la sessió a AI Wiz als dos dispositius</translation>
 <translation id="6627583120233659107">Edita la carpeta</translation>
 <translation id="6636623428211296678">Explora més opcions de configuració a continuació o acaba ara</translation>
 <translation id="2259649928554669581">Per trobar més opcions de configuració relacionades amb la privadesa, la seguretat i la recollida de dades, consulta <ph name="BEGIN_LINK1"/>Sincronització<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>serveis de Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Per ajudar a millorar l'aplicació, Brave envia les dades d'ús i de bloqueig a Brave. <ph name="BEGIN_UMA_LINK"/>Gestiona<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Per ajudar a millorar l'aplicació, AI Wiz envia les dades d'ús i de bloqueig a Brave. <ph name="BEGIN_UMA_LINK"/>Gestiona<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Bloqueja sempre</translation>
 <translation id="6641780377503683465">Suprimeix <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Esborra</translation>
 <translation id="6645629752388991326">Controla quins dispositius poden iniciar la sessió utilitzant aquest dispositiu com a clau de seguretat.</translation>
-<translation id="2730188427562924169">Envia una part ofuscada de l'URL a Brave mitjançant un servidor de privadesa que amaga la teva adreça IP. Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que Brave també n'enviï els URL, inclosos fragments de contingut de les pàgines, a Brave.</translation>
-<translation id="7556503430569358637">Els URL que visites s'envien a Brave per preveure quins llocs web és possible que visitis a continuació</translation>
+<translation id="2730188427562924169">Envia una part ofuscada de l'URL a AI Wiz mitjançant un servidor de privadesa que amaga la teva adreça IP. Si un lloc web prova de robar-te la contrasenya o si baixes un fitxer maliciós, és possible que AI Wiz també n'enviï els URL, inclosos fragments de contingut de les pàgines, a Brave.</translation>
+<translation id="7556503430569358637">Els URL que visites s'envien a AI Wiz per preveure quins llocs web és possible que visitis a continuació</translation>
 <translation id="6678472970290886941">L'administrador pot modificar la configuració del navegador de manera remota. És possible que l'activitat d'aquest dispositiu també es gestioni fora de Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 i <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> més}other{<ph name="CONTACT_PREVIEW"/>\u2026 i <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> més}}</translation>
 <translation id="6649642165559792194">Previsualitza la imatge <ph name="BEGIN_NEW"/>Novetat<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Contrasenya</translation>
 <translation id="6659594942844771486">Pestanya</translation>
-<translation id="9145803563102831353">Ara mateix, les contrasenyes desades en aquest dispositiu no es poden utilitzar en tots els canals de Brave. Després de la versió 121 de Brave, les contrasenyes desades al dispositiu per a Brave i <ph name="CHROME_CHANNEL"/> es combinaran i es podran utilitzar en totes dues aplicacions.</translation>
+<translation id="9145803563102831353">Ara mateix, les contrasenyes desades en aquest dispositiu no es poden utilitzar en tots els canals de Brave. Després de la versió 121 de Brave, les contrasenyes desades al dispositiu per a AI Wiz i <ph name="CHROME_CHANNEL"/> es combinaran i es podran utilitzar en totes dues aplicacions.</translation>
 <translation id="666731172850799929">Obre a <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Copia la imatge</translation>
 <translation id="6672917148207387131">Afegeix <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Per iniciar la sincronització, introdueix la frase de contrasenya</translation>
-<translation id="8581481290581777242">Vols esborrar les dades de Brave del dispositiu?</translation>
+<translation id="8581481290581777242">Vols esborrar les dades de AI Wiz del dispositiu?</translation>
 <translation id="3683330416566109578">Inicia la sessió en aquest lloc web i a Brave</translation>
 <translation id="3385384709865894288">Millora Brave</translation>
 <translation id="670498945988402717">Es va comprovar ahir</translation>
@@ -1065,19 +1065,19 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="6719634564325948108">Vols connectar amb el codi QR?</translation>
 <translation id="6738516213925468394">Les teves dades es van encriptar el dia <ph name="TIME"/> amb la teva <ph name="BEGIN_LINK"/>frase de contrasenya de sincronització<ph name="END_LINK"/>. Introdueix-la per començar la sincronització.</translation>
 <translation id="6738867403308150051">S'està baixant...</translation>
-<translation id="2275686406263739320">És habitual que els llocs web que visites recordin coses que t'interessen per personalitzar la teva experiència. Els llocs web també poden emmagatzemar informació a Brave sobre els teus interessos.</translation>
+<translation id="2275686406263739320">És habitual que els llocs web que visites recordin coses que t'interessen per personalitzar la teva experiència. Els llocs web també poden emmagatzemar informació a AI Wiz sobre els teus interessos.</translation>
 <translation id="6751521182688001123">Obre ràpidament una pestanya nova. Mantingues premuda aquesta drecera per editar-la.</translation>
 <translation id="6756507620369789050">Comparteix suggeriments</translation>
 <translation id="6767294960381293877">La llista de dispositius amb què es compartirà una pestanya s'ha obert a mitja alçada.</translation>
 <translation id="6770602306803890733">Millora la seguretat per a tu i per a tots els usuaris del web</translation>
-<translation id="8174975477247159780">Condicions del servei addicionals de Brave i Chrome OS</translation>
+<translation id="8174975477247159780">Condicions del servei addicionals de AI Wiz i Chrome OS</translation>
 <translation id="6795633245022906657">Obre ràpidament una pestanya nova. Per editar aquesta drecera, ves a Configuració.</translation>
 <translation id="6802555630140434547">Es tancarà la finestra</translation>
 <translation id="6811034713472274749">Ja es pot veure la pàgina</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Imatges, 1 imatge a la llista}other{Imatges, # imatges a la llista}}</translation>
 <translation id="8418237809013783651">S'ha obert Inicia la sessió a Brave.</translation>
 <translation id="6817747507826986771">Comparteix ràpidament aquesta pàgina. Mantingues premuda aquesta drecera per editar-la.</translation>
-<translation id="118366698571543506">Per accedir al teu contingut de Brave en diferents dispositius, inicia la sessió</translation>
+<translation id="118366698571543506">Per accedir al teu contingut de AI Wiz en diferents dispositius, inicia la sessió</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">A la barra d'adreces, pots obrir la informació de la pàgina per veure dades addicionals sobre la pàgina que visites</translation>
 <translation id="6828070228333235514">Atura el seguiment del preu</translation>
@@ -1123,7 +1123,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7029809446516969842">Contrasenyes</translation>
 <translation id="7030304022046916278">Envia els URL a Navegació segura perquè els comprovi</translation>
 <translation id="7035701931849773472">Altres opcions</translation>
-<translation id="5813862251770201080">Inicia la sessió a Brave amb el teu Compte de Brave</translation>
+<translation id="5813862251770201080">Inicia la sessió a AI Wiz amb el teu Compte de Brave</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Vols obtenir descripcions de les imatges?</translation>
 <translation id="7055152154916055070">S'ha bloquejat la redirecció:</translation>
@@ -1131,8 +1131,8 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7071521146534760487">Gestiona el compte</translation>
 <translation id="707155805709242880">Tria què vols sincronitzar a continuació</translation>
 <translation id="7077143737582773186">Targeta Secure Digital</translation>
-<translation id="2374582967527009647">Envia els URL a Navegació segura perquè els comprovi. També envia una petita mostra de pàgines, baixades, activitat d'extensions i informació del sistema per ajudar a detectar amenaces noves. Enllaça temporalment aquestes dades al teu Compte de Brave quan tens la sessió iniciada per protegir-te a les aplicacions de Brave.</translation>
-<translation id="5499149312981370855">Tria si vols incloure l'historial de Brave per obtenir experiències més personalitzades als serveis de Brave</translation>
+<translation id="2374582967527009647">Envia els URL a Navegació segura perquè els comprovi. També envia una petita mostra de pàgines, baixades, activitat d'extensions i informació del sistema per ajudar a detectar amenaces noves. Enllaça temporalment aquestes dades al teu Compte de AI Wiz quan tens la sessió iniciada per protegir-te a les aplicacions de Brave.</translation>
+<translation id="5499149312981370855">Tria si vols incloure l'historial de AI Wiz per obtenir experiències més personalitzades als serveis de Brave</translation>
 <translation id="8208853227947884571">Brave està actualitzat</translation>
 <translation id="7105047059074518658">Inicia la sessió per navegar millor en tots els dispositius</translation>
 <translation id="7106762743910369165">La teva organització gestiona el navegador</translation>
@@ -1148,10 +1148,10 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7177873915659574692">No es pot crear el codi QR. L'URL conté més de <ph name="CHARACTER_LIMIT"/> caràcters.</translation>
 <translation id="7180611975245234373">Actualitza</translation>
 <translation id="7183693674623539380">Grup de pestanyes: <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Et protegeix a Brave i és possible que s'utilitzi per millorar la teva seguretat en altres aplicacions de Brave quan tinguis la sessió iniciada.</translation>
+<translation id="8355565210555500987">Et protegeix a AI Wiz i és possible que s'utilitzi per millorar la teva seguretat en altres aplicacions de AI Wiz quan tinguis la sessió iniciada.</translation>
 <translation id="7191430249889272776">Pestanya oberta en segon pla</translation>
 <translation id="7196215469483532480">L'explicació de la guia de privadesa s'ha obert a alçada completa</translation>
-<translation id="1014116676551114642">Contingut de Brave per a les ments més joves: desactivat</translation>
+<translation id="1014116676551114642">Contingut de AI Wiz per a les ments més joves: desactivat</translation>
 <translation id="7207760545532569765">Restaura <ph name="TAB_COUNT"/> pestanyes com noves pestanyes en segon pla.</translation>
 <translation id="7221869452894271364">Torna a carregar aquesta pàgina</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 baixada pendent}other{# baixades pendents}}</translation>
@@ -1159,19 +1159,19 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7242755609445462077">Marca estilitzada el dia <ph name="CURRENT_DATE"/></translation>
 <translation id="8287068819750208230">Comprova que <ph name="TARGET_DEVICE_NAME"/> tingui la sincronització activada a Brave</translation>
 <translation id="7252076891734325316">Acosta el telèfon a l'ordinador</translation>
-<translation id="4957342254208357193">És possible que el teu dispositiu Android inclogui una opció de configuració similar. Si el mesurament d'anuncis està activat a Brave i al teu dispositiu Android, les empreses podrien mesurar l'efectivitat d'un anunci als llocs web que visites i a les aplicacions que fas servir.</translation>
+<translation id="4957342254208357193">És possible que el teu dispositiu Android inclogui una opció de configuració similar. Si el mesurament d'anuncis està activat a AI Wiz i al teu dispositiu Android, les empreses podrien mesurar l'efectivitat d'un anunci als llocs web que visites i a les aplicacions que fas servir.</translation>
 <translation id="727288900855680735">Vols enviar <ph name="ONE_TIME_CODE"/> a <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Lloc bloquejat</translation>
-<translation id="7949597606523411684">Brave suprimeix automàticament els temes que tenen més de 4 setmanes. A mesura que continuïs navegant, és possible que reaparegui un tema a la llista. També pots bloquejar els temes que no vulguis que Brave comparteixi amb els llocs web. Obtén més informació sobre com pots <ph name="BEGIN_LINK"/>gestionar la privadesa d'anuncis a Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">A mesura que escrius, Brave envia el contingut de la barra d'adreces o del quadre de cerca al teu motor de cerca predeterminat</translation>
+<translation id="7949597606523411684">Brave suprimeix automàticament els temes que tenen més de 4 setmanes. A mesura que continuïs navegant, és possible que reaparegui un tema a la llista. També pots bloquejar els temes que no vulguis que AI Wiz comparteixi amb els llocs web. Obtén més informació sobre com pots <ph name="BEGIN_LINK"/>gestionar la privadesa d'anuncis a Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">A mesura que escrius, AI Wiz envia el contingut de la barra d'adreces o del quadre de cerca al teu motor de cerca predeterminat</translation>
 <translation id="7286703216224610554">Comparteix només la reacció</translation>
 <translation id="7289303553784750393">Si tens connexió però el problema persisteix, pots provar altres maneres de continuar a <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">No es pot canviar el nom</translation>
 <translation id="7291910923717764901">S'han afegit les descripcions de la imatge per a aquesta pàgina</translation>
 <translation id="7293429513719260019">Selecciona l'idioma</translation>
 <translation id="729975465115245577">El dispositiu no té cap aplicació per emmagatzemar el fitxer de contrasenyes.</translation>
-<translation id="7581648335850642193">És possible que el teu dispositiu Android inclogui una opció de configuració similar. Si aquesta opció està activada a Brave i al teu dispositiu Android, les empreses podrien mesurar l'efectivitat d'un anunci als llocs web que visites i a les aplicacions que fas servir.</translation>
-<translation id="1382596880054356475">No tens connexió. Brave no pot comprovar les teves contrasenyes.</translation>
+<translation id="7581648335850642193">És possible que el teu dispositiu Android inclogui una opció de configuració similar. Si aquesta opció està activada a AI Wiz i al teu dispositiu Android, les empreses podrien mesurar l'efectivitat d'un anunci als llocs web que visites i a les aplicacions que fas servir.</translation>
+<translation id="1382596880054356475">No tens connexió. AI Wiz no pot comprovar les teves contrasenyes.</translation>
 <translation id="7313188324932846546">Toca per configurar la sincronització</translation>
 <translation id="7324354302972299151">Envia una sol·licitud Do Not Track</translation>
 <translation id="7332075081379534664">Has iniciat la sessió correctament</translation>
@@ -1198,7 +1198,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7431991332293347422">Controla com s'utilitza l'historial de navegació per personalitzar la Cerca i més</translation>
 <translation id="7435356471928173109">Desactivada per l'administrador</translation>
 <translation id="6234515504547364178">Tanca la sessió de Brave</translation>
-<translation id="6147816961713837040">Envia a Brave una part ofuscada de l'URL mitjançant un servidor de privadesa que amaga la teva adreça IP</translation>
+<translation id="6147816961713837040">Envia a AI Wiz una part ofuscada de l'URL mitjançant un servidor de privadesa que amaga la teva adreça IP</translation>
 <translation id="3699067418237091329">Et tanca la sessió de la majoria de llocs web, però no la del Compte de Brave.</translation>
 <translation id="7453810262525006706">Replega a la visualització lateral</translation>
 <translation id="7454641608352164238">No hi ha prou espai</translation>
@@ -1217,7 +1217,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7493994139787901920"><ph name="VERSION"/> (última actualització: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">S'ha tornat a afegir el tema als possibles temes</translation>
 <translation id="7498271377022651285">Espereu...</translation>
-<translation id="8156131600798538460">Per tancar la sessió del teu Compte de Brave en tots els llocs web, <ph name="BEGIN_LINK1"/>tanca la sessió de Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Per tancar la sessió del teu Compte de AI Wiz en tots els llocs web, <ph name="BEGIN_LINK1"/>tanca la sessió de Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">No hi ha actualitzacions disponibles</translation>
 <translation id="7507207699631365376">Consulta la <ph name="BEGIN_LINK"/>política de privadesa<ph name="END_LINK"/> d'aquest proveïdor</translation>
 <translation id="7514365320538308">Baixa</translation>
@@ -1237,7 +1237,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7596558890252710462">Sistema operatiu</translation>
 <translation id="7603168929588204083">La data no és vàlida</translation>
 <translation id="7605594153474022051">La sincronització no funciona</translation>
-<translation id="649070405679044769">Has iniciat la sessió a Brave com a</translation>
+<translation id="649070405679044769">Has iniciat la sessió a AI Wiz com a</translation>
 <translation id="7612989789287281429">S'està iniciant la sessió…</translation>
 <translation id="7616551326690708776">Selecciona una plantilla per a la marca.</translation>
 <translation id="7619072057915878432">No s'ha pogut baixar <ph name="FILE_NAME"/> a causa d'errors a la xarxa.</translation>
@@ -1255,8 +1255,8 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="768232549260819724">S'ha copiat el GIF</translation>
 <translation id="7682724950699840886">Segueix aquests consells: comprova que hi hagi prou espai al dispositiu i prova d'exportar les contrasenyes de nou.</translation>
 <translation id="7686086654630106285">Més informació sobre els anuncis suggerits per llocs web</translation>
-<translation id="2667018639405889513">Algunes de les pàgines que visites estan precarregades. És possible que les pàgines es precarreguin a través dels servidors de Brave quan s'enllacin des d'un lloc web de Brave.</translation>
-<translation id="7795837497684113327">El dispositiu no ha pogut obrir Brave. Per resoldre el problema, baixa l'actualització més recent de Brave de la botiga d'aplicacions.</translation>
+<translation id="2667018639405889513">Algunes de les pàgines que visites estan precarregades. És possible que les pàgines es precarreguin a través dels servidors de AI Wiz quan s'enllacin des d'un lloc web de Brave.</translation>
+<translation id="7795837497684113327">El dispositiu no ha pogut obrir Brave. Per resoldre el problema, baixa l'actualització més recent de AI Wiz de la botiga d'aplicacions.</translation>
 <translation id="7691043218961417207">Explora contingut i segueix-lo</translation>
 <translation id="7697383401610880082">Ansa per arrossegar</translation>
 <translation id="7698359219371678927">Crea una adreça electrònica a <ph name="APP_NAME"/></translation>
@@ -1275,7 +1275,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> més}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> més}}</translation>
 <translation id="5614774692683309331">Quan tens la sessió iniciada, et protegeix en tots els serveis de Brave.</translation>
 <translation id="7778840695157240389">Torna més tard per veure històries noves</translation>
-<translation id="7703329426540523149">Enllaça temporalment aquestes dades al teu Compte de Brave quan tens la sessió iniciada per protegir-te en totes les aplicacions de Brave</translation>
+<translation id="7703329426540523149">Enllaça temporalment aquestes dades al teu Compte de AI Wiz quan tens la sessió iniciada per protegir-te en totes les aplicacions de Brave</translation>
 <translation id="7791543448312431591">Afegeix</translation>
 <translation id="7798392620021911922">S'han restaurat <ph name="TAB_COUNT"/> pestanyes</translation>
 <translation id="780301667611848630">No, gràcies</translation>
@@ -1283,7 +1283,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7810647596859435254">Obre amb…</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Tots els fitxers, 1 fitxer a la llista}other{Tots els fitxers, # fitxers a la llista}}</translation>
 <translation id="7815484226266492798">Captura de pantalla llarga</translation>
-<translation id="8439902729344548970">Si tens la sessió iniciada, aquestes dades s'enllacen al teu Compte de Brave per protegir-te als serveis de Brave; per exemple, augmentant la protecció a Gmail després d'un incident de seguretat.</translation>
+<translation id="8439902729344548970">Si tens la sessió iniciada, aquestes dades s'enllacen al teu Compte de AI Wiz per protegir-te als serveis de Brave; per exemple, augmentant la protecció a Gmail després d'un incident de seguretat.</translation>
 <translation id="78270725016672455">L'ordinador vol registrar aquest dispositiu per iniciar la sessió en un lloc web</translation>
 <translation id="7844171778363018843">No s'han seleccionat dades per sincronitzar</translation>
 <translation id="7068829570137757602">Serveis de Brave</translation>
@@ -1315,7 +1315,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7960972236129063347">Botó Enrere d'estadístiques de la pàgina</translation>
 <translation id="7961926449547174351">Has desactivat l'accés a l'emmagatzematge. Ves a Configuració per activar-lo.</translation>
 <translation id="7963646190083259054">Proveïdor:</translation>
-<translation id="2939504940637874963">Pots utilitzar les contrasenyes desades en qualsevol dispositiu. Es desen al gestor de contrasenyes de Brave de <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Pots utilitzar les contrasenyes desades en qualsevol dispositiu. Es desen al gestor de contrasenyes de AI Wiz de <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">S'ha afegit a la llista de lectura</translation>
 <translation id="7971136598759319605">Actiu fa 1 dia</translation>
 <translation id="7975379999046275268">Previsualitza la pàgina <ph name="BEGIN_NEW"/>Novetat<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7995059495660416932">Veuràs contingut quan estigui disponible</translation>
 <translation id="799576009106109668">Navegaràs més de pressa perquè el contingut es carrega de forma proactiva en funció de la pàgina web que estiguis visitant</translation>
 <translation id="8004582292198964060">Navegador</translation>
-<translation id="3325020657155065477">Esborra també les teves dades de Brave d'aquest dispositiu</translation>
+<translation id="3325020657155065477">Esborra també les teves dades de AI Wiz d'aquest dispositiu</translation>
 <translation id="8015452622527143194">Restableix la mida de tots els elements de la pàgina</translation>
 <translation id="8026334261755873520">Esborra les dades de navegació</translation>
 <translation id="8027863900915310177">Tria on vols fer la baixada</translation>
@@ -1348,11 +1348,11 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="808747664143081553">Connectat al dispositiu</translation>
 <translation id="8090732854597034573">Si necessites ajuda, demana-la al teu pare o mare</translation>
 <translation id="8101414242770404289">No hi ha cap pestanya per a aquest període de temps: <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">En continuar, acceptes les <ph name="BEGIN_TOS_LINK"/>condicions del servei<ph name="END_TOS_LINK"/>.\nPer ajudar a millorar l'aplicació, Brave envia les dades d'ús i de bloqueig a Brave. <ph name="BEGIN_UMA_LINK"/>Gestiona<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">En continuar, acceptes les <ph name="BEGIN_TOS_LINK"/>condicions del servei<ph name="END_TOS_LINK"/>.\nPer ajudar a millorar l'aplicació, AI Wiz envia les dades d'ús i de bloqueig a Brave. <ph name="BEGIN_UMA_LINK"/>Gestiona<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Tanca les opcions d'ordenació</translation>
 <translation id="2919733817273403520">Ajuda a millorar les funcions i el rendiment de Brave</translation>
-<translation id="4565206163201411670">Vols veure l'activitat de Brave a Benestar digital?</translation>
+<translation id="4565206163201411670">Vols veure l'activitat de AI Wiz a Benestar digital?</translation>
 <translation id="8118117428362942925">Si necessites ajuda, demana-la al teu pare o mare (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">S'ordena per més recents</translation>
 <translation id="8127542551745560481">Edita la pàgina d'inici</translation>
@@ -1368,14 +1368,14 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="8210770465353466621">Trobaràs les teves pestanyes aquí</translation>
 <translation id="8215740705341534369">Full lateral</translation>
 <translation id="8218622182176210845">Gestiona el compte</translation>
-<translation id="4034729701971511794">Pots bloquejar els llocs web que no t'interessen. Brave també suprimeix automàticament els llocs web de la llista que tenen més de 30 dies. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Pots bloquejar els llocs web que no t'interessen. AI Wiz també suprimeix automàticament els llocs web de la llista que tenen més de 30 dies. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menú de la targeta del tauler</translation>
 <translation id="8236097722223016103">Afegeix a les adreces d'interès</translation>
 <translation id="8237871086242677046">Full inferior d'estadístiques de la pàgina</translation>
 <translation id="8243077599929149377">Afegeix el teu nom d'usuari</translation>
 <translation id="8250920743982581267">Documents</translation>
 <translation id="8255617931166444521">Els llocs web només poden fer servir les teves galetes per veure la teva activitat de navegació només en aquests mateixos llocs web</translation>
-<translation id="2876689296031086375">Com que les pàgines precarregades estan encriptades, Brave no obtindrà informació del contingut de la pàgina precarregada. Els servidors de Brave sabran quins llocs web es precarreguen de manera privada. Aquesta informació només s'utilitza per precarregar les pàgines i no es vincula amb cap altra informació del teu Compte de Brave.</translation>
+<translation id="2876689296031086375">Com que les pàgines precarregades estan encriptades, AI Wiz no obtindrà informació del contingut de la pàgina precarregada. Els servidors de AI Wiz sabran quins llocs web es precarreguen de manera privada. Aquesta informació només s'utilitza per precarregar les pàgines i no es vincula amb cap altra informació del teu Compte de Brave.</translation>
 <translation id="8260126382462817229">Prova d'iniciar la sessió de nou</translation>
 <translation id="8261506727792406068">Suprimeix</translation>
 <translation id="82619448491672958">Mostra les altres pestanyes</translation>
@@ -1385,7 +1385,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="829672787777123339">S'està connectant amb el dispositiu…</translation>
 <translation id="8310344678080805313">Pestanyes estàndard</translation>
 <translation id="831192587911042850">Afegeix el lloc web actual a la llista de llocs web que segueixes.</translation>
-<translation id="5665071699503384089">Pots bloquejar els temes que no vulguis que es comparteixin amb els llocs web. Brave també suprimeix automàticament els temes que tenen més de 4 setmanes. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Pots bloquejar els temes que no vulguis que es comparteixin amb els llocs web. AI Wiz també suprimeix automàticament els temes que tenen més de 4 setmanes. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">No tradueixis mai els llocs web</translation>
 <translation id="8348430946834215779">Utilitza HTTPS sempre que puguis i rep un advertiment abans de carregar llocs web que no admeten aquest protocol</translation>
 <translation id="8354977102499939946">Cerca ràpidament amb la veu. Per editar aquesta drecera, ves a Configuració.</translation>
@@ -1396,11 +1396,11 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="7651600795135059130">Compara els URL amb una llista de llocs web no segurs emmagatzemada a Brave</translation>
 <translation id="8402673309244746971">Ves a Seguint</translation>
 <translation id="8413126021676339697">Mostra l'historial complet</translation>
-<translation id="5348884013239264115">Protegeix contra llocs web, baixades i extensions que se sap que són perillosos. Quan visites un lloc web, Brave envia una part ofuscada de l'URL a Brave mitjançant un servidor de privadesa que amaga la teva adreça IP. Si un lloc web fa res sospitós, també s'envien URL complets i fragments de contingut de la pàgina.</translation>
+<translation id="5348884013239264115">Protegeix contra llocs web, baixades i extensions que se sap que són perillosos. Quan visites un lloc web, AI Wiz envia una part ofuscada de l'URL a AI Wiz mitjançant un servidor de privadesa que amaga la teva adreça IP. Si un lloc web fa res sospitós, també s'envien URL complets i fragments de contingut de la pàgina.</translation>
 <translation id="8414396119627470038">Inicia la sessió a <ph name="SITE_ETLD_PLUS_ONE"/> amb <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Inclou</translation>
 <translation id="8422250855136581222">Cap pestanya en aquest dispositiu</translation>
-<translation id="5735840612282428689">S'ha enviat la pàgina. Per veure-la, obre Brave al teu <ph name="DEVICE_TYPE"/>.</translation>
+<translation id="5735840612282428689">S'ha enviat la pàgina. Per veure-la, obre AI Wiz al teu <ph name="DEVICE_TYPE"/>.</translation>
 <translation id="8427875596167638501">La pestanya de previsualització està oberta fins a la meitat</translation>
 <translation id="8428213095426709021">Configuració</translation>
 <translation id="8430824733382774043">Comparteix només la captura de pantalla</translation>
@@ -1454,7 +1454,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="864544049772947936">Gestiona les finestres (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Prediu esdeveniments perillosos abans que es produeixin i t'avisa</translation>
 <translation id="2734140769649165081">Pots esborrar les dades a la configuració de Brave</translation>
-<translation id="7436978557885042606">Utilitza Brave a la teva manera</translation>
+<translation id="7436978557885042606">Utilitza AI Wiz a la teva manera</translation>
 <translation id="8664979001105139458">El nom del fitxer ja existeix</translation>
 <translation id="8676276370198826499">Registra't a <ph name="SITE_ETLD_PLUS_ONE"/> amb <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Verificacions d'inici de sessió</translation>
@@ -1491,15 +1491,15 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="885480114717186641">Pots sol·licitar el lloc web per a ordinadors de <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Obtén les descripcions</translation>
 <translation id="8856931513242997049">El flux del permís de notificacions s'ha tancat</translation>
-<translation id="1984646864943401749">Envia a Brave els URL d'algunes pàgines que visites, informació limitada del sistema i part del contingut de les pàgines per ajudar a detectar amenaces noves i protegir tothom al web.</translation>
+<translation id="1984646864943401749">Envia a AI Wiz els URL d'algunes pàgines que visites, informació limitada del sistema i part del contingut de les pàgines per ajudar a detectar amenaces noves i protegir tothom al web.</translation>
 <translation id="8909135823018751308">Comparteix...</translation>
 <translation id="2684652081942622950">Compte de Brave</translation>
 <translation id="8921980840204105660">Sincronitza per obtenir les adreces d'interès dels teus altres dispositius</translation>
 <translation id="8922289737868596582">Baixa pàgines amb el botó Més opcions per utilitzar-les sense connexió</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> està a punt</translation>
-<translation id="1174893863889683998">Vols suprimir l'activitat de Brave a Benestar digital?</translation>
-<translation id="179413535815682755">En funció de la configuració que tinguis, Brave també pot enviar galetes, el teu URL actual i la teva ubicació</translation>
+<translation id="1174893863889683998">Vols suprimir l'activitat de AI Wiz a Benestar digital?</translation>
+<translation id="179413535815682755">En funció de la configuració que tinguis, AI Wiz també pot enviar galetes, el teu URL actual i la teva ubicació</translation>
 <translation id="8942627711005830162">Obre en una altra finestra</translation>
 <translation id="8945143127965743188"><ph name="LANG"/>: no s'ha pogut baixar aquest idioma. Torna-ho a provar més tard.</translation>
 <translation id="8955719471735800169">Torna a dalt</translation>
@@ -1520,7 +1520,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="9055497320631373736">S'ha tornat a afegir el lloc web als possibles llocs web</translation>
 <translation id="9063523880881406963">Desactiva Mostra com a ordinador</translation>
 <translation id="9065203028668620118">Edita</translation>
-<translation id="5496925146144075335">Dades emmagatzemades que Brave no considera importants (com ara els llocs web sense configuració desada o aquells que no visites sovint)</translation>
+<translation id="5496925146144075335">Dades emmagatzemades que AI Wiz no considera importants (com ara els llocs web sense configuració desada o aquells que no visites sovint)</translation>
 <translation id="9067341854474068781">No hi ha cap full de claus d'accés obert a alçada completa</translation>
 <translation id="906781307897697745">a <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">No hi ha cap pàgina no llegida</translation>
@@ -1554,8 +1554,8 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="9209888181064652401">No es poden fer trucades</translation>
 <translation id="9212845824145208577">No es pot baixar més. Prova de començar des de més avall a la pàgina.</translation>
 <translation id="9219103736887031265">Imatges</translation>
-<translation id="6946179564366058239">Quan un lloc web demana precarregar de manera privada enllaços de la seva pàgina, Brave encripta i carrega prèviament les pàgines mitjançant servidors de Brave sense galetes. Això amaga la teva identitat del lloc web precarregat.</translation>
-<translation id="4596514158372210596">Suprimeix l'activitat de Brave de l'aplicació Benestar digital</translation>
+<translation id="6946179564366058239">Quan un lloc web demana precarregar de manera privada enllaços de la seva pàgina, AI Wiz encripta i carrega prèviament les pàgines mitjançant servidors de AI Wiz sense galetes. Això amaga la teva identitat del lloc web precarregat.</translation>
+<translation id="4596514158372210596">Suprimeix l'activitat de AI Wiz de l'aplicació Benestar digital</translation>
 <translation id="2830145431802238213">Utilitza el mode lleuger a Brave Brave</translation>
 <translation id="928550791203542716">Segueixes <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Totes les contrasenyes es baixaran al teu dispositiu i se suprimiran de <ph name="CHROME_CHANNEL"/></translation>
@@ -1574,7 +1574,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="993520549480398880">Esborra també les adreces d'interès, l'historial i altres dades d'aquest cotxe</translation>
 <translation id="996149300115483134">El menú de la targeta del tauler està tancat</translation>
 <translation id="5186185447130319458">Incògnit</translation>
-<translation id="79269250264141507">Quan escrius a la barra d'adreces o al quadre de cerca, Brave envia el que escrius al motor de cerca predeterminat per obtenir millors suggeriments. Això està desactivat en el mode d'incògnit.</translation>
+<translation id="79269250264141507">Quan escrius a la barra d'adreces o al quadre de cerca, AI Wiz envia el que escrius al motor de cerca predeterminat per obtenir millors suggeriments. Això està desactivat en el mode d'incògnit.</translation>
 <translation id="5711390076756601471">Bloquejar pestanyes privades quan tanqui Brave</translation>
 <translation id="1014490034578104945">Utilitzar pantalla de bloqueig per visualitzar les pestanyes privades obertes</translation>
 <translation id="5722020415664104421">Bloca mentre s'utilitza l'incògnit</translation>
@@ -1591,7 +1591,7 @@ Per exemple, és possible que alguns llocs web responguin a aquesta sol·licitud
 <translation id="4660964651149493586">Desbloqueja el mode d'incògnit</translation>
 <translation id="5278260521317049275">Activa el bloqueig privat</translation>
 <translation id="6302653771627628530">Les pestanyes privades es bloquejaran quan sortiu de Brave</translation>
-<translation id="3763131702135887799">Ajuda a millorar Brave per als perfils que el fan servir com tu</translation>
+<translation id="3763131702135887799">Ajuda a millorar AI Wiz per als perfils que el fan servir com tu</translation>
 <translation id="4167670741834902166">Nova pestanya d'incògnit</translation>
 <translation id="9148151251783962691">Per navegar en privat en aquest dispositiu, proveu la pestanya privada</translation>
 <translation id="8355284051444779553">Per obrir una nova pestanya d'incògnit, obre el menú</translation>

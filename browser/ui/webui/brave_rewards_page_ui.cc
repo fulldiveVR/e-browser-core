@@ -86,7 +86,7 @@ brave_rewards::RewardsPanelCoordinator* GetPanelCoordinator(
 
 #endif
 
-// The handler for Javascript messages for Brave about: pages
+// The handler for Javascript messages for AI Wiz about: pages
 class RewardsDOMHandler
     : public WebUIMessageHandler,
       public bat_ads::mojom::BatAdsObserver,

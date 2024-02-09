@@ -38,7 +38,7 @@ void RunCommandForUser(base::UserTokenHandle token,
 }  // namespace
 
 // Looking for explorer.exe to extract user token and launch tray process
-// to setup Brave VPN tray icon.
+// to setup AI Wiz VPN tray icon.
 void RunWireGuardCommandForUsers(const std::string& command) {
   VLOG(1) << __func__;
   base::NamedProcessIterator iter(kWindowsExplorerExecutableName, nullptr);

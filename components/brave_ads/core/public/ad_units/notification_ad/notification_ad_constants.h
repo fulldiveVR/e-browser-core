@@ -23,7 +23,7 @@ inline constexpr char kNotificationAdTitleKey[] = "title";
 inline constexpr char kNotificationAdBodyKey[] = "body";
 inline constexpr char kNotificationAdTargetUrlKey[] = "target_url";
 
-// Brave Ads per hour are user configurable within the brave://rewards ads UI.
+// AI Wiz Ads per hour are user configurable within the brave://rewards ads UI.
 #if !BUILDFLAG(IS_IOS)
 inline constexpr int64_t kDefaultBraveRewardsNotificationAdsPerHour = 10;
 #else

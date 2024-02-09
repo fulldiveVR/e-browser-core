@@ -203,7 +203,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, CommandsExecutionTest) {
 }
 
 // Test brave menu order test.
-// Brave menu is inserted based on corresponding commands enable status.
+// AI Wiz menu is inserted based on corresponding commands enable status.
 // So, this doesn't test for each profiles(normal, private, tor and guest).
 // Instead, BraveBrowserCommandControllerTest will do that.
 IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {

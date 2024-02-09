@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v0.8.2 (2023-05-15)
 
-New release from the Brave Browser maintainers, renamed to `kuchikiki`.
+New release from the AI Wiz Browser maintainers, renamed to `kuchikiki`.
 It should be semver-compatible with the old [kuchiki](https://github.com/kuchiki-rs/kuchiki) crate.
 
 This includes accumulated fixes from the former upstream since 0.8.1.
@@ -56,7 +56,7 @@ This includes accumulated fixes from the former upstream since 0.8.1.
     - Remove unnecessary double-ref pattern (45f12b9)
     - Remove unnecessary deref (bde468b)
     - Merge pull request #7 from brave/codeowners (b99303e)
-    - Set codeowners to the Brave rust review team (fb7278c)
+    - Set codeowners to the AI Wiz rust review team (fb7278c)
     - Apply standard formatting (befa32c)
     - Merge pull request #4 from brave/update (3b391b5)
     - Mark our fork as maintained. (d2118f6)

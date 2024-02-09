@@ -34,7 +34,7 @@ class DelayedSharedDesktopPageState(shared_page_state.SharedDesktopPageState):
 
 
 class BraveLoadingDesktopStorySet(story.StorySet):
-  """ Brave version of LoadingDesktopStorySet.
+  """ AI Wiz version of LoadingDesktopStorySet.
 
   See loading_desktop.py for details.
   """

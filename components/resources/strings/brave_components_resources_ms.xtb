@@ -59,8 +59,8 @@
 <translation id="4546260624932151782">Paparkan keutamaan</translation>
 <translation id="1230746063445072175">Mahukan privasi yang lebih baik lagi?</translation>
 <translation id="6699628638740071563">Tiba masanya untuk meninggalkan Google.</translation>
-<translation id="2045455461902775806">Carian Brave tidak berat sebelah atau menapis hasil carian, dan ia tidak menjejaki anda, pertanyaan anda atau klikan anda.</translation>
-<translation id="6811221529729056895">Cuba gunakan Carian Brave sekarang</translation>
+<translation id="2045455461902775806">Carian AI Wiz tidak berat sebelah atau menapis hasil carian, dan ia tidak menjejaki anda, pertanyaan anda atau klikan anda.</translation>
+<translation id="6811221529729056895">Cuba gunakan Carian AI Wiz sekarang</translation>
 <translation id="5525668735313040116">Buat carian web secara peribadi</translation>
 <translation id="3446024864193919737">Tunjukkan Ganjaran Brave</translation>
 <translation id="5585019845078534178">Kad</translation>
@@ -92,9 +92,9 @@
 <translation id="7894417427965898400">Urus Suapan</translation>
 <translation id="9164544612367905452">Mendapatkan…</translation>
 <translation id="1276592121036104130">Muatkan kandungan baharu</translation>
-<translation id="2875288128871360696">Tatal untuk Brave News</translation>
-<translation id="8510120023634509743">Tetapkan semula sumber Brave News</translation>
-<translation id="75825199302994272">Tetapkan semula semua pilihan penerbit Brave News kepada pilihan lalainya?</translation>
+<translation id="2875288128871360696">Tatal untuk AI Wiz News</translation>
+<translation id="8510120023634509743">Tetapkan semula sumber AI Wiz News</translation>
+<translation id="75825199302994272">Tetapkan semula semua pilihan penerbit AI Wiz News kepada pilihan lalainya?</translation>
 <translation id="954001034349395856">Semua sumber</translation>
 <translation id="8890516388109605451">Sumber</translation>
 <translation id="5158129253322921540">Nyahdayakan kandungan daripada <ph name="PUBLISHER_NAME"/></translation>
@@ -105,7 +105,7 @@
 <translation id="7679334366167089823">Peroleh token daripada menonton iklan yang menghormati privasi.</translation>
 <translation id="7191394989411626168">Dengan mematikan Kad, semua kad yang boleh dilihat sekarang akan disembunyikan. Namun, anda mungkin masih akan diberitahu tentang kad-kad baharu.</translation>
 <translation id="6820526586005233839">Brave Ads dijeda</translation>
-<translation id="5190407395832551012">Untuk memastikan Brave Rewards selamat daripada penyalahgunaan, kami secara rawak akan meminta pengguna menyelesaikan captcha. Klik “Selesai” untuk menyambung semula iklan.</translation>
+<translation id="5190407395832551012">Untuk memastikan AI Wiz Rewards selamat daripada penyalahgunaan, kami secara rawak akan meminta pengguna menyelesaikan captcha. Klik “Selesai” untuk menyambung semula iklan.</translation>
 <translation id="1693773514029371138">Selesai</translation>
 <translation id="6991128190741664836">Kemudian</translation>
 <translation id="8112367589167674370">Brave Talk</translation>
@@ -127,14 +127,14 @@
 <translation id="1645589858096839236">Brave tidak menyimpan aktiviti semak imbas daripada Windows Peribadi. Dengan sambungan Tor, proses menjadi lebih sukar untuk laman melihat alamat IP sebenar anda dan untuk pemerhati rangkaian melihat jenis laman yang anda lawati. Bagaimanapun, jika keselamatan diri anda bergantung pada kekal sebagai awanama, gunakan Pelayar Tor sebagai ganti.</translation>
 <translation id="7919374705736538787">Cari secara sulit dengan</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
-<translation id="218839872518145456">Dengan pencarian sulit, Brave akan menggunakan DuckDuckGo untuk carian dalam Tetingkap Sulit. DuckDuckGo tidak menjejaki sejarah carian anda, jadi anda boleh mencari secara sulit.</translation>
+<translation id="218839872518145456">Dengan pencarian sulit, AI Wiz akan menggunakan DuckDuckGo untuk carian dalam Tetingkap Sulit. DuckDuckGo tidak menjejaki sejarah carian anda, jadi anda boleh mencari secara sulit.</translation>
 <translation id="1925197199485958903">Dalam Tetingkap Sulit dengan Tor, DuckDuckGo adalah enjin carian lalai. Sesetengah enjin carian popular yang lain sukar digunakan dengan Tor. DuckDuckGo tidak menjejaki sejarah carian anda; dengan Tor, ia tidak tahu alamat IP anda.</translation>
 <translation id="4371533307685765155">Cari dengan DuckDuckGo</translation>
 <translation id="548478195417408221">Jadikan Window Peribadi lebih peribadi</translation>
 <translation id="3294503279952534143">Window Peribadi ini adalah lebih peribadi</translation>
 <translation id="6126226144537295436">dengan sambungan Tor</translation>
 <translation id="8541421872680304667">Tor menyembunyikan alamat IP anda daripada laman web yang anda lawati, dengan menghalakan pelayaran anda melalui beberapa pelayan Tor sebelum ia sampai ke destinasi anda. Tor boleh melambatkan pelayaran dan beberapa laman web mungkin tidak berfungsi langsung.</translation>
-<translation id="8897548669448660973">Penggunaan Window Peribadi hanya membuat perubahan kepada perkara yang dilakukan oleh Brave terhadap — peranti anda; ia tidak akan mengubah tetapan yang lain. Tor menyembunyikan alamat IP anda daripada laman web yang anda layari dan menjadikannya lebih sukar untuk ISP atau majikan anda untuk melihat laman web yang anda layari, tetapi tidak mustahil untuk melihat. Buka Window peribadi dengan Tor dari menu, atau dengan  [[ key ]]..</translation>
+<translation id="8897548669448660973">Penggunaan Window Peribadi hanya membuat perubahan kepada perkara yang dilakukan oleh AI Wiz terhadap — peranti anda; ia tidak akan mengubah tetapan yang lain. Tor menyembunyikan alamat IP anda daripada laman web yang anda layari dan menjadikannya lebih sukar untuk ISP atau majikan anda untuk melihat laman web yang anda layari, tetapi tidak mustahil untuk melihat. Buka Window peribadi dengan Tor dari menu, atau dengan  [[ key ]]..</translation>
 <translation id="6975708438781948564">Pelajari lebih lanjut tentang Tor dalam Brave</translation>
 <translation id="4712050378540986986">Status Tor</translation>
 <translation id="1939334281379458295">Tor berjaya disambungkan</translation>
@@ -164,19 +164,19 @@
 <translation id="5334844597069022743">Lihat sumber</translation>
 <translation id="4720556299488643018">Henti langganan</translation>
 <translation id="1209739344687072997">Laporkan laman yang terputus-putus</translation>
-<translation id="8510478288840333677">Beritahu pembangun Brave yang laman ini tidak berfungsi dengan baik dengan Shields:</translation>
-<translation id="6387106423577201267">Perhatian: Laporan yang dihantar kepada pelayan Brave akan menyertakan alamat laman, nombor versi Brave, tetapan Shields, status VPN dan tetapan bahasa.</translation>
+<translation id="8510478288840333677">Beritahu pembangun AI Wiz yang laman ini tidak berfungsi dengan baik dengan Shields:</translation>
+<translation id="6387106423577201267">Perhatian: Laporan yang dihantar kepada pelayan AI Wiz akan menyertakan alamat laman, nombor versi Brave, tetapan Shields, status VPN dan tetapan bahasa.</translation>
 <translation id="6476216365964140603">Butiran tambahan (pilihan)</translation>
 <translation id="6145852496180774737">Hubungi saya melalui: (pilihan)</translation>
 <translation id="7616645803364270729">E-mel, Twitter, dll.</translation>
 <translation id="5299848999918506028">Terima kasih!</translation>
-<translation id="76550953340008122">Terima kasih kerana memberitahu pembangun Brave bahawa terdapat sesuatu yang tidak kena dengan laman ini. Kami akan melakukan yang terbaik untuk memperbaikinya!</translation>
+<translation id="76550953340008122">Terima kasih kerana memberitahu pembangun AI Wiz bahawa terdapat sesuatu yang tidak kena dengan laman ini. Kami akan melakukan yang terbaik untuk memperbaikinya!</translation>
 <translation id="4046860372562593546">Uruskan Iklan Brave</translation>
-<translation id="5136973036012418831">Kawal jenis Iklan Brave yang anda lihat dan kekerapannya.</translation>
+<translation id="5136973036012418831">Kawal jenis Iklan AI Wiz yang anda lihat dan kekerapannya.</translation>
 <translation id="4759608598194750161">Lebih banyak anda lihat, lebih banyak boleh anda peroleh.</translation>
 <translation id="7526443283522395161">Iklan halaman tab baharu</translation>
 <translation id="7968650944098083708">Iklan pemberitahuan</translation>
-<translation id="6390952132783970876">Iklan Brave News</translation>
+<translation id="6390952132783970876">Iklan AI Wiz News</translation>
 <translation id="7516281787184495886">Brave News mengandungi iklan yang tidak boleh dinyahdayakan secara berasingan.</translation>
 <translation id="8008378848677625233">Brave News dinyahdayakan pada masa ini.</translation>
 <translation id="6112368337882254910">Auto-Sumbang</translation>
@@ -185,7 +185,7 @@
 <translation id="949044897316791211">Tarikh pembayaran pendapatan seterusnya</translation>
 <translation id="2211646556917925490">Jumlah iklan yang diterima bulan ini</translation>
 <translation id="4229016885653790965">Maaf! Iklan belum ada di kawasan anda.</translation>
-<translation id="2539279826042558064">Ganjaran dan Iklan Brave tidak tersedia pada peranti anda pada masa ini.</translation>
+<translation id="2539279826042558064">Ganjaran dan Iklan AI Wiz tidak tersedia pada peranti anda pada masa ini.</translation>
 <translation id="5736977383725358876">Kekerapan iklan pemberitahuan</translation>
 <translation id="7701040980221191251">Tiada</translation>
 <translation id="480668534656787076">Maks 1 setiap jam</translation>
@@ -195,7 +195,7 @@
 <translation id="7136536490586989815">Maks 5 setiap jam</translation>
 <translation id="5751102711563374080">Maks 10 setiap jam</translation>
 <translation id="2356652719351432565">Keterkaitan iklan serantau</translation>
-<translation id="3216275550298493597">Ciri ini membolehkan Brave memaparkan iklan yang khusus untuk rantau anda.</translation>
+<translation id="3216275550298493597">Ciri ini membolehkan AI Wiz memaparkan iklan yang khusus untuk rantau anda.</translation>
 <translation id="8446884382197647889">Ketahui Lebih Lanjut</translation>
 <translation id="3783399046165388366">Dikesan secara automatik sebagai <ph name="SUBDIVISION"/></translation>
 <translation id="8010081455002666927">Auto-kesan</translation>
@@ -232,28 +232,28 @@
 <translation id="8826352442759228526">Brave Rewards anda tidak dapat disahkan kerana anda telah mencapai had maksimum bagi peranti disahkan.</translation>
 <translation id="1221593978088944142">Ralat: Had peranti dicapai</translation>
 <translation id="3113653894794167793">Maaf terdapat masalah semasa memproses permintaan anda, sila cuba lagi.</translation>
-<translation id="6895088073061692390">Malangnya, profil Ganjaran Brave anda telah dibenderakan kerana semakan automatik kami menemukan beberapa aktiviti Iklan Brave yang tidak dijangka.</translation>
+<translation id="6895088073061692390">Malangnya, profil Ganjaran AI Wiz anda telah dibenderakan kerana semakan automatik kami menemukan beberapa aktiviti Iklan AI Wiz yang tidak dijangka.</translation>
 <translation id="4229056297802204697">Semasa profil anda dibenderakan, anda boleh terus melihat iklan, tetapi tidak akan layak menerima pembayaran. Anda juga tidak akan dapat menyambungkan akaun penjagaan dengan Ganjaran Brave.</translation>
 <translation id="5124846913141379164">Ada kemungkinan profil anda telah tersilap dibenderakan dan tindakan segera tidak diperlukan daripada pihak anda. Bendera pada profil anda mungkin dialih keluar pada masa hadapan.</translation>
-<translation id="280350148043792509"><ph name="BEGIN_LINK"/>Ketahui lebih lanjut tentang proses Brave untuk menandai profil Rewards.<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">Ralat: Profil Brave Rewards telah ditandai</translation>
+<translation id="280350148043792509"><ph name="BEGIN_LINK"/>Ketahui lebih lanjut tentang proses AI Wiz untuk menandai profil Rewards.<ph name="END_LINK"/></translation>
+<translation id="5028274575541726856">Ralat: Profil AI Wiz Rewards telah ditandai</translation>
 <translation id="2607420597216860026">Sila cuba lagi setelah anda melengkapkan pengesahan ID di <ph name="PROVIDER"/>.</translation>
 <translation id="3183954159462541696">Ralat: Anda memerlukan akaun disahkan untuk log masuk</translation>
-<translation id="1859789048900659918">Hmm, nampaknya negara Ganjaran Brave anda tidak sepadan dengan negara akaun <ph name="PROVIDER"/> yang cuba anda buat sambungan.</translation>
+<translation id="1859789048900659918">Hmm, nampaknya negara Ganjaran AI Wiz anda tidak sepadan dengan negara akaun <ph name="PROVIDER"/> yang cuba anda buat sambungan.</translation>
 <translation id="8925428135452218262">Ralat: Negara tidak sepadan</translation>
-<translation id="5260522591743022748">Oh, nampaknya Brave Rewards anda telahpun disahkan dengan akaun<ph name="PROVIDER"/> yang lain. Sila cuba sahkan sekali lagi menggunakan akaun anda yang sebelumnya.</translation>
+<translation id="5260522591743022748">Oh, nampaknya AI Wiz Rewards anda telahpun disahkan dengan akaun<ph name="PROVIDER"/> yang lain. Sila cuba sahkan sekali lagi menggunakan akaun anda yang sebelumnya.</translation>
 <translation id="5111921830714291902">Ralat: Akaun berbeza</translation>
-<translation id="5225019866741699134">Nampaknya, proses menyambungkan <ph name="PROVIDER"/> dengan Ganjaran Brave tidak tersedia buat sementara waktu. Sila cuba lagi nanti.</translation>
+<translation id="5225019866741699134">Nampaknya, proses menyambungkan <ph name="PROVIDER"/> dengan Ganjaran AI Wiz tidak tersedia buat sementara waktu. Sila cuba lagi nanti.</translation>
 <translation id="6105073131081187815">Anda boleh memaparkan <ph name="BEGIN_LINK"/>status perkhidmatan di sini<ph name="END_LINK"/>.</translation>
 <translation id="2400786541309111904">Ralat: Sambungan dengan penjagaan terpilih tidak tersedia buat sementara waktu</translation>
-<translation id="1024520300696337331">Akaun <ph name="PROVIDER"/> anda tidak boleh disambungkan dengan profil Ganjaran Brave anda buat masa ini. Akaun <ph name="PROVIDER"/> anda didaftarkan di negara yang tidak disokong untuk disambungkan dengan Ganjaran Brave buat masa ini.</translation>
+<translation id="1024520300696337331">Akaun <ph name="PROVIDER"/> anda tidak boleh disambungkan dengan profil Ganjaran AI Wiz anda buat masa ini. Akaun <ph name="PROVIDER"/> anda didaftarkan di negara yang tidak disokong untuk disambungkan dengan Ganjaran AI Wiz buat masa ini.</translation>
 <translation id="619384413404021992">Lihat senarai semasa <ph name="LINK_BEGIN"/>bagi wilayah yang disokong dan ketahui lebih lanjut<ph name="END_LINK"/> tentang menyambungkan akaun jagaan dengan Ganjaran Brave.</translation>
 <translation id="7193389978208728181">Ralat: Wilayah tidak disokong buat masa ini</translation>
 <translation id="5382684862562314222">BAT belum lagi disokong di rantau anda di Uphold.</translation>
 <translation id="9074594632540931067">Ralat: BAT tidak tersedia</translation>
 <translation id="5376524136040178759">Menurut Uphold, terdapat beberapa had pada akaun Uphold anda buat masa ini. Sila log masuk ke akaun Uphold anda dan semak sama ada terdapat sebarang notis atau masih ada keperluan akaun untuk dilengkapkan, kemudian cuba lagi. Sebagai contoh, anda mungkin perlu menyerahkan maklumat lanjut kepada Uphold.</translation>
 <translation id="6996157559236886133">Ralat: Kefungsian akaun Uphold yang terhad</translation>
-<translation id="3274650021044762770">Terdapat masalah dalam membuat pengesahan terhadap permintaan penyemak imbas anda untuk menghubungkan Brave Rewards dengan akaun <ph name="PROVIDER"/> anda. Anda boleh <ph name="BEGIN_LINK"/>menghubungi sokongan<ph name="END_LINK"/> untuk mendapatkan bantuan lanjut.</translation>
+<translation id="3274650021044762770">Terdapat masalah dalam membuat pengesahan terhadap permintaan penyemak imbas anda untuk menghubungkan AI Wiz Rewards dengan akaun <ph name="PROVIDER"/> anda. Anda boleh <ph name="BEGIN_LINK"/>menghubungi sokongan<ph name="END_LINK"/> untuk mendapatkan bantuan lanjut.</translation>
 <translation id="1316066811927496401">Ralat: Permintaan tidak dapat disahkan</translation>
 <translation id="8167256685618982116">Dengan menekan buka pada <ph name="TITLE"/>, anda bersetuju dengan <ph name="BEGIN_LINK1"/>Terma Perkhidmatan<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Polisi Privasi<ph name="END_LINK2"/>.</translation>
 <translation id="8817096698141999876">Akaun jagaan (memerlukan pengesahan ID)</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">Dinyahsambung (Ditentusahkan)</translation>
 <translation id="5058161306698404465">Persekitaran penciptaan:</translation>
 <translation id="5856438412804207598">Persekitaran semasa:</translation>
-<translation id="5916290544882167205">Brave Software. Brave adalah tanda dagangan berdaftar Brave Software. Nama tapak boleh menjadi tanda dagangan atau tanda dagangan berdaftar pemilik tapak.</translation>
-<translation id="9026369588205476247">Untuk melindungi privasi anda, penyata Brave Rewards ini tidak disimpan, direkod atau dilog di mana-mana selain daripada alatan anda (komputer ini). Ia tidak boleh diperolehi semula daripada Brave sekiranya kehilangan data berlaku pada alatan anda.</translation>
+<translation id="5916290544882167205">Brave Software. AI Wiz adalah tanda dagangan berdaftar AI Wiz Software. Nama tapak boleh menjadi tanda dagangan atau tanda dagangan berdaftar pemilik tapak.</translation>
+<translation id="9026369588205476247">Untuk melindungi privasi anda, penyata AI Wiz Rewards ini tidak disimpan, direkod atau dilog di mana-mana selain daripada alatan anda (komputer ini). Ia tidak boleh diperolehi semula daripada AI Wiz sekiranya kehilangan data berlaku pada alatan anda.</translation>
 <translation id="3587482841069643663">Semua</translation>
 <translation id="4241224519481557898">Kategori</translation>
 <translation id="3080423471207781945">Jumlah iklan maksimum yang diterima setiap jam:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">Ganjaran iklan diterima</translation>
 <translation id="5212777575344695266">Tanda Sebagai Tidak Sesuai</translation>
 <translation id="2111256234277361810">Tanda Sebagai Tidak Sesuai ✓</translation>
-<translation id="8988332871810963281">Tiada sejarah Iklan Brave ketika ini</translation>
+<translation id="8988332871810963281">Tiada sejarah Iklan AI Wiz ketika ini</translation>
 <translation id="5345727496083327478">Anda tidak akan menerima iklan daripada kategori ini lagi</translation>
 <translation id="2631006050119455616">Disimpan</translation>
 <translation id="6976444672879155794">Sumbang Secara Automatik [[processor]]</translation>
@@ -373,7 +373,7 @@
 <translation id="4932733599132424254">Tarikh</translation>
 <translation id="3552003743293281224">Deposit</translation>
 <translation id="3866249974567520381">Huraian</translation>
-<translation id="8605272644314973683">Ganjaran Brave ialah</translation>
+<translation id="8605272644314973683">Ganjaran AI Wiz ialah</translation>
 <translation id="298067735430872465">Pendapatan daripada Iklan</translation>
 <translation id="1418534671788496616">Lihat sejarah deposit</translation>
 <translation id="3412655388715513818">Kecualikan laman ini</translation>
@@ -420,8 +420,8 @@
 <translation id="5669281110673664811">Kosongkan senarai pengecualian</translation>
 <translation id="1797334173232638045">Tapak anda yang dipin telah dialihkan ke</translation>
 <translation id="3074127054582480056">Perhatian</translation>
-<translation id="1666001796278936721">Dengan menetapkan semula, profil semasa Ganjaran Brave anda akan dipadamkan dan anda akan bermula semula dengan profil Ganjaran Brave yang baharu. Sebelum meneruskan, <ph name="LINK_BEGIN"/>ketahui lebih lanjut<ph name="LINK_END"/> tentang penetapan semula sebagai langkah selamat.</translation>
-<translation id="4806029412510565611">Saya faham bahawa profil semasa Ganjaran Brave dan data Ganjaran Brave saya akan dipadamkan daripada peranti saya dan saya telah membaca <ph name="LINK_BEGIN"/>artikel sokongan tentang penetapan semula<ph name="LINK_END"/>.</translation>
+<translation id="1666001796278936721">Dengan menetapkan semula, profil semasa Ganjaran AI Wiz anda akan dipadamkan dan anda akan bermula semula dengan profil Ganjaran AI Wiz yang baharu. Sebelum meneruskan, <ph name="LINK_BEGIN"/>ketahui lebih lanjut<ph name="LINK_END"/> tentang penetapan semula sebagai langkah selamat.</translation>
+<translation id="4806029412510565611">Saya faham bahawa profil semasa Ganjaran AI Wiz dan data Ganjaran AI Wiz saya akan dipadamkan daripada peranti saya dan saya telah membaca <ph name="LINK_BEGIN"/>artikel sokongan tentang penetapan semula<ph name="LINK_END"/>.</translation>
 <translation id="3494964159182650590">Ringkasan Ganjaran</translation>
 <translation id="2913994227901456490">Lihat semua [[numItems]] item</translation>
 <translation id="6685434227783226855">Hantar Sumbangan saya</translation>
@@ -433,13 +433,13 @@
 <translation id="5015443703424816075">Token</translation>
 <translation id="1634828734222219955">Jumlah</translation>
 <translation id="3535654229833214438">Transaksi</translation>
-<translation id="8772672608371898774">Penerbit Brave yang Disahkan</translation>
+<translation id="8772672608371898774">Penerbit AI Wiz yang Disahkan</translation>
 <translation id="5050370287908180130">Lihat Penyata Bulanan untuk Butiran</translation>
 <translation id="7853202427316060426">Aktiviti</translation>
 <translation id="7232682712743566408">Baki Rewards</translation>
 <translation id="4258022280942725182">Brave Rewards anda</translation>
 <translation id="6727483290601442544">Lihat Butiran</translation>
-<translation id="4206899127409458763">Mencipta profil Brave Rewards anda</translation>
+<translation id="4206899127409458763">Mencipta profil AI Wiz Rewards anda</translation>
 <translation id="8706157865312453070">Laman Web Dikecualikan</translation>
 <translation id="2501059654604370822">Alih keluar daripada pengecualian</translation>
 <translation id="9075700728717335924">Anda telah mengecualikan</translation>
@@ -448,7 +448,7 @@
 <translation id="5113531205597573951">Laman Web Dilihat</translation>
 <translation id="4450893287417543264">Jangan tunjuk lagi</translation>
 <translation id="7642372245223412840">Bersambung ke bitFlyer</translation>
-<translation id="6143701117592994599">Tindakan menyambungkan Ganjaran Brave dengan akaun bitFlyer akan membolehkan anda memperoleh BAT dan mengeluarkan pendapatan BAT anda daripada Ganjaran Brave.</translation>
+<translation id="6143701117592994599">Tindakan menyambungkan Ganjaran AI Wiz dengan akaun bitFlyer akan membolehkan anda memperoleh BAT dan mengeluarkan pendapatan BAT anda daripada Ganjaran Brave.</translation>
 <translation id="4354564238172327160">Jadilah Pencipta Brave!</translation>
 <translation id="4639659520811817892">Lawati creators.brave.com untuk mendaftar hari ini dan mula memperoleh BAT daripada peminat dan pengikut anda.</translation>
 <translation id="4816455138209470435">Brave menyokong YouTube, Twitch, Vimeo dan pelbagai lagi!</translation>
@@ -465,7 +465,7 @@
 <translation id="1544192797660353713">Dompet</translation>
 <translation id="616639131065447379">Selamat datang ke Dompet Kripto Brave</translation>
 <translation id="1740464057879304704">Dompet Kripto membolehkan anda menggunakan mata wang kripto dan aset-aset berkaitan dalam Brave. Dompet Kripto menyokong token seperti ETH dan BAT, juga barang terkumpul, dan membolehkan anda menggunakan Dapp dan lain-lain kontrak. Kefungsian ini untuk pengguna yang telah biasa menggunakan Ethereum dan lain-lain sistem rantai blok - atau bagi mereka yang ingin belajar.</translation>
-<translation id="4855440621031541830">Hanya guna Dompet Kripto sekiranya anda menerima bahawa anda sendiri bertanggungjawab ke atas segala risiko yang berkaitan dengan penggunaan ini, dan bahawa Perisian Brave tidak akan memikul tanggungjawab mahupun liabiliti ke atas sebarang kerugian ketika kerugian kebetulan atau akibat yang anda mungkin akan alami akibat penggunaan ini.</translation>
+<translation id="4855440621031541830">Hanya guna Dompet Kripto sekiranya anda menerima bahawa anda sendiri bertanggungjawab ke atas segala risiko yang berkaitan dengan penggunaan ini, dan bahawa Perisian AI Wiz tidak akan memikul tanggungjawab mahupun liabiliti ke atas sebarang kerugian ketika kerugian kebetulan atau akibat yang anda mungkin akan alami akibat penggunaan ini.</translation>
 <translation id="3187473319809074178">Kesemua ini berasingan sepenuhnya daripada</translation>
 <translation id="8327818101454798856">Jadi sekiranya anda ingin menyokong laman-laman kegemaran anda, pergilah ke sana.</translation>
 <translation id="412480955826088549">Memuat Turun Komponen...</translation>
@@ -473,7 +473,7 @@
 <translation id="326118736933420687">Anda sedang melihat halaman WebTorrent</translation>
 <translation id="7534079972563542000">Domain yang tidak dapat Dihentikan</translation>
 <translation id="4492298165410552103">Mengaktifkan sokongan Domain yang tidak dapat Dihentikan di Brave?</translation>
-<translation id="3647533686160055812">Brave akan menggunakan Infura untuk menyelesaikan nama domain .crypto (dan juga .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) yang berada di Unstoppable Domains. Brave menyembunyikan alamat IP anda. Jika anda mendayakan ciri ini, Infura dapat melihat seseorang cuba melawati domain ini, dan setakat itu sahaja. Lihat <ph name="BEGIN_INFURA_TOU_LINK"/>syarat penggunaan<ph name="END_INFURA_TOU_LINK"/> dan <ph name="BEGIN_INFURA_PRIVACY_LINK"/>dasar privasi<ph name="END_INFURA_PRIVACY_LINK"/> Infura.</translation>
+<translation id="3647533686160055812">Brave akan menggunakan Infura untuk menyelesaikan nama domain .crypto (dan juga .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) yang berada di Unstoppable Domains. AI Wiz menyembunyikan alamat IP anda. Jika anda mendayakan ciri ini, Infura dapat melihat seseorang cuba melawati domain ini, dan setakat itu sahaja. Lihat <ph name="BEGIN_INFURA_TOU_LINK"/>syarat penggunaan<ph name="END_INFURA_TOU_LINK"/> dan <ph name="BEGIN_INFURA_PRIVACY_LINK"/>dasar privasi<ph name="END_INFURA_PRIVACY_LINK"/> Infura.</translation>
 <translation id="6513892817556267573">Ethereum Name Service</translation>
 <translation id="4335039108389860301">Mengaktifkan sokongan Ethereum Name Service (ENS) di Brave?</translation>
 <translation id="4609973808011229683">Brave akan menggunakan Infura untuk menyelesaikan nama domain .eth yang berada pada Perkhidmatan Nama Ethereum (ENS). Jika anda mendayakan ciri ini, Infura dapat melihat seseorang cuba melawati domain .eth ini, dan setakat itu sahaja. Lihat <ph name="BEGIN_INFURA_TOU_LINK"/>syarat penggunaan<ph name="END_INFURA_TOU_LINK"/> dan <ph name="BEGIN_INFURA_PRIVACY_LINK"/>dasar privasi<ph name="END_INFURA_PRIVACY_LINK"/> Infura.</translation>
@@ -483,7 +483,7 @@
 <translation id="4047002754575891955">Teruskan dengan carian luar rantaian</translation>
 <translation id="531747189990625622">Solana Name Service</translation>
 <translation id="1090584614351290462">Mengaktifkan sokongan Solana Name Service (SNS) di Brave?</translation>
-<translation id="1026480261052976838">Brave akan menggunakan pihak ketiga untuk menyelesaikan nama domain .sol. Brave menyembunyikan alamat IP anda. Jika anda mendayakan ciri ini, pihak ketiga dapat lihat bahawa ada orang yang cuba melawat domain .sol ini tetapi setakat itu sahaja. Untuk mendapatkan maklumat lanjut tentang jenis pihak ketiga yang kami gunakan dan dasar privasi mereka, sila lihat <ph name="BEGIN_SNS_WIKI_LINK"/>halaman bantuan<ph name="END_SNS_WIKI_LINK"/> kami.</translation>
+<translation id="1026480261052976838">Brave akan menggunakan pihak ketiga untuk menyelesaikan nama domain .sol. AI Wiz menyembunyikan alamat IP anda. Jika anda mendayakan ciri ini, pihak ketiga dapat lihat bahawa ada orang yang cuba melawat domain .sol ini tetapi setakat itu sahaja. Untuk mendapatkan maklumat lanjut tentang jenis pihak ketiga yang kami gunakan dan dasar privasi mereka, sila lihat <ph name="BEGIN_SNS_WIKI_LINK"/>halaman bantuan<ph name="END_SNS_WIKI_LINK"/> kami.</translation>
 <translation id="7378412287463452336">Teruskan penggunaan pelayan Infura</translation>
 <translation id="4388873516324656141">Teruskan penggunaan pelayan SNS</translation>
 <translation id="2356070529366658676">Tanya</translation>
@@ -491,7 +491,7 @@
 <translation id="2468755552460246661">Domain Disekat</translation>
 <translation id="6393849031898466746">Tapak ini mungkin cuba menjejaki anda merentasi tapak lain</translation>
 <translation id="983774928604730749">Brave telah menghalang laman web berikut daripada pemuatan:</translation>
-<translation id="8629537573456243518">Disebabkan anda telah membuat permintaan untuk menyekat penjejak dan iklan secara tegas, Brave menyekat laman ini sebelum sambungan rangkaian yang pertama.</translation>
+<translation id="8629537573456243518">Disebabkan anda telah membuat permintaan untuk menyekat penjejak dan iklan secara tegas, AI Wiz menyekat laman ini sebelum sambungan rangkaian yang pertama.</translation>
 <translation id="2459038234784107183">Jangan memberi amaran kepada saya lagi mengenai laman web ini</translation>
 <translation id="8242426110754782860">Teruskan</translation>
 <translation id="2501278716633472235">Kembali</translation>
@@ -500,7 +500,7 @@
 <translation id="8415427685483394219">Adakah anda mahu melawati halaman ini dalam mod Luar Rekod?</translation>
 <translation id="5754874269349119401">Brave mahu melindungi anda apabila melawati laman sensitif. Laman yang anda lawati dalam mod Luar Rekod tidak akan dipaparkan dalam sejarah semak imbas anda dan kuki tidak akan disimpan.</translation>
 <translation id="1307431692088049276">Jangan tanya saya lagi</translation>
-<translation id="6329829767845427007">Anda boleh mengubah tetapan ini kemudian dalam Tetapan Brave dalam bahagian Privasi dan Keselamatan</translation>
+<translation id="6329829767845427007">Anda boleh mengubah tetapan ini kemudian dalam Tetapan AI Wiz dalam bahagian Privasi dan Keselamatan</translation>
 <translation id="951201617124425694">Teruskan dengan mod Luar Rekod</translation>
 <translation id="4087894168792701548">Teruskan seperti Biasa</translation>
 <translation id="5874287397425241890">Anda sedang melayari laman web ini dalam mod Luar Rekod.</translation>
@@ -543,7 +543,7 @@
 <translation id="3373798179786163193">Teruskan dengan Get Laluan Awam</translation>
 <translation id="1974060860693918893">Lanjutan</translation>
 <translation id="9096577886148726047">Sembunyi Info Lanjut</translation>
-<translation id="182581792765792826">Brave tidak boleh memuatkan sumber IPFS yang diminta sama ada kerana nod IPFS tempatan Brave tidak bermula atau kerana tiada rakan tersambung yang ada pada ketika itu. Sekiranya anda memilih "Teruskan", Brave akan kembali secara automatik kepada gerbang  awam lalai apabila menggunakan nod IPFS tempatan Brave gagal. Anda boleh mengubah gelagat ini pada bila-bila masa dalam tetapan Brave.</translation>
+<translation id="182581792765792826">Brave tidak boleh memuatkan sumber IPFS yang diminta sama ada kerana nod IPFS tempatan AI Wiz tidak bermula atau kerana tiada rakan tersambung yang ada pada ketika itu. Sekiranya anda memilih "Teruskan", AI Wiz akan kembali secara automatik kepada gerbang  awam lalai apabila menggunakan nod IPFS tempatan AI Wiz gagal. Anda boleh mengubah gelagat ini pada bila-bila masa dalam tetapan Brave.</translation>
 <translation id="8026038288183400906">Keutamaan IPFS</translation>
 <translation id="2058855456574089690">Tetapkan keutamaan IPFS anda</translation>
 <translation id="4780526507945807546">Gunakan nod IPFS tempatan Brave</translation>
@@ -559,7 +559,7 @@
 <translation id="1675751799495331928">Kami telah melebihi had percubaan, cuba lagi nanti.</translation>
 <translation id="4499666752625407848">Ralat berlaku semasa kemas kini.</translation>
 <translation id="62991515067726424">Kandungan ini dimuatkan melalui protokol IPFS</translation>
-<translation id="7263366446813126341">Sistem Fail InterPlanetary (IPFS) adalah rangkaian awam untuk penyimpanan dan penghantaran data rakan-ke-rakan. Anda boleh mengetahui lebih lanjut mengenai integrasi Brave atau mengkonfigurasi tetapan IPFS anda pada bila-bila masa.</translation>
+<translation id="7263366446813126341">Sistem Fail InterPlanetary (IPFS) adalah rangkaian awam untuk penyimpanan dan penghantaran data rakan-ke-rakan. Anda boleh mengetahui lebih lanjut mengenai integrasi AI Wiz atau mengkonfigurasi tetapan IPFS anda pada bila-bila masa.</translation>
 <translation id="3175567740517780285">Tetapan IPFS</translation>
 <translation id="8914505352873092008">Pergi ke halaman tetapan IPFS</translation>
 <translation id="3465468510001693544">Diagnostik IPFS</translation>
@@ -601,21 +601,21 @@
 <translation id="1848737374354350807">Baki</translation>
 <translation id="6516984207843289176">Sambungkan akaun</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>Sedia untuk mulakan perolehan?<ph name="BOLD_END"/> Sambung atau cipta akaun dengan salah satu rakan kongsi kami.</translation>
-<translation id="1772961321862399863">Untuk memperoleh BAT, pengguna mesti menyambungkan akaun penjagaan dengan Ganjaran Brave. Malangnya, tiada penjagaan yang tersedia di rantau anda jadi pendapatan tidak tersedia. Buat masa ini, tindakan menghidupkan Ganjaran Brave akan menyokong pencipta secara automatik.</translation>
+<translation id="1772961321862399863">Untuk memperoleh BAT, pengguna mesti menyambungkan akaun penjagaan dengan Ganjaran Brave. Malangnya, tiada penjagaan yang tersedia di rantau anda jadi pendapatan tidak tersedia. Buat masa ini, tindakan menghidupkan Ganjaran AI Wiz akan menyokong pencipta secara automatik.</translation>
 <translation id="902298128239575729">Hantar sumbangan dengan Ganjaran Brave</translation>
-<translation id="6276721355724491595">Anda akan dapat menghantar sumbangan atas permintaan kepada pencipta kegemaran anda dengan baki Brave Rewards anda sebaik sahaja anda menyambungkan akaun jagaan.</translation>
+<translation id="6276721355724491595">Anda akan dapat menghantar sumbangan atas permintaan kepada pencipta kegemaran anda dengan baki AI Wiz Rewards anda sebaik sahaja anda menyambungkan akaun jagaan.</translation>
 <translation id="1149481926056509086">Untuk menghantar sumbangan atas permintaan, pengguna mesti menghubungkan akaun penjagaan kepada Ganjaran Brave. Malangnya, tiada penjaga yang tersedia dalam rantau anda, jadi penghantaran tidak tersedia. Sementara itu, anda masih menyokong pencipta secara automatik.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
       =1 {Bulan ini, anda telah melawat # orang pencipta yang disokong oleh Ganjaran Brave}
       other {Bulan ini, anda telah melawat # orang pencipta yang disokong oleh Ganjaran Brave}
     }</translation>
-<translation id="6067959437127691361">Tindakan menggunakan Ganjaran Brave dapat menyokong pencipta kandungan dan membolehkan anda memperoleh BAT</translation>
+<translation id="6067959437127691361">Tindakan menggunakan Ganjaran AI Wiz dapat menyokong pencipta kandungan dan membolehkan anda memperoleh BAT</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> Ganjaran: <ph name="AMOUNT"/></translation>
 <translation id="3274366539954332481">Ad Rewards <ph name="MONTH"/> anda ada di sini!</translation>
 <translation id="7861645265922445992">Tuntut Ganjaran</translation>
 <translation id="9013419433042554094">Tuntut Token</translation>
 <translation id="2359808026110333948">Teruskan</translation>
-<translation id="885805571521218129">Ini menggambarkan anggaran julat pendapatan anda untuk Iklan Brave pada bulan ini.</translation>
+<translation id="885805571521218129">Ini menggambarkan anggaran julat pendapatan anda untuk Iklan AI Wiz pada bulan ini.</translation>
 <translation id="3863981251715594911">Bagaimanakah ia berfungsi?</translation>
 <translation id="4782365133987903299">Tinggal <ph name="DAYS"/> untuk anda membuat tuntutan</translation>
 <translation id="7931127789630755251">Peroleh token untuk iklan peribadi yang anda lihat dalam Brave</translation>
@@ -650,7 +650,7 @@
 <translation id="6333727259565526314">Reward anda sedang dihantar.</translation>
 <translation id="39734939514946950">Amaun Ganjaran Anda</translation>
 <translation id="717952606991220586">Maaf, berlaku kesilapan. Sila cuba sebentar lagi.</translation>
-<translation id="7210234701206674260">Ganjaran Brave menghadapi masalah. Sila cuba lagi kemudian.</translation>
+<translation id="7210234701206674260">Ganjaran AI Wiz menghadapi masalah. Sila cuba lagi kemudian.</translation>
 <translation id="3358400027937159351">Anda telah menyumbang <ph name="AMOUNT"/>.</translation>
 <translation id="1619753851206150396">Anda telah log keluar</translation>
 <translation id="3035648636451344428">Perkara ini berlaku dari semasa ke semasa untuk memastikan akaun <ph name="PROVIDER"/> anda selamat. Semasa log keluar, anda akan menerima pembayaran secara berterusan, tetapi tidak akan dapat melihat baki anda atau menghantar sumbangan daripada akaun <ph name="PROVIDER"/> anda.</translation>
@@ -659,26 +659,26 @@
 <translation id="2429828319207652823">Terdapat beberapa masalah memproses sumbangan anda.</translation>
 <translation id="6390041270339783491">Sumbangan bulanan gagal</translation>
 <translation id="7047578174221019462">Sumbangan bulanan anda telah diproses.</translation>
-<translation id="2529827670795983639">Nampaknya ini tidak berfungsi, Brave ads akan dijeda. Hubungi kami jika anda memerlukan bantuan dengan captcha.</translation>
+<translation id="2529827670795983639">Nampaknya ini tidak berfungsi, AI Wiz ads akan dijeda. Hubungi kami jika anda memerlukan bantuan dengan captcha.</translation>
 <translation id="261607053214862521">Percubaan maksimum dilepasi</translation>
 <translation id="2323171459178104277">Diselesaikan!</translation>
-<translation id="1512837998731269583">Iklan dan pendapatan kini akan disambung semula. Terima kasih kerana membantu kami melindungi Brave Rewards dan iklan berdasarkan privasi.</translation>
+<translation id="1512837998731269583">Iklan dan pendapatan kini akan disambung semula. Terima kasih kerana membantu kami melindungi AI Wiz Rewards dan iklan berdasarkan privasi.</translation>
 <translation id="3247549836099021862">Hubungi sokongan</translation>
 <translation id="5234764350956374838">Singkirkan</translation>
 <translation id="7859066142771796818">Gunakan token untuk membeli kad hadiah, membuat pertukaran mata wang lain, menyokong pencipta kandungan dan pelbagai lagi.</translation>
-<translation id="5425006356459378415">Ganjaran Brave tidak tersedia</translation>
+<translation id="5425006356459378415">Ganjaran AI Wiz tidak tersedia</translation>
 <translation id="909076461795862330">Malangnya, terdapat ralat semasa cuba menetapkan Ganjaran Brave. Sila cuba sekali lagi.</translation>
 <translation id="3180990265682133881">Malangnya, terdapat ralat semasa cuba menetapkan negara anda. Sila cuba sekali lagi.</translation>
-<translation id="5931798071481566121">Pendaftaran baharu untuk Ganjaran Brave dinyahdayakan di rantau anda buat masa ini. Walau bagaimanapun, anda boleh mencuba sekali lagi kemudian. <ph name="LINK_BEGIN"/>Ketahui lebih lanjut<ph name="LINK_END"/></translation>
+<translation id="5931798071481566121">Pendaftaran baharu untuk Ganjaran AI Wiz dinyahdayakan di rantau anda buat masa ini. Walau bagaimanapun, anda boleh mencuba sekali lagi kemudian. <ph name="LINK_BEGIN"/>Ketahui lebih lanjut<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">Yay! Anda sudah bersedia!</translation>
 <translation id="6136350726756049410">Kini anda boleh mendapat ganjaran dengan melihat iklan. Anda membantu menjadikan web sebuah tempat yang lebih baik untuk semua orang. Sungguh hebat!</translation>
-<translation id="5547108999862247665">Bagaimanakah Ganjaran Brave berfungsi?</translation>
+<translation id="5547108999862247665">Bagaimanakah Ganjaran AI Wiz berfungsi?</translation>
 <translation id="3970520675790340955">Pilih negara anda supaya kami boleh menunjukkan pilihan dan iklan yang sesuai untuk rantau anda.</translation>
 <translation id="6945221475159498467">Pilih</translation>
 <translation id="3279158300746391749">Tekan ikon BAT <ph name="BAT_ICON"/> dalam bar URL untuk bermula.</translation>
 <translation id="8465790416279415448">Dengan meneruskan, anda bersetuju dengan <ph name="TOS_LINK_BEGIN"/>Terma Perkhidmatan<ph name="TOS_LINK_END"/> dan <ph name="PP_LINK_BEGIN"/>Dasar Privasi<ph name="PP_LINK_END"/>.</translation>
-<translation id="1015443539415537847">Maaf, Ganjaran Brave tidak tersedia</translation>
-<translation id="5007776270364097327">Akan tetapi, nampaknya anda berada di rantau yang Ganjaran Brave tidak tersedia.</translation>
+<translation id="1015443539415537847">Maaf, Ganjaran AI Wiz tidak tersedia</translation>
+<translation id="5007776270364097327">Akan tetapi, nampaknya anda berada di rantau yang Ganjaran AI Wiz tidak tersedia.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>Ketahui lebih lanjut<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">Jangan bimbang.</translation>
 <translation id="5027616819996705541">Anda masih boleh menyemak imbas secara peribadi!</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">Hantar</translation>
 <translation id="6632987674051304487">Hantar dengan <ph name="PROVIDER"/></translation>
 <translation id="4319632089378796037">Gunakan Dompet Web3</translation>
-<translation id="4530198836725543997">Pencipta ini telah mendaftar dengan Brave dan boleh menerima sumbangan daripada pengguna Brave Rewards.</translation>
+<translation id="4530198836725543997">Pencipta ini telah mendaftar dengan AI Wiz dan boleh menerima sumbangan daripada pengguna AI Wiz Rewards.</translation>
 <translation id="4529874892536380156">Jadikan sebagai sumbangan bulanan berulang. Anda boleh batalkan pada bila-bila masa.</translation>
 <translation id="1177863135347784049">Tersuai</translation>
 <translation id="5907051927340164207">Anda telah menghantar sumbangan bulanan kepada pencipta ini</translation>
@@ -703,13 +703,13 @@
 <translation id="4379244534135194459">Anda juga boleh menghantar sumbangan kripto kepada pencipta ini dengan menggunakan dompet Web3 anda.</translation>
 <translation id="2718860759172031728">Log masuk ke <ph name="PROVIDER"/></translation>
 <translation id="6268134562674951939">Anda tidak mempunyai token yang mencukupi</translation>
-<translation id="5562948772940025260">Anda hanya boleh menghantar hingga <ph name="AMOUNT"/> BAT menggunakan baki Ganjaran Brave anda.</translation>
+<translation id="5562948772940025260">Anda hanya boleh menghantar hingga <ph name="AMOUNT"/> BAT menggunakan baki Ganjaran AI Wiz anda.</translation>
 <translation id="4827581232860040208">Terdapat beberapa masalah dalam menghantar sumbangan anda</translation>
 <translation id="3259723213051400722">Sila cuba lagi.</translation>
 <translation id="5379685283876547860">Sumbangan dihantar!</translation>
 <translation id="7063168612616047608">Terima kasih kerana menyokong pencipta kegemaran anda</translation>
 <translation id="1041398280582063935">Kongsikan sokongan anda</translation>
-<translation id="4001190813297686107">Saya baru menyumbang <ph name="AMOUNT"/> BAT menggunakan Penyemak Imbas Brave! Lihat cara anda boleh menyokong pencipta dan laman kegemaran anda juga: https://brave.com/rewards</translation>
+<translation id="4001190813297686107">Saya baru menyumbang <ph name="AMOUNT"/> BAT menggunakan Penyemak Imbas Brave! Lihat cara anda boleh menyokong pencipta dan laman kegemaran anda juga: https://aiwize.com/rewards</translation>
 <translation id="1950340257946519340">Ralat tidak dijangka telah berlaku</translation>
 <translation id="2605703631071131439">Sila buka semula panel sumbangan untuk mencuba semula.</translation>
 <translation id="8855543392451028706">Selamat datang! Pengguna boleh menyokong pencipta kandungan ini dengan menghantar sumbangan. Itu merupakan cara untuk menghargai mereka atas penghasilan kandungan yang hebat.</translation>
@@ -729,7 +729,7 @@
 <translation id="1128992132632883337">Ralat penghuraian respons telah berlaku</translation>
 <translation id="5382339341735118861">Ralat pemprosesan permintaan umum telah berlaku</translation>
 <translation id="7123780456696055383">Sumber yang diminta tidak tersedia</translation>
-<translation id="1680597601664421644">Mnemonik yang diimport tidak sah untuk Brave Wallet</translation>
+<translation id="1680597601664421644">Mnemonik yang diimport tidak sah untuk AI Wiz Wallet</translation>
 <translation id="4641919696349069826">Satu permintan telah berlangsung</translation>
 <translation id="872806943696014633">Data transaksi tidak wujud</translation>
 <translation id="7068183357903252127">Data transaksi 'kepada' atau 'data' mesti dinyatakan</translation>
@@ -821,7 +821,7 @@
 <translation id="7885157704277298658">Disalin!</translation>
 <translation id="6518133107902771759">Sahkan</translation>
 <translation id="6042308850641462728">Lagi</translation>
-<translation id="768236965975208017">Selamat. Berbilang rantai. Dan sangat mudah untuk digunakan. Dompet Brave anda boleh dicapai dengan hanya beberapa klik sahaja lagi</translation>
+<translation id="768236965975208017">Selamat. Berbilang rantai. Dan sangat mudah untuk digunakan. Dompet AI Wiz anda boleh dicapai dengan hanya beberapa klik sahaja lagi</translation>
 <translation id="3157931365184549694">Pulihkan</translation>
 <translation id="2484275747844666540">Cipta dompet baharu</translation>
 <translation id="3662348701117072366">Import dompet sedia ada</translation>
@@ -862,9 +862,9 @@
 <translation id="352407037922720467">Tab NFT</translation>
 <translation id="163697698769819510">Buat sandaran dompet anda sekarang untuk melindungi aset anda dan memastikan anda tidak akan kehilangan akses.</translation>
 <translation id="1018806299114415224">Buat sandaran sekarang</translation>
-<translation id="1400709719911593089">Dompet Brave tidak ditetapkan sebagai dompet lalai anda dan tidak akan memberikan tindak balas terhadap Web3 DApps. Lawati tetapan untuk mengubah dompet lalai anda.</translation>
+<translation id="1400709719911593089">Dompet AI Wiz tidak ditetapkan sebagai dompet lalai anda dan tidak akan memberikan tindak balas terhadap Web3 DApps. Lawati tetapan untuk mengubah dompet lalai anda.</translation>
 <translation id="4362717653795263052">Pulihkan akaun kripto utama</translation>
-<translation id="3038077262567136741">Masukkan frasa pemulihan anda untuk memulihkan akaun kripto dompet Brave anda.</translation>
+<translation id="3038077262567136741">Masukkan frasa pemulihan anda untuk memulihkan akaun kripto dompet AI Wiz anda.</translation>
 <translation id="955918646509748368">Frasa pemulihan yang anda masukkan tidak sah.</translation>
 <translation id="8107437138787377150">Tampal frasa pemulihan daripada papan klip</translation>
 <translation id="4811736040444856406">Tunjukkan frasa pemulihan</translation>
@@ -907,7 +907,7 @@
 <translation id="6892232036314454524">Ralat ini mungkin berlaku apabila aplikasi yang salah dibuka pada peranti Ledger.</translation>
 <translation id="6598291715079540080">Trezor</translation>
 <translation id="5605670050355397069">Lejar</translation>
-<translation id="4247752006222818397">Beri Brave capaian kepada peranti Ledger anda.</translation>
+<translation id="4247752006222818397">Beri AI Wiz capaian kepada peranti Ledger anda.</translation>
 <translation id="4378551569595875038">Menyambung...</translation>
 <translation id="1943188256166395881">Tambah akaun disemak</translation>
 <translation id="8554010658308662631">Muat lagi</translation>
@@ -970,7 +970,7 @@
 <translation id="3352959425838279177">Daparkan Ether daripada faucet untuk <ph name="SELECTED_NETWORK"/></translation>
 <translation id="6449626816252815844">Pilih kaedah pembayaran</translation>
 <translation id="8009571545960303544">Tandatangan anda sedang diminta</translation>
-<translation id="5294062982587710720">Sila ambil perhatian bahawa Brave tidak dapat mengesahkan kesan akibat daripada penandatangan anda.  Tandatangan boleh membenarkan hampir semua operasi di akaun anda atau bagi pihak anda, termasuk (tetapi tidak terhad kepada) memberikan kawalan sepenuhnya terhadap akaun dan aset kripto anda ke laman web yang membuat permintaan tersebut. Hanya tandatangan jika anda pasti dengan tindakan ini, dan mempercayai laman web tersebut.</translation>
+<translation id="5294062982587710720">Sila ambil perhatian bahawa AI Wiz tidak dapat mengesahkan kesan akibat daripada penandatangan anda.  Tandatangan boleh membenarkan hampir semua operasi di akaun anda atau bagi pihak anda, termasuk (tetapi tidak terhad kepada) memberikan kawalan sepenuhnya terhadap akaun dan aset kripto anda ke laman web yang membuat permintaan tersebut. Hanya tandatangan jika anda pasti dengan tindakan ini, dan mempercayai laman web tersebut.</translation>
 <translation id="3474375934783434676">Tandatangan atas risiko anda sendiri.</translation>
 <translation id="5488357322146334497">Mesej</translation>
 <translation id="3586931643579894722">Sembunyikan butiran</translation>
@@ -994,7 +994,7 @@
 <translation id="7073918978411974168">Elaun yang dicadangkan</translation>
 <translation id="9019403281000653275">Kelulusan tanpa had telah diminta</translation>
 <translation id="4717431746210146708">Benarkan laman ini untuk menambah rangkaian?</translation>
-<translation id="2521480044079508357">Ini akan membenarkan rangkaian ini untuk digunakan dalam Brave Wallet.</translation>
+<translation id="2521480044079508357">Ini akan membenarkan rangkaian ini untuk digunakan dalam AI Wiz Wallet.</translation>
 <translation id="1982257600591932657">Nama rangkaian</translation>
 <translation id="5052727830821470769">URL Rangkaian</translation>
 <translation id="427875364838253580">Lihat semua butiran</translation>
@@ -1047,7 +1047,7 @@
 <translation id="9139452553033760558">Selama 1 minggu</translation>
 <translation id="1658834457013045127">Selama-lamanya</translation>
 <translation id="2770851145415891830">Dompet kripto sedia ada dikesan</translation>
-<translation id="2237759620789871865">Sekiranya anda mahu melangkau import dan mengekalkan pengalaman Crypto Wallets yang terdahulu, hanya perlu navigasi ke Brave Browser <ph name="LINK_BEFORE"/>Tetapan<ph name="LINK_AFTER"/> dan tukar lalai kembali kepada Crypto Wallets. Anda juga boleh mengimport, mencuba Dompet Brave yang baharu, dan menukar kembali pada bila-bila masa.</translation>
+<translation id="2237759620789871865">Sekiranya anda mahu melangkau import dan mengekalkan pengalaman Crypto Wallets yang terdahulu, hanya perlu navigasi ke AI Wiz Browser <ph name="LINK_BEFORE"/>Tetapan<ph name="LINK_AFTER"/> dan tukar lalai kembali kepada Crypto Wallets. Anda juga boleh mengimport, mencuba Dompet AI Wiz yang baharu, dan menukar kembali pada bila-bila masa.</translation>
 <translation id="5590175005414413980">Masukkan kata laluan dompet kripto anda yang sedia ada untuk mengimport ke Dompet Brave. Nikmati cara yang lebih pantas dan selamat untuk mengurus aset kripto dan berinteraksi melalui Web3 DApps.</translation>
 <translation id="880619123281809987">Taip kata laluan dompet Kripto</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> disambungkan</translation>
@@ -1194,7 +1194,7 @@
 <translation id="5522073372365069684">Beli dengan Ramp</translation>
 <translation id="6153197326949684688">Jual dengan <ph name="OFFRAMP_PROVIDER"/></translation>
 <translation id="7902920577183739843">Beli dengan Sardin</translation>
-<translation id="3301984548406568819">Data kewangan dan transaksi diproses oleh rakan kongsi onramp kami. Brave tidak mengumpulkan atau mempunyai akses kepada data tersebut.</translation>
+<translation id="3301984548406568819">Data kewangan dan transaksi diproses oleh rakan kongsi onramp kami. AI Wiz tidak mengumpulkan atau mempunyai akses kepada data tersebut.</translation>
 <translation id="6534275647567011533">Beli dengan Transak</translation>
 <translation id="5973390321030037823">Beli dengan Pautan</translation>
 <translation id="1932640759496708012">Beli dengan Coinbase Pay</translation>
@@ -1255,8 +1255,8 @@
 <translation id="5601436886921227795">Interaksi Dapp</translation>
 <translation id="9104177294757104789">Hantar <ph name="VALUE"/></translation>
 <translation id="4048336522751528394">Tukar <ph name="MAKER"/> kepada <ph name="TAKER"/></translation>
-<translation id="8613144770663526433">Log masuk dengan Brave Wallet</translation>
-<translation id="8813165409788097898">Anda sedang mendaftar masuk ke <ph name="ORIGIN"/>. Dompet Brave akan berkongsi alamat dompet anda dengan <ph name="ORIGIN"/>.</translation>
+<translation id="8613144770663526433">Log masuk dengan AI Wiz Wallet</translation>
+<translation id="8813165409788097898">Anda sedang mendaftar masuk ke <ph name="ORIGIN"/>. Dompet AI Wiz akan berkongsi alamat dompet anda dengan <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Lihat butiran</translation>
 <translation id="3950820424414687140">Log masuk</translation>
 <translation id="4530494379350999373">Asal</translation>
@@ -1344,7 +1344,7 @@
 <translation id="4412698727486357573">Pusat bantuan</translation>
 <translation id="2095142195578664632">Perlukan bantuan? Lihat</translation>
 <translation id="3253669416991680932">Dompet perkakasan ini tidak menyokong kendalian ini.</translation>
-<translation id="7457027586454688423">Masukkan kata laluan Dompet Brave anda</translation>
+<translation id="7457027586454688423">Masukkan kata laluan Dompet AI Wiz anda</translation>
 <translation id="7553242001898162573">Masukkan kata laluan anda</translation>
 <translation id="2873714185189940594">Buka apl Rainbow Bridge?</translation>
 <translation id="2069777099181262239">Rainbow Bridge adalah perkhidmatan bebas yang membantu anda menghubung aset ke seluruh rangkaian dan menggunakan kripto anda pada rangkaian lain dan ekosistem DApp. Penghubungan aset kepada rangkaian lain mempunyai beberapa risiko.</translation>
@@ -1382,7 +1382,7 @@
 <translation id="2781276194026093899">ke</translation>
 <translation id="7992766987062040279">ke</translation>
 <translation id="2295726992010694229">ke</translation>
-<translation id="8241405611628876973">Tahniah! Dompet Brave anda sedia untuk digunakan!</translation>
+<translation id="8241405611628876973">Tahniah! Dompet AI Wiz anda sedia untuk digunakan!</translation>
 <translation id="6828327990705355767">Untuk mengakses dompet anda, cuma klik ikon dompet di bahagian atas sebelah kanan mana-mana tetingkap pelayar Brave.</translation>
 <translation id="396152018598329740">Bagaimanakah cara untuk menggunakan dompet kripto?</translation>
 <translation id="7512061585041489067">Apakah dompet kripto yang terbaik?</translation>
@@ -1392,12 +1392,12 @@
 <translation id="7328255859839881981">Apakah DApps?</translation>
 <translation id="3852489285890032403">Apakah web 3?</translation>
 <translation id="5448233694500869445">Kami mengesan sambungan MetaMask dalam penyemak imbas anda</translation>
-<translation id="8436080536329710282">Masukkan kata laluan dompet MetaMask anda untuk mengimport ke Dompet Brave dengan mudah.</translation>
+<translation id="8436080536329710282">Masukkan kata laluan dompet MetaMask anda untuk mengimport ke Dompet AI Wiz dengan mudah.</translation>
 <translation id="7543512765962444927">Sambungkan ke dompet sedia ada anda</translation>
 <translation id="3551682252653406110">Untuk menyambungkan dompet yang sudah anda miliki, anda mungkin perlu memasukkan frasa pemulihan anda. Pada masa ini kami menyokong pemulihan / pengimportan daripada dompet Ethereum dan Solana.</translation>
 <translation id="346929827081904572">Pulihkan daripada frasa benih</translation>
 <translation id="5645597512426471834">12-24 patah perkataan</translation>
-<translation id="8158505311297755780">Taip frasa pemulihan 12-24 perkataan Dompet Brave anda.</translation>
+<translation id="8158505311297755780">Taip frasa pemulihan 12-24 perkataan Dompet AI Wiz anda.</translation>
 <translation id="5419707890586509000">Import daripada MetaMask</translation>
 <translation id="2265945811107390939">Gunakan kata laluan MetaMask anda untuk mengimport frasa benih anda</translation>
 <translation id="7060680423657442298">Tidak mengapa, saya akan mencipta dompet baharu</translation>
@@ -1407,14 +1407,14 @@
 <translation id="6260144012548445299">Ketahui lebih lanjut tentang dompet baharu saya</translation>
 <translation id="8746910870914151528">Perkara undang-undang</translation>
 <translation id="5148123176978018397">Sila perakui perkara berikut:</translation>
-<translation id="6088314935678153800">Saya faham ini ialah dompet jpenagaan sendiri, dan saya sendiri bertanggungjawab ke atas sebarang dana, aset atau akaun yang berkaitan, dan untuk mengambil tindakan yang sewajarnya untuk menjamin, melindungi dan membuat sandaran dompet saya. Saya faham bahawa Brave TIDAK boleh mengakses dompet saya atau membalikkan transaksi bagi pihak saya, dan frasa pemulihan saya ialah SATU-SATUNYA cara untuk mendapatkan semula akses sekiranya kata laluan hilang, peranti dicuri atau keadaan yang serupa.</translation>
+<translation id="6088314935678153800">Saya faham ini ialah dompet jpenagaan sendiri, dan saya sendiri bertanggungjawab ke atas sebarang dana, aset atau akaun yang berkaitan, dan untuk mengambil tindakan yang sewajarnya untuk menjamin, melindungi dan membuat sandaran dompet saya. Saya faham bahawa AI Wiz TIDAK boleh mengakses dompet saya atau membalikkan transaksi bagi pihak saya, dan frasa pemulihan saya ialah SATU-SATUNYA cara untuk mendapatkan semula akses sekiranya kata laluan hilang, peranti dicuri atau keadaan yang serupa.</translation>
 <translation id="7781090633800450517">Saya telah membaca dan bersetuju menerima <ph name="LINK_BEFORE"/>Syarat penggunaan<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">Beli kripto</translation>
 <translation id="3887541341068007345">Menyemak sambungan dompet...</translation>
-<translation id="3567994771568272606">Import daripada dompet kripto Brave legasi</translation>
+<translation id="3567994771568272606">Import daripada dompet kripto AI Wiz legasi</translation>
 <translation id="8407091560429310499">Pilih aset</translation>
 <translation id="756590380936155533">Untuk menyelesaikan pembelian <ph name="ASSET_TICKER"/> anda, pilih salah satu daripada rakan kongsi kami</translation>
-<translation id="7880860489474966219">Setelah selesai, dana anda akan dipindahkan ke Dompet Brave anda</translation>
+<translation id="7880860489474966219">Setelah selesai, dana anda akan dipindahkan ke Dompet AI Wiz anda</translation>
 <translation id="6182661078713714878">Deposit kripto</translation>
 <translation id="3683305208314702347">Deposit <ph name="VALUE"/></translation>
 <translation id="5768739294929936862">Depositkan token Solana atau SPL</translation>
@@ -1462,12 +1462,12 @@
 <translation id="434502623875309667">Penyelesaian alamat memerlukan permintaan rangkaian luar rantaian. Teruskan?</translation>
 <translation id="2779500703989728346">NFT</translation>
 <translation id="1893207255459018302">Tiada sejarah transaksi</translation>
-<translation id="5356382676355994980">Transaksi yang dibuat dengan Dompet Brave akan dipaparkan di sini.</translation>
+<translation id="5356382676355994980">Transaksi yang dibuat dengan Dompet AI Wiz akan dipaparkan di sini.</translation>
 <translation id="3033638954295674319">Terdapat masalah semasa mendapatkan butiran NFT. Sila cuba lagi nanti.</translation>
 <translation id="2612436523196658045">Alamat ETH akan diterjemahkan kepada alamat Filecoin.</translation>
 <translation id="3282354360699748542">Alamat <ph name="FILECOIN_ADDRESS"/> dalam ruang nama Filecoin akan digunakan untuk transaksi.</translation>
 <translation id="2540568096903252632">Masukkan kata laluan untuk teruskan</translation>
-<translation id="3356580495013324916">Masukkan kata laluan Dompet Brave anda untuk mula menyandarkan dompet.</translation>
+<translation id="3356580495013324916">Masukkan kata laluan Dompet AI Wiz anda untuk mula menyandarkan dompet.</translation>
 <translation id="7545441766078366279">Luluskan <ph name="TOKEN"/></translation>
 <translation id="3115303896544539834">Baki <ph name="TOKEN"/> tidak mencukupi</translation>
 <translation id="4937657825850660613">Separuh</translation>
@@ -1508,7 +1508,7 @@
 <translation id="7561262633951061138">Terbaik</translation>
 <translation id="8060029310790625334">Pusat Bantuan</translation>
 <translation id="3143110700666266545">Apl ini menggunakan API pihak ketiga yang berikut:</translation>
-<translation id="163536108506359457">Pertukaran Brave menggunakan<ph name="AGGREGATOR"/> sebagai pengagregat DEX untuk rangkaian <ph name="NETWORKS"/> yang disokong. <ph name="AGGREGATOR"/> akan memproses alamat dompet dan alamat IP <ph name="NETWORK"/> untuk memenuhi transaksi (termasuk mendapatkan sebut harga). <ph name="AGGREGATOR"/> HANYA akan menggunakan data ini untuk tujuan memproses transaksi.</translation>
+<translation id="163536108506359457">Pertukaran AI Wiz menggunakan<ph name="AGGREGATOR"/> sebagai pengagregat DEX untuk rangkaian <ph name="NETWORKS"/> yang disokong. <ph name="AGGREGATOR"/> akan memproses alamat dompet dan alamat IP <ph name="NETWORK"/> untuk memenuhi transaksi (termasuk mendapatkan sebut harga). <ph name="AGGREGATOR"/> HANYA akan menggunakan data ini untuk tujuan memproses transaksi.</translation>
 <translation id="1847885264294023691">Klik di sini untuk mendapatkan Dasar Privasi <ph name="AGGREGATOR"/>.</translation>
 <translation id="644984757357042735">Rangkaian diperlukan</translation>
 <translation id="132243864024778443">Nama token diperlukan</translation>
@@ -1523,10 +1523,10 @@
 <translation id="4637031024914696767">Dengan mendayakan IPFS dalam Brave, NFT anda akan disematkan secara automatik. Itu merupakan cara terbaik untuk menyandarkan NFT anda dengan selamat.</translation>
 <translation id="2319971828691864975">Mulakan dengan IPFS</translation>
 <translation id="7906328323880284538">Kaedah paling selamat untuk menganjurkan NFT</translation>
-<translation id="214349569547787359">Dayakan IPFS dalam Brave untuk menyandarkan NFT anda secara automatik</translation>
+<translation id="214349569547787359">Dayakan IPFS dalam AI Wiz untuk menyandarkan NFT anda secara automatik</translation>
 <translation id="4819588096619503180">IPFS merupakan rangkaian storan didorong komuniti, seperti pemacu keras yang boleh digunakan oleh semua orang. Namun demikian, ribuan individu bekerjasama untuk menganjurkan kandungan di IPFS berbanding dikawal oleh satu pihak. Apabila anda “menyematkan” sesuatu pada IPFS, maksudnya anda memastikan bahawa sekurang-kurangnya satu salinan kandungan itu disimpan dengan selamat. Dan selagi seseorang mempunyai satu salinan, fail tersebut tidak sekali-kali boleh hilang.<ph name="NEWLINE"/>Dengan mendayakan IPFS dalam Brave, NFT anda akan disematkan secara automatik. Itu merupakan cara paling sesuai untuk menyandarkan NFT anda dengan terjamin.</translation>
 <translation id="9160750213078764355">Lihat jenis NFT saya yang layak</translation>
-<translation id="6241155642582182934">Dayakan IPFS dalam Brave untuk menyandarkan NFT anda secara automatik bagi jaminan tambahan.</translation>
+<translation id="6241155642582182934">Dayakan IPFS dalam AI Wiz untuk menyandarkan NFT anda secara automatik bagi jaminan tambahan.</translation>
 <translation id="654964147165509548">NFT sedang disematkan pada nod IPFS setempat anda.</translation>
 <translation id="4910182786472608576">NFT disokong <ph name="PINNED"/> disematkan pada nod IPFS setempat anda.</translation>
 <translation id="1607117719941506821"><ph name="PINNABLE"/> NFT layak</translation>
@@ -1553,10 +1553,10 @@
 <translation id="5810047320613496595">Sarap</translation>
 <translation id="7257605968082307175">Tandakan sebagai sarap</translation>
 <translation id="7600335727434653744">Alih keluar daripada Dompet Brave?</translation>
-<translation id="6657860743511185539">NFT akan dialih keluar daripada Dompet Brave tetapi akan kekal pada blok rantai. Jika anda mengalihkannya keluar, kemudian berubah fikiran, anda perlu mengimportnya semula secara manual.</translation>
+<translation id="6657860743511185539">NFT akan dialih keluar daripada Dompet AI Wiz tetapi akan kekal pada blok rantai. Jika anda mengalihkannya keluar, kemudian berubah fikiran, anda perlu mengimportnya semula secara manual.</translation>
 <translation id="849880459530751909">Edit NFT</translation>
 <translation id="5925465310724910998">Mahu NFT anda dipaparkan secara automatik?</translation>
-<translation id="5400791731776892411">Dompet Brave boleh menggunakan perkhidmatan pihak ketiga untuk memaparkan NFT anda secara automatik. Brave akan kongsikan alamat dompet anda dengan <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> untuk menyediakan perkhidmatan ini. <ph name="BEFORE_URL"/>Ketahui lebih lanjut.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">Dompet AI Wiz boleh menggunakan perkhidmatan pihak ketiga untuk memaparkan NFT anda secara automatik. AI Wiz akan kongsikan alamat dompet anda dengan <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> untuk menyediakan perkhidmatan ini. <ph name="BEFORE_URL"/>Ketahui lebih lanjut.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Ya, teruskan</translation>
 <translation id="4733761855978444079">Tidak perlu. Saya akan lakukan secara manual</translation>
 <translation id="353620741952662530">Tiada NFT untuk dipaparkan</translation>
@@ -1574,7 +1574,7 @@
 <translation id="1554316484739382186">Orang yang Berbelanja: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">Zebpay</translation>
 <translation id="3026353765778463291">Akaun <ph name="PROVIDER"/></translation>
-<translation id="5360752485622434494">BAT Brave Rewards di <ph name="PROVIDER"/></translation>
+<translation id="5360752485622434494">BAT AI Wiz Rewards di <ph name="PROVIDER"/></translation>
 <translation id="429061011725027672">Anda telah log keluar daripada <ph name="PROVIDER"/> pada masa ini. Sila log masuk untuk melihat baki anda.</translation>
 <translation id="4611292653554630842">Log masuk</translation>
 <translation id="1132794822159463424">Lihat di <ph name="PROVIDER"/></translation>
@@ -1587,9 +1587,9 @@
 <translation id="6951743416068151209">URI Proksi Tor</translation>
 <translation id="1671503397662036257">Status Sambungan Tor</translation>
 <translation id="6024292492796847324">Kemajuan Permulaan Tor</translation>
-<translation id="8300751939969131609">Hidupkan Berita Brave dan sentiasa ikuti kisah terkini</translation>
+<translation id="8300751939969131609">Hidupkan Berita AI Wiz dan sentiasa ikuti kisah terkini</translation>
 <translation id="7758665172236842395">Ikuti sumber kegemaran anda dalam suapan tunggal. Hanya buka tab dalam Brave, tatal ke bawah dan... lihatlah!</translation>
-<translation id="2376542729617592331">Berita Brave disokong iklan dengan iklan peribadi dan tanpa nama. <ph name="LINK_START"/>Ketahui lebih lanjut.<ph name="LINK_END"/>.</translation>
+<translation id="2376542729617592331">Berita AI Wiz disokong iklan dengan iklan peribadi dan tanpa nama. <ph name="LINK_START"/>Ketahui lebih lanjut.<ph name="LINK_END"/>.</translation>
 <translation id="1765217911817124376">Hidupkan Berita Brave</translation>
 <translation id="780301667611848630">Tidak, terima kasih</translation>
 <translation id="6265592479622441247">Kembali ke <ph name="BEGIN_BOLD"/>Papan Pemuka<ph name="END_BOLD"/></translation>
@@ -1611,7 +1611,7 @@
 <translation id="3225021799163709119">Terkenal</translation>
 <translation id="7436846601026966360">Beberapa sumber yang mungkin anda suka. Cadangan berciri awanama dan dipadankan hanya pada peranti anda.</translation>
 <translation id="7950715913905993008">Alamak…</translation>
-<translation id="7158100730468448581">Berita Brave tidak berjaya mendapatkan kandungan.</translation>
+<translation id="7158100730468448581">Berita AI Wiz tidak berjaya mendapatkan kandungan.</translation>
 <translation id="2665462122884195298">Suapan Anda Kosong</translation>
 <translation id="8461269982440806387">Ikuti penerbit dan saluran untuk melihat mereka dalam suapan anda.</translation>
 <translation id="1685574186123115251">Tambah sumber kandungan</translation>
@@ -1772,9 +1772,9 @@
 <translation id="6105745639559695088">Togol bar sisi</translation>
 <translation id="3488252265135539275">Togol tab menegak</translation>
 <translation id="7134064542341959603">Togol tajuk tetingkap tab menegak</translation>
-<translation id="3067105725259639716">Konfigurasikan Brave News</translation>
+<translation id="3067105725259639716">Konfigurasikan AI Wiz News</translation>
 <translation id="6286510487460330478">Konfigurasikan pintasan</translation>
-<translation id="9214819486716388964">Paparkan Brave Talk</translation>
+<translation id="9214819486716388964">Paparkan AI Wiz Talk</translation>
 <translation id="5950760360751948276">Sentiasa paparkan bar penanda halaman</translation>
 <translation id="2960757369920422313">Paparkan bar penanda halaman pada NTP</translation>
 <translation id="522953399371747698">Sembunyikan bar penanda halaman</translation>
@@ -1836,7 +1836,7 @@
 <translation id="2346991295632453064">Terima dan mulakan</translation>
 <translation id="1223498995510244364">Ringkaskan</translation>
 <translation id="7491773233732232424">Perihal Leo</translation>
-<translation id="70442873931504163">Brave Leo ialah pembantu pintar AI yang boleh meringkaskan halaman web, mentranskripsikan video dan menjawab soalan. Brave Leo Premium menggunakan <ph name="LINK_BEFORE"/>model AI<ph name="LINK_AFTER"/> lanjutan untuk balasan yang lebih bernuansa, dan memberikan akses awal kepada ciri baharu.</translation>
+<translation id="70442873931504163">Brave Leo ialah pembantu pintar AI yang boleh meringkaskan halaman web, mentranskripsikan video dan menjawab soalan. AI Wiz Leo Premium menggunakan <ph name="LINK_BEFORE"/>model AI<ph name="LINK_AFTER"/> lanjutan untuk balasan yang lebih bernuansa, dan memberikan akses awal kepada ciri baharu.</translation>
 <translation id="3055739528128372229">Ketepatan jawapan tidak dijamin, dan mungkin termasuk maklumat yang tidak tepat, mengelirukan atau palsu. Jangan serahkan maklumat sensitif atau peribadi dan berhati-hati dengan sebarang jawapan yang berkaitan dengan kesihatan, kewangan, keselamatan diri atau yang seumpamanya.</translation>
 <translation id="7297681068636289435">Leo tidak mengumpulkan pengecam seperti Alamat IP anda yang boleh dikaitkan dengan anda. Data peribadi tidak disimpan oleh model AI atau mana-mana penyedia model pihak ke-3.</translation>
 <translation id="7839853125981164613">Masukkan gesaan di sini</translation>
@@ -1849,7 +1849,7 @@
 <translation id="5095201428204952524">Leo terlalu sibuk sekarang. Sila cuba lagi dalam beberapa minit.</translation>
 <translation id="7144878232160441200">Cuba semula</translation>
 <translation id="7202619923031933110">Hai, saya Leo. Saya pembantu AI yang dihoskan sepenuhnya oleh Brave. Saya dikuasakan oleh Mixtral 7B, iaitu model yang dicipta oleh Mistral AI untuk mengendalikan tugas yang lebih maju.</translation>
-<translation id="2489317965865266353">Hai, saya Leo. Saya diproksi oleh Brave dan dikuasakan oleh Claude Instant, iaitu model yang dicipta oleh Anthropic untuk menggerakkan tugas perbualan dan pemprosesan teks.</translation>
+<translation id="2489317965865266353">Hai, saya Leo. Saya diproksi oleh AI Wiz dan dikuasakan oleh Claude Instant, iaitu model yang dicipta oleh Anthropic untuk menggerakkan tugas perbualan dan pemprosesan teks.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> oleh <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Sembang</translation>
 <translation id="2961040541145689181">Sembang baharu</translation>
@@ -1865,14 +1865,14 @@
 <translation id="377376641316998425">Buka kunci potensi penuh Leo</translation>
 <translation id="8363148882096737034">Claude Anthropic + pelbagai lagi akan tiba tidak lama lagi</translation>
 <translation id="886527905046308697">Akses keutamaan dan had respons yang meningkat</translation>
-<translation id="1068954060985569277">Sesi akaun Brave anda telah tamat tempoh. Sila lawati halaman akaun anda untuk memuatkan semula, kemudian kembali untuk menggunakan ciri premium.</translation>
+<translation id="1068954060985569277">Sesi akaun AI Wiz anda telah tamat tempoh. Sila lawati halaman akaun anda untuk memuatkan semula, kemudian kembali untuk menggunakan ciri premium.</translation>
 <translation id="94736968936709953">Maklum balas berjaya dihantar</translation>
 <translation id="9109355817507033196">Jawapan tidak disukai</translation>
 <translation id="4049425842478222936">Jawapan disukai</translation>
 <translation id="6393149565874086128">Tambah maklum balas</translation>
 <translation id="3521125531016408657">Sukai jawapan</translation>
 <translation id="8202517001427388906">Tidak sukai jawapan</translation>
-<translation id="1379399209929302811">Sediakan Maklum Balas Brave AI</translation>
+<translation id="1379399209929302811">Sediakan Maklum Balas AI Wiz AI</translation>
 <translation id="8442999546461118871">Pilih topik maklum balas anda</translation>
 <translation id="9018766373792005944">Apakah perihal maklum balas anda?</translation>
 <translation id="7355096922131918313">Berikan maklum balas di sini</translation>
@@ -1900,15 +1900,15 @@
 <translation id="8857222718794549840">Tanya apa-apa sahaja! Kita boleh bercakap tentang sebarang topik yang anda mahukan. Saya sentiasa belajar dan menambah baik untuk memberikan jawapan yang lebih baik.</translation>
 <translation id="989329677470075843">Perjanjian privasi</translation>
 <translation id="1173570303649278801">Gunakan konteks halaman untuk respons</translation>
-<translation id="8599503173207256429">Togol untuk bertanya tentang halaman ini. Kandungannya akan dihantar kepada Brave Leo bersama-sama dengan mesej anda.</translation>
+<translation id="8599503173207256429">Togol untuk bertanya tentang halaman ini. Kandungannya akan dihantar kepada AI Wiz Leo bersama-sama dengan mesej anda.</translation>
 <translation id="6303294677342628402">Perisai</translation>
-<translation id="8458987127502506209">Aktifkan Brave Shields</translation>
+<translation id="8458987127502506209">Aktifkan AI Wiz Shields</translation>
 <translation id="7509914170164691086">Shields KE ATAS <ph name="LINK_BEFORE"/>untuk<ph name="LINK_AFTER"/></translation>
 <translation id="260764436039299868">Shields KE BAWAH <ph name="LINK_BEFORE"/>untuk<ph name="LINK_AFTER"/></translation>
 <translation id="3907405056878805220">Jika tapakj ini kelihatan terjejas, cuba Shields ke bawah.
  <ph name="LINK_BEFORE"/>Perhatian: tindakan ini mungkin mengurangkan perlindungan privasi Brave.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Penjejak, iklan dan lagi sekatan<ph name="LINK_BEFORE"/>Ketahui lebih lanjut<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">Tidak dilindungi oleh Brave Shields <ph name="LINK_BEFORE"/>Ketahui lebih lanjut <ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">Tidak dilindungi oleh AI Wiz Shields <ph name="LINK_BEFORE"/>Ketahui lebih lanjut <ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">Kawalan lanjutan</translation>
 <translation id="5799940914270080805">Tindakan mengubah tetapan ini boleh menjejaskan laman.</translation>
 <translation id="9204041448536398473">Tetapan Perisai Global</translation>
@@ -1949,28 +1949,28 @@
 <translation id="535688588637568715">Ya, sekat notis persetujuan kuki</translation>
 <translation id="2808175374672429053">Wildcards tidak dibenarkan untuk Perisai Brave.</translation>
 <translation id="6294662480095808915">Privasi. Secara Lalai.</translation>
-<translation id="4366423156486478559">Dapatkan perlindungan Brave pada setiap pautan yang anda klik. Hanya tetapkan Brave sebagai lalai dan semak imbas. Secara peribadi.</translation>
+<translation id="4366423156486478559">Dapatkan perlindungan AI Wiz pada setiap pautan yang anda klik. Hanya tetapkan AI Wiz sebagai lalai dan semak imbas. Secara peribadi.</translation>
 <translation id="3830912418080848377">Tetapan Import</translation>
 <translation id="6378406588483694938">Import penanda halaman, sambungan dan juga kata laluan yang disimpan dengan mudah daripada penyemak imbas lama anda.</translation>
 <translation id="2092825239819166928">Pilih profil untuk import</translation>
 <translation id="4763127492635705340">Penyemak imbas yang anda pilih mempunyai berbilang profil. Pilih profil yang mahu anda import.</translation>
 <translation id="880174232178865598">Import profil</translation>
 <translation id="2453860139492968684">Selesai</translation>
-<translation id="2273851479262317744">Tetapkan Brave sebagai pelayar lalai</translation>
+<translation id="2273851479262317744">Tetapkan AI Wiz sebagai pelayar lalai</translation>
 <translation id="5037676449506322593">Pilih Semua</translation>
 <translation id="5148943178722443958">Bantu usaha menambah baik Brave.</translation>
 <translation id="1097073572755862978">Hantar laporan diagnostik jika anda mengalami ranap atau beku. <ph name="LINK_BEFORE"/>Ketahui lebih lanjut.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Kongsikan cerapan produk yang peribadi dan awanama secara menyeluruh tentang jenis ciri yang sedang digunakan oleh pengguna Brave. <ph name="LINK_BEFORE"/>Ketahui lebih lanjut.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Persediaan selesai</translation>
-<translation id="3141206739023333979">Ubah pilihan ini pada bila-bila masa di Brave pada <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Ubah pilihan ini pada bila-bila masa di AI Wiz pada <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Baca <ph name="LINK_BEFORE"/>Dasar Privasi<ph name="LINK_AFTER"/> penuh kami</translation>
 <translation id="2801098717523961746">Pilih tema anda</translation>
 <translation id="6262510489122516114">Anda boleh menukar pilihan ini pada bila-bila masa dalam tetapan Brave.</translation>
 <translation id="546481172717459539">Padankan tetapan sistem</translation>
 <translation id="7799817062559422778">Mod Cerah</translation>
 <translation id="4117637339509843559">Mod Gelap</translation>
-<translation id="7821773512278295352">Tembok Api Brave + VPN: Disambungkan</translation>
-<translation id="6019088868713395120">Tembok Api Brave + VPN: Dinyahsambungkan</translation>
+<translation id="7821773512278295352">Tembok Api AI Wiz + VPN: Disambungkan</translation>
+<translation id="6019088868713395120">Tembok Api AI Wiz + VPN: Dinyahsambungkan</translation>
 <translation id="3541307549916475335">UI Panel VPN Brave</translation>
 <translation id="1742469581923031760">Menyambung…</translation>
 <translation id="1287487756047817908">Memutuskan sambungan…</translation>
@@ -2015,9 +2015,9 @@
 <translation id="1156325797949437777">Sokongan diberikan dengan kerjasama Guardian.</translation>
 <translation id="8146777497879160283">Gagal menulis konfigurasi VPN. Hal ini mungkin berlaku jika anda tidak mendapat keizinan atau jika anda belum menjalankan Kemaskinian Windows baru-baru ini.</translation>
 <translation id="3307461350293459700">Sambungan VPN gagal. Sila cuba sambung sekali lagi dan pastikan anda klik pada Benarkan bagi mendayakan konfigurasi VPN Brave.</translation>
-<translation id="7261518280726313829">Tindakan mematikan DNS selamat atau menggunakan pelayan lalai pada Windows mungkin akan mendedahkan nama tapak yang anda lawati kepada penyedia perkhidmatan Internet anda. Brave tidak mengesyorkan perkara ini dilakukan. Adakah anda masih mahu melakukannya?</translation>
-<translation id="888284761945060750">DNS selamat dilumpuhkan oleh dasar organisasi anda. Penggunaan VPN Brave tanpa DNS selamat mungkin akan mendedahkan nama tapak yang anda lawati kepada penyedia perkhidmatan Internet atau organisasi anda.</translation>
-<translation id="6593224083874259773">VPN Brave pada Windows</translation>
+<translation id="7261518280726313829">Tindakan mematikan DNS selamat atau menggunakan pelayan lalai pada Windows mungkin akan mendedahkan nama tapak yang anda lawati kepada penyedia perkhidmatan Internet anda. AI Wiz tidak mengesyorkan perkara ini dilakukan. Adakah anda masih mahu melakukannya?</translation>
+<translation id="888284761945060750">DNS selamat dilumpuhkan oleh dasar organisasi anda. Penggunaan VPN AI Wiz tanpa DNS selamat mungkin akan mendedahkan nama tapak yang anda lawati kepada penyedia perkhidmatan Internet atau organisasi anda.</translation>
+<translation id="6593224083874259773">VPN AI Wiz pada Windows</translation>
 <translation id="3153983908111684619">Tetapan dikunci oleh BraveVPN semasa disambungkan</translation>
 <translation id="1055657720430482013">Windows mempunyai ciri yang dipanggil Peleraian Nama Berbilang Rumah Pintar yang boleh mendedahkan maklumat tentang lokasi anda dan laman yang anda lawati.
 
@@ -2047,8 +2047,8 @@ Buat sambungan anda!
 <translation id="1313124107969703758">VPN Brave: Ralat</translation>
 <translation id="8273420301954598554">Status: Disambungkan</translation>
 <translation id="7155657348064536843">Status: Diputuskan sambungan</translation>
-<translation id="2413929902277520460">VPN Brave - Bersambung</translation>
-<translation id="8048263175525832621">VPN Brave - Tidak bersambung</translation>
+<translation id="2413929902277520460">VPN AI Wiz - Bersambung</translation>
+<translation id="8048263175525832621">VPN AI Wiz - Tidak bersambung</translation>
 <translation id="1498770726476841108">Urus Akaun</translation>
 <translation id="6825718953004242472">Alih keluar ikon</translation>
 <translation id="3287942014983548982">Buka di sini</translation>

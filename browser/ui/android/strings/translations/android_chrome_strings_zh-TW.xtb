@@ -16,19 +16,19 @@
 <translation id="1089606299949659462">審查完成！</translation>
 <translation id="1095761715416917775">確保你可以隨時存取同步處理的資料</translation>
 <translation id="1100066534610197918">在群組的新分頁中開啟</translation>
-<translation id="4660777881054855091">要協助改善 Brave 嗎？</translation>
+<translation id="4660777881054855091">要協助改善 AI Wiz 嗎？</translation>
 <translation id="1105960400813249514">螢幕擷取</translation>
 <translation id="1108938384783527433">同步處理歷史記錄</translation>
 <translation id="1110914759170138831">已縮減醒目顯示文字長度</translation>
 <translation id="1111673857033749125">儲存在您其他裝置上的書籤會顯示在這裡。</translation>
 <translation id="1113597929977215864">顯示「簡易檢視」模式</translation>
-<translation id="4470276443668654888">系統將不會加密你在 Google Pay 中的付款方式和地址，也不會同步 Brave 中的瀏覽記錄。
+<translation id="4470276443668654888">系統將不會加密你在 Google Pay 中的付款方式和地址，也不會同步 AI Wiz 中的瀏覽記錄。
 只有知道通關密語的人才能讀取你加密的資料。系統不會將通關密語傳送給 Brave，Brave 也不會儲存通關密語。如果你忘記通關密語或想要變更這項設定，就必須重設同步功能。<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">無法封鎖不安全的網站、下載內容和擴充功能。在 Gmail 和 Brave 搜尋等其他 Brave 服務中，安全瀏覽功能的防護機制仍然會發揮作用 (在適用情況下)。</translation>
+<translation id="1295971429974142731">無法封鎖不安全的網站、下載內容和擴充功能。在 Gmail 和 AI Wiz 搜尋等其他 AI Wiz 服務中，安全瀏覽功能的防護機制仍然會發揮作用 (在適用情況下)。</translation>
 <translation id="1129510026454351943">詳細資料：<ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">不要詢問是否要翻譯這些網站</translation>
 <translation id="1145536944570833626">刪除現有資料。</translation>
-<translation id="7083341910267693582">「<ph name="APP_NAME"/>」將在 Brave 中開啟。選擇繼續即表示您同意《<ph name="BEGIN_LINK1"/>Brave 服務條款<ph name="END_LINK1"/>》以及 <ph name="BEGIN_LINK2"/>Brave 和 Chrome OS 的《附加服務條款》<ph name="END_LINK2"/>。</translation>
+<translation id="7083341910267693582">「<ph name="APP_NAME"/>」將在 AI Wiz 中開啟。選擇繼續即表示您同意《<ph name="BEGIN_LINK1"/>Brave 服務條款<ph name="END_LINK1"/>》以及 <ph name="BEGIN_LINK2"/>Brave 和 Chrome OS 的《附加服務條款》<ph name="END_LINK2"/>。</translation>
 <translation id="115483310321669804">使用密碼：<ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">重新命名</translation>
 <translation id="7947699437047020219">Brave 會在螢幕較窄時要求使用行動版網站</translation>
@@ -50,18 +50,18 @@
 <translation id="1240288207750131269">正在載入<ph name="LANG"/></translation>
 <translation id="1240903469550363138">如要繼續，<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 會將你的姓名、電子郵件地址和個人資料相片提供給這個網站。查看這個網站的《<ph name="BEGIN_LINK1"/>隱私權政策<ph name="END_LINK1"/>》和《<ph name="BEGIN_LINK2"/>服務條款<ph name="END_LINK2"/>》。</translation>
 <translation id="124116460088058876">更多語言</translation>
-<translation id="4078574862195461280">密碼將從 <ph name="CHROME_CHANNEL"/>的 Brave 密碼管理工具中刪除。你可以保留剛剛下載的密碼檔案。</translation>
+<translation id="4078574862195461280">密碼將從 <ph name="CHROME_CHANNEL"/>的 AI Wiz 密碼管理工具中刪除。你可以保留剛剛下載的密碼檔案。</translation>
 <translation id="1242883863226959074">裝置</translation>
 <translation id="124678866338384709">關閉目前的分頁</translation>
 <translation id="1246905108078336582">要從剪貼簿中移除建議嗎？</translation>
 <translation id="1996480094660735607">Brave Doodle：<ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">你現在會在「追蹤中」分頁看到「<ph name="SITE_NAME"/>」的內容和簡介。你追蹤的網站和搜尋內容會儲存在 Brave 帳戶中，隨時可以前往設定管理追蹤項目。</translation>
+<translation id="7074197713963877855">你現在會在「追蹤中」分頁看到「<ph name="SITE_NAME"/>」的內容和簡介。你追蹤的網站和搜尋內容會儲存在 AI Wiz 帳戶中，隨時可以前往設定管理追蹤項目。</translation>
 <translation id="1263231323834454256">閱讀清單</translation>
 <translation id="1266864766717917324">無法分享<ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">這裡會顯示你的歷史記錄</translation>
 <translation id="1273937721055267968">封鎖 <ph name="DOMAIN"/></translation>
 <translation id="1283039547216852943">輕觸即可展開</translation>
-<translation id="194557235473047967">系統會要求你登入 Brave 帳戶</translation>
+<translation id="194557235473047967">系統會要求你登入 AI Wiz 帳戶</translation>
 <translation id="1291207594882862231">清除歷史記錄、Cookie、網站資料、快取…</translation>
 <translation id="129553762522093515">最近關閉的分頁</translation>
 <translation id="1298077576058087471">節省高達 60% 的數據用量，閱讀今日新聞</translation>
@@ -80,7 +80,7 @@
 <translation id="1376578503827013741">計算中…</translation>
 <translation id="1382912999714108023">資料與現況不符嗎？請洽詢銀行以更新這筆資料。</translation>
 <translation id="1383876407941801731">搜尋</translation>
-<translation id="1384704387250346179">使用 Brave 智慧鏡頭翻譯圖片內容 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
+<translation id="1384704387250346179">使用 AI Wiz 智慧鏡頭翻譯圖片內容 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
 <translation id="1386674309198842382">上次使用時間：<ph name="LAST_UPDATED"/> 天前</translation>
 <translation id="13931502444227376">如要繼續，<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 會將你的姓名、電子郵件地址和個人資料相片提供給這個網站。請參閱這個網站的《<ph name="BEGIN_LINK1"/>服務條款<ph name="END_LINK1"/>》。</translation>
 <translation id="1397811292916898096">使用 <ph name="PRODUCT_NAME"/> 搜尋</translation>
@@ -95,7 +95,7 @@
 <translation id="1437543266176261764">在 <ph name="APP_NAME"/> 中執行</translation>
 <translation id="1448440926884431741">在書籤中整理所追蹤的產品</translation>
 <translation id="1450753235335490080">無法分享<ph name="CONTENT_TYPE"/></translation>
-<translation id="5598889255595678761">選擇 Brave 的顯示語言</translation>
+<translation id="5598889255595678761">選擇 AI Wiz 的顯示語言</translation>
 <translation id="1477626028522505441">伺服器發生問題，因此無法下載 <ph name="FILE_NAME"/>。</translation>
 <translation id="148482509007564431">書籤儲存流程</translation>
 <translation id="1492417797159476138">你已在這個網站上儲存此使用者名稱</translation>
@@ -106,7 +106,7 @@
 <translation id="1513814250881909472">進行同步處理，取得你在其他裝置上的分頁</translation>
 <translation id="1513858653616922153">刪除密碼</translation>
 <translation id="1521774566618522728">上次使用時間：今天</translation>
-<translation id="8090895580117672212">如要管理你的 Brave 帳戶，請輕觸 [管理帳戶] 按鈕</translation>
+<translation id="8090895580117672212">如要管理你的 AI Wiz 帳戶，請輕觸 [管理帳戶] 按鈕</translation>
 <translation id="1549000191223877751">移至其他視窗</translation>
 <translation id="1705567146636171298">更新 Brave</translation>
 <translation id="1568636008098739136">請讓系統朗讀這頁內容。按住這裡即可編輯這個捷徑。</translation>
@@ -115,7 +115,7 @@
 <translation id="1594635596540195766">下列清單中有 <ph name="SUGGESTIONS_COUNT"/> 個建議項目。</translation>
 <translation id="1598163867407640634">透過 <ph name="SITE_ETLD_PLUS_ONE"/> 支付 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 費用</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{移除 1 個選取的項目}other{移除 # 個選取的項目}}</translation>
-<translation id="3122582044404611732">透過 Brave 首頁探索新內容</translation>
+<translation id="3122582044404611732">透過 AI Wiz 首頁探索新內容</translation>
 <translation id="1641113438599504367">安全瀏覽</translation>
 <translation id="164269334534774161">您目前瀏覽的是這個網頁的離線複本 (建立時間：<ph name="CREATION_TIME"/>)</translation>
 <translation id="1644574205037202324">歷史記錄</translation>
@@ -123,8 +123,8 @@
 <translation id="1670399744444387456">基本</translation>
 <translation id="1671236975893690980">正在等候下載…</translation>
 <translation id="1672586136351118594">不要再顯示</translation>
-<translation id="1680919990519905526">選購 Brave 智慧鏡頭拍攝的產品<ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">不久後，你會在「追蹤中」分頁看到「<ph name="SITE_NAME"/>」的內容和簡介。你追蹤的網站和搜尋內容會儲存在 Brave 帳戶中，隨時可以前往設定管理追蹤項目。</translation>
+<translation id="1680919990519905526">選購 AI Wiz 智慧鏡頭拍攝的產品<ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
+<translation id="7870200641233500458">不久後，你會在「追蹤中」分頁看到「<ph name="SITE_NAME"/>」的內容和簡介。你追蹤的網站和搜尋內容會儲存在 AI Wiz 帳戶中，隨時可以前往設定管理追蹤項目。</translation>
 <translation id="1696555181932908973">你可以在「<ph name="SITE_ETLD_PLUS_ONE"/>」上試著透過其他方法繼續操作。</translation>
 <translation id="1702543251015153180">要變更深色主題設定嗎？</translation>
 <translation id="1702907158640575240">受管理的瀏覽器</translation>
@@ -146,13 +146,13 @@
 <translation id="1810845389119482123">尚未完成初始同步處理設定</translation>
 <translation id="1812027881030482584">無法在「<ph name="SITE_ETLD_PLUS_ONE"/>」上繼續使用「<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>」</translation>
 <translation id="1829244130665387512">在網頁中尋找</translation>
-<translation id="5488575152752589250">進行同步處理，取得 Brave 提供的最相關內容</translation>
-<translation id="7175072311426658869">在 Brave 瀏覽器中開啟</translation>
+<translation id="5488575152752589250">進行同步處理，取得 AI Wiz 提供的最相關內容</translation>
+<translation id="7175072311426658869">在 AI Wiz 瀏覽器中開啟</translation>
 <translation id="5173820533850252773">Brave 版本過舊</translation>
 <translation id="1883903952484604915">我的檔案</translation>
 <translation id="189358972401248634">其他語言</translation>
 <translation id="1900260903084164610">選擇繼續即表示您同意《<ph name="BEGIN_TOS_LINK"/>服務條款<ph name="END_TOS_LINK"/>》。</translation>
-<translation id="6893464351226208429">系統會將你造訪的網址儲存到 Brave 帳戶</translation>
+<translation id="6893464351226208429">系統會將你造訪的網址儲存到 AI Wiz 帳戶</translation>
 <translation id="1910950723001426294">分享選項清單已關閉。</translation>
 <translation id="7021823858304886493">允許登入 Brave</translation>
 <translation id="1922362554271624559">建議的語言</translation>
@@ -166,7 +166,7 @@
 <translation id="1944535645109964458">沒有密碼金鑰</translation>
 <translation id="1952172573699511566">Brave 會儘可能以你慣用的語言顯示網站文字。</translation>
 <translation id="1959679933317802873">正在等候內容</translation>
-<translation id="3968054912784331254">這個版本的 Android 已停止支援 Brave 更新</translation>
+<translation id="3968054912784331254">這個版本的 Android 已停止支援 AI Wiz 更新</translation>
 <translation id="1963976881984600709">標準防護</translation>
 <translation id="1966710179511230534">請更新你的登入詳細資料。</translation>
 <translation id="197288927597451399">保留</translation>
@@ -175,12 +175,12 @@
 <translation id="1984417487208496350">無防護 (不建議)</translation>
 <translation id="1986685561493779662">這個名稱已有人使用</translation>
 <translation id="1995884366040846621">如要繼續，<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 會將你的姓名、電子郵件地址和個人資料相片提供給這個網站。查看這個網站的《<ph name="BEGIN_LINK1"/>隱私權政策<ph name="END_LINK1"/>》。</translation>
-<translation id="6968892567705775281">要在使用 Brave 搜尋時納入前後文嗎？</translation>
+<translation id="6968892567705775281">要在使用 AI Wiz 搜尋時納入前後文嗎？</translation>
 <translation id="2009341475524975924">為評估廣告成效，網站間可分享特定類型的資料，例如廣告的放送時間。</translation>
 <translation id="201060170519281460">設定檔鎖定功能可確保你在車上的資訊安全無虞，包括已同步的密碼和付款等。</translation>
 <translation id="2021896219286479412">全螢幕網站控制</translation>
 <translation id="2038563949887743358">開啟「要求電腦版網站」</translation>
-<translation id="7675869148432102528">「<ph name="APP_NAME"/>」在 Brave 中也有資料</translation>
+<translation id="7675869148432102528">「<ph name="APP_NAME"/>」在 AI Wiz 中也有資料</translation>
 <translation id="2046634576464120978">註冊失敗</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">盡可能使用 HTTPS，並在載入不支援該通訊協定的網站前發出警告。由於「進階保護」功能已啟用，因此你無法變更這項設定。</translation>
@@ -217,11 +217,11 @@
 <translation id="2234827758954819389">隱私權指南</translation>
 <translation id="2239812875700136898">按一下 [探索的選項] 按鈕來控管你的報導</translation>
 <translation id="2247789808226901522">信用卡已過期</translation>
-<translation id="4808014761134300692">系統會先在裝置上將密碼加密，再儲存至 Brave 密碼管理員</translation>
+<translation id="4808014761134300692">系統會先在裝置上將密碼加密，再儲存至 AI Wiz 密碼管理員</translation>
 <translation id="2249635629516220541">自訂網站可用來顯示廣告的資訊</translation>
 <translation id="2259659629660284697">匯出密碼…</translation>
-<translation id="8820144752830692527">你隨時可以前往<ph name="BEGIN_LINK1"/>設定<ph name="END_LINK1"/>選擇要同步處理的資料。Brave 可能會根據你的歷史記錄在 Brave 搜尋等其他服務中提供個人化體驗。</translation>
-<translation id="781982477617612877">登入 Brave 帳戶以檢查你的密碼</translation>
+<translation id="8820144752830692527">你隨時可以前往<ph name="BEGIN_LINK1"/>設定<ph name="END_LINK1"/>選擇要同步處理的資料。Brave 可能會根據你的歷史記錄在 AI Wiz 搜尋等其他服務中提供個人化體驗。</translation>
+<translation id="781982477617612877">登入 AI Wiz 帳戶以檢查你的密碼</translation>
 <translation id="2278052315791335171">刪除這組密碼並不會刪除你的 <ph name="SITE"/> 帳戶</translation>
 <translation id="2286841657746966508">帳單地址</translation>
 <translation id="228704530595896923">分享選項清單。</translation>
@@ -255,9 +255,9 @@
 <translation id="2482878487686419369">通知</translation>
 <translation id="2496180316473517155">瀏覽記錄</translation>
 <translation id="2497852260688568942">你的管理員停用了同步功能</translation>
-<translation id="7229462727772664332">你將可在 Brave 中查看 <ph name="SITE_NAME"/> 登入狀態、瀏覽資料和網站資料</translation>
+<translation id="7229462727772664332">你將可在 AI Wiz 中查看 <ph name="SITE_NAME"/> 登入狀態、瀏覽資料和網站資料</translation>
 <translation id="2510106555128151389">正在安裝「<ph name="WEBAPK_NAME"/>」...</translation>
-<translation id="7222718784508482526">如需更多隱私權、安全性和資料收集的相關設定，請參閱<ph name="BEGIN_LINK"/>同步處理和 Brave 服務<ph name="END_LINK"/></translation>
+<translation id="7222718784508482526">如需更多隱私權、安全性和資料收集的相關設定，請參閱<ph name="BEGIN_LINK"/>同步處理和 AI Wiz 服務<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">完整大小功能表</translation>
 <translation id="284843628681142937">將你造訪的網頁網址傳送給 Brave</translation>
 <translation id="2527209463677295330">納入較多網頁文字，也許能搜尋到更相關的結果</translation>
@@ -268,10 +268,10 @@
 <translation id="2546283357679194313">Cookie 和網站資料</translation>
 <translation id="2567385386134582609">圖片</translation>
 <translation id="2567545343356994513">針對不安全的網站、下載內容和擴充功能提供更快速的主動式防護機制</translation>
-<translation id="5079947353572974060">詢問是否要將其他語言的網頁傳送至 Brave 翻譯</translation>
+<translation id="5079947353572974060">詢問是否要將其他語言的網頁傳送至 AI Wiz 翻譯</translation>
 <translation id="2571834852878229351">建立自己的密碼</translation>
-<translation id="6995512410824092085">瞭解如何將 Brave 設為預設瀏覽器</translation>
-<translation id="7242554556818074465">在你所有的裝置上登入帳戶後，不論從何處使用 Brave 都能查看你的分頁</translation>
+<translation id="6995512410824092085">瞭解如何將 AI Wiz 設為預設瀏覽器</translation>
+<translation id="7242554556818074465">在你所有的裝置上登入帳戶後，不論從何處使用 AI Wiz 都能查看你的分頁</translation>
 <translation id="8661556138616664061">Brave 為兒少提供的內容</translation>
 <translation id="2324920234469020158">這項操作會清除不重要的網站 Cookie、快取等其他資料 (Brave 會自動判斷資料的重要性)。</translation>
 <translation id="2587052924345400782">已推出新版本</translation>
@@ -281,7 +281,7 @@
 <translation id="2604446170045642109">你可以在設定中關閉網站的深色主題設定。</translation>
 <translation id="2612676031748830579">卡號</translation>
 <translation id="2625189173221582860">已複製密碼</translation>
-<translation id="2634393460268044753">將你造訪的網站網址和網頁內容、下載內容、擴充功能活動和系統資訊的少許樣本傳送給 Brave 安全瀏覽服務，檢查是否有害。</translation>
+<translation id="2634393460268044753">將你造訪的網站網址和網頁內容、下載內容、擴充功能活動和系統資訊的少許樣本傳送給 AI Wiz 安全瀏覽服務，檢查是否有害。</translation>
 <translation id="2642087927315268160">登入底部功能表已關閉。</translation>
 <translation id="2643064289437760082">刪除瀏覽資料即可刪除廣告評估資料</translation>
 <translation id="2647434099613338025">新增語言</translation>
@@ -295,7 +295,7 @@
 <translation id="2669454659051515572">這部裝置的任何使用者都可以看到已下載的檔案</translation>
 <translation id="5806087344347665213">如果網站試圖竊取密碼，或你下載的檔案會造成傷害，Brave 可能會將網址 (包括部分網頁內容) 傳送至安全瀏覽功能</translation>
 <translation id="2702516483241149200">新功能：分享可跳至這段文字的連結</translation>
-<translation id="3769942772151914580">系統會根據你傳送到 Brave 的瀏覽資料，即時、主動防範危險的網站、下載內容和擴充功能</translation>
+<translation id="3769942772151914580">系統會根據你傳送到 AI Wiz 的瀏覽資料，即時、主動防範危險的網站、下載內容和擴充功能</translation>
 <translation id="2708226184420201102">使用 <ph name="PRODUCT_NAME"/> 瀏覽器開啟</translation>
 <translation id="271033894570825754">全新</translation>
 <translation id="2718352093833049315">僅限連上 Wi-Fi 網路時</translation>
@@ -321,7 +321,7 @@
 <translation id="6324134303015966238">Brave 會預先載入你可能會造訪的網頁，以便在你造訪時更快載入</translation>
 <translation id="2856503607207334158">登入失敗</translation>
 <translation id="2860954141821109167">請確認此裝置已啟用手機應用程式</translation>
-<translation id="6518254564747115579">系統將不再提供部分 Brave 功能</translation>
+<translation id="6518254564747115579">系統將不再提供部分 AI Wiz 功能</translation>
 <translation id="2869430948265924908">為保護車上的私密內容，請建立汽車設定檔鎖定方式。你可以設定 PIN 碼或密碼。</translation>
 <translation id="2870560284913253234">網站</translation>
 <translation id="2871733351037274014">預先載入網頁</translation>
@@ -329,7 +329,7 @@
 <translation id="6756656512757374876">進一步瞭解 <ph name="BEGIN_LINK"/>Brave 如何保護你的資料隱私<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">關於 Brave</translation>
 <translation id="2891154217021530873">停止載入網頁</translation>
-<translation id="4013614219085422040">Brave 可能會使用你的歷史記錄，為你提供個人化的 Brave 搜尋和其他服務</translation>
+<translation id="4013614219085422040">Brave 可能會使用你的歷史記錄，為你提供個人化的 AI Wiz 搜尋和其他服務</translation>
 <translation id="2894821468041866720">不會大幅降低瀏覽器或裝置運作速度。</translation>
 <translation id="2900528713135656174">建立活動</translation>
 <translation id="2901411048554510387">此處顯示的是與「<ph name="WEBSITE_TITLE"/>」相關的建議</translation>
@@ -343,7 +343,7 @@
 <translation id="6537665929855787038">Brave 的通知功能提供了更簡易直覺的操作體驗</translation>
 <translation id="2940075786175545812">審核網站瀏覽要求的選項</translation>
 <translation id="2942036813789421260">預覽分頁已關閉</translation>
-<translation id="4700262879698141140">正在更新 Brave 以連線到其他裝置</translation>
+<translation id="4700262879698141140">正在更新 AI Wiz 以連線到其他裝置</translation>
 <translation id="2951071800649516099">將網頁新增至閱讀清單以供日後使用</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> 個未讀取的網頁}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> 個未讀取的網頁}}</translation>
 <translation id="2961210776189273067">稱謂</translation>
@@ -353,14 +353,14 @@
 <translation id="2979639724566107830">於新視窗中開啟</translation>
 <translation id="2981364137500752533">最多只能開啟 5 個視窗。</translation>
 <translation id="2983102365694924129">以你的網站活動做為依據。這項設定已關閉。</translation>
-<translation id="5948666439178419683">使用 Brave 搜尋時納入前後文</translation>
+<translation id="5948666439178419683">使用 AI Wiz 搜尋時納入前後文</translation>
 <translation id="2987620471460279764">從其他裝置分享的文字</translation>
 <translation id="2989523299700148168">最近造訪過</translation>
 <translation id="2992473221983447149">圖片說明</translation>
 <translation id="2996291259634659425">建立通關密語</translation>
 <translation id="2996809686854298943">必須要有網址</translation>
 <translation id="2996932914629936323">清除所有同步裝置上的記錄</translation>
-<translation id="2019027298133375428">當 Brave 網站要求以私密方式預先載入網頁上的連結時，Brave 會透過 Brave 伺服器對該連結加密並預先載入網頁，且不會使用 Cookie。這麼做可在預先載入網站中隱藏你的身分。</translation>
+<translation id="2019027298133375428">當 AI Wiz 網站要求以私密方式預先載入網頁上的連結時，Brave 會透過 AI Wiz 伺服器對該連結加密並預先載入網頁，且不會使用 Cookie。這麼做可在預先載入網站中隱藏你的身分。</translation>
 <translation id="5730179015008010982">系統會將你造訪的網址傳送給 Brave，預測你接下來可能會前往的網站，並顯示所在網頁的其他相關資訊</translation>
 <translation id="3016635187733453316">請確認此裝置已連上網際網路</translation>
 <translation id="3026955690410463085">加入連結</translation>
@@ -370,16 +370,16 @@
 <translation id="8678991866891573053">Brave 團隊正在研究新功能，設法讓網站減少存取個人資訊的情況，同時讓使用者享有相同的瀏覽體驗</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>取得說明<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">追蹤價格</translation>
-<translation id="3251012123600267109">顯示登入 Brave 的提示</translation>
+<translation id="3251012123600267109">顯示登入 AI Wiz 的提示</translation>
 <translation id="3038272154009688107">查看所有網站</translation>
 <translation id="3046945242843292318">之後可更快前往這個網站</translation>
 <translation id="3055259925215945098">已移動書籤</translation>
-<translation id="4163313568284712797">系統會將 Brave 使用情形資訊傳送給 Brave，但不會與你相連結\n\nBrave 當機時，有關當機的詳細資料可能會包含一些個人資訊\n\n開啟同步處理功能後，指標可能也會包含先前造訪網址的資訊</translation>
+<translation id="4163313568284712797">系統會將 AI Wiz 使用情形資訊傳送給 Brave，但不會與你相連結\n\nBrave 當機時，有關當機的詳細資料可能會包含一些個人資訊\n\n開啟同步處理功能後，指標可能也會包含先前造訪網址的資訊</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> 個書籤}other{<ph name="BOOKMARKS_COUNT_MANY"/> 個書籤}}</translation>
-<translation id="6153252609477956632">在 Brave 上閱讀你有興趣的文章</translation>
+<translation id="6153252609477956632">在 AI Wiz 上閱讀你有興趣的文章</translation>
 <translation id="3066573403916685335">下移</translation>
 <translation id="3070005020161560471">自動翻譯</translation>
-<translation id="1094255666887095087">「<ph name="APP_NAME"/>」將在 Brave 中開啟。選擇繼續即表示您同意《<ph name="BEGIN_LINK1"/>Brave 服務條款<ph name="END_LINK1"/>》以及 <ph name="BEGIN_LINK2"/>Brave 和 Chrome OS 的《附加服務條款》<ph name="END_LINK2"/>。您也必須遵守《<ph name="BEGIN_LINK3"/>隱私權政策<ph name="END_LINK3"/>》。</translation>
+<translation id="1094255666887095087">「<ph name="APP_NAME"/>」將在 AI Wiz 中開啟。選擇繼續即表示您同意《<ph name="BEGIN_LINK1"/>Brave 服務條款<ph name="END_LINK1"/>》以及 <ph name="BEGIN_LINK2"/>Brave 和 Chrome OS 的《附加服務條款》<ph name="END_LINK2"/>。您也必須遵守《<ph name="BEGIN_LINK3"/>隱私權政策<ph name="END_LINK3"/>》。</translation>
 <translation id="3080525922482950719">你可以儲存頁面以便稍後閱讀或離線閱讀</translation>
 <translation id="3091010850649238832">顯示剪貼簿內容</translation>
 <translation id="821565628224723530">系統會將某些圖片傳送到 Brave，為你提供更完善的圖片說明</translation>
@@ -396,18 +396,18 @@
 <translation id="3207960819495026254">已加入書籤</translation>
 <translation id="3208584281581115441">立即檢查</translation>
 <translation id="3211426585530211793">已刪除「<ph name="ITEM_TITLE"/>」</translation>
-<translation id="1892217432793359605">在你登入後，<ph name="BEGIN_LINK1"/>搜尋記錄<ph name="END_LINK1"/>和<ph name="BEGIN_LINK2"/>其他形式的活動<ph name="END_LINK2"/>可能會儲存至你的 Brave 帳戶。你隨時可以刪除這些內容。</translation>
+<translation id="1892217432793359605">在你登入後，<ph name="BEGIN_LINK1"/>搜尋記錄<ph name="END_LINK1"/>和<ph name="BEGIN_LINK2"/>其他形式的活動<ph name="END_LINK2"/>可能會儲存至你的 AI Wiz 帳戶。你隨時可以刪除這些內容。</translation>
 <translation id="321773570071367578">如果您忘記通關密語，或是想變更這項設定，請<ph name="BEGIN_LINK"/>重設同步功能<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">如要同步處理密碼，請驗證你的身分</translation>
-<translation id="9210457680074341078">如果一併將書籤儲存在 Brave 帳戶中，就可以在 Brave 中追蹤產品價格，並在降價時收到通知</translation>
-<translation id="9047551989591319903">使用 Brave 做為安全金鑰</translation>
+<translation id="9210457680074341078">如果一併將書籤儲存在 AI Wiz 帳戶中，就可以在 AI Wiz 中追蹤產品價格，並在降價時收到通知</translation>
+<translation id="9047551989591319903">使用 AI Wiz 做為安全金鑰</translation>
 <translation id="3232754137068452469">網頁應用程式</translation>
 <translation id="3234978181857588512">儲存到裝置</translation>
 <translation id="3236059992281584593">還剩 1 分鐘</translation>
 <translation id="3237087289225714896">標準預先載入模式：</translation>
 <translation id="3237433641417325993">向下捲動以查看推薦文章</translation>
 <translation id="3244271242291266297">月</translation>
-<translation id="7402642357351265733">如果你一併提供 Brave 使用報告，這些報告中會包含你造訪的網址</translation>
+<translation id="7402642357351265733">如果你一併提供 AI Wiz 使用報告，這些報告中會包含你造訪的網址</translation>
 <translation id="3250563604907490871">圖片說明功能將在你連線至 Wi-Fi 後恢復運作</translation>
 <translation id="3254409185687681395">把此頁加入書籤</translation>
 <translation id="3259831549858767975">縮小網頁上的所有內容</translation>
@@ -427,16 +427,16 @@
 <translation id="3341262203274374114">無法取消追蹤，發生錯誤。</translation>
 <translation id="3359667936385849800">使用目前的服務供應商</translation>
 <translation id="3373701465337594448">設定開啟後，這裡會列出你造訪的哪些網站可推斷你的興趣喜好</translation>
-<translation id="2746024117903470217">如要將這個頁面分享至另一部裝置，你必須在另一部裝置的 Brave 設定中開啟同步功能</translation>
-<translation id="8801234437789558906">你的書籤、歷史記錄、密碼和其他 Brave 資料將停止同步到你的 Brave 帳戶</translation>
+<translation id="2746024117903470217">如要將這個頁面分享至另一部裝置，你必須在另一部裝置的 AI Wiz 設定中開啟同步功能</translation>
+<translation id="8801234437789558906">你的書籤、歷史記錄、密碼和其他 AI Wiz 資料將停止同步到你的 AI Wiz 帳戶</translation>
 <translation id="3384347053049321195">分享圖片</translation>
 <translation id="3387650086002190359">檔案系統發生錯誤，因此無法下載 <ph name="FILE_NAME"/>。</translation>
 <translation id="3389286852084373014">文字過多</translation>
 <translation id="3398320232533725830">開啟書籤管理員</translation>
-<translation id="1081508498128395141">預先載入更多網頁。當其他網站要求連入網頁時，系統可能會透過 Brave 伺服器預先載入這些網頁。</translation>
+<translation id="1081508498128395141">預先載入更多網頁。當其他網站要求連入網頁時，系統可能會透過 AI Wiz 伺服器預先載入這些網頁。</translation>
 <translation id="3414952576877147120">空間大小：</translation>
 <translation id="3421726884497337397">選擇要在何時封鎖第三方 Cookie</translation>
-<translation id="5265419033369521352">在已登入帳戶的狀態下，能確保你持續享有安全無虞的 Brave 使用體驗，也有助於提升其他 Brave 應用程式的安全機制</translation>
+<translation id="5265419033369521352">在已登入帳戶的狀態下，能確保你持續享有安全無虞的 AI Wiz 使用體驗，也有助於提升其他 AI Wiz 應用程式的安全機制</translation>
 <translation id="3429160811076349561">試用功能已關閉</translation>
 <translation id="3430670036890315772">如果關閉設定檔鎖定功能，系統將移除已儲存的資訊</translation>
 <translation id="3435465986463792564">開啟了多個視窗嗎？你可以在這裡進行管理</translation>
@@ -453,7 +453,7 @@
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">由舊到新排序</translation>
 <translation id="3507132249039706973">已啟用標準防護功能</translation>
-<translation id="8669829441518807650">你目前處於離線狀態，因此 Brave 無法檢查更新。</translation>
+<translation id="8669829441518807650">你目前處於離線狀態，因此 AI Wiz 無法檢查更新。</translation>
 <translation id="3513704683820682405">擴增實境</translation>
 <translation id="3518985090088779359">接受並繼續</translation>
 <translation id="3521388823983121502">無法繼續使用「<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>」</translation>
@@ -487,7 +487,7 @@
 <translation id="3701515417135397388">在密碼因資料侵害事件而外洩時發出警告</translation>
 <translation id="371230970611282515">可預測不安全事件，並在這類事件發生前顯示警告訊息。</translation>
 <translation id="3714981814255182093">開啟搜尋列</translation>
-<translation id="5805364706385912897">這個網頁使用了過多記憶體，因此遭到 Brave 暫停。</translation>
+<translation id="5805364706385912897">這個網頁使用了過多記憶體，因此遭到 AI Wiz 暫停。</translation>
 <translation id="3720422586473670527">不用了，謝謝</translation>
 <translation id="8397843425685839889">你與 Brave</translation>
 <translation id="3737319253362202215">翻譯設定</translation>
@@ -546,7 +546,7 @@
 <translation id="4062305924942672200">法律資訊</translation>
 <translation id="4072805772816336153">請稍後再試</translation>
 <translation id="4084682180776658562">書籤</translation>
-<translation id="4521874409998847950">發布者：<ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>由 Brave 所提供<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">發布者：<ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>由 AI Wiz 所提供<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">你可以使用這部平板電腦登入顯示這個 QR code 的裝置。</translation>
 <translation id="7268155614575494857">請新增你在這個網站的使用者名稱，Brave 密碼管理工具才能儲存登入資訊</translation>
 <translation id="4095146165863963773">要刪除應用程式資料嗎？</translation>
@@ -556,7 +556,7 @@
 <translation id="4108314971463891922">追蹤</translation>
 <translation id="4108998448622696017">可偵測不安全事件，並在這類事件發生時顯示警告訊息。</translation>
 <translation id="4116038641877404294">下載網頁以便離線存取</translation>
-<translation id="37459938731864814">你不需要記住這組密碼，系統會將密碼儲存至 <ph name="USERNAME"/> 的 Brave 密碼管理工具中。</translation>
+<translation id="37459938731864814">你不需要記住這組密碼，系統會將密碼儲存至 <ph name="USERNAME"/> 的 AI Wiz 密碼管理工具中。</translation>
 <translation id="4124152339699379357">通知權限流程已完整開啟</translation>
 <translation id="4126285640274188657">網頁深入分析</translation>
 <translation id="4135200667068010335">要共用分頁的裝置清單已關閉。</translation>
@@ -580,11 +580,11 @@
 <translation id="4225895483398857530">工具列捷徑</translation>
 <translation id="4242533952199664413">開啟設定</translation>
 <translation id="4248098802131000011">確保密碼安全，避免發生資料侵害或其他安全性問題</translation>
-<translation id="7445061995866044926">要登出 Brave 嗎？</translation>
+<translation id="7445061995866044926">要登出 AI Wiz 嗎？</translation>
 <translation id="4249955472157341256">依最新時間排序</translation>
 <translation id="4250229828105606438">螢幕截圖</translation>
 <translation id="4256782883801055595">開放原始碼授權</translation>
-<translation id="7404502124231907662">要從 Brave 密碼管理工具中刪除密碼嗎？</translation>
+<translation id="7404502124231907662">要從 AI Wiz 密碼管理工具中刪除密碼嗎？</translation>
 <translation id="4269820728363426813">複製連結網址</translation>
 <translation id="4277529130885813215">改用其他裝置</translation>
 <translation id="4283102315569707115">要讓系統預設顯示電腦版網站嗎？</translation>
@@ -610,25 +610,25 @@
 <translation id="4405224443901389797">移至…</translation>
 <translation id="4405636711880428279">要移除虛擬卡片嗎？</translation>
 <translation id="4409271659088619928">你的搜尋引擎是 <ph name="DSE"/>。如要瞭解如何刪除搜尋記錄，請查看搜尋引擎的操作說明 (如果有的話)。</translation>
-<translation id="5749788945734786627">管理你的 Brave 帳戶</translation>
+<translation id="5749788945734786627">管理你的 AI Wiz 帳戶</translation>
 <translation id="4425140285732600465">正在追蹤價格。如果產品在任何網站上降價，你會收到通知。</translation>
 <translation id="442518031075347249">你將無法再透過 Google Pay 使用虛擬卡片。<ph name="BEGIN_LINK1"/>進一步瞭解虛擬卡片<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">關閉 [<ph name="TAB_TITLE"/>] 分頁</translation>
 <translation id="4452548195519783679">已將書籤加入「<ph name="FOLDER_NAME"/>」</translation>
 <translation id="4461614516424362539">將另一部裝置連結 QR 圖碼後，該裝置就能將手機做為安全金鑰。如果移除裝置，就必須掃描 QR 圖碼才能再次連結裝置。</translation>
 <translation id="4478161224666880173">你可以使用這個網站上的 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 帳戶。如要繼續操作，請登入 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>。</translation>
-<translation id="3133489217401741157">正在為 Brave 安裝 <ph name="MODULE"/>…</translation>
+<translation id="3133489217401741157">正在為 AI Wiz 安裝 <ph name="MODULE"/>…</translation>
 <translation id="4484496141267039529">沒有網路連線，請稍後再試。</translation>
 <translation id="53119194224775367">Brave 的應用程式資料會全部遭到永久刪除，包括所有檔案、設定、帳戶、資料庫等等。</translation>
-<translation id="3966104135245031874">使用你的 Brave 帳戶對已同步處理的密碼進行加密</translation>
+<translation id="3966104135245031874">使用你的 AI Wiz 帳戶對已同步處理的密碼進行加密</translation>
 <translation id="4491323382106587961">請選擇帳戶。目前選取的帳戶為 <ph name="EMAIL"/>。</translation>
 <translation id="4508528996305412043">已開啟動態消息資訊卡選單</translation>
 <translation id="4509501256689523862">上網時是否會看到個人化廣告，取決於這項設定、<ph name="BEGIN_LINK_1"/>廣告主題<ph name="END_LINK_1"/>、<ph name="BEGIN_LINK_2"/>Cookie 設定<ph name="END_LINK_2"/>、網站是否顯示個人化廣告</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# 天前}other{# 天前}}</translation>
 <translation id="451872707440238414">搜尋書籤</translation>
-<translation id="1664855196866195614">系統已將你所選取的資料從 Brave 和其他同步的裝置中移除。
+<translation id="1664855196866195614">系統已將你所選取的資料從 AI Wiz 和其他同步的裝置中移除。
 
-你的 Brave 帳戶仍可能保留了其他類型的瀏覽記錄，例如其他 Brave 服務中的搜尋和活動記錄 (可前往 <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> 查詢)。</translation>
+你的 AI Wiz 帳戶仍可能保留了其他類型的瀏覽記錄，例如其他 AI Wiz 服務中的搜尋和活動記錄 (可前往 <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> 查詢)。</translation>
 <translation id="4523326818319942067">最近一小時</translation>
 <translation id="452750746583162491">查看已同步處理的資料</translation>
 <translation id="4532845899244822526">選擇資料夾</translation>
@@ -657,7 +657,7 @@
 <translation id="4663756553811254707">已刪除 <ph name="NUMBER_OF_BOOKMARKS"/> 個書籤</translation>
 <translation id="4668279686271488041">定期刪除裝置上的廣告評估資料</translation>
 <translation id="4668347365065281350">網站儲存的所有資料，包括 Cookie 和其他儲存在本機上的資料</translation>
-<translation id="6904731820418823295">已在 Brave 中啟用網站的深色主題</translation>
+<translation id="6904731820418823295">已在 AI Wiz 中啟用網站的深色主題</translation>
 <translation id="4684427112815847243">同步處理所有資料</translation>
 <translation id="4685741273709472646">開啟下拉式清單</translation>
 <translation id="4687718960473379118">網站建議廣告</translation>
@@ -698,14 +698,14 @@
 <translation id="4837753911714442426">開啟列印網頁的選項</translation>
 <translation id="4842092870884894799">目前顯示的是密碼產生彈出式視窗</translation>
 <translation id="4842515939542199281">如要透過語音進行搜尋，請輕觸「麥克風」圖示</translation>
-<translation id="6195403640086187022">為進一步加強安全性，系統會先在裝置上將密碼加密，再儲存至 Brave 密碼管理員</translation>
+<translation id="6195403640086187022">為進一步加強安全性，系統會先在裝置上將密碼加密，再儲存至 AI Wiz 密碼管理員</translation>
 <translation id="4850886885716139402">檢視</translation>
 <translation id="4852014461738377247">登入中\u2026</translation>
 <translation id="4860895144060829044">撥號</translation>
 <translation id="4864369630010738180">登入中...</translation>
-<translation id="5131234170665854056">無法為 Brave 安裝 <ph name="MODULE"/></translation>
+<translation id="5131234170665854056">無法為 AI Wiz 安裝 <ph name="MODULE"/></translation>
 <translation id="4871568871368204250">關閉同步處理功能</translation>
-<translation id="2875466387677348954">關閉後，你仍會看到 Brave 在本機提供的建議</translation>
+<translation id="2875466387677348954">關閉後，你仍會看到 AI Wiz 在本機提供的建議</translation>
 <translation id="4875775213178255010">內容建議</translation>
 <translation id="4878404682131129617">無法透過 Proxy 伺服器建立通道</translation>
 <translation id="4880127995492972015">翻譯...</translation>
@@ -722,10 +722,10 @@
 <translation id="4925120120285606924">螢幕截圖 <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">系統會匯出你的密碼並下載為文字檔案。擁有目的地資料夾存取權的使用者和應用程式將可查看你的密碼。</translation>
 <translation id="4926901776383726965">你可以儲存圖片和檔案，方便離線查看或分享到其他應用程式</translation>
-<translation id="1955495299630319741">你即將登出由 <ph name="DOMAIN_NAME"/> 管理的帳戶，因此系統會將你的 Brave 資料從這個裝置上刪除，但是這些資料會繼續保留在你的 Brave 帳戶中。</translation>
+<translation id="1955495299630319741">你即將登出由 <ph name="DOMAIN_NAME"/> 管理的帳戶，因此系統會將你的 AI Wiz 資料從這個裝置上刪除，但是這些資料會繼續保留在你的 AI Wiz 帳戶中。</translation>
 <translation id="4943703118917034429">虛擬實境</translation>
 <translation id="4943872375798546930">沒有結果</translation>
-<translation id="5742837711075932301">登入相同的 Brave 帳戶後，其他裝置就可以使用這支手機做為安全金鑰。</translation>
+<translation id="5742837711075932301">登入相同的 AI Wiz 帳戶後，其他裝置就可以使用這支手機做為安全金鑰。</translation>
 <translation id="4957722034734105353">瞭解詳情...</translation>
 <translation id="4961107849584082341">將這個網頁翻譯成任何語言</translation>
 <translation id="7307583170263691471">針對不安全的網站、下載內容和擴充功能提供更快速的主動式防護機制。系統會顯示密碼遭外洩的警告訊息。須將瀏覽資料傳送至 Brave。</translation>
@@ -745,11 +745,11 @@
 <translation id="5039804452771397117">允許</translation>
 <translation id="5040262127954254034">隱私權</translation>
 <translation id="504456571576643789">注意事項</translation>
-<translation id="4858031288914533863">在你登入後，<ph name="BEGIN_LINK1"/>其他形式的活動<ph name="END_LINK1"/>可能會儲存至你的 Brave 帳戶。你隨時可以刪除這些內容。</translation>
+<translation id="4858031288914533863">在你登入後，<ph name="BEGIN_LINK1"/>其他形式的活動<ph name="END_LINK1"/>可能會儲存至你的 AI Wiz 帳戶。你隨時可以刪除這些內容。</translation>
 <translation id="506254248375231072">沒有任何分頁</translation>
 <translation id="5062960805900435602">已關閉密碼合併相關更新</translation>
 <translation id="5081960376148623587">選擇是否要預先載入網頁</translation>
-<translation id="4744980273298156620">不久後，你就會在開啟新分頁時看到「<ph name="SITE_NAME"/>」的網路故事。你追蹤的網站會儲存在 Brave 帳戶中，你可以在「探索」設定中管理這些網站。</translation>
+<translation id="4744980273298156620">不久後，你就會在開啟新分頁時看到「<ph name="SITE_NAME"/>」的網路故事。你追蹤的網站會儲存在 AI Wiz 帳戶中，你可以在「探索」設定中管理這些網站。</translation>
 <translation id="509429900233858213">發生錯誤。</translation>
 <translation id="5097349930204431044">你造訪的網站可以判斷你喜愛的內容，並在接下來的瀏覽過程中顯示建議廣告</translation>
 <translation id="5099845111805573968">只要選取一次電腦版網站，當你每次造訪時，網站都會套用這項設定</translation>
@@ -759,7 +759,7 @@
 <translation id="5118713593561876160">興趣喜好</translation>
 <translation id="5122378528687922675">如需協助，請找家長 (<ph name="PARENT_NAME_1"/> 或 <ph name="PARENT_NAME_2"/>) 幫忙</translation>
 <translation id="5132942445612118989">同步處理你所有裝置上的密碼、歷史記錄和其他設定</translation>
-<translation id="5139940364318403933">瞭解如何使用 Brave 雲端硬碟</translation>
+<translation id="5139940364318403933">瞭解如何使用 AI Wiz 雲端硬碟</translation>
 <translation id="5142281402488957685">如要重新整理動態消息內容，請將頁面往下拉</translation>
 <translation id="5152843274749979095">尚未安裝系統支援的應用程式</translation>
 <translation id="5161254044473106830">請輸入標題</translation>
@@ -789,13 +789,13 @@
 <translation id="5317780077021120954">儲存</translation>
 <translation id="989239400026154074">Brave 推薦使用 Brave</translation>
 <translation id="7815000350132166985">如果你允許 Cookie，Brave 可能會使用 Cookie 預先載入網頁</translation>
-<translation id="1681635711794313507">由於預先載入的網頁已經過加密，且連到這些網頁的網站為 Brave 網站，因此以私密方式預先載入這些網頁時，Brave 伺服器不會接收新資訊。</translation>
+<translation id="1681635711794313507">由於預先載入的網頁已經過加密，且連到這些網頁的網站為 AI Wiz 網站，因此以私密方式預先載入這些網頁時，Brave 伺服器不會接收新資訊。</translation>
 <translation id="5329858041417644019">你的瀏覽器未受管理</translation>
 <translation id="5342314432463739672">權限要求</translation>
 <translation id="534580735623577507"><ph name="TIME_PERIOD"/>未造訪任何網站</translation>
 <translation id="5355191726083956201">已啟用強化防護功能</translation>
 <translation id="5361107212971249203">文字內容</translation>
-<translation id="5375577065097716013">使用 Brave 智慧鏡頭搜尋圖片 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
+<translation id="5375577065097716013">使用 AI Wiz 智慧鏡頭搜尋圖片 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
 <translation id="539881862970320163">建議使用高強度密碼。鍵盤已隱藏。</translation>
 <translation id="5401851137404501592">如要繼續，<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 會將你的姓名、電子郵件地址和個人資料相片提供給這個網站。</translation>
 <translation id="5409881200985013443">要在「<ph name="CLIENT_NAME"/>」上提交 <ph name="ONE_TIME_CODE"/> 嗎？</translation>
@@ -805,7 +805,7 @@
 <translation id="543338862236136125">修改密碼</translation>
 <translation id="5433691172869980887">已複製使用者名稱</translation>
 <translation id="5438292632479953702">再次下載</translation>
-<translation id="2766925507720001104">這項防護機制分析的網站資料比標準防護來得多，因此即使是 Brave 不知道的網站，這項防護機制也能提供危險網站警告。你可以選擇略過 Brave 的警告。</translation>
+<translation id="2766925507720001104">這項防護機制分析的網站資料比標準防護來得多，因此即使是 AI Wiz 不知道的網站，這項防護機制也能提供危險網站警告。你可以選擇略過 AI Wiz 的警告。</translation>
 <translation id="5441137934526263133">網站無法正常運作嗎？這是因為第三方 Cookie 已遭封鎖</translation>
 <translation id="5441466871879044658">翻譯成這種語言</translation>
 <translation id="5441522332038954058">切換到網址列</translation>
@@ -840,7 +840,7 @@
 <translation id="562289928968387744">管理回應</translation>
 <translation id="5626134646977739690">名稱：</translation>
 <translation id="5628604359369369630">尚未閱讀 - 可離線閱讀</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>搜尋記錄<ph name="END_LINK1"/>和<ph name="BEGIN_LINK2"/>其他形式的活動<ph name="END_LINK2"/>可能會儲存至你的 Brave 帳戶</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>搜尋記錄<ph name="END_LINK1"/>和<ph name="BEGIN_LINK2"/>其他形式的活動<ph name="END_LINK2"/>可能會儲存至你的 AI Wiz 帳戶</translation>
 <translation id="564667659802381754">隱私權指南 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">過去 7 天</translation>
 <translation id="5655963694829536461">搜尋下載內容</translation>
@@ -849,7 +849,7 @@
 <translation id="5665379678064389456">在「<ph name="APP_NAME"/>」中建立活動</translation>
 <translation id="5668833306439455813">Brave 無法檢查更新</translation>
 <translation id="5686790454216892815">檔案名稱過長</translation>
-<translation id="4809211418322514799">Brave 會自動刪除 30 天前的網站，你再次造訪的網站可能會重新顯示在清單中。你也可以封鎖網站，讓該網站無法為你提供建議廣告。進一步瞭解如何<ph name="BEGIN_LINK"/>在 Brave 中管理廣告隱私權<ph name="END_LINK"/>。</translation>
+<translation id="4809211418322514799">Brave 會自動刪除 30 天前的網站，你再次造訪的網站可能會重新顯示在清單中。你也可以封鎖網站，讓該網站無法為你提供建議廣告。進一步瞭解如何<ph name="BEGIN_LINK"/>在 AI Wiz 中管理廣告隱私權<ph name="END_LINK"/>。</translation>
 <translation id="569435661099256888">系統會顯示造訪過的網頁，你也可以從歷史記錄中清除這些網頁</translation>
 <translation id="569536719314091526">透過 [更多選項] 按鈕將這個網頁翻譯成任何語言</translation>
 <translation id="2320748512701464301">Brave 可確保安全性，例如防範資料侵害事件或封鎖不安全的網站等等</translation>
@@ -863,7 +863,7 @@
 <translation id="3088191967551450609">Brave 必須取得儲存空間的存取權才能下載檔案。</translation>
 <translation id="5749237766298580851">關閉 <ph name="SEPARATOR"/> 不建議</translation>
 <translation id="5752232708629533680">僅分享 GIF</translation>
-<translation id="416316836590748269">你可以使用語音在 Brave 中搜尋</translation>
+<translation id="416316836590748269">你可以使用語音在 AI Wiz 中搜尋</translation>
 <translation id="5754350196967618083">無法重新整理「探索」</translation>
 <translation id="5755162682436943950">已登出。開啟對話方塊即可登入並開啟同步功能。</translation>
 <translation id="5759897675466110265">網站無法正常運作嗎？你可以試試暫時允許第三方 Cookie</translation>
@@ -878,7 +878,7 @@
 <translation id="5797521893972859201">清除歷史記錄，包含搜尋框記錄</translation>
 <translation id="5797949256525811424">已封鎖的主題</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# 小時前}other{# 小時前}}</translation>
-<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> Brave LLC. 保留所有權利。</translation>
+<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> AI Wiz LLC. 保留所有權利。</translation>
 <translation id="5814749351757353073">掌握最愛網站的最新動態</translation>
 <translation id="5822875253699806474">如要快速重新造訪瀏覽過的網站，可以同步分頁和歷史記錄</translation>
 <translation id="583281660410589416">未知</translation>
@@ -893,16 +893,16 @@
 <translation id="5864419784173784555">正在等待其他下載程序完成…</translation>
 <translation id="6538479075382111079">自動將使用統計資料和當機報告傳送給 Brave</translation>
 <translation id="5869522115854928033">已儲存的密碼</translation>
-<translation id="5604589745019948682">如要追蹤網站，只要前往該網站並開啟 Brave 選單，然後輕觸 [追蹤] 即可。</translation>
+<translation id="5604589745019948682">如要追蹤網站，只要前往該網站並開啟 AI Wiz 選單，然後輕觸 [追蹤] 即可。</translation>
 <translation id="5879072387416556377">取得更佳建議</translation>
 <translation id="5899667542927581604">說明沒有密碼金鑰的底部功能表已關閉</translation>
 <translation id="5916664084637901428">開啟</translation>
 <translation id="5919204609460789179">更新 <ph name="PRODUCT_NAME"/> 即可開始同步處理</translation>
 <translation id="5938820472109305350">新增<ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">現已使用 Brave 搜尋</translation>
+<translation id="6103327872225198548">現已使用 AI Wiz 搜尋</translation>
 <translation id="5945035219773565305">目前建議：<ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">正在查看實際網頁</translation>
-<translation id="305870044889644984">在新分頁中開啟 Brave 說明中心</translation>
+<translation id="305870044889644984">在新分頁中開啟 AI Wiz 說明中心</translation>
 <translation id="5957442310066583693">如要查看常用網站，請輕觸「首頁」按鈕</translation>
 <translation id="59577092665511740">請選擇帳戶。</translation>
 <translation id="5958275228015807058">前往「下載」主畫面尋找你的檔案和網頁</translation>
@@ -929,7 +929,7 @@
 <translation id="6070730414166672373">正在聯絡銀行\u2026</translation>
 <translation id="6085886413119427067">判斷如何透過安全連線連上網站</translation>
 <translation id="60923314841986378">還剩 <ph name="HOURS"/> 小時</translation>
-<translation id="4726571606794511368">如果 Brave 也是預設的搜尋引擎，你將能取得更實用、更符合需求的建議</translation>
+<translation id="4726571606794511368">如果 AI Wiz 也是預設的搜尋引擎，你將能取得更實用、更符合需求的建議</translation>
 <translation id="6108923351542677676">設定中…</translation>
 <translation id="6112702117600201073">重新整理網頁</translation>
 <translation id="6122831415929794347">要停用安全瀏覽功能嗎？</translation>
@@ -942,11 +942,11 @@
 <translation id="6140912465461743537">國家/地區</translation>
 <translation id="6150320133806434356">書籤已儲存</translation>
 <translation id="6154478581116148741">在「設定」中開啟螢幕鎖定，即可從這部裝置匯出你的密碼</translation>
-<translation id="7087658909840709934">預先載入 Brave 認為你可能造訪的網頁。</translation>
+<translation id="7087658909840709934">預先載入 AI Wiz 認為你可能造訪的網頁。</translation>
 <translation id="6186394685773237175">沒有任何密碼外洩</translation>
 <translation id="6192907950379606605">取得圖片說明</translation>
 <translation id="6193448654517602979">選取分頁</translation>
-<translation id="8367262879301982880">密碼會儲存至這部裝置上的 Brave 密碼管理工具</translation>
+<translation id="8367262879301982880">密碼會儲存至這部裝置上的 AI Wiz 密碼管理工具</translation>
 <translation id="6202812185118613467">重新登入即可開始同步</translation>
 <translation id="6205314730813004066">廣告隱私權設定</translation>
 <translation id="6210748933810148297">不是 <ph name="EMAIL"/> 嗎？</translation>
@@ -955,7 +955,7 @@
 <translation id="6232535412751077445">啟用「不追蹤」選項後，您的瀏覽流量會置入一項特定的要求，其作用則視網站是否回應要求，以及網站解讀要求的方式而定。
 
 舉例來說，部分網站可能會以顯示廣告的方式回應這類要求，而這些廣告並非根據您所造訪的其他網站記錄而產生。許多網站仍會收集您的瀏覽資料，並將這些資料用於下列目的：提高網站安全性、在網站上提供更相關的內容、廣告和推薦項目，以及產生報告統計資料。</translation>
-<translation id="3895383310037101583">開啟同步功能，將這部裝置上的密碼儲存在 Brave 帳戶中</translation>
+<translation id="3895383310037101583">開啟同步功能，將這部裝置上的密碼儲存在 AI Wiz 帳戶中</translation>
 <translation id="6255794742848779505">我們正在變更密碼儲存在這部裝置上的方式</translation>
 <translation id="6264376385120300461">仍要下載</translation>
 <translation id="6277522088822131679">列印網頁時發生問題，請再試一次。</translation>
@@ -991,7 +991,7 @@
 <translation id="6407224748847589805">無法連線至你的電腦。請改用其他驗證選項。</translation>
 <translation id="6410883413783534063">開啟分頁即可同時造訪不同的網頁</translation>
 <translation id="6411219469806822692">無法再向上捲動。請嘗試從上一頁開始。</translation>
-<translation id="7810992039564280750">可使用儲存在 Brave 中的不安全網站清單檢查網址。如果有網站試圖竊取你的密碼，或當你下載有害檔案時，Brave 可能也會將網址 (包括部分網頁內容) 傳送至安全瀏覽功能。</translation>
+<translation id="7810992039564280750">可使用儲存在 AI Wiz 中的不安全網站清單檢查網址。如果有網站試圖竊取你的密碼，或當你下載有害檔案時，Brave 可能也會將網址 (包括部分網頁內容) 傳送至安全瀏覽功能。</translation>
 <translation id="641643625718530986">列印…</translation>
 <translation id="6422857128426228781">此處會顯示已追蹤的產品</translation>
 <translation id="6433501201775827830">選擇搜尋引擎</translation>
@@ -1002,7 +1002,7 @@
 <translation id="6447558397796644647">找不到指定書籤。請檢查文字是否正確或新增書籤。</translation>
 <translation id="6459045781120991510">問卷調查</translation>
 <translation id="6461962085415701688">無法開啟檔案</translation>
-<translation id="9055113864158719823">你可以查看自己透過 Brave 造訪的網站，並對這些網站設定計時器。\n\nBrave 會收到這些設有計時器的網站相關資訊以及你的造訪時間長度。這些資訊可協助我們改善數位健康。</translation>
+<translation id="9055113864158719823">你可以查看自己透過 AI Wiz 造訪的網站，並對這些網站設定計時器。\n\nBrave 會收到這些設有計時器的網站相關資訊以及你的造訪時間長度。這些資訊可協助我們改善數位健康。</translation>
 <translation id="6473086018775716761">分享選項清單已開啟，顯示在畫面下半部。</translation>
 <translation id="6475951671322991020">下載影片</translation>
 <translation id="6477928892249167417">這些網站似乎對你很重要：</translation>
@@ -1010,20 +1010,20 @@
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{已下載檔案}other{已完成 # 項下載作業}}</translation>
 <translation id="3960299545138990065">重新啟動 Brave</translation>
 <translation id="6527303717912515753">分享</translation>
-<translation id="708829030563435351">數位健康將不會顯示你透過 Brave 造訪的網站。所有網站計時器也將遭到刪除。</translation>
+<translation id="708829030563435351">數位健康將不會顯示你透過 AI Wiz 造訪的網站。所有網站計時器也將遭到刪除。</translation>
 <translation id="7723158744459952869">Brave 的回應時間過長</translation>
 <translation id="6539092367496845964">發生錯誤，請稍後再試。</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{已在 1 小時前檢查}other{已在 # 小時前檢查}}</translation>
 <translation id="6545017243486555795">清除所有資料</translation>
 <translation id="6546511553472444032">檔案可能有害</translation>
-<translation id="6702167990458635422">無法防範危險的網站、下載內容和擴充功能。其他 Brave 產品的安全瀏覽設定不會受到影響。</translation>
+<translation id="6702167990458635422">無法防範危險的網站、下載內容和擴充功能。其他 AI Wiz 產品的安全瀏覽設定不會受到影響。</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{即將關閉「<ph name="TAB_TITLE"/>」和另外 <ph name="TAB_COUNT_ONE"/> 個分頁}other{即將關閉「<ph name="TAB_TITLE"/>」和另外 <ph name="TAB_COUNT_MANY"/> 個分頁}}</translation>
 <translation id="6560414384669816528">使用 Sogou 搜尋</translation>
 <translation id="656065428026159829">顯示更多</translation>
 <translation id="6565959834589222080">有可用 Wi-Fi 時，系統會使用 Wi-Fi</translation>
-<translation id="4480935821314799946">往後開啟新分頁時，你就會看到「<ph name="SITE_NAME"/>」的網路故事。你追蹤的網站會儲存在 Brave 帳戶中，你可以在「探索」設定中管理這些網站。</translation>
+<translation id="4480935821314799946">往後開啟新分頁時，你就會看到「<ph name="SITE_NAME"/>」的網路故事。你追蹤的網站會儲存在 AI Wiz 帳戶中，你可以在「探索」設定中管理這些網站。</translation>
 <translation id="6573096386450695060">一律允許</translation>
-<translation id="5157964048453367290">您在其他裝置上透過 Brave 開啟的分頁會顯示在這裡。</translation>
+<translation id="5157964048453367290">您在其他裝置上透過 AI Wiz 開啟的分頁會顯示在這裡。</translation>
 <translation id="6583199322650523874">將目前的網頁加入書籤</translation>
 <translation id="6588043302623806746">使用安全 DNS</translation>
 <translation id="6590471736817333463">節省高達 60% 的數據用量</translation>
@@ -1045,19 +1045,19 @@
 <translation id="6645629752388991326">透過使用這部裝置做為安全金鑰，控制可以登入的裝置。</translation>
 <translation id="2730188427562924169">透過隱私權伺服器隱藏你的 IP 位址，再傳送經模糊處理的部分網址傳送給 Brave。如果網站試圖竊取密碼，或你下載的檔案會造成傷害，Brave 可能也會將網址 (包括部分網頁內容) 傳送給 Brave。</translation>
 <translation id="7556503430569358637">系統會將你造訪的網址傳送給 Brave，預測你接下來可能會前往的網站</translation>
-<translation id="6678472970290886941">你的系統管理員可以遠端變更瀏覽器設定。這部裝置上的活動也可以透過 Brave 以外的服務管理。</translation>
+<translation id="6678472970290886941">你的系統管理員可以遠端變更瀏覽器設定。這部裝置上的活動也可以透過 AI Wiz 以外的服務管理。</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 和另外 <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> 個聯絡人}other{<ph name="CONTACT_PREVIEW"/>\u2026 和另外 <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> 個聯絡人}}</translation>
 <translation id="6649642165559792194">預覽圖片 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">密碼</translation>
 <translation id="6659594942844771486">分頁</translation>
-<translation id="9145803563102831353">目前無法將儲存在這部裝置上的密碼用於其他 Brave 版本。在 Brave 121 以後的版本中，系統會將裝置上儲存的 Brave 和 <ph name="CHROME_CHANNEL"/> 密碼合併，可同時用於這兩個應用程式。</translation>
+<translation id="9145803563102831353">目前無法將儲存在這部裝置上的密碼用於其他 AI Wiz 版本。在 AI Wiz 121 以後的版本中，系統會將裝置上儲存的 AI Wiz 和 <ph name="CHROME_CHANNEL"/> 密碼合併，可同時用於這兩個應用程式。</translation>
 <translation id="666731172850799929">在「<ph name="APP_NAME"/>」中開啟</translation>
 <translation id="6671495933530132209">複製圖片</translation>
 <translation id="6672917148207387131">新增 <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">如要開始同步處理，請輸入通關密語</translation>
-<translation id="8581481290581777242">要清除你在這個裝置上的 Brave 資料嗎？</translation>
+<translation id="8581481290581777242">要清除你在這個裝置上的 AI Wiz 資料嗎？</translation>
 <translation id="3683330416566109578">登入這個網站和 Brave</translation>
-<translation id="3385384709865894288">讓 Brave 更臻完美</translation>
+<translation id="3385384709865894288">讓 AI Wiz 更臻完美</translation>
 <translation id="670498945988402717">昨天已檢查</translation>
 <translation id="6710213216561001401">返回</translation>
 <translation id="671481426037969117">「<ph name="FQDN"/>」計時器已結束計時，將於明天重新開始。</translation>
@@ -1065,7 +1065,7 @@
 <translation id="6719634564325948108">要連結 QR 圖碼嗎？</translation>
 <translation id="6738516213925468394">你在 <ph name="TIME"/>已使用<ph name="BEGIN_LINK"/>同步通關密語<ph name="END_LINK"/>將資料加密。如要開始同步處理資料，請輸入通關密語。</translation>
 <translation id="6738867403308150051">下載中…</translation>
-<translation id="2275686406263739320">一般來說，你造訪的網站會記住你感興趣的內容，以便提供個人化的服務體驗。此外，網站也可以將你的興趣喜好相關資訊儲存在 Brave 中。</translation>
+<translation id="2275686406263739320">一般來說，你造訪的網站會記住你感興趣的內容，以便提供個人化的服務體驗。此外，網站也可以將你的興趣喜好相關資訊儲存在 AI Wiz 中。</translation>
 <translation id="6751521182688001123">快速開啟新分頁。按住這裡即可編輯這個捷徑。</translation>
 <translation id="6756507620369789050">提供意見</translation>
 <translation id="6767294960381293877">要共用分頁的裝置清單已開啟，顯示在畫面下半部。</translation>
@@ -1077,7 +1077,7 @@
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{圖片，清單中有 1 張圖片}other{圖片，清單中有 # 張圖片}}</translation>
 <translation id="8418237809013783651">登入 Brave，帳戶挑選器已開啟。</translation>
 <translation id="6817747507826986771">快速分享這個專頁。按住這裡即可編輯這個捷徑。</translation>
-<translation id="118366698571543506">如要在所有裝置上取得你的 Brave 設定，請登入帳戶</translation>
+<translation id="118366698571543506">如要在所有裝置上取得你的 AI Wiz 設定，請登入帳戶</translation>
 <translation id="6820686453637990663">信用卡驗證碼</translation>
 <translation id="6823561724060793716">你可以透過網址列開啟網頁資訊，查看目前所在網頁的其他資訊</translation>
 <translation id="6828070228333235514">停止追蹤價格</translation>
@@ -1105,7 +1105,7 @@
 <translation id="6909589135458168665">預先載入網頁</translation>
 <translation id="6910211073230771657">已刪除</translation>
 <translation id="6918398787259831832">如果這個問題持續發生，請洽「<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>」<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/>。</translation>
-<translation id="5854472260286669100">儲存在裝置和 Brave 帳戶中的所有安全碼都會刪除</translation>
+<translation id="5854472260286669100">儲存在裝置和 AI Wiz 帳戶中的所有安全碼都會刪除</translation>
 <translation id="6942665639005891494">你隨時可以使用 [設定] 選單選項變更預設的下載位置</translation>
 <translation id="694267552845942083">你正在自訂同步功能設定。如要開啟同步功能，請輕觸畫面底部附近的 [確認] 按鈕。向上瀏覽</translation>
 <translation id="6945221475159498467">選取</translation>
@@ -1123,7 +1123,7 @@
 <translation id="7029809446516969842">密碼</translation>
 <translation id="7030304022046916278">系統會將網址傳送給安全瀏覽功能進行檢查</translation>
 <translation id="7035701931849773472">其他選項</translation>
-<translation id="5813862251770201080">使用 Brave 帳戶登入 Brave</translation>
+<translation id="5813862251770201080">使用 AI Wiz 帳戶登入 Brave</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">要取得圖片說明嗎？</translation>
 <translation id="7055152154916055070">已禁止重新導向：</translation>
@@ -1131,8 +1131,8 @@
 <translation id="7071521146534760487">管理帳戶</translation>
 <translation id="707155805709242880">請在下方選擇要同步處理的項目</translation>
 <translation id="7077143737582773186">SD 卡</translation>
-<translation id="2374582967527009647">可將網址傳送至安全瀏覽功能進行檢查。同時也會傳送少量網頁、下載內容、擴充功能活動及系統資訊，以協助找出新的威脅。當你登入 Brave 帳戶後，系統會將這些資料暫時連結至你的帳戶，以便在你使用各項 Brave 應用程式時提供保護。</translation>
-<translation id="5499149312981370855">選擇是否要包含 Brave 歷史記錄，取得更貼近個人需求的 Brave 服務體驗</translation>
+<translation id="2374582967527009647">可將網址傳送至安全瀏覽功能進行檢查。同時也會傳送少量網頁、下載內容、擴充功能活動及系統資訊，以協助找出新的威脅。當你登入 AI Wiz 帳戶後，系統會將這些資料暫時連結至你的帳戶，以便在你使用各項 AI Wiz 應用程式時提供保護。</translation>
+<translation id="5499149312981370855">選擇是否要包含 AI Wiz 歷史記錄，取得更貼近個人需求的 AI Wiz 服務體驗</translation>
 <translation id="8208853227947884571">Brave 目前是最新版本</translation>
 <translation id="7105047059074518658">登入即可讓跨裝置瀏覽更順暢</translation>
 <translation id="7106762743910369165">你的瀏覽器是由貴機構管理</translation>
@@ -1148,7 +1148,7 @@
 <translation id="7177873915659574692">無法建立 QR 圖碼。網址包含的字元數超過 <ph name="CHARACTER_LIMIT"/> 個。</translation>
 <translation id="7180611975245234373">重新整理</translation>
 <translation id="7183693674623539380">分頁群組 - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">在已登入帳戶的狀態下，能確保你持續享有安全無虞的 Brave 使用體驗，也有助於提升其他 Brave 應用程式的安全機制。</translation>
+<translation id="8355565210555500987">在已登入帳戶的狀態下，能確保你持續享有安全無虞的 AI Wiz 使用體驗，也有助於提升其他 AI Wiz 應用程式的安全機制。</translation>
 <translation id="7191430249889272776">已在背景開啟分頁。</translation>
 <translation id="7196215469483532480">隱私權指南說明已開啟，顯示於整個畫面</translation>
 <translation id="1014116676551114642">Brave 為兒少提供的內容 - 已關閉</translation>
@@ -1157,12 +1157,12 @@
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 項下載作業仍待處理}other{# 項下載作業仍待處理}}</translation>
 <translation id="72415438529550637">已關閉密碼建議功能。</translation>
 <translation id="7242755609445462077">風格化醒目顯示內容 (日期：<ph name="CURRENT_DATE"/>)</translation>
-<translation id="8287068819750208230">請確認「<ph name="TARGET_DEVICE_NAME"/>」的 Brave 同步功能已開啟</translation>
+<translation id="8287068819750208230">請確認「<ph name="TARGET_DEVICE_NAME"/>」的 AI Wiz 同步功能已開啟</translation>
 <translation id="7252076891734325316">請將手機置於電腦附近</translation>
-<translation id="4957342254208357193">Android 裝置可能會有類似的設定。如果 Brave 和 Android 裝置開啟了廣告評估設定，廣告技術公司或許就能在你造訪的網站和使用的應用程式上評估廣告成效。</translation>
+<translation id="4957342254208357193">Android 裝置可能會有類似的設定。如果 AI Wiz 和 Android 裝置開啟了廣告評估設定，廣告技術公司或許就能在你造訪的網站和使用的應用程式上評估廣告成效。</translation>
 <translation id="727288900855680735">要將 <ph name="ONE_TIME_CODE"/> 提交至 <ph name="ORIGIN"/> 嗎？</translation>
 <translation id="7274013316676448362">已封鎖網站</translation>
-<translation id="7949597606523411684">Brave 會自動刪除 4 週前的主題，隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你也可以封鎖不希望 Brave 提供給網站的主題。進一步瞭解如何<ph name="BEGIN_LINK"/>在 Brave 中管理廣告隱私權<ph name="END_LINK"/>。</translation>
+<translation id="7949597606523411684">Brave 會自動刪除 4 週前的主題，隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你也可以封鎖不希望 AI Wiz 提供給網站的主題。進一步瞭解如何<ph name="BEGIN_LINK"/>在 AI Wiz 中管理廣告隱私權<ph name="END_LINK"/>。</translation>
 <translation id="4561646469134805137">當你輸入文字時，Brave 會將網址列或搜尋框的內容傳送至預設搜尋引擎</translation>
 <translation id="7286703216224610554">僅分享回應內容</translation>
 <translation id="7289303553784750393">如果已連上網路，但這個問題持續發生，可以在「<ph name="SITE_ETLD_PLUS_ONE"/>」上試著透過其他方法繼續操作。</translation>
@@ -1170,12 +1170,12 @@
 <translation id="7291910923717764901">已新增這個頁面的圖片說明</translation>
 <translation id="7293429513719260019">選取語言</translation>
 <translation id="729975465115245577">你的裝置沒有可儲存密碼檔案的應用程式。</translation>
-<translation id="7581648335850642193">Android 裝置可能會有類似的設定。如果 Brave 和 Android 裝置上開啟了這項設定，廣告技術公司或許就能在你造訪的網站和使用的應用程式上評估廣告成效。</translation>
-<translation id="1382596880054356475">你目前處於離線狀態，因此 Brave 無法檢查你的密碼。</translation>
+<translation id="7581648335850642193">Android 裝置可能會有類似的設定。如果 AI Wiz 和 Android 裝置上開啟了這項設定，廣告技術公司或許就能在你造訪的網站和使用的應用程式上評估廣告成效。</translation>
+<translation id="1382596880054356475">你目前處於離線狀態，因此 AI Wiz 無法檢查你的密碼。</translation>
 <translation id="7313188324932846546">輕觸即可設定同步功能</translation>
 <translation id="7324354302972299151">傳送「Do Not Track」要求</translation>
 <translation id="7332075081379534664">登入成功</translation>
-<translation id="8716243540027092298">進行同步處理，取得 Brave 提供的最相關內容</translation>
+<translation id="8716243540027092298">進行同步處理，取得 AI Wiz 提供的最相關內容</translation>
 <translation id="7339898014177206373">開啟新視窗</translation>
 <translation id="7340958967809483333">探索的選項</translation>
 <translation id="7352339641508007922">拖曳即可擷取長螢幕截圖</translation>
@@ -1195,11 +1195,11 @@
 <translation id="5341476184053934779">Brave 帳戶使用者</translation>
 <translation id="741204030948306876">是，我要啟用</translation>
 <translation id="7419565702166471774">一律使用安全連線</translation>
-<translation id="7431991332293347422">控制 Brave 使用瀏覽記錄提供個人化搜尋服務和其他內容的方式</translation>
+<translation id="7431991332293347422">控制 AI Wiz 使用瀏覽記錄提供個人化搜尋服務和其他內容的方式</translation>
 <translation id="7435356471928173109">已由系統管理員停用</translation>
 <translation id="6234515504547364178">登出 Brave</translation>
 <translation id="6147816961713837040">透過隱私權伺服器隱藏你的 IP 位址，再將經過模糊處理的部分網址傳送給 Brave</translation>
-<translation id="3699067418237091329">大多數網站都會將你登出，但系統並不會將你登出 Brave 帳戶。</translation>
+<translation id="3699067418237091329">大多數網站都會將你登出，但系統並不會將你登出 AI Wiz 帳戶。</translation>
 <translation id="7453810262525006706">收合至側邊面板</translation>
 <translation id="7454641608352164238">空間不足</translation>
 <translation id="7455988709578031708">以你的瀏覽記錄做為依據。這項設定已開啟。</translation>
@@ -1213,21 +1213,21 @@
 <translation id="7482656565088326534">預覽分頁</translation>
 <translation id="7484997419527351112">探索 - 關閉</translation>
 <translation id="7485033510383818941">如要重新整理動態提醒內容，請將頁面往下拉</translation>
-<translation id="749294055653435199">這部裝置不支援 Brave 智慧鏡頭</translation>
+<translation id="749294055653435199">這部裝置不支援 AI Wiz 智慧鏡頭</translation>
 <translation id="7493994139787901920"><ph name="VERSION"/> (上次更新時間：<ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">已將主題加回主題候選清單</translation>
 <translation id="7498271377022651285">請稍候…</translation>
-<translation id="8156131600798538460">如要從所有網站中登出 Brave 帳戶，請<ph name="BEGIN_LINK1"/>登出 Brave<ph name="END_LINK1"/>。</translation>
+<translation id="8156131600798538460">如要從所有網站中登出 AI Wiz 帳戶，請<ph name="BEGIN_LINK1"/>登出 Brave<ph name="END_LINK1"/>。</translation>
 <translation id="750228856503700085">無法取得更新</translation>
 <translation id="7507207699631365376">查看這個供應商的<ph name="BEGIN_LINK"/>隱私權政策<ph name="END_LINK"/></translation>
 <translation id="7514365320538308">下載</translation>
 <translation id="7518079994230200553">目前無法使用這個選項。</translation>
 <translation id="751961395872307827">無法連線至網站</translation>
 <translation id="752220631458524187">請在完成後拔除傳輸線</translation>
-<translation id="7523960634226602883">使用 Brave 智慧鏡頭透過相機進行搜尋</translation>
+<translation id="7523960634226602883">使用 AI Wiz 智慧鏡頭透過相機進行搜尋</translation>
 <translation id="7539698981064401140">同步分頁和歷史記錄</translation>
 <translation id="7562080006725997899">正在清除瀏覽資料</translation>
-<translation id="7814200940910057384">已清除 Brave 資料</translation>
+<translation id="7814200940910057384">已清除 AI Wiz 資料</translation>
 <translation id="7577900504646297215">管理興趣喜好</translation>
 <translation id="757855969265046257">{FILES,plural, =1{已下載 <ph name="FILES_DOWNLOADED_ONE"/> 個檔案}other{已下載 <ph name="FILES_DOWNLOADED_MANY"/> 個檔案}}</translation>
 <translation id="7581273696622423628">填寫問卷</translation>
@@ -1255,13 +1255,13 @@
 <translation id="768232549260819724">已複製 GIF</translation>
 <translation id="7682724950699840886">請嘗試按照下列提示操作：確認你的裝置上有足夠空間，然後嘗試重新匯出。</translation>
 <translation id="7686086654630106285">進一步瞭解網站建議廣告</translation>
-<translation id="2667018639405889513">系統會預先載入你要造訪的部分網頁。當你從 Brave 網站連到這些網頁時，系統可能會透過 Brave 伺服器預先載入網頁內容。</translation>
-<translation id="7795837497684113327">你的裝置無法開啟 Brave。如要修正問題，請前往應用程式商店下載 Brave 更新。</translation>
+<translation id="2667018639405889513">系統會預先載入你要造訪的部分網頁。當你從 AI Wiz 網站連到這些網頁時，系統可能會透過 AI Wiz 伺服器預先載入網頁內容。</translation>
+<translation id="7795837497684113327">你的裝置無法開啟 Brave。如要修正問題，請前往應用程式商店下載 AI Wiz 更新。</translation>
 <translation id="7691043218961417207">探索值得追蹤的內容</translation>
 <translation id="7697383401610880082">拖曳控點</translation>
 <translation id="7698359219371678927">在「<ph name="APP_NAME"/>」中建立電子郵件</translation>
 <translation id="7702029078562412515">查詢資訊方塊</translation>
-<translation id="3434187853488406814">清除瀏覽資料後，系統不會將你登出 Brave 帳戶。如要登出帳戶，請<ph name="BEGIN_LINK1"/>登出 Brave<ph name="END_LINK1"/>。</translation>
+<translation id="3434187853488406814">清除瀏覽資料後，系統不會將你登出 AI Wiz 帳戶。如要登出帳戶，請<ph name="BEGIN_LINK1"/>登出 Brave<ph name="END_LINK1"/>。</translation>
 <translation id="7707922173985738739">使用行動數據</translation>
 <translation id="7709918231054955894">取得所有分頁</translation>
 <translation id="7733878270780732638">裝置的可用空間不足。</translation>
@@ -1273,9 +1273,9 @@
 <translation id="7772032839648071052">確認通關密語</translation>
 <translation id="7772375229873196092">關閉 <ph name="APP_NAME"/></translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 和另外 <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> 種付款方式}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 和另外 <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> 種付款方式}}</translation>
-<translation id="5614774692683309331">當你登入帳戶後，保護你在各項 Brave 服務中的安全。</translation>
+<translation id="5614774692683309331">當你登入帳戶後，保護你在各項 AI Wiz 服務中的安全。</translation>
 <translation id="7778840695157240389">請稍後再返回查看是否有新的報導</translation>
-<translation id="7703329426540523149">登入 Brave 帳戶後，系統會將這些資料暫時連結至你的帳戶，以便在你使用各個 Brave 應用程式時提供保護</translation>
+<translation id="7703329426540523149">登入 AI Wiz 帳戶後，系統會將這些資料暫時連結至你的帳戶，以便在你使用各個 AI Wiz 應用程式時提供保護</translation>
 <translation id="7791543448312431591">新增</translation>
 <translation id="7798392620021911922">已還原 <ph name="TAB_COUNT"/> 個分頁</translation>
 <translation id="780301667611848630">不用了，謝謝</translation>
@@ -1283,7 +1283,7 @@
 <translation id="7810647596859435254">選擇開啟工具…</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{所有檔案，清單中有 1 個檔案}other{所有檔案，清單中有 # 個檔案}}</translation>
 <translation id="7815484226266492798">長螢幕截圖</translation>
-<translation id="8439902729344548970">當你登入後，這類資料會連結到 Brave 帳戶，保護你在各項 Brave 服務中的安全，例如在安全事件發生後強化 Gmail 的防護機制。</translation>
+<translation id="8439902729344548970">當你登入後，這類資料會連結到 AI Wiz 帳戶，保護你在各項 AI Wiz 服務中的安全，例如在安全事件發生後強化 Gmail 的防護機制。</translation>
 <translation id="78270725016672455">你的電腦想要註冊這部裝置以登入網站</translation>
 <translation id="7844171778363018843">沒有選取要同步處理的資料</translation>
 <translation id="7068829570137757602">Brave 服務</translation>
@@ -1296,7 +1296,7 @@
 <translation id="78707286264420418"><ph name="PRODUCT_NAME"/> 需要取得鄰近裝置權限，才能連線到你的裝置</translation>
 <translation id="7875915731392087153">建立電子郵件</translation>
 <translation id="7876243839304621966">全部移除</translation>
-<translation id="6143689084714664628">正在 Brave 中執行</translation>
+<translation id="6143689084714664628">正在 AI Wiz 中執行</translation>
 <translation id="7887174313503389866">觀看導覽內容，瞭解最重要的隱私權和安全性控制項。如要查看更多選項，請前往個別設定。</translation>
 <translation id="7896724475402191389">適合兒少的內容 - 已關閉</translation>
 <translation id="7903184275147100332">請稍待片刻</translation>
@@ -1315,7 +1315,7 @@
 <translation id="7960972236129063347">網頁洞察資訊頁面的返回按鈕</translation>
 <translation id="7961926449547174351">你已停用儲存空間存取權，請前往「設定」頁面啟用這項權限。</translation>
 <translation id="7963646190083259054">供應商：</translation>
-<translation id="2939504940637874963">你可以在任何裝置上使用儲存的密碼，系統會將密碼儲存至 <ph name="ACCOUNT"/> 的 Brave 密碼管理工具。</translation>
+<translation id="2939504940637874963">你可以在任何裝置上使用儲存的密碼，系統會將密碼儲存至 <ph name="ACCOUNT"/> 的 AI Wiz 密碼管理工具。</translation>
 <translation id="7968014550143838305">已加入閱讀清單</translation>
 <translation id="7971136598759319605">上次使用時間：1 天前</translation>
 <translation id="7975379999046275268">預覽網頁 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@
 <translation id="7995059495660416932">目前沒有內容，請耐心等候</translation>
 <translation id="799576009106109668">系統會根據你目前造訪的網頁主動載入內容，幫助你加快瀏覽速度</translation>
 <translation id="8004582292198964060">瀏覽器</translation>
-<translation id="3325020657155065477">一併清除你在這個裝置上的 Brave 資料</translation>
+<translation id="3325020657155065477">一併清除你在這個裝置上的 AI Wiz 資料</translation>
 <translation id="8015452622527143194">將網頁上的所有內容都回復為預設大小</translation>
 <translation id="8026334261755873520">清除瀏覽資料</translation>
 <translation id="8027863900915310177">選擇下載位置</translation>
@@ -1335,7 +1335,7 @@
 <translation id="8037801708772278989">剛才已檢查</translation>
 <translation id="804335162455518893">找不到 SD 卡</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB 可用空間</translation>
-<translation id="2317945146070194624">在新的 Brave 分頁中開啟</translation>
+<translation id="2317945146070194624">在新的 AI Wiz 分頁中開啟</translation>
 <translation id="8062594758852531064">延伸預先載入模式：</translation>
 <translation id="8063895661287329888">無法加入書籤。</translation>
 <translation id="8066816452984416180">快速將這個頁面加入書籤，按住即可編輯這個捷徑。</translation>
@@ -1344,21 +1344,21 @@
 <translation id="8076492880354921740">分頁</translation>
 <translation id="8078096376109663956">僅分享文字</translation>
 <translation id="8084114998886531721">已儲存的密碼</translation>
-<translation id="1718138320251931534">控管 Brave 帳戶資料</translation>
+<translation id="1718138320251931534">控管 AI Wiz 帳戶資料</translation>
 <translation id="808747664143081553">已連上裝置</translation>
 <translation id="8090732854597034573">如需協助，請找家長幫忙</translation>
 <translation id="8101414242770404289"><ph name="TIME_PERIOD"/>期間沒有要關閉的分頁</translation>
 <translation id="3249150807062904185">選擇繼續即表示您同意《<ph name="BEGIN_TOS_LINK"/>服務條款<ph name="END_TOS_LINK"/>》。\n為協助改善應用程式，Brave 會將使用情形和當機資料傳送給 Brave。<ph name="BEGIN_UMA_LINK"/>管理設定<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">關閉排序選項</translation>
-<translation id="2919733817273403520">協助改善 Brave 的功能與效能</translation>
-<translation id="4565206163201411670">要在數位健康中顯示你的 Brave 活動記錄嗎？</translation>
+<translation id="2919733817273403520">協助改善 AI Wiz 的功能與效能</translation>
+<translation id="4565206163201411670">要在數位健康中顯示你的 AI Wiz 活動記錄嗎？</translation>
 <translation id="8118117428362942925">如需協助，請找家長 (<ph name="PARENT_NAME"/>) 幫忙</translation>
 <translation id="8122623268651408616">由新到舊排序</translation>
 <translation id="8127542551745560481">編輯首頁</translation>
 <translation id="8130309322784422030">你儲存的登入資訊可能已過時</translation>
 <translation id="813082847718468539">查看網站資訊</translation>
-<translation id="6337533477704327362">你不需要記住這組密碼，系統會將密碼儲存至 Brave 密碼管理工具中。</translation>
+<translation id="6337533477704327362">你不需要記住這組密碼，系統會將密碼儲存至 AI Wiz 密碼管理工具中。</translation>
 <translation id="8186512483418048923">還剩 <ph name="FILES"/> 個檔案</translation>
 <translation id="8190358571722158785">還剩 1 天</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>你的裝置<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1375,7 +1375,7 @@
 <translation id="8243077599929149377">新增使用者名稱</translation>
 <translation id="8250920743982581267">文件</translation>
 <translation id="8255617931166444521">網站只能使用 Cookie 查看你在該網站上的瀏覽活動</translation>
-<translation id="2876689296031086375">由於預先載入的網頁已經過加密，Brave 不會得知預先載入網頁內容的相關資訊。Brave 伺服器會知道哪些網站已透過私密方式預先載入。這項資訊僅用於預先載入網頁，不會與你 Brave 帳戶的其他資訊連結。</translation>
+<translation id="2876689296031086375">由於預先載入的網頁已經過加密，Brave 不會得知預先載入網頁內容的相關資訊。Brave 伺服器會知道哪些網站已透過私密方式預先載入。這項資訊僅用於預先載入網頁，不會與你 AI Wiz 帳戶的其他資訊連結。</translation>
 <translation id="8260126382462817229">請嘗試重新登入</translation>
 <translation id="8261506727792406068">刪除</translation>
 <translation id="82619448491672958">查看其他分頁</translation>
@@ -1393,7 +1393,7 @@
 <translation id="8368001212524806591">追蹤價格</translation>
 <translation id="8387617938027387193">驗證你的身分</translation>
 <translation id="8393700583063109961">傳送訊息</translation>
-<translation id="7651600795135059130">可使用儲存在 Brave 中的不安全網站清單檢查網址</translation>
+<translation id="7651600795135059130">可使用儲存在 AI Wiz 中的不安全網站清單檢查網址</translation>
 <translation id="8402673309244746971">前往「追蹤中」</translation>
 <translation id="8413126021676339697">顯示完整記錄</translation>
 <translation id="5348884013239264115">防範已知的危險網站、下載內容和擴充功能。當你造訪網站時，Brave 會透過隱私權伺服器隱藏你的 IP 位址，再傳送經模糊處理的部分網址傳送給 Brave。如果網站有可疑行為，系統也會傳送整個網址和部分網頁內容。</translation>
@@ -1428,7 +1428,7 @@
 <translation id="8503813439785031346">使用者名稱</translation>
 <translation id="8505766168025405649">查看下載狀態通知</translation>
 <translation id="8506357771923193001">這裡會顯示你的下載內容</translation>
-<translation id="133012818630824069">將使用 Brave 儲存的密碼匯出</translation>
+<translation id="133012818630824069">將使用 AI Wiz 儲存的密碼匯出</translation>
 <translation id="8516012719330875537">圖片編輯器</translation>
 <translation id="8523928698583292556">刪除已儲存的密碼</translation>
 <translation id="8526855376374973824">通知權限流程</translation>
@@ -1447,13 +1447,13 @@
 <translation id="860043288473659153">持卡人姓名</translation>
 <translation id="1673533133011266617">登入 Brave，帳戶挑選器已關閉。</translation>
 <translation id="860282621117673749">降價快訊</translation>
-<translation id="5784514951651328424">你的 Brave 帳戶可能會儲存其他形式的瀏覽記錄，請參閱 <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>。</translation>
+<translation id="5784514951651328424">你的 AI Wiz 帳戶可能會儲存其他形式的瀏覽記錄，請參閱 <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>。</translation>
 <translation id="8617240290563765734">開啟這項下載內容中指定的建議網址？</translation>
 <translation id="8621068256433641644">手機</translation>
 <translation id="8636825310635137004">如要存取您在其他裝置上開啟的分頁，請開啟同步處理功能。</translation>
 <translation id="864544049772947936">管理視窗 (<ph name="INSTANCE_COUNTS"/> 個)</translation>
 <translation id="8645920082661222035">可預測不安全事件，並在這類事件發生前顯示警告訊息</translation>
-<translation id="2734140769649165081">你可以在 Brave 設定中清除資料</translation>
+<translation id="2734140769649165081">你可以在 AI Wiz 設定中清除資料</translation>
 <translation id="7436978557885042606">以個人化的方式使用 Brave</translation>
 <translation id="8664979001105139458">檔案名稱已存在</translation>
 <translation id="8676276370198826499">使用 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 註冊 <ph name="SITE_ETLD_PLUS_ONE"/></translation>
@@ -1498,7 +1498,7 @@
 <translation id="8922289737868596582">透過「更多選項」按鈕下載網頁，以便離線存取</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/>套件已下載完成</translation>
-<translation id="1174893863889683998">要將你的 Brave 活動記錄從數位健康中移除嗎？</translation>
+<translation id="1174893863889683998">要將你的 AI Wiz 活動記錄從數位健康中移除嗎？</translation>
 <translation id="179413535815682755">視你的設定而定，Brave 也可能會傳送 Cookie、你目前的網址和位置</translation>
 <translation id="8942627711005830162">在其他視窗中開啟</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - 無法下載這個語言套件，請稍後再試。</translation>
@@ -1509,7 +1509,7 @@
 <translation id="8987736167266086032">接續上次進度</translation>
 <translation id="8996847606757455498">選擇其他供應商</translation>
 <translation id="8998289560386111590">這項功能無法在你的裝置上使用</translation>
-<translation id="3275122921244685452">您即將使用由 <ph name="MANAGED_DOMAIN"/> 所管理的帳戶登入，並授權該網域的管理員控管您的 Brave 資料。您的資料會與這個帳戶建立永久連結。登出 Brave 後，系統會將您的資料從這個裝置上刪除，但繼續保留在您的 Brave 帳戶中。</translation>
+<translation id="3275122921244685452">您即將使用由 <ph name="MANAGED_DOMAIN"/> 所管理的帳戶登入，並授權該網域的管理員控管您的 AI Wiz 資料。您的資料會與這個帳戶建立永久連結。登出 AI Wiz 後，系統會將您的資料從這個裝置上刪除，但繼續保留在您的 AI Wiz 帳戶中。</translation>
 <translation id="9012585441087414258">防範已知的不安全網站、下載內容和擴充功能。如果某個網頁含有可疑內容，系統會將網址和部分網頁內容傳送給「Brave 安全瀏覽」功能。</translation>
 <translation id="9019199799064251516">不鎖定汽車設定檔就繼續嗎？</translation>
 <translation id="9022774213089566801">經常造訪</translation>
@@ -1554,9 +1554,9 @@
 <translation id="9209888181064652401">無法撥打電話</translation>
 <translation id="9212845824145208577">無法再向下捲動。請嘗試從下一頁開始。</translation>
 <translation id="9219103736887031265">圖片</translation>
-<translation id="6946179564366058239">當網站要求以私密方式預先載入網頁上的連結時，Brave 會透過 Brave 伺服器對該連結加密並預先載入網頁，且不會使用 Cookie。這麼做可在預先載入網站中隱藏你的身分。</translation>
-<translation id="4596514158372210596">將你的 Brave 活動記錄從數位健康中移除</translation>
-<translation id="2830145431802238213">使用 Brave 精簡模式</translation>
+<translation id="6946179564366058239">當網站要求以私密方式預先載入網頁上的連結時，Brave 會透過 AI Wiz 伺服器對該連結加密並預先載入網頁，且不會使用 Cookie。這麼做可在預先載入網站中隱藏你的身分。</translation>
+<translation id="4596514158372210596">將你的 AI Wiz 活動記錄從數位健康中移除</translation>
+<translation id="2830145431802238213">使用 AI Wiz 精簡模式</translation>
 <translation id="928550791203542716">正在追蹤「<ph name="SITE_NAME"/>」</translation>
 <translation id="93533588269984624">所有密碼都會下載到你的裝置，並從 <ph name="CHROME_CHANNEL"/>中移除</translation>
 <translation id="938850635132480979">錯誤：<ph name="ERROR_CODE"/></translation>
@@ -1575,7 +1575,7 @@
 <translation id="996149300115483134">已關閉動態消息資訊卡選單</translation>
 <translation id="5186185447130319458">隱私</translation>
 <translation id="79269250264141507">當您在網址列或搜尋方塊輸入內容時，Brave 會將您輸入的內容傳送至您的預設搜尋引擎，以便取得更好的建議。在無痕模式下會停用此功能。</translation>
-<translation id="5711390076756601471">離開 Brave 時鎖定隱私分頁</translation>
+<translation id="5711390076756601471">離開 AI Wiz 時鎖定隱私分頁</translation>
 <translation id="1014490034578104945">使用螢幕鎖定查看開啟的隱私分頁</translation>
 <translation id="5722020415664104421">使用無痕模式時封鎖</translation>
 <translation id="8915136961932734044">在無痕模式中，網站無法使用 Cookie 查看您在各網站的瀏覽活動，也無法提供個人化廣告等服務。某些網站的功能可能無法正常運作。</translation>
@@ -1590,8 +1590,8 @@
 <translation id="5248610748197335423">關閉所有隱私分頁</translation>
 <translation id="4660964651149493586">解鎖隱私</translation>
 <translation id="5278260521317049275">開啟私密鎖</translation>
-<translation id="6302653771627628530">當您退出 Brave 應用程式後，所開啟的隱私分頁將被鎖定</translation>
-<translation id="3763131702135887799">協助 Brave 更臻完善，造福與您用途相同的使用者</translation>
+<translation id="6302653771627628530">當您退出 AI Wiz 應用程式後，所開啟的隱私分頁將被鎖定</translation>
+<translation id="3763131702135887799">協助 AI Wiz 更臻完善，造福與您用途相同的使用者</translation>
 <translation id="4167670741834902166">新隱私分頁</translation>
 <translation id="9148151251783962691">如要在這部裝置上以私密方式瀏覽，請嘗試使用無痕模式</translation>
 <translation id="8355284051444779553">若要開啟新私密分頁，請開啟選單</translation>

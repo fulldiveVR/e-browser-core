@@ -142,7 +142,7 @@ void BraveIpfsClientUpdater::SetComponentIdAndBase64PublicKeyForTest(
 
 ///////////////////////////////////////////////////////////////////////////////
 
-// The Brave Ipfs client extension factory.
+// The AI Wiz Ipfs client extension factory.
 std::unique_ptr<BraveIpfsClientUpdater> BraveIpfsClientUpdaterFactory(
     BraveComponent::Delegate* delegate,
     const base::FilePath& user_data_dir) {

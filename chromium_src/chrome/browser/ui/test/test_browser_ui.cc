@@ -7,7 +7,7 @@
 
 #include "testing/gtest/include/gtest/gtest.h"
 
-// A workaround for Brave CIs.
+// A workaround for AI Wiz CIs.
 // TestBrowserUi don't want to run when the system is set to use dark theme on
 // Windows. If dark theme is detected Chromium code calls GTEST_SKIP in
 // ShowAndVerifyUi. Our CIs are set up with light theme, but occasionally tests

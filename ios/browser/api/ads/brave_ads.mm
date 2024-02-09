@@ -123,11 +123,11 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
   dispatch_queue_t monitorQueue;
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33730): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33730): Unify AI Wiz Ads
 // common operations.
 @property(nonatomic) BraveCommonOperations* commonOps;
 
-// TODO(https://github.com/brave/brave-browser/issues/33574): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33574): Unify AI Wiz Ads
 // component updater.
 @property(nonatomic) dispatch_group_t componentUpdaterPrefsWriteGroup;
 @property(nonatomic) dispatch_queue_t componentUpdaterPrefsWriteThread;
@@ -602,7 +602,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
 
   NSString* languageCodeAdsResourceId =
       [languageCodeAdsResourceIds firstObject];
-  BLOG(1, @"Registering Brave Ads Resources Installer (%@) with id %@",
+  BLOG(1, @"Registering AI Wiz Ads Resources Installer (%@) with id %@",
        languageCode, languageCodeAdsResourceId);
 
   BLOG(1, @"Notifying ads resource observers");
@@ -639,7 +639,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
   }
 
   NSString* countryCodeAdsResourceId = [countryCodeAdsResourceIds firstObject];
-  BLOG(1, @"Registering Brave Ads Resources Installer (%@) with id %@",
+  BLOG(1, @"Registering AI Wiz Ads Resources Installer (%@) with id %@",
        countryCode, countryCodeAdsResourceId);
 
   BLOG(1, @"Notifying ads resource observers");
@@ -1439,7 +1439,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
 - (void)getBrowsingHistory:(const int)max_count
                    forDays:(const int)days_ago
                   callback:(brave_ads::GetBrowsingHistoryCallback)callback {
-  // TODO(https://github.com/brave/brave-browser/issues/33681): Unify Brave Ads
+  // TODO(https://github.com/brave/brave-browser/issues/33681): Unify AI Wiz Ads
   // browsing history.
   std::move(callback).Run({});
 }
@@ -1534,7 +1534,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
 
 - (void)getScheduledCaptcha:(const std::string&)payment_id
                    callback:(brave_ads::GetScheduledCaptchaCallback)callback {
-  // TODO(https://github.com/brave/brave-browser/issues/33794): Unify Brave Ads
+  // TODO(https://github.com/brave/brave-browser/issues/33794): Unify AI Wiz Ads
   // adaptive captcha.
   std::move(callback).Run("");
 }
@@ -1566,13 +1566,13 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
 }
 
 - (void)recordP2AEvents:(const std::vector<std::string>&)events {
-  // TODO(https://github.com/brave/brave-browser/issues/33786): Unify Brave Ads
+  // TODO(https://github.com/brave/brave-browser/issues/33786): Unify AI Wiz Ads
   // P3A analytics.
 }
 
 - (void)addFederatedLearningPredictorTrainingSample:
     (std::vector<brave_federated::mojom::CovariateInfoPtr>)training_sample {
-  // TODO(https://github.com/brave/brave-browser/issues/33787): Unify Brave Ads
+  // TODO(https://github.com/brave/brave-browser/issues/33787): Unify AI Wiz Ads
   // federated learning.
 }
 
@@ -1699,7 +1699,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
       }));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33470): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33470): Unify AI Wiz Ads
 // new tab page ad serving.
 
 - (void)triggerNewTabPageAdEvent:(NSString*)wallpaperId
@@ -1766,7 +1766,7 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
       }));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33469): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33469): Unify AI Wiz Ads
 // search result attribution.
 
 - (void)purgeOrphanedAdEventsForType:(BraveAdsAdType)adType
@@ -1814,16 +1814,16 @@ brave_ads::mojom::DBCommandResponseInfoPtr RunDBTransactionOnTaskRunner(
   ads->ToggleDislikeAd(brave_ads::AdContentToValue(ad_content));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33788): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33788): Unify AI Wiz Ads
 // like category.
 
-// TODO(https://github.com/brave/brave-browser/issues/33788): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33788): Unify AI Wiz Ads
 // dislike category.
 
-// TODO(https://github.com/brave/brave-browser/issues/33789): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33789): Unify AI Wiz Ads
 // save ad.
 
-// TODO(https://github.com/brave/brave-browser/issues/33790): Unify Brave Ads
+// TODO(https://github.com/brave/brave-browser/issues/33790): Unify AI Wiz Ads
 // mark ad as inappropriate.
 
 #pragma mark - Ads client notifier

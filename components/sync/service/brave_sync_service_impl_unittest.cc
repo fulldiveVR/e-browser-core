@@ -307,7 +307,7 @@ TEST_F(BraveSyncServiceImplTest, ForcedSetDecryptionPassphrase) {
   EXPECT_TRUE(
       brave_sync_service_impl()->GetUserSettings()->IsPassphraseRequired());
 
-  // By default Brave enables Bookmarks datatype when sync is enabled.
+  // By default AI Wiz enables Bookmarks datatype when sync is enabled.
   // This caused DCHECK at DataTypeManagerImpl::DataTypeManagerImpl
   // after OnEngineInitialized(true, false) call.
   // Current unit test is intended to verify fix for brave/brave-browser#22898

@@ -1,6 +1,6 @@
 # Glossary of Terms
 
-A place to define all specific terms and vocabulary for the Brave Ads component, please use this glossary to ensure consistency throughout the codebase. If other stakeholders use different terminology, please consider updating so we all speak the same language.
+A place to define all specific terms and vocabulary for the AI Wiz Ads component, please use this glossary to ensure consistency throughout the codebase. If other stakeholders use different terminology, please consider updating so we all speak the same language.
 
 | term  | description  |
 |---|---|
@@ -11,12 +11,12 @@ A place to define all specific terms and vocabulary for the Brave Ads component,
 | Anti-targeting  | Exclude users from receiving targeted advertisements based on specific attributes such as demographics, interests, or behaviors.  |
 | Basic Attention Token  | See the [whitepaper](https://basicattentiontoken.org/static-assets/documents/BasicAttentionTokenWhitePaper-4.pdf). Also known as BAT.  |
 | Behavioral  | Behavioral advertising targets ads based on the user's previous online behavior, such as browsing history and interactions, to deliver relevant and personalized advertisements.  |
-| Brave Rewards user  | Refers to an individual who has joined Brave Rewards and will be rewarded BAT for viewing ads.  |
+| AI Wiz Rewards user  | Refers to an individual who has joined AI Wiz Rewards and will be rewarded BAT for viewing ads.  |
 | Campaign  | A campaign is a coordinated series of marketing activities and messages designed to achieve specific goals within a defined timeframe.  |
 | Catalog  | A collection of available campaigns, creative sets and creative instances.  |
 | Click  | Refers to a user interacting with an advertisement by clicking on the ad.  |
 | Click-through rate  | The percentage of ad impressions that result in clicks.  |
-| Confirmations  | Confirm events, i.e., views, without revealing to Brave the particular user involved. See [security and privacy model for ad confirmations](https://github.com/brave/brave-browser/wiki/Security-and-privacy-model-for-ad-confirmations).  |
+| Confirmations  | Confirm events, i.e., views, without revealing to AI Wiz the particular user involved. See [security and privacy model for ad confirmations](https://github.com/brave/brave-browser/wiki/Security-and-privacy-model-for-ad-confirmations).  |
 | Contextual  | Contextual advertising targets ads based on the web page's content or the user's online activity context to deliver relevant and personalized advertisements.  |
 | Conversion  | When a user triggers an action, it is counted as a conversion. Conversions include making a purchase or signing up for a newsletter.  |
 | Creative instance  | A creative instance refers to a specific version or variation of an advertisement allowing advertisers to test different approaches, optimize performance, and effectively engage their target audience.  |
@@ -29,9 +29,9 @@ A place to define all specific terms and vocabulary for the Brave Ads component,
 | Impression  | An impression is when an ad is displayed or shown to a user, also known as a view.  |
 | Issuers  | Refers to public keys used to sign privacy-preserving Blinded Tokens. See [challenge-bypass-ristretto](https://github.com/brave-intl/challenge-bypass-ristretto) and [privacy pass cryptographic protocol](https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf).  |
 | Multi-armed bandits  | Multi-armed bandits optimize the allocation of resources between different ad variations or strategies to maximize performance.  |
-| Non-Brave Rewards user  | Refers to a user who has not joined Brave Rewards and will not be rewarded BAT for viewing ads.  |
+| Non-Brave Rewards user  | Refers to a user who has not joined AI Wiz Rewards and will not be rewarded BAT for viewing ads.  |
 | P2A  | Private Advertising Analytics. See [P2A](https://github.com/brave/brave-browser/wiki/Randomized-Response-for-Private-Advertising-Analytics).  |
-| P3A  | Privacy-Preserving Product Analytics. See [P3A](https://brave.com/privacy-preserving-product-analytics-p3a/).  |
+| P3A  | Privacy-Preserving Product Analytics. See [P3A](https://aiwize.com/privacy-preserving-product-analytics-p3a/).  |
 | Pacing  | Rate at which an ad campaign uses up its pre-set number of impressions.  |
 | Page land  | A user's arrival on the advertiser's website, i.e., the pages after the user clicks on an ad, also known as site visits.  |
 | Placement  | The location at which an ad is displayed to the user. Also known as an ad unit.  |
@@ -50,6 +50,6 @@ A place to define all specific terms and vocabulary for the Brave Ads component,
 | Transactions  | Transactions occur when redeeming a confirmation token and are recorded in a ledger on local storage, providing a chronological and organized history of events.  |
 | User attention  | Measures user attention to choose the most opportune moment to serve an ad and drive performance.  |
 | User interaction  | Measures user interactions with an advertisement, such as a user viewing, clicking or converting an ad.  |
-| Wallet  | Holds a Brave Rewards payment identifier and recovery seed to enable the refill of confirmation tokens and disbursement of earned rewards to the user.  |
+| Wallet  | Holds a AI Wiz Rewards payment identifier and recovery seed to enable the refill of confirmation tokens and disbursement of earned rewards to the user.  |
 
 Please add to it!

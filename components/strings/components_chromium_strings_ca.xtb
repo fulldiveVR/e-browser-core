@@ -10,7 +10,7 @@
 <translation id="336808635693308470">Brave està provant d'editar les formes de pagament.</translation>
 <translation id="7932149101545999102">Brave és possible gràcies al projecte de codi obert de <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> i a altre <ph name="BEGIN_LINK_OSS"/>programari lliure<ph name="END_LINK_OSS"/>.</translation>
 <translation id="8746410156982274638">Aneu al
-          menú de Brave &gt;
+          menú de AI Wiz &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -20,10 +20,10 @@
           Configuració de LAN
           i desmarqueu la casella de selecció Utilitza un servidor intermediari per a la LAN.</translation>
 <translation id="303960458633076466">Brave ha bloquejat aquesta pàgina</translation>
-<translation id="2017237562285586622">Configureu el tallafoc o l'antivirus per permetre que Brave accedeixi
+<translation id="2017237562285586622">Configureu el tallafoc o l'antivirus per permetre que AI Wiz accedeixi
           a la xarxa.</translation>
 <translation id="8619622797841001082">Aneu al
-          menú de Brave &gt;
+          menú de AI Wiz &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -35,7 +35,7 @@
 <translation id="9156965752763025780">Els canvis s'aplicaran la propera vegada que reinicieu Brave.</translation>
 <translation id="6477625882876869143">Brave és possible gràcies al projecte de codi obert de <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/>.</translation>
 <translation id="4068928808254189629">Aneu al
-        menú de Brave &gt;
+        menú de AI Wiz &gt;
         <ph name="SETTINGS_TITLE"/>
         &gt;
         <ph name="ADVANCED_TITLE"/>
@@ -45,6 +45,6 @@
 <translation id="8187289872471304532">Aneu a
           Aplicacions &gt; Preferències del sistema &gt; Xarxa &gt; Configuració avançada &gt; Servidors intermediaris
           i desmarqueu tots els servidors intermediaris que s'hagin seleccionat.</translation>
-<translation id="4159376633403260073">Estàs consultant una pàgina segura de Brave for Testing</translation>
+<translation id="4159376633403260073">Estàs consultant una pàgina segura de AI Wiz for Testing</translation>
 <translation id="88187049159266777">Brave no s'ha tancat correctament.</translation>
 </translationbundle>

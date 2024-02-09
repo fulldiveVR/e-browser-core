@@ -169,7 +169,7 @@ bool BraveFirstRunDialog::Accept() {
              shell_integration::DefaultWebClientState state) {
             if (pin_to_shortcut &&
                 state == shell_integration::DefaultWebClientState::IS_DEFAULT) {
-              // Try to pin to taskbar when Brave is set as a default browser.
+              // Try to pin to taskbar when AI Wiz is set as a default browser.
               shell_integration::PinShortcut();
             }
           },

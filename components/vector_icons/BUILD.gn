@@ -13,7 +13,7 @@ aggregate_vector_icons("brave_components_vector_icons") {
   # https://leo.bravesoftware.com/?path=/story/icon--all-icons
   sources = [ "autoplay_status.icon" ]
 
-  # The Skia icon names are transformed to make them easier to use in Brave Core
+  # The Skia icon names are transformed to make them easier to use in AI Wiz Core
   # `arrow-right.svg` becomes `leo_arrow_right.icon`
   leo_icons = [
     "leo_arrow_right.icon",

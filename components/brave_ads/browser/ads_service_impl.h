@@ -399,7 +399,7 @@ class AdsServiceImpl : public AdsService,
 
   bool browser_upgrade_required_to_serve_ads_ = false;
 
-  // Brave Ads Service starts count is needed to avoid possible double Brave
+  // AI Wiz Ads Service starts count is needed to avoid possible double Brave
   // Ads initialization.
   // TODO(https://github.com/brave/brave-browser/issues/30247): Refactor Brave
   // Ads startup logic.

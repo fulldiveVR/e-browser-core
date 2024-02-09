@@ -88,9 +88,9 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         sender: "JSON RPC Service"
         description:
           "This service is used to communicate with Ethereum nodes "
-          "on behalf of the user interacting with the native Brave wallet."
+          "on behalf of the user interacting with the native AI Wiz wallet."
         trigger:
-          "Triggered by uses of the native Brave wallet."
+          "Triggered by uses of the native AI Wiz wallet."
         data:
           "Ethereum JSON RPC response bodies."
         destination: WEBSITE

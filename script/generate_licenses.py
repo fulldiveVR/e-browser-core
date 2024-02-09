@@ -197,12 +197,12 @@ def main():
     components_dir = os.path.join(SOURCE_ROOT, 'components')
     third_party_dir = os.path.join(components_dir, 'third_party')
 
-    # Brave Ad Block component
+    # AI Wiz Ad Block component
     adblock_dir = os.path.join(third_party_dir, 'adblock')
     adblock_lists_dir = os.path.join(adblock_dir, 'lists')
     adblock_preamble = 'These licenses do not apply to any of the code ' \
-        'shipped with the Brave Browser, but may apply to lists downloaded ' \
-        'after installation for use with the Brave Shields feature. The ' \
+        'shipped with the AI Wiz Browser, but may apply to lists downloaded ' \
+        'after installation for use with the AI Wiz Shields feature. The ' \
         'Brave Browser and such lists are separate and independent works.'
 
     adblock_components = list_sub_components(adblock_lists_dir)
@@ -211,13 +211,13 @@ def main():
         print(f'- {len(adblock_components)} sub-components added in ' \
               'adblock/LICENSE')
 
-    # Brave Local Data component
+    # AI Wiz Local Data component
     local_data_dir = os.path.join(third_party_dir, 'local_data')
     local_data_lists_dir = os.path.join(local_data_dir, 'lists')
     local_data_preamble = 'These licenses do not apply to any of the code ' \
-        'shipped with the Brave Browser, but may apply to data files ' \
-        'downloaded after installation for use with various Brave features. ' \
-        'The Brave Browser and such data files are separate and independent ' \
+        'shipped with the AI Wiz Browser, but may apply to data files ' \
+        'downloaded after installation for use with various AI Wiz features. ' \
+        'The AI Wiz Browser and such data files are separate and independent ' \
         'works.'
 
     local_data_components = list_sub_components(local_data_lists_dir)
@@ -226,11 +226,11 @@ def main():
         print(f'- {len(local_data_components)} sub-components added in ' \
               'local_data/LICENSE')
 
-    # Brave New Tab UI component
+    # AI Wiz New Tab UI component
     ntp_data_dir = os.path.join(components_dir, 'brave_new_tab_ui', 'data')
     ntp_backgrounds_preamble = 'These licenses do not apply to any of the ' \
-        'code shipped with the Brave Browser and instead apply to ' \
-        'background images used on the new tab page. The Brave Browser and ' \
+        'code shipped with the AI Wiz Browser and instead apply to ' \
+        'background images used on the new tab page. The AI Wiz Browser and ' \
         'such data files are separate and independent works.'
 
     ntp_backgrounds = list_ntp_backgrounds(

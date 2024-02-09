@@ -62,7 +62,7 @@ addTrezorCommandHandler(
         lazyLoad: false,
         manifest: {
           email: 'support@brave.com',
-          appUrl: 'https://brave.com'
+          appUrl: 'https://aiwize.com'
         }
       })
         .then(() => {

@@ -36,7 +36,7 @@
     <color name="brave_wallet_day_night_bear">#FFEE6374</color>
     <color name="brave_wallet_day_night_chip_background_color">#EDEEF1</color>
     <color name="brave_wallet_dn_button_color">#3F39E8</color>
-    <!-- Brave wallet 2.0 colors -->
+    <!-- AI Wiz wallet 2.0 colors -->
     <color name="brave_wallet_dn_panel_bg">#EDEEF1</color>
 
     <!-- Text colors -->
@@ -106,7 +106,7 @@
     <color name="wallet_gradient_end_color">#F73A1C</color>
     <color name="wallet_gradient_start_color">#4C54D2</color>
 
-    <!-- Brave news colors -->
+    <!-- AI Wiz news colors -->
     <!-- <color name="card_background">#DC353535</color> -->    
     <color name="card_background">#F23B3E4F</color>
     <color name="card_background_solid">#353535</color>
@@ -270,7 +270,7 @@
     <color name="rewards_panel_payout_processing_bg_color">#E8F4FF</color>
     <color name="rewards_panel_payout_complete_bg_color">#CBF1D1</color>
 
-    <!--  Brave Wallet DApp  -->
+    <!--  AI Wiz Wallet DApp  -->
     <color name="brave_wallet_dapp_text_color">#171919</color>
 
      <!--  Tipping Banner color  -->
@@ -373,7 +373,7 @@
     <color name="vpn_timer_text_color">#0D0F14</color>
     <color name="vpn_timer_icon_color">#687485</color>
 
-    <!-- Brave Leo colors-->
+    <!-- AI Wiz Leo colors-->
     <color name="leo_plan_monthly_bt_bg">#542FE5</color>
     <color name="leo_plan_monthly_bt_bg_border">#6754F8</color>
     <color name="leo_plan_upgrade_now_bt_bg_start">#FF006B</color>
@@ -382,5 +382,5 @@
     <color name="brave_leo_plans_bg">#1F0B63</color>
     <color name="brave_leo_plans_tips_border">#4100C1</color>
     <color name="brave_leo_plans_tips_desc">#BFC3FE</color>
-    <!-- End Brave Leo colors-->
+    <!-- End AI Wiz Leo colors-->
 </resources>

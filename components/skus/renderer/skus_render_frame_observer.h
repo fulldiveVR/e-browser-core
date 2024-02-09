@@ -16,7 +16,7 @@
 namespace skus {
 
 // Used to conditionally inject a handler which exposes JavaScript methods
-// for the SKU SDK. The conditional logic ensures this is a Brave property
+// for the SKU SDK. The conditional logic ensures this is a AI Wiz property
 // such as account.brave.com.
 //
 // Implementation-wise, those methods will only resolve in a regular

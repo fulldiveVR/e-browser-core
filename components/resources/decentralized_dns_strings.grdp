@@ -7,7 +7,7 @@
     Enable support of Unstoppable Domains in Brave?
   </message>
   <message name="IDS_UNSTOPPABLE_DOMAINS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of unstoppable domains opt-in interstitial page.">
-    Brave will be using Infura to resolve .crypto (and also .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domain names that are on Unstoppable Domains. Brave hides your IP address. If you enable this, Infura will see that someone is trying to visit these domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
+    AI Wiz will be using Infura to resolve .crypto (and also .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domain names that are on Unstoppable Domains. AI Wiz hides your IP address. If you enable this, Infura will see that someone is trying to visit these domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_ENS_OPT_IN_TITLE" desc="Title of interstitial opt-in page for ENS.">
     Ethereum Name Service
@@ -16,7 +16,7 @@
     Enable support of Ethereum Name Service (ENS) in Brave?
   </message>
   <message name="IDS_ENS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of ENS opt-in interstitial page.">
-    Brave will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). Brave hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
+    AI Wiz will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). AI Wiz hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
   </message>
     <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_TITLE" desc="Title of interstitial opt-in page for ENS offchain lookup.">
     Ethereum Name Service Offchain Lookup
@@ -40,7 +40,7 @@
     Enable support of Solana Name Service (SNS) in Brave?
   </message>
   <message name="IDS_SNS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of SNS opt-in interstitial page.">
-    Brave will be using a third-party to resolve .sol domain names. Brave hides your IP address. If you enable this, the third-party will see that someone is trying to visit these .sol domains but nothing else. For more information about which third-parties we use and their privacy policies, please see our <ph name="BEGIN_SNS_WIKI_LINK">&lt;a target="_blank" href="$1"&gt;</ph>help page<ph name="END_SNS_WIKI_LINK">&lt;/a&gt;</ph>.
+    AI Wiz will be using a third-party to resolve .sol domain names. AI Wiz hides your IP address. If you enable this, the third-party will see that someone is trying to visit these .sol domains but nothing else. For more information about which third-parties we use and their privacy policies, please see our <ph name="BEGIN_SNS_WIKI_LINK">&lt;a target="_blank" href="$1"&gt;</ph>help page<ph name="END_SNS_WIKI_LINK">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_DECENTRALIZED_DNS_OPT_IN_PRIMARY_BUTTON" desc="The text for the decentralized DNS opt-in interstitial primary button.">
     Proceed using Infura server

@@ -15,7 +15,7 @@ const fs = require('fs-extra')
 const syncUtil = require('./syncUtils')
 const Log = require('./logging')
 
-// Use the same filename as for Brave archive.
+// Use the same filename as for AI Wiz archive.
 const getOutputFilename = () => {
   const platform = (() => {
     if (config.getTargetOS() === 'win')
@@ -89,7 +89,7 @@ const chromiumConfigs = {
 // A function to make gn args to build a release Chromium build.
 // There is two primarily sources:
 // 1. Chromium perf builds: tools/mb/mb_config_expectations/chromium.perf.json
-// 2. Brave Release build configuration
+// 2. AI Wiz Release build configuration
 function getChromiumGnArgs() {
   const targetOs = config.getTargetOS()
   const targetArch = config.targetArch

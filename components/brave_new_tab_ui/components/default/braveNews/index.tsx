@@ -16,7 +16,7 @@ import * as BraveNewsElement from './default'
 const Content = React.lazy(() => import('./content'))
 const FeedV2 = React.lazy(() => import('./FeedV2'))
 
-// When FeedV2 is enabled, immediately start loading the Brave News chunk,
+// When FeedV2 is enabled, immediately start loading the AI Wiz News chunk,
 // rather than waiting for the parent component to render.
 if (defaultState.featureFlagBraveNewsFeedV2Enabled) {
   import('./FeedV2')

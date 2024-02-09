@@ -44,7 +44,7 @@ BraveWebMainParts::~BraveWebMainParts() {}
 void BraveWebMainParts::PreCreateMainMessageLoop() {
   IOSChromeMainParts::PreCreateMainMessageLoop();
 
-  // Add Brave Resource Pack
+  // Add AI Wiz Resource Pack
   base::FilePath brave_pack_path;
   base::PathService::Get(base::DIR_ASSETS, &brave_pack_path);
   brave_pack_path = brave_pack_path.AppendASCII("brave_resources.pak");

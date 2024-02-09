@@ -32,7 +32,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '1',
         name: 'brave.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,
@@ -44,7 +44,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '2',
         name: 'brave.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,
@@ -58,7 +58,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '1',
         name: 'brave.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,
@@ -70,7 +70,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '2',
         name: 'brave.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,
@@ -84,7 +84,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '1',
         name: 'brave.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,
@@ -97,7 +97,7 @@ export const reduxState: Rewards.ApplicationState = {
       {
         id: '2',
         name: 'reallylongdomainname.com',
-        url: 'https://brave.com',
+        url: 'https://aiwize.com',
         publisherKey: 'brave.com',
         percentage: 1,
         status: 2,

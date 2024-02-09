@@ -1,4 +1,4 @@
-# Brave environment setup helpers
+# AI Wiz environment setup helpers
 
 The directory contains shell helpers to set Brave-specific environment
 variables. These variables allows you to run `gn`, `ninja`, `gclient` and other

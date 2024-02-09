@@ -822,7 +822,7 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
 #endif
 #endif
 
-// Brave News
+// AI Wiz News
 #if !BUILDFLAG(IS_ANDROID)
   content::RegisterWebUIControllerInterfaceBinder<
       brave_news::mojom::BraveNewsController, BraveNewTabUI>(map);

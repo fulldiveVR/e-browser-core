@@ -74,12 +74,12 @@
 <translation id="4930155581888391118">Ota Braven ilmoitukset käyttöön, jotta voit ansaita Brave-palkintoja.</translation>
 <translation id="325187916104529570">Avaa asetukset ja ota laitteen ilmoitukset käyttöön Brave-mainoksille.</translation>
 <translation id="5744802588121897886">Ota Brave-ilmoitukset käyttöön</translation>
-<translation id="7307834434086582547">Ota Brave Shields käyttöön tai poista se käytöstä</translation>
+<translation id="7307834434086582547">Ota AI Wiz Shields käyttöön tai poista se käytöstä</translation>
 <translation id="6945863270524203017">Hanki viikoittaisia tietosuojapäivityksiä seurantavälineiden ja mainosten estämiseen liittyen.</translation>
 <translation id="4324735664183300693">Ota ilmoitukset käyttöön</translation>
 <translation id="6395059271589866759">Brave veloittaa 5 % lähetetystä summasta käsittelykuluina.</translation>
 <translation id="6661699662755460155">vaihtokurssi</translation>
-<translation id="6790981891677399838">Lahjoitin juuri <ph name="AMOUNT"/> BATia Brave-selaimen avulla! Katso, miten voit tukea suosikkiluojiasi ja sivustoja myös: https://brave.com/rewards</translation>
+<translation id="6790981891677399838">Lahjoitin juuri <ph name="AMOUNT"/> BATia Brave-selaimen avulla! Katso, miten voit tukea suosikkiluojiasi ja sivustoja myös: https://aiwize.com/rewards</translation>
 <translation id="5510493033031835532">AMP-sivujen automaattinen uudelleenohjaus</translation>
 <translation id="5197219128592971597">Käy aina sivun alkuperäisessä URL-osoitteessa (ei-AMP) Googlen Accelerated Mobile Pages -tekniikkaa käyttävän version sijaan</translation>
 <translation id="920638232916443453">Automaattisesti uudelleenohjaa seuranta-URL-osoitteet</translation>
@@ -96,7 +96,7 @@
 <translation id="863171915776379000">Salli Facebookin sisäänkirjautumiset ja upotetut julkaisut</translation>
 <translation id="5165042248369837294">Salli Twitterin upotetut tviitit</translation>
 <translation id="958971637207126733">Salli LinkedIn-upotuksen sisältävät julkaisut</translation>
-<translation id="6302422639282249274">Hallitse Brave Rewards -ohjelmaa</translation>
+<translation id="6302422639282249274">Hallitse AI Wiz Rewards -ohjelmaa</translation>
 <translation id="8877432762827303535">Verkkokassa</translation>
 <translation id="6583902294974160967">Tuki</translation>
 <translation id="1799030480311994998">Ominaisuudet</translation>
@@ -143,7 +143,7 @@
 <translation id="8300751939969131609">Ota Brave-uutiset käyttöön, niin yksikään tarina ei mene ohi</translation>
 <translation id="7266075701303521777">Brave-uutiset on mainostuettu. Mainokset ovat täysin yksityisiä ja anonymisoituja laitteeseesi perustuen.</translation>
 <translation id="7699565323725789472">Seuraa suosikkilähteitäsi, yhdessä syötteessä. Avaa välilehti Bravessa, vieritä alas ja… voila!\nBrave-uutiset on mainoksilla tuettu palvelu, jossa on yksityisiä ja anonymisoituja mainoksia.</translation>
-<translation id="1765217911817124376">Ota Brave News käyttöön</translation>
+<translation id="1765217911817124376">Ota AI Wiz News käyttöön</translation>
 <translation id="8981973962043893066">Hae sivustoja, aiheita tai RSS-syötteitä</translation>
 <translation id="3225021799163709119">Suositut</translation>
 <translation id="3673348851739109493">Lähteiden prioriteettiluettelo</translation>
@@ -160,7 +160,7 @@
 <translation id="7461899062138731833">LÄHTEET</translation>
 <translation id="6150420917380577651">Syötteitä ei löydetty osoitteesta <ph name="SEARCH_URL"/></translation>
 <translation id="4541978218358617681">Mainos</translation>
-<translation id="7823038307453615214">Näytä Brave News</translation>
+<translation id="7823038307453615214">Näytä AI Wiz News</translation>
 <translation id="6527303717912515753">Jaa</translation>
 <translation id="1654539412343893324">Lue lisää tiedoistasi</translation>
 <translation id="2989805286512600854">Avaa uudessa välilehdessä</translation>
@@ -206,7 +206,7 @@
 <translation id="2675679258824361492">Muut tietosuoja-asetukset</translation>
 <translation id="8026334261755873520">Poista selaustiedot</translation>
 <translation id="1690924763769415936">Taustatoisto</translation>
-<translation id="6332924730165919598">Kun kaikki välilehdet suljetaan, myös Brave sulkeutuu</translation>
+<translation id="6332924730165919598">Kun kaikki välilehdet suljetaan, myös AI Wiz sulkeutuu</translation>
 <translation id="8308305244351876417">Sallii äänen toistaa, kun vaihdat toiseen välilehteen Bravessa tai toiseen sovellukseen tai laitteen näyttö ei ole päällä.</translation>
 <translation id="49147335255967913">Avaa YouTube-linkit Bravessa</translation>
 <translation id="4150201353443180367">Näyttö</translation>
@@ -225,16 +225,16 @@
 <translation id="834487290629916192">MYÖHEMMIN</translation>
 <translation id="7207456302801184289">Tervetuloa Braveiin</translation>
 <translation id="4117451092682672487">Yksinkertainen tietosuoja.</translation>
-<translation id="7909375417585209817">Kun Brave on käytössä oletuksena, jokainen napsauttamasi linkki avautuu Braven tietosuoja-asetusten suojaamana.</translation>
+<translation id="7909375417585209817">Kun AI Wiz on käytössä oletuksena, jokainen napsauttamasi linkki avautuu Braven tietosuoja-asetusten suojaamana.</translation>
 <translation id="7370959926683925817">Estä mainokset. Tallenna tiedot. Joka ikinen päivä.</translation>
-<translation id="7281027579943912834">Kun Brave on oletusselain, jokaisen napsauttamasi linkin kohdalla käytetään Brave-mainosestosuojausta. Jokaisen sivun, videon ja suoratoistoistunton kohdalla.</translation>
+<translation id="7281027579943912834">Kun AI Wiz on oletusselain, jokaisen napsauttamasi linkin kohdalla käytetään Brave-mainosestosuojausta. Jokaisen sivun, videon ja suoratoistoistunton kohdalla.</translation>
 <translation id="5148943178722443958">Auta parantamaan Bravea.</translation>
 <translation id="6718362830686703942">Lähetä diagnostiikkaraportteja, jos selain kaatuu tai jäätyy.</translation>
 <translation id="1929905278861178845">Jaa täysin yksityisiä ja nimettömiä tuotetietoja siitä, mitä ominaisuuksia Braven käyttäjät käyttävät.</translation>
 <translation id="2877653791257935258">Kirjoita verkkosivuston nimi tai URL</translation>
 <translation id="5329830149661250028">Koe Braven takaama ero: Ei mainoksia. Ei seurantavälineitä. Nopeampi sivujen lataus.</translation>
 <translation id="3941792073703079607">Tutustu Braven tarjoamaan eroon: Estä mainokset. Tallenna tiedot. Suoratoista nopeammin.</translation>
-<translation id="3545804467215833536">Tarkastele Brave Shieldisiä napauttamalla</translation>
+<translation id="3545804467215833536">Tarkastele AI Wiz Shieldisiä napauttamalla</translation>
 <translation id="1724327820822194498">Näet kaikki Braven jokaisella sivulla estämät huonot asiat Shieldsillä.</translation>
 <translation id="5386259141409498372"><ph name="BIG_TECH"/> ja <ph name="TRACKER"/> muuta mainosta ja seurantavälinettä estetty</translation>
 <translation id="7256200875155794202"><ph name="BIG_TECH"/> ja muita mainoksia ja seurantavälineitä estetty</translation>
@@ -260,7 +260,7 @@
 <translation id="48520986898237073">Jatka lompakkoon</translation>
 <translation id="3570367516044491911">Aseta oletusselaimeksi</translation>
 <translation id="6800338374677644736">Aseta oletusselaimeksi</translation>
-<translation id="19715420010996093">Valitse Brave Browser ja paina 'Aina'</translation>
+<translation id="19715420010996093">Valitse AI Wiz Browser ja paina 'Aina'</translation>
 <translation id="3546439402724649282">Brave on jo asetettu oletusselaimeksi.</translation>
 <translation id="8389661903259423907">Olet jo asettanut oletusselaimen. Voit vaihtaa oletusselainta sovelluksen asetuksista.</translation>
 <translation id="1545749641540134597">Lue QR-koodi</translation>
@@ -269,8 +269,8 @@
 <translation id="2734870894159530879">Kirjaudu sisään <ph name="WALLET_PROVIDER"/>-tilillesi tarkastaaksesi saldosi</translation>
 <translation id="7658239707568436148">Peruuta</translation>
 <translation id="1201402288615127009">Seuraava</translation>
-<translation id="8481779960444041069">Aseta Brave oletusselaimeksi parantaaksesi tietosuojaa</translation>
-<translation id="1938402585819943124">Valitse Brave seuraavalta näytöltä.</translation>
+<translation id="8481779960444041069">Aseta AI Wiz oletusselaimeksi parantaaksesi tietosuojaa</translation>
+<translation id="1938402585819943124">Valitse AI Wiz seuraavalta näytöltä.</translation>
 <translation id="8926389886865778422">Älä kysy uudestaan</translation>
 <translation id="745974920645827035">Riippumaton haku paremmalla yksityisyydellä</translation>
 <translation id="4717018805430015801">Brave-haku ei seuraa sinua, hakujasi tai napsautuksiasi.</translation>
@@ -355,14 +355,14 @@
 <translation id="4973653569293835178">Käytän kameraa…</translation>
 <translation id="326454632686131209">Synkronoi laite</translation>
 <translation id="327726072512457161">Poistu asetuksista</translation>
-<translation id="8050847734948770789">Salli Brave -palkinnot</translation>
+<translation id="8050847734948770789">Salli AI Wiz -palkinnot</translation>
 <translation id="9187185473011056079">Olen mukana!</translation>
-<translation id="8185825081026121627">Ansaitse perustason huomiopoletti yksityisyyttä suojelevien Brave Rewards -mainosten katselulla.</translation>
+<translation id="8185825081026121627">Ansaitse perustason huomiopoletti yksityisyyttä suojelevien AI Wiz Rewards -mainosten katselulla.</translation>
 <translation id="5321518976657560663">Palautusvirhe</translation>
-<translation id="4114170343590425996">Brave Rewards -ohjelmaa nollattaessa ilmeni virhe. Käynnistä Brave uudelleen ja yritä uudestaan.</translation>
+<translation id="4114170343590425996">Brave Rewards -ohjelmaa nollattaessa ilmeni virhe. Käynnistä AI Wiz uudelleen ja yritä uudestaan.</translation>
 <translation id="6417420737057016607">Brave-mainokset</translation>
-<translation id="5611966874859284786">Näytä ilmoitusmainoksia, kun Brave ei ole käytössä</translation>
-<translation id="6606319453795180219">Tämä poistaa Brave Rewards -palkintosi ja nollaa kaikki Brave Rewards -tietosi</translation>
+<translation id="5611966874859284786">Näytä ilmoitusmainoksia, kun AI Wiz ei ole käytössä</translation>
+<translation id="6606319453795180219">Tämä poistaa AI Wiz Rewards -palkintosi ja nollaa kaikki AI Wiz Rewards -tietosi</translation>
 <translation id="8293206222192510085">Lisää kirjanmerkki</translation>
 <translation id="340492034650766959">Poista kirjanmerkki</translation>
 <translation id="2149973817440762519">Muokkaa kirjanmerkkiä</translation>
@@ -423,7 +423,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="7136586167396205364">Piilota sponsoroidut kuvat</translation>
 <translation id="2927095357213611519">Voit tukea verkkotekijöitä poleteilla.\nAnsaitse poletteja katsomalla yksityisyyttä kunnioittavia mainoksia.</translation>
 <translation id="2898634658146274982">Avaa ulkoiset linkit Bravessa</translation>
-<translation id="5616508928556767259">Avaa linkit muista sovelluksista Brave-verkkonäkymässä. Huomaa: Brave on asetettava oletusselaimeksi.</translation>
+<translation id="5616508928556767259">Avaa linkit muista sovelluksista Brave-verkkonäkymässä. Huomaa: AI Wiz on asetettava oletusselaimeksi.</translation>
 <translation id="2394961582378297792">Kirjautunut ulos</translation>
 <translation id="5308380583665731573">Muodosta yhteys</translation>
 <translation id="3368922792935385530">Yhdistetty</translation>
@@ -431,7 +431,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="8558636200953226885">Mutta jos vahvistat, voit...</translation>
 <translation id="8697510149346635496">Nosta BATit, jotka ansaitset yksityisyyttä kunnioittavia mainoksia katsomalla</translation>
 <translation id="1481480653609649134">Osta lisää BATeja luottokorteilla ja muilla lähteillä</translation>
-<translation id="9096003370755878766">Nosta BATit, jotka olet saattanut lisätä Brave Rewards -lompakkoosi</translation>
+<translation id="9096003370755878766">Nosta BATit, jotka olet saattanut lisätä AI Wiz Rewards -lompakkoosi</translation>
 <translation id="1554282356558968486">Verkkokukkaropalvelumme tarjoaa</translation>
 <translation id="6569877533335686968">Uphold</translation>
 <translation id="3439853736976204026">bitFlyer</translation>
@@ -443,14 +443,14 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="4858636682078269312">Kirjaudu sisään <ph name="WALLET_PROVIDER"/> -tilillesi</translation>
 <translation id="8874184842967597500">Ei yhdistetty</translation>
 <translation id="2495032782748793764">Braven oletusasetukset</translation>
-<translation id="9132378787893584761">Jaa Brave ystävillesi!</translation>
+<translation id="9132378787893584761">Jaa AI Wiz ystävillesi!</translation>
 <translation id="717952606991220586">Oho, jokin meni vikaan. Yritä myöhemmin uudelleen.</translation>
 <translation id="987264212798334818">Yleistä</translation>
 <translation id="1116694919640316211">Tietoja asetuksista</translation>
 <translation id="7961015016161918242">Ei koskaan</translation>
 <translation id="1275213816424141989">Ehkä myöhemmin</translation>
 <translation id="4406937629441301400">Ansaitse käyttötunnuksia tämän kuvan katsomisesta ja lähetä ne kehittäjille. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Ansaitse maksutunnuksia katsomalla tämä kuva. Napauta Aloita Brave palkintojen käyttö -painiketta lunastaaksesi osuutesi.</translation>
+<translation id="1992363542751124282">Ansaitse maksutunnuksia katsomalla tämä kuva. Napauta Aloita AI Wiz palkintojen käyttö -painiketta lunastaaksesi osuutesi.</translation>
 <translation id="6632345639591919543">Saat käyttötunnuksia tämän kuvan katsomisesta.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Ansaitset käyttötunnuksia tämän sivun katsomisesta.</translation>
 <translation id="7877201489035217175">Lue lisää sponsoroiduista kuvista</translation>
@@ -458,7 +458,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="33967210973550414">Kuukauden <ph name="CURRENT_MONTH"/> palkintojen maksu on käynnissä. <ph name="CHECK_STATUS"/></translation>
 <translation id="1622952853310946314">Kuukauden <ph name="CURRENT_MONTH"/> palkintojen maksu on suoritettu. <ph name="SUPPORT"/></translation>
 <translation id="7717357606512850995">Tarkista tila</translation>
-<translation id="828092975561478703">Saa 70 % tulot käyttötunnuksina jokaisen sponsoroidun kuvan katsomisesta. Brave Ads antaa sinun itse päättää, mitä mainoksia näet.</translation>
+<translation id="828092975561478703">Saa 70 % tulot käyttötunnuksina jokaisen sponsoroidun kuvan katsomisesta. AI Wiz Ads antaa sinun itse päättää, mitä mainoksia näet.</translation>
 <translation id="3624048886326677117">Estä seuraimet ja mainokset (Aggressiivinen)</translation>
 <translation id="7151914815476509258">Estä seuraimet ja mainokset (Standardi)</translation>
 <translation id="7384778069178817075">Salli kaikki seuraimet &amp; mainokset</translation>
@@ -483,7 +483,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="769702552748212954">Salli kaikki sormenjälkitunnistaminen</translation>
 <translation id="876424292214881779">Estetyt mainokset ja muut epäilyttävät kohteet</translation>
 <translation id="6930134873084561197">Sivustoilla on usein evästeitä ja merkkijonoja, joita käytetään sinun ja laitteesi tunnistamiseen. Ne tahtovat selvittää henkilöllisyytesi sekä seurata sinua verkossa, tarkkaillen jokaisen sivuston käyttöä.\n\nBrave estää kyseiset seuraimet, joten voit rauhassa selata nettiä ilman tarkkailijoita.</translation>
-<translation id="8553998445606452168">Tietoja Brave Shieldsistä</translation>
+<translation id="8553998445606452168">Tietoja AI Wiz Shieldsistä</translation>
 <translation id="8912304686498704084">YLÖS</translation>
 <translation id="4963218453264888510">ALAS</translation>
 <translation id="7474113515179313724">Selaat tätä sivustoa ilman Braven tietosuojaa. Eikö se toimi kunnolla, kun Shields on käytössä?</translation>
@@ -499,7 +499,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="1118508688433541158">Selaa nopeammin ja estä mainoksia Braven avulla</translation>
 <translation id="7427391215172269363">Säästän kaistanleveyttä joka päivä selaamalla Bravella.</translation>
 <translation id="4776948189086901857">Brave toimii kaikkialla</translation>
-<translation id="1606322780901645965">Lataa Brave läppärillä tai tabletilla brave.comista ja teet selailustasi nopeampaa ja yksityisempää</translation>
+<translation id="1606322780901645965">Lataa AI Wiz läppärillä tai tabletilla brave.comista ja teet selailustasi nopeampaa ja yksityisempää</translation>
 <translation id="8374242949413616101">Yksityisyyden suojaus</translation>
 <translation id="4955406228638026265">Brave estää mainoksia &amp; seuraimia keräämästä tietoa sinusta ilman lupaasi.</translation>
 <translation id="752842701893882688">Säästä dataa ja akkua</translation>
@@ -640,7 +640,7 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="5493402808936397665">Ota biometriset tiedot käyttöön, jotta voit nopeasti avata lompakkosi antamatta salasanaasi.</translation>
 <translation id="8030647312184163932">Lukituksen avaaminen sormenjäljellä</translation>
 <translation id="4090490645603511157">Avaa lompakkosi ilman salasanaa käyttämällä biometrisia tietoja.</translation>
-<translation id="6901810042765869341">Anna palautuslauseesi, jotta voit palauttaa Brave Walletin kryptotilin.</translation>
+<translation id="6901810042765869341">Anna palautuslauseesi, jotta voit palauttaa AI Wiz Walletin kryptotilin.</translation>
 <translation id="9120654436199628567">Kryptotilin palauttaminen</translation>
 <translation id="4811736040444856406">Näytä palautuslause</translation>
 <translation id="283071225285270357">Anna palautuslauseesi</translation>
@@ -695,8 +695,8 @@ Haluatko varmasti tehdä tämän?</translation>
 <translation id="9033453977881595182">Tokenin tunnus</translation>
 <translation id="4987916116550559556">Minttauksen osoite</translation>
 <translation id="7592795625234816917">Kuva ei ole saatavilla</translation>
-<translation id="8239147115686034860">Lukitse Brave Wallet -lompakko automaattisesti</translation>
-<translation id="414639769490080648">Odottavien minuuttien määrä, kunnes Brave Wallet -lompakko lukitaan automaattisesti</translation>
+<translation id="8239147115686034860">Lukitse AI Wiz Wallet -lompakko automaattisesti</translation>
+<translation id="414639769490080648">Odottavien minuuttien määrä, kunnes AI Wiz Wallet -lompakko lukitaan automaattisesti</translation>
 <translation id="2326850911705720398">Nollaa ja tyhjennä lompakkotiedot</translation>
 <translation id="6567712397896147805">Haluatko varmasti nollata Brave-lompakkosi? Jos lompakkoasi ei ole varmuuskopioitu, nollaus johtaa kaikkien tilitietojen menetykseen (mukaan lukien kaikki siihen liittyvät varat). Vahvista kirjoittamalla "<ph name="CONFIRMATION_PHRASE"/>".</translation>
 <translation id="4862812525895306758">Tyhjennä maksutapahtuma- ja nonce-tiedot</translation>
@@ -965,7 +965,7 @@ Jos et hyväksy tätä pyyntöä, yhteyttä VPN:ään ei muodosta uudelleen ja I
 <translation id="803706420145725977">1 tunnin tauko</translation>
 <translation id="4394049700291259645">Poista käytöstä</translation>
 <translation id="7733890291091968191">Näytä Web3-ilmoitukset</translation>
-<translation id="1371627247679035769">\n\n\n\n#### Brave ei seuraa sinua eikä tiedä, kuinka käytät sovellustamme, joten emme tiedä VPN-asetuksiasi. Jaa tietoja kohtaamastasi ongelmasta, niin teemme parhaamme ratkaistaksemme sen mahdollisimman pian. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### AI Wiz ei seuraa sinua eikä tiedä, kuinka käytät sovellustamme, joten emme tiedä VPN-asetuksiasi. Jaa tietoja kohtaamastasi ongelmasta, niin teemme parhaamme ratkaistaksemme sen mahdollisimman pian. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nVPN-isäntänimi\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nTilaustyyppi\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nPlay Kaupan token\n <ph name="VALUE"/></translation>
@@ -996,7 +996,7 @@ Jos et hyväksy tätä pyyntöä, yhteyttä VPN:ään ei muodosta uudelleen ja I
 <translation id="4450893287417543264">Älä näytä uudelleen</translation>
 <translation id="168154537623654021">Päivitetään VPN-profiilia...</translation>
 <translation id="7457027586454688423">Anna Brave-lompakkosi salasanasi</translation>
-<translation id="4784306439879850873">Huomaa, että Brave ei voi tarkistaa, mitä tapahtuu, jos allekirjoitat. Allekirjoitus voi valtuuttaa melkein minkä tahansa toiminnon tililläsi tai puolestasi, mukaan lukien (mutta ei rajoittuen) tilin ja kryptovarojen täydellisen hallinnan antaminen pyynnön esittäneelle sivustolle. Allekirjoita vain, jos olet varma, että haluat suorittaa tämän toiminnon ja että pystyt luottamaan pyytävään sivustoon.</translation>
+<translation id="4784306439879850873">Huomaa, että AI Wiz ei voi tarkistaa, mitä tapahtuu, jos allekirjoitat. Allekirjoitus voi valtuuttaa melkein minkä tahansa toiminnon tililläsi tai puolestasi, mukaan lukien (mutta ei rajoittuen) tilin ja kryptovarojen täydellisen hallinnan antaminen pyynnön esittäneelle sivustolle. Allekirjoita vain, jos olet varma, että haluat suorittaa tämän toiminnon ja että pystyt luottamaan pyytävään sivustoon.</translation>
 <translation id="3474375934783434676">Allekirjoita omalla vastuullasi</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/>/<ph name="SIZE"/></translation>
 <translation id="756701799684433105">Hyväksy tapahtuma</translation>
@@ -1074,7 +1074,7 @@ Jos et hyväksy tätä pyyntöä, yhteyttä VPN:ään ei muodosta uudelleen ja I
 <translation id="1908159733454294871">Turvallisuusriski havaittu</translation>
 <translation id="4220693114674044366">Tokenin osoite</translation>
 <translation id="5658257029899993935">Linkitä ostos Brave-tiliisi</translation>
-<translation id="1187061015547219282">Linkitä Play Storen ostos Brave-tiliisi käyttääksesi Brave VPN:ää muissa laitteissa.</translation>
+<translation id="1187061015547219282">Linkitä Play Storen ostos Brave-tiliisi käyttääksesi AI Wiz VPN:ää muissa laitteissa.</translation>
 <translation id="6662142137695589205">Linkitä VPN-tilauksesi</translation>
 <translation id="2674077112509133024">Laajenna Brave-palomuuria + VPN-suojaa</translation>
 <translation id="6365389672683343144">Brave VPN -tilauksesi voi suojata enintään 5 laitetta Androidissa, iOSissa ja työpöydällä. Linkitä Google Play -tilauksesi Brave-tiliisi.</translation>
@@ -1185,7 +1185,7 @@ Jos et hyväksy tätä pyyntöä, yhteyttä VPN:ään ei muodosta uudelleen ja I
 <translation id="9085765419770918643">Täällä ei vielä ole NFT:itä.</translation>
 <translation id="8445532667841598737">Oletko valmis lisäämään joitakin? Tuo napsauttamalla alla olevaa painiketta.</translation>
 <translation id="5925465310724910998">Haluatko, että NFT:si näkyvät automaattisesti?</translation>
-<translation id="2827460859891872324">Brave-lompakko voi käyttää kolmannen osapuolen palvelua NFT:si automaattiseen näyttämiseen. Brave jakaa lompakkosi osoitteet <ph name="BEGIN_LINK_1"/>SimpleHashin kanssa<ph name="END_LINK_1"/> tarjotakseen tämän palvelun. <ph name="BEGIN_LINK_2"/>Lue lisää.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">Brave-lompakko voi käyttää kolmannen osapuolen palvelua NFT:si automaattiseen näyttämiseen. AI Wiz jakaa lompakkosi osoitteet <ph name="BEGIN_LINK_1"/>SimpleHashin kanssa<ph name="END_LINK_1"/> tarjotakseen tämän palvelun. <ph name="BEGIN_LINK_2"/>Lue lisää.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">Ota NFT:n löytäminen käyttöön</translation>
 <translation id="622372328961630111">Lisää automaattisesti omistamiasi NFT:itä lompakkoon kolmansien osapuolten APIen kautta. <ph name="BEGIN_LINK_1"/>Lue lisää.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">Osoitehakutaulukon tili:</translation>

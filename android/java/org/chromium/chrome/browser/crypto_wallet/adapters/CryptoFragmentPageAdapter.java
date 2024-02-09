@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Fragment adapter for the main sections of Brave Wallet displayed by {@link BraveWalletActivity}.
+ * Fragment adapter for the main sections of AI Wiz Wallet displayed by {@link BraveWalletActivity}.
  */
 public class CryptoFragmentPageAdapter extends FragmentStateAdapter {
     public static final int PORTFOLIO_FRAGMENT_POSITION = 0;

@@ -118,7 +118,7 @@ hooks = [
     'action': ['vpython3', 'script/generate_licenses.py'],
   },
   {
-    # Overwrite Chromium's LASTCHANGE using the latest Brave version commit.
+    # Overwrite Chromium's LASTCHANGE using the latest AI Wiz version commit.
     'name': 'brave_lastchange',
     'pattern': '.',
     'action': ['python3', '../build/util/lastchange.py',

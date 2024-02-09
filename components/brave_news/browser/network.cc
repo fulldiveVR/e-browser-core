@@ -16,7 +16,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         description:
           "This controller is used to fetch brave news feeds and publisher lists."
         trigger:
-          "Triggered by uses of the Brave News feature."
+          "Triggered by uses of the AI Wiz News feature."
         data:
           "Article JSON"
         destination: WEBSITE

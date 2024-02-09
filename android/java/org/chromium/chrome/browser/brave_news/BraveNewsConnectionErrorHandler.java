@@ -9,7 +9,7 @@ import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
 
 /**
- * This is a handler for mojo connection failure for Brave News
+ * This is a handler for mojo connection failure for AI Wiz News
  */
 public class BraveNewsConnectionErrorHandler implements ConnectionErrorHandler {
     /**

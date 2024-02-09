@@ -605,7 +605,7 @@ GetBravePrepopulatedEnginesForCountryID(
 }  // namespace
 
 // Redefines function with the same name in Chromium. We need to account for
-// the version of Brave engines as well: kCurrentDataVersion is defined in
+// the version of AI Wiz engines as well: kCurrentDataVersion is defined in
 // prepopulated_engines.json and is bumped every time the json file is
 // modified. Since we add our own engines we need to keep track of our
 // version as well and combine it with Chromium's version.

@@ -79,7 +79,7 @@
 <translation id="4324735664183300693">通知を有効にする</translation>
 <translation id="6395059271589866759">Braveは送信された金額の5%を処理手数料として徴収します。</translation>
 <translation id="6661699662755460155">交換</translation>
-<translation id="6790981891677399838">Braveブラウザで<ph name="AMOUNT"/>BATを支援しました！お気に入りのクリエイターやサイトをサポートする方法はこちら: https://brave.com/rewards</translation>
+<translation id="6790981891677399838">Braveブラウザで<ph name="AMOUNT"/>BATを支援しました！お気に入りのクリエイターやサイトをサポートする方法はこちら: https://aiwize.com/rewards</translation>
 <translation id="5510493033031835532">AMPページを自動でリダイレクト</translation>
 <translation id="5197219128592971597">GoogleのAccelerated Mobile Pageバージョンではなく、常にオリジナルの (AMPでない) ページURLにアクセスする</translation>
 <translation id="920638232916443453">自動リダイレクト追跡URL</translation>
@@ -317,7 +317,7 @@
 <translation id="3132642509209154999">このコードは期限切れです。他のデバイスで新しいコードを生成してもう一度お試しください。</translation>
 <translation id="2859229680945501779">このコードは無効です。お使いの端末の時刻とタイムゾーンが正しく設定されていることをご確認ください。</translation>
 <translation id="3149880132460839085">Brave Sync</translation>
-<translation id="3680755684186855422">Brave Syncを使うと、さまざまなデバイスの Brave ブラウザ間でブックマークのデータをブライベートに同期することができます。</translation>
+<translation id="3680755684186855422">Brave Syncを使うと、さまざまなデバイスの AI Wiz ブラウザ間でブックマークのデータをブライベートに同期することができます。</translation>
 <translation id="3735228155296883311">別の端末で開始した同期チェーンに、コードをスキャンして簡単に追加することができます。あるいはこの端末で新しい同期チェーンを開始することもできます。</translation>
 <translation id="2614069607859982576">既存の同期されたデバイスを使用してBrave Settingsを開き、設定と &gt; 同期に移動してください。「新しいデバイスを追加」を選択し、画面に表示されたQRコードをスキャンしてください。</translation>
 <translation id="5241263629636958324">クリップボードへコピーしました</translation>
@@ -599,7 +599,7 @@
 <translation id="1483493594462132177">送信</translation>
 <translation id="538450413584738399">スワップ</translation>
 <translation id="1366855498335432549">振込</translation>
-<translation id="1420318137760245955">新しい Brave Wallet へようこそ</translation>
+<translation id="1420318137760245955">新しい AI Wiz Wallet へようこそ</translation>
 <translation id="8339846196588658366">暗号資産を保管してポートフォリオのパフォーマンスを追跡しましょう。Brave プライバシーブラウザからご利用いただけます。</translation>
 <translation id="4472575034687746823">Get started</translation>
 <translation id="2759836790106646094">ウォレットを今すぐバックアップしましょう！</translation>
@@ -646,7 +646,7 @@
 <translation id="283071225285270357">リカバリーフレーズを入力</translation>
 <translation id="3943857333388298514">貼り付け</translation>
 <translation id="3331452756822160641">新しいパスワード</translation>
-<translation id="4359319875297001084">従来の Brave 暗号資産ウォレットからインポートしますか？</translation>
+<translation id="4359319875297001084">従来の AI Wiz 暗号資産ウォレットからインポートしますか？</translation>
 <translation id="2339124864228588937">リカバリーフレーズを確認</translation>
 <translation id="3747079125031086337">あなたのリカバリフレーズに含まれている単語を正しい順序で選択します。</translation>
 <translation id="6518133107902771759">確認</translation>

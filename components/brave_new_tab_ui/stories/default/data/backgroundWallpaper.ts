@@ -63,7 +63,7 @@ export const onChangeColoredBackground = (value: string, useRandomValue: boolean
 }
 
 /**
- * Mock handler for Brave background. Emits a change event to knobs.
+ * Mock handler for AI Wiz background. Emits a change event to knobs.
  * @param {string} selectedBackground - selected background URL
  * in storybook, we have only one preset image.
  */

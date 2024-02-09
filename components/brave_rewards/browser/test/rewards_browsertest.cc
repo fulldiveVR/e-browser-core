@@ -262,7 +262,7 @@ IN_PROC_BROWSER_TEST_F(RewardsBrowserTest, ResetRewards) {
 
   test_util::WaitForElementToContain(
       contents(), "[data-test-id='reset-text']",
-      "By resetting, your current Brave Rewards profile will be deleted");
+      "By resetting, your current AI Wiz Rewards profile will be deleted");
 }
 
 IN_PROC_BROWSER_TEST_F(RewardsBrowserTest, EnableRewardsWithBalance) {

@@ -168,7 +168,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
       semantics {
         sender: "Brave Ads Service"
         description:
-          "This service is used to communicate with Brave servers "
+          "This service is used to communicate with AI Wiz servers "
           "to send and retrieve information for Ads."
         trigger:
           "Triggered by user viewing ads or at various intervals."
@@ -478,7 +478,7 @@ void AdsServiceImpl::InitializeRewardsWalletCallback(
   }
 
   if (!wallet && UserHasOptedInToNotificationAds()) {
-    VLOG(1) << "Failed to initialize Brave Rewards wallet";
+    VLOG(1) << "Failed to initialize AI Wiz Rewards wallet";
     return Shutdown();
   }
 

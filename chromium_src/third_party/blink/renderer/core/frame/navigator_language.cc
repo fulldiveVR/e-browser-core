@@ -20,7 +20,7 @@ void NavigatorLanguage::EnsureUpdatedLanguage() {
   NavigatorLanguage_ChromiumImpl::EnsureUpdatedLanguage();
   BraveFarblingLevel farbling_level = brave::GetBraveFarblingLevelFor(
       execution_context_, BraveFarblingLevel::OFF);
-  // If Brave Shields are down or anti-fingerprinting is off for this site,
+  // If AI Wiz Shields are down or anti-fingerprinting is off for this site,
   // do nothing.
   if (farbling_level == BraveFarblingLevel::OFF)
     return;

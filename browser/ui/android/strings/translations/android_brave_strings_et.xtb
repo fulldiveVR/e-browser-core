@@ -79,7 +79,7 @@
 <translation id="4324735664183300693">Lülita teated sisse</translation>
 <translation id="6395059271589866759">Brave võtab 5% saadetud summast töötlemistasuks.</translation>
 <translation id="6661699662755460155">vaheta</translation>
-<translation id="6790981891677399838">Panustasin just Brave’i brauseriga <ph name="AMOUNT"/> BAT-i! Vaata, kuidas ka sina saad oma lemmikloojaid ja -saite toetada: https://brave.com/rewards</translation>
+<translation id="6790981891677399838">Panustasin just Brave’i brauseriga <ph name="AMOUNT"/> BAT-i! Vaata, kuidas ka sina saad oma lemmikloojaid ja -saite toetada: https://aiwize.com/rewards</translation>
 <translation id="5510493033031835532">Automaatne ümbersuunamine AMP-lehtedel</translation>
 <translation id="5197219128592971597">Google'i Accelerated Mobile Page'i versiooni asemel külastatakse alati algset (mitte-AMP) lehte</translation>
 <translation id="920638232916443453">Automaatselt ümbersuunavad jälgimis-URL-id</translation>
@@ -96,7 +96,7 @@
 <translation id="863171915776379000">Luba Facebooki sisselogimised ja manustatud postitused</translation>
 <translation id="5165042248369837294">Luba Twitteri manustatud säutsud</translation>
 <translation id="958971637207126733">Luba LinkedIni manustatud postitused</translation>
-<translation id="6302422639282249274">Halda Brave Rewardsi</translation>
+<translation id="6302422639282249274">Halda AI Wiz Rewardsi</translation>
 <translation id="8877432762827303535">Veebi kaudu maksmine</translation>
 <translation id="6583902294974160967">Kasutajatugi</translation>
 <translation id="1799030480311994998">Funktsioonid</translation>
@@ -160,7 +160,7 @@
 <translation id="7461899062138731833">ALLIKAD</translation>
 <translation id="6150420917380577651">Asukohast <ph name="SEARCH_URL"/> ei leitud kanaleid</translation>
 <translation id="4541978218358617681">Reklaam</translation>
-<translation id="7823038307453615214">Näita Brave Newsi</translation>
+<translation id="7823038307453615214">Näita AI Wiz Newsi</translation>
 <translation id="6527303717912515753">Jaga</translation>
 <translation id="1654539412343893324">Lisateave teie andmete kohta</translation>
 <translation id="2989805286512600854">Ava uuel vahelehel</translation>
@@ -232,10 +232,10 @@
 <translation id="6718362830686703942">Saatke diagnostikaaruanne, kui kogete krahhi minekut või hangumist.</translation>
 <translation id="1929905278861178845">Jagage täiesti privaatselt ja anonüümselt tooteteavet funktsioonide kohta, mida Brave'i kasutajad tarvitavad.</translation>
 <translation id="2877653791257935258">Sisestage veebisaidi nimi või URL</translation>
-<translation id="5329830149661250028">Vaadake, mille poolest Brave erineb: ei mingeid reklaame, ei mingeid jälgijaid. Lehe laadimine on palju kiirem.</translation>
+<translation id="5329830149661250028">Vaadake, mille poolest AI Wiz erineb: ei mingeid reklaame, ei mingeid jälgijaid. Lehe laadimine on palju kiirem.</translation>
 <translation id="3941792073703079607">Vaadake, kui erinev on Brave: reklaamid blokeeritakse. Andmed salvestatakse. Päevast päeva.</translation>
 <translation id="3545804467215833536">Puudutage Brave'i kaitsete kuvamiseks</translation>
-<translation id="1724327820822194498">Vaadake, millist jama Brave on igal lehel oma kaitsete abil blokeerinud.</translation>
+<translation id="1724327820822194498">Vaadake, millist jama AI Wiz on igal lehel oma kaitsete abil blokeerinud.</translation>
 <translation id="5386259141409498372">Blokeeritud on ettevõtete <ph name="BIG_TECH"/> ja <ph name="TRACKER"/> muud reklaamid ning jälgijad</translation>
 <translation id="7256200875155794202">Blokeeritud on ettevõtte <ph name="BIG_TECH"/> ja muud reklaamid ning jälgijad</translation>
 <translation id="3092683655478890840">Blokeeritud on <ph name="TRACKER_COUNT"/> muud reklaami ja jälgijat</translation>
@@ -249,14 +249,14 @@
 <translation id="8537217141725709400">Teeni <ph name="TOKEN"/>s</translation>
 <translation id="3333887201479867589">Brave Rewards</translation>
 <translation id="5870330605209713397">vaadates privaatsust austavaid reklaame ja toetate vaikimisi oma lemmiksaite ja -loojaid.</translation>
-<translation id="5302488867897327287">Puudutades nuppu "Alusta Brave Rewardsi kasutamist", nõustute</translation>
+<translation id="5302488867897327287">Puudutades nuppu "Alusta AI Wiz Rewardsi kasutamist", nõustute</translation>
 <translation id="4281844954008187215">teenusetingimustega</translation>
 <translation id="6871397658902960384">Alusta sirvimist</translation>
 <translation id="454386012157232640">Ma ei näinud reklaami</translation>
 <translation id="1448877943847791441">Brave kuvab esimese reklaami</translation>
-<translation id="4410793187232041318">Nüüd teenite Brave Adsilt tokeneid.</translation>
+<translation id="4410793187232041318">Nüüd teenite AI Wiz Adsilt tokeneid.</translation>
 <translation id="6511854390690723657">See on Teie esimene Brave’i reklaam. Lisateabe saamiseks puudutage.</translation>
-<translation id="2070991379950719711">Alusta Brave Rewardsi kasutamist</translation>
+<translation id="2070991379950719711">Alusta AI Wiz Rewardsi kasutamist</translation>
 <translation id="48520986898237073">Ava rahakott</translation>
 <translation id="3570367516044491911">Määra tavabrauseriks</translation>
 <translation id="6800338374677644736">Määra vaikebrauseriks</translation>
@@ -269,7 +269,7 @@
 <translation id="2734870894159530879">Oma saldo vaatamiseks logige sisse platvormile <ph name="WALLET_PROVIDER"/></translation>
 <translation id="7658239707568436148">Tühista</translation>
 <translation id="1201402288615127009">Edasi</translation>
-<translation id="8481779960444041069">Privaatsuse parandamiseks seadke Brave oma vaikebrauseriks</translation>
+<translation id="8481779960444041069">Privaatsuse parandamiseks seadke AI Wiz oma vaikebrauseriks</translation>
 <translation id="1938402585819943124">Valige järgmisel kuval Brave.</translation>
 <translation id="8926389886865778422">Ära enam küsi</translation>
 <translation id="745974920645827035">Sõltumatu otsing ja suurem privaatsus</translation>
@@ -355,11 +355,11 @@
 <translation id="4973653569293835178">Kasutan kaamerat...</translation>
 <translation id="326454632686131209">Sünkroniseeri seade</translation>
 <translation id="327726072512457161">Seadetest väljumine</translation>
-<translation id="8050847734948770789">Luba Brave Rewards</translation>
+<translation id="8050847734948770789">Luba AI Wiz Rewards</translation>
 <translation id="9187185473011056079">Olen käsi!</translation>
-<translation id="8185825081026121627">Teeni Basic Attention Token-eid, vaadates privaatsust säilitavaid Brave Rewards reklaame.</translation>
+<translation id="8185825081026121627">Teeni Basic Attention Token-eid, vaadates privaatsust säilitavaid AI Wiz Rewards reklaame.</translation>
 <translation id="5321518976657560663">Taastamise viga</translation>
-<translation id="4114170343590425996">Brave Rewardsi taastamisel ilmnes viga. Käivita Brave uuesti ja ürita taas.</translation>
+<translation id="4114170343590425996">Brave Rewardsi taastamisel ilmnes viga. Käivita AI Wiz uuesti ja ürita taas.</translation>
 <translation id="6417420737057016607">Brave'i reklaamid</translation>
 <translation id="5611966874859284786">Näita teavitusreklaame, kui Brave'i ei kasutata</translation>
 <translation id="6606319453795180219">See kustutab Brave'i Preemiad ja lähtestab kõik teie Brave'i Preemiate andmed</translation>
@@ -418,12 +418,12 @@ Kas soovite seda kindlasti teha?</translation>
 <translation id="8643377320501056697">Kuva popid saidid</translation>
 <translation id="7275773481201277457">Kuva Brave’i statistika</translation>
 <translation id="8297488609722895137">Foto autorilt <ph name="PHOTO_BY"/></translation>
-<translation id="4761229094276239865">Valiku "Alusta Brave Rewardsi kasutamist" puudutamisega nõustute dokumendiga <ph name="TERMS_OF_SERVICE"/>.</translation>
+<translation id="4761229094276239865">Valiku "Alusta AI Wiz Rewardsi kasutamist" puudutamisega nõustute dokumendiga <ph name="TERMS_OF_SERVICE"/>.</translation>
 <translation id="3794079107601824147">Saa raha selle taustapildi nägemise eest.</translation>
 <translation id="7136586167396205364">Peida sponsoreeritud pildid</translation>
 <translation id="2927095357213611519">Saate veebiloojaid toetada tokenitega.\nTeenige tokeneid, vaadates isikuandmeid austavaid reklaame.</translation>
 <translation id="2898634658146274982">Ava Brave’is välised lingid</translation>
-<translation id="5616508928556767259">Avab Brave’i veebivaates lingid muudest rakendustest. Märkus. Brave peab olema määratud vaikebrauseriks.</translation>
+<translation id="5616508928556767259">Avab Brave’i veebivaates lingid muudest rakendustest. Märkus. AI Wiz peab olema määratud vaikebrauseriks.</translation>
 <translation id="2394961582378297792">Välja loginud</translation>
 <translation id="5308380583665731573">Ühendamine</translation>
 <translation id="3368922792935385530">Ühendatud</translation>
@@ -431,7 +431,7 @@ Kas soovite seda kindlasti teha?</translation>
 <translation id="8558636200953226885">Kuid kui kinnitate, saate …</translation>
 <translation id="8697510149346635496">Võtke välja BAT, mille teenite privaatsust austavate reklaamide vaatamise eest</translation>
 <translation id="1481480653609649134">Ostke täiendavat BAT-i krediitkaartide ja muude vahenditega</translation>
-<translation id="9096003370755878766">Võtke välja BAT, mille olete eelnevalt lisanud oma Brave Rewardsi rahakotti.</translation>
+<translation id="9096003370755878766">Võtke välja BAT, mille olete eelnevalt lisanud oma AI Wiz Rewardsi rahakotti.</translation>
 <translation id="1554282356558968486">Meie rahakotiteenust pakub</translation>
 <translation id="6569877533335686968">Hoia</translation>
 <translation id="3439853736976204026">bitFlyer</translation>
@@ -450,7 +450,7 @@ Kas soovite seda kindlasti teha?</translation>
 <translation id="7961015016161918242">Mitte kunagi</translation>
 <translation id="1275213816424141989">Ehk hiljem</translation>
 <translation id="4406937629441301400">Teenige seda pilti vaadates tokeneid ja makske need loojatele edasi <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Selle pildi vaatamise eest teenite tokeneid. Oma osa kättesaamiseks puudutage valikut "Alusta Brave Rewardsi kasutamist".</translation>
+<translation id="1992363542751124282">Selle pildi vaatamise eest teenite tokeneid. Oma osa kättesaamiseks puudutage valikut "Alusta AI Wiz Rewardsi kasutamist".</translation>
 <translation id="6632345639591919543">Seda pilti vaadates teenite tokeneid.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Selle pildi vaatamise eest teenite tokeneid.</translation>
 <translation id="7877201489035217175">Lisateave tahastatud piltide kohta</translation>
@@ -533,7 +533,7 @@ Kas soovite seda kindlasti teha?</translation>
 <translation id="1945330434665345785">Blokeerisid eelmisel nädalal Brave'i brauseris <ph name="COUNT"/> jälitajat ja reklaami.</translation>
 <translation id="2883868922264431515">Teeni tokeneid privaatsust austavate reklaamide vaatamise eest ja toeta oma lemmikuid veebilehti.</translation>
 <translation id="7408493389591475748">Privaatsusaruannete vaatamiseks alusta sirvimist</translation>
-<translation id="9080777565335515917">Privaatseks ja turvaliseks sirvimiseks määra Brave vaikebrauseriks.</translation>
+<translation id="9080777565335515917">Privaatseks ja turvaliseks sirvimiseks määra AI Wiz vaikebrauseriks.</translation>
 <translation id="1390943217516275883">Võimaldab Brave'il kuvada sinu privaatsuse statistikat.</translation>
 <translation id="1763352720905582220">Saadab privaatsusaruande iga nädal</translation>
 <translation id="1811691435325545066">Tühjenda kõik privaatsusaruande andmed</translation>
@@ -554,7 +554,7 @@ Kas soovite seda kindlasti teha?</translation>
 <translation id="8804164990146287819">Privaatsuspoliitika</translation>
 <translation id="8363792084628930008">Kui lubate Preemiad, nõustute dokumentidega <ph name="TERMS_OF_SERVICE"/> ja <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">Teeme kiire ringkäigu</translation>
-<translation id="7930505144430343145">Tere tulemast kasutama Brave Rewardsi!</translation>
+<translation id="7930505144430343145">Tere tulemast kasutama AI Wiz Rewardsi!</translation>
 <translation id="3477340970981564961">Erinevalt tavareklaamidest annab Brave'i erareklaamide vaatamine teile sisuloojate toetamiseks tokeneid, samas hoitakse teie isikuandmed privaatsed.</translation>
 <translation id="6973095375773523904">Kus reklaamid kuvatakse?</translation>
 <translation id="4328028439561659455">Brave'i privaatsed reklaamid kuvatakse ekraanil teavitusena. Teie määrate, kui sageli neid reklaame kuvatakse.</translation>
@@ -965,7 +965,7 @@ Kui te selle taotlusega ei nõustu, siis VPN-i ühendust ei taastata ja teie int
 <translation id="803706420145725977">Peata 1 tunniks</translation>
 <translation id="4394049700291259645">Keela</translation>
 <translation id="7733890291091968191">Kuva Web3 märguanded</translation>
-<translation id="1371627247679035769">\n\n\n\n#### Brave ei jälgi teid ega tea, kuidas te meie rakendust kasutate, mistõttu me ei tea, kuidas olete VPN-i seadistanud. Jagage probleemi kohta teavet ja anname endast parima, et see võimalikult kiiresti lahendada. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### AI Wiz ei jälgi teid ega tea, kuidas te meie rakendust kasutate, mistõttu me ei tea, kuidas olete VPN-i seadistanud. Jagage probleemi kohta teavet ja anname endast parima, et see võimalikult kiiresti lahendada. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nVPN-i hostinimi\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nTellimuse tüüp\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nPlay poe token\n <ph name="VALUE"/></translation>
@@ -996,7 +996,7 @@ Kui te selle taotlusega ei nõustu, siis VPN-i ühendust ei taastata ja teie int
 <translation id="4450893287417543264">Ära enam näita</translation>
 <translation id="168154537623654021">VPN-i profiili värskendamine ...</translation>
 <translation id="7457027586454688423">Sisestage oma Brave'i rahakoti parool</translation>
-<translation id="4784306439879850873">Arvestage, et Brave ei saa kontrollida, mis pärast allkirjastamist toimub. Allkiri võib anda volitused peaaegu iga toimingu tegemiseks teie kontol või nimel, muuhulgas anda taotlevale veebisaidile täieliku kontrolli teie konto ja krüptovarade üle. Allkirjastage ainult juhul, kui olete kindel, et soovite seda teha ja usaldate taotlevat veebisaiti.</translation>
+<translation id="4784306439879850873">Arvestage, et AI Wiz ei saa kontrollida, mis pärast allkirjastamist toimub. Allkiri võib anda volitused peaaegu iga toimingu tegemiseks teie kontol või nimel, muuhulgas anda taotlevale veebisaidile täieliku kontrolli teie konto ja krüptovarade üle. Allkirjastage ainult juhul, kui olete kindel, et soovite seda teha ja usaldate taotlevat veebisaiti.</translation>
 <translation id="3474375934783434676">Allkirjastage omal vastutusel</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> kokku <ph name="SIZE"/>-st</translation>
 <translation id="756701799684433105">Kinnita tehing</translation>
@@ -1185,7 +1185,7 @@ Kui te selle taotlusega ei nõustu, siis VPN-i ühendust ei taastata ja teie int
 <translation id="9085765419770918643">Siin pole veel NFT-sid.</translation>
 <translation id="8445532667841598737">Kas olete valmis mõned lisama? Klõpsake importimiseks allolevat nuppu.</translation>
 <translation id="5925465310724910998">Kas soovite, et teie NFT-d kuvatakse automaatselt?</translation>
-<translation id="2827460859891872324">Brave’i rahakott saab teie NFT-de automaatseks kuvamiseks kasutada kolmanda osapoole teenust. Brave jagab selle teenuse pakkumiseks teie rahakoti aadresse ettevõttega <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/>. <ph name="BEGIN_LINK_2"/>Lisateave.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">Brave’i rahakott saab teie NFT-de automaatseks kuvamiseks kasutada kolmanda osapoole teenust. AI Wiz jagab selle teenuse pakkumiseks teie rahakoti aadresse ettevõttega <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/>. <ph name="BEGIN_LINK_2"/>Lisateave.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">Luba NFT tuvastamine</translation>
 <translation id="622372328961630111">Lisage oma NFT-d automaatselt rahakotti, kasutades kolmanda osapoole API-sid. <ph name="BEGIN_LINK_1"/>Lisateave.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">Aadresside teatmetabeli konto:</translation>

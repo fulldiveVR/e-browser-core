@@ -57,11 +57,11 @@
 <translation id="1094777233105318927">Brauzer, OS, cihaz, quraşdırılmış proqram təminatı və fayllar haqqında məlumat</translation>
 <translation id="1096545575934602868">Bu sahədə maksimum <ph name="MAX_ITEMS_LIMIT"/> daxiletmə olmalıdır. Əlavə daxiletmələr silinəcək.</translation>
 <translation id="1099928364755383720">avtomatik şəkildə şəkil</translation>
-<translation id="7584468665743195331">"Baxışa davam edin" düyməsi, Enter düyməsinə basaraq baxışa davam edin və Brave tarixçəsində əlaqəli fəaliyyəti görün</translation>
+<translation id="7584468665743195331">"Baxışa davam edin" düyməsi, Enter düyməsinə basaraq baxışa davam edin və AI Wiz tarixçəsində əlaqəli fəaliyyəti görün</translation>
 <translation id="1101672080107056897">Xəta əməliyyatı</translation>
 <translation id="1103523840287552314">Həmişə <ph name="LANGUAGE"/> dilinə tərcümə edin</translation>
 <translation id="1104409666019087579">Tələb edilən bəzi sahələr boşdur. Yadda saxlamamışdan əvvəl doldurun.</translation>
-<translation id="8424280348953443220">"Parolları idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında parollara baxın və onları idarə edin</translation>
+<translation id="8424280348953443220">"Parolları idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında parollara baxın və onları idarə edin</translation>
 <translation id="1108464073729874771">A3x4</translation>
 <translation id="1110994991967754504"><ph name="PERMISSION_NAME"/> üçün icazə seçin</translation>
 <translation id="1112828774174131240">Əntiq əşyalar və kolleksiyalar</translation>
@@ -83,7 +83,7 @@
 <translation id="1158211211994409885"><ph name="HOST_NAME"/> gözlənilmədən bağlantını kəsdi.</translation>
 <translation id="115926840831309955">CVC-i yoxlayıb yenidən cəhd edin və ya bitmə müddətini yeniləyin</translation>
 <translation id="1161325031994447685">Wi-Fi şəbəkəsinə təkrar qoşulur</translation>
-<translation id="6628439996552631516">"Ünvanları idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında ünvan əlavə və idarə edin</translation>
+<translation id="6628439996552631516">"Ünvanları idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında ünvan əlavə və idarə edin</translation>
 <translation id="1165039591588034296">Xəta</translation>
 <translation id="1165174597379888365">Səhifə ziyarət edilib</translation>
 <translation id="7108524493226474140">{COUNT,plural, =0{Yoxdur}=1{1 saytdan (Brave Hesabına daxil olmuş kimi qalacaqsınız)}other{# saytdan (Brave Hesabına daxil olmuş kimi qalacaqsınız)}}</translation>
@@ -145,7 +145,7 @@
     &lt;/ol&gt;</translation>
 <translation id="1257286744552378071">Təşkilatınızın idarə etmədiyi saytda parolunuzu daxil etdiniz. Hesabınızı qorumaq üçün digər tətbiq və saytlarda parolunuzdan təkrar istifadə etməyin.</translation>
 <translation id="1257553931232494454">zoom səviyyələri</translation>
-<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarınızı idarə edin</translation>
+<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarınızı idarə edin</translation>
 <translation id="1264309058268477500">Alternativ</translation>
 <translation id="1264974993859112054">İdman</translation>
 <translation id="1266469291454105242">Cihazın kiliddən çıxarılması</translation>
@@ -246,7 +246,7 @@
 <translation id="1432187715652018471">səhifə xidmət işləyici quraşdırmaq istəyir.</translation>
 <translation id="1432581352905426595">Axtarış sistemlərini idarə edin</translation>
 <translation id="1433225466058025572">Faylları yenidən köçürün</translation>
-<translation id="783200745622992168">Brave axtarış zamanı sizi qoruyan Brave güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış daxil olduğunuz <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında zərərli proqram tapıb<ph name="END_LINK"/>.</translation>
+<translation id="783200745622992168">Brave axtarış zamanı sizi qoruyan AI Wiz güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış daxil olduğunuz <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında zərərli proqram tapıb<ph name="END_LINK"/>.</translation>
 <translation id="1435940442311036198">Fərqli cihazda şifrə istifadə edin</translation>
 <translation id="1436185428532214179">Saytlar cihazınızdakı faylları və qovluqları redaktə etmək üçün icazə istəyə bilər</translation>
 <translation id="1442386063175183758">Sağ küncə qatlayın</translation>
@@ -354,13 +354,13 @@
 <translation id="1640244768702815859"><ph name="BEGIN_LINK"/>Saytın əsas səhifəsini ziyarət etməyə<ph name="END_LINK"/> calışın.</translation>
 <translation id="1641976391427233992">Çıxışı bu vaxta qədər gecikdirin:</translation>
 <translation id="164212631332220697">Ödəniş zamanı <ph name="CARD_DETAIL"/> ilə ödəyin.</translation>
-<translation id="8088023492467080559">Brave təhlükəsizlik yoxlanışına keçin düyməsi. Aktivləşdirərək ayarlarda Brave təhlükəsizlik yoxlanışı səhifəsinə daxil olun</translation>
+<translation id="8088023492467080559">Brave təhlükəsizlik yoxlanışına keçin düyməsi. Aktivləşdirərək ayarlarda AI Wiz təhlükəsizlik yoxlanışı səhifəsinə daxil olun</translation>
 <translation id="1644574205037202324">Tarixçə</translation>
 <translation id="1645368109819982629">Dəstəklənməyən protokol</translation>
 <translation id="1995056549836388472">Brave ayarlarınızı idarə edin</translation>
 <translation id="1652415888492971589">JIS B8</translation>
 <translation id="3549478477646243075">MacOS Keychain ilə Parol Menecerindən istifadə üçün Brave-u yenidən başladın və Keychain-ə giriş imkanı verin. Yenidən başladıldıqdan sonra tablar təkrar açılacaq.</translation>
-<translation id="3848846802033604519">Brave bu səhifənin daha rahat oxunması üçün onu sadələşdirib. Brave güvənli bağlantı üzərindən ilkin səhifəni açdı.</translation>
+<translation id="3848846802033604519">Brave bu səhifənin daha rahat oxunması üçün onu sadələşdirib. AI Wiz güvənli bağlantı üzərindən ilkin səhifəni açdı.</translation>
 <translation id="1656489000284462475">Götürmə</translation>
 <translation id="1658111267661135323">TV və video</translation>
 <translation id="1658918301167915956">bluetooth cihazları</translation>
@@ -375,9 +375,9 @@
 <translation id="168693727862418163">Bu siyasət dəyəri sxem əsasında doğrulanmadı və nəzərə alınmayacaq.</translation>
 <translation id="168841957122794586">Server sertifikatının kriptoqrafik açarı zəifdir.</translation>
 <translation id="1689333818294560261">Ləqəb</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Datanızı necə idarə edə bilərsiniz:<ph name="END_BOLD"/> Brave 4 həftədən köhnə mövzuları avtomatik silir. Baxmağa davam etdikcə mövzu siyahıda yenidən görünə bilər. Həmçinin Brave-un saytlarla paylaşmasını istəmədiyiniz mövzuları bloklaya və istənilən vaxt Brave ayarlarında reklam mövzularını deaktiv edə bilərsiniz.</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Datanızı necə idarə edə bilərsiniz:<ph name="END_BOLD"/> AI Wiz 4 həftədən köhnə mövzuları avtomatik silir. Baxmağa davam etdikcə mövzu siyahıda yenidən görünə bilər. Həmçinin Brave-un saytlarla paylaşmasını istəmədiyiniz mövzuları bloklaya və istənilən vaxt AI Wiz ayarlarında reklam mövzularını deaktiv edə bilərsiniz.</translation>
 <translation id="1697532407822776718">Hər şey hazırdır!</translation>
-<translation id="4030336595318918117">Artıq Brave Hesabındakı ünvanları istifadə edə bilərsiniz</translation>
+<translation id="4030336595318918117">Artıq AI Wiz Hesabındakı ünvanları istifadə edə bilərsiniz</translation>
 <translation id="1700542542921501212">Vebdə axtarış üçün <ph name="SEARCH_ENGINE_NAME"/> istifadə edə bilərsiniz.</translation>
 <translation id="1702815194757674443">ROC 16K</translation>
 <translation id="1703835215927279855">Letter</translation>
@@ -412,7 +412,7 @@
 <translation id="1736420071277903564">Kompüter</translation>
 <translation id="1741613555002899862">Təyin edilməli və DnsOverHttpsMode <ph name="SECURE_DNS_MODE_SECURE"/> olduqda, doğru dəyər olmalıdır.</translation>
 <translation id="1743393865165844832">Yataq və yataq örtükləri</translation>
-<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Bu datanı necə istifadə edirik:<ph name="END_BOLD"/> Baxış keçirərkən Brave maraqlandığınız mövzuları qeyd edir. Mövzu etiketləri əvvəlcədən müəyyən edilir və İncəsənət və Əyləncə, Alış-veriş və İdman kimi sahələri əhatə edir. Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan bəzi mövzularınızı (baxış tarixçənizi deyil) istəyə bilər.</translation>
+<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Bu datanı necə istifadə edirik:<ph name="END_BOLD"/> Baxış keçirərkən AI Wiz maraqlandığınız mövzuları qeyd edir. Mövzu etiketləri əvvəlcədən müəyyən edilir və İncəsənət və Əyləncə, Alış-veriş və İdman kimi sahələri əhatə edir. Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan bəzi mövzularınızı (baxış tarixçənizi deyil) istəyə bilər.</translation>
 <translation id="1746113442205726301">Şəklin Y oxu üzrə yerdəyişməsi</translation>
 <translation id="1746531169546376413">0 dərəcə</translation>
 <translation id="1751544761369730824"><ph name="SITE_NAME"/> saytını silin</translation>
@@ -423,13 +423,13 @@
 <translation id="1756026472674246267">Keçidi Yeni Tabda açın</translation>
 <translation id="175656076281618225">Sehr</translation>
 <translation id="1757773103848038814">Sabit Ölçülü Şrift</translation>
-<translation id="3727704638090640904">"Brave parolunu dəyişin" düyməsi, aktivləşdirərək Brave Hesabı parolunu dəyişin</translation>
+<translation id="3727704638090640904">"Brave parolunu dəyişin" düyməsi, aktivləşdirərək AI Wiz Hesabı parolunu dəyişin</translation>
 <translation id="1763864636252898013">Bu server <ph name="DOMAIN"/> domenini təsdiqləyə bilmədi; onun təhlükəsizlik sertifikatı cihazınızın əməliyyat sistemi tərəfindən doğrulanmayıb. Buna səbəb yanlış konfiqurasiya və ya hücumçu tərəfindən bağlantınızın ələ keçirilməsi ola bilər.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Windows Şəbəkə Diaqnostikasını işlətməyə çalışın<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">Foto (arxiv)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
 <translation id="3480410886581896628">Brave Smart Lock</translation>
-<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Hesabınızda məlumat, məxfilik və təhlükəsizliyinizi idarə edin</translation>
+<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Hesabınızda məlumat, məxfilik və təhlükəsizliyinizi idarə edin</translation>
 <translation id="1793631236004319016">Son istifadə: <ph name="NUM_HOURS_MINUTES_SECONDS"/> əvvəl</translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, bir neçə əməliyyat əlçatandır, onları nəzərdən keçirmək üçün Tab düyməsinə basın</translation>
 <translation id="1800473098294731951">B9</translation>
@@ -464,7 +464,7 @@
 <translation id="1855370856221982654">Boks</translation>
 <translation id="137199123615682137">Anonim rejim nələri bacarmır</translation>
 <translation id="1862788842908766795">İcra və idarəetmə işləri</translation>
-<translation id="7675404561163771060">İzləmədən qoruma müvəqqəti olaraq əlçatan deyil. Brave bu funksiyanı yeniləyərkən saytlar üçüncü tərəf kukilərindən müvəqqəti istifadə edə bilər (bloklamamısınızsa). <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">İzləmədən qoruma müvəqqəti olaraq əlçatan deyil. AI Wiz bu funksiyanı yeniləyərkən saytlar üçüncü tərəf kukilərindən müvəqqəti istifadə edə bilər (bloklamamısınızsa). <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
 <translation id="1863257867908022953">Qab 12</translation>
 <translation id="1864927262126810325">Mənbə: <ph name="SOURCE_NAME"/></translation>
 <translation id="186539747722034544">Kabel və peyk provayderləri</translation>
@@ -478,7 +478,7 @@
 <translation id="85321348617848915">Brave Formalar</translation>
 <translation id="1876399092304384674">Tarix üzrə</translation>
 <translation id="187918866476621466">Başlanğıc səhifələri açın</translation>
-<translation id="8632214058523487060">Növbəti dəfə tez ödəmək üçün kart, şifrələnmiş güvənlik kodu və ödəmə ünvanını Brave Hesabında yadda saxlayın</translation>
+<translation id="8632214058523487060">Növbəti dəfə tez ödəmək üçün kart, şifrələnmiş güvənlik kodu və ödəmə ünvanını AI Wiz Hesabında yadda saxlayın</translation>
 <translation id="1883255238294161206">Siyahını yığcamlaşdırın</translation>
 <translation id="1884843295353628214">Caz</translation>
 <translation id="1890171020361705182">Dinozavr oyunu. Pikselləşdirilmiş dinozavr kimsəsiz ərazi boyunca qaçarkən kaktuslardan və pterodaktillərdən yayınır. Səs siqnalı eşitdiyiniz zaman toxunaraq maneələrin üstündən tullanın.</translation>
@@ -507,7 +507,7 @@
 <translation id="1958218078413065209">Ən yüksək xalınız: <ph name="SCORE"/>.</translation>
 <translation id="990584554013599191"><ph name="BEGIN_WHITEPAPER_LINK"/>Daxil olduğunuz bəzi səhifələrin keçidlərini, məhdud sistem məlumatlarını və bəzi səhifə məzmununu<ph name="END_WHITEPAPER_LINK"/> Brave'a göndərməklə vebdə hər kəs üçün təhlükəsizliyi artırmağa yardım edin. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Məxfilik siyasəti<ph name="END_PRIVACY_PAGE_LINK"/></translation>
 <translation id="1962204205936693436"><ph name="DOMAIN"/> Əlfəcinləri</translation>
-<translation id="889162891089808318">Adətən, saytlara təhlükəsiz qoşulursunuz, lakin Brave bu dəfə təhlükəsiz bağlantıdan istifadə edə bilmədi. Hücumçu şəbəkə bağlantısını dinləməyə və ya dəyişdirməyə cəhd edə bilər. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="889162891089808318">Adətən, saytlara təhlükəsiz qoşulursunuz, lakin AI Wiz bu dəfə təhlükəsiz bağlantıdan istifadə edə bilmədi. Hücumçu şəbəkə bağlantısını dinləməyə və ya dəyişdirməyə cəhd edə bilər. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="1973335181906896915">Serializasiya xətası</translation>
 <translation id="1973785048533660168">Kargüzarlıq və inzibati işlər</translation>
 <translation id="1974060860693918893">Qabaqcıl</translation>
@@ -526,7 +526,7 @@
 <translation id="2003709556000175978">Parolu indi sıfırlayın</translation>
 <translation id="2003775180883135320">Yuxarıdan dördlü deşik açın</translation>
 <translation id="2004697686368036666">Bəzi saytlardakı funksiyalar işləməyə bilər</translation>
-<translation id="6855500251167861792">"Tədbir yaradın" düyməsi, aktivləşdirərək Brave Calendar-da cəld yeni tədbir yaradın</translation>
+<translation id="6855500251167861792">"Tədbir yaradın" düyməsi, aktivləşdirərək AI Wiz Calendar-da cəld yeni tədbir yaradın</translation>
 <translation id="2342444980304536062">Brave ayarlarında saytlarda saxlanılan icazələri və datanı idarə edin</translation>
 <translation id="2012276282211112603">Hazırda mövzu yoxdur</translation>
 <translation id="2018769312928511665">Parça (parlaq)</translation>
@@ -618,7 +618,7 @@
 <translation id="2168151236314517198">Bu məzmunun çap edilməsi administrator siyasəti əsasında bloklanıb</translation>
 <translation id="2175630235841878061">100 MB-dən böyük fayllar endirilə bilməz</translation>
 <translation id="2176974405772725904">Ünvanı Hesabda yadda saxlayın</translation>
-<translation id="7453373354666409887">"Brave-u güncəlləyin" düyməsi, aktivləşdirərək Brave ayarlarında Brave-u güncəlləyin</translation>
+<translation id="7453373354666409887">"Brave-u güncəlləyin" düyməsi, aktivləşdirərək AI Wiz ayarlarında Brave-u güncəlləyin</translation>
 <translation id="2181821976797666341">Siyasətlər</translation>
 <translation id="2182170103603703676">Qabyuyan maşınlar</translation>
 <translation id="2183608646556468874">Telefon Nömrəsi</translation>
@@ -646,7 +646,7 @@
 <translation id="2224337661447660594">İnternet yoxdur</translation>
 <translation id="2225927550500503913">Virtual kart aktiv edildi</translation>
 <translation id="2226636330183131181">WiFi şəbəkəsinə <ph name="BEGIN_LINK"/>daxil olunur<ph name="END_LINK"/></translation>
-<translation id="1271895112771969155">Bu ünvan hazırda Brave-da yadda saxlanır. Brave məhsullarında istifadə etmək üçün Brave Hesabında (<ph name="ACCOUNT"/>) yadda saxlayın.</translation>
+<translation id="1271895112771969155">Bu ünvan hazırda Brave-da yadda saxlanır. AI Wiz məhsullarında istifadə etmək üçün AI Wiz Hesabında (<ph name="ACCOUNT"/>) yadda saxlayın.</translation>
 <translation id="2229456043301340598">Bənzər qısayol nəzərə alınmayıb: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2233745931693710080">Kompakt disk</translation>
 <translation id="2235344399760031203">Üçüncü tərəf kukiləri bloklanıb</translation>
@@ -700,7 +700,7 @@
 <translation id="2350796302381711542"><ph name="HANDLER_HOSTNAME"/> hostuna <ph name="REPLACED_HANDLER_TITLE"/> əvəzinə <ph name="PROTOCOL"/> linklərinin açılması icazəsi verilsin?</translation>
 <translation id="2353297238722298836">Kamera və mikrofona icazə verildi</translation>
 <translation id="2354001756790975382">Digər əlfəcinlər</translation>
-<translation id="2354430244986887761">Təhlükəsiz Brave Axtarış bu yaxınlarda <ph name="SITE"/> saytında <ph name="BEGIN_LINK"/>zərərli tətbiq tapdı<ph name="END_LINK"/>.</translation>
+<translation id="2354430244986887761">Təhlükəsiz AI Wiz Axtarış bu yaxınlarda <ph name="SITE"/> saytında <ph name="BEGIN_LINK"/>zərərli tətbiq tapdı<ph name="END_LINK"/>.</translation>
 <translation id="2355395290879513365">Hücumçular bu saytda baxdığınız şəkilləri görə bilər və onları deyişdirərək Sizi aldada bilər.</translation>
 <translation id="2356070529366658676">Soruşun</translation>
 <translation id="2357481397660644965">Cihazı <ph name="DEVICE_MANAGER"/>, hesabı isə<ph name="ACCOUNT_MANAGER"/> idarə edir.</translation>
@@ -714,13 +714,13 @@
 <translation id="2366689192918515749">Ət və dəniz məhsulları</translation>
 <translation id="2367567093518048410">Səviyyə</translation>
 <translation id="23703388716193220">Qolf ləvazimatları</translation>
-<translation id="776356972507701422">Regiondakı qanuna əsasən, Brave defolt axtarış mexanizmi seçməyinizi istəyir. Bu axtarış mexanizmləri regionda populyardır və təsadüfi sıra ilə göstərilir.</translation>
+<translation id="776356972507701422">Regiondakı qanuna əsasən, AI Wiz defolt axtarış mexanizmi seçməyinizi istəyir. Bu axtarış mexanizmləri regionda populyardır və təsadüfi sıra ilə göstərilir.</translation>
 <translation id="2378084239755710604">Kartın yadda saxlanması bağlandı.</translation>
 <translation id="2380886658946992094">Hüquqi</translation>
 <translation id="5475992123321966556">Brave ayarlarında əlçatımlılıq alətlərinizi fərdiləşdirin</translation>
 <translation id="2384307209577226199">Korporativ defolt</translation>
 <translation id="238459632961158867">Veb-sayt</translation>
-<translation id="5244533701344680487">Brave'u Brave ayarlarınızdan güncəlləyin</translation>
+<translation id="5244533701344680487">Brave'u AI Wiz ayarlarınızdan güncəlləyin</translation>
 <translation id="2386255080630008482">Serverin sertifikatı geri alındı.</translation>
 <translation id="239293030466334554">Kabriole avtomobilləri</translation>
 <translation id="2392959068659972793">Heç bir dəyəri ayarlanmamış qaydaları göstərin</translation>
@@ -754,7 +754,7 @@
 <translation id="6944854796979239513">Brave Hesabında, <ph name="USER_EMAIL"/></translation>
 <translation id="2482878487686419369">Bildirişlər</translation>
 <translation id="248348093745724435">Cihaz siyasətləri</translation>
-<translation id="8381375318209119428">Daxil olduğunuz saytda hücumçular parol, foto, mesaj və ya kredit kartı nömrəsi kimi məlumatları oğurlayan və ya silən zərərli proqram təminatı quraşdıra bilər. Brave geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8381375318209119428">Daxil olduğunuz saytda hücumçular parol, foto, mesaj və ya kredit kartı nömrəsi kimi məlumatları oğurlayan və ya silən zərərli proqram təminatı quraşdıra bilər. AI Wiz geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2491120439723279231">Serverin sertifikatında xətalar var.</translation>
 <translation id="2491414235131909199">Bu səhifə artırma tərəfindən bloklanıb</translation>
 <translation id="2495083838625180221">JSON Parser</translation>
@@ -772,7 +772,7 @@
 <translation id="2521736961081452453">Forma yaradın</translation>
 <translation id="2523886232349826891">Yalnız bu cihaz yadda saxlanıldı</translation>
 <translation id="2524461107774643265">Ətraflı Məlumat Əlavə Edin</translation>
-<translation id="5151177152796946073">Yadda saxlanmış ünvanları Brave məhsullarında istifadə edə bilərsiniz. Bu ünvan Brave Hesabında (<ph name="ACCOUNT"/>) yadda saxlanacaq.</translation>
+<translation id="5151177152796946073">Yadda saxlanmış ünvanları AI Wiz məhsullarında istifadə edə bilərsiniz. Bu ünvan AI Wiz Hesabında (<ph name="ACCOUNT"/>) yadda saxlanacaq.</translation>
 <translation id="2527451058878391043">CVC kartın ön hissəsindədir. Bu, kart nömrəsinin yuxarı sağ tərəfindəki 4 rəqəmli koddur.</translation>
 <translation id="2529899080962247600">Bu sahədə maksimum <ph name="MAX_ITEMS_LIMIT"/> daxiletmə olmalıdır. Bundan sonrakı daxiletmələr nəzərə alınmayacaq.</translation>
 <translation id="253493526287553278">Promo kodu detallarına baxın</translation>
@@ -816,7 +816,7 @@
 <translation id="2604589665489080024">Pop musiqisi</translation>
 <translation id="2606760465469169465">Avtomatik təsdiqləyin</translation>
 <translation id="2610561535971892504">Kopyalamaq üçün klikləyin</translation>
-<translation id="686139377353794280">Cihaz və Brave Hesabında yadda saxlanan təhlükəsizlik kodları silinəcək</translation>
+<translation id="686139377353794280">Cihaz və AI Wiz Hesabında yadda saxlanan təhlükəsizlik kodları silinəcək</translation>
 <translation id="2616412942031748191">Axtarış mexanizminin optimallaşdırılması və marketinq</translation>
 <translation id="2625385379895617796">Saatınız irəlidədir</translation>
 <translation id="262745152991669301">Saytlar USB cihazlarına qoşulmaq icazəsi istəyə bilər</translation>
@@ -828,7 +828,7 @@
 <translation id="2647852283046201479">Strategiya oyunları</translation>
 <translation id="264810637653812429">Uyğun cihaz tapılmadı.</translation>
 <translation id="2649204054376361687"><ph name="CITY"/>, <ph name="COUNTRY"/></translation>
-<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında baxış tarixçəsi, kukilər, keş və daha çoxunu təmizləyin</translation>
+<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında baxış tarixçəsi, kukilər, keş və daha çoxunu təmizləyin</translation>
 <translation id="2650446666397867134">Fayla giriş rədd edildi</translation>
 <translation id="2651465929321991146">Tarixçə və tablar</translation>
 <translation id="2653659639078652383">Təqdim edin</translation>
@@ -863,7 +863,7 @@
 <translation id="2705137772291741111">Bu saytın yadda saxlanılmış nüsxəsi (keşlənmiş) oxunmadı.</translation>
 <translation id="2709516037105925701">Avtomatik doldurma</translation>
 <translation id="2713444072780614174">Ağ</translation>
-<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında ödənişlərinizi və kredit kartı məlumatlarınızı idarə edin</translation>
+<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında ödənişlərinizi və kredit kartı məlumatlarınızı idarə edin</translation>
 <translation id="2715808615350965923">Super A</translation>
 <translation id="271663710482723385">Tam ekrandan çıxmaq üçün |<ph name="ACCELERATOR1"/>| + |<ph name="ACCELERATOR2"/>| düyməsinə basın</translation>
 <translation id="2717336592027046789">Rulon</translation>
@@ -923,7 +923,7 @@
 <translation id="287596039013813457">Dost</translation>
 <translation id="28761159517501904">Film</translation>
 <translation id="6934396344327597525">Xarici tətbiqlə ödəniş etmək üçün Anonim rejimdən çıxırsınız. Davam edilsin?</translation>
-<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Brave ayarlarında Təhlükəsiz Baxış və daha çoxunu idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
+<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wiz ayarlarında Təhlükəsiz Baxış və daha çoxunu idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
 <translation id="2878197950673342043">Poster formasında qatlayın</translation>
 <translation id="2878424575911748999">A1</translation>
 <translation id="2879233115503670140"><ph name="DATE"/> tarixinə qədər etibarlıdır.</translation>
@@ -948,7 +948,7 @@
 <translation id="2922792708490674">{0,plural, =1{Faylın endirilməsi bloklandı}other{<ph name="FILE_COUNT"/> faylın endirilməsi bloklandı}}</translation>
 <translation id="2923275635648511531">Günəş baxımı və qaralma məhsulları</translation>
 <translation id="3249101334307130799">Brave ayarları</translation>
-<translation id="2039679058572892861">"Sənəd yaradın" düyməsi, aktivləşdirərək cəld yeni Brave Sənəd yaradın</translation>
+<translation id="2039679058572892861">"Sənəd yaradın" düyməsi, aktivləşdirərək cəld yeni AI Wiz Sənəd yaradın</translation>
 <translation id="2925673989565098301">Çatdırılma Üsulu</translation>
 <translation id="2928426578619531300">İstifadəçi ilə bağlı</translation>
 <translation id="2928905813689894207">Faktura Ünvanı</translation>
@@ -963,7 +963,7 @@
 <translation id="2943895734390379394">Yükləmə Vaxtı:</translation>
 <translation id="2945026002409061480">Online icmalar</translation>
 <translation id="2948083400971632585">Ayarlar səhifəsindən bağlantı üçün sazlanmış istənilən proksini deaktiv edə bilərsiniz.</translation>
-<translation id="3955566820843143766">Cihaz Brave Brauzer Bulud İdarəetməsində qeydiyyatdan keçirilmədiyi üçün nəzərə alınmayıb.</translation>
+<translation id="3955566820843143766">Cihaz AI Wiz Brauzer Bulud İdarəetməsində qeydiyyatdan keçirilmədiyi üçün nəzərə alınmayıb.</translation>
 <translation id="2951588413176968965">Poçt qutum</translation>
 <translation id="4920329334239571966">Bütün Anonim pəncərələri bağlayın</translation>
 <translation id="2952904171810469095">A2x5</translation>
@@ -978,7 +978,7 @@
 <translation id="2977665033722899841">Hazırda <ph name="ROW_NAME"/> seçilib. <ph name="ROW_CONTENT"/></translation>
 <translation id="2978824962390592855">Opera</translation>
 <translation id="2979424420072875974">Yazıçı resursları</translation>
-<translation id="6172169316494799304">Bu kartın CVC-si şifrələnəcək və sürətli ödəmə üçün Brave Hesabında yadda saxlanacaq</translation>
+<translation id="6172169316494799304">Bu kartın CVC-si şifrələnəcək və sürətli ödəmə üçün AI Wiz Hesabında yadda saxlanacaq</translation>
 <translation id="1536541482996273580">Anonim Tab açın</translation>
 <translation id="2985398929374701810">Düzgün ünvan daxil edin</translation>
 <translation id="2987034854559945715">Uyğun funksiya yoxdur</translation>
@@ -1046,7 +1046,7 @@
 <translation id="3144458715650412431">Test siyasətləri tətbiq edilib. chrome://policy/test ünvanında nəzər salıb, sıfırlayın. Admin siyasətləri tətbiq edilməyəcək.</translation>
 <translation id="3145945101586104090">Cavabı dekodlaşdırmaq olmadı</translation>
 <translation id="3150653042067488994">Müvəqqəti server xətası</translation>
-<translation id="6312561205154152917">"Cədvəl yaradın" düyməsi, aktivləşdirərək cəld yeni Brave Cədvəl yaradın</translation>
+<translation id="6312561205154152917">"Cədvəl yaradın" düyməsi, aktivləşdirərək cəld yeni AI Wiz Cədvəl yaradın</translation>
 <translation id="3154506275960390542">Bu səhifədə təhlükəsiz şəkildə göndərilməyən forma var. Göndərdiyiniz data keçid zamanı digərləri tərəfindən görülə bilər və ya serverin əldə etdiyi məlumatları dəyişmək üçün hücumçu tərəfindən dəyişdirilə bilər.</translation>
 <translation id="3154987252551138431">Yaxınlıqda Paylaşım istifadə edərkən xəta baş verdi</translation>
 <translation id="315504272643575312">Hesabınızı <ph name="MANAGER"/> idarə edir.</translation>
@@ -1071,7 +1071,7 @@
 <translation id="3194737229810486521"><ph name="URL"/> datanı həmişəlik cihazınızda saxlamaq istəyir</translation>
 <translation id="3195213714973468956"><ph name="PRINTER_NAME"/> <ph name="SERVER_NAME"/> serverində</translation>
 <translation id="3197136577151645743">Saytlar bu cihazdan nə vaxt aktiv istifadə etdiyinizi öyrənmək üçün icazə istəyə bilər</translation>
-<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Brave ayarlarında sinxronlaşdırdığınız məlumatları idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
+<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wiz ayarlarında sinxronlaşdırdığınız məlumatları idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
 <translation id="3203025201812691413">URL boş ola bilməz</translation>
 <translation id="320323717674993345">Ödənişi ləğv edin</translation>
 <translation id="3203366800380907218">Vebdən</translation>
@@ -1105,7 +1105,7 @@
 <translation id="3252772880526154546">Memarlıq</translation>
 <translation id="3254301855501243548">18 x 22 düym</translation>
 <translation id="3256863843508922226">Təqaüdə çıxma və pensiya</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Calendar'da cəld yeni tədbir yaradın</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Calendar'da cəld yeni tədbir yaradın</translation>
 <translation id="3261488570342242926">Virtual kartlar barədə məlumat</translation>
 <translation id="3262698603497362968">Alış seçimləri</translation>
 <translation id="3266367459139339908">Sizə fərdiləşdirilmiş reklamlar göstərdikdə saytların sizin haqqınızda öyrənə biləcəklərini məhdudlaşdırmaq üçün yeni yollar başladırıq, məsələn:</translation>
@@ -1125,7 +1125,7 @@
 <translation id="3287510313208355388">Onlayn olarkən endirin</translation>
 <translation id="3288238092761586174"><ph name="URL"/> ödənişinizi doğrulamaq üçün əlavə addımlar atmalı ola bilər</translation>
 <translation id="3293642807462928945"><ph name="POLICY_NAME"/> siyasəti haqqında ətraflı məlumat əldə edin</translation>
-<translation id="5894665462526421022">Parollarınıza Brave ayarlarında baxın və idarə edin</translation>
+<translation id="5894665462526421022">Parollarınıza AI Wiz ayarlarında baxın və idarə edin</translation>
 <translation id="3299098170013242198">Windows Hello parolları daxil etmək üçün aktivdir</translation>
 <translation id="3299720788264079132"><ph name="FEATURE_NAME"/> istifadə edərkən xəta oldu</translation>
 <translation id="3303176609391916566">30 x 42 düym</translation>
@@ -1211,7 +1211,7 @@
 <translation id="3461266716147554923"><ph name="URL"/> buferə kopylanan mətn və şəkillərə baxmaq istəyir</translation>
 <translation id="3461824795358126837">Vurğulayıcı</translation>
 <translation id="3462200631372590220">Qabaqcıl olanı gizlədin</translation>
-<translation id="5410160270050057437">Bu PDF-ə daxil olmaq olmur. Mətn çıxarıldı. Brave AI tərəfindən dəstəklənir</translation>
+<translation id="5410160270050057437">Bu PDF-ə daxil olmaq olmur. Mətn çıxarıldı. AI Wiz AI tərəfindən dəstəklənir</translation>
 <translation id="346601286295919445">Kimya</translation>
 <translation id="3468054117417088249"><ph name="TAB_SWITCH_SUFFIX"/> hazırda açıqdır, açıq taba keçmək üçün Taba klikləyib daxil olun</translation>
 <translation id="710569555563138608"><ph name="CLOSE_INCOGNITO_WINDOWS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq hazırda açıq olan bütün Anonim pəncərələri bağlayın</translation>
@@ -1277,15 +1277,15 @@
 <translation id="3586931643579894722">Detalları gizlədin</translation>
 <translation id="3587738293690942763">Orta</translation>
 <translation id="3600246354004376029"><ph name="TITLE"/>, <ph name="DOMAIN"/>, <ph name="TIME"/></translation>
-<translation id="8476504968862670676">"Brave Məxfilik ayarlarını idarə edin" düyməsi, aktivləşdirərək Brave Hesabının məxfilik ayarlarına daxil olun</translation>
+<translation id="8476504968862670676">"Brave Məxfilik ayarlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz Hesabının məxfilik ayarlarına daxil olun</translation>
 <translation id="3603507503523709">Tətbiq admin tərəfindən bloklanıb</translation>
 <translation id="3605899229568538311">5 x 5 düym</translation>
 <translation id="3608932978122581043">İstiqaməti tənzimləyin</translation>
-<translation id="1737525120923015525">Növbəti dəfə sürətli ödəniş üçün kart, ad və ödəmə ünvanını Brave Hesabında yadda saxlayın</translation>
+<translation id="1737525120923015525">Növbəti dəfə sürətli ödəniş üçün kart, ad və ödəmə ünvanını AI Wiz Hesabında yadda saxlayın</translation>
 <translation id="3611317423880285981">Məişət ləvazimatları</translation>
 <translation id="3614103345592970299">Ölçü 2</translation>
 <translation id="361438452008624280">Siyahı girişi "<ph name="LANGUAGE_ID"/>": Naməlum və ya dəstəklənməyən dil.</translation>
-<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında Təhlükəsizlik Yoxlanışını icra edin</translation>
+<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında Təhlükəsizlik Yoxlanışını icra edin</translation>
 <translation id="3615309852743236517">Manikür və pedikür</translation>
 <translation id="3620239073311576716">Uniforma və iş geyimləri</translation>
 <translation id="36224234498066874">Axtarış Datasını Silin...</translation>
@@ -1293,7 +1293,7 @@
 <translation id="3624292976554877583">Etiket (mat)</translation>
 <translation id="3628905806504633297">{0,plural, =1{Administrator siyasəti bu faylı <ph name="DESTINATION_NAME"/> bölməsinə ötürməyi tövsiyə etmir}other{Administrator siyasəti bu faylları <ph name="DESTINATION_NAME"/> bölməsinə ötürməyi tövsiyə etmir}}</translation>
 <translation id="3630155396527302611">Şəbəkəyə girmək icazəsi olan proqram olaraq siyahılanıb, onu siyahıdan silin və yenidən əlavə edin.</translation>
-<translation id="3599570280787620691">"Cihazın tapılması" düyməsi, aktivləşdirərək Brave Hesabında cihazın tapılması bölməsinə keçin</translation>
+<translation id="3599570280787620691">"Cihazın tapılması" düyməsi, aktivləşdirərək AI Wiz Hesabında cihazın tapılması bölməsinə keçin</translation>
 <translation id="3630699740441428070">Bu cihazın administratorları onların şəbəkə trafiki, o cümlədən daxil olduğunuz veb saytlara baxmasına imkan verə biləcək şəbəkə bağlantısı konfiqurasiya edib.</translation>
 <translation id="3631244953324577188">Biometriklər</translation>
 <translation id="3632503704576938756">Ekran paylaşımı davam etdirilir</translation>
@@ -1328,7 +1328,7 @@
 <translation id="2659564324969662497">Brave son baxış tarixçənizə əsaslanaraq maraqlandığınız mövzuları qeyd edir.</translation>
 <translation id="3689867156802445220">Bina nömrəsi</translation>
 <translation id="3693327506115126094">Kimliyinizi necə doğrulayacağınızı seçin</translation>
-<translation id="974818914962304978">"Sayt yaradın" düyməsi, aktivləşdirərək Brave Saytda cəld yeni sayt yaradın</translation>
+<translation id="974818914962304978">"Sayt yaradın" düyməsi, aktivləşdirərək AI Wiz Saytda cəld yeni sayt yaradın</translation>
 <translation id="3701325639446035885">Tədbir bileti satışı</translation>
 <translation id="3701427423622901115">Sıfırlanma doğrulandı.</translation>
 <translation id="3701900332588705891">Tipik qiymət: <ph name="LOW_PRICE"/>-<ph name="HIGH_PRICE"/></translation>
@@ -1350,8 +1350,8 @@
 <translation id="3717027428350673159"><ph name="BEGIN_LINK"/>Proksi, güvənlik divarı və DNS konfiqurasiyası yoxlanılır<ph name="END_LINK"/></translation>
 <translation id="3723663469265383848">Güncəllənmə zamanı 10 dəqiqəyə qədər cihazdan istifadə etmək mümkün olmayacaq.</translation>
 <translation id="372429172604983730">Bu xətaya səbəb olan tətbiqlərdə antivirus, həmişəlik proqram təminatı, veb filtrləmə və proksi proqram təminatı ola bilər.</translation>
-<translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Slaydda cəld yeni Brave təqdimatı yaradın</translation>
-<translation id="8077319455765501118">MacOS Keychain ilə Brave Parol Meneceri istifadəsi üçün Brave-u yenidən başladın və Keychain-ə giriş imkanı verin. Yenidən başladıldıqdan sonra tablar təkrar açılacaq.</translation>
+<translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Slaydda cəld yeni AI Wiz təqdimatı yaradın</translation>
+<translation id="8077319455765501118">MacOS Keychain ilə AI Wiz Parol Meneceri istifadəsi üçün Brave-u yenidən başladın və Keychain-ə giriş imkanı verin. Yenidən başladıldıqdan sonra tablar təkrar açılacaq.</translation>
 <translation id="3733139489341305600">Avtonom nəqliyyat vasitələri</translation>
 <translation id="3736520371357197498">Güvənliyinizin üzləşdiyi riskləri anlayırsınızsa, təhlükəli proqramlar silinmədən öncə <ph name="BEGIN_LINK"/>güvənsiz sayta daxil ola bilərsiniz<ph name="END_LINK"/>.</translation>
 <translation id="3736739313435669994">Saytların baxış zamanı sizi izləmək üçün üçüncü tərəf kukilərindən istifadəsini blokladınız. <ph name="LINK"/> üçün ayarlara daxil olun.</translation>
@@ -1375,8 +1375,8 @@
 <translation id="3765588406864124894">Poçt qutusu 9</translation>
 <translation id="3767485424735936570">Bu məzmunun kopyalanması və <ph name="VM_NAME"/> bölməsinə yerləşdirilməsi administrator siyasəti tərəfindən tövsiyə edilmir</translation>
 <translation id="3772211998634047851">Kağız (yüksəkkeyfiyyətli)</translation>
-<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Keep'də cəld yeni qeyd yaradın</translation>
-<translation id="6473814193688111215">Brave axtarış zamanı sizi qoruyan Brave güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında zərərli proqram təminatı tapıb<ph name="END_LINK"/>.</translation>
+<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Keep'də cəld yeni qeyd yaradın</translation>
+<translation id="6473814193688111215">Brave axtarış zamanı sizi qoruyan AI Wiz güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında zərərli proqram təminatı tapıb<ph name="END_LINK"/>.</translation>
 <translation id="3780694243617746492">Çıxış qabı</translation>
 <translation id="3781428340399460090">Parlaq Çəhrayı</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1389,7 +1389,7 @@
 <translation id="3799805948399000906">Şrift üzrə sorğu göndərildi</translation>
 <translation id="3801265110651850478">Baxış trafiki ilə birgə "İzlənilməsin" sorğusu göndərin</translation>
 <translation id="380329542618494757">Ad</translation>
-<translation id="4435991890010083520">Daxil olduğunuz saytda hücumçular sizi proqram təminatı quraşdırmağa, yaxud parol, telefon və ya kredit kartı nömrəsi kimi məlumatları açıqlamağa təşviq edə bilər. Brave geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4435991890010083520">Daxil olduğunuz saytda hücumçular sizi proqram təminatı quraşdırmağa, yaxud parol, telefon və ya kredit kartı nömrəsi kimi məlumatları açıqlamağa təşviq edə bilər. AI Wiz geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3807270098669886186">Telefon xidmət provayderləri</translation>
 <translation id="3807366285948165054">Şəklin X oxu üzrə yerdəyişməsi</translation>
 <translation id="3807873520724684969">Zərərli kontent blok edildi.</translation>
@@ -1413,7 +1413,7 @@
 <translation id="3836246517890985658">Kiçik mətbəx avadanlıqları</translation>
 <translation id="384315386171052386">Balıq və dəniz məhsulları</translation>
 <translation id="3844725157150297127">RA1</translation>
-<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cəld yeni Brave Sənəd yaradın</translation>
+<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cəld yeni AI Wiz Sənəd yaradın</translation>
 <translation id="385051799172605136">Geri</translation>
 <translation id="3851830401766703401">Hüquqi təhsil</translation>
 <translation id="385489333361351399">Kamera və foto avadanlığı</translation>
@@ -1434,8 +1434,8 @@
 <translation id="3906954721959377182">Planşet</translation>
 <translation id="3909695131102177774"><ph name="LABEL"/> <ph name="ERROR"/></translation>
 <translation id="3910231615117880630">Daxil edilmiş kontent haqqında ətraflı</translation>
-<translation id="5852873875468214161">İstənilən vaxt Brave ayarlarında fikrinizi dəyişə bilərsiniz</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Datanı idarə qaydası:<ph name="END_BOLD"/> Brave 30 gündən əvvələ aid saytları avtomatik silir. Yenidən daxil olduğunuz sayt siyahıda təkrar görünə bilər. Brave ayarlarında saytın reklam təklif etməsini bloklaya və sayt tərəfindən təklif olunan reklamları deaktiv edə bilərsiniz.</translation>
+<translation id="5852873875468214161">İstənilən vaxt AI Wiz ayarlarında fikrinizi dəyişə bilərsiniz</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Datanı idarə qaydası:<ph name="END_BOLD"/> AI Wiz 30 gündən əvvələ aid saytları avtomatik silir. Yenidən daxil olduğunuz sayt siyahıda təkrar görünə bilər. AI Wiz ayarlarında saytın reklam təklif etməsini bloklaya və sayt tərəfindən təklif olunan reklamları deaktiv edə bilərsiniz.</translation>
 <translation id="3921869355029467742">Təhlükəsizlik kodunuzu daxil edin</translation>
 <translation id="3927932062596804919">Rədd edin</translation>
 <translation id="3930260846839546333">Çanta və pul kisələri</translation>
@@ -1454,7 +1454,7 @@
 <translation id="3950820424414687140">Giriş</translation>
 <translation id="3953505489397572035">Bu qiymət tipikdir</translation>
 <translation id="3958057596965527988">4 x 4 düym</translation>
-<translation id="8475602291812563124">Brave axtarış zamanı sizi qoruyan Brave güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış daxil olduğunuz <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında fişinq tapıb<ph name="END_LINK"/>.<ph name="NEW_LINE"/>Bəzən hücumçular təhlükəsiz saytları da ələ keçirir. Yanlışlıq olduğunu və saytın təhlükəli olmadığını düşünürsünüzsə, <ph name="BEGIN_ERROR_LINK"/>bizə bildirin<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="8475602291812563124">Brave axtarış zamanı sizi qoruyan AI Wiz güvənli baxış kimi daxili güvənlik funksiyalarına malikdir. Bu yaxınlarda Güvənli baxış daxil olduğunuz <ph name="BEGIN_LINK"/><ph name="SITE"/> saytında fişinq tapıb<ph name="END_LINK"/>.<ph name="NEW_LINE"/>Bəzən hücumçular təhlükəsiz saytları da ələ keçirir. Yanlışlıq olduğunu və saytın təhlükəli olmadığını düşünürsünüzsə, <ph name="BEGIN_ERROR_LINK"/>bizə bildirin<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="3961148744525529027">Ödəniş səhifəsi yarım açıqdır</translation>
 <translation id="3962859241508114581">Əvvəlki trek</translation>
 <translation id="3963721102035795474">Oxu Rejimi</translation>
@@ -1486,7 +1486,7 @@
 <translation id="4040350669425716613">Kollec və universitetlər</translation>
 <translation id="4047351652147966654">18 x 24 düym</translation>
 <translation id="404831776305217138">"<ph name="EXTENSION_ID"/>" ID-li artırma üçün güncəllənmə URL-i yanlışdır, yaxud sxemi dəstəklənmir. Dəstəklənən sxemlər: <ph name="HTTP_SCHEME"/>, <ph name="HTTPS_SCHEME"/> və <ph name="FILE_SCHEME"/>.</translation>
-<translation id="2635033286761217583">Onu Brave məhsullarında istifadə edə biləcəksiniz</translation>
+<translation id="2635033286761217583">Onu AI Wiz məhsullarında istifadə edə biləcəksiniz</translation>
 <translation id="336808635693308470">Brave ödəniş metodlarını redaktə etməyə çalışır.</translation>
 <translation id="405399507749852140">Hər hansı bir saytda qiymət enərsə, bildiriş alın</translation>
 <translation id="4056223980640387499">Sepia</translation>
@@ -1522,7 +1522,7 @@
 <translation id="4111546256784973544">Peyntbol</translation>
 <translation id="4112140312785995938">Geri çəkin</translation>
 <translation id="4113354056388982663">Android üçün vacib performans güncəllənməsi</translation>
-<translation id="270198531912208609">Bu kart Brave Hesabı və bu cihazda yadda saxlansın?</translation>
+<translation id="270198531912208609">Bu kart AI Wiz Hesabı və bu cihazda yadda saxlansın?</translation>
 <translation id="4114146879518089587">Sayta davam edin</translation>
 <translation id="4116663294526079822">Həmişə bu saytda icazə verin</translation>
 <translation id="4116701314593212016">JIS B7</translation>
@@ -1560,7 +1560,7 @@
 <translation id="4177501066905053472">Reklam mövzuları</translation>
 <translation id="4179515394835346607"><ph name="ROW_NAME"/> <ph name="ROW_CONTENT"/></translation>
 <translation id="4186035307311647330">Qiyməti izləməyin</translation>
-<translation id="9150836098508392713">"Brave ipucularına baxın" düyməsi, aktivləşdirərək Brave funksiyaları haqqında ətraflı məlumat əldə edin</translation>
+<translation id="9150836098508392713">"Brave ipucularına baxın" düyməsi, aktivləşdirərək AI Wiz funksiyaları haqqında ətraflı məlumat əldə edin</translation>
 <translation id="4195643157523330669">Yeni tabda açın</translation>
 <translation id="4196861286325780578">Hərəkəti təkrarlayın</translation>
 <translation id="4199637363739172710">Saatlar</translation>
@@ -1584,7 +1584,7 @@
     &lt;/ol&gt;
     &lt;h4&gt;Mərhələ 2: Səhifəni gizli pəncərədə açın (yalnız kompüterdə)&lt;/h4&gt;
     &lt;p&gt;Gizli Pəncərədə daxil olduğunuz səhifəni açın.&lt;/p&gt;
-    &lt;p&gt;Səhifə açılarsa, Brave artırması düzgün işləməyəcək. Problemi həll etmək üçün artırmanı deaktiv edin.&lt;/p&gt;
+    &lt;p&gt;Səhifə açılarsa, AI Wiz artırması düzgün işləməyəcək. Problemi həll etmək üçün artırmanı deaktiv edin.&lt;/p&gt;
     &lt;h4&gt;Mərhələ 3: Sisteminizi güncəlləyin&lt;/h4&gt;
     &lt;p&gt;Əmin olun ki, cihazınız güncəldir.&lt;/p&gt;
     &lt;h4&gt;Mərhələ 4: Antivirusu müvəqqəti olaraq deaktiv edin&lt;/h4&gt;
@@ -1627,7 +1627,7 @@
 <translation id="4281998142035485137">{0,plural, =1{Məxfi fayl açılsın?}other{Məxfi fayllar açılsın?}}</translation>
 <translation id="4282346679996504092">Bu məhsul üçün xəbərdarlıqlar deaktiv edilib və əlfəcin silinib</translation>
 <translation id="4285498937028063278">Çıxarın</translation>
-<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Bu kart Brave Hesabında yadda saxlanılıb}other{Bu kartlar Brave Hesabında yadda saxlanılıb}}</translation>
+<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Bu kart AI Wiz Hesabında yadda saxlanılıb}other{Bu kartlar AI Wiz Hesabında yadda saxlanılıb}}</translation>
 <translation id="2820825061680010514">Brave'da təkmilləşdirilmiş reklam məxfiliyi</translation>
 <translation id="4290920330097335010">Heç vaxt icazə verməyin</translation>
 <translation id="4296207570293932800">Yeni reklam məxfiliyi funksiyası əlçatandır</translation>
@@ -1641,7 +1641,7 @@
 <translation id="4305666528087210886">Faylınıza giriş mümkün olmadı</translation>
 <translation id="4306529830550717874">Ünvan saxlanılsın?</translation>
 <translation id="4306812610847412719">mübadilə buferi</translation>
-<translation id="4270648948919210881">İstifadəçinin təşkilatla əlaqəsi olmadığı üçün bu siyasət nəzərə alınmır. Bu siyasətin tətbiq edilməsi üçün Brave brauzeri və profili eyni təşkilat tərəfindən Admin konsolu vasitəsilə idarə olunmalıdır.</translation>
+<translation id="4270648948919210881">İstifadəçinin təşkilatla əlaqəsi olmadığı üçün bu siyasət nəzərə alınmır. Bu siyasətin tətbiq edilməsi üçün AI Wiz brauzeri və profili eyni təşkilat tərəfindən Admin konsolu vasitəsilə idarə olunmalıdır.</translation>
 <translation id="4310070645992025887">Səyahətlərinizi axtarın</translation>
 <translation id="4310496734563057511">Bu cihazı başqaları ilə paylaşsanız, yadda saxlanmış paroldan istifadə etdiyiniz zaman kimliyinizi doğrulamaq üçün Windows Hello'nu aktiv edə bilərsiniz</translation>
 <translation id="4312613361423056926">B2</translation>
@@ -1661,9 +1661,9 @@
 <translation id="4333295216031073611">Alış-veriş siyahısı</translation>
 <translation id="4333561522337981382">Bütün displeylərinizdə pəncərələri idarə edin</translation>
 <translation id="4336219115486912529">{COUNT,plural, =1{Sabah vaxtı bitir}other{# gün sonra vaxtı bitir}}</translation>
-<translation id="5792122559159836842">Bu reklam cihazınız üçün həddindən çox mənbədən istifadə etdiyinə görə Brave onu sildi.</translation>
+<translation id="5792122559159836842">Bu reklam cihazınız üçün həddindən çox mənbədən istifadə etdiyinə görə AI Wiz onu sildi.</translation>
 <translation id="4340810192899866471">JSON-dan import edin</translation>
-<translation id="6116812392674177288">Bu kompüter korporativ idarə edilmir, ona görə də siyasət yalnız Brave Veb Mağazasında saxlanılan artırmaları quraşdıra bilər. Brave Veb Mağaza güncəlləmə linki: "<ph name="CWS_UPDATE_URL"/>".</translation>
+<translation id="6116812392674177288">Bu kompüter korporativ idarə edilmir, ona görə də siyasət yalnız AI Wiz Veb Mağazasında saxlanılan artırmaları quraşdıra bilər. AI Wiz Veb Mağaza güncəlləmə linki: "<ph name="CWS_UPDATE_URL"/>".</translation>
 <translation id="4348834659292907206"><ph name="SITE"/> saytına bağlantı güvənli deyil</translation>
 <translation id="4349365535725594680">Məxfi kontenti paylaşmaq olmur</translation>
 <translation id="4349810866125026513">İstənilən halda yükləyin</translation>
@@ -1706,10 +1706,10 @@
 <translation id="443673843213245140">Proksi istifadəsi deaktiv edilib, amma ətraflı proksi konfiqurasiyası müəyyən edilib.</translation>
 <translation id="4438821706955556403">Tipik qiymət</translation>
 <translation id="4441832193888514600">Siyasət yalnız bulud istifadəçisi siyasəti kimi təyin oluna bildiyi üçün nəzərə alınmadı.</translation>
-<translation id="7615139038297294584">"Sayt ayarlarını idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında icazələri və saytlarda saxlanan datanı idarə edin</translation>
+<translation id="7615139038297294584">"Sayt ayarlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında icazələri və saytlarda saxlanan datanı idarə edin</translation>
 <translation id="4451135742916150903">Saytlar HID cihazlarına qoşulmaq üçün icazə istəyə bilər</translation>
 <translation id="4451684391620232683">İstifadəçiyə təqdim olunan mətn:</translation>
-<translation id="8416018650396907203">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Hesablarınızı qorumaq üçün Brave Parol Meneceri yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
+<translation id="8416018650396907203">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Hesablarınızı qorumaq üçün AI Wiz Parol Meneceri yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
 <translation id="4464826014807964867">Təşkilatınızın məlumatları olan veb saytlar</translation>
 <translation id="8294153737034342992">Brave-un yüksək təhlükəsizlik səviyyəsi üçün <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>təkmil qorumanı aktiv edin<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>. <ph name="LEARN_MORE_TEXT"/></translation>
@@ -1721,23 +1721,23 @@
 <translation id="448363931695049633">Pizzacılar</translation>
 <translation id="4489023393592172404">Zərf Kaku 4</translation>
 <translation id="4490717597759821841">A7</translation>
-<translation id="3966104135245031874">Sinxronlaşdırılmış parolları Brave Hesabınız ilə şifrləyin</translation>
+<translation id="3966104135245031874">Sinxronlaşdırılmış parolları AI Wiz Hesabınız ilə şifrləyin</translation>
 <translation id="4493480324863638523">Yanlış link. Standart sxemli link olmalıdır, məs., http://example.com və ya https://example.com.</translation>
-<translation id="7622628059331736328">Ayarlarda reklam mövzularına baxa və saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. Brave həmçinin 4 həftədən köhnə reklam mövzularını avtomatik silir.</translation>
+<translation id="7622628059331736328">Ayarlarda reklam mövzularına baxa və saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. AI Wiz həmçinin 4 həftədən köhnə reklam mövzularını avtomatik silir.</translation>
 <translation id="4500587658229086076">təhlükəli məzmun</translation>
 <translation id="4506176782989081258">Doğrulama xətası: <ph name="VALIDATION_ERROR"/></translation>
 <translation id="4506599922270137252">Sistem admini ilə əlaqə yardılır</translation>
 <translation id="450710068430902550">Administrator ilə paylaşılır</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq bu səhifəni Brave Tərcümə ilə tərcümə edin</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq bu səhifəni AI Wiz Tərcümə ilə tərcümə edin</translation>
 <translation id="4514308731478712184">Baxışları deaktiv edin</translation>
-<translation id="4892470328555495647">Kart və ünvanlar Brave və Brave Hesabındandır (<ph name="ACCOUNT_EMAIL"/>). Onları <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/> bölməsindən idarə edə bilərsiniz.</translation>
+<translation id="4892470328555495647">Kart və ünvanlar AI Wiz və AI Wiz Hesabındandır (<ph name="ACCOUNT_EMAIL"/>). Onları <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/> bölməsindən idarə edə bilərsiniz.</translation>
 <translation id="4519245469315452746">Güncəllənmə zamanı cihaza müdaxilə edildi.</translation>
 <translation id="4520048001084013693">Bu faylın endirilməsi administrator siyasəti əsasında bloklanıb</translation>
 <translation id="4521157617044179198"><ph name="WIDTH"/> × <ph name="HEIGHT"/> mm (<ph name="ORIENTATION"/>)</translation>
 <translation id="4521280267704259211">Zərf Monarx</translation>
 <translation id="4521916730539354575">Sol Qab</translation>
 <translation id="4522570452068850558">Detallar</translation>
-<translation id="6221032662362020209">IBAN Brave Hesabında yadda saxlansın?</translation>
+<translation id="6221032662362020209">IBAN AI Wiz Hesabında yadda saxlansın?</translation>
 <translation id="4523643381056109546">İşarələr</translation>
 <translation id="4524138615196389145">Bundan sonra WebAuthn istifadə edərək kartlarınızı daha sürətli təsdiqləyin</translation>
 <translation id="45243788195988825"><ph name="TOPIC"/> adlı tətbiqi blok edin</translation>
@@ -1748,7 +1748,7 @@
 <translation id="4540780316273593836">Xəta baş verdi</translation>
 <translation id="4541810033354695636">artırılmış reallıq</translation>
 <translation id="4542971377163063093">Qab 6</translation>
-<translation id="563788859854213593">Növbəti dəfə sürətli ödəniş üçün kart və ödəmə ünvanını Brave Hesabında yadda saxlayın</translation>
+<translation id="563788859854213593">Növbəti dəfə sürətli ödəniş üçün kart və ödəmə ünvanını AI Wiz Hesabında yadda saxlayın</translation>
 <translation id="4546730006268514143">Ötürmə vaxtı bitdi</translation>
 <translation id="455113658016510503">A9</translation>
 <translation id="4556069465387849460">Parolları daxil etmək üçün ekran kilidindən istifadə edirsiniz</translation>
@@ -1776,7 +1776,7 @@
 <translation id="4617273035598175554">Qrafika və animasiya proqramı</translation>
 <translation id="4619564267100705184">Kimliyinizi doğrulayın</translation>
 <translation id="4622292761762557753">İstənilən halda ötürün</translation>
-<translation id="6398431831028858802">Bu siyasət Brave profil səviyyəsində ayarlana bilməz və nəzərə alınmayacaq.</translation>
+<translation id="6398431831028858802">Bu siyasət AI Wiz profil səviyyəsində ayarlana bilməz və nəzərə alınmayacaq.</translation>
 <translation id="4628678854894591460">Tətil təklifləri</translation>
 <translation id="4628948037717959914">Foto</translation>
 <translation id="4629370161347991046">A4x6</translation>
@@ -1846,7 +1846,7 @@
 <translation id="4756388243121344051">&amp;Tarixçə</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
 <translation id="5644030191910182707">Brave profilindən giriş açarı</translation>
-<translation id="1015173303159845845">İndicə parolunuzu aldadıcı sayt içində yazdınız. Hesablarınızı qorumaq üçün Brave yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
+<translation id="1015173303159845845">İndicə parolunuzu aldadıcı sayt içində yazdınız. Hesablarınızı qorumaq üçün AI Wiz yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
 <translation id="4758311279753947758">Kontakt məlumatı əlavə edin</translation>
 <translation id="4761104368405085019">Mikrofon işlədin</translation>
 <translation id="4761326898079498987">Əlavə detallar üçün nəzərdən keçirin</translation>
@@ -1868,7 +1868,7 @@
 <translation id="4792686369684665359">Təqdim etmək üzrə olduğunuz məlumat güvənli deyil</translation>
 <translation id="4793219378458250238">11 x 12 düym</translation>
 <translation id="4796594887379589189">İş hesabı ID'si</translation>
-<translation id="7110430050177876111">Kart məlumatlarını yeniləmək üçün <ph name="CREDIT_CARD"/> kartının bitmə tarixini və CVC-ni daxil edin. Təsdiqlədikdən sonra Brave Hesabındakı kart məlumatları bu saytda paylaşılacaq.</translation>
+<translation id="7110430050177876111">Kart məlumatlarını yeniləmək üçün <ph name="CREDIT_CARD"/> kartının bitmə tarixini və CVC-ni daxil edin. Təsdiqlədikdən sonra AI Wiz Hesabındakı kart məlumatları bu saytda paylaşılacaq.</translation>
 <translation id="4798269756263412078">Hər hansı bir saytda qiymət enərsə, bildiriş alın Xəbərdarlıqlar e-poçtunuza göndəriləcək.</translation>
 <translation id="4800132727771399293">Bitmə tarixi və CVC nömrəsini yoxlayın və yenidən cəhd edin</translation>
 <translation id="4803924862070940586"><ph name="FORMATTED_TOTAL_AMOUNT"/> <ph name="CURRENCY_CODE"/></translation>
@@ -1879,7 +1879,7 @@
 <translation id="4816492930507672669">Səhifəyə uyğunlaşsın</translation>
 <translation id="4819347708020428563">Annotasiyalar defolt görünüşdə redaktə edilsin?</translation>
 <translation id="4822493756793346865">Tipik qiymətlər son 90 günü əhatə edir və veb-mağazalara əsaslanır.</translation>
-<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cəld yeni Brave Cədvəli yaradın</translation>
+<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cəld yeni AI Wiz Cədvəli yaradın</translation>
 <translation id="4825507807291741242">Güclü</translation>
 <translation id="4826588772550366629">kamera və mikrofon</translation>
 <translation id="4827283332383516812">Kartı silin</translation>
@@ -1942,13 +1942,13 @@
 <translation id="4936134414789135531">Daxil edilən <ph name="VALUE_NAME"/> tapılmadı.</translation>
 <translation id="4936675324097895694">Maliyyə</translation>
 <translation id="6085043210649933880">Brave'da Anonim Rejim</translation>
-<translation id="712756862344567094">"Axtarış datasını silin" düyməsi, aktivləşdirərək Brave ayarlarında brauzer tarixçəsi, kukilər, keş və s. silin</translation>
+<translation id="712756862344567094">"Axtarış datasını silin" düyməsi, aktivləşdirərək AI Wiz ayarlarında brauzer tarixçəsi, kukilər, keş və s. silin</translation>
 <translation id="4943872375798546930">Nəticə yoxdur</translation>
 <translation id="4943933359574417591">Mətn və ani mesajlaşma</translation>
 <translation id="4950898438188848926">Keçid düyməsinə klikləyin, açıq <ph name="TAB_SWITCH_FOCUSED_FRIENDLY_MATCH_TEXT"/> tabına keçmək üçün "Daxil olun" düyməsinə basın</translation>
 <translation id="495170559598752135">Fəaliyyətlər</translation>
 <translation id="4953689047182316270">Əlçatımlılıq Tədbirlərinə cavab vermək</translation>
-<translation id="2351178841237473727">"Brave tarixçəsinə baxın" düyməsi, aktivləşdirərək Brave ayarlarında brauzer tarixçənizə baxıb, onu idarə edin</translation>
+<translation id="2351178841237473727">"Brave tarixçəsinə baxın" düyməsi, aktivləşdirərək AI Wiz ayarlarında brauzer tarixçənizə baxıb, onu idarə edin</translation>
 <translation id="4958444002117714549">Siyahını genişləndirin</translation>
 <translation id="5398999400894437316">Brave-un reklam məxfiliyi ayarlarında dəyişiklik edə bilərsiniz</translation>
 <translation id="4960203958361543136">Axtarış mexanizmi seçin</translation>
@@ -1973,7 +1973,7 @@
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq sayt axtarışı və defolt axtarış sisteminizi idarə edin</translation>
 <translation id="4998950033665438990">Birüzlü</translation>
 <translation id="5001526427543320409">Üçüncü tərəf kukiləri</translation>
-<translation id="3676215163710610678">Imkan varsa, Brave sürətli forma doldurmaq üçün bu cihaz sizin kart surəti saxlamaq olacaq.</translation>
+<translation id="3676215163710610678">Imkan varsa, AI Wiz sürətli forma doldurmaq üçün bu cihaz sizin kart surəti saxlamaq olacaq.</translation>
 <translation id="5007392906805964215">Nəzərdən keçirin</translation>
 <translation id="5011561501798487822">Aşkarlanmış Dil</translation>
 <translation id="5015510746216210676">Cihaz Adı:</translation>
@@ -1982,7 +1982,7 @@
 <translation id="5018422839182700155">Bu səhifəni açmaq olmur</translation>
 <translation id="5018802455907704660">16 x 20 düym</translation>
 <translation id="5019198164206649151">Yedəkləmə yaddaşı it günündədir</translation>
-<translation id="2013297594801702701">Brave məhsullarında saxlanmış ünvanları istifadə edə bilərsiniz. Ünvan Brave Hesabında (<ph name="USER_EMAIL"/>) saxlanacaq.</translation>
+<translation id="2013297594801702701">Brave məhsullarında saxlanmış ünvanları istifadə edə bilərsiniz. Ünvan AI Wiz Hesabında (<ph name="USER_EMAIL"/>) saxlanacaq.</translation>
 <translation id="5020776957610079374">Dünya musiqisi</translation>
 <translation id="6516968977334148048">Brave ilə qiymətləri izləyin</translation>
 <translation id="5023310440958281426">Administrator siyasətlərinizi yoxlayın</translation>
@@ -2018,7 +2018,7 @@
 <translation id="5087580092889165836">Kart əlavə edin</translation>
 <translation id="5088142053160410913">Operatora mesaj</translation>
 <translation id="5093232627742069661">Z-qatlama</translation>
-<translation id="4906192414477726331">Bu server <ph name="DOMAIN"/> domenini təsdiqləyə bilmədi; onun güvənlik sertifikatı Brave tərəfindən doğrulanmayıb. Buna səbəb yanlış konfiqurasiya və ya hücumçü tərəfindən bağlantınızın ələ keçirilməsi ola bilər.</translation>
+<translation id="4906192414477726331">Bu server <ph name="DOMAIN"/> domenini təsdiqləyə bilmədi; onun güvənlik sertifikatı AI Wiz tərəfindən doğrulanmayıb. Buna səbəb yanlış konfiqurasiya və ya hücumçü tərəfindən bağlantınızın ələ keçirilməsi ola bilər.</translation>
 <translation id="5097099694988056070">CPU/RAM istifadəsi kimi cihaz statistikası</translation>
 <translation id="5097468150760963273">27 x 39 düym</translation>
 <translation id="5097501891273180634">A2</translation>
@@ -2057,8 +2057,8 @@
 <translation id="5161334686036120870">Mövzu:</translation>
 <translation id="5161506081086828129">Yığıcı 9</translation>
 <translation id="5164798890604758545">Mətn daxil edilib</translation>
-<translation id="2996889577833788807"><ph name="CREDIT_CARD"/> üçün CVC daxil edin. Təsdiqlədikdən sonra Brave Hesabındakı kart məlumatları bu saytda paylaşılacaq.</translation>
-<translation id="8515152881111950319">Təşkilat hesabına girişi itirə və ya kimlik oğurluğu ilə üzləşə bilərsiniz. Brave parollarınızı indi dəyişməyi məsləhət görür.</translation>
+<translation id="2996889577833788807"><ph name="CREDIT_CARD"/> üçün CVC daxil edin. Təsdiqlədikdən sonra AI Wiz Hesabındakı kart məlumatları bu saytda paylaşılacaq.</translation>
+<translation id="8515152881111950319">Təşkilat hesabına girişi itirə və ya kimlik oğurluğu ilə üzləşə bilərsiniz. AI Wiz parollarınızı indi dəyişməyi məsləhət görür.</translation>
 <translation id="5171045022955879922">Linki axtarın və ya yazın</translation>
 <translation id="5172758083709347301">Maşın</translation>
 <translation id="5177076414499237632">Bu səhifənin mənbəyi və mövzusu haqqında məlumat əldə edin</translation>
@@ -2089,7 +2089,7 @@
 <translation id="5239623327352565343">Məkana icazə verilib</translation>
 <translation id="5242610955375133957">Quru plyonka</translation>
 <translation id="5242889659037569123">Baqaj və səyahət aksesuarları</translation>
-<translation id="8854897060240443467">"Brave Hesabını idarə edin" düyməsi, aktivləşdirərək Brave Hesabında məlumat, məxfilik və təhlükəsizliyi idarə edin</translation>
+<translation id="8854897060240443467">"Brave Hesabını idarə edin" düyməsi, aktivləşdirərək AI Wiz Hesabında məlumat, məxfilik və təhlükəsizliyi idarə edin</translation>
 <translation id="5244732203286792411">Yüklənir...
     Bir dəqiqə çəkə bilər.</translation>
 <translation id="5250209940322997802">"Şəbəkəyə qoşulun"</translation>
@@ -2201,7 +2201,7 @@
 <translation id="5483838506518938965">Hər şey hazırdır</translation>
 <translation id="5485973315555778056">Bulud cihazı</translation>
 <translation id="5487426985799386720">Qida və içki</translation>
-<translation id="1524606353801704832">"Qeyd yaradın" düyməsi, aktivləşdirərək Brave Keep-də cəld yeni qeyd yaradın</translation>
+<translation id="1524606353801704832">"Qeyd yaradın" düyməsi, aktivləşdirərək AI Wiz Keep-də cəld yeni qeyd yaradın</translation>
 <translation id="5490432419156082418">Ünvanlar və s.</translation>
 <translation id="5492298309214877701">Şirkət, təşkilat və ya məktəb intranetindəki saytın xarici veb saytlara bənzər linki var.
     <ph name="LINE_BREAK"/>
@@ -2237,8 +2237,8 @@
 <translation id="5543722831081909240">180 dərəcə</translation>
 <translation id="555128936272638662">Mobil və simsiz aksesuarlar</translation>
 <translation id="5551890439174915351">100 x 200 mm</translation>
-<translation id="6084314943327785510">Brave müntəzəm olaraq onlayn yayımlanan siyahılar əsasında parollarınızı yoxlayır. Bunu edərkən, parollar və istifadəçi adları şifrələnir ki, Brave daxil olmaqla, heç kim onları oxuya bilməsin.</translation>
-<translation id="4362225295386962644">İstifadə edilən parol onlayn yayımlanıbsa, Brave xəbərdarlıq edir. Parol və istifadəçi adları şifrələnir və hətta Brave-a da görünmür.</translation>
+<translation id="6084314943327785510">Brave müntəzəm olaraq onlayn yayımlanan siyahılar əsasında parollarınızı yoxlayır. Bunu edərkən, parollar və istifadəçi adları şifrələnir ki, AI Wiz daxil olmaqla, heç kim onları oxuya bilməsin.</translation>
+<translation id="4362225295386962644">İstifadə edilən parol onlayn yayımlanıbsa, AI Wiz xəbərdarlıq edir. Parol və istifadəçi adları şifrələnir və hətta Brave-a da görünmür.</translation>
 <translation id="5556459405103347317">Yenidən yükləyin</translation>
 <translation id="5558083606899411167">Kondisionerlər</translation>
 <translation id="5558125320634132440">Bu sayt böyüklər üçün məzmun ehtiva etdiyinə görə bloklanıb.</translation>
@@ -2252,7 +2252,7 @@
 <translation id="5570825185877910964">Hesabınızı qoruyun</translation>
 <translation id="5571083550517324815">Bu ünvandan götürmək mümkün deyil. Başqa ünvan seçin.</translation>
 <translation id="5572434905385510939">22 x 28 düym</translation>
-<translation id="1254756632288991504">Başlayın və Brave'a daxil olun, beləliklə, Brave bu sayta girişə icazə olub olmadığını yoxlaya bilər.</translation>
+<translation id="1254756632288991504">Başlayın və Brave'a daxil olun, beləliklə, AI Wiz bu sayta girişə icazə olub olmadığını yoxlaya bilər.</translation>
 <translation id="5578606540385219379">Xidmət təminatçıları</translation>
 <translation id="557886905979275351">Ülgüclər və təraş aparatları</translation>
 <translation id="5580958916614886209">Bitmə ayını yoxlayın və yenidən cəhd edin</translation>
@@ -2269,7 +2269,7 @@
 <translation id="5610142619324316209">Bağlantınız yoxlanılır</translation>
 <translation id="5610807607761827392"><ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/> bölməsindən kart və ünvanları idarə edə bilərsiniz.</translation>
 <translation id="5611398002774823980">Hesabda yadda saxlayın</translation>
-<translation id="2012723355262040739">Bu səhifəni Brave Tərcümə ilə tərcümə edin</translation>
+<translation id="2012723355262040739">Bu səhifəni AI Wiz Tərcümə ilə tərcümə edin</translation>
 <translation id="5612720917913232150"><ph name="URL"/> kompüterinizin məkanından istifadə etmək istəyir</translation>
 <translation id="561669346091975195">TV sci-fi və fentezi şouları</translation>
 <translation id="5617949217645503996"><ph name="HOST_NAME"/> bir çox dəfə sizə istiqamətləndirilib.</translation>
@@ -2325,11 +2325,11 @@
 <translation id="572328651809341494">Son panellər</translation>
 <translation id="5723287205918986743">Müdafiə sənayesi</translation>
 <translation id="5725297205162868298">Qısayol @ simvolu ilə başlaya bilməz: "<ph name="SHORTCUT_NAME"/>"</translation>
-<translation id="3006790309890592320">Parolunuzdan digər saytlarda təkrar istifadə etmisinizsə, Brave onu sıfırlamağınızı tövsiyə edir.</translation>
+<translation id="3006790309890592320">Parolunuzdan digər saytlarda təkrar istifadə etmisinizsə, AI Wiz onu sıfırlamağınızı tövsiyə edir.</translation>
 <translation id="5732392974455271431">Valideynləriniz kilidi aça bilər</translation>
-<translation id="5110141686029759199">"Forma yaradın" düyməsi, aktivləşdirərək Brave Formada cəld yeni forma yaradın</translation>
+<translation id="5110141686029759199">"Forma yaradın" düyməsi, aktivləşdirərək AI Wiz Formada cəld yeni forma yaradın</translation>
 <translation id="5736165827969430182">Metallar və mədənlər</translation>
-<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Kartı Brave Hesabında yadda saxlayın}other{Kartları Brave Hesabında yadda saxlayın}}</translation>
+<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Kartı AI Wiz Hesabında yadda saxlayın}other{Kartları AI Wiz Hesabında yadda saxlayın}}</translation>
 <translation id="5738385766833540397">İzlədiyiniz məhsullar üçün qiymət endirimi xəbərdarlıqlarını necə alacağınızı idarə edin</translation>
 <translation id="5740911612628596808">Zərf C9</translation>
 <translation id="5742806904559466333">Barlar, klublar və gecə həyatı</translation>
@@ -2375,7 +2375,7 @@
 <translation id="583281660410589416">Naməlum</translation>
 <translation id="5838278095973806738">Bu saytda hər hansı həssəs məlumatı (məsələn, parollar və kredit kartları) yerləşdirməməlisiniz, cünki, hücumçular tərəfindən oğurlana bilər.</translation>
 <translation id="5838732667866024867">Qrafikdə qiymət dəyişikliklərini nəzərdən keçirmək üçün sol/sağ oxdan istifadə edə bilərsiniz</translation>
-<translation id="7336369644051575343"><ph name="ACCOUNT"/> Brave Hesabınızda</translation>
+<translation id="7336369644051575343"><ph name="ACCOUNT"/> AI Wiz Hesabınızda</translation>
 <translation id="5841338463993781099">Hesabda saxlansın?</translation>
 <translation id="5847181246682413476">Enerji ləvazimatları</translation>
 <translation id="5851548754964597211">Panel siyahısı</translation>
@@ -2412,7 +2412,7 @@
 <translation id="5920262536204764679">{NUM_COOKIES,plural, =1{1 istifadə edilir}other{# istifadə edilir}}</translation>
 <translation id="592031860219554105">Buz skeytinqi</translation>
 <translation id="5921185718311485855">Aktiv</translation>
-<translation id="2687595201721621314">Kart Brave Hesabında yadda saxlanılsın?</translation>
+<translation id="2687595201721621314">Kart AI Wiz Hesabında yadda saxlanılsın?</translation>
 <translation id="5922853866070715753">Demək olar ki, hazırdır</translation>
 <translation id="5923492272538889093">CVC əvəzinə cihazın kiliddən çıxarılmasından istifadə edilsin?</translation>
 <translation id="5924510104057992926">Açmazdan əvvəl nəzərdən keçirilməlidir</translation>
@@ -2447,8 +2447,8 @@
 <translation id="5992691462791905444">Mühəndislikdə Z-qatlama</translation>
 <translation id="5992805036496113940">Sizə reklam göstərmək üçün istifadə olunan məlumata baxın</translation>
 <translation id="7409510288691071929">Brave Hesabınızda məlumat, məxfilik və təhlükəsizliyinizi idarə edin</translation>
-<translation id="3494641719937626561">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Hesablarınızı qorumaq üçün Brave Parol Meneceri onu indi dəyişməyi və sonra yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
-<translation id="4496834749307444910">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda zərərli proqram tapan<ph name="END_LINK"/> Brave güvənli baxış buna misaldır.</translation>
+<translation id="3494641719937626561">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Hesablarınızı qorumaq üçün AI Wiz Parol Meneceri onu indi dəyişməyi və sonra yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
+<translation id="4496834749307444910">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda zərərli proqram tapan<ph name="END_LINK"/> AI Wiz güvənli baxış buna misaldır.</translation>
 <translation id="6000758707621254961">"<ph name="SEARCH_TEXT"/>" üçün <ph name="RESULT_COUNT"/> nəticə</translation>
 <translation id="6002122790816966947">Cihazlarınız</translation>
 <translation id="6005659677094197001">Davamlı</translation>
@@ -2486,7 +2486,7 @@
 <translation id="6051221802930200923">Hazırda <ph name="SITE"/> saytına daxil olmaq mümkün deyil, çünki veb səhifə sertifikat bağlantısı istifadə edir. Şəbəkə xətaları və hücumları adətən müvəqqəti olur, beləliklə, səhifə yəqin ki daha sonra işləyəcək.</translation>
 <translation id="6051898664905071243">Səhifə sayı:</translation>
 <translation id="6052284303005792909">•</translation>
-<translation id="3284406940349582552">Yadda saxlanmış ünvanları Brave məhsullarında istifadə edə bilərsiniz. Bu ünvan Brave Hesabında (<ph name="ACCOUNT"/>) yadda saxlanıb.</translation>
+<translation id="3284406940349582552">Yadda saxlanmış ünvanları AI Wiz məhsullarında istifadə edə bilərsiniz. Bu ünvan AI Wiz Hesabında (<ph name="ACCOUNT"/>) yadda saxlanıb.</translation>
 <translation id="5814871361966482530">Məxfilik Siyasətimizdə Brave'un datanızı necə qoruduğu haqqında ətraflı məlumat əldə edin.</translation>
 <translation id="6055888660316801977">"Təhlükəsiz ödəniş giriş məlumatları uyğun gəlmir" giriş məlumatları səhifəsi</translation>
 <translation id="6055982527635883756">Zərf (arxiv)</translation>
@@ -2508,7 +2508,7 @@
 <translation id="6105460996796456817">Sayt yaradın</translation>
 <translation id="6106989379647458772"><ph name="PAGE"/> veb səhifəsi müvəqqəti işləməyə bilər və ya yeni veb ünvana köçürülmüş ola bilər.</translation>
 <translation id="6107012941649240045">Verildi:</translation>
-<translation id="8233947174119245051"><ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində Brave Hesabına məxsus axtarış tarixçəsinin başqa formaları ola bilər</translation>
+<translation id="8233947174119245051"><ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində AI Wiz Hesabına məxsus axtarış tarixçəsinin başqa formaları ola bilər</translation>
 <translation id="6116338172782435947">Buferə kopyalanan mətn və şəkillərə baxın</translation>
 <translation id="6117833587752089929">Foto (hamar)</translation>
 <translation id="6118782133429281336">Mənşə siyahısı boşdur.</translation>
@@ -2556,12 +2556,12 @@
 <translation id="6217950634729714357">Mətbəx və yemək otağı mebelləri</translation>
 <translation id="8385639954311581596">Ünvan Brave'dan silinsin?</translation>
 <translation id="622039917539443112">Paralel qatlayın</translation>
-<translation id="5286511760116495417">Bu kart Brave Hesabında yadda saxlansın?</translation>
+<translation id="5286511760116495417">Bu kart AI Wiz Hesabında yadda saxlansın?</translation>
 <translation id="6221345481584921695">Brave Güvənli Brauzinq <ph name="SITE"/> üzərində <ph name="BEGIN_LINK"/>virus aşkarladı<ph name="END_LINK"/>. Ziyanverici məzmun virus yaymağı ilə məşhur olan <ph name="SUBRESOURCE_HOST"/> tərəfdən gəlir.</translation>
 <translation id="6221892641068781024">Sadə Görünüş</translation>
 <translation id="6222527803348563979">Yazı ləvazimatları</translation>
 <translation id="6224281071334553713">Qiymətli daş və cəvahirat</translation>
-<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında əlçatımlılıq alətlərinizi fərdiləşdirin</translation>
+<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında əlçatımlılıq alətlərinizi fərdiləşdirin</translation>
 <translation id="6229196330202833460">Film və TV yayımı</translation>
 <translation id="6229649258872345286">Ailəvi səyahət</translation>
 <translation id="6232271601416750929">Zərərsiz gözəllik məhsulları</translation>
@@ -2604,7 +2604,7 @@
 <translation id="6311410654831092784">Çoxqatlı nazik karton</translation>
 <translation id="6312113039770857350">Veb səhifə əlçatan deyil</translation>
 <translation id="6316226860534107313">Skuter və mopedlər</translation>
-<translation id="1413891145337537586">Yeni: Brave üçün Family Link seçimləri burada tətbiq edilir</translation>
+<translation id="1413891145337537586">Yeni: AI Wiz üçün Family Link seçimləri burada tətbiq edilir</translation>
 <translation id="63172326633386613">Əlçatımlılıq ayarlarını idarə edin</translation>
 <translation id="6319249456820053699">Foto və video kameralar</translation>
 <translation id="6321917430147971392">DNS ayarlarınızı yoxlayın</translation>
@@ -2698,7 +2698,7 @@
 <translation id="6472874020827012601">Parça (mat)</translation>
 <translation id="647330291963761005">Güncəllənmələr quraşdırılır</translation>
 <translation id="6474220430271405609">Siyasət testləri</translation>
-<translation id="2252963430820803723">Ziyarət etdiyiniz saytlar Brave'dan reklamlarının performansını ölçməyə kömək edən məlumat istəyə bilər. Brave saytların bir-biri ilə paylaşa biləcəyi məlumatları məhdudlaşdırmaqla məxfiliyinizi qoruyur.</translation>
+<translation id="2252963430820803723">Ziyarət etdiyiniz saytlar Brave'dan reklamlarının performansını ölçməyə kömək edən məlumat istəyə bilər. AI Wiz saytların bir-biri ilə paylaşa biləcəyi məlumatları məhdudlaşdırmaqla məxfiliyinizi qoruyur.</translation>
 <translation id="6476284679642588870">Ödəniş metodlarını idarə edin</translation>
 <translation id="6480864723214312258">Məişət batareyaları</translation>
 <translation id="6486200200930923183">Sənədli filmlər</translation>
@@ -2718,7 +2718,7 @@
 <translation id="6518133107902771759">Doğrulayın</translation>
 <translation id="65203098586853226">Tərcümə edilir: <ph name="SOURCE"/> &gt; <ph name="TARGET"/></translation>
 <translation id="6521745193039995384">Aktiv deyil</translation>
-<translation id="7379829935006425840">"Əlçatımlıq ayarlarını idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında əlçatımlılıq alətlərini fərdiləşdirin</translation>
+<translation id="7379829935006425840">"Əlçatımlıq ayarlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında əlçatımlılıq alətlərini fərdiləşdirin</translation>
 <translation id="6529173248185917884">Yeddinci Rulon</translation>
 <translation id="652937045869844725">Üçüncü tərəf kukilərinə icazə verin. Beləcə, qoruma az olsa da, sayt funksiyalarının işləmə ehtimalı yüksəkdir</translation>
 <translation id="6529602333819889595">Silinməni yenidən edin</translation>
@@ -2735,7 +2735,7 @@
 <translation id="6557715786897013164">14 x 17 düym</translation>
 <translation id="6560786330438719938">Quraşdırılan və sistemdən silinən tətbiqlər, eləcə də onların işlənmə tezliyi</translation>
 <translation id="6567084950885568327">MIDI cihaz idarəetməsi və təkrar proqramlaşdırma</translation>
-<translation id="3720758671413152948">"Ödəniş metodlarını idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında ödəniş və kredit kartı məlumatlarını idarə edin</translation>
+<translation id="3720758671413152948">"Ödəniş metodlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında ödəniş və kredit kartı məlumatlarını idarə edin</translation>
 <translation id="6569060085658103619">Artırma səhifəsinə baxırsınız</translation>
 <translation id="6569366777234823130">Dram filmləri</translation>
 <translation id="6573200754375280815">Sağdan qoşa deşik açın</translation>
@@ -2760,12 +2760,12 @@
 <translation id="6628463337424475685"><ph name="ENGINE"/> axtarışı</translation>
 <translation id="6629652037942826935">Lüks səyahət</translation>
 <translation id="6630043285902923878">USB cihazları axtarılır...</translation>
-<translation id="4945711024178085608">"Brave ayarlarını idarə edin" düyməsi, aktivləşdirərək Brave ayarlarına daxil olun</translation>
+<translation id="4945711024178085608">"Brave ayarlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarına daxil olun</translation>
 <translation id="6630809736994426279">Hazırda <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> saytındakı hücumçular Mac cihazındakı məlumatları (məsələn, foto, parol, mesaj və kredit kartları) oğurlayan və ya silən təhlükəli proqramlar quraşdırmağa cəhd edə bilər. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">Kompüter təhsili</translation>
 <translation id="6633476656216409494">Biznes və məhsuldarlıq üzrə proqram təminatı</translation>
-<translation id="2529518595693862042">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda zərərli proqram təminatı tapan<ph name="END_LINK"/> Brave güvənli baxış buna misaldır.</translation>
+<translation id="2529518595693862042">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda zərərli proqram təminatı tapan<ph name="END_LINK"/> AI Wiz güvənli baxış buna misaldır.</translation>
 <translation id="6643016212128521049">Silin</translation>
 <translation id="6645291930348198241">Kukilər və sayt datasına giriş.</translation>
 <translation id="6645478838938543427">Qiymət endirimi xəbərdarlıqları <ph name="EMAIL_ADDRESS"/> ünvanına göndəriləcək</translation>
@@ -2794,9 +2794,9 @@
 <translation id="6688743156324860098">Güncəlləmə…</translation>
 <translation id="6688775486821967877">Virtual kart hazırda əlçatan deyil, sonra yenidən cəhd edin</translation>
 <translation id="6689249931105087298">Qara nöqtə sıxılması ilə nisbi</translation>
-<translation id="5406652219015697259">Daxil olduğunuza görə Brave kartları Brave Hesabında yadda saxlamağı təklif edir. Bunu ayarlarda dəyişə bilərsiniz. Kart sahibinin adı hesabınızdan götürülüb.</translation>
+<translation id="5406652219015697259">Daxil olduğunuza görə AI Wiz kartları AI Wiz Hesabında yadda saxlamağı təklif edir. Bunu ayarlarda dəyişə bilərsiniz. Kart sahibinin adı hesabınızdan götürülüb.</translation>
 <translation id="6691397311652656001"><ph name="REQUIRED_FREE_DISK_SPACE"/>+ yer boşaldın</translation>
-<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cihazınızı Brave Hesabında tapın</translation>
+<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq cihazınızı AI Wiz Hesabında tapın</translation>
 <translation id="6698381487523150993">Yaradılıb:</translation>
 <translation id="67007264085648978">Vaxt sürüşdürücüsü</translation>
 <translation id="6702919718839027939">Təqdim edin</translation>
@@ -2867,7 +2867,7 @@
 <translation id="6832753933931306326">Forma doldurulub</translation>
 <translation id="6841864657731852591">Qravür silindri</translation>
 <translation id="6842196666980060516">184 x 260 mm</translation>
-<translation id="976643339176907534">"Təhlükəsizlik ayarlarını idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında Təhlükəsiz axtarışı və s. idarə edin</translation>
+<translation id="976643339176907534">"Təhlükəsizlik ayarlarını idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında Təhlükəsiz axtarışı və s. idarə edin</translation>
 <translation id="6852204201400771460">Tətbiq yenidən yüklənilsin?</translation>
 <translation id="6857776781123259569">Parolları idarə edin...</translation>
 <translation id="6858034839887287663">A2x4</translation>
@@ -2880,12 +2880,12 @@
 <translation id="6873456682041376666">Üst Qab</translation>
 <translation id="6874604403660855544">&amp;Yenidən əlavə edin</translation>
 <translation id="6880941331070119097">Yüksək qiymət seçimi</translation>
-<translation id="5856252669085142737">Cəld yeni Brave Sənəd yaradın</translation>
+<translation id="5856252669085142737">Cəld yeni AI Wiz Sənəd yaradın</translation>
 <translation id="6882210908253838664">Sayt işləməsə, üçüncü tərəf kukilərindən müvəqqəti istifadə icazəsi verə bilərsiniz. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
 <translation id="6883221904761970440">Güvənli ödəniş məlumatları üzrə doğrulama vərəqəsi bağlanıb</translation>
 <translation id="6884662655240309489">Ölçü 1</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/> <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave bu səhifənin daha rahat oxunması üçün onu sadələşdirib. Brave güvənsiz bağlantı üzərindən ilkin səhifəni açdı.</translation>
+<translation id="7265969755975834932">Brave bu səhifənin daha rahat oxunması üçün onu sadələşdirib. AI Wiz güvənsiz bağlantı üzərindən ilkin səhifəni açdı.</translation>
 <translation id="6890443033788248019">Məkan icazəsi verilsin?</translation>
 <translation id="6890531741535756070"><ph name="PROVIDER_ORIGIN"/> istifadə edən saytlarda <ph name="DEVICE_LABEL"/> ilə doğrulamağı seçmisiniz. Bu provayder ödəniş metodunuz haqqında məlumat saxlamış ola bilər, bu məlumatın <ph name="BEGIN_LINK"/>silinməsini tələb edə<ph name="END_LINK"/> bilərsiniz.</translation>
 <translation id="6890956352250146925">Kukilər və sayt datası üçün seçimlər</translation>
@@ -2909,8 +2909,8 @@
 <translation id="6917795328362592458">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Hesablarınızı qorumaq üçün Parol Meneceri yadda saxladığınız parolları yoxlamağı tövsiyə edir.</translation>
 <translation id="6925267999184670015">Şimali Amerika B+</translation>
 <translation id="692638818576287323">Ticari nəqliyyat vasitələri</translation>
-<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>Defolt axtarış mexanizmi vebdə axtarış imkanı verir və Brave funksiyalarını dəstəkləyir<ph name="END_BOLD"/> (ünvan panelindən və veb-səhifələrdəki şəkillərdən axtarmaq kimi). Axtarış mexanizmi dəstəkləməsə, funksiya əlçatan olmaya bilər.</translation>
-<translation id="6722453239914327220">Bu ad Sizin Brave Hesabınızdandır.</translation>
+<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>Defolt axtarış mexanizmi vebdə axtarış imkanı verir və AI Wiz funksiyalarını dəstəkləyir<ph name="END_BOLD"/> (ünvan panelindən və veb-səhifələrdəki şəkillərdən axtarmaq kimi). Axtarış mexanizmi dəstəkləməsə, funksiya əlçatan olmaya bilər.</translation>
+<translation id="6722453239914327220">Bu ad Sizin AI Wiz Hesabınızdandır.</translation>
 <translation id="6935082727755903526">Mühasibat və maliyyə işləri</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>. Növbəti dəfə daxil olarkən bəzi saytlar yavaş yüklənə bilər.</translation>
 <translation id="6936976777388162184">Bu paketə bağlı cihazdır və Kiosk və Signage Upgrade'də qeydiyyatdan keçə bilməz.</translation>
@@ -2926,7 +2926,7 @@
 <translation id="6954049078461159956">Xokkey</translation>
 <translation id="695582302419398462">Karton (ikiqat)</translation>
 <translation id="6957887021205513506">Serverin sertifikatı fırıldağa oxşayır.</translation>
-<translation id="774679539085757206">Brave Hesabınızda Brave məxfilik ayarlarını idarə edin</translation>
+<translation id="774679539085757206">Brave Hesabınızda AI Wiz məxfilik ayarlarını idarə edin</translation>
 <translation id="695864015080711809">İş və təhsil</translation>
 <translation id="6961733224437895943">Ev sığortası</translation>
 <translation id="6961844873822989059">Saytlar cihazınızda quraşdırılmış şriftləri istifadə etmək üçün icazə istəyə bilər</translation>
@@ -2941,7 +2941,7 @@
 <translation id="696703987787944103">Qavrayış</translation>
 <translation id="6967851206780867018">Kontentə görə 1 fayl bloklandı</translation>
 <translation id="6970885655016700774">Parça (arxiv)</translation>
-<translation id="8485851762575764192">Slaydda cəld yeni Brave təqdimatı yaradın</translation>
+<translation id="8485851762575764192">Slaydda cəld yeni AI Wiz təqdimatı yaradın</translation>
 <translation id="6972629891077993081">HID cihazları</translation>
 <translation id="6973656660372572881">Fiskə edilmiş proksi serverlər və .pac skript URL-lər göstərilib.</translation>
 <translation id="6973988895180423160">3,5 x 5 düym</translation>
@@ -2969,12 +2969,12 @@
 <translation id="702146556168549005">Ziyarət etdiyiniz səhifələrin keçidləri təhlil üçün Google Cloud'a və ya üçüncü tərəflərə göndərilir. Məsələn, administrator tərəfindən müəyyən edilmiş qaydalara əsasən təhlükəli saytları aşkar etmək və ya saytları filtrləmək üçün skan edilə bilər.</translation>
 <translation id="8683151724374457021">Bu sayt bəyəndiklərinizi müəyyənləşdirir və sonra digər saytlara reklam təklif edir. Bu sayt sizə daha uyğun reklamlar göstərmək üçün Brave'dan reklam mövzularınızı da əldə edir.</translation>
 <translation id="7023162328967545559">Admin xəbərdarlığı</translation>
-<translation id="7613812024276037086">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda fişinq tapan<ph name="END_LINK"/> Brave güvənli baxış buna misaldır. Fişinq saytları sizi aldatmaq üçün özlərini digər saytlar kimi təqdim edir.<ph name="NEW_LINE"/>Bəzən hücumçular təhlükəsiz saytları da ələ keçirir. Yanlışlıq olduğunu və saytın təhlükəli olmadığını düşünürsünüzsə, <ph name="BEGIN_ERROR_LINK"/>bizə bildirin<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="7613812024276037086">Brave axtarış zamanı sizi qoruyan daxili güvənlik funksiyalarına malikdir. Daxil olduğunuz saytda <ph name="BEGIN_LINK"/>bu yaxınlarda fişinq tapan<ph name="END_LINK"/> AI Wiz güvənli baxış buna misaldır. Fişinq saytları sizi aldatmaq üçün özlərini digər saytlar kimi təqdim edir.<ph name="NEW_LINE"/>Bəzən hücumçular təhlükəsiz saytları da ələ keçirir. Yanlışlıq olduğunu və saytın təhlükəli olmadığını düşünürsünüzsə, <ph name="BEGIN_ERROR_LINK"/>bizə bildirin<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="7029809446516969842">Parollar</translation>
 <translation id="7030164307377592766">ödəniş metodlarını doldurmaq üçün ayarları dəyişməyə çalışır</translation>
 <translation id="7030436163253143341">Sertifikat etibarlı deyil</translation>
 <translation id="7031646650991750659">Quraşdırdığınız Google Play tətbiqləri</translation>
-<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Hesabınızın məxfilik ayarlarını idarə edin</translation>
+<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Hesabınızın məxfilik ayarlarını idarə edin</translation>
 <translation id="7043552168914147882">Çıxıntılı kağız</translation>
 <translation id="7044081119134178347">Bu dəfə üçün kameraya icazə verilib</translation>
 <translation id="7048095965575426564">Avropa Fanfold</translation>
@@ -2997,7 +2997,7 @@
 <translation id="7081308185095828845">Bu xüsusiyyət cihazınızda əlçatan deyil</translation>
 <translation id="7083258188081898530">Qab 9</translation>
 <translation id="7086090958708083563">Yükləmə istifadəçi tərəfindən tələb edildi</translation>
-<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Brave ayarlarında saytlarda saxlanılan icazələri və datanı idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
+<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wiz ayarlarında saytlarda saxlanılan icazələri və datanı idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
 <translation id="7096341143397839437">E-poçt: <ph name="EMAIL"/>.</translation>
 <translation id="7096937462164235847">Bu veb saytın kimliyi doğrulanmayıb.</translation>
 <translation id="7101893872976785596">Qorxu filmləri</translation>
@@ -3096,7 +3096,7 @@
 <translation id="7273111226200291353">Endirdiyiniz fayllar təhlil üçün Google Cloud və ya üçüncü tərəflərə göndərilir. Onlar həssas data və ya zərərli proqram ilə bağlı skanlana, şirkət siyasətinə əsasən saxlana və administratora görünə bilər.</translation>
 <translation id="7275334191706090484">İdarə olunan əlfəcinlər</translation>
 <translation id="7277998515889183784">Makiyaj və kosmetika</translation>
-<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Hesabı parolunuzu dəyişin</translation>
+<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Hesabı parolunuzu dəyişin</translation>
 <translation id="7292031607255951991">Alıcının adı</translation>
 <translation id="7298195798382681320">Tövsiyə olunur</translation>
 <translation id="7299471494012161875">Displeyin yan elementləri əlavə olunub</translation>
@@ -3125,7 +3125,7 @@
 <translation id="7359588939039777303">Reklamlar blok edildi.</translation>
 <translation id="7308957539693927108">Brave əlçatan endirimləri tapdıqda, onlar ödəniş zamanı göstəriləcək</translation>
 <translation id="8794378783472961468">Siz görünməz olmursunuz. Anonim rejim brauzeri şirkətinizdən, internet xidməti provayderi və ya daxil olduğunuz veb saytdan gizlətmir.</translation>
-<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Brave ayarlarında ünvanlar əlavə etmək və idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
+<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wiz ayarlarında ünvanlar əlavə etmək və idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
 <translation id="7365849542400970216">Cihazdan istifadəniz bilinsin?</translation>
 <translation id="736592699917579616">Qida</translation>
 <translation id="7366117520888504990">198 x 275 mm</translation>
@@ -3134,7 +3134,7 @@
 <translation id="7372526636730851647">Foto (parlaq)</translation>
 <translation id="7372973238305370288">axtarış nəticəsi</translation>
 <translation id="7374461526650987610">Protokol nizamlayıcıları</translation>
-<translation id="3898257577441589237">Bu xətanın səbəbi cihazınızda siz və ya başqası tərəfindən quraşdırılmış sertifikatdır. Sertifikat şəbəkələrə nəzarət etmək və onları bloklamaq üçün istifadə olunur və Brave ona etibar etmir. Məktəb və ya şirkət şəbəkəsi kimi bəzi hallarda qanuni nəzarətə icazə verilsə də, Brave qarşısını ala bilməsəniz də, bunun baş verdiyini bilmənizi istəyir. Nəzarət vebə girişi olan istənilən brauzer və ya tətbiqdə baş verə bilər.</translation>
+<translation id="3898257577441589237">Bu xətanın səbəbi cihazınızda siz və ya başqası tərəfindən quraşdırılmış sertifikatdır. Sertifikat şəbəkələrə nəzarət etmək və onları bloklamaq üçün istifadə olunur və AI Wiz ona etibar etmir. Məktəb və ya şirkət şəbəkəsi kimi bəzi hallarda qanuni nəzarətə icazə verilsə də, AI Wiz qarşısını ala bilməsəniz də, bunun baş verdiyini bilmənizi istəyir. Nəzarət vebə girişi olan istənilən brauzer və ya tətbiqdə baş verə bilər.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{Saytlara icazə verilmir}=1{1 sayta icazə verilir}other{# sayta icazə verilir}}</translation>
 <translation id="7375818412732305729">Fayl qoşulub</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3171,14 +3171,14 @@
 <translation id="7419106976560586862">Profil yolu</translation>
 <translation id="7421067045979951561">protokol nizamlayıcıları</translation>
 <translation id="7422347648202898039">Etiket (təhlükəsizlik)</translation>
-<translation id="4814329941923406129">"Kukiləri idarə edin" düyməsi, aktivləşdirərək Brave ayarlarında kuki tərcihlərini idarə edin</translation>
+<translation id="4814329941923406129">"Kukiləri idarə edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında kuki tərcihlərini idarə edin</translation>
 <translation id="7424421098814895617">Ünvanın silinməsi seçilib</translation>
 <translation id="7427366580982928791">Uşaq internet təhlükəsizliyi</translation>
 <translation id="7429429656042611765">Biznes klass</translation>
 <translation id="288933326661929857">Brave-un ödəniş məlumatlarını doldurması üçün kimliyi doğrulayın.</translation>
 <translation id="7437289804838430631">Kontakt Məlumatı Əlavə Edin</translation>
 <translation id="7437490109271760224">Kart oyunları</translation>
-<translation id="6591887805206070045">Daxil olduğunuz saytda hücumçular əsas səhifəni dəyişməklə və ya əlavə reklamlar göstərməklə sizi axtarış təcrübənizə təsir edən zərərli proqram təminatı quraşdırmağa təşviq edə bilər. Zərərdən yayınmaq üçün Brave geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="6591887805206070045">Daxil olduğunuz saytda hücumçular əsas səhifəni dəyişməklə və ya əlavə reklamlar göstərməklə sizi axtarış təcrübənizə təsir edən zərərli proqram təminatı quraşdırmağa təşviq edə bilər. Zərərdən yayınmaq üçün AI Wiz geri qayıtmağınızı təkidlə tövsiyə edir. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7440140511386898319">Oflayn kəşf edin</translation>
 <translation id="7441627299479586546">Yanlış siyasət mövzusu</translation>
 <translation id="7441864845853794192">Qurman və xüsusi yeməklər</translation>
@@ -3188,7 +3188,7 @@
 <translation id="7445762425076701745">Qoşulduğunuz serverin kimliyi tam təyin oluna bilmir. Yalnız şəbəkəniz daxilində etibarlı olan adı istifadə edən serverə qoşulmusunuz. Bəzi sertifikat buraxanlar bu adlar üçün sertifikarlar buraxaclaqlar, məqsədinizdə olan sayta qoşulduğunuzu, həmin saytın hücumçu olmadığını müəyyən etmək olmur.</translation>
 <translation id="7447234474237738389">Geyim xidmətləri</translation>
 <translation id="7447625772313191651"><ph name="NAME"/> (<ph name="WIDTH"/> x <ph name="HEIGHT"/> mm)</translation>
-<translation id="1548956355291859153">"Sinxronlaşdırmanı idarə edin" düyməsi, aktivləşdirərək sinxronlaşdıracağınız məlumatları Brave ayarlarında idarə edin</translation>
+<translation id="1548956355291859153">"Sinxronlaşdırmanı idarə edin" düyməsi, aktivləşdirərək sinxronlaşdıracağınız məlumatları AI Wiz ayarlarında idarə edin</translation>
 <translation id="7451311239929941790">Problem haqqında <ph name="BEGIN_LINK"/>ətraflı məlumat<ph name="END_LINK"/> əldə edilir.</translation>
 <translation id="7454377933424667109">Bulud hesabı</translation>
 <translation id="7455133967321480974">Qlobal defolt istifadə edin (Blok)</translation>
@@ -3223,7 +3223,7 @@
 <translation id="7508255263130623398">Qaytarılmış qaydalar cihaz İD'si boşdur və ya cari cihaz İD'si ilə üst-üstə düşmür</translation>
 <translation id="7508577201115425418">Sənəd və çap xidmətləri</translation>
 <translation id="7508870219247277067">Avokado Yaşılı</translation>
-<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>Saytlar bu datadan necə istifadə edir:<ph name="END_BOLD"/> Saytlar bəyəndikləriniz haqqında Brave ilə məlumat saxlaya bilər. Məsələn, marafon təlimi ilə bağlı sayta daxil olsanız, sayt qaçış ayaqqabıları ilə maraqlandığınıza qərar verə bilər. Daha sonra başqa sayta daxil olsanız, həmin sayt sizə ilk saytın təklif etdiyi qaçış ayaqqabısı reklamını göstərə bilər.</translation>
+<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>Saytlar bu datadan necə istifadə edir:<ph name="END_BOLD"/> Saytlar bəyəndikləriniz haqqında AI Wiz ilə məlumat saxlaya bilər. Məsələn, marafon təlimi ilə bağlı sayta daxil olsanız, sayt qaçış ayaqqabıları ilə maraqlandığınıza qərar verə bilər. Daha sonra başqa sayta daxil olsanız, həmin sayt sizə ilk saytın təklif etdiyi qaçış ayaqqabısı reklamını göstərə bilər.</translation>
 <translation id="7510269639068718544">Pişiklər</translation>
 <translation id="7511955381719512146">İşlətdiyiniz Wi-Fi <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/> linkinə daxil olmağı tələb edə bilər.</translation>
 <translation id="7512685745044087310">Bu siyasət "Doğru" olaraq ayarlana və məcburi ola bilməz, buna görə "tövsiyə olunan" kimi dəyişdirilib.</translation>
@@ -3232,7 +3232,7 @@
 <translation id="7518003948725431193">Bu veb ünvan üçün heç bir səhifə tapılmadı: <ph name="URL"/></translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7521825010239864438">"<ph name="SECTION"/>" bölməsi gizlədilib</translation>
-<translation id="8552966873255887118">Onu Brave məhsullarında istifadə edə bilərsiniz</translation>
+<translation id="8552966873255887118">Onu AI Wiz məhsullarında istifadə edə bilərsiniz</translation>
 <translation id="7523408071729642236">İstehsalat</translation>
 <translation id="7525804896095537619">Ad boş ola bilməz</translation>
 <translation id="7526934274050461096">Bu saytla olan bağlantınız şəxsi deyil</translation>
@@ -3245,7 +3245,7 @@
 <translation id="7546409722674205727">Başlayır: <ph name="APP_NAME"/></translation>
 <translation id="7548892272833184391">Bağlantı xətalarını həll edin</translation>
 <translation id="7549584377607005141">Bu veb səhifə düzgün görüntülənmək üçün əvvəlcə daxil etdiyiniz datanı tələb edir. Bu datanı yenidən göndərə bilərsiniz, amma bununla, bu səhifənin əvvəllər etdiyi əməliyyatı təkrarlamış olacaqsınız.</translation>
-<translation id="5474381306981932386">Cihazın istifadəçi adı və Brave istifadəçi adı</translation>
+<translation id="5474381306981932386">Cihazın istifadəçi adı və AI Wiz istifadəçi adı</translation>
 <translation id="7551484245293639699">Səyahət sığortası</translation>
 <translation id="7552846755917812628">Aşağıdakı məsləhətləri sınayın:</translation>
 <translation id="7554242657529665960">Administratordan: "<ph name="ADMIN_MESSAGE"/>"</translation>
@@ -3280,12 +3280,12 @@
 <translation id="759889825892636187"><ph name="HOST_NAME"/> hal-hazırda bu tələbi idarə edə bilmir.</translation>
 <translation id="7599089013883397081">Endirmə vaxtı bitdi</translation>
 <translation id="7600965453749440009"><ph name="LANGUAGE"/> heç vaxt tərcümə etməyin</translation>
-<translation id="8441931256884543961">Adətən, bu sayta təhlükəsiz qoşulursunuz, lakin Brave bu dəfə təhlükəsiz bağlantı istifadə edə bilmədi. Hücumçu şəbəkə bağlantısını dinləməyə və ya dəyişdirməyə cəhd edə bilər. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8441931256884543961">Adətən, bu sayta təhlükəsiz qoşulursunuz, lakin AI Wiz bu dəfə təhlükəsiz bağlantı istifadə edə bilmədi. Hücumçu şəbəkə bağlantısını dinləməyə və ya dəyişdirməyə cəhd edə bilər. <ph name="BEGIN_LEARN_MORE_LINK"/>Ətraflı məlumat<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7605377493722372900">Daxil olduğunuz saytda hücumçular parol, foto, mesaj və ya kredit kartı nömrəsi kimi məlumatları oğurlayan və ya silən zərərli proqram təminatı quraşdıra bilər.</translation>
 <translation id="7610193165460212391">Dəyər <ph name="VALUE"/> aralığından kənardır.</translation>
 <translation id="7613889955535752492">Bitmə tarixi: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
-<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında parollarınıza baxın və idarə edin</translation>
-<translation id="8565825862287624454">Administratorunuz brauzerinizdə Brave Enterprise Connectors funksiyasını aktivləşdirib. Bu birləşdiricilərin verilənlərinizdən bəzilərinə giriş imkanı var.</translation>
+<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında parollarınıza baxın və idarə edin</translation>
+<translation id="8565825862287624454">Administratorunuz brauzerinizdə AI Wiz Enterprise Connectors funksiyasını aktivləşdirib. Bu birləşdiricilərin verilənlərinizdən bəzilərinə giriş imkanı var.</translation>
 <translation id="7617825962482469577">Zərf C7/C6</translation>
 <translation id="7619838219691048931">Son vərəq</translation>
 <translation id="7625242817712715120">Administrator siyasəti bu kontenti çap etməyi tövsiyə etmir</translation>
@@ -3302,7 +3302,7 @@
 <translation id="7637586430889951925">{COUNT,plural, =0{Heç biri}=1{Hesabınızda 1 parol var (<ph name="DOMAIN_LIST"/> üçün)}other{Hesabınızda # parol var (<ph name="DOMAIN_LIST"/> üçün)}}</translation>
 <translation id="7638605456503525968">Seriya portları</translation>
 <translation id="7639968568612851608">Tünd-boz</translation>
-<translation id="8275603180424408640">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. Brave Parol Meneceri parolunuzu indi dəyişdirmənizi tövsiyə edir.</translation>
+<translation id="8275603180424408640">İndicə istifadə etdiyiniz parol bir data pozuntusunda tapılıb. AI Wiz Parol Meneceri parolunuzu indi dəyişdirmənizi tövsiyə edir.</translation>
 <translation id="7647206758853451655">Çap keyfiyyəti</translation>
 <translation id="7648992873808071793">Faylları bu cihazda saxlayın</translation>
 <translation id="7653957176542370971">Ödəniş səhifəsi bağlıdır</translation>
@@ -3366,7 +3366,7 @@
 <translation id="7751019142333897329"><ph name="FIRST_STRING"/> <ph name="SECOND_STRING"/></translation>
 <translation id="921286857694606205">Brave'da şrift ölçülərini və şriftləri fərdiləşdirin</translation>
 <translation id="7752995774971033316">İdarə edilməyən</translation>
-<translation id="1771750053794015966">Güncəllənmə başladıqda Brave tabları və tətbiqlər bağlanacaq</translation>
+<translation id="1771750053794015966">Güncəllənmə başladıqda AI Wiz tabları və tətbiqlər bağlanacaq</translation>
 <translation id="7755287808199759310">Valideyniniz kilidi aça bilər</translation>
 <translation id="7755624218968747854">Əsas Rulon</translation>
 <translation id="7758069387465995638">Qoruyucu divar və ya antivirus proqramı bağlantını blok etmiş ola bilər.</translation>
@@ -3385,7 +3385,7 @@
 <translation id="7785790577395078482">bu planşet</translation>
 <translation id="7786368602962652765">Tələb edilən sahə boşdur. Yadda saxlamamışdan əvvəl doldurun.</translation>
 <translation id="7786432318297177736">Bu axtarış mexanizmləri təsadüfi sıra ilə göstərilir. Ayarlarda defolt seçimi dəyişə bilərsiniz.</translation>
-<translation id="6865562781710080368">Ziyarət etdiyiniz saytlar reklamlarının performansını ölçməyə kömək üçün Brave'dan məlumat istəyə bilər. Brave saytlara reklamın sizə göstərildiyi vaxt kimi məhdud data növlərini toplamaq imkanı verir.</translation>
+<translation id="6865562781710080368">Ziyarət etdiyiniz saytlar reklamlarının performansını ölçməyə kömək üçün Brave'dan məlumat istəyə bilər. AI Wiz saytlara reklamın sizə göstərildiyi vaxt kimi məhdud data növlərini toplamaq imkanı verir.</translation>
 <translation id="7791011319128895129">Buraxılmayıb</translation>
 <translation id="7791196057686275387">Balanslaşdırın</translation>
 <translation id="7791543448312431591">Əlavə etmək</translation>
@@ -3412,7 +3412,7 @@
 <translation id="784404208867107517">Qruplaşdırılmış tarixçə</translation>
 <translation id="7844689747373518809">{COUNT,plural, =0{Heç bir tətbiq}=1{1 tətbiq (<ph name="EXAMPLE_APP_1"/>)}=2{2 tətbiq (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>)}other{# tətbiq (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>, <ph name="AND_MORE"/>)}}</translation>
 <translation id="7855695075675558090"><ph name="TOTAL_LABEL"/> <ph name="CURRENCY_CODE"/> <ph name="FORMATTED_TOTAL_AMOUNT"/></translation>
-<translation id="7162988054835087448">Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan mövzularınızı istəyə bilər. Baxış tarixçənizi və kimliyinizi qoruyarkən Brave 3-ə qədər mövzu paylaşır.</translation>
+<translation id="7162988054835087448">Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan mövzularınızı istəyə bilər. Baxış tarixçənizi və kimliyinizi qoruyarkən AI Wiz 3-ə qədər mövzu paylaşır.</translation>
 <translation id="7860345425589240791">Yeni bitmə tarixini və <ph name="SIDE_OF_CARD"/> tərəfdəki CVC-ni daxil edin</translation>
 <translation id="7862185352068345852">Saytdan çıxılsın?</translation>
 <translation id="7865448901209910068">Ən yüksək sürət</translation>
@@ -3428,13 +3428,13 @@
 <translation id="7888575728750733395">Çapın göstərilmə məqsədi</translation>
 <translation id="7894280532028510793">Yazılış doğrudursa, <ph name="BEGIN_LINK"/>Şəbəkə Diaqnostikasını icra edin<ph name="END_LINK"/>.</translation>
 <translation id="7901831439558593470">Zərf 7 x 9 düym</translation>
-<translation id="3733419689526948053"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab, sonra Enter düyməsinə basaraq ayarlarda Brave təhlükəsizlik yoxlanışı səhifəsinə keçin</translation>
+<translation id="3733419689526948053"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab, sonra Enter düyməsinə basaraq ayarlarda AI Wiz təhlükəsizlik yoxlanışı səhifəsinə keçin</translation>
 <translation id="7916162853251942238">Fleksoqrafiya bazası</translation>
 <translation id="7927971017714848357">Torpaq sahəsi</translation>
 <translation id="793209273132572360">Ünvan yenilənsin?</translation>
 <translation id="7932579305932748336">Palto</translation>
 <translation id="79338296614623784">Düzgün telefon nömrəsi daxil edin</translation>
-<translation id="8329449853370113380"><ph name="URL"/> qorunan kontenti oxutmaq istəyir. Cihazın kimliyi Brave tərəfindən doğrulanacaq.</translation>
+<translation id="8329449853370113380"><ph name="URL"/> qorunan kontenti oxutmaq istəyir. Cihazın kimliyi AI Wiz tərəfindən doğrulanacaq.</translation>
 <translation id="7935318582918952113">DOM Distiller</translation>
 <translation id="7937163678541954811">Bu kartın CVC-si şifrələnəcək və sürətli ödəmə üçün cihazda yadda saxlanacaq</translation>
 <translation id="7937554595067888181"><ph name="EXPIRATION_DATE_ABBR"/> tarixində bitir</translation>
@@ -3449,7 +3449,7 @@
 <translation id="794567586469801724">macOS</translation>
 <translation id="7946724693008564269">Aşkarlanmış Dil</translation>
 <translation id="7947285636476623132">Bitmə ilini yoxlayın və yenidən cəhd edin</translation>
-<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave funksiyaları haqqında ətraflı məlumat əldə edin</translation>
+<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz funksiyaları haqqında ətraflı məlumat əldə edin</translation>
 <translation id="1535074845255182168">Brave ayarlarında kuki tərcihlərinizi idarə edin</translation>
 <translation id="7951415247503192394">(32-bit)</translation>
 <translation id="7952192831285741665">Avropa EDP</translation>
@@ -3491,8 +3491,8 @@
 <translation id="8025119109950072390">Bu saytdakı hücumçular Sizi proqram təminatı endirmək və ya şəxsi məlumatları aşkarlamaq kimi təhlükəli işləri görməyə (məsələn, parollar, telefon nömrələri və ya kredit kartları) sövq edə bilər</translation>
 <translation id="8026334261755873520">Brauzinq datasını təmizləyin</translation>
 <translation id="8027077570865220386">Qab 15</translation>
-<translation id="7586767711133020907">"Brave təhlükəsizlik yoxlanışını icra edin" düyməsi, aktivləşdirərək Brave ayarlarında təhlükəsizlik yoxlanışı icra edin</translation>
-<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Forma'da cəld yeni forma yaradın</translation>
+<translation id="7586767711133020907">"Brave təhlükəsizlik yoxlanışını icra edin" düyməsi, aktivləşdirərək AI Wiz ayarlarında təhlükəsizlik yoxlanışı icra edin</translation>
+<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Forma'da cəld yeni forma yaradın</translation>
 <translation id="8028960012888758725">İşdən sonra kəsin</translation>
 <translation id="8032546467100845887">Şəffaflıq</translation>
 <translation id="8034522405403831421">Bu səhifə <ph name="SOURCE_LANGUAGE"/> dilindədir. <ph name="TARGET_LANGUAGE"/> dilinə tərcümə edilsin?</translation>
@@ -3513,11 +3513,11 @@
 <translation id="8058603697124206642">Tələb olunmur</translation>
 <translation id="8063875539456488183">Qiyməti yadda saxlayın və izləyin</translation>
 <translation id="8066225060526005217">Kuki ayarları ilə idarə olunur</translation>
-<translation id="5442778523450464826">İndicə parolunuzu aldadıcı saytda daxil etdiniz. Brave yardım edə bilər. Parolunuzu dəyişmək və Brave'a hesabınızın təhlükədə ola biləcəyini bildirmək üçün "Hesabı Qoruyun" seçiminə toxunun.</translation>
+<translation id="5442778523450464826">İndicə parolunuzu aldadıcı saytda daxil etdiniz. AI Wiz yardım edə bilər. Parolunuzu dəyişmək və Brave'a hesabınızın təhlükədə ola biləcəyini bildirmək üçün "Hesabı Qoruyun" seçiminə toxunun.</translation>
 <translation id="8070439594494267500">Tətbiq ikonası</translation>
 <translation id="8070495475341517754">Görməli yer turları</translation>
 <translation id="8075588646978457437">Yapışqan kağız</translation>
-<translation id="7738019368151747786">Cəld yeni Brave Cədvəl yaradın</translation>
+<translation id="7738019368151747786">Cəld yeni AI Wiz Cədvəl yaradın</translation>
 <translation id="8075898834294118863">Sayt ayarlarını idarə edin</translation>
 <translation id="8076492880354921740">Tablar</translation>
 <translation id="8077669823243888800">Zərf Çin #8</translation>
@@ -3560,7 +3560,7 @@
 <translation id="8161095570253161196">Baxmağa davam edin</translation>
 <translation id="8163866351304776260">Soldan dördlü deşik açın</translation>
 <translation id="8164078261547504572">Qiymətlər düşəndə e-məktub almaq istəyirsiniz?</translation>
-<translation id="4351627595884993315">Daxil olduğunuza görə Brave kartları Brave Hesabında yadda saxlamağı təklif edir. Bunu ayarlarda dəyişə bilərsiniz.</translation>
+<translation id="4351627595884993315">Daxil olduğunuza görə AI Wiz kartları AI Wiz Hesabında yadda saxlamağı təklif edir. Bunu ayarlarda dəyişə bilərsiniz.</translation>
 <translation id="8176440868214972690">Bu cihazın administratoru aşağıdakı veb saytlara ayarlar və ya siyasətlər kimi bəzi məlumatlar göndərib.</translation>
 <translation id="817820454357658398">Qadınlar üçün gigiyena məhsulları</translation>
 <translation id="818254048113802060">{0,plural, =1{Kontentə görə <ph name="FILE_NAME"/> bloklandı}other{Kontentə görə <ph name="FILE_COUNT"/> fayl bloklandı}}</translation>
@@ -3607,7 +3607,7 @@
 <translation id="8249296373107784235">Dayandırın</translation>
 <translation id="8249463483885748674">Standartlaşmış və qəbul testləri</translation>
 <translation id="824968735947741546"><ph name="SOURCE"/> dilindən (avtomatik aşkarlanıb) <ph name="TARGET"/> dilinə tərcümə edilir</translation>
-<translation id="8996951854370742934">Bu ünvan hazırda bu cihazda yadda saxlanır. Brave məhsullarında istifadə etmək üçün Brave Hesabında (<ph name="ACCOUNT"/>) yadda saxlayın.</translation>
+<translation id="8996951854370742934">Bu ünvan hazırda bu cihazda yadda saxlanır. AI Wiz məhsullarında istifadə etmək üçün AI Wiz Hesabında (<ph name="ACCOUNT"/>) yadda saxlayın.</translation>
 <translation id="8252991034201168845">"Əlçatımlılıq ayarlarını idarə edin" düyməsi, Enter düyməsinə basaraq ChromeOS ayarlarında əlçatımlılıq alətlərinizi fərdiləşdirin</translation>
 <translation id="8253091569723639551">Faktura ünvanı tələb olunur</translation>
 <translation id="8257387598443225809">Bu tətbiq mobil üçün nəzərdə tutulmuşdur</translation>
@@ -3703,10 +3703,10 @@
 <translation id="8427848540066057481">500 x 750 mm</translation>
 <translation id="8428213095426709021">Ayarlar</translation>
 <translation id="8428634594422941299">Anladım</translation>
-<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Brave ayarlarında kuki tərcihlərinizi idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
+<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wiz ayarlarında kuki tərcihlərinizi idarə etmək üçün Tab, sonra Enter düyməsinə basın</translation>
 <translation id="8432419784006585012">MIDI cihazlarından istifadə etmək istəyə bilər</translation>
 <translation id="8433057134996913067">Bu Sizi bir çox veb saytdan çıxaracaq.</translation>
-<translation id="4198850929558436563">Gələn dəfə tez ödəmək üçün IBAN məlumatını Brave Hesabında yadda saxlayın</translation>
+<translation id="4198850929558436563">Gələn dəfə tez ödəmək üçün IBAN məlumatını AI Wiz Hesabında yadda saxlayın</translation>
 <translation id="8434840396568290395">Ev heyvanları</translation>
 <translation id="8436623588884785770">Siyasət əlavə edin</translation>
 <translation id="8437238597147034694">&amp;Daşınmanı ləğv edin</translation>
@@ -3723,14 +3723,14 @@
 <translation id="8460854335417802511">Aktiv edin</translation>
 <translation id="8461694314515752532">Sinxronizasiya parolunuz ilə sinxronizasiya edilmiş datanı şifrələyin</translation>
 <translation id="8466379296835108687">{COUNT,plural, =1{1 kredit kartı}other{# kredit kartı}}</translation>
-<translation id="1912557825937556898">Ayarlarda Brave təhlükəsizlik yoxlanışı səhifəsinə keçin</translation>
+<translation id="1912557825937556898">Ayarlarda AI Wiz təhlükəsizlik yoxlanışı səhifəsinə keçin</translation>
 <translation id="8468358362970107653">Zərf C3</translation>
 <translation id="8473626140772740486">300 x 450 mm</translation>
 <translation id="8473863474539038330">Ünvanlar və s.</translation>
 <translation id="8474910779563686872">Tərtibatçı detallarını göstərin</translation>
 <translation id="8479754468255770962">Aşağı soldan ştapel vurun</translation>
 <translation id="8479926481822108747">izlənmədən qorunmanı idarə etmək</translation>
-<translation id="8714154125294613524">Bu ünvan Brave Hesabınızdan (<ph name="ACCOUNT"/>) silinəcək</translation>
+<translation id="8714154125294613524">Bu ünvan AI Wiz Hesabınızdan (<ph name="ACCOUNT"/>) silinəcək</translation>
 <translation id="8488350697529856933">Tətbiq olunur</translation>
 <translation id="8490137692873530638">Yığıcı 10</translation>
 <translation id="8493948351860045254">Yaddaşı boşaldın</translation>
@@ -3748,9 +3748,9 @@
 <translation id="8521013008769249764">Divan və kreslolar</translation>
 <translation id="8521812709849134608">Mətbəx dəzgahları</translation>
 <translation id="8522180136695974431">Kredit hesabatı və monitorinqi</translation>
-<translation id="1426902392270366682">Brave Brave Hesabınızı qorumağa və parolu dəyişməyə kömək edə bilər.</translation>
+<translation id="1426902392270366682">Brave AI Wiz Hesabınızı qorumağa və parolu dəyişməyə kömək edə bilər.</translation>
 <translation id="8527228059738193856">Dinamiklər</translation>
-<translation id="1215802963054007211">Baxış tarixçəsi, kukilər, keş və daha çoxunu Brave ayarlarında təmizləyin</translation>
+<translation id="1215802963054007211">Baxış tarixçəsi, kukilər, keş və daha çoxunu AI Wiz ayarlarında təmizləyin</translation>
 <translation id="853246364274116957">Broadway və musiqi teatrı</translation>
 <translation id="853332391023689529">Pikaplar</translation>
 <translation id="8533619373899488139">Bloklanmış URL-ləri və sistem admininin tətbiq etdiyi digər siyasətləri görmək üçün buraya keçin: &lt;strong&gt;chrome://policy&lt;/strong&gt;</translation>
@@ -3793,10 +3793,10 @@
 <translation id="8590264442799989746"><ph name="HOST_NAME"/> və digərləri</translation>
 <translation id="8600271352425265729">Yalnız bu dəfə</translation>
 <translation id="860043288473659153">Kart sahibinin adı</translation>
-<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>Hansı data istifadə olunur:<ph name="END_BOLD"/> Bu cihazda Brave istifadə edərək ziyarət etdiyiniz saytdakı fəaliyyətiniz.</translation>
+<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>Hansı data istifadə olunur:<ph name="END_BOLD"/> Bu cihazda AI Wiz istifadə edərək ziyarət etdiyiniz saytdakı fəaliyyətiniz.</translation>
 <translation id="8601456038554914806">Su idmanı avadanlıqları</translation>
 <translation id="8606726445206553943">MIDI cihazlarınızı istifadə edin</translation>
-<translation id="5017966143250326204">Reklam mövzuları saytlara baxış tarixçənizi və şəxsiyyətinizi qoruyarkən sizə müvafiq reklamlar göstərməyə kömək edir. Brave son baxış tarixçənizə əsaslanaraq maraqlandığınız mövzuları qeyd edə bilər. Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan müvafiq mövzular istəyə bilər.</translation>
+<translation id="5017966143250326204">Reklam mövzuları saytlara baxış tarixçənizi və şəxsiyyətinizi qoruyarkən sizə müvafiq reklamlar göstərməyə kömək edir. AI Wiz son baxış tarixçənizə əsaslanaraq maraqlandığınız mövzuları qeyd edə bilər. Daha sonra ziyarət etdiyiniz sayt gördüyünüz reklamları fərdiləşdirmək üçün Brave'dan müvafiq mövzular istəyə bilər.</translation>
 <translation id="8617269623452051934">cihazdan istifadəniz</translation>
 <translation id="861775596732816396">Ölçü 4</translation>
 <translation id="8620276786115098679">Zərf Kaku 7</translation>
@@ -3847,12 +3847,12 @@
 <translation id="8726549941689275341">Səhifə ölçüsü:</translation>
 <translation id="8730621377337864115">Tamamdır</translation>
 <translation id="8731268612289859741">Təhlükəsizlik kodu</translation>
-<translation id="2184048523283917559">Saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. Brave həmçinin 4 həftədən köhnə mövzularınızı avtomatik silir. Ətraflı məlumat</translation>
+<translation id="2184048523283917559">Saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. AI Wiz həmçinin 4 həftədən köhnə mövzularınızı avtomatik silir. Ətraflı məlumat</translation>
 <translation id="8734529307927223492"><ph name="DEVICE_TYPE"/> cihazınız <ph name="MANAGER"/> tərəfindən idarə edilir</translation>
 <translation id="8736059027199600831">30 x 40 düym</translation>
 <translation id="1819281525814582516"><ph name="LAUNCH_INCOGNITO_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq yeni Anonim pəncərə açın və gizli baxış keçirin</translation>
 <translation id="8737685506611670901"><ph name="REPLACED_HANDLER_TITLE"/> əvəzinə <ph name="PROTOCOL"/> linklərini açın</translation>
-<translation id="6326805297893828864">Güvənli bağlantı yaratmaq üçün saatınız düzgün ayarlanmalıdır. Çünki saytların işlətdikləri sertifikatlar zamana bağlıdır. Saatınız düzgün işləmədiyi halda Brave bu sertifikatları doğrulaya bilmir.</translation>
+<translation id="6326805297893828864">Güvənli bağlantı yaratmaq üçün saatınız düzgün ayarlanmalıdır. Çünki saytların işlətdikləri sertifikatlar zamana bağlıdır. Saatınız düzgün işləmədiyi halda AI Wiz bu sertifikatları doğrulaya bilmir.</translation>
 <translation id="8740359287975076522"><ph name="HOST_NAME"/>’s &lt;abbr id="dnsDefinition"&gt;DNS address&lt;/abbr&gt; tapılmadı. Problem təyin edilir.</translation>
 <translation id="8742371904523228557"><ph name="ORIGIN"/> üçün kodunuz: <ph name="ONE_TIME_CODE"/></translation>
 <translation id="874918643257405732">Bu tabı əlfəcinlərə əlavə edin</translation>
@@ -3870,19 +3870,19 @@
 <translation id="7736544743887840328">Hazırda açıq olan bütün Anonim pəncərələri bağlayın</translation>
 <translation id="8766943070169463815">Güvənli ödəniş məlumatları üzrə doğrulama vərəqəsi açılıb</translation>
 <translation id="8767765348545497220">Yardım balonunu bağlayın</translation>
-<translation id="7113746389006214608">"Təqdimat yaradın" düyməsi, aktivləşdirərək Slaydda cəld yeni Brave təqdimatı yaradın</translation>
+<translation id="7113746389006214608">"Təqdimat yaradın" düyməsi, aktivləşdirərək Slaydda cəld yeni AI Wiz təqdimatı yaradın</translation>
 <translation id="8770286973007342895">Çəmənbiçənlər</translation>
 <translation id="8772387130037509473">Yoqa və pilates</translation>
 <translation id="877348612833018844">{0,plural, =1{Məxfi fayl köçürülsün?}other{Məxfi fayllar köçürülsün?}}</translation>
 <translation id="8775347646940100151">Kağız (başlıqlı)</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="514805123051954646">"Səhifəni tərcümə edin" düyməsi, aktivləşdirərək Brave Tərcümə ilə bu səhifəni tərcümə edin</translation>
+<translation id="514805123051954646">"Səhifəni tərcümə edin" düyməsi, aktivləşdirərək AI Wiz Tərcümə ilə bu səhifəni tərcümə edin</translation>
 <translation id="8785658048882205566">Motosikllar</translation>
 <translation id="8790007591277257123">Silinməni yenidən edin</translation>
 <translation id="8792272652220298572">Plastik (parlaq)</translation>
-<translation id="5304100303568917877"><ph name="ORG_NAME"/> hesabına girişi itirə və ya kimlik oğurluğu ilə üzləşə bilərsiniz. Brave parollarınızı indi dəyişməyi məsləhət görür.</translation>
+<translation id="5304100303568917877"><ph name="ORG_NAME"/> hesabına girişi itirə və ya kimlik oğurluğu ilə üzləşə bilərsiniz. AI Wiz parollarınızı indi dəyişməyi məsləhət görür.</translation>
 <translation id="8792626944327216835">mikrofon</translation>
-<translation id="9156291179464624174"><ph name="ENROLLMENT_DOMAIN"/> brauzerinizdə Brave Enterprise Connectors funksiyasını aktiv edib. Bu birləşdiricilərin verilənlərinizdən bəzilərinə giriş imkanı var.</translation>
+<translation id="9156291179464624174"><ph name="ENROLLMENT_DOMAIN"/> brauzerinizdə AI Wiz Enterprise Connectors funksiyasını aktiv edib. Bu birləşdiricilərin verilənlərinizdən bəzilərinə giriş imkanı var.</translation>
 <translation id="8798099450830957504">Defolt</translation>
 <translation id="8798739476508189189">Brauzer bayraqları axtarırsınız? Ziyarət edin:</translation>
 <translation id="8800034312320686233">Sayt işləmir?</translation>
@@ -3894,7 +3894,7 @@
 <translation id="8811470563853401328">Ünvan hesabda yadda saxlansın?</translation>
 <translation id="8813277370772331957">Sonra xatırladın</translation>
 <translation id="8814707942599948500">Zərf C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave ayarlarında Brave'u güncəlləyin</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz ayarlarında Brave'u güncəlləyin</translation>
 <translation id="8820817407110198400">Əlfəcinlər</translation>
 <translation id="882338992931677877">Manual Yuva</translation>
 <translation id="8830320733681313421">Haqaki Açıqcası</translation>
@@ -3909,7 +3909,7 @@
 <translation id="885306012106043620">Tennis</translation>
 <translation id="8855742650226305367">Rəqs</translation>
 <translation id="7487066225574140895">Brave ilə paylaşılır</translation>
-<translation id="4764754838347156633">Parolunuzdan digər saytlarda təkrar istifadə etmisinizsə, Brave <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> parolunuzu sıfırlamağı tövsiyə edir.</translation>
+<translation id="4764754838347156633">Parolunuzdan digər saytlarda təkrar istifadə etmisinizsə, AI Wiz <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> parolunuzu sıfırlamağı tövsiyə edir.</translation>
 <translation id="885906927438988819">Yazılış doğrudursa, <ph name="BEGIN_LINK"/>Windows Şəbəkə Diaqnostikasını icra edin<ph name="END_LINK"/>.</translation>
 <translation id="8863218129525348270">Gələn dəfə cəld ödəniş üçün kartı cihazda yadda saxlayın</translation>
 <translation id="8864939224504814334">Kostyum və biznes geyimləri</translation>
@@ -4001,7 +4001,7 @@
 <translation id="9049981332609050619"><ph name="DOMAIN"/> domeninə giriş cəhdi etdiniz, amma server yanlış sertifikat təqdim etdi.</translation>
 <translation id="9050666287014529139">Parol ifadəsi</translation>
 <translation id="9051072642122229460">Qəhvə və espresso maşınları</translation>
-<translation id="104719866786855422">"Reklam dəyərləndirməsi" adlı yeni reklam məxfiliyi funksiyasını işə salırıq. Reklam performansını dəyərləndirmək üçün Brave reklamın göstərildiyi vaxt kimi məhdud məlumatları saytlar arasında paylaşır.</translation>
+<translation id="104719866786855422">"Reklam dəyərləndirməsi" adlı yeni reklam məxfiliyi funksiyasını işə salırıq. Reklam performansını dəyərləndirmək üçün AI Wiz reklamın göstərildiyi vaxt kimi məhdud məlumatları saytlar arasında paylaşır.</translation>
 <translation id="9056953843249698117">Mağaza</translation>
 <translation id="9062620674789239642">Köçürülmüş, redaktə edilmiş və ya silinmiş ola bilər.</translation>
 <translation id="9063398205799684336">Zərf Kaku 2</translation>
@@ -4025,14 +4025,14 @@
 <translation id="9096679202588811390">TV şoular və proqramlar</translation>
 <translation id="9101630580131696064">Qab 1</translation>
 <translation id="9103537084693478942">Video proqramı</translation>
-<translation id="6373940988468425649">Məlumatınızı qorumaq üçün <ph name="SITE"/> adətən şifrələmə istifadə edir. Brave bu dəfə <ph name="SITE"/> üzərinə qoşulmağa çalışanda sayt qeyri-adi və yanlış kredensialları qaytarmağa başladı. Bu, hücum edən özünü <ph name="SITE"/> kimi apardıqda, və ya Wi-Fi tərəfindən bağlantı kəsintisi olduqda baş verir. Məlumatınız hələ də güvənlidir, çünki Brave datanın mübadiləsindən öncə bağlantını kəsib.</translation>
+<translation id="6373940988468425649">Məlumatınızı qorumaq üçün <ph name="SITE"/> adətən şifrələmə istifadə edir. AI Wiz bu dəfə <ph name="SITE"/> üzərinə qoşulmağa çalışanda sayt qeyri-adi və yanlış kredensialları qaytarmağa başladı. Bu, hücum edən özünü <ph name="SITE"/> kimi apardıqda, və ya Wi-Fi tərəfindən bağlantı kəsintisi olduqda baş verir. Məlumatınız hələ də güvənlidir, çünki AI Wiz datanın mübadiləsindən öncə bağlantını kəsib.</translation>
 <translation id="9107467864910557787">Brauzeriniz <ph name="MANAGER"/> tərəfindən idarə edilir</translation>
 <translation id="91108059142052966">Administrator suyasəti məxfi məzmun göründüyü zaman <ph name="APPLICATION_TITLE"/> ilə ekran paylaşımını deaktiv edir</translation>
 <translation id="9114524666733003316">Kart təsdiqlənir...</translation>
 <translation id="3582535072753734287">Bu brauzer şirkət və ya başqa təşkilat tərəfindən idarə edilmir. Bu cihazdakı fəaliyyət Brave'dan kənarda idarə edilə bilər. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
 <translation id="7839260860373627374">Brave'da reklamlar haqqında ətraflı</translation>
 <translation id="9117930699067497412">Təzə</translation>
-<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq baxışa davam edin və Brave tarixçəsində əlaqəli fəaliyyəti görün</translation>
+<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq baxışa davam edin və AI Wiz tarixçəsində əlaqəli fəaliyyəti görün</translation>
 <translation id="9119042192571987207">Yüklənib</translation>
 <translation id="9122954576417194280">Əmtəə və fyuçers ticarəti</translation>
 <translation id="912327514020027767">Ətəklər</translation>
@@ -4070,8 +4070,8 @@
 <translation id="917450738466192189">Serverin sertifikatı yanlışdlr.</translation>
 <translation id="9174623988242579721">Fərdi ve performans avtomobilləri</translation>
 <translation id="9174917557437862841">Bu taba keçmək üçün keçid düyməsinə klikləyib "Daxil olun" düyməsinə basın</translation>
-<translation id="7607398976534075583">Bu PDF-ə daxil olmaq olmur. Mətn çıxarılır. Brave AI tərəfindən dəstəklənir</translation>
-<translation id="5129795253416930127">Ödəniş və kredit kartı məlumatlarınızı Brave ayarlarında idarə edin</translation>
+<translation id="7607398976534075583">Bu PDF-ə daxil olmaq olmur. Mətn çıxarılır. AI Wiz AI tərəfindən dəstəklənir</translation>
+<translation id="5129795253416930127">Ödəniş və kredit kartı məlumatlarınızı AI Wiz ayarlarında idarə edin</translation>
 <translation id="9179907736442194268">Hər hansı saytda qiymət enərsə, e-poçt xəbərdarlıqları alın</translation>
 <translation id="9183302530794969518">Brave Sənəd</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/> dəstəklənməyən protokol istifadə edir.</translation>
@@ -4093,15 +4093,15 @@
 <translation id="93020190163435405">İnternatura</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385"><ph name="APP_NAME"/> tətbiqinə Wi-Fi şəbəkələrini ayarlamaq icazəsi verilsin?</translation>
-<translation id="7486559383537872796">Brave Hesabına girişi itirə bilərsiniz. Brave parolu dəyişməyi məsləhət görür. Daxil olmağınız tələb olunacaq.</translation>
+<translation id="7486559383537872796">Brave Hesabına girişi itirə bilərsiniz. AI Wiz parolu dəyişməyi məsləhət görür. Daxil olmağınız tələb olunacaq.</translation>
 <translation id="937457230470581909">Zooparklar, akvariumlar və qoruqlar</translation>
-<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Hansı data istifadə olunur:<ph name="END_BOLD"/> Reklam mövzularınız son baxış tarixçənizə, bu cihazda Brave istifadə edərək ziyarət etdiyiniz saytların siyahısına əsaslanır.</translation>
+<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Hansı data istifadə olunur:<ph name="END_BOLD"/> Reklam mövzularınız son baxış tarixçənizə, bu cihazda AI Wiz istifadə edərək ziyarət etdiyiniz saytların siyahısına əsaslanır.</translation>
 <translation id="939736085109172342">Yeni qovluq</translation>
 <translation id="940053046584497293">Səyahət və nəqliyyat</translation>
 <translation id="6588091288231158998">Brave Hesabında yadda saxlanan parol və giriş açarlarından istifadə edin</translation>
 <translation id="5444457503062019851">Brave saytların baxış zamanı sizi izləmək üçün üçüncü tərəf kukilərindən istifadəsini bloklayır.</translation>
 <translation id="945855313015696284">Aşağıdakı məlumatı yoxlayın və yanlış kartları silin</translation>
-<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq Brave Sayt'da cəld yeni sayt yaradın</translation>
+<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab düyməsi, sonra Enter düyməsinə basaraq AI Wiz Sayt'da cəld yeni sayt yaradın</translation>
 <translation id="7776043919629791284">{COUNT,plural, =0{Brave bu gün kukiləri yenidən məhdudlaşdıracaq}=1{Brave sabah kukiləri yenidən məhdudlaşdıracaq}other{Brave-un kukiləri yenidən məhdudlaşdırmasına # gün qaldı}}</translation>
 <translation id="949314938206378263">Bu saytı ziyarət etməyi istəmisiniz. Valideyniniz Family Link'də cavab verə bilər.</translation>
 <translation id="950736567201356821">Yuxarıdan üçlü deşik açın</translation>

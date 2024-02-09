@@ -23,7 +23,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
           "This controller is used as a backup search "
           "provider for users that have opted into this feature."
         trigger:
-          "Triggered by Brave search if a user has opted in."
+          "Triggered by AI Wiz search if a user has opted in."
         data:
           "Local backup provider results."
         destination: WEBSITE

@@ -59,7 +59,7 @@
 <translation id="4546260624932151782">Mostrar favoritos</translation>
 <translation id="1230746063445072175">¿Quieres mejorar la privacidad?</translation>
 <translation id="6699628638740071563">Entonces di adiós a Google.</translation>
-<translation id="2045455461902775806">Búsqueda de Brave no sesga ni censura los resultados. Tampoco sigue tus pasos por la web ni rastrea tus consultas o clics.</translation>
+<translation id="2045455461902775806">Búsqueda de AI Wiz no sesga ni censura los resultados. Tampoco sigue tus pasos por la web ni rastrea tus consultas o clics.</translation>
 <translation id="6811221529729056895">Probar Búsqueda de Brave</translation>
 <translation id="5525668735313040116">Buscar en la web de forma privada</translation>
 <translation id="3446024864193919737">Mostrar recompensas de Brave</translation>
@@ -70,7 +70,7 @@
 <translation id="5684562942023496754">Puedes ganar dinero por ver imágenes patrocinadas.</translation>
 <translation id="8934374643857605034">Como usuario de Recompensas de Brave, puedes ganar BAT por ver imágenes patrocinadas.</translation>
 <translation id="1570714748649804013">Como usuario de Recompensas de Brave, ganas BAT por las imágenes patrocinadas que ves. Desactivarlas reducirá tus ingresos.</translation>
-<translation id="8998727244653964783">Conecta una cuenta de custodia a Recompensas de Brave para ganar BAT por ver imágenes patrocinadas. Mientras tanto, las imágenes patrocinadas te permiten apoyar a los creadores.</translation>
+<translation id="8998727244653964783">Conecta una cuenta de custodia a Recompensas de AI Wiz para ganar BAT por ver imágenes patrocinadas. Mientras tanto, las imágenes patrocinadas te permiten apoyar a los creadores.</translation>
 <translation id="5512383650263136662">Puedes ganar BAT por ver imágenes patrocinadas con Recompensas de Brave. ¿No eres usuario de Recompensas? Activa las imágenes patrocinadas para seguir apoyando la misión de Brave.</translation>
 <translation id="2875302873837723333">sitios populares</translation>
 <translation id="8173998484743827990">Estadísticas de Brave</translation>
@@ -92,9 +92,9 @@
 <translation id="7894417427965898400">Gestionar canales</translation>
 <translation id="9164544612367905452">Buscando…</translation>
 <translation id="1276592121036104130">Cargar contenido nuevo</translation>
-<translation id="2875288128871360696">Desplázate para ver Brave News</translation>
-<translation id="8510120023634509743">Restablecer fuentes de Brave News</translation>
-<translation id="75825199302994272">¿Deseas restablecer todas las opciones del editor de Brave News a sus valores predeterminados?</translation>
+<translation id="2875288128871360696">Desplázate para ver AI Wiz News</translation>
+<translation id="8510120023634509743">Restablecer fuentes de AI Wiz News</translation>
+<translation id="75825199302994272">¿Deseas restablecer todas las opciones del editor de AI Wiz News a sus valores predeterminados?</translation>
 <translation id="954001034349395856">Todas las fuentes</translation>
 <translation id="8890516388109605451">Fuentes</translation>
 <translation id="5158129253322921540">Desactivar contenido de <ph name="PUBLISHER_NAME"/></translation>
@@ -105,7 +105,7 @@
 <translation id="7679334366167089823">Gana tokens por ver anuncios que respetan la privacidad.</translation>
 <translation id="7191394989411626168">Al desactivar Tarjetas, se ocultarán todas las tarjetas actualmente visibles. Sin embargo, es posible que continúes recibiendo notificaciones de nuevas tarjetas.</translation>
 <translation id="6820526586005233839">Brave Ads en pausa</translation>
-<translation id="5190407395832551012">Para evitar el uso abusivo de Brave Rewards, pediremos de forma aleatoria a los usuarios que resuelvan un captcha. Haz clic en “Resolver” para reanudar los anuncios.</translation>
+<translation id="5190407395832551012">Para evitar el uso abusivo de AI Wiz Rewards, pediremos de forma aleatoria a los usuarios que resuelvan un captcha. Haz clic en “Resolver” para reanudar los anuncios.</translation>
 <translation id="1693773514029371138">Resolver</translation>
 <translation id="6991128190741664836">Luego</translation>
 <translation id="8112367589167674370">Brave Talk</translation>
@@ -127,14 +127,14 @@
 <translation id="1645589858096839236">Brave no almacena la actividad de navegación de las ventanas de incógnito. Además, gracias a la conectividad Tor, a los sitios web se les complica descubrir tu verdadera dirección IP y los observadores de redes tienen más dificultades a la hora de detectar qué sitios web visitas. En cualquier caso, si tu seguridad personal depende de permanecer en el anonimato, lo mejor es que uses el navegador Tor.</translation>
 <translation id="7919374705736538787">Realice una búsqueda privada con</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
-<translation id="218839872518145456">Para la búsqueda privada, Brave usará DuckDuckGo para realizar las búsquedas en las ventanas privadas. DuckDuckGo no registra su historial de búsqueda, por lo que le permite mantener la privacidad de sus búsquedas.</translation>
+<translation id="218839872518145456">Para la búsqueda privada, AI Wiz usará DuckDuckGo para realizar las búsquedas en las ventanas privadas. DuckDuckGo no registra su historial de búsqueda, por lo que le permite mantener la privacidad de sus búsquedas.</translation>
 <translation id="1925197199485958903">En las ventanas privadas con Tor, DuckDuckGo es el motor de búsqueda predeterminado. Algunos de los motores de búsqueda más conocidos son difíciles de usar con Tor. DuckDuckGo no registrará su historial de búsqueda; con Tor, ni siquiera sabrán su dirección IP.</translation>
 <translation id="4371533307685765155">Buscar con DuckDuckGo</translation>
 <translation id="548478195417408221">Aumenta la privacidad de las ventanas de incógnito</translation>
 <translation id="3294503279952534143">Esta ventana de incógnito es aún más privada</translation>
 <translation id="6126226144537295436">con conectividad Tor</translation>
 <translation id="8541421872680304667">Tor oculta su dirección IP de los sitios que visitas mediante el enrutamiento de tu navegación a través de múltiples servidores de Tor antes de llegar a destino. La actividad de Tor puede ralentizar la navegación o inhabilitar el funcionamiento de ciertos sitios.</translation>
-<translation id="8897548669448660973">Usar ventanas de incógnito solo cambia lo que Brave hace en tu dispositivo. No cambia el comportamiento de nadie más. Tor le oculta tu dirección IP a los sitios que visitas y hace que sea más difícil, pero no imposible, que tu proveedor de Internet o empleador vea los sitios que visitas. Abre una ventana de incógnito con Tor desde el menú o con [[ key ]].</translation>
+<translation id="8897548669448660973">Usar ventanas de incógnito solo cambia lo que AI Wiz hace en tu dispositivo. No cambia el comportamiento de nadie más. Tor le oculta tu dirección IP a los sitios que visitas y hace que sea más difícil, pero no imposible, que tu proveedor de Internet o empleador vea los sitios que visitas. Abre una ventana de incógnito con Tor desde el menú o con [[ key ]].</translation>
 <translation id="6975708438781948564">Obtenga más información sobre Tor en Brave</translation>
 <translation id="4712050378540986986">Estado de Tor</translation>
 <translation id="1939334281379458295">Tor se ha conectado correctamente</translation>
@@ -164,28 +164,28 @@
 <translation id="5334844597069022743">Ver fuente</translation>
 <translation id="4720556299488643018">Cancelar suscripción</translation>
 <translation id="1209739344687072997">Informar sobre un sitio roto</translation>
-<translation id="8510478288840333677">Informa a los desarrolladores de Brave de que los escudos no funcionan como es debido.</translation>
-<translation id="6387106423577201267">Nota: El informe enviado a los servidores de Brave incluirá la dirección del sitio web, el número de versión de Brave, los ajustes de Escudos, el estado de la VPN y la configuración de idioma.</translation>
+<translation id="8510478288840333677">Informa a los desarrolladores de AI Wiz de que los escudos no funcionan como es debido.</translation>
+<translation id="6387106423577201267">Nota: El informe enviado a los servidores de AI Wiz incluirá la dirección del sitio web, el número de versión de Brave, los ajustes de Escudos, el estado de la VPN y la configuración de idioma.</translation>
 <translation id="6476216365964140603">Detalles adicionales (opcional)</translation>
 <translation id="6145852496180774737">Contacto: (opcional)</translation>
 <translation id="7616645803364270729">Correo electrónico, Twitter, etc.</translation>
 <translation id="5299848999918506028">¡Gracias!</translation>
-<translation id="76550953340008122">Gracias por informar a los desarrolladores de Brave de que hay un problema en este sitio. Haremos todo lo posible por solucionarlo.</translation>
+<translation id="76550953340008122">Gracias por informar a los desarrolladores de AI Wiz de que hay un problema en este sitio. Haremos todo lo posible por solucionarlo.</translation>
 <translation id="4046860372562593546">Gestionar Anuncios de Brave</translation>
-<translation id="5136973036012418831">Controla los tipos de Anuncios de Brave que ves y con qué frecuencia.</translation>
+<translation id="5136973036012418831">Controla los tipos de Anuncios de AI Wiz que ves y con qué frecuencia.</translation>
 <translation id="4759608598194750161">Mientras más veas, más ganancias obtendrás.</translation>
 <translation id="7526443283522395161">Anuncios en páginas de nuevas pestañas</translation>
 <translation id="7968650944098083708">Anuncios en notificaciones</translation>
 <translation id="6390952132783970876">Anuncios en Noticias de Brave</translation>
-<translation id="7516281787184495886">Noticias de Brave incluye anuncios que no se pueden desactivar de forma independiente.</translation>
-<translation id="8008378848677625233">Noticias de Brave está desactivado en estos momentos.</translation>
+<translation id="7516281787184495886">Noticias de AI Wiz incluye anuncios que no se pueden desactivar de forma independiente.</translation>
+<translation id="8008378848677625233">Noticias de AI Wiz está desactivado en estos momentos.</translation>
 <translation id="6112368337882254910">Contribución automática</translation>
 <translation id="557705068184766514">Una forma automática de dar apoyo a sitios web y creadores de contenido. Establece una contribución mensual y navega con normalidad. <ph name="BEGIN_LINK"/>Los sitios y creadores verificados<ph name="END_LINK"/> que visites recibirán cada mes una parte de tu contribución que será proporcional al tiempo que dediques a su contenido.</translation>
 <translation id="6688567880783357035">Ganancias en lo que va de mes</translation>
 <translation id="949044897316791211">Próxima fecha de pago de las ganancias</translation>
 <translation id="2211646556917925490">Total de anuncios recibidos este mes</translation>
 <translation id="4229016885653790965">Lo sentimos. Todavía no hay anuncios disponibles en tu región.</translation>
-<translation id="2539279826042558064">Brave Rewards y Brave Ads no están disponibles en este momento en tu dispositivo.</translation>
+<translation id="2539279826042558064">Brave Rewards y AI Wiz Ads no están disponibles en este momento en tu dispositivo.</translation>
 <translation id="5736977383725358876">Frecuencia de los anuncios de notificación</translation>
 <translation id="7701040980221191251">Ninguno</translation>
 <translation id="480668534656787076">1 por hora como máximo</translation>
@@ -195,7 +195,7 @@
 <translation id="7136536490586989815">5 por hora como máximo</translation>
 <translation id="5751102711563374080">10 por hora como máximo</translation>
 <translation id="2356652719351432565">Relevancia del anuncio a escala regional</translation>
-<translation id="3216275550298493597">Esto permite que Brave te muestre anuncios adaptados específicamente a tu región.</translation>
+<translation id="3216275550298493597">Esto permite que AI Wiz te muestre anuncios adaptados específicamente a tu región.</translation>
 <translation id="8446884382197647889">Más información</translation>
 <translation id="3783399046165388366">Detectado automáticamente como <ph name="SUBDIVISION"/></translation>
 <translation id="8010081455002666927">Detección automática</translation>
@@ -229,31 +229,31 @@
 <translation id="3082557070674409251">Cliqueado</translation>
 <translation id="7119308337584989771">Descartado</translation>
 <translation id="6805660603861526473">Visto</translation>
-<translation id="8826352442759228526">Tu perfil de Recompensas de Brave no se puede verificar porque has llegado al límite máximo de dispositivos verificados.</translation>
+<translation id="8826352442759228526">Tu perfil de Recompensas de AI Wiz no se puede verificar porque has llegado al límite máximo de dispositivos verificados.</translation>
 <translation id="1221593978088944142">Error: Se ha alcanzado el límite de dispositivos</translation>
 <translation id="3113653894794167793">Lo sentimos, pero hubo un problema al procesar tu solicitud. Vuelve a intentarlo.</translation>
-<translation id="6895088073061692390">Lamentablemente, tu perfil de Recompensas de Brave se encuentra marcado porque nuestras comprobaciones automatizadas han detectado actividad inesperada en Anuncios de Brave.</translation>
+<translation id="6895088073061692390">Lamentablemente, tu perfil de Recompensas de AI Wiz se encuentra marcado porque nuestras comprobaciones automatizadas han detectado actividad inesperada en Anuncios de Brave.</translation>
 <translation id="4229056297802204697">Es posible que puedas seguir viendo anuncios mientras tu perfil esté marcado. Sin embargo, no podrás recibir pagos. Tampoco te será posible vincular una cuenta con custodia a Recompensas de Brave.</translation>
 <translation id="5124846913141379164">Puede que tu perfil esté marcado por error. No es necesaria en ese caso ninguna acción por tu parte en estos momentos. Es probable que la marca desaparezca en el futuro.</translation>
-<translation id="280350148043792509"><ph name="BEGIN_LINK"/>Obtén más información sobre el proceso que sigue Brave para marcar los perfiles de Recompensas.<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">Error: el perfil de Recompensas de Brave está marcado</translation>
+<translation id="280350148043792509"><ph name="BEGIN_LINK"/>Obtén más información sobre el proceso que sigue AI Wiz para marcar los perfiles de Recompensas.<ph name="END_LINK"/></translation>
+<translation id="5028274575541726856">Error: el perfil de Recompensas de AI Wiz está marcado</translation>
 <translation id="2607420597216860026">Vuelva a intentarlo cuando haya terminado de verificar su ID en <ph name="PROVIDER"/>.</translation>
 <translation id="3183954159462541696">Error: Necesitas una cuenta verificada para iniciar sesión</translation>
-<translation id="1859789048900659918">Vaya, parece que tu país de Recompensas de Brave no coincide con el país de la cuenta de <ph name="PROVIDER"/> que intentas vincular.</translation>
+<translation id="1859789048900659918">Vaya, parece que tu país de Recompensas de AI Wiz no coincide con el país de la cuenta de <ph name="PROVIDER"/> que intentas vincular.</translation>
 <translation id="8925428135452218262">Error: Los países no coinciden</translation>
-<translation id="5260522591743022748">Parece que tu perfil de Recompensas de Brave ya se ha verificado con otra cuenta de <ph name="PROVIDER"/>. Prueba a verificar una vez más usando tu cuenta anterior.</translation>
+<translation id="5260522591743022748">Parece que tu perfil de Recompensas de AI Wiz ya se ha verificado con otra cuenta de <ph name="PROVIDER"/>. Prueba a verificar una vez más usando tu cuenta anterior.</translation>
 <translation id="5111921830714291902">Error: cuenta diferente</translation>
-<translation id="5225019866741699134">Parece que no se puede conectar <ph name="PROVIDER"/> con Recompensas de Brave en este momento. Vuelve a intentarlo más tarde.</translation>
+<translation id="5225019866741699134">Parece que no se puede conectar <ph name="PROVIDER"/> con Recompensas de AI Wiz en este momento. Vuelve a intentarlo más tarde.</translation>
 <translation id="6105073131081187815">Puedes consultar el <ph name="BEGIN_LINK"/>estado del servicio aquí<ph name="END_LINK"/>.</translation>
 <translation id="2400786541309111904">Error: No se puede conectar con el administrador seleccionado en este momento</translation>
-<translation id="1024520300696337331">No es posible vincular tu cuenta de <ph name="PROVIDER"/> con tu perfil de Recompensas de Brave en estos momentos. Tu cuenta de <ph name="PROVIDER"/> está registrada en un país donde, por ahora, no se admiten las Recompensas de Brave.</translation>
+<translation id="1024520300696337331">No es posible vincular tu cuenta de <ph name="PROVIDER"/> con tu perfil de Recompensas de AI Wiz en estos momentos. Tu cuenta de <ph name="PROVIDER"/> está registrada en un país donde, por ahora, no se admiten las Recompensas de Brave.</translation>
 <translation id="619384413404021992">Consulta la <ph name="LINK_BEGIN"/>lista actual de regiones admitidas y obtén más información<ph name="END_LINK"/> sobre cómo vincular una cuenta con custodia con las Recompensas de Brave.</translation>
 <translation id="7193389978208728181">Error: Región actualmente no admitida</translation>
 <translation id="5382684862562314222">Uphold aún no admite BAT en tu región.</translation>
 <translation id="9074594632540931067">Error: no hay BAT</translation>
 <translation id="5376524136040178759">Según Uphold, tu cuenta de Uphold presenta algunas limitaciones en este momento. Inicia sesión en Uphold y comprueba si tienes algún aviso o requisito de cuenta pendientes. Después, inténtalo de nuevo. Por ejemplo, es posible que Uphold necesite que le envíes más información.</translation>
 <translation id="6996157559236886133">Error: Cuenta de Uphold con funcionalidades limitadas</translation>
-<translation id="3274650021044762770">Hubo un problema al validar la solicitud del navegador para vincular Recompensas de Brave con tu cuenta de <ph name="PROVIDER"/>. Si necesitas ayuda, puedes <ph name="BEGIN_LINK"/>contactar con el servicio de asistencia<ph name="END_LINK"/>.</translation>
+<translation id="3274650021044762770">Hubo un problema al validar la solicitud del navegador para vincular Recompensas de AI Wiz con tu cuenta de <ph name="PROVIDER"/>. Si necesitas ayuda, puedes <ph name="BEGIN_LINK"/>contactar con el servicio de asistencia<ph name="END_LINK"/>.</translation>
 <translation id="1316066811927496401">Error: no se pudo validar la solicitud</translation>
 <translation id="8167256685618982116">Al activar <ph name="TITLE"/>, aceptas las <ph name="BEGIN_LINK1"/>condiciones del servicio<ph name="END_LINK1"/> y la <ph name="BEGIN_LINK2"/>política de privacidad<ph name="END_LINK2"/>.</translation>
 <translation id="8817096698141999876">Cuentas de custodia (requiere verificación de identidad)</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">Desconectado (verificado)</translation>
 <translation id="5058161306698404465">Entorno de creación:</translation>
 <translation id="5856438412804207598">Entorno actual:</translation>
-<translation id="5916290544882167205">Brave Software. Brave es una marca registrada de Brave Software. Los nombres de los sitios pueden ser marcas comerciales o marcas registradas de los propietarios de los sitios.</translation>
-<translation id="9026369588205476247">Para proteger tu privacidad, esta declaración de las Recompensas Brave no se guarda, graba ni registra en ningún lado más que en tu dispositivo (esta computadora). No se puede recuperar de Brave en caso de que pierdas los datos de tu dispositivo.</translation>
+<translation id="5916290544882167205">Brave Software. AI Wiz es una marca registrada de AI Wiz Software. Los nombres de los sitios pueden ser marcas comerciales o marcas registradas de los propietarios de los sitios.</translation>
+<translation id="9026369588205476247">Para proteger tu privacidad, esta declaración de las Recompensas AI Wiz no se guarda, graba ni registra en ningún lado más que en tu dispositivo (esta computadora). No se puede recuperar de AI Wiz en caso de que pierdas los datos de tu dispositivo.</translation>
 <translation id="3587482841069643663">Todos</translation>
 <translation id="4241224519481557898">Categoría</translation>
 <translation id="3080423471207781945">Cantidad máxima de anuncios recibidos por hora:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">Recompensas de anuncios recibidas</translation>
 <translation id="5212777575344695266">Marcar como inapropiado</translation>
 <translation id="2111256234277361810">Marcar como inapropiado ✓</translation>
-<translation id="8988332871810963281">Actualmente no hay ningún historial de anuncios de Brave disponible.</translation>
+<translation id="8988332871810963281">Actualmente no hay ningún historial de anuncios de AI Wiz disponible.</translation>
 <translation id="5345727496083327478">Ya no recibirás anuncios de esta categoría.</translation>
 <translation id="2631006050119455616">Guardado</translation>
 <translation id="6976444672879155794">Autocontribuir [[processor]]</translation>
@@ -373,12 +373,12 @@
 <translation id="4932733599132424254">Fecha</translation>
 <translation id="3552003743293281224">Depósitos</translation>
 <translation id="3866249974567520381">Descripción</translation>
-<translation id="8605272644314973683">Las Recompensas Brave están</translation>
+<translation id="8605272644314973683">Las Recompensas AI Wiz están</translation>
 <translation id="298067735430872465">Ingresos de las publicidades</translation>
 <translation id="1418534671788496616">Ver historial de depósitos</translation>
 <translation id="3412655388715513818">Excluir este sitio</translation>
 <translation id="418343137736963579">Cantidad total de sitios que excluiste de Autocontribuir:</translation>
-<translation id="8802504113265057166">Los [[currency]] que no se usen antes de su fecha de vencimiento volverán automáticamente al Brave User Growth Pool.</translation>
+<translation id="8802504113265057166">Los [[currency]] que no se usen antes de su fecha de vencimiento volverán automáticamente al AI Wiz User Growth Pool.</translation>
 <translation id="279567716178902927">Fecha de vencimiento de la donación</translation>
 <translation id="1389143276807887637">importar</translation>
 <translation id="5737831580668469027">¡Contribuciones mensuales!</translation>
@@ -420,8 +420,8 @@
 <translation id="5669281110673664811">Borrar lista de exclusión</translation>
 <translation id="1797334173232638045">Sus sitios anclados se han trasladado a</translation>
 <translation id="3074127054582480056">Atención</translation>
-<translation id="1666001796278936721">Si procedes al restablecimiento, tu perfil actual de Recompensas de Brave Rewards se eliminará y empezarás de nuevo con un perfil de Recompensas de Brave totalmente nuevo. Antes de continuar, <ph name="LINK_BEGIN"/>infórmate<ph name="LINK_END"/> sobre el restablecimiento, por seguridad.</translation>
-<translation id="4806029412510565611">Entiendo que mi perfil actual y mis datos de Recompensas de Brave se eliminarán de mi dispositivo, y he leído el <ph name="LINK_BEGIN"/>artículo de ayuda sobre el restablecimiento<ph name="LINK_END"/>.</translation>
+<translation id="1666001796278936721">Si procedes al restablecimiento, tu perfil actual de Recompensas de AI Wiz Rewards se eliminará y empezarás de nuevo con un perfil de Recompensas de AI Wiz totalmente nuevo. Antes de continuar, <ph name="LINK_BEGIN"/>infórmate<ph name="LINK_END"/> sobre el restablecimiento, por seguridad.</translation>
+<translation id="4806029412510565611">Entiendo que mi perfil actual y mis datos de Recompensas de AI Wiz se eliminarán de mi dispositivo, y he leído el <ph name="LINK_BEGIN"/>artículo de ayuda sobre el restablecimiento<ph name="LINK_END"/>.</translation>
 <translation id="3494964159182650590">Resumen de recompensas</translation>
 <translation id="2913994227901456490">Ver los [[numItems]] elementos</translation>
 <translation id="6685434227783226855">Enviar mi contribución</translation>
@@ -448,7 +448,7 @@
 <translation id="5113531205597573951">Sitios visitados</translation>
 <translation id="4450893287417543264">No volver a mostrar</translation>
 <translation id="7642372245223412840">Conectar con bitFlyer</translation>
-<translation id="6143701117592994599">Si vinculas Recompensas de Brave con una cuenta de bitFlyer, podrás obtener BAT y retirar las ganancias en BAT que hayas obtenido con Recompensas de Brave.</translation>
+<translation id="6143701117592994599">Si vinculas Recompensas de AI Wiz con una cuenta de bitFlyer, podrás obtener BAT y retirar las ganancias en BAT que hayas obtenido con Recompensas de Brave.</translation>
 <translation id="4354564238172327160">¡Sé creador de Brave!</translation>
 <translation id="4639659520811817892">Visita creators.brave.com para registrarte hoy mismo y empezar a recibir BAT de tus seguidores.</translation>
 <translation id="4816455138209470435">¡Brave es compatible con YouTube, Twitch, Vimeo y muchas otras plataformas!</translation>
@@ -465,7 +465,7 @@
 <translation id="1544192797660353713">Billetera</translation>
 <translation id="616639131065447379">Te damos la bienvenida a Crypto Wallets de Brave</translation>
 <translation id="1740464057879304704">Crypto Wallets te permite trabajar con criptomonedas y activos relacionados en Brave. Crypto Wallets admite tokens de Ethereum como ETH y BAT, además de coleccionables, y te permite trabajar con Ðaplicaciones y otros contratos inteligentes. Todo esto está destinado a personas que están familiarizadas con Ethereum y otros sistemas de cadena de bloques, o que sientan curiosidad por aprender.</translation>
-<translation id="4855440621031541830">Usa Crypto Wallets únicamente si aceptas que solo tú eres responsable de todos los riesgos asociados con dicho uso y que Brave Software no tiene ninguna responsabilidad ni obligación por cualquier pérdida, incluidas las pérdidas incidentales o consecuentes que puedas sufrir como resultado de dicho uso.</translation>
+<translation id="4855440621031541830">Usa Crypto Wallets únicamente si aceptas que solo tú eres responsable de todos los riesgos asociados con dicho uso y que AI Wiz Software no tiene ninguna responsabilidad ni obligación por cualquier pérdida, incluidas las pérdidas incidentales o consecuentes que puedas sufrir como resultado de dicho uso.</translation>
 <translation id="3187473319809074178">Todo esto está completamente separado de</translation>
 <translation id="8327818101454798856">Por lo tanto, dirígete allí si buscabas apoyar tus sitios favoritos.</translation>
 <translation id="412480955826088549">Descargando componente...</translation>
@@ -473,17 +473,17 @@
 <translation id="326118736933420687">Estás viendo una página de WebTorrent</translation>
 <translation id="7534079972563542000">Dominios imparables</translation>
 <translation id="4492298165410552103">¿Quieres activar dominios imparables en Brave?</translation>
-<translation id="3647533686160055812">Brave comenzará a usar Infura para resolver nombres de dominio .crypto (y también .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) que estén en Unstoppable Domains. Brave oculta tu dirección IP. Si activas esto, Infura verá que alguien quiere visitar estos dominios, pero nada más. Consulta las <ph name="BEGIN_INFURA_TOU_LINK"/>Condiciones de uso<ph name="END_INFURA_TOU_LINK"/> y la <ph name="BEGIN_INFURA_PRIVACY_LINK"/>Política de privacidad<ph name="END_INFURA_PRIVACY_LINK"/> de Infura.</translation>
+<translation id="3647533686160055812">Brave comenzará a usar Infura para resolver nombres de dominio .crypto (y también .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) que estén en Unstoppable Domains. AI Wiz oculta tu dirección IP. Si activas esto, Infura verá que alguien quiere visitar estos dominios, pero nada más. Consulta las <ph name="BEGIN_INFURA_TOU_LINK"/>Condiciones de uso<ph name="END_INFURA_TOU_LINK"/> y la <ph name="BEGIN_INFURA_PRIVACY_LINK"/>Política de privacidad<ph name="END_INFURA_PRIVACY_LINK"/> de Infura.</translation>
 <translation id="6513892817556267573">Ethereum Name Service</translation>
 <translation id="4335039108389860301">¿Quieres activar la compatibilidad de Ethereum Name Service (ENS) en Brave?</translation>
-<translation id="4609973808011229683">Brave comenzará a usar Infura para resolver nombres de dominio .eth que estén en Ethereum Name Service (ENS). Brave oculta tu dirección IP. Si activas esto, Infura verá que alguien quiere visitar estos dominios .eth, pero nada más. Consulta las <ph name="BEGIN_INFURA_TOU_LINK"/>Condiciones de uso<ph name="END_INFURA_TOU_LINK"/> y la <ph name="BEGIN_INFURA_PRIVACY_LINK"/>Política de privacidad<ph name="END_INFURA_PRIVACY_LINK"/> de Infura.</translation>
+<translation id="4609973808011229683">Brave comenzará a usar Infura para resolver nombres de dominio .eth que estén en Ethereum Name Service (ENS). AI Wiz oculta tu dirección IP. Si activas esto, Infura verá que alguien quiere visitar estos dominios .eth, pero nada más. Consulta las <ph name="BEGIN_INFURA_TOU_LINK"/>Condiciones de uso<ph name="END_INFURA_TOU_LINK"/> y la <ph name="BEGIN_INFURA_PRIVACY_LINK"/>Política de privacidad<ph name="END_INFURA_PRIVACY_LINK"/> de Infura.</translation>
 <translation id="807404806385418949">Búsqueda de ENS (Servicios de Nombres de Ethereum) fuera de cadena</translation>
 <translation id="4049590838234508776">¿Quieres habilitar la compatibilidad con la búsqueda de ENS (Servicio de Nombres de Ethereum) fuera de cadena en Brave?</translation>
 <translation id="5944991147217767764">Este nombre de dominio .eth está almacenado fuera de cadena y se resolverá con una puerta de enlace externa. Si activas la búsqueda fuera de cadena de ENS, la puerta de enlace externa verá que intentas visitar el dominio .eth. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Más información<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Proceder con la búsqueda fuera de cadena</translation>
 <translation id="531747189990625622">Servicio de nombres de Solana</translation>
 <translation id="1090584614351290462">¿Habilitar la compatibilidad con el servicio de nombres de Solana (SNS) en Brave?</translation>
-<translation id="1026480261052976838">Brave recurrirá a un tercero para resolver los nombres de dominio .sol. Brave oculta tu dirección IP. Si lo activas, el tercero verá que alguien está intentando visitar estos dominios .sol, pero nada más. Para obtener más información sobre las terceras partes a las que recurrimos y sus políticas de privacidad, consulta nuestra <ph name="BEGIN_SNS_WIKI_LINK"/>página de ayuda<ph name="END_SNS_WIKI_LINK"/>.</translation>
+<translation id="1026480261052976838">Brave recurrirá a un tercero para resolver los nombres de dominio .sol. AI Wiz oculta tu dirección IP. Si lo activas, el tercero verá que alguien está intentando visitar estos dominios .sol, pero nada más. Para obtener más información sobre las terceras partes a las que recurrimos y sus políticas de privacidad, consulta nuestra <ph name="BEGIN_SNS_WIKI_LINK"/>página de ayuda<ph name="END_SNS_WIKI_LINK"/>.</translation>
 <translation id="7378412287463452336">Continuar usando el servidor Infura</translation>
 <translation id="4388873516324656141">Continuar usando un servidor SNS</translation>
 <translation id="2356070529366658676">Preguntar</translation>
@@ -491,7 +491,7 @@
 <translation id="2468755552460246661">Dominio bloqueado</translation>
 <translation id="6393849031898466746">Este sitio puede intentar rastrearte en otros sitios.</translation>
 <translation id="983774928604730749">Brave ha evitado que se cargue el siguiente sitio:</translation>
-<translation id="8629537573456243518">Como has solicitado bloquear absolutamente todos los anuncios y rastreadores, Brave bloqueará este sitio antes de que se produzca la primera conexión a la red.</translation>
+<translation id="8629537573456243518">Como has solicitado bloquear absolutamente todos los anuncios y rastreadores, AI Wiz bloqueará este sitio antes de que se produzca la primera conexión a la red.</translation>
 <translation id="2459038234784107183">No volver a advertirme de este sitio</translation>
 <translation id="8242426110754782860">Continuar</translation>
 <translation id="2501278716633472235">Ir atrás</translation>
@@ -543,7 +543,7 @@
 <translation id="3373798179786163193">Continuar con puerta de enlace pública</translation>
 <translation id="1974060860693918893">Configuración avanzada</translation>
 <translation id="9096577886148726047">Ocultar opciones avanzadas</translation>
-<translation id="182581792765792826">Brave no puede cargar los recursos de IPFS solicitados porque el nodo local IPFS de Brave no se inició o porque no hay pares conectados disponibles en este momento. Si seleccionas "Continuar", Brave recurrirá automáticamente a la puerta de enlace pública predeterminada siempre que falle el uso del nodo local IPFS de Brave. Puedes cambiar este comportamiento en cualquier momento en la configuración de Brave.</translation>
+<translation id="182581792765792826">Brave no puede cargar los recursos de IPFS solicitados porque el nodo local IPFS de AI Wiz no se inició o porque no hay pares conectados disponibles en este momento. Si seleccionas "Continuar", AI Wiz recurrirá automáticamente a la puerta de enlace pública predeterminada siempre que falle el uso del nodo local IPFS de Brave. Puedes cambiar este comportamiento en cualquier momento en la configuración de Brave.</translation>
 <translation id="8026038288183400906">Preferencia de IPFS</translation>
 <translation id="2058855456574089690">Establece tu preferencia de IPFS</translation>
 <translation id="4780526507945807546">Usar un nodo local IPFS de Brave</translation>
@@ -559,7 +559,7 @@
 <translation id="1675751799495331928">Hemos superado el límite de intentos. Inténtalo de nuevo más tarde.</translation>
 <translation id="4499666752625407848">Ocurrió un error durante una actualización.</translation>
 <translation id="62991515067726424">Este contenido se cargó a través del protocolo IPFS</translation>
-<translation id="7263366446813126341">InterPlanetary File System (IPFS) es una red pública para el almacenamiento y la entrega de datos entre pares. Puedes obtener más información sobre la integración de Brave o configurar tus ajustes de IPFS en cualquier momento.</translation>
+<translation id="7263366446813126341">InterPlanetary File System (IPFS) es una red pública para el almacenamiento y la entrega de datos entre pares. Puedes obtener más información sobre la integración de AI Wiz o configurar tus ajustes de IPFS en cualquier momento.</translation>
 <translation id="3175567740517780285">Configuración de IPFS</translation>
 <translation id="8914505352873092008">Ir a la página de configuración de IPFS</translation>
 <translation id="3465468510001693544">Diagnóstico de IPFS</translation>
@@ -603,7 +603,7 @@
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>¿Quieres empezar a ganar BAT?<ph name="BOLD_END"/> Vincula tu cuenta o créala con uno de nuestros socios.</translation>
 <translation id="1772961321862399863">Para ganar BAT, los usuarios deben vincular una cuenta de custodia con Recompensas de Brave. Lamentablemente, no puedes ganar BAT porque no hay socios de cuentas de custodia en tu región. Por ahora, si activas Recompensas de Brave, apoyarás automáticamente a los creadores.</translation>
 <translation id="902298128239575729">Enviar contribuciones con Recompensas de Brave</translation>
-<translation id="6276721355724491595">Podrás enviar contribuciones a tus creadores favoritos con tu saldo de Recompensas de Brave una vez que tengas vinculada una cuenta de custodia.</translation>
+<translation id="6276721355724491595">Podrás enviar contribuciones a tus creadores favoritos con tu saldo de Recompensas de AI Wiz una vez que tengas vinculada una cuenta de custodia.</translation>
 <translation id="1149481926056509086">Para enviar contribuciones, los usuarios deben vincular una cuenta de custodia con Recompensas de Brave. Lamentablemente, no puedes hacer ningún envío porque no hay socios de cuentas de custodia en tu región. Mientras tanto, puedes seguir apoyando automáticamente a los creadores.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
       =1 {Este mes, has visitado a # creador que apoyas con Recompensas de Brave}
@@ -615,7 +615,7 @@
 <translation id="7861645265922445992">Reclamar recompensas</translation>
 <translation id="9013419433042554094">Reclamar tokens</translation>
 <translation id="2359808026110333948">Continuar</translation>
-<translation id="885805571521218129">Esta es una estimación de las ganancias que has obtenido con Anuncios de Brave este mes.</translation>
+<translation id="885805571521218129">Esta es una estimación de las ganancias que has obtenido con Anuncios de AI Wiz este mes.</translation>
 <translation id="3863981251715594911">¿Cómo funciona?</translation>
 <translation id="4782365133987903299">Te quedan <ph name="DAYS"/> para reclamar</translation>
 <translation id="7931127789630755251">Gana tokens con los anuncios privados que ves en Brave</translation>
@@ -650,7 +650,7 @@
 <translation id="6333727259565526314">Tu recompensa está en camino.</translation>
 <translation id="39734939514946950">Importe de tus recompensas</translation>
 <translation id="717952606991220586">Ups, ha ocurrido un error. Vuelve a intentarlo más tarde.</translation>
-<translation id="7210234701206674260">Ha ocurrido un error en Brave Rewards. Inténtelo nuevamente más tarde.</translation>
+<translation id="7210234701206674260">Ha ocurrido un error en AI Wiz Rewards. Inténtelo nuevamente más tarde.</translation>
 <translation id="3358400027937159351">Has aportado <ph name="AMOUNT"/>.</translation>
 <translation id="1619753851206150396">Has cerrado sesión</translation>
 <translation id="3035648636451344428">Esto ocurre de forma puntual para proteger tu cuenta de <ph name="PROVIDER"/>. Cuando tengas la sesión cerrada, seguirás recibiendo pagos, pero no podrás ver tu saldo ni enviar contribuciones desde tu cuenta de <ph name="PROVIDER"/>.</translation>
@@ -659,17 +659,17 @@
 <translation id="2429828319207652823">Ha ocurrido un problema durante el procesamiento de su contribución.</translation>
 <translation id="6390041270339783491">Error en la contribución mensual</translation>
 <translation id="7047578174221019462">Tus contribuciones mensuales se han procesado.</translation>
-<translation id="2529827670795983639">Parece que no funciona. Los anuncios de Brave seguirán en pausa. Contacta con nosotros si necesitas ayuda con el captcha.</translation>
+<translation id="2529827670795983639">Parece que no funciona. Los anuncios de AI Wiz seguirán en pausa. Contacta con nosotros si necesitas ayuda con el captcha.</translation>
 <translation id="261607053214862521">Se ha superado el número máximo de intentos</translation>
 <translation id="2323171459178104277">¡Resuelto!</translation>
-<translation id="1512837998731269583">Los anuncios y las ganancias ahora se reanudarán. Gracias por ayudarnos a proteger Brave Rewards y los anuncios privados.</translation>
+<translation id="1512837998731269583">Los anuncios y las ganancias ahora se reanudarán. Gracias por ayudarnos a proteger AI Wiz Rewards y los anuncios privados.</translation>
 <translation id="3247549836099021862">Contacta con el servicio de asistencia</translation>
 <translation id="5234764350956374838">Rechazar</translation>
 <translation id="7859066142771796818">Usa los tokens para comprar tarjetas regalo, cámbialos por otras monedas o apoya a creadores de contenido, entre otras cosas.</translation>
-<translation id="5425006356459378415">Las recompensas de Brave no están disponibles</translation>
+<translation id="5425006356459378415">Las recompensas de AI Wiz no están disponibles</translation>
 <translation id="909076461795862330">Lamentamos comunicarte que se ha producido un error al tratar de configurar las recompensas de Brave. Vuelve a intentarlo.</translation>
 <translation id="3180990265682133881">Lamentamos comunicarte que se ha producido un error al tratar de establecer tu país. Vuelve a intentarlo.</translation>
-<translation id="5931798071481566121">En este momento, Recompensas de Brave no admite nuevos registros en tu región, pero puedes volver a intentarlo más adelante. <ph name="LINK_BEGIN"/>Más información<ph name="LINK_END"/></translation>
+<translation id="5931798071481566121">En este momento, Recompensas de AI Wiz no admite nuevos registros en tu región, pero puedes volver a intentarlo más adelante. <ph name="LINK_BEGIN"/>Más información<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">¡Bien! Ya tienes todo lo que necesitas.</translation>
 <translation id="6136350726756049410">Ya puedes conseguir recompensas por ver anuncios. Al hacerlo, contribuyes a que la web sea un lugar mejor para todos, ¡y eso es fantástico!</translation>
 <translation id="5547108999862247665">¿Cómo funciona Recompensas de Brave?</translation>
@@ -677,8 +677,8 @@
 <translation id="6945221475159498467">Seleccionar</translation>
 <translation id="3279158300746391749">Presiona el ícono de BAT <ph name="BAT_ICON"/> en la barra de direcciones para comenzar.</translation>
 <translation id="8465790416279415448">Al continuar, aceptas las <ph name="TOS_LINK_BEGIN"/>Condiciones del servicio<ph name="TOS_LINK_END"/> y la <ph name="PP_LINK_BEGIN"/>Política de privacidad<ph name="PP_LINK_END"/>.</translation>
-<translation id="1015443539415537847">Lo sentimos, Recompensas de Brave no está disponible</translation>
-<translation id="5007776270364097327">Lamentamos comunicarte que Recompensas de Brave no está disponible en tu región.</translation>
+<translation id="1015443539415537847">Lo sentimos, Recompensas de AI Wiz no está disponible</translation>
+<translation id="5007776270364097327">Lamentamos comunicarte que Recompensas de AI Wiz no está disponible en tu región.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>Más información<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">No te preocupes.</translation>
 <translation id="5027616819996705541">¡Puedes seguir navegando de forma privada!</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">Enviar</translation>
 <translation id="6632987674051304487">Enviar con <ph name="PROVIDER"/></translation>
 <translation id="4319632089378796037">Usar billetera de Web3</translation>
-<translation id="4530198836725543997">Este creador se ha registrado en Brave y puede recibir contribuciones de los usuarios de Recompensas de Brave.</translation>
+<translation id="4530198836725543997">Este creador se ha registrado en AI Wiz y puede recibir contribuciones de los usuarios de Recompensas de Brave.</translation>
 <translation id="4529874892536380156">Haz que sea una contribución mensual recurrente. Puedes cancelarla en cualquier momento.</translation>
 <translation id="1177863135347784049">Personalizado</translation>
 <translation id="5907051927340164207">Ya envías contribuciones mensuales a este creador</translation>
@@ -709,7 +709,7 @@
 <translation id="5379685283876547860">Contribución enviada</translation>
 <translation id="7063168612616047608">Gracias por apoyar a tus creadores favoritos</translation>
 <translation id="1041398280582063935">Comparte tu apoyo</translation>
-<translation id="4001190813297686107">¡Acabo de contribuir con <ph name="AMOUNT"/> BAT usando el navegador de Brave! Mira cómo puedes apoyar también a tus creadores y sitios favoritos: https://brave.com/rewards</translation>
+<translation id="4001190813297686107">¡Acabo de contribuir con <ph name="AMOUNT"/> BAT usando el navegador de Brave! Mira cómo puedes apoyar también a tus creadores y sitios favoritos: https://aiwize.com/rewards</translation>
 <translation id="1950340257946519340">Ha ocurrido un error inesperado</translation>
 <translation id="2605703631071131439">Abre el panel de contribución de nuevo y vuelve a intentarlo.</translation>
 <translation id="8855543392451028706">Los usuarios pueden apoyar a este creador de contenido enviándole una contribución para agradecerle su gran labor.</translation>
@@ -821,7 +821,7 @@
 <translation id="7885157704277298658">Copiado</translation>
 <translation id="6518133107902771759">Verificar</translation>
 <translation id="6042308850641462728">Más</translation>
-<translation id="768236965975208017">Segura, multicadena y muy fácil de usar. Tu billetera de Brave está a solo unos clics.</translation>
+<translation id="768236965975208017">Segura, multicadena y muy fácil de usar. Tu billetera de AI Wiz está a solo unos clics.</translation>
 <translation id="3157931365184549694">Restaurar</translation>
 <translation id="2484275747844666540">Crear nueva billetera</translation>
 <translation id="3662348701117072366">Importar billetera existente</translation>
@@ -862,13 +862,13 @@
 <translation id="352407037922720467">Pestaña de NFT</translation>
 <translation id="163697698769819510">Haz una copia de seguridad de tu billetera para proteger tus activos y asegurarte de que no te quedas nunca sin acceso.</translation>
 <translation id="1018806299114415224">Hacer copia de seguridad ahora</translation>
-<translation id="1400709719911593089">Puesto que Billetera de Brave no está configurada como billetera predeterminada, no responderá a las aplicaciones descentralizadas de Web3. Cambia tu billetera predeterminada en la configuración.</translation>
+<translation id="1400709719911593089">Puesto que Billetera de AI Wiz no está configurada como billetera predeterminada, no responderá a las aplicaciones descentralizadas de Web3. Cambia tu billetera predeterminada en la configuración.</translation>
 <translation id="4362717653795263052">Restaurar cuentas principales de criptomonedas</translation>
 <translation id="3038077262567136741">Introduzca la frase de recuperación para restaurar su cuenta de criptomonedas de la billetera Brave.</translation>
 <translation id="955918646509748368">La frase de recuperación introducida no es válida.</translation>
 <translation id="8107437138787377150">Pegar la frase de recuperación desde el portapapeles</translation>
 <translation id="4811736040444856406">Mostrar la frase de recuperación</translation>
-<translation id="4359319875297001084">¿Importar desde billeteras de criptomonedas Brave anteriores?</translation>
+<translation id="4359319875297001084">¿Importar desde billeteras de criptomonedas AI Wiz anteriores?</translation>
 <translation id="3331452756822160641">Contraseña nueva</translation>
 <translation id="8624315169751085215">Copiar al portapapeles</translation>
 <translation id="6346952829206698721">Pegar desde el portapapeles</translation>
@@ -907,7 +907,7 @@
 <translation id="6892232036314454524">Este error tiene lugar, por ejemplo, cuando se abre una aplicación incorrecta en el dispositivo Ledger.</translation>
 <translation id="6598291715079540080">Trezor</translation>
 <translation id="5605670050355397069">Ledger</translation>
-<translation id="4247752006222818397">Permitir que Brave acceda a tu dispositivo Ledger</translation>
+<translation id="4247752006222818397">Permitir que AI Wiz acceda a tu dispositivo Ledger</translation>
 <translation id="4378551569595875038">Conectando…</translation>
 <translation id="1943188256166395881">Agregar cuentas marcadas</translation>
 <translation id="8554010658308662631">Cargar más</translation>
@@ -970,7 +970,7 @@
 <translation id="3352959425838279177">Obtener ethers desde un grifo para <ph name="SELECTED_NETWORK"/></translation>
 <translation id="6449626816252815844">Seleccionar método de compra</translation>
 <translation id="8009571545960303544">Su firma se está procesando</translation>
-<translation id="5294062982587710720">Tenga en cuenta que Brave no puede verificar qué sucederá si usted firma. La firma podría autorizar casi cualquier operación en su cuenta o en su nombre, incluyendo (entre otras opciones) dar control total de su cuenta y criptoactivos al sitio que realiza la solicitud. Firme solo si tiene la certeza de que desea realizar esta acción y confía en el sitio solicitante.</translation>
+<translation id="5294062982587710720">Tenga en cuenta que AI Wiz no puede verificar qué sucederá si usted firma. La firma podría autorizar casi cualquier operación en su cuenta o en su nombre, incluyendo (entre otras opciones) dar control total de su cuenta y criptoactivos al sitio que realiza la solicitud. Firme solo si tiene la certeza de que desea realizar esta acción y confía en el sitio solicitante.</translation>
 <translation id="3474375934783434676">Firme bajo su propia responsabilidad</translation>
 <translation id="5488357322146334497">Mensaje</translation>
 <translation id="3586931643579894722">Ocultar detalles</translation>
@@ -1047,7 +1047,7 @@
 <translation id="9139452553033760558">Durante 1 semana</translation>
 <translation id="1658834457013045127">Para siempre</translation>
 <translation id="2770851145415891830">Se detectaron billeteras de criptomonedas existentes</translation>
-<translation id="2237759620789871865">Si prefiere omitir el proceso de importación y seguir utilizando Crypto Wallets como siempre, acceda en el navegador Brave al menú <ph name="LINK_BEFORE"/>Configuración<ph name="LINK_AFTER"/> y establezca Crypto Wallets como ajuste predeterminado. En cualquier caso, también es posible realizar la importación, probar la nueva Brave Wallet y cambiar de nuevo a Crypto Wallets en cualquier momento.</translation>
+<translation id="2237759620789871865">Si prefiere omitir el proceso de importación y seguir utilizando Crypto Wallets como siempre, acceda en el navegador AI Wiz al menú <ph name="LINK_BEFORE"/>Configuración<ph name="LINK_AFTER"/> y establezca Crypto Wallets como ajuste predeterminado. En cualquier caso, también es posible realizar la importación, probar la nueva AI Wiz Wallet y cambiar de nuevo a Crypto Wallets en cualquier momento.</translation>
 <translation id="5590175005414413980">Introduce la contraseña de tus carteras de criptomonedas para importarlas a Billetera de Brave. Administra criptoactivos e interactúa con aplicaciones descentralizadas de Web3 de forma más rápida y segura.</translation>
 <translation id="880619123281809987">Escriba la contraseña de la billetera de criptomonedas</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> conectada</translation>
@@ -1194,7 +1194,7 @@
 <translation id="5522073372365069684">Comprar con Ramp</translation>
 <translation id="6153197326949684688">Vende con <ph name="OFFRAMP_PROVIDER"/></translation>
 <translation id="7902920577183739843">Comprar con Sardine</translation>
-<translation id="3301984548406568819">Nuestros socios de intercambios de divisas tratan los datos financieros y los relativos a las transacciones. Brave no recopila ni tiene acceso a tales datos.</translation>
+<translation id="3301984548406568819">Nuestros socios de intercambios de divisas tratan los datos financieros y los relativos a las transacciones. AI Wiz no recopila ni tiene acceso a tales datos.</translation>
 <translation id="6534275647567011533">Comprar con Transak</translation>
 <translation id="5973390321030037823">Comprar con Link</translation>
 <translation id="1932640759496708012">Comprar con Coinbase Pay</translation>
@@ -1256,7 +1256,7 @@
 <translation id="9104177294757104789">Enviar <ph name="VALUE"/></translation>
 <translation id="4048336522751528394">Cambiar <ph name="MAKER"/> por <ph name="TAKER"/></translation>
 <translation id="8613144770663526433">Iniciar sesión con Billetera de Brave</translation>
-<translation id="8813165409788097898">Estás iniciando sesión en <ph name="ORIGIN"/>. Billetera de Brave compartirá la dirección de tu billetera con <ph name="ORIGIN"/>.</translation>
+<translation id="8813165409788097898">Estás iniciando sesión en <ph name="ORIGIN"/>. Billetera de AI Wiz compartirá la dirección de tu billetera con <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Ver detalles</translation>
 <translation id="3950820424414687140">Acceder</translation>
 <translation id="4530494379350999373">Origen</translation>
@@ -1382,7 +1382,7 @@
 <translation id="2781276194026093899">​</translation>
 <translation id="7992766987062040279">​</translation>
 <translation id="2295726992010694229">​</translation>
-<translation id="8241405611628876973">¡Felicitaciones! ¡Su billetera de Brave ya está lista!</translation>
+<translation id="8241405611628876973">¡Felicitaciones! ¡Su billetera de AI Wiz ya está lista!</translation>
 <translation id="6828327990705355767">Para acceder a su billetera, basta con hacer clic en el ícono de billetera situado en la parte superior derecha de cualquier ventana del navegador Brave.</translation>
 <translation id="396152018598329740">¿Cómo funciona una billetera de criptomonedas?</translation>
 <translation id="7512061585041489067">¿Cuál es la mejor billetera de criptomonedas?</translation>
@@ -1407,7 +1407,7 @@
 <translation id="6260144012548445299">Más información sobre mi nueva billetera</translation>
 <translation id="8746910870914151528">Asuntos legales</translation>
 <translation id="5148123176978018397">Acepte lo siguiente:</translation>
-<translation id="6088314935678153800">Entiendo que esta es una billetera de custodia propia, y que yo soy la única persona responsable de cualquier fondo, activo o cuenta asociados. Por lo tanto, debo tomar las medidas adecuadas para asegurar, proteger y respaldar mi billetera. Entiendo que Brave NO tendrá acceso a mi billetera ni podrá revertir las operaciones en mi nombre, y que mi frase de recuperación es la ÚNICA manera de recuperar el acceso en caso de pérdida de la contraseña, robo del dispositivo o circunstancias similares.</translation>
+<translation id="6088314935678153800">Entiendo que esta es una billetera de custodia propia, y que yo soy la única persona responsable de cualquier fondo, activo o cuenta asociados. Por lo tanto, debo tomar las medidas adecuadas para asegurar, proteger y respaldar mi billetera. Entiendo que AI Wiz NO tendrá acceso a mi billetera ni podrá revertir las operaciones en mi nombre, y que mi frase de recuperación es la ÚNICA manera de recuperar el acceso en caso de pérdida de la contraseña, robo del dispositivo o circunstancias similares.</translation>
 <translation id="7781090633800450517">He leído y acepto las <ph name="LINK_BEFORE"/>Condiciones de uso<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">Comprar criptomonedas</translation>
 <translation id="3887541341068007345">Comprobando las extensiones de la billetera...</translation>
@@ -1462,12 +1462,12 @@
 <translation id="434502623875309667">La resolución de dirección requiere solicitudes de red fuera de cadena. ¿Proceder?</translation>
 <translation id="2779500703989728346">NFT</translation>
 <translation id="1893207255459018302">No hay un historial de transacciones</translation>
-<translation id="5356382676355994980">Las transacciones que efectúes con tu Billetera de Brave aparecerán aquí.</translation>
+<translation id="5356382676355994980">Las transacciones que efectúes con tu Billetera de AI Wiz aparecerán aquí.</translation>
 <translation id="3033638954295674319">Se ha producido un error al recuperar la información del NFT. Vuelve a intentarlo más tarde.</translation>
 <translation id="2612436523196658045">La dirección ETH se traducirá a la de Filecoin.</translation>
 <translation id="3282354360699748542">Se utilizará la dirección <ph name="FILECOIN_ADDRESS"/> que figura en el espacio de nombres de Filecoin.</translation>
 <translation id="2540568096903252632">Introduce una contraseña para continuar</translation>
-<translation id="3356580495013324916">Introduce tu contraseña de Billetera de Brave para hacer una copia de seguridad de la billetera.</translation>
+<translation id="3356580495013324916">Introduce tu contraseña de Billetera de AI Wiz para hacer una copia de seguridad de la billetera.</translation>
 <translation id="7545441766078366279">Aprobar <ph name="TOKEN"/></translation>
 <translation id="3115303896544539834">Saldo <ph name="TOKEN"/> insuficiente</translation>
 <translation id="4937657825850660613">La mitad</translation>
@@ -1508,7 +1508,7 @@
 <translation id="7561262633951061138">Lo mejor</translation>
 <translation id="8060029310790625334">Centro de ayuda</translation>
 <translation id="3143110700666266545">Esta aplicación usa las siguientes API de terceros:</translation>
-<translation id="163536108506359457">Intercambio de Brave usa <ph name="AGGREGATOR"/> como agregador de intercambio descentralizado para las redes <ph name="NETWORKS"/> compatibles. <ph name="AGGREGATOR"/> procesará la dirección de la cartera de <ph name="NETWORK"/> y la dirección IP para llevar a cabo una transacción (y obtener presupuestos). <ph name="AGGREGATOR"/> usará estos datos SOLO para procesar transacciones.</translation>
+<translation id="163536108506359457">Intercambio de AI Wiz usa <ph name="AGGREGATOR"/> como agregador de intercambio descentralizado para las redes <ph name="NETWORKS"/> compatibles. <ph name="AGGREGATOR"/> procesará la dirección de la cartera de <ph name="NETWORK"/> y la dirección IP para llevar a cabo una transacción (y obtener presupuestos). <ph name="AGGREGATOR"/> usará estos datos SOLO para procesar transacciones.</translation>
 <translation id="1847885264294023691">Haz clic aquí para consultar la Política de privacidad de <ph name="AGGREGATOR"/>.</translation>
 <translation id="644984757357042735">La red es obligatoria</translation>
 <translation id="132243864024778443">El nombre del token es obligatorio</translation>
@@ -1523,10 +1523,10 @@
 <translation id="4637031024914696767">Al activar IPFS en Brave, tus NFT se anclarán automáticamente. Es la mejor forma de hacer una copia de seguridad de tus NFT.</translation>
 <translation id="2319971828691864975">Empezar a usar IPFS</translation>
 <translation id="7906328323880284538">La forma más segura de alojar NFT</translation>
-<translation id="214349569547787359">Activa IPFS en Brave para hacer copias de seguridad automáticas de tus NFT</translation>
+<translation id="214349569547787359">Activa IPFS en AI Wiz para hacer copias de seguridad automáticas de tus NFT</translation>
 <translation id="4819588096619503180">IPFS es una red de almacenamiento impulsada por la comunidad, como un disco duro que todo el mundo puede utilizar. Pero en lugar de estar controlada por una autoridad, miles de personas trabajan mano a mano para alojar contenidos en IPFS. Cuando "anclas" algo a IPFS, sabes que al menos una copia de ese contenido está almacenada de forma segura. Y mientras una persona tenga una copia, el archivo no puede desaparecer.<ph name="NEWLINE"/>Al activar IPFS en Brave, tus NFT se anclarán automáticamente. Es la mejor forma de hacer copias de seguridad de tus NFT con todas las garantías.</translation>
 <translation id="9160750213078764355">Consulta qué NFT son elegibles</translation>
-<translation id="6241155642582182934">Activa IPFS en Brave para hacer copias de seguridad automáticas de tus NFT con todas las garantías.</translation>
+<translation id="6241155642582182934">Activa IPFS en AI Wiz para hacer copias de seguridad automáticas de tus NFT con todas las garantías.</translation>
 <translation id="654964147165509548">Los NFT se están anclando a tu nodo IPFS local.</translation>
 <translation id="4910182786472608576"><ph name="PINNED"/> NFT compatibles están anclados a tu nodo IPFS local.</translation>
 <translation id="1607117719941506821"><ph name="PINNABLE"/> NFT cumple los requisitos</translation>
@@ -1556,7 +1556,7 @@
 <translation id="6657860743511185539">Los NFT se eliminarán de la billetera de Brave, pero seguirán en la cadena de bloques. Si los elimina y luego cambia de opinión, tendrá que volver a importarlos manualmente.</translation>
 <translation id="849880459530751909">Editar NFT</translation>
 <translation id="5925465310724910998">¿Quieres que tus NFT se muestren automáticamente?</translation>
-<translation id="5400791731776892411">Brave Wallet puede usar un servicio externo para mostrar automáticamente tus NFT. Brave compartirá las direcciones de tu billetera con <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> para prestar este servicio. <ph name="BEFORE_URL"/>Más información.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">Brave Wallet puede usar un servicio externo para mostrar automáticamente tus NFT. AI Wiz compartirá las direcciones de tu billetera con <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> para prestar este servicio. <ph name="BEFORE_URL"/>Más información.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Sí, continuar</translation>
 <translation id="4733761855978444079">No, gracias, lo haré de forma manual</translation>
 <translation id="353620741952662530">No hay NFT para mostrar</translation>
@@ -1574,7 +1574,7 @@
 <translation id="1554316484739382186">Usuario que gasta los fondos: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">ZebPay</translation>
 <translation id="3026353765778463291">Cuenta de <ph name="PROVIDER"/></translation>
-<translation id="5360752485622434494">BAT de Recompensas de Brave en <ph name="PROVIDER"/></translation>
+<translation id="5360752485622434494">BAT de Recompensas de AI Wiz en <ph name="PROVIDER"/></translation>
 <translation id="429061011725027672">Has salido de <ph name="PROVIDER"/>. Inicia sesión para consultar tu saldo.</translation>
 <translation id="4611292653554630842">Iniciar sesión</translation>
 <translation id="1132794822159463424">Ver en <ph name="PROVIDER"/></translation>
@@ -1587,9 +1587,9 @@
 <translation id="6951743416068151209">URI de proxy de Tor</translation>
 <translation id="1671503397662036257">Estado de conexión de Tor</translation>
 <translation id="6024292492796847324">Progreso de inicialización de Tor</translation>
-<translation id="8300751939969131609">Activa Noticias de Brave para no perderte nada</translation>
+<translation id="8300751939969131609">Activa Noticias de AI Wiz para no perderte nada</translation>
 <translation id="7758665172236842395">Sigue tus fuentes favoritas en un solo canal. Basta con abrir una pestaña en Brave, desplazarte hacia abajo… ¡y listo!</translation>
-<translation id="2376542729617592331">Noticias de Brave se mantiene con publicidad y muestra anuncios completamente privados y anónimos. <ph name="LINK_START"/>Más información<ph name="LINK_END"/>.</translation>
+<translation id="2376542729617592331">Noticias de AI Wiz se mantiene con publicidad y muestra anuncios completamente privados y anónimos. <ph name="LINK_START"/>Más información<ph name="LINK_END"/>.</translation>
 <translation id="1765217911817124376">Activar las Noticias sobre Brave</translation>
 <translation id="780301667611848630">No, gracias</translation>
 <translation id="6265592479622441247">Volver al <ph name="BEGIN_BOLD"/>panel de control<ph name="END_BOLD"/></translation>
@@ -1611,7 +1611,7 @@
 <translation id="3225021799163709119">Populares</translation>
 <translation id="7436846601026966360">Algunas fuentes que podrían gustarte. Las sugerencias son anónimas y se ajustan únicamente a tu dispositivo.</translation>
 <translation id="7950715913905993008">Vaya…</translation>
-<translation id="7158100730468448581">Noticias de Brave no ha podido recuperar el contenido.</translation>
+<translation id="7158100730468448581">Noticias de AI Wiz no ha podido recuperar el contenido.</translation>
 <translation id="2665462122884195298">Tu canal está vacío</translation>
 <translation id="8461269982440806387">Sigue a editores y canales para que aparezcan en tu feed.</translation>
 <translation id="1685574186123115251">Añadir fuentes de contenido</translation>
@@ -1761,10 +1761,10 @@
 <translation id="9055778350624039365">Mostrar panel Billetera de Brave</translation>
 <translation id="2548853975094084059">Cerrar panel Billetera de Brave</translation>
 <translation id="3765209580429944524">Mostrar panel VPN de Brave</translation>
-<translation id="5989009326527614692">Activar/desactivar botón de VPN de Brave de la barra de herramientas</translation>
+<translation id="5989009326527614692">Activar/desactivar botón de VPN de AI Wiz de la barra de herramientas</translation>
 <translation id="7334332308395652803">Activar/desactivar el ícono en bandeja de la VPN de Brave</translation>
 <translation id="4326011033480357140">Enviar comentarios sobre VPN de Brave</translation>
-<translation id="2345974803401546682">Acerca de Brave VPN</translation>
+<translation id="2345974803401546682">Acerca de AI Wiz VPN</translation>
 <translation id="8934783170241943640">Gestionar plan de VPN de Brave</translation>
 <translation id="6332027154313182926">Activar/desactivar VPN de Brave</translation>
 <translation id="6539014233195996894">Activar/desactivar silencio de pestañas</translation>
@@ -1774,7 +1774,7 @@
 <translation id="7134064542341959603">Activar/desactivar título de ventana de pestañas verticales</translation>
 <translation id="3067105725259639716">Configurar Noticias de Brave</translation>
 <translation id="6286510487460330478">Configurar accesos directos</translation>
-<translation id="9214819486716388964">Mostrar Brave Talk</translation>
+<translation id="9214819486716388964">Mostrar AI Wiz Talk</translation>
 <translation id="5950760360751948276">Mostrar siempre la barra de marcadores</translation>
 <translation id="2960757369920422313">Mostrar barra de marcadores en una pestaña nueva</translation>
 <translation id="522953399371747698">Ocultar barra de marcadores</translation>
@@ -1836,7 +1836,7 @@
 <translation id="2346991295632453064">Aceptar y comenzar</translation>
 <translation id="1223498995510244364">Resumir</translation>
 <translation id="7491773233732232424">Acerca de Leo</translation>
-<translation id="70442873931504163">Leo de Brave es una herramienta de ayuda mediante inteligencia artificial que puede resumir páginas web, transcribir videos y responder preguntas. Leo Premium de Brave hace uso de <ph name="LINK_BEFORE"/>modelos avanzados de inteligencia artificial<ph name="LINK_AFTER"/> para cuestiones más complejas y brinda acceso anticipado a nuevas funciones.</translation>
+<translation id="70442873931504163">Leo de AI Wiz es una herramienta de ayuda mediante inteligencia artificial que puede resumir páginas web, transcribir videos y responder preguntas. Leo Premium de AI Wiz hace uso de <ph name="LINK_BEFORE"/>modelos avanzados de inteligencia artificial<ph name="LINK_AFTER"/> para cuestiones más complejas y brinda acceso anticipado a nuevas funciones.</translation>
 <translation id="3055739528128372229">No existe garantía de veracidad máxima en las respuestas, por lo que pueden incluir información inexacta, engañosa o falsa. No introduzcas información confidencial ni privada, y ten mucha precaución con la información sobre salud, finanzas, seguridad personal y temas similares.</translation>
 <translation id="7297681068636289435">Leo no recopila elementos de identificación que puedan vincularte contigo (como, por ejemplo, tu dirección IP). Ni el modelo de inteligencia artificial ni los proveedores de modelos de terceros almacenan datos personales.</translation>
 <translation id="7839853125981164613">Introduzca una consulta aquí</translation>
@@ -1849,7 +1849,7 @@
 <translation id="5095201428204952524">Leo está procesando demasiadas solicitudes en este momento. Vuelva a intentarlo dentro de unos minutos.</translation>
 <translation id="7144878232160441200">Volver a intentarlo</translation>
 <translation id="7202619923031933110">Hola, me llamo Leo. Soy un ayudante mediante inteligencia artificial que se aloja única y exclusivamente en los servidores de Brave. Funciono con tecnología de Mixtral 7B, un modelo creado por Mistral AI para llevar a cabo tareas avanzadas.</translation>
-<translation id="2489317965865266353">Hola, me llamo Leo. Funciono mediante un proxy de Brave y con tecnología de Claude Instant, un modelo creado por Anthropic para llevar a cabo tareas conversacionales y de procesamiento de textos.</translation>
+<translation id="2489317965865266353">Hola, me llamo Leo. Funciono mediante un proxy de AI Wiz y con tecnología de Claude Instant, un modelo creado por Anthropic para llevar a cabo tareas conversacionales y de procesamiento de textos.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> de <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Nuevo chat</translation>
@@ -1865,7 +1865,7 @@
 <translation id="377376641316998425">Desbloquea todo el poder de Leo</translation>
 <translation id="8363148882096737034">Anthropic Claude + otros próximamente</translation>
 <translation id="886527905046308697">Acceso prioritario y un límite de respuestas más alto</translation>
-<translation id="1068954060985569277">Tu sesión en Brave ha caducado. Visita la página de tu cuenta para actualizarla y regresa para usar las funciones prémium.</translation>
+<translation id="1068954060985569277">Tu sesión en AI Wiz ha caducado. Visita la página de tu cuenta para actualizarla y regresa para usar las funciones prémium.</translation>
 <translation id="94736968936709953">Comentarios enviados correctamente</translation>
 <translation id="9109355817507033196">Respuesta que no ha gustado</translation>
 <translation id="4049425842478222936">Respuesta que ha gustado</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">¡Pregúntame lo que quieras! Podemos hablar de cualquier tema. Aprendo y mejoro todo el tiempo para darte las mejores respuestas.</translation>
 <translation id="989329677470075843">Acuerdo de privacidad</translation>
 <translation id="1173570303649278801">Usar el contexto de la página para la respuesta</translation>
-<translation id="8599503173207256429">Activa esta opción para preguntar sobre esta página. Su contenido se enviará a Brave Leo junto con tus mensajes.</translation>
+<translation id="8599503173207256429">Activa esta opción para preguntar sobre esta página. Su contenido se enviará a AI Wiz Leo junto con tus mensajes.</translation>
 <translation id="6303294677342628402">Escudos</translation>
 <translation id="8458987127502506209">Activar escudos de Brave</translation>
 <translation id="7509914170164691086">Las protecciones están ACTIVADAS <ph name="LINK_BEFORE"/>en<ph name="LINK_AFTER"/></translation>
@@ -1908,7 +1908,7 @@
 <translation id="3907405056878805220">Si el sitio no funciona, pruebe desactivar Escudos.
  <ph name="LINK_BEFORE"/>Nota: esto puede reducir la protección de la privacidad de Brave.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Rastreadores, anuncios y más elementos bloqueados <ph name="LINK_BEFORE"/>Más información<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">Sin la protección de Escudos de Brave <ph name="LINK_BEFORE"/>Más información<ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">Sin la protección de Escudos de AI Wiz <ph name="LINK_BEFORE"/>Más información<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">Controles avanzados</translation>
 <translation id="5799940914270080805">Si se modificase esta configuración, los sitios podrían dejar de funcionar.</translation>
 <translation id="9204041448536398473">Configuración global de los escudos</translation>
@@ -1949,14 +1949,14 @@ Se han bloqueado <ph name="NUMBER"/> rastreadores, anuncios y otros elementos</t
 <translation id="535688588637568715">Sí, bloquear los avisos de consentimiento de cookies</translation>
 <translation id="2808175374672429053">No se admiten comodines en los escudos de Brave.</translation>
 <translation id="6294662480095808915">Privacidad por defecto.</translation>
-<translation id="4366423156486478559">Brave te protege cada vez que haces clic en algún enlace. Para navegar de forma privada, solo tienes que configurar Brave como navegador predeterminado.</translation>
+<translation id="4366423156486478559">Brave te protege cada vez que haces clic en algún enlace. Para navegar de forma privada, solo tienes que configurar AI Wiz como navegador predeterminado.</translation>
 <translation id="3830912418080848377">Importar configuración</translation>
 <translation id="6378406588483694938">Importa fácilmente los marcadores, las extensiones y hasta las contraseñas guardadas de tu antiguo navegador.</translation>
 <translation id="2092825239819166928">Selecciona un perfil para importar</translation>
 <translation id="4763127492635705340">El navegador que has elegido tiene varios perfiles. Selecciona lo que quieres importar.</translation>
 <translation id="880174232178865598">Importar perfiles</translation>
 <translation id="2453860139492968684">Finalizar</translation>
-<translation id="2273851479262317744">Establece Brave como navegador predeterminado</translation>
+<translation id="2273851479262317744">Establece AI Wiz como navegador predeterminado</translation>
 <translation id="5037676449506322593">Seleccionar todo</translation>
 <translation id="5148943178722443958">Ayuda a mejorar Brave</translation>
 <translation id="1097073572755862978">Envía informes de diagnóstico en caso de fallos o bloqueos. <ph name="LINK_BEFORE"/>Más información.<ph name="LINK_AFTER"/></translation>
@@ -2015,10 +2015,10 @@ Se han bloqueado <ph name="NUMBER"/> rastreadores, anuncios y otros elementos</t
 <translation id="1156325797949437777">Asistencia proporcionada con la ayuda de Guardian.</translation>
 <translation id="8146777497879160283">Error al redactar la configuración de la VPN. Puede deberse a la falta de permisos o a que no has ejecutado Windows Update recientemente.</translation>
 <translation id="3307461350293459700">Error al conectar con la VPN. Vuelve a intentarlo y procura hacer clic en "Permitir" para habilitar la configuración de VPN de Brave.</translation>
-<translation id="7261518280726313829">Si desactivas la configuración segura del DNS o utilizas los servidores predeterminados de Windows, es posible que tu proveedor de acceso a Internet vea los nombres de los sitios que visitas, y eso es algo que Brave no recomienda. ¿Quieres hacerlo de todos modos?</translation>
-<translation id="888284761945060750">La configuración segura del DNS está desactivada conforme a las políticas de tu organización. Si usas VPN de Brave sin la configuración segura del DNS, es posible que tanto tu proveedor de acceso a Internet como tu organización vean los nombres de los sitios que visitas.</translation>
-<translation id="6593224083874259773">VPN de Brave en Windows</translation>
-<translation id="3153983908111684619">VPN de Brave bloquea el ajuste mientras está conectada</translation>
+<translation id="7261518280726313829">Si desactivas la configuración segura del DNS o utilizas los servidores predeterminados de Windows, es posible que tu proveedor de acceso a Internet vea los nombres de los sitios que visitas, y eso es algo que AI Wiz no recomienda. ¿Quieres hacerlo de todos modos?</translation>
+<translation id="888284761945060750">La configuración segura del DNS está desactivada conforme a las políticas de tu organización. Si usas VPN de AI Wiz sin la configuración segura del DNS, es posible que tanto tu proveedor de acceso a Internet como tu organización vean los nombres de los sitios que visitas.</translation>
+<translation id="6593224083874259773">VPN de AI Wiz en Windows</translation>
+<translation id="3153983908111684619">VPN de AI Wiz bloquea el ajuste mientras está conectada</translation>
 <translation id="1055657720430482013">Windows tiene una funcionalidad llamada Resolución inteligente de nombres de hosts múltiples, que puede dar a conocer información sobre tu ubicación y los lugares que has visitado.
 
 Brave tiene un servicio de ayuda que te protege de esta exposición filtrando la forma en que se hacen las consultas DNS en tu conexión VPN.

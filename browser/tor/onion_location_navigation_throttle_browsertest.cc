@@ -43,7 +43,7 @@ constexpr char kTestOnionURL[] = "https://brave.onion";
 constexpr char kTestInvalidScheme[] = "/invalid_scheme";
 constexpr char kTestInvalidSchemeURL[] = "brave://brave.onion";
 constexpr char kTestNotOnion[] = "/not_onion";
-constexpr char kTestNotOnionURL[] = "https://brave.com";
+constexpr char kTestNotOnionURL[] = "https://aiwize.com";
 
 std::unique_ptr<net::test_server::HttpResponse> HandleOnionLocation(
     const net::test_server::HttpRequest& request) {
@@ -216,7 +216,7 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest,
                                                true);
   BrowserList* browser_list = BrowserList::GetInstance();
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("https://brave.com")));
+      ui_test_utils::NavigateToURL(browser(), GURL("https://aiwize.com")));
   EXPECT_EQ(1U, browser_list->size());
   ASSERT_FALSE(browser_list->get(0)->profile()->IsTor());
   ASSERT_EQ(browser(), browser_list->get(0));
@@ -253,7 +253,7 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest,
                        OnionDomain_AutoOnionRedirect_OffByDefault) {
   BrowserList* browser_list = BrowserList::GetInstance();
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("https://brave.com")));
+      ui_test_utils::NavigateToURL(browser(), GURL("https://aiwize.com")));
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL(kTestOnionURL)));
   EXPECT_EQ(1U, browser_list->size());

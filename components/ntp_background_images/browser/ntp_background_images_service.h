@@ -176,7 +176,7 @@ class NTPBackgroundImagesService {
   // The reason is |kNewTabPageCachedSuperReferralComponentInfo| is used to
   // check whether initial download is finished or not. Knowing initial download
   // is done is important for super referral. If this is SR install, we should
-  // not show SI images until user chooses Brave default images. So, we should
+  // not show SI images until user chooses AI Wiz default images. So, we should
   // know the exact timing whether SR assets is ready to use or not.
   std::optional<base::Value::Dict> initial_sr_component_info_;
   base::WeakPtrFactory<NTPBackgroundImagesService> weak_factory_;

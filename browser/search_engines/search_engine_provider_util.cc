@@ -132,7 +132,7 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile* profile) {
   const std::string private_provider_guid =
       prefs->GetString(prefs::kSyncedDefaultPrivateSearchProviderGUID);
 
-  // Set Brave as a private window's initial search provider.
+  // Set AI Wiz as a private window's initial search provider.
   if (private_provider_guid.empty()) {
     SetBraveAsDefaultPrivateSearchProvider(prefs);
     return;
@@ -148,7 +148,7 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile* profile) {
     } else {
       // This could happen with update default provider list when brave is not
       // updated for longtime. So it doesn't have any chance to cache url data.
-      // Set Brave as default private search provider.
+      // Set AI Wiz as default private search provider.
       SetBraveAsDefaultPrivateSearchProvider(prefs);
     }
     return;

@@ -146,7 +146,7 @@ export function createWalletApi() {
       .injectEndpoints({ endpoints: fiatCurrencyEndpoints })
       // Site permission (connected accounts) endpoints
       .injectEndpoints({ endpoints: sitePermissionEndpoints })
-      // Brave Swap endpoints
+      // AI Wiz Swap endpoints
       .injectEndpoints({ endpoints: swapEndpoints })
   )
 }

@@ -20,22 +20,22 @@ enum {
   kApplication3Index = 2,
   kApplication4Index = 3,
 
-  // The Brave Canary application icon.
+  // The AI Wiz Canary application icon.
   kSxSApplicationIndex = 4,
 
-  // The Brave App Launcher icon.
+  // The AI Wiz App Launcher icon.
   kAppLauncherIndex = 5,
 
-  // The Brave App Launcher Canary icon.
+  // The AI Wiz App Launcher Canary icon.
   kSxSAppLauncherIndex = 6,
 
-  // The Brave incognito icon.
+  // The AI Wiz incognito icon.
   kIncognitoIndex = 7,
 
-  // The Brave Dev application icon.
+  // The AI Wiz Dev application icon.
   kDevApplicationIndex = 8,
 
-  // The Brave Beta application icon.
+  // The AI Wiz Beta application icon.
   kBetaApplicationIndex = 9,
 
   // The various file type icon(ex, pdf).
@@ -44,10 +44,10 @@ enum {
   kDevFileTypeIndex = 12,
   kSxSFileTypeIndex = 13,
 #else
-  // The Brave Developer App Launcher icon.
+  // The AI Wiz Developer App Launcher icon.
   kAppLauncherIndex = 1,
 
-  // The Brave Developer incognito icon.
+  // The AI Wiz Developer incognito icon.
   kIncognitoIndex = 2,
 #endif
 };

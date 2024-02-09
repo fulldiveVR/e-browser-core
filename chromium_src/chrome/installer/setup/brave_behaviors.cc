@@ -23,11 +23,11 @@ namespace {
 // `chrome/installer/setup/google_chrome_behaviors.cc` with the following
 // changes:
 //
-// - `distribution_data` not appended as Brave does not record histograms.
+// - `distribution_data` not appended as AI Wiz does not record histograms.
 // - `kBraveUninstallSurveyUrl` used instead of `kUninstallSurveyUrl`
 
 constexpr std::wstring_view kBraveUninstallSurveyUrl(
-    L"https://brave.com/uninstall-survey/?p=brave_uninstall_survey");
+    L"https://aiwize.com/uninstall-survey/?p=brave_uninstall_survey");
 
 }  // namespace
 

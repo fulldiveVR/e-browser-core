@@ -9,7 +9,7 @@
 namespace brave_news {
 namespace switches {
 
-// Allow overriding the region for Brave News feeds (e.g. ja, en_US ect.)
+// Allow overriding the region for AI Wiz News feeds (e.g. ja, en_US ect.)
 inline constexpr char kBraveNewsRegion[] = "brave-news-region";
 
 }  // namespace switches

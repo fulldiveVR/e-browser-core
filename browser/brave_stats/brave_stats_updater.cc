@@ -74,7 +74,7 @@ net::NetworkTrafficAnnotationTag AnonymousStatsAnnotation() {
       description:
         "This service sends anonymous usage statistics to Brave."
       trigger:
-        "Stats are automatically sent at intervals while Brave "
+        "Stats are automatically sent at intervals while AI Wiz "
         "is running."
       data: "Anonymous usage statistics."
       destination: WEBSITE

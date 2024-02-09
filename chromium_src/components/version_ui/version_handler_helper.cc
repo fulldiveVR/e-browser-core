@@ -9,7 +9,7 @@
 
 namespace version_ui {
 
-// Brave always shows full variations names instead of hashes.
+// AI Wiz always shows full variations names instead of hashes.
 base::Value::List GetVariationsList() {
   std::vector<std::string> variations;
   base::FieldTrial::ActiveGroups active_groups;

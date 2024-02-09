@@ -325,7 +325,7 @@ IN_PROC_BROWSER_TEST_F(BraveNetworkAuditTest, BasicTests) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), simple_url));
   WaitForTimeout(kMaxTimeoutPerLoadedURL);
 
-  // Finally, load brave://rewards and enable Brave Rewards.
+  // Finally, load brave://rewards and enable AI Wiz Rewards.
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("brave://rewards")));
   ASSERT_TRUE(EnableBraveRewards());
   WaitForTimeout(kMaxTimeoutPerLoadedURL);

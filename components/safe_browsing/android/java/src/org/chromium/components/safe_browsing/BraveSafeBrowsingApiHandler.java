@@ -21,7 +21,7 @@ import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 
 /**
- * Brave implementation of SafetyNetApiHandler for Safe Browsing
+ * AI Wiz implementation of SafetyNetApiHandler for Safe Browsing
  */
 public class BraveSafeBrowsingApiHandler implements SafetyNetApiHandler {
     public static final long SAFE_BROWSING_INIT_INTERVAL_MS = 30000;

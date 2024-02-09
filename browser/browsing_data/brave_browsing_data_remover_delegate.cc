@@ -69,7 +69,7 @@ void BraveBrowsingDataRemoverDelegate::RemoveEmbedderData(
   if (remove_mask & content::BrowsingDataRemover::DATA_TYPE_CACHE)
     ClearIPFSCache();
 #endif
-  // Brave News feed cache
+  // AI Wiz News feed cache
   if (remove_mask & chrome_browsing_data_remover::DATA_TYPE_HISTORY) {
     brave_news::BraveNewsControllerFactory::GetForContext(profile_)
         ->ClearHistory();
@@ -115,7 +115,7 @@ void BraveBrowsingDataRemoverDelegate::ClearShieldsSettings(
 #if BUILDFLAG(ENABLE_AI_CHAT)
 void BraveBrowsingDataRemoverDelegate::ClearAiChatHistory(base::Time begin_time,
                                                           base::Time end_time) {
-  // Handler for the Brave Leo History clearing.
+  // Handler for the AI Wiz Leo History clearing.
   // It is prepared for future implementation.
 }
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)

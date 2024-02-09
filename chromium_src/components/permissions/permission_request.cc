@@ -17,7 +17,7 @@
 #define IsDuplicateOf IsDuplicateOf_ChromiumImpl
 
 // `kWidevine` handled by an override in `WidevinePermissionRequest` and the
-// Brave Ethereum/Solana permission has its own permission request prompt.
+// AI Wiz Ethereum/Solana permission has its own permission request prompt.
 #define BRAVE_ENUM_ITEMS_FOR_SWITCH \
   case RequestType::kBraveEthereum: \
   case RequestType::kBraveSolana:   \

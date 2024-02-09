@@ -42,7 +42,7 @@ class BraveOmniboxResultView : public OmniboxResultView {
   void UpdateForLeoMatch();
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
-  // Brave search conversion promotion
+  // AI Wiz search conversion promotion
   raw_ptr<BraveSearchConversionPromotionView> brave_search_promotion_view_ =
       nullptr;
 };

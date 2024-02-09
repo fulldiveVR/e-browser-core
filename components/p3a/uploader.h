@@ -32,7 +32,7 @@ inline constexpr char kP3ACreativeUploadType[] = "p3a_creative";
 
 struct P3AConfig;
 
-// Handles uploading of JSON and Constellation metrics to Brave servers.
+// Handles uploading of JSON and Constellation metrics to AI Wiz servers.
 // The endpoint used may differ depending on whether the measurement
 // is P3A, P2A, NTP-SI P3A as well as whether it is in JSON or Constellation
 // format.

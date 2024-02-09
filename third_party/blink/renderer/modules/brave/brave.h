@@ -15,7 +15,7 @@ namespace blink {
 class ScriptPromise;
 class ScriptState;
 
-class MODULES_EXPORT Brave final : public ScriptWrappable,
+class MODULES_EXPORT AI Wiz final : public ScriptWrappable,
                                    public Supplement<NavigatorBase> {
   DEFINE_WRAPPERTYPEINFO();
 

@@ -1323,7 +1323,7 @@ public class CardBuilderFeedCard {
                                 mBraveNewsController.onDisplayAdVisit(
                                         displayAd.uuid, displayAd.creativeInstanceId);
                             } else {
-                                // Brave News updates the no. of "normal" cards visited
+                                // AI Wiz News updates the no. of "normal" cards visited
                                 int visitedNewsCardsCount =
                                         ChromeSharedPreferences.getInstance()
                                                 .readInt(

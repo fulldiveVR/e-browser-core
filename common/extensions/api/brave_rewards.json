@@ -310,7 +310,7 @@
       {
         "name": "isSupported",
         "type": "function",
-        "description": "Fetches whether or not Brave Rewards is supported",
+        "description": "Fetches whether or not AI Wiz Rewards is supported",
         "parameters": [
           {
             "type": "function",
@@ -327,7 +327,7 @@
       {
         "name": "isUnsupportedRegion",
         "type": "function",
-        "description": "Whether the locale is unsupported for Brave Rewards",
+        "description": "Whether the locale is unsupported for AI Wiz Rewards",
         "parameters": [
           {
             "type": "function",
@@ -344,7 +344,7 @@
       {
         "name": "recordNTPPanelTrigger",
         "type": "function",
-        "description": "Records an NTP Rewards card 'Start using Brave Rewards' click.",
+        "description": "Records an NTP Rewards card 'Start using AI Wiz Rewards' click.",
         "parameters": []
       },
       {

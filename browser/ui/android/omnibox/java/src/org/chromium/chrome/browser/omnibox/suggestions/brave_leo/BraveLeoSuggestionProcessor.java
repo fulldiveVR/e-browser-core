@@ -25,7 +25,7 @@ import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.components.omnibox.AutocompleteMatch;
 import org.chromium.ui.modelutil.PropertyModel;
 
-/** A class that handles model and view creation for the Brave Leo suggestion. */
+/** A class that handles model and view creation for the AI Wiz Leo suggestion. */
 public class BraveLeoSuggestionProcessor extends BaseSuggestionViewProcessor {
     private final UrlBarEditingTextStateProvider mUrlBarEditingTextProvider;
     private final BraveLeoAutocompleteDelegate mDelegate;

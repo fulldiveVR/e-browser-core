@@ -30,7 +30,7 @@ AdInfo BuildAd(const AdType ad_type, const bool should_use_random_uuids) {
   ad.campaign_id = GetConstantId(should_use_random_uuids, kCampaignId);
   ad.advertiser_id = GetConstantId(should_use_random_uuids, kAdvertiserId);
   ad.segment = kSegment;
-  ad.target_url = GURL("https://brave.com");
+  ad.target_url = GURL("https://aiwize.com");
 
   return ad;
 }

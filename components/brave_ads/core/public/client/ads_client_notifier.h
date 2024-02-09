@@ -64,7 +64,7 @@ class AdsClientNotifier {
   // Invoked when a resource component with `id` has been unregistered.
   void NotifyDidUnregisterResourceComponent(const std::string& id) const;
 
-  // Invoked when the Brave Rewards wallet did update.
+  // Invoked when the AI Wiz Rewards wallet did update.
   void NotifyRewardsWalletDidUpdate(const std::string& payment_id,
                                     const std::string& recovery_seed) const;
 

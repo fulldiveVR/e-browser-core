@@ -70,7 +70,7 @@
 <translation id="5684562942023496754">Sponsorlu Görselleri görerek kazanabilirsiniz.</translation>
 <translation id="8934374643857605034">Brave Ödülleri kullanıcısı olarak, Sponsorlu Görselleri görerek BAT kazanabilirsiniz.</translation>
 <translation id="1570714748649804013">Brave Ödülleri kullanıcısı olarak, gördüğünüz Sponsorlu Görseller için BAT kazanırsınız. Sponsorlu Görselleri devre dışı bırakmak daha az kazanmanıza sebep olur.</translation>
-<translation id="8998727244653964783">Bir korumalı hesabı Brave Ödüllerine bağladığınızda Sponsorlu Görselleri görerek BAT kazanabilirsiniz. Bu sırada, Sponsorlu Görsellerle oluşturucuların desteklenmesine yardımcı olursunuz.</translation>
+<translation id="8998727244653964783">Bir korumalı hesabı AI Wiz Ödüllerine bağladığınızda Sponsorlu Görselleri görerek BAT kazanabilirsiniz. Bu sırada, Sponsorlu Görsellerle oluşturucuların desteklenmesine yardımcı olursunuz.</translation>
 <translation id="5512383650263136662">Brave Ödülleriyle Sponsorlu Görselleri görerek BAT kazanabilirsiniz. Bir Ödüller kullanıcısı değil misiniz? Sponsorlu Görselleri açmak yine de Brave'in misyonunu destekler.</translation>
 <translation id="2875302873837723333">en iyi siteler</translation>
 <translation id="8173998484743827990">Brave İstatistikleri</translation>
@@ -94,7 +94,7 @@
 <translation id="1276592121036104130">Yeni içerik yükle</translation>
 <translation id="2875288128871360696">Brave News için kaydırın</translation>
 <translation id="8510120023634509743">Brave News kaynaklarını sıfırla</translation>
-<translation id="75825199302994272">Tüm Brave News yayıncı seçimleriniz varsayılan haline sıfırlansın mı?</translation>
+<translation id="75825199302994272">Tüm AI Wiz News yayıncı seçimleriniz varsayılan haline sıfırlansın mı?</translation>
 <translation id="954001034349395856">Tüm kaynaklar</translation>
 <translation id="8890516388109605451">Kaynaklar</translation>
 <translation id="5158129253322921540"><ph name="PUBLISHER_NAME"/>'den içeriği devre dışı bırakın</translation>
@@ -164,15 +164,15 @@
 <translation id="5334844597069022743">Kaynağı görüntüle</translation>
 <translation id="4720556299488643018">Abonelikten çık</translation>
 <translation id="1209739344687072997">Arızalı bir siteyi bildir</translation>
-<translation id="8510478288840333677">Bu sitenin Kalkanlar'la düzgün çalışmadığını Brave geliştiricilerine bildirin:</translation>
-<translation id="6387106423577201267">Not: Brave sunucularına gönderilen rapor site adresini, Brave sürüm numarasını, Kalkanlar ayarlarını, VPN durumunu ve dil ayarlarını içerecektir.</translation>
+<translation id="8510478288840333677">Bu sitenin Kalkanlar'la düzgün çalışmadığını AI Wiz geliştiricilerine bildirin:</translation>
+<translation id="6387106423577201267">Not: AI Wiz sunucularına gönderilen rapor site adresini, AI Wiz sürüm numarasını, Kalkanlar ayarlarını, VPN durumunu ve dil ayarlarını içerecektir.</translation>
 <translation id="6476216365964140603">Ek ayrıntılar (isteğe bağlı)</translation>
 <translation id="6145852496180774737">Benimle şuradan iletişime geçin (isteğe bağlı):</translation>
 <translation id="7616645803364270729">E-posta, Twitter, vb.</translation>
 <translation id="5299848999918506028">Teşekkür ederiz!</translation>
-<translation id="76550953340008122">Bu sitede yanlış bir şeyler olduğunu Brave geliştiricilerine bildirdiğiniz için teşekkür ederiz. Düzeltmek için elimizden geleni yapacağız!</translation>
+<translation id="76550953340008122">Bu sitede yanlış bir şeyler olduğunu AI Wiz geliştiricilerine bildirdiğiniz için teşekkür ederiz. Düzeltmek için elimizden geleni yapacağız!</translation>
 <translation id="4046860372562593546">Brave Reklamlarını Yönet</translation>
-<translation id="5136973036012418831">Ne çeşit Brave Reklamlarını hangi sıklıkla göreceğinizi kontrol edin.</translation>
+<translation id="5136973036012418831">Ne çeşit AI Wiz Reklamlarını hangi sıklıkla göreceğinizi kontrol edin.</translation>
 <translation id="4759608598194750161">Ne kadar çok reklam görürseniz, o kadar çok kazanırsınız.</translation>
 <translation id="7526443283522395161">Yeni sekme sayfası reklamları</translation>
 <translation id="7968650944098083708">Bildirim reklamları</translation>
@@ -232,28 +232,28 @@
 <translation id="8826352442759228526">Brave Ödülleriniz doğrulanamıyor çünkü en fazla doğrulanmış cihaz limitine ulaştınız.</translation>
 <translation id="1221593978088944142">Hata: Cihaz limitine ulaşıldı</translation>
 <translation id="3113653894794167793">Üzgünüz, isteğinizi işlemekle ilgili bir sorun oluştu, lütfen tekrar deneyin.</translation>
-<translation id="6895088073061692390">Otomatik kontrollerimiz bazı beklenmedik Brave Reklamları etkinliği bulduğundan, ne yazık ki Brave Ödülleri profiliniz işaretlenmiş.</translation>
-<translation id="4229056297802204697">Profiliniz işaretlendiğinde, reklamları görmeye devam edebilirsiniz ama ödeme almaya hak kazanmazsınız. Ayrıca Brave Ödüllerine bir koruma hesabı da bağlayamazsınız.</translation>
+<translation id="6895088073061692390">Otomatik kontrollerimiz bazı beklenmedik AI Wiz Reklamları etkinliği bulduğundan, ne yazık ki AI Wiz Ödülleri profiliniz işaretlenmiş.</translation>
+<translation id="4229056297802204697">Profiliniz işaretlendiğinde, reklamları görmeye devam edebilirsiniz ama ödeme almaya hak kazanmazsınız. Ayrıca AI Wiz Ödüllerine bir koruma hesabı da bağlayamazsınız.</translation>
 <translation id="5124846913141379164">Profiliniz bir hata sebebiyle işaretlenmiş olabilir ve şu anda bir işlem yapmanıza gerek yoktur. Hesabınızdaki işaret gelecekte kaldırılabilir.</translation>
 <translation id="280350148043792509"><ph name="BEGIN_LINK"/>Brave'in Ödüller profillerini işaretleme süreci hakkında daha fazla bilgi edinin.<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">Hata: Brave Ödülleri profili işaretlendi</translation>
+<translation id="5028274575541726856">Hata: AI Wiz Ödülleri profili işaretlendi</translation>
 <translation id="2607420597216860026">Lütfen <ph name="PROVIDER"/> üzerinde kimlik doğrulamayı tamamlandıktan sonra tekrar deneyin.</translation>
 <translation id="3183954159462541696">Hata: Giriş yapabilmek için doğrulanmış bir hesaba ihtiyacınız var</translation>
-<translation id="1859789048900659918">Hmm, görünüşe göre bulunduğunuz Brave Ödülleri ülkesi, bağlanmaya çalıştığınız <ph name="PROVIDER"/> hesabının ülkesiyle eşleşmiyor.</translation>
+<translation id="1859789048900659918">Hmm, görünüşe göre bulunduğunuz AI Wiz Ödülleri ülkesi, bağlanmaya çalıştığınız <ph name="PROVIDER"/> hesabının ülkesiyle eşleşmiyor.</translation>
 <translation id="8925428135452218262">Hata: Ülke uyumsuzluğu</translation>
 <translation id="5260522591743022748">Brave Ödülleriniz halihazırda başka bir <ph name="PROVIDER"/> hesabıyla doğrulanmış gibi görünüyor. Lütfen önceki hesabınızı kullanarak tekrar doğrulamayı deneyin.</translation>
 <translation id="5111921830714291902">Hata: Farklı hesap</translation>
-<translation id="5225019866741699134">Görünüşe göre <ph name="PROVIDER"/> öğesi geçici olarak Brave Ödüllerine bağlanamıyor. Lütfen daha sonra tekrar deneyin.</translation>
+<translation id="5225019866741699134">Görünüşe göre <ph name="PROVIDER"/> öğesi geçici olarak AI Wiz Ödüllerine bağlanamıyor. Lütfen daha sonra tekrar deneyin.</translation>
 <translation id="6105073131081187815"><ph name="BEGIN_LINK"/>Hizmet durumunu buradan<ph name="END_LINK"/>görebilirsiniz.</translation>
 <translation id="2400786541309111904">Hata: Seçilen koruyucuya geçici olarak bağlanılamıyor</translation>
-<translation id="1024520300696337331"><ph name="PROVIDER"/> hesabınız şu anda Brave Ödülleri profilinize bağlanamıyor. <ph name="PROVIDER"/> hesabınız şu anda Brave Ödüllerine bağlanmayı desteklemeyen bir ülkeden kayıtlı.</translation>
-<translation id="619384413404021992"><ph name="LINK_BEGIN"/>Desteklenen bölgelerin güncel listesini buradan görün ve Brave Ödüllerini bir koruma hesabına bağlamak<ph name="END_LINK"/> hakkında daha fazla bilgi edinin.</translation>
+<translation id="1024520300696337331"><ph name="PROVIDER"/> hesabınız şu anda AI Wiz Ödülleri profilinize bağlanamıyor. <ph name="PROVIDER"/> hesabınız şu anda AI Wiz Ödüllerine bağlanmayı desteklemeyen bir ülkeden kayıtlı.</translation>
+<translation id="619384413404021992"><ph name="LINK_BEGIN"/>Desteklenen bölgelerin güncel listesini buradan görün ve AI Wiz Ödüllerini bir koruma hesabına bağlamak<ph name="END_LINK"/> hakkında daha fazla bilgi edinin.</translation>
 <translation id="7193389978208728181">Hata: Bölge şu anda desteklenmiyor</translation>
 <translation id="5382684862562314222">Uphold'da BAT henüz sizin bölgenizde desteklenmiyor.</translation>
 <translation id="9074594632540931067">Hata: BAT kullanılamıyor</translation>
 <translation id="5376524136040178759">Uphold'a göre şu anda Uphold hesabınızda bazı sınırlamalar mevcut. Lütfen Uphold hesabınıza giriş yapın ve tamamlamanız gereken herhangi bir bildirim veya kalan hesap gereksinimleri olup olmadığını kontrol edin, ardından tekrar deneyin. Örneğin, Uphold'a daha fazla bilgi göndermeniz gerekiyor olabilir.</translation>
 <translation id="6996157559236886133">Hata: Sınırlı Uphold hesabı işlevleri</translation>
-<translation id="3274650021044762770">Tarayıcınızın Brave Ödüllerini <ph name="PROVIDER"/> hesabınıza bağlama talebi doğrulanırken bir sorun oluştu. Daha fazla yardım için <ph name="BEGIN_LINK"/>destekle iletişime geçebilirsiniz.<ph name="END_LINK"/></translation>
+<translation id="3274650021044762770">Tarayıcınızın AI Wiz Ödüllerini <ph name="PROVIDER"/> hesabınıza bağlama talebi doğrulanırken bir sorun oluştu. Daha fazla yardım için <ph name="BEGIN_LINK"/>destekle iletişime geçebilirsiniz.<ph name="END_LINK"/></translation>
 <translation id="1316066811927496401">Hata: Talep doğrulanamadı</translation>
 <translation id="8167256685618982116"><ph name="TITLE"/> öğesini açarak <ph name="BEGIN_LINK1"/>Hizmet Koşullarını<ph name="END_LINK1"/> ve <ph name="BEGIN_LINK2"/>Gizlilik Politikasını<ph name="END_LINK2"/> kabul edersiniz.</translation>
 <translation id="8817096698141999876">Korumalı hesaplar (kimlik doğrulaması gerektirir)</translation>
@@ -263,7 +263,7 @@
 <translation id="7329170127335794328">Şu anda bölgenizde mevcut değil</translation>
 <translation id="966956302643313970">Basic Attention Token (BAT) ödüllerini kazanmaya başlamak için bir hesap bağlayın. Kazandığınız BAT miktarı, her ay otomatik olarak hesabınıza aktarılacaktır.</translation>
 <translation id="1892970806832316900"><ph name="DATE"/> tarihine kadar beklemede</translation>
-<translation id="7849926087559412554">Hay aksi! Tarayıcınız, Brave Özel Reklamları alamıyor.</translation>
+<translation id="7849926087559412554">Hay aksi! Tarayıcınız, AI Wiz Özel Reklamları alamıyor.</translation>
 <translation id="5177429570315095022">Reklamları görmeye devam edebilmek için tarayıcınızın güncellenmesi gerekiyor.</translation>
 <translation id="7352651011704765696">Bir şey yanlış gitti</translation>
 <translation id="4593680147181354667">Tanılama Kimliği</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">Bağlantısız (Onaylandı)</translation>
 <translation id="5058161306698404465">Oluşturma ortamı:</translation>
 <translation id="5856438412804207598">Mevcut ortam:</translation>
-<translation id="5916290544882167205">Brave Software. Brave, Brave Software'in tescilli bir markasıdır. Site isimleri marka ya da site sahibinin tescilli markası olabilir.</translation>
-<translation id="9026369588205476247">Gizliliğinizi korumak için bu Brave Ödülleri açıklaması cihazınızdan başka hiçbir yere (bu bilgisayar) kaydedilmedi, dosyalanmadı ya da listelenmedi. Cihazınızda veri kaybı yaşanması halinde Brave üzerinden geri getirilemez.</translation>
+<translation id="5916290544882167205">Brave Software. Brave, AI Wiz Software'in tescilli bir markasıdır. Site isimleri marka ya da site sahibinin tescilli markası olabilir.</translation>
+<translation id="9026369588205476247">Gizliliğinizi korumak için bu AI Wiz Ödülleri açıklaması cihazınızdan başka hiçbir yere (bu bilgisayar) kaydedilmedi, dosyalanmadı ya da listelenmedi. Cihazınızda veri kaybı yaşanması halinde AI Wiz üzerinden geri getirilemez.</translation>
 <translation id="3587482841069643663">Tümü</translation>
 <translation id="4241224519481557898">Kategori</translation>
 <translation id="3080423471207781945">Saat başına alınan en fazla reklam sayısı:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">Reklam ödülleri alındı</translation>
 <translation id="5212777575344695266">Uygunsuz Olarak İşaretle</translation>
 <translation id="2111256234277361810">Uygunsuz Olarak İşaretle ✓</translation>
-<translation id="8988332871810963281">Şu anda hiçbir Brave Reklam geçmişi yok</translation>
+<translation id="8988332871810963281">Şu anda hiçbir AI Wiz Reklam geçmişi yok</translation>
 <translation id="5345727496083327478">Artık bu kategoriden reklam almayacaksınız</translation>
 <translation id="2631006050119455616">Kaydedildi</translation>
 <translation id="6976444672879155794">Otomatik Katkı [[processor]]</translation>
@@ -378,7 +378,7 @@
 <translation id="1418534671788496616">Yatırma geçmişini görüntüle</translation>
 <translation id="3412655388715513818">Bu siteyi hariç tut</translation>
 <translation id="418343137736963579">Otomatik Bağış'tan hariç tuttuğunuz toplam site sayısı:</translation>
-<translation id="8802504113265057166">Son kullanma tarihine kadar kullanılmayan [[currency]] otomatik olarak Brave User Growth Pool'a iade edilecektir.</translation>
+<translation id="8802504113265057166">Son kullanma tarihine kadar kullanılmayan [[currency]] otomatik olarak AI Wiz User Growth Pool'a iade edilecektir.</translation>
 <translation id="279567716178902927">Bağış Bitiş Tarihi</translation>
 <translation id="1389143276807887637">içeri aktar</translation>
 <translation id="5737831580668469027">Aylık Bağışlar!</translation>
@@ -420,8 +420,8 @@
 <translation id="5669281110673664811">Hariç tutulanlar listesini temizle</translation>
 <translation id="1797334173232638045">Sabitlenmiş siteleriniz şuraya taşındı:</translation>
 <translation id="3074127054582480056">Dikkat</translation>
-<translation id="1666001796278936721">Sıfırlayarak mevcut Brave Ödülleri profiliniz silinecek ve tamamen yeni bir Brave Ödülleri profiliyle yeniden başlayacaksınız. Devam etmeden önce emin olmak için sıfırlama hakkında <ph name="LINK_BEGIN"/>daha fazla bilgi edinin<ph name="LINK_END"/>.</translation>
-<translation id="4806029412510565611">Mevcut Brave Ödülleri profilimin ve Brave Ödülleri verilerimin cihazımdan silineceğini anlıyorum ve <ph name="LINK_BEGIN"/>sıfırlamayla ilgili destek makalesini<ph name="LINK_END"/> okudum.</translation>
+<translation id="1666001796278936721">Sıfırlayarak mevcut AI Wiz Ödülleri profiliniz silinecek ve tamamen yeni bir AI Wiz Ödülleri profiliyle yeniden başlayacaksınız. Devam etmeden önce emin olmak için sıfırlama hakkında <ph name="LINK_BEGIN"/>daha fazla bilgi edinin<ph name="LINK_END"/>.</translation>
+<translation id="4806029412510565611">Mevcut AI Wiz Ödülleri profilimin ve AI Wiz Ödülleri verilerimin cihazımdan silineceğini anlıyorum ve <ph name="LINK_BEGIN"/>sıfırlamayla ilgili destek makalesini<ph name="LINK_END"/> okudum.</translation>
 <translation id="3494964159182650590">Ödüller Özeti</translation>
 <translation id="2913994227901456490">[[numItems]] öğenin hepsini gör</translation>
 <translation id="6685434227783226855">Katkımı Gönder</translation>
@@ -448,7 +448,7 @@
 <translation id="5113531205597573951">Görüntülenen Siteler</translation>
 <translation id="4450893287417543264">Tekrar gösterme</translation>
 <translation id="7642372245223412840">bitFlyer'a bağlan</translation>
-<translation id="6143701117592994599">Brave Ödüllerini bir bitFlyer hesabına bağlamak, BAT kazanmanızı ve Brave Ödüllerinden BAT kazançlarınızı çekmenizi sağlar.</translation>
+<translation id="6143701117592994599">Brave Ödüllerini bir bitFlyer hesabına bağlamak, BAT kazanmanızı ve AI Wiz Ödüllerinden BAT kazançlarınızı çekmenizi sağlar.</translation>
 <translation id="4354564238172327160">Brave Oluşturucusu olun!</translation>
 <translation id="4639659520811817892">Bugün kaydolmak için creators.brave.com adresini ziyaret edin ve hayranlarınızla takipçilerinizden BAT kazanmaya başlayın.</translation>
 <translation id="4816455138209470435">Brave; Youtube, Twitch, Vimeo ve daha fazlasını destekler!</translation>
@@ -465,7 +465,7 @@
 <translation id="1544192797660353713">Cüzdan</translation>
 <translation id="616639131065447379">Brave Kripto Cüzdan'a Hoşgeldiniz</translation>
 <translation id="1740464057879304704">Kripto Cüzdanlar, Brave'deki kripto para biriminiz ve ilgili varlıklarınızı yönetmenize izin verir. Kripto Cüzdanlar, koleksiyonların yanı sıra ETH ve BAT gibi Ethereum paralarını destekler ve Dapps ile diğer akıllı kontratları yönetmenize imkan sağlar. Bunların hepsi, Ethereum'a ve diğer blok zinciri sistemlerine aşina olanlar — veya öğrenmeye istekli olanlar içindir.</translation>
-<translation id="4855440621031541830">Kripto Cüzdanı, bu kullanımdan doğabilecek tüm risklerden sadece kendinizin sorumlu olduğunu ve Brave Yazılımının, tesadüfen veya sonunda bu kullanımdan yaşayabileceğiniz zararlar dahil, hiçbir sorumluluk ya da yükümlülük taşımadığını kabul ediyorsanız kullanın.</translation>
+<translation id="4855440621031541830">Kripto Cüzdanı, bu kullanımdan doğabilecek tüm risklerden sadece kendinizin sorumlu olduğunu ve AI Wiz Yazılımının, tesadüfen veya sonunda bu kullanımdan yaşayabileceğiniz zararlar dahil, hiçbir sorumluluk ya da yükümlülük taşımadığını kabul ediyorsanız kullanın.</translation>
 <translation id="3187473319809074178">Bunların tamamı şundan tamamen ayrıdır:</translation>
 <translation id="8327818101454798856">Favori sitelerinizi desteklemek istediyseniz, o sitelere yönelin.</translation>
 <translation id="412480955826088549">Bileşen İndiriliyor...</translation>
@@ -491,7 +491,7 @@
 <translation id="2468755552460246661">Etki Alanı Engellendi</translation>
 <translation id="6393849031898466746">Bu site, diğer sitelerdeki hareketinizi izleme girişiminde bulunabilir</translation>
 <translation id="983774928604730749">Brave şu sitenin yüklenmesini engelledi:</translation>
-<translation id="8629537573456243518">İzleyicilerin ve reklamların katı bir şekilde engellenmesini istediğiniz için, Brave bu siteyi ilk ağ bağlantısından önce engelliyor.</translation>
+<translation id="8629537573456243518">İzleyicilerin ve reklamların katı bir şekilde engellenmesini istediğiniz için, AI Wiz bu siteyi ilk ağ bağlantısından önce engelliyor.</translation>
 <translation id="2459038234784107183">Beni bu site hakkında tekrar uyarma</translation>
 <translation id="8242426110754782860">İlerle</translation>
 <translation id="2501278716633472235">Geri dön</translation>
@@ -500,7 +500,7 @@
 <translation id="8415427685483394219">Bu siteyi Kayıt Dışı modunda ziyaret etmek ister misiniz?</translation>
 <translation id="5754874269349119401">Brave, siz web sitelerini ziyaret ederken sizi korumak ister. Kayıt Dışı modunda ziyaret ettiğiniz siteler tarama geçmişinizde gözükmez ve çerezler kaydedilmez.</translation>
 <translation id="1307431692088049276">Bana tekrar sorma</translation>
-<translation id="6329829767845427007">Bunu daha sonra Brave Ayarları içerisinde Gizlilik ve Güvenlik kısmından değiştirebilirsiniz</translation>
+<translation id="6329829767845427007">Bunu daha sonra AI Wiz Ayarları içerisinde Gizlilik ve Güvenlik kısmından değiştirebilirsiniz</translation>
 <translation id="951201617124425694">Kayıt Dışı Devam Et</translation>
 <translation id="4087894168792701548">Normal Devam Et</translation>
 <translation id="5874287397425241890">Bu web sitesinde Kayıt Dışı modunda geziniyorsunuz.</translation>
@@ -543,10 +543,10 @@
 <translation id="3373798179786163193">Herkese Açık Ağ Geçidi ile ilerle</translation>
 <translation id="1974060860693918893">Gelişmiş</translation>
 <translation id="9096577886148726047">Gelişmişi Gizle</translation>
-<translation id="182581792765792826">Brave ya Brave yerel IPFS düğümünün başlamaması ya da şu anda bağlı hiçbir eşin bulunmaması sebebiyle istenen IPFS kaynaklarını yükleyemiyor. Eğer "Devam Et" seçeneğini seçerseniz Brave, Brave yerel IPFS düğümünün kullanımı her başarısız olduğunda otomatik olarak varsayılan herkese açık geçide geri çekilecektir. Bu davranışı Brave ayarlarından istediğiniz zaman değiştirebilirsiniz.</translation>
+<translation id="182581792765792826">Brave ya AI Wiz yerel IPFS düğümünün başlamaması ya da şu anda bağlı hiçbir eşin bulunmaması sebebiyle istenen IPFS kaynaklarını yükleyemiyor. Eğer "Devam Et" seçeneğini seçerseniz Brave, AI Wiz yerel IPFS düğümünün kullanımı her başarısız olduğunda otomatik olarak varsayılan herkese açık geçide geri çekilecektir. Bu davranışı AI Wiz ayarlarından istediğiniz zaman değiştirebilirsiniz.</translation>
 <translation id="8026038288183400906">IPFS Tercihi</translation>
 <translation id="2058855456574089690">IPFS tercihinizi ayarlayın</translation>
-<translation id="4780526507945807546">Bir Brave yerel IPFS düğümü kullanın</translation>
+<translation id="4780526507945807546">Bir AI Wiz yerel IPFS düğümü kullanın</translation>
 <translation id="8148464361648742409">Herkese açık bir ağ geçidi kullan</translation>
 <translation id="5123478056123923857">IPFS (InterPlanetary Dosya Sistemi), eşler arası veri depolama ve teslimatına yönelik ortak bir ağdır. Bu protokolün, HTTP(S)'den farklı gizlilik hususları vardır.</translation>
 <translation id="1216911189668016151">Bilgisayarınız ortak ağa katkıda bulunuyor, ama talep ettiğiniz veya sunduğumuz tüm IP adresleri ifşa edilebilir. IPFS üzerinden talep ettiğiniz içerik, size sunulmadan önce doğrulanır. Ağ talepleri, tarayıcı proxy ve DNS ayarlarını kullanmayabilir.</translation>
@@ -601,13 +601,13 @@
 <translation id="1848737374354350807">Bakiye:</translation>
 <translation id="6516984207843289176">Hesabı bağla</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>Kazanmaya hazır mısınız?<ph name="BOLD_END"/> Bağlanın veya ortaklarımızdan biriyle bir hesap oluşturun.</translation>
-<translation id="1772961321862399863">BAT kazanmak için kullanıcıların Brave Ödüllerine bir korumalı hesap bağlamaları gerekir. Ne yazık ki bölgenizde ulaşılabilir bir koruyucu olmadığı için kazanç özelliği kullanılamıyor. Şimdilik Brave Ödüllerini açmak, oluşturucuları otomatik olarak destekler.</translation>
+<translation id="1772961321862399863">BAT kazanmak için kullanıcıların AI Wiz Ödüllerine bir korumalı hesap bağlamaları gerekir. Ne yazık ki bölgenizde ulaşılabilir bir koruyucu olmadığı için kazanç özelliği kullanılamıyor. Şimdilik AI Wiz Ödüllerini açmak, oluşturucuları otomatik olarak destekler.</translation>
 <translation id="902298128239575729">Brave Ödülleri ile katkı gönderin</translation>
-<translation id="6276721355724491595">Bir korumalı hesabı bağladıktan sonra en sevdiğiniz oluşturuculara Brave Ödülleri bakiyenizle isteğinize bağlı olarak katkıda bulunabileceksiniz.</translation>
-<translation id="1149481926056509086">İsteğe bağlı katkıda bulunmak için kullanıcılar korumalı bir hesabı Brave Ödüllerine bağlamalıdır. Ne yazık ki bölgenizde koruyucu bulunmamaktadır, bu yüzden katkıda bulunamıyorsunuz. Ancak bu sırada içerik oluşturucuları desteklemeye devam ediyorsunuz.</translation>
+<translation id="6276721355724491595">Bir korumalı hesabı bağladıktan sonra en sevdiğiniz oluşturuculara AI Wiz Ödülleri bakiyenizle isteğinize bağlı olarak katkıda bulunabileceksiniz.</translation>
+<translation id="1149481926056509086">İsteğe bağlı katkıda bulunmak için kullanıcılar korumalı bir hesabı AI Wiz Ödüllerine bağlamalıdır. Ne yazık ki bölgenizde koruyucu bulunmamaktadır, bu yüzden katkıda bulunamıyorsunuz. Ancak bu sırada içerik oluşturucuları desteklemeye devam ediyorsunuz.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
-      =1 {Bu ay, Brave Ödülleri tarafından desteklenen # oluşturucuyu ziyaret ettiniz}
-      other {Bu ay, Brave Ödülleri tarafından desteklenen # oluşturucuyu ziyaret ettiniz}
+      =1 {Bu ay, AI Wiz Ödülleri tarafından desteklenen # oluşturucuyu ziyaret ettiniz}
+      other {Bu ay, AI Wiz Ödülleri tarafından desteklenen # oluşturucuyu ziyaret ettiniz}
     }</translation>
 <translation id="6067959437127691361">Brave Ödüllerini kullanmak, içerik oluşturucuların desteklenmesine yardımcı olur ve BAT kazanmanızı sağlar.</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> Ayı Ödülleri: <ph name="AMOUNT"/></translation>
@@ -615,7 +615,7 @@
 <translation id="7861645265922445992">Ödülleri Al</translation>
 <translation id="9013419433042554094">Tokenleri Al</translation>
 <translation id="2359808026110333948">Continue</translation>
-<translation id="885805571521218129">Bu, bu ay Brave Reklamları için tahmini kazanç aralığınızı yansıtır.</translation>
+<translation id="885805571521218129">Bu, bu ay AI Wiz Reklamları için tahmini kazanç aralığınızı yansıtır.</translation>
 <translation id="3863981251715594911">Nasıl çalışır?</translation>
 <translation id="4782365133987903299">Almak için <ph name="DAYS"/> süreniz kaldı</translation>
 <translation id="7931127789630755251">Brave'de gördüğünüz özel reklamlar karşılığında token kazanın</translation>
@@ -627,7 +627,7 @@
 <translation id="2221902203895354376">Bir token yardımı kullanılabilir!</translation>
 <translation id="2956070106555335453">Özet</translation>
 <translation id="2369994359029526515">Doğrulanmamış Oluşturucu</translation>
-<translation id="3984338085370091436">Bu oluşturucu, henüz Brave Oluşturucusu üzerinden doğrulanmamış. Doğrulandıktan sonra onlara katkıda bulunabileceksiniz.</translation>
+<translation id="3984338085370091436">Bu oluşturucu, henüz AI Wiz Oluşturucusu üzerinden doğrulanmamış. Doğrulandıktan sonra onlara katkıda bulunabileceksiniz.</translation>
 <translation id="6020176662032623904">Doğrulanmış Oluşturucu</translation>
 <translation id="8635423276837443905">Oluşturucu doğrulama durumunu yenileyin</translation>
 <translation id="6633436087937398390"><ph name="NAME"/> <ph name="PLATFORM"/> platformunda</translation>
@@ -659,15 +659,15 @@
 <translation id="2429828319207652823">Katkınızın işleme sokulması esnasında bir sorunla karşılaşıldı.</translation>
 <translation id="6390041270339783491">Aylık katkı başarısız oldu</translation>
 <translation id="7047578174221019462">Aylık katkılarınız işlendi.</translation>
-<translation id="2529827670795983639">Bu çalışmıyor gibi görünüyor. Brave reklamları duraklatılmış kalmaya devam edecektir. Captcha için yardıma ihtiyacınız olursa bize ulaşın.</translation>
+<translation id="2529827670795983639">Bu çalışmıyor gibi görünüyor. AI Wiz reklamları duraklatılmış kalmaya devam edecektir. Captcha için yardıma ihtiyacınız olursa bize ulaşın.</translation>
 <translation id="261607053214862521">Maksimum deneme aşıldı</translation>
 <translation id="2323171459178104277">Çözüldü!</translation>
-<translation id="1512837998731269583">Reklamlar ve kazançlar artık devam edecektir. Brave Ödüllerini ve gizlilik tabanlı reklamları korumamıza yardımcı olduğunuz için teşekkür ederiz.</translation>
+<translation id="1512837998731269583">Reklamlar ve kazançlar artık devam edecektir. AI Wiz Ödüllerini ve gizlilik tabanlı reklamları korumamıza yardımcı olduğunuz için teşekkür ederiz.</translation>
 <translation id="3247549836099021862">Destek birimine ulaşın</translation>
 <translation id="5234764350956374838">Dismiss</translation>
 <translation id="7859066142771796818">Tokenlerle hediye kartları alın, tokenleri başka para birimlerine dönüştürün, içerik üreticilerini destekleyin ve çok daha fazlasını yapın.</translation>
 <translation id="5425006356459378415">Brave Ödülleri kullanılamıyor</translation>
-<translation id="909076461795862330">Ne yazık ki Brave Ödüllerini ayarlamaya çalışırken bir hata oluştu. Lütfen tekrar deneyin.</translation>
+<translation id="909076461795862330">Ne yazık ki AI Wiz Ödüllerini ayarlamaya çalışırken bir hata oluştu. Lütfen tekrar deneyin.</translation>
 <translation id="3180990265682133881">Ne yazık ki ülkenizi ayarlamaya çalışırken bir hata oluştu. Lütfen tekrar deneyin.</translation>
 <translation id="5931798071481566121">Brave Ödülleri için yeni kayıtlar şu anda bölgenizde devre dışı bırakılmıştır. Yine de daha sonra tekrar deneyebilirsiniz.<ph name="LINK_BEGIN"/>Daha fazla bilgi edinin<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">Yaşasın! Her şey tamam!</translation>
@@ -677,8 +677,8 @@
 <translation id="6945221475159498467">Seç</translation>
 <translation id="3279158300746391749">URL çubuğundaki <ph name="BAT_ICON"/> BAT simgesine basarak başlayın.</translation>
 <translation id="8465790416279415448">Devam ederek, <ph name="TOS_LINK_BEGIN"/>Hizmet Koşulları<ph name="TOS_LINK_END"/> ve <ph name="PP_LINK_BEGIN"/>Gizlilik Politikası<ph name="PP_LINK_END"/> içeriğini kabul etmiş olursunuz.</translation>
-<translation id="1015443539415537847">Üzgünüz, Brave Ödülleri kullanılamıyor</translation>
-<translation id="5007776270364097327">Görünüşe göre ne yazık ki Brave Ödüllerinin desteklenmediği bir bölgedesiniz.</translation>
+<translation id="1015443539415537847">Üzgünüz, AI Wiz Ödülleri kullanılamıyor</translation>
+<translation id="5007776270364097327">Görünüşe göre ne yazık ki AI Wiz Ödüllerinin desteklenmediği bir bölgedesiniz.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>Daha fazla bilgi edinin<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">Endişelenmeyin.</translation>
 <translation id="5027616819996705541">Hala gizli şekilde gezinebilirsiniz!</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">Gönder</translation>
 <translation id="6632987674051304487"><ph name="PROVIDER"/> ile gönder</translation>
 <translation id="4319632089378796037">Web3 Cüzdanı Kullan</translation>
-<translation id="4530198836725543997">Bu kullanıcı, Brave'e kaydolmuş ve Brave Ödülleri kullanıcılarından katkı alabilir.</translation>
+<translation id="4530198836725543997">Bu kullanıcı, Brave'e kaydolmuş ve AI Wiz Ödülleri kullanıcılarından katkı alabilir.</translation>
 <translation id="4529874892536380156">Bunu aylık tekrarlayan bir katkı olarak ayarlayın. İstediğiniz zaman iptal edebilirsiniz.</translation>
 <translation id="1177863135347784049">Özel</translation>
 <translation id="5907051927340164207">Bu oluşturucuya zaten aylık katkıda bulunuyorsunuz</translation>
@@ -709,7 +709,7 @@
 <translation id="5379685283876547860">Katkı gönderildi!</translation>
 <translation id="7063168612616047608">En sevdiğiniz oluşturucuları desteklediğiniz için teşekkürler</translation>
 <translation id="1041398280582063935">Desteğinizi paylaşın</translation>
-<translation id="4001190813297686107">Brave Tarayıcı kullanarak <ph name="AMOUNT"/> BAT katkıda bulundum! En sevdiğiniz oluşturucuları ve siteleri nasıl destekleyebileceğinize göz atın: https://brave.com/rewards</translation>
+<translation id="4001190813297686107">Brave Tarayıcı kullanarak <ph name="AMOUNT"/> BAT katkıda bulundum! En sevdiğiniz oluşturucuları ve siteleri nasıl destekleyebileceğinize göz atın: https://aiwize.com/rewards</translation>
 <translation id="1950340257946519340">Beklenmedik bir hata oluştu</translation>
 <translation id="2605703631071131439">Tekrar denemek için lütfen katkı panelini yeniden açın.</translation>
 <translation id="8855543392451028706">Hoş geldiniz! Kullanıcılar, katkıda bulunarak bu içerik oluşturucusunu destekleyebilir. Bu, harika içerikler için onlara teşekkür etmenin bir yoludur.</translation>
@@ -729,7 +729,7 @@
 <translation id="1128992132632883337">Bir yanıt ayırma hatası oluştu</translation>
 <translation id="5382339341735118861">Genel bir istek işleme hatası oluştu</translation>
 <translation id="7123780456696055383">İstenen kaynak kullanılamıyor</translation>
-<translation id="1680597601664421644">İçe aktarılmakta olan hatırlatıcı, Brave Cüzdan için geçerli değil</translation>
+<translation id="1680597601664421644">İçe aktarılmakta olan hatırlatıcı, AI Wiz Cüzdan için geçerli değil</translation>
 <translation id="4641919696349069826">Bir istek zaten işleniyor</translation>
 <translation id="872806943696014633">İşlem verisi eksik</translation>
 <translation id="7068183357903252127">'to' veya 'data' işlem verileri belirtilmelidir</translation>
@@ -812,7 +812,7 @@
 <translation id="6812967455478797345">Brave, DEX toplayıcısı olarak <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> kullanır.</translation>
 <translation id="151946611346774041">0x, bir işlemi yerine getirmek için (teklif alma da dahil) Ethereum adresini ve IP adresini işleyecektir. 0x bu veriyi SADECE işlemleri gerçekleştirme amacıyla kullanacaktır.</translation>
 <translation id="7465227658364622464">Jupiter, bir işlemi gerçekleştirmek için Solana adresini ve IP adresini işleyecektir (fiyat teklifi almak dahil). Jupiter bu verileri YALNIZCA işlem yapma amacıyla kullanacaktır.</translation>
-<translation id="712738518060477110">Fiyat, bir <ph name="SWAP_FEE_PERCENTAGE"/> Brave ücretini içerir.</translation>
+<translation id="712738518060477110">Fiyat, bir <ph name="SWAP_FEE_PERCENTAGE"/> AI Wiz ücretini içerir.</translation>
 <translation id="8368540604723748428">Çok fazla ondalık basamak</translation>
 <translation id="6575120282593094155">Henüz bir <ph name="ACCOUNT_TYPE"/> hesabınız yok. Şimdi bir tane oluşturmak ister misiniz?</translation>
 <translation id="1201402288615127009">İleri</translation>
@@ -821,7 +821,7 @@
 <translation id="7885157704277298658">Kopyalandı!</translation>
 <translation id="6518133107902771759">Doğrula</translation>
 <translation id="6042308850641462728">Daha fazla</translation>
-<translation id="768236965975208017">Güvenli. Çok zincirli. Ve kullanımı çok kolay. Brave Wallet sadece birkaç tık uzağınızda</translation>
+<translation id="768236965975208017">Güvenli. Çok zincirli. Ve kullanımı çok kolay. AI Wiz Wallet sadece birkaç tık uzağınızda</translation>
 <translation id="3157931365184549694">Geri yükle</translation>
 <translation id="2484275747844666540">Yeni cüzdan oluştur</translation>
 <translation id="3662348701117072366">Mevcut cüzdanı içe aktarın</translation>
@@ -868,7 +868,7 @@
 <translation id="955918646509748368">Girilen kurtarma cümlesi geçersiz.</translation>
 <translation id="8107437138787377150">Kurtarma cümlesini panodan yapıştır</translation>
 <translation id="4811736040444856406">Kurtarma ifadesini göster</translation>
-<translation id="4359319875297001084">Eski Brave kripto cüzdanlarından içe aktarılsın mı?</translation>
+<translation id="4359319875297001084">Eski AI Wiz kripto cüzdanlarından içe aktarılsın mı?</translation>
 <translation id="3331452756822160641">Yeni Şifre</translation>
 <translation id="8624315169751085215">Panoya Kopyala</translation>
 <translation id="6346952829206698721">Panodan yapıştır</translation>
@@ -907,7 +907,7 @@
 <translation id="6892232036314454524">Bu hata, Ledger cihazında yanlış uygulama açıkken yaşanabilir.</translation>
 <translation id="6598291715079540080">Trezor</translation>
 <translation id="5605670050355397069">Ledger</translation>
-<translation id="4247752006222818397">Ledger cihazınıza Brave erişimi verin.</translation>
+<translation id="4247752006222818397">Ledger cihazınıza AI Wiz erişimi verin.</translation>
 <translation id="4378551569595875038">Connecting...</translation>
 <translation id="1943188256166395881">İşaretli hesapları ekle</translation>
 <translation id="8554010658308662631">Daha fazla yükle</translation>
@@ -994,7 +994,7 @@
 <translation id="7073918978411974168">Önerilen karşılık</translation>
 <translation id="9019403281000653275">Sınırsız onay istendi</translation>
 <translation id="4717431746210146708">Bu sitenin bir ağ eklemesine izin verilsin mi?</translation>
-<translation id="2521480044079508357">Bu işlem bu ağın Brave Cüzdan'da kullanılmasına izin verecek.</translation>
+<translation id="2521480044079508357">Bu işlem bu ağın AI Wiz Cüzdan'da kullanılmasına izin verecek.</translation>
 <translation id="1982257600591932657">Ağ adı</translation>
 <translation id="5052727830821470769">Ağ URL'si</translation>
 <translation id="427875364838253580">Tüm detayları gör</translation>
@@ -1047,7 +1047,7 @@
 <translation id="9139452553033760558">1 hafta için</translation>
 <translation id="1658834457013045127">Sonsuza dek</translation>
 <translation id="2770851145415891830">Var olan kripto cüzdanları tespit edildi</translation>
-<translation id="2237759620789871865">İçe aktarma işlemini atlamak ve eski Kripto Cüzdanları deneyimine devam etmek isterseniz, Brave Tarayıcı <ph name="LINK_BEFORE"/>Ayarlarına<ph name="LINK_AFTER"/> gidin ve varsayılanı tekrar Kripto Cüzdanlarına çevirin. Ek olarak istediğiniz zaman içe aktarma yapabilir, yeni Brave Cüzdanı deneyebilir ve tekrar eskiye dönebilirsiniz.</translation>
+<translation id="2237759620789871865">İçe aktarma işlemini atlamak ve eski Kripto Cüzdanları deneyimine devam etmek isterseniz, AI Wiz Tarayıcı <ph name="LINK_BEFORE"/>Ayarlarına<ph name="LINK_AFTER"/> gidin ve varsayılanı tekrar Kripto Cüzdanlarına çevirin. Ek olarak istediğiniz zaman içe aktarma yapabilir, yeni AI Wiz Cüzdanı deneyebilir ve tekrar eskiye dönebilirsiniz.</translation>
 <translation id="5590175005414413980">Brave Cüzdan'a aktarmak için var olan kripto cüzdan şifrelerinizi girin. Kripto varlıklarınızı yönetmenin ve Web3 DApps ile etkileşime geçmenin daha hızlı ve daha güvenli bir yolunun tadını çıkarın.</translation>
 <translation id="880619123281809987">Kripto cüzdanlarının parolasını yazın</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> bağlandı</translation>
@@ -1194,7 +1194,7 @@
 <translation id="5522073372365069684">Ramp ile Satın Al</translation>
 <translation id="6153197326949684688"><ph name="OFFRAMP_PROVIDER"/> ile sat</translation>
 <translation id="7902920577183739843">Sardine ile satın alın</translation>
-<translation id="3301984548406568819">Finansal veriler ve işlem verileri, iş ortaklarımız tarafından işlenmektedir. Brave bu gibi verileri toplamaz ve bunlara erişemez.</translation>
+<translation id="3301984548406568819">Finansal veriler ve işlem verileri, iş ortaklarımız tarafından işlenmektedir. AI Wiz bu gibi verileri toplamaz ve bunlara erişemez.</translation>
 <translation id="6534275647567011533">Transak ile Satın Al</translation>
 <translation id="5973390321030037823">Link ile Satın Alın</translation>
 <translation id="1932640759496708012">Coinbase Pay ile Satın Alın</translation>
@@ -1256,7 +1256,7 @@
 <translation id="9104177294757104789"><ph name="VALUE"/> gönder</translation>
 <translation id="4048336522751528394"><ph name="MAKER"/> miktarını <ph name="TAKER"/> ile değiştir</translation>
 <translation id="8613144770663526433">Brave Cüzdan'la oturum açın</translation>
-<translation id="8813165409788097898"><ph name="ORIGIN"/> sitesinde oturum açıyorsunuz. Brave Cüzdanı, cüzdan adresinizi <ph name="ORIGIN"/> ile paylaşacaktır.</translation>
+<translation id="8813165409788097898"><ph name="ORIGIN"/> sitesinde oturum açıyorsunuz. AI Wiz Cüzdanı, cüzdan adresinizi <ph name="ORIGIN"/> ile paylaşacaktır.</translation>
 <translation id="1028781062521375153">Detayları gör</translation>
 <translation id="3950820424414687140">Oturum açın</translation>
 <translation id="4530494379350999373">Origin</translation>
@@ -1382,8 +1382,8 @@
 <translation id="2781276194026093899">.</translation>
 <translation id="7992766987062040279">.</translation>
 <translation id="2295726992010694229">.</translation>
-<translation id="8241405611628876973">Tebrikler! Brave Wallet'ınız kullanıma hazır!</translation>
-<translation id="6828327990705355767">Cüzdanınıza erişmek için, herhangi bir Brave tarayıcı penceresinin sağ üst köşesindeki cüzdan simgesine tıklamanız yeterlidir.</translation>
+<translation id="8241405611628876973">Tebrikler! AI Wiz Wallet'ınız kullanıma hazır!</translation>
+<translation id="6828327990705355767">Cüzdanınıza erişmek için, herhangi bir AI Wiz tarayıcı penceresinin sağ üst köşesindeki cüzdan simgesine tıklamanız yeterlidir.</translation>
 <translation id="396152018598329740">Kripto cüzdanı nasıl kullanılır?</translation>
 <translation id="7512061585041489067">En iyi kripto cüzdanı nedir?</translation>
 <translation id="1342755158522323177">Kripto tarayıcısı nedir?</translation>
@@ -1407,14 +1407,14 @@
 <translation id="6260144012548445299">Yeni cüzdanım hakkında daha fazla bilgi edinin</translation>
 <translation id="8746910870914151528">Yasal konular</translation>
 <translation id="5148123176978018397">Lütfen aşağıdakileri kabul edin:</translation>
-<translation id="6088314935678153800">Bunun bir kendi kendini koruma cüzdanı olduğunu ve ilişkili fonlardan, varlıklardan veya hesaplardan ve cüzdanımı güvence altına almak, korumak ve yedeklemek için uygun önlemleri almaktan yalnızca benim sorumlu olduğumu anlıyorum. Brave cüzdanıma erişemeyeceğini veya benim adıma işlemleri tersine çeviremeyeceğini ve kurtarma cümlemin kayıp bir parola, çalıntı cihaz veya benzeri bir durum durumunda yeniden erişim kazanmanın TEK yolu olduğunu anlıyorum.</translation>
+<translation id="6088314935678153800">Bunun bir kendi kendini koruma cüzdanı olduğunu ve ilişkili fonlardan, varlıklardan veya hesaplardan ve cüzdanımı güvence altına almak, korumak ve yedeklemek için uygun önlemleri almaktan yalnızca benim sorumlu olduğumu anlıyorum. AI Wiz cüzdanıma erişemeyeceğini veya benim adıma işlemleri tersine çeviremeyeceğini ve kurtarma cümlemin kayıp bir parola, çalıntı cihaz veya benzeri bir durum durumunda yeniden erişim kazanmanın TEK yolu olduğunu anlıyorum.</translation>
 <translation id="7781090633800450517"><ph name="LINK_BEFORE"/>Kullanım şartları<ph name="LINK_AFTER"/> bölümünü okudum ve kabul ediyorum</translation>
 <translation id="1422451606553326863">Kripto satın al</translation>
 <translation id="3887541341068007345">Cüzdan uzantıları kontrol ediliyor...</translation>
-<translation id="3567994771568272606">Eski Brave kripto cüzdanlarından içe aktar</translation>
+<translation id="3567994771568272606">Eski AI Wiz kripto cüzdanlarından içe aktar</translation>
 <translation id="8407091560429310499">Bir varlık seç</translation>
 <translation id="756590380936155533"><ph name="ASSET_TICKER"/> satın alma işleminizi tamamlamak için ortaklarımızdan birini seçin</translation>
-<translation id="7880860489474966219">Tamamlandığında, fonlarınız Brave Wallet'ınıza aktarılacaktır</translation>
+<translation id="7880860489474966219">Tamamlandığında, fonlarınız AI Wiz Wallet'ınıza aktarılacaktır</translation>
 <translation id="6182661078713714878">Kripto para yatırın</translation>
 <translation id="3683305208314702347">Para yatırma <ph name="VALUE"/></translation>
 <translation id="5768739294929936862">Solana veya SPL belirteçlerini yatırın</translation>
@@ -1467,7 +1467,7 @@
 <translation id="2612436523196658045">ETH adresi, Filecoin adresine dönüştürülecektir.</translation>
 <translation id="3282354360699748542">Filecoin isim uzayındaki <ph name="FILECOIN_ADDRESS"/> adresi, işlem için kullanılacaktır.</translation>
 <translation id="2540568096903252632">Devam etmek için bir parola girin</translation>
-<translation id="3356580495013324916">Cüzdanı yedeklemeye başlamak için Brave Cüzdanı parolanızı girin.</translation>
+<translation id="3356580495013324916">Cüzdanı yedeklemeye başlamak için AI Wiz Cüzdanı parolanızı girin.</translation>
 <translation id="7545441766078366279"><ph name="TOKEN"/> öğesini onayla</translation>
 <translation id="3115303896544539834">Yetersiz <ph name="TOKEN"/> bakiyesi</translation>
 <translation id="4937657825850660613">Yarısı</translation>
@@ -1553,7 +1553,7 @@
 <translation id="5810047320613496595">Gereksiz</translation>
 <translation id="7257605968082307175">Gereksiz olarak işaretle</translation>
 <translation id="7600335727434653744">Brave Cüzdanı'ndan kaldırılsın mı?</translation>
-<translation id="6657860743511185539">NFT, Brave Cüzdanı'ndan kaldırılacak ama blok zincirinde kalacaktır. Eğer kaldırırsanız ve sonradan fikrinizi değiştirirseniz NFT'yi manuel olarak tekrar içe aktarmanız gerekecektir.</translation>
+<translation id="6657860743511185539">NFT, AI Wiz Cüzdanı'ndan kaldırılacak ama blok zincirinde kalacaktır. Eğer kaldırırsanız ve sonradan fikrinizi değiştirirseniz NFT'yi manuel olarak tekrar içe aktarmanız gerekecektir.</translation>
 <translation id="849880459530751909">NFT'yi düzenle</translation>
 <translation id="5925465310724910998">NFT'leriniz otomatik olarak görüntülensin mi?</translation>
 <translation id="5400791731776892411">Brave Cüzdan, otomatik olarak NFT'lerinizi göstermek için bir üçüncü taraf hizmeti kullanabilir. Brave, bu hizmeti sunmak için cüzdan adresinizi <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> ile paylaşır. <ph name="BEFORE_URL"/>Daha fazla bilgi alın.<ph name="AFTER_URL"/></translation>
@@ -1574,7 +1574,7 @@
 <translation id="1554316484739382186">Harcayan: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">Zebpay</translation>
 <translation id="3026353765778463291"><ph name="PROVIDER"/> hesabı</translation>
-<translation id="5360752485622434494"><ph name="PROVIDER"/> üzerinde bulunan Brave Ödülleri BAT'ı</translation>
+<translation id="5360752485622434494"><ph name="PROVIDER"/> üzerinde bulunan AI Wiz Ödülleri BAT'ı</translation>
 <translation id="429061011725027672">Şu anda <ph name="PROVIDER"/> üzerinde oturum açmadınız. Lütfen bakiyenizi görmek için oturum açın.</translation>
 <translation id="4611292653554630842">Oturum aç</translation>
 <translation id="1132794822159463424"><ph name="PROVIDER"/> üzerinden görüntüleyin</translation>
@@ -1836,7 +1836,7 @@
 <translation id="2346991295632453064">Kabul et ve başla</translation>
 <translation id="1223498995510244364">Özetle</translation>
 <translation id="7491773233732232424">Leo Hakkında</translation>
-<translation id="70442873931504163">Brave Leo; web sayfalarını özetleyebilen, videoları yazıya geçirebilen ve sorulara yanıt verebilen bir YZ akıllı asistandır. Brave Leo Premium gelişmiş <ph name="LINK_BEFORE"/>YZ modelleri<ph name="LINK_AFTER"/> kullanarak çok daha incelikli yanıtlar verebilir ve yeni özelliklere erken erişim sağlar.</translation>
+<translation id="70442873931504163">Brave Leo; web sayfalarını özetleyebilen, videoları yazıya geçirebilen ve sorulara yanıt verebilen bir YZ akıllı asistandır. AI Wiz Leo Premium gelişmiş <ph name="LINK_BEFORE"/>YZ modelleri<ph name="LINK_AFTER"/> kullanarak çok daha incelikli yanıtlar verebilir ve yeni özelliklere erken erişim sağlar.</translation>
 <translation id="3055739528128372229">Yanıtların doğruluğu garanti edilmez ve hatalı, yanlış yönlendiren veya yanlış bilgiler içerebilir. Hassas ve gizli bilgiler göndermeyin ve sağlık, finans, kişisel güvenlik veya benzeri cevapları kullanırken dikkatli olun.</translation>
 <translation id="7297681068636289435">Leo, IP Adresi gibi sizinle ilişkilendirilebilecek hiçbir tanımlayıcı bilgiyi toplamaz. Hiçbir kişisel bilgi YZ modeli veya hiçbir 3. taraf model sağlayıcıları tarafından tutulmaz.</translation>
 <translation id="7839853125981164613">Buraya bir istem girin</translation>
@@ -1848,8 +1848,8 @@
 <translation id="1167803637855350748">Leo'ya bağlanırken bir ağ sorunu yaşandı, bağlantınızı kontrol edip tekrar deneyin.</translation>
 <translation id="5095201428204952524">Leo şu anda çok meşgul. Lütfen birkaç dakika içinde tekrar deneyin.</translation>
 <translation id="7144878232160441200">Tekrar Dene</translation>
-<translation id="7202619923031933110">Merhaba, ben Leo. Ben Brave tarafından geliştirilen, tamamen ana makinede bulunan bir YZ asistanıyım. Mistral AI tarafından gelişmiş görevleri yerine getirmek üzere tasarlanan Mixtral 7B modeli ile destekleniyorum.</translation>
-<translation id="2489317965865266353">Merhaba, ben Leo. Brave tarafından vekaleten kullanılıyorum ve Anthropic tarafından diyalog ve metin işleme görevlerini yerine getirmesi için tasarlanan Claude Instant ile destekleniyorum.</translation>
+<translation id="7202619923031933110">Merhaba, ben Leo. Ben AI Wiz tarafından geliştirilen, tamamen ana makinede bulunan bir YZ asistanıyım. Mistral AI tarafından gelişmiş görevleri yerine getirmek üzere tasarlanan Mixtral 7B modeli ile destekleniyorum.</translation>
+<translation id="2489317965865266353">Merhaba, ben Leo. AI Wiz tarafından vekaleten kullanılıyorum ve Anthropic tarafından diyalog ve metin işleme görevlerini yerine getirmesi için tasarlanan Claude Instant ile destekleniyorum.</translation>
 <translation id="6206029817087805290"><ph name="COMPANY_NAME"/> tarafından geliştirilen <ph name="MODEL_NAME"/></translation>
 <translation id="6187065185557150870">Sohbet</translation>
 <translation id="2961040541145689181">Yeni sohbet</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Bana istediğinizi sorun! İstediğiniz konu hakkında konuşabiliriz. Size daha iyi yanıt verebilmek için sürekli öğreniyor ve kendimi geliştiriyorum.</translation>
 <translation id="989329677470075843">Gizlilik sözleşmesi</translation>
 <translation id="1173570303649278801">Yanıt için sayfa bağlamını kullan</translation>
-<translation id="8599503173207256429">Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte Brave Leo'ya gönderilecektir.</translation>
+<translation id="8599503173207256429">Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte AI Wiz Leo'ya gönderilecektir.</translation>
 <translation id="6303294677342628402">Kalkanlar</translation>
 <translation id="8458987127502506209">Brave Kalkanlarını Etkinleştir</translation>
 <translation id="7509914170164691086">Şunun için Kalkanlar <ph name="LINK_BEFORE"/>AÇIK<ph name="LINK_AFTER"/>:</translation>
@@ -1949,7 +1949,7 @@
 <translation id="535688588637568715">Evet, çerez onay bildirimlerini engelle</translation>
 <translation id="2808175374672429053">Brave Kalkanları için Wildcards'a izin verilmez.</translation>
 <translation id="6294662480095808915">Varsayılan olarak Gizlilik.</translation>
-<translation id="4366423156486478559">Tıkladığınız her bağlantıda Brave koruması sizinle olsun. Sadece Brave'i varsayılan tarayıcınız olarak ayarlayın ve gezinmeye başlayın. Gizli olarak.</translation>
+<translation id="4366423156486478559">Tıkladığınız her bağlantıda AI Wiz koruması sizinle olsun. Sadece Brave'i varsayılan tarayıcınız olarak ayarlayın ve gezinmeye başlayın. Gizli olarak.</translation>
 <translation id="3830912418080848377">Ayarları İçe Aktar</translation>
 <translation id="6378406588483694938">Yer işaretlerini, uzantıları, hatta kaydedilen parolaları eski tarayıcınızdan içe aktarın.</translation>
 <translation id="2092825239819166928">İçe aktarılacak profili seçin</translation>
@@ -1965,7 +1965,7 @@
 <translation id="3141206739023333979">Brave'deki bu değişiklikleri istediğiniz zaman <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/> adresinden değiştirin.</translation>
 <translation id="8321985064212130832"><ph name="LINK_BEFORE"/>Gizlilik Politikamızın<ph name="LINK_AFTER"/> tamamını buradan okuyun</translation>
 <translation id="2801098717523961746">Temanızı seçin</translation>
-<translation id="6262510489122516114">İstediğiniz zaman Brave ayarlarından değiştirebilirsiniz.</translation>
+<translation id="6262510489122516114">İstediğiniz zaman AI Wiz ayarlarından değiştirebilirsiniz.</translation>
 <translation id="546481172717459539">Sistem ayarını eşleştir</translation>
 <translation id="7799817062559422778">Aydınlık mod</translation>
 <translation id="4117637339509843559">Gece modu</translation>
@@ -1997,7 +1997,7 @@
 <translation id="427718751211990320">Kimlik bilgilerinin süresi doldu.</translation>
 <translation id="8670619630771851260">Kimlik bilgileri yüklenemiyor.</translation>
 <translation id="1594643509610625766">Token artık geçerli değil.</translation>
-<translation id="8373427068383038263">Görünüşe göre son <ph name="VALUE"/> ödemeniz yerine ulaşmamış. Bu aboneliğe erişim, ödeme sorunu çözülene dek durdurulacaktır. Ödeme metodunuzu düzenlemeyi deneyin veya Brave destek birimiyle iletişime geçin.</translation>
+<translation id="8373427068383038263">Görünüşe göre son <ph name="VALUE"/> ödemeniz yerine ulaşmamış. Bu aboneliğe erişim, ödeme sorunu çözülene dek durdurulacaktır. Ödeme metodunuzu düzenlemeyi deneyin veya AI Wiz destek birimiyle iletişime geçin.</translation>
 <translation id="1839021455997460752">E-posta adresiniz</translation>
 <translation id="8054563304616131773">Lütfen geçerli bir e-posta adresi girin</translation>
 <translation id="5154702632169343078">Konu</translation>
@@ -2015,9 +2015,9 @@
 <translation id="1156325797949437777">Destek, Guardian'la ortaklığımız sayesinde sunulmaktadır.</translation>
 <translation id="8146777497879160283">VPN yapılandırmasını yazma işlemi başarısız oldu. Bu, izniniz yoksa veya yakın zamanda Windows Update'i çalıştırmadıysanız ortaya çıkabilir.</translation>
 <translation id="3307461350293459700">VPN bağlantısı başarısız. Lütfen tekrar bağlanmayı deneyin ve Brave'in VPN yapılandırmasını etkinleştirmek için İzin Ver'e tıkladığınızdan emin olun.</translation>
-<translation id="7261518280726313829">Güvenli bir DNS'yi kapatmak veya Windows'ta varsayılan sunucuları kullanmak ziyaret ettiğiniz sitelerin adlarını İnternet hizmet sağlayıcınıza gönderebilir. Brave bunu yapmayı önermez. Yine de yapmak istiyor musunuz?</translation>
-<translation id="888284761945060750">Güvenli DNS, kuruluşunuzun politikaları tarafından devre dışı bırakıldı. Güvenli DNS olmadan Brave VPN'i kullanmak, ziyaret ettiğiniz sitelerin adlarını İnternet hizmet sağlayıcınıza veya kuruluşunuza gönderebilir.</translation>
-<translation id="6593224083874259773">Windows'ta Brave VPN</translation>
+<translation id="7261518280726313829">Güvenli bir DNS'yi kapatmak veya Windows'ta varsayılan sunucuları kullanmak ziyaret ettiğiniz sitelerin adlarını İnternet hizmet sağlayıcınıza gönderebilir. AI Wiz bunu yapmayı önermez. Yine de yapmak istiyor musunuz?</translation>
+<translation id="888284761945060750">Güvenli DNS, kuruluşunuzun politikaları tarafından devre dışı bırakıldı. Güvenli DNS olmadan AI Wiz VPN'i kullanmak, ziyaret ettiğiniz sitelerin adlarını İnternet hizmet sağlayıcınıza veya kuruluşunuza gönderebilir.</translation>
+<translation id="6593224083874259773">Windows'ta AI Wiz VPN</translation>
 <translation id="3153983908111684619">Bu ayar, bağlı olduğu sırada BraveVPN tarafından kilitlenmiştir</translation>
 <translation id="1055657720430482013">Windows, konumunuza ve ziyaret ettiğiniz sitelere dair bilgileri ifşa edebilecek, Akıllı Çok Ana Bilgisayarlı Ad Çözümlemesi adlı bir özelliğe sahiptir.
 

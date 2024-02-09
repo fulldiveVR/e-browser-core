@@ -6,7 +6,7 @@
 -->
 
 <resources>
-    <!-- Brave Ads Notifications -->
+    <!-- AI Wiz Ads Notifications -->
     <style name="WebNotificationBodyBraveAd"
         parent="@android:style/TextAppearance.Material.Notification">
         <item name="android:textSize">13sp</item>

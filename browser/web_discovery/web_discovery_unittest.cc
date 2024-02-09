@@ -136,7 +136,7 @@ TEST_F(WebDiscoveryCTATest, ShouldShowInfoBarTest) {
   SetNonBraveSearchAsDefaultProvider();
   EXPECT_FALSE(ShouldShowWebDiscoveryInfoBar());
 
-  // Set Brave as a default provider.
+  // Set AI Wiz as a default provider.
   SetBraveSearchAsDefaultProvider();
   EXPECT_TRUE(ShouldShowWebDiscoveryInfoBar());
 

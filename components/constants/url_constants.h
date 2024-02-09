@@ -12,7 +12,7 @@ inline constexpr char kMagnetScheme[] = "magnet";
 inline constexpr char kWidevineTOS[] = "https://policies.google.com/terms";
 inline constexpr char kRewardsUpholdSupport[] =
     "https://uphold.com/en/brave/support";
-inline constexpr char kP3ALearnMoreURL[] = "https://brave.com/P3A";
+inline constexpr char kP3ALearnMoreURL[] = "https://aiwize.com/P3A";
 inline constexpr char kP3ASettingsLink[] = "chrome://settings/privacy";
 inline constexpr char kImportDataHelpURL[] =
     "https://support.brave.com/hc/en-us/articles/360019782291#safari";
@@ -27,7 +27,7 @@ inline constexpr char kSpeedreaderLearnMoreUrl[] =
     "https://support.brave.com/hc/en-us/articles/"
     "360045031392-What-is-SpeedReader";
 inline constexpr char kWebDiscoveryLearnMoreUrl[] =
-    "https://brave.com/privacy/browser/#web-discovery-project";
+    "https://aiwize.com/privacy/browser/#web-discovery-project";
 inline constexpr char kBraveSearchHost[] = "search.brave.com";
 inline constexpr char kWidevineLearnMoreUrl[] =
     "https://support.brave.com/hc/en-us/articles/"

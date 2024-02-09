@@ -6,7 +6,7 @@
 package org.chromium.components.variations.firstrun;
 
 /**
- *  Brave Variations configuration.
+ *  AI Wiz Variations configuration.
  */
 public class BraveVariationsConfig {
   public static final String VARIATIONS_SERVER_URL = BRAVE_ANDROID_VARIATIONS_SERVER_URL;

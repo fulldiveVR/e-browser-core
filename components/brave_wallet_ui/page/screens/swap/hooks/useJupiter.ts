@@ -143,7 +143,7 @@ export function useJupiter(params: SwapParams) {
         setBraveFee(braveFeeResponse || undefined)
       } catch (e) {
         console.log(
-          `Error getting Brave fee (Jupiter): ${
+          `Error getting AI Wiz fee (Jupiter): ${
             //
             overriddenParams.toToken.symbol
           }`

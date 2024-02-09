@@ -32,7 +32,7 @@ export const swapEndpoints = ({
         } catch (error) {
           return handleEndpointError(
             endpoint,
-            'Unable to fetch Brave Swap fee',
+            'Unable to fetch AI Wiz Swap fee',
             error
           )
         }
@@ -57,7 +57,7 @@ export const swapEndpoints = ({
         } catch (error) {
           return handleEndpointError(
             endpoint,
-            'Unable to generate Brave Swap quote',
+            'Unable to generate AI Wiz Swap quote',
             error
           )
         }
@@ -82,7 +82,7 @@ export const swapEndpoints = ({
         } catch (error) {
           return handleEndpointError(
             endpoint,
-            'Unable to generate Brave Swap transaction',
+            'Unable to generate AI Wiz Swap transaction',
             error
           )
         }
