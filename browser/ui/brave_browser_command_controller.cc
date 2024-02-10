@@ -18,8 +18,6 @@
 #include "brave/browser/ui/brave_pages.h"
 #include "brave/browser/ui/browser_commands.h"
 #include "brave/browser/ui/sidebar/sidebar_utils.h"
-#include "brave/components/brave_rewards/common/rewards_util.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
@@ -159,12 +157,6 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   if (!is_guest_session) {
     // If Rewards is not supported due to OFAC sanctions we still want to show
     // the menu item.
-    if (brave_rewards::IsSupported(browser_->profile()->GetPrefs())) {
-      UpdateCommandForBraveRewards();
-    }
-    if (brave_wallet::IsAllowed(browser_->profile()->GetPrefs())) {
-      UpdateCommandForBraveWallet();
-    }
     if (syncer::IsSyncAllowedByFlag()) {
       UpdateCommandForBraveSync();
     }
@@ -231,10 +223,6 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   UpdateCommandsForPin();
 }
 
-void BraveBrowserCommandController::UpdateCommandForBraveRewards() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_REWARDS, true);
-}
-
 void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
   UpdateCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER, true);
 }
@@ -292,12 +280,6 @@ void BraveBrowserCommandController::UpdateCommandForBraveSync() {
   UpdateCommandEnabled(IDC_SHOW_BRAVE_SYNC, true);
 }
 
-void BraveBrowserCommandController::UpdateCommandForBraveWallet() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_WALLET, true);
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_WALLET_PANEL, true);
-  UpdateCommandEnabled(IDC_CLOSE_BRAVE_WALLET_PANEL, true);
-}
-
 bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
     int id,
     WindowOpenDisposition disposition,
@@ -329,8 +311,6 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       }
       NewIncognitoWindow(browser_->profile()->GetOriginalProfile());
       break;
-    case IDC_SHOW_BRAVE_REWARDS:
-      break;
     case IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER:
       brave::ShowWebcompatReporter(&*browser_);
       break;
@@ -343,17 +323,8 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
     case IDC_SHOW_BRAVE_SYNC:
       brave::ShowSync(&*browser_);
       break;
-    case IDC_SHOW_BRAVE_WALLET:
-      brave::ShowBraveWallet(&*browser_);
-      break;
     case IDC_SPEEDREADER_ICON_ONCLICK:
       brave::MaybeDistillAndShowSpeedreaderBubble(&*browser_);
-      break;
-    case IDC_SHOW_BRAVE_WALLET_PANEL:
-      brave::ShowWalletBubble(&*browser_);
-      break;
-    case IDC_CLOSE_BRAVE_WALLET_PANEL:
-      brave::CloseWalletBubble(&*browser_);
       break;
     case IDC_SIDEBAR_TOGGLE_POSITION:
       brave::ToggleSidebarPosition(&*browser_);

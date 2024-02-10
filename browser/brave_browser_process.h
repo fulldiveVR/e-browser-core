@@ -86,11 +86,6 @@ namespace speedreader {
 class SpeedreaderRewriterService;
 }
 
-namespace brave_ads {
-class BraveStatsHelper;
-class ResourceComponent;
-}  // namespace brave_ads
-
 class BraveBrowserProcess {
  public:
   BraveBrowserProcess();
@@ -126,14 +121,12 @@ class BraveBrowserProcess {
   virtual p3a::P3AService* p3a_service() = 0;
   virtual brave::BraveReferralsService* brave_referrals_service() = 0;
   virtual brave_stats::BraveStatsUpdater* brave_stats_updater() = 0;
-  virtual brave_ads::BraveStatsHelper* ads_brave_stats_helper() = 0;
   virtual ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() = 0;
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   virtual speedreader::SpeedreaderRewriterService*
   speedreader_rewriter_service() = 0;
 #endif
-  virtual brave_ads::ResourceComponent* resource_component() = 0;
   virtual brave::BraveFarblingService* brave_farbling_service() = 0;
   virtual misc_metrics::ProcessMiscMetrics* process_misc_metrics() = 0;
 };

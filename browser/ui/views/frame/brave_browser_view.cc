@@ -16,12 +16,9 @@
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/sparkle_buildflags.h"
 #include "brave/browser/translate/brave_translate_utils.h"
 #include "brave/browser/ui/brave_browser.h"
-#include "brave/browser/ui/brave_rewards/rewards_panel_coordinator.h"
-#include "brave/browser/ui/brave_rewards/tip_panel_coordinator.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/commands/accelerator_service.h"
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
@@ -29,7 +26,6 @@
 #include "brave/browser/ui/views/brave_actions/brave_actions_container.h"
 #include "brave/browser/ui/views/brave_actions/brave_shields_action_view.h"
 #include "brave/browser/ui/views/brave_help_bubble/brave_help_bubble_host_view.h"
-#include "brave/browser/ui/views/brave_rewards/tip_panel_bubble_host.h"
 #include "brave/browser/ui/views/brave_shields/cookie_list_opt_in_bubble_host.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/frame/vertical_tab_strip_region_view.h"
@@ -41,11 +37,11 @@
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/browser/ui/views/toolbar/bookmark_button.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
-#include "brave/browser/ui/views/toolbar/wallet_button.h"
 #include "brave/browser/ui/views/window_closing_confirm_dialog_view.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
+#include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/app_mode/app_mode_utils.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
@@ -210,16 +206,6 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
     // Show the correct value in settings on initial start
     UpdateSearchTabsButtonState();
   }
-
-  auto* rewards_service =
-      brave_rewards::RewardsServiceFactory::GetForProfile(browser_->profile());
-  if (rewards_service) {
-    brave_rewards::RewardsPanelCoordinator::CreateForBrowser(browser_.get());
-    brave_rewards::TipPanelCoordinator::CreateForBrowser(browser_.get(),
-                                                         rewards_service);
-  }
-
-  brave_rewards::TipPanelBubbleHost::MaybeCreateForBrowser(browser_.get());
 
   brave_shields::CookieListOptInBubbleHost::MaybeCreateForBrowser(
       browser_.get());
@@ -459,10 +445,6 @@ void BraveBrowserView::ShowPlaylistBubble() {
       ->ShowPlaylistBubble();
 }
 #endif
-
-views::View* BraveBrowserView::GetWalletButtonAnchorView() {
-  return nullptr;
-}
 
 void BraveBrowserView::OnAcceleratorsChanged(
     const commands::Accelerators& changed) {

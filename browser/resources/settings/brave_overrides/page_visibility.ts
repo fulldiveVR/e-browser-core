@@ -28,8 +28,6 @@ function getPageVisibility () {
       getStarted: false,
       newTab: false,
       braveIPFS: false,
-      braveWallet: false,
-      braveWeb3: false,
       leoAssistant: false,
       playlist: false,
     }
@@ -54,7 +52,6 @@ function getPageVisibility () {
     privacy: alwaysTrueProxy,
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
-    braveWallet: loadTimeData.getBoolean('isBraveWalletAllowed'),
     leoAssistant: loadTimeData.getBoolean('isLeoAssistantAllowed'),
     playlist: loadTimeData.getBoolean('isPlaylistAllowed'),
   }

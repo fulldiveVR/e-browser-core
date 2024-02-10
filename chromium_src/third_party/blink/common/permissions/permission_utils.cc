@@ -38,9 +38,7 @@
 #define kDisplayCapture                                 \
   kDisplayCapture;                                      \
   case PermissionType::BRAVE_ETHEREUM:                  \
-    return mojom::PermissionsPolicyFeature::kEthereum;  \
   case PermissionType::BRAVE_SOLANA:                    \
-    return mojom::PermissionsPolicyFeature::kSolana;    \
   case PermissionType::BRAVE_ADS:                       \
   case PermissionType::BRAVE_COSMETIC_FILTERING:        \
   case PermissionType::BRAVE_TRACKERS:                  \

@@ -7,10 +7,8 @@ import("//brave/build/config.gni")
 import("//brave/build/mac/tweak_info_plist.gni")
 import("//brave/ios/browser/api/ads/headers.gni")
 import("//brave/ios/browser/api/ai_chat/headers.gni")
-import("//brave/ios/browser/api/brave_rewards/headers.gni")
 import("//brave/ios/browser/api/brave_shields/headers.gni")
 import("//brave/ios/browser/api/brave_stats/headers.gni")
-import("//brave/ios/browser/api/brave_wallet/headers.gni")
 import("//brave/ios/browser/api/certificate/headers.gni")
 import("//brave/ios/browser/api/favicon/headers.gni")
 import("//brave/ios/browser/api/ipfs/headers.gni")
@@ -54,7 +52,6 @@ brave_core_public_headers = [
   "//brave/build/ios/mojom/public/base/base_values.h",
   "//brave/ios/app/brave_core_main.h",
   "//brave/ios/app/brave_core_switches.h",
-  "//brave/ios/browser/brave_wallet/brave_wallet_factory_wrappers.h",
   "//brave/ios/browser/skus/skus_sdk_factory_wrappers.h",
   "//brave/ios/browser/api/bookmarks/brave_bookmarks_api.h",
   "//brave/ios/browser/api/bookmarks/brave_bookmarks_observer.h",
@@ -78,7 +75,6 @@ brave_core_public_headers += brave_shields_public_headers
 brave_core_public_headers += browser_api_url_sanitizer_public_headers
 brave_core_public_headers += browser_url_sanitizer_public_headers
 brave_core_public_headers += brave_stats_public_headers
-brave_core_public_headers += brave_wallet_public_headers
 brave_core_public_headers += browser_api_certificate_public_headers
 brave_core_public_headers += browser_api_favicon_public_headers
 brave_core_public_headers += rewards_public_headers
@@ -140,7 +136,6 @@ ios_framework_bundle("brave_core_ios_framework") {
 
   deps += ads_public_deps
   deps += ai_chat_public_deps
-  deps += brave_wallet_public_deps
   deps += rewards_public_deps
   deps += skus_public_deps
 

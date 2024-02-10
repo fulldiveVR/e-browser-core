@@ -7,7 +7,6 @@ import { PolymerElement } from 'chrome://resources/polymer/v3_0/polymer/polymer_
 import { I18nMixin, I18nMixinInterface } from 'chrome://resources/cr_elements/i18n_mixin.js'
 import { loadTimeData } from "../i18n_setup.js"
 import { getTemplate } from './toolbar.html.js'
-import { BraveWalletBrowserProxy, BraveWalletBrowserProxyImpl } from '../brave_wallet_page/brave_wallet_browser_proxy.js';
 
 import '../settings_shared.css.js'
 import '../settings_vars.css.js'
@@ -32,22 +31,7 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
 
   static get properties() {
     return {
-      isNativeWalletEnabled_: {
-        type: Boolean,
-        value: false,
-      }
     }
-  }
-
-  private isNativeWalletEnabled_: boolean
-  private walletBrowserProxy_: BraveWalletBrowserProxy = BraveWalletBrowserProxyImpl.getInstance()
-
-  override ready() {
-    super.ready()
-
-    this.walletBrowserProxy_.isNativeWalletEnabled().then(val => {
-      this.isNativeWalletEnabled_ = val
-    });
   }
 
   /**
@@ -64,14 +48,6 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
       return this.i18n('homePageNtp');
     }
     return homepageValue || this.i18n('customWebAddress');
-  }
-
-  private isBraveRewardsSupported_() {
-    return loadTimeData.getBoolean('isBraveRewardsSupported')
-  }
-
-  private showBraveVPNOption_() {
-    return loadTimeData.getBoolean('isBraveVPNEnabled')
   }
 
   private showLeoAssistant_() {

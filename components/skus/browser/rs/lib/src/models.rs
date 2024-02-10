@@ -78,25 +78,6 @@ impl FromStr for Environment {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct Wallet {
-    pub id: String,
-    pub environment: String,
-    pub wallet_type: String,
-    pub seed: Vec<u8>,
-}
-
-impl Wallet {
-    pub fn new(id: &str, environment: &str, wallet_type: &str, seed: [u8; 64]) -> Wallet {
-        Wallet {
-            id: id.to_string(),
-            environment: environment.to_string(),
-            wallet_type: wallet_type.to_string(),
-            seed: seed.to_vec(),
-        }
-    }
-}
-
-#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Promotion {
     pub id: String,
     pub approximate_value: f64,

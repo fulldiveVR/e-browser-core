@@ -3,7 +3,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import("//brave/browser/ethereum_remote_client/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_player/common/buildflags/buildflags.gni")
 import("//brave/components/ipfs/buildflags/buildflags.gni")
@@ -26,7 +25,6 @@ brave_grit("static_resources") {
   ]
   deps = [
     ":strings",
-    "//brave/components/brave_rewards/resources",
     "//brave/components/brave_shields/resources:bundle_js",
     "//brave/components/decentralized_dns/content/resources:bundle_js",
     "//brave/components/ipfs/resources:bundle_js",
@@ -110,23 +108,6 @@ repack("resources") {
     ]
   }
 
-  if (!is_ios) {
-    deps += [ "//brave/components/brave_wallet_ui:resources" ]
-    sources += [
-      "$root_gen_dir/brave/components/brave_wallet/resources/brave_wallet.pak",
-    ]
-  }
-
-  deps += [ "//brave/components/brave_wallet/resources:ethereum_provider_generated_resources" ]
-  sources += [ "$root_gen_dir/brave/components/brave_wallet/resources/brave_wallet_script_generated.pak" ]
-
-  if (ethereum_remote_client_enabled) {
-    if (!is_android && !is_ios) {
-      sources += [ "$root_gen_dir/brave/components/ethereum_remote_client_page/resources/ethereum_remote_client_page_generated.pak" ]
-      deps += [ "//brave/browser/ui/webui/ethereum_remote_client:ethereum_remote_client_page_generated" ]
-    }
-  }
-
   if (enable_playlist_webui) {
     deps +=
         [ "//brave/components/playlist/browser/resources:generated_resources" ]
@@ -159,7 +140,6 @@ brave_grit("strings") {
     "enable_speedreader=$enable_speedreader",
     "enable_ipfs=$enable_ipfs",
     "enable_ipfs_internals_webui=$enable_ipfs_internals_webui",
-    "ethereum_remote_client_enabled=$ethereum_remote_client_enabled",
     "enable_tor=$enable_tor",
   ]
 

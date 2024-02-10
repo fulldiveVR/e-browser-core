@@ -20,9 +20,6 @@ window.requestAnimationFrame = function (cb: FrameRequestCallback) {
 
 window.loadTimeData = {
   getString (key) {
-    if (key === 'braveWalletLedgerBridgeUrl') {
-      return 'chrome-untrusted://ledger-bridge'
-    }
     return key
   },
   getBoolean () {

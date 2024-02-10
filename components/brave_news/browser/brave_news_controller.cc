@@ -25,7 +25,6 @@
 #include "base/time/time.h"
 #include "base/values.h"
 #include "brave/components/api_request_helper/api_request_helper.h"
-#include "brave/components/brave_ads/browser/ads_service.h"
 #include "brave/components/brave_news/browser/brave_news_p3a.h"
 #include "brave/components/brave_news/browser/channels_controller.h"
 #include "brave/components/brave_news/browser/direct_feed_controller.h"
@@ -86,12 +85,10 @@ void BraveNewsController::RegisterProfilePrefs(PrefRegistrySimple* registry) {
 BraveNewsController::BraveNewsController(
     PrefService* prefs,
     favicon::FaviconService* favicon_service,
-    brave_ads::AdsService* ads_service,
     history::HistoryService* history_service,
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory)
     : prefs_(prefs),
       favicon_service_(favicon_service),
-      ads_service_(ads_service),
       api_request_helper_(GetNetworkTrafficAnnotationTag(), url_loader_factory),
       private_cdn_request_helper_(GetNetworkTrafficAnnotationTag(),
                                   url_loader_factory),
@@ -569,42 +566,7 @@ void BraveNewsController::AddConfigurationListener(
 }
 
 void BraveNewsController::GetDisplayAd(GetDisplayAdCallback callback) {
-  // TODO(petemill): maybe we need to have a way to re-fetch ads_service,
-  // since it may have been disabled at time of service creation and enabled
-  // some time later.
-  if (!ads_service_) {
-    VLOG(1) << "GetDisplayAd: no ads service";
-    std::move(callback).Run(nullptr);
-    return;
-  }
-  auto on_ad_received = base::BindOnce(
-      [](GetDisplayAdCallback callback, const std::string& dimensions,
-         std::optional<base::Value::Dict> ad_data) {
-        if (!ad_data) {
-          VLOG(1) << "GetDisplayAd: no ad";
-          std::move(callback).Run(nullptr);
-          return;
-        }
-        VLOG(1) << "GetDisplayAd: GOT ad";
-        // Convert to our mojom entity.
-        // TODO(petemill): brave_ads seems to use mojom, perhaps we can receive
-        // and send to callback the actual typed mojom struct from brave_ads?
-        auto ad = mojom::DisplayAd::New();
-        ad->uuid = *ad_data->FindString("uuid");
-        ad->creative_instance_id = *ad_data->FindString("creativeInstanceId");
-        if (const auto* value = ad_data->FindString("ctaText")) {
-          ad->cta_text = *value;
-        }
-        ad->dimensions = *ad_data->FindString("dimensions");
-        ad->title = *ad_data->FindString("title");
-        ad->description = *ad_data->FindString("description");
-        ad->image = mojom::Image::NewPaddedImageUrl(
-            GURL(*ad_data->FindString("imageUrl")));
-        ad->target_url = GURL(*ad_data->FindString("targetUrl"));
-        std::move(callback).Run(std::move(ad));
-      },
-      std::move(callback));
-  ads_service_->MaybeServeInlineContentAd("900x750", std::move(on_ad_received));
+  
 }
 
 void BraveNewsController::OnInteractionSessionStarted() {
@@ -619,23 +581,12 @@ void BraveNewsController::OnSessionCardVisitsCountChanged(
 void BraveNewsController::OnPromotedItemView(
     const std::string& item_id,
     const std::string& creative_instance_id) {
-  if (ads_service_ && !item_id.empty() && !creative_instance_id.empty()) {
-    ads_service_->TriggerPromotedContentAdEvent(
-        item_id, creative_instance_id,
-        brave_ads::mojom::PromotedContentAdEventType::kViewed,
-        /*intentional*/ base::DoNothing());
-  }
+ 
 }
 
 void BraveNewsController::OnPromotedItemVisit(
     const std::string& item_id,
     const std::string& creative_instance_id) {
-  if (ads_service_ && !item_id.empty() && !creative_instance_id.empty()) {
-    ads_service_->TriggerPromotedContentAdEvent(
-        item_id, creative_instance_id,
-        brave_ads::mojom::PromotedContentAdEventType::kClicked,
-        /*intentional*/ base::DoNothing());
-  }
 }
 
 void BraveNewsController::OnSessionCardViewsCountChanged(uint16_t total_count,
@@ -647,55 +598,11 @@ void BraveNewsController::OnSessionCardViewsCountChanged(uint16_t total_count,
 void BraveNewsController::OnDisplayAdVisit(
     const std::string& item_id,
     const std::string& creative_instance_id) {
-  // Validate
-  if (item_id.empty()) {
-    LOG(ERROR) << "News: asked to record visit for an ad without ad id";
-    return;
-  }
-  if (creative_instance_id.empty()) {
-    LOG(ERROR) << "News: asked to record visit for an ad without "
-                  "ad creative instance id";
-    return;
-  }
-  // Let ad service know an ad was visited
-  if (!ads_service_) {
-    VLOG(1)
-        << "News: Asked to record an ad visit but there is no ads service for"
-           "this profile!";
-    return;
-  }
-  ads_service_->TriggerInlineContentAdEvent(
-      item_id, creative_instance_id,
-      brave_ads::mojom::InlineContentAdEventType::kClicked,
-      /*intentional*/ base::DoNothing());
 }
 
 void BraveNewsController::OnDisplayAdView(
     const std::string& item_id,
     const std::string& creative_instance_id) {
-  // Validate
-  if (item_id.empty()) {
-    LOG(ERROR) << "News: asked to record view for an ad without ad id";
-    return;
-  }
-  if (creative_instance_id.empty()) {
-    LOG(ERROR) << "News: asked to record view for an ad without "
-                  "ad creative instance id";
-    return;
-  }
-  // Let ad service know an ad was viewed
-  if (!ads_service_) {
-    VLOG(1)
-        << "News: Asked to record an ad visit but there is no ads service for"
-           "this profile!";
-    return;
-  }
-  ads_service_->TriggerInlineContentAdEvent(
-      item_id, creative_instance_id,
-      brave_ads::mojom::InlineContentAdEventType::kViewed,
-      /*intentional*/ base::DoNothing());
-
-  p3a::RecordWeeklyDisplayAdsViewedCount(prefs_, true);
 }
 
 void BraveNewsController::CheckForPublishersUpdate() {

@@ -45,7 +45,6 @@ class DecentralizedDnsNavigationThrottle : public content::NavigationThrottle {
 
  private:
   void ShowInterstitial();
-  void ShowEnsOffchainLookupInterstitial();
 
   const raw_ptr<PrefService> user_prefs_ = nullptr;
   const raw_ptr<PrefService> local_state_ = nullptr;

@@ -339,22 +339,12 @@
       <message name="IDS_BRAVE_NEW_TAB_BACKGROUND_IMG_TAB" desc="Background image title">Background Image</message>
       <message name="IDS_BRAVE_NEW_TAB_WIDGET_ADD" desc="Add Widget Text">Add</message>
       <message name="IDS_BRAVE_NEW_TAB_WIDGET_HIDE" desc="Hide Widget Text">Hide</message>
-      <message name="IDS_BRAVE_NEW_TAB_BRAVE_REWARDS_TITLE" desc="">AI Wize Rewards</message>
-      <message name="IDS_BRAVE_NEW_TAB_REWARDS_WIDGET_DESC" desc="Rewards widget description">Earn tokens for watching privacy-respecting ads.</message>
       <message name="IDS_BRAVE_NEW_TAB_CARDS_TITLE" desc="Toggle cards title">Cards</message>
       <message name="IDS_BRAVE_NEW_TAB_CARDS_DESC" desc="Toggle cards description">By turning off Cards, all cards currently visible will be hidden. However, you may still be notified of new cards.</message>
-
-      <message name="IDS_BRAVE_ADS_SCHEDULED_CAPTCHA_NOTIFICATION_TITLE" desc="">AI Wize Ads paused</message>
-      <message name="IDS_BRAVE_ADS_SCHEDULED_CAPTCHA_NOTIFICATION_BODY" desc="">To keep AI Wize Rewards safe from abuse, we'll randomly ask users to solve a captcha. Click &#8220;Solve&#8221; to resume ads.</message>
-      <message name="IDS_BRAVE_ADS_SCHEDULED_CAPTCHA_NOTIFICATION_OK_BUTTON_TEXT" desc="">Solve</message>
-      <message name="IDS_BRAVE_ADS_SCHEDULED_CAPTCHA_NOTIFICATION_CANCEL_BUTTON_TEXT" desc="">Later</message>
 
       <if expr="toolkit_views">
         <message name="IDS_SIDEBAR_BRAVE_TALK_ITEM_TITLE" desc="Title for AI Wize Talk item in sidebar">
           AI Wize Talk
-        </message>
-        <message name="IDS_SIDEBAR_WALLET_ITEM_TITLE" desc="Title for crypto wallet item in sidebar">
-          AI Wize Wallet
         </message>
         <message name="IDS_SIDEBAR_BOOKMARKS_ITEM_TITLE" desc="Title for bookmarks item in sidebar">
           Bookmarks
@@ -443,215 +433,6 @@
         <message name="IDS_BRAVE_WEBCOMPATREPORTER_CONFIRMATION_NOTICE" desc="Assures the user that a problem with a website reported as broken will be fixed soon">Thanks for letting AI Wize's developers know that there's something wrong with this site. We'll do our best to fix it!</message>
       </if>
 
-      <!-- WebUI rewards resources -->
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_TITLE" desc="">Manage AI Wize Ads</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_DESCRIPTION" desc="">
-        Control what kinds of AI Wize Ads you see, and how often.
-      </message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_DESCRIPTION_EARN" desc="">
-        The more you see, the more you can earn.
-      </message>
-      <message name="IDS_BRAVE_REWARDS_NEW_TAB_AD_COUNT_LABEL" desc="">
-        New tab page ads
-      </message>
-      <message name="IDS_BRAVE_REWARDS_NOTIFICATION_AD_COUNT_LABEL" desc="">
-        Notification ads
-      </message>
-      <message name="IDS_BRAVE_REWARDS_NEWS_AD_COUNT_LABEL" desc="">
-        AI Wize News ads
-      </message>
-      <message name="IDS_BRAVE_REWARDS_NEWS_AD_INFO" desc="">
-        AI Wize News contains ads that cannot be independently disabled.
-      </message>
-      <message name="IDS_BRAVE_REWARDS_NEWS_AD_INFO_DISABLED" desc="">
-        AI Wize News is currently disabled.
-      </message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_TITLE" desc="">Auto-Contribute</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_DESC" desc="">An automatic way to support sites and content creators. Set a monthly contribution and browse normally. <ph name="BEGIN_LINK">$1</ph>Verified sites and creators<ph name="END_LINK">$2</ph> you visit will receive contributions from you each month based on the amount of time you spend on their content.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_CURRENT_EARNINGS" desc="">Earnings so far this month</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PAYMENT_DATE" desc="">Next earnings payout date</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_TOTAL_RECEIVED" desc="">Total ads received this month</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_NOT_SUPPORTED_REGION" desc="">Sorry! Ads are not yet available in your region.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_NOT_SUPPORTED_DEVICE" desc="">AI Wize Rewards and Ads are not available on your device at this time.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR" desc="">Notification ad frequency</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_0" desc="">None</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_1" desc="">Max 1 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_2" desc="">Max 2 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_3" desc="">Max 3 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_4" desc="">Max 4 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_5" desc="">Max 5 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_PER_HOUR_10" desc="">Max 10 per hour</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_TITLE" desc="">Regional ad relevance</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_DESCRIPTION" desc="">This allows AI Wize to show you ads meant specifically for your region.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_LEARN" desc="">Learn More</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_AUTO_DETECTED_AS" desc="">Auto-detected as <ph name="SUBDIVISION">$1</ph></message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_AUTO_DETECT" desc="">Auto-detect</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_DISABLE" desc="">Disable</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_SUBDIVISION_TARGETING_DISABLED" desc="">Disabled</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_SERVER_DISCONNECT_FAILED" desc="">Sorry, there was an error when trying to disconnect your <ph name="PROVIDER">$1</ph> account. Please try again in a little while.</message>
-      <message name="IDS_BRAVE_UI_BAT_REWARDS_TEXT" desc="">BAT</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_MONTHLY" desc="">Monthly Payment</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_NEXT_DATE" desc="">Next contribution date</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_SITES" desc="">Sites viewed</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_DONAT_TITLE" desc="">Contributions</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_DONAT_DESC" desc="">See the on-demand contributions you've given to websites and creators.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_DONAT_DESC_LEARN_MORE" desc="">Learn more about contributions.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_MONTHLY_TIPS_TITLE" desc="">Monthly Contributions</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_MONTHLY_TIPS_DESC" desc="">Set up recurring monthly contributions so you can continually support your favorite creators.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_MONTHLY_TIPS_EMPTY" desc="">No monthly contributions set up yet.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_NEXT_CONTRIBUTION" desc="">Next contribution</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_VISIT_SOME" desc="">Sites will appear as you browse</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_DONAT_TOTAL_DONATIONS" desc="">Total contributions this month</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_DONAT_VISIT_SOME" desc="">Have you contributed to your favorite content creator today?</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_MIN_TIME" desc="">Minimum page time before logging a visit</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_MIN_VISITS" desc="">Minimum visits for publisher relevancy</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_OTHER" desc="">Other settings</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_VISIT_1" desc="">1 visit</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_VISIT_5" desc="">5 visits</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_VISIT_10" desc="">10 visits</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_TIME_5" desc="">5 seconds</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_TIME_8" desc="">8 seconds</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_TIME_60" desc="">1 minute</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_CONTR_UP_TO" desc="">Up to</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_CONFIRMATION_TYPE_CLICK" desc="">Clicked</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_CONFIRMATION_TYPE_DISMISS" desc="">Dismissed</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_CONFIRMATION_TYPE_LANDED" desc="">Clicked</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_ADS_CONFIRMATION_TYPE_VIEW" desc="">Viewed</message>
-
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_CLOSE" desc="">Close</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_DEVICE_LIMIT_REACHED_TEXT" desc="">Your AI Wize Rewards cannot be verified because you've reached the maximum verified device limit.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_DEVICE_LIMIT_REACHED_TITLE" desc="">Error: Device limit reached</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_ERROR" desc="">Sorry there was a problem processing your request, please try again.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_FLAGGED_WALLET_TEXT_1" desc="">Unfortunately, your AI Wize Rewards profile was flagged because our automated checks found some unexpected AI Wize Ads activity.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_FLAGGED_WALLET_TEXT_2" desc="">While your profile is flagged, you may continue to see ads, but won't be eligible to receive payouts. You also won't be able to connect a custodial account to AI Wize Rewards.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_FLAGGED_WALLET_TEXT_3" desc="">It's possible your profile was flagged in error, and no immediate action is required on your part. The flag on your profile may be removed in the future.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_FLAGGED_WALLET_TEXT_4" desc=""><ph name="BEGIN_LINK">$2</ph>Learn more about AI Wize's process for flagging Rewards profiles.<ph name="END_LINK">$3</ph></message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_FLAGGED_WALLET_TITLE" desc="">Error: AI Wize Rewards profile is flagged</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_KYC_REQUIRED_TEXT" desc="">Please try again after you have completed ID verification on <ph name="PROVIDER">$1<ex>Uphold</ex></ph>.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_KYC_REQUIRED_TITLE" desc="">Error: You need a verified account to log in</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_MISMATCHED_COUNTRIES_TEXT" desc="">Hmm, it looks like your AI Wize Rewards country does not match the country of the <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account you're trying to connect.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_MISMATCHED_COUNTRIES_TITLE" desc="">Error: Country mismatch</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_MISMATCHED_PROVIDER_ACCOUNTS_TEXT" desc="">Hmm, it looks like your AI Wize Rewards has already been verified with another <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account. Please try verifying again using your previous account.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_MISMATCHED_PROVIDER_ACCOUNTS_TITLE" desc="">Error: Different account</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_PROVIDER_UNAVAILABLE_TEXT_1" desc="">It looks like connecting <ph name="PROVIDER">$1<ex>Uphold</ex></ph> to AI Wize Rewards is temporarily unavailable. Please try again later.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_PROVIDER_UNAVAILABLE_TEXT_2" desc="">You can view <ph name="BEGIN_LINK">$2</ph>service status here<ph name="END_LINK">$3</ph>.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_PROVIDER_UNAVAILABLE_TITLE" desc="">Error: Connecting to selected custodian temporarily unavailable</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_REGION_NOT_SUPPORTED_TEXT_1" desc="">Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account can't be connected to your AI Wize Rewards profile at this time. Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account is registered in a country that's not currently supported for connecting to AI Wize Rewards.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_REGION_NOT_SUPPORTED_TEXT_2" desc="">See the <ph name="LINK_BEGIN">$2</ph>current list of supported regions and learn more<ph name="END_LINK">$3</ph> about connecting a custodial account to AI Wize Rewards.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_REGION_NOT_SUPPORTED_TITLE" desc="">Error: Region currently not supported</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_UPHOLD_BAT_NOT_ALLOWED_TEXT" desc="">BAT is not yet supported in your region on Uphold.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_UPHOLD_BAT_NOT_ALLOWED_TITLE" desc="">Error: BAT unavailable</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_UPHOLD_INSUFFICIENT_CAPABILITIES_TEXT" desc="">According to Uphold, there are currently some limitations on your Uphold account. Please log in to your Uphold account and check whether there are any notices or remaining account requirements to complete, then try again. For example, you may need to submit more information to Uphold.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_UPHOLD_INSUFFICIENT_CAPABILITIES_TITLE" desc="">Error: Limited Uphold account functionality</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_WALLET_OWNERSHIP_VERIFICATION_FAILURE_TEXT" desc="">There was a problem validating your browser's request to connect AI Wize Rewards to your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account. You can <ph name="BEGIN_LINK">$2</ph>contact support<ph name="END_LINK">$3</ph> for more help.</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_REDIRECT_MODAL_WALLET_OWNERSHIP_VERIFICATION_FAILURE_TITLE" desc="">Error: Request could not be validated</message>
-      <message name="IDS_BRAVE_REWARDS_LOCAL_TOS_AND_PP" desc="">By turning on <ph name="TITLE">$1<ex>AI Wize Private Ads</ex></ph>, you agree to the <ph name="BEGIN_LINK1">$2</ph>Terms of Service<ph name="END_LINK1">$3</ph> and <ph name="BEGIN_LINK2">$4</ph>Privacy Policy<ph name="END_LINK2">$5</ph>.</message>
-
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_CUSTODIAL_HEADER" desc="">Custodial accounts (requires ID verification)</message>
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_CUSTODIAL_TOOLTIP" desc="">Custodial accounts are accounts with trusted third-party services that hold your BAT for you.</message>
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_HEADER" desc="">Choose where you'd like to receive BAT</message>
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_LEARN_MORE" desc="">Learn more about regions and support</message>
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_PROVIDER_NOT_AVAILABLE" desc="">Currently not available in your region</message>
-      <message name="IDS_BRAVE_REWARDS_CONNECT_WALLET_TEXT" desc="">To begin earning Basic Attention Token (BAT) rewards, connect an account. BAT you earn will be automatically transferred to your account every month.</message>
-
-      <message name="IDS_BRAVE_REWARDS_CONTRIBUTION_PENDING_UNTIL" desc="A label on Pending Contributions modal showing the date until which the contribution will be pending">
-        Pending until <ph name="DATE">$1</ph>
-      </message>
-
-      <message name="IDS_REWARDS_BROWSER_CANNOT_RECEIVE_ADS" desc="">Oops! Your browser cannot receive AI Wize Private Ads.</message>
-      <message name="IDS_REWARDS_BROWSER_NEEDS_UPDATE_TO_SEE_ADS" desc="">Your browser needs to be updated to continue seeing ads.</message>
-      <message name="IDS_REWARDS_APP_ERROR_TITLE" desc="">Something went wrong</message>
-
-      <!-- WebUI rewards internals resources -->
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AD_DIAGNOSTIC_ID" desc="Ad diagnostic id">Diagnostic Id</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AD_DIAGNOSTIC_INFO" desc="Ad diagnostic info">Diagnostic Info</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_ADS_NOT_INITIALIZED" desc="Ads not initialized">Ads not initialized, please refresh the page.</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AMOUNT" desc="Amount">Amount:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AUTO_REFRESH" desc="">Automatically refresh every 5 seconds</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_BALANCE_INFO" desc="">Balance info</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_BOOT_STAMP" desc="Wallet start time">Rewards profile created at:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CLEAR_BUTTON" desc="">Clear</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTED_AMOUNT" desc="Contributed Amount">Contributed amount:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTED_CREATED_AT" desc="">Created at:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION" desc="Contribution">Contribution</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_PROCESSOR" desc="Contribution processor">Processor:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP" desc="">Step:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_AUTO_CONTRIBUTE_TABLE_EMPTY" desc="">Auto Contribute table empty</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_NOT_ENOUGH_FUNDS" desc="">Not enough funds</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_FAILED" desc="">Failed</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_COMPLETED" desc="">Completed</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_NO" desc="">Unknown</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_START" desc="">Start</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_PREPARE" desc="">Prepare</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_RESERVE" desc="">Reserve</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_EXTERNAL_TRANSACTION" desc="">External transaction</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_CREDS" desc="">Creds</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_REWARDS_OFF" desc="">Rewards was turned off</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_AUTO_CONTRIBUTE_OFF" desc="">Auto-contribute was turned off</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_STEP_RETRY_COUNT" desc="">Stopped retrying</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CUSTODIAN" desc="Custodian">Custodian:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CUSTODIAN_MEMBER_ID" desc="Custodian member ID">Custodian member ID:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_EVENT_LOG_KEY" desc="event log key">Key</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_EVENT_LOG_VALUE" desc="event log value">Value</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_EVENT_LOG_TIME" desc="when event was logged">Logged at</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_MAIN_DISCLAIMER" desc="">WARNING: Data on these pages may be sensitive. Be careful who you share them with.</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_LOG_DISCLAIMER" desc="">WARNING: This log file may contain sensitive data. Be careful who you share it with.</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTION_TYPE" desc="Contribution type">Type:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CONTRIBUTIONS" desc="">Contributions</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_DOWNLOAD_BUTTON" desc="">Download full log</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_EXTERNAL_WALLET" desc="">Custodial account connection info</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_INVALID" desc="Invalid indicator">Invalid</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_KEY_INFO_SEED" desc="Key info seed">Key info seed:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_LOG_NOTICE" desc="">We show the last [[numberOfLines]] lines of the log. If you want the whole log, you can download it above.</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_MAIN_TITLE" desc="">Rewards internals</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_NOT_SET" desc="Not set">Not set</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PERSONA_ID" desc="Wallet persona ID">Persona ID</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_ADS" desc="">Ads</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_AMOUNT" desc="">Amount</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_CLAIMED_AT" desc="">Claimed at</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_CLAIM_ID" desc="">Claim ID</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_EXPIRES_AT" desc="">Expires at</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_ID" desc="">ID</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_LEGACY_CLAIMED" desc="">Legacy promotion</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_LEGACY_NO" desc="">No</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_LEGACY_YES" desc="">Yes</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTIONS" desc="">Promotions</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_STATUS" desc="">Status</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_STATUS_ACTIVE" desc="">Active</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_STATUS_ATTESTED" desc="">Attested</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_STATUS_FINISHED" desc="">Finished</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_STATUS_OVER" desc="">Over</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_TYPE" desc="">Type</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_UGP" desc="">UGP</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_PROMOTION_VERSION" desc="">Version</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_REFRESH_BUTTON" desc="Refresh button">Refresh</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_RETRY_COUNT" desc="Retry count">Retry Count:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_COUNTRY" desc="Rewards	country">Rewards country:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_AUTO" desc="Auto Contribute">Auto Contribute</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_ONE_TIME_TIP" desc="On-demand tip">Contribution</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_RECURRING_TIP" desc="Recurring tip">Recurring contribution</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_AD_DIAGNOSTICS" desc="">Ad diagnostics</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_CONTRIBUTIONS" desc="">Contributions</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_EVENT_LOGS" desc="">Event logs</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_GENERAL_INFO" desc="">General info</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_LOGS" desc="">Logs</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_PROMOTIONS" desc="">Promotions</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TOTAL_AMOUNT" desc="Total Amount">Total amount:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TOTAL_BALANCE" desc="Total balance">Total balance</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_USER_ID" desc="Wallet user ID">User ID</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_VALID" desc="Valid indicator">Valid</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_ADDRESS" desc="">Wallet address:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_HISTORY" desc="">Wallet History</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_INFO" desc="">Rewards info</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_NOT_CREATED" desc="">Rewards profile not yet created</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_PAYMENT_ID" desc="Rewards payment ID">Rewards payment ID:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_STATUS" desc="Wallet status">Rewards state:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_STATUS_NOT_CONNECTED" desc="">Not connected</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_STATUS_VERIFIED" desc="">Verified</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_STATUS_DISCONNECTED_VERIFIED" desc="">Disconnected (Verified)</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_WALLET_CREATION_ENVIRONMENT" desc="">Creation environment:</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_CURRENT_ENVIRONMENT" desc="">Current environment:</message>
-
       <!-- WebUI brave ui resources -->
       <message name="IDS_BRAVE_UI_ACTIVITY_COPY" desc=""> AI Wize Software. AI Wize is a registered trademark of AI Wize Software. Site names may be trademarks or registered trademarks of the site owner.</message>
       <message name="IDS_BRAVE_UI_ACTIVITY_NOTE" desc="">To protect your privacy, this AI Wize Rewards statement is not saved, recorded or logged anywhere other than on your device (this computer). It cannot be retrieved from AI Wize in the event of data loss on your device.</message>
@@ -673,7 +454,6 @@
       <message name="IDS_BRAVE_UI_AMOUNT" desc="">Amount</message>
       <message name="IDS_BRAVE_UI_BRAVE_CONTRIBUTE_TITLE" desc="">Auto-Contribute</message>
       <message name="IDS_BRAVE_UI_BRAVE_CONTRIBUTE_TRANSACTION" desc="">Auto-Contribute [[processor]]</message>
-      <message name="IDS_BRAVE_UI_BRAVE_REWARDS" desc="">AI Wize Rewards</message>
       <message name="IDS_BRAVE_UI_PRIVACY_POLICY" desc="">Privacy Policy</message>
       <message name="IDS_BRAVE_UI_CANCEL" desc="">Cancel</message>
       <message name="IDS_BRAVE_UI_CAPTCHA_DRAG" desc="">Drag the BAT Icon on to the</message>
@@ -734,14 +514,8 @@
       <message name="IDS_BRAVE_UI_REMOVE" desc="">remove</message>
       <message name="IDS_BRAVE_UI_REMOVE_AD_FROM_SAVED" desc="">Remove From Saved</message>
       <message name="IDS_BRAVE_UI_RESET" desc="">Reset</message>
-      <message name="IDS_BRAVE_UI_RESET_WALLET" desc="">Reset AI Wize Rewards</message>
       <message name="IDS_BRAVE_UI_CLEAR_EXCLUDE_LIST" desc="">Clear exclude list</message>
       <message name="IDS_BRAVE_UI_REVIEW_SITE_MSG" desc="">Your pinned sites have been moved to</message>
-      <message name="IDS_BRAVE_UI_REWARDS_CONTRIBUTE" desc="">Auto-Contribute</message>
-      <message name="IDS_BRAVE_UI_REWARDS_CONTRIBUTE_ATTENTION" desc="">Attention</message>
-      <message name="IDS_BRAVE_UI_REWARDS_RESET_TEXT" desc="">By resetting, your current AI Wize Rewards profile will be deleted and you will start again with a completely new AI Wize Rewards profile. Before proceeding, <ph name="LINK_BEGIN">$1</ph>learn more<ph name="LINK_END">$2</ph> about resetting, just to be safe.</message>
-      <message name="IDS_BRAVE_UI_REWARDS_RESET_CONSENT" desc="">I understand that my current AI Wize Rewards profile and AI Wize Rewards data will be deleted from my device, and I've read the <ph name="LINK_BEGIN">$1</ph>support article about resetting<ph name="LINK_END">$2</ph>.</message>
-      <message name="IDS_BRAVE_UI_REWARDS_SUMMARY" desc="">Rewards Summary</message>
       <message name="IDS_BRAVE_UI_SAVE" desc="">Save</message>
       <message name="IDS_BRAVE_UI_SEE_ALL_ITEMS" desc="">See all [[numItems]] items</message>
       <message name="IDS_BRAVE_UI_SEND_TIP" desc="">Send my Contribution</message>
@@ -756,16 +530,10 @@
       <message name="IDS_BRAVE_UI_TYPE" desc="">Type</message>
       <message name="IDS_BRAVE_UI_VERIFIED_PUBLISHER" desc="">AI Wize Verified Publisher</message>
       <message name="IDS_BRAVE_UI_VIEW_MONTHLY" desc="">View Monthly Statement for Details</message>
-      <message name="IDS_BRAVE_UI_WALLET_ACTIVITY" desc="">Activity</message>
-      <message name="IDS_BRAVE_UI_WALLET_BALANCE" desc="">Rewards balance</message>
-      <message name="IDS_BRAVE_UI_YOUR_WALLET" desc="">Your AI Wize Rewards</message>
       <message name="IDS_BRAVE_UI_VIEW_DETAILS" desc="">View Details</message>
-      <message name="IDS_BRAVE_UI_REWARDS_CREATING_TEXT" desc="">Creating your AI Wize Rewards profile</message>
 
       <message name="IDS_BRAVE_UI_EXCLUDED_SITES_TEXT" desc="">Sites Excluded</message>
       <message name="IDS_BRAVE_UI_REMOVE_FROM_EXCLUDED" desc="">Remove from excluded</message>
-      <message name="IDS_BRAVE_UI_REWARDS_EXCLUDED_TEXT_1" desc="">You've excluded</message>
-      <message name="IDS_BRAVE_UI_REWARDS_EXCLUDED_TEXT_2" desc="">sites from Auto-Contribute.</message>
       <message name="IDS_BRAVE_UI_SHOW_ALL" desc="">Show All</message>
       <message name="IDS_BRAVE_UI_VIEWED_SITES" desc="">Sites Viewed</message>
 
@@ -788,24 +556,12 @@
 
       <!-- Rewards New Tab Widget resources -->
       <message name="IDS_EDIT_CARDS_TITLE" desc="">Edit Cards</message>
-      <message name="IDS_REWARDS_WIDGET_START_USING" desc="">Start using AI Wize Rewards</message>
       <message name="IDS_BRAVE_TALK_WIDGET_TITLE" desc="">AI Wize Talk</message>
       <message name="IDS_BRAVE_TALK_WIDGET_WELCOME_TITLE" desc="">Start a private video call with your friends and colleagues.</message>
       <message name="IDS_BRAVE_TALK_WIDGET_START_BUTTON" desc="">Start call</message>
       <message name="IDS_BRAVE_TALK_WIDGET_ABOUT_DATA" desc="">About your data</message>
 
       <!-- WebUI AI Wize Toolbar resources -->
-      <message name="IDS_WALLETS_TITLE" desc="The toolbar title for the aiwize://wallets page">Wallet</message>
-      <!-- WebUI Crypto Wallets resources -->
-      <message name="IDS_BRAVE_WALLET_WELCOME" desc="">Welcome to AI Wize Crypto Wallets</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_ONE" desc="">Crypto Wallets lets you work with cryptocurrency and related assets in AI Wize. Crypto Wallets supports Ethereum tokens like ETH and BAT, as well as collectibles, and lets you work with Ðapps and other smart contracts. All this is meant for people who are familiar with Ethereum and other blockchain systems — or are excited to learn.</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_TWO" desc="">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that AI Wize Software bears no responsibility or liability for any losses including incidental or consequential losses you might suffer as a result of this use.</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_THREE" desc="">All of this is completely separate from</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_FOUR" desc="">So if you were looking to support your favorite sites, head over there instead.</message>
-      <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS" desc="">AI Wize Rewards</message>
-      <message name="IDS_BRAVE_WALLET_DOWNLOADING" desc="">Downloading Component...</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_CONFIRM" desc="">I understand</message>
-
       <message name="IDS_PAGE_INFO_BRAVE_WEBTORRENT" desc="The message showed to the user in the HTTP info bubble view when viewing a webtorrent: page">
         You're viewing a WebTorrent page
       </message>
@@ -819,8 +575,6 @@
       <part file="permissions_strings.grdp" />
       <part file="google_sign_in_permission_strings.grdp" />
       <part file="localhost_access_permission_strings.grdp" />
-      <part file="rewards_strings.grdp" />
-      <part file="wallet_strings.grdp" />
       <part file="tor_strings.grdp" />
       <part file="brave_news_strings.grdp" />
       <part file="commands.grdp" />

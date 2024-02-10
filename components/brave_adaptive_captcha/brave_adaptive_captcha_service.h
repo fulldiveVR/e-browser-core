@@ -13,8 +13,6 @@
 #include "brave/components/api_request_helper/api_request_helper.h"
 #include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_delegate.h"
 #include "brave/components/brave_adaptive_captcha/get_adaptive_captcha_challenge.h"
-#include "brave/components/brave_rewards/browser/rewards_service.h"
-#include "brave/components/brave_rewards/browser/rewards_service_observer.h"
 #include "components/keyed_service/core/keyed_service.h"
 
 namespace network {
@@ -29,13 +27,11 @@ namespace brave_adaptive_captcha {
 // mechanism for the server to provide new types of captchas without requiring
 // client changes.
 class BraveAdaptiveCaptchaService
-    : public KeyedService,
-      public brave_rewards::RewardsServiceObserver {
+    : public KeyedService{
  public:
   BraveAdaptiveCaptchaService(
       PrefService* prefs,
       scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
-      brave_rewards::RewardsService* rewards_service,
       std::unique_ptr<BraveAdaptiveCaptchaDelegate> delegate);
   ~BraveAdaptiveCaptchaService() override;
 
@@ -69,12 +65,7 @@ class BraveAdaptiveCaptchaService
   void ClearScheduledCaptcha();
 
  private:
-  // brave_rewards::RewardsServiceObserver:
-  void OnCompleteReset(const bool success) override;
-
   raw_ptr<PrefService> prefs_ = nullptr;
-  raw_ptr<brave_rewards::RewardsService> rewards_service_ =
-      nullptr;  // NOT OWNED
   std::unique_ptr<BraveAdaptiveCaptchaDelegate> delegate_;
   api_request_helper::APIRequestHelper api_request_helper_;
   std::unique_ptr<GetAdaptiveCaptchaChallenge> get_captcha_challenge_;

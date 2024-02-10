@@ -36,8 +36,6 @@ constexpr auto& kMicIconValue = vector_icons::kMicIcon;
 #define IDR_ANDROID_INFOBAR_PERMISSION_COOKIE        \
   kAndroidInfobarPermissionCookie;                   \
   case RequestType::kWidevine:                       \
-  case RequestType::kBraveEthereum:                  \
-  case RequestType::kBraveSolana:                    \
   case RequestType::kBraveGoogleSignInPermission:    \
   case RequestType::kBraveLocalhostAccessPermission: \
     return IDR_ANDROID_INFOBAR_PERMISSION_COOKIE
@@ -46,8 +44,6 @@ constexpr auto& kMicIconValue = vector_icons::kMicIcon;
 #define kMicIcon                                     \
   kMicIconValue;                                     \
   case RequestType::kWidevine:                       \
-  case RequestType::kBraveEthereum:                  \
-  case RequestType::kBraveSolana:                    \
   case RequestType::kBraveGoogleSignInPermission:    \
   case RequestType::kBraveLocalhostAccessPermission: \
     return vector_icons::kExtensionIcon
@@ -55,10 +51,6 @@ constexpr auto& kMicIconValue = vector_icons::kMicIcon;
 #define BRAVE_PERMISSION_KEY_FOR_REQUEST_TYPE                     \
   case permissions::RequestType::kWidevine:                       \
     return "widevine";                                            \
-  case permissions::RequestType::kBraveEthereum:                  \
-    return "brave_ethereum";                                      \
-  case permissions::RequestType::kBraveSolana:                    \
-    return "brave_solana";                                        \
   case permissions::RequestType::kBraveGoogleSignInPermission:    \
     return "brave_google_sign_in";                                \
   case permissions::RequestType::kBraveLocalhostAccessPermission: \
@@ -86,10 +78,6 @@ namespace permissions {
 RequestType ContentSettingsTypeToRequestType(
     ContentSettingsType content_settings_type) {
   switch (content_settings_type) {
-    case ContentSettingsType::BRAVE_ETHEREUM:
-      return RequestType::kBraveEthereum;
-    case ContentSettingsType::BRAVE_SOLANA:
-      return RequestType::kBraveSolana;
     case ContentSettingsType::BRAVE_GOOGLE_SIGN_IN:
       return RequestType::kBraveGoogleSignInPermission;
     case ContentSettingsType::BRAVE_LOCALHOST_ACCESS:
@@ -107,10 +95,6 @@ std::optional<ContentSettingsType> RequestTypeToContentSettingsType(
       return ContentSettingsType::BRAVE_GOOGLE_SIGN_IN;
     case RequestType::kBraveLocalhostAccessPermission:
       return ContentSettingsType::BRAVE_LOCALHOST_ACCESS;
-    case RequestType::kBraveEthereum:
-      return ContentSettingsType::BRAVE_ETHEREUM;
-    case RequestType::kBraveSolana:
-      return ContentSettingsType::BRAVE_SOLANA;
     default:
       return RequestTypeToContentSettingsType_ChromiumImpl(request_type);
   }
@@ -120,8 +104,6 @@ bool IsRequestablePermissionType(ContentSettingsType content_settings_type) {
   switch (content_settings_type) {
     case ContentSettingsType::BRAVE_GOOGLE_SIGN_IN:
     case ContentSettingsType::BRAVE_LOCALHOST_ACCESS:
-    case ContentSettingsType::BRAVE_ETHEREUM:
-    case ContentSettingsType::BRAVE_SOLANA:
       return true;
     default:
       return IsRequestablePermissionType_ChromiumImpl(content_settings_type);

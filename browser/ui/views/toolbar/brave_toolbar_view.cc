@@ -11,12 +11,9 @@
 
 #include "base/functional/bind.h"
 #include "brave/app/brave_command_ids.h"
-#include "brave/browser/brave_wallet/brave_wallet_context_utils.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/browser/ui/views/toolbar/bookmark_button.h"
-#include "brave/browser/ui/views/toolbar/wallet_button.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/constants/pref_names.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/browser_process.h"

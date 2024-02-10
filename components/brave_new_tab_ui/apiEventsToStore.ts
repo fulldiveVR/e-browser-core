@@ -10,7 +10,7 @@ import * as topSitesAPI from './api/topSites'
 import * as privateTabDataAPI from './api/privateTabData'
 import * as newTabAdsDataAPI from './api/newTabAdsData'
 import getNTPBrowserAPI, { Background, CustomBackground } from './api/background'
-import { getInitialData, getRewardsInitialData, getRewardsPreInitialData } from './api/initialData'
+import { getInitialData} from './api/initialData'
 import * as backgroundData from './data/backgrounds'
 
 async function updatePreferences (prefData: NewTab.Preferences) {
@@ -66,63 +66,3 @@ export function wireApiEventsToStore () {
     console.error('New Tab Page fatal error:', e)
   })
 }
-
-export function rewardsInitData () {
-  getRewardsPreInitialData().then((preInitialRewardsData) => {
-    getActions().setPreInitialRewardsData(preInitialRewardsData)
-
-    chrome.braveRewards.isInitialized((isInitialized) => {
-      if (isInitialized) {
-        getRewardsInitialData().then((data) => {
-          getActions().setInitialRewardsData(data)
-        })
-      }
-    })
-
-    setRewardsFetchInterval()
-  })
-  .catch(e => {
-    console.error('Error fetching pre-initial rewards data: ', e)
-  })
-}
-
-let intervalId = 0
-function setRewardsFetchInterval () {
-  if (!intervalId) {
-    intervalId = window.setInterval(() => { fetchRewardsData() }, 30000)
-  }
-}
-
-function fetchRewardsData () {
-  chrome.braveRewards.isInitialized((isInitialized) => {
-    if (!isInitialized) {
-      return
-    }
-
-    Promise.all([getRewardsPreInitialData(), getRewardsInitialData()]).then(
-      ([preInitialData, initialData]) => {
-        getActions().setPreInitialRewardsData(preInitialData)
-        getActions().setInitialRewardsData(initialData)
-      })
-  })
-}
-
-chrome.braveRewards.initialized.addListener(fetchRewardsData)
-
-chrome.braveRewards.onRewardsWalletCreated.addListener(fetchRewardsData)
-
-chrome.braveRewards.onPromotions.addListener((result: number, promotions: NewTab.Promotion[]) => {
-  getActions().onPromotions(result, promotions)
-})
-
-chrome.braveRewards.onPromotionFinish.addListener((result: number, promotion: NewTab.Promotion) => {
-  getActions().onPromotionFinish(result, promotion)
-})
-
-chrome.braveRewards.onCompleteReset.addListener((properties: { success: boolean }) => {
-  getActions().onCompleteReset(properties.success)
-})
-
-chrome.braveRewards.onExternalWalletLoggedOut.addListener(fetchRewardsData)
-
-chrome.braveRewards.onExternalWalletDisconnected.addListener(fetchRewardsData)

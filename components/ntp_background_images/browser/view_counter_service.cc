@@ -17,9 +17,6 @@
 #include "base/functional/callback_helpers.h"
 #include "base/logging.h"
 #include "base/metrics/histogram_macros.h"
-#include "brave/components/brave_ads/browser/ads_service.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/ntp_background_images/browser/brave_ntp_custom_background_service.h"
 #include "brave/components/ntp_background_images/browser/features.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_data.h"
@@ -91,13 +88,11 @@ void ViewCounterService::MigrateObsoleteProfilePrefs(PrefService* prefs) {
 ViewCounterService::ViewCounterService(
     NTPBackgroundImagesService* service,
     BraveNTPCustomBackgroundService* custom_service,
-    brave_ads::AdsService* ads_service,
     PrefService* prefs,
     PrefService* local_state,
     std::unique_ptr<NTPP3AHelper> ntp_p3a_helper,
     bool is_supported_locale)
     : service_(service),
-      ads_service_(ads_service),
       prefs_(prefs),
       is_supported_locale_(is_supported_locale),
       model_(prefs),
@@ -114,10 +109,6 @@ ViewCounterService::ViewCounterService(
   ResetModel();
 
   pref_change_registrar_.Init(prefs_);
-  pref_change_registrar_.Add(
-      brave_rewards::prefs::kEnabled,
-      base::BindRepeating(&ViewCounterService::OnPreferenceChanged,
-                          base::Unretained(this)));
   pref_change_registrar_.Add(prefs::kNewTabPageSuperReferralThemesOption,
       base::BindRepeating(&ViewCounterService::OnPreferenceChanged,
       base::Unretained(this)));
@@ -139,17 +130,6 @@ ViewCounterService::~ViewCounterService() = default;
 void ViewCounterService::BrandedWallpaperWillBeDisplayed(
     const std::string& wallpaper_id,
     const std::string& creative_instance_id) {
-  if (ads_service_) {
-    ads_service_->TriggerNewTabPageAdEvent(
-        wallpaper_id, creative_instance_id,
-        brave_ads::mojom::NewTabPageAdEventType::kViewed,
-        /*intentional*/ base::DoNothing());
-
-    if (ntp_p3a_helper_) {
-      // Should only report to P3A if rewards is disabled, as required by spec.
-      ntp_p3a_helper_->RecordView(creative_instance_id);
-    }
-  }
 
   branded_new_tab_count_state_->AddDelta(1);
   UpdateP3AValues();
@@ -214,15 +194,8 @@ std::optional<base::Value::Dict> ViewCounterService::GetCurrentWallpaper()
 
 std::optional<base::Value::Dict>
 ViewCounterService::GetCurrentBrandedWallpaper() const {
-  NTPSponsoredImagesData* images_data = GetCurrentBrandedWallpaperData();
-  if (!images_data) {
+  if (!GetCurrentBrandedWallpaperData()) {
     return std::nullopt;
-  }
-
-  const bool should_frequency_cap_ads =
-      prefs_->GetBoolean(brave_rewards::prefs::kEnabled);
-  if (should_frequency_cap_ads && !images_data->IsSuperReferral()) {
-    return GetCurrentBrandedWallpaperByAdInfo();
   }
 
   return GetCurrentBrandedWallpaperFromModel();
@@ -230,22 +203,8 @@ ViewCounterService::GetCurrentBrandedWallpaper() const {
 
 std::optional<base::Value::Dict>
 ViewCounterService::GetCurrentBrandedWallpaperByAdInfo() const {
-  DCHECK(ads_service_);
 
-  const std::optional<brave_ads::NewTabPageAdInfo> ad =
-      ads_service_->GetPrefetchedNewTabPageAdForDisplay();
-  if (!ad) {
     return std::nullopt;
-  }
-
-  std::optional<base::Value::Dict> branded_wallpaper_data =
-      GetCurrentBrandedWallpaperData()->GetBackgroundByAdInfo(*ad);
-  if (!branded_wallpaper_data) {
-    ads_service_->OnFailedToPrefetchNewTabPageAd(ad->placement_id,
-                                                 ad->creative_instance_id);
-  }
-
-  return branded_wallpaper_data;
 }
 
 std::optional<base::Value::Dict>
@@ -314,10 +273,6 @@ void ViewCounterService::ResetModel() {
 }
 
 void ViewCounterService::OnPreferenceChanged(const std::string& pref_name) {
-  if (pref_name == brave_rewards::prefs::kEnabled) {
-    ResetNotificationState();
-    return;
-  }
 
   // Reset model because SI and SR use different policy.
   // Start from initial model state whenever
@@ -343,19 +298,6 @@ void ViewCounterService::BrandedWallpaperLogoClicked(
     const std::string& creative_instance_id,
     const std::string& destination_url,
     const std::string& wallpaper_id) {
-  if (!ads_service_) {
-    return;
-  }
-
-  ads_service_->TriggerNewTabPageAdEvent(
-      wallpaper_id, creative_instance_id,
-      brave_ads::mojom::NewTabPageAdEventType::kClicked,
-      /*intentional*/ base::DoNothing());
-
-  if (ntp_p3a_helper_) {
-    // Should only report to P3A if ads are disabled, as required by spec.
-    ntp_p3a_helper_->RecordClickAndMaybeLand(creative_instance_id);
-  }
 }
 
 bool ViewCounterService::ShouldShowBrandedWallpaper() const {
@@ -432,14 +374,6 @@ std::string ViewCounterService::GetSuperReferralCode() const {
 }
 
 void ViewCounterService::MaybePrefetchNewTabPageAd() {
-  NTPSponsoredImagesData* images_data = GetCurrentBrandedWallpaperData();
-  if (!ads_service_ || !IsBrandedWallpaperActive() ||
-      !prefs_->GetBoolean(brave_rewards::prefs::kEnabled) || !images_data ||
-      images_data->IsSuperReferral()) {
-    return;
-  }
-
-  ads_service_->PrefetchNewTabPageAd();
 }
 
 void ViewCounterService::UpdateP3AValues() const {

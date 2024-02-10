@@ -22,9 +22,6 @@ inline constexpr char kRewardsPageHost[] = "rewards";
 inline constexpr char kRewardsInternalsHost[] = "rewards-internals";
 inline constexpr char kWelcomeHost[] = "welcome";
 inline constexpr char kWelcomeJS[] = "brave_welcome.js";
-inline constexpr char kBraveRewardsPanelURL[] =
-    "chrome://rewards-panel.top-chrome";
-inline constexpr char kBraveRewardsPanelHost[] = "rewards-panel.top-chrome";
 inline constexpr char kBraveTipPanelURL[] = "chrome://tip-panel.top-chrome";
 inline constexpr char kBraveTipPanelHost[] = "tip-panel.top-chrome";
 inline constexpr char kBraveNewTabJS[] = "brave_new_tab.js";
@@ -32,21 +29,8 @@ inline constexpr char kBraveNewsInternalsHost[] = "news-internals";
 inline constexpr char16_t kBraveUIRewardsURL[] = u"chrome://rewards/";
 inline constexpr char kBraveUIAdblockURL[] = "chrome://adblock/";
 inline constexpr char kBraveUIWebcompatReporterURL[] = "chrome://webcompat/";
-inline constexpr char kBraveUIWalletURL[] = "chrome://wallet/";
-inline constexpr char kBraveUIWalletOnboardingURL[] =
-    "aiwize://wallet/crypto/onboarding";
-inline constexpr char kBraveUIWalletAccountCreationURL[] =
-    "aiwize://wallet/crypto/accounts/add-account/create/";
-inline constexpr char kBraveUIWalletPanelURL[] =
-    "chrome://wallet-panel.top-chrome/";
-inline constexpr char kWalletPanelHost[] = "wallet-panel.top-chrome";
-inline constexpr char kVPNPanelURL[] =
-    "chrome-untrusted://vpn-panel.top-chrome/";
 inline constexpr char kVPNPanelHost[] = "vpn-panel.top-chrome";
-inline constexpr char kBraveUIWalletPageURL[] = "chrome://wallet/";
-inline constexpr char kWalletPageHost[] = "wallet";
 inline constexpr char kExtensionSettingsURL[] = "aiwize://settings/extensions";
-inline constexpr char kWalletSettingsURL[] = "aiwize://settings/wallet";
 inline constexpr char kBraveSyncPath[] = "braveSync";
 inline constexpr char kBraveSyncSetupPath[] = "braveSync/setup";
 inline constexpr char kTorInternalsHost[] = "tor-internals";

@@ -19,7 +19,6 @@
 #include "base/path_service.h"
 #include "base/strings/sys_string_conversions.h"
 #include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
-#include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/components/p3a/buildflags.h"
 #include "brave/components/p3a/histograms_braveizer.h"
@@ -31,7 +30,6 @@
 #include "brave/ios/browser/api/bookmarks/brave_bookmarks_api+private.h"
 #include "brave/ios/browser/api/brave_shields/adblock_service+private.h"
 #include "brave/ios/browser/api/brave_stats/brave_stats+private.h"
-#include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
 #include "brave/ios/browser/api/history/brave_history_api+private.h"
 #include "brave/ios/browser/api/ipfs/ipfs_api+private.h"
 #include "brave/ios/browser/api/ntp_background_images/ntp_background_images_service_ios+private.h"
@@ -112,7 +110,6 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
 @property(nonatomic) BraveSyncProfileServiceIOS* syncProfileService;
 @property(nonatomic) BraveTabGeneratorAPI* tabGeneratorAPI;
 @property(nonatomic) WebImageDownloader* webImageDownloader;
-@property(nonatomic) BraveWalletAPI* braveWalletAPI;
 @property(nonatomic) IpfsAPIImpl* ipfsAPI;
 @property(nonatomic) BraveP3AUtils* p3aUtils;
 @property(nonatomic) NTPBackgroundImagesService* backgroundImagesService;
@@ -316,9 +313,6 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
           base::BindRepeating(&component_updater::BraveOnDemandUpdate));
 
   RegisterSafetyTipsComponent(cus);
-  brave_wallet::WalletDataFilesInstaller::GetInstance()
-      .MaybeRegisterWalletDataFilesComponent(
-          cus, GetApplicationContext()->GetLocalState());
 }
 
 + (void)setLogHandler:(BraveCoreLogHandler)logHandler {
@@ -436,14 +430,6 @@ static bool CustomLogHandler(int severity,
         initWithBrowserState:_otr_browser->GetBrowserState()];
   }
   return _webImageDownloader;
-}
-
-- (BraveWalletAPI*)braveWalletAPI {
-  if (!_braveWalletAPI) {
-    _braveWalletAPI =
-        [[BraveWalletAPI alloc] initWithBrowserState:_mainBrowserState];
-  }
-  return _braveWalletAPI;
 }
 
 - (BraveStats*)braveStats {

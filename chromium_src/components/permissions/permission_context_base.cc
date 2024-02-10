@@ -19,8 +19,7 @@
 namespace {
 
 bool IsGroupedPermissionType(ContentSettingsType type) {
-  return type == ContentSettingsType::BRAVE_ETHEREUM ||
-         type == ContentSettingsType::BRAVE_SOLANA;
+  return false;
 }
 
 }  // namespace

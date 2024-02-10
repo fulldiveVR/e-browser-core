@@ -51,7 +51,6 @@ namespace content_settings {
 const std::vector<ContentSettingsType>& GetShieldsContentSettingsTypes() {
   static const base::NoDestructor<std::vector<ContentSettingsType>>
       kShieldsContentSettingsTypes({
-          ContentSettingsType::BRAVE_ADS,
           ContentSettingsType::BRAVE_COSMETIC_FILTERING,
           ContentSettingsType::BRAVE_TRACKERS,
           ContentSettingsType::BRAVE_HTTP_UPGRADABLE_RESOURCES,
@@ -66,8 +65,6 @@ const std::vector<ContentSettingsType>& GetShieldsContentSettingsTypes() {
 
 std::string GetShieldsContentTypeName(const ContentSettingsType& content_type) {
   switch (content_type) {
-    case ContentSettingsType::BRAVE_ADS:
-      return brave_shields::kAds;
     case ContentSettingsType::BRAVE_COSMETIC_FILTERING:
       return brave_shields::kCosmeticFiltering;
     case ContentSettingsType::BRAVE_TRACKERS:

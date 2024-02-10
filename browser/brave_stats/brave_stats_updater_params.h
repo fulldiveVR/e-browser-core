@@ -47,7 +47,6 @@ class BraveStatsUpdaterParams {
   std::string GetReferralCodeParam() const;
   std::string GetAdsEnabledParam() const;
   std::string GetProcessArchParam() const;
-  std::string GetWalletEnabledParam() const;
   GURL GetUpdateURL(const GURL& base_update_url,
                     const std::string platform_id,
                     const std::string channel_name,
@@ -73,8 +72,6 @@ class BraveStatsUpdaterParams {
   bool first_check_made_;
   std::string week_of_installation_;
   base::Time date_of_installation_;
-  base::Time wallet_last_unlocked_;
-  base::Time last_reported_wallet_unlock_;
   std::string referral_promo_code_;
   static base::Time g_current_time;
   static bool g_force_first_run;

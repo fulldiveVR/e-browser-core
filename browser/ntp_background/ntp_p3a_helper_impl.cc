@@ -18,9 +18,6 @@
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 #include "base/time/time.h"
-#include "brave/components/brave_ads/core/public/ads_feature.h"
-#include "brave/components/brave_ads/core/public/user_engagement/site_visit/site_visit_feature.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/p3a/metric_log_type.h"
 #include "brave/components/p3a/p3a_service.h"
 #include "components/prefs/pref_registry_simple.h"
@@ -52,12 +49,8 @@ constexpr char kExpireTimeKey[] = "expiry_time";
 
 constexpr base::TimeDelta kCountExpiryTime = base::Days(30);
 
-constexpr base::TimeDelta kStartLandingCheckTime = base::Milliseconds(750);
-
 bool IsRewardsDisabled(PrefService* prefs) {
-  return !prefs->GetBoolean(brave_rewards::prefs::kEnabled) &&
-         !base::FeatureList::IsEnabled(
-             brave_ads::kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature);
+  return true;
 }
 
 const char* GetCountDictPref(bool is_constellation) {
@@ -108,10 +101,6 @@ void NTPP3AHelperImpl::RecordClickAndMaybeLand(
     return;
   }
   UpdateMetricCount(creative_instance_id, kClickEventKey);
-  landing_check_timer_.Start(
-      FROM_HERE, kStartLandingCheckTime,
-      base::BindOnce(&NTPP3AHelperImpl::OnLandingStartCheck,
-                     base::Unretained(this), creative_instance_id));
 }
 
 void NTPP3AHelperImpl::SetLastTabURL(const GURL& url) {
@@ -298,11 +287,6 @@ void NTPP3AHelperImpl::OnLandingStartCheck(
   if (!last_tab_hostname_.has_value()) {
     return;
   }
-  landing_check_timer_.Start(
-      FROM_HERE, brave_ads::kPageLandAfter.Get(),
-      base::BindOnce(&NTPP3AHelperImpl::OnLandingEndCheck,
-                     base::Unretained(this), creative_instance_id,
-                     *last_tab_hostname_));
 }
 
 void NTPP3AHelperImpl::OnLandingEndCheck(

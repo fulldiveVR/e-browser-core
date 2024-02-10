@@ -8,7 +8,6 @@
 
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
-#include "brave/components/brave_ads/browser/ads_service.h"
 #include "components/prefs/pref_change_registrar.h"
 #include "content/public/browser/web_ui_message_handler.h"
 #include "mojo/public/cpp/bindings/receiver.h"
@@ -29,8 +28,7 @@ class PrefService;
 
 // TODO(simonhong): Migrate to brave_new_tab_page.mojom.
 // Handles messages to and from the New Tab Page javascript
-class BraveNewTabMessageHandler : public content::WebUIMessageHandler,
-                                  public bat_ads::mojom::BatAdsObserver {
+class BraveNewTabMessageHandler : public content::WebUIMessageHandler {
  public:
   BraveNewTabMessageHandler(Profile* profile, bool was_invisible_and_restored);
   BraveNewTabMessageHandler(const BraveNewTabMessageHandler&) = delete;
@@ -56,7 +54,6 @@ class BraveNewTabMessageHandler : public content::WebUIMessageHandler,
   void HandleGetPreferences(const base::Value::List& args);
   void HandleGetStats(const base::Value::List& args);
   void HandleGetPrivateProperties(const base::Value::List& args);
-  void HandleGetNewTabAdsData(const base::Value::List& args);
   void HandleSaveNewTabPagePref(const base::Value::List& args);
   void HandleToggleAlternativeSearchEngineProvider(
       const base::Value::List& args);
@@ -69,22 +66,9 @@ class BraveNewTabMessageHandler : public content::WebUIMessageHandler,
   void OnPreferencesChanged();
   void OnPrivatePropertiesChanged();
 
-  base::Value::Dict GetAdsDataDictionary() const;
-
-  // bat_ads::mojom::BatAdsObserver:
-  void OnAdRewardsDidChange() override {}
-  void OnBrowserUpgradeRequiredToServeAds() override;
-  void OnIneligibleRewardsWalletToServeAds() override {}
-  void OnRemindUser(brave_ads::mojom::ReminderType type) override {}
-
   PrefChangeRegistrar pref_change_registrar_;
   // Weak pointer.
   raw_ptr<Profile> profile_ = nullptr;
-
-  raw_ptr<brave_ads::AdsService> ads_service_ = nullptr;
-  mojo::Receiver<bat_ads::mojom::BatAdsObserver> bat_ads_observer_receiver_{
-      this};
-  bool browser_upgrade_required_to_serve_ads_ = false;
 
   bool was_invisible_and_restored_ = false;
 

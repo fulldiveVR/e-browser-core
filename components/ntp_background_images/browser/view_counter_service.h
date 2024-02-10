@@ -24,10 +24,6 @@ class PrefService;
 
 class GURL;
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
-
 namespace content {
 class WebUIDataSource;
 }  // namespace content
@@ -52,7 +48,6 @@ class ViewCounterService : public KeyedService,
  public:
   ViewCounterService(NTPBackgroundImagesService* service,
                      BraveNTPCustomBackgroundService* custom_service,
-                     brave_ads::AdsService* ads_service,
                      PrefService* prefs,
                      PrefService* local_state,
                      std::unique_ptr<NTPP3AHelper> ntp_p3a_helper,
@@ -164,7 +159,6 @@ class ViewCounterService : public KeyedService,
   void UpdateP3AValues() const;
 
   raw_ptr<NTPBackgroundImagesService> service_ = nullptr;
-  raw_ptr<brave_ads::AdsService> ads_service_ = nullptr;
   raw_ptr<PrefService> prefs_ = nullptr;
   bool is_supported_locale_ = false;
   PrefChangeRegistrar pref_change_registrar_;

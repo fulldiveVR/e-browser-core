@@ -12,7 +12,6 @@ export const keyName = 'new-tab-data'
 export const defaultState: NewTab.State = {
   initialDataLoaded: false,
   textDirection: loadTimeData.getString('textdirection'),
-  featureFlagBraveNTPSponsoredImagesWallpaper: loadTimeData.getBoolean('featureFlagBraveNTPSponsoredImagesWallpaper'),
   featureFlagBraveNewsPromptEnabled: loadTimeData.getBoolean('featureFlagBraveNewsPromptEnabled'),
   featureFlagBraveNewsFeedV2Enabled: loadTimeData.getBoolean('featureFlagBraveNewsFeedV2Enabled'),
   featureCustomBackgroundEnabled: loadTimeData.getBoolean('featureCustomBackgroundEnabled'),
@@ -46,40 +45,11 @@ export const defaultState: NewTab.State = {
     httpsUpgradesStat: 0,
     fingerprintingBlockedStat: 0
   },
-  rewardsState: {
-    adsAccountStatement: {
-      nextPaymentDate: 0,
-      adsReceivedThisMonth: 0,
-      minEarningsThisMonth: 0,
-      maxEarningsThisMonth: 0,
-      minEarningsLastMonth: 0,
-      maxEarningsLastMonth: 0
-    },
-    balance: undefined,
-    externalWallet: undefined,
-    externalWalletProviders: [],
-    dismissedNotifications: [],
-    rewardsEnabled: false,
-    userType: '',
-    isUnsupportedRegion: false,
-    declaredCountry: '',
-    needsBrowserUpgradeToServeAds: false,
-    promotions: [],
-    totalContribution: 0.0,
-    publishersVisitedCount: 0,
-    parameters: {
-      rate: 0,
-      monthlyTipChoices: [],
-      payoutStatus: {},
-      walletProviderRegions: {},
-      vbatDeadline: undefined,
-      vbatExpired: false
-    }
-  },
+
   currentStackWidget: '',
   removedStackWidgets: [],
   // Order is ascending, with last entry being in the foreground
-  widgetStackOrder: ['rewards'],
+  widgetStackOrder: [],
   customImageBackgrounds: []
 }
 
@@ -102,35 +72,6 @@ export const addNewStackWidget = (state: NewTab.State) => {
 }
 
 const cleanData = (state: NewTab.State) => {
-  const { rewardsState } = state
-
-  if (typeof (rewardsState.totalContribution as any) === 'string') {
-    rewardsState.totalContribution = 0
-  }
-
-  const { adsAccountStatement } = rewardsState
-  if (adsAccountStatement) {
-    // nextPaymentDate updated from seconds-since-epoch-string to ms-since-epoch
-    if (typeof (adsAccountStatement.nextPaymentDate as any) === 'string') {
-      adsAccountStatement.nextPaymentDate =
-        Number(adsAccountStatement.nextPaymentDate) * 1000 || 0
-    }
-    // earningsThisMonth replaced with range
-    if (typeof (adsAccountStatement.minEarningsThisMonth as any) !== 'number') {
-      adsAccountStatement.minEarningsThisMonth = 0
-      adsAccountStatement.maxEarningsThisMonth = 0
-    }
-    // earningsLastMonth replaced with range
-    if (typeof (adsAccountStatement.minEarningsLastMonth as any) !== 'number') {
-      adsAccountStatement.minEarningsLastMonth = 0
-      adsAccountStatement.maxEarningsLastMonth = 0
-    }
-  }
-
-  if (!rewardsState.parameters) {
-    rewardsState.parameters = defaultState.rewardsState.parameters
-  }
-
   return state
 }
 
@@ -161,7 +102,6 @@ export const debouncedSave = debounce<NewTab.State>((data: NewTab.State) => {
     // (or are obsolete).
     const dataToSave = {
       bitcoinDotComSupported: data.bitcoinDotComSupported,
-      rewardsState: data.rewardsState,
       removedStackWidgets: data.removedStackWidgets,
       widgetStackOrder: data.widgetStackOrder
     }

@@ -126,15 +126,6 @@ void OpenIpfsFilesWebUI(Browser* browser) {
 #endif
 }
 
-void ShowWalletBubble(Browser* browser) {
-}
-
-void ShowApproveWalletBubble(Browser* browser) {
-}
-
-void CloseWalletBubble(Browser* browser) {
-}
-
 void CopySanitizedURL(Browser* browser, const GURL& url) {
   if (!browser || !browser->profile()) {
     return;

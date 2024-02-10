@@ -10,7 +10,6 @@
 #include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_perf_predictor/common/pref_names.h"
 #include "brave/components/brave_referrals/common/pref_names.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/brave_shields/browser/brave_shields_util.h"
 #include "brave/components/brave_shields/common/pref_names.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
@@ -206,8 +205,6 @@ jboolean JNI_BravePrefServiceBridge_GetSafetynetCheckFailed(JNIEnv* env) {
 }
 
 void JNI_BravePrefServiceBridge_ResetPromotionLastFetchStamp(JNIEnv* env) {
-  GetOriginalProfile()->GetPrefs()->SetUint64(
-      brave_rewards::prefs::kPromotionLastFetchStamp, 0);
 }
 
 jboolean JNI_BravePrefServiceBridge_GetBooleanForContentSetting(JNIEnv* env,

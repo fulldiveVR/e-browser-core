@@ -97,18 +97,6 @@ bool HandleIPFSURLRewrite(GURL* url, content::BrowserContext* browser_context) {
   }
 
   if (IsLocalGatewayConfigured(prefs)) {
-    if (decentralized_dns::IsENSTLD(url->host_piece()) &&
-        decentralized_dns::IsENSResolveMethodEnabled(
-            g_browser_process->local_state())) {
-      return true;
-    }
-
-    if (decentralized_dns::IsSnsTLD(url->host_piece()) &&
-        decentralized_dns::IsSnsResolveMethodEnabled(
-            g_browser_process->local_state())) {
-      return true;
-    }
-
     if (decentralized_dns::IsUnstoppableDomainsTLD(url->host_piece()) &&
         decentralized_dns::IsUnstoppableDomainsResolveMethodEnabled(
             g_browser_process->local_state())) {

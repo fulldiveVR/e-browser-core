@@ -7,7 +7,6 @@
 
 #include "base/strings/sys_string_conversions.h"
 #include "brave/components/brave_stats/browser/brave_stats_updater_util.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/browser_state/chrome_browser_state.h"
@@ -27,24 +26,6 @@
     _localPrefs = GetApplicationContext()->GetLocalState();
   }
   return self;
-}
-
-- (NSDictionary<NSString*, NSString*>*)walletParams {
-  auto wallet_last_unlocked = _localPrefs->GetTime(kBraveWalletLastUnlockTime);
-  auto last_reported_wallet_unlock =
-      _localPrefs->GetTime(kBraveWalletPingReportedUnlockTime);
-  uint8_t usage_bitset = 0;
-  if (wallet_last_unlocked > last_reported_wallet_unlock) {
-    usage_bitset = brave_stats::UsageBitfieldFromTimestamp(
-        wallet_last_unlocked, last_reported_wallet_unlock);
-  }
-  return @{@"wallet2" : base::SysUTF8ToNSString(std::to_string(usage_bitset))};
-}
-
-- (void)notifyStatsPingSent {
-  auto wallet_last_unlocked = _localPrefs->GetTime(kBraveWalletLastUnlockTime);
-  _localPrefs->SetTime(kBraveWalletPingReportedUnlockTime,
-                       wallet_last_unlocked);
 }
 
 @end

@@ -12,4 +12,4 @@ source_set("brave_json_unit_tests") {
     "//brave/components/json/rs:rust_lib",
     "//testing/gtest",
   ]
-}  # source_set("brave_wallet_unit_tests")
+}

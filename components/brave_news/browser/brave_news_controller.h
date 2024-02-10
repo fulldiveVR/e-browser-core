@@ -42,10 +42,6 @@
 class PrefRegistrySimple;
 class PrefService;
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
-
 namespace favicon {
 class FaviconService;
 }
@@ -71,7 +67,6 @@ class BraveNewsController : public KeyedService,
   BraveNewsController(
       PrefService* prefs,
       favicon::FaviconService* favicon_service,
-      brave_ads::AdsService* ads_service,
       history::HistoryService* history_service,
       scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory);
   ~BraveNewsController() override;
@@ -162,7 +157,6 @@ class BraveNewsController : public KeyedService,
 
   raw_ptr<PrefService> prefs_ = nullptr;
   raw_ptr<favicon::FaviconService> favicon_service_ = nullptr;
-  raw_ptr<brave_ads::AdsService> ads_service_ = nullptr;
   api_request_helper::APIRequestHelper api_request_helper_;
   brave_private_cdn::PrivateCDNRequestHelper private_cdn_request_helper_;
   raw_ptr<history::HistoryService> history_service_;

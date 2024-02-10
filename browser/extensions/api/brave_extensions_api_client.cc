@@ -19,8 +19,7 @@ bool BraveExtensionsAPIClient::ShouldHideBrowserNetworkRequest(
     const WebRequestInfo& request) const {
   const url::Origin origin = url::Origin::Create(request.url);
   const std::string_view path = request.url.path_piece();
-  if (((origin.DomainIs("wallet-sandbox.uphold.com") ||
-        origin.DomainIs("uphold.com")) &&
+  if (((origin.DomainIs("uphold.com")) &&
        base::StartsWith(path, "/authorize/",
                         base::CompareCase::INSENSITIVE_ASCII)) ||
       (origin.DomainIs("api.uphold.com") &&

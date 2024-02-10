@@ -12,18 +12,15 @@
 #include "base/functional/bind.h"
 #include "base/path_service.h"
 #include "base/task/thread_pool.h"
-#include "brave/browser/brave_ads/analytics/p3a/brave_stats_helper.h"
 #include "brave/browser/brave_referrals/referrals_service_delegate.h"
 #include "brave/browser/brave_shields/ad_block_subscription_download_manager_getter.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
-#include "brave/browser/brave_wallet/wallet_data_files_installer_delegate_impl.h"
 #include "brave/browser/component_updater/brave_component_updater_configurator.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/net/brave_system_request_handler.h"
 #include "brave/browser/profiles/brave_profile_manager.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/common/brave_channel_info.h"
-#include "brave/components/brave_ads/browser/component_updater/resource_component.h"
 #include "brave/components/brave_component_updater/browser/brave_component_updater_delegate.h"
 #include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
@@ -34,7 +31,6 @@
 #include "brave/components/brave_shields/browser/brave_farbling_service.h"
 #include "brave/components/brave_shields/common/features.h"
 #include "brave/components/brave_sync/network_time_helper.h"
-#include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/debounce/browser/debounce_component_installer.h"
 #include "brave/components/debounce/common/features.h"
@@ -131,9 +127,7 @@ BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
   histogram_braveizer_ = p3a::HistogramsBraveizer::Create();
 #endif  // BUILDFLAG(BRAVE_P3A_ENABLED)
 
-  // initialize ads stats helper
-  ads_brave_stats_helper();
-
+/// TODO check ?????
   // early initialize brave stats
   brave_stats_updater();
 
@@ -211,8 +205,6 @@ ProfileManager* BraveBrowserProcessImpl::profile_manager() {
 void BraveBrowserProcessImpl::StartBraveServices() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
 
-  resource_component();
-
   if (base::FeatureList::IsEnabled(net::features::kBraveHttpsByDefault)) {
     https_upgrade_exceptions_service();
   }
@@ -239,8 +231,6 @@ void BraveBrowserProcessImpl::StartBraveServices() {
   brave_sync::NetworkTimeHelper::GetInstance()->SetNetworkTimeTracker(
       g_browser_process->network_time_tracker());
 
-  brave_wallet::WalletDataFilesInstaller::GetInstance().SetDelegate(
-      std::make_unique<brave_wallet::WalletDataFilesInstallerDelegateImpl>());
 }
 
 brave_shields::AdBlockService* BraveBrowserProcessImpl::ad_block_service() {
@@ -437,21 +427,6 @@ brave_stats::BraveStatsUpdater* BraveBrowserProcessImpl::brave_stats_updater() {
         local_state(), g_browser_process->profile_manager());
   }
   return brave_stats_updater_.get();
-}
-
-brave_ads::BraveStatsHelper* BraveBrowserProcessImpl::ads_brave_stats_helper() {
-  if (!brave_stats_helper_) {
-    brave_stats_helper_ = std::make_unique<brave_ads::BraveStatsHelper>();
-  }
-  return brave_stats_helper_.get();
-}
-
-brave_ads::ResourceComponent* BraveBrowserProcessImpl::resource_component() {
-  if (!resource_component_) {
-    resource_component_ = std::make_unique<brave_ads::ResourceComponent>(
-        brave_component_updater_delegate());
-  }
-  return resource_component_.get();
 }
 
 void BraveBrowserProcessImpl::CreateProfileManager() {

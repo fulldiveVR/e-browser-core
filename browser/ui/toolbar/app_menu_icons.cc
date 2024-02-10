@@ -28,8 +28,6 @@ const std::map<int, const gfx::VectorIcon&>& GetCommandIcons() {
           {IDC_NEW_INCOGNITO_WINDOW, kLeoWindowTabPrivateIcon},
           {IDC_NEW_TOR_CONNECTION_FOR_SITE, kLeoWindowTabTorIcon},
           {IDC_NEW_OFFTHERECORD_WINDOW_TOR, kLeoWindowTabTorIcon},
-          {IDC_SHOW_BRAVE_REWARDS, kLeoProductBatOutlineIcon},
-          {IDC_SHOW_BRAVE_WALLET, kLeoProductBraveWalletIcon},
           {IDC_APP_MENU_IPFS, kLeoProductIpfsOutlineIcon},
           {IDC_RECENT_TABS_MENU, kLeoHistoryIcon},
           {IDC_BOOKMARKS_MENU, kLeoProductBookmarksIcon},

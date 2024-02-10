@@ -60,9 +60,7 @@
       "chrome://brave-shields.top-chrome/*",
       "chrome://read-later.top-chrome/*",
       "chrome://rewards-panel.top-chrome/*",
-      "chrome://tab-strip/*",
-      "chrome://wallet-panel.top-chrome/*",
-      "chrome://wallet/*"
+      "chrome://tab-strip/*"
     ]
   }, {
     "channel": "stable",
@@ -97,28 +95,6 @@
     "contexts": ["blessed_extension"],
     "allowlist": ["3D9518A72EB02667A773B69DBA9E72E0F4A37423", "780BF954C0F7C586EA9662D4F967771F49CC2114", "FF32507DC3DB5DFFD1D6733187C84D4B74713D63"]
   },
-  "braveRewards": [
-    {
-      "channel": "stable",
-      "dependencies": [],
-      "contexts": ["blessed_extension"],
-      "allowlist": [
-        "46E9817CBF915C0D1F6BCCF916C42CC666FF1D64", // braveRewards
-        "21070F3D60711361C1210B870439BE49B5D995F4"  // braveWallet
-      ]
-    },
-    {
-      "channel": "stable",
-      "contexts": ["webui"],
-      "matches": [
-        "chrome://newtab/*",
-        "chrome://rewards-panel.top-chrome/*",
-        "chrome://settings/*",
-        "chrome://wallet-panel.top-chrome/*",
-        "chrome://wallet/*"
-      ]
-    }
-  ],
   "rewardsNotifications": [{
     "channel": "stable",
     "dependencies": [],
@@ -137,9 +113,7 @@
     "channel": "stable",
     "contexts": ["blessed_extension"],
     "allowlist": [
-      "A321D47A2B4CA86898167A55CA8B2E02385EA7CD",  // braveShields
-      "46E9817CBF915C0D1F6BCCF916C42CC666FF1D64",  // braveRewards
-      "21070F3D60711361C1210B870439BE49B5D995F4"   // braveWallet
+      "A321D47A2B4CA86898167A55CA8B2E02385EA7CD"  // braveShields
     ]
   }, {
     "channel": "stable",
@@ -149,8 +123,6 @@
       "chrome://settings/*",
       "chrome://newtab/*",
       "chrome://webcompat/*",
-      "chrome://wallet/*",
-      "chrome://wallet-panel.top-chrome/*",
       "chrome://brave-shields.top-chrome/*",
       "chrome://rewards-panel.top-chrome/*",
       "chrome://playlist/*"
@@ -160,8 +132,7 @@
     "channel": "stable",
     "contexts": ["blessed_extension"],
     "allowlist": [
-      "A321D47A2B4CA86898167A55CA8B2E02385EA7CD",  // braveShields
-      "46E9817CBF915C0D1F6BCCF916C42CC666FF1D64"   // braveRewards
+      "A321D47A2B4CA86898167A55CA8B2E02385EA7CD"  // braveShields
     ]
   }, {
     "channel": "stable",

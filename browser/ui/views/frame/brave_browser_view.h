@@ -45,7 +45,6 @@ class SidebarBrowserTest;
 class BraveBrowser;
 class ContentsLayoutManager;
 class SidebarContainerView;
-class WalletButton;
 class ViewShadow;
 class VerticalTabStripWidgetDelegateView;
 class BraveHelpBubbleHostView;
@@ -60,7 +59,6 @@ class BraveBrowserView : public BrowserView,
 
   void SetStarredState(bool is_starred) override;
   void ShowUpdateChromeDialog() override;
-  views::View* GetWalletButtonAnchorView();
 
   // BrowserView overrides:
   void Layout() override;

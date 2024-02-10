@@ -17,8 +17,6 @@ import '../brave_search_engines_page/brave_search_engines_page.js'
 import '../brave_sync_page/brave_sync_page.js'
 import '../brave_site_settings/brave_site_data_details_subpage.js'
 import '../brave_tor_page/brave_tor_subpage.js'
-import '../brave_wallet_page/brave_wallet_page.js'
-import '../brave_web3_domains_page/brave_web3_domains_page.js'
 import '../default_brave_shields_page/default_brave_shields_page.js'
 import '../getting_started_page/getting_started.js'
 import '../social_blocking_page/social_blocking_page.js'
@@ -190,19 +188,6 @@ RegisterPolymerTemplateModifications({
           prefs: '{{prefs}}'
         }
       ))
-      const sectionIPFS = document.createElement('template')
-      sectionIPFS.setAttribute('is', 'dom-if')
-      sectionIPFS.setAttribute('restamp', true)
-      sectionIPFS.setAttribute('if', '[[showPage_(pageVisibility.braveIPFS)]]')
-      sectionIPFS.content.appendChild(createNestedSectionElement(
-        'ipfs',
-        'web3',
-        'braveIPFS',
-        'settings-brave-ipfs-page',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
       const sectionTor = document.createElement('template')
       sectionTor.setAttribute('is', 'dom-if')
       sectionTor.setAttribute('restamp', true)
@@ -216,37 +201,7 @@ RegisterPolymerTemplateModifications({
           prefs: '{{prefs}}'
         }
       ))
-      const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
-      let sectionWallet = undefined
-      if (isBraveWalletAllowed) {
-        sectionWallet = document.createElement('template')
-        sectionWallet.setAttribute('is', 'dom-if')
-        sectionWallet.setAttribute('restamp', true)
-        sectionWallet.setAttribute('if', '[[showPage_(pageVisibility.braveWallet)]]')
-        sectionWallet.content.appendChild(createNestedSectionElement(
-          'wallet',
-          'web3',
-          'braveWallet',
-          'settings-brave-wallet-page',
-          {
-            prefs: '{{prefs}}'
-          }
-        ))
-      }
-      const sectionWeb3Domains = document.createElement('template')
-      sectionWeb3Domains.setAttribute('is', 'dom-if')
-      sectionWeb3Domains.setAttribute('restamp', true)
-      sectionWeb3Domains.setAttribute('if',
-        '[[showPage_(pageVisibility.braveWeb3Domains)]]')
-      sectionWeb3Domains.content.appendChild(createNestedSectionElement(
-        'web3Domains',
-        'web3',
-        'braveWeb3Domains',
-        'settings-brave-web3-domains-page',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
+
       const sectionSync = document.createElement('template')
       sectionSync.setAttribute('is', 'dom-if')
       sectionSync.setAttribute('restamp', true)
@@ -375,14 +330,6 @@ RegisterPolymerTemplateModifications({
       last = last.insertAdjacentElement('afterend', sectionSearch)
       // Insert extensions
       last = last.insertAdjacentElement('afterend', sectionExtensions)
-      // Insert Wallet
-      if (sectionWallet) {
-        last = last.insertAdjacentElement('afterend', sectionWallet)
-      }
-      // Insert IPFS
-      last = last.insertAdjacentElement('afterend', sectionIPFS)
-      // Insert Web3 Domains
-      last = last.insertAdjacentElement('afterend', sectionWeb3Domains)
       // Insert Tor
       last = last.insertAdjacentElement('afterend', sectionTor)
       // Insert Leo Assistant

@@ -22,7 +22,6 @@ static_library("webui") {
   deps = [
     "//base",
     "//brave/components/ai_chat/core/common/buildflags",
-    "//brave/components/brave_rewards/resources:static_resources",
     "//brave/components/constants",
     "//brave/components/ipfs/buildflags",
     "//brave/components/l10n/common",

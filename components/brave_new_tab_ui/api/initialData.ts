@@ -7,7 +7,6 @@ import * as preferencesAPI from './preferences'
 import * as statsAPI from './stats'
 import * as privateTabDataAPI from './privateTabData'
 import * as wallpaper from './wallpaper'
-import * as newTabAdsDataAPI from './newTabAdsData'
 import getNTPBrowserAPI from './background'
 
 export type InitialData = {
@@ -18,24 +17,6 @@ export type InitialData = {
   braveBackgrounds: NewTab.BraveBackground[]
   customImageBackgrounds: NewTab.ImageBackground[]
   searchPromotionEnabled: boolean
-}
-
-export type PreInitialRewardsData = {
-  rewardsEnabled: boolean
-  userType: string
-  isUnsupportedRegion: boolean
-  declaredCountry: string
-  needsBrowserUpgradeToServeAds: boolean
-}
-
-export type InitialRewardsData = {
-  report: NewTab.RewardsBalanceReport
-  balance?: number
-  externalWallet?: RewardsExtension.ExternalWallet
-  externalWalletProviders?: string[]
-  adsAccountStatement: NewTab.AdsAccountStatement
-  parameters: NewTab.RewardsParameters
-  publishersVisitedCount: number
 }
 
 const isIncognito: boolean = chrome.extension.inIncognitoContext
@@ -58,9 +39,7 @@ export async function getInitialData (): Promise<InitialData> {
       privateTabDataAPI.getPrivateTabData(),
       !isIncognito ? wallpaper.getWallpaper() : Promise.resolve(undefined),
       new Promise((resolve) => {
-        chrome.braveRewards.isSupported((supported: boolean) => {
-          resolve(supported)
-        })
+          resolve(false)
       }),
       new Promise((resolve) => {
         if (!('braveTalk' in chrome)) {
@@ -96,84 +75,3 @@ export async function getInitialData (): Promise<InitialData> {
   }
 }
 
-export async function getRewardsPreInitialData (): Promise<PreInitialRewardsData> {
-  const [
-    rewardsEnabled,
-    userType,
-    isUnsupportedRegion,
-    declaredCountry,
-    adsData
-  ] = await Promise.all([
-    new Promise<boolean>(
-      (resolve) => chrome.braveRewards.getRewardsEnabled(resolve)),
-    new Promise<string>(
-      (resolve) => chrome.braveRewards.getUserType(resolve)),
-    new Promise<boolean>(
-      (resolve) => chrome.braveRewards.isUnsupportedRegion(resolve)),
-    new Promise<string>(
-      (resolve) => chrome.braveRewards.getDeclaredCountry(resolve)),
-    newTabAdsDataAPI.getNewTabAdsData()
-  ])
-
-  const needsBrowserUpgradeToServeAds = adsData.needsBrowserUpgradeToServeAds
-
-  return {
-    rewardsEnabled,
-    userType,
-    isUnsupportedRegion,
-    declaredCountry,
-    needsBrowserUpgradeToServeAds
-  }
-}
-
-export async function getRewardsInitialData (): Promise<InitialRewardsData> {
-  try {
-    const [
-      adsAccountStatement,
-      report,
-      balance,
-      parameters,
-      externalWallet,
-      externalWalletProviders,
-      publishersVisitedCount
-    ] = await Promise.all([
-      new Promise(resolve => chrome.braveRewards.getAdsAccountStatement((success: boolean, adsAccountStatement: NewTab.AdsAccountStatement) => {
-        resolve(success ? adsAccountStatement : undefined)
-      })),
-      new Promise(resolve => chrome.braveRewards.getBalanceReport(new Date().getMonth() + 1, new Date().getFullYear(), (report: NewTab.RewardsBalanceReport) => {
-        resolve(report)
-      })),
-      new Promise(resolve => chrome.braveRewards.fetchBalance(
-        (balance?: number) => {
-          resolve(balance)
-        }
-      )),
-      new Promise(resolve => chrome.braveRewards.getRewardsParameters((parameters: NewTab.RewardsParameters) => {
-        resolve(parameters)
-      })),
-      new Promise(resolve => {
-        chrome.braveRewards.getExternalWallet((wallet) => resolve(wallet))
-      }),
-      new Promise(resolve => {
-        chrome.braveRewards.getExternalWalletProviders(resolve)
-      }),
-      new Promise(resolve => {
-        chrome.braveRewards.getPublishersVisitedCount(resolve)
-      }),
-      new Promise(resolve => {
-        chrome.braveRewards.fetchPromotions(resolve)
-      })
-    ])
-    return {
-      adsAccountStatement,
-      report,
-      balance,
-      parameters,
-      externalWallet,
-      externalWalletProviders,
-      publishersVisitedCount
-    } as InitialRewardsData
-  } catch (err) {
-    throw Error(err)
-  }
-}

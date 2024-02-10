@@ -88,11 +88,6 @@ namespace speedreader {
 class SpeedreaderRewriterService;
 }
 
-namespace brave_ads {
-class BraveStatsHelper;
-class ResourceComponent;
-}  // namespace brave_ads
-
 class BraveBrowserProcessImpl : public BraveBrowserProcess,
                                 public BrowserProcessImpl {
  public:
@@ -137,10 +132,8 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
   p3a::P3AService* p3a_service() override;
   brave::BraveReferralsService* brave_referrals_service() override;
   brave_stats::BraveStatsUpdater* brave_stats_updater() override;
-  brave_ads::BraveStatsHelper* ads_brave_stats_helper() override;
   ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() override;
-  brave_ads::ResourceComponent* resource_component() override;
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   speedreader::SpeedreaderRewriterService* speedreader_rewriter_service()
       override;
@@ -207,7 +200,6 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
   scoped_refptr<p3a::HistogramsBraveizer> histogram_braveizer_;
   std::unique_ptr<ntp_background_images::NTPBackgroundImagesService>
       ntp_background_images_service_;
-  std::unique_ptr<brave_ads::ResourceComponent> resource_component_;
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   std::unique_ptr<speedreader::SpeedreaderRewriterService>
@@ -216,7 +208,6 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
 
   std::unique_ptr<brave::BraveFarblingService> brave_farbling_service_;
   std::unique_ptr<misc_metrics::ProcessMiscMetrics> process_misc_metrics_;
-  std::unique_ptr<brave_ads::BraveStatsHelper> brave_stats_helper_;
 
   SEQUENCE_CHECKER(sequence_checker_);
 };

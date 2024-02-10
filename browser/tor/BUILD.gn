@@ -109,7 +109,6 @@ source_set("browser_tests") {
     "//brave/browser",
     "//brave/browser/tor",
     "//brave/common",
-    "//brave/components/brave_ads/browser",
     "//brave/components/brave_component_updater/browser",
     "//brave/components/brave_shields/browser",
     "//brave/components/constants",

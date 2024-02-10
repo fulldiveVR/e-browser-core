@@ -6,14 +6,10 @@
 #include "brave/browser/extensions/api/settings_private/brave_prefs_util.h"
 
 #include "base/feature_list.h"
-#include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/brave_shields/common/pref_names.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/de_amp/common/pref_names.h"
@@ -37,10 +33,6 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
 #include "brave/components/brave_wayback_machine/pref_names.h"
-#endif
-
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
-#include "brave/browser/ethereum_remote_client/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_IPFS)
@@ -109,12 +101,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[brave_shields::prefs::kLinkedInEmbedControlType] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
   (*s_brave_allowlist)[brave_shields::prefs::kReduceLanguageEnabled] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-
-  // Rewards/Ads prefs
-  (*s_brave_allowlist)[brave_rewards::prefs::kEnabled] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-  (*s_brave_allowlist)[brave_rewards::prefs::kShowLocationBarButton] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
 
   // Search engine prefs
@@ -231,22 +217,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[kIPFSCompanionEnabled] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
 
-  // Brave Wallet pref
-  (*s_brave_allowlist)[kBraveWalletSelectedNetworks] =
-      settings_api::PrefType::PREF_TYPE_DICTIONARY;
-  (*s_brave_allowlist)[kDefaultEthereumWallet] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[kDefaultSolanaWallet] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[kDefaultBaseCurrency] =
-      settings_api::PrefType::PREF_TYPE_STRING;
-  (*s_brave_allowlist)[kDefaultBaseCryptocurrency] =
-      settings_api::PrefType::PREF_TYPE_STRING;
-  (*s_brave_allowlist)[kBraveWalletAutoLockMinutes] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[kBraveWalletNftDiscoveryEnabled] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-
   // IPFS pref
 #if BUILDFLAG(ENABLE_IPFS)
   (*s_brave_allowlist)[kIPFSResolveMethod] =
@@ -297,19 +267,8 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
 
   (*s_brave_allowlist)[decentralized_dns::kUnstoppableDomainsResolveMethod] =
       settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[decentralized_dns::kENSResolveMethod] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[decentralized_dns::kEnsOffchainResolveMethod] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-  (*s_brave_allowlist)[decentralized_dns::kSnsResolveMethod] =
-      settings_api::PrefType::PREF_TYPE_NUMBER;
-
   // Media router pref
   (*s_brave_allowlist)[kEnableMediaRouterOnRestart] =
-      settings_api::PrefType::PREF_TYPE_BOOLEAN;
-
-  // NFT pinning pref
-  (*s_brave_allowlist)[kAutoPinEnabled] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
 
 #if defined(TOOLKIT_VIEWS)

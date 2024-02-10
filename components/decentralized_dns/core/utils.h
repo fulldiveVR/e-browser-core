@@ -26,22 +26,6 @@ ResolveMethodTypes GetUnstoppableDomainsResolveMethod(PrefService* local_state);
 bool IsUnstoppableDomainsResolveMethodAsk(PrefService* local_state);
 bool IsUnstoppableDomainsResolveMethodEnabled(PrefService* local_state);
 
-bool IsENSTLD(const std::string_view host);
-void SetENSResolveMethod(PrefService* local_state, ResolveMethodTypes method);
-ResolveMethodTypes GetENSResolveMethod(PrefService* local_state);
-bool IsENSResolveMethodAsk(PrefService* local_state);
-bool IsENSResolveMethodEnabled(PrefService* local_state);
-
-void SetEnsOffchainResolveMethod(PrefService* local_state,
-                                 EnsOffchainResolveMethod method);
-EnsOffchainResolveMethod GetEnsOffchainResolveMethod(PrefService* local_state);
-
-bool IsSnsTLD(const std::string_view host);
-void SetSnsResolveMethod(PrefService* local_state, ResolveMethodTypes method);
-ResolveMethodTypes GetSnsResolveMethod(PrefService* local_state);
-bool IsSnsResolveMethodAsk(PrefService* local_state);
-bool IsSnsResolveMethodEnabled(PrefService* local_state);
-
 }  // namespace decentralized_dns
 
 #endif  // BRAVE_COMPONENTS_DECENTRALIZED_DNS_CORE_UTILS_H_

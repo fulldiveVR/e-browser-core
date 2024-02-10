@@ -29,7 +29,6 @@ struct CredentialsState {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct KVState {
-    pub wallet: Option<Wallet>,
     pub promotions: Option<Vec<Promotion>>,
     pub orders: Option<HashMap<String, Order>>,
     pub credentials: Option<CredentialsState>,
@@ -94,18 +93,6 @@ where
     async fn clear(&self) -> Result<(), InternalError> {
         let mut store = self.get_store()?;
         store.purge()
-    }
-
-    #[instrument]
-    async fn insert_wallet(&self, wallet: &Wallet) -> Result<(), InternalError> {
-        let mut store = self.get_store()?;
-        let mut state: KVState = store.get_state()?;
-
-        if state.wallet.is_none() {
-            state.wallet = Some(wallet.clone());
-        }
-
-        store.set_state(&state)
     }
 
     #[instrument]

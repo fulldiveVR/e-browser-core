@@ -7,7 +7,6 @@
 
 #include "base/strings/strcat.h"
 #include "brave/browser/ui/webui/webcompat_reporter/webcompat_reporter_dialog.h"
-#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/sidebar/constants.h"
@@ -48,32 +47,8 @@ void ShowWebcompatReporter(Browser* browser) {
   webcompat_reporter::OpenReporterDialog(web_contents);
 }
 
-void ShowBraveWallet(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIWalletURL));
-}
-
-void ShowBraveWalletOnboarding(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIWalletOnboardingURL));
-}
-
-void ShowBraveWalletAccountCreation(Browser* browser,
-                                    brave_wallet::mojom::CoinType coin_type) {
-  // Only solana is supported.
-  if (coin_type == brave_wallet::mojom::CoinType::SOL) {
-    ShowSingletonTabOverwritingNTP(
-        browser,
-        GURL(base::StrCat({kBraveUIWalletAccountCreationURL, "Solana"})));
-  } else {
-    NOTREACHED();
-  }
-}
-
 void ShowExtensionSettings(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kExtensionSettingsURL));
-}
-
-void ShowWalletSettings(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kWalletSettingsURL));
 }
 
 void ShowIPFS(Browser* browser) {

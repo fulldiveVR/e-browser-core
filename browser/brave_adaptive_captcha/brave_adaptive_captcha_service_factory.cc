@@ -12,11 +12,9 @@
 #include "base/memory/raw_ptr.h"
 #include "base/no_destructor.h"
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/ui/brave_rewards/rewards_panel_coordinator.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
 #endif
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/profiles/profile_util.h"
 #include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_service.h"
 #include "chrome/browser/profiles/profile.h"
@@ -38,20 +36,7 @@ class CaptchaDelegate
 #if BUILDFLAG(IS_ANDROID)
     return true;
 #else
-    // Because this is triggered from the adaptive captcha tooltip, this call
-    // isn't associated with any particular `Browser` instance and we can use
-    // the last active browser for this profile.
-    auto* profile = Profile::FromBrowserContext(context_);
-    auto* browser = chrome::FindTabbedBrowser(profile, false);
-    if (!browser) {
-      return false;
-    }
-    auto* coordinator =
-        brave_rewards::RewardsPanelCoordinator::FromBrowser(browser);
-    if (!coordinator) {
-      return false;
-    }
-    return coordinator->ShowAdaptiveCaptcha();
+    return false;
 #endif
   }
 
@@ -85,7 +70,6 @@ BraveAdaptiveCaptchaServiceFactory::BraveAdaptiveCaptchaServiceFactory()
     : BrowserContextKeyedServiceFactory(
           "BraveAdaptiveCaptchaService",
           BrowserContextDependencyManager::GetInstance()) {
-  DependsOn(brave_rewards::RewardsServiceFactory::GetInstance());
 }
 
 BraveAdaptiveCaptchaServiceFactory::~BraveAdaptiveCaptchaServiceFactory() =
@@ -97,8 +81,6 @@ KeyedService* BraveAdaptiveCaptchaServiceFactory::BuildServiceInstanceFor(
                                 ->GetURLLoaderFactoryForBrowserProcess();
   return new BraveAdaptiveCaptchaService(
       user_prefs::UserPrefs::Get(context), std::move(url_loader_factory),
-      brave_rewards::RewardsServiceFactory::GetForProfile(
-          Profile::FromBrowserContext(context)),
       std::make_unique<CaptchaDelegate>(context));
 }
 

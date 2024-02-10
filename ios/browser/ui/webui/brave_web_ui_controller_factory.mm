@@ -52,14 +52,6 @@ WebUIIOSFactoryFunction GetWebUIIOSFactoryFunction(const GURL& url) {
   // ChromeBrowserState::FromWebUIIOS(web_ui);
 
   const std::string url_host = url.host();
-  /*if (url_host == kAdblockInternalsHost) {
-    return &NewWebUIIOS<BraveAdblockInternalsUI>;
-  } else if (url_host == kSkusInternalsHost) {
-    return &NewWebUIIOS<SkusInternalsUI>;
-  } else if (url_host == kRewardsInternalsHost &&
-             brave_rewards::IsSupportedForProfile(browser_state)) {
-    return &NewWebUIIOS<BraveRewardsInternalsUI>;
-  }*/
   return nullptr;
 }
 

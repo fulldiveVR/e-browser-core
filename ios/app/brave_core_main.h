@@ -19,7 +19,6 @@
 @class BraveSyncAPI;
 @class BraveSyncProfileServiceIOS;
 @class BraveStats;
-@class BraveWalletAPI;
 @class AdblockService;
 @class BraveTabGeneratorAPI;
 @class WebImageDownloader;
@@ -80,8 +79,6 @@ OBJC_EXPORT
                    (NSArray<BraveCoreSwitch*>*)additionalSwitches;
 
 - (void)scheduleLowPriorityStartupTasks;
-
-@property(readonly) BraveWalletAPI* braveWalletAPI;
 
 @property(readonly) BraveStats* braveStats;
 

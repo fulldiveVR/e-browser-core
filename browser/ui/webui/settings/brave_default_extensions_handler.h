@@ -10,7 +10,6 @@
 
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
-#include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "chrome/browser/ui/webui/settings/settings_page_ui_handler.h"
 #include "chrome/common/extensions/webstore_install_result.h"
@@ -50,15 +49,10 @@ class BraveDefaultExtensionsHandler : public settings::SettingsPageUIHandler
   void SetHangoutsEnabled(const base::Value::List& args);
   void SetIPFSCompanionEnabled(const base::Value::List& args);
   void SetMediaRouterEnabled(const base::Value::List& args);
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
-  void SetBraveWalletEnabled(const base::Value::List& args);
-#endif
   void SetWidevineEnabled(const base::Value::List& args);
   void IsWidevineEnabled(const base::Value::List& args);
   void OnWidevineEnabledChanged();
-  void OnWalletTypeChanged();
   void GetDecentralizedDnsResolveMethodList(const base::Value::List& args);
-  void GetEnsOffchainResolveMethodList(const base::Value::List& args);
 
   void InitializePrefCallbacks();
 
@@ -67,7 +61,6 @@ class BraveDefaultExtensionsHandler : public settings::SettingsPageUIHandler
                        bool success,
                        const std::string& error,
                        extensions::webstore_install::Result result);
-  void ResetWallet(const base::Value::List& args);
   void ResetTransactionInfo(const base::Value::List& args);
   void OnRestartNeededChanged();
   bool IsRestartNeeded();

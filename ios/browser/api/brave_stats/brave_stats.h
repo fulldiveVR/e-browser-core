@@ -11,12 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BraveStats : NSObject
-/// Any additional wallet parameters to send with the DAU ping
-@property(readonly) NSDictionary<NSString*, NSString*>* walletParams;
-/// Should be called when the stats ping has been sent
-- (void)notifyStatsPingSent;
-- (instancetype)init NS_UNAVAILABLE;
-@end
 
 NS_ASSUME_NONNULL_END
 

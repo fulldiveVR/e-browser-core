@@ -11,7 +11,6 @@ use crate::models::*;
 #[async_trait(?Send)]
 pub trait StorageClient {
     async fn clear(&self) -> Result<(), InternalError>;
-    async fn insert_wallet(&self, wallet: &Wallet) -> Result<(), InternalError>;
     async fn replace_promotions(&self, promotions: &[Promotion]) -> Result<(), InternalError>;
     async fn get_orders(&self) -> Result<Option<Vec<Order>>, InternalError>;
     async fn get_order(&self, order_id: &str) -> Result<Option<Order>, InternalError>;

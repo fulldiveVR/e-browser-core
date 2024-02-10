@@ -3,7 +3,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import("//brave/browser/ethereum_remote_client/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/ipfs/buildflags/buildflags.gni")
 import("//brave/resources/brave_grit.gni")
@@ -19,10 +18,6 @@ json_features("api_features") {
     "_api_features.json",
     "_brave_talk_api_features.json",
   ]
-
-  if (ethereum_remote_client_enabled) {
-    sources += [ "_brave_wallet_api_features.json" ]
-  }
 
   if (enable_ipfs) {
     sources += [ "_ipfs_api_features.json" ]
@@ -56,20 +51,14 @@ json_features("behavior_features") {
 }
 
 brave_extensions_api_schema_sources = [
-  "brave_rewards.json",
   "brave_shields.json",
   "brave_talk.json",
   "brave_theme.json",
   "greaselion.json",
-  "rewards_notifications.json",
 ]
 
 if (enable_ipfs) {
   brave_extensions_api_schema_sources += [ "ipfs.json" ]
-}
-
-if (ethereum_remote_client_enabled) {
-  brave_extensions_api_schema_sources += [ "brave_wallet.json" ]
 }
 
 brave_extensions_api_uncompiled_sources = []
@@ -103,8 +92,6 @@ function_registration("generated_api_registration") {
   root_namespace = brave_extensions_api_root_namespace
 
   deps = [
-    "//brave/components/brave_ads/core/mojom",
-    "//brave/components/brave_rewards/common/mojom",
     "//extensions/common",
   ]
 

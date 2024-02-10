@@ -2,7 +2,6 @@
 /vendor/*
 /components/brave_new_tab_ui/data/LICENSE
 /components/brave_webtorrent/extension/out/
-/components/brave_rewards/resources/extension/brave_rewards/out/
 /components/third_party/adblock/LICENSE
 /components/third_party/local_data/LICENSE
 /dist/
@@ -79,5 +78,3 @@ README.md
 .clang-tidy
 chromium_presubmit_config.json5
 
-# Ignored minified javascript
-components/brave_wallet/resources/solana_web3_script.js

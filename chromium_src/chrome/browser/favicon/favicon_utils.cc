@@ -17,13 +17,6 @@
 namespace favicon {
 
 bool ShouldThemifyFaviconForEntry(content::NavigationEntry* entry) {
-  const GURL& virtual_url = entry->GetVirtualURL();
-  // Don't theme for certain brave favicons which are full color
-  if (virtual_url.SchemeIs(content::kChromeUIScheme) &&
-      (virtual_url.host_piece() == kRewardsPageHost ||
-       virtual_url.host_piece() == kWalletPageHost)) {
-    return false;
-  }
   return ShouldThemifyFaviconForEntry_ChromiumImpl(entry);
 }
 

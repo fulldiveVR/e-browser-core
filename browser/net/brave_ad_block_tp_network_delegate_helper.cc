@@ -229,8 +229,6 @@ void OnShouldBlockRequestResult(
     EngineFlags result) {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
   if (ctx->blocked_by == kAdBlocked) {
-    brave_shields::BraveShieldsWebContentsObserver::DispatchBlockedEvent(
-        ctx->request_url, ctx->frame_tree_node_id, brave_shields::kAds);
   } else if (then_check_uncloaked) {
     // This will be deleted by `AdblockCnameResolveHostClient::OnComplete`.
     new AdblockCnameResolveHostClient(std::move(next_callback), task_runner,

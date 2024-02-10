@@ -165,9 +165,7 @@
       <!--Add new items to the appropriate sections below -->
 
       <!-- App Menu -->
-      <message name="IDS_SHOW_BRAVE_REWARDS" desc="The show AI Wize Rewards menu in the app menu">
-        AI Wize Rewards
-      </message>
+ 
       <message name="IDS_BOOKMAR_BAR_MENU_SHOW_ALWAYS" desc="The name of the context menu item to always show bookmark bar">
         Always
       </message>
@@ -207,9 +205,6 @@
       </if>
       <message name="IDS_SHOW_BRAVE_SYNC" desc="The show brave sync menu in the app menu">
         Sync
-      </message>
-      <message name="IDS_SHOW_BRAVE_WALLET" desc="The show AI Wize Wallet menu item (app menu)">
-        Wallet
       </message>
       <message name="IDS_OPEN_MORE_OTHER_DEVICES_SESSIONS" desc="The history sub-menu item to show sessions from other devices">
         More…
@@ -461,31 +456,6 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>aiwize://settings/ex
         </message>
       </if>
 
-      <!-- AI Wize Rewards Extension -->
-      <if expr="use_titlecase">
-        <message name="IDS_HIDE_BRAVE_REWARDS_ACTION_ICON" desc="The menu item to hide the AI Wize Rewards icon on the location bar">
-          Hide AI Wize Rewards Icon
-        </message>
-      </if>
-      <if expr="not use_titlecase">
-        <message name="IDS_HIDE_BRAVE_REWARDS_ACTION_ICON" desc="The menu item to hide the AI Wize Rewards icon on the location bar">
-          Hide AI Wize Rewards icon
-        </message>
-      </if>
-
-      <!-- AI Wize Wallet Extension -->
-      <if expr="use_titlecase">
-        <message name="IDS_HIDE_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for hiding the AI Wize Wallet icon on the toolbar">
-          Hide AI Wize Wallet Icon
-        </message>
-      </if>
-      <if expr="not use_titlecase">
-        <message name="IDS_HIDE_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for hiding the AI Wize Wallet icon on the toolbar">
-          Hide AI Wize Wallet icon
-        </message>
-      </if>
-
-
       <!-- Extensions page strings -->
       <message name="IDS_EXTENSIONS_BRAVE_ITEM_SOURCE_WEBSTORE" desc="The text to indicate that an extension is from the Web Extensions Store.">
         Web Extensions Store
@@ -655,32 +625,6 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>aiwize://settings/ex
         </message>
       </if>
 
-      <!-- AI Wize Ads -->
-      <message name="IDS_SERVICE_BAT_ADS" desc="The bat ads utility process">
-        Bat Ads Service
-      </message>
-      <message name="IDS_UTILITY_PROCESS_REWARDS_NAME" desc="The utility process running rewards">
-        Bat Rewards Service
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_AD_CLOSE_BUTTON" desc="Text to be spoken for the notification ad close button">
-        Close
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_AD_ACCESSIBLE_NAME" desc="Text to be spoken when a notification ad is shown">
-        AI Wize Notification Ad
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_TITLE" desc="The notification title to show when an external wallet is connected">
-        &#x1F389; You're now earning!
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_BODY" desc="The notification body to show when an external wallet is connected">
-        You earn whenever a notification like this appears on your screen. You don't need to click to earn.
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_TITLE" desc="The notification title to show when a user clicks an ad multiple times">
-        You earn when a AI Wize Ads notification appears
-      </message>
-      <message name="IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_BODY" desc="The notification body to show when a user clicks an ad multiple times">
-        You don't need to click to earn, but do click if you're interested!
-      </message>
-
       <!-- AI Wize Search -->
       <message name="IDS_SETTINGS_WEB_DISCOVERY_LABEL" desc="Description that shows settings for toggle Web Discovery">
         Web Discovery Project
@@ -830,37 +774,10 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>aiwize://settings/ex
         This completely anonymized info helps AI Wize estimate the overall usage of certain features and make them better for you.
       </message>
 
-      <!-- Web3 detection -->
-      <message name="IDS_BRAVE_CRYPTO_WALLETS_LAZY_LOAD_TEXT" desc="Text that shows on the info bar when a Dapp is detected">
-        Would you like to start Crypto Wallets for Ethereum support?
-      </message>
-      <message name="IDS_BRAVE_CRYPTO_WALLETS_INFOBAR_TEXT" desc="Text that shows on the info bar when a Dapp is detected">
-        Set up Crypto Wallets to interact with this app and others like it.
-      </message>
-      <message name="IDS_BRAVE_CRYPTO_WALLETS_SETUP_CRYPTO_WALLETS" desc="Set up Crypto Wallets">
-        Set up Crypto Wallets
-      </message>
-       <message name="IDS_BRAVE_CRYPTO_WALLETS_START_AND_RELOAD" desc="Start Crypto Wallets and reload">
-        Start Crypto Wallets and reload
-      </message>
-      <message name="IDS_BRAVE_CRYPTO_WALLETS_SETTINGS" desc="Open Crypto Wallets settings">
-        Settings
-      </message>
-      <message name="IDS_BRAVE_CRYPTO_WALLETS_DONT_ASK" desc="Sets provider to none">
-        Don't ask again
-      </message>
+    
       <!-- IPFS -->
-      <message name="IDS_BRAVE_WALLET_SETTINGS_SECTION" desc="Open Wallet settings section">
-        Wallet
-      </message>
       <message name="IDS_BRAVE_IPFS_SETTINGS_SECTION" desc="Open IPFS settings section">
         IPFS
-      </message>
-      <message name="IDS_BRAVE_WEB3_SETTINGS_SECTION" desc="Open Web3 settings section">
-        Web3
-      </message>
-      <message name="IDS_BRAVE_WEB3_DOMAINS_SETTINGS_SECTION" desc="Open Web3 Domains settings section">
-        Web3 Domains
       </message>
       <message name="IDS_BRAVE_IPFS_LEARN_MORE">
         Learn more about IPFS and privacy

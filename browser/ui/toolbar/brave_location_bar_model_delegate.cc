@@ -6,7 +6,6 @@
 #include "brave/browser/ui/toolbar/brave_location_bar_model_delegate.h"
 
 #include "base/strings/utf_string_conversions.h"
-#include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
@@ -15,9 +14,6 @@
 #include "chrome/browser/ui/browser.h"
 #include "extensions/buildflags/buildflags.h"
 
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
-#include "brave/browser/ethereum_remote_client/ethereum_remote_client_constants.h"
-#endif
 
 BraveLocationBarModelDelegate::BraveLocationBarModelDelegate(Browser* browser)
     : BrowserLocationBarModelDelegate(browser) {}
@@ -33,19 +29,7 @@ void BraveLocationBarModelDelegate::FormattedStringFromURL(
                                            u"aiwize://");
   }
 
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
-  if (url.SchemeIs(kChromeExtensionScheme) &&
-      url.host() == kEthereumRemoteClientExtensionId) {
-    base::ReplaceFirstSubstringAfterOffset(
-        new_formatted_url, 0, kEthereumRemoteClientBaseUrl, u"aiwize://wallet");
-    base::ReplaceFirstSubstringAfterOffset(new_formatted_url, 0,
-                                           kEthereumRemoteClientPhishingUrl,
-                                           u"aiwize://wallet");
-    base::ReplaceFirstSubstringAfterOffset(new_formatted_url, 0,
-                                           kEthereumRemoteClientEnsRedirectUrl,
-                                           u"aiwize://wallet");
-  }
-#endif
+
 }
 
 std::u16string

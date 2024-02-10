@@ -10,17 +10,9 @@
 #define ENUM_BOUNDARY                         \
   BRAVE_START = 600,                          \
   BRAVE_AD_BLOCKED,                           \
-  BRAVE_WALLET_CREATED,                       \
-  BRAVE_ON_WALLET_PROPERTIES,                 \
   BRAVE_ON_PUBLISHER_DATA,                    \
   BRAVE_ON_CURRENT_REPORT,                    \
   BRAVE_ON_BRAVE_THEME_TYPE_CHANGED,          \
-  BRAVE_REWARDS_NOTIFICATION_ADDED,           \
-  BRAVE_REWARDS_NOTIFICATION_DELETED,         \
-  BRAVE_REWARDS_ALL_NOTIFICATIONS_DELETED,    \
-  BRAVE_REWARDS_GET_NOTIFICATION,             \
-  BRAVE_REWARDS_GET_ALL_NOTIFICATIONS,        \
-  BRAVE_WALLET_FAILED,                        \
   ENUM_BOUNDARY
 // clang-format on
 

@@ -11,11 +11,8 @@
 #include <vector>
 
 #include "base/metrics/histogram_macros.h"
-#include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_federated/brave_federated_service_factory.h"
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
-#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
 #include "brave/browser/misc_metrics/extension_metrics_service_factory.h"
 #include "brave/browser/perf/brave_perf_features_processor.h"
 #include "brave/browser/profiles/profile_util.h"
@@ -45,10 +42,6 @@
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
 #include "brave/browser/gcm_driver/brave_gcm_channel_status.h"
 #endif
-
-#if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
-#include "brave/browser/brave_wallet/brave_wallet_auto_pin_service_factory.h"
-#endif  // BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
 
 #if BUILDFLAG(ENABLE_IPFS)
 #include "brave/browser/ipfs/ipfs_service_factory.h"
@@ -108,15 +101,9 @@ void BraveProfileManager::DoFinalInitForServices(Profile* profile,
   ProfileManager::DoFinalInitForServices(profile, go_off_the_record);
   if (!do_final_services_init_)
     return;
-  brave_ads::AdsServiceFactory::GetForProfile(profile);
-  brave_rewards::RewardsServiceFactory::GetForProfile(profile);
-#if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
-  brave_wallet::BraveWalletAutoPinServiceFactory::GetServiceForContext(profile);
-#endif  // BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
 #if BUILDFLAG(ENABLE_IPFS)
   ipfs::IpfsServiceFactory::GetForContext(profile);
 #endif  // BUILDFLAG(ENABLE_IPFS)
-  brave_wallet::BraveWalletServiceFactory::GetServiceForContext(profile);
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
   gcm::BraveGCMChannelStatus* status =
       gcm::BraveGCMChannelStatus::GetForProfile(profile);

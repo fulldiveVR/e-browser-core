@@ -21,7 +21,6 @@
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/l10n/common/locale_util.h"
 #include "brave/components/l10n/common/localization_util.h"
@@ -57,9 +56,6 @@ SidebarItem::BuiltInItemType GetBuiltInItemTypeForLegacyURL(
   // need to be updated.
   if (url == "https://together.brave.com/" || url == "https://talk.brave.com/")
     return SidebarItem::BuiltInItemType::kBraveTalk;
-
-  if (url == "chrome://wallet/")
-    return SidebarItem::BuiltInItemType::kWallet;
 
   if (url == "chrome://sidebar-bookmarks.top-chrome/" ||
       url == "chrome://bookmarks/")
@@ -150,8 +146,6 @@ void SidebarService::MigratePrefSidebarBuiltInItemsToHidden() {
   std::vector<SidebarItem> built_in_items_to_hide;
   built_in_items_to_hide.push_back(
       GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBraveTalk));
-  built_in_items_to_hide.push_back(
-      GetBuiltInItemForType(SidebarItem::BuiltInItemType::kWallet));
   built_in_items_to_hide.push_back(
       GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBookmarks));
 
@@ -590,17 +584,6 @@ SidebarItem SidebarService::GetBuiltInItemForType(
                                  SidebarItem::Type::kTypeBuiltIn,
                                  SidebarItem::BuiltInItemType::kBraveTalk,
                                  /* open_in_panel = */ false);
-    case SidebarItem::BuiltInItemType::kWallet: {
-      if (brave_wallet::IsAllowed(prefs_)) {
-        return SidebarItem::Create(GURL("chrome://wallet/"),
-                                   brave_l10n::GetLocalizedResourceUTF16String(
-                                       IDS_SIDEBAR_WALLET_ITEM_TITLE),
-                                   SidebarItem::Type::kTypeBuiltIn,
-                                   SidebarItem::BuiltInItemType::kWallet,
-                                   /* open_in_panel = */ false);
-      }
-      return SidebarItem();
-    }
     case SidebarItem::BuiltInItemType::kBookmarks:
       return SidebarItem::Create(brave_l10n::GetLocalizedResourceUTF16String(
                                      IDS_SIDEBAR_BOOKMARKS_ITEM_TITLE),

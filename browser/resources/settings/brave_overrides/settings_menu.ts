@@ -244,15 +244,6 @@ RegisterPolymerTemplateModifications({
     const privacyEl = getMenuElement(templateContent, '/privacy')
     shieldsEl.insertAdjacentElement('afterend', privacyEl)
 
-    // Add web3 item
-    const web3El = createMenuElement(
-      loadTimeData.getString('braveWeb3'),
-      '/web3',
-      'product-brave-wallet',
-      'wallet',
-    )
-    privacyEl.insertAdjacentElement('afterend', web3El)
-
     // Add leo item
     const leoAssistantEl = createMenuElement(
       loadTimeData.getString('leoAssistant'),
@@ -260,7 +251,7 @@ RegisterPolymerTemplateModifications({
       'product-brave-leo',
       'leoAssistant',
     )
-    web3El.insertAdjacentElement('afterend', leoAssistantEl)
+    privacyEl.insertAdjacentElement('afterend', leoAssistantEl)
 
     // Add Sync item
     const syncEl = createMenuElement(

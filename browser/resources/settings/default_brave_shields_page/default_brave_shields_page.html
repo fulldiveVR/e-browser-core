@@ -30,19 +30,6 @@
   }
 </style>
 <div hidden="[[isAdBlockRoute_]]">
-  <div class="settings-box first">
-    <div class="flex">
-      <div class="label shields-primary-title">$i18n{braveShieldsDefaultsSectionTitle}</div>
-      <div class="label secondary shields-secondary-title">
-        <template is="dom-if" if="[[isBraveRewardsSupported_]]">
-          <p>$i18nRaw{braveShieldsDefaultsSectionDescription2}</p>
-        </template>
-        <template is="dom-if" if="[[!isBraveRewardsSupported_]]">
-          <p>$i18n{braveShieldsDefaultsSectionDescription2RewardsDisabled}</p>
-        </template>
-      </div>
-    </div>
-  </div>
   <div class="settings-box">
     <div class="start">$i18n{adControlLabel}</div>
     <select id="adControlType" class="md-select"

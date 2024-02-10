@@ -126,12 +126,6 @@ module.exports = {
     {
       // opt-in directories for line length warnings
       "files": [
-        "components/brave_wallet/**/*.js",
-        "components/brave_wallet/**/*.ts",
-        "components/brave_wallet/**/*.tsx",
-        "components/brave_wallet_ui/**/*.js",
-        "components/brave_wallet_ui/**/*.ts",
-        "components/brave_wallet_ui/**/*.tsx"
       ],
       "rules": {
         'max-len': [

@@ -253,10 +253,6 @@ void SetAdControlType(HostContentSettingsMap* map,
     return;
   }
 
-  map->SetContentSettingCustomScope(
-      primary_pattern, ContentSettingsPattern::Wildcard(),
-      ContentSettingsType::BRAVE_ADS, GetDefaultBlockFromControlType(type));
-
   map->SetContentSettingCustomScope(primary_pattern,
                                     ContentSettingsPattern::Wildcard(),
                                     ContentSettingsType::BRAVE_TRACKERS,
@@ -270,11 +266,10 @@ ControlType GetAdControlType(HostContentSettingsMap* map, const GURL& url) {
       url.SchemeIs(kChromeExtensionScheme)) {
     return ControlType::BLOCK;
   }
-  ContentSetting setting =
-      map->GetContentSetting(url, GURL(), ContentSettingsType::BRAVE_ADS);
+ 
 
-  return setting == CONTENT_SETTING_ALLOW ? ControlType::ALLOW
-                                          : ControlType::BLOCK;
+ // ????
+  return ControlType::BLOCK;
 }
 
 void SetCosmeticFilteringControlType(HostContentSettingsMap* map,

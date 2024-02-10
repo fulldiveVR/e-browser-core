@@ -44,10 +44,6 @@
     return ContentSettingsType::BRAVE_GOOGLE_SIGN_IN;                    \
   if (name == "localhostAccess")                                         \
     return ContentSettingsType::BRAVE_LOCALHOST_ACCESS;                  \
-  if (name == "ethereum")                                                \
-    return ContentSettingsType::BRAVE_ETHEREUM;                          \
-  if (name == "solana")                                                  \
-    return ContentSettingsType::BRAVE_SOLANA;                            \
   if (name == brave_shields::kBraveShields)                              \
     return ContentSettingsType::BRAVE_SHIELDS;
 
@@ -69,10 +65,6 @@ bool HasRegisteredGroupName(ContentSettingsType type) {
   if (type == ContentSettingsType::BRAVE_LOCALHOST_ACCESS) {
     return true;
   }
-  if (type == ContentSettingsType::BRAVE_ETHEREUM)
-    return true;
-  if (type == ContentSettingsType::BRAVE_SOLANA)
-    return true;
   if (type == ContentSettingsType::BRAVE_SHIELDS)
     return true;
   return HasRegisteredGroupName_ChromiumImpl(type);
@@ -86,10 +78,6 @@ std::string_view ContentSettingsTypeToGroupName(ContentSettingsType type) {
   if (type == ContentSettingsType::BRAVE_LOCALHOST_ACCESS) {
     return "localhostAccess";
   }
-  if (type == ContentSettingsType::BRAVE_ETHEREUM)
-    return "ethereum";
-  if (type == ContentSettingsType::BRAVE_SOLANA)
-    return "solana";
   if (type == ContentSettingsType::BRAVE_SHIELDS)
     return brave_shields::kBraveShields;
   return ContentSettingsTypeToGroupName_ChromiumImpl(type);
@@ -97,8 +85,7 @@ std::string_view ContentSettingsTypeToGroupName(ContentSettingsType type) {
 
 const std::vector<ContentSettingsType>& GetVisiblePermissionCategories() {
   static base::NoDestructor<std::vector<ContentSettingsType>> types{
-      {ContentSettingsType::AUTOPLAY, ContentSettingsType::BRAVE_ETHEREUM,
-       ContentSettingsType::BRAVE_SOLANA,
+      {ContentSettingsType::AUTOPLAY, 
        ContentSettingsType::BRAVE_GOOGLE_SIGN_IN,
        ContentSettingsType::BRAVE_LOCALHOST_ACCESS}};
   static bool initialized = false;

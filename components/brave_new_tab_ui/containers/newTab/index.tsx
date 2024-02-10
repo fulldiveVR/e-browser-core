@@ -314,7 +314,6 @@ class NewTabPage extends React.Component<Props, State> {
   }
 
   dismissNotification = (id: string) => {
-    this.props.actions.dismissNotification(id)
   }
 
   closeSettings = () => {

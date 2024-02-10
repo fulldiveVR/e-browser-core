@@ -97,7 +97,6 @@ const handleMediaDurationMetadata = (tabId: number, mediaType: string, data: Med
     return
   }
 
-  chrome.braveRewards.updateMediaDuration(tabId, publisherKey, data.duration, data.firstVisit)
 }
 
 const onCompletedWebRequest = (
@@ -221,21 +220,6 @@ const handleRegisterOnUpdatedTab = (registrationKey: string, mediaType: string) 
   connectionState.onUpdatedTabListener = listener
 }
 
-const getPublisherPanelInfo = (tabId: number, publisherKey: string) => {
-  chrome.braveRewards.getPublisherPanelInfo(
-    publisherKey, (result: RewardsExtension.Result, info?: RewardsExtension.Publisher) => {
-      if (result === 0 && info) {
-        chrome.runtime.sendMessage(
-          braveRewardsExtensionId,
-          {
-            type: 'OnPublisherData',
-            tabId,
-            info
-          })
-      }
-    })
-}
-
 const getPublisherPanelInfoByTabId = (tabId: number) => {
   if (!tabId) {
     return
@@ -245,23 +229,6 @@ const getPublisherPanelInfoByTabId = (tabId: number) => {
   if (!publisherKey) {
     return
   }
-
-  getPublisherPanelInfo(tabId, publisherKey)
-}
-
-const savePublisherInfo = (tabId: number, mediaType: string, url: string, publisherKey: string, publisherName: string, favIconUrl: string) => {
-  chrome.braveRewards.savePublisherInfo(
-    tabId,
-    mediaType,
-    url,
-    publisherKey,
-    publisherName,
-    favIconUrl,
-    (result: RewardsExtension.Result) => {
-      if (result !== 0) {
-        console.error(`Failed to save publisher info for ${publisherKey}, result is ${result}`)
-      }
-    })
 }
 
 const handleSavePublisherVisit = (tabId: number, mediaType: string, data: SavePublisherVisit) => {
@@ -272,35 +239,9 @@ const handleSavePublisherVisit = (tabId: number, mediaType: string, data: SavePu
 
   publisherKeysByTabId.set(tabId, data.publisherKey)
 
-  chrome.braveRewards.setPublisherIdForTab(tabId, data.publisherKey)
-
   if (data.mediaKey && !publisherKeysByMediaKey.has(data.mediaKey)) {
     publisherKeysByMediaKey.set(data.mediaKey, data.publisherKey)
   }
-
-  chrome.braveRewards.getPublisherInfo(
-    data.publisherKey, (result: RewardsExtension.Result, info?: RewardsExtension.Publisher) => {
-      let shouldUpdate = false
-      if (result === 0 && info) {
-        shouldUpdate = (info.name !== data.publisherName || info.url !== data.url)
-        if (!shouldUpdate) {
-          getPublisherPanelInfo(tabId, data.publisherKey)
-          return
-        }
-      }
-
-      // Failed to find the publisher info corresponding to this key or the
-      // publisher info needs to be updated, so save the info now
-      if (result === 9 || shouldUpdate) {
-        savePublisherInfo(
-          tabId,
-          mediaType,
-          data.url,
-          data.publisherKey,
-          data.publisherName,
-          data.favIconUrl || '')
-      }
-    })
 }
 
 const onMessageListener = (msg: any, port: chrome.runtime.Port) => {

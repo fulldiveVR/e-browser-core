@@ -319,12 +319,6 @@
   <message name="IDS_IDC_LIVE_CAPTION">
     Toggle live captions
   </message>
-  <message name="IDS_IDC_SHOW_BRAVE_WALLET_PANEL">
-    Show AI Wize Wallet panel
-  </message>
-  <message name="IDS_IDC_CLOSE_BRAVE_WALLET_PANEL">
-    Close AI Wize Wallet panel
-  </message>
   <message name="IDS_IDC_TOGGLE_TAB_MUTE">
     Toggle tab mute
   </message>

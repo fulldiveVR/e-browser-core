@@ -3,7 +3,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#include "brave/browser/brave_wallet/brave_wallet_tab_helper.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "chrome/browser/extensions/extension_context_menu_model.h"
 #include "chrome/browser/profiles/profile.h"
@@ -22,34 +21,16 @@
 namespace {
 
 bool IsBravePanel(content::WebContents* content) {
-  return content->GetVisibleURL().EqualsIgnoringRef(
-      GURL(kBraveUIWalletPanelURL));
+  return false;
 }
 
 void OnWindowClosing(views::Widget* anchor_widget) {
-  if (!anchor_widget) {
-    return;
-  }
-  Browser* browser =
-      chrome::FindBrowserWithWindow(anchor_widget->GetNativeWindow());
-  if (!browser || !browser->tab_strip_model()) {
-    return;
-  }
-  content::WebContents* active =
-      browser->tab_strip_model()->GetActiveWebContents();
-  if (!active) {
-    return;
-  }
-  auto* tab_helper =
-      brave_wallet::BraveWalletTabHelper::FromWebContents(active);
-  if (tab_helper) {
-    tab_helper->SetCloseOnDeactivate(true);
-  }
 }
 
 }  // namespace
 
 namespace views {
+
 class BraveBubbleDialogDelegateView : public views::BubbleDialogDelegateView {
  public:
   BraveBubbleDialogDelegateView() : BubbleDialogDelegateView() {}
@@ -70,18 +51,7 @@ namespace chrome {
 
 Browser* FindBrowserAndAdjustBubbleForBraveWalletPanel(
     content::WebContents* contents) {
-  if (!IsBravePanel(contents))
     return chrome::FindBrowserWithTab(contents);
-
-  Browser* browser = chrome::FindBrowserWithProfile(
-      Profile::FromBrowserContext(contents->GetBrowserContext()));
-  content::WebContents* active =
-      browser->tab_strip_model()->GetActiveWebContents();
-  auto* tab_helper =
-      brave_wallet::BraveWalletTabHelper::FromWebContents(active);
-  if (tab_helper)
-    tab_helper->SetCloseOnDeactivate(false);
-  return browser;
 }
 
 }  // namespace chrome

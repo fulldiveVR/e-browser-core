@@ -47,19 +47,6 @@ IN_PROC_BROWSER_TEST_F(BraveWalletExtensionApiTest,
   ASSERT_TRUE(catcher.GetNextResult()) << message_;
 }
 
-IN_PROC_BROWSER_TEST_F(BraveWalletExtensionApiTest, BraveWalletAPIAvailable) {
-  std::unique_ptr<base::Environment> env(base::Environment::Create());
-  env->SetVar("BRAVE_INFURA_PROJECT_ID", "test-project-id");
-  env->SetVar("BRAVE_SERVICES_KEY", "test-brave-key");
-  ResultCatcher catcher;
-  const Extension* extension =
-      LoadExtension(extension_dir_.AppendASCII("braveWallet"));
-  ASSERT_TRUE(extension);
-  ASSERT_TRUE(browsertest_util::ExecuteScriptInBackgroundPageNoWait(
-      browser()->profile(), kEthereumRemoteClientExtensionId, "testBasics()"));
-  ASSERT_TRUE(catcher.GetNextResult()) << message_;
-}
-
 IN_PROC_BROWSER_TEST_F(BraveWalletExtensionApiTest,
                        BraveWalletAPIKnownValuesTest) {
   GetPrefs()->SetString(kERCAES256GCMSivNonce, "yJngKDr5nCGYz7EM");

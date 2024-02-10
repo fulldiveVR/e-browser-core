@@ -56,22 +56,16 @@ net::NetworkTrafficAnnotationTag kAnnotationTag =
 BraveAdaptiveCaptchaService::BraveAdaptiveCaptchaService(
     PrefService* prefs,
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
-    brave_rewards::RewardsService* rewards_service,
     std::unique_ptr<BraveAdaptiveCaptchaDelegate> delegate)
     : prefs_(prefs),
-      rewards_service_(rewards_service),
       delegate_(std::move(delegate)),
       api_request_helper_(kAnnotationTag, url_loader_factory),
       get_captcha_challenge_(
           std::make_unique<GetAdaptiveCaptchaChallenge>(&api_request_helper_)) {
   DCHECK(prefs);
-  DCHECK(rewards_service);
-
-  rewards_service_->AddObserver(this);
 }
 
 BraveAdaptiveCaptchaService::~BraveAdaptiveCaptchaService() {
-  rewards_service_->RemoveObserver(this);
 }
 
 void BraveAdaptiveCaptchaService::GetScheduledCaptcha(
@@ -155,9 +149,6 @@ void BraveAdaptiveCaptchaService::ClearScheduledCaptcha() {
   prefs_->SetBoolean(prefs::kScheduledCaptchaPaused, false);
 }
 
-void BraveAdaptiveCaptchaService::OnCompleteReset(const bool success) {
-  ClearScheduledCaptcha();
-}
 
 // static
 void BraveAdaptiveCaptchaService::RegisterProfilePrefs(

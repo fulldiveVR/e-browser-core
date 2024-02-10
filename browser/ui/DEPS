@@ -15,8 +15,4 @@ specific_include_rules = {
   "browser_commands\.cc": [
     "+brave/browser/ui/views",
   ],
-  "wallet_bubble_manager_delegate_impl\.cc" : [
-    "+brave/browser/ui/views",
-    "+chrome/browser/ui/views",
-  ],
 }

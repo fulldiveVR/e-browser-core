@@ -14,11 +14,6 @@ namespace base {
 namespace trace_event {
 
 bool IsMemoryAllocatorDumpNameInAllowlist(const std::string& name) {
-  if (base::StartsWith(
-          name, "extensions/value_store/Extensions.Database.Open.BraveWallet/",
-          CompareCase::SENSITIVE)) {
-    return true;
-  }
   return IsMemoryAllocatorDumpNameInAllowlist_ChromiumImpl(name);
 }
 

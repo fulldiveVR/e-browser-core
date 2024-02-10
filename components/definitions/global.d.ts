@@ -24,7 +24,6 @@ declare global {
     ) => RequestIdleCallbackHandle)
     cancelIdleCallback: ((handle: RequestIdleCallbackHandle) => void)
     alreadyInserted: boolean
-    web3: any
     content_cosmetic: {
       cosmeticStyleSheet: CSSStyleSheet
       allSelectorsToRules: Map<string, number>

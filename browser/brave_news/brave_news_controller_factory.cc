@@ -6,7 +6,6 @@
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
 
 #include "base/no_destructor.h"
-#include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/profiles/profile_util.h"
 #include "brave/components/brave_news/browser/brave_news_controller.h"
 #include "chrome/browser/favicon/favicon_service_factory.h"
@@ -53,7 +52,6 @@ BraveNewsControllerFactory::BraveNewsControllerFactory()
     : BrowserContextKeyedServiceFactory(
           "BraveNewsControllerFactory",
           BrowserContextDependencyManager::GetInstance()) {
-  DependsOn(brave_ads::AdsServiceFactory::GetInstance());
   DependsOn(FaviconServiceFactory::GetInstance());
   DependsOn(HistoryServiceFactory::GetInstance());
 }
@@ -71,11 +69,10 @@ KeyedService* BraveNewsControllerFactory::BuildServiceInstanceFor(
   }
   auto* favicon_service = FaviconServiceFactory::GetForProfile(
       profile, ServiceAccessType::EXPLICIT_ACCESS);
-  auto* ads_service = brave_ads::AdsServiceFactory::GetForProfile(profile);
   auto* history_service = HistoryServiceFactory::GetForProfile(
       profile, ServiceAccessType::EXPLICIT_ACCESS);
   return new BraveNewsController(profile->GetPrefs(), favicon_service,
-                                 ads_service, history_service,
+                                 history_service,
                                  profile->GetURLLoaderFactory());
 }
 

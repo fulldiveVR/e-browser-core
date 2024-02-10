@@ -16,11 +16,7 @@ bool HasSelectedURL(Browser* browser);
 void CleanAndCopySelectedURL(Browser* browser);
 void NewOffTheRecordWindowTor(Browser*);
 void NewTorConnectionForSite(Browser*);
-void ShowWalletBubble(Browser* browser);
-void ShowApproveWalletBubble(Browser* browser);
-void CloseWalletBubble(Browser* browser);
 void MaybeDistillAndShowSpeedreaderBubble(Browser* browser);
-void ShowBraveVPNBubble(Browser* browser);
 void OpenIpfsFilesWebUI(Browser* browser);
 // Copies an url sanitized by URLSanitizerService.
 void CopySanitizedURL(Browser* browser, const GURL& url);

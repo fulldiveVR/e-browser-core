@@ -499,9 +499,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/widget/quickactionsearchandbookmark/utils/BraveSearchWidgetUtils.java",
 ]
 
-brave_java_sources += brave_ads_java_sources
 brave_java_sources += brave_components_embedder_support_java_sources
-brave_java_sources += brave_rewards_java_sources
 brave_java_sources += brave_feed_java_sources
 brave_java_sources += brave_public_tab_management_java_sources
 brave_java_sources += brave_share_java_sources

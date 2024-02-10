@@ -137,12 +137,6 @@ TestingBraveBrowserProcess::brave_stats_updater() {
   return nullptr;
 }
 
-brave_ads::BraveStatsHelper*
-TestingBraveBrowserProcess::ads_brave_stats_helper() {
-  NOTREACHED();
-  return nullptr;
-}
-
 ntp_background_images::NTPBackgroundImagesService*
 TestingBraveBrowserProcess::ntp_background_images_service() {
   NOTREACHED();
@@ -156,11 +150,6 @@ TestingBraveBrowserProcess::speedreader_rewriter_service() {
   return nullptr;
 }
 #endif
-
-brave_ads::ResourceComponent* TestingBraveBrowserProcess::resource_component() {
-  NOTREACHED();
-  return nullptr;
-}
 
 brave::BraveFarblingService*
 TestingBraveBrowserProcess::brave_farbling_service() {

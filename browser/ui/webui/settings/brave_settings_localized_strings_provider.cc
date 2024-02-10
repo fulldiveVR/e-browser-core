@@ -10,9 +10,7 @@
 #include "brave/browser/shell_integrations/buildflags/buildflags.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
 #include "brave/browser/ui/webui/settings/brave_privacy_handler.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/brave_shields/common/features.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/ipfs/ipfs_constants.h"
@@ -63,8 +61,6 @@ const char16_t kDNSLinkLearnMoreURL[] =
 const char16_t kUnstoppableDomainsLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"Resolve-Methods-for-Unstoppable-Domains";
-const char16_t kEnsOffchainLookupLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/ENS-offchain-lookup";
 const char16_t kBraveSyncGuideUrl[] =
     u"https://support.aiwize.com/hc/en-us/articles/360047642371-Sync-FAQ";
 const char16_t kDeAmpLearnMoreUrl[] =
@@ -84,15 +80,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"siteSettingsCategoryAutoplay", IDS_SETTINGS_SITE_SETTINGS_AUTOPLAY},
     {"siteSettingsAutoplayAllow", IDS_SETTINGS_SITE_SETTINGS_AUTOPLAY_ALLOW},
     {"siteSettingsAutoplayBlock", IDS_SETTINGS_SITE_SETTINGS_AUTOPLAY_BLOCK},
-
-    {"siteSettingsEthereum", IDS_SETTINGS_SITE_SETTINGS_ETHEREUM},
-    {"siteSettingsCategoryEthereum", IDS_SETTINGS_SITE_SETTINGS_ETHEREUM},
-    {"siteSettingsEthereumAsk", IDS_SETTINGS_SITE_SETTINGS_ETHEREUM_ASK},
-    {"siteSettingsEthereumBlock", IDS_SETTINGS_SITE_SETTINGS_ETHEREUM_BLOCK},
-    {"siteSettingsSolana", IDS_SETTINGS_SITE_SETTINGS_SOLANA},
-    {"siteSettingsCategorySolana", IDS_SETTINGS_SITE_SETTINGS_SOLANA},
-    {"siteSettingsSolanaAsk", IDS_SETTINGS_SITE_SETTINGS_SOLANA_ASK},
-    {"siteSettingsSolanaBlock", IDS_SETTINGS_SITE_SETTINGS_SOLANA_BLOCK},
 
     {"siteSettingsGoogleSignIn", IDS_SETTINGS_SITE_SETTINGS_GOOGLE_SIGN_IN},
     {"siteSettingsCategoryGoogleSignIn",
@@ -216,8 +203,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"braveShieldsTitle", IDS_SETTINGS_BRAVE_SHIELDS_TITLE},
     {"braveShieldsDefaultsSectionTitle",
      IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_TITLE},
-    {"braveShieldsDefaultsSectionDescription2RewardsDisabled",
-     IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2_REWARDS_DISABLED},
     {"socialBlocking", IDS_SETTINGS_SOCIAL_BLOCKING_DEFAULTS_TITLE},
     {"defaultView", IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DEFAULT_VIEW_LABEL},
     {"simpleView", IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_SIMPLE_VIEW_LABEL},
@@ -354,10 +339,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"braveSyncLeaveAndRejoinTheChainButton",
      IDS_BRAVE_SYNC_LEAVE_AND_REJOIN_THE_CHAIN_BUTTON},
     {"braveIPFS", IDS_BRAVE_IPFS_SETTINGS_SECTION},
-    {"braveWeb3", IDS_BRAVE_WEB3_SETTINGS_SECTION},
-    {"braveWeb3Domains", IDS_BRAVE_WEB3_DOMAINS_SETTINGS_SECTION},
     {"braveTor", IDS_BRAVE_TOR_SETTINGS_SECTION},
-    {"braveWallet", IDS_BRAVE_WALLET_SETTINGS_SECTION},
     {"braveHelpTips", IDS_SETTINGS_HELP_TIPS},
     {"braveHelpTipsWaybackMachineLabel",
      IDS_SETTINGS_HELP_TIPS_SHOW_BRAVE_WAYBACK_MACHINE_PROMPT},
@@ -391,7 +373,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
 
     // New Tab Page
     {"braveNewTab", IDS_SETTINGS_NEW_TAB},
-    {"braveNewTabBraveRewards", IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS},
     {"braveNewTabNewTabPageShows", IDS_SETTINGS_NEW_TAB_NEW_TAB_PAGE_SHOWS},
     {"braveNewTabNewTabCustomizeWidgets",
      IDS_SETTINGS_NEW_TAB_NEW_TAB_CUSTOMIZE_WIDGETS},
@@ -401,40 +382,16 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"pinShortcut", IDS_SETTINGS_PIN_SHORTCUT},
     {"shortcutPinned", IDS_SETTINGS_SHORTCUT_PINNED},
 #endif
-    // Rewards page
-    {"braveRewards", IDS_SETTINGS_BRAVE_REWARDS_TITLE},
-    {"braveRewardsDisabledLabel", IDS_SETTINGS_BRAVE_REWARDS_DISABLED_LABEL},
-    {"braveRewardsDisabledSubLabel",
-     IDS_SETTINGS_BRAVE_REWARDS_DISABLED_SUB_LABEL},
-    {"braveRewardsPageLabel", IDS_SETTINGS_BRAVE_REWARDS_PAGE_LABEL},
-    {"braveRewardsShowBraveRewardsButtonLabel",
-     IDS_SETTINGS_BRAVE_REWARDS_SHOW_BRAVE_REWARDS_BUTTON_LABEL},
     // Misc (TODO: Organize this)
     {"showSearchTabsBtn", IDS_SETTINGS_TABS_SEARCH_SHOW},
     {"onExitPageTitle", IDS_SETTINGS_BRAVE_ON_EXIT},
     {"braveDefaultExtensions", IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE},
     {"webTorrentEnabledDesc", IDS_SETTINGS_WEBTORRENT_ENABLED_DESC},
-    {"defaultEthereumWalletDesc", IDS_SETTINGS_DEFAULT_ETHEREUM_WALLET_DESC},
-    {"defaultSolanaWalletDesc", IDS_SETTINGS_DEFAULT_SOLANA_WALLET_DESC},
-    {"defaultBaseCurrencyDesc", IDS_SETTINGS_DEFAULT_BASE_CURRENCY_DESC},
-    {"defaultBaseCryptocurrencyDesc",
-     IDS_SETTINGS_DEFAULT_BASE_CRYPTOCURRENCY_DESC},
-    {"showBravewalletIconOnToolbar",
-     IDS_SETTINGS_SHOW_BRAVE_WALLET_ICON_ON_TOOLBAR},
-    {"enableNftDiscoveryLabel", IDS_SETTINGS_ENABLE_NFT_DISCOVERY_LABEL},
-    {"enableNftDiscoveryDesc", IDS_SETTINGS_ENABLE_NFT_DISCOVERY_DESC},
-    {"showBravewalletTestNetworks",
-     IDS_SETTINGS_SHOW_BRAVE_WALLET_TEST_NETWORKS},
-    {"autoLockMinutes", IDS_SETTINGS_AUTO_LOCK_MINUTES},
-    {"autoLockMinutesDesc", IDS_SETTINGS_AUTO_LOCK_MINUTES_DESC},
     {"googleLoginForExtensionsDesc", IDS_SETTINGS_GOOGLE_LOGIN_FOR_EXTENSIONS},
     {"hangoutsEnabledDesc", IDS_SETTINGS_HANGOUTS_ENABLED_DESC},
     {"mediaRouterEnabledDesc", IDS_SETTINGS_MEDIA_ROUTER_ENABLED_DESC},
     {"resolveUnstoppableDomainsDesc",
      IDS_SETTINGS_RESOLVE_UNSTOPPABLE_DOMAINS_DESC},
-    {"resolveENSDesc", IDS_SETTINGS_RESOLVE_ENS_DESC},
-    {"ensOffchainLookupTitle", IDS_SETTINGS_ENABLE_ENS_OFFCHAIN_LOOKUP_TITLE},
-    {"resolveSnsDesc", IDS_SETTINGS_RESOLVE_SNS_DESC},
     {"resolveIPFSURLDesc", IDS_SETTINGS_RESOLVE_IPFS_URLS_DESC},
     {"ipfsPublicGatewayDesc", IDS_SETTINGS_IPFS_PUBLIC_GATEWAY_DESC},
     {"ipfsNftPublicGatewayDesc", IDS_SETTINGS_IPFS_PUBLIC_NFT_GATEWAY_DESC},
@@ -510,7 +467,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"p3aEnableTitle", IDS_BRAVE_P3A_ENABLE_SETTING},
     {"p3aEnabledDesc", IDS_BRAVE_P3A_ENABLE_SETTING_SUBITEM},
     {"siteSettings", IDS_SETTINGS_SITE_AND_SHIELDS_SETTINGS},
-    {"resetRewardsData", IDS_SETTINGS_RESET_REWARDS_DATA},
     {"showFullUrls", IDS_SETTINGS_ALWAYS_SHOW_FULL_URLS},
     {"ipfsIpnsKeysLinkTitle", IDS_SETTINGS_IPNS_KEYS_EDITOR_LINK},
     {"ipfsIpnsKeysLinkTitleDesc", IDS_SETTINGS_IPNS_KEYS_EDITOR_LINK_DESC},
@@ -540,83 +496,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
     {"ipfsKeyRemove", IDS_SETTINGS_IPNS_KEY_REMOVE_ITEM},
     {"ipfsKeyExportError", IDS_SETTINGS_IPNS_KEYS_EXPORT_ERROR},
     {"ipfsLocalNodeWarning", IDS_IPFS_LOCAL_NODE_WARNING},
-    {"clearPinnedNft", IDS_SETTINGS_CLEAR_PINNED_NFT},
-    {"clearPinnedNftDesc", IDS_SETTINGS_CLEAR_PINNED_NFT_DESC},
-    {"resetWallet", IDS_SETTINGS_WALLET_RESET},
-    {"resetTransactionInfo", IDS_SETTINGS_WALLET_RESET_TRANSACTION_INFO},
-    {"resetTransactionInfoDesc",
-     IDS_SETTINGS_WALLET_RESET_TRANSACTION_INFO_DESC},
-    {"enableNftPinning", IDS_SETTINGS_WALLET_ENABLE_NFT_PINNING},
-    {"enableNftPinningDesc", IDS_SETTINGS_WALLET_ENABLE_NFT_PINNING_DESC},
-    {"walletResetConfirmation", IDS_SETTINGS_WALLET_RESET_CONFIRMATION},
-    {"walletResetTransactionInfoConfirmation",
-     IDS_SETTINGS_WALLET_RESET_TRANSACTION_INFO_CONFIRMATION},
-    {"walletResetConfirmed", IDS_SETTINGS_WALLET_RESET_CONFIRMED},
-    {"walletResetTransactionInfoConfirmed",
-     IDS_SETTINGS_WALLET_RESET_TRANSACTION_INFO_CONFIRMED},
-    {"walletClearPinnedNftConfirmed",
-     IDS_SETTINGS_WALLET_CLEAR_PINNED_NFT_INFO_CONFIRMED},
-    {"walletNetworksLinkTitle", IDS_SETTINGS_WALLET_NETWORKS_ITEM},
-    {"walletAddNetworkDialogTitle", IDS_SETTINGS_WALLET_ADD_NETWORK_TITLE},
-    {"walletAddNetworkInvalidURLInput",
-     IDS_SETTINGS_WALLET_ADD_NETWORK_INVALID_ADDRESS_ERROR},
-    {"walletNetworkAdd", IDS_SETTINGS_WALLET_ADD_NETWORK},
-    {"walletEthNetworksListTitle", IDS_SETTINGS_WALLET_ETH_NETWORK_LIST_TITLE},
-    {"walletFilNetworksListTitle", IDS_SETTINGS_WALLET_FIL_NETWORK_LIST_TITLE},
-    {"walletSolNetworksListTitle", IDS_SETTINGS_WALLET_SOL_NETWORK_LIST_TITLE},
-    {"walletBtcNetworksListTitle", IDS_SETTINGS_WALLET_BTC_NETWORK_LIST_TITLE},
-    {"walletNetworksItemDesc", IDS_SETTINGS_WALLET_NETWORKS_ITEM_DESC},
-    {"walletNetworksError", IDS_SETTINGS_WALLET_NETWORKS_ERROR},
-    {"walletDeleteNetworkConfirmation",
-     IDS_SETTINGS_WALLET_DELETE_NETWORK_CONFIRMATION},
-    {"walletDefaultNetworkIsAlwaysVisible",
-     IDS_SETTINGS_WALLET_DEFAULT_NETWORK_IS_ALWAYS_VISIBLE},
-    {"walletShowHideNetwork", IDS_SETTINGS_WALLET_SHOW_HIDE_NETWORK},
-    {"walletResetNetworkConfirmation",
-     IDS_SETTINGS_WALLET_RESET_NETWORK_CONFIRMATION},
-    {"walletAddNetworkDialogChainIdTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_CHAIN_ID_TITLE},
-    {"walletAddNetworkDialogChainIdPlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_CHAIN_ID_PLACEHOLDER},
-    {"walletAddNetworkDialogSearchForNetworkLabel",
-     IDS_SETTINGS_WALLET_NETWORKS_SEARCH_FOR_NETWORK_LABEL},
-    {"walletAddNetworkDialogSearchForNetworkPlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_SEARCH_FOR_NETWORK_PLACEHOLDER},
-    {"walletAddNetworkDialogChainNameTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_CHAIN_NAME_TITLE},
-    {"walletAddNetworkDialogChainNamePlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_CHAIN_NAME_PLACEHOLDER},
-    {"walletAddNetworkDialogCurrencyNameTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_NAME_TITLE},
-    {"walletAddNetworkDialogCurrencyNamePlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_NAME_PLACEHOLDER},
-    {"walletAddNetworkDialogCurrencySymbolTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_SYMBOL_TITLE},
-    {"walletAddNetworkDialogCurrencySymbolPlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_SYMBOL_PLACEHOLDER},
-    {"walletAddNetworkDialogCurrencyDecimalsTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_DECIMALS_TITLE},
-    {"walletAddNetworkDialogCurrencyDecimalsPlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_CURRENCY_DECIMALS_PLACEHOLDER},
-    {"walletAddNetworkDialogRpcTitle", IDS_SETTINGS_WALLET_NETWORKS_RPC_TITLE},
-    {"walletAddNetworkDialogUrlPlaceholder",
-     IDS_SETTINGS_WALLET_NETWORKS_URL_PLACEHOLDER},
-    {"walletAddNetworkDialogIconsTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_ICONS_TITLE},
-    {"walletAddNetworkDialogBlocksTitle",
-     IDS_SETTINGS_WALLET_NETWORKS_BLOCKS_TITLE},
-    {"walletAddNetworkMandarotyFieldError",
-     IDS_SETTINGS_WALLET_NETWORKS_MANDATORY_ERROR},
-    {"walletAddNetworkInvalidChainId",
-     IDS_SETTINGS_WALLET_NETWORKS_CHAID_ID_ERROR},
-    {"walletAddNetworkDialogFillNativeCurrencyInfo",
-     IDS_SETTINGS_WALLET_NETWORKS_NATIVE_CURRENCY_ERROR},
-    {"walletAddNetworkDialogReplaceNetwork",
-     IDS_SETTINGS_WALLET_NETWORKS_REPLACE},
-    {"walletNetworkEdit", IDS_BRAVE_WALLET_NETWORK_EDIT},
-    {"walletNetworkRemove", IDS_BRAVE_WALLET_NETWORK_REMOVE},
-    {"walletNetworkReset", IDS_BRAVE_WALLET_NETWORK_RESET},
-    {"walletNetworkSetAsDefault", IDS_BRAVE_WALLET_NETWORK_SET_AS_DEFAULT},
     {"adblockContentFilteringLabel", IDS_BRAVE_ADBLOCK_CONTENT_FILTERING_LABEL},
     {"adblockAddCustomFiltersListsLabel",
      IDS_BRAVE_ADBLOCK_ADD_CUSTOM_FILTERS_LISTS_LABEL},
@@ -681,21 +560,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
   html_source->AddString("debounceLearnMoreURL", kDebounceLearnMoreUrl);
   html_source->AddString("enableNftDiscoveryLearnMoreURL",
                          kEnableNftDiscoveryLearnMoreUrl);
-  auto confirmation_phrase = brave_l10n::GetLocalizedResourceUTF16String(
-      IDS_SETTINGS_WALLET_RESET_CONFIRMATION_PHRASE);
-  html_source->AddString("walletResetConfirmationPhrase", confirmation_phrase);
-  auto confirmation_text = l10n_util::GetStringFUTF16(
-      IDS_SETTINGS_WALLET_RESET_CONFIRMATION, confirmation_phrase);
-  html_source->AddString("walletResetConfirmation", confirmation_text);
-  auto reset_tx_confirmation_text = l10n_util::GetStringFUTF16(
-      IDS_SETTINGS_WALLET_RESET_TRANSACTION_INFO_CONFIRMATION,
-      confirmation_phrase);
-  html_source->AddString("walletResetTransactionInfoConfirmation",
-                         reset_tx_confirmation_text);
-  auto clear_pinned_nft_confirmation = l10n_util::GetStringFUTF16(
-      IDS_SETTINGS_WALLET_CLEAR_PINNED_NFT_CONFIRMATION, confirmation_phrase);
-  html_source->AddString("walletClearPinnedNftConfirmation",
-                         clear_pinned_nft_confirmation);
+ 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   html_source->AddString("webDiscoveryLearnMoreURL", kWebDiscoveryLearnMoreUrl);
 #endif
@@ -707,9 +572,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
               GURL(extension_urls::GetWebstoreExtensionsCategoryURL()),
               g_browser_process->GetApplicationLocale())
               .spec()));
-  html_source->AddString("autoLockMinutesValue",
-                         std::to_string(profile->GetPrefs()->GetInteger(
-                             kBraveWalletAutoLockMinutes)));
   html_source->AddString(
       "ipfsStorageMaxValue",
       std::to_string(profile->GetPrefs()->GetInteger(kIpfsStorageMax)));
@@ -723,15 +585,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
                              IDS_SETTINGS_RESOLVE_UNSTOPPABLE_DOMAINS_SUB_DESC,
                              kUnstoppableDomainsLearnMoreURL));
 
-  html_source->AddString(
-      "ensOffchainLookupDesc",
-      l10n_util::GetStringFUTF16(IDS_SETTINGS_ENABLE_ENS_OFFCHAIN_LOOKUP_DESC,
-                                 kEnsOffchainLookupLearnMoreURL));
 
-  html_source->AddString("braveShieldsDefaultsSectionDescription2",
-                         l10n_util::GetStringFUTF16(
-                             IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2,
-                             kBraveUIRewardsURL));
 }  // NOLINT(readability/fn_size)
 
 void BraveAddResources(content::WebUIDataSource* html_source,
