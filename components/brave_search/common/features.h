@@ -13,9 +13,9 @@ namespace brave_search {
 namespace features {
 
 inline constexpr char kBraveSearchDefaultAPIDailyLimitName[] =
-    "BraveSearchDefaultAPIDailyLimit";
+    "AIWizeSearchDefaultAPIDailyLimit";
 inline constexpr char kBraveSearchDefaultAPITotalLimitName[] =
-    "BraveSearchDefaultAPITotalLimit";
+    "AIWizeSearchDefaultAPITotalLimit";
 
 BASE_DECLARE_FEATURE(kBraveSearchDefaultAPIFeature);
 extern const base::FeatureParam<int> kBraveSearchDefaultAPIDailyLimit;

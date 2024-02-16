@@ -13,7 +13,7 @@ class PrefService;
 namespace sidebar {
 namespace p3a {
 
-inline constexpr char kSidebarEnabledHistogramName[] = "Brave.Sidebar.Enabled";
+inline constexpr char kSidebarEnabledHistogramName[] = "AIWize.Sidebar.Enabled";
 
 class SidebarP3A {
  public:

@@ -91,7 +91,7 @@ std::tuple<base::flat_map<std::string, std::string>,
 ParseFromResource(int resource_id) {
   // TODO(AndriusA): insert trace event here
   SCOPED_UMA_HISTOGRAM_TIMER(
-      "Brave.Savings.NamedThirdPartyRegistry.LoadTimeMS");
+      "AIWize.Savings.NamedThirdPartyRegistry.LoadTimeMS");
   auto& resource_bundle = ui::ResourceBundle::GetSharedInstance();
   std::string data_resource =
       resource_bundle.LoadDataResourceString(resource_id);

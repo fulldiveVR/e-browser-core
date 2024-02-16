@@ -60,7 +60,7 @@ void HistogramsBraveizer::DoHistogramBravetization(
   DCHECK(histogram_name);
   if (strcmp("Bookmarks.Count.OnProfileLoad", histogram_name) == 0) {
     p3a_utils::RecordToHistogramBucket(
-        "Brave.Core.BookmarksCountOnProfileLoad.2",
+        "AIWize.Core.BookmarksCountOnProfileLoad.2",
         {5, 20, 100, 500, 1000, 5000, 10000}, sample);
     return;
   }
@@ -81,7 +81,7 @@ void HistogramsBraveizer::DoHistogramBravetization(
       default:
         NOTREACHED();
     }
-    UMA_HISTOGRAM_BOOLEAN("Brave.Core.IsDefault", answer);
+    UMA_HISTOGRAM_BOOLEAN("AIWize.Core.IsDefault", answer);
   }
 
   if (strcmp("Extensions.LoadExtension", histogram_name) == 0) {
@@ -93,7 +93,7 @@ void HistogramsBraveizer::DoHistogramBravetization(
     else if (sample >= 5)
       answer = 3;
 
-    UMA_HISTOGRAM_EXACT_LINEAR("Brave.Core.NumberOfExtensions", answer, 3);
+    UMA_HISTOGRAM_EXACT_LINEAR("AIWize.Core.NumberOfExtensions", answer, 3);
     return;
   }
 
@@ -112,7 +112,7 @@ void HistogramsBraveizer::DoHistogramBravetization(
       answer = 4;
     }
 
-    UMA_HISTOGRAM_EXACT_LINEAR("Brave.Core.TabCount", answer, 4);
+    UMA_HISTOGRAM_EXACT_LINEAR("AIWize.Core.TabCount", answer, 4);
     return;
   }
 
@@ -128,7 +128,7 @@ void HistogramsBraveizer::DoHistogramBravetization(
       answer = 3;
     }
 
-    UMA_HISTOGRAM_EXACT_LINEAR("Brave.Core.WindowCount.2", answer, 3);
+    UMA_HISTOGRAM_EXACT_LINEAR("AIWize.Core.WindowCount.2", answer, 3);
     return;
   }
 }

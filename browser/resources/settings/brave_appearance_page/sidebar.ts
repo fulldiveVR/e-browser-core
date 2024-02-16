@@ -43,7 +43,7 @@ export class SettingsBraveAppearanceSidebarElement extends SettingsBraveAppearan
 
   static get observers(){
     return [
-      'onShowOptionChanged_(prefs.brave.sidebar.sidebar_show_option.value)',
+      'onShowOptionChanged_(prefs.aiwize.sidebar.sidebar_show_option.value)',
     ]
   }
 
@@ -55,7 +55,7 @@ export class SettingsBraveAppearanceSidebarElement extends SettingsBraveAppearan
   private sidebarShowEnabledLabel_: string
 
   private onShowOptionChanged_() {
-    this.sidebarShowEnabledLabel_ = (this.get('prefs.brave.sidebar.sidebar_show_option.value') === 3)
+    this.sidebarShowEnabledLabel_ = (this.get('prefs.aiwize.sidebar.sidebar_show_option.value') === 3)
         ? this.i18n('appearanceSettingsSidebarDisabledDesc')
         : this.i18n('appearanceSettingsSidebarEnabledDesc')
   }

@@ -15,11 +15,11 @@ namespace request_otr {
 namespace p3a {
 
 inline constexpr char kSessionCountHistogramName[] =
-    "Brave.RequestOTR.SessionCount";
+    "AIWize.RequestOTR.SessionCount";
 inline constexpr char kInterstitialDurationHistogramName[] =
-    "Brave.RequestOTR.InterstitialDuration";
+    "AIWize.RequestOTR.InterstitialDuration";
 inline constexpr char kInterstitialShownHistogramName[] =
-    "Brave.RequestOTR.InterstitialShown";
+    "AIWize.RequestOTR.InterstitialShown";
 
 void RegisterProfilePrefs(PrefRegistrySimple* registry);
 

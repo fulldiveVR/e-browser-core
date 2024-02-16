@@ -26,12 +26,12 @@ class NoDestructor;
 
 // Exposed for tests.
 inline constexpr char kDefaultSearchEngineMetric[] =
-    "Brave.Search.DefaultEngine.4";
-inline constexpr char kSwitchSearchEngineMetric[] = "Brave.Search.SwitchEngine";
+    "AIWize.Search.DefaultEngine.4";
+inline constexpr char kSwitchSearchEngineMetric[] = "AIWize.Search.SwitchEngine";
 inline constexpr char kWebDiscoveryEnabledMetric[] =
-    "Brave.Search.WebDiscoveryEnabled";
+    "AIWize.Search.WebDiscoveryEnabled";
 inline constexpr char kWebDiscoveryAndAdsMetric[] =
-    "Brave.Search.WebDiscoveryAndAds";
+    "AIWize.Search.WebDiscoveryAndAds";
 
 // Note: append-only enumeration! Never remove any existing values, as this enum
 // is used to bucket a UMA histogram, and removing values breaks that.

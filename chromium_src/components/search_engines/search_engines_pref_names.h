@@ -11,15 +11,15 @@
 namespace prefs {
 
 inline constexpr char kDefaultSearchProviderByExtension[] =
-    "brave.default_search_provider_by_extension";
+    "aiwize.default_search_provider_by_extension";
 inline constexpr char kAddOpenSearchEngines[] =
-    "brave.other_search_engines_enabled";
+    "aiwize.other_search_engines_enabled";
 inline constexpr char kBraveDefaultSearchVersion[] =
-    "brave.search.default_version";
+    "aiwize.search.default_version";
 inline constexpr char kSyncedDefaultPrivateSearchProviderGUID[] =
-    "brave.default_private_search_provider_guid";
+    "aiwize.default_private_search_provider_guid";
 inline constexpr char kSyncedDefaultPrivateSearchProviderData[] =
-    "brave.default_private_search_provider_data";
+    "aiwize.default_private_search_provider_data";
 
 }  // namespace prefs
 

@@ -4,7 +4,7 @@
   <div class="settings-box">
     <div class="label flex">$i18n{privateSearchExplanation}</div>
     <settings-dropdown-menu
-      pref="{{prefs.brave.default_private_search_provider_guid}}"
+      pref="{{prefs.aiwize.default_private_search_provider_guid}}"
       menu-options="[[privateSearchEngines_]]">
     </settings-dropdown-menu>
   </div>
@@ -20,7 +20,7 @@
 <if expr="enable_extensions">
 <settings-toggle-button id="webDiscoveryEnabled"
     class="cr-row"
-    pref="{{prefs.brave.web_discovery_enabled}}"
+    pref="{{prefs.aiwize.web_discovery_enabled}}"
     label="$i18n{braveWebDiscoveryLabel}"
     sub-label="$i18n{braveWebDiscoverySubLabel}"
     learn-more-url="$i18n{webDiscoveryLearnMoreURL}">
@@ -28,7 +28,7 @@
 </if>
 <settings-toggle-button id="otherSearchEnginesEnabled"
     class="cr-row"
-    pref="{{prefs.brave.other_search_engines_enabled}}"
+    pref="{{prefs.aiwize.other_search_engines_enabled}}"
     label="$i18n{otherSearchEnginesControlLabel}"
     sub-label="$i18n{otherSearchEnginesControlDesc}">
 </settings-toggle-button>

@@ -14,7 +14,7 @@ import {BraveLeoAssistantBrowserProxy, BraveLeoAssistantBrowserProxyImpl, Model}
   from './brave_leo_assistant_browser_proxy.js'
 import 'chrome://resources/brave/leo.bundle.js'
 
-const MODEL_PREF_PATH = 'brave.ai_chat.default_model_key'
+const MODEL_PREF_PATH = 'aiwize.ai_chat.default_model_key'
 
 const BraveLeoAssistantPageBase =
   WebUiListenerMixin(I18nMixin(PrefsMixin(PolymerElement)))

@@ -165,7 +165,7 @@ void DistillPage(const GURL& url,
 
   auto distill = [](const GURL& url, std::string data,
                     std::unique_ptr<Rewriter> rewriter) -> Result {
-    SCOPED_UMA_HISTOGRAM_TIMER("Brave.Speedreader.Distill");
+    SCOPED_UMA_HISTOGRAM_TIMER("AIWize.Speedreader.Distill");
     int written = rewriter->Write(data.c_str(), data.length());
     // Error occurred
     if (written != 0) {

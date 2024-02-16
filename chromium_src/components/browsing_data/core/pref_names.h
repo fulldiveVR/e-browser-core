@@ -27,9 +27,9 @@ inline constexpr char kDeleteHostedAppsDataOnExit[] =
     "browser.clear_data.hosted_apps_data_on_exit";
 inline constexpr char kDeleteSiteSettingsOnExit[] =
     "browser.clear_data.site_settings_on_exit";
-inline constexpr char kDeleteBraveLeoHistory[] = "browser.clear_data.brave_leo";
+inline constexpr char kDeleteBraveLeoHistory[] = "browser.clear_data.aiwize_chat";
 inline constexpr char kDeleteBraveLeoHistoryOnExit[] =
-    "browser.clear_data.brave_leo_on_exit";
+    "browser.clear_data.aiwize_chat_on_exit";
 
 }  // namespace prefs
 

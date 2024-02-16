@@ -34,7 +34,7 @@ constexpr std::array<uint64_t, 7> kBandwidthSavingsBuckets{
 };
 
 constexpr char kSavingsDailyUMAHistogramName[] =
-    "Brave.Savings.BandwidthSavingsMB";
+    "AIWize.Savings.BandwidthSavingsMB";
 
 }  // namespace
 

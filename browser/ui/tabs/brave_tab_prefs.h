@@ -13,18 +13,18 @@ namespace brave_tabs {
 
 enum TabHoverMode { TOOLTIP = 0, CARD = 1, CARD_WITH_PREVIEW = 2 };
 
-inline constexpr char kTabHoverMode[] = "brave.tabs.hover_mode";
+inline constexpr char kTabHoverMode[] = "aiwize.tabs.hover_mode";
 
 inline constexpr char kVerticalTabsEnabled[] =
-    "brave.tabs.vertical_tabs_enabled";
+    "aiwize.tabs.vertical_tabs_enabled";
 inline constexpr char kVerticalTabsCollapsed[] =
-    "brave.tabs.vertical_tabs_collapsed";
+    "aiwize.tabs.vertical_tabs_collapsed";
 inline constexpr char kVerticalTabsShowTitleOnWindow[] =
-    "brave.tabs.vertical_tabs_show_title_on_window";
+    "aiwize.tabs.vertical_tabs_show_title_on_window";
 inline constexpr char kVerticalTabsFloatingEnabled[] =
-    "brave.tabs.vertical_tabs_floating_enabled";
+    "aiwize.tabs.vertical_tabs_floating_enabled";
 inline constexpr char kVerticalTabsExpandedWidth[] =
-    "brave.tabs.vertical_tabs_expanded_width";
+    "aiwize.tabs.vertical_tabs_expanded_width";
 
 void RegisterBraveProfilePrefs(PrefRegistrySimple* registry);
 

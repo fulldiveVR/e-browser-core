@@ -16,8 +16,8 @@ class ISOWeeklyStorage;
 
 namespace misc_metrics {
 
-inline constexpr char kWeeklyUseHistogramName[] = "Brave.Core.WeeklyUsage";
-inline constexpr char kProfileCountHistogramName[] = "Brave.Core.ProfileCount";
+inline constexpr char kWeeklyUseHistogramName[] = "AIWize.Core.WeeklyUsage";
+inline constexpr char kProfileCountHistogramName[] = "AIWize.Core.ProfileCount";
 
 class GeneralBrowserUsage {
  public:

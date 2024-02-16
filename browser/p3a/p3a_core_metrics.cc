@@ -112,13 +112,13 @@ void BraveWindowTracker::UpdateP3AValues() const {
     bucket = WindowUsageStats::kEverUsed;
   }
 
-  UMA_HISTOGRAM_ENUMERATION("Brave.Core.LastTimeIncognitoUsed", bucket,
+  UMA_HISTOGRAM_ENUMERATION("AIWize.Core.LastTimeIncognitoUsed", bucket,
                             WindowUsageStats::kSize);
 
   // Record if the TOR window was ever used.
   // 0 -> Yes; 1 -> No.
   const int tor_used = !local_state_->GetBoolean(kTorUsed);
-  UMA_HISTOGRAM_EXACT_LINEAR("Brave.Core.TorEverUsed", tor_used, 1);
+  UMA_HISTOGRAM_EXACT_LINEAR("AIWize.Core.TorEverUsed", tor_used, 1);
 }
 
 }  // namespace brave

@@ -68,6 +68,6 @@ void RecordImporterP3A(importer::ImporterType type) {
       break;
   }
 
-  UMA_HISTOGRAM_ENUMERATION("Brave.Importer.ImporterSource.2", metric,
+  UMA_HISTOGRAM_ENUMERATION("AIWize.Importer.ImporterSource.2", metric,
                             ImporterSource::kSize);
 }

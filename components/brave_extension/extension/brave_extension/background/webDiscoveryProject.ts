@@ -36,7 +36,7 @@ if (!chrome.extension.inIncognitoContext) {
   })
   window.WDP = APP
 
-  const WEB_DISCOVERY_PREF_KEY = 'brave.web_discovery_enabled'
+  const WEB_DISCOVERY_PREF_KEY = 'aiwize.web_discovery_enabled'
 
   const toggleWebDiscovery = (pref?: chrome.settingsPrivate.PrefObject) => {
     if (pref && pref.type === chrome.settingsPrivate.PrefType.BOOLEAN) {

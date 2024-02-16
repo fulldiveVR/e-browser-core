@@ -28,10 +28,10 @@ namespace {
 
 static constexpr char kCollectionEndpoint[] = "https://fl.brave.com/";
 
-constexpr char kLastSentSlotPrefName[] = "brave.federated.last_checked_slot";
-constexpr char kCollectionIdPrefName[] = "brave.federated.collection_id";
+constexpr char kLastSentSlotPrefName[] = "aiwize.federated.last_checked_slot";
+constexpr char kCollectionIdPrefName[] = "aiwize.federated.collection_id";
 constexpr char kCollectionIdExpirationPrefName[] =
-    "brave.federated.collection_id_expiration";
+    "aiwize.federated.collection_id_expiration";
 
 constexpr int kLastSentSlotInitValue = -1;
 

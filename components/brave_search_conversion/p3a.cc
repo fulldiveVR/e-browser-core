@@ -33,7 +33,7 @@ const char kBannerCTriggeredKey[] = "banner_c.triggered";
 const char kBannerDShownKey[] = "banner_d.shown";
 const char kBannerDTriggeredKey[] = "banner_d.triggered";
 
-const char kSwitchSearchEngineMetric[] = "Brave.Search.SwitchEngine";
+const char kSwitchSearchEngineMetric[] = "AIWize.Search.SwitchEngine";
 
 const int kMaxStoredQueryCount = 41;
 const int kQueriesBeforeChurnBuckets[] = {0, 1, 2, 5, 10, 20, 40};

@@ -46,7 +46,7 @@ void RecordIPFSCompanionInstalled(extensions::ExtensionRegistry* registry) {
   DCHECK(registry);
   bool installed =
       registry->enabled_extensions().Contains(ipfs_companion_extension_id);
-  UMA_HISTOGRAM_BOOLEAN("Brave.IPFS.IPFSCompanionInstalled", installed);
+  UMA_HISTOGRAM_BOOLEAN("AIWize.IPFS.IPFSCompanionInstalled", installed);
 }
 #endif
 }  // namespace

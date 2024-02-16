@@ -52,11 +52,11 @@ std::string GetDomain(const std::string& prefix,
 std::string GetEnvironmentForDomain(const std::string& domain) {
   auto base_domain = net::registry_controlled_domains::GetDomainAndRegistry(
       domain, net::registry_controlled_domains::INCLUDE_PRIVATE_REGISTRIES);
-  if (base_domain == "brave.com")
+  if (base_domain == "aiwize.com")
     return kEnvProduction;
-  if (base_domain == "bravesoftware.com")
+  if (base_domain == "stage.aiwize.com")
     return kEnvStaging;
-  if (base_domain == "brave.software")
+  if (base_domain == "dev.aiwize.com")
     return kEnvDevelopment;
   return kEnvProduction;
 }

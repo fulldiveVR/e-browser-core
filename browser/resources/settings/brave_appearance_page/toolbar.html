@@ -46,48 +46,48 @@
 </template>
 <settings-toggle-button
   class="cr-row"
-  pref="{{prefs.brave.show_bookmarks_button}}"
+  pref="{{prefs.aiwize.show_bookmarks_button}}"
   label="$i18n{appearanceSettingsShowBookmarksButton}">
 </settings-toggle-button>
 <settings-brave-appearance-bookmark-bar prefs="{{prefs}}">
 </settings-brave-appearance-bookmark-bar>
 <settings-toggle-button
   class="cr-row"
-  pref="{{prefs.brave.today.should_show_toolbar_button}}"
+  pref="{{prefs.aiwize.today.should_show_toolbar_button}}"
   label="$i18n{appearanceSettingsShowBraveNewsButtonLabel}">
 </settings-toggle-button>
 <settings-toggle-button
   class="cr-row"
-  pref="{{prefs.brave.show_side_panel_button}}"
+  pref="{{prefs.aiwize.show_side_panel_button}}"
   label="$i18n{appearanceSettingsShowSidebarButton}">
 </settings-toggle-button>
 <settings-toggle-button
   class="cr-row"
-  pref="{{prefs.brave.autocomplete_enabled}}"
+  pref="{{prefs.aiwize.autocomplete_enabled}}"
   label="$i18n{appearanceSettingsShowAutocompleteInAddressBar}">
 </settings-toggle-button>
 <template
   is="dom-if"
-  if="[[prefs.brave.autocomplete_enabled.value]]">
+  if="[[prefs.aiwize.autocomplete_enabled.value]]">
   <div class="list-frame vertical-list">
     <settings-checkbox
       class="cr-row list-item"
-      pref="{{prefs.brave.top_site_suggestions_enabled}}"
+      pref="{{prefs.aiwize.top_site_suggestions_enabled}}"
       label="$i18n{appearanceSettingsUseTopSiteSuggestions}">
     </settings-checkbox>
     <settings-checkbox
       class="cr-row list-item"
-      pref="{{prefs.brave.omnibox.history_suggestions_enabled}}"
+      pref="{{prefs.aiwize.omnibox.history_suggestions_enabled}}"
       label="$i18n{appearanceSettingsUseHistorySuggestions}">
     </settings-checkbox>
     <settings-checkbox
       class="cr-row list-item"
-      pref="{{prefs.brave.omnibox.bookmark_suggestions_enabled}}"
+      pref="{{prefs.aiwize.omnibox.bookmark_suggestions_enabled}}"
       label="$i18n{appearanceSettingsUseBookmarkSuggestions}">
     </settings-checkbox>
     <template is="dom-if" if="[[showLeoAssistant_()]]">
       <settings-checkbox class="cr-row list-item"
-        pref="{{prefs.brave.ai_chat.autocomplete_provider_enabled}}"
+        pref="{{prefs.aiwize.ai_chat.autocomplete_provider_enabled}}"
         label="$i18n{appearanceSettingsUseLeoSuggestions}">
       </settings-checkbox>
     </template>
@@ -95,7 +95,7 @@
 </template>
 <settings-toggle-button
   class="cr-row"
-  pref="{{prefs.brave.location_bar_is_wide}}"
+  pref="{{prefs.aiwize.location_bar_is_wide}}"
   label="$i18n{appearanceSettingsLocationBarIsWide}">
 </settings-toggle-button>
 <settings-toggle-button

@@ -10,7 +10,7 @@ import * as gridSitesState from '../../../brave_new_tab_ui/state/gridSitesState'
 
 const topSites: chrome.topSites.MostVisitedURL[] = [{
   url: 'https://aiwize.com',
-  title: 'brave'
+  title: 'aiwize'
 }, {
   url: 'https://cezaraugusto.net',
   title: 'cezar augusto'

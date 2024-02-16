@@ -18,19 +18,19 @@ class PrefService;
 
 namespace ai_chat {
 
-inline constexpr char kChatCountHistogramName[] = "Brave.AIChat.ChatCount";
+inline constexpr char kChatCountHistogramName[] = "AIWize.AIChat.ChatCount";
 inline constexpr char kAvgPromptCountHistogramName[] =
-    "Brave.AIChat.AvgPromptCount";
-inline constexpr char kEnabledHistogramName[] = "Brave.AIChat.Enabled.2";
-inline constexpr char kUsageDailyHistogramName[] = "Brave.AIChat.UsageDaily.2";
+    "AIWize.AIChat.AvgPromptCount";
+inline constexpr char kEnabledHistogramName[] = "AIWize.AIChat.Enabled.2";
+inline constexpr char kUsageDailyHistogramName[] = "AIWize.AIChat.UsageDaily.2";
 inline constexpr char kUsageMonthlyHistogramName[] =
-    "Brave.AIChat.UsageMonthly";
+    "AIWize.AIChat.UsageMonthly";
 inline constexpr char kOmniboxWeekCompareHistogramName[] =
-    "Brave.AIChat.OmniboxWeekCompare";
+    "AIWize.AIChat.OmniboxWeekCompare";
 inline constexpr char kOmniboxOpensHistogramName[] =
-    "Brave.AIChat.OmniboxOpens";
+    "AIWize.AIChat.OmniboxOpens";
 inline constexpr char kAcquisitionSourceHistogramName[] =
-    "Brave.AIChat.AcquisitionSource";
+    "AIWize.AIChat.AcquisitionSource";
 
 enum class AcquisitionSource {
   kOmnibox = 0,

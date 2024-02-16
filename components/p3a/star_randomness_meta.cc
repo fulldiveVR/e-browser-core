@@ -31,16 +31,16 @@ namespace p3a {
 
 namespace {
 
-constexpr char kCurrentPKPrefName[] = "brave.p3a.current_pk";  // DEPRECATED
+constexpr char kCurrentPKPrefName[] = "aiwize.p3a.current_pk";  // DEPRECATED
 constexpr char kCurrentEpochPrefName[] =
-    "brave.p3a.current_epoch";  // DEPRECATED
+    "aiwize.p3a.current_epoch";  // DEPRECATED
 constexpr char kNextEpochTimePrefName[] =
-    "brave.p3a.next_epoch_time";  // DEPRECATED
+    "aiwize.p3a.next_epoch_time";  // DEPRECATED
 constexpr char kApprovedCertFPPrefName[] =
-    "brave.p3a.approved_cert_fp";  // DEPRECATED
+    "aiwize.p3a.approved_cert_fp";  // DEPRECATED
 
 constexpr char kRandomnessMetaDictPrefName[] =
-    "brave.p3a.randomness_meta";  // DEPRECATED
+    "aiwize.p3a.randomness_meta";  // DEPRECATED
 constexpr char kCurrentPKPrefKey[] = "current_pk";
 constexpr char kCurrentEpochPrefKey[] = "current_epoch";
 constexpr char kNextEpochTimePrefKey[] = "next_epoch_time";

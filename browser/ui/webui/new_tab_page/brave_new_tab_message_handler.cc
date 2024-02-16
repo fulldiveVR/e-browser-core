@@ -103,7 +103,7 @@ base::Value::Dict GetPrivatePropertiesDictionary(PrefService* prefs) {
 enum class NTPCustomizeUsage { kNeverOpened, kOpened, kOpenedAndEdited, kSize };
 
 const char kNTPCustomizeUsageStatus[] =
-    "brave.new_tab_page.customize_p3a_usage";
+    "aiwize.new_tab_page.customize_p3a_usage";
 
 }  // namespace
 
@@ -116,7 +116,7 @@ void BraveNewTabMessageHandler::RegisterLocalStatePrefs(
 void BraveNewTabMessageHandler::RecordInitialP3AValues(
     PrefService* local_state) {
   p3a::RecordValueIfGreater<NTPCustomizeUsage>(
-      NTPCustomizeUsage::kNeverOpened, "Brave.NTP.CustomizeUsageStatus",
+      NTPCustomizeUsage::kNeverOpened, "AIWize.NTP.CustomizeUsageStatus",
       kNTPCustomizeUsageStatus, local_state);
 }
 
@@ -316,7 +316,7 @@ void BraveNewTabMessageHandler::HandleSaveNewTabPagePref(
     return;
   }
   p3a::RecordValueIfGreater<NTPCustomizeUsage>(
-      NTPCustomizeUsage::kOpenedAndEdited, "Brave.NTP.CustomizeUsageStatus",
+      NTPCustomizeUsage::kOpenedAndEdited, "AIWize.NTP.CustomizeUsageStatus",
       kNTPCustomizeUsageStatus, g_browser_process->local_state());
   PrefService* prefs = profile_->GetPrefs();
   // Collect args
@@ -474,7 +474,7 @@ void BraveNewTabMessageHandler::HandleCustomizeClicked(
     const base::Value::List& args) {
   AllowJavascript();
   p3a::RecordValueIfGreater<NTPCustomizeUsage>(
-      NTPCustomizeUsage::kOpened, "Brave.NTP.CustomizeUsageStatus",
+      NTPCustomizeUsage::kOpened, "AIWize.NTP.CustomizeUsageStatus",
       kNTPCustomizeUsageStatus, g_browser_process->local_state());
 }
 

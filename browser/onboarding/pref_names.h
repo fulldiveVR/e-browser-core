@@ -9,7 +9,7 @@
 namespace onboarding::prefs {
 
 constexpr char kLastShieldsIconHighlightTime[] =
-    "brave.onboarding.last_shields_icon_highlighted_time";
+    "aiwize.onboarding.last_shields_icon_highlighted_time";
 
 }  // namespace onboarding::prefs
 

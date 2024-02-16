@@ -56,7 +56,7 @@
   </div>
   <settings-toggle-button id="noScriptControlType"
       class="cr-row"
-      pref="{{prefs.brave.no_script_default}}"
+      pref="{{prefs.aiwize.no_script_default}}"
       label="$i18n{noScriptControlLabel}"
       on-settings-boolean-control-change="onNoScriptControlChange_">
   </settings-toggle-button>
@@ -121,12 +121,12 @@
 <div hidden="[[isAdBlockRoute_]]">
   <settings-toggle-button
       class="cr-row"
-      pref="{{prefs.brave.shields.stats_badge_visible}}"
+      pref="{{prefs.aiwize.shields.stats_badge_visible}}"
       label="$i18n{showStatsBlockedBadgeLabel}">
   </settings-toggle-button>
   <settings-toggle-button
     class="cr-row"
-    pref="{{prefs.brave.de_amp.enabled}}"
+    pref="{{prefs.aiwize.de_amp.enabled}}"
     label="$i18n{deAmpSettingLabel}"
     sub-label="$i18n{deAmpSettingSubLabel}"
     learn-more-url="$i18n{deAmpLearnMoreURL}">
@@ -134,7 +134,7 @@
   <template is="dom-if" if="[[isDebounceFeatureEnabled_]]">
     <settings-toggle-button
       class="cr-row"
-      pref="{{prefs.brave.debounce.enabled}}"
+      pref="{{prefs.aiwize.debounce.enabled}}"
       label="$i18n{debounceSettingLabel}"
       sub-label="$i18n{debounceSettingSubLabel}"
       learn-more-url="$i18n{debounceLearnMoreURL}">
@@ -142,7 +142,7 @@
   </template>
   <settings-toggle-button
       class="cr-row"
-      pref="{{prefs.brave.reduce_language}}"
+      pref="{{prefs.aiwize.reduce_language}}"
       label="$i18n{reduceLanguageControlLabel}"
       sub-label="$i18n{reduceLanguageDesc}">
   </settings-toggle-button>

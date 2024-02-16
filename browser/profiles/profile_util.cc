@@ -63,7 +63,7 @@ void RecordSponsoredImagesEnabledP3A(Profile* profile) {
       profile->GetPrefs()->GetBoolean(kNewTabPageShowBackgroundImage) &&
       profile->GetPrefs()->GetBoolean(
           kNewTabPageShowSponsoredImagesBackgroundImage);
-  UMA_HISTOGRAM_BOOLEAN("Brave.NTP.SponsoredImagesEnabled",
+  UMA_HISTOGRAM_BOOLEAN("AIWize.NTP.SponsoredImagesEnabled",
                         is_sponsored_image_enabled);
 }
 

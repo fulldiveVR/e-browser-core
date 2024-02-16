@@ -100,7 +100,7 @@ void RecordP3AHistogram(int screen_number, bool finished) {
   } else {
     kCurrentScreen = std::min(screen_number, kMaxScreens);
   }
-  UMA_HISTOGRAM_EXACT_LINEAR("Brave.Welcome.InteractionStatus", kCurrentScreen,
+  UMA_HISTOGRAM_EXACT_LINEAR("AIWize.Welcome.InteractionStatus", kCurrentScreen,
                              kMaxScreens + 1);
 }
 

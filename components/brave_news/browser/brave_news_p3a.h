@@ -15,22 +15,22 @@ namespace brave_news {
 namespace p3a {
 
 inline constexpr char kWeeklySessionCountHistogramName[] =
-    "Brave.Today.WeeklySessionCount";
+    "AIWize.Today.WeeklySessionCount";
 inline constexpr char kTotalCardViewsHistogramName[] =
-    "Brave.Today.WeeklyTotalCardViews";
+    "AIWize.Today.WeeklyTotalCardViews";
 inline constexpr char kWeeklyDisplayAdsViewedHistogramName[] =
-    "Brave.Today.WeeklyDisplayAdsViewedCount";
+    "AIWize.Today.WeeklyDisplayAdsViewedCount";
 inline constexpr char kDirectFeedsTotalHistogramName[] =
-    "Brave.Today.DirectFeedsTotal";
+    "AIWize.Today.DirectFeedsTotal";
 inline constexpr char kWeeklyAddedDirectFeedsHistogramName[] =
-    "Brave.Today.WeeklyAddedDirectFeedsCount";
+    "AIWize.Today.WeeklyAddedDirectFeedsCount";
 inline constexpr char kLastUsageTimeHistogramName[] =
-    "Brave.Today.LastUsageTime";
+    "AIWize.Today.LastUsageTime";
 inline constexpr char kNewUserReturningHistogramName[] =
-    "Brave.Today.NewUserReturning";
-inline constexpr char kIsEnabledHistogramName[] = "Brave.Today.IsEnabled";
-inline constexpr char kUsageMonthlyHistogramName[] = "Brave.Today.UsageMonthly";
-inline constexpr char kUsageDailyHistogramName[] = "Brave.Today.UsageDaily";
+    "AIWize.Today.NewUserReturning";
+inline constexpr char kIsEnabledHistogramName[] = "AIWize.Today.IsEnabled";
+inline constexpr char kUsageMonthlyHistogramName[] = "AIWize.Today.UsageMonthly";
+inline constexpr char kUsageDailyHistogramName[] = "AIWize.Today.UsageDaily";
 
 void RecordAtInit(PrefService* prefs);
 void RecordAtSessionStart(PrefService* prefs);

@@ -26,8 +26,8 @@ namespace {
 // A dictionary of command_id: [ "shortcut" ]
 // for example:
 // { 1: [ "Control+KeyC", "Control+KeySpace" ] }
-constexpr char kAcceleratorsPrefs[] = "brave.accelerators";
-constexpr char kDefaultAcceleratorsPrefs[] = "brave.default_accelerators";
+constexpr char kAcceleratorsPrefs[] = "aiwize.accelerators";
+constexpr char kDefaultAcceleratorsPrefs[] = "aiwize.default_accelerators";
 
 AcceleratorPrefManager::Accelerators GetAcceleratorsFromPref(
     const std::string& pref,

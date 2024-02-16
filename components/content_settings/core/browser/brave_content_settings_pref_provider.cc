@@ -46,7 +46,7 @@ namespace {
 constexpr char kObsoleteShieldCookies[] =
     "profile.content_settings.exceptions.shieldsCookies";
 constexpr char kBraveShieldsFPSettingsMigration[] =
-    "brave.shields_fp_settings_migration";
+    "aiwize.shields_fp_settings_migration";
 
 const char kExpirationPath[] = "expiration";
 const char kLastModifiedPath[] = "last_modified";
@@ -93,7 +93,7 @@ void BravePrefProvider::CopyPluginSettingsForMigration(PrefService* prefs) {
 
   const auto& plugins =
       prefs->GetDict("profile.content_settings.exceptions.plugins");
-  prefs->SetDict("brave.migrate.content_settings.exceptions.plugins",
+  prefs->SetDict("aiwize.migrate.content_settings.exceptions.plugins",
                  plugins.Clone());
 
   // Upstream won't clean this up for ANDROID, need to do it ourselves.
@@ -142,7 +142,7 @@ void BravePrefProvider::RegisterProfilePrefs(
 
   // migration of obsolete plugin prefs
   registry->RegisterDictionaryPref(
-      "brave.migrate.content_settings.exceptions.plugins");
+      "aiwize.migrate.content_settings.exceptions.plugins");
 
   // This path is no longer registered upstream but we still need it to migrate
   // Shields settings away from ResourceIdentifier.
@@ -226,7 +226,7 @@ void BravePrefProvider::MigrateShieldsSettingsFromResourceIds() {
   BravePrefProvider::CopyPluginSettingsForMigration(prefs_);
 
   const auto& plugins_dict =
-      prefs_->GetDict("brave.migrate.content_settings.exceptions.plugins");
+      prefs_->GetDict("aiwize.migrate.content_settings.exceptions.plugins");
 
   for (const auto [key, value] : plugins_dict) {
     const std::string& patterns_string(key);
@@ -281,7 +281,7 @@ void BravePrefProvider::MigrateShieldsSettingsFromResourceIds() {
   }
 
   // Finally clean this up now that Shields' settings have been migrated.
-  prefs_->ClearPref("brave.migrate.content_settings.exceptions.plugins");
+  prefs_->ClearPref("aiwize.migrate.content_settings.exceptions.plugins");
 }
 
 void BravePrefProvider::MigrateShieldsSettingsFromResourceIdsForOneType(

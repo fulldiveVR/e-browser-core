@@ -16,9 +16,9 @@ class PrefService;
 namespace misc_metrics {
 
 inline constexpr char kLocationNewEntriesHistogramName[] =
-    "Brave.Core.LocationNewEntries";
+    "AIWize.Core.LocationNewEntries";
 inline constexpr char kNewTabMethodsHistogramName[] =
-    "Brave.Core.NewTabMethods";
+    "AIWize.Core.NewTabMethods";
 
 class TabMetrics {
  public:

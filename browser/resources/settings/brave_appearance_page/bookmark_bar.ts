@@ -23,7 +23,7 @@ enum BookmarkBarState {
   NTP = 2,
 }
 
-const kAlwaysShowBookmarBarPrefName = 'brave.always_show_bookmark_bar_on_ntp'
+const kAlwaysShowBookmarBarPrefName = 'aiwize.always_show_bookmark_bar_on_ntp'
 const kShowOnAllTabsPrefName = 'bookmark_bar.show_on_all_tabs'
 
 /**
@@ -78,7 +78,7 @@ export class SettingsBraveAppearanceBookmarkBarElement
   static get observers() {
     return [
       'onPrefsChanged_(prefs.bookmark_bar.show_on_all_tabs.value,' +
-      ' prefs.brave.always_show_bookmark_bar_on_ntp.value)'
+      ' prefs.aiwize.always_show_bookmark_bar_on_ntp.value)'
     ]
   }
 

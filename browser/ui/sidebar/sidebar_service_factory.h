@@ -34,11 +34,19 @@ class SidebarServiceFactory : public BrowserContextKeyedServiceFactory {
 
   // This is the default display order
   static constexpr SidebarItem::BuiltInItemType kDefaultBuiltInItemTypes[] = {
+      SidebarItem::BuiltInItemType::kAiWize,
       SidebarItem::BuiltInItemType::kBraveTalk,
       SidebarItem::BuiltInItemType::kChatUI,
       SidebarItem::BuiltInItemType::kBookmarks,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kHistory,
+      SidebarItem::BuiltInItemType::kMessenger,
+      SidebarItem::BuiltInItemType::kTrello,
+      SidebarItem::BuiltInItemType::kWhatsapp,
+      SidebarItem::BuiltInItemType::kSlack,
+      SidebarItem::BuiltInItemType::kDiscord,
+      SidebarItem::BuiltInItemType::kGoogleDocs,
+      SidebarItem::BuiltInItemType::kGoogleCalendar,
       SidebarItem::BuiltInItemType::kPlaylist};
   static_assert(
       std::size(kDefaultBuiltInItemTypes) ==

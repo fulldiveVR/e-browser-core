@@ -14,36 +14,36 @@ class HostContentSettingsMap;
 
 namespace brave_shields {
 
-inline constexpr char kUsagePrefName[] = "brave_shields.p3a_usage";
+inline constexpr char kUsagePrefName[] = "aiwize_shields.p3a_usage";
 inline constexpr char kFirstReportedPrefName[] =
-    "brave_shields.p3a_first_reported_v2";
+    "aiwize_shields.p3a_first_reported_v2";
 
 inline constexpr char kAdsStrictCountPrefName[] =
-    "brave_shields.p3a_ads_strict_domain_count";
+    "aiwize_shields.p3a_ads_strict_domain_count";
 inline constexpr char kAdsStandardCountPrefName[] =
-    "brave_shields.p3a_ads_standard_domain_count";
+    "aiwize_shields.p3a_ads_standard_domain_count";
 inline constexpr char kAdsAllowCountPrefName[] =
-    "brave_shields.p3a_ads_allow_domain_count";
+    "aiwize_shields.p3a_ads_allow_domain_count";
 inline constexpr char kFPStrictCountPrefName[] =
-    "brave_shields.p3a_fp_strict_domain_count";
+    "aiwize_shields.p3a_fp_strict_domain_count";
 inline constexpr char kFPStandardCountPrefName[] =
-    "brave_shields.p3a_fp_standard_domain_count";
+    "aiwize_shields.p3a_fp_standard_domain_count";
 inline constexpr char kFPAllowCountPrefName[] =
-    "brave_shields.p3a_fp_allow_domain_count";
+    "aiwize_shields.p3a_fp_allow_domain_count";
 
 inline constexpr char kAdsSettingHistogramName[] =
-    "Brave.Shields.AdBlockSetting";
+    "AIWize.Shields.AdBlockSetting";
 inline constexpr char kFingerprintSettingHistogramName[] =
-    "Brave.Shields.FingerprintBlockSetting";
-inline constexpr char kUsageStatusHistogramName[] = "Brave.Shields.UsageStatus";
+    "AIWize.Shields.FingerprintBlockSetting";
+inline constexpr char kUsageStatusHistogramName[] = "AIWize.Shields.UsageStatus";
 inline constexpr char kDomainAdsSettingsAboveHistogramName[] =
-    "Brave.Shields.DomainAdsSettingsAboveGlobal";
+    "AIWize.Shields.DomainAdsSettingsAboveGlobal";
 inline constexpr char kDomainAdsSettingsBelowHistogramName[] =
-    "Brave.Shields.DomainAdsSettingsBelowGlobal";
+    "AIWize.Shields.DomainAdsSettingsBelowGlobal";
 inline constexpr char kDomainFPSettingsAboveHistogramName[] =
-    "Brave.Shields.DomainFingerprintSettingsAboveGlobal";
+    "AIWize.Shields.DomainFingerprintSettingsAboveGlobal";
 inline constexpr char kDomainFPSettingsBelowHistogramName[] =
-    "Brave.Shields.DomainFingerprintSettingsBelowGlobal";
+    "AIWize.Shields.DomainFingerprintSettingsBelowGlobal";
 // Note: append-only enumeration! Never remove any existing values, as this enum
 // is used to bucket a UMA histogram, and removing values breaks that.
 enum ShieldsIconUsage {
@@ -62,10 +62,10 @@ enum ShieldsIconUsage {
 void MaybeRecordShieldsUsageP3A(ShieldsIconUsage usage,
                                 PrefService* local_state);
 
-// Records to global ads setting histogram: Brave.Shields.AdBlockSetting
+// Records to global ads setting histogram: AIWize.Shields.AdBlockSetting
 void RecordShieldsAdsSetting(ControlType setting);
 
-// Records to global FP setting histogram: Brave.Shields.FingerprintBlockSetting
+// Records to global FP setting histogram: AIWize.Shields.FingerprintBlockSetting
 void RecordShieldsFingerprintSetting(ControlType setting);
 
 // To be called when the global setting changes.
@@ -91,6 +91,6 @@ void RegisterShieldsP3AProfilePrefs(PrefRegistrySimple* local_state);
 void MaybeRecordInitialShieldsSettings(PrefService* profile_prefs,
                                        HostContentSettingsMap* map);
 
-}  // namespace brave_shields
+}  // namespace aiwize_shields
 
 #endif  // BRAVE_COMPONENTS_BRAVE_SHIELDS_BROWSER_BRAVE_SHIELDS_P3A_H_

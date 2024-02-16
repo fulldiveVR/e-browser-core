@@ -45,11 +45,11 @@ class PrefService;
 class NTPBackgroundPrefs final {
  public:
   static constexpr char kDeprecatedPrefName[] =
-      "brave.new_tab_page.custom_background_enabled";
-  static constexpr char kPrefName[] = "brave.new_tab_page.background";
+      "aiwize.new_tab_page.custom_background_enabled";
+  static constexpr char kPrefName[] = "aiwize.new_tab_page.background";
 
   static constexpr char kCustomImageListPrefName[] =
-      "brave.new_tab_page.custom_background_image_list";
+      "aiwize.new_tab_page.custom_background_image_list";
 
   enum class Type {
     kBrave,  // Images that we supply.

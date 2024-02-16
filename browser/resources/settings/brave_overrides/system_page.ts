@@ -73,7 +73,7 @@ RegisterPolymerTemplateModifications({
       html`
         <settings-toggle-button
           class="cr-row"
-          pref="{{prefs.brave.enable_closing_last_tab}}"
+          pref="{{prefs.aiwize.enable_closing_last_tab}}"
           label="${loadTimeData.getString('braveHelpTipsClosingLastTab')}"
         >
         </settings-toggle-button>

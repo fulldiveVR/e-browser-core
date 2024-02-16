@@ -36,19 +36,19 @@
 
 namespace {
 
-constexpr char kNewTabsCreated[] = "brave.new_tab_page.p3a_new_tabs_created";
+constexpr char kNewTabsCreated[] = "aiwize.new_tab_page.p3a_new_tabs_created";
 constexpr char kSponsoredNewTabsCreated[] =
-    "brave.new_tab_page.p3a_sponsored_new_tabs_created";
+    "aiwize.new_tab_page.p3a_sponsored_new_tabs_created";
 
-constexpr char kNewTabsCreatedHistogramName[] = "Brave.NTP.NewTabsCreated.2";
+constexpr char kNewTabsCreatedHistogramName[] = "AIWize.NTP.NewTabsCreated.2";
 const int kNewTabsCreatedMetricBuckets[] = {0, 1, 2, 3, 4, 8, 15};
 constexpr char kSponsoredNewTabsHistogramName[] =
-    "Brave.NTP.SponsoredNewTabsCreated";
+    "AIWize.NTP.SponsoredNewTabsCreated";
 constexpr int kSponsoredNewTabsBuckets[] = {0, 10, 20, 30, 40, 50};
 
 // Obsolete pref
 constexpr char kObsoleteCountToBrandedWallpaperPref[] =
-    "brave.count_to_branded_wallpaper";
+    "aiwize.count_to_branded_wallpaper";
 
 }  // namespace
 

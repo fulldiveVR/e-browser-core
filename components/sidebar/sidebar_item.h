@@ -26,8 +26,16 @@ struct SidebarItem {
     kHistory,
     kPlaylist,
     kChatUI,
+    kAiWize,
+    kMessenger,
+    kTrello,
+    kWhatsapp,
+    kSlack,
+    kDiscord,
+    kGoogleDocs,
+    kGoogleCalendar,
     // When adding new item, dont' forget to update kBuiltInItemLast.
-    kBuiltInItemLast = kChatUI,
+    kBuiltInItemLast = kGoogleCalendar,
   };
 
   static SidebarItem Create(const std::u16string& title,
@@ -60,6 +68,7 @@ struct SidebarItem {
 
 bool IsBuiltInType(const SidebarItem& item);
 bool IsWebType(const SidebarItem& item);
+bool IsBuiltInWebType(const SidebarItem& item);
 bool IsValidItem(const SidebarItem& item);
 
 }  // namespace sidebar

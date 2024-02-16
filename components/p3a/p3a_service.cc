@@ -256,7 +256,7 @@ void P3AService::OnHistogramChanged(const char* histogram_name,
   }
 
   // Special handling of P2A histograms.
-  if (base::StartsWith(histogram_name, "Brave.P2A",
+  if (base::StartsWith(histogram_name, "AIWize.P2A",
                        base::CompareCase::SENSITIVE)) {
     // We need the bucket count to make proper perturbation.
     // All P2A metrics should be implemented as linear histograms.

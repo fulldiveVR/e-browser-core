@@ -9,7 +9,7 @@
 namespace debounce::prefs {
 
 // Is debounce feature currently enabled
-inline constexpr char kDebounceEnabled[] = "brave.debounce.enabled";
+inline constexpr char kDebounceEnabled[] = "aiwize.debounce.enabled";
 
 }  // namespace debounce::prefs
 

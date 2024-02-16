@@ -37,7 +37,7 @@ namespace {
 constexpr char kWidevineInvalidVersion[] = "";
 
 // Added 11/2020.
-constexpr char kWidevineInstalledVersion[] = "brave.widevine_installed_version";
+constexpr char kWidevineInstalledVersion[] = "aiwize.widevine_installed_version";
 
 void OnDeletedOldWidevineBinary(bool result) {
   DCHECK_CURRENTLY_ON(BrowserThread::UI);

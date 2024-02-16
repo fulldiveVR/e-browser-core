@@ -269,7 +269,7 @@ void BraveBrowserView::OnPreferenceChanged(const std::string& pref_name) {
 void BraveBrowserView::UpdateSideBarHorizontalAlignment() {
   DCHECK(sidebar_container_view_);
 
-  const bool on_left = !GetProfile()->GetPrefs()->GetBoolean(
+  const bool on_left = GetProfile()->GetPrefs()->GetBoolean(
       prefs::kSidePanelHorizontalAlignment);
 
   sidebar_container_view_->SetSidebarOnLeft(on_left);

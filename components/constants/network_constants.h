@@ -8,23 +8,23 @@
 
 #include "brave/components/widevine/static_buildflags.h"
 
-inline constexpr char kExtensionUpdaterDomain[] = "extensionupdater.brave.com";
+inline constexpr char kExtensionUpdaterDomain[] = "extensionupdater.aiwize.com";
 
-inline constexpr char kBraveProxyPattern[] = "https://*.brave.com/*";
+inline constexpr char kBraveProxyPattern[] = "https://*.aiwize.com/*";
 inline constexpr char kBraveSoftwareProxyPattern[] =
-    "https://*.bravesoftware.com/*";
+    "https://*.aiwize.com/*";
 
-inline constexpr char kBraveUsageStandardPath[] = "/1/usage/brave-core";
+inline constexpr char kBraveUsageStandardPath[] = "/1/usage/aiwize-core";
 
-inline constexpr char kBraveReferralsServer[] = "laptop-updates.brave.com";
+inline constexpr char kBraveReferralsServer[] = "laptop-updates.aiwize.com";
 inline constexpr char kBraveReferralsInitPath[] = "/promo/initialize/nonua";
 inline constexpr char kBraveReferralsActivityPath[] = "/promo/activity";
 
-inline constexpr char kBraveSafeBrowsing2Proxy[] = "safebrowsing2.brave.com";
-inline constexpr char kBraveSafeBrowsingSslProxy[] = "sb-ssl.brave.com";
-inline constexpr char kBraveRedirectorProxy[] = "redirector.brave.com";
-inline constexpr char kBraveClients4Proxy[] = "clients4.brave.com";
-inline constexpr char kBraveStaticProxy[] = "static1.brave.com";
+inline constexpr char kBraveSafeBrowsing2Proxy[] = "safebrowsing2.aiwize.com";
+inline constexpr char kBraveSafeBrowsingSslProxy[] = "sb-ssl.aiwize.com";
+inline constexpr char kBraveRedirectorProxy[] = "redirector.aiwize.com";
+inline constexpr char kBraveClients4Proxy[] = "clients4.aiwize.com";
+inline constexpr char kBraveStaticProxy[] = "static1.aiwize.com";
 
 inline constexpr char kAutofillPrefix[] = "https://www.gstatic.com/autofill/*";
 inline constexpr char kClients4Prefix[] = "*://clients4.google.com/";
@@ -67,7 +67,7 @@ inline constexpr char kWidevineGoogleDlPrefixWinArm64[] =
 #endif
 
 inline constexpr char kUserAgentHeader[] = "User-Agent";
-inline constexpr char kBravePartnerHeader[] = "X-Brave-Partner";
+inline constexpr char kBravePartnerHeader[] = "X-AIWize-Partner";
 inline constexpr char kBraveServicesKeyHeader[] = "BraveServiceKey";
 
 inline constexpr char kBittorrentMimeType[] = "application/x-bittorrent";

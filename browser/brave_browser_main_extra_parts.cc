@@ -48,7 +48,7 @@ void RecordInitialP3AValues() {
   // Record crash reporting status stats.
   const bool crash_reports_enabled = g_browser_process->local_state()->
       GetBoolean(metrics::prefs::kMetricsReportingEnabled);
-  UMA_HISTOGRAM_BOOLEAN("Brave.Core.CrashReportsEnabled",
+  UMA_HISTOGRAM_BOOLEAN("AIWize.Core.CrashReportsEnabled",
                         crash_reports_enabled);
 }
 

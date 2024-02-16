@@ -4,21 +4,21 @@
 <!-- Vertical Tab strip -->
 <settings-toggle-button
   class="cr-row first"
-  pref="{{prefs.brave.tabs.vertical_tabs_enabled}}"
+  pref="{{prefs.aiwize.tabs.vertical_tabs_enabled}}"
   label="$i18n{appearanceSettingsTabsUseVerticalTabs}">
 </settings-toggle-button>
 <template
   is="dom-if"
-  if="[[prefs.brave.tabs.vertical_tabs_enabled.value]]">
+  if="[[prefs.aiwize.tabs.vertical_tabs_enabled.value]]">
   <div class="cr-row continuation list-frame">
     <settings-checkbox
       class="list-item"
-      pref="{{prefs.brave.tabs.vertical_tabs_show_title_on_window}}"
+      pref="{{prefs.aiwize.tabs.vertical_tabs_show_title_on_window}}"
       label="$i18n{appearanceSettingsTabsShowWindowTitle}">
     </settings-checkbox>
     <settings-checkbox
       class="list-item"
-      pref="{{prefs.brave.tabs.vertical_tabs_floating_enabled}}"
+      pref="{{prefs.aiwize.tabs.vertical_tabs_floating_enabled}}"
       label="$i18n{appearanceSettingsTabsFloatOnMouseOver}">
     </settings-checkbox>
   </div>
@@ -26,14 +26,14 @@
 
 <!-- Tab search button visibility -->
 <settings-toggle-button
-  pref="{{prefs.brave.tabs_search_show}}"
+  pref="{{prefs.aiwize.tabs_search_show}}"
   class="cr-row"
   label="$i18n{showSearchTabsBtn}">
 </settings-toggle-button>
 
 <!-- Tab speaker icons function  -->
 <settings-toggle-button
-  pref="{{prefs.brave.tabs.mute_indicator_not_clickable}}"
+  pref="{{prefs.aiwize.tabs.mute_indicator_not_clickable}}"
   class="cr-row"
   label="$i18n{braveDisableClickableMuteIndicators}">
 </settings-toggle-button>
@@ -44,7 +44,7 @@
     <div class="label">$i18n{appearanceSettingsTabHoverMode}</div>
   </div>
   <settings-dropdown-menu
-    pref="{{prefs.brave.tabs.hover_mode}}"
+    pref="{{prefs.aiwize.tabs.hover_mode}}"
     menu-options="[[tabTooltipModes_]]">
   </settings-dropdown-menu>
 </div>

@@ -150,7 +150,7 @@ int MakeUniquePerfId() {
   return counter;
 }
 
-constexpr const char TRACE_CATEGORY[] = "brave.adblock";
+constexpr const char TRACE_CATEGORY[] = "aiwize.adblock";
 
 }  // namespace
 
@@ -370,17 +370,17 @@ bool CosmeticFiltersJSHandler::ProcessURL(
 
   if (callback.has_value()) {
     SCOPED_UMA_HISTOGRAM_TIMER_MICROS(
-        "Brave.CosmeticFilters.UrlCosmeticResources");
-    TRACE_EVENT1("brave.adblock", "UrlCosmeticResources", "url", url_.spec());
+        "AIWize.CosmeticFilters.UrlCosmeticResources");
+    TRACE_EVENT1("aiwize.adblock", "UrlCosmeticResources", "url", url_.spec());
     cosmetic_filters_resources_->UrlCosmeticResources(
         url_.spec(), enabled_1st_party_cf_,
         base::BindOnce(&CosmeticFiltersJSHandler::OnUrlCosmeticResources,
                        base::Unretained(this), std::move(callback.value())));
   } else {
-    TRACE_EVENT1("brave.adblock", "UrlCosmeticResourcesSync", "url",
+    TRACE_EVENT1("aiwize.adblock", "UrlCosmeticResourcesSync", "url",
                  url_.spec());
     SCOPED_UMA_HISTOGRAM_TIMER_MICROS(
-        "Brave.CosmeticFilters.UrlCosmeticResourcesSync");
+        "AIWize.CosmeticFilters.UrlCosmeticResourcesSync");
     base::Value result;
     cosmetic_filters_resources_->UrlCosmeticResources(
         url_.spec(), enabled_1st_party_cf_, &result);
@@ -411,8 +411,8 @@ void CosmeticFiltersJSHandler::ApplyRules(bool de_amp_enabled) {
   if (!resources_dict_ || web_frame->IsProvisional())
     return;
 
-  SCOPED_UMA_HISTOGRAM_TIMER_MICROS("Brave.CosmeticFilters.ApplyRules");
-  TRACE_EVENT1("brave.adblock", "ApplyRules", "url", url_.spec());
+  SCOPED_UMA_HISTOGRAM_TIMER_MICROS("AIWize.CosmeticFilters.ApplyRules");
+  TRACE_EVENT1("aiwize.adblock", "ApplyRules", "url", url_.spec());
 
   std::string scriptlet_script;
   base::Value* injected_script = resources_dict_->Find("injected_script");
@@ -460,8 +460,8 @@ void CosmeticFiltersJSHandler::ApplyRules(bool de_amp_enabled) {
 
 void CosmeticFiltersJSHandler::CSSRulesRoutine(
     const base::Value::Dict& resources_dict) {
-  SCOPED_UMA_HISTOGRAM_TIMER_MICROS("Brave.CosmeticFilters.CSSRulesRoutine");
-  TRACE_EVENT1("brave.adblock", "CSSRulesRoutine", "url", url_.spec());
+  SCOPED_UMA_HISTOGRAM_TIMER_MICROS("AIWize.CosmeticFilters.CSSRulesRoutine");
+  TRACE_EVENT1("aiwize.adblock", "CSSRulesRoutine", "url", url_.spec());
 
   blink::WebLocalFrame* web_frame = render_frame_->GetWebFrame();
   const auto* cf_exceptions_list = resources_dict.FindList("exceptions");
@@ -545,8 +545,8 @@ void CosmeticFiltersJSHandler::OnHiddenClassIdSelectors(
   }
 
   SCOPED_UMA_HISTOGRAM_TIMER_MICROS(
-      "Brave.CosmeticFilters.OnHiddenClassIdSelectors");
-  TRACE_EVENT1("brave.adblock", "OnHiddenClassIdSelectors", "url", url_.spec());
+      "AIWize.CosmeticFilters.OnHiddenClassIdSelectors");
+  TRACE_EVENT1("aiwize.adblock", "OnHiddenClassIdSelectors", "url", url_.spec());
 
   base::Value::List* hide_selectors = result.FindList("hide_selectors");
   DCHECK(hide_selectors);
@@ -605,8 +605,8 @@ void CosmeticFiltersJSHandler::ExecuteObservingBundleEntryPoint() {
 
   if (!bundle_injected_) {
     SCOPED_UMA_HISTOGRAM_TIMER_MICROS(
-        "Brave.CosmeticFilters.ExecuteObservingBundleEntryPoint");
-    TRACE_EVENT1("brave.adblock", "ExecuteObservingBundleEntryPoint", "url",
+        "AIWize.CosmeticFilters.ExecuteObservingBundleEntryPoint");
+    TRACE_EVENT1("aiwize.adblock", "ExecuteObservingBundleEntryPoint", "url",
                  url_.spec());
 
     static base::NoDestructor<std::string> s_observing_script(

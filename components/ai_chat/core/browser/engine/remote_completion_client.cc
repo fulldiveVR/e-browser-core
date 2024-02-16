@@ -14,8 +14,8 @@
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/json/json_writer.h"
 #include "base/json/json_reader.h"
+#include "base/json/json_writer.h"
 #include "base/json/string_escape.h"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
@@ -63,7 +63,6 @@ std::string CreateApiParametersDict(
     const base::flat_set<std::string_view>& stop_sequences,
     const std::vector<std::string> additional_stop_sequences,
     const bool is_sse_enabled) {
-
   base::Value::List all_stop_sequences;
   for (auto& item : additional_stop_sequences) {
     all_stop_sequences.Append(item);
@@ -78,11 +77,14 @@ std::string CreateApiParametersDict(
   //  dict.Set("stop", std::move(all_stop_sequences));
 
   std::string stream = "false";
-  if(is_sse_enabled){
+  if (is_sse_enabled) {
     stream = "true";
   }
 
-  std::string message = "{ \"model\": \"" + model_name + "\", \"messages\": [{ \"role\": \"user\", \"content\": " + base::GetQuotedJSONString(prompt) + "}], \"stream\":"+stream+"}";
+  std::string message =
+      "{ \"model\": \"" + model_name +
+      "\", \"messages\": [{ \"role\": \"user\", \"content\": " +
+      base::GetQuotedJSONString(prompt) + "}], \"stream\":" + stream + "}";
 
   DVLOG(1) << __func__ << " Prompt: |" << prompt << "|\n";
   DVLOG(1) << __func__ << " Using model: " << model_name;
@@ -115,17 +117,17 @@ std::string FetchMessageFromJson(const std::string& json_string) {
   if (choices_list->empty()) {
     return "";
   }
-  
-  const base::Value &first_item = (*choices_list)[0];
+
+  const base::Value& first_item = (*choices_list)[0];
 
   if (!first_item.is_dict()) {
     return "";
   }
-  const auto *message = first_item.GetDict().FindDict("message");
+  const auto* message = first_item.GetDict().FindDict("message");
   if (!message) {
     return "";
   }
-  const auto *content = message->FindString("content");
+  const auto* content = message->FindString("content");
   if (!content || content->empty()) {
     return "";
   }
@@ -141,7 +143,7 @@ std::string FetchMessageFromDict(const base::Value::Dict& dict) {
   if (choices_list->empty()) {
     return "";
   }
-  const base::Value &first_item = (*choices_list)[0];
+  const base::Value& first_item = (*choices_list)[0];
 
   if (!first_item.is_dict()) {
     return "";
@@ -151,14 +153,13 @@ std::string FetchMessageFromDict(const base::Value::Dict& dict) {
     return "";
     // return first_item.GetDict().DebugString();
   }
-  const auto *content = delta_dict->FindString("content");
+  const auto* content = delta_dict->FindString("content");
   if (!content || content->empty()) {
     return "";
   }
 
   return *content;
 }
-
 
 GURL GetEndpointUrl(const std::string& path) {
   DCHECK(!path.starts_with("/"));
@@ -195,7 +196,6 @@ void RemoteCompletionClient::QueryPrompt(
     EngineConsumer::GenerationCompletedCallback data_completed_callback,
     EngineConsumer::GenerationDataCallback
         data_received_callback /* = base::NullCallback() */) {
-
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
   headers.emplace("Authorization", "Bearer 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");
@@ -214,24 +214,21 @@ void RemoteCompletionClient::QueryPrompt(
     auto on_received = base::BindRepeating(
         &RemoteCompletionClient::OnQueryDataReceived,
         weak_ptr_factory_.GetWeakPtr(), std::move(data_received_callback));
-    auto on_complete =
-        base::BindOnce(&RemoteCompletionClient::OnQueryCompleted,
-                       weak_ptr_factory_.GetWeakPtr(),
-                       std::move(data_completed_callback));
+    auto on_complete = base::BindOnce(&RemoteCompletionClient::OnQueryCompleted,
+                                      weak_ptr_factory_.GetWeakPtr(),
+                                      std::move(data_completed_callback));
 
-    api_request_helper_.RequestSSE("POST", api_url, dict,
-                                   "application/json", std::move(on_received),
+    api_request_helper_.RequestSSE("POST", api_url, dict, "application/json",
+                                   std::move(on_received),
                                    std::move(on_complete), headers, {});
   } else {
     VLOG(2) << "Making non-streaming AI Chat API Request";
-    auto on_complete =
-        base::BindOnce(&RemoteCompletionClient::OnQueryCompleted,
-                       weak_ptr_factory_.GetWeakPtr(),
-                       std::move(data_completed_callback));
+    auto on_complete = base::BindOnce(&RemoteCompletionClient::OnQueryCompleted,
+                                      weak_ptr_factory_.GetWeakPtr(),
+                                      std::move(data_completed_callback));
 
-    api_request_helper_.Request("POST", api_url, dict,
-                                "application/json", std::move(on_complete),
-                                headers, {});
+    api_request_helper_.Request("POST", api_url, dict, "application/json",
+                                std::move(on_complete), headers, {});
   }
 }
 
@@ -291,7 +288,10 @@ void RemoteCompletionClient::OnQueryCompleted(
   }
 
   std::move(callback).Run(base::unexpected(std::move(error)));
-  // std::move(callback).Run(base::ok(std::move("error final_url: ") + std::move(result.final_url().spec()) + std::move("          response_code: ") +  std::to_string(result.response_code()) + std::move("          body: ") +  std::move(result.body())));  // TODO: XXX
+  // std::move(callback).Run(base::ok(std::move("error final_url: ") +
+  // std::move(result.final_url().spec()) + std::move("          response_code:
+  // ") +  std::to_string(result.response_code()) + std::move("          body:
+  // ") +  std::move(result.body())));  // TODO: XXX
 }
 
 }  // namespace ai_chat

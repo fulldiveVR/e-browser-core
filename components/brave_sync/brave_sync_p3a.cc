@@ -46,7 +46,7 @@ void RecordEnabledTypes(bool sync_everything_enabled,
 }
 
 void RecordSyncedObjectsCount(int total_entities) {
-  // "Brave.Sync.SyncedObjectsCount"
+  // "AIWize.Sync.SyncedObjectsCount"
   // 0 - 0..1000
   // 1 - 1001..10000
   // 2 - 10001..49000

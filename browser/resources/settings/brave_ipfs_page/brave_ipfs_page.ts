@@ -90,7 +90,7 @@ class SettingsBraveIpfsPageElement extends SettingBraveIpfsPageElementBase {
 
   /** @private **/
   setupOptionsVisibility() {
-    const resolve_method = this.getPref('brave.ipfs.resolve_method').value
+    const resolve_method = this.getPref('aiwize.ipfs.resolve_method').value
     // Check if IPFS method is LOCAL_NODE
     this.isLocalNodeEnabled_ = (resolve_method == IPFS_RESOLVE_METHOD_TYPES.IPFS_LOCAL) &&
                                 this.ipfsEnabled_
@@ -98,7 +98,7 @@ class SettingsBraveIpfsPageElement extends SettingBraveIpfsPageElementBase {
     this.showIPFSLearnMoreLink_ =
       (resolve_method == IPFS_RESOLVE_METHOD_TYPES.IPFS_ASK)
     this.$.ipfsStorageMax.value =
-      this.getPref('brave.ipfs.storage_max').value
+      this.getPref('aiwize.ipfs.storage_max').value
   }
 
   /** @private **/

@@ -275,22 +275,22 @@ def upload_translation_to_transifex(source_string_path, lang_code, filename,
 
 
 def braveify(string_value):
-    """Replace Chromium branded strings with Brave branded strings."""
-    return (string_value.replace('Chrome', 'Brave')
-            .replace('Chromium', 'Brave')
-            .replace('Google', 'Brave')
-            .replace('Brave Docs', 'Google Docs')
-            .replace('Brave Drive', 'Google Drive')
-            .replace('Brave Play', 'Google Play')
-            .replace('Brave Safe', 'Google Safe')
-            .replace('Sends URLs of some pages you visit to Brave',
+    """Replace Chromium branded strings with AIWize branded strings."""
+    return (string_value.replace('Chrome', 'AIWize')
+            .replace('Chromium', 'AIWize')
+            .replace('Google', 'AIWize')
+            .replace('AIWize Docs', 'Google Docs')
+            .replace('AIWize Drive', 'Google Drive')
+            .replace('AIWize Play', 'Google Play')
+            .replace('AIWize Safe', 'Google Safe')
+            .replace('Sends URLs of some pages you visit to AIWize',
                      'Sends URLs of some pages you visit to Google')
-            .replace('Brave Account', 'Brave sync chain')
-            .replace('Brave Lens', 'Google Lens')
-            .replace('Bravebook', 'Chromebook')
-            .replace('Bravecast', 'Chromecast')
-            .replace('Brave Cloud', 'Google Cloud')
-            .replace('Brave Pay', 'Google Pay')
-            .replace('Brave Photos', 'Google Photos')
-            .replace('Brave Projects', 'Chromium Projects')
-            .replace('Brave Widevine', 'Google Widevine'))
+            .replace('AIWize Account', 'AIWize sync chain')
+            .replace('AIWize Lens', 'Google Lens')
+            .replace('AIWizebook', 'Chromebook')
+            .replace('AIWizecast', 'Chromecast')
+            .replace('AIWize Cloud', 'Google Cloud')
+            .replace('AIWize Pay', 'Google Pay')
+            .replace('AIWize Photos', 'Google Photos')
+            .replace('AIWize Projects', 'Chromium Projects')
+            .replace('AIWize Widevine', 'Google Widevine'))

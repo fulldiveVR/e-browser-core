@@ -452,7 +452,7 @@
 <translation id="7642372245223412840">Connect to bitFlyer</translation>
 <translation id="6143701117592994599">Connecting AI Wize Rewards to a bitFlyer account will let you earn BATs and withdraw your BAT earnings from AI Wize Rewards.</translation>
 <translation id="4354564238172327160">Become a AI Wize creator!</translation>
-<translation id="4639659520811817892">Visit creators.brave.com to sign up today and start earning BAT from your fans and followers.</translation>
+<translation id="4639659520811817892">Visit creators.aiwize.com to sign up today and start earning BAT from your fans and followers.</translation>
 <translation id="4816455138209470435">AI Wize supports YouTube, Twitch, Vimeo and more!</translation>
 <translation id="7404779623219601861">Redeem BAT for gift cards</translation>
 <translation id="6215565499749144110">With TAP Network, you can redeem your BAT for popular name-brand gift cards.</translation>
@@ -481,7 +481,7 @@
 <translation id="4609973808011229683">AI Wize will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). AI Wize hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK"/>terms of use<ph name="END_INFURA_TOU_LINK"/> and <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privacy policy<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="807404806385418949">Ethereum Name Service off-chain look-up</translation>
 <translation id="4049590838234508776">Enable support of Ethereum Name Service (ENS) off-chain look-up in AI Wize?</translation>
-<translation id="5944991147217767764">This .eth domain name is stored off-chain and will be resolved by a third-party gateway. If you enable ENS off-chain lookup, the third-party gateway will see that you're trying to visit the .eth domain. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Learn more<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
+<translation id="5944991147217767764">This .eth domain name is stored off-chain and will be resolved by a third-party gateway. If you enable ENS off-chain lookup, the third-party gateway will see that you're trying to visit the .eth domain. <ph name="BEGIN_AIWIZE_LEARN_MORE_LINK"/>Learn more<ph name="END_AIWIZE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Proceed with off-chain look-up</translation>
 <translation id="531747189990625622">Solana Name Service</translation>
 <translation id="1090584614351290462">Enable support of Solana Name Service (SNS) in AI Wize?</translation>
@@ -574,7 +574,7 @@
 <translation id="5525148540855044244">Shareable link copied: <ph name="SHAREABLE_LINK"/></translation>
 <translation id="3741998951694470470">Failed to fetch data for import</translation>
 <translation id="7900950536120202771">IPFS node internal error</translation>
-<translation id="1036635552229153800">The data was successfully uploaded but not moved to the brave-import directory. You can do this manually on the import settings page.</translation>
+<translation id="1036635552229153800">The data was successfully uploaded but not moved to the aiwize-import directory. You can do this manually on the import settings page.</translation>
 <translation id="572392919096807438">Remember my decision</translation>
 <translation id="7978789143098237970">until I close this site</translation>
 <translation id="3523195733429162409">for 24 hours</translation>
@@ -2076,7 +2076,7 @@ Let's get you connected!
 <translation id="7896201779114201779">Restart browser</translation>
 <translation id="9061845622728745852">Timezone:</translation>
 <translation id="8295393906499561642">Session expired</translation>
-<translation id="3312623558576021182">Please log in to your <ph name="BRAVE_ACCOUNT_BEGIN"/>AI Wize Account<ph name="BRAVE_ACCOUNT_END"/> to refresh your VPN session.</translation>
+<translation id="3312623558576021182">Please log in to your <ph name="AIWIZE_ACCOUNT_BEGIN"/>AI Wize Account<ph name="AIWIZE_ACCOUNT_END"/> to refresh your VPN session.</translation>
 <translation id="6021669293402055982">AI Wize VPN: disconnected</translation>
 <translation id="7861195049821776142">AI Wize VPN: disconnecting</translation>
 <translation id="958268166261124668">AI Wize VPN: connected</translation>

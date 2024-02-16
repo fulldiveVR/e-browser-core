@@ -19,7 +19,7 @@ RegisterPolymerTemplateModifications({
           label="${loadTimeData.getString('autofillInPrivateSettingLabel')}"
           sub-label="${loadTimeData.getString('autofillInPrivateSettingDesc')}"
           id="autofill-private-profies"
-          pref="{{prefs.brave.autofill_private_windows}}"
+          pref="{{prefs.aiwize.autofill_private_windows}}"
           hidden=[[!isAutofillPage_]]
         </settings-toggle-button>
       `)

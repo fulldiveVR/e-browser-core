@@ -4,16 +4,16 @@ License, v. 2.0. If a copy of the MPL was not distributed with this file,
 You can obtain one at https://mozilla.org/MPL/2.0/. -->
 
 <settings-toggle-button class="cr-row hr"
-  pref="{{prefs.brave.playlist.enabled}}"
+  pref="{{prefs.aiwize.playlist.enabled}}"
   label="$i18n{bravePlaylistEnablePlaylistLabel}">
 </settings-toggle-button>
 <template
   is="dom-if"
-  if="[[prefs.brave.playlist.enabled.value]]">
+  if="[[prefs.aiwize.playlist.enabled.value]]">
   <div class="cr-row continuation list-frame">
     <settings-toggle-button
       class="list-item"
-      pref="{{prefs.brave.playlist.cache}}"
+      pref="{{prefs.aiwize.playlist.cache}}"
       label="$i18n{bravePlaylistCacheByDefaultLabel}"
       sub-label="$i18n{bravePlaylistCacheByDefaultSubLabel}"
     >

@@ -12,12 +12,12 @@ namespace omnibox {
 
 // Controls whether or not auto complete is enabled. If disabled, this overrides
 // the individual prefs listed below.
-inline constexpr char kAutocompleteEnabled[] = "brave.autocomplete_enabled";
+inline constexpr char kAutocompleteEnabled[] = "aiwize.autocomplete_enabled";
 
 // Determines whether top sites show up in the omnibox results. See
 // |TopsitesProvider|.
 inline constexpr char kTopSiteSuggestionsEnabled[] =
-    "brave.top_site_suggestions_enabled";
+    "aiwize.top_site_suggestions_enabled";
 
 // Determines whether history suggestions show up in the omnibox results. This
 // includes:
@@ -26,12 +26,12 @@ inline constexpr char kTopSiteSuggestionsEnabled[] =
 // 3. Results from the |ShortcutsProvider|.
 // 4. Results from the |SearchProvider|, which aren't "What-You-Typed".
 inline constexpr char kHistorySuggestionsEnabled[] =
-    "brave.omnibox.history_suggestions_enabled";
+    "aiwize.omnibox.history_suggestions_enabled";
 
 // Determines whether bookmarks show up in the omnibox results. This controls
 // whether or not we include results from the |BookmarkProvider|.
 inline constexpr char kBookmarkSuggestionsEnabled[] =
-    "brave.omnibox.bookmark_suggestions_enabled";
+    "aiwize.omnibox.bookmark_suggestions_enabled";
 
 void RegisterBraveProfilePrefs(PrefRegistrySimple* registry);
 

@@ -430,10 +430,18 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // Use this order for picking active panel when panel is opened as
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
+      SidebarItem::BuiltInItemType::kAiWize,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,
       SidebarItem::BuiltInItemType::kPlaylist,
-      SidebarItem::BuiltInItemType::kChatUI};
+      SidebarItem::BuiltInItemType::kChatUI,
+      SidebarItem::BuiltInItemType::kWhatsapp,
+      SidebarItem::BuiltInItemType::kSlack,
+      SidebarItem::BuiltInItemType::kDiscord,
+      SidebarItem::BuiltInItemType::kGoogleDocs,
+      SidebarItem::BuiltInItemType::kGoogleCalendar,
+      SidebarItem::BuiltInItemType::kPlaylist
+  };
 
   std::optional<SidebarItem> default_item;
   for (const auto& type : kPreferredPanelOrder) {
@@ -505,14 +513,13 @@ void SidebarService::LoadSidebarItems() {
         continue;
       }
       // Open in panel for custom items is not yet supported
-      bool open_in_panel = false;
       std::string title;
       if (const auto* value = item.FindString(kSidebarItemTitleKey)) {
         title = *value;
       }
       items_.push_back(SidebarItem::Create(
           GURL(url), base::UTF8ToUTF16(title), type,
-          SidebarItem::BuiltInItemType::kNone, open_in_panel));
+          SidebarItem::BuiltInItemType::kNone, false));
     }
   }
 
@@ -612,6 +619,62 @@ SidebarItem SidebarService::GetBuiltInItemForType(
       } else {
         return SidebarItem();
       }
+    }
+    case SidebarItem::BuiltInItemType::kAiWize: {
+      return SidebarItem::Create(GURL("https://aiwize.com"),
+                                u"AI Wize",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiWize,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kMessenger: {
+      return SidebarItem::Create(GURL("https://facebook.com"),
+                                u"Messenger",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kMessenger,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kTrello: {
+      return SidebarItem::Create(GURL("https://trello.com"),
+                                u"Trello",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kTrello,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kWhatsapp: {
+      return SidebarItem::Create(GURL("https://whatsapp.com"),
+                                u"Whatsapp",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kWhatsapp,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kSlack: {
+      return SidebarItem::Create(GURL("https://slack.com"),
+                                u"Slack",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kSlack,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kDiscord: {
+      return SidebarItem::Create(GURL("https://discord.com"),
+                                u"Discord",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kDiscord,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kGoogleDocs: {
+      return SidebarItem::Create(GURL("https://docs.google.com/spreadsheets/"),
+                                u"Google Docs",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kGoogleDocs,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kGoogleCalendar: {
+      return SidebarItem::Create(GURL("https://calendar.google.com/"),
+                                u"Google Calendar",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kGoogleCalendar,
+                                 /* open_in_panel = */ false);
     }
     case SidebarItem::BuiltInItemType::kPlaylist: {
       if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {

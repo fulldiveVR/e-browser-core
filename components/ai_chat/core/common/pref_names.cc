@@ -13,7 +13,7 @@ namespace ai_chat::prefs {
 namespace {
 
 inline constexpr char kObseleteBraveChatAutoGenerateQuestions[] =
-    "brave.ai_chat.auto_generate_questions";
+    "aiwize.ai_chat.auto_generate_questions";
 
 }  // namespace
 

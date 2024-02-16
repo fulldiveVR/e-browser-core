@@ -8,21 +8,21 @@
 
 namespace sidebar {
 
-inline constexpr char kSidebarItems[] = "brave.sidebar.sidebar_items";
+inline constexpr char kSidebarItems[] = "aiwize.sidebar.sidebar_items";
 inline constexpr char kSidebarHiddenBuiltInItems[] =
-    "brave.sidebar.hidden_built_in_items";
+    "aiwize.sidebar.hidden_built_in_items";
 inline constexpr char kSidebarShowOption[] =
-    "brave.sidebar.sidebar_show_option";
+    "aiwize.sidebar.sidebar_show_option";
 inline constexpr char kSidebarItemAddedFeedbackBubbleShowCount[] =
-    "brave.sidebar.item_added_feedback_bubble_shown_count";
-inline constexpr char kSidePanelWidth[] = "brave.sidebar.side_panel_width";
+    "aiwize.sidebar.item_added_feedback_bubble_shown_count";
+inline constexpr char kSidePanelWidth[] = "aiwize.sidebar.side_panel_width";
 inline constexpr char kLastUsedBuiltInItemType[] =
-    "brave.sidebar.last_used_built_in_item_type";
+    "aiwize.sidebar.last_used_built_in_item_type";
 
 // Indicates that sidebar alignment was changed by the browser itself, not by
 // users.
 inline constexpr char kSidebarAlignmentChangedTemporarily[] =
-    "brave.sidebar.sidebar_alignment_changed_for_vertical_tabs";
+    "aiwize.sidebar.sidebar_alignment_changed_for_vertical_tabs";
 
 }  // namespace sidebar
 

@@ -29,9 +29,9 @@ namespace ntp_background_images {
 namespace {
 
 constexpr char kNewTabPageEventCountDictPref[] =
-    "brave.brave_ads.p3a.ntp_event_count";
+    "aiwize.brave_ads.p3a.ntp_event_count";
 constexpr char kNewTabPageEventCountConstellationDictPref[] =
-    "brave.brave_ads.p3a.ntp_event_count_constellation";
+    "aiwize.brave_ads.p3a.ntp_event_count_constellation";
 const char* kAllCountDicts[] = {kNewTabPageEventCountDictPref,
                                 kNewTabPageEventCountConstellationDictPref};
 

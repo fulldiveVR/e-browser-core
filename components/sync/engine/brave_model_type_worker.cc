@@ -85,7 +85,7 @@ bool BraveModelTypeWorker::IsResetProgressMarkerRequired(
     // Reset progress marker due to 7th failure happening twice in a row
     // in less than 30mins
     // P3A sample is 1
-    base::UmaHistogramExactLinear("Brave.Sync.ProgressTokenEverReset", 1, 1);
+    base::UmaHistogramExactLinear("AIWize.Sync.ProgressTokenEverReset", 1, 1);
     return false;
   }
 
@@ -114,7 +114,7 @@ void BraveModelTypeWorker::ResetProgressMarker() {
   VLOG(1) << "Reset progress marker for type " << ModelTypeToDebugString(type_);
   // Normal reset of progress marker due to 7th failure
   // P3A sample is 0
-  base::UmaHistogramExactLinear("Brave.Sync.ProgressTokenEverReset", 0, 1);
+  base::UmaHistogramExactLinear("AIWize.Sync.ProgressTokenEverReset", 0, 1);
   last_reset_marker_time_ = base::Time::Now();
   model_type_state_.mutable_progress_marker()->clear_token();
 }

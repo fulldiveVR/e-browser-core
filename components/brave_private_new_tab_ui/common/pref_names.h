@@ -11,9 +11,9 @@ class PrefRegistrySimple;
 namespace brave_private_new_tab::prefs {
 
 inline constexpr char kBravePrivateWindowDisclaimerDismissed[] =
-    "brave.brave_private_new_tab.private_window_disclaimer_dismissed";
+    "aiwize.brave_private_new_tab.private_window_disclaimer_dismissed";
 inline constexpr char kBraveTorWindowDisclaimerDismissed[] =
-    "brave.brave_private_new_tab.tor_window_disclaimer_dismissed";
+    "aiwize.brave_private_new_tab.tor_window_disclaimer_dismissed";
 
 void RegisterProfilePrefs(PrefRegistrySimple* registry);
 

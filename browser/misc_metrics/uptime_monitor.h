@@ -19,7 +19,7 @@ class PrefRegistrySimple;
 namespace misc_metrics {
 
 inline constexpr char kBrowserOpenTimeHistogramName[] =
-    "Brave.Uptime.BrowserOpenTime";
+    "AIWize.Uptime.BrowserOpenTime";
 
 class UptimeMonitor {
  public:

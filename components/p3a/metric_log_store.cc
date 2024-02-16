@@ -45,11 +45,11 @@ void RecordSentAnswersCount(uint64_t answers_count) {
   } else if (10 <= answers_count) {
     answer = 3;
   }
-  UMA_HISTOGRAM_EXACT_LINEAR("Brave.P3A.SentAnswersCount", answer, 3);
+  UMA_HISTOGRAM_EXACT_LINEAR("AIWize.P3A.SentAnswersCount", answer, 3);
 }
 
 bool IsMetricP2A(const std::string& histogram_name) {
-  return base::StartsWith(histogram_name, "Brave.P2A",
+  return base::StartsWith(histogram_name, "AIWize.P2A",
                           base::CompareCase::SENSITIVE);
 }
 

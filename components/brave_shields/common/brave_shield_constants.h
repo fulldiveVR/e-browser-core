@@ -42,8 +42,8 @@ const char kCookieListUuid[] = "AC023D22-AE88-4060-A978-4FEEEC4221693";
 const char kMobileNotificationsListUuid[] =
     "2F3DCE16-A19A-493C-A88F-2E110FBD37D6";
 
-const char kCookieListEnabledHistogram[] = "Brave.Shields.CookieListEnabled";
-const char kCookieListPromptHistogram[] = "Brave.Shields.CookieListPrompt";
+const char kCookieListEnabledHistogram[] = "AIWize.Shields.CookieListEnabled";
+const char kCookieListPromptHistogram[] = "AIWize.Shields.CookieListPrompt";
 
 }  // namespace brave_shields
 

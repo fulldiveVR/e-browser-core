@@ -15,13 +15,13 @@ class PrefService;
 namespace playlist {
 
 inline constexpr char kLastUsageTimeHistogramName[] =
-    "Brave.Playlist.LastUsageTime";
+    "AIWize.Playlist.LastUsageTime";
 inline constexpr char kFirstTimeOffsetHistogramName[] =
-    "Brave.Playlist.FirstTimeOffset";
+    "AIWize.Playlist.FirstTimeOffset";
 inline constexpr char kUsageDaysInWeekHistogramName[] =
-    "Brave.Playlist.UsageDaysInWeek";
+    "AIWize.Playlist.UsageDaysInWeek";
 inline constexpr char kNewUserReturningHistogramName[] =
-    "Brave.Playlist.NewUserReturning";
+    "AIWize.Playlist.NewUserReturning";
 
 // Manages P3A metrics for playlist
 class PlaylistP3A {

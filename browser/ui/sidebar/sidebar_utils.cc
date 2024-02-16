@@ -126,6 +126,22 @@ SidePanelEntryId SidePanelIdFromSideBarItemType(BuiltInItemType type) {
       return SidePanelEntryId::kPlaylist;
     case BuiltInItemType::kChatUI:
       return SidePanelEntryId::kChatUI;
+    case BuiltInItemType::kAiWize:
+      [[fallthrough]];
+    case BuiltInItemType::kMessenger:
+      [[fallthrough]];
+    case BuiltInItemType::kTrello:
+      [[fallthrough]];
+    case BuiltInItemType::kWhatsapp:
+      [[fallthrough]];
+    case BuiltInItemType::kSlack:
+      [[fallthrough]];
+    case BuiltInItemType::kDiscord:
+      [[fallthrough]];
+    case BuiltInItemType::kGoogleDocs:
+      [[fallthrough]];
+    case BuiltInItemType::kGoogleCalendar:
+      [[fallthrough]];
     case BuiltInItemType::kBraveTalk:
       [[fallthrough]];
     case BuiltInItemType::kHistory:

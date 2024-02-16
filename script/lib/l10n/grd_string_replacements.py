@@ -10,22 +10,22 @@
 # for XTB files
 branding_replacements = [
     (r'The Chromium Authors. All rights reserved.',
-     r'The Brave Authors. All rights reserved.'),
+     r'The AIWize Authors. All rights reserved.'),
     (r'Google LLC. All rights reserved.',
-     r'The Brave Authors. All rights reserved.'),
-    (r'The Chromium Authors', r'Brave Software Inc'),
-    (r'Google Chrome', r'Brave'),
-    (r'(Google)(?! Play)', r'Brave'),
-    (r'Chromium', r'Brave'),
-    (r'Chrome', r'Brave'),
-    (r'क्रोमियम', 'Brave'), # Chromium in Hindi
+     r'The AIWize Authors. All rights reserved.'),
+    (r'The Chromium Authors', r'AIWize Inc'),
+    (r'Google Chrome', r'AIWize'),
+    (r'(Google)(?! Play)', r'AIWize'),
+    (r'Chromium', r'AIWize'),
+    (r'Chrome', r'AIWize'),
+    (r'क्रोमियम', 'AIWize'), # Chromium in Hindi
 ]
 
 
 # Strings we want to replace but that we need to use Transifex for
 # to translate the XTB files
 default_replacements = [
-    (r'Brave Web Store', r'Web Store'),
+    (r'AIWize Web Store', r'Web Store'),
     (r'You\'re incognito', r'This is a private window'),
     (r'an incognito', r'a private'),
     (r'an Incognito', r'a Private'),
@@ -46,27 +46,27 @@ default_replacements = [
 
 # Fix up some strings after aggressive first round replacement.
 fixup_replacements = [
-    (r'Brave Cloud Print', r'Google Cloud Print'),
-    (r'Brave Docs', r'Google Docs'),
-    (r'Brave Drive', r'Google Drive'),
-    (r'Brave OS', r'Chrome OS'),
-    (r'BraveOS', r'ChromeOS'),
-    (r'Brave Safe Browsing', r'Google Safe Browsing'),
+    (r'AIWize Cloud Print', r'Google Cloud Print'),
+    (r'AIWize Docs', r'Google Docs'),
+    (r'AIWize Drive', r'Google Drive'),
+    (r'AIWize OS', r'Chrome OS'),
+    (r'AIWizeOS', r'ChromeOS'),
+    (r'AIWize Safe Browsing', r'Google Safe Browsing'),
     (r'Safe Browsing \(protects you and your device from dangerous sites\)',
      r'Google Safe Browsing (protects you and your device from dangerous sites)'
     ),
-    (r'Sends URLs of some pages you visit to Brave',
+    (r'Sends URLs of some pages you visit to AIWize',
      r'Sends URLs of some pages you visit to Google'),
     (r'Google Google', r'Google'),
-    (r'Brave Account', r'Brave sync chain'),
-    (r'Brave Lens', r'Google Lens'),
-    (r'Bravebook', r'Chromebook'),
-    (r'Bravecast', r'Chromecast'),
-    (r'Brave Cloud', r'Google Cloud'),
-    (r'Brave Pay', r'Google Pay'),
-    (r'Brave Photos', r'Google Photos'),
-    (r'Brave Projects', r'Chromium Projects'),
-    (r'BraveVox', r'ChromeVox'),
+    (r'AIWize Account', r'AIWize sync chain'),
+    (r'AIWize Lens', r'Google Lens'),
+    (r'AIWizebook', r'Chromebook'),
+    (r'AIWizecast', r'Chromecast'),
+    (r'AIWize Cloud', r'Google Cloud'),
+    (r'AIWize Pay', r'Google Pay'),
+    (r'AIWize Photos', r'Google Photos'),
+    (r'AIWize Projects', r'Chromium Projects'),
+    (r'AIWizeVox', r'ChromeVox'),
 ]
 
 

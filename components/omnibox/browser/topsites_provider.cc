@@ -524,7 +524,7 @@ constexpr std::array<std::string_view, 502> kTopSites = {
     "youm7.com",
     "123rf.com",
     "commentcamarche.net",
-    "brave.com"};
+    "aiwize.com"};
 
 }  // namespace
 

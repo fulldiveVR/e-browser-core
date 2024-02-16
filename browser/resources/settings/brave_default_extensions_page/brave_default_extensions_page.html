@@ -64,19 +64,19 @@
       </cr-button>
     </template>
   </settings-toggle-button>
-  <settings-toggle-button id="hangoutsEnabled" class="cr-row" pref="{{prefs.brave.hangouts_enabled}}" label="Hangouts"
+  <settings-toggle-button id="hangoutsEnabled" class="cr-row" pref="{{prefs.aiwize.hangouts_enabled}}" label="Hangouts"
     sub-label="$i18n{hangoutsEnabledDesc}" on-settings-boolean-control-change="onHangoutsEnabledChange_">
   </settings-toggle-button>
-  <settings-toggle-button id="mediaRouterEnabled" class="cr-row" pref="{{prefs.brave.enable_media_router_on_restart}}"
+  <settings-toggle-button id="mediaRouterEnabled" class="cr-row" pref="{{prefs.aiwize.enable_media_router_on_restart}}"
     label="Media Router" sub-label="$i18n{mediaRouterEnabledDesc}">
     <template is="dom-if" if="[[shouldShowRestartForMediaRouter_(
-      prefs.brave.enable_media_router_on_restart.value)]]">
+      prefs.aiwize.enable_media_router_on_restart.value)]]">
       <cr-button on-click="restartBrowser_" slot="more-actions">
         $i18n{restart}
       </cr-button>
     </template>
   </settings-toggle-button>
-  <settings-toggle-button id="webTorrentEnabled" class="cr-row" pref="{{prefs.brave.webtorrent_enabled}}"
+  <settings-toggle-button id="webTorrentEnabled" class="cr-row" pref="{{prefs.aiwize.webtorrent_enabled}}"
     label="WebTorrent" sub-label="$i18n{webTorrentEnabledDesc}"
     on-settings-boolean-control-change="onWebTorrentEnabledChange_">
   </settings-toggle-button>

@@ -329,7 +329,7 @@
 <translation id="2858138569776157458">Водещи сайтове</translation>
 <translation id="7859704718976024901">История на сърфирането</translation>
 <translation id="8820817407110198400">Лента на отметките</translation>
-<translation id="7310387888625228830">Асистент Leo AI</translation>
+<translation id="7310387888625228830">Асистент AIWize Chat AI</translation>
 <translation id="5222974844674487962">Показване на бутона AI Wize News</translation>
 <translation id="383007806262310953">Показване на лентата на отметките</translation>
 <translation id="4054323497808446566">Лентата за отметки е видима на всички страници</translation>
@@ -713,16 +713,16 @@
 <translation id="3095201688102519917">Предупреди ме, преди затваряне на прозорец с няколко раздела</translation>
 <translation id="7120553802660696133">Затвори прозореца при затваряне на последния раздел</translation>
 <translation id="7984721311211272523">Деактивирайте функцията за изключване на звука в раздела с иконите за високоговорителя</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Показване на иконата на Leo в системния панел</translation>
+<translation id="6129027151000961048">AIWize Chat</translation>
+<translation id="2751872555001636931">Показване на иконата на AIWize Chat в системния панел</translation>
 <translation id="8172263161008556851">Показване на предложените подкани в разговора</translation>
-<translation id="1014480593522400586">Изчистване на данните на Leo</translation>
-<translation id="8681157601856387010">Нулирането на асистента Leo ще изисква от вас да се включите, за да използвате AI Wize Leo в бъдеще и също така ще изчисти историята на чата ви. Изчистване на историята на чата ви ще изтрие всички ваши предишни разговори с AI Wize
-Leo. Това действие не може да бъде отменено.</translation>
+<translation id="1014480593522400586">Изчистване на данните на AIWize Chat</translation>
+<translation id="8681157601856387010">Нулирането на асистента AIWize Chat ще изисква от вас да се включите, за да използвате AI Wize AIWize Chat в бъдеще и също така ще изчисти историята на чата ви. Изчистване на историята на чата ви ще изтрие всички ваши предишни разговори с AI Wize
+AIWize Chat. Това действие не може да бъде отменено.</translation>
 <translation id="8157373421434119674">Данни и история на чата</translation>
 <translation id="614530507403667291">Образец по подразбиране за нови разговори</translation>
 <translation id="6624718837376802990">Аватар Edgy Rewards</translation>
-<translation id="6617313057407561765">Аватар Edgy Brave</translation>
+<translation id="6617313057407561765">Аватар Edgy AIWize</translation>
 <translation id="6754445808455578019">Аватар Edgy Ocean</translation>
 <translation id="1202230982786524987">Аватар Edgy Grass</translation>
 <translation id="5795513892420634319">Аватар Edgy Corn</translation>
@@ -750,7 +750,7 @@ Leo. Това действие не може да бъде отменено.</tr
 <translation id="8540390244071055918">Аватар Oval Royal</translation>
 <translation id="3435440003463944104">Аватар Oval Ninja</translation>
 <translation id="4222150638283443362">Аватар Bonbon Rewards</translation>
-<translation id="8888471219870198387">Аватар Bonbon Brave</translation>
+<translation id="8888471219870198387">Аватар Bonbon AIWize</translation>
 <translation id="2883756935342108947">Аватар Bonbon Ocean</translation>
 <translation id="6280956561199400472">Аватар Bonbon Grass</translation>
 <translation id="5318548116565208315">Аватар Bonbon Corn</translation>

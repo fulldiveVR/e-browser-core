@@ -25,10 +25,10 @@ enum class MenuGroup {
 };
 
 inline constexpr char kFrequentMenuGroupHistogramName[] =
-    "Brave.Toolbar.FrequentMenuGroup";
+    "AIWize.Toolbar.FrequentMenuGroup";
 inline constexpr char kMenuDismissRateHistogramName[] =
-    "Brave.Toolbar.MenuDismissRate";
-inline constexpr char kMenuOpensHistogramName[] = "Brave.Toolbar.MenuOpens";
+    "AIWize.Toolbar.MenuDismissRate";
+inline constexpr char kMenuOpensHistogramName[] = "AIWize.Toolbar.MenuOpens";
 
 class MenuMetrics {
  public:

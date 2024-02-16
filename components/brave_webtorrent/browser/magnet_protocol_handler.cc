@@ -27,7 +27,7 @@ namespace webtorrent {
 
 namespace {
 
-constexpr char kWebtorrentUsageHistogramName[] = "Brave.WebTorrent.UsageWeekly";
+constexpr char kWebtorrentUsageHistogramName[] = "AIWize.WebTorrent.UsageWeekly";
 
 bool IsMagnetProtocol(const GURL& url) {
   return url.SchemeIs(kMagnetScheme);

@@ -264,7 +264,7 @@ void BraveProxyingURLLoaderFactory::InProgressRequest::OnTransferSizeUpdated(
 
 void BraveProxyingURLLoaderFactory::InProgressRequest::OnComplete(
     const network::URLLoaderCompletionStatus& status) {
-  UMA_HISTOGRAM_TIMES("Brave.ProxyingURLLoader.TotalRequestTime",
+  UMA_HISTOGRAM_TIMES("AIWize.ProxyingURLLoader.TotalRequestTime",
                       base::TimeTicks::Now() - start_time_);
   if (status.error_code != net::OK) {
     OnRequestError(status);

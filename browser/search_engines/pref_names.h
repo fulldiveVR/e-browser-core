@@ -7,8 +7,8 @@
 #define BRAVE_BROWSER_SEARCH_ENGINES_PREF_NAMES_H_
 
 inline constexpr char kUseAlternativePrivateSearchEngineProvider[] =
-    "brave.use_alternate_private_search_engine";
+    "aiwize.use_alternate_private_search_engine";
 inline constexpr char kShowAlternativePrivateSearchEngineProviderToggle[] =
-    "brave.show_alternate_private_search_engine_toggle";
+    "aiwize.show_alternate_private_search_engine_toggle";
 
 #endif  // BRAVE_BROWSER_SEARCH_ENGINES_PREF_NAMES_H_

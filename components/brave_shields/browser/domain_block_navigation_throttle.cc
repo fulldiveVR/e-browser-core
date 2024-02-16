@@ -36,7 +36,7 @@ std::pair<bool, std::string> ShouldBlockDomainOnTaskRunner(
     brave_shields::AdBlockService* ad_block_service,
     const GURL& url,
     bool aggressive_setting) {
-  SCOPED_UMA_HISTOGRAM_TIMER("Brave.DomainBlock.ShouldBlock");
+  SCOPED_UMA_HISTOGRAM_TIMER("AIWize.DomainBlock.ShouldBlock");
   // force aggressive blocking to `true` for domain blocking - these requests
   // are all "first-party", but the throttle is already only called when
   // necessary.

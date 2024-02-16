@@ -12,28 +12,28 @@ class PrefService;
 namespace ai_chat::prefs {
 
 inline constexpr char kLastAcceptedDisclaimer[] =
-    "brave.ai_chat.last_accepted_disclaimer";
+    "aiwize.ai_chat.last_accepted_disclaimer";
 inline constexpr char kBraveChatAutocompleteProviderEnabled[] =
-    "brave.ai_chat.autocomplete_provider_enabled";
+    "aiwize.ai_chat.autocomplete_provider_enabled";
 inline constexpr char kBraveChatP3AChatCountWeeklyStorage[] =
-    "brave.ai_chat.p3a_chat_count";
+    "aiwize.ai_chat.p3a_chat_count";
 inline constexpr char kBraveChatP3APromptCountWeeklyStorage[] =
-    "brave.ai_chat.p3a_prompt_count";
+    "aiwize.ai_chat.p3a_prompt_count";
 // Stores Leo Premium credentials that have already been fetched from the
 // SKU SDK but were not used because the chat server was unavailable.
 inline constexpr char kBraveChatPremiumCredentialCache[] =
-    "brave.ai_chat.premium_credential_cache";
+    "aiwize.ai_chat.premium_credential_cache";
 inline constexpr char kUserDismissedPremiumPrompt[] =
-    "brave.ai_chat.user_dismissed_premium_prompt";
-inline constexpr char kDefaultModelKey[] = "brave.ai_chat.default_model_key";
+    "aiwize.ai_chat.user_dismissed_premium_prompt";
+inline constexpr char kDefaultModelKey[] = "aiwize.ai_chat.default_model_key";
 inline constexpr char kBraveChatP3AOmniboxOpenWeeklyStorage[] =
-    "brave.ai_chat.p3a_omnibox_open";
+    "aiwize.ai_chat.p3a_omnibox_open";
 inline constexpr char kBraveChatP3AOmniboxAutocompleteWeeklyStorage[] =
-    "brave.ai_chat.p3a_omnibox_autocomplete";
+    "aiwize.ai_chat.p3a_omnibox_autocomplete";
 inline constexpr char kBraveChatP3ALastPremiumCheck[] =
-    "brave.ai_chat.p3a_last_premium_check";
+    "aiwize.ai_chat.p3a_last_premium_check";
 inline constexpr char kBraveChatP3ALastPremiumStatus[] =
-    "brave.ai_chat.p3a_last_premium_status";
+    "aiwize.ai_chat.p3a_last_premium_status";
 
 void RegisterProfilePrefs(PrefRegistrySimple* registry);
 

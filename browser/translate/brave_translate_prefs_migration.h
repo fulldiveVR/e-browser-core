@@ -13,7 +13,7 @@ namespace translate {
 
 namespace prefs {
 inline constexpr char kMigratedToInternalTranslation[] =
-    "brave.translate_migrated_from_extension";
+    "aiwize.translate_migrated_from_extension";
 }  // namespace prefs
 
 void RegisterBraveProfilePrefsForMigration(PrefRegistrySimple* registry);

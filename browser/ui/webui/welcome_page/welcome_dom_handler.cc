@@ -28,7 +28,7 @@ constexpr char16_t kChromeDevMacBrowserName[] = u"Chrome Dev";
 constexpr char16_t kChromeBetaLinuxBrowserName[] = u"Google Chrome (beta)";
 constexpr char16_t kChromeDevLinuxBrowserName[] = u"Google Chrome (unstable)";
 constexpr char kP3AOnboardingHistogramName[] =
-    "Brave.Welcome.InteractionStatus.2";
+    "AIWize.Welcome.InteractionStatus.2";
 constexpr size_t kMaxP3AOnboardingPhases = 3;
 
 // What was the last screen that you viewed during the browser onboarding

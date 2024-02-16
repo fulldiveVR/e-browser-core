@@ -25,9 +25,9 @@ class HistoryService;
 
 namespace misc_metrics {
 
-inline constexpr char kPagesLoadedHistogramName[] = "Brave.Core.PagesLoaded";
+inline constexpr char kPagesLoadedHistogramName[] = "AIWize.Core.PagesLoaded";
 inline constexpr char kDomainsLoadedHistogramName[] =
-    "Brave.Core.DomainsLoaded";
+    "AIWize.Core.DomainsLoaded";
 
 class PageMetricsService : public KeyedService {
  public:

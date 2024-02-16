@@ -41,11 +41,11 @@ void GetDATFileData(const base::FilePath& file_path,
 namespace brave_component_updater {
 
 DATFileDataBuffer ReadDATFileData(const base::FilePath& dat_file_path) {
-  TRACE_EVENT_BEGIN1("brave.adblock", "ReadDATFileData", "path",
+  TRACE_EVENT_BEGIN1("aiwize.adblock", "ReadDATFileData", "path",
                      dat_file_path.MaybeAsASCII());
   DATFileDataBuffer buffer;
   GetDATFileData(dat_file_path, &buffer);
-  TRACE_EVENT_END1("brave.adblock", "ReadDATFileData", "size", buffer.size());
+  TRACE_EVENT_END1("aiwize.adblock", "ReadDATFileData", "size", buffer.size());
   return buffer;
 }
 

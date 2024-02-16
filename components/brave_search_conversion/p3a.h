@@ -15,19 +15,19 @@ namespace brave_search_conversion {
 namespace p3a {
 
 inline constexpr char kSearchPromoButtonHistogramName[] =
-    "Brave.Search.Promo.Button";
+    "AIWize.Search.Promo.Button";
 inline constexpr char kSearchPromoBannerAHistogramName[] =
-    "Brave.Search.Promo.BannerA";
+    "AIWize.Search.Promo.BannerA";
 inline constexpr char kSearchPromoBannerBHistogramName[] =
-    "Brave.Search.Promo.BannerB";
+    "AIWize.Search.Promo.BannerB";
 inline constexpr char kSearchPromoBannerCHistogramName[] =
-    "Brave.Search.Promo.BannerC";
+    "AIWize.Search.Promo.BannerC";
 inline constexpr char kSearchPromoBannerDHistogramName[] =
-    "Brave.Search.Promo.BannerD";
+    "AIWize.Search.Promo.BannerD";
 inline constexpr char kSearchPromoNTPHistogramName[] =
-    "Brave.Search.Promo.NewTabPage";
+    "AIWize.Search.Promo.NewTabPage";
 inline constexpr char kSearchQueriesBeforeChurnHistogramName[] =
-    "Brave.Search.QueriesBeforeChurn";
+    "AIWize.Search.QueriesBeforeChurn";
 
 void RegisterLocalStatePrefs(PrefRegistrySimple* registry);
 void RegisterLocalStatePrefsForMigration(PrefRegistrySimple* registry);

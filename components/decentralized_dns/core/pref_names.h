@@ -14,7 +14,7 @@ namespace decentralized_dns {
 // Ask: Ask users if they want to enable support of unstoppable domains.
 // Enabled: Resolve domain name using Ethereum JSON-RPC server.
 inline constexpr char kUnstoppableDomainsResolveMethod[] =
-    "brave.unstoppable_domains.resolve_method";
+    "aiwize.unstoppable_domains.resolve_method";
 
 }
 #endif  // BRAVE_COMPONENTS_DECENTRALIZED_DNS_CORE_PREF_NAMES_H_

@@ -142,7 +142,7 @@ class AdblockCnameResolveHostClient : public network::mojom::ResolveHostClient {
                   const std::optional<net::AddressList>& resolved_addresses,
                   const std::optional<net::HostResolverEndpointResults>&
                       endpoint_results_with_metadata) override {
-    UMA_HISTOGRAM_TIMES("Brave.ShieldsCNAMEBlocking.TotalResolutionTime",
+    UMA_HISTOGRAM_TIMES("AIWize.ShieldsCNAMEBlocking.TotalResolutionTime",
                         base::TimeTicks::Now() - start_time_);
     if (result == net::OK && resolved_addresses) {
       DCHECK(resolved_addresses.has_value() && !resolved_addresses->empty());
@@ -190,7 +190,7 @@ EngineFlags ShouldBlockRequestOnTaskRunner(
       url::Origin::CreateFromNormalizedTuple("https", "youtube.com", 443),
       net::registry_controlled_domains::INCLUDE_PRIVATE_REGISTRIES);
 
-  SCOPED_UMA_HISTOGRAM_TIMER("Brave.Adblock.ShouldBlockRequest");
+  SCOPED_UMA_HISTOGRAM_TIMER("AIWize.Adblock.ShouldBlockRequest");
   auto adblock_result =
       g_brave_browser_process->ad_block_service()->ShouldStartRequest(
           url_to_check, ctx->resource_type, source_host,

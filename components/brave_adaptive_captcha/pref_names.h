@@ -10,15 +10,15 @@ namespace brave_adaptive_captcha {
 namespace prefs {
 
 inline constexpr char kScheduledCaptchaId[] =
-    "brave.rewards.scheduled_captcha.id";
+    "aiwize.rewards.scheduled_captcha.id";
 inline constexpr char kScheduledCaptchaPaymentId[] =
-    "brave.rewards.scheduled_captcha.payment_id";
+    "aiwize.rewards.scheduled_captcha.payment_id";
 inline constexpr char kScheduledCaptchaSnoozeCount[] =
-    "brave.rewards.scheduled_captcha.snooze_count";
+    "aiwize.rewards.scheduled_captcha.snooze_count";
 inline constexpr char kScheduledCaptchaFailedAttempts[] =
-    "brave.rewards.scheduled_captcha.failed_attempts";
+    "aiwize.rewards.scheduled_captcha.failed_attempts";
 inline constexpr char kScheduledCaptchaPaused[] =
-    "brave.rewards.scheduled_captcha.paused";
+    "aiwize.rewards.scheduled_captcha.paused";
 
 }  // namespace prefs
 }  // namespace brave_adaptive_captcha

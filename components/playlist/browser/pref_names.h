@@ -10,7 +10,7 @@ namespace playlist {
 
 // A boolean preference indicates whether playlist feature is enabled or not by
 // the user.
-inline constexpr char kPlaylistEnabledPref[] = "brave.playlist.enabled";
+inline constexpr char kPlaylistEnabledPref[] = "aiwize.playlist.enabled";
 
 // Set of playlists. Each playlist has ids of its items
 // so that playlists can share same item efficiently
@@ -22,39 +22,39 @@ inline constexpr char kPlaylistEnabledPref[] = "brave.playlist.enabled";
 //        "list1": {name: "playlist1", items: [id1, id2, id3]},
 //        "list2": {name: "playlist2", items: [id1, id4, id5] }
 //      }                                       ^ same item
-inline constexpr char kPlaylistsPref[] = "brave.playlist.lists";
+inline constexpr char kPlaylistsPref[] = "aiwize.playlist.lists";
 
 // Stores order of playlists.
 // ["id1", "id2" ... ]
-inline constexpr char kPlaylistOrderPref[] = "brave.playlist.lists_order";
+inline constexpr char kPlaylistOrderPref[] = "aiwize.playlist.lists_order";
 
 // Stores playlist item key-value pairs in a dict. Each item has unique key and
 // it's metadata(such as, title, media file path and etc..).
-inline constexpr char kPlaylistItemsPref[] = "brave.playlist.items";
+inline constexpr char kPlaylistItemsPref[] = "aiwize.playlist.items";
 
 // Boolean pref indicates that we should cache media file when adding items.
-inline constexpr char kPlaylistCacheByDefault[] = "brave.playlist.cache";
+inline constexpr char kPlaylistCacheByDefault[] = "aiwize.playlist.cache";
 
 // A string indicates to which playlist items should be added by default.
 inline constexpr char kPlaylistDefaultSaveTargetListID[] =
-    "brave.playlist.default_save_target_list_id";
+    "aiwize.playlist.default_save_target_list_id";
 
 // Timestamp indicating first usage of playlist
 inline constexpr char kPlaylistFirstUsageTime[] =
-    "brave.playlist.first_usage_time";
+    "aiwize.playlist.first_usage_time";
 
 // Timestamp indicating last usage of playlist
 inline constexpr char kPlaylistLastUsageTime[] =
-    "brave.playlist.last_usage_time";
+    "aiwize.playlist.last_usage_time";
 
 // Boolean indicating if playlist was used on second day
 // on first week of usage
 inline constexpr char kPlaylistUsedSecondDay[] =
-    "brave.playlist.used_second_day";
+    "aiwize.playlist.used_second_day";
 
 // Weekly storage event list counting usages of playlist
 inline constexpr char kPlaylistUsageWeeklyStorage[] =
-    "brave.playlist.usage_weekly_storage";
+    "aiwize.playlist.usage_weekly_storage";
 
 }  // namespace playlist
 

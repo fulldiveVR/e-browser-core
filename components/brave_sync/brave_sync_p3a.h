@@ -11,11 +11,11 @@
 namespace brave_sync {
 namespace p3a {
 
-// TODO(alexeybarabash): move here also "Brave.Sync.Status.2" and
-// "Brave.Sync.ProgressTokenEverReset"
-inline constexpr char kEnabledTypesHistogramName[] = "Brave.Sync.EnabledTypes";
+// TODO(alexeybarabash): move here also "AIWize.Sync.Status.2" and
+// "AIWize.Sync.ProgressTokenEverReset"
+inline constexpr char kEnabledTypesHistogramName[] = "AIWize.Sync.EnabledTypes";
 inline constexpr char kSyncedObjectsCountHistogramName[] =
-    "Brave.Sync.SyncedObjectsCount";
+    "AIWize.Sync.SyncedObjectsCount";
 
 enum class EnabledTypesAnswer {
   kEmptyOrBookmarksOnly = 0,
