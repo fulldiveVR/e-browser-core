@@ -17,10 +17,7 @@
 #include "brave/browser/brave_stats/brave_stats_updater_params.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_referrals/browser/brave_referrals_service.h"
-#include "brave/components/brave_rewards/browser/rewards_service.h"
 #include "brave/components/brave_stats/browser/brave_stats_updater_util.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/misc_metrics/general_browser_usage.h"
 
@@ -651,7 +648,6 @@ TEST_F(BraveStatsUpdaterTest, UsageURLFlags) {
   params->SavePrefs();
 
   task_environment_.AdvanceClock(base::Days(1));
-  local_state->SetTime(kBraveWalletLastUnlockTime, base::Time::Now());
 
   params = BuildUpdaterParams();
   url = params->GetUpdateURL(base_url, "", "", "");
@@ -660,7 +656,6 @@ TEST_F(BraveStatsUpdaterTest, UsageURLFlags) {
   params->SavePrefs();
 
   task_environment_.AdvanceClock(base::Days(6));
-  local_state->SetTime(kBraveWalletLastUnlockTime, base::Time::Now());
   params = BuildUpdaterParams();
   url = params->GetUpdateURL(base_url, "", "", "");
   EXPECT_THAT(url.query(), HasSubstr("daily=true&weekly=true&monthly=false"));
@@ -668,7 +663,6 @@ TEST_F(BraveStatsUpdaterTest, UsageURLFlags) {
   params->SavePrefs();
 
   task_environment_.AdvanceClock(base::Days(1));
-  local_state->SetTime(kBraveWalletLastUnlockTime, base::Time::Now());
   params = BuildUpdaterParams();
   url = params->GetUpdateURL(base_url, "", "", "");
   EXPECT_THAT(url.query(), HasSubstr("daily=true&weekly=false&monthly=false"));

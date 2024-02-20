@@ -155,6 +155,7 @@ module.exports = class GitPatcher {
     // Detect if patch file changed since patch was applied
     const currentPatchChecksum = await calculateFileChecksum(patchPath)
     if (currentPatchChecksum !== patchChecksum) {
+      console.error(`currentPatchChecksum: ${currentPatchChecksum}, patchChecksum: ${patchChecksum}`)
       return patchApplyReasons.PATCH_CHANGED
     }
     // Detect if any of the files the patch applies to have changed
@@ -162,6 +163,7 @@ module.exports = class GitPatcher {
       const fullPath = path.join(this.repoPath, localPath)
       const currentChecksum = await calculateFileChecksum(fullPath)
       if (currentChecksum !== checksum) {
+        console.error(`currentChecksum: ${currentChecksum}, checksum: ${checksum}`)
         return patchApplyReasons.SRC_CHANGED
       }
     }

@@ -27,7 +27,7 @@ int OnBeforeStartTransaction_BraveServiceKey(
        GURL(BUILDFLAG(UPDATER_PROD_ENDPOINT)).host()}};
 
   const GURL& url = ctx->request_url;
-
+// fftf: inject header
   if (url.SchemeIs(url::kHttpsScheme)) {
     if (std::any_of(
             allowed_domains->begin(), allowed_domains->end(),

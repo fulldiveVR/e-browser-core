@@ -8,10 +8,8 @@
 #include "brave/browser/android/safe_browsing/features.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/features.h"
-#include "brave/components/brave_rewards/common/features.h"
 #include "brave/components/brave_search_conversion/features.h"
 #include "brave/components/brave_shields/common/features.h"
-#include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/debounce/common/features.h"
 #include "brave/components/google_sign_in_permission/features.h"
 #include "brave/components/playlist/common/features.h"
@@ -30,7 +28,6 @@
 // clang-format off
 #define kForceWebContentsDarkMode kForceWebContentsDarkMode,            \
     BRAVE_AI_CHAT_FLAG                                                  \
-    &brave_rewards::features::kBraveRewards,                            \
     &brave_search_conversion::features::kOmniboxBanner,                 \
     &brave_wallet::features::kNativeBraveWalletFeature,                 \
     &playlist::features::kPlaylist,                                     \

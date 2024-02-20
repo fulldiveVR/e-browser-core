@@ -6,13 +6,9 @@
 #include "base/feature_list.h"
 #include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/browser/metrics/buildflags/buildflags.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/brave_shields/common/features.h"
 #include "brave/components/brave_shields/common/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
-#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
@@ -102,8 +98,6 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
 #endif
   EXPECT_TRUE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       kHangoutsEnabled));
-  EXPECT_TRUE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
-      brave_rewards::prefs::kShowLocationBarButton));
 #if BUILDFLAG(ENABLE_IPFS)
   EXPECT_EQ(chrome_test_utils::GetProfile(this)->GetPrefs()->GetInteger(
                 kIPFSResolveMethod),
@@ -117,16 +111,6 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
 #endif
   EXPECT_FALSE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       kIPFSCompanionEnabled));
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
-  EXPECT_FALSE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
-      kERCOptedIntoCryptoWallets));
-#endif
-  EXPECT_EQ(brave_wallet::GetDefaultEthereumWallet(
-                chrome_test_utils::GetProfile(this)->GetPrefs()),
-            brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension);
-  EXPECT_EQ(brave_wallet::GetDefaultSolanaWallet(
-                chrome_test_utils::GetProfile(this)->GetPrefs()),
-            brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension);
   EXPECT_FALSE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       kMRUCyclingEnabled));
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
