@@ -17,11 +17,11 @@ namespace skus {
 bool IsSafeOrigin(const blink::WebSecurityOrigin& origin) {
   // NOTE: please open a security review when appending to this list.
   static base::NoDestructor<std::vector<blink::WebSecurityOrigin>> safe_origins{
-      {{blink::WebSecurityOrigin::Create(GURL("https://account.brave.com"))},
+      {{blink::WebSecurityOrigin::Create(GURL("https://account.aiwize.com"))},
        {blink::WebSecurityOrigin::Create(
-           GURL("https://account.bravesoftware.com"))},
+           GURL("https://account.aiwize.com"))},
        {blink::WebSecurityOrigin::Create(
-           GURL("https://account.brave.software"))}}};
+           GURL("https://account.aiwize.com"))}}};
 
   for (const blink::WebSecurityOrigin& safe_origin : *safe_origins) {
     if (safe_origin.IsSameOriginWith(origin)) {

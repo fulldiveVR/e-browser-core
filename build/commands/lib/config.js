@@ -189,7 +189,7 @@ const Config = function () {
   this.safeBrowsingApiEndpoint = getNPMConfig(['safebrowsing_api_endpoint']) || ''
   this.updaterProdEndpoint = getNPMConfig(['updater_prod_endpoint']) || ''
   this.updaterDevEndpoint = getNPMConfig(['updater_dev_endpoint']) || ''
-  this.webcompatReportApiEndpoint = getNPMConfig(['webcompat_report_api_endpoint']) || 'https://webcompat.brave.com/1/webcompat'
+  this.webcompatReportApiEndpoint = getNPMConfig(['webcompat_report_api_endpoint']) || 'https://webcompat.aiwize.com/1/webcompat'
   this.rewardsGrantDevEndpoint = getNPMConfig(['rewards_grant_dev_endpoint']) || ''
   this.rewardsGrantStagingEndpoint = getNPMConfig(['rewards_grant_staging_endpoint']) || ''
   this.rewardsGrantProdEndpoint = getNPMConfig(['rewards_grant_prod_endpoint']) || ''
@@ -244,8 +244,8 @@ const Config = function () {
   this.androidAabToApk = false
   this.enable_dangling_raw_ptr_checks = false
   this.useBraveHermeticToolchain =
-    this.gomaServerHost.endsWith('.brave.com') ||
-    this.rbeService.includes('.brave.com:') ||
+    this.gomaServerHost.endsWith('.aiwize.com') ||
+    this.rbeService.includes('.aiwize.com:') ||
     this.rbeService.includes('.engflow.com:')
 }
 

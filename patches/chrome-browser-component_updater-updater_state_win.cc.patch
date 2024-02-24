@@ -6,7 +6,7 @@ index 56f5f518937560daf34b9d475e84d72e7926e28c..930924c19b99a9a8f003bdec6386899c
  
  // Google Update group policy settings.
  const wchar_t kGoogleUpdatePoliciesKey[] =
-+    L"SOFTWARE\\Policies\\BraveSoftware\\Update";
++    L"SOFTWARE\\Policies\\AIWize\\Update";
 +#if 0
      L"SOFTWARE\\Policies\\Google\\Update";
 +#endif
@@ -22,9 +22,9 @@ index 56f5f518937560daf34b9d475e84d72e7926e28c..930924c19b99a9a8f003bdec6386899c
  const int kCheckPeriodOverrideMinutesMax = 60 * 24 * 7 * 6;
  
  // Google Update registry settings.
-+const wchar_t kRegPathGoogleUpdate[] = L"Software\\BraveSoftware\\Update";
++const wchar_t kRegPathGoogleUpdate[] = L"Software\\AIWize\\Update";
 +const wchar_t kRegPathClientsGoogleUpdate[] =
-+    L"Software\\BraveSoftware\\Update\\Clients\\"
++    L"Software\\AIWize\\Update\\Clients\\"
 +    L"{B131C935-9BE6-41DA-9599-1F776BEB8019}";
 +#if 0
  const wchar_t kRegPathGoogleUpdate[] = L"Software\\Google\\Update";

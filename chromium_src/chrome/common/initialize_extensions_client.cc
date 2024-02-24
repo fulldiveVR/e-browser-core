@@ -6,6 +6,6 @@
 #include "brave/common/extensions/brave_extensions_client.h"
 
 // fftf: disabled injection
-// #define ChromeExtensionsClient BraveExtensionsClient
+#define ChromeExtensionsClient BraveExtensionsClient
 #include "src/chrome/common/initialize_extensions_client.cc"
-// #undef ChromeExtensionsClient
+#undef ChromeExtensionsClient

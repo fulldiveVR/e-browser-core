@@ -49,10 +49,10 @@ where
 
         let remote_sdk_url = remote_sdk_url.unwrap_or(match environment {
             Environment::Local => "http://localhost:8080",
-            Environment::Testing => "https://account.brave.software/skus",
-            Environment::Development => "https://account.brave.software/skus",
-            Environment::Staging => "https://account.bravesoftware.com/skus",
-            Environment::Production => "https://account.brave.com/skus",
+            Environment::Testing => "https://account.aiwize.com/skus",
+            Environment::Development => "https://account.aiwize.com/skus",
+            Environment::Staging => "https://account.aiwize.com/skus",
+            Environment::Production => "https://account.aiwize.com/skus",
         });
 
         SDK {

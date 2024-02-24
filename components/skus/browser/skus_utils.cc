@@ -37,11 +37,11 @@ std::string GetDomain(const std::string& prefix,
   DCHECK(prefix == kProductTalk || prefix == kProductVPN);
 
   if (environment == kEnvProduction) {
-    return prefix + ".brave.com";
+    return prefix + ".aiwize.com";
   } else if (environment == kEnvStaging) {
-    return prefix + ".bravesoftware.com";
+    return prefix + ".aiwize.com";
   } else if (environment == kEnvDevelopment) {
-    return prefix + ".brave.software";
+    return prefix + ".aiwize.com";
   }
 
   NOTREACHED();

@@ -172,18 +172,18 @@ class BraveBrowserTypeImpl(BrowserType):
                field_trials_mode: Optional[FieldTrialsMode]):
     if field_trials_mode is None:
       field_trials_mode = FieldTrialsMode.GRIFFIN
-    super().__init__('brave', 'Brave Browser', channel, [], [], False,
+    super().__init__('brave', 'AIWize Browser', channel, [], [], False,
                      field_trials_mode)
 
   def _GetWinInstallPath(self) -> str:
-    app_name = 'Brave-Browser'
+    app_name = 'AIWize-Browser'
     if self.channel is not None:
       app_name += '-' + self.channel
     return os.path.join(os.path.expanduser('~'), 'AppData', 'Local',
-                        'BraveSoftware', app_name, 'Application')
+                        'AIWize', app_name, 'Application')
 
   def _DownloadDmgAndExtract(self, tag: str, out_dir: str, target_arch):
-    dmg_name = f'Brave-Browser-{self._channel}-{target_arch}.dmg'
+    dmg_name = f'AIWize-Browser-{self._channel}-{target_arch}.dmg'
     dmg_path = os.path.join(out_dir, dmg_name)
 
     DownloadFile(_GetBraveDownloadUrl(tag, dmg_name), dmg_path)
@@ -192,7 +192,7 @@ class BraveBrowserTypeImpl(BrowserType):
         ['hdiutil', 'attach', '-noautoopen', '-nobrowse', dmg_path], check=True)
     mount_path = output.rsplit('\t')[-1].rstrip()
 
-    app_name = f'Brave Browser {self.channel}'
+    app_name = f'AIWize Browser {self.channel}'
     GetProcessOutput(
         ['cp', '-R',
          os.path.join(mount_path, app_name + '.app'), out_dir],
@@ -212,22 +212,22 @@ class BraveBrowserTypeImpl(BrowserType):
         and version_parts[1] < 35):
       if url is None:
         url = _GetBraveDownloadUrl(
-            tag, f'BraveBrowserStandaloneSilent{self.channel}Setup.exe')
+            tag, f'AIWizeBrowserStandaloneSilent{self.channel}Setup.exe')
       return _DownloadWinInstallerAndExtract(out_dir, url,
                                              self._GetWinInstallPath(),
                                              'brave.exe')
     if target_os == 'android':
       if url is None:
-        url = _GetBraveDownloadUrl(tag, 'BraveMonoarm64.apk')
+        url = _GetBraveDownloadUrl(tag, 'AIWizeMonoarm64.apk')
       apk_filename = os.path.join(out_dir, os.pardir,
-                                  f'brave-{version.to_string()}.apk')
+                                  f'aiwize-{version.to_string()}.apk')
       DownloadFile(url, apk_filename)
       return apk_filename
 
     if target_os == 'mac':
       self._DownloadDmgAndExtract(tag, out_dir, common_options.target_arch)
     elif target_os == 'windows':
-      url = _GetBraveDownloadUrl(tag, f'brave-{tag}-win32-x64.zip')
+      url = _GetBraveDownloadUrl(tag, f'aiwize-{tag}-win32-x64.zip')
       DownloadArchiveAndUnpack(out_dir, url)
     else:
       raise NotImplementedError(f'target_os {target_os} isn\'t supported')

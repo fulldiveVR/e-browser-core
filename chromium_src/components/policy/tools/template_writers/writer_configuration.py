@@ -15,31 +15,31 @@ _BRAVE_VALUES = {
   'app_name': 'Brave',
   'doc_url':
     'https://support.aiwize.com/hc/en-us/articles/360039248271-Group-Policy',
-  'frame_name': 'Brave Frame',
-  'webview_name': 'Brave WebView',
+  'frame_name': 'AIWize Frame',
+  'webview_name': 'AIWize WebView',
   'win_config': {
     'win': {
-      'reg_mandatory_key_name': 'Software\\Policies\\BraveSoftware\\Brave',
+      'reg_mandatory_key_name': 'Software\\Policies\\AIWize\\AIWize',
       'reg_recommended_key_name':
-        'Software\\Policies\\BraveSoftware\\Brave\\Recommended',
-      'mandatory_category_path': ['Brave:Cat_Brave', 'brave'],
-      'recommended_category_path': ['Brave:Cat_Brave', 'brave_recommended'],
+        'Software\\Policies\\AIWize\\AIWize\\Recommended',
+      'mandatory_category_path': ['AIWize:Cat_AIWize', 'brave'],
+      'recommended_category_path': ['AIWize:Cat_AIWize', 'aiwize_recommended'],
       'category_path_strings': {
-        'brave': 'Brave',
-        'brave_recommended':
-        'Brave - {doc_recommended}'
+        'brave': 'AIWize',
+        'aiwize_recommended':
+        'AIWize - {doc_recommended}'
       },
-      'namespace': 'BraveSoftware.Policies.Brave',
+      'namespace': 'AIWize.Policies.AIWize',
     },
   },
   # The string 'Brave' is defined in brave.adml for ADMX, but ADM doesn't
   # support external references, so we define this map here.
   'adm_category_path_strings': {
-    'Brave:Cat_Brave': 'Brave'
+    'AIWize:Cat_AIWize': 'AIWize'
   },
   'admx_prefix': 'brave',
   'admx_using_namespaces': {
-    'Brave': 'BraveSoftware.Policies'  # prefix: namespace
+    'AIWize': 'AIWize.Policies'  # prefix: namespace
   },
   'linux_policy_path': '/etc/brave/policies/',
   'bundle_id': 'com.brave.ios.core',
