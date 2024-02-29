@@ -55,7 +55,7 @@ class ControlViewMenuModel : public ui::SimpleMenuModel {
 };
 
 bool IsSidebarOnLeft(Browser* browser) {
-  return !browser->profile()->GetPrefs()->GetBoolean(
+  return browser->profile()->GetPrefs()->GetBoolean(
       prefs::kSidePanelHorizontalAlignment);
 }
 
