@@ -177,7 +177,7 @@ void AIChatUIPageHandler::OpenBraveLeoSettings() {
                                    ? active_chat_tab_helper_->web_contents()
                                    : web_contents();
 #if !BUILDFLAG(IS_ANDROID)
-  const GURL url("brave://settings/leo-assistant");
+  const GURL url("aiwize://settings/leo-assistant");
   if (auto* browser = chrome::FindBrowserWithTab(contents_to_navigate)) {
     ShowSingletonTab(browser, url);
   } else {

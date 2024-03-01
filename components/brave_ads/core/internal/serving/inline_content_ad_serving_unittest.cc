@@ -30,7 +30,7 @@ class BraveAdsInlineContentAdServingTest : public UnitTestBase {
   void MaybeServeAd(const std::string& dimensions,
                     MaybeServeInlineContentAdCallback callback) {
     NotifyTabDidChange(
-        /*tab_id=*/1, /*redirect_chain=*/{GURL("brave://newtab")},
+        /*tab_id=*/1, /*redirect_chain=*/{GURL("aiwize://newtab")},
         /*is_visible=*/true);
 
     SubdivisionTargeting subdivision_targeting;

@@ -1963,7 +1963,7 @@
 <translation id="1097073572755862978">أرسل تقارير التشخيص إذا واجهت حالة عطل أو توقف. <ph name="LINK_BEFORE"/>معرفة المزيد.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">شارك نتائج تحليلات المنتج الخاصة والمجهولة تمامًا حول الميزات التي يستخدمها مستخدمو Brave. <ph name="LINK_BEFORE"/>معرفة المزيد.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">اكتمل الإعداد</translation>
-<translation id="3141206739023333979">يمكنك تغيير هذه الاختيارات في أي وقت في AI Wiz من خلال <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">يمكنك تغيير هذه الاختيارات في أي وقت في AI Wiz من خلال <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">اقرأ سياسة الخصوصية <ph name="LINK_BEFORE"/> الكاملة الخاصة بنا <ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">اختيار المظهر</translation>
 <translation id="6262510489122516114">يمكنك تغيير هذا في أي وقت في إعدادات Brave.</translation>
@@ -2030,7 +2030,7 @@
 <translation id="5004375364898143117">يبدو أن هناك بعض المشكلات في اتصال WireGuard. هل تريد تمكين خيار IKEv2 الاحتياطي لشبكة VPN موثوقة؟ قم بإعادة تشغيل المتصفح الخاص بك بكل سهولة.
 
 هل تحتاج إلى مساعدة فيما يتعلق بالتوافق أو التكوين؟ تواصل مع فريق الدعم الودود لدينا.
-يمكنك دائمًا الرجوع مرة أخرى إلى WireGuard على brave://settings/system.
+يمكنك دائمًا الرجوع مرة أخرى إلى WireGuard على aiwize://settings/system.
 
 لنجعلك متصلا دائمًا!
 

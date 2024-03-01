@@ -1965,7 +1965,7 @@
 <translation id="1097073572755862978">クラッシュやフリーズが発生した場合、診断レポートを送信します。<ph name="LINK_BEFORE"/>詳細はこちら。<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Braveのユーザーがどのような機能を使用しているか、完全に非公開で匿名の製品インサイトを共有します。<ph name="LINK_BEFORE"/>詳細はこちら。<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">設定が完了しました</translation>
-<translation id="3141206739023333979">Braveで選択した内容は、<ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>でいつでも変更できます。</translation>
+<translation id="3141206739023333979">Braveで選択した内容は、<ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>でいつでも変更できます。</translation>
 <translation id="8321985064212130832"><ph name="LINK_BEFORE"/>プライバシーポリシーの全文<ph name="LINK_AFTER"/>を読む</translation>
 <translation id="2801098717523961746">テーマを選択</translation>
 <translation id="6262510489122516114">Braveの設定でいつでも変更することができます。</translation>
@@ -2032,7 +2032,7 @@ Braveには、VPN接続で行われるDNSクエリの方法をフィルタリン
 <translation id="5004375364898143117">WireGuard接続に問題があるようです。IKEv2フォールバックを有効にして信頼性の高いVPNを使用しますか？ブラウザを再起動するだけで完了です。
 
 互換性や設定に関するヘルプが必要ですか? Braveのサポートチームにお問い合わせください。
-brave://settings/systemにアクセスして、いつでもWireGuard に戻すことができます。
+aiwize://settings/systemにアクセスして、いつでもWireGuard に戻すことができます。
 
 さっそく接続して使ってみましょう！
 

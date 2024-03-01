@@ -258,12 +258,12 @@ bool HandleURLReverseOverrideRewrite(GURL* url,
   }
 
 // For wallet pages, return true to update the displayed URL to react-routed
-// URL rather than showing brave://wallet for everything. This is needed
-// because of a side effect from rewriting brave:// to chrome:// in
-// HandleURLRewrite handler which makes brave://wallet the virtual URL here
+// URL rather than showing aiwize://wallet for everything. This is needed
+// because of a side effect from rewriting aiwize:// to chrome:// in
+// HandleURLRewrite handler which makes aiwize://wallet the virtual URL here
 // unless we return true to trigger an update of virtual URL here to the routed
-// URL. For example, we will display brave://wallet/send instead of
-// brave://wallet with this. This is Android only because currently both
+// URL. For example, we will display aiwize://wallet/send instead of
+// aiwize://wallet with this. This is Android only because currently both
 // virtual and real URLs are chrome:// on desktop, so it doesn't have this
 // issue.
 #if BUILDFLAG(IS_ANDROID)
@@ -289,7 +289,7 @@ bool HandleURLRewrite(GURL* url, content::BrowserContext* browser_context) {
   }
 
 // For wallet pages, return true so we can handle it in the reverse handler.
-// Also update the real URL from brave:// to chrome://.
+// Also update the real URL from aiwize:// to chrome://.
 #if BUILDFLAG(IS_ANDROID)
   if ((url->SchemeIs(content::kBraveUIScheme) ||
        url->SchemeIs(content::kChromeUIScheme)) &&
@@ -1082,7 +1082,7 @@ bool BraveContentBrowserClient::HandleURLOverrideRewrite(
     return false;
   }
 
-  // brave://sync => brave://settings/braveSync
+  // aiwize://sync => aiwize://settings/braveSync
   if (url->host() == chrome::kChromeUISyncHost) {
     GURL::Replacements replacements;
     replacements.SetSchemeStr(content::kChromeUIScheme);
@@ -1093,7 +1093,7 @@ bool BraveContentBrowserClient::HandleURLOverrideRewrite(
   }
 
 #if !BUILDFLAG(IS_ANDROID)
-  // brave://adblock => brave://settings/shields/filters
+  // aiwize://adblock => aiwize://settings/shields/filters
   if (url->host() == kAdblockHost) {
     GURL::Replacements replacements;
     replacements.SetSchemeStr(content::kChromeUIScheme);

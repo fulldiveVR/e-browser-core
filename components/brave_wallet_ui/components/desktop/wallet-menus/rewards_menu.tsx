@@ -25,7 +25,7 @@ import {
 const onClickRewardsSettings = () => {
   chrome.tabs.create(
     {
-      url: 'brave://rewards'
+      url: 'aiwize://rewards'
     },
     () => {
       if (chrome.runtime.lastError) {

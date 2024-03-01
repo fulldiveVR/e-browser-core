@@ -1962,7 +1962,7 @@ other {# surse}
 <translation id="1097073572755862978">Transmiteți rapoarte de diagnostic în caz că întâmpinați erori sau blocaje. <ph name="LINK_BEFORE"/>Aflați mai multe.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Trimiteți statistici de produse confidențiale și anonime referitoare la funcțiile utilizate de utilizatorii Brave. <ph name="LINK_BEFORE"/>Aflați mai multe.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Configurare completă</translation>
-<translation id="3141206739023333979">Schimbați aceste alegeri în orice moment în AI Wiz în <ph name="LINK_BEFORE1"/> brave://settings/privacy <ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Schimbați aceste alegeri în orice moment în AI Wiz în <ph name="LINK_BEFORE1"/> aiwize://settings/privacy <ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Citiți <ph name="LINK_BEFORE"/>politica noastră completă de confidențialitate <ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Alegeți tema dvs.</translation>
 <translation id="6262510489122516114">Puteți modifica opțiunea în orice moment în setările Brave.</translation>
@@ -2029,7 +2029,7 @@ Cu toate acestea, am observat că acest serviciu de asistență nu funcționeaz�
 <translation id="5004375364898143117">Se pare că există unele probleme cu conexiunea WireGuard. Vreți să activați protecția IKEv2 pentru un VPN fiabil? Trebuie doar să reporniți browserul.
 
 Aveți nevoie de ajutor cu compatibilitatea sau configurarea? Luați legătura cu echipa noastră de asistență.
-Puteți întotdeauna să reveniți la WireGuard pe brave://settings/system.
+Puteți întotdeauna să reveniți la WireGuard pe aiwize://settings/system.
 
 Vrem să vă menținem conectat(ă)!
 

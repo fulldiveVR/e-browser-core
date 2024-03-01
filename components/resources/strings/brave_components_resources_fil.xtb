@@ -1962,7 +1962,7 @@
 <translation id="1097073572755862978">Magpadala ng mga diagnostic report kung nakakaranas ka ng pag-crash o pag-freeze. <ph name="LINK_BEFORE"/>Alamin pa.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Mag-share ng ganap na pribado at anonymous na mga insight sa produkto tungkol sa kung anong mga feature ang ginagamit ng mga user ng Brave. <ph name="LINK_BEFORE"/>Alamin pa.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Kumpleto na ang pag-set up</translation>
-<translation id="3141206739023333979">Baguhin ang mga pagpiling ito anumang oras sa AI Wiz sa <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Baguhin ang mga pagpiling ito anumang oras sa AI Wiz sa <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Basahin ang aming buong <ph name="LINK_BEFORE"/>Patakaran sa Privacy<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Piliin ang iyong tema</translation>
 <translation id="6262510489122516114">Puwede mo itong baguhin anumang oras sa AI Wiz settings.</translation>
@@ -2029,7 +2029,7 @@ Gayunpaman, napansin naming hindi tumatakbo ang serbisyo ng helper na ito - at a
 <translation id="5004375364898143117">Mukhang may ilang isyu sa koneksyon ng WireGuard. Gusto mo bang i-enable ang IKEv2 fallback para sa maaasahang VPN? I-restart lang ang iyong browser.
 
 Kailangan ng tulong sa compatibility o configuration? Makipag-ugnayan sa aming mabait na support team.
-Puwede kang bumalik kahit anong oras sa WireGuard sa brave://settings/system.
+Puwede kang bumalik kahit anong oras sa WireGuard sa aiwize://settings/system.
 
 Kumonekta na tayo!
 

@@ -523,7 +523,7 @@
 # This test fails because we disable kVisualQuerySuggestions
 -CompanionUrlBuilderTest.MsbbAndPcOn
 
-# This test fails because we replace WebUI chrome:// scheme with brave://
+# This test fails because we replace WebUI chrome:// scheme with aiwize://
 -ChromeURLsTest.ContainsConfigURLs
 
 # These tests fail because we changed idle detection content setting to BLOCK

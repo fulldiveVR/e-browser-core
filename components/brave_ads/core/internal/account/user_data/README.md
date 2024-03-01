@@ -21,7 +21,7 @@ Should only be included in the confirmation payload for users who have joined AI
 | buildChannel  | no  | no  | Browser build channel.  |
 | catalog  | no  | no  |  Catalog identifier.  |
 | createdAtTimestamp  | no  | no  | Privacy-preserving [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp.  |
-| diagnosticId  | yes  | yes  | Diagnostic id from [brave://rewards-internals](brave://rewards-internals) to help diagnose issues.  |
+| diagnosticId  | yes  | yes  | Diagnostic id from [aiwize://rewards-internals](aiwize://rewards-internals) to help diagnose issues.  |
 | locale  | yes  | no  | Privacy-preserving operating system locale  |
 | platform  | no  | no  | Operating system.  |
 | rotating_hash  | yes  | no  | Privacy-preserving time-based rotating hash.  |

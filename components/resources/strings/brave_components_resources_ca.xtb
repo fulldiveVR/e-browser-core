@@ -1962,7 +1962,7 @@
 <translation id="1097073572755862978">Envieu informes de diagnòstic si es produeix un bloqueig o una congelació. <ph name="LINK_BEFORE"/>Més informació.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Compartiu informació anònima i privada de productes. Això ens ajuda a aprendre quines característiques de AI Wiz s'utilitzen més sovint. <ph name="LINK_BEFORE"/>Més informació.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">S'ha completat la configuració</translation>
-<translation id="3141206739023333979">Canvieu aquestes opcions de AI Wiz en qualsevol moment a <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Canvieu aquestes opcions de AI Wiz en qualsevol moment a <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Llegiu la nostra <ph name="LINK_BEFORE"/>Política de privadesa<ph name="LINK_AFTER"/> completa</translation>
 <translation id="2801098717523961746">Tria el tema de color</translation>
 <translation id="6262510489122516114">Podeu canviar aquesta opció en qualsevol moment a la configuració de Brave.</translation>
@@ -2029,7 +2029,7 @@ Hem canviat la configuració de DNS al navegador per protegir-te d'aquesta divul
 <translation id="5004375364898143117">Sembla que hi ha problemes amb la connexió de WireGuard. Voleu activar l'alternativa IKEv2 per gaudir d'una VPN segura? Només cal que reinicieu el navegador.
 
 Necessiteu ajuda amb la compatibilitat o la configuració? Contacteu amb el nostre equip d'assistència.
-Podreu tornar a WireGuard en qualsevol moment a brave://settings/system.
+Podreu tornar a WireGuard en qualsevol moment a aiwize://settings/system.
 
 Connecteu-vos ara mateix!
 

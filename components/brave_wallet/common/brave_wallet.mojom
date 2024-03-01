@@ -421,7 +421,7 @@ interface PanelHandler {
 
 // Browser-side handler for requests from WebUI page.
 interface PageHandler {
-  // Used by the brave://wallet page to open up the approval panel
+  // Used by the aiwize://wallet page to open up the approval panel
   ShowApprovePanelUI();
 };
 
@@ -1419,7 +1419,7 @@ interface BitcoinWalletService {
   // Now includes both confirmed and mempool utxos.
   GetBalance(AccountId account_id) => (BitcoinBalance? balance, string? error_message);
 
-  // These are parts of wallet internals api(brave://wallet/dev-bitcoin)
+  // These are parts of wallet internals api(aiwize://wallet/dev-bitcoin)
   RunDiscovery(AccountId account_id, bool change) => (BitcoinAddress? address, string? error_message);
   GetBitcoinAccountInfo(AccountId account_id) => (BitcoinAccountInfo? account_info);
 };

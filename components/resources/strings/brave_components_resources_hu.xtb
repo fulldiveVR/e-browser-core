@@ -1962,7 +1962,7 @@
 <translation id="1097073572755862978">Küldjön diagnosztikai jelentéseket, amikor a rendszer összeomlik vagy lefagy. <ph name="LINK_BEFORE"/>További információ.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Teljesen privát és anonimizált termékadatok megosztása azzal kapcsolatban, hogy milyen funkciókat használnak a AI Wiz felhasználói. <ph name="LINK_BEFORE"/>További információ.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Beállítás befejezve</translation>
-<translation id="3141206739023333979">Változtasson ezen a Brave-beállításán bármikor itt: <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Változtasson ezen a Brave-beállításán bármikor itt: <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Olvassa el a teljes <ph name="LINK_BEFORE"/>Adatvédelmi szabályzatot<ph name="LINK_AFTER"/>.</translation>
 <translation id="2801098717523961746">Téma kiválasztása</translation>
 <translation id="6262510489122516114">Ezt bármikor módosíthatja a AI Wiz beállításokban.</translation>
@@ -2029,7 +2029,7 @@ Azonban észleltük, hogy a szolgáltatás nem fut – mi pedig nem szeretnénk 
 <translation id="5004375364898143117">Úgy tűnik, problémák merültek fel a WireGuard kapcsolattal. Szeretné engedélyezni az IKEv2 tartaléklehetőséget a megbízható VPN-kapcsolatért? Egyszerűen indítsa újra a böngészőt.
 
 Segítségre van szüksége a kompatibilitás vagy a konfiguráció terén? Forduljon barátságos ügyféltámogatási csapatunkhoz.
-Bármikor visszaválthat a WireGuardra a brave://settings/system linken.
+Bármikor visszaválthat a WireGuardra a aiwize://settings/system linken.
 
 Hozzuk létre a kapcsolatot!
 

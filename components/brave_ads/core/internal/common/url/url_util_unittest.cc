@@ -40,54 +40,54 @@ TEST(BraveAdsUrlUtilTest, DoesNotSupportUrlWithFooBarScheme) {
 
 TEST(BraveAdsUrlUtilTest, DoesNotSupportBraveSchemeWithFooBarHostName) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://foobar")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://foobar")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithWalletHostName) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://wallet")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://wallet")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithWalletHostNameAndPath) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://wallet/foo")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://wallet/foo")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithSyncHostName) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://sync")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://sync")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithSyncHostNameAndPath) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://sync/foo")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://sync/foo")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithRewardsHostName) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://rewards")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://rewards")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesSupportBraveSchemeWithRewardsHostNameAndPath) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://rewards/foo")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://rewards/foo")));
 }
 
 TEST(BraveAdsUrlUtilTest, DoesNotSupportBraveSchemeWithSettingsHostName) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesNotSupportBraveSchemeWithSettingsHostNameAndFooBarPath) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings/foobar")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings/foobar")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesSupportBraveSchemeWithSettingsHostNameAndSearchEnginesPath) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://settings/searchEngines")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://settings/searchEngines")));
 }
 
 TEST(
@@ -95,7 +95,7 @@ TEST(
     DoesSupportBraveSchemeWithSettingsHostNameSearchEnginesPathAndSearchQuery) {
   // Act & Assert
   EXPECT_TRUE(
-      DoesSupportUrl(GURL("brave://settings/searchEngines?search=foobar")));
+      DoesSupportUrl(GURL("aiwize://settings/searchEngines?search=foobar")));
 }
 
 TEST(
@@ -103,26 +103,26 @@ TEST(
     DoesNotSupportBraveSchemeWithSettingsHostNameSearchEnginesPathAndMultipleSearchQueries) {
   // Act & Assert
   EXPECT_FALSE(DoesSupportUrl(
-      GURL("brave://settings/searchEngines?search=foo&bar=baz")));
+      GURL("aiwize://settings/searchEngines?search=foo&bar=baz")));
 }
 
 TEST(
     BraveAdsUrlUtilTest,
     DoesNotSupportBraveSchemeWithSettingsHostNameSearchEnginesPathAndInvalidQuery) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings/searchEngines?search")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings/searchEngines?search")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesSupportBraveSchemeWithSettingsHostNameAndSearchPath) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://settings/search")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://settings/search")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesSupportBraveSchemeWithSettingsHostNameSearchPathAndSearchQuery) {
   // Act & Assert
-  EXPECT_TRUE(DoesSupportUrl(GURL("brave://settings/search?search=foobar")));
+  EXPECT_TRUE(DoesSupportUrl(GURL("aiwize://settings/search?search=foobar")));
 }
 
 TEST(
@@ -130,30 +130,30 @@ TEST(
     DoesNotSupportBraveSchemeWithSettingsHostNameSearchPathAndMultipleSearchQueries) {
   // Act & Assert
   EXPECT_FALSE(
-      DoesSupportUrl(GURL("brave://settings/search?search=foo&bar=baz")));
+      DoesSupportUrl(GURL("aiwize://settings/search?search=foo&bar=baz")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesNotSupportBraveSchemeWithSettingsHostNameSearchPathAndInvalidQuery) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings/search?search")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings/search?search")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesNotSupportBraveSchemeWithSettingsHostNameAndQuery) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings/?search=foobar")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings/?search=foobar")));
 }
 
 TEST(BraveAdsUrlUtilTest,
      DoesNotSupportBraveSchemeWithSettingsHostNameAndInvalidQuery) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("brave://settings/?search")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("aiwize://settings/?search")));
 }
 
 TEST(BraveAdsUrlUtilTest, MalformedUrlIsNotSupported) {
   // Act & Assert
-  EXPECT_FALSE(DoesSupportUrl(GURL("http://foobar.com/brave://wallet")));
+  EXPECT_FALSE(DoesSupportUrl(GURL("http://foobar.com/aiwize://wallet")));
 }
 
 TEST(BraveAdsUrlUtilTest, UrlMatchesPatternWithNoWildcards) {
