@@ -334,7 +334,7 @@ Ili promijenite kasnije putem <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation
 <translation id="2858138569776157458">Najpopularnije web-lokacije</translation>
 <translation id="7859704718976024901">Povijest pregledavanja</translation>
 <translation id="8820817407110198400">Knjižne oznake</translation>
-<translation id="7310387888625228830">Pomoćnik Leo potpomognut umjetnom inteligencijom (AI)</translation>
+<translation id="7310387888625228830">Pomoćnik AI Wize Chat potpomognut umjetnom inteligencijom (AI)</translation>
 <translation id="5222974844674487962">Pokaži gumb Novosti AI Wize</translation>
 <translation id="383007806262310953">Prikaži traku oznaka</translation>
 <translation id="4054323497808446566">Traka s knjiškim oznakama vidljiva je na svim stranicama</translation>
@@ -717,13 +717,13 @@ Ili promijenite kasnije putem <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation
 <translation id="3095201688102519917">Upozori me prije zatvaranja prozora s višestrukim karticama</translation>
 <translation id="7120553802660696133">Zatvori prozor pri zatvaranju posljednje kartice</translation>
 <translation id="7984721311211272523">Onemogućite funkciju isključivanja zvuka na kartici s ikonama zvučnika</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Prikaži ikonu pomoćnika Leo na bočnoj traci</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Prikaži ikonu pomoćnika AI Wize Chat na bočnoj traci</translation>
 <translation id="8172263161008556851">Prikaži predložene upite u razgovoru</translation>
-<translation id="1014480593522400586">Očisti podatke pomoćnika Leo</translation>
-<translation id="8681157601856387010">Za ponovno postavljanje pomoćnika Leo morate pristati na upotrebu preglednika AI Wize
-Pomoćnik Leo u budućnosti čisti i vašu povijest.         Čišćenjem
-povijesti čavrljanja brišu se svi vaši prethodni razgovori s pomoćnikom Leo
+<translation id="1014480593522400586">Očisti podatke pomoćnika AI Wize Chat</translation>
+<translation id="8681157601856387010">Za ponovno postavljanje pomoćnika AI Wize Chat morate pristati na upotrebu preglednika AI Wize
+Pomoćnik AI Wize Chat u budućnosti čisti i vašu povijest.         Čišćenjem
+povijesti čavrljanja brišu se svi vaši prethodni razgovori s pomoćnikom AI Wize Chat
 preglednika AI Wize. Ta se radnja ne može poništiti.</translation>
 <translation id="8157373421434119674">Povijest podataka i čavrljanja</translation>
 <translation id="614530507403667291">Zadani model za nove razgovore</translation>

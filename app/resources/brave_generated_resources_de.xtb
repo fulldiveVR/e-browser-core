@@ -334,7 +334,7 @@ Oder später ändern unter <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Top-Websites</translation>
 <translation id="7859704718976024901">Browserverlauf</translation>
 <translation id="8820817407110198400">Lesezeichen</translation>
-<translation id="7310387888625228830">Leo KI-Assistent</translation>
+<translation id="7310387888625228830">AI Wize Chat KI-Assistent</translation>
 <translation id="5222974844674487962">AI Wize News-Schaltfläche anzeigen</translation>
 <translation id="383007806262310953">Lesezeichenleiste anzeigen</translation>
 <translation id="4054323497808446566">Lesezeichenleiste ist auf allen Seiten sichtbar</translation>
@@ -718,14 +718,14 @@ Hinweis: Bei Auswahl des lokalen Knotens wird die Ressource direkt von Ihrem Com
 <translation id="3095201688102519917">Mich vor dem Schließen eines Fensters mit mehreren Tabs warnen</translation>
 <translation id="7120553802660696133">Fenster beim Schließen der letzten Registerkarte schließen</translation>
 <translation id="7984721311211272523">Stummschaltfunktion der Lautsprechersymbole auf den Registerkarten deaktivieren</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Leo-Symbol in der Seitenleiste anzeigen</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">AI Wize Chat-Symbol in der Seitenleiste anzeigen</translation>
 <translation id="8172263161008556851">Vorgeschlagene Befehle im Gespräch anzeigen</translation>
-<translation id="1014480593522400586">Leo-Daten löschen</translation>
-<translation id="8681157601856387010">Wenn Sie den Leo-Assistenten zurücksetzen, müssen Sie sich in Zukunft
-erneut bereiterklären, AI Wize Leo zu nutzen. Außerdem wird Ihr Chatverlauf
+<translation id="1014480593522400586">AI Wize Chat-Daten löschen</translation>
+<translation id="8681157601856387010">Wenn Sie den AI Wize Chat-Assistenten zurücksetzen, müssen Sie sich in Zukunft
+erneut bereiterklären, AI Wize AI Wize Chat zu nutzen. Außerdem wird Ihr Chatverlauf
 gelöscht. Wenn Sie Ihren Chatverlauf löschen, werden alle bisherigen
-Unterhaltungen mit AI Wize Leo entfernt. Dieser Vorgang kann nicht
+Unterhaltungen mit AI Wize AI Wize Chat entfernt. Dieser Vorgang kann nicht
 rückgängig gemacht werden.</translation>
 <translation id="8157373421434119674">Daten- und Chatverlauf</translation>
 <translation id="614530507403667291">Standardmodell für neue Unterhaltungen</translation>

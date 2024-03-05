@@ -718,14 +718,14 @@ ou modifiez les autorisations plus tard à l'adresse <ph name="SETTINGS_EXTENION
 <translation id="3095201688102519917">Afficher un avertissement lorsque je ferme une fenêtre avec plusieurs onglets</translation>
 <translation id="7120553802660696133">Fermer la fenêtre à la fermeture du dernier onglet</translation>
 <translation id="7984721311211272523">Désactiver la fonction d'activation/désactivation du son dans les icônes de haut-parleur des onglets</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Afficher l'icône Leo sur la barre latérale</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Afficher l'icône AI Wize Chat sur la barre latérale</translation>
 <translation id="8172263161008556851">Afficher les invites suggérées dans la conversation</translation>
-<translation id="1014480593522400586">Effacer les données Leo</translation>
-<translation id="8681157601856387010">La réinitialisation de l'assistant Leo requiert que vous choisissiez d'utiliser AI Wize
-Leo à l'avenir et effacera également votre historique de clavardage. L'effacement de votre
+<translation id="1014480593522400586">Effacer les données AI Wize Chat</translation>
+<translation id="8681157601856387010">La réinitialisation de l'assistant AI Wize Chat requiert que vous choisissiez d'utiliser AI Wize
+AI Wize Chat à l'avenir et effacera également votre historique de clavardage. L'effacement de votre
 historique de clavardage supprimera toutes vos conversations précédentes avec AI Wize
-Leo. Cette action est définitive.</translation>
+AI Wize Chat. Cette action est définitive.</translation>
 <translation id="8157373421434119674">Données et historique de clavardage</translation>
 <translation id="614530507403667291">Modèle par défaut pour les nouvelles conversations</translation>
 <translation id="349846214503465941">Activer Liste de lecture</translation>

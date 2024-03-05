@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Afspelen/pauzeren</translation>
 <translation id="1689210457482459023">Terugspoelsnelheid verlagen</translation>
 <translation id="5872363163901278000">Terugspoelsnelheid verhogen</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">De samensvattingfunctie is momenteel alleen beschikbaar voor bepaalde artikelen en andere webpagina's in lange vorm.</translation>
 <translation id="2346991295632453064">Accepteren en beginnen</translation>
 <translation id="1223498995510244364">Samenvatten</translation>
-<translation id="7491773233732232424">Over Leo</translation>
-<translation id="70442873931504163">Brave Leo is een slimme AI-assistent die webpagina's kan samenvatten, video's kan transcriberen en vragen kan beantwoorden. AI Wiz Leo Premium gebruikt geavanceerde <ph name="LINK_BEFORE"/>AI-modellen<ph name="LINK_AFTER"/> voor nog genuanceerdere antwoorden en biedt vroegtijdige toegang tot nieuwe functies.</translation>
+<translation id="7491773233732232424">Over AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat is een slimme AI-assistent die webpagina's kan samenvatten, video's kan transcriberen en vragen kan beantwoorden. AI Wize Chat Premium gebruikt geavanceerde <ph name="LINK_BEFORE"/>AI-modellen<ph name="LINK_AFTER"/> voor nog genuanceerdere antwoorden en biedt vroegtijdige toegang tot nieuwe functies.</translation>
 <translation id="3055739528128372229">De nauwkeurigheid van antwoorden kan niet worden gegarandeerd. Antwoorden kunnen onnauwkeurige, misleidende of verkeerde informatie bevatten. Verstuur geen gevoelige of privégegevens en ga voorzichtig om met antwoorden over gezondheid, financiën, persoonlijke veiligheid en vergelijkbare categorieën.</translation>
-<translation id="7297681068636289435">Leo verzamelt geen identifiers die aan u kunnen worden gekoppeld, zoals uw IP-adres. Het AI-model en modellen van derden bewaren geen persoonsgegevens.</translation>
+<translation id="7297681068636289435">AI Wize Chat verzamelt geen identifiers die aan u kunnen worden gekoppeld, zoals uw IP-adres. Het AI-model en modellen van derden bewaren geen persoonsgegevens.</translation>
 <translation id="7839853125981164613">Voer hier een opdracht in</translation>
 <translation id="334325425115922031">Voorgestelde follow-ups</translation>
 <translation id="4524675003624341892">Stel vragen voor...</translation>
 <translation id="4567071417854988869">Deze video samenvatten</translation>
 <translation id="7921782882718083488">Deze pagina samenvatten</translation>
-<translation id="7932221068776853847">Verbreek de verbinding om ervoor te zorgen dat deze pagina geen content meer naar Leo stuurt en start een nieuw gesprek</translation>
-<translation id="1167803637855350748">Er was een netwerkprobleem bij het verbinden met Leo. Controleer uw verbinding en probeer het opnieuw.</translation>
-<translation id="5095201428204952524">Leo is bezet. Probeer het over een paar minuten opnieuw.</translation>
+<translation id="7932221068776853847">Verbreek de verbinding om ervoor te zorgen dat deze pagina geen content meer naar AI Wize Chat stuurt en start een nieuw gesprek</translation>
+<translation id="1167803637855350748">Er was een netwerkprobleem bij het verbinden met AI Wize Chat. Controleer uw verbinding en probeer het opnieuw.</translation>
+<translation id="5095201428204952524">AI Wize Chat is bezet. Probeer het over een paar minuten opnieuw.</translation>
 <translation id="7144878232160441200">Opnieuw proberen</translation>
-<translation id="7202619923031933110">Hallo, ik ben Leo. Ik ben een volledig door AI Wiz gehoste AI-assistent. Ik ben mogelijk gemaakt door Mixtral 7B, een model dat Mistral AI heeft ontworpen voor het uitvoeren van geavanceerde taken.</translation>
-<translation id="2489317965865266353">Hallo, ik ben Leo. Ik werk via een proxy door AI Wiz en ben mogelijk gemaakt door Claude Instant, een model dat door Anthropic is gemaakt voor gesprekstaken en tekstverwerkingstaken.</translation>
+<translation id="7202619923031933110">Hallo, ik ben AI Wize Chat. Ik ben een volledig door AI Wiz gehoste AI-assistent. Ik ben mogelijk gemaakt door Mixtral 7B, een model dat Mistral AI heeft ontworpen voor het uitvoeren van geavanceerde taken.</translation>
+<translation id="2489317965865266353">Hallo, ik ben AI Wize Chat. Ik werk via een proxy door AI Wiz en ben mogelijk gemaakt door Claude Instant, een model dat door Anthropic is gemaakt voor gesprekstaken en tekstverwerkingstaken.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> door <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Nieuwe chat</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Toegang tot toonaangevende LLM's</translation>
 <translation id="8021579987620496265">Hogere snelheden</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /maand</translation>
-<translation id="377376641316998425">Benut de volledige capaciteit van Leo</translation>
+<translation id="377376641316998425">Benut de volledige capaciteit van AI Wize Chat</translation>
 <translation id="8363148882096737034">Anthropic Claude en meer binnenkort verwacht</translation>
 <translation id="886527905046308697">Prioriteitstoegang en snellere antwoordlimieten</translation>
 <translation id="1068954060985569277">Uw Brave-accountsessie is verlopen. Ga naar uw accountpagina om te vernieuwen, kom daarna terug om de premiumfuncties te gebruiken.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Selecteer uw feedbackonderwerp</translation>
 <translation id="9018766373792005944">Waar gaat uw feedback over?</translation>
 <translation id="7355096922131918313">Schrijf hier uw feedback</translation>
-<translation id="3027575440738035995">Leo Premium biedt toegang tot een uitgebreide set taalmodellen voor betere, genuanceerdere antwoorden. <ph name="LINK_BEFORE"/>Meer informatie<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium biedt toegang tot een uitgebreide set taalmodellen voor betere, genuanceerdere antwoorden. <ph name="LINK_BEFORE"/>Meer informatie<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Niet nuttig</translation>
 <translation id="2976167228906046828">Onjuist</translation>
 <translation id="1183055847065865059">Onveilig/gevaarlijk</translation>
 <translation id="7138678301420049075">Overige</translation>
 <translation id="2313959174679245365">Uw beoordeling kan niet worden verstuurd. Controleer uw netwerkverbinding en probeer het opnieuw</translation>
 <translation id="98413980871833152">Uw feedback kan niet worden verstuurd. Controleer uw internetverbinding en probeer het opnieuw</translation>
-<translation id="8742658901413346500">Dit gesprek is lang en Leo zou spoedig dingen kunnen gaan vergeten. U kunt langere gesprekken krijgen door over te stappen op een premiummodel of u kunt de chat wissen om het gesprek te resetten.</translation>
+<translation id="8742658901413346500">Dit gesprek is lang en AI Wize Chat zou spoedig dingen kunnen gaan vergeten. U kunt langere gesprekken krijgen door over te stappen op een premiummodel of u kunt de chat wissen om het gesprek te resetten.</translation>
 <translation id="7550152963854770123">Chat wissen</translation>
-<translation id="7494736170250048402">Bericht naar Leo sturen</translation>
-<translation id="4110772752544684964">De pagina is te lang voor Leo. Er kan context van het gesprek verloren gaan.</translation>
-<translation id="4370698775470316661">Dit gesprek is te lang en kan niet verdergaan. Mogelijk kan Leo met andere, beschikbare modellen langere gesprekken correct uitvoeren.</translation>
+<translation id="7494736170250048402">Bericht naar AI Wize Chat sturen</translation>
+<translation id="4110772752544684964">De pagina is te lang voor AI Wize Chat. Er kan context van het gesprek verloren gaan.</translation>
+<translation id="4370698775470316661">Dit gesprek is te lang en kan niet verdergaan. Mogelijk kan AI Wize Chat met andere, beschikbare modellen langere gesprekken correct uitvoeren.</translation>
 <translation id="8193130769524604031">Chat voor geavanceerde taken</translation>
 <translation id="3185367320601718531">Gespreks- en tekstproductie</translation>
-<translation id="3965507912994218570">Leo-instellingen</translation>
-<translation id="1037324977127422019">Hallo, ik ben Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat-instellingen</translation>
+<translation id="1037324977127422019">Hallo, ik ben AI Wize Chat!</translation>
 <translation id="8930348081963284873">Ik ben een AI-assistent die rechtstreeks in AI Wiz is ingebouwd.</translation>
 <translation id="3528849152231418380">Heeft u hulp nodig met een website?</translation>
 <translation id="1558192229187362674">Ik kan artikelen voor u samenvatten, toelichting geven op de inhoud van een website en nog veel meer.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">U kunt me alles vragen. We kunnen het over elk onderwerp hebben. Ik leer voortdurend zodat ik betere antwoorden kan geven.</translation>
 <translation id="989329677470075843">Privacyovereenkomst</translation>
 <translation id="1173570303649278801">Paginacontext opnemen in het antwoord</translation>
-<translation id="8599503173207256429">Schakel dit in om vragen te stellen over deze pagina. De inhoud van de site en uw berichten worden naar AI Wiz Leo gestuurd.</translation>
+<translation id="8599503173207256429">Schakel dit in om vragen te stellen over deze pagina. De inhoud van de site en uw berichten worden naar AI Wize Chat gestuurd.</translation>
 <translation id="6303294677342628402">Schilden</translation>
 <translation id="8458987127502506209">Brave Schilden inschakelen</translation>
 <translation id="7509914170164691086">Shields zijn geactiveerd <ph name="LINK_BEFORE"/>voor<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Laten we een verbinding instellen!
     druk op Tab en daarna op Enter om naar het geopende tabblad te gaan</translation>
 <translation id="1538335063514960365">Hier openen-knop, druk op Enter om deze URL in het huidige tabblad te openen, in plaats van naar het
     bestaande tabblad te gaan</translation>
-<translation id="451189393813405346">Vraag het Leo</translation>
+<translation id="451189393813405346">Vraag het AI Wize Chat</translation>
 </translationbundle>

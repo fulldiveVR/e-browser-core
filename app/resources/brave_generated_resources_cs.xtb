@@ -334,7 +334,7 @@ Nebo změňte později na odkaze<ph name="SETTINGS_EXTENIONS_LINK"/>.</translati
 <translation id="2858138569776157458">Top weby</translation>
 <translation id="7859704718976024901">Historie procházení</translation>
 <translation id="8820817407110198400">Záložky</translation>
-<translation id="7310387888625228830">Asistent s umělou inteligencí Leo</translation>
+<translation id="7310387888625228830">Asistent s umělou inteligencí AI Wize Chat</translation>
 <translation id="5222974844674487962">Tlačítko Zobrazit AI Wize News</translation>
 <translation id="383007806262310953">Zobrazit lištu záložek</translation>
 <translation id="4054323497808446566">Panel záložek je viditelný na všech stránkách</translation>
@@ -718,14 +718,14 @@ Jste si jisti, že chcete tuto akci provést?</translation>
 <translation id="3095201688102519917">Upozornění před zavřením okna s více kartami</translation>
 <translation id="7120553802660696133">Při zavření posledního panelu zavřete okno</translation>
 <translation id="7984721311211272523">Deaktivovat funkci ztlumení zvuku ikon reproduktorů na kartě</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Zobrazit ikonu Leo na postranním panelu</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Zobrazit ikonu AI Wize Chat na postranním panelu</translation>
 <translation id="8172263161008556851">Zobrazit navrhované výzvy v konverzaci</translation>
-<translation id="1014480593522400586">Vymazat data Leo</translation>
-<translation id="8681157601856387010">Resetování asistenta Leo bude vyžadovat přihlášení k používání služby AI Wize
-Leo v budoucnu a také vymaže historii chatu. Vymazání
+<translation id="1014480593522400586">Vymazat data AI Wize Chat</translation>
+<translation id="8681157601856387010">Resetování asistenta AI Wize Chat bude vyžadovat přihlášení k používání služby AI Wize
+AI Wize Chat v budoucnu a také vymaže historii chatu. Vymazání
 chatu odstraní všechny vaše předchozí konverzace s AI Wize
-Leo. Tuto akci nelze vrátit zpět.</translation>
+AI Wize Chat. Tuto akci nelze vrátit zpět.</translation>
 <translation id="8157373421434119674">Historie dat a chatu</translation>
 <translation id="614530507403667291">Výchozí model pro konverzace</translation>
 <translation id="349846214503465941">Aktivovat seznam stop</translation>

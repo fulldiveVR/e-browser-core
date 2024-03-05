@@ -334,7 +334,7 @@
 <translation id="2858138569776157458">熱門網站</translation>
 <translation id="7859704718976024901">瀏覽記錄</translation>
 <translation id="8820817407110198400">書籤列</translation>
-<translation id="7310387888625228830">Leo 人工智慧助理</translation>
+<translation id="7310387888625228830">AI Wize Chat 人工智慧助理</translation>
 <translation id="5222974844674487962">顯示 AI Wize News 按鈕</translation>
 <translation id="383007806262310953">顯示書籤列</translation>
 <translation id="4054323497808446566">書籤列在所有頁面上都可見</translation>
@@ -719,13 +719,13 @@
 <translation id="3095201688102519917">關閉已開啟多個分頁的視窗前顯示警告訊息</translation>
 <translation id="7120553802660696133">關閉最後一個分頁時關閉視窗</translation>
 <translation id="7984721311211272523">在分頁喇叭圖示中停用靜音功能</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">在側邊欄顯示 Leo 圖示</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">在側邊欄顯示 AI Wize Chat 圖示</translation>
 <translation id="8172263161008556851">在對話中顯示建議的提示語</translation>
-<translation id="1014480593522400586">清除 Leo 資料</translation>
-<translation id="8681157601856387010">重設 Leo 助理將要求您選擇將來使用 AI Wize Leo，
+<translation id="1014480593522400586">清除 AI Wize Chat 資料</translation>
+<translation id="8681157601856387010">重設 AI Wize Chat 助理將要求您選擇將來使用 AI Wize AI Wize Chat，
 並且還會清除您的聊天記錄。
-清除聊天記錄將會刪除您之前的所有 AI Wize Leo 工作階段。
+清除聊天記錄將會刪除您之前的所有 AI Wize AI Wize Chat 工作階段。
 此操作無法撤銷。</translation>
 <translation id="8157373421434119674">資料和聊天歷史記錄</translation>
 <translation id="614530507403667291">新對話的預設模式</translation>

@@ -334,7 +334,7 @@ Eller endre dette senere på <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Populært</translation>
 <translation id="7859704718976024901">Nettleserlogg</translation>
 <translation id="8820817407110198400">Bokmerker</translation>
-<translation id="7310387888625228830">Leo KI-assistent</translation>
+<translation id="7310387888625228830">AI Wize Chat KI-assistent</translation>
 <translation id="5222974844674487962">Vis AI Wize News-knappen</translation>
 <translation id="383007806262310953">Vis bokmerkeraden</translation>
 <translation id="4054323497808446566">Bokmerkefeltet er synlig på alle sider</translation>
@@ -718,14 +718,14 @@ Du har <ph name="NFT_COUNT"/> festede NFT-er akkurat nå.</translation>
 <translation id="3095201688102519917">Advar meg før vinduer med flere faner lukkes</translation>
 <translation id="7120553802660696133">Lukk vinduet når siste fane lukkes</translation>
 <translation id="7984721311211272523">Deaktiver mute-funksjonen i fane-høyttalerikoner</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Vis Leo-ikonet i sidefeltet</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Vis AI Wize Chat-ikonet i sidefeltet</translation>
 <translation id="8172263161008556851">Vis foreslåtte spørsmål i samtalen</translation>
-<translation id="1014480593522400586">Fjern Leo-data</translation>
-<translation id="8681157601856387010">Hvis du tilbakestiller Leo-assistenten, må du samtykke på nytt til å bruke AI Wize
-Leo igjen i fremtiden. Chathistorikken din blir også slettet. Hvis du sletter
+<translation id="1014480593522400586">Fjern AI Wize Chat-data</translation>
+<translation id="8681157601856387010">Hvis du tilbakestiller AI Wize Chat-assistenten, må du samtykke på nytt til å bruke AI Wize
+AI Wize Chat igjen i fremtiden. Chathistorikken din blir også slettet. Hvis du sletter
 chathistorikken, slettes alle de tidligere samtalene dine med AI Wize
-Leo. Handlingen kan ikke angres.</translation>
+AI Wize Chat. Handlingen kan ikke angres.</translation>
 <translation id="8157373421434119674">Data og chathistorikk</translation>
 <translation id="614530507403667291">Standardmodell for nye samtaler</translation>
 <translation id="349846214503465941">Aktiver spillelisten</translation>

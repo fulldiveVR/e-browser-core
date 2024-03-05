@@ -39,14 +39,14 @@ const InstallConstants kInstallModes[] = {
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid = L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",
-        .base_app_name = L"AIWIZE Browser",       // A distinct base_app_name.
+        .base_app_name = L"AI Wize Browser",       // A distinct base_app_name.
         .base_app_id = L"Aiwize",                 // A distinct base_app_id.
         .browser_prog_id_prefix = L"AiwizeHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"AIWIZE Browser HTML Document",         // Browser ProgID description.
+            L"AI Wize Browser HTML Document",         // Browser ProgID description.
         .pdf_prog_id_prefix = L"AiwizePDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"AIWIZE Browser PDF Document",  // PDF ProgID description.
+            L"AI Wize Browser PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",  // Active Setup GUID.
         .legacy_command_execute_clsid =
@@ -87,14 +87,14 @@ const InstallConstants kInstallModes[] = {
         .logo_suffix = L"Beta",           // Logo suffix.
         .app_guid =
             L"{103BD053-949B-43A8-9120-2E424887DE11}",  // A distinct app GUID.
-        .base_app_name = L"AIWIZE Browser Beta",   // A distinct base_app_name.
+        .base_app_name = L"AI Wize Browser Beta",   // A distinct base_app_name.
         .base_app_id = L"AiwizeBeta",              // A distinct base_app_id.
         .browser_prog_id_prefix = L"AiwizeBHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"AIWIZE Browser Beta HTML Document",     // Browser ProgID description.
+            L"AI Wize Browser Beta HTML Document",     // Browser ProgID description.
         .pdf_prog_id_prefix = L"AiwizeBPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"AIWIZE Browser Beta PDF Document",  // PDF ProgID description.
+            L"AI Wize Browser Beta PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{103BD053-949B-43A8-9120-2E424887DE11}",  // Active Setup GUID.
         .legacy_command_execute_clsid = L"",  // CommandExecuteImpl CLSID.
@@ -133,14 +133,14 @@ const InstallConstants kInstallModes[] = {
         .logo_suffix = L"Dev",           // Logo suffix.
         .app_guid =
             L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // A distinct app GUID.
-        .base_app_name = L"AIWIZE Browser Dev",    // A distinct base_app_name.
+        .base_app_name = L"AI Wize Browser Dev",    // A distinct base_app_name.
         .base_app_id = L"AiwizeDev",               // A distinct base_app_id.
         .browser_prog_id_prefix = L"AiwizeDHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"AIWIZE Browser Dev HTML Document",      // Browser ProgID description.
+            L"AI Wize Browser Dev HTML Document",      // Browser ProgID description.
         .pdf_prog_id_prefix = L"AiwizeDPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"AIWIZE Browser Dev PDF Document",  // PDF ProgID description.
+            L"AI Wize Browser Dev PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // Active Setup GUID.
         .legacy_command_execute_clsid = L"",  // CommandExecuteImpl CLSID.
@@ -180,14 +180,14 @@ const InstallConstants kInstallModes[] = {
         .logo_suffix = L"Canary",        // Logo suffix.
         .app_guid =
             L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // A distinct app GUID.
-        .base_app_name = L"AIWIZE Browser Nightly",// A distinct base_app_name.
+        .base_app_name = L"AI Wize Browser Nightly",// A distinct base_app_name.
         .base_app_id = L"AiwizeNightly",           // A distinct base_app_id.
         .browser_prog_id_prefix = L"BraveSSHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"AIWIZE Browser Nightly HTML Document",   // Browser ProgID description.
+            L"AI Wize Browser Nightly HTML Document",   // Browser ProgID description.
         .pdf_prog_id_prefix = L"BraveSSPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"AIWIZE Browser Nightly PDF Document",  // PDF ProgID description.
+            L"AI Wize Browser Nightly PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // Active Setup GUID.
         .legacy_command_execute_clsid =
@@ -233,14 +233,14 @@ const InstallConstants kInstallModes[] = {
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid =
             L"",  // Empty app_guid since no integraion with AI Wiz Update.
-        .base_app_name = L"AIWIZE Browser Development",     // A distinct base_app_name.
+        .base_app_name = L"AI Wize Browser Development",     // A distinct base_app_name.
         .base_app_id = L"AiwizeDevelopment",        // A distinct base_app_id.
         .browser_prog_id_prefix = L"AiwizeDevHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"AIWIZE Browser Development HTML Document",  // Browser ProgID description.
+            L"AI Wize Browser Development HTML Document",  // Browser ProgID description.
         .pdf_prog_id_prefix = L"BraveDevPDF",    // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"AIWIZE Browser Development PDF Document",  // PDF ProgID description.
+            L"AI Wize Browser Development PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{D6527C63-5CDD-4EF3-9299-1504E17CBD18}",  // Active Setup GUID.
         .legacy_command_execute_clsid =

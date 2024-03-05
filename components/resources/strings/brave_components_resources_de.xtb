@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Abspielen / Pause</translation>
 <translation id="1689210457482459023">Verringern der Abspielgeschwindigkeit</translation>
 <translation id="5872363163901278000">Steigerung der Abspielgeschwindigkeit</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Die Zusammenfassungsfunktion ist derzeit nur für ausgewählte Artikel und andere Webseiten in Langform verfügbar.</translation>
 <translation id="2346991295632453064">Akzeptieren und starten</translation>
 <translation id="1223498995510244364">Zusammenfassen</translation>
-<translation id="7491773233732232424">Über Leo</translation>
-<translation id="70442873931504163">Brave Leo ist ein intelligenter KI-Assistent, der Webseiten zusammenfassen, Videos transkribieren und Fragen beantworten kann. AI Wiz Leo Premium nutzt fortschrittliche <ph name="LINK_BEFORE"/>KI-Modelle<ph name="LINK_AFTER"/> für noch differenziertere Antworten und bietet frühen Zugriff auf neue Funktionen.</translation>
+<translation id="7491773233732232424">Über AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat ist ein intelligenter KI-Assistent, der Webseiten zusammenfassen, Videos transkribieren und Fragen beantworten kann. AI Wize Chat Premium nutzt fortschrittliche <ph name="LINK_BEFORE"/>KI-Modelle<ph name="LINK_AFTER"/> für noch differenziertere Antworten und bietet frühen Zugriff auf neue Funktionen.</translation>
 <translation id="3055739528128372229">Die Richtigkeit der Antworten wird nicht garantiert; sie können ungenaue, irreführende oder falsche Informationen enthalten. Geben Sie keine vertraulichen oder privaten Informationen an und seien Sie vorsichtig bei Antworten, die sich auf Gesundheit, Finanzen, persönliche Sicherheit oder Ähnliches beziehen.</translation>
-<translation id="7297681068636289435">Leo erfasst keine Identifikatoren, die mit Ihnen in Verbindung gebracht werden können, wie etwa Ihre IP-Adresse. Weder das KI-Modell noch Drittanbieter speichern personenbezogene Daten.</translation>
+<translation id="7297681068636289435">AI Wize Chat erfasst keine Identifikatoren, die mit Ihnen in Verbindung gebracht werden können, wie etwa Ihre IP-Adresse. Weder das KI-Modell noch Drittanbieter speichern personenbezogene Daten.</translation>
 <translation id="7839853125981164613">Befehl hier eingeben</translation>
 <translation id="334325425115922031">Fragenvorschläge</translation>
 <translation id="4524675003624341892">Fragen vorschlagen …</translation>
 <translation id="4567071417854988869">Dieses Video zusammenfassen</translation>
 <translation id="7921782882718083488">Diese Seite zusammenfassen</translation>
-<translation id="7932221068776853847">Trennen Sie die Verbindung, um diesen Seiteninhalt nicht mehr an Leo zu senden und eine neue Unterhaltung zu beginnen.</translation>
-<translation id="1167803637855350748">Bei der Verbindung mit Leo ist ein Netzwerkproblem aufgetreten. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.</translation>
-<translation id="5095201428204952524">Leo ist gerade zu beschäftigt. Bitte versuchen Sie es in ein paar Minuten erneut.</translation>
+<translation id="7932221068776853847">Trennen Sie die Verbindung, um diesen Seiteninhalt nicht mehr an AI Wize Chat zu senden und eine neue Unterhaltung zu beginnen.</translation>
+<translation id="1167803637855350748">Bei der Verbindung mit AI Wize Chat ist ein Netzwerkproblem aufgetreten. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.</translation>
+<translation id="5095201428204952524">AI Wize Chat ist gerade zu beschäftigt. Bitte versuchen Sie es in ein paar Minuten erneut.</translation>
 <translation id="7144878232160441200">Erneut versuchen</translation>
-<translation id="7202619923031933110">Hallo, ich bin Leo. Ich bin ein vollständig gehosteter KI-Assistent von Brave. Ich werde von Mixtral 7B angetrieben, einem von Mistral AI entwickelten Modell, und kann damit fortschrittliche Aufgaben erledigen.</translation>
-<translation id="2489317965865266353">Hallo, ich bin Leo. Ich bin ein Proxy von AI Wiz und werde von Claude Instant angetrieben, einem von Anthropic entwickeltem Modell, um Konversations- und Textverarbeitungsaufgaben zu unterstützen.</translation>
+<translation id="7202619923031933110">Hallo, ich bin AI Wize Chat. Ich bin ein vollständig gehosteter KI-Assistent von Brave. Ich werde von Mixtral 7B angetrieben, einem von Mistral AI entwickelten Modell, und kann damit fortschrittliche Aufgaben erledigen.</translation>
+<translation id="2489317965865266353">Hallo, ich bin AI Wize Chat. Ich bin ein Proxy von AI Wiz und werde von Claude Instant angetrieben, einem von Anthropic entwickeltem Modell, um Konversations- und Textverarbeitungsaufgaben zu unterstützen.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> von <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Neuer Chat</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Zugriff auf branchenführende LLMs</translation>
 <translation id="8021579987620496265">Höhere Antwortquoten</translation>
 <translation id="8556044455877152001"><ph name="PRICE_VALUE"/> USD/Monat</translation>
-<translation id="377376641316998425">Schalten Sie das komplette Potenzial von Leo frei</translation>
+<translation id="377376641316998425">Schalten Sie das komplette Potenzial von AI Wize Chat frei</translation>
 <translation id="8363148882096737034">Anthropic Claude + mehr in Kürze</translation>
 <translation id="886527905046308697">Prioritärer Zugang und höhere Antwortquoten</translation>
 <translation id="1068954060985569277">Ihre Brave-Sitzung ist abgelaufen. Bitte gehen Sie zu Ihrer Kontoseite, um eine neue zu starten, und kommen Sie dann zurück, um die Premiumfunktionen zu nutzen.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Wählen Sie ein Thema für Ihr Feedback.</translation>
 <translation id="9018766373792005944">Worum geht Ihr Feedback?</translation>
 <translation id="7355096922131918313">Geben Sie hier Ihr Feedback</translation>
-<translation id="3027575440738035995">Leo Premium bietet Zugriff auf mehr Sprachmodelle, um noch differenziertere Antworten zu geben. <ph name="LINK_BEFORE"/>Mehr erfahren<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium bietet Zugriff auf mehr Sprachmodelle, um noch differenziertere Antworten zu geben. <ph name="LINK_BEFORE"/>Mehr erfahren<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nicht hilfreich</translation>
 <translation id="2976167228906046828">Falsch</translation>
 <translation id="1183055847065865059">Unsicher/schädlich</translation>
 <translation id="7138678301420049075">Sonstiges</translation>
 <translation id="2313959174679245365">Ihre Bewertung konnte nicht übermittelt werden. Bitte überprüfen Sie Ihre Netzwerkverbindung und versuchen Sie es erneut.</translation>
 <translation id="98413980871833152">Ihr Feedback konnte nicht übermittelt werden. Bitte überprüfen Sie Ihre Netzwerkverbindung und versuchen Sie es erneut.</translation>
-<translation id="8742658901413346500">Diese Unterhaltung ist ziemlich lang; möglicherweise wird Leo bald ein paar Dinge vergessen. Sie können längere Unterhaltungen ermöglichen, indem Sie auf ein Premium-Modell wechseln, oder Sie können den Chat löschen, um ihn zurückzusetzen.</translation>
+<translation id="8742658901413346500">Diese Unterhaltung ist ziemlich lang; möglicherweise wird AI Wize Chat bald ein paar Dinge vergessen. Sie können längere Unterhaltungen ermöglichen, indem Sie auf ein Premium-Modell wechseln, oder Sie können den Chat löschen, um ihn zurückzusetzen.</translation>
 <translation id="7550152963854770123">Chat löschen</translation>
-<translation id="7494736170250048402">Nachricht an Leo schicken</translation>
-<translation id="4110772752544684964">Diese Seite ist für Leo zu lang. Eventuell wird der Unterhaltung etwas Kontext fehlen.</translation>
-<translation id="4370698775470316661">Diese Unterhaltung ist zu lang und kann nicht fortgesetzt werden. Möglicherweise gibt es andere Modelle, mit denen Leo auch über längere Unterhaltungen richtige Antworten geben kann.</translation>
+<translation id="7494736170250048402">Nachricht an AI Wize Chat schicken</translation>
+<translation id="4110772752544684964">Diese Seite ist für AI Wize Chat zu lang. Eventuell wird der Unterhaltung etwas Kontext fehlen.</translation>
+<translation id="4370698775470316661">Diese Unterhaltung ist zu lang und kann nicht fortgesetzt werden. Möglicherweise gibt es andere Modelle, mit denen AI Wize Chat auch über längere Unterhaltungen richtige Antworten geben kann.</translation>
 <translation id="8193130769524604031">Fortschrittliche Chat-Aufgabe</translation>
 <translation id="3185367320601718531">Unterhaltung und Textgenerierung</translation>
-<translation id="3965507912994218570">Leo-Einstellungen</translation>
-<translation id="1037324977127422019">Hallo, ich bin Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat-Einstellungen</translation>
+<translation id="1037324977127422019">Hallo, ich bin AI Wize Chat!</translation>
 <translation id="8930348081963284873">Ein intelligenter KI-Assistent, der direkt in den Browser integriert ist.</translation>
 <translation id="3528849152231418380">Benötigen Sie Hilfe bei einer Website?</translation>
 <translation id="1558192229187362674">Ich kann Ihnen dabei helfen, Artikel zusammenzufassen, die Inhalte einer Website zu erweitern und vieles mehr.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Fragen Sie mich, was Sie möchten. Wir können über jedes Thema sprechen, das Sie möchten. Ich lerne ständig dazu, um bessere Antworten geben zu können.</translation>
 <translation id="989329677470075843">Datenschutzvereinbarung</translation>
 <translation id="1173570303649278801">Seitenkontext in die Antwort einbeziehen</translation>
-<translation id="8599503173207256429">Aktivieren Sie diese Option, um Fragen zu dieser Seite zu stellen. Ihre Inhalte werden zusammen mit Ihren Nachrichten an AI Wiz Leo gesendet.</translation>
+<translation id="8599503173207256429">Aktivieren Sie diese Option, um Fragen zu dieser Seite zu stellen. Ihre Inhalte werden zusammen mit Ihren Nachrichten an AI Wize Chat gesendet.</translation>
 <translation id="6303294677342628402">Schutz</translation>
 <translation id="8458987127502506209">Brave Schutz aktivieren</translation>
 <translation id="7509914170164691086">Schutz ist AKTIV <ph name="LINK_BEFORE"/>für<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Wir bringen Sie in Verbindung!
     drücken Sie die Tabulatortaste und dann Eingabe, um zum offenen Tab zu wechseln</translation>
 <translation id="1538335063514960365">„Hier öffnen“-Schaltfläche. Drücken Sie Eingabe, um diese URL im aktuellen Tab zu öffnen
     und nicht zum bestehenden Tab zu wechseln.</translation>
-<translation id="451189393813405346">Leo fragen</translation>
+<translation id="451189393813405346">AI Wize Chat fragen</translation>
 </translationbundle>

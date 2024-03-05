@@ -334,7 +334,7 @@ O canvia més tard a <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Llocs populars</translation>
 <translation id="7859704718976024901">Historial de navegació</translation>
 <translation id="8820817407110198400">Adreces d'interès</translation>
-<translation id="7310387888625228830">Assistent d'IA Leo</translation>
+<translation id="7310387888625228830">Assistent d'IA AI Wize Chat</translation>
 <translation id="5222974844674487962">Mostra el botó de AI Wize News</translation>
 <translation id="383007806262310953">Mostra la barra d'adreces d'interès</translation>
 <translation id="4054323497808446566">La barra d'adreces d'interès és visible a totes les pàgines</translation>
@@ -718,14 +718,14 @@ Segur que vols continuar?</translation>
 <translation id="3095201688102519917">Avisa abans de tancar una finestra amb múltiples pestanyes</translation>
 <translation id="7120553802660696133">Tanca la finestra en tancar l'última pestanya</translation>
 <translation id="7984721311211272523">Desactiva la funció silenci a les icones de les pestanyes dels altaveus</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Mostra la icona de Leo a la barra lateral</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Mostra la icona de AI Wize Chat a la barra lateral</translation>
 <translation id="8172263161008556851">Mostra suggeriments de missatges en la conversa</translation>
-<translation id="1014480593522400586">Esborra les dades de Leo</translation>
-<translation id="8681157601856387010">Per restablir l'assistent Leo, haureu d'acceptar la utilització futura de AI Wize
-Leo i també esborrar l'historial de xat. Quan esborreu l'historial de xat
+<translation id="1014480593522400586">Esborra les dades de AI Wize Chat</translation>
+<translation id="8681157601856387010">Per restablir l'assistent AI Wize Chat, haureu d'acceptar la utilització futura de AI Wize
+AI Wize Chat i també esborrar l'historial de xat. Quan esborreu l'historial de xat
 se suprimiran també totes les converses anteriors amb AI Wize
-Leo. Aquesta acció no es pot desfer.</translation>
+AI Wize Chat. Aquesta acció no es pot desfer.</translation>
 <translation id="8157373421434119674">Dades i historial de xat</translation>
 <translation id="614530507403667291">Model predeterminal per a les converses noves</translation>
 <translation id="349846214503465941">Activa la llista de reproducció</translation>

@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Afspil/Pause</translation>
 <translation id="1689210457482459023">Sænk afspilningshastigheden</translation>
 <translation id="5872363163901278000">Hæv afspilningshastigheden</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Opsummering er kun tilgængelig for udvalgte artikler og længere hjemmesider.</translation>
 <translation id="2346991295632453064">Acceptér og start</translation>
 <translation id="1223498995510244364">Opsummér</translation>
-<translation id="7491773233732232424">Om Leo</translation>
-<translation id="70442873931504163">Brave Leo er en smart AI-assistent, der kan sammenfatte websider, transskribere videoer og besvare spørgsmål. AI Wiz Leo Premium bruger avancerede <ph name="LINK_BEFORE"/>AI-modeller<ph name="LINK_AFTER"/>, der giver endnu mere nuancerede svar, og giver tidlig adgang til nye funktioner.</translation>
+<translation id="7491773233732232424">Om AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat er en smart AI-assistent, der kan sammenfatte websider, transskribere videoer og besvare spørgsmål. AI Wize Chat Premium bruger avancerede <ph name="LINK_BEFORE"/>AI-modeller<ph name="LINK_AFTER"/>, der giver endnu mere nuancerede svar, og giver tidlig adgang til nye funktioner.</translation>
 <translation id="3055739528128372229">Der gives ingen garanti for svarenes nøjagtighed, og de kan indeholde unøjagtige, misvisende eller falske oplysninger. Undlad at angive følsomme eller private oplysninger, og vær forsigtig med svar, der vedrører sundhed, økonomi, personlig sikkerhed eller lignende.</translation>
-<translation id="7297681068636289435">Leo indsamler ikke identifikatorer såsom IP-adresse, der kan knyttes til dig. Ingen personlige data bliver lagret af AI-modellen eller af nogen tredjepartsudbydere af modeller.</translation>
+<translation id="7297681068636289435">AI Wize Chat indsamler ikke identifikatorer såsom IP-adresse, der kan knyttes til dig. Ingen personlige data bliver lagret af AI-modellen eller af nogen tredjepartsudbydere af modeller.</translation>
 <translation id="7839853125981164613">Skriv noget her</translation>
 <translation id="334325425115922031">Foreslåede opfølgninger</translation>
 <translation id="4524675003624341892">Foreslå spørgsmål...</translation>
 <translation id="4567071417854988869">Sammenfat denne video</translation>
 <translation id="7921782882718083488">Sammenfat denne side</translation>
-<translation id="7932221068776853847">Afbryd for at holde op med at sende denne sides indhold til Leo, og start en ny samtale</translation>
-<translation id="1167803637855350748">Kunne ikke forbinde til Leo på grund af netværksproblemer. Tjek din forbindelse, og prøv igen.</translation>
-<translation id="5095201428204952524">Leo har for travlt lige nu. Prøv igen om et par minutter.</translation>
+<translation id="7932221068776853847">Afbryd for at holde op med at sende denne sides indhold til AI Wize Chat, og start en ny samtale</translation>
+<translation id="1167803637855350748">Kunne ikke forbinde til AI Wize Chat på grund af netværksproblemer. Tjek din forbindelse, og prøv igen.</translation>
+<translation id="5095201428204952524">AI Wize Chat har for travlt lige nu. Prøv igen om et par minutter.</translation>
 <translation id="7144878232160441200">Prøv igen</translation>
-<translation id="7202619923031933110">Hej, jeg hedder Leo. Jeg er en AI-assistent fra Brave, der er fuldt hostet. Jeg er udviklet af Mixtral 7B, en model skabt af Mistral AI til at håndtere avancerede opgaver.</translation>
-<translation id="2489317965865266353">Hej, jeg hedder Leo. Jeg er en proxy fra AI Wiz og udviklet af Claude Instant, en model skabt af Anthropic til at udføre samtale- og tekstbehandlingsopgaver.</translation>
+<translation id="7202619923031933110">Hej, jeg hedder AI Wize Chat. Jeg er en AI-assistent fra Brave, der er fuldt hostet. Jeg er udviklet af Mixtral 7B, en model skabt af Mistral AI til at håndtere avancerede opgaver.</translation>
+<translation id="2489317965865266353">Hej, jeg hedder AI Wize Chat. Jeg er en proxy fra AI Wiz og udviklet af Claude Instant, en model skabt af Anthropic til at udføre samtale- og tekstbehandlingsopgaver.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> fra <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Ny chat</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Adgang til store sprogmodeller, der er brancheførende</translation>
 <translation id="8021579987620496265">Højere grænseværdier for procenter</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /måned</translation>
-<translation id="377376641316998425">Få adgang til Leos fulde potentiale</translation>
+<translation id="377376641316998425">Få adgang til AI Wize Chats fulde potentiale</translation>
 <translation id="8363148882096737034">Anthropic Claude + meget mere lanceres inden længe</translation>
 <translation id="886527905046308697">Prioriteret adgang og øgede grænseværdier for svar</translation>
 <translation id="1068954060985569277">Din session på Brave-kontoen er udløbet. Gå til din kontoside for at opdatere, og kom derefter tilbage for at bruge premium-funktioner.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Vælg dit feedback-emne</translation>
 <translation id="9018766373792005944">Hvad drejer din feedback sig om?</translation>
 <translation id="7355096922131918313">Angiv din feedback her</translation>
-<translation id="3027575440738035995">Leo Premium giver adgang til et udvidet antal sprogmodeller, hvilket giver endnu mere nuancerede svar. <ph name="LINK_BEFORE"/>Få mere at vide<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium giver adgang til et udvidet antal sprogmodeller, hvilket giver endnu mere nuancerede svar. <ph name="LINK_BEFORE"/>Få mere at vide<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Ikke nyttigt</translation>
 <translation id="2976167228906046828">Forkert</translation>
 <translation id="1183055847065865059">Usikkert/skadeligt</translation>
 <translation id="7138678301420049075">Andet</translation>
 <translation id="2313959174679245365">Din bedømmelse kan ikke indsendes. Tjek netværksforbindelsen, og prøv igen.</translation>
 <translation id="98413980871833152">Din feedback kan ikke indsendes. Tjek netværksforbindelsen, og prøv igen.</translation>
-<translation id="8742658901413346500">Denne samtale er lang, og Leo begynder muligvis snart at glemme ting. Du kan få længere samtaler ved at skifte til en premium-model, eller du kan rydde chatten for at nulstille den.</translation>
+<translation id="8742658901413346500">Denne samtale er lang, og AI Wize Chat begynder muligvis snart at glemme ting. Du kan få længere samtaler ved at skifte til en premium-model, eller du kan rydde chatten for at nulstille den.</translation>
 <translation id="7550152963854770123">Ryd chat</translation>
-<translation id="7494736170250048402">Send en besked til Leo</translation>
-<translation id="4110772752544684964">Siden er for lang til Leo. Der mangler muligvis noget kontekst i samtalen.</translation>
-<translation id="4370698775470316661">Denne samtale er for lang og kan ikke fortsættes. Der findes muligvis andre modeller, som Leo kan bruge til at bibeholde nøjagtigheden i længere samtaler.</translation>
+<translation id="7494736170250048402">Send en besked til AI Wize Chat</translation>
+<translation id="4110772752544684964">Siden er for lang til AI Wize Chat. Der mangler muligvis noget kontekst i samtalen.</translation>
+<translation id="4370698775470316661">Denne samtale er for lang og kan ikke fortsættes. Der findes muligvis andre modeller, som AI Wize Chat kan bruge til at bibeholde nøjagtigheden i længere samtaler.</translation>
 <translation id="8193130769524604031">Avancerede chatopgaver</translation>
 <translation id="3185367320601718531">Generering af samtale og tekst</translation>
-<translation id="3965507912994218570">Leo-indstillinger</translation>
-<translation id="1037324977127422019">Hej, jeg hedder Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat-indstillinger</translation>
+<translation id="1037324977127422019">Hej, jeg hedder AI Wize Chat!</translation>
 <translation id="8930348081963284873">En AI-drevet intelligent assistent bygget direkte ind i Brave.</translation>
 <translation id="3528849152231418380">Har du brug for hjælp med en hjemmeside?</translation>
 <translation id="1558192229187362674">Jeg kan hjælpe dig med at opsummere artikler, udvide et websteds indhold og meget mere.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Spørg mig om hvad som helst! Vi kan tale om ethvert emne, du ønsker. Jeg lærer og forbedrer mig altid for at give bedre svar.</translation>
 <translation id="989329677470075843">Fortrolighedsaftale</translation>
 <translation id="1173570303649278801">Brug sidekontekst for svar</translation>
-<translation id="8599503173207256429">Aktiver for at spørge om denne side. Dens indhold vil blive sendt til AI Wiz Leo sammen med dine beskeder.</translation>
+<translation id="8599503173207256429">Aktiver for at spørge om denne side. Dens indhold vil blive sendt til AI Wize Chat sammen med dine beskeder.</translation>
 <translation id="6303294677342628402">Afskærmning</translation>
 <translation id="8458987127502506209">Aktivér Brave-skjolde</translation>
 <translation id="7509914170164691086">Skjolde er OPPE <ph name="LINK_BEFORE"/>for<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Lad os få dig tilknyttet!
     Tryk på Fane og derefter Enter for at skifte til den åbne fane</translation>
 <translation id="1538335063514960365">Knappen Åbn her, tryk på Enter for at åbne denne webadresse i den aktuelle fane i stedet for at skifte til den
     nuværende fane</translation>
-<translation id="451189393813405346">Spørg Leo</translation>
+<translation id="451189393813405346">Spørg AI Wize Chat</translation>
 </translationbundle>

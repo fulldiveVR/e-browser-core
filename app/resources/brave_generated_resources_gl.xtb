@@ -335,7 +335,7 @@ Se prefires, podes cambiar os permisos máis tarde en <ph name="SETTINGS_EXTENIO
 <translation id="2858138569776157458">Populares</translation>
 <translation id="7859704718976024901">Historial de exploración</translation>
 <translation id="8820817407110198400">Marcadores</translation>
-<translation id="7310387888625228830">Asistente de IA Leo</translation>
+<translation id="7310387888625228830">Asistente de IA AI Wize Chat</translation>
 <translation id="5222974844674487962">Amosar o botón de Noticias de AI Wize</translation>
 <translation id="383007806262310953">Mostrar barra de marcadores</translation>
 <translation id="4054323497808446566">A barra de marcadores pódese ver en todas a páxinas</translation>
@@ -719,14 +719,14 @@ volver usar Sincronización, terás que crear unha conta nova e volver engadir o
 <translation id="3095201688102519917">Notificarme antes de pechar unha ventá con varias pestanas</translation>
 <translation id="7120553802660696133">Pechar a ventá cando se peche o último separador</translation>
 <translation id="7984721311211272523">Desactiva a función de silenciar nas iconas de altofalante da lapela</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Mostrar icona de Leo na barra lateral</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Mostrar icona de AI Wize Chat na barra lateral</translation>
 <translation id="8172263161008556851">Mostrar mensaxes emerxentes suxeridas na conversa</translation>
-<translation id="1014480593522400586">Borrar datos de Leo</translation>
-<translation id="8681157601856387010">Para restablecer o asistente de Leo, deberá optar por utilizar AI Wize
-Leo no futuro e tamén borrará o seu historial de chats. Borrar o seu
+<translation id="1014480593522400586">Borrar datos de AI Wize Chat</translation>
+<translation id="8681157601856387010">Para restablecer o asistente de AI Wize Chat, deberá optar por utilizar AI Wize
+AI Wize Chat no futuro e tamén borrará o seu historial de chats. Borrar o seu
 historial de chats eliminará todas as súas conversas anteriores con AI Wize
-Leo. Esta acción non se pode desfacer.</translation>
+AI Wize Chat. Esta acción non se pode desfacer.</translation>
 <translation id="8157373421434119674">Historial de datos e chat</translation>
 <translation id="614530507403667291">Modelo predeterminado para conversas novas</translation>
 <translation id="349846214503465941">Activar Lista de reprodución</translation>

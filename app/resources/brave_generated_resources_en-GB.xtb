@@ -334,7 +334,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Top sites</translation>
 <translation id="7859704718976024901">Browsing History</translation>
 <translation id="8820817407110198400">Bookmarks</translation>
-<translation id="7310387888625228830">Leo AI assistant</translation>
+<translation id="7310387888625228830">AI Wize Chat AI assistant</translation>
 <translation id="5222974844674487962">Show AI Wize News button</translation>
 <translation id="383007806262310953">Show bookmarks bar</translation>
 <translation id="4054323497808446566">Bookmarks bar is visible on all pages</translation>
@@ -718,14 +718,14 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="3095201688102519917">Warn me before closing window with multiple tabs</translation>
 <translation id="7120553802660696133">Close window when closing last tab</translation>
 <translation id="7984721311211272523">Disable mute function in tab speaker icons</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Show Leo icon in the sidebar</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Show AI Wize Chat icon in the sidebar</translation>
 <translation id="8172263161008556851">Show suggested prompts in the conversation</translation>
-<translation id="1014480593522400586">Clear Leo data</translation>
-<translation id="8681157601856387010">Resetting the Leo assistant will require you to opt-in to use AI Wize
-Leo in the future and will also clear your chat history. Clearing your
+<translation id="1014480593522400586">Clear AI Wize Chat data</translation>
+<translation id="8681157601856387010">Resetting the AI Wize Chat assistant will require you to opt-in to use AI Wize
+AI Wize Chat in the future and will also clear your chat history. Clearing your
 chat history will delete all your previous conversations with AI Wize
-Leo. This action cannot be undone.</translation>
+AI Wize Chat. This action cannot be undone.</translation>
 <translation id="8157373421434119674">Data and chat history</translation>
 <translation id="614530507403667291">Default model for new conversations</translation>
 <translation id="349846214503465941">Enable playlist</translation>

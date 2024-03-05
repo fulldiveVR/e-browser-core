@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Esitamine/peatamine</translation>
 <translation id="1689210457482459023">Taasesituse kiiruse vähendamine</translation>
 <translation id="5872363163901278000">Taasesituse kiiruse suurendamine</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Kokkuvõtja funktsioon on praegu saadaval ainult valitud artiklite ja muude pika vormi veebilehtede jaoks.</translation>
 <translation id="2346991295632453064">Nõustu ja jätka</translation>
 <translation id="1223498995510244364">Võta kokku</translation>
-<translation id="7491773233732232424">Leo tutvustus</translation>
-<translation id="70442873931504163">Brave’i Leo on tehisintellektist assistent, kes oskab teha veebilehtedest kokkuvõtteid, transkribeerida videoid ja vastata küsimustele. Brave’i Leo Premium-versioonis kasutatakse täiustatud <ph name="LINK_BEFORE"/>tehisintellektimudeleid<ph name="LINK_AFTER"/>, et vastused oleksid veelgi nüansirikkamad, ja pakutakse uutele funktsioonidele varajast juurdepääsu.</translation>
+<translation id="7491773233732232424">AI Wize Chat tutvustus</translation>
+<translation id="70442873931504163">Brave’i AI Wize Chat on tehisintellektist assistent, kes oskab teha veebilehtedest kokkuvõtteid, transkribeerida videoid ja vastata küsimustele. Brave’i AI Wize Chat Premium-versioonis kasutatakse täiustatud <ph name="LINK_BEFORE"/>tehisintellektimudeleid<ph name="LINK_AFTER"/>, et vastused oleksid veelgi nüansirikkamad, ja pakutakse uutele funktsioonidele varajast juurdepääsu.</translation>
 <translation id="3055739528128372229">Vastuste täpsust ei tagata ja need võivad sisaldada ebatäpset, eksitavat või valet teavet. Ärge sisestage tundlikke ega isiklikke andmeid ning olge tervise, finantsteemade, isikliku turvalisuse või sarnasega seotud vastuste puhul ettevaatlik.</translation>
-<translation id="7297681068636289435">Leo ei kogu andmeid, mida saaks teiega seostada, nt teie IP-aadressi. Tehisintellektimudeli ega mis tahes 3. osapoole mudeli pakkujad ei säilita isikuandmeid.</translation>
+<translation id="7297681068636289435">AI Wize Chat ei kogu andmeid, mida saaks teiega seostada, nt teie IP-aadressi. Tehisintellektimudeli ega mis tahes 3. osapoole mudeli pakkujad ei säilita isikuandmeid.</translation>
 <translation id="7839853125981164613">Sisestage siia viip</translation>
 <translation id="334325425115922031">Soovitatud järjed</translation>
 <translation id="4524675003624341892">Soovitage küsimusi…</translation>
 <translation id="4567071417854988869">Tee videost kokkuvõte</translation>
 <translation id="7921782882718083488">Tee lehest kokkuvõte</translation>
-<translation id="7932221068776853847">Katkestage ühendus, et lõpetada selle lehe sisu Leole saatmine ja alustada uut vestlust</translation>
-<translation id="1167803637855350748">Leoga ühenduse loomisel ilmnes võrguprobleem, kontrollige oma ühendust ja proovige uuesti.</translation>
-<translation id="5095201428204952524">Leo on praegu liiga hõivatud. Proovige paari minuti pärast uuesti.</translation>
+<translation id="7932221068776853847">Katkestage ühendus, et lõpetada selle lehe sisu AI Wize Chatle saatmine ja alustada uut vestlust</translation>
+<translation id="1167803637855350748">AI Wize Chatga ühenduse loomisel ilmnes võrguprobleem, kontrollige oma ühendust ja proovige uuesti.</translation>
+<translation id="5095201428204952524">AI Wize Chat on praegu liiga hõivatud. Proovige paari minuti pärast uuesti.</translation>
 <translation id="7144878232160441200">Proovi uuesti</translation>
-<translation id="7202619923031933110">Tere, olen Leo. Olen tehisintellektist abiline, täielikult Brave'i majutatud. Põhinen platvormil Mixtral 7B. See on Mistral AI loodud mudel keerukamate ülesannetega tegelemiseks.</translation>
-<translation id="2489317965865266353">Tere! Mina olen Leo. Mind vahendab AI Wiz ja ma põhinen Anthropicu loodud Claude Instanti mudelil, mis on mõeldud vestluste ja teksti töötluseks.</translation>
+<translation id="7202619923031933110">Tere, olen AI Wize Chat. Olen tehisintellektist abiline, täielikult Brave'i majutatud. Põhinen platvormil Mixtral 7B. See on Mistral AI loodud mudel keerukamate ülesannetega tegelemiseks.</translation>
+<translation id="2489317965865266353">Tere! Mina olen AI Wize Chat. Mind vahendab AI Wiz ja ma põhinen Anthropicu loodud Claude Instanti mudelil, mis on mõeldud vestluste ja teksti töötluseks.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> ettevõttelt <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Vestlus</translation>
 <translation id="2961040541145689181">Uus vestlus</translation>
@@ -1862,7 +1862,7 @@ uuesti</translation>
 <translation id="1239767708151339890">Valdkonna parimad suured keelemudelid</translation>
 <translation id="8021579987620496265">Suuremad limiidid</translation>
 <translation id="8556044455877152001"><ph name="PRICE_VALUE"/> USD kuus</translation>
-<translation id="377376641316998425">Kasutage kõiki Leo võimalusi</translation>
+<translation id="377376641316998425">Kasutage kõiki AI Wize Chat võimalusi</translation>
 <translation id="8363148882096737034">Anthropicu mudel Claude ja varsti paljud teised</translation>
 <translation id="886527905046308697">Eelisjuurdepääs ja suuremad vastuselimiidid</translation>
 <translation id="1068954060985569277">Teie Brave’i konto seanss on aegunud. Minge selle värskendamiseks oma konto lehele ja tulge seejärel tagasi, et Premium-funktsioone kasutada.</translation>
@@ -1876,22 +1876,22 @@ uuesti</translation>
 <translation id="8442999546461118871">Valige tagasiside teema</translation>
 <translation id="9018766373792005944">Mille kohta annate tagasisidet?</translation>
 <translation id="7355096922131918313">Kirjutage tagasiside siia</translation>
-<translation id="3027575440738035995">Leo Premium-versioonis saate juurdepääsu rohkematele keelemudelitele, et vastused oleksid veelgi nüansirikkamad. <ph name="LINK_BEFORE"/>Lisateave<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium-versioonis saate juurdepääsu rohkematele keelemudelitele, et vastused oleksid veelgi nüansirikkamad. <ph name="LINK_BEFORE"/>Lisateave<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Ei aita</translation>
 <translation id="2976167228906046828">Vale</translation>
 <translation id="1183055847065865059">Ohtlik/kahjulik</translation>
 <translation id="7138678301420049075">Muu</translation>
 <translation id="2313959174679245365">Teie hinnangut ei esitatud. Kontrollige oma võrguühendust ja proovige uuesti</translation>
 <translation id="98413980871833152">Teie tagasisidet ei esitatud. Kontrollige oma võrguühendust ja proovige uuesti</translation>
-<translation id="8742658901413346500">See vestlus on pikk ja Leo võib varsti hakata asju unustama. Pikemalt vestlemiseks tellige Premium-mudel või tühjendage praegune vestlus.</translation>
+<translation id="8742658901413346500">See vestlus on pikk ja AI Wize Chat võib varsti hakata asju unustama. Pikemalt vestlemiseks tellige Premium-mudel või tühjendage praegune vestlus.</translation>
 <translation id="7550152963854770123">Tühjenda vestlus</translation>
-<translation id="7494736170250048402">Saada Leole sõnum</translation>
-<translation id="4110772752544684964">See leht on Leo jaoks liiga pikk. Osa konteksti võib vestlusest välja jääda.</translation>
-<translation id="4370698775470316661">Vestlus on pikk ja seda ei saa jätkata. Saadaval võib olla teisi mudeleid, mille abil saab Leo pikemates vestlustes täpsuse säilitada.</translation>
+<translation id="7494736170250048402">Saada AI Wize Chatle sõnum</translation>
+<translation id="4110772752544684964">See leht on AI Wize Chat jaoks liiga pikk. Osa konteksti võib vestlusest välja jääda.</translation>
+<translation id="4370698775470316661">Vestlus on pikk ja seda ei saa jätkata. Saadaval võib olla teisi mudeleid, mille abil saab AI Wize Chat pikemates vestlustes täpsuse säilitada.</translation>
 <translation id="8193130769524604031">Täpsemad vestlusefunktsioonid</translation>
 <translation id="3185367320601718531">Vestluse- ja tekstilooja</translation>
-<translation id="3965507912994218570">Leo seaded</translation>
-<translation id="1037324977127422019">Tere, olen Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat seaded</translation>
+<translation id="1037324977127422019">Tere, olen AI Wize Chat!</translation>
 <translation id="8930348081963284873">Tehisintellektipõhine arukas abiline, otse Brave'i sisse ehitatud.</translation>
 <translation id="3528849152231418380">Kas vajate abi veebisaidiga?</translation>
 <translation id="1558192229187362674">Võin teid aidata artiklikokkuvõtete tegemisel, veebisaidi sisu laiendamisel ja paljus muus.</translation>
@@ -1900,7 +1900,7 @@ uuesti</translation>
 <translation id="8857222718794549840">Küsige minult ükskõik mida! Võime rääkida mis tahes teemal. Õpin ja täiustun pidevalt, et saaksin pakkuda paremaid vastuseid.</translation>
 <translation id="989329677470075843">Privaatsusleping</translation>
 <translation id="1173570303649278801">Kasuta vastamiseks lehe konteksti</translation>
-<translation id="8599503173207256429">Lülitage sisse, kui soovite selle lehe kohta midagi küsida. Selle sisu saadetakse koos teie sõnumitega Brave'i Leole.</translation>
+<translation id="8599503173207256429">Lülitage sisse, kui soovite selle lehe kohta midagi küsida. Selle sisu saadetakse koos teie sõnumitega Brave'i AI Wize Chatle.</translation>
 <translation id="6303294677342628402">Kaitse</translation>
 <translation id="8458987127502506209">Luba Brave'i kaitsed</translation>
 <translation id="7509914170164691086">Kaitsed on PEAL, <ph name="LINK_BEFORE"/>kestus<ph name="LINK_AFTER"/></translation>
@@ -2055,5 +2055,5 @@ Saate alati WireGuardi juurde tagasi pöörduda aadressil aiwize://settings/syst
 vajutage tabeldusklahvi ja sisestusklahvi, et teha avatud vaheleht aktiivseks</translation>
 <translation id="1538335063514960365">Siin avamise nupp. Vajutage sisestusklahvi, et avada see URL praegusel vahelehel, mitte
 olemasoleval vahelehel</translation>
-<translation id="451189393813405346">Küsi Leolt</translation>
+<translation id="451189393813405346">Küsi AI Wize Chatlt</translation>
 </translationbundle>

@@ -334,7 +334,7 @@
 <translation id="2858138569776157458">เว็บไซต์อันดับสูงสุด</translation>
 <translation id="7859704718976024901">ประวัติการเรียกดู</translation>
 <translation id="8820817407110198400">บุ๊กมาร์ก</translation>
-<translation id="7310387888625228830">Leo ผู้ช่วย AI</translation>
+<translation id="7310387888625228830">AI Wize Chat ผู้ช่วย AI</translation>
 <translation id="5222974844674487962">แสดงปุ่ม AI Wize News</translation>
 <translation id="383007806262310953">แสดงแถบบุ๊กมาร์ก</translation>
 <translation id="4054323497808446566">แถบบุ๊กมาร์กจะแสดงให้เห็นบนทุกหน้า</translation>
@@ -719,13 +719,13 @@
 <translation id="7120553802660696133">ปิดหน้าต่างเมื่อปิดแท็บสุดท้าย</translation>
 <translation id="7984721311211272523">ปิดใช้ฟังก์ชันปิดเสียงในไอคอนแท็บลำโพง</translation>
 <translation id="6129027151000961048">ลีโอ</translation>
-<translation id="2751872555001636931">แสดงไอคอน Leo ในแถบด้านข้าง</translation>
+<translation id="2751872555001636931">แสดงไอคอน AI Wize Chat ในแถบด้านข้าง</translation>
 <translation id="8172263161008556851">แสดงข้อความแจ้งเตือนที่แนะนำในการสนทนา</translation>
-<translation id="1014480593522400586">ล้างข้อมูล Leo</translation>
-<translation id="8681157601856387010">การรีเซ็ตผู้ช่วย Leo จะทำให้คุณต้องเลือกใช้ AI Wize
-Leo ในอนาคต และจะล้างประวัติการแชทของคุณด้วย การล้าง
+<translation id="1014480593522400586">ล้างข้อมูล AI Wize Chat</translation>
+<translation id="8681157601856387010">การรีเซ็ตผู้ช่วย AI Wize Chat จะทำให้คุณต้องเลือกใช้ AI Wize
+AI Wize Chat ในอนาคต และจะล้างประวัติการแชทของคุณด้วย การล้าง
 ประวัติการแชทจะลบการสนทนาก่อนหน้าทั้งหมดของคุณกับ AI Wize
-Leo การดำเนินการนี้ไม่สามารถยกเลิกได้</translation>
+AI Wize Chat การดำเนินการนี้ไม่สามารถยกเลิกได้</translation>
 <translation id="8157373421434119674">ข้อมูลและประวัติการแชท</translation>
 <translation id="614530507403667291">โมเดลเริ่มต้นสำหรับการสนทนาใหม่</translation>
 <translation id="349846214503465941">เปิดใช้งานเพลย์ลิสต์</translation>

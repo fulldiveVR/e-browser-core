@@ -1838,8 +1838,8 @@
 <translation id="8637805148029768813">Ova funkcija sažimanja je trenutno dostupna samo za izabrane članke i druge veb-stranice.</translation>
 <translation id="2346991295632453064">Prihvatiti i početi</translation>
 <translation id="1223498995510244364">Sažetak</translation>
-<translation id="7491773233732232424">O Leo</translation>
-<translation id="70442873931504163">Brave Leo je pametni asistent veštačke inteligencije koji može da sumira veb stranice, transkribuje video zapise, i odgovora na pitanja. AI Wiz Leo Premium koristi napredne <ph name="LINK_BEFORE"/>modele veštačke inteligencije<ph name="LINK_AFTER"/>za još jasnije odgovore i daje rani pristup novim funkcijama.</translation>
+<translation id="7491773233732232424">O AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat je pametni asistent veštačke inteligencije koji može da sumira veb stranice, transkribuje video zapise, i odgovora na pitanja. AI Wize Chat Premium koristi napredne <ph name="LINK_BEFORE"/>modele veštačke inteligencije<ph name="LINK_AFTER"/>za još jasnije odgovore i daje rani pristup novim funkcijama.</translation>
 <translation id="3055739528128372229">Tačnost odgovora nije zagarantovana i može uključivati netačne, obmanjujuće ili lažne informacije. Nemojte slati osetljive ili privatne informacije i budite oprezni sa bilo kakvim odgovorima koji se odnose na zdravlje, finansije, ličnu bezbednost ili slično.</translation>
 <translation id="7297681068636289435">Лео не прикупља идентификаторе као што је ваша ИП адреса која се може повезати са вама. АИ модел или било који добављач модела треће стране не 3рд-парти никакве личне податке.</translation>
 <translation id="7839853125981164613">Uneti upit ovde</translation>
@@ -1847,12 +1847,12 @@
 <translation id="4524675003624341892">Predloži pitanja...</translation>
 <translation id="4567071417854988869">Sumiraj ovaj video zapis</translation>
 <translation id="7921782882718083488">Sumiraj ovu stranicu</translation>
-<translation id="7932221068776853847">Prekinite vezu da biste zaustavili slanje sadržaja ovog sajta asistentu Leo i pokrenite novi razgovor</translation>
-<translation id="1167803637855350748">Došlo je do problema s mrežom prilikom povezivanja sa asistentom Leo, proverite vezu i pokušajte ponovo.</translation>
-<translation id="5095201428204952524">Leo je trenutno prebukiran. Pokušajte ponovo za nekoliko minuta.</translation>
+<translation id="7932221068776853847">Prekinite vezu da biste zaustavili slanje sadržaja ovog sajta asistentu AI Wize Chat i pokrenite novi razgovor</translation>
+<translation id="1167803637855350748">Došlo je do problema s mrežom prilikom povezivanja sa asistentom AI Wize Chat, proverite vezu i pokušajte ponovo.</translation>
+<translation id="5095201428204952524">AI Wize Chat je trenutno prebukiran. Pokušajte ponovo za nekoliko minuta.</translation>
 <translation id="7144878232160441200">Pokušaj ponovo</translation>
-<translation id="7202619923031933110">Zdravo, ja sam Leo. Ja sam potpuno hostovan AI Wiz asistent veštačke inteligencije. Pokreće me Mixtral 7B, model koji je kreirao MIstral AI Meta za obavljanje naprednijih zadataka.</translation>
-<translation id="2489317965865266353">Zdravo, ja sam Leo. AI Wiz mi je proksi, a pokreće me Claude Instant, model koji je napravio Anthropic da bi omogućio razgovore i zadatke obrade teksta.</translation>
+<translation id="7202619923031933110">Zdravo, ja sam AI Wize Chat. Ja sam potpuno hostovan AI Wiz asistent veštačke inteligencije. Pokreće me Mixtral 7B, model koji je kreirao MIstral AI Meta za obavljanje naprednijih zadataka.</translation>
+<translation id="2489317965865266353">Zdravo, ja sam AI Wize Chat. AI Wiz mi je proksi, a pokreće me Claude Instant, model koji je napravio Anthropic da bi omogućio razgovore i zadatke obrade teksta.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> od <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Ćaskanje</translation>
 <translation id="2961040541145689181">Novo ćaskanje</translation>
@@ -1865,7 +1865,7 @@
 <translation id="1239767708151339890">Pristupite vodećim LLM-ovima u industriji</translation>
 <translation id="8021579987620496265">Veći ograničenja stope</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /mesec</translation>
-<translation id="377376641316998425">Otključajte Leov puni potencijal</translation>
+<translation id="377376641316998425">Otključajte AI Wize Chatv puni potencijal</translation>
 <translation id="8363148882096737034">Anthropic Claude + više stiže uskoro</translation>
 <translation id="886527905046308697">Prioritetni pristup i povećana ograničenja odgovora</translation>
 <translation id="1068954060985569277">Vaša sesija AI Wiz naloga je istekla. Posetite stranicu naloga da biste osvežili, a zatim se vratite da koristite premijum funkcije.</translation>
@@ -1879,22 +1879,22 @@
 <translation id="8442999546461118871">Izaberite temu za povratne informacije</translation>
 <translation id="9018766373792005944">O čemu imate povratne informacije?</translation>
 <translation id="7355096922131918313">Pružite povratne informacije ovde</translation>
-<translation id="3027575440738035995">Leo Premium pruža pristup proširenom skupu jezičkih modela za još veću jasnoću odgovora. <ph name="LINK_BEFORE"/>Saznajte više<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium pruža pristup proširenom skupu jezičkih modela za još veću jasnoću odgovora. <ph name="LINK_BEFORE"/>Saznajte više<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nije od pomoći</translation>
 <translation id="2976167228906046828">Netačno</translation>
 <translation id="1183055847065865059">Nije bezbedno/Štetno</translation>
 <translation id="7138678301420049075">Друго</translation>
 <translation id="2313959174679245365">Vaša ocena nije mogla da se pošalje, proverite mrežnu vezu i pokušajte ponovo</translation>
 <translation id="98413980871833152">Vaše povratne informacije nisu mogle da se pošalju, proverite mrežnu vezu i pokušajte ponovo</translation>
-<translation id="8742658901413346500">Ovaj razgovor je dug i Leo će možda uskoro početi da zaboravlja. Možete da dobijete duže razgovore prelaskom na premijum model ili možete da obrišete ćaskanje da ga resetujete.</translation>
+<translation id="8742658901413346500">Ovaj razgovor je dug i AI Wize Chat će možda uskoro početi da zaboravlja. Možete da dobijete duže razgovore prelaskom na premijum model ili možete da obrišete ćaskanje da ga resetujete.</translation>
 <translation id="7550152963854770123">Obrišite ćaskanje</translation>
 <translation id="7494736170250048402">Pošaljite poruku Leu</translation>
 <translation id="4110772752544684964">Stranica je predugačka za Lea. Neki kontekst bi mogao da nedostaje u razgovoru.</translation>
-<translation id="4370698775470316661">Ovaj razgovor je predugačak i ne može se nastaviti. Možda postoje i drugi modeli sa kojima je Leo sposoban da održi tačnost za duže razgovore.</translation>
+<translation id="4370698775470316661">Ovaj razgovor je predugačak i ne može se nastaviti. Možda postoje i drugi modeli sa kojima je AI Wize Chat sposoban da održi tačnost za duže razgovore.</translation>
 <translation id="8193130769524604031">Napredni zadaci ćaskanja</translation>
 <translation id="3185367320601718531">Razgovor i generisanje teksta</translation>
 <translation id="3965507912994218570">Лео подешавања</translation>
-<translation id="1037324977127422019">Zdravo, ja sam Leo!</translation>
+<translation id="1037324977127422019">Zdravo, ja sam AI Wize Chat!</translation>
 <translation id="8930348081963284873">Inteligentni asistent sa veštačkom inteligencijom, ugrađen direktno u Brave.</translation>
 <translation id="3528849152231418380">Treba vam pomoć oko veb stranice?</translation>
 <translation id="1558192229187362674">Mogu vam pomoći da sumirate članke, proširite sadržaj stranice i još mnogo toga.</translation>

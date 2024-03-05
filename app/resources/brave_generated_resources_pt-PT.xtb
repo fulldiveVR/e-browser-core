@@ -334,7 +334,7 @@ Ou altere mais tarde em <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Princ. sites</translation>
 <translation id="7859704718976024901">Histórico de navegação</translation>
 <translation id="8820817407110198400">Barra de marcadores</translation>
-<translation id="7310387888625228830">Assistente de IA Leo</translation>
+<translation id="7310387888625228830">Assistente de IA AI Wize Chat</translation>
 <translation id="5222974844674487962">Mostrar botão do AI Wize News</translation>
 <translation id="383007806262310953">Mostrar barra de marcadores</translation>
 <translation id="4054323497808446566">A barra de marcadores está visível em todas as páginas</translation>
@@ -717,14 +717,14 @@ Nota: se for selecionado um nó local, o recurso será solicitado diretamente do
 <translation id="3095201688102519917">Avisar antes de fechar janela com vários separadores</translation>
 <translation id="7120553802660696133">Fechar a janela ao fechar o último separador</translation>
 <translation id="7984721311211272523">Desativar a função sem som nos ícones das colunas do separador</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Mostrar o ícone Leo na barra lateral</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Mostrar o ícone AI Wize Chat na barra lateral</translation>
 <translation id="8172263161008556851">Mostrar sugestões na conversa</translation>
-<translation id="1014480593522400586">Eliminar dados Leo</translation>
-<translation id="8681157601856387010">A reposição do assistente Leo irá requerer que opte por utilizar o AI Wize
-Leo no futuro. Também irá limpar o histórico de chat. A limpeza do 
+<translation id="1014480593522400586">Eliminar dados AI Wize Chat</translation>
+<translation id="8681157601856387010">A reposição do assistente AI Wize Chat irá requerer que opte por utilizar o AI Wize
+AI Wize Chat no futuro. Também irá limpar o histórico de chat. A limpeza do 
 histórico de chat irá eliminar todas as conversas anteriores com o AI Wize
-Leo. Não é possível anular esta ação.</translation>
+AI Wize Chat. Não é possível anular esta ação.</translation>
 <translation id="8157373421434119674">Histórico de dados e chat</translation>
 <translation id="614530507403667291">Modelo predefinido para novas conversas</translation>
 <translation id="349846214503465941">Ativar lista de reprodução</translation>

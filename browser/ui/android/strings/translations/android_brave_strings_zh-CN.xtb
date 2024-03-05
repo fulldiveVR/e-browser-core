@@ -1204,14 +1204,14 @@
 <translation id="5494920125229734069">全选</translation>
 <translation id="5972844218283131174">取消选择所有</translation>
 <translation id="6322030314101903925">没有可用资产</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">用 AI Wiz Wallet 登录</translation>
 <translation id="3696514931437952995">你正在登录<ph name="ORIGIN"/>。Brave 钱包将与<ph name="ORIGIN"/>共享钱包地址。</translation>
 <translation id="1028781062521375153">查看详情</translation>
 <translation id="6759710362319508545">资源</translation>
 <translation id="2471230424465522689">以前没有</translation>
 <translation id="4841860051609590575">申请 ID</translation>
-<translation id="1179407411385015942">Leo 是采用 AI 技术的智慧助理，内置于浏览器中。</translation>
-<translation id="1250335737108905610">重置并清除 Leo 数据</translation>
-<translation id="6165101586663336913">如果重置 Leo 助理，日后必须重新选择加入才能再次使用，您的聊天记录也会一并清除。清除聊天记录会删除您先前与 Leo 的对话。此动作无法还原。</translation>
+<translation id="1179407411385015942">AI Wize Chat 是采用 AI 技术的智慧助理，内置于浏览器中。</translation>
+<translation id="1250335737108905610">重置并清除 AI Wize Chat 数据</translation>
+<translation id="6165101586663336913">如果重置 AI Wize Chat 助理，日后必须重新选择加入才能再次使用，您的聊天记录也会一并清除。清除聊天记录会删除您先前与 AI Wize Chat 的对话。此动作无法还原。</translation>
 </translationbundle>

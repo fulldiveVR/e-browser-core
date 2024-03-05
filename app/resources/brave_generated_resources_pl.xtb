@@ -333,7 +333,7 @@ lub zmień później w <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Popularne</translation>
 <translation id="7859704718976024901">Historia przeglądania</translation>
 <translation id="8820817407110198400">Zakładki</translation>
-<translation id="7310387888625228830">Asystent SI Leo</translation>
+<translation id="7310387888625228830">Asystent SI AI Wize Chat</translation>
 <translation id="5222974844674487962">Pokaż przycisk Aktualności AI Wize</translation>
 <translation id="383007806262310953">Pokaż pasek zakładek</translation>
 <translation id="4054323497808446566">Pasek zakładek jest widoczny na wszystkich stronach</translation>
@@ -717,14 +717,14 @@ Uwaga: Jeśli wybrano węzeł lokalny, dostęp do zasobu będzie wymagany bezpo�
 <translation id="3095201688102519917">Ostrzegaj przed zamknięciem okna z wieloma kartami</translation>
 <translation id="7120553802660696133">Zamknij okno po zamknięciu ostatniej karty</translation>
 <translation id="7984721311211272523">Wyłącz funkcję wyciszenia na karcie ikon głośnika</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Pokaż ikonę Leo w pasku bocznym</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Pokaż ikonę AI Wize Chat w pasku bocznym</translation>
 <translation id="8172263161008556851">Pokaż sugerowane podpowiedzi w rozmowie</translation>
-<translation id="1014480593522400586">Wyczyść dane Leo</translation>
-<translation id="8681157601856387010">Zresetowanie asystenta Leo będzie wymagało wyrażenia zgody na
-korzystanie z AI Wize Leo w przyszłości, a także spowoduje wyczyszczenie
+<translation id="1014480593522400586">Wyczyść dane AI Wize Chat</translation>
+<translation id="8681157601856387010">Zresetowanie asystenta AI Wize Chat będzie wymagało wyrażenia zgody na
+korzystanie z AI Wize AI Wize Chat w przyszłości, a także spowoduje wyczyszczenie
 historii czatu. Wyczyszczenie historii czatu oznacza usunięcie wszystkich
-poprzednich rozmów z AI Wize Leo. Tej czynności nie można cofnąć.</translation>
+poprzednich rozmów z AI Wize AI Wize Chat. Tej czynności nie można cofnąć.</translation>
 <translation id="8157373421434119674">Dane i historia czatu</translation>
 <translation id="614530507403667291">Domyślny model dla nowych rozmów</translation>
 <translation id="349846214503465941">Włącz listę odtwarzania</translation>

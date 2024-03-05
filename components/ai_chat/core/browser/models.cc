@@ -34,19 +34,17 @@ namespace ai_chat {
 // Breakdown:
 // - Reserverd for page content: 100k / 2 = 50k tokens
 // - Long conversation warning threshold: 100k * 0.80 = 80k tokens
+      // {"chat-leo-expanded", "mixtral-8x7b-instruct", "Mixtral", "Mistral AI",
+      //  mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT,
+      //  kFreemiumAccess, 8000, 9700},
+      // {"chat-claude-instant", "claude-instant-v1", "Claude Instant",
+      //  "Anthropic", mojom::ModelEngineType::CLAUDE_REMOTE,
+      //  mojom::ModelCategory::CHAT, kFreemiumAccess, 180000, 320000},
+      // {"chat-basic", "llama-2-13b-chat", "Llama 2 13b", "Meta",
 
 const std::vector<ai_chat::mojom::Model>& GetAllModels() {
-  static const auto kFreemiumAccess =
-      features::kFreemiumAvailable.Get() ? mojom::ModelAccess::BASIC_AND_PREMIUM
-                                         : mojom::ModelAccess::PREMIUM;
   static const base::NoDestructor<std::vector<mojom::Model>> kModels({
-      {"chat-leo-expanded", "mixtral-8x7b-instruct", "Mixtral", "Mistral AI",
-       mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT,
-       kFreemiumAccess, 8000, 9700},
-      {"chat-claude-instant", "claude-instant-v1", "Claude Instant",
-       "Anthropic", mojom::ModelEngineType::CLAUDE_REMOTE,
-       mojom::ModelCategory::CHAT, kFreemiumAccess, 180000, 320000},
-      {"chat-basic", "llama-2-13b-chat", "Llama 2 13b", "Meta",
+      {"chat-basic", "gpt-3.5-turbo", "AI Wize Chat", "AI Wize",
        mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT,
        mojom::ModelAccess::BASIC, 8000, 9700},
   });

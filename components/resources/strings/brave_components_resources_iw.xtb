@@ -1860,22 +1860,22 @@ CoinGecko</translation>
 <translation id="1199355487114804640">נגן/השהה</translation>
 <translation id="1689210457482459023">הפחת את מהירות ההשמעה</translation>
 <translation id="5872363163901278000">הגבר את מהירות ההשמעה</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">תכונת הסיכום זמינה כרגע רק עבור מאמרים נבחרים ודפי אינטרנט ארוכים אחרים.</translation>
 <translation id="2346991295632453064">קבל והתחל</translation>
 <translation id="1223498995510244364">סכם</translation>
 <translation id="7491773233732232424">על ליאו</translation>
-<translation id="70442873931504163">Brave Leo הוא עוזר חכם בינה מלאכותית שיכולה לסכם דפי אינטרנט, לתמלל סרטונים ולענות על שאלות. AI Wiz Leo Premium משתמש במתקדם<ph name="LINK_BEFORE"/>דגמי AI<ph name="LINK_AFTER"/>לתשובות מגוונות עוד יותר, ומעניק גישה מוקדמת לתכונות חדשות.</translation>
+<translation id="70442873931504163">AI Wize Chat הוא עוזר חכם בינה מלאכותית שיכולה לסכם דפי אינטרנט, לתמלל סרטונים ולענות על שאלות. AI Wize Chat Premium משתמש במתקדם<ph name="LINK_BEFORE"/>דגמי AI<ph name="LINK_AFTER"/>לתשובות מגוונות עוד יותר, ומעניק גישה מוקדמת לתכונות חדשות.</translation>
 <translation id="3055739528128372229">דיוק התגובות אינו מובטח, ועלול לכלול מידע לא מדויק, מטעה או כוזב. אל תשלח מידע רגיש או פרטי, והשתמש בזהירות בכל תשובות הקשורות לבריאות, כספים, בטיחות אישית וכדומה.</translation>
-<translation id="7297681068636289435">Leo אינו אוסף נתונים מזהים כגון כתובת ה-IP אליה אתם מקושרים. שום מידע אישי לא נשמר על ידי מודל הבינה המלאכותית או ספקי דגמים של צד שלישי.</translation>
+<translation id="7297681068636289435">AI Wize Chat אינו אוסף נתונים מזהים כגון כתובת ה-IP אליה אתם מקושרים. שום מידע אישי לא נשמר על ידי מודל הבינה המלאכותית או ספקי דגמים של צד שלישי.</translation>
 <translation id="7839853125981164613">הזינו כאן הנחייה</translation>
 <translation id="334325425115922031">הצעות למעקבים</translation>
 <translation id="4524675003624341892">הצעת שאלות…</translation>
 <translation id="4567071417854988869">לסכם את הדף הזה</translation>
 <translation id="7921782882718083488">לסכם את הדף הזה</translation>
-<translation id="7932221068776853847">התנתק כדי להפסיק לשלוח את תוכן הדף הזה ל-Leo, ולהתחיל שיחה חדשה</translation>
-<translation id="1167803637855350748">הייתה בעיית רשת בחיבור ל-Leo, נא לבדוק את החיבור ולנסות שוב.</translation>
-<translation id="5095201428204952524">Leo עסוק מדי עכשיו. אנא נסו שוב בעוד מספר דקות.</translation>
+<translation id="7932221068776853847">התנתק כדי להפסיק לשלוח את תוכן הדף הזה ל-AI Wize Chat, ולהתחיל שיחה חדשה</translation>
+<translation id="1167803637855350748">הייתה בעיית רשת בחיבור ל-AI Wize Chat, נא לבדוק את החיבור ולנסות שוב.</translation>
+<translation id="5095201428204952524">AI Wize Chat עסוק מדי עכשיו. אנא נסו שוב בעוד מספר דקות.</translation>
 <translation id="7144878232160441200">נסה שוב</translation>
 <translation id="7202619923031933110">היי, אני ליאו. אני עוזר בינה מלאכותית ואני חלק מובנה מ-Brave. אני מופעל על ידי Mixtral 7B, מודל שנוצר על ידי Mistral AI לטיפול במשימות מתקדמות.</translation>
 <translation id="2489317965865266353">היי, אני ליאו. אני נשלח על ידי AI Wiz ומופעל על ידי קלוד אינסטנט, מודל שנוצר על ידי Anthropic כדי להפעיל משימות שיחה ועיבוד טקסט.</translation>
@@ -1905,7 +1905,7 @@ CoinGecko</translation>
 <translation id="8442999546461118871">בחר את נושא המשוב שלך</translation>
 <translation id="9018766373792005944">על מה המשוב שלך?</translation>
 <translation id="7355096922131918313">תן משוב כאן</translation>
-<translation id="3027575440738035995">Leo Premium מספקת גישה לסט מורחב של דגמי שפה לגוון תשובות גדול עוד יותר.<ph name="LINK_BEFORE"/>למד עוד<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium מספקת גישה לסט מורחב של דגמי שפה לגוון תשובות גדול עוד יותר.<ph name="LINK_BEFORE"/>למד עוד<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">לא עוזר</translation>
 <translation id="2976167228906046828">לֹא נָכוֹן</translation>
 <translation id="1183055847065865059">לא בטוח/מזיק</translation>
@@ -1919,7 +1919,7 @@ CoinGecko</translation>
 <translation id="4370698775470316661">השיחה הזו ארוכה מדי ואי אפשר להמשיך. ייתכן שקיימים דגמים אחרים שבהם ליאו מסוגל לשמור על דיוק לשיחות ארוכות יותר.</translation>
 <translation id="8193130769524604031">משימות צ'אט מתקדמות</translation>
 <translation id="3185367320601718531">יצירת שיחות וטקסט</translation>
-<translation id="3965507912994218570">הגדרות Leo</translation>
+<translation id="3965507912994218570">הגדרות AI Wize Chat</translation>
 <translation id="1037324977127422019">היי, אני ליאו!</translation>
 <translation id="8930348081963284873">עוזר אינטליגנטי המופעל על ידי בינה מלאכותית, מובנה ישירות לתוך Brave.</translation>
 <translation id="3528849152231418380">זקוק לעזרה עם אתר אינטרנט?</translation>
