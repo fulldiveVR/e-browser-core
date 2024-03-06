@@ -122,8 +122,8 @@
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_BOOKMARKS" desc="The label for settings checkbox controlling whether or not bookmarks show up in autocomplete">
     Bookmarks
   </message>
-  <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_LEO" desc="The label for settings checkbox en/disabling autcomplete provider with Leo assistant">
-    Leo AI Assistant
+  <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_LEO" desc="The label for settings checkbox en/disabling autcomplete provider with AI Wize Chat assistant">
+    AI Wize Assistant
   </message>
   <message name="IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL" desc="The label for the settings switch controlling whether the AI Wize News button is shown in the toolbar">
     Show AI Wize News button
@@ -1432,30 +1432,30 @@
     Disable mute function in tab speaker icons
   </message>
 
-  <!-- Settings / Leo Assistant -->
-  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'Leo Assistant' section of AI Wize Settings">
-    Leo
+  <!-- Settings / AI Wize Chat Assistant -->
+  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'AI Wize Chat Assistant' section of AI Wize Settings">
+    AI Wize Chat
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_SHOW_ICON_ON_TOOLBAR_LABEL" desc="The text for settings option">
-    Show Leo icon in the sidebar
+    Show AI Wize Chat icon in the sidebar
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_SHOW_SUGGESTED_PROMPTS_LABEL" desc="The text for settings option">
     Show suggested prompts in the conversation
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_LABEL" desc="The text for settings option">
-    Clear Leo data
+    Clear AI Wize Chat data
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_CONFIRMATION_LABEL" desc="The confirmation window message for reset option">
-    Resetting the Leo assistant will require you to opt-in to use AI Wize
-Leo in the future and will also clear your chat history. Clearing your
+    Resetting the AI Wize Chat assistant will require you to opt-in to use AI Wize
+AI Wize Chat in the future and will also clear your chat history. Clearing your
 chat history will delete all your previous conversations with AI Wize
-Leo. This action cannot be undone.
+AI Wize Chat. This action cannot be undone.
   </message>
-  <message name="IDS_SETTINGS_LEO_ASSISTANT_AUTOCOMPLETE_LINK" desc="A label for a link to settings page to adjust autocomplete suggestion based on Leo">
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_AUTOCOMPLETE_LINK" desc="A label for a link to settings page to adjust autocomplete suggestion based on AI Wize Chat">
     Adjust autocomplete suggestions
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_CLEAR_HISTORY_DATA_LABEL" desc="The text for settings option">
-    Leo
+    AI Wize Chat
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_CLEAR_HISTORY_DATA_SUBLABEL" desc="The text for settings option">
     Data and chat history

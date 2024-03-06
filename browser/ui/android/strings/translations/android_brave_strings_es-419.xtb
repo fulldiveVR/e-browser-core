@@ -1204,14 +1204,14 @@ Si no acepta esta solicitud, la VPN no se volverá a conectar y su conexión a I
 <translation id="5494920125229734069">Seleccionar todo</translation>
 <translation id="5972844218283131174">Anular toda la selección</translation>
 <translation id="6322030314101903925">No hay activos disponibles</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">Iniciar sesión con Billetera de Brave</translation>
 <translation id="3696514931437952995">Estás iniciando sesión en <ph name="ORIGIN"/>. Billetera de AI Wiz compartirá la dirección de tu cartera con <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Ver detalles</translation>
 <translation id="6759710362319508545">Recursos</translation>
 <translation id="2471230424465522689">No antes de</translation>
 <translation id="4841860051609590575">ID de solicitud</translation>
-<translation id="1179407411385015942">Leo es un asistente de IA integrado en el navegador</translation>
-<translation id="1250335737108905610">Restablecer y borrar los datos de Leo</translation>
-<translation id="6165101586663336913">Si restableces el asistente de IA (Leo), será necesario que habilites Leo para poder usarlo en el futuro. El historial de chats se borrará al llevar a cabo dicha acción. Esto significa que se eliminarán todas las conversaciones que hayas mantenido con Leo de forma irreversible.</translation>
+<translation id="1179407411385015942">AI Wize Chat es un asistente de IA integrado en el navegador</translation>
+<translation id="1250335737108905610">Restablecer y borrar los datos de AI Wize Chat</translation>
+<translation id="6165101586663336913">Si restableces el asistente de IA (AI Wize Chat), será necesario que habilites AI Wize Chat para poder usarlo en el futuro. El historial de chats se borrará al llevar a cabo dicha acción. Esto significa que se eliminarán todas las conversaciones que hayas mantenido con AI Wize Chat de forma irreversible.</translation>
 </translationbundle>

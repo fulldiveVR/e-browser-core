@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Lejátszás/leállítás</translation>
 <translation id="1689210457482459023">Visszajátszási sebesség csökkentése</translation>
 <translation id="5872363163901278000">Visszajátszási sebesség növelése</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Az összefoglaló funkció jelenleg csak bizonyos cikkeknél és egyéb hosszú formátumú webhelyeknél elérhető.</translation>
 <translation id="2346991295632453064">Elfogadás és kezdés</translation>
 <translation id="1223498995510244364">Összefoglalás</translation>
 <translation id="7491773233732232424">Tudnivalók a Leóról</translation>
-<translation id="70442873931504163">A AI Wiz Leo egy intelligens MI-segéd, amely képes összefoglalni a weboldalak tartalmát, átiratot készíteni a videókról, és kérdésekre válaszolni. A AI Wiz Leo Premium fejlett <ph name="LINK_BEFORE"/>MI-modellek<ph name="LINK_AFTER"/> alkalmazásával képes még részletesebb válaszokat nyújtani, és korai hozzáférést is biztosít az új funkciókhoz.</translation>
+<translation id="70442873931504163">A AI Wize Chat egy intelligens MI-segéd, amely képes összefoglalni a weboldalak tartalmát, átiratot készíteni a videókról, és kérdésekre válaszolni. A AI Wize Chat Premium fejlett <ph name="LINK_BEFORE"/>MI-modellek<ph name="LINK_AFTER"/> alkalmazásával képes még részletesebb válaszokat nyújtani, és korai hozzáférést is biztosít az új funkciókhoz.</translation>
 <translation id="3055739528128372229">A válaszok pontossága nem garantált, és tartalmazhatnak pontatlan, félrevezető vagy hamis információkat. A felületen ne küldjön el érzékeny vagy magánjellegű adatokat, és kezelje fokozott körültekintéssel az egészségüggyel, pénzügyekkel, személyi biztonsággal és hasonló témakörökkel kapcsolatos válaszokat.</translation>
-<translation id="7297681068636289435">A Leo nem gyűjt Önhöz társítható azonosítókat, például IP-címet. Az MI-modell, illetve a harmadik fél modellszolgáltatók nem tárolnak személyes adatokat.</translation>
+<translation id="7297681068636289435">A AI Wize Chat nem gyűjt Önhöz társítható azonosítókat, például IP-címet. Az MI-modell, illetve a harmadik fél modellszolgáltatók nem tárolnak személyes adatokat.</translation>
 <translation id="7839853125981164613">Itt tehet fel kérdéseket</translation>
 <translation id="334325425115922031">Javasolt további kérdések</translation>
 <translation id="4524675003624341892">Kérdések javasolása...</translation>
 <translation id="4567071417854988869">Videó összefoglalása</translation>
 <translation id="7921782882718083488">Lap összefoglalása</translation>
-<translation id="7932221068776853847">Ha szeretné leállítani a tartalmak küldését a Leo számára, és új beszélgetést indítani, bontsa a kapcsolatot.</translation>
-<translation id="1167803637855350748">Hálózati probléma lépett fel a Leo rendszeréhez való kapcsolódás során. Ellenőrizze a hálózati kapcsolatot, és próbálja újra.</translation>
-<translation id="5095201428204952524">A Leo jelenleg túlságosan foglalt. Néhány perc múlva próbálja újra.</translation>
+<translation id="7932221068776853847">Ha szeretné leállítani a tartalmak küldését a AI Wize Chat számára, és új beszélgetést indítani, bontsa a kapcsolatot.</translation>
+<translation id="1167803637855350748">Hálózati probléma lépett fel a AI Wize Chat rendszeréhez való kapcsolódás során. Ellenőrizze a hálózati kapcsolatot, és próbálja újra.</translation>
+<translation id="5095201428204952524">A AI Wize Chat jelenleg túlságosan foglalt. Néhány perc múlva próbálja újra.</translation>
 <translation id="7144878232160441200">Újra</translation>
-<translation id="7202619923031933110">Üdv, Leo vagyok, egy teljes körűen a AI Wiz által üzemeltetett MI-segéd. A működésem alapja a Mixtral 7B modell, amelyet a Mistral AI fejlesztett ki a bonyolultabb feladatok elvégzésére.</translation>
-<translation id="2489317965865266353">Üdv, Leo vagyok. A AI Wiz proxyval üzemeltet, a működésem pedig a Claude Instant modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetési és szövegfeldolgozási feladatok elvégzésére.</translation>
+<translation id="7202619923031933110">Üdv, AI Wize Chat vagyok, egy teljes körűen a AI Wiz által üzemeltetett MI-segéd. A működésem alapja a Mixtral 7B modell, amelyet a Mistral AI fejlesztett ki a bonyolultabb feladatok elvégzésére.</translation>
+<translation id="2489317965865266353">Üdv, AI Wize Chat vagyok. A AI Wiz proxyval üzemeltet, a működésem pedig a Claude Instant modellen alapul, amelyet az Anthropic fejlesztett ki beszélgetési és szövegfeldolgozási feladatok elvégzésére.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/>, a(z) <ph name="COMPANY_NAME"/> által</translation>
 <translation id="6187065185557150870">Csevegés</translation>
 <translation id="2961040541145689181">Új csevegés</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Hozzáférés piacvezető nagyméretű nyelvmodellekhez</translation>
 <translation id="8021579987620496265">Magasabb gyakorisági korlátok</translation>
 <translation id="8556044455877152001"><ph name="PRICE_VALUE"/> USD/hó</translation>
-<translation id="377376641316998425">Oldja fel a Leo képességeinek teljes körét</translation>
+<translation id="377376641316998425">Oldja fel a AI Wize Chat képességeinek teljes körét</translation>
 <translation id="8363148882096737034">Anthropic Claude, hamarosan továbbiakkal együtt</translation>
 <translation id="886527905046308697">Elsőbbségi hozzáférés és magasabb válaszkorlátok</translation>
 <translation id="1068954060985569277">A Brave-fiókja bejelentkezési munkamenete lejárt. A frissítéshez látogasson el a fiókja oldalára, majd térjen vissza ide a prémium funkciók használatához.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Válassza ki a visszajelzési témát</translation>
 <translation id="9018766373792005944">Mihez kapcsolódik a visszajelzése?</translation>
 <translation id="7355096922131918313">Itt adja meg a visszajelzést</translation>
-<translation id="3027575440738035995">A Leo Premium a nyelvmodellek szélesebb köréhez nyújt hozzáférést a még részletesebb válaszok érdekében. <ph name="LINK_BEFORE"/>További információ<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">A AI Wize Chat Premium a nyelvmodellek szélesebb köréhez nyújt hozzáférést a még részletesebb válaszok érdekében. <ph name="LINK_BEFORE"/>További információ<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nem hasznos</translation>
 <translation id="2976167228906046828">Helytelen</translation>
 <translation id="1183055847065865059">Nem biztonságos/ártalmas</translation>
 <translation id="7138678301420049075">Egyéb</translation>
 <translation id="2313959174679245365">Az értékelését nem sikerült elküldeni, ellenőrizze az internetkapcsolatot, és próbálja újra</translation>
 <translation id="98413980871833152">A visszajelzését nem sikerült elküldeni, ellenőrizze az internetkapcsolatot, és próbálja újra</translation>
-<translation id="8742658901413346500">Ez a beszélgetés hosszúra nyúlt, és előfordulhat, hogy a Leo nemsokára elfelejt információkat. A hosszabb beszélgetések folytatásához prémium modellre válthat, vagy pedig törölheti a csevegést az alaphelyzetbe állításhoz.</translation>
+<translation id="8742658901413346500">Ez a beszélgetés hosszúra nyúlt, és előfordulhat, hogy a AI Wize Chat nemsokára elfelejt információkat. A hosszabb beszélgetések folytatásához prémium modellre válthat, vagy pedig törölheti a csevegést az alaphelyzetbe állításhoz.</translation>
 <translation id="7550152963854770123">Csevegés törlése</translation>
 <translation id="7494736170250048402">Üzenet küldése a Leónak</translation>
-<translation id="4110772752544684964">Az oldal túl hosszú a Leo számára. A beszélgetésből kimaradhatnak egyes kontextuselemek.</translation>
-<translation id="4370698775470316661">Ez a beszélgetés túl hosszúra nyúlt, és nem folytatható. Más modellek alkalmazásával a Leo képes lehet megőrizni a pontosságát a hosszabb beszélgetések esetében.</translation>
+<translation id="4110772752544684964">Az oldal túl hosszú a AI Wize Chat számára. A beszélgetésből kimaradhatnak egyes kontextuselemek.</translation>
+<translation id="4370698775470316661">Ez a beszélgetés túl hosszúra nyúlt, és nem folytatható. Más modellek alkalmazásával a AI Wize Chat képes lehet megőrizni a pontosságát a hosszabb beszélgetések esetében.</translation>
 <translation id="8193130769524604031">Speciális csevegési feladatok</translation>
 <translation id="3185367320601718531">Beszélgetés és szöveg generálása</translation>
-<translation id="3965507912994218570">Leo-beállítások</translation>
-<translation id="1037324977127422019">Üdv, Leo vagyok!</translation>
+<translation id="3965507912994218570">AI Wize Chat-beállítások</translation>
+<translation id="1037324977127422019">Üdv, AI Wize Chat vagyok!</translation>
 <translation id="8930348081963284873">Egy MI-alapú intelligens asszisztens, amely közvetlenül a Brave-ből elérhető.</translation>
 <translation id="3528849152231418380">Segítségre van szüksége egy weboldallal?</translation>
 <translation id="1558192229187362674">Segíthetek a cikkek tartalmának összefoglalásában, egy adott oldal tartalmának bővebb kifejtésében és még több dologban.</translation>
@@ -2056,5 +2056,5 @@ Hozzuk létre a kapcsolatot!
 a Tab, majd az Enter billentyű megnyomásával a megnyitott lapra válthat</translation>
 <translation id="1538335063514960365">Megnyitás itt gomb, az Enter megnyomásával az aktuális lapon nyithatja meg ezt az URL-t,
 a meglévő lapra való váltás helyett</translation>
-<translation id="451189393813405346">A Leo megkérdezése</translation>
+<translation id="451189393813405346">A AI Wize Chat megkérdezése</translation>
 </translationbundle>

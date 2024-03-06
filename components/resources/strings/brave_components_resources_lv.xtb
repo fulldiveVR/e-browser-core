@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Atskaņot/Pauzēt</translation>
 <translation id="1689210457482459023">Samazināt atskaņošanas ātrumu</translation>
 <translation id="5872363163901278000">Palielināt atskaņošanas ātrumu</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Kopsavilcēja funkcija pašreiz ir pieejama tikai rakstu atlasīšanai un citām garas formas tīmekļa lapām.</translation>
 <translation id="2346991295632453064">Piekrist un sākt</translation>
 <translation id="1223498995510244364">Kopsavilkt</translation>
-<translation id="7491773233732232424">Par Leo</translation>
-<translation id="70442873931504163">Brave Leo ir mākslīgā intelekta viedais asistents, kas var apkopot tīmekļa lapas, transkribēt video un atbildēt uz jautājumiem. AI Wiz Leo Premium izmanto modernus <ph name="LINK_BEFORE"/>mākslīgā intelekta modeļus<ph name="LINK_AFTER"/> niansētākām atbildēm un nodrošina agrīnu piekļuvi jaunām funkcijām.</translation>
+<translation id="7491773233732232424">Par AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat ir mākslīgā intelekta viedais asistents, kas var apkopot tīmekļa lapas, transkribēt video un atbildēt uz jautājumiem. AI Wize Chat Premium izmanto modernus <ph name="LINK_BEFORE"/>mākslīgā intelekta modeļus<ph name="LINK_AFTER"/> niansētākām atbildēm un nodrošina agrīnu piekļuvi jaunām funkcijām.</translation>
 <translation id="3055739528128372229">Atbilžu precizitāte nav garantēta, un tajās var būt iekļauta neprecīza, maldinoša vai nepatiesa informācija. Neiesniedziet sensitīvu vai privātu informāciju, kā arī piesardzīgi atbildiet uz jautājumiem, kas saistīti ar veselību, finansēm, personīgo drošību vai tamlīdzīgiem jautājumiem.</translation>
-<translation id="7297681068636289435">Leo neuzkrāj identifikatorus, piemēram, jūsu IP adresi, ko var saistīt ar jums. Mākslīgā intelekta modelis vai 3rd puses modeļu nodrošinātāji nesaglabā nekādus personas datus.</translation>
+<translation id="7297681068636289435">AI Wize Chat neuzkrāj identifikatorus, piemēram, jūsu IP adresi, ko var saistīt ar jums. Mākslīgā intelekta modelis vai 3rd puses modeļu nodrošinātāji nesaglabā nekādus personas datus.</translation>
 <translation id="7839853125981164613">Ievadiet uzvedni šeit</translation>
 <translation id="334325425115922031">Ieteicamie turpmākie pasākumi</translation>
 <translation id="4524675003624341892">Ieteikt jautājumus...</translation>
 <translation id="4567071417854988869">Apkopot informāciju šajā video</translation>
 <translation id="7921782882718083488">Apkopot informāciju šajā lapā</translation>
-<translation id="7932221068776853847">Atvienoties, lai pārtrauktu sūtīt šīs lapas saturu Leo, un sākt jaunu sarunu</translation>
-<translation id="1167803637855350748">Pievienojoties Leo, radās tīkla problēma, pārbaudiet savu savienojumu un mēģiniet vēlreiz.</translation>
-<translation id="5095201428204952524">Leo šobrīd ir pārāk noslogots. Lūdzu, mēģiniet vēlreiz pēc dažām minūtēm.</translation>
+<translation id="7932221068776853847">Atvienoties, lai pārtrauktu sūtīt šīs lapas saturu AI Wize Chat, un sākt jaunu sarunu</translation>
+<translation id="1167803637855350748">Pievienojoties AI Wize Chat, radās tīkla problēma, pārbaudiet savu savienojumu un mēģiniet vēlreiz.</translation>
+<translation id="5095201428204952524">AI Wize Chat šobrīd ir pārāk noslogots. Lūdzu, mēģiniet vēlreiz pēc dažām minūtēm.</translation>
 <translation id="7144878232160441200">Mēģināt vēlreiz</translation>
-<translation id="7202619923031933110">Sveiki! Mani sauc Leo. Es esmu pilnībā mitināts AI Wiz mākslīgā intelekta asistents. Mani darbina Mixtral 7B, kas ir Mistral AI radītais modelis, kas spēj risināt sarežģītus uzdevumus.</translation>
-<translation id="2489317965865266353">Sveiki! Mani sauc Leo. Manu darbību nodrošina AI Wiz un Claude Instant, kas ir Antropic radītais modelis, lai izpildītu sarunu un teksta apstrādes uzdevumus.</translation>
+<translation id="7202619923031933110">Sveiki! Mani sauc AI Wize Chat. Es esmu pilnībā mitināts AI Wiz mākslīgā intelekta asistents. Mani darbina Mixtral 7B, kas ir Mistral AI radītais modelis, kas spēj risināt sarežģītus uzdevumus.</translation>
+<translation id="2489317965865266353">Sveiki! Mani sauc AI Wize Chat. Manu darbību nodrošina AI Wiz un Claude Instant, kas ir Antropic radītais modelis, lai izpildītu sarunu un teksta apstrādes uzdevumus.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> no <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Tērzēt</translation>
 <translation id="2961040541145689181">Jauna tērzēšana</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Piekļuve nozarē vadošajiem LLM</translation>
 <translation id="8021579987620496265">Augstāki biežuma limiti</translation>
 <translation id="8556044455877152001"><ph name="PRICE_VALUE"/> USD $ /mēnesī</translation>
-<translation id="377376641316998425">Atbloķēt pilnu Leo potenciālu</translation>
+<translation id="377376641316998425">Atbloķēt pilnu AI Wize Chat potenciālu</translation>
 <translation id="8363148882096737034">Anthropic Claude + un vairāk jau drīzumā</translation>
 <translation id="886527905046308697">Prioritāra piekļuve un paaugstināti atbilžu limiti</translation>
 <translation id="1068954060985569277">Jūsu AI Wiz konta sesijas derīgums ir beidzies. Lūdzu, apmeklējiet sava konta  lapu, lai atsvaidzinātu, tad atgriezieties, lai izmantotu premium funkcijas.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Atlasiet savu atsauksmu tematu</translation>
 <translation id="9018766373792005944">Par ko ir jūsu atsauksme?</translation>
 <translation id="7355096922131918313">Sniegt atsauksmi šeit</translation>
-<translation id="3027575440738035995">Leo Premium sniedz piekļuvi vairāk valodu modeļiem vēl niansētākām atbildēm. <ph name="LINK_BEFORE"/>Uzzināt vairāk<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium sniedz piekļuvi vairāk valodu modeļiem vēl niansētākām atbildēm. <ph name="LINK_BEFORE"/>Uzzināt vairāk<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nebija noderīgi</translation>
 <translation id="2976167228906046828">Nepareizi</translation>
 <translation id="1183055847065865059">Nedroši/kaitīgi</translation>
 <translation id="7138678301420049075">Cits</translation>
 <translation id="2313959174679245365">Jūsu reitingu nevarēja iesniegt. Pārbaudiet tīkla savienojumu un mēģiniet vēlreiz</translation>
 <translation id="98413980871833152">Jūsu atsauksmi nevarēja iesniegt. Pārbaudiet tīkla savienojumu un mēģiniet vēlreiz</translation>
-<translation id="8742658901413346500">Saruna ir gara, un Leo, iespējams, drīz aizmirsīs dažādas lietas. Jūs varat piedalīties garākās sarunās, pārslēdzoties uz premium modeli, vai jūs varat notīrīt tērzēšanu, lai to atiestatītu.</translation>
+<translation id="8742658901413346500">Saruna ir gara, un AI Wize Chat, iespējams, drīz aizmirsīs dažādas lietas. Jūs varat piedalīties garākās sarunās, pārslēdzoties uz premium modeli, vai jūs varat notīrīt tērzēšanu, lai to atiestatītu.</translation>
 <translation id="7550152963854770123">Notīrīt tērzēšanu</translation>
-<translation id="7494736170250048402">Nosūtīt ziņojumu Leo</translation>
-<translation id="4110772752544684964">Šī lapa ir pārāk gara Leo. Sarunā, iespējams, trūkst konteksta.</translation>
-<translation id="4370698775470316661">Šī saruna ir pārāk gara, un tā nevar turpināties. Iespējams, ir citi modeļi, kuros Leo spēj nodrošināt precizitāti garākās sarunās.</translation>
+<translation id="7494736170250048402">Nosūtīt ziņojumu AI Wize Chat</translation>
+<translation id="4110772752544684964">Šī lapa ir pārāk gara AI Wize Chat. Sarunā, iespējams, trūkst konteksta.</translation>
+<translation id="4370698775470316661">Šī saruna ir pārāk gara, un tā nevar turpināties. Iespējams, ir citi modeļi, kuros AI Wize Chat spēj nodrošināt precizitāti garākās sarunās.</translation>
 <translation id="8193130769524604031">Papildu tērzēšanas uzdevumi</translation>
 <translation id="3185367320601718531">Sarunas un teksta ģenerēšana</translation>
-<translation id="3965507912994218570">Leo iestatījumi</translation>
-<translation id="1037324977127422019">Sveiki! Mani sauc Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat iestatījumi</translation>
+<translation id="1037324977127422019">Sveiki! Mani sauc AI Wize Chat!</translation>
 <translation id="8930348081963284873">Es esmu pilnībā mitināts AI Wiz mākslīgā intelekta asistents.</translation>
 <translation id="3528849152231418380">Nepieciešama palīdzība tīmekļa vietnē?</translation>
 <translation id="1558192229187362674">Es jums varu palīdzēt apkopot rakstus, izvērst vietnes saturu un vēl daudz vairāk.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Vaicājiet man jebko! Mēs varat parunāt par jebkuru tematu. Es nepārtraukti mācos un uzlaboju prasmes, lai sniegtu labākas atbildes.</translation>
 <translation id="989329677470075843">Privātuma līgums</translation>
 <translation id="1173570303649278801">Izmantot lapas kontekstu atbildes sniegšanai</translation>
-<translation id="8599503173207256429">Ieslēdziet, lai vaicātu par šo lapu. Tās saturs tiks nosūtīts AI Wiz Leo kopā ar jūsu ziņojumiem.</translation>
+<translation id="8599503173207256429">Ieslēdziet, lai vaicātu par šo lapu. Tās saturs tiks nosūtīts AI Wize Chat kopā ar jūsu ziņojumiem.</translation>
 <translation id="6303294677342628402">Aizsargi</translation>
 <translation id="8458987127502506209">Iespējot AI Wiz aizsargus</translation>
 <translation id="7509914170164691086">Šo funkciju aizsargi ir <ph name="LINK_BEFORE"/>AKTIVIZĒTI<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Savienosim jūs!
     nospiediet Tab taustiņu un tad Enter taustiņu, lai pārietu uz atvērtu cilni</translation>
 <translation id="1538335063514960365">Poga Atvērt šeit, nospiediet Enter taustinu, lai atvērtu šo vietrādi URL pašreizējā cilnē, nevis pārslēgtos uz 
 esošo cilni.</translation>
-<translation id="451189393813405346">Jautāt Leo</translation>
+<translation id="451189393813405346">Jautāt AI Wize Chat</translation>
 </translationbundle>

@@ -334,7 +334,7 @@ Saate muuta ka hiljem veebilehel <ph name="SETTINGS_EXTENIONS_LINK"/>.</translat
 <translation id="2858138569776157458">Popid saidid</translation>
 <translation id="7859704718976024901">Lehitsemisajalugu</translation>
 <translation id="8820817407110198400">Järjehoidjad</translation>
-<translation id="7310387888625228830">Tehisintellektist assistent Leo</translation>
+<translation id="7310387888625228830">Tehisintellektist assistent AI Wize Chat</translation>
 <translation id="5222974844674487962">Kuva AI Wize’i uudiste nupp</translation>
 <translation id="383007806262310953">Kuva järjehoidjariba</translation>
 <translation id="4054323497808446566">Järjehoidjariba on nähtav kõigil lehtedel</translation>
@@ -718,13 +718,13 @@ Saate muuta ka hiljem veebilehel <ph name="SETTINGS_EXTENIONS_LINK"/>.</translat
 <translation id="3095201688102519917">Hoiata mind enne mitme vahelehega akna sulgemist</translation>
 <translation id="7120553802660696133">Viimase vahelehe sulgemisel sule aken</translation>
 <translation id="7984721311211272523">Keela vahelehe kõlariikoonide vaigistusfunktsioon</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Kuva külgribal Leo ikooni</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Kuva külgribal AI Wize Chat ikooni</translation>
 <translation id="8172263161008556851">Kuva vestluses soovitatud viibad</translation>
-<translation id="1014480593522400586">Eemalda Leo andmed</translation>
-<translation id="8681157601856387010">Kui soovite Leo lähtestada, peate nõustuma AI Wize’i
-Leo kasutamisega tulevikus ja selle käigus tühjendatakse ka teie vestluseajalugu. See tähendab,
-et kõik Leoga peetud eelmised vestlused kustutatakse.
+<translation id="1014480593522400586">Eemalda AI Wize Chat andmed</translation>
+<translation id="8681157601856387010">Kui soovite AI Wize Chat lähtestada, peate nõustuma AI Wize’i
+AI Wize Chat kasutamisega tulevikus ja selle käigus tühjendatakse ka teie vestluseajalugu. See tähendab,
+et kõik AI Wize Chatga peetud eelmised vestlused kustutatakse.
 Seda tegevust ei saa tagasi võtta.</translation>
 <translation id="8157373421434119674">Andmed ja vestluseajalugu</translation>
 <translation id="614530507403667291">Uute vestluste vaikemudel</translation>

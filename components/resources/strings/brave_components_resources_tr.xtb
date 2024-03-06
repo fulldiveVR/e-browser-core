@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Oynat/Duraklat</translation>
 <translation id="1689210457482459023">Oynatma hızını azalt</translation>
 <translation id="5872363163901278000">Oynatma hızını artır</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Özetleyici özelliği şu an yalnızca seçili makalelerde ve diğer uzun web sayfalarında kullanılır.</translation>
 <translation id="2346991295632453064">Kabul et ve başla</translation>
 <translation id="1223498995510244364">Özetle</translation>
-<translation id="7491773233732232424">Leo Hakkında</translation>
-<translation id="70442873931504163">Brave Leo; web sayfalarını özetleyebilen, videoları yazıya geçirebilen ve sorulara yanıt verebilen bir YZ akıllı asistandır. AI Wiz Leo Premium gelişmiş <ph name="LINK_BEFORE"/>YZ modelleri<ph name="LINK_AFTER"/> kullanarak çok daha incelikli yanıtlar verebilir ve yeni özelliklere erken erişim sağlar.</translation>
+<translation id="7491773233732232424">AI Wize Chat Hakkında</translation>
+<translation id="70442873931504163">AI Wize Chat; web sayfalarını özetleyebilen, videoları yazıya geçirebilen ve sorulara yanıt verebilen bir YZ akıllı asistandır. AI Wize Chat Premium gelişmiş <ph name="LINK_BEFORE"/>YZ modelleri<ph name="LINK_AFTER"/> kullanarak çok daha incelikli yanıtlar verebilir ve yeni özelliklere erken erişim sağlar.</translation>
 <translation id="3055739528128372229">Yanıtların doğruluğu garanti edilmez ve hatalı, yanlış yönlendiren veya yanlış bilgiler içerebilir. Hassas ve gizli bilgiler göndermeyin ve sağlık, finans, kişisel güvenlik veya benzeri cevapları kullanırken dikkatli olun.</translation>
-<translation id="7297681068636289435">Leo, IP Adresi gibi sizinle ilişkilendirilebilecek hiçbir tanımlayıcı bilgiyi toplamaz. Hiçbir kişisel bilgi YZ modeli veya hiçbir 3. taraf model sağlayıcıları tarafından tutulmaz.</translation>
+<translation id="7297681068636289435">AI Wize Chat, IP Adresi gibi sizinle ilişkilendirilebilecek hiçbir tanımlayıcı bilgiyi toplamaz. Hiçbir kişisel bilgi YZ modeli veya hiçbir 3. taraf model sağlayıcıları tarafından tutulmaz.</translation>
 <translation id="7839853125981164613">Buraya bir istem girin</translation>
 <translation id="334325425115922031">Önerilen ek sorular</translation>
 <translation id="4524675003624341892">Soru önerin...</translation>
 <translation id="4567071417854988869">Bu videoyu özetle</translation>
 <translation id="7921782882718083488">Bu sayfayı özetle</translation>
-<translation id="7932221068776853847">Bu sayfanın içeriğini Leo'ya göndermeyi durdurmak için bağlantıyı kesin ve yeni bir konuşma başlatın</translation>
-<translation id="1167803637855350748">Leo'ya bağlanırken bir ağ sorunu yaşandı, bağlantınızı kontrol edip tekrar deneyin.</translation>
-<translation id="5095201428204952524">Leo şu anda çok meşgul. Lütfen birkaç dakika içinde tekrar deneyin.</translation>
+<translation id="7932221068776853847">Bu sayfanın içeriğini AI Wize Chat'ya göndermeyi durdurmak için bağlantıyı kesin ve yeni bir konuşma başlatın</translation>
+<translation id="1167803637855350748">AI Wize Chat'ya bağlanırken bir ağ sorunu yaşandı, bağlantınızı kontrol edip tekrar deneyin.</translation>
+<translation id="5095201428204952524">AI Wize Chat şu anda çok meşgul. Lütfen birkaç dakika içinde tekrar deneyin.</translation>
 <translation id="7144878232160441200">Tekrar Dene</translation>
-<translation id="7202619923031933110">Merhaba, ben Leo. Ben AI Wiz tarafından geliştirilen, tamamen ana makinede bulunan bir YZ asistanıyım. Mistral AI tarafından gelişmiş görevleri yerine getirmek üzere tasarlanan Mixtral 7B modeli ile destekleniyorum.</translation>
-<translation id="2489317965865266353">Merhaba, ben Leo. AI Wiz tarafından vekaleten kullanılıyorum ve Anthropic tarafından diyalog ve metin işleme görevlerini yerine getirmesi için tasarlanan Claude Instant ile destekleniyorum.</translation>
+<translation id="7202619923031933110">Merhaba, ben AI Wize Chat. Ben AI Wiz tarafından geliştirilen, tamamen ana makinede bulunan bir YZ asistanıyım. Mistral AI tarafından gelişmiş görevleri yerine getirmek üzere tasarlanan Mixtral 7B modeli ile destekleniyorum.</translation>
+<translation id="2489317965865266353">Merhaba, ben AI Wize Chat. AI Wiz tarafından vekaleten kullanılıyorum ve Anthropic tarafından diyalog ve metin işleme görevlerini yerine getirmesi için tasarlanan Claude Instant ile destekleniyorum.</translation>
 <translation id="6206029817087805290"><ph name="COMPANY_NAME"/> tarafından geliştirilen <ph name="MODEL_NAME"/></translation>
 <translation id="6187065185557150870">Sohbet</translation>
 <translation id="2961040541145689181">Yeni sohbet</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Endüstriye yön veren LLM'lere erişin</translation>
 <translation id="8021579987620496265">Daha yüksek hız sınırları</translation>
 <translation id="8556044455877152001"><ph name="PRICE_VALUE"/> $/ay</translation>
-<translation id="377376641316998425">Leo'nun tüm potansiyelinden faydalanın</translation>
+<translation id="377376641316998425">AI Wize Chat'nun tüm potansiyelinden faydalanın</translation>
 <translation id="8363148882096737034">Anthroic Claude + daha fazlası çok yakında</translation>
 <translation id="886527905046308697">Öncelikli erişim ve artan yanıt sınırları</translation>
 <translation id="1068954060985569277">Brave hesap oturumunuzun süresi doldu. Premium özellikleri kullanmak için lütfen hesap sayfasına giderek yenileyin ve ardından geri dönün.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Geri bildirim konunuzu seçin</translation>
 <translation id="9018766373792005944">Geri bildiriminiz neyle alakalı?</translation>
 <translation id="7355096922131918313">Geri bildirimi buraya girin</translation>
-<translation id="3027575440738035995">Leo Premium, daha yüksek yanıt nüansı için genişletilmiş dil modellerine erişim sunmaktadır. <ph name="LINK_BEFORE"/>Daha fazla bilgi<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium, daha yüksek yanıt nüansı için genişletilmiş dil modellerine erişim sunmaktadır. <ph name="LINK_BEFORE"/>Daha fazla bilgi<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Yardımcı olmadı</translation>
 <translation id="2976167228906046828">Hatalı</translation>
 <translation id="1183055847065865059">Güvenli değil/zararlı</translation>
 <translation id="7138678301420049075">Diğer</translation>
 <translation id="2313959174679245365">Değerlendirmeniz gönderilemedi, lütfen ağ bağlantınızı kontrol edin ve tekrar deneyin</translation>
 <translation id="98413980871833152">Geri bildiriminiz gönderilemedi, lütfen ağ bağlantınızı kontrol edin ve tekrar deneyin</translation>
-<translation id="8742658901413346500">Bu konuşma uzun, Leo yakında bir şeyleri unutmaya başlayabilir. Premium modele geçerek daha uzun konuşmalar yapabilir veya sıfırlamak için sohbeti temizleyebilirsiniz.</translation>
+<translation id="8742658901413346500">Bu konuşma uzun, AI Wize Chat yakında bir şeyleri unutmaya başlayabilir. Premium modele geçerek daha uzun konuşmalar yapabilir veya sıfırlamak için sohbeti temizleyebilirsiniz.</translation>
 <translation id="7550152963854770123">Sohbeti Temizle</translation>
-<translation id="7494736170250048402">Leo'ya mesaj gönder</translation>
-<translation id="4110772752544684964">Bu sayfa Leo için çok uzun. Konuşmada, bağlamın bir kısmı eksik olabilir.</translation>
-<translation id="4370698775470316661">Bu konuşma çok uzun ve devam edemiyor. Leo'nun daha uzun konuşmalarda tutarlılığı sürdürebileceği başka modeller mevcut olabilir.</translation>
+<translation id="7494736170250048402">AI Wize Chat'ya mesaj gönder</translation>
+<translation id="4110772752544684964">Bu sayfa AI Wize Chat için çok uzun. Konuşmada, bağlamın bir kısmı eksik olabilir.</translation>
+<translation id="4370698775470316661">Bu konuşma çok uzun ve devam edemiyor. AI Wize Chat'nun daha uzun konuşmalarda tutarlılığı sürdürebileceği başka modeller mevcut olabilir.</translation>
 <translation id="8193130769524604031">Gelişmiş sohbet görevleri</translation>
 <translation id="3185367320601718531">Konuşma ve metin oluşturma</translation>
-<translation id="3965507912994218570">Leo ayarları</translation>
-<translation id="1037324977127422019">Merhaba, ben Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat ayarları</translation>
+<translation id="1037324977127422019">Merhaba, ben AI Wize Chat!</translation>
 <translation id="8930348081963284873">Doğrudan Brave'in içine inşa edilen, YZ destekli akıllı bir asistanım.</translation>
 <translation id="3528849152231418380">Bir web sitesiyle ilgili yardıma mı ihtiyacınız var?</translation>
 <translation id="1558192229187362674">Makaleleri özetlemenize, bir sitenin içeriklerini ayrıntılarıyla açıklamanıza ve çok daha fazlasını yapmanıza yardım edebilirim.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Bana istediğinizi sorun! İstediğiniz konu hakkında konuşabiliriz. Size daha iyi yanıt verebilmek için sürekli öğreniyor ve kendimi geliştiriyorum.</translation>
 <translation id="989329677470075843">Gizlilik sözleşmesi</translation>
 <translation id="1173570303649278801">Yanıt için sayfa bağlamını kullan</translation>
-<translation id="8599503173207256429">Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte AI Wiz Leo'ya gönderilecektir.</translation>
+<translation id="8599503173207256429">Bu sayfa hakkında soru sormak için bu ayarı açın. Sayfanın içerikleri mesajlarınızla birlikte AI Wize Chat'ya gönderilecektir.</translation>
 <translation id="6303294677342628402">Kalkanlar</translation>
 <translation id="8458987127502506209">Brave Kalkanlarını Etkinleştir</translation>
 <translation id="7509914170164691086">Şunun için Kalkanlar <ph name="LINK_BEFORE"/>AÇIK<ph name="LINK_AFTER"/>:</translation>
@@ -2056,5 +2056,5 @@ Hadi sizi bağlayalım!
     açık sekmeye geçmek için Tab tuşuna ve ardından Enter tuşuna basın</translation>
 <translation id="1538335063514960365">Burada aç butonu. Bu URL'yi başka bir sekmeye geçmeden mevcut sekmede açmak için
     Enter'a basın</translation>
-<translation id="451189393813405346">Leo'ya Sorun</translation>
+<translation id="451189393813405346">AI Wize Chat'ya Sorun</translation>
 </translationbundle>

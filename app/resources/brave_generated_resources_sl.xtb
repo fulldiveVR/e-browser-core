@@ -336,7 +336,7 @@ Preberete si lahko <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>navodila o tem, kak
 <translation id="2858138569776157458">Najb. prilj.</translation>
 <translation id="7859704718976024901">Zgodovina iskanja</translation>
 <translation id="8820817407110198400">Zaznamki</translation>
-<translation id="7310387888625228830">Leo AI pomočnik</translation>
+<translation id="7310387888625228830">AI Wize Chat AI pomočnik</translation>
 <translation id="5222974844674487962">Prikaži gumb AI Wize News</translation>
 <translation id="383007806262310953">Pokaži vrstico z zaznamki</translation>
 <translation id="4054323497808446566">Vrstica z zaznamki je prikazana na vseh straneh</translation>
@@ -720,14 +720,14 @@ ponovno uporabo sinhronizacije, boste morali ustvariti nov račun in posamično 
 <translation id="3095201688102519917">Opozori me pred zaprtjem okna z več zavihki</translation>
 <translation id="7120553802660696133">Zapri okno, ko se zapre zadnji zavihek</translation>
 <translation id="7984721311211272523">Onemogočite funkcijo izklopa zvoka s pomočjo ikon zvočnikov v zavihkih</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Pokaži ikono Leo v stranski vrstici</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Pokaži ikono AI Wize Chat v stranski vrstici</translation>
 <translation id="8172263161008556851">Pokaži predlagane pozive v pogovoru</translation>
-<translation id="1014480593522400586">Počisti podatke Leo</translation>
-<translation id="8681157601856387010">Če ponastavite pomočnika Leo, se boste morali prijaviti za uporabo AI Wize
-Leo v prihodnosti in bo počistil tudi vašo zgodovino klepetov. Čiščenje vašega
+<translation id="1014480593522400586">Počisti podatke AI Wize Chat</translation>
+<translation id="8681157601856387010">Če ponastavite pomočnika AI Wize Chat, se boste morali prijaviti za uporabo AI Wize
+AI Wize Chat v prihodnosti in bo počistil tudi vašo zgodovino klepetov. Čiščenje vašega
 zgodovina klepetov bo izbrisala vse vaše prejšnje pogovore z AI Wize
-Leo. Tega dejanja ni mogoče razveljaviti.</translation>
+AI Wize Chat. Tega dejanja ni mogoče razveljaviti.</translation>
 <translation id="8157373421434119674">Podatki in zgodovina klepeta</translation>
 <translation id="614530507403667291">Privzeti model za nove pogovore</translation>
 <translation id="349846214503465941">Omogoči seznam predvajanja</translation>

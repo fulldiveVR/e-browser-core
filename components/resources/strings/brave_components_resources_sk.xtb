@@ -1832,25 +1832,25 @@
 <translation id="1199355487114804640">Prehrať/pozastaviť</translation>
 <translation id="1689210457482459023">Znížiť rýchlosť prehrávania</translation>
 <translation id="5872363163901278000">Zvýšiť rýchlosť prehrávania</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Funkcia nástroja na vytváranie súhrnu je v súčasnosti k dispozícii len pre vybrané články a ďalšie dlhé webové stránky.</translation>
 <translation id="2346991295632453064">Prijať a začať</translation>
 <translation id="1223498995510244364">Vytvoriť súhrn</translation>
-<translation id="7491773233732232424">Informácie o Leo</translation>
-<translation id="70442873931504163">Brave Leo je inteligentný asistent AI, ktorý dokáže sumarizovať webové lokality, prepisovať videá a odpovedať na otázky. AI Wiz Leo Premium používa modely s pokročilou <ph name="LINK_BEFORE"/> umelou inteligenciou <ph name="LINK_AFTER"/> pre ešte presnejšie odpovede a poskytuje skorý prístup k novým funkciám.</translation>
+<translation id="7491773233732232424">Informácie o AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat je inteligentný asistent AI, ktorý dokáže sumarizovať webové lokality, prepisovať videá a odpovedať na otázky. AI Wize Chat Premium používa modely s pokročilou <ph name="LINK_BEFORE"/> umelou inteligenciou <ph name="LINK_AFTER"/> pre ešte presnejšie odpovede a poskytuje skorý prístup k novým funkciám.</translation>
 <translation id="3055739528128372229">Presnosť odpovedí nie je zaručená a odpovede môžu obsahovať nepresné, zavádzajúce alebo nepravdivé informácie. Neodosielajte citlivé ani súkromné informácie a buďte opatrní pri akýchkoľvek odpovediach súvisiacich so zdravotným stavom, financiami, osobnou bezpečnosťou a podobne.</translation>
-<translation id="7297681068636289435">Spoločnosť Leo nezhromažďuje identifikátory, ako je vaša IP adresa, ktoré by sa dali spojiť s vami. Model umelej inteligencie ani žiadni poskytovatelia modelov 3rd-strán neuchovávajú žiadne osobné údaje.</translation>
+<translation id="7297681068636289435">Spoločnosť AI Wize Chat nezhromažďuje identifikátory, ako je vaša IP adresa, ktoré by sa dali spojiť s vami. Model umelej inteligencie ani žiadni poskytovatelia modelov 3rd-strán neuchovávajú žiadne osobné údaje.</translation>
 <translation id="7839853125981164613">Tu zadajte pokyn</translation>
 <translation id="334325425115922031">Navrhované následné kroky</translation>
 <translation id="4524675003624341892">Navrhnite otázky...</translation>
 <translation id="4567071417854988869">Zosumarizovať toto video</translation>
 <translation id="7921782882718083488">Zosumarizovať túto stránku</translation>
-<translation id="7932221068776853847">Odpojením zastavíte odosielanie obsahu tejto stránky Leovi a začnete novú konverzáciu.</translation>
-<translation id="1167803637855350748">Pri pripájaní k Leovi došlo k sieťovému problému, skontrolujte pripojenie a skúste to znova.</translation>
-<translation id="5095201428204952524">Leo je teraz príliš zaneprázdnený. Skúste to znova o niekoľko minút.</translation>
+<translation id="7932221068776853847">Odpojením zastavíte odosielanie obsahu tejto stránky AI Wize Chatvi a začnete novú konverzáciu.</translation>
+<translation id="1167803637855350748">Pri pripájaní k AI Wize Chatvi došlo k sieťovému problému, skontrolujte pripojenie a skúste to znova.</translation>
+<translation id="5095201428204952524">AI Wize Chat je teraz príliš zaneprázdnený. Skúste to znova o niekoľko minút.</translation>
 <translation id="7144878232160441200">Skúsiť znova</translation>
-<translation id="7202619923031933110">Zdravím, som Leo. Som plne funkčný asistent s umelou inteligenciou od spoločnosti Brave. Využívam model Mixtral 7B, ktorý vytvorila spoločnosť Mistral AI na zvládanie pokročilých úloh.</translation>
-<translation id="2489317965865266353">Ahoj, ja som Leo. Som sprostredkovaný spoločnosťou AI Wiz a poháňa ma model Claude Instant vytvorený spoločnosťou Anthropic na podporu úloh konverzácie a spracovania textu.</translation>
+<translation id="7202619923031933110">Zdravím, som AI Wize Chat. Som plne funkčný asistent s umelou inteligenciou od spoločnosti Brave. Využívam model Mixtral 7B, ktorý vytvorila spoločnosť Mistral AI na zvládanie pokročilých úloh.</translation>
+<translation id="2489317965865266353">Ahoj, ja som AI Wize Chat. Som sprostredkovaný spoločnosťou AI Wiz a poháňa ma model Claude Instant vytvorený spoločnosťou Anthropic na podporu úloh konverzácie a spracovania textu.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> spoločnosťou <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Nový chat</translation>
@@ -1863,7 +1863,7 @@
 <translation id="1239767708151339890">Prístup k popredným LLM v tomto odvetví</translation>
 <translation id="8021579987620496265">Vyššia miera kontroly</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /mesiac</translation>
-<translation id="377376641316998425">Odomknúť plný potenciál Leo</translation>
+<translation id="377376641316998425">Odomknúť plný potenciál AI Wize Chat</translation>
 <translation id="8363148882096737034">Anthropic Claude + viac už čoskoro</translation>
 <translation id="886527905046308697">Prednostný prístup a zvýšené limity odozvy</translation>
 <translation id="1068954060985569277">Platnosť relácie vášho účtu AI Wiz vypršala. Navštívte stránku svojho účtu, aby ste ju obnovili a potom sa vráťte, aby ste mohli využívať prémiové funkcie.</translation>
@@ -1877,22 +1877,22 @@
 <translation id="8442999546461118871">Vyberte tému spätnej väzby</translation>
 <translation id="9018766373792005944">Čoho sa týka vaša spätná väzba?</translation>
 <translation id="7355096922131918313">Uviesť spätnú väzbu sem</translation>
-<translation id="3027575440738035995">Leo Premium poskytuje prístup k rozšírenej súprave jazykových modelov pre ešte presnejšie odpovede. <ph name="LINK_BEFORE"/>Zistite viac na<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium poskytuje prístup k rozšírenej súprave jazykových modelov pre ešte presnejšie odpovede. <ph name="LINK_BEFORE"/>Zistite viac na<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nepomohlo</translation>
 <translation id="2976167228906046828">Nesprávne</translation>
 <translation id="1183055847065865059">Nebezpečné/škodlivé</translation>
 <translation id="7138678301420049075">Ostatné</translation>
 <translation id="2313959174679245365">Vaše hodnotenie nebolo možné odoslať, skontrolujte sieťové pripojenie a skúste to znova</translation>
 <translation id="98413980871833152">Vašu spätnú väzbu nebolo možné odoslať, skontrolujte sieťové pripojenie a skúste to znova</translation>
-<translation id="8742658901413346500">Táto konverzácia je dlhá a Leo môže čoskoro začať zabúdať. Prepnutím na prémiový model môžete získať dlhšie konverzácie alebo vymazať chat a obnoviť ho.</translation>
+<translation id="8742658901413346500">Táto konverzácia je dlhá a AI Wize Chat môže čoskoro začať zabúdať. Prepnutím na prémiový model môžete získať dlhšie konverzácie alebo vymazať chat a obnoviť ho.</translation>
 <translation id="7550152963854770123">Vymazať chat</translation>
-<translation id="7494736170250048402">Poslať správu do asistenta Leo</translation>
+<translation id="7494736170250048402">Poslať správu do asistenta AI Wize Chat</translation>
 <translation id="4110772752544684964">Stránka je pre Lea príliš dlhá. V konverzácii môže chýbať nejaký kontext.</translation>
-<translation id="4370698775470316661">Táto konverzácia je príliš dlhá a nemôže pokračovať. Dostupné môžu byť aj iné modely, s ktorými je Leo schopný zachovať presnosť pri dlhších konverzáciách.</translation>
+<translation id="4370698775470316661">Táto konverzácia je príliš dlhá a nemôže pokračovať. Dostupné môžu byť aj iné modely, s ktorými je AI Wize Chat schopný zachovať presnosť pri dlhších konverzáciách.</translation>
 <translation id="8193130769524604031">Rozšírené úlohy chatu</translation>
 <translation id="3185367320601718531">Konverzácia a generovanie textu</translation>
 <translation id="3965507912994218570">Nastavenia Lea</translation>
-<translation id="1037324977127422019">Zdravím, som Leo!</translation>
+<translation id="1037324977127422019">Zdravím, som AI Wize Chat!</translation>
 <translation id="8930348081963284873">Inteligentný asistent s umelou inteligenciou zabudovaný priamo do aplikácie Brave.</translation>
 <translation id="3528849152231418380">Potrebujete pomoc s webovou stránkou?</translation>
 <translation id="1558192229187362674">Môžem vám pomôcť so zhrnutím článkov, rozšírením obsahu stránky a mnohým ďalším.</translation>
@@ -1901,7 +1901,7 @@
 <translation id="8857222718794549840">Spýtajte sa ma na čokoľvek! Môžeme sa porozprávať na akúkoľvek tému. Stále sa učím a zdokonaľujem, aby som vám mohol poskytnúť lepšie odpovede.</translation>
 <translation id="989329677470075843">Dohoda o ochrane osobných údajov</translation>
 <translation id="1173570303649278801">Použiť kontex stránky pre odpoveď</translation>
-<translation id="8599503173207256429">Prepnutím do polohy „Povolené“ sa opýtate na túto stránku. Jej obsah bude odoslaný spoločnosti AI Wiz Leo spolu s vašimi správami.</translation>
+<translation id="8599503173207256429">Prepnutím do polohy „Povolené“ sa opýtate na túto stránku. Jej obsah bude odoslaný spoločnosti AI Wize Chat spolu s vašimi správami.</translation>
 <translation id="6303294677342628402">Štíty</translation>
 <translation id="8458987127502506209">Zapnúť štíty Brave</translation>
 <translation id="7509914170164691086">Štíty sú aktívne <ph name="LINK_BEFORE"/>pre<ph name="LINK_AFTER"/></translation>

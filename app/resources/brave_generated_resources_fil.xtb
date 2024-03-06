@@ -334,7 +334,7 @@ O baguhin mamaya sa <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Top na sites</translation>
 <translation id="7859704718976024901">History ng Pagba-browse</translation>
 <translation id="8820817407110198400">Bar ng Mga Bookmark</translation>
-<translation id="7310387888625228830">Leo AI Assistant</translation>
+<translation id="7310387888625228830">AI Wize Chat AI Assistant</translation>
 <translation id="5222974844674487962">Ipakita ang button na AI Wize News</translation>
 <translation id="383007806262310953">Ipakita ang bookmarks bar</translation>
 <translation id="4054323497808446566">Nakikita ang bar ng Bookmarks sa lahat ng page</translation>
@@ -718,13 +718,13 @@ O baguhin mamaya sa <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="3095201688102519917">Bigyan ako ng babala bago magsara ng window na may maraming tab</translation>
 <translation id="7120553802660696133">Isara ang window kapag isinasara ang huling tab</translation>
 <translation id="7984721311211272523">I-disable ang mute function sa tab ng mga icon ng speaker</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Ipakita ang icon ng Leo sa sidebar</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Ipakita ang icon ng AI Wize Chat sa sidebar</translation>
 <translation id="8172263161008556851">Ipakita ang mga iminumungkahing prompt sa conversation</translation>
-<translation id="1014480593522400586">I-clear ang data ng Leo</translation>
-<translation id="8681157601856387010">Kakailangan ka ng pag-reset ng Leo assistant na mag-opt-in sa paggamit ng AI Wize
-Leo sa hinaharap at iki-clear rin nito ang chat history mo. ide-delete
-ng pag-clear ng chat history ang lahat ng nakaraan mong pag-uusap sa AI Wize Leo. Hindi na maaaring bawiin ang pagkilos na ito.</translation>
+<translation id="1014480593522400586">I-clear ang data ng AI Wize Chat</translation>
+<translation id="8681157601856387010">Kakailangan ka ng pag-reset ng AI Wize Chat assistant na mag-opt-in sa paggamit ng AI Wize
+AI Wize Chat sa hinaharap at iki-clear rin nito ang chat history mo. ide-delete
+ng pag-clear ng chat history ang lahat ng nakaraan mong pag-uusap sa AI Wize AI Wize Chat. Hindi na maaaring bawiin ang pagkilos na ito.</translation>
 <translation id="8157373421434119674">Data at history ng chat</translation>
 <translation id="614530507403667291">Default na model para sa mga bagong pag-uusap</translation>
 <translation id="349846214503465941">I-enable ang Playlist</translation>

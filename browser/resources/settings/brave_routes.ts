@@ -67,7 +67,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   }
   if (pageVisibility.leoAssistant) {
     r.BRAVE_LEO_ASSISTANT =
-      r.BASIC.createSection('/leo-assistant', 'leoAssistant')
+      r.BASIC.createSection('/aiwize-chat-assistant', 'leoAssistant')
   }
   if (pageVisibility.playlist) {
     r.BRAVE_PLAYLIST = r.BASIC.createSection('/playlist', 'playlist')

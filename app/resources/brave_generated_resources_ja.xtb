@@ -334,7 +334,7 @@
 <translation id="2858138569776157458">トップサイトをサイト候補に含める</translation>
 <translation id="7859704718976024901">閲覧履歴</translation>
 <translation id="8820817407110198400">ブックマーク バー</translation>
-<translation id="7310387888625228830">Leo AI アシスタント</translation>
+<translation id="7310387888625228830">AI Wize Chat AI アシスタント</translation>
 <translation id="5222974844674487962">AI Wizeニュースボタンを表示する</translation>
 <translation id="383007806262310953">ブックマーク バーを表示する</translation>
 <translation id="4054323497808446566">ブックマーク バーをすべてのページに表示</translation>
@@ -718,14 +718,14 @@
 <translation id="3095201688102519917">複数のタブでウィンドウを閉じる前に警告を表示する</translation>
 <translation id="7120553802660696133">最後のタブを閉じる際にウィンドウを閉じる</translation>
 <translation id="7984721311211272523">タブのスピーカーアイコンでミュート機能を無効にする</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">サイドバーにLeoアイコンを表示</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">サイドバーにAI Wize Chatアイコンを表示</translation>
 <translation id="8172263161008556851">会話でおすすめのプロンプトを表示</translation>
-<translation id="1014480593522400586">Leoのデータを消去</translation>
-<translation id="8681157601856387010">Leoアシスタントをリセットすると、今後AI Wize 
-Leoの利用をオプトインする必要があります。チャット履歴も消去されます。
+<translation id="1014480593522400586">AI Wize Chatのデータを消去</translation>
+<translation id="8681157601856387010">AI Wize Chatアシスタントをリセットすると、今後AI Wize 
+AI Wize Chatの利用をオプトインする必要があります。チャット履歴も消去されます。
 チャット履歴を消去すると、AI Wize 
-Leoとの会話がすべて削除されます。この操作を元に戻すことはできません。</translation>
+AI Wize Chatとの会話がすべて削除されます。この操作を元に戻すことはできません。</translation>
 <translation id="8157373421434119674">データ＆チャット履歴</translation>
 <translation id="614530507403667291">新しい会話向けデフォルトモデル</translation>
 <translation id="349846214503465941">プレイリストを有効にする</translation>

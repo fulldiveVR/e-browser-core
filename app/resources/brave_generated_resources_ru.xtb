@@ -334,7 +334,7 @@
 <translation id="2858138569776157458">Топ сайтов</translation>
 <translation id="7859704718976024901">История просмотров</translation>
 <translation id="8820817407110198400">Закладки</translation>
-<translation id="7310387888625228830">ИИ-помощник Leo</translation>
+<translation id="7310387888625228830">ИИ-помощник AI Wize Chat</translation>
 <translation id="5222974844674487962">Показывать кнопку AI Wize Новостей</translation>
 <translation id="383007806262310953">Показывать панель закладок</translation>
 <translation id="4054323497808446566">Панель закладок закреплена на всех вкладках</translation>
@@ -718,12 +718,12 @@
 <translation id="3095201688102519917">Предупреждать перед закрытием окна с несколькими вкладками</translation>
 <translation id="7120553802660696133">Закрывать окно при закрытии последней вкладки</translation>
 <translation id="7984721311211272523">Деактивировать функцию отключения звука с помощью значка динамика на вкладке</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Показывать значок Leo на боковой панели</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Показывать значок AI Wize Chat на боковой панели</translation>
 <translation id="8172263161008556851">Показывать подсказки в беседах</translation>
-<translation id="1014480593522400586">Очистить данные Leo</translation>
+<translation id="1014480593522400586">Очистить данные AI Wize Chat</translation>
 <translation id="8681157601856387010">Если вы перезапустите чат с ИИ-помощником,
-в будущем для использования AI Wize Leo
+в будущем для использования AI Wize AI Wize Chat
 снова потребуется разрешение.
 История чата будет безвозвратно удалена.</translation>
 <translation id="8157373421434119674">История и данные чата</translation>

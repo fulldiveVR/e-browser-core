@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Putar/Jedakan</translation>
 <translation id="1689210457482459023">Kurangi kecepatan pemutaran ulang</translation>
 <translation id="5872363163901278000">Tingkatkan kecepatan pemutaran ulang</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Fitur peringkas saat ini hanya tersedia untuk artikel tertentu dan halaman web berbentuk panjang lainnya.</translation>
 <translation id="2346991295632453064">Terima dan mulai</translation>
 <translation id="1223498995510244364">Ringkas</translation>
-<translation id="7491773233732232424">Tentang Leo</translation>
-<translation id="70442873931504163">Brave Leo adalah asisten pintar AI yang dapat meringkas halaman web, membuat transkrip video, dan menjawab pertanyaan. AI Wiz Leo Premium menggunakan<ph name="LINK_BEFORE"/>model AI<ph name="LINK_AFTER"/> unggulan untuk dapat memberikan balasan yang lebih beragam, dan memberikan akses awal ke fitur-fitur baru.</translation>
+<translation id="7491773233732232424">Tentang AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat adalah asisten pintar AI yang dapat meringkas halaman web, membuat transkrip video, dan menjawab pertanyaan. AI Wize Chat Premium menggunakan<ph name="LINK_BEFORE"/>model AI<ph name="LINK_AFTER"/> unggulan untuk dapat memberikan balasan yang lebih beragam, dan memberikan akses awal ke fitur-fitur baru.</translation>
 <translation id="3055739528128372229">Akurasi jawaban tidak dijamin, dan mungkin mengandung informasi yang tidak akurat, menyesatkan, atau keliru. Jangan mengirimkan informasi sensitif atau privat, serta berhati-hatilah terhadap jawaban teks yang berkaitan dengan kesehatan, keuangan, keselamatan pribadi, atau hal yang serupa.</translation>
-<translation id="7297681068636289435">Leo tidak mengumpulkan atau memproses pengidentifikasi seperti Alamat IP Anda yang dapat dikaitkan kepada Anda. Data pribadi Anda tidak akan disimpan oleh model AI atau penyedia model pihak ketiga mana pun.</translation>
+<translation id="7297681068636289435">AI Wize Chat tidak mengumpulkan atau memproses pengidentifikasi seperti Alamat IP Anda yang dapat dikaitkan kepada Anda. Data pribadi Anda tidak akan disimpan oleh model AI atau penyedia model pihak ketiga mana pun.</translation>
 <translation id="7839853125981164613">Masukkan petunjuk di sini</translation>
 <translation id="334325425115922031">Tindak lanjut yang diusulkan</translation>
 <translation id="4524675003624341892">Usulkan pertanyaan...</translation>
 <translation id="4567071417854988869">Ringkas video ini</translation>
 <translation id="7921782882718083488">Ringkas halaman ini</translation>
-<translation id="7932221068776853847">Putuskan koneksi untuk menghentikan pengiriman konten halaman ini ke Leo, dan mulai percakapan baru</translation>
-<translation id="1167803637855350748">Terdapat masalah jaringan untuk terhubung dengan Leo, periksa kembali koneksi Anda dan coba lagi.</translation>
-<translation id="5095201428204952524">Leo sedang sibuk sekali sekarang. Silakan coba lagi dalam beberapa menit.</translation>
+<translation id="7932221068776853847">Putuskan koneksi untuk menghentikan pengiriman konten halaman ini ke AI Wize Chat, dan mulai percakapan baru</translation>
+<translation id="1167803637855350748">Terdapat masalah jaringan untuk terhubung dengan AI Wize Chat, periksa kembali koneksi Anda dan coba lagi.</translation>
+<translation id="5095201428204952524">AI Wize Chat sedang sibuk sekali sekarang. Silakan coba lagi dalam beberapa menit.</translation>
 <translation id="7144878232160441200">Coba Lagi</translation>
-<translation id="7202619923031933110">Hai, saya Leo. Saya asisten AI yang sepenuhnya dihosting oleh Brave. Saya dipersembahkan oleh Mixtral 7B, model yang diciptakan oleh Mistral untuk menangani tugas yang lebih rumit daripada yang ditangani AI.</translation>
-<translation id="2489317965865266353">Hai, saya Leo. Saya diproksikan oleh AI Wiz dan dipersembahkan oleh Claude Instant, model yang diciptakan oleh Anthropic untuk menangani tugas-tugas pemrosesan percakapan dan teks.</translation>
+<translation id="7202619923031933110">Hai, saya AI Wize Chat. Saya asisten AI yang sepenuhnya dihosting oleh Brave. Saya dipersembahkan oleh Mixtral 7B, model yang diciptakan oleh Mistral untuk menangani tugas yang lebih rumit daripada yang ditangani AI.</translation>
+<translation id="2489317965865266353">Hai, saya AI Wize Chat. Saya diproksikan oleh AI Wiz dan dipersembahkan oleh Claude Instant, model yang diciptakan oleh Anthropic untuk menangani tugas-tugas pemrosesan percakapan dan teks.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> oleh <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Obrolan</translation>
 <translation id="2961040541145689181">Obrolan baru</translation>
@@ -1861,7 +1861,7 @@
 <translation id="1239767708151339890">Akses ke LLM yang memimpin industri</translation>
 <translation id="8021579987620496265">Batas tingkat respons yang lebih tinggi</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /bulan</translation>
-<translation id="377376641316998425">Buka potensi Leo yang seutuhnya</translation>
+<translation id="377376641316998425">Buka potensi AI Wize Chat yang seutuhnya</translation>
 <translation id="8363148882096737034">Anthropic Claude + banyak lagi akan segera datang</translation>
 <translation id="886527905046308697">Akses prioritas dan batas respons yang ditingkatkan</translation>
 <translation id="1068954060985569277">Sesi akun AI Wiz Anda telah berakhir. Silakan kunjungi halaman akun Anda untuk menyegarkannya, lalu kembali menggunakan fitur-fitur premium.</translation>
@@ -1875,22 +1875,22 @@
 <translation id="8442999546461118871">Pilih topik umpan balik Anda</translation>
 <translation id="9018766373792005944">Umpan balik Anda adalah tentang apa?</translation>
 <translation id="7355096922131918313">Berikan umpan balik di sini</translation>
-<translation id="3027575440738035995">Leo Premium menyediakan akses ke set model bahasa yang diperluas untuk jawaban yang bahkan lebih bernuansa. <ph name="LINK_BEFORE"/>Pelajari lebih lanjut<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium menyediakan akses ke set model bahasa yang diperluas untuk jawaban yang bahkan lebih bernuansa. <ph name="LINK_BEFORE"/>Pelajari lebih lanjut<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Tidak membantu</translation>
 <translation id="2976167228906046828">Tidak tepat</translation>
 <translation id="1183055847065865059">Tidak aman/berbahaya</translation>
 <translation id="7138678301420049075">Lainnya</translation>
 <translation id="2313959174679245365">Peringkat yang Anda berikan tidak dapat dikirimkan, silakan periksa koneksi jaringan dan coba lagi</translation>
 <translation id="98413980871833152">Umpan balik Anda tidak dapat dikirimkan, silakan periksa koneksi jaringan dan coba lagi</translation>
-<translation id="8742658901413346500">Percakapan ini terlalu panjang dan Leo mungkin akan segera mulai melupakan satu dua hal. Anda bisa melakukan percakapan yang lebih panjang dengan beralih ke model premium, atau Anda dapat menghapus obrolan untuk memulainya kembali.</translation>
+<translation id="8742658901413346500">Percakapan ini terlalu panjang dan AI Wize Chat mungkin akan segera mulai melupakan satu dua hal. Anda bisa melakukan percakapan yang lebih panjang dengan beralih ke model premium, atau Anda dapat menghapus obrolan untuk memulainya kembali.</translation>
 <translation id="7550152963854770123">Hapus obrolan</translation>
-<translation id="7494736170250048402">Kirim pesan ke Leo</translation>
-<translation id="4110772752544684964">Halaman ini terlalu panjang untuk Leo. Beberapa konteks mungkin akan hilang dari percakapan.</translation>
-<translation id="4370698775470316661">Percakapan ini terlalu panjang dan tidak dapat dilanjutkan. Mungkin ada model lain yang tersedia yang memungkinkan Leo untuk menjaga akurasi percakapan yang lebih panjang.</translation>
+<translation id="7494736170250048402">Kirim pesan ke AI Wize Chat</translation>
+<translation id="4110772752544684964">Halaman ini terlalu panjang untuk AI Wize Chat. Beberapa konteks mungkin akan hilang dari percakapan.</translation>
+<translation id="4370698775470316661">Percakapan ini terlalu panjang dan tidak dapat dilanjutkan. Mungkin ada model lain yang tersedia yang memungkinkan AI Wize Chat untuk menjaga akurasi percakapan yang lebih panjang.</translation>
 <translation id="8193130769524604031">Tugas obrolan lanjutan</translation>
 <translation id="3185367320601718531">Penghasil percakapan dan teks</translation>
-<translation id="3965507912994218570">Pengaturan Leo</translation>
-<translation id="1037324977127422019">Hai, saya Leo!</translation>
+<translation id="3965507912994218570">Pengaturan AI Wize Chat</translation>
+<translation id="1037324977127422019">Hai, saya AI Wize Chat!</translation>
 <translation id="8930348081963284873">Asisten cerdas yang didukung AI, dibangun langsung ke dalam Brave.</translation>
 <translation id="3528849152231418380">Perlu bantuan dengan situs web?</translation>
 <translation id="1558192229187362674">Saya dapat membantu Anda meringkas artikel, memperluas konten situs dan banyak lagi.</translation>
@@ -1899,7 +1899,7 @@
 <translation id="8857222718794549840">Tanya saya hal apa pun! Kita bisa berbicara tentang topik apa pun yang Anda inginkan. Saya selalu belajar dan meningkatkan diri untuk memberikan jawaban yang lebih baik.</translation>
 <translation id="989329677470075843">Persetujuan privasi</translation>
 <translation id="1173570303649278801">Gunakan konteks halaman untuk mendapatkan respons</translation>
-<translation id="8599503173207256429">Telusuri untuk menanyakan tentang halaman ini. Konten ini akan dikirim ke AI Wiz Leo, bersama dengan pesan Anda.</translation>
+<translation id="8599503173207256429">Telusuri untuk menanyakan tentang halaman ini. Konten ini akan dikirim ke AI Wize Chat, bersama dengan pesan Anda.</translation>
 <translation id="6303294677342628402">Pelindung</translation>
 <translation id="8458987127502506209">Aktifkan AI Wiz Shield</translation>
 <translation id="7509914170164691086">Perisai sedang AKTIF <ph name="LINK_BEFORE"/>untuk<ph name="LINK_AFTER"/></translation>
@@ -2055,5 +2055,5 @@ Mari sambungkan koneksi Anda!
     tekan Tab, kemudian Enter untuk beralih ke tab yang terbuka</translation>
 <translation id="1538335063514960365">Tombol buka di sini, tekan Enter untuk membuka URL ini pada tab saat ini, daripada beralih ke
     tab yang sudah ada</translation>
-<translation id="451189393813405346">Tanyakan pada Leo</translation>
+<translation id="451189393813405346">Tanyakan pada AI Wize Chat</translation>
 </translationbundle>

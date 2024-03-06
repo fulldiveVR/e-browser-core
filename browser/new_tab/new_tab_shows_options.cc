@@ -91,7 +91,7 @@ bool ShouldNewTabShowDashboard(Profile* profile) {
 }
 
 bool ShouldNewTabShowBlankpage(Profile* profile) {
-  // TODO AIWIZE Browser: Temporary show blank page for aiwize browser new tab
+  // TODO AI Wize Browser: Temporary show blank page for aiwize browser new tab
   return true;
 //  if (!brave::IsRegularProfile(profile))
 //    return false;

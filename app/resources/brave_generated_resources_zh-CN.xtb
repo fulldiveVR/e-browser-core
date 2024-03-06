@@ -333,7 +333,7 @@
 <translation id="2858138569776157458">热门网站</translation>
 <translation id="7859704718976024901">浏览记录</translation>
 <translation id="8820817407110198400">书签栏</translation>
-<translation id="7310387888625228830">Leo 人工智能助手</translation>
+<translation id="7310387888625228830">AI Wize Chat 人工智能助手</translation>
 <translation id="5222974844674487962">显示 AI Wize 新闻按钮</translation>
 <translation id="383007806262310953">显示书签栏</translation>
 <translation id="4054323497808446566">所有页面均可见书签栏</translation>
@@ -717,14 +717,14 @@
 <translation id="3095201688102519917">关闭已开启多个标签页的视窗前显示警告消息</translation>
 <translation id="7120553802660696133">关闭最后一个选项卡时关闭窗口</translation>
 <translation id="7984721311211272523">禁用选项卡扬声器图标中的静音功能</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">在侧边栏中显示 Leo 图标</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">在侧边栏中显示 AI Wize Chat 图标</translation>
 <translation id="8172263161008556851">在对话中显示建议提示</translation>
-<translation id="1014480593522400586">清除 Leo 数据</translation>
-<translation id="8681157601856387010">重置 Leo 助手将要求您选择在未来使用 AI Wize
-Leo，并清除您的聊天记录。清除您的
+<translation id="1014480593522400586">清除 AI Wize Chat 数据</translation>
+<translation id="8681157601856387010">重置 AI Wize Chat 助手将要求您选择在未来使用 AI Wize
+AI Wize Chat，并清除您的聊天记录。清除您的
 聊天记录将删除您之前与 AI Wize
-Leo 的所有对话。此操作无法撤销。</translation>
+AI Wize Chat 的所有对话。此操作无法撤销。</translation>
 <translation id="8157373421434119674">数据和聊天记录</translation>
 <translation id="614530507403667291">新对话的默认模型</translation>
 <translation id="349846214503465941">启用播放列表</translation>

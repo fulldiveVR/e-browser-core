@@ -334,7 +334,7 @@ Hoặc thay đổi sau tại <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Trang web hàng đầu</translation>
 <translation id="7859704718976024901">Lịch sử duyệt web</translation>
 <translation id="8820817407110198400">Dấu trang</translation>
-<translation id="7310387888625228830">Trợ lý Leo AI</translation>
+<translation id="7310387888625228830">Trợ lý AI Wize Chat AI</translation>
 <translation id="5222974844674487962">Hiển thị nút AI Wize Tin tức</translation>
 <translation id="383007806262310953">Hiển thị thanh dấu trang</translation>
 <translation id="4054323497808446566">Thanh dấu trang hiển thị trên tất cả các trang</translation>
@@ -718,14 +718,14 @@ Hoặc thay đổi sau tại <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="3095201688102519917">Cảnh báo tôi trước khi đóng cửa sổ với nhiều tab</translation>
 <translation id="7120553802660696133">Đóng cửa sổ khi đóng tab cuối cùng</translation>
 <translation id="7984721311211272523">Tắt chức năng tắt tiếng trong tab biểu tượng loa</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Hiển thị biểu tượng Leo trong thanh bên</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Hiển thị biểu tượng AI Wize Chat trong thanh bên</translation>
 <translation id="8172263161008556851">Hiển thị lời nhắc được đề xuất trong cuộc trò chuyện</translation>
-<translation id="1014480593522400586">Xóa dữ liệu Leo</translation>
-<translation id="8681157601856387010">Việc thiết lập lại trợ lý Leo sẽ yêu cầu bạn chọn tham gia sử dụng AI Wize
-Leo trong tương lai và cũng sẽ xóa lịch sử trò chuyện của bạn. Xóa lịch sử
+<translation id="1014480593522400586">Xóa dữ liệu AI Wize Chat</translation>
+<translation id="8681157601856387010">Việc thiết lập lại trợ lý AI Wize Chat sẽ yêu cầu bạn chọn tham gia sử dụng AI Wize
+AI Wize Chat trong tương lai và cũng sẽ xóa lịch sử trò chuyện của bạn. Xóa lịch sử
 trò chuyện của bạn sẽ xóa tất cả các cuộc trò chuyện trước đó của bạn với AI Wize
-Leo. Hành động này không thể được hoàn tác.</translation>
+AI Wize Chat. Hành động này không thể được hoàn tác.</translation>
 <translation id="8157373421434119674">Dữ liệu và lịch sử trò chuyện</translation>
 <translation id="614530507403667291">Mô hình mặc định cho các cuộc trò chuyện mới</translation>
 <translation id="349846214503465941">Bật Danh sách phát</translation>

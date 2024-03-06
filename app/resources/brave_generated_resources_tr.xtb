@@ -335,7 +335,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="2858138569776157458">Popüler siteler</translation>
 <translation id="7859704718976024901">Gözatma Geçmişi</translation>
 <translation id="8820817407110198400">Yer imleri</translation>
-<translation id="7310387888625228830">Leo YZ Asistanı</translation>
+<translation id="7310387888625228830">AI Wize Chat YZ Asistanı</translation>
 <translation id="5222974844674487962">AI Wize Haberleri butonunu göster</translation>
 <translation id="383007806262310953">Yer işaretleri çubuğunu göster</translation>
 <translation id="4054323497808446566">Yer işaretleri çubuğu tüm sayfalarda görünür halde</translation>
@@ -719,13 +719,13 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="3095201688102519917">Çok sayıda sekmesi olan pencereleri kapatırken beni uyar</translation>
 <translation id="7120553802660696133">Son sekmeyi kapatırken pencereyi kapatın</translation>
 <translation id="7984721311211272523">Sekme hoparlör simgelerinden sessize alma işlevini devre dışı bırak</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Kenar çubuğunda Leo simgesini göster</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Kenar çubuğunda AI Wize Chat simgesini göster</translation>
 <translation id="8172263161008556851">Konuşmada önerilen istemleri göster</translation>
-<translation id="1014480593522400586">Leo verilerini temizle</translation>
-<translation id="8681157601856387010">Leo asistanını sıfırlamak, gelecekte AI Wize Leo'yu kullanabilmek için
+<translation id="1014480593522400586">AI Wize Chat verilerini temizle</translation>
+<translation id="8681157601856387010">AI Wize Chat asistanını sıfırlamak, gelecekte AI Wize AI Wize Chat'yu kullanabilmek için
 katılmanızı gerektirecek ve ayrıca sohbet geçmişinizi temizleyecektir.
-Sohbet geçmişinizin temizlenmesi AI Wize Leo ile yaptığınız geçmiş konuşmaların
+Sohbet geçmişinizin temizlenmesi AI Wize AI Wize Chat ile yaptığınız geçmiş konuşmaların
 tümünü silecektir. Bu eylem geri alınamaz.</translation>
 <translation id="8157373421434119674">Veri ve sohbet geçmişi</translation>
 <translation id="614530507403667291">Yeni konuşmalar için varsayılan model</translation>

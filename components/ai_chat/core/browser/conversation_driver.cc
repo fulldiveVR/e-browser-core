@@ -283,14 +283,19 @@ void ConversationDriver::AddToConversationHistory(mojom::ConversationTurn turn) 
 }
 
 void ConversationDriver::UpdateOrCreateLastAssistantEntry(std::string updated_text) {
-  updated_text = base::TrimWhitespaceASCII(updated_text, base::TRIM_LEADING);
+  // updated_text = base::TrimWhitespaceASCII(updated_text, base::TRIM_LEADING);
   if (chat_history_.empty() ||
       chat_history_.back().character_type != CharacterType::ASSISTANT) {
     AddToConversationHistory({CharacterType::ASSISTANT,
                               ConversationTurnVisibility::VISIBLE,
                               updated_text});
   } else {
-    chat_history_.back().text = updated_text;
+    std::string &text = chat_history_.back().text;
+    if(text.empty()){
+      chat_history_.back().text = updated_text;
+    } else {
+      chat_history_.back().text = text + updated_text;
+    }
   }
 
   // Trigger an observer update to refresh the UI.

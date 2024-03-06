@@ -335,7 +335,7 @@ DU kan læse <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>instruktioner om hvordan 
 <translation id="2858138569776157458">Topwebsites</translation>
 <translation id="7859704718976024901">Browsinghistorik</translation>
 <translation id="8820817407110198400">Bogmærker</translation>
-<translation id="7310387888625228830">AI-assistenten Leo</translation>
+<translation id="7310387888625228830">AI-assistenten AI Wize Chat</translation>
 <translation id="5222974844674487962">Vis knappen AI Wize News</translation>
 <translation id="383007806262310953">Vis bogmærkelinjen</translation>
 <translation id="4054323497808446566">Bogmærkelinjen er synlig på alle sider</translation>
@@ -719,14 +719,14 @@ DU kan læse <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>instruktioner om hvordan 
 <translation id="3095201688102519917">Advar, inden jeg lukker et vindue med flere faner</translation>
 <translation id="7120553802660696133">Luk hele vinduet, når det sidste faneblad lukkes</translation>
 <translation id="7984721311211272523">Slå stum funktion fra i fanen Højtalerikoner</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Vis Leo-ikon i sidebjælken</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Vis AI Wize Chat-ikon i sidebjælken</translation>
 <translation id="8172263161008556851">Vis anbefalede forespørgsler i samtalen</translation>
-<translation id="1014480593522400586">Ryd Leo-data</translation>
-<translation id="8681157601856387010">Nulstilling af Leo-assistenten kræver, at du vælger at bruge AI Wize
-Leo fremover, og denne handling sletter også din chathistorik. Hvis du sletter din
+<translation id="1014480593522400586">Ryd AI Wize Chat-data</translation>
+<translation id="8681157601856387010">Nulstilling af AI Wize Chat-assistenten kræver, at du vælger at bruge AI Wize
+AI Wize Chat fremover, og denne handling sletter også din chathistorik. Hvis du sletter din
 chathistorik, slettes alle dine tidligere samtaler med AI Wize
-Leo. Denne handling kan ikke fortrydes.</translation>
+AI Wize Chat. Denne handling kan ikke fortrydes.</translation>
 <translation id="8157373421434119674">Data og chathistorik</translation>
 <translation id="614530507403667291">Standardmodel for nye samtaler</translation>
 <translation id="349846214503465941">Aktivér spilleliste</translation>

@@ -334,7 +334,7 @@ Később is módosíthatja a következő helyen: <ph name="SETTINGS_EXTENIONS_LI
 <translation id="2858138569776157458">Népszerűek</translation>
 <translation id="7859704718976024901">Böngészési előzmények</translation>
 <translation id="8820817407110198400">Könyvjelzők</translation>
-<translation id="7310387888625228830">Leo MI-segéd</translation>
+<translation id="7310387888625228830">AI Wize Chat MI-segéd</translation>
 <translation id="5222974844674487962">AI Wize hírek gomb megjelenítése</translation>
 <translation id="383007806262310953">Könyvjelzősáv megjelenítése</translation>
 <translation id="4054323497808446566">A Könyvjelzők sáv minden oldalon látható</translation>
@@ -718,12 +718,12 @@ Később is módosíthatja a következő helyen: <ph name="SETTINGS_EXTENIONS_LI
 <translation id="3095201688102519917">Figyelmeztessen, mielőtt bezár egy több nyitott lappal rendelkező ablakot</translation>
 <translation id="7120553802660696133">Az ablak bezárása az utolsó lap bezárásakor</translation>
 <translation id="7984721311211272523">Némítás funkció letiltása a lapok hangszóró ikonjaiban</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Leo ikon mutatása az oldalsávban</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">AI Wize Chat ikon mutatása az oldalsávban</translation>
 <translation id="8172263161008556851">Ajánlott kérdések megjelenítése a beszélgetésben</translation>
-<translation id="1014480593522400586">Leo adatok törlése</translation>
-<translation id="8681157601856387010">A Leo segéd alaphelyzetbe állításához fel kell iratkoznia a AI Wize
-Leo jövőbeli használatára, és a művelet törli a csevegési előzményeit.
+<translation id="1014480593522400586">AI Wize Chat adatok törlése</translation>
+<translation id="8681157601856387010">A AI Wize Chat segéd alaphelyzetbe állításához fel kell iratkoznia a AI Wize
+AI Wize Chat jövőbeli használatára, és a művelet törli a csevegési előzményeit.
 A csevegési előzmények törlésével a AI Wize
 Leóval folytatott összes korábbi beszélgetés törölve lesz. Ez a művelet nem vonható vissza.</translation>
 <translation id="8157373421434119674">Adatok és csevegési előzmények</translation>

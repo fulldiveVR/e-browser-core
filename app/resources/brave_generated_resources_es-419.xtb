@@ -335,7 +335,7 @@ O cambia los permisos más adelante en <ph name="SETTINGS_EXTENIONS_LINK"/></tra
 <translation id="2858138569776157458">Populares</translation>
 <translation id="7859704718976024901">Historial de navegación</translation>
 <translation id="8820817407110198400">Favoritos</translation>
-<translation id="7310387888625228830">Asistente de IA (Leo)</translation>
+<translation id="7310387888625228830">Asistente de IA (AI Wize Chat)</translation>
 <translation id="5222974844674487962">Mostrar botón de Noticias de AI Wize</translation>
 <translation id="383007806262310953">Mostrar barra de favoritos</translation>
 <translation id="4054323497808446566">La barra de marcadores está visible en todas las páginas</translation>
@@ -719,13 +719,13 @@ En este momento tienes <ph name="NFT_COUNT"/> NFT anclados.</translation>
 <translation id="3095201688102519917">Avisarme antes de cerrar una ventana con varias pestañas</translation>
 <translation id="7120553802660696133">Cerrar la ventana al cerrar la última pestaña</translation>
 <translation id="7984721311211272523">Desactivar la función de silencio del sonido en los iconos de altavoz de las pestañas.</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Mostrar el ícono de Leo en la barra lateral</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Mostrar el ícono de AI Wize Chat en la barra lateral</translation>
 <translation id="8172263161008556851">Mostrar sugerencias en la conversación</translation>
-<translation id="1014480593522400586">Borrar datos de Leo</translation>
-<translation id="8681157601856387010">Si restableces el asistente de IA (Leo), será necesario que habilites Leo de AI Wize
+<translation id="1014480593522400586">Borrar datos de AI Wize Chat</translation>
+<translation id="8681157601856387010">Si restableces el asistente de IA (AI Wize Chat), será necesario que habilites AI Wize Chat de AI Wize
 para poder usarlo en el futuro. El historial de chats se borrará al llevar a cabo dicha acción.
-Esto significa que se eliminarán todas las conversaciones que hayas mantenido con Leo
+Esto significa que se eliminarán todas las conversaciones que hayas mantenido con AI Wize Chat
 de forma irreversible.</translation>
 <translation id="8157373421434119674">Historial de datos y chats</translation>
 <translation id="614530507403667291">Modelo predeterminado para conversaciones nuevas</translation>

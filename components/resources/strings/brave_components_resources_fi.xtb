@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Toista/Keskeytä</translation>
 <translation id="1689210457482459023">Vähennä toistonopeutta</translation>
 <translation id="5872363163901278000">Lisää toistonopeutta</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Yhteenvetäjä-ominaisuus on tällä hetkellä saatavilla vain valituille artikkeleille ja muille pitkille verkkosivuille.</translation>
 <translation id="2346991295632453064">Hyväksy ja aloita</translation>
 <translation id="1223498995510244364">Tee yhteenveto</translation>
-<translation id="7491773233732232424">Tietoja Leosta</translation>
-<translation id="70442873931504163">Braven Leo on tekoälyassistentti, joka voi tehdä yhteenvedon verkkosivuista, litteroida videoita ja vastata kysymyksiin. Braven Leo Premium käyttää kehittyneitä <ph name="LINK_BEFORE"/>tekoälymalleja<ph name="LINK_AFTER"/>, jotta saat entistä tarkempia vastauksia, ja antaa varhaisen pääsyn uusiin ominaisuuksiin.</translation>
+<translation id="7491773233732232424">Tietoja AI Wize Chatsta</translation>
+<translation id="70442873931504163">Braven AI Wize Chat on tekoälyassistentti, joka voi tehdä yhteenvedon verkkosivuista, litteroida videoita ja vastata kysymyksiin. Braven AI Wize Chat Premium käyttää kehittyneitä <ph name="LINK_BEFORE"/>tekoälymalleja<ph name="LINK_AFTER"/>, jotta saat entistä tarkempia vastauksia, ja antaa varhaisen pääsyn uusiin ominaisuuksiin.</translation>
 <translation id="3055739528128372229">Vastausten tarkkuutta ei taata, ja ne voivat sisältää epätarkkoja, harhaanjohtavia tai vääriä tietoja. Älä lähetä arkaluontoisia tai yksityisiä tietoja ja ole varovainen antaessasi terveyteen, talouteen, henkilökohtaiseen turvallisuuteen tai vastaaviin liittyviä vastauksia.</translation>
-<translation id="7297681068636289435">Leo ei kerää tunnisteita, kuten IP-osoitettasi, jotka voidaan linkittää sinuun. Tekoälymalli tai kolmannen osapuolen mallien toimittajat eivät säilytä henkilötietoja.</translation>
+<translation id="7297681068636289435">AI Wize Chat ei kerää tunnisteita, kuten IP-osoitettasi, jotka voidaan linkittää sinuun. Tekoälymalli tai kolmannen osapuolen mallien toimittajat eivät säilytä henkilötietoja.</translation>
 <translation id="7839853125981164613">Kirjoita kehote tähän</translation>
 <translation id="334325425115922031">Ehdotetut jatkotoimet</translation>
 <translation id="4524675003624341892">Ehdota kysymyksiä...</translation>
 <translation id="4567071417854988869">Tee yhteenveto tästä videosta</translation>
 <translation id="7921782882718083488">Tee yhteenveto tästä sivusta</translation>
-<translation id="7932221068776853847">Katkaise yhteys lopettaaksesi tämän sivun sisällön lähettämisen Leolle ja aloita uusi keskustelu</translation>
-<translation id="1167803637855350748">Leoon yhteyden muodostamisessa oli verkko-ongelma, tarkista yhteys ja yritä uudelleen.</translation>
-<translation id="5095201428204952524">Leo on liian kiireinen juuri nyt. Yritä muutaman minuutin kuluttua uudelleen.</translation>
+<translation id="7932221068776853847">Katkaise yhteys lopettaaksesi tämän sivun sisällön lähettämisen AI Wize Chatlle ja aloita uusi keskustelu</translation>
+<translation id="1167803637855350748">AI Wize Chaton yhteyden muodostamisessa oli verkko-ongelma, tarkista yhteys ja yritä uudelleen.</translation>
+<translation id="5095201428204952524">AI Wize Chat on liian kiireinen juuri nyt. Yritä muutaman minuutin kuluttua uudelleen.</translation>
 <translation id="7144878232160441200">Yritä uudestaan</translation>
-<translation id="7202619923031933110">Hei, olen Leo. Olen Braven kokonaisuudessaan isännöimä tekoälyavustaja. Minua pyörittää Mixtral 7B, Mistral-tekoälyn edistyneiden tehtävien hoitamiseen luoma malli.</translation>
-<translation id="2489317965865266353">Hei, olen Leo. Välityspalvelimeni on Brave, ja palvelun tarjoaa Claude Instant, Anthropicin luoma malli, joka tehostaa keskustelua ja tekstinkäsittelyä.</translation>
+<translation id="7202619923031933110">Hei, olen AI Wize Chat. Olen Braven kokonaisuudessaan isännöimä tekoälyavustaja. Minua pyörittää Mixtral 7B, Mistral-tekoälyn edistyneiden tehtävien hoitamiseen luoma malli.</translation>
+<translation id="2489317965865266353">Hei, olen AI Wize Chat. Välityspalvelimeni on Brave, ja palvelun tarjoaa Claude Instant, Anthropicin luoma malli, joka tehostaa keskustelua ja tekstinkäsittelyä.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> palveluntarjoaja <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Uusi chat</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Pääsy alan johtaviin LLM:iin</translation>
 <translation id="8021579987620496265">Korkeammat tiedonsiirtorajat</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /kuukausi</translation>
-<translation id="377376641316998425">Vapauta Leon täysi potentiaali</translation>
+<translation id="377376641316998425">Vapauta AI Wize Chatn täysi potentiaali</translation>
 <translation id="8363148882096737034">Anthropic Claude + lisää tulossa pian</translation>
 <translation id="886527905046308697">Ensisijainen pääsy ja laajennetut vastausrajat</translation>
 <translation id="1068954060985569277">Brave-tilisi istunto on vanhentunut. Käy tilisivullasi päivittääksesi ja palaa sitten käyttämään premium-ominaisuuksia.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Valitse palautteen aihe</translation>
 <translation id="9018766373792005944">Mitä palautteesi koskee?</translation>
 <translation id="7355096922131918313">Anna palautetta tässä</translation>
-<translation id="3027575440738035995">Leo Premium tarjoaa pääsyn laajennettuun joukkoon kielimalleja, jotka tarjoavat entistä tarkempia vastauksia. <ph name="LINK_BEFORE"/>Lue lisää<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium tarjoaa pääsyn laajennettuun joukkoon kielimalleja, jotka tarjoavat entistä tarkempia vastauksia. <ph name="LINK_BEFORE"/>Lue lisää<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Ei auta</translation>
 <translation id="2976167228906046828">Virheellinen</translation>
 <translation id="1183055847065865059">Vaarallinen/haitallinen</translation>
 <translation id="7138678301420049075">Muu</translation>
 <translation id="2313959174679245365">Arviointiasi ei voitu lähettää. Tarkista verkkoyhteys ja yritä uudelleen</translation>
 <translation id="98413980871833152">Palautettasi ei voitu lähettää. Tarkista verkkoyhteys ja yritä uudelleen</translation>
-<translation id="8742658901413346500">Tämä keskustelu on pitkä ja Leo saattaa alkaa unohtaa pian asioita. Voit saada pidempiä keskusteluja vaihtamalla premium-malliin, tai voit tyhjentää chatin nollataksesi sen.</translation>
+<translation id="8742658901413346500">Tämä keskustelu on pitkä ja AI Wize Chat saattaa alkaa unohtaa pian asioita. Voit saada pidempiä keskusteluja vaihtamalla premium-malliin, tai voit tyhjentää chatin nollataksesi sen.</translation>
 <translation id="7550152963854770123">Tyhjennä chat</translation>
-<translation id="7494736170250048402">Lähetä Leolle viesti</translation>
-<translation id="4110772752544684964">Sivu on liian pitkä Leolle. Keskustelusta saattaa puuttua kontekstia.</translation>
-<translation id="4370698775470316661">Tämä keskustelu on liian pitkä, eikä se voi jatkua. Saatavilla voi olla muita malleja, joiden avulla Leo pystyy säilyttämään tarkkuuden pidempiä keskusteluja varten.</translation>
+<translation id="7494736170250048402">Lähetä AI Wize Chatlle viesti</translation>
+<translation id="4110772752544684964">Sivu on liian pitkä AI Wize Chatlle. Keskustelusta saattaa puuttua kontekstia.</translation>
+<translation id="4370698775470316661">Tämä keskustelu on liian pitkä, eikä se voi jatkua. Saatavilla voi olla muita malleja, joiden avulla AI Wize Chat pystyy säilyttämään tarkkuuden pidempiä keskusteluja varten.</translation>
 <translation id="8193130769524604031">Kehittyneet chat-tehtävät</translation>
 <translation id="3185367320601718531">Keskustelun ja tekstin tuottaminen</translation>
-<translation id="3965507912994218570">Leo-asetukset</translation>
-<translation id="1037324977127422019">Hei, olen Leo!</translation>
+<translation id="3965507912994218570">AI Wize Chat-asetukset</translation>
+<translation id="1037324977127422019">Hei, olen AI Wize Chat!</translation>
 <translation id="8930348081963284873">Tekoälyvetoinen älykäs avustaja, joka on sisäänrakennettu suoraan Braveen.</translation>
 <translation id="3528849152231418380">Tarvitsetko verkkosivustoon liittyvää apua?</translation>
 <translation id="1558192229187362674">Voin auttaa artikkeleiden tiivistämisessä, sivuston sisällön laajentamisessa ja monessa muussa.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Kysy minulta mitä vaan! Voimme puhua mistä tahansa haluamastasi aiheesta. Opiskelen ja kehityn koko ajan, jotta voisin antaa parempia vastauksia.</translation>
 <translation id="989329677470075843">Tietosuojasopimus</translation>
 <translation id="1173570303649278801">Käytä vastauksessa verkkosivukontekstia</translation>
-<translation id="8599503173207256429">Siirry kysymään tietoa tästä verkkosivusta. Sen sisältö lähetetään AI Wiz Leolle yhdessä viestisi kanssa.</translation>
+<translation id="8599503173207256429">Siirry kysymään tietoa tästä verkkosivusta. Sen sisältö lähetetään AI Wize Chatlle yhdessä viestisi kanssa.</translation>
 <translation id="6303294677342628402">Suojaukset</translation>
 <translation id="8458987127502506209">Ota Brave-suojaus käyttöön</translation>
 <translation id="7509914170164691086">Suojaukset ovat käytössä <ph name="LINK_BEFORE"/>kohteelle<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Muodostetaan sinulle yhteys!
     paina Tab ja sitten Enter vaihtaaksesi avoimeen välilehteen</translation>
 <translation id="1538335063514960365">Avaa tässä -painike, paina Enter avataksesi tämän URL-osoitteen nykyisessä välilehdessä sen sijaan, että vaihdat
     olemassa olevaan välilehteen</translation>
-<translation id="451189393813405346">Kysy Leolta</translation>
+<translation id="451189393813405346">Kysy AI Wize Chatlta</translation>
 </translationbundle>

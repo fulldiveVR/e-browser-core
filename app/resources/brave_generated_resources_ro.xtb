@@ -334,7 +334,7 @@ Sau modificați permisinile ulterior în <ph name="SETTINGS_EXTENIONS_LINK"/>.</
 <translation id="2858138569776157458">Site-uri de top</translation>
 <translation id="7859704718976024901">Istoric de navigare</translation>
 <translation id="8820817407110198400">Bookmark</translation>
-<translation id="7310387888625228830">Asistentul IA Leo</translation>
+<translation id="7310387888625228830">Asistentul IA AI Wize Chat</translation>
 <translation id="5222974844674487962">Afișați butonul AI Wize News</translation>
 <translation id="383007806262310953">Afișează bara de marcaje</translation>
 <translation id="4054323497808446566">Bara de marcaje este vizibilă pe toate paginile</translation>
@@ -718,14 +718,14 @@ Notă: Dacă se selectează nodul local, resursa va fi solicitată direct de pe 
 <translation id="3095201688102519917">Avertizează-mă înainte de a închide o fereastră cu mai multe file</translation>
 <translation id="7120553802660696133">Închideți fereastra la închiderea ultimei file</translation>
 <translation id="7984721311211272523">Dezactivați funcția silențioasă în pictogramele de difuzoare din file</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Afișați pictograma Leo în bara laterală</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Afișați pictograma AI Wize Chat în bara laterală</translation>
 <translation id="8172263161008556851">Afișați mesajele sugerate în conversație</translation>
-<translation id="1014480593522400586">Ștergeți datele Leo</translation>
-<translation id="8681157601856387010">Resetarea asistentului Leo necesită acceptarea folosirii AI Wize
-Leo în viitor și va șterge istoricul de chat. Prin ștergerea
+<translation id="1014480593522400586">Ștergeți datele AI Wize Chat</translation>
+<translation id="8681157601856387010">Resetarea asistentului AI Wize Chat necesită acceptarea folosirii AI Wize
+AI Wize Chat în viitor și va șterge istoricul de chat. Prin ștergerea
 istoricului de chat se vor șterge toate conversațiile anterioare cu AI Wize
-Leo. Această acțiune nu poate fi anulată.</translation>
+AI Wize Chat. Această acțiune nu poate fi anulată.</translation>
 <translation id="8157373421434119674">Istoric de date și chat</translation>
 <translation id="614530507403667291">Model implicit pentru conversații noi</translation>
 <translation id="349846214503465941">Activați Lista de redare</translation>

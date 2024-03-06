@@ -334,7 +334,7 @@ Eller ändra senare på <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2858138569776157458">Populärt</translation>
 <translation id="7859704718976024901">Webbhistorik</translation>
 <translation id="8820817407110198400">Bokmärkesfältet</translation>
-<translation id="7310387888625228830">Leo AI-assistent</translation>
+<translation id="7310387888625228830">AI Wize Chat AI-assistent</translation>
 <translation id="5222974844674487962">Visa AI Wize News-knapp</translation>
 <translation id="383007806262310953">Visa bokmärkesfältet</translation>
 <translation id="4054323497808446566">Bokmärkesfältet är synligt på alla sidor</translation>
@@ -718,14 +718,14 @@ Obs: Om lokal nod är vald kommer resurs att begäras direkt från din dator och
 <translation id="3095201688102519917">Varna mig innan fönster med flera flikar stängs</translation>
 <translation id="7120553802660696133">Stäng fönstret när du stänger den sista fliken</translation>
 <translation id="7984721311211272523">Inaktivera funktionen Ljud av för högtalarikoner på flikar</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Visa Leo-ikonen i sidofältet</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Visa AI Wize Chat-ikonen i sidofältet</translation>
 <translation id="8172263161008556851">Visa föreslagna uppmaningar i konversationen</translation>
-<translation id="1014480593522400586">Rensa Leo-data</translation>
-<translation id="8681157601856387010">För att återställa Leo-assistenten måste du välja att använda AI Wize
-Leo i framtiden och det kommer också att rensa din chatthistorik. När din
+<translation id="1014480593522400586">Rensa AI Wize Chat-data</translation>
+<translation id="8681157601856387010">För att återställa AI Wize Chat-assistenten måste du välja att använda AI Wize
+AI Wize Chat i framtiden och det kommer också att rensa din chatthistorik. När din
 chatthistorik rensas raderas alla dina tidigare konversationer med AI Wize
-Leo. Det går inte att ångra den här åtgärden.</translation>
+AI Wize Chat. Det går inte att ångra den här åtgärden.</translation>
 <translation id="8157373421434119674">Data och chatthistorik</translation>
 <translation id="614530507403667291">Standardmodell för nya konversationer</translation>
 <translation id="349846214503465941">Aktivera spellista</translation>

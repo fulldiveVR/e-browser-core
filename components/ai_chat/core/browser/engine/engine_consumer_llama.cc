@@ -24,7 +24,7 @@
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"
-#include "brave/components/ai_chat/core/browser/engine/remote_completion_client.h"
+#include "brave/components/ai_chat/core/browser/engine/remote_completion_openai_client.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "components/grit/brave_components_strings.h"
@@ -251,7 +251,7 @@ EngineConsumerLlamaRemote::EngineConsumerLlamaRemote(
   DCHECK(!model.name.empty());
   base::flat_set<std::string_view> stop_sequences(kStopSequences.begin(),
                                                   kStopSequences.end());
-  api_ = std::make_unique<RemoteCompletionClient>(
+  api_ = std::make_unique<RemoteCompletionOpenAIClient>(
       model.name, stop_sequences, url_loader_factory, credential_manager);
 
   needs_general_seed_ = base::StartsWith(model.name, "llama-2");

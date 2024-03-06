@@ -1831,25 +1831,25 @@
 <translation id="1199355487114804640">Cheza/Sitisha</translation>
 <translation id="1689210457482459023">Punguza kasi ya kucheza tena</translation>
 <translation id="5872363163901278000">Ongeza kasi ya kucheza tena</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Kipengele cha kufupisha kwa sasa kinapatikana tu kwa makala teule na kurasa nyingine za wavuti zenye maudhui marefu.</translation>
 <translation id="2346991295632453064">Kubali na uanze</translation>
 <translation id="1223498995510244364">Fupisha</translation>
-<translation id="7491773233732232424">Kuhusu Leo</translation>
-<translation id="70442873931504163">Brave Leo ni mratibu mahiri wa AI ambaye anaweza kufupisha kurasa za wavuti, kunakili maneno yanayosemwa kwenye video, na kujibu maswali. AI Wiz Leo Inayolipiwa hutumia <ph name="LINK_BEFORE"/>miundo bora ya AI <ph name="LINK_AFTER"/> kutoa majibu yenye usahihi zaidi, na hutoa ufikiaji wa mapema wa vipengele vipya.</translation>
+<translation id="7491773233732232424">Kuhusu AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat ni mratibu mahiri wa AI ambaye anaweza kufupisha kurasa za wavuti, kunakili maneno yanayosemwa kwenye video, na kujibu maswali. AI Wize Chat Inayolipiwa hutumia <ph name="LINK_BEFORE"/>miundo bora ya AI <ph name="LINK_AFTER"/> kutoa majibu yenye usahihi zaidi, na hutoa ufikiaji wa mapema wa vipengele vipya.</translation>
 <translation id="3055739528128372229">Usahihi wa majibu hauhakikishwi, na yanaweza kujumuisha taarifa zisizo sahihi, zinazopotosha au za uwongo. Usiwasilishe maelezo nyeti au ya faragha, na uwe mwangalifu kuhusiana na majibu yoyote yanayohusiana na afya, fedha, usalama wa binafsi au mada kama hizo.</translation>
-<translation id="7297681068636289435">Leo haikusanyi vitambulishi kama vile Anwani yako ya IP inayoweza kuunganishwa nawe. Hakuna data ya binafsi inayohifadhiwa na muundo wa AI au wahusika wengine wowote wanaotoa muundo.</translation>
+<translation id="7297681068636289435">AI Wize Chat haikusanyi vitambulishi kama vile Anwani yako ya IP inayoweza kuunganishwa nawe. Hakuna data ya binafsi inayohifadhiwa na muundo wa AI au wahusika wengine wowote wanaotoa muundo.</translation>
 <translation id="7839853125981164613">Weka kidokezo hapa</translation>
 <translation id="334325425115922031">Ufuatiliaji uliopendekezwa</translation>
 <translation id="4524675003624341892">Pendekeza maswali...</translation>
 <translation id="4567071417854988869">Fupisha video hii</translation>
 <translation id="7921782882718083488">Fupisha ukurasa huu</translation>
-<translation id="7932221068776853847">Tenganisha ili kuacha kutuma maudhui ya ukurasa huu kwenye Leo na uanzishe mazungumzo mapya</translation>
-<translation id="1167803637855350748">Kulikuwa na hitilafu ya mtandao kuunganisha kwenye Leo, angalia muunganisho wano na ujaribu tena.</translation>
-<translation id="5095201428204952524">Leo ina shughuli nyingi sana. Tafadhali jaribu tena baada ya dakika chache.</translation>
+<translation id="7932221068776853847">Tenganisha ili kuacha kutuma maudhui ya ukurasa huu kwenye AI Wize Chat na uanzishe mazungumzo mapya</translation>
+<translation id="1167803637855350748">Kulikuwa na hitilafu ya mtandao kuunganisha kwenye AI Wize Chat, angalia muunganisho wano na ujaribu tena.</translation>
+<translation id="5095201428204952524">AI Wize Chat ina shughuli nyingi sana. Tafadhali jaribu tena baada ya dakika chache.</translation>
 <translation id="7144878232160441200">Jaribu tena</translation>
-<translation id="7202619923031933110">Habari, jina langu ni Leo. Mimi ni msaidizi kamili wa AI wa Brave. Ninawezeshwa na Mixtral 7B, muundo ulioundwa na Mistral AI ili kushughulikia kazi ngumu.</translation>
-<translation id="2489317965865266353">Hujambo, mimi ni Leo. Ninapangishwa na AI Wiz na kuwezeshwa na Claude Instant, muundo ulioundwa na Anthropic ili kuwezesha kazi za kuchakata mazungumzo na matini.</translation>
+<translation id="7202619923031933110">Habari, jina langu ni AI Wize Chat. Mimi ni msaidizi kamili wa AI wa Brave. Ninawezeshwa na Mixtral 7B, muundo ulioundwa na Mistral AI ili kushughulikia kazi ngumu.</translation>
+<translation id="2489317965865266353">Hujambo, mimi ni AI Wize Chat. Ninapangishwa na AI Wiz na kuwezeshwa na Claude Instant, muundo ulioundwa na Anthropic ili kuwezesha kazi za kuchakata mazungumzo na matini.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> kutoka <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Gumzo</translation>
 <translation id="2961040541145689181">Gumzo jipya</translation>
@@ -1862,7 +1862,7 @@
 <translation id="1239767708151339890">Ufikiaji wa LLM bora za tasnia</translation>
 <translation id="8021579987620496265">Vikomo vya juu vya kiwango</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /mwezi</translation>
-<translation id="377376641316998425">Fungua uwezo kamili wa Leo</translation>
+<translation id="377376641316998425">Fungua uwezo kamili wa AI Wize Chat</translation>
 <translation id="8363148882096737034">Anthropic Claude + zaidi zija karibuni</translation>
 <translation id="886527905046308697">Ufikiaji uliopewa kipaumbele na vikomo vya juu vya majibu</translation>
 <translation id="1068954060985569277">Kipindi cha akaunti yako ya AI Wiz kimeisha muda. Tafadhali tembelea ukurasa wako wa akaunti ili kufungua upya, kisha urudi ili kutumia vipengele vinavyolipiwa.</translation>
@@ -1876,22 +1876,22 @@
 <translation id="8442999546461118871">Chagua mada yako ya majibu</translation>
 <translation id="9018766373792005944">Je, maoni yako ni kuhusu nini?</translation>
 <translation id="7355096922131918313">Toa maoni hapa</translation>
-<translation id="3027575440738035995">Leo Inayolipiwa hutoa ufikiaji wa seti pana ya miundo ya lugha ili kutoa hata usahihi zaidi wa majibu. <ph name="LINK_BEFORE"/>Pata habari zaidi<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Inayolipiwa hutoa ufikiaji wa seti pana ya miundo ya lugha ili kutoa hata usahihi zaidi wa majibu. <ph name="LINK_BEFORE"/>Pata habari zaidi<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Haisaidii</translation>
 <translation id="2976167228906046828">Si sahihi</translation>
 <translation id="1183055847065865059">Si salama/inadhuru</translation>
 <translation id="7138678301420049075">Nyingine</translation>
 <translation id="2313959174679245365">Ukadiriaji wako haukuweza kuwasilishwa, tafadhali angalia muunganisho wa mtandao na ujaribu tena</translation>
 <translation id="98413980871833152">Maoni yako hayakuweza kuwasilishwa, tafadhali angalia muunganisho wa mtandao na ujaribu tena</translation>
-<translation id="8742658901413346500">Mazungumzo haya ni marefu na Leo anaweza kuanza kusahau mambo karibuni. Unaweza kupata mazungumzo marefu kwa kubadili hadi muundo unaolipiwa, au unaweza kufuta gumzo ili kuweka upya.</translation>
+<translation id="8742658901413346500">Mazungumzo haya ni marefu na AI Wize Chat anaweza kuanza kusahau mambo karibuni. Unaweza kupata mazungumzo marefu kwa kubadili hadi muundo unaolipiwa, au unaweza kufuta gumzo ili kuweka upya.</translation>
 <translation id="7550152963854770123">Futa Gumzo</translation>
-<translation id="7494736170250048402">Tumia Leo ujumbe</translation>
-<translation id="4110772752544684964">Ukurasa ni mrefu sana kwa Leo. Muktadha fulani unaweza kukosekana kwenye mazungumzo.</translation>
-<translation id="4370698775470316661">Mazungumzo haya ni marefu sana na hayawezi kuendelea. Kunaweza kuwa na miundo mingine inayopatikana ambako Leo ana uwezo wa kudumisha usahihi kwa mazungumzo marefu.</translation>
+<translation id="7494736170250048402">Tumia AI Wize Chat ujumbe</translation>
+<translation id="4110772752544684964">Ukurasa ni mrefu sana kwa AI Wize Chat. Muktadha fulani unaweza kukosekana kwenye mazungumzo.</translation>
+<translation id="4370698775470316661">Mazungumzo haya ni marefu sana na hayawezi kuendelea. Kunaweza kuwa na miundo mingine inayopatikana ambako AI Wize Chat ana uwezo wa kudumisha usahihi kwa mazungumzo marefu.</translation>
 <translation id="8193130769524604031">Kazi za juu za gumzo</translation>
 <translation id="3185367320601718531">Uzalishaji wa mazungumzo na matini</translation>
-<translation id="3965507912994218570">Mipangilio ya Leo</translation>
-<translation id="1037324977127422019">Habari, jina langu ni Leo!</translation>
+<translation id="3965507912994218570">Mipangilio ya AI Wize Chat</translation>
+<translation id="1037324977127422019">Habari, jina langu ni AI Wize Chat!</translation>
 <translation id="8930348081963284873">Msaidizi jasusi anayewezeshwa na AI, aliyejengwa ndani ya Brave.</translation>
 <translation id="3528849152231418380">Unahitaji usaidizi wa tovuti?</translation>
 <translation id="1558192229187362674">Ninaweza kukusaidia kufupisha makala, kupanua maudhui ya tovuti na mengi zaidi.</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">Niulize chochote! Tunaweza kuzungumza kuhusu mada yoyote unayotaka. Daima ninajifunza na kujiboresha ili kutoa majibu bora zaidi.</translation>
 <translation id="989329677470075843">Mkataba wa faragha</translation>
 <translation id="1173570303649278801">Tumia muktadha wa ukurasa kwa majibu</translation>
-<translation id="8599503173207256429">Washa ili kuuliza kuhusu ukurasa huu. Maudhui yake yatatumwa kwa AI Wiz Leo pamoja na ujumbe wako.</translation>
+<translation id="8599503173207256429">Washa ili kuuliza kuhusu ukurasa huu. Maudhui yake yatatumwa kwa AI Wize Chat pamoja na ujumbe wako.</translation>
 <translation id="6303294677342628402">Ulinzi</translation>
 <translation id="8458987127502506209">Wezesha Ulinzi wa Brave</translation>
 <translation id="7509914170164691086">Ngao Zinatumika <ph name="LINK_BEFORE"/>kwa<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Acha tukuunganishe!
     bonyeza Kichupo kisha Ingiza ili kubadili hadi kichupo ambacho kimefunguliwa</translation>
 <translation id="1538335063514960365">Kitufe cha Fungua hapa, bonyeza Ingiza ili kufungua url hii kwenye kichupo cha sasa, badala ya kubadili hadi
     kichupo kilichopo</translation>
-<translation id="451189393813405346">Uliza Leo</translation>
+<translation id="451189393813405346">Uliza AI Wize Chat</translation>
 </translationbundle>

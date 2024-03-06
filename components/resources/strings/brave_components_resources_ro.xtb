@@ -1832,25 +1832,25 @@ other {# surse}
 <translation id="1199355487114804640">Redare/Pauză</translation>
 <translation id="1689210457482459023">Scădeți viteza de redare</translation>
 <translation id="5872363163901278000">Creșteți viteza de redare</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">Funcția de rezumare este momentan disponibilă doar pentru anumite articole și alte pagini web în format lung.</translation>
 <translation id="2346991295632453064">Acceptați și începeți</translation>
 <translation id="1223498995510244364">Rezumați</translation>
-<translation id="7491773233732232424">Despre Leo</translation>
-<translation id="70442873931504163">Brave Leo este un asistent inteligent de IA care oferă rezumate pentru paginile web, care transcrie videoclipuri și răspunde la întrebări. AI Wiz Leo Premium folosește <ph name="LINK_BEFORE"/>modele IA<ph name="LINK_AFTER"/> pentru răspunsuri și mai nuanțate, oferindu-vă acces timpuriu la funcții noi.</translation>
+<translation id="7491773233732232424">Despre AI Wize Chat</translation>
+<translation id="70442873931504163">AI Wize Chat este un asistent inteligent de IA care oferă rezumate pentru paginile web, care transcrie videoclipuri și răspunde la întrebări. AI Wize Chat Premium folosește <ph name="LINK_BEFORE"/>modele IA<ph name="LINK_AFTER"/> pentru răspunsuri și mai nuanțate, oferindu-vă acces timpuriu la funcții noi.</translation>
 <translation id="3055739528128372229">Acuratețea răspunsurilor nu este garantată, acestea putând conține informații imprecise, înșelătoare sau false. Nu trimiteți informații sensibile sau confidențiale și manifestați prudență în cazul întrebărilor legate de sănătate, finanțe, siguranță personală etc.</translation>
-<translation id="7297681068636289435">Leo nu colectează elemente de identificare, precum adresa IP, care pot fi asociate cu dumneavoastră. Modelul de IA sau furnizorii de modele terțe nu rețin niciun fel de date cu caracter personal.</translation>
+<translation id="7297681068636289435">AI Wize Chat nu colectează elemente de identificare, precum adresa IP, care pot fi asociate cu dumneavoastră. Modelul de IA sau furnizorii de modele terțe nu rețin niciun fel de date cu caracter personal.</translation>
 <translation id="7839853125981164613">Introduceți o întrebare aici</translation>
 <translation id="334325425115922031">Întrebări suplimentare sugerate</translation>
 <translation id="4524675003624341892">Sugerați întrebări...</translation>
 <translation id="4567071417854988869">Rezumați acest videoclip</translation>
 <translation id="7921782882718083488">Rezumați această pagină</translation>
-<translation id="7932221068776853847">Deconectați pentru a întrerupe transmiterea conținutul acestei pagini la Leo și începeți o conversație nouă</translation>
-<translation id="1167803637855350748">A apărut o problemă de rețea în timpul conectării la Leo. Verificați-vă conexiunea și încercați din nou.</translation>
-<translation id="5095201428204952524">Leo e prea ocupat momentan. Încercați din nou în câteva minute.</translation>
+<translation id="7932221068776853847">Deconectați pentru a întrerupe transmiterea conținutul acestei pagini la AI Wize Chat și începeți o conversație nouă</translation>
+<translation id="1167803637855350748">A apărut o problemă de rețea în timpul conectării la AI Wize Chat. Verificați-vă conexiunea și încercați din nou.</translation>
+<translation id="5095201428204952524">AI Wize Chat e prea ocupat momentan. Încercați din nou în câteva minute.</translation>
 <translation id="7144878232160441200">Reîncearcă</translation>
-<translation id="7202619923031933110">Bună, sunt Leo. Sunt un asistent IA oferit de AI Wiz și structurat pe Mixtral 70B, un model creat de Mistral AI pentru a gestiona sarcini complexe.</translation>
-<translation id="2489317965865266353">Bună, sunt Leo. Sunt un model oferit prin proxy de AI Wiz și structurat pe Claude Instant, un model creat de Anthropic pentru sarcini conversaționale și de procesare de text.</translation>
+<translation id="7202619923031933110">Bună, sunt AI Wize Chat. Sunt un asistent IA oferit de AI Wiz și structurat pe Mixtral 70B, un model creat de Mistral AI pentru a gestiona sarcini complexe.</translation>
+<translation id="2489317965865266353">Bună, sunt AI Wize Chat. Sunt un model oferit prin proxy de AI Wiz și structurat pe Claude Instant, un model creat de Anthropic pentru sarcini conversaționale și de procesare de text.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> oferit de <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Chat nou</translation>
@@ -1862,7 +1862,7 @@ other {# surse}
 <translation id="1239767708151339890">Acces la cele mai bune modele de limbaj din domeniu</translation>
 <translation id="8021579987620496265">Limite de rate mai mari</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> /lună</translation>
-<translation id="377376641316998425">Deblocați întregul potențial al lui Leo</translation>
+<translation id="377376641316998425">Deblocați întregul potențial al lui AI Wize Chat</translation>
 <translation id="8363148882096737034">Anthropic Claude + mai multe în curând</translation>
 <translation id="886527905046308697">Acces prioritar și limite de răspuns crescute</translation>
 <translation id="1068954060985569277">Sesiunea dvs. de AI Wiz a expirat. Accesați pagina contului pentru a reîmprospăta, apoi reveniți pentru a folosi funcțiile premium.</translation>
@@ -1876,22 +1876,22 @@ other {# surse}
 <translation id="8442999546461118871">Selectați domeniul feedbackului</translation>
 <translation id="9018766373792005944">Despre ce e feedbackul?</translation>
 <translation id="7355096922131918313">Oferiți feedback aici</translation>
-<translation id="3027575440738035995">Leo Premium oferă acces la un set extins de modele de limbaj pentru și mai multă precizie a răspunsurilor. <ph name="LINK_BEFORE"/>Aflați mai multe<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium oferă acces la un set extins de modele de limbaj pentru și mai multă precizie a răspunsurilor. <ph name="LINK_BEFORE"/>Aflați mai multe<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Inutil</translation>
 <translation id="2976167228906046828">Incorect</translation>
 <translation id="1183055847065865059">Nesigur/dăunător</translation>
 <translation id="7138678301420049075">Altele</translation>
 <translation id="2313959174679245365">Evaluarea nu a putut fi transmisă, verificați conexiunea rețelei și încercați din nou</translation>
 <translation id="98413980871833152">Feedbackul nu a putut fi transmis, verificați conexiunea rețelei și încercați din nou</translation>
-<translation id="8742658901413346500">Această conversație e lungă și Leo ar putea începe să uite în curând. Puteți obține conversații mai lungi comutând la un model premium sau puteți șterge conversația pentru a o reseta.</translation>
+<translation id="8742658901413346500">Această conversație e lungă și AI Wize Chat ar putea începe să uite în curând. Puteți obține conversații mai lungi comutând la un model premium sau puteți șterge conversația pentru a o reseta.</translation>
 <translation id="7550152963854770123">Ștergeți conversația</translation>
-<translation id="7494736170250048402">Trimiteți-i un mesaj lui Leo</translation>
-<translation id="4110772752544684964">Această pagină este prea lungă pentru Leo. E posibil să lipsească context din conversație.</translation>
-<translation id="4370698775470316661">Această conversație este prea lungă și nu mai poate continua. Ar putea exista alte modele disponibile cu care Leo poate menține acuratețea pentru conversații mai lungi.</translation>
+<translation id="7494736170250048402">Trimiteți-i un mesaj lui AI Wize Chat</translation>
+<translation id="4110772752544684964">Această pagină este prea lungă pentru AI Wize Chat. E posibil să lipsească context din conversație.</translation>
+<translation id="4370698775470316661">Această conversație este prea lungă și nu mai poate continua. Ar putea exista alte modele disponibile cu care AI Wize Chat poate menține acuratețea pentru conversații mai lungi.</translation>
 <translation id="8193130769524604031">Sarcini de chat avansate</translation>
 <translation id="3185367320601718531">Conversație și generare de text</translation>
-<translation id="3965507912994218570">Setări Leo</translation>
-<translation id="1037324977127422019">Bună, sunt Leo!</translation>
+<translation id="3965507912994218570">Setări AI Wize Chat</translation>
+<translation id="1037324977127422019">Bună, sunt AI Wize Chat!</translation>
 <translation id="8930348081963284873">Un asistent de inteligență artificială, integrat direct în Brave.</translation>
 <translation id="3528849152231418380">Aveți nevoie de ajutor cu un site web/</translation>
 <translation id="1558192229187362674">Vă pot ajuta cu rezumate de articole, cu extinderea conținutului unui site web și cu multe altele.</translation>
@@ -1900,7 +1900,7 @@ other {# surse}
 <translation id="8857222718794549840">Întrebați-mă orice! Putem discuta despre orice subiect. Învăț și fac eforturi continue să mă îmbunătățesc pentru a oferi răspunsuri cât mai pertinente.</translation>
 <translation id="989329677470075843">Acord de confidențialitate</translation>
 <translation id="1173570303649278801">Folosiți contextul paginii pentru răspunsuri</translation>
-<translation id="8599503173207256429">Activați pentru a întreba despre această pagină. Conținutul său îi va fi trimis lui AI Wiz Leo, alături de mesajele dvs.</translation>
+<translation id="8599503173207256429">Activați pentru a întreba despre această pagină. Conținutul său îi va fi trimis lui AI Wize Chat, alături de mesajele dvs.</translation>
 <translation id="6303294677342628402">Scuturi</translation>
 <translation id="8458987127502506209">Activați scuturile Brave</translation>
 <translation id="7509914170164691086">Scuturile sunt ACTIVE <ph name="LINK_BEFORE"/>pentru<ph name="LINK_AFTER"/></translation>
@@ -2056,5 +2056,5 @@ Vrem să vă menținem conectat(ă)!
  apăsați tasta Tab, apoi Enter pentru a comuta la fila deschisă</translation>
 <translation id="1538335063514960365">Butonul Descideți aici, apăsați tasta Enter pentru a deschide acest url în fila curentă, în loc să comutați la
  fila existentă</translation>
-<translation id="451189393813405346">Întrebați-l pe Leo</translation>
+<translation id="451189393813405346">Întrebați-l pe AI Wize Chat</translation>
 </translationbundle>
