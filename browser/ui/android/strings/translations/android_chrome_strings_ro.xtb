@@ -22,13 +22,13 @@
 <translation id="1110914759170138831">Evidențierea a fost scurtată</translation>
 <translation id="1111673857033749125">Marcajele salvate pe alte dispozitive vor apărea aici.</translation>
 <translation id="1113597929977215864">Arată afișarea simplificată</translation>
-<translation id="4470276443668654888">Metodele de plată și adresele din Google Pay nu vor fi criptate. Istoricul de navigare din AI Wiz nu se va sincroniza.
+<translation id="4470276443668654888">Metodele de plată și adresele din Google Pay nu vor fi criptate. Istoricul de navigare din AI Wize nu se va sincroniza.
 Numai un utilizator care deține expresia ta de acces îți poate citi datele criptate. Expresia de acces nu este trimisă la sau stocată de Brave. Dacă uiți expresia de acces sau vrei să modifici setarea, va trebui să resetezi sincronizarea. <ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Nu te protejează împotriva site-urilor, descărcărilor și extensiilor periculoase. Te vei bucura în continuare de protecția oferită de Navigarea sigură, dacă este disponibilă, în alte servicii Brave, cum ar fi Gmail și Căutarea.</translation>
 <translation id="1129510026454351943">Detalii: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Nu oferi traducerea acestor site-uri</translation>
 <translation id="1145536944570833626">Șterge datele existente.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> se va deschide în Brave. Dacă alegi să continui, ești de acord cu <ph name="BEGIN_LINK1"/>Termenii și condițiile Brave<ph name="END_LINK1"/> și cu <ph name="BEGIN_LINK2"/>Termenii și condițiile suplimentare pentru AI Wiz și Sistemul de operare Brave<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> se va deschide în Brave. Dacă alegi să continui, ești de acord cu <ph name="BEGIN_LINK1"/>Termenii și condițiile Brave<ph name="END_LINK1"/> și cu <ph name="BEGIN_LINK2"/>Termenii și condițiile suplimentare pentru AI Wize și Sistemul de operare Brave<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Folosește parola <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Redenumește</translation>
 <translation id="7947699437047020219">Brave va solicita site-ul mobil când ecranul este îngust</translation>
@@ -50,7 +50,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="1240288207750131269">Se încarcă <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Pentru a continua, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> va permite accesul site-ului la numele, adresa de e-mail și fotografia ta de profil. Consultă <ph name="BEGIN_LINK1"/>politica de confidențialitate<ph name="END_LINK1"/> și <ph name="BEGIN_LINK2"/>termenii și condițiile<ph name="END_LINK2"/> site-ului.</translation>
 <translation id="124116460088058876">Mai multe limbi</translation>
-<translation id="4078574862195461280">Parolele se vor șterge din Managerul de parole AI Wiz pentru <ph name="CHROME_CHANNEL"/>. Vei păstra fișierul cu parole pe care tocmai l-ai descărcat.</translation>
+<translation id="4078574862195461280">Parolele se vor șterge din Managerul de parole AI Wize pentru <ph name="CHROME_CHANNEL"/>. Vei păstra fișierul cu parole pe care tocmai l-ai descărcat.</translation>
 <translation id="1242883863226959074">dispozitiv</translation>
 <translation id="124678866338384709">Închide fila actuală</translation>
 <translation id="1246905108078336582">Elimini sugestia din clipboard?</translation>
@@ -131,7 +131,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="1710099199314114079">Comută sau închide filele</translation>
 <translation id="1718835860248848330">Ultima oră</translation>
 <translation id="1724977129262658800">Deblochează pentru a modifica parola</translation>
-<translation id="6493900814829428590">Poți să navighezi și să cauți mai repede când AI Wiz preîncarcă pagini pe care crede că le-ai putea accesa</translation>
+<translation id="6493900814829428590">Poți să navighezi și să cauți mai repede când AI Wize preîncarcă pagini pe care crede că le-ai putea accesa</translation>
 <translation id="1749561566933687563">Sincronizează marcajele</translation>
 <translation id="1750259112639922169">Grup de file – <ph name="TAB_COUNT"/> file</translation>
 <translation id="17513872634828108">File deschise</translation>
@@ -166,7 +166,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="1944535645109964458">Nu sunt disponibile chei de acces</translation>
 <translation id="1952172573699511566">Site-urile vor afișa textul în limba ta preferată, dacă este posibil.</translation>
 <translation id="1959679933317802873">Se așteaptă conținutul</translation>
-<translation id="3968054912784331254">Actualizările AI Wiz nu mai sunt acceptate pentru această versiune de Android</translation>
+<translation id="3968054912784331254">Actualizările AI Wize nu mai sunt acceptate pentru această versiune de Android</translation>
 <translation id="1963976881984600709">Protecție standard</translation>
 <translation id="1966710179511230534">Actualizați detaliile de conectare.</translation>
 <translation id="197288927597451399">Păstrează</translation>
@@ -210,7 +210,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="218608176142494674">Trimitere</translation>
 <translation id="2194856509914051091">De reținut</translation>
 <translation id="22091350895006575">Adaugă un nume de utilizator</translation>
-<translation id="4075202346699640887">Dacă deschizi AI Wiz fără o blocare a profilului, parolele salvate și metodele de plată vor fi eliminate din mașină. Dacă folosești o blocare a profilului, aceste date sunt păstrate în siguranță.</translation>
+<translation id="4075202346699640887">Dacă deschizi AI Wize fără o blocare a profilului, parolele salvate și metodele de plată vor fi eliminate din mașină. Dacă folosești o blocare a profilului, aceste date sunt păstrate în siguranță.</translation>
 <translation id="2227444325776770048">Continuă ca <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Fereastră goală</translation>
 <translation id="223356358902285214">Activitatea de pe web și din aplicații</translation>
@@ -220,8 +220,8 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="4808014761134300692">Parolele tale sunt criptate pe dispozitiv înainte să se salveze în Managerul de parole Brave</translation>
 <translation id="2249635629516220541">Personalizează informațiile folosite de site-uri pentru a-ți afișa anunțuri</translation>
 <translation id="2259659629660284697">Exportă parolele…</translation>
-<translation id="8820144752830692527">Poți să alegi oricând ce să sincronizezi în <ph name="BEGIN_LINK1"/>setări<ph name="END_LINK1"/>. AI Wiz poate personaliza Căutarea și alte servicii pe baza istoricului.</translation>
-<translation id="781982477617612877">Conectează-te la contul AI Wiz pentru a verifica parolele</translation>
+<translation id="8820144752830692527">Poți să alegi oricând ce să sincronizezi în <ph name="BEGIN_LINK1"/>setări<ph name="END_LINK1"/>. AI Wize poate personaliza Căutarea și alte servicii pe baza istoricului.</translation>
+<translation id="781982477617612877">Conectează-te la contul AI Wize pentru a verifica parolele</translation>
 <translation id="2278052315791335171">Prin ștergerea acestei parole, nu va fi șters și contul de pe <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Adresa de facturare</translation>
 <translation id="228704530595896923">Lista cu opțiuni de permitere a accesului.</translation>
@@ -259,7 +259,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="2510106555128151389">Se instalează <ph name="WEBAPK_NAME"/>...</translation>
 <translation id="7222718784508482526">Pentru mai multe setări privind confidențialitatea, securitatea și colectarea datelor, consultă <ph name="BEGIN_LINK"/>Sincronizare și servicii Brave<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Foaie de dimensiune completă</translation>
-<translation id="284843628681142937">Trimite la AI Wiz adresele URL ale paginilor pe care le accesezi</translation>
+<translation id="284843628681142937">Trimite la AI Wize adresele URL ale paginilor pe care le accesezi</translation>
 <translation id="2527209463677295330">Dacă incluzi mai mult din textul paginii, ai putea vedea rezultate mai bune</translation>
 <translation id="2527779675047087889">Ascunde conținutul clipboardului</translation>
 <translation id="2532336938189706096">Vizualizare pe web</translation>
@@ -268,12 +268,12 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="2546283357679194313">Cookie-uri și date privind site-ul</translation>
 <translation id="2567385386134582609">IMAGINE</translation>
 <translation id="2567545343356994513">Protecție proactivă mai rapidă împotriva site-urilor, descărcărilor și extensiilor periculoase</translation>
-<translation id="5079947353572974060">Oferă trimiterea paginilor în alte limbi la AI Wiz Traducere</translation>
+<translation id="5079947353572974060">Oferă trimiterea paginilor în alte limbi la AI Wize Traducere</translation>
 <translation id="2571834852878229351">Creez una proprie</translation>
-<translation id="6995512410824092085">Află cum să setezi AI Wiz ca browser prestabilit</translation>
+<translation id="6995512410824092085">Află cum să setezi AI Wize ca browser prestabilit</translation>
 <translation id="7242554556818074465">Conectează-te pe toate dispozitivele ca să vezi toate filele tale deschise în Brave</translation>
-<translation id="8661556138616664061">Conținut de la AI Wiz pentru tineri</translation>
-<translation id="2324920234469020158">Astfel, vor fi șterse cookie-urile, memoria cache și alte date ale site-urilor pe care AI Wiz nu le consideră importante.</translation>
+<translation id="8661556138616664061">Conținut de la AI Wize pentru tineri</translation>
+<translation id="2324920234469020158">Astfel, vor fi șterse cookie-urile, memoria cache și alte date ale site-urilor pe care AI Wize nu le consideră importante.</translation>
 <translation id="2587052924345400782">Este disponibilă o versiune mai nouă</translation>
 <translation id="2593272815202181319">Un singur spațiu</translation>
 <translation id="2603212228005142861">Conectează-te pentru a-ți gestiona preferințele</translation>
@@ -281,7 +281,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="2604446170045642109">Poți să dezactivezi tema întunecată pentru site-uri din setări.</translation>
 <translation id="2612676031748830579">Număr card</translation>
 <translation id="2625189173221582860">Parola a fost copiată</translation>
-<translation id="2634393460268044753">Trimite adresele URL ale site-urilor pe care le accesezi și un mic eșantion cu conținutul paginilor, descărcări, activități ale extensiilor și informații despre sistem la Navigarea sigură AI Wiz pentru a verifica dacă sunt dăunătoare.</translation>
+<translation id="2634393460268044753">Trimite adresele URL ale site-urilor pe care le accesezi și un mic eșantion cu conținutul paginilor, descărcări, activități ale extensiilor și informații despre sistem la Navigarea sigură AI Wize pentru a verifica dacă sunt dăunătoare.</translation>
 <translation id="2642087927315268160">Foaia de conectare din partea de jos este închisă.</translation>
 <translation id="2643064289437760082">Poți să ștergi oricând datele despre cuantificarea anunțurilor dacă ștergi datele de navigare</translation>
 <translation id="2647434099613338025">Adaugă o limbă</translation>
@@ -293,7 +293,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="265156376773362237">Preîncărcare standard</translation>
 <translation id="2656405586795711023">Aplicații web</translation>
 <translation id="2669454659051515572">Oricine folosește acest dispozitiv poate să vadă fișierele descărcate</translation>
-<translation id="5806087344347665213">Dacă un site încearcă să-ți fure parola sau descarci un fișier dăunător, AI Wiz poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către Brave</translation>
+<translation id="5806087344347665213">Dacă un site încearcă să-ți fure parola sau descarci un fișier dăunător, AI Wize poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către Brave</translation>
 <translation id="2702516483241149200">Nou: distribuie un link care derulează la acest text</translation>
 <translation id="3769942772151914580">Protecție proactivă în timp real împotriva site-urilor, descărcărilor și extensiilor periculoase, pe baza datelor de navigare trimise la Brave</translation>
 <translation id="2708226184420201102">Deschide în browserul <ph name="PRODUCT_NAME"/></translation>
@@ -321,12 +321,12 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="6324134303015966238">Brave preîncarcă paginile pe care este posibil să le accesezi, astfel încât să se încarce mai rapid când le accesezi</translation>
 <translation id="2856503607207334158">Nu te-ai conectat</translation>
 <translation id="2860954141821109167">Verifică dacă pe dispozitiv este activată o aplicație de telefon</translation>
-<translation id="6518254564747115579">Unele funcții AI Wiz nu vor mai fi disponibile</translation>
+<translation id="6518254564747115579">Unele funcții AI Wize nu vor mai fi disponibile</translation>
 <translation id="2869430948265924908">Pentru a proteja conținutul sensibil din mașină, trebuie să creezi o blocare a profilului mașinii.  Poți face acest lucru cu un cod PIN, un cod sau o parolă.</translation>
 <translation id="2870560284913253234">Site</translation>
 <translation id="2871733351037274014">Preîncarcă paginile</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> vrea să aprobi acest site:</translation>
-<translation id="6756656512757374876">Află mai multe despre <ph name="BEGIN_LINK"/>cum îți păstrează AI Wiz datele private<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Află mai multe despre <ph name="BEGIN_LINK"/>cum îți păstrează AI Wize datele private<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Despre Brave</translation>
 <translation id="2891154217021530873">Oprește încărcarea paginii</translation>
 <translation id="4013614219085422040">Brave poate folosi istoricul pentru a personaliza Căutarea și alte servicii Brave</translation>
@@ -338,12 +338,12 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="7339921667754113786">Platforma de notificări Brave</translation>
 <translation id="2912296070571964914">Gestionează subiectele care te interesează</translation>
 <translation id="2923908459366352541">Numele nu este valid</translation>
-<translation id="6355102470683871794">Stocarea AI Wiz <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Stocarea AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Tastatura nu se va schimba</translation>
 <translation id="6537665929855787038">Cu notificările Brave, totul este mai simplu</translation>
 <translation id="2940075786175545812">Opțiunea de a aproba sau nu un site</translation>
 <translation id="2942036813789421260">Fila de previzualizare este închisă</translation>
-<translation id="4700262879698141140">Se actualizează AI Wiz pentru a se conecta la alte dispozitive</translation>
+<translation id="4700262879698141140">Se actualizează AI Wize pentru a se conecta la alte dispozitive</translation>
 <translation id="2951071800649516099">Adaugă pagini la lista de lecturi pentru mai târziu</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> pagină necitită}few{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> pagini necitite}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> de pagini necitite}}</translation>
 <translation id="2961210776189273067">Titlu</translation>
@@ -360,8 +360,8 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="2996291259634659425">Creează o expresie de acces</translation>
 <translation id="2996809686854298943">Adresă URL obligatorie</translation>
 <translation id="2996932914629936323">Șterge istoricul de pe toate dispozitivele sincronizate</translation>
-<translation id="2019027298133375428">Când un site AI Wiz îți solicită să preîncarci în mod privat linkurile pe pagină, AI Wiz criptează și preîncarcă paginile prin intermediul serverelor AI Wiz fără cookie-uri. Astfel, identitatea ta este ascunsă pentru site-ul preîncărcat.</translation>
-<translation id="5730179015008010982">Adresele URL pe care le accesezi se trimit la AI Wiz pentru a anticipa site-urile pe care le-ai putea accesa în continuare și pentru a afișa informații suplimentare despre pagina pe care o accesezi</translation>
+<translation id="2019027298133375428">Când un site AI Wize îți solicită să preîncarci în mod privat linkurile pe pagină, AI Wize criptează și preîncarcă paginile prin intermediul serverelor AI Wize fără cookie-uri. Astfel, identitatea ta este ascunsă pentru site-ul preîncărcat.</translation>
+<translation id="5730179015008010982">Adresele URL pe care le accesezi se trimit la AI Wize pentru a anticipa site-urile pe care le-ai putea accesa în continuare și pentru a afișa informații suplimentare despre pagina pe care o accesezi</translation>
 <translation id="3016635187733453316">Verifică dacă dispozitivul este conectat la internet</translation>
 <translation id="3026955690410463085">Include linkul</translation>
 <translation id="3027644380269727216">Pe baza activității tale pe un site. Setarea este activată.</translation>
@@ -374,15 +374,15 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3038272154009688107">Vezi toate site-urile</translation>
 <translation id="3046945242843292318">Accesează mai rapid site-ul data viitoare</translation>
 <translation id="3055259925215945098">Marcajul a fost mutat</translation>
-<translation id="4163313568284712797">Brave primește informații despre modul în care folosești Brave, dar acestea nu pot fi asociate cu tine\n\nDacă AI Wiz se blochează, detaliile despre blocare pot include unele informații cu caracter personal\n\nDacă activezi sincronizarea, valorile pot să includă și informații despre adresele URL pe care le accesezi</translation>
+<translation id="4163313568284712797">Brave primește informații despre modul în care folosești Brave, dar acestea nu pot fi asociate cu tine\n\nDacă AI Wize se blochează, detaliile despre blocare pot include unele informații cu caracter personal\n\nDacă activezi sincronizarea, valorile pot să includă și informații despre adresele URL pe care le accesezi</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> marcaj}few{<ph name="BOOKMARKS_COUNT_MANY"/> marcaje}other{<ph name="BOOKMARKS_COUNT_MANY"/> de marcaje}}</translation>
 <translation id="6153252609477956632">Articole despre ceea ce te interesează în Brave</translation>
 <translation id="3066573403916685335">Mutați în jos</translation>
 <translation id="3070005020161560471">Tradu automat</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> se va deschide în Brave. Dacă alegi să continui, ești de acord cu <ph name="BEGIN_LINK1"/>Termenii și condițiile Brave<ph name="END_LINK1"/> și cu <ph name="BEGIN_LINK2"/>Termenii și condițiile suplimentare pentru AI Wiz și Sistemul de operare Brave<ph name="END_LINK2"/>. Se aplică și <ph name="BEGIN_LINK3"/>Politica de confidențialitate<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> se va deschide în Brave. Dacă alegi să continui, ești de acord cu <ph name="BEGIN_LINK1"/>Termenii și condițiile Brave<ph name="END_LINK1"/> și cu <ph name="BEGIN_LINK2"/>Termenii și condițiile suplimentare pentru AI Wize și Sistemul de operare Brave<ph name="END_LINK2"/>. Se aplică și <ph name="BEGIN_LINK3"/>Politica de confidențialitate<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Poți să salvezi pagini ca să le citești offline sau mai târziu</translation>
 <translation id="3091010850649238832">Afișează conținutul clipboardului</translation>
-<translation id="821565628224723530">Unele imagini sunt trimise la AI Wiz pentru îmbunătățirea descrierilor</translation>
+<translation id="821565628224723530">Unele imagini sunt trimise la AI Wize pentru îmbunătățirea descrierilor</translation>
 <translation id="3114507951000454849">Citește știrile de azi <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Anunțuri</translation>
 <translation id="3134784203083076891">”</translation>
@@ -396,10 +396,10 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3207960819495026254">Marcată</translation>
 <translation id="3208584281581115441">Verifică acum</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> a fost șters</translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Istoricul căutărilor<ph name="END_LINK1"/> și <ph name="BEGIN_LINK2"/>alte tipuri de activități<ph name="END_LINK2"/> pot fi salvate în Contul AI Wiz dacă te-ai conectat. Le poți șterge oricând.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Istoricul căutărilor<ph name="END_LINK1"/> și <ph name="BEGIN_LINK2"/>alte tipuri de activități<ph name="END_LINK2"/> pot fi salvate în Contul AI Wize dacă te-ai conectat. Le poți șterge oricând.</translation>
 <translation id="321773570071367578">Dacă ai uitat expresia de acces sau dorești să modifici această setare, <ph name="BEGIN_LINK"/>resetează sincronizarea<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Pentru a sincroniza parolele, confirmă-ți identitatea</translation>
-<translation id="9210457680074341078">Dacă salvezi marcajele și în Contul Brave, poți să urmărești prețurile produselor în AI Wiz și să primești notificări când scad</translation>
+<translation id="9210457680074341078">Dacă salvezi marcajele și în Contul Brave, poți să urmărești prețurile produselor în AI Wize și să primești notificări când scad</translation>
 <translation id="9047551989591319903">Brave drept cheie de securitate</translation>
 <translation id="3232754137068452469">Aplicație web</translation>
 <translation id="3234978181857588512">Salvează pe dispozitiv</translation>
@@ -427,16 +427,16 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3341262203274374114">Nu se poate anula urmărirea. A apărut o eroare.</translation>
 <translation id="3359667936385849800">Folosește furnizorul de servicii actual</translation>
 <translation id="3373701465337594448">Când opțiunea este activată, aici apare o listă a site-urilor pe care le accesezi care estimează lucrurile care te interesează</translation>
-<translation id="2746024117903470217">Ca să trimiți această pagină pe alt dispozitiv, activează sincronizarea în setările AI Wiz pe celălalt dispozitiv</translation>
-<translation id="8801234437789558906">Marcajele, istoricul, parolele și alte date AI Wiz nu vor mai fi sincronizate cu Contul Brave</translation>
+<translation id="2746024117903470217">Ca să trimiți această pagină pe alt dispozitiv, activează sincronizarea în setările AI Wize pe celălalt dispozitiv</translation>
+<translation id="8801234437789558906">Marcajele, istoricul, parolele și alte date AI Wize nu vor mai fi sincronizate cu Contul Brave</translation>
 <translation id="3384347053049321195">Trimite imaginea</translation>
 <translation id="3387650086002190359">Descărcarea fișierului <ph name="FILE_NAME"/> nu a reușit din cauza unor erori privind sistemul de fișiere.</translation>
 <translation id="3389286852084373014">Textul este prea mare</translation>
 <translation id="3398320232533725830">Deschide managerul de marcaje</translation>
-<translation id="1081508498128395141">Mai multe pagini sunt preîncărcate. Este posibil ca paginile să fie preîncărcate prin serverele AI Wiz atunci când alte site-uri solicită acest lucru.</translation>
+<translation id="1081508498128395141">Mai multe pagini sunt preîncărcate. Este posibil ca paginile să fie preîncărcate prin serverele AI Wize atunci când alte site-uri solicită acest lucru.</translation>
 <translation id="3414952576877147120">Dimensiune:</translation>
 <translation id="3421726884497337397">Alege când sunt blocate cookie-urile terțe</translation>
-<translation id="5265419033369521352">Te protejează în AI Wiz și poate fi folosită pentru a spori securitatea în alte aplicații AI Wiz dacă te-ai conectat</translation>
+<translation id="5265419033369521352">Te protejează în AI Wize și poate fi folosită pentru a spori securitatea în alte aplicații AI Wize dacă te-ai conectat</translation>
 <translation id="3429160811076349561">Funcțiile de încercare sunt dezactivate</translation>
 <translation id="3430670036890315772">Dacă dezactivezi blocarea profilului, informațiile tale salvate vor fi șterse</translation>
 <translation id="3435465986463792564">Ai deschis multe ferestre? Gestionează-le de aici</translation>
@@ -444,7 +444,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3439276997620616816">Aici vei vedea filele recente</translation>
 <translation id="3443221991560634068">Reîncarcă pagina curentă</translation>
 <translation id="3444179773590444986">Trimiți feedback despre tema întunecată pentru site-uri?</translation>
-<translation id="7384339501748168186">Pentru a-ți proteja confidențialitatea, AI Wiz nu va completa automat parola în acest câmp.</translation>
+<translation id="7384339501748168186">Pentru a-ți proteja confidențialitatea, AI Wize nu va completa automat parola în acest câmp.</translation>
 <translation id="3474624961160222204">Continuă ca <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Poți alege motorul de căutare</translation>
 <translation id="3479552764303398839">Nu acum</translation>
@@ -453,7 +453,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Sortează după vechime</translation>
 <translation id="3507132249039706973">Protecția standard este activată</translation>
-<translation id="8669829441518807650">Offline. AI Wiz nu poate căuta actualizări.</translation>
+<translation id="8669829441518807650">Offline. AI Wize nu poate căuta actualizări.</translation>
 <translation id="3513704683820682405">Realitate augmentată</translation>
 <translation id="3518985090088779359">Acceptă și continuă</translation>
 <translation id="3521388823983121502">Nu poți folosi <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="3701515417135397388">Avertizează-mă dacă o parolă a fost compromisă printr-o încălcare a securității datelor</translation>
 <translation id="371230970611282515">Anticipează și te avertizează cu privire la evenimente periculoase înainte să aibă loc.</translation>
 <translation id="3714981814255182093">Deschide Bara de căutare</translation>
-<translation id="5805364706385912897">Această pagină folosește prea multă memorie, prin urmare AI Wiz a întrerupt-o.</translation>
+<translation id="5805364706385912897">Această pagină folosește prea multă memorie, prin urmare AI Wize a întrerupt-o.</translation>
 <translation id="3720422586473670527">Nu, mulțumesc</translation>
 <translation id="8397843425685839889">Tu și Brave</translation>
 <translation id="3737319253362202215">Setări de traducere</translation>
@@ -548,7 +548,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="4084682180776658562">Marcaj</translation>
 <translation id="4521874409998847950">De la <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>livrată de Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Poți folosi această tabletă pentru a te conecta la dispozitivul care afișează acest cod QR.</translation>
-<translation id="7268155614575494857">Pentru a ajuta Managerul de parole AI Wiz să-ți salveze informațiile de conectare, adaugă numele de utilizator pentru acest site</translation>
+<translation id="7268155614575494857">Pentru a ajuta Managerul de parole AI Wize să-ți salveze informațiile de conectare, adaugă numele de utilizator pentru acest site</translation>
 <translation id="4095146165863963773">Ștergi datele aplicației?</translation>
 <translation id="4095425503313512126">Navigarea și căutarea sunt mai rapide</translation>
 <translation id="4096227151372679484">Fluxul de salvare a marcajului deschis la jumătate din înălțime</translation>
@@ -556,7 +556,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="4108314971463891922">Urmărește</translation>
 <translation id="4108998448622696017">Detectează și te avertizează cu privire la evenimentele periculoase atunci când au loc.</translation>
 <translation id="4116038641877404294">Descarcă paginile pentru a le folosi offline</translation>
-<translation id="37459938731864814">Nu va trebui să reții parola. Ea se va salva în Managerul de parole AI Wiz pentru <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Nu va trebui să reții parola. Ea se va salva în Managerul de parole AI Wize pentru <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Fluxul de permisiune pentru notificări a fost deschis la înălțimea completă</translation>
 <translation id="4126285640274188657">Statistici privind paginile</translation>
 <translation id="4135200667068010335">Lista de dispozitive pe care să trimiți o filă este închisă.</translation>
@@ -574,7 +574,7 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{O filă pe acest dispozitiv}few{# file pe acest dispozitiv}other{# de file pe acest dispozitiv}}</translation>
 <translation id="4198423547019359126">Nu există locații de descărcare disponibile</translation>
 <translation id="4202218894997543208">Subiecte pe care le-ai blocat</translation>
-<translation id="1675646381334855139">Dacă permiți cookie-uri, AI Wiz le va folosi probabil pentru preîncărcare.</translation>
+<translation id="1675646381334855139">Dacă permiți cookie-uri, AI Wize le va folosi probabil pentru preîncărcare.</translation>
 <translation id="4216511743389425832">Ascultă pagina</translation>
 <translation id="4225725533026049334">Urmărești</translation>
 <translation id="4225895483398857530">Comanda rapidă spre bara de instrumente</translation>
@@ -619,16 +619,16 @@ Numai un utilizator care deține expresia ta de acces îți poate citi datele cr
 <translation id="4478161224666880173">Poți folosi contul <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> pe acest site. Pentru a continua, conectează-te la <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">Se instalează <ph name="MODULE"/> pentru Brave…</translation>
 <translation id="4484496141267039529">Nu există conexiune. Încearcă din nou mai târziu.</translation>
-<translation id="53119194224775367">Toate datele aplicației AI Wiz vor fi șterse definitiv. Sunt incluse toate fișierele, setările, conturile, bazele de date etc.</translation>
+<translation id="53119194224775367">Toate datele aplicației AI Wize vor fi șterse definitiv. Sunt incluse toate fișierele, setările, conturile, bazele de date etc.</translation>
 <translation id="3966104135245031874">Criptează parolele sincronizate folosind Contul Brave</translation>
 <translation id="4491323382106587961">Alege un cont. Este selectat <ph name="EMAIL"/>.</translation>
 <translation id="4508528996305412043">Meniul cardului din feed este deschis</translation>
 <translation id="4509501256689523862">În timp ce navighezi, personalizarea anunțurilor se bazează pe această setare, pe <ph name="BEGIN_LINK_1"/>Subiectele anunțurilor<ph name="END_LINK_1"/>, pe <ph name="BEGIN_LINK_2"/>setările pentru cookie-uri<ph name="END_LINK_2"/> și pe capacitatea site-ului pe care îl accesezi de a personaliza anunțurile</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{Acum # zi}few{Acum # zile}other{Acum # de zile}}</translation>
 <translation id="451872707440238414">Caută în marcaje</translation>
-<translation id="1664855196866195614">Datele selectate au fost eliminate din AI Wiz și de pe dispozitivele sincronizate.
+<translation id="1664855196866195614">Datele selectate au fost eliminate din AI Wize și de pe dispozitivele sincronizate.
 
-Contul AI Wiz poate să ofere alte forme ale istoricului de navigare, cum ar fi căutările și activitatea din alte servicii Brave, la <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Contul AI Wize poate să ofere alte forme ale istoricului de navigare, cum ar fi căutările și activitatea din alte servicii Brave, la <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">ultima oră</translation>
 <translation id="452750746583162491">Examinează datele sincronizate</translation>
 <translation id="4532845899244822526">Alege dosarul</translation>
@@ -679,7 +679,7 @@ Contul AI Wiz poate să ofere alte forme ale istoricului de navigare, cum ar fi 
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Parolele sunt salvate în Managerul de parole pe acest dispozitiv</translation>
 <translation id="4766678251456904326">Adaugă un cont pe dispozitiv</translation>
-<translation id="1996253762801922860">Lansăm o nouă funcție pentru confidențialitatea anunțurilor, numită cuantificarea anunțurilor. AI Wiz trimite numai informații foarte limitate între site-uri și aplicații, de exemplu, când ți s-a afișat un anunț, pentru a ajuta la măsurarea performanței anunțurilor.</translation>
+<translation id="1996253762801922860">Lansăm o nouă funcție pentru confidențialitatea anunțurilor, numită cuantificarea anunțurilor. AI Wize trimite numai informații foarte limitate între site-uri și aplicații, de exemplu, când ți s-a afișat un anunț, pentru a ajuta la măsurarea performanței anunțurilor.</translation>
 <translation id="4769095993849849966">Numele fișierului nou</translation>
 <translation id="4775646243557794597">S-au șters datele din <ph name="TIME_PERIOD"/></translation>
 <translation id="4778653490315793244">Nimic nou încă</translation>
@@ -705,13 +705,13 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="4864369630010738180">Se conectează...</translation>
 <translation id="5131234170665854056">Nu se poate instala <ph name="MODULE"/> pentru Brave</translation>
 <translation id="4871568871368204250">Dezactivează sincronizarea</translation>
-<translation id="2875466387677348954">Când opțiunea este dezactivată, vei vedea în continuare sugestii pe care AI Wiz le oferă local</translation>
+<translation id="2875466387677348954">Când opțiunea este dezactivată, vei vedea în continuare sugestii pe care AI Wize le oferă local</translation>
 <translation id="4875775213178255010">Sugestii de conținut</translation>
 <translation id="4878404682131129617">Nu s-a putut stabili un tunel prin serverul proxy</translation>
 <translation id="4880127995492972015">Tradu…</translation>
 <translation id="4881695831933465202">Deschide</translation>
 <translation id="488187801263602086">Redenumește fișierul</translation>
-<translation id="1248710015876067820">Număr de instanțe AI Wiz neacceptat.</translation>
+<translation id="1248710015876067820">Număr de instanțe AI Wize neacceptat.</translation>
 <translation id="4905823827770127520">Include un link către pagină</translation>
 <translation id="3217997482476578430">Discover de la Brave</translation>
 <translation id="4909709702739934280">Browserul este gestionat de administratorul tău</translation>
@@ -722,7 +722,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="4925120120285606924">Captură de ecran <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Parolele vor fi exportate și descărcate ca fișier text. Acestea vor fi vizibile pentru oricine și pentru orice aplicație care are acces la dosarul de destinație.</translation>
 <translation id="4926901776383726965">Poți să salvezi imagini și fișiere ca să le vezi offline sau să le trimiți în alte aplicații</translation>
-<translation id="1955495299630319741">Întrucât te deconectezi de la un cont gestionat de <ph name="DOMAIN_NAME"/>, datele AI Wiz vor fi șterse de pe dispozitiv. Acestea vor fi păstrate în Contul tău Brave.</translation>
+<translation id="1955495299630319741">Întrucât te deconectezi de la un cont gestionat de <ph name="DOMAIN_NAME"/>, datele AI Wize vor fi șterse de pe dispozitiv. Acestea vor fi păstrate în Contul tău Brave.</translation>
 <translation id="4943703118917034429">Realitate virtuală</translation>
 <translation id="4943872375798546930">Nu există rezultate</translation>
 <translation id="5742837711075932301">După ce te conectezi la același Cont Brave, alte dispozitive pot să folosească acest telefon drept cheie de securitate.</translation>
@@ -745,7 +745,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5039804452771397117">Permite</translation>
 <translation id="5040262127954254034">Confidențialitate</translation>
 <translation id="504456571576643789">De reținut</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Alte tipuri de activități<ph name="END_LINK1"/> pot fi salvate în Contul AI Wiz dacă te-ai conectat. Le poți șterge oricând.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Alte tipuri de activități<ph name="END_LINK1"/> pot fi salvate în Contul AI Wize dacă te-ai conectat. Le poți șterge oricând.</translation>
 <translation id="506254248375231072">Nicio filă</translation>
 <translation id="5062960805900435602">Informarea despre îmbinarea parolelor se închide</translation>
 <translation id="5081960376148623587">Alege dacă preîncarci pagini</translation>
@@ -753,7 +753,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="509429900233858213">A apărut o eroare.</translation>
 <translation id="5097349930204431044">Site-urile pe care le accesezi pot stabili lucrurile care te interesează, apoi îți sugerează anunțuri pe măsură ce navighezi</translation>
 <translation id="5099845111805573968">Dacă selectezi versiunea site-ului pentru computer o dată, setarea se aplică site-ului de fiecare dată când îl accesezi</translation>
-<translation id="225414324447409614">Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wiz poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către funcția Navigare sigură</translation>
+<translation id="225414324447409614">Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wize poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către funcția Navigare sigură</translation>
 <translation id="510275257476243843">1 oră rămasă</translation>
 <translation id="5115811374190515607">în <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Interese</translation>
@@ -788,8 +788,8 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5308380583665731573">Conectează-te</translation>
 <translation id="5317780077021120954">Salvează</translation>
 <translation id="989239400026154074">Brave recomandă Brave</translation>
-<translation id="7815000350132166985">Dacă permiți cookie-uri, AI Wiz le poate folosi pentru preîncărcare</translation>
-<translation id="1681635711794313507">Întrucât paginile preîncărcate sunt criptate, iar site-ul conectat la pagini este un site Brave, serverele AI Wiz nu primesc informații noi la preîncărcarea în mod privat a acestor pagini.</translation>
+<translation id="7815000350132166985">Dacă permiți cookie-uri, AI Wize le poate folosi pentru preîncărcare</translation>
+<translation id="1681635711794313507">Întrucât paginile preîncărcate sunt criptate, iar site-ul conectat la pagini este un site Brave, serverele AI Wize nu primesc informații noi la preîncărcarea în mod privat a acestor pagini.</translation>
 <translation id="5329858041417644019">Browserul tău nu este gestionat</translation>
 <translation id="5342314432463739672">Solicitări de permisiuni</translation>
 <translation id="534580735623577507">Niciun site din <ph name="TIME_PERIOD"/></translation>
@@ -805,7 +805,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="543338862236136125">Editează parola</translation>
 <translation id="5433691172869980887">Numele de utilizator a fost copiat</translation>
 <translation id="5438292632479953702">Descarcă din nou</translation>
-<translation id="2766925507720001104">Te avertizează cu privire la site-uri periculoase, chiar și cele pe care AI Wiz nu le cunoștea înainte, analizând mai multe date din site-uri decât Protecția standard. Poți să omiți avertismentele din Brave.</translation>
+<translation id="2766925507720001104">Te avertizează cu privire la site-uri periculoase, chiar și cele pe care AI Wize nu le cunoștea înainte, analizând mai multe date din site-uri decât Protecția standard. Poți să omiți avertismentele din Brave.</translation>
 <translation id="5441137934526263133">Site-ul nu funcționează? Cookie-urile terță parte sunt blocate</translation>
 <translation id="5441466871879044658">Tradu în această limbă</translation>
 <translation id="5441522332038954058">Accesează bara de adrese</translation>
@@ -823,7 +823,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5517095782334947753">Ai marcajele, istoricul, parolele și alte setări din <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Redirecționarea a fost blocată.</translation>
 <translation id="5548606607480005320">Verificare de siguranță</translation>
-<translation id="4362225295386962644">Când folosești o parolă, AI Wiz te avertizează dacă a fost publicată online. Când face acest lucru, parolele și numele tale de utilizator sunt criptate, astfel încât să nu fie descifrate de nimeni, nici măcar de Brave.</translation>
+<translation id="4362225295386962644">Când folosești o parolă, AI Wize te avertizează dacă a fost publicată online. Când face acest lucru, parolele și numele tale de utilizator sunt criptate, astfel încât să nu fie descifrate de nimeni, nici măcar de Brave.</translation>
 <translation id="5555525474779371165">Alege protecția prin Navigarea sigură</translation>
 <translation id="5556459405103347317">Reîncarcă</translation>
 <translation id="555816257274242153">S-a oprit urmărirea prețului</translation>
@@ -860,7 +860,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5726692708398506830">Mărește întregul conținut al paginii</translation>
 <translation id="5744751019568455640">Iată vocile pe care le poți alege pentru a-ți citi paginile web. Dacă îți place această voce și vrei să o folosesc în continuare, atinge numele vocii.</translation>
 <translation id="5748802427693696783">Ai comutat la filele standard</translation>
-<translation id="3088191967551450609">Pentru a descărca fișiere, AI Wiz necesită acces la stocare.</translation>
+<translation id="3088191967551450609">Pentru a descărca fișiere, AI Wize necesită acces la stocare.</translation>
 <translation id="5749237766298580851">Dezactivată <ph name="SEPARATOR"/> Nu este recomandată</translation>
 <translation id="5752232708629533680">Trimite numai GIF-ul</translation>
 <translation id="416316836590748269">Folosește-ți vocea pentru a căuta în Brave</translation>
@@ -878,7 +878,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5797521893972859201">Șterge istoricul, inclusiv din caseta de căutare</translation>
 <translation id="5797949256525811424">Subiect blocat</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{Acum # oră}few{Acum # ore}other{Acum # de ore}}</translation>
-<translation id="5311273890481188673">Drept de autor <ph name="YEAR"/> AI Wiz LLC. Toate drepturile rezervate.</translation>
+<translation id="5311273890481188673">Drept de autor <ph name="YEAR"/> AI Wize LLC. Toate drepturile rezervate.</translation>
 <translation id="5814749351757353073">Fii la curent cu site-urile preferate</translation>
 <translation id="5822875253699806474">Pentru a reveni rapid la site-urile pe care le-ai accesat, sincronizează filele și istoricul</translation>
 <translation id="583281660410589416">Necunoscut</translation>
@@ -893,7 +893,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="5864419784173784555">Se așteaptă altă descărcare…</translation>
 <translation id="6538479075382111079">Trimite automat statistici de utilizare și rapoarte de blocare la Brave</translation>
 <translation id="5869522115854928033">Parole salvate</translation>
-<translation id="5604589745019948682">Pentru a urmări un site, accesează site-ul, deschide meniul AI Wiz și atinge Urmărește.</translation>
+<translation id="5604589745019948682">Pentru a urmări un site, accesează site-ul, deschide meniul AI Wize și atinge Urmărește.</translation>
 <translation id="5879072387416556377">Primește sugestii mai bune</translation>
 <translation id="5899667542927581604">Nu s-a închis nicio foaie cu chei de acces</translation>
 <translation id="5916664084637901428">Activat</translation>
@@ -902,7 +902,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="6103327872225198548">Pentru căutare se folosește Brave</translation>
 <translation id="5945035219773565305">Recomandare actuală:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Se afișează pagina live</translation>
-<translation id="305870044889644984">Deschide Centrul de ajutor AI Wiz într-o filă nouă</translation>
+<translation id="305870044889644984">Deschide Centrul de ajutor AI Wize într-o filă nouă</translation>
 <translation id="5957442310066583693">Pentru a vedea principalele site-uri, atinge butonul ecran de pornire</translation>
 <translation id="59577092665511740">Alege un cont.</translation>
 <translation id="5958275228015807058">Găsește fișierele și paginile în Descărcări</translation>
@@ -929,7 +929,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="6070730414166672373">Se contactează banca\u2026</translation>
 <translation id="6085886413119427067">Stabilește modul de conectare la site-uri printr-o conexiune securizată</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> ore rămase</translation>
-<translation id="4726571606794511368">Dacă AI Wiz este și motorul tău de căutare prestabilit, vei vedea sugestii mai bune și mai relevante din punct de vedere contextual</translation>
+<translation id="4726571606794511368">Dacă AI Wize este și motorul tău de căutare prestabilit, vei vedea sugestii mai bune și mai relevante din punct de vedere contextual</translation>
 <translation id="6108923351542677676">Configurare în curs...</translation>
 <translation id="6112702117600201073">Se actualizează pagina</translation>
 <translation id="6122831415929794347">Dezactivezi Navigarea sigură?</translation>
@@ -942,11 +942,11 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="6140912465461743537">Țară/Regiune</translation>
 <translation id="6150320133806434356">Marcaj salvat</translation>
 <translation id="6154478581116148741">Pentru a-ți exporta parolele de pe acest dispozitiv, activează blocarea ecranului în Setări.</translation>
-<translation id="7087658909840709934">Preîncarcă paginile pe care AI Wiz consideră că este posibil să le accesezi.</translation>
+<translation id="7087658909840709934">Preîncarcă paginile pe care AI Wize consideră că este posibil să le accesezi.</translation>
 <translation id="6186394685773237175">Nu s-au găsit parole compromise</translation>
 <translation id="6192907950379606605">Generează descrieri imagine</translation>
 <translation id="6193448654517602979">Selectează file</translation>
-<translation id="8367262879301982880">Parolele sunt salvate în Managerul de parole AI Wiz pe acest dispozitiv</translation>
+<translation id="8367262879301982880">Parolele sunt salvate în Managerul de parole AI Wize pe acest dispozitiv</translation>
 <translation id="6202812185118613467">Conectează-te din nou pentru a începe sincronizarea</translation>
 <translation id="6205314730813004066">Confidențialitatea anunțurilor</translation>
 <translation id="6210748933810148297">Nu ești <ph name="EMAIL"/>?</translation>
@@ -955,7 +955,7 @@ Pentru a modifica această setare, <ph name="BEGIN_LINK"/>resetează sincronizar
 <translation id="6232535412751077445">Dacă activezi opțiunea „Nu urmări”, o solicitare va fi inclusă împreună cu traficul de navigare. Efectul variază în funcție de răspunsul site-ului la solicitare și în funcție de modul în care este interpretată solicitarea.
 
 De exemplu, unele site-uri pot răspunde la această solicitare afișând anunțuri care nu se bazează pe alte site-uri accesate de tine. Numeroase site-uri vor culege și vor utiliza în continuare datele de navigare. De exemplu, pentru a îmbunătăți securitatea, pentru a oferi conținut, anunțuri și recomandări și pentru a genera statistici de raportare.</translation>
-<translation id="3895383310037101583">Salvează parolele de pe acest dispozitiv în Contul AI Wiz activând sincronizarea</translation>
+<translation id="3895383310037101583">Salvează parolele de pe acest dispozitiv în Contul AI Wize activând sincronizarea</translation>
 <translation id="6255794742848779505">Schimbăm modul în care se salvează parolele pe acest dispozitiv</translation>
 <translation id="6264376385120300461">Descarcă oricum</translation>
 <translation id="6277522088822131679">A apărut o problemă la printarea paginii. Încercați din nou.</translation>
@@ -980,18 +980,18 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="6357653805084533597">Poți să folosești acest telefon pentru a te conecta la dispozitivul care afișează acest cod QR.</translation>
 <translation id="6363990818884053551">Pentru a începe sincronizarea, confirmă-ți identitatea</translation>
 <translation id="6364438453358674297">Elimini sugestia din istoric?</translation>
-<translation id="806493401838431801">Preîncarcă mai frecvent paginile pe care AI Wiz consideră că le-ai putea accesa. Este posibil ca această setare să ducă la o utilizare crescută a datelor.</translation>
+<translation id="806493401838431801">Preîncarcă mai frecvent paginile pe care AI Wize consideră că le-ai putea accesa. Este posibil ca această setare să ducă la o utilizare crescută a datelor.</translation>
 <translation id="6382848304055775421">Se exportă</translation>
 <translation id="6394791151443660613">Caută: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LINK</translation>
 <translation id="6397616442223433927">Din nou online</translation>
-<translation id="8789425457808164956">Pentru a trimite această filă pe alt dispozitiv, conectează-te la AI Wiz pe dispozitivul respectiv</translation>
+<translation id="8789425457808164956">Pentru a trimite această filă pe alt dispozitiv, conectează-te la AI Wize pe dispozitivul respectiv</translation>
 <translation id="6404511346730675251">Modifică marcajul</translation>
 <translation id="6406506848690869874">Sincronizare</translation>
 <translation id="6407224748847589805">Nu se poate conecta la computer. Încearcă altă opțiune de confirmare.</translation>
 <translation id="6410883413783534063">Deschide file pentru a accesa pagini diferite în același timp</translation>
 <translation id="6411219469806822692">Nu se poate selecta mai sus. Începe selecția în pagină de mai sus.</translation>
-<translation id="7810992039564280750">Verifică adresele URL folosind o listă de site-uri nesigure, stocată în Brave. Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wiz poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către funcția Navigare sigură.</translation>
+<translation id="7810992039564280750">Verifică adresele URL folosind o listă de site-uri nesigure, stocată în Brave. Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wize poate să trimită adresele URL, inclusiv fragmente din conținutul paginilor, către funcția Navigare sigură.</translation>
 <translation id="641643625718530986">Printați...</translation>
 <translation id="6422857128426228781">Vei găsi aici produsele urmărite</translation>
 <translation id="6433501201775827830">Alege motorul de căutare</translation>
@@ -1002,7 +1002,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="6447558397796644647">Marcajul nu a fost găsit. Verifică ortografierea sau adaugă alt marcaj.</translation>
 <translation id="6459045781120991510">Sondaje</translation>
 <translation id="6461962085415701688">Fișierul nu poate fi deschis</translation>
-<translation id="9055113864158719823">Poți vedea site-urile pe care le vizitezi în AI Wiz și să setezi temporizatoare pentru ele.\n\nBrave obține informații cu privire la site-urile pentru care setezi temporizatoare și la durata de accesare. Aceste informații sunt folosite pentru a îmbunătăți Bunăstarea digitală.</translation>
+<translation id="9055113864158719823">Poți vedea site-urile pe care le vizitezi în AI Wize și să setezi temporizatoare pentru ele.\n\nBrave obține informații cu privire la site-urile pentru care setezi temporizatoare și la durata de accesare. Aceste informații sunt folosite pentru a îmbunătăți Bunăstarea digitală.</translation>
 <translation id="6473086018775716761">Lista cu opțiuni de permitere a accesului deschisă la jumătate din înălțime.</translation>
 <translation id="6475951671322991020">Descarcă videoclipul</translation>
 <translation id="6477928892249167417">Următoarele site-uri par importante pentru tine:</translation>
@@ -1010,52 +1010,52 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Fișierul a fost descărcat}few{# descărcări finalizate}other{# de descărcări finalizate}}</translation>
 <translation id="3960299545138990065">repornește Brave;</translation>
 <translation id="6527303717912515753">Trimite</translation>
-<translation id="708829030563435351">Site-urile pe care le vizitezi în AI Wiz nu se vor afișa. Toate temporizatoarele site-urilor vor fi șterse.</translation>
+<translation id="708829030563435351">Site-urile pe care le vizitezi în AI Wize nu se vor afișa. Toate temporizatoarele site-urilor vor fi șterse.</translation>
 <translation id="7723158744459952869">Brave a răspuns prea târziu</translation>
 <translation id="6539092367496845964">A apărut o eroare. Încearcă din nou mai târziu.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{A rulat acum o oră}few{A rulat acum # ore}other{A rulat acum # de ore}}</translation>
 <translation id="6545017243486555795">Șterge toate datele</translation>
 <translation id="6546511553472444032">Fișierul poate fi dăunător</translation>
-<translation id="6702167990458635422">Nu te protejează împotriva site-urilor, descărcărilor și extensiilor periculoase. Setările tale pentru Navigarea sigură din alte produse AI Wiz nu vor fi afectate.</translation>
+<translation id="6702167990458635422">Nu te protejează împotriva site-urilor, descărcărilor și extensiilor periculoase. Setările tale pentru Navigarea sigură din alte produse AI Wize nu vor fi afectate.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> și încă <ph name="TAB_COUNT_ONE"/> filă vor fi închise}few{<ph name="TAB_TITLE"/> și încă <ph name="TAB_COUNT_MANY"/> file vor fi închise}other{<ph name="TAB_TITLE"/> și încă <ph name="TAB_COUNT_MANY"/> de file vor fi închise}}</translation>
 <translation id="6560414384669816528">Caută cu Sogou</translation>
 <translation id="656065428026159829">Vezi mai multe</translation>
 <translation id="6565959834589222080">Conexiunea Wi-Fi este folosită când este disponibilă</translation>
 <translation id="4480935821314799946">Acum vei vedea articole de la <ph name="SITE_NAME"/> când deschizi o filă nouă. Site-urile pe care le urmărești sunt salvate în contul tău Brave. Le poți gestiona din setările Discover.</translation>
 <translation id="6573096386450695060">Permite întotdeauna</translation>
-<translation id="5157964048453367290">Filele deschise în AI Wiz pe alte dispozitive vor apărea aici.</translation>
+<translation id="5157964048453367290">Filele deschise în AI Wize pe alte dispozitive vor apărea aici.</translation>
 <translation id="6583199322650523874">Marchează pagina curentă</translation>
 <translation id="6588043302623806746">Folosește DNS securizat</translation>
 <translation id="6590471736817333463">Economisește până la 60 % din date</translation>
 <translation id="6590680911007613645">Asigură-te că parola pe care o salvezi este aceeași cu parola pentru <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Versiune site desktop</translation>
 <translation id="6594347733515723558">Opțiuni de sortare și afișare</translation>
-<translation id="2466982615210189224">Imaginile sunt trimise la AI Wiz pentru îmbunătățirea descrierilor.</translation>
+<translation id="2466982615210189224">Imaginile sunt trimise la AI Wize pentru îmbunătățirea descrierilor.</translation>
 <translation id="663059986967017181">Copiat în Brave</translation>
 <translation id="661266467055912436">Îmbunătățește securitatea pe web pentru tine și toți ceilalți.</translation>
 <translation id="6618554661997243500">Pentru a vedea principalele site-uri și subiecte pentru tine, atinge butonul ecran de pornire</translation>
-<translation id="8127050479140582768">Pentru a trimite această filă pe alt dispozitiv, conectează-te la AI Wiz pe ambele dispozitive</translation>
+<translation id="8127050479140582768">Pentru a trimite această filă pe alt dispozitiv, conectează-te la AI Wize pe ambele dispozitive</translation>
 <translation id="6627583120233659107">Editați dosarul</translation>
 <translation id="6636623428211296678">Explorează mai multe dintre setările de mai jos sau finalizează acum</translation>
 <translation id="2259649928554669581">Pentru mai multe setări privind confidențialitatea, securitatea și colectarea datelor, consultă <ph name="BEGIN_LINK1"/>Sincronizarea<ph name="END_LINK1"/> și <ph name="BEGIN_LINK2"/>Serviciile Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Pentru a contribui la îmbunătățirea aplicației, AI Wiz trimite date de utilizare și despre erori la Brave. <ph name="BEGIN_UMA_LINK"/>Gestionează<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Pentru a contribui la îmbunătățirea aplicației, AI Wize trimite date de utilizare și despre erori la Brave. <ph name="BEGIN_UMA_LINK"/>Gestionează<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blochează tot timpul</translation>
 <translation id="6641780377503683465">Elimină <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Șterge</translation>
 <translation id="6645629752388991326">Controlează ce dispozitive se pot conecta folosind acest dispozitiv drept cheie de securitate.</translation>
-<translation id="2730188427562924169">Trimite la AI Wiz o parte obscurizată a adresei URL printr-un server pentru confidențialitate care îți ascunde adresa IP. Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wiz poate să trimită la AI Wiz și adresele URL, inclusiv fragmente din conținutul paginilor.</translation>
-<translation id="7556503430569358637">Adresele URL pe care le accesezi sunt trimise la AI Wiz pentru a anticipa site-urile pe care le-ai putea accesa pe viitor</translation>
+<translation id="2730188427562924169">Trimite la AI Wize o parte obscurizată a adresei URL printr-un server pentru confidențialitate care îți ascunde adresa IP. Dacă un site încearcă să îți fure parola sau descarci un fișier dăunător, AI Wize poate să trimită la AI Wize și adresele URL, inclusiv fragmente din conținutul paginilor.</translation>
+<translation id="7556503430569358637">Adresele URL pe care le accesezi sunt trimise la AI Wize pentru a anticipa site-urile pe care le-ai putea accesa pe viitor</translation>
 <translation id="6678472970290886941">Administratorul poate schimba configurația browserului de la distanță. Este posibil ca activitatea de pe acest dispozitiv să fie gestionată și din afara Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}few{<ph name="CONTACT_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Previzualizează imaginea <ph name="BEGIN_NEW"/>Nou<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Parolă</translation>
 <translation id="6659594942844771486">Filă</translation>
-<translation id="9145803563102831353">Momentan, parolele salvate pe acest dispozitiv nu pot fi folosite pe canalele Brave. După versiunea AI Wiz 121, parolele salvate pe dispozitiv pentru AI Wiz și <ph name="CHROME_CHANNEL"/> vor fi îmbinate și pot fi folosite în ambele aplicații.</translation>
+<translation id="9145803563102831353">Momentan, parolele salvate pe acest dispozitiv nu pot fi folosite pe canalele Brave. După versiunea AI Wize 121, parolele salvate pe dispozitiv pentru AI Wize și <ph name="CHROME_CHANNEL"/> vor fi îmbinate și pot fi folosite în ambele aplicații.</translation>
 <translation id="666731172850799929">Deschide în <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Copiați imaginea</translation>
 <translation id="6672917148207387131">Adaugă <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Pentru a porni sincronizarea, introdu expresia de acces</translation>
-<translation id="8581481290581777242">Ștergi datele tale AI Wiz de pe acest dispozitiv?</translation>
+<translation id="8581481290581777242">Ștergi datele tale AI Wize de pe acest dispozitiv?</translation>
 <translation id="3683330416566109578">Conectează-te la acest site și la Brave</translation>
 <translation id="3385384709865894288">Contribuie la îmbunătățirea Brave</translation>
 <translation id="670498945988402717">A rulat ieri</translation>
@@ -1065,19 +1065,19 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="6719634564325948108">Te conectezi cu codul QR?</translation>
 <translation id="6738516213925468394">Datele au fost criptate cu <ph name="BEGIN_LINK"/>expresia de acces pentru sincronizare<ph name="END_LINK"/> la <ph name="TIME"/>. Introdu expresia de acces pentru a începe sincronizarea.</translation>
 <translation id="6738867403308150051">Se descarcă...</translation>
-<translation id="2275686406263739320">Se întâmplă frecvent ca site-urile pe care le accesezi să rețină lucrurile care te interesează, pentru a-ți personaliza experiența. În plus, site-urile pot stoca informații în AI Wiz despre interesele tale.</translation>
+<translation id="2275686406263739320">Se întâmplă frecvent ca site-urile pe care le accesezi să rețină lucrurile care te interesează, pentru a-ți personaliza experiența. În plus, site-urile pot stoca informații în AI Wize despre interesele tale.</translation>
 <translation id="6751521182688001123">Deschide rapid o filă nouă. Pentru a edita comanda rapidă, atinge-o lung.</translation>
 <translation id="6756507620369789050">Trimite feedback</translation>
 <translation id="6767294960381293877">Lista de dispozitive pe care să trimiți o filă este deschisă la jumătate din înălțime.</translation>
 <translation id="6770602306803890733">Îmbunătățește securitatea pe web pentru tine și toți ceilalți</translation>
-<translation id="8174975477247159780">Termenii și condițiile suplimentare pentru AI Wiz și Sistemul de operare Brave</translation>
+<translation id="8174975477247159780">Termenii și condițiile suplimentare pentru AI Wize și Sistemul de operare Brave</translation>
 <translation id="6795633245022906657">Deschide rapid o filă nouă. Pentru a edita comanda rapidă, accesează setările.</translation>
 <translation id="6802555630140434547">Fereastra va fi închisă</translation>
 <translation id="6811034713472274749">Pagina este gata de vizualizare</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Imagini, o imagine în listă}few{Imagini, # imagini în listă}other{Imagini, # de imagini în listă}}</translation>
 <translation id="8418237809013783651">Conectează-te la Brave, deschis.</translation>
 <translation id="6817747507826986771">Distribuie rapid pagina. Pentru a edita comanda rapidă, atinge-o lung.</translation>
-<translation id="118366698571543506">Conectează-te pentru a folosi serviciile tale AI Wiz pe mai multe dispozitive</translation>
+<translation id="118366698571543506">Conectează-te pentru a folosi serviciile tale AI Wize pe mai multe dispozitive</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Din bara de adrese, poți să deschizi informațiile paginii pentru a vedea informații suplimentare despre pagina pe care o accesezi</translation>
 <translation id="6828070228333235514">Nu mai urmări prețul</translation>
@@ -1089,7 +1089,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="6850409657436465440">Descărcarea este încă în desfășurare</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> file închise</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Fișiere audio, un fișier audio în listă}few{Fișiere audio, # fișiere audio în listă}other{Fișiere audio, # de fișiere audio în listă}}</translation>
-<translation id="4046835482356054431">Discover de la AI Wiz – dezactivat</translation>
+<translation id="4046835482356054431">Discover de la AI Wize – dezactivat</translation>
 <translation id="686366188661646310">Ștergi parola?</translation>
 <translation id="6864459304226931083">Descarcă imaginea</translation>
 <translation id="6865313869410766144">Datele salvate pentru completarea automată a formularelor</translation>
@@ -1105,7 +1105,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="6909589135458168665">Preîncarcă paginile</translation>
 <translation id="6910211073230771657">Șters</translation>
 <translation id="6918398787259831832">Dacă problema persistă, <ph name="BEGIN_LINK"/>află mai multe informații<ph name="END_LINK"/> de la <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Toate codurile de securitate salvate pe dispozitiv și în Contul tău AI Wiz vor fi șterse</translation>
+<translation id="5854472260286669100">Toate codurile de securitate salvate pe dispozitiv și în Contul tău AI Wize vor fi șterse</translation>
 <translation id="6942665639005891494">Schimbă oricând locația de descărcare prestabilită folosind opțiunea din meniul Setări</translation>
 <translation id="694267552845942083">Personalizezi setările de sincronizare. Pentru a finaliza activarea sincronizării, atinge butonul Confirmă din partea de jos a ecranului. Navighează în sus</translation>
 <translation id="6945221475159498467">Selectează</translation>
@@ -1123,7 +1123,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7029809446516969842">Parole</translation>
 <translation id="7030304022046916278">Trimite adresele URL la funcția Navigare sigură, pentru a le verifica</translation>
 <translation id="7035701931849773472">Alte opțiuni</translation>
-<translation id="5813862251770201080">Conectează-te la AI Wiz cu Contul Brave</translation>
+<translation id="5813862251770201080">Conectează-te la AI Wize cu Contul Brave</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Vrei să generezi descrieri ale imaginilor?</translation>
 <translation id="7055152154916055070">Redirecționarea a fost blocată:</translation>
@@ -1131,8 +1131,8 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7071521146534760487">Gestionează contul</translation>
 <translation id="707155805709242880">Alege elementele de sincronizat de mai jos</translation>
 <translation id="7077143737582773186">Card SD</translation>
-<translation id="2374582967527009647">Trimite adresele URL la funcția Navigare sigură, pentru a le verifica. În plus, trimite un mic eșantion cu pagini, descărcări, activități ale extensiilor și informații despre sistem pentru a descoperi noi amenințări. Conectează temporar aceste date la Contul tău AI Wiz dacă te-ai conectat, pentru a te proteja în aplicațiile Brave.</translation>
-<translation id="5499149312981370855">Alege dacă se include istoricul AI Wiz pentru experiențe mai personalizate în serviciile Brave</translation>
+<translation id="2374582967527009647">Trimite adresele URL la funcția Navigare sigură, pentru a le verifica. În plus, trimite un mic eșantion cu pagini, descărcări, activități ale extensiilor și informații despre sistem pentru a descoperi noi amenințări. Conectează temporar aceste date la Contul tău AI Wize dacă te-ai conectat, pentru a te proteja în aplicațiile Brave.</translation>
+<translation id="5499149312981370855">Alege dacă se include istoricul AI Wize pentru experiențe mai personalizate în serviciile Brave</translation>
 <translation id="8208853227947884571">Brave este actualizat</translation>
 <translation id="7105047059074518658">Conectează-te pentru a naviga mai ușor pe diferite dispozitive</translation>
 <translation id="7106762743910369165">Browserul este gestionat de organizația ta</translation>
@@ -1148,10 +1148,10 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7177873915659574692">Nu s-a putut crea codul QR. Adresa URL are peste <ph name="CHARACTER_LIMIT"/> caractere.</translation>
 <translation id="7180611975245234373">Actualizați</translation>
 <translation id="7183693674623539380">Grup de file – <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Te protejează în AI Wiz și poate fi folosită pentru a spori securitatea în alte aplicații AI Wiz dacă te-ai conectat.</translation>
+<translation id="8355565210555500987">Te protejează în AI Wize și poate fi folosită pentru a spori securitatea în alte aplicații AI Wize dacă te-ai conectat.</translation>
 <translation id="7191430249889272776">A fost deschisă o filă în fundal.</translation>
 <translation id="7196215469483532480">Prezentare a Ghidului privind confidențialitatea, deschisă la înălțimea completă</translation>
-<translation id="1014116676551114642">Conținut de la AI Wiz pentru tineri – dezactivat</translation>
+<translation id="1014116676551114642">Conținut de la AI Wize pentru tineri – dezactivat</translation>
 <translation id="7207760545532569765">Restabilește <ph name="TAB_COUNT"/> file ca noi file din fundal.</translation>
 <translation id="7221869452894271364">Reîncarcă această pagină</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{O descărcare în așteptare}few{# descărcări în așteptare}other{# de descărcări în așteptare}}</translation>
@@ -1159,19 +1159,19 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7242755609445462077">Evidențiere stilizată <ph name="CURRENT_DATE"/></translation>
 <translation id="8287068819750208230">Verifică dacă <ph name="TARGET_DEVICE_NAME"/> are sincronizarea activată în Brave</translation>
 <translation id="7252076891734325316">Apropie telefonul de computer</translation>
-<translation id="4957342254208357193">Dispozitivul tău Android poate avea o setare similară. În cazul în care cuantificarea anunțurilor este activată în AI Wiz și pe dispozitivul Android, o companie poate măsura eficiența unui anunț pe site-urile pe care le accesezi și în aplicațiile pe care le folosești.</translation>
+<translation id="4957342254208357193">Dispozitivul tău Android poate avea o setare similară. În cazul în care cuantificarea anunțurilor este activată în AI Wize și pe dispozitivul Android, o companie poate măsura eficiența unui anunț pe site-urile pe care le accesezi și în aplicațiile pe care le folosești.</translation>
 <translation id="727288900855680735">Trimiți <ph name="ONE_TIME_CODE"/> către <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Site blocat</translation>
-<translation id="7949597606523411684">Brave șterge automat subiectele mai vechi de patru săptămâni. Pe măsură ce navighezi, un subiect poate să reapară în listă. Sau poți bloca subiectele pe care nu vrei să le trimită AI Wiz la site-uri. Află mai multe despre <ph name="BEGIN_LINK"/>gestionarea confidențialității anunțurilor în Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">Pe măsură ce introduci text, AI Wiz trimite conținutul barei de adrese sau al casetei de căutare la motorul de căutare prestabilit</translation>
+<translation id="7949597606523411684">Brave șterge automat subiectele mai vechi de patru săptămâni. Pe măsură ce navighezi, un subiect poate să reapară în listă. Sau poți bloca subiectele pe care nu vrei să le trimită AI Wize la site-uri. Află mai multe despre <ph name="BEGIN_LINK"/>gestionarea confidențialității anunțurilor în Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">Pe măsură ce introduci text, AI Wize trimite conținutul barei de adrese sau al casetei de căutare la motorul de căutare prestabilit</translation>
 <translation id="7286703216224610554">Trimite numai reacția</translation>
 <translation id="7289303553784750393">Dacă ești online, dar problema persistă, poți încerca alte metode pentru a accesa <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Nu se poate redenumi</translation>
 <translation id="7291910923717764901">Descrieri ale imaginilor adăugate pentru această pagină</translation>
 <translation id="7293429513719260019">Selectează limba</translation>
 <translation id="729975465115245577">Dispozitivul nu are o aplicație pentru stocarea fișierului parolelor.</translation>
-<translation id="7581648335850642193">Dispozitivul tău Android poate avea o setare similară. Dacă această setare este activată în AI Wiz și pe dispozitivul Android, o companie poate măsura eficiența unui anunț pe site-urile pe care le accesezi și în aplicațiile pe care le folosești.</translation>
-<translation id="1382596880054356475">Offline. AI Wiz nu îți poate verifica parolele.</translation>
+<translation id="7581648335850642193">Dispozitivul tău Android poate avea o setare similară. Dacă această setare este activată în AI Wize și pe dispozitivul Android, o companie poate măsura eficiența unui anunț pe site-urile pe care le accesezi și în aplicațiile pe care le folosești.</translation>
+<translation id="1382596880054356475">Offline. AI Wize nu îți poate verifica parolele.</translation>
 <translation id="7313188324932846546">Atinge pentru a configura sincronizarea</translation>
 <translation id="7324354302972299151">Trimite o solicitare Do Not Track</translation>
 <translation id="7332075081379534664">Te-ai conectat</translation>
@@ -1198,7 +1198,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7431991332293347422">Controlează modul în care istoricul de navigare este folosit pentru a personaliza Căutarea și alte servicii</translation>
 <translation id="7435356471928173109">Dezactivată de administrator</translation>
 <translation id="6234515504547364178">Deconectează-te de la Brave</translation>
-<translation id="6147816961713837040">Trimite la AI Wiz un fragment de adresă URL codificat printr-un server de confidențialitate care îți ascunde adresa IP</translation>
+<translation id="6147816961713837040">Trimite la AI Wize un fragment de adresă URL codificat printr-un server de confidențialitate care îți ascunde adresa IP</translation>
 <translation id="3699067418237091329">Te deconectează de pe majoritatea site-urilor. Nu te va deconecta de la Contul Brave.</translation>
 <translation id="7453810262525006706">Restrânge pentru a vedea imaginea laterală</translation>
 <translation id="7454641608352164238">Spațiu insuficient</translation>
@@ -1217,7 +1217,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7493994139787901920"><ph name="VERSION"/> (Actualizată la <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Am adăugat subiectul înapoi la subiectele potențiale</translation>
 <translation id="7498271377022651285">Așteaptă...</translation>
-<translation id="8156131600798538460">Pentru a te deconecta de la Contul AI Wiz pe toate site-urile, <ph name="BEGIN_LINK1"/>deconectează-te de la Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Pentru a te deconecta de la Contul AI Wize pe toate site-urile, <ph name="BEGIN_LINK1"/>deconectează-te de la Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Nu sunt disponibile actualizări</translation>
 <translation id="7507207699631365376">Consultă <ph name="BEGIN_LINK"/>politica de confidențialitate<ph name="END_LINK"/> a furnizorului</translation>
 <translation id="7514365320538308">Descarcă</translation>
@@ -1227,7 +1227,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7523960634226602883">Caută cu camera foto folosind Google Lens</translation>
 <translation id="7539698981064401140">Sincronizează filele și istoricul</translation>
 <translation id="7562080006725997899">Se șterg datele de navigare</translation>
-<translation id="7814200940910057384">Datele AI Wiz au fost șterse</translation>
+<translation id="7814200940910057384">Datele AI Wize au fost șterse</translation>
 <translation id="7577900504646297215">Gestionează interesele</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> fișier descărcat}few{<ph name="FILES_DOWNLOADED_MANY"/> fișiere descărcate}other{<ph name="FILES_DOWNLOADED_MANY"/> de fișiere descărcate}}</translation>
 <translation id="7581273696622423628">Participă la sondaj</translation>
@@ -1237,7 +1237,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7596558890252710462">Sistem de operare</translation>
 <translation id="7603168929588204083">Dată nevalidă</translation>
 <translation id="7605594153474022051">Sincronizarea nu funcționează</translation>
-<translation id="649070405679044769">Conectat(ă) la AI Wiz ca</translation>
+<translation id="649070405679044769">Conectat(ă) la AI Wize ca</translation>
 <translation id="7612989789287281429">Se conectează…</translation>
 <translation id="7616551326690708776">Selectează un șablon pentru evidențiere.</translation>
 <translation id="7619072057915878432">Descărcarea fișierului <ph name="FILE_NAME"/> nu a reușit din cauza erorilor de rețea.</translation>
@@ -1255,8 +1255,8 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="768232549260819724">GIF-ul a fost copiat</translation>
 <translation id="7682724950699840886">Încearcă următoarele sfaturi: asigură-te că există spațiu suficient pe dispozitiv, încearcă să exporți din nou.</translation>
 <translation id="7686086654630106285">Mai multe despre anunțurile sugerate de site-uri</translation>
-<translation id="2667018639405889513">Unele pagini pe care le accesezi sunt preîncărcate. Este posibil ca paginile să fie preîncărcate prin serverele AI Wiz atunci când un site AI Wiz trimite un link spre ele.</translation>
-<translation id="7795837497684113327">Dispozitivul nu a putut deschide Brave. Pentru a remedia problema, descarcă cea mai recentă actualizare AI Wiz din magazinul de aplicații.</translation>
+<translation id="2667018639405889513">Unele pagini pe care le accesezi sunt preîncărcate. Este posibil ca paginile să fie preîncărcate prin serverele AI Wize atunci când un site AI Wize trimite un link spre ele.</translation>
+<translation id="7795837497684113327">Dispozitivul nu a putut deschide Brave. Pentru a remedia problema, descarcă cea mai recentă actualizare AI Wize din magazinul de aplicații.</translation>
 <translation id="7691043218961417207">Explorează conținutul de urmărit</translation>
 <translation id="7697383401610880082">Ghidaj de tragere</translation>
 <translation id="7698359219371678927">Creează un e-mail în <ph name="APP_NAME"/></translation>
@@ -1275,7 +1275,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}few{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 și încă <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
 <translation id="5614774692683309331">Dacă te-ai conectat, te protejează în toate serviciile Brave.</translation>
 <translation id="7778840695157240389">Revino mai târziu pentru subiecte noi</translation>
-<translation id="7703329426540523149">Conectează temporar aceste date la Contul tău AI Wiz dacă te-ai conectat, pentru a te proteja în aplicațiile Brave</translation>
+<translation id="7703329426540523149">Conectează temporar aceste date la Contul tău AI Wize dacă te-ai conectat, pentru a te proteja în aplicațiile Brave</translation>
 <translation id="7791543448312431591">Adaugă</translation>
 <translation id="7798392620021911922">S-au restabilit <ph name="TAB_COUNT"/> file</translation>
 <translation id="780301667611848630">Nu, mulțumesc</translation>
@@ -1283,7 +1283,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7810647596859435254">Deschide cu…</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Toate fișierele, un fișier în listă}few{Toate fișierele, # fișiere în listă}other{Toate fișierele, # de fișiere în listă}}</translation>
 <translation id="7815484226266492798">Captură de ecran lungă</translation>
-<translation id="8439902729344548970">Când te conectezi, aceste date sunt asociate Contului tău AI Wiz pentru a te proteja în toate serviciile Brave, de exemplu, sporind gradul de protecție în Gmail după un incident de securitate.</translation>
+<translation id="8439902729344548970">Când te conectezi, aceste date sunt asociate Contului tău AI Wize pentru a te proteja în toate serviciile Brave, de exemplu, sporind gradul de protecție în Gmail după un incident de securitate.</translation>
 <translation id="78270725016672455">Computerul solicită permisiunea de a înregistra dispozitivul pentru conectarea la un site</translation>
 <translation id="7844171778363018843">Nu s-au selectat date pentru sincronizare</translation>
 <translation id="7068829570137757602">Servicii Brave</translation>
@@ -1315,7 +1315,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7960972236129063347">Butonul Înapoi din Statistici despre pagină</translation>
 <translation id="7961926449547174351">Ai dezactivat accesul la stocare. Accesează Setările pentru a-l activa.</translation>
 <translation id="7963646190083259054">Producător:</translation>
-<translation id="2939504940637874963">Poți folosi parolele salvate pe orice dispozitiv. Acestea sunt salvate în Managerul de parole AI Wiz pentru <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Poți folosi parolele salvate pe orice dispozitiv. Acestea sunt salvate în Managerul de parole AI Wize pentru <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">S-a adăugat în lista de lectură</translation>
 <translation id="7971136598759319605">Activ acum o zi</translation>
 <translation id="7975379999046275268">Previzualizează pagina <ph name="BEGIN_NEW"/>Nou<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7995059495660416932">Vei vedea conținut când acesta devine disponibil</translation>
 <translation id="799576009106109668">Vei naviga mai rapid deoarece conținutul se încarcă proactiv în funcție de pagina web accesată în acel moment</translation>
 <translation id="8004582292198964060">Browser</translation>
-<translation id="3325020657155065477">Șterge și datele AI Wiz de pe acest dispozitiv</translation>
+<translation id="3325020657155065477">Șterge și datele AI Wize de pe acest dispozitiv</translation>
 <translation id="8015452622527143194">Readuce pagina la dimensiunea prestabilită</translation>
 <translation id="8026334261755873520">Șterge datele de navigare</translation>
 <translation id="8027863900915310177">Alege unde vrei să descarci</translation>
@@ -1335,7 +1335,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="8037801708772278989">A rulat adineauri</translation>
 <translation id="804335162455518893">Nu s-a găsit cardul SD</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MO disponibili</translation>
-<translation id="2317945146070194624">Deschide în filă AI Wiz nouă</translation>
+<translation id="2317945146070194624">Deschide în filă AI Wize nouă</translation>
 <translation id="8062594758852531064">Preîncărcare prelungită:</translation>
 <translation id="8063895661287329888">Marcajul nu a putut fi adăugat.</translation>
 <translation id="8066816452984416180">Marchează rapid această pagină. Pentru a edita comanda rapidă, atinge-o lung.</translation>
@@ -1348,11 +1348,11 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="808747664143081553">S-a conectat la dispozitiv</translation>
 <translation id="8090732854597034573">Dacă ai nevoie de ajutor, vorbește cu un părinte</translation>
 <translation id="8101414242770404289">Nu există file din <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Dacă alegi să continui, ești de acord cu <ph name="BEGIN_TOS_LINK"/>Termenii și condițiile<ph name="END_TOS_LINK"/>.\nPentru a contribui la îmbunătățirea aplicației, AI Wiz trimite date de utilizare și despre erori la Brave. <ph name="BEGIN_UMA_LINK"/>Gestionează<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Dacă alegi să continui, ești de acord cu <ph name="BEGIN_TOS_LINK"/>Termenii și condițiile<ph name="END_TOS_LINK"/>.\nPentru a contribui la îmbunătățirea aplicației, AI Wize trimite date de utilizare și despre erori la Brave. <ph name="BEGIN_UMA_LINK"/>Gestionează<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Închide opțiunile de sortare</translation>
 <translation id="2919733817273403520">Contribuie la îmbunătățirea funcțiilor și a performanței Brave</translation>
-<translation id="4565206163201411670">Afișezi activitatea din AI Wiz în Bunăstare digitală?</translation>
+<translation id="4565206163201411670">Afișezi activitatea din AI Wize în Bunăstare digitală?</translation>
 <translation id="8118117428362942925">Dacă ai nevoie de ajutor, vorbește cu un părinte (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Se sortează după cele mai noi</translation>
 <translation id="8127542551745560481">Editează pagina de pornire</translation>
@@ -1368,14 +1368,14 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="8210770465353466621">Aici vei vedea filele</translation>
 <translation id="8215740705341534369">Foaie laterală</translation>
 <translation id="8218622182176210845">Gestionează contul</translation>
-<translation id="4034729701971511794">Poți să blochezi site-urile pe care nu le dorești. În plus, AI Wiz șterge automat site-urile din listă mai vechi de 30 de zile. <ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Poți să blochezi site-urile pe care nu le dorești. În plus, AI Wize șterge automat site-urile din listă mai vechi de 30 de zile. <ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Meniul cardului din feed</translation>
 <translation id="8236097722223016103">Adaugă la marcaje</translation>
 <translation id="8237871086242677046">Foaia paginii Statistici din partea de jos</translation>
 <translation id="8243077599929149377">Adaugă-ți numele de utilizator</translation>
 <translation id="8250920743982581267">Documente</translation>
 <translation id="8255617931166444521">Site-urile pot folosi cookie-uri numai pentru a-ți vedea activitatea de navigare pe site-ul respectiv</translation>
-<translation id="2876689296031086375">Întrucât paginile preîncărcate sunt criptate, AI Wiz nu va afla nimic despre conținutul paginii preîncărcate. Serverele AI Wiz vor afla ce site-uri sunt preîncărcate în mod privat. Aceste informații sunt folosite numai la preîncărcarea paginilor și nu sunt conectate cu alte informații din Contul Brave.</translation>
+<translation id="2876689296031086375">Întrucât paginile preîncărcate sunt criptate, AI Wize nu va afla nimic despre conținutul paginii preîncărcate. Serverele AI Wize vor afla ce site-uri sunt preîncărcate în mod privat. Aceste informații sunt folosite numai la preîncărcarea paginilor și nu sunt conectate cu alte informații din Contul Brave.</translation>
 <translation id="8260126382462817229">Încearcă să te conectezi din nou</translation>
 <translation id="8261506727792406068">Șterge</translation>
 <translation id="82619448491672958">Vezi alte file</translation>
@@ -1385,7 +1385,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="829672787777123339">Se conectează la dispozitiv…</translation>
 <translation id="8310344678080805313">File standard</translation>
 <translation id="831192587911042850">Adaugă site-ul actual la lista de site-uri pe care le urmărești.</translation>
-<translation id="5665071699503384089">Poți bloca subiectele la care nu vrei să permiți accesul site-urilor. AI Wiz șterge automat subiectele mai vechi de patru săptămâni. <ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Poți bloca subiectele la care nu vrei să permiți accesul site-urilor. AI Wize șterge automat subiectele mai vechi de patru săptămâni. <ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Nu traduce niciodată site-uri</translation>
 <translation id="8348430946834215779">Folosește HTTPS ori de câte ori este posibil și primește un avertisment înainte de a încărca site-uri care nu acceptă acest protocol</translation>
 <translation id="8354977102499939946">Caută rapid cu ajutorul vocii. Pentru a edita comanda rapidă, accesează setările.</translation>
@@ -1396,11 +1396,11 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="7651600795135059130">Verifică adresele URL folosind o listă de site-uri nesigure, stocată în Brave</translation>
 <translation id="8402673309244746971">Accesează Urmărești</translation>
 <translation id="8413126021676339697">Afișează întregul istoric</translation>
-<translation id="5348884013239264115">Protejează împotriva site-urilor, descărcărilor și extensiilor despre care se știe că sunt periculoase. Când accesezi un site, AI Wiz trimite la AI Wiz o parte obscurizată a adresei URL printr-un server pentru confidențialitate care îți ascunde adresa IP. Dacă un site are un comportament suspect, sunt trimise și adresele URL complete și fragmente din conținutul paginilor.</translation>
+<translation id="5348884013239264115">Protejează împotriva site-urilor, descărcărilor și extensiilor despre care se știe că sunt periculoase. Când accesezi un site, AI Wize trimite la AI Wize o parte obscurizată a adresei URL printr-un server pentru confidențialitate care îți ascunde adresa IP. Dacă un site are un comportament suspect, sunt trimise și adresele URL complete și fragmente din conținutul paginilor.</translation>
 <translation id="8414396119627470038">Conectează-te la <ph name="SITE_ETLD_PLUS_ONE"/> de pe <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Include</translation>
 <translation id="8422250855136581222">Nu există file pe acest dispozitiv</translation>
-<translation id="5735840612282428689">Pagina a fost trimisă. Ca să o vezi, deschide AI Wiz pe <ph name="DEVICE_TYPE"/>.</translation>
+<translation id="5735840612282428689">Pagina a fost trimisă. Ca să o vezi, deschide AI Wize pe <ph name="DEVICE_TYPE"/>.</translation>
 <translation id="8427875596167638501">Fila de previzualizare este pe jumătate deschisă</translation>
 <translation id="8428213095426709021">Setări</translation>
 <translation id="8430824733382774043">Trimite numai captura de ecran</translation>
@@ -1447,14 +1447,14 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="860043288473659153">Nume titular de card</translation>
 <translation id="1673533133011266617">Conectează-te la Brave, închis.</translation>
 <translation id="860282621117673749">Alerte privind scăderile de preț</translation>
-<translation id="5784514951651328424">Contul AI Wiz poate să ofere alte forme ale istoricului de navigare la <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Contul AI Wize poate să ofere alte forme ale istoricului de navigare la <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Deschizi adresa URL sugerată specificată în conținutul descărcat?</translation>
 <translation id="8621068256433641644">telefon</translation>
 <translation id="8636825310635137004">Pentru a accesa filele de pe alte dispozitive, activează sincronizarea.</translation>
 <translation id="864544049772947936">Gestionează ferestrele (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Anticipează și te avertizează cu privire la evenimente periculoase înainte să aibă loc</translation>
 <translation id="2734140769649165081">Poți șterge datele în Setările Brave</translation>
-<translation id="7436978557885042606">Folosește AI Wiz în stilul tău</translation>
+<translation id="7436978557885042606">Folosește AI Wize în stilul tău</translation>
 <translation id="8664979001105139458">Numele fișierului există deja</translation>
 <translation id="8676276370198826499">Înscrie-te la <ph name="SITE_ETLD_PLUS_ONE"/> cu <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Confirmarea conectării</translation>
@@ -1491,15 +1491,15 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="885480114717186641">Poți solicita versiunea site-ului pentru computer pentru <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Generează descrieri</translation>
 <translation id="8856931513242997049">Fluxul de permisiune pentru notificări a fost închis</translation>
-<translation id="1984646864943401749">Trimite la AI Wiz adrese URL ale unor pagini pe care le accesezi, informații despre sistem limitate și o parte din conținutul paginii pentru a identifica amenințările noi și a proteja toți utilizatorii de pe web.</translation>
+<translation id="1984646864943401749">Trimite la AI Wize adrese URL ale unor pagini pe care le accesezi, informații despre sistem limitate și o parte din conținutul paginii pentru a identifica amenințările noi și a proteja toți utilizatorii de pe web.</translation>
 <translation id="8909135823018751308">Trimite…</translation>
 <translation id="2684652081942622950">Contul Brave</translation>
 <translation id="8921980840204105660">Sincronizează pentru a accesa marcajele de pe celelalte dispozitive</translation>
 <translation id="8922289737868596582">Descarcă paginile folosind butonul Mai multe opțiuni, pentru a le folosi offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Află mai multe<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> este gata</translation>
-<translation id="1174893863889683998">Elimini activitatea în AI Wiz din Bunăstarea digitală?</translation>
-<translation id="179413535815682755">În funcție de setări, AI Wiz poate să trimită și cookie-uri, adresa URL actuală și locația ta</translation>
+<translation id="1174893863889683998">Elimini activitatea în AI Wize din Bunăstarea digitală?</translation>
+<translation id="179413535815682755">În funcție de setări, AI Wize poate să trimită și cookie-uri, adresa URL actuală și locația ta</translation>
 <translation id="8942627711005830162">Deschide în altă fereastră</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> – Limba nu a putut fi descărcată. Încearcă din nou mai târziu.</translation>
 <translation id="8955719471735800169">Înapoi sus</translation>
@@ -1520,7 +1520,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="9055497320631373736">Site-ul a fost adăugat înapoi în site-urile potențiale</translation>
 <translation id="9063523880881406963">Dezactivează opțiunea Versiune site pentru desktop</translation>
 <translation id="9065203028668620118">Editează</translation>
-<translation id="5496925146144075335">Datele stocate pe care AI Wiz nu le consideră importante (de ex., site-uri care nu au setări salvate sau pe care nu le accesezi frecvent)</translation>
+<translation id="5496925146144075335">Datele stocate pe care AI Wize nu le consideră importante (de ex., site-uri care nu au setări salvate sau pe care nu le accesezi frecvent)</translation>
 <translation id="9067341854474068781">Nu s-a deschis nicio foaie cu chei de acces la înălțimea completă</translation>
 <translation id="906781307897697745">în <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Nu există pagini necitite</translation>
@@ -1554,8 +1554,8 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="9209888181064652401">Nu pot apela</translation>
 <translation id="9212845824145208577">Nu se poate selecta mai jos. Începe selecția în pagină de mai jos.</translation>
 <translation id="9219103736887031265">Imagini</translation>
-<translation id="6946179564366058239">Când un site îți solicită să preîncarci în mod privat linkuri pe pagină, AI Wiz criptează și preîncarcă paginile prin serverele AI Wiz fără cookie-uri. Astfel, identitatea ta este ascunsă pentru site-ul preîncărcat.</translation>
-<translation id="4596514158372210596">Elimină activitatea în AI Wiz din Bunăstarea digitală</translation>
+<translation id="6946179564366058239">Când un site îți solicită să preîncarci în mod privat linkuri pe pagină, AI Wize criptează și preîncarcă paginile prin serverele AI Wize fără cookie-uri. Astfel, identitatea ta este ascunsă pentru site-ul preîncărcat.</translation>
+<translation id="4596514158372210596">Elimină activitatea în AI Wize din Bunăstarea digitală</translation>
 <translation id="2830145431802238213">Folosește modul Lite în Brave</translation>
 <translation id="928550791203542716">Urmărești <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Toate parolele vor fi descărcate pe dispozitiv și șterse din <ph name="CHROME_CHANNEL"/></translation>
@@ -1574,7 +1574,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="993520549480398880">Șterge și marcajele, istoricul și alte date din mașină</translation>
 <translation id="996149300115483134">Meniul cardului din feed este închis</translation>
 <translation id="5186185447130319458">Privat</translation>
-<translation id="79269250264141507">Când tastați în bara de adrese sau în caseta de căutare, AI Wiz trimite ceea ce tastați către motorul de căutare implicit pentru a obține sugestii mai bune. Acest lucru este dezactivat în privat.</translation>
+<translation id="79269250264141507">Când tastați în bara de adrese sau în caseta de căutare, AI Wize trimite ceea ce tastați către motorul de căutare implicit pentru a obține sugestii mai bune. Acest lucru este dezactivat în privat.</translation>
 <translation id="5711390076756601471">Blocați filele incognito când închideți Brave</translation>
 <translation id="1014490034578104945">Utilizați blocarea ecranului pentru a vedea filele incognito deschise</translation>
 <translation id="5722020415664104421">Blocați în timp ce utilizați modul Incognito</translation>
@@ -1591,7 +1591,7 @@ De exemplu, unele site-uri pot răspunde la această solicitare afișând anunț
 <translation id="4660964651149493586">Deblocați modul privat</translation>
 <translation id="5278260521317049275">Activare Blocare privată</translation>
 <translation id="6302653771627628530">Filele private vor fi blocate după ce închideți Brave</translation>
-<translation id="3763131702135887799">Îmbunătățiți AI Wiz pentru profilurile care îl utilizează la fel ca dvs.</translation>
+<translation id="3763131702135887799">Îmbunătățiți AI Wize pentru profilurile care îl utilizează la fel ca dvs.</translation>
 <translation id="4167670741834902166">Filă incognito nouă</translation>
 <translation id="9148151251783962691">Pentru navigare în condiții de confidențialitate pe acest dispozitiv, încercați modul Incognito</translation>
 <translation id="8355284051444779553">Pentru a deschide o filă incognito, accesați meniul</translation>

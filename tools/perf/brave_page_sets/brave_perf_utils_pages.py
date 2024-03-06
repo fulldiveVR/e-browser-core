@@ -124,7 +124,7 @@ class _UpdateProfilePage(page_module.Page):
 
 
 class BravePerfUtilsStorySet(story.StorySet):
-  """ AI Wiz version of LoadingDesktopStorySet.
+  """ AI Wize version of LoadingDesktopStorySet.
 
   See loading_desktop.py for details.
   """

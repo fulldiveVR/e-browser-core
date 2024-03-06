@@ -3,14 +3,14 @@
 .TH @@PACKAGE@@ 1 "" "" "USER COMMANDS"
 
 .SH NAME
-@@PACKAGE@@ \- AI Wiz Browser
+@@PACKAGE@@ \- AI Wize Browser
 
 .SH SYNOPSIS
 .B @@PACKAGE@@
 [\fIOPTION\fR] [\fIPATH\fR|\fIURL\fR]
 
 .SH DESCRIPTION
-See the AI Wiz Help Center for help on using the browser.
+See the AI Wize Help Center for help on using the browser.
 .IP
 <https://support.brave.com/>
 .PP

@@ -26,11 +26,11 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         sender: "Brave VPN Service"
         description:
           "This service is used to communicate with Guardian VPN apis"
-          "on behalf of the user interacting with the AI Wiz VPN."
+          "on behalf of the user interacting with the AI Wize VPN."
         trigger:
-          "Triggered by user connecting the AI Wiz VPN."
+          "Triggered by user connecting the AI Wize VPN."
         data:
-          "Servers, hosts and credentials for AI Wiz VPN"
+          "Servers, hosts and credentials for AI Wize VPN"
         destination: WEBSITE
       }
       policy {

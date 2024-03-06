@@ -68,7 +68,7 @@
 <translation id="6549021453810473782">Skatīt veikala informāciju</translation>
 <translation id="6562820390860419811">Pārvietot cilni pa kreisi</translation>
 <translation id="6615455863669487791">Rādīt man</translation>
-<translation id="6398241160085205003">Aizvērtās cilnes varat atrast AI Wiz galvenās izvēlnes sadaļā “Nesen atvērtas cilnes”.</translation>
+<translation id="6398241160085205003">Aizvērtās cilnes varat atrast AI Wize galvenās izvēlnes sadaļā “Nesen atvērtas cilnes”.</translation>
 <translation id="6840760312327750441">Lai sagrupētu cilnes, pieskarieties cilnei un turiet to. Pēc tam velciet to uz citas cilnes.</translation>
 <translation id="6856809498882026482">Paslēpt vairākatlases režīmu</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Kopīgot cilni}zero{Kopīgot cilnes}one{Kopīgot cilnes}other{Kopīgot cilnes}}</translation>
@@ -77,7 +77,7 @@
 <translation id="7326879924029668159">Skatiet atgriešanas politiku un citu informāciju.</translation>
 <translation id="7352298686197644113">Skatiet, kurai precei jūsu atvērtajās cilnēs ir zemāka cena.</translation>
 <translation id="753732157349120914">Ciļņu pārslēdzējs</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> atsauksme no AI Wiz tīkla}zero{<ph name="REVIEWS_COUNT_MANY"/> atsauksmju no AI Wiz tīkla}one{<ph name="REVIEWS_COUNT_MANY"/> atsauksme no AI Wiz tīkla}other{<ph name="REVIEWS_COUNT_MANY"/> atsauksmes no AI Wiz tīkla}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> atsauksme no AI Wize tīkla}zero{<ph name="REVIEWS_COUNT_MANY"/> atsauksmju no AI Wize tīkla}one{<ph name="REVIEWS_COUNT_MANY"/> atsauksme no AI Wize tīkla}other{<ph name="REVIEWS_COUNT_MANY"/> atsauksmes no AI Wize tīkla}}</translation>
 <translation id="7559245342362162951">Rādīt grupas cilnes pilnekrāna režģī</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Kopīgot <ph name="TABS_COUNT_ONE"/> atlasīto cilni}zero{Kopīgot <ph name="TABS_COUNT_MANY"/> atlasītās cilnes}one{Kopīgot <ph name="TABS_COUNT_MANY"/> atlasīto cilni}other{Kopīgot <ph name="TABS_COUNT_MANY"/> atlasītās cilnes}}</translation>
 <translation id="7792771145871471484">Pārskatīt ieteikumus.</translation>
@@ -98,8 +98,8 @@
 <translation id="9169594135889675189">Pievienot grupai jaunu cilni</translation>
 <translation id="959682366969460160">Informācijas kārtošana</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
- =1 {Aizvērtās cilnes varat atrast AI Wiz galvenajā izvēlnē sadaļā Nesen izmantotās cilnes. Jūsu privātā cilne nebūs pieejama.}
- other {Jūs varat atrast savas aizvērtās cilnes sadaļā Nesen izmantotās cilnes AI Wiz galvenajā izvēlnē. Jūsu # privātās cilnes nebūs pieejamas.}}</translation>
+ =1 {Aizvērtās cilnes varat atrast AI Wize galvenajā izvēlnē sadaļā Nesen izmantotās cilnes. Jūsu privātā cilne nebūs pieejama.}
+ other {Jūs varat atrast savas aizvērtās cilnes sadaļā Nesen izmantotās cilnes AI Wize galvenajā izvēlnē. Jūsu # privātās cilnes nebūs pieejamas.}}</translation>
 <translation id="3228718275011575753">Vai aizvērt visas inkognito cilnes?</translation>
 <translation id="6687920250729800417">Jūsu darbības šajās privātajās cilnēs tiks noņemtas no šīs ierīces</translation>
 </translationbundle>

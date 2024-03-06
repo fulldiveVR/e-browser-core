@@ -22,13 +22,13 @@ import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 
 /**
- * Fragment to keep track of all AI Wiz Rewards related preferences.
+ * Fragment to keep track of all AI Wize Rewards related preferences.
  */
 public class BraveRewardsPreferences extends BravePreferenceFragment
         implements OnPreferenceChangeListener, BraveRewardsObserver {
     public static final String PREF_ADS_SWITCH = "ads_switch";
 
-    // flag, if exists: default state (off) for background AI Wiz ads has been set
+    // flag, if exists: default state (off) for background AI Wize ads has been set
     public static final String PREF_ADS_SWITCH_DEFAULT_HAS_BEEN_SET = "ads_switch_default_set";
 
     private ChromeSwitchPreference mAdsSwitch;

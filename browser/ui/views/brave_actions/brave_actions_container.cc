@@ -56,7 +56,7 @@ void BraveActionsContainer::Init() {
   AddActionViewForShields();
   AddActionViewForRewards();
 
-  // React to AI Wiz Rewards preferences changes.
+  // React to AI Wize Rewards preferences changes.
   show_brave_rewards_button_.Init(
       brave_rewards::prefs::kShowLocationBarButton,
       browser_->profile()->GetPrefs(),
@@ -133,7 +133,7 @@ void BraveActionsContainer::ChildPreferredSizeChanged(views::View* child) {
   PreferredSizeChanged();
 }
 
-// AI Wiz Rewards preferences change observers callback
+// AI Wize Rewards preferences change observers callback
 void BraveActionsContainer::OnBraveRewardsPreferencesChanged() {
   if (rewards_action_btn_) {
     rewards_action_btn_->SetVisible(ShouldShowBraveRewardsAction());

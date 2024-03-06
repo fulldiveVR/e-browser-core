@@ -23,7 +23,7 @@ void BraveSpellingOptionsSubMenuObserver::InitMenu(
   SpellingOptionsSubMenuObserver::InitMenu(params);
 
   // Assumptions:
-  // 1. Use of spelling service is disabled in AI Wiz profile preferences.
+  // 1. Use of spelling service is disabled in AI Wize profile preferences.
   // 2. We overrode RenderViewContextMenu::AddSpellCheckServiceItem so that the
   // spelling suggestions toggle isn't added to the menu by the base class.
   DCHECK(!use_spelling_service_.GetValue());

@@ -116,7 +116,7 @@
 -ErrorConsoleBrowserTest.BrowserActionRuntimeError
 -WindowOpenApiTest.OpenLockedFullscreenWindowNonChromeOS
 
-# These tests are failing because AI Wiz triggers reading of prefstore pref
+# These tests are failing because AI Wize triggers reading of prefstore pref
 # values before a prefstore is initialised.
 -PrivacySandboxPromptHelperTestWithParamInstance/PrivacySandboxPromptHelperTestWithParam.PromptOpensOnSettings/*
 -PrivacySandboxPromptHelperTestWithParamInstance/PrivacySandboxPromptHelperTestWithParam.UnsuitableUrl/*
@@ -533,7 +533,7 @@
 # the run_loop.Run() fixes the crash.
 # Also, running the test with --disable-brave-extension fixes it as well, so
 # perhaps the additional recorded event that is causing the unexpected callback
-# is coming from AI Wiz extension?
+# is coming from AI Wize extension?
 -PrivacyBudgetBrowserTestWithTestRecorderParameterized/PrivacyBudgetBrowserTestWithTestRecorder.RecordingFeaturesCalledInWorker/*
 
 # These tests time out because we Disable "Use a prediction service to load
@@ -568,7 +568,7 @@
 -SearchPreloadUnifiedFallbackBrowserTest.PrerenderDiscardedBeforeServingData
 
 # The tests below are being disabled due to current incompatibilities between
-# Chromium storage partitioning and AI Wiz epehemeral storage.
+# Chromium storage partitioning and AI Wize epehemeral storage.
 -ChromeRegisterProtocolHandlerIsolatedWebAppsTest.Basic
 -ChromeWebPlatformSecurityMetricsBrowserTest.BlobUrl
 -ChromeWebPlatformSecurityMetricsBrowserTest.BlobUrlFromDataUrl
@@ -815,7 +815,7 @@
 -PermissionPromptBubbleBaseViewBrowserTest.InvokeUi_storage_access
 -PreinstalledWebAppManagerBrowserTest.PreinstalledAppsPrefInstall
 
-# AI Wiz disables Session Cookies restore when ContinueWhereILeftOff is enabled.
+# AI Wize disables Session Cookies restore when ContinueWhereILeftOff is enabled.
 -ContinueWhereILeftOffTest.SessionCookies
 
 # These tests fail because the extension name contains "Chromium" instead of

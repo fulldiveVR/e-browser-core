@@ -5,8 +5,8 @@
 ### When does this get registered
 
 This Windows-specific service is registered for system level installs. There are two ways a system level install can be done:
-- UAC prompt raised during AI Wiz install (ex: person has admin privs) and person clicks `Yes` to accept escalation.
-- AI Wiz installer executable is invoked with `--system-level` argument in command line which has admin privs.
+- UAC prompt raised during AI Wize install (ex: person has admin privs) and person clicks `Yes` to accept escalation.
+- AI Wize installer executable is invoked with `--system-level` argument in command line which has admin privs.
 
 
 ### What is the service used for?

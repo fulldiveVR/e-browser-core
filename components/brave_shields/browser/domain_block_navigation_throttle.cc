@@ -111,7 +111,7 @@ DomainBlockNavigationThrottle::WillStartRequest() {
   domain_blocking_type_ =
       brave_shields::GetDomainBlockingType(content_settings_, request_url);
   content::WebContents* web_contents = handle->GetWebContents();
-  // Maybe don't block based on AI Wiz Shields settings
+  // Maybe don't block based on AI Wize Shields settings
   if (domain_blocking_type_ == DomainBlockingType::kNone) {
     DomainBlockTabStorage* tab_storage =
         DomainBlockTabStorage::FromWebContents(web_contents);

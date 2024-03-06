@@ -149,7 +149,7 @@ ExtensionFunction::ResponseAction BraveWalletGetWeb3ProviderFunction::Run() {
   // be the default Dapp provider. Since the new wallet is not an
   // extension at all, we can just re-use the Crypto Wallets ID.
   // We also don't want to prompt in Crypto Wallets when it's set
-  // to AI Wiz Wallet.
+  // to AI Wize Wallet.
   if (default_wallet == ::brave_wallet::mojom::DefaultWallet::BraveWallet ||
       default_wallet ==
           ::brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension ||

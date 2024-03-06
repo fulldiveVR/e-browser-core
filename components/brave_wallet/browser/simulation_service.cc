@@ -29,7 +29,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         description:
           "This service is used scan proposed transactions and simulate expected state changes."
         trigger:
-          "Triggered by uses of the native AI Wiz wallet."
+          "Triggered by uses of the native AI Wize wallet."
         data:
           "Blowfish API response bodies."
         destination: WEBSITE

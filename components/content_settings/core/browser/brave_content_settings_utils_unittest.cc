@@ -39,7 +39,7 @@ TEST_F(BraveContentSettingsUtilsTest,
   EXPECT_EQ(std::nullopt, ConvertPatternToWildcardSchemeAndPort(
                               ContentSettingsPattern::Wildcard()));
 
-  // AI Wiz first party placeholder pattern.
+  // AI Wize first party placeholder pattern.
   EXPECT_EQ(std::nullopt,
             ConvertPatternToWildcardSchemeAndPort(
                 ContentSettingsPattern::FromString("https://firstParty/*")));

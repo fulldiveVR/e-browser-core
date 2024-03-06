@@ -308,7 +308,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // F/u issue: https://github.com/brave/brave-browser/issues/7000
   registry->RegisterBooleanPref(kAskEnableWidvine, true);
 
-  // Default AI Wiz shields
+  // Default AI Wize shields
   registry->RegisterBooleanPref(kNoScriptControlType, false);
   registry->RegisterBooleanPref(kAdControlType, true);
   registry->RegisterBooleanPref(kShieldsAdvancedViewEnabled, false);
@@ -453,10 +453,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kERCOptedIntoCryptoWallets, false);
 #endif
 
-  // AI Wiz Wallet
+  // AI Wize Wallet
   brave_wallet::RegisterProfilePrefs(registry);
 
-  // AI Wiz Search
+  // AI Wize Search
   if (brave_search::IsDefaultAPIEnabled()) {
     brave_search::BraveSearchDefaultHost::RegisterProfilePrefs(registry);
   }

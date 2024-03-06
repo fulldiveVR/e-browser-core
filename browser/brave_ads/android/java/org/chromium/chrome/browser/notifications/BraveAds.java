@@ -12,7 +12,7 @@ import org.jni_zero.CalledByNative;
 import org.chromium.chrome.browser.notifications.channels.BraveChannelDefinitions;
 
 /**
- * This class provides the AI Wiz Ads related methods for the native library
+ * This class provides the AI Wize Ads related methods for the native library
  * (brave/components/brave_ads/browser/notification_helper_android)
  */
 public abstract class BraveAds {

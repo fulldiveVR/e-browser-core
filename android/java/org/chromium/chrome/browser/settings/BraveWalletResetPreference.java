@@ -36,7 +36,7 @@ import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.ui.KeyboardVisibilityDelegate;
 
 /**
- * The preference used to reset AI Wiz Wallet.
+ * The preference used to reset AI Wize Wallet.
  */
 public class BraveWalletResetPreference
         extends Preference implements Preference.OnPreferenceClickListener {

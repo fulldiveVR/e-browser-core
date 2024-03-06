@@ -6,15 +6,15 @@
 
 ## User Data Submitted when Redeeming Anonymous Confirmations
 
-Included in the confirmation payload for non-Brave Rewards and AI Wiz Rewards users. See [anonymous confirmation redemption](../utility/redeem_confirmation/README.md).
+Included in the confirmation payload for non-Brave Rewards and AI Wize Rewards users. See [anonymous confirmation redemption](../utility/redeem_confirmation/README.md).
 
 | user data  | optional  | mutable  | description  |
 |---|---|---|---|
 | conversion  | yes  | no  | Conversion action and encrypted verifiable envelope.  |
 
-### Additional User Data Submitted for AI Wiz Rewards Users
+### Additional User Data Submitted for AI Wize Rewards Users
 
-Should only be included in the confirmation payload for users who have joined AI Wiz Rewards.
+Should only be included in the confirmation payload for users who have joined AI Wize Rewards.
 
 | user data  | optional  | mutable  | description  |
 |---|---|---|---|

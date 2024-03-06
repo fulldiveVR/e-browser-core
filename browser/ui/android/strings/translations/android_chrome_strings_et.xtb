@@ -23,7 +23,7 @@
 <translation id="1111673857033749125">Siin kuvatakse teie teistes seadmetes salvestatud järjehoidjad.</translation>
 <translation id="1113597929977215864">Kuva lihtsustatud vaade</translation>
 <translation id="4470276443668654888">Google Payst pärinevaid makseviise ja aadresse ei krüpteerita. Sirvimisajalugu Brave'ist ei sünkroonita.
-Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Parooli ei saadeta Brave'ile ja AI Wiz ei salvesta seda. Kui parooli unustate või soovite seda seadet muuta, peate sünkroonimise lähtestama. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
+Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Parooli ei saadeta Brave'ile ja AI Wize ei salvesta seda. Kui parooli unustate või soovite seda seadet muuta, peate sünkroonimise lähtestama. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Ei kaitse teid ohtlike veebisaitide, allalaadimiste ega laienduste eest. Brave'i ohutu sirvimine kaitseb teid siiski muudes Brave'i teenustes, kus see saadaval on (nt Gmail ja Otsing).</translation>
 <translation id="1129510026454351943">Üksikasjad: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Ära paku nende saitide tõlkimist</translation>
@@ -131,7 +131,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="1710099199314114079">Vahelehtede vahetamine või sulgemine</translation>
 <translation id="1718835860248848330">Viimase tunni jooksul</translation>
 <translation id="1724977129262658800">Parooli muutmiseks avage</translation>
-<translation id="6493900814829428590">Kui AI Wiz eellaadib lehed, mida võite arvatavasti külastada, võimaldab see teil kiiremini sirvida ja otsida</translation>
+<translation id="6493900814829428590">Kui AI Wize eellaadib lehed, mida võite arvatavasti külastada, võimaldab see teil kiiremini sirvida ja otsida</translation>
 <translation id="1749561566933687563">Järjehoidjate sünkroonimine</translation>
 <translation id="1750259112639922169">Vahelehegrupp – <ph name="TAB_COUNT"/> vahelehte</translation>
 <translation id="17513872634828108">Avatud vahelehed</translation>
@@ -160,7 +160,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="1925021887439448749">Sisestage kohandatud veebiaadress</translation>
 <translation id="1928618076168182477">Näidatakse visuaalset vaadet</translation>
 <translation id="1928696683969751773">Värskendused</translation>
-<translation id="1875543012935658554">Avage AI Wiz uuesti.</translation>
+<translation id="1875543012935658554">Avage AI Wize uuesti.</translation>
 <translation id="1933845786846280168">Valitud vaheleht</translation>
 <translation id="1943432128510653496">Paroolide salvestamine</translation>
 <translation id="1944535645109964458">Saadaval pole ühtegi pääsuvõtit</translation>
@@ -220,7 +220,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="4808014761134300692">Paroolid krüpteeritakse teie seadmes, enne kui need salvestatakse Brave'i paroolihaldurisse</translation>
 <translation id="2249635629516220541">Kohandage teavet, mida saidid teile reklaamide kuvamiseks kasutavad</translation>
 <translation id="2259659629660284697">Paroolide eksportimine …</translation>
-<translation id="8820144752830692527">Jaotises <ph name="BEGIN_LINK1"/>Seaded<ph name="END_LINK1"/> saate igal ajal valida, mida sünkroonida. AI Wiz võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="8820144752830692527">Jaotises <ph name="BEGIN_LINK1"/>Seaded<ph name="END_LINK1"/> saate igal ajal valida, mida sünkroonida. AI Wize võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
 <translation id="781982477617612877">Paroolide kontrollimiseks logige sisse oma Brave'i kontole</translation>
 <translation id="2278052315791335171">Selle parooli kustutamisel ei kustutata teie kontot saidil <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Arveldusaadress</translation>
@@ -270,7 +270,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="2567545343356994513">Kiirem ennetav kaitse ohtlike veebisaitide, allalaadimiste ja laienduste vastu</translation>
 <translation id="5079947353572974060">Paku muudes keeltes olevate lehtede saatmist teenusele Brave'i tõlge</translation>
 <translation id="2571834852878229351">Loon ise</translation>
-<translation id="6995512410824092085">Vaadake, kuidas AI Wiz vaikevalikuks määrata</translation>
+<translation id="6995512410824092085">Vaadake, kuidas AI Wize vaikevalikuks määrata</translation>
 <translation id="7242554556818074465">Selleks et näha vahelehti kõikjalt, kus Brave'i kasutate, logige kõigisse oma seadmetesse sisse</translation>
 <translation id="8661556138616664061">Brave'i sisu lastele</translation>
 <translation id="2324920234469020158">See tühjendab vahemälu, kustutab küpsised ja muud andmed, mis pärinevad Brave'i arvates ebatähtsatelt saitidelt.</translation>
@@ -293,7 +293,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="265156376773362237">Standardne eellaadimine</translation>
 <translation id="2656405586795711023">Veebirakendused</translation>
 <translation id="2669454659051515572">Kõik inimesed, kes seda seadet kasutavad, näevad allalaaditud faile</translation>
-<translation id="5806087344347665213">Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wiz saata Brave'ile URL-e, sh lehe sisu</translation>
+<translation id="5806087344347665213">Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wize saata Brave'ile URL-e, sh lehe sisu</translation>
 <translation id="2702516483241149200">Uus: jagage linki, millega keritakse selle teksti juurde</translation>
 <translation id="3769942772151914580">Reaalajas ja ennetav kaitse ohtlike saitide, allalaadimiste ja laienduste eest, mis põhineb teie sirvimisandmetel, mis saadetakse Brave'ile</translation>
 <translation id="2708226184420201102">Avamine brauseris <ph name="PRODUCT_NAME"/></translation>
@@ -326,7 +326,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="2870560284913253234">Sait</translation>
 <translation id="2871733351037274014">Lehtede eellaadimine</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> soovib, et kiidaksite heaks järgmise veebisaidi:</translation>
-<translation id="6756656512757374876">Vaadake lisateavet, <ph name="BEGIN_LINK"/>kuidas AI Wiz teie andmeid privaatsena hoiab<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Vaadake lisateavet, <ph name="BEGIN_LINK"/>kuidas AI Wize teie andmeid privaatsena hoiab<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Teave Brave'i kohta</translation>
 <translation id="2891154217021530873">Peata lehe laadimine</translation>
 <translation id="4013614219085422040">Brave võib kasutada teie ajalugu otsingu ja muude Brave'i teenuste isikupärastamiseks</translation>
@@ -338,7 +338,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="7339921667754113786">Brave'i märguannete platvorm</translation>
 <translation id="2912296070571964914">Hallake teemasid, mis teile huvi pakuvad</translation>
 <translation id="2923908459366352541">Nimi on sobimatu</translation>
-<translation id="6355102470683871794">Rakenduse AI Wiz <ph name="APP_NAME"/> salvestusruum</translation>
+<translation id="6355102470683871794">Rakenduse AI Wize <ph name="APP_NAME"/> salvestusruum</translation>
 <translation id="2932222164150889403">Teie klaviatuur ei muutu</translation>
 <translation id="6537665929855787038">Brave'i märguanded lihtsustavad asju</translation>
 <translation id="2940075786175545812">Valik veebisaidi heakskiitmiseks või mitteheakskiitmiseks</translation>
@@ -360,7 +360,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="2996291259634659425">Parooli loomine</translation>
 <translation id="2996809686854298943">Vaja on URL-i</translation>
 <translation id="2996932914629936323">Kustutab ajaloo kõigist sünkroonitud seadmetest</translation>
-<translation id="2019027298133375428">Kui Brave'i sait palub lehel olevad lingid privaatselt eellaadida, krüpteerib AI Wiz need lehed ja laadib need Brave'i serverite kaudu ilma küpsisefailideta. See peidab teie identiteedi eellaaditud saidi eest.</translation>
+<translation id="2019027298133375428">Kui Brave'i sait palub lehel olevad lingid privaatselt eellaadida, krüpteerib AI Wize need lehed ja laadib need Brave'i serverite kaudu ilma küpsisefailideta. See peidab teie identiteedi eellaaditud saidi eest.</translation>
 <translation id="5730179015008010982">Teie külastatavad URL-id saadetakse Brave'ile, et prognoosida, milliseid saite võiksite järgmisena külastada, ja pakkuda lisateavet lehe kohta, mida külastate</translation>
 <translation id="3016635187733453316">Veenduge, et seadmel oleks internetiühendus</translation>
 <translation id="3026955690410463085">Link on kaasatud</translation>
@@ -374,7 +374,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="3038272154009688107">Kuva kõik saidid</translation>
 <translation id="3046945242843292318">Liikuge järgmine kord sellele saidile kiiremini</translation>
 <translation id="3055259925215945098">Järjehoidja teisaldati</translation>
-<translation id="4163313568284712797">Brave'ile saadetakse teavet teie Brave'i kasutuse kohta, kuid see teave pole teiega seotud.\n\nKui AI Wiz jookseb kokku, võivad krahhi üksikasjad isiklikku teavet sisaldada.\n\nKui lülitate sünkroonimise sisse, võivad mõõdikud sisaldada ka teavet teie külastatavate URL-ide kohta.</translation>
+<translation id="4163313568284712797">Brave'ile saadetakse teavet teie Brave'i kasutuse kohta, kuid see teave pole teiega seotud.\n\nKui AI Wize jookseb kokku, võivad krahhi üksikasjad isiklikku teavet sisaldada.\n\nKui lülitate sünkroonimise sisse, võivad mõõdikud sisaldada ka teavet teie külastatavate URL-ide kohta.</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> järjehoidja}other{<ph name="BOOKMARKS_COUNT_MANY"/> järjehoidjat}}</translation>
 <translation id="6153252609477956632">Teie huvidega seotud artiklid Brave'is</translation>
 <translation id="3066573403916685335">Liiguta allapoole</translation>
@@ -444,7 +444,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="3439276997620616816">Oma hiljutised vahelehed leiate siit</translation>
 <translation id="3443221991560634068">Praeguse lehe uuesti laadimine</translation>
 <translation id="3444179773590444986">Kas soovite saitide tumeda teema kohta tagasisidet jagada?</translation>
-<translation id="7384339501748168186">Teie privaatsuse kaitsmiseks ei sisesta AI Wiz sellele väljale automaatselt parooli.</translation>
+<translation id="7384339501748168186">Teie privaatsuse kaitsmiseks ei sisesta AI Wize sellele väljale automaatselt parooli.</translation>
 <translation id="3474624961160222204">Jätka kasutajana <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Võite valida oma otsingumootori</translation>
 <translation id="3479552764303398839">Mitte praegu</translation>
@@ -453,7 +453,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Sordi vanima järgi</translation>
 <translation id="3507132249039706973">Tavakaitse on sisse lülitatud</translation>
-<translation id="8669829441518807650">Võrguühenduseta. AI Wiz ei saa värskendusi otsida.</translation>
+<translation id="8669829441518807650">Võrguühenduseta. AI Wize ei saa värskendusi otsida.</translation>
 <translation id="3513704683820682405">Liitreaalsus</translation>
 <translation id="3518985090088779359">Nõustu ja jätka</translation>
 <translation id="3521388823983121502">Ei saa teenusega <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> jätkata</translation>
@@ -574,7 +574,7 @@ Teie krüpteeritud andmeid saab lugeda ainult isik, kes teab teie parooli. Paroo
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 vahekaart selles seadmes}other{# vahekaarti selles seadmes}}</translation>
 <translation id="4198423547019359126">Ükski allalaadimise asukoht ei ole saadaval</translation>
 <translation id="4202218894997543208">Teie blokeeritud teemad</translation>
-<translation id="1675646381334855139">Kui lubate küpsised, võib AI Wiz neid kasutada eellaadimise jaoks.</translation>
+<translation id="1675646381334855139">Kui lubate küpsised, võib AI Wize neid kasutada eellaadimise jaoks.</translation>
 <translation id="4216511743389425832">Kuula seda lehte</translation>
 <translation id="4225725533026049334">Jälgitav</translation>
 <translation id="4225895483398857530">Tööriistariba otsetee</translation>
@@ -679,7 +679,7 @@ Veebisaidil <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> v�
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Paroolid salvestatakse rakendusse Paroolihaldur selles seadmes</translation>
 <translation id="4766678251456904326">Konto lisamine seadmesse</translation>
-<translation id="1996253762801922860">Anname välja uue reklaamide privaatsusfunktsiooni, mida nimetame reklaamide mõõtmiseks. AI Wiz jagab saitide ja rakenduste vahel vaid väga piiratud teavet, näiteks seda, millal teile reklaami näidati, et aidata reklaamide toimivust mõõta.</translation>
+<translation id="1996253762801922860">Anname välja uue reklaamide privaatsusfunktsiooni, mida nimetame reklaamide mõõtmiseks. AI Wize jagab saitide ja rakenduste vahel vaid väga piiratud teavet, näiteks seda, millal teile reklaami näidati, et aidata reklaamide toimivust mõõta.</translation>
 <translation id="4769095993849849966">Uus failinimi</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> on kustutatud</translation>
 <translation id="4778653490315793244">Siin ei ole veel midagi</translation>
@@ -705,7 +705,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="4864369630010738180">Sisselogimine ...</translation>
 <translation id="5131234170665854056">Moodulit <ph name="MODULE"/> ei saa Brave'i jaoks installida</translation>
 <translation id="4871568871368204250">Sünkroonimise väljalülitamine</translation>
-<translation id="2875466387677348954">Kui see on välja lülitatud, näete endiselt soovitusi, mida AI Wiz kohalikult pakub</translation>
+<translation id="2875466387677348954">Kui see on välja lülitatud, näete endiselt soovitusi, mida AI Wize kohalikult pakub</translation>
 <translation id="4875775213178255010">Sisu soovitused</translation>
 <translation id="4878404682131129617">Puhverserveri kaudu tunneli loomine ebaõnnestus</translation>
 <translation id="4880127995492972015">Tõlgi …</translation>
@@ -753,7 +753,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="509429900233858213">Tekkis viga.</translation>
 <translation id="5097349930204431044">Teie külastatavad saidid saavad tuvastada, mis teile meeldib, ja siis sirvimise jätkamisel reklaame soovitada</translation>
 <translation id="5099845111805573968">Kui valite ühe korra arvutisaidi, rakendatakse seade saidi jaoks ka järgmistel külastuskordadel</translation>
-<translation id="225414324447409614">Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wiz saata URL-id ja lehe sisu osad teenusele Brave'i ohutu sirvimine</translation>
+<translation id="225414324447409614">Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wize saata URL-id ja lehe sisu osad teenusele Brave'i ohutu sirvimine</translation>
 <translation id="510275257476243843">Jäänud on 1 tund</translation>
 <translation id="5115811374190515607">teenusesse <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Huvid</translation>
@@ -788,7 +788,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="5308380583665731573">Ühendamine</translation>
 <translation id="5317780077021120954">Salvesta</translation>
 <translation id="989239400026154074">Brave soovitab Brave'i</translation>
-<translation id="7815000350132166985">Kui lubate küpsised, võib AI Wiz neid eellaadimise ajal kasutada</translation>
+<translation id="7815000350132166985">Kui lubate küpsised, võib AI Wize neid eellaadimise ajal kasutada</translation>
 <translation id="1681635711794313507">Kuna eellaaditud saidid on krüpteeritud ja lehtedele linkiv sait on Brave'i sait, ei võta Brave'i serverid nende lehtede privaatsel eellaadimisel vastu uut teavet.</translation>
 <translation id="5329858041417644019">Teie brauserit ei hallata</translation>
 <translation id="5342314432463739672">Lubade taotlused</translation>
@@ -805,7 +805,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="543338862236136125">Muuda parooli</translation>
 <translation id="5433691172869980887">Kasutajanimi on kopeeritud</translation>
 <translation id="5438292632479953702">Laadi uuesti alla</translation>
-<translation id="2766925507720001104">Hoiatab teid ohtlike saitide eest, isegi nende eest, millest AI Wiz varem ei teadnud, analüüsides standardse kaitsega võrreldes rohkem saitidelt pärinevaid andmeid. Soovi korral saate Brave'i hoiatused vahele jätta.</translation>
+<translation id="2766925507720001104">Hoiatab teid ohtlike saitide eest, isegi nende eest, millest AI Wize varem ei teadnud, analüüsides standardse kaitsega võrreldes rohkem saitidelt pärinevaid andmeid. Soovi korral saate Brave'i hoiatused vahele jätta.</translation>
 <translation id="5441137934526263133">Kas sait ei tööta? Kolmanda osapoole küpsisefailid on blokeeritud</translation>
 <translation id="5441466871879044658">Tõlgi sellesse keelde</translation>
 <translation id="5441522332038954058">Aadressiribale liikumine</translation>
@@ -823,7 +823,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="5517095782334947753">Teil on järjehoidjad, ajalugu, paroolid ja muud seaded kontolt <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Ümbersuunamine blokeeriti.</translation>
 <translation id="5548606607480005320">Ohutuskontroll</translation>
-<translation id="4362225295386962644">Kui kasutate parooli, hoiatab AI Wiz teid, kui see on veebis avalikustatud. Selle käigus on teie paroolid ja kasutajanimed krüpteeritud, et mitte keegi (sh Brave) ei saaks neid lugeda.</translation>
+<translation id="4362225295386962644">Kui kasutate parooli, hoiatab AI Wize teid, kui see on veebis avalikustatud. Selle käigus on teie paroolid ja kasutajanimed krüpteeritud, et mitte keegi (sh Brave) ei saaks neid lugeda.</translation>
 <translation id="5555525474779371165">Valige oma Brave'i ohutu sirvimise kaitse</translation>
 <translation id="5556459405103347317">Laadi uuesti</translation>
 <translation id="555816257274242153">Hinna jälgimine peatati</translation>
@@ -878,7 +878,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="5797521893972859201">Tühjendab ajaloo, sh otsingukasti ajaloo</translation>
 <translation id="5797949256525811424">Teema blokeeriti</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# tund tagasi}other{# tundi tagasi}}</translation>
-<translation id="5311273890481188673">Autoriõigus <ph name="YEAR"/> AI Wiz LLC. Kõik õigused on kaitstud.</translation>
+<translation id="5311273890481188673">Autoriõigus <ph name="YEAR"/> AI Wize LLC. Kõik õigused on kaitstud.</translation>
 <translation id="5814749351757353073">Olge oma lemmiksaitidega kursis</translation>
 <translation id="5822875253699806474">Külastatud saitidele kiiresti naasmiseks sünkroonige vahelehed ja ajalugu.</translation>
 <translation id="583281660410589416">Tundmatu</translation>
@@ -929,7 +929,7 @@ Seade muutmiseks <ph name="BEGIN_LINK"/>lähtestage sünkroonimine<ph name="END_
 <translation id="6070730414166672373">Pangaga ühenduse võtmine \u2026</translation>
 <translation id="6085886413119427067">Määrab, kuidas veebisaitidega turvaline ühendus luua</translation>
 <translation id="60923314841986378">Jäänud on <ph name="HOURS"/> tundi</translation>
-<translation id="4726571606794511368">Kui AI Wiz on ka teie vaikeotsingumootor, näete paremaid, konteksti suhtes asjakohaseid soovitusi</translation>
+<translation id="4726571606794511368">Kui AI Wize on ka teie vaikeotsingumootor, näete paremaid, konteksti suhtes asjakohaseid soovitusi</translation>
 <translation id="6108923351542677676">Seadistamine on pooleli ...</translation>
 <translation id="6112702117600201073">Lehe värskendamine</translation>
 <translation id="6122831415929794347">Kas lülitada Brave'i ohutu sirvimine välja?</translation>
@@ -991,7 +991,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="6407224748847589805">Ei saanud teie arvutiga ühendust luua. Proovige mõnda teist kinnitusvõimalust.</translation>
 <translation id="6410883413783534063">Avage vahelehti, et samal ajal eri lehti külastada</translation>
 <translation id="6411219469806822692">Kõrgemale ei saa minna. Alustage lehel eestpoolt.</translation>
-<translation id="7810992039564280750">Kontrollib URL-e Brave'i talletatud ohtlike saitide loendi alusel. Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wiz saata URL-id ja lehe sisu osad teenusesse Brave'i ohutu sirvimine.</translation>
+<translation id="7810992039564280750">Kontrollib URL-e Brave'i talletatud ohtlike saitide loendi alusel. Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wize saata URL-id ja lehe sisu osad teenusesse Brave'i ohutu sirvimine.</translation>
 <translation id="641643625718530986">Printimine ...</translation>
 <translation id="6422857128426228781">Siit leiate oma jälgitavad tooted</translation>
 <translation id="6433501201775827830">Valige oma otsingumootor</translation>
@@ -1038,19 +1038,19 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="6627583120233659107">Muuda kausta</translation>
 <translation id="6636623428211296678">Avastage allpool rohkem seadeid või lõpetage kohe</translation>
 <translation id="2259649928554669581">Privaatsuse, turvalisuse ning andmete kogumisega seotud lisaseadete nägemiseks vaadake jaotisi <ph name="BEGIN_LINK1"/>Sünkroonimine<ph name="END_LINK1"/> ja <ph name="BEGIN_LINK2"/>Brave'i teenused<ph name="END_LINK2"/>.</translation>
-<translation id="7939692063031538305">Rakenduse täiustamiseks saadab AI Wiz Brave'ile kasutus- ja krahhiandmeid. <ph name="BEGIN_UMA_LINK"/>Haldamine<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Rakenduse täiustamiseks saadab AI Wize Brave'ile kasutus- ja krahhiandmeid. <ph name="BEGIN_UMA_LINK"/>Haldamine<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blokeeri alati</translation>
 <translation id="6641780377503683465">Eemalda <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Tühjenda</translation>
 <translation id="6645629752388991326">Hallake, millised seadmed saavad seda seadet turvavõtmena kasutades sisse logida.</translation>
-<translation id="2730188427562924169">Saadab privaatse serveri kaudu Brave'ile URL-i hägustatud osa, mis peidab teie IP-aadressi. Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wiz saata Brave'ile ka URL-e, sh lehe sisu.</translation>
+<translation id="2730188427562924169">Saadab privaatse serveri kaudu Brave'ile URL-i hägustatud osa, mis peidab teie IP-aadressi. Kui sait üritab teie parooli varastada või laadite alla kahjuliku faili, võib AI Wize saata Brave'ile ka URL-e, sh lehe sisu.</translation>
 <translation id="7556503430569358637">Teie külastatavad URL-id saadetakse Brave'ile, et prognoosida, milliseid saite võiksite järgmisena külastada</translation>
 <translation id="6678472970290886941">Teie administraator saab brauseri seadistust kaugühenduse kaudu muuta. Selle seadme tegevusi võidakse hallata ka väljaspool Brave'i.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 ja veel <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 ja veel <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Kujutise eelvaade <ph name="BEGIN_NEW"/>Uus<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Parool</translation>
 <translation id="6659594942844771486">Vaheleht</translation>
-<translation id="9145803563102831353">Praegu ei saa sellesse seadmesse salvestatud paroole Brave'i kanalites kasutada. Pärast versiooni AI Wiz 121 liidetakse teie seadmesse Brave'i ja <ph name="CHROME_CHANNEL"/>'i jaoks salvestatud paroolid ning neid saab kasutada mõlemas rakenduses.</translation>
+<translation id="9145803563102831353">Praegu ei saa sellesse seadmesse salvestatud paroole Brave'i kanalites kasutada. Pärast versiooni AI Wize 121 liidetakse teie seadmesse Brave'i ja <ph name="CHROME_CHANNEL"/>'i jaoks salvestatud paroolid ning neid saab kasutada mõlemas rakenduses.</translation>
 <translation id="666731172850799929">Ava rakenduses <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kopeeri kujutis</translation>
 <translation id="6672917148207387131">Lisa <ph name="DOMAIN"/></translation>
@@ -1163,7 +1163,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="727288900855680735">Kas saata kood <ph name="ONE_TIME_CODE"/> saidile <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Blokeeritud sait</translation>
 <translation id="7949597606523411684">Brave kustutab automaatselt teemad, mis on vanemad kui 4 nädalat. Kui jätkate sirvimist, võib teema uuesti loendis ilmuda. Võite ka blokeerida teemad, mida te ei soovi lasta Brave'il saitidega jagada. Lugege lisateavet <ph name="BEGIN_LINK"/>Brave'is reklaamide privaatsuse haldamise<ph name="END_LINK"/> kohta.</translation>
-<translation id="4561646469134805137">Sisestamise ajal saadab AI Wiz aadressiriba või otsingukasti sisu teie vaikeotsingumootorisse</translation>
+<translation id="4561646469134805137">Sisestamise ajal saadab AI Wize aadressiriba või otsingukasti sisu teie vaikeotsingumootorisse</translation>
 <translation id="7286703216224610554">Jaga ainult reaktsiooni</translation>
 <translation id="7289303553784750393">Kui olete onlainis, kuid see probleem jääb korduma, võite proovida teisi viise, kuidas saidil <ph name="SITE_ETLD_PLUS_ONE"/> jätkata.</translation>
 <translation id="7290209999329137901">Ümbernimetamine ei ole võimalik</translation>
@@ -1171,7 +1171,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="7293429513719260019">Valige keel</translation>
 <translation id="729975465115245577">Seadmes pole sünkroonimiseks piisavalt salvestusruumi.</translation>
 <translation id="7581648335850642193">Teie Android-seadmes võib olla sarnane seade. Kui see seade on Brave’is ja teie Android-seadmes sisse lülitatud, võib ettevõttel olla võimalik mõõta reklaami tõhusust veebisaitidel, mida külastate, ja rakendustes, mida kasutate.</translation>
-<translation id="1382596880054356475">Võrguühenduseta. AI Wiz ei saa teie paroole kontrollida.</translation>
+<translation id="1382596880054356475">Võrguühenduseta. AI Wize ei saa teie paroole kontrollida.</translation>
 <translation id="7313188324932846546">Puudutage sünkroonimise seadistamiseks</translation>
 <translation id="7324354302972299151">„Do Not Track” taotluse saatmine</translation>
 <translation id="7332075081379534664">Sisselogimine õnnestus</translation>
@@ -1348,7 +1348,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="808747664143081553">Seadmega ühendatud</translation>
 <translation id="8090732854597034573">Kui vajad abi, küsi vanemalt</translation>
 <translation id="8101414242770404289">Vahelehti pole <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Jätkamisel nõustute <ph name="BEGIN_TOS_LINK"/>teenusetingimustega<ph name="END_TOS_LINK"/>.\nRakenduse täiustamiseks saadab AI Wiz Brave'ile kasutus- ja krahhiandmeid. <ph name="BEGIN_UMA_LINK"/>Haldamine<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Jätkamisel nõustute <ph name="BEGIN_TOS_LINK"/>teenusetingimustega<ph name="END_TOS_LINK"/>.\nRakenduse täiustamiseks saadab AI Wize Brave'ile kasutus- ja krahhiandmeid. <ph name="BEGIN_UMA_LINK"/>Haldamine<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Sule sortimisvalikud</translation>
 <translation id="2919733817273403520">Aidake täiustada Brave'i funktsioone ja toimivust</translation>
@@ -1368,14 +1368,14 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="8210770465353466621">Oma vahelehed leiate siit</translation>
 <translation id="8215740705341534369">Külgmine leht</translation>
 <translation id="8218622182176210845">Konto haldamine</translation>
-<translation id="4034729701971511794">Saate blokeerida saidid, millel te ei soovi lubada andmeid salvestada. AI Wiz kustutab loendist automaatselt ka saidid, mis on vanemad kui 30 päeva. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Saate blokeerida saidid, millel te ei soovi lubada andmeid salvestada. AI Wize kustutab loendist automaatselt ka saidid, mis on vanemad kui 30 päeva. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Voo kaardimenüü</translation>
 <translation id="8236097722223016103">Lisa järjehoidjatesse</translation>
 <translation id="8237871086242677046">Lehe statistika alumine leht</translation>
 <translation id="8243077599929149377">Lisage oma kasutajanimi</translation>
 <translation id="8250920743982581267">Dokumendid</translation>
 <translation id="8255617931166444521">Saidid võivad teie küpsisefaile kasutada vaid selleks, et vaadata teie sirvimistegevust ainult samal saidil</translation>
-<translation id="2876689296031086375">Kuna eellaaditud lehed on krüpteeritud, ei saa AI Wiz eellaaditud lehe sisu kohta teavet. Brave'i serverid saavad teada, millised saidid eellaaditakse privaatselt. Seda teavet kasutatakse ainult lehtede eellaadimiseks ja seda ei seostata teie Brave'i kontol oleva muu teabega.</translation>
+<translation id="2876689296031086375">Kuna eellaaditud lehed on krüpteeritud, ei saa AI Wize eellaaditud lehe sisu kohta teavet. Brave'i serverid saavad teada, millised saidid eellaaditakse privaatselt. Seda teavet kasutatakse ainult lehtede eellaadimiseks ja seda ei seostata teie Brave'i kontol oleva muu teabega.</translation>
 <translation id="8260126382462817229">Proovige uuesti sisse logida</translation>
 <translation id="8261506727792406068">Kustuta</translation>
 <translation id="82619448491672958">Kuva muud vahelehed</translation>
@@ -1385,7 +1385,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="829672787777123339">Teie seadmega ühendamine …</translation>
 <translation id="8310344678080805313">Tavapärased vahekaardid</translation>
 <translation id="831192587911042850">Lisab praeguse veebisaidi teie jälgitavate veebisaitide loendisse.</translation>
-<translation id="5665071699503384089">Saate blokeerida teemad, mida ei soovi saitidega jagada. Samuti kustutab AI Wiz automaatselt teemad, mis on vanemad kui 4 nädalat. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Saate blokeerida teemad, mida ei soovi saitidega jagada. Samuti kustutab AI Wize automaatselt teemad, mis on vanemad kui 4 nädalat. <ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Ära kunagi tõlgi järgmisi saite</translation>
 <translation id="8348430946834215779">Kasutage võimalusel alati HTTPS-i ja saate enne HTTPS-i toetuseta saitide laadimist hoiatuse</translation>
 <translation id="8354977102499939946">Otsige kiirelt oma hääle abil. Selle otsetee muutmiseks avage menüü Seaded.</translation>
@@ -1396,11 +1396,11 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="7651600795135059130">Kontrollib URL-e Brave'i talletatud ohtlike saitide loendi alusel.</translation>
 <translation id="8402673309244746971">Ava voog Jälgitav</translation>
 <translation id="8413126021676339697">Kuva kogu ajalugu</translation>
-<translation id="5348884013239264115">Kaitseb teadaolevalt ohtlike veebisaitide, allalaadimiste ja laienduste vastu. Kui külastate saiti, saadab AI Wiz privaatsusserveri kaudu Brave'ile URL-i hägustatud osa, mis peidab teie IP-aadressi. Kui sait teeb midagi kahtlast, saadetakse nii täielikud URL-id kui ka osa lehe sisust.</translation>
+<translation id="5348884013239264115">Kaitseb teadaolevalt ohtlike veebisaitide, allalaadimiste ja laienduste vastu. Kui külastate saiti, saadab AI Wize privaatsusserveri kaudu Brave'ile URL-i hägustatud osa, mis peidab teie IP-aadressi. Kui sait teeb midagi kahtlast, saadetakse nii täielikud URL-id kui ka osa lehe sisust.</translation>
 <translation id="8414396119627470038">Logige saidile <ph name="SITE_ETLD_PLUS_ONE"/> sisse teenusega <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Kaasa</translation>
 <translation id="8422250855136581222">Selles seadmes pole vahelehti</translation>
-<translation id="5735840612282428689">Leht saadetud. Selle vaatamiseks avage AI Wiz oma <ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">Leht saadetud. Selle vaatamiseks avage AI Wize oma <ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">Eelvaate vaheleht on pooleldi avatud</translation>
 <translation id="8428213095426709021">Seaded</translation>
 <translation id="8430824733382774043">Jagatakse vaid ekraanipilti</translation>
@@ -1499,7 +1499,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Lisateave<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> on valmis</translation>
 <translation id="1174893863889683998">Kas eemaldada teie Brave'i tegevused teenusest Digitaalne heaolu?</translation>
-<translation id="179413535815682755">Teie seadetest olenevalt võib AI Wiz saata ka küpsisefaile, teie praeguse URL-i ja teie asukoha</translation>
+<translation id="179413535815682755">Teie seadetest olenevalt võib AI Wize saata ka küpsisefaile, teie praeguse URL-i ja teie asukoha</translation>
 <translation id="8942627711005830162">Ava teises aknas</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> – seda keelt ei saanud alla laadida. Proovige hiljem uuesti.</translation>
 <translation id="8955719471735800169">Tagasi üles</translation>
@@ -1520,7 +1520,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="9055497320631373736">Sait lisati tagasi potentsiaalsete saitide hulka</translation>
 <translation id="9063523880881406963">Valiku Taotle arvutisaiti väljalülitamine</translation>
 <translation id="9065203028668620118">Muuda</translation>
-<translation id="5496925146144075335">Salvestatud andmed, mida AI Wiz peab ebaoluliseks (nt saidid, mida külastate harva või millel ei ole salvestatud seadeid)</translation>
+<translation id="5496925146144075335">Salvestatud andmed, mida AI Wize peab ebaoluliseks (nt saidid, mida külastate harva või millel ei ole salvestatud seadeid)</translation>
 <translation id="9067341854474068781">Pääsuvõtmete puudumise leht on avatud täiskõrgusel</translation>
 <translation id="906781307897697745">kohas: <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Pole lugemata lehti</translation>
@@ -1554,7 +1554,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="9209888181064652401">Ei saa helistada</translation>
 <translation id="9212845824145208577">Madalamale ei saa minna. Alustage lehel altpoolt.</translation>
 <translation id="9219103736887031265">Pildid</translation>
-<translation id="6946179564366058239">Kui sait palub lehel olevad lingid privaatselt eellaadida, krüpteerib AI Wiz need lehed ja laadib need Brave'i serverite kaudu ilma küpsisefailideta. See peidab teie identiteedi eellaaditud saidi eest.</translation>
+<translation id="6946179564366058239">Kui sait palub lehel olevad lingid privaatselt eellaadida, krüpteerib AI Wize need lehed ja laadib need Brave'i serverite kaudu ilma küpsisefailideta. See peidab teie identiteedi eellaaditud saidi eest.</translation>
 <translation id="4596514158372210596">Brave'i tegevuste eemaldamine teenusest Digitaalne heaolu</translation>
 <translation id="2830145431802238213">Kasutage Brave'is lihtsustatud režiimi</translation>
 <translation id="928550791203542716">Jälgitakse saiti <ph name="SITE_NAME"/></translation>
@@ -1574,7 +1574,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="993520549480398880">Samuti kustutage sellest autost järjehoidjad, ajalugu ja muu</translation>
 <translation id="996149300115483134">Voo kaardimenüü on suletud</translation>
 <translation id="5186185447130319458">Privaatne</translation>
-<translation id="79269250264141507">Kui sisestate midagi aadressiribale või otsingukasti, saadab AI Wiz sisestatava teie vaikeotsingumootorile, et saada paremaid soovitusi. Privaatses režiimis on see välja lülitatud.</translation>
+<translation id="79269250264141507">Kui sisestate midagi aadressiribale või otsingukasti, saadab AI Wize sisestatava teie vaikeotsingumootorile, et saada paremaid soovitusi. Privaatses režiimis on see välja lülitatud.</translation>
 <translation id="5711390076756601471">Lukusta Brave'ist lahkumisel privaatsed vahelehed</translation>
 <translation id="1014490034578104945">Kasuta avatud privaatsete vahelehtede vaatamiseks ekraanilukku</translation>
 <translation id="5722020415664104421">Blokeeri privaatrežiimi kasutamisel</translation>
@@ -1591,7 +1591,7 @@ Näiteks võivad mõned veebisaidid taotlusele reageerida nii, et näitavad teil
 <translation id="4660964651149493586">Ava privaatne</translation>
 <translation id="5278260521317049275">Lülita sisse privaatlukk</translation>
 <translation id="6302653771627628530">Brave'ist lahkumisel lukustatakse privaatsed vahelehed</translation>
-<translation id="3763131702135887799">Aidake muuta AI Wiz paremaks nende profiilide jaoks, kes kasutavad seda teiega sarnasel viisil</translation>
+<translation id="3763131702135887799">Aidake muuta AI Wize paremaks nende profiilide jaoks, kes kasutavad seda teiega sarnasel viisil</translation>
 <translation id="4167670741834902166">Uus privaatne vaheleht</translation>
 <translation id="9148151251783962691">Kui soovite selles seadmes privaatselt sirvida, proovige privaatrežiimi</translation>
 <translation id="8355284051444779553">Uue privaatse vahelehe avamiseks avage menüü</translation>

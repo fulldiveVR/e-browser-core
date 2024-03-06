@@ -19,7 +19,7 @@ class TranslatePrefs : public TranslatePrefs_ChromiumImpl {
  public:
   using TranslatePrefs_ChromiumImpl::TranslatePrefs_ChromiumImpl;
 
-  // Override to control by AI Wiz features. No virtual because TranslatePrefs
+  // Override to control by AI Wize features. No virtual because TranslatePrefs
   // doesn't have a virtual dtor and the method isn't used inside the impl.
   bool ShouldAutoTranslate(std::string_view source_language,
                            std::string* target_language);

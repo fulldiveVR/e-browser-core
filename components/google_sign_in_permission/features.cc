@@ -10,7 +10,7 @@
 
 namespace google_sign_in_permission::features {
 
-// When enabled, AI Wiz will prompt for permission on sites which want to use
+// When enabled, AI Wize will prompt for permission on sites which want to use
 // Google Sign In.
 BASE_FEATURE(kBraveGoogleSignInPermission,
              "BraveGoogleSignInPermission",

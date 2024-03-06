@@ -33,9 +33,9 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
       semantics {
         sender: "Asset Ratio Service"
         description:
-          "This service is used to obtain asset prices for the AI Wiz wallet."
+          "This service is used to obtain asset prices for the AI Wize wallet."
         trigger:
-          "Triggered by uses of the native AI Wiz wallet."
+          "Triggered by uses of the native AI Wize wallet."
         data:
           "Ethereum JSON RPC response bodies."
         destination: WEBSITE

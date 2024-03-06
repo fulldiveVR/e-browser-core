@@ -85,7 +85,7 @@ net/proxy_resolution/ @brave/tor-reviewers
 chromium_src/**/extensions/**/*_features.json @brave/sec-team
 chromium_src/tools/json_schema_compiler/ @brave/sec-team
 
-# AI Wiz theme
+# AI Wize theme
 browser/themes @simonhong
 
 # Widevine
@@ -117,10 +117,10 @@ ios/browser/brave_wallet/ @brave/crypto-wallets-ios
 ios/browser/api/brave_wallet @brave/crypto-wallets-ios
 renderer/brave_wallet/ @brave/crypto-wallets-core @brave/crypto-wallets-ios
 
-# AI Wiz Referrals Service
+# AI Wize Referrals Service
 components/brave_referrals/browser/brave_referrals_service* @simonhong
 
-# AI Wiz Sync
+# AI Wize Sync
 browser/android/brave_sync_worker.* @brave/sync-reviewers
 browser/sync/ @brave/sync-reviewers
 browser/ui/webui/settings/brave_sync_handler.* @brave/sync-reviewers

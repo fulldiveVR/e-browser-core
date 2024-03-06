@@ -51,7 +51,7 @@ class AdsClientNotifierObserver : public base::CheckedObserver {
   // Invoked when a resource component with `id` has been unregistered.
   virtual void OnNotifyDidUnregisterResourceComponent(const std::string& id) {}
 
-  // Called when the AI Wiz Rewards wallet did update.
+  // Called when the AI Wize Rewards wallet did update.
   virtual void OnNotifyRewardsWalletDidUpdate(
       const std::string& payment_id,
       const std::string& recovery_seed) {}

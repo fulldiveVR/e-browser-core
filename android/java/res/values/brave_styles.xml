@@ -45,7 +45,7 @@
         <item name="android:background">@drawable/rounded_set_default_top_corners</item>
     </style>
 
-    <!-- AI Wiz Wallet -->
+    <!-- AI Wize Wallet -->
     <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
         <item name="android:textSize">12sp</item>
         <item name="android:lineSpacingExtra">2sp</item>
@@ -137,7 +137,7 @@
         <item name="android:textCursorDrawable">@null</item>
     </style>
 
-    <!-- Buttons for AI Wiz Sync -->
+    <!-- Buttons for AI Wize Sync -->
     <style name="BraveSyncButton">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/brave_sync_btn</item>
@@ -293,7 +293,7 @@
         <item name="android:windowExitAnimation">@anim/slide_out_top</item>
     </style>
     
-    <!-- AI Wiz Ads Notifications -->
+    <!-- AI Wize Ads Notifications -->
     <style name="WebNotificationSmallIcon">
         <item name="android:alpha">0.6</item>
     </style>
@@ -305,7 +305,7 @@
         <item name="android:layout_marginStart">8dp</item>
     </style>
 
-    <!-- AI Wiz Leo preferences -->
+    <!-- AI Wize Leo preferences -->
     <style name="BraveLeoResetTextColor" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/leo_reset_text_color</item>
     </style>

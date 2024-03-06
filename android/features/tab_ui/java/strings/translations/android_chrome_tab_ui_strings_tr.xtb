@@ -68,7 +68,7 @@
 <translation id="6549021453810473782">Mağaza bilgilerini görün</translation>
 <translation id="6562820390860419811">Sekmeyi sola taşı</translation>
 <translation id="6615455863669487791">Göster</translation>
-<translation id="6398241160085205003">Kapatılan sekmelerinizi, AI Wiz ana menüsündeki son sekmelerde bulabilirsiniz.</translation>
+<translation id="6398241160085205003">Kapatılan sekmelerinizi, AI Wize ana menüsündeki son sekmelerde bulabilirsiniz.</translation>
 <translation id="6840760312327750441">Sekmeleri gruplamak için bir sekmeye dokunup basılı tutun. Ardından başka bir sekmenin üzerine sürükleyin.</translation>
 <translation id="6856809498882026482">Çoklu seçim modunu gizle</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Sekmeyi paylaş}other{Sekmeleri paylaş}}</translation>
@@ -98,8 +98,8 @@
 <translation id="9169594135889675189">Gruba yeni sekme ekler</translation>
 <translation id="959682366969460160">Organize çalışın</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Kapatılan sekmelerinizi, AI Wiz ana menüsündeki Son Sekmeler bölümünde bulabilirsiniz. Gizli sekmeniz burada bulunmaz.}
-        other {Kapatılan sekmelerinizi, AI Wiz ana menüsündeki Son Sekmeler bölümünde bulabilirsiniz. # Gizli sekmeniz burada bulunmaz.}}</translation>
+        =1 {Kapatılan sekmelerinizi, AI Wize ana menüsündeki Son Sekmeler bölümünde bulabilirsiniz. Gizli sekmeniz burada bulunmaz.}
+        other {Kapatılan sekmelerinizi, AI Wize ana menüsündeki Son Sekmeler bölümünde bulabilirsiniz. # Gizli sekmeniz burada bulunmaz.}}</translation>
 <translation id="3228718275011575753">Tüm Gizli sekmeler kapatılsın mı?</translation>
 <translation id="6687920250729800417">Bu Gizli sekmelerdeki etkinliğiniz, bu cihazdan kaldırılacaktır</translation>
 </translationbundle>

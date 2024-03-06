@@ -32,7 +32,7 @@ import org.chromium.chrome.browser.crypto_wallet.observers.ApprovedTxObserver;
 import java.util.List;
 
 /**
- * Main section of AI Wiz Wallet showing Asset list and NFT grid view.
+ * Main section of AI Wize Wallet showing Asset list and NFT grid view.
  */
 public class PortfolioFragment extends Fragment implements ApprovedTxObserver {
     private static final String TAG = "PortfolioFragment";

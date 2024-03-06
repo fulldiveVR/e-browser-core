@@ -320,31 +320,31 @@
     Toggle live captions
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_WALLET_PANEL">
-    Show AI Wiz Wallet panel
+    Show AI Wize Wallet panel
   </message>
   <message name="IDS_IDC_CLOSE_BRAVE_WALLET_PANEL">
-    Close AI Wiz Wallet panel
+    Close AI Wize Wallet panel
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_VPN_PANEL">
-    Show AI Wiz VPN panel
+    Show AI Wize VPN panel
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON">
-    Toggle AI Wiz VPN toolbar button
+    Toggle AI Wize VPN toolbar button
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TRAY_ICON">
-    Toggle AI Wiz VPN tray icon
+    Toggle AI Wize VPN tray icon
   </message>
   <message name="IDS_IDC_SEND_BRAVE_VPN_FEEDBACK">
-    Send AI Wiz VPN feedback
+    Send AI Wize VPN feedback
   </message>
   <message name="IDS_IDC_ABOUT_BRAVE_VPN">
-    About AI Wiz VPN
+    About AI Wize VPN
   </message>
   <message name="IDS_IDC_MANAGE_BRAVE_VPN_PLAN">
-    Manage AI Wiz VPN plan
+    Manage AI Wize VPN plan
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN">
-    Toggle AI Wiz VPN
+    Toggle AI Wize VPN
   </message>
   <message name="IDS_IDC_TOGGLE_TAB_MUTE">
     Toggle tab mute
@@ -362,13 +362,13 @@
     Toggle vertical tabs window title
   </message>
   <message name="IDS_IDC_CONFIGURE_BRAVE_NEWS">
-    Configure AI Wiz News
+    Configure AI Wize News
   </message>
   <message name="IDS_IDC_CONFIGURE_SHORTCUTS">
     Configure shortcuts
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_TALK">
-    Show AI Wiz Talk
+    Show AI Wize Talk
   </message>
   <message name="IDS_IDC_BRAVE_BOOKMARK_BAR_ALWAYS">
     Always show bookmark bar

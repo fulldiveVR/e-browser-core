@@ -48,7 +48,7 @@
 //   },
 //   "fees": [],
 //   "id": "ba1ba438-49a8-4618-8c0b-099b69afc722",
-//   "message": "5% transaction fee collected by AI Wiz Software International",
+//   "message": "5% transaction fee collected by AI Wize Software International",
 //   "network": "uphold",
 //   "normalized": [
 //     {

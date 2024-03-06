@@ -23,15 +23,15 @@
 <translation id="1111673857033749125">סימניות שנשמרו במכשירים האחרים שלך יופיעו כאן.</translation>
 <translation id="1113597929977215864">צפייה בתצוגה נקייה</translation>
 <translation id="4470276443668654888">‏אמצעי תשלום וכתובות שנשמרו ב-Google Pay לא יוצפנו. היסטוריית הגלישה ב-Brave לא תסונכרן.
-רק מי שיודע את ביטוי הסיסמה יכול לקרוא את הנתונים המוצפנים. ביטוי הסיסמה לא נשלח אל AI Wiz או מאוחסן ב-Brave. אם שכחת את ביטוי הסיסמה או שברצונך לשנות את ההגדרה הזו, עליך לאפס את הסנכרון. <ph name="BEGIN_LINK"/>מידע נוסף<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">‏במצב הזה המערכת לא מגינה עליך מפני אתרים, הורדות ותוספים מסוכנים. גלישה בטוחה עדיין תגן עליך בשירותים אחרים של AI Wiz שבהם היא זמינה, כמו Gmail והחיפוש.</translation>
+רק מי שיודע את ביטוי הסיסמה יכול לקרוא את הנתונים המוצפנים. ביטוי הסיסמה לא נשלח אל AI Wize או מאוחסן ב-Brave. אם שכחת את ביטוי הסיסמה או שברצונך לשנות את ההגדרה הזו, עליך לאפס את הסנכרון. <ph name="BEGIN_LINK"/>מידע נוסף<ph name="END_LINK"/></translation>
+<translation id="1295971429974142731">‏במצב הזה המערכת לא מגינה עליך מפני אתרים, הורדות ותוספים מסוכנים. גלישה בטוחה עדיין תגן עליך בשירותים אחרים של AI Wize שבהם היא זמינה, כמו Gmail והחיפוש.</translation>
 <translation id="1129510026454351943">פרטים: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">אין להציג את ההצעה לתרגם את האתרים האלה</translation>
 <translation id="1145536944570833626">מחיקת נתונים קיימים.</translation>
-<translation id="7083341910267693582">‏האפליקציה <ph name="APP_NAME"/> תיפתח ב-Brave. המשך הפעולה מבטא הסכמה <ph name="BEGIN_LINK1"/>לתנאים ולהגבלות של Brave<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>לתנאים ולהגבלות הנוספים של AI Wiz ו-ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">‏האפליקציה <ph name="APP_NAME"/> תיפתח ב-Brave. המשך הפעולה מבטא הסכמה <ph name="BEGIN_LINK1"/>לתנאים ולהגבלות של Brave<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>לתנאים ולהגבלות הנוספים של AI Wize ו-ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">שימוש בסיסמה <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">שינוי שם</translation>
-<translation id="7947699437047020219">‏אם המסך צר, AI Wiz יבקש את האתר לנייד</translation>
+<translation id="7947699437047020219">‏אם המסך צר, AI Wize יבקש את האתר לנייד</translation>
 <translation id="1177863135347784049">מותאם אישית</translation>
 <translation id="1181037720776840403">הסרה</translation>
 <translation id="1181366777303791449">ב-<ph name="MAIN_FRAME_ETLD_PLUS_ONE"/></translation>
@@ -50,12 +50,12 @@
 <translation id="1240288207750131269"><ph name="LANG"/> בטעינה</translation>
 <translation id="1240903469550363138">כדי להמשיך, הפרטים הבאים ישותפו על ידי <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> עם האתר הזה: השם, האימייל, הכתובת ותמונת הפרופיל שלך. בקישורים הבאים ניתן לצפות ב<ph name="BEGIN_LINK1"/>מדיניות הפרטיות<ph name="END_LINK1"/> וב<ph name="BEGIN_LINK2"/>תנאים וההגבלות<ph name="END_LINK2"/> של האתר הזה.</translation>
 <translation id="124116460088058876">שפות נוספות</translation>
-<translation id="4078574862195461280">‏הסיסמאות יימחקו ממנהל הסיסמאות של AI Wiz ב-<ph name="CHROME_CHANNEL"/>. קובץ הסיסמאות שהורדת עכשיו יישאר אצלך.</translation>
+<translation id="4078574862195461280">‏הסיסמאות יימחקו ממנהל הסיסמאות של AI Wize ב-<ph name="CHROME_CHANNEL"/>. קובץ הסיסמאות שהורדת עכשיו יישאר אצלך.</translation>
 <translation id="1242883863226959074">מכשיר</translation>
 <translation id="124678866338384709">סגירת הכרטיסייה הנוכחית</translation>
 <translation id="1246905108078336582">להסיר את ההצעה מהלוח?</translation>
 <translation id="1996480094660735607">‏דודל של Brave‏: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">‏מעכשיו יוצג לך תוכן מאתר <ph name="SITE_NAME"/>, ותוכן לגביו, בקטע 'במעקב'. האתרים והחיפושים שבמעקב נשמרים בחשבון AI Wiz שלך. בכל שלב אפשר לנהל את הפריטים שבמעקב בהגדרות.</translation>
+<translation id="7074197713963877855">‏מעכשיו יוצג לך תוכן מאתר <ph name="SITE_NAME"/>, ותוכן לגביו, בקטע 'במעקב'. האתרים והחיפושים שבמעקב נשמרים בחשבון AI Wize שלך. בכל שלב אפשר לנהל את הפריטים שבמעקב בהגדרות.</translation>
 <translation id="1263231323834454256">רשימת קריאה</translation>
 <translation id="1266864766717917324">לא ניתן היה לשתף את ה<ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">ההיסטוריה תופיע כאן</translation>
@@ -124,14 +124,14 @@
 <translation id="1671236975893690980">ההורדה תיכף תתחיל…</translation>
 <translation id="1672586136351118594">אין להציג שוב</translation>
 <translation id="1680919990519905526">‏קניית מוצר עם Google Lens <ph name="BEGIN_NEW"/>חדש<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">‏בקרוב יוצג לך תוכן מאתר <ph name="SITE_NAME"/>, ותוכן לגביו, בקטע 'במעקב'. האתרים והחיפושים שבמעקב נשמרים בחשבון AI Wiz שלך. בכל שלב אפשר לנהל את הפריטים שבמעקב בהגדרות.</translation>
+<translation id="7870200641233500458">‏בקרוב יוצג לך תוכן מאתר <ph name="SITE_NAME"/>, ותוכן לגביו, בקטע 'במעקב'. האתרים והחיפושים שבמעקב נשמרים בחשבון AI Wize שלך. בכל שלב אפשר לנהל את הפריטים שבמעקב בהגדרות.</translation>
 <translation id="1696555181932908973">אפשר לנסות להמשיך בדרכים אחרות ב-<ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">רוצה לשנות את ההגדרות של העיצוב הכהה?</translation>
 <translation id="1702907158640575240">דפדפן מנוהל</translation>
 <translation id="1710099199314114079">מעבר בין כרטיסיות וסגירתן</translation>
 <translation id="1718835860248848330">מהשעה האחרונה</translation>
 <translation id="1724977129262658800">יש לבטל את הנעילה כדי לערוך את הסיסמה</translation>
-<translation id="6493900814829428590">‏אפשר לגלוש ולחפש מהר יותר כשמערכת AI Wiz מבצעת הערכה לגבי דפים שהמשתמש יעבור אליהם וטוענת אותם מראש</translation>
+<translation id="6493900814829428590">‏אפשר לגלוש ולחפש מהר יותר כשמערכת AI Wize מבצעת הערכה לגבי דפים שהמשתמש יעבור אליהם וטוענת אותם מראש</translation>
 <translation id="1749561566933687563">סנכרון הסימניות שלך</translation>
 <translation id="1750259112639922169">קבוצת כרטיסיות - <ph name="TAB_COUNT"/> כרטיסיות</translation>
 <translation id="17513872634828108">כרטיסיות פתוחות</translation>
@@ -166,7 +166,7 @@
 <translation id="1944535645109964458">אין מפתחות גישה זמינים</translation>
 <translation id="1952172573699511566">אתרים יציגו טקסט בשפה המועדפת שלך, כשזה אפשרי.</translation>
 <translation id="1959679933317802873">בהמתנה לתוכן</translation>
-<translation id="3968054912784331254">‏עדכוני AI Wiz לא נתמכים יותר בגרסה הזו של Android</translation>
+<translation id="3968054912784331254">‏עדכוני AI Wize לא נתמכים יותר בגרסה הזו של Android</translation>
 <translation id="1963976881984600709">הגנה רגילה</translation>
 <translation id="1966710179511230534">יש לעדכן את פרטי הכניסה שלך.</translation>
 <translation id="197288927597451399">שמירה</translation>
@@ -210,7 +210,7 @@
 <translation id="218608176142494674">שיתוף</translation>
 <translation id="2194856509914051091">מה כדאי לקחת בחשבון</translation>
 <translation id="22091350895006575">הוספה של שם המשתמש</translation>
-<translation id="4075202346699640887">‏פתיחת AI Wiz בלי נעילת פרופיל תגרום להסרת הסיסמאות ואמצעי התשלום השמורים מהמכונית. שימוש בנעילת פרופיל עוזר לשמור על אבטחת הנתונים האלה.</translation>
+<translation id="4075202346699640887">‏פתיחת AI Wize בלי נעילת פרופיל תגרום להסרת הסיסמאות ואמצעי התשלום השמורים מהמכונית. שימוש בנעילת פרופיל עוזר לשמור על אבטחת הנתונים האלה.</translation>
 <translation id="2227444325776770048">המשך בשם <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">חלון ריק</translation>
 <translation id="223356358902285214">פעילות באינטרנט ובאפליקציות</translation>
@@ -220,8 +220,8 @@
 <translation id="4808014761134300692">‏הסיסמאות שלך מוצפנות במכשיר לפני שהן נשמרות במנהל הסיסמאות של Brave</translation>
 <translation id="2249635629516220541">התאמה אישית של המידע שמשמש אתרים להצגת מודעות</translation>
 <translation id="2259659629660284697">ייצוא סיסמאות…</translation>
-<translation id="8820144752830692527">‏תמיד אפשר לבחור מה לסנכרן דרך <ph name="BEGIN_LINK1"/>ההגדרות<ph name="END_LINK1"/>. AI Wiz עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
-<translation id="781982477617612877">‏יש להיכנס לחשבון AI Wiz כדי לבדוק את הסיסמאות שלך</translation>
+<translation id="8820144752830692527">‏תמיד אפשר לבחור מה לסנכרן דרך <ph name="BEGIN_LINK1"/>ההגדרות<ph name="END_LINK1"/>. AI Wize עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="781982477617612877">‏יש להיכנס לחשבון AI Wize כדי לבדוק את הסיסמאות שלך</translation>
 <translation id="2278052315791335171">מחיקת הסיסמה הזו לא תגרום למחיקת החשבון שלך באתר <ph name="SITE"/>.</translation>
 <translation id="2286841657746966508">כתובת לחיוב</translation>
 <translation id="228704530595896923">רשימת אפשרויות השיתוף.</translation>
@@ -270,9 +270,9 @@
 <translation id="2567545343356994513">הגנה מהירה יותר ואקטיבית מפני אתרים, הורדות ותוספים מסוכנים</translation>
 <translation id="5079947353572974060">‏הצעה לשלוח דפים בשפות אחרות ל-Brave Translate</translation>
 <translation id="2571834852878229351">יצירת סיסמה משלי</translation>
-<translation id="6995512410824092085">‏כך מגדירים את AI Wiz כדפדפן ברירת המחדל</translation>
-<translation id="7242554556818074465">‏כדי לראות את הכרטיסיות שלך מכל מקום שבו פתחת את AI Wiz יש להיכנס לחשבון בכל המכשירים</translation>
-<translation id="8661556138616664061">‏תוכן של AI Wiz לילדים</translation>
+<translation id="6995512410824092085">‏כך מגדירים את AI Wize כדפדפן ברירת המחדל</translation>
+<translation id="7242554556818074465">‏כדי לראות את הכרטיסיות שלך מכל מקום שבו פתחת את AI Wize יש להיכנס לחשבון בכל המכשירים</translation>
+<translation id="8661556138616664061">‏תוכן של AI Wize לילדים</translation>
 <translation id="2324920234469020158">‏פעולה זו תמחק את קובצי ה-Cookie, את המטמון ונתונים אחרים של אתרים ש-Brave לא מחשיב כחשובים.</translation>
 <translation id="2587052924345400782">יש גרסה חדשה יותר</translation>
 <translation id="2593272815202181319">רוחב אחיד</translation>
@@ -281,7 +281,7 @@
 <translation id="2604446170045642109">בהגדרות, יש לך אפשרות לכבות את העיצוב הכהה באתרים.</translation>
 <translation id="2612676031748830579">מספר הכרטיס</translation>
 <translation id="2625189173221582860">הסיסמה הועתקה</translation>
-<translation id="2634393460268044753">‏כתובות ה-URL של האתרים שבהן ביקרת ודגימה קטנה של תוכן מהדפים, הורדות, פעילות של תוספים ופרטי מערכת נשלחים אל הגלישה הבטוחה של AI Wiz כדי לבדוק אם הם מזיקים.</translation>
+<translation id="2634393460268044753">‏כתובות ה-URL של האתרים שבהן ביקרת ודגימה קטנה של תוכן מהדפים, הורדות, פעילות של תוספים ופרטי מערכת נשלחים אל הגלישה הבטוחה של AI Wize כדי לבדוק אם הם מזיקים.</translation>
 <translation id="2642087927315268160">הגיליון התחתון של הכניסה סגור.</translation>
 <translation id="2643064289437760082">תמיד אפשר למחוק את נתוני המדידה של ביצועי המודעות על ידי מחיקה של נתוני הגלישה</translation>
 <translation id="2647434099613338025">להוספת שפה</translation>
@@ -293,7 +293,7 @@
 <translation id="265156376773362237">טעינה רגילה מראש</translation>
 <translation id="2656405586795711023">אפליקציות אינטרנט</translation>
 <translation id="2669454659051515572">כל מי שמשתמש במכשיר הזה יכול לראות את הקבצים שהורדו</translation>
-<translation id="5806087344347665213">‏אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wiz עשוי לשלוח ל-Brave כתובות URL וקטעי תוכן מדפים</translation>
+<translation id="5806087344347665213">‏אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wize עשוי לשלוח ל-Brave כתובות URL וקטעי תוכן מדפים</translation>
 <translation id="2702516483241149200">חדש: ניתן לשתף קישור שגולל לטקסט הזה</translation>
 <translation id="3769942772151914580">‏הגנה יזומה בזמן אמת מפני אתרים, הורדות ותוספים מסוכנים, המבוססת על נתוני הגלישה שלך שנשלחים אל Brave</translation>
 <translation id="2708226184420201102">פתיחה בדפדפן <ph name="PRODUCT_NAME"/></translation>
@@ -318,10 +318,10 @@
 <translation id="2839327205551510876">בוטל המעקב אחר <ph name="SITE_NAME"/></translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{התבצעה בדיקה לפני יום אחד}one{התבצעה בדיקה לפני # ימים}two{התבצעה בדיקה לפני יומיים}other{התבצעה בדיקה לפני # ימים}}</translation>
 <translation id="2842985007712546952">תיקיית אב</translation>
-<translation id="6324134303015966238">‏כדי שהדפים שבהם מבקרים ייטענו מהר יותר, AI Wiz טוען מראש דפים שיש סיכוי גבוה שייפתחו</translation>
+<translation id="6324134303015966238">‏כדי שהדפים שבהם מבקרים ייטענו מהר יותר, AI Wize טוען מראש דפים שיש סיכוי גבוה שייפתחו</translation>
 <translation id="2856503607207334158">הכניסה נכשלה</translation>
 <translation id="2860954141821109167">יש לוודא שמופעלת במכשיר הזה אפליקציית טלפון</translation>
-<translation id="6518254564747115579">‏חלק מהתכונות של AI Wiz לא יהיו זמינות יותר</translation>
+<translation id="6518254564747115579">‏חלק מהתכונות של AI Wize לא יהיו זמינות יותר</translation>
 <translation id="2869430948265924908">כדי להגן על תוכן רגיש ברכב, עליך ליצור נעילת פרופיל ברכב.  אפשר לעשות זאת באמצעות קוד אימות, קוד או סיסמה.</translation>
 <translation id="2870560284913253234">אתר</translation>
 <translation id="2871733351037274014">טעינה מראש של דפים</translation>
@@ -329,7 +329,7 @@
 <translation id="6756656512757374876">‏<ph name="BEGIN_LINK"/>מידע נוסף לגבי השמירה על פרטיות הנתונים ב-Brave<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">‏מידע כללי על Brave</translation>
 <translation id="2891154217021530873">הפסקת טעינת הדף</translation>
-<translation id="4013614219085422040">‏Brave עשויה להשתמש בהיסטוריית הגלישה שלך לצורך התאמה אישית של החיפוש ושירותי AI Wiz אחרים</translation>
+<translation id="4013614219085422040">‏Brave עשויה להשתמש בהיסטוריית הגלישה שלך לצורך התאמה אישית של החיפוש ושירותי AI Wize אחרים</translation>
 <translation id="2894821468041866720">ההגנה המשופרת לא מאטה במידה משמעותית את הדפדפן או המכשיר.</translation>
 <translation id="2900528713135656174">יצירת אירוע</translation>
 <translation id="2901411048554510387">מוצגות הצעות הקשורות לדף <ph name="WEBSITE_TITLE"/></translation>
@@ -343,7 +343,7 @@
 <translation id="6537665929855787038">‏ההתראות של Brave: קל יותר, פשוט יותר</translation>
 <translation id="2940075786175545812">אפשרות לאשר או לא לאשר אתר</translation>
 <translation id="2942036813789421260">כרטיסיית התצוגה המקדימה סגורה</translation>
-<translation id="4700262879698141140">‏מתבצע עדכון של AI Wiz כדי להתחבר למכשירים אחרים</translation>
+<translation id="4700262879698141140">‏מתבצע עדכון של AI Wize כדי להתחבר למכשירים אחרים</translation>
 <translation id="2951071800649516099">מוסיפים דפים לרשימת הקריאה לשלב מאוחר יותר</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{דף אחד (<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/>) שלא נקרא}one{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> דפים שלא נקראו}two{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> דפים שלא נקראו}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> דפים שלא נקראו}}</translation>
 <translation id="2961210776189273067">תואר</translation>
@@ -360,8 +360,8 @@
 <translation id="2996291259634659425">יצירת ביטוי סיסמה</translation>
 <translation id="2996809686854298943">דרושה כתובת אתר</translation>
 <translation id="2996932914629936323">ניקוי ההיסטוריה בכל המכשירים המסונכרנים</translation>
-<translation id="2019027298133375428">‏כשאתר שנוצר באמצעות AI Wiz Sites מבקש לטעון מראש קישורים בדף שלו באופן פרטי, מערכת AI Wiz מצפינה וטוענת מראש את הדפים באמצעות השרתים של AI Wiz ללא קובצי cookie. כך מוסתרת הזהות שלך מהאתר שנטען מראש.</translation>
-<translation id="5730179015008010982">‏במהלך הגלישה, כתובת ה-URL שמבקרים בהן יישלחו אל AI Wiz כדי לחזות את האתרים הבאים שעשויים להיפתח וכדי להציג לך מידע נוסף על הדף הנוכחי</translation>
+<translation id="2019027298133375428">‏כשאתר שנוצר באמצעות AI Wize Sites מבקש לטעון מראש קישורים בדף שלו באופן פרטי, מערכת AI Wize מצפינה וטוענת מראש את הדפים באמצעות השרתים של AI Wize ללא קובצי cookie. כך מוסתרת הזהות שלך מהאתר שנטען מראש.</translation>
+<translation id="5730179015008010982">‏במהלך הגלישה, כתובת ה-URL שמבקרים בהן יישלחו אל AI Wize כדי לחזות את האתרים הבאים שעשויים להיפתח וכדי להציג לך מידע נוסף על הדף הנוכחי</translation>
 <translation id="3016635187733453316">יש לוודא שהמכשיר הזה מחובר לאינטרנט</translation>
 <translation id="3026955690410463085">הכללת הקישור</translation>
 <translation id="3027644380269727216">על סמך הפעילות שלך באתר מסוים. ההגדרה הזו פועלת.</translation>
@@ -374,15 +374,15 @@
 <translation id="3038272154009688107">הצגת כל האתרים</translation>
 <translation id="3046945242843292318">בפעם הבאה ניתן יהיה להיכנס לאתר מהר יותר</translation>
 <translation id="3055259925215945098">הסימניה הועברה</translation>
-<translation id="4163313568284712797">‏מידע על אופן השימוש שלך ב-Brave נשלח אל Brave, אבל הוא לא משויך אליך\n\nאם AI Wiz קורס, הפרטים בנוגע לקריסה עשויים להכיל גם פרטים אישיים\n\nאם הפעלת את הסנכרון, יכול להיות שהמדדים יכללו גם מידע על כתובות ה-URL שבהן ביקרת.</translation>
+<translation id="4163313568284712797">‏מידע על אופן השימוש שלך ב-Brave נשלח אל Brave, אבל הוא לא משויך אליך\n\nאם AI Wize קורס, הפרטים בנוגע לקריסה עשויים להכיל גם פרטים אישיים\n\nאם הפעלת את הסנכרון, יכול להיות שהמדדים יכללו גם מידע על כתובות ה-URL שבהן ביקרת.</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{סימנייה אחת (<ph name="BOOKMARKS_COUNT_ONE"/>)}one{<ph name="BOOKMARKS_COUNT_MANY"/> סימניות}two{<ph name="BOOKMARKS_COUNT_MANY"/> סימניות}other{<ph name="BOOKMARKS_COUNT_MANY"/> סימניות}}</translation>
 <translation id="6153252609477956632">‏ב-Brave מחכים לך מאמרים בנושאים שמעניינים אותך</translation>
 <translation id="3066573403916685335">רד למטה</translation>
 <translation id="3070005020161560471">יש לתרגם אוטומטית</translation>
-<translation id="1094255666887095087">‏האפליקציה <ph name="APP_NAME"/> תיפתח ב-Brave. המשך הפעולה מבטא הסכמה <ph name="BEGIN_LINK1"/>לתנאים ולהגבלות של Brave<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>לתנאים ולהגבלות הנוספים של AI Wiz ו-ChromeOS<ph name="END_LINK2"/>. גם <ph name="BEGIN_LINK3"/>מדיניות הפרטיות<ph name="END_LINK3"/> חלה.</translation>
+<translation id="1094255666887095087">‏האפליקציה <ph name="APP_NAME"/> תיפתח ב-Brave. המשך הפעולה מבטא הסכמה <ph name="BEGIN_LINK1"/>לתנאים ולהגבלות של Brave<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>לתנאים ולהגבלות הנוספים של AI Wize ו-ChromeOS<ph name="END_LINK2"/>. גם <ph name="BEGIN_LINK3"/>מדיניות הפרטיות<ph name="END_LINK3"/> חלה.</translation>
 <translation id="3080525922482950719">ניתן לשמור דפים לקריאה במועד מאוחר יותר או במצב אופליין</translation>
 <translation id="3091010850649238832">הצגת התוכן שבלוח</translation>
-<translation id="821565628224723530">‏חלק מהתמונות נשלחות אל AI Wiz כדי לשפר עבורך את התיאורים</translation>
+<translation id="821565628224723530">‏חלק מהתמונות נשלחות אל AI Wize כדי לשפר עבורך את התיאורים</translation>
 <translation id="3114507951000454849">קראת חדשות היום? <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">הודעות</translation>
 <translation id="3134784203083076891">”</translation>
@@ -396,7 +396,7 @@
 <translation id="3207960819495026254">מסומן בסימנייה</translation>
 <translation id="3208584281581115441">לבדיקה</translation>
 <translation id="3211426585530211793">מועד המחיקה: <ph name="ITEM_TITLE"/></translation>
-<translation id="1892217432793359605">‏<ph name="BEGIN_LINK1"/>היסטוריית החיפושים<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>סוגי פעילות אחרים<ph name="END_LINK2"/> יכולים להישמר בחשבון AI Wiz אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
+<translation id="1892217432793359605">‏<ph name="BEGIN_LINK1"/>היסטוריית החיפושים<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>סוגי פעילות אחרים<ph name="END_LINK2"/> יכולים להישמר בחשבון AI Wize אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
 <translation id="321773570071367578">אם שכחת את ביטוי הסיסמה או אם ברצונך לשנות את ההגדרה הזו, <ph name="BEGIN_LINK"/>יש לאפס את הסנכרון<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">כדי לסנכרן את הסיסמאות עליך לאמת את זהותך</translation>
 <translation id="9210457680074341078">‏אם הסימניות שלך נשמרות גם בחשבון Brave, יש לך אפשרות לעקוב אחרי מחירי מוצרים ב-Brave ולקבל הודעות כשהמחירים יורדים</translation>
@@ -427,16 +427,16 @@
 <translation id="3341262203274374114">לא ניתן לבטל את המעקב. משהו השתבש.</translation>
 <translation id="3359667936385849800">שימוש בספק השירות הנוכחי</translation>
 <translation id="3373701465337594448">כשההגדרה מופעלת, מוצגת כאן רשימה של אתרים שיכולים להעריך את תחומי העניין שלך</translation>
-<translation id="2746024117903470217">‏כדי לשתף את הדף הזה עם מכשיר אחר, יש להפעיל את הסנכרון בהגדרות של AI Wiz במכשיר האחר</translation>
+<translation id="2746024117903470217">‏כדי לשתף את הדף הזה עם מכשיר אחר, יש להפעיל את הסנכרון בהגדרות של AI Wize במכשיר האחר</translation>
 <translation id="8801234437789558906">‏הסימניות, ההיסטוריה, הסיסמאות ונתונים אחרים ב-Brave כבר לא יסונכרנו עם חשבון Brave</translation>
 <translation id="3384347053049321195">שיתוף תמונה</translation>
 <translation id="3387650086002190359">הורדת <ph name="FILE_NAME"/> נכשלה עקב שגיאות במערכת הקבצים.</translation>
 <translation id="3389286852084373014">הטקסט ארוך מדי</translation>
 <translation id="3398320232533725830">פתיחת מנהל הסימניות</translation>
-<translation id="1081508498128395141">‏יותר דפים נטענים מראש. דפים יכולים להיטען מראש באמצעות השרתים של AI Wiz כשמתקבלת בקשה מאתרים אחרים.</translation>
+<translation id="1081508498128395141">‏יותר דפים נטענים מראש. דפים יכולים להיטען מראש באמצעות השרתים של AI Wize כשמתקבלת בקשה מאתרים אחרים.</translation>
 <translation id="3414952576877147120">גודל:</translation>
 <translation id="3421726884497337397">‏אפשר לקבוע מתי קובצי cookie של צד שלישי ייחסמו</translation>
-<translation id="5265419033369521352">‏מגן עליך ב-Brave וייתכן שייעשה בו שימוש לשיפור האבטחה באפליקציות אחרות של AI Wiz שבהן נכנסת לחשבון</translation>
+<translation id="5265419033369521352">‏מגן עליך ב-Brave וייתכן שייעשה בו שימוש לשיפור האבטחה באפליקציות אחרות של AI Wize שבהן נכנסת לחשבון</translation>
 <translation id="3429160811076349561">התכונות הניסיוניות מושבתות</translation>
 <translation id="3430670036890315772">השבתה של נעילת הפרופיל תגרום להסרת המידע השמור</translation>
 <translation id="3435465986463792564">פתוחים אצלך הרבה חלונות? יש לך אפשרות לנהל את כולם מכאן.</translation>
@@ -453,7 +453,7 @@
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">מיון לפי הישן ביותר</translation>
 <translation id="3507132249039706973">מופעלת הגנה רגילה</translation>
-<translation id="8669829441518807650">‏אין חיבור לאינטרנט. מערכת AI Wiz לא יכולה לבדוק אם יש עדכונים.</translation>
+<translation id="8669829441518807650">‏אין חיבור לאינטרנט. מערכת AI Wize לא יכולה לבדוק אם יש עדכונים.</translation>
 <translation id="3513704683820682405">מציאות רבודה</translation>
 <translation id="3518985090088779359">בסדר, מקובל עליי</translation>
 <translation id="3521388823983121502">לא ניתן להמשיך עם <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -548,7 +548,7 @@
 <translation id="4084682180776658562">סימנייה</translation>
 <translation id="4521874409998847950">‏מאת <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>מוגש על-ידי Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">‏יש לך אפשרות להשתמש בטאבלט הזה כדי להיכנס לחשבון במכשיר שמוצג בו קוד ה-QR הזה.</translation>
-<translation id="7268155614575494857">‏כדי לעזור למנהל הסיסמאות של AI Wiz לשמור את פרטי הכניסה, עליך להוסיף את שם המשתמש שלך באתר הזה</translation>
+<translation id="7268155614575494857">‏כדי לעזור למנהל הסיסמאות של AI Wize לשמור את פרטי הכניסה, עליך להוסיף את שם המשתמש שלך באתר הזה</translation>
 <translation id="4095146165863963773">למחוק נתוני יישומים?</translation>
 <translation id="4095425503313512126">הגלישה והחיפוש מהירים יותר</translation>
 <translation id="4096227151372679484">תהליך שמירת הסימניות שפתוחות בחצי הגובה</translation>
@@ -556,7 +556,7 @@
 <translation id="4108314971463891922">מעקב</translation>
 <translation id="4108998448622696017">המערכת מזהה אירועים מסוכנים כשהם מתרחשים ומזהירה אותך על כך.</translation>
 <translation id="4116038641877404294">הורדת דפים כדי להשתמש בהם אופליין</translation>
-<translation id="37459938731864814">‏אין צורך לזכור את הסיסמה הזו. היא תישמר במנהל הסיסמאות של AI Wiz בחשבון <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">‏אין צורך לזכור את הסיסמה הזו. היא תישמר במנהל הסיסמאות של AI Wize בחשבון <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">תהליך ההרשאה לשליחת התראות נפתח בגובה מלא</translation>
 <translation id="4126285640274188657">תובנות לגבי הדף</translation>
 <translation id="4135200667068010335">רשימת המכשירים שאפשר לשתף איתם כרטיסייה נסגרה.</translation>
@@ -574,7 +574,7 @@
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{כרטיסייה אחת במכשיר הזה}one{# כרטיסיות במכשיר הזה}two{# כרטיסיות במכשיר הזה}other{# כרטיסיות במכשיר הזה}}</translation>
 <translation id="4198423547019359126">אין מיקומים זמינים להורדה</translation>
 <translation id="4202218894997543208">נושאים שחסמת</translation>
-<translation id="1675646381334855139">‏אם מאפשרים שימוש בקובצי Cookie, יכול להיות שמערכת AI Wiz תשתמש בהם בטעינה מראש.</translation>
+<translation id="1675646381334855139">‏אם מאפשרים שימוש בקובצי Cookie, יכול להיות שמערכת AI Wize תשתמש בהם בטעינה מראש.</translation>
 <translation id="4216511743389425832">האזנה לדף הזה</translation>
 <translation id="4225725533026049334">במעקב</translation>
 <translation id="4225895483398857530">קיצור דרך בסרגל הכלים</translation>
@@ -610,7 +610,7 @@
 <translation id="4405224443901389797">העברה אל…</translation>
 <translation id="4405636711880428279">להסיר את הכרטיס הווירטואלי?</translation>
 <translation id="4409271659088619928">מנוע החיפוש שלך הוא <ph name="DSE"/>. ניתן לעיין בהוראות שלו לגבי מחיקת היסטוריית החיפושים, אם רלוונטי.</translation>
-<translation id="5749788945734786627">‏ניהול חשבון AI Wiz שלך</translation>
+<translation id="5749788945734786627">‏ניהול חשבון AI Wize שלך</translation>
 <translation id="4425140285732600465">המחיר נמצא במעקב. קבלת התראות על הנחות באתר כלשהו.</translation>
 <translation id="442518031075347249">‏לא תהיה לך יותר אפשרות להשתמש בכרטיס הווירטואלי באמצעות Google Pay. <ph name="BEGIN_LINK1"/>כאן יש מידע נוסף על כרטיסים וירטואליים<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">סגירת הכרטיסייה <ph name="TAB_TITLE"/></translation>
@@ -619,7 +619,7 @@
 <translation id="4478161224666880173">אפשר להשתמש בחשבון <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> באתר הזה. כדי להמשיך עליך להיכנס אל <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">‏מתבצעת התקנה של <ph name="MODULE"/> ל-Brave…</translation>
 <translation id="4484496141267039529">אין חיבור. כדאי לנסות שוב מאוחר יותר.</translation>
-<translation id="53119194224775367">‏כל נתוני היישומים של AI Wiz יימחקו לצמיתות, כולל כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו'</translation>
+<translation id="53119194224775367">‏כל נתוני היישומים של AI Wize יימחקו לצמיתות, כולל כל הקבצים, ההגדרות, החשבונות, מסדי הנתונים וכו'</translation>
 <translation id="3966104135245031874">‏הצפנת סיסמאות מסונכרנות באמצעות חשבון Brave</translation>
 <translation id="4491323382106587961">בחירת חשבון. <ph name="EMAIL"/> נבחר.</translation>
 <translation id="4508528996305412043">תפריט כרטיס הפיד נפתח</translation>
@@ -628,7 +628,7 @@
 <translation id="451872707440238414">חיפוש בסימניות</translation>
 <translation id="1664855196866195614">‏הנתונים שבחרת הוסרו מ-Brave ומהמכשירים המסונכרנים.
 
-ייתכן שבכתובת <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> יש סוגים אחרים של היסטוריית גלישה בחשבון Brave, כמו חיפושים ופעילות משירותי AI Wiz אחרים.</translation>
+ייתכן שבכתובת <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> יש סוגים אחרים של היסטוריית גלישה בחשבון Brave, כמו חיפושים ופעילות משירותי AI Wize אחרים.</translation>
 <translation id="4523326818319942067">בשעה האחרונה</translation>
 <translation id="452750746583162491">סקירת הנתונים המסונכרנים</translation>
 <translation id="4532845899244822526">בחירת תיקייה</translation>
@@ -679,7 +679,7 @@
 <translation id="4763480195061959176">סרטוני וידאו</translation>
 <translation id="4766313118839197559">סיסמאות נשמרות במנהל הסיסמאות במכשיר הזה</translation>
 <translation id="4766678251456904326">הוספת חשבון למכשיר</translation>
-<translation id="1996253762801922860">‏אנחנו משיקים תכונה חדשה לשמירה על פרטיות בפרסום שנקראת 'מדידת ביצועים של מודעות'. AI Wiz משתף מידע מוגבל מאוד בין אתרים ואפליקציות, למשל מתי הוצגה לך מודעה, כדי לעזור במדידת הביצועים של המודעות.</translation>
+<translation id="1996253762801922860">‏אנחנו משיקים תכונה חדשה לשמירה על פרטיות בפרסום שנקראת 'מדידת ביצועים של מודעות'. AI Wize משתף מידע מוגבל מאוד בין אתרים ואפליקציות, למשל מתי הוצגה לך מודעה, כדי לעזור במדידת הביצועים של המודעות.</translation>
 <translation id="4769095993849849966">שם הקובץ החדש</translation>
 <translation id="4775646243557794597">בוצעה מחיקה של <ph name="TIME_PERIOD"/></translation>
 <translation id="4778653490315793244">עדיין אין פריטים להצגה</translation>
@@ -705,7 +705,7 @@
 <translation id="4864369630010738180">מתבצעת כניסה...</translation>
 <translation id="5131234170665854056">‏לא ניתן להתקין את <ph name="MODULE"/> ל-Brave</translation>
 <translation id="4871568871368204250">כיבוי הסינכרון</translation>
-<translation id="2875466387677348954">‏גם אם משביתים את ההגדרה, דפדפן AI Wiz יכול להציג הצעות באופן מקומי</translation>
+<translation id="2875466387677348954">‏גם אם משביתים את ההגדרה, דפדפן AI Wize יכול להציג הצעות באופן מקומי</translation>
 <translation id="4875775213178255010">תוכן מוצע</translation>
 <translation id="4878404682131129617">‏יצירת מנהרה בעזרת שרת proxy נכשלה</translation>
 <translation id="4880127995492972015">תרגום…</translation>
@@ -722,10 +722,10 @@
 <translation id="4925120120285606924">צילום מסך <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">המערכת תייצא את הסיסמאות ותוריד אותן כקובץ טקסט. הן יהיו גלויות לכל המשתמשים והאפליקציות שיש להם גישה לתיקיית היעד.</translation>
 <translation id="4926901776383726965">אפשר לשמור תמונות וקבצים לצפייה במצב אופליין או לשיתוף באפליקציות אחרות</translation>
-<translation id="1955495299630319741">‏מכיוון שבחרת לצאת מחשבון שמנוהל על ידי <ph name="DOMAIN_NAME"/>, נתוני AI Wiz שלך יימחקו מהמכשיר הזה. הם יישמרו בחשבון AI Wiz שלך.</translation>
+<translation id="1955495299630319741">‏מכיוון שבחרת לצאת מחשבון שמנוהל על ידי <ph name="DOMAIN_NAME"/>, נתוני AI Wize שלך יימחקו מהמכשיר הזה. הם יישמרו בחשבון AI Wize שלך.</translation>
 <translation id="4943703118917034429">מציאות מדומה</translation>
 <translation id="4943872375798546930">אין תוצאות</translation>
-<translation id="5742837711075932301">‏אם נכנסת לאותו חשבון AI Wiz במכשירים אחרים, הטלפון הזה יכול לשמש בהם כמפתח אבטחה.</translation>
+<translation id="5742837711075932301">‏אם נכנסת לאותו חשבון AI Wize במכשירים אחרים, הטלפון הזה יכול לשמש בהם כמפתח אבטחה.</translation>
 <translation id="4957722034734105353">למידע נוסף...</translation>
 <translation id="4961107849584082341">אפשר לתרגם את הדף הזה לשפה כלשהי</translation>
 <translation id="7307583170263691471">‏הגנה מהירה יותר ואקטיבית מפני אתרים, הורדות ותוספים מסוכנים. המערכת מזהירה אותך בנוגע לחשיפה של סיסמאות. כשמצב ההגנה הזה בשימוש, נתוני גלישה נשלחים אל Brave.</translation>
@@ -745,15 +745,15 @@
 <translation id="5039804452771397117">זה בסדר</translation>
 <translation id="5040262127954254034">פרטיות</translation>
 <translation id="504456571576643789">מה כדאי לקחת בחשבון?</translation>
-<translation id="4858031288914533863">‏<ph name="BEGIN_LINK1"/>סוגי פעילות אחרים<ph name="END_LINK1"/> יכולים להישמר בחשבון AI Wiz אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
+<translation id="4858031288914533863">‏<ph name="BEGIN_LINK1"/>סוגי פעילות אחרים<ph name="END_LINK1"/> יכולים להישמר בחשבון AI Wize אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
 <translation id="506254248375231072">אין כרטיסיות</translation>
 <translation id="5062960805900435602">העדכון על מיזוג הסיסמאות נסגר</translation>
 <translation id="5081960376148623587">בוחרים אם לאפשר טעינת דפים מראש</translation>
-<translation id="4744980273298156620">‏בקרוב יוצגו סטוריז מהאתר <ph name="SITE_NAME"/> בפתיחת כרטיסייה חדשה. אתרים שנמצאים במעקב נשמרים בחשבון AI Wiz שלך. יש לך אפשרות לנהל אותם בהגדרות של Discover.</translation>
+<translation id="4744980273298156620">‏בקרוב יוצגו סטוריז מהאתר <ph name="SITE_NAME"/> בפתיחת כרטיסייה חדשה. אתרים שנמצאים במעקב נשמרים בחשבון AI Wize שלך. יש לך אפשרות לנהל אותם בהגדרות של Discover.</translation>
 <translation id="509429900233858213">אירעה שגיאה.</translation>
 <translation id="5097349930204431044">אתרים שביקרת בהם יכולים לזהות מה מעניין אותך ואז להציע מודעות במהלך הגלישה</translation>
 <translation id="5099845111805573968">כשבוחרים אתר שמותאם למחשב בפעם הראשונה, ההגדרה חלה על האתר בכל פעם שמבקרים בו</translation>
-<translation id="225414324447409614">‏אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wiz עשוי לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים ביטים מתוכן של דפים</translation>
+<translation id="225414324447409614">‏אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wize עשוי לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים ביטים מתוכן של דפים</translation>
 <translation id="510275257476243843">נותרה שעה אחת</translation>
 <translation id="5115811374190515607">אל <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">תחומי עניין</translation>
@@ -788,8 +788,8 @@
 <translation id="5308380583665731573">התחברות</translation>
 <translation id="5317780077021120954">שמירה</translation>
 <translation id="989239400026154074">‏Brave ממליצה על Brave</translation>
-<translation id="7815000350132166985">‏אם מאפשרים שימוש בקובצי cookie, יכול להיות שמערכת AI Wiz תשתמש בהם במהלך טעינה מראש.</translation>
-<translation id="1681635711794313507">‏מפני שהדפים שנטענים מראש מוצפנים והאתר שמקשר לדפים הוא אתר שנוצר באמצעות AI Wiz Sites, השרתים של AI Wiz לא מקבלים מידע חדש כשמתבצעת טעינה מראש של הדפים האלה באופן פרטי.</translation>
+<translation id="7815000350132166985">‏אם מאפשרים שימוש בקובצי cookie, יכול להיות שמערכת AI Wize תשתמש בהם במהלך טעינה מראש.</translation>
+<translation id="1681635711794313507">‏מפני שהדפים שנטענים מראש מוצפנים והאתר שמקשר לדפים הוא אתר שנוצר באמצעות AI Wize Sites, השרתים של AI Wize לא מקבלים מידע חדש כשמתבצעת טעינה מראש של הדפים האלה באופן פרטי.</translation>
 <translation id="5329858041417644019">הדפדפן שלך לא מנוהל</translation>
 <translation id="5342314432463739672">בקשות הרשאה</translation>
 <translation id="534580735623577507">אין ביקורים באתרים מאז <ph name="TIME_PERIOD"/></translation>
@@ -847,7 +847,7 @@
 <translation id="5657871969392618475">המידע שלך מאובטח באמצעות נעילת פרופיל</translation>
 <translation id="5659593005791499971">אימייל</translation>
 <translation id="5665379678064389456">יצירת אירוע ב-<ph name="APP_NAME"/></translation>
-<translation id="5668833306439455813">‏מערכת AI Wiz לא יכולה לבדוק אם יש עדכונים</translation>
+<translation id="5668833306439455813">‏מערכת AI Wize לא יכולה לבדוק אם יש עדכונים</translation>
 <translation id="5686790454216892815">שם הקובץ ארוך מדי</translation>
 <translation id="4809211418322514799">‏אתרים שנוספו לפני יותר מ-30 יום נמחקים מ-Brave באופן אוטומטי. אתר שמבקרים בו פעם נוספת עשוי להופיע שוב ברשימה. אפשר גם לחסום את האפשרות של אתרים להציע מודעות. <ph name="BEGIN_LINK"/>מידע נוסף על ניהול הפרטיות בפרסום ב-Brave<ph name="END_LINK"/></translation>
 <translation id="569435661099256888">בדף ההיסטוריה אפשר לראות או למחוק את הדפים שבהם ביקרת</translation>
@@ -860,7 +860,7 @@
 <translation id="5726692708398506830">הגדלת כל מה שמופיע בדף</translation>
 <translation id="5744751019568455640">אלה הקולות שאפשר לבחור להקראה של דפי האינטרנט. אם הקול הזה מוצא חן בעיניך וברצונך שאמשיך להשתמש בו, פשוט צריך להקיש על שם הקול.</translation>
 <translation id="5748802427693696783">הוחלף לכרטיסיות רגילות</translation>
-<translation id="3088191967551450609">‏לצורך הורדת קבצים, AI Wiz זקוק לגישה לאחסון.</translation>
+<translation id="3088191967551450609">‏לצורך הורדת קבצים, AI Wize זקוק לגישה לאחסון.</translation>
 <translation id="5749237766298580851">כבויה <ph name="SEPARATOR"/> לא מומלץ</translation>
 <translation id="5752232708629533680">‏שיתוף קובץ GIF בלבד</translation>
 <translation id="416316836590748269">‏יש לך אפשרות להשתמש בקול כדי לחפש ב-Brave</translation>
@@ -878,7 +878,7 @@
 <translation id="5797521893972859201">יתבצע ניקוי של ההיסטוריה שבתיבת החיפוש</translation>
 <translation id="5797949256525811424">הנושא חסום</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{לפני שעה}one{לפני # שעות}two{לפני שעתיים}other{לפני # שעות}}</translation>
-<translation id="5311273890481188673">‏Copyright © <ph name="YEAR"/> AI Wiz LLC.‎ כל הזכויות שמורות.</translation>
+<translation id="5311273890481188673">‏Copyright © <ph name="YEAR"/> AI Wize LLC.‎ כל הזכויות שמורות.</translation>
 <translation id="5814749351757353073">עוקבים אחר אתרים שאוהבים</translation>
 <translation id="5822875253699806474">אחרי סנכרון הכרטיסיות וההיסטוריה אפשר יהיה לחזור במהירות לאתרים שביקרת בהם</translation>
 <translation id="583281660410589416">לא ידוע</translation>
@@ -891,9 +891,9 @@
 <translation id="5860033963881614850">כבוי</translation>
 <translation id="5860491529813859533">הפעלה</translation>
 <translation id="5864419784173784555">בהמתנה להורדה נוספת…</translation>
-<translation id="6538479075382111079">‏שליחת דוחות קריסה וסטטיסטיקת שימוש אל AI Wiz באופן אוטומטי</translation>
+<translation id="6538479075382111079">‏שליחת דוחות קריסה וסטטיסטיקת שימוש אל AI Wize באופן אוטומטי</translation>
 <translation id="5869522115854928033">סיסמאות שמורות</translation>
-<translation id="5604589745019948682">‏כדי לעקוב אחר אתר כלשהו, עוברים אליו, פותחים את תפריט AI Wiz ומקישים על 'מעקב'.</translation>
+<translation id="5604589745019948682">‏כדי לעקוב אחר אתר כלשהו, עוברים אליו, פותחים את תפריט AI Wize ומקישים על 'מעקב'.</translation>
 <translation id="5879072387416556377">קבלת הצעות טובות יותר</translation>
 <translation id="5899667542927581604">אין גיליון של מפתחות גישה שנסגר</translation>
 <translation id="5916664084637901428">פועל</translation>
@@ -902,7 +902,7 @@
 <translation id="6103327872225198548">‏שימוש ב-Brave לחיפוש</translation>
 <translation id="5945035219773565305">המלצה נוכחית:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">מוצג דף פעיל</translation>
-<translation id="305870044889644984">‏פתיחת מרכז העזרה של AI Wiz בכרטיסייה חדשה</translation>
+<translation id="305870044889644984">‏פתיחת מרכז העזרה של AI Wize בכרטיסייה חדשה</translation>
 <translation id="5957442310066583693">להצגת האתרים המובילים שלך, יש להקיש על לחצן דף הבית</translation>
 <translation id="59577092665511740">בחירת חשבון.</translation>
 <translation id="5958275228015807058">הקבצים והדפים שלך נמצאים ב'הורדות'</translation>
@@ -929,7 +929,7 @@
 <translation id="6070730414166672373">‏בתהליך יצירת קשר עם הבנק שלך\u2026</translation>
 <translation id="6085886413119427067">קביעת אופן ההתחברות לאתרים באמצעות קישור מאובטח</translation>
 <translation id="60923314841986378">נותרו <ph name="HOURS"/> שעות</translation>
-<translation id="4726571606794511368">‏אם AI Wiz הוא גם מנוע החיפוש המוגדר אצלך כברירת מחדל, יוצגו לך הצעות משופרות ורלוונטיות מבחינת הקשר.</translation>
+<translation id="4726571606794511368">‏אם AI Wize הוא גם מנוע החיפוש המוגדר אצלך כברירת מחדל, יוצגו לך הצעות משופרות ורלוונטיות מבחינת הקשר.</translation>
 <translation id="6108923351542677676">ההגדרה מתבצעת…</translation>
 <translation id="6112702117600201073">רענון הדף מתבצע</translation>
 <translation id="6122831415929794347">להשבית את 'גלישה בטוחה'?</translation>
@@ -942,11 +942,11 @@
 <translation id="6140912465461743537">מדינה/אזור</translation>
 <translation id="6150320133806434356">הסימנייה נשמרה</translation>
 <translation id="6154478581116148741">יש להפעיל נעילת מסך ב'הגדרות' כדי לייצא את הסיסמאות מהמכשיר הזה</translation>
-<translation id="7087658909840709934">‏מערכת AI Wiz טוענת מראש דפים שסביר שהמשתמש יעבור אליהם.</translation>
+<translation id="7087658909840709934">‏מערכת AI Wize טוענת מראש דפים שסביר שהמשתמש יעבור אליהם.</translation>
 <translation id="6186394685773237175">לא נמצאו סיסמאות שנחשפו</translation>
 <translation id="6192907950379606605">ליצירת תיאורי תמונות</translation>
 <translation id="6193448654517602979">בחירת כרטיסיות</translation>
-<translation id="8367262879301982880">‏סיסמאות נשמרות במנהל הסיסמאות של AI Wiz במכשיר הזה</translation>
+<translation id="8367262879301982880">‏סיסמאות נשמרות במנהל הסיסמאות של AI Wize במכשיר הזה</translation>
 <translation id="6202812185118613467">עליך להיכנס שוב כדי להתחיל את הסנכרון</translation>
 <translation id="6205314730813004066">פרטיות בפרסום</translation>
 <translation id="6210748933810148297">אינך <ph name="EMAIL"/>?</translation>
@@ -955,7 +955,7 @@
 <translation id="6232535412751077445">‏אם תופעל התכונה 'לא לעקוב (DNT), בקשה זו תיכלל בתנועת הגלישה שלך. השפעת הבקשה תלויה באופן הפעולה של כל אתר – אם הוא מגיב לבקשה או לא, וכיצד הוא מפרש אותה.
 
 לדוגמה, ייתכן שבתגובה לבקשה, אתרים מסוימים יציגו מודעות שאינן מבוססות על אתרים אחרים שבהם ביקרת. אתרים רבים ימשיכו לאסוף את נתוני הגלישה שלך ולהשתמש בהם, למשל כדי לשפר את האבטחה, כדי לספק תוכן, מודעות והמלצות וכדי ליצור נתונים סטטיסטיים לדיווח.</translation>
-<translation id="3895383310037101583">‏כדי לשמור בחשבון AI Wiz את הסיסמאות שבמכשיר הזה, צריך להפעיל את הסנכרון</translation>
+<translation id="3895383310037101583">‏כדי לשמור בחשבון AI Wize את הסיסמאות שבמכשיר הזה, צריך להפעיל את הסנכרון</translation>
 <translation id="6255794742848779505">אנחנו משנים את האופן שבו סיסמאות נשמרות במכשיר הזה</translation>
 <translation id="6264376385120300461">להוריד בכל זאת</translation>
 <translation id="6277522088822131679">אירעה בעיה בעת הדפסת הדף. יש לנסות שוב.</translation>
@@ -980,7 +980,7 @@
 <translation id="6357653805084533597">‏יש לך אפשרות להשתמש בטלפון הזה כדי להיכנס לחשבון במכשיר שמוצג בו קוד ה-QR הזה.</translation>
 <translation id="6363990818884053551">כדי להתחיל בסנכרון עליך לאמת את זהותך</translation>
 <translation id="6364438453358674297">האם להסיר את ההצעה מההיסטוריה?</translation>
-<translation id="806493401838431801">‏מערכת AI Wiz טוענת מראש בתדירות גבוהה יותר דפים שסביר שהמשתמש יעבור אליהם. ההגדרה הזו יכולה לגרום לשימוש מוגבר בנתונים.</translation>
+<translation id="806493401838431801">‏מערכת AI Wize טוענת מראש בתדירות גבוהה יותר דפים שסביר שהמשתמש יעבור אליהם. ההגדרה הזו יכולה לגרום לשימוש מוגבר בנתונים.</translation>
 <translation id="6382848304055775421">מתבצע ייצוא</translation>
 <translation id="6394791151443660613">חיפוש: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">קישור</translation>
@@ -991,7 +991,7 @@
 <translation id="6407224748847589805">לא ניתן להתחבר למחשב שלך. יש לנסות אפשרות אחרת לאימות.</translation>
 <translation id="6410883413783534063">ניתן לפתוח כרטיסיות כדי להיכנס אל דפים שונים בו-זמנית</translation>
 <translation id="6411219469806822692">אי אפשר לזוז למעלה יותר. יש לנסות להתחיל מחלק גבוה יותר בדף.</translation>
-<translation id="7810992039564280750">‏המערכת בודקת כתובות URL ששמורות ב-Brave ומכילות רשימות של אתרים לא בטוחים. אם אתר מסוים מנסה לגנוב סיסמה או אם המערכת מזהה הורדה של קובץ מזיק, AI Wiz עשוי גם לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים ביטים מהתוכן של הדף.</translation>
+<translation id="7810992039564280750">‏המערכת בודקת כתובות URL ששמורות ב-Brave ומכילות רשימות של אתרים לא בטוחים. אם אתר מסוים מנסה לגנוב סיסמה או אם המערכת מזהה הורדה של קובץ מזיק, AI Wize עשוי גם לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים ביטים מהתוכן של הדף.</translation>
 <translation id="641643625718530986">הדפסה…</translation>
 <translation id="6422857128426228781">כאן ניתן למצוא את המוצרים שבמעקב</translation>
 <translation id="6433501201775827830">בחירת מנוע החיפוש</translation>
@@ -1016,12 +1016,12 @@
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{התבצעה בדיקה לפני שעה אחת}one{התבצעה בדיקה לפני # שעות}two{התבצעה בדיקה לפני שעתיים}other{התבצעה בדיקה לפני # שעות}}</translation>
 <translation id="6545017243486555795">ניקוי כל הנתונים</translation>
 <translation id="6546511553472444032">הקובץ עלול להזיק</translation>
-<translation id="6702167990458635422">‏במצב הזה המערכת לא מגינה עליך מפני אתרים, הורדות ותוספים מסוכנים. ההגדרות שקבעת לגלישה הבטוחה במוצרים אחרים של AI Wiz לא יושפעו.</translation>
+<translation id="6702167990458635422">‏במצב הזה המערכת לא מגינה עליך מפני אתרים, הורדות ותוספים מסוכנים. ההגדרות שקבעת לגלישה הבטוחה במוצרים אחרים של AI Wize לא יושפעו.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{הכרטיסייה <ph name="TAB_TITLE"/> וכרטיסייה אחת (<ph name="TAB_COUNT_ONE"/>) נוספת ייסגרו}one{הכרטיסייה <ph name="TAB_TITLE"/> ו-<ph name="TAB_COUNT_MANY"/> כרטיסיות נוספות ייסגרו}two{הכרטיסייה <ph name="TAB_TITLE"/> ו-<ph name="TAB_COUNT_MANY"/> כרטיסיות נוספות ייסגרו}other{הכרטיסייה <ph name="TAB_TITLE"/> ו-<ph name="TAB_COUNT_MANY"/> כרטיסיות נוספות ייסגרו}}</translation>
 <translation id="6560414384669816528">‏שימוש ב-Sogou לחיפוש</translation>
 <translation id="656065428026159829">אפשרויות נוספות</translation>
 <translation id="6565959834589222080">‏המכשיר יתחבר לרשת Wi-Fi כאשר תהיה זמינה</translation>
-<translation id="4480935821314799946">‏בפתיחת כרטיסייה חדשה, יוצגו לך סטוריז מהאתר <ph name="SITE_NAME"/>. אתרים שנמצאים במעקב נשמרים בחשבון AI Wiz שלך. יש לך אפשרות לנהל אותם בהגדרות של Discover.</translation>
+<translation id="4480935821314799946">‏בפתיחת כרטיסייה חדשה, יוצגו לך סטוריז מהאתר <ph name="SITE_NAME"/>. אתרים שנמצאים במעקב נשמרים בחשבון AI Wize שלך. יש לך אפשרות לנהל אותם בהגדרות של Discover.</translation>
 <translation id="6573096386450695060">אני רוצה לאפשר תמיד</translation>
 <translation id="5157964048453367290">‏כרטיסיות שפתחת ב-Brave במכשירים האחרים שלך יופיעו כאן.</translation>
 <translation id="6583199322650523874">סימון הדף הנוכחי בסימנייה</translation>
@@ -1030,7 +1030,7 @@
 <translation id="6590680911007613645">יש לוודא שהסיסמה שנשמרת זהה לסיסמה שלך עבור <ph name="SITE"/></translation>
 <translation id="6593061639179217415">לגרסה במחשב</translation>
 <translation id="6594347733515723558">אפשרויות למיון ולהצגה</translation>
-<translation id="2466982615210189224">‏התמונות נשלחות אל AI Wiz כדי לשפר את התיאורים לנוחיותך.</translation>
+<translation id="2466982615210189224">‏התמונות נשלחות אל AI Wize כדי לשפר את התיאורים לנוחיותך.</translation>
 <translation id="663059986967017181">‏הועתק אל Brave</translation>
 <translation id="661266467055912436">רמת אבטחה משופרת עבורך ועבור כל מי שמתחבר לאינטרנט.</translation>
 <translation id="6618554661997243500">להצגת הכתבות והאתרים המובילים שלך, יש להקיש על הלחצן הראשי</translation>
@@ -1038,13 +1038,13 @@
 <translation id="6627583120233659107">עריכת התיקייה</translation>
 <translation id="6636623428211296678">אפשר לעיין למטה בהגדרות נוספות או לסיים עכשיו.</translation>
 <translation id="2259649928554669581">‏אפשר למצוא הגדרות נוספות בנושא פרטיות, אבטחה ואיסוף נתונים בדפים <ph name="BEGIN_LINK1"/>סנכרון<ph name="END_LINK1"/> ו<ph name="BEGIN_LINK2"/>שירותי Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">‏כדי לעזור בשיפור האפליקציה, AI Wiz ישלח נתוני שימוש וקריסות אל Brave. <ph name="BEGIN_UMA_LINK"/>ניהול<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">‏כדי לעזור בשיפור האפליקציה, AI Wize ישלח נתוני שימוש וקריסות אל Brave. <ph name="BEGIN_UMA_LINK"/>ניהול<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">חסימה כל הזמן</translation>
 <translation id="6641780377503683465">הסרה של תחום העניין '<ph name="INTEREST"/>'</translation>
 <translation id="6643016212128521049">ניקוי</translation>
 <translation id="6645629752388991326">שליטה במכשירים שיקבלו הרשאה לכניסה לחשבון, תוך שימוש בטלפון הזה כמפתח אבטחה.</translation>
-<translation id="2730188427562924169">‏שליחת קטע קוד מעורפל מכתובת ה-URL ל-Brave דרך שרת פרטיות שמסתיר את כתובת ה-IP. אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wiz עשוי גם לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים קטעי תוכן מדפים.</translation>
-<translation id="7556503430569358637">‏כתובות URL שבהן ביקרת יישלחו אל AI Wiz כדי לחזות את האתרים הבאים שאליהם תתבצע כניסה על ידך</translation>
+<translation id="2730188427562924169">‏שליחת קטע קוד מעורפל מכתובת ה-URL ל-Brave דרך שרת פרטיות שמסתיר את כתובת ה-IP. אם באתר כלשהו מתבצע ניסיון לגנוב את הסיסמה שלך, או אם המערכת מזהה הורדה של קובץ מזיק, AI Wize עשוי גם לשלוח כתובות URL לבדיקה באמצעות 'גלישה בטוחה'. הנתונים שנשלחים לבדיקה כוללים קטעי תוכן מדפים.</translation>
+<translation id="7556503430569358637">‏כתובות URL שבהן ביקרת יישלחו אל AI Wize כדי לחזות את האתרים הבאים שאליהם תתבצע כניסה על ידך</translation>
 <translation id="6678472970290886941">‏מנהל המערכת יכול לשנות את הגדרת הדפדפן שלך מרחוק. בנוסף, ניתן לנהל את הפעילות במכשיר הזה מחוץ ל-Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{‏<ph name="CONTACT_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> נוסף}one{‏<ph name="CONTACT_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> נוספים}two{‏<ph name="CONTACT_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> נוספים}other{‏<ph name="CONTACT_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> נוספים}}</translation>
 <translation id="6649642165559792194">הצגת התמונה בתצוגה מקדימה <ph name="BEGIN_NEW"/>חדש<ph name="END_NEW"/></translation>
@@ -1055,7 +1055,7 @@
 <translation id="6671495933530132209">העתקת התמונה</translation>
 <translation id="6672917148207387131">הוספה של <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">כדי להתחיל לסנכרן צריך להזין את ביטוי הסיסמה</translation>
-<translation id="8581481290581777242">‏למחוק את נתוני AI Wiz שלך מהמכשיר הזה?</translation>
+<translation id="8581481290581777242">‏למחוק את נתוני AI Wize שלך מהמכשיר הזה?</translation>
 <translation id="3683330416566109578">‏כניסה לאתר הזה ול-Brave</translation>
 <translation id="3385384709865894288">‏משפרים את Brave</translation>
 <translation id="670498945988402717">התבצעה בדיקה אתמול</translation>
@@ -1070,7 +1070,7 @@
 <translation id="6756507620369789050">שיתוף משוב</translation>
 <translation id="6767294960381293877">רשימת המכשירים שאפשר לשתף איתם כרטיסייה נפתחה בחצי גובה המסך.</translation>
 <translation id="6770602306803890733">רמת אבטחה משופרת עבורך ועבור כל מי שמתחבר לאינטרנט</translation>
-<translation id="8174975477247159780">‏תנאים והגבלות נוספים של AI Wiz ושל ChromeOS</translation>
+<translation id="8174975477247159780">‏תנאים והגבלות נוספים של AI Wize ושל ChromeOS</translation>
 <translation id="6795633245022906657">פתיחת כרטיסייה חדשה במהירות. ניתן לערוך את קיצור הדרך ב'הגדרות'.</translation>
 <translation id="6802555630140434547">החלון הזה ייסגר</translation>
 <translation id="6811034713472274749">הדף מוכן להצגה</translation>
@@ -1089,7 +1089,7 @@
 <translation id="6850409657436465440">ההורדה עדיין מתבצעת</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> כרטיסיות נסגרו</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{קובצי אודיו, קובץ אודיו אחד ברשימה}one{קובצי אודיו, # קובצי אודיו ברשימה}two{קובצי אודיו, # קובצי אודיו ברשימה}other{קובצי אודיו, # קובצי אודיו ברשימה}}</translation>
-<translation id="4046835482356054431">‏Discover by AI Wiz – מושבת</translation>
+<translation id="4046835482356054431">‏Discover by AI Wize – מושבת</translation>
 <translation id="686366188661646310">למחוק את הסיסמה?</translation>
 <translation id="6864459304226931083">הורדת תמונה</translation>
 <translation id="6865313869410766144">נתוני טפסים למילוי אוטומטי</translation>
@@ -1105,7 +1105,7 @@
 <translation id="6909589135458168665">טעינה מראש של דפים</translation>
 <translation id="6910211073230771657">נמחק</translation>
 <translation id="6918398787259831832">אם הבעיה נמשכת, <ph name="BEGIN_LINK"/>ניתן לעיין במידע נוסף<ph name="END_LINK"/> ב-<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">‏כל קודי האבטחה שנשמרו במכשיר ובחשבון AI Wiz שלך יימחקו</translation>
+<translation id="5854472260286669100">‏כל קודי האבטחה שנשמרו במכשיר ובחשבון AI Wize שלך יימחקו</translation>
 <translation id="6942665639005891494">ניתן תמיד לשנות את מיקום ברירת המחדל להורדות דרך האפשרות 'הגדרות' בתפריט</translation>
 <translation id="694267552845942083">מתבצעת עכשיו התאמה אישית של הגדרות הסנכרון. כדי להשלים את הפעלת הסנכרון יש להקיש על הלחצן 'אישור', קרוב לתחתית המסך. ניווט למעלה</translation>
 <translation id="6945221475159498467">בחירה</translation>
@@ -1123,7 +1123,7 @@
 <translation id="7029809446516969842">סיסמאות</translation>
 <translation id="7030304022046916278">‏שליחת כתובות URL לבדיקה על ידי 'גלישה בטוחה'</translation>
 <translation id="7035701931849773472">אפשרויות אחרות</translation>
-<translation id="5813862251770201080">‏אפשר להיכנס לחשבון AI Wiz ב-Brave</translation>
+<translation id="5813862251770201080">‏אפשר להיכנס לחשבון AI Wize ב-Brave</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">רוצה לקבל תיאורי תמונות?</translation>
 <translation id="7055152154916055070">הפניה אוטומטית נחסמה:</translation>
@@ -1131,7 +1131,7 @@
 <translation id="7071521146534760487">ניהול חשבון</translation>
 <translation id="707155805709242880">יש לבחור למטה מה לסנכרן</translation>
 <translation id="7077143737582773186">‏כרטיס SD</translation>
-<translation id="2374582967527009647">‏כתובות URL נשלחות לבדיקה על ידי 'גלישה בטוחה'. בנוסף, נשלחת דוגמית קטנה הכוללת דפים, הורדות, פעילות של תוספים ופרטי מערכת במטרה לאתר איומים חדשים. כדי להגן עליך בכל האפליקציות של Brave, הנתונים האלה מקושרים באופן זמני לחשבון AI Wiz שלך. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
+<translation id="2374582967527009647">‏כתובות URL נשלחות לבדיקה על ידי 'גלישה בטוחה'. בנוסף, נשלחת דוגמית קטנה הכוללת דפים, הורדות, פעילות של תוספים ופרטי מערכת במטרה לאתר איומים חדשים. כדי להגן עליך בכל האפליקציות של Brave, הנתונים האלה מקושרים באופן זמני לחשבון AI Wize שלך. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
 <translation id="5499149312981370855">‏בוחרים אם לכלול את ההיסטוריה ב-Brave להתאמה אישית מדויקת יותר בשירותי Brave</translation>
 <translation id="8208853227947884571">‏Brave מעודכן</translation>
 <translation id="7105047059074518658">כדי שיהיה קל יותר לגלוש במכשירים שונים, עליך להיכנס לחשבון</translation>
@@ -1151,7 +1151,7 @@
 <translation id="8355565210555500987">‏מגינה עליך ב-Brave ועשויה לשפר את האבטחה שלך באפליקציות אחרות של Brave. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
 <translation id="7191430249889272776">הכרטיסייה נפתחה ברקע.</translation>
 <translation id="7196215469483532480">ההסבר על המדריך בנושא פרטיות נפתח בגובה מלא</translation>
-<translation id="1014116676551114642">‏תוכן של AI Wiz לילדים – מושבת</translation>
+<translation id="1014116676551114642">‏תוכן של AI Wize לילדים – מושבת</translation>
 <translation id="7207760545532569765">שחזור של <ph name="TAB_COUNT"/> כרטיסיות ככרטיסיות חדשות ברקע.</translation>
 <translation id="7221869452894271364">רענון הדף</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{הורדה אחת בהמתנה}one{# הורדות בהמתנה}two{# הורדות בהמתנה}other{# הורדות בהמתנה}}</translation>
@@ -1163,7 +1163,7 @@
 <translation id="727288900855680735">לשלוח את <ph name="ONE_TIME_CODE"/> אל <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">אתר חסום</translation>
 <translation id="7949597606523411684">‏נושאים שנוספו לפני יותר מ-4 שבועות נמחקים מ-Brave באופן אוטומטי. ככל שממשיכים לגלוש, נושא מסוים עשוי להופיע שוב ברשימה. אפשר גם לחסום נושאים כדי ש-Brave לא ישתף אותם עם אתרים. <ph name="BEGIN_LINK"/>מידע נוסף על ניהול הפרטיות בפרסום ב-Brave<ph name="END_LINK"/></translation>
-<translation id="4561646469134805137">‏תוך כדי הקלדה, AI Wiz שולח את התוכן של סרגל הכתובות או תיבת החיפוש למנוע החיפוש שמוגדר כברירת מחדל</translation>
+<translation id="4561646469134805137">‏תוך כדי הקלדה, AI Wize שולח את התוכן של סרגל הכתובות או תיבת החיפוש למנוע החיפוש שמוגדר כברירת מחדל</translation>
 <translation id="7286703216224610554">שיתוף התגובה בלבד</translation>
 <translation id="7289303553784750393">אם יש חיבור לאינטרנט אבל הבעיה נמשכת, אפשר לנסות להמשיך בדרכים אחרות ב-<ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">לא ניתן היה לשנת את השם מפני שהפריט לא זמין</translation>
@@ -1199,7 +1199,7 @@
 <translation id="7435356471928173109">מנהל המערכת כיבה את התכונה הזו</translation>
 <translation id="6234515504547364178">‏יציאה מ-Brave</translation>
 <translation id="6147816961713837040">‏שליחת קטע קוד מעורפל מכתובת ה-URL ל-Brave דרך שרת פרטיות שמסתיר את כתובת ה-IP</translation>
-<translation id="3699067418237091329">‏הפעולה תוציא אותך מרוב האתרים אבל לא מחשבון AI Wiz שלך.</translation>
+<translation id="3699067418237091329">‏הפעולה תוציא אותך מרוב האתרים אבל לא מחשבון AI Wize שלך.</translation>
 <translation id="7453810262525006706">כיווץ לחלונית צדדית</translation>
 <translation id="7454641608352164238">אין מספיק מקום</translation>
 <translation id="7455988709578031708">על סמך היסטוריית הגלישה שלך. ההגדרה הזו פועלת.</translation>
@@ -1217,7 +1217,7 @@
 <translation id="7493994139787901920"><ph name="VERSION"/> (עודכן <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">הנושא הוחזר לנושאים פוטנציאליים</translation>
 <translation id="7498271377022651285">נא להמתין…</translation>
-<translation id="8156131600798538460">‏כדי לצאת מחשבון AI Wiz שלך בכל האתרים, עליך <ph name="BEGIN_LINK1"/>לצאת מ-Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">‏כדי לצאת מחשבון AI Wize שלך בכל האתרים, עליך <ph name="BEGIN_LINK1"/>לצאת מ-Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">אין עדכונים זמינים</translation>
 <translation id="7507207699631365376">הצגת <ph name="BEGIN_LINK"/>מדיניות הפרטיות<ph name="END_LINK"/> של הספק הזה</translation>
 <translation id="7514365320538308">הורדה</translation>
@@ -1227,7 +1227,7 @@
 <translation id="7523960634226602883">‏חיפוש עם המצלמה באמצעות Google Lens</translation>
 <translation id="7539698981064401140">סנכרון הכרטיסיות וההיסטוריה</translation>
 <translation id="7562080006725997899">ניקוי נתוני הגלישה מתבצע</translation>
-<translation id="7814200940910057384">‏נתוני AI Wiz נוקו</translation>
+<translation id="7814200940910057384">‏נתוני AI Wize נוקו</translation>
 <translation id="7577900504646297215">ניהול תחומי עניין</translation>
 <translation id="757855969265046257">{FILES,plural, =1{הורדת קובץ אחד (<ph name="FILES_DOWNLOADED_ONE"/>)}one{הורדת <ph name="FILES_DOWNLOADED_MANY"/> קבצים}two{הורדת <ph name="FILES_DOWNLOADED_MANY"/> קבצים}other{הורדת <ph name="FILES_DOWNLOADED_MANY"/> קבצים}}</translation>
 <translation id="7581273696622423628">השתתף בסקר</translation>
@@ -1255,8 +1255,8 @@
 <translation id="768232549260819724">‏ה-GIF הועתק</translation>
 <translation id="7682724950699840886">אפשר לנסות את הטיפים הבאים: צריך לוודא שיש מספיק מקום פנוי במכשיר ואז לנסות לייצא שוב.</translation>
 <translation id="7686086654630106285">מידע נוסף על הצעות למודעות באתרים</translation>
-<translation id="2667018639405889513">‏חלק מהדפים שאליהם עוברים נטענים מראש. דפים יכולים להיטען מראש באמצעות שרתי AI Wiz כשיש אליהם קישורים מאתר שנוצר באמצעות AI Wiz Sites.</translation>
-<translation id="7795837497684113327">‏לא ניתן לפתוח את AI Wiz במכשיר. כדי לפתור את הבעיה, עליך להוריד את העדכון האחרון של AI Wiz מחנות האפליקציות.</translation>
+<translation id="2667018639405889513">‏חלק מהדפים שאליהם עוברים נטענים מראש. דפים יכולים להיטען מראש באמצעות שרתי AI Wize כשיש אליהם קישורים מאתר שנוצר באמצעות AI Wize Sites.</translation>
+<translation id="7795837497684113327">‏לא ניתן לפתוח את AI Wize במכשיר. כדי לפתור את הבעיה, עליך להוריד את העדכון האחרון של AI Wize מחנות האפליקציות.</translation>
 <translation id="7691043218961417207">אפשרויות לתוכן למעקב</translation>
 <translation id="7697383401610880082">נקודת אחיזה לגרירה</translation>
 <translation id="7698359219371678927">יצירת הודעת אימייל ב-<ph name="APP_NAME"/></translation>
@@ -1275,7 +1275,7 @@
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{‏<ph name="PAYMENT_METHOD_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> נוסף}one{‏<ph name="PAYMENT_METHOD_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> נוספים}two{‏<ph name="PAYMENT_METHOD_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> נוספים}other{‏<ph name="PAYMENT_METHOD_PREVIEW"/>‎\u2026‎ ו-<ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> נוספים}}</translation>
 <translation id="5614774692683309331">‏אחרי שנכנסת לחשבון, המערכת מגינה עליך בשירותי Brave.</translation>
 <translation id="7778840695157240389">בהמשך יהיו פה סיפורים חדשים</translation>
-<translation id="7703329426540523149">‏כדי להגן עליך באפליקציות של Brave, הנתונים האלה מקושרים באופן זמני לחשבון AI Wiz שלך. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
+<translation id="7703329426540523149">‏כדי להגן עליך באפליקציות של Brave, הנתונים האלה מקושרים באופן זמני לחשבון AI Wize שלך. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
 <translation id="7791543448312431591">הוספה</translation>
 <translation id="7798392620021911922">שוחזרו <ph name="TAB_COUNT"/> כרטיסיות</translation>
 <translation id="780301667611848630">לא תודה</translation>
@@ -1283,7 +1283,7 @@
 <translation id="7810647596859435254">פתיחה באמצעות...</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{כל הקבצים, קובץ אחד ברשימה}one{כל הקבצים, # קבצים ברשימה}two{כל הקבצים, # קבצים ברשימה}other{כל הקבצים, # קבצים ברשימה}}</translation>
 <translation id="7815484226266492798">צילום מסך ארוך</translation>
-<translation id="8439902729344548970">‏אחרי הכניסה לחשבון, הנתונים האלה מקושרים לחשבון AI Wiz כדי להגן עליך בשירותי Brave. לדוגמה, במקרה של אירוע אבטחה, ההגנה ב-Gmail מוגברת.</translation>
+<translation id="8439902729344548970">‏אחרי הכניסה לחשבון, הנתונים האלה מקושרים לחשבון AI Wize כדי להגן עליך בשירותי Brave. לדוגמה, במקרה של אירוע אבטחה, ההגנה ב-Gmail מוגברת.</translation>
 <translation id="78270725016672455">התקבלה מהמחשב בקשה לרשום את המכשיר הזה לצורך כניסה לאתר</translation>
 <translation id="7844171778363018843">אין נתונים שנבחרו לסנכרון</translation>
 <translation id="7068829570137757602">‏שירותי Brave</translation>
@@ -1315,7 +1315,7 @@
 <translation id="7960972236129063347">לחצן 'הקודם' בתובנות לגבי הדף</translation>
 <translation id="7961926449547174351">השבתת את הגישה לאחסון. כדי להפעיל אותה, יש לעבור להגדרות.</translation>
 <translation id="7963646190083259054">ספק:</translation>
-<translation id="2939504940637874963">‏יש לך אפשרות להשתמש בסיסמאות השמורות בכל מכשיר. הן נשמרות במנהל הסיסמאות של AI Wiz לחשבון <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">‏יש לך אפשרות להשתמש בסיסמאות השמורות בכל מכשיר. הן נשמרות במנהל הסיסמאות של AI Wize לחשבון <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">נוסף לרשימת הקריאה</translation>
 <translation id="7971136598759319605">פעילות אחרונה: לפני יום אחד</translation>
 <translation id="7975379999046275268">הצגת הדף בתצוגה מקדימה<ph name="BEGIN_NEW"/>חדש<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@
 <translation id="7995059495660416932">תוכן יוצג לך ברגע שיהיה זמין</translation>
 <translation id="799576009106109668">מהירות הגלישה תגבר כי התוכן ייטען באופן יזום, על סמך הביקור הנוכחי שלך בדף האינטרנט</translation>
 <translation id="8004582292198964060">דפדפן</translation>
-<translation id="3325020657155065477">‏יש לנקות גם את נתוני AI Wiz מהמכשיר הזה</translation>
+<translation id="3325020657155065477">‏יש לנקות גם את נתוני AI Wize מהמכשיר הזה</translation>
 <translation id="8015452622527143194">כל מה שמופיע בדף ישתנה לגודל ברירת המחדל</translation>
 <translation id="8026334261755873520">ניקוי נתוני גלישה</translation>
 <translation id="8027863900915310177">בחירת המיקום להורדה</translation>
@@ -1348,7 +1348,7 @@
 <translation id="808747664143081553">הטלפון מחובר למחשב</translation>
 <translation id="8090732854597034573">אם צריך עזרה, אפשר לבקש עזרה מהורה</translation>
 <translation id="8101414242770404289">לא יסגרו כרטיסיות במסגרת <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">‏לחיצה על המשך תתפרש כהסכמתך <ph name="BEGIN_TOS_LINK"/>לתנאים ולהגבלות<ph name="END_TOS_LINK"/>.\nכדי לעזור בשיפור האפליקציה, AI Wiz ישלח נתוני שימוש וקריסות אל Brave. <ph name="BEGIN_UMA_LINK"/>ניהול<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">‏לחיצה על המשך תתפרש כהסכמתך <ph name="BEGIN_TOS_LINK"/>לתנאים ולהגבלות<ph name="END_TOS_LINK"/>.\nכדי לעזור בשיפור האפליקציה, AI Wize ישלח נתוני שימוש וקריסות אל Brave. <ph name="BEGIN_UMA_LINK"/>ניהול<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">סגירה של אפשרויות המיון</translation>
 <translation id="2919733817273403520">‏עזרה בשיפור התכונות והביצועים של Brave</translation>
@@ -1375,7 +1375,7 @@
 <translation id="8243077599929149377">הוספה של שם המשתמש</translation>
 <translation id="8250920743982581267">מסמכים</translation>
 <translation id="8255617931166444521">‏אתרים יכולים להשתמש בקובצי ה-cookie רק כדי לראות את פעילות הגלישה שלך שמתבצעת בהם בלבד, ולא באתרים אחרים</translation>
-<translation id="2876689296031086375">‏מפני שהדפים שנטענים מראש מוצפנים, AI Wiz לא תקבל מידע על תוכן הדף שנטען מראש. שרתי AI Wiz יגלו אילו אתרים נטענים מראש באופן פרטי. המידע הזה משמש רק לטעינה מראש של הדפים והוא לא מקושר למידע אחר מחשבון AI Wiz שלך.</translation>
+<translation id="2876689296031086375">‏מפני שהדפים שנטענים מראש מוצפנים, AI Wize לא תקבל מידע על תוכן הדף שנטען מראש. שרתי AI Wize יגלו אילו אתרים נטענים מראש באופן פרטי. המידע הזה משמש רק לטעינה מראש של הדפים והוא לא מקושר למידע אחר מחשבון AI Wize שלך.</translation>
 <translation id="8260126382462817229">יש להיכנס שוב</translation>
 <translation id="8261506727792406068">מחיקה</translation>
 <translation id="82619448491672958">הצגת כרטיסיות אחרות</translation>
@@ -1385,7 +1385,7 @@
 <translation id="829672787777123339">מתבצע חיבור למכשיר…</translation>
 <translation id="8310344678080805313">כרטיסיות רגילות</translation>
 <translation id="831192587911042850">הוספת אתר האינטרנט שפתוח כרגע לרשימת אתרי האינטרנט שבמעקב.</translation>
-<translation id="5665071699503384089">‏ניתן לחסום נושאים כדי שלא ישותפו עם אתרים. בנוסף, AI Wiz מוחק באופן אוטומטי נושאים שנוספו לפני יותר מ-4 שבועות. <ph name="BEGIN_LINK"/>מידע נוסף<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">‏ניתן לחסום נושאים כדי שלא ישותפו עם אתרים. בנוסף, AI Wize מוחק באופן אוטומטי נושאים שנוספו לפני יותר מ-4 שבועות. <ph name="BEGIN_LINK"/>מידע נוסף<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">אין לתרגם את האתרים אף פעם</translation>
 <translation id="8348430946834215779">‏יש להשתמש ב-HTTPS כשאפשר, ולקבל אזהרה לפני שטוענים אתרים שלא תומכים ב-HTTPS</translation>
 <translation id="8354977102499939946">חיפוש מהיר באמצעות הקול. ניתן לערוך את קיצור הדרך הזה ב'הגדרות'.</translation>
@@ -1396,11 +1396,11 @@
 <translation id="7651600795135059130">‏המערכת בודקת כתובות URL בעזרת רשימה של אתרים לא בטוחים ששמורה ב-Brave</translation>
 <translation id="8402673309244746971">מעבר אל הפיד 'במעקב'</translation>
 <translation id="8413126021676339697">להצגת ההיסטוריה המלאה</translation>
-<translation id="5348884013239264115">‏הגנה מפני אתרים, הורדות ותוספים שידועים כמסוכנים. כשמבקרים באתר מסוים, AI Wiz שולח ל-Brave קטע קוד מעורפל מכתובת ה-URL דרך שרת פרטיות שמסתיר את כתובת ה-IP. אם האתר פועל באופן שמעורר חשד, נשלחות גם כתובות URL מלאות וקטעי תוכן מדפים.</translation>
+<translation id="5348884013239264115">‏הגנה מפני אתרים, הורדות ותוספים שידועים כמסוכנים. כשמבקרים באתר מסוים, AI Wize שולח ל-Brave קטע קוד מעורפל מכתובת ה-URL דרך שרת פרטיות שמסתיר את כתובת ה-IP. אם האתר פועל באופן שמעורר חשד, נשלחות גם כתובות URL מלאות וקטעי תוכן מדפים.</translation>
 <translation id="8414396119627470038">כניסה אל <ph name="SITE_ETLD_PLUS_ONE"/> באמצעות <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">הוספה</translation>
 <translation id="8422250855136581222">אין כרטיסיות במכשיר הזה</translation>
-<translation id="5735840612282428689">‏הדף נשלח. כדי לראות אותו, פותחים את דפדפן AI Wiz ב<ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">‏הדף נשלח. כדי לראות אותו, פותחים את דפדפן AI Wize ב<ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">כרטיסיית התצוגה המקדימה פתוחה בחצי גובה המסך</translation>
 <translation id="8428213095426709021">הגדרות</translation>
 <translation id="8430824733382774043">שיתוף צילום המסך בלבד</translation>
@@ -1447,7 +1447,7 @@
 <translation id="860043288473659153">שם בעל הכרטיס</translation>
 <translation id="1673533133011266617">‏כניסה ל-Brave, סגור.</translation>
 <translation id="860282621117673749">התראות על הנחות</translation>
-<translation id="5784514951651328424">‏ייתכן שלחשבון AI Wiz שלך יהיו צורות אחרות של היסטוריית גלישה בכתובת <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">‏ייתכן שלחשבון AI Wize שלך יהיו צורות אחרות של היסטוריית גלישה בכתובת <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">האם לעבור אל כתובת האתר שצוינה כהצעה בתוכן שהורדת?</translation>
 <translation id="8621068256433641644">טלפון</translation>
 <translation id="8636825310635137004">כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, יש להפעיל את הסנכרון.</translation>
@@ -1499,7 +1499,7 @@
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>מידע נוסף<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> מוכנה לשימוש</translation>
 <translation id="1174893863889683998">‏האם להסיר את הפעילות שלך ב-Brave מ'שימוש חכם בדיגיטל'?</translation>
-<translation id="179413535815682755">‏בהתאם להגדרות שקבעת, AI Wiz עשוי גם לשלוח קובצי Cookie, את כתובת ה-URL הנוכחית ואת המיקום שלך</translation>
+<translation id="179413535815682755">‏בהתאם להגדרות שקבעת, AI Wize עשוי גם לשלוח קובצי Cookie, את כתובת ה-URL הנוכחית ואת המיקום שלך</translation>
 <translation id="8942627711005830162">פתיחה בחלון האחר</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - לא ניתן היה להוריד את השפה הזו. יש לנסות שוב מאוחר יותר.</translation>
 <translation id="8955719471735800169">חזרה למעלה</translation>
@@ -1554,7 +1554,7 @@
 <translation id="9209888181064652401">לא ניתן לבצע שיחות</translation>
 <translation id="9212845824145208577">אי אפשר לזוז למטה יותר. יש לנסות להתחיל מחלק נמוך יותר בדף.</translation>
 <translation id="9219103736887031265">תמונות</translation>
-<translation id="6946179564366058239">‏כשאתר מבקש לטעון מראש קישורים בדף שלו באופן פרטי, מערכת AI Wiz מצפינה וטוענת מראש את הדפים באמצעות שרתים של AI Wiz ללא קובצי cookie. כך מוסתרת הזהות שלך מהאתר שנטען מראש.</translation>
+<translation id="6946179564366058239">‏כשאתר מבקש לטעון מראש קישורים בדף שלו באופן פרטי, מערכת AI Wize מצפינה וטוענת מראש את הדפים באמצעות שרתים של AI Wize ללא קובצי cookie. כך מוסתרת הזהות שלך מהאתר שנטען מראש.</translation>
 <translation id="4596514158372210596">‏הסרת הפעילות שלך ב-Brave מ'שימוש חכם בדיגיטל'.</translation>
 <translation id="2830145431802238213">‏כדאי להשתמש במצב הטעינה המהירה ב-Brave</translation>
 <translation id="928550791203542716">האתר <ph name="SITE_NAME"/> נמצא במעקב</translation>
@@ -1562,7 +1562,7 @@
 <translation id="938850635132480979">שגיאה: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">הזנת ביטוי סיסמה</translation>
 <translation id="952301137339791907">הגיליון התחתון של התובנות לגבי הדף פתוח</translation>
-<translation id="5406914950576900927">‏דפדפן AI Wiz יכול להשתמש ב-<ph name="BEGIN_BOLD"/>Sogou‏<ph name="END_BOLD"/> כדי לבצע חיפוש מסין. אפשר לשנות את ההעדפה הזאת ב<ph name="BEGIN_LINK"/>הגדרות<ph name="END_LINK"/>.</translation>
+<translation id="5406914950576900927">‏דפדפן AI Wize יכול להשתמש ב-<ph name="BEGIN_BOLD"/>Sogou‏<ph name="END_BOLD"/> כדי לבצע חיפוש מסין. אפשר לשנות את ההעדפה הזאת ב<ph name="BEGIN_LINK"/>הגדרות<ph name="END_LINK"/>.</translation>
 <translation id="962979164594783469">התקנת האפליקציה</translation>
 <translation id="96681097142096641">להציג דף פשוט?</translation>
 <translation id="968900484120156207">הדפים שבהם ביקרת מופיעים כאן</translation>
@@ -1574,7 +1574,7 @@
 <translation id="993520549480398880">ניתן לנקות גם את הסימניות, ההיסטוריה ונתונים נוספים במכונית הזו</translation>
 <translation id="996149300115483134">תפריט כרטיס הפיד סגור</translation>
 <translation id="5186185447130319458">פרטי</translation>
-<translation id="79269250264141507">כשאתה מקליד בשורת הכתובת או בתיבת החיפוש, AI Wiz שולח את מה שאתה מקליד למנוע החיפוש המוגדר כברירת מחדל כדי לקבל הצעות טובות יותר. זה לא פעיל בפרטי.</translation>
+<translation id="79269250264141507">כשאתה מקליד בשורת הכתובת או בתיבת החיפוש, AI Wize שולח את מה שאתה מקליד למנוע החיפוש המוגדר כברירת מחדל כדי לקבל הצעות טובות יותר. זה לא פעיל בפרטי.</translation>
 <translation id="5711390076756601471">סגרו את הכרטיסיות הפרטיות בעת יציאה מ-Brave</translation>
 <translation id="1014490034578104945">השתמשו בנעילת המסך כדי לראות את הכרטיסיות הפרטיות הפתוחות</translation>
 <translation id="5722020415664104421">חסימה במצב אנונימי</translation>
@@ -1591,7 +1591,7 @@
 <translation id="4660964651149493586">בטל את הנעילה של פרטי</translation>
 <translation id="5278260521317049275">הפעל את הנעילה הפרטית</translation>
 <translation id="6302653771627628530">כרטיסיות פרטיות יינעלו כשתעזוב את Brave</translation>
-<translation id="3763131702135887799">עזור לשפר את AI Wiz עבור פרופילים שמשתמשים בו כמו שאתה עושה</translation>
+<translation id="3763131702135887799">עזור לשפר את AI Wize עבור פרופילים שמשתמשים בו כמו שאתה עושה</translation>
 <translation id="4167670741834902166">כרטיסייה פרטית חדשה</translation>
 <translation id="9148151251783962691">כדי לגלוש באופן פרטי במכשיר זה, נסו את מצב גלישה פרטי</translation>
 <translation id="8355284051444779553">לפתיחת כרטיסיה פרטית חדשה, פתחו את התפריט</translation>

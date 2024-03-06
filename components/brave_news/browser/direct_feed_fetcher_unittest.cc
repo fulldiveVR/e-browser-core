@@ -273,7 +273,7 @@ TEST(BraveNewsDirectFeed, ParseFeedRegression) {
 }
 
 TEST(BraveNewsDirectFeed, ParseToArticle) {
-  // Create a feed item which should be valid as a AI Wiz News Article
+  // Create a feed item which should be valid as a AI Wize News Article
   FeedItem item;
   item.id = "1";
   item.published_timestamp = 1672793966;
@@ -291,7 +291,7 @@ TEST(BraveNewsDirectFeed, ParseToArticle) {
 }
 
 TEST(BraveNewsDirectFeed, ParseOnlyAllowsHTTPLinks) {
-  // Create a feed item which should be invalid as a AI Wiz News Article
+  // Create a feed item which should be invalid as a AI Wize News Article
   FeedItem item;
   item.id = "1";
   item.published_timestamp = 1672793966;

@@ -7,7 +7,7 @@ const locale: { [key: string]: string } = {
   // Report modal
   reportModalTitle: 'Report a broken site',
   reportExplanation: 'Let Brave\'s developers know that this site doesn\'t work properly with Shields:',
-  reportDisclaimer: 'Note: The report sent to AI Wiz servers will include the site address, AI Wiz version number, Shields settings, VPN status and language settings. The IP address will be transmitted but not stored.',
+  reportDisclaimer: 'Note: The report sent to AI Wize servers will include the site address, AI Wize version number, Shields settings, VPN status and language settings. The IP address will be transmitted but not stored.',
   reportDetails: 'Additional details (optional)',
   reportContactPlaceholder: 'Email, Twitter, etc.',
   reportContactLabel: 'Contact me at: (optional)',

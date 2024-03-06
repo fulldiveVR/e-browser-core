@@ -4,7 +4,7 @@ When an ad is served, it is delivered to a specific audience that has been targe
 
 | format  | description  |
 |---|---|
-| inline content ad  | Displayed on the AI Wiz News feed  |
+| inline content ad  | Displayed on the AI Wize News feed  |
 | new tab page ad  | Displayed on new tab pages  |
 | notification ad  | Displayed as system or custom push notifications  |
 

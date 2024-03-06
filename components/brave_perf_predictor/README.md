@@ -1,4 +1,4 @@
-# AI Wiz Performance Predictor
+# AI Wize Performance Predictor
 
 This component is based on our [blog post](https://aiwize.com/accurately-predicting-ad-blocker-savings/).
 

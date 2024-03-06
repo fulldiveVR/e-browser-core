@@ -29,7 +29,7 @@
   },
   "reportBrokenSite": {
     "message": "Rapporter en side der ikke virker",
-    "description": "Message for the button allowing users to report a broken site to AI Wiz developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Emner blokeret",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Websteder inkluderer ofte cookies og scripts, der prøver at identificere dig og din enhed (ofte indlejret i annoncer). De vil regne ud, hvem du er og følge dig på tværs af nettet - spore, hvad du gør på ethvert websted. AI Wiz blokerer disse ting, så du kan browse uden at blive fulgt rundt.",
-    "description": "Message in read-only view explaining what AI Wiz Shields do"
+    "message": "Websteder inkluderer ofte cookies og scripts, der prøver at identificere dig og din enhed (ofte indlejret i annoncer). De vil regne ud, hvem du er og følge dig på tværs af nettet - spore, hvad du gør på ethvert websted. AI Wize blokerer disse ting, så du kan browse uden at blive fulgt rundt.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackere og andre uhyggelige ting er blokerede",

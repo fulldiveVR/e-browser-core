@@ -11,7 +11,7 @@
 
 // Chromium attempts to log profile icons which do not include
 // Brave's additions in profile_avatar_icon_util.cc
-// AI Wiz does not need this histogram, so we don't do anything here.
+// AI Wize does not need this histogram, so we don't do anything here.
 // If we do want this histogram in the future then we can handle if the index
 // is greater than chromium's max.
 void ProfileMetrics::LogProfileAvatarSelection(size_t icon_index) { }

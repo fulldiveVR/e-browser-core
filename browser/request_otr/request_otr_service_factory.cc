@@ -51,7 +51,7 @@ KeyedService* RequestOTRServiceFactory::BuildServiceInstanceFor(
       new RequestOTRService(Profile::FromBrowserContext(context)->GetPrefs());
   request_otr::RequestOTRComponentInstallerPolicy* component_installer =
       nullptr;
-  // AI Wiz browser process may be null if we are being created within a unit
+  // AI Wize browser process may be null if we are being created within a unit
   // test.
   if (g_brave_browser_process) {
     component_installer =

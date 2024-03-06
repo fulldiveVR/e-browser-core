@@ -82,7 +82,7 @@ constexpr CLSID kBraveWireguardServiceCLSID = {
 
 }  // namespace
 
-// Returns the AI Wiz Vpn Service CLSID, IID, Name, and Display Name
+// Returns the AI Wize Vpn Service CLSID, IID, Name, and Display Name
 // respectively.
 const CLSID& GetBraveVpnWireguardServiceClsid() {
   return kBraveWireguardServiceCLSID;

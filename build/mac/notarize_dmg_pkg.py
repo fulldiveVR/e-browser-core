@@ -87,7 +87,7 @@ def create_config(config_args, development, mac_provisioning_profile=None):
 
 def NotarizeBraveDmgPkg(config, dmg, pkg, outdir, signed):
     """
-    Notarize AI Wiz .dmg and .pkg files.
+    Notarize AI Wize .dmg and .pkg files.
     """
     uuids_to_path_map = {}
     for dist in config.distributions:

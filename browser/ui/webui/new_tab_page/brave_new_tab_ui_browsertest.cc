@@ -67,7 +67,7 @@ IN_PROC_BROWSER_TEST_F(BraveNewTabUIBrowserTest, StartupURLTest) {
   WaitForLoadStop(contents);
 }
 
-// This test simply checks that by default the AI Wiz new tab page is used.
+// This test simply checks that by default the AI Wize new tab page is used.
 // It does this by loading the newtab page and then checking if
 // window.brave_new_tab exists.
 IN_PROC_BROWSER_TEST_F(BraveNewTabUIBrowserTest, BraveNewTabIsDefault) {

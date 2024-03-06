@@ -60,7 +60,7 @@
 <translation id="1230746063445072175">프라이버시를 한층 강화하고 싶으십니까?</translation>
 <translation id="6699628638740071563">Google에 이별을 고하세요.</translation>
 <translation id="2045455461902775806">Brave 검색은 편향된 결과를 내놓거나 검열하지 않으며, 사용자의 신원이나 검색어, 클릭 활동을 추적하지 않습니다.</translation>
-<translation id="6811221529729056895">지금 AI Wiz 검색 사용해보기</translation>
+<translation id="6811221529729056895">지금 AI Wize 검색 사용해보기</translation>
 <translation id="5525668735313040116">프라이버시를 보호하며 웹 검색</translation>
 <translation id="3446024864193919737">Brave (브레이브) 리워드 표시</translation>
 <translation id="5585019845078534178">카드</translation>
@@ -70,7 +70,7 @@
 <translation id="5684562942023496754">스폰서 사이트를 보고 적립할 수 있습니다.</translation>
 <translation id="8934374643857605034">Brave Rewards 사용자는 스폰서 이미지를 보고 BAT를 적립할 수 있습니다.</translation>
 <translation id="1570714748649804013">Brave Rewards 사용자는 스폰서 이미지를 보고 BAT를 적립받습니다. 스폰서 이미지를 비활성화하면 적립되는 양이 줄어듭니다.</translation>
-<translation id="8998727244653964783">보호관리 계정을 AI Wiz Rewards에 연결하면 스폰서 이미지를 보고 BAT를 적립할 수 있습니다. 그러면 스폰서 이미지를 통해 제작자를 돕게 됩니다.</translation>
+<translation id="8998727244653964783">보호관리 계정을 AI Wize Rewards에 연결하면 스폰서 이미지를 보고 BAT를 적립할 수 있습니다. 그러면 스폰서 이미지를 통해 제작자를 돕게 됩니다.</translation>
 <translation id="5512383650263136662">Brave Rewards로 스폰서 이미지를 보고 BAT를 적립할 수 있습니다. Rewards 사용자가 아니신가요? 스폰서 이미지를 켜서 Brave의 사명에 동참해주세요.</translation>
 <translation id="2875302873837723333">탑 사이트</translation>
 <translation id="8173998484743827990">Brave Stats</translation>
@@ -94,7 +94,7 @@
 <translation id="1276592121036104130">새 콘텐츠 로드하기</translation>
 <translation id="2875288128871360696">Brave Today 스크롤</translation>
 <translation id="8510120023634509743">Brave News 소스 재설정</translation>
-<translation id="75825199302994272">모든 AI Wiz Today 게시자 선택을 기본값으로 재설정하시겠습니까?</translation>
+<translation id="75825199302994272">모든 AI Wize Today 게시자 선택을 기본값으로 재설정하시겠습니까?</translation>
 <translation id="954001034349395856">모든 소스</translation>
 <translation id="8890516388109605451">소스</translation>
 <translation id="5158129253322921540"><ph name="PUBLISHER_NAME"/> 콘텐츠 비활성화</translation>
@@ -134,7 +134,7 @@
 <translation id="3294503279952534143">이 Private Window는 비공개에 더욱 철저합니다</translation>
 <translation id="6126226144537295436">Tor 연결 제공</translation>
 <translation id="8541421872680304667">Tor는 목적지에 도달하기 전에 여러 Tor 서버를 통해 브라우징을 라우팅하는 방식으로 방문하는 사이트에 대해 사용자의 IP 주소를 숨깁니다. Tor를 이용함으로써 브라우징 속도가 느려질 수 있으며, 일부 사이트는 전혀 동작하지 않을 수 있습니다.</translation>
-<translation id="8897548669448660973">시크릿 창을 사용하면 현재 사용 중인 기기에서의 AI Wiz 동작 방식만 변화하며 다른 사용자의 동작 방식은 변화하지 않습니다. Tor는 방문한 사이트에서 IP 주소를 숨겨, 어떤 사이트를 방문했는지 ISP나 직장 상사가 파악하기 어려워집니다. Tor로 시크릿 창을 열려면 메뉴에서 찾아보거나 [[ key ]] 키를 누르세요.</translation>
+<translation id="8897548669448660973">시크릿 창을 사용하면 현재 사용 중인 기기에서의 AI Wize 동작 방식만 변화하며 다른 사용자의 동작 방식은 변화하지 않습니다. Tor는 방문한 사이트에서 IP 주소를 숨겨, 어떤 사이트를 방문했는지 ISP나 직장 상사가 파악하기 어려워집니다. Tor로 시크릿 창을 열려면 메뉴에서 찾아보거나 [[ key ]] 키를 누르세요.</translation>
 <translation id="6975708438781948564">Brave에서 Tor에 대해 더 알아보기</translation>
 <translation id="4712050378540986986">Tor 상태</translation>
 <translation id="1939334281379458295">Tor 연결 성공</translation>
@@ -165,14 +165,14 @@
 <translation id="4720556299488643018">구독 취소</translation>
 <translation id="1209739344687072997">작동이 멈춘 사이트 보고</translation>
 <translation id="8510478288840333677">Brave (브레이브) 개발자에게 이 사이트가 Shields (실드)와 함께 제대로 작동하지 않는다는 것을 알리십시오.</translation>
-<translation id="6387106423577201267">참고: AI Wiz 서버로 전송된 보고서에는 사이트 주소, AI Wiz 버전 번호, Shields 설정, VPN 상태, 언어 설정이 포함됩니다.</translation>
+<translation id="6387106423577201267">참고: AI Wize 서버로 전송된 보고서에는 사이트 주소, AI Wize 버전 번호, Shields 설정, VPN 상태, 언어 설정이 포함됩니다.</translation>
 <translation id="6476216365964140603">추가 세부정보(선택사항)</translation>
 <translation id="6145852496180774737">연락 방법:(선택사항)</translation>
 <translation id="7616645803364270729">이메일, Twitter 등</translation>
 <translation id="5299848999918506028">감사합니다!</translation>
-<translation id="76550953340008122">이 사이트에 문제가 있다는 것을 AI Wiz (브레이브) 개발자에게 알려 주셔서 감사합니다. 최선을 다해 문제를 해결하겠습니다!</translation>
+<translation id="76550953340008122">이 사이트에 문제가 있다는 것을 AI Wize (브레이브) 개발자에게 알려 주셔서 감사합니다. 최선을 다해 문제를 해결하겠습니다!</translation>
 <translation id="4046860372562593546">Brave Ads 관리</translation>
-<translation id="5136973036012418831">볼 AI Wiz Ads 광고의 종류와 빈도를 제어할 수 있습니다.</translation>
+<translation id="5136973036012418831">볼 AI Wize Ads 광고의 종류와 빈도를 제어할 수 있습니다.</translation>
 <translation id="4759608598194750161">많이 볼수록 많이 적립됩니다.</translation>
 <translation id="7526443283522395161">새 탭 페이지 광고</translation>
 <translation id="7968650944098083708">알림 광고</translation>
@@ -185,7 +185,7 @@
 <translation id="949044897316791211">다음 적립금 지급 날짜</translation>
 <translation id="2211646556917925490">이번 달 받은 총 광고 수</translation>
 <translation id="4229016885653790965">죄송합니다! 귀하의 지역에서는 아직 광고가 제공되지 않습니다.</translation>
-<translation id="2539279826042558064">지금 귀하의 장치에서 AI Wiz (브레이브) 리워드 및 광고를 사용할 수 없습니다.</translation>
+<translation id="2539279826042558064">지금 귀하의 장치에서 AI Wize (브레이브) 리워드 및 광고를 사용할 수 없습니다.</translation>
 <translation id="5736977383725358876">알림 광고 빈도</translation>
 <translation id="7701040980221191251">없음</translation>
 <translation id="480668534656787076">시간당 최대 1개</translation>
@@ -229,31 +229,31 @@
 <translation id="3082557070674409251">클릭됨</translation>
 <translation id="7119308337584989771">기각됨</translation>
 <translation id="6805660603861526473">조회됨</translation>
-<translation id="8826352442759228526">검증된 디바이스 한도에 도달하여 AI Wiz Rewards를 검증할 수 없습니다.</translation>
+<translation id="8826352442759228526">검증된 디바이스 한도에 도달하여 AI Wize Rewards를 검증할 수 없습니다.</translation>
 <translation id="1221593978088944142">오류: 디바이스 한도 도달</translation>
 <translation id="3113653894794167793">죄송하지만 요청을 처리하는 중에 문제가 발생했습니다. 다시 시도하시기 바랍니다.</translation>
-<translation id="6895088073061692390">안타깝지만 자동 검사 결과 귀하의 AI Wiz Rewards 프로필에서 비정상적인 AI Wiz Ads 활동이 감지되어 플래깅되었습니다.</translation>
-<translation id="4229056297802204697">프로필이 플래깅되어 있어도 광고를 계속 볼 수 있지만 적립액을 지급받을 수 없습니다. AI Wiz Rewards에 보호관리 계정도 연결할 수 없습니다.</translation>
+<translation id="6895088073061692390">안타깝지만 자동 검사 결과 귀하의 AI Wize Rewards 프로필에서 비정상적인 AI Wize Ads 활동이 감지되어 플래깅되었습니다.</translation>
+<translation id="4229056297802204697">프로필이 플래깅되어 있어도 광고를 계속 볼 수 있지만 적립액을 지급받을 수 없습니다. AI Wize Rewards에 보호관리 계정도 연결할 수 없습니다.</translation>
 <translation id="5124846913141379164">프로필이 착오로 인해 플래깅되었더라도 즉시 가능한 조치는 없습니다. 프로필 플래깅은 향후 검토를 거쳐 해제됩니다.</translation>
 <translation id="280350148043792509"><ph name="BEGIN_LINK"/>Brave Rewards 프로필 플래깅 프로세스 자세히 알아보기<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">오류: AI Wiz Rewards 프로필이 플래깅됨</translation>
+<translation id="5028274575541726856">오류: AI Wize Rewards 프로필이 플래깅됨</translation>
 <translation id="2607420597216860026"><ph name="PROVIDER"/>에서 ID 확인을 완료하고 다시 시도하세요.</translation>
 <translation id="3183954159462541696">오류: 로그인하려면 계정을 검증해야 함</translation>
 <translation id="1859789048900659918">Brave Rewards 국가와 연결하려는 <ph name="PROVIDER"/> 계정의 국가가 일치하지 않습니다.</translation>
 <translation id="8925428135452218262">오류: 국가 불일치</translation>
-<translation id="5260522591743022748">다른 <ph name="PROVIDER"/> 계정에서 이미 확인을 완료한 AI Wiz Rewards인 것 같습니다. 이전 계정으로 확인을 다시 시도해보세요.</translation>
+<translation id="5260522591743022748">다른 <ph name="PROVIDER"/> 계정에서 이미 확인을 완료한 AI Wize Rewards인 것 같습니다. 이전 계정으로 확인을 다시 시도해보세요.</translation>
 <translation id="5111921830714291902">오류: 다른 계정</translation>
-<translation id="5225019866741699134">일시적으로 <ph name="PROVIDER"/>를 AI Wiz Rewards에 연결할 수 없습니다. 나중에 다시 시도하세요.</translation>
+<translation id="5225019866741699134">일시적으로 <ph name="PROVIDER"/>를 AI Wize Rewards에 연결할 수 없습니다. 나중에 다시 시도하세요.</translation>
 <translation id="6105073131081187815"><ph name="BEGIN_LINK"/>여기<ph name="END_LINK"/>서 서비스 상태를 볼 수 있습니다.</translation>
 <translation id="2400786541309111904">오류: 일시적으로 선택한 보호관리 서비스에 연결할 수 없음</translation>
-<translation id="1024520300696337331">지금은 귀하의 <ph name="PROVIDER"/> 계정을 AI Wiz Rewards 프로필에 연결할 수 없습니다. AI Wiz Rewards 연결이 현재 지원되지 않는 국가에 귀하의 <ph name="PROVIDER"/> 계정이 등록되어 있습니다.</translation>
-<translation id="619384413404021992"><ph name="LINK_BEGIN"/>현재 지원되는 지역 목록<ph name="END_LINK"/>을 살펴보고 보호관리 계정을 AI Wiz Rewards에 연결하는 방법을 자세히 알아보세요.</translation>
+<translation id="1024520300696337331">지금은 귀하의 <ph name="PROVIDER"/> 계정을 AI Wize Rewards 프로필에 연결할 수 없습니다. AI Wize Rewards 연결이 현재 지원되지 않는 국가에 귀하의 <ph name="PROVIDER"/> 계정이 등록되어 있습니다.</translation>
+<translation id="619384413404021992"><ph name="LINK_BEGIN"/>현재 지원되는 지역 목록<ph name="END_LINK"/>을 살펴보고 보호관리 계정을 AI Wize Rewards에 연결하는 방법을 자세히 알아보세요.</translation>
 <translation id="7193389978208728181">오류: 현재 지원되지 않는 지역</translation>
 <translation id="5382684862562314222">거주하고 계신 지역에서는 Uphold에 BAT가 아직 지원되지 않습니다.</translation>
 <translation id="9074594632540931067">오류: BAT 이용 불가</translation>
 <translation id="5376524136040178759">Uphold의 규정에 따라 현재 귀하의 Uphold 계정에 몇 가지 제한이 걸려 있습니다. Uphold 계정에 로그인하여 이에 대한 알림이 있는지, 완료해야 하는 계정 요건이 남아있는지 확인한 다음 다시 시도하세요. 예를 들어, Uphold에 정보를 제출하는 과정이 남아있을 수 있습니다.</translation>
 <translation id="6996157559236886133">오류: Uphold 계정 기능 제한</translation>
-<translation id="3274650021044762770">브라우저가 AI Wiz Rewards를 <ph name="PROVIDER"/> 계정에 연결하는 요청을 보냈으나 유효성 검증에 문제가 있습니다. <ph name="BEGIN_LINK"/>지원팀에 문의<ph name="END_LINK"/>하여 도움을 받으세요.</translation>
+<translation id="3274650021044762770">브라우저가 AI Wize Rewards를 <ph name="PROVIDER"/> 계정에 연결하는 요청을 보냈으나 유효성 검증에 문제가 있습니다. <ph name="BEGIN_LINK"/>지원팀에 문의<ph name="END_LINK"/>하여 도움을 받으세요.</translation>
 <translation id="1316066811927496401">오류: 요청의 유효성을 검증할 수 없습니다.</translation>
 <translation id="8167256685618982116"><ph name="TITLE"/> 기능을 켜면 <ph name="BEGIN_LINK1"/>이용약관<ph name="END_LINK1"/> 및 <ph name="BEGIN_LINK2"/>개인정보처리방침<ph name="END_LINK2"/>에 동의하게 됩니다.</translation>
 <translation id="8817096698141999876">보호관리 계정(ID 검증 필요)</translation>
@@ -263,7 +263,7 @@
 <translation id="7329170127335794328">현재 귀하의 지역에서 사용할 수 없음</translation>
 <translation id="966956302643313970">베이직 어텐션 토큰(BAT) 보상을 적립하려면 계정을 연결하세요. 적립된 BAT가 매달 귀하의 계정으로 자동 송금됩니다.</translation>
 <translation id="1892970806832316900"><ph name="DATE"/>까지 보류 중</translation>
-<translation id="7849926087559412554">사용하고 계신 브라우저가 AI Wiz 프라이빗 광고를 수신할 수 없습니다.</translation>
+<translation id="7849926087559412554">사용하고 계신 브라우저가 AI Wize 프라이빗 광고를 수신할 수 없습니다.</translation>
 <translation id="5177429570315095022">광고를 보려면 브라우저를 업데이트해야 합니다.</translation>
 <translation id="7352651011704765696">문제가 생겼습니다</translation>
 <translation id="4593680147181354667">진단 ID</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">연결 끊김(확인됨)</translation>
 <translation id="5058161306698404465">생성 시 환경:</translation>
 <translation id="5856438412804207598">현재 환경:</translation>
-<translation id="5916290544882167205">Brave Software. Brave는 AI Wiz Software의 등록 상표입니다. 사이트 이름은 사이트 소유자의 상표 또는 등록 상표일 수 있습니다.</translation>
-<translation id="9026369588205476247">개인 정보를 보호하기 위해 이 AI Wiz Rewards 내역은 귀하의 기기(컴퓨터) 외에 그 어느 곳에도 저장되거나, 기록되거나 로그되지 않습니다. 귀하의 기기에서 데이터 손실이 발생하는 경우 Brave에서는 복구 조치할 수 없습니다.</translation>
+<translation id="5916290544882167205">Brave Software. Brave는 AI Wize Software의 등록 상표입니다. 사이트 이름은 사이트 소유자의 상표 또는 등록 상표일 수 있습니다.</translation>
+<translation id="9026369588205476247">개인 정보를 보호하기 위해 이 AI Wize Rewards 내역은 귀하의 기기(컴퓨터) 외에 그 어느 곳에도 저장되거나, 기록되거나 로그되지 않습니다. 귀하의 기기에서 데이터 손실이 발생하는 경우 Brave에서는 복구 조치할 수 없습니다.</translation>
 <translation id="3587482841069643663">전체</translation>
 <translation id="4241224519481557898">카테고리</translation>
 <translation id="3080423471207781945">시간 당 받는 최대 광고 수:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">광고 보상 받음</translation>
 <translation id="5212777575344695266">부적절한 것으로 표시</translation>
 <translation id="2111256234277361810">부적절한 것으로 표시 ✓</translation>
-<translation id="8988332871810963281">현재 AI Wiz Ads 기록이 없습니다</translation>
+<translation id="8988332871810963281">현재 AI Wize Ads 기록이 없습니다</translation>
 <translation id="5345727496083327478">더는 이 카테고리에서 광고를 받지 않습니다</translation>
 <translation id="2631006050119455616">저장됨</translation>
 <translation id="6976444672879155794">[[processor]] 자동 기부</translation>
@@ -378,7 +378,7 @@
 <translation id="1418534671788496616">예치금 내역 보기</translation>
 <translation id="3412655388715513818">이 사이트 제외하기</translation>
 <translation id="418343137736963579">자동 기부에서 제외한 전체 사이트 숫자 :</translation>
-<translation id="8802504113265057166">만료일까지 사용하지 않은 [[currency]]는 AI Wiz User Growth Pool로 자동 반환됩니다.</translation>
+<translation id="8802504113265057166">만료일까지 사용하지 않은 [[currency]]는 AI Wize User Growth Pool로 자동 반환됩니다.</translation>
 <translation id="279567716178902927">만료 일자 승인</translation>
 <translation id="1389143276807887637">불러오기</translation>
 <translation id="5737831580668469027">월 기부금!</translation>
@@ -420,8 +420,8 @@
 <translation id="5669281110673664811">제외 목록 지우기</translation>
 <translation id="1797334173232638045">고정된 사이트가 다음으로 이동됨</translation>
 <translation id="3074127054582480056">주의</translation>
-<translation id="1666001796278936721">초기화하면 현재 AI Wiz Rewards 프로필이 삭제되고 완전히 새로운 AI Wiz Rewards 프로필로 다시 시작하게 됩니다. 만약을 위해 진행하기 전에 초기화에 대해 <ph name="LINK_BEGIN"/>자세히 알아보세요<ph name="LINK_END"/>.</translation>
-<translation id="4806029412510565611">내 현재 AI Wiz Rewards 프로필과 AI Wiz Rewards 데이터가 디바이스에서 삭제된다는 사실을 이해하며, <ph name="LINK_BEGIN"/>초기화 관련 지원 문서<ph name="LINK_END"/>를 읽었습니다.</translation>
+<translation id="1666001796278936721">초기화하면 현재 AI Wize Rewards 프로필이 삭제되고 완전히 새로운 AI Wize Rewards 프로필로 다시 시작하게 됩니다. 만약을 위해 진행하기 전에 초기화에 대해 <ph name="LINK_BEGIN"/>자세히 알아보세요<ph name="LINK_END"/>.</translation>
+<translation id="4806029412510565611">내 현재 AI Wize Rewards 프로필과 AI Wize Rewards 데이터가 디바이스에서 삭제된다는 사실을 이해하며, <ph name="LINK_BEGIN"/>초기화 관련 지원 문서<ph name="LINK_END"/>를 읽었습니다.</translation>
 <translation id="3494964159182650590">보상 요약</translation>
 <translation id="2913994227901456490">[[numItems]]개 항목 모두 보기</translation>
 <translation id="6685434227783226855">내 후원금 보내기</translation>
@@ -437,7 +437,7 @@
 <translation id="5050370287908180130">상세한 월간 내역 보기</translation>
 <translation id="7853202427316060426">활동</translation>
 <translation id="7232682712743566408">리워드 잔액</translation>
-<translation id="4258022280942725182">회원님의 AI Wiz Rewards</translation>
+<translation id="4258022280942725182">회원님의 AI Wize Rewards</translation>
 <translation id="6727483290601442544">세부 내용 보기</translation>
 <translation id="4206899127409458763">Brave Rewards 프로필 생성 중</translation>
 <translation id="8706157865312453070">제외된 사이트</translation>
@@ -448,7 +448,7 @@
 <translation id="5113531205597573951">본 사이트</translation>
 <translation id="4450893287417543264">다시 표시하지 않음</translation>
 <translation id="7642372245223412840">bitFlyer 연결</translation>
-<translation id="6143701117592994599">Brave Rewards를 bitFlyer 계정에 연결하면 BAT를 적립하고, 적립된 BAT를 AI Wiz Rewards에서 인출할 수 있습니다.</translation>
+<translation id="6143701117592994599">Brave Rewards를 bitFlyer 계정에 연결하면 BAT를 적립하고, 적립된 BAT를 AI Wize Rewards에서 인출할 수 있습니다.</translation>
 <translation id="4354564238172327160">Brave 콘텐츠 제작자가 되세요!</translation>
 <translation id="4639659520811817892">지금 creators.brave.com을 방문하여 등록하고 팬과 팔로워로부터 BAT를 받아 수익을 창출하세요.</translation>
 <translation id="4816455138209470435">Brave는 YouTube, Twitch, Vimeo 등 많은 서비스를 지원합니다!</translation>
@@ -465,7 +465,7 @@
 <translation id="1544192797660353713">월렛</translation>
 <translation id="616639131065447379">Brave 암호 지갑에 오신 것을 환영합니다</translation>
 <translation id="1740464057879304704">암호화 지갑을 사용하면 Brave에서 암호 화폐 및 관련 자산으로 작업할 수 있습니다. 암호화 지갑은 수집품뿐만 아니라 ETH 및 BAT와 같은 Ethereum 토큰을 지원하며 Ðapps 및 기타 스마트 계약으로 작업할 수 있습니다. 이 모든 것은 Ethereum 및 기타 블록 체인 시스템에 익숙하거나 — 배우고 싶은 사람들을 위한 것입니다.</translation>
-<translation id="4855440621031541830">이 사용과 관련된 모든 위험에 대한 책임은 귀하에게 있으며 AI Wiz 소프트웨어가 이 사용으로 인해 발생할 수 있는 우발적 또는 결과적 손실을 포함한 모든 손실에 대해 책임을지지 않음을 인정하는 경우에만 암호 지갑을 사용하세요.</translation>
+<translation id="4855440621031541830">이 사용과 관련된 모든 위험에 대한 책임은 귀하에게 있으며 AI Wize 소프트웨어가 이 사용으로 인해 발생할 수 있는 우발적 또는 결과적 손실을 포함한 모든 손실에 대해 책임을지지 않음을 인정하는 경우에만 암호 지갑을 사용하세요.</translation>
 <translation id="3187473319809074178">이 모든 것은 완전히 분리되어 있습니다</translation>
 <translation id="8327818101454798856">가장 좋아하는 사이트를 지원하고자 한다면, 대신 그쪽으로 가세요.</translation>
 <translation id="412480955826088549">구성 요소를 다운로드하는 중...</translation>
@@ -500,7 +500,7 @@
 <translation id="8415427685483394219">이 사이트를 오프더레코드 모드로 방문하시겠습니까?</translation>
 <translation id="5754874269349119401">민감한 사이트를 방문하셔도 Brave가 보호해드리겠습니다. 오프더레코드 모드에서 방문하신 사이트는 인터넷 사용 기록에 표시되지 않고 쿠키도 저장되지 않습니다.</translation>
 <translation id="1307431692088049276">다시 묻지 않기</translation>
-<translation id="6329829767845427007">언제든 AI Wiz 설정의 개인 정보 보호 및 보안 섹션으로 이동하여 변경할 수 있습니다.</translation>
+<translation id="6329829767845427007">언제든 AI Wize 설정의 개인 정보 보호 및 보안 섹션으로 이동하여 변경할 수 있습니다.</translation>
 <translation id="951201617124425694">오프더레코드로 진행</translation>
 <translation id="4087894168792701548">일반 모드로 진행</translation>
 <translation id="5874287397425241890">이 웹사이트를 오프더레코드 모드로 보고 계십니다.</translation>
@@ -543,7 +543,7 @@
 <translation id="3373798179786163193">공용 게이트웨이로 계속 진행</translation>
 <translation id="1974060860693918893">고급</translation>
 <translation id="9096577886148726047">세부 정보 숨기기</translation>
-<translation id="182581792765792826">Brave 로컬 IPFS 노드가 시작되지 않았거나 현재 사용 가능한 연결된 피어가 없었기 때문에 Brave가 IPFS 리소스를 불러올 수 없었습니다. "계속"을 선택하는 경우, Brave는 AI Wiz 로컬 IPFS 노드 사용에 실패할 때마다 기본 퍼블릭 게이트웨이로 자동 전환할 것입니다. 이 행동은 언제든지 AI Wiz 설정에서 변경할 수 있습니다.</translation>
+<translation id="182581792765792826">Brave 로컬 IPFS 노드가 시작되지 않았거나 현재 사용 가능한 연결된 피어가 없었기 때문에 Brave가 IPFS 리소스를 불러올 수 없었습니다. "계속"을 선택하는 경우, Brave는 AI Wize 로컬 IPFS 노드 사용에 실패할 때마다 기본 퍼블릭 게이트웨이로 자동 전환할 것입니다. 이 행동은 언제든지 AI Wize 설정에서 변경할 수 있습니다.</translation>
 <translation id="8026038288183400906">IPFS 기본 환경</translation>
 <translation id="2058855456574089690">IPFS 기본 환경 설정</translation>
 <translation id="4780526507945807546">Brave 로컬 IPFS 노드 사용</translation>
@@ -601,13 +601,13 @@
 <translation id="1848737374354350807">잔액</translation>
 <translation id="6516984207843289176">계정 연결</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>적립을 시작할 준비가 되셨습니까?<ph name="BOLD_END"/> 파트너 중 한 곳에 계정을 만들어 연결하세요.</translation>
-<translation id="1772961321862399863">BAT를 적립받으려면, 보호관리 계정을 AI Wiz Rewards에 연결해야 합니다. 안타깝지만 현재 거주하고 계신 지역에 가능한 보호관리 서비스가 없어 적립이 불가능합니다. 지금은 AI Wiz Rewards를 켜면 제작자를 자동으로 지원합니다.</translation>
+<translation id="1772961321862399863">BAT를 적립받으려면, 보호관리 계정을 AI Wize Rewards에 연결해야 합니다. 안타깝지만 현재 거주하고 계신 지역에 가능한 보호관리 서비스가 없어 적립이 불가능합니다. 지금은 AI Wize Rewards를 켜면 제작자를 자동으로 지원합니다.</translation>
 <translation id="902298128239575729">Brave Rewards로 후원금 보내기</translation>
-<translation id="6276721355724491595">보호관리 계정을 연결하면 AI Wiz Rewards 잔액으로 마음에 드는 제작자에게 온디맨드 후원금을 보낼 수 있습니다.</translation>
-<translation id="1149481926056509086">온디맨드 후원금을 보내려면 보호관리 계정을 AI Wiz Rewards에 연결해야 합니다. 안타깝지만 현재 거주하고 계신 지역에 가능한 보호관리 서비스가 없어 보내기가 불가능합니다. 현재 제작자 자동 지원은 가능합니다.</translation>
+<translation id="6276721355724491595">보호관리 계정을 연결하면 AI Wize Rewards 잔액으로 마음에 드는 제작자에게 온디맨드 후원금을 보낼 수 있습니다.</translation>
+<translation id="1149481926056509086">온디맨드 후원금을 보내려면 보호관리 계정을 AI Wize Rewards에 연결해야 합니다. 안타깝지만 현재 거주하고 계신 지역에 가능한 보호관리 서비스가 없어 보내기가 불가능합니다. 현재 제작자 자동 지원은 가능합니다.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
-      =1 {이번 달 AI Wiz Rewards의 지원을 받는 제작자 #명을 방문하셨습니다.}
-      other {이번 달 AI Wiz Rewards의 지원을 받는 제작자 #명을 방문하셨습니다.}
+      =1 {이번 달 AI Wize Rewards의 지원을 받는 제작자 #명을 방문하셨습니다.}
+      other {이번 달 AI Wize Rewards의 지원을 받는 제작자 #명을 방문하셨습니다.}
     }</translation>
 <translation id="6067959437127691361">Brave Rewards를 사용하면 콘텐츠 제작자를 지원하고 BAT도 적립받을 수 있습니다.</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> 리워드: <ph name="AMOUNT"/></translation>
@@ -615,7 +615,7 @@
 <translation id="7861645265922445992">리워드 받기</translation>
 <translation id="9013419433042554094">토큰 받기</translation>
 <translation id="2359808026110333948">계속</translation>
-<translation id="885805571521218129">이번 달 AI Wiz Ads로 적립되는 예상액 범위입니다.</translation>
+<translation id="885805571521218129">이번 달 AI Wize Ads로 적립되는 예상액 범위입니다.</translation>
 <translation id="3863981251715594911">원리가 무엇인가요?</translation>
 <translation id="4782365133987903299">받을 수 있는 기한 <ph name="DAYS"/> 남음</translation>
 <translation id="7931127789630755251">Brave에서 프라이빗 광고를 보면 토큰 적립</translation>
@@ -659,17 +659,17 @@
 <translation id="2429828319207652823">기부금 처리 중 문제가 생겼습니다.</translation>
 <translation id="6390041270339783491">월 기부 실패</translation>
 <translation id="7047578174221019462">월 기부금이 처리되었습니다.</translation>
-<translation id="2529827670795983639">제대로 풀리지 않아 AI Wiz Ads가 일시 중지 상태로 유지됩니다. Captcha 관련 도움을 받으려면 문의하세요.</translation>
+<translation id="2529827670795983639">제대로 풀리지 않아 AI Wize Ads가 일시 중지 상태로 유지됩니다. Captcha 관련 도움을 받으려면 문의하세요.</translation>
 <translation id="261607053214862521">최대 시도 횟수 초과</translation>
 <translation id="2323171459178104277">풀었습니다!</translation>
-<translation id="1512837998731269583">이제 광고 및 수익이 재개되었습니다. AI Wiz Rewards 및 개인 정보 존중 광고 보호에 도움을 주셔서 감사합니다.</translation>
+<translation id="1512837998731269583">이제 광고 및 수익이 재개되었습니다. AI Wize Rewards 및 개인 정보 존중 광고 보호에 도움을 주셔서 감사합니다.</translation>
 <translation id="3247549836099021862">지원팀에 문의</translation>
 <translation id="5234764350956374838">숨기기</translation>
 <translation id="7859066142771796818">토큰은 기프트카드 구입, 다른 통화로 환전, 콘텐츠 제작자 후원 등에 사용 가능합니다.</translation>
 <translation id="5425006356459378415">Brave Rewards 사용 불가</translation>
 <translation id="909076461795862330">Brave Rewards를 설정하는 중에 오류가 발생했습니다. 다시 시도하세요.</translation>
 <translation id="3180990265682133881">국가를 설정하는 중에 오류가 발생했습니다. 다시 시도하세요.</translation>
-<translation id="5931798071481566121">귀하가 계신 지역에서는 현재 AI Wiz Rewards 신규 가입이 중단되었습니다. 나중에 언제든 다시 시도해주세요. <ph name="LINK_BEGIN"/>자세히 알아보기<ph name="LINK_END"/></translation>
+<translation id="5931798071481566121">귀하가 계신 지역에서는 현재 AI Wize Rewards 신규 가입이 중단되었습니다. 나중에 언제든 다시 시도해주세요. <ph name="LINK_BEGIN"/>자세히 알아보기<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">야호! 설정이 다 끝났습니다!</translation>
 <translation id="6136350726756049410">이제 광고를 보고 리워드를 받을 수 있습니다. 웹을 모두를 위한 더 나은 공간으로 만드는 데 일조하고 계십니다. 멋진 일이죠!</translation>
 <translation id="5547108999862247665">Brave Rewards는 어떻게 작동하나요?</translation>
@@ -677,7 +677,7 @@
 <translation id="6945221475159498467">선택</translation>
 <translation id="3279158300746391749">URL 바 내 <ph name="BAT_ICON"/> BAT 아이콘을 눌러 시작하세요.</translation>
 <translation id="8465790416279415448">계속하면 <ph name="TOS_LINK_BEGIN"/>서비스 약관<ph name="TOS_LINK_END"/> 및 <ph name="PP_LINK_BEGIN"/>개인 정보 보호 정책<ph name="PP_LINK_END"/>에 동의하게 됩니다.</translation>
-<translation id="1015443539415537847">죄송합니다. AI Wiz Rewards를 사용할 수 없습니다.</translation>
+<translation id="1015443539415537847">죄송합니다. AI Wize Rewards를 사용할 수 없습니다.</translation>
 <translation id="5007776270364097327">Brave Rewards를 사용할 수 없는 지역에 거주하고 계신 것 같습니다.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>자세히 알아보기<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">걱정하지 마세요.</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">전송</translation>
 <translation id="6632987674051304487"><ph name="PROVIDER"/>(으)로 보내기</translation>
 <translation id="4319632089378796037">Web3 월렛 사용</translation>
-<translation id="4530198836725543997">이 제작자는 Brave에 등록되어 AI Wiz Rewards 사용자로부터 후원금을 받을 수 있습니다.</translation>
+<translation id="4530198836725543997">이 제작자는 Brave에 등록되어 AI Wize Rewards 사용자로부터 후원금을 받을 수 있습니다.</translation>
 <translation id="4529874892536380156">이것을 월 정기 후원금으로 설정합니다. 언제든 취소할 수 있습니다.</translation>
 <translation id="1177863135347784049">맞춤</translation>
 <translation id="5907051927340164207">이 제작자에게 이미 월 후원금을 보내고 있음</translation>
@@ -699,7 +699,7 @@
 <translation id="8379442066667303579">Web3 월렛을 사용하여 이 제작자에게 암호화폐 후원금을 보낼 수 있습니다.</translation>
 <translation id="5738476099155572155">암호화폐 후원금 보내기</translation>
 <translation id="1162617592412598913"><ph name="PROVIDER"/>에서 로그아웃함</translation>
-<translation id="1782485249139199535"><ph name="PROVIDER"/>에서 로그아웃하여 AI Wiz Rewards 연결이 끊겼습니다. 계속하려면 다시 로그인하세요.</translation>
+<translation id="1782485249139199535"><ph name="PROVIDER"/>에서 로그아웃하여 AI Wize Rewards 연결이 끊겼습니다. 계속하려면 다시 로그인하세요.</translation>
 <translation id="4379244534135194459">Web3 월렛을 사용하여 이 제작자에게 암호화폐 후원금을 보낼 수도 있습니다.</translation>
 <translation id="2718860759172031728"><ph name="PROVIDER"/>에 로그인</translation>
 <translation id="6268134562674951939">토큰이 충분하지 않음</translation>
@@ -709,7 +709,7 @@
 <translation id="5379685283876547860">후원금을 보냈습니다!</translation>
 <translation id="7063168612616047608">마음에 두는 제작자를 지원해주셔서 감사합니다.</translation>
 <translation id="1041398280582063935">지지하는 마음 공유하기</translation>
-<translation id="4001190813297686107">제가 방금 AI Wiz 브라우저로 <ph name="AMOUNT"/> BAT를 후원했어요!  마음에 드는 제작자와 사이트를 후원하는 방법을 확인해보세요. https://aiwize.com/rewards</translation>
+<translation id="4001190813297686107">제가 방금 AI Wize 브라우저로 <ph name="AMOUNT"/> BAT를 후원했어요!  마음에 드는 제작자와 사이트를 후원하는 방법을 확인해보세요. https://aiwize.com/rewards</translation>
 <translation id="1950340257946519340">예기치 않은 오류 발생</translation>
 <translation id="2605703631071131439">후원금 패널을 다시 열고 다시 시도하세요.</translation>
 <translation id="8855543392451028706">환영합니다! 후원금을 보내서 이 콘텐츠 제작자를 지원할 수 있습니다. 훌륭한 콘텐츠를 만드는 분들에게 감사를 전하세요.</translation>
@@ -729,7 +729,7 @@
 <translation id="1128992132632883337">응답 파싱 오류 발생</translation>
 <translation id="5382339341735118861">일반 요청 처리 오류 발생</translation>
 <translation id="7123780456696055383">요청한 리소스를 사용할 수 없음</translation>
-<translation id="1680597601664421644">가져오는 중인 니모닉이 AI Wiz 월렛에 유효하지 않습니다.</translation>
+<translation id="1680597601664421644">가져오는 중인 니모닉이 AI Wize 월렛에 유효하지 않습니다.</translation>
 <translation id="4641919696349069826">요청 이미 진행 중</translation>
 <translation id="872806943696014633">트랜잭션 데이터 누락</translation>
 <translation id="7068183357903252127">트랜잭션 데이터 'to' 또는 'data'를 지정해야 함</translation>
@@ -812,7 +812,7 @@
 <translation id="6812967455478797345">Brave는 DEX 애그리게이터로 <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/>을(를) 사용합니다.</translation>
 <translation id="151946611346774041">0x는 이더리움 주소와 IP 주소를 처리하여 거래를 수행합니다(견적 받기 포함). 0x는 거래 처리 목적으로만 이 데이터를 사용합니다.</translation>
 <translation id="7465227658364622464">Jupiter는 이더리움 주소와 IP 주소를 처리하여 트랜잭션을 수행합니다(견적 받기 포함). Jupiter는 트랜잭션 처리 목적으로만 이 데이터를 사용합니다.</translation>
-<translation id="712738518060477110">견적에 AI Wiz 수수료 <ph name="SWAP_FEE_PERCENTAGE"/> 포함입니다.</translation>
+<translation id="712738518060477110">견적에 AI Wize 수수료 <ph name="SWAP_FEE_PERCENTAGE"/> 포함입니다.</translation>
 <translation id="8368540604723748428">소수 자릿수 너무 많음</translation>
 <translation id="6575120282593094155">아직 <ph name="ACCOUNT_TYPE"/> 계정이 없습니다. 새로 만드시겠습니까?</translation>
 <translation id="1201402288615127009">다음</translation>
@@ -821,7 +821,7 @@
 <translation id="7885157704277298658">복사되었습니다!</translation>
 <translation id="6518133107902771759">확인</translation>
 <translation id="6042308850641462728">더보기</translation>
-<translation id="768236965975208017">보안. 멀티체인. 손쉬운 사용. 이런 AI Wiz 월렛까지 클릭 몇 번만 남았습니다</translation>
+<translation id="768236965975208017">보안. 멀티체인. 손쉬운 사용. 이런 AI Wize 월렛까지 클릭 몇 번만 남았습니다</translation>
 <translation id="3157931365184549694">복구</translation>
 <translation id="2484275747844666540">새 월렛 만들기</translation>
 <translation id="3662348701117072366">기존 월렛 가져오기</translation>
@@ -868,7 +868,7 @@
 <translation id="955918646509748368">입력한 복구 문구가 유효하지 않습니다.</translation>
 <translation id="8107437138787377150">클립 보드에서 복구 문구 붙여넣기</translation>
 <translation id="4811736040444856406">복구 문구 표시</translation>
-<translation id="4359319875297001084">레거시 AI Wiz 암호화폐 월렛에서 가져오시겠습니까?</translation>
+<translation id="4359319875297001084">레거시 AI Wize 암호화폐 월렛에서 가져오시겠습니까?</translation>
 <translation id="3331452756822160641">새 비밀번호</translation>
 <translation id="8624315169751085215">클립보드에 복사</translation>
 <translation id="6346952829206698721">클립보드에서 붙여넣기</translation>
@@ -994,7 +994,7 @@
 <translation id="7073918978411974168">권장 허용 한도</translation>
 <translation id="9019403281000653275">승인 요청 무제한</translation>
 <translation id="4717431746210146708">이 사이트가 네트워크를 추가할 수 있게 허용하시겠습니까?</translation>
-<translation id="2521480044079508357">이 네트워크를 AI Wiz 월렛 내에서 사용할 수 있게 됩니다.</translation>
+<translation id="2521480044079508357">이 네트워크를 AI Wize 월렛 내에서 사용할 수 있게 됩니다.</translation>
 <translation id="1982257600591932657">네트워크 이름</translation>
 <translation id="5052727830821470769">네트워크 URL</translation>
 <translation id="427875364838253580">모든 세부정보 보기</translation>
@@ -1047,8 +1047,8 @@
 <translation id="9139452553033760558">1주</translation>
 <translation id="1658834457013045127">영구적으로</translation>
 <translation id="2770851145415891830">기존 암호화폐 월렛 감지됨</translation>
-<translation id="2237759620789871865">가져오기를 건너뛰고 기존 암호화폐 월렛 경험을 유지하려면 AI Wiz 브라우저 <ph name="LINK_BEFORE"/>설정<ph name="LINK_AFTER"/>으로 이동하여 기본값을 암호화폐 월렛으로 변경하세요. 언제든지 새 AI Wiz 월렛을 가져와 사용해보거나 되돌릴 수 있습니다.</translation>
-<translation id="5590175005414413980">기존 암호화폐 월렛 비밀번호를 입력하면 AI Wiz 계정으로 가져옵니다. 더욱 빠르고 안전하게 암호화폐 자산을 관리하고 Web3 DApps를 이용하세요.</translation>
+<translation id="2237759620789871865">가져오기를 건너뛰고 기존 암호화폐 월렛 경험을 유지하려면 AI Wize 브라우저 <ph name="LINK_BEFORE"/>설정<ph name="LINK_AFTER"/>으로 이동하여 기본값을 암호화폐 월렛으로 변경하세요. 언제든지 새 AI Wize 월렛을 가져와 사용해보거나 되돌릴 수 있습니다.</translation>
+<translation id="5590175005414413980">기존 암호화폐 월렛 비밀번호를 입력하면 AI Wize 계정으로 가져옵니다. 더욱 빠르고 안전하게 암호화폐 자산을 관리하고 Web3 DApps를 이용하세요.</translation>
 <translation id="880619123281809987">암호화폐 월렛 비밀번호 입력</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> 연결됨</translation>
 <translation id="7051244143160304048"><ph name="DEVICE_NAME"/> 연결 해제됨</translation>
@@ -1256,7 +1256,7 @@
 <translation id="9104177294757104789"><ph name="VALUE"/> 보내기</translation>
 <translation id="4048336522751528394"><ph name="MAKER"/>에서 <ph name="TAKER"/>(으)로 스왑</translation>
 <translation id="8613144770663526433">Brave 월렛으로 로그인</translation>
-<translation id="8813165409788097898"><ph name="ORIGIN"/>에 로그인합니다. AI Wiz 월렛이 귀하의 월렛 주소를 <ph name="ORIGIN"/>에 공유합니다.</translation>
+<translation id="8813165409788097898"><ph name="ORIGIN"/>에 로그인합니다. AI Wize 월렛이 귀하의 월렛 주소를 <ph name="ORIGIN"/>에 공유합니다.</translation>
 <translation id="1028781062521375153">세부정보 보기</translation>
 <translation id="3950820424414687140">로그인</translation>
 <translation id="4530494379350999373">오리진</translation>
@@ -1382,8 +1382,8 @@
 <translation id="2781276194026093899">번째</translation>
 <translation id="7992766987062040279">번째</translation>
 <translation id="2295726992010694229">번째</translation>
-<translation id="8241405611628876973">축하합니다! 이제 AI Wiz 월렛을 사용하실 수 있습니다!</translation>
-<translation id="6828327990705355767">월렛에 액세스하려면 AI Wiz 브라우저 창 오른쪽 상단에 있는 지갑 아이콘을 클릭하세요.</translation>
+<translation id="8241405611628876973">축하합니다! 이제 AI Wize 월렛을 사용하실 수 있습니다!</translation>
+<translation id="6828327990705355767">월렛에 액세스하려면 AI Wize 브라우저 창 오른쪽 상단에 있는 지갑 아이콘을 클릭하세요.</translation>
 <translation id="396152018598329740">암호화폐 월렛은 어떻게 사용할 수 있나요?</translation>
 <translation id="7512061585041489067">최고의 암호화폐 월렛은 무엇인가요?</translation>
 <translation id="1342755158522323177">암호화폐 브라우저란 무엇인가요?</translation>
@@ -1392,7 +1392,7 @@
 <translation id="7328255859839881981">DApps이란 무엇인가요?</translation>
 <translation id="3852489285890032403">Web3란 무엇인가요?</translation>
 <translation id="5448233694500869445">브라우저에서 MetaMask 확장 프로그램 감지됨</translation>
-<translation id="8436080536329710282">MetaMask 월렛 비밀번호를 입력하면 쉽게 AI Wiz 월렛으로 가져올 수 있습니다.</translation>
+<translation id="8436080536329710282">MetaMask 월렛 비밀번호를 입력하면 쉽게 AI Wize 월렛으로 가져올 수 있습니다.</translation>
 <translation id="7543512765962444927">기존 월렛에 연결</translation>
 <translation id="3551682252653406110">이미 가지고 계신 월렛을 연결하려면 복구 문구를 입력해야 할 수 있습니다. 현재 이더리움 및 Solana 월렛 복구와 가져오기를 지원합니다.</translation>
 <translation id="346929827081904572">시드 문구에서 복구</translation>
@@ -1411,7 +1411,7 @@
 <translation id="7781090633800450517"><ph name="LINK_BEFORE"/>이용 약관<ph name="LINK_AFTER"/>을 읽었으며 이에 동의합니다.</translation>
 <translation id="1422451606553326863">암호화폐 구입</translation>
 <translation id="3887541341068007345">월렛 확장 프로그램 확인 중...</translation>
-<translation id="3567994771568272606">레거시 AI Wiz 암호화폐 월렛에서 가져오기</translation>
+<translation id="3567994771568272606">레거시 AI Wize 암호화폐 월렛에서 가져오기</translation>
 <translation id="8407091560429310499">자산 선택</translation>
 <translation id="756590380936155533"><ph name="ASSET_TICKER"/> 구매를 완료하려면 파트너 중 하나를 선택하세요.</translation>
 <translation id="7880860489474966219">완료되면 자금이 용감한 지갑으로 이체됩니다.</translation>
@@ -1467,7 +1467,7 @@
 <translation id="2612436523196658045">ETH 주소가 Filecoin 주소로 번역됩니다.</translation>
 <translation id="3282354360699748542">Filecoin 네임스페이스 내 <ph name="FILECOIN_ADDRESS"/> 주소가 트랜잭션에 사용됩니다.</translation>
 <translation id="2540568096903252632">계속하려면 비밀번호 입력</translation>
-<translation id="3356580495013324916">월렛 백업을 시작하려면 AI Wiz 월렛 비밀번호를 입력하세요.</translation>
+<translation id="3356580495013324916">월렛 백업을 시작하려면 AI Wize 월렛 비밀번호를 입력하세요.</translation>
 <translation id="7545441766078366279"><ph name="TOKEN"/> 승인</translation>
 <translation id="3115303896544539834"><ph name="TOKEN"/> 잔액 부족</translation>
 <translation id="4937657825850660613">절반</translation>
@@ -1553,7 +1553,7 @@
 <translation id="5810047320613496595">정크</translation>
 <translation id="7257605968082307175">정크로 표시</translation>
 <translation id="7600335727434653744">Brave 월렛에서 제거하시겠습니까?</translation>
-<translation id="6657860743511185539">NFT가 AI Wiz 월렛에서 제거되지만 블록체인상에는 남아 있습니다. 제거한 후에는 마음이 바뀌면 다시 수동으로 가져와야 합니다.</translation>
+<translation id="6657860743511185539">NFT가 AI Wize 월렛에서 제거되지만 블록체인상에는 남아 있습니다. 제거한 후에는 마음이 바뀌면 다시 수동으로 가져와야 합니다.</translation>
 <translation id="849880459530751909">NFT 편집</translation>
 <translation id="5925465310724910998">NFT를 자동으로 표시하고 싶으십니까?</translation>
 <translation id="5400791731776892411">Brave 월렛이 귀하의 NFT를 자동으로 표시하기 위해서는 제3자 서비스를 사용할 수 있습니다. Brave는 이 서비스를 제공하기 위해 <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/>에 귀하의 월렛 주소를 공유합니다. <ph name="BEFORE_URL"/>자세히 알아보세요.<ph name="AFTER_URL"/></translation>
@@ -1574,7 +1574,7 @@
 <translation id="1554316484739382186">출금 주소: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">Zebpay</translation>
 <translation id="3026353765778463291"><ph name="PROVIDER"/> 계정</translation>
-<translation id="5360752485622434494"><ph name="PROVIDER"/>상의 AI Wiz Rewards BAT</translation>
+<translation id="5360752485622434494"><ph name="PROVIDER"/>상의 AI Wize Rewards BAT</translation>
 <translation id="429061011725027672">현재 <ph name="PROVIDER"/>에서 로그아웃된 상태입니다. 잔액을 보려면 로그인하세요.</translation>
 <translation id="4611292653554630842">로그인</translation>
 <translation id="1132794822159463424"><ph name="PROVIDER"/>에서 보기</translation>
@@ -1836,7 +1836,7 @@
 <translation id="2346991295632453064">동의하고 시작</translation>
 <translation id="1223498995510244364">요약하기</translation>
 <translation id="7491773233732232424">레오 소개</translation>
-<translation id="70442873931504163">Brave 레오는 웹페이지 요약, 동영상 스크립트 전사, 질문 답변 등을 도와드릴 수 있는 AI 스마트 어시스턴트입니다. AI Wiz 레오 프리미엄은 진보된<ph name="LINK_BEFORE"/>AI 모델<ph name="LINK_AFTER"/>을 사용하여 맥락에 맞게 더욱 사람 같은 답변을 하고 새로운 기능도 우선적으로 제공됩니다.</translation>
+<translation id="70442873931504163">Brave 레오는 웹페이지 요약, 동영상 스크립트 전사, 질문 답변 등을 도와드릴 수 있는 AI 스마트 어시스턴트입니다. AI Wize 레오 프리미엄은 진보된<ph name="LINK_BEFORE"/>AI 모델<ph name="LINK_AFTER"/>을 사용하여 맥락에 맞게 더욱 사람 같은 답변을 하고 새로운 기능도 우선적으로 제공됩니다.</translation>
 <translation id="3055739528128372229">답변의 정확성은 보장되지 않으며 부정확하거나 오인할 수 있거나 잘못된 정보가 포함될 수 있습니다. 민감하거나 사적인 정보를 입력하지 않아야 하며, 건강, 재무, 개인 안전 등과 관련된 텍스트에는 특별한 주의를 요합니다.</translation>
 <translation id="7297681068636289435">레오는 IP 주소와 같이 개인을 특정할 수 있는 식별자를 수집하지 않습니다. AI 모델 또는 어떤 제3자 모델도 개인 데이터를 보관하지 않습니다.</translation>
 <translation id="7839853125981164613">여기 프롬프트 입력</translation>
@@ -1900,7 +1900,7 @@
 <translation id="8857222718794549840">무엇이든 제게 물어보세요! 어떤 주제든 함께 이야기할 수 있습니다. 전 항상 열심히 배워 점점 더 똑똑해지고 있으니까 갈수록 나은 답변을 드릴 거예요.</translation>
 <translation id="989329677470075843">프라이버시 동의</translation>
 <translation id="1173570303649278801">답변에 페이지 맥락 사용</translation>
-<translation id="8599503173207256429">이 페이지에 대해 물어보시려면 토글하여 켜세요. 입력하신 메시지와 함께 콘텐츠가 AI Wiz 레오에게 전송됩니다.</translation>
+<translation id="8599503173207256429">이 페이지에 대해 물어보시려면 토글하여 켜세요. 입력하신 메시지와 함께 콘텐츠가 AI Wize 레오에게 전송됩니다.</translation>
 <translation id="6303294677342628402">보호</translation>
 <translation id="8458987127502506209">Brave Shields 활성화</translation>
 <translation id="7509914170164691086">다음에 대해 실드 <ph name="LINK_BEFORE"/>활성화됨<ph name="LINK_AFTER"/></translation>
@@ -1997,7 +1997,7 @@
 <translation id="427718751211990320">자격증명 만료일이 경과했습니다.</translation>
 <translation id="8670619630771851260">자격증명을 로드할 수 없습니다.</translation>
 <translation id="1594643509610625766">토큰이 더 이상 유효하지 않습니다.</translation>
-<translation id="8373427068383038263">최근 <ph name="VALUE"/> 결제에 문제가 생긴 것 같습니다. 결제 문제가 해결될 때까지 이 구독 액세스가 일시 중지됩니다. 결제 수단을 편집해보거나 AI Wiz 지원에 문의하세요.</translation>
+<translation id="8373427068383038263">최근 <ph name="VALUE"/> 결제에 문제가 생긴 것 같습니다. 결제 문제가 해결될 때까지 이 구독 액세스가 일시 중지됩니다. 결제 수단을 편집해보거나 AI Wize 지원에 문의하세요.</translation>
 <translation id="1839021455997460752">이메일 주소</translation>
 <translation id="8054563304616131773">유효한 이메일 주소를 입력하세요.</translation>
 <translation id="5154702632169343078">제목</translation>
@@ -2016,7 +2016,7 @@
 <translation id="8146777497879160283">VPN 구성 쓰기에 실패했습니다. 권한이 없거나 최신 Windows 업데이트를 설치하지 않았기 때문일 수 있습니다.</translation>
 <translation id="3307461350293459700">VPN 연결 실패. 다시 연결을 시도해보거나 허용을 클릭하여 Brave의 VPN 구성을 활성화하세요.</translation>
 <translation id="7261518280726313829">보안 DNS를 끄거나 Windows상의 기본 서버를 사용하면 방문하신 사이트의 이름이 인터넷 서비스 제공자에게 공개될 수 있습니다. Brave는 이를 권장하지 않습니다. 그래도 계속하시겠습니까?</translation>
-<translation id="888284761945060750">조직 정책에 의해 보안 DNS가 비활성화되어 있습니다. 보안 DNS 없이 AI Wiz VPN을 사용하면 방문하신 사이트의 이름이 인터넷 서비스 제공자 또는 귀하의 조직에게 공개될 수 있습니다.</translation>
+<translation id="888284761945060750">조직 정책에 의해 보안 DNS가 비활성화되어 있습니다. 보안 DNS 없이 AI Wize VPN을 사용하면 방문하신 사이트의 이름이 인터넷 서비스 제공자 또는 귀하의 조직에게 공개될 수 있습니다.</translation>
 <translation id="6593224083874259773">Brave VPN - Windows</translation>
 <translation id="3153983908111684619">BraveVPN이 연결된 동안에는 변경할 수 없는 설정</translation>
 <translation id="1055657720430482013">Windows에는 위치 및 방문한 사이트에 대한 정보를 노출시킬 수 있는 '스마트 멀티홈 이름 확인'이라는 기능이 있습니다.

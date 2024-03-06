@@ -31,7 +31,7 @@
 //     "balance": "12.35",
 //     "currency": "BAT",
 //     "id": "3ed3b2c4-a715-4c01-b302-fa2681a971ea",
-//     "label": "Twitter - User - AI Wiz Rewards",
+//     "label": "Twitter - User - AI Wize Rewards",
 //     "lastTransactionAt": "2020-03-31T19:27:57.552Z",
 //     "settings": {
 //       "position": 7,

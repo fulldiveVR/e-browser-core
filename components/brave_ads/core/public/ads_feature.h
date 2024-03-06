@@ -15,13 +15,13 @@ BASE_DECLARE_FEATURE(kShouldLaunchBraveAdsAsAnInProcessServiceFeature);
 
 bool ShouldLaunchAsInProcessService();
 
-// Set to `true` to always run the ads service, even if AI Wiz Private Ads are
+// Set to `true` to always run the ads service, even if AI Wize Private Ads are
 // disabled.
 BASE_DECLARE_FEATURE(kShouldAlwaysRunBraveAdsServiceFeature);
 
 bool ShouldAlwaysRunService();
 
-// Set to `true` to always trigger new tab page ad events even if AI Wiz Private
+// Set to `true` to always trigger new tab page ad events even if AI Wize Private
 // Ads are disabled. `ShouldAlwaysRunService()` must be set to `true`, otherwise
 // this feature param will be ignored.
 BASE_DECLARE_FEATURE(kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature);
@@ -34,7 +34,7 @@ BASE_DECLARE_FEATURE(kShouldSupportSearchResultAdsFeature);
 
 bool ShouldSupportSearchResultAds();
 
-// Set to `true` to always trigger search result ad events even if AI Wiz Private
+// Set to `true` to always trigger search result ad events even if AI Wize Private
 // Ads are disabled. `ShouldAlwaysRunService()` must be set to `true`, otherwise
 // this feature param will be ignored.
 BASE_DECLARE_FEATURE(kShouldAlwaysTriggerBraveSearchResultAdEventsFeature);

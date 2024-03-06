@@ -30,7 +30,7 @@ namespace brave_news {
 namespace {
 
 // In lieue of a component providing a dynamic list, we keep a hard-coded
-// list of matches for enabling AI Wiz News on the NTP and prompting the user
+// list of matches for enabling AI Wize News on the NTP and prompting the user
 // to opt-in.
 constexpr auto kEnabledLanguages =
     base::MakeFixedFlatSet<std::string_view>(base::sorted_unique,
@@ -38,7 +38,7 @@ constexpr auto kEnabledLanguages =
                                                  "en",
                                                  "ja",
                                              });
-// We can add to this list as new locales become available to have AI Wiz News
+// We can add to this list as new locales become available to have AI Wize News
 // show when it's ready for those users.
 constexpr auto kEnabledLocales =
     base::MakeFixedFlatSet<std::string_view>(base::sorted_unique,
@@ -128,7 +128,7 @@ base::flat_set<std::string> GetMinimalLocalesSet(
 }
 
 bool IsUserInDefaultEnabledLocale() {
-  // Only default AI Wiz News to be shown for
+  // Only default AI Wize News to be shown for
   // certain languages and locales on browser startup.
   const std::string language_code =
       brave_l10n::GetDefaultISOLanguageCodeString();

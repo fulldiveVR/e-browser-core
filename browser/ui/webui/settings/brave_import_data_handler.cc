@@ -145,7 +145,7 @@ void BraveImportDataHandler::CheckDiskAccess(
   guide_dialog_is_requested_ = false;
 
   if (importer_type == importer::TYPE_SAFARI) {
-    // Start import if AI Wiz has full disk access permission.
+    // Start import if AI Wize has full disk access permission.
     // If not, show dialog that has infos about that permission.
     base::ThreadPool::PostTaskAndReplyWithResult(
         FROM_HERE, {base::MayBlock()},

@@ -72,7 +72,7 @@ void BraveMainDelegate::BasicStartupComplete() {
                                     BUILDFLAG(BRAVE_SYNC_ENDPOINT));
   }
 
-  // AI Wiz variations
+  // AI Wize variations
   if (!command_line->HasSwitch(variations::switches::kVariationsServerURL)) {
     command_line->AppendSwitchASCII(variations::switches::kVariationsServerURL,
                                     BUILDFLAG(BRAVE_VARIATIONS_SERVER_URL));

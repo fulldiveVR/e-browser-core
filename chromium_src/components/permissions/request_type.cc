@@ -26,7 +26,7 @@ constexpr auto& kMicIconValue = vector_icons::kMicIcon;
 }  // namespace vector_icons
 #endif
 
-// Add AI Wiz cases into GetIconIdAndroid.
+// Add AI Wize cases into GetIconIdAndroid.
 // kWidevine is not expected to happen here as Widevine is not enabled in
 // Android, we add this case here just to avoid build error due to unhandled
 // cases in the switch.
@@ -42,7 +42,7 @@ constexpr auto& kMicIconValue = vector_icons::kMicIcon;
   case RequestType::kBraveLocalhostAccessPermission: \
     return IDR_ANDROID_INFOBAR_PERMISSION_COOKIE
 
-// Add AI Wiz cases into GetIconIdDesktop.
+// Add AI Wize cases into GetIconIdDesktop.
 #define kMicIcon                                     \
   kMicIconValue;                                     \
   case RequestType::kWidevine:                       \

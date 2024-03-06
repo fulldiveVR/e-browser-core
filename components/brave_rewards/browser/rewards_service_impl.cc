@@ -221,7 +221,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTagForURLLoad() {
           "tallying the attention spent on visited sites and dividing up a "
           "monthly BAT contribution."
         trigger:
-          "User-initiated for direct tipping or on a set interval while AI Wiz "
+          "User-initiated for direct tipping or on a set interval while AI Wize "
           "is running for monthly contributions."
         data:
           "Publisher and contribution data."

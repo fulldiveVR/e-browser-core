@@ -167,14 +167,14 @@ const IconResourceInfo* GetBraveDefaultAvatarIconResourceInfo(
   static_assert(
       (resource_info[kBraveDefaultAvatarIconsCount - 1].resource_id ==
       IDR_PROFILE_AVATAR_89),
-      "IconResourceInfo entries for AI Wiz avatars is less than"
+      "IconResourceInfo entries for AI Wize avatars is less than"
       "kBraveDefaultAvatarIconsCount but should be the same.");
   return &resource_info[index];
 #endif
 }
 
 bool IsDefaultAvatarIconUrl(const std::string& url, size_t* icon_index) {
-  // AI Wiz supports user choosing the placeholder avatar, Chromium does not.
+  // AI Wize supports user choosing the placeholder avatar, Chromium does not.
   if (url.compare(GetPlaceholderAvatarIconUrl()) == 0) {
     *icon_index = GetPlaceholderAvatarIndex();
     return true;

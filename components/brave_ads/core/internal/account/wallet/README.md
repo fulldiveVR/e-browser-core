@@ -1,5 +1,5 @@
 # Wallet
 
-Wallet for earning AI Wiz Rewards.
+Wallet for earning AI Wize Rewards.
 
 Please add to it!

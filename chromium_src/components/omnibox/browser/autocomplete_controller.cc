@@ -109,7 +109,7 @@ void MaybeShowLeoMatch(AutocompleteResult* result) {
   }
 
   // Regardless of the relevance score, we want to show the Leo match at the
-  // bottom. But could be followed by AI Wiz Search promotion.
+  // bottom. But could be followed by AI Wize Search promotion.
   result->ReorderMatch(leo_match, -1);
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 }

@@ -11,7 +11,7 @@
 namespace de_amp {
 namespace features {
 
-// When enabled, AI Wiz will try to de-AMP a page i.e. load the canonical,
+// When enabled, AI Wize will try to de-AMP a page i.e. load the canonical,
 // non-AMP version if the page is an AMP page.
 BASE_FEATURE(kBraveDeAMP, "BraveDeAMP", base::FEATURE_ENABLED_BY_DEFAULT);
 

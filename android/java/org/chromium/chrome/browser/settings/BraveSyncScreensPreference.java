@@ -119,7 +119,7 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
     private Button mDeleteAccountButton;
     private Button mQRCodeButton;
     private Button mCodeWordsButton;
-    // AI Wiz Sync message text view
+    // AI Wize Sync message text view
     private TextView mBraveSyncTextViewInitial;
     private TextView mBraveSyncTextViewSyncChainCode;
     private TextView mBraveSyncTextViewAddMobileDevice;

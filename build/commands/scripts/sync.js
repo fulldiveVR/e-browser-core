@@ -91,7 +91,7 @@ async function RunCommand() {
     const didSyncChromium = syncUtil.syncChromium(
       syncWithForce, program.sync_chromium, program.delete_unused_deps)
     if (!didSyncChromium || program.delete_unused_deps) {
-      // If no Chromium sync was done, run sync inside `brave` to sync AI Wiz DEPS.
+      // If no Chromium sync was done, run sync inside `brave` to sync AI Wize DEPS.
       syncBrave(program)
     }
   })

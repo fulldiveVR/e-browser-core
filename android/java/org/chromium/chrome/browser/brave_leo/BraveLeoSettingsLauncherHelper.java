@@ -14,7 +14,7 @@ import org.chromium.chrome.browser.settings.SettingsLauncherImpl;
 import org.chromium.components.browser_ui.settings.SettingsLauncher;
 import org.chromium.content_public.browser.WebContents;
 
-/** Launches AI Wiz Leo settings page or subscription. */
+/** Launches AI Wize Leo settings page or subscription. */
 public class BraveLeoSettingsLauncherHelper {
     private static SettingsLauncher sLauncher;
 

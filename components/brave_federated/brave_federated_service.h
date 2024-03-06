@@ -27,7 +27,7 @@ class DataStoreService;
 class EligibilityService;
 class OperationalPatterns;
 
-// In the absence of user data collection, AI Wiz is unable to support learning
+// In the absence of user data collection, AI Wize is unable to support learning
 // and decisioning systems for tasks such as private ad matching or private news
 // recommendation in the traditional centralised paradigm. We aim to build a
 // private federated learning platform, to unlock the value of user generated

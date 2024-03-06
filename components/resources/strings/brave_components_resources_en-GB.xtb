@@ -35,7 +35,7 @@
 <translation id="5801450813341024983">Brave backgrounds</translation>
 <translation id="1416884769823233410">Use your own</translation>
 <translation id="6246790815526961700">Upload from device</translation>
-<translation id="7275773481201277457">Show AI Wiz Stats</translation>
+<translation id="7275773481201277457">Show AI Wize Stats</translation>
 <translation id="6836061097810262923">Show Clock</translation>
 <translation id="5912396950572065471">Format</translation>
 <translation id="604124094241169006">Automatic</translation>
@@ -60,18 +60,18 @@
 <translation id="1230746063445072175">Want even better privacy?</translation>
 <translation id="6699628638740071563">It's time to ditch Google.</translation>
 <translation id="2045455461902775806">Brave Search doesn't bias or censor results and it doesn't track you, your queries or your clicks.</translation>
-<translation id="6811221529729056895">Try AI Wiz Search now</translation>
+<translation id="6811221529729056895">Try AI Wize Search now</translation>
 <translation id="5525668735313040116">Search the web privately</translation>
-<translation id="3446024864193919737">Show AI Wiz Rewards</translation>
+<translation id="3446024864193919737">Show AI Wize Rewards</translation>
 <translation id="5585019845078534178">Cards</translation>
 <translation id="3870475560794762985">Show sponsored images</translation>
 <translation id="2414654907269324670">You're earning BATs for sponsored images.</translation>
 <translation id="4942016616604700968">Enable Rewards</translation>
 <translation id="5684562942023496754">You can earn for seeing sponsored images.</translation>
-<translation id="8934374643857605034">As a AI Wiz Rewards user, you can earn BATs for seeing sponsored images.</translation>
-<translation id="1570714748649804013">As a AI Wiz Rewards user, you earn BATs for sponsored images you see. Disabling sponsored images will reduce how much you earn.</translation>
-<translation id="8998727244653964783">You can earn BATs for seeing sponsored images when you connect a custodial account to AI Wiz Rewards. In the meantime, you're helping to support creators with sponsored images.</translation>
-<translation id="5512383650263136662">You can earn BATs for seeing sponsored images with AI Wiz Rewards. Not a Rewards user? Turning on sponsored images still supports Brave's mission.</translation>
+<translation id="8934374643857605034">As a AI Wize Rewards user, you can earn BATs for seeing sponsored images.</translation>
+<translation id="1570714748649804013">As a AI Wize Rewards user, you earn BATs for sponsored images you see. Disabling sponsored images will reduce how much you earn.</translation>
+<translation id="8998727244653964783">You can earn BATs for seeing sponsored images when you connect a custodial account to AI Wize Rewards. In the meantime, you're helping to support creators with sponsored images.</translation>
+<translation id="5512383650263136662">You can earn BATs for seeing sponsored images with AI Wize Rewards. Not a Rewards user? Turning on sponsored images still supports Brave's mission.</translation>
 <translation id="2875302873837723333">top sites</translation>
 <translation id="8173998484743827990">Brave stats</translation>
 <translation id="383680190590774040">clock</translation>
@@ -88,13 +88,13 @@
 <translation id="4108314971463891922">Follow</translation>
 <translation id="3861486700625780712">Unfollow</translation>
 <translation id="8909741410750517071">Follow this source in 1-click.</translation>
-<translation id="1982678174789043774">Get all the latest stories in AI Wiz News.</translation>
+<translation id="1982678174789043774">Get all the latest stories in AI Wize News.</translation>
 <translation id="7894417427965898400">Manage feeds</translation>
 <translation id="9164544612367905452">Fetching…</translation>
 <translation id="1276592121036104130">Load new content</translation>
-<translation id="2875288128871360696">Scroll for AI Wiz news</translation>
-<translation id="8510120023634509743">Reset AI Wiz News sources</translation>
-<translation id="75825199302994272">Reset all your AI Wiz News publisher choices to their default?</translation>
+<translation id="2875288128871360696">Scroll for AI Wize news</translation>
+<translation id="8510120023634509743">Reset AI Wize News sources</translation>
+<translation id="75825199302994272">Reset all your AI Wize News publisher choices to their default?</translation>
 <translation id="954001034349395856">All sources</translation>
 <translation id="8890516388109605451">Sources</translation>
 <translation id="5158129253322921540">Disable content from <ph name="PUBLISHER_NAME"/></translation>
@@ -105,7 +105,7 @@
 <translation id="7679334366167089823">Earn tokens for watching privacy-respecting ads.</translation>
 <translation id="7191394989411626168">By turning off Cards, all cards currently visible will be hidden. However, you may still be notified of new cards.</translation>
 <translation id="6820526586005233839">Brave Ads paused</translation>
-<translation id="5190407395832551012">To keep AI Wiz Rewards safe from abuse, we'll randomly ask users to solve a captcha. Click “Solve” to resume ads.</translation>
+<translation id="5190407395832551012">To keep AI Wize Rewards safe from abuse, we'll randomly ask users to solve a captcha. Click “Solve” to resume ads.</translation>
 <translation id="1693773514029371138">Solve</translation>
 <translation id="6991128190741664836">Later</translation>
 <translation id="8112367589167674370">Brave talk</translation>
@@ -127,14 +127,14 @@
 <translation id="1645589858096839236">Brave doesn't store browsing activity from private windows. With Tor connectivity, it becomes more difficult for sites to see your true IP address and for network observers to see what sites you visit. However, if your personal safety depends on remaining anonymous, use the Tor browser instead.</translation>
 <translation id="7919374705736538787">Search Privately with</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
-<translation id="218839872518145456">With private search, AI Wiz will use DuckDuckGo for searches in Private Windows. DuckDuckGo doesn't track your search history, so you can search privately.</translation>
+<translation id="218839872518145456">With private search, AI Wize will use DuckDuckGo for searches in Private Windows. DuckDuckGo doesn't track your search history, so you can search privately.</translation>
 <translation id="1925197199485958903">In Private Windows with Tor, DuckDuckGo is the default search engine. Some of the other popular search engines are harder to use with Tor. DuckDuckGo doesn't track your search history; with Tor, they don't even know your IP address.</translation>
 <translation id="4371533307685765155">Search with DuckDuckGo</translation>
 <translation id="548478195417408221">Make Private Windows more private</translation>
 <translation id="3294503279952534143">This Private Window is more private</translation>
 <translation id="6126226144537295436">with Tor connectivity</translation>
 <translation id="8541421872680304667">Tor hides your IP address from the sites you visit, by routing your browsing through several Tor servers before it reaches your destination. Tor can slow down browsing and some sites might not work at all.</translation>
-<translation id="8897548669448660973">Using Private Windows only changes what AI Wiz does on your device — it doesn't change anyone else's behavior. Tor hides your IP address from the sites you visit and makes it somewhat more difficult, but not impossible, for your ISP or employer to see what sites you are visiting. Open a Private Window with Tor from the menu, or with [[ key ]].</translation>
+<translation id="8897548669448660973">Using Private Windows only changes what AI Wize does on your device — it doesn't change anyone else's behavior. Tor hides your IP address from the sites you visit and makes it somewhat more difficult, but not impossible, for your ISP or employer to see what sites you are visiting. Open a Private Window with Tor from the menu, or with [[ key ]].</translation>
 <translation id="6975708438781948564">Learn more about Tor in Brave</translation>
 <translation id="4712050378540986986">Tor status</translation>
 <translation id="1939334281379458295">Tor connected successfully</translation>
@@ -165,14 +165,14 @@
 <translation id="4720556299488643018">Unsubscribe</translation>
 <translation id="1209739344687072997">Report a broken site</translation>
 <translation id="8510478288840333677">Let Brave's developers know that this site doesn't work properly with Shields:</translation>
-<translation id="6387106423577201267">Note: the report sent to AI Wiz servers will include the site address, AI Wiz version number, Shields settings, VPN status and language settings.</translation>
+<translation id="6387106423577201267">Note: the report sent to AI Wize servers will include the site address, AI Wize version number, Shields settings, VPN status and language settings.</translation>
 <translation id="6476216365964140603">Additional details (optional)</translation>
 <translation id="6145852496180774737">Contact me at: (optional)</translation>
 <translation id="7616645803364270729">Email, Twitter, etc.</translation>
 <translation id="5299848999918506028">Thank you!</translation>
 <translation id="76550953340008122">Thanks for letting Brave's developers know that there's something wrong with this site. We'll do our best to fix it!</translation>
-<translation id="4046860372562593546">Manage AI Wiz Ads</translation>
-<translation id="5136973036012418831">Control what kinds of AI Wiz Ads you see and how often.</translation>
+<translation id="4046860372562593546">Manage AI Wize Ads</translation>
+<translation id="5136973036012418831">Control what kinds of AI Wize Ads you see and how often.</translation>
 <translation id="4759608598194750161">The more you see, the more you can earn.</translation>
 <translation id="7526443283522395161">New tab page ads</translation>
 <translation id="7968650944098083708">Notification ads</translation>
@@ -195,7 +195,7 @@
 <translation id="7136536490586989815">Max 5 per hour</translation>
 <translation id="5751102711563374080">Max 10 per hour</translation>
 <translation id="2356652719351432565">Regional ad relevance</translation>
-<translation id="3216275550298493597">This allows AI Wiz to show you ads meant specifically for your region.</translation>
+<translation id="3216275550298493597">This allows AI Wize to show you ads meant specifically for your region.</translation>
 <translation id="8446884382197647889">Learn More</translation>
 <translation id="3783399046165388366">Auto-detected as <ph name="SUBDIVISION"/></translation>
 <translation id="8010081455002666927">Auto-detect</translation>
@@ -229,31 +229,31 @@
 <translation id="3082557070674409251">Clicked</translation>
 <translation id="7119308337584989771">Dismissed</translation>
 <translation id="6805660603861526473">Viewed</translation>
-<translation id="8826352442759228526">Your AI Wiz Rewards cannot be verified because you've reached the maximum verified device limit.</translation>
+<translation id="8826352442759228526">Your AI Wize Rewards cannot be verified because you've reached the maximum verified device limit.</translation>
 <translation id="1221593978088944142">Error: device limit reached</translation>
 <translation id="3113653894794167793">Sorry there was a problem processing your request, please try again.</translation>
-<translation id="6895088073061692390">Unfortunately, your AI Wiz Rewards profile was flagged because our automated checks found some unexpected AI Wiz Ads activity.</translation>
-<translation id="4229056297802204697">While your profile is flagged, you may continue to see ads, but won't be eligible to receive payouts. You also won't be able to connect a custodial account to AI Wiz Rewards.</translation>
+<translation id="6895088073061692390">Unfortunately, your AI Wize Rewards profile was flagged because our automated checks found some unexpected AI Wize Ads activity.</translation>
+<translation id="4229056297802204697">While your profile is flagged, you may continue to see ads, but won't be eligible to receive payouts. You also won't be able to connect a custodial account to AI Wize Rewards.</translation>
 <translation id="5124846913141379164">It's possible your profile was flagged in error, and no immediate action is required on your part. The flag on your profile may be removed in the future.</translation>
 <translation id="280350148043792509"><ph name="BEGIN_LINK"/>Learn more about Brave's process for flagging Rewards profiles.<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">Error: AI Wiz Rewards profile is flagged</translation>
+<translation id="5028274575541726856">Error: AI Wize Rewards profile is flagged</translation>
 <translation id="2607420597216860026">Please try again after you have completed ID verification on <ph name="PROVIDER"/>.</translation>
 <translation id="3183954159462541696">Error: you need a verified account to log in</translation>
-<translation id="1859789048900659918">Hmm, it looks like your AI Wiz Rewards country does not match the country of the <ph name="PROVIDER"/> account you're trying to connect.</translation>
+<translation id="1859789048900659918">Hmm, it looks like your AI Wize Rewards country does not match the country of the <ph name="PROVIDER"/> account you're trying to connect.</translation>
 <translation id="8925428135452218262">Error: country mismatch</translation>
-<translation id="5260522591743022748">Hmm, it looks like your AI Wiz Rewards has already been verified with another <ph name="PROVIDER"/> account. Please try verifying again using your previous account.</translation>
+<translation id="5260522591743022748">Hmm, it looks like your AI Wize Rewards has already been verified with another <ph name="PROVIDER"/> account. Please try verifying again using your previous account.</translation>
 <translation id="5111921830714291902">Error: Different account</translation>
-<translation id="5225019866741699134">It looks like connecting <ph name="PROVIDER"/> to AI Wiz Rewards is temporarily unavailable. Please try again later.</translation>
+<translation id="5225019866741699134">It looks like connecting <ph name="PROVIDER"/> to AI Wize Rewards is temporarily unavailable. Please try again later.</translation>
 <translation id="6105073131081187815">You can view <ph name="BEGIN_LINK"/>service status here<ph name="END_LINK"/>.</translation>
 <translation id="2400786541309111904">Error: connecting to selected custodian temporarily unavailable</translation>
-<translation id="1024520300696337331">Your <ph name="PROVIDER"/> account can't be connected to your AI Wiz Rewards profile at this time. Your <ph name="PROVIDER"/> account is registered in a country that's not currently supported for connecting to AI Wiz Rewards.</translation>
-<translation id="619384413404021992">See the <ph name="LINK_BEGIN"/>current list of supported regions and learn more<ph name="END_LINK"/> about connecting a custodial account to AI Wiz Rewards.</translation>
+<translation id="1024520300696337331">Your <ph name="PROVIDER"/> account can't be connected to your AI Wize Rewards profile at this time. Your <ph name="PROVIDER"/> account is registered in a country that's not currently supported for connecting to AI Wize Rewards.</translation>
+<translation id="619384413404021992">See the <ph name="LINK_BEGIN"/>current list of supported regions and learn more<ph name="END_LINK"/> about connecting a custodial account to AI Wize Rewards.</translation>
 <translation id="7193389978208728181">Error: region currently not supported</translation>
 <translation id="5382684862562314222">BAT is not yet supported in your region on Uphold.</translation>
 <translation id="9074594632540931067">Error: BAT unavailable</translation>
 <translation id="5376524136040178759">According to Uphold, there are currently some limitations on your Uphold account. Please log in to your Uphold account and check whether there are any notices or remaining account requirements to complete, then try again. For example, you may need to submit more information to Uphold.</translation>
 <translation id="6996157559236886133">Error: Limited Uphold account functionality</translation>
-<translation id="3274650021044762770">There was a problem validating your browser's request to connect AI Wiz Rewards to your <ph name="PROVIDER"/> account. You can <ph name="BEGIN_LINK"/>contact support<ph name="END_LINK"/> for more help.</translation>
+<translation id="3274650021044762770">There was a problem validating your browser's request to connect AI Wize Rewards to your <ph name="PROVIDER"/> account. You can <ph name="BEGIN_LINK"/>contact support<ph name="END_LINK"/> for more help.</translation>
 <translation id="1316066811927496401">Error: Request could not be validated</translation>
 <translation id="8167256685618982116">By turning on <ph name="TITLE"/>, you agree to the <ph name="BEGIN_LINK1"/>Terms of Service<ph name="END_LINK1"/> and <ph name="BEGIN_LINK2"/>Privacy Policy<ph name="END_LINK2"/>.</translation>
 <translation id="8817096698141999876">Custodial accounts (requires ID verification)</translation>
@@ -263,7 +263,7 @@
 <translation id="7329170127335794328">Currently not available in your region</translation>
 <translation id="966956302643313970">To begin earning Basic Attention Token (BAT) rewards, connect an account. BATs you earn will be automatically transferred to your account every month.</translation>
 <translation id="1892970806832316900">Pending until <ph name="DATE"/></translation>
-<translation id="7849926087559412554">Oops! Your browser cannot receive AI Wiz Private Ads.</translation>
+<translation id="7849926087559412554">Oops! Your browser cannot receive AI Wize Private Ads.</translation>
 <translation id="5177429570315095022">Your browser needs to be updated to continue seeing ads.</translation>
 <translation id="7352651011704765696">Something went wrong</translation>
 <translation id="4593680147181354667">Diagnostic ID</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">Disconnected (verified)</translation>
 <translation id="5058161306698404465">Creation environment:</translation>
 <translation id="5856438412804207598">Current environment:</translation>
-<translation id="5916290544882167205">Brave Software. AI Wiz is a registered trademark of AI Wiz Software. Site names may be trademarks or registered trademarks of the site owner.</translation>
-<translation id="9026369588205476247">To protect your privacy, this AI Wiz Rewards statement is not saved, recorded or logged anywhere other than on your device (this computer). It cannot be retrieved from AI Wiz in the event of data loss on your device.</translation>
+<translation id="5916290544882167205">Brave Software. AI Wize is a registered trademark of AI Wize Software. Site names may be trademarks or registered trademarks of the site owner.</translation>
+<translation id="9026369588205476247">To protect your privacy, this AI Wize Rewards statement is not saved, recorded or logged anywhere other than on your device (this computer). It cannot be retrieved from AI Wize in the event of data loss on your device.</translation>
 <translation id="3587482841069643663">All</translation>
 <translation id="4241224519481557898">Category</translation>
 <translation id="3080423471207781945">Maximum ads received per hour:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">Ads rewards received</translation>
 <translation id="5212777575344695266">Mark as inappropriate</translation>
 <translation id="2111256234277361810">Mark as inappropriate ✓</translation>
-<translation id="8988332871810963281">There is currently no AI Wiz ads history</translation>
+<translation id="8988332871810963281">There is currently no AI Wize ads history</translation>
 <translation id="5345727496083327478">You will no longer receive ads from this category</translation>
 <translation id="2631006050119455616">Saved</translation>
 <translation id="6976444672879155794">Auto-Contribute [[processor]]</translation>
@@ -378,7 +378,7 @@
 <translation id="1418534671788496616">View deposit history</translation>
 <translation id="3412655388715513818">Exclude this site</translation>
 <translation id="418343137736963579">Total number of sites you excluded from Auto-Contribute:</translation>
-<translation id="8802504113265057166">[[currency]] not used by the expiration date will be automatically returned to the AI Wiz User Growth Pool.</translation>
+<translation id="8802504113265057166">[[currency]] not used by the expiration date will be automatically returned to the AI Wize User Growth Pool.</translation>
 <translation id="279567716178902927">Grant Expiration Date</translation>
 <translation id="1389143276807887637">import</translation>
 <translation id="5737831580668469027">Monthly Contributions!</translation>
@@ -416,12 +416,12 @@
 <translation id="1110535155349301542">remove</translation>
 <translation id="8204292894173669182">Remove from saved</translation>
 <translation id="5939518447894949180">Reset</translation>
-<translation id="3349204812119681938">Reset AI Wiz Rewards</translation>
+<translation id="3349204812119681938">Reset AI Wize Rewards</translation>
 <translation id="5669281110673664811">Clear exclude list</translation>
 <translation id="1797334173232638045">Your pinned sites have been moved to</translation>
 <translation id="3074127054582480056">Attention</translation>
-<translation id="1666001796278936721">By resetting, your current AI Wiz Rewards profile will be deleted and you will start again with a completely new AI Wiz Rewards profile. Before proceeding, <ph name="LINK_BEGIN"/>learn more<ph name="LINK_END"/> about resetting, just to be safe.</translation>
-<translation id="4806029412510565611">I understand that my current AI Wiz Rewards profile and AI Wiz Rewards data will be deleted from my device, and I've read the <ph name="LINK_BEGIN"/>support article about resetting<ph name="LINK_END"/>.</translation>
+<translation id="1666001796278936721">By resetting, your current AI Wize Rewards profile will be deleted and you will start again with a completely new AI Wize Rewards profile. Before proceeding, <ph name="LINK_BEGIN"/>learn more<ph name="LINK_END"/> about resetting, just to be safe.</translation>
+<translation id="4806029412510565611">I understand that my current AI Wize Rewards profile and AI Wize Rewards data will be deleted from my device, and I've read the <ph name="LINK_BEGIN"/>support article about resetting<ph name="LINK_END"/>.</translation>
 <translation id="3494964159182650590">Rewards Summary</translation>
 <translation id="2913994227901456490">See all [[numItems]] items</translation>
 <translation id="6685434227783226855">Send my contribution</translation>
@@ -437,9 +437,9 @@
 <translation id="5050370287908180130">View Monthly Statement for Details</translation>
 <translation id="7853202427316060426">Activity</translation>
 <translation id="7232682712743566408">Rewards balance</translation>
-<translation id="4258022280942725182">Your AI Wiz Rewards</translation>
+<translation id="4258022280942725182">Your AI Wize Rewards</translation>
 <translation id="6727483290601442544">View Details</translation>
-<translation id="4206899127409458763">Creating your AI Wiz Rewards profile</translation>
+<translation id="4206899127409458763">Creating your AI Wize Rewards profile</translation>
 <translation id="8706157865312453070">Sites excluded</translation>
 <translation id="2501059654604370822">Remove from excluded</translation>
 <translation id="9075700728717335924">You've excluded</translation>
@@ -448,8 +448,8 @@
 <translation id="5113531205597573951">Sites viewed</translation>
 <translation id="4450893287417543264">Don't show again</translation>
 <translation id="7642372245223412840">Connect to bitFlyer</translation>
-<translation id="6143701117592994599">Connecting AI Wiz Rewards to a bitFlyer account will let you earn BATs and withdraw your BAT earnings from AI Wiz Rewards.</translation>
-<translation id="4354564238172327160">Become a AI Wiz creator!</translation>
+<translation id="6143701117592994599">Connecting AI Wize Rewards to a bitFlyer account will let you earn BATs and withdraw your BAT earnings from AI Wize Rewards.</translation>
+<translation id="4354564238172327160">Become a AI Wize creator!</translation>
 <translation id="4639659520811817892">Visit creators.brave.com to sign up today and start earning BAT from your fans and followers.</translation>
 <translation id="4816455138209470435">Brave supports YouTube, Twitch, Vimeo and more!</translation>
 <translation id="7404779623219601861">Redeem BAT for gift cards</translation>
@@ -458,14 +458,14 @@
 <translation id="7703007724342399482">Get 2% cryptoback with the Uphold card</translation>
 <translation id="1109729143147368573">Spend your crypto and other assets at nearly 50 million merchants and ATMs worldwide. Spend crypto to get crypto!</translation>
 <translation id="3787061634640932557">Edit Cards</translation>
-<translation id="2070991379950719711">Start using AI Wiz Rewards</translation>
+<translation id="2070991379950719711">Start using AI Wize Rewards</translation>
 <translation id="5977237145327845546">Start a private video call with your friends and colleagues.</translation>
 <translation id="8863928195533744356">Start call</translation>
 <translation id="3651550649176056334">About your data</translation>
 <translation id="1544192797660353713">Wallet</translation>
-<translation id="616639131065447379">Welcome to AI Wiz Crypto Wallets</translation>
+<translation id="616639131065447379">Welcome to AI Wize Crypto Wallets</translation>
 <translation id="1740464057879304704">Crypto Wallets lets you work with cryptocurrency and related assets in Brave. Crypto Wallets supports Ethereum tokens like ETH and BAT, as well as collectibles, and lets you work with Ðapps and other smart contracts. All this is meant for people who are familiar with Ethereum and other blockchain systems - or are excited to learn.</translation>
-<translation id="4855440621031541830">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that AI Wiz Software bears no responsibility or liability for any losses, including incidental or consequential losses you might suffer as a result of this use.</translation>
+<translation id="4855440621031541830">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that AI Wize Software bears no responsibility or liability for any losses, including incidental or consequential losses you might suffer as a result of this use.</translation>
 <translation id="3187473319809074178">All of this is completely separate from</translation>
 <translation id="8327818101454798856">So if you were looking to support your favourite sites, head over there instead.</translation>
 <translation id="412480955826088549">Downloading Component...</translation>
@@ -473,17 +473,17 @@
 <translation id="326118736933420687">You're viewing a WebTorrent page</translation>
 <translation id="7534079972563542000">Unstoppable Domains</translation>
 <translation id="4492298165410552103">Enable support of Unstoppable Domains in Brave?</translation>
-<translation id="3647533686160055812">Brave will be using Infura to resolve .crypto (and also .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domain names that are on Unstoppable Domains. AI Wiz hides your IP address. If you enable this, Infura will see that someone is trying to visit these domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK"/>terms of use<ph name="END_INFURA_TOU_LINK"/> and <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privacy policy<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="3647533686160055812">Brave will be using Infura to resolve .crypto (and also .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domain names that are on Unstoppable Domains. AI Wize hides your IP address. If you enable this, Infura will see that someone is trying to visit these domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK"/>terms of use<ph name="END_INFURA_TOU_LINK"/> and <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privacy policy<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="6513892817556267573">Ethereum Name Service</translation>
 <translation id="4335039108389860301">Enable support of Ethereum Name Service (ENS) in Brave?</translation>
-<translation id="4609973808011229683">Brave will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). AI Wiz hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK"/>terms of use<ph name="END_INFURA_TOU_LINK"/> and <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privacy policy<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="4609973808011229683">Brave will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). AI Wize hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK"/>terms of use<ph name="END_INFURA_TOU_LINK"/> and <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privacy policy<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="807404806385418949">Ethereum Name Service off-chain look-up</translation>
 <translation id="4049590838234508776">Enable support of Ethereum Name Service (ENS) off-chain look-up in Brave?</translation>
 <translation id="5944991147217767764">This .eth domain name is stored off-chain and will be resolved by a third-party gateway. If you enable ENS off-chain lookup, the third-party gateway will see that you're trying to visit the .eth domain. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Learn more<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Proceed with off-chain look-up</translation>
 <translation id="531747189990625622">Solana Name Service</translation>
 <translation id="1090584614351290462">Enable support of Solana Name Service (SNS) in Brave?</translation>
-<translation id="1026480261052976838">Brave will be using a third party to resolve .sol domain names. AI Wiz hides your IP address. If you enable this, the third party will see that someone is trying to visit these .sol domains but nothing else. For more information about which third parties we use and their privacy policies, please see our <ph name="BEGIN_SNS_WIKI_LINK"/>help page<ph name="END_SNS_WIKI_LINK"/>.</translation>
+<translation id="1026480261052976838">Brave will be using a third party to resolve .sol domain names. AI Wize hides your IP address. If you enable this, the third party will see that someone is trying to visit these .sol domains but nothing else. For more information about which third parties we use and their privacy policies, please see our <ph name="BEGIN_SNS_WIKI_LINK"/>help page<ph name="END_SNS_WIKI_LINK"/>.</translation>
 <translation id="7378412287463452336">Proceed using Infura server</translation>
 <translation id="4388873516324656141">Proceed using an SNS server</translation>
 <translation id="2356070529366658676">Ask</translation>
@@ -491,7 +491,7 @@
 <translation id="2468755552460246661">Domain blocked</translation>
 <translation id="6393849031898466746">This site may attempt to track you across other sites</translation>
 <translation id="983774928604730749">Brave has prevented the following site from loading:</translation>
-<translation id="8629537573456243518">Because you requested to aggressively block trackers and ads, AI Wiz is blocking this site before the first network connection.</translation>
+<translation id="8629537573456243518">Because you requested to aggressively block trackers and ads, AI Wize is blocking this site before the first network connection.</translation>
 <translation id="2459038234784107183">Don't warn me about this site again</translation>
 <translation id="8242426110754782860">Proceed</translation>
 <translation id="2501278716633472235">Go back</translation>
@@ -500,7 +500,7 @@
 <translation id="8415427685483394219">Would you like to visit this site in Off-The-Record mode?</translation>
 <translation id="5754874269349119401">Brave wants to protect you when visiting sensitive sites. Sites you visit in Off-The-Record mode won't show up in your browsing history, and cookies will not be saved.</translation>
 <translation id="1307431692088049276">Don't ask me again</translation>
-<translation id="6329829767845427007">You can change this later in AI Wiz Settings in the Privacy and Security section</translation>
+<translation id="6329829767845427007">You can change this later in AI Wize Settings in the Privacy and Security section</translation>
 <translation id="951201617124425694">Proceed Off-The-Record</translation>
 <translation id="4087894168792701548">Proceed Normally</translation>
 <translation id="5874287397425241890">You're browsing this website in Off-The-Record mode.</translation>
@@ -538,15 +538,15 @@
 <translation id="7691598647605453992">IPFS</translation>
 <translation id="1886162073868201257">IPFS Service launch error</translation>
 <translation id="5357895013476183089">IPFS Not Connected</translation>
-<translation id="7662930734991751511">Can't load IPFS resources using AI Wiz local IPFS node</translation>
+<translation id="7662930734991751511">Can't load IPFS resources using AI Wize local IPFS node</translation>
 <translation id="1141556610026845297">Failed to use the local IPFS node to load the requested IPFS resources. Click the "Proceed" button to use the public gateway instead, and to automatically fall back to the public gateway in the future.</translation>
 <translation id="3373798179786163193">Proceed with Public Gateway</translation>
 <translation id="1974060860693918893">Advanced</translation>
 <translation id="9096577886148726047">Hide Advanced</translation>
-<translation id="182581792765792826">Brave cannot load the requested IPFS resources either because the AI Wiz local IPFS node did not start, or because there are no connected peers available at the moment. If you choose "Proceed", AI Wiz will automatically fall back to the default public gateway whenever using the AI Wiz local IPFS node fails. You can change this behavior at any point in AI Wiz settings.</translation>
+<translation id="182581792765792826">Brave cannot load the requested IPFS resources either because the AI Wize local IPFS node did not start, or because there are no connected peers available at the moment. If you choose "Proceed", AI Wize will automatically fall back to the default public gateway whenever using the AI Wize local IPFS node fails. You can change this behavior at any point in AI Wize settings.</translation>
 <translation id="8026038288183400906">IPFS preference</translation>
 <translation id="2058855456574089690">Set your IPFS preference</translation>
-<translation id="4780526507945807546">Use a AI Wiz local IPFS node</translation>
+<translation id="4780526507945807546">Use a AI Wize local IPFS node</translation>
 <translation id="8148464361648742409">Use a public gateway</translation>
 <translation id="5123478056123923857">IPFS (InterPlanetary File System) is the public network for peer-to-peer data storage and delivery. This protocol has different privacy considerations from HTTP(S).</translation>
 <translation id="1216911189668016151">Your computer contributes to the public network, but your IP address and any content you’re requesting or providing could be exposed. Content you request over IPFS is verified before being served to you. Network requests may not use browser proxy and DNS settings.</translation>
@@ -601,33 +601,33 @@
 <translation id="1848737374354350807">Balance</translation>
 <translation id="6516984207843289176">Connect account</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>Ready to start earning?<ph name="BOLD_END"/> Connect or create an account with one of our partners.</translation>
-<translation id="1772961321862399863">To earn BAT, users must connect a custodial account to AI Wiz Rewards. Unfortunately, there's no custodian available in your region, so earning isn't available. For now, turning on AI Wiz Rewards will automatically support creators.</translation>
-<translation id="902298128239575729">Send contributions with AI Wiz Rewards</translation>
-<translation id="6276721355724491595">You'll be able to send on-demand contributions to your favorite creators with your AI Wiz Rewards balance once you have a custodial account connected.</translation>
-<translation id="1149481926056509086">To send on-demand contributions, users must connect a custodial account to AI Wiz Rewards. Unfortunately, there’s no custodian available in your region, so sending isn’t available. In the meantime, you’re still automatically supporting creators.</translation>
+<translation id="1772961321862399863">To earn BAT, users must connect a custodial account to AI Wize Rewards. Unfortunately, there's no custodian available in your region, so earning isn't available. For now, turning on AI Wize Rewards will automatically support creators.</translation>
+<translation id="902298128239575729">Send contributions with AI Wize Rewards</translation>
+<translation id="6276721355724491595">You'll be able to send on-demand contributions to your favorite creators with your AI Wize Rewards balance once you have a custodial account connected.</translation>
+<translation id="1149481926056509086">To send on-demand contributions, users must connect a custodial account to AI Wize Rewards. Unfortunately, there’s no custodian available in your region, so sending isn’t available. In the meantime, you’re still automatically supporting creators.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
-      =1 {This month, you've visited # creator supported by AI Wiz Rewards}
-      other {This month, you've visited # creators supported by AI Wiz Rewards}
+      =1 {This month, you've visited # creator supported by AI Wize Rewards}
+      other {This month, you've visited # creators supported by AI Wize Rewards}
     }</translation>
-<translation id="6067959437127691361">Using AI Wiz Rewards helps support content creators, and lets you earn BATs.</translation>
+<translation id="6067959437127691361">Using AI Wize Rewards helps support content creators, and lets you earn BATs.</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> Rewards: <ph name="AMOUNT"/></translation>
 <translation id="3274366539954332481">Your <ph name="MONTH"/> Ad Rewards are here!</translation>
 <translation id="7861645265922445992">Claim Rewards</translation>
 <translation id="9013419433042554094">Claim Tokens</translation>
 <translation id="2359808026110333948">Continue</translation>
-<translation id="885805571521218129">This reflects your estimated earnings range for AI Wiz Ads this month.</translation>
+<translation id="885805571521218129">This reflects your estimated earnings range for AI Wize Ads this month.</translation>
 <translation id="3863981251715594911">How does it work?</translation>
 <translation id="4782365133987903299">You have <ph name="DAYS"/> left to claim</translation>
 <translation id="7931127789630755251">Earn tokens for private ads you see in Brave</translation>
 <translation id="2278423362884506724">Support content creators and use your tokens to buy gift cards, exchange for other currencies and more.</translation>
 <translation id="6278643716658443228">Rewards settings</translation>
 <translation id="2862978891748913252">Select your country</translation>
-<translation id="3717922248131893262">To continue using AI Wiz Rewards, select your country so we can show you the right options and ads for your region. <ph name="LINK_BEGIN"/>Privacy Policy<ph name="LINK_END"/></translation>
+<translation id="3717922248131893262">To continue using AI Wize Rewards, select your country so we can show you the right options and ads for your region. <ph name="LINK_BEGIN"/>Privacy Policy<ph name="LINK_END"/></translation>
 <translation id="2965798296974325760">Start using Rewards</translation>
 <translation id="2221902203895354376">A token grant is available!</translation>
 <translation id="2956070106555335453">Summary</translation>
 <translation id="2369994359029526515">Unverified Creator</translation>
-<translation id="3984338085370091436">This creator is not yet verified with AI Wiz Creators. You'll be able to send them contributions once they're verified.</translation>
+<translation id="3984338085370091436">This creator is not yet verified with AI Wize Creators. You'll be able to send them contributions once they're verified.</translation>
 <translation id="6020176662032623904">Verified creator</translation>
 <translation id="8635423276837443905">Refresh creator verification status</translation>
 <translation id="6633436087937398390"><ph name="NAME"/> on <ph name="PLATFORM"/></translation>
@@ -659,26 +659,26 @@
 <translation id="2429828319207652823">There was a problem processing your contribution.</translation>
 <translation id="6390041270339783491">Monthly contribution failed</translation>
 <translation id="7047578174221019462">Your monthly contributions have been processed.</translation>
-<translation id="2529827670795983639">Looks like this is not working, AI Wiz ads will remain paused. Contact us if you need help with the captcha.</translation>
+<translation id="2529827670795983639">Looks like this is not working, AI Wize ads will remain paused. Contact us if you need help with the captcha.</translation>
 <translation id="261607053214862521">Max attempts exceeded</translation>
 <translation id="2323171459178104277">Solved!</translation>
-<translation id="1512837998731269583">Ads and earnings will now resume. Thanks for helping us protect AI Wiz Rewards and privacy-based ads.</translation>
+<translation id="1512837998731269583">Ads and earnings will now resume. Thanks for helping us protect AI Wize Rewards and privacy-based ads.</translation>
 <translation id="3247549836099021862">Contact support</translation>
 <translation id="5234764350956374838">Dismiss</translation>
 <translation id="7859066142771796818">Use tokens to buy gift cards, exchange for other currencies, support content creators and more.</translation>
 <translation id="5425006356459378415">Brave Rewards not available</translation>
-<translation id="909076461795862330">Unfortunately, there was an error while trying to set up AI Wiz Rewards. Please try again.</translation>
+<translation id="909076461795862330">Unfortunately, there was an error while trying to set up AI Wize Rewards. Please try again.</translation>
 <translation id="3180990265682133881">Unfortunately, there was an error while trying to set your country. Please try again.</translation>
-<translation id="5931798071481566121">New sign-ups for AI Wiz Rewards are currently disabled in your region. However, you can always try again later. <ph name="LINK_BEGIN"/>Learn more<ph name="LINK_END"/></translation>
+<translation id="5931798071481566121">New sign-ups for AI Wize Rewards are currently disabled in your region. However, you can always try again later. <ph name="LINK_BEGIN"/>Learn more<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">Woohoo! You’re all set!</translation>
 <translation id="6136350726756049410">Now you can get rewarded for viewing ads. You're helping make the web a better place for everyone. And that's awesome!</translation>
-<translation id="5547108999862247665">How does AI Wiz Rewards work?</translation>
+<translation id="5547108999862247665">How does AI Wize Rewards work?</translation>
 <translation id="3970520675790340955">Select your country so we can show you the right options and ads for your region.</translation>
 <translation id="6945221475159498467">Select</translation>
 <translation id="3279158300746391749">Press the <ph name="BAT_ICON"/> BAT icon in the URL bar to start.</translation>
 <translation id="8465790416279415448">By proceeding, you agree to the <ph name="TOS_LINK_BEGIN"/>Terms of Service<ph name="TOS_LINK_END"/> and <ph name="PP_LINK_BEGIN"/>Privacy Policy<ph name="PP_LINK_END"/>.</translation>
-<translation id="1015443539415537847">Sorry, AI Wiz Rewards is not available</translation>
-<translation id="5007776270364097327">Unfortunately, it looks like you’re in a region where AI Wiz Rewards is not available.</translation>
+<translation id="1015443539415537847">Sorry, AI Wize Rewards is not available</translation>
+<translation id="5007776270364097327">Unfortunately, it looks like you’re in a region where AI Wize Rewards is not available.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>Learn more<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">Don’t worry.</translation>
 <translation id="5027616819996705541">You can still browse privately!</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">Send</translation>
 <translation id="6632987674051304487">Send with <ph name="PROVIDER"/></translation>
 <translation id="4319632089378796037">Use Web3 Wallet</translation>
-<translation id="4530198836725543997">This creator has registered with AI Wiz and can receive contributions from AI Wiz Rewards users.</translation>
+<translation id="4530198836725543997">This creator has registered with AI Wize and can receive contributions from AI Wize Rewards users.</translation>
 <translation id="4529874892536380156">Make this a monthly recurring contribution. You can cancel it at any time.</translation>
 <translation id="1177863135347784049">Custom</translation>
 <translation id="5907051927340164207">You're already sending monthly contributions to this creator</translation>
@@ -699,17 +699,17 @@
 <translation id="8379442066667303579">You can still send crypto contributions to this creator by using your Web3 wallet.</translation>
 <translation id="5738476099155572155">Send crypto contributions</translation>
 <translation id="1162617592412598913">Logged out of <ph name="PROVIDER"/></translation>
-<translation id="1782485249139199535">It looks like you're logged out of <ph name="PROVIDER"/> for AI Wiz Rewards. Log in again to continue.</translation>
+<translation id="1782485249139199535">It looks like you're logged out of <ph name="PROVIDER"/> for AI Wize Rewards. Log in again to continue.</translation>
 <translation id="4379244534135194459">You can also send crypto contributions to this creator by using your Web3 wallet.</translation>
 <translation id="2718860759172031728">Log in to <ph name="PROVIDER"/></translation>
 <translation id="6268134562674951939">You don't have enough tokens</translation>
-<translation id="5562948772940025260">You can only send up to <ph name="AMOUNT"/> BATs using your AI Wiz Rewards balance.</translation>
+<translation id="5562948772940025260">You can only send up to <ph name="AMOUNT"/> BATs using your AI Wize Rewards balance.</translation>
 <translation id="4827581232860040208">There was a problem sending your contribution</translation>
 <translation id="3259723213051400722">Please try again.</translation>
 <translation id="5379685283876547860">Contribution sent!</translation>
 <translation id="7063168612616047608">Thanks for supporting your favourite creators</translation>
 <translation id="1041398280582063935">Share your support</translation>
-<translation id="4001190813297686107">I just contributed <ph name="AMOUNT"/> BATs using the AI Wiz Browser! See how you can support your favourite creators and sites too: https://aiwize.com/rewards</translation>
+<translation id="4001190813297686107">I just contributed <ph name="AMOUNT"/> BATs using the AI Wize Browser! See how you can support your favourite creators and sites too: https://aiwize.com/rewards</translation>
 <translation id="1950340257946519340">An unexpected error has occurred</translation>
 <translation id="2605703631071131439">Please reopen the contribution panel to try again.</translation>
 <translation id="8855543392451028706">Welcome! Users can support this content creator by sending them contributions. It’s a way of thanking them for making great content.</translation>
@@ -729,7 +729,7 @@
 <translation id="1128992132632883337">A response parsing error has occurred</translation>
 <translation id="5382339341735118861">A generic request processing error has occurred</translation>
 <translation id="7123780456696055383">Requested resource not available</translation>
-<translation id="1680597601664421644">The mnemonic being imported is not valid for AI Wiz Wallet</translation>
+<translation id="1680597601664421644">The mnemonic being imported is not valid for AI Wize Wallet</translation>
 <translation id="4641919696349069826">A request is already in progress</translation>
 <translation id="872806943696014633">Transaction data is missing</translation>
 <translation id="7068183357903252127">Transaction data 'to' or 'data' must be specified</translation>
@@ -812,7 +812,7 @@
 <translation id="6812967455478797345">Brave uses <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> as a DEX aggregator.</translation>
 <translation id="151946611346774041">0x will process the Ethereum address and IP address to fulfill a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions.</translation>
 <translation id="7465227658364622464">Jupiter will process the Solana address and IP address to fulfill a transaction (including getting quotes). Jupiter will ONLY use this data for the purposes of processing transactions.</translation>
-<translation id="712738518060477110">Quote includes a <ph name="SWAP_FEE_PERCENTAGE"/> AI Wiz fee.</translation>
+<translation id="712738518060477110">Quote includes a <ph name="SWAP_FEE_PERCENTAGE"/> AI Wize fee.</translation>
 <translation id="8368540604723748428">Too many decimal places</translation>
 <translation id="6575120282593094155">You don’t yet have a <ph name="ACCOUNT_TYPE"/> account. Create one now?</translation>
 <translation id="1201402288615127009">Next</translation>
@@ -821,7 +821,7 @@
 <translation id="7885157704277298658">Copied!</translation>
 <translation id="6518133107902771759">Verify</translation>
 <translation id="6042308850641462728">More</translation>
-<translation id="768236965975208017">Secure. Multi-chain. And oh-so-easy to use. Your AI Wiz Wallet is just a few clicks away</translation>
+<translation id="768236965975208017">Secure. Multi-chain. And oh-so-easy to use. Your AI Wize Wallet is just a few clicks away</translation>
 <translation id="3157931365184549694">Restore</translation>
 <translation id="2484275747844666540">Create new wallet</translation>
 <translation id="3662348701117072366">Import existing wallet</translation>
@@ -864,11 +864,11 @@
 <translation id="1018806299114415224">Back up now</translation>
 <translation id="1400709719911593089">Brave Wallet is not set as your default wallet and will not respond to Web3 DApps. Visit settings to change your default wallet.</translation>
 <translation id="4362717653795263052">Restore primary crypto accounts</translation>
-<translation id="3038077262567136741">Enter your recovery phrase to restore your AI Wiz wallet crypto account.</translation>
+<translation id="3038077262567136741">Enter your recovery phrase to restore your AI Wize wallet crypto account.</translation>
 <translation id="955918646509748368">The recovery phrase entered is invalid.</translation>
 <translation id="8107437138787377150">Paste recovery phrase from clipboard</translation>
 <translation id="4811736040444856406">Show recovery phrase</translation>
-<translation id="4359319875297001084">Import from legacy AI Wiz crypto wallets?</translation>
+<translation id="4359319875297001084">Import from legacy AI Wize crypto wallets?</translation>
 <translation id="3331452756822160641">New password</translation>
 <translation id="8624315169751085215">Copy to clipboard</translation>
 <translation id="6346952829206698721">Paste from clipboard</translation>
@@ -907,7 +907,7 @@
 <translation id="6892232036314454524">This error may occur when the wrong application is open on the Ledger device.</translation>
 <translation id="6598291715079540080">Trezor</translation>
 <translation id="5605670050355397069">Ledger</translation>
-<translation id="4247752006222818397">Grant AI Wiz access to your Ledger device.</translation>
+<translation id="4247752006222818397">Grant AI Wize access to your Ledger device.</translation>
 <translation id="4378551569595875038">Connecting...</translation>
 <translation id="1943188256166395881">Add checked accounts</translation>
 <translation id="8554010658308662631">Load more</translation>
@@ -970,7 +970,7 @@
 <translation id="3352959425838279177">Get Ether from a faucet for <ph name="SELECTED_NETWORK"/></translation>
 <translation id="6449626816252815844">Select purchase method</translation>
 <translation id="8009571545960303544">Your signature is being requested</translation>
-<translation id="5294062982587710720">Note that AI Wiz can’t verify what will happen if you sign. A signature could authorise nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.</translation>
+<translation id="5294062982587710720">Note that AI Wize can’t verify what will happen if you sign. A signature could authorise nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.</translation>
 <translation id="3474375934783434676">Sign at your own risk</translation>
 <translation id="5488357322146334497">Message</translation>
 <translation id="3586931643579894722">Hide details</translation>
@@ -994,7 +994,7 @@
 <translation id="7073918978411974168">Proposed allowance</translation>
 <translation id="9019403281000653275">Unlimited approval requested</translation>
 <translation id="4717431746210146708">Allow this site to add a network?</translation>
-<translation id="2521480044079508357">This will allow this network to be used within AI Wiz Wallet.</translation>
+<translation id="2521480044079508357">This will allow this network to be used within AI Wize Wallet.</translation>
 <translation id="1982257600591932657">Network name</translation>
 <translation id="5052727830821470769">Network URL</translation>
 <translation id="427875364838253580">View all details</translation>
@@ -1047,8 +1047,8 @@
 <translation id="9139452553033760558">For 1 week</translation>
 <translation id="1658834457013045127">Forever</translation>
 <translation id="2770851145415891830">Existing crypto wallets detected</translation>
-<translation id="2237759620789871865">If you'd rather skip the import and keep the old Crypto Wallets experience, just navigate to the AI Wiz Browser <ph name="LINK_BEFORE"/>Settings<ph name="LINK_AFTER"/> and change the default back to Crypto Wallets. You can also import, try the new AI Wiz Wallet and change back at any time.</translation>
-<translation id="5590175005414413980">Enter your existing crypto wallets password to import to AI Wiz Wallet. Enjoy a faster and more secure way to manage crypto assets and interact with Web3 DApps.</translation>
+<translation id="2237759620789871865">If you'd rather skip the import and keep the old Crypto Wallets experience, just navigate to the AI Wize Browser <ph name="LINK_BEFORE"/>Settings<ph name="LINK_AFTER"/> and change the default back to Crypto Wallets. You can also import, try the new AI Wize Wallet and change back at any time.</translation>
+<translation id="5590175005414413980">Enter your existing crypto wallets password to import to AI Wize Wallet. Enjoy a faster and more secure way to manage crypto assets and interact with Web3 DApps.</translation>
 <translation id="880619123281809987">Type Crypto wallets password</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> connected</translation>
 <translation id="7051244143160304048"><ph name="DEVICE_NAME"/> disconnected</translation>
@@ -1194,7 +1194,7 @@
 <translation id="5522073372365069684">Buy with Ramp</translation>
 <translation id="6153197326949684688">Sell with <ph name="OFFRAMP_PROVIDER"/></translation>
 <translation id="7902920577183739843">Buy with Sardine</translation>
-<translation id="3301984548406568819">Financial and transaction data is processed by our onramp partners. AI Wiz does not collect or have access to such data.</translation>
+<translation id="3301984548406568819">Financial and transaction data is processed by our onramp partners. AI Wize does not collect or have access to such data.</translation>
 <translation id="6534275647567011533">Buy with Transak</translation>
 <translation id="5973390321030037823">Buy with Link</translation>
 <translation id="1932640759496708012">Buy with Coinbase Pay</translation>
@@ -1255,8 +1255,8 @@
 <translation id="5601436886921227795">Dapp interaction</translation>
 <translation id="9104177294757104789">Send <ph name="VALUE"/></translation>
 <translation id="4048336522751528394">Swap <ph name="MAKER"/> to <ph name="TAKER"/></translation>
-<translation id="8613144770663526433">Sign in with AI Wiz Wallet</translation>
-<translation id="8813165409788097898">You are signing into <ph name="ORIGIN"/>. AI Wiz Wallet will share your wallet address with <ph name="ORIGIN"/>.</translation>
+<translation id="8613144770663526433">Sign in with AI Wize Wallet</translation>
+<translation id="8813165409788097898">You are signing into <ph name="ORIGIN"/>. AI Wize Wallet will share your wallet address with <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">See details</translation>
 <translation id="3950820424414687140">Sign in</translation>
 <translation id="4530494379350999373">Origin</translation>
@@ -1344,7 +1344,7 @@
 <translation id="4412698727486357573">Help Centre</translation>
 <translation id="2095142195578664632">Need help? See</translation>
 <translation id="3253669416991680932">This hardware wallet does not support this operation.</translation>
-<translation id="7457027586454688423">Enter your AI Wiz Wallet password</translation>
+<translation id="7457027586454688423">Enter your AI Wize Wallet password</translation>
 <translation id="7553242001898162573">Enter your password</translation>
 <translation id="2873714185189940594">Open the Rainbow Bridge app?</translation>
 <translation id="2069777099181262239">Rainbow Bridge is an independent service that helps you bridge assets across networks, and use your crypto on other networks and DApp ecosystems. Bridging assets to other networks has some risks.</translation>
@@ -1352,7 +1352,7 @@
 <translation id="3890567288132019108">Learn more about mitigating risk on Rainbow Bridge</translation>
 <translation id="1792917191129448067">Open Rainbow Bridge app</translation>
 <translation id="1522775706527775647">Bridge to Aurora</translation>
-<translation id="4903322403594141291">Learn more about AI Wiz Wallet</translation>
+<translation id="4903322403594141291">Learn more about AI Wize Wallet</translation>
 <translation id="3875185448438395303">At least:</translation>
 <translation id="2029465635925899949">8 characters</translation>
 <translation id="6697810017029555732">Match!</translation>
@@ -1382,8 +1382,8 @@
 <translation id="2781276194026093899">nd</translation>
 <translation id="7992766987062040279">rd</translation>
 <translation id="2295726992010694229">th</translation>
-<translation id="8241405611628876973">Congratulations! Your AI Wiz Wallet is ready to go!</translation>
-<translation id="6828327990705355767">To access your wallet, just click the wallet icon at the top right of any AI Wiz browser window.</translation>
+<translation id="8241405611628876973">Congratulations! Your AI Wize Wallet is ready to go!</translation>
+<translation id="6828327990705355767">To access your wallet, just click the wallet icon at the top right of any AI Wize browser window.</translation>
 <translation id="396152018598329740">How to use a crypto wallet?</translation>
 <translation id="7512061585041489067">What’s the best crypto wallet?</translation>
 <translation id="1342755158522323177">What’s a crypto browser?</translation>
@@ -1392,12 +1392,12 @@
 <translation id="7328255859839881981">What are DApps?</translation>
 <translation id="3852489285890032403">What’s web 3?</translation>
 <translation id="5448233694500869445">We detected the MetaMask extension in your browser</translation>
-<translation id="8436080536329710282">Enter your MetaMask wallet password to easily import to AI Wiz Wallet.</translation>
+<translation id="8436080536329710282">Enter your MetaMask wallet password to easily import to AI Wize Wallet.</translation>
 <translation id="7543512765962444927">Connect to your existing wallet</translation>
 <translation id="3551682252653406110">To connect a wallet you already have, you may need to enter your recovery phrase. At this time we support restoring / importing from Ethereum and Solana wallets.</translation>
 <translation id="346929827081904572">Restore from seed phrase</translation>
 <translation id="5645597512426471834">12-24 words</translation>
-<translation id="8158505311297755780">Type your AI Wiz Wallet 12 to 24-word recovery phrase.</translation>
+<translation id="8158505311297755780">Type your AI Wize Wallet 12 to 24-word recovery phrase.</translation>
 <translation id="5419707890586509000">Import from MetaMask</translation>
 <translation id="2265945811107390939">Use your MetaMask password to import your seed phrase</translation>
 <translation id="7060680423657442298">Never mind, I’ll create a new wallet</translation>
@@ -1407,14 +1407,14 @@
 <translation id="6260144012548445299">Learn more about my new wallet</translation>
 <translation id="8746910870914151528">Legal stuff</translation>
 <translation id="5148123176978018397">Please acknowledge the following:</translation>
-<translation id="6088314935678153800">I understand this is a self-custody wallet, and that I alone am responsible for any associated funds, assets, or accounts, and for taking appropriate action to secure, protect and back up my wallet. I understand that AI Wiz can NOT access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.</translation>
+<translation id="6088314935678153800">I understand this is a self-custody wallet, and that I alone am responsible for any associated funds, assets, or accounts, and for taking appropriate action to secure, protect and back up my wallet. I understand that AI Wize can NOT access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.</translation>
 <translation id="7781090633800450517">I have read and agree to the <ph name="LINK_BEFORE"/>Terms of use<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">Buy crypto</translation>
 <translation id="3887541341068007345">Checking for wallet extensions...</translation>
-<translation id="3567994771568272606">Import from legacy AI Wiz crypto wallets</translation>
+<translation id="3567994771568272606">Import from legacy AI Wize crypto wallets</translation>
 <translation id="8407091560429310499">Select an asset</translation>
 <translation id="756590380936155533">To finish your <ph name="ASSET_TICKER"/> purchase, select one of our partners</translation>
-<translation id="7880860489474966219">On completion, your funds will be transferred to your AI Wiz Wallet</translation>
+<translation id="7880860489474966219">On completion, your funds will be transferred to your AI Wize Wallet</translation>
 <translation id="6182661078713714878">Deposit crypto</translation>
 <translation id="3683305208314702347">Deposit <ph name="VALUE"/></translation>
 <translation id="5768739294929936862">Deposit Solana or SPL tokens</translation>
@@ -1462,12 +1462,12 @@
 <translation id="434502623875309667">Address resolution requires off-chain network requests. Proceed?</translation>
 <translation id="2779500703989728346">NFT</translation>
 <translation id="1893207255459018302">No transaction history</translation>
-<translation id="5356382676355994980">Transactions made with your AI Wiz Wallet will appear here.</translation>
+<translation id="5356382676355994980">Transactions made with your AI Wize Wallet will appear here.</translation>
 <translation id="3033638954295674319">Something went wrong when fetching NFT details. Please try again later.</translation>
 <translation id="2612436523196658045">ETH address will be translated to the Filecoin address.</translation>
 <translation id="3282354360699748542"><ph name="FILECOIN_ADDRESS"/> address in the Filecoin namespace will be used for the transaction.</translation>
 <translation id="2540568096903252632">Enter a password to continue</translation>
-<translation id="3356580495013324916">Enter your AI Wiz Wallet password to start backing up wallet.</translation>
+<translation id="3356580495013324916">Enter your AI Wize Wallet password to start backing up wallet.</translation>
 <translation id="7545441766078366279">Approve <ph name="TOKEN"/></translation>
 <translation id="3115303896544539834">Insufficient <ph name="TOKEN"/> balance</translation>
 <translation id="4937657825850660613">Half</translation>
@@ -1523,10 +1523,10 @@
 <translation id="4637031024914696767">By enabling IPFS in Brave, your NFTs will be pinned automatically. It's the best way to securely back up your NFTs.</translation>
 <translation id="2319971828691864975">Get started with IPFS</translation>
 <translation id="7906328323880284538">The safest way to host NFTs</translation>
-<translation id="214349569547787359">Enable IPFS in AI Wiz to automatically back up your NFTs</translation>
+<translation id="214349569547787359">Enable IPFS in AI Wize to automatically back up your NFTs</translation>
 <translation id="4819588096619503180">IPFS is a community-driven storage network, like a hard drive that everyone can use. But instead of being controlled by one authority, thousands of individuals work together to host content on IPFS. When you “pin” something to IPFS, you’re ensuring that at least one copy of that content is safely stored. And as long as one person has a copy, a file can never disappear.<ph name="NEWLINE"/>By enabling IPFS in Brave, your NFTs will be pinned automatically. It's the best way to securely back up your NFTs.</translation>
 <translation id="9160750213078764355">See which of my NFTs are eligible</translation>
-<translation id="6241155642582182934">Enable IPFS in AI Wiz to automatically back up your NFTs for extra security.</translation>
+<translation id="6241155642582182934">Enable IPFS in AI Wize to automatically back up your NFTs for extra security.</translation>
 <translation id="654964147165509548">NFTs are being pinned to your local IPFS node.</translation>
 <translation id="4910182786472608576"><ph name="PINNED"/> supported NFTs are pinned to your local IPFS node.</translation>
 <translation id="1607117719941506821"><ph name="PINNABLE"/> NFT is eligible</translation>
@@ -1552,11 +1552,11 @@
 <translation id="6948667383954749033">Mark as not junk</translation>
 <translation id="5810047320613496595">Junk</translation>
 <translation id="7257605968082307175">Mark as junk</translation>
-<translation id="7600335727434653744">Remove from AI Wiz Wallet?</translation>
-<translation id="6657860743511185539">NFT will be removed from AI Wiz Wallet but will remain on the blockchain. If you remove it, then change your mind, you'll need to import it again manually.</translation>
+<translation id="7600335727434653744">Remove from AI Wize Wallet?</translation>
+<translation id="6657860743511185539">NFT will be removed from AI Wize Wallet but will remain on the blockchain. If you remove it, then change your mind, you'll need to import it again manually.</translation>
 <translation id="849880459530751909">Edit NFT</translation>
 <translation id="5925465310724910998">Want your NFTs displayed automatically?</translation>
-<translation id="5400791731776892411">Brave Wallet can use a third-party service to automatically display your NFTs. AI Wiz will share your wallet addresses with <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> to provide this service. <ph name="BEFORE_URL"/>Learn more.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">Brave Wallet can use a third-party service to automatically display your NFTs. AI Wize will share your wallet addresses with <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> to provide this service. <ph name="BEFORE_URL"/>Learn more.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Yes, proceed</translation>
 <translation id="4733761855978444079">No thanks, I’ll do it manually</translation>
 <translation id="353620741952662530">No NFTs to display</translation>
@@ -1587,10 +1587,10 @@
 <translation id="6951743416068151209">Tor Proxy URI</translation>
 <translation id="1671503397662036257">Tor connection status</translation>
 <translation id="6024292492796847324">Tor initialization progress</translation>
-<translation id="8300751939969131609">Turn on AI Wiz News and never miss a story</translation>
+<translation id="8300751939969131609">Turn on AI Wize News and never miss a story</translation>
 <translation id="7758665172236842395">Follow your favourite sources, in a single feed. Just open a tab in Brave, scroll down, and … voila!</translation>
 <translation id="2376542729617592331">Brave News is ad-supported with private, anonymised ads. <ph name="LINK_START"/>Learn more.<ph name="LINK_END"/>.</translation>
-<translation id="1765217911817124376">Turn on AI Wiz News</translation>
+<translation id="1765217911817124376">Turn on AI Wize News</translation>
 <translation id="780301667611848630">No, thanks</translation>
 <translation id="6265592479622441247">Back to <ph name="BEGIN_BOLD"/>dashboard<ph name="END_BOLD"/></translation>
 <translation id="8981973962043893066">Search for site, topic or RSS feed</translation>
@@ -1758,23 +1758,23 @@
 <translation id="6938154350999993769">Debug toggle tablet mode</translation>
 <translation id="5854741377790551127">Debug print view tree</translation>
 <translation id="8199130368328220410">Toggle live captions</translation>
-<translation id="9055778350624039365">Show AI Wiz Wallet panel</translation>
-<translation id="2548853975094084059">Close AI Wiz Wallet panel</translation>
-<translation id="3765209580429944524">Show AI Wiz VPN panel</translation>
-<translation id="5989009326527614692">Toggle AI Wiz VPN toolbar button</translation>
-<translation id="7334332308395652803">Toggle AI Wiz VPN tray icon</translation>
-<translation id="4326011033480357140">Send AI Wiz VPN feedback</translation>
-<translation id="2345974803401546682">About AI Wiz VPN</translation>
-<translation id="8934783170241943640">Manage AI Wiz VPN plan</translation>
-<translation id="6332027154313182926">Toggle AI Wiz VPN</translation>
+<translation id="9055778350624039365">Show AI Wize Wallet panel</translation>
+<translation id="2548853975094084059">Close AI Wize Wallet panel</translation>
+<translation id="3765209580429944524">Show AI Wize VPN panel</translation>
+<translation id="5989009326527614692">Toggle AI Wize VPN toolbar button</translation>
+<translation id="7334332308395652803">Toggle AI Wize VPN tray icon</translation>
+<translation id="4326011033480357140">Send AI Wize VPN feedback</translation>
+<translation id="2345974803401546682">About AI Wize VPN</translation>
+<translation id="8934783170241943640">Manage AI Wize VPN plan</translation>
+<translation id="6332027154313182926">Toggle AI Wize VPN</translation>
 <translation id="6539014233195996894">Toggle tab mute</translation>
 <translation id="2682865834956428001">Toggle sidebar position</translation>
 <translation id="6105745639559695088">Toggle sidebar</translation>
 <translation id="3488252265135539275">Toggle vertical tabs</translation>
 <translation id="7134064542341959603">Toggle vertical tabs window title</translation>
-<translation id="3067105725259639716">Configure AI Wiz News</translation>
+<translation id="3067105725259639716">Configure AI Wize News</translation>
 <translation id="6286510487460330478">Configure shortcuts</translation>
-<translation id="9214819486716388964">Show AI Wiz Talk</translation>
+<translation id="9214819486716388964">Show AI Wize Talk</translation>
 <translation id="5950760360751948276">Always show bookmark bar</translation>
 <translation id="2960757369920422313">Show bookmark bar on NTP</translation>
 <translation id="522953399371747698">Hide bookmark bar</translation>
@@ -1849,7 +1849,7 @@
 <translation id="5095201428204952524">AI Wize Chat is too busy right now. Please try again in a few minutes.</translation>
 <translation id="7144878232160441200">Retry</translation>
 <translation id="7202619923031933110">Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by Brave. I'm powered by Mixtral 7B, a model created by Mistral AI to handle advanced tasks.</translation>
-<translation id="2489317965865266353">Hi, I'm AI Wize Chat. I'm proxied by AI Wiz and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.</translation>
+<translation id="2489317965865266353">Hi, I'm AI Wize Chat. I'm proxied by AI Wize and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> by <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">New chat</translation>
@@ -1865,14 +1865,14 @@
 <translation id="377376641316998425">Unlock the full potential of AI Wize Chat</translation>
 <translation id="8363148882096737034">Anthropic Claude + more coming soon</translation>
 <translation id="886527905046308697">Priority access and increased response limits</translation>
-<translation id="1068954060985569277">Your AI Wiz account session has expired. Please visit your account page to refresh, then come back to use premium features.</translation>
+<translation id="1068954060985569277">Your AI Wize account session has expired. Please visit your account page to refresh, then come back to use premium features.</translation>
 <translation id="94736968936709953">Feedback sent successfully</translation>
 <translation id="9109355817507033196">Answer disliked</translation>
 <translation id="4049425842478222936">Answer liked</translation>
 <translation id="6393149565874086128">Add feedback</translation>
 <translation id="3521125531016408657">Like answer</translation>
 <translation id="8202517001427388906">Dislike answer</translation>
-<translation id="1379399209929302811">Provide AI Wiz AI feedback</translation>
+<translation id="1379399209929302811">Provide AI Wize AI feedback</translation>
 <translation id="8442999546461118871">Select your feedback topic</translation>
 <translation id="9018766373792005944">What's your feedback about?</translation>
 <translation id="7355096922131918313">Provide feedback here</translation>
@@ -1902,13 +1902,13 @@
 <translation id="1173570303649278801">Use page context for response</translation>
 <translation id="8599503173207256429">Toggle on to ask about this page. Its content will be sent to AI Wize Chat along with your messages.</translation>
 <translation id="6303294677342628402">Shields</translation>
-<translation id="8458987127502506209">Enable AI Wiz Shields</translation>
+<translation id="8458987127502506209">Enable AI Wize Shields</translation>
 <translation id="7509914170164691086">Shields are UP <ph name="LINK_BEFORE"/>for<ph name="LINK_AFTER"/></translation>
 <translation id="260764436039299868">Shields are DOWN <ph name="LINK_BEFORE"/>for<ph name="LINK_AFTER"/></translation>
 <translation id="3907405056878805220">If this site seems broken, try Shields down.
     <ph name="LINK_BEFORE"/>Note: this may reduce Brave's privacy protections.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Trackers, ads and more blocked <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">Not protected by AI Wiz Shields <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">Not protected by AI Wize Shields <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">Advanced controls</translation>
 <translation id="5799940914270080805">Changing these settings might break sites.</translation>
 <translation id="9204041448536398473">Global Shield settings</translation>
@@ -1947,25 +1947,25 @@
 <translation id="264682546981571963">Tired of cookie consent notices?</translation>
 <translation id="4986297793092101884">Brave already blocks third-party cookies. We can block cookie consent notices, too.</translation>
 <translation id="535688588637568715">Yes, block cookie consent notices</translation>
-<translation id="2808175374672429053">Wildcards are not allowed for AI Wiz Shields.</translation>
+<translation id="2808175374672429053">Wildcards are not allowed for AI Wize Shields.</translation>
 <translation id="6294662480095808915">Privacy. By default.</translation>
-<translation id="4366423156486478559">Get AI Wiz protection on every link you click. Just set AI Wiz as default and browse. Privately.</translation>
+<translation id="4366423156486478559">Get AI Wize protection on every link you click. Just set AI Wize as default and browse. Privately.</translation>
 <translation id="3830912418080848377">Import Settings</translation>
 <translation id="6378406588483694938">Easily import bookmarks, extensions and even saved passwords from your old browser.</translation>
 <translation id="2092825239819166928">Select profile to import</translation>
 <translation id="4763127492635705340">The browser you chose has multiple profiles. Select the profile(s) you'd like to import.</translation>
 <translation id="880174232178865598">Import profiles</translation>
 <translation id="2453860139492968684">Finish</translation>
-<translation id="2273851479262317744">Set AI Wiz as default browser</translation>
+<translation id="2273851479262317744">Set AI Wize as default browser</translation>
 <translation id="5037676449506322593">Select all</translation>
-<translation id="5148943178722443958">Help make AI Wiz better.</translation>
+<translation id="5148943178722443958">Help make AI Wize better.</translation>
 <translation id="1097073572755862978">Send diagnostic reports if you experience a crash or freeze. <ph name="LINK_BEFORE"/>Learn more.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Share completely private and anonymous product insights about what features are being used by Brave's users. <ph name="LINK_BEFORE"/>Learn more.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Set-up complete</translation>
-<translation id="3141206739023333979">Change these choices at any time in AI Wiz at <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Change these choices at any time in AI Wize at <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Read our full <ph name="LINK_BEFORE"/>Privacy Policy<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Choose your theme</translation>
-<translation id="6262510489122516114">You can change this at any time in AI Wiz settings.</translation>
+<translation id="6262510489122516114">You can change this at any time in AI Wize settings.</translation>
 <translation id="546481172717459539">Match system setting</translation>
 <translation id="7799817062559422778">Light mode</translation>
 <translation id="4117637339509843559">Dark mode</translation>
@@ -1997,7 +1997,7 @@
 <translation id="427718751211990320">Credentials expiry date elapsed.</translation>
 <translation id="8670619630771851260">Unable to load credentials.</translation>
 <translation id="1594643509610625766">Token no longer valid.</translation>
-<translation id="8373427068383038263">Looks like your most recent payment for <ph name="VALUE"/> did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method or contact AI Wiz support.</translation>
+<translation id="8373427068383038263">Looks like your most recent payment for <ph name="VALUE"/> did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method or contact AI Wize support.</translation>
 <translation id="1839021455997460752">Your email address</translation>
 <translation id="8054563304616131773">Please enter a valid email address</translation>
 <translation id="5154702632169343078">Subject</translation>
@@ -2015,8 +2015,8 @@
 <translation id="1156325797949437777">Support provided in partnership with Guardian.</translation>
 <translation id="8146777497879160283">Failed to write the VPN config. This may happen if you don't have permission or if you haven't run Windows Update recently.</translation>
 <translation id="3307461350293459700">VPN connection failed. Please try connecting again, and be sure to click "Allow" to enable Brave's VPN configuration.</translation>
-<translation id="7261518280726313829">Turning off secure DNS or using default servers on Windows may reveal the names of the sites you visit to your Internet service provider. AI Wiz does not recommend doing this. Do you want to do it anyway?</translation>
-<translation id="888284761945060750">Secure DNS is disabled by your organisation's policies. Using AI Wiz VPN without Secure DNS may reveal the names of the sites you visit to your Internet service provider or organisation.</translation>
+<translation id="7261518280726313829">Turning off secure DNS or using default servers on Windows may reveal the names of the sites you visit to your Internet service provider. AI Wize does not recommend doing this. Do you want to do it anyway?</translation>
+<translation id="888284761945060750">Secure DNS is disabled by your organisation's policies. Using AI Wize VPN without Secure DNS may reveal the names of the sites you visit to your Internet service provider or organisation.</translation>
 <translation id="6593224083874259773">Brave VPN on Windows</translation>
 <translation id="3153983908111684619">The setting is locked by BraveVPN while it is connected</translation>
 <translation id="1055657720430482013">Windows has a feature called Smart Multi-Homed Name Resolution, which can expose information about your location and the sites you visit.

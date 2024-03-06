@@ -684,7 +684,7 @@ class Generator(generator.Generator):
                         receivers.add(param.kind.kind)
 
         # We handle imports from mojo base types with custom typemaps, so only
-        # other AI Wiz imports should only be included
+        # other AI Wize imports should only be included
         brave_imports = [i for i in self.module.imports if
                          i.path.startswith('brave/')]
 

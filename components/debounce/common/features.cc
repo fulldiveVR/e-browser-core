@@ -10,7 +10,7 @@
 namespace debounce {
 namespace features {
 
-// When enabled, AI Wiz will try to parse tracking URLs of the form
+// When enabled, AI Wize will try to parse tracking URLs of the form
 // https://tracker.example.com/?url=http://final.example.com/
 // and automatically redirect to the final URL without sending any
 // network requests to the tracker.

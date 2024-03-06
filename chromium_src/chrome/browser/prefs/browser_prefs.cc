@@ -74,7 +74,7 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
   // Added 02/2020.
   // Must be called before ChromiumImpl because it's migrating a Chromium pref
-  // to AI Wiz pref.
+  // to AI Wize pref.
   gcm::MigrateGCMPrefs(profile_prefs);
 #endif
 

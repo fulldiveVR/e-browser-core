@@ -63,7 +63,7 @@ if (history.state && (history.state.todayArticle || history.state.todayAdPositio
 }
 
 // TODO(petemill): Make sure we don't keep scrolling to the scrolled-to article
-// if it gets removed and rendered again (e.g. if AI Wiz News is toggled off and on).
+// if it gets removed and rendered again (e.g. if AI Wize News is toggled off and on).
 // Reset to defaultState when Today is turned off or refreshed.
 
 const reducer = createReducer<BraveNewsState>({}, defaultState)

@@ -14,7 +14,7 @@ index 99ed543f6d145a03f4bcdc523a17324022e30e6d..5a1e337ce8b3a2602a799fd740736c4c
    mffr.MultiFileFindReplace(
        r'(//.*)%s' % re.escape(from_path),
        r'\1%s' % to_path,
-+      ['*.gni', '*.gn'] + # AI Wiz uses full paths (start with //) to add files
++      ['*.gni', '*.gn'] + # AI Wize uses full paths (start with //) to add files
        ['*.cc', '*.h', '*.m', '*.mm', '*.cpp'])
  
    # Update references in GYP and BUILD.gn files.

@@ -23,9 +23,9 @@ int OnBeforeStartTransaction_AdsStatusHeader(
     std::shared_ptr<BraveRequestInfo> ctx) {
   Profile* profile = Profile::FromBrowserContext(ctx->browser_context);
 
-  // The X-Brave-Ads-Enabled header should be added when AI Wiz Private Ads are
-  // enabled, the requested URL host is one of the AI Wiz Search domains, and the
-  // request originates from one of the AI Wiz Search domains.
+  // The X-Brave-Ads-Enabled header should be added when AI Wize Private Ads are
+  // enabled, the requested URL host is one of the AI Wize Search domains, and the
+  // request originates from one of the AI Wize Search domains.
   if (!profile->GetPrefs()->GetBoolean(brave_rewards::prefs::kEnabled) ||
       !brave_search::IsAllowedHost(ctx->request_url) ||
       (!brave_search::IsAllowedHost(ctx->tab_origin) &&

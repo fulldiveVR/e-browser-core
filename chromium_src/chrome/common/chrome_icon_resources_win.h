@@ -20,22 +20,22 @@ enum {
   kApplication3Index = 2,
   kApplication4Index = 3,
 
-  // The AI Wiz Canary application icon.
+  // The AI Wize Canary application icon.
   kSxSApplicationIndex = 4,
 
-  // The AI Wiz App Launcher icon.
+  // The AI Wize App Launcher icon.
   kAppLauncherIndex = 5,
 
-  // The AI Wiz App Launcher Canary icon.
+  // The AI Wize App Launcher Canary icon.
   kSxSAppLauncherIndex = 6,
 
-  // The AI Wiz incognito icon.
+  // The AI Wize incognito icon.
   kIncognitoIndex = 7,
 
-  // The AI Wiz Dev application icon.
+  // The AI Wize Dev application icon.
   kDevApplicationIndex = 8,
 
-  // The AI Wiz Beta application icon.
+  // The AI Wize Beta application icon.
   kBetaApplicationIndex = 9,
 
   // The various file type icon(ex, pdf).
@@ -44,10 +44,10 @@ enum {
   kDevFileTypeIndex = 12,
   kSxSFileTypeIndex = 13,
 #else
-  // The AI Wiz Developer App Launcher icon.
+  // The AI Wize Developer App Launcher icon.
   kAppLauncherIndex = 1,
 
-  // The AI Wiz Developer incognito icon.
+  // The AI Wize Developer incognito icon.
   kIncognitoIndex = 2,
 #endif
 };

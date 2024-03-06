@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the AI Wiz AI product">
+  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the AI Wize AI product">
     AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_SUMMARIZE_FAILED_LABEL" desc="Label for when summarization is not possible">
@@ -16,7 +16,7 @@
     About AI Wize Chat
   </message>
    <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION" desc="Outlining the functioning of AIChat (paragraph 1 of 3)">
-    AI Wiz AI Wize Chat is an AI smart assistant that can summarize web pages, transcribe videos, and answer questions. AI Wiz AI Wize Chat Premium uses advanced <ph name="LINK_BEFORE">$1</ph>AI models<ph name="LINK_AFTER">$2</ph> for even more nuanced replies, and gives early access to new features.
+    AI Wize AI Wize Chat is an AI smart assistant that can summarize web pages, transcribe videos, and answer questions. AI Wize AI Wize Chat Premium uses advanced <ph name="LINK_BEFORE">$1</ph>AI models<ph name="LINK_AFTER">$2</ph> for even more nuanced replies, and gives early access to new features.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_2" desc="Outlining the functioning of AIChat (paragraph 2 of 3)">
     The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar.
@@ -55,7 +55,7 @@
     Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by AI Wize. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks.
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model">
-    Hi, I'm AI Wize Chat. I'm proxied by AI Wiz and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.
+    Hi, I'm AI Wize Chat. I'm proxied by AI Wize and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.
   </message>
   <message name="IDS_CHAT_UI_MODEL_NAME_SYNTAX" desc="Sentence structure for model name">
     <ph name="MODEL_NAME">$1<ex>llama2-13b</ex></ph> by <ph name="COMPANY_NAME">$2<ex>Meta</ex></ph>
@@ -100,7 +100,7 @@
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_2" desc="A premium feature">
      Higher rate limits
   </message>
-  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for AI Wiz premium products">
+  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for AI Wize premium products">
      AI Wize Chat Premium
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_PRICING" desc="Price label to subscribe for Premium model">
@@ -122,7 +122,7 @@
     Priority access and increased response limits
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_DESCRIPTION" desc="Warning message when AI Chat Premium authentication is expired">
-    Your AI Wiz account session has expired. Please visit your account page to refresh, then come back to use premium features.
+    Your AI Wize account session has expired. Please visit your account page to refresh, then come back to use premium features.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_ACTION" desc="Action to take when AI Chat Premium authentication is expired">
     Refresh
@@ -149,7 +149,7 @@
     Dislike answer
   </message>
   <message name="IDS_CHAT_UI_PROVIDE_FEEDBACK_TITLE" desc="Title for feedback provision section">
-    Provide AI Wiz AI Feedback
+    Provide AI Wize AI Feedback
   </message>
   <message name="IDS_CHAT_UI_SELECT_FEEDBACK_TOPIC" desc="Prompt to select feedback topic">
     Select your feedback topic
@@ -245,6 +245,6 @@
     Use page context for response
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_TOOLTIP_INFO" desc="Info tooltip for contextual toggle">
-    Toggle on to ask about this page. Its content will be sent to AI Wiz AI Wize Chat along with your messages.
+    Toggle on to ask about this page. Its content will be sent to AI Wize AI Wize Chat along with your messages.
   </message>
 </grit-part>

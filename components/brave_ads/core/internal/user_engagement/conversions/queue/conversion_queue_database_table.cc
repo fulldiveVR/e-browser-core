@@ -142,7 +142,7 @@ void GetCallback(GetConversionQueueCallback callback,
     const ConversionQueueItemInfo conversion_queue_item =
         GetFromRecord(&*record);
     // TODO(https://github.com/brave/brave-browser/issues/33239): Validate all
-    // AI Wiz Ads data when loading from database
+    // AI Wize Ads data when loading from database
     if (!conversion_queue_item.IsValid()) {
       SCOPED_CRASH_KEY_STRING256(
           "BraveAdsConversion", "invalidFieldsNames",

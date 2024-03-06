@@ -94,7 +94,7 @@
 #define BRAVE_VPN_FEATURE_ENTRIES                         \
   EXPAND_FEATURE_ENTRIES({                                \
       kBraveVPNFeatureInternalName,                       \
-      "Enable experimental AI Wiz VPN",                    \
+      "Enable experimental AI Wize VPN",                    \
       "Experimental native VPN support",                  \
       kOsMac | kOsWin,                                    \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPN), \
@@ -104,7 +104,7 @@
 #define BRAVE_VPN_WIREGUARD_FEATURE_ENTRIES                                  \
   EXPAND_FEATURE_ENTRIES({                                                   \
       kBraveVPNWireguardFeatureInternalName,                                 \
-      "Enable experimental WireGuard AI Wiz VPN service",                     \
+      "Enable experimental WireGuard AI Wize VPN service",                     \
       "Experimental WireGuard VPN support. Deprecated.",                     \
       kOsWin,                                                                \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPNUseWireguardService), \
@@ -112,7 +112,7 @@
 #define BRAVE_VPN_DNS_FEATURE_ENTRIES                                    \
   EXPAND_FEATURE_ENTRIES({                                               \
       kBraveVPNDnsFeatureInternalName,                                   \
-      "Enable DoH for AI Wiz VPN",                                        \
+      "Enable DoH for AI Wize VPN",                                        \
       "Override DoH settings with Cloudflare dns if necessary to avoid " \
       "leaking requests due to Smart Multi-Home Named Resolution",       \
       kOsWin,                                                            \
@@ -124,7 +124,7 @@
 #define BRAVE_VPN_WIREGUARD_FEATURE_ENTRIES                                    \
   EXPAND_FEATURE_ENTRIES({                                                     \
       kBraveVPNWireguardForOSXFeatureInternalName,                             \
-      "Enable experimental WireGuard AI Wiz VPN for OSX",                       \
+      "Enable experimental WireGuard AI Wize VPN for OSX",                       \
       "Experimental WireGuard VPN support.",                                   \
       kOsMac,                                                                  \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPNEnableWireguardForOSX), \
@@ -188,7 +188,7 @@
       ENABLE_GEMINI_WALLET,                                                \
       EXPAND_FEATURE_ENTRIES({                                             \
           "brave-rewards-gemini",                                          \
-          "Enable Gemini for AI Wiz Rewards",                               \
+          "Enable Gemini for AI Wize Rewards",                               \
           "Enables support for Gemini as an external wallet provider for " \
           "Brave",                                                         \
           kOsDesktop,                                                      \
@@ -210,14 +210,14 @@
       {                                                                       \
           "enable-nft-pinning",                                               \
           "Enable NFT pinning",                                               \
-          "Enable NFT pinning for AI Wiz Wallet",                              \
+          "Enable NFT pinning for AI Wize Wallet",                              \
           kOsDesktop,                                                         \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletNftPinningFeature),         \
       },                                                                      \
       {                                                                       \
           "native-brave-wallet",                                              \
-          "Enable AI Wiz Wallet",                                              \
+          "Enable AI Wize Wallet",                                              \
           "Native cryptocurrency wallet support without the use of "          \
           "extensions",                                                       \
           kOsDesktop | kOsAndroid,                                            \
@@ -227,15 +227,15 @@
       {                                                                       \
           "brave-wallet-zcash",                                               \
           "Enable BraveWallet ZCash support",                                 \
-          "Zcash support for native AI Wiz Wallet",                            \
+          "Zcash support for native AI Wize Wallet",                            \
           kOsDesktop | kOsAndroid,                                            \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletZCashFeature),              \
       },                                                                      \
       {                                                                       \
           "brave-wallet-bitcoin",                                             \
-          "Enable AI Wiz Wallet Bitcoin support",                              \
-          "Bitcoin support for native AI Wiz Wallet",                          \
+          "Enable AI Wize Wallet Bitcoin support",                              \
+          "Bitcoin support for native AI Wize Wallet",                          \
           kOsDesktop | kOsAndroid,                                            \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletBitcoinFeature),            \
@@ -243,7 +243,7 @@
       {                                                                       \
           "brave-wallet-enable-ankr-balances",                                \
           "Enable Ankr balances",                                             \
-          "Enable usage of Ankr Advanced API for fetching balances in AI Wiz " \
+          "Enable usage of Ankr Advanced API for fetching balances in AI Wize " \
           "Wallet",                                                           \
           kOsDesktop | kOsAndroid,                                            \
           FEATURE_VALUE_TYPE(                                                 \
@@ -255,7 +255,7 @@
       {                                                                        \
           "brave-news-peek",                                                   \
           "Brave News prompts on New Tab Page",                                \
-          "Prompt AI Wiz News via the top featured article peeking up from "    \
+          "Prompt AI Wize News via the top featured article peeking up from "    \
           "the bottom of the New Tab Page, after a short delay.",              \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsCardPeekFeature), \
@@ -263,7 +263,7 @@
       {                                                                        \
           "brave-news-feed-update",                                            \
           "Brave News Feed Update",                                            \
-          "Use the updated AI Wiz News feed",                                   \
+          "Use the updated AI Wize News feed",                                   \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsFeedUpdate),      \
       })
@@ -450,7 +450,7 @@
                EXPAND_FEATURE_ENTRIES({                                      \
                    "brave-player",                                           \
                    "Brave Player",                                           \
-                   "Enables AI Wiz Player",                                   \
+                   "Enables AI Wize Player",                                   \
                    kOsMac | kOsWin | kOsLinux | kOsAndroid,                  \
                    FEATURE_VALUE_TYPE(brave_player::features::kBravePlayer), \
                }))
@@ -542,7 +542,7 @@
       {                                                                        \
           "brave-adblock-default-1p-blocking",                                 \
           "Shields first-party network blocking",                              \
-          "Allow AI Wiz Shields to block first-party network requests in "      \
+          "Allow AI Wize Shields to block first-party network requests in "      \
           "Standard blocking mode",                                            \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
@@ -587,7 +587,7 @@
       {                                                                        \
           "brave-domain-block-1pes",                                           \
           "Enable domain blocking using First Party Ephemeral Storage",        \
-          "When visiting a blocked domain, AI Wiz will try to enable "          \
+          "When visiting a blocked domain, AI Wize will try to enable "          \
           "Ephemeral Storage for a first party context, meaning neither "      \
           "cookies nor localStorage data will be persisted after a website "   \
           "is closed. Ephemeral Storage will be auto-enabled only if no data " \
@@ -657,8 +657,8 @@
       },                                                                       \
       {                                                                        \
           "brave-super-referral",                                              \
-          "Enable AI Wiz Super Referral",                                       \
-          "Use custom theme for AI Wiz Super Referral",                         \
+          "Enable AI Wize Super Referral",                                       \
+          "Use custom theme for AI Wize Super Referral",                         \
           flags_ui::kOsMac | flags_ui::kOsWin | flags_ui::kOsAndroid,          \
           FEATURE_VALUE_TYPE(ntp_background_images::features::                 \
                                  kBraveNTPSuperReferralWallpaper),             \
@@ -689,34 +689,34 @@
       {                                                                        \
           "brave-forget-first-party-storage",                                  \
           "Enable First Party Storage Cleanup support",                        \
-          "Add cookie blocking mode which allows AI Wiz to cleanup first "      \
+          "Add cookie blocking mode which allows AI Wize to cleanup first "      \
           "party storage (Cookies, DOM Storage) on website close",             \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(net::features::kBraveForgetFirstPartyStorage),    \
       },                                                                       \
       {                                                                        \
           "brave-rewards-vbat-notice",                                         \
-          "Enable AI Wiz Rewards VBAT notices",                                 \
-          "Enables notices in the AI Wiz Rewards UI about VBAT deadlines.",     \
+          "Enable AI Wize Rewards VBAT notices",                                 \
+          "Enables notices in the AI Wize Rewards UI about VBAT deadlines.",     \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(brave_rewards::features::kVBatNoticeFeature),     \
       },                                                                       \
       {                                                                        \
           "brave-rewards-verbose-logging",                                     \
-          "Enable AI Wiz Rewards verbose logging",                              \
-          "Enables detailed logging of AI Wiz Rewards system events to a log "  \
+          "Enable AI Wize Rewards verbose logging",                              \
+          "Enables detailed logging of AI Wize Rewards system events to a log "  \
           "file stored on your device. Please note that this log file could "  \
           "include information such as browsing history and credentials such " \
           "as passwords and access tokens depending on your activity. Please " \
-          "do not share it unless asked to by AI Wiz staff.",                   \
+          "do not share it unless asked to by AI Wize staff.",                   \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(brave_rewards::features::kVerboseLoggingFeature), \
       },                                                                       \
       {                                                                        \
           "brave-rewards-allow-unsupported-wallet-providers",                  \
-          "Always show AI Wiz Rewards custodial connection options",            \
+          "Always show AI Wize Rewards custodial connection options",            \
                                                                                \
-          "Allows all custodial options to be selected in AI Wiz Rewards, "     \
+          "Allows all custodial options to be selected in AI Wize Rewards, "     \
           "including those not supported for your Rewards country.",           \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(brave_rewards::features::                         \
@@ -724,16 +724,16 @@
       },                                                                       \
       {                                                                        \
           "brave-rewards-allow-self-custody-providers",                        \
-          "Enable AI Wiz Rewards self-custody connection options",              \
-          "Enables self-custody options to be selected in AI Wiz Rewards.",     \
+          "Enable AI Wize Rewards self-custody connection options",              \
+          "Enables self-custody options to be selected in AI Wize Rewards.",     \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(                                                  \
               brave_rewards::features::kAllowSelfCustodyProvidersFeature),     \
       },                                                                       \
       {                                                                        \
           "brave-ads-should-launch-brave-ads-as-an-in-process-service",        \
-          "Launch AI Wiz Ads as an in-process service",                         \
-          "Launch AI Wiz Ads as an in-process service removing the utility "    \
+          "Launch AI Wize Ads as an in-process service",                         \
+          "Launch AI Wize Ads as an in-process service removing the utility "    \
           "process.",                                                          \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
@@ -741,8 +741,8 @@
       },                                                                       \
       {                                                                        \
           "brave-ads-should-always-run-brave-ads-service",                     \
-          "Should always run AI Wiz Ads service",                               \
-          "Always run AI Wiz Ads service to support triggering ad events when " \
+          "Should always run AI Wize Ads service",                               \
+          "Always run AI Wize Ads service to support triggering ad events when " \
           "Brave Private Ads are disabled.",                                   \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
@@ -751,7 +751,7 @@
       {                                                                        \
           "brave-ads-should-always-trigger-new-tab-page-ad-events",            \
           "Should always trigger new tab page ad events",                      \
-          "Support triggering new tab page ad events if AI Wiz Private Ads "    \
+          "Support triggering new tab page ad events if AI Wize Private Ads "    \
           "are disabled. Requires "                                            \
           "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
           kOsAll,                                                              \
@@ -770,7 +770,7 @@
       {                                                                        \
           "brave-ads-should-always-trigger-search-result-ad-events",           \
           "Should always trigger search result ad events",                     \
-          "Support triggering search result ad events if AI Wiz Private Ads "   \
+          "Support triggering search result ad events if AI Wize Private Ads "   \
           "are disabled. Requires "                                            \
           "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
           kOsAll,                                                              \
@@ -780,16 +780,16 @@
       },                                                                       \
       {                                                                        \
           "brave-ads-custom-push-notifications-ads",                           \
-          "Enable AI Wiz Ads custom push notifications",                        \
-          "Enable AI Wiz Ads custom push notifications to support rich media",  \
+          "Enable AI Wize Ads custom push notifications",                        \
+          "Enable AI Wize Ads custom push notifications to support rich media",  \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_ads::kCustomNotificationAdFeature),         \
       },                                                                       \
       {                                                                        \
           "brave-ads-allowed-to-fallback-to-custom-push-notification-ads",     \
-          "Allow AI Wiz Ads to fallback from native to custom push "            \
+          "Allow AI Wize Ads to fallback from native to custom push "            \
           "notifications",                                                     \
-          "Allow AI Wiz Ads to fallback from native to custom push "            \
+          "Allow AI Wize Ads to fallback from native to custom push "            \
           "notifications on operating systems which do not support native "    \
           "notifications",                                                     \
           kOsAll,                                                              \
@@ -798,8 +798,8 @@
       },                                                                       \
       {                                                                        \
           "brave-sync-v2",                                                     \
-          "Enable AI Wiz Sync v2",                                              \
-          "Brave Sync v2 integrates with chromium sync engine with AI Wiz "     \
+          "Enable AI Wize Sync v2",                                              \
+          "Brave Sync v2 integrates with chromium sync engine with AI Wize "     \
           "specific authentication flow and enforce client side encryption",   \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(brave_sync::features::kBraveSync),                \
@@ -973,7 +973,7 @@
 namespace flags_ui {
 namespace {
 
-// Unused function to reference AI Wiz feature entries for clang checks.
+// Unused function to reference AI Wize feature entries for clang checks.
 [[maybe_unused]] void UseBraveAboutFlags() {
   // These vars are declared in anonymous namespace in
   // //chrome/browser/about_flags.cc. We declare them here manually to

@@ -29,7 +29,7 @@ const mockedRewardsData: BraveRewardsProxyOverrides = {
   rewardsEnabled: true
 }
 
-describe('api slice AI Wiz Rewards endpoints', () => {
+describe('api slice AI Wize Rewards endpoints', () => {
   describe('useGetRewardsInfoQuery', () => {
     it('should fetch & cache external rewards wallet data', async () => {
       const store = createMockStore({}, {}, mockedRewardsData)

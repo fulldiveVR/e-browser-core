@@ -68,7 +68,7 @@
 <translation id="6549021453810473782">查看商店信息</translation>
 <translation id="6562820390860419811">左移标签页</translation>
 <translation id="6615455863669487791">演示一下</translation>
-<translation id="6398241160085205003">通过在 AI Wiz 主菜单中点击“最近打开的标签页”，您可以找到已关闭的标签页。</translation>
+<translation id="6398241160085205003">通过在 AI Wize 主菜单中点击“最近打开的标签页”，您可以找到已关闭的标签页。</translation>
 <translation id="6840760312327750441">要将标签页分组，请轻触并按住某个标签页，然后拖动到另一个标签页上。</translation>
 <translation id="6856809498882026482">隐藏多选模式</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{分享标签页}other{分享标签页}}</translation>
@@ -77,7 +77,7 @@
 <translation id="7326879924029668159">查看退货政策及其他信息</translation>
 <translation id="7352298686197644113">查看您打开的标签页中哪件商品降价了</translation>
 <translation id="753732157349120914">标签页切换器</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> 条来自 AI Wiz 的评价}other{<ph name="REVIEWS_COUNT_MANY"/> 条来自 AI Wiz 的评价}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> 条来自 AI Wize 的评价}other{<ph name="REVIEWS_COUNT_MANY"/> 条来自 AI Wize 的评价}}</translation>
 <translation id="7559245342362162951">以全屏网格状视图显示组中的标签页</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{分享所选的 <ph name="TABS_COUNT_ONE"/> 个标签页}other{分享所选的 <ph name="TABS_COUNT_MANY"/> 个标签页}}</translation>
 <translation id="7792771145871471484">查看建议。</translation>
@@ -98,8 +98,8 @@
 <translation id="9169594135889675189">向组中添加新标签页</translation>
 <translation id="959682366969460160">让各项内容井井有条</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {您可以在 AI Wiz 主菜单下的最近标签中找到已关闭的标签页。 您的无痕选项卡将不可用。}
-        other {您可以在 AI Wiz 主菜单下的最近标签中找到已关闭的标签页。 您的 # 无痕标签页将不可用。}}</translation>
+        =1 {您可以在 AI Wize 主菜单下的最近标签中找到已关闭的标签页。 您的无痕选项卡将不可用。}
+        other {您可以在 AI Wize 主菜单下的最近标签中找到已关闭的标签页。 您的 # 无痕标签页将不可用。}}</translation>
 <translation id="3228718275011575753">关闭所有无痕标签页？</translation>
 <translation id="6687920250729800417">您在这些私人标签页中的活动将从本设备删除</translation>
 </translationbundle>

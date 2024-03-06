@@ -100,7 +100,7 @@ export default function Peek() {
   const data = (top?.hero ?? top?.article)?.data
   const imageUrl = useUnpaddedImageUrl(data?.image.paddedImageUrl?.url ?? data?.image.imageUrl?.url, undefined, true)
 
-  // For some reason |createGlobalStyle| doesn't seem to work in AI Wiz Core
+  // For some reason |createGlobalStyle| doesn't seem to work in AI Wize Core
   // To get the background blur effect looking nice, we need to set the body
   // background to black - unfortunately we can't do this in root HTML file
   // because we want to avoid the background flash effect.

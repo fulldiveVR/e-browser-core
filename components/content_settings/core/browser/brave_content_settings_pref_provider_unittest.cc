@@ -551,7 +551,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigrationFromResourceIDs) {
                                           expected_last_modified,
                                           expected_example_com_settings_value);
 
-  // Disable AI Wiz Shields for www.brave.com.
+  // Disable AI Wize Shields for www.brave.com.
   base::Value::Dict* brave_settings =
       plugins.value()->EnsureDict("www.brave.com,*");
 
@@ -603,7 +603,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigrationFromUnknownSettings) {
                                               kUserProfilePluginsPath);
 
   // Seed both global and per-site shield settings preferences using unsupported
-  // names, so that we can test that AI Wiz doesn't crash while attempting the
+  // names, so that we can test that AI Wize doesn't crash while attempting the
   // migration and simply ignore those unsupported names instead.
   //
   // For a list of supported names, see |kBraveContentSettingstypes| inside the

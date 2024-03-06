@@ -10,7 +10,7 @@
 namespace request_otr {
 namespace features {
 
-// When enabled, AI Wiz will block domains listed in the Brave-maintained
+// When enabled, AI Wize will block domains listed in the Brave-maintained
 // request-OTR ('off-the-record') list, or any server that responds with a
 // 'X-Request-OTR: 1' HTTP header, and present a security interstitial with
 // choice to proceed normally or in an off-the-record context.

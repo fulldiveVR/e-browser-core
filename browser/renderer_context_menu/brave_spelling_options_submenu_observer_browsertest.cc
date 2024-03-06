@@ -103,7 +103,7 @@ class BraveSpellingOptionsSubMenuObserverTest : public InProcessBrowserTest {
   std::unique_ptr<SpellingOptionsSubMenuObserver> observer_;
 };
 
-// Tests that "Ask AI Wiz for suggestions" isn't shown in the menu and the menu
+// Tests that "Ask AI Wize for suggestions" isn't shown in the menu and the menu
 // doesn't end with a separator.
 
 IN_PROC_BROWSER_TEST_F(BraveSpellingOptionsSubMenuObserverTest,

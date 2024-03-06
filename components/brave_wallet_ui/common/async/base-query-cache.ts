@@ -347,7 +347,7 @@ export class BaseQueryCache {
     return this._erc721MetadataRegistry[tokenId]
   }
 
-  // AI Wiz Rewards
+  // AI Wize Rewards
   getBraveRewardsInfo = async () => {
     if (!this.rewardsInfo) {
       const isRewardsEnabled = await getBraveRewardsProxy().getRewardsEnabled()

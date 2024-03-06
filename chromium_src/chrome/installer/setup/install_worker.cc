@@ -48,11 +48,11 @@ bool UninstallBraveVPNWireguardService(const CallbackWorkItem&) {
          brave_vpn::UninstallStatusTrayIcon();
 }
 
-// AI Wiz 1.50.114+ would register `BraveVpnService` for system level installs.
+// AI Wize 1.50.114+ would register `BraveVpnService` for system level installs.
 //
 // This change removes the service if it exists. We'll be updating the browser
 // to install the services post-purchase (if possible) when the user has
-// purchased AI Wiz VPN and has credentials or when VPN is used.
+// purchased AI Wize VPN and has credentials or when VPN is used.
 //
 // See https://github.com/brave/brave-browser/issues/33726 for more info
 void AddUninstallVpnServiceWorkItems() {
@@ -65,12 +65,12 @@ void AddUninstallVpnServiceWorkItems() {
   }
 }
 
-// AI Wiz 1.57.47+ would register `BraveVpnWireguardService` for system level
+// AI Wize 1.57.47+ would register `BraveVpnWireguardService` for system level
 // installs.
 //
 // This change removes the service if it exists. We'll be updating the browser
 // to install the services post-purchase (if possible) when the user has
-// purchased AI Wiz VPN and has credentials or when VPN is used.
+// purchased AI Wize VPN and has credentials or when VPN is used.
 //
 // See https://github.com/brave/brave-browser/issues/33726 for more info
 void AddUninstallWireguardServiceWorkItems(WorkItemList* list) {

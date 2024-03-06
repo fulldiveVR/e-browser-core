@@ -51,7 +51,7 @@ def GenerateBraveWidevineSigFile(paths, config, part):
 
 
 def BraveModifyPartsForSigning(parts, config):
-    """ Inserts AI Wiz specific parts that need to be signed """
+    """ Inserts AI Wize specific parts that need to be signed """
     parts = collections.OrderedDict(parts)
     from signing.model import CodeSignedProduct, VerifyOptions, CodeSignOptions  # pylint: disable=import-error, import-outside-toplevel
 
@@ -110,7 +110,7 @@ def BraveModifyPartsForSigning(parts, config):
 
 
 def GetBraveSigningConfig(config_class, mac_provisioning_profile=None):
-    """ Creates AI Wiz specific config used for signing """
+    """ Creates AI Wize specific config used for signing """
     class ConfigNonChromeBranded(config_class):  # pylint: disable=too-few-public-methods
         """ Config that overrides is_chrome_branded """
 
@@ -121,7 +121,7 @@ def GetBraveSigningConfig(config_class, mac_provisioning_profile=None):
 
         @property
         def distributions(self):
-            """ AI Wiz distribution """
+            """ AI Wize distribution """
             return [model.Distribution(channel=brave_channel)]
 
         @property

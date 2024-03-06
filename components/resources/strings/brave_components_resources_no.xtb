@@ -62,16 +62,16 @@
 <translation id="2045455461902775806">Brave-søk er ikke skjevfordelt, og sporer verken deg, søkene dine eller klikkene dine.</translation>
 <translation id="6811221529729056895">Prøv Brave-søk nå</translation>
 <translation id="5525668735313040116">Søk privat på nettet</translation>
-<translation id="3446024864193919737">Vis AI Wiz Rewards</translation>
+<translation id="3446024864193919737">Vis AI Wize Rewards</translation>
 <translation id="5585019845078534178">Kort</translation>
 <translation id="3870475560794762985">Vis sponsede bilder</translation>
 <translation id="2414654907269324670">Du tjener BAT for Sponsede Bilder.</translation>
 <translation id="4942016616604700968">Aktiver belønninger</translation>
 <translation id="5684562942023496754">Du kan tjene på å se Sponsede Bilder.</translation>
-<translation id="8934374643857605034">Som AI Wiz Rewards-bruker kan du tjene BAT på å se Sponsede Bilder.</translation>
-<translation id="1570714748649804013">Som AI Wiz Rewards-bruker tjener du BAT for Sponsede Bilder du ser på. Deaktivering av Sponsede Bilder reduserer hvor mye du tjener.</translation>
-<translation id="8998727244653964783">Du kan tjene BAT på å se Sponsede Bilder hvis du tilknytter en partnerkonto til AI Wiz Rewards. I mellomtiden bidrar du til å støtte innholdsskapere med Sponsede Bilder.</translation>
-<translation id="5512383650263136662">Du kan tjene BAT på å se Sponsede Bilder med AI Wiz Rewards. Er du ikke Rewards-bruker? Du vil fortsatt støtte Braves oppdrag hvis du slår på Sponsede Bilder.</translation>
+<translation id="8934374643857605034">Som AI Wize Rewards-bruker kan du tjene BAT på å se Sponsede Bilder.</translation>
+<translation id="1570714748649804013">Som AI Wize Rewards-bruker tjener du BAT for Sponsede Bilder du ser på. Deaktivering av Sponsede Bilder reduserer hvor mye du tjener.</translation>
+<translation id="8998727244653964783">Du kan tjene BAT på å se Sponsede Bilder hvis du tilknytter en partnerkonto til AI Wize Rewards. I mellomtiden bidrar du til å støtte innholdsskapere med Sponsede Bilder.</translation>
+<translation id="5512383650263136662">Du kan tjene BAT på å se Sponsede Bilder med AI Wize Rewards. Er du ikke Rewards-bruker? Du vil fortsatt støtte Braves oppdrag hvis du slår på Sponsede Bilder.</translation>
 <translation id="2875302873837723333">populære nettsteder</translation>
 <translation id="8173998484743827990">Brave-statistikk</translation>
 <translation id="383680190590774040">klokke</translation>
@@ -88,13 +88,13 @@
 <translation id="4108314971463891922">Følg</translation>
 <translation id="3861486700625780712">Slutt å følge</translation>
 <translation id="8909741410750517071">Følg denne kilden med 1 klikk.</translation>
-<translation id="1982678174789043774">Hold deg oppdatert på siste nytt i AI Wiz News</translation>
+<translation id="1982678174789043774">Hold deg oppdatert på siste nytt i AI Wize News</translation>
 <translation id="7894417427965898400">Administrer feeder</translation>
 <translation id="9164544612367905452">Henter ...</translation>
 <translation id="1276592121036104130">Last inn nytt innhold</translation>
-<translation id="2875288128871360696">Bla for AI Wiz News</translation>
-<translation id="8510120023634509743">Tilbakestill AI Wiz News-kilder</translation>
-<translation id="75825199302994272">Vil du tilbakestille alle valgene dine for AI Wiz News-utgivere til standard?</translation>
+<translation id="2875288128871360696">Bla for AI Wize News</translation>
+<translation id="8510120023634509743">Tilbakestill AI Wize News-kilder</translation>
+<translation id="75825199302994272">Vil du tilbakestille alle valgene dine for AI Wize News-utgivere til standard?</translation>
 <translation id="954001034349395856">Alle kilder</translation>
 <translation id="8890516388109605451">Kilder</translation>
 <translation id="5158129253322921540">Deaktiver innhold fra <ph name="PUBLISHER_NAME"/></translation>
@@ -105,7 +105,7 @@
 <translation id="7679334366167089823">Tjen polletter på å se annonser som respekterer personvernet ditt.</translation>
 <translation id="7191394989411626168">Ved å slå av kort vil alle kort som vises nå bli skjulte. Du kan likevel bli varslet om nye kort.</translation>
 <translation id="6820526586005233839">Brave Ads er pauset</translation>
-<translation id="5190407395832551012">For å beskytte AI Wiz Rewards ber vi tilfeldige brukere om å løse en captcha. Klikk på “Løs” for å gjenoppta annonsene.</translation>
+<translation id="5190407395832551012">For å beskytte AI Wize Rewards ber vi tilfeldige brukere om å løse en captcha. Klikk på “Løs” for å gjenoppta annonsene.</translation>
 <translation id="1693773514029371138">Løs</translation>
 <translation id="6991128190741664836">Senere</translation>
 <translation id="8112367589167674370">Brave Talk</translation>
@@ -127,14 +127,14 @@
 <translation id="1645589858096839236">Brave lagrer ikke nettleseraktivitet fra Private vinduer. Med Tor-tilkobling blir det vanskeligere for nettsider å se den faktiske IP-adressen din, og for nettverksobservatører å se hvilke sider du besøler. Hvis din personlige sikkerhet krever at du er helt anonym, bør du imidlertid bruke Tor-nettleseren i stedet.</translation>
 <translation id="7919374705736538787">Søk privat med</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
-<translation id="218839872518145456">Med privat søk vil AI Wiz bruke DuckDuckGo for søk i private vinduer. DuckDuckGo sporer ikke søkehistorien din, så du kan søke privat.</translation>
+<translation id="218839872518145456">Med privat søk vil AI Wize bruke DuckDuckGo for søk i private vinduer. DuckDuckGo sporer ikke søkehistorien din, så du kan søke privat.</translation>
 <translation id="1925197199485958903">I privatvindu med Tor er DuckDuckGo den forhåndsinnstilte søkemotoren. Andre populære søkemotorer kan være vanskelig å bruke med Tor. DuckDuckGo doesn’t sporer ikke søkehistorikken din med Tor, de don’t vet heller ikke IP-adressen din.</translation>
 <translation id="4371533307685765155">Søk ved hjelp av DuckDuckGo</translation>
 <translation id="548478195417408221">Gjør private vinduer mer private</translation>
 <translation id="3294503279952534143">Dette private vinduet er mer privat</translation>
 <translation id="6126226144537295436">med Tor-tilkobling</translation>
 <translation id="8541421872680304667">Tor skjuler IP-adressen din for nettstedene du besøker, ved å dirigere surfingen din gjennom flere Tor-tjenere før den når destinasjonen. Tor kan gjøre surfingen tregere, og noen nettsteder fungerer kanskje ikke i det hele tatt.</translation>
-<translation id="8897548669448660973">Bruk av private vinduer endrer bare hva AI Wiz gjør på enheten din — det endrer ikke andres oppførsel. Tor skjuler IP-adressen din fra nettstedene du besøker og gjør det noe vanskeligere, men ikke umulig, for din ISP eller arbeidsgiver å se hvilke nettsteder du besøker. Åpne et privat vindu med Tor fra menyen, eller med [[ key ]].</translation>
+<translation id="8897548669448660973">Bruk av private vinduer endrer bare hva AI Wize gjør på enheten din — det endrer ikke andres oppførsel. Tor skjuler IP-adressen din fra nettstedene du besøker og gjør det noe vanskeligere, men ikke umulig, for din ISP eller arbeidsgiver å se hvilke nettsteder du besøker. Åpne et privat vindu med Tor fra menyen, eller med [[ key ]].</translation>
 <translation id="6975708438781948564">Lær mer om Tor i Brave</translation>
 <translation id="4712050378540986986">Tor-status</translation>
 <translation id="1939334281379458295">Tor er tilkoblet</translation>
@@ -164,15 +164,15 @@
 <translation id="5334844597069022743">Vis kilde</translation>
 <translation id="4720556299488643018">Avslutt abonnement</translation>
 <translation id="1209739344687072997">Rapporter et nettsted som ikke fungerer</translation>
-<translation id="8510478288840333677">Gi utviklerne av AI Wiz beskjed om at dette nettstedet ikke fungerer skikkelig med Shields:</translation>
+<translation id="8510478288840333677">Gi utviklerne av AI Wize beskjed om at dette nettstedet ikke fungerer skikkelig med Shields:</translation>
 <translation id="6387106423577201267">Merk: Rapporten som sendes til Brave-servere vil omfatte nettstedets adresse, Brave-versjonsnummeret, Shields-innstillinger, VPN-status og språkinnstillinger.</translation>
 <translation id="6476216365964140603">Ytterligere informasjon (valgfritt)</translation>
 <translation id="6145852496180774737">Kontakt meg på: (valgfritt)</translation>
 <translation id="7616645803364270729">E-post, Twitter osv.</translation>
 <translation id="5299848999918506028">Takk skal du ha!</translation>
-<translation id="76550953340008122">Takk for at du ga beskjed til utviklerne av AI Wiz om at noe er galt med dette nettstedet. Vi skal gjøre vårt beste for å rette det!</translation>
-<translation id="4046860372562593546">Administrer AI Wiz Ads</translation>
-<translation id="5136973036012418831">Kontroller hvilke typer AI Wiz Ads du ser, og hvor ofte.</translation>
+<translation id="76550953340008122">Takk for at du ga beskjed til utviklerne av AI Wize om at noe er galt med dette nettstedet. Vi skal gjøre vårt beste for å rette det!</translation>
+<translation id="4046860372562593546">Administrer AI Wize Ads</translation>
+<translation id="5136973036012418831">Kontroller hvilke typer AI Wize Ads du ser, og hvor ofte.</translation>
 <translation id="4759608598194750161">Jo flere du ser, jo mer kan du tjene.</translation>
 <translation id="7526443283522395161">Reklamer i ny fane</translation>
 <translation id="7968650944098083708">Varselreklamer</translation>
@@ -195,7 +195,7 @@
 <translation id="7136536490586989815">Maks 5 per time</translation>
 <translation id="5751102711563374080">Maks 10 per time</translation>
 <translation id="2356652719351432565">Regional annonserelevans</translation>
-<translation id="3216275550298493597">Dette lar AI Wiz vise deg annonser myntet på regionen du er i.</translation>
+<translation id="3216275550298493597">Dette lar AI Wize vise deg annonser myntet på regionen du er i.</translation>
 <translation id="8446884382197647889">Les mer</translation>
 <translation id="3783399046165388366">Automatisk oppdaget som <ph name="SUBDIVISION"/></translation>
 <translation id="8010081455002666927">Gjenkjenn automatisk</translation>
@@ -232,28 +232,28 @@
 <translation id="8826352442759228526">Brave Rewards-kontoen din kan ikke bekreftes, fordi du har nådd maksgrensen for antall bekreftede enheter.</translation>
 <translation id="1221593978088944142">Feil: Enhetsgrensen er nådd</translation>
 <translation id="3113653894794167793">Beklager, men det var problemer med å behandle forespørselen din. Prøv igjen.</translation>
-<translation id="6895088073061692390">Dessverre ble AI Wiz Rewards-profilen din rapportert fordi våre automatiske sjekker oppdaget uventet AI Wiz Ads-aktivitet.</translation>
-<translation id="4229056297802204697">Selv om profilen din er flagget, kan du fortsette å se annonser, men du kommer ikke til å være kvalifisert til å motta utbetalinger. Du kan heller ikke koble en depotkonto til AI Wiz Rewards.</translation>
+<translation id="6895088073061692390">Dessverre ble AI Wize Rewards-profilen din rapportert fordi våre automatiske sjekker oppdaget uventet AI Wize Ads-aktivitet.</translation>
+<translation id="4229056297802204697">Selv om profilen din er flagget, kan du fortsette å se annonser, men du kommer ikke til å være kvalifisert til å motta utbetalinger. Du kan heller ikke koble en depotkonto til AI Wize Rewards.</translation>
 <translation id="5124846913141379164">Det er mulig at profilen din ble flagget ved en feil, og at det ikke kreves umiddelbare handlinger fra din side. Flagget på profilen din kan bli fjernet i fremtiden.</translation>
 <translation id="280350148043792509"><ph name="BEGIN_LINK"/>Finn ut mer om Braves prosess ved flagging av Rewards-profiler.<ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">Feil: AI Wiz Rewards-profilen er flagget</translation>
+<translation id="5028274575541726856">Feil: AI Wize Rewards-profilen er flagget</translation>
 <translation id="2607420597216860026">Prøv igjen etter du har fullført ID-verifisering på <ph name="PROVIDER"/>.</translation>
 <translation id="3183954159462541696">Feil: Du trenger en bekreftet konto for å logge på</translation>
-<translation id="1859789048900659918">Hmm, det ser ut til at AI Wiz Rewards-landet ditt ikke samsvarer med <ph name="PROVIDER"/>-kontoen du prøver å koble til.</translation>
+<translation id="1859789048900659918">Hmm, det ser ut til at AI Wize Rewards-landet ditt ikke samsvarer med <ph name="PROVIDER"/>-kontoen du prøver å koble til.</translation>
 <translation id="8925428135452218262">Feil: Landene samsvarer ikke</translation>
-<translation id="5260522591743022748">Hmm, det ser ut som at AI Wiz Rewards allerede er bekreftet med en annen <ph name="PROVIDER"/>-konto. Prøv å bekrefte på nytt med den tidligere kontoen.</translation>
+<translation id="5260522591743022748">Hmm, det ser ut som at AI Wize Rewards allerede er bekreftet med en annen <ph name="PROVIDER"/>-konto. Prøv å bekrefte på nytt med den tidligere kontoen.</translation>
 <translation id="5111921830714291902">Feil: Annen konto</translation>
-<translation id="5225019866741699134">Det ser ut som om det ikke er mulig å koble <ph name="PROVIDER"/> til AI Wiz Rewards akkurat nå. Prøv på nytt senere.</translation>
+<translation id="5225019866741699134">Det ser ut som om det ikke er mulig å koble <ph name="PROVIDER"/> til AI Wize Rewards akkurat nå. Prøv på nytt senere.</translation>
 <translation id="6105073131081187815">Du kan se <ph name="BEGIN_LINK"/>tjenestestatusen her<ph name="END_LINK"/>.</translation>
 <translation id="2400786541309111904">Feil: Kan ikke koble til den valgte partneren akkurat nå.</translation>
-<translation id="1024520300696337331"><ph name="PROVIDER"/>-kontoen din kan ikke knyttes til Brav Rewards-profilen din akkurat nå. <ph name="PROVIDER"/>-kontoen er registrert i et land som for tiden ikke støttes for tilkobling til AI Wiz Rewards.</translation>
-<translation id="619384413404021992">Se den <ph name="LINK_BEGIN"/>oppdaterte listen over regioner som støttes, og finn ut mer<ph name="END_LINK"/> om å knytte partnerkontoer til AI Wiz Rewards.</translation>
+<translation id="1024520300696337331"><ph name="PROVIDER"/>-kontoen din kan ikke knyttes til Brav Rewards-profilen din akkurat nå. <ph name="PROVIDER"/>-kontoen er registrert i et land som for tiden ikke støttes for tilkobling til AI Wize Rewards.</translation>
+<translation id="619384413404021992">Se den <ph name="LINK_BEGIN"/>oppdaterte listen over regioner som støttes, og finn ut mer<ph name="END_LINK"/> om å knytte partnerkontoer til AI Wize Rewards.</translation>
 <translation id="7193389978208728181">Feil: Regionen støttes ikke for tiden</translation>
 <translation id="5382684862562314222">BAT støttes ikke enda i regionen din på Uphold.</translation>
 <translation id="9074594632540931067">Feil: BAT utilgjengelig</translation>
 <translation id="5376524136040178759">Ifølge Uphold er det for tiden visse begrensninger på Uphold-kontoen din. Logg på Uphold-kontoen og se om du har fått noen varsler eller om det er flere trinn du må fullføre i kontoen, og prøv på nytt. Det kan for eksempel være at Uphold vil be deg legge inn ytterligere informasjon.</translation>
 <translation id="6996157559236886133">Feil: Begrenset Uphold-kontofunksjonalitet</translation>
-<translation id="3274650021044762770">Det oppstod et problem ved bekreftelse av nettleserforespørselen for å koble AI Wiz Rewards til <ph name="PROVIDER"/>-kontoen din. Du kan <ph name="BEGIN_LINK"/>kontakte brukerstøtten<ph name="END_LINK"/> for mer hjelp.</translation>
+<translation id="3274650021044762770">Det oppstod et problem ved bekreftelse av nettleserforespørselen for å koble AI Wize Rewards til <ph name="PROVIDER"/>-kontoen din. Du kan <ph name="BEGIN_LINK"/>kontakte brukerstøtten<ph name="END_LINK"/> for mer hjelp.</translation>
 <translation id="1316066811927496401">Feil: Forespørselen kunne ikke valideres</translation>
 <translation id="8167256685618982116">Ved å skru på <ph name="TITLE"/>, samtykker du til <ph name="BEGIN_LINK1"/>bruksvilkårene<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>retningslinjene for personvern<ph name="END_LINK2"/>.</translation>
 <translation id="8817096698141999876">Oppbevaringskontoer (krever ID-verifisering)</translation>
@@ -263,7 +263,7 @@
 <translation id="7329170127335794328">Ikke tilgjengelig i din region ennå</translation>
 <translation id="966956302643313970">For å begynne å tjene belønninger i form av Basic Attention Token (BAT), må du koble til en konto. BAT du tjener opp, overføres automatisk til kontoen din hver måned.</translation>
 <translation id="1892970806832316900">Venter frem til <ph name="DATE"/></translation>
-<translation id="7849926087559412554">Au da! Nettleseren din kan ikke motta AI Wiz Private Ads.</translation>
+<translation id="7849926087559412554">Au da! Nettleseren din kan ikke motta AI Wize Private Ads.</translation>
 <translation id="5177429570315095022">Du må oppdatere nettleseren for å fortsette å se annonser.</translation>
 <translation id="7352651011704765696">Noe gikk galt</translation>
 <translation id="4593680147181354667">Diagnostikk-ID</translation>
@@ -350,8 +350,8 @@
 <translation id="6521149675246672063">Frakoblet (Verifisert)</translation>
 <translation id="5058161306698404465">Skapermiljø:</translation>
 <translation id="5856438412804207598">Nåværende miljø:</translation>
-<translation id="5916290544882167205">Brave Software. AI Wiz er et registrert varemerke for AI Wiz Software. Navn på nettsteder kan være varemerker eller registrerte varemerker for eieren av det aktuelle nettstedet.</translation>
-<translation id="9026369588205476247">For å beskytte ditt personvern, blir ikke denne AI Wiz Rewards-utskriften lagret eller logget noen andre steder enn på din enhet (denne datamaskinen). Den kan ikke hentes opp igjen fra AI Wiz i tilfelle datatap på din enhet.</translation>
+<translation id="5916290544882167205">Brave Software. AI Wize er et registrert varemerke for AI Wize Software. Navn på nettsteder kan være varemerker eller registrerte varemerker for eieren av det aktuelle nettstedet.</translation>
+<translation id="9026369588205476247">For å beskytte ditt personvern, blir ikke denne AI Wize Rewards-utskriften lagret eller logget noen andre steder enn på din enhet (denne datamaskinen). Den kan ikke hentes opp igjen fra AI Wize i tilfelle datatap på din enhet.</translation>
 <translation id="3587482841069643663">Alle</translation>
 <translation id="4241224519481557898">Kategori</translation>
 <translation id="3080423471207781945">Maksimalt antall mottatte annonser pr. time:</translation>
@@ -361,7 +361,7 @@
 <translation id="2777306694585938662">Ads-belønninger er mottatt</translation>
 <translation id="5212777575344695266">Merk som usømmelig</translation>
 <translation id="2111256234277361810">Merk som usømmelig ✓</translation>
-<translation id="8988332871810963281">Det er ingen AI Wiz Ads-historikk for øyeblikket</translation>
+<translation id="8988332871810963281">Det er ingen AI Wize Ads-historikk for øyeblikket</translation>
 <translation id="5345727496083327478">Du kommer ikke til å motta annonser fra denne kategorien lenger</translation>
 <translation id="2631006050119455616">Lagret</translation>
 <translation id="6976444672879155794">Bidra automatisk [[processor]]</translation>
@@ -378,7 +378,7 @@
 <translation id="1418534671788496616">Se innskuddshistorikken</translation>
 <translation id="3412655388715513818">Ekskluder denne siden</translation>
 <translation id="418343137736963579">Total antall nettsider du har ekskludert fra Auto-Bidra:</translation>
-<translation id="8802504113265057166">[[currency]] som ikke brukes innen utløpsdatoen, returneres automatisk til AI Wiz User Growth Pool.</translation>
+<translation id="8802504113265057166">[[currency]] som ikke brukes innen utløpsdatoen, returneres automatisk til AI Wize User Growth Pool.</translation>
 <translation id="279567716178902927">Utløpsdato for stipend</translation>
 <translation id="1389143276807887637">importer</translation>
 <translation id="5737831580668469027">Månedlige bidrag!</translation>
@@ -416,12 +416,12 @@
 <translation id="1110535155349301542">fjern</translation>
 <translation id="8204292894173669182">Fjern fra Lagrede</translation>
 <translation id="5939518447894949180">Tilbakestill</translation>
-<translation id="3349204812119681938">Tilbakestill AI Wiz Rewards</translation>
+<translation id="3349204812119681938">Tilbakestill AI Wize Rewards</translation>
 <translation id="5669281110673664811">Slett ekskluderingslisten</translation>
 <translation id="1797334173232638045">De festede sidene dine er flyttet til</translation>
 <translation id="3074127054582480056">Obs</translation>
-<translation id="1666001796278936721">Ved tilbakestilling slettes den gjeldende AI Wiz Rewards-profilen, og du starter på nytt med en splitter ny AI Wiz Rewards-profil. Før du fortsetter bør du <ph name="LINK_BEGIN"/>lese mer<ph name="LINK_END"/> om tilbakestilling for å være på den sikre siden.</translation>
-<translation id="4806029412510565611">Jeg forstår at min nåværende AI Wiz rewards-profil og AI Wiz Rewards-informasjonen min slettes fra enheten min, og jeg har lest <ph name="LINK_BEGIN"/>supportartikkelen om tilbakestilling<ph name="LINK_END"/>.</translation>
+<translation id="1666001796278936721">Ved tilbakestilling slettes den gjeldende AI Wize Rewards-profilen, og du starter på nytt med en splitter ny AI Wize Rewards-profil. Før du fortsetter bør du <ph name="LINK_BEGIN"/>lese mer<ph name="LINK_END"/> om tilbakestilling for å være på den sikre siden.</translation>
+<translation id="4806029412510565611">Jeg forstår at min nåværende AI Wize rewards-profil og AI Wize Rewards-informasjonen min slettes fra enheten min, og jeg har lest <ph name="LINK_BEGIN"/>supportartikkelen om tilbakestilling<ph name="LINK_END"/>.</translation>
 <translation id="3494964159182650590">Sammendrag av belønninger</translation>
 <translation id="2913994227901456490">Se alle [[numItems]] gjenstander</translation>
 <translation id="6685434227783226855">Send et Bidrag</translation>
@@ -439,7 +439,7 @@
 <translation id="7232682712743566408">Belønninger – saldo</translation>
 <translation id="4258022280942725182">Dine Brave-belønninger</translation>
 <translation id="6727483290601442544">Se detaljer</translation>
-<translation id="4206899127409458763">Oppretter AI Wiz Rewards-profilen</translation>
+<translation id="4206899127409458763">Oppretter AI Wize Rewards-profilen</translation>
 <translation id="8706157865312453070">Ekskluderte nettsteder</translation>
 <translation id="2501059654604370822">Fjern fra ekskluderte</translation>
 <translation id="9075700728717335924">Du har ekskludert</translation>
@@ -448,7 +448,7 @@
 <translation id="5113531205597573951">Nettsteder besøkt</translation>
 <translation id="4450893287417543264">Ikke vis igjen</translation>
 <translation id="7642372245223412840">Koble til bitFlyer</translation>
-<translation id="6143701117592994599">Hvis du kobler AI Wiz Rewards til en bitFlyer-konto kan du tjene BAT og ta ut BAT-inntekter fra AI Wiz Rewards.</translation>
+<translation id="6143701117592994599">Hvis du kobler AI Wize Rewards til en bitFlyer-konto kan du tjene BAT og ta ut BAT-inntekter fra AI Wize Rewards.</translation>
 <translation id="4354564238172327160">Bli Brave-innholdsskaper!</translation>
 <translation id="4639659520811817892">Gå til creators.brave.com for å registrere deg i dag og begynne å tjene inn BAT fra fans og følgere.</translation>
 <translation id="4816455138209470435">Brave har støtte for YouTube, Twitch, Vimeo og mange fler!</translation>
@@ -458,7 +458,7 @@
 <translation id="7703007724342399482">Få 2 % krypto tilbake med Uphold-kortet</translation>
 <translation id="1109729143147368573">Bruk kryptoen din og andre aktiva hos nesten 50 millioner selgere og minibanker over hele verden. Bruk krypto for å få krypto!</translation>
 <translation id="3787061634640932557">Rediger kort</translation>
-<translation id="2070991379950719711">Begynn å bruke AI Wiz Rewards</translation>
+<translation id="2070991379950719711">Begynn å bruke AI Wize Rewards</translation>
 <translation id="5977237145327845546">Start en privat videosamtale med dine venner og kolleger.</translation>
 <translation id="8863928195533744356">Start anrop</translation>
 <translation id="3651550649176056334">Om dine data</translation>
@@ -473,17 +473,17 @@
 <translation id="326118736933420687">Du ser på en WebTorrent-side</translation>
 <translation id="7534079972563542000">Ustoppelige domener</translation>
 <translation id="4492298165410552103">Vil du slå på støtte for ustoppelige domener i Brave?</translation>
-<translation id="3647533686160055812">Brave vil bruke Infura til å resolve .crypto (pluss .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil)-domenenavn som er på Unstoppable Domains. AI Wiz skjuler IP-adressen din. Hvis du slår på dette, vil Infura se at noen prøver å besøke disse domenene, men ikke noe annet. Les Infuras <ph name="BEGIN_INFURA_TOU_LINK"/>brukervilkår<ph name="END_INFURA_TOU_LINK"/> og <ph name="BEGIN_INFURA_PRIVACY_LINK"/>personvernerklæring<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="3647533686160055812">Brave vil bruke Infura til å resolve .crypto (pluss .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil)-domenenavn som er på Unstoppable Domains. AI Wize skjuler IP-adressen din. Hvis du slår på dette, vil Infura se at noen prøver å besøke disse domenene, men ikke noe annet. Les Infuras <ph name="BEGIN_INFURA_TOU_LINK"/>brukervilkår<ph name="END_INFURA_TOU_LINK"/> og <ph name="BEGIN_INFURA_PRIVACY_LINK"/>personvernerklæring<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="6513892817556267573">Ethereum-navnetjenesten</translation>
 <translation id="4335039108389860301">Vil du slå på støtte for Ethereum-navnetjenesten (ENS) i Brave?</translation>
-<translation id="4609973808011229683">Brave vil bruke Infura til å resolve .eth-domenenavn som befinner seg på Ethereum Name Service (ENS).  AI Wiz skjuler IP-adressen din. Hvis du slår på dette, får Infura se at noen prøver å besøke disse .eth-domenene, men ikke noe annet. Les Infuras <ph name="BEGIN_INFURA_TOU_LINK"/>brukervilkår<ph name="END_INFURA_TOU_LINK"/> og <ph name="BEGIN_INFURA_PRIVACY_LINK"/>personvernerklæring<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="4609973808011229683">Brave vil bruke Infura til å resolve .eth-domenenavn som befinner seg på Ethereum Name Service (ENS).  AI Wize skjuler IP-adressen din. Hvis du slår på dette, får Infura se at noen prøver å besøke disse .eth-domenene, men ikke noe annet. Les Infuras <ph name="BEGIN_INFURA_TOU_LINK"/>brukervilkår<ph name="END_INFURA_TOU_LINK"/> og <ph name="BEGIN_INFURA_PRIVACY_LINK"/>personvernerklæring<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="807404806385418949">Ethereum Name Service offchain-søk</translation>
 <translation id="4049590838234508776">Vil du aktivere støtte for Ethereum Name Service-offchainsøk i Brave?</translation>
 <translation id="5944991147217767764">Dette .eth-domenenavnet er lagret offchain, og blir resolvet av en tredjeparts gateway. Hvis du aktiverer ENS offchain-søk, vil tredjepartsgatewayen se at du prøver å besøke .eth-domenet. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Les mer<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Fortsett med offchain-søk</translation>
 <translation id="531747189990625622">Solena-navnetjenesten</translation>
 <translation id="1090584614351290462">Vil du slå på støtte for Solena-navnetjenesten (SNS) i Brave?</translation>
-<translation id="1026480261052976838">Brave vil bruke en tredjepart til å resolve .sol-domenenavn. AI Wiz skjuler IP-adressen din. Hvis du slår på dette, vil tredjeparten kunne se at noen forsøker å besøke disse .sol-domenene, men ikke noe mer. Du finner mer informasjon om hvilke tredjeparter vi benytter oss av, og personvernreglene deres, på <ph name="BEGIN_SNS_WIKI_LINK"/>hjelpesiden vår<ph name="END_SNS_WIKI_LINK"/>.</translation>
+<translation id="1026480261052976838">Brave vil bruke en tredjepart til å resolve .sol-domenenavn. AI Wize skjuler IP-adressen din. Hvis du slår på dette, vil tredjeparten kunne se at noen forsøker å besøke disse .sol-domenene, men ikke noe mer. Du finner mer informasjon om hvilke tredjeparter vi benytter oss av, og personvernreglene deres, på <ph name="BEGIN_SNS_WIKI_LINK"/>hjelpesiden vår<ph name="END_SNS_WIKI_LINK"/>.</translation>
 <translation id="7378412287463452336">Fortsett med Infura-serveren</translation>
 <translation id="4388873516324656141">Fortsett med en SNS-server</translation>
 <translation id="2356070529366658676">Spør</translation>
@@ -491,7 +491,7 @@
 <translation id="2468755552460246661">Domenet er blokkert</translation>
 <translation id="6393849031898466746">Dette nettstedet kan prøve å spore deg på tvers av andre nettsteder</translation>
 <translation id="983774928604730749">Brave har forhindret det følgende nettstedet fra å lastes inn:</translation>
-<translation id="8629537573456243518">Siden du har valgt aggressiv blokkering av annonser og sporere, blokkerer AI Wiz denne siden før første nettverkstilkobling.</translation>
+<translation id="8629537573456243518">Siden du har valgt aggressiv blokkering av annonser og sporere, blokkerer AI Wize denne siden før første nettverkstilkobling.</translation>
 <translation id="2459038234784107183">Ikke advar meg om dette nettstedet igjen</translation>
 <translation id="8242426110754782860">Fortsett</translation>
 <translation id="2501278716633472235">Gå tilbake</translation>
@@ -543,7 +543,7 @@
 <translation id="3373798179786163193">Fortsett med offentlig gateway</translation>
 <translation id="1974060860693918893">Avansert</translation>
 <translation id="9096577886148726047">Skjul avansert</translation>
-<translation id="182581792765792826">Brave kunne ikke laste de forespurte IPFS-ressursene – enten fordi den lokale IPFS-noden ikke startet, eller fordi det ikke er noen tilkoblede tjenere tilgjengelig for øyeblikket. Dersom du velger "Fortsett", vil AI Wiz automatisk falle tilbake til standard offentlig systemport når forsøk på å bruke Braves lokale IPFS-node mislykkes. Du kan endre dette mønsteret når som helst i Brave-innstillingene.</translation>
+<translation id="182581792765792826">Brave kunne ikke laste de forespurte IPFS-ressursene – enten fordi den lokale IPFS-noden ikke startet, eller fordi det ikke er noen tilkoblede tjenere tilgjengelig for øyeblikket. Dersom du velger "Fortsett", vil AI Wize automatisk falle tilbake til standard offentlig systemport når forsøk på å bruke Braves lokale IPFS-node mislykkes. Du kan endre dette mønsteret når som helst i Brave-innstillingene.</translation>
 <translation id="8026038288183400906">Ønsket IPFS</translation>
 <translation id="2058855456574089690">Bestem ønsket IPFS</translation>
 <translation id="4780526507945807546">Bruk en lokal IPFS-node for Brave</translation>
@@ -601,15 +601,15 @@
 <translation id="1848737374354350807">Saldo</translation>
 <translation id="6516984207843289176">Tilknytt konto</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>Er du klar til å begynne å tjene penger?<ph name="BOLD_END"/> Koble til en konto eller opprett en hos en av partnerne våre.</translation>
-<translation id="1772961321862399863">For å tjene opp BAT må brukerne tilknytte en partnerkonto til AI Wiz Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så opptjening er ikke mulig. Per nå vil det å slå på AI Wiz rewards automatisk støtte innholdsskapere.</translation>
-<translation id="902298128239575729">Send bidrag med AI Wiz Rewards</translation>
-<translation id="6276721355724491595">Du vil kunne sende bidrag på forespørsel til favorittskaperne dine med AI Wiz Rewards-saldoen din når du har en oppbevaringskonto tilkoblet.</translation>
-<translation id="1149481926056509086">For å sende on demand-bidrag må brukerne tilknytte en partnerkonto til AI Wiz Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så sending er ikke mulig. I mellomtiden støtter du fortsatt innholdsskapere automatisk.</translation>
+<translation id="1772961321862399863">For å tjene opp BAT må brukerne tilknytte en partnerkonto til AI Wize Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så opptjening er ikke mulig. Per nå vil det å slå på AI Wize rewards automatisk støtte innholdsskapere.</translation>
+<translation id="902298128239575729">Send bidrag med AI Wize Rewards</translation>
+<translation id="6276721355724491595">Du vil kunne sende bidrag på forespørsel til favorittskaperne dine med AI Wize Rewards-saldoen din når du har en oppbevaringskonto tilkoblet.</translation>
+<translation id="1149481926056509086">For å sende on demand-bidrag må brukerne tilknytte en partnerkonto til AI Wize Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så sending er ikke mulig. I mellomtiden støtter du fortsatt innholdsskapere automatisk.</translation>
 <translation id="2584752537998444309">{PUBLISHER_COUNT, plural,
-      =1 {Denne måneden har du besøkt # innholdsskaper støttet av AI Wiz Rewards}
-      other {Denne måneden har du besøkt # innholdsskapere støttet av AI Wiz Rewards}
+      =1 {Denne måneden har du besøkt # innholdsskaper støttet av AI Wize Rewards}
+      other {Denne måneden har du besøkt # innholdsskapere støttet av AI Wize Rewards}
     }</translation>
-<translation id="6067959437127691361">Ved å bruke AI Wiz rewards kan du støtte innholdsskapere samtidig som du tjener opp BAT.</translation>
+<translation id="6067959437127691361">Ved å bruke AI Wize rewards kan du støtte innholdsskapere samtidig som du tjener opp BAT.</translation>
 <translation id="1187367336925051518">Belønninger for <ph name="MONTH"/>: <ph name="AMOUNT"/></translation>
 <translation id="3274366539954332481">Annonsebelønningene dine for <ph name="MONTH"/> er her!</translation>
 <translation id="7861645265922445992">Hent belønninger</translation>
@@ -622,12 +622,12 @@
 <translation id="2278423362884506724">Bruk tokener til å kjøpe gavekort, veksle til andre valutaer, støtte innholdsskapere med mer.</translation>
 <translation id="6278643716658443228">Rewards-innstillinger</translation>
 <translation id="2862978891748913252">Velg land</translation>
-<translation id="3717922248131893262">For å fortsette å bruke AI Wiz Rewards må du velge landet ditt, så vi kan vise deg de riktige alternativene og annonsene for din region. <ph name="LINK_BEGIN"/>Personvernerklæring<ph name="LINK_END"/></translation>
+<translation id="3717922248131893262">For å fortsette å bruke AI Wize Rewards må du velge landet ditt, så vi kan vise deg de riktige alternativene og annonsene for din region. <ph name="LINK_BEGIN"/>Personvernerklæring<ph name="LINK_END"/></translation>
 <translation id="2965798296974325760">Begynn å bruke Rewards</translation>
 <translation id="2221902203895354376">En ny tokenopptjening er tilgjengelig!</translation>
 <translation id="2956070106555335453">Sammendrag</translation>
 <translation id="2369994359029526515">Uverifisert Skaper</translation>
-<translation id="3984338085370091436">Denne skaperen er ikke verifisert av AI Wiz Creators ennå. Du vil kunne sende dem bidrag når de har blitt verifisert.</translation>
+<translation id="3984338085370091436">Denne skaperen er ikke verifisert av AI Wize Creators ennå. Du vil kunne sende dem bidrag når de har blitt verifisert.</translation>
 <translation id="6020176662032623904">Verifisert Skaper</translation>
 <translation id="8635423276837443905">Oppdater skaperens verifiseringsstatus</translation>
 <translation id="6633436087937398390"><ph name="NAME"/> på <ph name="PLATFORM"/></translation>
@@ -659,26 +659,26 @@
 <translation id="2429828319207652823">Det oppstod et problem under behandlingen av bidraget ditt.</translation>
 <translation id="6390041270339783491">Det månedlige bidraget mislyktes</translation>
 <translation id="7047578174221019462">De månedlige bidragene dine er behandlet.</translation>
-<translation id="2529827670795983639">Det ser ut til at dette ikke fungerer – AI Wiz Ads er fortsatt pauset. Kontakt oss hvis du trenger hjelp med å løse captcha-en.</translation>
+<translation id="2529827670795983639">Det ser ut til at dette ikke fungerer – AI Wize Ads er fortsatt pauset. Kontakt oss hvis du trenger hjelp med å løse captcha-en.</translation>
 <translation id="261607053214862521">Maks. antall forsøk er overskredet</translation>
 <translation id="2323171459178104277">Løst!</translation>
-<translation id="1512837998731269583">Annonsene og inntjeningen gjenopptas. Takk for at du hjelper oss med å ivareta sikkerheten ved AI Wiz Rewards og annonsesystemet.</translation>
+<translation id="1512837998731269583">Annonsene og inntjeningen gjenopptas. Takk for at du hjelper oss med å ivareta sikkerheten ved AI Wize Rewards og annonsesystemet.</translation>
 <translation id="3247549836099021862">Kontakt brukerstøtten</translation>
 <translation id="5234764350956374838">Lukk</translation>
 <translation id="7859066142771796818">Bruk tokener til å kjøpe gavekort, veksle til andre valutaer, støtte innholdsskapere med mer.</translation>
 <translation id="5425006356459378415">Brave-belønninger er ikke tilgjengelig</translation>
-<translation id="909076461795862330">Dessverre oppstod det en feil under forsøket på å konfigurere AI Wiz Rewards. Prøv på nytt.</translation>
+<translation id="909076461795862330">Dessverre oppstod det en feil under forsøket på å konfigurere AI Wize Rewards. Prøv på nytt.</translation>
 <translation id="3180990265682133881">Dessverre oppstod det en feil da landet skulle angis. Prøv på nytt.</translation>
 <translation id="5931798071481566121">Nye registreringer for Brave-belønninger er deaktivert for din region for tiden. Du kan alltids prøve igjen senere. <ph name="LINK_BEGIN"/>Les mer<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">Hurra, alt er klart!</translation>
 <translation id="6136350726756049410">Nå kan du få belønninger for å se på annonser. Du bidrar til å gjøre nettet til et bedre sted for alle. Og det er kjempebra!</translation>
-<translation id="5547108999862247665">Hvordan fungerer AI Wiz Rewards?</translation>
+<translation id="5547108999862247665">Hvordan fungerer AI Wize Rewards?</translation>
 <translation id="3970520675790340955">Velg landet du er i, slik at vi kan vise de riktige valgmulighetene og annonsene for din region.</translation>
 <translation id="6945221475159498467">Velg</translation>
 <translation id="3279158300746391749">Trykk på <ph name="BAT_ICON"/> BAT-ikonet i nettadresselinjen for å starte.</translation>
 <translation id="8465790416279415448">Ved å fortsette, samtykker du til <ph name="TOS_LINK_BEGIN"/>Bruksvilkårene<ph name="TOS_LINK_END"/> og <ph name="PP_LINK_BEGIN"/>Retningslinjene for personvern<ph name="PP_LINK_END"/>.</translation>
 <translation id="1015443539415537847">Brave Rewards er ikke tilgjengelig</translation>
-<translation id="5007776270364097327">Det ser dessverre ut til at du er i en region der AI Wiz Rewards ikke er tilgjengelig.</translation>
+<translation id="5007776270364097327">Det ser dessverre ut til at du er i en region der AI Wize Rewards ikke er tilgjengelig.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>Finn ut mer<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">Men ta det med ro.</translation>
 <translation id="5027616819996705541">Du kan fortsatt surfe privat på nettet!</translation>
@@ -689,7 +689,7 @@
 <translation id="1483493594462132177">Send</translation>
 <translation id="6632987674051304487">Send med <ph name="PROVIDER"/></translation>
 <translation id="4319632089378796037">Bruk Web3 Wallet</translation>
-<translation id="4530198836725543997">Denne skaperen har registrert seg hos AI Wiz og kan motta bidrag fra AI Wiz Rewards-brukere.</translation>
+<translation id="4530198836725543997">Denne skaperen har registrert seg hos AI Wize og kan motta bidrag fra AI Wize Rewards-brukere.</translation>
 <translation id="4529874892536380156">Gjør dette til et fast månedlig bidrag. Du kan kansellere det når som helst.</translation>
 <translation id="1177863135347784049">Tilpasset</translation>
 <translation id="5907051927340164207">Du sender allerede månedlige bidrag til denne innholdsskaperen</translation>
@@ -699,11 +699,11 @@
 <translation id="8379442066667303579">Du kan fortsatt sende kryptobidrag til denne innholdsskaperen ved å bruke Web3-lommeboken din.</translation>
 <translation id="5738476099155572155">Send kryptobidrag</translation>
 <translation id="1162617592412598913">Logget ut av <ph name="PROVIDER"/></translation>
-<translation id="1782485249139199535">Du ser ut til å være logget ut av <ph name="PROVIDER"/> for AI Wiz Rewards. Logg på igjen for å fortsette.</translation>
+<translation id="1782485249139199535">Du ser ut til å være logget ut av <ph name="PROVIDER"/> for AI Wize Rewards. Logg på igjen for å fortsette.</translation>
 <translation id="4379244534135194459">Du kan også sende kryptobidrag til denne innholdsskaperen ved å bruke Web3-lommeboken din.</translation>
 <translation id="2718860759172031728">Logg på <ph name="PROVIDER"/></translation>
 <translation id="6268134562674951939">Du har ikke nok tokener</translation>
-<translation id="5562948772940025260">Du kan bare sende opptil <ph name="AMOUNT"/> BAT med AI Wiz Rewards-saldoen din.</translation>
+<translation id="5562948772940025260">Du kan bare sende opptil <ph name="AMOUNT"/> BAT med AI Wize Rewards-saldoen din.</translation>
 <translation id="4827581232860040208">Det oppstod et problem ved sending av bidraget ditt.</translation>
 <translation id="3259723213051400722">Prøv på nytt.</translation>
 <translation id="5379685283876547860">Bidrag sendt!</translation>
@@ -729,7 +729,7 @@
 <translation id="1128992132632883337">En intern parsingfeil har oppstått</translation>
 <translation id="5382339341735118861">En generisk behandlingsfeil har oppstått</translation>
 <translation id="7123780456696055383">Den forespurte ressursen er ikke tilgjengelig</translation>
-<translation id="1680597601664421644">Huskeregelen som importeres er ikke gyldig for AI Wiz Wallet</translation>
+<translation id="1680597601664421644">Huskeregelen som importeres er ikke gyldig for AI Wize Wallet</translation>
 <translation id="4641919696349069826">En forespørsel er allerede aktiv</translation>
 <translation id="872806943696014633">Transaksjonsdata mangler</translation>
 <translation id="7068183357903252127">Transaksjonsdataene 'to' eller 'data' må spesifiseres</translation>
@@ -907,7 +907,7 @@
 <translation id="6892232036314454524">Denne feilen kan oppstå når feil applikasjon er åpen på Ledger-enheten.</translation>
 <translation id="6598291715079540080">Trezor</translation>
 <translation id="5605670050355397069">Ledger</translation>
-<translation id="4247752006222818397">Gi AI Wiz tilgang til Ledger-enheten din</translation>
+<translation id="4247752006222818397">Gi AI Wize tilgang til Ledger-enheten din</translation>
 <translation id="4378551569595875038">Kobler til …</translation>
 <translation id="1943188256166395881">Legg til markerte kontoer</translation>
 <translation id="8554010658308662631">Last inn mer</translation>
@@ -970,7 +970,7 @@
 <translation id="3352959425838279177">Hent Eter fra en kran for <ph name="SELECTED_NETWORK"/></translation>
 <translation id="6449626816252815844">Velg kjøpsmetode</translation>
 <translation id="8009571545960303544">Det bes om signaturen din</translation>
-<translation id="5294062982587710720">Vær oppmerksom på at AI Wiz ikke kan gå god for hva som skjer hvis du signerer. En signatur kan autorisere nesten en hvilken som helst operasjon i kontoen din eller på dine vegne, herunder blant annet å gi full kontroll over kontoen og kryptoressursene dine til siden som kommer med forespørselen, Signer bare hvis du er sikker på at du stoler på den aktuelle siden og vil gjøre denne handlingen.</translation>
+<translation id="5294062982587710720">Vær oppmerksom på at AI Wize ikke kan gå god for hva som skjer hvis du signerer. En signatur kan autorisere nesten en hvilken som helst operasjon i kontoen din eller på dine vegne, herunder blant annet å gi full kontroll over kontoen og kryptoressursene dine til siden som kommer med forespørselen, Signer bare hvis du er sikker på at du stoler på den aktuelle siden og vil gjøre denne handlingen.</translation>
 <translation id="3474375934783434676">Signer på egen risiko</translation>
 <translation id="5488357322146334497">Melding</translation>
 <translation id="3586931643579894722">Skjul detaljer</translation>
@@ -1047,7 +1047,7 @@
 <translation id="9139452553033760558">I 1 uke</translation>
 <translation id="1658834457013045127">Alltid</translation>
 <translation id="2770851145415891830">Eksisterende kryptolommebøker funnet</translation>
-<translation id="2237759620789871865">Om du heller vil hoppe over importen og beholde den gamle Crypto Wallets-opplevelsen, er det bare å navigere til <ph name="LINK_BEFORE"/>innstillinger<ph name="LINK_AFTER"/> for AI Wiz Browser og endre standard tilbake til Crypto Wallets. Du kan også importere, prøve nye AI Wiz Wallet og bytte tilbake når som helst.</translation>
+<translation id="2237759620789871865">Om du heller vil hoppe over importen og beholde den gamle Crypto Wallets-opplevelsen, er det bare å navigere til <ph name="LINK_BEFORE"/>innstillinger<ph name="LINK_AFTER"/> for AI Wize Browser og endre standard tilbake til Crypto Wallets. Du kan også importere, prøve nye AI Wize Wallet og bytte tilbake når som helst.</translation>
 <translation id="5590175005414413980">Skriv inn det eksisterende CryptoWallet-passordet for å importere til Brave-lommeboken. Dra nytte av en raskere og sikrere måte å administrere kryptoressurser og ha interaksjon med Web3 DApps på.</translation>
 <translation id="880619123281809987">Skriv inn passordet for kryptolommeboken</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> koblet til</translation>
@@ -1194,7 +1194,7 @@
 <translation id="5522073372365069684">Kjøp med Ramp</translation>
 <translation id="6153197326949684688">Selg med <ph name="OFFRAMP_PROVIDER"/></translation>
 <translation id="7902920577183739843">Kjøp med Sardine</translation>
-<translation id="3301984548406568819">Finansielle opplysninger og transaksjonsopplysninger behandles av onramp-partnerne våre. AI Wiz hverken samler inn eller har tilgang til slike data.</translation>
+<translation id="3301984548406568819">Finansielle opplysninger og transaksjonsopplysninger behandles av onramp-partnerne våre. AI Wize hverken samler inn eller har tilgang til slike data.</translation>
 <translation id="6534275647567011533">Kjøp med Transak</translation>
 <translation id="5973390321030037823">Kjøp med Link</translation>
 <translation id="1932640759496708012">Kjøp med Coinbase Pay</translation>
@@ -1256,7 +1256,7 @@
 <translation id="9104177294757104789">Send <ph name="VALUE"/></translation>
 <translation id="4048336522751528394">Bytt <ph name="MAKER"/> til <ph name="TAKER"/></translation>
 <translation id="8613144770663526433">Logg på med Brave-lommeboken</translation>
-<translation id="8813165409788097898">Du logger deg på <ph name="ORIGIN"/>. AI Wiz Wallet kommer til å dele lommebokadressen din med <ph name="ORIGIN"/>.</translation>
+<translation id="8813165409788097898">Du logger deg på <ph name="ORIGIN"/>. AI Wize Wallet kommer til å dele lommebokadressen din med <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Vis detaljer</translation>
 <translation id="3950820424414687140">Logg på</translation>
 <translation id="4530494379350999373">Opprinnelse</translation>
@@ -1352,7 +1352,7 @@
 <translation id="3890567288132019108">Finn ut mer om hvordan du begrenser risikoene med Rainbow Bridge</translation>
 <translation id="1792917191129448067">Åpne Rainbow Bridge-appen</translation>
 <translation id="1522775706527775647">Bro til Aurora</translation>
-<translation id="4903322403594141291">Les mer om AI Wiz Wallet</translation>
+<translation id="4903322403594141291">Les mer om AI Wize Wallet</translation>
 <translation id="3875185448438395303">Minst:</translation>
 <translation id="2029465635925899949">8 tegn</translation>
 <translation id="6697810017029555732">Match!</translation>
@@ -1407,7 +1407,7 @@
 <translation id="6260144012548445299">Les mer om den nye lommeboken</translation>
 <translation id="8746910870914151528">Juridiske greier</translation>
 <translation id="5148123176978018397">Godta følgende:</translation>
-<translation id="6088314935678153800">Jeg forstår at dette er en lommebok jeg styrer selv og at det kun er jeg som er ansvarlig for tilknyttede midler, ressurser og konti og for å gjøre det som trengs for å sikre, beskytte og ta sikkerhetskopi av lommeboken. Jeg forstår at AI Wiz IKKE har tilgang til lommeboken min eller kan reversere transaksjonene mine på mine vegne og at gjenopprettingsfrasen min er den ENESTE måten å få tilgang til lommeboken på i tilfeller med tapt passord, stjålet enhet eller tilsvarende hendelser.</translation>
+<translation id="6088314935678153800">Jeg forstår at dette er en lommebok jeg styrer selv og at det kun er jeg som er ansvarlig for tilknyttede midler, ressurser og konti og for å gjøre det som trengs for å sikre, beskytte og ta sikkerhetskopi av lommeboken. Jeg forstår at AI Wize IKKE har tilgang til lommeboken min eller kan reversere transaksjonene mine på mine vegne og at gjenopprettingsfrasen min er den ENESTE måten å få tilgang til lommeboken på i tilfeller med tapt passord, stjålet enhet eller tilsvarende hendelser.</translation>
 <translation id="7781090633800450517">Jeg har lest og godtar <ph name="LINK_BEFORE"/>bruksbetingelsene<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">Kjøp krypto</translation>
 <translation id="3887541341068007345">Ser etter lommebokutvidelser ...</translation>
@@ -1462,7 +1462,7 @@
 <translation id="434502623875309667">Adresseresolusjon krever offchain-nettverksforespørsler. Vil du fortsette?</translation>
 <translation id="2779500703989728346">NFT</translation>
 <translation id="1893207255459018302">Ingen transaksjonshistorikk</translation>
-<translation id="5356382676355994980">Transaksjoner utført med din AI Wiz Wallet vil vises her.</translation>
+<translation id="5356382676355994980">Transaksjoner utført med din AI Wize Wallet vil vises her.</translation>
 <translation id="3033638954295674319">Det oppstod en feil ved henting av NFT-info. Prøv på nytt senere.</translation>
 <translation id="2612436523196658045">ETH-adressen vil oversettes til Filecoin-adressen.</translation>
 <translation id="3282354360699748542"><ph name="FILECOIN_ADDRESS"/>-adresse i Filecoin-navneområdet vil brukes til transaksjonen.</translation>
@@ -1520,13 +1520,13 @@
 <translation id="2227702748249086756">Kan ikke hente beregnede avgifter</translation>
 <translation id="6580621526400120372">Hvorfor kvalifiserer enkelte NFT-er ikke?</translation>
 <translation id="620930608106217992">Enkelte NFT-opplysninger lagres på sentraliserte servere som AWS, Google Cloud, osv. I dette tilfellet er det ikke mulig å feste NFT-dataene dine til IPFS-nettverket.</translation>
-<translation id="4637031024914696767">Ved å slå på IPFS i AI Wiz blir NFT-ene dine festet automatisk. Dette er den beste måten å sikkerhetskopiere NFT-ene dine på – på en sikker måte.</translation>
+<translation id="4637031024914696767">Ved å slå på IPFS i AI Wize blir NFT-ene dine festet automatisk. Dette er den beste måten å sikkerhetskopiere NFT-ene dine på – på en sikker måte.</translation>
 <translation id="2319971828691864975">Kom i gang med IPFS</translation>
 <translation id="7906328323880284538">Den tryggeste måten å være vert for NFT-er på</translation>
-<translation id="214349569547787359">Slå på IPFS i AI Wiz for å sikkerhetskopiere NFT-ene dine automatisk</translation>
-<translation id="4819588096619503180">IPFS er et fellesskapsbasert lagringsnettverk, som en harddisk som alle kan bruke – men i stedet for å være styrt av én aktør, samarbeider tusenvis av personer om å være vert for innhold på IPFS. Når du «fester» noe i IPFS, sikrer du at minst én kopi av det aktuelle innholdet er trygt lagret – og så lenge én person har en kopi, kan filen aldri forsvinne. <ph name="NEWLINE"/>Ved å slå på IPFS i AI Wiz blir NFT-ene dine festet automatisk. Dette er den beste måten å sikkerhetskopiere NFT-ene dine på – på en trygg måte.</translation>
+<translation id="214349569547787359">Slå på IPFS i AI Wize for å sikkerhetskopiere NFT-ene dine automatisk</translation>
+<translation id="4819588096619503180">IPFS er et fellesskapsbasert lagringsnettverk, som en harddisk som alle kan bruke – men i stedet for å være styrt av én aktør, samarbeider tusenvis av personer om å være vert for innhold på IPFS. Når du «fester» noe i IPFS, sikrer du at minst én kopi av det aktuelle innholdet er trygt lagret – og så lenge én person har en kopi, kan filen aldri forsvinne. <ph name="NEWLINE"/>Ved å slå på IPFS i AI Wize blir NFT-ene dine festet automatisk. Dette er den beste måten å sikkerhetskopiere NFT-ene dine på – på en trygg måte.</translation>
 <translation id="9160750213078764355">Se hvilke av NFT-ene dine som kvalifiserer</translation>
-<translation id="6241155642582182934">Slå på IPFS i AI Wiz for å sikkerhetskopiere NFT-ene dine automatisk for ekstra sikkerhet.</translation>
+<translation id="6241155642582182934">Slå på IPFS i AI Wize for å sikkerhetskopiere NFT-ene dine automatisk for ekstra sikkerhet.</translation>
 <translation id="654964147165509548">NFT-ene festes til den lokale IPFS-noden din.</translation>
 <translation id="4910182786472608576"><ph name="PINNED"/>Støttede NFT-er festes til den lokale IPFS-noden din.</translation>
 <translation id="1607117719941506821"><ph name="PINNABLE"/> NFT(-er) kvalifiserer</translation>
@@ -1556,7 +1556,7 @@
 <translation id="6657860743511185539">NFT-en blir fjernet fra Brave-lommeboken, men vil fortsatt være i blokkjeden. Hvis du fjerner den og deretter ombestemmer deg, må den importeres igjen manuelt.</translation>
 <translation id="849880459530751909">Rediger NFT</translation>
 <translation id="5925465310724910998">Vil du vise NFT-ene dine automatisk?</translation>
-<translation id="5400791731776892411">Brave Wallet kan bruke en tredjepartstjeneste til å vise NFT-ene dine automatisk. AI Wiz deler lommebok-adressene dine med <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> for å levere denne tjenesten. <ph name="BEFORE_URL"/>Finn ut mer.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">Brave Wallet kan bruke en tredjepartstjeneste til å vise NFT-ene dine automatisk. AI Wize deler lommebok-adressene dine med <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> for å levere denne tjenesten. <ph name="BEFORE_URL"/>Finn ut mer.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Ja, fortsett</translation>
 <translation id="4733761855978444079">Nei takk, jeg vil gjøre det manuelt</translation>
 <translation id="353620741952662530">Ingen NFT-er å vise</translation>
@@ -1587,7 +1587,7 @@
 <translation id="6951743416068151209">Tor-mellomtjener-URI</translation>
 <translation id="1671503397662036257">Tor-tilkoblingsstatus</translation>
 <translation id="6024292492796847324">Tor-initialiseringsprosess</translation>
-<translation id="8300751939969131609">Slå på AI Wiz News og gå aldri mer glipp av siste nytt</translation>
+<translation id="8300751939969131609">Slå på AI Wize News og gå aldri mer glipp av siste nytt</translation>
 <translation id="7758665172236842395">Følg favorittkildene dine i én samlet feed. Bare åpne en fane i Brave, rull ned – og voilà!</translation>
 <translation id="2376542729617592331">Brave News støttes av private, anonymiserte annonser. <ph name="LINK_START"/>Finn ut mer<ph name="LINK_END"/>.</translation>
 <translation id="1765217911817124376">Slå på Brave-nyheter</translation>
@@ -1758,23 +1758,23 @@
 <translation id="6938154350999993769">Feilsøking: vis/skjul tablet-modus</translation>
 <translation id="5854741377790551127">Feilsøk visningstre</translation>
 <translation id="8199130368328220410">Slå på Direkteteksting</translation>
-<translation id="9055778350624039365">Vis AI Wiz Wallet-panelet</translation>
-<translation id="2548853975094084059">Lukk AI Wiz Wallet-panelet</translation>
-<translation id="3765209580429944524">Vis AI Wiz VPN-panelet</translation>
-<translation id="5989009326527614692">Vis AI Wiz VPN-vertøylinjeknappen</translation>
-<translation id="7334332308395652803">Slå på AI Wiz VPN-skuffikonet</translation>
-<translation id="4326011033480357140">Send tilbakemelding om AI Wiz VPN</translation>
-<translation id="2345974803401546682">om AI Wiz VPM</translation>
-<translation id="8934783170241943640">Administrer AI Wiz VPN-abonnementet</translation>
-<translation id="6332027154313182926">Slå på AI Wiz VPN</translation>
+<translation id="9055778350624039365">Vis AI Wize Wallet-panelet</translation>
+<translation id="2548853975094084059">Lukk AI Wize Wallet-panelet</translation>
+<translation id="3765209580429944524">Vis AI Wize VPN-panelet</translation>
+<translation id="5989009326527614692">Vis AI Wize VPN-vertøylinjeknappen</translation>
+<translation id="7334332308395652803">Slå på AI Wize VPN-skuffikonet</translation>
+<translation id="4326011033480357140">Send tilbakemelding om AI Wize VPN</translation>
+<translation id="2345974803401546682">om AI Wize VPM</translation>
+<translation id="8934783170241943640">Administrer AI Wize VPN-abonnementet</translation>
+<translation id="6332027154313182926">Slå på AI Wize VPN</translation>
 <translation id="6539014233195996894">Demp/slå på lyd i fanen</translation>
 <translation id="2682865834956428001">Sidepanelposisjon høyre/venstre</translation>
 <translation id="6105745639559695088">Slå på/av sidepanel</translation>
 <translation id="3488252265135539275">Slå på/av vertikale faner</translation>
 <translation id="7134064542341959603">Slå på/av vindustittel for vertikale faner</translation>
-<translation id="3067105725259639716">Konfigurer AI Wiz Nyheter</translation>
+<translation id="3067105725259639716">Konfigurer AI Wize Nyheter</translation>
 <translation id="6286510487460330478">Konfigurer snarveier</translation>
-<translation id="9214819486716388964">Vis AI Wiz Talk</translation>
+<translation id="9214819486716388964">Vis AI Wize Talk</translation>
 <translation id="5950760360751948276">Vis alltid bokmerkeraden</translation>
 <translation id="2960757369920422313">Vis bokmerkeraden på NTP</translation>
 <translation id="522953399371747698">Skjul bokmerkeraden</translation>
@@ -1848,8 +1848,8 @@
 <translation id="1167803637855350748">Det oppstod et nettverksproblem under tilkoblingen til AI Wize Chat. Kontroller forbindelsen og prøv på nytt.</translation>
 <translation id="5095201428204952524">AI Wize Chat har for mye å gjøre akkurat nå. Prøv på nytt om noen minutter.</translation>
 <translation id="7144878232160441200">Prøv på nytt</translation>
-<translation id="7202619923031933110">Hei, jeg er AI Wize Chat! Jeg er en KI-assistent som AI Wiz er vert for i sin helhet. Jeg er basert på Mixtral 7B, som er en modell Mistral AI har laget for å håndtere avanserte oppgaver.</translation>
-<translation id="2489317965865266353">Hei, jeg er AI Wize Chat! Jeg brukes i proxyversjon av AI Wiz og er basert på Claude Instant, en modell som er utviklet av Anthropic for å håndtere oppgaver knyttet til behandling av tekst og samtaler.</translation>
+<translation id="7202619923031933110">Hei, jeg er AI Wize Chat! Jeg er en KI-assistent som AI Wize er vert for i sin helhet. Jeg er basert på Mixtral 7B, som er en modell Mistral AI har laget for å håndtere avanserte oppgaver.</translation>
+<translation id="2489317965865266353">Hei, jeg er AI Wize Chat! Jeg brukes i proxyversjon av AI Wize og er basert på Claude Instant, en modell som er utviklet av Anthropic for å håndtere oppgaver knyttet til behandling av tekst og samtaler.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> etter <ph name="COMPANY_NAME"/></translation>
 <translation id="6187065185557150870">Chat</translation>
 <translation id="2961040541145689181">Ny chat</translation>
@@ -1871,7 +1871,7 @@
 <translation id="6393149565874086128">Gi tilbakemelding</translation>
 <translation id="3521125531016408657">Lik svaret</translation>
 <translation id="8202517001427388906">Mislik svaret</translation>
-<translation id="1379399209929302811">Send tilbakemelding om AI Wiz AI</translation>
+<translation id="1379399209929302811">Send tilbakemelding om AI Wize AI</translation>
 <translation id="8442999546461118871">Velg hva tilbakemeldingen handler om</translation>
 <translation id="9018766373792005944">Hva handler tilbakemeldingen om?</translation>
 <translation id="7355096922131918313">Gi tilbakemelding her</translation>
@@ -1901,13 +1901,13 @@
 <translation id="1173570303649278801">Bruk sidekonteksten til svar</translation>
 <translation id="8599503173207256429">Slå på for å spørre om denne siden. Innholdet sendes til AI Wize Chat sammen med meldingene dine.</translation>
 <translation id="6303294677342628402">Skjold</translation>
-<translation id="8458987127502506209">Aktiver AI Wiz Shields</translation>
+<translation id="8458987127502506209">Aktiver AI Wize Shields</translation>
 <translation id="7509914170164691086">Skjoldene er OPPE <ph name="LINK_BEFORE"/>for<ph name="LINK_AFTER"/></translation>
 <translation id="260764436039299868">Skjoldene er NEDE <ph name="LINK_BEFORE"/>for<ph name="LINK_AFTER"/></translation>
 <translation id="3907405056878805220">Hvis det virker som at dette nettstedet har feil, kan du prøve å senke skjoldene.
     <ph name="LINK_BEFORE"/>Merk: dette kan redusere Braves personvernbeskyttelse.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Sporinger, reklamer og annet blokkert <ph name="LINK_BEFORE"/>Les mer<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">Ikke beskyttet av AI Wiz Shields <ph name="LINK_BEFORE"/>Finn ut mer<ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">Ikke beskyttet av AI Wize Shields <ph name="LINK_BEFORE"/>Finn ut mer<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">Avanserte kontroller</translation>
 <translation id="5799940914270080805">Hvis du endrer disse innstillingene, kan du oppleve problemer med nettsider.</translation>
 <translation id="9204041448536398473">Globale Shield-innstillinger</translation>
@@ -1946,18 +1946,18 @@
 <translation id="264682546981571963">Lei av meldinger om å godta informasjonskapsler?</translation>
 <translation id="4986297793092101884">Brave blokkerer allerede informasjonskapsler fra tredjepart. Vi kan blokkere meldinger om å godta informasjonskapsler også.</translation>
 <translation id="535688588637568715">Ja, blokker meldinger om å godta informasjonskapsler</translation>
-<translation id="2808175374672429053">Wildcards er ikke tillatt for AI Wiz Shields.</translation>
+<translation id="2808175374672429053">Wildcards er ikke tillatt for AI Wize Shields.</translation>
 <translation id="6294662480095808915">Personvern fra bunnen av.</translation>
-<translation id="4366423156486478559">Få Brave-beskyttelse for alle linker du klikker på. Bare angi AI Wiz som standard, og surf i vei – helt privat.</translation>
+<translation id="4366423156486478559">Få Brave-beskyttelse for alle linker du klikker på. Bare angi AI Wize som standard, og surf i vei – helt privat.</translation>
 <translation id="3830912418080848377">Importer innstillinger</translation>
 <translation id="6378406588483694938">Importer enkelt bokmerker, utvidelser og lagrede passord fra den gamle nettleseren din.</translation>
 <translation id="2092825239819166928">Velg profil som skal importeres</translation>
 <translation id="4763127492635705340">Nettleseren du har valgt, har flere profiler. Velg profilen(e) du vil importere.</translation>
 <translation id="880174232178865598">Importer profiler</translation>
 <translation id="2453860139492968684">Fullfør</translation>
-<translation id="2273851479262317744">Angi AI Wiz som standard nettleser</translation>
+<translation id="2273851479262317744">Angi AI Wize som standard nettleser</translation>
 <translation id="5037676449506322593">Velg alle</translation>
-<translation id="5148943178722443958">Bidra til å gjøre AI Wiz bedre.</translation>
+<translation id="5148943178722443958">Bidra til å gjøre AI Wize bedre.</translation>
 <translation id="1097073572755862978">Send diagnoserapporter hvis du opplever at systemet krasjer eller henger seg opp. <ph name="LINK_BEFORE"/>Finn ut mer.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Del helt private og anonyme produktdata om hvilke funksjoner Brave-brukerne benytter seg av. <ph name="LINK_BEFORE"/>Finn ut mer.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Ferdig</translation>
@@ -2014,10 +2014,10 @@
 <translation id="1156325797949437777">Brukerstøtte gis i samarbeid med Guardian.</translation>
 <translation id="8146777497879160283">Kunne ikke skrive VPN-konfigurasjonen. Dette kan skje hvis du ikke har riktig tillatelse eller ikke har kjørt Windows Update nylig.</translation>
 <translation id="3307461350293459700">VPN-tilkoblingen mislyktes. Prøv å koble til igjen, og husk å trykke på Tillat for å aktivere Braves VPN-konfigurasjon.</translation>
-<translation id="7261518280726313829">Hvis du slår av sikker DNS eller bruker standardserverne på Windows, kan navnene på nettsidene du besøker, bli synlige for internettleverandøren din. AI Wiz anbefaler ikke å gjøre dette. Vil du gjøre det likevel?</translation>
-<translation id="888284761945060750">Secure DNS er deaktivert av organisasjonen din. Hvis du bruker AI Wiz VPN uten Secure DNS, kan navnene på nettstedene du besøker, bli synlige for internettleverandøren eller organisasjonen din.</translation>
+<translation id="7261518280726313829">Hvis du slår av sikker DNS eller bruker standardserverne på Windows, kan navnene på nettsidene du besøker, bli synlige for internettleverandøren din. AI Wize anbefaler ikke å gjøre dette. Vil du gjøre det likevel?</translation>
+<translation id="888284761945060750">Secure DNS er deaktivert av organisasjonen din. Hvis du bruker AI Wize VPN uten Secure DNS, kan navnene på nettstedene du besøker, bli synlige for internettleverandøren eller organisasjonen din.</translation>
 <translation id="6593224083874259773">Brave VPN på Windows</translation>
-<translation id="3153983908111684619">Denne innstillingen er låst av AI Wiz VPN så lenge den er tilkoblet.</translation>
+<translation id="3153983908111684619">Denne innstillingen er låst av AI Wize VPN så lenge den er tilkoblet.</translation>
 <translation id="1055657720430482013">Windows har en funksjon kalt Smart Multi-Homed Name Resolution, som kan avsløre informasjon om hvor du befinner deg og hvilke sider du besøker. 
 
 Brave har en hjelpetjeneste som beskytter deg fra slik avsløring ved å filtrere måten DNS-spørringer gjøres på i VPN-tilkoblingen din.

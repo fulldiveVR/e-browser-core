@@ -27,7 +27,7 @@ namespace ai_chat {
 using api_request_helper::APIRequestResult;
 
 // An AI Chat engine consumer that uses the Claude-style remote HTTP completion
-// API and builds prompts tailored to the AI Wiz Leo model.
+// API and builds prompts tailored to the AI Wize Leo model.
 class EngineConsumerLlamaRemote : public EngineConsumer {
  public:
   explicit EngineConsumerLlamaRemote(

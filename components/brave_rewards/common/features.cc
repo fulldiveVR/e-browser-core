@@ -11,7 +11,7 @@ namespace brave_rewards {
 namespace features {
 
 #if BUILDFLAG(IS_ANDROID)
-//  Flag for AI Wiz Rewards.
+//  Flag for AI Wize Rewards.
 #if defined(ARCH_CPU_X86_FAMILY) && defined(OFFICIAL_BUILD)
 BASE_FEATURE(kBraveRewards, "BraveRewards", base::FEATURE_DISABLED_BY_DEFAULT);
 #else

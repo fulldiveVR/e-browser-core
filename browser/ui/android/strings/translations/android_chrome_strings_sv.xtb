@@ -22,13 +22,13 @@
 <translation id="1110914759170138831">Den markerade texten har förkortats</translation>
 <translation id="1111673857033749125">Här visas bokmärken som du har sparat på andra enheter.</translation>
 <translation id="1113597929977215864">Använd förenklad visning</translation>
-<translation id="4470276443668654888">Betalningsmetoder och adresser från Google Pay krypteras inte. Webbhistorik från AI Wiz synkroniseras inte.
+<translation id="4470276443668654888">Betalningsmetoder och adresser från Google Pay krypteras inte. Webbhistorik från AI Wize synkroniseras inte.
 Din krypterade data kan endast läsas av en person som har din lösenfras. Lösenfrasen varken skickas till eller lagras av Brave. Om du glömmer lösenfrasen eller vill ändra den här inställningen måste du återställa synkroniseringen. <ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Skyddar inte mot farliga webbplatser, nedladdningar och tillägg. Där funktionen är tillgänglig får du fortfarande skydd med Säker webbsökning i andra tjänster från Brave, till exempel Gmail och Sök.</translation>
 <translation id="1129510026454351943">Mer information: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Erbjud inte att översätta dessa webbplatser</translation>
 <translation id="1145536944570833626">Radera befintlig data.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> öppnas i Brave. Genom att fortsätta godkänner du <ph name="BEGIN_LINK1"/>Braves användarvillkor<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>de ytterligare användarvillkoren för AI Wiz och Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> öppnas i Brave. Genom att fortsätta godkänner du <ph name="BEGIN_LINK1"/>Braves användarvillkor<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>de ytterligare användarvillkoren för AI Wize och Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Använd lösenordet <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Ändra namn</translation>
 <translation id="7947699437047020219">Brave begär den mobila webbplatsen när skärmen är smal</translation>
@@ -50,7 +50,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1240288207750131269">Läser in <ph name="LANG"/></translation>
 <translation id="1240903469550363138"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> delar ditt namn, din e-postadress, din adress och din profilbild med den här webbplatsen om du fortsätter. Läs webbplatsens <ph name="BEGIN_LINK1"/>integritetspolicy<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>användarvillkor<ph name="END_LINK2"/>.</translation>
 <translation id="124116460088058876">Fler språk</translation>
-<translation id="4078574862195461280">Dina lösenord raderas från AI Wiz Lösenordshantering för <ph name="CHROME_CHANNEL"/>. Lösenordsfilen som du precis laddade ned finns kvar.</translation>
+<translation id="4078574862195461280">Dina lösenord raderas från AI Wize Lösenordshantering för <ph name="CHROME_CHANNEL"/>. Lösenordsfilen som du precis laddade ned finns kvar.</translation>
 <translation id="1242883863226959074">enhet</translation>
 <translation id="124678866338384709">Stäng den aktuella fliken</translation>
 <translation id="1246905108078336582">Vill du ta bort förslaget från urklipp?</translation>
@@ -131,11 +131,11 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1710099199314114079">Byt eller stäng flikar</translation>
 <translation id="1718835860248848330">Senaste timmen</translation>
 <translation id="1724977129262658800">Lås upp om du vill redigera lösenordet</translation>
-<translation id="6493900814829428590">Du kan surfa och söka snabbare när AI Wiz läser in sidor som du kanske vill besöka i förväg</translation>
+<translation id="6493900814829428590">Du kan surfa och söka snabbare när AI Wize läser in sidor som du kanske vill besöka i förväg</translation>
 <translation id="1749561566933687563">Synkronisera bokmärken</translation>
 <translation id="1750259112639922169">Flikgrupp – <ph name="TAB_COUNT"/> flikar</translation>
 <translation id="17513872634828108">Öppna flikar</translation>
-<translation id="9207812657123271782">Uppdatering om AI Wiz Lösenordshantering</translation>
+<translation id="9207812657123271782">Uppdatering om AI Wize Lösenordshantering</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Sidor, 1 sida i listan}other{Sidor, # sidor i listan}}</translation>
 <translation id="1778457539567749232">Markera som oläst</translation>
 <translation id="1779766957982586368">Stäng fönstret</translation>
@@ -148,7 +148,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1829244130665387512">Hitta på sida</translation>
 <translation id="5488575152752589250">Synkronisera om du vill få det mest relevanta innehållet från Brave</translation>
 <translation id="7175072311426658869">Öppna i Brave-webbläsaren</translation>
-<translation id="5173820533850252773">Den här versionen av AI Wiz är inaktuell</translation>
+<translation id="5173820533850252773">Den här versionen av AI Wize är inaktuell</translation>
 <translation id="1883903952484604915">Mina filer</translation>
 <translation id="189358972401248634">Övriga språk</translation>
 <translation id="1900260903084164610">Genom att fortsätta godkänner du <ph name="BEGIN_TOS_LINK"/>användarvillkoren<ph name="END_TOS_LINK"/>.</translation>
@@ -160,13 +160,13 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1925021887439448749">Ange en anpassad webbadress</translation>
 <translation id="1928618076168182477">Visar visuell vy</translation>
 <translation id="1928696683969751773">Uppdateringar</translation>
-<translation id="1875543012935658554">Öppna AI Wiz igen.</translation>
+<translation id="1875543012935658554">Öppna AI Wize igen.</translation>
 <translation id="1933845786846280168">Vald flik</translation>
 <translation id="1943432128510653496">Spara lösenord</translation>
 <translation id="1944535645109964458">Inga nycklar är tillgängliga</translation>
 <translation id="1952172573699511566">När det är möjligt visas text på webbplatser på önskat språk.</translation>
 <translation id="1959679933317802873">Väntar på innehåll</translation>
-<translation id="3968054912784331254">Uppdateringar av AI Wiz stöds inte längre för den här versionen av Android</translation>
+<translation id="3968054912784331254">Uppdateringar av AI Wize stöds inte längre för den här versionen av Android</translation>
 <translation id="1963976881984600709">Standardskydd</translation>
 <translation id="1966710179511230534">Uppdatera dina inloggningsuppgifter.</translation>
 <translation id="197288927597451399">Behåll</translation>
@@ -210,17 +210,17 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="218608176142494674">Delar</translation>
 <translation id="2194856509914051091">Tänk på detta</translation>
 <translation id="22091350895006575">Lägg till användarnamn</translation>
-<translation id="4075202346699640887">Om du öppnar AI Wiz utan ett profillås tas dina sparade lösenord och betalningsmetoder bort från bilen. Denna data skyddas om du använder ett profillås.</translation>
+<translation id="4075202346699640887">Om du öppnar AI Wize utan ett profillås tas dina sparade lösenord och betalningsmetoder bort från bilen. Denna data skyddas om du använder ett profillås.</translation>
 <translation id="2227444325776770048">Fortsätt som <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Tomt fönster</translation>
 <translation id="223356358902285214">Webb- och appaktivitet</translation>
 <translation id="2234827758954819389">Integritetsguide</translation>
 <translation id="2239812875700136898">Du kan styra artiklarna med knappen Alternativ för Förslag</translation>
 <translation id="2247789808226901522">Kortet har gått ut</translation>
-<translation id="4808014761134300692">Dina lösenord krypteras på enheten innan de sparas i AI Wiz Lösenordshantering</translation>
+<translation id="4808014761134300692">Dina lösenord krypteras på enheten innan de sparas i AI Wize Lösenordshantering</translation>
 <translation id="2249635629516220541">Anpassa informationen som används av webbplatser för att visa annonser</translation>
 <translation id="2259659629660284697">Exportera lösenord …</translation>
-<translation id="8820144752830692527">Du kan alltid välja vad som ska synkroniseras i <ph name="BEGIN_LINK1"/>inställningarna<ph name="END_LINK1"/>. AI Wiz kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="8820144752830692527">Du kan alltid välja vad som ska synkroniseras i <ph name="BEGIN_LINK1"/>inställningarna<ph name="END_LINK1"/>. AI Wize kan anpassa Sök och andra tjänster utifrån din historik.</translation>
 <translation id="781982477617612877">Logga in på ditt Brave-konto om du vill kontrollera lösenorden</translation>
 <translation id="2278052315791335171">Att ta bort det här lösenordet innebär inte att ditt konto på <ph name="SITE"/> raderas</translation>
 <translation id="2286841657746966508">Faktureringsadress</translation>
@@ -268,11 +268,11 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="2546283357679194313">Cookies och webbplatsdata</translation>
 <translation id="2567385386134582609">BILD</translation>
 <translation id="2567545343356994513">Snabbare och förebyggande skydd mot farliga webbplatser, nedladdningar och tillägg</translation>
-<translation id="5079947353572974060">Erbjud att skicka sidor på andra språk till AI Wiz Översätt</translation>
+<translation id="5079947353572974060">Erbjud att skicka sidor på andra språk till AI Wize Översätt</translation>
 <translation id="2571834852878229351">Skapa ett eget</translation>
-<translation id="6995512410824092085">Läs mer om hur du ställer in AI Wiz som standardwebbläsare</translation>
+<translation id="6995512410824092085">Läs mer om hur du ställer in AI Wize som standardwebbläsare</translation>
 <translation id="7242554556818074465">Logga in på alla dina enheter om du vill ha samma flikar tillgängliga på alla enheter där du använder Brave</translation>
-<translation id="8661556138616664061">Innehåll från AI Wiz för unga</translation>
+<translation id="8661556138616664061">Innehåll från AI Wize för unga</translation>
 <translation id="2324920234469020158">Det här alternativet rensar cookies, cacheminnet och annan data från webbplatser som bedöms vara oviktiga.</translation>
 <translation id="2587052924345400782">Det finns en nyare version</translation>
 <translation id="2593272815202181319">Monospace</translation>
@@ -281,7 +281,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="2604446170045642109">Du kan stänga av mörkt tema för webbplatser i inställningarna.</translation>
 <translation id="2612676031748830579">Kortnummer</translation>
 <translation id="2625189173221582860">Lösenordet har kopierats</translation>
-<translation id="2634393460268044753">Webbadresser som du besöker och ett litet urval av sidans innehåll, nedladdningar, tilläggsaktivitet och systeminformation skickas till AI Wiz Säker webbsökning, som kontrollerar om webbadresserna är skadliga.</translation>
+<translation id="2634393460268044753">Webbadresser som du besöker och ett litet urval av sidans innehåll, nedladdningar, tilläggsaktivitet och systeminformation skickas till AI Wize Säker webbsökning, som kontrollerar om webbadresserna är skadliga.</translation>
 <translation id="2642087927315268160">Arket för inloggning på nedre delen av skärmen har stängts.</translation>
 <translation id="2643064289437760082">Du kan när du vill radera annonsmätningsdata genom att radera din webbinformation</translation>
 <translation id="2647434099613338025">Lägg till språk</translation>
@@ -293,7 +293,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="265156376773362237">Standardförinläsning</translation>
 <translation id="2656405586795711023">Webbappar</translation>
 <translation id="2669454659051515572">Alla som använder enheten kan se nedladdade filer</translation>
-<translation id="5806087344347665213">Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wiz till AI Wiz tillsammans med delar av sidinnehållet</translation>
+<translation id="5806087344347665213">Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wize till AI Wize tillsammans med delar av sidinnehållet</translation>
 <translation id="2702516483241149200">Nyhet: dela en länk som scrollar fram till den här texten</translation>
 <translation id="3769942772151914580">Proaktivt skydd i realtid mot farliga webbplatser, nedladdningar och tillägg baserat på din webbinformation som skickas till Brave</translation>
 <translation id="2708226184420201102">Öppna i webbläsaren <ph name="PRODUCT_NAME"/></translation>
@@ -318,15 +318,15 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="2839327205551510876">Slutade följa <ph name="SITE_NAME"/></translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{Genomsöktes för 1 dag sedan}other{Genomsöktes för # dagar sedan}}</translation>
 <translation id="2842985007712546952">Överordnad mapp</translation>
-<translation id="6324134303015966238">Sidor som du troligen kommer att besöka läses in i förväg i AI Wiz så att de läses in snabbare när du besöker dem</translation>
+<translation id="6324134303015966238">Sidor som du troligen kommer att besöka läses in i förväg i AI Wize så att de läses in snabbare när du besöker dem</translation>
 <translation id="2856503607207334158">Inloggningen misslyckades</translation>
 <translation id="2860954141821109167">Kontrollera att en telefonapp har aktiverats på enheten</translation>
-<translation id="6518254564747115579">Vissa funktioner i AI Wiz kommer inte längre att vara tillgängliga</translation>
+<translation id="6518254564747115579">Vissa funktioner i AI Wize kommer inte längre att vara tillgängliga</translation>
 <translation id="2869430948265924908">Du måste skapa ett profillås för bilen för att skydda känsligt innehåll i bilen.  Det kan du göra med en pinkod, en kod eller ett lösenord.</translation>
 <translation id="2870560284913253234">Webbplats</translation>
 <translation id="2871733351037274014">Läs in sidor i förväg</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> vill att du godkänner följande webbplats:</translation>
-<translation id="6756656512757374876">Läs mer om <ph name="BEGIN_LINK"/>hur AI Wiz skyddar din data<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Läs mer om <ph name="BEGIN_LINK"/>hur AI Wize skyddar din data<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Om Brave</translation>
 <translation id="2891154217021530873">Avbryt inläsningen av sidan</translation>
 <translation id="4013614219085422040">Brave kan anpassa Sök och andra Brave-tjänster utifrån historiken</translation>
@@ -338,12 +338,12 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="7339921667754113786">Braves aviseringsplattform</translation>
 <translation id="2912296070571964914">Hantera ämnen som du är intresserad av</translation>
 <translation id="2923908459366352541">Namnet är ogiltigt</translation>
-<translation id="6355102470683871794">Lagring för AI Wiz <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Lagring för AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Tangentbordet ändras inte</translation>
 <translation id="6537665929855787038">Brave-aviseringar gör saker enklare</translation>
 <translation id="2940075786175545812">Alternativ för att godkänna eller inte godkänna en webbplats</translation>
 <translation id="2942036813789421260">Fliken Förhandsgranskning har stängts</translation>
-<translation id="4700262879698141140">Uppdatera AI Wiz för att ansluta till andra enheter</translation>
+<translation id="4700262879698141140">Uppdatera AI Wize för att ansluta till andra enheter</translation>
 <translation id="2951071800649516099">Lägg till sidor som du vill läsa senare i läslistan</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> oläst sida i listan}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> olästa sidor i listan}}</translation>
 <translation id="2961210776189273067">Titel</translation>
@@ -360,8 +360,8 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="2996291259634659425">Skapa lösenfras</translation>
 <translation id="2996809686854298943">En webbadress måste anges.</translation>
 <translation id="2996932914629936323">Historiken rensas från alla synkroniserade enheter</translation>
-<translation id="2019027298133375428">När en Brave-webbplats frågar om dess länkar ska läsas in privat i förväg krypterar AI Wiz sidorna och läser in dem i förväg via Braves servrar utan cookies. Det innebär att din identitet döljs från den förinlästa webbplatsen.</translation>
-<translation id="5730179015008010982">Webbadresser som du besöker skickas till AI Wiz för att förutse vilka webbplatser du kanske vill besöka härnäst och för att visa mer information om den sida du besöker</translation>
+<translation id="2019027298133375428">När en Brave-webbplats frågar om dess länkar ska läsas in privat i förväg krypterar AI Wize sidorna och läser in dem i förväg via Braves servrar utan cookies. Det innebär att din identitet döljs från den förinlästa webbplatsen.</translation>
+<translation id="5730179015008010982">Webbadresser som du besöker skickas till AI Wize för att förutse vilka webbplatser du kanske vill besöka härnäst och för att visa mer information om den sida du besöker</translation>
 <translation id="3016635187733453316">Kontrollera att enheten är ansluten till internet</translation>
 <translation id="3026955690410463085">Inkludera länk</translation>
 <translation id="3027644380269727216">Baserat på din aktivitet på en webbplats. Inställningen är aktiverad.</translation>
@@ -374,15 +374,15 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="3038272154009688107">Visa alla webbplatser</translation>
 <translation id="3046945242843292318">Besök den här webbplatsen snabbare nästa gång</translation>
 <translation id="3055259925215945098">Bokmärket har flyttats</translation>
-<translation id="4163313568284712797">Information om hur du använder AI Wiz skickas till AI Wiz men kopplas inte till dig\n\nIfOm AI Wiz kraschar kan personliga uppgifter finnas med i kraschinformationen\n\nOm du aktiverar synkronisering kan mätvärdena även innehålla information om webbadresser du besöker</translation>
+<translation id="4163313568284712797">Information om hur du använder AI Wize skickas till AI Wize men kopplas inte till dig\n\nIfOm AI Wize kraschar kan personliga uppgifter finnas med i kraschinformationen\n\nOm du aktiverar synkronisering kan mätvärdena även innehålla information om webbadresser du besöker</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> bokmärke}other{<ph name="BOOKMARKS_COUNT_MANY"/> bokmärken}}</translation>
 <translation id="6153252609477956632">Artiklar om dina intressen i Brave</translation>
 <translation id="3066573403916685335">Flytta ner</translation>
 <translation id="3070005020161560471">Översätt automatiskt</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> öppnas i Brave. Genom att fortsätta godkänner du <ph name="BEGIN_LINK1"/>Braves användarvillkor<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>de ytterligare användarvillkoren för AI Wiz och Chrome OS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Integritetspolicyn<ph name="END_LINK3"/> gäller också.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> öppnas i Brave. Genom att fortsätta godkänner du <ph name="BEGIN_LINK1"/>Braves användarvillkor<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>de ytterligare användarvillkoren för AI Wize och Chrome OS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Integritetspolicyn<ph name="END_LINK3"/> gäller också.</translation>
 <translation id="3080525922482950719">Du kan spara sidor som du vill läsa senare eller offline</translation>
 <translation id="3091010850649238832">Visa innehållet i Urklipp</translation>
-<translation id="821565628224723530">Vissa bilder skickas till AI Wiz så att du får bättre beskrivningar</translation>
+<translation id="821565628224723530">Vissa bilder skickas till AI Wize så att du får bättre beskrivningar</translation>
 <translation id="3114507951000454849">Läs dagens nyheter <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Meddelanden</translation>
 <translation id="3134784203083076891">”</translation>
@@ -399,7 +399,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Sökhistorik<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>annan aktivitet<ph name="END_LINK2"/> kan sparas i Brave-kontot när du är inloggad. Du kan radera den när du vill.</translation>
 <translation id="321773570071367578">Om du har glömt lösenfrasen eller vill ändra inställningen <ph name="BEGIN_LINK"/>återställer du synkroniseringen<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Verifiera din identitet för att synkronisera lösenord</translation>
-<translation id="9210457680074341078">Om du även sparar bokmärken i Brave-kontot kan du bevaka produktpriser i AI Wiz och få en avisering när priset sänks.</translation>
+<translation id="9210457680074341078">Om du även sparar bokmärken i Brave-kontot kan du bevaka produktpriser i AI Wize och få en avisering när priset sänks.</translation>
 <translation id="9047551989591319903">Brave som säkerhetsnyckel</translation>
 <translation id="3232754137068452469">Webbapp</translation>
 <translation id="3234978181857588512">Spara på enhet</translation>
@@ -427,8 +427,8 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="3341262203274374114">Det gick inte att sluta följa flödet på grund av ett fel.</translation>
 <translation id="3359667936385849800">Använd den nuvarande DNS-leverantören</translation>
 <translation id="3373701465337594448">När detta är aktiverat visas en lista över webbplatser som du besöker som gissar dina intressen</translation>
-<translation id="2746024117903470217">Om du vill dela den här sidan med en annan enhet måste du aktivera synkronisering i inställningarna för AI Wiz på den andra enheten</translation>
-<translation id="8801234437789558906">Bokmärken, historik, lösenord och annan data i AI Wiz synkroniseras inte längre med ditt Brave-konto</translation>
+<translation id="2746024117903470217">Om du vill dela den här sidan med en annan enhet måste du aktivera synkronisering i inställningarna för AI Wize på den andra enheten</translation>
+<translation id="8801234437789558906">Bokmärken, historik, lösenord och annan data i AI Wize synkroniseras inte längre med ditt Brave-konto</translation>
 <translation id="3384347053049321195">Dela bild</translation>
 <translation id="3387650086002190359">Det gick inte att ladda ned <ph name="FILE_NAME"/> på grund av filsystemfel.</translation>
 <translation id="3389286852084373014">Texten är för stor</translation>
@@ -436,7 +436,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="1081508498128395141">Fler sidor läses in i förväg. Sidor kan läsas in i förväg via Braves servrar när de begärs av andra webbplatser.</translation>
 <translation id="3414952576877147120">Storlek:</translation>
 <translation id="3421726884497337397">Välj när cookies från tredje part ska blockeras</translation>
-<translation id="5265419033369521352">Skyddar dig i AI Wiz och kan användas för förbättrad säkerhet i andra Brave-appar där du är inloggad</translation>
+<translation id="5265419033369521352">Skyddar dig i AI Wize och kan användas för förbättrad säkerhet i andra Brave-appar där du är inloggad</translation>
 <translation id="3429160811076349561">Provfunktionerna är inaktiverade</translation>
 <translation id="3430670036890315772">Om du inaktiverar profillåset tas dina sparade uppgifter bort</translation>
 <translation id="3435465986463792564">Har du många fönster? Du kan hantera dem härifrån</translation>
@@ -453,7 +453,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Sortera efter äldsta</translation>
 <translation id="3507132249039706973">Standardskydd är aktiverat</translation>
-<translation id="8669829441518807650">Offline. AI Wiz kan inte söka efter uppdateringar.</translation>
+<translation id="8669829441518807650">Offline. AI Wize kan inte söka efter uppdateringar.</translation>
 <translation id="3513704683820682405">Förstärkt verklighet</translation>
 <translation id="3518985090088779359">Godkänn och fortsätt</translation>
 <translation id="3521388823983121502">Det går inte att fortsätta med <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="3701515417135397388">Varna dig om ett lösenord har utsatts för dataintrång</translation>
 <translation id="371230970611282515">Förutser och varnar dig om farliga händelser innan de inträffar.</translation>
 <translation id="3714981814255182093">Öppna sökfältet</translation>
-<translation id="5805364706385912897">Den här sidan har pausats i AI Wiz eftersom den använder för mycket minne.</translation>
+<translation id="5805364706385912897">Den här sidan har pausats i AI Wize eftersom den använder för mycket minne.</translation>
 <translation id="3720422586473670527">Nej tack</translation>
 <translation id="8397843425685839889">Du och Brave</translation>
 <translation id="3737319253362202215">Inställningar för översättning</translation>
@@ -523,7 +523,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="3934366560681368531">”</translation>
 <translation id="393697183122708255">Röstsökning är inte tillgängligt</translation>
 <translation id="395377504920307820">Använd utan ett konto</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Sidan läses in i AI Wiz när den blir tillgänglig}other{Sidorna läses in i AI Wiz när de blir tillgängliga}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Sidan läses in i AI Wize när den blir tillgänglig}other{Sidorna läses in i AI Wize när de blir tillgängliga}}</translation>
 <translation id="3962119236270174787">Standardskydd mot kända skadliga webbplatser, nedladdningar och tillägg</translation>
 <translation id="1453002554835005700">Brave kan inte kontrollera dina lösenord</translation>
 <translation id="3969863827134279083">Flytta upp</translation>
@@ -548,7 +548,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="4084682180776658562">Lägg till bokmärke</translation>
 <translation id="4521874409998847950">Från <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>via Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Du kan logga in med surfplattans hjälp på den enhet där den här QR-koden visas.</translation>
-<translation id="7268155614575494857">Hjälp AI Wiz Lösenordshantering att spara dina inloggningsuppgifter genom att lägga till ditt användarnamn för den här webbplatsen</translation>
+<translation id="7268155614575494857">Hjälp AI Wize Lösenordshantering att spara dina inloggningsuppgifter genom att lägga till ditt användarnamn för den här webbplatsen</translation>
 <translation id="4095146165863963773">Vill du ta bort appdata?</translation>
 <translation id="4095425503313512126">Det går snabbare att surfa och söka</translation>
 <translation id="4096227151372679484">Flöde för att spara bokmärken har öppnats över halva skärmen</translation>
@@ -556,7 +556,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="4108314971463891922">Följ</translation>
 <translation id="4108998448622696017">Identifierar och varnar dig om farliga händelser som inträffar.</translation>
 <translation id="4116038641877404294">Ladda ned sidor så att du kan använda dem offline</translation>
-<translation id="37459938731864814">Du behöver inte komma ihåg det här lösenordet. Det sparas med AI Wiz Lösenordshantering för <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Du behöver inte komma ihåg det här lösenordet. Det sparas med AI Wize Lösenordshantering för <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Behörighetsflödet för aviseringar har öppnats över hela skärmen</translation>
 <translation id="4126285640274188657">Sidinsikter</translation>
 <translation id="4135200667068010335">Listan över enheter som fliken kan delas med är stängd.</translation>
@@ -574,7 +574,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 flik på den här enheten}other{# flikar på den här enheten}}</translation>
 <translation id="4198423547019359126">Det fins inga tillgängliga nedladdningsplatser</translation>
 <translation id="4202218894997543208">Ämnen som du har blockerat</translation>
-<translation id="1675646381334855139">Om du tillåter cookies kan AI Wiz använda dem för att läsa in innehåll i förväg.</translation>
+<translation id="1675646381334855139">Om du tillåter cookies kan AI Wize använda dem för att läsa in innehåll i förväg.</translation>
 <translation id="4216511743389425832">Lyssna på sidan</translation>
 <translation id="4225725533026049334">Följer</translation>
 <translation id="4225895483398857530">Genväg i verktygsfältet</translation>
@@ -584,7 +584,7 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="4249955472157341256">Sortera efter senaste</translation>
 <translation id="4250229828105606438">Skärmbild</translation>
 <translation id="4256782883801055595">Licenser för öppen källkod</translation>
-<translation id="7404502124231907662">Vill du radera lösenord från AI Wiz Lösenordshantering?</translation>
+<translation id="7404502124231907662">Vill du radera lösenord från AI Wize Lösenordshantering?</translation>
 <translation id="4269820728363426813">Kopiera länkadress</translation>
 <translation id="4277529130885813215">Använd en annan enhet</translation>
 <translation id="4283102315569707115">Vill du begära webbplatser för dator som standard?</translation>
@@ -617,16 +617,16 @@ Din krypterade data kan endast läsas av en person som har din lösenfras. Löse
 <translation id="4452548195519783679">Bokmärkt i <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">När en annan enhet har länkats med QR-kod kan den enheten använda telefonen som säkerhetsnyckel. Om du tar bort länken måste du skanna en QR-kod om du vill länka enheten igen.</translation>
 <translation id="4478161224666880173">Du kan använda ditt <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>-konto på den här webbplatsen. Logga in på <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> om du vill fortsätta.</translation>
-<translation id="3133489217401741157"><ph name="MODULE"/> installeras i AI Wiz …</translation>
+<translation id="3133489217401741157"><ph name="MODULE"/> installeras i AI Wize …</translation>
 <translation id="4484496141267039529">Ingen anslutning. Försök igen senare.</translation>
-<translation id="53119194224775367">All appdata i AI Wiz raderas permanent. Detta omfattar alla filer, inställningar, konton, databaser osv.</translation>
+<translation id="53119194224775367">All appdata i AI Wize raderas permanent. Detta omfattar alla filer, inställningar, konton, databaser osv.</translation>
 <translation id="3966104135245031874">Kryptera synkroniserade lösenord med ditt Brave-konto</translation>
 <translation id="4491323382106587961">Välj ett konto. <ph name="EMAIL"/> är markerad just nu.</translation>
 <translation id="4508528996305412043">Menyn med flödeskort är öppen</translation>
 <translation id="4509501256689523862">Huruvida annonser som visas när du surfar anpassas eller inte beror på den här inställningen, <ph name="BEGIN_LINK_1"/>annonsämnen<ph name="END_LINK_1"/>, dina <ph name="BEGIN_LINK_2"/>cookieinställningar<ph name="END_LINK_2"/> och om webbplatsen du besöker anpassar annonser.</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{för # dag sedan}other{för # dagar sedan}}</translation>
 <translation id="451872707440238414">Sök bland dina bokmärken</translation>
-<translation id="1664855196866195614">Markerad data har tagits bort från AI Wiz och från synkroniserade enheter.
+<translation id="1664855196866195614">Markerad data har tagits bort från AI Wize och från synkroniserade enheter.
 
 Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>, t.ex. sökningar och aktivitet på andra tjänster från Brave.</translation>
 <translation id="4523326818319942067">senaste timmen</translation>
@@ -679,7 +679,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Lösenorden sparas med Lösenordshantering på den här enheten</translation>
 <translation id="4766678251456904326">Lägg till konto på enheten</translation>
-<translation id="1996253762801922860">Vi lanserar en ny funktion för annonsintegritet som kallas annonsmätning. AI Wiz delar bara mycket begränsad information mellan webbplatser och appar, till exempel när en annons visades för dig, för att hjälpa till att mäta annonsernas resultat.</translation>
+<translation id="1996253762801922860">Vi lanserar en ny funktion för annonsintegritet som kallas annonsmätning. AI Wize delar bara mycket begränsad information mellan webbplatser och appar, till exempel när en annons visades för dig, för att hjälpa till att mäta annonsernas resultat.</translation>
 <translation id="4769095993849849966">Nytt filnamn</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> har raderats</translation>
 <translation id="4778653490315793244">Det finns inget att visa än</translation>
@@ -698,7 +698,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="4837753911714442426">Öppna utskriftsalternativ</translation>
 <translation id="4842092870884894799">Visar popupfönster för lösenordsgenerering</translation>
 <translation id="4842515939542199281">Tryck på mikrofonen om du vill söka med rösten</translation>
-<translation id="6195403640086187022">Öka säkerheten genom att kryptera lösenord på enheten innan de sparas i AI Wiz Lösenordshantering.</translation>
+<translation id="6195403640086187022">Öka säkerheten genom att kryptera lösenord på enheten innan de sparas i AI Wize Lösenordshantering.</translation>
 <translation id="4850886885716139402">Visa</translation>
 <translation id="4852014461738377247">Loggar in …</translation>
 <translation id="4860895144060829044">Ring</translation>
@@ -753,7 +753,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="509429900233858213">Det har uppstått ett fel.</translation>
 <translation id="5097349930204431044">Webbplatser du besöker kan identifiera vad du gillar och sedan föreslå annonser medan du fortsätter att surfa</translation>
 <translation id="5099845111805573968">När du väljer webbplatsen för dator en gång tillämpas inställningen på webbplatsen varje gång du besöker den</translation>
-<translation id="225414324447409614">Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wiz till Säker webbsökning tillsammans med delar av sidinnehållet</translation>
+<translation id="225414324447409614">Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wize till Säker webbsökning tillsammans med delar av sidinnehållet</translation>
 <translation id="510275257476243843">1 timme kvar</translation>
 <translation id="5115811374190515607">i <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Intressen</translation>
@@ -788,7 +788,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="5308380583665731573">Anslut</translation>
 <translation id="5317780077021120954">Spara</translation>
 <translation id="989239400026154074">Brave rekommenderar Brave</translation>
-<translation id="7815000350132166985">Om du tillåter cookies kan AI Wiz använda dem när innehåll läses in i förväg</translation>
+<translation id="7815000350132166985">Om du tillåter cookies kan AI Wize använda dem när innehåll läses in i förväg</translation>
 <translation id="1681635711794313507">Brave får ingen ny information när de här sidorna läses in privat i förväg, eftersom de förinlästa sidorna är krypterade och webbplatsen som länkar till sidorna är en Brave-webbplats.</translation>
 <translation id="5329858041417644019">Din webbläsare är inte hanterad</translation>
 <translation id="5342314432463739672">Behörighetsförfrågningar</translation>
@@ -805,7 +805,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="543338862236136125">Redigera lösenord</translation>
 <translation id="5433691172869980887">Användarnamnet har kopierats</translation>
 <translation id="5438292632479953702">Ladda ned igen</translation>
-<translation id="2766925507720001104">Varnar dig om farliga webbplatser, även sådana som AI Wiz inte kände till tidigare, genom att analysera mer data från webbplatser än standardskyddet. Du kan välja att hoppa över Brave-varningar.</translation>
+<translation id="2766925507720001104">Varnar dig om farliga webbplatser, även sådana som AI Wize inte kände till tidigare, genom att analysera mer data från webbplatser än standardskyddet. Du kan välja att hoppa över Brave-varningar.</translation>
 <translation id="5441137934526263133">Fungerar inte webbplatsen? Cookies från tredje part har blockerats</translation>
 <translation id="5441466871879044658">Översätt till detta språk</translation>
 <translation id="5441522332038954058">Hoppa till adressfältet</translation>
@@ -823,7 +823,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="5517095782334947753">Du har bokmärken, historik, lösenord och andra inställningar från <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Omdirigeringen blockerades.</translation>
 <translation id="5548606607480005320">Säkerhetskontroll</translation>
-<translation id="4362225295386962644">När du använder ett lösenord visas en varning i AI Wiz om det har publicerats online. När detta görs krypteras dina lösenord och användarnamn så att varken AI Wiz eller någon annan kan läsa dem.</translation>
+<translation id="4362225295386962644">När du använder ett lösenord visas en varning i AI Wize om det har publicerats online. När detta görs krypteras dina lösenord och användarnamn så att varken AI Wize eller någon annan kan läsa dem.</translation>
 <translation id="5555525474779371165">Välj ditt skydd med Säker webbsökning</translation>
 <translation id="5556459405103347317">Hämta igen</translation>
 <translation id="555816257274242153">Bevakning av pris har avbrutits</translation>
@@ -878,7 +878,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="5797521893972859201">Rensar historiken, inklusive från sökrutan</translation>
 <translation id="5797949256525811424">Blockerat ämne</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{för # timme sedan}other{för # timmar sedan}}</translation>
-<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> AI Wiz LLC. Med ensamrätt.</translation>
+<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> AI Wize LLC. Med ensamrätt.</translation>
 <translation id="5814749351757353073">Håll dig uppdaterad om dina favoritwebbplatser</translation>
 <translation id="5822875253699806474">Synkronisera flikar och historik för att snabbt återgå till webbplatser du har besökt</translation>
 <translation id="583281660410589416">Okänd</translation>
@@ -891,7 +891,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="5860033963881614850">Av</translation>
 <translation id="5860491529813859533">Aktivera</translation>
 <translation id="5864419784173784555">Väntar på nästa nedladdning …</translation>
-<translation id="6538479075382111079">Skickar användningsstatistik och felrapporter till AI Wiz automatiskt</translation>
+<translation id="6538479075382111079">Skickar användningsstatistik och felrapporter till AI Wize automatiskt</translation>
 <translation id="5869522115854928033">Sparade lösenord</translation>
 <translation id="5604589745019948682">Om du vill följa en webbplats besöker du den, öppnar Brave-menyn och trycker på Följ.</translation>
 <translation id="5879072387416556377">Få bättre förslag</translation>
@@ -902,7 +902,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="6103327872225198548">Du söker med Brave</translation>
 <translation id="5945035219773565305">Nuvarande rekommendation: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Visar aktiv sida</translation>
-<translation id="305870044889644984">Öppna hjälpcentret för AI Wiz på en ny flik</translation>
+<translation id="305870044889644984">Öppna hjälpcentret för AI Wize på en ny flik</translation>
 <translation id="5957442310066583693">Tryck på hemknappen om du vill se dina mest besökta webbplatser</translation>
 <translation id="59577092665511740">Välj ett konto.</translation>
 <translation id="5958275228015807058">Du hittar filerna och sidorna i Nedladdningar</translation>
@@ -929,7 +929,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="6070730414166672373">Kontaktar din bank \u2026</translation>
 <translation id="6085886413119427067">Styr hur du ansluter till webbplatser via en säker anslutning</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> timmar kvar</translation>
-<translation id="4726571606794511368">Om du även använder AI Wiz som standardsökmotor får du bättre förslag som är relevanta i sammanhanget</translation>
+<translation id="4726571606794511368">Om du även använder AI Wize som standardsökmotor får du bättre förslag som är relevanta i sammanhanget</translation>
 <translation id="6108923351542677676">Konfigurationen pågår ...</translation>
 <translation id="6112702117600201073">Uppdaterar sidan</translation>
 <translation id="6122831415929794347">Vill du inaktivera Säker webbsökning?</translation>
@@ -946,7 +946,7 @@ Det kan finnas andra former av webbhistorik i Brave-kontot på <ph name="BEGIN_L
 <translation id="6186394685773237175">Inga utsatta lösenord hittades</translation>
 <translation id="6192907950379606605">Få bildbeskrivningar</translation>
 <translation id="6193448654517602979">Välj flikar</translation>
-<translation id="8367262879301982880">Lösenorden sparas med AI Wiz Lösenordshantering på den här enheten</translation>
+<translation id="8367262879301982880">Lösenorden sparas med AI Wize Lösenordshantering på den här enheten</translation>
 <translation id="6202812185118613467">Logga in igen för att starta synkroniseringen</translation>
 <translation id="6205314730813004066">Annonsintegritet</translation>
 <translation id="6210748933810148297">Inte <ph name="EMAIL"/>?</translation>
@@ -985,13 +985,13 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="6394791151443660613">Sök efter: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LÄNK</translation>
 <translation id="6397616442223433927">Online igen</translation>
-<translation id="8789425457808164956">Om du vill skicka den här fliken till en annan enhet loggar du in i AI Wiz på den enheten</translation>
+<translation id="8789425457808164956">Om du vill skicka den här fliken till en annan enhet loggar du in i AI Wize på den enheten</translation>
 <translation id="6404511346730675251">Redigera bokmärke</translation>
 <translation id="6406506848690869874">Synkronisera</translation>
 <translation id="6407224748847589805">Det går inte att ansluta till datorn. Försök med ett annat verifieringsalternativ.</translation>
 <translation id="6410883413783534063">Öppna flikar för att besöka olika sidor samtidigt</translation>
 <translation id="6411219469806822692">Markeringen kan inte utökas mer i riktning uppåt. Testa att börja någonstans högre upp på sidan.</translation>
-<translation id="7810992039564280750">Kontrollera webbadresser mot en lista över osäkra webbplatser i Brave. Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wiz till Säker webbsökning tillsammans med delar av sidinnehållet.</translation>
+<translation id="7810992039564280750">Kontrollera webbadresser mot en lista över osäkra webbplatser i Brave. Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wize till Säker webbsökning tillsammans med delar av sidinnehållet.</translation>
 <translation id="641643625718530986">Skriv ut …</translation>
 <translation id="6422857128426228781">Du hittar dina bevakade produkter här</translation>
 <translation id="6433501201775827830">Välj sökmotor</translation>
@@ -1002,7 +1002,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="6447558397796644647">Det går inte att hitta det bokmärket. Kontrollera stavningen eller lägg till ett nytt bokmärke.</translation>
 <translation id="6459045781120991510">Enkäter</translation>
 <translation id="6461962085415701688">Det går inte att öppna filen</translation>
-<translation id="9055113864158719823">Du kan se vilka webbplatser du besökt i AI Wiz och ställa in en timer för dem.\n\nBrave får information om vilka webbplatser du har ställt in en timer för och hur länge du har stannat på dem. Informationen används för att förbättra Digitalt välmående.</translation>
+<translation id="9055113864158719823">Du kan se vilka webbplatser du besökt i AI Wize och ställa in en timer för dem.\n\nBrave får information om vilka webbplatser du har ställt in en timer för och hur länge du har stannat på dem. Informationen används för att förbättra Digitalt välmående.</translation>
 <translation id="6473086018775716761">Lista över delningsalternativ har öppnats över halva skärmen.</translation>
 <translation id="6475951671322991020">Ladda ned video</translation>
 <translation id="6477928892249167417">De här webbplatserna verkar vara viktiga för dig:</translation>
@@ -1010,54 +1010,54 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Filen har laddats ned}other{# nedladdningar har slutförts}}</translation>
 <translation id="3960299545138990065">Starta om Brave</translation>
 <translation id="6527303717912515753">Dela</translation>
-<translation id="708829030563435351">Webbplatser som du besöker i AI Wiz visas inte. Alla timer för webbplatser raderas.</translation>
+<translation id="708829030563435351">Webbplatser som du besöker i AI Wize visas inte. Alla timer för webbplatser raderas.</translation>
 <translation id="7723158744459952869">Brave tog för lång tid på sig att svara</translation>
 <translation id="6539092367496845964">Något gick fel. Försök igen senare.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Genomsöktes för 1 timme sedan}other{Genomsöktes för # timmar sedan}}</translation>
 <translation id="6545017243486555795">Rensa all data</translation>
 <translation id="6546511553472444032">Filen kan vara skadlig</translation>
-<translation id="6702167990458635422">Skyddar inte mot farliga webbplatser, nedladdningar och tillägg. Inställningarna för Säker webbsökning i andra produkter från AI Wiz påverkas inte.</translation>
+<translation id="6702167990458635422">Skyddar inte mot farliga webbplatser, nedladdningar och tillägg. Inställningarna för Säker webbsökning i andra produkter från AI Wize påverkas inte.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> och <ph name="TAB_COUNT_ONE"/> flik till stängs}other{<ph name="TAB_TITLE"/> och <ph name="TAB_COUNT_MANY"/> flikar till stängs}}</translation>
 <translation id="6560414384669816528">Sök med Sogou</translation>
 <translation id="656065428026159829">Visa fler</translation>
 <translation id="6565959834589222080">wifi används när det är tillgängligt</translation>
 <translation id="4480935821314799946">Nu visas artiklar från <ph name="SITE_NAME"/> när du öppnar en ny flik. Webbplatser som du följer sparas i Brave-kontot. Du kan hantera dem i inställningarna för Förslag.</translation>
 <translation id="6573096386450695060">Tillåt alltid</translation>
-<translation id="5157964048453367290">Här visas flikar som du har öppnat i AI Wiz på andra enheter.</translation>
+<translation id="5157964048453367290">Här visas flikar som du har öppnat i AI Wize på andra enheter.</translation>
 <translation id="6583199322650523874">Infoga ett bokmärke för den aktuella sidan</translation>
 <translation id="6588043302623806746">Använd säker DNS</translation>
 <translation id="6590471736817333463">Spara upp till 60 % data</translation>
 <translation id="6590680911007613645">Kontrollera att lösenordet som du sparar överensstämmer med lösenordet för <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Datoranpassad webbplats</translation>
 <translation id="6594347733515723558">Sortera, visa alternativ</translation>
-<translation id="2466982615210189224">Bilder skickas till AI Wiz så att du får bättre beskrivningar.</translation>
+<translation id="2466982615210189224">Bilder skickas till AI Wize så att du får bättre beskrivningar.</translation>
 <translation id="663059986967017181">Kopierat till Brave</translation>
 <translation id="661266467055912436">Förbättrar säkerheten för dig och alla andra på webben.</translation>
 <translation id="6618554661997243500">Tryck på hemknappen om du vill se dina mest besökta webbplatser och artiklar för dig</translation>
-<translation id="8127050479140582768">Om du vill skicka den här fliken till en annan enhet loggar du in i AI Wiz på båda enheterna</translation>
+<translation id="8127050479140582768">Om du vill skicka den här fliken till en annan enhet loggar du in i AI Wize på båda enheterna</translation>
 <translation id="6627583120233659107">Redigera mapp</translation>
 <translation id="6636623428211296678">Utforska fler inställningar nedan eller avsluta nu</translation>
 <translation id="2259649928554669581">Fler inställningar som rör integritet, säkerhet och datainsamling finns under <ph name="BEGIN_LINK1"/>Synk<ph name="END_LINK1"/> och <ph name="BEGIN_LINK2"/>Braves tjänster<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Brave skickar data om användning och krascher till AI Wiz i syfte att förbättra appen. <ph name="BEGIN_UMA_LINK"/>Hantera<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Brave skickar data om användning och krascher till AI Wize i syfte att förbättra appen. <ph name="BEGIN_UMA_LINK"/>Hantera<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blockera alltid</translation>
 <translation id="6641780377503683465">Ta bort <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Rensa</translation>
 <translation id="6645629752388991326">Styr vilka enheter som får logga in med den här enheten som säkerhetsnyckel.</translation>
-<translation id="2730188427562924169">En obfuskerad del av webbadressen skickas till AI Wiz via en integritetsserver som döljer din IP-adress. Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wiz till AI Wiz tillsammans med delar av sidinnehållet.</translation>
-<translation id="7556503430569358637">Webbadresser som du besöker skickas till AI Wiz för att förutse vilka webbplatser du kanske vill besöka härnäst</translation>
+<translation id="2730188427562924169">En obfuskerad del av webbadressen skickas till AI Wize via en integritetsserver som döljer din IP-adress. Om du utsätts för försök att kapa ditt lösenord på en webbplats eller om du laddar ned en skadlig fil kan webbadresserna skickas från AI Wize till AI Wize tillsammans med delar av sidinnehållet.</translation>
+<translation id="7556503430569358637">Webbadresser som du besöker skickas till AI Wize för att förutse vilka webbplatser du kanske vill besöka härnäst</translation>
 <translation id="6678472970290886941">Administratören kan ändra webbläsarinställningarna på distans. Aktivitet på den här enheten kan hanteras även utanför Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 och <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> till}other{<ph name="CONTACT_PREVIEW"/>\u2026 och <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> till}}</translation>
 <translation id="6649642165559792194">Förhandsgranska bild <ph name="BEGIN_NEW"/>Nyhet<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Lösenord</translation>
 <translation id="6659594942844771486">Flik</translation>
-<translation id="9145803563102831353">Lösenord som har sparats på den här enheten går för närvarande inte att använda i Brave-kanaler. Efter AI Wiz 121 sammanfogas lösenord som har sparats på din enhet för AI Wiz och <ph name="CHROME_CHANNEL"/> och kan användas i båda apparna.</translation>
+<translation id="9145803563102831353">Lösenord som har sparats på den här enheten går för närvarande inte att använda i Brave-kanaler. Efter AI Wize 121 sammanfogas lösenord som har sparats på din enhet för AI Wize och <ph name="CHROME_CHANNEL"/> och kan användas i båda apparna.</translation>
 <translation id="666731172850799929">Öppna i <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kopiera bild</translation>
 <translation id="6672917148207387131">Lägg till <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Ange din lösenfras för att starta synkroniseringen</translation>
-<translation id="8581481290581777242">Vill du rensa din data i AI Wiz från den här enheten?</translation>
+<translation id="8581481290581777242">Vill du rensa din data i AI Wize från den här enheten?</translation>
 <translation id="3683330416566109578">Logga in på den här webbplatsen och i Brave</translation>
-<translation id="3385384709865894288">Gör AI Wiz bättre</translation>
+<translation id="3385384709865894288">Gör AI Wize bättre</translation>
 <translation id="670498945988402717">Genomsöktes i går</translation>
 <translation id="6710213216561001401">Föregående</translation>
 <translation id="671481426037969117">Timern för <ph name="FQDN"/> har löpt ut. Den börjar om igen i morgon.</translation>
@@ -1070,14 +1070,14 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="6756507620369789050">Dela feedback</translation>
 <translation id="6767294960381293877">Listan över enheter som fliken kan delas med öppnades och tar upp halva skärmen.</translation>
 <translation id="6770602306803890733">Förbättrar säkerheten för dig och alla andra på webben</translation>
-<translation id="8174975477247159780">Ytterligare villkor för AI Wiz och Chrome OS</translation>
+<translation id="8174975477247159780">Ytterligare villkor för AI Wize och Chrome OS</translation>
 <translation id="6795633245022906657">Öppna en ny flik snabbt. Öppna inställningarna om du vill ändra genvägen.</translation>
 <translation id="6802555630140434547">Fönstret stängs</translation>
 <translation id="6811034713472274749">Sidan är klar att öppna</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Bilder, 1 bild i listan}other{Bilder, # bilder i listan}}</translation>
 <translation id="8418237809013783651">Logga in i Brave, öppet.</translation>
 <translation id="6817747507826986771">Dela den här sidan snabbt. Tryck länge om du vill ändra genvägen.</translation>
-<translation id="118366698571543506">Logga in och ta AI Wiz med dig på alla dina enheter</translation>
+<translation id="118366698571543506">Logga in och ta AI Wize med dig på alla dina enheter</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Från adressfältet kan du öppna sidinformationen för att läsa mer om den sida du besöker</translation>
 <translation id="6828070228333235514">Avbryt bevakningen av priset</translation>
@@ -1089,7 +1089,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="6850409657436465440">Nedladdningen pågår fortfarande</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> flikar har stängts</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Ljudfiler, 1 ljudfil i listan}other{Ljudfiler, # ljudfiler i listan}}</translation>
-<translation id="4046835482356054431">Förslag från AI Wiz – av</translation>
+<translation id="4046835482356054431">Förslag från AI Wize – av</translation>
 <translation id="686366188661646310">Vill du radera lösenordet?</translation>
 <translation id="6864459304226931083">Ladda ned bild</translation>
 <translation id="6865313869410766144">Formuläruppgifter för Autofyll</translation>
@@ -1123,7 +1123,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7029809446516969842">Lösenord</translation>
 <translation id="7030304022046916278">Webbadresser skickas till Säker webbsökning för kontroll</translation>
 <translation id="7035701931849773472">Andra alternativ</translation>
-<translation id="5813862251770201080">Logga in i AI Wiz med ditt Brave-konto</translation>
+<translation id="5813862251770201080">Logga in i AI Wize med ditt Brave-konto</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Vill du få bildbeskrivningar?</translation>
 <translation id="7055152154916055070">Omdirigeringen blockerades:</translation>
@@ -1148,30 +1148,30 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7177873915659574692">Det gick inte att skapa QR-koden. Webbadressen är längre än <ph name="CHARACTER_LIMIT"/> tecken.</translation>
 <translation id="7180611975245234373">Uppdatera</translation>
 <translation id="7183693674623539380">Flikgrupp – <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Skyddar dig i AI Wiz och kan användas för förbättrad säkerhet i andra Brave-appar där du är inloggad.</translation>
+<translation id="8355565210555500987">Skyddar dig i AI Wize och kan användas för förbättrad säkerhet i andra Brave-appar där du är inloggad.</translation>
 <translation id="7191430249889272776">Fliken öppnades i bakgrunden.</translation>
 <translation id="7196215469483532480">Förklaringen till integritetsguiden har öppnats över hela skärmen</translation>
-<translation id="1014116676551114642">Innehåll från AI Wiz för unga – inaktiverat</translation>
+<translation id="1014116676551114642">Innehåll från AI Wize för unga – inaktiverat</translation>
 <translation id="7207760545532569765">Återställ <ph name="TAB_COUNT"/> flikar som nya flikar i bakgrunden.</translation>
 <translation id="7221869452894271364">Hämta sidan igen</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 nedladdning väntar}other{# nedladdningar väntar}}</translation>
 <translation id="72415438529550637">Lösenordsförslaget har stängts.</translation>
 <translation id="7242755609445462077">Stiliserad markering <ph name="CURRENT_DATE"/></translation>
-<translation id="8287068819750208230">Kontrollera att synkronisering har aktiverats i AI Wiz på <ph name="TARGET_DEVICE_NAME"/></translation>
+<translation id="8287068819750208230">Kontrollera att synkronisering har aktiverats i AI Wize på <ph name="TARGET_DEVICE_NAME"/></translation>
 <translation id="7252076891734325316">Lägg telefonen nära datorn</translation>
-<translation id="4957342254208357193">En liknande inställning kan finnas på Android-enheten. Om annonsmätning har aktiverats i AI Wiz och på Android-enheten kan ett företag mäta hur effektiv en annons är på alla webbplatser du besöker och i appar som du använder.</translation>
+<translation id="4957342254208357193">En liknande inställning kan finnas på Android-enheten. Om annonsmätning har aktiverats i AI Wize och på Android-enheten kan ett företag mäta hur effektiv en annons är på alla webbplatser du besöker och i appar som du använder.</translation>
 <translation id="727288900855680735">Vill du skicka <ph name="ONE_TIME_CODE"/> till <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Blockerad webbplats</translation>
-<translation id="7949597606523411684">Brave raderar automatiskt ämnen som är äldre än fyra veckor. Medan du surfar kan ett ämne dyka upp på listan igen. Du kan också blockera ämnen som du inte vill att AI Wiz ska dela med webbplatser. Läs mer om hur du <ph name="BEGIN_LINK"/>hanterar annonsintegritet i Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">När du skriver skickar AI Wiz innehållet i adressfältet eller sökrutan till standardsökmotorn</translation>
+<translation id="7949597606523411684">Brave raderar automatiskt ämnen som är äldre än fyra veckor. Medan du surfar kan ett ämne dyka upp på listan igen. Du kan också blockera ämnen som du inte vill att AI Wize ska dela med webbplatser. Läs mer om hur du <ph name="BEGIN_LINK"/>hanterar annonsintegritet i Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">När du skriver skickar AI Wize innehållet i adressfältet eller sökrutan till standardsökmotorn</translation>
 <translation id="7286703216224610554">Dela endast reaktion</translation>
 <translation id="7289303553784750393">Om du är online men problemet kvarstår kan du testa andra sätt att fortsätta på <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Det går inte att byta namn</translation>
 <translation id="7291910923717764901">Bildbeskrivningar för den här sidan har lagts till</translation>
 <translation id="7293429513719260019">Välj språk</translation>
 <translation id="729975465115245577">Det finns ingen app som kan spara lösenordsfilen på enheten.</translation>
-<translation id="7581648335850642193">En liknande inställning kan finnas på Android-enheten. Om den här inställningen är aktiverad i AI Wiz och på Android-enheten kan ett företag mäta hur effektiv en annons är på alla webbplatser du besöker och i appar som du använder.</translation>
-<translation id="1382596880054356475">Offline. AI Wiz kan inte kontrollera dina lösenord.</translation>
+<translation id="7581648335850642193">En liknande inställning kan finnas på Android-enheten. Om den här inställningen är aktiverad i AI Wize och på Android-enheten kan ett företag mäta hur effektiv en annons är på alla webbplatser du besöker och i appar som du använder.</translation>
+<translation id="1382596880054356475">Offline. AI Wize kan inte kontrollera dina lösenord.</translation>
 <translation id="7313188324932846546">Tryck för att konfigurera synkronisering</translation>
 <translation id="7324354302972299151">Skicka en Do Not Track-begäran</translation>
 <translation id="7332075081379534664">Inloggningen lyckades</translation>
@@ -1198,7 +1198,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7431991332293347422">Styr hur webbhistoriken får användas för att anpassa Sök med mera</translation>
 <translation id="7435356471928173109">Inaktiverat av administratören</translation>
 <translation id="6234515504547364178">Logga ut från Brave</translation>
-<translation id="6147816961713837040">En obfuskerad del av webbadressen skickas till AI Wiz via en integritetsserver som döljer din IP-adress</translation>
+<translation id="6147816961713837040">En obfuskerad del av webbadressen skickas till AI Wize via en integritetsserver som döljer din IP-adress</translation>
 <translation id="3699067418237091329">Du loggas ut från de flesta webbplatser. Du loggas inte ut från Brave-kontot.</translation>
 <translation id="7453810262525006706">Komprimera till sidovy</translation>
 <translation id="7454641608352164238">Utrymmet räcker inte</translation>
@@ -1227,7 +1227,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7523960634226602883">Sök med kameran med hjälp av Google Lens</translation>
 <translation id="7539698981064401140">Synkronisera flikar och historik</translation>
 <translation id="7562080006725997899">Tar bort webbinformation</translation>
-<translation id="7814200940910057384">Data i AI Wiz har rensats</translation>
+<translation id="7814200940910057384">Data i AI Wize har rensats</translation>
 <translation id="7577900504646297215">Hantera intressen</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> fil har laddats ned}other{<ph name="FILES_DOWNLOADED_MANY"/> filer har laddats ned}}</translation>
 <translation id="7581273696622423628">Svara på enkäten</translation>
@@ -1237,7 +1237,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7596558890252710462">Operativsystem</translation>
 <translation id="7603168929588204083">Ogiltigt datum</translation>
 <translation id="7605594153474022051">Det går inte att synkronisera</translation>
-<translation id="649070405679044769">Inloggad i AI Wiz som</translation>
+<translation id="649070405679044769">Inloggad i AI Wize som</translation>
 <translation id="7612989789287281429">Du loggas in …</translation>
 <translation id="7616551326690708776">Välj en mall för markeringen.</translation>
 <translation id="7619072057915878432">Det gick inte att ladda ned <ph name="FILE_NAME"/> på grund av nätverksfel.</translation>
@@ -1256,7 +1256,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7682724950699840886">Testa följande: kontrollera att det finns tillräckligt mycket utrymme på enheten, gör om exporten.</translation>
 <translation id="7686086654630106285">Mer om föreslagna annonser på webbplatser</translation>
 <translation id="2667018639405889513">Vissa av sidorna du besöker läser in i förväg. Sidor kan läsas in i förväg via Braves servrar när de länkas från en Brave-webbplats.</translation>
-<translation id="7795837497684113327">Det gick inte att öppna AI Wiz på enheten. Åtgärda problemet genom att ladda ned den senaste Brave-uppdateringen från appbutiken.</translation>
+<translation id="7795837497684113327">Det gick inte att öppna AI Wize på enheten. Åtgärda problemet genom att ladda ned den senaste Brave-uppdateringen från appbutiken.</translation>
 <translation id="7691043218961417207">Utforska innehåll att följa</translation>
 <translation id="7697383401610880082">Handtag</translation>
 <translation id="7698359219371678927">Skapa ett e-postmeddelande i <ph name="APP_NAME"/></translation>
@@ -1315,7 +1315,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7960972236129063347">Bakåtknapp för sidinsikter</translation>
 <translation id="7961926449547174351">Du har inaktiverat åtkomst till lagringsutrymmet. Återaktivera i inställningarna.</translation>
 <translation id="7963646190083259054">Leverantör:</translation>
-<translation id="2939504940637874963">Du kan använda sparade lösenord på vilken enhet som helst. De sparas i AI Wiz Lösenordshantering för <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Du kan använda sparade lösenord på vilken enhet som helst. De sparas i AI Wize Lösenordshantering för <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Har lagts till i läslistan</translation>
 <translation id="7971136598759319605">Aktiv för 1 dag sedan</translation>
 <translation id="7975379999046275268">Förhandsgranska sida <ph name="BEGIN_NEW"/>Nyhet<ph name="END_NEW"/></translation>
@@ -1348,17 +1348,17 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="808747664143081553">Ansluten till enheten</translation>
 <translation id="8090732854597034573">Prata med din förälder om du behöver hjälp</translation>
 <translation id="8101414242770404289">Inga flikar från <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Genom att fortsätta godkänner du <ph name="BEGIN_TOS_LINK"/>användarvillkoren<ph name="END_TOS_LINK"/>.\nBrave skickar data om användning och krascher till AI Wiz i syfte att förbättra appen. <ph name="BEGIN_UMA_LINK"/>Hantera<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Genom att fortsätta godkänner du <ph name="BEGIN_TOS_LINK"/>användarvillkoren<ph name="END_TOS_LINK"/>.\nBrave skickar data om användning och krascher till AI Wize i syfte att förbättra appen. <ph name="BEGIN_UMA_LINK"/>Hantera<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Stäng sorteringsalternativ</translation>
 <translation id="2919733817273403520">Hjälp oss att förbättra funktioner och prestanda i Brave</translation>
-<translation id="4565206163201411670">Vill du att din aktivitet i AI Wiz ska visas i Digitalt välmående?</translation>
+<translation id="4565206163201411670">Vill du att din aktivitet i AI Wize ska visas i Digitalt välmående?</translation>
 <translation id="8118117428362942925">Prata med din förälder (<ph name="PARENT_NAME"/>) om du behöver hjälp</translation>
 <translation id="8122623268651408616">Sorterar efter senaste</translation>
 <translation id="8127542551745560481">Redigera startsida</translation>
 <translation id="8130309322784422030">Dina sparade inloggningsuppgifter kan vara inaktuella</translation>
 <translation id="813082847718468539">Visa information om webbplatsen</translation>
-<translation id="6337533477704327362">Du behöver inte komma ihåg det här lösenordet. Det sparas med AI Wiz Lösenordshantering.</translation>
+<translation id="6337533477704327362">Du behöver inte komma ihåg det här lösenordet. Det sparas med AI Wize Lösenordshantering.</translation>
 <translation id="8186512483418048923"><ph name="FILES"/> filer återstår</translation>
 <translation id="8190358571722158785">1 dag kvar</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Dina enheter<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1368,14 +1368,14 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="8210770465353466621">Du hittar dina flikar här</translation>
 <translation id="8215740705341534369">Ark på sidan av skärmen</translation>
 <translation id="8218622182176210845">Hantera kontot</translation>
-<translation id="4034729701971511794">Du kan blockera webbplatser som du inte vill ha. AI Wiz raderar även webbplatser som är äldre än 30 dagar automatiskt. <ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Du kan blockera webbplatser som du inte vill ha. AI Wize raderar även webbplatser som är äldre än 30 dagar automatiskt. <ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menyn med flödeskort</translation>
 <translation id="8236097722223016103">Lägg till i bokmärken</translation>
 <translation id="8237871086242677046">Ark för sidinsikter på nedre delen av skärmen</translation>
 <translation id="8243077599929149377">Lägg till ditt användarnamn</translation>
 <translation id="8250920743982581267">Dokument</translation>
 <translation id="8255617931166444521">Webbplatser får endast se din webbaktivitet på den aktuella webbplatsen med hjälp av cookies</translation>
-<translation id="2876689296031086375">Eftersom förinlästa sidor är krypterade får AI Wiz ingen information om innehållet på dem. Braves servrar lär sig vilka webbplatser som läses in privat i förväg. Den här informationen används endast för att läsa in sidor i förväg och är inte länkar till andra uppgifter från ditt Brave-konto.</translation>
+<translation id="2876689296031086375">Eftersom förinlästa sidor är krypterade får AI Wize ingen information om innehållet på dem. Braves servrar lär sig vilka webbplatser som läses in privat i förväg. Den här informationen används endast för att läsa in sidor i förväg och är inte länkar till andra uppgifter från ditt Brave-konto.</translation>
 <translation id="8260126382462817229">Försök att logga in igen</translation>
 <translation id="8261506727792406068">Radera</translation>
 <translation id="82619448491672958">Se andra flikar</translation>
@@ -1385,7 +1385,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="829672787777123339">Ansluter till enheten …</translation>
 <translation id="8310344678080805313">Standardflikar</translation>
 <translation id="831192587911042850">Lägger till den aktuella webbplatsen i listan med webbplatser du följer.</translation>
-<translation id="5665071699503384089">Du kan blockera ämnen som du inte vill dela med webbplatser. I AI Wiz raderas även ämnen som är äldre än fyra veckor automatiskt. <ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Du kan blockera ämnen som du inte vill dela med webbplatser. I AI Wize raderas även ämnen som är äldre än fyra veckor automatiskt. <ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Översätt aldrig webbplatser</translation>
 <translation id="8348430946834215779">Använd HTTPS när det är möjligt och få en varning innan webbplatser som saknar stöd för HTTPS läses in</translation>
 <translation id="8354977102499939946">Gör en röstsökning snabbt. Öppna inställningarna om du vill ändra genvägen.</translation>
@@ -1396,11 +1396,11 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="7651600795135059130">Kontrollera webbadresser mot en lista över osäkra webbplatser i Brave</translation>
 <translation id="8402673309244746971">Öppna Följer</translation>
 <translation id="8413126021676339697">Visa fullständig historik</translation>
-<translation id="5348884013239264115">Skyddar mot skadliga webbplatser, nedladdningar och tillägg. När du besöker en webbplats skickas en obfuskerad del av webbadressen till AI Wiz via en integritetsserver som döljer din IP-adress. Om en webbplats gör något misstänkt skickas också fullständiga webbadresser och delar av sidinnehållet.</translation>
+<translation id="5348884013239264115">Skyddar mot skadliga webbplatser, nedladdningar och tillägg. När du besöker en webbplats skickas en obfuskerad del av webbadressen till AI Wize via en integritetsserver som döljer din IP-adress. Om en webbplats gör något misstänkt skickas också fullständiga webbadresser och delar av sidinnehållet.</translation>
 <translation id="8414396119627470038">Logga in på <ph name="SITE_ETLD_PLUS_ONE"/> med <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Inkludera</translation>
 <translation id="8422250855136581222">Inga flikar på den här enheten</translation>
-<translation id="5735840612282428689">Sidan har skickats. Öppna AI Wiz på <ph name="DEVICE_TYPE"/> för att se den</translation>
+<translation id="5735840612282428689">Sidan har skickats. Öppna AI Wize på <ph name="DEVICE_TYPE"/> för att se den</translation>
 <translation id="8427875596167638501">Fliken Förhandsgranskning visas på halva skärmen</translation>
 <translation id="8428213095426709021">Inställningar</translation>
 <translation id="8430824733382774043">Dela endast skärmbild</translation>
@@ -1454,7 +1454,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="864544049772947936">Hantera fönster (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Förutser och varnar dig om farliga händelser innan de inträffar</translation>
 <translation id="2734140769649165081">Du kan rensa data i Brave-inställningarna</translation>
-<translation id="7436978557885042606">Använd AI Wiz på ditt sätt</translation>
+<translation id="7436978557885042606">Använd AI Wize på ditt sätt</translation>
 <translation id="8664979001105139458">Filnamnet finns redan</translation>
 <translation id="8676276370198826499">Registrera dig för <ph name="SITE_ETLD_PLUS_ONE"/> med <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Verifieringar för inloggning</translation>
@@ -1491,15 +1491,15 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="885480114717186641">Du kan begära webbplatsen för datorn för <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Få beskrivningar</translation>
 <translation id="8856931513242997049">Behörighetsflödet för aviseringar har stängts</translation>
-<translation id="1984646864943401749">Skickar webbadresser till vissa sidor som du besöker, vissa systemuppgifter och visst sidinnehåll till AI Wiz för att upptäcka och blockera nya hot och skydda alla användare på internet.</translation>
+<translation id="1984646864943401749">Skickar webbadresser till vissa sidor som du besöker, vissa systemuppgifter och visst sidinnehåll till AI Wize för att upptäcka och blockera nya hot och skydda alla användare på internet.</translation>
 <translation id="8909135823018751308">Dela …</translation>
 <translation id="2684652081942622950">Brave-konto</translation>
 <translation id="8921980840204105660">Synkronisera om du vill få tillgång till bokmärken från dina andra enheter</translation>
 <translation id="8922289737868596582">Ladda ned sidor via knappen Fler alternativ så att du kan använda dem offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Läs mer<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> är redo</translation>
-<translation id="1174893863889683998">Vill du ta bort din aktivitet i AI Wiz från Digitalt välmående?</translation>
-<translation id="179413535815682755">Beroende på dina inställningar kan AI Wiz även skicka cookies, din nuvarande webbadress och din plats</translation>
+<translation id="1174893863889683998">Vill du ta bort din aktivitet i AI Wize från Digitalt välmående?</translation>
+<translation id="179413535815682755">Beroende på dina inställningar kan AI Wize även skicka cookies, din nuvarande webbadress och din plats</translation>
 <translation id="8942627711005830162">Öppna i ett annat fönster</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> – Det gick inte att ladda ned språket. Försök igen senare.</translation>
 <translation id="8955719471735800169">Tillbaka till början</translation>
@@ -1509,8 +1509,8 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="8987736167266086032">Fortsätt där du slutade</translation>
 <translation id="8996847606757455498">Välj en annan leverantör</translation>
 <translation id="8998289560386111590">Inte tillgängligt på din enhet</translation>
-<translation id="3275122921244685452">Du håller på att logga in med ett konto som hanteras av <ph name="MANAGED_DOMAIN"/>, vilket ger administratören kontroll över data i Brave. Din data kopplas permanent till det här kontot. Om du loggar ut från AI Wiz raderas all din data från enheten, men den lagras fortfarande i Brave-kontot.</translation>
-<translation id="9012585441087414258">Skyddar mot skadliga webbplatser, nedladdningar och tillägg. Om något misstänkt händer på en sida skickas webbadresser och delar av sidinnehållet till AI Wiz Säker webbsökning.</translation>
+<translation id="3275122921244685452">Du håller på att logga in med ett konto som hanteras av <ph name="MANAGED_DOMAIN"/>, vilket ger administratören kontroll över data i Brave. Din data kopplas permanent till det här kontot. Om du loggar ut från AI Wize raderas all din data från enheten, men den lagras fortfarande i Brave-kontot.</translation>
+<translation id="9012585441087414258">Skyddar mot skadliga webbplatser, nedladdningar och tillägg. Om något misstänkt händer på en sida skickas webbadresser och delar av sidinnehållet till AI Wize Säker webbsökning.</translation>
 <translation id="9019199799064251516">Vill du fortsätta utan ett profillås i bilen?</translation>
 <translation id="9022774213089566801">Mest besökta</translation>
 <translation id="9022871169049522985">Webbplatser och annonsörer kan mäta annonsernas resultat</translation>
@@ -1520,7 +1520,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="9055497320631373736">Webbplatsen har lagts till i potentiella webbplatser igen</translation>
 <translation id="9063523880881406963">Inaktivera begäran av webbplats för stationär dator</translation>
 <translation id="9065203028668620118">Redigera</translation>
-<translation id="5496925146144075335">Sparad data som bedöms som oviktig i AI Wiz (t.ex. webbplatser utan sparade inställningar eller som du inte besöker ofta)</translation>
+<translation id="5496925146144075335">Sparad data som bedöms som oviktig i AI Wize (t.ex. webbplatser utan sparade inställningar eller som du inte besöker ofta)</translation>
 <translation id="9067341854474068781">Inget nyckelark har öppnats över hela skärmen</translation>
 <translation id="906781307897697745">i <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Det finns inga olästa sidor</translation>
@@ -1554,8 +1554,8 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="9209888181064652401">Det går inte att ringa</translation>
 <translation id="9212845824145208577">Markeringen kan inte utökas mer i riktning nedåt. Testa att börja någonstans längre ned på sidan.</translation>
 <translation id="9219103736887031265">Bilder</translation>
-<translation id="6946179564366058239">När en webbplats frågar om dess länkar ska läsas in privat i förväg krypterar AI Wiz sidorna och läser in dem i förväg via Braves servrar utan cookies. Det innebär att din identitet döljs från den förinlästa webbplatsen.</translation>
-<translation id="4596514158372210596">Ta bort din aktivitet i AI Wiz från Digitalt välmående</translation>
+<translation id="6946179564366058239">När en webbplats frågar om dess länkar ska läsas in privat i förväg krypterar AI Wize sidorna och läser in dem i förväg via Braves servrar utan cookies. Det innebär att din identitet döljs från den förinlästa webbplatsen.</translation>
+<translation id="4596514158372210596">Ta bort din aktivitet i AI Wize från Digitalt välmående</translation>
 <translation id="2830145431802238213">Använd begränsat läge i Brave</translation>
 <translation id="928550791203542716">Följer <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Alla lösenord laddas ned på enheten och tas bort från <ph name="CHROME_CHANNEL"/></translation>
@@ -1591,7 +1591,7 @@ Vissa webbplatser kan till exempel svara på begäran genom att visa annonser so
 <translation id="4660964651149493586">Lås upp privat</translation>
 <translation id="5278260521317049275">Aktivera Privat lås</translation>
 <translation id="6302653771627628530">Privata flikar blir låsta när du lämnar Brave</translation>
-<translation id="3763131702135887799">Hjälp till att göra AI Wiz bättre för profiler som använder det som du gör</translation>
+<translation id="3763131702135887799">Hjälp till att göra AI Wize bättre för profiler som använder det som du gör</translation>
 <translation id="4167670741834902166">Ny inkognitofli</translation>
 <translation id="9148151251783962691">Testa Privat om du vill surfa privat på den här enheten</translation>
 <translation id="8355284051444779553">Öppna menyn för att öppna en ny privat flik</translation>

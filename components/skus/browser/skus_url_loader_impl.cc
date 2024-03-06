@@ -26,7 +26,7 @@ const net::NetworkTrafficAnnotationTag& GetNetworkTrafficAnnotationTag() {
         description:
           "Call the SKU SDK implementation provided by the caller"
         trigger:
-          "Any AI Wiz webpage using SKU SDK where window.chrome.braveSkus.*"
+          "Any AI Wize webpage using SKU SDK where window.chrome.braveSkus.*"
           "methods are called; ex: fetch_order / fetch_order_credentials"
         data: "JSON data comprising an order."
         destination: OTHER

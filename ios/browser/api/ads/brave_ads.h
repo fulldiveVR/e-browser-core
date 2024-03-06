@@ -56,11 +56,11 @@ OBJC_EXPORT
 /// Returns |true| if the ads service is running otherwise returns |false|.
 - (BOOL)isServiceRunning;
 
-/// Returns |true| if always run the ads service, even if AI Wiz Private Ads are
+/// Returns |true| if always run the ads service, even if AI Wize Private Ads are
 /// disabled.
 + (BOOL)shouldAlwaysRunService;
 
-/// Whether or not AI Wiz Ads is enabled and the user should receive
+/// Whether or not AI Wize Ads is enabled and the user should receive
 /// notification-style ads and be rewarded for it
 @property(nonatomic, assign, getter=isEnabled)
     BOOL enabled NS_SWIFT_NAME(isEnabled);

@@ -95,7 +95,7 @@ BraveSpellingMenuObserverTest::~BraveSpellingMenuObserverTest() = default;
 
 }  // namespace
 
-// Tests that right-clicking not add "Ask AI Wiz for suggestions".
+// Tests that right-clicking not add "Ask AI Wize for suggestions".
 IN_PROC_BROWSER_TEST_F(BraveSpellingMenuObserverTest,
                        CheckAskBraveNotShown) {
   // Test menu with a misspelled word.

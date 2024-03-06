@@ -17,7 +17,7 @@ class JSONValueConverter;
 
 namespace brave_shields {
 
-// Represents an entry of the catalog of filter lists that AI Wiz makes
+// Represents an entry of the catalog of filter lists that AI Wize makes
 // available. Corresponds to the entries in
 // https://github.com/brave/adblock-resources/blob/master/filter_lists/regional.json.
 // See https://github.com/brave/adblock-resources#filter-list-description-format

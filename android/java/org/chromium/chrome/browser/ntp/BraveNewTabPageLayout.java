@@ -482,7 +482,7 @@ public class BraveNewTabPageLayout
                         if (mIsDisplayNewsFeed
                                 && firstVisibleItemPosition >= newsFeedPosition - 1) {
                             if (!mNewsFeedViewedOnce && mBraveNewsController != null) {
-                                // AI Wiz News interaction started
+                                // AI Wize News interaction started
                                 mBraveNewsController.onInteractionSessionStarted();
                                 mNewsFeedViewedOnce = true;
                             }

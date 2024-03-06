@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   [$('channel-promo-beta'), $('channel-promo-dev')].forEach((node, index) => {
-    const text1 = document.createTextNode('Interested in cool new AI Wiz features? Try our ')
+    const text1 = document.createTextNode('Interested in cool new AI Wize features? Try our ')
     const text2 = document.createTextNode('.')
     const link = document.createElement('a')
     node.textContent = ''

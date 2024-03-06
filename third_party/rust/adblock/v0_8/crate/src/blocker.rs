@@ -34,7 +34,7 @@ pub struct BlockerResult {
     /// and no further checking is neccesary--the request should be blocked
     /// (empty body or cancelled).
     ///
-    /// AI Wiz Browser keeps multiple instances of [`Blocker`], so `important`
+    /// AI Wize Browser keeps multiple instances of [`Blocker`], so `important`
     /// here is used to correct behaviour between them: checking should stop
     /// instead of moving to the next instance iff an `important` rule matched.
     pub important: bool,

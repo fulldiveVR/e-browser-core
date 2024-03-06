@@ -28,7 +28,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1129510026454351943">Pojedinosti: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Nemoj nuditi prevođenje ovih web-lokacija</translation>
 <translation id="1145536944570833626">Brisanje postojećih podataka.</translation>
-<translation id="7083341910267693582">Aplikacija <ph name="APP_NAME"/> otvorit će se u Braveu. Nastavljanjem prihvaćate <ph name="BEGIN_LINK1"/>Braveove uvjete pružanja usluge<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>dodatne uvjete pružanja usluge za AI Wiz i Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">Aplikacija <ph name="APP_NAME"/> otvorit će se u Braveu. Nastavljanjem prihvaćate <ph name="BEGIN_LINK1"/>Braveove uvjete pružanja usluge<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>dodatne uvjete pružanja usluge za AI Wize i Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Upotrijebi zaporku <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Preimenuj</translation>
 <translation id="7947699437047020219">Brave će zahtijevati web-lokaciju za mobilne uređaje kad je zaslon uzak</translation>
@@ -50,18 +50,18 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1240288207750131269">Učitava se <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Da biste nastavili, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> podijelit će vaše ime, e-adresu i profilnu sliku s ovom web-lokacijom. Pogledajte <ph name="BEGIN_LINK1"/>pravila o privatnosti<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>uvjete pružanja usluge<ph name="END_LINK2"/> ove web-lokacije.</translation>
 <translation id="124116460088058876">Više jezika</translation>
-<translation id="4078574862195461280">Vaše će se zaporke izbrisati s AI Wiz upravitelja zaporki za <ph name="CHROME_CHANNEL"/>. Zadržat ćete datoteku sa zaporkama koju ste upravo preuzeli.</translation>
+<translation id="4078574862195461280">Vaše će se zaporke izbrisati s AI Wize upravitelja zaporki za <ph name="CHROME_CHANNEL"/>. Zadržat ćete datoteku sa zaporkama koju ste upravo preuzeli.</translation>
 <translation id="1242883863226959074">uređaju</translation>
 <translation id="124678866338384709">Zatvaranje trenutačne kartice</translation>
 <translation id="1246905108078336582">Želite li ukloniti prijedlog iz međuspremnika?</translation>
 <translation id="1996480094660735607">Braveov doodle logotip: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Sada će se na kartici Praćeno prikazivati sadržaj s web-lokacije <ph name="SITE_NAME"/> i informacije o toj web-lokaciji. Web-lokacije i pretraživanja koja pratite spremaju se na vaš AI Wiz račun. Praćenim stavkama možete upravljati u postavkama kad god želite.</translation>
+<translation id="7074197713963877855">Sada će se na kartici Praćeno prikazivati sadržaj s web-lokacije <ph name="SITE_NAME"/> i informacije o toj web-lokaciji. Web-lokacije i pretraživanja koja pratite spremaju se na vaš AI Wize račun. Praćenim stavkama možete upravljati u postavkama kad god želite.</translation>
 <translation id="1263231323834454256">Popis za čitanje</translation>
 <translation id="1266864766717917324">Nije moguće podijeliti <ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">Ovdje ćete pronaći svoju povijest</translation>
 <translation id="1273937721055267968">Blokiraj <ph name="DOMAIN"/></translation>
 <translation id="1283039547216852943">Dodirnite za proširivanje</translation>
-<translation id="194557235473047967">Od vas će se tražiti da se prijavite na AI Wiz račun.</translation>
+<translation id="194557235473047967">Od vas će se tražiti da se prijavite na AI Wize račun.</translation>
 <translation id="1291207594882862231">Brisanje povijesti, kolačića, podataka web-lokacija, predmemorije...</translation>
 <translation id="129553762522093515">Nedavno zatvoreno</translation>
 <translation id="1298077576058087471">Uštedite do 60% podataka, pročitajte današnje vijesti</translation>
@@ -102,11 +102,11 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1493287004536771723">Pratite web-lokaciju <ph name="SITE_NAME"/></translation>
 <translation id="1502010315804028179">Ažurirajte usluge za Google Play da biste upravljali zaporkama</translation>
 <translation id="1506061864768559482">Tražilica</translation>
-<translation id="1513352483775369820">Oznake i AI Wiz povijest</translation>
+<translation id="1513352483775369820">Oznake i AI Wize povijest</translation>
 <translation id="1513814250881909472">Uključite sinkronizaciju da bi se kartice prikazale na drugim uređajima</translation>
 <translation id="1513858653616922153">Izbriši zaporku</translation>
 <translation id="1521774566618522728">Aktivan danas</translation>
-<translation id="8090895580117672212">Da biste upravljali svojim AI Wiz računom, dodirnite gumb "Upravljanje računom"</translation>
+<translation id="8090895580117672212">Da biste upravljali svojim AI Wize računom, dodirnite gumb "Upravljanje računom"</translation>
 <translation id="1549000191223877751">Premjesti u drugi prozor</translation>
 <translation id="1705567146636171298">Ažuriraj Brave</translation>
 <translation id="1568636008098739136">Poslušajte ovu stranicu. Da biste uredili taj prečac, dodirnite ga i zadržite pritisak.</translation>
@@ -124,18 +124,18 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1671236975893690980">Preuzimanje na čekanju…</translation>
 <translation id="1672586136351118594">Ne prikazuj ponovo</translation>
 <translation id="1680919990519905526">Kupi pomoću Objektiva <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Uskoro će se na kartici Praćeno prikazivati sadržaj s web-lokacije <ph name="SITE_NAME"/> i informacije o toj web-lokaciji. Web-lokacije i pretraživanja koja pratite spremaju se na vaš AI Wiz račun. Praćenim stavkama možete upravljati u postavkama kad god želite.</translation>
+<translation id="7870200641233500458">Uskoro će se na kartici Praćeno prikazivati sadržaj s web-lokacije <ph name="SITE_NAME"/> i informacije o toj web-lokaciji. Web-lokacije i pretraživanja koja pratite spremaju se na vaš AI Wize račun. Praćenim stavkama možete upravljati u postavkama kad god želite.</translation>
 <translation id="1696555181932908973">Možete isprobati druge načine da biste nastavili na <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">Želite li promijeniti postavke tamne teme?</translation>
 <translation id="1702907158640575240">Upravljani preglednik</translation>
 <translation id="1710099199314114079">Promjena ili zatvaranje kartica</translation>
 <translation id="1718835860248848330">Zadnji sat</translation>
 <translation id="1724977129262658800">Otključajte da biste izmijenili zaporku</translation>
-<translation id="6493900814829428590">Možete pregledavati i pretraživati brže kad AI Wiz predučitava stranice za koje misli da biste ih mogli posjetiti</translation>
+<translation id="6493900814829428590">Možete pregledavati i pretraživati brže kad AI Wize predučitava stranice za koje misli da biste ih mogli posjetiti</translation>
 <translation id="1749561566933687563">Sinkronizirajte oznake</translation>
 <translation id="1750259112639922169">Grupa kartica – broj kartica: <ph name="TAB_COUNT"/></translation>
 <translation id="17513872634828108">Otvorene kartice</translation>
-<translation id="9207812657123271782">Ažuriranje AI Wiz upravitelja zaporki</translation>
+<translation id="9207812657123271782">Ažuriranje AI Wize upravitelja zaporki</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Stranice, 1 stranica na popisu}one{Stranice, # stranica na popisu}few{Stranice, # stranice na popisu}other{Stranice, # stranica na popisu}}</translation>
 <translation id="1778457539567749232">Označi kao nepročitano</translation>
 <translation id="1779766957982586368">Zatvori prozor</translation>
@@ -152,7 +152,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1883903952484604915">Moje datoteke</translation>
 <translation id="189358972401248634">Drugi jezici</translation>
 <translation id="1900260903084164610">Nastavkom upotrebe prihvaćate <ph name="BEGIN_TOS_LINK"/>uvjete pružanja usluge<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">URL-ovi koje posjećujete spremaju se na vaš AI Wiz račun</translation>
+<translation id="6893464351226208429">URL-ovi koje posjećujete spremaju se na vaš AI Wize račun</translation>
 <translation id="1910950723001426294">Popis opcija za dijeljenje je zatvoren.</translation>
 <translation id="7021823858304886493">Dopusti prijavu u Brave</translation>
 <translation id="1922362554271624559">Predloženi jezici</translation>
@@ -175,7 +175,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="1984417487208496350">Bez zaštite (ne preporučuje se)</translation>
 <translation id="1986685561493779662">Naziv već postoji</translation>
 <translation id="1995884366040846621">Da biste nastavili, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> podijelit će vaše ime, e-adresu i profilnu sliku s ovom web-lokacijom. Pogledajte <ph name="BEGIN_LINK1"/>pravila o privatnosti<ph name="END_LINK1"/> ove web-lokacije.</translation>
-<translation id="6968892567705775281">Želite li uključiti okolni tekst u AI Wiz pretraživanja?</translation>
+<translation id="6968892567705775281">Želite li uključiti okolni tekst u AI Wize pretraživanja?</translation>
 <translation id="2009341475524975924">Kako bi se mjerila izvedba oglasa, ograničene vrste podataka mogu se dijeliti između web-lokacija, primjerice u doba dana kada vam je oglas prikazan.</translation>
 <translation id="201060170519281460">Zaključavanje profila štiti vaše podatke u automobilu, uključujući sinkronizirane zaporke, plaćanja i drugo.</translation>
 <translation id="2021896219286479412">Kontrole web-lokacije na cijelom zaslonu</translation>
@@ -217,11 +217,11 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2234827758954819389">Vodič za privatnost</translation>
 <translation id="2239812875700136898">Člancima možete upravljati pomoću gumba Opcije za Discover</translation>
 <translation id="2247789808226901522">Kartica je istekla</translation>
-<translation id="4808014761134300692">Vaše se zaporke šifriraju na uređaju prije spremanja na AI Wiz upravitelj zaporki</translation>
+<translation id="4808014761134300692">Vaše se zaporke šifriraju na uređaju prije spremanja na AI Wize upravitelj zaporki</translation>
 <translation id="2249635629516220541">Prilagodite podatke koje web-lokacije koriste da bi vam prikazivale oglase</translation>
 <translation id="2259659629660284697">Izvoz zaporki...</translation>
-<translation id="8820144752830692527">U <ph name="BEGIN_LINK1"/>postavkama<ph name="END_LINK1"/> možete odabrati što će se sinkronizirati. AI Wiz može prilagoditi Pretraživanje i druge usluge na temelju vaše povijesti.</translation>
-<translation id="781982477617612877">Prijavite se na svoj AI Wiz račun da biste provjerili zaporke</translation>
+<translation id="8820144752830692527">U <ph name="BEGIN_LINK1"/>postavkama<ph name="END_LINK1"/> možete odabrati što će se sinkronizirati. AI Wize može prilagoditi Pretraživanje i druge usluge na temelju vaše povijesti.</translation>
+<translation id="781982477617612877">Prijavite se na svoj AI Wize račun da biste provjerili zaporke</translation>
 <translation id="2278052315791335171">Brisanjem zaporke neće se izbrisati vaš račun na <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Adresa za naplatu</translation>
 <translation id="228704530595896923">Popis opcija za dijeljenje.</translation>
@@ -232,7 +232,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2323763861024343754">Pohrana web-lokacije</translation>
 <translation id="2328985652426384049">Prijava nije moguća</translation>
 <translation id="2341410551640223969">Instaliranje aplikacije <ph name="WEBAPK_NAME"/> nije uspjelo.</translation>
-<translation id="3587672679800759167">Ukupna količina podataka koju AI Wiz upotrebljava, uključujući račune, oznake i spremljene postavke.</translation>
+<translation id="3587672679800759167">Ukupna količina podataka koju AI Wize upotrebljava, uključujući račune, oznake i spremljene postavke.</translation>
 <translation id="2767094839186957509">Braveova pravila o privatnosti</translation>
 <translation id="2359808026110333948">Nastavi</translation>
 <translation id="2362083820973145409">Prijavljeni ste kao <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Otvara postavke.</translation>
@@ -268,12 +268,12 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2546283357679194313">Kolačići i podaci o web-lokacijama</translation>
 <translation id="2567385386134582609">SLIKA</translation>
 <translation id="2567545343356994513">Brža, proaktivna zaštita od opasnih web-lokacija, preuzimanja i proširenja</translation>
-<translation id="5079947353572974060">Ponudi slanje stranica na drugim jezicima na AI Wiz prevoditelj</translation>
+<translation id="5079947353572974060">Ponudi slanje stranica na drugim jezicima na AI Wize prevoditelj</translation>
 <translation id="2571834852878229351">Izradi moju zaporku</translation>
-<translation id="6995512410824092085">Saznajte kako postaviti AI Wiz kao zadani preglednik</translation>
+<translation id="6995512410824092085">Saznajte kako postaviti AI Wize kao zadani preglednik</translation>
 <translation id="7242554556818074465">Da biste vidjeli svoje kartice bez obzira na to gdje koristite Brave, prijavite se na svim svojim uređajima</translation>
 <translation id="8661556138616664061">Braveov sadržaj za mlade umove</translation>
-<translation id="2324920234469020158">Time će se izbrisati kolačići, predmemorija i ostali podaci o web-lokacijama koje AI Wiz ne smatra važnima.</translation>
+<translation id="2324920234469020158">Time će se izbrisati kolačići, predmemorija i ostali podaci o web-lokacijama koje AI Wize ne smatra važnima.</translation>
 <translation id="2587052924345400782">Dostupna je novija verzija</translation>
 <translation id="2593272815202181319">Ravnomjerno raspoređeno</translation>
 <translation id="2603212228005142861">Prijavite se da biste upravljali svojim preferencijama</translation>
@@ -281,7 +281,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2604446170045642109">Tamnu temu za web-lokacije možete isključiti u postavkama.</translation>
 <translation id="2612676031748830579">Broj kartice</translation>
 <translation id="2625189173221582860">Zaporka je kopirana</translation>
-<translation id="2634393460268044753">URL-ove web-lokacija koje posjećujete i mali uzorak sadržaja stranice, preuzimanja, aktivnosti proširenja i informacija o sustavu šalje AI Wiz sigurnom pregledavanju kako bi se provjerilo jesu li štetni.</translation>
+<translation id="2634393460268044753">URL-ove web-lokacija koje posjećujete i mali uzorak sadržaja stranice, preuzimanja, aktivnosti proširenja i informacija o sustavu šalje AI Wize sigurnom pregledavanju kako bi se provjerilo jesu li štetni.</translation>
 <translation id="2642087927315268160">Donja tablica za prijavu je zatvorena.</translation>
 <translation id="2643064289437760082">Podatke o mjerenju oglasa uvijek možete izbrisati brisanjem podataka o pregledavanju</translation>
 <translation id="2647434099613338025">Dodavanje jezika</translation>
@@ -293,7 +293,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="265156376773362237">Standardno predučitavanje</translation>
 <translation id="2656405586795711023">Web-aplikacije</translation>
 <translation id="2669454659051515572">Svi koji upotrebljavaju ovaj uređaj mogu vidjeti preuzete datoteke</translation>
-<translation id="5806087344347665213">Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wiz može Braveu poslati URL-ove, uključujući dijelove sadržaja web-stranice</translation>
+<translation id="5806087344347665213">Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wize može Braveu poslati URL-ove, uključujući dijelove sadržaja web-stranice</translation>
 <translation id="2702516483241149200">Novo: dijelite vezu koja se pomiče na ovaj tekst</translation>
 <translation id="3769942772151914580">Proaktivna zaštita u stvarnom vremenu od opasnih web-lokacija, preuzimanja i proširenja koja se temelji na slanju vaših podataka o pregledavanju Braveu</translation>
 <translation id="2708226184420201102">Otvori u pregledniku <ph name="PRODUCT_NAME"/></translation>
@@ -326,7 +326,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2870560284913253234">Web lokacija</translation>
 <translation id="2871733351037274014">Predučitavanje stranica</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> želi da odobrite ovu web-lokaciju:</translation>
-<translation id="6756656512757374876">Saznajte više o tome <ph name="BEGIN_LINK"/>kako AI Wiz štiti privatnost vaših podataka<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Saznajte više o tome <ph name="BEGIN_LINK"/>kako AI Wize štiti privatnost vaših podataka<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">O Braveu</translation>
 <translation id="2891154217021530873">Zaustavljanje učitavanja stranice</translation>
 <translation id="4013614219085422040">Brave može upotrebljavati vašu povijest za prilagodbu Pretraživanja i drugih Braveovih usluga</translation>
@@ -338,7 +338,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="7339921667754113786">Braveova platforma za obavijesti</translation>
 <translation id="2912296070571964914">Upravljajte temama koje vas zanimaju</translation>
 <translation id="2923908459366352541">Naziv nije važeći</translation>
-<translation id="6355102470683871794">Pohrana aplikacije AI Wiz <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Pohrana aplikacije AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Tipkovnica se neće promijeniti</translation>
 <translation id="6537665929855787038">Obavijesti u Braveu olakšavaju stvari</translation>
 <translation id="2940075786175545812">Opcija odobravanja ili neodobravanja web-lokacije</translation>
@@ -353,14 +353,14 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="2979639724566107830">Otvori u novom prozoru</translation>
 <translation id="2981364137500752533">Možete imati do pet prozora.</translation>
 <translation id="2983102365694924129">Na temelju vaše aktivnosti na web-lokaciji. Postavka je isključena.</translation>
-<translation id="5948666439178419683">Uključi okolni tekst u AI Wiz pretraživanja</translation>
+<translation id="5948666439178419683">Uključi okolni tekst u AI Wize pretraživanja</translation>
 <translation id="2987620471460279764">Tekst podijeljen s drugog uređaja</translation>
 <translation id="2989523299700148168">Nedavno posjećeno</translation>
 <translation id="2992473221983447149">Opisi slika</translation>
 <translation id="2996291259634659425">Stvaranje zaporke</translation>
 <translation id="2996809686854298943">Potreban URL</translation>
 <translation id="2996932914629936323">Briše povijest sa svih sinkroniziranih uređaja</translation>
-<translation id="2019027298133375428">Kad Braveova web-lokacija zatraži privatno predučitavanje veza na stranici, AI Wiz šifrira i predučitava stranice putem Braveovih poslužitelja bez kolačića. Na taj se način vaš identitet sakriva od predučitane web-lokacije.</translation>
+<translation id="2019027298133375428">Kad Braveova web-lokacija zatraži privatno predučitavanje veza na stranici, AI Wize šifrira i predučitava stranice putem Braveovih poslužitelja bez kolačića. Na taj se način vaš identitet sakriva od predučitane web-lokacije.</translation>
 <translation id="5730179015008010982">URL-ovi koje posjećujete šalju se Braveu kako bi se predvidjelo koje biste web-lokacije mogli posjetiti sljedeće i kako bi vam se prikazali dodatni podaci o stranici koju posjećujete</translation>
 <translation id="3016635187733453316">Provjerite je li uređaj povezan s internetom</translation>
 <translation id="3026955690410463085">Uključi vezu</translation>
@@ -374,12 +374,12 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3038272154009688107">Pogledajte sve web-lokacije</translation>
 <translation id="3046945242843292318">Sljedeći put brže otvorite ovu web-lokaciju</translation>
 <translation id="3055259925215945098">Oznaka je premještena</translation>
-<translation id="4163313568284712797">Braveu se šalju podaci o vašoj upotrebi Bravea, no ti podaci nisu povezani s vama.\n\nAko se AI Wiz sruši, pojedinosti o rušenju mogu uključivati neke osobne podatke.\n\nAko uključite sinkronizaciju, mjerni podaci mogu uključivati i informacije o URL-ovima koje posjećujete.</translation>
+<translation id="4163313568284712797">Braveu se šalju podaci o vašoj upotrebi Bravea, no ti podaci nisu povezani s vama.\n\nAko se AI Wize sruši, pojedinosti o rušenju mogu uključivati neke osobne podatke.\n\nAko uključite sinkronizaciju, mjerni podaci mogu uključivati i informacije o URL-ovima koje posjećujete.</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> oznaka}one{<ph name="BOOKMARKS_COUNT_MANY"/> oznaka}few{<ph name="BOOKMARKS_COUNT_MANY"/> oznake}other{<ph name="BOOKMARKS_COUNT_MANY"/> oznaka}}</translation>
 <translation id="6153252609477956632">Članci o vašim interesima na Braveu</translation>
 <translation id="3066573403916685335">Premjesti dolje</translation>
 <translation id="3070005020161560471">Automatski prevedi</translation>
-<translation id="1094255666887095087">Aplikacija <ph name="APP_NAME"/> otvorit će se u Braveu. Nastavljanjem prihvaćate <ph name="BEGIN_LINK1"/>Braveove uvjete pružanja usluge<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>dodatne uvjete pružanja usluge za AI Wiz i Chrome OS<ph name="END_LINK2"/>. Primjenjuju se i <ph name="BEGIN_LINK3"/>pravila o privatnosti<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087">Aplikacija <ph name="APP_NAME"/> otvorit će se u Braveu. Nastavljanjem prihvaćate <ph name="BEGIN_LINK1"/>Braveove uvjete pružanja usluge<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>dodatne uvjete pružanja usluge za AI Wize i Chrome OS<ph name="END_LINK2"/>. Primjenjuju se i <ph name="BEGIN_LINK3"/>pravila o privatnosti<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Stranice možete spremati da biste ih čitali kasnije ili izvanmrežno</translation>
 <translation id="3091010850649238832">Prikaži sadržaj međuspremnika</translation>
 <translation id="821565628224723530">Neke se slike šalju Braveu radi poboljšanja opisa za vas</translation>
@@ -396,10 +396,10 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3207960819495026254">Označeno</translation>
 <translation id="3208584281581115441">Provjeri sad</translation>
 <translation id="3211426585530211793">Izbrisano <ph name="ITEM_TITLE"/></translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Povijest pretraživanja<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>drugi oblici aktivnosti<ph name="END_LINK2"/> mogu se spremati na vaš AI Wiz račun kad ste prijavljeni. Uvijek ih možete izbrisati.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Povijest pretraživanja<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>drugi oblici aktivnosti<ph name="END_LINK2"/> mogu se spremati na vaš AI Wize račun kad ste prijavljeni. Uvijek ih možete izbrisati.</translation>
 <translation id="321773570071367578">Ako ste zaboravili šifru ili želite promijeniti tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaciju<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Za sinkroniziranje zaporki potvrdite da ste to vi</translation>
-<translation id="9210457680074341078">Ako oznake spremate i na AI Wiz račun, cijene proizvoda možete pratiti u Braveu i primati obavijesti kad cijena padne</translation>
+<translation id="9210457680074341078">Ako oznake spremate i na AI Wize račun, cijene proizvoda možete pratiti u Braveu i primati obavijesti kad cijena padne</translation>
 <translation id="9047551989591319903">Brave kao sigurnosni ključ</translation>
 <translation id="3232754137068452469">Web-aplikacija</translation>
 <translation id="3234978181857588512">Spremi na uređaj</translation>
@@ -428,7 +428,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3359667936385849800">Koristi trenutačnog davatelja usluga</translation>
 <translation id="3373701465337594448">Kad je ta postavka uključena, ovdje se prikazuje popis web-lokacija koje posjećujete, a koje pogađaju vaše interese</translation>
 <translation id="2746024117903470217">Da biste podijelili ovu stranicu s nekim drugim uređajem, uključite sinkroniziranje u Braveovim postavkama na tom uređaju</translation>
-<translation id="8801234437789558906">Vaše oznake, povijest, zaporke i drugi podaci iz Bravea više se neće sinkronizirati s vašim AI Wiz računom</translation>
+<translation id="8801234437789558906">Vaše oznake, povijest, zaporke i drugi podaci iz Bravea više se neće sinkronizirati s vašim AI Wize računom</translation>
 <translation id="3384347053049321195">Dijeli sliku</translation>
 <translation id="3387650086002190359">Preuzimanje datoteke <ph name="FILE_NAME"/> nije uspjelo zbog nepoznate pogreške sustava datoteka.</translation>
 <translation id="3389286852084373014">Tekst je prevelik</translation>
@@ -444,7 +444,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3439276997620616816">Ovdje ćete pronaći svoje nedavne kartice</translation>
 <translation id="3443221991560634068">Ponovno učitavanje trenutačne stranice</translation>
 <translation id="3444179773590444986">Želite li podijeliti povratne informacije o tamnoj temi za web-lokacije?</translation>
-<translation id="7384339501748168186">Da bi zaštitio vašu privatnost, AI Wiz neće automatski popuniti zaporku u ovom polju.</translation>
+<translation id="7384339501748168186">Da bi zaštitio vašu privatnost, AI Wize neće automatski popuniti zaporku u ovom polju.</translation>
 <translation id="3474624961160222204">Nastavi kao <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Možete odabrati tražilicu</translation>
 <translation id="3479552764303398839">Ne sada</translation>
@@ -453,7 +453,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Poredaj od najstarijeg</translation>
 <translation id="3507132249039706973">Uključena je Standardna zaštita</translation>
-<translation id="8669829441518807650">Offline. AI Wiz ne može provjeriti ima li ažuriranja.</translation>
+<translation id="8669829441518807650">Offline. AI Wize ne može provjeriti ima li ažuriranja.</translation>
 <translation id="3513704683820682405">Proširena stvarnost</translation>
 <translation id="3518985090088779359">Prihvati i nastavi</translation>
 <translation id="3521388823983121502">Nije moguće nastaviti s: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3701515417135397388">Upozori ako je zaporka ugrožena zbog povrede podataka</translation>
 <translation id="371230970611282515">Predviđa opasne događaje i upozorava vas na njih prije nego što se dogode.</translation>
 <translation id="3714981814255182093">Otvaranje Trake za traženje</translation>
-<translation id="5805364706385912897">Ova stranica upotrebljava previše memorije, pa ju je AI Wiz pauzirao.</translation>
+<translation id="5805364706385912897">Ova stranica upotrebljava previše memorije, pa ju je AI Wize pauzirao.</translation>
 <translation id="3720422586473670527">Ne, hvala</translation>
 <translation id="8397843425685839889">Vi i Brave</translation>
 <translation id="3737319253362202215">Postavke prevođenja</translation>
@@ -548,7 +548,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="4084682180776658562">Oznaka</translation>
 <translation id="4521874409998847950">Objavio <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>omogućio Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Pomoću ovog tableta možete se prijaviti na uređaju na kojem se prikazuje ovaj QR kôd.</translation>
-<translation id="7268155614575494857">Da biste pomogli AI Wiz upravitelju zaporki da spremi vaše podatke za prijavu, dodajte svoje korisničko ime za ovu web-lokaciju</translation>
+<translation id="7268155614575494857">Da biste pomogli AI Wize upravitelju zaporki da spremi vaše podatke za prijavu, dodajte svoje korisničko ime za ovu web-lokaciju</translation>
 <translation id="4095146165863963773">Želite li izbrisati podatke aplikacije?</translation>
 <translation id="4095425503313512126">Pregledavanje i pretraživanje je brže</translation>
 <translation id="4096227151372679484">Tijek spremanja oznake otvoren je na pola visine</translation>
@@ -556,7 +556,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="4108314971463891922">Prati</translation>
 <translation id="4108998448622696017">Otkriva opasne događaje i upozorava vas na njih kada se dogode.</translation>
 <translation id="4116038641877404294">Preuzmite stranice za izvanmrežnu upotrebu</translation>
-<translation id="37459938731864814">Nećete morati pamtiti tu zaporku. Spremit će se u AI Wiz upravitelj zaporki za <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Nećete morati pamtiti tu zaporku. Spremit će se u AI Wize upravitelj zaporki za <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Tijek dopuštenja za obavijesti otvoren je u punoj visini</translation>
 <translation id="4126285640274188657">Uvidi na stranici</translation>
 <translation id="4135200667068010335">Popis za odabir uređaja s kojim će se dijeliti kartica zatvoren je.</translation>
@@ -574,7 +574,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 kartica na ovom uređaju}one{# kartica na ovom uređaju}few{# kartice na ovom uređaju}other{# kartica na ovom uređaju}}</translation>
 <translation id="4198423547019359126">Lokacije preuzimanja nisu dostupne</translation>
 <translation id="4202218894997543208">Teme koje ste blokirali</translation>
-<translation id="1675646381334855139">Ako dopustite kolačiće, AI Wiz ih može koristiti za predučitavanje.</translation>
+<translation id="1675646381334855139">Ako dopustite kolačiće, AI Wize ih može koristiti za predučitavanje.</translation>
 <translation id="4216511743389425832">Poslušajte ovu stranicu</translation>
 <translation id="4225725533026049334">Praćeno</translation>
 <translation id="4225895483398857530">Prečac alatne trake</translation>
@@ -584,7 +584,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="4249955472157341256">Poredaj po najnovijem</translation>
 <translation id="4250229828105606438">Snimka zaslona</translation>
 <translation id="4256782883801055595">Licence otvorenog koda</translation>
-<translation id="7404502124231907662">Želite li izbrisati zaporke s AI Wiz upravitelja zaporki?</translation>
+<translation id="7404502124231907662">Želite li izbrisati zaporke s AI Wize upravitelja zaporki?</translation>
 <translation id="4269820728363426813">Kopiraj adresu veze</translation>
 <translation id="4277529130885813215">Upotrijebite neki drugi uređaj</translation>
 <translation id="4283102315569707115">Želite li prema zadanim postavkama tražiti web-lokacije za stolna računala?</translation>
@@ -610,7 +610,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="4405224443901389797">Premjesti u…</translation>
 <translation id="4405636711880428279">Ukloniti virtualnu karticu?</translation>
 <translation id="4409271659088619928">Vaša je tražilica <ph name="DSE"/>. Potražite njezine upute da biste saznali kako izbrisati svoju povijest pretraživanja, ako je primjenjivo.</translation>
-<translation id="5749788945734786627">Upravljajte svojim AI Wiz računom</translation>
+<translation id="5749788945734786627">Upravljajte svojim AI Wize računom</translation>
 <translation id="4425140285732600465">Praćenje cijene. Dobivajte upozorenja ako se cijena snizi na bilo kojoj web-lokaciji.</translation>
 <translation id="442518031075347249">Više nećete moći upotrebljavati svoju virtualnu karticu s Google Payom. <ph name="BEGIN_LINK1"/>Saznajte više o virtualnim karticama<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">Zatvori karticu <ph name="TAB_TITLE"/></translation>
@@ -620,7 +620,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="3133489217401741157">Instalira se <ph name="MODULE"/> za Brave…</translation>
 <translation id="4484496141267039529">Niste povezani. Pokušajte ponovo kasnije.</translation>
 <translation id="53119194224775367">Svi Braveovi podaci aplikacije trajno će se izbrisati. To uključuje sve datoteke, postavke, račune, baze podataka i slično.</translation>
-<translation id="3966104135245031874">Šifriranje sinkroniziranih zaporki s AI Wiz računom</translation>
+<translation id="3966104135245031874">Šifriranje sinkroniziranih zaporki s AI Wize računom</translation>
 <translation id="4491323382106587961">Odaberite račun. Trenutačno odabran <ph name="EMAIL"/>.</translation>
 <translation id="4508528996305412043">Izbornik kartice feeda je otvoren</translation>
 <translation id="4509501256689523862">Hoće li se oglas koji vam se prikazuje dok pregledavate personalizirati ovisi o toj postavci, <ph name="BEGIN_LINK_1"/>temama oglasa<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>postavkama kolačića<ph name="END_LINK_2"/> i o tome personalizira li web-lokacija koju pregledavate oglase</translation>
@@ -628,7 +628,7 @@ Vaše šifrirane podatke može pročitati samo osoba koja ima vašu šifru. Šif
 <translation id="451872707440238414">Pretraži oznake</translation>
 <translation id="1664855196866195614">Odabrani podaci uklonjeni su iz Bravea i sa sinkroniziranih uređaja.
 
-Vaš AI Wiz račun može sadržavati druge oblike povijesti pregledavanja, na primjer pretraživanja i aktivnosti s drugih Braveovih usluga, na stranici <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Vaš AI Wize račun može sadržavati druge oblike povijesti pregledavanja, na primjer pretraživanja i aktivnosti s drugih Braveovih usluga, na stranici <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">posljednji sat</translation>
 <translation id="452750746583162491">Pregledajte svoje sinkronizirane podatke</translation>
 <translation id="4532845899244822526">Odabir mape</translation>
@@ -679,7 +679,7 @@ Vaš AI Wiz račun može sadržavati druge oblike povijesti pregledavanja, na pr
 <translation id="4763480195061959176">videozapis</translation>
 <translation id="4766313118839197559">Zaporke se spremaju u Upravitelj zaporki na ovom uređaju</translation>
 <translation id="4766678251456904326">Dodajte račun uređaju</translation>
-<translation id="1996253762801922860">Predstavljamo novu značajku zaštite privatnosti u online oglašavanju pod nazivom mjerenje oglasa. AI Wiz dijeli samo vrlo ograničene informacije među web-lokacijama i aplikacijama, kao što je vrijeme prikazivanja oglasa, radi mjerenja izvedbe oglasa.</translation>
+<translation id="1996253762801922860">Predstavljamo novu značajku zaštite privatnosti u online oglašavanju pod nazivom mjerenje oglasa. AI Wize dijeli samo vrlo ograničene informacije među web-lokacijama i aplikacijama, kao što je vrijeme prikazivanja oglasa, radi mjerenja izvedbe oglasa.</translation>
 <translation id="4769095993849849966">Novi naziv datoteke</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> izbrisan</translation>
 <translation id="4778653490315793244">Još nema ničega</translation>
@@ -698,14 +698,14 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="4837753911714442426">Otvaranje opcija za ispis stranice</translation>
 <translation id="4842092870884894799">Prikazuje se skočni prozor generiranja zaporke</translation>
 <translation id="4842515939542199281">Da biste pretraživali glasovno, dodirnite mikrofon</translation>
-<translation id="6195403640086187022">Radi dodatne sigurnosti šifrirajte zaporke na uređaju prije spremanja na AI Wiz upravitelj zaporki.</translation>
+<translation id="6195403640086187022">Radi dodatne sigurnosti šifrirajte zaporke na uređaju prije spremanja na AI Wize upravitelj zaporki.</translation>
 <translation id="4850886885716139402">Prikaz</translation>
 <translation id="4852014461738377247">Prijava\u2026</translation>
 <translation id="4860895144060829044">Poziv</translation>
 <translation id="4864369630010738180">Prijavljivanje...</translation>
-<translation id="5131234170665854056">Instaliranje modula <ph name="MODULE"/> za AI Wiz nije uspjelo</translation>
+<translation id="5131234170665854056">Instaliranje modula <ph name="MODULE"/> za AI Wize nije uspjelo</translation>
 <translation id="4871568871368204250">Isključivanje sinkronizacije</translation>
-<translation id="2875466387677348954">Kad je isključeno, i dalje ćete vidjeti prijedloge koje AI Wiz pruža lokalno</translation>
+<translation id="2875466387677348954">Kad je isključeno, i dalje ćete vidjeti prijedloge koje AI Wize pruža lokalno</translation>
 <translation id="4875775213178255010">Prijedlozi sadržaja</translation>
 <translation id="4878404682131129617">Uspostava tunela putem proxy poslužitelja nije uspjela</translation>
 <translation id="4880127995492972015">Prevedi…</translation>
@@ -722,10 +722,10 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="4925120120285606924">Snimka zaslona <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Vaše će se zaporke izvesti i preuzeti kao tekstne datoteke. Bit će vidljive svim korisnicima i aplikacijama s pristupom odredišnoj mapi.</translation>
 <translation id="4926901776383726965">Slike i datoteke možete spremiti za izvanmrežni pregled ili dijeljenje u drugim aplikacijama</translation>
-<translation id="1955495299630319741">Budući da se odjavljujete s računa kojim upravlja <ph name="DOMAIN_NAME"/>, vaši podaci iz Bravea izbrisat će se s ovog uređaja. Ostat će na vašem AI Wiz računu.</translation>
+<translation id="1955495299630319741">Budući da se odjavljujete s računa kojim upravlja <ph name="DOMAIN_NAME"/>, vaši podaci iz Bravea izbrisat će se s ovog uređaja. Ostat će na vašem AI Wize računu.</translation>
 <translation id="4943703118917034429">Virtualna stvarnost</translation>
 <translation id="4943872375798546930">Nema rezultata</translation>
-<translation id="5742837711075932301">Kad ste prijavljeni na isti AI Wiz račun, drugi uređaji mogu koristiti ovaj telefon kao sigurnosni ključ.</translation>
+<translation id="5742837711075932301">Kad ste prijavljeni na isti AI Wize račun, drugi uređaji mogu koristiti ovaj telefon kao sigurnosni ključ.</translation>
 <translation id="4957722034734105353">Saznajte više...</translation>
 <translation id="4961107849584082341">Prevedite ovu stranicu na bilo koji jezik</translation>
 <translation id="7307583170263691471">Brža, proaktivna zaštita od opasnih web-lokacija, preuzimanja i proširenja. Upozorava vas na povrede zaporki. Traži slanje podataka o pregledavanju Braveu.</translation>
@@ -745,15 +745,15 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="5039804452771397117">Dopusti</translation>
 <translation id="5040262127954254034">Privatnost</translation>
 <translation id="504456571576643789">Važne napomene</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Ostali oblici aktivnosti<ph name="END_LINK1"/> mogu se spremati na vaš AI Wiz račun kad ste prijavljeni. Uvijek ih možete izbrisati.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Ostali oblici aktivnosti<ph name="END_LINK1"/> mogu se spremati na vaš AI Wize račun kad ste prijavljeni. Uvijek ih možete izbrisati.</translation>
 <translation id="506254248375231072">Nema kartica</translation>
 <translation id="5062960805900435602">Zatvoreno je ažuriranje o spajanju zaporki</translation>
 <translation id="5081960376148623587">Odaberite želite li predučitati stranice</translation>
-<translation id="4744980273298156620">Prilikom otvaranja nove kartice uskoro će se prikazivati članci s web-lokacije <ph name="SITE_NAME"/>. Web-lokacije koje pratite spremaju se na vašem AI Wiz računu. Njima možete upravljati u postavkama Discovera.</translation>
+<translation id="4744980273298156620">Prilikom otvaranja nove kartice uskoro će se prikazivati članci s web-lokacije <ph name="SITE_NAME"/>. Web-lokacije koje pratite spremaju se na vašem AI Wize računu. Njima možete upravljati u postavkama Discovera.</translation>
 <translation id="509429900233858213">Došlo je do pogreške.</translation>
 <translation id="5097349930204431044">Web-lokacije koje posjećujete mogu utvrditi što vam se sviđa, a zatim predlagati oglase dok pregledavate</translation>
 <translation id="5099845111805573968">Kada odaberete web-lokaciju za računalo, ta se postavka primjenjuje na tu web-lokaciju svaki put kad je posjetite</translation>
-<translation id="225414324447409614">Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wiz može sigurnom pregledavanju poslati URL-ove, uključujući dijelove sadržaja web-stranice</translation>
+<translation id="225414324447409614">Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wize može sigurnom pregledavanju poslati URL-ove, uključujući dijelove sadržaja web-stranice</translation>
 <translation id="510275257476243843">Još 1 sat</translation>
 <translation id="5115811374190515607">u <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Interesi</translation>
@@ -788,14 +788,14 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="5308380583665731573">Poveži</translation>
 <translation id="5317780077021120954">Spremi</translation>
 <translation id="989239400026154074">Brave preporučuje Brave</translation>
-<translation id="7815000350132166985">Ako dopustite kolačiće, AI Wiz ih može koristiti prilikom predučitavanja.</translation>
+<translation id="7815000350132166985">Ako dopustite kolačiće, AI Wize ih može koristiti prilikom predučitavanja.</translation>
 <translation id="1681635711794313507">Budući da se predučitane stranice šifriraju i da je web-lokacija s vezom na stranice Braveova web-lokacija, Braveovi poslužitelji ne primaju nove podatke kad se te stranice anonimno predučitavaju.</translation>
 <translation id="5329858041417644019">Preglednikom se ne upravlja</translation>
 <translation id="5342314432463739672">Zahtjevi za dopuštenja</translation>
 <translation id="534580735623577507">Nema web-lokacija od <ph name="TIME_PERIOD"/></translation>
 <translation id="5355191726083956201">Uključena je Poboljšana zaštita</translation>
 <translation id="5361107212971249203">tekstna poruka</translation>
-<translation id="5375577065097716013">Pretraži sliku pomoću AI Wiz objektiva <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
+<translation id="5375577065097716013">Pretraži sliku pomoću AI Wize objektiva <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
 <translation id="539881862970320163">Predložena je snažna zaporka. Tipkovnica je skrivena.</translation>
 <translation id="5401851137404501592">Da biste nastavili, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> podijelit će vaše ime, e-adresu i profilnu sliku s ovom web-lokacijom.</translation>
 <translation id="5409881200985013443">Poslati <ph name="ONE_TIME_CODE"/> na klijentu <ph name="CLIENT_NAME"/>?</translation>
@@ -805,7 +805,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="543338862236136125">Uredite zaporku</translation>
 <translation id="5433691172869980887">Korisničko je ime kopirano</translation>
 <translation id="5438292632479953702">Ponovno preuzmi</translation>
-<translation id="2766925507720001104">Upozorava vas na opasne web-lokacije, čak i one za koje AI Wiz još nije znao, analiziranjem više podataka s web-lokacija od standardne zaštite. Možete preskočiti Braveova upozorenja.</translation>
+<translation id="2766925507720001104">Upozorava vas na opasne web-lokacije, čak i one za koje AI Wize još nije znao, analiziranjem više podataka s web-lokacija od standardne zaštite. Možete preskočiti Braveova upozorenja.</translation>
 <translation id="5441137934526263133">Web-lokacija ne funkcionira? Blokirani su kolačići treće strane</translation>
 <translation id="5441466871879044658">Prevedi na ovaj jezik</translation>
 <translation id="5441522332038954058">Preskakanje na adresnu traku</translation>
@@ -823,7 +823,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="5517095782334947753">Imate oznake, povijest, zaporke i druge postavke s računa <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Preusmjeravanje je blokirano.</translation>
 <translation id="5548606607480005320">Sigurnosna provjera</translation>
-<translation id="4362225295386962644">Kad upotrijebite zaporku, AI Wiz vas upozorava ako je objavljena online. Tom su prilikom vaše zaporke i korisnička imena šifrirani, tako da ih nitko ne može pročitati, uključujući Brave.</translation>
+<translation id="4362225295386962644">Kad upotrijebite zaporku, AI Wize vas upozorava ako je objavljena online. Tom su prilikom vaše zaporke i korisnička imena šifrirani, tako da ih nitko ne može pročitati, uključujući Brave.</translation>
 <translation id="5555525474779371165">Odaberite svoju zaštitu sigurnog pregledavanja</translation>
 <translation id="5556459405103347317">Ponovno učitaj</translation>
 <translation id="555816257274242153">Praćenje cijene zaustavljeno</translation>
@@ -840,7 +840,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="562289928968387744">Upravljanje reakcijama</translation>
 <translation id="5626134646977739690">Naziv:</translation>
 <translation id="5628604359369369630">Nepročitano – dostupno izvanmrežno</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Povijest pretraživanja<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>drugi oblici aktivnosti<ph name="END_LINK2"/> mogu se spremati na vaš AI Wiz račun</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Povijest pretraživanja<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>drugi oblici aktivnosti<ph name="END_LINK2"/> mogu se spremati na vaš AI Wize račun</translation>
 <translation id="564667659802381754">Vodič za privatnost <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">Posljednjih 7 dana</translation>
 <translation id="5655963694829536461">Pretražite preuzimanja</translation>
@@ -878,7 +878,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="5797521893972859201">Briše povijest, uključujući u okviru za pretraživanje</translation>
 <translation id="5797949256525811424">Tema je blokirana</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{prije # sata}one{prije # sata}few{prije # sata}other{prije # sati}}</translation>
-<translation id="5311273890481188673">Autorska prava <ph name="YEAR"/>. AI Wiz LLC. Sva prava pridržana.</translation>
+<translation id="5311273890481188673">Autorska prava <ph name="YEAR"/>. AI Wize LLC. Sva prava pridržana.</translation>
 <translation id="5814749351757353073">Pratite svoje omiljene web-lokacije</translation>
 <translation id="5822875253699806474">Da biste se brzo vratili na web-lokacije koje ste posjetili, sinkronizirajte kartice i povijest</translation>
 <translation id="583281660410589416">Nepoznato</translation>
@@ -893,7 +893,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="5864419784173784555">Čekanje na još jedno preuzimanje…</translation>
 <translation id="6538479075382111079">Automatski šalje Braveu statistiku upotrebe i izvješća o rušenju</translation>
 <translation id="5869522115854928033">Spremljene zaporke</translation>
-<translation id="5604589745019948682">Da biste pratili web-lokaciju, otvorite je, otvorite izbornik preglednika AI Wiz i dodirnite Prati.</translation>
+<translation id="5604589745019948682">Da biste pratili web-lokaciju, otvorite je, otvorite izbornik preglednika AI Wize i dodirnite Prati.</translation>
 <translation id="5879072387416556377">Bolji prijedlozi</translation>
 <translation id="5899667542927581604">Nije zatvoren nijedan list pristupnih ključeva</translation>
 <translation id="5916664084637901428">Uključi</translation>
@@ -929,7 +929,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="6070730414166672373">Kontaktiranje banke\u2026</translation>
 <translation id="6085886413119427067">Određuje kako se povezati na web-lokacije sigurnom vezom</translation>
 <translation id="60923314841986378">Preostalo sati: <ph name="HOURS"/></translation>
-<translation id="4726571606794511368">Ako vam je AI Wiz i zadana tražilica, prikazivat će vam se bolji, kontekstualno relevantni prijedlozi</translation>
+<translation id="4726571606794511368">Ako vam je AI Wize i zadana tražilica, prikazivat će vam se bolji, kontekstualno relevantni prijedlozi</translation>
 <translation id="6108923351542677676">Postavljanje je u tijeku…</translation>
 <translation id="6112702117600201073">Osvježavanje stranice</translation>
 <translation id="6122831415929794347">Želite li isključiti Sigurno pregledavanje?</translation>
@@ -942,11 +942,11 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="6140912465461743537">Država/regija</translation>
 <translation id="6150320133806434356">Oznaka je spremljena</translation>
 <translation id="6154478581116148741">Uključite zaključavanje zaslona u postavkama da biste izvezli svoje zaporke s ovog uređaja</translation>
-<translation id="7087658909840709934">Predučitava stranice za koje AI Wiz misli da ćete ih vjerojatno posjetiti.</translation>
+<translation id="7087658909840709934">Predučitava stranice za koje AI Wize misli da ćete ih vjerojatno posjetiti.</translation>
 <translation id="6186394685773237175">Nije pronađena nijedna ugrožena zaporka</translation>
 <translation id="6192907950379606605">Primajte opise slike</translation>
 <translation id="6193448654517602979">Odaberite kartice</translation>
-<translation id="8367262879301982880">Zaporke se spremaju u AI Wiz upravitelj zaporki na ovom uređaju.</translation>
+<translation id="8367262879301982880">Zaporke se spremaju u AI Wize upravitelj zaporki na ovom uređaju.</translation>
 <translation id="6202812185118613467">Prijavite se ponovo da biste pokrenuli sinkronizaciju</translation>
 <translation id="6205314730813004066">Zaštita privatnosti u online oglašavanju</translation>
 <translation id="6210748933810148297">Niste <ph name="EMAIL"/>?</translation>
@@ -955,7 +955,7 @@ Da biste promijenili tu postavku, <ph name="BEGIN_LINK"/>poništite sinkronizaci
 <translation id="6232535412751077445">Omogućivanje opcije "Nemoj pratiti" znači da će se u promet pregledavanja uključiti zahtjev. Učinak ovisi o tome odgovara li web-lokacija na taj zahtjev i kako se zahtjev tumači.
 
 Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikažu oglase koji se ne temelje na drugim web-lokacijama koje ste posjetili. Mnoge web-lokacije i dalje će prikupljati i upotrebljavati vaše podatke o pregledavanju, primjerice, za poboljšanje sigurnosti, pružanje sadržaja, oglasa i preporuka, kao i za generiranje statističkih izvješća.</translation>
-<translation id="3895383310037101583">Uključivanjem sinkronizacije spremite zaporke na ovom uređaju na svojem AI Wiz računu</translation>
+<translation id="3895383310037101583">Uključivanjem sinkronizacije spremite zaporke na ovom uređaju na svojem AI Wize računu</translation>
 <translation id="6255794742848779505">Mijenjamo način spremanja zaporki na ovom uređaju</translation>
 <translation id="6264376385120300461">Svejedno preuzmi</translation>
 <translation id="6277522088822131679">Pojavio se problem prilikom ispisivanja stranice. Pokušajte ponovo.</translation>
@@ -980,18 +980,18 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="6357653805084533597">Pomoću ovog telefona možete se prijaviti na uređaju na kojem se prikazuje ovaj QR kôd.</translation>
 <translation id="6363990818884053551">Za pokretanje sinkronizacije potvrdite da ste to vi.</translation>
 <translation id="6364438453358674297">Želite li ukloniti prijedlog iz povijesti?</translation>
-<translation id="806493401838431801">Češće predučitava stranice za koje AI Wiz misli da ćete ih vjerojatno posjetiti. Ta postavka može rezultirati većom potrošnjom podatkovnog prometa.</translation>
+<translation id="806493401838431801">Češće predučitava stranice za koje AI Wize misli da ćete ih vjerojatno posjetiti. Ta postavka može rezultirati većom potrošnjom podatkovnog prometa.</translation>
 <translation id="6382848304055775421">Izvoz</translation>
 <translation id="6394791151443660613">Pretraživanje: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">VEZA</translation>
 <translation id="6397616442223433927">Veza je ponovo uspostavljena</translation>
-<translation id="8789425457808164956">Da biste poslali ovu karticu na drugi uređaj, prijavite se na AI Wiz na tom uređaju</translation>
+<translation id="8789425457808164956">Da biste poslali ovu karticu na drugi uređaj, prijavite se na AI Wize na tom uređaju</translation>
 <translation id="6404511346730675251">Uredi oznaku</translation>
 <translation id="6406506848690869874">Sinkronizacija</translation>
 <translation id="6407224748847589805">Povezivanje s računalom nije moguće. Pokušajte s drugom opcijom potvrde.</translation>
 <translation id="6410883413783534063">Otvorite kartice da biste istovremeno posjetili različite stranice</translation>
 <translation id="6411219469806822692">Ne možete ići više. Pokušajte započeti na višem mjestu na stranici.</translation>
-<translation id="7810992039564280750">Provjerava URL-ove s popisom nesigurnih web-lokacija pohranjenih u Braveu. Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wiz također može poslati URL-ove, uključujući dijelove sadržaja web-stranice, Sigurnom pregledavanju.</translation>
+<translation id="7810992039564280750">Provjerava URL-ove s popisom nesigurnih web-lokacija pohranjenih u Braveu. Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wize također može poslati URL-ove, uključujući dijelove sadržaja web-stranice, Sigurnom pregledavanju.</translation>
 <translation id="641643625718530986">Ispis…</translation>
 <translation id="6422857128426228781">Praćene proizvode pronaći ćete ovdje</translation>
 <translation id="6433501201775827830">Odaberite tražilicu</translation>
@@ -1021,7 +1021,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="6560414384669816528">Pretražujte na usluzi Sogou</translation>
 <translation id="656065428026159829">Prikaži više</translation>
 <translation id="6565959834589222080">Wi-Fi se koristi kad je dostupan</translation>
-<translation id="4480935821314799946">Prilikom otvaranja nove kartice odsad će se prikazivati članci s web-lokacije <ph name="SITE_NAME"/>. Web-lokacije koje pratite spremaju se na vašem AI Wiz računu. Njima možete upravljati u postavkama Discovera.</translation>
+<translation id="4480935821314799946">Prilikom otvaranja nove kartice odsad će se prikazivati članci s web-lokacije <ph name="SITE_NAME"/>. Web-lokacije koje pratite spremaju se na vašem AI Wize računu. Njima možete upravljati u postavkama Discovera.</translation>
 <translation id="6573096386450695060">Dopusti uvijek</translation>
 <translation id="5157964048453367290">Ovdje će se prikazati kartice koje ste otvorili u Braveu na svojim ostalim uređajima.</translation>
 <translation id="6583199322650523874">Označavanje trenutačne stranice</translation>
@@ -1034,23 +1034,23 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="663059986967017181">Kopirano u Brave</translation>
 <translation id="661266467055912436">Poboljšava sigurnost za vas i sve ostale na webu.</translation>
 <translation id="6618554661997243500">Za prikaz web-lokacija koje najčešće posjećujete i vijesti prilagođenih vama dodirnite gumb početnog zaslona</translation>
-<translation id="8127050479140582768">Da biste poslali ovu karticu na drugi uređaj, prijavite se na AI Wiz na oba uređaja</translation>
+<translation id="8127050479140582768">Da biste poslali ovu karticu na drugi uređaj, prijavite se na AI Wize na oba uređaja</translation>
 <translation id="6627583120233659107">Uredi mapu</translation>
 <translation id="6636623428211296678">Istražite više postavki u nastavku ili završite odmah</translation>
 <translation id="2259649928554669581">Više postavki koje se odnose na privatnost, sigurnost i prikupljanje podataka dostupno je u odjeljcima <ph name="BEGIN_LINK1"/>Sinkronizacija<ph name="END_LINK1"/> i <ph name="BEGIN_LINK2"/>Braveove usluge<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Radi poboljšanja aplikacije AI Wiz šalje Braveu podatke o upotrebi i rušenju. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Radi poboljšanja aplikacije AI Wize šalje Braveu podatke o upotrebi i rušenju. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blokiraj cijelo vrijeme</translation>
 <translation id="6641780377503683465">Ukloni <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Izbriši</translation>
 <translation id="6645629752388991326">Kontrolirajte koji se uređaji mogu prijaviti koristeći ovaj uređaj kao sigurnosni ključ.</translation>
-<translation id="2730188427562924169">Braveu se šalje maskirani dio URL-a putem poslužitelja privatnosti koji skriva vašu IP adresu. Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wiz također može Braveu poslati URL-ove, uključujući dijelove sadržaja web-stranice.</translation>
+<translation id="2730188427562924169">Braveu se šalje maskirani dio URL-a putem poslužitelja privatnosti koji skriva vašu IP adresu. Ako neka web-lokacija pokuša ukrasti vašu zaporku ili ako preuzmete štetnu datoteku, AI Wize također može Braveu poslati URL-ove, uključujući dijelove sadržaja web-stranice.</translation>
 <translation id="7556503430569358637">URL-ovi koje posjećujete šalju se Braveu kako bi se predvidjelo koje biste web-lokacije mogli posjetiti sljedeće</translation>
 <translation id="6678472970290886941">Vaš administrator može daljinski promijeniti postavke preglednika. Aktivnostima na ovom uređaju može se upravljati i izvan Bravea.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}one{<ph name="CONTACT_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}few{<ph name="CONTACT_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Pregled slike <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Zaporka</translation>
 <translation id="6659594942844771486">Kartica</translation>
-<translation id="9145803563102831353">Zaporke spremljene na ovom uređaju trenutačno se ne mogu upotrebljavati na Braveovim kanalima. Nakon Bravea 121 zaporke spremljene na vašem uređaju za AI Wiz i <ph name="CHROME_CHANNEL"/> spojit će se i moći će se upotrebljavati u obje aplikacije.</translation>
+<translation id="9145803563102831353">Zaporke spremljene na ovom uređaju trenutačno se ne mogu upotrebljavati na Braveovim kanalima. Nakon Bravea 121 zaporke spremljene na vašem uređaju za AI Wize i <ph name="CHROME_CHANNEL"/> spojit će se i moći će se upotrebljavati u obje aplikacije.</translation>
 <translation id="666731172850799929">Otvori u aplikaciji <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kopiraj sliku</translation>
 <translation id="6672917148207387131">Dodaj <ph name="DOMAIN"/></translation>
@@ -1070,7 +1070,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="6756507620369789050">Pošaljite povratne informacije</translation>
 <translation id="6767294960381293877">Popis za odabir uređaja s kojim će se dijeliti kartica otvoren na pola visine.</translation>
 <translation id="6770602306803890733">Poboljšava sigurnost za vas i sve ostale na webu</translation>
-<translation id="8174975477247159780">Dodatni uvjeti pružanja usluge za AI Wiz i Chrome OS</translation>
+<translation id="8174975477247159780">Dodatni uvjeti pružanja usluge za AI Wize i Chrome OS</translation>
 <translation id="6795633245022906657">Brzo otvorite novu karticu. Da biste uredili prečac, otvorite Postavke.</translation>
 <translation id="6802555630140434547">Prozor će se zatvoriti</translation>
 <translation id="6811034713472274749">Stranica je spremna za prikaz</translation>
@@ -1105,7 +1105,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="6909589135458168665">Predučitavanje stranica</translation>
 <translation id="6910211073230771657">Izbrisano</translation>
 <translation id="6918398787259831832">Ako se taj problem nastavi pojavljivati, <ph name="BEGIN_LINK"/>potražite više informacija<ph name="END_LINK"/> od <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Izbrisat će se svi sigurnosni kodovi spremljeni na vašem uređaju i na AI Wiz računu</translation>
+<translation id="5854472260286669100">Izbrisat će se svi sigurnosni kodovi spremljeni na vašem uređaju i na AI Wize računu</translation>
 <translation id="6942665639005891494">Zadanu lokaciju preuzimanja možete promijeniti kad god želite putem opcije u izborniku Postavke</translation>
 <translation id="694267552845942083">Trenutačno prilagođavate postavke sinkronizacije. Da biste dovršili uključivanje sinkronizacije, dodirnite gumb Potvrdi pri dnu zaslona. Natrag</translation>
 <translation id="6945221475159498467">Odaberi</translation>
@@ -1123,7 +1123,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7029809446516969842">Zaporke</translation>
 <translation id="7030304022046916278">Šalje URL-ove sigurnom pregledavanju na provjeru</translation>
 <translation id="7035701931849773472">Ostale opcije</translation>
-<translation id="5813862251770201080">Prijavite se na AI Wiz svojim AI Wiz računom</translation>
+<translation id="5813862251770201080">Prijavite se na AI Wize svojim AI Wize računom</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Primati opise slike?</translation>
 <translation id="7055152154916055070">Preusmjeravanje je blokirano:</translation>
@@ -1131,7 +1131,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7071521146534760487">Upravljanje računom</translation>
 <translation id="707155805709242880">U nastavku odaberite što ćete sinkronizirati</translation>
 <translation id="7077143737582773186">SD kartica</translation>
-<translation id="2374582967527009647">Šalje URL-ove Sigurnom pregledavanju na provjeru. Šalje i mali uzorak stranica, preuzimanja, aktivnosti proširenja i informacija o sustavu radi lakšeg otkrivanja novih prijetnji. Privremeno povezuje te podatke s vašim AI Wiz računom kad ste prijavljeni kako biste bili zaštićeni u raznim Braveovim aplikacijama.</translation>
+<translation id="2374582967527009647">Šalje URL-ove Sigurnom pregledavanju na provjeru. Šalje i mali uzorak stranica, preuzimanja, aktivnosti proširenja i informacija o sustavu radi lakšeg otkrivanja novih prijetnji. Privremeno povezuje te podatke s vašim AI Wize računom kad ste prijavljeni kako biste bili zaštićeni u raznim Braveovim aplikacijama.</translation>
 <translation id="5499149312981370855">Odaberite želite li uključiti povijest na Braveu za prilagođenije doživljaje na Braveovim uslugama</translation>
 <translation id="8208853227947884571">Brave je ažuriran</translation>
 <translation id="7105047059074518658">Prijavite se da biste lakše pregledavali na više uređaja</translation>
@@ -1162,8 +1162,8 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="4957342254208357193">Vaš Android uređaj možda ima sličnu postavku. Ako je mjerenje oglasa uključeno u Braveu i na vašem Android uređaju, tvrtka će možda moći mjeriti učinkovitost oglasa na web-lokacijama koje posjećujete i u aplikacijama koje upotrebljavate.</translation>
 <translation id="727288900855680735">Poslati <ph name="ONE_TIME_CODE"/> na <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Blokirana web-lokacija</translation>
-<translation id="7949597606523411684">Brave automatski briše teme starije od 4 tjedna. Kako nastavljate s pregledavanjem, tema se može ponovo pojaviti na popisu. Možete i blokirati teme za koje ne želite da ih AI Wiz dijeli s web-lokacijama. Saznajte više o <ph name="BEGIN_LINK"/>upravljanju zaštitom privatnosti u online oglašavanju u Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">Dok tipkate, AI Wiz vašoj zadanoj tražilici šalje sadržaj adresne trake ili okvira za pretraživanje</translation>
+<translation id="7949597606523411684">Brave automatski briše teme starije od 4 tjedna. Kako nastavljate s pregledavanjem, tema se može ponovo pojaviti na popisu. Možete i blokirati teme za koje ne želite da ih AI Wize dijeli s web-lokacijama. Saznajte više o <ph name="BEGIN_LINK"/>upravljanju zaštitom privatnosti u online oglašavanju u Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">Dok tipkate, AI Wize vašoj zadanoj tražilici šalje sadržaj adresne trake ili okvira za pretraživanje</translation>
 <translation id="7286703216224610554">Podijeli samo reakciju</translation>
 <translation id="7289303553784750393">Ako ste online, ali se taj problem i dalje pojavljuje, možete pokušati na neki drugi način nastaviti na <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Promjena naziva nije dostupna</translation>
@@ -1171,7 +1171,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7293429513719260019">Odaberite jezik</translation>
 <translation id="729975465115245577">Vaš uređaj nema aplikaciju za spremanje datoteke zaporki.</translation>
 <translation id="7581648335850642193">Vaš Android uređaj možda ima sličnu postavku. Ako je ta postavka uključena u Braveu i na vašem Android uređaju, tvrtka će možda moći mjeriti učinkovitost oglasa na web-lokacijama koje posjećujete i u aplikacijama koje upotrebljavate.</translation>
-<translation id="1382596880054356475">Offline. AI Wiz ne može provjeriti vaše zaporke.</translation>
+<translation id="1382596880054356475">Offline. AI Wize ne može provjeriti vaše zaporke.</translation>
 <translation id="7313188324932846546">Dodirnite da biste postavili sinkronizaciju</translation>
 <translation id="7324354302972299151">Slanje zahtjeva "Do Not Track"</translation>
 <translation id="7332075081379534664">Prijava uspješna</translation>
@@ -1192,14 +1192,14 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Drugo, 1 datoteka na popisu}one{Drugo, # datoteka na popisu}few{Drugo, # datoteke na popisu}other{Drugo, # datoteka na popisu}}</translation>
 <translation id="7400418766976504921">URL</translation>
 <translation id="724102042129299115">Braveov doživljaj prvog pokretanja</translation>
-<translation id="5341476184053934779">Korisnik AI Wiz računa</translation>
+<translation id="5341476184053934779">Korisnik AI Wize računa</translation>
 <translation id="741204030948306876">Da, u redu</translation>
 <translation id="7419565702166471774">Uvijek upotrebljavaj sigurne veze</translation>
 <translation id="7431991332293347422">Odredite na koji će se način vaša povijest pregledavanja upotrebljavati za prilagodbu Pretraživanja i drugih značajki</translation>
 <translation id="7435356471928173109">Isključio vaš administrator</translation>
 <translation id="6234515504547364178">Odjava s Bravea</translation>
 <translation id="6147816961713837040">Braveu se šalje maskirani dio URL-a putem poslužitelja privatnosti koji skriva vašu IP adresu.</translation>
-<translation id="3699067418237091329">Odjavit ćete se s većine web-lokacija, ali se nećete odjaviti s AI Wiz računa.</translation>
+<translation id="3699067418237091329">Odjavit ćete se s većine web-lokacija, ali se nećete odjaviti s AI Wize računa.</translation>
 <translation id="7453810262525006706">Sažmi u bočni prikaz</translation>
 <translation id="7454641608352164238">Nema dovoljno prostora</translation>
 <translation id="7455988709578031708">Na temelju vaše povijesti pregledavanja. Postavka je uključena.</translation>
@@ -1217,14 +1217,14 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7493994139787901920"><ph name="VERSION"/> (ažurirano <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Tema je vraćena u potencijalne teme</translation>
 <translation id="7498271377022651285">Pričekajte…</translation>
-<translation id="8156131600798538460">Da biste se odjavili sa svojeg AI Wiz računa na svim web-lokacijama, <ph name="BEGIN_LINK1"/>odjavite se iz Bravea<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Da biste se odjavili sa svojeg AI Wize računa na svim web-lokacijama, <ph name="BEGIN_LINK1"/>odjavite se iz Bravea<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Ažuriranja nisu dostupna</translation>
 <translation id="7507207699631365376">Pogledajte <ph name="BEGIN_LINK"/>Pravila o privatnosti<ph name="END_LINK"/> tog davatelja usluga</translation>
 <translation id="7514365320538308">Preuzmi</translation>
 <translation id="7518079994230200553">Ta opcija trenutačno nije dostupna.</translation>
 <translation id="751961395872307827">Povezivanje s web-lokacijom nije uspjelo</translation>
 <translation id="752220631458524187">Odspojite telefon kad završite</translation>
-<translation id="7523960634226602883">Pretražujte kamerom pomoću AI Wiz objektiva</translation>
+<translation id="7523960634226602883">Pretražujte kamerom pomoću AI Wize objektiva</translation>
 <translation id="7539698981064401140">Sinkronizirajte kartice i povijest</translation>
 <translation id="7562080006725997899">Brisanje podataka o pregledavanju</translation>
 <translation id="7814200940910057384">Braveovi su podaci izbrisani</translation>
@@ -1237,7 +1237,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7596558890252710462">Operativni sustav</translation>
 <translation id="7603168929588204083">Nevažeći datum</translation>
 <translation id="7605594153474022051">Sinkronizacija ne radi</translation>
-<translation id="649070405679044769">Prijavljeni ste na AI Wiz kao</translation>
+<translation id="649070405679044769">Prijavljeni ste na AI Wize kao</translation>
 <translation id="7612989789287281429">Prijavljivanje…</translation>
 <translation id="7616551326690708776">Odaberite predložak za isticanje.</translation>
 <translation id="7619072057915878432">Preuzimanje datoteke <ph name="FILE_NAME"/> nije uspjelo zbog kvarova na mreži.</translation>
@@ -1261,7 +1261,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7697383401610880082">Marker za povlačenje</translation>
 <translation id="7698359219371678927">Izradite e-poruku u aplikaciji <ph name="APP_NAME"/></translation>
 <translation id="7702029078562412515">Kartice s upitima</translation>
-<translation id="3434187853488406814">Brisanjem podataka o pregledavanju nećete se odjaviti s AI Wiz računa. Da biste to učinili, <ph name="BEGIN_LINK1"/>odjavite se iz Bravea<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Brisanjem podataka o pregledavanju nećete se odjaviti s AI Wize računa. Da biste to učinili, <ph name="BEGIN_LINK1"/>odjavite se iz Bravea<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Upotreba mobilnih podataka</translation>
 <translation id="7709918231054955894">Pristupajte svim svojim karticama</translation>
 <translation id="7733878270780732638">Nema dovoljno prostora na uređaju.</translation>
@@ -1275,7 +1275,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}one{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}few{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 i još <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
 <translation id="5614774692683309331">Kad ste prijavljeni, štiti vas na svim Braveovim uslugama.</translation>
 <translation id="7778840695157240389">Nove priče potražite kasnije</translation>
-<translation id="7703329426540523149">Privremeno povezuje te podatke s vašim AI Wiz računom kad ste prijavljeni kako biste bili zaštićeni u raznim Braveovim aplikacijama</translation>
+<translation id="7703329426540523149">Privremeno povezuje te podatke s vašim AI Wize računom kad ste prijavljeni kako biste bili zaštićeni u raznim Braveovim aplikacijama</translation>
 <translation id="7791543448312431591">Dodajte</translation>
 <translation id="7798392620021911922">Kartice su vraćene (njih <ph name="TAB_COUNT"/>)</translation>
 <translation id="780301667611848630">Ne, hvala</translation>
@@ -1283,7 +1283,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7810647596859435254">Otvori aplikacijom…</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Sve datoteke, 1 datoteka na popisu}one{Sve datoteke, # datoteka na popisu}few{Sve datoteke, # datoteke na popisu}other{Sve datoteke, # datoteka na popisu}}</translation>
 <translation id="7815484226266492798">Duga snimka zaslona</translation>
-<translation id="8439902729344548970">Kad ste prijavljeni, ti se podaci povezuju s vašim AI Wiz računom kako biste dobili zaštitu na svim Braveovim uslugama, na primjer radi poboljšanja zaštite na Gmailu nakon sigurnosnog incidenta.</translation>
+<translation id="8439902729344548970">Kad ste prijavljeni, ti se podaci povezuju s vašim AI Wize računom kako biste dobili zaštitu na svim Braveovim uslugama, na primjer radi poboljšanja zaštite na Gmailu nakon sigurnosnog incidenta.</translation>
 <translation id="78270725016672455">Vaše računalo želi registrirati ovaj uređaj za prijavu na web-lokaciju</translation>
 <translation id="7844171778363018843">Za sinkronizaciju nije odabrana nijedna vrsta podataka</translation>
 <translation id="7068829570137757602">Braveove usluge</translation>
@@ -1315,7 +1315,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7960972236129063347">Gumb za povratak na uvide u stranicu</translation>
 <translation id="7961926449547174351">Onemogućili ste pristup pohrani. Omogućite ga u Postavkama.</translation>
 <translation id="7963646190083259054">Dobavljač:</translation>
-<translation id="2939504940637874963">Spremljene zaporke možete koristiti na bilo kojem uređaju. Spremaju se u AI Wiz upravitelj zaporki za <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Spremljene zaporke možete koristiti na bilo kojem uređaju. Spremaju se u AI Wize upravitelj zaporki za <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Dodano na popis za čitanje</translation>
 <translation id="7971136598759319605">Aktivan prije jednog dana</translation>
 <translation id="7975379999046275268">Pregled stranice <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
@@ -1335,7 +1335,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8037801708772278989">Provjera je upravo izvršena</translation>
 <translation id="804335162455518893">SD kartica nije pronađena</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB dostupno</translation>
-<translation id="2317945146070194624">Otvori u novoj AI Wiz kartici</translation>
+<translation id="2317945146070194624">Otvori u novoj AI Wize kartici</translation>
 <translation id="8062594758852531064">Prošireno predučitavanje:</translation>
 <translation id="8063895661287329888">Dodavanje oznake nije uspjelo.</translation>
 <translation id="8066816452984416180">Brzo označite ovu stranicu. Da biste uredili taj prečac, dodirnite ga i zadržite pritisak.</translation>
@@ -1344,11 +1344,11 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8076492880354921740">Kartice</translation>
 <translation id="8078096376109663956">Podijelite samo tekst</translation>
 <translation id="8084114998886531721">Spremljena zaporka</translation>
-<translation id="1718138320251931534">Upravljajte podacima svojeg AI Wiz računa</translation>
+<translation id="1718138320251931534">Upravljajte podacima svojeg AI Wize računa</translation>
 <translation id="808747664143081553">Uspostavljena je veza s uređajem</translation>
 <translation id="8090732854597034573">Ako ti je potrebna pomoć, obrati se roditelju</translation>
 <translation id="8101414242770404289">Nema kartica iz vremenskog razdoblja <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Nastavkom upotrebe prihvaćate <ph name="BEGIN_TOS_LINK"/>uvjete pružanja usluge<ph name="END_TOS_LINK"/>.\nRadi poboljšanja aplikacije AI Wiz šalje Braveu podatke o upotrebi i rušenju. <ph name="BEGIN_UMA_LINK"/>Upravljajte<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Nastavkom upotrebe prihvaćate <ph name="BEGIN_TOS_LINK"/>uvjete pružanja usluge<ph name="END_TOS_LINK"/>.\nRadi poboljšanja aplikacije AI Wize šalje Braveu podatke o upotrebi i rušenju. <ph name="BEGIN_UMA_LINK"/>Upravljajte<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Zatvori opcije razvrstavanja</translation>
 <translation id="2919733817273403520">Pomozite poboljšati Braveove značajke i izvedbu</translation>
@@ -1358,7 +1358,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8127542551745560481">Uređivanje početne stranice</translation>
 <translation id="8130309322784422030">Pohranjeni podaci o prijavi možda su zastarjeli</translation>
 <translation id="813082847718468539">Prikaz informacija o web-lokaciji</translation>
-<translation id="6337533477704327362">Nećete morati pamtiti tu zaporku. Spremit će se u AI Wiz upravitelj zaporki.</translation>
+<translation id="6337533477704327362">Nećete morati pamtiti tu zaporku. Spremit će se u AI Wize upravitelj zaporki.</translation>
 <translation id="8186512483418048923">Preostalo datoteka: <ph name="FILES"/></translation>
 <translation id="8190358571722158785">Još 1 dan</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Vaši uređaji<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1368,14 +1368,14 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8210770465353466621">Ovdje ćete pronaći svoje kartice</translation>
 <translation id="8215740705341534369">Bočni list</translation>
 <translation id="8218622182176210845">Upravljanje računom</translation>
-<translation id="4034729701971511794">Možete blokirati web-lokacije koje ne želite. AI Wiz također automatski briše web-lokacije koje su na popisu više od 30 dana. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Možete blokirati web-lokacije koje ne želite. AI Wize također automatski briše web-lokacije koje su na popisu više od 30 dana. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Izbornik kartica feeda</translation>
 <translation id="8236097722223016103">Dodaj u oznake</translation>
 <translation id="8237871086242677046">Donja tablica uvida u stranicu</translation>
 <translation id="8243077599929149377">Dodajte svoje korisničko ime</translation>
 <translation id="8250920743982581267">Dokumenti</translation>
 <translation id="8255617931166444521">Pojedina web-lokacija može upotrebljavati vaše kolačiće samo za uvid u vašu aktivnost pregledavanja na toj web-lokaciji</translation>
-<translation id="2876689296031086375">Budući da se predučitane stranice šifriraju, AI Wiz neće saznati ništa o sadržaju predučitanih stranica. Braveovi poslužitelji saznat će koje se web-lokacije anonimno predučitavaju. Ti se podaci koriste samo za predučitavanje stranica i ne povezuju se s drugim podacima s vašeg AI Wiz računa.</translation>
+<translation id="2876689296031086375">Budući da se predučitane stranice šifriraju, AI Wize neće saznati ništa o sadržaju predučitanih stranica. Braveovi poslužitelji saznat će koje se web-lokacije anonimno predučitavaju. Ti se podaci koriste samo za predučitavanje stranica i ne povezuju se s drugim podacima s vašeg AI Wize računa.</translation>
 <translation id="8260126382462817229">Ponovo se pokušajte prijaviti</translation>
 <translation id="8261506727792406068">Izbriši</translation>
 <translation id="82619448491672958">Pogledajte ostale kartice</translation>
@@ -1385,7 +1385,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="829672787777123339">Povezivanje s uređajem…</translation>
 <translation id="8310344678080805313">Standardne kartice</translation>
 <translation id="831192587911042850">Dodaje trenutačnu web-lokaciju na popis web-lokacija koje pratite.</translation>
-<translation id="5665071699503384089">Možete blokirati teme za koje ne želite da se dijele s web-lokacijama. AI Wiz također automatski briše vaše teme starije od četiri tjedna. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Možete blokirati teme za koje ne želite da se dijele s web-lokacijama. AI Wize također automatski briše vaše teme starije od četiri tjedna. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Nikad ne prevodi web-lokacije</translation>
 <translation id="8348430946834215779">Upotrebljavajte HTTPS kad god je to moguće i primajte upozorenja prije učitavanja web-lokacija koje ga ne podržavaju</translation>
 <translation id="8354977102499939946">Brzo pretražujte glasovno. Da biste uredili prečac, otvorite Postavke.</translation>
@@ -1396,11 +1396,11 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="7651600795135059130">Provjerava nalaze li se URL-ovi na popisu nesigurnih web-lokacija pohranjenom u Braveu</translation>
 <translation id="8402673309244746971">Otvorite feed Praćeno</translation>
 <translation id="8413126021676339697">Pokaži cijelu povijest</translation>
-<translation id="5348884013239264115">Štiti od web-lokacija, preuzimanja i proširenja za koje je poznato da su opasni. Kad posjetite neku web-lokaciju, AI Wiz Braveu šalje maskirani dio URL-a putem poslužitelja privatnosti koji skriva vašu IP adresu. Ako web-lokacija učini nešto sumnjivo, šalju se i potpuni URL-ovi i dijelovi sadržaja.</translation>
+<translation id="5348884013239264115">Štiti od web-lokacija, preuzimanja i proširenja za koje je poznato da su opasni. Kad posjetite neku web-lokaciju, AI Wize Braveu šalje maskirani dio URL-a putem poslužitelja privatnosti koji skriva vašu IP adresu. Ako web-lokacija učini nešto sumnjivo, šalju se i potpuni URL-ovi i dijelovi sadržaja.</translation>
 <translation id="8414396119627470038">Prijavite se na web-lokaciju <ph name="SITE_ETLD_PLUS_ONE"/> s <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Uključi</translation>
 <translation id="8422250855136581222">Na ovom uređaju nema kartica</translation>
-<translation id="5735840612282428689">Stranica je poslana. Da biste je vidjeli, otvorite AI Wiz na svojem <ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">Stranica je poslana. Da biste je vidjeli, otvorite AI Wize na svojem <ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">Kartica pregleda je poluotvorena</translation>
 <translation id="8428213095426709021">Postavke</translation>
 <translation id="8430824733382774043">Podijeli samo snimku zaslona</translation>
@@ -1436,7 +1436,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="854522910157234410">Otvori tu stranicu:</translation>
 <translation id="5503308854539525011">Brave ograničava ukupnu količinu podataka koje web-lokacije mogu dijeliti putem preglednika radi mjerenja izvedbe oglasa</translation>
 <translation id="8559990750235505898">Ponudi prevođenje stranica na druge jezike</translation>
-<translation id="8560602726703398413">Pronađite svoj popis za čitanje u AI Wiz oznakama</translation>
+<translation id="8560602726703398413">Pronađite svoj popis za čitanje u AI Wize oznakama</translation>
 <translation id="8562452229998620586">Ovdje će se pojaviti spremljene zaporke.</translation>
 <translation id="856481929701340285">Traži klasičnu stranicu</translation>
 <translation id="8570677896027847510">Datoteka se ne može sigurno preuzeti</translation>
@@ -1447,14 +1447,14 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="860043288473659153">Ime vlasnika kartice</translation>
 <translation id="1673533133011266617">Prijava u Brave; zatvoreno.</translation>
 <translation id="860282621117673749">Obavijesti o padu cijena</translation>
-<translation id="5784514951651328424">Na vašem AI Wiz računu možda postoje drugi oblici povijesti pregledavanja na stranici <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Na vašem AI Wize računu možda postoje drugi oblici povijesti pregledavanja na stranici <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Želite li otvoriti predloženi URL naveden u preuzetom sadržaju?</translation>
 <translation id="8621068256433641644">telefonu</translation>
 <translation id="8636825310635137004">Da bi se prikazale kartice s vaših ostalih uređaja, uključite sinkronizaciju.</translation>
 <translation id="864544049772947936">Upravljanje prozorima (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Predviđa opasne događaje i upozorava vas na njih prije nego što se dogode</translation>
 <translation id="2734140769649165081">Podatke možete izbrisati u postavkama Bravea</translation>
-<translation id="7436978557885042606">Upotrijebite AI Wiz na svoj način</translation>
+<translation id="7436978557885042606">Upotrijebite AI Wize na svoj način</translation>
 <translation id="8664979001105139458">Već postoji datoteka s tim nazivom</translation>
 <translation id="8676276370198826499">Registrirajte se za <ph name="SITE_ETLD_PLUS_ONE"/> pomoću davatelja identiteta <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Potvrde prijave</translation>
@@ -1499,7 +1499,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
 <translation id="892496902842311796">Spremno: <ph name="LANG"/></translation>
 <translation id="1174893863889683998">Želite li ukloniti svoju aktivnost u Braveu iz Digitalne ravnoteže?</translation>
-<translation id="179413535815682755">Ovisno o vašim postavkama, AI Wiz može slati i kolačiće, vaš trenutačni URL i lokaciju</translation>
+<translation id="179413535815682755">Ovisno o vašim postavkama, AI Wize može slati i kolačiće, vaš trenutačni URL i lokaciju</translation>
 <translation id="8942627711005830162">Otvori u drugom prozoru</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> – preuzimanje tog jezika nije uspjelo. Pokušajte ponovo kasnije.</translation>
 <translation id="8955719471735800169">Natrag na vrh</translation>
@@ -1509,8 +1509,8 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="8987736167266086032">Nastavite tamo gdje ste stali</translation>
 <translation id="8996847606757455498">Odaberi drugog davatelja usluga</translation>
 <translation id="8998289560386111590">Nije dostupno na vašem uređaju</translation>
-<translation id="3275122921244685452">Prijavljujete se računom kojim upravlja <ph name="MANAGED_DOMAIN"/> i njegovom administratoru dajete kontrolu nad svojim podacima u Braveu. Vaši će se podaci trajno povezati s tim računom. Ako se odjavite iz Bravea, vaši će se podaci izbrisati s ovog uređaja, no ostat će pohranjeni na vašem AI Wiz računu.</translation>
-<translation id="9012585441087414258">Štiti od web-lokacija, preuzimanja i proširenja za koje je poznato da su opasni. Ako stranica učini nešto sumnjivo, URL-ovi i dijelovi sadržaja stranice šalju se AI Wiz sigurnom pregledavanju.</translation>
+<translation id="3275122921244685452">Prijavljujete se računom kojim upravlja <ph name="MANAGED_DOMAIN"/> i njegovom administratoru dajete kontrolu nad svojim podacima u Braveu. Vaši će se podaci trajno povezati s tim računom. Ako se odjavite iz Bravea, vaši će se podaci izbrisati s ovog uređaja, no ostat će pohranjeni na vašem AI Wize računu.</translation>
+<translation id="9012585441087414258">Štiti od web-lokacija, preuzimanja i proširenja za koje je poznato da su opasni. Ako stranica učini nešto sumnjivo, URL-ovi i dijelovi sadržaja stranice šalju se AI Wize sigurnom pregledavanju.</translation>
 <translation id="9019199799064251516">Želite li nastaviti bez zaključavanja profila automobila?</translation>
 <translation id="9022774213089566801">Često posjećeno</translation>
 <translation id="9022871169049522985">Web-lokacije i oglašivači mogu mjeriti izvedbu svojih oglasa</translation>
@@ -1520,7 +1520,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="9055497320631373736">Web-lokacija je vraćena u potencijalne web-lokacije</translation>
 <translation id="9063523880881406963">Isključivanje zahtjeva za prikaz klasične web-lokacije</translation>
 <translation id="9065203028668620118">Uredi</translation>
-<translation id="5496925146144075335">Pohranjeni podaci koje AI Wiz ne smatra važnim (primjerice web-lokacije za koje nema spremljenih postavki ili koje ne posjećujete često)</translation>
+<translation id="5496925146144075335">Pohranjeni podaci koje AI Wize ne smatra važnim (primjerice web-lokacije za koje nema spremljenih postavki ili koje ne posjećujete često)</translation>
 <translation id="9067341854474068781">Nijedan list s pristupnim ključevima nije otvoren u punoj visini</translation>
 <translation id="906781307897697745">u proizvodu <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Nema nepročitanih stranica</translation>
@@ -1554,7 +1554,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="9209888181064652401">Upućivanje poziva nije moguće</translation>
 <translation id="9212845824145208577">Ne možete ići niže. Pokušajte započeti na nižem mjestu na stranici.</translation>
 <translation id="9219103736887031265">Slike</translation>
-<translation id="6946179564366058239">Kad web-lokacija zatraži privatno predučitavanje veza na stranici, AI Wiz šifrira i predučitava stranice putem Braveovih poslužitelja bez kolačića. Na taj se način vaš identitet sakriva od predučitane web-lokacije.</translation>
+<translation id="6946179564366058239">Kad web-lokacija zatraži privatno predučitavanje veza na stranici, AI Wize šifrira i predučitava stranice putem Braveovih poslužitelja bez kolačića. Na taj se način vaš identitet sakriva od predučitane web-lokacije.</translation>
 <translation id="4596514158372210596">Uklanjanje vaše aktivnosti u Braveu iz Digitalne ravnoteže</translation>
 <translation id="2830145431802238213">Koristite Jednostavni način na Braveu</translation>
 <translation id="928550791203542716">Praćenje web-lokacije <ph name="SITE_NAME"/></translation>
@@ -1574,7 +1574,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="993520549480398880">Izbrišite i oznake, povijest i druge podatke s ovog automobila</translation>
 <translation id="996149300115483134">Izbornik kartice feeda je zatvoren</translation>
 <translation id="5186185447130319458">Privatno</translation>
-<translation id="79269250264141507">Kada upisujete u adresnu traku ili okvir za pretraživanje, AI Wiz šalje što upisujete zadanoj tražilici za dobivanje boljih prijedloga. To je isključeno u privatnom načinu rada.</translation>
+<translation id="79269250264141507">Kada upisujete u adresnu traku ili okvir za pretraživanje, AI Wize šalje što upisujete zadanoj tražilici za dobivanje boljih prijedloga. To je isključeno u privatnom načinu rada.</translation>
 <translation id="5711390076756601471">Zaključaj privatne kartice pri napuštanju preglednika Brave</translation>
 <translation id="1014490034578104945">Upotrijebi zaključavanje zaslona za prikazivanje otvorenih privatnih kartica</translation>
 <translation id="5722020415664104421">Blokiraj u anonimnom načinu rada</translation>
@@ -1591,7 +1591,7 @@ Na primjer, neke web-lokacije na taj zahtjev mogu odgovoriti tako da vam prikaž
 <translation id="4660964651149493586">Otključaj anonimni način rada</translation>
 <translation id="5278260521317049275">Uključite privatno zaključavanje</translation>
 <translation id="6302653771627628530">Privatne će kartice biti zaključane kada napustite preglednik Brave</translation>
-<translation id="3763131702135887799">Dajte svoj doprinos da bi preglednik AI Wiz bio bolji za profile koji ga upotrebljavaju na jednak način kao i vi</translation>
+<translation id="3763131702135887799">Dajte svoj doprinos da bi preglednik AI Wize bio bolji za profile koji ga upotrebljavaju na jednak način kao i vi</translation>
 <translation id="4167670741834902166">Nova Privatna kartica</translation>
 <translation id="9148151251783962691">Za privatno pregledavanje na ovom uređaju isprobajte privatni način rada</translation>
 <translation id="8355284051444779553">Za otvaranje nove anonimne kartice otvorite izbornik</translation>

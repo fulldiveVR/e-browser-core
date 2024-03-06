@@ -22,7 +22,7 @@
 <translation id="1110914759170138831">Theksimi është shkurtuar</translation>
 <translation id="1111673857033749125">Faqeshënuesit e ruajtur në pajisjet e tua të tjera do të shfaqen këtu.</translation>
 <translation id="1113597929977215864">Shfaq pamjen e thjeshtuar</translation>
-<translation id="4470276443668654888">Mënyrat e pagesës dhe adresat nga Google Pay nuk do të enkriptohen. Historiku i shfletimit nga AI Wiz nuk do të sinkronizohet.
+<translation id="4470276443668654888">Mënyrat e pagesës dhe adresat nga Google Pay nuk do të enkriptohen. Historiku i shfletimit nga AI Wize nuk do të sinkronizohet.
 Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua të enkriptuara. Fraza e kalimit nuk dërgohet apo ruhet nga Brave. Nëse e harron frazën tënde të kalimit apo dëshiron të ndryshosh këtë cilësim, duhet që të rivendosësh sinkronizimin. <ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Nuk të mbron kundër faqeve të internetit, shkarkimeve dhe shtesave të rrezikshme. Do të vazhdosh të marrësh mbrojtje për "Shfletimin e sigurt", aty ku ofrohet, në shërbimet e tjera të Brave, si Gmail dhe "Kërko".</translation>
 <translation id="1129510026454351943">Detajet: <ph name="ERROR_DESCRIPTION"/></translation>
@@ -131,7 +131,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="1710099199314114079">Ndërro ose mbyll skeda</translation>
 <translation id="1718835860248848330">Ora e fundit</translation>
 <translation id="1724977129262658800">Shkyçe për të modifikuar fjalëkalimin tënd</translation>
-<translation id="6493900814829428590">Mund të shfletosh dhe të kërkosh më shpejt kur AI Wiz ngarkon paraprakisht faqet që mendon se mund të vizitosh</translation>
+<translation id="6493900814829428590">Mund të shfletosh dhe të kërkosh më shpejt kur AI Wize ngarkon paraprakisht faqet që mendon se mund të vizitosh</translation>
 <translation id="1749561566933687563">Sinkronizo faqeshënuesit e tu</translation>
 <translation id="1750259112639922169">Grupi i skedave - <ph name="TAB_COUNT"/> skeda</translation>
 <translation id="17513872634828108">Hap skedat</translation>
@@ -166,7 +166,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="1944535645109964458">Nuk ofrohet asnjë çelës kalimi</translation>
 <translation id="1952172573699511566">Uebsajtet do ta shfaqin tekstin në gjuhën tënde të preferuar, kur është e mundur.</translation>
 <translation id="1959679933317802873">Në pritje të përmbajtjes</translation>
-<translation id="3968054912784331254">Përditësimet e AI Wiz nuk mbështeten më për këtë version të Android</translation>
+<translation id="3968054912784331254">Përditësimet e AI Wize nuk mbështeten më për këtë version të Android</translation>
 <translation id="1963976881984600709">Mbrojtja standarde</translation>
 <translation id="1966710179511230534">Përditëso detajet e identifikimit.</translation>
 <translation id="197288927597451399">Mbaje</translation>
@@ -210,7 +210,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="218608176142494674">Ndarja</translation>
 <translation id="2194856509914051091">Gjëra për t'u pasur parasysh</translation>
 <translation id="22091350895006575">Shto emrin e përdoruesit</translation>
-<translation id="4075202346699640887">Hapja e AI Wiz pa një kyçje të profilit do të heqë të gjitha fjalëkalimet e ruajtura dhe mënyrat e pagesës nga makina. Përdorimi i një kyçjeje profili i mban këto të dhëna të sigurta.</translation>
+<translation id="4075202346699640887">Hapja e AI Wize pa një kyçje të profilit do të heqë të gjitha fjalëkalimet e ruajtura dhe mënyrat e pagesës nga makina. Përdorimi i një kyçjeje profili i mban këto të dhëna të sigurta.</translation>
 <translation id="2227444325776770048">Vazhdo si <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Dritare bosh</translation>
 <translation id="223356358902285214">Aktiviteti i uebit dhe i aplikacioneve</translation>
@@ -220,7 +220,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="4808014761134300692">Fjalëkalimet enkriptohen në pajisjen tënde para se të ruhen në "Menaxherin e fjalëkalimeve të Brave"</translation>
 <translation id="2249635629516220541">Personalizo informacionet e përdorura nga sajtet për të të shfaqur reklama</translation>
 <translation id="2259659629660284697">Eksporto fjalëkalimet…</translation>
-<translation id="8820144752830692527">Mund të zgjedhësh gjithmonë se çfarë do të sinkronizosh te <ph name="BEGIN_LINK1"/>cilësimet<ph name="END_LINK1"/>. AI Wiz mund t'i personalizojë "Kërko" dhe shërbimet e tjera bazuar në historikun tënd.</translation>
+<translation id="8820144752830692527">Mund të zgjedhësh gjithmonë se çfarë do të sinkronizosh te <ph name="BEGIN_LINK1"/>cilësimet<ph name="END_LINK1"/>. AI Wize mund t'i personalizojë "Kërko" dhe shërbimet e tjera bazuar në historikun tënd.</translation>
 <translation id="781982477617612877">Identifikohu në "Llogarinë tënde të Brave" për të kontrolluar fjalëkalimet e tua</translation>
 <translation id="2278052315791335171">Fshirja e këtij fjalëkalimi nuk do ta fshijë llogarinë tënde në <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Adresa e faturimit</translation>
@@ -259,7 +259,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="2510106555128151389"><ph name="WEBAPK_NAME"/> po instalohet...</translation>
 <translation id="7222718784508482526">Për cilësime të mëtejshme në lidhje me privatësinë, sigurinë dhe mbledhjen e të dhënave, shih <ph name="BEGIN_LINK"/>Sinkronizimi dhe shërbimet e Brave<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Fleta me madhësi të plotë</translation>
-<translation id="284843628681142937">Dërgon te AI Wiz URL-të e faqeve që ti viziton</translation>
+<translation id="284843628681142937">Dërgon te AI Wize URL-të e faqeve që ti viziton</translation>
 <translation id="2527209463677295330">Duke përfshirë më shumë nga teksti i një faqeje, mund të shikosh rezultate më të mira</translation>
 <translation id="2527779675047087889">Fshih përmbajtjet e kujtesës së fragmenteve</translation>
 <translation id="2532336938189706096">Pamja e uebit</translation>
@@ -270,10 +270,10 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="2567545343356994513">Mbrojtje më e shpejtë dhe proaktive ndaj sajteve të uebit, shkarkimeve dhe shtesave të rrezikshme</translation>
 <translation id="5079947353572974060">Ofro të dërgosh faqe në gjuhë të tjera te "Përkthe me Brave"</translation>
 <translation id="2571834852878229351">Krijo fjalëkalimin tim</translation>
-<translation id="6995512410824092085">Mëso se si ta caktosh AI Wiz si të parazgjedhur</translation>
+<translation id="6995512410824092085">Mëso se si ta caktosh AI Wize si të parazgjedhur</translation>
 <translation id="7242554556818074465">Për të parë skedat e tua nga çdo vend ku përdor Brave, identifikohu në të gjitha pajisjet e tua</translation>
-<translation id="8661556138616664061">Përmbajtje nga AI Wiz për mendjet e të vegjëlve</translation>
-<translation id="2324920234469020158">Kjo do të pastrojë kukit, memorien e përkohshme dhe të dhënat e tjera të sajteve që AI Wiz nuk i konsideron si të rëndësishme.</translation>
+<translation id="8661556138616664061">Përmbajtje nga AI Wize për mendjet e të vegjëlve</translation>
+<translation id="2324920234469020158">Kjo do të pastrojë kukit, memorien e përkohshme dhe të dhënat e tjera të sajteve që AI Wize nuk i konsideron si të rëndësishme.</translation>
 <translation id="2587052924345400782">Një version më i ri është i disponueshëm</translation>
 <translation id="2593272815202181319">Me hapësirë fikse</translation>
 <translation id="2603212228005142861">Identifikohu për të menaxhuar preferencat e tua</translation>
@@ -293,7 +293,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="265156376773362237">Ngarkimi paraprak standard</translation>
 <translation id="2656405586795711023">Aplikacionet e uebit</translation>
 <translation id="2669454659051515572">Çdo person që e përdor këtë pajisje mund t'i shikojë skedarët e shkarkuar</translation>
-<translation id="5806087344347665213">Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wiz mund t'i dërgojë URL-të, duke përfshirë pjesë të përmbajtjes së faqes, te Brave</translation>
+<translation id="5806087344347665213">Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wize mund t'i dërgojë URL-të, duke përfshirë pjesë të përmbajtjes së faqes, te Brave</translation>
 <translation id="2702516483241149200">E re: Ndaj një lidhje që të drejton te ky tekst</translation>
 <translation id="3769942772151914580">Mbrojtje proaktive dhe në kohë reale nga sajtet, shkarkimet dhe shtesat e rrezikshme që bazohet në të dhënat e tua të shfletimit që dërgohen te Brave</translation>
 <translation id="2708226184420201102">Hape në shfletuesin <ph name="PRODUCT_NAME"/></translation>
@@ -321,12 +321,12 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="6324134303015966238">Brave ngarkon paraprakisht faqet që mund t'i vizitosh që ato të ngarkohen më shpejt kur t'i vizitosh</translation>
 <translation id="2856503607207334158">Identifikimi dështoi</translation>
 <translation id="2860954141821109167">Sigurohu që një aplikacion i telefonit të jetë i aktivizuar në këtë pajisje</translation>
-<translation id="6518254564747115579">Disa veçori të AI Wiz nuk do të ofrohen më</translation>
+<translation id="6518254564747115579">Disa veçori të AI Wize nuk do të ofrohen më</translation>
 <translation id="2869430948265924908">Për të mbrojtur përmbajtjet e tua delikate në makinë, duhet të krijosh një kyçje të profilit të makinës.  Këtë mund ta bësh me një kod, fjalëkalim ose kod PIN.</translation>
 <translation id="2870560284913253234">Sajti</translation>
 <translation id="2871733351037274014">Ngarkimi paraprak i faqeve</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> dëshiron që të miratosh këtë uebsajt:</translation>
-<translation id="6756656512757374876">Mëso më shumë se <ph name="BEGIN_LINK"/>si AI Wiz i mban private të dhënat e tua<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Mëso më shumë se <ph name="BEGIN_LINK"/>si AI Wize i mban private të dhënat e tua<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Rreth Brave</translation>
 <translation id="2891154217021530873">Ndalo ngarkimin e faqes</translation>
 <translation id="4013614219085422040">Brave mund ta përdorë historikun tënd për të personalizuar "Kërko me Brave" dhe shërbime të tjera të Brave</translation>
@@ -338,9 +338,9 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="7339921667754113786">Platforma e njoftimeve të Brave</translation>
 <translation id="2912296070571964914">Menaxho temat që të interesojnë</translation>
 <translation id="2923908459366352541">Emri është i pavlefshëm</translation>
-<translation id="6355102470683871794">Hapësira ruajtëse e AI Wiz <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Hapësira ruajtëse e AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Tastiera jote nuk do të ndryshojë</translation>
-<translation id="6537665929855787038">Njoftimet e AI Wiz i bëjnë gjërat më të lehta</translation>
+<translation id="6537665929855787038">Njoftimet e AI Wize i bëjnë gjërat më të lehta</translation>
 <translation id="2940075786175545812">Opsioni për të miratuar ose jo një uebsajt</translation>
 <translation id="2942036813789421260">Skeda e shikimit paraprak është e mbyllur</translation>
 <translation id="4700262879698141140">Brave po përditësohet për t'u lidhur me pajisjet e tjera</translation>
@@ -360,8 +360,8 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="2996291259634659425">Krijo një frazë kalimi</translation>
 <translation id="2996809686854298943">URL-ja e detyrueshme</translation>
 <translation id="2996932914629936323">Pastron historikun nga të gjitha pajisjet e sinkronizuara</translation>
-<translation id="2019027298133375428">Kur një sajt i AI Wiz kërkon të ngarkojë paraprakisht lidhje në mënyrë private në faqen e tij, AI Wiz i enkripton dhe i ngarkon paraprakisht faqet nëpërmjet serverëve të AI Wiz pa kuki. Kjo e fsheh identitetin tënd nga sajti i ngarkuar paraprakisht.</translation>
-<translation id="5730179015008010982">URL-të që viziton dërgohen te AI Wiz për të parashikuar sajtet që mund të vizitosh në vijim dhe për të shfaqur informacione shtesë për faqen që po viziton ti</translation>
+<translation id="2019027298133375428">Kur një sajt i AI Wize kërkon të ngarkojë paraprakisht lidhje në mënyrë private në faqen e tij, AI Wize i enkripton dhe i ngarkon paraprakisht faqet nëpërmjet serverëve të AI Wize pa kuki. Kjo e fsheh identitetin tënd nga sajti i ngarkuar paraprakisht.</translation>
+<translation id="5730179015008010982">URL-të që viziton dërgohen te AI Wize për të parashikuar sajtet që mund të vizitosh në vijim dhe për të shfaqur informacione shtesë për faqen që po viziton ti</translation>
 <translation id="3016635187733453316">Sigurohu që kjo pajisje të jetë e lidhur me internetin</translation>
 <translation id="3026955690410463085">Përfshi lidhjen</translation>
 <translation id="3027644380269727216">Bazuar në aktivitetin tënd në një sajt. Ky cilësim është aktiv.</translation>
@@ -374,7 +374,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="3038272154009688107">Shiko të gjitha sajtet</translation>
 <translation id="3046945242843292318">Shko më shpejt te ky sajt herën tjetër</translation>
 <translation id="3055259925215945098">Faqeshënuesi u zhvendos</translation>
-<translation id="4163313568284712797">Informacioni për përdorimin tënd të AI Wiz dërgohet te Brave, por nuk lidhet me ty\n\nNëse AI Wiz ndërpritet aksidentalisht, detajet rreth aksidentit mund të përfshijnë disa informacione personale\n\nNëse aktivizon sinkronizimin, metrikat mund të përfshijnë edhe informacione për URL-të që ti viziton</translation>
+<translation id="4163313568284712797">Informacioni për përdorimin tënd të AI Wize dërgohet te Brave, por nuk lidhet me ty\n\nNëse AI Wize ndërpritet aksidentalisht, detajet rreth aksidentit mund të përfshijnë disa informacione personale\n\nNëse aktivizon sinkronizimin, metrikat mund të përfshijnë edhe informacione për URL-të që ti viziton</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> faqeshënues}other{<ph name="BOOKMARKS_COUNT_MANY"/> faqeshënues}}</translation>
 <translation id="6153252609477956632">Artikuj rreth interesave të tua në Brave</translation>
 <translation id="3066573403916685335">Lëviz poshtë</translation>
@@ -382,7 +382,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="1094255666887095087"><ph name="APP_NAME"/> do të hapet në Brave. Duke vazhduar, ti pranon <ph name="BEGIN_LINK1"/>"Kushtet e shërbimit" të Brave<ph name="END_LINK1"/> dhe <ph name="BEGIN_LINK2"/>"Kushtet shtesë të shërbimit" të Brave Brave dhe të ChromeOS<ph name="END_LINK2"/>. Zbatohet gjithashtu <ph name="BEGIN_LINK3"/>Politika e privatësisë<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Mund t'i ruash faqet për t'i lexuar më vonë ose offline</translation>
 <translation id="3091010850649238832">Shfaq përmbajtjet e kujtesës së fragmenteve</translation>
-<translation id="821565628224723530">Disa imazhet i dërgohen AI Wiz për të përmirësuar përshkrimet për ty</translation>
+<translation id="821565628224723530">Disa imazhet i dërgohen AI Wize për të përmirësuar përshkrimet për ty</translation>
 <translation id="3114507951000454849">Lexo lajmet e sotme <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Njoftime</translation>
 <translation id="3134784203083076891">”</translation>
@@ -399,7 +399,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Historiku i kërkimeve<ph name="END_LINK1"/> dhe <ph name="BEGIN_LINK2"/>forma të tjera aktiviteti<ph name="END_LINK2"/> mund të ruhen në "Llogarinë tënde të Brave" kur je i identifikuar. Mund t'i fshish ato në çdo kohë.</translation>
 <translation id="321773570071367578">Nëse e ke harruar frazën e kalimit apo dëshiron të ndryshosh këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimin<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Për të sinkronizuar fjalëkalimet e tua, verifiko që je ti</translation>
-<translation id="9210457680074341078">Nëse i ruan faqeshënuesit e tu vetëm në "Llogarinë tënde të Brave", mund t'i monitorosh çmimet e produkteve në AI Wiz dhe të marrësh njoftime kur të ulet çmimi</translation>
+<translation id="9210457680074341078">Nëse i ruan faqeshënuesit e tu vetëm në "Llogarinë tënde të Brave", mund t'i monitorosh çmimet e produkteve në AI Wize dhe të marrësh njoftime kur të ulet çmimi</translation>
 <translation id="9047551989591319903">Brave si çelës sigurie</translation>
 <translation id="3232754137068452469">Aplikacioni i uebit</translation>
 <translation id="3234978181857588512">Ruaj te pajisja</translation>
@@ -427,16 +427,16 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="3341262203274374114">Ndjekja nuk mund të anulohet. Ndodhi një gabim.</translation>
 <translation id="3359667936385849800">Përdor ofruesin aktual të shërbimit</translation>
 <translation id="3373701465337594448">Kur ky cilësim është aktiv, këtu shfaqet një listë e sajteve që viziton që hamendësojnë interesat e tu</translation>
-<translation id="2746024117903470217">Për ta ndarë këtë faqe në një pajisje tjetër, aktivizo sinkronizimin në cilësimet e AI Wiz në pajisjen tjetër</translation>
-<translation id="8801234437789558906">Faqeshënuesit, historiku, fjalëkalimet dhe të dhënat e tjera të AI Wiz nuk do të sinkronizohen më në "Llogarinë tënde të Brave"</translation>
+<translation id="2746024117903470217">Për ta ndarë këtë faqe në një pajisje tjetër, aktivizo sinkronizimin në cilësimet e AI Wize në pajisjen tjetër</translation>
+<translation id="8801234437789558906">Faqeshënuesit, historiku, fjalëkalimet dhe të dhënat e tjera të AI Wize nuk do të sinkronizohen më në "Llogarinë tënde të Brave"</translation>
 <translation id="3384347053049321195">Ndaje imazhin</translation>
 <translation id="3387650086002190359">Shkarkimi i <ph name="FILE_NAME"/> dështoi për shkak të gabimeve të sistemit të skedarëve.</translation>
 <translation id="3389286852084373014">Teksti është tepër i madh</translation>
 <translation id="3398320232533725830">Hap menaxherin e faqeshënuesve</translation>
-<translation id="1081508498128395141">Ngarkohen paraprakisht më shumë faqe. Faqet mund të ngarkohen paraprakisht nëpërmjet serverëve të AI Wiz kur kërkohen nga sajte të tjera.</translation>
+<translation id="1081508498128395141">Ngarkohen paraprakisht më shumë faqe. Faqet mund të ngarkohen paraprakisht nëpërmjet serverëve të AI Wize kur kërkohen nga sajte të tjera.</translation>
 <translation id="3414952576877147120">Madhësia:</translation>
 <translation id="3421726884497337397">Zgjidh se kur do t'i bllokosh kukit e palëve të treta</translation>
-<translation id="5265419033369521352">Të mban të sigurt në AI Wiz dhe mund të përdoret për të përmirësuar sigurinë tënde në aplikacionet e tjera të AI Wiz kur je i identifikuar</translation>
+<translation id="5265419033369521352">Të mban të sigurt në AI Wize dhe mund të përdoret për të përmirësuar sigurinë tënde në aplikacionet e tjera të AI Wize kur je i identifikuar</translation>
 <translation id="3429160811076349561">Veçoritë e provës janë joaktive</translation>
 <translation id="3430670036890315772">Çaktivizimi i kyçjes së profilit do të heqë informacionet e tua të ruajtura</translation>
 <translation id="3435465986463792564">Ke shumë dritare? Mund t'i menaxhosh ato nga këtu</translation>
@@ -444,7 +444,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="3439276997620616816">Këtu do të gjesh skedat e tua të fundit</translation>
 <translation id="3443221991560634068">Ringarko faqen aktuale</translation>
 <translation id="3444179773590444986">Të ndahen komentet për temën e errët për sajtet?</translation>
-<translation id="7384339501748168186">Për të mbrojtur privatësinë tënde, AI Wiz nuk do ta plotësojë automatikisht fjalëkalimin tënd në këtë fushë.</translation>
+<translation id="7384339501748168186">Për të mbrojtur privatësinë tënde, AI Wize nuk do ta plotësojë automatikisht fjalëkalimin tënd në këtë fushë.</translation>
 <translation id="3474624961160222204">Vazhdo si <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Mund të zgjedhësh motorin tënd të kërkimit</translation>
 <translation id="3479552764303398839">Jo tani</translation>
@@ -453,7 +453,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Rendit nga më i vjetri</translation>
 <translation id="3507132249039706973">"Mbrojtja standarde" është aktive</translation>
-<translation id="8669829441518807650">Offline. AI Wiz nuk mund të kontrollojë për përditësime</translation>
+<translation id="8669829441518807650">Offline. AI Wize nuk mund të kontrollojë për përditësime</translation>
 <translation id="3513704683820682405">Realiteti i zgjeruar</translation>
 <translation id="3518985090088779359">Prano dhe vazhdo</translation>
 <translation id="3521388823983121502">Nuk mund të vazhdosh me <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="3701515417135397388">Të paralajmëron nëse një fjalëkalim është komprometuar në një nxjerrje të paautorizuar të të dhënave</translation>
 <translation id="371230970611282515">Parashikon dhe të paralajmëron rreth ngjarjeve të rrezikshme përpara se ato të ndodhin.</translation>
 <translation id="3714981814255182093">Hap shiritin e gjetjes</translation>
-<translation id="5805364706385912897">Kjo faqe përdor shumë memorie, prandaj AI Wiz e ka vendosur atë në pauzë.</translation>
+<translation id="5805364706385912897">Kjo faqe përdor shumë memorie, prandaj AI Wize e ka vendosur atë në pauzë.</translation>
 <translation id="3720422586473670527">Jo, faleminderit</translation>
 <translation id="8397843425685839889">Ti dhe Brave</translation>
 <translation id="3737319253362202215">Cilësimet e përkthimit</translation>
@@ -574,7 +574,7 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 skedë në këtë pajisje}other{# skeda në këtë pajisje}}</translation>
 <translation id="4198423547019359126">Nuk ka vendndodhje shkarkimi</translation>
 <translation id="4202218894997543208">Temat që ke bllokuar</translation>
-<translation id="1675646381334855139">Nëse lejon kukit, AI Wiz mund t'i përdorë ato për ngarkimin paraprak.</translation>
+<translation id="1675646381334855139">Nëse lejon kukit, AI Wize mund t'i përdorë ato për ngarkimin paraprak.</translation>
 <translation id="4216511743389425832">Dëgjoje këtë faqe</translation>
 <translation id="4225725533026049334">Po ndjek</translation>
 <translation id="4225895483398857530">Shkurtorja e shiritit të veglave</translation>
@@ -619,16 +619,16 @@ Vetëm dikush me frazën tënde të kalimit mund të lexojë të dhënat e tua t
 <translation id="4478161224666880173">Mund të përdorësh llogarinë tënde të <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> në këtë sajt. Për të vazhduar, identifikohu në <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">Po instalohet <ph name="MODULE"/> për Brave…</translation>
 <translation id="4484496141267039529">Nuk ka lidhje. Provo sërish më vonë.</translation>
-<translation id="53119194224775367">Të gjitha të dhënat e aplikacionit të AI Wiz do të fshihen përgjithmonë. Kjo përfshin të gjithë skedarët, cilësimet, llogaritë, bazat e të dhënave etj.</translation>
+<translation id="53119194224775367">Të gjitha të dhënat e aplikacionit të AI Wize do të fshihen përgjithmonë. Kjo përfshin të gjithë skedarët, cilësimet, llogaritë, bazat e të dhënave etj.</translation>
 <translation id="3966104135245031874">Enkripto fjalëkalimet e sinkronizuara me "Llogarinë tënde të Brave"</translation>
 <translation id="4491323382106587961">Zgjidh një llogari. Aktualisht është zgjedhur <ph name="EMAIL"/>.</translation>
 <translation id="4508528996305412043">Menyja e kartave të furnizimit është hapur</translation>
 <translation id="4509501256689523862">Kur shfleton, nëse një reklamë që shikon është e personalizuar, kjo varet nga ky cilësim, nga <ph name="BEGIN_LINK_1"/>Temat e reklamave<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>cilësimet e tua të kukive<ph name="END_LINK_2"/>, si dhe nëse sajti që po shikon i personalizon reklamat</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# ditë më parë}other{# ditë më parë}}</translation>
 <translation id="451872707440238414">Kërko te faqeshënuesit</translation>
-<translation id="1664855196866195614">Të dhënat e zgjedhura janë hequr nga AI Wiz dhe nga pajisjet e sinkronizuara.
+<translation id="1664855196866195614">Të dhënat e zgjedhura janë hequr nga AI Wize dhe nga pajisjet e sinkronizuara.
 
-Llogaria jote e AI Wiz mund të ketë forma të tjera të historikut të shfletimit, si kërkimet dhe aktivitetet nga shërbimet e tjera të AI Wiz në <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Llogaria jote e AI Wize mund të ketë forma të tjera të historikut të shfletimit, si kërkimet dhe aktivitetet nga shërbimet e tjera të AI Wize në <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">ora e fundit</translation>
 <translation id="452750746583162491">Rishiko të dhënat e tua të sinkronizuara</translation>
 <translation id="4532845899244822526">Zgjidh dosjen</translation>
@@ -680,7 +680,7 @@ Llogaria jote e AI Wiz mund të ketë forma të tjera të historikut të shfleti
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Fjalëkalimet ruhen në "Menaxherin e fjalëkalimeve" në këtë pajisje</translation>
 <translation id="4766678251456904326">Shto llogari në pajisje</translation>
-<translation id="1996253762801922860">Ne po prezantojmë një veçori të re të privatësisë së reklamave që quajtur "Matja e reklamave". AI Wiz ndan vetëm informacione shumë të kufizuara mes sajteve dhe aplikacioneve, si p.sh. kur të është shfaqur një reklamë, për të ndihmuar në matjen e performancës së reklamave.</translation>
+<translation id="1996253762801922860">Ne po prezantojmë një veçori të re të privatësisë së reklamave që quajtur "Matja e reklamave". AI Wize ndan vetëm informacione shumë të kufizuara mes sajteve dhe aplikacioneve, si p.sh. kur të është shfaqur një reklamë, për të ndihmuar në matjen e performancës së reklamave.</translation>
 <translation id="4769095993849849966">Emri i ri i skedarit</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> u fshi</translation>
 <translation id="4778653490315793244">Nuk shfaqet ende asgjë</translation>
@@ -706,7 +706,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="4864369630010738180">Po identifikohet...</translation>
 <translation id="5131234170665854056"><ph name="MODULE"/> nuk mund të instalohet për Brave</translation>
 <translation id="4871568871368204250">Çaktivizo sinkronizimin</translation>
-<translation id="2875466387677348954">Kur kjo është joaktive, do të shikosh përsëri sugjerime që AI Wiz i ofron në nivel lokal</translation>
+<translation id="2875466387677348954">Kur kjo është joaktive, do të shikosh përsëri sugjerime që AI Wize i ofron në nivel lokal</translation>
 <translation id="4875775213178255010">Sugjerimet e përmbajtjes</translation>
 <translation id="4878404682131129617">Dështoi krijimi i një tuneli përmes serverit përfaqësues</translation>
 <translation id="4880127995492972015">Përkthe…</translation>
@@ -723,7 +723,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="4925120120285606924">Pamja e ekranit më <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Fjalëkalimet e tua do të eksportohen dhe shkarkohen si skedar teksti. Ato do të jenë të dukshme për këdo dhe çdo aplikacion me qasje në dosjen e destinacionit.</translation>
 <translation id="4926901776383726965">Mund t'i ruash imazhet dhe skedarët që t'i shikosh offline ose t'i ndash në aplikacione të tjera</translation>
-<translation id="1955495299630319741">Duke qenë se po del nga një llogari e menaxhuar nga <ph name="DOMAIN_NAME"/>, të dhënat e tua të AI Wiz do të fshihen nga kjo pajisje. Ato do të mbeten në "Llogarinë tënde të Brave".</translation>
+<translation id="1955495299630319741">Duke qenë se po del nga një llogari e menaxhuar nga <ph name="DOMAIN_NAME"/>, të dhënat e tua të AI Wize do të fshihen nga kjo pajisje. Ato do të mbeten në "Llogarinë tënde të Brave".</translation>
 <translation id="4943703118917034429">Realiteti virtual</translation>
 <translation id="4943872375798546930">Asnjë rezultat</translation>
 <translation id="5742837711075932301">Kur je identifikuar në të njëjtën "Llogari të Brave", pajisjet e tjera mund ta përdorin këtë telefon si një çelës sigurie.</translation>
@@ -754,7 +754,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="509429900233858213">Ndodhi një gabim.</translation>
 <translation id="5097349930204431044">Sajtet që viziton mund të përcaktojnë se çfarë të pëlqen dhe më pas të sugjerojnë reklama ndërkohë që ti vazhdon të shfletosh</translation>
 <translation id="5099845111805573968">Kur zgjedh një herë sajtin për desktop, cilësimi zbatohet te sajti sa herë që e viziton atë</translation>
-<translation id="225414324447409614">Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wiz mund t'i dërgojë URL-të, duke përfshirë pjesë të përmbajtjes së faqeve te "Shfletimi i sigurt"</translation>
+<translation id="225414324447409614">Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wize mund t'i dërgojë URL-të, duke përfshirë pjesë të përmbajtjes së faqeve te "Shfletimi i sigurt"</translation>
 <translation id="510275257476243843">1 orë e mbetur</translation>
 <translation id="5115811374190515607">te <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Interesat</translation>
@@ -789,8 +789,8 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="5308380583665731573">Lidh</translation>
 <translation id="5317780077021120954">Ruaj</translation>
 <translation id="989239400026154074">Brave rekomandon Brave</translation>
-<translation id="7815000350132166985">Nëse lejon kukit, AI Wiz mund t'i përdorë ato gjatë ngarkimit paraprak</translation>
-<translation id="1681635711794313507">Për shkak se faqet e ngarkuara paraprakisht janë të enkriptuara dhe lidhja e sajtit në faqe është një sajt i Brave, serverët e AI Wiz nuk marrin informacione të reja kur ngarkojnë paraprakisht këto faqe në mënyrë private.</translation>
+<translation id="7815000350132166985">Nëse lejon kukit, AI Wize mund t'i përdorë ato gjatë ngarkimit paraprak</translation>
+<translation id="1681635711794313507">Për shkak se faqet e ngarkuara paraprakisht janë të enkriptuara dhe lidhja e sajtit në faqe është një sajt i Brave, serverët e AI Wize nuk marrin informacione të reja kur ngarkojnë paraprakisht këto faqe në mënyrë private.</translation>
 <translation id="5329858041417644019">Shfletuesi yt nuk është i menaxhuar</translation>
 <translation id="5342314432463739672">Kërkesat për autorizim</translation>
 <translation id="534580735623577507">Asnjë sajt nga <ph name="TIME_PERIOD"/></translation>
@@ -806,7 +806,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="543338862236136125">Redakto fjalëkalimin</translation>
 <translation id="5433691172869980887">Emri i përdoruesit u kopjua</translation>
 <translation id="5438292632479953702">Shkarko sërish</translation>
-<translation id="2766925507720001104">Të paralajmëron për sajtet e rrezikshme, edhe ato që AI Wiz nuk i ka njohur më parë, duke analizuar më shumë të dhëna nga sajtet sesa nga mbrojtja standarde. Mund të zgjedhësh që t'i kapërcesh paralajmërimet e Brave.</translation>
+<translation id="2766925507720001104">Të paralajmëron për sajtet e rrezikshme, edhe ato që AI Wize nuk i ka njohur më parë, duke analizuar më shumë të dhëna nga sajtet sesa nga mbrojtja standarde. Mund të zgjedhësh që t'i kapërcesh paralajmërimet e Brave.</translation>
 <translation id="5441137934526263133">Sajti nuk funksionon? Kukit e palëve të treta janë bllokuar</translation>
 <translation id="5441466871879044658">Përkthe në këtë gjuhë</translation>
 <translation id="5441522332038954058">Kalo te shiriti i adresës</translation>
@@ -824,7 +824,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="5517095782334947753">Ke faqeshënues, historik, fjalëkalime dhe cilësime të tjera nga <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Ridrejtimi u bllokua.</translation>
 <translation id="5548606607480005320">Kontrolli i sigurisë</translation>
-<translation id="4362225295386962644">Kur përdor një fjalëkalim, AI Wiz të paralajmëron nëse ai është publikuar online. Kur vepron kështu, fjalëkalimet dhe emrat e tu të përdoruesit enkriptohen, në mënyrë që të mos lexohen nga askush, duke përfshirë Brave.</translation>
+<translation id="4362225295386962644">Kur përdor një fjalëkalim, AI Wize të paralajmëron nëse ai është publikuar online. Kur vepron kështu, fjalëkalimet dhe emrat e tu të përdoruesit enkriptohen, në mënyrë që të mos lexohen nga askush, duke përfshirë Brave.</translation>
 <translation id="5555525474779371165">Zgjidh mbrojtjen me "Shfletimin e sigurt"</translation>
 <translation id="5556459405103347317">Ringarko</translation>
 <translation id="555816257274242153">Monitorimi i çmimit u ndalua</translation>
@@ -864,7 +864,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="3088191967551450609">Brave ka nevojë për qasje te hapësira ruajtëse për të shkarkuar skedarë.</translation>
 <translation id="5749237766298580851">Joaktiv <ph name="SEPARATOR"/> Nuk rekomandohet</translation>
 <translation id="5752232708629533680">Ndaj vetëm imazhin GIF</translation>
-<translation id="416316836590748269">Në AI Wiz mund të përdorësh zërin për të kërkuar</translation>
+<translation id="416316836590748269">Në AI Wize mund të përdorësh zërin për të kërkuar</translation>
 <translation id="5754350196967618083">"Zbulo" nuk mund të rifreskohet</translation>
 <translation id="5755162682436943950">Ke dalë Hap dialogun për t'u identifikuar dhe për të aktivizuar sinkronizimin.</translation>
 <translation id="5759897675466110265">Sajti nuk funksionon? Provo të lejosh përkohësisht kukit e një pale të tretë</translation>
@@ -879,7 +879,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="5797521893972859201">Pastron historikun, duke përfshirë dhe në kutinë e kërkimit</translation>
 <translation id="5797949256525811424">Tema u bllokua</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# orë më parë}other{# orë më parë}}</translation>
-<translation id="5311273890481188673">Të drejtat e autorit <ph name="YEAR"/> AI Wiz LLC. Të gjitha të drejtat e rezervuara.</translation>
+<translation id="5311273890481188673">Të drejtat e autorit <ph name="YEAR"/> AI Wize LLC. Të gjitha të drejtat e rezervuara.</translation>
 <translation id="5814749351757353073">Ndiq sajtet e tua të preferuara</translation>
 <translation id="5822875253699806474">Për t'u kthyer me shpejtësi te sajtet që ke vizituar, sinkronizo skedat dhe historikun</translation>
 <translation id="583281660410589416">E panjohur</translation>
@@ -892,15 +892,15 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="5860033963881614850">Çaktivizuar</translation>
 <translation id="5860491529813859533">Aktivizo</translation>
 <translation id="5864419784173784555">Në pritje të një shkarkimi tjetër…</translation>
-<translation id="6538479075382111079">Dërgon automatikisht te AI Wiz statistika të përdorimit dhe raportet e ndërprerjeve aksidentale</translation>
+<translation id="6538479075382111079">Dërgon automatikisht te AI Wize statistika të përdorimit dhe raportet e ndërprerjeve aksidentale</translation>
 <translation id="5869522115854928033">Fjalëkalimet e ruajtura</translation>
-<translation id="5604589745019948682">Për të ndjekur një sajt, shko te sajti, hap menynë e AI Wiz dhe trokit te Ndiq.</translation>
+<translation id="5604589745019948682">Për të ndjekur një sajt, shko te sajti, hap menynë e AI Wize dhe trokit te Ndiq.</translation>
 <translation id="5879072387416556377">Merr sugjerime më të mira</translation>
 <translation id="5899667542927581604">Nuk është mbyllur asnjë fletë e çelësave të kalimit</translation>
 <translation id="5916664084637901428">Aktiv</translation>
 <translation id="5919204609460789179">Përditëso <ph name="PRODUCT_NAME"/> për të nisur sinkronizimin</translation>
 <translation id="5938820472109305350">Shto <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">Po përdor AI Wiz për kërkimin</translation>
+<translation id="6103327872225198548">Po përdor AI Wize për kërkimin</translation>
 <translation id="5945035219773565305">Rekomandimi aktual: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Po shikon faqen drejtpërdrejt</translation>
 <translation id="305870044889644984">Hap "Qendrën e ndihmës së Brave" në një skedë të re</translation>
@@ -930,7 +930,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="6070730414166672373">Po kontakton bankën tënde\u2026</translation>
 <translation id="6085886413119427067">Përcakton mënyrën e lidhjes me uebsajtet nëpërmjet një lidhjeje të sigurt</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> orë të mbetura</translation>
-<translation id="4726571606794511368">Nëse AI Wiz është gjithashtu motori yt i parazgjedhur i kërkimit, do të shohësh sugjerime më të mira dhe të përshtatshme me kontekstin</translation>
+<translation id="4726571606794511368">Nëse AI Wize është gjithashtu motori yt i parazgjedhur i kërkimit, do të shohësh sugjerime më të mira dhe të përshtatshme me kontekstin</translation>
 <translation id="6108923351542677676">Konfigurimi në vazhdim...</translation>
 <translation id="6112702117600201073">Po rifreskon faqen</translation>
 <translation id="6122831415929794347">Të çaktivizohet "Shfletimi i sigurt"?</translation>
@@ -943,7 +943,7 @@ Për të ndryshuar këtë cilësim, <ph name="BEGIN_LINK"/>rivendos sinkronizimi
 <translation id="6140912465461743537">Shteti/rajoni</translation>
 <translation id="6150320133806434356">Faqeshënuesi u ruajt</translation>
 <translation id="6154478581116148741">Aktivizo kyçjen e ekranit te "Cilësimet" për të eksportuar fjalëkalime e tua nga kjo pajisje</translation>
-<translation id="7087658909840709934">Ngarkon paraprakisht faqet që AI Wiz mendon se mund të vizitosh.</translation>
+<translation id="7087658909840709934">Ngarkon paraprakisht faqet që AI Wize mendon se mund të vizitosh.</translation>
 <translation id="6186394685773237175">Nuk u gjetën fjalëkalime të komprometuara</translation>
 <translation id="6192907950379606605">Merr përshkrimet e imazheve</translation>
 <translation id="6193448654517602979">Zgjidh skedat</translation>
@@ -981,18 +981,18 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="6357653805084533597">Mund ta përdorësh këtë telefon për t'u identifikuar në pajisjen që po shfaq këtë kod QR.</translation>
 <translation id="6363990818884053551">Për të nisur sinkronizimin, verifiko që je ti</translation>
 <translation id="6364438453358674297">Të hiqet sugjerimi nga historiku?</translation>
-<translation id="806493401838431801">Ngarkon paraprakisht më shpesh faqet që AI Wiz mendon se mund të vizitosh. Ky cilësim mund të rezultojë në përdorimin e më shumë të dhënave.</translation>
+<translation id="806493401838431801">Ngarkon paraprakisht më shpesh faqet që AI Wize mendon se mund të vizitosh. Ky cilësim mund të rezultojë në përdorimin e më shumë të dhënave.</translation>
 <translation id="6382848304055775421">Po eksportohen</translation>
 <translation id="6394791151443660613">Kërko: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LIDHJA</translation>
 <translation id="6397616442223433927">Përsëri online</translation>
-<translation id="8789425457808164956">Për ta dërguar këtë skedë te një pajisje tjetër, identifikohu në AI Wiz në të</translation>
+<translation id="8789425457808164956">Për ta dërguar këtë skedë te një pajisje tjetër, identifikohu në AI Wize në të</translation>
 <translation id="6404511346730675251">Redakto faqeshënuesin</translation>
 <translation id="6406506848690869874">Sinkronizo</translation>
 <translation id="6407224748847589805">Nuk mund të lidhet me kompjuterin tënd. Provo një opsion tjetër verifikimi.</translation>
 <translation id="6410883413783534063">Hap skedat për të vizituar faqe të ndryshme njëkohësisht</translation>
 <translation id="6411219469806822692">Nuk mund të shkosh më lart. Provo të fillosh më lart në faqe.</translation>
-<translation id="7810992039564280750">Kontrollon URL-të kundrejt një liste sajtesh të pasigurta të ruajtur në Brave. Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd, ose kur shkarkon një skedar të dëmshëm, AI Wiz mund t'i dërgojë po ashtu "Shfletimit të sigurt" URL-të, duke përfshirë pjesë të përmbajtjes së faqes.</translation>
+<translation id="7810992039564280750">Kontrollon URL-të kundrejt një liste sajtesh të pasigurta të ruajtur në Brave. Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd, ose kur shkarkon një skedar të dëmshëm, AI Wize mund t'i dërgojë po ashtu "Shfletimit të sigurt" URL-të, duke përfshirë pjesë të përmbajtjes së faqes.</translation>
 <translation id="641643625718530986">Printo…</translation>
 <translation id="6422857128426228781">Produktet e tua të monitoruara do t'i gjesh këtu</translation>
 <translation id="6433501201775827830">Zgjidh motorin e kërkimit</translation>
@@ -1003,7 +1003,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="6447558397796644647">Ai faqeshënues nuk mund të gjendet. Kontrollo nëse e ke shkruar saktë ose shto një faqeshënues të ri</translation>
 <translation id="6459045781120991510">Anketat</translation>
 <translation id="6461962085415701688">Skedari nuk mund të hapet</translation>
-<translation id="9055113864158719823">Mund të shikosh sajtet që viziton në AI Wiz dhe të caktosh kohëmatës për to.\n\nBrave merr informacion rreth sajteve për të cilat cakton kohëmatës dhe për sa kohë i viziton ato. Ky informacion përdoret për të përmirësuar "Mirëqenien dixhitale".</translation>
+<translation id="9055113864158719823">Mund të shikosh sajtet që viziton në AI Wize dhe të caktosh kohëmatës për to.\n\nBrave merr informacion rreth sajteve për të cilat cakton kohëmatës dhe për sa kohë i viziton ato. Ky informacion përdoret për të përmirësuar "Mirëqenien dixhitale".</translation>
 <translation id="6473086018775716761">Listë e opsioneve të ndarjes e hapur në gjysmën e lartësisë.</translation>
 <translation id="6475951671322991020">Shkarko videon</translation>
 <translation id="6477928892249167417">Këto sajte duken të rëndësishme për ty:</translation>
@@ -1011,54 +1011,54 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Skedar i shkarkuar}other{# shkarkime të përfunduara}}</translation>
 <translation id="3960299545138990065">Rinis Brave</translation>
 <translation id="6527303717912515753">Ndaj</translation>
-<translation id="708829030563435351">Sajtet që viziton në AI Wiz nuk do të shfaqen. Të gjithë kohëmatësit e sajtit do të fshihen.</translation>
+<translation id="708829030563435351">Sajtet që viziton në AI Wize nuk do të shfaqen. Të gjithë kohëmatësit e sajtit do të fshihen.</translation>
 <translation id="7723158744459952869">Brave kërkoi shumë kohë për t'u përgjigjur</translation>
 <translation id="6539092367496845964">Ndodhi një gabim. Provo përsëri më vonë.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Kontrolluar 1 orë më parë}other{Kontrolluar # orë më parë}}</translation>
 <translation id="6545017243486555795">Pastro të gjitha të dhënat</translation>
 <translation id="6546511553472444032">Skedari mund të jetë i dëmshëm</translation>
-<translation id="6702167990458635422">Nuk të mbron nga uebsajtet, shkarkimet dhe shtesat e rrezikshme. Cilësimet e tua të "Shfletimit të sigurt" në produktet e tjera të AI Wiz nuk do të preken.</translation>
+<translation id="6702167990458635422">Nuk të mbron nga uebsajtet, shkarkimet dhe shtesat e rrezikshme. Cilësimet e tua të "Shfletimit të sigurt" në produktet e tjera të AI Wize nuk do të preken.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> dhe <ph name="TAB_COUNT_ONE"/> skedë tjetër do të mbyllen}other{<ph name="TAB_TITLE"/> dhe <ph name="TAB_COUNT_MANY"/> skeda të tjera do të mbyllen}}</translation>
 <translation id="6560414384669816528">Kërko me Sogou</translation>
 <translation id="656065428026159829">Shiko më shumë</translation>
 <translation id="6565959834589222080">Wi-Fi përdoret kur ofrohet</translation>
 <translation id="4480935821314799946">Tani do të shikosh histori nga <ph name="SITE_NAME"/> kur të hapësh një skedë të re. Sajtet që ndjek ruhen në llogarinë tënde të Brave. Mund t'i menaxhosh te cilësimet e "Zbulo".</translation>
 <translation id="6573096386450695060">Lejo gjithmonë</translation>
-<translation id="5157964048453367290">Skedat që ke hapur në AI Wiz në pajisjet e tjera do të shfaqen këtu.</translation>
+<translation id="5157964048453367290">Skedat që ke hapur në AI Wize në pajisjet e tjera do të shfaqen këtu.</translation>
 <translation id="6583199322650523874">Shëno si faqeshënues faqen aktuale</translation>
 <translation id="6588043302623806746">Përdor DNS-në e sigurt</translation>
 <translation id="6590471736817333463">Kurse deri në 60% të të dhënave</translation>
 <translation id="6590680911007613645">Sigurohu që fjalëkalimi që po ruan përputhet me fjalëkalimin tënd për <ph name="SITE"/>.</translation>
 <translation id="6593061639179217415">Sajti për desktop</translation>
 <translation id="6594347733515723558">Opsionet e renditjes dhe shikimit</translation>
-<translation id="2466982615210189224">Imazhet janë dërguar te AI Wiz për të përmirësuar përshkrimet për ty.</translation>
+<translation id="2466982615210189224">Imazhet janë dërguar te AI Wize për të përmirësuar përshkrimet për ty.</translation>
 <translation id="663059986967017181">Kopjuar në Brave</translation>
 <translation id="661266467055912436">Përmirëson sigurinë për ty dhe këdo në ueb.</translation>
 <translation id="6618554661997243500">Për të parë sajtet kryesore dhe historitë për ty, trokit te butoni "Kreu"</translation>
-<translation id="8127050479140582768">Për ta dërguar këtë skedë te një pajisje tjetër, identifikohu në AI Wiz në të dyja pajisjet</translation>
+<translation id="8127050479140582768">Për ta dërguar këtë skedë te një pajisje tjetër, identifikohu në AI Wize në të dyja pajisjet</translation>
 <translation id="6627583120233659107">Modifiko dosjen</translation>
 <translation id="6636623428211296678">Eksploro më shumë cilësime më poshtë ose përfundo tani</translation>
 <translation id="2259649928554669581">Për cilësime të mëtejshme në lidhje me privatësinë, sigurinë dhe mbledhjen e të dhënave, shih <ph name="BEGIN_LINK1"/>Shinkronizimi <ph name="END_LINK1"/> dhe <ph name="BEGIN_LINK2"/>Shërbimet e Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Për të ndihmuar në përmirësimin e aplikacionit, AI Wiz dërgon të dhëna të përdorimit dhe të ndërprerjeve aksidentale te Brave. <ph name="BEGIN_UMA_LINK"/>Menaxho<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Për të ndihmuar në përmirësimin e aplikacionit, AI Wize dërgon të dhëna të përdorimit dhe të ndërprerjeve aksidentale te Brave. <ph name="BEGIN_UMA_LINK"/>Menaxho<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Bllokoji gjithmonë</translation>
 <translation id="6641780377503683465">Hiq <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Pastro</translation>
 <translation id="6645629752388991326">Kontrollo se cilat pajisje mund të identifikohen duke përdorur këtë pajisje si çelës sigurie.</translation>
-<translation id="2730188427562924169">Dërgon një pjesë të pakuptueshme të URL-së te AI Wiz nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP. Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wiz mund t'i dërgojë gjithashtu URL-të, duke përfshirë pjesë të përmbajtjes së faqeve, te Brave.</translation>
-<translation id="7556503430569358637">URL-të që viziton dërgohen te AI Wiz për të parashikuar sajtet që mund të vizitosh në vijim</translation>
+<translation id="2730188427562924169">Dërgon një pjesë të pakuptueshme të URL-së te AI Wize nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP. Nëse një sajt përpiqet të vjedhë fjalëkalimin tënd ose kur shkarkon një skedar të dëmshëm, AI Wize mund t'i dërgojë gjithashtu URL-të, duke përfshirë pjesë të përmbajtjes së faqeve, te Brave.</translation>
+<translation id="7556503430569358637">URL-të që viziton dërgohen te AI Wize për të parashikuar sajtet që mund të vizitosh në vijim</translation>
 <translation id="6678472970290886941">Administratori yt mund të ndryshojë konfigurimin e shfletuesit në distancë. Aktiviteti në këtë pajisje mund të menaxhohet edhe jashtë Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 dhe <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> tjetër}other{<ph name="CONTACT_PREVIEW"/>\u2026 dhe <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> të tjera}}</translation>
 <translation id="6649642165559792194">Paraafisho imazhin <ph name="BEGIN_NEW"/>E re<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Fjalëkalimi</translation>
 <translation id="6659594942844771486">Skeda</translation>
-<translation id="9145803563102831353">Për momentin fjalëkalimet e ruajtura në këtë pajisje nuk mund të përdoren nëpër kanalet e Brave. Pas AI Wiz 121, fjalëkalimet e ruajtura në pajisjen tënde për AI Wiz dhe <ph name="CHROME_CHANNEL"/> do të shkrihen dhe do të mund të përdoren në të dyja aplikacionet.</translation>
+<translation id="9145803563102831353">Për momentin fjalëkalimet e ruajtura në këtë pajisje nuk mund të përdoren nëpër kanalet e Brave. Pas AI Wize 121, fjalëkalimet e ruajtura në pajisjen tënde për AI Wize dhe <ph name="CHROME_CHANNEL"/> do të shkrihen dhe do të mund të përdoren në të dyja aplikacionet.</translation>
 <translation id="666731172850799929">Hape në <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kopjo imazhin</translation>
 <translation id="6672917148207387131">Shto <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Për të nisur sinkronizimin, fut frazën e kalimit</translation>
-<translation id="8581481290581777242">Të pastrohen të dhënat e tua të AI Wiz nga kjo pajisje?</translation>
+<translation id="8581481290581777242">Të pastrohen të dhënat e tua të AI Wize nga kjo pajisje?</translation>
 <translation id="3683330416566109578">Identifikohu në këtë sajt dhe në Brave</translation>
-<translation id="3385384709865894288">Bëje AI Wiz më të mirë</translation>
+<translation id="3385384709865894288">Bëje AI Wize më të mirë</translation>
 <translation id="670498945988402717">Kontrolluar dje</translation>
 <translation id="6710213216561001401">Prapa</translation>
 <translation id="671481426037969117">Kohëmatësi <ph name="FQDN"/> përfundoi. Do të fillojë përsëri nesër.</translation>
@@ -1066,20 +1066,20 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="6719634564325948108">Të lidhet me kod QR?</translation>
 <translation id="6738516213925468394">Të dhënat e tua u enkriptuan me <ph name="BEGIN_LINK"/>frazën e kalimit për sinkronizimin<ph name="END_LINK"/> më <ph name="TIME"/>. Fute atë për të nisur sinkronizmin.</translation>
 <translation id="6738867403308150051">Po shkarkon...</translation>
-<translation id="2275686406263739320">Zakonisht, sajtet që ti viziton i kujtojnë gjërat që të interesojnë për të personalizuar përvojën tënde. Sajtet mund të ruajnë po ashtu informacione në AI Wiz për interesat e tu.</translation>
+<translation id="2275686406263739320">Zakonisht, sajtet që ti viziton i kujtojnë gjërat që të interesojnë për të personalizuar përvojën tënde. Sajtet mund të ruajnë po ashtu informacione në AI Wize për interesat e tu.</translation>
 <translation id="6751521182688001123">Hap me shpejtësi një skedë të re. Për ta modifikuar këtë shkurtore, preke dhe mbaje të prekur.</translation>
 <translation id="6756507620369789050">Ndaj komente</translation>
 <translation id="6767294960381293877">Lista e pajisjeve për të ndarë një skedë e hapur në gjysmë lartësi.</translation>
 <translation id="6770602306803890733">Përmirëson sigurinë për ty dhe këdo në ueb</translation>
 <translation id="2213938739750509524">Kur troket ose shkruan në shiritin e adresës ose në kutinë e kërkimit, do të shikosh sugjerime nga motori i parazgjedhur i kërkimit. Kjo është joaktive në modalitetin "e fshehtë".</translation>
-<translation id="8174975477247159780">"Kushtet shtesë të shërbimit" të AI Wiz dhe të ChromeOS</translation>
+<translation id="8174975477247159780">"Kushtet shtesë të shërbimit" të AI Wize dhe të ChromeOS</translation>
 <translation id="6795633245022906657">Hap me shpejtësi një skedë të re. Për ta modifikuar këtë shkurtore, shko te "Cilësimet".</translation>
 <translation id="6802555630140434547">Dritarja do të mbyllet</translation>
 <translation id="6811034713472274749">Faqja është gati për ta shikuar</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Imazhet, 1 imazh në listë}other{Imazhet, # imazhe në listë}}</translation>
 <translation id="8418237809013783651">"Identifikohu në Brave", i hapur.</translation>
 <translation id="6817747507826986771">Ndaje me shpejtësi këtë faqe. Për ta modifikuar këtë shkurtore, preke dhe mbaje të prekur.</translation>
-<translation id="118366698571543506">Identifikohu për të marrë gjërat e AI Wiz në pajisje të ndryshme</translation>
+<translation id="118366698571543506">Identifikohu për të marrë gjërat e AI Wize në pajisje të ndryshme</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Nga shiriti i adresës, mund të hapësh informacionet e faqes për të parë informacione shtesë për faqen që po viziton</translation>
 <translation id="6828070228333235514">Ndalo monitorimin e çmimit</translation>
@@ -1091,7 +1091,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="6850409657436465440">Shkarkimi yt është ende në vazhdim</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> skeda janë mbyllur</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Skedarët audio, 1 skedar audio në listë}other{Skedarët audio, # skedarë audio në listë}}</translation>
-<translation id="4046835482356054431">"Zbulo" nga AI Wiz - joaktive</translation>
+<translation id="4046835482356054431">"Zbulo" nga AI Wize - joaktive</translation>
 <translation id="686366188661646310">Të fshihet fjalëkalimi?</translation>
 <translation id="6864459304226931083">Shkarko imazhin</translation>
 <translation id="6865313869410766144">Plotëso automatikisht të dhënat e formularit</translation>
@@ -1125,7 +1125,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7029809446516969842">Fjalëkalimet</translation>
 <translation id="7030304022046916278">I dërgon URL-të te "Shfletimi i sigurt" për t'i kontrolluar</translation>
 <translation id="7035701931849773472">Opsione të tjera…</translation>
-<translation id="5813862251770201080">Identifikohu në AI Wiz me "Llogarinë tënde të Brave"</translation>
+<translation id="5813862251770201080">Identifikohu në AI Wize me "Llogarinë tënde të Brave"</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Të merren përshkrimet e imazheve?</translation>
 <translation id="7055152154916055070">Ridrejtimi u bllokua:</translation>
@@ -1134,7 +1134,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="707155805709242880">Zgjidh më poshtë se çfarë do të sinkronizohet</translation>
 <translation id="7077143737582773186">Karta SD</translation>
 <translation id="2374582967527009647">I dërgon URL-të te "Shfletimi i sigurt" për t'i kontrolluar. Dërgon gjithashtu një shembull të vogël të faqeve, shkarkimeve, aktivitetit të shtesave dhe informacionit të sistemit për të ndihmuar në zbulimin e kërcënimeve të reja. I lidh përkohësisht këto të dhëna me "Llogarinë e Brave" kur je i identifikuar, për të të mbrojtur nëpër aplikacionet e Brave.</translation>
-<translation id="5499149312981370855">Zgjidh nëse do të përfshish historikun e AI Wiz për përvoja më të personalizuara në shërbimet e Brave</translation>
+<translation id="5499149312981370855">Zgjidh nëse do të përfshish historikun e AI Wize për përvoja më të personalizuara në shërbimet e Brave</translation>
 <translation id="8208853227947884571">Brave është i përditësuar</translation>
 <translation id="7105047059074518658">Identifikohu për të shfletuar më lehtë nëpër pajisje</translation>
 <translation id="7106762743910369165">Shfletuesi yt menaxhohet nga organizata jote</translation>
@@ -1150,10 +1150,10 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7177873915659574692">Kodi QR nuk mund të krijohet. URL-ja është më shumë se <ph name="CHARACTER_LIMIT"/> karaktere.</translation>
 <translation id="7180611975245234373">Rifresko</translation>
 <translation id="7183693674623539380">Grupi i skedave - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Të mban të sigurt në AI Wiz dhe mund të përdoret për të përmirësuar sigurinë tënde në aplikacionet e tjera të AI Wiz kur je i identifikuar.</translation>
+<translation id="8355565210555500987">Të mban të sigurt në AI Wize dhe mund të përdoret për të përmirësuar sigurinë tënde në aplikacionet e tjera të AI Wize kur je i identifikuar.</translation>
 <translation id="7191430249889272776">Skeda u hap në sfond.</translation>
 <translation id="7196215469483532480">Shpjegimi i udhëzuesit të privatësisë u hap në lartësi të plotë</translation>
-<translation id="1014116676551114642">Përmbajtje nga AI Wiz për mendjet e të vegjëlve - joaktive</translation>
+<translation id="1014116676551114642">Përmbajtje nga AI Wize për mendjet e të vegjëlve - joaktive</translation>
 <translation id="7207760545532569765">Restauro <ph name="TAB_COUNT"/> skeda si skeda të reja në sfond.</translation>
 <translation id="6302653771627628530">Skedat "e fshehta" do të kyçen kur të largohesh nga Brave</translation>
 <translation id="7221869452894271364">Ringarkoje këtë faqe</translation>
@@ -1162,19 +1162,19 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7242755609445462077">Theksimi i stilizuar (<ph name="CURRENT_DATE"/>)</translation>
 <translation id="8287068819750208230">Sigurohu që <ph name="TARGET_DEVICE_NAME"/> të ketë të aktivizuar sinkronizimin në Brave</translation>
 <translation id="7252076891734325316">Vendose telefonin tënd pranë kompjuterit</translation>
-<translation id="4957342254208357193">Pajisja jote Android mund të përfshijë një cilësim të ngjashëm. Nëse "Matja e reklamave" është aktivizuar në AI Wiz dhe në pajisjen tënde Android, një kompani mund të matë efektivitetin e një reklame nëpër uebsajtet që viziton dhe aplikacionet që përdor ti.</translation>
+<translation id="4957342254208357193">Pajisja jote Android mund të përfshijë një cilësim të ngjashëm. Nëse "Matja e reklamave" është aktivizuar në AI Wize dhe në pajisjen tënde Android, një kompani mund të matë efektivitetin e një reklame nëpër uebsajtet që viziton dhe aplikacionet që përdor ti.</translation>
 <translation id="727288900855680735">Të dërgohet <ph name="ONE_TIME_CODE"/> te <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Sajt i bllokuar</translation>
-<translation id="7949597606523411684">Brave i fshin automatikisht temat që janë më të vjetra se 4 javë. Ndërsa vazhdon të shfletosh, një temë mund të shfaqet përsëri në listë. Ose mund t'i bllokosh temat që nuk dëshiron që AI Wiz t'i ndajë me sajtet. Mëso më shumë rreth <ph name="BEGIN_LINK"/>menaxhimit të privatësisë së reklamave në Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">Kur shkruan, AI Wiz e dërgon përmbajtjen e shiritit të adresës ose të kutisë së kërkimit te motori yt i parazgjedhur i kërkimit</translation>
+<translation id="7949597606523411684">Brave i fshin automatikisht temat që janë më të vjetra se 4 javë. Ndërsa vazhdon të shfletosh, një temë mund të shfaqet përsëri në listë. Ose mund t'i bllokosh temat që nuk dëshiron që AI Wize t'i ndajë me sajtet. Mëso më shumë rreth <ph name="BEGIN_LINK"/>menaxhimit të privatësisë së reklamave në Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">Kur shkruan, AI Wize e dërgon përmbajtjen e shiritit të adresës ose të kutisë së kërkimit te motori yt i parazgjedhur i kërkimit</translation>
 <translation id="7286703216224610554">Ndaj vetëm reagimin</translation>
 <translation id="7289303553784750393">Nëse je online, por ky problem vazhdon të ndodhë, mund të provosh mënyra të tjera për të vazhduar në <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Riemërtimi nuk ofrohet</translation>
 <translation id="7291910923717764901">Përshkrimet e imazheve u shtuan për këtë faqe</translation>
 <translation id="7293429513719260019">Zgjidh gjuhën</translation>
 <translation id="729975465115245577">Pajisja jote nuk ka një aplikacion për të ruajtur skedarin e fjalëkalimeve.</translation>
-<translation id="7581648335850642193">Pajisja jote Android mund të përfshijë një cilësim të ngjashëm. Nëse ky cilësim është aktivizuar në AI Wiz dhe në pajisjen tënde Android, një kompani mund të matë efektivitetin e një reklame nëpër uebsajtet që viziton dhe aplikacionet që përdor ti.</translation>
-<translation id="1382596880054356475">Offline. AI Wiz nuk mund t'i kontrollojë fjalëkalimet e tua.</translation>
+<translation id="7581648335850642193">Pajisja jote Android mund të përfshijë një cilësim të ngjashëm. Nëse ky cilësim është aktivizuar në AI Wize dhe në pajisjen tënde Android, një kompani mund të matë efektivitetin e një reklame nëpër uebsajtet që viziton dhe aplikacionet që përdor ti.</translation>
+<translation id="1382596880054356475">Offline. AI Wize nuk mund t'i kontrollojë fjalëkalimet e tua.</translation>
 <translation id="7313188324932846546">Trokit për të konfiguruar sinkronizimin</translation>
 <translation id="7324354302972299151">Dërgo një kërkesë "Do Not Track"</translation>
 <translation id="7332075081379534664">Identifikimi i suksesshëm</translation>
@@ -1201,7 +1201,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7431991332293347422">Kontrollo se si përdoret historiku i shfletimit për të personalizuar "Kërkimin" dhe shumë të tjera</translation>
 <translation id="7435356471928173109">Çaktivizuar nga administratori yt</translation>
 <translation id="6234515504547364178">Dil nga Brave</translation>
-<translation id="6147816961713837040">Dërgon një pjesë të pakuptueshme të URL-së te AI Wiz nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP</translation>
+<translation id="6147816961713837040">Dërgon një pjesë të pakuptueshme të URL-së te AI Wize nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP</translation>
 <translation id="3699067418237091329">Të nxjerr nga shumica e sajteve. Nuk do të dalësh nga llogaria jote e Brave.</translation>
 <translation id="7453810262525006706">Palos te pamja anësore</translation>
 <translation id="7454641608352164238">Nuk ka hapësirë të mjaftueshme</translation>
@@ -1231,7 +1231,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="5722020415664104421">Bllokoji kur përdor modalitetin "e fshehtë"</translation>
 <translation id="7539698981064401140">Sinkronizo skedat dhe historikun</translation>
 <translation id="7562080006725997899">Të dhënat e pastrimit të shfletimit</translation>
-<translation id="7814200940910057384">Të dhënat e AI Wiz u pastruan</translation>
+<translation id="7814200940910057384">Të dhënat e AI Wize u pastruan</translation>
 <translation id="7577900504646297215">Menaxho interesat</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> skedar i shkarkuar}other{<ph name="FILES_DOWNLOADED_MANY"/> skedarë të shkarkuar}}</translation>
 <translation id="7581273696622423628">Merr pjesë në anketë</translation>
@@ -1241,7 +1241,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7596558890252710462">Sistemi operativ</translation>
 <translation id="7603168929588204083">Datë e pavlefshme</translation>
 <translation id="7605594153474022051">Sinkronizimi nuk po funksionon.</translation>
-<translation id="649070405679044769">U identifikove te AI Wiz si</translation>
+<translation id="649070405679044769">U identifikove te AI Wize si</translation>
 <translation id="7612989789287281429">Po identifikohesh…</translation>
 <translation id="7616551326690708776">Zgjidh një shabllon për theksimin.</translation>
 <translation id="7619072057915878432">Shkarkimi i <ph name="FILE_NAME"/> dështoi për shkak të problemeve të rrjetit.</translation>
@@ -1260,8 +1260,8 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="768232549260819724">GIF u kopjua</translation>
 <translation id="7682724950699840886">Provoni këshillat e mëposhtme: sigurohu që ka hapësirë ​​të mjaftueshme në pajisjen tënde dhe provo të eksportosh përsëri.</translation>
 <translation id="7686086654630106285">Më shumë rreth reklamave të sugjeruara nga sajtet</translation>
-<translation id="2667018639405889513">Disa nga faqet që ti viziton janë të ngarkuara paraprakisht. Faqet mund të ngarkohen paraprakisht nëpërmjet serverëve të AI Wiz kur lidhen nga një sajt i Brave.</translation>
-<translation id="7795837497684113327">Pajisja jote nuk mund ta hapte Brave. Për ta rregulluar problemin, shkarko përditësimin më të fundit të AI Wiz nga dyqani yt i aplikacioneve.</translation>
+<translation id="2667018639405889513">Disa nga faqet që ti viziton janë të ngarkuara paraprakisht. Faqet mund të ngarkohen paraprakisht nëpërmjet serverëve të AI Wize kur lidhen nga një sajt i Brave.</translation>
+<translation id="7795837497684113327">Pajisja jote nuk mund ta hapte Brave. Për ta rregulluar problemin, shkarko përditësimin më të fundit të AI Wize nga dyqani yt i aplikacioneve.</translation>
 <translation id="7691043218961417207">Eksploro përmbajtje për t'i ndjekur</translation>
 <translation id="7697383401610880082">Doreza e zvarritjes</translation>
 <translation id="7698359219371678927">Krijo mail në <ph name="APP_NAME"/></translation>
@@ -1329,7 +1329,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7995059495660416932">Do ta shikosh përmbajtjen kur të ofrohet</translation>
 <translation id="799576009106109668">Do të shfletosh më shpejt sepse përmbajtja ngarkohet në mënyrë proaktive bazuar në vizitën aktuale në faqen e uebit</translation>
 <translation id="8004582292198964060">Shfletuesi</translation>
-<translation id="3325020657155065477">Pastro po ashtu të dhënat e tua të AI Wiz nga kjo pajisje</translation>
+<translation id="3325020657155065477">Pastro po ashtu të dhënat e tua të AI Wize nga kjo pajisje</translation>
 <translation id="8015452622527143194">Ktheje gjithçka në faqe në madhësinë e parazgjedhur</translation>
 <translation id="8026334261755873520">Pastro të dhënat e shfletimit</translation>
 <translation id="8027863900915310177">Zgjidh ku do ta shkarkosh</translation>
@@ -1353,11 +1353,11 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="808747664143081553">U lidh me pajisjen</translation>
 <translation id="8090732854597034573">Nëse ke nevojë për ndihmë, pyet prindin tënd</translation>
 <translation id="8101414242770404289">Asnjë skedë nga <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Duke vazhduar, ti pranon <ph name="BEGIN_TOS_LINK"/>Kushtet e shërbimit<ph name="END_TOS_LINK"/>.\nPër të ndihmuar në përmirësimin e aplikacionit, AI Wiz dërgon të dhëna të përdorimit dhe të ndërprerjeve aksidentale te Brave. <ph name="BEGIN_UMA_LINK"/>Menaxho<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Duke vazhduar, ti pranon <ph name="BEGIN_TOS_LINK"/>Kushtet e shërbimit<ph name="END_TOS_LINK"/>.\nPër të ndihmuar në përmirësimin e aplikacionit, AI Wize dërgon të dhëna të përdorimit dhe të ndërprerjeve aksidentale te Brave. <ph name="BEGIN_UMA_LINK"/>Menaxho<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Mbyll opsionet e renditjes</translation>
 <translation id="2919733817273403520">Ndihmo në përmirësimin e veçorive dhe të cilësisë së funksionimit të Brave</translation>
-<translation id="4565206163201411670">Dëshiron të shfaqësh aktivitetin tënd të AI Wiz te "Mirëqenia dixhitale"?</translation>
+<translation id="4565206163201411670">Dëshiron të shfaqësh aktivitetin tënd të AI Wize te "Mirëqenia dixhitale"?</translation>
 <translation id="8118117428362942925">Nëse ke nevojë për ndihmë, pyet prindin tënd (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Po renditen sipas më të rinjve</translation>
 <translation id="8127542551745560481">Modifiko faqen bazë</translation>
@@ -1373,14 +1373,14 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="8210770465353466621">Këtu do të gjesh skedat e tua</translation>
 <translation id="8215740705341534369">Fleta anësore</translation>
 <translation id="8218622182176210845">Menaxho llogarinë tënde</translation>
-<translation id="4034729701971511794">Mund t'i bllokosh sajtet që nuk i dëshiron. Gjithashtu, AI Wiz i fshin automatikisht nga lista sajtet që janë më të vjetra se 30 ditë. <ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Mund t'i bllokosh sajtet që nuk i dëshiron. Gjithashtu, AI Wize i fshin automatikisht nga lista sajtet që janë më të vjetra se 30 ditë. <ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menyja e kartave të furnizimit</translation>
 <translation id="8236097722223016103">Shto te faqeshënuesit</translation>
 <translation id="8237871086242677046">Fleta e poshtme e statistikave të faqes</translation>
 <translation id="8243077599929149377">Shto emrin tënd të përdoruesit</translation>
 <translation id="8250920743982581267">Dokumentet</translation>
 <translation id="8255617931166444521">Sajtet mund t'i përdorin kukit e tua vetëm për të parë aktivitetin tënd të shfletimit në sajtin e tyre</translation>
-<translation id="2876689296031086375">Për shkak se faqet e ngarkuara paraprakisht janë të enkriptuara, AI Wiz nuk do të mësojë asgjë rreth përmbajtjes së faqes së ngarkuar paraprakisht. Serverët e AI Wiz do të mësojnë se cilat sajte janë ngarkuar paraprakisht në mënyrë private. Ky informacion përdoret vetëm për të ngarkuar paraprakisht faqet dhe nuk lidhet me informacione të tjera nga "Llogaria jote e Brave".</translation>
+<translation id="2876689296031086375">Për shkak se faqet e ngarkuara paraprakisht janë të enkriptuara, AI Wize nuk do të mësojë asgjë rreth përmbajtjes së faqes së ngarkuar paraprakisht. Serverët e AI Wize do të mësojnë se cilat sajte janë ngarkuar paraprakisht në mënyrë private. Ky informacion përdoret vetëm për të ngarkuar paraprakisht faqet dhe nuk lidhet me informacione të tjera nga "Llogaria jote e Brave".</translation>
 <translation id="8260126382462817229">Provo të identifikohesh përsëri</translation>
 <translation id="8261506727792406068">Fshi</translation>
 <translation id="82619448491672958">Shiko skedat e tjera</translation>
@@ -1390,7 +1390,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="829672787777123339">Po lidhet me pajisjen tënde…</translation>
 <translation id="8310344678080805313">Skedat standarde</translation>
 <translation id="831192587911042850">Shton sajtin aktual të uebit në listën e sajteve të uebit që po ndjek ti.</translation>
-<translation id="5665071699503384089">Mund t'i bllokosh temat që nuk dëshiron të ndahen me sajtet. AI Wiz gjithashtu i fshin automatikisht temat më të vjetra se 4 javë. <ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Mund t'i bllokosh temat që nuk dëshiron të ndahen me sajtet. AI Wize gjithashtu i fshin automatikisht temat më të vjetra se 4 javë. <ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Mos i përkthe asnjëherë sajtet</translation>
 <translation id="8348430946834215779">Përdor HTTPS kur është e mundur dhe merr paralajmërime para ngarkimit të sajteve që nuk e mbështesin atë</translation>
 <translation id="8354977102499939946">Kërko me shpejtësi me zërin tënd. Për ta modifikuar këtë shkurtore, shko te "Cilësimet".</translation>
@@ -1401,11 +1401,11 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="7651600795135059130">Kontrollon URL-të kundrejt një liste sajtesh të pasigurta të ruajtur në Brave</translation>
 <translation id="8402673309244746971">Shko te "Po ndjek"</translation>
 <translation id="8413126021676339697">Shfaq historikun e plotë</translation>
-<translation id="5348884013239264115">Të mbron kundër sajteve, shkarkimeve dhe shtesave që njihen si të rrezikshme. Kur ti viziton një sajt, AI Wiz dërgon një pjesë të pakuptueshme të URL-së te AI Wiz nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP. Nëse një sajt bën diçka të dyshimtë, dërgohen edhe URL-të e plota dhe pjesët e përmbajtjeve të faqeve.</translation>
+<translation id="5348884013239264115">Të mbron kundër sajteve, shkarkimeve dhe shtesave që njihen si të rrezikshme. Kur ti viziton një sajt, AI Wize dërgon një pjesë të pakuptueshme të URL-së te AI Wize nëpërmjet një serveri të privatësisë që e fsheh adresën tënde IP. Nëse një sajt bën diçka të dyshimtë, dërgohen edhe URL-të e plota dhe pjesët e përmbajtjeve të faqeve.</translation>
 <translation id="8414396119627470038">Identifikohu në <ph name="SITE_ETLD_PLUS_ONE"/> me <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Përfshi</translation>
 <translation id="8422250855136581222">Asnjë skedë në këtë pajisje</translation>
-<translation id="5735840612282428689">Faqja u dërgua. Për ta parë, hap AI Wiz në <ph name="DEVICE_TYPE"/> tënde</translation>
+<translation id="5735840612282428689">Faqja u dërgua. Për ta parë, hap AI Wize në <ph name="DEVICE_TYPE"/> tënde</translation>
 <translation id="8427875596167638501">Skeda e shikimit paraprak është gjysmë e hapur</translation>
 <translation id="8428213095426709021">Cilësimet</translation>
 <translation id="8430824733382774043">Ndaj vetëm pamjen e ekranit</translation>
@@ -1452,14 +1452,14 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="860043288473659153">Emri i mbajtësit të kartës</translation>
 <translation id="1673533133011266617">"Identifikohu në Brave", i mbyllur</translation>
 <translation id="860282621117673749">Alarme sinjalizuese për rënie çmimi</translation>
-<translation id="5784514951651328424">Llogaria jote e AI Wiz mund të ketë forma të tjera të historikut të shfletimit në <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Llogaria jote e AI Wize mund të ketë forma të tjera të historikut të shfletimit në <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Të hapet URL-ja e sugjeruar në përmbajtjen e shkarkuar?</translation>
 <translation id="8621068256433641644">telefon</translation>
 <translation id="8636825310635137004">Për të marrë skedat e tua nga pajisjet e tjera, aktivizo sinkronizimin.</translation>
 <translation id="864544049772947936">Menaxho dritaret (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Parashikon dhe të paralajmëron rreth ngjarjeve të rrezikshme përpara se ato të ndodhin</translation>
 <translation id="2734140769649165081">Mund t'i pastrosh të dhënat në "Cilësimet" e Brave</translation>
-<translation id="7436978557885042606">Përdore AI Wiz sipas mënyrës sate</translation>
+<translation id="7436978557885042606">Përdore AI Wize sipas mënyrës sate</translation>
 <translation id="8664979001105139458">Emri i skedarit ekziston tashmë</translation>
 <translation id="8676276370198826499">Regjistrohu në <ph name="SITE_ETLD_PLUS_ONE"/> me <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Verifikimet e identifikimit</translation>
@@ -1475,7 +1475,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="8748850008226585750">Përmbajtjet janë të fshehura</translation>
 <translation id="8754448020583829686">Kopjo pa lidhjen</translation>
 <translation id="8756969031206844760">Të përditësohet fjalëkalimi?</translation>
-<translation id="79269250264141507">Kur shkruan në shiritin e adresës ose në kutinë e kërkimit, AI Wiz i dërgon ato që shkruan te motori i parazgjedhur i kërkimit për të marrë sugjerime më të mira. Kjo është joaktive në modalitetin "e fshehtë".</translation>
+<translation id="79269250264141507">Kur shkruan në shiritin e adresës ose në kutinë e kërkimit, AI Wize i dërgon ato që shkruan te motori i parazgjedhur i kërkimit për të marrë sugjerime më të mira. Kjo është joaktive në modalitetin "e fshehtë".</translation>
 <translation id="8766529642647037772">Të krijohet një lidhje e theksuar si kjo?</translation>
 <translation id="8773160212632396039">Po përpunon kërkesën</translation>
 <translation id="8788265440806329501">Historiku i navigimit është mbyllur</translation>
@@ -1497,15 +1497,15 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="885480114717186641">Mund të kërkosh sajtin për desktop për <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Merr përshkrimet</translation>
 <translation id="8856931513242997049">Rrjedha e lejeve për njoftimet u mbyll</translation>
-<translation id="1984646864943401749">Dërgon te AI Wiz URL-të e disa faqeve që viziton, informacione të kufizuara të sistemit, si dhe disa përmbajtje faqeje për të ndihmuar në zbulimin e kërcënimeve të reja dhe për t'i mbrojtur të gjithë në ueb.</translation>
+<translation id="1984646864943401749">Dërgon te AI Wize URL-të e disa faqeve që viziton, informacione të kufizuara të sistemit, si dhe disa përmbajtje faqeje për të ndihmuar në zbulimin e kërcënimeve të reja dhe për t'i mbrojtur të gjithë në ueb.</translation>
 <translation id="8909135823018751308">Ndaj…</translation>
 <translation id="2684652081942622950">Llogaria e Brave</translation>
 <translation id="8921980840204105660">Sinkronizoje për të marrë faqeshënuesit nga pajisjet e tua të tjera</translation>
 <translation id="8922289737868596582">Shkarko faqet nga butoni "Më shumë opsione" për t'i përdorur ato offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Mëso më shumë<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> është gati</translation>
-<translation id="1174893863889683998">Dëshiron të heqësh aktivitetin tënd të AI Wiz nga "Mirëqenia dixhitale"?</translation>
-<translation id="179413535815682755">Në varësi të cilësimeve të tua, AI Wiz mund të dërgojë po ashtu kukit, URL-në aktuale dhe vendndodhjen tënde.</translation>
+<translation id="1174893863889683998">Dëshiron të heqësh aktivitetin tënd të AI Wize nga "Mirëqenia dixhitale"?</translation>
+<translation id="179413535815682755">Në varësi të cilësimeve të tua, AI Wize mund të dërgojë po ashtu kukit, URL-në aktuale dhe vendndodhjen tënde.</translation>
 <translation id="8942627711005830162">Hap në një dritare tjetër</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Kjo gjuhë nuk mund të shkarkohet. Provo përsëri më vonë.</translation>
 <translation id="8955719471735800169">Kthehu në krye</translation>
@@ -1515,7 +1515,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="8987736167266086032">Vazhdo ku e ke lënë</translation>
 <translation id="8996847606757455498">Zgjidh një ofrues tjetër</translation>
 <translation id="8998289560386111590">Nuk ofrohet në pajisjen tënde</translation>
-<translation id="3275122921244685452">Po identifikohesh me një llogari të menaxhuar nga <ph name="MANAGED_DOMAIN"/> dhe po i jep administratorit të saj kontroll mbi të dhënat e tua të Brave. Duke dalë nga AI Wiz do të fshihen të dhënat e tua nga kjo pajisje, por do të mbeten të ruajtura në llogarinë tënde të Brave.</translation>
+<translation id="3275122921244685452">Po identifikohesh me një llogari të menaxhuar nga <ph name="MANAGED_DOMAIN"/> dhe po i jep administratorit të saj kontroll mbi të dhënat e tua të Brave. Duke dalë nga AI Wize do të fshihen të dhënat e tua nga kjo pajisje, por do të mbeten të ruajtura në llogarinë tënde të Brave.</translation>
 <translation id="9012585441087414258">Të mbron kundër sajteve, shkarkimeve dhe shtesave që njihen si të rrezikshme. Nëse një faqe bën diçka të dyshimtë, URL-të dhe pjesët e përmbajtjes së faqes dërgohen te "Shfletimi i sigurt i Brave".</translation>
 <translation id="9019199799064251516">Të vazhdohet pa një kyçje të profilit të makinës?</translation>
 <translation id="9022774213089566801">Të vizituara shpesh</translation>
@@ -1526,7 +1526,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="9055497320631373736">Sajti u shtua përsëri te sajtet e mundshme</translation>
 <translation id="9063523880881406963">Çaktivizo "Kërko faqen për desktop"</translation>
 <translation id="9065203028668620118">Redakto</translation>
-<translation id="5496925146144075335">Të dhënat e ruajtura që AI Wiz nuk i konsideron të rëndësishme (p.sh. sajtet pa cilësime të ruajtura ose që ti nuk i viziton shpesh)</translation>
+<translation id="5496925146144075335">Të dhënat e ruajtura që AI Wize nuk i konsideron të rëndësishme (p.sh. sajtet pa cilësime të ruajtura ose që ti nuk i viziton shpesh)</translation>
 <translation id="9067341854474068781">Asnjë fletë e çelësave të kalimit nuk është hapur në lartësi të plotë</translation>
 <translation id="906781307897697745">në <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Nuk ka faqe të palexuara</translation>
@@ -1560,8 +1560,8 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="9209888181064652401">Telefonatat nuk mund të kryhen</translation>
 <translation id="9212845824145208577">Nuk mund të shkosh më poshtë. Provo të fillosh më poshtë në faqe.</translation>
 <translation id="9219103736887031265">Imazhet</translation>
-<translation id="6946179564366058239">Kur një sajt kërkon të ngarkojë paraprakisht lidhje në mënyrë private në faqen e tij, AI Wiz i enkripton dhe i ngarkon paraprakisht faqet nëpërmjet serverëve të AI Wiz pa kuki. Kjo e fsheh identitetin tënd nga sajti i ngarkuar paraprakisht.</translation>
-<translation id="4596514158372210596">Hiq aktivitetin tënd të AI Wiz nga "Mirëqenia dixhitale"</translation>
+<translation id="6946179564366058239">Kur një sajt kërkon të ngarkojë paraprakisht lidhje në mënyrë private në faqen e tij, AI Wize i enkripton dhe i ngarkon paraprakisht faqet nëpërmjet serverëve të AI Wize pa kuki. Kjo e fsheh identitetin tënd nga sajti i ngarkuar paraprakisht.</translation>
+<translation id="4596514158372210596">Hiq aktivitetin tënd të AI Wize nga "Mirëqenia dixhitale"</translation>
 <translation id="2830145431802238213">Përdor "Modalitetin e lehtë" në Brave</translation>
 <translation id="928550791203542716">Po ndjek <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Të gjitha fjalëkalimet do të shkarkohen në pajisjen tënde dhe do të hiqen nga <ph name="CHROME_CHANNEL"/></translation>
@@ -1591,7 +1591,7 @@ Për shembull, disa uebsajte mund t'i përgjigjen kësaj kërkese duke të tregu
 <translation id="4526803704855831732">Skedat "e fshehura"</translation>
 <translation id="5248610748197335423">Mbylli të gjitha skedat "e fshehta"</translation>
 <translation id="4660964651149493586">Shkyç modalitetin "I fshehtë"</translation>
-<translation id="3763131702135887799">Ndihmo në përmirësimin e AI Wiz për njerëzit që e përdorin si ti</translation>
+<translation id="3763131702135887799">Ndihmo në përmirësimin e AI Wize për njerëzit që e përdorin si ti</translation>
 <translation id="4167670741834902166">Skedë e re "e fshehtë"</translation>
 <translation id="9148151251783962691">Provo modalitetin "E fshehtë" për të shfletuar në mënyrë private në këtë pajisje</translation>
 <translation id="8355284051444779553">Për të hapur një skedë të re "të fshehtë", hap menynë</translation>

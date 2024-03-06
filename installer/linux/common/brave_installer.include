@@ -8,7 +8,7 @@ brave_stage_install_common() {
   install -m 644 "${OUTPUTDIR}/brave_100_percent.pak" "${STAGEDIR}/${INSTALLDIR}/"
   install -m 644 "${OUTPUTDIR}/brave_200_percent.pak" "${STAGEDIR}/${INSTALLDIR}/"
 
-  # localization files for AI Wiz extension
+  # localization files for AI Wize extension
   install -d -m 755 "${STAGEDIR}/${INSTALLDIR}/resources/brave_extension/_locales"
   cp -a "${OUTPUTDIR}/resources/brave_extension/_locales" "${STAGEDIR}/${INSTALLDIR}/resources/brave_extension"
   find "${STAGEDIR}/${INSTALLDIR}/resources/brave_extension/_locales" -type f -exec chmod 644 '{}' \;

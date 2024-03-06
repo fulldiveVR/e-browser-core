@@ -32,7 +32,7 @@ std::optional<Publishers> ParseCombinedPublisherList(const base::Value& value) {
   for (const base::Value& publisher_value : value.GetList()) {
     auto parsed_publisher = api::feed::Publisher::FromValue(publisher_value);
     if (!parsed_publisher.has_value()) {
-      LOG(ERROR) << "Invalid AI Wiz Publisher data. error="
+      LOG(ERROR) << "Invalid AI Wize Publisher data. error="
                  << parsed_publisher.error();
       return std::nullopt;
     }
@@ -47,7 +47,7 @@ std::optional<Publishers> ParseCombinedPublisherList(const base::Value& value) {
     }();
 
     if (!site_url.is_valid()) {
-      LOG(ERROR) << "Found invalid site url for AI Wiz News publisher "
+      LOG(ERROR) << "Found invalid site url for AI Wize News publisher "
                  << entry.publisher_name << "(was " << entry.site_url << ")";
       continue;
     }
@@ -128,7 +128,7 @@ void ParseDirectPublisherList(const base::Value::Dict& direct_feeds_pref_dict,
       // This is worth error logging because we shouldn't
       // get in to this state due to validation at the
       // point of adding the item to prefs.
-      LOG(ERROR) << "Found invalid feed url for AI Wiz News "
+      LOG(ERROR) << "Found invalid feed url for AI Wize News "
                     "direct feeds pref at the path "
                  << prefs::kBraveNewsDirectFeeds << " > "
                  << prefs::kBraveNewsDirectFeedsKeySource;

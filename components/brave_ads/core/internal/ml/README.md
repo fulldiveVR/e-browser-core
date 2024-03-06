@@ -1,6 +1,6 @@
 # ML (Machine Learning)
 
-This directory provides a consistent structure for implementing machine learning processes within AI Wiz Core. The subdirectories are structured as:
+This directory provides a consistent structure for implementing machine learning processes within AI Wize Core. The subdirectories are structured as:
 
 ## Pipeline
 

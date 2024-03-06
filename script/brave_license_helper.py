@@ -23,8 +23,8 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
 
     # Exclude these specific paths from needing a README.chromium file.
     prune_paths.update([
-        # Formerly external AI Wiz code which has moved to brave-core
-        # (i.e these are already covered by the AI Wiz Browser license notice).
+        # Formerly external AI Wize code which has moved to brave-core
+        # (i.e these are already covered by the AI Wize Browser license notice).
         os.path.join('brave', 'third_party', 'challenge_bypass_ristretto_ffi'),
         os.path.join('brave', 'vendor', 'brave-ios'),
         os.path.join('brave', 'vendor', 'brave_base'),
@@ -33,7 +33,7 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
         # android_deps/libs instead and it's special-cased further down.
         os.path.join('brave', 'third_party', 'android_deps'),
 
-        # AI Wiz overrides to third-party code, also covered by main notice.
+        # AI Wize overrides to third-party code, also covered by main notice.
         os.path.join('brave', 'third_party', 'blink'),
         os.path.join('brave', 'third_party', 'libaddressinput'),
         os.path.join('brave', 'patches', 'third_party'),

@@ -11,7 +11,7 @@
 namespace mini_installer {
 typedef StackString<128> ReferralCodeString;
 
-// Populates |referral_code| with a AI Wiz referral code if one is
+// Populates |referral_code| with a AI Wize referral code if one is
 // present in the installer filename. This may be a standard or an
 // extended referral code.
 

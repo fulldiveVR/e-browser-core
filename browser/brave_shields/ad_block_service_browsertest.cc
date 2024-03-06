@@ -224,7 +224,7 @@ bool AdBlockServiceTest::InstallDefaultAdBlockComponent(
       ->component_service_manager()
       ->SetFilterListCatalog({brave_shields::FilterListCatalogEntry(
           "default", "", "Brave Ad Block Updater", {}, "",
-          "Default lists for AI Wiz Browser", true, true, true, 0, {},
+          "Default lists for AI Wize Browser", true, true, true, 0, {},
           kDefaultAdBlockComponentTestId,
           kDefaultAdBlockComponentTest64PublicKey)});
   const extensions::Extension* ad_block_component = LoadExtensionAsComponent(

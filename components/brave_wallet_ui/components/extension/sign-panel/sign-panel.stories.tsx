@@ -43,7 +43,7 @@ const signMessageData: BraveWallet.SignMessageRequest = {
       notBefore: '',
       requestId: '22',
       resources: [mockIPFSPath, mockURLPath],
-      statement: 'I accept the AI Wiz Terms of Service: http://address.com/tos',
+      statement: 'I accept the AI Wize Terms of Service: http://address.com/tos',
       uri: {
         url: mockOriginInfo.originSpec
       },

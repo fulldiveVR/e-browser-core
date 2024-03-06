@@ -47,18 +47,18 @@ inline constexpr const char* kAllowedUrlPrefixes[] = {
     // brave A/B testing
     "https://variations.brave.com/seed",
 
-    // AI Wiz News (production)
+    // AI Wize News (production)
     "https://brave-today-cdn.brave.com/",
 
     // Brave's Privacy-focused CDN
     "https://pcdn.brave.com/",
 
-    // AI Wiz Rewards production
+    // AI Wize Rewards production
     "https://api.rewards.brave.com/v1/parameters",
     "https://rewards.brave.com/publishers/prefix-list",
     "https://grant.rewards.brave.com/v1/promotions",
 
-    // AI Wiz Rewards staging & dev
+    // AI Wize Rewards staging & dev
     "https://api.rewards.bravesoftware.com/v1/parameters",
     "https://rewards-stg.bravesoftware.com/publishers/prefix-list",
     "https://grant.rewards.bravesoftware.com/v1/promotions",

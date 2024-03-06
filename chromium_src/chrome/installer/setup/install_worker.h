@@ -12,7 +12,7 @@ namespace installer {
 
 // Method specifically used to do a one-time removal of VPN services from
 // a person's machine. The service will then only be installed if they have
-// purchased the AI Wiz VPN product.
+// purchased the AI Wize VPN product.
 bool OneTimeVpnServiceCleanup(const base::FilePath& target_path,
                               const base::Version& new_version,
                               WorkItemList* install_list,

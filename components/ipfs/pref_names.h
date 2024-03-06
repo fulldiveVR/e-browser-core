@@ -23,7 +23,7 @@ inline constexpr char kIPFSAutoFallbackToGateway[] =
 
 // Deprecated, use kIPFSAutoRedirectToConfiguredGateway instead
 // Used to automatically redirect Gateway resources with x-ipfs-path
-// header to the configured AI Wiz IPFS gateway.
+// header to the configured AI Wize IPFS gateway.
 inline constexpr char kIPFSAutoRedirectGateway[] =
     "brave.ipfs.auto_redirect_gateway";
 
@@ -65,7 +65,7 @@ inline constexpr char kIPFSAutoRedirectToConfiguredGateway[] =
     "brave.ipfs.auto_redirect_to_configured_gateway";
 
 // Used to determine whether to start IPFS daemon
-// at the same moment when AI Wiz starts.
+// at the same moment when AI Wize starts.
 inline constexpr char kIPFSAlwaysStartMode[] = "brave.ipfs.always_start_mode";
 
 // Used to determine if  IPFS always start infobar was ever shown

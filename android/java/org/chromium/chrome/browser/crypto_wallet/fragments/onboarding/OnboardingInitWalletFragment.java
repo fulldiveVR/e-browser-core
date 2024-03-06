@@ -28,7 +28,7 @@ import org.chromium.chrome.browser.app.helpers.Api33AndPlusBackPressHelper;
 import org.chromium.chrome.browser.crypto_wallet.util.Utils;
 
 /**
- * Initial onboarding fragment to setup AI Wiz Wallet.
+ * Initial onboarding fragment to setup AI Wize Wallet.
  */
 public class OnboardingInitWalletFragment extends BaseOnboardingWalletFragment {
     private static final String TAG = "SetupWalletFragment";

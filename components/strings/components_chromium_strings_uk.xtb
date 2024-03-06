@@ -10,7 +10,7 @@
 <translation id="336808635693308470">Brave намагається змінити способи оплати.</translation>
 <translation id="7932149101545999102">Brave став можливим завдяки проекту з відкритим кодом <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> та іншому <ph name="BEGIN_LINK_OSS"/>програмному забезпеченню з відкритим кодом<ph name="END_LINK_OSS"/>.</translation>
 <translation id="8746410156982274638">Перейдіть у
-          меню AI Wiz &gt;
+          меню AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -19,11 +19,11 @@
           &gt;
           Налаштування LAN
           і зніміть прапорець біля опції "Використовувати проксі-сервер для вашої локальної мережі".</translation>
-<translation id="303960458633076466">Веб-переглядач AI Wiz заблокував цю сторінку</translation>
-<translation id="2017237562285586622">Надайте AI Wiz доступ до мережі в налаштуваннях брандмауера чи
+<translation id="303960458633076466">Веб-переглядач AI Wize заблокував цю сторінку</translation>
+<translation id="2017237562285586622">Надайте AI Wize доступ до мережі в налаштуваннях брандмауера чи
         антивірусної програми.</translation>
 <translation id="8619622797841001082">Перейдіть у
-          меню AI Wiz &gt;
+          меню AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -35,7 +35,7 @@
 <translation id="9156965752763025780">Ваші зміни почнуть діяти після наступного перезапуску Brave.</translation>
 <translation id="6477625882876869143">Brave було створено на основі проекту програмного забезпечення з відкритим кодом <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/>.</translation>
 <translation id="4068928808254189629">Перейдіть у
-          меню AI Wiz &gt;
+          меню AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -45,6 +45,6 @@
 <translation id="8187289872471304532">Перейдіть у меню
           Applications &gt; System Preferences &gt; Network &gt; Advanced &gt; Proxies (Програми &gt; Системні налаштування &gt; Мережа &gt; Розширені &gt; Проксі-сервери)
           і зніміть прапорці біля всіх вибраних проксі-серверів.</translation>
-<translation id="4159376633403260073">Ви переглядаєте безпечну сторінку AI Wiz for Testing</translation>
+<translation id="4159376633403260073">Ви переглядаєте безпечну сторінку AI Wize for Testing</translation>
 <translation id="88187049159266777">Brave було неправильно закрито.</translation>
 </translationbundle>

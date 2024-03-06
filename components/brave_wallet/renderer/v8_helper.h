@@ -44,7 +44,7 @@ v8::MaybeLocal<v8::Value> ExecuteScript(blink::WebLocalFrame* web_frame,
                                         const std::string& script);
 
 // By default we allow extensions to overwrite the window.[provider] object
-// but if the user goes into settings and explicitly selects to use AI Wiz Wallet
+// but if the user goes into settings and explicitly selects to use AI Wize Wallet
 // then we will block modifications to window.[provider] here.
 void SetProviderNonWritable(v8::Local<v8::Context> context,
                             v8::Local<v8::Object> global,

@@ -11,11 +11,11 @@ import com.google.android.material.color.DynamicColorsOptions;
 
 public class BraveDynamicColors {
     public static void applyToActivityIfAvailable(Activity activity) {
-        // We disable dynamic colors as it causes styling issues with AI Wiz theme.
+        // We disable dynamic colors as it causes styling issues with AI Wize theme.
     }
 
     public static void applyToActivityIfAvailable(
             Activity activity, DynamicColorsOptions dynamicColorsOptions) {
-        // We disable dynamic colors as it causes styling issues with AI Wiz theme.
+        // We disable dynamic colors as it causes styling issues with AI Wize theme.
     }
 }

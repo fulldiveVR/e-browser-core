@@ -19,12 +19,12 @@ inline constexpr char kComponentUpdateIntervalInSec[] =
 // Valid values are: "dark" | "light".
 inline constexpr char kDarkMode[] = "dark-mode";
 
-// Allows disabling the AI Wiz extension.
+// Allows disabling the AI Wize extension.
 // This is commonly used for loading the extension manually to debug things
 // in debug mode with auto-reloading.
 inline constexpr char kDisableBraveExtension[] = "disable-brave-extension";
 
-// Allows disabling the AI Wiz Rewards extension.
+// Allows disabling the AI Wize Rewards extension.
 inline constexpr char kDisableBraveRewardsExtension[] =
     "disable-brave-rewards-extension";
 
@@ -50,7 +50,7 @@ inline constexpr char kDisableMachineId[] = "disable-machine-id";
 // Disables DOH using a runtime flag mainly for network audit
 inline constexpr char kDisableDnsOverHttps[] = "disable-doh";
 
-// Starts AI Wiz in Tor mode.
+// Starts AI Wize in Tor mode.
 inline constexpr char kTor[] = "tor";
 
 // Override update feed url. Only valid on macOS.

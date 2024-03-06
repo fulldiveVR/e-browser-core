@@ -6,7 +6,7 @@
 
   This is a copy of upstream's tools/android/checkstyle/chromium-style-5.0.xml with
   difference in severity for all checks except RedundantImport/UnusedImports.
-  This file will be removed when all style checks at AI Wiz java files will be fixed.
+  This file will be removed when all style checks at AI Wize java files will be fixed.
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>

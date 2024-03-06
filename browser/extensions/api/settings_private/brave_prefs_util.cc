@@ -98,13 +98,13 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   // Start with parent class allowlist
   const auto chromium_prefs = PrefsUtil::GetAllowlistedKeys();
   s_brave_allowlist->insert(chromium_prefs.begin(), chromium_prefs.end());
-  // Add AI Wiz values to the allowlist
+  // Add AI Wize values to the allowlist
   // import data
   (*s_brave_allowlist)[kImportDialogExtensions] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kImportDialogPayments] =
       settings_api::PrefType::kBoolean;
-  // Default AI Wiz shields
+  // Default AI Wize shields
   (*s_brave_allowlist)[kShieldsAdvancedViewEnabled] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kShieldsStatsBadgeVisible] =
@@ -243,7 +243,7 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[kIPFSCompanionEnabled] =
       settings_api::PrefType::kBoolean;
 
-  // AI Wiz Wallet pref
+  // AI Wize Wallet pref
   (*s_brave_allowlist)[kBraveWalletSelectedNetworks] =
       settings_api::PrefType::kDictionary;
   (*s_brave_allowlist)[kDefaultEthereumWallet] =

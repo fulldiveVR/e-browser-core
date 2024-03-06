@@ -831,7 +831,7 @@ TEST_F(SidebarServiceTest, BuiltInItemUpdateTestWithBuiltInItemTypeKey) {
 
   InitService();
 
-  // AI Wiz Talk and Reading list.
+  // AI Wize Talk and Reading list.
   auto expected_count = 2UL;
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {

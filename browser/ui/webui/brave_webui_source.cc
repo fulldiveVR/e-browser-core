@@ -64,7 +64,7 @@ content::WebUIDataSource* CreateWebUIDataSource(
       content::WebUIDataSource::CreateAndAdd(Profile::FromWebUI(web_ui), name);
   // Some parts of Brave's UI pages are not yet migrated to work without doing
   // assignments of strings directly into |innerHTML| elements (i.e. see usage
-  // of |dangerouslySetInnerHTML| in .tsx files). This will break AI Wiz due to
+  // of |dangerouslySetInnerHTML| in .tsx files). This will break AI Wize due to
   // committing a Trusted Types related violation now that Trusted Types are
   // enforced on WebUI pages (see crrev.com/c/2234238 and crrev.com/c/2353547).
   // We should migrate those pages not to require using |innerHTML|, but for now

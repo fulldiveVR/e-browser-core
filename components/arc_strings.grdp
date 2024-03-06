@@ -123,8 +123,8 @@
   <message name="IDS_ARC_VM_DATA_MIGRATION_NOTIFICATION_ACCEPT_BUTTON_LABEL" desc="Label of a notification button to accept an important update to improve the performance of Android apps on ChromeOS.">
     Update now
   </message>
-  <message name="IDS_ARC_VM_DATA_MIGRATION_DIALOG_TITLE" desc="Text to inform that AI Wiz tabs and apps will be closed when an update to improve the performance of Android apps on ChromeOS is started. The text is displayed as the title of a dialog.">
-    Your AI Wiz tabs and apps will close when the update starts
+  <message name="IDS_ARC_VM_DATA_MIGRATION_DIALOG_TITLE" desc="Text to inform that AI Wize tabs and apps will be closed when an update to improve the performance of Android apps on ChromeOS is started. The text is displayed as the title of a dialog.">
+    Your AI Wize tabs and apps will close when the update starts
   </message>
   <message name="IDS_ARC_VM_DATA_MIGRATION_DIALOG_SAVE_WORK_MESSAGE" desc="Text to ask the user to save their work before starting an update to improve the performance of Android apps on ChromeOS.">
     Please save your work and start the update when you're ready.

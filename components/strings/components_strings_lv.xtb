@@ -51,11 +51,11 @@
 <translation id="1094777233105318927">Informācija par jūsu pārlūku, OS, ierīci, instalēto programmatūru un failiem</translation>
 <translation id="1096545575934602868">Šajā laukā drīkst būt ne vairāk kā <ph name="MAX_ITEMS_LIMIT"/> ierakstu. Visi turpmākie ieraksti tiks atmesti.</translation>
 <translation id="1099928364755383720">režīma “Attēls attēlā” automātiska aktivizēšana</translation>
-<translation id="7584468665743195331">Poga Atsākt meklēšanas ceļu. Lai atsāktu meklēšanas ceļu un skatītu atbilstošās darbības savā AI Wiz vēsturē, nospiediet taustiņu Enter.</translation>
+<translation id="7584468665743195331">Poga Atsākt meklēšanas ceļu. Lai atsāktu meklēšanas ceļu un skatītu atbilstošās darbības savā AI Wize vēsturē, nospiediet taustiņu Enter.</translation>
 <translation id="1101672080107056897">Darbība pēc kļūdas konstatēšanas</translation>
 <translation id="1103523840287552314">Vienmēr tulkot <ph name="LANGUAGE"/> valodas saturu</translation>
 <translation id="1104409666019087579">Daži obligātie lauki ir tukši. Pirms saglabāšanas aizpildiet tos.</translation>
-<translation id="8424280348953443220">Poga “Pārvaldīt paroles”. Aktivizējiet, lai AI Wiz iestatījumos skatītu un pārvaldītu paroles.</translation>
+<translation id="8424280348953443220">Poga “Pārvaldīt paroles”. Aktivizējiet, lai AI Wize iestatījumos skatītu un pārvaldītu paroles.</translation>
 <translation id="1108464073729874771">A3x4</translation>
 <translation id="1110994991967754504">Atlasiet atļauju: <ph name="PERMISSION_NAME"/></translation>
 <translation id="1112828774174131240">Senlietas un kolekcionējami priekšmeti</translation>
@@ -76,10 +76,10 @@
 <translation id="1158211211994409885"><ph name="HOST_NAME"/> negaidīti pārtrauca savienojumu.</translation>
 <translation id="115926840831309955">Pārbaudiet CVC un mēģiniet vēlreiz vai atjauniniet derīguma termiņu.</translation>
 <translation id="1161325031994447685">Atkārtoti izveidojiet savienojumu ar Wi-Fi tīklu.</translation>
-<translation id="6628439996552631516">Poga “Pārvaldīt adreses”. Aktivizējiet, lai pievienotu un pārvaldītu adreses AI Wiz iestatījumos.</translation>
+<translation id="6628439996552631516">Poga “Pārvaldīt adreses”. Aktivizējiet, lai pievienotu un pārvaldītu adreses AI Wize iestatījumos.</translation>
 <translation id="1165039591588034296">Kļūda</translation>
 <translation id="1165174597379888365">Apmeklēta lapa</translation>
-<translation id="7108524493226474140">{COUNT,plural, =0{Nav}=1{No vienas vietnes (joprojām būsiet pierakstījies AI Wiz kontā)}zero{No # vietnēm (joprojām būsiet pierakstījies AI Wiz kontā)}one{No # vietnes (joprojām būsiet pierakstījies AI Wiz kontā)}other{No # vietnēm (joprojām būsiet pierakstījies AI Wiz kontā)}}</translation>
+<translation id="7108524493226474140">{COUNT,plural, =0{Nav}=1{No vienas vietnes (joprojām būsiet pierakstījies AI Wize kontā)}zero{No # vietnēm (joprojām būsiet pierakstījies AI Wize kontā)}one{No # vietnes (joprojām būsiet pierakstījies AI Wize kontā)}other{No # vietnēm (joprojām būsiet pierakstījies AI Wize kontā)}}</translation>
 <translation id="1165852471352757509">Dokumentālas TV pārraides</translation>
 <translation id="1174644974616730562">Ķīniešu aploksne 1</translation>
 <translation id="1174723505405632867">Vai vēlaties atļaut vietnei <ph name="EMBEDDED_URL"/> izmantot sīkfailus un vietnes datus šeit: <ph name="TOP_LEVEL_URL"/>?
@@ -94,7 +94,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1178581264944972037">Pauzēt</translation>
 <translation id="1178821169867863726">12 x 16 collas</translation>
 <translation id="1181037720776840403">Noņemt</translation>
-<translation id="3248691252569103537">Pārlūkā AI Wiz vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
+<translation id="3248691252569103537">Pārlūkā AI Wize vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
 <translation id="1186201132766001848">Pārbaudīt paroles</translation>
 <translation id="1190491977647722791">Papīrs (augsta gramāža)</translation>
 <translation id="1195073053842921378">Šī adrese tiks dzēsta no šīs ierīces.</translation>
@@ -138,13 +138,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
     &lt;/ol&gt;</translation>
 <translation id="1257286744552378071">Jūs ievadījāt paroli vietnē, kuru nepārvalda jūsu organizācija. Lai aizsargātu savu kontu, neizmantojiet šo paroli citās lietotnēs un vietnēs.</translation>
 <translation id="1257553931232494454">tālummaiņas līmeņi</translation>
-<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai pārvaldītu AI Wiz iestatījumus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter</translation>
+<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai pārvaldītu AI Wize iestatījumus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter</translation>
 <translation id="1264309058268477500">Alternatīva</translation>
 <translation id="1264974993859112054">Sports</translation>
 <translation id="1266469291454105242">Ierīces atbloķēšana</translation>
 <translation id="126728463333482584">Jūs esat viens no pirmajiem lietotājiem, kas izmanto izsekošanas aizsardzību. Šī funkcija ierobežo vietņu iespējas izmantot trešo pušu sīkfailus, lai jūs izsekotu pārlūkošanas laikā.</translation>
 <translation id="1268480293435976622">Ķīniešu aploksne 7</translation>
-<translation id="53564677632020212">Ātri izveidot jaunu vietni pakalpojumā AI Wiz vietnes</translation>
+<translation id="53564677632020212">Ātri izveidot jaunu vietni pakalpojumā AI Wize vietnes</translation>
 <translation id="1270328905573953738">Pārvākšanās un pārvietošana</translation>
 <translation id="1270502636509132238">Saņemšanas veids</translation>
 <translation id="1273592791152866347">Cenas izsekošana ir izslēgta</translation>
@@ -155,7 +155,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1285320974508926690">Nekad netulkot šo vietni</translation>
 <translation id="1288548991597756084">Droši saglabājiet karti</translation>
 <translation id="1292571435393770077">16. paplāte</translation>
-<translation id="1209478311331937175">“Programmatūra jūsu datorā, kuras dēļ pārlūkā AI Wiz nevar izveidot drošu tīmekļa savienojumu” (tikai Windows datoros)</translation>
+<translation id="1209478311331937175">“Programmatūra jūsu datorā, kuras dēļ pārlūkā AI Wize nevar izveidot drošu tīmekļa savienojumu” (tikai Windows datoros)</translation>
 <translation id="1293797321964802402">Aploksne (9 x 11 collas)</translation>
 <translation id="1294154142200295408">Komandrindu varianti</translation>
 <translation id="129553762522093515">Nesen aizvērtas</translation>
@@ -176,7 +176,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="132390688737681464">Saglabāt un aizpildīt adreses</translation>
 <translation id="1329916999021038454">Nosūtīt atsauksmes</translation>
 <translation id="1330449323196174374">Abpusējs locījums pa kreisi</translation>
-<translation id="4274264486214599895">Spēlēt AI Wiz dinozaura spēli</translation>
+<translation id="4274264486214599895">Spēlēt AI Wize dinozaura spēli</translation>
 <translation id="1333989956347591814">Iespējams, jūsu darbības <ph name="BEGIN_EMPHASIS"/>joprojām būs redzamas<ph name="END_EMPHASIS"/>:
         <ph name="BEGIN_LIST"/>
           <ph name="LIST_ITEM"/>jūsu apmeklētajām vietnēm;
@@ -190,7 +190,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1346748346194534595">Pa labi</translation>
 <translation id="1348198688976932919">Vietnē, kas tiks atvērta, ir bīstamas lietotnes</translation>
 <translation id="1348779747280417563">Apstipriniet vārdu</translation>
-<translation id="8447194907998385478">Pārlūkā AI Wiz vairākumam vietņu tiek ierobežotas iespējas pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
+<translation id="8447194907998385478">Pārlūkā AI Wize vairākumam vietņu tiek ierobežotas iespējas pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
 <translation id="1354976809542763843">Finansējums mājokļa iegādei</translation>
 <translation id="1355158069018170842">Rādīt cenu kritumu cilnēs</translation>
 <translation id="1355301061807280185">Vakances</translation>
@@ -225,8 +225,8 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1413809658975081374">Konfidencialitātes kļūda</translation>
 <translation id="1414134146594747368">Pirmsskola</translation>
 <translation id="141826476809826269">Iegūtā teksta beigas</translation>
-<translation id="3181333394175596679">Kamēr pārlūkā AI Wiz tiek atjaunināta šī funkcija, vietnes var īslaicīgi izmantot trešo pušu sīkfailus, ja vien iestatījumos neesat tos bloķējis.</translation>
-<translation id="5305237486453576422">Pārlūka AI Wiz poga “Pārvaldīt lejupielādes”. Aktivizējiet, lai pārvaldītu pārlūkā AI Wiz lejupielādētos failus.</translation>
+<translation id="3181333394175596679">Kamēr pārlūkā AI Wize tiek atjaunināta šī funkcija, vietnes var īslaicīgi izmantot trešo pušu sīkfailus, ja vien iestatījumos neesat tos bloķējis.</translation>
+<translation id="5305237486453576422">Pārlūka AI Wize poga “Pārvaldīt lejupielādes”. Aktivizējiet, lai pārvaldītu pārlūkā AI Wize lejupielādētos failus.</translation>
 <translation id="1422930527989633628">Var pieprasīt atļauju noteikt tuvumā esošas Bluetooth ierīces</translation>
 <translation id="1426410128494586442">Jā</translation>
 <translation id="1427192966110103169">Mājas peldbaseini, saunas un SPA</translation>
@@ -238,7 +238,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1432187715652018471">lapa vēlas instalēt pakalpojumu apdarinātāju.</translation>
 <translation id="1432581352905426595">Pārvaldīt meklējumprogrammas</translation>
 <translation id="1433225466058025572">Mēģiniet vēlreiz pārvietot savus failus.</translation>
-<translation id="783200745622992168">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, piemēram, AI Wiz droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana <ph name="BEGIN_LINK"/>nesen konstatēja ļaunprātīgu programmatūru vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.</translation>
+<translation id="783200745622992168">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, piemēram, AI Wize droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana <ph name="BEGIN_LINK"/>nesen konstatēja ļaunprātīgu programmatūru vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.</translation>
 <translation id="1435940442311036198">Izmantot piekļuves atslēgu citā ierīcē</translation>
 <translation id="1436185428532214179">Var pieprasīt atļauju rediģēt failus un mapes jūsu ierīcē</translation>
 <translation id="1442386063175183758">Abpusējs locījums pa labi</translation>
@@ -346,13 +346,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1640244768702815859"><ph name="BEGIN_LINK"/>Apmeklējiet vietnes sākumlapu<ph name="END_LINK"/>.</translation>
 <translation id="1641976391427233992">Aizkavēt izvadi līdz šādam laika periodam:</translation>
 <translation id="164212631332220697">Maksājiet ar karti <ph name="CARD_DETAIL"/>.</translation>
-<translation id="8088023492467080559">Poga “Pāriet uz AI Wiz drošības pārbaudi”, ko varat aktivizēt, lai iestatījumos apmeklētu AI Wiz drošības pārbaudes lapu</translation>
+<translation id="8088023492467080559">Poga “Pāriet uz AI Wize drošības pārbaudi”, ko varat aktivizēt, lai iestatījumos apmeklētu AI Wize drošības pārbaudes lapu</translation>
 <translation id="1644574205037202324">Vēsture</translation>
 <translation id="1645368109819982629">Neatbalstīts protokols</translation>
-<translation id="1995056549836388472">Pārvaldīt AI Wiz iestatījumus</translation>
+<translation id="1995056549836388472">Pārvaldīt AI Wize iestatījumus</translation>
 <translation id="1652415888492971589">JIS B8</translation>
-<translation id="3549478477646243075">Lai izmantotu paroļu pārvaldnieku ar macOS sistēmu Keychain, atkārtoti palaidiet pārlūku AI Wiz un atļaujiet piekļuvi sistēmai Keychain. Jūsu cilnes tiks atkal atvērtas pēc atkārtotas palaišanas.</translation>
-<translation id="3848846802033604519">Brave vienkāršoja šo lapu, lai atvieglotu lasīšanu. AI Wiz izguva sākotnējo lapu, izmantojot drošu savienojumu.</translation>
+<translation id="3549478477646243075">Lai izmantotu paroļu pārvaldnieku ar macOS sistēmu Keychain, atkārtoti palaidiet pārlūku AI Wize un atļaujiet piekļuvi sistēmai Keychain. Jūsu cilnes tiks atkal atvērtas pēc atkārtotas palaišanas.</translation>
+<translation id="3848846802033604519">Brave vienkāršoja šo lapu, lai atvieglotu lasīšanu. AI Wize izguva sākotnējo lapu, izmantojot drošu savienojumu.</translation>
 <translation id="1656489000284462475">Informācija par saņemšanu</translation>
 <translation id="1658111267661135323">TV un video</translation>
 <translation id="1658918301167915956">Bluetooth ierīces</translation>
@@ -367,9 +367,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="168693727862418163">Šo politikas vērtību neizdevās apstiprināt, izmantojot tās shēmu, un tā tiks ignorēta.</translation>
 <translation id="168841957122794586">Servera sertifikāts ietver vāju kriptogrāfisko atslēgu.</translation>
 <translation id="1689333818294560261">Apzīmējums</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Kā varat pārvaldīt savus datus:<ph name="END_BOLD"/> pārlūkā AI Wiz tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. AI Wiz iestatījumos jebkurā brīdī varat bloķēt tēmas, ko nevēlaties kopīgot ar vietnēm, un izslēgt reklāmu tēmas.</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Kā varat pārvaldīt savus datus:<ph name="END_BOLD"/> pārlūkā AI Wize tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. AI Wize iestatījumos jebkurā brīdī varat bloķēt tēmas, ko nevēlaties kopīgot ar vietnēm, un izslēgt reklāmu tēmas.</translation>
 <translation id="1697532407822776718">Gatavs!</translation>
-<translation id="4030336595318918117">Tagad varat izmantot adreses no sava AI Wiz konta.</translation>
+<translation id="4030336595318918117">Tagad varat izmantot adreses no sava AI Wize konta.</translation>
 <translation id="1700542542921501212">Varat izmantot meklētājprogrammu <ph name="SEARCH_ENGINE_NAME"/>, lai veiktu meklēšanu tīmeklī.</translation>
 <translation id="1702815194757674443">ROC 16K</translation>
 <translation id="1703835215927279855">Letter</translation>
@@ -402,7 +402,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1736420071277903564">Dators</translation>
 <translation id="1741613555002899862">Ir jābūt norādītai politikas vērtībai un derīgai virknei, ja DnsOverHttpsMode vērtība ir <ph name="SECURE_DNS_MODE_SECURE"/>.</translation>
 <translation id="1743393865165844832">Gultas piederumi un gultasveļa</translation>
-<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Kā mēs izmantojam šos datus:<ph name="END_BOLD"/> pārlūkā AI Wiz tiek reģistrētas tēmas, kas jūs interesē. Tēmu iezīmes ir iepriekš definētas, piemēram, Māksla un izklaide, Pirkumi un Sports. Vēlāk kāda jūsu apmeklēta vietne var pieprasīt pārlūkam AI Wiz kopīgot jūsu tēmas (bet ne pārlūkošanas vēsturi), lai personalizētu jums rādītās reklāmas.</translation>
+<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Kā mēs izmantojam šos datus:<ph name="END_BOLD"/> pārlūkā AI Wize tiek reģistrētas tēmas, kas jūs interesē. Tēmu iezīmes ir iepriekš definētas, piemēram, Māksla un izklaide, Pirkumi un Sports. Vēlāk kāda jūsu apmeklēta vietne var pieprasīt pārlūkam AI Wize kopīgot jūsu tēmas (bet ne pārlūkošanas vēsturi), lai personalizētu jums rādītās reklāmas.</translation>
 <translation id="1746113442205726301">Attēla nobīde uz Y ass</translation>
 <translation id="1746531169546376413">Par 0 grādiem</translation>
 <translation id="1751544761369730824">Dzēst vietni <ph name="SITE_NAME"/></translation>
@@ -413,13 +413,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1756026472674246267">Atvērt saiti jaunā cilnē</translation>
 <translation id="175656076281618225">Maģija</translation>
 <translation id="1757773103848038814">Vienplatuma fonts</translation>
-<translation id="3727704638090640904">Poga “Mainīt AI Wiz paroli”. Aktivizējiet, lai mainītu sava AI Wiz konta paroli.</translation>
+<translation id="3727704638090640904">Poga “Mainīt AI Wize paroli”. Aktivizējiet, lai mainītu sava AI Wize konta paroli.</translation>
 <translation id="1763864636252898013">Šis serveris nevarēja pierādīt, ka šī ir vietne <ph name="DOMAIN"/>; tās drošības sertifikāts netiek uzskatīts par uzticamu jūsu ierīces operētājsistēmā. Iespējams, tas ir nepareizas konfigurācijas dēļ vai arī kāds ir ļaunprātīgi izmantojis jūsu savienojumu.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Mēģiniet palaist Windows tīkla diagnostiku<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">Fotopapīrs (arhīva)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
 <translation id="3480410886581896628">Brave Smart Lock</translation>
-<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu savu informāciju, konfidencialitāti un drošību savā AI Wiz kontā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu savu informāciju, konfidencialitāti un drošību savā AI Wize kontā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="1793631236004319016">Pēdējoreiz lietota pirms: <ph name="NUM_HOURS_MINUTES_SECONDS"/></translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ir pieejamas vairākas darbības. Lai pēc kārtas pārietu starp šīm darbībām, nospiediet tabulēšanas taustiņu.</translation>
 <translation id="1800473098294731951">B9</translation>
@@ -453,7 +453,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1854180393107901205">Apturēt apraidi</translation>
 <translation id="1855370856221982654">Bokss</translation>
 <translation id="1862788842908766795">Vadītāja līmeņa vakances</translation>
-<translation id="7675404561163771060">Izsekošanas aizsardzība īslaicīgi nav pieejama. Kamēr pārlūkā AI Wiz tiek atjaunināta šī funkcija, vietnes var īslaicīgi izmantot trešo pušu sīkfailus, ja vien neesat tos bloķējis. <ph name="BEGIN_LINK"/>Uzziniet vairāk.<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">Izsekošanas aizsardzība īslaicīgi nav pieejama. Kamēr pārlūkā AI Wize tiek atjaunināta šī funkcija, vietnes var īslaicīgi izmantot trešo pušu sīkfailus, ja vien neesat tos bloķējis. <ph name="BEGIN_LINK"/>Uzziniet vairāk.<ph name="END_LINK"/></translation>
 <translation id="1863257867908022953">12. paplāte</translation>
 <translation id="1864927262126810325">No: <ph name="SOURCE_NAME"/></translation>
 <translation id="186539747722034544">Kabeļtelevīzijas un satelīttelevīzijas pakalpojumu sniedzēji</translation>
@@ -494,9 +494,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="1954847915560574887">A3x3</translation>
 <translation id="1956486093533522234">Atrast, aizsargāt vai dzēst ierīci</translation>
 <translation id="1958218078413065209">Jūsu vislabākais rezultāts ir <ph name="SCORE"/>.</translation>
-<translation id="990584554013599191">Palīdzēt uzlabot drošību tīmeklī visiem, nosūtot AI Wiz serveriem <ph name="BEGIN_WHITEPAPER_LINK"/>dažu apmeklēto lapu vietrāžus URL, ierobežotu sistēmas informāciju un daļu lapu satura<ph name="END_WHITEPAPER_LINK"/>. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Konfidencialitātes politika<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="990584554013599191">Palīdzēt uzlabot drošību tīmeklī visiem, nosūtot AI Wize serveriem <ph name="BEGIN_WHITEPAPER_LINK"/>dažu apmeklēto lapu vietrāžus URL, ierobežotu sistēmas informāciju un daļu lapu satura<ph name="END_WHITEPAPER_LINK"/>. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Konfidencialitātes politika<ph name="END_PRIVACY_PAGE_LINK"/></translation>
 <translation id="1962204205936693436"><ph name="DOMAIN"/> grāmatzīmes</translation>
-<translation id="889162891089808318">Parasti jūs izveidojat drošu savienojumu ar vietnēm, taču šoreiz AI Wiz nevarēja izmantot drošu savienojumu. Iespējams, kāds uzbrucējs mēģina izsekot jūsu darbības vai mainīt jūsu tīkla savienojumu. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzzināt vairāk<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="889162891089808318">Parasti jūs izveidojat drošu savienojumu ar vietnēm, taču šoreiz AI Wize nevarēja izmantot drošu savienojumu. Iespējams, kāds uzbrucējs mēģina izsekot jūsu darbības vai mainīt jūsu tīkla savienojumu. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzzināt vairāk<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="1973335181906896915">Radās serializēšanas kļūda.</translation>
 <translation id="1973785048533660168">Darba piedāvājumi ierēdniecībā un administrācijā</translation>
 <translation id="1974060860693918893">Papildu</translation>
@@ -515,7 +515,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2003709556000175978">Nekavējoties atiestatiet paroli</translation>
 <translation id="2003775180883135320">Četri caurumi augšdaļā</translation>
 <translation id="2004697686368036666">Noteiktās vietnēs funkcijas var nedarboties.</translation>
-<translation id="6855500251167861792">Poga “Izveidot pasākumu”. Aktivizējiet, lai ātri izveidotu jaunu pasākumu AI Wiz kalendārā.</translation>
+<translation id="6855500251167861792">Poga “Izveidot pasākumu”. Aktivizējiet, lai ātri izveidotu jaunu pasākumu AI Wize kalendārā.</translation>
 <translation id="2342444980304536062">Brave iestatījumos pārvaldiet atļaujas un datus, kas tiek glabāti vietnēs.</translation>
 <translation id="2012276282211112603">Pašlaik nav parādāmu tēmu</translation>
 <translation id="2018769312928511665">Audums (glancēts)</translation>
@@ -542,7 +542,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2048261947532620704">Notiek lapas tulkošana…</translation>
 <translation id="205212645995975601">Barbekjū un grilēšana</translation>
 <translation id="2053111141626950936">Lapas netiks tulkotas no šīs valodas: <ph name="LANGUAGE"/></translation>
-<translation id="5469355573019315764">Vietnes var pieprasīt pārlūkam AI Wiz informāciju, lai palīdzētu personalizēt jums rādītās reklāmas.</translation>
+<translation id="5469355573019315764">Vietnes var pieprasīt pārlūkam AI Wize informāciju, lai palīdzētu personalizēt jums rādītās reklāmas.</translation>
 <translation id="2059166748188874810">Pašvaldība</translation>
 <translation id="2059202684901022309">22 x 34 collas</translation>
 <translation id="2064568741209980952">Kredīti un aizdevumi</translation>
@@ -573,7 +573,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2108755909498034140">Restartējiet datoru</translation>
 <translation id="2111166930115883695">Lai spēlētu, nospiediet atstarpes taustiņu</translation>
 <translation id="2112529237938317174">Rādīt informāciju par atļauju</translation>
-<translation id="3307744350283817699">Šis brīdinājums tiek rādīts, jo šajā vietnē netiek atbalstīts HTTPS un jūs esat iekļauts AI Wiz papildu aizsardzības programmā. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="3307744350283817699">Šis brīdinājums tiek rādīts, jo šajā vietnē netiek atbalstīts HTTPS un jūs esat iekļauts AI Wize papildu aizsardzības programmā. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="2113977810652731515">Karte</translation>
 <translation id="2114841414352855701">Ignorēta, jo to atcēla politika <ph name="POLICY_NAME"/>.</translation>
 <translation id="2118132148597630479">Aploksne C5</translation>
@@ -607,7 +607,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2168151236314517198">Administratora politika bloķē šī satura drukāšanu</translation>
 <translation id="2175630235841878061">Faili, kuru lielums pārsniedz 100 MB, nav pieejami lejupielādei.</translation>
 <translation id="2176974405772725904">Adreses saglabāšana kontā</translation>
-<translation id="7453373354666409887">Poga “Atjaunināt Brave”. Aktivizējiet, lai AI Wiz iestatījumos atjauninātu pārlūku Brave.</translation>
+<translation id="7453373354666409887">Poga “Atjaunināt Brave”. Aktivizējiet, lai AI Wize iestatījumos atjauninātu pārlūku Brave.</translation>
 <translation id="2181821976797666341">Politikas</translation>
 <translation id="2182170103603703676">Trauku mazgājamās mašīnas</translation>
 <translation id="2183608646556468874">Tālruņa numurs</translation>
@@ -635,7 +635,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2224337661447660594">Nav interneta savienojuma</translation>
 <translation id="2225927550500503913">Virtuālā karte ir ieslēgta</translation>
 <translation id="2226636330183131181"><ph name="BEGIN_LINK"/>Pierakstīšanās<ph name="END_LINK"/> Wi-Fi tīklā</translation>
-<translation id="1271895112771969155">Šī adrese pašlaik ir saglabāta pārlūkā Brave. Lai izmantotu šo adresi citos AI Wiz produktos, saglabājiet to savā AI Wiz kontā (<ph name="ACCOUNT"/>).</translation>
+<translation id="1271895112771969155">Šī adrese pašlaik ir saglabāta pārlūkā Brave. Lai izmantotu šo adresi citos AI Wize produktos, saglabājiet to savā AI Wize kontā (<ph name="ACCOUNT"/>).</translation>
 <translation id="2229456043301340598">Ignorēts saīsnes dublikāts: “<ph name="SHORTCUT_NAME"/>”.</translation>
 <translation id="2233745931693710080">Kompaktdisks</translation>
 <translation id="2235344399760031203">Trešo pušu sīkfaili ir bloķēti</translation>
@@ -687,7 +687,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2350796302381711542">Vai ļaut <ph name="HANDLER_HOSTNAME"/> atvērt visas <ph name="PROTOCOL"/> saites <ph name="REPLACED_HANDLER_TITLE"/> vietā?</translation>
 <translation id="2353297238722298836">Kameras un mikrofona lietošana ir atļauta</translation>
 <translation id="2354001756790975382">Citas grāmatzīmes</translation>
-<translation id="2354430244986887761">Izmantojot AI Wiz drošo pārlūkošanu, nesen <ph name="BEGIN_LINK"/>tika atrastas kaitīgas lietotnes<ph name="END_LINK"/> vietnē <ph name="SITE"/>.</translation>
+<translation id="2354430244986887761">Izmantojot AI Wize drošo pārlūkošanu, nesen <ph name="BEGIN_LINK"/>tika atrastas kaitīgas lietotnes<ph name="END_LINK"/> vietnē <ph name="SITE"/>.</translation>
 <translation id="2355395290879513365">Uzbrucēji var skatīt attēlus, kurus skatāt šajā vietnē, un apmānīt jūs, pārveidojot šos attēlus.</translation>
 <translation id="2356070529366658676">Vaicāt</translation>
 <translation id="2357481397660644965">Jūsu ierīci pārvalda <ph name="DEVICE_MANAGER"/>, un jūsu kontu pārvalda <ph name="ACCOUNT_MANAGER"/>.</translation>
@@ -701,13 +701,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2366689192918515749">Gaļa un jūras veltes</translation>
 <translation id="2367567093518048410">Līmenis</translation>
 <translation id="23703388716193220">Golfa aprīkojums</translation>
-<translation id="776356972507701422">Saskaņā ar tiesību aktiem jūsu reģionā pārlūks AI Wiz aicina jūs izvēlēties noklusējuma meklētājprogrammu. Šīs meklētājprogrammas ir populāras jūsu reģionā un tiek rādītas nejaušā secībā.</translation>
+<translation id="776356972507701422">Saskaņā ar tiesību aktiem jūsu reģionā pārlūks AI Wize aicina jūs izvēlēties noklusējuma meklētājprogrammu. Šīs meklētājprogrammas ir populāras jūsu reģionā un tiek rādītas nejaušā secībā.</translation>
 <translation id="2378084239755710604">Kartes saglabāšanas uzvedne aizvērta.</translation>
 <translation id="2380886658946992094">Legal</translation>
 <translation id="5475992123321966556">Brave iestatījumos personalizēt pieejamības rīkus</translation>
 <translation id="2384307209577226199">Uzņēmuma noklusējuma politika</translation>
 <translation id="238459632961158867">Tīmekļa vietne</translation>
-<translation id="5244533701344680487">Atjauniniet pārlūku AI Wiz savos AI Wiz iestatījumos.</translation>
+<translation id="5244533701344680487">Atjauniniet pārlūku AI Wize savos AI Wize iestatījumos.</translation>
 <translation id="2386255080630008482">Servera sertifikāts ir atsaukts.</translation>
 <translation id="239293030466334554">Kabrioleti</translation>
 <translation id="2392959068659972793">Rādīt politikas, kuru vērtība nav iestatīta</translation>
@@ -730,7 +730,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2462599289530201834">Meklēt: <ph name="KEYWORD_SHORT_NAME"/></translation>
 <translation id="2463739503403862330">Aizpildīt</translation>
 <translation id="2465688316154986572">Skavojums</translation>
-<translation id="4058615531773510267">Pārvaldīt pārlūkā AI Wiz lejupielādētos failus</translation>
+<translation id="4058615531773510267">Pārvaldīt pārlūkā AI Wize lejupielādētos failus</translation>
 <translation id="2466004615675155314">Rādīt informāciju no tīmekļa</translation>
 <translation id="2467272921457885625">Ierīces aparatūras specifikācijas un statistika, piemēram, centrālā procesora / RAM lietojuma vēsture</translation>
 <translation id="2467694685043708798"><ph name="BEGIN_LINK"/>Palaist tīkla diagnostiku<ph name="END_LINK"/></translation>
@@ -738,10 +738,10 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="24699311393038040">Papīrs (pārklāts)</translation>
 <translation id="2470767536994572628">Ja rediģēsiet piezīmes, dokuments atkal pāries vienas lapas skatā un rotācija tiks atiestatīta.</translation>
 <translation id="2479410451996844060">Nederīgs meklēšanas URL.</translation>
-<translation id="6944854796979239513">Jūsu AI Wiz kontā <ph name="USER_EMAIL"/></translation>
+<translation id="6944854796979239513">Jūsu AI Wize kontā <ph name="USER_EMAIL"/></translation>
 <translation id="2482878487686419369">Paziņojumi</translation>
 <translation id="248348093745724435">Ierīces politikas</translation>
-<translation id="8381375318209119428">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var instalēt kaitīgu programmatūru, kas zog vai dzēš kādu informāciju, piemēram, jūsu paroli, fotoattēlus, ziņojumus vai kredītkaršu numurus. AI Wiz stingri iesaka doties atpakaļ. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="8381375318209119428">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var instalēt kaitīgu programmatūru, kas zog vai dzēš kādu informāciju, piemēram, jūsu paroli, fotoattēlus, ziņojumus vai kredītkaršu numurus. AI Wize stingri iesaka doties atpakaļ. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="2491120439723279231">Servera sertifikātā ir kļūdas.</translation>
 <translation id="2491414235131909199">Šo lapu ir bloķējis kāds paplašinājums.</translation>
 <translation id="2495083838625180221">JSON parsētājs</translation>
@@ -752,14 +752,14 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2505268675989099013">Aizsargāt kontu</translation>
 <translation id="2509167091171468975">Pārtikas mazumtirdzniecība</translation>
 <translation id="2512101340618156538">Atļauja nav piešķirta (noklusējums)</translation>
-<translation id="3233967599412104589">Poga “Iestatīt AI Wiz kā noklusējuma pārlūku”; nospiediet taustiņu Enter, lai iestatītu AI Wiz kā sistēmas noklusējuma pārlūku iOS iestatījumos.</translation>
+<translation id="3233967599412104589">Poga “Iestatīt AI Wize kā noklusējuma pārlūku”; nospiediet taustiņu Enter, lai iestatītu AI Wize kā sistēmas noklusējuma pārlūku iOS iestatījumos.</translation>
 <translation id="2515629240566999685">Pārbaudiet signālu savā apkaimē.</translation>
 <translation id="2515761554693942801">Jūs izvēlējāties veikt verifikāciju ar Touch ID tīmekļa vietnēs, kas izmanto <ph name="PROVIDER_ORIGIN"/> pakalpojumus. Šis pakalpojumu sniedzējs, iespējams, ir saglabājis informāciju par jūsu maksājuma veidu, un jūs varat <ph name="LINK_TEXT"/>.</translation>
 <translation id="2521385132275182522">Skavojums apakšējā labajā malā</translation>
 <translation id="2521736961081452453">Izveidot veidlapu</translation>
 <translation id="2523886232349826891">Tiks saglabāta tikai šajā ierīcē</translation>
 <translation id="2524461107774643265">Papildu informācijas pievienošana</translation>
-<translation id="5151177152796946073">Saglabātās adreses varat izmantot dažādos AI Wiz produktos. Šī adrese tiks saglabāta jūsu AI Wiz kontā (<ph name="ACCOUNT"/>).</translation>
+<translation id="5151177152796946073">Saglabātās adreses varat izmantot dažādos AI Wize produktos. Šī adrese tiks saglabāta jūsu AI Wize kontā (<ph name="ACCOUNT"/>).</translation>
 <translation id="2527451058878391043">CVC kods ir norādīts kartes priekšpusē. Tas ir četrciparu kods augšējā labajā stūrī virs kartes numura.</translation>
 <translation id="2529899080962247600">Šajā laukā drīkst būt ne vairāk kā <ph name="MAX_ITEMS_LIMIT"/> ierakstu. Visi turpmākie ieraksti tiks ignorēti.</translation>
 <translation id="253493526287553278">Skatīt akcijas koda informāciju</translation>
@@ -769,7 +769,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2542106216580219892">Sērfošana</translation>
 <translation id="2544546346215446551">Administrators restartēja jūsu ierīci</translation>
 <translation id="2544644783021658368">Viens dokuments</translation>
-<translation id="5342827302598046226">Iestata AI Wiz par noklusējuma pārlūku</translation>
+<translation id="5342827302598046226">Iestata AI Wize par noklusējuma pārlūku</translation>
 <translation id="2545721997179863249">Tika atlasīta opcija Aizpildīt visu</translation>
 <translation id="2546283357679194313">Sīkfaili un vietņu dati</translation>
 <translation id="2547466893236767989">Tīmekļa dizains un izstrāde</translation>
@@ -801,11 +801,11 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2604589665489080024">Popmūzika</translation>
 <translation id="2606760465469169465">Automātiska verifikācija</translation>
 <translation id="2610561535971892504">Noklikšķināt, lai kopētu</translation>
-<translation id="686139377353794280">Tiks dzēsti visi drošības kodi, kas ir saglabāti jūsu ierīcē un AI Wiz kontā</translation>
+<translation id="686139377353794280">Tiks dzēsti visi drošības kodi, kas ir saglabāti jūsu ierīcē un AI Wize kontā</translation>
 <translation id="2616412942031748191">Meklētājprogrammu optimizācija un mārketings</translation>
 <translation id="2625385379895617796">Norādītais laiks ir pārāk tālu nākotnē</translation>
 <translation id="262745152991669301">Var pieprasīt atļauju veidot savienojumu ar USB ierīcēm</translation>
-<translation id="2915787201097107005">Lai pārlūkprogrammā AI Wiz izmantotu visaugstāko drošības līmeni, <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>ieslēdziet uzlaboto aizsardzību<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
+<translation id="2915787201097107005">Lai pārlūkprogrammā AI Wize izmantotu visaugstāko drošības līmeni, <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>ieslēdziet uzlaboto aizsardzību<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
 <translation id="2634124572758952069">Nevarēja atrast vietnes <ph name="HOST_NAME"/> servera IP adresi.</translation>
 <translation id="2639739919103226564">Statuss:</translation>
 <translation id="2643134278432436513">Matu kopšana</translation>
@@ -813,7 +813,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2647852283046201479">Stratēģiskās spēles</translation>
 <translation id="264810637653812429">Netika atrasta neviena saderīga ierīce.</translation>
 <translation id="2649204054376361687"><ph name="CITY"/>, <ph name="COUNTRY"/></translation>
-<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai notīrītu jūsu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus AI Wiz iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
+<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai notīrītu jūsu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus AI Wize iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
 <translation id="2650446666397867134">Piekļuve failam tika noraidīta.</translation>
 <translation id="2651465929321991146">Vēsture un cilnes</translation>
 <translation id="2653659639078652383">Iesniegt</translation>
@@ -848,14 +848,14 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2705137772291741111">Nevar nolasīt šīs vietnes saglabāto (kešatmiņā ievietoto) kopiju.</translation>
 <translation id="2709516037105925701">Automātiskā aizpilde</translation>
 <translation id="2713444072780614174">Balta</translation>
-<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu savus maksājumus un kredītkaršu informāciju AI Wiz iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
+<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu savus maksājumus un kredītkaršu informāciju AI Wize iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
 <translation id="2715808615350965923">Super A</translation>
 <translation id="271663710482723385">Nospiediet |<ph name="ACCELERATOR1"/>| + |<ph name="ACCELERATOR2"/>|, lai izietu no pilnekrāna režīma.</translation>
 <translation id="2717336592027046789">Rullis</translation>
 <translation id="2718207025093645426">Pārvaldītajam lietotājam vai ierīcei nav ielādēta neviena politika.</translation>
 <translation id="2721148159707890343">Pieprasījums bija veiksmīgs.</translation>
 <translation id="2722622039067384533">Dzīvojamās istabas mēbeles</translation>
-<translation id="4054726005361352357">Veiciet drošības pārbaudi AI Wiz iestatījumos.</translation>
+<translation id="4054726005361352357">Veiciet drošības pārbaudi AI Wize iestatījumos.</translation>
 <translation id="2725492561136085792">Lai aktivizētu šo darbību, nospiediet taustiņu Enter.</translation>
 <translation id="2725927759457695883">Aizpildīt vārdu un uzvārdu</translation>
 <translation id="2726001110728089263">Sānu paplāte</translation>
@@ -863,7 +863,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2730326759066348565"><ph name="BEGIN_LINK"/>Palaist savienojamības diagnostiku<ph name="END_LINK"/></translation>
 <translation id="2730600605555029057">Klasiskā mūzika</translation>
 <translation id="2731382536835015353">44 x 68 collas</translation>
-<translation id="3163800392243881597">Ļaujiet uzņēmumam AI Wiz izmantot jūsu grozus, lai meklētu personalizētas atlaides. Atlaides tiks automātiski parādītas jūsu grozos, kad tās būs pieejamas.</translation>
+<translation id="3163800392243881597">Ļaujiet uzņēmumam AI Wize izmantot jūsu grozus, lai meklētu personalizētas atlaides. Atlaides tiks automātiski parādītas jūsu grozos, kad tās būs pieejamas.</translation>
 <translation id="273785062888389088">Apsildes, ventilācijas un gaisa kondicionēšanas sistēmas un klimata kontrole</translation>
 <translation id="2740531572673183784">Labi</translation>
 <translation id="2742511345840685325">Galda teniss</translation>
@@ -874,7 +874,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2765217105034171413">Mazs</translation>
 <translation id="2770159525358613612">Mēģiniet vēlreiz augšupielādēt savus failus.</translation>
 <translation id="277133753123645258">Nosūtīšanas veids</translation>
-<translation id="7956239349290436105">Pārlūkā AI Wiz vairākumam vietņu tiek ierobežotas iespējas izmantot trešo pušu sīkfailus. Tomēr šajā vietnē trešo pušu sīkfaili ir atļauti, jo vietnei tie ir nepieciešami, lai nodrošinātu pamatpakalpojumus. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
+<translation id="7956239349290436105">Pārlūkā AI Wize vairākumam vietņu tiek ierobežotas iespējas izmantot trešo pušu sīkfailus. Tomēr šajā vietnē trešo pušu sīkfaili ir atļauti, jo vietnei tie ir nepieciešami, lai nodrošinātu pamatpakalpojumus. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
 <translation id="277499241957683684">Trūkst ierīces ieraksta.</translation>
 <translation id="2775884851269838147">Pirmā drukas lapa</translation>
 <translation id="2781692009645368755">Brave Pay</translation>
@@ -907,7 +907,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="28618371182701850">Elektriski, ar uzlādējamiem akumulatoriem darbināmi transportlīdzekļi</translation>
 <translation id="287596039013813457">Draudzīga</translation>
 <translation id="28761159517501904">Filmas</translation>
-<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wiz iestatījumos pārvaldītu funkciju “Droša pārlūkošana” un citas funkcijas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wize iestatījumos pārvaldītu funkciju “Droša pārlūkošana” un citas funkcijas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="2878197950673342043">Plakāta locījums</translation>
 <translation id="2878424575911748999">A1</translation>
 <translation id="2879233115503670140">Derīguma termiņš: <ph name="DATE"/></translation>
@@ -932,7 +932,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2922792708490674">{0,plural, =1{Faila lejupielāde ir bloķēta}zero{<ph name="FILE_COUNT"/> failu lejupielāde ir bloķēta}one{<ph name="FILE_COUNT"/> faila lejupielāde ir bloķēta}other{<ph name="FILE_COUNT"/> failu lejupielāde ir bloķēta}}</translation>
 <translation id="2923275635648511531">Sauļošanās un mākslīgā iedeguma produkti</translation>
 <translation id="3249101334307130799">Brave iestatījumi</translation>
-<translation id="2039679058572892861">Poga “Izveidot dokumentu”. Aktivizējiet, lai ātri izveidotu jaunu AI Wiz dokumentu.</translation>
+<translation id="2039679058572892861">Poga “Izveidot dokumentu”. Aktivizējiet, lai ātri izveidotu jaunu AI Wize dokumentu.</translation>
 <translation id="2925673989565098301">Piegādes veids</translation>
 <translation id="2928426578619531300">Saistītais lietotājs</translation>
 <translation id="2928905813689894207">Norēķinu adrese</translation>
@@ -947,7 +947,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2943895734390379394">Augšupielādes laiks:</translation>
 <translation id="2945026002409061480">Tiešsaistes kopienas</translation>
 <translation id="2948083400971632585">Iestatījumu lapā varat atspējot jebkurus starpniekserverus, kas konfigurēti savienojuma izveidei.</translation>
-<translation id="3955566820843143766">Tiek ignorēta, jo iekārta nav reģistrēta pārlūka AI Wiz mākoņa pārvaldībā.</translation>
+<translation id="3955566820843143766">Tiek ignorēta, jo iekārta nav reģistrēta pārlūka AI Wize mākoņa pārvaldībā.</translation>
 <translation id="2951588413176968965">Mana pastkaste</translation>
 <translation id="2952904171810469095">A2x5</translation>
 <translation id="2954624054936281172">Saglabāto maksājumu veidu tabula</translation>
@@ -961,10 +961,10 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2977665033722899841">Pašlaik ir atlasīta rinda “<ph name="ROW_NAME"/>”. <ph name="ROW_CONTENT"/></translation>
 <translation id="2978824962390592855">Opera</translation>
 <translation id="2979424420072875974">Rakstnieku resursi</translation>
-<translation id="6172169316494799304">Šīs kartes CVC tiks šifrēts un saglabāts jūsu AI Wiz kontā ātrākiem norēķiniem.</translation>
+<translation id="6172169316494799304">Šīs kartes CVC tiks šifrēts un saglabāts jūsu AI Wize kontā ātrākiem norēķiniem.</translation>
 <translation id="2985398929374701810">Ievadiet derīgu adresi</translation>
 <translation id="2987034854559945715">Nav atbilstošu līdzekļu</translation>
-<translation id="714850411804317247">Pārlūkā AI Wiz tiek ierobežots informācijas apjoms, ko vietnes var izmantot jūsu darbību izsekošanai pārlūkošanas laikā. Varat mainīt iestatījumus, lai izvēlētos savu aizsardzības līmeni.</translation>
+<translation id="714850411804317247">Pārlūkā AI Wize tiek ierobežots informācijas apjoms, ko vietnes var izmantot jūsu darbību izsekošanai pārlūkošanas laikā. Varat mainīt iestatījumus, lai izvēlētos savu aizsardzības līmeni.</translation>
 <translation id="2989742184762224133">Divkāršs skavojums augšdaļā</translation>
 <translation id="2991174974383378012">Kopīgošana ar vietnēm</translation>
 <translation id="299122504639061328">Pārvaldīt noklusējuma meklētājprogrammu un meklēšanu vietnēs</translation>
@@ -990,14 +990,14 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3041612393474885105">Sertifikāta informācija</translation>
 <translation id="8418829431154568330">Brave attālās darbvirsmas vēsture, tostarp laikspiedoli, saimniekdatori un klientu sesiju identifikatori</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> cenas kritums produktam “<ph name="PRODUCT_NAME"/>”</translation>
-<translation id="4832983047807637948">Pārlūkā AI Wiz tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. Varat arī bloķēt kādas tēmas, ja nevēlaties, lai pārlūks AI Wiz tās kopīgotu ar vietnēm. Uzziniet vairāk par reklāmu konfidencialitātes pārvaldību pārlūkā Brave.</translation>
+<translation id="4832983047807637948">Pārlūkā AI Wize tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. Varat arī bloķēt kādas tēmas, ja nevēlaties, lai pārlūks AI Wize tās kopīgotu ar vietnēm. Uzziniet vairāk par reklāmu konfidencialitātes pārvaldību pārlūkā Brave.</translation>
 <translation id="3061707000357573562">Ielāpu pakalpojums</translation>
 <translation id="306573536155379004">Spēle sākta.</translation>
 <translation id="3067505415088964188">Cena ir zema</translation>
 <translation id="3068991664510324412">Datorspēles un videospēles</translation>
 <translation id="3080254622891793721">Grafika</translation>
 <translation id="3081538120861307764">Lai novērtētu reklāmas veiktspēju, vietnes kopīgo noteikta veida datus, piemēram, reklāmas rādīšanas laiku.</translation>
-<translation id="254030672859277244">Ļaujiet uzņēmumam AI Wiz izmantot jūsu grozus, lai atrastu personalizētas atlaides, kad tās pieejamas.</translation>
+<translation id="254030672859277244">Ļaujiet uzņēmumam AI Wize izmantot jūsu grozus, lai atrastu personalizētas atlaides, kad tās pieejamas.</translation>
 <translation id="3086579638707268289">Jūsu darbības tīmeklī tiek uzraudzītas</translation>
 <translation id="3087734570205094154">Apakšā</translation>
 <translation id="3090667236485488075">Stikls</translation>
@@ -1028,7 +1028,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3144458715650412431">Tika piemērotas testēšanas politikas. Pārskatiet un atiestatiet tās vietnē chrome://policy/test. Administratoru politikas netiks piemērotas.</translation>
 <translation id="3145945101586104090">Neizdevās atšifrēt atbildi.</translation>
 <translation id="3150653042067488994">Īslaicīga servera kļūda</translation>
-<translation id="6312561205154152917">Poga “Izveidot izklājlapu”. Aktivizējiet, lai ātri izveidotu jaunu AI Wiz izklājlapu.</translation>
+<translation id="6312561205154152917">Poga “Izveidot izklājlapu”. Aktivizējiet, lai ātri izveidotu jaunu AI Wize izklājlapu.</translation>
 <translation id="3154506275960390542">Šajā lapā ir veidlapa, ko, iespējams, nevar droši iesniegt. Kamēr šie dati tiek pārsūtīti, tos var aplūkot citi, un uzbrucējs tos varētu pārveidot, lai mainītu datus, ko saņem serveris.</translation>
 <translation id="3154987252551138431">Izmantojot funkciju “Kopīgošana tuvumā”, radās kļūda</translation>
 <translation id="315504272643575312">Jūsu kontu pārvalda <ph name="MANAGER"/>.</translation>
@@ -1055,7 +1055,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3194737229810486521">Vietnē <ph name="URL"/> tiek pieprasīta atļauja pastāvīgi glabāt datus jūsu ierīcē.</translation>
 <translation id="3195213714973468956"><ph name="PRINTER_NAME"/> serverī <ph name="SERVER_NAME"/></translation>
 <translation id="3197136577151645743">Var pieprasīt informāciju par to, kad jūs aktīvi lietojat šo ierīci</translation>
-<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wiz iestatījumos pārvaldītu, kāda informācija tiek sinhronizēta.</translation>
+<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wize iestatījumos pārvaldītu, kāda informācija tiek sinhronizēta.</translation>
 <translation id="3203025201812691413">URL lauks nedrīkst būt tukšs.</translation>
 <translation id="320323717674993345">Atcelt maksājumu</translation>
 <translation id="3203366800380907218">No tīmekļa</translation>
@@ -1088,7 +1088,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3252772880526154546">Arhitektūra</translation>
 <translation id="3254301855501243548">18 x 22 collas</translation>
 <translation id="3256863843508922226">Pensionēšanās un pensijas</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu pasākumu AI Wiz kalendārā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu pasākumu AI Wize kalendārā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="3261488570342242926">Uzzināt vairāk par virtuālajām kartēm</translation>
 <translation id="3262698603497362968">Iegādes iespējas</translation>
 <translation id="3266367459139339908">Ieviešam jaunas iespējas ierobežot, kādu informāciju par jums vietnes var iegūt, rādot jums personalizētas reklāmas, piem.</translation>
@@ -1108,7 +1108,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3287510313208355388">Lejupielādēt, kad pieejama tiešsaiste</translation>
 <translation id="3288238092761586174">Iespējams, vietnē <ph name="URL"/> būs jāveic papildu darbības, lai apstiprinātu maksājumu.</translation>
 <translation id="3293642807462928945">Uzzināt vairāk par politiku <ph name="POLICY_NAME"/></translation>
-<translation id="5894665462526421022">Skatiet un pārvaldiet savas paroles AI Wiz iestatījumos.</translation>
+<translation id="5894665462526421022">Skatiet un pārvaldiet savas paroles AI Wize iestatījumos.</translation>
 <translation id="3299098170013242198">Paroļu aizpildei ir ieslēgta funkcija Windows Hello.</translation>
 <translation id="3299720788264079132">Izmantojot funkciju <ph name="FEATURE_NAME"/>, radās problēma.</translation>
 <translation id="3303176609391916566">30 x 42 collas</translation>
@@ -1143,9 +1143,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3366477098757335611">Skatīt kartes</translation>
 <translation id="3369192424181595722">Pulksteņa kļūda</translation>
 <translation id="3369459162151165748">Transportlīdzekļu detaļas un piederumi</translation>
-<translation id="2273851479262317744">Iestatīt AI Wiz kā noklusējuma pārlūku</translation>
+<translation id="2273851479262317744">Iestatīt AI Wize kā noklusējuma pārlūku</translation>
 <translation id="337363190475750230">Tika noņemta piekļuve</translation>
-<translation id="7740652748540081864">Veikt AI Wiz drošības pārbaudi</translation>
+<translation id="7740652748540081864">Veikt AI Wize drošības pārbaudi</translation>
 <translation id="3377144306166885718">Serveris izmantoja novecojušu TLS versiju.</translation>
 <translation id="3377188786107721145">Radās politikas parsēšanas kļūda.</translation>
 <translation id="3377736046129930310">Izmantot ekrāna bloķēšanu, lai kartes apstiprinātu ātrāk</translation>
@@ -1165,7 +1165,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3407789382767355356">trešās puses pierakstīšanās</translation>
 <translation id="3409896703495473338">Pārvaldīt drošības iestatījumus</translation>
 <translation id="3414952576877147120">Lielums:</translation>
-<translation id="7115177860507615612">Poga “Spēlēt AI Wiz dinozaura spēli”. Aktivizējiet, lai pārlūkā AI Wiz spēlētu dinozaura skriešanas spēli.</translation>
+<translation id="7115177860507615612">Poga “Spēlēt AI Wize dinozaura spēli”. Aktivizējiet, lai pārlūkā AI Wize spēlētu dinozaura skriešanas spēli.</translation>
 <translation id="3422248202833853650">Aizveriet citas programmas, lai atbrīvotu vietu atmiņā.</translation>
 <translation id="3422472998109090673">Vietne <ph name="HOST_NAME"/> pašlaik nav sasniedzama.</translation>
 <translation id="3423742043356668186">Sistēmas noteikta</translation>
@@ -1197,7 +1197,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5410160270050057437">Šis PDF fails nav pieejams. Teksts iegūts. Pakalpojumu nodrošina Brave MI.</translation>
 <translation id="346601286295919445">Ķīmija</translation>
 <translation id="3468054117417088249"><ph name="TAB_SWITCH_SUFFIX"/>, šobrīd atvērta. Nospiediet tabulēšanas taustiņu, pēc tam — ievadīšanas taustiņu, lai atvērtu cilni.</translation>
-<translation id="3807334561457710885">Brave poga “Pielāgot fontus”. Aktivizējiet, lai pārlūkā AI Wiz pielāgotu fontu izmērus un burtveidolus.</translation>
+<translation id="3807334561457710885">Brave poga “Pielāgot fontus”. Aktivizējiet, lai pārlūkā AI Wize pielāgotu fontu izmērus un burtveidolus.</translation>
 <translation id="3477679029130949506">Filmu seansi un teātru izrāžu laiki</translation>
 <translation id="3478033058537426179">Pēc grupas</translation>
 <translation id="3479552764303398839">Vēlāk</translation>
@@ -1260,7 +1260,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3586931643579894722">Slēpt detaļas</translation>
 <translation id="3587738293690942763">vidējais</translation>
 <translation id="3600246354004376029"><ph name="TITLE"/>, <ph name="DOMAIN"/>, <ph name="TIME"/></translation>
-<translation id="8476504968862670676">Poga “Pārvaldīt AI Wiz konfidencialitātes iestatījumus”. Aktivizējiet, lai atvērtu sava AI Wiz konta konfidencialitātes iestatījumus.</translation>
+<translation id="8476504968862670676">Poga “Pārvaldīt AI Wize konfidencialitātes iestatījumus”. Aktivizējiet, lai atvērtu sava AI Wize konta konfidencialitātes iestatījumus.</translation>
 <translation id="3603507503523709">Lietojumprogrammu bloķēja jūsu administrators</translation>
 <translation id="3605899229568538311">5 x 5 collas</translation>
 <translation id="3608932978122581043">Padeves virziens</translation>
@@ -1268,7 +1268,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3611317423880285981">Mājsaimniecības piederumi</translation>
 <translation id="3614103345592970299">2. izmērs</translation>
 <translation id="361438452008624280">Saraksta ieraksts “<ph name="LANGUAGE_ID"/>”: nezināma vai neatbalstīta valoda.</translation>
-<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wiz iestatījumos veiktu drošības pārbaudi, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wize iestatījumos veiktu drošības pārbaudi, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="3615309852743236517">Manikīrs un pedikīrs</translation>
 <translation id="3620239073311576716">Uniformas un darba apģērbs</translation>
 <translation id="36224234498066874">Dzēst pārlūkošanas datus...</translation>
@@ -1276,7 +1276,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3624292976554877583">Etiķešu papīrs (matēts)</translation>
 <translation id="3628905806504633297">{0,plural, =1{Administratora politika nosaka, ka nav ieteicams pārsūtīt šo failu uz: <ph name="DESTINATION_NAME"/>.}zero{Administratora politika nosaka, ka nav ieteicams pārsūtīt šos failus uz: <ph name="DESTINATION_NAME"/>.}one{Administratora politika nosaka, ka nav ieteicams pārsūtīt šos failus uz: <ph name="DESTINATION_NAME"/>.}other{Administratora politika nosaka, ka nav ieteicams pārsūtīt šos failus uz: <ph name="DESTINATION_NAME"/>.}}</translation>
 <translation id="3630155396527302611">Ja tā jau ir norādīta kā programma, kurai ir atļauts piekļūt tīklam, noņemiet to no saraksta un pievienojiet vēlreiz.</translation>
-<translation id="3599570280787620691">Poga “Atrast ierīci”. Aktivizējiet, lai savā AI Wiz kontā atvērtu lapu Atrast ierīci.</translation>
+<translation id="3599570280787620691">Poga “Atrast ierīci”. Aktivizējiet, lai savā AI Wize kontā atvērtu lapu Atrast ierīci.</translation>
 <translation id="3630699740441428070">Šīs ierīces administratori ir konfigurējuši jūsu tīkla savienojumu, tāpēc viņi, iespējams, var skatīt jūsu tīkla datplūsmu, tostarp apmeklētās vietnes.</translation>
 <translation id="3631244953324577188">Biometrija</translation>
 <translation id="3632503704576938756">Ekrāna kopīgošana atsākta</translation>
@@ -1310,7 +1310,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="2659564324969662497">Brave nosaka, kādas tēmas jūs interesē, ņemot vērā jūsu neseno pārlūkošanas vēsturi.</translation>
 <translation id="3689867156802445220">Ēkas numurs</translation>
 <translation id="3693327506115126094">Identitātes apstiprināšanas veida izvēle</translation>
-<translation id="974818914962304978">Poga “Izveidot vietni”. Aktivizējiet, lai ātri izveidotu jaunu vietni pakalpojumā AI Wiz vietnes.</translation>
+<translation id="974818914962304978">Poga “Izveidot vietni”. Aktivizējiet, lai ātri izveidotu jaunu vietni pakalpojumā AI Wize vietnes.</translation>
 <translation id="3701325639446035885">Pasākumu biļešu pārdošana</translation>
 <translation id="3701427423622901115">Atiestatīšana apstiprināta.</translation>
 <translation id="3701900332588705891">Parasti <ph name="LOW_PRICE"/>–<ph name="HIGH_PRICE"/></translation>
@@ -1327,13 +1327,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3714633008798122362">tīmekļa kalendārs</translation>
 <translation id="3714780639079136834">Ieslēdziet mobilo datu savienojumu vai Wi-Fi.</translation>
 <translation id="3715016660240337709">{0,plural, =1{Faila augšupielāde ir bloķēta}zero{<ph name="FILE_COUNT"/> failu augšupielāde ir bloķēta}one{<ph name="FILE_COUNT"/> faila augšupielāde ir bloķēta}other{<ph name="FILE_COUNT"/> failu augšupielāde ir bloķēta}}</translation>
-<translation id="2241987852555440600">Ja pārlūkā AI Wiz tiek atzīmēti ar drošību saistīti notikumi, atbilstošie dati par notikumiem tiek nosūtīti administratoram. Šie dati var būt, piemēram, pārlūkā AI Wiz apmeklēto lapu URL, failu nosaukumi vai metadati, pārlūka vai ciļņu avārijas, kā arī lietotājvārds, ar kuru pierakstāties tīmekļa lietojumprogrammās, ierīcē un pārlūkā Brave.</translation>
+<translation id="2241987852555440600">Ja pārlūkā AI Wize tiek atzīmēti ar drošību saistīti notikumi, atbilstošie dati par notikumiem tiek nosūtīti administratoram. Šie dati var būt, piemēram, pārlūkā AI Wize apmeklēto lapu URL, failu nosaukumi vai metadati, pārlūka vai ciļņu avārijas, kā arī lietotājvārds, ar kuru pierakstāties tīmekļa lietojumprogrammās, ierīcē un pārlūkā Brave.</translation>
 <translation id="3715597595485130451">Savienojuma izveide ar Wi-Fi</translation>
 <translation id="3717027428350673159"><ph name="BEGIN_LINK"/>Pārbaudiet starpniekserveri, ugunsmūri un DNS konfigurāciju<ph name="END_LINK"/>.</translation>
 <translation id="3723663469265383848">Atjaunināšanas laikā (līdz 10 minūtēm) nevarēsiet izmantot ierīci.</translation>
 <translation id="372429172604983730">Šo kļūdu var izraisīt tādas lietojumprogrammas kā pretvīrusu, ugunsmūra, tīmekļa filtrēšanas vai starpniekservera programmatūra.</translation>
-<translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wiz prezentāciju pakalpojumā Prezentācijas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
-<translation id="8077319455765501118">Lai izmantotu AI Wiz paroļu pārvaldnieku ar macOS sistēmu Keychain, atkārtoti palaidiet pārlūku AI Wiz un atļaujiet piekļuvi sistēmai Keychain. Jūsu cilnes tiks atkal atvērtas pēc atkārtotas palaišanas.</translation>
+<translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wize prezentāciju pakalpojumā Prezentācijas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="8077319455765501118">Lai izmantotu AI Wize paroļu pārvaldnieku ar macOS sistēmu Keychain, atkārtoti palaidiet pārlūku AI Wize un atļaujiet piekļuvi sistēmai Keychain. Jūsu cilnes tiks atkal atvērtas pēc atkārtotas palaišanas.</translation>
 <translation id="3733139489341305600">Autonomi transportlīdzekļi</translation>
 <translation id="3736520371357197498">Ja apzināties drošības risku, varat <ph name="BEGIN_LINK"/>apmeklēt šo nedrošo vietni<ph name="END_LINK"/>, pirms ir noņemtas bīstamās programmas.</translation>
 <translation id="3736739313435669994">Bloķējāt savu darbību izsekošanu ar trešo pušu sīkfailiem vietnēs pārlūkošanas laikā. Lai <ph name="LINK"/>, pārejiet uz iestatījumiem.</translation>
@@ -1357,8 +1357,8 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3765588406864124894">9. pastkaste</translation>
 <translation id="3767485424735936570">Saskaņā ar administratora iestatīto politiku nav ieteicams kopēt un ielīmēt šo saturu šeit: <ph name="VM_NAME"/>.</translation>
 <translation id="3772211998634047851">Papīrs (biroja)</translation>
-<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu piezīmi lietotnē AI Wiz Keep, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
-<translation id="6473814193688111215">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, piemēram, AI Wiz droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana nesen <ph name="BEGIN_LINK"/>konstatēja kaitīgu programmatūru vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.</translation>
+<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu piezīmi lietotnē AI Wize Keep, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="6473814193688111215">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, piemēram, AI Wize droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana nesen <ph name="BEGIN_LINK"/>konstatēja kaitīgu programmatūru vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.</translation>
 <translation id="3780694243617746492">Izvades nodalījums</translation>
 <translation id="3781428340399460090">Spilgti rozā</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1371,7 +1371,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3799805948399000906">Tika pieprasīts fonts</translation>
 <translation id="3801265110651850478">Sūtīt pieprasījumu “Do Not Track” savā pārlūkošanas datplūsmā</translation>
 <translation id="380329542618494757">Vārds, uzvārds</translation>
-<translation id="4435991890010083520">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var jūs maldināt un pamudināt instalēt programmatūru vai atklāt kādu informāciju, piemēram, jūsu paroli, tālruņa numuru vai kredītkartes numuru. AI Wiz stingri iesaka doties atpakaļ. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="4435991890010083520">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var jūs maldināt un pamudināt instalēt programmatūru vai atklāt kādu informāciju, piemēram, jūsu paroli, tālruņa numuru vai kredītkartes numuru. AI Wize stingri iesaka doties atpakaļ. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="3807270098669886186">Telefonsakaru operatori</translation>
 <translation id="3807366285948165054">Attēla nobīde uz X ass</translation>
 <translation id="3807873520724684969">Tika bloķēts kaitīgs saturs.</translation>
@@ -1395,7 +1395,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3836246517890985658">Mazā virtuves tehnika</translation>
 <translation id="384315386171052386">Zivis un jūras veltes</translation>
 <translation id="3844725157150297127">RA1</translation>
-<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wiz dokumentu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wize dokumentu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="385051799172605136">Atpakaļ</translation>
 <translation id="3851830401766703401">Juridiskā izglītība</translation>
 <translation id="385489333361351399">Kameru un foto aprīkojums</translation>
@@ -1416,8 +1416,8 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3906954721959377182">Planšetdators</translation>
 <translation id="3909695131102177774"><ph name="LABEL"/> <ph name="ERROR"/></translation>
 <translation id="3910231615117880630">Uzzināt vairāk par iegulto saturu</translation>
-<translation id="5852873875468214161">Ja pārdomāsiet, jebkurā brīdī varēsiet atbilstoši mainīt AI Wiz iestatījumus</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Kā pārvaldīt savus datus:<ph name="END_BOLD"/> pārlūkā AI Wiz tiek automātiski dzēstas vietnes, kas ir glabātas ilgāk nekā 30 dienas. Ja kādu vietni apmeklējat atkārtoti, tā var atkal tikt iekļauta sarakstā. Jebkurā brīdī AI Wiz iestatījumos varat bloķēt vietni, lai tā vairs neieteiktu reklāmas, un izslēgt vietņu ieteiktās reklāmas.</translation>
+<translation id="5852873875468214161">Ja pārdomāsiet, jebkurā brīdī varēsiet atbilstoši mainīt AI Wize iestatījumus</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Kā pārvaldīt savus datus:<ph name="END_BOLD"/> pārlūkā AI Wize tiek automātiski dzēstas vietnes, kas ir glabātas ilgāk nekā 30 dienas. Ja kādu vietni apmeklējat atkārtoti, tā var atkal tikt iekļauta sarakstā. Jebkurā brīdī AI Wize iestatījumos varat bloķēt vietni, lai tā vairs neieteiktu reklāmas, un izslēgt vietņu ieteiktās reklāmas.</translation>
 <translation id="3921869355029467742">Ievadīt drošības kodu</translation>
 <translation id="3927932062596804919">Neatļaut</translation>
 <translation id="3930260846839546333">Rokassomas</translation>
@@ -1436,7 +1436,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="3950820424414687140">Pierakstīties</translation>
 <translation id="3953505489397572035">Šī ir parastā cena</translation>
 <translation id="3958057596965527988">4 x 4 collas</translation>
-<translation id="8475602291812563124">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, piemēram, AI Wiz droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana nesen <ph name="BEGIN_LINK"/>konstatēja pikšķerēšanu vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.<ph name="NEW_LINE"/>Dažkārt uzbrucēji apdraud pat vietnes, kuras parasti ir drošas. <ph name="BEGIN_ERROR_LINK"/>Informējiet mūs<ph name="END_ERROR_LINK"/>, ja uzskatāt, ka ir pieļauta kļūda un šī vietne nerada apdraudējumu.</translation>
+<translation id="8475602291812563124">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, piemēram, AI Wize droša pārlūkošana, lai aizsargātu jūs pārlūkošanas laikā. Droša pārlūkošana nesen <ph name="BEGIN_LINK"/>konstatēja pikšķerēšanu vietnē <ph name="SITE"/><ph name="END_LINK"/>, kas ir iegulta vietnē, kuru mēģināt apmeklēt.<ph name="NEW_LINE"/>Dažkārt uzbrucēji apdraud pat vietnes, kuras parasti ir drošas. <ph name="BEGIN_ERROR_LINK"/>Informējiet mūs<ph name="END_ERROR_LINK"/>, ja uzskatāt, ka ir pieļauta kļūda un šī vietne nerada apdraudējumu.</translation>
 <translation id="3961148744525529027">Maksājumu apstrādātāja lapa ir līdz pusei atvērta</translation>
 <translation id="3962859241508114581">Iepriekšējais ieraksts</translation>
 <translation id="3963721102035795474">Lasītāja režīms</translation>
@@ -1468,11 +1468,11 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4040350669425716613">Koledžas un universitātes</translation>
 <translation id="4047351652147966654">18 x 24 collas</translation>
 <translation id="404831776305217138">Paplašinājuma ar ID “<ph name="EXTENSION_ID"/>” atjaunināšanas vietrādis URL nav derīgs vai satur neatbalstītu shēmu. Atbalstītās shēmas ir <ph name="HTTP_SCHEME"/>, <ph name="HTTPS_SCHEME"/> un <ph name="FILE_SCHEME"/>.</translation>
-<translation id="2635033286761217583">Jūs varēsiet izmantot šo adresi AI Wiz produktos.</translation>
-<translation id="336808635693308470">Pārlūkā AI Wiz tiek mēģināts automātiski rediģēt maksājuma veidus.</translation>
+<translation id="2635033286761217583">Jūs varēsiet izmantot šo adresi AI Wize produktos.</translation>
+<translation id="336808635693308470">Pārlūkā AI Wize tiek mēģināts automātiski rediģēt maksājuma veidus.</translation>
 <translation id="405399507749852140">Saņemiet paziņojumus, ja kādā vietnē tiek konstatēts cenas kritums.</translation>
 <translation id="4056223980640387499">Sēpija</translation>
-<translation id="4161619938555288542">Ļaujiet AI Wiz palīdzēt jums atrast atlaides jūsu groziem</translation>
+<translation id="4161619938555288542">Ļaujiet AI Wize palīdzēt jums atrast atlaides jūsu groziem</translation>
 <translation id="406358100705415968">Aizsargaprīkojums darba drošībai</translation>
 <translation id="4063924980214801036">Izmantojiet ierīces atbloķēšanu, lai ātrāk apstiprinātu kartes</translation>
 <translation id="4065659219963895623">Restorāni</translation>
@@ -1526,7 +1526,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4150099059797363385">Ķīniešu aploksne 4</translation>
 <translation id="4151403195736952345">Izmantot globālo noklusējuma vērtību (noteikt)</translation>
 <translation id="4152318981910038897">{COUNT,plural, =1{1. lapa}zero{{COUNT}. lapa}one{{COUNT}. lapa}other{{COUNT}. lapa}}</translation>
-<translation id="6923879007831202776">Turpmāk pārlūkā AI Wiz pirms maksājuma veida informācijas aizpildīšanas tiks pārbaudīta jūsu identitāte. To varat jebkurā laikā atspējot sadaļā <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="6923879007831202776">Turpmāk pārlūkā AI Wize pirms maksājuma veida informācijas aizpildīšanas tiks pārbaudīta jūsu identitāte. To varat jebkurā laikā atspējot sadaļā <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
 <translation id="4159149286839604525">Tas nozīmē, ka lielākā daļa vietnes funkciju darbosies, taču jūsu aizsardzības līmenis būs zemāks.</translation>
 <translation id="4159784952369912983">Violets</translation>
 <translation id="4165986682804962316">Vietnes iestatījumi</translation>
@@ -1542,7 +1542,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4177501066905053472">Reklāmu tēmas</translation>
 <translation id="4179515394835346607"><ph name="ROW_NAME"/>: <ph name="ROW_CONTENT"/></translation>
 <translation id="4186035307311647330">Atcelt cenas izsekošanu</translation>
-<translation id="9150836098508392713">Poga “Skatīt AI Wiz padomus”. Aktivizējiet, lai uzzinātu par AI Wiz funkcijām.</translation>
+<translation id="9150836098508392713">Poga “Skatīt AI Wize padomus”. Aktivizējiet, lai uzzinātu par AI Wize funkcijām.</translation>
 <translation id="4195643157523330669">Atvērt jaunā cilnē</translation>
 <translation id="4196861286325780578">&amp;Atcelt pārvietošanas atsaukšanu</translation>
 <translation id="4199637363739172710">Pulksteņi</translation>
@@ -1563,7 +1563,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="422722221769396062">Restorānu piegādes pakalpojumi</translation>
 <translation id="4230204356098880324">Var pieprasīt atļauju izmantot kameru un mainīt tās pozīciju</translation>
 <translation id="4231448684371260244">8 x 13 collas</translation>
-<translation id="2706343222967082402">Pārlūkā AI Wiz 30 dienu laikā automātiski tiek dzēstas tēmas un vietnes, kurās tiek ieteiktas reklāmas. Varat arī bloķēt konkrētas tēmas un vietnes, kas jums nepatīk.</translation>
+<translation id="2706343222967082402">Pārlūkā AI Wize 30 dienu laikā automātiski tiek dzēstas tēmas un vietnes, kurās tiek ieteiktas reklāmas. Varat arī bloķēt konkrētas tēmas un vietnes, kas jums nepatīk.</translation>
 <translation id="4235360514405112390">Derīgs</translation>
 <translation id="4239799716689808527">Etiķešu papīrs</translation>
 <translation id="4242380780309416996">Aploksne (augsta gramāža)</translation>
@@ -1606,7 +1606,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4305666528087210886">Jūsu failam nevarēja piekļūt</translation>
 <translation id="4306529830550717874">Vai saglabāt adresi?</translation>
 <translation id="4306812610847412719">starpliktuve</translation>
-<translation id="4270648948919210881">Šī politika tiek ignorēta, jo lietotājs nav saistīts. Lai šī politika tiktu lietota, pārlūks AI Wiz un profils ir jāpārvalda administratora konsolē vienā organizācijā.</translation>
+<translation id="4270648948919210881">Šī politika tiek ignorēta, jo lietotājs nav saistīts. Lai šī politika tiktu lietota, pārlūks AI Wize un profils ir jāpārvalda administratora konsolē vienā organizācijā.</translation>
 <translation id="4310070645992025887">Meklēt jūsu ceļos</translation>
 <translation id="4310496734563057511">Ja šo ierīci izmanto arī citas personas, varat ieslēgt Windows Hello, lai tiktu pārbaudīta jūsu identitāte ikreiz, kad izmantojat saglabātu paroli.</translation>
 <translation id="4312613361423056926">B2</translation>
@@ -1626,9 +1626,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4333295216031073611">Iepirkumu saraksts</translation>
 <translation id="4333561522337981382">Pārvaldīt logus visos jūsu displejos</translation>
 <translation id="4336219115486912529">{COUNT,plural, =1{Derīguma termiņš beigsies rīt}zero{Derīguma termiņš beigsies pēc # dienām}one{Derīguma termiņš beigsies pēc # dienas}other{Derīguma termiņš beigsies pēc # dienām}}</translation>
-<translation id="5792122559159836842">Šī reklāma izmantoja pārāk daudz resursu jūsu ierīcē, tādēļ AI Wiz to noņēma.</translation>
+<translation id="5792122559159836842">Šī reklāma izmantoja pārāk daudz resursu jūsu ierīcē, tādēļ AI Wize to noņēma.</translation>
 <translation id="4340810192899866471">Importēt no JSON formāta</translation>
-<translation id="6116812392674177288">Šo datoru nepārvalda uzņēmums, tāpēc politika var automātiski instalēt tikai tos paplašinājumus, kas tiek mitināti AI Wiz interneta veikalā. AI Wiz interneta veikala atjauninājumu URL: <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6116812392674177288">Šo datoru nepārvalda uzņēmums, tāpēc politika var automātiski instalēt tikai tos paplašinājumus, kas tiek mitināti AI Wize interneta veikalā. AI Wize interneta veikala atjauninājumu URL: <ph name="CWS_UPDATE_URL"/>.</translation>
 <translation id="4348834659292907206">Savienojums ar vietni <ph name="SITE"/> nav drošs</translation>
 <translation id="4349365535725594680">Nevar kopīgot konfidenciālu saturu</translation>
 <translation id="4349810866125026513">Tomēr augšupielādēt</translation>
@@ -1643,7 +1643,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="437040971055499437">Rodas ar drošību saistīts notikums</translation>
 <translation id="4371591986692297148">neaktīva</translation>
 <translation id="4372948949327679948">Tika gaidīta vērtība <ph name="VALUE_TYPE"/>.</translation>
-<translation id="7617743757131201121">Varat atkārtoti pievienot vienumu, ja vēlaties to atkal iekļaut to tēmu grupā, kuras pārlūks AI Wiz var izmantot jūsu interešu noteikšanai</translation>
+<translation id="7617743757131201121">Varat atkārtoti pievienot vienumu, ja vēlaties to atkal iekļaut to tēmu grupā, kuras pārlūks AI Wize var izmantot jūsu interešu noteikšanai</translation>
 <translation id="437620492464254965">Durvis un logi</translation>
 <translation id="4377125064752653719">Jūs mēģinājāt sasniegt <ph name="DOMAIN"/>, bet izdevējs atsauca servera uzrādīto sertifikātu. Tas nozīmē, ka servera uzrādītie drošības akreditācijas dati itin nemaz nav uzticami. Iespējams, jūs sazināties ar uzbrucēju.</translation>
 <translation id="4378154925671717803">Tālrunis</translation>
@@ -1671,12 +1671,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="443673843213245140">Starpniekservera lietošana ir atspējota, bet ir norādīta atklāta starpniekservera konfigurācija.</translation>
 <translation id="4438821706955556403">Parastā cena</translation>
 <translation id="4441832193888514600">Ignorēta, jo šo politiku var iestatīt tikai kā mākoņa lietotāja politiku.</translation>
-<translation id="7615139038297294584">Poga “Pārvaldīt vietnes iestatījumus”. Aktivizējiet, lai AI Wiz iestatījumos pārvaldītu atļaujas un vietnēs glabātos datus.</translation>
+<translation id="7615139038297294584">Poga “Pārvaldīt vietnes iestatījumus”. Aktivizējiet, lai AI Wize iestatījumos pārvaldītu atļaujas un vietnēs glabātos datus.</translation>
 <translation id="4451135742916150903">Var pieprasīt atļauju veidot savienojumu ar HID ierīcēm</translation>
 <translation id="4451684391620232683">Lietotājam rādītais teksts:</translation>
-<translation id="8416018650396907203">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. Lai aizsargātu kontus, AI Wiz paroļu pārvaldnieks iesaka pārbaudīt saglabātās paroles.</translation>
+<translation id="8416018650396907203">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. Lai aizsargātu kontus, AI Wize paroļu pārvaldnieks iesaka pārbaudīt saglabātās paroles.</translation>
 <translation id="4464826014807964867">Vietnes ar informāciju no jūsu organizācijas</translation>
-<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Ieslēdziet uzlaboto aizsardzību<ph name="END_ENHANCED_PROTECTION_LINK"/>, lai saņemtu AI Wiz augstāko drošības līmeni</translation>
+<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Ieslēdziet uzlaboto aizsardzību<ph name="END_ENHANCED_PROTECTION_LINK"/>, lai saņemtu AI Wize augstāko drošības līmeni</translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>. <ph name="LEARN_MORE_TEXT"/></translation>
 <translation id="4476953670630786061">Šī veidlapa nav droša. Automātiskā aizpilde ir izslēgta.</translation>
 <translation id="4477350412780666475">Nākamais ieraksts</translation>
@@ -1685,23 +1685,23 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="448363931695049633">Picērijas</translation>
 <translation id="4489023393592172404">Aploksne Kaku 4</translation>
 <translation id="4490717597759821841">A7</translation>
-<translation id="3966104135245031874">Šifrēt sinhronizētās paroles, izmantojot jūsu AI Wiz konta datus</translation>
+<translation id="3966104135245031874">Šifrēt sinhronizētās paroles, izmantojot jūsu AI Wize konta datus</translation>
 <translation id="4493480324863638523">Nederīgs URL. Vietrādim URL ir jābūt ar standarta shēmu, piemēram, “http://example.com” vai “https://example.com”.</translation>
-<translation id="7622628059331736328">Varat skatīt reklāmu tēmas iestatījumos un bloķēt tēmas, ko nevēlaties atļaut kopīgot ar vietnēm. AI Wiz arī regulāri dzēš reklāmu tēmas, kas ir vecākas par četrām nedēļām.</translation>
+<translation id="7622628059331736328">Varat skatīt reklāmu tēmas iestatījumos un bloķēt tēmas, ko nevēlaties atļaut kopīgot ar vietnēm. AI Wize arī regulāri dzēš reklāmu tēmas, kas ir vecākas par četrām nedēļām.</translation>
 <translation id="4500587658229086076">nedrošs saturs</translation>
 <translation id="4506176782989081258">Validācijas kļūda: <ph name="VALIDATION_ERROR"/></translation>
 <translation id="4506599922270137252">Sazinieties ar sistēmas administratoru.</translation>
 <translation id="450710068430902550">Kopīgošana ar administratoru</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai tulkotu šo lapu, izmantojot AI Wiz tulkotāju, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai tulkotu šo lapu, izmantojot AI Wize tulkotāju, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
 <translation id="4514308731478712184">Izslēgt funkciju Meklēšanas ceļi</translation>
-<translation id="4892470328555495647">Kartes un adreses tiek iegūtas no AI Wiz un jūsu AI Wiz konta (<ph name="ACCOUNT_EMAIL"/>). Varat tās pārvaldīt <ph name="BEGIN_LINK"/>iestatījumos<ph name="END_LINK"/>.</translation>
+<translation id="4892470328555495647">Kartes un adreses tiek iegūtas no AI Wize un jūsu AI Wize konta (<ph name="ACCOUNT_EMAIL"/>). Varat tās pārvaldīt <ph name="BEGIN_LINK"/>iestatījumos<ph name="END_LINK"/>.</translation>
 <translation id="4519245469315452746">Ierīces atjaunināšana tika pārtraukta.</translation>
 <translation id="4520048001084013693">Administratora politika bloķē šī faila lejupielādi.</translation>
 <translation id="4521157617044179198"><ph name="WIDTH"/> × <ph name="HEIGHT"/> mm (<ph name="ORIENTATION"/>)</translation>
 <translation id="4521280267704259211">Aploksne Monarch</translation>
 <translation id="4521916730539354575">Kreisā paplāte</translation>
 <translation id="4522570452068850558">Dati</translation>
-<translation id="6221032662362020209">Vai saglabāt IBAN AI Wiz kontā?</translation>
+<translation id="6221032662362020209">Vai saglabāt IBAN AI Wize kontā?</translation>
 <translation id="4523643381056109546">Izkārtnes</translation>
 <translation id="4524138615196389145">Turpmāk, izmantojot WebAuthn, apstipriniet kartes ātrāk</translation>
 <translation id="45243788195988825">Bloķēt tēmu <ph name="TOPIC"/></translation>
@@ -1732,14 +1732,14 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4600084978141515058">Vegāniskā virtuve</translation>
 <translation id="4602465984861132303">Boulings</translation>
 <translation id="4606870351894164739">Pamanāma</translation>
-<translation id="8338928872956435647">Skatīt AI Wiz padomus</translation>
+<translation id="8338928872956435647">Skatīt AI Wize padomus</translation>
 <translation id="460848736049414407">Bloķējis administrators</translation>
 <translation id="4610279718074907952">Šī vietne ir uzņēmuma <ph name="SET_OWNER"/> definētā grupā, un jūsu darbības ir redzamas visai grupai.</translation>
 <translation id="46128681529823442">Futbola aprīkojums</translation>
 <translation id="4617273035598175554">Grafikas un animācijas programmatūra</translation>
 <translation id="4619564267100705184">Apstiprināt identitāti</translation>
 <translation id="4622292761762557753">Tomēr pārsūtīt</translation>
-<translation id="6398431831028858802">Šo politiku nevar iestatīt AI Wiz profila līmenī, un tā tiks ignorēta.</translation>
+<translation id="6398431831028858802">Šo politiku nevar iestatīt AI Wize profila līmenī, un tā tiks ignorēta.</translation>
 <translation id="4628678854894591460">Brīvdienu piedāvājumi</translation>
 <translation id="4628948037717959914">Fotoattēls</translation>
 <translation id="4629370161347991046">A4x6</translation>
@@ -1805,12 +1805,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4754461935447132332">Nav atļauts nedrošām vietnēm</translation>
 <translation id="4756388243121344051">Vēsture</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
-<translation id="5644030191910182707">Piekļuves atslēga no AI Wiz profila</translation>
-<translation id="1015173303159845845">Jūs tikko ievadījāt savu paroli maldinošā vietnē. AI Wiz ieteikums jūsu kontu aizsardzībai: pārbaudiet saglabātās paroles.</translation>
+<translation id="5644030191910182707">Piekļuves atslēga no AI Wize profila</translation>
+<translation id="1015173303159845845">Jūs tikko ievadījāt savu paroli maldinošā vietnē. AI Wize ieteikums jūsu kontu aizsardzībai: pārbaudiet saglabātās paroles.</translation>
 <translation id="4758311279753947758">Pievienot kontaktinformāciju</translation>
 <translation id="4761104368405085019">Izmantot jūsu mikrofonu</translation>
 <translation id="4761326898079498987">Skatiet plašāku informāciju</translation>
-<translation id="1980929286541331105">Veikt AI Wiz drošības pārbaudi</translation>
+<translation id="1980929286541331105">Veikt AI Wize drošības pārbaudi</translation>
 <translation id="4763196677855776703">Pakalpojumu sniegšanas noteikumus nodrošina <ph name="URL"/></translation>
 <translation id="4764680219299728632">Plītis, plīts virsmas un cepeškrāsnis</translation>
 <translation id="4764776831041365478">Tīmekļa lapa vietnē <ph name="URL"/> var īslaicīgi nebūt pieejama, vai tā var būt pārvietota uz jaunu tīmekļa adresi.</translation>
@@ -1819,7 +1819,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4774055414220872623">Mākslas un amatniecības piederumi</translation>
 <translation id="477945296921629067">{NUM_POPUPS,plural, =1{Uznirstošais logs ir bloķēts}zero{# uznirstošie logi ir bloķēti}one{# uznirstošais logs ir bloķēts}other{# uznirstošie logi ir bloķēti}}</translation>
 <translation id="4780366598804516005">1. pastkaste</translation>
-<translation id="752757955979594126">Pārvaldīt AI Wiz kontu</translation>
+<translation id="752757955979594126">Pārvaldīt AI Wize kontu</translation>
 <translation id="4785689107224900852">Pāriet uz šo cilni</translation>
 <translation id="4786804728079074733">Volejbols</translation>
 <translation id="4787182171088676626">Aploksne (augstvērtīgs materiāls)</translation>
@@ -1839,7 +1839,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4816492930507672669">Ietilpināt lapā</translation>
 <translation id="4819347708020428563">Vai vēlaties rediģēt piezīmes noklusējuma skatā?</translation>
 <translation id="4822493756793346865">Parasto cenu pamatā ir informācija par pēdējām 90 dienām no veikaliem tīmeklī.</translation>
-<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wiz izklājlapu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu AI Wize izklājlapu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="4825507807291741242">Efektīva</translation>
 <translation id="4826588772550366629">kameru un mikrofonu</translation>
 <translation id="4827283332383516812">Kartes dzēšana</translation>
@@ -1847,14 +1847,14 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="483241715238664915">Ieslēgt brīdinājumus</translation>
 <translation id="4834250788637067901">Maksājumu veidi, piedāvājumi un adreses no pakalpojuma Brave Pay</translation>
 <translation id="4838327282952368871">Mierīga</translation>
-<translation id="1923748633297576468">Nākamreiz maksājiet ātrāk un aizsargājiet savu karti ar nozarē vadošo AI Wiz drošības risinājumu.</translation>
-<translation id="246176083348620700">Skatīt AI Wiz vēsturi</translation>
+<translation id="1923748633297576468">Nākamreiz maksājiet ātrāk un aizsargājiet savu karti ar nozarē vadošo AI Wize drošības risinājumu.</translation>
+<translation id="246176083348620700">Skatīt AI Wize vēsturi</translation>
 <translation id="484462545196658690">Autom.</translation>
 <translation id="484671803914931257">Saņemiet atlaides, iepērkoties pie <ph name="MERCHANT_NAME"/> un citiem tirgotājiem</translation>
 <translation id="484988093836683706">Izmantot ierīces atbloķēšanu</translation>
 <translation id="4850886885716139402">Skatīt</translation>
 <translation id="4852429274334674023">Operētājsistēmas</translation>
-<translation id="3418609161696289726">Ātri izveidot jaunu piezīmi lietotnē AI Wiz Keep</translation>
+<translation id="3418609161696289726">Ātri izveidot jaunu piezīmi lietotnē AI Wize Keep</translation>
 <translation id="485902285759009870">Notiek koda verificēšana…</translation>
 <translation id="4864406669374375262">Versijas virkne tika kopēta starpliktuvē</translation>
 <translation id="486459320933704969">Kādam no vecākiem vai aizbildnim ir jāapstiprina, ka jūs varat apmeklēt šo vietni.</translation>
@@ -1901,15 +1901,15 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4934780484581617878">Logu pārvaldība</translation>
 <translation id="4936134414789135531">Ievietoto elementu “<ph name="VALUE_NAME"/>” nevarēja atrast.</translation>
 <translation id="4936675324097895694">Finanses</translation>
-<translation id="712756862344567094">Poga “Notīrīt pārlūkošanas datus”. Aktivizējiet, lai AI Wiz iestatījumos notīrītu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus.</translation>
+<translation id="712756862344567094">Poga “Notīrīt pārlūkošanas datus”. Aktivizējiet, lai AI Wize iestatījumos notīrītu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus.</translation>
 <translation id="4943872375798546930">Nav rezultātu</translation>
 <translation id="4943933359574417591">Īsziņas un tūlītējā ziņojumapmaiņa</translation>
 <translation id="4950898438188848926">Ciļņu pārslēgšanas poga. Nospiediet ievadīšanas taustiņu, lai pārslēgtos uz atvērto cilni, <ph name="TAB_SWITCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>.</translation>
 <translation id="495170559598752135">Darbības</translation>
 <translation id="4953689047182316270">Atbildēt uz pieejamības notikumiem</translation>
-<translation id="2351178841237473727">Poga “Skatīt AI Wiz vēsturi”. Aktivizējiet, lai AI Wiz iestatījumos skatītu un pārvaldītu pārlūkošanas vēsturi.</translation>
+<translation id="2351178841237473727">Poga “Skatīt AI Wize vēsturi”. Aktivizējiet, lai AI Wize iestatījumos skatītu un pārvaldītu pārlūkošanas vēsturi.</translation>
 <translation id="4958444002117714549">Izvērst sarakstu</translation>
-<translation id="5398999400894437316">Varat veikt izmaiņas AI Wiz reklāmu konfidencialitātes iestatījumos.</translation>
+<translation id="5398999400894437316">Varat veikt izmaiņas AI Wize reklāmu konfidencialitātes iestatījumos.</translation>
 <translation id="4960203958361543136">Meklētājprogrammas izvēle</translation>
 <translation id="4964505745997821360">Veselības apdrošināšana</translation>
 <translation id="4967366744630699583">Rediģēt adresi</translation>
@@ -1932,7 +1932,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai pārvaldītu meklēšanu vietnēs un noklusējuma meklētājprogrammu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter</translation>
 <translation id="4998950033665438990">Vienpusējs</translation>
 <translation id="5001526427543320409">Trešo pušu sīkfaili</translation>
-<translation id="3676215163710610678">Iespējojot šo opciju, AI Wiz saglabās jūsu kartes informāciju šajā ierīcē, lai jūs varētu ātrāk aizpildīt veidlapas.</translation>
+<translation id="3676215163710610678">Iespējojot šo opciju, AI Wize saglabās jūsu kartes informāciju šajā ierīcē, lai jūs varētu ātrāk aizpildīt veidlapas.</translation>
 <translation id="5007392906805964215">Pārskatīt</translation>
 <translation id="5011561501798487822">Noteiktā valoda</translation>
 <translation id="5015510746216210676">Ierīces nosaukums:</translation>
@@ -1941,13 +1941,13 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5018422839182700155">Nevar atvērt šo lapu</translation>
 <translation id="5018802455907704660">16 x 20 collas</translation>
 <translation id="5019198164206649151">Dublējumu krātuve nav labā stāvoklī.</translation>
-<translation id="2013297594801702701">Saglabātās adreses varat izmantot dažādos AI Wiz produktos. Šī adrese tiks saglabāta jūsu AI Wiz kontā (<ph name="USER_EMAIL"/>).</translation>
+<translation id="2013297594801702701">Saglabātās adreses varat izmantot dažādos AI Wize produktos. Šī adrese tiks saglabāta jūsu AI Wize kontā (<ph name="USER_EMAIL"/>).</translation>
 <translation id="5020776957610079374">Pasaules mūzika</translation>
 <translation id="6516968977334148048">Cenu izsekošana, izmantojot pārlūku Brave</translation>
 <translation id="5023310440958281426">Administratora politiku pārbaude</translation>
 <translation id="5030338702439866405">Izsniedzis</translation>
 <translation id="503069730517007720">Programmatūrai <ph name="SOFTWARE_NAME"/> ir nepieciešams saknes sertifikāts, taču tas nav instalēts. Lai novērstu šo problēmu, tīkla administratoram ir jāapskata <ph name="SOFTWARE_NAME"/> konfigurācijas norādījumi. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="6425384654920630035">Par AI Wiz tulkotāju</translation>
+<translation id="6425384654920630035">Par AI Wize tulkotāju</translation>
 <translation id="503498442187459473"><ph name="HOST"/> vēlas lietot jūsu kameru un mikrofonu.</translation>
 <translation id="5035135400558156732">Dārzkopība</translation>
 <translation id="503574301575803523">SRA3</translation>
@@ -1977,7 +1977,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5087580092889165836">Pievienot karti</translation>
 <translation id="5088142053160410913">Ziņojums operatoram</translation>
 <translation id="5093232627742069661">Z-veida locījums</translation>
-<translation id="4906192414477726331">Šis serveris nevarēja pierādīt, ka šī ir vietne <ph name="DOMAIN"/>; tās drošības sertifikāts netiek uzskatīts par uzticamu AI Wiz sistēmā. Iespējams, tas ir nepareizas konfigurācijas dēļ vai arī kāds ir ļaunprātīgi izmantojis jūsu savienojumu.</translation>
+<translation id="4906192414477726331">Šis serveris nevarēja pierādīt, ka šī ir vietne <ph name="DOMAIN"/>; tās drošības sertifikāts netiek uzskatīts par uzticamu AI Wize sistēmā. Iespējams, tas ir nepareizas konfigurācijas dēļ vai arī kāds ir ļaunprātīgi izmantojis jūsu savienojumu.</translation>
 <translation id="5097099694988056070">Ierīces statistika, piemēram, CPU/RAM lietojums</translation>
 <translation id="5097468150760963273">27 x 39 collas</translation>
 <translation id="5097501891273180634">A2</translation>
@@ -2016,7 +2016,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5161506081086828129">9. izvades vieta</translation>
 <translation id="5164798890604758545">Tiek ievadīts teksts</translation>
 <translation id="2996889577833788807">Ievadiet kredītkartes <ph name="CREDIT_CARD"/> CVC kodu. Pēc apstiprināšanas kartes informācija no Brave konta tiks kopīgota ar šo vietni.</translation>
-<translation id="8515152881111950319">Varat zaudēt piekļuvi savam organizācijas kontam, vai jūsu identitāte var tikt nozagta. AI Wiz iesaka nekavējoties nomainīt paroli.</translation>
+<translation id="8515152881111950319">Varat zaudēt piekļuvi savam organizācijas kontam, vai jūsu identitāte var tikt nozagta. AI Wize iesaka nekavējoties nomainīt paroli.</translation>
 <translation id="5171045022955879922">Meklējiet vai ievadiet URL.</translation>
 <translation id="5172758083709347301">Ierīce</translation>
 <translation id="5177076414499237632">Skatīt informāciju par šīs lapas avotu un tēmu</translation>
@@ -2047,11 +2047,11 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5239623327352565343">Piekļuve atrašanās vietai ir atļauta</translation>
 <translation id="5242610955375133957">Sausa plēve</translation>
 <translation id="5242889659037569123">Bagāža un ceļošanas piederumi</translation>
-<translation id="8854897060240443467">Poga “Pārvaldīt AI Wiz kontu”. Aktivizējiet, lai AI Wiz kontā pārvaldītu informāciju, konfidencialitātes un drošības iestatījumus.</translation>
+<translation id="8854897060240443467">Poga “Pārvaldīt AI Wize kontu”. Aktivizējiet, lai AI Wize kontā pārvaldītu informāciju, konfidencialitātes un drošības iestatījumus.</translation>
 <translation id="5244732203286792411">Notiek ielāde…
     Tā var ilgt kādu brīdi.</translation>
 <translation id="5250209940322997802">“Izveidojiet savienojumu ar tīklu”</translation>
-<translation id="6055400808586511449">Uzzināt vairāk par AI Wiz funkcijām</translation>
+<translation id="6055400808586511449">Uzzināt vairāk par AI Wize funkcijām</translation>
 <translation id="5251803541071282808">Mākonis</translation>
 <translation id="5254043433801397071">Drukājamā satura optimizācija</translation>
 <translation id="5255690596502591079">Tomēr tvert</translation>
@@ -2084,7 +2084,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5306593769196050043">Abas lapas</translation>
 <translation id="5307166000025436103">Derīga</translation>
 <translation id="5308380583665731573">Pievienot</translation>
-<translation id="9017231970148712387">Varat veikt izmaiņas AI Wiz iestatījumos.</translation>
+<translation id="9017231970148712387">Varat veikt izmaiņas AI Wize iestatījumos.</translation>
 <translation id="5308689395849655368">Avāriju pārskatu izveide ir atspējota.</translation>
 <translation id="5310178588836736698">Bezceļu transportlīdzekļi</translation>
 <translation id="5314967030527622926">Bukletu veidotājs</translation>
@@ -2194,8 +2194,8 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5543722831081909240">Par 180 grādiem</translation>
 <translation id="555128936272638662">Mobilās un bezvadu ierīces</translation>
 <translation id="5551890439174915351">100 x 200 mm</translation>
-<translation id="6084314943327785510">Pārlūkā AI Wiz tiek periodiski pārbaudītas jūsu paroles, salīdzinot tās ar tiešsaistē publicētiem sarakstiem. Šo pārbaužu laikā paroles un lietotājvārdi ir šifrēti, lai neviens tos nevarētu lasīt, tostarp Brave.</translation>
-<translation id="4362225295386962644">Pārlūkā AI Wiz tiek parādīts brīdinājums, ja izmantojat paroli, kas ir publicēta tiešsaistē. To darot, jūsu paroles un lietotājvārdi tiek šifrēti, lai neviens tos nevarētu lasīt, tostarp Brave.</translation>
+<translation id="6084314943327785510">Pārlūkā AI Wize tiek periodiski pārbaudītas jūsu paroles, salīdzinot tās ar tiešsaistē publicētiem sarakstiem. Šo pārbaužu laikā paroles un lietotājvārdi ir šifrēti, lai neviens tos nevarētu lasīt, tostarp Brave.</translation>
+<translation id="4362225295386962644">Pārlūkā AI Wize tiek parādīts brīdinājums, ja izmantojat paroli, kas ir publicēta tiešsaistē. To darot, jūsu paroles un lietotājvārdi tiek šifrēti, lai neviens tos nevarētu lasīt, tostarp Brave.</translation>
 <translation id="5556459405103347317">Pārlādēt</translation>
 <translation id="5558083606899411167">Gaisa kondicionētāji</translation>
 <translation id="5558125320634132440">Šī vietne ir bloķēta, jo tajā var būt galvenokārt pieaugušajiem paredzēts saturs.</translation>
@@ -2208,7 +2208,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5570825185877910964">Aizsargāt kontu</translation>
 <translation id="5571083550517324815">Nevar saņemt sūtījumu šajā adresē. Atlasiet citu adresi.</translation>
 <translation id="5572434905385510939">22 x 28 collas</translation>
-<translation id="1254756632288991504">Lūdzu, palaidiet pārlūku AI Wiz un pierakstieties tajā, lai pārlūkā AI Wiz varētu pārbaudīt, vai jums ir atļauja piekļūt šai vietnei.</translation>
+<translation id="1254756632288991504">Lūdzu, palaidiet pārlūku AI Wize un pierakstieties tajā, lai pārlūkā AI Wize varētu pārbaudīt, vai jums ir atļauja piekļūt šai vietnei.</translation>
 <translation id="5578606540385219379">Pakalpojumu sniedzēji</translation>
 <translation id="557886905979275351">Skuvekļi</translation>
 <translation id="5580958916614886209">Pārbaudiet derīguma termiņa mēnesi un mēģiniet vēlreiz.</translation>
@@ -2283,7 +2283,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5725297205162868298">Saīsne nedrīkst sākties ar rakstzīmi @: “<ph name="SHORTCUT_NAME"/>”.</translation>
 <translation id="3006790309890592320">Brave iesaka atiestatīt jūsu paroli, ja izmantojāt to citās vietnēs.</translation>
 <translation id="5732392974455271431">Lai atbloķētu, vērsieties pie vecākiem</translation>
-<translation id="5110141686029759199">Poga “Izveidot veidlapu”. Aktivizējiet, lai pakalpojumā AI Wiz veidlapas ātri izveidotu jaunu veidlapu.</translation>
+<translation id="5110141686029759199">Poga “Izveidot veidlapu”. Aktivizējiet, lai pakalpojumā AI Wize veidlapas ātri izveidotu jaunu veidlapu.</translation>
 <translation id="5736165827969430182">Metāli un kalnrūpniecība</translation>
 <translation id="5576538372759072019">{NUM_CARDS,plural, =1{Kartes datu saglabāšana Brave kontā}zero{Karšu datu saglabāšana Brave kontā}one{Karšu datu saglabāšana Brave kontā}other{Karšu datu saglabāšana Brave kontā}}</translation>
 <translation id="5738385766833540397">Pārvaldiet, kā saņemt paziņojumus par izsekoto produktu cenu kritumu</translation>
@@ -2317,7 +2317,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="580241730938216256">Sākt atjaunināšanu</translation>
 <translation id="5803412860119678065">Vai vēlaties aizpildīt lauku ar informāciju “<ph name="CARD_DETAIL"/>”?</translation>
 <translation id="5804241973901381774">Atļaujas</translation>
-<translation id="5937482014241669139">Skatīt AI Wiz vēsturi</translation>
+<translation id="5937482014241669139">Skatīt AI Wize vēsturi</translation>
 <translation id="5808542072418270309">Simulācijas spēles</translation>
 <translation id="5810442152076338065">Savienojums ar domēnu <ph name="DOMAIN"/> ir šifrēts, izmantojot novecojušu šifra komplektu.</translation>
 <translation id="5813119285467412249">&amp;Pievienošanas atsaukuma atcelšana</translation>
@@ -2331,7 +2331,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="583281660410589416">Nezināms</translation>
 <translation id="5838278095973806738">Neievadiet šajā vietnē sensitīvu informāciju (piemēram, paroles vai kredītkartes), jo to var nozagt uzbrucēji.</translation>
 <translation id="5838732667866024867">Lai izpētītu cenu izmaiņas diagrammā, varat izmantot kreiso un labo bultiņu</translation>
-<translation id="7336369644051575343">Jūsu AI Wiz kontā: <ph name="ACCOUNT"/></translation>
+<translation id="7336369644051575343">Jūsu AI Wize kontā: <ph name="ACCOUNT"/></translation>
 <translation id="5841338463993781099">Vai saglabāt kontā?</translation>
 <translation id="5847181246682413476">Energoapgāde</translation>
 <translation id="5851548754964597211">Ciļņu saraksts</translation>
@@ -2347,7 +2347,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5873297634595728366">Dīzeļautomašīnas</translation>
 <translation id="5877831137320480913">Skaistums un fitness</translation>
 <translation id="5879989559903563723">Nav atļauta viesa režīmā</translation>
-<translation id="8967688963142514142">Pāriet uz AI Wiz drošības pārbaudi</translation>
+<translation id="8967688963142514142">Pāriet uz AI Wize drošības pārbaudi</translation>
 <translation id="5883861433316751031">Vai kontrolēt un pārprogrammēt MIDI ierīces?</translation>
 <translation id="5884465125445718607">Ķīniešu aploksne 6</translation>
 <translation id="5887400589839399685">Kartīte ir saglabāta</translation>
@@ -2402,9 +2402,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="5989320800837274978">Nav norādīti nedz fiksēti starpniekserveri, nedz .pac skripta URL.</translation>
 <translation id="5992691462791905444">Inženierijas Z-veida locījums</translation>
 <translation id="5992805036496113940">Skatīt reklāmu rādīšanai izmantoto informāciju</translation>
-<translation id="7409510288691071929">Pārvaldiet savu informāciju, konfidencialitāti un drošību savā AI Wiz kontā</translation>
-<translation id="3494641719937626561">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. Lai aizsargātu kontus, AI Wiz paroļu pārvaldnieks iesaka nekavējoties to nomainīt un pēc tam pārbaudīt saglabātās paroles.</translation>
-<translation id="4496834749307444910">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wiz droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja ļaunprātīgu programmatūru<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt.</translation>
+<translation id="7409510288691071929">Pārvaldiet savu informāciju, konfidencialitāti un drošību savā AI Wize kontā</translation>
+<translation id="3494641719937626561">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. Lai aizsargātu kontus, AI Wize paroļu pārvaldnieks iesaka nekavējoties to nomainīt un pēc tam pārbaudīt saglabātās paroles.</translation>
+<translation id="4496834749307444910">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wize droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja ļaunprātīgu programmatūru<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt.</translation>
 <translation id="6000758707621254961"><ph name="RESULT_COUNT"/> rezultāti vaicājumam “<ph name="SEARCH_TEXT"/>”</translation>
 <translation id="6002122790816966947">Jūsu ierīces</translation>
 <translation id="6005659677094197001">Vienlaidu</translation>
@@ -2442,8 +2442,8 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6051221802930200923">Pašlaik nevarat apmeklēt vietni <ph name="SITE"/>, jo tajā tiek izmantota sertifikātu piespraušana. Tā kā tīkla kļūdas un uzbrukumi parasti ir īslaicīgi, visticamāk, šī lapa vēlāk darbosies.</translation>
 <translation id="6051898664905071243">Lappušu skaits:</translation>
 <translation id="6052284303005792909">•</translation>
-<translation id="3284406940349582552">Saglabātās adreses varat izmantot dažādos AI Wiz produktos. Šī adrese ir saglabāta jūsu AI Wiz kontā (<ph name="ACCOUNT"/>).</translation>
-<translation id="5814871361966482530">Lai uzzinātu vairāk par to, kā AI Wiz tīklā tiek aizsargāti jūsu dati, skatiet mūsu konfidencialitātes politiku.</translation>
+<translation id="3284406940349582552">Saglabātās adreses varat izmantot dažādos AI Wize produktos. Šī adrese ir saglabāta jūsu AI Wize kontā (<ph name="ACCOUNT"/>).</translation>
+<translation id="5814871361966482530">Lai uzzinātu vairāk par to, kā AI Wize tīklā tiek aizsargāti jūsu dati, skatiet mūsu konfidencialitātes politiku.</translation>
 <translation id="6055888660316801977">Lapa ar akreditācijas datiem, kas neatbilst drošu maksājumu akreditācijas datiem</translation>
 <translation id="6055982527635883756">Aploksne (arhīva)</translation>
 <translation id="6058977677006700226">Vai vēlaties izmantot kartes visās savās ierīcēs?</translation>
@@ -2464,7 +2464,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6105460996796456817">Izveidot vietni</translation>
 <translation id="6106989379647458772">Tīmekļa lapa <ph name="PAGE"/> var būt īslaicīgi nepieejama, vai tā var būt pārvietota uz jaunu tīmekļa adresi.</translation>
 <translation id="6107012941649240045">Izsniegts</translation>
-<translation id="8233947174119245051">Jūsu AI Wiz kontam var būt citu veidu pārlūkošanas vēstures dati vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="8233947174119245051">Jūsu AI Wize kontam var būt citu veidu pārlūkošanas vēstures dati vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="6116338172782435947">Skatīt starpliktuvē kopēto tekstu un attēlus</translation>
 <translation id="6117833587752089929">Fotopapīrs (satinēts)</translation>
 <translation id="6118782133429281336">Avotu saraksts ir tukšs.</translation>
@@ -2495,7 +2495,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6177531123306197852">Aploksne C2</translation>
 <translation id="6180316780098470077">Intervāls starp atkārtotiem mēģinājumiem</translation>
 <translation id="6182972682129119950">A4x5</translation>
-<translation id="1713601041945301465">Pārlūkā AI Wiz tiek automātiski ierobežoti trešo pušu sīkfaili</translation>
+<translation id="1713601041945301465">Pārlūkā AI Wize tiek automātiski ierobežoti trešo pušu sīkfaili</translation>
 <translation id="61877208875190028">Sieviešu apģērbs</translation>
 <translation id="6194209731893739467">Skatiet visus savus izsekotos produktus šeit</translation>
 <translation id="6195163219142236913">Trešo pušu sīkfaili ir ierobežoti</translation>
@@ -2515,7 +2515,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6221892641068781024">Vienkāršotais skats</translation>
 <translation id="6222527803348563979">Rakstāmpapīrs</translation>
 <translation id="6224281071334553713">Dārgakmeņi un juvelierizstrādājumi</translation>
-<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wiz iestatījumos personalizētu pieejamības rīkus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wize iestatījumos personalizētu pieejamības rīkus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="6229196330202833460">Filmu un TV pārraižu straumēšana</translation>
 <translation id="6229649258872345286">Ceļojumi ģimenēm</translation>
 <translation id="6232271601416750929">Videi draudzīgi skaistumkopšanas produkti</translation>
@@ -2526,7 +2526,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6241121617266208201">Paslēpt ieteikumus</translation>
 <translation id="624499991300733384">Drukājamā satura salikšanas pakalpojums</translation>
 <translation id="6251906504834538140">{0,plural, =1{Faila pārvietošana ir bloķēta}zero{<ph name="FILE_COUNT"/> failu pārvietošana ir bloķēta}one{<ph name="FILE_COUNT"/> faila pārvietošana ir bloķēta}other{<ph name="FILE_COUNT"/> failu pārvietošana ir bloķēta}}</translation>
-<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai pārvaldītu pārlūkā AI Wiz lejupielādētos failus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter</translation>
+<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai pārvaldītu pārlūkā AI Wize lejupielādētos failus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter</translation>
 <translation id="6254436959401408446">Nav pietiekami daudz vietas atmiņā, lai atvērtu šo lapu</translation>
 <translation id="625463612687472648">Atsaukt atļauju</translation>
 <translation id="6259156558325130047">&amp;Pārkārtošanas atsaukuma atcelšana</translation>
@@ -2536,7 +2536,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6265794661083428563">Kopēt politikas <ph name="POLICY_NAME"/> vērtību</translation>
 <translation id="6266934640124581640">Gaiši zilganzaļa</translation>
 <translation id="6270066318535733958">Laivošana</translation>
-<translation id="1300170712564922349">Atsāciet meklēšanas ceļu, lai skatītu atbilstošās darbības savā AI Wiz vēsturē</translation>
+<translation id="1300170712564922349">Atsāciet meklēšanas ceļu, lai skatītu atbilstošās darbības savā AI Wize vēsturē</translation>
 <translation id="9136010393039243713">Brave atjauninājums</translation>
 <translation id="6279183038361895380">Lai tiktu parādīts kursors, nospiediet |<ph name="ACCELERATOR"/>|</translation>
 <translation id="628016388715774955">Tika atlasīta opcija Aizpildīt visu adresi</translation>
@@ -2563,7 +2563,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6319249456820053699">Kameras un videoierakstītāji</translation>
 <translation id="6321917430147971392">Sistēmas DNS iestatījumu pārbaude</translation>
 <translation id="6322182122604171028">Neizdevās izmantot Windows Hello</translation>
-<translation id="7962450223988560278">Iestatīt AI Wiz kā sistēmas noklusējuma pārlūku iOS iestatījumos</translation>
+<translation id="7962450223988560278">Iestatīt AI Wize kā sistēmas noklusējuma pārlūku iOS iestatījumos</translation>
 <translation id="6328639280570009161">Tīkla prognožu atspējošana</translation>
 <translation id="6328784461820205019">“Savienojums nav privāts”, “&lt;span class="error-code"&gt;NET::ERR_CERT_AUTHORITY_INVALID&lt;/span&gt;”, “&lt;span class="error-code"&gt;ERR_CERT_COMMON_NAME_INVALID&lt;/span&gt;”, “&lt;span class="error-code"&gt;NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM&lt;/span&gt;”, “&lt;span class="error-code"&gt;ERR_CERT_SYMANTEC_LEGACY&lt;/span&gt;” vai “SSL sertifikāta kļūda”</translation>
 <translation id="6328786501058569169">Šī vietne ir krāpnieciska</translation>
@@ -2623,7 +2623,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6427730057873428458">Abpusējs locījums</translation>
 <translation id="6428450836711225518">Verificējiet savu tālruņa numuru</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
-<translation id="7772223497488184427">Mainīt AI Wiz paroli</translation>
+<translation id="7772223497488184427">Mainīt AI Wize paroli</translation>
 <translation id="6431119592588449664">Pārskats ir augšupielādēts</translation>
 <translation id="6432297414176614592">Vairāk par reklāmu tēmām</translation>
 <translation id="6432831586648556868">Darba piedāvājumi pārdošanas un mārketinga nozarē</translation>
@@ -2652,7 +2652,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6472874020827012601">Audums (matēts)</translation>
 <translation id="647330291963761005">Notiek atjauninājumu instalēšana</translation>
 <translation id="6474220430271405609">Politikas pārbaudes</translation>
-<translation id="2252963430820803723">Jūsu apmeklētās vietnes var lūgt pārlūkam AI Wiz informāciju, kas var palīdzēt novērtēt reklāmu veiktspēju. Pārlūkā AI Wiz tiek aizsargāta jūsu konfidencialitāte, ierobežojot informāciju, ko vietnes var kopīgot cita ar citu.</translation>
+<translation id="2252963430820803723">Jūsu apmeklētās vietnes var lūgt pārlūkam AI Wize informāciju, kas var palīdzēt novērtēt reklāmu veiktspēju. Pārlūkā AI Wize tiek aizsargāta jūsu konfidencialitāte, ierobežojot informāciju, ko vietnes var kopīgot cita ar citu.</translation>
 <translation id="6476284679642588870">Pārvaldīt maksājumu veidus</translation>
 <translation id="6480864723214312258">Mājsaimniecības baterijas un akumulatori</translation>
 <translation id="6486200200930923183">Dokumentālās filmas</translation>
@@ -2672,7 +2672,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6518133107902771759">Verificēt</translation>
 <translation id="65203098586853226">Notiek tulkošana šādā valodu kombinācijā: <ph name="SOURCE"/>–<ph name="TARGET"/></translation>
 <translation id="6521745193039995384">Nav aktīva</translation>
-<translation id="7379829935006425840">Poga “Pārvaldīt pieejamības iestatījumus”. Aktivizējiet, lai AI Wiz iestatījumos personalizētu pieejamības rīkus.</translation>
+<translation id="7379829935006425840">Poga “Pārvaldīt pieejamības iestatījumus”. Aktivizējiet, lai AI Wize iestatījumos personalizētu pieejamības rīkus.</translation>
 <translation id="6529173248185917884">Septītais rullis</translation>
 <translation id="652937045869844725">Varat atļaut trešo pušu sīkfailus. Tas nozīmē, ka aizsardzības līmenis būs zemāks, taču pastāv lielāka iespēja, ka darbosies vietnes funkcijas.</translation>
 <translation id="6529602333819889595">&amp;Dzēšanas atsaukuma atcelšana</translation>
@@ -2689,7 +2689,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6557715786897013164">14 x 17 collas</translation>
 <translation id="6560786330438719938">Instalētās vai atinstalētās lietotnes un to izmantošanas biežums</translation>
 <translation id="6567084950885568327">MIDI ierīču vadība un pārprogrammēšana</translation>
-<translation id="3720758671413152948">Poga “Pārvaldīt maksājumu veidus”. Aktivizējiet, lai AI Wiz iestatījumos pārvaldītu savus maksājumu un kredītkaršu informāciju.</translation>
+<translation id="3720758671413152948">Poga “Pārvaldīt maksājumu veidus”. Aktivizējiet, lai AI Wize iestatījumos pārvaldītu savus maksājumu un kredītkaršu informāciju.</translation>
 <translation id="6569060085658103619">Jūs skatāt paplašinājumu lapu.</translation>
 <translation id="6569366777234823130">Drāmas</translation>
 <translation id="6573200754375280815">Divi caurumi labajā pusē</translation>
@@ -2704,7 +2704,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6596325263575161958">Šifrēšanas opcijas</translation>
 <translation id="6597665340361269064">Par 90 grādiem</translation>
 <translation id="6599642189720630047">Izsekotie produkti</translation>
-<translation id="5976895887103591798">Pārlūkā AI Wiz vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības.
+<translation id="5976895887103591798">Pārlūkā AI Wize vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības.
             <ph name="NEW_LINE"/>Ja vietnes funkcijas nedarbojas, <ph name="START_LINK"/>varat īslaicīgi atļaut trešo pušu sīkfailus<ph name="END_LINK"/>.</translation>
 <translation id="6611723696964473273">Ekonomikas ziņas</translation>
 <translation id="6612010098632894193">Tiešsaistes video</translation>
@@ -2714,12 +2714,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6628463337424475685"><ph name="ENGINE"/> meklēšana</translation>
 <translation id="6629652037942826935">Luksusa ceļojumi</translation>
 <translation id="6630043285902923878">Notiek USB ierīču meklēšana...</translation>
-<translation id="4945711024178085608">Poga “Pārvaldīt AI Wiz iestatījumus”. Aktivizējiet, lai apmeklētu AI Wiz iestatījumus</translation>
+<translation id="4945711024178085608">Poga “Pārvaldīt AI Wize iestatījumus”. Aktivizējiet, lai apmeklētu AI Wize iestatījumus</translation>
 <translation id="6630809736994426279">Uzbrucēji vietnē <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> var mēģināt jūsu Mac datorā instalēt bīstamas programmas, kas zog vai izdzēš informāciju (piemēram, fotoattēlus, paroles, ziņojumus un kredītkaršu datus). <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">Izglītība informātikas nozarē</translation>
 <translation id="6633476656216409494">Uzņēmējdarbības un produktivitātes programmatūra</translation>
-<translation id="2529518595693862042">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wiz droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja kaitīgu programmatūru<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt.</translation>
+<translation id="2529518595693862042">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wize droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja kaitīgu programmatūru<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt.</translation>
 <translation id="6643016212128521049">Notīrīt</translation>
 <translation id="6645291930348198241">Piekļūt sīkfailiem un vietnes datiem</translation>
 <translation id="6645478838938543427">Paziņojums par cenas kritumu tiks nosūtīts uz adresi <ph name="EMAIL_ADDRESS"/>.</translation>
@@ -2748,9 +2748,9 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6688743156324860098">Atjaunināt…</translation>
 <translation id="6688775486821967877">Virtuālā karte pašlaik nav pieejama. Lūdzu, vēlāk mēģiniet vēlreiz.</translation>
 <translation id="6689249931105087298">Relatīva, ar melno punktu saspiešanu</translation>
-<translation id="5406652219015697259">Pārlūkprogrammā AI Wiz tiek piedāvāts saglabāt jūsu kartes Brave kontā, jo esat pierakstījies. Varat mainīt šo darbību iestatījumos. Kartes īpašnieka vārds tiek iegūts no jūsu konta.</translation>
+<translation id="5406652219015697259">Pārlūkprogrammā AI Wize tiek piedāvāts saglabāt jūsu kartes Brave kontā, jo esat pierakstījies. Varat mainīt šo darbību iestatījumos. Kartes īpašnieka vārds tiek iegūts no jūsu konta.</translation>
 <translation id="6691397311652656001">Atbrīvojiet vismaz <ph name="REQUIRED_FREE_DISK_SPACE"/> vietas</translation>
-<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai atrastu savu ierīci AI Wiz kontā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai atrastu savu ierīci AI Wize kontā, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="6698381487523150993">Izveidots:</translation>
 <translation id="67007264085648978">Laika skalas slīdnis</translation>
 <translation id="6702919718839027939">Prezentācija</translation>
@@ -2786,7 +2786,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6775759552199460396">JIS B2</translation>
 <translation id="4302311572898487420">Brave paroļu pārvaldniekam ir nepieciešama piekļuve MacOS sistēmai Keychain</translation>
 <translation id="6784045420901191374">Komerciāli aizdevumi</translation>
-<translation id="8425450156395369987">Jebkurā brīdī AI Wiz iestatījumos varat mainīt meklētājprogrammu.</translation>
+<translation id="8425450156395369987">Jebkurā brīdī AI Wize iestatījumos varat mainīt meklētājprogrammu.</translation>
 <translation id="6786145470008421571">Aploksne (6 x 9 collas)</translation>
 <translation id="67862343314499040">Violeta</translation>
 <translation id="6786747875388722282">Paplašinājumi</translation>
@@ -2821,7 +2821,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6832753933931306326">Veidlapa tika aizpildīta</translation>
 <translation id="6841864657731852591">Dobspiedes cilindrs</translation>
 <translation id="6842196666980060516">184 x 260 mm</translation>
-<translation id="976643339176907534">Poga “Pārvaldīt drošības iestatījumus”. Aktivizējiet, lai AI Wiz iestatījumos pārvaldītu funkciju “Droša pārlūkošana” un citas iespējas.</translation>
+<translation id="976643339176907534">Poga “Pārvaldīt drošības iestatījumus”. Aktivizējiet, lai AI Wize iestatījumos pārvaldītu funkciju “Droša pārlūkošana” un citas iespējas.</translation>
 <translation id="6852204201400771460">Vai atkārtoti ielādēt lietotni?</translation>
 <translation id="6857776781123259569">Pārvaldīt paroles…</translation>
 <translation id="6858034839887287663">A2x4</translation>
@@ -2834,12 +2834,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6873456682041376666">Augšējā paplāte</translation>
 <translation id="6874604403660855544">&amp;Atcelt pievienošanas atsaukšanu</translation>
 <translation id="6880941331070119097">Augstas cenas opcija</translation>
-<translation id="5856252669085142737">Ātri izveidojiet jaunu AI Wiz dokumentu.</translation>
+<translation id="5856252669085142737">Ātri izveidojiet jaunu AI Wize dokumentu.</translation>
 <translation id="6882210908253838664">Ja vietne nedarbojas, varat mēģināt piešķirt tai pagaidu atļauju izmantot trešo pušu sīkfailus. <ph name="BEGIN_LINK"/>Uzziniet vairāk<ph name="END_LINK"/>.</translation>
 <translation id="6883221904761970440">Ir aizvērta drošu maksājumu akreditācijas datu autentifikācijas lapa</translation>
 <translation id="6884662655240309489">1. izmērs</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/>: <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave vienkāršoja šo lapu, lai atvieglotu lasīšanu. AI Wiz izguva sākotnējo lapu, izmantojot nedrošu savienojumu.</translation>
+<translation id="7265969755975834932">Brave vienkāršoja šo lapu, lai atvieglotu lasīšanu. AI Wize izguva sākotnējo lapu, izmantojot nedrošu savienojumu.</translation>
 <translation id="6890443033788248019">Vai atļaut piekļuvi atrašanās vietai?</translation>
 <translation id="6890531741535756070">Jūs izvēlējāties veikt verifikāciju ar <ph name="DEVICE_LABEL"/> tīmekļa vietnēs, kas izmanto <ph name="PROVIDER_ORIGIN"/> pakalpojumus. Šis pakalpojumu sniedzējs, iespējams, ir saglabājis informāciju par jūsu maksājuma veidu, un jūs varat <ph name="BEGIN_LINK"/>pieprasīt šīs informācijas dzēšanu<ph name="END_LINK"/>.</translation>
 <translation id="6890956352250146925">Sīkfailu un vietņu datu opcijas</translation>
@@ -2857,7 +2857,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6917795328362592458">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. Lai aizsargātu kontus, Paroļu pārvaldnieks iesaka pārbaudīt saglabātās paroles.</translation>
 <translation id="6925267999184670015">B+ (Ziemeļamerika)</translation>
 <translation id="692638818576287323">Komerciāli transportlīdzekļi</translation>
-<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>Jūsu noklusējuma meklētājprogramma ļauj veikt meklēšanu tīmeklī un nodrošina AI Wiz funkcijas<ph name="END_BOLD"/>, piemēram, meklēšanu adreses joslā un pēc attēliem tīmekļa lapās. Ja jūsu meklētājprogramma neatbalsta kādu funkciju, iespējams, šī funkcija nebūs pieejama.</translation>
+<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>Jūsu noklusējuma meklētājprogramma ļauj veikt meklēšanu tīmeklī un nodrošina AI Wize funkcijas<ph name="END_BOLD"/>, piemēram, meklēšanu adreses joslā un pēc attēliem tīmekļa lapās. Ja jūsu meklētājprogramma neatbalsta kādu funkciju, iespējams, šī funkcija nebūs pieejama.</translation>
 <translation id="6722453239914327220">Šis vārds ir no jūsu Brave konta</translation>
 <translation id="6935082727755903526">Darba piedāvājumi grāmatvedības un finanšu jomā</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>. Dažas vietnes nākamā apmeklējuma laikā, iespējams, tiks ielādētas lēnāk.</translation>
@@ -2874,7 +2874,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="6954049078461159956">Hokejs</translation>
 <translation id="695582302419398462">Kartons (divslāņu)</translation>
 <translation id="6957887021205513506">Šķiet, ka servera sertifikāts ir viltojums.</translation>
-<translation id="774679539085757206">Pārvaldīt AI Wiz konfidencialitātes iestatījumus AI Wiz kontā</translation>
+<translation id="774679539085757206">Pārvaldīt AI Wize konfidencialitātes iestatījumus AI Wize kontā</translation>
 <translation id="695864015080711809">Vakances un izglītība</translation>
 <translation id="6961733224437895943">Mājokļa apdrošināšana</translation>
 <translation id="6961844873822989059">Var pieprasīt atļauju izmantot jūsu ierīcē instalētos fontus</translation>
@@ -2889,7 +2889,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="696703987787944103">Perceptuāla</translation>
 <translation id="6967851206780867018">1 fails tika bloķēts ar saturu saistītu ierobežojumu dēļ.</translation>
 <translation id="6970885655016700774">Audums (arhīva)</translation>
-<translation id="8485851762575764192">Ātri izveidot jaunu AI Wiz prezentāciju pakalpojumā Prezentācijas</translation>
+<translation id="8485851762575764192">Ātri izveidot jaunu AI Wize prezentāciju pakalpojumā Prezentācijas</translation>
 <translation id="6972629891077993081">HID ierīces</translation>
 <translation id="6973656660372572881">Ir norādīti gan fiksēti starpniekserveri, gan .pac skripta URL.</translation>
 <translation id="6973988895180423160">3,5 x 5 collas</translation>
@@ -2917,12 +2917,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="702146556168549005">Jūsu apmeklēto lapu vietrāži URL tiek nosūtīti uz pakalpojumu Brave Cloud vai trešajām pusēm, lai veiktu analīzi. Piemēram, šie vietrāži var tikt pārmeklēti, lai konstatētu nedrošas vietnes vai filtrētu vietnes, pamatojoties uz administratora iestatītajām kārtulām.</translation>
 <translation id="8683151724374457021">Šī vietne nosaka jūsu intereses un pēc tam iesaka reklāmas citām vietnēm. Turklāt šī vietne iegūst informāciju par jūsu reklāmu tēmām no pārlūka Brave, lai rādītu jums atbilstošākas reklāmas.</translation>
 <translation id="7023162328967545559">Administratora brīdinājums</translation>
-<translation id="7613812024276037086">Pārlūkā AI Wiz ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wiz droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja pikšķerēšanu<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt. Pikšķerēšanas vietnes uzdodas par citām vietnēm, lai jūs maldinātu.<ph name="NEW_LINE"/>Dažkārt uzbrucēji apdraud pat vietnes, kuras parasti ir drošas. <ph name="BEGIN_ERROR_LINK"/>Informējiet mūs<ph name="END_ERROR_LINK"/>, ja uzskatāt, ka ir pieļauta kļūda un šī vietne nerada apdraudējumu.</translation>
+<translation id="7613812024276037086">Pārlūkā AI Wize ir iebūvētas drošības funkcijas, lai jūs aizsargātu pārlūkošanas laikā, piemēram, AI Wize droša pārlūkošana — šī funkcija <ph name="BEGIN_LINK"/>nesen konstatēja pikšķerēšanu<ph name="END_LINK"/> vietnē, kuru mēģināt apmeklēt. Pikšķerēšanas vietnes uzdodas par citām vietnēm, lai jūs maldinātu.<ph name="NEW_LINE"/>Dažkārt uzbrucēji apdraud pat vietnes, kuras parasti ir drošas. <ph name="BEGIN_ERROR_LINK"/>Informējiet mūs<ph name="END_ERROR_LINK"/>, ja uzskatāt, ka ir pieļauta kļūda un šī vietne nerada apdraudējumu.</translation>
 <translation id="7029809446516969842">Paroles</translation>
 <translation id="7030164307377592766">mainīt maksājumu veidu aizpildes iestatījumus</translation>
 <translation id="7030436163253143341">Sertifikāts nav derīgs</translation>
 <translation id="7031646650991750659">Kuras Brave Play lietotnes esat instalējis</translation>
-<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu sava AI Wiz konta konfidencialitātes iestatījumus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai pārvaldītu sava AI Wize konta konfidencialitātes iestatījumus, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="7043552168914147882">Izciļņa starpkarte</translation>
 <translation id="7044081119134178347">Ir atļauts šoreiz izmantot kameru</translation>
 <translation id="7048095965575426564">Fanfold (Eiropa)</translation>
@@ -2945,12 +2945,12 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="7081308185095828845">Šī funkcija jūsu ierīcē nav pieejama</translation>
 <translation id="7083258188081898530">9. paplāte</translation>
 <translation id="7086090958708083563">Augšupielādi pieprasīja lietotājs.</translation>
-<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wiz iestatījumos pārvaldītu atļaujas un datus, kas tiek glabāti vietnēs.</translation>
+<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wize iestatījumos pārvaldītu atļaujas un datus, kas tiek glabāti vietnēs.</translation>
 <translation id="7096341143397839437">E-pasta adrese: <ph name="EMAIL"/>.</translation>
 <translation id="7096937462164235847">Šīs vietnes identitāte nav verificēta.</translation>
 <translation id="7101893872976785596">Šausmu filmas</translation>
 <translation id="7102079138917191645">Būvniecība un apsaimniekošana</translation>
-<translation id="6793825086874189463">Spēlēt AI Wiz dinozaura spēli</translation>
+<translation id="6793825086874189463">Spēlēt AI Wize dinozaura spēli</translation>
 <translation id="7102760431686146931">Virtuves un galda piederumi</translation>
 <translation id="7105998430540165694">Piekļuves atslēga no iCloud Keychain</translation>
 <translation id="7106762743910369165">Pārlūku pārvalda jūsu organizācija</translation>
@@ -3005,7 +3005,7 @@ Pretējā gadījumā šī iespēja būtu liegta saskaņā ar jūsu konfidenciali
 <translation id="719464814642662924">Visa</translation>
 <translation id="7199278868241956094">Oficio</translation>
 <translation id="7201591969684833065">Administrators var redzēt:</translation>
-<translation id="2540471381262404386">Iestatīt AI Wiz kā sistēmas noklusējuma pārlūku</translation>
+<translation id="2540471381262404386">Iestatīt AI Wize kā sistēmas noklusējuma pārlūku</translation>
 <translation id="7207736436284129083">{COUNT,plural, =0{Nav}=1{1 piekļuves atslēga}zero{# piekļuves atslēgu}one{# piekļuves atslēga}other{# piekļuves atslēgas}}</translation>
 <translation id="7210863904660874423"><ph name="HOST_NAME"/> neatbilst drošības standartiem.</translation>
 <translation id="7210993021468939304">Linux darbība konteinerā; var instalēt un palaist Linux lietotnes konteinerā</translation>
@@ -3040,13 +3040,13 @@ Papildu informācija:
 <translation id="7273111226200291353">Jūsu lejupielādētie faili tiek nosūtīti uz Brave Cloud vai trešajām pusēm, lai veiktu analīzi. Piemēram, šie faili var tikt pārmeklēti, lai konstatētu, vai tajos ir sensitīvi dati vai ļaunprātīga programmatūra, un uzglabāti saskaņā ar uzņēmuma politikām, turklāt tie var būt redzami jūsu administratoram.</translation>
 <translation id="7275334191706090484">Pārvaldītās grāmatzīmes</translation>
 <translation id="7277998515889183784">Dekoratīvā kosmētika un sejas kopšanas līdzekļi</translation>
-<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai nomainītu AI Wiz konta paroli, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai nomainītu AI Wize konta paroli, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="7292031607255951991">Saņēmēja vārds</translation>
 <translation id="7298195798382681320">Ieteicams</translation>
 <translation id="7299471494012161875">Pievienotās perifērās attēlojuma ierīces</translation>
 <translation id="7300012071106347854">Kobalta zila</translation>
 <translation id="7304030187361489308">Augsts</translation>
-<translation id="244157907932852817">Pārvaldīt AI Wiz konta konfidencialitātes iestatījumus</translation>
+<translation id="244157907932852817">Pārvaldīt AI Wize konta konfidencialitātes iestatījumus</translation>
 <translation id="7305756307268530424">Sākt lēnāk</translation>
 <translation id="7308436126008021607">sinhronizācija fonā</translation>
 <translation id="7310392214323165548">Ierīce ļoti drīz tiks restartēta</translation>
@@ -3067,8 +3067,8 @@ Papildu informācija:
 <translation id="7353601530677266744">Komandrinda</translation>
 <translation id="7354880545102894991">Zemo izmaksu un pēdējā brīža ceļojumu piedāvājumi</translation>
 <translation id="7359588939039777303">Reklāmu rādīšana ir bloķēta.</translation>
-<translation id="7308957539693927108">Ja AI Wiz atradīs pieejamas atlaides, tās tiks rādītas norēķinoties.</translation>
-<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wiz iestatījumos pievienotu un pārvaldītu adreses.</translation>
+<translation id="7308957539693927108">Ja AI Wize atradīs pieejamas atlaides, tās tiks rādītas norēķinoties.</translation>
+<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wize iestatījumos pievienotu un pārvaldītu adreses.</translation>
 <translation id="7365849542400970216">Vai rādīt, kad jūs lietojat ierīci?</translation>
 <translation id="736592699917579616">Pārtika</translation>
 <translation id="7366117520888504990">198 x 275 mm</translation>
@@ -3077,7 +3077,7 @@ Papildu informācija:
 <translation id="7372526636730851647">Fotopapīrs (glancēts)</translation>
 <translation id="7372973238305370288">meklēšanas rezultāts</translation>
 <translation id="7374461526650987610">Protokolu apdarinātāji</translation>
-<translation id="3898257577441589237">Šīs problēmas iemesls ir sertifikāts, kuru jūs vai kāds cits ir instalējis jūsu ierīcē. Ir zināms, ka šis sertifikāts tiek izmantots tīklu pārraudzībai un pārtveršanai, un pārlūks AI Wiz tam neuzticas. Lai gan pastāv daži likumīgi pārraudzības gadījumi, piemēram, skolas vai uzņēmuma tīklā, pārlūks AI Wiz vēlas pārliecināties, ka esat par to informēts, pat ja nevarat to apturēt. Pārraudzība var notikt jebkurā pārlūkā vai lietojumprogrammā ar piekļuvi tīmeklim.</translation>
+<translation id="3898257577441589237">Šīs problēmas iemesls ir sertifikāts, kuru jūs vai kāds cits ir instalējis jūsu ierīcē. Ir zināms, ka šis sertifikāts tiek izmantots tīklu pārraudzībai un pārtveršanai, un pārlūks AI Wize tam neuzticas. Lai gan pastāv daži likumīgi pārraudzības gadījumi, piemēram, skolas vai uzņēmuma tīklā, pārlūks AI Wize vēlas pārliecināties, ka esat par to informēts, pat ja nevarat to apturēt. Pārraudzība var notikt jebkurā pārlūkā vai lietojumprogrammā ar piekļuvi tīmeklim.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{Nav atļauta neviena vietne}=1{Atļauta 1 vietne}zero{Atļautas # vietnes}one{Atļauta # vietne}other{Atļautas # vietnes}}</translation>
 <translation id="7375818412732305729">Tiek pievienots fails</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3114,14 +3114,14 @@ Papildu informācija:
 <translation id="7419106976560586862">Profila ceļš</translation>
 <translation id="7421067045979951561">protokolu apdarinātāji</translation>
 <translation id="7422347648202898039">Etiķešu papīrs (ar aizsardzības elementiem)</translation>
-<translation id="4814329941923406129">Poga “Pārvaldīt sīkfailus”. Aktivizējiet, lai AI Wiz iestatījumos pārvaldītu sīkfailu preferences.</translation>
+<translation id="4814329941923406129">Poga “Pārvaldīt sīkfailus”. Aktivizējiet, lai AI Wize iestatījumos pārvaldītu sīkfailu preferences.</translation>
 <translation id="7424421098814895617">Tika atlasīta opcija Dzēst adresi</translation>
 <translation id="7427366580982928791">Bērnu drošība internetā</translation>
 <translation id="7429429656042611765">Executive</translation>
-<translation id="288933326661929857">Verificējiet savu identitāti, lai AI Wiz varētu ievadīt maksājuma informāciju.</translation>
+<translation id="288933326661929857">Verificējiet savu identitāti, lai AI Wize varētu ievadīt maksājuma informāciju.</translation>
 <translation id="7437289804838430631">Pievienot kontaktinformāciju</translation>
 <translation id="7437490109271760224">Kāršu spēles</translation>
-<translation id="6591887805206070045">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var jūs maldināt un pamudināt instalēt kaitīgu programmatūru, kas ietekmē pārlūkošanu, piemēram, maina sākumlapu vai rāda papildu reklāmas jūsu apmeklētajās vietnēs. AI Wiz stingri iesaka doties atpakaļ, lai izvairītos no kaitējuma. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="6591887805206070045">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var jūs maldināt un pamudināt instalēt kaitīgu programmatūru, kas ietekmē pārlūkošanu, piemēram, maina sākumlapu vai rāda papildu reklāmas jūsu apmeklētajās vietnēs. AI Wize stingri iesaka doties atpakaļ, lai izvairītos no kaitējuma. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="7440140511386898319">Pārlūkošana bezsaistē</translation>
 <translation id="7441627299479586546">Politikas subjekts nav pareizs.</translation>
 <translation id="7441864845853794192">Izsmalcināti un īpaši ēdieni</translation>
@@ -3131,7 +3131,7 @@ Papildu informācija:
 <translation id="7445762425076701745">Nevar pilnībā apstiprināt servera identifikācijas datus, ar kuru esat savienots. Jums ir izveidots savienojums ar serveri, izmantojot nosaukumu, kas ir derīgs tikai jūsu tīklā, kam ārējā sertifikāta izdevējiestāde nekādā veidā nevar apstiprināt īpašumtiesības. Tā kā dažas sertifikāta izdevējiestādes tāpat izsniegs sertifikātus šādiem nosaukumiem, nav iespējams garantēt, ka jūs esat savienots ar vajadzīgo vietni, nevis uzbrucēju.</translation>
 <translation id="7447234474237738389">Ar apģērbu saistīti pakalpojumi</translation>
 <translation id="7447625772313191651"><ph name="NAME"/> (<ph name="WIDTH"/> x <ph name="HEIGHT"/> mm)</translation>
-<translation id="1548956355291859153">Poga “Sinhronizācijas pārvaldība”. Aktivizējiet, lai AI Wiz iestatījumos pārvaldītu, kāda informācija tiek sinhronizēta.</translation>
+<translation id="1548956355291859153">Poga “Sinhronizācijas pārvaldība”. Aktivizējiet, lai AI Wize iestatījumos pārvaldītu, kāda informācija tiek sinhronizēta.</translation>
 <translation id="7451311239929941790"><ph name="BEGIN_LINK"/>Uzzināt vairāk<ph name="END_LINK"/> par šo problēmu.</translation>
 <translation id="7454377933424667109">Mākoņa konts</translation>
 <translation id="7455133967321480974">Izmantot globālo noklusējumu (Bloķēt)</translation>
@@ -3156,7 +3156,7 @@ Papildu informācija:
 <translation id="749865518782565832">Santehnikas darbi</translation>
 <translation id="7501663406926337752">Šo vietni ir atzīmējusi jūsu organizācija</translation>
 <translation id="7501853161948120656">Izglītojoši materiāli</translation>
-<translation id="2957285558977211818">Pārlūkā AI Wiz <ph name="BEGIN_EMPHASIS"/>netiks saglabāta<ph name="END_EMPHASIS"/> šāda informācija:
+<translation id="2957285558977211818">Pārlūkā AI Wize <ph name="BEGIN_EMPHASIS"/>netiks saglabāta<ph name="END_EMPHASIS"/> šāda informācija:
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>jūsu pārlūkošanas vēsture;
             <ph name="LIST_ITEM"/>sīkfaili un vietņu dati;
@@ -3166,7 +3166,7 @@ Papildu informācija:
 <translation id="7508255263130623398">Atgrieztais politikas ierīces ID ir tukšs vai neatbilst pašreizējam ierīces ID.</translation>
 <translation id="7508577201115425418">Dokumentu un drukāšanas pakalpojumi</translation>
 <translation id="7508870219247277067">Avokado zaļa</translation>
-<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>Kā vietnes izmanto šos datus:<ph name="END_BOLD"/> vietnes pārlūkā AI Wiz var glabāt informāciju par jūsu interesēm. Piemēram, ja apmeklējat vietni, kurā sniegta informācija par trenēšanos maratona noskriešanai, var tikt pieņemts, ka jūs interesē skriešanas apavi. Ja vēlāk apmeklēsiet citu vietni, tajā var tikt rādīta skriešanas apavu reklāma, pamatojoties uz iepriekš apmeklētās vietnes izsecinātajām interesēm.</translation>
+<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>Kā vietnes izmanto šos datus:<ph name="END_BOLD"/> vietnes pārlūkā AI Wize var glabāt informāciju par jūsu interesēm. Piemēram, ja apmeklējat vietni, kurā sniegta informācija par trenēšanos maratona noskriešanai, var tikt pieņemts, ka jūs interesē skriešanas apavi. Ja vēlāk apmeklēsiet citu vietni, tajā var tikt rādīta skriešanas apavu reklāma, pamatojoties uz iepriekš apmeklētās vietnes izsecinātajām interesēm.</translation>
 <translation id="7510269639068718544">Kaķi</translation>
 <translation id="7511955381719512146">Iespējams, izmantotajā Wi-Fi tīklā tiks pieprasīts apmeklēt vietni <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/>.</translation>
 <translation id="7512685745044087310">Šai politikai nevar iestatīt vērtību “True”, un tā nevar būt obligāta, tāpēc politika tagad ir norādīta kā ieteicama.</translation>
@@ -3175,7 +3175,7 @@ Papildu informācija:
 <translation id="7518003948725431193">Šādā tīmekļa adresē netika atrasta neviena tīmekļa lapa: <ph name="URL"/></translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7521825010239864438">Sadaļa “<ph name="SECTION"/>” ir paslēpta</translation>
-<translation id="8552966873255887118">Varat to izmantot AI Wiz produktos.</translation>
+<translation id="8552966873255887118">Varat to izmantot AI Wize produktos.</translation>
 <translation id="7523408071729642236">Ražošana</translation>
 <translation id="7525804896095537619">Nosaukuma lauks nedrīkst būt tukšs.</translation>
 <translation id="7526934274050461096">Jūsu savienojums ar šo vietni nav privāts.</translation>
@@ -3201,16 +3201,16 @@ Papildu informācija:
 <translation id="7564667064360547717">Krekli un topi</translation>
 <translation id="7564680668369175887">Universāļi</translation>
 <translation id="7567204685887185387">Šis serveris nevarēja pierādīt, ka šī ir vietne <ph name="DOMAIN"/>; tās drošības sertifikāts, iespējams, ir izveidots krāpnieciski. Iespējams, tas ir nepareizas konfigurācijas dēļ vai arī kāds ir ļaunprātīgi izmantojis jūsu savienojumu.</translation>
-<translation id="8661288256654172117">Pārlūkā AI Wiz tiek mēģināts ievadīt jūsu paroli vietnē <ph name="APP_NAME"/>.</translation>
+<translation id="8661288256654172117">Pārlūkā AI Wize tiek mēģināts ievadīt jūsu paroli vietnē <ph name="APP_NAME"/>.</translation>
 <translation id="7569490014721427265">Golfs</translation>
 <translation id="7569983096843329377">Melna</translation>
 <translation id="7574998639136359461">Ziemas sporta veidu aprīkojums</translation>
 <translation id="7575207903026901870">Ieteikuma noņemšanas poga, nospiediet ievadīšanas taustiņu, lai noņemtu šo ieteikumu</translation>
 <translation id="7575887283389198269">Mobilie tālruņi</translation>
-<translation id="405970181812690156">Ātri apmaksājiet pirkumus vietnēs un lietotnēs no dažādām ierīcēm, izmantojot kartes, ko esat saglabājis AI Wiz sistēmā.</translation>
+<translation id="405970181812690156">Ātri apmaksājiet pirkumus vietnēs un lietotnēs no dažādām ierīcēm, izmantojot kartes, ko esat saglabājis AI Wize sistēmā.</translation>
 <translation id="7579442726219254162">Nezināms mainīgais “<ph name="VARIABLE"/>” lietojumprogrammas “<ph name="APPLICATION_ID"/>” pārvaldītajā konfigurācijā.</translation>
 <translation id="7581199239021537589">2. puses attēla nobīde uz Y ass</translation>
-<translation id="4790068920551988473">Ātri izveidot jaunu pasākumu AI Wiz kalendārā</translation>
+<translation id="4790068920551988473">Ātri izveidot jaunu pasākumu AI Wize kalendārā</translation>
 <translation id="7583969447617676942">Juridiskie pakalpojumi</translation>
 <translation id="7586676035079382730">Paziņojumi nav atļauti</translation>
 <translation id="7588460771338574392">Piekļuves atslēga no ierīces “<ph name="PHONE_NAME"/>”</translation>
@@ -3223,11 +3223,11 @@ Papildu informācija:
 <translation id="759889825892636187"><ph name="HOST_NAME"/> pašlaik nevar apstrādāt šo pieprasījumu.</translation>
 <translation id="7599089013883397081">Lejupielādei iestājās noildze</translation>
 <translation id="7600965453749440009">Nekad netulkot saturu, kas rakstīts <ph name="LANGUAGE"/> valodā</translation>
-<translation id="8441931256884543961">Parasti jūs izveidojat drošu savienojumu ar šo vietni, taču šoreiz AI Wiz nevarēja izmantot drošu savienojumu. Iespējams, kāds uzbrucējs mēģina izsekot jūsu darbības vai mainīt jūsu tīkla savienojumu. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="8441931256884543961">Parasti jūs izveidojat drošu savienojumu ar šo vietni, taču šoreiz AI Wize nevarēja izmantot drošu savienojumu. Iespējams, kāds uzbrucējs mēģina izsekot jūsu darbības vai mainīt jūsu tīkla savienojumu. <ph name="BEGIN_LEARN_MORE_LINK"/>Uzziniet vairāk<ph name="END_LEARN_MORE_LINK"/>.</translation>
 <translation id="7605377493722372900">Vietnē, kuru mēģināt apmeklēt, uzbrucēji var instalēt kaitīgu programmatūru, kas zog vai dzēš kādu informāciju, piemēram, jūsu paroli, fotoattēlus, ziņojumus vai kredītkaršu numurus.</translation>
 <translation id="7610193165460212391">Vērtība pārsniedz diapazonu: <ph name="VALUE"/>.</translation>
 <translation id="7613889955535752492">Derīguma termiņš: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
-<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai skatītu un pārvaldītu savas paroles AI Wiz iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
+<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai skatītu un pārvaldītu savas paroles AI Wize iestatījumos, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
 <translation id="8565825862287624454">Administrators ir ieslēdzis savienotāju kolekciju Brave Enterprise Connectors jūsu pārlūkā. Šie savienotāji var piekļūt daļai jūsu datu.</translation>
 <translation id="7617825962482469577">Aploksne C7/C6</translation>
 <translation id="7619838219691048931">Beigu lapa</translation>
@@ -3245,7 +3245,7 @@ Papildu informācija:
 <translation id="7637586430889951925">{COUNT,plural, =0{Nav}=1{1 parole jūsu kontā (<ph name="DOMAIN_LIST"/>)}zero{# paroles jūsu kontā (<ph name="DOMAIN_LIST"/>)}one{# parole jūsu kontā (<ph name="DOMAIN_LIST"/>)}other{# paroles jūsu kontā (<ph name="DOMAIN_LIST"/>)}}</translation>
 <translation id="7638605456503525968">Seriālie porti</translation>
 <translation id="7639968568612851608">Tumši pelēka</translation>
-<translation id="8275603180424408640">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. AI Wiz paroļu pārvaldnieks iesaka nekavējoties nomainīt paroli.</translation>
+<translation id="8275603180424408640">Nupat izmantotā parole ir atklāta datu aizsardzības pārkāpuma dēļ. AI Wize paroļu pārvaldnieks iesaka nekavējoties nomainīt paroli.</translation>
 <translation id="7647206758853451655">Drukas kvalitāte</translation>
 <translation id="7648992873808071793">saglabāt failus šajā ierīcē</translation>
 <translation id="7653957176542370971">Maksājumu apstrādātāja lapa ir aizvērta</translation>
@@ -3297,7 +3297,7 @@ Papildu informācija:
 <translation id="7719791801330803993">Fotogrāfiju un video programmatūra</translation>
 <translation id="772128550427553158">CVC kods ir norādīts kartes priekšpusē.</translation>
 <translation id="7724603315864178912">Izgriezt</translation>
-<translation id="1296098648902562076">Ātri izveidot jaunu veidlapu pakalpojumā AI Wiz veidlapas</translation>
+<translation id="1296098648902562076">Ātri izveidot jaunu veidlapu pakalpojumā AI Wize veidlapas</translation>
 <translation id="773466115871691567">Vienmēr tulkot lapas šādā valodā: <ph name="SOURCE_LANGUAGE"/></translation>
 <translation id="7736959720849233795">Kopēt saites adresi</translation>
 <translation id="7740996059027112821">Standarta</translation>
@@ -3308,7 +3308,7 @@ Papildu informācija:
 <translation id="7751019142333897329"><ph name="FIRST_STRING"/> <ph name="SECOND_STRING"/></translation>
 <translation id="921286857694606205">Pielāgot fontu izmērus un burtveidolus pārlūkā Brave</translation>
 <translation id="7752995774971033316">Netiek pārvaldīts</translation>
-<translation id="1771750053794015966">Sākot atjaunināšanu, tiks aizvērtas jūsu AI Wiz cilnes un lietotnes.</translation>
+<translation id="1771750053794015966">Sākot atjaunināšanu, tiks aizvērtas jūsu AI Wize cilnes un lietotnes.</translation>
 <translation id="7755287808199759310">Lai atbloķētu, vēsieties pie vecāka</translation>
 <translation id="7755624218968747854">Galvenais rullis</translation>
 <translation id="7758069387465995638">Iespējams, savienojumu ir bloķējis ugunsmūris vai pretvīrusu programmatūra.</translation>
@@ -3327,7 +3327,7 @@ Papildu informācija:
 <translation id="7785790577395078482">šo planšetdatoru</translation>
 <translation id="7786368602962652765">Obligātais lauks ir tukšs. Pirms saglabāšanas aizpildiet to.</translation>
 <translation id="7786432318297177736">Šīs meklētājprogrammas tiek rādītas nejauši izvēlētā secībā. Jebkurā brīdī iestatījumos varat mainīt noklusējuma meklētājprogrammu.</translation>
-<translation id="6865562781710080368">Jūsu apmeklētās vietnes var pieprasīt informāciju no pārlūka Brave, lai varētu efektīvāk novērtēt reklāmu veiktspēju. AI Wiz ļauj vietnēm vākt tikai noteiktu veidu datus, piemēram, par diennakts laiku, kad reklāma tika jums parādīta.</translation>
+<translation id="6865562781710080368">Jūsu apmeklētās vietnes var pieprasīt informāciju no pārlūka Brave, lai varētu efektīvāk novērtēt reklāmu veiktspēju. AI Wize ļauj vietnēm vākt tikai noteiktu veidu datus, piemēram, par diennakts laiku, kad reklāma tika jums parādīta.</translation>
 <translation id="7791011319128895129">Nav izlaista</translation>
 <translation id="7791196057686275387">Iepakojums</translation>
 <translation id="7791543448312431591">Pievienot</translation>
@@ -3354,12 +3354,12 @@ Papildu informācija:
 <translation id="784404208867107517">Grupēta vēsture</translation>
 <translation id="7844689747373518809">{COUNT,plural, =0{Nav}=1{1 lietotne (<ph name="EXAMPLE_APP_1"/>)}=2{2 lietotnes (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>)}zero{# lietotnes (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/> <ph name="AND_MORE"/>)}one{# lietotne (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/> <ph name="AND_MORE"/>)}other{# lietotnes (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/> <ph name="AND_MORE"/>)}}</translation>
 <translation id="7855695075675558090"><ph name="TOTAL_LABEL"/>: <ph name="CURRENCY_CODE"/> <ph name="FORMATTED_TOTAL_AMOUNT"/></translation>
-<translation id="7162988054835087448">Vēlāk kāda jūsu apmeklēta vietne var pieprasīt pārlūkam AI Wiz kopīgot jūsu tēmas, lai personalizētu jums rādītās reklāmas. Pārlūks AI Wiz kopīgo līdz trīs tēmām, bet aizsargā jūsu pārlūkošanas vēsturi un identitāti.</translation>
+<translation id="7162988054835087448">Vēlāk kāda jūsu apmeklēta vietne var pieprasīt pārlūkam AI Wize kopīgot jūsu tēmas, lai personalizētu jums rādītās reklāmas. Pārlūks AI Wize kopīgo līdz trīs tēmām, bet aizsargā jūsu pārlūkošanas vēsturi un identitāti.</translation>
 <translation id="7860345425589240791">Vēlreiz ievadiet derīguma termiņu un CVC, kas ir norādīts <ph name="SIDE_OF_CARD"/>.</translation>
 <translation id="7862185352068345852">Vai aizvērt vietni?</translation>
 <translation id="7865448901209910068">Optimālais ātrums</translation>
 <translation id="7870281855125116701">Atrasta atlaide</translation>
-<translation id="7971990257511863579">Mainīt AI Wiz konta paroli</translation>
+<translation id="7971990257511863579">Mainīt AI Wize konta paroli</translation>
 <translation id="7877007680666472091">aizsargāta satura identifikatori</translation>
 <translation id="7878562273885520351">Iespējams, jūsu parole ir apdraudēta</translation>
 <translation id="7880146494886811634">Adreses saglabāšana</translation>
@@ -3370,13 +3370,13 @@ Papildu informācija:
 <translation id="7888575728750733395">Drukāšanas krāsu atveide</translation>
 <translation id="7894280532028510793">Ja nav pareizrakstības kļūdu, <ph name="BEGIN_LINK"/>mēģiniet palaist tīkla diagnostiku<ph name="END_LINK"/>.</translation>
 <translation id="7901831439558593470">Aploksne (7 x 9 collas)</translation>
-<translation id="3733419689526948053"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai iestatījumos pārietu uz AI Wiz drošības pārbaudes lapu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="3733419689526948053"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, lai iestatījumos pārietu uz AI Wize drošības pārbaudes lapu, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="7916162853251942238">Fleksogrāfijas pamatne</translation>
 <translation id="7927971017714848357">Zemes gabali</translation>
 <translation id="793209273132572360">Vai atjaunināt adresi?</translation>
 <translation id="7932579305932748336">Pārklājums</translation>
 <translation id="79338296614623784">Ievadiet derīgu tālruņa numuru</translation>
-<translation id="8329449853370113380">Vietne <ph name="URL"/> vēlas atskaņot aizsargātu saturu. AI Wiz verificēs jūsu ierīces identitāti.</translation>
+<translation id="8329449853370113380">Vietne <ph name="URL"/> vēlas atskaņot aizsargātu saturu. AI Wize verificēs jūsu ierīces identitāti.</translation>
 <translation id="7935318582918952113">DOM Distiller</translation>
 <translation id="7937163678541954811">Šīs kartes CVC tiks šifrēts un saglabāts jūsu ierīcē ātrākiem norēķiniem.</translation>
 <translation id="7937554595067888181">Derīguma termiņš: <ph name="EXPIRATION_DATE_ABBR"/></translation>
@@ -3391,7 +3391,7 @@ Papildu informācija:
 <translation id="794567586469801724">macOS</translation>
 <translation id="7946724693008564269">Noteiktā valoda</translation>
 <translation id="7947285636476623132">Pārbaudiet derīguma termiņa gadu un mēģiniet vēlreiz.</translation>
-<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai uzzinātu vairāk par AI Wiz funkcijām, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai uzzinātu vairāk par AI Wize funkcijām, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="1535074845255182168">Brave iestatījumos pārvaldiet savas sīkfailu preferences.</translation>
 <translation id="7951415247503192394">(32 bitu)</translation>
 <translation id="7952192831285741665">EDP (Eiropa)</translation>
@@ -3428,12 +3428,12 @@ Papildu informācija:
 <translation id="8012647001091218357">Mēs nevarējām sasniegt jūsu vecākus. Lūdzu, mēģiniet vēlreiz.</translation>
 <translation id="8019861005170389898"><ph name="TRADITIONAL_TEXT"/> (<ph name="ADDITIONAL_TEXT"/>)</translation>
 <translation id="8022542098135319050">Ceļojumu aģentūras un pakalpojumi</translation>
-<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>; lai iestatītu AI Wiz kā sistēmas noklusējuma pārlūku, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>; lai iestatītu AI Wize kā sistēmas noklusējuma pārlūku, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="8025119109950072390">Uzbrucēji šajā vietnē var mudināt jūs veikt bīstamas darbības, piemēram, instalēt programmatūru vai atklāt savu personas informāciju (piemēram, paroles, tālruņa numurus vai informāciju par kredītkartēm).</translation>
 <translation id="8026334261755873520">Notīrīt pārlūkošanas datus</translation>
 <translation id="8027077570865220386">15. paplāte</translation>
-<translation id="7586767711133020907">Poga “Veikt AI Wiz drošības pārbaudi”. Aktivizējiet, lai AI Wiz iestatījumos veiktu drošības pārbaudi.</translation>
-<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu veidlapu pakalpojumā AI Wiz veidlapas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="7586767711133020907">Poga “Veikt AI Wize drošības pārbaudi”. Aktivizējiet, lai AI Wize iestatījumos veiktu drošības pārbaudi.</translation>
+<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu veidlapu pakalpojumā AI Wize veidlapas, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
 <translation id="8028960012888758725">Apgriešana pēc uzdevuma</translation>
 <translation id="8032546467100845887">Caurspīdīgums</translation>
 <translation id="8034522405403831421">Šī lapas saturs ir šādā valodā: <ph name="SOURCE_LANGUAGE"/>. Vai tulkot šādā valodā: <ph name="TARGET_LANGUAGE"/>?</translation>
@@ -3454,11 +3454,11 @@ Papildu informācija:
 <translation id="8058603697124206642">nav nepieciešama</translation>
 <translation id="8063875539456488183">Saglabāt un sekot cenai</translation>
 <translation id="8066225060526005217">Tiek pārvaldīta sīkfailu iestatījumos</translation>
-<translation id="5442778523450464826">Jūs tikko ievadījāt savu paroli maldinošā vietnē. AI Wiz var palīdzēt. Lai mainītu paroli un paziņotu uzņēmumam Brave, ka jūsu konts, iespējams, ir apdraudēts, noklikšķiniet uz pogas Aizsargāt kontu.</translation>
+<translation id="5442778523450464826">Jūs tikko ievadījāt savu paroli maldinošā vietnē. AI Wize var palīdzēt. Lai mainītu paroli un paziņotu uzņēmumam Brave, ka jūsu konts, iespējams, ir apdraudēts, noklikšķiniet uz pogas Aizsargāt kontu.</translation>
 <translation id="8070439594494267500">Lietotnes ikona</translation>
 <translation id="8070495475341517754">Ievērojamu vietu apskate</translation>
 <translation id="8075588646978457437">Pašlīmējošs papīrs</translation>
-<translation id="7738019368151747786">Ātri izveidot jaunu AI Wiz izklājlapu</translation>
+<translation id="7738019368151747786">Ātri izveidot jaunu AI Wize izklājlapu</translation>
 <translation id="8075898834294118863">Pārvaldīt vietnes iestatījumus</translation>
 <translation id="8076492880354921740">Cilnes</translation>
 <translation id="8077669823243888800">Ķīniešu aploksne 8</translation>
@@ -3501,7 +3501,7 @@ Papildu informācija:
 <translation id="8161095570253161196">Atsākt pārlūkošanu</translation>
 <translation id="8163866351304776260">Četri caurumi kreisajā malā</translation>
 <translation id="8164078261547504572">Vai vēlaties saņemt e-pasta ziņojumus par cenu kritumu?</translation>
-<translation id="4351627595884993315">Pārlūkprogrammā AI Wiz tiek piedāvāts saglabāt jūsu kartes Brave kontā, jo esat pierakstījies. Varat mainīt šo darbību iestatījumos.</translation>
+<translation id="4351627595884993315">Pārlūkprogrammā AI Wize tiek piedāvāts saglabāt jūsu kartes Brave kontā, jo esat pierakstījies. Varat mainīt šo darbību iestatījumos.</translation>
 <translation id="8176440868214972690">Šīs ierīces administrators ir nosūtījis informāciju, piemēram, iestatījumus vai politikas, uz tālāk norādītajām vietnēm.</translation>
 <translation id="817820454357658398">Menstruālās higiēnas produkti</translation>
 <translation id="818254048113802060">{0,plural, =1{Fails “<ph name="FILE_NAME"/>” tika bloķēts satura dēļ}zero{<ph name="FILE_COUNT"/> faili tika bloķēti satura dēļ}one{<ph name="FILE_COUNT"/> fails tika bloķēts satura dēļ}other{<ph name="FILE_COUNT"/> faili tika bloķēti satura dēļ}}</translation>
@@ -3547,7 +3547,7 @@ Papildu informācija:
 <translation id="8249296373107784235">Priekšlaikus pārtraukt</translation>
 <translation id="8249463483885748674">Standartizēti un iestāšanās pārbaudījumi</translation>
 <translation id="824968735947741546">Notiek tulkošana no šādas valodas: <ph name="SOURCE"/> (automātiski noteikta); šādā valodā: <ph name="TARGET"/></translation>
-<translation id="8996951854370742934">Šī adrese pašlaik ir saglabāta šajā ierīcē. Lai izmantotu šo adresi citos AI Wiz produktos, saglabājiet to savā AI Wiz kontā (<ph name="ACCOUNT"/>).</translation>
+<translation id="8996951854370742934">Šī adrese pašlaik ir saglabāta šajā ierīcē. Lai izmantotu šo adresi citos AI Wize produktos, saglabājiet to savā AI Wize kontā (<ph name="ACCOUNT"/>).</translation>
 <translation id="8252991034201168845">Poga “Pārvaldīt pieejamības iestatījumus”. Lai Brave OS iestatījumos personalizētu pieejamības rīkus, nospiediet taustiņu Enter.</translation>
 <translation id="8253091569723639551">Jānorāda norēķinu adrese.</translation>
 <translation id="8257387598443225809">Šī lietotne ir paredzēta mobilajām ierīcēm</translation>
@@ -3564,7 +3564,7 @@ Papildu informācija:
 <translation id="8275952078857499577">Nepiedāvāt tulkot šo vietni</translation>
 <translation id="8277900682056760511">Maksājumu apstrādātāja lapa ir atvērta</translation>
 <translation id="827820107214076967">Atsvaidzināt žurnālus</translation>
-<translation id="2164614088382669062">Jābūt ieslēgtiem AI Wiz paziņojumiem. Varat tos ieslēgt šeit: <ph name="BEGIN_LINK"/><ph name="NOTIFICATION_SETTINGS"/><ph name="END_LINK"/>.</translation>
+<translation id="2164614088382669062">Jābūt ieslēgtiem AI Wize paziņojumiem. Varat tos ieslēgt šeit: <ph name="BEGIN_LINK"/><ph name="NOTIFICATION_SETTINGS"/><ph name="END_LINK"/>.</translation>
 <translation id="8280630997017109758">11. paplāte</translation>
 <translation id="8281730697546299650">Tagad ir pieejamas citas reklāmu konfidencialitātes funkcijas</translation>
 <translation id="8281886186245836920">Izlaist</translation>
@@ -3625,7 +3625,7 @@ Papildu informācija:
 <translation id="8398335999901363925">Maksājumu veidi, kas pieejami aizpildīšanai pieskaroties, ir atvērti pilnā augstumā.</translation>
 <translation id="8398446215576328011">Atcelt piemērotās politikas</translation>
 <translation id="8398790343843005537">Atrast tālruni</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{Šodien pārlūkā AI Wiz sīkfaili atkal tiks bloķēti}=1{Rīt pārlūkā AI Wiz sīkfaili atkal tiks bloķēti}zero{Pēc # dienām pārlūkā AI Wiz sīkfaili atkal tiks bloķēti}one{Pēc # dienām pārlūkā AI Wiz sīkfaili atkal tiks bloķēti}other{Pēc # dienām pārlūkā AI Wiz sīkfaili atkal tiks bloķēti}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{Šodien pārlūkā AI Wize sīkfaili atkal tiks bloķēti}=1{Rīt pārlūkā AI Wize sīkfaili atkal tiks bloķēti}zero{Pēc # dienām pārlūkā AI Wize sīkfaili atkal tiks bloķēti}one{Pēc # dienām pārlūkā AI Wize sīkfaili atkal tiks bloķēti}other{Pēc # dienām pārlūkā AI Wize sīkfaili atkal tiks bloķēti}}</translation>
 <translation id="8403506619177967839">Fanu rakstīti stāsti</translation>
 <translation id="15931837016421186">Brave iestatījumos pārvaldiet, kāda informācija tiek sinhronizēta.</translation>
 <translation id="8406071103346257942">pārtraukt izmantot ekrāna bloķēšanu, lai aizpildītu paroles.</translation>
@@ -3643,10 +3643,10 @@ Papildu informācija:
 <translation id="8427848540066057481">500 x 750 mm</translation>
 <translation id="8428213095426709021">Iestatījumi</translation>
 <translation id="8428634594422941299">Labi</translation>
-<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wiz iestatījumos pārvaldītu savas sīkfailu preferences.</translation>
+<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai AI Wize iestatījumos pārvaldītu savas sīkfailu preferences.</translation>
 <translation id="8432419784006585012">Var pieprasīt atļauju izmantot jūsu MIDI ierīces</translation>
 <translation id="8433057134996913067">Šādi tiksiet izrakstīts no lielākās daļas vietņu.</translation>
-<translation id="4198850929558436563">Lai nākamreiz veiktu maksājumu ātrāk, AI Wiz kontā saglabājiet IBAN.</translation>
+<translation id="4198850929558436563">Lai nākamreiz veiktu maksājumu ātrāk, AI Wize kontā saglabājiet IBAN.</translation>
 <translation id="8434840396568290395">Mājdzīvnieki</translation>
 <translation id="8436623588884785770">Pievienot politiku</translation>
 <translation id="8437238597147034694">&amp;Atsaukt pārvietošanu</translation>
@@ -3663,7 +3663,7 @@ Papildu informācija:
 <translation id="8460854335417802511">Ieslēgt</translation>
 <translation id="8461694314515752532">Šifrējiet sinhronizētos datus, izmantojot savu sinhronizācijas ieejas frāzi</translation>
 <translation id="8466379296835108687">{COUNT,plural, =1{1 kredītkarte}zero{# kredītkartes}one{# kredītkarte}other{# kredītkartes}}</translation>
-<translation id="1912557825937556898">Iestatījumos pāriet uz AI Wiz drošības pārbaudes lapu</translation>
+<translation id="1912557825937556898">Iestatījumos pāriet uz AI Wize drošības pārbaudes lapu</translation>
 <translation id="8468358362970107653">Aploksne C3</translation>
 <translation id="8473626140772740486">300 x 450 mm</translation>
 <translation id="8473863474539038330">Adreses un citi dati</translation>
@@ -3688,9 +3688,9 @@ Papildu informācija:
 <translation id="8521013008769249764">Dīvāni un atpūtas krēsli</translation>
 <translation id="8521812709849134608">Darbvirsmas</translation>
 <translation id="8522180136695974431">Informācija par kredītiem un to pārraudzība</translation>
-<translation id="1426902392270366682">Brave var palīdzēt jums aizsargāt jūsu AI Wiz kontu un nomainīt paroli.</translation>
+<translation id="1426902392270366682">Brave var palīdzēt jums aizsargāt jūsu AI Wize kontu un nomainīt paroli.</translation>
 <translation id="8527228059738193856">Skaļruņi</translation>
-<translation id="1215802963054007211">Notīriet savu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus AI Wiz iestatījumos.</translation>
+<translation id="1215802963054007211">Notīriet savu pārlūkošanas vēsturi, sīkfailus, kešatmiņu un citus datus AI Wize iestatījumos.</translation>
 <translation id="853246364274116957">Brodveja un mūzikli</translation>
 <translation id="853332391023689529">Pikapi</translation>
 <translation id="8533619373899488139">Apmeklējiet vietni &lt;strong&gt;chrome://policy&lt;/strong&gt;, lai skatītu bloķēto URL sarakstu, kā arī citas politikas, ko noteicis sistēmas administrators.</translation>
@@ -3737,7 +3737,7 @@ Papildu informācija:
 <translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>Kādi dati tiek izmantoti:<ph name="END_BOLD"/> jūsu darbības vietnē, ko šajā ierīcē apmeklējat, izmantojot pārlūku Brave.</translation>
 <translation id="8601456038554914806">Ūdens sporta veidu aprīkojums</translation>
 <translation id="8606726445206553943">izmantot jūsu MIDI ierīces</translation>
-<translation id="5017966143250326204">Reklāmu tēmas palīdz vietnēm rādīt jums atbilstošas reklāmas, vienlaikus aizsargājot jūsu pārlūkošanas vēsturi un identitāti. AI Wiz var noteikt, kādas tēmas jūs interesē, ņemot vērā neseno pārlūkošanas vēsturi. Vēlāk, lai personalizētu jums rādītās reklāmas, kāda jūsu izmantotā lietotne var pieprasīt no operētājsistēmas AI Wiz atbilstošās tēmas.</translation>
+<translation id="5017966143250326204">Reklāmu tēmas palīdz vietnēm rādīt jums atbilstošas reklāmas, vienlaikus aizsargājot jūsu pārlūkošanas vēsturi un identitāti. AI Wize var noteikt, kādas tēmas jūs interesē, ņemot vērā neseno pārlūkošanas vēsturi. Vēlāk, lai personalizētu jums rādītās reklāmas, kāda jūsu izmantotā lietotne var pieprasīt no operētājsistēmas AI Wize atbilstošās tēmas.</translation>
 <translation id="8617269623452051934">jūsu ierīces lietojums</translation>
 <translation id="861775596732816396">4. izmērs</translation>
 <translation id="8620276786115098679">Aploksne Kaku 7</translation>
@@ -3788,11 +3788,11 @@ Papildu informācija:
 <translation id="8726549941689275341">Lapas lielums:</translation>
 <translation id="8730621377337864115">Gatavs</translation>
 <translation id="8731268612289859741">Drošības kods</translation>
-<translation id="2184048523283917559">Varat bloķēt tēmas, kuras nevēlaties kopīgot ar vietnēm. Pārlūkā AI Wiz tiek arī automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Uzzināt vairāk</translation>
+<translation id="2184048523283917559">Varat bloķēt tēmas, kuras nevēlaties kopīgot ar vietnēm. Pārlūkā AI Wize tiek arī automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Uzzināt vairāk</translation>
 <translation id="8734529307927223492">Jūsu <ph name="DEVICE_TYPE"/> ierīci pārvalda <ph name="MANAGER"/></translation>
 <translation id="8736059027199600831">30 x 40 collas</translation>
 <translation id="8737685506611670901">atvērt <ph name="PROTOCOL"/> saites, nevis <ph name="REPLACED_HANDLER_TITLE"/></translation>
-<translation id="6326805297893828864">Lai izveidotu drošu savienojumu, ir jāiestata pareizs pulksteņa laiks. Tas ir nepieciešams, jo sertifikāti, kurus vietnes izmanto, lai tiktu identificētas, ir derīgi tikai noteiktos laika periodos. Tā kā jūsu ierīces pulkstenis nav pareizi iestatīts, AI Wiz nevar verificēt šos sertifikātus.</translation>
+<translation id="6326805297893828864">Lai izveidotu drošu savienojumu, ir jāiestata pareizs pulksteņa laiks. Tas ir nepieciešams, jo sertifikāti, kurus vietnes izmanto, lai tiktu identificētas, ir derīgi tikai noteiktos laika periodos. Tā kā jūsu ierīces pulkstenis nav pareizi iestatīts, AI Wize nevar verificēt šos sertifikātus.</translation>
 <translation id="8740359287975076522">Nevarēja atrast <ph name="HOST_NAME"/> &lt;abbr id="dnsDefinition"&gt;DNS adresi&lt;/abbr&gt;. Notiek problēmas diagnosticēšana.</translation>
 <translation id="8742371904523228557"><ph name="ONE_TIME_CODE"/> ir jūsu kods vietnei <ph name="ORIGIN"/>.</translation>
 <translation id="874918643257405732">Saglabāt šo cilni kā grāmatzīmi</translation>
@@ -3809,7 +3809,7 @@ Papildu informācija:
 <translation id="8763927697961133303">USB ierīce</translation>
 <translation id="8766943070169463815">Ir atvērta drošu maksājumu akreditācijas datu autentifikācijas lapa</translation>
 <translation id="8767765348545497220">Aizvērt palīdzības burbuli</translation>
-<translation id="7113746389006214608">Poga “Izveidot prezentāciju”. Aktivizējiet, lai pakalpojumā Prezentācijas ātri izveidotu jaunu AI Wiz prezentāciju.</translation>
+<translation id="7113746389006214608">Poga “Izveidot prezentāciju”. Aktivizējiet, lai pakalpojumā Prezentācijas ātri izveidotu jaunu AI Wize prezentāciju.</translation>
 <translation id="8770286973007342895">Zāles pļāvēji</translation>
 <translation id="8772387130037509473">Joga un pilates</translation>
 <translation id="877348612833018844">{0,plural, =1{Vai pārvietot konfidenciālu failu?}zero{Vai pārvietot konfidenciālus failus?}one{Vai pārvietot konfidenciālus failus?}other{Vai pārvietot konfidenciālus failus?}}</translation>
@@ -3819,7 +3819,7 @@ Papildu informācija:
 <translation id="8785658048882205566">Motocikli</translation>
 <translation id="8790007591277257123">&amp;Atcelt dzēšanas atsaukšanu</translation>
 <translation id="8792272652220298572">Plastmasa (glancēta)</translation>
-<translation id="5304100303568917877">Varat zaudēt piekļuvi savam <ph name="ORG_NAME"/> kontam, vai jūsu identitāte var tikt nozagta. AI Wiz iesaka nekavējoties nomainīt paroli.</translation>
+<translation id="5304100303568917877">Varat zaudēt piekļuvi savam <ph name="ORG_NAME"/> kontam, vai jūsu identitāte var tikt nozagta. AI Wize iesaka nekavējoties nomainīt paroli.</translation>
 <translation id="8792626944327216835">mikrofons</translation>
 <translation id="9156291179464624174">Domēns <ph name="ENROLLMENT_DOMAIN"/> ir iespējojis savienotājus Brave Enterprise Connectors jūsu pārlūkā. Šie savienotāji var piekļūt daļai jūsu datu.</translation>
 <translation id="8798099450830957504">Noklusējums</translation>
@@ -3833,7 +3833,7 @@ Papildu informācija:
 <translation id="8811470563853401328">Vai saglabāt adresi kontā?</translation>
 <translation id="8813277370772331957">Atgādināt vēlāk</translation>
 <translation id="8814707942599948500">Aploksne C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wiz iestatījumos atjauninātu pārlūkprogrammu Brave, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai AI Wize iestatījumos atjauninātu pārlūkprogrammu Brave, nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu.</translation>
 <translation id="882338992931677877">Manuālais slots</translation>
 <translation id="8830320733681313421">Hagaki (pastkarte)</translation>
 <translation id="8833007469711500369">Veļas mazgājamās mašīnas un žāvētāji</translation>
@@ -3939,7 +3939,7 @@ Papildu informācija:
 <translation id="9049981332609050619">Jūs centāties piekļūt <ph name="DOMAIN"/>, bet serveris piedāvāja nederīgu sertifikātu.</translation>
 <translation id="9050666287014529139">Ieejas frāze</translation>
 <translation id="9051072642122229460">Kafijas un espreso automāti</translation>
-<translation id="104719866786855422">Tiek izlaista jauna reklāmu konfidencialitātes funkcija, ko dēvē par reklāmu novērtēšanu. Lai palīdzētu vietnēs novērtēt reklāmu veiktspēju, AI Wiz starp dažādām vietnēm kopīgo tikai ļoti ierobežotu informāciju, piemēram, par laiku, kad jums tika parādīta noteikta reklāma.</translation>
+<translation id="104719866786855422">Tiek izlaista jauna reklāmu konfidencialitātes funkcija, ko dēvē par reklāmu novērtēšanu. Lai palīdzētu vietnēs novērtēt reklāmu veiktspēju, AI Wize starp dažādām vietnēm kopīgo tikai ļoti ierobežotu informāciju, piemēram, par laiku, kad jums tika parādīta noteikta reklāma.</translation>
 <translation id="9056953843249698117">Veikals</translation>
 <translation id="9062620674789239642">Iespējams, tas ir pārvietots, rediģēts vai izdzēsts.</translation>
 <translation id="9063398205799684336">Aploksne Kaku 2</translation>
@@ -3959,18 +3959,18 @@ Papildu informācija:
 <translation id="9090243919347147717">Pielikumi</translation>
 <translation id="9093723786115107672">Apģērbs gulēšanai</translation>
 <translation id="9095388113577226029">Citas valodas…</translation>
-<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>; nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter, lai iestatītu AI Wiz kā sistēmas noklusējuma pārlūku iOS iestatījumos.</translation>
+<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>; nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter, lai iestatītu AI Wize kā sistēmas noklusējuma pārlūku iOS iestatījumos.</translation>
 <translation id="9096679202588811390">TV seriāli un pārraides</translation>
 <translation id="9101630580131696064">1. paplāte</translation>
 <translation id="9103537084693478942">Video programmatūra</translation>
-<translation id="6373940988468425649">Vietnē <ph name="SITE"/> informācijas aizsargāšanai parasti tiek izmantota šifrēšana. Kad pārlūkā AI Wiz tika mēģināts izveidot savienojumu ar vietni <ph name="SITE"/>, šoreiz tā nosūtīja neparastus un nepareizus akreditācijas datus. Iespējams, tas notika, jo uzbrucējs mēģināja uzdoties par vietni <ph name="SITE"/>, vai arī Wi-Fi pierakstīšanās ekrāns pārtrauca savienojumu. Jūsu informācija joprojām ir drošībā, jo pārlūks AI Wiz pārtrauca savienojumu, pirms tika veikta jebkādu datu apmaiņa.</translation>
+<translation id="6373940988468425649">Vietnē <ph name="SITE"/> informācijas aizsargāšanai parasti tiek izmantota šifrēšana. Kad pārlūkā AI Wize tika mēģināts izveidot savienojumu ar vietni <ph name="SITE"/>, šoreiz tā nosūtīja neparastus un nepareizus akreditācijas datus. Iespējams, tas notika, jo uzbrucējs mēģināja uzdoties par vietni <ph name="SITE"/>, vai arī Wi-Fi pierakstīšanās ekrāns pārtrauca savienojumu. Jūsu informācija joprojām ir drošībā, jo pārlūks AI Wize pārtrauca savienojumu, pirms tika veikta jebkādu datu apmaiņa.</translation>
 <translation id="9107467864910557787">Jūsu pārlūku pārvalda <ph name="MANAGER"/></translation>
 <translation id="91108059142052966">Saskaņā ar administratora iestatīto politiku ekrāna kopīgošana ar lietojumprogrammu <ph name="APPLICATION_TITLE"/> tiek atspējota, kad ir redzams konfidenciāls saturs.</translation>
 <translation id="9114524666733003316">Notiek kartes apstiprināšana...</translation>
 <translation id="3582535072753734287">Šo pārlūku nepārvalda uzņēmums vai cita organizācija. Darbību šajā ierīcē var pārvaldīt ārpus pārlūka Brave. <ph name="BEGIN_LINK"/>Uzzināt vairāk<ph name="END_LINK"/></translation>
 <translation id="7839260860373627374">Vairāk par reklāmām pārlūkā Brave</translation>
 <translation id="9117930699067497412">Dzīvīga</translation>
-<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai atsāktu meklēšanu un skatītu atbilstošās darbības savā AI Wiz vēsturē.</translation>
+<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>: nospiediet tabulēšanas taustiņu un pēc tam — ievadīšanas taustiņu, lai atsāktu meklēšanu un skatītu atbilstošās darbības savā AI Wize vēsturē.</translation>
 <translation id="9119042192571987207">Augšupielādēts</translation>
 <translation id="9122954576417194280">Izejvielu un nākotnes līgumu tirdzniecība</translation>
 <translation id="912327514020027767">Svārki</translation>
@@ -3981,7 +3981,7 @@ Papildu informācija:
 <translation id="913552870853451045"><ph name="IDS_AUTOFILL_VIRTUAL_CARD_NAME_AND_LAST_FOUR_DIGITS"/>, virtuāla karte</translation>
 <translation id="9136861683332321024">Luksusa klases transportlīdzekļi</translation>
 <translation id="9137013805542155359">Rādīt oriģinālo</translation>
-<translation id="3480834636742786788">Pirms šīs lietotnes izmantošanas, lūdzu, palaidiet pārlūku AI Wiz un pierakstieties tajā.</translation>
+<translation id="3480834636742786788">Pirms šīs lietotnes izmantošanas, lūdzu, palaidiet pārlūku AI Wize un pierakstieties tajā.</translation>
 <translation id="9138037198177304356">Paziņojumi ir atļauti</translation>
 <translation id="9139318394846604261">Pirkumi</translation>
 <translation id="9141013498910525015">Pārvaldīt adreses</translation>
@@ -4009,12 +4009,12 @@ Papildu informācija:
 <translation id="9174623988242579721">Pielāgotas un sacīkšu automašīnas</translation>
 <translation id="9174917557437862841">Ciļņu pārslēgšanas poga. Nospiediet ievadīšanas taustiņu, lai pārslēgtu šo cilni.</translation>
 <translation id="7607398976534075583">Šis PDF fails nav pieejams. Notiek teksta iegūšana. Pakalpojumu nodrošina Brave MI.</translation>
-<translation id="5129795253416930127">Pārvaldiet savu maksājumu un kredītkaršu informāciju AI Wiz iestatījumos.</translation>
+<translation id="5129795253416930127">Pārvaldiet savu maksājumu un kredītkaršu informāciju AI Wize iestatījumos.</translation>
 <translation id="9179907736442194268">Saņemiet e-pasta brīdinājumus, ja kādā vietnē tiek konstatēts cenas kritums.</translation>
 <translation id="9183302530794969518">Brave dokumenti</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/> izmanto neatbalstītu protokolu.</translation>
 <translation id="918454845714257218">Pārbaudiet kodu (atrodas šeit: <ph name="SIDE_OF_CARD"/>) un mēģiniet vēlreiz.</translation>
-<translation id="7202091195027070644">Poga “Iestatīt AI Wiz kā noklusējuma pārlūku”. Aktivizējiet, lai iestatītu AI Wiz kā sistēmas noklusējuma pārlūku.</translation>
+<translation id="7202091195027070644">Poga “Iestatīt AI Wize kā noklusējuma pārlūku”. Aktivizējiet, lai iestatītu AI Wize kā sistēmas noklusējuma pārlūku.</translation>
 <translation id="9187461866967718678">Ekstrēmie sporta veidi</translation>
 <translation id="9191834167571392248">Caurums apakšējā kreisajā malā</translation>
 <translation id="9192361865877479444">Metāls (matēts)</translation>
@@ -4022,7 +4022,7 @@ Papildu informācija:
 <translation id="9205078245616868884">Jūsu dati ir šifrēti, izmantojot jūsu sinhronizācijas ieejas frāzi. Lai sāktu sinhronizāciju, ievadiet ieejas frāzi.</translation>
 <translation id="9207861905230894330">Rakstu neizdevās pievienot.</translation>
 <translation id="9213433120051936369">Izskata pielāgošana</translation>
-<translation id="2206050430829841793">Lietojumprogrammas darbības dēļ pārlūkā AI Wiz nevar izveidot drošu savienojumu ar šo vietni</translation>
+<translation id="2206050430829841793">Lietojumprogrammas darbības dēļ pārlūkā AI Wize nevar izveidot drošu savienojumu ar šo vietni</translation>
 <translation id="92178312226016010">Jūs izsekojat šo produktu.</translation>
 <translation id="9218430445555521422">Iestatīt kā noklusējumu</translation>
 <translation id="9219103736887031265">Attēli</translation>
@@ -4031,16 +4031,16 @@ Papildu informācija:
 <translation id="93020190163435405">Prakse</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385">Vai atļaut lietotnei <ph name="APP_NAME"/> iestatīt Wi-Fi tīklus?</translation>
-<translation id="7486559383537872796">Varat zaudēt piekļuvi savam AI Wiz kontam. AI Wiz iesaka nekavējoties nomainīt paroli. Jums tiks lūgts pierakstīties.</translation>
+<translation id="7486559383537872796">Varat zaudēt piekļuvi savam AI Wize kontam. AI Wize iesaka nekavējoties nomainīt paroli. Jums tiks lūgts pierakstīties.</translation>
 <translation id="937457230470581909">Zooloģiskie dārzi, akvāriji un rezervāti</translation>
-<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Kādi dati tiek izmantoti:<ph name="END_BOLD"/> reklāmu tēmas tiek noteiktas, pamatojoties uz jūsu neseno pārlūkošanas vēsturi — to vietņu sarakstu, kuras esat apmeklējis pārlūkā AI Wiz šajā ierīcē.</translation>
+<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Kādi dati tiek izmantoti:<ph name="END_BOLD"/> reklāmu tēmas tiek noteiktas, pamatojoties uz jūsu neseno pārlūkošanas vēsturi — to vietņu sarakstu, kuras esat apmeklējis pārlūkā AI Wize šajā ierīcē.</translation>
 <translation id="939736085109172342">Jauna mape</translation>
 <translation id="940053046584497293">Ceļojumi un transports</translation>
-<translation id="6588091288231158998">Izmantot AI Wiz kontā saglabātās paroles un piekļuves atslēgas</translation>
-<translation id="5444457503062019851">Pārlūkā AI Wiz vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības.</translation>
+<translation id="6588091288231158998">Izmantot AI Wize kontā saglabātās paroles un piekļuves atslēgas</translation>
+<translation id="5444457503062019851">Pārlūkā AI Wize vietnēm tiek liegts pārlūkošanas laikā izmantot trešo pušu sīkfailus, lai izsekotu jūsu darbības.</translation>
 <translation id="945855313015696284">Pārbaudiet tālāk sniegto informāciju un dzēsiet visas nederīgās kartītes.</translation>
-<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu vietni pakalpojumā AI Wiz vietnes, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{Šodien pārlūkā AI Wiz atkal tiks ierobežoti sīkfaili}=1{Rīt pārlūkā AI Wiz atkal tiks ierobežoti sīkfaili}zero{Pēc # dienām pārlūkā AI Wiz atkal tiks ierobežoti sīkfaili}one{Pēc # dienas pārlūkā AI Wiz atkal tiks ierobežoti sīkfaili}other{Pēc # dienām pārlūkā AI Wiz atkal tiks ierobežoti sīkfaili}}</translation>
+<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Lai ātri izveidotu jaunu vietni pakalpojumā AI Wize vietnes, nospiediet tabulēšanas taustiņu un pēc tam — taustiņu Enter.</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{Šodien pārlūkā AI Wize atkal tiks ierobežoti sīkfaili}=1{Rīt pārlūkā AI Wize atkal tiks ierobežoti sīkfaili}zero{Pēc # dienām pārlūkā AI Wize atkal tiks ierobežoti sīkfaili}one{Pēc # dienas pārlūkā AI Wize atkal tiks ierobežoti sīkfaili}other{Pēc # dienām pārlūkā AI Wize atkal tiks ierobežoti sīkfaili}}</translation>
 <translation id="949314938206378263">Jūs lūdzāt atļauju apmeklēt šo vietni. Kāds no jūsu vecākiem var atbildēt lietotnē Family Link.</translation>
 <translation id="950736567201356821">Trīs caurumi augšdaļā</translation>
 <translation id="961663415146723894">Iesējums apakšdaļā</translation>
@@ -4091,7 +4091,7 @@ Papildu informācija:
 <translation id="3812568169637430422">Tagad varat privāti pārlūkot saturu, un citas personas, kuras izmanto šo ierīci, nevarēs redzēt jūsu darbības. Tomēr lejupielādes, grāmatzīmes un lasīšanas saraksta vienumi tiks saglabāti.</translation>
 <translation id="6085043210649933880">Inkognito režīms Brave</translation>
 <translation id="3683567996395248272">Kas notiek inkognito režīmā?</translation>
-<translation id="5581758310848298360">Aizverot visas AI Wiz privātās cilnes, jūsu darbības šajās cilnēs tiek noņemtas no šīs ierīces:
+<translation id="5581758310848298360">Aizverot visas AI Wize privātās cilnes, jūsu darbības šajās cilnēs tiek noņemtas no šīs ierīces:
 <ph name="BEGIN_LIST"/>
 <ph name="LIST_ITEM"/>Pārlūkošanas darbība<ph name="END_LIST_ITEM"/>
 <ph name="LIST_ITEM"/>Meklēšanas vēsture <ph name="END_LIST_ITEM"/>
@@ -4132,11 +4132,11 @@ Papildu informācija:
     &lt;/ol&gt;
     &lt;h4&gt;2. darbība. Lapas atvēršana inkognito režīmā (tikai datorā)&lt;/h4&gt;
     &lt;p&gt;Atveriet apmeklēto lapu inkognito režīma logā.&lt;/p&gt;
-    &lt;p&gt;Ja lapa tiek atvērta, AI Wiz paplašinājums nedarbojas pareizi. Lai novērstu kļūdu, izslēdziet paplašinājumu.&lt;/p&gt;
+    &lt;p&gt;Ja lapa tiek atvērta, AI Wize paplašinājums nedarbojas pareizi. Lai novērstu kļūdu, izslēdziet paplašinājumu.&lt;/p&gt;
     &lt;h4&gt;3. darbība. Operētājsistēmas atjaunināšana&lt;/h4&gt;
     &lt;p&gt;Ierīcē ir jābūt instalētai jaunākajai operētājsistēmas versijai.&lt;/p&gt;
     &lt;h4&gt;4. darbība. Pretvīrusu programmas īslaicīga izslēgšana&lt;/h4&gt;
-    &lt;p&gt;Šis kļūdas ziņojums tiek rādīts, ja pretvīrusu programmatūra ietver HTTPS aizsardzību vai HTTPS skenēšanu. Šī pretvīrusa programmatūra novērš AI Wiz drošības funkciju darbību.&lt;/p&gt;
+    &lt;p&gt;Šis kļūdas ziņojums tiek rādīts, ja pretvīrusu programmatūra ietver HTTPS aizsardzību vai HTTPS skenēšanu. Šī pretvīrusa programmatūra novērš AI Wize drošības funkciju darbību.&lt;/p&gt;
     &lt;p&gt;Lai novērstu šo problēmu, izslēdziet pretvīrusu programmatūru. Ja pēc programmatūras izslēgšanas lapa darbojas, izslēdziet šo programmatūru, kad apmeklējat drošas vietnes.&lt;/p&gt;
     &lt;p&gt;Pēc darba beigšanas noteikti atkal ieslēdziet pretvīrusu programmatūru.&lt;/p&gt;
     &lt;h4&gt;5. darbība. Papildu palīdzības saņemšana&lt;/h4&gt;

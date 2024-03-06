@@ -3,7 +3,7 @@
 <translationbundle lang="tr">
 <translation id="8631427463833030968">Reklamları yönet</translation>
 <translation id="7630214457764713113">Temiz bağlantıyı kopyala</translation>
-<translation id="885805571521218129">Bu, bu ay AI Wiz Ads için tahmini kazanç aralığınızı yansıtır.</translation>
+<translation id="885805571521218129">Bu, bu ay AI Wize Ads için tahmini kazanç aralığınızı yansıtır.</translation>
 <translation id="3478449063771497234">Bildirimler devre dışı bırakıldı</translation>
 <translation id="2862978891748913252">Ülkenizi seçin</translation>
 <translation id="3970520675790340955">Size bölgeniz için doğru seçenekleri ve reklamları gösterebilmemiz için ülkenizi seçin.</translation>
@@ -30,8 +30,8 @@
 <translation id="3699420827646925694"><ph name="CUSTODIAN"/> oturumunuz kapatıldı</translation>
 <translation id="9038728316393235637"><ph name="CUSTODIAN"/> oturumu açın</translation>
 <translation id="7063168612616047608">En sevdiğiniz oluşturucuları desteklediğiniz için teşekkürler</translation>
-<translation id="3796032246917966749">Görünüşe göre AI Wiz Ödülleri için <ph name="CUSTODIAN"/> oturumunuz kapatılmış. Devam etmek için yeniden giriş yapın.</translation>
-<translation id="5202112619925434373">Bu oluşturucu, AI Wiz Oluşturucusu tarafından daha doğrulanmadı. Doğrulandıktan sonra katkıda bulunabileceksiniz. <ph name="LEARN_MORE"/></translation>
+<translation id="3796032246917966749">Görünüşe göre AI Wize Ödülleri için <ph name="CUSTODIAN"/> oturumunuz kapatılmış. Devam etmek için yeniden giriş yapın.</translation>
+<translation id="5202112619925434373">Bu oluşturucu, AI Wize Oluşturucusu tarafından daha doğrulanmadı. Doğrulandıktan sonra katkıda bulunabileceksiniz. <ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">Katkıda Bulun</translation>
 <translation id="1899434873745933492">Katkıda bulunma başarısız</translation>
 <translation id="1794046983410841192">Brave Ödüllerini kullan</translation>
@@ -41,8 +41,8 @@
 <translation id="1177863135347784049">Özel</translation>
 <translation id="4827581232860040208">Katkıda bulunurken bir sorun oluştu</translation>
 <translation id="3259723213051400722">Lütfen tekrar deneyin.</translation>
-<translation id="5298965408768377685">Bu Oluşturucu, Brave'e kayıtlıdır ve AI Wiz Ödülleri kullanıcılarından katkı alabilir. <ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">Bildirimler devre dışıyken AI Wiz Ödülleri çalışmayabilir.</translation>
+<translation id="5298965408768377685">Bu Oluşturucu, Brave'e kayıtlıdır ve AI Wize Ödülleri kullanıcılarından katkı alabilir. <ph name="LEARN_MORE"/></translation>
+<translation id="7466579932043491502">Bildirimler devre dışıyken AI Wize Ödülleri çalışmayabilir.</translation>
 <translation id="4259212006412783790">AÇ</translation>
 <translation id="6112331814131703370">"Uygulamaya Git" Bildirimlerini engelle</translation>
 <translation id="4744921452903670666">Bize ne düşündüğünü söyle!</translation>
@@ -72,7 +72,7 @@
 <translation id="312404770066229090">Brave Ödüllerini kazanmak için cihaz bildirimlerini etkinleştirin.</translation>
 <translation id="2241529840361230499">Brave Gizlilik Raporlarını almak için cihaz bildirimlerini etkinleştirin.</translation>
 <translation id="4930155581888391118">Brave Ödüllerini kazanmak için Brave'den gelen bildirimleri etkinleştirin.</translation>
-<translation id="325187916104529570">Ayarları Açın ve AI Wiz Reklamları için cihaz bildirimlerini etkinleştirin.</translation>
+<translation id="325187916104529570">Ayarları Açın ve AI Wize Reklamları için cihaz bildirimlerini etkinleştirin.</translation>
 <translation id="5744802588121897886">Brave bildirimlerini aç</translation>
 <translation id="7307834434086582547">Brave Kalkanlarını Etkinleştir/Devre Dışı Bırak</translation>
 <translation id="6945863270524203017">İzleyici &amp; reklam engelleyici için haftalık gizlilik güncellemeleri alın</translation>
@@ -169,7 +169,7 @@
 <translation id="6332791358521956870"><ph name="PUBLISHER"/> devre dışı</translation>
 <translation id="1276592121036104130">Yeni içerik yükle</translation>
 <translation id="3189348785087463371">Tanıtılan</translation>
-<translation id="7554145152551782675">Daha Fazla AI Wiz Teklifi</translation>
+<translation id="7554145152551782675">Daha Fazla AI Wize Teklifi</translation>
 <translation id="254100925533869330">İçerik yok</translation>
 <translation id="7172792761509429092">Brave News'de gösterilecek içerik yok.</translation>
 <translation id="1771307734839364850">İçerik kaynaklarını seçin</translation>
@@ -218,7 +218,7 @@
 <translation id="6961369821791548622">İzin Ver (Şimdi Yeniden Çalıştır)</translation>
 <translation id="2433507940547922241">Görünüm</translation>
 <translation id="9040069796107003510">Brave Ödülleri simgesi</translation>
-<translation id="6333347122924254968">Adres çubuğunda AI Wiz Ödülleri simgesini göster</translation>
+<translation id="6333347122924254968">Adres çubuğunda AI Wize Ödülleri simgesini göster</translation>
 <translation id="8495235435594442882">Alt araç çubuğunu etkinleştir</translation>
 <translation id="6587448235155023666">Yaptığınız değişiklikler cihazı yeniden başlattığınızda etkinleşecektir.</translation>
 <translation id="8701563696941209024">ŞİMDİ YENİDEN BAŞLAT</translation>
@@ -254,8 +254,8 @@
 <translation id="6871397658902960384">Taramaya başlayın</translation>
 <translation id="454386012157232640">Bir reklam görmedim</translation>
 <translation id="1448877943847791441">Brave ilk reklamınızı şu süre içinde gösterecek:</translation>
-<translation id="4410793187232041318">Şimdi AI Wiz Ads'den jeton kazanacaksın.</translation>
-<translation id="6511854390690723657">Bu, ilk AI Wiz reklamınız. Daha fazla bilgi almak için tıklayın.</translation>
+<translation id="4410793187232041318">Şimdi AI Wize Ads'den jeton kazanacaksın.</translation>
+<translation id="6511854390690723657">Bu, ilk AI Wize reklamınız. Daha fazla bilgi almak için tıklayın.</translation>
 <translation id="2070991379950719711">Brave Ödülleri'ni kullanmaya Başla</translation>
 <translation id="48520986898237073">Cüzdana devam et</translation>
 <translation id="3570367516044491911">Varsayılan tarayıcı olarak ayarla</translation>
@@ -317,14 +317,14 @@
 <translation id="3132642509209154999">Bu kodun süresi dolmuş. Lütfen diğer cihazınızda yeni bir kod oluşturun ve tekrar deneyin.</translation>
 <translation id="2859229680945501779">Bu kod geçersiz. Lütfen cihazınızdaki saatin ve saat diliminin doğru şekilde ayarlandığını teyit edin.</translation>
 <translation id="3149880132460839085">Brave Senkronizasyonu</translation>
-<translation id="3680755684186855422">Brave Senkronizasyonu, yer imleri verilerini çeşitli cihazlarınızdaki AI Wiz Tarayıcılarınız arasında özel olarak senkronize etmenize izin verir.</translation>
+<translation id="3680755684186855422">Brave Senkronizasyonu, yer imleri verilerini çeşitli cihazlarınızdaki AI Wize Tarayıcılarınız arasında özel olarak senkronize etmenize izin verir.</translation>
 <translation id="3735228155296883311">Başka bir cihazda oluşturduğunuz eşitleme zincirinizden alınan kodu taramanız yeterlidir. Ya da yeni bir eşitleme zinciri başlatın.</translation>
-<translation id="2614069607859982576">Mevcut eşitlenmiş cihazı kullnarak, AI Wiz Ayarlarını açın ve Eşitleme &gt; Ayarlarına gidin. "Yeni Cihaz Ekle"yi seçin ve ekranda gösterilen QR Kodunu tarayın.</translation>
+<translation id="2614069607859982576">Mevcut eşitlenmiş cihazı kullnarak, AI Wize Ayarlarını açın ve Eşitleme &gt; Ayarlarına gidin. "Yeni Cihaz Ekle"yi seçin ve ekranda gösterilen QR Kodunu tarayın.</translation>
 <translation id="5241263629636958324">Panoya kopyalandı</translation>
 <translation id="5817918615728894473">Eşle</translation>
 <translation id="7090325819305486658">Veri Tercihleri</translation>
 <translation id="1680065323266179640">Senkronizasyon hesabını sil</translation>
-<translation id="3792563952903751704">Hesabınızı silmek, şifrelenmiş verilerinizi AI Wiz sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır. Ancak bu işlem, bu cihazlarda yerel olarak depolanan verileri silmez.
+<translation id="3792563952903751704">Hesabınızı silmek, şifrelenmiş verilerinizi AI Wize sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır. Ancak bu işlem, bu cihazlarda yerel olarak depolanan verileri silmez.
   Silme işlemi kalıcıdır ve verileri kurtarmanın hiçbir yolu yoktur. Senkronizasyonu tekrar kullanmaya karar verirseniz, yeni bir hesap oluşturmanız ve tüm cihazları tek tek yeniden eklemeniz gerekecektir.</translation>
 <translation id="9064376100690171155">Hesabı kalıcı olarak sil</translation>
 <translation id="2740516568641790390">Senkronizasyon hesabı başarıyla silindi</translation>
@@ -335,12 +335,12 @@
 <translation id="1602067095281698985">Yeni bir senkronizasyon zinciri başlat</translation>
 <translation id="1475223680121592371">Mobil Bir Cihaz Ekle</translation>
 <translation id="2965377893636908578">Bir Bilgisayar Ekle</translation>
-<translation id="6604289897677913048">İkinci bir telefon veya tablet kullanırken AI Wiz Ayarları &gt; Eşitleme &gt; Tara'ya gidin.</translation>
-<translation id="8508856434435157945">Mobil cihazınızda Ayarlar bölümünde AI Wiz Eşitleme'ye gidin ve "Eşitleme Kodunu Tara" düğmesine tıklayın. Aşağıdaki QR Kodunu taramak için kameranızı kullanın.</translation>
-<translation id="2590683710114839102">Bilgisayarınızda AI Wiz Ayarları &gt; Eşitle konumuna gidin. "Bir Eşitleme Zincir Kodu Girin"i seçin.</translation>
+<translation id="6604289897677913048">İkinci bir telefon veya tablet kullanırken AI Wize Ayarları &gt; Eşitleme &gt; Tara'ya gidin.</translation>
+<translation id="8508856434435157945">Mobil cihazınızda Ayarlar bölümünde AI Wize Eşitleme'ye gidin ve "Eşitleme Kodunu Tara" düğmesine tıklayın. Aşağıdaki QR Kodunu taramak için kameranızı kullanın.</translation>
+<translation id="2590683710114839102">Bilgisayarınızda AI Wize Ayarları &gt; Eşitle konumuna gidin. "Bir Eşitleme Zincir Kodu Girin"i seçin.</translation>
 <translation id="65315202420929965">Bu eşitleme kodunu tarayın</translation>
 <translation id="6764016175302339802">Bu koda bir şifreymiş gibi davranın. Birisi kodu ele geçirirse, eşitlenen verilerinizi okuyup değiştirebilir.</translation>
-<translation id="6707003343517029414">Hedef bilgisayarınızda ayarlarda AI Wiz Eşitleme'ye gidin ve "Bir Eşitleme Kodum Var" düğmesine tıklayın.\nAşağıda gösterilen eşitleme zinciri kodunu girin.</translation>
+<translation id="6707003343517029414">Hedef bilgisayarınızda ayarlarda AI Wize Eşitleme'ye gidin ve "Bir Eşitleme Kodum Var" düğmesine tıklayın.\nAşağıda gösterilen eşitleme zinciri kodunu girin.</translation>
 <translation id="2731921493694251495">Eşitleme zinciri kodunu girin</translation>
 <translation id="2175927920773552910">QR Kodu</translation>
 <translation id="8653433343015102968">Kod Sözcükleri</translation>
@@ -350,19 +350,19 @@
 <translation id="6776430845975754238">Ayarların değiştirilmesi, yalnızca bu cihazın diğerleriyle paylaştığı verileri etkiler.</translation>
 <translation id="1061533051865606843">Yeni Cihaz Ekle</translation>
 <translation id="7539985410310934287">Kod sözcüklerini girin</translation>
-<translation id="2886391679017857869">Mevcut eşitlenmiş cihazları kullanarak, AI Wiz Ayarlarını açın ve Eşitleme &gt; Ayarlarına gidin. "Yeni Cihaz Ekle"yi ve sonra "Yerine kod kelimeleri görüntüle"yi seçin.</translation>
+<translation id="2886391679017857869">Mevcut eşitlenmiş cihazları kullanarak, AI Wize Ayarlarını açın ve Eşitleme &gt; Ayarlarına gidin. "Yeni Cihaz Ekle"yi ve sonra "Yerine kod kelimeleri görüntüle"yi seçin.</translation>
 <translation id="8131740175452115882">Onayla</translation>
 <translation id="4973653569293835178">Kameramı kullanacağım...</translation>
 <translation id="326454632686131209">Cihazı eşitle</translation>
 <translation id="327726072512457161">Ayarlardan çıkış</translation>
 <translation id="8050847734948770789">Brave Ödülleri'ni Etkinleştir</translation>
 <translation id="9187185473011056079">Ben varım!</translation>
-<translation id="8185825081026121627">Gizliliği koruyan AI Wiz Rewards reklamlarına bakarak Basic Attention Token kazanın.</translation>
+<translation id="8185825081026121627">Gizliliği koruyan AI Wize Rewards reklamlarına bakarak Basic Attention Token kazanın.</translation>
 <translation id="5321518976657560663">Sıfırlama Hatası</translation>
 <translation id="4114170343590425996">Brave Ödülleri sıfırlanırken bir hata oluştu. Lütfen Brave'i yeniden başlatın ve tekrar deneyin.</translation>
 <translation id="6417420737057016607">Brave Reklamları</translation>
 <translation id="5611966874859284786">Brave kullanımda olmadığında bildirim reklamlarını göster</translation>
-<translation id="6606319453795180219">Bu, AI Wiz Rewards'unuzu siler ve tüm AI Wiz Rewards verilerinizi sıfırlar</translation>
+<translation id="6606319453795180219">Bu, AI Wize Rewards'unuzu siler ve tüm AI Wize Rewards verilerinizi sıfırlar</translation>
 <translation id="8293206222192510085">Yer İşareti Ekle</translation>
 <translation id="340492034650766959">Yer İşaretini Sil</translation>
 <translation id="2149973817440762519">Yer İşaretini Düzenle</translation>
@@ -381,16 +381,16 @@
 <translation id="2803313416453193357">Klasörü aç</translation>
 <translation id="8985635554450124959">Eşitleme ayarlanamadı</translation>
 <translation id="7173114856073700355">Ayarları Aç</translation>
-<translation id="496896260395129787">Bu AI Wiz Sync hesabı, başka bir cihazdan silindi. Senkronizasyonu devre dışı bırakmak istemediyseniz <ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">Bu AI Wize Sync hesabı, başka bir cihazdan silindi. Senkronizasyonu devre dışı bırakmak istemediyseniz <ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>hesabı yeniden oluşturun</translation>
 <translation id="4094590686212463338">Bu senkronizasyon zincirine katılınamadı. Senkronizasyon zinciri silindi.</translation>
 <translation id="4908081302669157000">Telefon numaraları, e-postalar ve adresler</translation>
 <translation id="1056898198331236512">Uyarı</translation>
 <translation id="1426410128494586442">Evet</translation>
-<translation id="7811264919113243207">Bu, potansiyel olarak şifrelerinizi de içeren AI Wiz verilerinizi bu QR kodunu üretmiş olan cihazla paylaşacaktır.
+<translation id="7811264919113243207">Bu, potansiyel olarak şifrelerinizi de içeren AI Wize verilerinizi bu QR kodunu üretmiş olan cihazla paylaşacaktır.
 Lütfen bu QR kodunun size ait bir cihaz tarafından üretildiğinden emin olun.
 Bunu yapmak istediğinizden emin misiniz?</translation>
-<translation id="3097089005389027085">Bu, potansiyel olarak şifrelerinizi de içeren AI Wiz verilerinizi bu kod kelimelerini üretmiş olan cihazla paylaşacaktır.
+<translation id="3097089005389027085">Bu, potansiyel olarak şifrelerinizi de içeren AI Wize verilerinizi bu kod kelimelerini üretmiş olan cihazla paylaşacaktır.
 
 Lütfen bu kod kelimelerinin size ait bir cihaz tarafından üretildiğinden emin olun.
 Bunu yapmak istediğinizden emin misiniz?</translation>
@@ -424,7 +424,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="7136586167396205364">Sponsorlu Resimleri Gizle</translation>
 <translation id="2927095357213611519">Tokenler ile web tasarımcıları destekleyebilirsiniz.\nGizlilik dostu reklamlar izleyerek token kazanın.</translation>
 <translation id="2898634658146274982">Harici linkleri Brave'de aç</translation>
-<translation id="5616508928556767259">Diğer uygulamalardaki bağlantıları AI Wiz web görünümünde açar. Not: Varsayılan tarayıcınız AI Wiz olmalıdır.</translation>
+<translation id="5616508928556767259">Diğer uygulamalardaki bağlantıları AI Wize web görünümünde açar. Not: Varsayılan tarayıcınız AI Wize olmalıdır.</translation>
 <translation id="2394961582378297792">Oturum kapatıldı</translation>
 <translation id="5308380583665731573">Bağlan</translation>
 <translation id="3368922792935385530">Bağlı</translation>
@@ -451,7 +451,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="7961015016161918242">Hiçbir Zaman</translation>
 <translation id="1275213816424141989">Belki Daha Sonra</translation>
 <translation id="4406937629441301400">Bu görseli görüntülediğiniz için jeton kazanın, ödemesini oluşturuculara yapın. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Bu resmi görüntülemek için jeton kazanın. Payınızı talep etmek için AI Wiz Ödülleri'ni kullanmaya Başla tuşuna dokunun.</translation>
+<translation id="1992363542751124282">Bu resmi görüntülemek için jeton kazanın. Payınızı talep etmek için AI Wize Ödülleri'ni kullanmaya Başla tuşuna dokunun.</translation>
 <translation id="6632345639591919543">Bu görseli görüntülediğiniz için jeton kazanıyorsunuz.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Bu görseli görüntülediğiniz için jeton kazanıyorsunuz.</translation>
 <translation id="7877201489035217175">Sponsorlu görseller hakkında daha fazla bilgi edinin</translation>
@@ -459,7 +459,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="33967210973550414"><ph name="CURRENT_MONTH"/> ödülleri için ödemelerin işlenmesi devam ediyor. <ph name="CHECK_STATUS"/></translation>
 <translation id="1622952853310946314"><ph name="CURRENT_MONTH"/> ödülleri için ödemeler tamamlandı. <ph name="SUPPORT"/></translation>
 <translation id="7717357606512850995">Durumu kontrol et</translation>
-<translation id="828092975561478703">Görüntülediğiniz her sponsırlu görsel için gelirin %70'ini jeton olarak alırsınız. AI Wiz Ads ile gördüğünüz reklamların kontrolü her zaman sizde.</translation>
+<translation id="828092975561478703">Görüntülediğiniz her sponsırlu görsel için gelirin %70'ini jeton olarak alırsınız. AI Wize Ads ile gördüğünüz reklamların kontrolü her zaman sizde.</translation>
 <translation id="3624048886326677117">İzleyicileri &amp; reklamları engelle (Agresif)</translation>
 <translation id="7151914815476509258">İzleyicileri &amp; reklamları engelle (Standart)</translation>
 <translation id="7384778069178817075">Tüm izleyicilere &amp; reklamlara izin ver</translation>
@@ -490,10 +490,10 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="7474113515179313724">Bu siteyi Brave'in gizlilik koruması olmadan tarıyorsunuz. Shields açıkken doğru çalışmıyor mu?</translation>
 <translation id="9055546041146396417">Bu site bozuk görüntülenirse, Shileds'ı kapatmayı deneyin.</translation>
 <translation id="1209739344687072997">Arızalı bir siteyi bildir</translation>
-<translation id="8510478288840333677">Bu sitenin Kalkanlar'la düzgün çalışmadığını AI Wiz geliştiricilerine bildirin:</translation>
-<translation id="5429200298326665264">Not: Bu site adresi, AI Wiz sürüm numaranız ve IP adresinizle birlikte gönderilecek (depolanmayacak).</translation>
+<translation id="8510478288840333677">Bu sitenin Kalkanlar'la düzgün çalışmadığını AI Wize geliştiricilerine bildirin:</translation>
+<translation id="5429200298326665264">Not: Bu site adresi, AI Wize sürüm numaranız ve IP adresinizle birlikte gönderilecek (depolanmayacak).</translation>
 <translation id="5299848999918506028">Teşekkür ederiz!</translation>
-<translation id="76550953340008122">Bu sitede yanlış bir şeyler olduğunu AI Wiz geliştiricilerine bildirdiğiniz için teşekkür ederiz. Düzeltmek için elimizden geleni yapacağız!</translation>
+<translation id="76550953340008122">Bu sitede yanlış bir şeyler olduğunu AI Wize geliştiricilerine bildirdiğiniz için teşekkür ederiz. Düzeltmek için elimizden geleni yapacağız!</translation>
 <translation id="650318023204990401">Gelişmiş kontroller</translation>
 <translation id="1275664486910646411">Otomatik tamamlamada en popüler siteleri göster</translation>
 <translation id="5370478469168390143">Çevrimiçi Verileri Kaydet</translation>
@@ -508,7 +508,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="5440744330377972191">Websiteleri daha hızlı yüklenir</translation>
 <translation id="3000738865641747653">Daha az veri yüklenmesi, websitelerinin Brave'de daha hızlı yüklenmesi demek (diğer tarayıcılardan 8 kata kadar daha hızlı).</translation>
 <translation id="8903462729414407077">Haftalık haber alın</translation>
-<translation id="7450323860390658083">Ziyaret ettiğiniz web sitelerinden hangilerinin gizliliği en fazla ihlal ettiği hakkında bilgi alın.\n\nBu gizlilik istatistiklerini sadece siz görebilirsiniz. AI Wiz tarayıcısındaki hiçbir kişisel veri veya tarama geçmişi cihazınızı terk etmeyecektir.</translation>
+<translation id="7450323860390658083">Ziyaret ettiğiniz web sitelerinden hangilerinin gizliliği en fazla ihlal ettiği hakkında bilgi alın.\n\nBu gizlilik istatistiklerini sadece siz görebilirsiniz. AI Wize tarayıcısındaki hiçbir kişisel veri veya tarama geçmişi cihazınızı terk etmeyecektir.</translation>
 <translation id="6170159749517116894">Gizlilik raporlarını açın</translation>
 <translation id="1669047024429367828">Görünürlük</translation>
 <translation id="5966707198760109579">Hafta</translation>
@@ -590,7 +590,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="5187052478998910855">Rewards'la ilgili bir hatırlatıcı mı lazım?</translation>
 <translation id="8622329973403382303">Tarihe bir Rewards rock yıldızı olarak geçmek için, işlerin nasıl yürüdüğü konusunda tazelenmek amacıyla hızlı bir gezinti yapın!</translation>
 <translation id="3479552764303398839">Şimdi değil</translation>
-<translation id="7138272885617540195">Uygulama bağlantılarının AI Wiz dışındaki uygulamalarda açılmasına izin ver</translation>
+<translation id="7138272885617540195">Uygulama bağlantılarının AI Wize dışındaki uygulamalarda açılmasına izin ver</translation>
 <translation id="8792121506918889955">WebRTC IP kullanım politikası</translation>
 <translation id="8798099450830957504">Varsayılan</translation>
 <translation id="1822560017823072927">Varsayılan genel ve özel arabirimler</translation>
@@ -600,8 +600,8 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="1483493594462132177">Gönder</translation>
 <translation id="538450413584738399">Takas</translation>
 <translation id="1366855498335432549">Para Yatır</translation>
-<translation id="1420318137760245955">Yeni AI Wiz Cüzdan'a hoş geldiniz</translation>
-<translation id="8339846196588658366">Kripto varlıklarınızı himayenizde tutun ve portföy performansınızı izleyin. Hepsi doğrudan AI Wiz gizlilik tarayıcısı üzerinden.</translation>
+<translation id="1420318137760245955">Yeni AI Wize Cüzdan'a hoş geldiniz</translation>
+<translation id="8339846196588658366">Kripto varlıklarınızı himayenizde tutun ve portföy performansınızı izleyin. Hepsi doğrudan AI Wize gizlilik tarayıcısı üzerinden.</translation>
 <translation id="4472575034687746823">Başlayın</translation>
 <translation id="2759836790106646094">Cüzdanınızı hemen yedekleyin!</translation>
 <translation id="1078873179929044999">Bir sonraki adımda, ana kripto hesaplarınızı kurtarmak için kullanabileceğiniz 12 kelimelik bir kurtarma tümcesi göreceksiniz. Bu tümceyi güvenli bir yerde saklayın. Kurtarma tümceniz; şifreyi unutmanız, cihazınızın kaybolması veya çalınması ya da cüzdanınızı değiştirmek istemeniz halinde hesabınıza yeniden erişim sağlamanın tek yoludur.</translation>
@@ -647,7 +647,7 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="283071225285270357">Kurtarma ifadenizi girin</translation>
 <translation id="3943857333388298514">Yapıştır</translation>
 <translation id="3331452756822160641">Yeni Şifre</translation>
-<translation id="4359319875297001084">Eski AI Wiz kripto cüzdanlarından içe aktarılsın mı?</translation>
+<translation id="4359319875297001084">Eski AI Wize kripto cüzdanlarından içe aktarılsın mı?</translation>
 <translation id="2339124864228588937">Kurtarma ifadesini doğrulayın</translation>
 <translation id="3747079125031086337">Kurtarma cümlenizdeki kelimeleri doğru sırada seçin.</translation>
 <translation id="6518133107902771759">Doğrula</translation>
@@ -925,10 +925,10 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="5242300593039211344">Cüzdanı Kilitle</translation>
 <translation id="1108298724135935307">Bağlı siteler</translation>
 <translation id="4255623233927788178">Blok gezgininde görüntüleyin</translation>
-<translation id="8274201358637112807">Bu sayfa AI Wiz Cüzdan'la etkileşime geçmek istiyor</translation>
+<translation id="8274201358637112807">Bu sayfa AI Wize Cüzdan'la etkileşime geçmek istiyor</translation>
 <translation id="3355936511340229503">Bağlantı hatası</translation>
 <translation id="4891604214809245310">Ağ, <ph name="NETWORK_NAME"/> olarak ayarlanamıyor</translation>
-<translation id="685345388423515592">Görünüşe göre bu cihazda "Her zaman açık" şeklinde ayarlanmış başka VPN'ler var. AI Wiz Güvenlik Duvarı + VPN'i etkinleştirmek için tekrar bağlanmadan önce ilk olarak diğer VPN'ler için bu "Her zaman açık" ayarını devre dışı bırakın. Sorun devam ederse, diğer VPN'leri kaldırmayı deneyin.</translation>
+<translation id="685345388423515592">Görünüşe göre bu cihazda "Her zaman açık" şeklinde ayarlanmış başka VPN'ler var. AI Wize Güvenlik Duvarı + VPN'i etkinleştirmek için tekrar bağlanmadan önce ilk olarak diğer VPN'ler için bu "Her zaman açık" ayarını devre dışı bırakın. Sorun devam ederse, diğer VPN'leri kaldırmayı deneyin.</translation>
 <translation id="85136472535634474">VPN Ayarlarını Aç</translation>
 <translation id="8352805003811526272">Yapılandırma sıfırlanıyor ...</translation>
 <translation id="6809312301323611382">Zaten aynı sunucuyu seçtiniz.</translation>
@@ -948,7 +948,7 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="4822132585477111396">Chain ID</translation>
 <translation id="7131971375297699539">Para birimi sembolü</translation>
 <translation id="7982789257301363584">Ağ</translation>
-<translation id="6936860995365507185">Bu, bu ağın AI Wiz Wallet içinde kullanılmasına izin verecektir. <ph name="CLICK_START"/>Daha fazla bilgi edin<ph name="CLICK_END"/>.</translation>
+<translation id="6936860995365507185">Bu, bu ağın AI Wize Wallet içinde kullanılmasına izin verecektir. <ph name="CLICK_START"/>Daha fazla bilgi edin<ph name="CLICK_END"/>.</translation>
 <translation id="4717431746210146708">Bu sitenin bir ağ eklemesine izin verilsin mi?</translation>
 <translation id="4857321293515555666">Bu DApp, talebinizi tamamlamadan önce bu mesajı okumak istiyor.</translation>
 <translation id="714506544401754321">Mesajı çöz</translation>
@@ -966,7 +966,7 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="803706420145725977">1 saatliğine durdur</translation>
 <translation id="4394049700291259645">Devre dışı bırak</translation>
 <translation id="7733890291091968191">Web3 bildirimlerini göster</translation>
-<translation id="1371627247679035769">\n\n\n\n#### AI Wiz sizi izlemez veya uygulamamızı nasıl kullandığınızı bilmez, bu nedenle VPN'i nasıl kurduğunuzu bilmiyoruz. Lütfen yaşadığınız sorunla ilgili bilgileri paylaşın, böylece sorunu olabilecek en kısa sürede çözmek için elimizden gelenin en iyisini yapalım. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### AI Wize sizi izlemez veya uygulamamızı nasıl kullandığınızı bilmez, bu nedenle VPN'i nasıl kurduğunuzu bilmiyoruz. Lütfen yaşadığınız sorunla ilgili bilgileri paylaşın, böylece sorunu olabilecek en kısa sürede çözmek için elimizden gelenin en iyisini yapalım. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nVPN Ana Bilgisayar Adı\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nAbonelik Türü\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nPlaystore Token\n <ph name="VALUE"/></translation>
@@ -1044,7 +1044,7 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="77243237706803459">Mint 2'yi başlat</translation>
 <translation id="583281660410589416">Bilinmeyen</translation>
 <translation id="5666264859501108700">Brave Ödülleri bölgeniz <ph name="COUNTRY_NAME"/> olarak ayarlandı.</translation>
-<translation id="909076461795862330">Ne yazık ki AI Wiz Ödüllerini ayarlamaya çalışırken bir hata oluştu. Lütfen tekrar deneyin.</translation>
+<translation id="909076461795862330">Ne yazık ki AI Wize Ödüllerini ayarlamaya çalışırken bir hata oluştu. Lütfen tekrar deneyin.</translation>
 <translation id="7352651011704765696">Bir şey yanlış gitti</translation>
 <translation id="7144878232160441200">Tekrar Dene</translation>
 <translation id="6040143037577758943">Kapat</translation>
@@ -1074,11 +1074,11 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="7902225556763260253">Son kullanma tarihi</translation>
 <translation id="1908159733454294871">Güvenlik riski tespit edildi</translation>
 <translation id="4220693114674044366">Token adresi</translation>
-<translation id="5658257029899993935">Satın alımı AI Wiz hesabınıza bağlayın</translation>
-<translation id="1187061015547219282">Brave VPN'i diğer cihazlarda kullanmak için Play Store satın alımınızı AI Wiz hesabınıza bağlayın.</translation>
+<translation id="5658257029899993935">Satın alımı AI Wize hesabınıza bağlayın</translation>
+<translation id="1187061015547219282">Brave VPN'i diğer cihazlarda kullanmak için Play Store satın alımınızı AI Wize hesabınıza bağlayın.</translation>
 <translation id="6662142137695589205">VPN aboneliğinizi bağlayın</translation>
 <translation id="2674077112509133024">Brave Güvenlik Duvarı + VPN korumanızı genişletin</translation>
-<translation id="6365389672683343144">Brave VPN aboneliğiniz; Android, iOS ve masaüstü genelinde 5 cihaza kadar koruma sağlayabilir. Sadece Google Play aboneliğinizi AI Wiz hesabınıza bağlayın.</translation>
+<translation id="6365389672683343144">Brave VPN aboneliğiniz; Android, iOS ve masaüstü genelinde 5 cihaza kadar koruma sağlayabilir. Sadece Google Play aboneliğinizi AI Wize hesabınıza bağlayın.</translation>
 <translation id="6610899852831463073">Güvenli Tarama etkinleştirilemiyor</translation>
 <translation id="7954263306665462056">Güvenli Tarama, cihazınızda devre dışı bırakıldı. Etkinleştirmek için Google Play hizmetlerinin yüklendiğinden ve güncel olduğundan emin olun.</translation>
 <translation id="6605147707233193230">İçerik oluşturucuları desteklemeye yardımcı olmak için açın</translation>
@@ -1086,11 +1086,11 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="6067959437127691361">Brave Ödüllerini kullanmak, içerik oluşturucuların desteklenmesine yardımcı olur ve BAT kazanmanızı sağlar.</translation>
 <translation id="3264975266761862670">Kazanmaya hazır mısınız?</translation>
 <translation id="265337947574975838">Bağlanın veya ortaklarımızdan biriyle bir hesap oluşturun.</translation>
-<translation id="1772961321862399863">BAT kazanmak için kullanıcıların AI Wiz Ödüllerine bir korumalı hesap bağlamaları gerekir. Ne yazık ki bölgenizde ulaşılabilir bir koruyucu olmadığı için kazanç özelliği kullanılamıyor. Şimdilik AI Wiz Ödüllerini açmak, oluşturucuları otomatik olarak destekler.</translation>
+<translation id="1772961321862399863">BAT kazanmak için kullanıcıların AI Wize Ödüllerine bir korumalı hesap bağlamaları gerekir. Ne yazık ki bölgenizde ulaşılabilir bir koruyucu olmadığı için kazanç özelliği kullanılamıyor. Şimdilik AI Wize Ödüllerini açmak, oluşturucuları otomatik olarak destekler.</translation>
 <translation id="654447476965480878">BAT kazanmak hakkında daha fazla bilgi alın</translation>
 <translation id="6278643716658443228">Ödüller ayarları</translation>
 <translation id="6516984207843289176">Hesabı bağla</translation>
-<translation id="4272136334824111854">Bu ay, AI Wiz Ödülleri tarafından desteklenen <ph name="CREATOR_COUNT"/> oluşturucuyu ziyaret ettiniz</translation>
+<translation id="4272136334824111854">Bu ay, AI Wize Ödülleri tarafından desteklenen <ph name="CREATOR_COUNT"/> oluşturucuyu ziyaret ettiniz</translation>
 <translation id="6845311459433734326">BAT kazanmak ve kazançlarınızı çekmek için bir korumalı hesabı bağlayın</translation>
 <translation id="928980476243133540">Daha sonra yapacağım</translation>
 <translation id="579702532610384533">Tekrar bağlan</translation>
@@ -1207,7 +1207,7 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="6322030314101903925">Kullanılabilir varlık yok</translation>
 <translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">Brave Cüzdan'la oturum açın</translation>
-<translation id="3696514931437952995"><ph name="ORIGIN"/> adresinde oturum açıyorsunuz. AI Wiz Cüzdanı, cüzdan adresinizi <ph name="ORIGIN"/> ile paylaşacak.</translation>
+<translation id="3696514931437952995"><ph name="ORIGIN"/> adresinde oturum açıyorsunuz. AI Wize Cüzdanı, cüzdan adresinizi <ph name="ORIGIN"/> ile paylaşacak.</translation>
 <translation id="1028781062521375153">Detayları gör</translation>
 <translation id="6759710362319508545">Kaynaklar</translation>
 <translation id="2471230424465522689">En erken</translation>

@@ -9,7 +9,7 @@
 namespace brave_wallet {
 namespace prefs {
 
-// Used to enable/disable AI Wiz Wallet via a policy.
+// Used to enable/disable AI Wize Wallet via a policy.
 inline constexpr char kDisabledByPolicy[] = "brave.wallet.disabled_by_policy";
 
 }  // namespace prefs

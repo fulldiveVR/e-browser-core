@@ -1,3 +1,3 @@
 # Promoted Content Ad Unit
 
-Displayed on the AI Wiz News feed.
+Displayed on the AI Wize News feed.

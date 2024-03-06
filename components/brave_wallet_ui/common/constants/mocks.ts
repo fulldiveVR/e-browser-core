@@ -1472,7 +1472,7 @@ export const mockSendSplTokenEvent: BraveWallet.BlowfishSolanaStateChange = {
 }
 
 export const mockSendSolNftEvent: BraveWallet.BlowfishSolanaStateChange = {
-  humanReadableDiff: 'Send AI Wiz NFT',
+  humanReadableDiff: 'Send AI Wize NFT',
   suggestedColor: BraveWallet.BlowfishSuggestedColor.kDebit,
   rawInfo: {
     kind: BraveWallet.BlowfishSolanaRawInfoKind.kSplTransfer,

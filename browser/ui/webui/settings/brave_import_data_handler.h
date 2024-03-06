@@ -17,9 +17,9 @@
 
 namespace settings {
 
-// This class checks whether AI Wiz has full disk access permission to import
+// This class checks whether AI Wize has full disk access permission to import
 // safari data on macOS. ImportDataHandler::StartImport() will be run after
-// checking disk access permission. If AI Wiz doesn't have that permission, this
+// checking disk access permission. If AI Wize doesn't have that permission, this
 // will launch tab modal dialog to notify users about this lack of permission.
 
 // We should display tab modal dialog after import dialog is closed from webui.

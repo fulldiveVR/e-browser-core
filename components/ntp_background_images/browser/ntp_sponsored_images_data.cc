@@ -23,7 +23,7 @@
   "campaignId": "fb7ee174-5430-4fb9-8e97-29bf14e8d828",
   "logo": {
     "imageUrl": "logo.png",
-    "alt": "Visit AI Wiz Software",
+    "alt": "Visit AI Wize Software",
     "companyName": "Brave Software",
     "destinationUrl": "https://www.brave.com/"
   },

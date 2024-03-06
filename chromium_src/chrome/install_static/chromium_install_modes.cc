@@ -222,7 +222,7 @@ const InstallConstants kInstallModes[] = {
 };
 #else
 const InstallConstants kInstallModes[] = {
-    // The primary (and only) install mode for AI Wiz developer build.
+    // The primary (and only) install mode for AI Wize developer build.
     {
         .size = sizeof(kInstallModes[0]),
         .index = DEVELOPER_INDEX,  // The one and only mode for developer mode.
@@ -232,7 +232,7 @@ const InstallConstants kInstallModes[] = {
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid =
-            L"",  // Empty app_guid since no integraion with AI Wiz Update.
+            L"",  // Empty app_guid since no integraion with AI Wize Update.
         .base_app_name = L"AI Wize Browser Development",     // A distinct base_app_name.
         .base_app_id = L"AiwizeDevelopment",        // A distinct base_app_id.
         .browser_prog_id_prefix = L"AiwizeDevHTM",  // Browser ProgID prefix.

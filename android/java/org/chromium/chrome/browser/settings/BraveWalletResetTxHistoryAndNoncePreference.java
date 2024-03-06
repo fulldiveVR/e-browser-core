@@ -28,7 +28,7 @@ import org.chromium.mojo.system.MojoException;
 import org.chromium.ui.KeyboardVisibilityDelegate;
 
 /**
- * The preference used to reset transaction and nonce history in AI Wiz Wallet.
+ * The preference used to reset transaction and nonce history in AI Wize Wallet.
  */
 public class BraveWalletResetTxHistoryAndNoncePreference
         extends Preference implements Preference.OnPreferenceClickListener, ConnectionErrorHandler {

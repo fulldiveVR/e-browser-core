@@ -200,7 +200,7 @@ public class BraveMainPreferencesBase
 
         // updates the icons - normally the ones from Chromium
         updatePreferenceIcons();
-        // rearanges programmatically the order for the prefs from AI Wiz and Chromium
+        // rearanges programmatically the order for the prefs from AI Wize and Chromium
         rearrangePreferenceOrders();
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M 

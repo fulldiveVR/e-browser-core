@@ -160,7 +160,7 @@ std::optional<std::string> GetChainIdByNetworkId_DEPRECATED(
 
 // Returns a string used for web3_clientVersion in the form of
 // BraveWallet/v[chromium-version]. Note that we expose only the Chromium
-// version and not the AI Wiz version because that way no extra entropy
+// version and not the AI Wize version because that way no extra entropy
 // is leaked from what the user agent provides for fingerprinting.
 std::string GetWeb3ClientVersion();
 

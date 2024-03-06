@@ -22,13 +22,13 @@
 <translation id="1110914759170138831">Sorotan dipersingkat</translation>
 <translation id="1111673857033749125">Bookmark yang tersimpan di perangkat lainnya akan muncul di sini.</translation>
 <translation id="1113597929977215864">Buka tampilan sederhana</translation>
-<translation id="4470276443668654888">Metode pembayaran dan alamat dari Google Pay tidak akan dienkripsi. Histori penjelajahan dari AI Wiz tidak akan disinkronkan.
+<translation id="4470276443668654888">Metode pembayaran dan alamat dari Google Pay tidak akan dienkripsi. Histori penjelajahan dari AI Wize tidak akan disinkronkan.
 Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi Anda. Frasa sandi tidak dikirim ke atau disimpan oleh Brave. Jika lupa frasa sandi atau ingin mengubah setelan ini, Anda perlu mereset sinkronisasi. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Tidak melindungi Anda terhadap situs, download, dan ekstensi berbahaya. Anda akan tetap mendapatkan perlindungan Safe Browsing, jika tersedia, di layanan AI Wiz lainnya, seperti Gmail dan Penelusuran.</translation>
+<translation id="1295971429974142731">Tidak melindungi Anda terhadap situs, download, dan ekstensi berbahaya. Anda akan tetap mendapatkan perlindungan Safe Browsing, jika tersedia, di layanan AI Wize lainnya, seperti Gmail dan Penelusuran.</translation>
 <translation id="1129510026454351943">Detail: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Jangan tawarkan penerjemahan situs ini</translation>
 <translation id="1145536944570833626">Hapus data yang sudah ada.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> akan dibuka di Brave. Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1"/>Persyaratan Layanan Brave<ph name="END_LINK1"/> serta <ph name="BEGIN_LINK2"/>Persyaratan Layanan Tambahan AI Wiz dan ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> akan dibuka di Brave. Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1"/>Persyaratan Layanan Brave<ph name="END_LINK1"/> serta <ph name="BEGIN_LINK2"/>Persyaratan Layanan Tambahan AI Wize dan ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Gunakan sandi <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Ganti nama</translation>
 <translation id="7947699437047020219">Brave akan meminta situs seluler jika layarnya sempit</translation>
@@ -50,18 +50,18 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="1240288207750131269">Memuat <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Untuk melanjutkan, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> akan membagikan nama, alamat email, dan foto profil Anda ke situs ini. Lihat <ph name="BEGIN_LINK1"/>kebijakan privasi<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>persyaratan layanan<ph name="END_LINK2"/> situs ini.</translation>
 <translation id="124116460088058876">Bahasa lainnya</translation>
-<translation id="4078574862195461280">Sandi Anda akan dihapus dari Pengelola Sandi AI Wiz untuk <ph name="CHROME_CHANNEL"/>. Anda akan menyimpan file sandi yang baru saja didownload.</translation>
+<translation id="4078574862195461280">Sandi Anda akan dihapus dari Pengelola Sandi AI Wize untuk <ph name="CHROME_CHANNEL"/>. Anda akan menyimpan file sandi yang baru saja didownload.</translation>
 <translation id="1242883863226959074">perangkat</translation>
 <translation id="124678866338384709">Menutup tab aktif</translation>
 <translation id="1246905108078336582">Hapus saran dari papan klip?</translation>
 <translation id="1996480094660735607">Brave doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Sekarang Anda akan melihat konten dari dan tentang <ph name="SITE_NAME"/> di tab Mengikuti. Situs dan penelusuran yang Anda ikuti disimpan di Akun AI Wiz Anda. Anda dapat mengelola konten yang Anda ikuti di setelan kapan saja.</translation>
+<translation id="7074197713963877855">Sekarang Anda akan melihat konten dari dan tentang <ph name="SITE_NAME"/> di tab Mengikuti. Situs dan penelusuran yang Anda ikuti disimpan di Akun AI Wize Anda. Anda dapat mengelola konten yang Anda ikuti di setelan kapan saja.</translation>
 <translation id="1263231323834454256">Daftar bacaan</translation>
 <translation id="1266864766717917324">Tidak dapat membagikan <ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">Anda akan menemukan histori di sini</translation>
 <translation id="1273937721055267968">Blokir <ph name="DOMAIN"/></translation>
 <translation id="1283039547216852943">Ketuk untuk meluaskan</translation>
-<translation id="194557235473047967">Anda akan diminta untuk login ke Akun AI Wiz Anda</translation>
+<translation id="194557235473047967">Anda akan diminta untuk login ke Akun AI Wize Anda</translation>
 <translation id="1291207594882862231">Hapus histori, cookie, data situs, cache...</translation>
 <translation id="129553762522093515">Baru saja ditutup</translation>
 <translation id="1298077576058087471">Hemat data hingga 60%, baca berita hari ini</translation>
@@ -106,7 +106,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="1513814250881909472">Sinkronkan untuk mengakses tab Anda dari perangkat lainnya</translation>
 <translation id="1513858653616922153">Hapus sandi</translation>
 <translation id="1521774566618522728">Aktif hari ini</translation>
-<translation id="8090895580117672212">Untuk mengelola akun AI Wiz Anda, ketuk tombol "Kelola akun"</translation>
+<translation id="8090895580117672212">Untuk mengelola akun AI Wize Anda, ketuk tombol "Kelola akun"</translation>
 <translation id="1549000191223877751">Beralih ke jendela lain</translation>
 <translation id="1705567146636171298">Perbarui browser Brave</translation>
 <translation id="1568636008098739136">Dengarkan halaman ini. Sentuh lama untuk mengedit pintasan ini.</translation>
@@ -124,14 +124,14 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="1671236975893690980">Proses download tertunda...</translation>
 <translation id="1672586136351118594">Jangan tampilkan lagi</translation>
 <translation id="1680919990519905526">Beli dengan Google Lens <ph name="BEGIN_NEW"/>Baru<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Anda akan segera melihat konten dari dan tentang <ph name="SITE_NAME"/> di tab Mengikuti. Situs dan penelusuran yang Anda ikuti disimpan di Akun AI Wiz Anda. Anda dapat mengelola konten yang Anda ikuti di setelan kapan saja.</translation>
+<translation id="7870200641233500458">Anda akan segera melihat konten dari dan tentang <ph name="SITE_NAME"/> di tab Mengikuti. Situs dan penelusuran yang Anda ikuti disimpan di Akun AI Wize Anda. Anda dapat mengelola konten yang Anda ikuti di setelan kapan saja.</translation>
 <translation id="1696555181932908973">Anda dapat mencoba cara lain untuk melanjutkan di <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">Ubah setelan tema gelap?</translation>
 <translation id="1702907158640575240">Browser terkelola</translation>
 <translation id="1710099199314114079">Pindah atau tutup tab</translation>
 <translation id="1718835860248848330">Sejam terakhir</translation>
 <translation id="1724977129262658800">Buka kunci untuk mengedit sandi Anda</translation>
-<translation id="6493900814829428590">Anda dapat menjelajah dan menelusuri lebih cepat saat AI Wiz melakukan pramuat halaman yang menurutnya mungkin akan Anda buka</translation>
+<translation id="6493900814829428590">Anda dapat menjelajah dan menelusuri lebih cepat saat AI Wize melakukan pramuat halaman yang menurutnya mungkin akan Anda buka</translation>
 <translation id="1749561566933687563">Sinkronisasikan bookmark Anda</translation>
 <translation id="1750259112639922169">Grup tab - <ph name="TAB_COUNT"/> tab</translation>
 <translation id="17513872634828108">Buka tab</translation>
@@ -152,7 +152,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="1883903952484604915">File Saya</translation>
 <translation id="189358972401248634">Bahasa lain</translation>
 <translation id="1900260903084164610">Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_TOS_LINK"/>Persyaratan Layanan<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">URL yang Anda buka disimpan ke Akun AI Wiz Anda</translation>
+<translation id="6893464351226208429">URL yang Anda buka disimpan ke Akun AI Wize Anda</translation>
 <translation id="1910950723001426294">Daftar opsi berbagi ditutup.</translation>
 <translation id="7021823858304886493">Izinkan login Brave</translation>
 <translation id="1922362554271624559">Bahasa yang disarankan</translation>
@@ -160,13 +160,13 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="1925021887439448749">Masukkan alamat web khusus</translation>
 <translation id="1928618076168182477">Menampilkan tampilan visual</translation>
 <translation id="1928696683969751773">Update</translation>
-<translation id="1875543012935658554">Buka AI Wiz lagi.</translation>
+<translation id="1875543012935658554">Buka AI Wize lagi.</translation>
 <translation id="1933845786846280168">Tab yang Dipilih</translation>
 <translation id="1943432128510653496">Simpan sandi</translation>
 <translation id="1944535645109964458">Tidak ada kunci sandi yang tersedia</translation>
 <translation id="1952172573699511566">Situs akan menampilkan teks dalam bahasa pilihan Anda, jika memungkinkan.</translation>
 <translation id="1959679933317802873">Menunggu konten</translation>
-<translation id="3968054912784331254">Update AI Wiz tidak lagi didukung untuk versi Android ini</translation>
+<translation id="3968054912784331254">Update AI Wize tidak lagi didukung untuk versi Android ini</translation>
 <translation id="1963976881984600709">Perlindungan standar</translation>
 <translation id="1966710179511230534">Perbarui detail ID masuk Anda.</translation>
 <translation id="197288927597451399">Tetap Download</translation>
@@ -210,7 +210,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="218608176142494674">Berbagi</translation>
 <translation id="2194856509914051091">Hal-hal yang perlu dipertimbangkan</translation>
 <translation id="22091350895006575">Tambahkan nama pengguna</translation>
-<translation id="4075202346699640887">Membuka AI Wiz tanpa kunci profil akan menghapus sandi dan metode pembayaran tersimpan Anda dari mobil. Menggunakan kunci profil akan menjaga keamanan data ini.</translation>
+<translation id="4075202346699640887">Membuka AI Wize tanpa kunci profil akan menghapus sandi dan metode pembayaran tersimpan Anda dari mobil. Menggunakan kunci profil akan menjaga keamanan data ini.</translation>
 <translation id="2227444325776770048">Lanjutkan sebagai <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Jendela kosong</translation>
 <translation id="223356358902285214">Aktivitas Web &amp; Aplikasi</translation>
@@ -220,8 +220,8 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4808014761134300692">Sandi Anda dienkripsi di perangkat sebelum disimpan ke Pengelola Sandi Brave</translation>
 <translation id="2249635629516220541">Sesuaikan info yang digunakan situs untuk menampilkan iklan</translation>
 <translation id="2259659629660284697">Ekspor sandi…</translation>
-<translation id="8820144752830692527">Anda dapat memilih jenis data yang akan disinkronkan di <ph name="BEGIN_LINK1"/>setelan<ph name="END_LINK1"/> kapan saja. AI Wiz dapat mempersonalisasi Penelusuran dan layanan lainnya berdasarkan histori Anda.</translation>
-<translation id="781982477617612877">Login ke Akun AI Wiz Anda untuk memeriksa sandi</translation>
+<translation id="8820144752830692527">Anda dapat memilih jenis data yang akan disinkronkan di <ph name="BEGIN_LINK1"/>setelan<ph name="END_LINK1"/> kapan saja. AI Wize dapat mempersonalisasi Penelusuran dan layanan lainnya berdasarkan histori Anda.</translation>
+<translation id="781982477617612877">Login ke Akun AI Wize Anda untuk memeriksa sandi</translation>
 <translation id="2278052315791335171">Menghapus sandi ini tidak akan menghapus akun Anda di <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Alamat penagihan</translation>
 <translation id="228704530595896923">Daftar opsi berbagi.</translation>
@@ -268,11 +268,11 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="2546283357679194313">Cookie dan data situs</translation>
 <translation id="2567385386134582609">GAMBAR</translation>
 <translation id="2567545343356994513">Perlindungan lebih cepat dan lebih proaktif terhadap situs, download, dan ekstensi berbahaya</translation>
-<translation id="5079947353572974060">Menawarkan pengiriman halaman dalam bahasa lain ke AI Wiz Terjemahan</translation>
+<translation id="5079947353572974060">Menawarkan pengiriman halaman dalam bahasa lain ke AI Wize Terjemahan</translation>
 <translation id="2571834852878229351">Buat sandi saya sendiri</translation>
-<translation id="6995512410824092085">Pelajari cara menyetel AI Wiz sebagai browser default</translation>
-<translation id="7242554556818074465">Untuk melihat tab AI Wiz Anda dari perangkat lain, login ke semua perangkat Anda</translation>
-<translation id="8661556138616664061">Konten oleh AI Wiz untuk anak-anak</translation>
+<translation id="6995512410824092085">Pelajari cara menyetel AI Wize sebagai browser default</translation>
+<translation id="7242554556818074465">Untuk melihat tab AI Wize Anda dari perangkat lain, login ke semua perangkat Anda</translation>
+<translation id="8661556138616664061">Konten oleh AI Wize untuk anak-anak</translation>
 <translation id="2324920234469020158">Tindakan ini akan mengosongkan cache dan menghapus cookie, serta data lain dari situs yang dianggap tidak penting oleh Brave.</translation>
 <translation id="2587052924345400782">Versi baru telah tersedia</translation>
 <translation id="2593272815202181319">Monospace</translation>
@@ -293,7 +293,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="265156376773362237">Pramuat standar</translation>
 <translation id="2656405586795711023">Aplikasi web</translation>
 <translation id="2669454659051515572">Siapa pun yang menggunakan perangkat ini dapat melihat file yang didownload</translation>
-<translation id="5806087344347665213">Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wiz dapat mengirimkan URL, termasuk bit konten halaman, ke Brave</translation>
+<translation id="5806087344347665213">Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wize dapat mengirimkan URL, termasuk bit konten halaman, ke Brave</translation>
 <translation id="2702516483241149200">Baru: bagikan link yang mengarah ke teks ini</translation>
 <translation id="3769942772151914580">Perlindungan proaktif secara real time terhadap situs, download, dan ekstensi berbahaya yang didasarkan pada data penjelajahan yang dikirim ke Brave</translation>
 <translation id="2708226184420201102">Buka di browser <ph name="PRODUCT_NAME"/></translation>
@@ -321,15 +321,15 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="6324134303015966238">Brave melakukan pramuat halaman yang mungkin akan Anda buka, agar halaman tersebut dimuat lebih cepat saat Anda membukanya</translation>
 <translation id="2856503607207334158">Login gagal</translation>
 <translation id="2860954141821109167">Pastikan aplikasi telepon diaktifkan di perangkat ini</translation>
-<translation id="6518254564747115579">Beberapa fitur AI Wiz tidak akan tersedia lagi</translation>
+<translation id="6518254564747115579">Beberapa fitur AI Wize tidak akan tersedia lagi</translation>
 <translation id="2869430948265924908">Untuk melindungi konten sensitif di mobil, Anda harus membuat kunci profil mobil.  Anda dapat melakukannya dengan PIN, kode, atau sandi.</translation>
 <translation id="2870560284913253234">Situs</translation>
 <translation id="2871733351037274014">Pramuat halaman</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> ingin Anda menyetujui situs ini:</translation>
-<translation id="6756656512757374876">Pelajari lebih lanjut <ph name="BEGIN_LINK"/>cara AI Wiz menjaga privasi data Anda<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Pelajari lebih lanjut <ph name="BEGIN_LINK"/>cara AI Wize menjaga privasi data Anda<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Tentang Brave</translation>
 <translation id="2891154217021530873">Hentikan pemuatan halaman</translation>
-<translation id="4013614219085422040">Brave dapat menggunakan histori Anda untuk mempersonalisasi Penelusuran dan layanan AI Wiz lainnya</translation>
+<translation id="4013614219085422040">Brave dapat menggunakan histori Anda untuk mempersonalisasi Penelusuran dan layanan AI Wize lainnya</translation>
 <translation id="2894821468041866720">Tidak memperlambat browser atau perangkat Anda.</translation>
 <translation id="2900528713135656174">Buat acara</translation>
 <translation id="2901411048554510387">Menampilkan saran untuk <ph name="WEBSITE_TITLE"/></translation>
@@ -338,12 +338,12 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="7339921667754113786">Platform Notifikasi Brave</translation>
 <translation id="2912296070571964914">Kelola topik yang menarik bagi Anda</translation>
 <translation id="2923908459366352541">Nama tidak valid</translation>
-<translation id="6355102470683871794">Penyimpanan AI Wiz <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Penyimpanan AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Keyboard Anda tidak akan berubah</translation>
-<translation id="6537665929855787038">Notifikasi AI Wiz membuat semuanya menjadi lebih mudah</translation>
+<translation id="6537665929855787038">Notifikasi AI Wize membuat semuanya menjadi lebih mudah</translation>
 <translation id="2940075786175545812">Opsi untuk menyetujui atau tidak menyetujui situs</translation>
 <translation id="2942036813789421260">Tab pratinjau ditutup</translation>
-<translation id="4700262879698141140">Mengupdate AI Wiz untuk terhubung ke perangkat lain</translation>
+<translation id="4700262879698141140">Mengupdate AI Wize untuk terhubung ke perangkat lain</translation>
 <translation id="2951071800649516099">Tambahkan halaman ke daftar bacaan untuk dibaca nanti</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> halaman belum dibaca}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> halaman belum dibaca}}</translation>
 <translation id="2961210776189273067">Gelar</translation>
@@ -360,8 +360,8 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="2996291259634659425">Buat frasa sandi</translation>
 <translation id="2996809686854298943">Perlu URL</translation>
 <translation id="2996932914629936323">Menghapus histori dari semua perangkat yang disinkronkan</translation>
-<translation id="2019027298133375428">Saat sebuah situs AI Wiz meminta untuk melakukan pramuat link yang ada di halamannya secara pribadi, AI Wiz akan mengenkripsi dan melakukan pramuat halaman melalui server AI Wiz tanpa cookie. Hal ini akan menyembunyikan identitas Anda dari situs yang dipramuat.</translation>
-<translation id="5730179015008010982">URL yang Anda buka akan dikirim ke AI Wiz untuk memprediksi situs yang mungkin Anda buka berikutnya dan menampilkan info tambahan tentang halaman yang sedang Anda buka</translation>
+<translation id="2019027298133375428">Saat sebuah situs AI Wize meminta untuk melakukan pramuat link yang ada di halamannya secara pribadi, AI Wize akan mengenkripsi dan melakukan pramuat halaman melalui server AI Wize tanpa cookie. Hal ini akan menyembunyikan identitas Anda dari situs yang dipramuat.</translation>
+<translation id="5730179015008010982">URL yang Anda buka akan dikirim ke AI Wize untuk memprediksi situs yang mungkin Anda buka berikutnya dan menampilkan info tambahan tentang halaman yang sedang Anda buka</translation>
 <translation id="3016635187733453316">Pastikan perangkat ini terhubung ke internet</translation>
 <translation id="3026955690410463085">Sertakan link</translation>
 <translation id="3027644380269727216">Berdasarkan aktivitas Anda di situs. Setelan ini aktif.</translation>
@@ -374,15 +374,15 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3038272154009688107">Lihat semua situs</translation>
 <translation id="3046945242843292318">Buka situs ini lebih cepat pada waktu berikutnya</translation>
 <translation id="3055259925215945098">Bookmark dipindahkan</translation>
-<translation id="4163313568284712797">Info tentang penggunaan AI Wiz akan dikirim ke Brave, tetapi tidak dikaitkan dengan Anda\n\nJika AI Wiz mengalami error, detail tentang error tersebut dapat menyertakan beberapa info pribadi\n\nJika Anda mengaktifkan sinkronisasi, metrik juga dapat menyertakan info tentang URL yang Anda buka</translation>
+<translation id="4163313568284712797">Info tentang penggunaan AI Wize akan dikirim ke Brave, tetapi tidak dikaitkan dengan Anda\n\nJika AI Wize mengalami error, detail tentang error tersebut dapat menyertakan beberapa info pribadi\n\nJika Anda mengaktifkan sinkronisasi, metrik juga dapat menyertakan info tentang URL yang Anda buka</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> bookmark}other{<ph name="BOOKMARKS_COUNT_MANY"/> bookmark}}</translation>
-<translation id="6153252609477956632">Artikel di AI Wiz terkait minat Anda</translation>
+<translation id="6153252609477956632">Artikel di AI Wize terkait minat Anda</translation>
 <translation id="3066573403916685335">Turunkan</translation>
 <translation id="3070005020161560471">Otomatis terjemahkan</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> akan dibuka di Brave. Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1"/>Persyaratan Layanan Brave<ph name="END_LINK1"/> serta <ph name="BEGIN_LINK2"/>Persyaratan Layanan Tambahan AI Wiz dan ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Kebijakan Privasi<ph name="END_LINK3"/> juga akan berlaku.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> akan dibuka di Brave. Dengan melanjutkan, Anda menyetujui <ph name="BEGIN_LINK1"/>Persyaratan Layanan Brave<ph name="END_LINK1"/> serta <ph name="BEGIN_LINK2"/>Persyaratan Layanan Tambahan AI Wize dan ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Kebijakan Privasi<ph name="END_LINK3"/> juga akan berlaku.</translation>
 <translation id="3080525922482950719">Anda dapat menyimpan halaman untuk dibaca nanti atau saat offline</translation>
 <translation id="3091010850649238832">Tampilkan konten papan klip</translation>
-<translation id="821565628224723530">Beberapa gambar dikirim ke AI Wiz guna menyempurnakan deskripsi untuk Anda</translation>
+<translation id="821565628224723530">Beberapa gambar dikirim ke AI Wize guna menyempurnakan deskripsi untuk Anda</translation>
 <translation id="3114507951000454849">Baca berita hari ini <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Pengumuman</translation>
 <translation id="3134784203083076891">"</translation>
@@ -396,10 +396,10 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3207960819495026254">Diberi bookmark</translation>
 <translation id="3208584281581115441">Periksa sekarang</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> dihapus</translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Histori penelusuran<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktivitas lainnya<ph name="END_LINK2"/> dapat disimpan di Akun AI Wiz Anda saat login. Anda dapat menghapusnya kapan saja.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Histori penelusuran<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktivitas lainnya<ph name="END_LINK2"/> dapat disimpan di Akun AI Wize Anda saat login. Anda dapat menghapusnya kapan saja.</translation>
 <translation id="321773570071367578">Jika lupa frasa sandi atau ingin mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Untuk menyinkronkan sandi, verifikasi diri Anda</translation>
-<translation id="9210457680074341078">Jika Anda juga menyimpan bookmark di Akun Brave, Anda dapat memantau harga produk di AI Wiz dan mendapatkan notifikasi jika ada penurunan harga</translation>
+<translation id="9210457680074341078">Jika Anda juga menyimpan bookmark di Akun Brave, Anda dapat memantau harga produk di AI Wize dan mendapatkan notifikasi jika ada penurunan harga</translation>
 <translation id="9047551989591319903">Brave sebagai Kunci Keamanan</translation>
 <translation id="3232754137068452469">Aplikasi Web</translation>
 <translation id="3234978181857588512">Simpan ke perangkat</translation>
@@ -427,16 +427,16 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3341262203274374114">Tidak dapat berhenti mengikuti. Terjadi error.</translation>
 <translation id="3359667936385849800">Gunakan penyedia layanan saat ini</translation>
 <translation id="3373701465337594448">Jika diaktifkan, daftar situs yang Anda buka dan menebak minat Anda akan muncul di sini</translation>
-<translation id="2746024117903470217">Untuk membagikan halaman ini ke perangkat lain, aktifkan sinkronisasi setelan AI Wiz di perangkat lain</translation>
-<translation id="8801234437789558906">Bookmark, histori, sandi, dan data AI Wiz lainnya tidak akan disinkronkan lagi dengan Akun AI Wiz Anda.</translation>
+<translation id="2746024117903470217">Untuk membagikan halaman ini ke perangkat lain, aktifkan sinkronisasi setelan AI Wize di perangkat lain</translation>
+<translation id="8801234437789558906">Bookmark, histori, sandi, dan data AI Wize lainnya tidak akan disinkronkan lagi dengan Akun AI Wize Anda.</translation>
 <translation id="3384347053049321195">Bagikan gambar</translation>
 <translation id="3387650086002190359">Download <ph name="FILE_NAME"/> gagal karena kesalahan sistem file.</translation>
 <translation id="3389286852084373014">Teks terlalu besar</translation>
 <translation id="3398320232533725830">Membuka pengelola bookmark</translation>
-<translation id="1081508498128395141">Lebih banyak halaman dipramuat. Halaman mungkin dipramuat melalui server AI Wiz saat diminta oleh situs lain.</translation>
+<translation id="1081508498128395141">Lebih banyak halaman dipramuat. Halaman mungkin dipramuat melalui server AI Wize saat diminta oleh situs lain.</translation>
 <translation id="3414952576877147120">Ukuran:</translation>
 <translation id="3421726884497337397">Pilih kapan cookie pihak ketiga diblokir</translation>
-<translation id="5265419033369521352">Memastikan Anda tetap aman di AI Wiz dan dapat digunakan untuk menyempurnakan keamanan Anda di aplikasi AI Wiz lainnya saat login</translation>
+<translation id="5265419033369521352">Memastikan Anda tetap aman di AI Wize dan dapat digunakan untuk menyempurnakan keamanan Anda di aplikasi AI Wize lainnya saat login</translation>
 <translation id="3429160811076349561">Fitur uji coba nonaktif</translation>
 <translation id="3430670036890315772">Menonaktifkan kunci profil akan menghapus info yang Anda simpan</translation>
 <translation id="3435465986463792564">Membuka banyak jendela Brave? Anda dapat mengelolanya dari sini</translation>
@@ -444,7 +444,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3439276997620616816">Tab yang baru-baru ini ditutup akan ditampilkan di sini</translation>
 <translation id="3443221991560634068">Memuat ulang halaman saat ini</translation>
 <translation id="3444179773590444986">Bagikan masukan terkait tema gelap untuk situs?</translation>
-<translation id="7384339501748168186">Untuk melindungi privasi Anda, AI Wiz tidak akan mengisi otomatis sandi Anda di kolom ini.</translation>
+<translation id="7384339501748168186">Untuk melindungi privasi Anda, AI Wize tidak akan mengisi otomatis sandi Anda di kolom ini.</translation>
 <translation id="3474624961160222204">Lanjutkan sebagai <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Anda dapat memilih mesin telusur Anda</translation>
 <translation id="3479552764303398839">Jangan sekarang</translation>
@@ -453,7 +453,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Urutkan dari yang terlama</translation>
 <translation id="3507132249039706973">Perlindungan Standar aktif</translation>
-<translation id="8669829441518807650">Offline. AI Wiz tidak dapat memeriksa update.</translation>
+<translation id="8669829441518807650">Offline. AI Wize tidak dapat memeriksa update.</translation>
 <translation id="3513704683820682405">Augmented Reality</translation>
 <translation id="3518985090088779359">Terima &amp; lanjutkan</translation>
 <translation id="3521388823983121502">Tidak dapat melanjutkan dengan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -487,7 +487,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="3701515417135397388">Berikan peringatan jika sandi telah dibobol saat terjadi pelanggaran data</translation>
 <translation id="371230970611282515">Memperkirakan dan memberikan peringatan terkait peristiwa berbahaya sebelum terjadi.</translation>
 <translation id="3714981814255182093">Membuka Bilah Cari</translation>
-<translation id="5805364706385912897">Halaman ini menggunakan terlalu banyak memori, sehingga AI Wiz menjedanya.</translation>
+<translation id="5805364706385912897">Halaman ini menggunakan terlalu banyak memori, sehingga AI Wize menjedanya.</translation>
 <translation id="3720422586473670527">Lain kali</translation>
 <translation id="8397843425685839889">Anda dan Brave</translation>
 <translation id="3737319253362202215">Setelan penerjemahan</translation>
@@ -548,7 +548,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4084682180776658562">Bookmark</translation>
 <translation id="4521874409998847950">Dari <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>dikirim oleh Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Anda dapat menggunakan tablet ini untuk login di perangkat yang menampilkan kode QR ini.</translation>
-<translation id="7268155614575494857">Untuk membantu Pengelola Sandi AI Wiz menyimpan info login Anda, tambahkan nama pengguna Anda untuk situs ini</translation>
+<translation id="7268155614575494857">Untuk membantu Pengelola Sandi AI Wize menyimpan info login Anda, tambahkan nama pengguna Anda untuk situs ini</translation>
 <translation id="4095146165863963773">Hapus data aplikasi?</translation>
 <translation id="4095425503313512126">Penjelajahan dan penelusuran lebih cepat</translation>
 <translation id="4096227151372679484">Alur penyimpanan bookmark terbuka setengah</translation>
@@ -556,7 +556,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4108314971463891922">Ikuti</translation>
 <translation id="4108998448622696017">Mendeteksi dan memberikan peringatan terkait peristiwa berbahaya ketika terjadi.</translation>
 <translation id="4116038641877404294">Download halaman untuk melihat secara offline</translation>
-<translation id="37459938731864814">Anda tidak perlu mengingat sandi ini. Sandi akan disimpan ke Pengelola Sandi AI Wiz untuk <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Anda tidak perlu mengingat sandi ini. Sandi akan disimpan ke Pengelola Sandi AI Wize untuk <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Alur izin notifikasi terbuka sepenuhnya</translation>
 <translation id="4126285640274188657">Insight Halaman</translation>
 <translation id="4135200667068010335">Daftar perangkat yang dapat digunakan untuk berbagi tab tertutup.</translation>
@@ -574,7 +574,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 tab di perangkat ini}other{# tab di perangkat ini}}</translation>
 <translation id="4198423547019359126">Tidak tersedia lokasi download</translation>
 <translation id="4202218894997543208">Topik yang Anda blokir</translation>
-<translation id="1675646381334855139">Jika Anda mengizinkan cookie, AI Wiz dapat menggunakan cookie tersebut untuk melakukan pramuat.</translation>
+<translation id="1675646381334855139">Jika Anda mengizinkan cookie, AI Wize dapat menggunakan cookie tersebut untuk melakukan pramuat.</translation>
 <translation id="4216511743389425832">Dengarkan halaman ini</translation>
 <translation id="4225725533026049334">Mengikuti</translation>
 <translation id="4225895483398857530">Pintasan toolbar</translation>
@@ -610,7 +610,7 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4405224443901389797">Pindahkan ke…</translation>
 <translation id="4405636711880428279">Hapus kartu virtual Anda?</translation>
 <translation id="4409271659088619928">Mesin telusur Anda adalah <ph name="DSE"/>. Lihat petunjuknya untuk menghapus histori penelusuran Anda, jika memungkinkan.</translation>
-<translation id="5749788945734786627">Kelola Akun AI Wiz Anda</translation>
+<translation id="5749788945734786627">Kelola Akun AI Wize Anda</translation>
 <translation id="4425140285732600465">Memantau harga. Dapatkan notifikasi jika ada diskon di situs mana pun.</translation>
 <translation id="442518031075347249">Anda tidak akan dapat menggunakan kartu virtual dengan Google Pay lagi. <ph name="BEGIN_LINK1"/>Pelajari kartu virtual lebih lanjut<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">Tutup tab <ph name="TAB_TITLE"/></translation>
@@ -619,16 +619,16 @@ Hanya orang yang memiliki frasa sandi Anda yang dapat membaca data terenkripsi A
 <translation id="4478161224666880173">Anda dapat menggunakan akun <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> Anda di situs ini. Untuk melanjutkan, login ke <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">Menginstal <ph name="MODULE"/> untuk Brave…</translation>
 <translation id="4484496141267039529">Tidak ada koneksi. Coba lagi nanti.</translation>
-<translation id="53119194224775367">Semua data aplikasi AI Wiz akan dihapus secara permanen. Hal ini meliputi semua file, setelan, akun, database, dll.</translation>
-<translation id="3966104135245031874">Enkripsikan sandi yang disinkronkan dengan Akun AI Wiz Anda</translation>
+<translation id="53119194224775367">Semua data aplikasi AI Wize akan dihapus secara permanen. Hal ini meliputi semua file, setelan, akun, database, dll.</translation>
+<translation id="3966104135245031874">Enkripsikan sandi yang disinkronkan dengan Akun AI Wize Anda</translation>
 <translation id="4491323382106587961">Pilih akun. Saat ini <ph name="EMAIL"/> dipilih.</translation>
 <translation id="4508528996305412043">Menu kartu feed terbuka</translation>
 <translation id="4509501256689523862">Saat Anda menjelajah, iklan yang Anda lihat akan dipersonalisasi atau tidak bergantung pada setelan ini, <ph name="BEGIN_LINK_1"/>Topik iklan<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>setelan cookie<ph name="END_LINK_2"/>, dan apakah situs yang Anda lihat mempersonalisasi iklan</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# hari yang lalu}other{# hari yang lalu}}</translation>
 <translation id="451872707440238414">Telusuri bookmark</translation>
-<translation id="1664855196866195614">Data yang dipilih telah dihapus dari AI Wiz dan perangkat yang disinkronkan.
+<translation id="1664855196866195614">Data yang dipilih telah dihapus dari AI Wize dan perangkat yang disinkronkan.
 
-Akun AI Wiz Anda mungkin memiliki bentuk histori penjelajahan lain seperti penelusuran dan aktivitas dari layanan AI Wiz lainnya di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Akun AI Wize Anda mungkin memiliki bentuk histori penjelajahan lain seperti penelusuran dan aktivitas dari layanan AI Wize lainnya di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">sejam terakhir</translation>
 <translation id="452750746583162491">Tinjau data Anda yang disinkronkan</translation>
 <translation id="4532845899244822526">Pilih folder</translation>
@@ -679,7 +679,7 @@ Akun AI Wiz Anda mungkin memiliki bentuk histori penjelajahan lain seperti penel
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Sandi disimpan ke Pengelola Sandi di perangkat ini</translation>
 <translation id="4766678251456904326">Tambahkan akun ke perangkat</translation>
-<translation id="1996253762801922860">Kami meluncurkan fitur privasi iklan baru yang disebut pengukuran iklan. AI Wiz hanya membagikan informasi yang sangat terbatas di antara situs dan aplikasi, seperti kapan iklan ditampilkan kepada Anda, untuk membantu mengukur performa iklan.</translation>
+<translation id="1996253762801922860">Kami meluncurkan fitur privasi iklan baru yang disebut pengukuran iklan. AI Wize hanya membagikan informasi yang sangat terbatas di antara situs dan aplikasi, seperti kapan iklan ditampilkan kepada Anda, untuk membantu mengukur performa iklan.</translation>
 <translation id="4769095993849849966">Nama file baru</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> dihapus</translation>
 <translation id="4778653490315793244">Belum ada yang dapat ditampilkan</translation>
@@ -705,13 +705,13 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="4864369630010738180">Login...</translation>
 <translation id="5131234170665854056">Tidak dapat menginstal <ph name="MODULE"/> untuk Brave</translation>
 <translation id="4871568871368204250">Nonaktifkan sinkronisasi</translation>
-<translation id="2875466387677348954">Jika dinonaktifkan, Anda akan tetap melihat saran yang disediakan AI Wiz secara lokal</translation>
+<translation id="2875466387677348954">Jika dinonaktifkan, Anda akan tetap melihat saran yang disediakan AI Wize secara lokal</translation>
 <translation id="4875775213178255010">Saran Konten</translation>
 <translation id="4878404682131129617">Gagal membentuk saluran melalui server proxy</translation>
 <translation id="4880127995492972015">Terjemahkan…</translation>
 <translation id="4881695831933465202">Buka</translation>
 <translation id="488187801263602086">Ganti nama file</translation>
-<translation id="1248710015876067820">Jumlah kemunculan AI Wiz tidak didukung.</translation>
+<translation id="1248710015876067820">Jumlah kemunculan AI Wize tidak didukung.</translation>
 <translation id="4905823827770127520">Sertakan link ke halaman</translation>
 <translation id="3217997482476578430">Discover oleh Brave</translation>
 <translation id="4909709702739934280">Browser Anda dikelola oleh administrator Anda</translation>
@@ -722,10 +722,10 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="4925120120285606924">Screenshot <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Sandi Anda akan diekspor dan didownload sebagai file teks. Sandi akan dapat dilihat oleh semua orang dan semua aplikasi yang memiliki akses ke folder tujuan.</translation>
 <translation id="4926901776383726965">Anda dapat menyimpan gambar dan file untuk dilihat secara offline atau membagikannya di aplikasi lain</translation>
-<translation id="1955495299630319741">Karena Anda logout dari akun yang dikelola oleh <ph name="DOMAIN_NAME"/>, data AI Wiz Anda akan dihapus dari perangkat ini. Data akan tetap berada dalam Akun AI Wiz Anda.</translation>
+<translation id="1955495299630319741">Karena Anda logout dari akun yang dikelola oleh <ph name="DOMAIN_NAME"/>, data AI Wize Anda akan dihapus dari perangkat ini. Data akan tetap berada dalam Akun AI Wize Anda.</translation>
 <translation id="4943703118917034429">Virtual Reality</translation>
 <translation id="4943872375798546930">Tidak ada hasil</translation>
-<translation id="5742837711075932301">Jika Anda login ke Akun AI Wiz yang sama, perangkat lainnya dapat menggunakan ponsel ini sebagai kunci keamanan.</translation>
+<translation id="5742837711075932301">Jika Anda login ke Akun AI Wize yang sama, perangkat lainnya dapat menggunakan ponsel ini sebagai kunci keamanan.</translation>
 <translation id="4957722034734105353">Pelajari selengkapnya...</translation>
 <translation id="4961107849584082341">Terjemahkan halaman ini ke bahasa apa pun</translation>
 <translation id="7307583170263691471">Perlindungan lebih cepat dan proaktif terhadap situs, download, dan ekstensi berbahaya. Memberi Anda peringatan terkait kebocoran sandi. Mengharuskan pengiriman data penjelajahan ke Brave.</translation>
@@ -745,15 +745,15 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="5039804452771397117">Izinkan</translation>
 <translation id="5040262127954254034">Privasi</translation>
 <translation id="504456571576643789">Hal-hal yang perlu dipertimbangkan</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Bentuk aktivitas lainnya<ph name="END_LINK1"/> dapat disimpan di Akun AI Wiz Anda saat login. Anda dapat menghapusnya kapan saja.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Bentuk aktivitas lainnya<ph name="END_LINK1"/> dapat disimpan di Akun AI Wize Anda saat login. Anda dapat menghapusnya kapan saja.</translation>
 <translation id="506254248375231072">Tidak ada tab</translation>
 <translation id="5062960805900435602">Pembaruan terkait penggabungan sandi ditutup</translation>
 <translation id="5081960376148623587">Pilih apakah akan melakukan pramuat halaman</translation>
-<translation id="4744980273298156620">Sebentar lagi, Anda akan melihat cerita dari <ph name="SITE_NAME"/> saat membuka tab baru. Situs yang Anda ikuti akan disimpan di Akun AI Wiz Anda. Anda dapat mengelolanya di setelan Discover.</translation>
+<translation id="4744980273298156620">Sebentar lagi, Anda akan melihat cerita dari <ph name="SITE_NAME"/> saat membuka tab baru. Situs yang Anda ikuti akan disimpan di Akun AI Wize Anda. Anda dapat mengelolanya di setelan Discover.</translation>
 <translation id="509429900233858213">Terjadi error.</translation>
 <translation id="5097349930204431044">Situs yang Anda buka dapat menentukan hal-hal yang Anda sukai, lalu menyarankan iklan saat Anda melanjutkan penjelajahan</translation>
 <translation id="5099845111805573968">Sekali Anda memilih situs desktop, setelan ini akan diterapkan setiap kali Anda membuka situs</translation>
-<translation id="225414324447409614">Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wiz dapat mengirimkan URL, termasuk bit konten halaman, ke Safe Browsing</translation>
+<translation id="225414324447409614">Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wize dapat mengirimkan URL, termasuk bit konten halaman, ke Safe Browsing</translation>
 <translation id="510275257476243843">1 jam lagi</translation>
 <translation id="5115811374190515607">ke <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Minat</translation>
@@ -788,8 +788,8 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="5308380583665731573">Hubungkan</translation>
 <translation id="5317780077021120954">Simpan</translation>
 <translation id="989239400026154074">Brave merekomendasikan Brave</translation>
-<translation id="7815000350132166985">Jika Anda mengizinkan cookie, AI Wiz dapat menggunakannya saat melakukan pramuat</translation>
-<translation id="1681635711794313507">Karena halaman yang dipramuat terenkripsi dan situs yang ditautkan ke halaman tersebut adalah situs Brave, server AI Wiz tidak menerima informasi baru saat melakukan pramuat halaman ini secara pribadi.</translation>
+<translation id="7815000350132166985">Jika Anda mengizinkan cookie, AI Wize dapat menggunakannya saat melakukan pramuat</translation>
+<translation id="1681635711794313507">Karena halaman yang dipramuat terenkripsi dan situs yang ditautkan ke halaman tersebut adalah situs Brave, server AI Wize tidak menerima informasi baru saat melakukan pramuat halaman ini secara pribadi.</translation>
 <translation id="5329858041417644019">Browser Anda tidak dikelola</translation>
 <translation id="5342314432463739672">Permintaan izin</translation>
 <translation id="534580735623577507">Tidak ada situs dari <ph name="TIME_PERIOD"/></translation>
@@ -805,7 +805,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="543338862236136125">Edit sandi</translation>
 <translation id="5433691172869980887">Nama pengguna disalin</translation>
 <translation id="5438292632479953702">Download lagi</translation>
-<translation id="2766925507720001104">Memperingatkan Anda tentang situs berbahaya, bahkan situs yang tidak diketahui AI Wiz sebelumnya, dengan menganalisis lebih banyak data dari situs dibandingkan perlindungan standar. Anda dapat memilih untuk melewati peringatan Brave.</translation>
+<translation id="2766925507720001104">Memperingatkan Anda tentang situs berbahaya, bahkan situs yang tidak diketahui AI Wize sebelumnya, dengan menganalisis lebih banyak data dari situs dibandingkan perlindungan standar. Anda dapat memilih untuk melewati peringatan Brave.</translation>
 <translation id="5441137934526263133">Situs tidak berfungsi? Cookie pihak ketiga diblokir</translation>
 <translation id="5441466871879044658">Terjemahkan ke bahasa ini</translation>
 <translation id="5441522332038954058">Beralih ke bilah alamat</translation>
@@ -823,7 +823,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="5517095782334947753">Anda memiliki bookmark, histori, sandi, dan setelan lain dari <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Pengalihan diblokir.</translation>
 <translation id="5548606607480005320">Pemeriksaan keamanan</translation>
-<translation id="4362225295386962644">Jika Anda menggunakan sandi, AI Wiz akan memperingatkan Anda jika sandi telah dipublikasikan secara online. Saat pemeriksaan dilakukan, sandi dan nama pengguna Anda dienkripsi, sehingga tidak dapat dibaca oleh siapa pun, termasuk Brave.</translation>
+<translation id="4362225295386962644">Jika Anda menggunakan sandi, AI Wize akan memperingatkan Anda jika sandi telah dipublikasikan secara online. Saat pemeriksaan dilakukan, sandi dan nama pengguna Anda dienkripsi, sehingga tidak dapat dibaca oleh siapa pun, termasuk Brave.</translation>
 <translation id="5555525474779371165">Pilih perlindungan Safe Browsing Anda</translation>
 <translation id="5556459405103347317">Muat ulang</translation>
 <translation id="555816257274242153">Pemantauan harga dihentikan</translation>
@@ -840,7 +840,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="562289928968387744">Kelola reaksi</translation>
 <translation id="5626134646977739690">Nama:</translation>
 <translation id="5628604359369369630">Belum dibaca - Tersedia secara offline</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Histori penelusuran<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktivitas lainnya<ph name="END_LINK2"/> dapat disimpan di Akun AI Wiz Anda</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Histori penelusuran<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>bentuk aktivitas lainnya<ph name="END_LINK2"/> dapat disimpan di Akun AI Wize Anda</translation>
 <translation id="564667659802381754">Panduan Privasi <ph name="BEGIN_NEW"/>Baru<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">7 hari terakhir</translation>
 <translation id="5655963694829536461">Telusuri file download</translation>
@@ -878,7 +878,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="5797521893972859201">Menghapus histori, termasuk di kotak penelusuran</translation>
 <translation id="5797949256525811424">Topik yang diblokir</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# jam yang lalu}other{# jam yang lalu}}</translation>
-<translation id="5311273890481188673">Hak cipta <ph name="YEAR"/> AI Wiz LLC. Semua hak dilindungi undang-undang.</translation>
+<translation id="5311273890481188673">Hak cipta <ph name="YEAR"/> AI Wize LLC. Semua hak dilindungi undang-undang.</translation>
 <translation id="5814749351757353073">Ikuti kabar terbaru dari situs favorit Anda</translation>
 <translation id="5822875253699806474">Untuk segera kembali ke situs yang Anda buka, sinkronkan tab dan histori Anda</translation>
 <translation id="583281660410589416">Tidak dikenal</translation>
@@ -899,10 +899,10 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="5916664084637901428">Aktif</translation>
 <translation id="5919204609460789179">Perbarui <ph name="PRODUCT_NAME"/> untuk memulai sinkronisasi</translation>
 <translation id="5938820472109305350">Tambahkan <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">Menggunakan AI Wiz untuk penelusuran</translation>
+<translation id="6103327872225198548">Menggunakan AI Wize untuk penelusuran</translation>
 <translation id="5945035219773565305">Rekomendasi saat ini:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Melihat halaman live</translation>
-<translation id="305870044889644984">Membuka Pusat Bantuan AI Wiz di tab baru</translation>
+<translation id="305870044889644984">Membuka Pusat Bantuan AI Wize di tab baru</translation>
 <translation id="5957442310066583693">Untuk melihat situs teratas Anda, ketuk tombol Beranda</translation>
 <translation id="59577092665511740">Pilih akun.</translation>
 <translation id="5958275228015807058">Temukan file dan halaman di Download</translation>
@@ -929,7 +929,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="6070730414166672373">Menghubungi bank Anda \u2026</translation>
 <translation id="6085886413119427067">Menentukan cara terhubung ke situs melalui koneksi yang aman</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> jam lagi</translation>
-<translation id="4726571606794511368">Jika AI Wiz juga merupakan mesin telusur default Anda, Anda akan melihat saran yang lebih baik dan relevan secara kontekstual</translation>
+<translation id="4726571606794511368">Jika AI Wize juga merupakan mesin telusur default Anda, Anda akan melihat saran yang lebih baik dan relevan secara kontekstual</translation>
 <translation id="6108923351542677676">Penyiapan sedang berlangsung...</translation>
 <translation id="6112702117600201073">Menyegarkan halaman</translation>
 <translation id="6122831415929794347">Nonaktifkan Safe Browsing?</translation>
@@ -942,11 +942,11 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="6140912465461743537">Negara/Wilayah</translation>
 <translation id="6150320133806434356">Bookmark disimpan</translation>
 <translation id="6154478581116148741">Aktifkan kunci layar di Setelan untuk mengekspor sandi dari perangkat ini</translation>
-<translation id="7087658909840709934">Melakukan pramuat halaman yang menurut AI Wiz mungkin akan Anda buka.</translation>
+<translation id="7087658909840709934">Melakukan pramuat halaman yang menurut AI Wize mungkin akan Anda buka.</translation>
 <translation id="6186394685773237175">Tidak ditemukan sandi yang telah dibobol</translation>
 <translation id="6192907950379606605">Dapatkan deskripsi gambar</translation>
 <translation id="6193448654517602979">Pilih tab</translation>
-<translation id="8367262879301982880">Sandi disimpan ke Pengelola Sandi AI Wiz di perangkat ini</translation>
+<translation id="8367262879301982880">Sandi disimpan ke Pengelola Sandi AI Wize di perangkat ini</translation>
 <translation id="6202812185118613467">Login kembali untuk memulai sinkronisasi</translation>
 <translation id="6205314730813004066">Privasi iklan</translation>
 <translation id="6210748933810148297">Bukan <ph name="EMAIL"/>?</translation>
@@ -955,7 +955,7 @@ Untuk mengubah setelan ini, <ph name="BEGIN_LINK"/>reset sinkronisasi<ph name="E
 <translation id="6232535412751077445">Jika “Jangan Lacak” diaktifkan, permintaan akan disertakan bersama traffic penjelajahan Anda. Dampaknya tergantung pada apakah situs web menanggapi permintaan itu, dan bagaimana permintaan itu diinterpretasikan.
 
 Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangkan iklan yang tidak berdasarkan pada data kunjungan Anda ke situs web lainnya. Banyak situs web masih akan mengumpulkan dan menggunakan data penjelajahan Anda — misalnya, untuk meningkatkan keamanan, menyediakan konten, iklan, dan saran, serta untuk membuat statistik pelaporan.</translation>
-<translation id="3895383310037101583">Simpan sandi di perangkat ini di Akun AI Wiz Anda dengan mengaktifkan sinkronisasi</translation>
+<translation id="3895383310037101583">Simpan sandi di perangkat ini di Akun AI Wize Anda dengan mengaktifkan sinkronisasi</translation>
 <translation id="6255794742848779505">Kami mengubah cara sandi disimpan di perangkat ini</translation>
 <translation id="6264376385120300461">Tetap download</translation>
 <translation id="6277522088822131679">Terjadi error saat mencetak halaman. Coba lagi.</translation>
@@ -980,18 +980,18 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6357653805084533597">Anda dapat menggunakan ponsel ini untuk login di perangkat yang menampilkan kode QR ini.</translation>
 <translation id="6363990818884053551">Untuk memulai sinkronisasi, verifikasi diri Anda</translation>
 <translation id="6364438453358674297">Hapus saran dari histori?</translation>
-<translation id="806493401838431801">Lebih sering melakukan pramuat halaman yang menurut AI Wiz mungkin akan Anda buka. Setelan ini dapat mengakibatkan peningkatan penggunaan data.</translation>
+<translation id="806493401838431801">Lebih sering melakukan pramuat halaman yang menurut AI Wize mungkin akan Anda buka. Setelan ini dapat mengakibatkan peningkatan penggunaan data.</translation>
 <translation id="6382848304055775421">Mengekspor</translation>
 <translation id="6394791151443660613">Telusuri: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LINK</translation>
 <translation id="6397616442223433927">Kembali online</translation>
-<translation id="8789425457808164956">Untuk mengirim tab ini ke perangkat lain, login ke AI Wiz di sana</translation>
+<translation id="8789425457808164956">Untuk mengirim tab ini ke perangkat lain, login ke AI Wize di sana</translation>
 <translation id="6404511346730675251">Edit bookmark</translation>
 <translation id="6406506848690869874">Sinkronisasi</translation>
 <translation id="6407224748847589805">Tidak dapat terhubung ke komputer. Coba opsi verifikasi lain.</translation>
 <translation id="6410883413783534063">Buka tab untuk mengunjungi halaman yang berbeda secara bersamaan</translation>
 <translation id="6411219469806822692">Tidak dapat lebih tinggi lagi. Coba mulai dari bagian yang lebih atas pada halaman.</translation>
-<translation id="7810992039564280750">Memeriksa kesesuaian URL dengan daftar situs tidak aman yang disimpan di Brave. Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wiz mungkin juga mengirim URL, termasuk bit konten halaman, ke Safe Browsing.</translation>
+<translation id="7810992039564280750">Memeriksa kesesuaian URL dengan daftar situs tidak aman yang disimpan di Brave. Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wize mungkin juga mengirim URL, termasuk bit konten halaman, ke Safe Browsing.</translation>
 <translation id="641643625718530986">Cetak...</translation>
 <translation id="6422857128426228781">Anda akan menemukan produk yang dipantau di sini</translation>
 <translation id="6433501201775827830">Pilih mesin telusur Anda</translation>
@@ -1002,7 +1002,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6447558397796644647">Bookmark tidak dapat ditemukan. Periksa ejaan Anda atau tambahkan bookmark baru.</translation>
 <translation id="6459045781120991510">Survei</translation>
 <translation id="6461962085415701688">Tidak dapat membuka file</translation>
-<translation id="9055113864158719823">Anda dapat melihat situs yang Anda kunjungi di AI Wiz dan menetapkan timer untuk situs tersebut.\n\nBrave mendapatkan info tentang situs yang Anda tetapkan timer-nya dan durasi Anda mengunjunginya. Info ini digunakan untuk membuat Kesehatan Digital jadi lebih baik.</translation>
+<translation id="9055113864158719823">Anda dapat melihat situs yang Anda kunjungi di AI Wize dan menetapkan timer untuk situs tersebut.\n\nBrave mendapatkan info tentang situs yang Anda tetapkan timer-nya dan durasi Anda mengunjunginya. Info ini digunakan untuk membuat Kesehatan Digital jadi lebih baik.</translation>
 <translation id="6473086018775716761">Daftar opsi berbagi terbuka setengah.</translation>
 <translation id="6475951671322991020">Download video</translation>
 <translation id="6477928892249167417">Situs ini sepertinya penting untuk Anda:</translation>
@@ -1010,54 +1010,54 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{File didownload}other{# download selesai}}</translation>
 <translation id="3960299545138990065">Buka Ulang Brave</translation>
 <translation id="6527303717912515753">Bagikan</translation>
-<translation id="708829030563435351">Situs yang Anda kunjungi di AI Wiz tidak akan ditampilkan. Semua timer situs akan dihapus.</translation>
+<translation id="708829030563435351">Situs yang Anda kunjungi di AI Wize tidak akan ditampilkan. Semua timer situs akan dihapus.</translation>
 <translation id="7723158744459952869">Brave membutuhkan waktu terlalu lama untuk merespons</translation>
 <translation id="6539092367496845964">Terjadi error. Coba lagi nanti.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Diperiksa 1 jam yang lalu}other{Diperiksa # jam yang lalu}}</translation>
 <translation id="6545017243486555795">Hapus Semua Data</translation>
 <translation id="6546511553472444032">File mungkin berbahaya</translation>
-<translation id="6702167990458635422">Tidak melindungi Anda terhadap situs, download, dan ekstensi berbahaya. Setelan Safe Browsing Anda di produk AI Wiz lainnya tidak akan terpengaruh.</translation>
+<translation id="6702167990458635422">Tidak melindungi Anda terhadap situs, download, dan ekstensi berbahaya. Setelan Safe Browsing Anda di produk AI Wize lainnya tidak akan terpengaruh.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> dan <ph name="TAB_COUNT_ONE"/> tab lainnya akan ditutup}other{<ph name="TAB_TITLE"/> dan <ph name="TAB_COUNT_MANY"/> tab lainnya akan ditutup}}</translation>
 <translation id="6560414384669816528">Menelusuri menggunakan Sogou</translation>
 <translation id="656065428026159829">Lihat lebih banyak</translation>
 <translation id="6565959834589222080">Wi-Fi akan digunakan jika tersedia</translation>
-<translation id="4480935821314799946">Anda sekarang akan melihat artikel dari <ph name="SITE_NAME"/> saat membuka tab baru. Situs yang Anda ikuti akan disimpan di Akun AI Wiz Anda. Anda dapat mengelolanya di setelan Discover.</translation>
+<translation id="4480935821314799946">Anda sekarang akan melihat artikel dari <ph name="SITE_NAME"/> saat membuka tab baru. Situs yang Anda ikuti akan disimpan di Akun AI Wize Anda. Anda dapat mengelolanya di setelan Discover.</translation>
 <translation id="6573096386450695060">Selalu izinkan</translation>
-<translation id="5157964048453367290">Tab yang telah dibuka di AI Wiz pada perangkat lainnya akan muncul di sini.</translation>
+<translation id="5157964048453367290">Tab yang telah dibuka di AI Wize pada perangkat lainnya akan muncul di sini.</translation>
 <translation id="6583199322650523874">Membookmark halaman saat ini</translation>
 <translation id="6588043302623806746">Gunakan DNS aman</translation>
 <translation id="6590471736817333463">Hemat data hingga 60%</translation>
 <translation id="6590680911007613645">Pastikan sandi yang Anda simpan cocok dengan sandi untuk <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Situs desktop</translation>
 <translation id="6594347733515723558">Opsi urutan dan tampilan</translation>
-<translation id="2466982615210189224">Gambar dikirim ke AI Wiz guna menyempurnakan deskripsi untuk Anda.</translation>
+<translation id="2466982615210189224">Gambar dikirim ke AI Wize guna menyempurnakan deskripsi untuk Anda.</translation>
 <translation id="663059986967017181">Disalin ke Brave</translation>
 <translation id="661266467055912436">Meningkatkan keamanan untuk Anda dan semua orang di web.</translation>
 <translation id="6618554661997243500">Untuk melihat situs dan artikel teratas untuk Anda, ketuk tombol Beranda</translation>
-<translation id="8127050479140582768">Untuk mengirim tab ini ke perangkat lain, login ke AI Wiz di kedua perangkat</translation>
+<translation id="8127050479140582768">Untuk mengirim tab ini ke perangkat lain, login ke AI Wize di kedua perangkat</translation>
 <translation id="6627583120233659107">Edit folder</translation>
 <translation id="6636623428211296678">Jelajahi pengaturan lainnya di bawah atau selesaikan sekarang</translation>
 <translation id="2259649928554669581">Untuk setelan lainnya yang berkaitan dengan privasi, keamanan, dan pengumpulan data, lihat <ph name="BEGIN_LINK1"/>Sinkronisasi<ph name="END_LINK1"/> dan <ph name="BEGIN_LINK2"/>Layanan Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Untuk membantu meningkatkan kualitas aplikasi, AI Wiz akan mengirimkan data penggunaan dan error ke Brave. <ph name="BEGIN_UMA_LINK"/>Kelola<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Untuk membantu meningkatkan kualitas aplikasi, AI Wize akan mengirimkan data penggunaan dan error ke Brave. <ph name="BEGIN_UMA_LINK"/>Kelola<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blokir sepanjang waktu</translation>
 <translation id="6641780377503683465">Hapus <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Hapus</translation>
 <translation id="6645629752388991326">Kontrol perangkat mana yang dapat login dengan menggunakan perangkat ini sebagai kunci keamanan.</translation>
-<translation id="2730188427562924169">Mengirim bagian URL yang di-obfuscate ke AI Wiz melalui server privasi yang menyembunyikan alamat IP Anda. Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wiz mungkin juga mengirimkan URL, termasuk bit konten halaman, ke Brave.</translation>
-<translation id="7556503430569358637">URL yang Anda buka akan dikirim ke AI Wiz untuk memprediksi situs yang mungkin Anda buka berikutnya</translation>
+<translation id="2730188427562924169">Mengirim bagian URL yang di-obfuscate ke AI Wize melalui server privasi yang menyembunyikan alamat IP Anda. Jika situs berusaha mencuri sandi Anda, atau jika Anda mendownload file berbahaya, AI Wize mungkin juga mengirimkan URL, termasuk bit konten halaman, ke Brave.</translation>
+<translation id="7556503430569358637">URL yang Anda buka akan dikirim ke AI Wize untuk memprediksi situs yang mungkin Anda buka berikutnya</translation>
 <translation id="6678472970290886941">Administrator dapat mengubah penyiapan browser Anda dari jarak jauh. Aktivitas di perangkat ini juga dapat dikelola di luar Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> lainnya}other{<ph name="CONTACT_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> lainnya}}</translation>
 <translation id="6649642165559792194">Lihat pratinjau gambar <ph name="BEGIN_NEW"/>Baru<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Sandi</translation>
 <translation id="6659594942844771486">Tab</translation>
-<translation id="9145803563102831353">Saat ini, sandi yang disimpan di perangkat ini tidak dapat digunakan di seluruh saluran Brave. Setelah AI Wiz 121, sandi yang disimpan di perangkat Anda untuk AI Wiz dan <ph name="CHROME_CHANNEL"/> akan digabungkan dan dapat digunakan di kedua aplikasi.</translation>
+<translation id="9145803563102831353">Saat ini, sandi yang disimpan di perangkat ini tidak dapat digunakan di seluruh saluran Brave. Setelah AI Wize 121, sandi yang disimpan di perangkat Anda untuk AI Wize dan <ph name="CHROME_CHANNEL"/> akan digabungkan dan dapat digunakan di kedua aplikasi.</translation>
 <translation id="666731172850799929">Buka di <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Salin gambar</translation>
 <translation id="6672917148207387131">Tambahkan <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Untuk memulai sinkronisasi, masukkan frasa sandi</translation>
-<translation id="8581481290581777242">Hapus data AI Wiz Anda dari perangkat ini?</translation>
+<translation id="8581481290581777242">Hapus data AI Wize Anda dari perangkat ini?</translation>
 <translation id="3683330416566109578">Login ke situs ini dan Brave</translation>
-<translation id="3385384709865894288">Buat AI Wiz menjadi lebih baik</translation>
+<translation id="3385384709865894288">Buat AI Wize menjadi lebih baik</translation>
 <translation id="670498945988402717">Diperiksa kemarin</translation>
 <translation id="6710213216561001401">Sebelumnya</translation>
 <translation id="671481426037969117">Timer <ph name="FQDN"/> Anda telah berakhir. Timer akan dimulai lagi besok.</translation>
@@ -1070,14 +1070,14 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6756507620369789050">Bagikan masukan</translation>
 <translation id="6767294960381293877">Daftar perangkat yang dapat digunakan untuk berbagi tab terbuka dalam setengah layar.</translation>
 <translation id="6770602306803890733">Meningkatkan keamanan untuk Anda dan semua orang di web</translation>
-<translation id="8174975477247159780">Persyaratan Layanan Tambahan AI Wiz &amp; ChromeOS</translation>
+<translation id="8174975477247159780">Persyaratan Layanan Tambahan AI Wize &amp; ChromeOS</translation>
 <translation id="6795633245022906657">Buka tab baru dengan cepat. Untuk mengedit pintasan ini, buka Setelan.</translation>
 <translation id="6802555630140434547">Jendela akan ditutup</translation>
 <translation id="6811034713472274749">Halaman siap ditampilkan</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Gambar, 1 gambar dalam daftar}other{Gambar, # gambar dalam daftar}}</translation>
 <translation id="8418237809013783651">Login ke Brave, dibuka.</translation>
 <translation id="6817747507826986771">Bagikan halaman ini dengan cepat. Sentuh lama untuk mengedit pintasan ini.</translation>
-<translation id="118366698571543506">Login untuk mendapatkan produk dan layanan AI Wiz di seluruh perangkat</translation>
+<translation id="118366698571543506">Login untuk mendapatkan produk dan layanan AI Wize di seluruh perangkat</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Dari kolom URL, Anda dapat membuka info halaman untuk melihat info tambahan tentang halaman yang sedang Anda kunjungi</translation>
 <translation id="6828070228333235514">Berhenti memantau harga</translation>
@@ -1089,7 +1089,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6850409657436465440">Download sedang berlangsung</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> tab ditutup</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{File audio, 1 file audio dalam daftar}other{File audio, # file audio dalam daftar}}</translation>
-<translation id="4046835482356054431">Discover oleh AI Wiz - nonaktif</translation>
+<translation id="4046835482356054431">Discover oleh AI Wize - nonaktif</translation>
 <translation id="686366188661646310">Hapus sandi?</translation>
 <translation id="6864459304226931083">Download gambar</translation>
 <translation id="6865313869410766144">Data formulir isi-otomatis</translation>
@@ -1105,7 +1105,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="6909589135458168665">Pramuat Halaman</translation>
 <translation id="6910211073230771657">Dihapus</translation>
 <translation id="6918398787259831832">Jika masalah ini terus terjadi, <ph name="BEGIN_LINK"/>dapatkan informasi selengkapnya<ph name="END_LINK"/> dari <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Semua kode keamanan yang disimpan di perangkat dan di Akun AI Wiz Anda akan dihapus</translation>
+<translation id="5854472260286669100">Semua kode keamanan yang disimpan di perangkat dan di Akun AI Wize Anda akan dihapus</translation>
 <translation id="6942665639005891494">Ubah lokasi download default kapan saja menggunakan opsi menu Setelan</translation>
 <translation id="694267552845942083">Anda sedang menyesuaikan setelan Sinkronisasi. Untuk menyelesaikan pengaktifan sinkronisasi, ketuk tombol Konfirmasi di dekat bagian bawah layar. Kembali ke atas</translation>
 <translation id="6945221475159498467">Pilih</translation>
@@ -1123,7 +1123,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7029809446516969842">Sandi</translation>
 <translation id="7030304022046916278">Mengirimkan URL ke Safe Browsing untuk memeriksanya</translation>
 <translation id="7035701931849773472">Opsi lainnya</translation>
-<translation id="5813862251770201080">Login ke AI Wiz dengan Akun AI Wiz Anda</translation>
+<translation id="5813862251770201080">Login ke AI Wize dengan Akun AI Wize Anda</translation>
 <translation id="7038956721828960940">chrome_image_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="7054588988317389591">Dapatkan deskripsi gambar?</translation>
 <translation id="7055152154916055070">Pengalihan diblokir:</translation>
@@ -1131,8 +1131,8 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7071521146534760487">Kelola akun</translation>
 <translation id="707155805709242880">Pilih konten yang akan disinkronkan berikut</translation>
 <translation id="7077143737582773186">Kartu Secure Digital</translation>
-<translation id="2374582967527009647">Mengirimkan URL ke Safe Browsing untuk memeriksanya. Juga mengirimkan sedikit contoh halaman, download, aktivitas ekstensi, dan informasi sistem untuk membantu menemukan ancaman baru. Menautkan sementara data ini ke Akun AI Wiz Anda saat login, untuk melindungi Anda ketika menggunakan berbagai aplikasi Brave.</translation>
-<translation id="5499149312981370855">Pilih apakah akan menyertakan histori AI Wiz untuk mendapatkan pengalaman yang lebih dipersonalisasi di layanan Brave</translation>
+<translation id="2374582967527009647">Mengirimkan URL ke Safe Browsing untuk memeriksanya. Juga mengirimkan sedikit contoh halaman, download, aktivitas ekstensi, dan informasi sistem untuk membantu menemukan ancaman baru. Menautkan sementara data ini ke Akun AI Wize Anda saat login, untuk melindungi Anda ketika menggunakan berbagai aplikasi Brave.</translation>
+<translation id="5499149312981370855">Pilih apakah akan menyertakan histori AI Wize untuk mendapatkan pengalaman yang lebih dipersonalisasi di layanan Brave</translation>
 <translation id="8208853227947884571">Brave sudah versi terbaru</translation>
 <translation id="7105047059074518658">Login agar lebih mudah menjelajah di berbagai perangkat</translation>
 <translation id="7106762743910369165">Browser dikelola oleh organisasi Anda</translation>
@@ -1148,10 +1148,10 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7177873915659574692">Tidak dapat membuat Kode QR. URL berisi lebih dari <ph name="CHARACTER_LIMIT"/> karakter.</translation>
 <translation id="7180611975245234373">Perbarui</translation>
 <translation id="7183693674623539380">Grup tab - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Memastikan Anda tetap aman di AI Wiz dan dapat digunakan untuk menyempurnakan keamanan Anda di aplikasi AI Wiz lainnya saat login.</translation>
+<translation id="8355565210555500987">Memastikan Anda tetap aman di AI Wize dan dapat digunakan untuk menyempurnakan keamanan Anda di aplikasi AI Wize lainnya saat login.</translation>
 <translation id="7191430249889272776">Tab dibuka di latar belakang.</translation>
 <translation id="7196215469483532480">Penjelasan panduan privasi terbuka sepenuhnya</translation>
-<translation id="1014116676551114642">Konten oleh AI Wiz untuk anak-anak - nonaktif</translation>
+<translation id="1014116676551114642">Konten oleh AI Wize untuk anak-anak - nonaktif</translation>
 <translation id="7207760545532569765">Pulihkan <ph name="TAB_COUNT"/> tab sebagai grup tab latar belakang baru.</translation>
 <translation id="7221869452894271364">Muat ulang halaman ini</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 download tertunda}other{# download tertunda}}</translation>
@@ -1159,19 +1159,19 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7242755609445462077">Sorotan bergaya <ph name="CURRENT_DATE"/></translation>
 <translation id="8287068819750208230">Pastikan <ph name="TARGET_DEVICE_NAME"/> telah mengaktifkan sinkronisasi di Brave</translation>
 <translation id="7252076891734325316">Letakkan ponsel Anda dekat dengan komputer</translation>
-<translation id="4957342254208357193">Perangkat Android Anda mungkin menyertakan setelan serupa. Jika Pengukuran iklan diaktifkan di AI Wiz dan di perangkat Android Anda, perusahaan iklan mungkin dapat mengukur keefektifan iklan di semua situs yang Anda buka dan aplikasi yang Anda gunakan.</translation>
+<translation id="4957342254208357193">Perangkat Android Anda mungkin menyertakan setelan serupa. Jika Pengukuran iklan diaktifkan di AI Wize dan di perangkat Android Anda, perusahaan iklan mungkin dapat mengukur keefektifan iklan di semua situs yang Anda buka dan aplikasi yang Anda gunakan.</translation>
 <translation id="727288900855680735">Kirim <ph name="ONE_TIME_CODE"/> ke <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Situs yang diblokir</translation>
-<translation id="7949597606523411684">Brave akan otomatis menghapus topik yang tersimpan lebih dari 4 minggu. Saat Anda menjelajah, suatu topik mungkin muncul kembali di daftar. Atau, Anda dapat memblokir topik yang tidak ingin Anda bagikan dari AI Wiz ke situs. Pelajari lebih lanjut <ph name="BEGIN_LINK"/>cara mengelola privasi iklan Anda di Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">Saat Anda mengetik, AI Wiz akan mengirimkan konten kolom URL atau kotak penelusuran ke mesin telusur default Anda</translation>
+<translation id="7949597606523411684">Brave akan otomatis menghapus topik yang tersimpan lebih dari 4 minggu. Saat Anda menjelajah, suatu topik mungkin muncul kembali di daftar. Atau, Anda dapat memblokir topik yang tidak ingin Anda bagikan dari AI Wize ke situs. Pelajari lebih lanjut <ph name="BEGIN_LINK"/>cara mengelola privasi iklan Anda di Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">Saat Anda mengetik, AI Wize akan mengirimkan konten kolom URL atau kotak penelusuran ke mesin telusur default Anda</translation>
 <translation id="7286703216224610554">Hanya bagikan reaksi</translation>
 <translation id="7289303553784750393">Jika Anda sudah online tetapi masalah ini terus terjadi, Anda dapat mencoba cara lain untuk melanjutkan di <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Ganti nama tidak tersedia</translation>
 <translation id="7291910923717764901">Deskripsi gambar ditambahkan untuk halaman ini</translation>
 <translation id="7293429513719260019">Pilih bahasa</translation>
 <translation id="729975465115245577">Perangkat Anda tidak memiliki aplikasi untuk menyimpan file sandi.</translation>
-<translation id="7581648335850642193">Perangkat Android Anda mungkin menyertakan setelan serupa. Jika setelan ini diaktifkan di AI Wiz dan di perangkat Android Anda, perusahaan iklan mungkin dapat mengukur keefektifan iklan di semua situs yang Anda buka dan aplikasi yang Anda gunakan.</translation>
-<translation id="1382596880054356475">Offline. AI Wiz tidak dapat memeriksa sandi Anda.</translation>
+<translation id="7581648335850642193">Perangkat Android Anda mungkin menyertakan setelan serupa. Jika setelan ini diaktifkan di AI Wize dan di perangkat Android Anda, perusahaan iklan mungkin dapat mengukur keefektifan iklan di semua situs yang Anda buka dan aplikasi yang Anda gunakan.</translation>
+<translation id="1382596880054356475">Offline. AI Wize tidak dapat memeriksa sandi Anda.</translation>
 <translation id="7313188324932846546">Ketuk untuk menyiapkan sinkronisasi</translation>
 <translation id="7324354302972299151">Kirim permintaan “Do Not Track”</translation>
 <translation id="7332075081379534664">Login berhasil</translation>
@@ -1198,7 +1198,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7431991332293347422">Kontrol cara histori browsing digunakan untuk mempersonalisasi Penelusuran dan lainnya</translation>
 <translation id="7435356471928173109">Dinonaktifkan oleh administrator Anda</translation>
 <translation id="6234515504547364178">Logout dari Brave</translation>
-<translation id="6147816961713837040">Mengirim bagian URL yang di-obfuscate ke AI Wiz melalui server privasi yang menyembunyikan alamat IP Anda</translation>
+<translation id="6147816961713837040">Mengirim bagian URL yang di-obfuscate ke AI Wize melalui server privasi yang menyembunyikan alamat IP Anda</translation>
 <translation id="3699067418237091329">Membuat Anda logout dari sebagian besar situs. Anda tidak akan logout dari Akun Brave.</translation>
 <translation id="7453810262525006706">Ciutkan ke panel samping</translation>
 <translation id="7454641608352164238">Tidak cukup ruang</translation>
@@ -1217,7 +1217,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7493994139787901920"><ph name="VERSION"/> (Diperbarui <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Menambahkan kembali topik ke topik potensial</translation>
 <translation id="7498271377022651285">Harap tunggu...</translation>
-<translation id="8156131600798538460">Untuk logout dari Akun AI Wiz Anda di semua situs, <ph name="BEGIN_LINK1"/>logout dari Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Untuk logout dari Akun AI Wize Anda di semua situs, <ph name="BEGIN_LINK1"/>logout dari Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Update Tidak Tersedia</translation>
 <translation id="7507207699631365376">Lihat <ph name="BEGIN_LINK"/>kebijakan privasi<ph name="END_LINK"/> penyedia ini</translation>
 <translation id="7514365320538308">Download</translation>
@@ -1227,7 +1227,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7523960634226602883">Telusuri dengan kamera Anda menggunakan Google Lens</translation>
 <translation id="7539698981064401140">Sinkronkan tab dan histori Anda</translation>
 <translation id="7562080006725997899">Menghapus data penjelajahan</translation>
-<translation id="7814200940910057384">Data AI Wiz telah dihapus</translation>
+<translation id="7814200940910057384">Data AI Wize telah dihapus</translation>
 <translation id="7577900504646297215">Kelola minat</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> file didownload}other{<ph name="FILES_DOWNLOADED_MANY"/> file didownload}}</translation>
 <translation id="7581273696622423628">Ikuti survei</translation>
@@ -1237,7 +1237,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7596558890252710462">Sistem operasi</translation>
 <translation id="7603168929588204083">Tanggal tidak valid</translation>
 <translation id="7605594153474022051">Sinkronisasi tidak berfungsi</translation>
-<translation id="649070405679044769">Login ke AI Wiz sebagai</translation>
+<translation id="649070405679044769">Login ke AI Wize sebagai</translation>
 <translation id="7612989789287281429">Memproses login Anda…</translation>
 <translation id="7616551326690708776">Pilih template untuk teks yang Anda tandai.</translation>
 <translation id="7619072057915878432">Download <ph name="FILE_NAME"/> gagal karena kesalahan jaringan.</translation>
@@ -1255,13 +1255,13 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="768232549260819724">GIF Disalin</translation>
 <translation id="7682724950699840886">Coba tips berikut ini: pastikan ruang di perangkat Anda mencukupi, lalu coba ekspor lagi.</translation>
 <translation id="7686086654630106285">Selengkapnya tentang iklan yang disarankan situs</translation>
-<translation id="2667018639405889513">Beberapa halaman yang Anda buka akan dipramuat. Halaman mungkin dipramuat melalui server AI Wiz saat ditautkan dari situs Brave.</translation>
-<translation id="7795837497684113327">Perangkat Anda tidak dapat membuka Brave. Untuk memperbaiki masalah ini, download update AI Wiz terbaru dari app store.</translation>
+<translation id="2667018639405889513">Beberapa halaman yang Anda buka akan dipramuat. Halaman mungkin dipramuat melalui server AI Wize saat ditautkan dari situs Brave.</translation>
+<translation id="7795837497684113327">Perangkat Anda tidak dapat membuka Brave. Untuk memperbaiki masalah ini, download update AI Wize terbaru dari app store.</translation>
 <translation id="7691043218961417207">Jelajahi konten untuk diikuti</translation>
 <translation id="7697383401610880082">Handel geser</translation>
 <translation id="7698359219371678927">Buat email di <ph name="APP_NAME"/></translation>
 <translation id="7702029078562412515">Kartu kueri</translation>
-<translation id="3434187853488406814">Menghapus data penjelajahan tidak akan membuat Anda logout dari Akun AI Wiz Anda. Untuk melakukannya, <ph name="BEGIN_LINK1"/>logout dari Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Menghapus data penjelajahan tidak akan membuat Anda logout dari Akun AI Wize Anda. Untuk melakukannya, <ph name="BEGIN_LINK1"/>logout dari Brave<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Gunakan data seluler</translation>
 <translation id="7709918231054955894">Akses semua tab Anda</translation>
 <translation id="7733878270780732638">Tidak ada cukup ruang pada perangkat.</translation>
@@ -1275,7 +1275,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> lainnya}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 dan <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> lainnya}}</translation>
 <translation id="5614774692683309331">Jika login, Anda akan dilindungi di berbagai layanan Brave.</translation>
 <translation id="7778840695157240389">Periksa kembali nanti untuk membaca artikel baru</translation>
-<translation id="7703329426540523149">Menautkan sementara data ini ke Akun AI Wiz Anda saat login, untuk melindungi Anda di berbagai aplikasi Brave</translation>
+<translation id="7703329426540523149">Menautkan sementara data ini ke Akun AI Wize Anda saat login, untuk melindungi Anda di berbagai aplikasi Brave</translation>
 <translation id="7791543448312431591">Tambahkan</translation>
 <translation id="7798392620021911922">Memulihkan <ph name="TAB_COUNT"/> tab</translation>
 <translation id="780301667611848630">Lain kali</translation>
@@ -1283,7 +1283,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7810647596859435254">Buka dengan...</translation>
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Semua file, 1 file dalam daftar}other{Semua file, # file dalam daftar}}</translation>
 <translation id="7815484226266492798">Screenshot Panjang</translation>
-<translation id="8439902729344548970">Jika Anda login, data ini akan ditautkan ke Akun AI Wiz Anda untuk melindungi Anda di berbagai layanan Brave, misalnya, meningkatkan perlindungan di Gmail setelah insiden keamanan.</translation>
+<translation id="8439902729344548970">Jika Anda login, data ini akan ditautkan ke Akun AI Wize Anda untuk melindungi Anda di berbagai layanan Brave, misalnya, meningkatkan perlindungan di Gmail setelah insiden keamanan.</translation>
 <translation id="78270725016672455">Komputer Anda ingin mendaftarkan perangkat ini untuk login ke situs</translation>
 <translation id="7844171778363018843">Tidak ada data yang dipilih untuk disinkronkan</translation>
 <translation id="7068829570137757602">Layanan Brave</translation>
@@ -1315,7 +1315,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7960972236129063347">Tombol kembali insight halaman</translation>
 <translation id="7961926449547174351">Anda telah menonaktifkan Akses penyimpanan, buka Setelan untuk mengaktifkannya.</translation>
 <translation id="7963646190083259054">Vendor:</translation>
-<translation id="2939504940637874963">Anda dapat menggunakan sandi tersimpan di semua perangkat. Sandi disimpan ke Pengelola Sandi AI Wiz untuk <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Anda dapat menggunakan sandi tersimpan di semua perangkat. Sandi disimpan ke Pengelola Sandi AI Wize untuk <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Ditambahkan ke daftar bacaan</translation>
 <translation id="7971136598759319605">Aktif 1 hari yang lalu</translation>
 <translation id="7975379999046275268">Pratinjau halaman <ph name="BEGIN_NEW"/>Baru<ph name="END_NEW"/></translation>
@@ -1324,7 +1324,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7995059495660416932">Anda akan melihat konten saat tersedia</translation>
 <translation id="799576009106109668">Anda akan menjelajah lebih cepat karena konten dimuat secara proaktif berdasarkan halaman web yang sedang Anda buka</translation>
 <translation id="8004582292198964060">Browser</translation>
-<translation id="3325020657155065477">Hapus juga data AI Wiz Anda dari perangkat ini</translation>
+<translation id="3325020657155065477">Hapus juga data AI Wize Anda dari perangkat ini</translation>
 <translation id="8015452622527143194">Mengembalikan semua di halaman ke ukuran default</translation>
 <translation id="8026334261755873520">Hapus data penjelajahan</translation>
 <translation id="8027863900915310177">Pilih lokasi untuk mendownload</translation>
@@ -1335,7 +1335,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="8037801708772278989">Baru saja diperiksa</translation>
 <translation id="804335162455518893">Kartu SD tidak ditemukan</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB tersedia</translation>
-<translation id="2317945146070194624">Buka di tab AI Wiz baru</translation>
+<translation id="2317945146070194624">Buka di tab AI Wize baru</translation>
 <translation id="8062594758852531064">Pramuat ekstensif:</translation>
 <translation id="8063895661287329888">Gagal menambahkan bookmark.</translation>
 <translation id="8066816452984416180">Bookmark halaman ini dengan cepat. Sentuh lama untuk mengedit pintasan ini.</translation>
@@ -1344,15 +1344,15 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="8076492880354921740">Tab</translation>
 <translation id="8078096376109663956">Bagikan teks saja</translation>
 <translation id="8084114998886531721">Sandi tersimpan</translation>
-<translation id="1718138320251931534">Mengontrol data Akun AI Wiz Anda</translation>
+<translation id="1718138320251931534">Mengontrol data Akun AI Wize Anda</translation>
 <translation id="808747664143081553">Terhubung ke perangkat</translation>
 <translation id="8090732854597034573">Jika kamu perlu bantuan, minta kepada orang tuamu</translation>
 <translation id="8101414242770404289">Tidak ada tab dari <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Dengan melanjutkan, kamu menyetujui <ph name="BEGIN_TOS_LINK"/>Persyaratan Layanan<ph name="END_TOS_LINK"/>.\nUntuk membantu meningkatkan kualitas aplikasi, AI Wiz akan mengirimkan data penggunaan dan error ke Brave. <ph name="BEGIN_UMA_LINK"/>Kelola<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Dengan melanjutkan, kamu menyetujui <ph name="BEGIN_TOS_LINK"/>Persyaratan Layanan<ph name="END_TOS_LINK"/>.\nUntuk membantu meningkatkan kualitas aplikasi, AI Wize akan mengirimkan data penggunaan dan error ke Brave. <ph name="BEGIN_UMA_LINK"/>Kelola<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Tutup opsi pengurutan</translation>
 <translation id="2919733817273403520">Bantu tingkatkan fitur dan performa Brave</translation>
-<translation id="4565206163201411670">Tampilkan aktivitas AI Wiz Anda di Kesehatan Digital?</translation>
+<translation id="4565206163201411670">Tampilkan aktivitas AI Wize Anda di Kesehatan Digital?</translation>
 <translation id="8118117428362942925">Jika kamu perlu bantuan, minta kepada orang tuamu (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Mengurutkan berdasarkan yang terbaru</translation>
 <translation id="8127542551745560481">Edit halaman beranda</translation>
@@ -1368,14 +1368,14 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="8210770465353466621">Tab Anda akan ditampilkan di sini</translation>
 <translation id="8215740705341534369">Sheet samping</translation>
 <translation id="8218622182176210845">Kelola akun Anda</translation>
-<translation id="4034729701971511794">Anda dapat memblokir situs yang tidak diinginkan. AI Wiz juga otomatis menghapus situs dari daftar yang tersimpan lebih dari 30 hari. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Anda dapat memblokir situs yang tidak diinginkan. AI Wize juga otomatis menghapus situs dari daftar yang tersimpan lebih dari 30 hari. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menu kartu feed</translation>
 <translation id="8236097722223016103">Tambahkan ke bookmark</translation>
 <translation id="8237871086242677046">Sheet bawah insight halaman</translation>
 <translation id="8243077599929149377">Tambahkan nama pengguna Anda</translation>
 <translation id="8250920743982581267">Dokumen</translation>
 <translation id="8255617931166444521">Situs hanya dapat menggunakan cookie Anda untuk melihat aktivitas penjelajahan Anda di situs itu sendiri</translation>
-<translation id="2876689296031086375">Karena halaman yang dipramuat terenkripsi, AI Wiz tidak akan mempelajari apa pun tentang konten halaman yang dipramuat. Server AI Wiz akan mempelajari situs mana yang dipramuat secara pribadi. Informasi ini hanya digunakan untuk melakukan pramuat halaman tersebut dan tidak akan ditautkan ke informasi lain dari Akun AI Wiz Anda.</translation>
+<translation id="2876689296031086375">Karena halaman yang dipramuat terenkripsi, AI Wize tidak akan mempelajari apa pun tentang konten halaman yang dipramuat. Server AI Wize akan mempelajari situs mana yang dipramuat secara pribadi. Informasi ini hanya digunakan untuk melakukan pramuat halaman tersebut dan tidak akan ditautkan ke informasi lain dari Akun AI Wize Anda.</translation>
 <translation id="8260126382462817229">Coba masuk lagi</translation>
 <translation id="8261506727792406068">Hapus</translation>
 <translation id="82619448491672958">Lihat tab lainnya</translation>
@@ -1385,7 +1385,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="829672787777123339">Menghubungkan ke perangkat …</translation>
 <translation id="8310344678080805313">Tab standar</translation>
 <translation id="831192587911042850">Menambahkan situs saat ini ke daftar situs yang Anda ikuti.</translation>
-<translation id="5665071699503384089">Anda dapat memblokir topik yang tidak ingin dibagikan ke situs. AI Wiz juga otomatis menghapus topik yang tersimpan lebih dari 4 minggu. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Anda dapat memblokir topik yang tidak ingin dibagikan ke situs. AI Wize juga otomatis menghapus topik yang tersimpan lebih dari 4 minggu. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Jangan pernah terjemahkan situs</translation>
 <translation id="8348430946834215779">Gunakan HTTPS jika memungkinkan dan dapatkan peringatan sebelum memuat situs yang tidak mendukungnya</translation>
 <translation id="8354977102499939946">Telusuri dengan cepat menggunakan suara Anda. Untuk mengedit pintasan ini, buka Setelan.</translation>
@@ -1396,11 +1396,11 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="7651600795135059130">Memeriksa kesesuaian URL dengan daftar situs tidak aman yang disimpan di Brave</translation>
 <translation id="8402673309244746971">Buka feed Mengikuti</translation>
 <translation id="8413126021676339697">Tampilkan histori lengkap</translation>
-<translation id="5348884013239264115">Melindungi dari situs, download, dan ekstensi yang bereputasi berbahaya. Saat Anda membuka situs, AI Wiz mengirimkan bagian URL yang di-obfuscate ke AI Wiz melalui server privasi yang menyembunyikan alamat IP Anda. Jika situs melakukan hal yang mencurigakan, URL lengkap dan bit konten halaman juga akan dikirim.</translation>
+<translation id="5348884013239264115">Melindungi dari situs, download, dan ekstensi yang bereputasi berbahaya. Saat Anda membuka situs, AI Wize mengirimkan bagian URL yang di-obfuscate ke AI Wize melalui server privasi yang menyembunyikan alamat IP Anda. Jika situs melakukan hal yang mencurigakan, URL lengkap dan bit konten halaman juga akan dikirim.</translation>
 <translation id="8414396119627470038">Login ke <ph name="SITE_ETLD_PLUS_ONE"/> dengan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Sertakan</translation>
 <translation id="8422250855136581222">Tidak ada tab di perangkat ini</translation>
-<translation id="5735840612282428689">Halaman dikirim. Untuk melihatnya, buka AI Wiz di <ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">Halaman dikirim. Untuk melihatnya, buka AI Wize di <ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">Tab pratinjau terbuka setengah</translation>
 <translation id="8428213095426709021">Setelan</translation>
 <translation id="8430824733382774043">Hanya bagikan screenshot</translation>
@@ -1447,14 +1447,14 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="860043288473659153">Nama pemegang kartu</translation>
 <translation id="1673533133011266617">Login ke Brave, ditutup.</translation>
 <translation id="860282621117673749">Notifikasi diskon</translation>
-<translation id="5784514951651328424">Akun AI Wiz Anda mungkin memiliki bentuk histori penjelajahan lainnya di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Akun AI Wize Anda mungkin memiliki bentuk histori penjelajahan lainnya di <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Buka URL yang disarankan yang ditentukan di konten download?</translation>
 <translation id="8621068256433641644">ponsel</translation>
 <translation id="8636825310635137004">Untuk mengakses tab Anda dari perangkat lainnya, aktifkan sinkronisasi.</translation>
 <translation id="864544049772947936">Kelola jendela (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Memperkirakan dan memberikan peringatan terkait peristiwa berbahaya sebelum terjadi</translation>
 <translation id="2734140769649165081">Anda dapat menghapus data di Setelan Brave</translation>
-<translation id="7436978557885042606">Gunakan AI Wiz sesuai keinginan</translation>
+<translation id="7436978557885042606">Gunakan AI Wize sesuai keinginan</translation>
 <translation id="8664979001105139458">Nama file sudah ada</translation>
 <translation id="8676276370198826499">Daftar ke <ph name="SITE_ETLD_PLUS_ONE"/> dengan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Verifikasi login</translation>
@@ -1491,15 +1491,15 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="885480114717186641">Anda dapat meminta situs desktop untuk <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Dapatkan deskripsi</translation>
 <translation id="8856931513242997049">Alur izin notifikasi ditutup</translation>
-<translation id="1984646864943401749">Kirim URL beberapa halaman yang Anda kunjungi, informasi sistem terbatas, dan beberapa konten halaman ke AI Wiz untuk membantu menemukan ancaman baru dan melindungi semua orang di web.</translation>
+<translation id="1984646864943401749">Kirim URL beberapa halaman yang Anda kunjungi, informasi sistem terbatas, dan beberapa konten halaman ke AI Wize untuk membantu menemukan ancaman baru dan melindungi semua orang di web.</translation>
 <translation id="8909135823018751308">Bagikan...</translation>
 <translation id="2684652081942622950">Akun Brave</translation>
 <translation id="8921980840204105660">Sinkronkan untuk mendapatkan bookmark Anda dari perangkat lainnya</translation>
 <translation id="8922289737868596582">Download halaman dari tombol opsi Lainnya untuk menggunakannya secara offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Pelajari Lebih Lanjut<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> sudah siap</translation>
-<translation id="1174893863889683998">Hapus aktivitas AI Wiz Anda dari Kesehatan Digital?</translation>
-<translation id="179413535815682755">Bergantung pada setelan Anda, AI Wiz juga dapat mengirim cookie, URL saat ini, dan lokasi Anda</translation>
+<translation id="1174893863889683998">Hapus aktivitas AI Wize Anda dari Kesehatan Digital?</translation>
+<translation id="179413535815682755">Bergantung pada setelan Anda, AI Wize juga dapat mengirim cookie, URL saat ini, dan lokasi Anda</translation>
 <translation id="8942627711005830162">Buka di jendela lain</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Bahasa ini tidak dapat didownload. Coba lagi nanti.</translation>
 <translation id="8955719471735800169">Kembali ke atas</translation>
@@ -1509,7 +1509,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="8987736167266086032">Lanjutkan dari saat terakhir Anda menggunakannya</translation>
 <translation id="8996847606757455498">Pilih penyedia lain</translation>
 <translation id="8998289560386111590">Tidak tersedia di perangkat Anda</translation>
-<translation id="3275122921244685452">Anda akan login dengan akun yang dikelola oleh <ph name="MANAGED_DOMAIN"/> dan memberikan kontrol data AI Wiz kepada administratornya. Data akan terikat dengan akun ini secara permanen. Bila Anda logout dari Brave, data akan dihapus dari perangkat ini, tetapi data tetap tersimpan di Akun Brave.</translation>
+<translation id="3275122921244685452">Anda akan login dengan akun yang dikelola oleh <ph name="MANAGED_DOMAIN"/> dan memberikan kontrol data AI Wize kepada administratornya. Data akan terikat dengan akun ini secara permanen. Bila Anda logout dari Brave, data akan dihapus dari perangkat ini, tetapi data tetap tersimpan di Akun Brave.</translation>
 <translation id="9012585441087414258">Melindungi dari situs, download, dan ekstensi yang bereputasi berbahaya. Jika halaman melakukan hal yang mencurigakan, URL dan contoh kecil konten halaman akan dikirim ke Google Safe Browsing.</translation>
 <translation id="9019199799064251516">Lanjutkan tanpa kunci profil mobil?</translation>
 <translation id="9022774213089566801">Sering dikunjungi</translation>
@@ -1520,7 +1520,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="9055497320631373736">Menambahkan kembali situs ke situs potensial</translation>
 <translation id="9063523880881406963">Nonaktifkan Ubah situs desktop</translation>
 <translation id="9065203028668620118">Edit</translation>
-<translation id="5496925146144075335">Data tersimpan yang dianggap tidak penting oleh AI Wiz (misalnya situs yang tidak memiliki setelan tersimpan atau situs yang jarang Anda kunjungi)</translation>
+<translation id="5496925146144075335">Data tersimpan yang dianggap tidak penting oleh AI Wize (misalnya situs yang tidak memiliki setelan tersimpan atau situs yang jarang Anda kunjungi)</translation>
 <translation id="9067341854474068781">Sheet tidak ada kunci sandi terbuka sepenuhnya</translation>
 <translation id="906781307897697745">di <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Tidak ada halaman yang belum dibaca</translation>
@@ -1554,8 +1554,8 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="9209888181064652401">Tidak dapat menelepon</translation>
 <translation id="9212845824145208577">Tidak dapat lebih rendah lagi. Coba mulai dari bagian yang lebih bawah pada halaman.</translation>
 <translation id="9219103736887031265">Gambar</translation>
-<translation id="6946179564366058239">Saat sebuah situs meminta untuk melakukan pramuat link yang ada di halamannya secara pribadi, AI Wiz akan mengenkripsi dan melakukan pramuat halaman melalui server AI Wiz tanpa cookie. Hal ini akan menyembunyikan identitas Anda dari situs yang dipramuat.</translation>
-<translation id="4596514158372210596">Hapus aktivitas AI Wiz Anda dari Kesehatan Digital</translation>
+<translation id="6946179564366058239">Saat sebuah situs meminta untuk melakukan pramuat link yang ada di halamannya secara pribadi, AI Wize akan mengenkripsi dan melakukan pramuat halaman melalui server AI Wize tanpa cookie. Hal ini akan menyembunyikan identitas Anda dari situs yang dipramuat.</translation>
+<translation id="4596514158372210596">Hapus aktivitas AI Wize Anda dari Kesehatan Digital</translation>
 <translation id="2830145431802238213">Gunakan Mode Ringan di Brave</translation>
 <translation id="928550791203542716">Mengikuti <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Semua sandi akan didownload di perangkat Anda dan dihapus dari <ph name="CHROME_CHANNEL"/></translation>
@@ -1574,7 +1574,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="993520549480398880">Hapus juga bookmark, histori, dan data lainnya dari mobil ini</translation>
 <translation id="996149300115483134">Menu kartu feed ditutup</translation>
 <translation id="5186185447130319458">Pribadi</translation>
-<translation id="79269250264141507">Ketika Anda mengetik di bilah alamat atau kotak pencarian, AI Wiz mengirim hal yang Anda ketik ke mesin pencarian bawaan Anda untuk mendapatkan usulan yang lebih baik. Ini dinonaktifkan di mode Privat.</translation>
+<translation id="79269250264141507">Ketika Anda mengetik di bilah alamat atau kotak pencarian, AI Wize mengirim hal yang Anda ketik ke mesin pencarian bawaan Anda untuk mendapatkan usulan yang lebih baik. Ini dinonaktifkan di mode Privat.</translation>
 <translation id="5711390076756601471">Kunci tab Privat saat Anda meninggalkan Brave</translation>
 <translation id="1014490034578104945">Gunakan kunci layar untuk melihat tab Privat yang terbuka</translation>
 <translation id="5722020415664104421">Memblokir sementara menggunakan Privat</translation>
@@ -1591,7 +1591,7 @@ Misalnya, beberapa situs web mungkin menanggapi permintaan ini dengan menayangka
 <translation id="4660964651149493586">Buka Kunci Privat</translation>
 <translation id="5278260521317049275">Aktifkan kunci Privat</translation>
 <translation id="6302653771627628530">Tab privat akan dikunci ketika Anda meninggalkan Brave</translation>
-<translation id="3763131702135887799">Bantulah AI Wiz menjadi lebih baik untuk profil-profil yang menggunakannya dengan cara seperti Anda</translation>
+<translation id="3763131702135887799">Bantulah AI Wize menjadi lebih baik untuk profil-profil yang menggunakannya dengan cara seperti Anda</translation>
 <translation id="4167670741834902166">Tab Privat baru</translation>
 <translation id="9148151251783962691">Untuk meramban secara privat di perangkat ini, cobalah mode Privat</translation>
 <translation id="8355284051444779553">Untuk membuka tab Privat baru, buka menu</translation>

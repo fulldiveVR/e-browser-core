@@ -67,7 +67,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Assets fragment displayed under portfolio section of AI Wiz Wallet.
+ * Assets fragment displayed under portfolio section of AI Wize Wallet.
  */
 public class AssetsFragment extends Fragment implements OnWalletListItemClick, ApprovedTxObserver {
     private static final String TAG = "AssetsFragment";

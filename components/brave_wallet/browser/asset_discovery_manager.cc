@@ -26,9 +26,9 @@ GetAssetDiscoveryManagerNetworkTrafficAnnotationTag() {
         sender: "Asset Discovery Manager"
         description:
           "This service is used to discover crypto assets on behalf "
-          "of the user interacting with the native AI Wiz wallet."
+          "of the user interacting with the native AI Wize wallet."
         trigger:
-          "Triggered by uses of the native AI Wiz wallet."
+          "Triggered by uses of the native AI Wize wallet."
         data:
           "NFT assets."
         destination: WEBSITE

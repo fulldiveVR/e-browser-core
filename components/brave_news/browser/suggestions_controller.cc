@@ -86,7 +86,7 @@ double GetVisitWeighting(const mojom::PublisherPtr& publisher,
   const auto host_name = publisher->site_url.host();
   auto it = visit_weightings.find(host_name);
   if (it == visit_weightings.end()) {
-    // The |site_urls| we receive from AI Wiz News aren't terribly accurate, and
+    // The |site_urls| we receive from AI Wize News aren't terribly accurate, and
     // many of them are missing bits and pieces. This is a simple middle ground
     // while we wait for them to be fixed.
     // Relevant issues: https://github.com/brave/news-aggregator/issues/58 and

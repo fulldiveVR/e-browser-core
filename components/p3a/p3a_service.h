@@ -33,7 +33,7 @@ namespace p3a {
 
 struct P3AConfig;
 
-// Core class for AI Wiz Privacy-Preserving Product Analytics machinery.
+// Core class for AI Wize Privacy-Preserving Product Analytics machinery.
 // Works on UI thread. Refcounted to receive histogram updating callbacks
 // on any thread. This class manages registration of dynamic metrics,
 // and histogram listeners. Metric value updates are propagated to the

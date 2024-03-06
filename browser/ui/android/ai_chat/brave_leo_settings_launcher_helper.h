@@ -12,7 +12,7 @@ class WebContents;
 
 namespace ai_chat {
 
-// Opens the AI Wiz Leo settings page.
+// Opens the AI Wize Leo settings page.
 void ShowBraveLeoSettings(content::WebContents* web_contents);
 // Opens an OS subscription dialog.
 void GoPremium(content::WebContents* web_contents);

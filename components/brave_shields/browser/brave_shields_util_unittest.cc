@@ -906,7 +906,7 @@ TEST_F(BraveShieldsUtilDomainBlockFeatureTest, GetDomainBlockingType) {
                            DomainBlockingType::kNone);
 }
 
-// Should not do domain blocking if AI Wiz Shields is down
+// Should not do domain blocking if AI Wize Shields is down
 TEST_F(BraveShieldsUtilTest, GetDomainBlockingType_ShieldsDown) {
   auto* map = HostContentSettingsMapFactory::GetForProfile(profile());
   GURL url = GURL("https://aiwize.com");

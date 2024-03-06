@@ -52,7 +52,7 @@ void RecordNewUserReturning(PrefService* prefs) {
 
 void RecordWeeklySessionCount(PrefService* prefs, bool is_add) {
   // Track how many times in the past week
-  // user has scrolled to AI Wiz News.
+  // user has scrolled to AI Wize News.
   constexpr int buckets[] = {0, 1, 3, 7, 12, 18, 25, 1000};
   uint64_t total_session_count = AddToWeeklyStorageAndGetSum(
       prefs, prefs::kBraveNewsWeeklySessionCount, is_add);

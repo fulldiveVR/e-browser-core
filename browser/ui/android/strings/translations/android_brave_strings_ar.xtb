@@ -3,7 +3,7 @@
 <translationbundle lang="ar">
 <translation id="8631427463833030968">إدارة الإعلانات</translation>
 <translation id="7630214457764713113">نسخ الرابط الكامل</translation>
-<translation id="885805571521218129">يعكس هذا نطاق أرباحك المقدرة لإعلانات موقع AI Wiz لهذا الشهر.</translation>
+<translation id="885805571521218129">يعكس هذا نطاق أرباحك المقدرة لإعلانات موقع AI Wize لهذا الشهر.</translation>
 <translation id="3478449063771497234">تم تعطيل الإشعارات</translation>
 <translation id="2862978891748913252">حدّد بلدك</translation>
 <translation id="3970520675790340955">اختر بلدك حتى نتمكن من عرض الخيارات والإعلانات المناسبة لمنطقتك.</translation>
@@ -19,7 +19,7 @@
 <translation id="6385969012847057348">منشئ المحتوى هذا غير قادر على تلقي أي مساهمات من <ph name="CUSTODIAN"/>.</translation>
 <translation id="6268134562674951939">ليس لديك ما يكفي من الرموز المميزة</translation>
 <translation id="4529874892536380156">اجعل هذه مساهمة شهرية متكررة. يمكنك إلغاؤها في أي وقت.</translation>
-<translation id="5562948772940025260">يمكنك فقط إرسال ما يصل إلى <ph name="AMOUNT"/>عملة BAT رقمية باستخدام رصيد AI Wiz Rewards.</translation>
+<translation id="5562948772940025260">يمكنك فقط إرسال ما يصل إلى <ph name="AMOUNT"/>عملة BAT رقمية باستخدام رصيد AI Wize Rewards.</translation>
 <translation id="5012991400231464322">المساهمات الشهرية</translation>
 <translation id="5907051927340164207">أنت ترسلُ بالفعل مساهمات شهرية إلى منشئ المحتوى هذا</translation>
 <translation id="4848906651275579475">لا يزال بإمكانك إرسال مساهمة الآن، ويمكنك إلغاء مساهماتك الشهرية لهذا المنشئ عن طريق إزالتها من <ph name="MONTHLY_CONTRIBUTION"/>.</translation>
@@ -30,19 +30,19 @@
 <translation id="3699420827646925694">تم تسجيل الخروج من<ph name="CUSTODIAN"/></translation>
 <translation id="9038728316393235637">تسجيل الدخول إلى<ph name="CUSTODIAN"/></translation>
 <translation id="7063168612616047608">نشكرك جزيل الشكر على دعم منشئي المحتوى المفضلين لديك</translation>
-<translation id="3796032246917966749">يبدو أنك قمت بتسجيل الخروج من <ph name="CUSTODIAN"/>للوصول إلى AI Wiz Rewards. ولذا، سجل الدخول مرة أخرى للمتابعة.</translation>
-<translation id="5202112619925434373">لم يتم التحقق من هذا المنشئ بعد مع AI Wiz Creators. ستتمكن من إرسال المساهمات إليهم بمجرد التحقق منها. <ph name="LEARN_MORE"/></translation>
+<translation id="3796032246917966749">يبدو أنك قمت بتسجيل الخروج من <ph name="CUSTODIAN"/>للوصول إلى AI Wize Rewards. ولذا، سجل الدخول مرة أخرى للمتابعة.</translation>
+<translation id="5202112619925434373">لم يتم التحقق من هذا المنشئ بعد مع AI Wize Creators. ستتمكن من إرسال المساهمات إليهم بمجرد التحقق منها. <ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">إرسال المساهمة</translation>
 <translation id="1899434873745933492">يتعذّر إرسال مساهمتك</translation>
-<translation id="1794046983410841192">استخدام AI Wiz Rewards</translation>
+<translation id="1794046983410841192">استخدام AI Wize Rewards</translation>
 <translation id="8037118277449189044">استخدام محفظة Web3</translation>
-<translation id="9059356165618961685">رصيد AI Wiz Rewards</translation>
+<translation id="9059356165618961685">رصيد AI Wize Rewards</translation>
 <translation id="86107454835395919">تعيين كمساهمة شهرية</translation>
 <translation id="1177863135347784049">مخصص</translation>
 <translation id="4827581232860040208">حدثت مشكلة أثناء إرسال مساهمتك</translation>
 <translation id="3259723213051400722">يُرجى إعادة المحاولة.</translation>
-<translation id="5298965408768377685">قام هذا المنشئ بالتسجيل في AI Wiz ويمكنه تلقي مساهمات من مستخدمي AI Wiz Rewards. <ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">قد لا تعمل AI Wiz Rewards أثناء تعطيل الإشعارات.</translation>
+<translation id="5298965408768377685">قام هذا المنشئ بالتسجيل في AI Wize ويمكنه تلقي مساهمات من مستخدمي AI Wize Rewards. <ph name="LEARN_MORE"/></translation>
+<translation id="7466579932043491502">قد لا تعمل AI Wize Rewards أثناء تعطيل الإشعارات.</translation>
 <translation id="4259212006412783790">تشغيل</translation>
 <translation id="6112331814131703370">حظر إشعارات "التبديل إلى التطبيق"</translation>
 <translation id="4744921452903670666">أخبرنا ما رأيك!</translation>
@@ -59,7 +59,7 @@
 <translation id="5867854497245948308">شكرًا على تعليقاتك!</translation>
 <translation id="4935400164159327304">أخبرنا كيف يمكننا تحسين Brave.</translation>
 <translation id="1420756770787071946">دعم هذا المنشئ</translation>
-<translation id="8966035543003363155">تُسهل إشعارات AI Wiz الأمر</translation>
+<translation id="8966035543003363155">تُسهل إشعارات AI Wize الأمر</translation>
 <translation id="7662771815233894695">يمكنك إدارة التنزيلات، والحصول على الرموز المميزة، والاطلاع على إحصائيات الاستخدام الأسبوعية وغير ذلك الكثير.</translation>
 <translation id="4265429476391459783">أنت لا تحصل على مكافآت أو تتلقى تقارير الخصوصية</translation>
 <translation id="1305714751384738456">أنت لا تحصل على مكافآت Brave</translation>
@@ -68,16 +68,16 @@
 <translation id="8618359751943259593">قم بإعادة تشغيل الإشعارات إذا كنت ترغب في الاستمرار في الحصول على BAT</translation>
 <translation id="760355165169399836">قم بإعادة تشغيل الإشعارات إذا كنت ترغب في الاستمرار في تلقي تقارير الخصوصية الأسبوعية.</translation>
 <translation id="6268959058971634697">أنت لا تحصل على مكافآت</translation>
-<translation id="1088637159642753509">قم بتمكين إشعارات الجهاز لتحصل على مكافآت AI Wiz وتشاهد تقارير الخصوصية.</translation>
+<translation id="1088637159642753509">قم بتمكين إشعارات الجهاز لتحصل على مكافآت AI Wize وتشاهد تقارير الخصوصية.</translation>
 <translation id="312404770066229090">قم بتمكين إشعارات الجهاز لتحصل على مكافآت Brave</translation>
 <translation id="2241529840361230499">قم بتمكين إشعارات الجهاز لتحصل على تقارير خصوصية Brave</translation>
-<translation id="4930155581888391118">قم بتمكين الإشعارات المرسلة من AI Wiz للحصول على مكافآت Brave.</translation>
+<translation id="4930155581888391118">قم بتمكين الإشعارات المرسلة من AI Wize للحصول على مكافآت Brave.</translation>
 <translation id="325187916104529570">افتح الإعدادات وقم بتشغيل إشعارات الجهاز لإعلانات Brave.</translation>
 <translation id="5744802588121897886">قم بتشغيل إشعارات Brave</translation>
 <translation id="7307834434086582547">تمكين/تعطيل طرق حماية Brave</translation>
 <translation id="6945863270524203017">احصل على تحديثات الخصوصية الأسبوعية على حظر أدوات التعقب amp;amp، والإعلانات.</translation>
 <translation id="4324735664183300693">تشغيل الإشعارات</translation>
-<translation id="6395059271589866759">يحصل AI Wiz على نسبة 5٪ من المبلغ المرسل كرسم للمعالجة.</translation>
+<translation id="6395059271589866759">يحصل AI Wize على نسبة 5٪ من المبلغ المرسل كرسم للمعالجة.</translation>
 <translation id="6661699662755460155">الصرف</translation>
 <translation id="6790981891677399838">أرسلت مساهمة بقيمة <ph name="AMOUNT"/>عملة BAT رقمية باستخدام متصفح Brave. تعرف على كيفية دعم منشئي المحتوى المفضلين لديك والمواقع أيضًا عبر: https://aiwize.com/rewards</translation>
 <translation id="5510493033031835532">إعادة توجيه صفحات AMP تلقائيًا</translation>
@@ -92,7 +92,7 @@
 <translation id="5152595963250646670">حظر عناصر التشويش على YouTube</translation>
 <translation id="2998960761270772157">يحظر عناصر تسجيل الدخول والقائمة والتعليقات ومعلومات الفيديو على youtube.com.</translation>
 <translation id="6052725679982758334">حجب وسائل التواصل الاجتماعي</translation>
-<translation id="7498695072878479744">السماح بأزرار تسجيل الدخول إلى AI Wiz على مواقع أطراف خارجية</translation>
+<translation id="7498695072878479744">السماح بأزرار تسجيل الدخول إلى AI Wize على مواقع أطراف خارجية</translation>
 <translation id="863171915776379000">السماح بتسجيل الدخول إلى فيسبوك والمشاركات المدمجة</translation>
 <translation id="5165042248369837294">السماح بدمج تغريدات من تويتر</translation>
 <translation id="958971637207126733">السماح بالمشاركات المدمجة في LinkedIn</translation>
@@ -100,7 +100,7 @@
 <translation id="8877432762827303535">الدفع عبر الإنترنت</translation>
 <translation id="6583902294974160967">الدعم</translation>
 <translation id="1799030480311994998">الميزات</translation>
-<translation id="2005732746077850308">طرق حماية AI Wiz &amp; الخصوصية</translation>
+<translation id="2005732746077850308">طرق حماية AI Wize &amp; الخصوصية</translation>
 <translation id="4692623383562244444">محركات البحث</translation>
 <translation id="1468415711258933398">علامة تبويب قياسية</translation>
 <translation id="3377025655491224618">علامة تبويب خاصة</translation>
@@ -141,9 +141,9 @@
 <translation id="4176463684765177261">غير مفعّل</translation>
 <translation id="59174027418879706">تم التمكين</translation>
 <translation id="6252490671914511928">أهم’sأخبار اليوم في موجز خاص تمامًا، من أجلك فقط.</translation>
-<translation id="8300751939969131609">قم بتشغيل AI Wiz News، ولا تفوت أي خبر</translation>
+<translation id="8300751939969131609">قم بتشغيل AI Wize News، ولا تفوت أي خبر</translation>
 <translation id="7266075701303521777">Brave News عبارة عن خدمة مدعومة بالإعلانات، وتتضمن إعلانات خاصة وغير مسماة ومطابقة لجهازك.</translation>
-<translation id="7699565323725789472">تابع المصادر التي تفضلها، في موجو واحد، ليس عليك سوى فتح علامة تبويب في منصة Brave، والتمرير لأسفل، و… ها هو ذا!\nأخبار AI Wiz هي خدمة مدعومة بالإعلانات، وتتضمن إعلانات خاصة، وإعلانات مجهولة المصدر.</translation>
+<translation id="7699565323725789472">تابع المصادر التي تفضلها، في موجو واحد، ليس عليك سوى فتح علامة تبويب في منصة Brave، والتمرير لأسفل، و… ها هو ذا!\nأخبار AI Wize هي خدمة مدعومة بالإعلانات، وتتضمن إعلانات خاصة، وإعلانات مجهولة المصدر.</translation>
 <translation id="1765217911817124376">تشغيل أخبار Brave</translation>
 <translation id="8981973962043893066">بحث عن موقع، أو موضوع، أو موجز RSS</translation>
 <translation id="3225021799163709119">الشائع</translation>
@@ -161,7 +161,7 @@
 <translation id="7461899062138731833">المصادر</translation>
 <translation id="6150420917380577651">لم يتم العثور على الموجز على <ph name="SEARCH_URL"/></translation>
 <translation id="4541978218358617681">إعلان</translation>
-<translation id="7823038307453615214">إظهار AI Wiz News</translation>
+<translation id="7823038307453615214">إظهار AI Wize News</translation>
 <translation id="6527303717912515753">مشاركة</translation>
 <translation id="1654539412343893324">اعرف المزيد عن بياناتك</translation>
 <translation id="2989805286512600854">فتح في علامة تبويب جديدة</translation>
@@ -172,7 +172,7 @@
 <translation id="3189348785087463371">تمت ترقيته</translation>
 <translation id="7554145152551782675">المزيد من عروض Brave</translation>
 <translation id="254100925533869330">لا يوجد مختوى</translation>
-<translation id="7172792761509429092">ليس لدي خدمة أخبار AI Wiz محتوى لعرضه.</translation>
+<translation id="7172792761509429092">ليس لدي خدمة أخبار AI Wize محتوى لعرضه.</translation>
 <translation id="1771307734839364850">اختيار مصادر المحتوى</translation>
 <translation id="6891769200437737956">تمنع مواقع الويب من تحديد هويتي بالبصمة الرقمية</translation>
 <translation id="7459000603787995422">غلق علامات التبويب عند الخروج</translation>
@@ -187,9 +187,9 @@
 <translation id="6975864539539353406">يتم مسح البيانات الخاصة بالكوكيز ومعلومات الموقع الأخرى عند إغلاق الموقع</translation>
 <translation id="1680858055899097121">لا تواصل استخدام علامات التبويب بين جلسات التصفح</translation>
 <translation id="7142548388914389999">السماح بتحليلات المنتج التي تحافظ على الخصوصية (P3A)</translation>
-<translation id="5254037869598726291">تساعد معلومات P3A مجهولة المصدر AI Wiz على تقدير الاستخدام الكلي، وتضمن أننا ’re نقوم بتحسين الميزات الشائعة.</translation>
+<translation id="5254037869598726291">تساعد معلومات P3A مجهولة المصدر AI Wize على تقدير الاستخدام الكلي، وتضمن أننا ’re نقوم بتحسين الميزات الشائعة.</translation>
 <translation id="933652931229970927">إرسال التقارير التشخيصية تلقائيًا</translation>
-<translation id="5987838417172370108">ساعد في تحسين استقرار منتج Brave\u2019s عن خلال إرسال التقارير التشخيصية تلقائيًا أثناء تعطل متصفح AI Wiz أو توقفه عن العمل.</translation>
+<translation id="5987838417172370108">ساعد في تحسين استقرار منتج Brave\u2019s عن خلال إرسال التقارير التشخيصية تلقائيًا أثناء تعطل متصفح AI Wize أو توقفه عن العمل.</translation>
 <translation id="7977176350719484850">البيانات التقديرية المحفوظة</translation>
 <translation id="9008534313521214777">الوقت المقدر\nالذي تم توفيره</translation>
 <translation id="410351446219883937">التشغيل التلقائي</translation>
@@ -208,7 +208,7 @@
 <translation id="8026334261755873520">محو بيانات التصفُّح</translation>
 <translation id="1690924763769415936">تشغيل في الخلفية</translation>
 <translation id="6332924730165919598">يؤدي إغلاق جميع علامات التبويب إلى إغلاق Brave</translation>
-<translation id="8308305244351876417">يسمح بتشغيل الصوت عند التبديل إلى علامة تبويب أخرى في AI Wiz أو تطبيق آخر أو عند إيقاف تشغيل شاشة جهازك.</translation>
+<translation id="8308305244351876417">يسمح بتشغيل الصوت عند التبديل إلى علامة تبويب أخرى في AI Wize أو تطبيق آخر أو عند إيقاف تشغيل شاشة جهازك.</translation>
 <translation id="49147335255967913">فتح روابط YouTube في متصفح Brave</translation>
 <translation id="4150201353443180367">عرض</translation>
 <translation id="4275663329226226506">الوسائط</translation>
@@ -226,16 +226,16 @@
 <translation id="834487290629916192">لاحقاً</translation>
 <translation id="7207456302801184289">‏مرحبًا بك في Brave</translation>
 <translation id="4117451092682672487">الخصوصية. أصبحت أبسط.</translation>
-<translation id="7909375417585209817">باستخدام AI Wiz كافتراضي، يفتح كل رابط تنقر عليه بحماية خصوصية Brave.</translation>
+<translation id="7909375417585209817">باستخدام AI Wize كافتراضي، يفتح كل رابط تنقر عليه بحماية خصوصية Brave.</translation>
 <translation id="7370959926683925817">حظر الإعلانات. حفظ البيانات. كل يوم.</translation>
-<translation id="7281027579943912834">باستخدام AI Wiz كافتراضي، يحصل كل رابط تنقر عليه على حماية حظر الإعلانات من Brave. وكذلك كل صفحة وفيديو وبث.</translation>
+<translation id="7281027579943912834">باستخدام AI Wize كافتراضي، يحصل كل رابط تنقر عليه على حماية حظر الإعلانات من Brave. وكذلك كل صفحة وفيديو وبث.</translation>
 <translation id="5148943178722443958">ساعد في تحسين Brave.</translation>
 <translation id="6718362830686703942">أرسل تقارير التشخيص إذا واجهت حالة عطل أو توقف.</translation>
 <translation id="1929905278861178845">شارك نتائج تحليلات المنتج الخاصة والمجهولة تمامًا حول الميزات التي يستخدمها مستخدمو Brave.</translation>
 <translation id="2877653791257935258">كتابة اسم موقع ويب أو عنوان URL</translation>
 <translation id="5329830149661250028">شاهد اختلاف Brave: لا توجد إعلانات. لا توجد أجهزة تعقب. طريقة أسرع لتحميل الصفحة.</translation>
 <translation id="3941792073703079607">شاهد اختلاف Brave: حظر الإعلانات. حفظ البيانات. البث بشكل أسرع.</translation>
-<translation id="3545804467215833536">انقر لعرض AI Wiz Shields</translation>
+<translation id="3545804467215833536">انقر لعرض AI Wize Shields</translation>
 <translation id="1724327820822194498">شاهد كل الأشياء السيئةالتي تم حظرها بواسطة Brave، في كل صفحة، باستخدام Shields.</translation>
 <translation id="5386259141409498372"><ph name="BIG_TECH"/> و<ph name="TRACKER"/> إعلانات أخرى &amp; تم حظر أجهزة التعقب</translation>
 <translation id="7256200875155794202"><ph name="BIG_TECH"/> وتم حظر أدوات تتبُّع الإعلانات الأخرى &amp;</translation>
@@ -250,19 +250,19 @@
 <translation id="8537217141725709400">اكسب <ph name="TOKEN"/></translation>
 <translation id="3333887201479867589">مكافآت Brave</translation>
 <translation id="5870330605209713397">من خلال عرض الإعلانات التي تحترم الخصوصية ودعم مواقعك ومنشئي المحتوى المفضلين لديك بشكل افتراضي.</translation>
-<translation id="5302488867897327287">من خلال النقر على "البدء في استخدام AI Wiz Rewards"، فإنك توافق على</translation>
+<translation id="5302488867897327287">من خلال النقر على "البدء في استخدام AI Wize Rewards"، فإنك توافق على</translation>
 <translation id="4281844954008187215">شروط الخدمة</translation>
 <translation id="6871397658902960384">ابدأ التصفح</translation>
 <translation id="454386012157232640">لم أرى إعلان</translation>
-<translation id="1448877943847791441">سيعرض AI Wiz إعلانك الأول في</translation>
-<translation id="4410793187232041318">ستربح الآن رمزاً مميزاً من AI Wiz Ads.</translation>
+<translation id="1448877943847791441">سيعرض AI Wize إعلانك الأول في</translation>
+<translation id="4410793187232041318">ستربح الآن رمزاً مميزاً من AI Wize Ads.</translation>
 <translation id="6511854390690723657">هذا هو إعلانك الأول من Brave. انقر للاطلاع على المزيد.</translation>
-<translation id="2070991379950719711">ابدأ في استخدام AI Wiz Rewards</translation>
+<translation id="2070991379950719711">ابدأ في استخدام AI Wize Rewards</translation>
 <translation id="48520986898237073">الاستمرار إلى المحفظة</translation>
 <translation id="3570367516044491911">تعيين كمتصفح افتراضي</translation>
 <translation id="6800338374677644736">التعيين كمتصفح افتراضي</translation>
-<translation id="19715420010996093">حدد متصفح AI Wiz وانقر على "دائماً"</translation>
-<translation id="3546439402724649282">تم تعيين AI Wiz بالفعل كمتصفح افتراضي.</translation>
+<translation id="19715420010996093">حدد متصفح AI Wize وانقر على "دائماً"</translation>
+<translation id="3546439402724649282">تم تعيين AI Wize بالفعل كمتصفح افتراضي.</translation>
 <translation id="8389661903259423907">لقد قمت بالفعل بتعيين المتصفح الافتراضي. يمكنك تغيير المتصفح الافتراضي في إعدادات التطبيق الخاصة بك.</translation>
 <translation id="1545749641540134597">مسح كود الاستجابة السريعة QR</translation>
 <translation id="5317781812114905957">تعليمات</translation>
@@ -270,11 +270,11 @@
 <translation id="2734870894159530879">سجّل الدخول إلى <ph name="WALLET_PROVIDER"/> لمعرفة رصيدك</translation>
 <translation id="7658239707568436148">إلغاء</translation>
 <translation id="1201402288615127009">التالي</translation>
-<translation id="8481779960444041069">لتحسين خصوصيتك، قم بإعداد AI Wiz ليكون المتصفح الافتراضي الخاص بك</translation>
-<translation id="1938402585819943124">اختر AI Wiz في الشاشة التالية.</translation>
+<translation id="8481779960444041069">لتحسين خصوصيتك، قم بإعداد AI Wize ليكون المتصفح الافتراضي الخاص بك</translation>
+<translation id="1938402585819943124">اختر AI Wize في الشاشة التالية.</translation>
 <translation id="8926389886865778422">عدم السؤال مرة أخرى</translation>
 <translation id="745974920645827035">بحث مستقل مع خصوصية أفضل</translation>
-<translation id="4717018805430015801">البحث في AI Wiz لا يتتبعك أو يتتبع استفساراتك أو نقراتك</translation>
+<translation id="4717018805430015801">البحث في AI Wize لا يتتبعك أو يتتبع استفساراتك أو نقراتك</translation>
 <translation id="5240031343741051161">تجربة البحث في Brave</translation>
 <translation id="5234764350956374838">رفض</translation>
 <translation id="6639570430554986719">يناير/كانون الثاني</translation>
@@ -306,7 +306,7 @@
 <translation id="1649629664206601032">بقي لديك <ph name="TOKEN"/> يوم على المطالبة</translation>
 <translation id="683765328936486920">على يوتيوب</translation>
 <translation id="8969049974285901797">على تويتش</translation>
-<translation id="8038539967102225446">إعلانات AI Wiz هنا!</translation>
+<translation id="8038539967102225446">إعلانات AI Wize هنا!</translation>
 <translation id="222883304157347087">(هذا الجهاز)</translation>
 <translation id="4157741509680155021">الأجهزة المرتبطة بسلسلة التزامن</translation>
 <translation id="279635009973773843">جارٍ تحميل الأجهزة...</translation>
@@ -318,14 +318,14 @@
 <translation id="3132642509209154999">لقد انتهت صلاحية هذا الرمز. يرجى  إنشاء رمز جديد على جهازك الآخر والمحاولة مرة أخرى.</translation>
 <translation id="2859229680945501779">هذا الرمز غير صالح. يُرجى التحقق من ضبط الوقت والمنطقة الزمنية بشكل صحيح على جهازك.</translation>
 <translation id="3149880132460839085">مزامنة Brave</translation>
-<translation id="3680755684186855422">تتيح لك مزامنة AI Wiz إمكانية مزامنة بيانات الإشارات المرجعية بشكل خاص بين متصفحات AI Wiz الخاصة بك على أجهزتك المختلفة.</translation>
+<translation id="3680755684186855422">تتيح لك مزامنة AI Wize إمكانية مزامنة بيانات الإشارات المرجعية بشكل خاص بين متصفحات AI Wize الخاصة بك على أجهزتك المختلفة.</translation>
 <translation id="3735228155296883311">كل ما عليك فعله هو مسح الرمز من سلسلة المزامنة التي قمت بإنشائها على جهاز آخر. أو ابدأ سلسلة مزامنة جديدة.</translation>
-<translation id="2614069607859982576">باستخدام الجهاز المتزامن الحالي، افتح إعدادات AI Wiz وانتقل إلى الإعدادات والمزامنة. اختر "إضافة جهاز جديد" وقم بمسح رمز QR المعروض على الشاشة.</translation>
+<translation id="2614069607859982576">باستخدام الجهاز المتزامن الحالي، افتح إعدادات AI Wize وانتقل إلى الإعدادات والمزامنة. اختر "إضافة جهاز جديد" وقم بمسح رمز QR المعروض على الشاشة.</translation>
 <translation id="5241263629636958324">تم النسخ إلى الحافظة</translation>
 <translation id="5817918615728894473">إقران</translation>
 <translation id="7090325819305486658">تفضيلات البيانات</translation>
 <translation id="1680065323266179640">حذف حساب المزامنة</translation>
-<translation id="3792563952903751704">سيؤدي حذف حسابك إلى إزالة بياناتك المشفرة من خوادم AI Wiz وتعطيل المزامنة على جميع أجهزتك المتصلة. ومع ذلك، لن يحذف البيانات المخزنة محليًا على تلك الأجهزة.
+<translation id="3792563952903751704">سيؤدي حذف حسابك إلى إزالة بياناتك المشفرة من خوادم AI Wize وتعطيل المزامنة على جميع أجهزتك المتصلة. ومع ذلك، لن يحذف البيانات المخزنة محليًا على تلك الأجهزة.
 هذا الحذف نهائي ولا توجد طريقة لاستعادة البيانات. إذا قررتبدء استخدام المزامنة مرة أخرى، فستحتاج إلى إنشاء حساب جديد وإعادة إضافة كل جهاز واحدًا تلو الآخر.</translation>
 <translation id="9064376100690171155">حذف الحساب نهائيا</translation>
 <translation id="2740516568641790390">تم حذف حساب المزامنة بنجاح</translation>
@@ -336,12 +336,12 @@
 <translation id="1602067095281698985">بدء سلسلة مزامنة جديدة</translation>
 <translation id="1475223680121592371">إضافة هاتف محمول</translation>
 <translation id="2965377893636908578">إضافة جهاز كمبيوتر</translation>
-<translation id="6604289897677913048">باستخدام هاتف أو جهاز لوحي ثانٍ، انتقل إلى إعدادات مزامنة ومسح AI Wiz &gt;  &gt; ضوئياً.</translation>
-<translation id="8508856434435157945">على هاتفك المحمول، انتقل إلى مزامنة AI Wiz  في لوحة الإعدادات وانقر على زر "مسح رمز المزامنة ضوئياً". استخدم الكاميرا لمسح رمز QR الموجود أدناه.</translation>
-<translation id="2590683710114839102">على جهاز الكمبيوتر الخاص بك، انتقل إلى إعدادات مزامنة AI Wiz &gt;. اختر "إدخال رمز سلسلة المزامنة"</translation>
+<translation id="6604289897677913048">باستخدام هاتف أو جهاز لوحي ثانٍ، انتقل إلى إعدادات مزامنة ومسح AI Wize &gt;  &gt; ضوئياً.</translation>
+<translation id="8508856434435157945">على هاتفك المحمول، انتقل إلى مزامنة AI Wize  في لوحة الإعدادات وانقر على زر "مسح رمز المزامنة ضوئياً". استخدم الكاميرا لمسح رمز QR الموجود أدناه.</translation>
+<translation id="2590683710114839102">على جهاز الكمبيوتر الخاص بك، انتقل إلى إعدادات مزامنة AI Wize &gt;. اختر "إدخال رمز سلسلة المزامنة"</translation>
 <translation id="65315202420929965">مسح رمز المزامنة هذا ضوئياً</translation>
 <translation id="6764016175302339802">تعامل مع هذا الرمز مثل كلمة المرور. إذا حصل عليه شخص ما، فيمكنه قراءة وتعديل بياناتك المتزامنة.</translation>
-<translation id="6707003343517029414">على جهاز الكمبيوتر الخاص بك المستهدف، انتقل إلى مزامنة AI Wiz في الإعدادات وانقر فوق زر "لدي رمز المزامنة". \nأدخل الكلمات الرمزية الخاصة بسلسلة المزامنة الموضحة أدناه.</translation>
+<translation id="6707003343517029414">على جهاز الكمبيوتر الخاص بك المستهدف، انتقل إلى مزامنة AI Wize في الإعدادات وانقر فوق زر "لدي رمز المزامنة". \nأدخل الكلمات الرمزية الخاصة بسلسلة المزامنة الموضحة أدناه.</translation>
 <translation id="2731921493694251495">أدخل رمز سلسلة المزامنة</translation>
 <translation id="2175927920773552910">رمز الاستجابة السريعة</translation>
 <translation id="8653433343015102968">الكلمات الرمزية</translation>
@@ -351,19 +351,19 @@
 <translation id="6776430845975754238">سيؤثر تغيير الإعدادات فقط على البيانات التي يشاركها هذا الجهاز مع الآخرين.</translation>
 <translation id="1061533051865606843">إضافة جهاز جديد</translation>
 <translation id="7539985410310934287">أدخل الكلمات الرمزية</translation>
-<translation id="2886391679017857869">باستخدام الجهاز المتزامن الحالي، افتح إعدادات AI Wiz وانتقل إلى الإعدادات &gt; والمزامنة. اختر "إضافة جهاز جديد" ثم "عرض كلمات الرموز بدلاً من ذلك".</translation>
+<translation id="2886391679017857869">باستخدام الجهاز المتزامن الحالي، افتح إعدادات AI Wize وانتقل إلى الإعدادات &gt; والمزامنة. اختر "إضافة جهاز جديد" ثم "عرض كلمات الرموز بدلاً من ذلك".</translation>
 <translation id="8131740175452115882">التأكيد</translation>
 <translation id="4973653569293835178">سأستخدم الكاميرا...</translation>
 <translation id="326454632686131209">مزامنة الجهاز</translation>
 <translation id="327726072512457161">الخروج من الإعدادات</translation>
 <translation id="8050847734948770789">تمكين مكافآت Brave</translation>
 <translation id="9187185473011056079">أنا معكم!</translation>
-<translation id="8185825081026121627">اربح عملة Basic Attention الرمزية مقابل استعراضك لإعلانات AI Wiz Rewards التي تحترم الخصوصية.</translation>
+<translation id="8185825081026121627">اربح عملة Basic Attention الرمزية مقابل استعراضك لإعلانات AI Wize Rewards التي تحترم الخصوصية.</translation>
 <translation id="5321518976657560663">حدث خطأ أثناء إعادة التعيين</translation>
-<translation id="4114170343590425996">لقد حدث خطأ أثناء إعادة تعيين مكافآت Brave. يرجى إعادة تشغيل متصفح AI Wiz وإعادة المحاولة مرةً أخرى.</translation>
+<translation id="4114170343590425996">لقد حدث خطأ أثناء إعادة تعيين مكافآت Brave. يرجى إعادة تشغيل متصفح AI Wize وإعادة المحاولة مرةً أخرى.</translation>
 <translation id="6417420737057016607">إعلانات Brave</translation>
 <translation id="5611966874859284786">يتم عرض الإشعارات الخاصة بالإعلانات عندما لا يتم استخدام موقع Brave</translation>
-<translation id="6606319453795180219">سيؤدي ذلك إلى حذف مكافآت AI Wiz الخاصة بك وإعادة تعيين جميع بيانات مكافآت AI Wiz الخاصة بك</translation>
+<translation id="6606319453795180219">سيؤدي ذلك إلى حذف مكافآت AI Wize الخاصة بك وإعادة تعيين جميع بيانات مكافآت AI Wize الخاصة بك</translation>
 <translation id="8293206222192510085">إضافة إشارة مرجعية</translation>
 <translation id="340492034650766959">حذف إشارة مرجعية</translation>
 <translation id="2149973817440762519">تعديل إشارة مرجعية</translation>
@@ -382,14 +382,14 @@
 <translation id="2803313416453193357">فتح المجلد</translation>
 <translation id="8985635554450124959">لا يمكن إعداد المزامنة</translation>
 <translation id="7173114856073700355">فتح الإعدادات</translation>
-<translation id="496896260395129787">تم حذف حساب AI Wiz Sync هذا من جهاز آخر. إذا كنت لا تقصد تعطيل المزامنة، <ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">تم حذف حساب AI Wize Sync هذا من جهاز آخر. إذا كنت لا تقصد تعطيل المزامنة، <ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/> إعادة إنشاء الحساب</translation>
 <translation id="4094590686212463338">تعذر الانضمام إلى سلسلة المزامنة هذه. تم حذف سلسلة المزامنة.</translation>
 <translation id="4908081302669157000">أرقام الهواتف ورسائل البريد الإلكتروني والعناوين</translation>
 <translation id="1056898198331236512">تحذير</translation>
 <translation id="1426410128494586442">نعم</translation>
-<translation id="7811264919113243207">سيؤدي هذا إلى مشاركة بيانات AI Wiz الخاصة بك، بما في ذلك كلمات مرورك المحتملة، مع الجهاز الذي أنشأ رمز الاستجابة السريعة هذا. يرجى التحقق مرة أخرى من أن رمز الاستجابة السريعة هذا قد تم إنشاؤه بواسطة جهاز تملكه. هل أنت متأكد من أنك تريد القيام بذلك؟</translation>
-<translation id="3097089005389027085">سيؤدي هذا إلى مشاركة بيانات AI Wiz الخاصة بك، بما في ذلك كلمات مرورك المحتملة، مع الجهاز الذي أنشأ كلمات الشفرة هذه. يرجى التحقق مرة أخرى من أن هذه الكلمات المشفرة قد تم إنشاؤها بواسطة جهاز تملكه. هل أنت متأكد من أنك تريد القيام بذلك؟</translation>
+<translation id="7811264919113243207">سيؤدي هذا إلى مشاركة بيانات AI Wize الخاصة بك، بما في ذلك كلمات مرورك المحتملة، مع الجهاز الذي أنشأ رمز الاستجابة السريعة هذا. يرجى التحقق مرة أخرى من أن رمز الاستجابة السريعة هذا قد تم إنشاؤه بواسطة جهاز تملكه. هل أنت متأكد من أنك تريد القيام بذلك؟</translation>
+<translation id="3097089005389027085">سيؤدي هذا إلى مشاركة بيانات AI Wize الخاصة بك، بما في ذلك كلمات مرورك المحتملة، مع الجهاز الذي أنشأ كلمات الشفرة هذه. يرجى التحقق مرة أخرى من أن هذه الكلمات المشفرة قد تم إنشاؤها بواسطة جهاز تملكه. هل أنت متأكد من أنك تريد القيام بذلك؟</translation>
 <translation id="4550208292810542331">لم يُمنح الإذن باستخدام الكاميرا</translation>
 <translation id="6470233139461745039">لتمكين مزامنة كلمات المرور، قم أولاً بتعيين قفل الشاشة على جهازك</translation>
 <translation id="3063783274005996079">فتح القفل لتمكين مزامنة كلمات المرور</translation>
@@ -399,7 +399,7 @@
 <translation id="6336451774241870485">علامة تبويب خاصة جديدة</translation>
 <translation id="6199596294742117349">هذه علامة تبويب خاصة</translation>
 <translation id="5858455511731621847">على الرغم من أن المواقع التي تزورها في علامات التبويب الخاصة لا يتم حفظها محلياً، إلا أنها لا تجعلك مجهول الهوية أو غير مرئي لمزود خدمة الإنترنت أو للشركة التي تعمل بها أو للمواقع التي تزورها.</translation>
-<translation id="5789441016350810005">إعلانات AI Wiz المرسلة عندما يكون المتصفح في الخلفية</translation>
+<translation id="5789441016350810005">إعلانات AI Wize المرسلة عندما يكون المتصفح في الخلفية</translation>
 <translation id="4973347371961481083">المساهمات</translation>
 <translation id="7047578174221019462">جرت معالجة إسهاماتك الشهرية.</translation>
 <translation id="3124090095880236567">تشغيل الإعلانات</translation>
@@ -415,12 +415,12 @@
 <translation id="8643377320501056697">عرض أهم المواقع</translation>
 <translation id="7275773481201277457">إظهار إحصائيات Brave</translation>
 <translation id="8297488609722895137">الصورة بعدسة <ph name="PHOTO_BY"/></translation>
-<translation id="4761229094276239865">من خلال النقر على "البدء في استخدام AI Wiz Rewards"، فإنك توافق على <ph name="TERMS_OF_SERVICE"/>.</translation>
+<translation id="4761229094276239865">من خلال النقر على "البدء في استخدام AI Wize Rewards"، فإنك توافق على <ph name="TERMS_OF_SERVICE"/>.</translation>
 <translation id="3794079107601824147">تقاضَ أجراً لرؤية صورة الخلفية هذه.</translation>
 <translation id="7136586167396205364">إخفاء صور الرعاة الدعائية</translation>
 <translation id="2927095357213611519">يمكنك دعم منشئي الويب باستخدام الرموز المميزة.\nاكسب رموزاً مميزة من خلال مشاهدة إعلانات مراعية للخصوصية.</translation>
 <translation id="2898634658146274982">فتح الروابط الخارجية في Brave</translation>
-<translation id="5616508928556767259">يفتح روابط من تطبيقات أخرى في عرض الويب بمتصفح Brave. ملاحظة: يجب تعيين AI Wiz كمتصفحك الافتراضي.</translation>
+<translation id="5616508928556767259">يفتح روابط من تطبيقات أخرى في عرض الويب بمتصفح Brave. ملاحظة: يجب تعيين AI Wize كمتصفحك الافتراضي.</translation>
 <translation id="2394961582378297792">تم تسجيل الخروج</translation>
 <translation id="5308380583665731573">اتصال</translation>
 <translation id="3368922792935385530">متصل</translation>
@@ -428,26 +428,26 @@
 <translation id="8558636200953226885">لكن إذا قمت بالتحقق فسيمكنك...</translation>
 <translation id="8697510149346635496">اسحب رموز BAT التي تكسبها من عرض الإعلانات التي تحترم الخصوصية</translation>
 <translation id="1481480653609649134">قم بشراء رموز BAT إضافية بواسطة بطاقات الائتمان وغيرها من المصادر</translation>
-<translation id="9096003370755878766">اسحب رموز BAT التي قد تكون أضفتها سابقاً في محفظة مكافآت AI Wiz الخاصة بك</translation>
+<translation id="9096003370755878766">اسحب رموز BAT التي قد تكون أضفتها سابقاً في محفظة مكافآت AI Wize الخاصة بك</translation>
 <translation id="1554282356558968486">تتوفر خدمتنا للمحافظ من قبل</translation>
 <translation id="6569877533335686968">Uphold</translation>
 <translation id="3439853736976204026">bitFlyer</translation>
 <translation id="8533411848724153701">Gemini</translation>
 <translation id="6011108706830742093">ZebPay</translation>
 <translation id="8465442795593991224">قد يتطلب منك Uphold التحقق من هويتك بناءً على الخدمات المطلوبة.</translation>
-<translation id="3200197118442451932">لا تقوم شركة AI Wiz Software Inc. بمعالجة المعلومات الشخصية التي تقدمها إلى <ph name="WALLET_PROVIDER"/>أو تخزينها أو الوصول إليها، عندما تقوم بإنشاء حساب بواسطتها.</translation>
+<translation id="3200197118442451932">لا تقوم شركة AI Wize Software Inc. بمعالجة المعلومات الشخصية التي تقدمها إلى <ph name="WALLET_PROVIDER"/>أو تخزينها أو الوصول إليها، عندما تقوم بإنشاء حساب بواسطتها.</translation>
 <translation id="1665118090708049096">الانتقال إلى <ph name="WALLET_PROVIDER"/>حسابي</translation>
 <translation id="4858636682078269312">سجّل الدخول إلى حساب <ph name="WALLET_PROVIDER"/> الخاص بك</translation>
 <translation id="8874184842967597500">غير متصل</translation>
 <translation id="2495032782748793764">Brave Default</translation>
-<translation id="9132378787893584761">شارك AI Wiz مع أصدقائك!</translation>
+<translation id="9132378787893584761">شارك AI Wize مع أصدقائك!</translation>
 <translation id="717952606991220586">عذرًا، حدث خطأ ما. الرجاء المحاولة مرة أخرى لاحقًا.</translation>
 <translation id="987264212798334818">عام</translation>
 <translation id="1116694919640316211">حول</translation>
 <translation id="7961015016161918242">مطلقًا</translation>
 <translation id="1275213816424141989">ربما لاحقاً</translation>
 <translation id="4406937629441301400">اكسب رموزاً مقابل عرض هذه الصورة وردّ الصنيع إلى منشئي المحتوى. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">اكسب العملات الرمزية مقابل مشاهدة هذه الصورة. انقر فوق بدء استخدام AI Wiz Rewards للمطالبة بحصتك.</translation>
+<translation id="1992363542751124282">اكسب العملات الرمزية مقابل مشاهدة هذه الصورة. انقر فوق بدء استخدام AI Wize Rewards للمطالبة بحصتك.</translation>
 <translation id="6632345639591919543">أنت تكسب رموزاً مقابل عرض هذه الصورة.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">أنت تكسب رموزاً مقابل عرض هذه الصورة.</translation>
 <translation id="7877201489035217175">تعرف على المزيد حول الصور الدعائية</translation>
@@ -455,7 +455,7 @@
 <translation id="33967210973550414">صرف المكافآت قيد التقدم. <ph name="CURRENT_MONTH"/>  <ph name="CHECK_STATUS"/></translation>
 <translation id="1622952853310946314">الدفع ل <ph name="CURRENT_MONTH"/> اكتملت المكافآت. <ph name="SUPPORT"/></translation>
 <translation id="7717357606512850995">تحقق من الحالة</translation>
-<translation id="828092975561478703">مقابل كل صورة دعائية تشاهدها تتلقى 70% من العائد بصيغة رموز. مع AI Wiz Ads فإنك دائماً تتحكم في الإعلانات التي تراها.</translation>
+<translation id="828092975561478703">مقابل كل صورة دعائية تشاهدها تتلقى 70% من العائد بصيغة رموز. مع AI Wize Ads فإنك دائماً تتحكم في الإعلانات التي تراها.</translation>
 <translation id="3624048886326677117">حجب المتتبعات &amp; والإعلانات (شديد)</translation>
 <translation id="7151914815476509258">حجب المتتبعات &amp; والإعلانات (قياسي)</translation>
 <translation id="7384778069178817075">السماح بجميع المتتبعات والإعلانات</translation>
@@ -479,32 +479,32 @@
 <translation id="5582686930349810484">حظر بصمات الأصابع (قياسي)</translation>
 <translation id="769702552748212954">السماح بجميع عمليات أخذ البصمات</translation>
 <translation id="876424292214881779">الإعلانات والأشياء المريبة الأخرى التي تم حظرها</translation>
-<translation id="6930134873084561197">غالبًا ما تتضمن المواقع ملفات تعريف ارتباط ونصوص برمجية تحاول التعرف على هويتك وجهازك. إنهم يريدون معرفة هويتك ومتابعتك عبر الويب لتتبع ما تفعله في كل موقع.\n\nيحجب AI Wiz هذه الأشياء عنك لكي تتمكن من التصفح دون أن يتم تتبعك.</translation>
-<translation id="8553998445606452168">حول AI Wiz Shields</translation>
+<translation id="6930134873084561197">غالبًا ما تتضمن المواقع ملفات تعريف ارتباط ونصوص برمجية تحاول التعرف على هويتك وجهازك. إنهم يريدون معرفة هويتك ومتابعتك عبر الويب لتتبع ما تفعله في كل موقع.\n\nيحجب AI Wize هذه الأشياء عنك لكي تتمكن من التصفح دون أن يتم تتبعك.</translation>
+<translation id="8553998445606452168">حول AI Wize Shields</translation>
 <translation id="8912304686498704084">قيد التشغيل</translation>
 <translation id="4963218453264888510">معطل</translation>
 <translation id="7474113515179313724">إنك تتصفح هذا الموقع دون حماية الخصوصية من Brave. ألا يعمل بشكل صحيح أثناء تشغيل Shields؟</translation>
 <translation id="9055546041146396417">إذا كان هذا الموقع يبدو معطلاً فجرّب إيقاف تشغيل Shields.</translation>
 <translation id="1209739344687072997">الإبلاغ عن موقع إلكتروني معطل</translation>
-<translation id="8510478288840333677">إخطار مطوري AI Wiz بأن هذا الموقع لا يعمل بشكلٍ سليم مع Shields:</translation>
-<translation id="5429200298326665264">ملاحظة: سيتم إرسال عنوان هذا الموقع مع رقم إصدار AI Wiz الخاص بك وعنوان IP الخاص بك (والذي لن يتم تخزينه).</translation>
+<translation id="8510478288840333677">إخطار مطوري AI Wize بأن هذا الموقع لا يعمل بشكلٍ سليم مع Shields:</translation>
+<translation id="5429200298326665264">ملاحظة: سيتم إرسال عنوان هذا الموقع مع رقم إصدار AI Wize الخاص بك وعنوان IP الخاص بك (والذي لن يتم تخزينه).</translation>
 <translation id="5299848999918506028">شكراً لك!</translation>
-<translation id="76550953340008122">شكراً لإخطارك مطوري AI Wiz بوجود خطأٍ في هذا الموقع. سنبذل قصارى جهدنا لإصلاحه!</translation>
+<translation id="76550953340008122">شكراً لإخطارك مطوري AI Wize بوجود خطأٍ في هذا الموقع. سنبذل قصارى جهدنا لإصلاحه!</translation>
 <translation id="650318023204990401">الضوابط المتقدمة</translation>
 <translation id="1275664486910646411">أظهر المواقع الأكثر تقدما بشكل إكمال تلقائي</translation>
 <translation id="5370478469168390143">حفظ البيانات عبر الإنترنت</translation>
 <translation id="1118508688433541158">تصفّح أسرع وقم بحظر الإعلانات مع متصفح Brave</translation>
 <translation id="7427391215172269363">أحفظ البيانات يوميًا عبر تصفح موقع الويب باستخدام Brave.</translation>
 <translation id="4776948189086901857">Brave يعمل في كل مكان</translation>
-<translation id="1606322780901645965">قم بتنزيل AI Wiz على موقع brave.com على الكمبيوتر المحمول أو الجهاز اللوحي الخاص بك للحصول على شبكة ويب أسرع وأكثر خصوصية</translation>
+<translation id="1606322780901645965">قم بتنزيل AI Wize على موقع brave.com على الكمبيوتر المحمول أو الجهاز اللوحي الخاص بك للحصول على شبكة ويب أسرع وأكثر خصوصية</translation>
 <translation id="8374242949413616101">حماية الخصوصية</translation>
-<translation id="4955406228638026265">يمنع متصفح AI Wiz الإعلانات &amp; وأدوات التتبع من جمع معلومات عنك دون موافقتك.</translation>
+<translation id="4955406228638026265">يمنع متصفح AI Wize الإعلانات &amp; وأدوات التتبع من جمع معلومات عنك دون موافقتك.</translation>
 <translation id="752842701893882688">توفير البيانات والبطارية</translation>
 <translation id="1685837926613452362">بدون إعلانات &amp; فإنّ برامج التتبع والمواقع الإلكترونية تستهلك البيانات والبطارية بصورة أقل. يمكنك حتى توفير المال على رسوم ناقل الخدمة.</translation>
 <translation id="5440744330377972191">المواقع الإلكترونية تقوم بالتحميل بشكل أسرع</translation>
-<translation id="3000738865641747653">تحميل بيانات أقل يعني أنه يتم تحميل المواقع الإلكترونية في AI Wiz بشكل أسرع - حتى 8 مرات أسرع من المتصفحات الأخرى.</translation>
+<translation id="3000738865641747653">تحميل بيانات أقل يعني أنه يتم تحميل المواقع الإلكترونية في AI Wize بشكل أسرع - حتى 8 مرات أسرع من المتصفحات الأخرى.</translation>
 <translation id="8903462729414407077">احصل على تحديثات أسبوعية</translation>
-<translation id="7450323860390658083">كُن على اطلاع بالمواقع الإلكترونية التي تزورها التي تعد الأكثر تغلغلًا في الخصوصية.\n\nيمكنك فقط مشاهدة إحصائيات الخصوصية هذه. لا توجد بيانات شخصية أو سجل تصفح يترك متصفح AI Wiz على جهازك.</translation>
+<translation id="7450323860390658083">كُن على اطلاع بالمواقع الإلكترونية التي تزورها التي تعد الأكثر تغلغلًا في الخصوصية.\n\nيمكنك فقط مشاهدة إحصائيات الخصوصية هذه. لا توجد بيانات شخصية أو سجل تصفح يترك متصفح AI Wize على جهازك.</translation>
 <translation id="6170159749517116894">قم بتشغيل تقارير الخصوصية</translation>
 <translation id="1669047024429367828">الرؤية</translation>
 <translation id="5966707198760109579">الأسبوع</translation>
@@ -521,17 +521,17 @@
 <translation id="3694122362646626770">المواقع الإلكترونية</translation>
 <translation id="2225863440766607138">أدوات تتبع</translation>
 <translation id="2993367530362078067"><ph name="COUNT"/><ph name="COUNT_TEXT"/></translation>
-<translation id="6737820963776538947">لقد قمت بحظر <ph name="COUNT"/> أدوات تتبع &amp; وإعلانات مع متصفح AI Wiz في الساعات الثلاث الماضية.</translation>
-<translation id="3621193901658023971">تصفح بسرعة تصل إلى 6 أضعاف على المواقع الإخبارية الرئيسية في AI Wiz عن طريق حجب أدوات التتبع &amp; والإعلانات.</translation>
+<translation id="6737820963776538947">لقد قمت بحظر <ph name="COUNT"/> أدوات تتبع &amp; وإعلانات مع متصفح AI Wize في الساعات الثلاث الماضية.</translation>
+<translation id="3621193901658023971">تصفح بسرعة تصل إلى 6 أضعاف على المواقع الإخبارية الرئيسية في AI Wize عن طريق حجب أدوات التتبع &amp; والإعلانات.</translation>
 <translation id="7427567994475794038">قم بتشغيل تقارير الخصوصية لمعرفة عدد أدوات التتبع &amp; والإعلانات التي قد تم حظرها في الساعات الثلاث الماضية.</translation>
 <translation id="2053891538879944400">لقد حفظت <ph name="DATA"/> <ph name="DATA_TEXT"/> من البيانات مع متصفح Brave.</translation>
 <translation id="8640064498452534195">قم بتشغيل تقارير الخصوصية لمعرفة مقدار البيانات التي قمت بحفظها.</translation>
-<translation id="2252497442547961651">يستخدم متصفح AI Wiz بطارية أقل بنسبة 40% في المتوسط. 🔋</translation>
-<translation id="1945330434665345785">لقد قمت بحظر <ph name="COUNT"/> أدوات تتبع &amp; وإعلانات مع متصفح AI Wiz الأسبوع الماضي.</translation>
+<translation id="2252497442547961651">يستخدم متصفح AI Wize بطارية أقل بنسبة 40% في المتوسط. 🔋</translation>
+<translation id="1945330434665345785">لقد قمت بحظر <ph name="COUNT"/> أدوات تتبع &amp; وإعلانات مع متصفح AI Wize الأسبوع الماضي.</translation>
 <translation id="2883868922264431515">اربح عملات رمزية عند مشاهدة إعلانات تحترم الخصوصية وادعم المواقع الإلكترونية المفضلة لديك.</translation>
 <translation id="7408493389591475748">ابدأ التصفح لمشاهدة تقرير الخصوصية</translation>
-<translation id="9080777565335515917">قم بتعيين AI Wiz كمتصفحك الافتراضي للتصفح الخاص والآمن.</translation>
-<translation id="1390943217516275883">السماح لـ AI Wiz بإظهار إحصائيات الخصوصية الخاصة بك</translation>
+<translation id="9080777565335515917">قم بتعيين AI Wize كمتصفحك الافتراضي للتصفح الخاص والآمن.</translation>
+<translation id="1390943217516275883">السماح لـ AI Wize بإظهار إحصائيات الخصوصية الخاصة بك</translation>
 <translation id="1763352720905582220">يُرسل تقرير خصوصية أسبوعي</translation>
 <translation id="1811691435325545066">مسح كافة بيانات تقارير الخصوصية</translation>
 <translation id="5966003059662780423">حفظ البيانات عند الخروج</translation>
@@ -551,10 +551,10 @@
 <translation id="8804164990146287819">سياسة الخصوصية</translation>
 <translation id="8363792084628930008">من خلال تمكين المكافآت، فإنك توافق على <ph name="TERMS_OF_SERVICE"/> و <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">لنقم بجولة سريعة</translation>
-<translation id="7930505144430343145">مرحباً بك في AI Wiz Rewards!</translation>
-<translation id="3477340970981564961">تكافئك AI Wiz Private Ads برموز لدعم منشئي المحتوى على عكس الإعلانات التقليدية، كل ذلك مع الحفاظ على خصوصية معلوماتك الشخصية.</translation>
+<translation id="7930505144430343145">مرحباً بك في AI Wize Rewards!</translation>
+<translation id="3477340970981564961">تكافئك AI Wize Private Ads برموز لدعم منشئي المحتوى على عكس الإعلانات التقليدية، كل ذلك مع الحفاظ على خصوصية معلوماتك الشخصية.</translation>
 <translation id="6973095375773523904">أين تظهر الإعلانات؟</translation>
-<translation id="4328028439561659455">تظهر AI Wiz Private Ads كإشعارات على شاشتك. يمكنك التحكم في عدد المرات التي تشاهد فيها هذه الإعلانات.</translation>
+<translation id="4328028439561659455">تظهر AI Wize Private Ads كإشعارات على شاشتك. يمكنك التحكم في عدد المرات التي تشاهد فيها هذه الإعلانات.</translation>
 <translation id="7712287524451429139">أصبح العطاء أمراً هيناً</translation>
 <translation id="105037569026952831">يتلقى منشئو المحتوى مساهماتك بالعملات الرمزية تلقائياً بناءً على مستويات المشاركة الخاصة بك والتي نقيسها على أنها "انتباه".</translation>
 <translation id="3025802705256919103">تقديم الشكر على منح المساهمات</translation>
@@ -566,7 +566,7 @@
 <translation id="2353222426385080466">كلما زادت الإعلانات الخاصة، زادت المكافآت.</translation>
 <translation id="1201128255476890443"><ph name="ADS_PER_HOUR"/>  إعلانات في الساعة</translation>
 <translation id="827315274423079662">مرحى، أنت جاهز تماماً!</translation>
-<translation id="3895246934788932488">باستخدام AI Wiz Rewards، فأنت تحمي خصوصيتك وتساعد في جعل الويب مكاناً أفضل للجميع. وهذا الـ’s رائعاً!</translation>
+<translation id="3895246934788932488">باستخدام AI Wize Rewards، فأنت تحمي خصوصيتك وتساعد في جعل الويب مكاناً أفضل للجميع. وهذا الـ’s رائعاً!</translation>
 <translation id="5705882733397021510">العودة</translation>
 <translation id="3985567919248057638">لنأخذ جولة سريعة</translation>
 <translation id="7889432931837317731">الفتح تلقائياً عندما يكون ذلك ممكناً</translation>
@@ -596,7 +596,7 @@
 <translation id="1483493594462132177">إرسال</translation>
 <translation id="538450413584738399">تبديل</translation>
 <translation id="1366855498335432549">إيداع</translation>
-<translation id="1420318137760245955">مرحبًا بك في AI Wiz Wallet الجديد</translation>
+<translation id="1420318137760245955">مرحبًا بك في AI Wize Wallet الجديد</translation>
 <translation id="8339846196588658366">الاحتفاظ بأصول العملات المشفرة وتتبع أداء الحافظة. يمكن القيام بهذا كله من متصفح حماية الخصوصية Brave.</translation>
 <translation id="4472575034687746823">الخطوات الأولى</translation>
 <translation id="2759836790106646094">قم بعمل نسخة احتياطية من محفظتك الآن!</translation>
@@ -614,7 +614,7 @@
 <translation id="8289942708804097960">شراء العملة المشفرة ببطاقة ائتمان أو بطاقة خصم.</translation>
 <translation id="841880029259839903">إرسال وحدات crypto المشفرة أو قم بتحويلها من حساب إلى آخر.</translation>
 <translation id="151939837774436299">استبدال الرموز المميزة والأصول.</translation>
-<translation id="5512897350309216422">قم بإيداع العملات المشفرة في محفظة AI Wiz Wallet.</translation>
+<translation id="5512897350309216422">قم بإيداع العملات المشفرة في محفظة AI Wize Wallet.</translation>
 <translation id="1783600039044302171">تأمين تشفير crypto الخاص بك بكلمة مرور</translation>
 <translation id="3726490322412361740">أدخل كلمة المرور</translation>
 <translation id="3038243139480464605">تحقق من كلمة المرور</translation>
@@ -637,7 +637,7 @@
 <translation id="5493402808936397665">قم بتفعيل خيار الدخول بالبصمة لفتح محفظتك بسرعة دون إدخال كلمة المرور الخاصة بك.</translation>
 <translation id="8030647312184163932">فتح القفل ببصمة الإصبع</translation>
 <translation id="4090490645603511157">استخدم المقاييس الحيوية لفتح محفظتك بسرعة دون حاجة لإدخال كلمة المرور.</translation>
-<translation id="6901810042765869341">أدخل عبارة الاسترداد الخاصة بك لاستعادة حساب التشفير crypto لـ AI Wiz Wallet الخاص بك.</translation>
+<translation id="6901810042765869341">أدخل عبارة الاسترداد الخاصة بك لاستعادة حساب التشفير crypto لـ AI Wize Wallet الخاص بك.</translation>
 <translation id="9120654436199628567">استعادة حساب العملة المشفرة</translation>
 <translation id="4811736040444856406">عرض عبارة الاسترداد</translation>
 <translation id="283071225285270357">أدخِل عبارة الاسترداد</translation>
@@ -666,7 +666,7 @@
 <translation id="5483736362376139517">سنة واحدة</translation>
 <translation id="6979737339423435258">جميع الأوقات</translation>
 <translation id="6284218950354553099">الإرسال التلقائي لأداة البينج للاستخدام اليومي إلى Brave</translation>
-<translation id="5288333155754958121">يتيح هذا أمر البينج المجهول والخاص لـ AI Wiz تقدير المستخدمين النشطين.</translation>
+<translation id="5288333155754958121">يتيح هذا أمر البينج المجهول والخاص لـ AI Wize تقدير المستخدمين النشطين.</translation>
 <translation id="3819257035322786455">الاحتفاظ بنسخة احتياطية</translation>
 <translation id="4608713693379664295">حسابات التشفير الأساسية</translation>
 <translation id="4003821417160006384">الحسابات الثانوية</translation>
@@ -692,10 +692,10 @@
 <translation id="9033453977881595182">مُعرّف "الرمز المميز"</translation>
 <translation id="4987916116550559556">عنوان عملة Mint</translation>
 <translation id="7592795625234816917">الصورة غير متاحة</translation>
-<translation id="8239147115686034860">قفل AI Wiz Wallet تلقائيًا</translation>
-<translation id="414639769490080648">عدد دقائق الانتظار حتى يتم قفل AI Wiz Wallet تلقائيًا</translation>
+<translation id="8239147115686034860">قفل AI Wize Wallet تلقائيًا</translation>
+<translation id="414639769490080648">عدد دقائق الانتظار حتى يتم قفل AI Wize Wallet تلقائيًا</translation>
 <translation id="2326850911705720398">إعادة تعيين بيانات المحفظة وحذفها</translation>
-<translation id="6567712397896147805">هل أنت متأكد أنك تريد إعادة تعيين محفظة AI Wiz الخاصة بك؟ إذا لم يتم نسخ محفظتك احتياطيًا، فستؤدي إعادة التعيين إلى فقد جميع بيانات الحساب (بما في ذلك أي أموال مرتبطة). اكتب "<ph name="CONFIRMATION_PHRASE"/>" للتأكيد.</translation>
+<translation id="6567712397896147805">هل أنت متأكد أنك تريد إعادة تعيين محفظة AI Wize الخاصة بك؟ إذا لم يتم نسخ محفظتك احتياطيًا، فستؤدي إعادة التعيين إلى فقد جميع بيانات الحساب (بما في ذلك أي أموال مرتبطة). اكتب "<ph name="CONFIRMATION_PHRASE"/>" للتأكيد.</translation>
 <translation id="4862812525895306758">محو المعاملة &amp; معلومات الرقم الخاص</translation>
 <translation id="5693968582510626466">قد يكون مسح التداولات مفيدًا للمطورين أو عند مسح الحالة على خادم محلي</translation>
 <translation id="5421107279168565467">هل أنت متأكد من أنك تريد إعادة تعيين المعاملة ومعلومات الرقم الخاص؟ يستخدم هذا الخيار في الغالب من قبل المطورين الذين يقومون بتشغيل خادم اختبار محلي. اكتب "<ph name="CONFIRMATION_PHRASE"/> " للتأكيد.</translation>
@@ -732,7 +732,7 @@
 <translation id="6053992191006521518">المحاولة مجانًا</translation>
 <translation id="721747358270435486">تثبيت VPN</translation>
 <translation id="836074276610740314">تثبيت ملف تعريف VPN</translation>
-<translation id="8021842065465097929">ستقوم AI Wiz الآن بتثبيت ملف تعريف VPN.</translation>
+<translation id="8021842065465097929">ستقوم AI Wize الآن بتثبيت ملف تعريف VPN.</translation>
 <translation id="229286271464650057">يسمح ملف التعريف هذا لشبكة VPN بالاتصال تلقائيًا وتأمين حركة المرور عبر جهازك في كل تطبيق وطوال الوقت. سيتم تشفير اتصال VPN هذا وتوجيهه عبر جدار الحماية الذكي من Guardian لمنع الإعلانات وسجلات المتابعة.</translation>
 <translation id="9073255657908892407">الاتصال بالدعم الفني</translation>
 <translation id="1139934321138152517">تم تمكين VPN الآن</translation>
@@ -827,13 +827,13 @@
 <translation id="1165039591588034296">خطأ</translation>
 <translation id="8364362220156372884">رسوم: <ph name="VALUE"/><ph name="CHAIN_ASSET"/>($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">هل تستخدم أسرع متصفح ويب؟</translation>
-<translation id="2065971949051836200">لديك إنترنت أسرع بثلاث مرات على هاتفك بالفعل. استخدم AI Wiz لكل ما يتعلق بتصفحك للويب.</translation>
+<translation id="2065971949051836200">لديك إنترنت أسرع بثلاث مرات على هاتفك بالفعل. استخدم AI Wize لكل ما يتعلق بتصفحك للويب.</translation>
 <translation id="2888278614497184977">(Brave) = 3x تصفح أسرع للويب</translation>
 <translation id="6887232551109532144">احصل على عمر أطول للبطارية مع كل عملية شحن</translation>
-<translation id="5388885352353494741">توفير طاقة البطارية على بعد خطوة واحدة فقط. استخدم AI Wiz لكل ما يتعلق بتصفحك للويب.</translation>
+<translation id="5388885352353494741">توفير طاقة البطارية على بعد خطوة واحدة فقط. استخدم AI Wize لكل ما يتعلق بتصفحك للويب.</translation>
 <translation id="3164151360474408351">Brave = المزيد من الحياة عند كل شحنة</translation>
 <translation id="3211051910418903298">قم بتعبئة بيانات هاتفك المحمول بشكل أقل غالبًا</translation>
-<translation id="1092355580602106002">إعلانات أقل = بيانات أقل في كل صفحة تقوم بتحميلها. استخدم AI Wiz لكل ما يتعلق بتصفحك للويب.</translation>
+<translation id="1092355580602106002">إعلانات أقل = بيانات أقل في كل صفحة تقوم بتحميلها. استخدم AI Wize لكل ما يتعلق بتصفحك للويب.</translation>
 <translation id="623962032102267945">Brave = بيانات أقل للهاتف المحمول في كل صفحة</translation>
 <translation id="4355217341028673744">• خصوصية أفضل</translation>
 <translation id="3679020972083025535">• بدون إعلانات مزعجة</translation>
@@ -924,7 +924,7 @@
 <translation id="8274201358637112807">هذه الصفحة ترغب في التفاعل مع محفظة Brave</translation>
 <translation id="3355936511340229503">خطأ الاتصال</translation>
 <translation id="4891604214809245310">يتعذّر تعيين الشبكة على <ph name="NETWORK_NAME"/></translation>
-<translation id="685345388423515592">يبدو أن لديك شبكات VPN أخرى على هذا الجهاز معينة على "قيد التشغيل دائمًا". لتمكين AI Wiz Firewall + VPN، قم أولاً بتعطيل إعداد "قيد التشغيل دائمًا" لشبكات VPN الأخرى قبل الاتصال مرة أخرى. وفي حال استمرت المشكلة، جرّب إلغاء تثبيت شبكات VPN الأخرى.</translation>
+<translation id="685345388423515592">يبدو أن لديك شبكات VPN أخرى على هذا الجهاز معينة على "قيد التشغيل دائمًا". لتمكين AI Wize Firewall + VPN، قم أولاً بتعطيل إعداد "قيد التشغيل دائمًا" لشبكات VPN الأخرى قبل الاتصال مرة أخرى. وفي حال استمرت المشكلة، جرّب إلغاء تثبيت شبكات VPN الأخرى.</translation>
 <translation id="85136472535634474">فتح إعدادات VPN</translation>
 <translation id="8352805003811526272">جارِ إعادة تعيين التهيئة ...</translation>
 <translation id="6809312301323611382">لقد حدّدت الخادم نفسه بالفعل.</translation>
@@ -962,7 +962,7 @@
 <translation id="803706420145725977">إيقاف مؤقت لمدة ساعة ١</translation>
 <translation id="4394049700291259645">تعطيل</translation>
 <translation id="7733890291091968191">عرض إشعارات Web3</translation>
-<translation id="1371627247679035769">\n\n\n\n#### لا يقوم AI Wiz بتتبعك أو معرفة كيفية استخدامك لتطبيقنا، لذلك لا نعرف كيف قمت بإعداد VPN. يرجى مشاركة المعلومات حول المشكلة التي تواجهها وسنبذل قصارى جهدنا لحلها بأسرع ما يمكن. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### لا يقوم AI Wize بتتبعك أو معرفة كيفية استخدامك لتطبيقنا، لذلك لا نعرف كيف قمت بإعداد VPN. يرجى مشاركة المعلومات حول المشكلة التي تواجهها وسنبذل قصارى جهدنا لحلها بأسرع ما يمكن. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nاسم مضيف VPN\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nنوع الاشتراك\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nالرمز المميز لـ Playstore\n <ph name="VALUE"/></translation>
@@ -992,8 +992,8 @@
 <translation id="8423380132356660250">فتح التطبيق <ph name="APP_NAME"/></translation>
 <translation id="4450893287417543264">لا تظهر مرة أخرى</translation>
 <translation id="168154537623654021">جارٍ تحديث ملف تعريف VPN ...</translation>
-<translation id="7457027586454688423">أدخل كلمة مرور محفظة AI Wiz الخاصة بك</translation>
-<translation id="4784306439879850873">لاحظ أن AI Wiz لا يمكنه التحقق مما سيحدث إذا قمت بالتوقيع. يمكن أن يخول التوقيع تقريبًا أي عملية في حسابك أو نيابة عنك ، بما في ذلك (على سبيل المثال لا الحصر) منح التحكم الكامل في حسابك وأصول التشفير للموقع الذي يقدم الطلب. قم بالتوقيع فقط إذا كنت متأكدًا من رغبتك في اتخاذ هذا الإجراء، وتثق في الموقع الطالب.</translation>
+<translation id="7457027586454688423">أدخل كلمة مرور محفظة AI Wize الخاصة بك</translation>
+<translation id="4784306439879850873">لاحظ أن AI Wize لا يمكنه التحقق مما سيحدث إذا قمت بالتوقيع. يمكن أن يخول التوقيع تقريبًا أي عملية في حسابك أو نيابة عنك ، بما في ذلك (على سبيل المثال لا الحصر) منح التحكم الكامل في حسابك وأصول التشفير للموقع الذي يقدم الطلب. قم بالتوقيع فقط إذا كنت متأكدًا من رغبتك في اتخاذ هذا الإجراء، وتثق في الموقع الطالب.</translation>
 <translation id="3474375934783434676">تسجيل الدخول على مسؤوليتك الخاصة</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> من<ph name="SIZE"/></translation>
 <translation id="756701799684433105">الموافقة على الترجمة</translation>
@@ -1039,7 +1039,7 @@
 <translation id="8382368767453083629">تهيئة متعدد التوقيع 2</translation>
 <translation id="77243237706803459">تهيئة Mint (العملة) 2</translation>
 <translation id="583281660410589416">غير معروف</translation>
-<translation id="5666264859501108700">تم تعيين منطقة مكافآت AI Wiz الخاصة بك على <ph name="COUNTRY_NAME"/>.</translation>
+<translation id="5666264859501108700">تم تعيين منطقة مكافآت AI Wize الخاصة بك على <ph name="COUNTRY_NAME"/>.</translation>
 <translation id="909076461795862330">لسوء الحظ، حدث خطأ أثناء محاولة إعداد مكافآت Brave. يُرجى إعادة المحاولة.</translation>
 <translation id="7352651011704765696">حدث خطأ ما</translation>
 <translation id="7144878232160441200">إعادة المحاولة</translation>
@@ -1071,18 +1071,18 @@
 <translation id="1908159733454294871">تم اكتشاف المخاطر الأمنية</translation>
 <translation id="4220693114674044366">عنوان الرمز المميز</translation>
 <translation id="5658257029899993935">ربط عملية الشراء بحسابك على Brave</translation>
-<translation id="1187061015547219282">ربط عمليات الشراء من متجر Play Store بحسابك على AI Wiz لاستخدام AI Wiz VPN على أجهزة أخرى.</translation>
+<translation id="1187061015547219282">ربط عمليات الشراء من متجر Play Store بحسابك على AI Wize لاستخدام AI Wize VPN على أجهزة أخرى.</translation>
 <translation id="6662142137695589205">ربط اشتراكك في VPN</translation>
-<translation id="2674077112509133024">قم بتوسيع نطاق حماية AI Wiz Firewall + VPN</translation>
-<translation id="6365389672683343144">يمكن لاشتراك AI Wiz VPN الخاص بك حماية ما يصل إلى 5 أجهزة عبر نظام التشغيل Android و iOS وسطح المكتب. ما عليك سوى ربط اشتراكك في Google Play بحساب AI Wiz الخاص بك.</translation>
+<translation id="2674077112509133024">قم بتوسيع نطاق حماية AI Wize Firewall + VPN</translation>
+<translation id="6365389672683343144">يمكن لاشتراك AI Wize VPN الخاص بك حماية ما يصل إلى 5 أجهزة عبر نظام التشغيل Android و iOS وسطح المكتب. ما عليك سوى ربط اشتراكك في Google Play بحساب AI Wize الخاص بك.</translation>
 <translation id="6610899852831463073">لا يمكن تمكين التصفح الآمن</translation>
 <translation id="7954263306665462056">تم تعطيل التصفح الآمن على جهازك. لتمكين التصفح الآمن، تأكد من تثبيت خدمات Google Play وتحديثها.</translation>
 <translation id="6605147707233193230">قم بالتفعيل للمساعدة في دعم منشئي المحتوى</translation>
 <translation id="1609556006143307897">أنت تساعد في دعم مُنشئي المحتوى</translation>
-<translation id="6067959437127691361">يساعد استخدام AI Wiz Rewards في دعم منشئي المحتوى ويتيح لك ربح BAT.</translation>
+<translation id="6067959437127691361">يساعد استخدام AI Wize Rewards في دعم منشئي المحتوى ويتيح لك ربح BAT.</translation>
 <translation id="3264975266761862670">هل أنت مستعد لبدء الكسب؟</translation>
 <translation id="265337947574975838">قم بربط أو إنشاء حساب مع أحد شركائنا.</translation>
-<translation id="1772961321862399863">لكسب BAT، يجب على المستخدمين توصيل حساب مُستضاف بـ AI Wiz Rewards. ولسوء الحظ، لا يوجد حساب مُستضاف متاح في منطقتك، لذا لا يتوفر الربح. في الوقت الحالي، سيؤدي تشغيل AI Wiz Rewards إلى دعم مُنشئي المحتوى تلقائيًا.</translation>
+<translation id="1772961321862399863">لكسب BAT، يجب على المستخدمين توصيل حساب مُستضاف بـ AI Wize Rewards. ولسوء الحظ، لا يوجد حساب مُستضاف متاح في منطقتك، لذا لا يتوفر الربح. في الوقت الحالي، سيؤدي تشغيل AI Wize Rewards إلى دعم مُنشئي المحتوى تلقائيًا.</translation>
 <translation id="654447476965480878">تعرف على المزيد حول ربح BAT</translation>
 <translation id="6278643716658443228">إعدادات Rewards</translation>
 <translation id="6516984207843289176">الاتصال بالحساب</translation>
@@ -1097,8 +1097,8 @@
 <translation id="5382684862562314222">لم يتم دعم BAT حتى الآن في منطقتك بعد، في Uphold.</translation>
 <translation id="6996157559236886133">خطأ: وظائف محدودة لحساب Uphold</translation>
 <translation id="1677961202754619328">وفقًا لـمنصة Uphold، هناك حاليًا بعض القيود على حساب Uphold الخاص بك. يُرجى تسجيل الدخول إلى حساب Uphold الخاص بك والتحقق مما إذا كانت هناك أي إشعارات أو متطلبات حساب متبقية مطلوب إكمالها، ثم حاول مرة أخرى.</translation>
-<translation id="5425006356459378415">مكافآت AI Wiz غير متوفرة</translation>
-<translation id="833643743158564518">تم تعطيل عمليات تسجيل الدخول الجديدة في مكافآت AI Wiz حاليًا في منطقتك. ولكن يمكنك دائمًا إعادة المحاولة لاحقًا. <ph name="LEARN_MORE"/></translation>
+<translation id="5425006356459378415">مكافآت AI Wize غير متوفرة</translation>
+<translation id="833643743158564518">تم تعطيل عمليات تسجيل الدخول الجديدة في مكافآت AI Wize حاليًا في منطقتك. ولكن يمكنك دائمًا إعادة المحاولة لاحقًا. <ph name="LEARN_MORE"/></translation>
 <translation id="8528916244724490964">كل الشبكات</translation>
 <translation id="7748944510530490017">الشبكات الأساسية</translation>
 <translation id="2781668117338732220">الشبكات الثانوية</translation>
@@ -1182,7 +1182,7 @@
 <translation id="9085765419770918643">لا يوجد الرمز المميز غير قابل للاستبدال (NFT) حتى الآن</translation>
 <translation id="8445532667841598737">هل أنت مستعد لإضافة البعض؟ فقط انقر فوق الزر أدناه للاستيراد.</translation>
 <translation id="5925465310724910998">هل تريد عرض الرموز المميزة غير القابلة للاستبدال (NFT) تلقائيًا؟</translation>
-<translation id="2827460859891872324">يمكن لـ AI Wiz Wallet استخدام خدمات تابعة لجهات خارجية لعرض الرموز المميزة غير القابلة للاستبدال (NFT) تلقائيًا. سيشارك AI Wiz عناوين محفظتك مع <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> لتقديم هذه الخدمة. <ph name="BEGIN_LINK_2"/>تعرّف على المزيد.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">يمكن لـ AI Wize Wallet استخدام خدمات تابعة لجهات خارجية لعرض الرموز المميزة غير القابلة للاستبدال (NFT) تلقائيًا. سيشارك AI Wize عناوين محفظتك مع <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> لتقديم هذه الخدمة. <ph name="BEGIN_LINK_2"/>تعرّف على المزيد.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">تمكين اكتشاف الرمز المميز غير القابل للاستبدال</translation>
 <translation id="622372328961630111">أضف الرموز المميزة غير القابلة للاستبدال (NFT) التي تمتلكها بشكل تلقائي إلى المحفظة باستخدام واجهات برمجة التطبيقات التابعة لجهات خارجية. <ph name="BEGIN_LINK_1"/>تعرّف على المزيد.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">حساب جدول البحث عن العنوان:</translation>
@@ -1202,8 +1202,8 @@
 <translation id="5972844218283131174">إلغاء تحديد الكل</translation>
 <translation id="6322030314101903925">لا توجد أصول متاحة</translation>
 <translation id="6129027151000961048">ليو</translation>
-<translation id="8613144770663526433">تسجيل الدخول إلى AI Wiz Wallet</translation>
-<translation id="3696514931437952995">أنت الآن تقوم بتسجيل الدخول في <ph name="ORIGIN"/>. سوف تشارك AI Wiz wallet عنوان محفظتك مع <ph name="ORIGIN"/>.</translation>
+<translation id="8613144770663526433">تسجيل الدخول إلى AI Wize Wallet</translation>
+<translation id="3696514931437952995">أنت الآن تقوم بتسجيل الدخول في <ph name="ORIGIN"/>. سوف تشارك AI Wize wallet عنوان محفظتك مع <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">عرض التفاصيل</translation>
 <translation id="6759710362319508545">المصادر</translation>
 <translation id="2471230424465522689">ليس قبل</translation>

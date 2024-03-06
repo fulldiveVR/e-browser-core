@@ -173,7 +173,7 @@ IN_PROC_BROWSER_TEST_F(RewardsContributionBrowserTest,
   test_util::WaitForElementToContain(
       context_helper_->OpenRewardsPopup().get(),
       "[data-test-id=publishers-count]",
-      "This month, you've visited 1 creator supported by AI Wiz Rewards");
+      "This month, you've visited 1 creator supported by AI Wize Rewards");
 }
 
 IN_PROC_BROWSER_TEST_F(RewardsContributionBrowserTest,
@@ -202,7 +202,7 @@ IN_PROC_BROWSER_TEST_F(RewardsContributionBrowserTest,
   test_util::WaitForElementToContain(
       context_helper_->OpenRewardsPopup().get(),
       "[data-test-id=publishers-count]",
-      "This month, you've visited 1 creator supported by AI Wiz Rewards");
+      "This month, you've visited 1 creator supported by AI Wize Rewards");
 }
 
 IN_PROC_BROWSER_TEST_F(RewardsContributionBrowserTest,

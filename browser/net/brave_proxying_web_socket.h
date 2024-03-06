@@ -35,7 +35,7 @@ class BrowserContext;
 class RenderFrameHost;
 }
 
-// Ensures that all web socket requests go through AI Wiz network request
+// Ensures that all web socket requests go through AI Wize network request
 // handling framework. Cargoculted from |WebRequestProxyingWebSocket|.
 class BraveProxyingWebSocket
     : public network::mojom::WebSocketHandshakeClient,

@@ -68,7 +68,7 @@
 <translation id="6549021453810473782">Üzletadatok megtekintése</translation>
 <translation id="6562820390860419811">Lap mozgatása balra</translation>
 <translation id="6615455863669487791">Megjelenítés</translation>
-<translation id="6398241160085205003">A bezárt lapjait a AI Wiz főmenüjének Nemrég megnyitott lapok szakaszában találja.</translation>
+<translation id="6398241160085205003">A bezárt lapjait a AI Wize főmenüjének Nemrég megnyitott lapok szakaszában találja.</translation>
 <translation id="6840760312327750441">Lapok csoportosításához tartsa nyomva az egyik lapot, majd húzza rá a másikra.</translation>
 <translation id="6856809498882026482">Több lapot kiválasztó mód elrejtése</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Lap megosztása}other{Lapok megosztása}}</translation>
@@ -98,8 +98,8 @@
 <translation id="9169594135889675189">Új lap hozzáadása a csoporthoz</translation>
 <translation id="959682366969460160">Könnyebb rendszerezés</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-=1 {A bezárt lapokat a AI Wiz főmenü Legutóbbi lapok szakaszában találja. A Privát lap nem lesz elérhető.}
-other {A bezárt lapokat a AI Wiz főmenü Legutóbbi lapok szakaszában találja. A(z) # Privát lap nem lesz elérhető.}}</translation>
+=1 {A bezárt lapokat a AI Wize főmenü Legutóbbi lapok szakaszában találja. A Privát lap nem lesz elérhető.}
+other {A bezárt lapokat a AI Wize főmenü Legutóbbi lapok szakaszában találja. A(z) # Privát lap nem lesz elérhető.}}</translation>
 <translation id="3228718275011575753">Összes privát lap bezárása?</translation>
 <translation id="6687920250729800417">A privát lapokon végzett tevékenysége törölve lesz az eszközről</translation>
 </translationbundle>

@@ -95,10 +95,10 @@ void WebcompatReportUploader::CreateAndStartURLLoader(
           sender: "Brave Web Compatibility Reporting"
           description:
             "A user-initiated report of a website that appears broken as a"
-            "result of having AI Wiz Shields enabled."
+            "result of having AI Wize Shields enabled."
           trigger:
             "Though the 'Report a Broken Site' option of the help menu or"
-            "the AI Wiz Shields panel."
+            "the AI Wize Shields panel."
           data: "Broken URL, IP address, Shields settings, language settings,"
                 "Brave VPN connection status; user provided additional details"
                 "and contact information."

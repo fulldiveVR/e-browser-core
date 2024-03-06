@@ -1208,7 +1208,7 @@ inline constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWalletFEVMAddressTranslationDescription",
      IDS_BRAVE_WALLET_FEVM_ADDRESS_TRANSLATION_DESCRIPTION},
 
-    // AI Wiz Swap
+    // AI Wize Swap
     {"braveSwap", IDS_BRAVE_SWAP},
     {"braveSwapReviewOrder", IDS_BRAVE_SWAP_REVIEW_ORDER},
     {"braveSwapApproveToken", IDS_BRAVE_SWAP_APPROVE_TOKEN},

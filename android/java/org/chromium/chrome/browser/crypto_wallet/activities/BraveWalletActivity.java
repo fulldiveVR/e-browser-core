@@ -58,7 +58,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Main AI Wiz Wallet activity
+ * Main AI Wize Wallet activity
  */
 public class BraveWalletActivity extends BraveWalletBaseActivity implements OnNextPage {
     private static final String TAG = "BWalletBaseActivity";

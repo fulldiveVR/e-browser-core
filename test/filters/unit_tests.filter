@@ -366,10 +366,10 @@
 -MediaRouterUIServiceFactoryUnitTest.*
 -MediaRouterViewsUITest.*
 
-# This test is disabled because the AI Wiz NTP doesn't support this feature
+# This test is disabled because the AI Wize NTP doesn't support this feature
 -NewTabPageModulesTest.HasModulesEnabled_SignedInAccount
 
-# This test is disabled because AI Wiz overrides how underlines are drawn for tab
+# This test is disabled because AI Wize overrides how underlines are drawn for tab
 # groups
 -All/TabGroupViewsTest.UnderlineBoundsWhenTabsAreNotVisible/1
 

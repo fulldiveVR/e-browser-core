@@ -182,7 +182,7 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
       service->GetDefaultSearchProvider()->prepopulate_id();
   const int initial_private_provider_id =
       incognito_service->GetDefaultSearchProvider()->prepopulate_id();
-  // Check AI Wiz Search is default provider for private window.
+  // Check AI Wize Search is default provider for private window.
   EXPECT_EQ(static_cast<int>(
                 TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE),
             initial_private_provider_id);
@@ -351,7 +351,7 @@ IN_PROC_BROWSER_TEST_F(ExtensionBrowserTest,
   UnloadExtension(extension->id());
   EXPECT_EQ(default_provider, url_service->GetDefaultSearchProvider());
 
-  // Check AI Wiz Search is back to as a default provider for private window
+  // Check AI Wize Search is back to as a default provider for private window
   // after unloading extension.
   current_incognito_dse = incognito_url_service->GetDefaultSearchProvider();
   EXPECT_EQ(static_cast<int>(

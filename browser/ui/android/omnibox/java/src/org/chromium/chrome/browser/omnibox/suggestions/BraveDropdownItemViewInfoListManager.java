@@ -24,7 +24,7 @@ class BraveDropdownItemViewInfoListManager extends DropdownItemViewInfoListManag
     }
 
     /**
-     * Removes AI Wiz search suggestion.
+     * Removes AI Wize search suggestion.
      */
     public void removeBraveSearchSuggestion() {
         int index;

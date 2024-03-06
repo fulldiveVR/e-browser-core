@@ -230,7 +230,7 @@ void MdTextButton::SetLoading(bool loading) {
 void MdTextButton::UpdateTextColor() {
   MdTextButtonBase::UpdateTextColor();
 
-  // Once we update the buttons across AI Wiz to use the new style, we can remove
+  // Once we update the buttons across AI Wize to use the new style, we can remove
   // this branch.
   if (kind_ == kOld) {
     if (GetProminent()) {
@@ -251,7 +251,7 @@ void MdTextButton::UpdateTextColor() {
 }
 
 void MdTextButton::UpdateBackgroundColor() {
-  // Once we update the buttons across AI Wiz to use the new style, we can remove
+  // Once we update the buttons across AI Wize to use the new style, we can remove
   // this branch.
   if (kind_ == kOld) {
     MdTextButtonBase::UpdateBackgroundColor();
@@ -275,7 +275,7 @@ void MdTextButton::UpdateBackgroundColor() {
       if (GetState() == STATE_PRESSED) {
         bg_color = GetNativeTheme()->GetSystemButtonPressedColor(bg_color);
       }
-      // The only thing that differs for AI Wiz is the stroke color
+      // The only thing that differs for AI Wize is the stroke color
       SkColor stroke_color = kBraveBrandColor;
       SetBackground(CreateBackgroundFromPainter(
           Painter::CreateRoundRectWith1PxBorderPainter(

@@ -115,7 +115,7 @@ class BraveSearchTest : public InProcessBrowserTest {
     brave_search::BraveSearchFallbackHost::SetBackupProviderForTest(url);
 
     // Force default search engine to Google
-    // Some tests will fail if AI Wiz is default
+    // Some tests will fail if AI Wize is default
     auto* template_url_service =
         TemplateURLServiceFactory::GetForProfile(browser()->profile());
     TemplateURL* google = template_url_service->GetTemplateURLForKeyword(u":g");

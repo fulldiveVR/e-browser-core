@@ -372,7 +372,7 @@ bool ShouldDoReduceLanguage(HostContentSettingsMap* map,
   if (!IsReduceLanguageEnabledForProfile(pref_service))
     return false;
 
-  // Don't reduce language if AI Wiz Shields is down (this also handles cases
+  // Don't reduce language if AI Wize Shields is down (this also handles cases
   // where the URL is not HTTP(S))
   if (!brave_shields::GetBraveShieldsEnabled(map, url))
     return false;
@@ -391,7 +391,7 @@ DomainBlockingType GetDomainBlockingType(HostContentSettingsMap* map,
   if (!base::FeatureList::IsEnabled(brave_shields::features::kBraveDomainBlock))
     return DomainBlockingType::kNone;
 
-  // Don't block if AI Wiz Shields is down (this also handles cases where
+  // Don't block if AI Wize Shields is down (this also handles cases where
   // the URL is not HTTP(S))
   if (!brave_shields::GetBraveShieldsEnabled(map, url))
     return DomainBlockingType::kNone;

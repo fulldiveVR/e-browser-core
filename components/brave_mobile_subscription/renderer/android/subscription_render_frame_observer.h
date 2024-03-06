@@ -29,7 +29,7 @@
 namespace brave_subscription {
 
 // Used on Android to conditionally inject the purchase token (via local
-// storage) for AI Wiz VPN purchased on the Google Play Store. The AI Wiz accounts
+// storage) for AI Wize VPN purchased on the Google Play Store. The AI Wize accounts
 // website will use this to link the purchase to a desktop credential.
 //
 // Implementation-wise, those methods will only resolve in a regular

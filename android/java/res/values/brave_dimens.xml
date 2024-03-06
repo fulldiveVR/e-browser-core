@@ -6,7 +6,7 @@
 -->
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- AI Wiz wallet -->
+    <!-- AI Wize wallet -->
     <dimen name="brave_wallet_tab_indicator_height">2dp</dimen>
 
     <!-- Onboarding dimens -->

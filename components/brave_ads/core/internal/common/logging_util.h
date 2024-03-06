@@ -20,7 +20,7 @@ namespace brave_ads {
 //
 //   --enable-logging=stderr --v=1 --vmodule=foo=2,bar=3
 //
-// This runs AI Wiz Ads with the global VLOG level set to "print everything at
+// This runs AI Wize Ads with the global VLOG level set to "print everything at
 // level 1 and lower", but prints levels up to 2 in foo.cc and levels up to 3 in
 // bar.cc
 //
@@ -28,7 +28,7 @@ namespace brave_ads {
 // whole pathname and not just the module. e.g., "/foo/bar/=2" would change the
 // logging level for all code in source files under a "foo/bar" directory
 //
-// AI Wiz Ads verbosity levels:
+// AI Wize Ads verbosity levels:
 //
 //   0 Error
 //   1 Info

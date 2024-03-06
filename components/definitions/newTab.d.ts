@@ -11,7 +11,7 @@ declare namespace NewTab {
     random?: boolean
   }
 
-  // Backgrounds based on image. Custom image background or AI Wiz background.
+  // Backgrounds based on image. Custom image background or AI Wize background.
   export type ImageBackground = {
     type: 'image'
     wallpaperImageUrl: string

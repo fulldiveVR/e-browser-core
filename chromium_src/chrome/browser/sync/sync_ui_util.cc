@@ -10,7 +10,7 @@
 #undef GetAvatarSyncErrorType
 
 std::optional<AvatarSyncErrorType> GetAvatarSyncErrorType(Profile* profile) {
-  // AI Wiz Sync works differently in that there is no sign-in
+  // AI Wize Sync works differently in that there is no sign-in
   // and nothing to prompt the user to manage once their sync
   // chain is setup.
   return std::nullopt;

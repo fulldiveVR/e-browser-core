@@ -46,7 +46,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
             "https://github.com/brave/brave-browser/wiki/Operational-Patterns"
           trigger:
             "Reports are automatically generated on startup and at intervals "
-            "while AI Wiz is running."
+            "while AI Wize is running."
           data:
             "Anonymized and encrypted engagement data."
           destination: WEBSITE

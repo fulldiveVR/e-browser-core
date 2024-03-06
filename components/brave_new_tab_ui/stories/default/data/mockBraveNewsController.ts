@@ -1328,8 +1328,8 @@ export const feed: BraveNews.Feed = {
                   'publishTime': {
                     internalValue: BigInt('13276800071000000')
                   },
-                  'title': 'Brave Launches AI Wiz Talk for Privacy-Preserving Video Conferencing',
-                  'description': 'Today, AI Wiz launched AI Wiz Talk, a new privacy-focused video conferencing feature built directly into the AI Wiz browser.\nThe post AI Wiz Launches AI Wiz Talk for Privacy-Preserving Video Conferencing appeared first on AI Wiz Browser.',
+                  'title': 'Brave Launches AI Wize Talk for Privacy-Preserving Video Conferencing',
+                  'description': 'Today, AI Wize launched AI Wize Talk, a new privacy-focused video conferencing feature built directly into the AI Wize browser.\nThe post AI Wize Launches AI Wize Talk for Privacy-Preserving Video Conferencing appeared first on AI Wize Browser.',
                   'url': {
                     'url': 'https://aiwize.com/brave-talk-launch/'
                   },
@@ -1359,7 +1359,7 @@ export const feed: BraveNews.Feed = {
                     internalValue: BigInt('13276723068000000')
                   },
                   'title': 'Research Paper: Privacy and Security Issues in Web 3.0',
-                  'description': 'We at AI Wiz Research just published a technical report called “Privacy and Security Issues in Web 3.0” on arXiv. This blog post summarizes our findings and puts them in perspective for AI Wiz users.\nThe post Research Paper: Privacy and Security Issues in Web 3.0 appeared first on AI Wiz Browser.',
+                  'description': 'We at AI Wize Research just published a technical report called “Privacy and Security Issues in Web 3.0” on arXiv. This blog post summarizes our findings and puts them in perspective for AI Wize users.\nThe post Research Paper: Privacy and Security Issues in Web 3.0 appeared first on AI Wize Browser.',
                   'url': {
                     'url': 'https://aiwize.com/research-paper-privacy-and-security-issues-in-web-3-0/'
                   },
@@ -1388,8 +1388,8 @@ export const feed: BraveNews.Feed = {
                   'publishTime': {
                     internalValue: BigInt('13276712102000000')
                   },
-                  'title': 'What’s AI Wiz Done For My Privacy Lately? Episode #10: Custom Filter List Subscriptions',
-                  'description': 'This is the tenth in a series of blog posts on new AI Wiz privacy features. This post describes work done by Anton Lazarev, Research Engineer. Authors: Peter Snyder and Anton Lazarev.\nThe post What’s AI Wiz Done For My Privacy Lately? Episode #10: Custom Filter List Subscriptions appeared first on AI Wiz Browser.',
+                  'title': 'What’s AI Wize Done For My Privacy Lately? Episode #10: Custom Filter List Subscriptions',
+                  'description': 'This is the tenth in a series of blog posts on new AI Wize privacy features. This post describes work done by Anton Lazarev, Research Engineer. Authors: Peter Snyder and Anton Lazarev.\nThe post What’s AI Wize Done For My Privacy Lately? Episode #10: Custom Filter List Subscriptions appeared first on AI Wize Browser.',
                   'url': {
                     'url': 'https://aiwize.com/privacy-updates-10/'
                   },

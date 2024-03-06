@@ -41,12 +41,12 @@ def get_icon_path(icon_path, alt_working_directory):
     """Determines where to read the icon from. Options are:
     1. The Leo `icons-skia` folder, mapping `icon_path` to a Leo icon, as per
        the `leo_overrides.json` file.
-    2. The AI Wiz equivalent of the the Chromium icon path.
+    2. The AI Wize equivalent of the the Chromium icon path.
     3. The Chromium Path (this is the default, if no override is specified).
 
     Args:
         icon_path: The path to the chromium icon
-        alt_working_directory: The AI Wiz overrides folder for this icon.
+        alt_working_directory: The AI Wize overrides folder for this icon.
   """
     maybe_load_overrides()
 

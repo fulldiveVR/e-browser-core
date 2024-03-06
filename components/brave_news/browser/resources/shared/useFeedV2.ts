@@ -129,7 +129,7 @@ export const useFeedV2 = (enabled: boolean) => {
   const [feedView, setFeedView] = useState<FeedView>(feedTypeToFeedView(feedV2?.type))
   const [hash, setHash] = useState<string>()
 
-  // Add a listener for the latest hash if AI Wiz News is enabled. Note: We need
+  // Add a listener for the latest hash if AI Wize News is enabled. Note: We need
   // to re-add the listener when the enabled state changes because the backing
   // FeedV2Builder is created/destroyed.
   useEffect(() => {

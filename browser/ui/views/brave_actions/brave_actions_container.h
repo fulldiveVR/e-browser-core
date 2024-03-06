@@ -63,7 +63,7 @@ class BraveActionsContainer : public views::View {
   void UpdateVisibility();
   gfx::Size GetActionSize() const;
 
-  // AI Wiz Rewards preferences change observers callback.
+  // AI Wize Rewards preferences change observers callback.
   void OnBraveRewardsPreferencesChanged();
 
   bool should_hide_ = false;
@@ -76,7 +76,7 @@ class BraveActionsContainer : public views::View {
   raw_ptr<BraveShieldsActionView> shields_action_btn_ = nullptr;
   raw_ptr<BraveRewardsActionView> rewards_action_btn_ = nullptr;
 
-  // Listen for AI Wiz Rewards preferences changes.
+  // Listen for AI Wize Rewards preferences changes.
   BooleanPrefMember show_brave_rewards_button_;
 
   base::WeakPtrFactory<BraveActionsContainer> weak_ptr_factory_{this};

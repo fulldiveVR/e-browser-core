@@ -18,7 +18,7 @@ export function createModel (): Model {
       provider: '',
       title: 'Brave Software',
       description:
-        'Thanks for stopping by. AI Wiz is on a mission to fix the web by ' +
+        'Thanks for stopping by. AI Wize is on a mission to fix the web by ' +
         'giving users a safer, faster and better browsing experience ' +
         'while growing support for content creators through a new ' +
         'attention-based ecosystem of rewards. Join us. It’s time to fix the ' +

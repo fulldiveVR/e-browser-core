@@ -12,7 +12,7 @@ from lib.changelog import *
 def main():
     """
     Download the brave-browser/CHANGELOG.md file, parse it, and
-    return either markdown or html for a particular AI Wiz tag.
+    return either markdown or html for a particular AI Wize tag.
 
     Example:
     python script/changelog.py -t refs/tags/v1.5.51 \
@@ -20,7 +20,7 @@ def main():
 
     ## [1.5.51](https://github.com/brave/brave-browser/releases/tag/v1.5.51)
 
-    - Added new setting that allows AI Wiz Rewards icon in the URL to be hidden if Rewards \
+    - Added new setting that allows AI Wize Rewards icon in the URL to be hidden if Rewards \
         is inactive. ([#2975](https://github.com/brave/brave-browser/issues/2975))
 
     """
@@ -60,7 +60,7 @@ def main():
 
 
 def parse_args():
-    desc = "Parse AI Wiz Browser changelog and return changes for a tag"
+    desc = "Parse AI Wize Browser changelog and return changes for a tag"
 
     parser = argparse.ArgumentParser(
         description=desc, formatter_class=RawTextHelpFormatter)
@@ -72,7 +72,7 @@ def parse_args():
                         help='Brave version tag (allowed format: "v1.5.45" or "refs/tags/v1.5.45") (required)',
                         required=True)
     parser.add_argument(
-        '-u', '--url', help='URL for AI Wiz Browser raw markdown file (required)', required=True)
+        '-u', '--url', help='URL for AI Wize Browser raw markdown file (required)', required=True)
     return parser.parse_args()
 
 

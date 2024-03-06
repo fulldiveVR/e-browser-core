@@ -185,7 +185,7 @@ def CheckPylint(input_api, output_api):
 
 
 def CheckLicense(input_api, output_api):
-    """Verifies the AI Wiz license header."""
+    """Verifies the AI Wize license header."""
 
     files_to_check = input_api.DEFAULT_FILES_TO_CHECK + (r'.+\.gni?$', )
     files_to_skip = input_api.DEFAULT_FILES_TO_SKIP + (
@@ -203,7 +203,7 @@ def CheckLicense(input_api, output_api):
     # that's why we cannot force this regexp to have a precise year, also
     # uplifts may fail during year change period, so the year check is relaxed.
     new_file_license_re = input_api.re.compile((
-        r'.*? Copyright \(c\) %(year)s The AI Wiz Authors\. All rights reserved\.\n'
+        r'.*? Copyright \(c\) %(year)s The AI Wize Authors\. All rights reserved\.\n'
         r'.*? This Source Code Form is subject to the terms of the Mozilla Public\n'
         r'.*? License, v\. 2\.0\. If a copy of the MPL was not distributed with this file,\n'
         r'.*? You can obtain one at https://mozilla.org/MPL/2\.0/\.(?: \*/)?\n')
@@ -212,7 +212,7 @@ def CheckLicense(input_api, output_api):
 
     # License regexp to match in EXISTING files, it allows some variance.
     existing_file_license_re = input_api.re.compile((
-        r'.*? Copyright \(c\) %(year)s The AI Wiz Authors\. All rights reserved\.\n'
+        r'.*? Copyright \(c\) %(year)s The AI Wize Authors\. All rights reserved\.\n'
         r'.*? This Source Code Form is subject to the terms of the Mozilla Public\n'
         r'.*? License, v\. 2\.0\. If a copy of the MPL was not distributed with this(\n.*?)? file,\n?'
         r'.*? (y|Y)ou can obtain one at https?://mozilla.org/MPL/2\.0/\.(?: \*/)?\n'

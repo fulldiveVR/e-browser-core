@@ -6,7 +6,7 @@
 package org.chromium.chrome.browser;
 
 /**
- *  AI Wiz configuration.
+ *  AI Wize configuration.
  */
 public class BraveConfig {
   public static final String DEVELOPER_OPTIONS_CODE = BRAVE_ANDROID_DEVELOPER_OPTIONS_CODE;

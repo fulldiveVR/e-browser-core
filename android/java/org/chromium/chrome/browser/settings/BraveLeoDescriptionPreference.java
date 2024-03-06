@@ -17,7 +17,7 @@ import org.chromium.chrome.R;
 import org.chromium.components.browser_ui.settings.ChromeBasePreference;
 
 /**
- * The preference used to reset AI Wiz Leo.
+ * The preference used to reset AI Wize Leo.
  */
 public class BraveLeoDescriptionPreference
         extends ChromeBasePreference implements Preference.OnPreferenceClickListener {

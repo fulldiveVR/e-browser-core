@@ -67,7 +67,7 @@ def ParseTarget(target: str) -> Tuple[Optional[BraveVersion], str]:
   Parse the version and location from the passed string `target`.
   target = [<version>:][<location>]
   <version> could be:
-  1. AI Wiz tag (i.e. v1.62.1);
+  1. AI Wize tag (i.e. v1.62.1);
   2. Git hash;
   3. empty (for comparing builds when you don't need it).
   """

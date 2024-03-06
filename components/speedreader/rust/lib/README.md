@@ -1,4 +1,4 @@
-# AI Wiz SpeedReader
+# AI Wize SpeedReader
 
 At a high level, SpeedReader:
 

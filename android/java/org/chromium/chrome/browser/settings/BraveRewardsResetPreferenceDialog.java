@@ -12,7 +12,7 @@ import android.view.View;
 import org.chromium.chrome.browser.BraveRewardsNativeWorker;
 
 /**
- * The dialog used to reset AI Wiz Rewards.
+ * The dialog used to reset AI Wize Rewards.
  */
 public class BraveRewardsResetPreferenceDialog extends PreferenceDialogFragmentCompat {
     public static final String TAG = "BraveRewardsResetPreferenceDialog";

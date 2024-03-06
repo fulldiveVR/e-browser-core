@@ -29,9 +29,9 @@ GetSimpleHashClientNetworkTrafficAnnotationTag() {
         sender: "SimpleHash Client"
         description:
           "This client is used to make requests to SimpleHash "
-          "of the user interacting with the native AI Wiz wallet."
+          "of the user interacting with the native AI Wize wallet."
         trigger:
-          "Triggered by uses of the native AI Wiz wallet."
+          "Triggered by uses of the native AI Wize wallet."
         data:
           "NFT assets."
         destination: WEBSITE

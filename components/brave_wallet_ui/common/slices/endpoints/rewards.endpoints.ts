@@ -25,7 +25,7 @@ export function braveRewardsApiEndpoints({
         } catch (error) {
           return handleEndpointError(
             endpoint,
-            'Failed to get AI Wiz Rewards information',
+            'Failed to get AI Wize Rewards information',
             error
           )
         }

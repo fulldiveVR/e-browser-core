@@ -180,7 +180,7 @@ export function useZeroEx(params: SwapParams) {
         }
       } catch (e) {
         console.log(
-          `Error getting AI Wiz fee (0x):
+          `Error getting AI Wize fee (0x):
           ${overriddenParams.toToken.symbol}`
         )
       }

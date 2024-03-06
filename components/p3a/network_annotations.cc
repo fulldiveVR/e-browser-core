@@ -22,7 +22,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessRequestAnnotation() {
         "See https://arxiv.org/abs/2109.10074 for more information."
       trigger:
         "Requests are automatically sent at intervals "
-        "while AI Wiz is running."
+        "while AI Wize is running."
       data: "Anonymous usage data."
       destination: WEBSITE
     }
@@ -47,7 +47,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessServerInfoAnnotation() {
         "See https://arxiv.org/abs/2109.10074 for more information."
       trigger:
         "Requests are automatically sent at intervals "
-        "while AI Wiz is running."
+        "while AI Wize is running."
       data: "Request for randomness server info."
       destination: WEBSITE
     }
@@ -74,7 +74,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
               "https://aiwize.com/P3A"
             trigger:
               "Reports are automatically generated on startup and at intervals "
-              "while AI Wiz is running."
+              "while AI Wize is running."
             data:
               "A base64 encoded encrypted payload with anonymized usage data."
               "Encryption is performed using STAR to protect user anonymity."
@@ -99,7 +99,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
             "Randomized-Response-for-Private-Advertising-Analytics"
           trigger:
             "Reports are automatically generated on startup and at intervals "
-            "while AI Wiz is running."
+            "while AI Wize is running."
           data:
             "A base64 encoded encrypted payload with anonymized usage data."
             "Encryption is performed using STAR to protect user anonymity."
@@ -109,7 +109,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
         policy {
           cookies_allowed: NO
           setting:
-            "Users can enable or disable it by enabling or disabling AI Wiz "
+            "Users can enable or disable it by enabling or disabling AI Wize "
             "rewards or ads in aiwize://rewards."
            policy_exception_justification:
              "Not implemented."
@@ -125,7 +125,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
               "https://aiwize.com/P3A"
             trigger:
               "Reports are automatically generated on startup and at intervals "
-              "while AI Wiz is running."
+              "while AI Wize is running."
             data:
               "A json document with anonymized usage data."
             destination: WEBSITE
@@ -148,7 +148,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
             "Randomized-Response-for-Private-Advertising-Analytics"
           trigger:
             "Reports are automatically generated on startup and at intervals "
-            "while AI Wiz is running."
+            "while AI Wize is running."
           data:
             "A json document with anonymized usage data."
           destination: WEBSITE
@@ -156,7 +156,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
         policy {
           cookies_allowed: NO
           setting:
-            "Users can enable or disable it by enabling or disabling AI Wiz "
+            "Users can enable or disable it by enabling or disabling AI Wize "
             "rewards or ads in aiwize://rewards."
            policy_exception_justification:
              "Not implemented."
