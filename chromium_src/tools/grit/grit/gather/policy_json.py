@@ -9,7 +9,7 @@ import override_utils
 @override_utils.override_method(PolicyJson)
 def SetDefines(self, _orig_method, _defines):
     self._config = {
-        'build': 'aiwize',
+        'build': 'brave',
         'app_name': 'AIWize',
         'frame_name': 'AIWize Frame',
         'os_name': 'Google Chrome OS'
