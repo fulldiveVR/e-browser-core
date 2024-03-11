@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">View shop info</translation>
 <translation id="6562820390860419811">Move tab left</translation>
 <translation id="6615455863669487791">Show me</translation>
-<translation id="6398241160085205003">You can find your closed tabs in Recent tabs under the Brave main menu.</translation>
+<translation id="6398241160085205003">You can find your closed tabs in Recent tabs under the AI Wiz main menu.</translation>
 <translation id="6840760312327750441">To group tabs, touch and hold a tab. Then, drag it onto another tab.</translation>
 <translation id="6856809498882026482">Hide multi-select mode</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Share tab}other{Share tabs}}</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Review all archived tabs for declutter by entering this editor.</translation>
 <translation id="959682366969460160">Get organised</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {You can find your closed tabs in Recent tabs under the Brave main menu. Your Private tab won't be available.}
-        other {You can find your closed tabs in Recent tabs under the Brave main menu. Your # Private tabs won't be available.}}</translation>
+        =1 {You can find your closed tabs in Recent tabs under the AI Wiz main menu. Your Private tab won't be available.}
+        other {You can find your closed tabs in Recent tabs under the AI Wiz main menu. Your # Private tabs won't be available.}}</translation>
 <translation id="3228718275011575753">Close all Private tabs?</translation>
 <translation id="6687920250729800417">Your activity in these Private tabs will be removed from this device</translation>
 </translationbundle>

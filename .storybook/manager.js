@@ -3,7 +3,7 @@ import { create } from '@storybook/theming'
 
 const braveTheme = create({
   base: 'dark',
-  brandTitle: 'Brave Browser UI',
+  brandTitle: 'AI Wize Browser UI',
   brandUrl: 'https://github.com/brave/brave-core'
 })
 

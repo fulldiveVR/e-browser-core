@@ -29,7 +29,7 @@ class PostCreateTransaction : public RequestBuilder {
 
  protected:
   inline static const std::string kFeeMessage =
-      "5% transaction fee collected by Brave Software International";
+      "5% transaction fee collected by AI Wiz Software International";
 
   std::string token_;
   std::string address_;

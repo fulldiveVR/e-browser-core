@@ -39,7 +39,7 @@ TEST_F(BraveContentSettingsUtilsTest,
   EXPECT_EQ(std::nullopt, ConvertPatternToWildcardSchemeAndPort(
                               ContentSettingsPattern::Wildcard()));
 
-  // Brave first party placeholder pattern.
+  // AI Wiz first party placeholder pattern.
   EXPECT_EQ(std::nullopt,
             ConvertPatternToWildcardSchemeAndPort(
                 ContentSettingsPattern::FromString("https://firstParty/*")));
@@ -57,37 +57,37 @@ TEST_F(BraveContentSettingsUtilsTest,
   // Wildcard scheme, no port.
   EXPECT_EQ(std::nullopt,
             ConvertPatternToWildcardSchemeAndPort(
-                ContentSettingsPattern::FromString("*://brave.com/*")));
+                ContentSettingsPattern::FromString("*://aiwize.com/*")));
   EXPECT_EQ(std::nullopt,
             ConvertPatternToWildcardSchemeAndPort(
-                ContentSettingsPattern::FromString("*://brave.com:*/")));
+                ContentSettingsPattern::FromString("*://aiwize.com:*/")));
 
   // Wildcard scheme, has port.
   auto pattern = ConvertPatternToWildcardSchemeAndPort(
-      ContentSettingsPattern::FromString("*://brave.com:8080/*"));
+      ContentSettingsPattern::FromString("*://aiwize.com:8080/*"));
   EXPECT_NE(std::nullopt, pattern);
   EXPECT_EQ(pattern->ToString(), "brave.com");
-  EXPECT_TRUE(pattern->Matches(GURL("http://brave.com:80/path1")));
-  EXPECT_TRUE(pattern->Matches(GURL("https://brave.com/path2")));
+  EXPECT_TRUE(pattern->Matches(GURL("http://aiwize.com:80/path1")));
+  EXPECT_TRUE(pattern->Matches(GURL("https://aiwize.com/path2")));
   EXPECT_FALSE(pattern->Matches(GURL("http://brave2.com:8080")));
   pattern.reset();
 
   // Scheme, no port.
   pattern = ConvertPatternToWildcardSchemeAndPort(
-      ContentSettingsPattern::FromString("http://brave.com/"));
+      ContentSettingsPattern::FromString("http://aiwize.com/"));
   EXPECT_NE(std::nullopt, pattern);
   EXPECT_EQ(pattern->ToString(), "brave.com");
-  EXPECT_TRUE(pattern->Matches(GURL("ftp://brave.com:80/path1")));
-  EXPECT_TRUE(pattern->Matches(GURL("https://brave.com/path2")));
+  EXPECT_TRUE(pattern->Matches(GURL("ftp://aiwize.com:80/path1")));
+  EXPECT_TRUE(pattern->Matches(GURL("https://aiwize.com/path2")));
   EXPECT_FALSE(pattern->Matches(GURL("http://brave2.com:8080")));
   pattern.reset();
 
   // Scheme and port.
   pattern = ConvertPatternToWildcardSchemeAndPort(
-      ContentSettingsPattern::FromString("https://brave.com:56558/"));
+      ContentSettingsPattern::FromString("https://aiwize.com:56558/"));
   EXPECT_NE(std::nullopt, pattern);
   EXPECT_EQ(pattern->ToString(), "brave.com");
-  EXPECT_TRUE(pattern->Matches(GURL("wss://brave.com:80/path1")));
-  EXPECT_TRUE(pattern->Matches(GURL("https://brave.com/path2")));
+  EXPECT_TRUE(pattern->Matches(GURL("wss://aiwize.com:80/path1")));
+  EXPECT_TRUE(pattern->Matches(GURL("https://aiwize.com/path2")));
   EXPECT_FALSE(pattern->Matches(GURL("http://brave2.com:8080")));
 }

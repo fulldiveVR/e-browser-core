@@ -1,4 +1,4 @@
-# Brave VPN WireGuard Service
+# AI Wiz VPN WireGuard Service
 
 Windows service which exposes COM and CLI interfaces that can be used to
 start/stop a WireGuard VPN connection given a configuration file.

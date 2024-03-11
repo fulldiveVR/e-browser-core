@@ -30,7 +30,7 @@ GOOGLE_CHROME_STRINGS_MIGRATION_MAP = {
 
 
 def braveify_grd_text(text, is_main_text, branding_replacements_only):
-    """Replaces text string to Brave wording"""
+    """Replaces text string to AI Wiz wording"""
     for (pattern, to) in branding_replacements:
         text = re.sub(pattern, to, text)
     if not branding_replacements_only:
@@ -45,7 +45,7 @@ def braveify_grd_text(text, is_main_text, branding_replacements_only):
 
 
 def generate_braveified_node(elem, is_comment, branding_replacements_only):
-    """Replaces a node and attributes to Brave wording"""
+    """Replaces a node and attributes to AI Wiz wording"""
     if elem.text:
         elem.text = braveify_grd_text(
             elem.text, not is_comment, branding_replacements_only)
@@ -249,7 +249,7 @@ def get_chromium_grd_src_with_fallback(grd_file_path, brave_source_root):
 
 
 def get_original_grd(src_root, grd_file_path):
-    """Obtains the Chromium GRD file for a specified Brave GRD file."""
+    """Obtains the Chromium GRD file for a specified AI Wiz GRD file."""
     # pylint: disable=fixme
     # TODO: consider passing this mapping into the script from l10nUtil.js
     grd_file_name = os.path.basename(grd_file_path)

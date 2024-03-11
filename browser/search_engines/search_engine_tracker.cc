@@ -30,7 +30,7 @@ constexpr char kGoogleDomain[] = "google.com";
 constexpr char kDDGDomain[] = "duckduckgo.com";
 
 // Deduces the search engine from |type|, if nothing is found - from |url|.
-// Not all engines added by Brave are present in |SearchEngineType| enumeration.
+// Not all engines added by AI Wiz are present in |SearchEngineType| enumeration.
 SearchEngineP3A GetSearchEngineProvider(const GURL& search_engine_url,
                                         SearchEngineType type) {
   SearchEngineP3A result = SearchEngineP3A::kOther;
@@ -72,7 +72,7 @@ SearchEngineSwitchP3A SearchEngineSwitchP3AMapAnswer(const GURL& to,
   DCHECK(to.is_valid());
 
   if (from.DomainIs(kBraveDomain)) {
-    // Switching away from Brave Search.
+    // Switching away from AI Wiz Search.
     if (to.DomainIs(kGoogleDomain)) {
       answer = SearchEngineSwitchP3A::kBraveToGoogle;
     } else if (to.DomainIs(kDDGDomain)) {
@@ -81,7 +81,7 @@ SearchEngineSwitchP3A SearchEngineSwitchP3AMapAnswer(const GURL& to,
       answer = SearchEngineSwitchP3A::kBraveToOther;
     }
   } else if (to.DomainIs(kBraveDomain)) {
-    // Switching to Brave Search.
+    // Switching to AI Wiz Search.
     if (from.DomainIs(kGoogleDomain)) {
       answer = SearchEngineSwitchP3A::kGoogleToBrave;
     } else if (from.DomainIs(kDDGDomain)) {

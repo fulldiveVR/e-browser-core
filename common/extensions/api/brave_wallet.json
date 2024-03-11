@@ -34,7 +34,7 @@
       }, {
         "name": "notifyWalletUnlock",
         "type": "function",
-        "description": "Called to notify Brave that the wallet was unlocked",
+        "description": "Called to notify AI Wiz that the wallet was unlocked",
         "parameters": []
       }, {
         "name": "getWalletSeed",

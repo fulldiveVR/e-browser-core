@@ -85,7 +85,7 @@ class BraveTemplateURLPrepopulateDataTest : public testing::Test {
 
 // Verifies that the set of all prepopulate data doesn't contain entries with
 // duplicate keywords. This should make us notice if Chromium adds a search
-// engine in the future that Brave already added.
+// engine in the future that AI Wiz already added.
 TEST_F(BraveTemplateURLPrepopulateDataTest, UniqueKeywords) {
   using PrepopulatedEngine = TemplateURLPrepopulateData::PrepopulatedEngine;
   const std::vector<const PrepopulatedEngine*> all_engines =

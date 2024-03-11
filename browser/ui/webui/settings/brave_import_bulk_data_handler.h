@@ -19,7 +19,7 @@
 namespace settings {
 
 // This class handles bulk requests to import multiple profiles to
-// new target Brave profiles.
+// new target AI Wiz profiles.
 class BraveImportBulkDataHandler : public BraveImportDataHandler {
  public:
   BraveImportBulkDataHandler();

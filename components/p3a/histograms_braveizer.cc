@@ -52,7 +52,7 @@ void HistogramsBraveizer::InitCallbacks() {
 }
 
 // TODO(iefremov): Replace a bunch of 'if's with something more elegant.
-// Records the given sample using the proper Brave way.
+// Records the given sample using the proper AI Wiz way.
 void HistogramsBraveizer::DoHistogramBravetization(
     const char* histogram_name,
     uint64_t name_hash,

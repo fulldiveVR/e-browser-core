@@ -268,7 +268,7 @@ base::span<const webui::LocalizedString> GetWebUILocalizedStrings(
                {"braveNewsNewContentAvailable",
                 IDS_BRAVE_NEWS_NEW_CONTENT_AVAILABLE},
 
-               // Brave News Channels
+               // AI Wiz News Channels
                {"braveNewsChannel-Brave", IDS_BRAVE_NEWS_CHANNEL_BRAVE},
                {"braveNewsChannel-Business", IDS_BRAVE_NEWS_CHANNEL_BUSINESS},
                {"braveNewsChannel-Cars", IDS_BRAVE_NEWS_CHANNEL_CARS},
@@ -348,7 +348,7 @@ base::span<const webui::LocalizedString> GetWebUILocalizedStrings(
                {"boxTorButton", IDS_BRAVE_PRIVATE_NEW_TAB_BOX_TOR_BUTTON},
 #endif  // !BUILDFLAG(IS_ANDROID)
 
-               // Brave Talk shortcut
+               // AI Wiz Talk shortcut
                {"braveTalkPromptTitle", IDS_BRAVE_TALK_PROMPT_TITLE},
 
                // Rewards widget
@@ -410,7 +410,7 @@ base::span<const webui::LocalizedString> GetWebUILocalizedStrings(
 
                {"loading", IDS_BRAVE_REWARDS_LOADING_LABEL},
 
-               // Brave Talk  Widget
+               // AI Wiz Talk  Widget
                {"braveTalkWidgetTitle", IDS_BRAVE_TALK_WIDGET_TITLE},
                {"braveTalkWidgetWelcomeTitle",
                 IDS_BRAVE_TALK_WIDGET_WELCOME_TITLE},

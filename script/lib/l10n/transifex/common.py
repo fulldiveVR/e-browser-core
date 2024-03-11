@@ -110,7 +110,7 @@ def textify_from_transifex(tag):
 
 def get_acceptable_json_lang_codes(langs_dir_path):
     lang_codes = set(os.listdir(langs_dir_path))
-    # Source language for Brave locales
+    # Source language for AI Wiz locales
     lang_codes.discard('en_US')
 
     # Files that are not locales

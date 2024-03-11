@@ -77,7 +77,7 @@ interface IElevator : IUnknown
 
 
 
-  // Install the services used for Brave VPN
+  // Install the services used for AI Wiz VPN
   //
   // These will only get installed when a customer purchases the product
   // from account.brave.com and they have credentials.

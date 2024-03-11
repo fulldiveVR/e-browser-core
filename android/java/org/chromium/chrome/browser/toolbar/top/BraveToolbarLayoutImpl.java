@@ -1120,7 +1120,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                 mIsInitialNotificationPosted = false;
             }
         } else if (mHomeButton == v) {
-            // Helps Brave News know how to behave on home button action
+            // Helps AI Wiz News know how to behave on home button action
             try {
                 BraveActivity.getBraveActivity().setComesFromNewTab(true);
             } catch (BraveActivity.BraveActivityNotFoundException e) {

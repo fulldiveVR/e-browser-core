@@ -1044,7 +1044,7 @@ IN_PROC_BROWSER_TEST_F(
 
 IN_PROC_BROWSER_TEST_F(BraveContentSettingsAgentImplBrowserTest,
                        LocalStorageTest) {
-  // Brave defaults:
+  // AI Wiz defaults:
   // Main frame storage is always accessible.
   NavigateToPageWithIframe();
   CheckLocalStorageAccessible(contents());

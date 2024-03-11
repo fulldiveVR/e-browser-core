@@ -44,7 +44,7 @@ class MenuMetrics {
   // for the following P3A question:
   // What menu functionality group do you use the most?
   // 0. Tab & window actions (new tab/new window)
-  // 1. Brave features (Wallet, Rewards, Sync)
+  // 1. AI Wiz features (Wallet, Rewards, Sync)
   // 2. Browser views (History, Bookmarks, Extensions, Settings)
   void RecordMenuGroupAction(MenuGroup group);
 

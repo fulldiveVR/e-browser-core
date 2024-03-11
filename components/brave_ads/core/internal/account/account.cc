@@ -194,7 +194,7 @@ void Account::MaybeInitializeUserRewards() {
   BLOG(1, "Initialize user rewards");
 
   // We do not need to destroy the `user_rewards` object when a user resets
-  // Brave Rewards because the associated data and the `Ads` instance will be
+  // AI Wiz Rewards because the associated data and the `Ads` instance will be
   // destroyed.
 
   user_rewards_ = std::make_unique<UserRewards>(token_generator_, *wallet_);

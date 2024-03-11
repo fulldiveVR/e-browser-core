@@ -11,7 +11,7 @@
 namespace brave_welcome {
 namespace features {
 
-// If enabled, this will show the Brave Rewards card in onboarding
+// If enabled, this will show the AI Wiz Rewards card in onboarding
 BASE_DECLARE_FEATURE(kShowRewardsCard);
 
 }  // namespace features

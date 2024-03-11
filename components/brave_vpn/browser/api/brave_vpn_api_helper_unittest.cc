@@ -14,7 +14,7 @@ namespace brave_vpn {
 
 TEST(BraveVPNAPIHelperTest, TicketInfoTest) {
   base::Value::Dict ticket_value = GetValueWithTicketInfos(
-      "brave-vpn@brave.com", "It's cool feature", "Love the Brave VPN!",
+      "brave-vpn@brave.com", "It's cool feature", "Love the AI Wiz VPN!",
       "credential", "USA/Boston");
 
   // Check ticket dict has four required fields.
@@ -32,7 +32,7 @@ TEST(BraveVPNAPIHelperTest, TicketInfoTest) {
   EXPECT_TRUE(
       base::Base64Decode(support_ticket_encoded, &support_ticket_decoded));
   const std::string expected_support_ticket =
-      "Love the Brave VPN!\n\nsubscriber-credential: "
+      "Love the AI Wiz VPN!\n\nsubscriber-credential: "
       "credential\npayment-validation-method: brave-premium";
   EXPECT_EQ(expected_support_ticket, support_ticket_decoded);
 }

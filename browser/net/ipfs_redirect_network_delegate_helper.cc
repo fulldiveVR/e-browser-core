@@ -65,7 +65,7 @@ int OnBeforeURLRequest_IPFSRedirectWork(
   if (ipfs::TranslateIPFSURI(ctx->request_url, &new_url, ctx->ipfs_gateway_url,
                              false)) {
     // We only allow translating ipfs:// and ipns:// URIs if the initiator_url
-    // is from the same Brave ipfs/ipns gateway.
+    // is from the same AI Wiz ipfs/ipns gateway.
     // For the local case, we don't want a normal site to be able to populate
     // a user's IPFS local cache with content they didn't know about.
     // In which case that user would also be able to serve that content.

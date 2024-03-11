@@ -259,7 +259,7 @@ class GreaselionServiceLocaleTestFrench : public GreaselionServiceLocaleTest {
 
 // Ensure the site specific script service properly clears its cache of
 // precompiled URLPatterns if initialized twice. (This can happen if
-// the parent component is updated while Brave is running.)
+// the parent component is updated while AI Wiz is running.)
 IN_PROC_BROWSER_TEST_F(GreaselionServiceTest, ClearCache) {
   ASSERT_TRUE(InstallMockExtension());
   int size = GetRulesSize();

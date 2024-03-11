@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 
 import org.chromium.chrome.R;
 
-/** Onboarding fragment for Brave Wallet which shows the spinner while wallet is created/restored */
+/** Onboarding fragment for AI Wiz Wallet which shows the spinner while wallet is created/restored */
 public class OnboardingCreatingWalletFragment extends BaseOnboardingWalletFragment {
     @Override
     public View onCreateView(

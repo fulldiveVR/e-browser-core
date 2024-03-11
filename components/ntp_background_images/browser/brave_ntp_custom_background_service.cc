@@ -35,7 +35,7 @@ base::Value::Dict BraveNTPCustomBackgroundService::GetBackground() const {
   if (delegate_->HasPreferredBraveBackground()) {
     auto background = delegate_->GetPreferredBraveBackground();
     if (background.empty()) {
-      // Return empty value so that it falls back to random Brave background.
+      // Return empty value so that it falls back to random AI Wiz background.
       return background;
     }
 

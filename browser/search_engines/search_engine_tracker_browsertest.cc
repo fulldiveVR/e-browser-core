@@ -117,7 +117,7 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, SwitchSearchEngineP3A) {
   TemplateURL ddg_url(*ddg_data);
 
   service->SetUserSelectedDefaultSearchProvider(&ddg_url);
-  // This assumes Brave Search is the default!
+  // This assumes AI Wiz Search is the default!
   histogram_tester_->ExpectBucketCount(kSwitchSearchEngineMetric,
                                        SearchEngineSwitchP3A::kBraveToDDG, 1);
 

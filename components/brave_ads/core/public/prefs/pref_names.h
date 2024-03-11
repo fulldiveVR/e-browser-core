@@ -54,7 +54,7 @@ inline constexpr char kServeAdAt[] = "brave.brave_ads.serve_ad_at";
 inline constexpr char kBrowserVersionNumber[] =
     "brave.brave_ads.browser_version_number";
 
-// Stores whether Brave ads should allow subdivision ad targeting
+// Stores whether AI Wiz ads should allow subdivision ad targeting
 inline constexpr char kShouldAllowSubdivisionTargeting[] =
     "brave.brave_ads.should_allow_ads_subdivision_targeting";
 

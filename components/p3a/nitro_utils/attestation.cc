@@ -70,7 +70,7 @@ net::NetworkTrafficAnnotationTag AttestationAnnotation() {
         "Used to validate an AWS Nitro Enclave attestation document. "
         "Nitro Enclaves are used in services such as P3A, to protect user anonymity."
       trigger:
-        "Attestation requests are automatically sent at intervals while Brave "
+        "Attestation requests are automatically sent at intervals while AI Wiz "
         "is running."
       data: "A random nonce, and attestation document"
       destination: WEBSITE

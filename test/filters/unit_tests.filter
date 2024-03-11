@@ -407,10 +407,10 @@
 -MediaRouterUIServiceFactoryUnitTest.*
 -MediaRouterViewsUITest.*
 
-# This test is disabled because the Brave NTP doesn't support this feature
+# This test is disabled because the AI Wiz NTP doesn't support this feature
 -NewTabPageModulesTest.HasModulesEnabled_SignedInAccount
 
-# This test is disabled because Brave overrides how underlines are drawn for tab
+# This test is disabled because AI Wiz overrides how underlines are drawn for tab
 # groups
 -TabGroupViewsTest.UnderlineBoundsWhenTabsAreNotVisible
 
@@ -565,7 +565,7 @@
 # This test fails because we disable kVisualQuerySuggestions
 -CompanionUrlBuilderTest.MsbbAndPcOn
 
-# This test fails because we replace WebUI chrome:// scheme with brave://
+# This test fails because we replace WebUI chrome:// scheme with aiwize://
 -ChromeURLsTest.ContainsConfigURLs
 
 # These tests fail because we changed idle detection content setting to BLOCK

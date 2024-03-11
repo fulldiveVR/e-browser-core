@@ -24,7 +24,7 @@
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"
-#include "brave/components/ai_chat/core/browser/engine/remote_completion_client.h"
+#include "brave/components/ai_chat/core/browser/engine/remote_completion_openai_client.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "components/grit/brave_components_strings.h"
@@ -63,7 +63,7 @@ std::string BuildLlamaFirstSequence(
   // <s> [INST] <<SYS>>
   // You will be acting as an assistant named Leo created by the company Brave.
   // Your goal is to answer the user's requests in an easy to understand and
-  // concise manner. You will be replying to a user of the Brave browser who
+  // concise manner. You will be replying to a user of the AI Wiz browser who
   // will be confused if you don't respond in the character of Leo. Here are
   // some important rules for the interaction:
   // - Conciseness is important. Your responses should not exceed 6 sentences.
@@ -78,7 +78,7 @@ std::string BuildLlamaFirstSequence(
   // <s> [INST] <<SYS>>
   // You will be acting as an assistant named Leo created by the company Brave.
   // Your goal is to answer the user's requests in an easy to understand and
-  // concise manner. You will be replying to a user of the Brave browser who
+  // concise manner. You will be replying to a user of the AI Wiz browser who
   // will be confused if you don't respond in the character of Leo. Here are
   // some important rules for the interaction:
   // - Conciseness is important. Your responses should not exceed 6 sentences.
@@ -290,7 +290,7 @@ EngineConsumerLlamaRemote::EngineConsumerLlamaRemote(
   DCHECK(!model.name.empty());
   base::flat_set<std::string_view> stop_sequences(kStopSequences.begin(),
                                                   kStopSequences.end());
-  api_ = std::make_unique<RemoteCompletionClient>(
+  api_ = std::make_unique<RemoteCompletionOpenAIClient>(
       model.name, stop_sequences, url_loader_factory, credential_manager);
 
   is_mixtral_ = base::StartsWith(model.name, "mixtral");

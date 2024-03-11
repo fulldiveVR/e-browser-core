@@ -169,7 +169,7 @@ bool ConfigureBraveWireguardService(const std::wstring& service_name) {
   return true;
 }
 
-// Installs Brave VPN Wireguard Windows service and configures the service
+// Installs AI Wiz VPN Wireguard Windows service and configures the service
 // config.
 bool InstallBraveWireguardService(const base::FilePath& root_dir) {
   base::CommandLine service_cmd(
@@ -197,7 +197,7 @@ bool InstallBraveWireguardService(const base::FilePath& root_dir) {
   return false;
 }
 
-// Uninstalling and clearing Brave VPN service data.
+// Uninstalling and clearing AI Wiz VPN service data.
 bool UninstallBraveWireguardService() {
   brave_vpn::wireguard::RemoveExistingWireguardService();
   auto last_used_config = brave_vpn::wireguard::GetLastUsedConfigPath();

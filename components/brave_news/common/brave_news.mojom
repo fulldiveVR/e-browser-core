@@ -324,7 +324,7 @@ interface BraveNewsController {
 
   GetDisplayAd() => (DisplayAd? ad);
   // Lets the browser know when a user begins viewing or scrolling
-  // through Brave News, for statistics gathering purposes.
+  // through AI Wiz News, for statistics gathering purposes.
   OnInteractionSessionStarted();
 
   OnNewCardsViewed(uint16 card_views);

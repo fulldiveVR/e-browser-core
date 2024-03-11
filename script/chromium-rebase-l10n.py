@@ -252,17 +252,17 @@ def main():
         elem1.attrib.pop('desc')
         elem1 = xml_tree.xpath(
             '//message[@name="IDS_INBOUND_MDNS_RULE_DESCRIPTION_BETA"]')[0]
-        elem1.text = 'Inbound rule for Brave Beta to allow mDNS traffic.'
+        elem1.text = 'Inbound rule for AI Wiz Beta to allow mDNS traffic.'
         elem1.attrib.pop('desc')
         elem1.attrib.pop('translateable')
         elem1 = xml_tree.xpath(
             '//message[@name="IDS_INBOUND_MDNS_RULE_DESCRIPTION_CANARY"]')[0]
-        elem1.text = 'Inbound rule for Brave Nightly to allow mDNS traffic.'
+        elem1.text = 'Inbound rule for AI Wiz Nightly to allow mDNS traffic.'
         elem1.attrib.pop('desc')
         elem1.attrib.pop('translateable')
         elem1 = xml_tree.xpath(
             '//message[@name="IDS_INBOUND_MDNS_RULE_DESCRIPTION_DEV"]')[0]
-        elem1.text = 'Inbound rule for Brave Dev to allow mDNS traffic.'
+        elem1.text = 'Inbound rule for AI Wiz Dev to allow mDNS traffic.'
         elem1.attrib.pop('desc')
         elem1.attrib.pop('translateable')
         elem1 = xml_tree.xpath(

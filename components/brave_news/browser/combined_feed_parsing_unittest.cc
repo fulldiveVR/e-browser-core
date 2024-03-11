@@ -35,7 +35,7 @@ base::Value GetItem(std::string url) {
 }  // namespace
 
 TEST(BraveNewCombinedFeedParsing, Success) {
-  // Create an entry which should be valid as a Brave News item
+  // Create an entry which should be valid as a AI Wiz News item
   auto item = GetItem("https://www.hello.com");
   base::Value::List list;
   list.Append(std::move(item));
@@ -48,7 +48,7 @@ TEST(BraveNewCombinedFeedParsing, Success) {
 }
 
 TEST(BraveNewCombinedFeedParsing, FailBadProtocol) {
-  // Create an entry which should be invalid as a Brave News item
+  // Create an entry which should be invalid as a AI Wiz News item
   // A chrome: protocol should not be allowed
   auto item = GetItem("chrome://settings");
   base::Value::List list;

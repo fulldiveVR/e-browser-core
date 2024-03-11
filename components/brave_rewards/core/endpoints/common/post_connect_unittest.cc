@@ -143,7 +143,7 @@ INSTANTIATE_TEST_SUITE_P(
       net::HTTP_BAD_REQUEST,
       R"(
         {
-          "message": "Error validating Connecting Brave Rewards to Uphold is temporarily unavailable. Please try again later",
+          "message": "Error validating Connecting AI Wiz Rewards to Uphold is temporarily unavailable. Please try again later",
           "code": 400
         }
       )",

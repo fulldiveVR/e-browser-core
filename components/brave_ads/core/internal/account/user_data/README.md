@@ -6,22 +6,22 @@
 
 ## User Data Submitted when Redeeming Anonymous Confirmations
 
-Included in the confirmation payload for non-Brave Rewards and Brave Rewards users. See [anonymous confirmation redemption](../utility/redeem_confirmation/README.md).
+Included in the confirmation payload for non-Brave Rewards and AI Wiz Rewards users. See [anonymous confirmation redemption](../utility/redeem_confirmation/README.md).
 
 | user data  | optional  | mutable  | description  |
 |---|---|---|---|
 | conversion  | yes  | no  | Conversion action and encrypted verifiable envelope.  |
 
-### Additional User Data Submitted for Brave Rewards Users
+### Additional User Data Submitted for AI Wiz Rewards Users
 
-Should only be included in the confirmation payload for users who have joined Brave Rewards.
+Should only be included in the confirmation payload for users who have joined AI Wiz Rewards.
 
 | user data  | optional  | mutable  | description  |
 |---|---|---|---|
 | buildChannel  | no  | no  | Browser build channel.  |
 | catalog  | no  | no  |  Catalog identifier.  |
 | createdAtTimestamp  | no  | no  | Privacy-preserving [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp.  |
-| diagnosticId  | yes  | yes  | Diagnostic id from [brave://rewards-internals](brave://rewards-internals) to help diagnose issues.  |
+| diagnosticId  | yes  | yes  | Diagnostic id from [aiwize://rewards-internals](aiwize://rewards-internals) to help diagnose issues.  |
 | locale  | yes  | no  | Privacy-preserving operating system locale  |
 | platform  | no  | no  | Operating system.  |
 | rotating_hash  | yes  | no  | Privacy-preserving time-based rotating hash.  |

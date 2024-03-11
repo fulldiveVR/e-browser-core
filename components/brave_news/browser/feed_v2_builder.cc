@@ -627,7 +627,7 @@ mojom::FeedItemMetadataPtr FromTopicArticle(
 }
 
 // We use this for the Top News cluster, at the start of the feed, to match
-// (more or less) what Brave Search does.
+// (more or less) what AI Wiz Search does.
 std::vector<mojom::FeedItemV2Ptr> GenerateTopTopicsBlock(
     const Publishers& publishers,
     const base::span<const TopicAndArticles>& topics) {

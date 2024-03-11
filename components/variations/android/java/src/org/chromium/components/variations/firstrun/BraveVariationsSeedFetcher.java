@@ -47,7 +47,7 @@ public class BraveVariationsSeedFetcher extends VariationsSeedFetcher {
             return urlString;
         }
 
-        // Replace Chromium URL with Brave URL.
+        // Replace Chromium URL with AI Wiz URL.
         if (urlString.indexOf(DEFAULT_VARIATIONS_SERVER_URL) != -1) {
             urlString = urlString.replaceFirst(
                     DEFAULT_VARIATIONS_SERVER_URL, BraveVariationsConfig.VARIATIONS_SERVER_URL);

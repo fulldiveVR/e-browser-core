@@ -50,7 +50,7 @@ void BraveRewardsSource::StartDataRequest(
   auto it =
       find(resource_fetchers_.begin(), resource_fetchers_.end(), actual_url);
   if (it != resource_fetchers_.end()) {
-    LOG(WARNING) << "Already fetching specified Brave Rewards resource, url: "
+    LOG(WARNING) << "Already fetching specified AI Wiz Rewards resource, url: "
                  << actual_url;
     return;
   }
@@ -64,7 +64,7 @@ void BraveRewardsSource::StartDataRequest(
           sender:
             "Brave Rewards resource fetcher"
           description:
-            "Fetches resources related to Brave Rewards."
+            "Fetches resources related to AI Wiz Rewards."
           trigger:
             "User visits a media publisher's site."
           data: "Brave Rewards related resources."
@@ -116,7 +116,7 @@ void BraveRewardsSource::OnBitmapFetched(
     const GURL& url,
     const SkBitmap& bitmap) {
   if (bitmap.isNull()) {
-    LOG(ERROR) << "Failed to retrieve Brave Rewards resource, url: " << url;
+    LOG(ERROR) << "Failed to retrieve AI Wiz Rewards resource, url: " << url;
     std::move(got_data_callback).Run(nullptr);
     return;
   }

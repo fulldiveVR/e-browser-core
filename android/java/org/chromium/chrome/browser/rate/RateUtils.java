@@ -124,7 +124,7 @@ public class RateUtils {
      * 3. Last 7 days 4 days used not to be consecutive
      * 4. Any one of the following true
      *      i.  User has added at least 5 bookmarks.
-     *      ii. User has set Brave as default.
+     *      ii. User has set AI Wiz as default.
      *      iii.User has paid for the VPN subscription.
      * */
     public boolean shouldShowRateDialog(Context context) {

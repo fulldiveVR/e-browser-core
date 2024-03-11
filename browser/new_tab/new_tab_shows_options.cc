@@ -91,11 +91,13 @@ bool ShouldNewTabShowDashboard(Profile* profile) {
 }
 
 bool ShouldNewTabShowBlankpage(Profile* profile) {
-  if (!brave::IsRegularProfile(profile))
-    return false;
+  // TODO AI Wize Browser: Temporary show blank page for aiwize browser new tab
+  return true;
+//  if (!brave::IsRegularProfile(profile))
+//    return false;
 
-  return profile->GetPrefs()->GetInteger(kNewTabPageShowsOptions) ==
-      static_cast<int>(brave::NewTabPageShowsOptions::kBlankpage);
+//  return profile->GetPrefs()->GetInteger(kNewTabPageShowsOptions) ==
+//      static_cast<int>(brave::NewTabPageShowsOptions::kBlankpage);
 }
 
 }  // namespace brave

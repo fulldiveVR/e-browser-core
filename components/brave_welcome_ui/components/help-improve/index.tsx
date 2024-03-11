@@ -104,13 +104,13 @@ function HelpImprove () {
           </Button>
           <S.FootNote>
             {changeSettingsNote.beforeTag}
-            <a href="brave://settings/privacy" onClick={handleOpenSettingsPage}>
+            <a href="aiwize://settings/privacy" onClick={handleOpenSettingsPage}>
               {changeSettingsNote.duringTag}
             </a>
             {changeSettingsNote.afterTag}
             <span>
               {readPrivacyPolicy.beforeTag}
-              <a href="https://brave.com/privacy/browser" target="_blank">
+              <a href="https://aiwize.com/privacy/browser" target="_blank">
                 {readPrivacyPolicy.duringTag}
               </a>
               {readPrivacyPolicy.afterTag}

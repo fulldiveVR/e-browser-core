@@ -316,7 +316,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   ShieldsEnabledSetting enabled_settings(&provider);
   ShieldsScriptSetting script_settings(&provider);
 
-  GURL url("http://brave.com:8080/");
+  GURL url("http://aiwize.com:8080/");
   GURL url2("http://allowed.brave.com:3030");
   // Check that the settings for the url are default values.
   cookie_settings.CheckSettingsAreDefault(url);
@@ -343,37 +343,37 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Check that settings would block brave.com:8080, but not brave.com:5555.
   cookie_settings.CheckSettingsWouldBlock(url);
   cookie_settings.CheckSettingsWouldAllow(url2);
-  cookie_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  cookie_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // Finterprinting.
   fp_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_ALLOW);
   // Check that settings would allow brave.com:8080, but not brave.com:5555.
   fp_settings.CheckSettingsWouldAllow(url);
-  fp_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  fp_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // HTTPSE.
   httpse_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_BLOCK);
   // Check that settings would block brave.com:8080, but not brave.com:5555.
   httpse_settings.CheckSettingsWouldBlock(url);
-  httpse_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  httpse_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // Ads.
   ads_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_ALLOW);
   // Check that settings would allow brave.com:8080, but not brave.com:5555.
   ads_settings.CheckSettingsWouldAllow(url);
-  ads_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  ads_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // Enabled.
   enabled_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_BLOCK);
   // Check that settings would block brave.com:8080, but not brave.com:5555.
   httpse_settings.CheckSettingsWouldBlock(url);
-  httpse_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  httpse_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // Scripts.
   script_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_BLOCK);
   // Check that settings would block brave.com:8080, but not brave.com:5555.
   script_settings.CheckSettingsWouldBlock(url);
-  script_settings.CheckSettingsAreDefault(GURL("http://brave.com:5555"));
+  script_settings.CheckSettingsAreDefault(GURL("http://aiwize.com:5555"));
 
   // Migrate settings.
   // ------------------------------------------------------
@@ -385,8 +385,8 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Cookies.
   // Check that settings would block brave.com with any protocol and port.
   cookie_settings.CheckSettingsWouldBlock(url);
-  cookie_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  cookie_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  cookie_settings.CheckSettingsWouldBlock(GURL("http://aiwize.com:5555"));
+  cookie_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Check that settings would allow allow.brave.com with any protocol and port.
   cookie_settings.CheckSettingsWouldAllow(url2);
   cookie_settings.CheckSettingsWouldAllow(GURL("https://allowed.brave.com"));
@@ -399,39 +399,39 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigration) {
   // Fingerprinting.
   // Check that settings would allow brave.com with any protocol and port.
   fp_settings.CheckSettingsWouldAllow(url);
-  fp_settings.CheckSettingsWouldAllow(GURL("http://brave.com:5555"));
-  fp_settings.CheckSettingsWouldAllow(GURL("https://brave.com"));
+  fp_settings.CheckSettingsWouldAllow(GURL("http://aiwize.com:5555"));
+  fp_settings.CheckSettingsWouldAllow(GURL("https://aiwize.com"));
   // Would not allow a different domain.
   fp_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
   // HTTPSE.
   // Check that settings would block brave.com with any protocol and port.
   httpse_settings.CheckSettingsWouldBlock(url);
-  httpse_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
+  httpse_settings.CheckSettingsWouldBlock(GURL("http://aiwize.com:5555"));
   // Would not block a different domain.
   httpse_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
   // Ads.
   // Check that settings would allow brave.com with any protocol and port.
   ads_settings.CheckSettingsWouldAllow(url);
-  ads_settings.CheckSettingsWouldAllow(GURL("http://brave.com:5555"));
-  ads_settings.CheckSettingsWouldAllow(GURL("https://brave.com"));
+  ads_settings.CheckSettingsWouldAllow(GURL("http://aiwize.com:5555"));
+  ads_settings.CheckSettingsWouldAllow(GURL("https://aiwize.com"));
   // Would not allow a different domain.
   ads_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
   // Enabled.
   // Check that settings would block brave.com with any protocol and port.
   httpse_settings.CheckSettingsWouldBlock(url);
-  httpse_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  httpse_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  httpse_settings.CheckSettingsWouldBlock(GURL("http://aiwize.com:5555"));
+  httpse_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Would not block a different domain.
   httpse_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
   // Scripts.
   // Check that settings would block brave.com with any protocol and port.
   script_settings.CheckSettingsWouldBlock(url);
-  script_settings.CheckSettingsWouldBlock(GURL("http://brave.com:5555"));
-  script_settings.CheckSettingsWouldBlock(GURL("https://brave.com"));
+  script_settings.CheckSettingsWouldBlock(GURL("http://aiwize.com:5555"));
+  script_settings.CheckSettingsWouldBlock(GURL("https://aiwize.com"));
   // Would not block a different domain.
   script_settings.CheckSettingsAreDefault(GURL("http://brave2.com"));
 
@@ -467,21 +467,21 @@ TEST_F(BravePrefProviderTest, MigrateFPShieldsSettings) {
 
   ShieldsFingerprintingSetting fp_settings(&provider);
 
-  GURL url("http://brave.com:8080/");
+  GURL url("http://aiwize.com:8080/");
   ContentSettingsPattern pattern = ContentSettingsPattern::FromURL(url);
   fp_settings.SetPreMigrationSettings(pattern, CONTENT_SETTING_BLOCK);
 
-  GURL url2("http://brave.com:3030");
+  GURL url2("http://aiwize.com:3030");
   ContentSettingsPattern pattern2 = ContentSettingsPattern::FromURL(url2);
   fp_settings.SetPreMigrationSettingsWithSecondary(
       pattern2, ContentSettingsPattern::FromString("https://balanced/*"),
       CONTENT_SETTING_BLOCK);
 
-  GURL url3("http://brave.com:8181/");
+  GURL url3("http://aiwize.com:8181/");
   ContentSettingsPattern pattern3 = ContentSettingsPattern::FromURL(url3);
   fp_settings.SetPreMigrationSettings(pattern3, CONTENT_SETTING_ALLOW);
 
-  GURL url4("http://brave.com:8282/");
+  GURL url4("http://aiwize.com:8282/");
   ContentSettingsPattern pattern4 = ContentSettingsPattern::FromURL(url4);
   fp_settings.SetPreMigrationSettings(pattern4, CONTENT_SETTING_ASK);
 
@@ -552,7 +552,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigrationFromResourceIDs) {
                                           expected_last_modified,
                                           expected_example_com_settings_value);
 
-  // Disable Brave Shields for www.brave.com.
+  // Disable AI Wiz Shields for www.brave.com.
   base::Value::Dict* brave_settings =
       plugins.value()->EnsureDict("www.brave.com,*");
 
@@ -604,7 +604,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigrationFromUnknownSettings) {
                                               kUserProfilePluginsPath);
 
   // Seed both global and per-site shield settings preferences using unsupported
-  // names, so that we can test that Brave doesn't crash while attempting the
+  // names, so that we can test that AI Wiz doesn't crash while attempting the
   // migration and simply ignore those unsupported names instead.
   //
   // For a list of supported names, see |kBraveContentSettingstypes| inside the
@@ -647,7 +647,7 @@ TEST_F(BravePrefProviderTest, TestShieldsSettingsMigrationV2toV4) {
   CookieSettings cookie_settings(&provider);
   ShieldsEnabledSetting shields_enabled_settings(&provider);
 
-  GURL blocked("http://brave.com:8080/");
+  GURL blocked("http://aiwize.com:8080/");
   GURL allowed("http://allowed.brave.com:3030");
 
   ContentSettingsPattern allowed_pattern =

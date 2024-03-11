@@ -586,7 +586,7 @@ TEST(EthResponseParserUnitTest, ParseDataURIAndExtractJSON) {
   // Invalid URL
   EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL(""), &json));
   // Valid URL, incorrect scheme
-  EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL("https://brave.com"),
+  EXPECT_FALSE(ParseDataURIAndExtractJSON(GURL("https://aiwize.com"),
                                           &json));  // Incorrect scheme
   // Valid URL and scheme, invalid mime_type
   EXPECT_FALSE(ParseDataURIAndExtractJSON(
@@ -655,7 +655,7 @@ TEST(EthResponseParserUnitTest, ParseTokenUri) {
   EXPECT_FALSE(eth::ParseTokenUri(ParseJson(body), &url));
   EXPECT_EQ(url.spec(), "");
 
-  // (2/2) Invalid URL returns false (https//brave.com)
+  // (2/2) Invalid URL returns false (https//aiwize.com)
   body = R"({
       "jsonrpc":"2.0",
       "id":1,

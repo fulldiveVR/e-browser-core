@@ -50,7 +50,7 @@ public class BraveStatsUtil {
     private static String sShareStatsFile = "";
 
     /*
-     * Gets string view of specific time in seconds for Brave stats
+     * Gets string view of specific time in seconds for AI Wiz stats
      */
     public static Pair<String, String> getBraveStatsStringFromTime(long seconds) {
         String result = "";

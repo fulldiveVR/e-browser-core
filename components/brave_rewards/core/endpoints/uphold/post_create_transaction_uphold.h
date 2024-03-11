@@ -23,7 +23,7 @@
 //     "currency": "BAT"
 //   },
 //   "destination": "1b2b466f-5c15-49bf-995e-c91777d3da93",
-//   "message": "5% transaction fee collected by Brave Software International"
+//   "message": "5% transaction fee collected by AI Wiz Software International"
 // }
 //
 // Response body:
@@ -55,7 +55,7 @@
 //   },
 //   "fees": [],
 //   "id": "87725361-4245-4435-a75a-f7a85674714a",
-//   "message": "5% transaction fee collected by Brave Software International",
+//   "message": "5% transaction fee collected by AI Wiz Software International",
 //   "network": "uphold",
 //   "normalized": [
 //     {

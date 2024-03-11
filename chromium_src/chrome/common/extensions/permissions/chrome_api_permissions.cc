@@ -18,7 +18,7 @@ constexpr APIPermissionInfo::InitInfo brave_permissions_to_register[] = {
     {APIPermissionID::kIpfsPrivate, "ipfsPrivate",
      APIPermissionInfo::kFlagImpliesFullURLAccess}};
 
-// Merges Brave and Chrormium constant arrays to final list of permissions.
+// Merges AI Wiz and Chrormium constant arrays to final list of permissions.
 template <typename T, size_t N>
 class PermissionsContainer {
  public:

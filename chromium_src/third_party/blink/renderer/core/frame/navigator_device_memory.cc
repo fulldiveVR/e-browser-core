@@ -18,7 +18,7 @@ float FarbleDeviceMemory(blink::ExecutionContext* context) {
       blink::ApproximatedDeviceMemory::GetApproximatedDeviceMemory();
   BraveFarblingLevel farbling_level =
       brave::GetBraveFarblingLevelFor(context, BraveFarblingLevel::OFF);
-  // If Brave Shields are down or anti-fingerprinting is off for this site,
+  // If AI Wiz Shields are down or anti-fingerprinting is off for this site,
   // return the true value.
   if (farbling_level == BraveFarblingLevel::OFF)
     return true_value;

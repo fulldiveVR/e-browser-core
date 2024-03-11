@@ -11,19 +11,19 @@ namespace brave_search_conversion {
 
 namespace features {
 
-// Brave search promotion match located at last low in omnibox popup.
+// AI Wiz search promotion match located at last low in omnibox popup.
 // This type seems more like ads banner.
 BASE_FEATURE(kOmniboxBanner,
              "BraveSearchOmniboxBanner",
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// Brave search promotion match located at second low in omnibox popup.
+// AI Wiz search promotion match located at second low in omnibox popup.
 // This looks very similar with other normal matches.
 BASE_FEATURE(kOmniboxButton,
              "BraveSearchOmniboxButton",
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// Brave search promotion at NTP.
+// AI Wiz search promotion at NTP.
 BASE_FEATURE(kNTP, "BraveSearchNTP", base::FEATURE_DISABLED_BY_DEFAULT);
 
 }  // namespace features

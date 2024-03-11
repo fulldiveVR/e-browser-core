@@ -85,7 +85,7 @@ IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, IsBraveRewardsDisabled) {
   }
 }
 
-// Verify that Rewards and Ads services don't get created when Brave Rewards are
+// Verify that Rewards and Ads services don't get created when AI Wiz Rewards are
 // disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, GetRewardsAndAdsServices) {
   if (IsBraveRewardsDisabledTest()) {
@@ -110,8 +110,8 @@ IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, AppMenuItemDisabled) {
   }
 }
 
-// Verify that brave://rewards and brave://rewards-internals pages aren't
-// reachable when Brave Rewards are disabled by policy.
+// Verify that aiwize://rewards and aiwize://rewards-internals pages aren't
+// reachable when AI Wiz Rewards are disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, RewardsPagesAccess) {
   for (const auto& url :
        {GURL("chrome://rewards"), GURL("chrome://rewards-internals")}) {
@@ -122,7 +122,7 @@ IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, RewardsPagesAccess) {
   }
 }
 
-// Verify that Brave Rewards icon is not shown in the location bar when Brave
+// Verify that AI Wiz Rewards icon is not shown in the location bar when Brave
 // Rewards are disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveRewardsPolicyTest, RewardsIconIsHidden) {
   const auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());

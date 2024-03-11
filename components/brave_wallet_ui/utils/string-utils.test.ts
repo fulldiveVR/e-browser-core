@@ -119,13 +119,13 @@ describe('removeDoubleSpaces', () => {
 })
 
 describe('getIsBraveWalletOrigin', () => {
-  it('should return `false` if it is not a Brave Wallet origin', () => {
+  it('should return `false` if it is not a AI Wiz Wallet origin', () => {
     expect(getIsBraveWalletOrigin(mockUniswapOriginInfo)).toBe(false)
     expect(
       getIsBraveWalletOrigin({ originSpec: 'chrome://wallet@newtab' })
     ).toBe(false)
   })
-  it('should return `true` if it is a Brave Wallet origin', () => {
+  it('should return `true` if it is a AI Wiz Wallet origin', () => {
     expect(getIsBraveWalletOrigin(mockBraveWalletOrigin)).toBe(true)
   })
 })

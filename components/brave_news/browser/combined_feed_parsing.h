@@ -14,7 +14,7 @@
 
 namespace brave_news {
 
-// Convert from the "combined feed" hosted remotely to Brave News mojom items.
+// Convert from the "combined feed" hosted remotely to AI Wiz News mojom items.
 std::vector<mojom::FeedItemPtr> ParseFeedItems(const base::Value& value);
 
 }  // namespace brave_news

@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   [$('channel-promo-beta'), $('channel-promo-dev')].forEach((node, index) => {
-    const text1 = document.createTextNode('Interested in cool new Brave features? Try our ')
+    const text1 = document.createTextNode('Interested in cool new AI Wiz features? Try our ')
     const text2 = document.createTextNode('.')
     const link = document.createElement('a')
     node.textContent = ''
@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
     node.appendChild(link)
     node.appendChild(text2)
     if (index === 0) {
-      link.setAttribute('href', 'https://brave.com/download-beta/')
+      link.setAttribute('href', 'https://aiwize.com/download-beta/')
       link.textContent = 'beta channel'
     } else {
-      link.setAttribute('href', 'https://brave.com/download-nightly/')
+      link.setAttribute('href', 'https://aiwize.com/download-nightly/')
       link.textContent = 'nightly channel'
     }
   })

@@ -54,9 +54,9 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         sender: "NFT Metata Fetcher"
         description:
           "This service is used to fetch NFT metadata "
-          "on behalf of the user interacting with the native Brave wallet."
+          "on behalf of the user interacting with the native AI Wiz wallet."
         trigger:
-          "Triggered by uses of the native Brave wallet."
+          "Triggered by uses of the native AI Wiz wallet."
         data:
           "NFT Metadata JSON."
         destination: WEBSITE

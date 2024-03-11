@@ -217,23 +217,23 @@ public abstract class BraveActivity extends ChromeActivity
                    MiscAndroidMetricsConnectionErrorHandler
                            .MiscAndroidMetricsConnectionErrorHandlerDelegate {
     public static final String BRAVE_WALLET_HOST = "wallet";
-    public static final String BRAVE_WALLET_URL = "brave://wallet/crypto/portfolio/assets";
-    public static final String BRAVE_BUY_URL = "brave://wallet/crypto/fund-wallet";
-    public static final String BRAVE_SEND_URL = "brave://wallet/send";
-    public static final String BRAVE_SWAP_URL = "brave://wallet/swap";
-    public static final String BRAVE_DEPOSIT_URL = "brave://wallet/crypto/deposit-funds";
-    public static final String BRAVE_REWARDS_SETTINGS_URL = "brave://rewards/";
+    public static final String BRAVE_WALLET_URL = "aiwize://wallet/crypto/portfolio/assets";
+    public static final String BRAVE_BUY_URL = "aiwize://wallet/crypto/fund-wallet";
+    public static final String BRAVE_SEND_URL = "aiwize://wallet/send";
+    public static final String BRAVE_SWAP_URL = "aiwize://wallet/swap";
+    public static final String BRAVE_DEPOSIT_URL = "aiwize://wallet/crypto/deposit-funds";
+    public static final String BRAVE_REWARDS_SETTINGS_URL = "aiwize://rewards/";
     public static final String BRAVE_REWARDS_SETTINGS_WALLET_VERIFICATION_URL =
-            "brave://rewards/#verify";
-    public static final String BRAVE_REWARDS_WALLET_RECONNECT_URL = "brave://rewards/reconnect";
-    public static final String BRAVE_REWARDS_SETTINGS_MONTHLY_URL = "brave://rewards/#monthly";
-    public static final String REWARDS_AC_SETTINGS_URL = "brave://rewards/contribute";
+            "aiwize://rewards/#verify";
+    public static final String BRAVE_REWARDS_WALLET_RECONNECT_URL = "aiwize://rewards/reconnect";
+    public static final String BRAVE_REWARDS_SETTINGS_MONTHLY_URL = "aiwize://rewards/#monthly";
+    public static final String REWARDS_AC_SETTINGS_URL = "aiwize://rewards/contribute";
     public static final String BRAVE_AI_CHAT_URL = "chrome-untrusted://chat";
     public static final String REWARDS_LEARN_MORE_URL =
-            "https://brave.com/faq-rewards/#unclaimed-funds";
+            "https://aiwize.com/faq-rewards/#unclaimed-funds";
     public static final String BRAVE_TERMS_PAGE =
             "https://basicattentiontoken.org/user-terms-of-service/";
-    public static final String BRAVE_PRIVACY_POLICY = "https://brave.com/privacy/browser/#rewards";
+    public static final String BRAVE_PRIVACY_POLICY = "https://aiwize.com/privacy/browser/#rewards";
     public static final String OPEN_URL = "open_url";
 
     private static final int DAYS_1 = 1;

@@ -61,7 +61,7 @@ namespace brave_news {
 
 bool GetIsEnabled(PrefService* prefs);
 
-// Browser-side handler for Brave News mojom API, 1 per profile
+// Browser-side handler for AI Wiz News mojom API, 1 per profile
 // Orchestrates FeedController and PublishersController for data, as well as
 // owning prefs data.
 // Controls remote feed update logic via Timer and prefs values.

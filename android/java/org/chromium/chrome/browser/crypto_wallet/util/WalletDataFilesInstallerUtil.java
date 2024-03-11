@@ -9,7 +9,7 @@ import org.jni_zero.CalledByNative;
 
 /**
  * Class that is used by wallet_data_files_installer.cc to determine, if we need to download
- * Brave Wallet data files component on Android at startup
+ * AI Wiz Wallet data files component on Android at startup
  */
 public class WalletDataFilesInstallerUtil {
     @CalledByNative

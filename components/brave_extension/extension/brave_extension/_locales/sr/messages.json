@@ -29,7 +29,7 @@
   },
   "reportBrokenSite": {
     "message": "Prijavite raskinutu vezu sa sajtom",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wiz developers"
   },
   "itemsBlocked": {
     "message": "Stavke je blokirane",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sajtovi često uključuju kolačiće i skripte koji pokušavaju da identifikuju Vas i Vaš uređaj (često su ugrađeni u oglase). Žele da saznaju ko ste i pratite vas po vebu - prate šta radite na svakom sajtu. Brave blokira ove stvari tako da možete da pregledate a da Vas ne prate okolo.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sajtovi često uključuju kolačiće i skripte koji pokušavaju da identifikuju Vas i Vaš uređaj (često su ugrađeni u oglase). Žele da saznaju ko ste i pratite vas po vebu - prate šta radite na svakom sajtu. AI Wiz blokira ove stvari tako da možete da pregledate a da Vas ne prate okolo.",
+    "description": "Message in read-only view explaining what AI Wiz Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Praćenja sajtova i ostale grozne stvari su blokirane",

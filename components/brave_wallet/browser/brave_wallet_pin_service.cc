@@ -194,7 +194,7 @@ void ContentTypeChecker::CheckContentTypeSupported(
                 "which are added to the wallet."
               trigger:
                 "Triggered by enable auto-pinning mode"
-                "from the Brave Wallet page or settings."
+                "from the AI Wiz Wallet page or settings."
               data:
                 "Options of the commands."
               destination: WEBSITE
@@ -202,7 +202,7 @@ void ContentTypeChecker::CheckContentTypeSupported(
             policy {
               cookies_allowed: NO
               setting:
-                "You can enable or disable this feature in brave://settings."
+                "You can enable or disable this feature in aiwize://settings."
               policy_exception_justification:
                 "Not implemented."
             }

@@ -22,7 +22,7 @@ namespace feed {
 
   // A dictionary with fields representing a publisher.
   dictionary Publisher {
-    // If the publisher is enabled. Brave today defaults it to true.
+    // If the publisher is enabled. AI Wiz today defaults it to true.
     boolean? enabled;
 
     // the publishers name.

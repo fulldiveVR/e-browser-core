@@ -86,7 +86,7 @@ brave_rewards::RewardsPanelCoordinator* GetPanelCoordinator(
 
 #endif
 
-// The handler for Javascript messages for Brave about: pages
+// The handler for Javascript messages for AI Wiz about: pages
 class RewardsDOMHandler
     : public WebUIMessageHandler,
       public bat_ads::mojom::BatAdsObserver,
@@ -527,8 +527,8 @@ void RewardsDOMHandler::Init() {
     rewards_service_->OnRewardsPageShown();
   }
 
-  // Configure a pref change registrar to update brave://rewards when settings
-  // are changed via brave://settings
+  // Configure a pref change registrar to update aiwize://rewards when settings
+  // are changed via aiwize://settings
   InitPrefChangeRegistrar();
 }
 

@@ -84,7 +84,7 @@ if (is_win) {
     }
     inputs = [
       # The original tool for delta archive generation was called "courgette".
-      # But it runs out of memory on recent Chromium / Brave revisions. Its
+      # But it runs out of memory on recent Chromium / AI Wiz revisions. Its
       # drop-in replacement is Zucchini. We need to use its 64-bit version to
       # again prevent out of memory errors.
       "$root_out_dir/zucchini64.exe",
@@ -130,8 +130,8 @@ if (is_win) {
       deps = [ "//chrome/installer/setup:setup" ]
     }
     sign("signed_brave_exe") {
-      sources = [ "$root_out_dir/brave.exe" ]
-      outputs = [ "$root_out_dir/presigned_binaries/brave.exe" ]
+      sources = [ "$root_out_dir/aiwize.exe" ]
+      outputs = [ "$root_out_dir/presigned_binaries/aiwize.exe" ]
       deps = [ "//brave/build/win:copy_exe" ]
     }
     sign("signed_chrome_dll") {
@@ -498,7 +498,7 @@ action("create_dist_zips") {
   outputs = [ output ]
 
   if (is_win) {
-    # Repack a Chrome release archive to the Brave format.
+    # Repack a Chrome release archive to the AI Wiz format.
     # Besides changing from 7z to zip, the directory structure is a bit different.
     # TODO(atuchin): support other platforms.
 

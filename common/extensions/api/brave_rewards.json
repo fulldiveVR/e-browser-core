@@ -332,7 +332,7 @@
       {
         "name": "recordNTPPanelTrigger",
         "type": "function",
-        "description": "Records an NTP Rewards card 'Start using Brave Rewards' click.",
+        "description": "Records an NTP Rewards card 'Start using AI Wiz Rewards' click.",
         "parameters": []
       },
       {

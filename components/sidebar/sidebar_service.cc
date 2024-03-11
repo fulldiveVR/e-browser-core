@@ -155,8 +155,6 @@ void SidebarService::MigratePrefSidebarBuiltInItemsToHidden() {
   built_in_items_to_hide.push_back(
       GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBraveTalk));
   built_in_items_to_hide.push_back(
-      GetBuiltInItemForType(SidebarItem::BuiltInItemType::kWallet));
-  built_in_items_to_hide.push_back(
       GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBookmarks));
 
   // We will also correct built-in items which did not specify their type
@@ -440,10 +438,18 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // Use this order for picking active panel when panel is opened as
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
-      SidebarItem::BuiltInItemType::kChatUI,
+      SidebarItem::BuiltInItemType::kAiWize,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,
-      SidebarItem::BuiltInItemType::kPlaylist};
+      SidebarItem::BuiltInItemType::kPlaylist,
+      SidebarItem::BuiltInItemType::kChatUI,
+      SidebarItem::BuiltInItemType::kWhatsapp,
+      SidebarItem::BuiltInItemType::kSlack,
+      SidebarItem::BuiltInItemType::kDiscord,
+      SidebarItem::BuiltInItemType::kGoogleDocs,
+      SidebarItem::BuiltInItemType::kGoogleCalendar,
+      SidebarItem::BuiltInItemType::kPlaylist
+  };
 
   std::optional<SidebarItem> default_item;
   for (const auto& type : kPreferredPanelOrder) {
@@ -588,13 +594,18 @@ SidebarItem SidebarService::GetBuiltInItemForType(
     SidebarItem::BuiltInItemType type) const {
   switch (type) {
     case SidebarItem::BuiltInItemType::kBraveTalk:
+#ifdef AIWIZE_BROWSER
+      return SidebarItem();
+#else
       return SidebarItem::Create(GURL(kBraveTalkURL),
                                  brave_l10n::GetLocalizedResourceUTF16String(
                                      IDS_SIDEBAR_BRAVE_TALK_ITEM_TITLE),
                                  SidebarItem::Type::kTypeBuiltIn,
                                  SidebarItem::BuiltInItemType::kBraveTalk,
                                  /* open_in_panel = */ false);
+#endif
     case SidebarItem::BuiltInItemType::kWallet: {
+#ifndef AIWIZE_BROWSER
       if (brave_wallet::IsAllowed(prefs_)) {
         return SidebarItem::Create(GURL("chrome://wallet/"),
                                    brave_l10n::GetLocalizedResourceUTF16String(
@@ -603,7 +614,9 @@ SidebarItem SidebarService::GetBuiltInItemForType(
                                    SidebarItem::BuiltInItemType::kWallet,
                                    /* open_in_panel = */ false);
       }
+#else
       return SidebarItem();
+#endif
     }
     case SidebarItem::BuiltInItemType::kBookmarks:
       return SidebarItem::Create(brave_l10n::GetLocalizedResourceUTF16String(
@@ -633,6 +646,62 @@ SidebarItem SidebarService::GetBuiltInItemForType(
       } else {
         return SidebarItem();
       }
+    }
+    case SidebarItem::BuiltInItemType::kAiWize: {
+      return SidebarItem::Create(GURL("https://aiwize.com"),
+                                u"AI Wize",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiWize,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kMessenger: {
+      return SidebarItem::Create(GURL("https://facebook.com"),
+                                u"Messenger",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kMessenger,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kTrello: {
+      return SidebarItem::Create(GURL("https://trello.com"),
+                                u"Trello",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kTrello,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kWhatsapp: {
+      return SidebarItem::Create(GURL("https://whatsapp.com"),
+                                u"Whatsapp",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kWhatsapp,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kSlack: {
+      return SidebarItem::Create(GURL("https://slack.com"),
+                                u"Slack",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kSlack,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kDiscord: {
+      return SidebarItem::Create(GURL("https://discord.com"),
+                                u"Discord",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kDiscord,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kGoogleDocs: {
+      return SidebarItem::Create(GURL("https://docs.google.com/spreadsheets/"),
+                                u"Google Docs",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kGoogleDocs,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kGoogleCalendar: {
+      return SidebarItem::Create(GURL("https://calendar.google.com/"),
+                                u"Google Calendar",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kGoogleCalendar,
+                                 /* open_in_panel = */ false);
     }
     case SidebarItem::BuiltInItemType::kPlaylist: {
       if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {

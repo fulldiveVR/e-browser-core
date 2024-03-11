@@ -786,7 +786,7 @@ TEST(BraveWalletUtilsUnitTest, GetNetworkURLTest) {
   values.push_back(NetworkInfoToValue(chain2));
   UpdateCustomNetworks(&prefs, std::move(values), mojom::CoinType::ETH);
   for (const auto& chain : GetAllKnownChains(&prefs, mojom::CoinType::ETH)) {
-    // Brave proxies should have infura key added to path.
+    // AI Wiz proxies should have infura key added to path.
     GURL rpc_url(chain->rpc_endpoints.front());
     if (base::EndsWith(rpc_url.host(), "brave.com")) {
       rpc_url = AddInfuraProjectId(rpc_url);

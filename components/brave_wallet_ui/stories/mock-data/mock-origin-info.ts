@@ -15,6 +15,6 @@ export const mockUniswapOriginInfo: BraveWallet.OriginInfo = {
 }
 
 export const mockBraveWalletOrigin: BraveWallet.OriginInfo = {
-  originSpec: 'brave://wallet',
+  originSpec: 'aiwize://wallet',
   eTldPlusOne: 'wallet'
 }

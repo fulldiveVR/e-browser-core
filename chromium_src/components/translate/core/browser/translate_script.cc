@@ -29,7 +29,7 @@ std::string GetAPIKey() {
 
 namespace translate {
 
-// Redirect the translate script request to the Brave endpoints.
+// Redirect the translate script request to the AI Wiz endpoints.
 GURL ChromiumTranslateScript::AddHostLocaleToUrl(const GURL& url) {
   GURL result = ::translate::AddHostLocaleToUrl(url);
   const GURL google_translate_script(kScriptURL);

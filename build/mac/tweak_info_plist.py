@@ -45,7 +45,7 @@ def _RemoveKeys(plist, *keys):
 
 def _OverrideVersionKey(plist, brave_version):
     """ `minor.build` version string is used for update.
-    When we begin to use the Major version component, Brave version string will
+    When we begin to use the Major version component, AI Wiz version string will
     be `1.0.0` for example and `Minor.Build` (`0.0`) would be used for update
     check. Without modifying these numbers, update will fail as `0.0` is lower
     than `70.121` for example.

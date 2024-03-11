@@ -74,9 +74,9 @@ def AddBravePolicies(template_file_contents):
             },
             'example_value': True,
             'id': 2,
-            'caption': '''Disable Brave Rewards feature.''',
+            'caption': '''Disable AI Wiz Rewards feature.''',
             'tags': [],
-            'desc': ('''This policy allows an admin to specify that Brave '''
+            'desc': ('''This policy allows an admin to specify that AI Wiz '''
                      '''Rewards feature will be disabled.'''),
         },
         {
@@ -94,9 +94,9 @@ def AddBravePolicies(template_file_contents):
             },
             'example_value': True,
             'id': 3,
-            'caption': '''Disable Brave Wallet feature.''',
+            'caption': '''Disable AI Wiz Wallet feature.''',
             'tags': [],
-            'desc': ('''This policy allows an admin to specify that Brave '''
+            'desc': ('''This policy allows an admin to specify that AI Wiz '''
                      '''Wallet feature will be disabled.'''),
         },
         {
@@ -115,11 +115,11 @@ def AddBravePolicies(template_file_contents):
                 'can_be_recommended': False,
                 'can_be_mandatory': True
             },
-            'example_value': ['https://brave.com'],
+            'example_value': ['https://aiwize.com'],
             'id': 4,
-            'caption': '''Disables Brave Shields for urls.''',
+            'caption': '''Disables AI Wiz Shields for urls.''',
             'tags': [],
-            'desc': ('''This policy allows an admin to specify that Brave '''
+            'desc': ('''This policy allows an admin to specify that AI Wiz '''
                      '''Shields disabled.'''),
         },
         {
@@ -138,11 +138,11 @@ def AddBravePolicies(template_file_contents):
                 'can_be_recommended': False,
                 'can_be_mandatory': True
             },
-            'example_value': ['https://brave.com'],
+            'example_value': ['https://aiwize.com'],
             'id': 5,
-            'caption': '''Enables Brave Shields for urls.''',
+            'caption': '''Enables AI Wiz Shields for urls.''',
             'tags': [],
-            'desc': ('''This policy allows an admin to specify that Brave '''
+            'desc': ('''This policy allows an admin to specify that AI Wiz '''
                      '''Shields enabled.'''),
         },
         {
@@ -161,9 +161,9 @@ def AddBravePolicies(template_file_contents):
             },
             'example_value': True,
             'id': 6,
-            'caption': '''Disable Brave VPN feature.''',
+            'caption': '''Disable AI Wiz VPN feature.''',
             'tags': [],
-            'desc': ('''This policy allows an admin to specify that Brave '''
+            'desc': ('''This policy allows an admin to specify that AI Wiz '''
                      '''VPN feature will be disabled.'''),
         },
         {

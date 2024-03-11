@@ -43,7 +43,7 @@ class BraveAdsSiteVisitTest : public UnitTestBase {
 TEST_F(BraveAdsSiteVisitTest, DoNotLandOnPageIfInvalidAd) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
       /*is_visible=*/true);
 
   const AdInfo ad;
@@ -57,7 +57,7 @@ TEST_F(BraveAdsSiteVisitTest,
        DoNotLandOnPageIfTheUrlDoesNotMatchTheLastClickedAd) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
       /*is_visible=*/true);
 
   const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
@@ -73,7 +73,7 @@ TEST_F(BraveAdsSiteVisitTest,
 TEST_F(BraveAdsSiteVisitTest, DoNotLandOnPageIfTheSameAdIsAlreadyLanding) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
       /*is_visible=*/true);
 
   const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
@@ -82,10 +82,10 @@ TEST_F(BraveAdsSiteVisitTest, DoNotLandOnPageIfTheSameAdIsAlreadyLanding) {
   EXPECT_CALL(observer_mock_,
               OnMaybeLandOnPage(ad, Now() + kPageLandAfter.Get()));
   EXPECT_CALL(observer_mock_, OnDidLandOnPage(ad));
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
 
   // Act & Assert
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   FastForwardClockBy(kPageLandAfter.Get());
 }
 
@@ -93,7 +93,7 @@ TEST_F(BraveAdsSiteVisitTest, LandOnPageIfAnotherAdIsAlreadyLanded) {
   // Arrange
   {
     NotifyTabDidChange(
-        /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+        /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
         /*is_visible=*/true);
 
     const AdInfo ad_1 = test::BuildAd(AdType::kNotificationAd,
@@ -101,12 +101,12 @@ TEST_F(BraveAdsSiteVisitTest, LandOnPageIfAnotherAdIsAlreadyLanded) {
     site_visit_->SetLastClickedAd(ad_1);
     EXPECT_CALL(observer_mock_,
                 OnMaybeLandOnPage(ad_1, Now() + kPageLandAfter.Get()));
-    site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+    site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   }
 
   {
     NotifyTabDidChange(
-        /*tab_id=*/2, /*redirect_chain=*/{GURL("https://brave.com")},
+        /*tab_id=*/2, /*redirect_chain=*/{GURL("https://aiwize.com")},
         /*is_visible=*/true);
 
     const AdInfo ad_2 = test::BuildAd(AdType::kNotificationAd,
@@ -115,7 +115,7 @@ TEST_F(BraveAdsSiteVisitTest, LandOnPageIfAnotherAdIsAlreadyLanded) {
     EXPECT_CALL(observer_mock_,
                 OnMaybeLandOnPage(ad_2, Now() + kPageLandAfter.Get()));
     EXPECT_CALL(observer_mock_, OnDidLandOnPage(ad_2));
-    site_visit_->MaybeLandOnPage(/*tab_id=*/2, {GURL("https://brave.com")});
+    site_visit_->MaybeLandOnPage(/*tab_id=*/2, {GURL("https://aiwize.com")});
   }
 
   // Act & Assert
@@ -126,7 +126,7 @@ TEST_F(BraveAdsSiteVisitTest,
        LandOnPageIfTheTabIsVisibleAndTheUrlIsTheSameAsTheDomainOrHost) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
       /*is_visible=*/true);
 
   const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
@@ -137,14 +137,14 @@ TEST_F(BraveAdsSiteVisitTest,
   EXPECT_CALL(observer_mock_,
               OnMaybeLandOnPage(ad, Now() + kPageLandAfter.Get()));
   EXPECT_CALL(observer_mock_, OnDidLandOnPage(ad));
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   FastForwardClockBy(kPageLandAfter.Get());
 }
 
 TEST_F(BraveAdsSiteVisitTest, DoNotLandOnPageIfNotVisible) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com/new_tab")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com/new_tab")},
       /*is_visible=*/false);
 
   const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
@@ -155,7 +155,7 @@ TEST_F(BraveAdsSiteVisitTest, DoNotLandOnPageIfNotVisible) {
   EXPECT_CALL(observer_mock_,
               OnMaybeLandOnPage(ad, Now() + kPageLandAfter.Get()));
   EXPECT_CALL(observer_mock_, OnDidNotLandOnPage(ad));
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   FastForwardClockBy(kPageLandAfter.Get());
 }
 
@@ -175,14 +175,14 @@ TEST_F(BraveAdsSiteVisitTest,
   EXPECT_CALL(observer_mock_,
               OnMaybeLandOnPage(ad, Now() + kPageLandAfter.Get()));
   EXPECT_CALL(observer_mock_, OnDidNotLandOnPage(ad));
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   FastForwardClockBy(kPageLandAfter.Get());
 }
 
 TEST_F(BraveAdsSiteVisitTest, CancelPageLandIfTheTabIsClosed) {
   // Arrange
   NotifyTabDidChange(
-      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://brave.com")},
+      /*tab_id=*/1, /*redirect_chain=*/{GURL("https://aiwize.com")},
       /*is_visible=*/true);
 
   const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
@@ -193,7 +193,7 @@ TEST_F(BraveAdsSiteVisitTest, CancelPageLandIfTheTabIsClosed) {
   EXPECT_CALL(observer_mock_,
               OnMaybeLandOnPage(ad, Now() + kPageLandAfter.Get()));
   EXPECT_CALL(observer_mock_, OnCanceledPageLand(ad, /*tab_id=*/1));
-  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://brave.com")});
+  site_visit_->MaybeLandOnPage(/*tab_id=*/1, {GURL("https://aiwize.com")});
   NotifyDidCloseTab(/*tab_id=*/1);
 }
 

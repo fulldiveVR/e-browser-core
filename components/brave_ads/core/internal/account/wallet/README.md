@@ -1,5 +1,5 @@
 # Wallet
 
-Wallet for earning Brave Rewards.
+Wallet for earning AI Wiz Rewards.
 
 Please add to it!

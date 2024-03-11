@@ -62,7 +62,7 @@ class BraveDownloadItemView : public DownloadItemView {
 
   void SetOriginUrlVisible(bool visible);
 
-  // Brave download item model.
+  // AI Wiz download item model.
   BraveDownloadItemModel brave_model_;
 
   // The font list used to draw the origin URL text.

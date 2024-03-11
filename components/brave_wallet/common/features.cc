@@ -14,7 +14,12 @@ namespace features {
 
 BASE_FEATURE(kNativeBraveWalletFeature,
              "NativeBraveWallet",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+#ifdef AIWIZE_BROWSER
+             base::FEATURE_DISABLED_BY_DEFAULT
+#else
+             base::FEATURE_ENABLED_BY_DEFAULT
+#endif
+);
 
 BASE_FEATURE(kBraveWalletNftPinningFeature,
              "BraveWalletNftPinning",

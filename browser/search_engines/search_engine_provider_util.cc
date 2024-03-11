@@ -141,7 +141,7 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile* profile) {
   const std::string private_provider_guid =
       prefs->GetString(prefs::kSyncedDefaultPrivateSearchProviderGUID);
 
-  // Set Brave as a private window's initial search provider.
+  // Set AI Wiz as a private window's initial search provider.
   if (private_provider_guid.empty()) {
     SetBraveAsDefaultPrivateSearchProvider(profile);
     return;

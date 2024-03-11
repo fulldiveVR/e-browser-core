@@ -32,7 +32,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
         description:
           "This service is used to obtain swap price quotes and transactions to sign."
         trigger:
-          "Triggered by uses of the native Brave wallet."
+          "Triggered by uses of the native AI Wiz wallet."
         data:
           "0x and Jupiter API response bodies."
         destination: WEBSITE

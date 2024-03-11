@@ -167,7 +167,9 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
              host == kBraveNewsInternalsHost) {
     return new BraveNewsInternalsUI(web_ui, url.host());
   } else if (host == kWelcomeHost && !profile->IsGuestSession()) {
-    return new BraveWelcomeUI(web_ui, url.host());
+    // TODO AI Wize Browser: Welcome is disabled and temporary moved to New Tab
+    //return new BraveWelcomeUI(web_ui, url.host());
+    return new BraveNewTabUI(web_ui, url.host());
   } else if (host == chrome::kChromeUISettingsHost) {
     return new BraveSettingsUI(web_ui, url.host());
   } else if (host == chrome::kChromeUINewTabHost) {

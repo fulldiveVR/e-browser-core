@@ -76,10 +76,10 @@ TEST_F(BandwidthSavingsPredictorTest, FeaturiseTiming) {
 TEST_F(BandwidthSavingsPredictorTest, FeaturiseResourceLoading) {
   EXPECT_EQ(predictor_->feature_map_["resources.third-party.requestCount"], 0);
 
-  const GURL main_frame("https://brave.com/");
+  const GURL main_frame("https://aiwize.com/");
 
   auto fp_style = predictors::CreateResourceLoadInfo(
-      "https://brave.com/style.css",
+      "https://aiwize.com/style.css",
       network::mojom::RequestDestination::kStyle);
   fp_style->raw_body_bytes = 1000;
   predictor_->OnResourceLoadComplete(main_frame, *fp_style);
@@ -108,8 +108,8 @@ TEST_F(BandwidthSavingsPredictorTest, PredictZeroNoData) {
 }
 
 TEST_F(BandwidthSavingsPredictorTest, PredictZeroInternalUrl) {
-  const GURL main_frame("brave://version");
-  auto res = predictors::CreateResourceLoadInfo("brave://version");
+  const GURL main_frame("aiwize://version");
+  auto res = predictors::CreateResourceLoadInfo("aiwize://version");
   predictor_->OnResourceLoadComplete(main_frame, *res);
 
   EXPECT_EQ(predictor_->PredictSavingsBytes(), 0);
@@ -118,7 +118,7 @@ TEST_F(BandwidthSavingsPredictorTest, PredictZeroInternalUrl) {
 TEST_F(BandwidthSavingsPredictorTest, PredictZeroBadFrame) {
   const GURL main_frame("");
   auto res = predictors::CreateResourceLoadInfo(
-      "https://brave.com/style.css",
+      "https://aiwize.com/style.css",
       network::mojom::RequestDestination::kStyle);
   res->raw_body_bytes = 1000;
   predictor_->OnResourceLoadComplete(main_frame, *res);
@@ -127,9 +127,9 @@ TEST_F(BandwidthSavingsPredictorTest, PredictZeroBadFrame) {
 }
 
 TEST_F(BandwidthSavingsPredictorTest, PredictZeroNoBlocks) {
-  const GURL main_frame("https://brave.com");
+  const GURL main_frame("https://aiwize.com");
   auto res = predictors::CreateResourceLoadInfo(
-      "https://brave.com/style.css",
+      "https://aiwize.com/style.css",
       network::mojom::RequestDestination::kStyle);
   res->raw_body_bytes = 1000;
   predictor_->OnResourceLoadComplete(main_frame, *res);
@@ -138,9 +138,9 @@ TEST_F(BandwidthSavingsPredictorTest, PredictZeroNoBlocks) {
 }
 
 TEST_F(BandwidthSavingsPredictorTest, PredictNonZero) {
-  const GURL main_frame("https://brave.com");
+  const GURL main_frame("https://aiwize.com");
   auto res = predictors::CreateResourceLoadInfo(
-      "https://brave.com/style.css",
+      "https://aiwize.com/style.css",
       network::mojom::RequestDestination::kStyle);
   res->raw_body_bytes = 200000;
   res->total_received_bytes = 200000;

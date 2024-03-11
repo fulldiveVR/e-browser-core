@@ -78,7 +78,7 @@ std::optional<int> ChromeMainDelegate::BasicStartupComplete() {
 
   command_line.AppendSwitchASCII(switches::kLsoUrl, kDummyUrl);
 
-  // Brave variations
+  // AI Wiz variations
   command_line.AppendSwitchASCII(variations::switches::kVariationsServerURL,
                                  BUILDFLAG(BRAVE_VARIATIONS_SERVER_URL));
   // Insecure fall-back for variations is set to the same (secure) URL. This is

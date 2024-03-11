@@ -118,7 +118,7 @@ IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, IsBraveWalletDisabled) {
   }
 }
 
-// Verify that Wallet service doesn't get created when Brave Wallet is
+// Verify that Wallet service doesn't get created when AI Wiz Wallet is
 // disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, GetWalletService) {
   if (IsBraveWalletDisabledTest()) {
@@ -143,7 +143,7 @@ IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, AppMenuItemDisabled) {
   }
 }
 
-// Verify that brave://wallet page isn't reachable when Brave Wallet is
+// Verify that aiwize://wallet page isn't reachable when AI Wiz Wallet is
 // disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, WalletPageAccess) {
   const GURL url("chrome://wallet");
@@ -152,7 +152,7 @@ IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, WalletPageAccess) {
   EXPECT_EQ(IsBraveWalletDisabledTest(), rfh->IsErrorDocument());
 }
 
-// Verify that the wallet item is not shown in the sidebar when Brave Wallet is
+// Verify that the wallet item is not shown in the sidebar when AI Wiz Wallet is
 // disabled by policy.
 IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, WalletInSidebar) {
   BraveBrowser* brave_browser = static_cast<BraveBrowser*>(browser());

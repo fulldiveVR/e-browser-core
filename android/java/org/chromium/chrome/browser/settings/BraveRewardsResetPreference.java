@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import org.chromium.chrome.R;
 
 /**
- * The preference used to reset Brave Rewards.
+ * The preference used to reset AI Wiz Rewards.
  */
 public class BraveRewardsResetPreference extends DialogPreference {
     /**

@@ -553,7 +553,7 @@ void BraveRenderViewContextMenu::BuildAIChatMenu() {
 void BraveRenderViewContextMenu::AddSpellCheckServiceItem(bool is_checked) {
   // Call our implementation, not the one in the base class.
   // Assumption:
-  // Use of spelling service is disabled in Brave profile preferences.
+  // Use of spelling service is disabled in AI Wiz profile preferences.
   DCHECK(!GetProfile()->GetPrefs()->GetBoolean(
       spellcheck::prefs::kSpellCheckUseSpellingService));
   AddSpellCheckServiceItem(&menu_model_, is_checked);
@@ -563,7 +563,7 @@ void BraveRenderViewContextMenu::AddSpellCheckServiceItem(bool is_checked) {
 void BraveRenderViewContextMenu::AddSpellCheckServiceItem(
     ui::SimpleMenuModel* menu,
     bool is_checked) {
-  // Suppress adding "Spellcheck->Ask Brave for suggestions" item.
+  // Suppress adding "Spellcheck->Ask AI Wiz for suggestions" item.
 }
 
 void BraveRenderViewContextMenu::AddAccessibilityLabelsServiceItem(

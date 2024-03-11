@@ -18,7 +18,7 @@ import org.chromium.chrome.browser.crypto_wallet.activities.BraveWalletActivity;
 import org.chromium.chrome.browser.crypto_wallet.listeners.OnNextPage;
 
 /**
- * Base Brave Wallet fragment that performs a cast on the host activity to extract {@link
+ * Base AI Wiz Wallet fragment that performs a cast on the host activity to extract {@link
  * OnNextPage} interface used for basic navigation actions.
  */
 public abstract class BaseWalletNextPageFragment extends Fragment {

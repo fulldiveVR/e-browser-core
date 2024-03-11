@@ -16,7 +16,7 @@ import androidx.preference.PreferenceViewHolder;
 import org.chromium.chrome.R;
 
 /**
- * The preference used to reset Brave Playlist.
+ * The preference used to reset AI Wiz Playlist.
  */
 public class BravePlaylistResetPreference
         extends Preference implements Preference.OnPreferenceClickListener {

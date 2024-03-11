@@ -221,7 +221,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTagForURLLoad() {
           "tallying the attention spent on visited sites and dividing up a "
           "monthly BAT contribution."
         trigger:
-          "User-initiated for direct tipping or on a set interval while Brave "
+          "User-initiated for direct tipping or on a set interval while AI Wiz "
           "is running for monthly contributions."
         data:
           "Publisher and contribution data."
@@ -231,7 +231,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTagForURLLoad() {
         cookies_allowed: NO
         setting:
           "You can enable or disable this feature via the BAT icon in the URL "
-          "bar or by visiting brave://rewards/."
+          "bar or by visiting aiwize://rewards/."
         policy_exception_justification:
           "Not implemented."
       })");

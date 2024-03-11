@@ -372,7 +372,7 @@ TEST_F(SidebarServiceTest, UpdateItem) {
   EXPECT_FALSE(service_->IsEditableItemAt(last_item_index));
 
   SidebarItem brave_item;
-  const GURL brave_url("https://brave.com/");
+  const GURL brave_url("https://aiwize.com/");
   const std::u16string brave_title(u"Brave software");
   brave_item.url = brave_url;
   brave_item.title = brave_title;
@@ -823,7 +823,7 @@ TEST_F(SidebarServiceTest, BuiltInItemUpdateTestWithBuiltInItemTypeKey) {
 
   InitService();
 
-  // Brave Talk and Reading list.
+  // AI Wiz Talk and Reading list.
   auto expected_count = 2UL;
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {

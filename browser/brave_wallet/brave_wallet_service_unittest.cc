@@ -172,7 +172,7 @@ const char interface_not_supported_response[] = R"({
       "result":"0x0000000000000000000000000000000000000000000000000000000000000000"
   })";
 
-constexpr char kBraveUrl[] = "https://brave.com";
+constexpr char kBraveUrl[] = "https://aiwize.com";
 
 class MockDataRemovalObserver : public StoragePartition::DataRemovalObserver {
  public:
@@ -1981,7 +1981,7 @@ TEST_F(BraveWalletServiceUnitTest, SignMessageHardware) {
   SetupWallet();
 
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   std::string expected_signature = std::string("0xSiGnEd");
   // That should be hw account per test name.
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
@@ -2045,7 +2045,7 @@ TEST_F(BraveWalletServiceUnitTest, SignMessage) {
   SetupWallet();
 
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   std::string expected_signature = std::string("0xSiGnEd");
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
   std::string domain = "{}";
@@ -2243,7 +2243,7 @@ TEST_F(BraveWalletServiceUnitTest, Reset) {
   EXPECT_TRUE(GetPrefs()->HasPrefPath(kDefaultBaseCurrency));
   EXPECT_TRUE(GetPrefs()->HasPrefPath(kDefaultBaseCryptocurrency));
   mojom::OriginInfoPtr origin_info =
-      MakeOriginInfo(url::Origin::Create(GURL("https://brave.com")));
+      MakeOriginInfo(url::Origin::Create(GURL("https://aiwize.com")));
   auto account_id = GetAccountUtils().EnsureEthAccount(0)->account_id.Clone();
   std::string domain = "{}";
   std::string message = "0xAB";

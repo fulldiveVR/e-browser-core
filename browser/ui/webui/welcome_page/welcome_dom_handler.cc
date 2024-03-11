@@ -61,7 +61,7 @@ bool IsChromeDev(const std::u16string& browser_name) {
 
 WelcomeDOMHandler::WelcomeDOMHandler(Profile* profile) : profile_(profile) {
   base::MakeRefCounted<shell_integration::DefaultSchemeClientWorker>(
-      GURL("https://brave.com"))
+      GURL("https://aiwize.com"))
       ->StartCheckIsDefaultAndGetDefaultClientName(
           base::BindOnce(&WelcomeDOMHandler::OnGetDefaultBrowser,
                          weak_ptr_factory_.GetWeakPtr()));
@@ -143,7 +143,7 @@ void WelcomeDOMHandler::HandleOpenSettingsPage(const base::Value::List& args) {
   Browser* browser = chrome::FindBrowserWithProfile(profile_);
   if (browser) {
     content::OpenURLParams open_params(
-        GURL("brave://settings/privacy"), content::Referrer(),
+        GURL("aiwize://settings/privacy"), content::Referrer(),
         WindowOpenDisposition::NEW_BACKGROUND_TAB,
         ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
     browser->OpenURL(open_params);

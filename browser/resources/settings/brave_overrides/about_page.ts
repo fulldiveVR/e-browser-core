@@ -27,7 +27,7 @@ RegisterPolymerTemplateModifications({
     if (!section.querySelector('a#release-notes')) {
       const version = section.querySelector('#updateStatusMessage ~ .secondary')
       if (!version) {
-        console.error('[Brave Settings Overrides] Could not find version div')
+        console.error('[AI Wize Settings Overrides] Could not find version div')
       }
       // Remove the class from the version, so we take the link styling.
       version.removeAttribute('class')
@@ -37,7 +37,7 @@ RegisterPolymerTemplateModifications({
       wrapper.setAttribute('id', 'release-notes')
       wrapper.setAttribute('target', '_blank')
       wrapper.setAttribute('rel', 'noopener noreferrer')
-      wrapper.setAttribute('href', 'https://brave.com/latest/')
+      wrapper.setAttribute('href', 'https://aiwize.com/latest/')
       parent.replaceChild(wrapper, version)
       wrapper.appendChild(version)
     }

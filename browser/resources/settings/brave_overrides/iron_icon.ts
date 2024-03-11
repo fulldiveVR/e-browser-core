@@ -9,7 +9,7 @@ import 'chrome://resources/brave/leo.bundle.js'
 
 const leoIcons = (window as any)['leoIcons'] as Set<string>
 
-// Maps Chromium icons to their equivalent Brave icons.
+// Maps Chromium icons to their equivalent AI Wiz icons.
 const iconMap: { [key: string]: string } = {
   'cr:security': 'lock',
   'cr:search': 'search',

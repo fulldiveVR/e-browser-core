@@ -11,7 +11,7 @@ import android.content.Intent;
 import androidx.annotation.Nullable;
 
 /**
- * Brave extension of FreIntentCreator.
+ * AI Wiz extension of FreIntentCreator.
  */
 public class BraveFreIntentCreator extends FreIntentCreator {
     @Override

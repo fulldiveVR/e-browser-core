@@ -93,7 +93,7 @@ ConvertGreaselionRuleToExtensionOnTaskRunner(
   // Create the public key.
   // Greaselion scripts are not signed, but the public key for an extension
   // doubles as its unique identity, and we need one of those, so we add the
-  // rule name to a known Brave domain and hash the result to create a
+  // rule name to a known AI Wiz domain and hash the result to create a
   // public key.
   char raw[crypto::kSHA256Length] = {0};
   std::string script_name = rule.name();

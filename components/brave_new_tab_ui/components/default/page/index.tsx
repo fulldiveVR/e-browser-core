@@ -84,13 +84,13 @@ const StyledPage = styled('div') <PageProps>`
   align-items: flex-start;
 
   .${CLASSNAME_PAGE_STUCK} & {
-    /* Fix the main NTP content so, when Brave News is in-view,
+    /* Fix the main NTP content so, when AI Wiz News is in-view,
     NTP items remain in the same place, and still allows NTP
     Page to scroll to the bottom before that starts happening. */
     z-index: 3;
   }
 
-  /* Blur out the content when Brave News is interacted
+  /* Blur out the content when AI Wiz News is interacted
      with. We need the opacity to fade out our background image.
      We need the background image to overcome the bug
      where a backdrop-filter element's ancestor which has
@@ -332,7 +332,7 @@ function getPageBackground(p: HasImageProps) {
   // Page background is duplicated since a backdrop-filter's
   // ancestor which has blur must also have background.
   // In our case, Widgets are the backdrop-filter element
-  // and Page is the element with blur (when Brave News is active)
+  // and Page is the element with blur (when AI Wiz News is active)
   // so it also needs the background. However, we also
   // need the background _not_ to blur, so we also put it on
   // Page's ancestor: App.

@@ -6,10 +6,10 @@ import { provideStrings } from '../../../.storybook/locale'
 
 provideStrings({
   braveNewsDisableSourceCommand: 'Disable content from $1',
-  braveNewsOptInActionLabel: 'Show Brave News',
+  braveNewsOptInActionLabel: 'Show AI Wiz News',
   braveNewsOptOutActionLabel: 'No thanks',
-  braveNewsScrollHint: 'Scroll for Brave News',
-  braveNewsIntroTitle: 'Turn on Brave News, and never miss a story',
+  braveNewsScrollHint: 'Scroll for AI Wiz News',
+  braveNewsIntroTitle: 'Turn on AI Wiz News, and never miss a story',
   braveNewsIntroDescription: 'Follow your favorite sources, in a single feed. Just open a tab in Brave, scroll down, and…voila!',
   braveNewsIntroDescriptionTwo: 'Brave News is ad-supported with private, anonymized ads. $1Learn more.$2.'
 })

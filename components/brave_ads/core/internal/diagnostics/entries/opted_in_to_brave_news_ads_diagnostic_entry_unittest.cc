@@ -22,7 +22,7 @@ TEST_F(BraveAdsOptedInToBraveNewsAdsDiagnosticEntryTest, IsOptedIn) {
   // Act & Assert
   EXPECT_EQ(DiagnosticEntryType::kOptedInToBraveNewsAds,
             diagnostic_entry.GetType());
-  EXPECT_EQ("Opted-in to Brave News ads", diagnostic_entry.GetName());
+  EXPECT_EQ("Opted-in to AI Wiz News ads", diagnostic_entry.GetName());
   EXPECT_EQ("true", diagnostic_entry.GetValue());
 }
 
@@ -35,7 +35,7 @@ TEST_F(BraveAdsOptedInToBraveNewsAdsDiagnosticEntryTest, IsOptedOut) {
   // Act & Assert
   EXPECT_EQ(DiagnosticEntryType::kOptedInToBraveNewsAds,
             diagnostic_entry.GetType());
-  EXPECT_EQ("Opted-in to Brave News ads", diagnostic_entry.GetName());
+  EXPECT_EQ("Opted-in to AI Wiz News ads", diagnostic_entry.GetName());
   EXPECT_EQ("false", diagnostic_entry.GetValue());
 }
 

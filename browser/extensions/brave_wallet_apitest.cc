@@ -148,7 +148,7 @@ IN_PROC_BROWSER_TEST_F(BraveWalletExtensionApiTest,
       browser()->profile()->GetPrefs(),
       brave_wallet::mojom::DefaultWallet::CryptoWallets);
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://settings/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("aiwize://settings/")));
 
   const Extension* extension =
       LoadExtension(extension_dir_.AppendASCII("braveWallet"));
@@ -169,7 +169,7 @@ IN_PROC_BROWSER_TEST_F(BraveWalletExtensionApiTest,
       browser()->profile()->GetPrefs(),
       brave_wallet::mojom::DefaultWallet::CryptoWallets);
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://settings/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("aiwize://settings/")));
 
   const Extension* extension =
       LoadExtension(extension_dir_.AppendASCII("braveWallet"));

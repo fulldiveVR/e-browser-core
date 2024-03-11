@@ -10,30 +10,30 @@
 namespace brave_shields {
 namespace features {
 
-// When enabled, Brave will block first-party requests that appear in a filter
-// list when Shields is in "standard" blocking mode. When disabled, Brave will
+// When enabled, AI Wiz will block first-party requests that appear in a filter
+// list when Shields is in "standard" blocking mode. When disabled, AI Wiz will
 // allow first-party requests in "standard" blocking mode regardless of whether
 // or not they appear in a filter list.
 BASE_FEATURE(kBraveAdblockDefault1pBlocking,
              "BraveAdblockDefault1pBlocking",
              base::FEATURE_DISABLED_BY_DEFAULT);
-// When enabled, Brave will issue DNS queries for requests that the adblock
+// When enabled, AI Wiz will issue DNS queries for requests that the adblock
 // engine has not blocked, then check them again with the original hostname
 // substituted for any canonical name found.
 BASE_FEATURE(kBraveAdblockCnameUncloaking,
              "BraveAdblockCnameUncloaking",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will apply HTML element collapsing to all images and
+// When enabled, AI Wiz will apply HTML element collapsing to all images and
 // iframes that initiate a blocked network request.
 BASE_FEATURE(kBraveAdblockCollapseBlockedElements,
              "BraveAdblockCollapseBlockedElements",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will enable "Easylist-Cookie List" by default unless
+// When enabled, AI Wiz will enable "Easylist-Cookie List" by default unless
 // overridden by a locally set preference.
 BASE_FEATURE(kBraveAdblockCookieListDefault,
              "BraveAdblockCookieListDefault",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will display a bubble inviting the user to turn on the
+// When enabled, AI Wiz will display a bubble inviting the user to turn on the
 // "Easylist-Cookie List" filter.
 BASE_FEATURE(kBraveAdblockCookieListOptIn,
              "BraveAdblockCookieListOptIn",
@@ -47,12 +47,12 @@ BASE_FEATURE(kBraveAdblockScriptletDebugLogs,
 BASE_FEATURE(kBraveAdblockCspRules,
              "BraveAdblockCspRules",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will enable "Fanboy's Mobile Notifications List" by
+// When enabled, AI Wiz will enable "Fanboy's Mobile Notifications List" by
 // default unless overridden by a locally set preference.
 BASE_FEATURE(kBraveAdblockMobileNotificationsListDefault,
              "BraveAdblockMobileNotificationsListDefault",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will block domains listed in the user's selected adblock
+// When enabled, AI Wiz will block domains listed in the user's selected adblock
 // filters and present a security interstitial with choice to proceed and
 // optionally whitelist the domain.
 // Domain block filters look like this:
@@ -60,7 +60,7 @@ BASE_FEATURE(kBraveAdblockMobileNotificationsListDefault,
 BASE_FEATURE(kBraveDomainBlock,
              "BraveDomainBlock",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will attempt to enable 1PES mode in a standard blocking
+// When enabled, AI Wiz will attempt to enable 1PES mode in a standard blocking
 // mode when a user visists a domain that is present in currently active adblock
 // filters. 1PES will be enabled only if neither cookies nor localStorage data
 // is stored for the website.
@@ -68,15 +68,15 @@ BASE_FEATURE(kBraveDomainBlock1PES,
              "BraveDomainBlock1PES",
              base::FEATURE_ENABLED_BY_DEFAULT);
 // When enabled, network requests initiated by extensions will be checked and
-// potentially blocked by Brave Shields.
+// potentially blocked by AI Wiz Shields.
 BASE_FEATURE(kBraveExtensionNetworkBlocking,
              "BraveExtensionNetworkBlocking",
              base::FEATURE_DISABLED_BY_DEFAULT);
-// When enabled, language headers and APIs may be altered by Brave Shields.
+// When enabled, language headers and APIs may be altered by AI Wiz Shields.
 BASE_FEATURE(kBraveReduceLanguage,
              "BraveReduceLanguage",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, show Strict (aggressive) fingerprinting mode in Brave Shields.
+// When enabled, show Strict (aggressive) fingerprinting mode in AI Wiz Shields.
 BASE_FEATURE(kBraveShowStrictFingerprintingMode,
              "BraveShowStrictFingerprintingMode",
              base::FEATURE_ENABLED_BY_DEFAULT);
@@ -85,7 +85,7 @@ BASE_FEATURE(kBraveShowStrictFingerprintingMode,
 BASE_FEATURE(kBraveLocalhostAccessPermission,
              "BraveLocalhostAccessPermission",
              base::FEATURE_DISABLED_BY_DEFAULT);
-// When enabled, Brave will always report Light in Fingerprinting: Strict mode
+// When enabled, AI Wiz will always report Light in Fingerprinting: Strict mode
 BASE_FEATURE(kBraveDarkModeBlock,
              "BraveDarkModeBlock",
              base::FEATURE_ENABLED_BY_DEFAULT);

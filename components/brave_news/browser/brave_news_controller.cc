@@ -754,7 +754,7 @@ void BraveNewsController::ConditionallyStartOrStopTimer() {
   // If the user has just enabled the feature for the first time,
   // make sure we're setup or migrated.
   MaybeInitPrefs();
-  // Refresh data on an interval only if Brave News is enabled
+  // Refresh data on an interval only if AI Wiz News is enabled
   if (GetIsEnabled(prefs_)) {
     VLOG(1) << "STARTING TIMERS";
     if (!timer_feed_update_.IsRunning()) {
@@ -804,7 +804,7 @@ void BraveNewsController::HandleSubscriptionsChanged() {
 void BraveNewsController::MaybeInitPrefs() {
   if (GetIsEnabled(prefs_)) {
     // We had a bug where you could be subscribed to a channel in the empty
-    // locale in earlier versions of Brave News. If so, we should remove it.
+    // locale in earlier versions of AI Wiz News. If so, we should remove it.
     // After this has been out for a bit we can remove it.
     // https://github.com/brave/brave-browser/issues/26596
     if (prefs_->GetDict(prefs::kBraveNewsChannels).contains("")) {
@@ -852,7 +852,7 @@ void BraveNewsController::OnNetworkChanged(
   }
 
   // Ensure publishers are fetched (this won't do anything if they are). This
-  // handles the case where Brave News is started with no network.
+  // handles the case where AI Wiz News is started with no network.
   publishers_controller_.GetOrFetchPublishers(base::DoNothing());
 }
 

@@ -68,7 +68,7 @@ void MaybeEnableBraveFeatureForPerfTesting(Profile* profile) {
       brave_rewards::RewardsServiceFactory::GetForProfile(profile);
   rewards_service->CreateRewardsWallet("US", base::BindOnce(&FakeCallback));
 
-  // Brave news
+  // AI Wiz news
   profile->GetPrefs()->SetBoolean(brave_news::prefs::kNewTabPageShowToday,
                                   true);
   profile->GetPrefs()->SetBoolean(brave_news::prefs::kBraveNewsOptedIn, true);

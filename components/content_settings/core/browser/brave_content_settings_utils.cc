@@ -110,7 +110,7 @@ std::optional<ContentSettingsPattern> ConvertPatternToWildcardSchemeAndPort(
   return new_pattern;
 }
 
-// Returns the full path in the user preferences store to the Brave Shields
+// Returns the full path in the user preferences store to the AI Wiz Shields
 // setting identified by it's name (i.e. |name|).
 std::string GetShieldsSettingUserPrefsPath(const std::string& name) {
   return std::string("profile.content_settings.exceptions.").append(name);

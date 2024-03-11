@@ -20,7 +20,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     r.MANAGE_PROFILE = r.GET_STARTED.createChild('/manageProfile');
     // We re-section people page into getStarted section (see people_page Brave
     // override), so we need to adjust the route accordingly in order for the
-    // direct navigation to brave://settings/importData to work.
+    // direct navigation to aiwize://settings/importData to work.
     if (r.IMPORT_DATA) {
       r.IMPORT_DATA.section = 'getStarted'
     }
@@ -67,7 +67,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   }
   if (pageVisibility.leoAssistant) {
     r.BRAVE_LEO_ASSISTANT =
-      r.BASIC.createSection('/leo-assistant', 'leoAssistant')
+      r.BASIC.createSection('/aiwize-chat-assistant', 'leoAssistant')
   }
   if (pageVisibility.content) {
     r.BRAVE_CONTENT = r.BASIC.createSection('/brave-content', 'content')

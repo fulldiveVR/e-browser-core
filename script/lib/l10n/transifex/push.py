@@ -207,7 +207,7 @@ def upload_source_string_file_to_transifex(source_file_path, filename,
 
 
 def check_for_chromium_upgrade_extra_langs(src_root, grd_file_path):
-    """Checks the Brave GRD file vs the Chromium GRD file for extra
+    """Checks the AI Wiz GRD file vs the Chromium GRD file for extra
        languages."""
     chromium_grd_file_path = get_original_grd(src_root, grd_file_path)
     if not chromium_grd_file_path:
@@ -222,7 +222,7 @@ def check_for_chromium_upgrade_extra_langs(src_root, grd_file_path):
     x_chromium_extra_langs = chromium_langs - brave_langs
     assert len(x_chromium_extra_langs) == 0, \
         f'Chromium GRD {chromium_grd_file_path} has extra languages ' \
-            f'{list(x_chromium_extra_langs)} over Brave GRD {grd_file_path}'
+            f'{list(x_chromium_extra_langs)} over AI Wiz GRD {grd_file_path}'
 
 
 def get_transifex_source_resource_strings(grd_file_path):
@@ -275,7 +275,7 @@ def upload_translation_to_transifex(source_string_path, lang_code, filename,
 
 
 def braveify(string_value):
-    """Replace Chromium branded strings with Brave branded strings."""
+    """Replace Chromium branded strings with AI Wiz branded strings."""
     return (string_value.replace('Chrome', 'Brave')
             .replace('Chromium', 'Brave')
             .replace('Google', 'Brave')

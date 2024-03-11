@@ -41,7 +41,7 @@ net::NetworkTrafficAnnotationTag kAnnotationTag =
           description:
             "Fetches CAPTCHA data from Brave."
           trigger:
-            "The Brave service indicates that it's time to solve a CAPTCHA."
+            "The AI Wiz service indicates that it's time to solve a CAPTCHA."
           data: "Brave CAPTCHA data."
           destination: WEBSITE
         }

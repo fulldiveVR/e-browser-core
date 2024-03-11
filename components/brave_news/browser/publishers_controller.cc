@@ -282,7 +282,7 @@ void PublishersController::EnsurePublishersIsUpdating() {
 void PublishersController::UpdateDefaultLocale() {
   auto available_locales = GetPublisherLocales(publishers_);
 
-  // Locale can be "language_Script_COUNTRY.charset@variant" but Brave News
+  // Locale can be "language_Script_COUNTRY.charset@variant" but AI Wiz News
   // wants the format to be "language_COUNTRY".
   const std::string brave_news_locale =
       base::StrCat({brave_l10n::GetDefaultISOLanguageCodeString(), "_",

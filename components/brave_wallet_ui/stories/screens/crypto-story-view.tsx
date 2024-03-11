@@ -78,7 +78,7 @@ const CryptoStoryView = (props: Props) => {
 
   const onClickSettings = () => {
     // Does nothing in storybook
-    alert('Will Nav to brave://settings/wallet')
+    alert('Will Nav to aiwize://settings/wallet')
   }
 
   const onClickMore = () => {

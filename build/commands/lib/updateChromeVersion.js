@@ -32,7 +32,7 @@ function updateChromeVersion() {
       // Keep MAJOR.
       assert(versionLines[line].startsWith('MAJOR='))
     } else {
-      // Set MINOR, BUILD, PATCH to Brave version.
+      // Set MINOR, BUILD, PATCH to AI Wiz version.
       versionLines[line] = versionLines[line].replace(
         versionLineRegex,
         `$1=${braveVersionParts[line - 1]}`

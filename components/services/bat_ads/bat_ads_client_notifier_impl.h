@@ -56,7 +56,7 @@ class BatAdsClientNotifierImpl : public bat_ads::mojom::BatAdsClientNotifier {
   // Invoked when a resource component with `id` has been unregistered.
   void NotifyDidUnregisterResourceComponent(const std::string& id) override;
 
-  // Invoked when the Brave Reward wallet did change.
+  // Invoked when the AI Wiz Reward wallet did change.
   void NotifyRewardsWalletDidUpdate(const std::string& payment_id,
                                     const std::string& recovery_seed) override;
 

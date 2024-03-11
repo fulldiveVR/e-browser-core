@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 /**
- * Fragment to display Brave license information.
+ * Fragment to display AI Wiz license information.
  */
 public class BraveLicensePreferences extends BravePreferenceFragment {
     private static final String TAG = "BraveLicense";

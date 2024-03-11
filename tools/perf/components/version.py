@@ -39,7 +39,7 @@ class BraveVersion:
 
   def __init__(self, version_str: str) -> None:
     m = re.match(r'v\d+\.\d+\.\d+', version_str)
-    if m is not None:  # Brave tag (v1.62.35)
+    if m is not None:  # AI Wiz tag (v1.62.35)
       revision = f'refs/tags/{version_str}'
       self._is_tag = True
     else:  # could be git hash
