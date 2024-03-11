@@ -71,7 +71,7 @@ BookmarkBarInstructionsView::BookmarkBarInstructionsView(Browser* browser)
 
 gfx::Size BookmarkBarInstructionsView::CalculatePreferredSize() const {
   int height = 0, width = 0;
-  for (auto* view : children()) {
+  for (views::View* view : children()) {
     gfx::Size pref = view->GetPreferredSize();
     height = std::max(pref.height(), height);
     width += pref.width();
@@ -81,20 +81,16 @@ gfx::Size BookmarkBarInstructionsView::CalculatePreferredSize() const {
   return gfx::Size(width + insets.width(), height + insets.height());
 }
 
-void BookmarkBarInstructionsView::Layout() {
+void BookmarkBarInstructionsView::Layout(PassKey) {
   int remaining_width = width();
   int x = 0;
-  for (auto* view : children()) {
+  for (views::View* view : children()) {
     gfx::Size pref = view->GetPreferredSize();
     int view_width = std::min(remaining_width, pref.width());
     view->SetBounds(x, 0, view_width, height());
     x += view_width + GetViewPadding();
     remaining_width = std::max(0, width() - x);
   }
-}
-
-const char* BookmarkBarInstructionsView::GetClassName() const {
-  return "BookmarkBarInstructionsView";
 }
 
 void BookmarkBarInstructionsView::OnThemeChanged() {

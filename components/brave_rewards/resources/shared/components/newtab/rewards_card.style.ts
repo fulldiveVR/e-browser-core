@@ -48,10 +48,6 @@ export const cardHeaderText = styled.div`
   margin-top: 2px;
 `
 
-export const unsupportedRegionCard = styled.div`
-  margin-top: 24px;
-`
-
 export const optInIcon = styled.div`
   margin-top: 14px;
   margin-left: auto;
@@ -611,4 +607,16 @@ export const selfCustodyInviteDismiss = styled.div`
     font: ${leo.font.components.buttonSmall};
   }
 `
+
+export const tosUpdateNotice = styled.div.attrs({
+  'data-theme': 'light'
+})`
+  margin: 8px -10px 0;
+
+  --tos-update-notice-border-radius: 8px;
+  --tos-update-notice-padding: 16px;
+  --tos-update-heading-padding-bottom: 0;
+  --tos-update-notice-heading-font: ${leo.font.heading.h4};
+  --tos-update-notice-text-font: ${leo.font.small.link};
+`;
 

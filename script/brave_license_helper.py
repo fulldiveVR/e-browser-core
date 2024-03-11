@@ -4,6 +4,9 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import os
+import subprocess
+
+BRAVE_SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 BRAVE_THIRD_PARTY_DIRS = [
     'vendor',
@@ -25,7 +28,6 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
     prune_paths.update([
         # Formerly external Brave code which has moved to brave-core
         # (i.e these are already covered by the Brave Browser license notice).
-        os.path.join('brave', 'third_party', 'challenge_bypass_ristretto_ffi'),
         os.path.join('brave', 'vendor', 'brave-ios'),
         os.path.join('brave', 'vendor', 'brave_base'),
 
@@ -33,14 +35,45 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
         # android_deps/libs instead and it's special-cased further down.
         os.path.join('brave', 'third_party', 'android_deps'),
 
+        # No third-party code directly under ios_deps.
+        os.path.join('brave', 'third_party', 'ios_deps'),
+
         # Brave overrides to third-party code, also covered by main notice.
         os.path.join('brave', 'third_party', 'blink'),
         os.path.join('brave', 'third_party', 'libaddressinput'),
         os.path.join('brave', 'patches', 'third_party'),
 
+        # Dependencies that are already in brave-core, and whose notices
+        # therefore do not need to be repeated.
+        os.path.join('brave', 'vendor', 'omaha', 'omaha', 'third_party',
+                     'chrome'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'libzip'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'lzma'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'zlib'),
+
+        # Dependencies already mentioned in the main breakpad notice.
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad',
+                     'src', 'third_party', 'curl'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad',
+                     'src', 'third_party', 'libdisasm'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad',
+                     'src', 'third_party', 'linux'),
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad',
+                     'src', 'third_party', 'mac_headers'),
+
+        # Essentially empty directories that should be cleaned up upstream.
+        os.path.join('brave', 'vendor', 'omaha', 'omaha', 'third_party',
+                     'hashlib'),
+
+        # No licensing information in recursive dependency. This should be
+        # added upstream.
+        os.path.join('brave', 'vendor', 'omaha', 'omaha', 'third_party',
+                     'smartany'),
+
         # Build dependencies which don't end up in the binaries.
         os.path.join('brave', 'vendor', 'depot_tools'),
         os.path.join('brave', 'vendor', 'gn-project-generators'),
+        os.path.join('brave', 'vendor', 'omaha', 'omaha', 'scons-out'),
     ])
 
     # Add the licensing info that would normally be in a README.chromium file.
@@ -79,18 +112,22 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
                 "/brave/vendor/omaha/third_party/breakpad/LICENSE"
             ],
         },
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'googletest'): {
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad',
+                     'src', 'third_party', 'musl'): {
+            "Name": "musl",
+            "URL": "https://musl.libc.org/",
+            "License File": [
+                "/brave/vendor/omaha/third_party/breakpad/src/third_party/"
+                "musl/COPYRIGHT"
+            ],
+        },
+        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'googletest'):
+        {
             "Name": "GoogleTest",
             "URL": "https://github.com/google/googletest",
             "License": "BSD",
             "License File":
                 ["/brave/vendor/omaha/third_party/googletest/LICENSE"],
-        },
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'libzip'): {
-            "Name": "libzip",
-            "URL": "https://libzip.org",
-            "License": "BSD",
-            "License File": ["/brave/vendor/omaha/third_party/libzip/LICENSE"],
         },
         os.path.join('brave', 'third_party', 'rapidjson'): {
             "Name": "RapidJSON",
@@ -117,12 +154,6 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
             "License": "MIT",
             "License File": \
                 ["/brave/third_party/rust/either/v1/crate/LICENSE-MIT"],
-        },
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'zlib'): {
-            "Name": "zlib",
-            "URL": "https://zlib.net",
-            "License": "zlib",
-            "License File": ["/brave/vendor/omaha/third_party/zlib/README"],
         },
         os.path.join('brave', 'vendor', 'python-patch'): {
             "Name": "Python Patch",
@@ -153,7 +184,7 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
     prune_list += [
         'chromium_src',  # Brave's overrides, covered by main notice.
         'node_modules',  # See brave/third_party/npm-* instead.
-        '.vscode',       # Automatically added by Visual Studio.
+        '.vscode',  # Automatically added by Visual Studio.
     ]
     prune_dirs = tuple(prune_list)
 
@@ -178,6 +209,14 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
             dirname = os.path.basename(dirpath)
             additional_list += [os.path.join(android_libs, dirname)]
 
+    # Add all iOS libraries since they're not directly contained
+    # within a third_party directory. iOS deps will never be nested
+    ios_deps = os.path.join('brave', 'third_party', 'ios_deps')
+    for dirname in os.listdir(os.path.join(root, ios_deps)):
+        if not os.path.isdir(os.path.join(root, ios_deps, dirname)):
+            continue
+        additional_list += [os.path.join(ios_deps, dirname)]
+
     additional_paths = tuple(additional_list)
 
     return (prune_dirs, additional_paths)
@@ -185,6 +224,16 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
 
 def CheckBraveMissingLicense(target_os, path, error):
     if path.startswith('brave'):
+        output = subprocess.check_output(
+            [
+                'git', 'status', '-z',
+                os.path.join(os.path.relpath(path, 'brave'), 'LICENSE')
+            ],
+            cwd=os.path.abspath(os.path.join(BRAVE_SCRIPT_PATH,
+                                             os.pardir))).decode("utf-8")
+        if output.startswith('??'):
+            return  # Ignore untracked files
+
         if target_os == 'android':
             if path in DESKTOP_ONLY_PATHS:
                 return  # Desktop failures are not relevant on Android.

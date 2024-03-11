@@ -20,6 +20,7 @@
 #include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/ntp_background/ntp_tab_helper.h"
+#include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/skus/skus_service_factory.h"
 #include "brave/browser/ui/bookmark/brave_bookmark_tab_helper.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
@@ -36,6 +37,7 @@
 #include "chrome/browser/browser_process.h"
 #include "chrome/common/channel_info.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
+#include "components/user_prefs/user_prefs.h"
 #include "components/version_info/channel.h"
 #include "components/version_info/version_info.h"
 #include "content/public/browser/browser_context.h"
@@ -59,7 +61,7 @@
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/content/browser/ai_chat_tab_helper.h"
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
 #endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
@@ -94,11 +96,13 @@
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
-#include "brave/browser/playlist/playlist_tab_helper.h"
+#include "brave/browser/playlist/playlist_service_factory.h"
+#include "brave/components/playlist/browser/playlist_tab_helper.h"
 #endif
 
 #if defined(TOOLKIT_VIEWS)
 #include "brave/browser/onboarding/onboarding_tab_helper.h"
+#include "brave/browser/ui/sidebar/sidebar_tab_helper.h"
 #endif
 
 namespace brave {
@@ -131,19 +135,20 @@ void AttachTabHelpers(content::WebContents* web_contents) {
   brave_rewards::RewardsTabHelper::CreateForWebContents(web_contents);
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
-  if (ai_chat::features::IsAIChatEnabled()) {
     content::BrowserContext* context = web_contents->GetBrowserContext();
-    auto skus_service_getter = base::BindRepeating(
-        [](content::BrowserContext* context) {
-          return skus::SkusServiceFactory::GetForContext(context);
-        },
-        context);
-    ai_chat::AIChatTabHelper::CreateForWebContents(
-        web_contents,
-        g_brave_browser_process->process_misc_metrics()->ai_chat_metrics(),
-        skus_service_getter, g_browser_process->local_state(),
-        std::string(version_info::GetChannelString(chrome::GetChannel())));
-  }
+    if (ai_chat::IsAIChatEnabled(user_prefs::UserPrefs::Get(context)) &&
+        IsRegularProfile(context)) {
+      auto skus_service_getter = base::BindRepeating(
+          [](content::BrowserContext* context) {
+            return skus::SkusServiceFactory::GetForContext(context);
+          },
+          context);
+      ai_chat::AIChatTabHelper::CreateForWebContents(
+          web_contents,
+          g_brave_browser_process->process_misc_metrics()->ai_chat_metrics(),
+          skus_service_getter, g_browser_process->local_state(),
+          std::string(version_info::GetChannelString(chrome::GetChannel())));
+    }
 #endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
@@ -183,6 +188,7 @@ void AttachTabHelpers(content::WebContents* web_contents) {
 
 #if defined(TOOLKIT_VIEWS)
   OnboardingTabHelper::MaybeCreateForWebContents(web_contents);
+  sidebar::SidebarTabHelper::MaybeCreateForWebContents(web_contents);
 #endif
 
   if (base::FeatureList::IsEnabled(net::features::kBraveEphemeralStorage)) {
@@ -204,8 +210,10 @@ void AttachTabHelpers(content::WebContents* web_contents) {
   }
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
-  playlist::PlaylistTabHelper::MaybeCreateForWebContents(web_contents);
-#endif
+  playlist::PlaylistTabHelper::MaybeCreateForWebContents(
+      web_contents, playlist::PlaylistServiceFactory::GetForBrowserContext(
+                        web_contents->GetBrowserContext()));
+#endif  // BUILDFLAG(ENABLE_PLAYLIST)
 }
 
 }  // namespace brave

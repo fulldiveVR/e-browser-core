@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/prefs/browser_prefs.cc b/chrome/browser/prefs/browser_prefs.cc
-index 2c9e95b07c762a9f38a530093531e7342c6109c1..91b1791ec7713529bdc4c59d3b21209ba3260159 100644
+index 2ab6e767c374164c6613688d46e9a2af1be5cbba..e95b24b7e4f359450e682997edf3f1259c66c996 100644
 --- a/chrome/browser/prefs/browser_prefs.cc
 +++ b/chrome/browser/prefs/browser_prefs.cc
 @@ -1668,6 +1668,8 @@ void RegisterLocalState(PrefRegistrySimple* registry) {
@@ -11,9 +11,9 @@ index 2c9e95b07c762a9f38a530093531e7342c6109c1..91b1791ec7713529bdc4c59d3b21209b
  #if BUILDFLAG(ENABLE_SCREEN_AI_SERVICE)
    screen_ai::RegisterLocalStatePrefs(registry);
  #endif  // BUILDFLAG(ENABLE_SCREEN_AI_SERVICE)
-@@ -2118,6 +2120,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry,
+@@ -2116,6 +2118,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry,
  #if BUILDFLAG(ENABLE_COMPOSE)
-   registry->RegisterBooleanPref(prefs::kPrefHasAcceptedComposeConsent, false);
+   registry->RegisterBooleanPref(prefs::kPrefHasCompletedComposeFRE, false);
  #endif
 +  brave::RegisterProfilePrefs(registry);
  }

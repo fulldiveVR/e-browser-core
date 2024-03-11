@@ -12,9 +12,10 @@
 #include "base/base64url.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/common/signer.h"
+#include "brave/components/brave_rewards/core/common/url_helpers.h"
 #include "brave/components/brave_rewards/core/database/database.h"
-#include "brave/components/brave_rewards/core/endpoint/rewards/rewards_util.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
 #include "brave/components/brave_rewards/core/logging/event_log_keys.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
@@ -22,7 +23,6 @@
 #include "brave/components/brave_rewards/core/wallet/wallet_util.h"
 #include "brave/components/brave_rewards/core/wallet_provider/linkage_checker.h"
 #include "net/base/url_util.h"
-#include "url/gurl.h"
 
 namespace brave_rewards::internal {
 
@@ -57,7 +57,8 @@ const char* SolanaWalletProvider::WalletType() const {
 void SolanaWalletProvider::AssignWalletLinks(
     mojom::ExternalWallet& external_wallet) {
   auto explorer_url =
-      GURL("https://solscan.io/account/").Resolve(external_wallet.address);
+      URLHelpers::Resolve(GURL("https://explorer.solana.com/address/"),
+                          {external_wallet.address, "/tokens"});
   external_wallet.account_url = explorer_url.spec();
   external_wallet.activity_url = explorer_url.spec();
 }
@@ -115,7 +116,7 @@ void SolanaWalletProvider::OnPostChallengesResponse(
   base::Base64UrlEncode(
       signed_message, base::Base64UrlEncodePolicy::INCLUDE_PADDING, &signature);
 
-  GURL url(endpoint::rewards::GetServerUrl("/connect/"));
+  auto url = Get<EnvironmentConfig>().rewards_url().Resolve("/connect/");
   url = net::AppendOrReplaceQueryParameter(url, "msg", message);
   url = net::AppendOrReplaceQueryParameter(url, "sig", signature);
 

@@ -8,6 +8,7 @@
 #include <utility>
 #include <vector>
 
+#include "base/auto_reset.h"
 #include "base/logging.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
@@ -15,6 +16,7 @@
 #include "brave/components/brave_sync/crypto/crypto.h"
 #include "brave/components/sync/service/brave_sync_auth_manager.h"
 #include "brave/components/sync/service/sync_service_impl_delegate.h"
+#include "build/build_config.h"
 #include "components/prefs/pref_service.h"
 #include "components/sync/engine/sync_protocol_error.h"
 #include "components/sync/model/type_entities_count.h"
@@ -47,6 +49,8 @@ BraveSyncServiceImpl::~BraveSyncServiceImpl() {
 }
 
 void BraveSyncServiceImpl::Initialize() {
+  base::AutoReset<bool> is_initializing_resetter(&is_initializing_, true);
+
   SyncServiceImpl::Initialize();
 
   // P3A ping for those who have sync disabled
@@ -61,7 +65,12 @@ bool BraveSyncServiceImpl::IsSetupInProgress() const {
 }
 
 void BraveSyncServiceImpl::StopAndClear() {
-  brave_sync_prefs_.AddLeaveChainDetail(__FILE__, __LINE__, __func__);
+  // StopAndClear is invoked during |SyncServiceImpl::Initialize| even if sync
+  // is not enabled. This adds lots of useless lines into
+  // `brave_sync_v2.diag.leave_chain_details`
+  if (!is_initializing_) {
+    brave_sync_prefs_.AddLeaveChainDetail(__FILE__, __LINE__, __func__);
+  }
   // Clear prefs before StopAndClear() to make NotifyObservers() be invoked
   brave_sync_prefs_.Clear();
   SyncServiceImpl::StopAndClear();
@@ -323,13 +332,17 @@ void BraveSyncServiceImpl::LocalDeviceAppeared() {
 }
 
 namespace {
-const int kCyclesBeforeUpdateP3AObjects = 10;
+// Typical cycle takes 30 sec, let's send P3A updates each ~30 minutes
+const int kCyclesBeforeUpdateP3AObjects = 60;
+// And Let's do the first update in ~5 minutes after sync start
+const int kCyclesBeforeFirstUpdatesP3A = 10;
 }  // namespace
 
 void BraveSyncServiceImpl::OnSyncCycleCompleted(
     const SyncCycleSnapshot& snapshot) {
   SyncServiceImpl::OnSyncCycleCompleted(snapshot);
-  if (completed_cycles_count_ % kCyclesBeforeUpdateP3AObjects == 0) {
+  if (completed_cycles_count_ == kCyclesBeforeFirstUpdatesP3A ||
+      completed_cycles_count_ % kCyclesBeforeUpdateP3AObjects == 0) {
     UpdateP3AObjectsNumber();
   }
   ++completed_cycles_count_;
@@ -347,12 +360,24 @@ void BraveSyncServiceImpl::OnGotEntityCounts(
     total_entities += count.non_tombstone_entities;
   }
 
-  brave_sync::p3a::RecordSyncedObjectsCount(total_entities);
+  if (GetUserSettings()->GetSelectedTypes().Has(
+          syncer::UserSelectableType::kHistory)) {
+    // History stores info about synced objects in a different way than the
+    // others types. Issue a separate request to achieve this info
+    sync_service_impl_delegate_->GetKnownToSyncHistoryCount(base::BindOnce(
+        [](int total_entities, std::pair<bool, int> known_to_sync_count) {
+          brave_sync::p3a::RecordSyncedObjectsCount(total_entities +
+                                                    known_to_sync_count.second);
+        },
+        total_entities));
+  } else {
+    brave_sync::p3a::RecordSyncedObjectsCount(total_entities);
+  }
 }
 
-void BraveSyncServiceImpl::OnPreferredDataTypesPrefChange(
+void BraveSyncServiceImpl::OnSelectedTypesPrefChange(
     bool payments_integration_enabled_changed) {
-  SyncServiceImpl::OnPreferredDataTypesPrefChange(
+  SyncServiceImpl::OnSelectedTypesPrefChange(
       payments_integration_enabled_changed);
 
   brave_sync::p3a::RecordEnabledTypes(

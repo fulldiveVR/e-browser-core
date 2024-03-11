@@ -9,8 +9,6 @@ import { loadTimeData } from '$web-common/loadTimeData'
 import getPageHandlerInstance, * as mojom from '../api/page_handler'
 import DataContext, { AIChatContext } from './context'
 
-const URL_MANAGE_PREMIUM = 'https://account.brave.com/'
-
 function toBlobURL(data: number[] | null) {
   if (!data) return undefined
 
@@ -33,6 +31,7 @@ function DataContextProvider (props: DataContextProviderProps) {
     title: undefined,
     isContentAssociationPossible: false,
     isContentTruncated: false,
+    hostname: undefined,
   })
   const [favIconUrl, setFavIconUrl] = React.useState<string>()
   const [currentError, setCurrentError] = React.useState<mojom.APIError>(mojom.APIError.None)
@@ -208,9 +207,7 @@ function DataContextProvider (props: DataContextProviderProps) {
   }
 
   const managePremium = () => {
-    getPageHandlerInstance().pageHandler.openURL({
-      url: URL_MANAGE_PREMIUM
-    })
+    getPageHandlerInstance().pageHandler.managePremium()
   }
 
   const initialiseForTargetTab = async () => {
@@ -227,6 +224,8 @@ function DataContextProvider (props: DataContextProviderProps) {
     getCanShowPremiumPrompt()
     getShouldSendPageContents()
   }
+
+  const isMobile = React.useMemo(() => loadTimeData.getBoolean('isMobile'), [])
 
   React.useEffect(() => {
     initialiseForTargetTab()
@@ -294,6 +293,7 @@ function DataContextProvider (props: DataContextProviderProps) {
     shouldShowLongConversationInfo,
     showAgreementModal,
     shouldSendPageContents: shouldSendPageContents && siteInfo?.isContentAssociationPossible,
+    isMobile,
     setCurrentModel,
     switchToBasicModel,
     goPremium,

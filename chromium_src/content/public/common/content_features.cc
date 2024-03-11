@@ -23,13 +23,13 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kDigitalGoodsApi, base::FEATURE_DISABLED_BY_DEFAULT},
     {kDIPS, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFedCm, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kFirstPartySets, base::FEATURE_DISABLED_BY_DEFAULT},
     {kLegacyTechReportEnableCookieIssueReports,
      base::FEATURE_DISABLED_BY_DEFAULT},
     {kLegacyTechReportTopLevelUrl, base::FEATURE_DISABLED_BY_DEFAULT},
     {kNotificationTriggers, base::FEATURE_DISABLED_BY_DEFAULT},
     {kPrivacySandboxAdsAPIsOverride, base::FEATURE_DISABLED_BY_DEFAULT},
     {kSignedHTTPExchange, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kWebIdentityDigitalCredentials, base::FEATURE_DISABLED_BY_DEFAULT},
 #if BUILDFLAG(IS_ANDROID)
     {kWebNfc, base::FEATURE_DISABLED_BY_DEFAULT},
 #endif

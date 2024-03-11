@@ -67,7 +67,7 @@ import {
   CopyIcon
 } from './account-details-header.style'
 import {
-  CircleButton,
+  MenuButton,
   ButtonIcon,
   MenuWrapper,
   HorizontalDivider
@@ -77,7 +77,7 @@ import { Row, Column, HorizontalSpace } from '../../shared/style'
 interface Props {
   account: BraveWallet.AccountInfo
   onClickMenuOption: (option: AccountModalTypes) => void
-  tokenBalancesRegistry: TokenBalancesRegistry | undefined
+  tokenBalancesRegistry: TokenBalancesRegistry | undefined | null
 }
 
 export const AccountDetailsHeader = (props: Props) => {
@@ -172,21 +172,27 @@ export const AccountDetailsHeader = (props: Props) => {
   ])
 
   const menuOptions = React.useMemo((): AccountButtonOptionsObjectType[] => {
+    let options = AccountDetailsMenuOptions
     // We are not able to remove a Derived account
     // so we filter out this option.
     if (account.accountId.kind === BraveWallet.AccountKind.kDerived) {
-      return AccountDetailsMenuOptions.filter(
+      options = options.filter(
         (option: AccountButtonOptionsObjectType) => option.id !== 'remove'
       )
     }
     // We are not able to fetch Private Keys for
     // a Hardware account so we filter out this option.
-    if (account.accountId.kind === BraveWallet.AccountKind.kHardware) {
-      return AccountDetailsMenuOptions.filter(
+    // BTC and ZEC are not yet supported.
+    if (
+      account.accountId.coin === BraveWallet.CoinType.BTC ||
+      account.accountId.coin === BraveWallet.CoinType.ZEC ||
+      account.accountId.kind === BraveWallet.AccountKind.kHardware
+    ) {
+      options = options.filter(
         (option: AccountButtonOptionsObjectType) => option.id !== 'privateKey'
       )
     }
-    return AccountDetailsMenuOptions
+    return options
   }, [account])
 
   const goBack = React.useCallback(() => {
@@ -199,7 +205,7 @@ export const AccountDetailsHeader = (props: Props) => {
       justifyContent='space-between'
     >
       <Row width='unset'>
-        <CircleButton
+        <MenuButton
           size={28}
           marginRight={16}
           onClick={goBack}
@@ -208,7 +214,7 @@ export const AccountDetailsHeader = (props: Props) => {
             size={16}
             name='arrow-left'
           />
-        </CircleButton>
+        </MenuButton>
         <CreateAccountIcon
           account={account}
           size='big'
@@ -263,11 +269,11 @@ export const AccountDetailsHeader = (props: Props) => {
           </>
         )}
         <MenuWrapper ref={accountDetailsMenuRef}>
-          <CircleButton
+          <MenuButton
             onClick={() => setShowAccountDetailsMenu((prev) => !prev)}
           >
             <ButtonIcon name='more-vertical' />
-          </CircleButton>
+          </MenuButton>
           {showAccountDetailsMenu && (
             <AccountDetailsMenu
               options={menuOptions}

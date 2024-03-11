@@ -32,12 +32,14 @@ class AIChatUI : public ui::UntrustedWebUIController {
   void BindInterface(
       mojo::PendingReceiver<ai_chat::mojom::PageHandler> receiver);
 
-  // Set by BubbleContentsWrapperT. MojoBubbleWebUIController provides default
+  // Set by WebUIContentsWrapperT. MojoBubbleWebUIController provides default
   // implementation for this but we don't use it.
   void set_embedder(
       base::WeakPtr<ui::MojoBubbleWebUIController::Embedder> embedder) {
     embedder_ = embedder;
   }
+
+  static constexpr std::string GetWebUIName() { return "AIChatPanel"; }
 
  private:
   std::unique_ptr<ai_chat::mojom::PageHandler> page_handler_;

@@ -128,18 +128,8 @@ BraveRewardsIsSupportedFunction::~BraveRewardsIsSupportedFunction() = default;
 
 ExtensionFunction::ResponseAction BraveRewardsIsSupportedFunction::Run() {
   Profile* profile = Profile::FromBrowserContext(browser_context());
-  bool is_supported = ::brave_rewards::IsSupportedForProfile(
-      profile, ::brave_rewards::IsSupportedOptions::kSkipRegionCheck);
+  bool is_supported = ::brave_rewards::IsSupportedForProfile(profile);
   return RespondNow(WithArguments(is_supported));
-}
-
-BraveRewardsIsUnsupportedRegionFunction::
-    ~BraveRewardsIsUnsupportedRegionFunction() = default;
-
-ExtensionFunction::ResponseAction
-BraveRewardsIsUnsupportedRegionFunction::Run() {
-  bool is_unsupported_region = ::brave_rewards::IsUnsupportedRegion();
-  return RespondNow(WithArguments(is_unsupported_region));
 }
 
 BraveRewardsRecordNTPPanelTriggerFunction::
@@ -1165,6 +1155,36 @@ BraveRewardsDismissSelfCustodyInviteFunction::Run() {
         brave_rewards::OnSelfCustodyInviteDismissed::kEventName,
         base::Value::List()));
   }
+  return RespondNow(NoArguments());
+}
+
+BraveRewardsIsTermsOfServiceUpdateRequiredFunction::
+    ~BraveRewardsIsTermsOfServiceUpdateRequiredFunction() = default;
+
+ExtensionFunction::ResponseAction
+BraveRewardsIsTermsOfServiceUpdateRequiredFunction::Run() {
+  auto* profile = Profile::FromBrowserContext(browser_context());
+  auto* rewards_service = RewardsServiceFactory::GetForProfile(profile);
+  if (!rewards_service) {
+    return RespondNow(Error("Rewards service is not initialized"));
+  }
+
+  return RespondNow(
+      WithArguments(rewards_service->IsTermsOfServiceUpdateRequired()));
+}
+
+BraveRewardsAcceptTermsOfServiceUpdateFunction::
+    ~BraveRewardsAcceptTermsOfServiceUpdateFunction() = default;
+
+ExtensionFunction::ResponseAction
+BraveRewardsAcceptTermsOfServiceUpdateFunction::Run() {
+  auto* profile = Profile::FromBrowserContext(browser_context());
+  auto* rewards_service = RewardsServiceFactory::GetForProfile(profile);
+  if (!rewards_service) {
+    return RespondNow(Error("Rewards service is not initialized"));
+  }
+
+  rewards_service->AcceptTermsOfServiceUpdate();
   return RespondNow(NoArguments());
 }
 

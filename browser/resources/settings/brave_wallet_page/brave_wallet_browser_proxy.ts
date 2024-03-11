@@ -37,15 +37,18 @@ export type NetworksList = {
   hiddenNetworks: string[]
 }
 
-export type SolanaProvider = {
+export type Option = {
   name: string
   value: number
 }
+
+export type SolanaProvider = Option
 
 export interface BraveWalletBrowserProxy {
   setBraveWalletEnabled(value: boolean): void
   getWeb3ProviderList(): Promise<string>
   getSolanaProviderOptions(): Promise<SolanaProvider[]>
+  getTransactionSimulationOptInStatusOptions(): Promise<Option[]>
   isNativeWalletEnabled(): Promise<boolean>
   isNftPinningEnabled(): Promise<boolean>
   isBitcoinEnabled(): Promise<boolean>
@@ -61,6 +64,7 @@ export interface BraveWalletBrowserProxy {
   resetTransactionInfo (): void
   getPinnedNftCount(): Promise<number>
   clearPinnedNft(): Promise<boolean>
+  isTransactionSimulationsFeatureEnabled(): Promise<boolean>
 }
 
 export class BraveWalletBrowserProxyImpl implements BraveWalletBrowserProxy {
@@ -132,12 +136,24 @@ export class BraveWalletBrowserProxyImpl implements BraveWalletBrowserProxy {
     return sendWithPromise('isBitcoinEnabled')
   }
 
+  isZCashEnabled() {
+    return sendWithPromise('isZCashEnabled')
+  }
+
   getPinnedNftCount() {
     return sendWithPromise('getPinnedNftCount')
   }
 
   clearPinnedNft() {
     return sendWithPromise('clearPinnedNft')
+  }
+
+  getTransactionSimulationOptInStatusOptions() {
+    return sendWithPromise('getTransactionSimulationOptInStatusOptions')
+  }
+
+  isTransactionSimulationsFeatureEnabled() {
+    return sendWithPromise('isTransactionSimulationsFeatureEnabled')
   }
 
   static getInstance() {

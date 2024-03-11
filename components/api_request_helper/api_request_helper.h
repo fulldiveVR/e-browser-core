@@ -35,7 +35,6 @@ class APIRequestResult {
  public:
   APIRequestResult();
   APIRequestResult(int response_code,
-                   std::string body,
                    base::Value value_body,
                    base::flat_map<std::string, std::string> headers,
                    int error_code,
@@ -54,10 +53,18 @@ class APIRequestResult {
 
   // HTTP response code.
   int response_code() const { return response_code_; }
-  // Sanitized json response.
-  const std::string& body() const { return body_; }
-  // `base::Value` of sanitized json response.
+
+  // Extract the sanitized response as base::Value.
+  base::Value TakeBody();
+
+  // Returns the sanitized response as base::Value.
+  // Note: don't clone large responses, use TakeBody() instead.
   const base::Value& value_body() const { return value_body_; }
+
+  // Serialize the sanitized response and returns it as string.
+  // Note: use TakeBody()/value_body() instead where possible.
+  std::string SerializeBodyToString() const;
+
   // HTTP response headers.
   const base::flat_map<std::string, std::string>& headers() const {
     return headers_;
@@ -72,11 +79,11 @@ class APIRequestResult {
   friend class APIRequestHelper;
 
   int response_code_ = -1;
-  std::string body_;
   base::Value value_body_;
   base::flat_map<std::string, std::string> headers_;
   int error_code_ = -1;
   GURL final_url_;
+  bool body_consumed_ = false;
 };
 
 struct APIRequestOptions {
@@ -104,7 +111,8 @@ class APIRequestHelper {
 
   class URLLoaderHandler : public network::SimpleURLLoaderStreamConsumer {
    public:
-    explicit URLLoaderHandler(APIRequestHelper* api_request_helper);
+    URLLoaderHandler(APIRequestHelper* api_request_helper,
+                     scoped_refptr<base::SequencedTaskRunner> task_runner);
     ~URLLoaderHandler() override;
     URLLoaderHandler(const URLLoaderHandler&) = delete;
     URLLoaderHandler& operator=(const URLLoaderHandler&) = delete;
@@ -120,7 +128,8 @@ class APIRequestHelper {
    private:
     friend class APIRequestHelper;
 
-    data_decoder::DataDecoder* GetDataDecoder();
+    void ParseJsonImpl(std::string json,
+                       data_decoder::DataDecoder::ValueParseCallback callback);
 
     // Run completion callback if there are no operations in progress.
     // If Cancel is needed even if url or data operations are in progress,
@@ -164,6 +173,8 @@ class APIRequestHelper {
     // completes.
     int current_decoding_operation_count_ = 0;
     bool request_is_finished_ = false;
+
+    const scoped_refptr<base::SequencedTaskRunner> task_runner_;
 
     base::WeakPtrFactory<URLLoaderHandler> weak_ptr_factory_{this};
   };
@@ -241,6 +252,7 @@ class APIRequestHelper {
   net::NetworkTrafficAnnotationTag annotation_tag_;
   URLLoaderHandlerList url_loaders_;
   scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory_;
+  const scoped_refptr<base::SequencedTaskRunner> task_runner_;
   base::WeakPtrFactory<APIRequestHelper> weak_ptr_factory_{this};
 };
 

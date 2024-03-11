@@ -7,6 +7,7 @@
 
 #include <utility>
 
+#include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/ui/webui/brave_webui_source.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/constants/webui_url_constants.h"
@@ -25,7 +26,7 @@
 #include "content/public/common/url_constants.h"
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
 #endif
 
 SpeedreaderToolbarUI::SpeedreaderToolbarUI(content::WebUI* web_ui,
@@ -50,7 +51,8 @@ SpeedreaderToolbarUI::SpeedreaderToolbarUI(content::WebUI* web_ui,
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
   source->AddBoolean("aiChatFeatureEnabled",
-                     ai_chat::features::IsAIChatEnabled());
+                     ai_chat::IsAIChatEnabled(profile_->GetPrefs()) &&
+                         brave::IsRegularProfile(profile_));
 #else
   source->AddBoolean("aiChatFeatureEnabled", false);
 #endif

@@ -13,7 +13,7 @@ from os.path import join
 
 import override_utils
 
-from import_inline import get_src_dir
+from brave_chromium_utils import get_src_dir
 from sign_binaries import sign_binaries
 
 
@@ -68,8 +68,8 @@ def GetPrevVersion(_, build_dir, _temp_dir, last_chrome_installer, output_name):
 
 
 @override_utils.override_function(globals())
-def CreateArchiveFile(original_function, options, staging_dir, current_version,
-                      prev_version):
+def CreateArchiveFiles(original_function, options, staging_dir, current_version,
+                       prev_version):
     # At least as of this writing, `current_version` and `prev_version` are
     # actually two-tuple build numbers y.z, not four-tuple version numbers
     # w.x.y.z.

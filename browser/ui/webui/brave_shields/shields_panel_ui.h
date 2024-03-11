@@ -7,10 +7,11 @@
 #define BRAVE_BROWSER_UI_WEBUI_BRAVE_SHIELDS_SHIELDS_PANEL_UI_H_
 
 #include <memory>
+#include <string>
 
 #include "brave/browser/ui/webui/brave_shields/shields_panel_data_handler.h"
 #include "brave/browser/ui/webui/brave_shields/shields_panel_handler.h"
-#include "brave/components/brave_shields/common/brave_shields_panel.mojom.h"
+#include "brave/components/brave_shields/core/common/brave_shields_panel.mojom.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 #include "mojo/public/cpp/bindings/receiver.h"
 #include "ui/webui/mojo_bubble_web_ui_controller.h"
@@ -30,6 +31,8 @@ class ShieldsPanelUI : public ui::MojoBubbleWebUIController,
   void BindInterface(
       mojo::PendingReceiver<brave_shields::mojom::PanelHandlerFactory>
           receiver);
+
+  static constexpr std::string GetWebUIName() { return "ShieldsPanel"; }
 
  private:
   void CreatePanelHandler(

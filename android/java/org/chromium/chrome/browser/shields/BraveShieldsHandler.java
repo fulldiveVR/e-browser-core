@@ -75,6 +75,7 @@ import java.util.Map;
 public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCallback {
     private static final String TAG = "BraveShieldsHandler";
     private static final int URL_SPEC_MAX_LINES = 3;
+    private static final String CHROME_ERROR = "chrome-error://";
 
     private static class BlockersInfo {
         public BlockersInfo() {
@@ -482,7 +483,7 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
     private void setUpMainLayout() {
         if (mContext == null) return;
 
-        String favIconURL = mBraveRewardsNativeWorker.GetPublisherFavIconURL(mTabId);
+        String favIconURL = mBraveRewardsNativeWorker.getPublisherFavIconURL(mTabId);
         Tab currentActiveTab = mIconFetcher.getTab();
         String url = currentActiveTab.getUrl().getSpec();
         final String favicon_url = (favIconURL.isEmpty()) ? url : favIconURL;
@@ -519,7 +520,7 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
             }
         });
 
-        mToggleIcon.setColorFilter(mContext.getResources().getColor(R.color.shield_toggle_button_tint));
+        mToggleIcon.setColorFilter(mContext.getColor(R.color.shield_toggle_button_tint));
         mToggleLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -529,8 +530,7 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
 
         ImageView mPrivacyReportIcon = mPrivacyReportLayout.findViewById(R.id.toggle_favicon);
         mPrivacyReportIcon.setImageResource(R.drawable.ic_arrow_forward);
-        mPrivacyReportIcon.setColorFilter(
-                mContext.getResources().getColor(R.color.default_icon_color_baseline));
+        mPrivacyReportIcon.setColorFilter(mContext.getColor(R.color.default_icon_color_baseline));
         TextView mViewPrivacyReportText = mPrivacyReportLayout.findViewById(R.id.toggle_text);
         mViewPrivacyReportText.setText(R.string.view_full_privacy_report);
         mPrivacyReportLayout.setOnClickListener(new View.OnClickListener() {
@@ -679,7 +679,7 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
             ImageView mBlockShieldsIcon = mShieldsLayout.findViewById(R.id.toggle_favicon);
             mBlockShieldsIcon.setImageResource(R.drawable.ic_chevron_right);
             mBlockShieldsIcon.setColorFilter(
-                    mContext.getResources().getColor(R.color.default_icon_color_baseline));
+                    mContext.getColor(R.color.default_icon_color_baseline));
             TextView mBlockShieldsText = mShieldsLayout.findViewById(R.id.toggle_text);
             mBlockShieldsText.setText(titleStringId);
 
@@ -812,7 +812,9 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
     private void setUpReportBrokenSiteLayout() {
         TextView mReportSiteUrlText = mReportBrokenSiteLayout.findViewById(R.id.report_site_url);
         final Uri reportUri = Uri.parse(mUrlSpec).buildUpon().clearQuery().build();
-        mReportSiteUrlText.setText(reportUri.toString());
+        final String host = mHost.replaceFirst("^(http[s]?://www\\.|http[s]?://|www\\.)", "");
+        final String siteUrl = mUrlSpec.startsWith(CHROME_ERROR) ? host : reportUri.toString();
+        mReportSiteUrlText.setText(siteUrl);
         mReportSiteUrlText.setMovementMethod(new ScrollingMovementMethod());
 
         Button mCancelButton = mReportBrokenSiteLayout.findViewById(R.id.btn_cancel);
@@ -824,21 +826,22 @@ public class BraveShieldsHandler implements BraveRewardsHelper.LargeIconReadyCal
         });
 
         Button mSubmitButton = mReportBrokenSiteLayout.findViewById(R.id.btn_submit);
-        mSubmitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Profile.getLastUsedRegularProfile requires to run in UI thread,
-                // so get api key here and pass it to IO worker task
-                String referralApiKey =
-                        NTPBackgroundImagesBridge.getInstance(mProfile).getReferralApiKey();
-                BraveShieldsUtils.BraveShieldsWorkerTask mWorkerTask =
-                        new BraveShieldsUtils.BraveShieldsWorkerTask(
-                                reportUri.toString(), referralApiKey);
-                mWorkerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                mReportBrokenSiteLayout.setVisibility(View.GONE);
-                mThankYouLayout.setVisibility(View.VISIBLE);
-            }
-        });
+        mSubmitButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        // Profile.getLastUsedRegularProfile requires to run in UI thread,
+                        // so get api key here and pass it to IO worker task
+                        String referralApiKey =
+                                NTPBackgroundImagesBridge.getInstance(mProfile).getReferralApiKey();
+                        BraveShieldsUtils.BraveShieldsWorkerTask mWorkerTask =
+                                new BraveShieldsUtils.BraveShieldsWorkerTask(
+                                        siteUrl, referralApiKey);
+                        mWorkerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        mReportBrokenSiteLayout.setVisibility(View.GONE);
+                        mThankYouLayout.setVisibility(View.VISIBLE);
+                    }
+                });
     }
 
     private void setUpMainSwitchLayout(boolean isChecked) {

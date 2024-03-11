@@ -23,7 +23,6 @@
 #include "brave/components/brave_rewards/common/features.h"
 #include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
-#include "brave/components/brave_rewards/core/uphold/uphold_util.h"
 #include "brave/components/constants/brave_paths.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/test/base/in_process_browser_test.h"
@@ -32,6 +31,7 @@
 #include "components/network_session_configurator/common/network_switches.h"
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/test/browser_test.h"
+#include "content/public/test/browser_test_utils.h"
 #include "net/dns/mock_host_resolver.h"
 
 // npm run test -- brave_browser_tests --filter=RewardsBrowserTest.*
@@ -171,7 +171,8 @@ IN_PROC_BROWSER_TEST_F(RewardsBrowserTest, ActivateSettingsModal) {
 
   test_util::WaitForElementThenClick(contents(),
                                      "[data-test-id=manage-wallet-button]");
-  test_util::WaitForElementToAppear(contents(), "#modal");
+  test_util::WaitForElementToAppear(contents(),
+                                    "[data-test-id=rewards-reset-modal]");
 }
 
 IN_PROC_BROWSER_TEST_F(RewardsBrowserTest, SiteBannerDefaultTipChoices) {
@@ -258,10 +259,11 @@ IN_PROC_BROWSER_TEST_F(RewardsBrowserTest, ResetRewards) {
   test_util::WaitForElementThenClick(contents(),
                                      "[data-test-id=manage-wallet-button]");
 
-  test_util::WaitForElementToAppear(contents(), "#modal");
+  test_util::WaitForElementToAppear(contents(),
+                                    "[data-test-id=rewards-reset-modal]");
 
   test_util::WaitForElementToContain(
-      contents(), "[data-test-id='reset-text']",
+      contents(), "[data-test-id=rewards-reset-modal]",
       "By resetting, your current Brave Rewards profile will be deleted");
 }
 

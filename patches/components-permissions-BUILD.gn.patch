@@ -1,8 +1,17 @@
 diff --git a/components/permissions/BUILD.gn b/components/permissions/BUILD.gn
-index 402c8d9808454425ce718696f0f27f5630e590ae..b08aa8c64b75f60ed0c98967b0d86a19acdf098a 100644
+index a97d977cf3fd87b1b0c895d49c97b48436ae193f..8927343055484d1c09f62b423f154487e432c0e1 100644
 --- a/components/permissions/BUILD.gn
 +++ b/components/permissions/BUILD.gn
-@@ -144,6 +144,7 @@ source_set("permissions") {
+@@ -2,7 +2,7 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
+-source_set("permissions_common") {
++component("permissions_common") {
+   sources = [
+     "constants.cc",
+     "constants.h",
+@@ -147,6 +147,7 @@ source_set("permissions") {
    if (!is_android) {
      deps += [ "//components/guest_view/browser" ]
    }

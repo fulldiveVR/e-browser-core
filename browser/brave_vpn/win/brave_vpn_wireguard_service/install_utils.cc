@@ -21,17 +21,17 @@
 #include "base/path_service.h"
 #include "base/win/registry.h"
 #include "base/win/windows_types.h"
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_constants.h"
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_utils.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/service/wireguard_tunnel_service.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/status_tray/brave_vpn_tray_command_ids.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/status_tray/status_icon/constants.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/status_tray/status_icon/icon_utils.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_constants.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_utils.h"
+#include "brave/browser/brave_vpn/win/service_constants.h"
+#include "brave/browser/brave_vpn/win/service_details.h"
+#include "brave/browser/brave_vpn/win/storage_utils.h"
 #include "brave/components/brave_vpn/common/win/scoped_sc_handle.h"
 #include "brave/components/brave_vpn/common/win/utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_constants.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_details.h"
-#include "brave/components/brave_vpn/common/wireguard/win/storage_utils.h"
 #include "chrome/installer/util/install_service_work_item.h"
 
 namespace brave_vpn {
@@ -137,9 +137,8 @@ bool ConfigureServiceAutoRestart(const std::wstring& service_name,
   return true;
 }
 
-base::FilePath GetBraveVpnHelperServicePath() {
-  base::FilePath asset_dir = base::PathService::CheckedGet(base::DIR_ASSETS);
-  return asset_dir.Append(brave_vpn::kBraveVPNHelperExecutable);
+base::FilePath GetBraveVpnHelperServicePath(const base::FilePath& root_dir) {
+  return root_dir.Append(brave_vpn::kBraveVPNHelperExecutable);
 }
 
 }  // namespace
@@ -172,8 +171,9 @@ bool ConfigureBraveWireguardService(const std::wstring& service_name) {
 
 // Installs Brave VPN Wireguard Windows service and configures the service
 // config.
-bool InstallBraveWireguardService() {
-  base::CommandLine service_cmd(GetBraveVPNWireguardServiceExecutablePath());
+bool InstallBraveWireguardService(const base::FilePath& root_dir) {
+  base::CommandLine service_cmd(
+      GetBraveVPNWireguardServiceExecutablePath(root_dir));
   installer::InstallServiceWorkItem install_service_work_item(
       brave_vpn::GetBraveVpnWireguardServiceName(),
       brave_vpn::GetBraveVpnWireguardServiceDisplayName(), SERVICE_DEMAND_START,
@@ -232,13 +232,13 @@ bool UninstallStatusTrayIcon() {
                      IDC_BRAVE_VPN_TRAY_EXIT, 0) == TRUE;
 }
 
-bool InstallBraveVPNHelperService() {
-  base::CommandLine service_cmd(GetBraveVpnHelperServicePath());
+bool InstallBraveVPNHelperService(const base::FilePath& root_dir) {
+  base::CommandLine service_cmd(GetBraveVpnHelperServicePath(root_dir));
   installer::InstallServiceWorkItem install_service_work_item(
       brave_vpn::GetBraveVpnHelperServiceName(),
       brave_vpn::GetBraveVpnHelperServiceDisplayName(), SERVICE_DEMAND_START,
       service_cmd, base::CommandLine(base::CommandLine::NO_PROGRAM),
-      brave_vpn::kBraveVpnHelperRegistryStoragePath, {}, {});
+      GetBraveVpnHelperRegistryStoragePath(), {}, {});
   install_service_work_item.set_best_effort(true);
   install_service_work_item.set_rollback_enabled(false);
   if (install_service_work_item.Do()) {

@@ -7,6 +7,7 @@
 #define BRAVE_COMPONENTS_AI_CHAT_CORE_BROWSER_CONVERSATION_DRIVER_H_
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -105,6 +106,9 @@ class ConversationDriver {
   mojom::SiteInfoPtr BuildSiteInfo();
   bool HasPendingConversationEntry();
 
+  void SubmitSelectedText(const std::string& selected_text,
+                          mojom::ActionType action_type);
+
   void RateMessage(bool is_liked,
                    uint32_t turn_id,
                    mojom::PageHandler::RateMessageCallback callback);
@@ -112,7 +116,17 @@ class ConversationDriver {
   void SendFeedback(const std::string& category,
                     const std::string& feedback,
                     const std::string& rating_id,
+                    bool send_hostname,
                     mojom::PageHandler::SendFeedbackCallback callback);
+
+  // Used to determine whether the page content should be unlinked when
+  // triggering from outside of the side panel, such as context menu or
+  // location bar, and unlink it if so. If the panel is not open and there is
+  // no existing chat history, the page content should not be linked.
+  void MaybeUnlinkPageContent();
+
+  bool IsArticleTextEmptyForTesting() const { return article_text_.empty(); }
+  bool IsSuggestionsEmptyForTesting() const { return suggestions_.empty(); }
 
  protected:
   virtual GURL GetPageURL() const = 0;
@@ -140,12 +154,14 @@ class ConversationDriver {
   bool MaybePopPendingRequests();
   void MaybeSeedOrClearSuggestions();
 
-  void PerformAssistantGeneration(std::string input,
-                                  std::vector<mojom::ConversationTurn> history,
-                                  int64_t current_navigation_id,
-                                  std::string page_content = "",
-                                  bool is_video = false,
-                                  std::string invalidation_token = "");
+  void PerformAssistantGeneration(
+      const std::string& input,
+      std::optional<std::string> selected_text,
+      const std::vector<mojom::ConversationTurn>& history,
+      int64_t current_navigation_id,
+      std::string page_content = "",
+      bool is_video = false,
+      std::string invalidation_token = "");
 
   void GeneratePageContent(GetPageContentCallback callback);
   void OnGeneratePageContentComplete(int64_t navigation_id,
@@ -159,8 +175,9 @@ class ConversationDriver {
                                       std::string result);
   void OnEngineCompletionComplete(int64_t navigation_id,
                                   EngineConsumer::GenerationResult result);
-  void OnSuggestedQuestionsResponse(int64_t navigation_id,
-                                    std::vector<std::string> result);
+  void OnSuggestedQuestionsResponse(
+      int64_t navigation_id,
+      EngineConsumer::SuggestedQuestionResult result);
   void OnSuggestedQuestionsChanged();
   void OnPageHasContentChanged(mojom::SiteInfoPtr site_info);
   void OnPremiumStatusReceived(

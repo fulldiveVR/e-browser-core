@@ -11,6 +11,7 @@
 
 #include "base/base64.h"
 #include "base/command_line.h"
+#include "base/containers/span.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/logging.h"
@@ -24,12 +25,12 @@
 #include "base/win/security_descriptor.h"
 #include "base/win/sid.h"
 #include "base/win/windows_types.h"
+#include "brave/browser/brave_vpn/win/service_commands.h"
+#include "brave/browser/brave_vpn/win/service_constants.h"
+#include "brave/browser/brave_vpn/win/service_details.h"
+#include "brave/browser/brave_vpn/win/storage_utils.h"
 #include "brave/components/brave_vpn/common/win/scoped_sc_handle.h"
 #include "brave/components/brave_vpn/common/win/utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_commands.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_constants.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_details.h"
-#include "brave/components/brave_vpn/common/wireguard/win/storage_utils.h"
 
 namespace brave_vpn {
 
@@ -390,9 +391,8 @@ bool WireguardGenerateKeypair(std::string* public_key,
     return false;
   }
 
-  *public_key = base::Base64Encode(base::span<const uint8_t>(public_key_bytes));
-  *private_key =
-      base::Base64Encode(base::span<const uint8_t>(private_key_bytes));
+  *public_key = base::Base64Encode(base::make_span(public_key_bytes));
+  *private_key = base::Base64Encode(base::make_span(private_key_bytes));
   return true;
 }
 

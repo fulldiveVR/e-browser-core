@@ -11,16 +11,17 @@
 #include "ios/chrome/browser/bookmarks/model/local_or_syncable_bookmark_model_factory.h"
 #include "ios/chrome/browser/consent_auditor/model/consent_auditor_factory.h"
 #include "ios/chrome/browser/content_settings/model/host_content_settings_map_factory.h"
-#include "ios/chrome/browser/favicon/favicon_service_factory.h"
-#include "ios/chrome/browser/favicon/ios_chrome_favicon_loader_factory.h"
-#include "ios/chrome/browser/favicon/ios_chrome_large_icon_cache_factory.h"
-#include "ios/chrome/browser/favicon/ios_chrome_large_icon_service_factory.h"
+#include "ios/chrome/browser/favicon/model/favicon_service_factory.h"
+#include "ios/chrome/browser/favicon/model/ios_chrome_favicon_loader_factory.h"
+#include "ios/chrome/browser/favicon/model/ios_chrome_large_icon_cache_factory.h"
+#include "ios/chrome/browser/favicon/model/ios_chrome_large_icon_service_factory.h"
 #include "ios/chrome/browser/history/model/history_service_factory.h"
 #include "ios/chrome/browser/history/model/web_history_service_factory.h"
 #include "ios/chrome/browser/invalidation/model/ios_chrome_profile_invalidation_provider_factory.h"
 #include "ios/chrome/browser/passwords/model/ios_chrome_profile_password_store_factory.h"
 #include "ios/chrome/browser/reading_list/model/reading_list_model_factory.h"
 #include "ios/chrome/browser/search_engines/model/template_url_service_factory.h"
+#include "ios/chrome/browser/sessions/session_restoration_service_factory.h"
 #include "ios/chrome/browser/signin/model/account_consistency_service_factory.h"
 #include "ios/chrome/browser/signin/model/identity_manager_factory.h"
 #include "ios/chrome/browser/sync/model/ios_user_event_service_factory.h"
@@ -52,6 +53,7 @@ void EnsureBrowserStateKeyedServiceFactoriesBuilt() {
   ModelTypeStoreServiceFactory::GetInstance();
   SyncServiceFactory::GetInstance();
   ReadingListModelFactory::GetInstance();
+  SessionRestorationServiceFactory::GetInstance();
   SessionSyncServiceFactory::GetInstance();
   SyncSetupServiceFactory::GetInstance();
 

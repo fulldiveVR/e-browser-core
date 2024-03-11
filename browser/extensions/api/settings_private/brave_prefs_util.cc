@@ -12,14 +12,14 @@
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_rewards/common/pref_names.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/common/pref_names.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/core/common/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/de_amp/common/pref_names.h"
-#include "brave/components/debounce/common/pref_names.h"
+#include "brave/components/debounce/core/common/pref_names.h"
 #include "brave/components/decentralized_dns/core/pref_names.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
@@ -256,7 +256,11 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kBraveWalletAutoLockMinutes] =
       settings_api::PrefType::kNumber;
+  (*s_brave_allowlist)[kBraveWalletTransactionSimulationOptInStatus] =
+      settings_api::PrefType::kNumber;
   (*s_brave_allowlist)[kBraveWalletNftDiscoveryEnabled] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[kBraveWalletPrivateWindowsEnabled] =
       settings_api::PrefType::kBoolean;
 
   // IPFS pref
@@ -280,6 +284,8 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[ai_chat::prefs::kDefaultModelKey] =
       settings_api::PrefType::kString;
+  (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatContextMenuEnabled] =
+      settings_api::PrefType::kBoolean;
 #endif
 
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)

@@ -23,7 +23,6 @@ const createDist = require('../lib/createDist')
 const test = require('../lib/test')
 const gnCheck = require('../lib/gnCheck')
 const genGradle = require('../lib/genGradle')
-const pylint = require('../lib/pylint')
 const perfTests = require('../lib/perfTests')
 
 const collect = (value, accumulator) => {
@@ -77,6 +76,7 @@ program
   .option('--symlink_dir <symlink_dir>', 'symlink that points to the actual build directory')
   .option('--target_os <target_os_type>', 'target OS type', /^(host_os|ios|android)$/i)
   .option('--target_arch <target_arch>', 'target architecture', /^(host_cpu|x64|arm64|x86)$/i)
+  .option('--target_environment <target_environment>', 'target environment (device, catalyst, simulator)', /^(device|catalyst|simulator)$/i)
   .arguments('[build_config]')
   .action((buildConfig = config.defaultBuildConfig, options = {}) => {
     config.buildConfig = buildConfig
@@ -340,16 +340,11 @@ program
   .option('--target_environment <target_environment>', 'target environment (device, catalyst, simulator)')
   .option('--run_disabled_tests', 'run disabled tests')
   .option('--manual_android_test_device', 'indicates that Android test device is run manually')
-  .option('--android_test_emulator_version <emulator_version>', 'set Android version for the emulator for tests', parseInteger, '30')
+  .option('--android_test_emulator_version <emulator_version>', 'set Android version for the emulator for tests', parseInteger, '27')
   .option('--use_remoteexec [arg]', 'whether to use RBE for building', JSON.parse)
   .option('--offline', 'use offline mode for RBE')
   .arguments('[build_config]')
   .action(test.bind(null, parsedArgs.unknown))
-
-program
-  .command('lint')
-  .option('--base <base branch>', 'set the destination branch for the PR')
-  .action(util.lint)
 
 program
   .command('presubmit')
@@ -360,13 +355,6 @@ program
   .option('--verbose [arg]', 'pass --verbose 2 for more debugging info', JSON.parse)
   .option('--fix', 'try to fix found issues automatically')
   .action(util.presubmit)
-
-program
-  .command('pylint')
-  .option('--base <base_branch>', 'only analyse files changed relative to base_branch')
-  .option('--all', 'run pylint on all files')
-  .option('--report', 'produce a parseable report file')
-  .action(pylint)
 
 program
   .command('format')

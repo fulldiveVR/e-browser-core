@@ -23,12 +23,12 @@
 #include "brave/components/brave_player/common/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/common/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/common/features.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_sync/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/de_amp/common/features.h"
-#include "brave/components/debounce/common/features.h"
+#include "brave/components/debounce/core/common/features.h"
 #include "brave/components/google_sign_in_permission/features.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/features.h"
@@ -248,6 +248,15 @@
           kOsDesktop | kOsAndroid,                                            \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletAnkrBalancesFeature),       \
+      },                                                                      \
+      {                                                                       \
+          "brave-wallet-enable-transaction-simulations",                      \
+          "Enable transaction simulations",                                   \
+          "Enable usage of Blowfish API for running transaction simulations " \
+          "in Brave Wallet",                                                  \
+          kOsDesktop | kOsAndroid,                                            \
+          FEATURE_VALUE_TYPE(brave_wallet::features::                         \
+                                 kBraveWalletTransactionSimulationsFeature),  \
       })
 
 #define BRAVE_NEWS_FEATURE_ENTRIES                                             \
@@ -404,6 +413,19 @@
 #define BRAVE_TABS_FEATURE_ENTRIES
 #endif
 
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+#define BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY                      \
+  EXPAND_FEATURE_ENTRIES({                                               \
+      "middle-button-autoscroll",                                        \
+      "Middle button autoscroll",                                        \
+      "Enables autoscrolling when the middle mouse button is clicked",   \
+      kOsMac | kOsLinux,                                                 \
+      FEATURE_VALUE_TYPE(blink::features::kMiddleButtonClickAutoscroll), \
+  })
+#else
+#define BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY
+#endif
+
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #define BRAVE_AI_CHAT                                          \
   EXPAND_FEATURE_ENTRIES({                                     \
@@ -467,14 +489,6 @@
           "testing only.",                                                     \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_component_updater::kUseDevUpdaterUrl),      \
-      },                                                                       \
-      {                                                                        \
-          "allow-certain-client-hints",                                        \
-          "Allow certain request client hints",                                \
-          "Allows setting certain request client hints (sec-ch-ua, "           \
-          "sec-ch-ua-mobile, sec-ch-ua-platform)",                             \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(blink::features::kAllowCertainClientHints),       \
       },                                                                       \
       {                                                                        \
           "brave-ntp-branded-wallpaper-demo",                                  \
@@ -920,6 +934,14 @@
           FEATURE_VALUE_TYPE(net::features::kBraveHttpsByDefault),             \
       },                                                                       \
       {                                                                        \
+          "fallback-dns-over-https",                                           \
+          "Use a fallback DoH provider",                                       \
+          "In Automatic DoH mode, use a fallback DoH provider if the current " \
+          "provider doesn't offer Secure DNS.",                                \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(net::features::kBraveFallbackDoHProvider),        \
+      },                                                                       \
+      {                                                                        \
           "brave-show-strict-fingerprinting-mode",                             \
           "Show Strict Fingerprinting Mode",                                   \
           "Show Strict (aggressive) option for Fingerprinting Mode in "        \
@@ -969,6 +991,7 @@
   BRAVE_AI_CHAT_HISTORY                                                        \
   BRAVE_OMNIBOX_FEATURES                                                       \
   BRAVE_PLAYER_FEATURE_ENTRIES                                                 \
+  BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY                                  \
   LAST_BRAVE_FEATURE_ENTRIES_ITEM  // Keep it as the last item.
 namespace flags_ui {
 namespace {

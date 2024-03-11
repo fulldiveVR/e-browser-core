@@ -38,6 +38,7 @@ export type BlockchainTokenEntityAdaptorState = ReturnType<
   idsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   visibleTokenIds: string[]
   hiddenTokenIds: string[]
+  deletedTokenIds: string[]
   visibleTokenIdsByChainId: Record<string, string[]>
   visibleTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   hiddenTokenIdsByChainId: Record<string, string[]>
@@ -64,6 +65,10 @@ export type BlockchainTokenEntityAdaptorState = ReturnType<
   nonFungibleVisibleTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   nonFungibleHiddenTokenIdsByChainId: Record<string, string[]>
   nonFungibleHiddenTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
+
+  // spam
+  spamTokenIds: string[]
+  nonSpamTokenIds: string[]
 }
 
 export const blockchainTokenEntityAdaptorInitialState: //
@@ -73,6 +78,7 @@ BlockchainTokenEntityAdaptorState = {
   idsByCoinType: {},
   visibleTokenIds: [],
   hiddenTokenIds: [],
+  deletedTokenIds: [],
   visibleTokenIdsByChainId: {},
   visibleTokenIdsByCoinType: {},
   hiddenTokenIdsByChainId: {},
@@ -96,14 +102,16 @@ BlockchainTokenEntityAdaptorState = {
   nonFungibleVisibleTokenIdsByChainId: {},
   nonFungibleVisibleTokenIdsByCoinType: {},
   nonFungibleHiddenTokenIdsByChainId: {},
-  nonFungibleHiddenTokenIdsByCoinType: {}
+  nonFungibleHiddenTokenIdsByCoinType: {},
+
+  spamTokenIds: [],
+  nonSpamTokenIds: []
 }
 
 export const combineTokenRegistries = (
   tokensRegistry: BlockchainTokenEntityAdaptorState,
   userTokensRegistry: BlockchainTokenEntityAdaptorState
 ): BlockchainTokenEntityAdaptorState => {
-  // TODO: hidden ids
   const chainIds = new Set(
     Object.keys(tokensRegistry.idsByChainId).concat(
       Object.keys(userTokensRegistry.idsByChainId)
@@ -346,6 +354,11 @@ export const combineTokenRegistries = (
     // use the tokens registry state to reduce amount of additions
     ...tokensRegistry,
 
+    // unmodified user registry ids
+    deletedTokenIds: userTokensRegistry.deletedTokenIds,
+    spamTokenIds: userTokensRegistry.spamTokenIds,
+    nonSpamTokenIds: userTokensRegistry.nonSpamTokenIds,
+
     // new combined grouping Ids
     visibleTokenIds,
     hiddenTokenIds,
@@ -546,3 +559,23 @@ export const selectAllVisibleUserAssetsFromQueryResult =
   createDraftSafeSelector([selectTokensRegistryFromQueryResult], (assets) =>
     getEntitiesListFromEntityState(assets, assets.visibleTokenIds)
   )
+
+/**
+ * Used to select visible only fungible tokens from
+ * useGetUserTokensRegistryQuery
+ */
+export const selectAllVisibleFungibleUserAssetsFromQueryResult =
+  createDraftSafeSelector([selectTokensRegistryFromQueryResult], (assets) =>
+    getEntitiesListFromEntityState(assets, assets.fungibleVisibleTokenIds)
+  )
+
+/**
+ * Used to select only hidden NFTs from useGetUserTokensRegistryQuery
+ */
+export const selectHiddenNftsFromQueryResult = createDraftSafeSelector(
+  [selectTokensRegistryFromQueryResult],
+  (assets) =>
+    getEntitiesListFromEntityState(assets, assets.hiddenTokenIds).filter(
+      (t) => t.isErc1155 || t.isErc721 || t.isNft
+    )
+)

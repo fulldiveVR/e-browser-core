@@ -1,9 +1,9 @@
 diff --git a/components/sync/service/sync_service_impl.h b/components/sync/service/sync_service_impl.h
-index 1303e875eeea0f3f829fd8fb21864fa385f278ba..8e5d63ebbf0bff8cd1fe90e29c3e3d122d81be84 100644
+index 34339f31213d3ea2e638e49af0dcb5c93dbee53c..84e7cf58fd5b2aa028ad5f0820cc786cf705b494 100644
 --- a/components/sync/service/sync_service_impl.h
 +++ b/components/sync/service/sync_service_impl.h
-@@ -259,6 +259,7 @@ class SyncServiceImpl : public SyncService,
-   SyncClient* GetSyncClientForTest();
+@@ -264,6 +264,7 @@ class SyncServiceImpl : public SyncService,
+   void ReportDataTypeErrorForTest(ModelType type);
  
   private:
 +  BRAVE_SYNC_SERVICE_IMPL_H_

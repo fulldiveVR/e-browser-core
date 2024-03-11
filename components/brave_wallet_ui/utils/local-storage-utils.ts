@@ -17,6 +17,7 @@ import {
 // utils
 import { networkEntityAdapter } from '../common/slices/entities/network.entity'
 import { LOCAL_STORAGE_KEYS } from '../common/constants/local-storage-keys'
+import { createEmptyTokenBalancesRegistry } from './balance-utils'
 
 export const parseJSONFromLocalStorage = <T = any>(
   storageString: keyof typeof LOCAL_STORAGE_KEYS,
@@ -122,18 +123,20 @@ export function setStoredPortfolioTimeframe(
   )
 }
 
-export const getPersistedTokenBalances = (): TokenBalancesRegistry => {
+export const getPersistedPortfolioTokenBalances = (): TokenBalancesRegistry => {
   try {
     return JSON.parse(
       window.localStorage.getItem(LOCAL_STORAGE_KEYS.TOKEN_BALANCES) || '{}'
     )
   } catch (error) {
     console.error(error)
-    return {}
+    return createEmptyTokenBalancesRegistry()
   }
 }
 
-export const setPersistedTokenBalances = (registry: TokenBalancesRegistry) => {
+export const setPersistedPortfolioTokenBalances = (
+  registry: TokenBalancesRegistry
+) => {
   try {
     window.localStorage.setItem(
       LOCAL_STORAGE_KEYS.TOKEN_BALANCES,

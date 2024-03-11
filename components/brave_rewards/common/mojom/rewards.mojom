@@ -105,6 +105,7 @@ struct RewardsParameters {
   map<string, Regions> wallet_provider_regions;
   mojo_base.mojom.Time vbat_deadline;
   bool vbat_expired;
+  int32 tos_version = 1;
 };
 
 struct AutoContributeProperties {
@@ -424,9 +425,9 @@ enum UserType {
 };
 
 enum Environment {
-  STAGING = 0,
-  PRODUCTION = 1,
-  DEVELOPMENT = 2
+  kStaging = 0,
+  kProduction = 1,
+  kDevelopment = 2
 };
 
 struct SolanaAccountBalance {

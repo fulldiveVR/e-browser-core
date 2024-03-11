@@ -10,6 +10,7 @@
 
 #include "base/strings/string_number_conversions.h"
 #include "brave/browser/brave_browser_features.h"
+#include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/speedreader/speedreader_service_factory.h"
 #include "brave/browser/speedreader/speedreader_tab_helper.h"
 #include "brave/browser/ui/brave_browser.h"
@@ -28,7 +29,7 @@
 #include "ui/color/color_provider.h"
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #endif
 
@@ -147,7 +148,8 @@ void SpeedreaderToolbarDataHandlerImpl::ViewOriginal() {
 
 void SpeedreaderToolbarDataHandlerImpl::AiChat() {
 #if BUILDFLAG(ENABLE_AI_CHAT)
-  if (!ai_chat::features::IsAIChatEnabled() || !browser_) {
+  if (!browser_ || !ai_chat::IsAIChatEnabled(browser_->profile()->GetPrefs()) ||
+      !brave::IsRegularProfile(browser_->profile())) {
     return;
   }
   auto* side_panel = SidePanelUI::GetSidePanelUIForBrowser(browser_.get());

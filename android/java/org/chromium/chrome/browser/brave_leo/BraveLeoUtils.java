@@ -5,18 +5,24 @@
 
 package org.chromium.chrome.browser.brave_leo;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import org.jni_zero.JNINamespace;
 import org.jni_zero.NativeMethods;
 
+import org.chromium.ai_chat.mojom.ModelWithSubtitle;
 import org.chromium.base.Callback;
 import org.chromium.base.Log;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
 import org.chromium.chrome.browser.billing.PurchaseModel;
 import org.chromium.chrome.browser.util.LiveDataUtil;
+import org.chromium.chrome.browser.util.TabUtils;
 import org.chromium.content_public.browser.WebContents;
 
 @JNINamespace("ai_chat")
@@ -33,12 +39,13 @@ public class BraveLeoUtils {
                 activePurchaseModel -> {
                     BraveLeoPrefUtils.setIsSubscriptionActive(activePurchaseModel != null);
                     if (activePurchaseModel != null) {
-                        BraveLeoPrefUtils.setChatPurchaseToken(
-                                activePurchaseModel.getPurchaseToken());
                         BraveLeoPrefUtils.setChatPackageName();
                         BraveLeoPrefUtils.setChatProductId(activePurchaseModel.getProductId());
+                        BraveLeoPrefUtils.setChatPurchaseToken(
+                                activePurchaseModel.getPurchaseToken());
                     } else {
-                        // TODO(sergz): showRestoreMenu?
+                        BraveLeoPrefUtils.setChatProductId("");
+                        BraveLeoPrefUtils.setChatPurchaseToken("");
                     }
                     if (callback != null) {
                         callback.onResult(null);
@@ -48,11 +55,61 @@ public class BraveLeoUtils {
 
     public static void openLeoQuery(WebContents webContents, String query) {
         try {
+            BraveLeoUtilsJni.get().openLeoQuery(webContents, query);
             BraveActivity activity = BraveActivity.getBraveActivity();
             activity.openBraveLeo();
-            BraveLeoUtilsJni.get().openLeoQuery(webContents, query);
         } catch (BraveActivity.BraveActivityNotFoundException e) {
             Log.e(TAG, "get BraveActivity exception", e);
+        }
+    }
+
+    public static String getDefaultModelName(ModelWithSubtitle[] models) {
+        String defaultModelKey = BraveLeoPrefUtils.getDefaultModel();
+
+        for (ModelWithSubtitle model : models) {
+            if (model.model.key.equals(defaultModelKey)) {
+                return model.model.displayName;
+            }
+        }
+
+        return "";
+    }
+
+    public static void openManageSubscription() {
+        try {
+            BraveActivity activity = BraveActivity.getBraveActivity();
+            Intent browserIntent =
+                    new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(InAppPurchaseWrapper.MANAGE_SUBSCRIPTION_PAGE));
+            activity.startActivity(browserIntent);
+        } catch (BraveActivity.BraveActivityNotFoundException e) {
+            Log.e(TAG, "openManageSubscription get BraveActivity exception", e);
+        }
+    }
+
+    public static void openURL(String url) {
+        try {
+            BraveActivity activity = BraveActivity.getBraveActivity();
+            activity.openNewOrSelectExistingTab(url, true);
+            TabUtils.bringChromeTabbedActivityToTheTop(activity);
+        } catch (BraveActivity.BraveActivityNotFoundException e) {
+            Log.e(TAG, "openURL error", e);
+        }
+    }
+
+    public static void goPremium(Activity activity) {
+        Intent braveLeoPlansIntent = new Intent(activity, BraveLeoPlansActivity.class);
+        braveLeoPlansIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        braveLeoPlansIntent.setAction(Intent.ACTION_VIEW);
+        activity.startActivity(braveLeoPlansIntent);
+    }
+
+    public static void bringMainActivityOnTop() {
+        try {
+            TabUtils.bringChromeTabbedActivityToTheTop(BraveActivity.getBraveActivity());
+        } catch (BraveActivity.BraveActivityNotFoundException e) {
+            Log.e(TAG, "bringMainActivityOnTop error", e);
         }
     }
 

@@ -26,6 +26,8 @@ class BraveTabMenuModel : public TabMenuModel {
     CommandBookmarkAllTabs,
     CommandShowVerticalTabs,
     CommandToggleTabMuted,
+    CommandBringAllTabsToThisWindow,
+    CommandCloseDuplicateTabs,
     CommandLast,
   };
 

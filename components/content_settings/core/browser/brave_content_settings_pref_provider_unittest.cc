@@ -13,7 +13,7 @@
 #include "base/json/values_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/values.h"
-#include "brave/components/brave_shields/common/brave_shield_constants.h"
+#include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/content_settings/core/browser/brave_content_settings_utils.h"
 #include "chrome/test/base/testing_profile.h"
@@ -501,7 +501,8 @@ TEST_F(BravePrefProviderTest, MigrateFPShieldsSettings) {
       ContentSettingToValue(CONTENT_SETTING_BLOCK), {});
   std::vector<Rule> rules;
   auto rule_iterator = provider.GetRuleIterator(
-      ContentSettingsType::BRAVE_FINGERPRINTING_V2, false);
+      ContentSettingsType::BRAVE_FINGERPRINTING_V2, false,
+      content_settings::PartitionKey::WipGetDefault());
   while (rule_iterator && rule_iterator->HasNext()) {
     auto rule = rule_iterator->Next();
     EXPECT_NE(

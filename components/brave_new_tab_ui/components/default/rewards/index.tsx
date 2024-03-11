@@ -45,7 +45,6 @@ export function RewardsContextAdapter (props: { children: React.ReactNode }) {
 export interface RewardsProps {
   rewardsEnabled: boolean
   userType: string
-  isUnsupportedRegion: boolean
   declaredCountry: string
   needsBrowserUpgradeToServeAds: boolean
   balance?: number
@@ -58,11 +57,13 @@ export interface RewardsProps {
   totalContribution: number
   publishersVisitedCount: number
   selfCustodyInviteDismissed: boolean
+  isTermsOfServiceUpdateRequired: boolean
   showContent: boolean
   stackPosition: number
   onShowContent: () => void
   onDismissNotification: (id: string) => void
   onSelfCustodyInviteDismissed: () => void
+  onTermsOfServiceUpdateAccepted: () => void
 }
 
 function getVisibleGrant (promotions: NewTab.Promotion[]): GrantInfo | null {
@@ -156,7 +157,6 @@ export const RewardsWidget = createWidget((props: RewardsProps) => {
       rewardsEnabled={props.rewardsEnabled}
       userType={userTypeFromString(props.userType)}
       vbatDeadline={props.parameters.vbatDeadline}
-      isUnsupportedRegion={props.isUnsupportedRegion}
       declaredCountry={props.declaredCountry}
       needsBrowserUpgradeToServeAds={props.needsBrowserUpgradeToServeAds}
       rewardsBalance={optional(props.balance)}
@@ -173,11 +173,13 @@ export const RewardsWidget = createWidget((props: RewardsProps) => {
       contributionsThisMonth={props.totalContribution}
       canConnectAccount={canConnectAccount()}
       showSelfCustodyInvite={showSelfCustodyInvite()}
+      isTermsOfServiceUpdateRequired={props.isTermsOfServiceUpdateRequired}
       publishersVisited={props.publishersVisitedCount || 0}
       onEnableRewards={openRewardsPanel}
       onSelectCountry={openRewardsPanel}
       onClaimGrant={onClaimGrant}
       onSelfCustodyInviteDismissed={props.onSelfCustodyInviteDismissed}
+      onTermsOfServiceUpdateAccepted={props.onTermsOfServiceUpdateAccepted}
     />
   )
 })

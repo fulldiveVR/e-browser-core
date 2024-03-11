@@ -24,10 +24,10 @@
 #include "base/strings/strcat.h"
 #include "brave/components/api_request_helper/api_request_helper.h"
 #include "brave/components/brave_news/browser/brave_news_controller.h"
+#include "brave/components/brave_news/browser/brave_news_p3a.h"
 #include "brave/components/brave_news/browser/direct_feed_controller.h"
 #include "brave/components/brave_news/browser/locales_helper.h"
 #include "brave/components/brave_news/browser/publishers_parsing.h"
-#include "brave/components/brave_news/browser/unsupported_publisher_migrator.h"
 #include "brave/components/brave_news/browser/urls.h"
 #include "brave/components/brave_news/common/brave_news.mojom.h"
 #include "brave/components/brave_news/common/pref_names.h"
@@ -75,12 +75,12 @@ mojom::Publisher* FindMatchPreferringLocale(
 PublishersController::PublishersController(
     PrefService* prefs,
     DirectFeedController* direct_feed_controller,
-    UnsupportedPublisherMigrator* unsupported_publisher_migrator,
-    api_request_helper::APIRequestHelper* api_request_helper)
+    api_request_helper::APIRequestHelper* api_request_helper,
+    p3a::NewsMetrics* news_metrics)
     : prefs_(prefs),
       direct_feed_controller_(direct_feed_controller),
-      unsupported_publisher_migrator_(unsupported_publisher_migrator),
       api_request_helper_(api_request_helper),
+      news_metrics_(news_metrics),
       on_current_update_complete_(new base::OneShotEvent()) {}
 
 PublishersController::~PublishersController() = default;
@@ -201,7 +201,7 @@ void PublishersController::EnsurePublishersIsUpdating() {
          api_request_helper::APIRequestResult api_request_result) {
         // TODO(petemill): handle bad status or response
         std::optional<Publishers> publisher_list =
-            ParseCombinedPublisherList(api_request_result.value_body());
+            ParseCombinedPublisherList(api_request_result.TakeBody());
 
         // Update failed, we'll just reuse whatever publishers we had before.
         if (!publisher_list) {
@@ -216,6 +216,7 @@ void PublishersController::EnsurePublishersIsUpdating() {
         const auto& publisher_prefs =
             controller->prefs_->GetDict(prefs::kBraveNewsSources);
         std::vector<std::string> missing_publishers;
+        size_t total_enabled_publishers = 0;
         for (const auto&& [key, value] : publisher_prefs) {
           auto publisher_id = key;
           auto is_user_enabled = value.GetIfBool();
@@ -225,6 +226,9 @@ void PublishersController::EnsurePublishersIsUpdating() {
                 (is_user_enabled.value()
                      ? brave_news::mojom::UserEnabled::ENABLED
                      : brave_news::mojom::UserEnabled::DISABLED);
+            if (is_user_enabled.value()) {
+              total_enabled_publishers++;
+            }
           } else {
             VLOG(1) << "Publisher list did not contain publisher found in"
                        "user prefs: "
@@ -238,6 +242,11 @@ void PublishersController::EnsurePublishersIsUpdating() {
             }
           }
         }
+        if (controller->news_metrics_) {
+          controller->news_metrics_->RecordTotalSubscribedCount(
+              p3a::SubscribeType::kPublishers, total_enabled_publishers);
+        }
+
         // Add direct feeds
         std::vector<mojom::PublisherPtr> direct_publishers =
             controller->direct_feed_controller_->ParseDirectFeedsPref();
@@ -262,21 +271,6 @@ void PublishersController::EnsurePublishersIsUpdating() {
         // Observers
         for (auto& observer : controller->observers_) {
           observer.OnPublishersUpdated(controller);
-        }
-
-        if (!missing_publishers.empty()) {
-          controller->unsupported_publisher_migrator_->MigrateUnsupportedFeeds(
-              missing_publishers,
-              base::BindOnce(
-                  [](PublishersController* controller,
-                     uint64_t migrated_count) {
-                    // If any publisher was migrated, ensure we update the list
-                    // of publishers.
-                    if (migrated_count != 0) {
-                      controller->EnsurePublishersIsUpdating();
-                    }
-                  },
-                  base::Unretained(controller)));
         }
       },
       base::Unretained(this));

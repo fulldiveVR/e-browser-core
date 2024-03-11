@@ -27,9 +27,14 @@ struct DecodedZCashAddress {
 };
 
 bool IsUnifiedAddress(const std::string& address);
+bool IsUnifiedTestnetAddress(const std::string& address);
 
 std::string PubkeyToTransparentAddress(base::span<const uint8_t> pubkey,
                                        bool testnet);
+
+std::optional<std::string> PubkeyHashToTransparentAddress(
+    base::span<const uint8_t> pubkey_hash,
+    bool testnet);
 
 std::optional<DecodedZCashAddress> DecodeZCashAddress(
     const std::string& address);

@@ -2,14 +2,15 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
+
 #include "brave/components/brave_rewards/core/endpoint/promotion/put_devicecheck/put_devicecheck.h"
 
 #include <utility>
 
 #include "base/json/json_writer.h"
-#include "base/strings/stringprintf.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
+#include "brave/components/brave_rewards/core/common/url_helpers.h"
 #include "brave/components/brave_rewards/core/common/url_loader.h"
-#include "brave/components/brave_rewards/core/endpoint/promotion/promotions_util.h"
 #include "brave/components/brave_rewards/core/rewards_engine_impl.h"
 #include "net/http/http_status_code.h"
 
@@ -22,10 +23,10 @@ PutDevicecheck::PutDevicecheck(RewardsEngineImpl& engine) : engine_(engine) {}
 PutDevicecheck::~PutDevicecheck() = default;
 
 std::string PutDevicecheck::GetUrl(const std::string& nonce) {
-  const std::string path =
-      base::StringPrintf("/v1/devicecheck/attestations/%s", nonce.c_str());
-
-  return GetServerUrl(path);
+  auto url =
+      URLHelpers::Resolve(engine_->Get<EnvironmentConfig>().rewards_grant_url(),
+                          {"/v1/devicecheck/attestations/", nonce});
+  return url.spec();
 }
 
 std::string PutDevicecheck::GeneratePayload(const std::string& blob,
@@ -41,22 +42,22 @@ std::string PutDevicecheck::GeneratePayload(const std::string& blob,
 
 mojom::Result PutDevicecheck::CheckStatusCode(const int status_code) {
   if (status_code == net::HTTP_BAD_REQUEST) {
-    BLOG(0, "Invalid request");
+    engine_->LogError(FROM_HERE) << "Invalid request";
     return mojom::Result::CAPTCHA_FAILED;
   }
 
   if (status_code == net::HTTP_UNAUTHORIZED) {
-    BLOG(0, "Invalid solution");
+    engine_->LogError(FROM_HERE) << "Invalid solution";
     return mojom::Result::CAPTCHA_FAILED;
   }
 
   if (status_code == net::HTTP_INTERNAL_SERVER_ERROR) {
-    BLOG(0, "Failed to verify captcha solution");
+    engine_->LogError(FROM_HERE) << "Failed to verify captcha solution";
     return mojom::Result::FAILED;
   }
 
   if (status_code != net::HTTP_OK) {
-    BLOG(0, "Unexpected HTTP status: " << status_code);
+    engine_->LogError(FROM_HERE) << "Unexpected HTTP status: " << status_code;
     return mojom::Result::FAILED;
   }
 

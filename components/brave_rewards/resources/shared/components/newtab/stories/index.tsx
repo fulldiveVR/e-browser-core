@@ -38,7 +38,6 @@ export function Card () {
             rewardsEnabled={true}
             userType='unconnected'
             vbatDeadline={Date.parse('2023-01-01T00:00:00-05:00')}
-            isUnsupportedRegion={false}
             declaredCountry='US'
             needsBrowserUpgradeToServeAds={false}
             rewardsBalance={optional(91.5812)}
@@ -68,11 +67,15 @@ export function Card () {
             publishersVisited={4}
             canConnectAccount={true}
             showSelfCustodyInvite={true}
+            isTermsOfServiceUpdateRequired={true}
             onEnableRewards={actionLogger('onEnableRewards')}
             onSelectCountry={actionLogger('onSelectCountry')}
             onClaimGrant={actionLogger('onClaimGrant')}
             onSelfCustodyInviteDismissed={
               actionLogger('onSelfCustodyInviteDismissed')
+            }
+            onTermsOfServiceUpdateAccepted={
+              actionLogger('onTermsOfServiceUpdateAgreed')
             }
           />
         </div>

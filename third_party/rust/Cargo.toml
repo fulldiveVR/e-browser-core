@@ -278,7 +278,7 @@ path = "bincode/v1/crate"
 package = "bincode"
 
 [patch.crates-io.bitflags_v1]
-path = "../../../third_party/rust/bitflags/v1/crate"
+path = "third_party/rust/bitflags/v1/crate"
 package = "bitflags"
 
 [patch.crates-io.bitvec_v1]
@@ -1164,10 +1164,6 @@ package = "string_cache_codegen"
 [patch.crates-io.string_cache_v0_8]
 path = "string_cache/v0_8/crate"
 package = "string_cache"
-
-[patch.crates-io.strobe-rng_v0_2]
-path = "strobe_rng/v0_2/crate"
-package = "strobe-rng"
 
 [patch.crates-io.strobe-rs_v0_8]
 path = "strobe_rs/v0_8/crate"

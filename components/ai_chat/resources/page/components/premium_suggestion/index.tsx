@@ -15,11 +15,34 @@ interface PremiumSuggestionProps {
   title?: string
   description?: string
   secondaryActionButton?: React.ReactNode
-  verbose?: boolean
 }
+
+const featuresList = [
+  {
+    title: getLocale('premiumFeature_1'),
+    desc: getLocale('premiumFeature_1_desc'),
+    icon: 'widget-generic'
+  },
+  {
+    title: getLocale('premiumFeature_2'),
+    desc: getLocale('premiumFeature_2_desc'),
+    icon: 'idea'
+  },
+  {
+    title: getLocale('premiumFeature_3'),
+    desc: getLocale('premiumFeature_3_desc'),
+    icon: 'edit-pencil'
+  },
+  {
+    title: getLocale('premiumFeature_4'),
+    desc: getLocale('premiumFeature_4_desc'),
+    icon: 'message-bubble-comments'
+  }
+]
 
 function PremiumSuggestion(props: PremiumSuggestionProps) {
   const context = React.useContext(DataContext)
+  const buttonRef = React.useRef<HTMLButtonElement>()
 
   const pricingInfo = formatMessage(getLocale('premiumPricing'), {
     placeholders: {
@@ -27,37 +50,48 @@ function PremiumSuggestion(props: PremiumSuggestionProps) {
     }
   })
 
+  React.useEffect(() => {
+    if (buttonRef.current === undefined) return
+    buttonRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
     <div className={styles.boxPremium}>
-      <h4>{props.title}</h4>
-      <p>{props.description}</p>
-      <ul className={styles.featuresListing}>
-        <li>
-          <Icon name='check-normal' />
-          <span>
-            {getLocale('premiumFeature_1')}
-            {props?.verbose && <p>{getLocale('premiumFeature_1_desc')}</p>}
-          </span>
-        </li>
-        <li>
-          <Icon name='check-normal' />
-          <span>
-            {getLocale('premiumFeature_2')}
-            {props?.verbose && (
-              <p>{getLocale('premiumFeature_2_desc')}</p>
-            )}
-          </span>
-        </li>
-        <li className={styles.priceList}>
-          <span>{getLocale('premiumLabel')}</span>
-          <span className={styles.price}>
-            {pricingInfo}
-          </span>
-        </li>
-      </ul>
-      <div className={styles.actionsBox}>
-        <Button onClick={context.goPremium}>
-          {getLocale('premiumButtonLabel')}
+      <div className={styles.header}>
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
+      </div>
+      <div className={styles.features}>
+        <ul>
+          {featuresList.map((entry) => {
+            return (
+              <li>
+                <div className={styles.icon}>
+                  <Icon name={entry.icon} />
+                </div>
+                <span>
+                  {entry.title}
+                  <p>{entry.desc}</p>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      {!context.isMobile && (
+        <div className={styles.priceList}>
+          <button className={styles.priceButton} tabIndex={-1}>
+            <span className={styles.priceButtonLabel}>Monthly</span>
+            <span className={styles.price}>{pricingInfo}</span>
+          </button>
+          <div className={styles.subscriptionPolicy}>
+            {getLocale('subscriptionPolicyInfo')}
+          </div>
+        </div>
+      )}
+      <div className={styles.actions}>
+        <Button onClick={context.goPremium} ref={buttonRef}>
+          {getLocale('upgradeButtonLabel')}
         </Button>
         {props.secondaryActionButton}
       </div>

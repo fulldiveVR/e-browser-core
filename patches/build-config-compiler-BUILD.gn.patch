@@ -1,8 +1,8 @@
 diff --git a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
-index de1cd6efc67b4c93ffd73896f479f3839cb37da5..d71860fce442ff958ee1b16f832c40b094283b83 100644
+index 3c7b4d82d0b4675597b4d67b5ed40f62e229512f..56092de9e91df34cf6406d0fd8f1c1c51742f1b0 100644
 --- a/build/config/compiler/BUILD.gn
 +++ b/build/config/compiler/BUILD.gn
-@@ -594,7 +594,6 @@ config("compiler") {
+@@ -591,7 +591,6 @@ config("compiler") {
    }
  
    if (is_clang && !is_nacl && current_os != "zos") {

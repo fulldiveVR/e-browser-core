@@ -15,6 +15,7 @@
 #include "base/json/json_reader.h"
 #include "base/memory/raw_ptr.h"
 #include "base/path_service.h"
+#include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"
 #include "base/strings/stringprintf.h"
 #include "base/test/bind.h"
@@ -119,7 +120,8 @@ class RewardsStateBrowserTest : public InProcessBrowserTest {
       return;
     }
 
-    int32_t test_version = std::stoi(version_split[1]);
+    int32_t test_version = 0;
+    CHECK(base::StringToInt(version_split[1], &test_version));
 
     ASSERT_GT(test_version, 0);
 
@@ -303,10 +305,8 @@ IN_PROC_BROWSER_TEST_F(RewardsStateBrowserTest, V11ValidWallet) {
 
 IN_PROC_BROWSER_TEST_F(RewardsStateBrowserTest, V11CorruptedWallet) {
   profile_->GetPrefs()->SetInteger("brave.rewards.version", 10);
-
-  std::string base64_wallet;
-  base::Base64Encode("foobar", &base64_wallet);
-  profile_->GetPrefs()->SetString("brave.rewards.wallets.brave", base64_wallet);
+  profile_->GetPrefs()->SetString("brave.rewards.wallets.brave",
+                                  base::Base64Encode("foobar"));
 
   test_util::StartProcess(rewards_service_);
 

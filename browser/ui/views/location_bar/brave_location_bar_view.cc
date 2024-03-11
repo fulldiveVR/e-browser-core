@@ -142,7 +142,7 @@ void BraveLocationBarView::Init() {
   Update(nullptr);
 
   // Stop slide animation for all content settings views icon.
-  for (auto* content_setting_view : content_setting_views_) {
+  for (ContentSettingImageView* content_setting_view : content_setting_views_) {
     content_setting_view->disable_animation();
   }
 }
@@ -356,7 +356,7 @@ void BraveLocationBarView::ChildVisibilityChanged(views::View* child) {
   // does not listen to ChildVisibilityChanged events so we must make we Layout
   // and re-caculate trailing decorator positions when a child changes.
   if (base::Contains(GetTrailingViews(), child)) {
-    Layout();
+    DeprecatedLayoutImmediately();
     SchedulePaint();
   }
 }
@@ -394,5 +394,5 @@ BraveLocationBarView::GetContentSettingsImageViewForTesting(size_t idx) {
   return content_setting_views_[idx];
 }
 
-BEGIN_METADATA(BraveLocationBarView, LocationBarView)
+BEGIN_METADATA(BraveLocationBarView)
 END_METADATA

@@ -80,7 +80,8 @@ constexpr char kSnsDomainPattern[] = R"(^(?:[a-z0-9-]+\.)+sol$)";
 // Then one of fixed suffixes(should match `supportedUDExtensions` array from
 // domain-extensions.ts).
 constexpr char kUDPattern[] =
-    "(?:[a-z0-9-]+)\\.(?:crypto|x|nft|dao|wallet|blockchain|bitcoin|zil)";
+    "(?:[a-z0-9-]+)\\.(?:crypto|x|nft|dao|wallet|blockchain|bitcoin|zil|"
+    "altimist|anime|klever|manga|polygon|unstoppable|pudgy)";
 
 net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
   return net::DefineNetworkTrafficAnnotation("json_rpc_service", R"(
@@ -335,7 +336,7 @@ void JsonRpcService::RequestInternal(
         base::NullCallback()) {
   if (!network_url.is_valid()) {
     std::move(callback).Run(
-        APIRequestResult(400, {}, {}, {}, net::ERR_UNEXPECTED, GURL()));
+        APIRequestResult(400, {}, {}, net::ERR_UNEXPECTED, GURL()));
     return;
   }
 

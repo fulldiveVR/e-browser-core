@@ -10,6 +10,7 @@ import styled, { css, CSSProperties } from 'styled-components'
 import { Link } from 'react-router-dom'
 import * as leo from '@brave/leo/tokens/css'
 import Icon from '@brave/leo/react/icon'
+import Button from '@brave/leo/react/button'
 
 // types
 import { BraveWallet, StringWithAutocomplete } from '../../constants/types'
@@ -82,7 +83,10 @@ export const ErrorText = styled.span`
 `
 
 type FlexProps = Partial<
-  Pick<CSSProperties, 'flex' | 'alignItems' | 'justifyContent' | 'gap'>
+  Pick<
+    CSSProperties,
+    'flex' | 'alignItems' | 'justifyContent' | 'gap' | 'alignSelf'
+  >
 >
 
 // Mixins
@@ -152,6 +156,7 @@ export const Row = styled.div<
   flex-wrap: ${(p) => (p.$wrap ? 'wrap' : 'unset')};
   flex: ${(p) => p.flex ?? 'unset'};
   align-items: ${(p) => p.alignItems ?? 'center'};
+  align-self: ${(p) => p.alignSelf ?? 'unset'};
   justify-content: ${(p) => p.justifyContent ?? 'center'};
   gap: ${(p) => p.gap ?? 'unset'};
   width: ${(p) => p.width ?? '100%'};
@@ -189,6 +194,7 @@ export const Column = styled.div<
   display: flex;
   flex-direction: column;
   align-items: ${(p) => p.alignItems ?? 'center'};
+  align-self: ${(p) => p.alignSelf ?? 'unset'};
   justify-content: ${(p) => p.justifyContent ?? 'center'};
   gap: ${(p) => p.gap ?? 'unset'};
   margin: ${(p) => p.margin ?? 0};
@@ -574,4 +580,8 @@ export const BraveRewardsIndicator = styled.div`
   padding: 2px 6px;
   border: 1px solid ${leo.color.divider.subtle};
   border-radius: 4px;
+`
+
+export const LeoSquaredButton = styled(Button)`
+  --leo-button-radius: 12px;
 `

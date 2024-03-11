@@ -32,6 +32,7 @@
 #include "brave/ios/browser/api/brave_shields/adblock_service+private.h"
 #include "brave/ios/browser/api/brave_stats/brave_stats+private.h"
 #include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
+#include "brave/ios/browser/api/de_amp/de_amp_prefs+private.h"
 #include "brave/ios/browser/api/history/brave_history_api+private.h"
 #include "brave/ios/browser/api/ipfs/ipfs_api+private.h"
 #include "brave/ios/browser/api/ntp_background_images/ntp_background_images_service_ios+private.h"
@@ -72,7 +73,7 @@
 #include "ios/chrome/browser/sync/model/send_tab_to_self_sync_service_factory.h"
 #include "ios/chrome/browser/sync/model/session_sync_service_factory.h"
 #include "ios/chrome/browser/sync/model/sync_service_factory.h"
-#include "ios/chrome/browser/ui/webui/chrome_web_ui_ios_controller_factory.h"
+#include "ios/chrome/browser/webui/ui_bundled/chrome_web_ui_ios_controller_factory.h"
 #include "ios/public/provider/chrome/browser/overrides/overrides_api.h"
 #include "ios/public/provider/chrome/browser/ui_utils/ui_utils_api.h"
 #include "ios/web/public/init/web_main.h"
@@ -116,6 +117,7 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
 @property(nonatomic) BraveWalletAPI* braveWalletAPI;
 @property(nonatomic) IpfsAPIImpl* ipfsAPI;
 @property(nonatomic) BraveP3AUtils* p3aUtils;
+@property(nonatomic) DeAmpPrefs* deAmpPrefs;
 @property(nonatomic) NTPBackgroundImagesService* backgroundImagesService;
 @end
 
@@ -261,15 +263,15 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
       BrowserListFactory::GetForBrowserState(_otr_browser->GetBrowserState());
   [_otr_browser->GetCommandDispatcher() prepareForShutdown];
   _otr_browserList->RemoveBrowser(_otr_browser.get());
-  _otr_browser->GetWebStateList()->CloseAllWebStates(
-      WebStateList::CLOSE_NO_FLAGS);
+  CloseAllWebStates(*_otr_browser->GetWebStateList(),
+                    WebStateList::CLOSE_NO_FLAGS);
   _otr_browser.reset();
 
   _browserList =
       BrowserListFactory::GetForBrowserState(_browser->GetBrowserState());
   [_browser->GetCommandDispatcher() prepareForShutdown];
   _browserList->RemoveBrowser(_browser.get());
-  _browser->GetWebStateList()->CloseAllWebStates(WebStateList::CLOSE_NO_FLAGS);
+  CloseAllWebStates(*_browser->GetWebStateList(), WebStateList::CLOSE_NO_FLAGS);
   _browser.reset();
 
   _mainBrowserState = nullptr;
@@ -482,6 +484,14 @@ static bool CustomLogHandler(int severity,
                 p3aService:_p3a_service];
   }
   return _p3aUtils;
+}
+
+- (DeAmpPrefs*)deAmpPrefs {
+  if (!_deAmpPrefs) {
+    _deAmpPrefs =
+        [[DeAmpPrefs alloc] initWithProfileState:_mainBrowserState->GetPrefs()];
+  }
+  return _deAmpPrefs;
 }
 
 - (AIChat*)aiChatAPIWithDelegate:(id<AIChatDelegate>)delegate {

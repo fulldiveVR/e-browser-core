@@ -12,7 +12,7 @@
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search/renderer/brave_search_render_frame_observer.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/cosmetic_filters/renderer/cosmetic_filters_js_render_frame_observer.h"
@@ -88,10 +88,12 @@ void BraveContentRendererClient::
   ChromeContentRendererClient::
       SetRuntimeFeaturesDefaultsBeforeBlinkInitialization();
 
+  blink::WebRuntimeFeatures::EnableFledge(false);
+  blink::WebRuntimeFeatures::EnableWebGPUExperimentalFeatures(false);
   blink::WebRuntimeFeatures::EnableWebNFC(false);
-  blink::WebRuntimeFeatures::EnableAnonymousIframe(false);
 
   // These features don't have dedicated WebRuntimeFeatures wrappers.
+  blink::WebRuntimeFeatures::EnableFeatureFromString("AdTagging", false);
   blink::WebRuntimeFeatures::EnableFeatureFromString("DigitalGoods", false);
   if (!base::FeatureList::IsEnabled(blink::features::kFileSystemAccessAPI)) {
     blink::WebRuntimeFeatures::EnableFeatureFromString("FileSystemAccessLocal",
@@ -99,10 +101,18 @@ void BraveContentRendererClient::
     blink::WebRuntimeFeatures::EnableFeatureFromString(
         "FileSystemAccessAPIExperimental", false);
   }
+  blink::WebRuntimeFeatures::EnableFeatureFromString("FledgeMultiBid", false);
   if (!base::FeatureList::IsEnabled(blink::features::kBraveWebSerialAPI)) {
     blink::WebRuntimeFeatures::EnableFeatureFromString("Serial", false);
   }
-  blink::WebRuntimeFeatures::EnableFeatureFromString("AdTagging", false);
+
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+  if (base::FeatureList::IsEnabled(
+          blink::features::kMiddleButtonClickAutoscroll)) {
+    blink::WebRuntimeFeatures::EnableFeatureFromString("MiddleClickAutoscroll",
+                                                       true);
+  }
+#endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 }
 
 BraveContentRendererClient::~BraveContentRendererClient() = default;
@@ -207,6 +217,20 @@ void BraveContentRendererClient::RunScriptsAtDocumentStart(
   ChromeContentRendererClient::RunScriptsAtDocumentStart(render_frame);
 }
 
+void BraveContentRendererClient::RunScriptsAtDocumentEnd(
+    content::RenderFrame* render_frame) {
+#if BUILDFLAG(ENABLE_PLAYLIST)
+  if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {
+    if (auto* playlist_observer =
+            playlist::PlaylistRenderFrameObserver::Get(render_frame)) {
+      playlist_observer->RunScriptsAtDocumentEnd();
+    }
+  }
+#endif
+
+  ChromeContentRendererClient::RunScriptsAtDocumentEnd(render_frame);
+}
+
 void BraveContentRendererClient::WillEvaluateServiceWorkerOnWorkerThread(
     blink::WebServiceWorkerContextProxy* context_proxy,
     v8::Local<v8::Context> v8_context,
@@ -237,8 +261,8 @@ void BraveContentRendererClient::WillDestroyServiceWorkerContextOnWorkerThread(
 std::unique_ptr<blink::URLLoaderThrottleProvider>
 BraveContentRendererClient::CreateURLLoaderThrottleProvider(
     blink::URLLoaderThrottleProviderType provider_type) {
-  return std::make_unique<BraveURLLoaderThrottleProviderImpl>(
-      browser_interface_broker_.get(), provider_type, this);
+  return BraveURLLoaderThrottleProviderImpl::Create(
+      provider_type, this, browser_interface_broker_.get());
 }
 
 bool BraveContentRendererClient::IsOnionAllowed() const {

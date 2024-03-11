@@ -6,7 +6,6 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_REWARDS_CORE_CREDENTIALS_CREDENTIALS_UTIL_H_
 #define BRAVE_COMPONENTS_BRAVE_REWARDS_CORE_CREDENTIALS_CREDENTIALS_UTIL_H_
 
-#include <memory>
 #include <optional>
 #include <string>
 #include <vector>
@@ -15,12 +14,16 @@
 #include "base/values.h"
 #include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
 #include "brave/components/brave_rewards/core/credentials/credentials_redeem.h"
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/blinded_token.h"
+#include "brave/components/challenge_bypass_ristretto/token.h"
 
 using challenge_bypass_ristretto::BlindedToken;
 using challenge_bypass_ristretto::Token;
 
 namespace brave_rewards::internal {
+
+class RewardsEngineImpl;
+
 namespace credential {
 
 std::vector<Token> GenerateCreds(const int count);
@@ -42,6 +45,7 @@ std::vector<std::string> UnBlindCredsMock(const mojom::CredsBatch& creds);
 std::string ConvertRewardTypeToString(const mojom::RewardsType type);
 
 base::Value::List GenerateCredentials(
+    RewardsEngineImpl& engine,
     const std::vector<mojom::UnblindedToken>& token_list,
     const std::string& body);
 

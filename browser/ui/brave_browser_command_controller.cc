@@ -5,6 +5,7 @@
 
 #include "brave/browser/ui/brave_browser_command_controller.h"
 
+#include <memory>
 #include <optional>
 #include <utility>
 #include <vector>
@@ -21,6 +22,7 @@
 #include "brave/components/brave_rewards/common/rewards_util.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/common_utils.h"
+#include "brave/components/commander/common/buildflags/buildflags.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
@@ -54,6 +56,10 @@
 
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 #include "brave/components/playlist/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_COMMANDER)
+#include "brave/browser/ui/commander/commander_service.h"
 #endif
 
 namespace {
@@ -92,6 +98,8 @@ BraveBrowserCommandController::~BraveBrowserCommandController() = default;
 void BraveBrowserCommandController::TabChangedAt(content::WebContents* contents,
                                                  int index,
                                                  TabChangeType type) {
+  UpdateCommandEnabled(IDC_CLOSE_DUPLICATE_TABS,
+                       brave::HasDuplicateTabs(&*browser_));
   UpdateCommandsForMute();
   UpdateCommandsForSend();
 }
@@ -112,6 +120,8 @@ void BraveBrowserCommandController::OnTabStripModelChanged(
 
   UpdateCommandEnabled(IDC_WINDOW_CLOSE_TABS_TO_LEFT,
                        brave::CanCloseTabsToLeft(&*browser_));
+  UpdateCommandEnabled(IDC_CLOSE_DUPLICATE_TABS,
+                       brave::HasDuplicateTabs(&*browser_));
   UpdateCommandsForMute();
   UpdateCommandsForSend();
   UpdateCommandsForPin();
@@ -224,6 +234,11 @@ void BraveBrowserCommandController::InitBraveCommandState() {
 #if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
   UpdateCommandEnabled(IDC_APP_MENU_IPFS_OPEN_FILES, true);
 #endif
+
+#if BUILDFLAG(ENABLE_COMMANDER)
+  UpdateCommandEnabled(IDC_COMMANDER, commander::IsEnabled());
+#endif
+
   UpdateCommandEnabled(IDC_BRAVE_BOOKMARK_BAR_SUBMENU, true);
 
   UpdateCommandEnabled(IDC_TOGGLE_VERTICAL_TABS, true);
@@ -243,7 +258,8 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   UpdateCommandEnabled(IDC_GROUP_TABS_ON_CURRENT_ORIGIN, true);
 
   UpdateCommandEnabled(IDC_MOVE_GROUP_TO_NEW_WINDOW, true);
-  UpdateCommandEnabled(IDC_CLOSE_DUPLICATE_TABS, true);
+  UpdateCommandEnabled(IDC_CLOSE_DUPLICATE_TABS,
+                       brave::HasDuplicateTabs(&*browser_));
   UpdateCommandEnabled(IDC_WINDOW_ADD_ALL_TABS_TO_NEW_GROUP, true);
 
   UpdateCommandEnabled(IDC_SCROLL_TAB_TO_TOP, true);
@@ -254,6 +270,8 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   UpdateCommandsForMute();
   UpdateCommandsForSend();
   UpdateCommandsForPin();
+
+  UpdateCommandEnabled(IDC_TOGGLE_ALL_BOOKMARKS_BUTTON_VISIBILITY, true);
 }
 
 void BraveBrowserCommandController::UpdateCommandForBraveRewards() {
@@ -512,6 +530,14 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       break;
     case IDC_BRAVE_SEND_TAB_TO_SELF:
       chrome::SendTabToSelfFromPageAction(&*browser_);
+      break;
+    case IDC_TOGGLE_ALL_BOOKMARKS_BUTTON_VISIBILITY:
+      brave::ToggleAllBookmarksButtonVisibility(std::to_address(browser_));
+      break;
+    case IDC_COMMANDER:
+#if BUILDFLAG(ENABLE_COMMANDER)
+      brave::ToggleCommander(std::to_address(browser_));
+#endif
       break;
     default:
       LOG(WARNING) << "Received Unimplemented Command: " << id;

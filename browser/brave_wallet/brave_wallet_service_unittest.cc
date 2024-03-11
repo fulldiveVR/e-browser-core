@@ -343,7 +343,7 @@ class BraveWalletServiceUnitTest : public testing::Test {
         shared_url_loader_factory_,
         BraveWalletServiceDelegate::Create(profile_.get()), keyring_service_,
         json_rpc_service_, tx_service_, bitcoin_wallet_service_.get(), nullptr,
-        GetPrefs(), local_state_->Get());
+        GetPrefs(), local_state_->Get(), false /* is_private_window_ */);
     observer_ = std::make_unique<TestBraveWalletServiceObserver>();
     service_->AddObserver(observer_->GetReceiver());
 
@@ -514,6 +514,14 @@ class BraveWalletServiceUnitTest : public testing::Test {
     run_loop.Run();
   }
 
+  std::vector<mojom::BlockchainTokenPtr> GetUserAssets(
+      const std::string& chain_id,
+      mojom::CoinType coin_type) {
+    std::vector<mojom::BlockchainTokenPtr> result;
+    GetUserAssets(chain_id, coin_type, &result);
+    return result;
+  }
+
   bool AddUserAsset(mojom::BlockchainTokenPtr token) {
     bool out_success = false;
     base::RunLoop run_loop;
@@ -566,7 +574,7 @@ class BraveWalletServiceUnitTest : public testing::Test {
     auto old_default_wallet = observer_->GetDefaultEthereumWallet();
     EXPECT_FALSE(observer_->DefaultEthereumWalletChangedFired());
     service_->SetDefaultEthereumWallet(default_wallet);
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     if (old_default_wallet != default_wallet) {
       EXPECT_TRUE(observer_->DefaultEthereumWalletChangedFired());
     } else {
@@ -580,7 +588,7 @@ class BraveWalletServiceUnitTest : public testing::Test {
     auto old_default_wallet = observer_->GetDefaultSolanaWallet();
     EXPECT_FALSE(observer_->DefaultSolanaWalletChangedFired());
     service_->SetDefaultSolanaWallet(default_wallet);
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     if (old_default_wallet != default_wallet) {
       EXPECT_TRUE(observer_->DefaultSolanaWalletChangedFired());
     } else {
@@ -594,7 +602,7 @@ class BraveWalletServiceUnitTest : public testing::Test {
     auto old_currency = observer_->GetDefaultBaseCurrency();
     EXPECT_FALSE(observer_->DefaultBaseCurrencyChangedFired());
     service_->SetDefaultBaseCurrency(currency);
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     if (old_currency != currency) {
       EXPECT_TRUE(observer_->DefaultBaseCurrencyChangedFired());
     } else {
@@ -608,7 +616,7 @@ class BraveWalletServiceUnitTest : public testing::Test {
     auto old_cryptocurrency = observer_->GetDefaultBaseCryptocurrency();
     EXPECT_FALSE(observer_->DefaultBaseCryptocurrencyChangedFired());
     service_->SetDefaultBaseCryptocurrency(cryptocurrency);
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     if (old_cryptocurrency != cryptocurrency) {
       EXPECT_TRUE(observer_->DefaultBaseCryptocurrencyChangedFired());
     } else {
@@ -942,6 +950,50 @@ TEST_F(BraveWalletServiceUnitTest, GetUserAssets) {
   EXPECT_EQ(tokens.size(), 2u);
   EXPECT_EQ(eth_0xaa36a7_token, tokens[0]);
   EXPECT_EQ(token1_0xaa36a7, tokens[1]);
+}
+
+TEST_F(BraveWalletServiceUnitTest, GetUserAssetsAlwaysHasNativeTokensForBtc) {
+  GetPrefs()->SetList(kBraveWalletUserAssetsList, base::Value::List());
+
+  auto btc_mainnet_token = GetBitcoinNativeToken(mojom::kBitcoinMainnet);
+  auto btc_testnet_token = GetBitcoinNativeToken(mojom::kBitcoinTestnet);
+
+  EXPECT_THAT(GetUserAssets(mojom::kBitcoinMainnet, mojom::CoinType::BTC),
+              ElementsAre(Eq(std::ref(btc_mainnet_token))));
+  EXPECT_THAT(GetUserAssets(mojom::kBitcoinTestnet, mojom::CoinType::BTC),
+              ElementsAre(Eq(std::ref(btc_testnet_token))));
+
+  btc_mainnet_token->visible = false;
+  btc_testnet_token->visible = false;
+  AddUserAsset(btc_mainnet_token.Clone());
+  AddUserAsset(btc_testnet_token.Clone());
+
+  EXPECT_THAT(GetUserAssets(mojom::kBitcoinMainnet, mojom::CoinType::BTC),
+              ElementsAre(Eq(std::ref(btc_mainnet_token))));
+  EXPECT_THAT(GetUserAssets(mojom::kBitcoinTestnet, mojom::CoinType::BTC),
+              ElementsAre(Eq(std::ref(btc_testnet_token))));
+}
+
+TEST_F(BraveWalletServiceUnitTest, GetUserAssetsAlwaysHasNativeTokensForZec) {
+  GetPrefs()->SetList(kBraveWalletUserAssetsList, base::Value::List());
+
+  auto zec_mainnet_token = GetZcashNativeToken(mojom::kZCashMainnet);
+  auto zec_testnet_token = GetZcashNativeToken(mojom::kZCashTestnet);
+
+  EXPECT_THAT(GetUserAssets(mojom::kZCashMainnet, mojom::CoinType::ZEC),
+              ElementsAre(Eq(std::ref(zec_mainnet_token))));
+  EXPECT_THAT(GetUserAssets(mojom::kZCashTestnet, mojom::CoinType::ZEC),
+              ElementsAre(Eq(std::ref(zec_testnet_token))));
+
+  zec_mainnet_token->visible = false;
+  zec_testnet_token->visible = false;
+  AddUserAsset(zec_mainnet_token.Clone());
+  AddUserAsset(zec_testnet_token.Clone());
+
+  EXPECT_THAT(GetUserAssets(mojom::kZCashMainnet, mojom::CoinType::ZEC),
+              ElementsAre(Eq(std::ref(zec_mainnet_token))));
+  EXPECT_THAT(GetUserAssets(mojom::kZCashTestnet, mojom::CoinType::ZEC),
+              ElementsAre(Eq(std::ref(zec_testnet_token))));
 }
 
 TEST_F(BraveWalletServiceUnitTest, DefaultAssets) {
@@ -1355,35 +1407,6 @@ TEST_F(BraveWalletServiceUnitTest, SetAssetSpamStatus) {
   EXPECT_EQ(tokens[1]->visible, false);
 }
 
-TEST_F(BraveWalletServiceUnitTest, GetChecksumAddress) {
-  std::optional<std::string> addr = service_->GetChecksumAddress(
-      "0x06012c8cf97bead5deae237070f9587f8e7a266d", "0x1");
-  EXPECT_EQ(addr.value(), "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d");
-
-  addr = service_->GetChecksumAddress(
-      "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d", "0x1");
-  EXPECT_EQ(addr.value(), "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d");
-
-  addr = service_->GetChecksumAddress("", "0x1");
-  EXPECT_EQ(addr.value(), "");
-
-  addr = service_->GetChecksumAddress("eth", "0x1");
-  EXPECT_FALSE(addr.has_value());
-
-  addr = service_->GetChecksumAddress("ETH", "0x1");
-  EXPECT_FALSE(addr.has_value());
-
-  addr = service_->GetChecksumAddress("0x123", "0x1");
-  EXPECT_FALSE(addr.has_value());
-
-  addr = service_->GetChecksumAddress("123", "0x1");
-  EXPECT_FALSE(addr.has_value());
-
-  addr = service_->GetChecksumAddress(
-      "06012c8cf97BEaD5deAe237070F9587f8E7A266d", "0x1");
-  EXPECT_FALSE(addr.has_value());
-}
-
 TEST_F(BraveWalletServiceUnitTest, GetAndSetDefaultEthereumWallet) {
   SetDefaultEthereumWallet(mojom::DefaultWallet::BraveWallet);
   EXPECT_EQ(GetDefaultEthereumWallet(), mojom::DefaultWallet::BraveWallet);
@@ -1485,7 +1508,7 @@ TEST_F(BraveWalletServiceUnitTest, NetworkListChangedEvent) {
   mojom::NetworkInfo chain = GetTestNetworkInfo1("0x5566");
 
   AddCustomNetwork(GetPrefs(), chain);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(observer_->OnNetworkListChangedFired());
 
   // Remove network.
@@ -1501,7 +1524,7 @@ TEST_F(BraveWalletServiceUnitTest, NetworkListChangedEvent) {
       return *chain_id_value == "0x5566";
     });
   }
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(observer_->OnNetworkListChangedFired());
 }
 
@@ -1660,8 +1683,12 @@ TEST_F(BraveWalletServiceUnitTest, SolanaTokenUserAssetsAPI) {
 }
 
 TEST_F(BraveWalletServiceUnitTest, MigrateDefaultHiddenNetworks) {
+  // Note: The testing profile has already performed the prefs migration by the
+  // time this test runs, so undo its effects here for testing purposes
   ASSERT_EQ(GetPrefs()->GetInteger(kBraveWalletDefaultHiddenNetworksVersion),
-            0);
+            1);
+  GetPrefs()->SetInteger(kBraveWalletDefaultHiddenNetworksVersion, 0);
+
   BraveWalletService::MigrateHiddenNetworks(GetPrefs());
   {
     auto* list =
@@ -1684,8 +1711,12 @@ TEST_F(BraveWalletServiceUnitTest, MigrateDefaultHiddenNetworks) {
 }
 
 TEST_F(BraveWalletServiceUnitTest, MigrateDefaultHiddenNetworks_NoList) {
+  // Note: The testing profile has already performed the prefs migration by the
+  // time this test runs, so undo its effects here for testing purposes
   ASSERT_EQ(GetPrefs()->GetInteger(kBraveWalletDefaultHiddenNetworksVersion),
-            0);
+            1);
+  GetPrefs()->SetInteger(kBraveWalletDefaultHiddenNetworksVersion, 0);
+
   {
     ScopedDictPrefUpdate update(GetPrefs(), kBraveWalletHiddenNetworks);
     update.Get().Remove("ethereum");
@@ -1701,6 +1732,15 @@ TEST_F(BraveWalletServiceUnitTest, MigrateDefaultHiddenNetworks_NoList) {
 }
 
 TEST_F(BraveWalletServiceUnitTest, MigrateFantomMainnetAsCustomNetwork) {
+  // Note: The testing profile has already performed the prefs migration by the
+  // time this test runs, so undo its effects here for testing purposes
+  ASSERT_TRUE(
+      GetPrefs()->GetBoolean(kBraveWalletCustomNetworksFantomMainnetMigrated));
+  GetPrefs()->SetBoolean(kBraveWalletCustomNetworksFantomMainnetMigrated,
+                         false);
+  GetPrefs()->ClearPref(kBraveWalletCustomNetworks);
+  GetPrefs()->ClearPref(kBraveWalletSelectedNetworksPerOrigin);
+
   // CASE 1: Fantom is the selected network of some origin
   ASSERT_FALSE(
       GetPrefs()->GetBoolean(kBraveWalletCustomNetworksFantomMainnetMigrated));
@@ -1849,9 +1889,9 @@ TEST_F(BraveWalletServiceUnitTest, MigrateAssetsPrefToList) {
   ASSERT_FALSE(GetPrefs()->HasPrefPath(kBraveWalletUserAssetsDeprecated));
   ASSERT_TRUE(GetPrefs()->HasPrefPath(kBraveWalletUserAssetsList));
 
-  EXPECT_THAT(BraveWalletService::GetUserAssets(GetPrefs()),
-              testing::ElementsAre(
-                  Eq(std::ref(custom_eth_token)), Eq(std::ref(eth_token)),
+  EXPECT_THAT(
+      GetAllUserAssets(GetPrefs()),
+      ElementsAre(Eq(std::ref(custom_eth_token)), Eq(std::ref(eth_token)),
                   Eq(std::ref(bat_token)), Eq(std::ref(sol_token))));
 }
 
@@ -2280,41 +2320,6 @@ TEST_F(BraveWalletServiceUnitTest, Reset) {
 #endif
 }
 
-TEST_F(BraveWalletServiceUnitTest, GetUserAssetAddress) {
-  // Native asset
-  EXPECT_EQ(
-      *BraveWalletService::GetUserAssetAddress("", mojom::CoinType::ETH, "0x1"),
-      "");
-  EXPECT_EQ(*BraveWalletService::GetUserAssetAddress("", mojom::CoinType::SOL,
-                                                     mojom::kSolanaMainnet),
-            "");
-  EXPECT_EQ(
-      *BraveWalletService::GetUserAssetAddress("", mojom::CoinType::FIL, "f"),
-      "");
-
-  // ETH
-  EXPECT_EQ(*BraveWalletService::GetUserAssetAddress(
-                "0x6b175474e89094c44da98b954eedeac495271d0f",
-                mojom::CoinType::ETH, "0x1"),
-            "0x6B175474E89094C44Da98b954EedeAC495271d0F");
-
-  // SOL
-  EXPECT_EQ(*BraveWalletService::GetUserAssetAddress(
-                "AQoKYV7tYpTrFZN6P5oUufbQKAUr9mNYGe1TTJC9wajM",
-                mojom::CoinType::SOL, mojom::kSolanaMainnet),
-            "AQoKYV7tYpTrFZN6P5oUufbQKAUr9mNYGe1TTJC9wajM");
-  EXPECT_EQ(BraveWalletService::GetUserAssetAddress("not_base58_encoded_string",
-                                                    mojom::CoinType::SOL,
-                                                    mojom::kSolanaMainnet),
-            std::nullopt);
-
-  // FIL
-  EXPECT_EQ(BraveWalletService::GetUserAssetAddress(
-                "f1h4n7rphclbmwyjcp6jrdiwlfcuwbroxy3jvg33q",
-                mojom::CoinType::FIL, "f"),
-            std::nullopt);
-}
-
 TEST_F(BraveWalletServiceUnitTest, NewUserReturningMetric) {
   histogram_tester_->ExpectBucketCount(
       kBraveWalletNewUserReturningHistogramName, 0, 1);
@@ -2403,7 +2408,7 @@ TEST_F(BraveWalletServiceUnitTest, SetNftDiscoveryEnabled) {
   // discovery
   EXPECT_CALL(*observer_, OnDiscoverAssetsCompleted(testing::_)).Times(1);
   service_->SetNftDiscoveryEnabled(true);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(testing::Mock::VerifyAndClearExpectations(&observer_));
   EXPECT_TRUE(GetPrefs()->GetBoolean(kBraveWalletNftDiscoveryEnabled));
 
@@ -2411,9 +2416,24 @@ TEST_F(BraveWalletServiceUnitTest, SetNftDiscoveryEnabled) {
   // asset discovery
   EXPECT_CALL(*observer_, OnDiscoverAssetsCompleted(testing::_)).Times(0);
   service_->SetNftDiscoveryEnabled(false);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(testing::Mock::VerifyAndClearExpectations(&observer_));
   EXPECT_FALSE(GetPrefs()->GetBoolean(kBraveWalletNftDiscoveryEnabled));
+}
+
+TEST_F(BraveWalletServiceUnitTest, SetPrivateWindowsEnabled) {
+  // Default should be off
+  EXPECT_FALSE(GetPrefs()->GetBoolean(kBraveWalletPrivateWindowsEnabled));
+
+  // Setting private enabled should update the pref.
+  service_->SetPrivateWindowsEnabled(true);
+  base::RunLoop().RunUntilIdle();
+  EXPECT_TRUE(GetPrefs()->GetBoolean(kBraveWalletPrivateWindowsEnabled));
+
+  // Unsetting NFT discovery enabled should update the pref.
+  service_->SetPrivateWindowsEnabled(false);
+  base::RunLoop().RunUntilIdle();
+  EXPECT_FALSE(GetPrefs()->GetBoolean(kBraveWalletPrivateWindowsEnabled));
 }
 
 TEST_F(BraveWalletServiceUnitTest, RecordGeneralUsageMetrics) {
@@ -2667,13 +2687,13 @@ TEST_F(BraveWalletServiceUnitTest, GenerateReceiveAddress_Btc) {
   EXPECT_CALL(callback, Run(expected_address, std::optional<std::string>()));
   service_->GenerateReceiveAddress(btc_account->account_id.Clone(),
                                    callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   EXPECT_CALL(callback, Run(expected_address, std::optional<std::string>()));
   service_->GenerateReceiveAddress(btc_account->account_id.Clone(),
                                    callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   bitcoin_test_rpc_server_->address_stats_map()[*expected_address] =
@@ -2686,7 +2706,7 @@ TEST_F(BraveWalletServiceUnitTest, GenerateReceiveAddress_Btc) {
   EXPECT_CALL(callback, Run(expected_address, std::optional<std::string>()));
   service_->GenerateReceiveAddress(btc_account->account_id.Clone(),
                                    callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 

@@ -144,6 +144,19 @@ bool SetCurrentChainId(PrefService* prefs,
                        const std::optional<url::Origin>& origin,
                        const std::string& chain_id);
 
+std::vector<mojom::BlockchainTokenPtr> GetAllUserAssets(PrefService* prefs);
+mojom::BlockchainTokenPtr AddUserAsset(PrefService* prefs,
+                                       mojom::BlockchainTokenPtr token);
+bool RemoveUserAsset(PrefService* prefs,
+                     const mojom::BlockchainTokenPtr& token);
+bool SetUserAssetVisible(PrefService* prefs,
+                         const mojom::BlockchainTokenPtr& token,
+                         bool visible);
+bool SetAssetSpamStatus(PrefService* prefs,
+                        const mojom::BlockchainTokenPtr& token,
+                        bool is_spam);
+base::Value::List GetDefaultUserAssets();
+
 std::string GetPrefKeyForCoinType(mojom::CoinType coin);
 
 // Converts string representation of CoinType to enum.
@@ -173,6 +186,16 @@ mojom::OriginInfoPtr MakeOriginInfo(const url::Origin& origin);
 std::string GenerateRandomHexString();
 
 std::string WalletInternalErrorMessage();
+
+mojom::BlockchainTokenPtr GetBitcoinNativeToken(const std::string& chain_id);
+mojom::BlockchainTokenPtr GetZcashNativeToken(const std::string& chain_id);
+
+mojom::BlowfishOptInStatus GetTransactionSimulationOptInStatus(
+    PrefService* prefs);
+
+void SetTransactionSimulationOptInStatus(
+    PrefService* prefs,
+    const mojom::BlowfishOptInStatus& status);
 
 }  // namespace brave_wallet
 

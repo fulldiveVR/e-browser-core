@@ -521,6 +521,10 @@ void RewardsServiceImpl::CreateRewardsWallet(
         prefs->SetString(prefs::kUserVersion, prefs::kCurrentUserVersion);
         prefs->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds, true);
 
+        // Set the user's current ToS version.
+        prefs->SetInteger(prefs::kTosVersion,
+                          prefs->GetInteger(prefs::kParametersTosVersion));
+
         // Fetch the user's balance before turning on AC. We don't want to
         // automatically turn on AC if for some reason the user has a current
         // balance, as this could result in unintentional BAT transfers.
@@ -593,6 +597,27 @@ void RewardsServiceImpl::GetUserType(
 
   GetExternalWallet(
       base::BindOnce(on_external_wallet, AsWeakPtr(), std::move(callback)));
+}
+
+bool RewardsServiceImpl::IsTermsOfServiceUpdateRequired() {
+  auto* prefs = profile_->GetPrefs();
+  if (!prefs->GetBoolean(prefs::kEnabled)) {
+    return false;
+  }
+  int params_version = prefs->GetInteger(prefs::kParametersTosVersion);
+  int user_version = prefs->GetInteger(prefs::kTosVersion);
+  return user_version < params_version;
+}
+
+void RewardsServiceImpl::AcceptTermsOfServiceUpdate() {
+  if (IsTermsOfServiceUpdateRequired()) {
+    auto* prefs = profile_->GetPrefs();
+    int params_version = prefs->GetInteger(prefs::kParametersTosVersion);
+    prefs->SetInteger(prefs::kTosVersion, params_version);
+    for (auto& observer : observers_) {
+      observer.OnTermsOfServiceUpdateAccepted();
+    }
+  }
 }
 
 std::string RewardsServiceImpl::GetCountryCode() const {
@@ -2081,21 +2106,17 @@ mojom::RewardsEngineOptionsPtr RewardsServiceImpl::HandleFlags(
   if (flags.environment) {
     switch (*flags.environment) {
       case RewardsFlags::Environment::kDevelopment:
-        options->environment = mojom::Environment::DEVELOPMENT;
+        options->environment = mojom::Environment::kDevelopment;
         break;
       case RewardsFlags::Environment::kStaging:
-        options->environment = mojom::Environment::STAGING;
+        options->environment = mojom::Environment::kStaging;
         break;
       case RewardsFlags::Environment::kProduction:
-        options->environment = mojom::Environment::PRODUCTION;
+        options->environment = mojom::Environment::kProduction;
         break;
     }
   } else {
     options->environment = GetDefaultServerEnvironment();
-  }
-
-  if (flags.debug) {
-    options->is_debug = true;
   }
 
   if (flags.reconcile_interval) {
@@ -2479,18 +2500,18 @@ void RewardsServiceImpl::OnRecordBackendP3AStatsAC(bool ac_enabled) {
 }
 
 mojom::Environment RewardsServiceImpl::GetDefaultServerEnvironment() {
-  mojom::Environment environment = mojom::Environment::STAGING;
+  mojom::Environment environment = mojom::Environment::kStaging;
 #if defined(OFFICIAL_BUILD) && BUILDFLAG(IS_ANDROID)
   environment = GetDefaultServerEnvironmentForAndroid();
 #elif defined(OFFICIAL_BUILD)
-  environment = mojom::Environment::PRODUCTION;
+  environment = mojom::Environment::kProduction;
 #endif
   return environment;
 }
 
 #if BUILDFLAG(IS_ANDROID)
 mojom::Environment RewardsServiceImpl::GetDefaultServerEnvironmentForAndroid() {
-  auto result = mojom::Environment::PRODUCTION;
+  auto result = mojom::Environment::kProduction;
   bool use_staging = false;
   if (profile_ && profile_->GetPrefs()) {
     use_staging =
@@ -2498,7 +2519,7 @@ mojom::Environment RewardsServiceImpl::GetDefaultServerEnvironmentForAndroid() {
   }
 
   if (use_staging) {
-    result = mojom::Environment::STAGING;
+    result = mojom::Environment::kStaging;
   }
 
   return result;

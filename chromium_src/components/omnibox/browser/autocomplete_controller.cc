@@ -37,7 +37,7 @@
 #endif
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/omnibox/browser/leo_provider.h"
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
@@ -87,9 +87,12 @@ void MaybeAddCommanderProvider(AutocompleteController::Providers& providers,
 void MaybeAddLeoProvider(AutocompleteController::Providers& providers,
                          AutocompleteController* controller) {
 #if BUILDFLAG(ENABLE_AI_CHAT)
-  if (ai_chat::features::IsAIChatEnabled()) {
-    providers.push_back(base::MakeRefCounted<LeoProvider>(
-        controller->autocomplete_provider_client()));
+  auto* provider_client = controller->autocomplete_provider_client();
+  // TestOmniboxClient has null prefs getter
+  auto* prefs = provider_client->GetPrefs();
+  if (prefs && ai_chat::IsAIChatEnabled(prefs) &&
+      !provider_client->IsOffTheRecord()) {
+    providers.push_back(base::MakeRefCounted<LeoProvider>(provider_client));
   }
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 }

@@ -12,6 +12,8 @@ assert(toolkit_views)
 static_library("sidebar") {
   sources = [
     "constants.h",
+    "features.cc",
+    "features.h",
     "pref_names.h",
     "sidebar_item.cc",
     "sidebar_item.h",
@@ -36,7 +38,10 @@ static_library("sidebar") {
   ]
 
   if (enable_ai_chat) {
-    deps += [ "//brave/components/ai_chat/core/common" ]
+    deps += [
+      "//brave/components/ai_chat/core/browser",
+      "//brave/components/ai_chat/core/common",
+    ]
   }
 
   if (enable_playlist) {

@@ -3,16 +3,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "chrome/browser/ui/webui/help/version_updater_mac.h"
+#include "brave/chromium_src/chrome/browser/ui/webui/help/version_updater_mac.h"
+
+#include <memory>
 
 #include "base/apple/foundation_util.h"
+#include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/escape.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/strings/utf_string_conversions.h"
+#include "brave/browser/mac/keystone_glue.h"
 #include "brave/browser/sparkle_buildflags.h"
 #include "brave/components/l10n/common/localization_util.h"
-#include "chrome/browser/mac/keystone_glue.h"
 #include "chrome/browser/obsolete_system/obsolete_system.h"
 #include "chrome/grit/branded_strings.h"
 #include "chrome/grit/generated_resources.h"
@@ -61,10 +64,9 @@
 
 @end  // @implementation KeystoneObserver
 
-
-VersionUpdater* VersionUpdater::Create(
+std::unique_ptr<VersionUpdater> VersionUpdater::Create(
     content::WebContents* web_contents) {
-  return new VersionUpdaterMac;
+  return base::WrapUnique(new VersionUpdaterMac());
 }
 
 VersionUpdaterMac::VersionUpdaterMac()

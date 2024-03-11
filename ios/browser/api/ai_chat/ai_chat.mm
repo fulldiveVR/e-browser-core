@@ -101,8 +101,9 @@
 - (void)submitHumanConversationEntry:(NSString*)text {
   driver_->SubmitHumanConversationEntry(
       {ai_chat::mojom::CharacterType::HUMAN,
+       ai_chat::mojom::ActionType::UNSPECIFIED,
        ai_chat::mojom::ConversationTurnVisibility::VISIBLE,
-       base::SysNSStringToUTF8(text)});
+       base::SysNSStringToUTF8(text), std::nullopt});
 }
 
 - (void)submitSummarizationRequest {
@@ -188,10 +189,12 @@
 - (void)sendFeedback:(NSString*)category
             feedback:(NSString*)feedback
             ratingId:(NSString*)ratingId
+         sendPageUrl:(bool)sendPageUrl
           completion:(void (^)(bool))completion {
-  driver_->SendFeedback(
-      base::SysNSStringToUTF8(category), base::SysNSStringToUTF8(feedback),
-      base::SysNSStringToUTF8(ratingId), base::BindOnce(completion));
+  driver_->SendFeedback(base::SysNSStringToUTF8(category),
+                        base::SysNSStringToUTF8(feedback),
+                        base::SysNSStringToUTF8(ratingId), sendPageUrl,
+                        base::BindOnce(completion));
 }
 
 - (bool)canShowPremiumPrompt {

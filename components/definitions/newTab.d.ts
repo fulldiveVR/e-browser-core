@@ -156,7 +156,6 @@ declare namespace NewTab {
   export interface RewardsWidgetState {
     rewardsEnabled: boolean
     userType: string
-    isUnsupportedRegion: boolean
     declaredCountry: string
     balance?: number
     externalWallet?: RewardsExtension.ExternalWallet
@@ -170,6 +169,7 @@ declare namespace NewTab {
     totalContribution: number
     publishersVisitedCount: number
     selfCustodyInviteDismissed: boolean
+    isTermsOfServiceUpdateRequired: boolean
   }
 
   export const enum RewardsResult {

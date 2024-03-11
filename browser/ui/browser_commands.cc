@@ -12,13 +12,14 @@
 #include "base/strings/utf_string_conversions.h"
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/debounce/debounce_service_factory.h"
+#include "brave/browser/ui/bookmark/brave_bookmark_prefs.h"
 #include "brave/browser/ui/brave_shields_data_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/debounce/browser/debounce_service.h"
+#include "brave/components/debounce/core/browser/debounce_service.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/query_filter/utils.h"
 #include "brave/components/sidebar/sidebar_service.h"
@@ -39,6 +40,7 @@
 #include "chrome/browser/ui/tabs/tab_group_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_utils.h"
+#include "chrome/common/channel_info.h"
 #include "chrome/common/pref_names.h"
 #include "components/tab_groups/tab_group_visual_data.h"
 #include "content/public/browser/browser_thread.h"
@@ -71,15 +73,19 @@
 #include "brave/components/brave_vpn/common/pref_names.h"
 
 #if BUILDFLAG(IS_WIN)
-#include "brave/components/brave_vpn/common/wireguard/win/storage_utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/wireguard_utils_win.h"
+#include "brave/browser/brave_vpn/win/storage_utils.h"
+#include "brave/browser/brave_vpn/win/wireguard_utils_win.h"
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
 #if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
 #include "brave/components/ipfs/ipfs_utils.h"
-#include "chrome/common/channel_info.h"
+#endif
+
+#if BUILDFLAG(ENABLE_COMMANDER)
+#include "brave/browser/ui/commander/commander_service.h"
+#include "brave/browser/ui/commander/commander_service_factory.h"
 #endif
 
 using content::WebContents;
@@ -357,6 +363,16 @@ void ToggleJavascriptEnabled(Browser* browser) {
   shields->SetIsNoScriptEnabled(!shields->GetNoScriptEnabled());
 }
 
+#if BUILDFLAG(ENABLE_COMMANDER)
+void ToggleCommander(Browser* browser) {
+  if (auto* commander_service =
+          commander::CommanderServiceFactory::GetForBrowserContext(
+              browser->profile())) {
+    commander_service->Toggle();
+  }
+}
+#endif
+
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 void ShowPlaylistBubble(Browser* browser) {
   BraveBrowserWindow::From(browser->window())->ShowPlaylistBubble();
@@ -393,6 +409,33 @@ void MoveGroupToNewWindow(Browser* browser) {
   }
 
   tsm->delegate()->MoveGroupToNewWindow(current_group_id.value());
+}
+
+bool HasDuplicateTabs(Browser* browser) {
+  if (!browser) {
+    return false;
+  }
+
+  auto* tsm = browser->tab_strip_model();
+  auto* active_web_contents = tsm->GetActiveWebContents();
+  if (!active_web_contents) {
+    return false;
+  }
+
+  auto url = active_web_contents->GetVisibleURL();
+  for (int i = 0; i < tsm->GetTabCount(); ++i) {
+    // Don't check the active tab.
+    if (tsm->active_index() == i) {
+      continue;
+    }
+
+    auto* tab = tsm->GetWebContentsAt(i);
+    if (tab->GetVisibleURL() == url) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 void CloseDuplicateTabs(Browser* browser) {
@@ -517,6 +560,13 @@ void ScrollTabToTop(Browser* browser) {
 void ScrollTabToBottom(Browser* browser) {
   auto* contents = browser->tab_strip_model()->GetActiveWebContents();
   contents->ScrollToBottomOfDocument();
+}
+
+void ToggleAllBookmarksButtonVisibility(Browser* browser) {
+  auto* prefs = browser->profile()->GetPrefs();
+  prefs->SetBoolean(
+      brave::bookmarks::prefs::kShowAllBookmarksButton,
+      !prefs->GetBoolean(brave::bookmarks::prefs::kShowAllBookmarksButton));
 }
 
 }  // namespace brave

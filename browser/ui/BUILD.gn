@@ -32,7 +32,8 @@ source_set("ui") {
     "//chrome/browser/ui/webui:configs",
   ]
 
-  deps = []
+  deps = [ "//brave/components/brave_shields/core/browser" ]
+
   public_deps = []
   sources = [
     "webui/brave_adblock_internals_ui.cc",
@@ -278,20 +279,32 @@ source_set("ui") {
 
   if (enable_commander) {
     sources += [
-      "commander/brave_simple_command_source.cc",
-      "commander/brave_simple_command_source.h",
+      "commander/bookmark_command_source.cc",
+      "commander/bookmark_command_source.h",
+      "commander/command_source.cc",
+      "commander/command_source.h",
       "commander/commander_service.cc",
       "commander/commander_service.h",
       "commander/commander_service_factory.cc",
       "commander/commander_service_factory.h",
       "commander/commander_service_factory.h",
+      "commander/entity_match.cc",
+      "commander/entity_match.h",
+      "commander/open_url_command_source.cc",
+      "commander/open_url_command_source.h",
       "commander/ranker.cc",
       "commander/ranker.h",
+      "commander/simple_command_source.cc",
+      "commander/simple_command_source.h",
+      "commander/tab_command_source.cc",
+      "commander/tab_command_source.h",
+      "commander/window_command_source.cc",
+      "commander/window_command_source.h",
     ]
 
     deps += [
+      "//brave/browser/ui/commander:fuzzy_finder",
       "//brave/components/commander/browser",
-      "//chrome/browser/ui/commander:fuzzy_finder",
     ]
   }
 
@@ -299,8 +312,12 @@ source_set("ui") {
     sources += [
       "views/bookmarks/bookmark_bar_instructions_view.cc",
       "views/bookmarks/bookmark_bar_instructions_view.h",
+      "views/bookmarks/brave_bookmark_bar_view.cc",
+      "views/bookmarks/brave_bookmark_bar_view.h",
       "views/bookmarks/brave_bookmark_context_menu.cc",
       "views/bookmarks/brave_bookmark_context_menu.h",
+      "views/bookmarks/saved_tab_groups/brave_saved_tab_group_button.cc",
+      "views/bookmarks/saved_tab_groups/brave_saved_tab_group_button.h",
       "views/brave_first_run_dialog.cc",
       "views/brave_first_run_dialog.h",
       "views/brave_layout_provider.cc",
@@ -339,6 +356,8 @@ source_set("ui") {
       "views/frame/brave_non_client_hit_test_helper.h",
       "views/frame/brave_opaque_browser_frame_view.cc",
       "views/frame/brave_opaque_browser_frame_view.h",
+      "views/frame/brave_tab_strip_region_view.cc",
+      "views/frame/brave_tab_strip_region_view.h",
       "views/frame/brave_window_frame_graphic.cc",
       "views/frame/brave_window_frame_graphic.h",
       "views/omnibox/brave_omnibox_popup_view_views.cc",
@@ -410,6 +429,9 @@ source_set("ui") {
       "views/window_closing_confirm_dialog_view.cc",
       "views/window_closing_confirm_dialog_view.h",
     ]
+
+    deps += [ "//components/bookmarks/browser" ]
+
     if (enable_brave_vpn) {
       if (is_win) {
         sources += [
@@ -422,6 +444,8 @@ source_set("ui") {
           "webui/settings/brave_vpn/brave_vpn_handler.cc",
           "webui/settings/brave_vpn/brave_vpn_handler.h",
         ]
+
+        deps += [ "//brave/browser/brave_vpn/win:wireguard_utils" ]
       }
     }
     if (enable_ai_chat) {
@@ -540,9 +564,9 @@ source_set("ui") {
     "//brave/components/brave_rewards/resources:page_generated_resources",
     "//brave/components/brave_search/common",
     "//brave/components/brave_search_conversion",
-    "//brave/components/brave_shields/browser",
-    "//brave/components/brave_shields/common",
-    "//brave/components/brave_shields/common:mojom",
+    "//brave/components/brave_shields/content/browser",
+    "//brave/components/brave_shields/core/common",
+    "//brave/components/brave_shields/core/common:mojom",
     "//brave/components/brave_sync:crypto",
     "//brave/components/brave_sync:prefs",
     "//brave/components/brave_sync:time_limited_codes",
@@ -559,8 +583,8 @@ source_set("ui") {
     "//brave/components/constants",
     "//brave/components/cosmetic_filters/resources/data:generated_resources",
     "//brave/components/de_amp/common",
-    "//brave/components/debounce/browser",
-    "//brave/components/debounce/common",
+    "//brave/components/debounce/core/browser",
+    "//brave/components/debounce/core/common",
     "//brave/components/decentralized_dns/core",
     "//brave/components/google_sign_in_permission",
     "//brave/components/infobars/core",
@@ -596,8 +620,6 @@ source_set("ui") {
     "//chrome/browser/ui/color:color_headers",
     "//chrome/browser/ui/color:mixers",
     "//chrome/common",
-    "//chrome/services/qrcode_generator",
-    "//chrome/services/qrcode_generator/public/cpp",
     "//components/bookmarks/common",
     "//components/content_settings/browser",
     "//components/country_codes",
@@ -612,12 +634,14 @@ source_set("ui") {
     "//components/optimization_guide/core:features",
     "//components/optimization_guide/optimization_guide_internals/webui:url_constants",
     "//components/prefs",
+    "//components/qr_code_generator:bitmap_generator",
     "//components/resources:components_resources_grit",
     "//components/search_engines",
     "//components/sessions",
     "//components/strings:components_strings",
     "//components/tab_groups",
     "//components/update_client",
+    "//components/user_prefs",
     "//content/public/browser",
     "//content/public/common",
     "//mojo/public/cpp/bindings",
@@ -638,6 +662,7 @@ source_set("ui") {
 
   if (enable_brave_vpn) {
     deps += [
+      "//brave/browser/brave_vpn",
       "//brave/components/brave_vpn/browser",
       "//brave/components/brave_vpn/browser/connection:api",
       "//brave/components/brave_vpn/common",
@@ -646,7 +671,6 @@ source_set("ui") {
       deps += [
         "//brave/components/brave_vpn/common/win",
         "//brave/components/brave_vpn/common/wireguard",
-        "//brave/components/brave_vpn/common/wireguard/win",
       ]
     }
   }
@@ -713,7 +737,14 @@ source_set("ui") {
     deps += [ "//brave/components/brave_wayback_machine" ]
 
     if (toolkit_views) {
-      deps += [ "//brave/browser/ui/views/infobars:brave_wayback_machine" ]
+      sources += [
+        "views/wayback_machine_dialog_view.cc",
+        "views/wayback_machine_dialog_view.h",
+        "views/wayback_machine_fetch_button.cc",
+        "views/wayback_machine_fetch_button.h",
+        "views/wayback_machine_throbber.cc",
+        "views/wayback_machine_throbber.h",
+      ]
     }
   }
 
@@ -968,10 +999,7 @@ source_set("ui") {
   }
 
   if (is_win && is_official_build) {
-    sources += [
-      "//chrome/browser/ui/webui/help/version_updater_win.cc",
-      "//chrome/browser/ui/webui/help/version_updater_win.h",
-    ]
+    sources += [ "//chrome/browser/ui/webui/help/version_updater_win.cc" ]
     deps += [ "//google_update" ]
   }
 

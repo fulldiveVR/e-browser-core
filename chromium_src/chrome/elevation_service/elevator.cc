@@ -10,13 +10,17 @@
 
 #include <intsafe.h>
 
+#include "base/path_service.h"
 #include "base/win/windows_types.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_utils.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/install_utils.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/wireguard_utils_win.h"
+#include "brave/browser/brave_vpn/win/wireguard_utils_win.h"
+#endif
 #endif
 
 #include "src/chrome/elevation_service/elevator.cc"
@@ -26,18 +30,22 @@ namespace elevation_service {
 HRESULT Elevator::InstallVPNServices() {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   if (!brave_vpn::IsBraveVPNHelperServiceInstalled()) {
-    auto success = brave_vpn::InstallBraveVPNHelperService();
+    auto success = brave_vpn::InstallBraveVPNHelperService(
+        base::PathService::CheckedGet(base::DIR_ASSETS));
     if (!success) {
       return E_FAIL;
     }
   }
 
+#if BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
   if (!brave_vpn::wireguard::IsWireguardServiceInstalled()) {
-    auto success = brave_vpn::InstallBraveWireguardService();
+    auto success = brave_vpn::InstallBraveWireguardService(
+        base::PathService::CheckedGet(base::DIR_ASSETS));
     if (!success) {
       return E_FAIL;
     }
   }
+#endif
 #endif
   return S_OK;
 }

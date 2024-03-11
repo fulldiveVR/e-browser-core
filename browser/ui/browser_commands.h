@@ -6,12 +6,14 @@
 #ifndef BRAVE_BROWSER_UI_BROWSER_COMMANDS_H_
 #define BRAVE_BROWSER_UI_BROWSER_COMMANDS_H_
 
+#include "brave/components/commander/common/buildflags/buildflags.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 
 class Browser;
 class GURL;
 
 namespace brave {
+
 bool HasSelectedURL(Browser* browser);
 void CleanAndCopySelectedURL(Browser* browser);
 void NewOffTheRecordWindowTor(Browser*);
@@ -45,6 +47,10 @@ void ToggleSidebar(Browser* browser);
 void ToggleShieldsEnabled(Browser* browser);
 void ToggleJavascriptEnabled(Browser* browser);
 
+#if BUILDFLAG(ENABLE_COMMANDER)
+void ToggleCommander(Browser* browser);
+#endif
+
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 void ShowPlaylistBubble(Browser* browser);
 #endif
@@ -52,6 +58,7 @@ void ShowPlaylistBubble(Browser* browser);
 void GroupTabsOnCurrentOrigin(Browser* browser);
 void MoveGroupToNewWindow(Browser* browser);
 
+bool HasDuplicateTabs(Browser* browser);
 void CloseDuplicateTabs(Browser* browser);
 
 bool CanCloseTabsToLeft(Browser* browser);
@@ -70,6 +77,8 @@ void UnmuteAllTabs(Browser* browser);
 
 void ScrollTabToTop(Browser* browser);
 void ScrollTabToBottom(Browser* browser);
+
+void ToggleAllBookmarksButtonVisibility(Browser* browser);
 
 }  // namespace brave
 

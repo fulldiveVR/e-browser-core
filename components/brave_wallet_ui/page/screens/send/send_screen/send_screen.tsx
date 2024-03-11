@@ -30,9 +30,6 @@ import {
   AmountValidationErrorType
 } from '../../../../constants/types'
 
-// Options
-import { AllNetworksOption } from '../../../../options/network-filter-options'
-
 // Utils
 import { getLocale } from '../../../../../common/locale'
 import Amount from '../../../../utils/amount'
@@ -50,8 +47,7 @@ import {
 import {
   isValidBtcAddress,
   isValidEVMAddress,
-  isValidFilAddress,
-  isValidZecAddress
+  isValidFilAddress
 } from '../../../../utils/address-utils'
 import { makeSendRoute } from '../../../../utils/routes-utils'
 import {
@@ -72,6 +68,7 @@ import {
   useEnableEnsOffchainLookupMutation,
   useGetFVMAddressQuery,
   useGetEthAddressChecksumQuery,
+  useValidateUnifiedAddressQuery,
   useGetIsBase58EncodedSolPubkeyQuery,
   useSendSPLTransferMutation,
   useSendERC20TransferMutation,
@@ -174,8 +171,6 @@ export const SendScreen = React.memo((props: Props) => {
   const [isOffChainEnsWarningDismissed, dismissOffchainEnsWarning] =
     React.useState<boolean>(false)
   const [domainPosition, setDomainPosition] = React.useState<number>(0)
-  const [selectedNetworkFilter, setSelectedNetworkFilter] =
-    React.useState<BraveWallet.NetworkInfo>(AllNetworksOption)
   const [isWarningAcknowledged, setIsWarningAcknowledged] =
     React.useState<boolean>(false)
 
@@ -299,6 +294,19 @@ export const SendScreen = React.memo((props: Props) => {
     isValidEvmAddress ? trimmedToAddressOrUrl : skipToken
   )
 
+  const {
+    data: zecAddressValidationResult
+      = BraveWallet.ZCashAddressValidationResult.Unknown
+  } = useValidateUnifiedAddressQuery(
+    accountFromParams?.accountId.coin === BraveWallet.CoinType.ZEC &&
+    trimmedToAddressOrUrl
+    ? {
+      address: trimmedToAddressOrUrl,
+      testnet: networkFromParams?.chainId === BraveWallet.Z_CASH_TESTNET
+    }
+    : skipToken
+  )
+
   // memos & computed
   const sendAmountValidationError: AmountValidationErrorType | undefined =
     React.useMemo(() => {
@@ -392,7 +400,8 @@ export const SendScreen = React.memo((props: Props) => {
           isBase58,
           coinType:
             accountFromParams.accountId.coin ?? BraveWallet.CoinType.ETH,
-          token: tokenFromParams
+          token: tokenFromParams,
+          zecAddressValidationResult: zecAddressValidationResult,
         })
       : undefined
     : undefined
@@ -698,6 +707,18 @@ export const SendScreen = React.memo((props: Props) => {
     setDomainPosition(position ? position + 28 : 0)
   }, [toAddressOrUrl])
 
+  React.useEffect(() => {
+    if (
+      tokenFromParams &&
+      (tokenFromParams.isNft ||
+        tokenFromParams.isErc721 ||
+        tokenFromParams.isErc1155) &&
+      sendAssetBalance === '1'
+    ) {
+      setSendAmount('1')
+    }
+  }, [tokenFromParams, sendAssetBalance])
+
   // render
   return (
     <>
@@ -860,8 +881,6 @@ export const SendScreen = React.memo((props: Props) => {
           ref={selectTokenModalRef}
           onSelectAsset={selectSendAsset}
           onSelectSendOption={onSelectSendOption}
-          selectedNetwork={selectedNetworkFilter}
-          setSelectedNetwork={setSelectedNetworkFilter}
           modalType='send'
         />
       ) : null}
@@ -1037,8 +1056,19 @@ const processEthereumAddress = (
     : 'braveWalletInvalidRecipientAddress'
 }
 
-const processZCashAddress = (addressOrUrl: string) => {
-  if (!isValidZecAddress(addressOrUrl)) {
+const processZCashAddress = (
+    addressOrUrl: string,
+    zecAddressValidationResult: BraveWallet.ZCashAddressValidationResult) => {
+  if (zecAddressValidationResult ===
+        BraveWallet.ZCashAddressValidationResult.Unknown) {
+    return undefined
+  }
+  if (zecAddressValidationResult ===
+        BraveWallet.ZCashAddressValidationResult.InvalidUnified) {
+    return 'braveWalletInvalidZcashUnifiedRecipientAddress'
+  }
+  if (zecAddressValidationResult !==
+        BraveWallet.ZCashAddressValidationResult.Success) {
     return 'braveWalletInvalidRecipientAddress'
   }
   return undefined
@@ -1085,6 +1115,7 @@ function processAddressOrUrl({
   ethAddressChecksum,
   isBase58,
   coinType,
+  zecAddressValidationResult,
   token
 }: {
   addressOrUrl: string
@@ -1092,6 +1123,7 @@ function processAddressOrUrl({
   token: BraveWallet.BlockchainToken | undefined
   ethAddressChecksum: string
   isBase58: boolean
+  zecAddressValidationResult: BraveWallet.ZCashAddressValidationResult
 }) {
   // Do nothing if value is an empty string
   if (addressOrUrl === '') {
@@ -1117,7 +1149,7 @@ function processAddressOrUrl({
       )
     }
     case BraveWallet.CoinType.ZEC: {
-      return processZCashAddress(addressOrUrl)
+      return processZCashAddress(addressOrUrl, zecAddressValidationResult)
     }
     default: {
       console.log(`Unknown coin ${coinType}`)

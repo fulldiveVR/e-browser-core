@@ -176,7 +176,10 @@ function Container() {
 
   if (
     selectedAccount &&
-    (selectedPendingTransaction || signMessageData.length) &&
+    (selectedPendingTransaction ||
+      signMessageData.length ||
+      signAllTransactionsRequests.length ||
+      signTransactionRequests.length) &&
     selectedPanel === 'connectHardwareWallet'
   ) {
     return (
@@ -285,12 +288,10 @@ function Container() {
   }
 
   if (selectedPendingTransaction) {
-    const isSwap =
-      selectedPendingTransaction?.txType === BraveWallet.TransactionType.ETHSwap
     return (
       <PanelWrapper
-        width={isSwap ? undefined : 390}
-        height={isSwap ? 540 : 650}
+        width={390}
+        height={650}
       >
         <LongWrapper>
           <PendingTransactionPanel

@@ -12,6 +12,7 @@
 #include "brave/components/brave_rewards/core/database/database.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
 #include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
 #include "brave/components/brave_rewards/core/wallet_provider/wallet_provider.h"
 
@@ -22,24 +23,21 @@ WalletBalance::WalletBalance(RewardsEngineImpl& engine) : engine_(engine) {}
 WalletBalance::~WalletBalance() = default;
 
 void WalletBalance::Fetch(FetchBalanceCallback callback) {
-  auto tokens_callback =
-      base::BindOnce(&WalletBalance::OnGetUnblindedTokens,
-                     base::Unretained(this), std::move(callback));
-
   engine_->database()->GetSpendableUnblindedTokensByBatchTypes(
       {mojom::CredsBatchType::PROMOTION},
-      [callback = std::make_shared<decltype(tokens_callback)>(std::move(
-           tokens_callback))](std::vector<mojom::UnblindedTokenPtr> list) {
-        std::move(*callback).Run(std::move(list));
-      });
+      base::BindOnce(&WalletBalance::OnGetUnblindedTokens,
+                     base::Unretained(this), std::move(callback)));
 }
 
 void WalletBalance::OnGetUnblindedTokens(
     FetchBalanceCallback callback,
     std::vector<mojom::UnblindedTokenPtr> tokens) {
   double total = 0.0;
-  for (const auto& token : tokens) {
-    total += token->value;
+
+  if (!engine_->state()->GetVBatExpired()) {
+    for (const auto& token : tokens) {
+      total += token->value;
+    }
   }
 
   auto balance = mojom::Balance::New();
@@ -74,7 +72,8 @@ void WalletBalance::OnFetchExternalWalletBalance(const std::string& wallet_type,
     balance_ptr->wallets.emplace(wallet_type, balance);
     std::move(callback).Run(std::move(balance_ptr));
   } else {
-    BLOG(0, "Failed to fetch balance for " << wallet_type << " wallet!");
+    engine_->LogError(FROM_HERE)
+        << "Failed to fetch balance for " << wallet_type << " wallet";
     std::move(callback).Run(nullptr);
   }
 }

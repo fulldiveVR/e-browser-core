@@ -42,7 +42,7 @@ class BraveSyncServiceImpl : public SyncServiceImpl {
   void OnSyncCycleCompleted(const SyncCycleSnapshot& snapshot) override;
 
   // SyncPrefObserver implementation.
-  void OnPreferredDataTypesPrefChange(
+  void OnSelectedTypesPrefChange(
       bool payments_integration_enabled_changed) override;
 
   std::string GetOrCreateSyncCode();
@@ -78,6 +78,8 @@ class BraveSyncServiceImpl : public SyncServiceImpl {
   FRIEND_TEST_ALL_PREFIXES(BraveSyncServiceImplTest, JoinActiveOrNewChain);
   FRIEND_TEST_ALL_PREFIXES(BraveSyncServiceImplTest, JoinDeletedChain);
   FRIEND_TEST_ALL_PREFIXES(BraveSyncServiceImplTest, HistoryPreconditions);
+  FRIEND_TEST_ALL_PREFIXES(BraveSyncServiceImplTest,
+                           P3aForHistoryThroughDelegate);
 
   BraveSyncAuthManager* GetBraveSyncAuthManager();
   SyncServiceCrypto* GetCryptoForTests();
@@ -121,6 +123,11 @@ class BraveSyncServiceImpl : public SyncServiceImpl {
   bool initiated_self_device_info_deleted_ = false;
 
   int completed_cycles_count_ = 0;
+
+  // This flag is set to true during BraveSyncServiceImpl::Initialize call. The
+  // reason is that upstream SyncServiceImpl::Initialize() can invoke
+  // StopAndClear, but we don't want to invoke AddLeaveChainDetail in that case
+  bool is_initializing_ = false;
 
   std::unique_ptr<SyncServiceImplDelegate> sync_service_impl_delegate_;
   base::OnceCallback<void(bool)> join_chain_result_callback_;

@@ -198,8 +198,6 @@ export interface WalletState {
   isZCashEnabled: boolean
   isWalletCreated: boolean
   isWalletLocked: boolean
-  userVisibleTokensInfo: BraveWallet.BlockchainToken[]
-  fullTokenList: BraveWallet.BlockchainToken[]
   addUserAssetError: boolean
   activeOrigin: BraveWallet.OriginInfo
   selectedNetworkFilter: NetworkFilterType
@@ -213,12 +211,7 @@ export interface WalletState {
   isAnkrBalancesFeatureEnabled: boolean
   hidePortfolioGraph: boolean
   hidePortfolioBalances: boolean
-  removedFungibleTokenIds: string[]
-  removedNonFungibleTokenIds: string[]
-  deletedNonFungibleTokenIds: string[]
   hidePortfolioNFTsTab: boolean
-  removedNonFungibleTokens: BraveWallet.BlockchainToken[]
-  deletedNonFungibleTokens: BraveWallet.BlockchainToken[]
   filteredOutPortfolioNetworkKeys: string[]
   filteredOutPortfolioAccountIds: string[]
   hidePortfolioSmallBalances: boolean
@@ -715,8 +708,16 @@ export interface NFTMetadataReturnType {
 }
 
 export interface TransactionProviderError {
-  code: BraveWallet.ProviderError | BraveWallet.SolanaProviderError
+  code: BraveWallet.ProviderErrorUnion
   message: string
+}
+
+export const emptyProviderErrorCodeUnion: BraveWallet.ProviderErrorUnion = {
+  providerError: undefined,
+  zcashProviderError: undefined,
+  bitcoinProviderError: undefined,
+  filecoinProviderError: undefined,
+  solanaProviderError: undefined
 }
 
 export interface TransactionProviderErrorRegistry {
@@ -788,6 +789,11 @@ export const SupportedTestNetworkEntityIds: EntityId[] = [
 ]
 
 export const DAppSupportedCoinTypes = [
+  BraveWallet.CoinType.SOL,
+  BraveWallet.CoinType.ETH
+]
+
+export const CustomAssetSupportedCoinTypes = [
   BraveWallet.CoinType.SOL,
   BraveWallet.CoinType.ETH
 ]
@@ -908,15 +914,6 @@ export interface AccountButtonOptionsObjectType {
 }
 
 export type StringWithAutocomplete<T> = T | (string & Record<never, never>)
-
-export const P3ASendTransactionTypes = [
-  BraveWallet.TransactionType.ETHSend,
-  BraveWallet.TransactionType.ERC20Transfer,
-  BraveWallet.TransactionType.SolanaSystemTransfer,
-  BraveWallet.TransactionType.SolanaSPLTokenTransfer,
-  BraveWallet.TransactionType
-    .SolanaSPLTokenTransferWithAssociatedTokenAccountCreation
-]
 
 export type SendPageTabHashes =
   (typeof SendPageTabHashes)[keyof typeof SendPageTabHashes]
@@ -1040,8 +1037,6 @@ export type SwapAndSend = {
   label: string
   name: string
 }
-
-export type TxSimulationOptInStatus = 'allowed' | 'denied' | 'unset'
 
 export enum SignDataSteps {
   SignRisk = 0,

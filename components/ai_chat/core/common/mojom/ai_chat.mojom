@@ -75,16 +75,45 @@ struct SiteInfo {
   bool is_content_truncated;
   // Indicates if the URL scheme is of a type that allows for content association.
   bool is_content_association_possible;
+  // Current tab's hostname
+  string? hostname;
+};
+
+enum ActionType {
+  UNSPECIFIED,
+  RESPONSE,
+  SUMMARIZE_PAGE,
+  SUMMARIZE_VIDEO,
+  SUMMARIZE_SELECTED_TEXT,
+  QUERY,
+  EXPLAIN,
+  PARAPHRASE,
+  CREATE_TAGLINE,
+  CREATE_SOCIAL_MEDIA_COMMENT_SHORT,
+  CREATE_SOCIAL_MEDIA_COMMENT_LONG,
+  IMPROVE,
+  ACADEMICIZE,
+  PROFESSIONALIZE,
+  PERSUASIVE_TONE,
+  CASUALIZE,
+  FUNNY_TONE,
+  SHORTEN,
+  EXPAND,
 };
 
 // Represents a single turn in a conversation.
-// The character type defines which party initiated the turn in the conversation
+// The character type defines which party initiated the turn in the
+// conversation.
 // The text attribute contains the actual content of the turn, which can be a
 // message, statement, or question, among others.
+// The selected_text attribute contains what user selects in the page when
+// calling from the context menu.
 struct ConversationTurn {
   CharacterType character_type;
+  ActionType action_type;
   ConversationTurnVisibility visibility;
   string text;
+  string? selected_text;
 };
 
 // Represents an AI engine model choice, usually for the user to choose for a
@@ -145,6 +174,7 @@ interface PageHandler {
   GetShouldSendPageContents() => (bool should_send);
   GoPremium();
   RefreshPremiumSession();
+  ManagePremium();
   ClearConversationHistory();
   RetryAPIRequest();
   GetAPIResponseError() => (APIError error);
@@ -155,9 +185,7 @@ interface PageHandler {
   // message. |turn_id| is the index of the message in the
   // current conversation.
   RateMessage(bool is_liked, uint32 turn_id) => (string? rating_id);
-  SendFeedback(string category,
-      string feedback,
-          string rating_id) => (bool is_success);
+  SendFeedback(string category, string feedback, string rating_id, bool send_hostname) => (bool is_success);
   GetPremiumStatus() => (PremiumStatus status, PremiumInfo? info);
 };
 
@@ -180,11 +208,21 @@ interface ChatUIPage {
 };
 
 [EnableIf=is_android]
-interface CredentialManagerHelper {
+struct ModelWithSubtitle {
+  Model model;
+  string subtitle;
+};
+
+[EnableIf=is_android]
+interface AIChatAndroidHelper {
   GetPremiumStatus() => (PremiumStatus status, PremiumInfo? info);
+  CreateOrderId() => (string order_id);
+  FetchOrderCredentials(string order_id) => (string response);
+  RefreshOrder(string order_id) => (string response);
+  GetModelsWithSubtitles() => (array<ModelWithSubtitle> models);
 };
 
 [EnableIf=is_android]
 interface IAPSubscription {
-  GetPurchaseToken() => (string token);
+  GetPurchaseTokenOrderId() => (string token, string order_id);
 };

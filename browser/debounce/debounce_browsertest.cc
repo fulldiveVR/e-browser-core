@@ -11,13 +11,13 @@
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_content_browser_client.h"
 #include "brave/browser/extensions/brave_base_local_data_files_browsertest.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/browser/engine_test_observer.h"
-#include "brave/components/brave_shields/browser/test_filters_provider.h"
-#include "brave/components/debounce/browser/debounce_component_installer.h"
-#include "brave/components/debounce/common/features.h"
-#include "brave/components/debounce/common/pref_names.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/content/test/engine_test_observer.h"
+#include "brave/components/brave_shields/content/test/test_filters_provider.h"
+#include "brave/components/debounce/core/browser/debounce_component_installer.h"
+#include "brave/components/debounce/core/common/features.h"
+#include "brave/components/debounce/core/common/pref_names.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/interstitials/security_interstitial_page_test_utils.h"
 #include "chrome/test/base/in_process_browser_test.h"
@@ -91,11 +91,12 @@ class SpyContentBrowserClient : public BraveContentBrowserClient {
       content::BrowserContext* browser_context,
       const base::RepeatingCallback<content::WebContents*()>& wc_getter,
       content::NavigationUIData* navigation_ui_data,
-      int frame_tree_node_id) override {
+      int frame_tree_node_id,
+      std::optional<int64_t> navigation_id) override {
     std::vector<std::unique_ptr<blink::URLLoaderThrottle>> throttles =
         BraveContentBrowserClient::CreateURLLoaderThrottles(
             request, browser_context, wc_getter, navigation_ui_data,
-            frame_tree_node_id);
+            frame_tree_node_id, navigation_id);
     throttles.push_back(std::make_unique<SpyThrottle>());
     return throttles;
   }

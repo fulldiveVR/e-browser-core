@@ -45,8 +45,8 @@ constexpr char kSidebarItemDragType[] = "brave/sidebar-item";
 constexpr int kArrowHeight = 24;
 
 class SidebarItemsArrowView : public views::ImageButton {
+  METADATA_HEADER(SidebarItemsArrowView, views::ImageButton)
  public:
-  METADATA_HEADER(SidebarItemsArrowView);
   explicit SidebarItemsArrowView(const std::u16string& accessible_name) {
     SetImageHorizontalAlignment(views::ImageButton::ALIGN_CENTER);
     SetImageVerticalAlignment(views::ImageButton::ALIGN_MIDDLE);
@@ -89,7 +89,7 @@ class SidebarItemsArrowView : public views::ImageButton {
   }
 };
 
-BEGIN_METADATA(SidebarItemsArrowView, views::ImageButton)
+BEGIN_METADATA(SidebarItemsArrowView)
 END_METADATA
 
 }  // namespace
@@ -126,7 +126,7 @@ SidebarItemsScrollView::SidebarItemsScrollView(BraveBrowser* browser)
 
 SidebarItemsScrollView::~SidebarItemsScrollView() = default;
 
-void SidebarItemsScrollView::Layout() {
+void SidebarItemsScrollView::Layout(PassKey) {
   // |contents_view_| always has it's preferred size. and this scroll view only
   // shows some parts of it if scroll view can't get enough rect.
   contents_view_->SizeToPreferredSize();
@@ -217,7 +217,7 @@ void SidebarItemsScrollView::OnItemAdded(const sidebar::SidebarItem& item,
 
   // Calculate and set this view's bounds to determine whether this view is
   // scroll mode or not.
-  parent()->Layout();
+  parent()->DeprecatedLayoutImmediately();
 
   // Only show item added feedback bubble on active browser window if this new
   // item is explicitely by user gesture.
@@ -386,7 +386,7 @@ bool SidebarItemsScrollView::NeedScrollForItemAt(size_t index) const {
     return false;
   }
 
-  auto* item_view = contents_view_->children()[index];
+  views::View* item_view = contents_view_->children()[index];
   auto item_view_bounds_per_scroll_view = item_view->GetLocalBounds();
   item_view_bounds_per_scroll_view = views::View::ConvertRectToTarget(
       item_view, this, item_view_bounds_per_scroll_view);
@@ -402,7 +402,7 @@ gfx::Rect SidebarItemsScrollView::GetTargetScrollContentsViewRectForItemAt(
     size_t index) const {
   DCHECK(NeedScrollForItemAt(index));
 
-  auto* item_view = contents_view_->children()[index];
+  views::View* item_view = contents_view_->children()[index];
   auto item_view_bounds_per_scroll_view = item_view->GetLocalBounds();
   item_view_bounds_per_scroll_view = views::View::ConvertRectToTarget(
       item_view, this, item_view_bounds_per_scroll_view);
@@ -575,5 +575,5 @@ void SidebarItemsScrollView::Update() {
   contents_view_->Update();
 }
 
-BEGIN_METADATA(SidebarItemsScrollView, views::View)
+BEGIN_METADATA(SidebarItemsScrollView)
 END_METADATA

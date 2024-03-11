@@ -19,13 +19,13 @@
 #include "base/time/time.h"
 #include "base/timer/timer.h"
 #include "brave/components/api_request_helper/api_request_helper.h"
+#include "brave/components/brave_news/browser/brave_news_p3a.h"
 #include "brave/components/brave_news/browser/channels_controller.h"
 #include "brave/components/brave_news/browser/direct_feed_controller.h"
 #include "brave/components/brave_news/browser/feed_controller.h"
 #include "brave/components/brave_news/browser/feed_v2_builder.h"
 #include "brave/components/brave_news/browser/publishers_controller.h"
 #include "brave/components/brave_news/browser/suggestions_controller.h"
-#include "brave/components/brave_news/browser/unsupported_publisher_migrator.h"
 #include "brave/components/brave_news/common/brave_news.mojom-forward.h"
 #include "brave/components/brave_news/common/brave_news.mojom.h"
 #include "brave/components/brave_private_cdn/private_cdn_request_helper.h"
@@ -141,9 +141,11 @@ class BraveNewsController
       mojo::PendingRemote<mojom::ConfigurationListener> listener) override;
   void GetDisplayAd(GetDisplayAdCallback callback) override;
   void OnInteractionSessionStarted() override;
-  void OnSessionCardVisitsCountChanged(uint16_t total_count) override;
-  void OnSessionCardViewsCountChanged(uint16_t total_count,
-                                      uint16_t count_delta) override;
+
+  void OnNewCardsViewed(uint16_t card_views) override;
+  void OnCardVisited(uint32_t depth) override;
+  void OnSidebarFilterUsage() override;
+
   void OnPromotedItemView(const std::string& item_id,
                           const std::string& creative_instance_id) override;
   void OnPromotedItemVisit(const std::string& item_id,
@@ -177,8 +179,9 @@ class BraveNewsController
   raw_ptr<history::HistoryService> history_service_;
   scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory_;
 
+  p3a::NewsMetrics news_metrics_;
+
   DirectFeedController direct_feed_controller_;
-  UnsupportedPublisherMigrator unsupported_publisher_migrator_;
   PublishersController publishers_controller_;
   ChannelsController channels_controller_;
   FeedController feed_controller_;

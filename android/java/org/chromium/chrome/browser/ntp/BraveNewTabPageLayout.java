@@ -48,6 +48,7 @@ import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.base.ThreadUtils;
+import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.Supplier;
 import org.chromium.base.task.AsyncTask;
 import org.chromium.base.task.PostTask;
@@ -93,7 +94,7 @@ import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.BravePrefServiceBridge;
 import org.chromium.chrome.browser.profiles.Profile;
-import org.chromium.chrome.browser.query_tiles.BraveQueryTileSection;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.rate.RateUtils;
 import org.chromium.chrome.browser.settings.BackgroundImagesPreferences;
 import org.chromium.chrome.browser.settings.BraveNewsPreferencesV2;
@@ -540,8 +541,7 @@ public class BraveNewTabPageLayout
                                         }
                                     }
                                     if (mBraveNewsController != null) {
-                                        mBraveNewsController.onSessionCardViewsCountChanged(
-                                                (short) mNewsSessionCardViews, newCardViews);
+                                        mBraveNewsController.onNewCardsViewed(newCardViews);
                                     }
                                     mPrevVisibleNewsCardPosition = lastVisibleItemPosition;
                                 }
@@ -1170,10 +1170,11 @@ public class BraveNewTabPageLayout
             NewTabPageUma uma,
             boolean isIncognito,
             WindowAndroid windowAndroid,
-            boolean isNtpAsHomeSurfaceEnabled,
+            boolean isNtpAsHomeSurfaceOnTablet,
             boolean isSurfacePolishEnabled,
             boolean isSurfacePolishOmniboxColorEnabled,
-            boolean isTablet) {
+            boolean isTablet,
+            ObservableSupplier<Integer> tabStripHeightSupplier) {
         super.initialize(
                 manager,
                 activity,
@@ -1187,10 +1188,11 @@ public class BraveNewTabPageLayout
                 uma,
                 isIncognito,
                 windowAndroid,
-                isNtpAsHomeSurfaceEnabled,
+                isNtpAsHomeSurfaceOnTablet,
                 isSurfacePolishEnabled,
                 isSurfacePolishOmniboxColorEnabled,
-                isTablet);
+                isTablet,
+                tabStripHeightSupplier);
 
         assert mMvTilesContainerLayout != null : "Something has changed in the upstream!";
 
@@ -1202,8 +1204,7 @@ public class BraveNewTabPageLayout
 
             if (tilesLayout instanceof MostVisitedTilesGridLayout) {
                 ((MostVisitedTilesGridLayout) tilesLayout)
-                        .setMaxRows(
-                                BraveQueryTileSection.getMaxRowsForMostVisitedTiles(getContext()));
+                        .setMaxRows(getMaxRowsForMostVisitedTiles());
             }
         }
 
@@ -1364,8 +1365,7 @@ public class BraveNewTabPageLayout
         mSuperReferralSitesLayout = new LinearLayout(mActivity);
         mSuperReferralSitesLayout.setWeightSum(1f);
         mSuperReferralSitesLayout.setOrientation(LinearLayout.HORIZONTAL);
-        mSuperReferralSitesLayout.setBackgroundColor(
-                mActivity.getResources().getColor(R.color.topsite_bg_color));
+        mSuperReferralSitesLayout.setBackgroundColor(mActivity.getColor(R.color.topsite_bg_color));
 
         LayoutInflater inflater =
                 (LayoutInflater) mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -1376,7 +1376,7 @@ public class BraveNewTabPageLayout
             TextView tileViewTitleTv = tileView.findViewById(R.id.tile_view_title);
             tileViewTitleTv.setText(topSite.getName());
             tileViewTitleTv.setTextColor(
-                    getResources().getColor(R.color.brave_state_time_count_color));
+                    getContext().getColor(R.color.brave_state_time_count_color));
 
             ImageView iconIv = tileView.findViewById(R.id.tile_view_icon);
             if (NTPUtil.imageCache.get(topSite.getDestinationUrl()) == null) {
@@ -1385,7 +1385,7 @@ public class BraveNewTabPageLayout
                                 NTPUtil.getTopSiteBitmap(topSite.getImagePath())));
             }
             iconIv.setImageBitmap(NTPUtil.imageCache.get(topSite.getDestinationUrl()).get());
-            iconIv.setBackgroundColor(mActivity.getResources().getColor(android.R.color.white));
+            iconIv.setBackgroundColor(mActivity.getColor(android.R.color.white));
             iconIv.setClickable(false);
 
             tileView.setOnClickListener(
@@ -1500,5 +1500,21 @@ public class BraveNewTabPageLayout
     @Override
     void setSearchProviderBottomMargin(int bottomMargin) {
         if (mLogoCoordinator != null) mLogoCoordinator.setBottomMargin(bottomMargin);
+    }
+
+    private int getMaxRowsForMostVisitedTiles() {
+        try {
+            if (!ProfileManager.isInitialized()
+                    || !UserPrefs.get(BraveActivity.getBraveActivity().getCurrentProfile())
+                            .getBoolean(BravePref.NEW_TAB_PAGE_SHOW_BACKGROUND_IMAGE)) {
+                return 2;
+            } else {
+                return 1;
+            }
+        } catch (BraveActivity.BraveActivityNotFoundException e) {
+            Log.e(TAG, "getMaxRowsForMostVisitedTiles ", e);
+        }
+
+        return 2;
     }
 }

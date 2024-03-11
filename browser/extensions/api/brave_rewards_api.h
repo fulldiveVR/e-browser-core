@@ -28,16 +28,6 @@ class BraveRewardsIsSupportedFunction : public ExtensionFunction {
   ResponseAction Run() override;
 };
 
-class BraveRewardsIsUnsupportedRegionFunction : public ExtensionFunction {
- public:
-  DECLARE_EXTENSION_FUNCTION("braveRewards.isUnsupportedRegion", UNKNOWN)
-
- protected:
-  ~BraveRewardsIsUnsupportedRegionFunction() override;
-
-  ResponseAction Run() override;
-};
-
 class BraveRewardsRecordNTPPanelTriggerFunction : public ExtensionFunction {
  public:
   DECLARE_EXTENSION_FUNCTION("braveRewards.recordNTPPanelTrigger", UNKNOWN)
@@ -498,6 +488,29 @@ class BraveRewardsDismissSelfCustodyInviteFunction : public ExtensionFunction {
 
  protected:
   ~BraveRewardsDismissSelfCustodyInviteFunction() override;
+
+  ResponseAction Run() override;
+};
+
+class BraveRewardsIsTermsOfServiceUpdateRequiredFunction
+    : public ExtensionFunction {
+ public:
+  DECLARE_EXTENSION_FUNCTION("braveRewards.isTermsOfServiceUpdateRequired",
+                             UNKNOWN)
+
+ protected:
+  ~BraveRewardsIsTermsOfServiceUpdateRequiredFunction() override;
+
+  ResponseAction Run() override;
+};
+
+class BraveRewardsAcceptTermsOfServiceUpdateFunction
+    : public ExtensionFunction {
+ public:
+  DECLARE_EXTENSION_FUNCTION("braveRewards.acceptTermsOfServiceUpdate", UNKNOWN)
+
+ protected:
+  ~BraveRewardsAcceptTermsOfServiceUpdateFunction() override;
 
   ResponseAction Run() override;
 };

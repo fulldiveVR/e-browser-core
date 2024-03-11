@@ -12,11 +12,6 @@
 #include "build/build_config.h"
 
 class PrefRegistrySimple;
-class PrefService;
-
-namespace user_prefs {
-class PrefRegistrySyncable;
-}  // namespace user_prefs
 
 namespace dark_mode {
 
@@ -32,9 +27,6 @@ enum class BraveDarkModeType {
 };
 
 // APIs for prefs.
-void MigrateBraveDarkModePrefs(PrefService* prefs);
-void RegisterBraveDarkModePrefsForMigration(
-    user_prefs::PrefRegistrySyncable* registry);
 void RegisterBraveDarkModeLocalStatePrefs(PrefRegistrySimple* registry);
 
 std::string GetStringFromBraveDarkModeType(BraveDarkModeType type);

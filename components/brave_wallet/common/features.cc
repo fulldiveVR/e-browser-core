@@ -40,10 +40,19 @@ const base::FeatureParam<bool> kBitcoinTestnetDiscovery{
 
 BASE_FEATURE(kBraveWalletZCashFeature,
              "BraveWalletZCash",
-             base::FEATURE_DISABLED_BY_DEFAULT);
+#if BUILDFLAG(ENABLE_ZCASH_BY_DEFAULT)
+             base::FEATURE_ENABLED_BY_DEFAULT
+#else
+             base::FEATURE_DISABLED_BY_DEFAULT
+#endif
+);
 
 BASE_FEATURE(kBraveWalletAnkrBalancesFeature,
              "BraveWalletAnkrBalances",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+BASE_FEATURE(kBraveWalletTransactionSimulationsFeature,
+             "BraveWalletTransactionSimulations",
              base::FEATURE_DISABLED_BY_DEFAULT);
 }  // namespace features
 }  // namespace brave_wallet

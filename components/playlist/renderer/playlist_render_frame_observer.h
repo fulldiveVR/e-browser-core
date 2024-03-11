@@ -6,41 +6,65 @@
 #ifndef BRAVE_COMPONENTS_PLAYLIST_RENDERER_PLAYLIST_RENDER_FRAME_OBSERVER_H_
 #define BRAVE_COMPONENTS_PLAYLIST_RENDERER_PLAYLIST_RENDER_FRAME_OBSERVER_H_
 
-#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 
+#include "base/memory/weak_ptr.h"
+#include "base/values.h"
+#include "brave/components/playlist/common/mojom/playlist.mojom.h"
 #include "content/public/renderer/render_frame_observer.h"
 #include "content/public/renderer/render_frame_observer_tracker.h"
-#include "url/gurl.h"
-#include "v8/include/v8.h"
+#include "mojo/public/cpp/bindings/associated_receiver.h"
+#include "mojo/public/cpp/bindings/pending_associated_receiver.h"
+#include "mojo/public/cpp/bindings/remote.h"
 
 namespace playlist {
 
-class PlaylistJSHandler;
-
-class PlaylistRenderFrameObserver
+class PlaylistRenderFrameObserver final
     : public content::RenderFrameObserver,
-      public content::RenderFrameObserverTracker<PlaylistRenderFrameObserver> {
+      public content::RenderFrameObserverTracker<PlaylistRenderFrameObserver>,
+      public mojom::PlaylistRenderFrameObserverConfigurator {
  public:
-  PlaylistRenderFrameObserver(content::RenderFrame* render_frame,
-                              const int32_t isolated_world_id);
+  PlaylistRenderFrameObserver(content::RenderFrame* frame,
+                              int32_t isolated_world_id);
+
+  PlaylistRenderFrameObserver(const PlaylistRenderFrameObserver&) = delete;
+  PlaylistRenderFrameObserver& operator=(const PlaylistRenderFrameObserver&) =
+      delete;
 
   void RunScriptsAtDocumentStart();
+  void RunScriptsAtDocumentEnd();
 
  private:
   ~PlaylistRenderFrameObserver() override;
 
-  void HideMediaSourceAPI();
-  void InstallMediaDetector();
-
   // RenderFrameObserver:
   void OnDestruct() override;
-  void DidCreateScriptContext(v8::Local<v8::Context> context,
-                              int32_t world_id) override;
 
- private:
-  const int32_t isolated_world_id_ = 0;
+  // mojom::PlaylistRenderFrameObserverConfigurator
+  void AddMediaSourceAPISuppressor(
+      const std::string& media_source_api_suppressor) override;
+  void AddMediaDetector(const std::string& media_detector) override;
 
-  std::unique_ptr<PlaylistJSHandler> javascript_handler_;
+  void BindConfigurator(
+      mojo::PendingAssociatedReceiver<
+          mojom::PlaylistRenderFrameObserverConfigurator> receiver);
+
+  const mojo::Remote<playlist::mojom::PlaylistMediaHandler>& GetMediaHandler();
+
+  void Inject(const std::string& script_text,
+              v8::Local<v8::Context> context,
+              std::vector<v8::Local<v8::Value>> args = {}) const;
+  void OnMediaDetected(base::Value media);
+
+  int32_t isolated_world_id_;
+  mojo::AssociatedReceiver<mojom::PlaylistRenderFrameObserverConfigurator>
+      configurator_receiver_{this};
+  mojo::Remote<playlist::mojom::PlaylistMediaHandler> media_handler_;
+  std::optional<std::string> media_source_api_suppressor_;
+  std::optional<std::string> media_detector_;
+  base::WeakPtrFactory<PlaylistRenderFrameObserver> weak_ptr_factory_{this};
 };
 
 }  // namespace playlist

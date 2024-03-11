@@ -214,6 +214,10 @@ inline constexpr char kGoogleAccountActivityControlsURL[] =
 inline constexpr char kGoogleAccountActivityControlsURLInPrivacyGuide[] =
     "https://support.brave.com/";
 
+// URL of the 'Linked services' section of the privacy settings page.
+inline constexpr char kGoogleAccountLinkedServicesURL[] =
+    "https://support.brave.com/";
+
 // URL of the Google Account.
 inline constexpr char kGoogleAccountURL[] = "https://support.brave.com/";
 
@@ -228,17 +232,21 @@ inline constexpr char kGoogleAccountDeviceActivityURL[] =
 inline constexpr char kGooglePasswordManagerURL[] = "https://support.brave.com";
 
 // The URL for the "Learn more" link for the High Efficiency Mode.
-inline constexpr char kHighEfficiencyModeLearnMoreUrl[] =
+inline constexpr char kMemorySaverModeLearnMoreUrl[] =
     "https://support.brave.com/hc/en-us/articles/13383683902733";
 
 // The URL in the help text for the High Efficiency Mode tab discarding
 // exceptions add dialog.
-inline constexpr char16_t kHighEfficiencyModeTabDiscardingHelpUrl[] =
+inline constexpr char16_t kMemorySaverModeTabDiscardingHelpUrl[] =
     u"https://support.brave.com/";
 
 // The URL to the help center article of Incognito mode.
 inline constexpr char16_t kIncognitoHelpCenterURL[] =
     u"https://support.brave.com";
+
+// The URL for the Help Center page about IP Protection.
+inline constexpr char kIpProtectionHelpCenterURL[] =
+    "https://support.google.com/chrome?p=ip_protection";
 
 // The URL for the "Learn more" page for the usage/crash reporting option in the
 // first run dialog.

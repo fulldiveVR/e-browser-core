@@ -108,7 +108,7 @@ class PlaylistServiceDelegateImpl : public PlaylistService::Delegate {
 #if !BUILDFLAG(IS_ANDROID)
     // Before removing the Playlist item from the service, close all active
     // Playlist panels.
-    for (auto* browser : *BrowserList::GetInstance()) {
+    for (Browser* browser : *BrowserList::GetInstance()) {
       if (!browser->is_type_normal() || browser->profile() != profile_) {
         continue;
       }
@@ -267,10 +267,7 @@ void PlaylistServiceFactory::RegisterProfilePrefs(
 PlaylistServiceFactory::PlaylistServiceFactory()
     : BrowserContextKeyedServiceFactory(
           "PlaylistService",
-          BrowserContextDependencyManager::GetInstance()) {
-  PlaylistDownloadRequestManager::SetPlaylistJavaScriptWorldId(
-      ISOLATED_WORLD_ID_BRAVE_INTERNAL);
-}
+          BrowserContextDependencyManager::GetInstance()) {}
 
 PlaylistServiceFactory::~PlaylistServiceFactory() = default;
 

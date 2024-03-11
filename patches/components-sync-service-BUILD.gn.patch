@@ -1,5 +1,5 @@
 diff --git a/components/sync/service/BUILD.gn b/components/sync/service/BUILD.gn
-index c86542f8833f029eb9d140614025041185da7945..da6dd1b3d4c7130d743ac504999452f11e757fa3 100644
+index 86779e026cae2b4deb44529330eb21241e9b0ab1..131b7d6e034451e7f77383f72e11ce59c57387bd 100644
 --- a/components/sync/service/BUILD.gn
 +++ b/components/sync/service/BUILD.gn
 @@ -116,4 +116,5 @@ static_library("service") {

@@ -18,7 +18,6 @@
 #include "brave/components/tor/tor_navigation_throttle.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "brave/net/proxy_resolution/proxy_config_service_tor.h"
-#include "chrome/browser/auth_notification_types.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_list.h"
 #include "chrome/browser/ui/browser_list_observer.h"
@@ -44,6 +43,8 @@ constexpr char kTestInvalidScheme[] = "/invalid_scheme";
 constexpr char kTestInvalidSchemeURL[] = "brave://brave.onion";
 constexpr char kTestNotOnion[] = "/not_onion";
 constexpr char kTestNotOnionURL[] = "https://brave.com";
+constexpr char kTestErrorPage[] = "/errorpage";
+constexpr char kTestAttackerOnionURL[] = "https://attacker.onion";
 
 std::unique_ptr<net::test_server::HttpResponse> HandleOnionLocation(
     const net::test_server::HttpRequest& request) {
@@ -58,6 +59,18 @@ std::unique_ptr<net::test_server::HttpResponse> HandleOnionLocation(
     http_response->AddCustomHeader("onion-location", kTestInvalidSchemeURL);
   } else if (request.GetURL().path_piece() == kTestNotOnion) {
     http_response->AddCustomHeader("onion-location", kTestNotOnionURL);
+  } else if (request.GetURL().path_piece() == kTestErrorPage) {
+    http_response->AddCustomHeader("onion-location", kTestAttackerOnionURL);
+    http_response->set_content(R"html(
+        <html>
+          <head>
+            <script>
+              // Going to the unreachable url.
+              window.location.href="https://google.goom"
+            </script>
+          </head>
+        </html>
+      )html");
   }
   return std::move(http_response);
 }
@@ -428,4 +441,24 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, HTTPHost) {
   web_contents =
       browser_list->get(0)->tab_strip_model()->GetActiveWebContents();
   EXPECT_EQ(web_contents->GetVisibleURL(), url);
+}
+
+IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, ErrorPage) {
+  auto* tor_browser = OpenTorWindow();
+  const GURL url = test_server()->GetURL(kTestErrorPage);
+  const GURL error_url("https://google.goom/");
+
+  ui_test_utils::UrlLoadObserver observer(error_url);
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(tor_browser, url));
+  observer.Wait();
+
+  content::WebContents* web_contents =
+      tor_browser->tab_strip_model()->GetActiveWebContents();
+  auto* helper = tor::OnionLocationTabHelper::FromWebContents(web_contents);
+
+  EXPECT_EQ(error_url, web_contents->GetLastCommittedURL());
+  EXPECT_TRUE(web_contents->GetPrimaryMainFrame()->IsErrorDocument());
+  EXPECT_FALSE(helper->should_show_icon());
+  EXPECT_TRUE(helper->onion_location().is_empty());
+  EXPECT_FALSE(GetOnionLocationView(tor_browser)->GetVisible());
 }

@@ -16,26 +16,43 @@ import formatMessage from '$web-common/formatMessage'
 import DataContext from '../../state/context'
 
 const WIKI_URL = "https://github.com/brave/brave-browser/wiki/Brave-Leo"
+const PRIVACY_URL = "https://brave.com/privacy/browser/#brave-leo"
 
 function PrivacyMessage () {
   const context = React.useContext(DataContext)
+  const buttonRef = React.useRef<HTMLButtonElement>()
 
-  const handleWikiLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent, url: string) => {
+    e.preventDefault()
     const mojomUrl = new Url()
-    mojomUrl.url = WIKI_URL
+    mojomUrl.url = url
 
     getPageHandlerInstance().pageHandler.openURL(mojomUrl)
   }
 
+  const createLinkWithClickHandler = (content: string, url: string) => (
+      <a onClick={(e) => handleLinkClick(e, url)} href={url} target='_blank'>
+        {content}
+      </a>
+  )
+
   const aboutDescription = formatMessage(getLocale('aboutDescription'), {
     tags: {
-      $1: (content) => (
-        <a onClick={handleWikiLinkClick} href={WIKI_URL} target='_blank'>
-          {content}
-        </a>
-      )
+      $1: (content) => createLinkWithClickHandler(content, WIKI_URL)
     }
   })
+
+  const aboutDescription3 = formatMessage(getLocale('aboutDescription_3'), {
+    tags: {
+      $1: (content) => createLinkWithClickHandler(content, PRIVACY_URL)
+    }
+  })
+
+  React.useEffect(() => {
+    const button = buttonRef.current
+    if (button === undefined) return
+    setTimeout(() => button.focus())
+  }, [])
 
   return (
     <Dialog
@@ -49,10 +66,10 @@ function PrivacyMessage () {
       <div className={styles.content}>
         <p>{aboutDescription}</p>
         <p>{getLocale('aboutDescription_2')}</p>
-        <p>{getLocale('aboutDescription_3')}</p>
+        <p>{aboutDescription3}</p>
       </div>
       <div slot="actions">
-        <Button onClick={context.handleAgreeClick}>{getLocale('acceptButtonLabel')}</Button>
+        <Button ref={buttonRef} onClick={context.handleAgreeClick}>{getLocale('acceptButtonLabel')}</Button>
       </div>
     </Dialog>
   )

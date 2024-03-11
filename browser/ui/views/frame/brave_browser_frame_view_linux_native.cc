@@ -44,14 +44,12 @@ ui::NavButtonProvider::ButtonState ButtonStateToNavButtonProviderState(
 BraveBrowserFrameViewLinuxNative::BraveBrowserFrameViewLinuxNative(
     BrowserFrame* frame,
     BrowserView* browser_view,
-    BrowserFrameViewLayoutLinux* layout,
-    std::unique_ptr<ui::NavButtonProvider> nav_button_provider,
-    ui::WindowFrameProvider* window_frame_provider)
+    BrowserFrameViewLayoutLinuxNative* layout,
+    std::unique_ptr<ui::NavButtonProvider> nav_button_provider)
     : BrowserFrameViewLinuxNative(frame,
                                   browser_view,
                                   layout,
-                                  std::move(nav_button_provider),
-                                  window_frame_provider) {}
+                                  std::move(nav_button_provider)) {}
 
 BraveBrowserFrameViewLinuxNative::~BraveBrowserFrameViewLinuxNative() = default;
 
@@ -107,8 +105,8 @@ void BraveBrowserFrameViewLinuxNative::MaybeUpdateCachedFrameButtonImages() {
   UpdateLeadingTrailingCaptionButtonWidth();
 }
 
-void BraveBrowserFrameViewLinuxNative::Layout() {
-  BrowserFrameViewLinuxNative::Layout();
+void BraveBrowserFrameViewLinuxNative::Layout(PassKey) {
+  LayoutSuperclass<BrowserFrameViewLinuxNative>(this);
 
   UpdateLeadingTrailingCaptionButtonWidth();
 }
@@ -192,5 +190,5 @@ void BraveBrowserFrameViewLinuxNative::
 
 // Unfortunately, BrowserFrameViewLinux(Native) doesn't declare metadata.
 // OpaqueBrowserFrameView is the nearest ancestor.
-BEGIN_METADATA(BraveBrowserFrameViewLinuxNative, OpaqueBrowserFrameView)
+BEGIN_METADATA(BraveBrowserFrameViewLinuxNative)
 END_METADATA

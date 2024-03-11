@@ -8,6 +8,7 @@ package org.chromium.chrome.browser.app.domain;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import org.chromium.base.Callbacks;
 import org.chromium.brave_wallet.mojom.AccountInfo;
 import org.chromium.brave_wallet.mojom.BraveWalletService;
 import org.chromium.brave_wallet.mojom.ByteArrayStringUnion;
@@ -24,7 +25,6 @@ import org.chromium.chrome.browser.crypto_wallet.activities.BraveWalletDAppsActi
 import org.chromium.chrome.browser.crypto_wallet.model.WalletAccountCreationRequest;
 import org.chromium.chrome.browser.crypto_wallet.util.PendingTxHelper;
 import org.chromium.chrome.browser.crypto_wallet.util.Utils;
-import org.chromium.mojo.bindings.Callbacks;
 import org.chromium.mojo.system.MojoException;
 import org.chromium.mojo.system.Pair;
 
@@ -77,20 +77,12 @@ public class DappsModel implements KeyringServiceObserver {
             return;
         }
 
-        mKeyringService.getAllAccounts(allAccounts -> {
-            if (coinType == CoinType.SOL) {
-                // only the selected account is used for solana dapps
-                if (allAccounts.solDappSelectedAccount != null) {
-                    List<AccountInfo> accounts = new ArrayList();
-                    accounts.add(allAccounts.solDappSelectedAccount);
-                    callback.call(new Pair<>(allAccounts.solDappSelectedAccount, accounts));
-                }
-            } else {
-                List<AccountInfo> accounts =
-                        Utils.filterAccountsByCoin(allAccounts.accounts, coinType);
-                callback.call(new Pair<>(allAccounts.ethDappSelectedAccount, accounts));
-            }
-        });
+        mKeyringService.getAllAccounts(
+                allAccounts -> {
+                    List<AccountInfo> accounts =
+                            Utils.filterAccountsByCoin(allAccounts.accounts, coinType);
+                    callback.call(new Pair<>(allAccounts.ethDappSelectedAccount, accounts));
+                });
     }
 
     public LiveData<List<SignTransactionRequest>> fetchSignTxRequest() {

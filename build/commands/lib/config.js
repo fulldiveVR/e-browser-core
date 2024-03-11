@@ -58,9 +58,36 @@ var packageConfig = function (key, sourceDir = braveCoreDir) {
 const getNPMConfig = (key, default_value = undefined) => {
   if (!NpmConfig) {
     const list = run(npmCommand, ['config', 'list', '--json', '--userconfig=' + path.join(rootDir, '.npmrc')])
-    NpmConfig = JSON.parse(list.stdout.toString())
-    // Merge in config from `.env` file
-    dotenv.config({ processEnv: NpmConfig, override: true })
+    const unusedNpmConfig = JSON.parse(list.stdout.toString())
+
+    // Show deprecation warning if any brave-related variable is found in .npmrc.
+    for (const key in unusedNpmConfig) {
+      if (typeof key !== 'string') {
+        continue;
+      }
+      if (key.startsWith('bitflyer') ||
+          key.startsWith('brave') ||
+          key.startsWith('gemini') ||
+          key.startsWith('google') ||
+          key.startsWith('rewards') ||
+          key.startsWith('p3a') ||
+          key.startsWith('rbe') ||
+          key.startsWith('sardine') ||
+          key.startsWith('updater') ||
+          key.startsWith('uphold') ||
+          key.startsWith('zebpay')) {
+        Log.warn(
+          `Warning: ${key.replace(/-/g, '_')} and all other Brave-core related variables in .npmrc are ignored. Please migrate to src/brave/.env.\n` +
+          'Internal wiki: https://github.com/brave/devops/wiki/%60.env%60-config-for-Brave-Developers\n' +
+          'Public wiki: https://github.com/brave/brave-browser/wiki/Build-configuration\n' +
+          'If the found variable is not related to Brave-core, please ignore this warning.'
+        )
+        break
+      }
+    }
+
+    NpmConfig = {}
+    dotenv.config({ processEnv: NpmConfig })
     for (const [key, value] of Object.entries(NpmConfig)) {
       if (value === 'true' || value === 'false') {
         NpmConfig[key] = value === 'true'
@@ -68,17 +95,9 @@ const getNPMConfig = (key, default_value = undefined) => {
     }
   }
 
-  // NpmConfig has the multiple copy of the same variable: one from .npmrc
-  // (that we want to) and one from the environment.
-  // https://docs.npmjs.com/cli/v7/using-npm/config#environment-variables
   const npmConfigValue = NpmConfig[key.join('_')]
   if (npmConfigValue !== undefined)
     return npmConfigValue
-
-  // Shouldn't be used in general but added for backward compatibilty.
-  const npmConfigDeprecatedValue = NpmConfig[key.join('-').replace(/_/g, '-')]
-  if (npmConfigDeprecatedValue !== undefined)
-    return npmConfigDeprecatedValue
 
   const packageConfigValue = packageConfig(key)
   if (packageConfigValue !== undefined)
@@ -114,6 +133,7 @@ const getBraveVersion = (ignorePatchVersionNumber) => {
 
 const Config = function () {
   this.isCI = process.env.BUILD_ID !== undefined || process.env.TEAMCITY_VERSION !== undefined
+  this.internalDepsUrl = 'https://vhemnu34de4lf5cj6bx2wwshyy0egdxk.lambda-url.us-west-2.on.aws'
   this.defaultBuildConfig = 'Component'
   this.buildConfig = this.defaultBuildConfig
   this.signTarget = 'sign_app'
@@ -146,7 +166,6 @@ const Config = function () {
   this.googleDefaultClientId = getNPMConfig(['google_default_client_id']) || ''
   this.googleDefaultClientSecret = getNPMConfig(['google_default_client_secret']) || ''
   this.infuraProjectId = getNPMConfig(['brave_infura_project_id']) || ''
-  this.braveZeroExApiKey = getNPMConfig(['brave_zero_ex_api_key']) || ''
   this.sardineClientId = getNPMConfig(['sardine_client_id']) || ''
   this.sardineClientSecret = getNPMConfig(['sardine_client_secret']) || ''
   this.bitFlyerProductionClientId = getNPMConfig(['bitflyer_production_client_id']) || ''
@@ -195,6 +214,7 @@ const Config = function () {
   this.rewardsGrantProdEndpoint = getNPMConfig(['rewards_grant_prod_endpoint']) || ''
   this.ignorePatchVersionNumber = !this.isBraveReleaseBuild() && getNPMConfig(['ignore_patch_version_number'], !this.isCI)
   this.braveVersion = getBraveVersion(this.ignorePatchVersionNumber)
+  this.braveIOSMarketingPatchVersion = getNPMConfig(['brave_ios_marketing_version_patch']) || ''
   this.androidOverrideVersionName = this.braveVersion
   this.releaseTag = this.braveVersion.split('+')[0]
   this.mac_signing_identifier = getNPMConfig(['mac_signing_identifier'])
@@ -320,6 +340,7 @@ Config.prototype.buildArgs = function () {
     sardine_client_secret: this.sardineClientSecret,
     is_asan: this.isAsan(),
     enable_rust: true,
+    enable_rust_json: true,
     enable_full_stack_frames_for_profiling: this.isAsan(),
     v8_enable_verify_heap: this.isAsan(),
     disable_fieldtrial_testing_config: true,
@@ -349,7 +370,6 @@ Config.prototype.buildArgs = function () {
     google_default_client_id: this.googleDefaultClientId,
     google_default_client_secret: this.googleDefaultClientSecret,
     brave_infura_project_id: this.infuraProjectId,
-    brave_zero_ex_api_key: this.braveZeroExApiKey,
     bitflyer_production_client_id: this.bitFlyerProductionClientId,
     bitflyer_production_client_secret: this.bitFlyerProductionClientSecret,
     bitflyer_production_fee_address: this.bitFlyerProductionFeeAddress,
@@ -596,6 +616,18 @@ Config.prototype.buildArgs = function () {
 
     args.android_aab_to_apk = this.androidAabToApk
 
+    if (this.targetArch == "arm64") {
+      // Flag use_relr_relocations is incompatible with Android 8 arm64, but
+      // makes huge optimizations on Android 9 and above.
+      // Decision is to specify android:minSdkVersion=28 for arm64 and keep
+      // 26(default) for arm32.
+      // Then:
+      //   - for Android 8 and 8.1 GP will supply arm32 bundle;
+      //   - for Android 9 and above GP will supply arm64 and we can enable all
+      //     optimizations.
+      args.default_min_sdk_version = 28
+    }
+
     // These do not exist on android
     // TODO - recheck
     delete args.enable_nacl
@@ -605,6 +637,9 @@ Config.prototype.buildArgs = function () {
   if (this.targetOS === 'ios') {
     if (this.targetEnvironment) {
       args.target_environment = this.targetEnvironment
+    }
+    if (this.braveIOSMarketingPatchVersion != '') {
+      args.brave_ios_marketing_version_patch = this.braveIOSMarketingPatchVersion
     }
     args.enable_stripping = !this.isComponentBuild()
     // Component builds are not supported for iOS:
@@ -659,7 +694,6 @@ Config.prototype.buildArgs = function () {
     delete args.enable_hangout_services_extension
     delete args.brave_google_api_endpoint
     delete args.brave_google_api_key
-    delete args.brave_stats_api_key
     delete args.brave_stats_updater_url
     delete args.bitflyer_production_client_id
     delete args.bitflyer_production_client_secret
@@ -867,10 +901,6 @@ Config.prototype.update = function (options) {
 
   if (options.brave_infura_project_id) {
     this.infuraProjectId = options.brave_infura_project_id
-  }
-
-  if (options.brave_zero_ex_api_key) {
-    this.braveZeroExApiKey = options.brave_zero_ex_api_key
   }
 
   if (options.bitflyer_production_client_id) {
@@ -1210,7 +1240,7 @@ Object.defineProperty(Config.prototype, 'defaultOptions', {
       env.USE_BRAVE_HERMETIC_TOOLCHAIN = '1'
       env.DEPOT_TOOLS_WIN_TOOLCHAIN = '1'
       env.GYP_MSVS_HASH_27370823e7 = '01b3b59461'
-      env.DEPOT_TOOLS_WIN_TOOLCHAIN_BASE_URL = 'https://brave-build-deps-public.s3.brave.com/windows-hermetic-toolchain/'
+      env.DEPOT_TOOLS_WIN_TOOLCHAIN_BASE_URL = `${this.internalDepsUrl}/windows-hermetic-toolchain/`
     }
 
     if (this.getCachePath()) {

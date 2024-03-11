@@ -33,31 +33,6 @@ namespace brave_wallet {
 
 namespace {
 
-mojom::CoinType GetCoinTypeFromTxDataUnion(
-    const mojom::TxDataUnion& tx_data_union) {
-  if (tx_data_union.is_eth_tx_data_1559() || tx_data_union.is_eth_tx_data()) {
-    return mojom::CoinType::ETH;
-  }
-
-  if (tx_data_union.is_solana_tx_data()) {
-    return mojom::CoinType::SOL;
-  }
-
-  if (tx_data_union.is_fil_tx_data()) {
-    return mojom::CoinType::FIL;
-  }
-
-  if (tx_data_union.is_btc_tx_data()) {
-    return mojom::CoinType::BTC;
-  }
-
-  if (tx_data_union.is_zec_tx_data()) {
-    return mojom::CoinType::ZEC;
-  }
-
-  NOTREACHED_NORETURN();
-}
-
 std::string GetToAddressFromTxDataUnion(
     const mojom::TxDataUnion& tx_data_union) {
   if (tx_data_union.is_eth_tx_data_1559()) {
@@ -136,10 +111,13 @@ TxService::TxService(JsonRpcService* json_rpc_service,
   }
 
   if (IsZCashEnabled()) {
-    CHECK(zcash_wallet_service);
-    tx_manager_map_[mojom::CoinType::ZEC] = std::make_unique<ZCashTxManager>(
-        this, zcash_wallet_service, keyring_service, prefs, delegate_.get(),
-        account_resolver_delegate_.get());
+    if (!zcash_wallet_service) {
+      CHECK_IS_TEST();
+    } else {
+      tx_manager_map_[mojom::CoinType::ZEC] = std::make_unique<ZCashTxManager>(
+          this, zcash_wallet_service, keyring_service, prefs, delegate_.get(),
+          account_resolver_delegate_.get());
+    }
   }
 }
 

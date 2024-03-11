@@ -26,12 +26,10 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kBiddingAndScoringDebugReportingAPI, base::FEATURE_DISABLED_BY_DEFAULT},
     {kBrowsingTopics, base::FEATURE_DISABLED_BY_DEFAULT},
     {kClientHintsFormFactor, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kClientHintsMetaEquivDelegateCH, base::FEATURE_DISABLED_BY_DEFAULT},
     {kComputePressure, base::FEATURE_DISABLED_BY_DEFAULT},
     {kCssSelectorFragmentAnchor, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kEventTimingReportAllEarlyEntriesOnPaintedPresentation,
-     base::FEATURE_DISABLED_BY_DEFAULT},
     {kFencedFrames, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kFencedFramesM120FeaturesPart2, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFledge, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFledgeBiddingAndAuctionServer, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFledgeConsiderKAnonymity, base::FEATURE_DISABLED_BY_DEFAULT},
@@ -43,20 +41,20 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kPrivateAggregationApi, base::FEATURE_DISABLED_BY_DEFAULT},
     {kPrivateAggregationApiMultipleCloudProviders,
      base::FEATURE_DISABLED_BY_DEFAULT},
+    // This feature uses shared memory to reduce IPCs to access cookies, but
+    // Ephemeral Storage can switch cookie storage backend at runtime, so we
+    // can't use it.
+    {kReduceCookieIPCs, base::FEATURE_DISABLED_BY_DEFAULT},
     {kReduceUserAgentMinorVersion, base::FEATURE_ENABLED_BY_DEFAULT},
     {kSharedStorageAPI, base::FEATURE_DISABLED_BY_DEFAULT},
     {kSharedStorageAPIM118, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kSharedStorageAPIM123, base::FEATURE_DISABLED_BY_DEFAULT},
     {kSharedStorageSelectURLLimit, base::FEATURE_DISABLED_BY_DEFAULT},
     {kSpeculationRulesHeaderEnableThirdPartyOriginTrial,
      base::FEATURE_DISABLED_BY_DEFAULT},
     {kSpeculationRulesPrefetchFuture, base::FEATURE_DISABLED_BY_DEFAULT},
     {kTextFragmentAnchor, base::FEATURE_DISABLED_BY_DEFAULT},
 }});
-
-// Allow certain client hints in request header.
-BASE_FEATURE(kAllowCertainClientHints,
-             "AllowCertainClientHints",
-             base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE(kFileSystemAccessAPI,
              "FileSystemAccessAPI",
@@ -108,6 +106,12 @@ BASE_FEATURE(kRestrictEventSourcePool,
              base::FEATURE_ENABLED_BY_DEFAULT
 #endif
 );
+
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+BASE_FEATURE(kMiddleButtonClickAutoscroll,
+             "MiddelButtonClickAutoscroll",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+#endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 
 bool IsPrerender2Enabled() {
   return false;
