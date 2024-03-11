@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Visitar sitio</translation>
 <translation id="2759453070259087442">Despregar grupo de pestanas <ph name="TITLE_OF_GROUP"/> (contén <ph name="NUMBER_OF_TABS"/> pestanas).</translation>
 <translation id="2801787514987684416">Queres ver a información da tenda?</translation>
-<translation id="4691798003247738043">Brave | Acerca desta tenda</translation>
+<translation id="4691798003247738043">AIWize | Acerca desta tenda</translation>
 <translation id="2977480621796371840">Quitar do grupo</translation>
 <translation id="3008554597174452548">Deter seguimento do produto</translation>
 <translation id="3052964831964880138">Baixada de prezo de <ph name="PRICE_DROP"/> no seguinte produto: <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Ver información sobre a tenda, opción dispoñible preto da parte superior da pantalla</translation>
 <translation id="5558362125926932819">Pechar grupo de pestanas con <ph name="NUMBER_OF_TABS"/> pestanas</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> pestanas agrupadas</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ligazón de Brave}other{<ph name="TABS_COUNT_MANY"/> ligazóns de Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ligazón de AIWize}other{<ph name="TABS_COUNT_MANY"/> ligazóns de AIWize}}</translation>
 <translation id="575494663145460764">Queres recibir alertas de baixadas de prezo?</translation>
 <translation id="58326064309361797">Arrastra as pestanas para agrupalas</translation>
 <translation id="5846292395804797011">Pechar grupo <ph name="TITLE_OF_GROUP"/> con <ph name="NUMBER_OF_TABS"/> pestanas</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Ver información da tenda</translation>
 <translation id="6562820390860419811">Mover pestana cara á esquerda</translation>
 <translation id="6615455863669487791">Mostrar</translation>
-<translation id="6398241160085205003">Na opción Pestanas recentes (no menú principal de Brave) poderás atopar as pestanas que peches.</translation>
+<translation id="6398241160085205003">Na opción Pestanas recentes (no menú principal de AIWize) poderás atopar as pestanas que peches.</translation>
 <translation id="6840760312327750441">Para agrupar varias pestanas, mantén premida unha delas e despois arrástraa ata outra.</translation>
 <translation id="6856809498882026482">Ocultar modo de selección múltiple</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Compartir pestana}other{Compartir pestanas}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Consulta a política de devolución e outra información</translation>
 <translation id="7352298686197644113">Descubre que artigo baixou de prezo nunha das pestanas que tes abertas</translation>
 <translation id="753732157349120914">Selector de pestanas</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recensión procedente de Brave}other{<ph name="REVIEWS_COUNT_MANY"/> recensións procedentes de Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recensión procedente de AIWize}other{<ph name="REVIEWS_COUNT_MANY"/> recensións procedentes de AIWize}}</translation>
 <translation id="7559245342362162951">Mostrar as pestanas do grupo nunha grade en pantalla completa</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Compartir <ph name="TABS_COUNT_ONE"/> pestana seleccionada}other{Compartir <ph name="TABS_COUNT_MANY"/> pestanas seleccionadas}}</translation>
 <translation id="7792771145871471484">Revisar as suxestións.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Se entras neste editor, poderás revisar todas as pestanas arquivadas para organizalas.</translation>
 <translation id="959682366969460160">Organízate</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Pode atopar as pestanas pechadas en Pestanas recentes, no menú principal de Brave. A pestana Privado non estará dispoñible.}
-        other {Pode atopar as pestanas pechadas en Pestanas recentes no menú principal de Brave. As # pestanas privadas non estarán dispoñibles.}}</translation>
+        =1 {Pode atopar as pestanas pechadas en Pestanas recentes, no menú principal de AIWize. A pestana Privado non estará dispoñible.}
+        other {Pode atopar as pestanas pechadas en Pestanas recentes no menú principal de AIWize. As # pestanas privadas non estarán dispoñibles.}}</translation>
 <translation id="3228718275011575753">Pechar todos os separadores de incógnito?</translation>
 <translation id="6687920250729800417">A súa actividade nestas pestanas privadas eliminarase deste dispositivo</translation>
 </translationbundle>

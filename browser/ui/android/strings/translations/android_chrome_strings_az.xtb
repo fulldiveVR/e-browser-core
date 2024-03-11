@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Bura köçürün</translation>
 <translation id="1014147525163127655">Bu cihazda <ph name="ORIGIN"/> üçün giriş açarı yoxdur</translation>
 <translation id="1016498331642356377">Səsinizlə sürətlə axtarın. Bu qısayolu redaktə etmək üçün toxunub saxlayın.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AIWize Dev</translation>
 <translation id="1028699632127661925"><ph name="DEVICE_NAME"/> cihazına göndərilir...</translation>
 <translation id="103269572468856066">Həmçinin bu saytlar və tətbiqlərdən data silinsin?</translation>
 <translation id="1034259925032978114">Pəncərə açıqdır</translation>
@@ -17,21 +17,21 @@
 <translation id="1089606299949659462">Nəzərdən keçirmə tamamlandı!</translation>
 <translation id="1095761715416917775">Sinxronlaşdırma datasına həmişə girişinizin olduğuna əmin olun</translation>
 <translation id="1100066534610197918">Qrupda yeni tabda açın</translation>
-<translation id="4660777881054855091">Brave'un təkmilləşdirilməsinə kömək edirsiniz?</translation>
+<translation id="4660777881054855091">AIWize'un təkmilləşdirilməsinə kömək edirsiniz?</translation>
 <translation id="1105960400813249514">Ekranın Ani Çəkimi</translation>
 <translation id="1108938384783527433">Tarixçə sinxronizasiyası</translation>
 <translation id="1111673857033749125">Digər cihazlarınızda yadda saxlanmış əlfəcinlər burada görünəcək.</translation>
 <translation id="1113597929977215864">Sadə görüntüyə baxın</translation>
-<translation id="4470276443668654888">Google Pay'dən ödəniş metodları və ünvanlar şifrələnməyəcək. Brave'dan baxış tarixçəsi sinxronlaşdırılmayacaq.
-Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu parol Brave tərəfindən göndərilmiş və yadda saxlanmır. Parol ifadəsini unutsanız və ya bu ayarı dəyişmək istəsəniz sinxronizasiyanı sıfırlamalısınız. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Sizi təhlükəli veb sayt, endirmə və artırmalardan qorumur. Hələ də Gmail və Axtarış kimi digər Brave xidmətlərində mümkün olduğu qədər Təhlükəsiz Baxış qoruması əldə edəcəksiniz.</translation>
+<translation id="4470276443668654888">Google Pay'dən ödəniş metodları və ünvanlar şifrələnməyəcək. AIWize'dan baxış tarixçəsi sinxronlaşdırılmayacaq.
+Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu parol AIWize tərəfindən göndərilmiş və yadda saxlanmır. Parol ifadəsini unutsanız və ya bu ayarı dəyişmək istəsəniz sinxronizasiyanı sıfırlamalısınız. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
+<translation id="1295971429974142731">Sizi təhlükəli veb sayt, endirmə və artırmalardan qorumur. Hələ də Gmail və Axtarış kimi digər AIWize xidmətlərində mümkün olduğu qədər Təhlükəsiz Baxış qoruması əldə edəcəksiniz.</translation>
 <translation id="1129510026454351943">Detallar: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Bu saytların tərcümə edilməsini təklif etməyin</translation>
 <translation id="1145536944570833626">Mövcud datanı silin.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> Brave'da açılacaq. Davam etməklə, <ph name="BEGIN_LINK1"/>Brave Xidmət Şərtləri<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>Brave və ChromeOS Əlavə Xidmət Şərtləri<ph name="END_LINK2"/> ilə razılaşırsınız.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> AIWize'da açılacaq. Davam etməklə, <ph name="BEGIN_LINK1"/>AIWize Xidmət Şərtləri<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>AIWize və ChromeOS Əlavə Xidmət Şərtləri<ph name="END_LINK2"/> ilə razılaşırsınız.</translation>
 <translation id="115483310321669804">Parol istifadə edin: <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Adını dəyişin</translation>
-<translation id="7947699437047020219">Ekran dar olduqda Brave mobil sayt tələb edəcək</translation>
+<translation id="7947699437047020219">Ekran dar olduqda AIWize mobil sayt tələb edəcək</translation>
 <translation id="1177863135347784049">İxtiyari</translation>
 <translation id="1181037720776840403">Silin</translation>
 <translation id="1181366777303791449"><ph name="MAIN_FRAME_ETLD_PLUS_ONE"/> domenində</translation>
@@ -47,22 +47,22 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1231733316453485619">Sinxronizasiya ktiv edilsin?</translation>
 <translation id="123724288017357924">Keş məzmununu iqnor edərək cari səhifəni yenidən yükləyin</translation>
 <translation id="1239792311949352652">Bu səhifəni cəld paylaşın. Bu qısayolu redaktə etmək üçün Ayarlara keçin.</translation>
-<translation id="3251315496493761426">Brave ipucuları</translation>
+<translation id="3251315496493761426">AIWize ipucuları</translation>
 <translation id="1240288207750131269"><ph name="LANG"/> yüklənir</translation>
 <translation id="1240903469550363138">Davam etmək üçün <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ad, e-poçt ünvanı və profil şəklinizi bu sayt ilə paylaşacaq. Bu saytın <ph name="BEGIN_LINK1"/>məxfilik siyasəti<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>xidmət şərtlərinə<ph name="END_LINK2"/> baxın.</translation>
 <translation id="124116460088058876">Digər dillər</translation>
-<translation id="4078574862195461280"><ph name="CHROME_CHANNEL"/> üçün parollar Brave Parol Menecerindən silinəcək. İndicə endirilən parol faylını saxlayacaqsınız.</translation>
+<translation id="4078574862195461280"><ph name="CHROME_CHANNEL"/> üçün parollar AIWize Parol Menecerindən silinəcək. İndicə endirilən parol faylını saxlayacaqsınız.</translation>
 <translation id="1242883863226959074">cihaz</translation>
 <translation id="124678866338384709">Cari paneli bağlayın</translation>
 <translation id="1246905108078336582">Təklif mübadilə buferindən silinsin?</translation>
-<translation id="1996480094660735607">Brave doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">İzlənilənlər bölməsində <ph name="SITE_NAME"/> üzrə kontent görəcəksiniz. İzlədiyiniz sayt və axtarışlar Brave Hesabında yadda saxlanır. Ayarlarda izlədiklərinizi idarə edə bilərsiniz.</translation>
+<translation id="1996480094660735607">AIWize doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="7074197713963877855">İzlənilənlər bölməsində <ph name="SITE_NAME"/> üzrə kontent görəcəksiniz. İzlədiyiniz sayt və axtarışlar AIWize Hesabında yadda saxlanır. Ayarlarda izlədiklərinizi idarə edə bilərsiniz.</translation>
 <translation id="1263231323834454256">Oxu siyahısı</translation>
 <translation id="1266864766717917324"><ph name="CONTENT_TYPE"/> paylaşmaq mümkün olmnadı</translation>
 <translation id="1269129608791067105">Tarixçə burada olacaq</translation>
 <translation id="1273937721055267968"><ph name="DOMAIN"/> adlı tətbiqi blok edin</translation>
 <translation id="1283039547216852943">Genişləndirmək üçün klikləyin</translation>
-<translation id="194557235473047967">Brave Hesabına daxil olmağınız istəniləcək</translation>
+<translation id="194557235473047967">AIWize Hesabına daxil olmağınız istəniləcək</translation>
 <translation id="1291207594882862231">Tarixçə, kuki, sayt datası və keşi təmizləyin…</translation>
 <translation id="129553762522093515">Son qapadılan</translation>
 <translation id="1298077576058087471">60%-ədək dataya qənaət edin, bugünün xəbərlərini oxuyun</translation>
@@ -70,8 +70,8 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1303507811548703290"><ph name="DOMAIN"/> - <ph name="DEVICE_NAME"/> cihazından göndərilib</translation>
 <translation id="1320912611264252795">Əlfəcin saxlama prosesi qovluqları tam hündürlükdə açılıb</translation>
 <translation id="1327257854815634930">Naviqasiya tarixçəsi açıqdır</translation>
-<translation id="6773423637732432200">Brave güncəllənmədi. Digər seçimlər</translation>
-<translation id="3169981355900570544">Brave funksiya qısayolları</translation>
+<translation id="6773423637732432200">AIWize güncəllənmədi. Digər seçimlər</translation>
+<translation id="3169981355900570544">AIWize funksiya qısayolları</translation>
 <translation id="1344653310988386453">Vurğulamaya keçidi daxil edin</translation>
 <translation id="1347468774581902829">Fəaliyyəti idarə edin</translation>
 <translation id="1360432990279830238">Sinxronizasiya deaktiv edilsin?</translation>
@@ -80,14 +80,14 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1376578503827013741">Hesablanır...</translation>
 <translation id="1382912999714108023">Cari məlumatınızı görmürsünüz? Yeniləmək üçün bankınızla əlaqə saxlayın.</translation>
 <translation id="1383876407941801731">Axtar</translation>
-<translation id="1384704387250346179">Brave Linza ilə şəkli tərcümə edin <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
+<translation id="1384704387250346179">AIWize Linza ilə şəkli tərcümə edin <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
 <translation id="1386674309198842382"><ph name="LAST_UPDATED"/> gün əvvəl aktiv olub</translation>
 <translation id="13931502444227376">Davam etmək üçün <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ad, e-poçt ünvanı və profil şəklinizi bu sayt ilə paylaşacaq. Bu saytın <ph name="BEGIN_LINK1"/>xidmət şərtlərinə<ph name="END_LINK1"/> baxın.</translation>
 <translation id="1397811292916898096"><ph name="PRODUCT_NAME"/> ilə axtarın</translation>
 <translation id="1407069428457324124">Tünd tema</translation>
 <translation id="1407135791313364759">Hamısını açın</translation>
 <translation id="1409879593029778104"><ph name="FILE_NAME"/> fayl yüklənilmədi, çünki artıq mövcuddur.</translation>
-<translation id="1853026300647876496">Brave ilə əlaqə yaradılır. Bir dəqiqə vaxt ala bilər...</translation>
+<translation id="1853026300647876496">AIWize ilə əlaqə yaradılır. Bir dəqiqə vaxt ala bilər...</translation>
 <translation id="1416550906796893042">Tətbiq versiyası</translation>
 <translation id="1428770807407000502">Sinxronlaşdırma deaktiv edilsin?</translation>
 <translation id="1430915738399379752">Çap edin</translation>
@@ -96,7 +96,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1437543266176261764"><ph name="APP_NAME"/> tətbiqində işləyir</translation>
 <translation id="1448440926884431741">Əlfəcinlərdə izlədiyiniz məhsulları təşkil edin</translation>
 <translation id="1450753235335490080"><ph name="CONTENT_TYPE"/> paylaşmaq mümkün deyil</translation>
-<translation id="5598889255595678761">Brave dilini seçin</translation>
+<translation id="5598889255595678761">AIWize dilini seçin</translation>
 <translation id="1477626028522505441"><ph name="FILE_NAME"/> faylının endirilməsi server problemləri səbəbindən alınmadı.</translation>
 <translation id="148482509007564431">Əlfəcin saxlama prosesi</translation>
 <translation id="1492417797159476138">Hazırda bu istifadəçi adını bu sayt üçün yadda saxlamısınız</translation>
@@ -107,10 +107,10 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1513814250881909472">Tablarınızı digər cihazlarınızdan əldə etmək üçün sinxronizasiya edin</translation>
 <translation id="1513858653616922153">Parolu silin</translation>
 <translation id="1521774566618522728">Bu gün aktivdir</translation>
-<translation id="8090895580117672212">Brave hesabınızı idarə etmək üçün "Hesabı idarə edin" düyməsinə toxunun</translation>
+<translation id="8090895580117672212">AIWize hesabınızı idarə etmək üçün "Hesabı idarə edin" düyməsinə toxunun</translation>
 <translation id="1549000191223877751">Başqa pəncərəyə keçin</translation>
-<translation id="1705567146636171298">Brave'u güncəlləşdirin</translation>
-<translation id="3763131702135887799">Brave'u sizin kimi istifadə edən insanlar üçün təkmilləşdirməyə kömək edin</translation>
+<translation id="1705567146636171298">AIWize'u güncəlləşdirin</translation>
+<translation id="3763131702135887799">AIWize'u sizin kimi istifadə edən insanlar üçün təkmilləşdirməyə kömək edin</translation>
 <translation id="6464648082977038075">Anonim tabları qapadın</translation>
 <translation id="1568636008098739136">Bu səhifəni dinləyin. Bu qısayolu redaktə etmək üçün toxunub saxlayın.</translation>
 <translation id="1571304935088121812">İstifadəçi adını kopyalayın</translation>
@@ -118,7 +118,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1594635596540195766">Aşağıdakı siyahıda <ph name="SUGGESTIONS_COUNT"/> element təklif edilib.</translation>
 <translation id="1598163867407640634"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ilə <ph name="SITE_ETLD_PLUS_ONE"/> istifadə edin</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Seçilmiş 1 elementi silin}other{Seçilmiş # elementi silin}}</translation>
-<translation id="3122582044404611732">Brave'un əsas səhifəsində yeni məzmunu kəşf edin</translation>
+<translation id="3122582044404611732">AIWize'un əsas səhifəsində yeni məzmunu kəşf edin</translation>
 <translation id="1641113438599504367">Təhlükəsiz Axtarış</translation>
 <translation id="164269334534774161"><ph name="CREATION_TIME"/> tarixində yaradılmış səhifənin oflayn nüsxəsini görürsünüz</translation>
 <translation id="1644574205037202324">Tarixçə</translation>
@@ -126,20 +126,20 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1670399744444387456">Əsas</translation>
 <translation id="1671236975893690980">Endirilmə gözlənilir...</translation>
 <translation id="1672586136351118594">Göstərilməsin</translation>
-<translation id="1680919990519905526">Brave Linza ilə şəkil alın <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Tezliklə İzlənilənlər bölməsində <ph name="SITE_NAME"/> üzrə kontent görəcəksiniz. İzlədiyiniz sayt və axtarışlar Brave Hesabında yadda saxlanır. Ayarlarda izlədiklərinizi idarə edə bilərsiniz.</translation>
+<translation id="1680919990519905526">AIWize Linza ilə şəkil alın <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
+<translation id="7870200641233500458">Tezliklə İzlənilənlər bölməsində <ph name="SITE_NAME"/> üzrə kontent görəcəksiniz. İzlədiyiniz sayt və axtarışlar AIWize Hesabında yadda saxlanır. Ayarlarda izlədiklərinizi idarə edə bilərsiniz.</translation>
 <translation id="1696555181932908973"><ph name="SITE_ETLD_PLUS_ONE"/> saytında davam etmək üçün başqa yolları sınaya bilərsiniz.</translation>
 <translation id="1702543251015153180">Tünd tema ayarları dəyişdirilsin?</translation>
 <translation id="1702907158640575240">İdarə edilən brauzer</translation>
 <translation id="1710099199314114079">Tabları keçirin və ya bağlayın</translation>
 <translation id="1718835860248848330">Son saat</translation>
 <translation id="1724977129262658800">Parolunuzu redaktə etmək üçün kiliddən çıxarın</translation>
-<translation id="6493900814829428590">Brave ziyarət edə biləcəyinizi düşündüyü səhifələri əvvəlcədən yüklədikdə daha sürətli gözdən keçirə və axtarış edə bilərsiniz</translation>
+<translation id="6493900814829428590">AIWize ziyarət edə biləcəyinizi düşündüyü səhifələri əvvəlcədən yüklədikdə daha sürətli gözdən keçirə və axtarış edə bilərsiniz</translation>
 <translation id="5129323533070334129">Giriş açarı Anonim rejimdən kənarda yadda saxlansın?</translation>
 <translation id="1749561566933687563">Əlfəcinlərinizi sinxronizasiya edin</translation>
 <translation id="1750259112639922169">Tab qrupu - <ph name="TAB_COUNT"/> tab</translation>
 <translation id="17513872634828108">Panelləri açın</translation>
-<translation id="9207812657123271782">Brave Parol Meneceri bildirişi</translation>
+<translation id="9207812657123271782">AIWize Parol Meneceri bildirişi</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Səhifələr, siyahıda 1 səhifə}other{Səhifələr, siyahıda # səhifə}}</translation>
 <translation id="1778457539567749232">Oxunmamış kimi qeyd edin</translation>
 <translation id="1779766957982586368">Pəncərəni qapadın</translation>
@@ -151,15 +151,15 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1810845389119482123">İlkin sinxronizasiya ayarlanması tamamlanmayıb</translation>
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/> <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> istifadəsinə davam edə bilməz</translation>
 <translation id="1829244130665387512">Səhifədə tapın</translation>
-<translation id="5488575152752589250">Brave-dan uyğun kontent əldə etmək üçün sinxronlaşdırın</translation>
-<translation id="7175072311426658869">Brave brauzerində açın</translation>
-<translation id="5173820533850252773">Brave'un vaxtı keçib</translation>
+<translation id="5488575152752589250">AIWize-dan uyğun kontent əldə etmək üçün sinxronlaşdırın</translation>
+<translation id="7175072311426658869">AIWize brauzerində açın</translation>
+<translation id="5173820533850252773">AIWize'un vaxtı keçib</translation>
 <translation id="1883903952484604915">Fayllarım</translation>
 <translation id="189358972401248634">Digər dillərdə</translation>
 <translation id="1900260903084164610">Davam etməklə, <ph name="BEGIN_TOS_LINK"/>Xidmət Şərtləri<ph name="END_TOS_LINK"/> ilə razılaşırsınız.</translation>
-<translation id="6893464351226208429">Ziyarət etdiyiniz keçidlər Brave Hesabınızda saxlanılır</translation>
+<translation id="6893464351226208429">Ziyarət etdiyiniz keçidlər AIWize Hesabınızda saxlanılır</translation>
 <translation id="1910950723001426294">Paylaşım seçimlərinin siyahısı bağlıdır.</translation>
-<translation id="7021823858304886493">Brave girişinə icazə verin</translation>
+<translation id="7021823858304886493">AIWize girişinə icazə verin</translation>
 <translation id="1922362554271624559">Təklif edilən dillər</translation>
 <translation id="1924255092154549435">Tab genişləndirildi</translation>
 <translation id="1925021887439448749">Fərdi veb ünvanı daxil edin</translation>
@@ -170,7 +170,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1944535645109964458">Əlçatan giriş açarı yoxdur</translation>
 <translation id="1952172573699511566">Mümkün olduqda veb səhifələr tərcih etdiyiniz dildə mətn göstərəcək.</translation>
 <translation id="1959679933317802873">Məzmun gözlənilir</translation>
-<translation id="3968054912784331254">Brave güncəlləmələri artıq bu Android versiyasında dəstəklənmir</translation>
+<translation id="3968054912784331254">AIWize güncəlləmələri artıq bu Android versiyasında dəstəklənmir</translation>
 <translation id="1963976881984600709">Standart qoruma</translation>
 <translation id="1966710179511230534">Hesaba giriş detallarınızı güncəlləşdirin.</translation>
 <translation id="197288927597451399">Saxlayın</translation>
@@ -179,12 +179,12 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1984417487208496350">Qoruma yoxdur (tövsiyə edilmir)</translation>
 <translation id="1986685561493779662">Adı artıq mövcuddur</translation>
 <translation id="1995884366040846621">Davam etmək üçün <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ad, e-poçt ünvanı və profil şəklinizi bu sayt ilə paylaşacaq. Bu saytın <ph name="BEGIN_LINK1"/>məxfilik siyasətinə<ph name="END_LINK1"/> baxın.</translation>
-<translation id="6968892567705775281">Brave axtarışlarına ətrafdakı mətn daxil edilsin?</translation>
+<translation id="6968892567705775281">AIWize axtarışlarına ətrafdakı mətn daxil edilsin?</translation>
 <translation id="2009341475524975924">Reklamın performansını ölçmək üçün reklamın sizə göstərildiyi vaxt kimi məhdud data növləri saytlar arasında paylaşıla bilər.</translation>
 <translation id="201060170519281460">Profil kilidi sinxronlaşdırılmış parol, ödəniş və s. məlumatları avtomobildə təhlükəsiz saxlayır.</translation>
 <translation id="2021896219286479412">Tam ekran sayt nəzarətləri</translation>
 <translation id="2038563949887743358">Əsas Versiya Sorğusunu aktiv edin</translation>
-<translation id="7675869148432102528">Həmçinin, <ph name="APP_NAME"/> tətbiqinin Brave'da datası var</translation>
+<translation id="7675869148432102528">Həmçinin, <ph name="APP_NAME"/> tətbiqinin AIWize'da datası var</translation>
 <translation id="2046634576464120978">Qeydiyyat alınmadı</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">Mümkün olduqda HTTPS istifadə edin və onu dəstəkləməyən saytları yükləməzdən əvvəl xəbərdarlıq alın. Qabaqcıl Qoruma aktivləşdirildiyi üçün bu ayarı dəyişə bilməzsiniz.</translation>
@@ -206,7 +206,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2141396931810938595">İstifadənizə əsasən</translation>
 <translation id="2149973817440762519">Əlfəcinə düzəliş edin</translation>
 <translation id="2155214902713132423">Bu doğrulama metodu bu cihaz üçün əlçatan deyil. Digər cihazınızda fərqli seçim edin.</translation>
-<translation id="4162910516440006395">Brave bütün parolları yoxlaya bilmədi</translation>
+<translation id="4162910516440006395">AIWize bütün parolları yoxlaya bilmədi</translation>
 <translation id="2172688499998841696">Şəkil təsvirləri deaktivdir</translation>
 <translation id="2172905120685242547">Pəncərə bağlansın?</translation>
 <translation id="2173302385160625112">İnternet bağlantısını yoxlayın</translation>
@@ -214,18 +214,18 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="218608176142494674">Paylaşım</translation>
 <translation id="2194856509914051091">Nəzərə alınmalı amillər</translation>
 <translation id="22091350895006575">İstifadəçi adı əlavə edin</translation>
-<translation id="4075202346699640887">Brave-u profil kilidi olmadan açdıqda yadda saxlanmış parol və ödəniş metodları avtomobildən silinəcək. Profil kilidindən istifadə bu datanı qoruyur.</translation>
+<translation id="4075202346699640887">AIWize-u profil kilidi olmadan açdıqda yadda saxlanmış parol və ödəniş metodları avtomobildən silinəcək. Profil kilidindən istifadə bu datanı qoruyur.</translation>
 <translation id="2227444325776770048"><ph name="USER_FULL_NAME"/> kimi davam edin</translation>
 <translation id="2230777942707397948">Boş pəncərə</translation>
 <translation id="223356358902285214">Veb və Tətbiq Fəaliyyəti</translation>
 <translation id="2234827758954819389">Məxfilik Bələdçisi</translation>
 <translation id="2239812875700136898">"Kəşf edin" düyməsi üçün Seçimlərdən hekayələrinizi idarə edin</translation>
 <translation id="2247789808226901522">Kartın müddəti bitib</translation>
-<translation id="4808014761134300692">Parollarınız Brave Parol Menecerində saxlanmazdan əvvəl cihazınızda şifrələnir</translation>
+<translation id="4808014761134300692">Parollarınız AIWize Parol Menecerində saxlanmazdan əvvəl cihazınızda şifrələnir</translation>
 <translation id="2249635629516220541">Sizə reklam göstərmək üçün saytların istifadə etdiyi məlumatları fərdiləşdirin</translation>
 <translation id="2259659629660284697">Parolları eksport edin...</translation>
-<translation id="8820144752830692527">Sinxronizasiya seçimlərini <ph name="BEGIN_LINK1"/>ayarlarda<ph name="END_LINK1"/> edə bilərsiniz. Brave tarixçənizə əsasən Axtarış və digər xidmətləri fərdiləşdirə bilər.</translation>
-<translation id="781982477617612877">Parollarınızı yoxlamaq üçün Brave hesabınıza daxil olun</translation>
+<translation id="8820144752830692527">Sinxronizasiya seçimlərini <ph name="BEGIN_LINK1"/>ayarlarda<ph name="END_LINK1"/> edə bilərsiniz. AIWize tarixçənizə əsasən Axtarış və digər xidmətləri fərdiləşdirə bilər.</translation>
+<translation id="781982477617612877">Parollarınızı yoxlamaq üçün AIWize hesabınıza daxil olun</translation>
 <translation id="2278052315791335171">Bu parolu sildikdə <ph name="SITE"/> saytında hesabınız silinməyəcək</translation>
 <translation id="2286841657746966508">Faktura ünvanı</translation>
 <translation id="228704530595896923">Paylaşım seçimlərinin siyahısı.</translation>
@@ -236,8 +236,8 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2323763861024343754">Sayt yaddaşı</translation>
 <translation id="2328985652426384049">Daxil olmaq mümkün deyil</translation>
 <translation id="2341410551640223969"><ph name="WEBAPK_NAME"/> tətbiqini quraşdırmaq mümkün olmadı.</translation>
-<translation id="3587672679800759167">Hesablar, əlfəcinlər və yadda saxlanılan ayarlar daxil olmaqla, Brave tərəfindən istifadə olunmuş ümumi data</translation>
-<translation id="2767094839186957509">Brave Məxfilik Siyasəti</translation>
+<translation id="3587672679800759167">Hesablar, əlfəcinlər və yadda saxlanılan ayarlar daxil olmaqla, AIWize tərəfindən istifadə olunmuş ümumi data</translation>
+<translation id="2767094839186957509">AIWize Məxfilik Siyasəti</translation>
 <translation id="2359808026110333948">Davam edin</translation>
 <translation id="2362083820973145409"><ph name="USER_NAME"/> olaraq daxil olunub. <ph name="USER_EMAIL"/>. Ayarları açır.</translation>
 <translation id="2364539095045928896">Səhifə statistikası mərkəzinin məxfilik bildirişini bağlamaq üçün düymə.</translation>
@@ -259,11 +259,11 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2482878487686419369">Bildirişlər</translation>
 <translation id="2496180316473517155">Brauzer tarixçəsi</translation>
 <translation id="2497852260688568942">Sinxronizasiya administratorunuz tərəfindən deaktiv edilib</translation>
-<translation id="7229462727772664332">Brave'da <ph name="SITE_NAME"/> üçün giriş statusu, baxış datası və sayt datanızı görəcəksiniz</translation>
+<translation id="7229462727772664332">AIWize'da <ph name="SITE_NAME"/> üçün giriş statusu, baxış datası və sayt datanızı görəcəksiniz</translation>
 <translation id="2510106555128151389"><ph name="WEBAPK_NAME"/> quraşdırılır...</translation>
-<translation id="7222718784508482526">Məxfilik, təhlükəsizlik və data toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK"/>Sinxronizasiya və Brave xidmətləri<ph name="END_LINK"/> səhifəsinə daxil olun</translation>
+<translation id="7222718784508482526">Məxfilik, təhlükəsizlik və data toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK"/>Sinxronizasiya və AIWize xidmətləri<ph name="END_LINK"/> səhifəsinə daxil olun</translation>
 <translation id="2517113738956581680">Tam ölçülü vərəq</translation>
-<translation id="284843628681142937">Daxil olduğunuz səhifələrin linkləri Brave'a göndərilir</translation>
+<translation id="284843628681142937">Daxil olduğunuz səhifələrin linkləri AIWize'a göndərilir</translation>
 <translation id="2527209463677295330">Digər səhifə mətnini daxil etməklə daha yaxşı nəticələr görə bilərsiniz</translation>
 <translation id="8737444348664175738">Anonim tablara keçib</translation>
 <translation id="2527779675047087889">Mübadilə buferindəki kontenti gizlədin</translation>
@@ -274,12 +274,12 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2567385386134582609">ŞƏKİL</translation>
 <translation id="2567545343356994513">Təhlükəli veb saytlar, endirmələr və artırmalara qarşı daha sürətli, fəal qoruma</translation>
 <translation id="3095878721037212218">Media nizamlayıcılarını, Anonim sessiyaları, endirmələri və s. asanlıqla idarə edə biləcəksiniz</translation>
-<translation id="5079947353572974060">Başqa dillərdə olan səhifələrin Brave Tərcüməyə göndərilməsini təklif edin</translation>
+<translation id="5079947353572974060">Başqa dillərdə olan səhifələrin AIWize Tərcüməyə göndərilməsini təklif edin</translation>
 <translation id="2571834852878229351">Fərdi parol yaradıram</translation>
-<translation id="6995512410824092085">Brave'u defolt brauzer kimi ayarlama qaydasını öyrənin</translation>
-<translation id="7242554556818074465">Brave istifadə etdiyiniz hər yerdən tabları görmək üçün bütün cihazlarda daxil olun</translation>
-<translation id="8661556138616664061">Gənclər üçün Brave tərəfindən kontent</translation>
-<translation id="2324920234469020158">Bu, Brave'un vacib hesab etmədiyi kukilər, keş və digər sayt datalarını siləcək.</translation>
+<translation id="6995512410824092085">AIWize'u defolt brauzer kimi ayarlama qaydasını öyrənin</translation>
+<translation id="7242554556818074465">AIWize istifadə etdiyiniz hər yerdən tabları görmək üçün bütün cihazlarda daxil olun</translation>
+<translation id="8661556138616664061">Gənclər üçün AIWize tərəfindən kontent</translation>
+<translation id="2324920234469020158">Bu, AIWize'un vacib hesab etmədiyi kukilər, keş və digər sayt datalarını siləcək.</translation>
 <translation id="2587052924345400782">Ən yeni versiya əlçatandır</translation>
 <translation id="2593272815202181319">Monospace</translation>
 <translation id="2603212228005142861">Tərcihləri idarə etmək üçün daxil olun</translation>
@@ -287,7 +287,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2604446170045642109">Ayarlarınızda saytlar üçün tünd temanı deaktiv edə bilərsiniz.</translation>
 <translation id="2612676031748830579">Kart nömrəsi</translation>
 <translation id="2625189173221582860">Parol kopyalandı</translation>
-<translation id="2634393460268044753">Zərərli olub-olmadığını yoxlamaq üçün daxil olduğunuz saytların URL-ni, habelə səhifə kontenti, endirmə, artırma fəaliyyəti və sistem məlumatlarının kiçik hissəsini Brave Güvənli Axtarışa göndərir.</translation>
+<translation id="2634393460268044753">Zərərli olub-olmadığını yoxlamaq üçün daxil olduğunuz saytların URL-ni, habelə səhifə kontenti, endirmə, artırma fəaliyyəti və sistem məlumatlarının kiçik hissəsini AIWize Güvənli Axtarışa göndərir.</translation>
 <translation id="2642087927315268160">Giriş alt vərəqi bağlanıb.</translation>
 <translation id="2643064289437760082">Baxış datanızı silməklə reklam ölçmə datasını hər zaman silə bilərsiniz</translation>
 <translation id="2647434099613338025">Dil əlavə edin</translation>
@@ -299,9 +299,9 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="265156376773362237">Standart əvvəlcədən yükləmə</translation>
 <translation id="2656405586795711023">Veb tətbiqlər</translation>
 <translation id="2669454659051515572">Bu cihazdan istifadə edən hər kəs endirilmiş faylları görə bilər</translation>
-<translation id="5806087344347665213">Sayt parolu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə Brave səhifə kontentindən kiçik nümunələr daxil olmaqla URL-i Brave-a göndərə bilər</translation>
+<translation id="5806087344347665213">Sayt parolu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə AIWize səhifə kontentindən kiçik nümunələr daxil olmaqla URL-i AIWize-a göndərə bilər</translation>
 <translation id="2702516483241149200">Yeni: bu mətnə keçidi paylaşın</translation>
-<translation id="3769942772151914580">Brave-a göndərilən baxış datasına əsasən təhlükəli sayt, endirmə və artırmalardan real zamanda proaktiv qoruma</translation>
+<translation id="3769942772151914580">AIWize-a göndərilən baxış datasına əsasən təhlükəli sayt, endirmə və artırmalardan real zamanda proaktiv qoruma</translation>
 <translation id="2708226184420201102"><ph name="PRODUCT_NAME"/> brauzerində açın</translation>
 <translation id="271033894570825754">Yeni</translation>
 <translation id="2718352093833049315">Yalnız Wi-Fi üzərindən</translation>
@@ -312,12 +312,12 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2760989362628427051">Cihazın tünd tema və ya Enerjiyə Qənaət rejimi aktiv olduqda tünd temanı aktiv edin</translation>
 <translation id="2762000892062317888">indicə</translation>
 <translation id="276969039800130567"><ph name="USER_EMAIL_ADDRESS"/> olaraq hesaba girdi.</translation>
-<translation id="8312774691909088652">Məxfilik, təhlükəsizlik və datanın toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK"/>Brave xidmətləri<ph name="END_LINK"/> səhifəsinə daxil olun.</translation>
+<translation id="8312774691909088652">Məxfilik, təhlükəsizlik və datanın toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK"/>AIWize xidmətləri<ph name="END_LINK"/> səhifəsinə daxil olun.</translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> saniyə qaldı</translation>
 <translation id="2779651927720337254">alınmadı</translation>
 <translation id="2781151931089541271">1 saniyə qaldı</translation>
 <translation id="2800066122460699237"><ph name="TAB_TITLE"/> tabı bağlanacaq</translation>
-<translation id="7068873021383263704"><ph name="BEGIN_LINK"/>Brave Hesabınızda<ph name="END_LINK"/> yadda saxlanılmış parollara baxın və idarə edin</translation>
+<translation id="7068873021383263704"><ph name="BEGIN_LINK"/>AIWize Hesabınızda<ph name="END_LINK"/> yadda saxlanılmış parollara baxın və idarə edin</translation>
 <translation id="2827278682606527653">Təchizat kartı menyusu yarı hündürlükdədir</translation>
 <translation id="2830783625999891985">Mübadilə buferindəki kontent gizlədilib</translation>
 <translation id="2838367486340230368">Məxfilik bələdçisi izahı yarım hündürlükdə açılıb</translation>
@@ -325,34 +325,34 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="1982350477927404142">{TAB_COUNT,plural, =1{<ph name="TAB_COUNT_ONE"/> anonim tab bağlanacaq}other{<ph name="TAB_COUNT_MANY"/> anonim tab bağlanacaq}}</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{1 gün əvvəl yoxlanılıb}other{# gün əvvəl yoxlanılıb}}</translation>
 <translation id="2842985007712546952">Ana qovluq</translation>
-<translation id="6324134303015966238">Tez yüklənməsi üçün Brave daxil ola biləcəyiniz səhifələri əvvəlcədən yükləyir</translation>
+<translation id="6324134303015966238">Tez yüklənməsi üçün AIWize daxil ola biləcəyiniz səhifələri əvvəlcədən yükləyir</translation>
 <translation id="2856503607207334158">Daxil olmaq alınmadı</translation>
 <translation id="2860954141821109167">Telefon tətbiqinin bu cihazda aktiv edildiyinə əmin olun</translation>
-<translation id="6518254564747115579">Bəzi Brave funksiyaları daha əlçatan olmayacaq</translation>
+<translation id="6518254564747115579">Bəzi AIWize funksiyaları daha əlçatan olmayacaq</translation>
 <translation id="2869430948265924908">Avtomobildə həssas kontenti qorumaq üçün avtomobil profil kilidi yaratmalısınız.  Bunu PIN, kod və ya parol ilə edə bilərsiniz.</translation>
 <translation id="2870560284913253234">Sayt</translation>
 <translation id="2871733351037274014">Səhifələri əvvəlcədən yükləyin</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> bu vebsaytı təsdiq etməyinizi istəyir:</translation>
-<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>Brave-un datanı məxfi saxlaması<ph name="END_LINK"/> haqqında ətraflı</translation>
-<translation id="8541922081612557424">Brave haqqında</translation>
+<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>AIWize-un datanı məxfi saxlaması<ph name="END_LINK"/> haqqında ətraflı</translation>
+<translation id="8541922081612557424">AIWize haqqında</translation>
 <translation id="2891154217021530873">Səhifə yükləməsini dayandırın</translation>
-<translation id="4013614219085422040">Axtarış və digər Brave xidmətlərini fərdiləşdirmək üçün Brave tarixçədən istifadə edə bilər</translation>
+<translation id="4013614219085422040">Axtarış və digər AIWize xidmətlərini fərdiləşdirmək üçün AIWize tarixçədən istifadə edə bilər</translation>
 <translation id="2894821468041866720">Brauzer və ya cihazı çox yavaşlatmır.</translation>
 <translation id="2900528713135656174">Tədbir yaradın</translation>
 <translation id="2901411048554510387"><ph name="WEBSITE_TITLE"/> üçün təkliflər göstərilir</translation>
 <translation id="2904300462646366554">Endirilmiş PDF-lər cihazdakı PDF göstəricilərdən biri ilə avtomatik açılır</translation>
 <translation id="2904414404539560095">Tam hündürlükdə açılan tabı paylaşa biləcəyiniz cihazların siyahısı.</translation>
 <translation id="2908243544703713905">Oxunmamış hekayələr hazırdır</translation>
-<translation id="7339921667754113786">Brave Bildiriş Platforması</translation>
+<translation id="7339921667754113786">AIWize Bildiriş Platforması</translation>
 <translation id="2912296070571964914">Sizi maraqlandıran mövzuları idarə edin</translation>
 <translation id="1014490034578104945">Açıq Incognito tablarını görmək üçün ekran kilidi işlədin</translation>
 <translation id="2923908459366352541">Ad yanlışdır</translation>
-<translation id="6355102470683871794">Brave <ph name="APP_NAME"/> yaddaşı</translation>
+<translation id="6355102470683871794">AIWize <ph name="APP_NAME"/> yaddaşı</translation>
 <translation id="2932222164150889403">Klaviatura dəyişməyəcək</translation>
-<translation id="6537665929855787038">Brave bildirişləri işləri asanlaşdırır</translation>
+<translation id="6537665929855787038">AIWize bildirişləri işləri asanlaşdırır</translation>
 <translation id="2940075786175545812">Vebsaytı təsdiqləmək və ya təsdiqləməmək seçimi</translation>
 <translation id="2942036813789421260">Önbaxış tabı bağlıdır</translation>
-<translation id="4700262879698141140">Digər cihazlara qoşulmaq üçün Brave güncəllənir</translation>
+<translation id="4700262879698141140">Digər cihazlara qoşulmaq üçün AIWize güncəllənir</translation>
 <translation id="2951071800649516099">Sonra üçün oxu siyahınıza səhifələr əlavə edin</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> oxunmamış səhifə}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> oxunmamış səhifə}}</translation>
 <translation id="296370266220139811">Vaxta qənaət edin və daha az yazın</translation>
@@ -362,59 +362,59 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="2979639724566107830">Yeni pəncərədə açın</translation>
 <translation id="2981364137500752533">5-ə qədər pəncərəniz ola bilər.</translation>
 <translation id="2983102365694924129">Saytdakı fəaliyyətinizə əsaslanır. Bu ayar deaktivdir.</translation>
-<translation id="5948666439178419683">Brave axtarışlarına ətrafdakı mətni daxil edin</translation>
+<translation id="5948666439178419683">AIWize axtarışlarına ətrafdakı mətni daxil edin</translation>
 <translation id="2987620471460279764">Digər cihazdan paylaşılan mətn</translation>
 <translation id="2989523299700148168">Son ziyarət</translation>
 <translation id="2992473221983447149">Şəkil təsvirləri</translation>
 <translation id="2996291259634659425">Parol söz yaradın</translation>
 <translation id="2996809686854298943">URL tələb olunur</translation>
 <translation id="2996932914629936323">Bütün sinxronizasiya edilmiş cihazlardan tarixçəni təmizləyir</translation>
-<translation id="2019027298133375428">Brave saytı öz səhifəsindəki keçidləri məxfi olaraq əvvəlcədən yükləməyi tələb etdikdə, Brave kukilər olmadan Brave serverləri vasitəsilə səhifələri şifrələyir və əvvəlcədən yükləyir. Bu, kimliyinizi əvvəlcədən yüklənmiş saytdan gizlədir.</translation>
-<translation id="5730179015008010982">Növbəti axtarışları proqnozlaşdırmaq və baxdığınız səhifə haqqında əlavə məlumat göstərmək üçün daxil olduğunuz URL-lər Brave-a göndərilir</translation>
+<translation id="2019027298133375428">AIWize saytı öz səhifəsindəki keçidləri məxfi olaraq əvvəlcədən yükləməyi tələb etdikdə, AIWize kukilər olmadan AIWize serverləri vasitəsilə səhifələri şifrələyir və əvvəlcədən yükləyir. Bu, kimliyinizi əvvəlcədən yüklənmiş saytdan gizlədir.</translation>
+<translation id="5730179015008010982">Növbəti axtarışları proqnozlaşdırmaq və baxdığınız səhifə haqqında əlavə məlumat göstərmək üçün daxil olduğunuz URL-lər AIWize-a göndərilir</translation>
 <translation id="3016635187733453316">Bu cihazın internetə qoşulduğuna əmin olun</translation>
 <translation id="3026955690410463085">Keçid daxil edin</translation>
 <translation id="3027644380269727216">Saytdakı fəaliyyətinizə əsaslanır. Bu ayar aktivdir.</translation>
 <translation id="3029276696788198026">Əvvəlcədən yükləmə yoxdur</translation>
 <translation id="3029704984691124060">Parollar uyğun gəlmir</translation>
-<translation id="8678991866891573053">Brave saytlara datanızdan daha az istifadə etməklə eyni baxış təcrübəsi təqdim etməyə imkan verən yeni funksiyaları araşdırır</translation>
+<translation id="8678991866891573053">AIWize saytlara datanızdan daha az istifadə etməklə eyni baxış təcrübəsi təqdim etməyə imkan verən yeni funksiyaları araşdırır</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Yardım alın<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Qiymət izlənilir</translation>
-<translation id="3251012123600267109">Brave'a giriş tələblərini göstərir</translation>
+<translation id="3251012123600267109">AIWize'a giriş tələblərini göstərir</translation>
 <translation id="3038272154009688107">Bütün saytlara baxın</translation>
 <translation id="3046945242843292318">Növbəti dəfə bu sayta daha tez daxil olun</translation>
 <translation id="3055259925215945098">Əlfəcin köçürülüb</translation>
-<translation id="4163313568284712797">Brave istifadəniz haqqında məlumat Brave'a göndərilir, lakin sizinlə əlaqələndirilmir\n\nBrave'da xəta olarsa, xəta ilə bağlı təfərrüatlar bəzi şəxsi məlumatları ehtiva edə bilər\n\nSinxronizasiyanı aktiv etsəniz, göstəricilərə daxil olduunuz keçidlər haqqında məlumat da daxil ola bilər</translation>
+<translation id="4163313568284712797">AIWize istifadəniz haqqında məlumat AIWize'a göndərilir, lakin sizinlə əlaqələndirilmir\n\nAIWize'da xəta olarsa, xəta ilə bağlı təfərrüatlar bəzi şəxsi məlumatları ehtiva edə bilər\n\nSinxronizasiyanı aktiv etsəniz, göstəricilərə daxil olduunuz keçidlər haqqında məlumat da daxil ola bilər</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> əlfəcin}other{<ph name="BOOKMARKS_COUNT_MANY"/> əlfəcin}}</translation>
-<translation id="6153252609477956632">Brave'da maraqlarınıza dair məqalələr</translation>
+<translation id="6153252609477956632">AIWize'da maraqlarınıza dair məqalələr</translation>
 <translation id="3066573403916685335">Aşağıya</translation>
 <translation id="3070005020161560471">Avtomatik tərcümə edin</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> Brave'da açılacaq. Davam etməklə, <ph name="BEGIN_LINK1"/>Brave Xidmət Şərtləri<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>Brave və ChromeOS Əlavə Xidmət Şərtləri<ph name="END_LINK2"/> ilə razılaşırsınız. <ph name="BEGIN_LINK3"/>Məxfilik Siyasəti<ph name="END_LINK3"/> də tətbiq edilir.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> AIWize'da açılacaq. Davam etməklə, <ph name="BEGIN_LINK1"/>AIWize Xidmət Şərtləri<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>AIWize və ChromeOS Əlavə Xidmət Şərtləri<ph name="END_LINK2"/> ilə razılaşırsınız. <ph name="BEGIN_LINK3"/>Məxfilik Siyasəti<ph name="END_LINK3"/> də tətbiq edilir.</translation>
 <translation id="3080525922482950719">Sonra və ya oflayn oxumaq üçün səhifələri yadda saxlaya bilərsiniz</translation>
 <translation id="3091010850649238832">Mübadilə buferindəki kontenti göstərin</translation>
-<translation id="821565628224723530">Sizin üçün təsvirləri yaxşılaşdırmaq üçün bəzi şəkillər Brave'a göndərilir</translation>
+<translation id="821565628224723530">Sizin üçün təsvirləri yaxşılaşdırmaq üçün bəzi şəkillər AIWize'a göndərilir</translation>
 <translation id="3114507951000454849">Bugünün <ph name="NEWS_ICON"/> xəbərlərini oxuyun</translation>
 <translation id="3123734510202723619">Elanlar</translation>
-<translation id="5063487983358782016">Brave’un əsas səhifəsi</translation>
+<translation id="5063487983358782016">AIWize’un əsas səhifəsi</translation>
 <translation id="3158667104057012316">Manual sıra ilə çeşidlənir</translation>
 <translation id="3166827708714933426">Panel və pəncərə qısayolları</translation>
-<translation id="7249949543831830993">Brave artıq burada işləyir.</translation>
+<translation id="7249949543831830993">AIWize artıq burada işləyir.</translation>
 <translation id="3167258285411721858"><ph name="HOST_NAME"/> üçün mobil sayt tələb edə bilərsiniz</translation>
 <translation id="3169472444629675720">Discover</translation>
 <translation id="3187472288455401631">Reklam ölçülməsi</translation>
 <translation id="3207960819495026254">Əlfəcinlənib</translation>
 <translation id="3208584281581115441">İndi yoxlayın</translation>
 <translation id="3211426585530211793">Silinmiş <ph name="ITEM_TITLE"/></translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Axtarış tarixçəsi<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>digər fəaliyyət formaları<ph name="END_LINK2"/> daxil olduğunuz zaman Brave Hesabınızda saxlanıla bilər. İstənilən zaman onları silə bilərsiniz.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Axtarış tarixçəsi<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>digər fəaliyyət formaları<ph name="END_LINK2"/> daxil olduğunuz zaman AIWize Hesabınızda saxlanıla bilər. İstənilən zaman onları silə bilərsiniz.</translation>
 <translation id="321773570071367578">Əgər parol sözü unutmusunuzsa və ya bu ayarı dəyişmək istəyirsinizsə,  <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayın<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Parollarınızı sinxronlaşdırmaq üçün kimliyinizi doğrulayın</translation>
-<translation id="9210457680074341078">Brave-da məhsul qiymətlərini izləmək və qiymət enəndə bildiriş almaq üçün əlfəcinləri Brave Hesabında da saxlayın</translation>
-<translation id="9047551989591319903">Təhlükəsizlik Açarı olaraq Brave</translation>
+<translation id="9210457680074341078">AIWize-da məhsul qiymətlərini izləmək və qiymət enəndə bildiriş almaq üçün əlfəcinləri AIWize Hesabında da saxlayın</translation>
+<translation id="9047551989591319903">Təhlükəsizlik Açarı olaraq AIWize</translation>
 <translation id="3232754137068452469">Veb Tətbiq</translation>
 <translation id="3236059992281584593">1 dəqiqə qaldı</translation>
 <translation id="3237087289225714896">Standart əvvəlcədən yükləmə:</translation>
 <translation id="3237433641417325993">Təklif olunan məqalələrə baxmaq üçün aşağı sürüşdürün</translation>
 <translation id="3244271242291266297">MM</translation>
-<translation id="7402642357351265733">Brave istifadə hesabatlarını da paylaşırsınızsa, bu hesabatlara ziyarət etdiyiniz keçidlər daxil olacaq</translation>
+<translation id="7402642357351265733">AIWize istifadə hesabatlarını da paylaşırsınızsa, bu hesabatlara ziyarət etdiyiniz keçidlər daxil olacaq</translation>
 <translation id="3250563604907490871">Wi-Fi'a qoşulduğunuz zaman şəkil təsvirləri davam edəcək</translation>
 <translation id="3254409185687681395">Bu səhifəni əlfəcinləyin</translation>
 <translation id="3259831549858767975">Səhifədəki hər şeyi kiçildin</translation>
@@ -423,7 +423,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="3265534588625245297">İzlədiyiniz saytları idarə edin</translation>
 <translation id="3269093882174072735">Şəkli yükləyin</translation>
 <translation id="3280562213547448728">Səsli axtarış</translation>
-<translation id="82609232232243542">Brave'a daxil olun</translation>
+<translation id="82609232232243542">AIWize'a daxil olun</translation>
 <translation id="3290249595466894471">Həmçinin yeni təhlükələri aşkarlamaqda kömək məqsədilə səhifə, endirmə, artırma fəaliyyətindən ibarət kiçik nümunə göndərir</translation>
 <translation id="3293181007446299124">Baxış tarixçəniz cihazınızda məxfi saxlanılır və şəxsiyyətinizi qorumaq üçün hesabatlar gecikmə ilə göndərilir</translation>
 <translation id="3303414029551471755">Kontentin endirilməsinə davam etmək istəyirsiniz?</translation>
@@ -433,23 +433,23 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="3341262203274374114">İzləmədən çıxarmaq olmur. Xəta baş verdi.</translation>
 <translation id="3359667936385849800">Cari xidmət təminatçınızı istifadə edin</translation>
 <translation id="3373701465337594448">Aktiv olduqda, maraqlarınızı təxmin edən ziyarət etdiyiniz saytların siyahısı burada görünür</translation>
-<translation id="2746024117903470217">Bu səhifəni başqa bir cihaz ilə paylaşmaq üçün digər cihazın Brave ayarlarında sinxronlaşdırmanı yandırın</translation>
-<translation id="8801234437789558906">Əlfəcin, tarixçə, parol və digər Brave datası artıq Brave Hesabınıza sinxronizasiya edilməyəcək</translation>
+<translation id="2746024117903470217">Bu səhifəni başqa bir cihaz ilə paylaşmaq üçün digər cihazın AIWize ayarlarında sinxronlaşdırmanı yandırın</translation>
+<translation id="8801234437789558906">Əlfəcin, tarixçə, parol və digər AIWize datası artıq AIWize Hesabınıza sinxronizasiya edilməyəcək</translation>
 <translation id="3384347053049321195">Şəkli paylaşın</translation>
 <translation id="3387650086002190359">Fayl sistem xətaları səbəbindən <ph name="FILE_NAME"/> faylı endirilmədi.</translation>
 <translation id="3389286852084373014">Mətn çox böyükdür</translation>
 <translation id="3398320232533725830">Əlfəcin menecerini açın</translation>
-<translation id="1081508498128395141">Daha çox səhifə əvvəlcədən yüklənir. Səhifələr başqa saytlar tərəfindən tələb edildikdə Brave serverləri vasitəsilə əvvəlcədən yüklənə bilər.</translation>
+<translation id="1081508498128395141">Daha çox səhifə əvvəlcədən yüklənir. Səhifələr başqa saytlar tərəfindən tələb edildikdə AIWize serverləri vasitəsilə əvvəlcədən yüklənə bilər.</translation>
 <translation id="3414952576877147120">Ölçü:</translation>
 <translation id="3421726884497337397">Üçüncü tərəf kukilərinin nə vaxt bloklanacağını seçin</translation>
-<translation id="5265419033369521352">Daxil olduğunuzda Brave'da sizi qoruyur və digər Brave tətbiqlərində təhlükəsizliyinizi artırmaq üçün istifadə edilə bilər</translation>
+<translation id="5265419033369521352">Daxil olduğunuzda AIWize'da sizi qoruyur və digər AIWize tətbiqlərində təhlükəsizliyinizi artırmaq üçün istifadə edilə bilər</translation>
 <translation id="3430670036890315772">Profil kilidi deaktiv ediləndə yadda saxlanmış məlumatlar silinəcək</translation>
 <translation id="3435465986463792564">Çox sayda pəncərə var? Onları buradan idarə edə bilərsiniz</translation>
 <translation id="3435738964857648380">Təhlükəsizlik</translation>
 <translation id="3439276997620616816">Son tablar burada olacaq</translation>
 <translation id="3443221991560634068">Cari səhifəni yenidən yükləyin</translation>
 <translation id="3444179773590444986">Saytlar üçün tünd tema barədə rəy paylaşılsın?</translation>
-<translation id="7384339501748168186">Brave məxfiliyi qorumaq üçün parolu bu sahədə avtomatik doldurmayacaq.</translation>
+<translation id="7384339501748168186">AIWize məxfiliyi qorumaq üçün parolu bu sahədə avtomatik doldurmayacaq.</translation>
 <translation id="3474624961160222204"><ph name="NAME"/> olaraq davam edin</translation>
 <translation id="3478363558367712427">Axtarış maşınını seçə bilərsiniz</translation>
 <translation id="3479552764303398839">İndi yox</translation>
@@ -458,7 +458,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Ən köhnə üzrə sıralayın</translation>
 <translation id="3507132249039706973">Standart Qoruma aktivdir</translation>
-<translation id="8669829441518807650">Oflayn. Brave güncəlləmələri yoxlaya bilmir.</translation>
+<translation id="8669829441518807650">Oflayn. AIWize güncəlləmələri yoxlaya bilmir.</translation>
 <translation id="3513704683820682405">Artırılmış Reallıq</translation>
 <translation id="3518985090088779359">Qəbul edin və davam edin</translation>
 <translation id="3521388823983121502"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ilə davam etmək olmur</translation>
@@ -491,9 +491,9 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="3701515417135397388">Verilənlərin pozulması nəticəsində parol ifşa edilibsə, xəbərdarlıq edilir</translation>
 <translation id="371230970611282515">Təhlükəli hadisələr baş vermədən əvvəl onları proqnozlaşdırır və sizə xəbərdarlıq edir.</translation>
 <translation id="3714981814255182093">Tapma Barını açın</translation>
-<translation id="5805364706385912897">Bu səhifə həddindən çox yaddaş istifadə etdiyinə görə Brave tərəfindən dayandırıldı.</translation>
+<translation id="5805364706385912897">Bu səhifə həddindən çox yaddaş istifadə etdiyinə görə AIWize tərəfindən dayandırıldı.</translation>
 <translation id="3720422586473670527">Xeyr, təşəkkürlər</translation>
-<translation id="8397843425685839889">Siz və Brave</translation>
+<translation id="8397843425685839889">Siz və AIWize</translation>
 <translation id="3737319253362202215">Tərcümə ayarları</translation>
 <translation id="3737402728074743863">Bu cihazı təhlükəsizlik açarı kimi istifadə etmək üçün ekran kilidi ayarlayın</translation>
 <translation id="3738139272394829648">Axtarmaq üçün toxunun</translation>
@@ -501,7 +501,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="3740525748616366977">Səsli axtarış bu cihazda əlçatan deyil</translation>
 <translation id="4526803704855831732">Gizli Panellər</translation>
 <translation id="3771290962915251154">Valideyn nəzarətləri yanılı olduğu üçün bu ayar deaktiv edilib</translation>
-<translation id="1138681184697033370">Brave Xidmət Şərtləri</translation>
+<translation id="1138681184697033370">AIWize Xidmət Şərtləri</translation>
 <translation id="3775705724665058594">Cihazlara göndərin</translation>
 <translation id="3777796259512476958">Əksər saytlardan çıxacaqsınız</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 tab}other{# tab}}</translation>
@@ -530,9 +530,9 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="393697183122708255">Aktiv səsli axtarış əlçatan deyil</translation>
 <translation id="395377504920307820">Hesab olmadan istifadə edin</translation>
 <translation id="7667871022963214473">Cihazdan Incognito brauzer tarixçəsini silmək üçün Incognito tablarını qapadın</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Brave səhifəni cihaz onlayn olduqda yükləyəcək}other{Brave səhifələri cihaz onlayn olduqda yükləyəcək}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{AIWize səhifəni cihaz onlayn olduqda yükləyəcək}other{AIWize səhifələri cihaz onlayn olduqda yükləyəcək}}</translation>
 <translation id="3962119236270174787">Təhlükəli hesab edilən veb saytlar, endirmələr və artırmalara qarşı standart qoruma</translation>
-<translation id="1453002554835005700">Brave parollarınızı yoxlaya bilmir</translation>
+<translation id="1453002554835005700">AIWize parollarınızı yoxlaya bilmir</translation>
 <translation id="3969863827134279083">Yuxarı Köçürün</translation>
 <translation id="397105322502079400">Hesablanır...</translation>
 <translation id="397583555483684758">Sinxronizasiya işləmir</translation>
@@ -553,9 +553,9 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4062305924942672200">Leqal informasiya</translation>
 <translation id="4072805772816336153">Sonra yenidən sınayın</translation>
 <translation id="4084682180776658562">Əlfəcin</translation>
-<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/> ünvanından – <ph name="BEGIN_DEEMPHASIZED"/>Brave tərəfindən çatdırıldı<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/> ünvanından – <ph name="BEGIN_DEEMPHASIZED"/>AIWize tərəfindən çatdırıldı<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Bu QR kodunu göstərən cihaza daxil olmaq üçün bu planşetdən istifadə edə bilərsiniz.</translation>
-<translation id="7268155614575494857">Brave Parol Menecerinin giriş məlumatlarını yadda saxlaması üçün bu sayt üzrə istifadəçi adı əlavə edin</translation>
+<translation id="7268155614575494857">AIWize Parol Menecerinin giriş məlumatlarını yadda saxlaması üçün bu sayt üzrə istifadəçi adı əlavə edin</translation>
 <translation id="4095146165863963773">Tətbiq datası silinsin?</translation>
 <translation id="4095425503313512126">Baxış və axtarış daha sürətlidir</translation>
 <translation id="4096227151372679484">Əlfəcin saxlama prosesi yarım hündürlükdə açılıb</translation>
@@ -563,12 +563,12 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4108314971463891922">İzləyin</translation>
 <translation id="4108998448622696017">Təhlükəli hadisələr baş verdikdə onları aşkarlayır və sizə xəbərdarlıq edir.</translation>
 <translation id="4116038641877404294">Oflayn istifadə etmək üçün səhifələri endirin</translation>
-<translation id="37459938731864814">Bu parolu xatırlamağa ehtiyac yoxdur. <ph name="USERNAME"/> üçün Brave Parol Menecerində yadda saxlanacaq.</translation>
+<translation id="37459938731864814">Bu parolu xatırlamağa ehtiyac yoxdur. <ph name="USERNAME"/> üçün AIWize Parol Menecerində yadda saxlanacaq.</translation>
 <translation id="4124152339699379357">Bildiriş icazəsi prosesi tam hündürlükdə açılıb</translation>
 <translation id="4126285640274188657">Səhifə statistikası</translation>
 <translation id="4135200667068010335">Tabı paylaşa biləcəyiniz cihazların siyahısı bağlıdır.</translation>
 <translation id="4137746084635924146">Cari cihaz dili</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AIWize Canary</translation>
 <translation id="414128724510021958">Defolt olaraq tələb olunan masaüstü saytlar</translation>
 <translation id="4162867837470729563">Paylaşım seçimlərinin siyahısı tam yüksəklikdədir.</translation>
 <translation id="4170011742729630528">Xidmət əlçatmazdır. Yenidən cəhd edin.</translation>
@@ -580,16 +580,16 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{Bu cihazda 1 tab}other{Bu cihazda # tab}}</translation>
 <translation id="4198423547019359126">Əlçatan endirmə məkanı yoxdur</translation>
 <translation id="4202218894997543208">Blok etdiyiniz mövzular</translation>
-<translation id="1675646381334855139">Kukilərə icazə versəniz, Brave onları əvvəlcədən yükləmək üçün istifadə edə bilər.</translation>
+<translation id="1675646381334855139">Kukilərə icazə versəniz, AIWize onları əvvəlcədən yükləmək üçün istifadə edə bilər.</translation>
 <translation id="4216511743389425832">Bu səhifəni dinləyin</translation>
 <translation id="4225725533026049334">İzlənilir</translation>
 <translation id="4225895483398857530">Alətlər paneli qısayolu</translation>
 <translation id="4242533952199664413">Ayarları açın</translation>
 <translation id="4248098802131000011">Data pozuntuları və digər güvənlik məsələlərinə qarşı parollarınızı qoruyun</translation>
-<translation id="7445061995866044926">Brave'dan çıxılsın?</translation>
+<translation id="7445061995866044926">AIWize'dan çıxılsın?</translation>
 <translation id="4249955472157341256">Ən sonuncular üzrə sıalayın</translation>
 <translation id="4256782883801055595">Açıq mənbə lisenziyaları</translation>
-<translation id="7404502124231907662">Parollar Brave Parol Menecerindən silinsin?</translation>
+<translation id="7404502124231907662">Parollar AIWize Parol Menecerindən silinsin?</translation>
 <translation id="4269820728363426813">Link ünvanını kopyalayın</translation>
 <translation id="4277529130885813215">Digər cihazdan istifadə edin</translation>
 <translation id="4283102315569707115">Defolt olaraq masaüstü saytlar tələb olunsun?</translation>
@@ -616,7 +616,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4405224443901389797">Bura köçürün:</translation>
 <translation id="4405636711880428279">Virtual kartınız silinsin?</translation>
 <translation id="4409271659088619928">Axtarış sisteminiz <ph name="DSE"/>. Axtarış tarixçənizi silmək üçün onun təlimatlarına (təmin edilibsə) baxın.</translation>
-<translation id="5749788945734786627">Brave Hesabını idarə edin</translation>
+<translation id="5749788945734786627">AIWize Hesabını idarə edin</translation>
 <translation id="4425140285732600465">Qiymət izlənilir. Hər hansı bir saytda qiymət enərsə, bildiriş alın</translation>
 <translation id="4425173294238317796">Giriş açarı təsdiqi üçün vərəq</translation>
 <translation id="442518031075347249">Artıq virtual kartınızı Google Pay ilə istifadə edə bilməyəcəksiniz. <ph name="BEGIN_LINK1"/>Virtual kartlar haqqında ətraflı məlumat<ph name="END_LINK1"/></translation>
@@ -624,19 +624,19 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4452548195519783679"><ph name="FOLDER_NAME"/> qovluğuna əlfəcinləndi</translation>
 <translation id="4461614516424362539">Başqa cihazı QR kodu ilə əlaqələndirdiyiniz zaman o, bu telefonu təhlükəsizlik açarı kimi istifadə edə bilər. Onu silsəniz, onu yenidən əlaqələndirmək üçün QR kodunu skan etməli olacaqsınız.</translation>
 <translation id="4478161224666880173">Bu saytda <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> hesabını istifadə edə bilərsiniz. Davam etmək üçün <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> hesabına daxil olun.</translation>
-<translation id="3133489217401741157">Brave üçün <ph name="MODULE"/> quraşdırılır…</translation>
+<translation id="3133489217401741157">AIWize üçün <ph name="MODULE"/> quraşdırılır…</translation>
 <translation id="4484496141267039529">Bağlantı yoxdur. Sonra cəhd edin.</translation>
-<translation id="53119194224775367">Bütün Brave tətbiq datası həmişəlik silinəcək. Bura fayllar, ayarlar, hesablar, data bazası və s. daxildir.</translation>
-<translation id="3966104135245031874">Sinxronlaşdırılmış parolları Brave Hesabınız ilə şifrləyin</translation>
+<translation id="53119194224775367">Bütün AIWize tətbiq datası həmişəlik silinəcək. Bura fayllar, ayarlar, hesablar, data bazası və s. daxildir.</translation>
+<translation id="3966104135245031874">Sinxronlaşdırılmış parolları AIWize Hesabınız ilə şifrləyin</translation>
 <translation id="4491323382106587961">Hesab seçin. Seçilib: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">Parolun yadda saxlanılması administratorunuz tərəfindən aktiv edildi</translation>
 <translation id="4508528996305412043">Təchizat kartı menyusu açıqdır</translation>
 <translation id="4509501256689523862">Baxış keçirdiyiniz zaman gördüyünüz reklamın fərdiləşdirilmiş olub-olmaması bu ayardan, <ph name="BEGIN_LINK_1"/>Reklam mövzularından<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>kuki ayarlarınızdan<ph name="END_LINK_2"/> və baxdığınız saytın reklamları fərdiləşdirib-fərdiləşdirməməsindən asılıdır</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# gün öncə}other{# gün öncə}}</translation>
 <translation id="451872707440238414">Əlfəcin axtarın</translation>
-<translation id="1664855196866195614">Seçilmiş data Brave və sinxronizasiya olunmuş cihazınızdan silindi. 
+<translation id="1664855196866195614">Seçilmiş data AIWize və sinxronizasiya olunmuş cihazınızdan silindi. 
 
-<ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində Brave hesabınızın digər Brave xidmətlərində axtarış və fəaliyyət kimi başqa formalı axtarış tarixçəsi ola bilər.</translation>
+<ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində AIWize hesabınızın digər AIWize xidmətlərində axtarış və fəaliyyət kimi başqa formalı axtarış tarixçəsi ola bilər.</translation>
 <translation id="4523326818319942067">son saat</translation>
 <translation id="452750746583162491">Sinxronlaşdırılmış datanızı nəzərdən keçirin</translation>
 <translation id="4532845899244822526">Qovluq seçin</translation>
@@ -666,7 +666,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/> əlfəcin silindi</translation>
 <translation id="4668279686271488041">Reklam ölçmə datası cihazınızdan müntəzəm olaraq silinir</translation>
 <translation id="4668347365065281350">Kukilər və digər yerli yadda saxlanmış data daxil olmaqla, saytların saxladığı bütün dütü</translation>
-<translation id="6904731820418823295">Saytlar üçün tünd tema Brave'da aktivdir</translation>
+<translation id="6904731820418823295">Saytlar üçün tünd tema AIWize'da aktivdir</translation>
 <translation id="4684427112815847243">Hər şeyi sinxronlaşdırın</translation>
 <translation id="4685741273709472646">Aşağı açılan siyahıdan seçin</translation>
 <translation id="4687718960473379118">Saytın təklif etdiyi reklamlar</translation>
@@ -687,7 +687,7 @@ Yalnız parolunuzu bilən kimsə şifrələnmiş datanızı oxuya bilər. Bu par
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Parollar bu cihazda Parol Menecerində saxlanılır</translation>
 <translation id="4766678251456904326">Cihaza hesab əlavə edin</translation>
-<translation id="1996253762801922860">"Reklam dəyərləndirməsi" adlı yeni reklam məxfiliyi funksiyasını işə salırıq. Reklam performansını dəyərləndirmək üçün Brave reklamın göstərildiyi vaxt kimi məhdud məlumatları sayt və tətbiqlər arasında paylaşır.</translation>
+<translation id="1996253762801922860">"Reklam dəyərləndirməsi" adlı yeni reklam məxfiliyi funksiyasını işə salırıq. Reklam performansını dəyərləndirmək üçün AIWize reklamın göstərildiyi vaxt kimi məhdud məlumatları sayt və tətbiqlər arasında paylaşır.</translation>
 <translation id="4769095993849849966">Yeni fayl adı</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> silindi</translation>
 <translation id="4778653490315793244">Göstəriləsi heç nə yoxdur</translation>
@@ -702,27 +702,27 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="4826163340425232009">Giriş alt vərəqi.</translation>
 <translation id="4834007576107377210">Axtarış tarixçənizi silmək üçün axtarış sisteminizin təlimatlarına (təmin edilibsə) baxın</translation>
 <translation id="4834250788637067901">Google Pay istifadə edən ödəniş metodları, təkliflər və ünvanlar</translation>
-<translation id="2593289874938379417">Brave'un sorğulanan mənbəyə girişi yoxdur.</translation>
+<translation id="2593289874938379417">AIWize'un sorğulanan mənbəyə girişi yoxdur.</translation>
 <translation id="4837753911714442426">Səhifəni çap etmək üçün seçimləri açın</translation>
 <translation id="4842092870884894799">Parol yaradılması popapı göstərilir</translation>
 <translation id="4842515939542199281">Səsinizlə axtarış etmək üçün mikrofona toxunun</translation>
-<translation id="6195403640086187022">Təhlükəsizliyi artırmaq üçün Brave Parol Menecerində saxlanmazdan əvvəl cihazınızda parolları şifrələyin</translation>
+<translation id="6195403640086187022">Təhlükəsizliyi artırmaq üçün AIWize Parol Menecerində saxlanmazdan əvvəl cihazınızda parolları şifrələyin</translation>
 <translation id="4850886885716139402">Görünüş</translation>
 <translation id="4852014461738377247">Giriş edilir\u2026</translation>
 <translation id="4860895144060829044">Zəng</translation>
 <translation id="4864369630010738180">Daxil olunur...</translation>
-<translation id="5131234170665854056">Brave üçün <ph name="MODULE"/> quraşdırmaq mümkün deyil</translation>
+<translation id="5131234170665854056">AIWize üçün <ph name="MODULE"/> quraşdırmaq mümkün deyil</translation>
 <translation id="4871568871368204250">Sinxronizasiyanı deaktiv edin</translation>
-<translation id="2875466387677348954">Deaktiv etsəniz də, Brave-un yerli axtarış təkliflərini görəcəksiniz</translation>
+<translation id="2875466387677348954">Deaktiv etsəniz də, AIWize-un yerli axtarış təkliflərini görəcəksiniz</translation>
 <translation id="4875775213178255010">Kontent Təklifləri</translation>
 <translation id="8448127664493413656">Anonim rejimə daxil olun</translation>
 <translation id="4878404682131129617">Proksi server vasitəsilə tunel yaratmaq alınmadı</translation>
 <translation id="4880127995492972015">Tərcümə edin...</translation>
 <translation id="4881695831933465202">Açın</translation>
 <translation id="488187801263602086">Faylın adını dəyişin</translation>
-<translation id="1248710015876067820">Dəstəklənməyən Brave nümunələrinin sayı.</translation>
+<translation id="1248710015876067820">Dəstəklənməyən AIWize nümunələrinin sayı.</translation>
 <translation id="4905823827770127520">Səhifəyə keçid daxil edin</translation>
-<translation id="3217997482476578430">Brave Təkliflər</translation>
+<translation id="3217997482476578430">AIWize Təkliflər</translation>
 <translation id="4909709702739934280">Brauzeriniz administratorunuz tərəfindən idarə edilir</translation>
 <translation id="4910889077668685004">Ödəniş tətbiqləri</translation>
 <translation id="4912413785358399818">Tabı köçürün</translation>
@@ -731,20 +731,20 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="4925120120285606924">Skrinşot <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Parollarınız mətn faylı kimi eksport ediləcək və endiriləcək. Təyinat qovluğuna girişi olan hər kəs və hər bir tətbiq onları görəcək.</translation>
 <translation id="4926901776383726965">Oflayn baxmaq və ya digər tətbiqlərdə paylaşmaq üçün şəkil və faylları yadda saxlaya bilərsiniz</translation>
-<translation id="1955495299630319741"><ph name="DOMAIN_NAME"/> tərəfindən idarə edilən hesabdan çıxdığınıza görə Brave datanız bu cihazdan silinəcək. Bu, Brave Hesabında qalacaq.</translation>
+<translation id="1955495299630319741"><ph name="DOMAIN_NAME"/> tərəfindən idarə edilən hesabdan çıxdığınıza görə AIWize datanız bu cihazdan silinəcək. Bu, AIWize Hesabında qalacaq.</translation>
 <translation id="4943703118917034429">Virtual Reallıq</translation>
 <translation id="4943872375798546930">Nəticə yoxdur</translation>
-<translation id="5742837711075932301">Eyni Brave Hesabına daxil olduğunuz zaman digər cihazlar bu telefonu təhlükəsizlik açarı kimi istifadə edə bilər.</translation>
+<translation id="5742837711075932301">Eyni AIWize Hesabına daxil olduğunuz zaman digər cihazlar bu telefonu təhlükəsizlik açarı kimi istifadə edə bilər.</translation>
 <translation id="4957722034734105353">Ətraflı məlumat...</translation>
 <translation id="4961107849584082341">Bu səhifəni istədiyiniz dilə tərcümə edin</translation>
-<translation id="7307583170263691471">Təhlükəli veb saytlar, endirmələr və artırmalara qarşı daha sürətli, fəal qoruma. Sizə parol aşkarlanmaları barədə xəbərdarlıq edir. Baxış datasının Brave'a göndərilməsini tələb edir.</translation>
+<translation id="7307583170263691471">Təhlükəli veb saytlar, endirmələr və artırmalara qarşı daha sürətli, fəal qoruma. Sizə parol aşkarlanmaları barədə xəbərdarlıq edir. Baxış datasının AIWize'a göndərilməsini tələb edir.</translation>
 <translation id="497421865427891073">İrəli</translation>
 <translation id="4987271110129728827">Həmin səhifəni tapmaq mümkün deyil. Orfoqrafiyanı yoxlayın və ya vebdə axtarış edin.</translation>
 <translation id="4988526792673242964">Səhifələr</translation>
 <translation id="4991110219272367918">Vebsaytı təsdiqləmək və ya təsdiqləməmək seçimi bağlanıb</translation>
 <translation id="499724277181351974">Naviqasiya: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Bu saytı burada izləyin</translation>
-<translation id="6447211988989208781">Brave fəaliyyət nəzarətləri</translation>
+<translation id="6447211988989208781">AIWize fəaliyyət nəzarətləri</translation>
 <translation id="5005498671520578047">Parolu kopyalayın</translation>
 <translation id="5010886807652684893">Vizual baxış</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> qoşulmaq istəyir</translation>
@@ -754,22 +754,22 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5039804452771397117">İcazə verin</translation>
 <translation id="5040262127954254034">Məxfilik</translation>
 <translation id="504456571576643789">Nəzərə alınmalı amillər</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Digər fəaliyyət formaları<ph name="END_LINK1"/> daxil olduğunuz zaman Brave Hesabınızda saxlanıla bilər. İstənilən zaman onları silə bilərsiniz.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Digər fəaliyyət formaları<ph name="END_LINK1"/> daxil olduğunuz zaman AIWize Hesabınızda saxlanıla bilər. İstənilən zaman onları silə bilərsiniz.</translation>
 <translation id="506254248375231072">Tab yoxdur</translation>
 <translation id="5062960805900435602">Parol birləşdirmə bildirişi bağlandı</translation>
 <translation id="5081960376148623587">Səhifələri əvvəlcədən yüklənib-yüklənməməsini seçin</translation>
-<translation id="4744980273298156620">Tezliklə yeni tab açdığınız zaman <ph name="SITE_NAME"/> saytından hekayələri görəcəksiniz. İzlədiyiniz saytlar Brave hesabınızda saxlanılır. Onları Təkliflər ayarlarında idarə edə bilərsiniz.</translation>
+<translation id="4744980273298156620">Tezliklə yeni tab açdığınız zaman <ph name="SITE_NAME"/> saytından hekayələri görəcəksiniz. İzlədiyiniz saytlar AIWize hesabınızda saxlanılır. Onları Təkliflər ayarlarında idarə edə bilərsiniz.</translation>
 <translation id="509429900233858213">Xəta baş verdi.</translation>
 <translation id="5097349930204431044">Ziyarət etdiyiniz saytlar nəyi bəyəndiyinizi müəyyən edə bilər və siz baxışa davam edərkən reklamlar təklif edə bilər</translation>
 <translation id="5099845111805573968">Masaüstü saytını bir dəfə seçdiyiniz zaman ayar hər dəfə ziyarət etdiyinizdə sayta tətbiq edilir</translation>
-<translation id="225414324447409614">Sayt parolunuzu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə Brave səhifə məzmunundan kiçik nümunələr də daxil olmaqla, URL'ləri Təhlükəsiz Baxışa göndərə bilər</translation>
+<translation id="225414324447409614">Sayt parolunuzu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə AIWize səhifə məzmunundan kiçik nümunələr də daxil olmaqla, URL'ləri Təhlükəsiz Baxışa göndərə bilər</translation>
 <translation id="510275257476243843">1 saat qaldı</translation>
 <translation id="5115811374190515607"><ph name="PRODUCT_NAME"/> məkanına</translation>
 <translation id="5118713593561876160">Maraqlar</translation>
 <translation id="5122378528687922675">Köməyə ehtiyacınız varsa, valideyninizə müraciət edin (<ph name="PARENT_NAME_1"/> və ya <ph name="PARENT_NAME_2"/>)</translation>
 <translation id="3110967157686007724">Aanonim tab</translation>
 <translation id="5132942445612118989">Bütün cihazlarda parol, tarixçə və s. sinxronizasiya edin</translation>
-<translation id="5139940364318403933">Brave Diskdən istifadə etməyi öyrənin</translation>
+<translation id="5139940364318403933">AIWize Diskdən istifadə etməyi öyrənin</translation>
 <translation id="5142281402488957685">Yeni hekayələr üçün aşağı çəkərək yeniləyin</translation>
 <translation id="5152843274749979095">Heç bir dəstəklənən tətbiq quraşdırılmayıb</translation>
 <translation id="5161254044473106830">Başlıq tələb olunur</translation>
@@ -785,7 +785,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Fayl endirilir…}other{# fayl endirilir…}}</translation>
 <translation id="5210286577605176222">Əvvəlki panelə keçin</translation>
 <translation id="5210365745912300556">Paneli qapadın</translation>
-<translation id="827672955486173928">Səhifə statistikasındakı fəliyyətiniz <ph name="BEGIN_LINK"/>Brave Hesabında<ph name="END_LINK"/> yadda saxlanır.</translation>
+<translation id="827672955486173928">Səhifə statistikasındakı fəliyyətiniz <ph name="BEGIN_LINK"/>AIWize Hesabında<ph name="END_LINK"/> yadda saxlanır.</translation>
 <translation id="5222676887888702881">Hesabdan çıxın</translation>
 <translation id="5226378907213531272">Avtomobildən hər istifadədə ekranı kiliddən çıxaracaqsınız</translation>
 <translation id="5227554086496586518">Axtarış nəticələrini görmək üçün toxunun</translation>
@@ -799,16 +799,16 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5308380583665731573">Qoşun</translation>
 <translation id="5316947901395241499">Parolun yadda saxlanılması administratorunuz tərəfindən deaktiv edildi</translation>
 <translation id="5317780077021120954">Yadda saxlayın</translation>
-<translation id="989239400026154074">Brave, Brave'u tövsiyə edir</translation>
-<translation id="7815000350132166985">Kukilərə icazə versəniz, əvvəlcədən yükləmə zamanı Brave onlardan istifadə edə bilər</translation>
-<translation id="1681635711794313507">Əvvəlcədən yüklənmiş səhifələr şifrələndiyinə və səhifələrə keçid təmin edən sayt Brave saytı olduğuna görə Brave serverləri bu səhifələri məxfi olaraq əvvəlcədən yükləyərkən yeni məlumat almır.</translation>
+<translation id="989239400026154074">AIWize, AIWize'u tövsiyə edir</translation>
+<translation id="7815000350132166985">Kukilərə icazə versəniz, əvvəlcədən yükləmə zamanı AIWize onlardan istifadə edə bilər</translation>
+<translation id="1681635711794313507">Əvvəlcədən yüklənmiş səhifələr şifrələndiyinə və səhifələrə keçid təmin edən sayt AIWize saytı olduğuna görə AIWize serverləri bu səhifələri məxfi olaraq əvvəlcədən yükləyərkən yeni məlumat almır.</translation>
 <translation id="5329858041417644019">Brauzer idarə edilmir</translation>
 <translation id="5342314432463739672">İcazə sorğuları</translation>
 <translation id="534580735623577507"><ph name="TIME_PERIOD"/> üzrə sayt yoxdur</translation>
 <translation id="5355191726083956201">Qabaqcıl Qoruma aktivdir</translation>
 <translation id="5361107212971249203">mətn</translation>
 <translation id="9148151251783962691">Bu cihazda məxfi şəkildə axtarış etmək üçün Anonim rejimi sınayın</translation>
-<translation id="5375577065097716013">Brave Linza ilə şəkil axtarın <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
+<translation id="5375577065097716013">AIWize Linza ilə şəkil axtarın <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
 <translation id="539881862970320163">Güclü parol təklif edildi. Klaviatura gizlədildi.</translation>
 <translation id="5401851137404501592">Davam etmək üçün <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ad, e-poçt ünvanı və profil şəklinizi bu sayt ilə paylaşacaq.</translation>
 <translation id="5409881200985013443"><ph name="CLIENT_NAME"/> tətbiqində <ph name="ONE_TIME_CODE"/> təqdim edilsin?</translation>
@@ -818,7 +818,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="543338862236136125">Parolu redaktə edin</translation>
 <translation id="5433691172869980887">İstifadəçi adı kopyalandı</translation>
 <translation id="5438292632479953702">Yenidən endirin</translation>
-<translation id="2766925507720001104">Standart qoruma ilə müqayisədə saytlardan daha çox data təhlil edərək təhlükəli, hətta Brave-un bilmədiyi saytlar haqqında xəbərdar edir. Brave xəbərdarlıqlarını ötürə bilərsiniz.</translation>
+<translation id="2766925507720001104">Standart qoruma ilə müqayisədə saytlardan daha çox data təhlil edərək təhlükəli, hətta AIWize-un bilmədiyi saytlar haqqında xəbərdar edir. AIWize xəbərdarlıqlarını ötürə bilərsiniz.</translation>
 <translation id="5441137934526263133">Sayt işləmir? Üçüncü tərəf kukiləri bloklanıb</translation>
 <translation id="5441466871879044658">Bu dilə tərcümə edin</translation>
 <translation id="5441522332038954058">Ünvan barına keçin</translation>
@@ -836,7 +836,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5517095782334947753"><ph name="FROM_ACCOUNT"/> hesabından əlfəcin, tarixçə, parol və digər ayarlar var.</translation>
 <translation id="5524843473235508879">Yönləndirmə blok edildi.</translation>
 <translation id="5548606607480005320">Təhlükəsizlik yoxlanışı</translation>
-<translation id="4362225295386962644">İstifadə edilən parol onlayn yayımlanıbsa, Brave xəbərdarlıq edir. Parol və istifadəçi adları şifrələnir və hətta Brave-a da görünmür.</translation>
+<translation id="4362225295386962644">İstifadə edilən parol onlayn yayımlanıbsa, AIWize xəbərdarlıq edir. Parol və istifadəçi adları şifrələnir və hətta AIWize-a da görünmür.</translation>
 <translation id="5555525474779371165">Təhlükəsiz Baxış ilə qorunmanı seçin</translation>
 <translation id="5556459405103347317">Yenidən yükləyin</translation>
 <translation id="555816257274242153">Qiymətin izlənməsi dayandırılıb</translation>
@@ -854,19 +854,19 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="562289928968387744">Reaksiyalarıi idarə edin</translation>
 <translation id="5626134646977739690">Ad:</translation>
 <translation id="5628604359369369630">Oxunmayıb - Oflayn əlçatandır</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Axtarış tarixçəsi<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>digər fəaliyyət formaları<ph name="END_LINK2"/> Brave Hesabında yadda saxlana bilər</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Axtarış tarixçəsi<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>digər fəaliyyət formaları<ph name="END_LINK2"/> AIWize Hesabında yadda saxlana bilər</translation>
 <translation id="564667659802381754">Məxfilik Bələdçisi <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">Son 7 gün</translation>
 <translation id="5655963694829536461">Endirmələri axtarın</translation>
 <translation id="5657871969392618475">Məlumatlar profil kilidi ilə qorunur</translation>
 <translation id="5659593005791499971">E-poçt</translation>
 <translation id="5665379678064389456"><ph name="APP_NAME"/> tətbiqində tədbir yaradın</translation>
-<translation id="5668833306439455813">Brave güncəlləmələri yoxlaya bilmir</translation>
+<translation id="5668833306439455813">AIWize güncəlləmələri yoxlaya bilmir</translation>
 <translation id="5686790454216892815">Fayl adı çox uzundur</translation>
-<translation id="4809211418322514799">Brave 30 gündən əvvələ aid saytları avtomatik silir. Yenidən daxil olduğunuz sayt siyahıda təkrar görünə bilər. Saytın reklam təklif etməsini bloklaya bilərsiniz. <ph name="BEGIN_LINK"/>Brave-da reklam məxfiliyinin idarə edilməsi<ph name="END_LINK"/> haqqında ətraflı.</translation>
+<translation id="4809211418322514799">AIWize 30 gündən əvvələ aid saytları avtomatik silir. Yenidən daxil olduğunuz sayt siyahıda təkrar görünə bilər. Saytın reklam təklif etməsini bloklaya bilərsiniz. <ph name="BEGIN_LINK"/>AIWize-da reklam məxfiliyinin idarə edilməsi<ph name="END_LINK"/> haqqında ətraflı.</translation>
 <translation id="569435661099256888">Daxil olduğunuz səhifələri görə və ya tarixçədən silə bilərsiniz</translation>
 <translation id="569536719314091526">Əlavə seçimlər düyməsində bu səhifəni istədiyiniz dilə tərcümə edin</translation>
-<translation id="2320748512701464301">Brave sizi data pozuntuları, güvənli olmayan vebsaytlar və digər güvənlik məsələlərindən qoruya bilər</translation>
+<translation id="2320748512701464301">AIWize sizi data pozuntuları, güvənli olmayan vebsaytlar və digər güvənlik məsələlərindən qoruya bilər</translation>
 <translation id="5698878456427040674">Seçilmiş hesabın dəstəklənib-dəstəklənmədiyini yoxlayın.</translation>
 <translation id="570347048394355941">Taba keçin</translation>
 <translation id="5715150588940290235">Yadda saxlanmış təhlükəsizlik kodları silinsin?</translation>
@@ -874,10 +874,10 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5726692708398506830">Səhifədəki hər şeyi böyüdün</translation>
 <translation id="5744751019568455640">Veb-səhifələri oxutmaq üçün seçə biləcəyiniz səslər. Bu səsi bəyənirsinizsə və ondan istifadəyə davam etməyimi istəyirsinizsə, səsin adına toxunun.</translation>
 <translation id="5748802427693696783">Standart panellərə keçdi</translation>
-<translation id="3088191967551450609">Faylları endirmək üçün Brave yaddaşa giriş tələb edir.</translation>
+<translation id="3088191967551450609">Faylları endirmək üçün AIWize yaddaşa giriş tələb edir.</translation>
 <translation id="5749237766298580851">Deaktiv <ph name="SEPARATOR"/> Tövsiyə edilmir</translation>
 <translation id="5752232708629533680">Yalnız GIF paylaşın</translation>
-<translation id="416316836590748269">Brave'da axtarış etmək üçün səsinizdən istifadə edə bilərsiniz</translation>
+<translation id="416316836590748269">AIWize'da axtarış etmək üçün səsinizdən istifadə edə bilərsiniz</translation>
 <translation id="5754350196967618083">Təklifləri yeniləmək olmur</translation>
 <translation id="5755162682436943950">Hesabdan çıxış edilib. Daxil olmaq və sinxronizasiyanı aktiv etmək üçün dialoqu açır.</translation>
 <translation id="5759897675466110265">Sayt işləmir? Üçüncü tərəf kukilərinə müvəqqəti icazə verin</translation>
@@ -893,13 +893,13 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5797521893972859201">Axtarış bölməsindəki daxil olmaqla, tarixçəni silir</translation>
 <translation id="5797949256525811424">Bloklanmış mövzu</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# saat öncə}other{# saat öncə}}</translation>
-<translation id="5311273890481188673">Müəllif hüquqları <ph name="YEAR"/> Brave MMC. Bütün hüquqlar qorunur.</translation>
+<translation id="5311273890481188673">Müəllif hüquqları <ph name="YEAR"/> AIWize MMC. Bütün hüquqlar qorunur.</translation>
 <translation id="5814749351757353073">Sevdiyiniz saytlardan xəbərdar olun</translation>
 <translation id="5822875253699806474">Daxil olduğunuz saytlara sürətlə qayıtmaq üçün tablar və tarixçəni sinxronlaşdırın</translation>
 <translation id="5829586821381540080"><ph name="FOLDER_NAME"/> qovluğunda yadda saxlandı</translation>
 <translation id="583281660410589416">Naməlum</translation>
 <translation id="5833984609253377421">Linki paylaşın</translation>
-<translation id="2225291765389142805">Brave Dinozavr</translation>
+<translation id="2225291765389142805">AIWize Dinozavr</translation>
 <translation id="5848257610304005265">PDF <ph name="APP_NAME"/> ilə açılsın?</translation>
 <translation id="5853623416121554550">dayandırıldı</translation>
 <translation id="5855546874025048181">Yaxşılaşdırın: <ph name="REFINE_TEXT"/></translation>
@@ -908,28 +908,28 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="5860033963881614850">Deaktiv</translation>
 <translation id="5860491529813859533">Aktiv edin</translation>
 <translation id="5864419784173784555">Başqa endirmə gözlənilir…</translation>
-<translation id="6538479075382111079">İstifadə statistikası və qəza raportlarını avtomatik Brave'a göndərir</translation>
+<translation id="6538479075382111079">İstifadə statistikası və qəza raportlarını avtomatik AIWize'a göndərir</translation>
 <translation id="5869522115854928033">Saxlanılmış parollar</translation>
-<translation id="5604589745019948682">Bir saytı izləmək üçün sayta keçin, Brave menyusunu açın və İzlə seçiminə toxunun.</translation>
+<translation id="5604589745019948682">Bir saytı izləmək üçün sayta keçin, AIWize menyusunu açın və İzlə seçiminə toxunun.</translation>
 <translation id="5879072387416556377">Daha yaxşı təkliflər alın</translation>
 <translation id="5899667542927581604">Bağlanmış giriş açarı vərəqi yoxdur</translation>
 <translation id="5916664084637901428">Aktiv</translation>
 <translation id="5919204609460789179">Sinxronizasiyanı başlatmaq üçün <ph name="PRODUCT_NAME"/> məhsulunu yeniləyin</translation>
 <translation id="5938820472109305350"><ph name="INTEREST"/> əlavə edin</translation>
-<translation id="6103327872225198548">Axtarış üçün Brave istifadə edilir</translation>
+<translation id="6103327872225198548">Axtarış üçün AIWize istifadə edilir</translation>
 <translation id="5945035219773565305">Cari tövsiyə: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Canlı səhifəyə baxılır</translation>
-<translation id="305870044889644984">Brave Yardım Mərkəzini yeni paneldə açın</translation>
+<translation id="305870044889644984">AIWize Yardım Mərkəzini yeni paneldə açın</translation>
 <translation id="59577092665511740">Hesab seçin.</translation>
 <translation id="5958275228015807058">Fayl və səhifələri Endirilənlər bölməsində tapın</translation>
 <translation id="5958994127112619898">Səhifəni sadələşdirin</translation>
 <translation id="5962718611393537961">Yığcamlaşdırmaq üçün klikləyin</translation>
 <translation id="5964869237734432770">Şəkil təsvirini dayandırın</translation>
-<translation id="9135546826883360971">Brave seçiminizi yadda saxlayacaq</translation>
+<translation id="9135546826883360971">AIWize seçiminizi yadda saxlayacaq</translation>
 <translation id="5977976211062815271">Bu cihazda</translation>
 <translation id="5979084224081478209">Parolları yoxlayın</translation>
 <translation id="5995726099713306770">Səhifə yenidən endirilsin?</translation>
-<translation id="6456271171669383967">Brave'u saxlayın</translation>
+<translation id="6456271171669383967">AIWize'u saxlayın</translation>
 <translation id="6000203700195075278">Yenidən izləyin</translation>
 <translation id="6002122790816966947">Cihazlarınız</translation>
 <translation id="6011308810877101166">Axtarış təkliflərini təkmilləşdirin</translation>
@@ -946,7 +946,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6070730414166672373">Bankınız əlaqə saxlanılır\u2026</translation>
 <translation id="6085886413119427067">Güvənli bağlantı vasitəsilə vebsaytlara necə qoşulmağı müəyyən edir</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> saat qaldı</translation>
-<translation id="4726571606794511368">Brave həm də defolt axtarış sisteminizdirsə daha yaxşı, kontekstə uyğun təkliflər görəcəksiniz</translation>
+<translation id="4726571606794511368">AIWize həm də defolt axtarış sisteminizdirsə daha yaxşı, kontekstə uyğun təkliflər görəcəksiniz</translation>
 <translation id="6108923351542677676">Quraşdırma icra olunur...</translation>
 <translation id="6112702117600201073">Səhifə yenilənir</translation>
 <translation id="6122831415929794347">Təhlükəsiz Baxış deaktiv edilsin?</translation>
@@ -959,18 +959,18 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6140912465461743537">Ölkə/Region</translation>
 <translation id="6150320133806434356">Əlfəcin yadda saxlanıldı</translation>
 <translation id="6154478581116148741">Bu cihazdan parolları eksport etmək üçün Ayarlarda ekran kilidini aktiv edin</translation>
-<translation id="7087658909840709934">Brave'un ziyarət edə biləcəyinizi düşündüyü səhifələri əvvəlcədən yükləyir.</translation>
+<translation id="7087658909840709934">AIWize'un ziyarət edə biləcəyinizi düşündüyü səhifələri əvvəlcədən yükləyir.</translation>
 <translation id="6186394685773237175">Oğurlanmış parol tapılmadı</translation>
 <translation id="6192907950379606605">Şəkil təsvirləri əldə edin</translation>
 <translation id="6193448654517602979">Tablar seçin</translation>
-<translation id="8367262879301982880">Parollar bu cihazda Brave Parol Menecerində saxlanılır</translation>
+<translation id="8367262879301982880">Parollar bu cihazda AIWize Parol Menecerində saxlanılır</translation>
 <translation id="6202812185118613467">Sinxronizasiyanı başlatmaq üçün yenidən daxil olun</translation>
 <translation id="6205314730813004066">Reklam məxfiliyi</translation>
 <translation id="6210748933810148297"><ph name="EMAIL"/> deyil?</translation>
 <translation id="6211386937064921208">Bu səhifə önizlənir</translation>
 <translation id="6221633008163990886">Parolları eksport etmək üçün kiliddən çıxarın</translation>
 <translation id="6232535412751077445">İzlənilməyin qadağan edilməsi o deməkdir ki, sorğu brauzer trafikinizə daxil ediləcək. İstənilən effekt saytın sorğuya cavab verməsindən və sorğunun necə anlaşılmasından asılıdır.  Məsələn, bəzi saytlar bu sorğuya ziyarət etdiyiniz saytlarda olmayan reklamları göstərməklə cavab verə bilər. Bir çox saytlar hələ də brauzinq datanızı toplayacaq və istifadə edəcək. Məqsədləri güvənliyin artırılması, kontent, xidmət, reklam, tövsiyə təqdim edilməsi və raport statistikasının yaradılması ola bilər.</translation>
-<translation id="3895383310037101583">Sinxronlaşdırmanı aktiv etməklə bu cihazdakı parolları Brave Hesabında saxlayın</translation>
+<translation id="3895383310037101583">Sinxronlaşdırmanı aktiv etməklə bu cihazdakı parolları AIWize Hesabında saxlayın</translation>
 <translation id="6255794742848779505">Parolların bu cihazda saxlanma qaydasını dəyişirik</translation>
 <translation id="6264376385120300461">Hər bir halda endirin</translation>
 <translation id="6277522088822131679">Səhifə çap olunarkən problem oldu. Yenidən cəhd edin.</translation>
@@ -995,18 +995,18 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6357653805084533597">Bu QR kodunu göstərən cihaza daxil olmaq üçün bu telefondan istifadə edə bilərsiniz.</translation>
 <translation id="6363990818884053551">Sinxronizasiyaya başlamaq üçün kimliyinizi doğrulayın</translation>
 <translation id="6364438453358674297">Təklif tarixçədən silinsin?</translation>
-<translation id="806493401838431801">Brave'un ziyarət edəcəyinizi düşündüyü səhifələr daha çox əvvəlcədən yüklənir. Bu ayar data istifadəsinin artması ilə nəticələnə bilər.</translation>
+<translation id="806493401838431801">AIWize'un ziyarət edəcəyinizi düşündüyü səhifələr daha çox əvvəlcədən yüklənir. Bu ayar data istifadəsinin artması ilə nəticələnə bilər.</translation>
 <translation id="6382848304055775421">Eksport edilir</translation>
 <translation id="6394791151443660613">Axtarış: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LİNK</translation>
 <translation id="6397616442223433927">Bağlantı bərpa edildi</translation>
-<translation id="8789425457808164956">Bu tabı başqa cihaza göndərmək üçün orada Brave'a daxil olun</translation>
+<translation id="8789425457808164956">Bu tabı başqa cihaza göndərmək üçün orada AIWize'a daxil olun</translation>
 <translation id="6404511346730675251">Əlfəcinə düzəliş edin</translation>
 <translation id="6406506848690869874">Sinx</translation>
 <translation id="6407224748847589805">Kompüterinizə qoşulmaq olmur. Digər doğrulama seçimini sınayın.</translation>
 <translation id="6410883413783534063">Müxtəlif səhifələrə eyni vaxtda daxil olmaq üçün tabları açın</translation>
 <translation id="6411219469806822692">Bundan yuxarıya keçmək olmur. Səhifənin yuxarısından başlamağı sınayın.</translation>
-<translation id="7810992039564280750">URL'ləri Brave'da saxlanılan təhlükəli saytların siyahısı ilə yoxlayır. Sayt parolunuzu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə Brave səhifə məzmunundan kiçik nümunələr də daxil olmaqla, URL'ləri Təhlükəsiz Baxışa göndərə bilər.</translation>
+<translation id="7810992039564280750">URL'ləri AIWize'da saxlanılan təhlükəli saytların siyahısı ilə yoxlayır. Sayt parolunuzu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyinizdə AIWize səhifə məzmunundan kiçik nümunələr də daxil olmaqla, URL'ləri Təhlükəsiz Baxışa göndərə bilər.</translation>
 <translation id="641643625718530986">Çap edin...</translation>
 <translation id="6422857128426228781">İzlənən məhsulları burada tapa bilərsiniz</translation>
 <translation id="6433501201775827830">Axtarış sistemini seçin</translation>
@@ -1017,84 +1017,84 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6447558397796644647">Bu əlfəcini tapmaq mümkün deyil. Orfoqrafiyanı yoxlayın və ya yeni əlfəcin əlavə edin.</translation>
 <translation id="6459045781120991510">Sorğular</translation>
 <translation id="6461962085415701688">Fayl açılmır</translation>
-<translation id="9055113864158719823">Brave'da girdiyiniz saytlara baxa və onlar üçün taymer ayarlaya bilərsiniz.\n\nBrave taymer ayarladığınız saytları və onlara hansı müddətdən bir girdiyiniz haqda məlumat əldə edir. Bu məlumat Digital Sağlamlığı təkmilləşdirmək üçün istifadə olunur.</translation>
+<translation id="9055113864158719823">AIWize'da girdiyiniz saytlara baxa və onlar üçün taymer ayarlaya bilərsiniz.\n\nAIWize taymer ayarladığınız saytları və onlara hansı müddətdən bir girdiyiniz haqda məlumat əldə edir. Bu məlumat Digital Sağlamlığı təkmilləşdirmək üçün istifadə olunur.</translation>
 <translation id="6473086018775716761">Paylaşım seçimlərinin siyahısı yarım yüksəklikdə açılıb.</translation>
 <translation id="6475951671322991020">Videonu endirin</translation>
 <translation id="6477928892249167417">Bu saytlar sizə vacib görünür:</translation>
 <translation id="6482749332252372425">Yadda az olduğu üçün <ph name="FILE_NAME"/> endirilə bilmədi.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Fayl endirildi}other{# endirmə tamamlandı}}</translation>
-<translation id="3960299545138990065">Brave'u yenidən başladın</translation>
+<translation id="3960299545138990065">AIWize'u yenidən başladın</translation>
 <translation id="6527303717912515753">Paylaşın</translation>
-<translation id="708829030563435351">Brave'da girdiyiniz saytlar göstərilməyəcək. Bütün sayt taymerləri silinəcək.</translation>
-<translation id="7723158744459952869">Brave cavab üçün çox vaxt aldı</translation>
+<translation id="708829030563435351">AIWize'da girdiyiniz saytlar göstərilməyəcək. Bütün sayt taymerləri silinəcək.</translation>
+<translation id="7723158744459952869">AIWize cavab üçün çox vaxt aldı</translation>
 <translation id="6539092367496845964">Xəta baş verdi. Sonra cəhd edin.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{1 saat əvvəl yoxlanılıb}other{# saat əvvəl yoxlanılıb}}</translation>
 <translation id="6545017243486555795">Bütün Datanı Silin</translation>
 <translation id="6546511553472444032">Fayl zərərli ola bilər</translation>
-<translation id="6702167990458635422">Təhlükəli veb-sayt, endirmə və artırmalardan qorumur. Digər Brave məhsullarında Təhlükəsiz baxış ayarlarına təsir etmir.</translation>
+<translation id="6702167990458635422">Təhlükəli veb-sayt, endirmə və artırmalardan qorumur. Digər AIWize məhsullarında Təhlükəsiz baxış ayarlarına təsir etmir.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> və digər <ph name="TAB_COUNT_ONE"/> tab bağlanacaq}other{<ph name="TAB_TITLE"/> və digər <ph name="TAB_COUNT_MANY"/> tab bağlanacaq}}</translation>
 <translation id="6560414384669816528">Sogou ilə axtarış</translation>
 <translation id="656065428026159829">Daha çoxuna baxın</translation>
 <translation id="6565959834589222080">Wi-Fi əlçatan olduqda istifadə edilir</translation>
-<translation id="4480935821314799946">İndi yeni tab açdığınız zaman <ph name="SITE_NAME"/> saytından hekayələri görəcəksiniz. İzlədiyiniz saytlar Brave hesabınızda saxlanılır. Onları Təkliflər ayarlarında idarə edə bilərsiniz.</translation>
+<translation id="4480935821314799946">İndi yeni tab açdığınız zaman <ph name="SITE_NAME"/> saytından hekayələri görəcəksiniz. İzlədiyiniz saytlar AIWize hesabınızda saxlanılır. Onları Təkliflər ayarlarında idarə edə bilərsiniz.</translation>
 <translation id="6573096386450695060">Həmişə icazə verin</translation>
-<translation id="5157964048453367290">Başqa cihaz ilə Brave'da açdığınız panellər burada görünəcək.</translation>
+<translation id="5157964048453367290">Başqa cihaz ilə AIWize'da açdığınız panellər burada görünəcək.</translation>
 <translation id="6583199322650523874">Cari səhifəni əlfəcin olaraq qeyd edin</translation>
 <translation id="6588043302623806746">Güvənli DNS yoxdur</translation>
 <translation id="6590471736817333463">60%-ədək dataya qənaət edin</translation>
 <translation id="6590680911007613645">Yadda saxlanılan parolun <ph name="SITE"/> paroluna uyğun olduğuna əmin olun</translation>
 <translation id="6593061639179217415">Masaüstü saytı</translation>
 <translation id="6594347733515723558">Sıra və baxış seçimləri</translation>
-<translation id="2466982615210189224">Sizin üçün təsvirləri yaxşılaşdırmaq üçün şəkillər Brave'a göndərilir.</translation>
-<translation id="663059986967017181">Brave'a kopYanlışır</translation>
+<translation id="2466982615210189224">Sizin üçün təsvirləri yaxşılaşdırmaq üçün şəkillər AIWize'a göndərilir.</translation>
+<translation id="663059986967017181">AIWize'a kopYanlışır</translation>
 <translation id="661266467055912436">Siz və vebdəki hər kəs üçün təhlükəsizliyi artırır.</translation>
-<translation id="8127050479140582768">Bu tabı başqa cihaza göndərmək üçün hər iki cihazda Brave'a daxil olun</translation>
+<translation id="8127050479140582768">Bu tabı başqa cihaza göndərmək üçün hər iki cihazda AIWize'a daxil olun</translation>
 <translation id="6627583120233659107">Qovluğa düzəliş edin</translation>
 <translation id="4660964651149493586">Anonim rejimi kiliddən çıxarın</translation>
 <translation id="6636623428211296678">Aşağıda digər ayarları araşdırın və ya indi bitirin</translation>
-<translation id="2259649928554669581">Məxfilik, təhlükəsizlik və datanın toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK1"/>Sinxronizasiya<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>Brave xidmətləri<ph name="END_LINK2"/> səhifəsinə daxil olun.</translation>
-<translation id="7939692063031538305">Tətbiqi təkmilləşdirməyə kömək etmək üçün Brave istifadə və qəza datasını Brave'a göndərir. <ph name="BEGIN_UMA_LINK"/>İdarə edin<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Məxfilik, təhlükəsizlik və datanın toplanması ilə bağlı daha çox ayarlar üçün <ph name="BEGIN_LINK1"/>Sinxronizasiya<ph name="END_LINK1"/> və <ph name="BEGIN_LINK2"/>AIWize xidmətləri<ph name="END_LINK2"/> səhifəsinə daxil olun.</translation>
+<translation id="7939692063031538305">Tətbiqi təkmilləşdirməyə kömək etmək üçün AIWize istifadə və qəza datasını AIWize'a göndərir. <ph name="BEGIN_UMA_LINK"/>İdarə edin<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Həmişə bloklayın</translation>
 <translation id="6641780377503683465"><ph name="INTEREST"/> silin</translation>
 <translation id="6643016212128521049">Silin</translation>
 <translation id="6645629752388991326">Bu cihazı təhlükəsizlik açarı kimi istifadə etməklə hansı cihazların daxil ola biləcəyinə nəzarət edin.</translation>
-<translation id="2730188427562924169">IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini Brave-a göndərir. Sayt parolu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyiniz zaman Brave səhifə kontentindən kiçik nümunələr daxil olmaqla URL-i Brave-a göndərə bilər.</translation>
-<translation id="7556503430569358637">Ziyarət etdiyiniz keçidlər növbəti dəfə hansı saytlara daxil ola biləcəyinizi proqnozlaşdırmaq üçün Brave'a göndərilir</translation>
-<translation id="6678472970290886941">Administrator brauzer quraşdırmasını uzaqdan dəyişə bilər. Bu cihazdakı fəaliyyət Brave'dan kənarda da idarə edilə bilər.</translation>
+<translation id="2730188427562924169">IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini AIWize-a göndərir. Sayt parolu oğurlamağa çalışdıqda və ya zərərli fayl endirdiyiniz zaman AIWize səhifə kontentindən kiçik nümunələr daxil olmaqla URL-i AIWize-a göndərə bilər.</translation>
+<translation id="7556503430569358637">Ziyarət etdiyiniz keçidlər növbəti dəfə hansı saytlara daxil ola biləcəyinizi proqnozlaşdırmaq üçün AIWize'a göndərilir</translation>
+<translation id="6678472970290886941">Administrator brauzer quraşdırmasını uzaqdan dəyişə bilər. Bu cihazdakı fəaliyyət AIWize'dan kənarda da idarə edilə bilər.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 və <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> digəri}other{<ph name="CONTACT_PREVIEW"/>\u2026 və <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> digəri}}</translation>
 <translation id="6649642165559792194">Önizləmə şəkli <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Parol</translation>
 <translation id="6659594942844771486">Səkmə</translation>
-<translation id="9145803563102831353">Bu cihazda yadda saxlanan parollar Brave kanallarında istifadə edilə bilməz. Brave 121-dən sonra Brave və <ph name="CHROME_CHANNEL"/> üçün cihazda yadda saxlanan parollar birləşdiriləcək və hər iki tətbiqdə istifadə edilə biləcək.</translation>
+<translation id="9145803563102831353">Bu cihazda yadda saxlanan parollar AIWize kanallarında istifadə edilə bilməz. AIWize 121-dən sonra AIWize və <ph name="CHROME_CHANNEL"/> üçün cihazda yadda saxlanan parollar birləşdiriləcək və hər iki tətbiqdə istifadə edilə biləcək.</translation>
 <translation id="666731172850799929"><ph name="APP_NAME"/> tətbiqində açın</translation>
 <translation id="6671495933530132209">Şəkli kopyalayın</translation>
 <translation id="6672917148207387131"><ph name="DOMAIN"/> əlavə edin</translation>
 <translation id="6674571176963658787">Sinxronizasiyanı başlatmaq üçün parol ifadənizi daxil edin</translation>
-<translation id="8581481290581777242">Brave datası bu cihazdan silinsin?</translation>
-<translation id="3683330416566109578">Bu sayta və Brave'a daxil olun</translation>
-<translation id="3385384709865894288">Brave'u yaxşılaşdırın</translation>
+<translation id="8581481290581777242">AIWize datası bu cihazdan silinsin?</translation>
+<translation id="3683330416566109578">Bu sayta və AIWize'a daxil olun</translation>
+<translation id="3385384709865894288">AIWize'u yaxşılaşdırın</translation>
 <translation id="670498945988402717">Dünən yoxlanılıb</translation>
 <translation id="6710213216561001401">Əvvəlki</translation>
 <translation id="671481426037969117"><ph name="FQDN"/> taymerinin vaxtı bitir. Sabah yenidən başlayacaq.</translation>
 <translation id="6715020873764921614">Hər halda <ph name="FILE_NAME"/> (<ph name="FILE_SIZE"/>) faylını endirmək istəyirsiniz?</translation>
 <translation id="6719634564325948108">QR Kodu ilə qoşulun?</translation>
-<translation id="7499197548870160669">Brave Hesabında</translation>
+<translation id="7499197548870160669">AIWize Hesabında</translation>
 <translation id="6738516213925468394">Data <ph name="TIME"/> tarixində <ph name="BEGIN_LINK"/>sinxronizasiya parolu<ph name="END_LINK"/> ilə şifrələnib. Sinxronizasiyanı başlatmaq üçün klikləyin.</translation>
 <translation id="6738867403308150051">Endirilir...</translation>
-<translation id="2275686406263739320">Ziyarət etdiyiniz saytların təcrübənizi fərdiləşdirmək üçün maraqlarınızı xatırlaması normaldır. Saytlar həmçinin maraqlarınız haqqında Brave ilə məlumat saxlaya bilər.</translation>
+<translation id="2275686406263739320">Ziyarət etdiyiniz saytların təcrübənizi fərdiləşdirmək üçün maraqlarınızı xatırlaması normaldır. Saytlar həmçinin maraqlarınız haqqında AIWize ilə məlumat saxlaya bilər.</translation>
 <translation id="6751521182688001123">Cəld yeni tab açın. Bu qısayolu redaktə etmək üçün toxunub saxlayın.</translation>
 <translation id="6756507620369789050">Rəy paylaşın</translation>
 <translation id="6767294960381293877">Yarı hündürlükdə açılan tabı paylaşa biləcəyiniz cihazların siyahısı.</translation>
 <translation id="6770602306803890733">Siz və vebdəki hər kəs üçün təhlükəsizliyi artırır</translation>
 <translation id="2213938739750509524">Ünvan paneli və ya axtarış xanasına toxunduqda, yaxud yazdıqda defolt axtarış mexanizmindən təkliflər görəcəksiniz. Anonim rejimdə deaktivdir.</translation>
-<translation id="8174975477247159780">Brave və ChromeOS Əlavə Xidmət Şərtləri</translation>
+<translation id="8174975477247159780">AIWize və ChromeOS Əlavə Xidmət Şərtləri</translation>
 <translation id="6795633245022906657">Cəld yeni tab açın. Bu qısayolu redaktə etmək üçün Ayarlara keçin.</translation>
 <translation id="6802555630140434547">Bu pəncərə bağlanacaq</translation>
 <translation id="6811034713472274749">Səhifəyə baxa bilərsiniz</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Şəkillər, siyahıda 1 şəkil}other{Şəkillər, siyahıda # şəkil}}</translation>
-<translation id="8418237809013783651">Brave'a giriş açılıb.</translation>
+<translation id="8418237809013783651">AIWize'a giriş açılıb.</translation>
 <translation id="6817747507826986771">Bu səhifəni cəld paylaşın. Bu qısayolu redaktə etmək üçün toxunub saxlayın.</translation>
-<translation id="118366698571543506">Cihazlarınızda Brave komponentlərini əldə etmək üçün daxil olun</translation>
+<translation id="118366698571543506">Cihazlarınızda AIWize komponentlərini əldə etmək üçün daxil olun</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Ünvan panelində daxil olduğunuz səhifə haqqında əlavə məlumatı aça bilərsiniz</translation>
 <translation id="6828070228333235514">Qiymətin izlənməsini dayandırın</translation>
@@ -1106,7 +1106,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6850409657436465440">Endirmə hələ də gözlənilir</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> panel bağlanıldı</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Audio fayllar, siyahıda 1 audio fayl}other{Audio fayllar, siyahıda # audio fayl}}</translation>
-<translation id="4046835482356054431">Brave Təkliflər - deaktivdir</translation>
+<translation id="4046835482356054431">AIWize Təkliflər - deaktivdir</translation>
 <translation id="686366188661646310">Parol silinsin?</translation>
 <translation id="6864459304226931083">Şəkli endirin</translation>
 <translation id="6865313869410766144">Avtomatik data doldurması</translation>
@@ -1123,7 +1123,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="6909589135458168665">Səhifələri Əvvəlcədən Yükləyin</translation>
 <translation id="6910211073230771657">Silinib</translation>
 <translation id="6918398787259831832">Bu problem davam etsə, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> tərəfindən <ph name="BEGIN_LINK"/>ətraflı məlumat əldə edin<ph name="END_LINK"/>.</translation>
-<translation id="5854472260286669100">Cihaz və Brave Hesabında yadda saxlanan güvənlik kodları silinəcək</translation>
+<translation id="5854472260286669100">Cihaz və AIWize Hesabında yadda saxlanan güvənlik kodları silinəcək</translation>
 <translation id="6942665639005891494">Ayarlarda menyu seçimi ilə istənilən zaman defolt endirmə məkanını dəyişin</translation>
 <translation id="694267552845942083">Hazırda Sinxronizasiya ayarlarını fərdiləşdirirsiniz. Sinxronizasiyanı aktiv etməyi tamamlamaq üçün ekranın aşağısına yaxın yerləşən "Təsdiq edin" düyməsinə toxunun. Yuxarı keçin</translation>
 <translation id="6945221475159498467">Seçin</translation>
@@ -1144,16 +1144,16 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7029809446516969842">Parollar</translation>
 <translation id="7030304022046916278">URL'ləri yoxlamaq üçün onları Təhlükəsiz Baxışa göndərir</translation>
 <translation id="7035701931849773472">Digər seçimlər</translation>
-<translation id="5813862251770201080">Brave Hesabınızla Brave'a daxil olun</translation>
+<translation id="5813862251770201080">AIWize Hesabınızla AIWize'a daxil olun</translation>
 <translation id="7054588988317389591">Şəkil təsvirləri əldə edilsin?</translation>
 <translation id="7055152154916055070">Yönləndirmə blok edildi:</translation>
 <translation id="7063006564040364415">Sinxronizasiya serverinə qoşula bilmədi.</translation>
 <translation id="7071521146534760487">Hesabı idarə edin</translation>
 <translation id="707155805709242880">Nəyi sinxronizasiya edəcəyinizi aşağıda seçin</translation>
 <translation id="7077143737582773186">SD Kart</translation>
-<translation id="2374582967527009647">URL'ləri yoxlamaq üçün onları Təhlükəsiz Baxışa göndərir. Həmçinin yeni təhlükələri aşkarlamaqda kömək məqsədilə səhifə, endirmə, artırma fəaliyyətindən ibarət kiçik nümunə göndərir. Daxil olduğunuzda sizi Brave tətbiqlərində qorumaq üçün bu datanı Brave Hesabınız ilə müvəqqəti olaraq əlaqələndirir.</translation>
-<translation id="5499149312981370855">Brave xidmətlərində daha çox fərdiləşdirilmiş təcrübə üçün Brave tarixçəsinin daxil edilib-edilməməsini seçin</translation>
-<translation id="8208853227947884571">Brave güncəldir</translation>
+<translation id="2374582967527009647">URL'ləri yoxlamaq üçün onları Təhlükəsiz Baxışa göndərir. Həmçinin yeni təhlükələri aşkarlamaqda kömək məqsədilə səhifə, endirmə, artırma fəaliyyətindən ibarət kiçik nümunə göndərir. Daxil olduğunuzda sizi AIWize tətbiqlərində qorumaq üçün bu datanı AIWize Hesabınız ilə müvəqqəti olaraq əlaqələndirir.</translation>
+<translation id="5499149312981370855">AIWize xidmətlərində daha çox fərdiləşdirilmiş təcrübə üçün AIWize tarixçəsinin daxil edilib-edilməməsini seçin</translation>
+<translation id="8208853227947884571">AIWize güncəldir</translation>
 <translation id="7105047059074518658">Cihazlar arasında asan baxış üçün daxil olun</translation>
 <translation id="7106762743910369165">Təşkilatınız brauzerinizi idarə edir</translation>
 <translation id="7116588989735740310">Digər cihazlarda daxil olduğunuz saytlara qayıtmaq üçün tablar və tarixçəni sinxronlaşdırın</translation>
@@ -1168,33 +1168,33 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7177873915659574692">QR kod yaratmaq olmur. URL'də <ph name="CHARACTER_LIMIT"/> ədəddən çox simvol var.</translation>
 <translation id="7180611975245234373">Yeniləyin</translation>
 <translation id="7183693674623539380">Tab qrupu - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Daxil olduğunuzda Brave'da sizi qoruyur və digər Brave tətbiqlərində təhlükəsizliyinizi artırmaq üçün istifadə edilə bilər.</translation>
+<translation id="8355565210555500987">Daxil olduğunuzda AIWize'da sizi qoruyur və digər AIWize tətbiqlərində təhlükəsizliyinizi artırmaq üçün istifadə edilə bilər.</translation>
 <translation id="7191430249889272776">Panel arxa fonda açıldı.</translation>
 <translation id="7196215469483532480">Məxfilik bələdçisi izahı tam hündürlükdə açılıb</translation>
-<translation id="1014116676551114642">Gənclər üçün Brave tərəfindən kontent - deaktiv</translation>
+<translation id="1014116676551114642">Gənclər üçün AIWize tərəfindən kontent - deaktiv</translation>
 <translation id="7207760545532569765"><ph name="TAB_COUNT"/> tabı yeni arxa fon tabları olaraq bərpa edin.</translation>
-<translation id="6302653771627628530">Brave'dan çıxdığınız zaman anonim tablar kilidlənəcək</translation>
+<translation id="6302653771627628530">AIWize'dan çıxdığınız zaman anonim tablar kilidlənəcək</translation>
 <translation id="7221869452894271364">Bu səhifəni yenidən yükləyin</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 endirmə gözlənilir}other{# endirmə gözlənilir}}</translation>
 <translation id="72415438529550637">Parol təklifi bağlandı.</translation>
-<translation id="8287068819750208230"><ph name="TARGET_DEVICE_NAME"/> adlı cihazının Brave tətbiqində sinxronizasiyanın aktiv edildiyinə əmin olun</translation>
+<translation id="8287068819750208230"><ph name="TARGET_DEVICE_NAME"/> adlı cihazının AIWize tətbiqində sinxronizasiyanın aktiv edildiyinə əmin olun</translation>
 <translation id="7252076891734325316">Telefonunuzu kompüterə yaxın yerləşdirin</translation>
-<translation id="4957342254208357193">Android cihazınızda oxşar ayar ola bilər. Reklamın ölçülməsi Brave və Android cihazınızda aktivdirsə, şirkət ziyarət etdiyiniz saytlar və istifadə etdiyiniz tətbiqlərdə reklamın effektivliyini ölçə bilər.</translation>
+<translation id="4957342254208357193">Android cihazınızda oxşar ayar ola bilər. Reklamın ölçülməsi AIWize və Android cihazınızda aktivdirsə, şirkət ziyarət etdiyiniz saytlar və istifadə etdiyiniz tətbiqlərdə reklamın effektivliyini ölçə bilər.</translation>
 <translation id="727288900855680735"><ph name="ONE_TIME_CODE"/> kodu <ph name="ORIGIN"/> ünvanına göndərilsin?</translation>
 <translation id="7274013316676448362">Blok edilmiş sayt</translation>
-<translation id="7949597606523411684">Brave 4 həftədən əvvələ aid mövzuları avtomatik silir. Baxmağa davam etdikcə mövzu siyahıda yenidən görünə bilər. Brave-un saytlarla paylaşmaması üçün mövzuları bloklaya bilərsiniz. <ph name="BEGIN_LINK"/>Brave-da reklam məxfiliyinin idarə edilməsi<ph name="END_LINK"/> haqqında ətraflı.</translation>
-<translation id="4561646469134805137">Siz yazdıqca Brave ünvan paneli və ya axtarış xanasının kontentini standart axtarış mexanizminə göndərir</translation>
+<translation id="7949597606523411684">AIWize 4 həftədən əvvələ aid mövzuları avtomatik silir. Baxmağa davam etdikcə mövzu siyahıda yenidən görünə bilər. AIWize-un saytlarla paylaşmaması üçün mövzuları bloklaya bilərsiniz. <ph name="BEGIN_LINK"/>AIWize-da reklam məxfiliyinin idarə edilməsi<ph name="END_LINK"/> haqqında ətraflı.</translation>
+<translation id="4561646469134805137">Siz yazdıqca AIWize ünvan paneli və ya axtarış xanasının kontentini standart axtarış mexanizminə göndərir</translation>
 <translation id="7289303553784750393">Onlayn olduğunuz halda bu problem davam etsə, <ph name="SITE_ETLD_PLUS_ONE"/> saytında davam etmək üçün başqa yolları sınaya bilərsiniz.</translation>
 <translation id="7290209999329137901">Adı dəyişmək mümkün deyil</translation>
 <translation id="7291910923717764901">Bu səhifə üçün şəkil təsvirləri əlavə edildi</translation>
 <translation id="7293429513719260019">Dil seçin</translation>
 <translation id="729975465115245577">Cihazda parollar faylını saxlamaq üçün tətbiq yoxdur.</translation>
-<translation id="7581648335850642193">Android cihazında oxşar ayar ola bilər. Bu ayar Brave və Android cihazında aktivdirsə, şirkət daxil olduğunuz veb-sayt və istifadə etdiyiniz tətbiqlər üzrə reklamın effektivliyini ölçə bilər.</translation>
-<translation id="1382596880054356475">Oflayn. Brave parollarınızı yoxlaya bilmir.</translation>
+<translation id="7581648335850642193">Android cihazında oxşar ayar ola bilər. Bu ayar AIWize və Android cihazında aktivdirsə, şirkət daxil olduğunuz veb-sayt və istifadə etdiyiniz tətbiqlər üzrə reklamın effektivliyini ölçə bilər.</translation>
+<translation id="1382596880054356475">Oflayn. AIWize parollarınızı yoxlaya bilmir.</translation>
 <translation id="7313188324932846546">Sinxronlaşdırmanı ayarlamaq üçün toxunun</translation>
 <translation id="7324354302972299151">"Do Not Track" sorğusu göndərin</translation>
 <translation id="7332075081379534664">Giriş uğurlu oldu</translation>
-<translation id="8716243540027092298">Brave'dan ən uyğun məzmunu əldə etmək üçün sinxronizasiya edin</translation>
+<translation id="8716243540027092298">AIWize'dan ən uyğun məzmunu əldə etmək üçün sinxronizasiya edin</translation>
 <translation id="7339898014177206373">Yeni pəncərə</translation>
 <translation id="7340958967809483333">"Kəşf edin" üçün seçimlər</translation>
 <translation id="7352339641508007922">Uzun skrinşot çəkmək üçün sürüşdürün</translation>
@@ -1210,15 +1210,15 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7397416715506917976">Səhifə statistikasına baxın</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Digər, siyahıda 1 fayl}other{Digər, siyahıda # fayl}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">İlkin Brave Təcrübəsi</translation>
-<translation id="5341476184053934779">Brave Hesabı istifadəçisi</translation>
+<translation id="724102042129299115">İlkin AIWize Təcrübəsi</translation>
+<translation id="5341476184053934779">AIWize Hesabı istifadəçisi</translation>
 <translation id="741204030948306876">Bəli, razıyam</translation>
 <translation id="7419565702166471774">Həmişə güvənli bağlantılardan istifadə edin</translation>
 <translation id="7431991332293347422">Axtarış tarixçəsinin Axtarış və sairəni necə fərdiləşdirdiyinə nəzarət edin</translation>
 <translation id="7435356471928173109">Administratorunuz tərəfindən deaktiv edilib</translation>
-<translation id="6234515504547364178">Brave'dan çıxın</translation>
-<translation id="6147816961713837040">IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini Brave-a göndərir</translation>
-<translation id="3699067418237091329">Bununla əksər saytlardan çıxacaqsınız. Brave Hesabından çıxmayacaqsınız.</translation>
+<translation id="6234515504547364178">AIWize'dan çıxın</translation>
+<translation id="6147816961713837040">IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini AIWize-a göndərir</translation>
+<translation id="3699067418237091329">Bununla əksər saytlardan çıxacaqsınız. AIWize Hesabından çıxmayacaqsınız.</translation>
 <translation id="7453810262525006706">Yan görünüşə yığcamlaşdırın</translation>
 <translation id="7454641608352164238">Yetərincə yer yoxdur</translation>
 <translation id="7455988709578031708">Axtarış tarixçənizə əsaslanır. Bu ayar aktivdir.</translation>
@@ -1232,22 +1232,22 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7482656565088326534">Önbaxış tabı</translation>
 <translation id="7484997419527351112">"Təkliflər" - deaktivdir</translation>
 <translation id="7485033510383818941">Lent məzmununu yeniləmək üçün səhifəni aşağı çəkin</translation>
-<translation id="749294055653435199">Brave Linza bu cihazda əlçatan deyil</translation>
+<translation id="749294055653435199">AIWize Linza bu cihazda əlçatan deyil</translation>
 <translation id="7493994139787901920"><ph name="VERSION"/> (Güncəlləşib <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Mövzu yenidən potensial mövzulara əlavə edilib</translation>
 <translation id="7498271377022651285">Xahiş edirik gözləyin ...</translation>
-<translation id="8156131600798538460">Bütün vebsaytlarda Brave Hesabınızdan çıxmaq üçün <ph name="BEGIN_LINK1"/>Brave'dan çıxın<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Bütün vebsaytlarda AIWize Hesabınızdan çıxmaq üçün <ph name="BEGIN_LINK1"/>AIWize'dan çıxın<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Güncəlləmələr əlçatan deyil</translation>
 <translation id="7507207699631365376">Bu təminatçının <ph name="BEGIN_LINK"/>məxfilik siyasətinə<ph name="END_LINK"/> baxın</translation>
 <translation id="7514365320538308">Endirmə</translation>
 <translation id="7518079994230200553">Bu seçim əlçatan deyil.</translation>
 <translation id="751961395872307827">Sayta qoşulmaq mümkün deyil</translation>
 <translation id="752220631458524187">Hazır olduqda bağlantını ayırın</translation>
-<translation id="7523960634226602883">Brave Linza istifadə edərək kameranızla axtarış edin</translation>
+<translation id="7523960634226602883">AIWize Linza istifadə edərək kameranızla axtarış edin</translation>
 <translation id="5722020415664104421">Anonim rejimdə bloklayın</translation>
 <translation id="7539698981064401140">Tablar və tarixçəni sinxronlaşdırın</translation>
 <translation id="7562080006725997899">Baxış datası silinir</translation>
-<translation id="7814200940910057384">Brave datası təmizləndi</translation>
+<translation id="7814200940910057384">AIWize datası təmizləndi</translation>
 <translation id="7577900504646297215">Maraqları idarə edin</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> fayl endirildi}other{<ph name="FILES_DOWNLOADED_MANY"/> fayl endirildi}}</translation>
 <translation id="7581273696622423628">Sorğudan keçin</translation>
@@ -1257,10 +1257,10 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7596558890252710462">Əməliyyat sistemi</translation>
 <translation id="7603168929588204083">Yanlış tarix</translation>
 <translation id="7605594153474022051">Sinxronizasiya işləmir</translation>
-<translation id="649070405679044769">Brave'a bu cür daxil olunub</translation>
+<translation id="649070405679044769">AIWize'a bu cür daxil olunub</translation>
 <translation id="7612989789287281429">Daxil olursunuz…</translation>
 <translation id="7619072057915878432">Şəbəkə problemi səbəbi ilə <ph name="FILE_NAME"/> faylının yüklənməsi uğursuz oldu.</translation>
-<translation id="7207456302801184289">Brave'a xoş gəlmisiniz</translation>
+<translation id="7207456302801184289">AIWize'a xoş gəlmisiniz</translation>
 <translation id="7630202231528827509">Provayder URL-i</translation>
 <translation id="7638584964844754484">Yanlış parol</translation>
 <translation id="7641339528570811325">Brauzinq datasını təmizləyin...</translation>
@@ -1274,13 +1274,13 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="766587987807204883">Məqalələr burada görünəcək. Onları oflayn olduqda belə oxuya bilərsiniz</translation>
 <translation id="7682724950699840886">Aşağıdakıları sınayın: cihazda kifayət qədər yer olduğuna əmin olun və eksport etməyə cəhd edin.</translation>
 <translation id="7686086654630106285">Saytın təklif etdiyi reklamlar haqqında ətraflı</translation>
-<translation id="2667018639405889513">Ziyarət etdiyiniz bəzi səhifələr əvvəlcədən yüklənib. Səhifələr Brave saytından əlaqələndirildikdə Brave serverləri vasitəsilə əvvəlcədən yüklənə bilər.</translation>
-<translation id="7795837497684113327">Cihaz Brave-u aça bilmədi. Tətbiq mağazasından son Brave güncəllənməsini endirin.</translation>
+<translation id="2667018639405889513">Ziyarət etdiyiniz bəzi səhifələr əvvəlcədən yüklənib. Səhifələr AIWize saytından əlaqələndirildikdə AIWize serverləri vasitəsilə əvvəlcədən yüklənə bilər.</translation>
+<translation id="7795837497684113327">Cihaz AIWize-u aça bilmədi. Tətbiq mağazasından son AIWize güncəllənməsini endirin.</translation>
 <translation id="7691043218961417207">İzləmək üçün kontentləri araşdırın</translation>
 <translation id="7697383401610880082">Dəstəyi çəkin</translation>
 <translation id="7698359219371678927"><ph name="APP_NAME"/> tətbiqində e-poçt yaradın</translation>
 <translation id="7702029078562412515">Sorğu blokları</translation>
-<translation id="3434187853488406814">Baxış datasını sildikdə Brave Hesabından çıxırsınız. Bunun üçün <ph name="BEGIN_LINK1"/>Brave-dan çıxın<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Baxış datasını sildikdə AIWize Hesabından çıxırsınız. Bunun üçün <ph name="BEGIN_LINK1"/>AIWize-dan çıxın<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Mobil data istifadə edin</translation>
 <translation id="7709918231054955894">Bütün tablarınızı əldə edin</translation>
 <translation id="7733878270780732638">Cihazda yer yoxdur.</translation>
@@ -1292,9 +1292,9 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7772032839648071052">Parolu təsdiq edin</translation>
 <translation id="7772375229873196092"><ph name="APP_NAME"/> tətbiqini bağlayın</translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 və <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> digəri}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 və <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> digəri}}</translation>
-<translation id="5614774692683309331">Daxil olduqda Brave xidmətlərində sizi qoruyur.</translation>
+<translation id="5614774692683309331">Daxil olduqda AIWize xidmətlərində sizi qoruyur.</translation>
 <translation id="7778840695157240389">Yeni hekayələr üçün sonra yenidən yoxlayın</translation>
-<translation id="7703329426540523149">Daxil olduğunuzda sizi Brave tətbiqlərində qorumaq üçün bu datanı Brave Hesabınız ilə müvəqqəti olaraq əlaqələndirir</translation>
+<translation id="7703329426540523149">Daxil olduğunuzda sizi AIWize tətbiqlərində qorumaq üçün bu datanı AIWize Hesabınız ilə müvəqqəti olaraq əlaqələndirir</translation>
 <translation id="7791543448312431591">Əlavə etmək</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> tab bərpa edilib</translation>
 <translation id="780301667611848630">Yox, çox sağ olun</translation>
@@ -1303,10 +1303,10 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Bütün fayllar, siyahıda 1 fayl}other{Bütün fayllar, siyahıda # fayl}}</translation>
 <translation id="7815484226266492798">Uzun Skrinşot</translation>
 <translation id="7821130663268546430">Açıq tabları tab keçiricisində tapa bilərsiniz</translation>
-<translation id="8439902729344548970">Daxil olduqda sizi Brave xidmətlərində qorumaq üçün bu data Brave Hesabı ilə əlaqələndirilir. Məsələn, təhlükəsizlik insidentindən sonra Gmail-də qoruma artırılır.</translation>
+<translation id="8439902729344548970">Daxil olduqda sizi AIWize xidmətlərində qorumaq üçün bu data AIWize Hesabı ilə əlaqələndirilir. Məsələn, təhlükəsizlik insidentindən sonra Gmail-də qoruma artırılır.</translation>
 <translation id="78270725016672455">Kompüteriniz bu cihazı sayta daxil olmaq üçün qeydiyyatdan keçirmək istəyir</translation>
 <translation id="7844171778363018843">Sinxronizasiya etmək üçün data seçilməyib</translation>
-<translation id="7068829570137757602">Brave xidmətləri</translation>
+<translation id="7068829570137757602">AIWize xidmətləri</translation>
 <translation id="784934925303690534">Vaxt aralığı</translation>
 <translation id="7851858861565204677">Digər cihazlar</translation>
 <translation id="7853202427316060426">Fəalliyyət</translation>
@@ -1316,7 +1316,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="78707286264420418"><ph name="PRODUCT_NAME"/> cihazınıza qoşulmaq üçün Yaxınlıqdakı cihazlar icazəsini tələb edir</translation>
 <translation id="7875915731392087153">E-poçt yaradın</translation>
 <translation id="7876243839304621966">Hamısını silin</translation>
-<translation id="6143689084714664628">Brave'da istifadə edilir</translation>
+<translation id="6143689084714664628">AIWize'da istifadə edilir</translation>
 <translation id="7887174313503389866">Əsas məxfilik və təhlükəsizlik nəzarətlərinə bələdçi ilə baxış keçirin. Digər seçimlər üçün fərdi ayarlara keçin.</translation>
 <translation id="7896724475402191389">Gənclər üçün kontent - deaktiv</translation>
 <translation id="7903184275147100332">Bu, bir dəqiqə çəkə bilər</translation>
@@ -1335,7 +1335,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7960972236129063347">Səhifə statistikasında geri düyməsi</translation>
 <translation id="7961926449547174351">Yaddaş girişini deaktiv etmisiniz, aktiv etmək üçün Ayarlara keçin.</translation>
 <translation id="7963646190083259054">Vendor:</translation>
-<translation id="2939504940637874963">İstənilən cihazda saxlanmış parollarınızı istifadə edə bilərsiniz. Onlar <ph name="ACCOUNT"/> üçün Brave Parol Menecerində saxlanılır.</translation>
+<translation id="2939504940637874963">İstənilən cihazda saxlanmış parollarınızı istifadə edə bilərsiniz. Onlar <ph name="ACCOUNT"/> üçün AIWize Parol Menecerində saxlanılır.</translation>
 <translation id="7968014550143838305">Oxu siyahısına əlavə edildi</translation>
 <translation id="7971136598759319605">1 gün əvvəl aktiv olub</translation>
 <translation id="7975379999046275268">Önizləmə səhifəsi <ph name="BEGIN_NEW"/>Yeni<ph name="END_NEW"/></translation>
@@ -1344,7 +1344,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="7995059495660416932">Kontent əlçatan olduqda onu görəcəksiniz</translation>
 <translation id="799576009106109668">Cari veb səhifə ziyarətinizə əsasən məzmun proaktiv şəkildə yükləndiyinə görə daha sürətli gözdən keçirəcəksiniz</translation>
 <translation id="8004582292198964060">Brauzer</translation>
-<translation id="3325020657155065477">Həmçinin Brave datanızı bu cihazdan silin</translation>
+<translation id="3325020657155065477">Həmçinin AIWize datanızı bu cihazdan silin</translation>
 <translation id="8015452622527143194">Səhifədəki hər şeyi defolt ölçüsünə qaytarın</translation>
 <translation id="8026334261755873520">Brauzinq datasını təmizləyin</translation>
 <translation id="8027863900915310177">Endiriləcək yeri seçin</translation>
@@ -1356,7 +1356,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="804335162455518893">SD kart tapılmadı</translation>
 <translation id="5048396920203761159">{TAB_COUNT,plural, =1{<ph name="TAB_COUNT_ONE"/> anonim tab}other{<ph name="TAB_COUNT_NORMAL"/> anonim tab}}</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB əlçatandır</translation>
-<translation id="2317945146070194624">Yeni Brave tabında açın</translation>
+<translation id="2317945146070194624">Yeni AIWize tabında açın</translation>
 <translation id="8062594758852531064">Artırılmış əvvəlcədən yükləmə:</translation>
 <translation id="8063895661287329888">Əlfəcin əlavə etmək alınmadı.</translation>
 <translation id="8066816452984416180">Səhifəni sürətlə əlfəcinləyin. Qısayolu redaktə etmək üçün toxunub saxlayın.</translation>
@@ -1365,24 +1365,24 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8076492880354921740">Tablar</translation>
 <translation id="8078096376109663956">Yalnız mətn paylaşın</translation>
 <translation id="8084114998886531721">Yadda saxlanmış parol</translation>
-<translation id="1718138320251931534">Brave Hesab datanıza nəzarət edin</translation>
+<translation id="1718138320251931534">AIWize Hesab datanıza nəzarət edin</translation>
 <translation id="808747664143081553">Cihaza qoşulub</translation>
 <translation id="1998933850996224665">Yaxınlıqdakı insanlarla paylaşmaq üçün onlara bu QR kodu skanlamaq icazəsi verin</translation>
 <translation id="8090732854597034573">Köməyə ehtiyacınız varsa, valideyninizə müraciət edin</translation>
 <translation id="8101414242770404289"><ph name="TIME_PERIOD"/> üzrə tab yoxdur</translation>
 <translation id="3377025655491224618">Gizli Panel</translation>
-<translation id="3249150807062904185">Davam etməklə, <ph name="BEGIN_TOS_LINK"/> Xidmət Şərtləri<ph name="END_TOS_LINK"/> ilə razılaşırsınız.\nTətbiqi təkmilləşdirməyə kömək etmək üçün Brave istifadə və qəza datasını Brave'a göndərir. <ph name="BEGIN_UMA_LINK"/>İdarə edin<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Davam etməklə, <ph name="BEGIN_TOS_LINK"/> Xidmət Şərtləri<ph name="END_TOS_LINK"/> ilə razılaşırsınız.\nTətbiqi təkmilləşdirməyə kömək etmək üçün AIWize istifadə və qəza datasını AIWize'a göndərir. <ph name="BEGIN_UMA_LINK"/>İdarə edin<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Çeşidləmə seçimlərini bağlayın</translation>
-<translation id="2919733817273403520">Brave funksiyalarını və performansını təkmilləşdirməyə yardım edin</translation>
-<translation id="4565206163201411670">Digital Sağlamlıqda Brave fəaliyyəti göstərilsin?</translation>
+<translation id="2919733817273403520">AIWize funksiyalarını və performansını təkmilləşdirməyə yardım edin</translation>
+<translation id="4565206163201411670">Digital Sağlamlıqda AIWize fəaliyyəti göstərilsin?</translation>
 <translation id="8118117428362942925">Köməyə ehtiyacınız varsa, valideyninizə müraciət edin (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Ən yeni əsasında çeşidlənir</translation>
 <translation id="8127542551745560481">Əsas səhifəni redaktə edin</translation>
 <translation id="8130309322784422030">Saxladığınız giriş məlumatları köhnəlmiş ola bilər</translation>
 <translation id="813082847718468539">Sayt məlumatına baxın</translation>
 <translation id="8135406045838672858">Endirilmiş PDF-lər avtomatik <ph name="APP_NAME"/> ilə açılır</translation>
-<translation id="6337533477704327362">Bu parolu xatırlamağa ehtiyac yoxdur. Brave Parol Menecerində yadda saxlanacaq.</translation>
+<translation id="6337533477704327362">Bu parolu xatırlamağa ehtiyac yoxdur. AIWize Parol Menecerində yadda saxlanacaq.</translation>
 <translation id="8186512483418048923"><ph name="FILES"/> fayl qalır</translation>
 <translation id="8190358571722158785">1 gün qaldı</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Cihazlarınız<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1392,14 +1392,14 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8210770465353466621">Tablar burada olacaq</translation>
 <translation id="8215740705341534369">Yan vərəq</translation>
 <translation id="8218622182176210845">Hesabınızı idarə edin</translation>
-<translation id="4034729701971511794">İstəmədiyiniz saytları bloklaya bilərsiniz. Brave 30 gündən əvvələ aid saytları siyahıdan avtomatik silir. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">İstəmədiyiniz saytları bloklaya bilərsiniz. AIWize 30 gündən əvvələ aid saytları siyahıdan avtomatik silir. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Lent kartı menyusu</translation>
 <translation id="8236097722223016103">Əlfəcinlərə əlavə edin</translation>
 <translation id="8237871086242677046">Səhifə statistikası üzrə aşağı vərəq</translation>
 <translation id="8243077599929149377">İstifadəçi adınızı əlavə edin</translation>
 <translation id="8250920743982581267">Sənədlər</translation>
 <translation id="8255617931166444521">Saytlar yalnız öz saytlarında axtarış fəaliyyətinizi görmək üçün kukilərinizdən istifadə edə bilər</translation>
-<translation id="2876689296031086375">Əvvəlcədən yüklənmiş səhifələr şifrələndiyinə görə Brave əvvəlcədən yüklənmiş səhifə məzmunu haqqında heç nə öyrənməyəcək. Brave serverləri hansı saytların məxfi olaraq əvvəlcədən yükləndiyini öyrənəcək. Bu məlumat yalnız səhifələri əvvəlcədən yükləmək üçün istifadə olunur və Brave Hesabınızdakı digər məlumatlarla əlaqələndirilmir.</translation>
+<translation id="2876689296031086375">Əvvəlcədən yüklənmiş səhifələr şifrələndiyinə görə AIWize əvvəlcədən yüklənmiş səhifə məzmunu haqqında heç nə öyrənməyəcək. AIWize serverləri hansı saytların məxfi olaraq əvvəlcədən yükləndiyini öyrənəcək. Bu məlumat yalnız səhifələri əvvəlcədən yükləmək üçün istifadə olunur və AIWize Hesabınızdakı digər məlumatlarla əlaqələndirilmir.</translation>
 <translation id="8260126382462817229">Yenidən daxil olmağa cəhd edin</translation>
 <translation id="8261506727792406068">Silin</translation>
 <translation id="82619448491672958">Digər tablara baxın</translation>
@@ -1410,7 +1410,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="829672787777123339">Cihazınıza qoşulur…</translation>
 <translation id="8310344678080805313">Standart panellər</translation>
 <translation id="831192587911042850">Cari veb saytı izlədiyiniz veb saytların siyahısına əlavə edir.</translation>
-<translation id="5665071699503384089">Saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. Brave həmçinin 4 həftədən köhnə mövzularınızı avtomatik silir. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Saytlarla paylaşılmasını istəmədiyiniz mövzuları bloklaya bilərsiniz. AIWize həmçinin 4 həftədən köhnə mövzularınızı avtomatik silir. <ph name="BEGIN_LINK"/>Ətraflı məlumat<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Saytları heç vaxt tərcümə etməyin</translation>
 <translation id="8348430946834215779">Mümkün olduqda HTTPS istifadə edin və onu dəstəkləməyən saytları yükləməzdən əvvəl xəbərdarlıq alın</translation>
 <translation id="8354977102499939946">Səsinizlə sürətlə axtarın. Bu qısayolu redaktə etmək üçün Ayarlara keçin.</translation>
@@ -1418,21 +1418,21 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8368001212524806591">Qiyməti izləyin</translation>
 <translation id="8387617938027387193">Kimliyinizi doğrulayın</translation>
 <translation id="8393700583063109961">Mesaj göndərin</translation>
-<translation id="7651600795135059130">URL'ləri Brave'da saxlanılan təhlükəli saytların siyahısı ilə yoxlayır</translation>
+<translation id="7651600795135059130">URL'ləri AIWize'da saxlanılan təhlükəli saytların siyahısı ilə yoxlayır</translation>
 <translation id="8402673309244746971">İzlənənlərə keçin</translation>
 <translation id="8413126021676339697">Tam tarixçəni göstərin</translation>
-<translation id="5348884013239264115">Təhlükəli sayt, endirmə və artırmalardan qoruyur. Sayta daxil olduqda Brave IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini Brave-a göndərir. Sayt şübhəli nəsə edərsə, tam URL və kiçik səhifə kontenti nümunələri də göndərilir.</translation>
+<translation id="5348884013239264115">Təhlükəli sayt, endirmə və artırmalardan qoruyur. Sayta daxil olduqda AIWize IP ünvanını gizlədən məxfilik serveri vasitəsilə URL-in qarışıq bir hissəsini AIWize-a göndərir. Sayt şübhəli nəsə edərsə, tam URL və kiçik səhifə kontenti nümunələri də göndərilir.</translation>
 <translation id="8414396119627470038"><ph name="SITE_ETLD_PLUS_ONE"/> saytına <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ilə daxil olun</translation>
 <translation id="8419244640277402268">Daxil edin</translation>
 <translation id="8422250855136581222">Bu cihazda tab yoxdur</translation>
-<translation id="5735840612282428689">Səhifə göndərildi. Onu görmək üçün bu cihazda Brave'u açın: <ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">Səhifə göndərildi. Onu görmək üçün bu cihazda AIWize'u açın: <ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">Önbaxış tabının yarısı açılıb</translation>
 <translation id="8428213095426709021">Ayarlar</translation>
 <translation id="8430824733382774043">Yalnız skrinşot paylaşın</translation>
 <translation id="8438566539970814960">Axtarış və brauzer fəaliyyətini təkmilləşdirin</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> - Dil hazırdır, <ph name="APP_NAME"/> tətbiqini yenidən başladın.</translation>
 <translation id="8442258441309440798">Əlçatan hekayə yoxdur</translation>
-<translation id="4058091506841967397">Brave güncəllənmir</translation>
+<translation id="4058091506841967397">AIWize güncəllənmir</translation>
 <translation id="8445448999790540984">Parolları eksport etmək alınmadı</translation>
 <translation id="8446884382197647889">Ətraflı Məlumat</translation>
 <translation id="8453310803815879010">Dinozavr oyununu başladın</translation>
@@ -1448,18 +1448,18 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8497480609928300907">Məxfilik bələdçisi izahı</translation>
 <translation id="8497726226069778601">Hələ ki, burada baxılası heç nə yoxdur.</translation>
 <translation id="8501423924927196358">Səhifə statistikasını yükləmə göstəricisi</translation>
-<translation id="230699814587342492">Brave Parolları</translation>
+<translation id="230699814587342492">AIWize Parolları</translation>
 <translation id="8503813439785031346">İstifadəçi adı</translation>
 <translation id="8505766168025405649">Endirmə statusu üçün bildirişə baxın</translation>
 <translation id="8506357771923193001">Endirmələr burada olacaq</translation>
-<translation id="133012818630824069">Brave'da saxlanılan parolları eksport edin</translation>
+<translation id="133012818630824069">AIWize'da saxlanılan parolları eksport edin</translation>
 <translation id="8516012719330875537">Şəkil Redaktoru</translation>
 <translation id="8523928698583292556">Yadda saxlanmış parolu silin</translation>
 <translation id="8526855376374973824">Bildiriş icazəsi prosesi</translation>
 <translation id="8540136935098276800">Düzgün formatlanmış URL daxil edin</translation>
 <translation id="854522910157234410">Bu səhifəni açın</translation>
-<translation id="5711390076756601471">Brave-dan çıxdıqda Incognito tablarını kilidləyin</translation>
-<translation id="5503308854539525011">Brave reklam performansını ölçmək üçün saytların brauzer vasitəsilə paylaşa biləcəyi ümumi data miqdarını məhdudlaşdırır</translation>
+<translation id="5711390076756601471">AIWize-dan çıxdıqda Incognito tablarını kilidləyin</translation>
+<translation id="5503308854539525011">AIWize reklam performansını ölçmək üçün saytların brauzer vasitəsilə paylaşa biləcəyi ümumi data miqdarını məhdudlaşdırır</translation>
 <translation id="8559990750235505898">Digər dillərdə səhifələrin tərcümə edilməsini təklif edin</translation>
 <translation id="8560602726703398413">Əlfəcinlərdə oxuma siyahınızı tapın</translation>
 <translation id="8562452229998620586">Saxlanmış parollar burada görünəcək.</translation>
@@ -1468,16 +1468,16 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8583805026567836021">Hesab datası silinir</translation>
 <translation id="859046281437143747">"Digər seçimlər" düyməsi ilə qiyməti izləyin</translation>
 <translation id="860043288473659153">Kart sahibinin adı</translation>
-<translation id="1673533133011266617">Brave'a giriş bağlıdır.</translation>
+<translation id="1673533133011266617">AIWize'a giriş bağlıdır.</translation>
 <translation id="860282621117673749">Qiymət endirimi siqnalları</translation>
-<translation id="5784514951651328424"><ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində Brave Hesabına məxsus axtarış tarixçəsinin başqa formaları ola bilər.</translation>
+<translation id="5784514951651328424"><ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> linkində AIWize Hesabına məxsus axtarış tarixçəsinin başqa formaları ola bilər.</translation>
 <translation id="8617240290563765734">Endirilmiş kontentdə təklif edilən link açılsın?</translation>
 <translation id="8621068256433641644">telefon</translation>
 <translation id="8636825310635137004">Panelləri digər cihazlarınızdan əldə etmək üçün sinxronizasiyanı aktiv edin.</translation>
 <translation id="864544049772947936">Pəncərələri idarə edin (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Təhlükəli hadisələr baş vermədən əvvəl onları proqnozlaşdırır və sizə xəbərdarlıq edir</translation>
-<translation id="2734140769649165081">Datanı Brave Ayarlarından silə bilərsiniz</translation>
-<translation id="7436978557885042606">Brave'u istədiyiniz kimi istifadə edin</translation>
+<translation id="2734140769649165081">Datanı AIWize Ayarlarından silə bilərsiniz</translation>
+<translation id="7436978557885042606">AIWize'u istədiyiniz kimi istifadə edin</translation>
 <translation id="8664979001105139458">Fayl adı artıq mövcuddur</translation>
 <translation id="8676276370198826499"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ilə <ph name="SITE_ETLD_PLUS_ONE"/> saytına daxil olun</translation>
 <translation id="8676789164135894283">Giriş doğrulamaları</translation>
@@ -1493,7 +1493,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="8748850008226585750">Məzmun gizlidir</translation>
 <translation id="8754448020583829686">Keçidsiz kopyalayın</translation>
 <translation id="8756969031206844760">Parol yenilənsin?</translation>
-<translation id="79269250264141507">Ünvan panelinə və ya axtarış xanasına mətn daxil etdiyiniz zaman Brave sizə daha yaxşı təkliflər təqdim etmək üçün yazdıqlarınızı defolt axtarış sisteminizə göndərir. Bu, Anonim rejimdə deaktivdir.</translation>
+<translation id="79269250264141507">Ünvan panelinə və ya axtarış xanasına mətn daxil etdiyiniz zaman AIWize sizə daha yaxşı təkliflər təqdim etmək üçün yazdıqlarınızı defolt axtarış sisteminizə göndərir. Bu, Anonim rejimdə deaktivdir.</translation>
 <translation id="8766529642647037772">Bunun kimi vurgulanmış keçid yaradılsın?</translation>
 <translation id="8773160212632396039">Sorğu icra olunur</translation>
 <translation id="8788265440806329501">Naviqasiya tarixçəsi bağlıdır</translation>
@@ -1515,15 +1515,15 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="885480114717186641"><ph name="HOST_NAME"/> üçün masaüstü saytı tələb edə bilərsiniz</translation>
 <translation id="8856607253650333758">Təsvirləri əldə edin</translation>
 <translation id="8856931513242997049">Bildiriş icazəsi prosesi bağlanıb</translation>
-<translation id="1984646864943401749">Yeni təhlükələri aşkarlamaq və vebdə hər kəsi qorumağa yardım etmək üçün daxil olduğunuz bəzi səhifələrin URL'lərini, məhdud sistem məlumatlarını və bəzi səhifə məzmunlarını Brave'a göndərin.</translation>
+<translation id="1984646864943401749">Yeni təhlükələri aşkarlamaq və vebdə hər kəsi qorumağa yardım etmək üçün daxil olduğunuz bəzi səhifələrin URL'lərini, məhdud sistem məlumatlarını və bəzi səhifə məzmunlarını AIWize'a göndərin.</translation>
 <translation id="8909135823018751308">Paylaşın...</translation>
-<translation id="2684652081942622950">Brave Hesabı</translation>
+<translation id="2684652081942622950">AIWize Hesabı</translation>
 <translation id="8921980840204105660">Əlfəcinlərinizi digər cihazlardan əldə etmək üçün sinxronizasiya edin</translation>
 <translation id="8922289737868596582">Oflayn istifadə etmək üçün səhifələri Digər seçimlər düyməsindən endirin</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Ətraflı Məlumat<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> hazırdır</translation>
-<translation id="1174893863889683998">Brave fəaliyyəti Rəqəmsal Sağlamlıqdan silinsin?</translation>
-<translation id="179413535815682755">Ayarlardan asılı olaraq Brave kukiləri, cari URL-i və məkanı da göndərə bilər</translation>
+<translation id="1174893863889683998">AIWize fəaliyyəti Rəqəmsal Sağlamlıqdan silinsin?</translation>
+<translation id="179413535815682755">Ayarlardan asılı olaraq AIWize kukiləri, cari URL-i və məkanı da göndərə bilər</translation>
 <translation id="8942627711005830162">Başqa pəncərədə açın</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Bu dili endirmək mümkün olmadı. Sonra cəhd edin.</translation>
 <translation id="8355284051444779553">Yeni Incognito tabı üçün menyunu açın</translation>
@@ -1535,9 +1535,9 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="2280910239864711607">Incognito rejimində yeni panel açın</translation>
 <translation id="8996847606757455498">Başqa provayder seçin</translation>
 <translation id="8998289560386111590">Cihazınızda əlçatan deyil</translation>
-<translation id="3275122921244685452"><ph name="MANAGED_DOMAIN"/> tərəfindən idarə olunan hesab ilə daxil olursunuz və onun administratoruna Brave datanız üzərində nəzarəti verirsiniz. Datanız həmişəlik bu hesab ilə əlaqələndiriləcək. Brave'dan çıxmaq datanızı bu cihazdan siləcək, lakin data Brave Hesabında qalacaq.</translation>
+<translation id="3275122921244685452"><ph name="MANAGED_DOMAIN"/> tərəfindən idarə olunan hesab ilə daxil olursunuz və onun administratoruna AIWize datanız üzərində nəzarəti verirsiniz. Datanız həmişəlik bu hesab ilə əlaqələndiriləcək. AIWize'dan çıxmaq datanızı bu cihazdan siləcək, lakin data AIWize Hesabında qalacaq.</translation>
 <translation id="8998837250940831980">Tab kiçildilmədi. Sonra cəhd edin.</translation>
-<translation id="9012585441087414258">Təhlükəli sayt, endirmə və artırmalardan qoruyur. Səhifədə şübhəli fəaliyyət olarsa, URL və səhifə kontentinin bir hissəsi Brave Güvənli Axtarışa göndərilir.</translation>
+<translation id="9012585441087414258">Təhlükəli sayt, endirmə və artırmalardan qoruyur. Səhifədə şübhəli fəaliyyət olarsa, URL və səhifə kontentinin bir hissəsi AIWize Güvənli Axtarışa göndərilir.</translation>
 <translation id="9019199799064251516">Avtomobil profil kilidi olmadan davam edilsin?</translation>
 <translation id="9022774213089566801">Tez-tez ziyarət edilənlər</translation>
 <translation id="9022871169049522985">Saytlar və reklamçılar öz reklamlarının performansını ölçə bilər</translation>
@@ -1547,7 +1547,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="9055497320631373736">Sayt yenidən potensial saytlara əlavə edilib</translation>
 <translation id="9063523880881406963">Əsas Versiya Sorğusunu deaktiv edin</translation>
 <translation id="9065203028668620118">Düzəliş edin</translation>
-<translation id="5496925146144075335">Brave'un vacib olduğunu düşünmədiyi saxlanmış data (məs. yadda saxlanmayan ayarlar ilə olan və ya tez-tez daxil olmadığınız saytlar)</translation>
+<translation id="5496925146144075335">AIWize'un vacib olduğunu düşünmədiyi saxlanmış data (məs. yadda saxlanmayan ayarlar ilə olan və ya tez-tez daxil olmadığınız saytlar)</translation>
 <translation id="9067341854474068781">Tam açılmış giriş açarı vərəqi yoxdur</translation>
 <translation id="906781307897697745"><ph name="PRODUCT_NAME"/> ərazisində</translation>
 <translation id="9069999660519089861">Oxunmamış səhifə yoxdur</translation>
@@ -1572,7 +1572,7 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="9158770349521403363">Yalnız məzmun paylaşın</translation>
 <translation id="9159716826369098114"><ph name="TAB_COUNT"/> tabdan ibarət tab qrupunu yeni arxa fon tab qrupu olaraq bərpa edin.</translation>
 <translation id="9169507124922466868">Naviqasiya tarixçəsi yarı açıqdır</translation>
-<translation id="4947625801334180582">Brave Beta</translation>
+<translation id="4947625801334180582">AIWize Beta</translation>
 <translation id="9190276265094487094">Bütün sinxronlaşdırılmış cihazlarınızda tarixçəniz olacaq, beləliklə, gördüyünüz işə davam edə bilərsiniz</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{1 dəqiqə əvvəl yoxlanılıb}other{# dəqiqə əvvəl yoxlanılıb}}</translation>
 <translation id="9204021776105550328">Silinir</translation>
@@ -1582,15 +1582,15 @@ Ayarı dəyişmək üçün <ph name="BEGIN_LINK"/>sinxronizasiyanı sıfırlayı
 <translation id="9209888181064652401">Zəng etmək mümkün deyil</translation>
 <translation id="9212845824145208577">Aşağıya keçmək olmur. Səhifənin aşağısından başlamağı sınayın.</translation>
 <translation id="9219103736887031265">Şəkillər</translation>
-<translation id="6946179564366058239">Sayt öz səhifəsindəki keçidləri məxfi olaraq əvvəlcədən yükləməyi tələb etdikdə, Brave kukilər olmadan Brave serverləri vasitəsilə səhifələri şifrələyir və əvvəlcədən yükləyir. Bu, kimliyinizi əvvəlcədən yüklənmiş saytdan gizlədir.</translation>
-<translation id="4596514158372210596">Digital Sağlamlıqdan Brave fəaliyyətini silin</translation>
-<translation id="2830145431802238213">Brave'da Lite rejimindən istifadə edin</translation>
+<translation id="6946179564366058239">Sayt öz səhifəsindəki keçidləri məxfi olaraq əvvəlcədən yükləməyi tələb etdikdə, AIWize kukilər olmadan AIWize serverləri vasitəsilə səhifələri şifrələyir və əvvəlcədən yükləyir. Bu, kimliyinizi əvvəlcədən yüklənmiş saytdan gizlədir.</translation>
+<translation id="4596514158372210596">Digital Sağlamlıqdan AIWize fəaliyyətini silin</translation>
+<translation id="2830145431802238213">AIWize'da Lite rejimindən istifadə edin</translation>
 <translation id="928550791203542716"><ph name="SITE_NAME"/> izlənilir</translation>
 <translation id="93533588269984624">Bütün parollar cihaza endiriləcək və <ph name="CHROME_CHANNEL"/> kanalından silinəcək</translation>
 <translation id="938850635132480979">Xəta: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">Parol daxil edin</translation>
 <translation id="952301137339791907">Səhifə statistikası üzrə aşağı vərəq açılıb</translation>
-<translation id="5406914950576900927">Brave, Çində axtarış üçün <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> istifadə edə bilər. Bunu <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/> bölməsindən dəyişə bilərsiniz.</translation>
+<translation id="5406914950576900927">AIWize, Çində axtarış üçün <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> istifadə edə bilər. Bunu <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/> bölməsindən dəyişə bilərsiniz.</translation>
 <translation id="962979164594783469">Bu tətbiqi quraşdırın</translation>
 <translation id="96681097142096641">Sadələşdirilmiş səhifəyə baxmaq istəyirsiniz?</translation>
 <translation id="968900484120156207">Girdiyiniz səhifələr burada görünəcək</translation>

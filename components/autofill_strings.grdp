@@ -38,24 +38,24 @@
   </message>
   <if expr="_google_chrome">
     <message name="IDS_AUTOFILL_DELETE_AUTOCOMPLETE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an autocomplete form history suggestion.">
-      Remove form suggestion from Brave?
+      Remove form suggestion from AIWize?
     </message>
     <message name="IDS_AUTOFILL_DELETE_CREDIT_CARD_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete a credit card from Autofill.">
-      Remove credit card from Brave?
+      Remove credit card from AIWize?
     </message>
     <message name="IDS_AUTOFILL_DELETE_PROFILE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an address from Autofill.">
-      Remove address from Brave?
+      Remove address from AIWize?
     </message>
   </if>
   <if expr="not _google_chrome">
     <message name="IDS_AUTOFILL_DELETE_AUTOCOMPLETE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an autocomplete form history suggestion.">
-      Remove form suggestion from Brave?
+      Remove form suggestion from AIWize?
     </message>
     <message name="IDS_AUTOFILL_DELETE_CREDIT_CARD_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete a credit card from Autofill.">
-      Remove credit card from Brave?
+      Remove credit card from AIWize?
     </message>
     <message name="IDS_AUTOFILL_DELETE_PROFILE_SUGGESTION_CONFIRMATION_BODY" desc="Text in a dialog to confirm that the user wants to delete an address from Autofill.">
-      Remove address from Brave?
+      Remove address from AIWize?
     </message>
   </if>
   <message name="IDS_AUTOFILL_DELETE_AUTOCOMPLETE_SUGGESTION_TOOLTIP" desc="Tooltip shown when hovering over a small button with a trash-can logo next to an Autocomplete entry in the Autofill popup.">
@@ -82,7 +82,7 @@
   <message name="IDS_AUTOFILL_CC_ELO" desc="Elo credit card name.">
     Elo
   </message>
-  <message name="IDS_AUTOFILL_CC_GOOGLE_PAY" desc="Brave pay brand name">
+  <message name="IDS_AUTOFILL_CC_GOOGLE_PAY" desc="AIWize pay brand name">
     Google Pay
   </message>
   <message name="IDS_AUTOFILL_CC_JCB" desc="JCB credit card name.">
@@ -326,7 +326,7 @@
     Address is available only on this device
   </message>
   <message name="IDS_AUTOFILL_SYNC_TOGGLE_LABEL" desc="The Sync Autofill toggle label on the Autofill Settings page.">
-    Use and save Addresses from your Brave sync chain
+    Use and save Addresses from your AIWize sync chain
   </message>
   <if expr="not is_ios">
     <then>
@@ -406,7 +406,7 @@
       Default
     </message>
     <!-- TODO(crbug.com/1469795): Use finalized string.-->
-    <message translateable="false" name="IDS_AUTOFILL_THIRD_PARTY_FILLING_OPT_IN" desc="Title of the option to use third-party autofill in Brave." formatter_data="android_java">
+    <message translateable="false" name="IDS_AUTOFILL_THIRD_PARTY_FILLING_OPT_IN" desc="Title of the option to use third-party autofill in AIWize." formatter_data="android_java">
       Use other providers
     </message>
     <!-- TODO(crbug.com/1469795): Use finalized string.-->
@@ -414,7 +414,7 @@
       Use AI Wiz Password Manager and AI Wiz Autofill to save and fill passwords, passkeys, payment methods, and addresses
     </message>
     <!-- TODO(crbug.com/1469795): Use finalized string.-->
-    <message translateable="false" name="IDS_AUTOFILL_THIRD_PARTY_FILLING_OPT_IN_DESCRIPTION" desc="Description shown on the option enabling the use of third-party autofill in Brave." formatter_data="android_java">
+    <message translateable="false" name="IDS_AUTOFILL_THIRD_PARTY_FILLING_OPT_IN_DESCRIPTION" desc="Description shown on the option enabling the use of third-party autofill in AIWize." formatter_data="android_java">
       Use password managers and autofill services that are turned on in Android Settings
     </message>
   </if>
@@ -488,7 +488,7 @@
     You can use saved addresses across AI Wiz products. This address is saved in your AI Wiz sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>.
   </message>
   <message name="IDS_AUTOFILL_SYNCABLE_PROFILE_MIGRATION_PROMPT_NOTICE" desc="The syncable profile prompt body text.">
-    This address is currently saved to Brave. To use it across AI Wiz products, save it in your AI Wiz sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>.
+    This address is currently saved to AIWize. To use it across AI Wiz products, save it in your AI Wiz sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>.
   </message>
   <message name="IDS_AUTOFILL_LOCAL_PROFILE_MIGRATION_PROMPT_NOTICE" desc="The local profile prompt body text.">
     This address is currently saved to this device. To use it across AI Wiz products, save it in your AI Wiz sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>.

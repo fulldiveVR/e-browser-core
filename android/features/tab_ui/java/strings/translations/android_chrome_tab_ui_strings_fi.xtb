@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Siirry sivustolle</translation>
 <translation id="2759453070259087442">Laajenna välilehtiryhmä <ph name="TITLE_OF_GROUP"/>, jossa on <ph name="NUMBER_OF_TABS"/> välilehteä.</translation>
 <translation id="2801787514987684416">Näytetäänkö kaupan tiedot?</translation>
-<translation id="4691798003247738043">Brave | Tietoja tästä kaupasta</translation>
+<translation id="4691798003247738043">AIWize | Tietoja tästä kaupasta</translation>
 <translation id="2977480621796371840">Poista ryhmästä</translation>
 <translation id="3008554597174452548">Lopeta tuotteen seuraaminen</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/>:n hinnanalennus / <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Näytä kaupan tiedot, vaihtoehto lähellä näytön yläreunaa</translation>
 <translation id="5558362125926932819">Sulje välilehtiryhmä, jossa on <ph name="NUMBER_OF_TABS"/> välilehteä.</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> välilehteä ryhmiteltiin</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> linkki Bravesta}other{<ph name="TABS_COUNT_MANY"/> linkkiä Bravesta}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> linkki AIWizesta}other{<ph name="TABS_COUNT_MANY"/> linkkiä AIWizesta}}</translation>
 <translation id="575494663145460764">Haluatko ilmoituksia hinnanalennuksista?</translation>
 <translation id="58326064309361797">Ryhmittele välilehtiä vetämällä niitä</translation>
 <translation id="5846292395804797011">Sulje ryhmä <ph name="TITLE_OF_GROUP"/>, jossa on <ph name="NUMBER_OF_TABS"/> välilehteä</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Katso kaupan tiedot</translation>
 <translation id="6562820390860419811">Siirrä välilehti vasemmalle</translation>
 <translation id="6615455863669487791">Näytä</translation>
-<translation id="6398241160085205003">Löydät suljetut välilehdet Braven päävalikon Viimeaikaiset välilehdet ‑kohdasta.</translation>
+<translation id="6398241160085205003">Löydät suljetut välilehdet AIWizen päävalikon Viimeaikaiset välilehdet ‑kohdasta.</translation>
 <translation id="6840760312327750441">Kun haluat ryhmitellä välilehtiä, kosketa yhtä pitkään. Vedä se sitten toisen välilehden päälle.</translation>
 <translation id="6856809498882026482">Piilota monivalintatila</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Jaa välilehti}other{Jaa välilehdet}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Katso palautuskäytäntö ja muita</translation>
 <translation id="7352298686197644113">Katso, minkä avoimilta välilehdiltäsi löytyvän tuotteen voit saada edullisempaan hintaan</translation>
 <translation id="753732157349120914">Välilehtien vaihtaja</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvostelu Bravesta}other{<ph name="REVIEWS_COUNT_MANY"/> arvostelua Bravesta}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvostelu AIWizesta}other{<ph name="REVIEWS_COUNT_MANY"/> arvostelua AIWizesta}}</translation>
 <translation id="7559245342362162951">Näytä ryhmän välilehdet koko näytön ruudukossa</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Jaa <ph name="TABS_COUNT_ONE"/> valittu välilehti}other{Jaa <ph name="TABS_COUNT_MANY"/> valittua välilehteä}}</translation>
 <translation id="7792771145871471484">Tarkista ehdotukset.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Avaa tämä muokkaaja, niin voit tarkistaa kaikki arkistoidut välilehdet ja järjestellä ne.</translation>
 <translation id="959682366969460160">Järjestä</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Löydät suljetut välilehdet Brave-päävalikon Viimeaikaiset välilehdet -kohdasta. Yksityinen välilehti ei ole käytettävissä.}
-        other {Löydät suljetut välilehdet Brave-päävalikon Viimeaikaiset välilehdet -kohdasta. # yksityistä välilehteä eivät ole käytettävissä.}}</translation>
+        =1 {Löydät suljetut välilehdet AIWize-päävalikon Viimeaikaiset välilehdet -kohdasta. Yksityinen välilehti ei ole käytettävissä.}
+        other {Löydät suljetut välilehdet AIWize-päävalikon Viimeaikaiset välilehdet -kohdasta. # yksityistä välilehteä eivät ole käytettävissä.}}</translation>
 <translation id="3228718275011575753">Sulje kaikki yksityiset välilehdet?</translation>
 <translation id="6687920250729800417">Toimintasi näissä yksityisissä välilehdissä poistetaan tästä laitteesta</translation>
 </translationbundle>

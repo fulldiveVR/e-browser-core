@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Site bezoeken</translation>
 <translation id="2759453070259087442">De tabbladgroep <ph name="TITLE_OF_GROUP"/> uitvouwen met <ph name="NUMBER_OF_TABS"/> tabbladen.</translation>
 <translation id="2801787514987684416">Winkelinformatie bekijken?</translation>
-<translation id="4691798003247738043">Brave | Over deze winkel</translation>
+<translation id="4691798003247738043">AIWize | Over deze winkel</translation>
 <translation id="2977480621796371840">Uit groep verwijderen</translation>
 <translation id="3008554597174452548">Product niet meer volgen</translation>
 <translation id="3052964831964880138">Prijsdaling van <ph name="PRICE_DROP"/> voor <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Winkelinformatie bekijken, optie beschikbaar bovenaan het scherm</translation>
 <translation id="5558362125926932819">Tabbladgroep met <ph name="NUMBER_OF_TABS"/> tabbladen sluiten</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> tabbladen gegroepeerd</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link vanuit Brave}other{<ph name="TABS_COUNT_MANY"/> links vanuit Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link vanuit AIWize}other{<ph name="TABS_COUNT_MANY"/> links vanuit AIWize}}</translation>
 <translation id="575494663145460764">Meldingen krijgen voor prijsdalingen?</translation>
 <translation id="58326064309361797">Sleep de tabbladen om ze te groeperen</translation>
 <translation id="5846292395804797011">De groep <ph name="TITLE_OF_GROUP"/> met <ph name="NUMBER_OF_TABS"/> tabbladen sluiten</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Winkelinformatie bekijken</translation>
 <translation id="6562820390860419811">Tabblad naar links verplaatsen</translation>
 <translation id="6615455863669487791">Tonen</translation>
-<translation id="6398241160085205003">Je vindt je gesloten tabbladen bij Recente tabbladen in het hoofdmenu van Brave.</translation>
+<translation id="6398241160085205003">Je vindt je gesloten tabbladen bij Recente tabbladen in het hoofdmenu van AIWize.</translation>
 <translation id="6840760312327750441">Groepeer tabbladen door ze vast te houden en naar andere tabbladen te slepen.</translation>
 <translation id="6856809498882026482">Optie om meerdere tabbladen te selecteren verbergen</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Tabblad delen}other{Tabbladen delen}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Retourbeleid en meer bekijken</translation>
 <translation id="7352298686197644113">Bekijk welk item op je geopende tabbladen een lagere prijs heeft</translation>
 <translation id="753732157349120914">Tabbladschakelaar</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review van Brave}other{<ph name="REVIEWS_COUNT_MANY"/> reviews van Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review van AIWize}other{<ph name="REVIEWS_COUNT_MANY"/> reviews van AIWize}}</translation>
 <translation id="7559245342362162951">Tabbladen van groep bekijken in raster op volledig scherm</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> geselecteerd tabblad delen}other{<ph name="TABS_COUNT_MANY"/> geselecteerde tabbladen delen}}</translation>
 <translation id="7792771145871471484">Bekijk de suggesties.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Check alle gearchiveerde tabbladen die je kunt opruimen door deze editor te openen.</translation>
 <translation id="959682366969460160">Georganiseerd werken</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {U kunt uw gesloten tabbladen vinden onder Recente tabbladen in het hoofdmenu van Brave. Uw Private-tabblad is niet beschikbaar.}
-        other {U kunt uw gesloten tabbladen vinden onder Recente tabbladen in het hoofdmenu van Brave. Uw # Private-tabbladen zijn niet beschikbaar.}}</translation>
+        =1 {U kunt uw gesloten tabbladen vinden onder Recente tabbladen in het hoofdmenu van AIWize. Uw Private-tabblad is niet beschikbaar.}
+        other {U kunt uw gesloten tabbladen vinden onder Recente tabbladen in het hoofdmenu van AIWize. Uw # Private-tabbladen zijn niet beschikbaar.}}</translation>
 <translation id="3228718275011575753">Alle privétabbladen sluiten?</translation>
 <translation id="6687920250729800417">Uw activiteit in deze Private-tabbladen wordt van dit apparaat verwijderd</translation>
 </translationbundle>

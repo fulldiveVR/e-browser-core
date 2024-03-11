@@ -21,7 +21,7 @@
 <translation id="266935134738038806">사이트 방문</translation>
 <translation id="2759453070259087442"><ph name="NUMBER_OF_TABS"/>개의 탭이 포함된 <ph name="TITLE_OF_GROUP"/> 탭 그룹을 확장합니다.</translation>
 <translation id="2801787514987684416">스토어 정보를 확인하시겠습니까?</translation>
-<translation id="4691798003247738043">Brave | 매장 정보</translation>
+<translation id="4691798003247738043">AIWize | 매장 정보</translation>
 <translation id="2977480621796371840">그룹에서 삭제</translation>
 <translation id="3008554597174452548">제품 추적 중지</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> 가격 <ph name="PRICE_DROP"/> 인하</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">스토어 정보 보기, 화면 상단에 옵션 있음</translation>
 <translation id="5558362125926932819">탭 <ph name="NUMBER_OF_TABS"/>개가 포함된 탭 그룹 닫기</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/>개의 탭 그룹화됨</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave 링크 <ph name="TABS_COUNT_ONE"/>개}other{Brave 링크 <ph name="TABS_COUNT_MANY"/>개}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AIWize 링크 <ph name="TABS_COUNT_ONE"/>개}other{AIWize 링크 <ph name="TABS_COUNT_MANY"/>개}}</translation>
 <translation id="575494663145460764">가격 인하 알림을 받으시겠습니까?</translation>
 <translation id="58326064309361797">탭을 드래그하여 그룹화하세요.</translation>
 <translation id="5846292395804797011">탭 <ph name="NUMBER_OF_TABS"/>개가 포함된 <ph name="TITLE_OF_GROUP"/> 그룹 닫기</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">매장 정보 보기</translation>
 <translation id="6562820390860419811">탭을 왼쪽으로 이동</translation>
 <translation id="6615455863669487791">보기</translation>
-<translation id="6398241160085205003">Brave 기본 메뉴의 최근 탭에서 종료된 탭을 확인할 수 있습니다.</translation>
+<translation id="6398241160085205003">AIWize 기본 메뉴의 최근 탭에서 종료된 탭을 확인할 수 있습니다.</translation>
 <translation id="6840760312327750441">탭을 그룹화하려면 탭을 길게 터치한 다음 다른 탭으로 드래그하세요.</translation>
 <translation id="6856809498882026482">다중 선택 모드 숨기기</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{탭 공유}other{탭 공유}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">반품 정책 등 확인하기</translation>
 <translation id="7352298686197644113">열려 있는 탭의 상품 중 가격이 더 낮은 상품을 확인합니다.</translation>
 <translation id="753732157349120914">탭 전환 도구</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave에서 찾은 리뷰 <ph name="REVIEWS_COUNT_ONE"/>개}other{Brave에서 찾은 리뷰 <ph name="REVIEWS_COUNT_MANY"/>개}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AIWize에서 찾은 리뷰 <ph name="REVIEWS_COUNT_ONE"/>개}other{AIWize에서 찾은 리뷰 <ph name="REVIEWS_COUNT_MANY"/>개}}</translation>
 <translation id="7559245342362162951">그룹 탭을 전체화면 그리드로 표시</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{선택한 탭 <ph name="TABS_COUNT_ONE"/>개 공유}other{선택한 탭 <ph name="TABS_COUNT_MANY"/>개 공유}}</translation>
 <translation id="7792771145871471484">추천을 검토합니다.</translation>

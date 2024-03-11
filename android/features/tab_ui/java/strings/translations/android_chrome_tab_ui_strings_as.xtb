@@ -22,7 +22,7 @@
 <translation id="266935134738038806">ছাইটটোলৈ যাওক</translation>
 <translation id="2759453070259087442"><ph name="TITLE_OF_GROUP"/> টেবৰ গোটটো <ph name="NUMBER_OF_TABS"/> টা টেবৰ সৈতে বিস্তাৰ কৰক।</translation>
 <translation id="2801787514987684416">ষ্ট’ৰৰ তথ্য চাব নেকি?</translation>
-<translation id="4691798003247738043">Brave | এই ষ্ট'ৰখনৰ বিষয়ে</translation>
+<translation id="4691798003247738043">AIWize | এই ষ্ট'ৰখনৰ বিষয়ে</translation>
 <translation id="2977480621796371840">গোটৰ পৰা আঁতৰাওক</translation>
 <translation id="3008554597174452548">প্ৰ'ডাক্ট ট্ৰেক কৰাটো বন্ধ কৰক</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/>ৰ দাম <ph name="PRICE_DROP"/> কমিছে</translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">ষ্ট’ৰৰ তথ্য চাওক, বিকল্পটো স্ক্ৰীনখনৰ প্ৰায় শীৰ্ষত আছে</translation>
 <translation id="5558362125926932819"><ph name="NUMBER_OF_TABS"/> টা টেবযুক্ত টেবৰ গোট বন্ধ কৰক</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/>টা টেব এক গোট কৰা হৈছে</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Braveৰ পৰা <ph name="TABS_COUNT_ONE"/> টা লিংক}one{Braveৰ পৰা <ph name="TABS_COUNT_MANY"/> টা লিংক}other{Braveৰ পৰা <ph name="TABS_COUNT_MANY"/> টা লিংক}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AIWizeৰ পৰা <ph name="TABS_COUNT_ONE"/> টা লিংক}one{AIWizeৰ পৰা <ph name="TABS_COUNT_MANY"/> টা লিংক}other{AIWizeৰ পৰা <ph name="TABS_COUNT_MANY"/> টা লিংক}}</translation>
 <translation id="575494663145460764">মূল্য কমাৰ সতৰ্কবাৰ্তা পাবলৈ বিচাৰেনে?</translation>
 <translation id="58326064309361797">এক গোট কৰিবলৈ টেববোৰ টানি আনি এৰক</translation>
 <translation id="5846292395804797011"><ph name="NUMBER_OF_TABS"/> টা টেবযুক্ত <ph name="TITLE_OF_GROUP"/> গোটটো বন্ধ কৰক</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(ষ্ট’ৰৰ মূল্যাংকন)</translation>
 <translation id="6333260925957816943">এই দোকানৰ বিষয়ে তথ্য</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{বাছনি কৰা <ph name="TABS_COUNT_ONE"/> টা টেবৰ গোট ভংগ কৰক}one{বাছনি কৰা <ph name="TABS_COUNT_MANY"/> টা টেবৰ গোট ভংগ কৰক}other{বাছনি কৰা <ph name="TABS_COUNT_MANY"/> টা টেবৰ গোট ভংগ কৰক}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{আপুনি Braveৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ ইনক’গ্নিট’ টেবটো উপলব্ধ নহ’ব।}one{আপুনি Braveৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ # টা ইনক’গ্নিট’ টেব উপলব্ধ নহ’ব।}other{আপুনি Braveৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ # টা ইনক’গ্নিট’ টেব উপলব্ধ নহ’ব।}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{আপুনি AIWizeৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ ইনক’গ্নিট’ টেবটো উপলব্ধ নহ’ব।}one{আপুনি AIWizeৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ # টা ইনক’গ্নিট’ টেব উপলব্ধ নহ’ব।}other{আপুনি AIWizeৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে। আপোনাৰ # টা ইনক’গ্নিট’ টেব উপলব্ধ নহ’ব।}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> টা টেব}one{<ph name="TABS_COUNT_MANY"/> টা টেব}other{<ph name="TABS_COUNT_MANY"/> টা টেব}}</translation>
 <translation id="6549021453810473782">ষ্ট’ৰৰ তথ্য চাওক</translation>
 <translation id="6562820390860419811">টেবটো বাওঁফাললৈ নিয়ক</translation>
 <translation id="6615455863669487791">মোক দেখুৱাওক</translation>
-<translation id="6398241160085205003">আপুনি Braveৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে।</translation>
+<translation id="6398241160085205003">আপুনি AIWizeৰ মুখ্য মেনুখনত থকা শেহতীয়া টেবসমূহত আপোনাৰ বন্ধ কৰা টেবসমূহ বিচাৰি পাব পাৰে।</translation>
 <translation id="6840760312327750441">টেববোৰ একগোট কৰিবলৈ, এটা টেবত স্পৰ্শ কৰি ধৰি ৰাখক। তাৰপাছত, এইটো অন্য এটা টেবলৈ টানি আনি এৰক।</translation>
 <translation id="6856809498882026482">একাধিক বাছনি কৰিব পৰা ম’ডটো লুকুৱাওক</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{টেব শ্বেয়াৰ কৰক}one{টেব শ্বেয়াৰ কৰক}other{টেব শ্বেয়াৰ কৰক}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">উভতাই দিয়াৰ নীতি আৰু অন্য বহুতো চাওক</translation>
 <translation id="7352298686197644113">আপোনাৰ খোলা থকা টেবসমূহত কোনটো বস্তুৰ মূল্য কম সেয়া চাওক</translation>
 <translation id="753732157349120914">টেব সলনি কৰোঁতা</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Braveৰ পৰা <ph name="REVIEWS_COUNT_ONE"/> টা পর্যালোচনা}one{Braveৰ পৰা <ph name="REVIEWS_COUNT_MANY"/> টা পর্যালোচনা}other{Braveৰ পৰা <ph name="REVIEWS_COUNT_MANY"/> টা পর্যালোচনা}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AIWizeৰ পৰা <ph name="REVIEWS_COUNT_ONE"/> টা পর্যালোচনা}one{AIWizeৰ পৰা <ph name="REVIEWS_COUNT_MANY"/> টা পর্যালোচনা}other{AIWizeৰ পৰা <ph name="REVIEWS_COUNT_MANY"/> টা পর্যালোচনা}}</translation>
 <translation id="7559245342362162951">গোটৰ টেব সম্পূৰ্ণ স্ক্রীণৰ গ্রিডত দেখুৱাওক</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> টা বাছনি কৰা টেব শ্বেয়াৰ কৰক}one{<ph name="TABS_COUNT_MANY"/> টা বাছনি কৰা টেব শ্বেয়াৰ কৰক}other{<ph name="TABS_COUNT_MANY"/> টা বাছনি কৰা টেব শ্বেয়াৰ কৰক}}</translation>
 <translation id="7792771145871471484">পৰামৰ্শসমূহ পৰ্যালোচনা কৰক।</translation>

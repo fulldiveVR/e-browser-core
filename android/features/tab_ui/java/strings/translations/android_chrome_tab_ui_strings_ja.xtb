@@ -21,7 +21,7 @@
 <translation id="266935134738038806">サイトを見る</translation>
 <translation id="2759453070259087442"><ph name="TITLE_OF_GROUP"/> タブグループの <ph name="NUMBER_OF_TABS"/> 個のタブを展開します。</translation>
 <translation id="2801787514987684416">ストア情報を表示しますか？</translation>
-<translation id="4691798003247738043">Brave | このショップについて</translation>
+<translation id="4691798003247738043">AIWize | このショップについて</translation>
 <translation id="2977480621796371840">グループから削除</translation>
 <translation id="3008554597174452548">商品のトラッキングを停止</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> が <ph name="PRICE_DROP"/> 値下げ</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">ストア情報を表示、画面上部付近に表示されるオプション</translation>
 <translation id="5558362125926932819">タブグループの <ph name="NUMBER_OF_TABS"/> 個のタブを閉じます</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> 個のタブがグループ化されました</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave からの <ph name="TABS_COUNT_ONE"/> 件のリンク}other{Brave からの <ph name="TABS_COUNT_MANY"/> 件のリンク}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AIWize からの <ph name="TABS_COUNT_ONE"/> 件のリンク}other{AIWize からの <ph name="TABS_COUNT_MANY"/> 件のリンク}}</translation>
 <translation id="575494663145460764">値下げアラートを受け取りますか？</translation>
 <translation id="58326064309361797">タブをグループ化するにはドラッグします</translation>
 <translation id="5846292395804797011"><ph name="TITLE_OF_GROUP"/> グループの <ph name="NUMBER_OF_TABS"/> 個のタブを閉じます</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">返品に関するポリシーなどを確認</translation>
 <translation id="7352298686197644113">開いているタブに値下げされた商品があります</translation>
 <translation id="753732157349120914">タブ切り替え機能</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave による審査 <ph name="REVIEWS_COUNT_ONE"/> 件}other{Brave による審査 <ph name="REVIEWS_COUNT_MANY"/> 件}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AIWize による審査 <ph name="REVIEWS_COUNT_ONE"/> 件}other{AIWize による審査 <ph name="REVIEWS_COUNT_MANY"/> 件}}</translation>
 <translation id="7559245342362162951">グループのタブを全画面グリッドで表示</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{選択した <ph name="TABS_COUNT_ONE"/> 個のタブを共有}other{選択した <ph name="TABS_COUNT_MANY"/> 個のタブを共有}}</translation>
 <translation id="7792771145871471484">提案を確認します。</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">このエディタを開くと、アーカイブ済みのすべてのタブを確認して整理できます。</translation>
 <translation id="959682366969460160">タブを整理</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {閉じたタブは、Braveメインメニューの「最近使ったタブ」で確認できます。プライベートタブは表示されません。}
-        other {閉じたタブは、Braveメインメニューの「最近使ったタブ」で確認できます。#件のプライベートタブは表示されません。}}</translation>
+        =1 {閉じたタブは、AIWizeメインメニューの「最近使ったタブ」で確認できます。プライベートタブは表示されません。}
+        other {閉じたタブは、AIWizeメインメニューの「最近使ったタブ」で確認できます。#件のプライベートタブは表示されません。}}</translation>
 <translation id="3228718275011575753">すべてのプライベートタブを閉じますか？</translation>
 <translation id="6687920250729800417">これらのプライベートタブでのアクティビティはこのデバイスから削除されます</translation>
 </translationbundle>

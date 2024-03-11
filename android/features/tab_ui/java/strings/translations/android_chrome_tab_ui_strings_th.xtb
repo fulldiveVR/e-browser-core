@@ -21,7 +21,7 @@
 <translation id="266935134738038806">ไปที่เว็บไซต์</translation>
 <translation id="2759453070259087442">ขยายกลุ่มแท็บ <ph name="TITLE_OF_GROUP"/> จำนวน <ph name="NUMBER_OF_TABS"/> แท็บ</translation>
 <translation id="2801787514987684416">ดูข้อมูลร้านค้าไหม</translation>
-<translation id="4691798003247738043">Brave | เกี่ยวกับร้านนี้</translation>
+<translation id="4691798003247738043">AIWize | เกี่ยวกับร้านนี้</translation>
 <translation id="2977480621796371840">นำออกจากกลุ่ม</translation>
 <translation id="3008554597174452548">หยุดติดตามผลิตภัณฑ์</translation>
 <translation id="3052964831964880138">ลดราคา <ph name="PRICE_DROP"/> สำหรับ <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">ดูข้อมูลร้านค้า ตัวเลือกจะอยู่ตรงบริเวณด้านบนของหน้าจอ</translation>
 <translation id="5558362125926932819">ปิดกลุ่มแท็บที่มีแท็บอยู่ <ph name="NUMBER_OF_TABS"/> แท็บ</translation>
 <translation id="5580090775658607195">จัดกลุ่มไว้ <ph name="TAB_COUNT"/> แท็บ</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ลิงก์จาก Brave}other{<ph name="TABS_COUNT_MANY"/> ลิงก์จาก Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ลิงก์จาก AIWize}other{<ph name="TABS_COUNT_MANY"/> ลิงก์จาก AIWize}}</translation>
 <translation id="575494663145460764">รับการแจ้งเตือนการลดราคาไหม</translation>
 <translation id="58326064309361797">ลากแท็บเพื่อจัดกลุ่ม</translation>
 <translation id="5846292395804797011">เลือกกลุ่ม <ph name="TITLE_OF_GROUP"/> ที่มีแท็บอยู่ <ph name="NUMBER_OF_TABS"/> แท็บ</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">ดูข้อมูลร้านค้า</translation>
 <translation id="6562820390860419811">ย้ายแท็บไปทางซ้าย</translation>
 <translation id="6615455863669487791">แสดงให้ฉันเห็น</translation>
-<translation id="6398241160085205003">คุณค้นหาแท็บที่ปิดไปได้ในแท็บล่าสุดในส่วนเมนูหลักของ Brave</translation>
+<translation id="6398241160085205003">คุณค้นหาแท็บที่ปิดไปได้ในแท็บล่าสุดในส่วนเมนูหลักของ AIWize</translation>
 <translation id="6840760312327750441">หากต้องการจัดกลุ่มแท็บ ให้แตะแท็บหนึ่งค้างไว้ แล้วลากไปที่อีกแท็บ</translation>
 <translation id="6856809498882026482">ซ่อนโหมดเลือกหลายรายการ</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{แชร์แท็บ}other{แชร์แท็บ}}</translation>

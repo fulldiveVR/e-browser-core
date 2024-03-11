@@ -5,11 +5,11 @@
 <translation id="1555506416658437797">төлеу әдістерін өзгерткісі келеді.</translation>
 <translation id="7999989146447764333">Бұзылу туралы хабарлау мүмкіндігі AI Wiz қызметінде қолжетімді емес.</translation>
 <translation id="1953231710324290369">Қауіпсіз AI Wiz бетін көрудесіз</translation>
-<translation id="907470742420136113">Brave төлеу әдістерін толтыру параметрлерін өзгерткісі келеді.</translation>
-<translation id="4847979153841887006">Brave логотипі</translation>
-<translation id="336808635693308470">Brave төлеу әдістерін өзгерткісі келеді.</translation>
-<translation id="7932149101545999102">Brave қолданбасына <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> ашық бастапқы код жобасы мен басқа <ph name="BEGIN_LINK_OSS"/>ашық бастапқы код бағдарламалық жасақтамасы<ph name="END_LINK_OSS"/> арқылы қол жеткізілді.</translation>
-<translation id="8746410156982274638">"Brave мәзірі &gt;
+<translation id="907470742420136113">AIWize төлеу әдістерін толтыру параметрлерін өзгерткісі келеді.</translation>
+<translation id="4847979153841887006">AIWize логотипі</translation>
+<translation id="336808635693308470">AIWize төлеу әдістерін өзгерткісі келеді.</translation>
+<translation id="7932149101545999102">AIWize қолданбасына <ph name="BEGIN_LINK_CHROMIUM"/>AIWize<ph name="END_LINK_CHROMIUM"/> ашық бастапқы код жобасы мен басқа <ph name="BEGIN_LINK_OSS"/>ашық бастапқы код бағдарламалық жасақтамасы<ph name="END_LINK_OSS"/> арқылы қол жеткізілді.</translation>
+<translation id="8746410156982274638">"AIWize мәзірі &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -21,7 +21,7 @@
 <translation id="303960458633076466">Бұл бетке AI Wiz тарапынан тыйым салынған.</translation>
 <translation id="2017237562285586622">Брандмауэр немесе антивирус параметрлерінде AI Wiz жүйесіне
           желіге кіруге рұқсат беріңіз.</translation>
-<translation id="8619622797841001082">Brave мәзірі &gt;
+<translation id="8619622797841001082">AIWize мәзірі &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -31,8 +31,8 @@
 <translation id="585620188971323280">төлеу әдістерін толтыру параметрлерін өзгертіңіз.</translation>
 <translation id="2765022094254723779">Сонымен қатар AI Wiz басқа <ph name="BEGIN_LINK_OSS"/>ашық кодты бағдарламалық құрал<ph name="END_LINK_OSS"/> арқылы қолжетімді болады.</translation>
 <translation id="9156965752763025780">Өзгертулеріңіз AI Wiz келесі рет қайта іске қосылғанда күшіне енеді.</translation>
-<translation id="6477625882876869143">Brave браузері <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> ашық кодты бағдарлама жобасы арқылы қолжетімді болады.</translation>
-<translation id="4068928808254189629">Brave мәзірі &gt;
+<translation id="6477625882876869143">AIWize браузері <ph name="BEGIN_LINK_CHROMIUM"/>AIWize<ph name="END_LINK_CHROMIUM"/> ашық кодты бағдарлама жобасы арқылы қолжетімді болады.</translation>
+<translation id="4068928808254189629">AIWize мәзірі &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -42,5 +42,5 @@
 <translation id="8187289872471304532">"Қолданбалар &gt; Жүйе параметрлері &gt; Желі &gt; Кеңейтілген &gt; Прокси серверлері" тармағына өтіп,
           таңдалған барлық прокси серверлерін таңдаудан алып тастаңыз.</translation>
 <translation id="4159376633403260073">Қауіпсіз AI Wiz for Testing бетін көріп отырсыз.</translation>
-<translation id="88187049159266777">Brave дұрыс өшірілмеді.</translation>
+<translation id="88187049159266777">AIWize дұрыс өшірілмеді.</translation>
 </translationbundle>

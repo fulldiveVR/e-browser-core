@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Μετάβαση στον ιστότοπο</translation>
 <translation id="2759453070259087442">Ανάπτυξη ομάδας καρτελών <ph name="TITLE_OF_GROUP"/> με <ph name="NUMBER_OF_TABS"/> καρτέλες.</translation>
 <translation id="2801787514987684416">Προβολή πληροφοριών καταστήματος;</translation>
-<translation id="4691798003247738043">Brave | Σχετικά με αυτό το κατάστημα</translation>
+<translation id="4691798003247738043">AIWize | Σχετικά με αυτό το κατάστημα</translation>
 <translation id="2977480621796371840">Κατάργηση από την ομάδα</translation>
 <translation id="3008554597174452548">Διακοπή παρακολούθησης προϊόντος</translation>
 <translation id="3052964831964880138">Πτώση τιμής <ph name="PRICE_DROP"/> για <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Δείτε πληροφορίες καταστήματος, η επιλογή είναι διαθέσιμη στο επάνω μέρος της οθόνης</translation>
 <translation id="5558362125926932819">Κλείσιμο της ομάδας καρτελών με τις <ph name="NUMBER_OF_TABS"/> καρτέλες</translation>
 <translation id="5580090775658607195">Ομαδοποιήθηκαν <ph name="TAB_COUNT"/> καρτέλες</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> σύνδεσμος από το Brave}other{<ph name="TABS_COUNT_MANY"/> σύνδεσμοι από το Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> σύνδεσμος από το AIWize}other{<ph name="TABS_COUNT_MANY"/> σύνδεσμοι από το AIWize}}</translation>
 <translation id="575494663145460764">Θέλετε να λαμβάνετε ειδοποιήσεις για πτώσεις τιμών;</translation>
 <translation id="58326064309361797">Σύρετε καρτέλες για να τις ομαδοποιήσετε.</translation>
 <translation id="5846292395804797011">Κλείσιμο της ομάδας <ph name="TITLE_OF_GROUP"/> με τις <ph name="NUMBER_OF_TABS"/> καρτέλες</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Προβολή πληροφοριών καταστήματος</translation>
 <translation id="6562820390860419811">Μετακίνηση καρτέλας αριστερά</translation>
 <translation id="6615455863669487791">Εμφάνιση</translation>
-<translation id="6398241160085205003">Μπορείτε να βρείτε τις κλειστές καρτέλες σας στις Πρόσφατες καρτέλες στο κύριο μενού του Brave.</translation>
+<translation id="6398241160085205003">Μπορείτε να βρείτε τις κλειστές καρτέλες σας στις Πρόσφατες καρτέλες στο κύριο μενού του AIWize.</translation>
 <translation id="6840760312327750441">Για την ομαδοποίηση καρτελών, αγγίξτε παρατεταμένα μια καρτέλα. Έπειτα, σύρετέ τη πάνω σε μια άλλη καρτέλα.</translation>
 <translation id="6856809498882026482">Απόκρυψη λειτουργίας πολλαπλής επιλογής</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Κοινοποίηση καρτέλας}other{Κοινοποίηση καρτελών}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Δείτε την πολιτική επιστροφής και άλλα.</translation>
 <translation id="7352298686197644113">Δείτε ποιο στοιχείο στις ανοικτές καρτέλες σας έχει τη χαμηλότερη τιμή.</translation>
 <translation id="753732157349120914">Εναλλαγή καρτελών</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> έλεγχος από την Brave}other{<ph name="REVIEWS_COUNT_MANY"/> έλεγχοι από την Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> έλεγχος από την AIWize}other{<ph name="REVIEWS_COUNT_MANY"/> έλεγχοι από την AIWize}}</translation>
 <translation id="7559245342362162951">Εμφάνιση καρτελών ομάδας σε πλέγμα πλήρους οθόνης</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Κοινοποίηση <ph name="TABS_COUNT_ONE"/> επιλεγμένης καρτέλας}other{Κοινοποίηση <ph name="TABS_COUNT_MANY"/> επιλεγμένων καρτελών}}</translation>
 <translation id="7792771145871471484">Έλεγχος των προτάσεων.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Εισέλθετε σε αυτό το πρόγραμμα επεξεργασίας για να ελέγξετε όλες τις αρχειοθετημένες καρτέλες για τακτοποίηση.</translation>
 <translation id="959682366969460160">Οργανωθείτε</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Οι κλεισμένες καρτέλες είναι διαθέσιμες στις Πρόσφατες καρτέλες, στο κύριο μενού του Brave. Η Ιδιωτική καρτέλα που ανοίξατε δεν θα είναι διαθέσιμη εκεί.}
-        other {Οι κλεισμένες καρτέλες είναι διαθέσιμες στις Πρόσφατες καρτέλες, στο κύριο μενού του Brave. # Ιδιωτικές καρτέλες δεν θα είναι διαθέσιμες εκεί.}}</translation>
+        =1 {Οι κλεισμένες καρτέλες είναι διαθέσιμες στις Πρόσφατες καρτέλες, στο κύριο μενού του AIWize. Η Ιδιωτική καρτέλα που ανοίξατε δεν θα είναι διαθέσιμη εκεί.}
+        other {Οι κλεισμένες καρτέλες είναι διαθέσιμες στις Πρόσφατες καρτέλες, στο κύριο μενού του AIWize. # Ιδιωτικές καρτέλες δεν θα είναι διαθέσιμες εκεί.}}</translation>
 <translation id="3228718275011575753">Να κλείσουν όλες οι Ιδιωτικές καρτέλες;</translation>
 <translation id="6687920250729800417">Η δραστηριότητά σας σε αυτές τις Ιδιωτικές καρτέλες θα διαγραφεί από αυτήν τη συσκευή</translation>
 </translationbundle>

@@ -22,7 +22,7 @@
 <translation id="266935134738038806">Mynd i'r wefan</translation>
 <translation id="2759453070259087442">Ehangu'r grŵp tabiau <ph name="TITLE_OF_GROUP"/> sydd â <ph name="NUMBER_OF_TABS"/> o dabiau.</translation>
 <translation id="2801787514987684416">Gweld gwybodaeth siop?</translation>
-<translation id="4691798003247738043">Brave | Ynghylch y siop hon</translation>
+<translation id="4691798003247738043">AIWize | Ynghylch y siop hon</translation>
 <translation id="2977480621796371840">Tynnu o'r grŵp</translation>
 <translation id="3008554597174452548">Stopio olrhain y cynnyrch</translation>
 <translation id="3052964831964880138">Gostyngiad pris o <ph name="PRICE_DROP"/> ar <ph name="PRODUCT_NAME"/></translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">Gweld gwybodaeth siop, opsiwn ar gael yn agos at frig y sgrîn</translation>
 <translation id="5558362125926932819">Cau'r grŵp tabiau â <ph name="NUMBER_OF_TABS"/> o dabiau</translation>
 <translation id="5580090775658607195">Mae <ph name="TAB_COUNT"/> o dabiau wedi'u grwpio</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> dolen o Brave}zero{<ph name="TABS_COUNT_MANY"/> dolen o Brave}two{<ph name="TABS_COUNT_MANY"/> ddolen o Brave}few{<ph name="TABS_COUNT_MANY"/> dolen o Brave}many{<ph name="TABS_COUNT_MANY"/> dolen o Brave}other{<ph name="TABS_COUNT_MANY"/> dolen o Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> dolen o AIWize}zero{<ph name="TABS_COUNT_MANY"/> dolen o AIWize}two{<ph name="TABS_COUNT_MANY"/> ddolen o AIWize}few{<ph name="TABS_COUNT_MANY"/> dolen o AIWize}many{<ph name="TABS_COUNT_MANY"/> dolen o AIWize}other{<ph name="TABS_COUNT_MANY"/> dolen o AIWize}}</translation>
 <translation id="575494663145460764">Cael hysbysiadau am ostyngiadau prisiau?</translation>
 <translation id="58326064309361797">Llusgwch dabiau i'w grwpio</translation>
 <translation id="5846292395804797011">Cau'r grŵp <ph name="TITLE_OF_GROUP"/> sydd â <ph name="NUMBER_OF_TABS"/> o dabiau</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(sgôr siop)</translation>
 <translation id="6333260925957816943">Gwybodaeth am y siop hon</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{Dadgrwpio'r <ph name="TABS_COUNT_ONE"/> tab a ddewiswyd}zero{Dadgrwpio'r <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}two{Dadgrwpio'r <ph name="TABS_COUNT_MANY"/> dab a ddewiswyd}few{Dadgrwpio'r <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}many{Dadgrwpio'r <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}other{Dadgrwpio'r <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich tab Anhysbys ar gael.}zero{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich # tab Anhysbys ar gael.}two{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich # dab Anhysbys ar gael.}few{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich # thab Anhysbys ar gael.}many{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich # thab Anhysbys ar gael.}other{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave. Ni fydd eich # tab Anhysbys ar gael.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich tab Anhysbys ar gael.}zero{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich # tab Anhysbys ar gael.}two{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich # dab Anhysbys ar gael.}few{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich # thab Anhysbys ar gael.}many{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich # thab Anhysbys ar gael.}other{Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize. Ni fydd eich # tab Anhysbys ar gael.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> tab}zero{<ph name="TABS_COUNT_MANY"/> tab}two{<ph name="TABS_COUNT_MANY"/> dab}few{<ph name="TABS_COUNT_MANY"/> tab}many{<ph name="TABS_COUNT_MANY"/> tab}other{<ph name="TABS_COUNT_MANY"/> tab}}</translation>
 <translation id="6549021453810473782">Gweld gwybodaeth siop</translation>
 <translation id="6562820390860419811">Symud tab i'r chwith</translation>
 <translation id="6615455863669487791">Dangos i fi</translation>
-<translation id="6398241160085205003">Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen Brave.</translation>
+<translation id="6398241160085205003">Gallwch ddod o hyd i'ch tabiau sydd wedi'u cau yn Nhabiau diweddar o dan brif ddewislen AIWize.</translation>
 <translation id="6840760312327750441">I grwpio tabiau, cyffyrddwch a daliwch dab. Llusgwch ef i dab arall.</translation>
 <translation id="6856809498882026482">Cuddio'r modd dewis mwy nag un</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Rhannu tab}zero{Rhannu tabiau}two{Rhannu tabiau}few{Rhannu tabiau}many{Rhannu tabiau}other{Rhannu tabiau}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">Gweld y polisi dychwelyd a rhagor</translation>
 <translation id="7352298686197644113">Gweld pa eitem yn eich tabiau sydd ar agor sydd â phris is</translation>
 <translation id="753732157349120914">Newidiwr Tabiau</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> adolygiad gan Brave}zero{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan Brave}two{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan Brave}few{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan Brave}many{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan Brave}other{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> adolygiad gan AIWize}zero{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan AIWize}two{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan AIWize}few{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan AIWize}many{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan AIWize}other{<ph name="REVIEWS_COUNT_MANY"/> adolygiad gan AIWize}}</translation>
 <translation id="7559245342362162951">Dangos tabiau'r grŵp mewn grid sgrîn lawn</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Rhannu <ph name="TABS_COUNT_ONE"/> tab a ddewiswyd}zero{Rhannu <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}two{Rhannu <ph name="TABS_COUNT_MANY"/> dab a ddewiswyd}few{Rhannu <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}many{Rhannu <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}other{Rhannu <ph name="TABS_COUNT_MANY"/> tab a ddewiswyd}}</translation>
 <translation id="7792771145871471484">Gweld yr awgrymiadau.</translation>

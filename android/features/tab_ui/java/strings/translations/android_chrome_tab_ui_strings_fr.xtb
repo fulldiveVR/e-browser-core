@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Accéder au site</translation>
 <translation id="2759453070259087442">Développez le groupe d'onglets <ph name="TITLE_OF_GROUP"/> comportant <ph name="NUMBER_OF_TABS"/> onglets.</translation>
 <translation id="2801787514987684416">Afficher les infos sur le magasin ?</translation>
-<translation id="4691798003247738043">Brave | À propos de ce magasin</translation>
+<translation id="4691798003247738043">AIWize | À propos de ce magasin</translation>
 <translation id="2977480621796371840">Retirer du groupe</translation>
 <translation id="3008554597174452548">Arrêter de suivre le produit</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> : prix en baisse (-<ph name="PRICE_DROP"/>)</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Afficher les infos sur le magasin, option disponible en haut de l'écran</translation>
 <translation id="5558362125926932819">Fermez le groupe d'onglets qui contient <ph name="NUMBER_OF_TABS"/> onglets</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> onglets regroupés</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> lien de Brave}one{<ph name="TABS_COUNT_MANY"/> lien de Brave}other{<ph name="TABS_COUNT_MANY"/> liens de Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> lien de AIWize}one{<ph name="TABS_COUNT_MANY"/> lien de AIWize}other{<ph name="TABS_COUNT_MANY"/> liens de AIWize}}</translation>
 <translation id="575494663145460764">Être averti des baisses de prix ?</translation>
 <translation id="58326064309361797">Faites glisser les onglets pour les regrouper</translation>
 <translation id="5846292395804797011">Fermez le groupe <ph name="TITLE_OF_GROUP"/> qui contient <ph name="NUMBER_OF_TABS"/> onglets</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Afficher les infos sur le magasin</translation>
 <translation id="6562820390860419811">Déplacer l'onglet vers la gauche</translation>
 <translation id="6615455863669487791">Démonstration</translation>
-<translation id="6398241160085205003">Vous trouverez les onglets fermés dans le menu principal de Brave, sous "Onglets récents".</translation>
+<translation id="6398241160085205003">Vous trouverez les onglets fermés dans le menu principal de AIWize, sous "Onglets récents".</translation>
 <translation id="6840760312327750441">Pour regrouper des onglets, appuyez de manière prolongée sur un onglet, puis faites-le glisser vers un autre.</translation>
 <translation id="6856809498882026482">Masquer le mode multi-sélection</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Partager l'onglet}one{Partager l'onglet}other{Partager les onglets}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Voir les conditions de retour et plus</translation>
 <translation id="7352298686197644113">Affichez l'article le moins cher parmi ceux présentés dans les onglets ouverts</translation>
 <translation id="753732157349120914">Sélecteur d'onglets</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> avis issus de Brave}one{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Brave}other{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> avis issus de AIWize}one{<ph name="REVIEWS_COUNT_MANY"/> avis issus de AIWize}other{<ph name="REVIEWS_COUNT_MANY"/> avis issus de AIWize}}</translation>
 <translation id="7559245342362162951">Afficher les onglets du groupe dans une grille en plein écran</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Partager <ph name="TABS_COUNT_ONE"/> onglet sélectionné}one{Partager <ph name="TABS_COUNT_MANY"/> onglet sélectionné}other{Partager <ph name="TABS_COUNT_MANY"/> onglets sélectionnés}}</translation>
 <translation id="7792771145871471484">Afficher les suggestions.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Accédez à cet éditeur pour vérifier les onglets archivés à désencombrer.</translation>
 <translation id="959682366969460160">Restez organisé</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Vous trouverez vos onglets fermés dans les onglets récents dans le menu principal de Brave. Votre onglet Privé ne sera pas disponible.}
-        other {Vous trouverez vos onglets fermés dans les onglets récents dans le menu principal de Brave. Vos # onglets Privé ne seront pas disponibles.}}</translation>
+        =1 {Vous trouverez vos onglets fermés dans les onglets récents dans le menu principal de AIWize. Votre onglet Privé ne sera pas disponible.}
+        other {Vous trouverez vos onglets fermés dans les onglets récents dans le menu principal de AIWize. Vos # onglets Privé ne seront pas disponibles.}}</translation>
 <translation id="3228718275011575753">Fermer tous les onglets privés ?</translation>
 <translation id="6687920250729800417">Votre activité dans ces onglets privés sera supprimée de cet appareil</translation>
 </translationbundle>

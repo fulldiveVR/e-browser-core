@@ -22,7 +22,7 @@
 <translation id="266935134738038806">साइटवर भेट द्या</translation>
 <translation id="2759453070259087442"><ph name="TITLE_OF_GROUP"/> टॅब गटाचा <ph name="NUMBER_OF_TABS"/> टॅबसह विस्तार करा.</translation>
 <translation id="2801787514987684416">स्टोअरची माहिती पाहायची आहे का?</translation>
-<translation id="4691798003247738043">Brave | या स्टोअरबद्दल</translation>
+<translation id="4691798003247738043">AIWize | या स्टोअरबद्दल</translation>
 <translation id="2977480621796371840">गटामधून काढून टाका</translation>
 <translation id="3008554597174452548">उत्पादनाचा माग ठेवणे थांबवा</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> पासून किमतीमध्ये <ph name="PRICE_DROP"/> घसरण</translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">स्टोअरची माहिती पहा, पर्याय स्क्रीनच्या सर्वात वर उपलब्ध आहे</translation>
 <translation id="5558362125926932819"><ph name="NUMBER_OF_TABS"/> टॅब असलेला टॅब गट बंद करा</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> टॅबची गटामध्ये विभागणी केली आहे</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave वरील <ph name="TABS_COUNT_ONE"/> लिंक}other{Brave वरील <ph name="TABS_COUNT_MANY"/> लिंक}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AIWize वरील <ph name="TABS_COUNT_ONE"/> लिंक}other{AIWize वरील <ph name="TABS_COUNT_MANY"/> लिंक}}</translation>
 <translation id="575494663145460764">किंमत कमी झाल्याच्या सूचना मिळवायच्या आहेत का?</translation>
 <translation id="58326064309361797">त्यांचा गट बनवण्यासाठी टॅबना ड्रॅग करा</translation>
 <translation id="5846292395804797011"><ph name="NUMBER_OF_TABS"/> टॅब असलेला <ph name="TITLE_OF_GROUP"/> गट बंद करा</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(स्टोअरचे रेटिंग)</translation>
 <translation id="6333260925957816943">या स्टोअरविषयी माहिती</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{निवडलेला <ph name="TABS_COUNT_ONE"/> टॅब गटामधून काढून टाका}other{निवडलेले <ph name="TABS_COUNT_MANY"/> टॅब गटामधून काढून टाका}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Brave च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता. तुमचा गुप्त टॅब उपलब्ध असणार नाही.}other{Brave च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता. तुमचे # गुप्त टॅब उपलब्ध असणार नाहीत.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{AIWize च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता. तुमचा गुप्त टॅब उपलब्ध असणार नाही.}other{AIWize च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता. तुमचे # गुप्त टॅब उपलब्ध असणार नाहीत.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> टॅब}other{<ph name="TABS_COUNT_MANY"/> टॅब}}</translation>
 <translation id="6549021453810473782">स्टोअरची माहिती पहा</translation>
 <translation id="6562820390860419811">टॅब डावीकडे हलवा</translation>
 <translation id="6615455863669487791">मला दर्शवा</translation>
-<translation id="6398241160085205003">Brave च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता.</translation>
+<translation id="6398241160085205003">AIWize च्या मुख्य मेनू अंतर्गत अलीकडील टॅबमध्ये तुम्ही तुमचे बंद केलेले टॅब पाहू शकता.</translation>
 <translation id="6840760312327750441">टॅबचा गट करण्यासाठी, टॅबला स्पर्श करा आणि धरून ठेवा. नंतर, तो दुसऱ्या टॅबवर ड्रॅग करा.</translation>
 <translation id="6856809498882026482">एकाहून अधिक निवड मोड लपवा</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{टॅब शेअर करा}other{टॅब शेअर करा}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">रिटर्न धोरण आणि आणखी बरेच काही पहा</translation>
 <translation id="7352298686197644113">तुमच्या उघड्या असलेल्या टॅबमध्ये कोणत्या आयटमची किंमत आणखी कमी आहे ते पहा</translation>
 <translation id="753732157349120914">टॅब स्विचर</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave कडून <ph name="REVIEWS_COUNT_ONE"/> पुनरावलोकन}other{Brave कडून <ph name="REVIEWS_COUNT_MANY"/> पुनरावलोकने}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AIWize कडून <ph name="REVIEWS_COUNT_ONE"/> पुनरावलोकन}other{AIWize कडून <ph name="REVIEWS_COUNT_MANY"/> पुनरावलोकने}}</translation>
 <translation id="7559245342362162951">फुलस्क्रीन ग्रिडमध्ये गटाचे टॅब दाखवा</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{निवडलेला <ph name="TABS_COUNT_ONE"/> टॅब शेअर करा}other{निवडलेले <ph name="TABS_COUNT_MANY"/> टॅब शेअर करा}}</translation>
 <translation id="7792771145871471484">सूचनांचे पुनरावलोकन करा.</translation>

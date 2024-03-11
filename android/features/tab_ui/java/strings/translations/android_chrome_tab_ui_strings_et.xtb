@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Külasta saiti</translation>
 <translation id="2759453070259087442"><ph name="NUMBER_OF_TABS"/> vahekaardiga vahekaartide grupi <ph name="TITLE_OF_GROUP"/> laiendamine.</translation>
 <translation id="2801787514987684416">Kas kuvada poe teave?</translation>
-<translation id="4691798003247738043">Brave | Teave selle poe kohta</translation>
+<translation id="4691798003247738043">AIWize | Teave selle poe kohta</translation>
 <translation id="2977480621796371840">Grupist eemaldamine</translation>
 <translation id="3008554597174452548">Lõpeta toote jälgimine</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> hinnalangus teenuse <ph name="PRODUCT_NAME"/> puhul</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Poe teabe vaatamine, valik saadaval ekraanikuva ülaosas</translation>
 <translation id="5558362125926932819">Sule <ph name="NUMBER_OF_TABS"/> vahelehega vahelehegrupp</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> vahekaarti grupeeriti</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link Brave'ist}other{<ph name="TABS_COUNT_MANY"/> linki Brave'ist}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link AIWize'ist}other{<ph name="TABS_COUNT_MANY"/> linki AIWize'ist}}</translation>
 <translation id="575494663145460764">Kas soovite hinnalanguste puhul märguandeid saada?</translation>
 <translation id="58326064309361797">Lohistage vahelehti, et neid grupeerida</translation>
 <translation id="5846292395804797011">Sule <ph name="NUMBER_OF_TABS"/> vahelehega grupp <ph name="TITLE_OF_GROUP"/></translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Kuva poe teave</translation>
 <translation id="6562820390860419811">Teisalda vaheleht vasakule</translation>
 <translation id="6615455863669487791">Kuva mulle</translation>
-<translation id="6398241160085205003">Oma suletud vahelehed leiate Brave’i peamenüüs olevast jaotisest Hiljutised vahelehed.</translation>
+<translation id="6398241160085205003">Oma suletud vahelehed leiate AIWize’i peamenüüs olevast jaotisest Hiljutised vahelehed.</translation>
 <translation id="6840760312327750441">Vahelehtede rühmitamiseks puudutage vahelehte pikalt. Seejärel lohistage see teise vahelehe peale.</translation>
 <translation id="6856809498882026482">Peida mitmikvalimise režiim</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Jaga vahelehte}other{Jaga vahelehti}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Vaadake tagastuseeskirju ja muud</translation>
 <translation id="7352298686197644113">Vaadake, millisel avatud vahelehtedel olevatest toodetest on soodsaim hind</translation>
 <translation id="753732157349120914">Vahelehtede vaheti</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvustus Brave'ist}other{<ph name="REVIEWS_COUNT_MANY"/> arvustust Brave'ist}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvustus AIWize'ist}other{<ph name="REVIEWS_COUNT_MANY"/> arvustust AIWize'ist}}</translation>
 <translation id="7559245342362162951">Kuva grupi vahelehed täisekraani ruudustikus</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Jaga <ph name="TABS_COUNT_ONE"/> valitud vahelehte}other{Jaga <ph name="TABS_COUNT_MANY"/> valitud vahelehte}}</translation>
 <translation id="7792771145871471484">Vaadake soovitused üle.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Avage see redaktor, et vaadata puhastamise eesmärgil üle kõik arhiivitud vahekaardid.</translation>
 <translation id="959682366969460160">Lööge kord majja</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Leiate oma suletud vahekaardid Brave'i peamenüü osa Hiljutised vahekaardid alt. Teie privaatne vahekaart ei ole saadaval.}
-        other {Leiate oma suletud vahekaardid Brave'i peamenüü osa Hiljutised vahekaardid alt. Teie # privaatset vahekaarti ei ole saadaval.}}</translation>
+        =1 {Leiate oma suletud vahekaardid AIWize'i peamenüü osa Hiljutised vahekaardid alt. Teie privaatne vahekaart ei ole saadaval.}
+        other {Leiate oma suletud vahekaardid AIWize'i peamenüü osa Hiljutised vahekaardid alt. Teie # privaatset vahekaarti ei ole saadaval.}}</translation>
 <translation id="3228718275011575753">Kas sulgeda kõik privaatsed vahelehed?</translation>
 <translation id="6687920250729800417">Teie tegevus nendel privaatsetel vahekaartidel eemaldatakse sellest seadmest</translation>
 </translationbundle>

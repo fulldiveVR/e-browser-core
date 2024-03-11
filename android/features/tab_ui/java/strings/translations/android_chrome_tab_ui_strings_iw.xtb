@@ -21,7 +21,7 @@
 <translation id="266935134738038806">כניסה לאתר</translation>
 <translation id="2759453070259087442">הרחבת קבוצת הכרטיסיות <ph name="TITLE_OF_GROUP"/> שיש בה <ph name="NUMBER_OF_TABS"/> כרטיסיות.</translation>
 <translation id="2801787514987684416">להציג את פרטי החנות?</translation>
-<translation id="4691798003247738043">‏Brave | מידע על החנות הזו</translation>
+<translation id="4691798003247738043">‏AIWize | מידע על החנות הזו</translation>
 <translation id="2977480621796371840">הסרה מהקבוצה</translation>
 <translation id="3008554597174452548">הפסקת המעקב אחר המוצר הזה</translation>
 <translation id="3052964831964880138">הנחה בסך <ph name="PRICE_DROP"/> על <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">ניתן להציג את פרטי החנות. האפשרות זמינה בחלק העליון של המסך</translation>
 <translation id="5558362125926932819">סגירת קבוצת הכרטיסיות עם <ph name="NUMBER_OF_TABS"/> כרטיסיות</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> כרטיסיות מקובצות</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏קישור אחד (<ph name="TABS_COUNT_ONE"/>) מ-Brave}one{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-Brave}two{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-Brave}other{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏קישור אחד (<ph name="TABS_COUNT_ONE"/>) מ-AIWize}one{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-AIWize}two{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-AIWize}other{‏<ph name="TABS_COUNT_MANY"/> קישורים מ-AIWize}}</translation>
 <translation id="575494663145460764">רוצה לקבל התראות על הנחות?</translation>
 <translation id="58326064309361797">ניתן לגרור כרטיסיות כדי לקבץ אותן</translation>
 <translation id="5846292395804797011">סגירה של הקבוצה <ph name="TITLE_OF_GROUP"/> עם <ph name="NUMBER_OF_TABS"/> כרטיסיות</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">הצגת פרטי החנות</translation>
 <translation id="6562820390860419811">העברת הכרטיסייה ימינה</translation>
 <translation id="6615455863669487791">איך עושים את זה?</translation>
-<translation id="6398241160085205003">‏ניתן לאתר את הכרטיסיות הסגורות ב'כרטיסיות אחרונות' שבתפריט הראשי של Brave.</translation>
+<translation id="6398241160085205003">‏ניתן לאתר את הכרטיסיות הסגורות ב'כרטיסיות אחרונות' שבתפריט הראשי של AIWize.</translation>
 <translation id="6840760312327750441">כדי לקבץ כרטיסיות, יש ללחוץ לחיצה ארוכה על כרטיסייה. בזמן הלחיצה, יש לגרור אותה אל כרטיסייה אחרת.</translation>
 <translation id="6856809498882026482">הסתרת מצב הבחירה המרובה</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{שיתוף הכרטיסייה}one{שיתוף הכרטיסיות}two{שיתוף הכרטיסיות}other{שיתוף הכרטיסיות}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">מדיניות החזרת המוצרים ומידע נוסף</translation>
 <translation id="7352298686197644113">הצגת הפריטים שמופיעים עם מחיר נמוך יותר בכרטיסיות הפתוחות שלך</translation>
 <translation id="753732157349120914">מחליף הכרטיסיות</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{‏ביקורת אחת (<ph name="REVIEWS_COUNT_ONE"/>) מ-Brave}one{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-Brave}two{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-Brave}other{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{‏ביקורת אחת (<ph name="REVIEWS_COUNT_ONE"/>) מ-AIWize}one{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-AIWize}two{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-AIWize}other{‏<ph name="REVIEWS_COUNT_MANY"/> ביקורות מ-AIWize}}</translation>
 <translation id="7559245342362162951">הצגת כרטיסיות הקבוצה ברשת מסך מלא</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{שיתוף הכרטיסייה (<ph name="TABS_COUNT_ONE"/>) שנבחרה}one{שיתוף <ph name="TABS_COUNT_MANY"/> הכרטיסיות שנבחרו}two{שיתוף <ph name="TABS_COUNT_MANY"/> הכרטיסיות שנבחרו}other{שיתוף <ph name="TABS_COUNT_MANY"/> הכרטיסיות שנבחרו}}</translation>
 <translation id="7792771145871471484">עיון בהצעות.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">אפשר להיכנס לכלי העריכה הזה כדי לבדוק את כל הכרטיסיות שהועברו לארכיון ולעשות בהן סדר.</translation>
 <translation id="959682366969460160">ארגון הפריטים</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-=1 {תוכל למצוא את הכרטיסיות הסגורות שלך בכרטיסיות אחרונות תחת התפריט הראשי של Brave. הכרטיסייה הפרטית שלך לא תהיה זמינה.}
-other {אתה יכול למצוא את הכרטיסיות הסגורות שלך בכרטיסיות אחרונות תחת התפריט הראשי של Brave.  # מהכרטיסיות הפרטיות שלך לא יהיו זמינות.}}</translation>
+=1 {תוכל למצוא את הכרטיסיות הסגורות שלך בכרטיסיות אחרונות תחת התפריט הראשי של AIWize. הכרטיסייה הפרטית שלך לא תהיה זמינה.}
+other {אתה יכול למצוא את הכרטיסיות הסגורות שלך בכרטיסיות אחרונות תחת התפריט הראשי של AIWize.  # מהכרטיסיות הפרטיות שלך לא יהיו זמינות.}}</translation>
 <translation id="3228718275011575753">לסגור את כל הכרטיסיות הפרטיות?</translation>
 <translation id="6687920250729800417">הפעילות שלך בכרטיסיות הפרטיות האלה תוסר מהמכשיר הזה</translation>
 </translationbundle>

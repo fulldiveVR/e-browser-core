@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Na spletno mesto</translation>
 <translation id="2759453070259087442">Razširitev skupine zavihkov <ph name="TITLE_OF_GROUP"/> s toliko zavihki: <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Si želite ogledati podatke o trgovini?</translation>
-<translation id="4691798003247738043">Brave | O tej trgovini</translation>
+<translation id="4691798003247738043">AIWize | O tej trgovini</translation>
 <translation id="2977480621796371840">Odstrani iz skupine</translation>
 <translation id="3008554597174452548">Ustavi spremljanje izdelka</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/>-odstotno znižanje cene izdelka <ph name="PRODUCT_NAME"/></translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">V tem urejevalniku lahko pregledate arhivirane zavihke in jih organizirate tako, da odstranite nepotrebne.</translation>
 <translation id="959682366969460160">Postanite bolj organizirani</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-             =1 {Svoje zaprte zavihke lahko najdete v Nedavnih zavihkih v glavnem meniju Brave. Vaš zavihek Zasebno ne bo na voljo.}
-             other {Svoje zaprte zavihke najdete v Nedavnih zavihkih v glavnem meniju Brave. Vaših # zasebnih zavihkov ne bo na voljo.}}</translation>
+             =1 {Svoje zaprte zavihke lahko najdete v Nedavnih zavihkih v glavnem meniju AIWize. Vaš zavihek Zasebno ne bo na voljo.}
+             other {Svoje zaprte zavihke najdete v Nedavnih zavihkih v glavnem meniju AIWize. Vaših # zasebnih zavihkov ne bo na voljo.}}</translation>
 <translation id="3228718275011575753">Želite zapreti vse zasebne zavihke?</translation>
 <translation id="6687920250729800417">Vaša dejavnost v teh zasebnih zavihkih bo odstranjena iz te naprave</translation>
 </translationbundle>
