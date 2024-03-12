@@ -290,7 +290,7 @@ EngineConsumerLlamaRemote::EngineConsumerLlamaRemote(
   DCHECK(!model.name.empty());
   base::flat_set<std::string_view> stop_sequences(kStopSequences.begin(),
                                                   kStopSequences.end());
-  api_ = std::make_unique<RemoteCompletionOpenAIClient>(
+  api_ = std::make_unique<RemoteCompletionClient>(
       model.name, stop_sequences, url_loader_factory, credential_manager);
 
   is_mixtral_ = base::StartsWith(model.name, "mixtral");

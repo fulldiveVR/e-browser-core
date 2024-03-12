@@ -36,27 +36,6 @@ namespace {
 
 constexpr char kAIChatCompletionPath[] = "v1/chat/completions";
 
-net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
-  return net::DefineNetworkTrafficAnnotation("ai_chat", R"(
-      semantics {
-        sender: "AI Chat"
-        description:
-          "This is used to communicate with our partner API"
-          "on behalf of the user interacting with the ChatUI."
-        trigger:
-          "Triggered by user sending a prompt."
-        data:
-          "Will generate a text that attempts to match the user gave it"
-        destination: WEBSITE
-      }
-      policy {
-        cookies_allowed: NO
-        policy_exception_justification:
-          "Not implemented."
-      }
-    )");
-}
-
 std::string CreateApiParametersDict(
     const std::string& prompt,
     const std::string& model_name,
@@ -194,18 +173,14 @@ RemoteCompletionOpenAIClient::RemoteCompletionOpenAIClient(
     const base::flat_set<std::string_view>& stop_sequences,
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
     AIChatCredentialManager* credential_manager)
-    : model_name_(model_name),
-      stop_sequences_(stop_sequences),
-      api_request_helper_(GetNetworkTrafficAnnotationTag(), url_loader_factory),
-      credential_manager_(credential_manager) {
-      }
+    : RemoteCompletionClient(model_name, stop_sequences, url_loader_factory, credential_manager){}
 RemoteCompletionOpenAIClient::~RemoteCompletionOpenAIClient() = default;
 
 void RemoteCompletionOpenAIClient::QueryPrompt(
     const std::string& prompt,
-    const std::vector<std::string> extra_stop_sequences,
-    EngineConsumer::GenerationCompletedCallback data_completed_callback,
-    EngineConsumer::GenerationDataCallback
+    const std::vector<std::string>& extra_stop_sequences,
+    GenerationCompletedCallback data_completed_callback,
+    GenerationDataCallback
         data_received_callback /* = base::NullCallback() */) {
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
@@ -244,12 +219,6 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
   }
 }
 
-void RemoteCompletionOpenAIClient::ClearAllQueries() {
-  // TODO(nullhook): Keep track of in-progress requests and cancel them
-  // individually. This would be useful to keep some in-progress requests alive.
-  api_request_helper_.CancelAll();
-}
-
 void RemoteCompletionOpenAIClient::OnQueryDataReceived(
     EngineConsumer::GenerationDataCallback callback,
     base::expected<base::Value, std::string> result) {
@@ -276,7 +245,7 @@ void RemoteCompletionOpenAIClient::OnQueryCompleted(
 
   if (success) {
     std::string completion = "";
-    std::string body = result.body();
+    std::string body = result.SerializeBodyToString();
     if (!body.empty()) {
       const std::string value = FetchMessageFromJson(body);
       if (!value.empty()) {

@@ -29,7 +29,7 @@ namespace ai_chat {
 
 using api_request_helper::APIRequestResult;
 
-class RemoteCompletionOpenAIClient {
+class RemoteCompletionOpenAIClient : RemoteCompletionClient {
  public:
   RemoteCompletionOpenAIClient(
       const std::string& model_name,
@@ -39,29 +39,21 @@ class RemoteCompletionOpenAIClient {
 
   RemoteCompletionOpenAIClient(const RemoteCompletionOpenAIClient&) = delete;
   RemoteCompletionOpenAIClient& operator=(const RemoteCompletionOpenAIClient&) = delete;
-  ~RemoteCompletionOpenAIClient();
+  ~RemoteCompletionOpenAIClient() override;
 
   // This function queries both types of APIs: SSE and non-SSE.
   // In non-SSE cases, only the data_completed_callback will be triggered.
   void QueryPrompt(
-      const std::string& prompt,
-      const std::vector<std::string> stop_sequences,
-      EngineConsumer::GenerationCompletedCallback data_completed_callback,
-      EngineConsumer::GenerationDataCallback data_received_callback =
-          base::NullCallback());
-  // Clears all in-progress requests
-  void ClearAllQueries();
+       const std::string& prompt,
+      const std::vector<std::string>& stop_sequences,
+      GenerationCompletedCallback data_completed_callback,
+      GenerationDataCallback data_received_callback = base::NullCallback()) override;
 
  private:
   void OnQueryDataReceived(EngineConsumer::GenerationDataCallback callback,
                            base::expected<base::Value, std::string> result);
   void OnQueryCompleted(EngineConsumer::GenerationCompletedCallback callback,
                         APIRequestResult result);
-
-  const std::string model_name_;
-  const base::flat_set<std::string_view> stop_sequences_;
-  api_request_helper::APIRequestHelper api_request_helper_;
-  raw_ptr<AIChatCredentialManager> credential_manager_;
 
   base::WeakPtrFactory<RemoteCompletionOpenAIClient> weak_ptr_factory_{this};
 };
