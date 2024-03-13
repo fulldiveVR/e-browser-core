@@ -68,12 +68,12 @@ class RemoteCompletionClient {
       GenerationCompletedCallback data_completed_callback,
       GenerationDataCallback data_received_callback,
       std::optional<CredentialCacheEntry> credential);
-
+protected:
   const std::string model_name_;
   const base::flat_set<std::string_view> stop_sequences_;
   api_request_helper::APIRequestHelper api_request_helper_;
   raw_ptr<AIChatCredentialManager> credential_manager_;
-
+private:
   base::WeakPtrFactory<RemoteCompletionClient> weak_ptr_factory_{this};
 };
 
