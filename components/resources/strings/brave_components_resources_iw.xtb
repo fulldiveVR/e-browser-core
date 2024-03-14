@@ -2050,7 +2050,7 @@ CoinGecko</translation>
 <translation id="1097073572755862978">שלחו דוחות אבחון, במידה וחוויתם קריסה או הקפאה. <ph name="LINK_BEFORE"/>למידע נוסך.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">שלחו תובנות מוצר פרטיות ואנונימיות לחלוטין על אילו תכונות משומשות על ידי משתמשי AI Wize. <ph name="LINK_BEFORE"/>למידע נוסף.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">ההתקנה הסתיימה</translation>
-<translation id="3141206739023333979">אפשר לשנות את הבחירות האלה בכל עת ב-AI Wize בכתובת <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/></translation>
+<translation id="3141206739023333979">אפשר לשנות את הבחירות האלה בכל עת ב-AI Wize בכתובת <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/></translation>
 <translation id="8321985064212130832">קראו את <ph name="LINK_BEFORE"/>מדיניות הפרטיות<ph name="LINK_AFTER"/> המלאה</translation>
 <translation id="2801098717523961746">בחרו את העיצוב שלכם</translation>
 <translation id="6262510489122516114">באפשרותכם לשנות את זה בכל עת בהגדרות AI Wize.</translation>
@@ -2117,7 +2117,7 @@ AI Wize יש שירות עוזר שמגן עליך מפני חשיפה זו על
 <translation id="5004375364898143117">נראה שיש כמה בעיות בחיבור ה-WireGuard. רוצה להפעיל IKEv2 fallback עבור VPN אמין? פשוט הפעל מחדש את הדפדפן שלך.
 
 זקוק לעזרה עם תאימות או תצורה? פנה לצוות התמיכה הידידותי שלנו.
-אתה תמיד יכול לחזור ל-WireGuard ב-brave://settings/system.
+אתה תמיד יכול לחזור ל-WireGuard ב-aiwize://settings/system.
 
 בוא נחבר אותך!
 <ph name="LEARN_MORE"/></translation>

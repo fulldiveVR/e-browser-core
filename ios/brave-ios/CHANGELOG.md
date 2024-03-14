@@ -616,7 +616,7 @@
 
  - Added Siri Shortcuts. ([#2227](https://github.com/brave/brave-ios/issues/2227))
  - Added Pull-to-Refresh functionality. ([#916](https://github.com/brave/brave-ios/issues/916))
- - Added brave://search URL scheme support. ([#627](https://github.com/brave/brave-ios/issues/627))
+ - Added aiwize://search URL scheme support. ([#627](https://github.com/brave/brave-ios/issues/627))
  - Updated custom browser PIN feature to use users native device authentication instead. ([#3921](https://github.com/brave/brave-ios/issues/3921))
  - Updated adblock-rust library to support new DAT format. ([#3848](https://github.com/brave/brave-ios/issues/3848))
  - Updated URLs for custom top tiles for the Japan region. ([#3568](https://github.com/brave/brave-ios/issues/3568))

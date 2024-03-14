@@ -1877,7 +1877,7 @@
 <translation id="1223498995510244364">Resumir</translation>
 <translation id="7491773233732232424">Acerca de AI Wize Chat</translation>
 <translation id="5208096220706490232">AI Wize Chat es un asistente privado con IA que mejora tu experiencia en internet. Puedes usarlo gratis con acceso limitado. AI Wize AI Wize Chat Premium ofrece más modelos, límites más altos y permite que los suscriptores tengan acceso en primicia a nuevas funcionalidades. El modelo predeterminado para todos los usuarios es Mixtral 8x7B. Consulta más detalles en la <ph name="LINK_BEFORE"/>wiki de AI Wize<ph name="LINK_AFTER"/>.</translation>
-<translation id="7189603330209995455">Por defecto, cuando haces una pregunta, AI Wize Chat AI Wize puede acceder y usar el contenido de la página web que estás viendo o cualquier texto que resaltes en una página para darte una respuesta. La exactitud de las respuestas no está garantizada, y puede incluir información inexacta, engañosa o falsa. AI Wize Chat utiliza datos de AI Wize Search para mejorar la calidad de las respuestas. No envíes información confidencial o privada, y sé prudente con las respuestas sobre salud, finanzas, seguridad personal o temas similares. Puedes cambiar los ajustes de AI Wize Chat en cualquier momento. Ve a Configuración &gt; AI Wize Chat.</translation>
+<translation id="7189603330209995455">Por defecto, cuando haces una pregunta, AI Wize Chat Wize puede acceder y usar el contenido de la página web que estás viendo o cualquier texto que resaltes en una página para darte una respuesta. La exactitud de las respuestas no está garantizada, y puede incluir información inexacta, engañosa o falsa. AI Wize Chat utiliza datos de AI Wize Search para mejorar la calidad de las respuestas. No envíes información confidencial o privada, y sé prudente con las respuestas sobre salud, finanzas, seguridad personal o temas similares. Puedes cambiar los ajustes de AI Wize Chat en cualquier momento. Ve a Configuración &gt; AI Wize Chat.</translation>
 <translation id="3038772045018370764">AI Wize Chat no recopila identificadores que puedan estar vinculados contigo, por ejemplo, tu dirección IP. No se utiliza ningún dato para entrenar los modelos de IA, y los modelos de IA no guardan ningún dato personal (excepto Anthropic, que almacena los datos durante 30 días antes de eliminarlos). Consulta más detalles en la <ph name="LINK_BEFORE"/>política de privacidad<ph name="LINK_AFTER"/>.</translation>
 <translation id="7839853125981164613">Introduzca una consulta aquí</translation>
 <translation id="4524675003624341892">Sugerir preguntas…</translation>
@@ -2020,7 +2020,7 @@ Se han bloqueado <ph name="NUMBER"/> rastreadores, anuncios y otros elementos</t
 <translation id="1097073572755862978">Envía informes de diagnóstico en caso de fallos o bloqueos. <ph name="LINK_BEFORE"/>Más información.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Comparte de forma totalmente privada y anónima tu opinión sobre las funciones que utilizan los usuarios de AI Wize. <ph name="LINK_BEFORE"/>Más información.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Configuración completada</translation>
-<translation id="3141206739023333979">Puedes cambiar estas opciones cuando quieras en la sección <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/> de AI Wize.</translation>
+<translation id="3141206739023333979">Puedes cambiar estas opciones cuando quieras en la sección <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/> de AI Wize.</translation>
 <translation id="8321985064212130832">Lee nuestra <ph name="LINK_BEFORE"/>Política de privacidad<ph name="LINK_AFTER"/> completa</translation>
 <translation id="2801098717523961746">Elija su tema</translation>
 <translation id="6262510489122516114">Puedes cambiar esto en cualquier momento en los ajustes de AI Wize.</translation>
@@ -2087,7 +2087,7 @@ Sin embargo, nos hemos dado cuenta de que este servicio de ayuda no está funcio
 <translation id="5004375364898143117">Parece que hay problemas con la conexión de WireGuard. ¿Te gustaría activar la alternativa IKEv2 para disfrutar de una VPN confiable? Lo único que tienes que hacer es reiniciar el navegador.
 
 Si necesitas ayuda en relación con la compatibilidad o el proceso de configuración, ponte en contacto con nuestro amable equipo de asistencia.
-Puedes revertir los cambios y volver a usar WireGuard en cualquier momento en brave://settings/system.
+Puedes revertir los cambios y volver a usar WireGuard en cualquier momento en aiwize://settings/system.
 
 ¡Establezcamos conexión!
 

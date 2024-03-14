@@ -59,7 +59,7 @@ TEST_F(BraveAdsPurchaseIntentProcessorTest,
   PurchaseIntentProcessor processor(*resource_);
 
   // Act
-  processor.Process(GURL("brave://rewards"));
+  processor.Process(GURL("aiwize://rewards"));
 
   // Assert
   EXPECT_THAT(

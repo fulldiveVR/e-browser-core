@@ -88,7 +88,7 @@ IN_PROC_BROWSER_TEST_F(BraveTabContextMenuContentsTest, Basics) {
 
   // When a tab is closed, restore tab menu item is enabled.
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://version/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("aiwize://version/")));
   chrome::CloseTab(browser());
   EXPECT_TRUE(menu->IsCommandIdEnabled(BraveTabMenuModel::CommandRestoreTab));
   EXPECT_FALSE(

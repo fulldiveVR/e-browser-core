@@ -134,7 +134,7 @@
       }, {
         "name": "loadUI",
         "type": "function",
-        "description": "Called when brave://wallet WebUI wants to load the real UI",
+        "description": "Called when aiwize://wallet WebUI wants to load the real UI",
         "parameters": [],
         "returns_async": {
           "name": "callback",

@@ -30,20 +30,20 @@ void BraveLocationBarModelDelegate::FormattedStringFromURL(
     std::u16string* new_formatted_url) {
   if (url.SchemeIs("chrome")) {
     base::ReplaceFirstSubstringAfterOffset(new_formatted_url, 0, u"chrome://",
-                                           u"brave://");
+                                           u"aiwize://");
   }
 
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
   if (url.SchemeIs(kChromeExtensionScheme) &&
       url.host() == kEthereumRemoteClientExtensionId) {
     base::ReplaceFirstSubstringAfterOffset(
-        new_formatted_url, 0, kEthereumRemoteClientBaseUrl, u"brave://wallet");
+        new_formatted_url, 0, kEthereumRemoteClientBaseUrl, u"aiwize://wallet");
     base::ReplaceFirstSubstringAfterOffset(new_formatted_url, 0,
                                            kEthereumRemoteClientPhishingUrl,
-                                           u"brave://wallet");
+                                           u"aiwize://wallet");
     base::ReplaceFirstSubstringAfterOffset(new_formatted_url, 0,
                                            kEthereumRemoteClientEnsRedirectUrl,
-                                           u"brave://wallet");
+                                           u"aiwize://wallet");
   }
 #endif
 }

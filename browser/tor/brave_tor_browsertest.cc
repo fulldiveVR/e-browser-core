@@ -376,7 +376,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorTestWithCustomProfile, Incognito) {
   EXPECT_TRUE(TorProfileServiceFactory::IsTorManaged(browser()->profile()));
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("aiwize://settings/privacy")));
   web_contents = browser()->tab_strip_model()->GetActiveWebContents();
 
   EXPECT_FALSE(is_element_enabled("torEnabled"));
@@ -407,7 +407,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorTestWithCustomProfile, Incognito) {
   EXPECT_TRUE(tor_profile->IsTor());
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("aiwize://settings/privacy")));
   web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_TRUE(is_element_enabled("torEnabled"));
   EXPECT_TRUE(is_element_enabled("useBridges"));

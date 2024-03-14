@@ -304,7 +304,7 @@ class SyncWelcomeViewController: SyncViewController {
 
       let syncInternalsController = ChromeWebViewController(privateBrowsing: false).then {
         $0.title = Strings.braveSyncInternalsTitle
-        $0.loadURL("brave://sync-internals")
+        $0.loadURL("aiwize://sync-internals")
       }
 
       navigationController?.pushViewController(syncInternalsController, animated: true)

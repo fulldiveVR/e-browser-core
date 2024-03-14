@@ -2020,7 +2020,7 @@ hat <ph name="NUMBER"/> Tracker, Anzeigen und mehr blockiert</translation>
 <translation id="1097073572755862978">Senden Sie einen Diagnosebericht, wenn AI Wize abstürzt  oder hängen bleibt. <ph name="LINK_BEFORE"/>Mehr erfahren.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Teilen Sie völlig anonyme und private Produkteinblicke darüber, welche Funktionen von AI Wize-Nutzern verwendet werden. <ph name="LINK_BEFORE"/>Mehr erfahren.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Einrichtung abgeschlossen</translation>
-<translation id="3141206739023333979">Sie können Ihre Auswahl jederzeit in AI Wize unter <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/> ändern.</translation>
+<translation id="3141206739023333979">Sie können Ihre Auswahl jederzeit in AI Wize unter <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/> ändern.</translation>
 <translation id="8321985064212130832">Unsere gesamte <ph name="LINK_BEFORE"/>Datenschutzerklärung<ph name="LINK_AFTER"/> lesen</translation>
 <translation id="2801098717523961746">Wählen Sie Ihr Scema</translation>
 <translation id="6262510489122516114">Sie können dies jederzeit in den AI Wize-Einstellungen ändern.</translation>
@@ -2087,7 +2087,7 @@ Wir haben allerdings festgestellt, dass dieser Hilfsdienst nicht ausgeführt wir
 <translation id="5004375364898143117">Es sieht so aus, als gäbe es einige Probleme mit der WireGuard-Verbindung. Möchten Sie IKEv2 Fallback für ein zuverlässiges VPN aktivieren? Starten Sie einfach Ihren Browser neu.
 
 Benötigen Sie Hilfe bei der Kompatibilität oder Konfiguration? Wenden Sie sich an unser freundliches Support-Team.
-Sie können jederzeit zu WireGuard zurückkehren unter brave://settings/system.
+Sie können jederzeit zu WireGuard zurückkehren unter aiwize://settings/system.
 
 Wir bringen Sie in Verbindung!
 

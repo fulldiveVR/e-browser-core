@@ -917,7 +917,7 @@ class SettingsViewController: TableViewController {
             let viewMoreDetails = UIAlertAction(title: Strings.viewAllVersionInfo, style: .default)
             { [unowned self, weak actionSheet] _ in
               let versionController = ChromeWebViewController(privateBrowsing: false).then {
-                $0.loadURL("brave://version/?show-variations-cmd")
+                $0.loadURL("aiwize://version/?show-variations-cmd")
               }
               versionController.title = version
 
@@ -1059,7 +1059,7 @@ class SettingsViewController: TableViewController {
           selection: { [unowned self] in
             let localStateController = ChromeWebViewController(privateBrowsing: false).then {
               $0.title = "Chromium Local State"
-              $0.loadURL("brave://local-state")
+              $0.loadURL("aiwize://local-state")
             }
             if #available(iOS 16.0, *) {
               let webView = localStateController.webView
@@ -1087,7 +1087,7 @@ class SettingsViewController: TableViewController {
           selection: { [unowned self] in
             let histogramsController = ChromeWebViewController(privateBrowsing: false).then {
               $0.title = "Histograms (p3a)"
-              $0.loadURL("brave://histograms")
+              $0.loadURL("aiwize://histograms")
             }
             if #available(iOS 16.0, *) {
               let webView = histogramsController.webView

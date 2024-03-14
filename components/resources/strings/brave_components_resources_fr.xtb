@@ -2020,7 +2020,7 @@
 <translation id="1097073572755862978">Envoyer des rapports de diagnostic en cas de dysfonctionnement. <ph name="LINK_BEFORE"/>En savoir plus<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Partager des données complètement privées et anonymes sur les fonctionnalités utilisées par les utilisateurs de AI Wize. <ph name="LINK_BEFORE"/>En savoir plus<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Configuration terminée</translation>
-<translation id="3141206739023333979">Consultez ce lien (<ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>) pour modifier ces options à tout moment dans AI Wize.</translation>
+<translation id="3141206739023333979">Consultez ce lien (<ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>) pour modifier ces options à tout moment dans AI Wize.</translation>
 <translation id="8321985064212130832">Lisez notre <ph name="LINK_BEFORE"/>politique de confidentialité<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Choisir votre thème</translation>
 <translation id="6262510489122516114">Vous pouvez modifier cette option à tout moment dans les paramètres AI Wize.</translation>
@@ -2087,7 +2087,7 @@ Cependant, nous avons remarqué que ce service d'aide n'est pas exécuté, et no
 <translation id="5004375364898143117">Il semble qu'il y ait des problèmes avec la connexion WireGuard. Vous voulez activer la fonction de secours IKEv2 pour disposer d'un VPN fiable ? Il vous suffit de redémarrer votre navigateur.
 
 Besoin d'aide pour la compatibilité ou la configuration ? Contactez notre équipe d'assistance.
-Vous pouvez toujours revenir à WireGuard sur brave://settings/system.
+Vous pouvez toujours revenir à WireGuard sur aiwize://settings/system.
 
 Connectez-vous !
 

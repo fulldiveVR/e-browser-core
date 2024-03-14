@@ -265,7 +265,7 @@
     Share the hostname of the page you are on (<ph name="HOST_NAME">$1<ex>www.example.com</ex></ph>) to help us make AI Wize Chat better.
   </message>
   <message name="IDS_AI_CHAT_CONTEXT_LEO_TOOLS" desc="The text label of AI Wize Chat tools submenu in the context menu">
-    AI Wize Chat AI tools
+    AI Wize Chat tools
   </message>
   <message name="IDS_AI_CHAT_CONTEXT_QUICK_ACTIONS" desc="The title of the context menu section for AI quick actions">
     Quick actions

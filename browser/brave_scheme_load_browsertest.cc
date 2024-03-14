@@ -154,7 +154,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest, NotAllowedToLoadTest) {
       NavigateToURLUntilLoadStop("example.com", "/brave_scheme_load.html"));
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(
       active_contents(),
@@ -169,7 +169,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       NavigateToURLUntilLoadStop("example.com", "/brave_scheme_load.html"));
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(
       active_contents(),
@@ -185,7 +185,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       NavigateToURLUntilLoadStop("example.com", "/brave_scheme_load.html"));
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(
       active_contents(),
@@ -202,7 +202,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
   auto* initial_active_tab = active_contents();
   content::WebContentsConsoleObserver console_observer(initial_active_tab);
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(initial_active_tab,
                               "window.domAutomationController.send("
@@ -218,10 +218,10 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
 
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(
-      content::ExecJs(active_contents(), "window.open(\"brave://settings\")"));
+      content::ExecJs(active_contents(), "window.open(\"aiwize://settings\")"));
   ASSERT_TRUE(console_observer.Wait());
 }
 
@@ -231,7 +231,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest, NotAllowedToBraveByClick) {
       NavigateToURLUntilLoadStop("example.com", "/brave_scheme_load.html"));
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(
       active_contents(),
@@ -246,7 +246,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       NavigateToURLUntilLoadStop("example.com", "/brave_scheme_load.html"));
   content::WebContentsConsoleObserver console_observer(active_contents());
   console_observer.SetPattern(
-      "Not allowed to load local resource: brave://settings/");
+      "Not allowed to load local resource: aiwize://settings/");
 
   ASSERT_TRUE(content::ExecJs(
       active_contents(),
@@ -264,7 +264,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
 #endif
 // NOTE: the actual crash functionality is covered upstream in
 // chrome/browser/crash_recovery_browsertest.cc
-// This test is for the brave:// scheme. This is a regression test added with:
+// This test is for the aiwize:// scheme. This is a regression test added with:
 // https://github.com/brave/brave-core/pull/2229)
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest, MAYBE_CrashURLTest) {
   content::RenderProcessHostWatcher crash_observer(
@@ -272,7 +272,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest, MAYBE_CrashURLTest) {
       content::RenderProcessHostWatcher::WATCH_FOR_PROCESS_EXIT);
   content::ScopedAllowRendererCrashes allow_renderer_crashes(active_contents());
   browser()->OpenURL(
-      content::OpenURLParams(GURL("brave://crash/"), content::Referrer(),
+      content::OpenURLParams(GURL("aiwize://crash/"), content::Referrer(),
                              WindowOpenDisposition::CURRENT_TAB,
                              ui::PAGE_TRANSITION_TYPED, false));
   crash_observer.Wait();
@@ -281,13 +281,13 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest, MAYBE_CrashURLTest) {
 // Some webuis are not allowed to load in private window.
 // Allowed url list are checked by IsURLAllowedInIncognito().
 // So, corresponding brave scheme url should be filtered as chrome scheme.
-// Ex, brave://settings should be loaded only in normal window because
-// chrome://settings is not allowed. When tyring to loading brave://settings in
+// Ex, aiwize://settings should be loaded only in normal window because
+// chrome://settings is not allowed. When tyring to loading aiwize://settings in
 // private window, it should be loaded in normal window instead of private
 // window.
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
                        SettingsPageIsNotAllowedInPrivateWindow) {
-  TestURLIsNotLoadedInPrivateWindow("brave://settings");
+  TestURLIsNotLoadedInPrivateWindow("aiwize://settings");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
@@ -300,7 +300,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       IsURLAllowedInIncognito(GURL("chrome://rewards"), browser()->profile()));
   EXPECT_TRUE(
       IsURLAllowedInIncognito(GURL("http://rewards"), browser()->profile()));
-  TestURLIsNotLoadedInPrivateWindow("brave://rewards");
+  TestURLIsNotLoadedInPrivateWindow("aiwize://rewards");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
@@ -309,16 +309,16 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       IsURLAllowedInIncognito(GURL("chrome://wallet"), browser()->profile()));
   EXPECT_TRUE(
       IsURLAllowedInIncognito(GURL("http://wallet"), browser()->profile()));
-  TestURLIsNotLoadedInPrivateWindow("brave://wallet");
+  TestURLIsNotLoadedInPrivateWindow("aiwize://wallet");
   prefs()->SetBoolean(kBraveWalletPrivateWindowsEnabled, true);
   EXPECT_TRUE(
-      IsURLAllowedInIncognito(GURL("brave://wallet"), browser()->profile()));
+      IsURLAllowedInIncognito(GURL("aiwize://wallet"), browser()->profile()));
   TestURLIsLoadedInPrivateWindow("chrome://wallet/crypto/onboarding/welcome");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
                        WalletPageIsNotAllowedInGuestWindow) {
-  TestURLIsNotLoadedInGuestWindow(GURL("brave://wallet"));
+  TestURLIsNotLoadedInGuestWindow(GURL("aiwize://wallet"));
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
@@ -327,7 +327,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       IsURLAllowedInIncognito(GURL("chrome://sync"), browser()->profile()));
   EXPECT_TRUE(
       IsURLAllowedInIncognito(GURL("http://sync"), browser()->profile()));
-  TestURLIsNotLoadedInPrivateWindow("brave://sync");
+  TestURLIsNotLoadedInPrivateWindow("aiwize://sync");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
@@ -336,10 +336,10 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
       IsURLAllowedInIncognito(GURL("chrome://welcome"), browser()->profile()));
   EXPECT_TRUE(
       IsURLAllowedInIncognito(GURL("http://welcome"), browser()->profile()));
-  TestURLIsNotLoadedInPrivateWindow("brave://welcome");
+  TestURLIsNotLoadedInPrivateWindow("aiwize://welcome");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
                        BraveWelcomePageIsNotAllowedInGuestWindow) {
-  TestURLIsNotLoadedInGuestWindow(GURL("brave://welcome"));
+  TestURLIsNotLoadedInGuestWindow(GURL("aiwize://welcome"));
 }

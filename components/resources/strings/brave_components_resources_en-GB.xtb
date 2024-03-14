@@ -2020,7 +2020,7 @@
 <translation id="1097073572755862978">Send diagnostic reports if you experience a crash or freeze. <ph name="LINK_BEFORE"/>Learn more.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Share completely private and anonymous product insights about what features are being used by AI Wize's users. <ph name="LINK_BEFORE"/>Learn more.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Set-up complete</translation>
-<translation id="3141206739023333979">Change these choices at any time in AI Wize at <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Change these choices at any time in AI Wize at <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Read our full <ph name="LINK_BEFORE"/>Privacy Policy<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Choose your theme</translation>
 <translation id="6262510489122516114">You can change this at any time in AI Wize settings.</translation>
@@ -2087,7 +2087,7 @@ However, we noticed this helper service is not running, and we don't want to lea
 <translation id="5004375364898143117">Looks like there are some issues with the WireGuard connection. Want to enable IKEv2 fallback for a reliable VPN? Simply restart your browser.
 
 Need help with compatibility or configuration? Contact our friendly support team.
-You can always revert back to WireGuard on brave://settings/system.
+You can always revert back to WireGuard on aiwize://settings/system.
 
 Let's get you connected!
 

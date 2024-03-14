@@ -2020,7 +2020,7 @@
 <translation id="1097073572755862978">Send fejlrapporter, hvis browseren bryder sammen eller går i stå. <ph name="LINK_BEFORE"/>Læs mere.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Del anonyme, og private oplysninger om, hvilke funktioner andre AI Wize-brugere benytter.<ph name="LINK_BEFORE"/>Læs mere.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Setup fuldført</translation>
-<translation id="3141206739023333979">Du kan når som helst ændre dine valg i AI Wize under <ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
+<translation id="3141206739023333979">Du kan når som helst ændre dine valg i AI Wize under <ph name="LINK_BEFORE1"/>aiwize://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Læs vores fulde <ph name="LINK_BEFORE"/>Privatlivspolitik<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Vælg dit tema</translation>
 <translation id="6262510489122516114">Du kan til enhver tid ændre dette i AI Wize-indstillingerne</translation>
@@ -2087,7 +2087,7 @@ Vi har dog bemærket, at denne hjælpetjeneste ikke er slået til, og vi vil ger
 <translation id="5004375364898143117">Det ser ud til, at der er nogle problemer med WireGuard-forbindelsen. Vil du aktivere IKEv2-tilbagefald for en pålidelig VPN? Du skal blot genstarte din browser.
 
 Har du brug for hjælp til kompatibilitet eller konfigurering? Kontakt vores hjælpsomme support team.
-Du kan altid gå tilbage til WireGuard på brave://settings/system.
+Du kan altid gå tilbage til WireGuard på aiwize://settings/system.
 
 Lad os få dig tilknyttet!
 
