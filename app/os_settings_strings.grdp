@@ -334,12 +334,12 @@
   </message>
   <if expr="reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your AI Wize account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Brave settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your AI Wize account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>AI Wize settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
   </if>
   <if expr="not reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS devices where you are signed in with your AI Wize account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Brave settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS devices where you are signed in with your AI Wize account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>AI Wize settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
   </if>
   <message name="IDS_OS_SETTINGS_SYNC_APPS_CHECKBOX_LABEL" desc="Label for the checkbox which enables syncing of apps across devices.">
@@ -509,7 +509,7 @@
   <message name="IDS_OS_SETTINGS_INPUT_METHOD_LANGUAGE_PACKS_NEEDS_REBOOT_ERROR" desc="Error message when a component of an input method could not be downloaded because the device needs to restart to update." translateable="false">
     Please restart your device to finish installation
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_TITLE" desc="Title for the section containing all the options for spell check settings. The options include picking between using the system's spell check or using Brave's web service and a list of the enabled languages which support spell checking.">
+  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_TITLE" desc="Title for the section containing all the options for spell check settings. The options include picking between using the system's spell check or using AI Wize's web service and a list of the enabled languages which support spell checking.">
     Spell check
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_AND_GRAMMAR_CHECK_TITLE" desc="Title for the section containing all the options for spell and grammar check settings. The options include a list of the enabled languages which support spell checking.">
@@ -518,7 +518,7 @@
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_AND_GRAMMAR_CHECK_DESCRIPTION" desc="Description for the spell and grammar check section.">
     Grammar check currently available for English only
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_ENHANCED_LABEL" desc="Label for enhanced spell check toggle, the type of spell check that sends the text the user types to AI Wize spelling service. It is important that it is communicated that the text the user types will be sent to Brave.">
+  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_ENHANCED_LABEL" desc="Label for enhanced spell check toggle, the type of spell check that sends the text the user types to AI Wize spelling service. It is important that it is communicated that the text the user types will be sent to AI Wize.">
     Enhanced spell check in AI Wize browser (text is sent to AI Wize for spelling suggestions)
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_LANGUAGES_LIST_TITLE" desc="Title for the list of languages that support spell check, from which users can enable or disable spell check for.">
@@ -612,7 +612,7 @@
     Reset to device language
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_APP_LANGUAGES_CHANGE_LANGUAGE_BUTTON_DESCRIPTION" desc="The description read by screenreader for the button where users can change the app language, either to another one, or reset to device language.">
-    Change <ph name="APP">$1<ex>Brave TV</ex></ph> language. Current language is <ph name="LANGUAGE">$2<ex>English (United States)</ex></ph>.
+    Change <ph name="APP">$1<ex>AI Wize TV</ex></ph> language. Current language is <ph name="LANGUAGE">$2<ex>English (United States)</ex></ph>.
   </message>
 
   <!-- Suggestions Section -->
@@ -628,7 +628,7 @@
   <message name="IDS_SETTINGS_SUGGESTIONS_PERSONAL_INFO_DESCRIPTION" desc="The description for personal information suggestion section.">
     Write faster with inline suggestions for your name, address, or phone number
   </message>
-  <message name="IDS_SETTINGS_SUGGESTIONS_MANAGE_PERSONAL_INFO" desc="The label for opening Brave's browser settings page for managing personal addresses">
+  <message name="IDS_SETTINGS_SUGGESTIONS_MANAGE_PERSONAL_INFO" desc="The label for opening AI Wize's browser settings page for managing personal addresses">
     Manage personal information
   </message>
   <message name="IDS_OS_SETTINGS_SUGGESTIONS_ORCA_TITLE" desc="The label for orca" translateable="false">
@@ -699,8 +699,8 @@
   <message name="IDS_SETTINGS_INPUT_METHOD_OPTIONS_JAPANESE_DISABLE_PERSONALIZED_SUGGESTIONS" desc="The label for the setting toggle to enable or disable the personalized conversions and custom user dictionaries for Japanese. The original string in Japanese is '学習機能、入力履歴からのサジェスト機能、ユーザ辞書機能を無効にする'.">
     Disable personalized conversions and suggestions as well as user dictionary
   </message>
-  <message name="IDS_SETTINGS_INPUT_METHOD_OPTIONS_JAPANESE_SEND_STATISTICS_TO_GOOGLE" desc="The label for the setting toggle to enable or disable sending all usage statistics and crash reports to Brave. The original string in Japanese is '使用統計データや障害レポートを AI Wize に自動送信する'.">
-    Automatically send usage statistics and crash reports to Brave
+  <message name="IDS_SETTINGS_INPUT_METHOD_OPTIONS_JAPANESE_SEND_STATISTICS_TO_GOOGLE" desc="The label for the setting toggle to enable or disable sending all usage statistics and crash reports to AI Wize. The original string in Japanese is '使用統計データや障害レポートを AI Wize に自動送信する'.">
+    Automatically send usage statistics and crash reports to AI Wize
   </message>
   <message name="IDS_SETTINGS_INPUT_METHOD_OPTIONS_ENABLE_DOUBLE_SPACE_PERIOD" desc="The label for the input method option to enable double-space to type period (when an user types two consecutive space, it outputs a period).">
     Double-space to type period
@@ -2493,7 +2493,7 @@ Press an assigned switch or key to remove assignment.
     Develop Android apps
   </message>
   <message name="IDS_SETTINGS_CROSTINI_ARC_ADB_DESCRIPTION" desc="Description of ARC ADB sideloading in Settings.">
-    To create and test your apps, enable the Android Debug Bridge (ADB). Note that this action allows installation of Android apps that haven't been verified by Brave, and requires a factory reset to disable.
+    To create and test your apps, enable the Android Debug Bridge (ADB). Note that this action allows installation of Android apps that haven't been verified by AI Wize, and requires a factory reset to disable.
   </message>
   <message name="IDS_SETTINGS_CROSTINI_ARC_ADB_LABEL" desc="Label for enabling ADB in ARC.">
     Enable ADB debugging
@@ -4223,7 +4223,7 @@ Press an assigned switch or key to remove assignment.
     Forget
   </message>
   <message name="IDS_SETTINGS_INTERNET_KNOWN_NETWORKS_MENU_BUTTON_TITLE" desc="Settings &gt; Internet &gt; Known networks &gt; Item &gt; Title for button that opens dropdown menu for the network.">
-    More actions for <ph name="NETWORK_NAME">$1<ex>Brave-A</ex></ph>
+    More actions for <ph name="NETWORK_NAME">$1<ex>AI Wize-A</ex></ph>
   </message>
   <message name="IDS_SETTINGS_SETTINGS_NETWORK_ALLOW_DATA_ROAMING" desc="Settings &gt; Internet &gt; Network details: Toggle label to allow mobile data roaming.">
     Allow mobile data roaming
@@ -4412,7 +4412,7 @@ Press an assigned switch or key to remove assignment.
     Network configuration is controlled by <ph name="USER_EMAIL">$1<ex>joe@gmail.com</ex></ph>.
   </message>
   <message name="IDS_SETTINGS_INTERNET_A11Y_MANAGED_BY_ADMINISTRATOR" desc="Settings &gt; Internet &gt; Network details: A11Y label for managed by administrator icon, indicating which network settings is being managed by an administrator">
-    <ph name="NETWORK_NAME">$1<ex>Brave-A</ex></ph> is managed by your administrator
+    <ph name="NETWORK_NAME">$1<ex>AI Wize-A</ex></ph> is managed by your administrator
   </message>
   <message name="IDS_SETTINGS_INTERNET_NETWORK_SECTION_ADVANCED" desc="Settings &gt; Internet &gt; Network details: Advanced section label.">
     Advanced
@@ -4493,10 +4493,10 @@ Press an assigned switch or key to remove assignment.
     To use Instant Tethering, turn on notifications for Google Play Services.
   </message>
   <message name="IDS_SETTINGS_INTERNET_GMSCORE_NOTIFICATIONS_ONE_DEVICE_SUBTITLE" desc="Subtitle of the section which explains how to enable Google Play Services notifications. This subtitle is used when only one phone needs to have its notifications enabled.">
-    On your '<ph name="PHONE_NAME">$1<ex>Brave Pixel</ex></ph>':
+    On your '<ph name="PHONE_NAME">$1<ex>AI Wize Pixel</ex></ph>':
   </message>
   <message name="IDS_SETTINGS_INTERNET_GMSCORE_NOTIFICATIONS_TWO_DEVICES_SUBTITLE" desc="Subtitle of the section which explains how to enable Google Play Services notifications. This subtitle is used when two phones need to have their notifications enabled.">
-    On your '<ph name="PHONE_NAME_1">$1<ex>Brave Pixel</ex></ph>' and '<ph name="PHONE_NAME_2">$2<ex>Brave Pixel 2</ex></ph>':
+    On your '<ph name="PHONE_NAME_1">$1<ex>AI Wize Pixel</ex></ph>' and '<ph name="PHONE_NAME_2">$2<ex>AI Wize Pixel 2</ex></ph>':
   </message>
   <message name="IDS_SETTINGS_INTERNET_GMSCORE_NOTIFICATIONS_MANY_DEVICES_SUBTITLE" desc="Subtitle of the section which explains how to enable Google Play Services notifications. This subtitle is used when three or more phones need to have their notifications enabled.">
     On your devices:
@@ -4523,13 +4523,13 @@ Press an assigned switch or key to remove assignment.
     <ph name="BATTERY_PERCENTAGE">$1<ex>100</ex></ph>% Battery
   </message>
   <message name="IDS_SETTINGS_INTERNET_TETHER_CONNECTION_EXPLANATION" desc="Settings &gt; Internet &gt; Tether Connection Dialog &gt; Explanation of what will happen if the user connects to a tether hotspot.">
-    Your <ph name="PHONE_NAME">$1<ex>Brave Pixel XL</ex></ph> will create a private Wi-Fi connection.
+    Your <ph name="PHONE_NAME">$1<ex>AI Wize Pixel XL</ex></ph> will create a private Wi-Fi connection.
   </message>
   <message name="IDS_SETTINGS_INTERNET_TETHER_CONNECTION_CARRIER_WARNING" desc="Settings &gt; Internet &gt; Tether Connection Dialog &gt; Warning to users that cellular providers may block the use of tethering.">
     Some carriers might block this feature.
   </message>
   <message name="IDS_SETTINGS_INTERNET_TETHER_CONNECTION_DESCRIPTION_TITLE" desc="Settings &gt; Internet &gt; Tether Connection Dialog &gt; Title of the section describing what will happen when tethering is enabled.">
-    While the hotspot is on, your <ph name="PHONE_NAME">$1<ex>Brave Pixel XL</ex></ph> will:
+    While the hotspot is on, your <ph name="PHONE_NAME">$1<ex>AI Wize Pixel XL</ex></ph> will:
   </message>
   <message name="IDS_SETTINGS_INTERNET_TETHER_CONNECTION_DESCRIPTION_MOBILE_DATA" desc="Settings &gt; Internet &gt; Tether Connection Dialog &gt; Bulletpoint alerting the user that tethering will use mobile data.">
     Use mobile data
@@ -4860,7 +4860,7 @@ Press an assigned switch or key to remove assignment.
     View your phone's photos, media, notifications, and apps
   </message>
   <message name="IDS_SETTINGS_MULTIDEVICE_PHONE_HUB_TASK_CONTINUATION_DISABLED_SUMMARY" desc="Description of for the 'Phone Hub Task Continuation' setting when AI Wize sync is not enabled. This feature lets users resume in-app actions and chrome tabs that are open on a connected Android phone from ChromeOS devices.">
-    Turn on <ph name="LINK1_BEGIN">&lt;a id="chromeSyncLink"&gt;</ph>Brave Sync<ph name="LINK1_END">&lt;/a&gt;</ph> to view recent AI Wize tabs. <ph name="LINK2_BEGIN">&lt;a target="_blank" id="learnMoreLink" href="$1<ex>https://google.com/</ex>"&gt;</ph>Learn More<ph name="LINK2_END">&lt;/a&gt;</ph>
+    Turn on <ph name="LINK1_BEGIN">&lt;a id="chromeSyncLink"&gt;</ph>AI Wize Sync<ph name="LINK1_END">&lt;/a&gt;</ph> to view recent AI Wize tabs. <ph name="LINK2_BEGIN">&lt;a target="_blank" id="learnMoreLink" href="$1<ex>https://google.com/</ex>"&gt;</ph>Learn More<ph name="LINK2_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_MULTIDEVICE_PHONE_HUB_TASK_CONTINUATION_SYNC_LABEL" desc="Accessibility label (used by screen readers, not shown in UI) for a link that leads to the AI Wize Sync toggle that needs to be enabled as a prerequisite for the 'Phone Hub Task Continuation' feature to be enabled. This feature lets users resume chrome tabs that are open on a connected Android phone from ChromeOS devices.">
     Turn on AI Wize Sync to view recent AI Wize tabs from your phone
@@ -4934,8 +4934,8 @@ Press an assigned switch or key to remove assignment.
   <message name="IDS_SETTINGS_MULTIDEVICE_WIFI_SYNC_SUMMARY" desc="Description for the 'Wifi Sync' section on the settings page. This feature lets the user sync wifi network configurations between ChromeOS devices and a connected Android phone">
     Sync Wi-Fi networks with your phone. <ph name="LINK_BEGIN">&lt;a target="_blank" href="$1<ex>https://google.com/</ex>"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
-  <message name="IDS_SETTINGS_MULTIDEVICE_ENABLE_WIFI_SYNC_V1_SUMMARY" desc="Description for the 'Wifi Sync' section on the settings page when the prerequisite 'Brave Sync' setting is not activated. This feature lets the user sync wifi network configurations between ChromeOS devices and a connected Android phone. The description contains a link that leads to the toggle where the prerequisite 'Brave Sync' feature can be turned on and a 'Learn More' link to learn more about the 'Wifi Sync' feature.">
-    Turn on <ph name="LINK1_BEGIN">&lt;a id="chromeSyncLink"&gt;</ph>Brave Sync<ph name="LINK1_END">&lt;/a&gt;</ph> to use Wi-Fi Sync. <ph name="LINK2_BEGIN">&lt;a id="learnMoreLink" target="_blank" href="$1<ex>https://google.com/</ex>"&gt;</ph>Learn more<ph name="LINK2_END">&lt;/a&gt;</ph>
+  <message name="IDS_SETTINGS_MULTIDEVICE_ENABLE_WIFI_SYNC_V1_SUMMARY" desc="Description for the 'Wifi Sync' section on the settings page when the prerequisite 'AI Wize Sync' setting is not activated. This feature lets the user sync wifi network configurations between ChromeOS devices and a connected Android phone. The description contains a link that leads to the toggle where the prerequisite 'AI Wize Sync' feature can be turned on and a 'Learn More' link to learn more about the 'Wifi Sync' feature.">
+    Turn on <ph name="LINK1_BEGIN">&lt;a id="chromeSyncLink"&gt;</ph>AI Wize Sync<ph name="LINK1_END">&lt;/a&gt;</ph> to use Wi-Fi Sync. <ph name="LINK2_BEGIN">&lt;a id="learnMoreLink" target="_blank" href="$1<ex>https://google.com/</ex>"&gt;</ph>Learn more<ph name="LINK2_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_MULTIDEVICE_WIFI_SYNC_CHROME_SYNC_LABEL" desc="Accessibility label (used by screen readers, not shown in UI) for a link that leads to the AI Wize Sync toggle that needs to be enabled as a prerequisite for the 'Wifi Sync' feature to be enabled. This feature lets the user sync wifi network configurations between ChromeOS devices and a connected Android phone.">
     Turn on AI Wize Sync to use Wi-Fi Sync
@@ -5431,7 +5431,7 @@ Press an assigned switch or key to remove assignment.
     Restart your device
   </message>
   <message name="IDS_SETTINGS_FACTORY_RESET_DESCRIPTION" desc="Description of the factory reset option on the AI Wize settings page">
-    Remove all user accounts and reset your <ph name="IDS_SHORT_PRODUCT_NAME">$1<ex>Brave</ex></ph> device to be just like new.
+    Remove all user accounts and reset your <ph name="IDS_SHORT_PRODUCT_NAME">$1<ex>AI Wize</ex></ph> device to be just like new.
   </message>
   <message name="IDS_OS_SETTINGS_REVAMP_FACTORY_RESET_DESCRIPTION" desc="Description of the factory reset option on the ChromeOS settings page">
     Remove all user accounts and reset your Chromebook to be just like new.
@@ -5486,13 +5486,13 @@ Press an assigned switch or key to remove assignment.
     AI Wize Assistant
   </message>
   <message name="IDS_SETTINGS_GOOGLE_ASSISTANT_ENABLE_HOTWORD" desc="Title for a toggle that lets the assistant detect hotword.">
-    "Hey Brave"
+    "Hey AI Wize"
   </message>
   <message name="IDS_SETTINGS_GOOGLE_ASSISTANT_ENABLE_HOTWORD_DESCRIPTION" desc="Sub label for hotword-enable toggle.">
-    Access your Assistant when you say "Hey Brave."
+    Access your Assistant when you say "Hey AI Wize."
   </message>
   <message name="IDS_SETTINGS_GOOGLE_ASSISTANT_ENABLE_HOTWORD_WITHOUT_DSP_DESCRIPTION" desc="Sub label for hotword-enable dropdown without DSP support.">
-    Access your Assistant when you say "Hey Brave." To save battery, choose “On (Recommended.)” Your Assistant will respond only when your device is plugged in or charging.
+    Access your Assistant when you say "Hey AI Wize." To save battery, choose “On (Recommended.)” Your Assistant will respond only when your device is plugged in or charging.
   </message>
   <message name="IDS_SETTINGS_GOOGLE_ASSISTANT_ENABLE_HOTWORD_WITHOUT_DSP_RECOMMENDED" desc="Default label for hotword-enable dropdown without DSP support.">
     On (Recommended)
@@ -6310,7 +6310,7 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     Lock screen, controls
   </message>
   <message name="IDS_SETTINGS_ENABLE_LOGGING_TOGGLE_DESC" desc="The description of the checkbox to enable/disable crash and user metrics logging in ChromeOS for user of the device.">
-    Automatically sends crash reports as well as diagnostic and usage data to Brave
+    Automatically sends crash reports as well as diagnostic and usage data to AI Wize
   </message>
   <message name="IDS_SETTINGS_ENABLE_SUGGESTED_CONTENT_TITLE" desc="The label of the checkbox to enable/disable Suggested Content in ChromeOS settings. Suggested Content includes app search recommendations and website recommendations which can show up in places such as the launcher search and suggestion chips.">
     Suggest new content to explore
@@ -6370,7 +6370,7 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     Screen privacy
   </message>
   <message name="IDS_OS_SETTINGS_SMART_PRIVACY_DESC" desc="The text explaining to the user the manner in which their presence is sensed and data usage policy.">
-    Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> uses a built-in sensor to detect profiles in front of your device. All data is processed on your device immediately and then deleted. Sensor data is never sent to Brave. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> uses a built-in sensor to detect profiles in front of your device. All data is processed on your device immediately and then deleted. Sensor data is never sent to AI Wize. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_OS_SETTINGS_SMART_PRIVACY_QUICK_DIM_TITLE" desc="The name of the quick dim feature shown as the label of a toggle in the smart privacy subpage.">
     Lock-on-leave
@@ -6481,13 +6481,13 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     Websites
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_MANAGE_CAMERA_PERMISSIONS_IN_CHROME_TEXT" desc="The label of the AI Wize row in the Websites section of the camera subpage. This row is displayed when camera is allowed.">
-    Manage site camera permissions in Brave
+    Manage site camera permissions in AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_MANAGE_MIC_PERMISSIONS_IN_CHROME_TEXT" desc="The label of the AI Wize row in the Websites section of the microphone subpage. This row is displayed when microphone is allowed.">
-    Manage site microphone permissions in Brave
+    Manage site microphone permissions in AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_MANAGE_LOCATION_PERMISSIONS_IN_CHROME_TEXT" translateable="false" desc="The label of the AI Wize row in the Websites section of the location subpage. This row is displayed when location is allowed.">
-    Manage site location permissions in Brave
+    Manage site location permissions in AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_NO_WEBSITE_CAN_USE_CAMERA_TEXT" desc="The text displayed in the Websites section of the camera subpage when camera is not allowed.">
     No websites are allowed to use your camera
@@ -6547,13 +6547,13 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     <ph name="SENSOR_NAME">$1<ex>Front Camera</ex></ph> (blocked)
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_CAMERA_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub camera subpage.">
-    <ph name="APP_NAME">$1<ex>Brave Meet</ex></ph> camera permission
+    <ph name="APP_NAME">$1<ex>AI Wize Meet</ex></ph> camera permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_LOCATION_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub location subpage.">
-    <ph name="APP_NAME">$1<ex>Brave Meet</ex></ph> location permission
+    <ph name="APP_NAME">$1<ex>AI Wize Meet</ex></ph> location permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_MICROPHONE_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub microphone subpage.">
-    <ph name="APP_NAME">$1<ex>Brave Meet</ex></ph> microphone permission
+    <ph name="APP_NAME">$1<ex>AI Wize Meet</ex></ph> microphone permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_APP_PERMISSION_ROW_ARIA_DESCRIPTION" desc="ARIA (accessibility) description describing the action buttons (toggle button or managed icon) in the app permission rows of the privacy hub subpages.">
     Permission is <ph name="PERMISSION_STATE">$1<ex>Ask every time</ex></ph>

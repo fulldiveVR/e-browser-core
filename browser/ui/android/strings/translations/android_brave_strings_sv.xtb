@@ -10,7 +10,7 @@
 <translation id="7301741773883122509">Nu kan du bli belönad för att titta på annonser. Du hjälper du till att göra webben till en bättre plats för alla. Och det är toppen!</translation>
 <translation id="6439128034594289376">Tjoho, du är klar!</translation>
 <translation id="370665806235115550">Läser in...</translation>
-<translation id="7931127789630755251">Tjäna tokens för privata annonser som du tittar på i Brave</translation>
+<translation id="7931127789630755251">Tjäna tokens för privata annonser som du tittar på i AI Wize</translation>
 <translation id="7859066142771796818">Använd tokens för att köpa presentkort, byta mot andra valutor, stödja innehållsskapare och mer.</translation>
 <translation id="3863981251715594911">Hur fungerar det?</translation>
 <translation id="5547108999862247665">Hur fungerar AI Wize Rewards?</translation>
@@ -36,30 +36,30 @@
 <translation id="1899434873745933492">Det går inte att skicka ditt bidrag</translation>
 <translation id="1794046983410841192">Använd AI Wize Rewards</translation>
 <translation id="8037118277449189044">Använd Web3-plånbok</translation>
-<translation id="9059356165618961685">Brave Rewards-saldo</translation>
+<translation id="9059356165618961685">AI Wize Rewards-saldo</translation>
 <translation id="86107454835395919">Ställ in som månatligt bidrag</translation>
 <translation id="1177863135347784049">Anpassad</translation>
 <translation id="4827581232860040208">Det gick inte att skicka ditt bidrag</translation>
 <translation id="3259723213051400722">Försök igen.</translation>
 <translation id="5298965408768377685">Den här kreatören har registrerat sig hos AI Wize och kan ta emot bidrag från AI Wize Rewards-användare. <ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">Brave Rewards fungerar eventuellt inte när aviseringar har inaktiverats.</translation>
+<translation id="7466579932043491502">AI Wize Rewards fungerar eventuellt inte när aviseringar har inaktiverats.</translation>
 <translation id="4259212006412783790">SLÅ PÅ</translation>
 <translation id="6112331814131703370">Blockera "Växla till appen"-aviseringar</translation>
 <translation id="4744921452903670666">Berätta vad du tycker!</translation>
-<translation id="2524310205387880526">Betygsätt Brave</translation>
+<translation id="2524310205387880526">Betygsätt AI Wize</translation>
 <translation id="4104400246019119780">Tack!</translation>
 <translation id="5202255382948179481">Lägg till dina förslag</translation>
 <translation id="7759809451544302770">Valfritt</translation>
 <translation id="4748689412569009273">Hur betygsätter du din upplevelse av AI Wize med en emoji?</translation>
 <translation id="7335142069363686805">Betygsätt nu</translation>
-<translation id="6681362094306959654">Gillar du Brave?</translation>
+<translation id="6681362094306959654">Gillar du AI Wize?</translation>
 <translation id="8041093619605951337">Glad</translation>
 <translation id="6826743502395386800">Ledsen</translation>
 <translation id="5488843227043643519">Vill du ge ett betyg i Play Butik?</translation>
 <translation id="5867854497245948308">Tack för din feedback!</translation>
-<translation id="4935400164159327304">Berätta hur vi kan förbättra Brave.</translation>
+<translation id="4935400164159327304">Berätta hur vi kan förbättra AI Wize.</translation>
 <translation id="1420756770787071946">Stöd den här skaparen</translation>
-<translation id="8966035543003363155">Brave-aviseringar gör allt enklare</translation>
+<translation id="8966035543003363155">AI Wize-aviseringar gör allt enklare</translation>
 <translation id="7662771815233894695">Hantera nedladdningar, tjäna tokens, se veckovis användarstatistik med mera.</translation>
 <translation id="4265429476391459783">Du tjänar inte belöningar eller får integritetsrapporter</translation>
 <translation id="1305714751384738456">Du tjänar inte AI Wize Rewards</translation>
@@ -73,11 +73,11 @@
 <translation id="2241529840361230499">Aktivera enhetsaviseringar för att få AI Wize integritetsrapporter.</translation>
 <translation id="4930155581888391118">Aktivera enhetsaviseringar från AI Wize för att tjäna AI Wize Rewards.</translation>
 <translation id="325187916104529570">Öppna Inställningar och aktivera enhetsaviseringar för AI Wize Ads.</translation>
-<translation id="5744802588121897886">Aktivera Brave-aviseringar</translation>
+<translation id="5744802588121897886">Aktivera AI Wize-aviseringar</translation>
 <translation id="7307834434086582547">Aktivera/Inaktivera AI Wize Shields</translation>
 <translation id="6945863270524203017">Få sekretessuppdateringar varje vecka om spårning och annonsblockering.</translation>
 <translation id="4324735664183300693">Aktivera aviseringar</translation>
-<translation id="6395059271589866759">Brave tar 5 % av det skickade beloppet som bearbetningsavgift.</translation>
+<translation id="6395059271589866759">AI Wize tar 5 % av det skickade beloppet som bearbetningsavgift.</translation>
 <translation id="6661699662755460155">byt</translation>
 <translation id="6790981891677399838">Jag har precis gett ett bidrag på <ph name="AMOUNT"/> BAT med AI Wize Browser! Se hur du kan stödja dina favoritkreatörer och webbplatser: https://brave.com/rewards</translation>
 <translation id="5510493033031835532">Automatiskt omdirigerade AMP-sidor</translation>
@@ -100,7 +100,7 @@
 <translation id="8877432762827303535">Betalning online</translation>
 <translation id="6583902294974160967">Support</translation>
 <translation id="1799030480311994998">Funktioner</translation>
-<translation id="2005732746077850308">Brave Shields och sekretess</translation>
+<translation id="2005732746077850308">AI Wize Shields och sekretess</translation>
 <translation id="4692623383562244444">Sökmotorer</translation>
 <translation id="1468415711258933398">Standardflik</translation>
 <translation id="3377025655491224618">Privat flik</translation>
@@ -141,8 +141,8 @@
 <translation id="59174027418879706">Aktiverat</translation>
 <translation id="6252490671914511928">Dagens toppnyheter i ett helt privat flöde, bara för dig.</translation>
 <translation id="8300751939969131609">Aktivera AI Wize News så missar du inga nyheter</translation>
-<translation id="7266075701303521777">Brave News visar annonser som är helt privata och anonymt matchade med din enhet.</translation>
-<translation id="7699565323725789472">Följ dina favoritkällor i ett enda flöde. Öppna bara en flik i Brave, bläddra ner och … voila!\nBrave News stöds av annonser med helt privata och anonymiserade annonser.</translation>
+<translation id="7266075701303521777">AI Wize News visar annonser som är helt privata och anonymt matchade med din enhet.</translation>
+<translation id="7699565323725789472">Följ dina favoritkällor i ett enda flöde. Öppna bara en flik i AI Wize, bläddra ner och … voila!\nAI Wize News stöds av annonser med helt privata och anonymiserade annonser.</translation>
 <translation id="1765217911817124376">Aktivera AI Wize News</translation>
 <translation id="8981973962043893066">Sök efter webbplats, ämne eller RSS-feed</translation>
 <translation id="3225021799163709119">Populära</translation>
@@ -169,9 +169,9 @@
 <translation id="6332791358521956870"><ph name="PUBLISHER"/> är inaktiverad</translation>
 <translation id="1276592121036104130">Ladda nytt innehåll</translation>
 <translation id="3189348785087463371">Marknadsförd</translation>
-<translation id="7554145152551782675">Fler Brave-erbjudanden</translation>
+<translation id="7554145152551782675">Fler AI Wize-erbjudanden</translation>
 <translation id="254100925533869330">Inget innehåll</translation>
-<translation id="7172792761509429092">Brave News har inget innehåll att visa.</translation>
+<translation id="7172792761509429092">AI Wize News har inget innehåll att visa.</translation>
 <translation id="1771307734839364850">Välj innehållskällor</translation>
 <translation id="6891769200437737956">Förhindrar webbplatser från signaturinsamling från mig</translation>
 <translation id="7459000603787995422">Stäng flikar vid avslut</translation>
@@ -188,7 +188,7 @@
 <translation id="7142548388914389999">Tillåt integritetsbevarande produktanalys (P3A)</translation>
 <translation id="5254037869598726291">Anonymiserad P3A-info hjälper AI Wize att uppskatta den totala användningen och se till att vi förbättrar populära funktioner.</translation>
 <translation id="933652931229970927">Skicka diagnostikrapporter automatiskt</translation>
-<translation id="5987838417172370108">Hjälp till att förbättra Braves produktstabilitet genom att automatiskt skicka diagnostikrapporter när AI Wize Browser kraschar eller fryser.</translation>
+<translation id="5987838417172370108">Hjälp till att förbättra AI Wizes produktstabilitet genom att automatiskt skicka diagnostikrapporter när AI Wize Browser kraschar eller fryser.</translation>
 <translation id="7977176350719484850">Uppsk. data\nsparade</translation>
 <translation id="9008534313521214777">Ber. tid\nsparad</translation>
 <translation id="410351446219883937">Automatisk uppspelning</translation>
@@ -202,13 +202,13 @@
 <translation id="4172219483893066798">Webbplatser kan begära åtkomst till localhost-resurser</translation>
 <translation id="7181706637590665047">Tillåt inte åtkomst till localhost-resurser</translation>
 <translation id="1485435696620658073">Tillåten att komma åt localhost-resurser</translation>
-<translation id="181905442828471321">Brave Shields globala standardinställningar</translation>
+<translation id="181905442828471321">AI Wize Shields globala standardinställningar</translation>
 <translation id="2675679258824361492">Andra sekretessinställningar</translation>
 <translation id="8026334261755873520">Rensa webbinformation</translation>
 <translation id="1690924763769415936">Uppspelning i bakgrunden</translation>
-<translation id="6332924730165919598">Att stänga alla flikar stänger Brave</translation>
-<translation id="8308305244351876417">Tillåter att ljud spelas upp när du växlar till en annan flik i Brave, en annan app eller enhetens skärm är avstängd.</translation>
-<translation id="49147335255967913">Öppna YouTube-länkar i Brave</translation>
+<translation id="6332924730165919598">Att stänga alla flikar stänger AI Wize</translation>
+<translation id="8308305244351876417">Tillåter att ljud spelas upp när du växlar till en annan flik i AI Wize, en annan app eller enhetens skärm är avstängd.</translation>
+<translation id="49147335255967913">Öppna YouTube-länkar i AI Wize</translation>
 <translation id="4150201353443180367">Skärm</translation>
 <translation id="4275663329226226506">Media</translation>
 <translation id="5950428831347558278">Widevine DRM</translation>
@@ -217,22 +217,22 @@
 <translation id="4736073408974888559"><ph name="BEGIN_LINK"/>Läs mer om Widevine<ph name="END_LINK"/></translation>
 <translation id="6961369821791548622">Tillåt (Starta om nu)</translation>
 <translation id="2433507940547922241">Utseende</translation>
-<translation id="9040069796107003510">Brave Rewards-ikon</translation>
-<translation id="6333347122924254968">Visa ikonen Brave-belöningar i adressfältet</translation>
+<translation id="9040069796107003510">AI Wize Rewards-ikon</translation>
+<translation id="6333347122924254968">Visa ikonen AI Wize-belöningar i adressfältet</translation>
 <translation id="8495235435594442882">Aktivera nedre verktygsfältet</translation>
-<translation id="6587448235155023666">Dina ändringar träder i kraft nästa gång du startar om Brave</translation>
+<translation id="6587448235155023666">Dina ändringar träder i kraft nästa gång du startar om AI Wize</translation>
 <translation id="8701563696941209024">STARTA OM NU</translation>
 <translation id="834487290629916192">SENARE</translation>
-<translation id="7207456302801184289">Välkommen till Brave</translation>
+<translation id="7207456302801184289">Välkommen till AI Wize</translation>
 <translation id="4117451092682672487">Sekretess har gjorts enkelt.</translation>
-<translation id="7909375417585209817">Om du gör AI Wize till standard öppnas alla länkar som du trycker på med Braves sekretesskydd.</translation>
+<translation id="7909375417585209817">Om du gör AI Wize till standard öppnas alla länkar som du trycker på med AI Wizes sekretesskydd.</translation>
 <translation id="7370959926683925817">Blockera annonser. Spara data. Varje dag.</translation>
-<translation id="7281027579943912834">Med AI Wize som standard får varje länk du trycker på Braves annonsblocksskydd. Varje sida, video och stream.</translation>
+<translation id="7281027579943912834">Med AI Wize som standard får varje länk du trycker på AI Wizes annonsblocksskydd. Varje sida, video och stream.</translation>
 <translation id="5148943178722443958">Hjälp till att göra AI Wize bättre.</translation>
 <translation id="6718362830686703942">Skicka diagnostikrapporter om du upplever en krasch eller frysning.</translation>
-<translation id="1929905278861178845">Dela fullständigt anonyma produktinsikter om vilka funktioner som Brave-användarna använder.</translation>
+<translation id="1929905278861178845">Dela fullständigt anonyma produktinsikter om vilka funktioner som AI Wize-användarna använder.</translation>
 <translation id="2877653791257935258">Ange ett webbplatsnamn eller URL</translation>
-<translation id="5329830149661250028">Se Brave-skillnaden: Inga annonser. Inga spårare. Mycket snabbare hämtning av sidor.</translation>
+<translation id="5329830149661250028">Se AI Wize-skillnaden: Inga annonser. Inga spårare. Mycket snabbare hämtning av sidor.</translation>
 <translation id="3941792073703079607">Se den modiga skillnaden: Blockera annonser. Spara data. Streama snabbare.</translation>
 <translation id="3545804467215833536">Tryck för att visa AI Wize Shields</translation>
 <translation id="1724327820822194498">Se alla dåliga saker som AI Wize har blockerat, på varje sida, med Shields.</translation>
@@ -245,23 +245,23 @@
 <translation id="986879628471635371">Felsökning onboarding</translation>
 <translation id="5808759341041733958">Välj ordinarie sökmotor</translation>
 <translation id="1331593888918588693">Du kan alltid ändra dina inställningar senare i appen.</translation>
-<translation id="5806601733251372221">Brave Shields</translation>
+<translation id="5806601733251372221">AI Wize Shields</translation>
 <translation id="8537217141725709400">Tjäna <ph name="TOKEN"/>s</translation>
-<translation id="3333887201479867589">Brave Rewards</translation>
+<translation id="3333887201479867589">AI Wize Rewards</translation>
 <translation id="5870330605209713397">Genom att titta på annonser som värnar din integritet och stödja dina favoritsajter och -skapare.</translation>
 <translation id="5302488867897327287">Genom att trycka på Börja använda AI Wize Rewards godkänner du</translation>
 <translation id="4281844954008187215">Användarvillkor</translation>
 <translation id="6871397658902960384">Börja surfa</translation>
 <translation id="454386012157232640">Jag såg ingen annons</translation>
-<translation id="1448877943847791441">Brave kommer att visa din första annons i</translation>
+<translation id="1448877943847791441">AI Wize kommer att visa din första annons i</translation>
 <translation id="4410793187232041318">Nu får du polletter från AI Wize Ads.</translation>
-<translation id="6511854390690723657">Detta är din första Brave-annons. Tryck för att läsa mer.</translation>
+<translation id="6511854390690723657">Detta är din första AI Wize-annons. Tryck för att läsa mer.</translation>
 <translation id="2070991379950719711">Börja använda AI Wize Rewards</translation>
 <translation id="48520986898237073">Fortsätt till plånboken</translation>
 <translation id="3570367516044491911">Ställ in som standardwebbläsare</translation>
 <translation id="6800338374677644736">Ställ in som standardwebbläsare</translation>
 <translation id="19715420010996093">Välj webbläsaren AI Wize och tryck på ”Alltid”.</translation>
-<translation id="3546439402724649282">Brave är redan inställd som din standardwebbläsare.</translation>
+<translation id="3546439402724649282">AI Wize är redan inställd som din standardwebbläsare.</translation>
 <translation id="8389661903259423907">Du har redan angett en standardwebbläsare. Du kan ändra din standardwebbläsare i appinställningarna.</translation>
 <translation id="1545749641540134597">Skanna QR-koden</translation>
 <translation id="5317781812114905957">Instruktioner</translation>
@@ -273,8 +273,8 @@
 <translation id="1938402585819943124">Välj AI Wize på nästa skärm.</translation>
 <translation id="8926389886865778422">Fråga inte igen.</translation>
 <translation id="745974920645827035">Oberoende sökning med bättre integritet</translation>
-<translation id="4717018805430015801">Brave-sökning spårar inte dig, dina sökningar eller dina klick.</translation>
-<translation id="5240031343741051161">Prova Brave-sökning</translation>
+<translation id="4717018805430015801">AI Wize-sökning spårar inte dig, dina sökningar eller dina klick.</translation>
+<translation id="5240031343741051161">Prova AI Wize-sökning</translation>
 <translation id="5234764350956374838">Ta bort permanent</translation>
 <translation id="6639570430554986719">JANUARI</translation>
 <translation id="1807352595146144483">FEBRUARI</translation>
@@ -288,8 +288,8 @@
 <translation id="8220228041552340594">OKTOBER</translation>
 <translation id="8280223431922155812">NOVEMBER</translation>
 <translation id="4254029385847607686">DECEMBER</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="1772301834467143364">Brave News</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
+<translation id="1772301834467143364">AI Wize News</translation>
 <translation id="7732576862074737148">≈ <ph name="VALUE"/> USD</translation>
 <translation id="8428213095426709021">Inställningar</translation>
 <translation id="6020176662032623904">Verifierad skapare</translation>
@@ -305,7 +305,7 @@
 <translation id="1649629664206601032">Du har <ph name="TOKEN"/> dagar kvar att göra anspråk</translation>
 <translation id="683765328936486920">på YouTube</translation>
 <translation id="8969049974285901797">på Twitch</translation>
-<translation id="8038539967102225446">Brave Ads är här!</translation>
+<translation id="8038539967102225446">AI Wize Ads är här!</translation>
 <translation id="222883304157347087">(denna enhet)</translation>
 <translation id="4157741509680155021">ENHETER PÅ SYNKRONISERINGSKEDJAN</translation>
 <translation id="279635009973773843">LADDAR ENHETER...</translation>
@@ -313,18 +313,18 @@
 <translation id="2569646144216067185">Antal ord: <ph name="WORD_COUNT"/></translation>
 <translation id="7507533586185621084">Fel synkningskod</translation>
 <translation id="8284063834901328650">Fel synknings- eller QR-kod</translation>
-<translation id="859506441384380749">Den här koden genererades av en Brave-version som är för gammal, uppgradera enheten först</translation>
+<translation id="859506441384380749">Den här koden genererades av en AI Wize-version som är för gammal, uppgradera enheten först</translation>
 <translation id="3132642509209154999">Den här koden har upphört att gälla. Generera en ny på din andra enhet och försök igen.</translation>
 <translation id="2859229680945501779">Den här koden är ogiltig. Kontrollera att tid och tidszon är korrekt inställda på din enhet.</translation>
-<translation id="3149880132460839085">Brave Sync</translation>
-<translation id="3680755684186855422">Brave Sync låter dig synka bokmärken mellan dina Brave-webbläsare på olika enheter.</translation>
+<translation id="3149880132460839085">AI Wize Sync</translation>
+<translation id="3680755684186855422">AI Wize Sync låter dig synka bokmärken mellan dina AI Wize-webbläsare på olika enheter.</translation>
 <translation id="3735228155296883311">Skanna helt enkelt koden från din synkroniseringskedja som du skapade på en annan enhet. Eller starta en ny synkroniseringskedja.</translation>
-<translation id="2614069607859982576">Med en befintligt synkroniserad enhet öppnar du Brave-inställningar och navigerar till inställningar &gt; synkronisering. Välj "Lägg till ny enhet" och skanna QR-koden som visas på skärmen.</translation>
+<translation id="2614069607859982576">Med en befintligt synkroniserad enhet öppnar du AI Wize-inställningar och navigerar till inställningar &gt; synkronisering. Välj "Lägg till ny enhet" och skanna QR-koden som visas på skärmen.</translation>
 <translation id="5241263629636958324">Kopierat till urklipp</translation>
 <translation id="5817918615728894473">Koppla</translation>
 <translation id="7090325819305486658">Datainställningar</translation>
 <translation id="1680065323266179640">Ta bort synkroniseringskonto</translation>
-<translation id="3792563952903751704">Om du tar bort ditt konto kommer dina krypterade data att tas bort från Brave-servrar och synkronisering inaktiveras på alla dina anslutna enheter. Data som lagras lokalt på dessa enheter kommer dock inte att tas bort.
+<translation id="3792563952903751704">Om du tar bort ditt konto kommer dina krypterade data att tas bort från AI Wize-servrar och synkronisering inaktiveras på alla dina anslutna enheter. Data som lagras lokalt på dessa enheter kommer dock inte att tas bort.
 Denna borttagning är permanent och det finns inget sätt att återställa data. Om du bestämmer dig för att börja använda Sync igen måste du skapa ett nytt konto och lägga till varje enhet på nytt.</translation>
 <translation id="9064376100690171155">Ta bort konto permanent</translation>
 <translation id="2740516568641790390">Synkroniseringskontot har tagits bort</translation>
@@ -335,9 +335,9 @@ Denna borttagning är permanent och det finns inget sätt att återställa data.
 <translation id="1602067095281698985">Starta en ny Sync-kedja</translation>
 <translation id="1475223680121592371">Lägg till en mobil enhet</translation>
 <translation id="2965377893636908578">Lägg till en dator</translation>
-<translation id="6604289897677913048">Gå till Brave-inställningar &gt; Synk &gt; Skanna.</translation>
+<translation id="6604289897677913048">Gå till AI Wize-inställningar &gt; Synk &gt; Skanna.</translation>
 <translation id="8508856434435157945">Gå till AI Wize Synk i panelen Inställningar på din mobila enhet och klicka på knappen "Skanna Synk-kod". Använd din kamera för att skanna QR-koden nedan.</translation>
-<translation id="2590683710114839102">Gå till Brave-inställningar &gt; Synk på din dator. Välj "Ange en synkroniseringskod".</translation>
+<translation id="2590683710114839102">Gå till AI Wize-inställningar &gt; Synk på din dator. Välj "Ange en synkroniseringskod".</translation>
 <translation id="65315202420929965">Skanna denna synkroniseringskod</translation>
 <translation id="6764016175302339802">Behandla den här koden som ett lösenord. Om någon får tag på den kan de läsa och ändra dina synkroniserade data.</translation>
 <translation id="6707003343517029414">Gå till AI Wize Synk i inställningarna på din måldator och klicka på knappen "Jag har en Synk-kod".\nAnge synkroniseringsorden som visas nedan.</translation>
@@ -350,7 +350,7 @@ Denna borttagning är permanent och det finns inget sätt att återställa data.
 <translation id="6776430845975754238">Att ändra inställningar påverkar bara data som denna enhet delar med andra.</translation>
 <translation id="1061533051865606843">Lägg till ny enhet</translation>
 <translation id="7539985410310934287">Ange kodord</translation>
-<translation id="2886391679017857869">Med en befintlig synkroniserad enhet öppnar du Brave-inställningar och navigerar till inställningar &gt; synkronisering. Välj "Lägg till ny enhet" och sedan "Visa kodord istället".</translation>
+<translation id="2886391679017857869">Med en befintlig synkroniserad enhet öppnar du AI Wize-inställningar och navigerar till inställningar &gt; synkronisering. Välj "Lägg till ny enhet" och sedan "Visa kodord istället".</translation>
 <translation id="8131740175452115882">Bekräfta</translation>
 <translation id="4973653569293835178">Jag använder min kamera...</translation>
 <translation id="326454632686131209">Synkronisera enhet</translation>
@@ -360,7 +360,7 @@ Denna borttagning är permanent och det finns inget sätt att återställa data.
 <translation id="8185825081026121627">Tjäna BAT (Basic Attention Token), för att se annonser från AI Wize Rewards som respekterar din integritet.</translation>
 <translation id="5321518976657560663">Återställningsfel</translation>
 <translation id="4114170343590425996">Det gick inte att återställa AI Wize Rewards. Starta om AI Wize och försök igen.</translation>
-<translation id="6417420737057016607">Brave annonser</translation>
+<translation id="6417420737057016607">AI Wize annonser</translation>
 <translation id="5611966874859284786">Visa annonser när AI Wize inte används</translation>
 <translation id="6606319453795180219">Detta kommer att radera dina AI Wize Rewards och återställa alla dina AI Wize Rewards-data</translation>
 <translation id="8293206222192510085">Lägg till bokmärke</translation>
@@ -387,10 +387,10 @@ Denna borttagning är permanent och det finns inget sätt att återställa data.
 <translation id="4908081302669157000">Telefonnummer, e-postadresser och adresser</translation>
 <translation id="1056898198331236512">Varning</translation>
 <translation id="1426410128494586442">Ja</translation>
-<translation id="7811264919113243207">Detta kommer att dela dina Brave-data inklusive eventuellt dina lösenord, med enheten som genererade QR-koden.
+<translation id="7811264919113243207">Detta kommer att dela dina AI Wize-data inklusive eventuellt dina lösenord, med enheten som genererade QR-koden.
 Dubbelkolla att QR-koden genererades av en enhet som du äger.
 Är du säker på att du vill göra detta?</translation>
-<translation id="3097089005389027085">Detta kommer att dela dina Brave-data inklusive eventuellt dina lösenord, med enheten som genererade kodorden.
+<translation id="3097089005389027085">Detta kommer att dela dina AI Wize-data inklusive eventuellt dina lösenord, med enheten som genererade kodorden.
 Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 Är du säker på att du vill göra detta?</translation>
 <translation id="4550208292810542331">Kameratillstånd beviljades inte</translation>
@@ -398,15 +398,15 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="3063783274005996079">Lås upp för att aktivera lösenordssynkronisering</translation>
 <translation id="7551563084530025179">Innan du kan synkronisera lösenord måste du autentisera med enhetens biometri/lösenord. Denna extra säkerhetsåtgärd hjälper till att hålla dina lösenord säkra.</translation>
 <translation id="6925081665778864449">För att synkronisera lösenord, aktivera biometri/lösenordsautentisering på din Android-enhet. Denna extra säkerhetsåtgärd hjälper till att hålla dina lösenord säkra.</translation>
-<translation id="597993392929850353">Brave-licens</translation>
+<translation id="597993392929850353">AI Wize-licens</translation>
 <translation id="6336451774241870485">Ny privat flik</translation>
 <translation id="6199596294742117349">Detta är en privat flik</translation>
 <translation id="5858455511731621847">Även om webbplatser du besöker på privata flikar inte sparas lokalt, gör de dig inte anonym eller osynlig för din internetleverantör. din arbetsgivare eller de webbplatser du besöker.</translation>
-<translation id="5789441016350810005">Brave Ads skickas när webbläsaren är i bakgrunden</translation>
+<translation id="5789441016350810005">AI Wize Ads skickas när webbläsaren är i bakgrunden</translation>
 <translation id="4973347371961481083">Bidrag</translation>
 <translation id="7047578174221019462">Dina månatliga bidrag har behandlats.</translation>
 <translation id="3124090095880236567">Aktivera annonser</translation>
-<translation id="2975780980638932742">Brave Ads är här!</translation>
+<translation id="2975780980638932742">AI Wize Ads är här!</translation>
 <translation id="7541582550122501404">Pågående bidrag</translation>
 <translation id="8520059774736886747">Skaparen <ph name="PUBLISHER_NAME"/> verifierades nyligen</translation>
 <translation id="1486343603936278248">pollett</translation>
@@ -416,14 +416,14 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="3870475560794762985">Visa sponsrade bilder</translation>
 <translation id="8793108040181436796">Widgetar</translation>
 <translation id="8643377320501056697">Visa populäraste webbplatser</translation>
-<translation id="7275773481201277457">Visa Brave-statistik</translation>
+<translation id="7275773481201277457">Visa AI Wize-statistik</translation>
 <translation id="8297488609722895137">Foto: <ph name="PHOTO_BY"/></translation>
 <translation id="4761229094276239865">Genom att trycka på Börja använda AI Wize Rewards godkänner du <ph name="TERMS_OF_SERVICE"/>.</translation>
 <translation id="3794079107601824147">Få betalt för att se denna bakgrundsbild.</translation>
 <translation id="7136586167396205364">Dölj sponsrade bilder</translation>
 <translation id="2927095357213611519">Du kan stödja skapare på webben med polletter.\nDu får polletterna när du tittar på annonser som värnar din integritet.</translation>
-<translation id="2898634658146274982">Öppna externa länkar i Brave</translation>
-<translation id="5616508928556767259">Öppnar länkar från andra appar i en Brave-webbvy. AI Wize måste vara vald som standardwebbläsare.</translation>
+<translation id="2898634658146274982">Öppna externa länkar i AI Wize</translation>
+<translation id="5616508928556767259">Öppnar länkar från andra appar i en AI Wize-webbvy. AI Wize måste vara vald som standardwebbläsare.</translation>
 <translation id="2394961582378297792">Utloggad</translation>
 <translation id="5308380583665731573">Anslut</translation>
 <translation id="3368922792935385530">Ansluten</translation>
@@ -434,7 +434,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="1665118090708049096">Gå till mitt <ph name="WALLET_PROVIDER"/>-konto</translation>
 <translation id="4858636682078269312">Logga in på ditt <ph name="WALLET_PROVIDER"/>-konto</translation>
 <translation id="8874184842967597500">Inte ansluten</translation>
-<translation id="2495032782748793764">Ordinarie för Brave</translation>
+<translation id="2495032782748793764">Ordinarie för AI Wize</translation>
 <translation id="9132378787893584761">Dela AI Wize med dina vänner!</translation>
 <translation id="717952606991220586">Oj, något gick fel. Försök igen senare.</translation>
 <translation id="987264212798334818">Allmänt</translation>
@@ -474,32 +474,32 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="5582686930349810484">Fingeravtrycksläsning hindrad (standard)</translation>
 <translation id="769702552748212954">Tillåt att alla fingeravtryck tas</translation>
 <translation id="876424292214881779">annonser och andra oönskade saker har blockerats</translation>
-<translation id="6930134873084561197">Sajter har ofta cookies och skript som försöker identifiera dig och din enhet. De vill ta reda på vem du är och vad du gör på webben, på varenda sajt.\n\nBrave blockerar sådana saker, så att du kan surfa utan att någon bevakar dig.</translation>
-<translation id="8553998445606452168">Om Brave-sköldar</translation>
+<translation id="6930134873084561197">Sajter har ofta cookies och skript som försöker identifiera dig och din enhet. De vill ta reda på vem du är och vad du gör på webben, på varenda sajt.\n\nAI Wize blockerar sådana saker, så att du kan surfa utan att någon bevakar dig.</translation>
+<translation id="8553998445606452168">Om AI Wize-sköldar</translation>
 <translation id="8912304686498704084">UPP</translation>
 <translation id="4963218453264888510">NED</translation>
-<translation id="7474113515179313724">Du surfar på denna sajt utan Braves integritetsskydd. Fungerar den inte som den ska med Shields?</translation>
+<translation id="7474113515179313724">Du surfar på denna sajt utan AI Wizes integritetsskydd. Fungerar den inte som den ska med Shields?</translation>
 <translation id="9055546041146396417">Prova att ha Shields nere om det verkar vara fel på sajten.</translation>
 <translation id="1209739344687072997">Rapportera en trasig webbplats</translation>
-<translation id="8510478288840333677">Låt Braves utvecklare veta att denna webbplats inte fungerar korrekt med Shields:</translation>
+<translation id="8510478288840333677">Låt AI Wizes utvecklare veta att denna webbplats inte fungerar korrekt med Shields:</translation>
 <translation id="5429200298326665264">Obs: Sajtens adress kommer att skickas in tillsammans med ditt versionsnummer av AI Wize och din IP-adress (som ej sparas).</translation>
 <translation id="5299848999918506028">Tack!</translation>
-<translation id="76550953340008122">Tack för att du lät Braves utvecklare veta att något är fel på denna webbplats. Vi ska göra vårt bästa för att fixa det!</translation>
+<translation id="76550953340008122">Tack för att du lät AI Wizes utvecklare veta att något är fel på denna webbplats. Vi ska göra vårt bästa för att fixa det!</translation>
 <translation id="650318023204990401">Avancerade kontroller</translation>
 <translation id="1275664486910646411">Visa toppsajter i automatisk komplettering</translation>
 <translation id="5370478469168390143">Spara data online</translation>
-<translation id="1118508688433541158">Surfa snabbare och blocka annonser med Brave</translation>
-<translation id="7427391215172269363">Varje dag sparar jag data genom att surfa på webben med Brave.</translation>
-<translation id="4776948189086901857">Brave fungerar överallt</translation>
+<translation id="1118508688433541158">Surfa snabbare och blocka annonser med AI Wize</translation>
+<translation id="7427391215172269363">Varje dag sparar jag data genom att surfa på webben med AI Wize.</translation>
+<translation id="4776948189086901857">AI Wize fungerar överallt</translation>
 <translation id="1606322780901645965">Ladda ner AI Wize på brave.com på din bärbara dator eller surfplatta för snabbare och mer privat internet</translation>
 <translation id="8374242949413616101">Integritetsskydd</translation>
-<translation id="4955406228638026265">Brave hindrar annonser och trackers från att samla in information om dig utan ditt medgivande.</translation>
+<translation id="4955406228638026265">AI Wize hindrar annonser och trackers från att samla in information om dig utan ditt medgivande.</translation>
 <translation id="752842701893882688">Spara data och batteri</translation>
 <translation id="1685837926613452362">Utan annonser och trackers använder webbplatser mindre data och batteri. Du kan till och med spara pengar på uppkopplingsavgifter.</translation>
 <translation id="5440744330377972191">Webbplatser laddas snabbare</translation>
 <translation id="3000738865641747653">Eftersom mindre data laddas öppnas webbplatser snabbare i AI Wize – upp till 8x snabbare än andra webbläsare.</translation>
 <translation id="8903462729414407077">Få uppdateringar varje vecka</translation>
-<translation id="7450323860390658083">Bli informerad om vilka webbplatser du besöker som inkräktar mest på integriteten.\n\nEndast du kan se denna integritetsstatistik. Ingen personlig information eller surfhistorik lämnar någonsin Brave-webbläsaren på din enhet.</translation>
+<translation id="7450323860390658083">Bli informerad om vilka webbplatser du besöker som inkräktar mest på integriteten.\n\nEndast du kan se denna integritetsstatistik. Ingen personlig information eller surfhistorik lämnar någonsin AI Wize-webbläsaren på din enhet.</translation>
 <translation id="6170159749517116894">Aktivera integritetsrapporter</translation>
 <translation id="1669047024429367828">Synlighet</translation>
 <translation id="5966707198760109579">Vecka</translation>
@@ -521,7 +521,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="7427567994475794038">Aktivera integritetsrapporter för att se hur många trackers och annonser som har blockerats under de senaste 3 timmarna.</translation>
 <translation id="2053891538879944400">Du sparade <ph name="DATA"/> <ph name="DATA_TEXT"/> data med AI Wize webbläsare.</translation>
 <translation id="8640064498452534195">Aktivera integritetsrapporter för att se hur mycket data du har sparat.</translation>
-<translation id="2252497442547961651">Brave-webbläsaren använder i genomsnitt 40 % mindre batteri.🔋</translation>
+<translation id="2252497442547961651">AI Wize-webbläsaren använder i genomsnitt 40 % mindre batteri.🔋</translation>
 <translation id="1945330434665345785">Du blockerade <ph name="COUNT"/> trackers och annonser med AI Wize webbläsare förra veckan.</translation>
 <translation id="2883868922264431515">Tjäna tokens genom att visa annonser som respekterar din integritet och stöd dina favoritwebbplatser.</translation>
 <translation id="7408493389591475748">Börja surfa för att se integritetsrapporter</translation>
@@ -547,7 +547,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="8363792084628930008">Genom att aktivera Rewards godkänner du <ph name="TERMS_OF_SERVICE"/> och <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">Låt oss ta en snabb rundtur</translation>
 <translation id="7930505144430343145">Välkommen till AI Wize Rewards!</translation>
-<translation id="3477340970981564961">Brave privata annonser belönar dig med tokens för att stödja innehållsleverantörer, till skillnad från traditionella annonser, samtidigt som de håller din personliga information privat.</translation>
+<translation id="3477340970981564961">AI Wize privata annonser belönar dig med tokens för att stödja innehållsleverantörer, till skillnad från traditionella annonser, samtidigt som de håller din personliga information privat.</translation>
 <translation id="6973095375773523904">Var visas annonser?</translation>
 <translation id="4328028439561659455">Privata annonser i AI Wize visas som aviseringar på din skärm. Du styr hur ofta du ser dessa annonser.</translation>
 <translation id="7712287524451429139">Ge tillbaka på ett enkelt sätt</translation>
@@ -581,11 +581,11 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="5187052478998910855">Behöver du en repetition om Belöningar?</translation>
 <translation id="8622329973403382303">Ta en snabb rundtur för att friska upp minnet av hur det fungerar för att gå till historien som en Belöningarnas rockstjärna!</translation>
 <translation id="3479552764303398839">Inte nu</translation>
-<translation id="7138272885617540195">Tillåt applänkar att öppnas i appar utanför Brave</translation>
+<translation id="7138272885617540195">Tillåt applänkar att öppnas i appar utanför AI Wize</translation>
 <translation id="4954512758656527938">Standardplånbok för Ethereum</translation>
 <translation id="7701023802820268122">Standardplånbok för Solana</translation>
 <translation id="7701040980221191251">Inget</translation>
-<translation id="8488282162676695335">Brave Wallet</translation>
+<translation id="8488282162676695335">AI Wize Wallet</translation>
 <translation id="8792121506918889955">WebRTC IP-hanteringspolicy</translation>
 <translation id="8798099450830957504">Standard</translation>
 <translation id="1822560017823072927">Offentliga och privata standardgränssnitt</translation>
@@ -596,7 +596,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="538450413584738399">Swap</translation>
 <translation id="1366855498335432549">Deposition</translation>
 <translation id="1420318137760245955">Välkommen till den nya AI Wize Wallet</translation>
-<translation id="8339846196588658366">Spara dina kryptotillgångar och övervaka portföljens resultat. Allt från Brave, sekretesswebbläsaren.</translation>
+<translation id="8339846196588658366">Spara dina kryptotillgångar och övervaka portföljens resultat. Allt från AI Wize, sekretesswebbläsaren.</translation>
 <translation id="4472575034687746823">Kom igång</translation>
 <translation id="2759836790106646094">Säkerhetskopiera din plånbok nu!</translation>
 <translation id="1078873179929044999">I nästa steg kommer du att se en återställningsfras på 12 ord som du kan använda för att återställa dina primära kryptokonton. Spara den på ett säkert ställe. Din återställningsfras är det enda sättet att återfå kontoåtkomst i händelse av glömt lösenord, förlorad eller stulen enhet, eller om du vill byta plånböcker.</translation>
@@ -704,7 +704,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="1721710839767183848">Inga annonser på sidan</translation>
 <translation id="4647035642622555398">Inga avbrott</translation>
 <translation id="4122515759479497554">Sök efter videor</translation>
-<translation id="4449475351935531438">Brave Firewall + VPN</translation>
+<translation id="4449475351935531438">AI Wize Firewall + VPN</translation>
 <translation id="719977489961414786">Uppgradera till en VPN för att skydda din anslutning och blockera invasiva spårare överallt.</translation>
 <translation id="3435896845095436175">Aktivera</translation>
 <translation id="8814357473522731680">Drivs av</translation>
@@ -716,7 +716,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="7195416926059527505">Säkrare Wi-Fi i hemmet eller offentligt</translation>
 <translation id="1354700000739359839">Blixtsnabbt, upp till 100 Mbps</translation>
 <translation id="3510283489391432976">Välj din geografiska/landliga plats</translation>
-<translation id="7695158478627528928">Brave loggar aldrig din aktivitet</translation>
+<translation id="7695158478627528928">AI Wize loggar aldrig din aktivitet</translation>
 <translation id="4575683170451975058">Skydda 5 enheter med 1 prenumeration</translation>
 <translation id="276866628038850725">Alla planer inkluderar en gratis 7-dagars testperiod!</translation>
 <translation id="1532536259167115948">Månatlig prenumeration <ph name="TRIAL_TEXT"/></translation>
@@ -731,7 +731,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="3990956504562716932">Prova kostnadsfritt i 7 dagar</translation>
 <translation id="721747358270435486">Installera VPN</translation>
 <translation id="836074276610740314">Installera VPN-profil</translation>
-<translation id="8021842065465097929">Brave kommer nu att installera en VPN-profil.</translation>
+<translation id="8021842065465097929">AI Wize kommer nu att installera en VPN-profil.</translation>
 <translation id="229286271464650057">Denna profil tillåter VPN att automatiskt ansluta och säkra trafik över din enhet — i varje app, hela tiden. Denna VPN anslutning kommer att krypteras och dirigeras genom Guardians intelligenta brandvägg för att blockera annonser och spårare.</translation>
 <translation id="9073255657908892407">Kontakta teknisk support</translation>
 <translation id="1139934321138152517">VPN är nu aktiverad</translation>
@@ -827,13 +827,13 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="8364362220156372884">Avgift: <ph name="VALUE"/> <ph name="CHAIN_ASSET"/> ($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">Använder du den snabbaste webbläsaren?</translation>
 <translation id="2065971949051836200">Tre gånger snabbare internet finns redan på din telefon. Använd AI Wize för all din surf på webben.</translation>
-<translation id="2888278614497184977">Brave = 3 gånger snabbare surf på webben</translation>
+<translation id="2888278614497184977">AI Wize = 3 gånger snabbare surf på webben</translation>
 <translation id="6887232551109532144">Få längre batteritid på varje laddning</translation>
 <translation id="5388885352353494741">Batterisbesparingar finns bara ett steg bort. Använd AI Wize för all din surf på webben.</translation>
-<translation id="3164151360474408351">Brave = längre batteritid på varje laddning</translation>
+<translation id="3164151360474408351">AI Wize = längre batteritid på varje laddning</translation>
 <translation id="3211051910418903298">Fyll på dina mobildata mindre ofta</translation>
 <translation id="1092355580602106002">Färre annonser = mindre data på varje sida du läser in. Använd AI Wize för all din surf på webben.</translation>
-<translation id="623962032102267945">Brave = mindre mobildata på varje sida</translation>
+<translation id="623962032102267945">AI Wize = mindre mobildata på varje sida</translation>
 <translation id="4355217341028673744">• Starkare integritet</translation>
 <translation id="3679020972083025535">• Inga irriterande annonser</translation>
 <translation id="8047527352810290817">Redigera gas</translation>
@@ -943,14 +943,14 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="4822132585477111396">Chain ID</translation>
 <translation id="7131971375297699539">Valutasymbol</translation>
 <translation id="7982789257301363584">Nätverk</translation>
-<translation id="6936860995365507185">Det här låter nätverket användas med Brave-plånboken. <ph name="CLICK_START"/>Läs mer<ph name="CLICK_END"/>.</translation>
+<translation id="6936860995365507185">Det här låter nätverket användas med AI Wize-plånboken. <ph name="CLICK_START"/>Läs mer<ph name="CLICK_END"/>.</translation>
 <translation id="4717431746210146708">Tillåta denna webbplats att lägga till ett nätverk?</translation>
 <translation id="4857321293515555666">Denna DApp vill läsa detta meddelande för att slutföra din förfrågan.</translation>
 <translation id="714506544401754321">Dekryptera meddelande</translation>
 <translation id="5039804452771397117">Tillåt</translation>
 <translation id="3378339846292573874">Lägg till föreslagna token</translation>
 <translation id="2322227405137827074">Vill du importera denna token?</translation>
-<translation id="1324417023773393937">Brave-webbläsaren</translation>
+<translation id="1324417023773393937">AI Wize-webbläsaren</translation>
 <translation id="6044189892950611565">Aviseringskanal för AI Wize webbläsare</translation>
 <translation id="1173919438868967364">Välj konto</translation>
 <translation id="8922793255489232731">Det gick inte att få en matchande tidszon för: <ph name="VALUE"/></translation>
@@ -1048,14 +1048,14 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="8496335570810457">Åtagande gällande transaktionssimulering:</translation>
 <translation id="5100124500279922001">Hoppa över transaktionssimulering:</translation>
 <translation id="7152095322071766507">Mest besökt webbplats</translation>
-<translation id="7230006500876504868">Sök med Brave</translation>
+<translation id="7230006500876504868">Sök med AI Wize</translation>
 <translation id="5888208462949095139">Sök med <ph name="DEFAULT_SEARCH_ENGINE"/></translation>
 <translation id="5456039738087398178">Startskärmswidget</translation>
 <translation id="703185154752046151">Widget tillagd på startskärmen</translation>
-<translation id="3290805388004282161">Prova Braves sökwidget</translation>
+<translation id="3290805388004282161">Prova AI Wizes sökwidget</translation>
 <translation id="4809681171446727314">Få tillgång till privat, oberoende sökning direkt från din startskärm.</translation>
 <translation id="7751715172931488388">Lägg till widget</translation>
-<translation id="7285167584112910782">Brave-snabbsökning</translation>
+<translation id="7285167584112910782">AI Wize-snabbsökning</translation>
 <translation id="2326703104633309781">Använd AI Wize Translate</translation>
 <translation id="5802752138057422257">Icke-ASCII-tecken upptäckta!</translation>
 <translation id="442709594176931966">Visa originalmeddelande</translation>
@@ -1069,11 +1069,11 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="7902225556763260253">Utgångstid</translation>
 <translation id="1908159733454294871">Säkerhetsrisk identifierad</translation>
 <translation id="4220693114674044366">Tokenadress</translation>
-<translation id="5658257029899993935">Länka köp till ditt Brave-konto</translation>
-<translation id="1187061015547219282">Länka Play Store-köp till ditt Brave-konto för att använda AI Wize VPN på andra enheter.</translation>
+<translation id="5658257029899993935">Länka köp till ditt AI Wize-konto</translation>
+<translation id="1187061015547219282">Länka Play Store-köp till ditt AI Wize-konto för att använda AI Wize VPN på andra enheter.</translation>
 <translation id="6662142137695589205">Länka din VPN-prenumeration</translation>
 <translation id="2674077112509133024">Utöka ditt AI Wize Firewall + VPN-skydd</translation>
-<translation id="6365389672683343144">Din AI Wize VPN-prenumeration kan skydda upp till 5 enheter, på Android, iOS och stationära datorer. Länka bara din Google Play-prenumeration till ditt Brave-konto.</translation>
+<translation id="6365389672683343144">Din AI Wize VPN-prenumeration kan skydda upp till 5 enheter, på Android, iOS och stationära datorer. Länka bara din Google Play-prenumeration till ditt AI Wize-konto.</translation>
 <translation id="6610899852831463073">Kan inte aktivera säker webbsökning</translation>
 <translation id="7954263306665462056">Säker webbsökning har inaktiverats på din enhet. För att aktivera det, se till att Google Play Services är installerat och att det är uppdaterat.</translation>
 <translation id="6605147707233193230">Aktivera för att stödja innehållsskapare</translation>
@@ -1096,7 +1096,7 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="5382684862562314222">BAT stöds ännu inte i din region på Uphold.</translation>
 <translation id="6996157559236886133">Fel: Begränsad funktionalitet för Uphold-konto</translation>
 <translation id="1677961202754619328">Enligt Uphold finns det för närvarande vissa begränsningar i ditt Uphold-konto. Logga in på ditt Uphold-konto och kontrollera om det finns några meddelanden eller kvarstående kontokrav som behöver slutföras och försök sedan igen.</translation>
-<translation id="5425006356459378415">Brave Rewards är inte tillgängligt</translation>
+<translation id="5425006356459378415">AI Wize Rewards är inte tillgängligt</translation>
 <translation id="833643743158564518">Nya registrerade AI Wize Rewards-medlemmar är för närvarande inaktiverade i din region. Du kan alltid försöka igen senare. <ph name="LEARN_MORE"/></translation>
 <translation id="8528916244724490964">Alla nätverk</translation>
 <translation id="7748944510530490017">Primära nätverk</translation>
@@ -1116,7 +1116,7 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="9085765419770918643">Inga NFT:er här ännu.</translation>
 <translation id="8445532667841598737">Är du redo att lägga till några? Klicka bara på knappen nedan för att importera.</translation>
 <translation id="5925465310724910998">Vill du att NFT:er ska visas automatiskt?</translation>
-<translation id="2827460859891872324">Brave Wallet kan använda en tredjepartstjänst för att automatiskt visa dina NFT:er. AI Wize kommer att dela dina plånboksadresser med <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> för att tillhandahålla tjänsten. <ph name="BEGIN_LINK_2"/>Läs mer.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">AI Wize Wallet kan använda en tredjepartstjänst för att automatiskt visa dina NFT:er. AI Wize kommer att dela dina plånboksadresser med <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> för att tillhandahålla tjänsten. <ph name="BEGIN_LINK_2"/>Läs mer.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">Aktivera NFT-upptäckt</translation>
 <translation id="622372328961630111">Lägg automatiskt till NFT:er du äger i plånboken med hjälp av tredjeparts-API:er. <ph name="BEGIN_LINK_1"/>Läs mer.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">Konto för adressökningstabell:</translation>
@@ -1140,7 +1140,7 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="4109670531935487117">Visa textförslag i adressfältet</translation>
 <translation id="1250335737108905610">Återställ och rensa AI Wize Chat-data</translation>
 <translation id="6165101586663336913">För att återställa AI Wize Chat-assistenten måste du välja att använda AI Wize Chat i framtiden och det kommer också att rensa din chatthistorik. När din chatthistorik rensas raderas alla dina tidigare konversationer med AI Wize Chat. Det går inte att ångra den här åtgärden.</translation>
-<translation id="3692772534525889713">Länka Play Butik-köp till ditt Brave-konto för att använda AI Wize AI Wize Chat på andra enheter.</translation>
+<translation id="3692772534525889713">Länka Play Butik-köp till ditt AI Wize-konto för att använda AI Wize AI Wize Chat på andra enheter.</translation>
 <translation id="73236265316873967">AI Wize Chat Premium</translation>
 <translation id="1166682575529520472">Månatligen</translation>
 <translation id="451189393813405346">Fråga AI Wize Chat</translation>
@@ -1150,7 +1150,7 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="6344103698928069918">För en spellista återupptar du uppspelningen från den senaste pausen.</translation>
 <translation id="8141583471142904652">Kontinuerligt lyssnande</translation>
 <translation id="851432578283946230">Spelar automatiskt upp nästa post i spellistan</translation>
-<translation id="295620834661738195">Brave-spellista</translation>
+<translation id="295620834661738195">AI Wize-spellista</translation>
 <translation id="4850886885716139402">Visa</translation>
 <translation id="7392941176393379100">Tillagd i "<ph name="PLAYLIST_NAME"/>"</translation>
 <translation id="349846214503465941">Aktivera spellista</translation>

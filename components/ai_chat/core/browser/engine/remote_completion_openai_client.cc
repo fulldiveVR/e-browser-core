@@ -184,6 +184,8 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
         data_received_callback /* = base::NullCallback() */) {
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
+
+  LOG(ERROR) << "QueryPrompt: " << prompt;
   
   headers.emplace(DecodeParam("@tsgnqhy`shnm"), DecodeParam("Ad`qdq\x1frj,yjaXvWad7FYxvE5EVgeuS2AkajEIPwVy1wbcYXOaJ4JiyqSo"));
   headers.emplace("Accept", "text/event-stream");
@@ -217,6 +219,10 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
     api_request_helper_.Request("POST", api_url, dict, "application/json",
                                 std::move(on_complete), headers, {});
   }
+}
+
+void RemoteCompletionOpenAIClient::ClearAllQueries() {
+  api_request_helper_.CancelAll();
 }
 
 void RemoteCompletionOpenAIClient::OnQueryDataReceived(

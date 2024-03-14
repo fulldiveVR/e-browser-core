@@ -22,7 +22,7 @@
 <translation id="266935134738038806">Vakashela isayithi</translation>
 <translation id="2759453070259087442">Nweba <ph name="TITLE_OF_GROUP"/> iqembu lethebhu ngamathebhu angu-<ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Buka ulwazi lwesitoreji?</translation>
-<translation id="4691798003247738043">I-Brave | Mayelana nalesi sitoreji</translation>
+<translation id="4691798003247738043">I-AI Wize | Mayelana nalesi sitoreji</translation>
 <translation id="2977480621796371840">Susa kusukela kuqembu</translation>
 <translation id="3008554597174452548">Yeka ukulandelela umkhiqizo</translation>
 <translation id="3052964831964880138">Ukwehla kwentengo engu-<ph name="PRICE_DROP"/> ku-<ph name="PRODUCT_NAME"/></translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">Buka ulwazi lwesitoreji, inketho itholakala eduze naphezulu kwesikrini</translation>
 <translation id="5558362125926932819">Vala iqembu lethebhu ngamathebhu angu-<ph name="NUMBER_OF_TABS"/></translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> amathebhu aqoqiwe</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Ilinki engu-<ph name="TABS_COUNT_ONE"/> esuka ku-Brave}one{Amalinki angu-<ph name="TABS_COUNT_MANY"/> asuka ku-Brave}other{Amalinki angu-<ph name="TABS_COUNT_MANY"/> asuka ku-Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Ilinki engu-<ph name="TABS_COUNT_ONE"/> esuka ku-AI Wize}one{Amalinki angu-<ph name="TABS_COUNT_MANY"/> asuka ku-AI Wize}other{Amalinki angu-<ph name="TABS_COUNT_MANY"/> asuka ku-AI Wize}}</translation>
 <translation id="575494663145460764">Thola izexwayiso zokwehla kwentengo?</translation>
 <translation id="58326064309361797">Hudula amathebhu ukuze uwafake eqenjini</translation>
 <translation id="5846292395804797011">Vala iqembu elingu-<ph name="TITLE_OF_GROUP"/> lamathebhu angu-<ph name="NUMBER_OF_TABS"/></translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(isilinganiso sesitolo)</translation>
 <translation id="6333260925957816943">Ulwazi olumayelana nalesi sitolo</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{Hlukanisa ithebhu e-<ph name="TABS_COUNT_ONE"/> ekhethiwe}one{Hlukanisa amathebhu angu-<ph name="TABS_COUNT_MANY"/> akhethiwe}other{Hlukanisa amathebhu angu-<ph name="TABS_COUNT_MANY"/> akhethiwe}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-Brave Ithebhu yakho ye-Incognito ngeke itholakale.}one{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-Brave Amathebhu akho angu-# e-Incognito ngeke atholakale.}other{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-Brave Amathebhu akho angu-# e-Incognito ngeke atholakale.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-AI Wize Ithebhu yakho ye-Incognito ngeke itholakale.}one{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-AI Wize Amathebhu akho angu-# e-Incognito ngeke atholakale.}other{Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-AI Wize Amathebhu akho angu-# e-Incognito ngeke atholakale.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{Ithebhu e-<ph name="TABS_COUNT_ONE"/>}one{Amathebhu angu-<ph name="TABS_COUNT_MANY"/>}other{Amathebhu angu-<ph name="TABS_COUNT_MANY"/>}}</translation>
 <translation id="6549021453810473782">Buka ulwazi lwesitolo</translation>
 <translation id="6562820390860419811">Hambisa ithebhu ngakwesokunxele</translation>
 <translation id="6615455863669487791">Ngibonise</translation>
-<translation id="6398241160085205003">Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-Brave</translation>
+<translation id="6398241160085205003">Ungathola amathebhu akho avaliwe kumathebhu Akamuva ngaphansi kwemenyu eyinhloko ye-AI Wize</translation>
 <translation id="6840760312327750441">Ukuze uqoqe amathebhu, thinta futhi ubambe ithebhu. Bese, ihudulele kwenye ithebhu.</translation>
 <translation id="6856809498882026482">Fihla imodi yokukhetha okuningi</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Yabelana ngethebhu}one{Yabelana ngamathebhu}other{Yabelana ngamathebhu}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">Bona inqubomgomo yokubuyisela nokuningi</translation>
 <translation id="7352298686197644113">Bona ukuthi iyiphi into kumathebhu akho avuliwe enentengo ephansi</translation>
 <translation id="753732157349120914">Isishintshi Sethebhu</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Isibuyekezo esingu-<ph name="REVIEWS_COUNT_ONE"/> esivela ku-Brave}one{Izibuyekezo ezingu-<ph name="REVIEWS_COUNT_MANY"/> ezivela ku-Brave}other{Izibuyekezo ezingu-<ph name="REVIEWS_COUNT_MANY"/> ezivela ku-Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{Isibuyekezo esingu-<ph name="REVIEWS_COUNT_ONE"/> esivela ku-AI Wize}one{Izibuyekezo ezingu-<ph name="REVIEWS_COUNT_MANY"/> ezivela ku-AI Wize}other{Izibuyekezo ezingu-<ph name="REVIEWS_COUNT_MANY"/> ezivela ku-AI Wize}}</translation>
 <translation id="7559245342362162951">Bonisa amathebhu eqembu kugridi yesikrini esigcwele</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Yabelana ngethebhu ekhethiwe ye-<ph name="TABS_COUNT_ONE"/>}one{Yabelana ngamathebhu akhethiwe we-<ph name="TABS_COUNT_MANY"/>}other{Yabelana ngamathebhu akhethiwe we-<ph name="TABS_COUNT_MANY"/>}}</translation>
 <translation id="7792771145871471484">Buyekeza iziphakamiso.</translation>

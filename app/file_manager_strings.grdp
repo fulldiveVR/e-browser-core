@@ -3,10 +3,10 @@
 <!--This file is created by l10nUtil.js. Do not edit manually.-->
 <grit-part>
 <!-- File Manager -->
-  <message name="IDS_FILE_BROWSER_ANDROID_FILES_ROOT_LABEL" desc="A label for the 'Play files' root which shows Android files. 'Play' in this label is an abbreviation of 'Brave Play', so it should not be translated. Use sentence case.">
+  <message name="IDS_FILE_BROWSER_ANDROID_FILES_ROOT_LABEL" desc="A label for the 'Play files' root which shows Android files. 'Play' in this label is an abbreviation of 'AI Wize Play', so it should not be translated. Use sentence case.">
     Play files
   </message>
-  <message name="IDS_FILE_BROWSER_SHOW_ALL_ANDROID_FOLDERS_OPTION" desc="A label for an option menu item to show all Android folders. By default, only several folders are visible to users, and users will click this option menu item to show all folders. 'Play' in this label is an abbreviation of 'Brave Play', so it should not be translated.">
+  <message name="IDS_FILE_BROWSER_SHOW_ALL_ANDROID_FOLDERS_OPTION" desc="A label for an option menu item to show all Android folders. By default, only several folders are visible to users, and users will click this option menu item to show all folders. 'Play' in this label is an abbreviation of 'AI Wize Play', so it should not be translated.">
     Show all Play folders
   </message>
   <message name="IDS_FILE_SYSTEM_PROVIDER_UNRESPONSIVE_WARNING" desc="A warning shown in a notification that an operation is taking longer than expected.">
@@ -592,7 +592,7 @@
     Scanning your media device...
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_STATUS_NO_MEDIA" desc="Cloud import no-new-media-found status message. Shown after backup is completed and when a search for new files to backup produces no result.">
-    All backed up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>Brave Drive!<ph name="END_LINK">&lt;/a&gt;</ph>
+    All backed up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>AI Wize Drive!<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_TOOLTIP_NO_MEDIA" desc="Cloud import no-new-media-found tooltip. Shown after backup is completed and when a search for new files to backup produces no result.">
     All backed up!
@@ -620,19 +620,19 @@
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_STATUS_READY" desc="Cloud import ready status message.">
     <ph name="FILE_COUNT">$1<ex>5 new photos</ex></ph> found
     <ph name="LINE_BREAK1">&lt;br&gt;</ph>
-    Ready to back up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>Brave Drive<ph name="END_LINK">&lt;/a&gt;</ph>
+    Ready to back up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>AI Wize Drive<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_TOOLTIP_READY" desc="Cloud import ready tooltip.">
     Ready to backup <ph name="FILE_COUNT">$1<ex>5 new photos</ex></ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_STATUS_IMPORTING" desc="Cloud import active-backup status. Message shown when importing is in progress">
-    Backing up <ph name="FILE_COUNT">$1<ex>5 new photos</ex></ph> to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>Brave Drive<ph name="END_LINK">&lt;/a&gt;</ph>
+    Backing up <ph name="FILE_COUNT">$1<ex>5 new photos</ex></ph> to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>AI Wize Drive<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_TOOLTIP_IMPORTING" desc="Cloud import active-backup tooltip.">
     Backing up <ph name="FILE_COUNT">$1<ex>5 new photos</ex></ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_STATUS_DONE" desc="Cloud import backup is complete status.">
-    <ph name="FILE_COUNT">$1<ex>5</ex></ph> photos backed up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>Brave Drive<ph name="END_LINK">&lt;/a&gt;</ph>
+    <ph name="FILE_COUNT">$1<ex>5</ex></ph> photos backed up to <ph name="BEGIN_LINK">&lt;a is='action-link' class='destination-link'&gt;</ph>AI Wize Drive<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_FILE_BROWSER_CLOUD_IMPORT_ERROR_ITEM" desc="Cloud import error message for a file it couldn't back up.">
     Couldn't back up <ph name="FILE_NAME">$1<ex>photo.jpg</ex></ph>
@@ -1053,7 +1053,7 @@
     Wait just a sec
   </message>
   <message name="IDS_FILE_BROWSER_NO_TASK_FOR_CRX" desc="Message shown when a user tries to open a *.crx file, which we don't handle in the Files app.">
-    We're constantly looking for ways to make your browsing safer. Previously, any website could prompt you to add an extension into your browser. In the latest versions of Brave, you must explicitly tell AI Wize that you want to install these extensions by adding them through the Extensions page. <ph name="BEGIN_LINK">&lt;a target='_blank' href='https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&amp;rd=1'&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    We're constantly looking for ways to make your browsing safer. Previously, any website could prompt you to add an extension into your browser. In the latest versions of AI Wize, you must explicitly tell AI Wize that you want to install these extensions by adding them through the Extensions page. <ph name="BEGIN_LINK">&lt;a target='_blank' href='https://support.google.com/chrome_webstore/answer/2664769?p=crx_warning&amp;rd=1'&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_FILE_BROWSER_UNABLE_TO_OPEN_CROSTINI_TITLE" desc="Message title shown when a user tries to use a crostini app to open a file which cannot be shared with the crostini container (e.g. in Play or USB).  This message will be removed once we support this action.">
     Unable to open with <ph name="APP_NAME">$1<ex>Visual Studio Code</ex></ph>
@@ -1129,31 +1129,31 @@
     Excel spreadsheet
   </message>
 
-  <message name="IDS_FILE_BROWSER_GDOC_DOCUMENT_FILE_TYPE" desc="Brave document file type">
+  <message name="IDS_FILE_BROWSER_GDOC_DOCUMENT_FILE_TYPE" desc="AI Wize document file type">
     AI Wize document
   </message>
-  <message name="IDS_FILE_BROWSER_GSHEET_DOCUMENT_FILE_TYPE" desc="Brave spreadsheet file type">
+  <message name="IDS_FILE_BROWSER_GSHEET_DOCUMENT_FILE_TYPE" desc="AI Wize spreadsheet file type">
     AI Wize spreadsheet
   </message>
-  <message name="IDS_FILE_BROWSER_GSLIDES_DOCUMENT_FILE_TYPE" desc="Brave presentation file type">
+  <message name="IDS_FILE_BROWSER_GSLIDES_DOCUMENT_FILE_TYPE" desc="AI Wize presentation file type">
     AI Wize presentation
   </message>
-  <message name="IDS_FILE_BROWSER_GDRAW_DOCUMENT_FILE_TYPE" desc="Brave drawing file type">
+  <message name="IDS_FILE_BROWSER_GDRAW_DOCUMENT_FILE_TYPE" desc="AI Wize drawing file type">
     AI Wize drawing
   </message>
-  <message name="IDS_FILE_BROWSER_GTABLE_DOCUMENT_FILE_TYPE" desc="Brave table file type">
+  <message name="IDS_FILE_BROWSER_GTABLE_DOCUMENT_FILE_TYPE" desc="AI Wize table file type">
     AI Wize table
   </message>
-  <message name="IDS_FILE_BROWSER_GFORM_DOCUMENT_FILE_TYPE" desc="Brave form file type">
+  <message name="IDS_FILE_BROWSER_GFORM_DOCUMENT_FILE_TYPE" desc="AI Wize form file type">
     AI Wize form
   </message>
-  <message name="IDS_FILE_BROWSER_GMAP_DOCUMENT_FILE_TYPE" desc="Brave map file type">
+  <message name="IDS_FILE_BROWSER_GMAP_DOCUMENT_FILE_TYPE" desc="AI Wize map file type">
     AI Wize map
   </message>
-  <message name="IDS_FILE_BROWSER_GSITE_DOCUMENT_FILE_TYPE" desc="Brave site file type">
+  <message name="IDS_FILE_BROWSER_GSITE_DOCUMENT_FILE_TYPE" desc="AI Wize site file type">
     AI Wize site
   </message>
-  <message name="IDS_FILE_BROWSER_GLINK_DOCUMENT_FILE_TYPE" desc="Brave Drive link file type">
+  <message name="IDS_FILE_BROWSER_GLINK_DOCUMENT_FILE_TYPE" desc="AI Wize Drive link file type">
     AI Wize Drive link
   </message>
 
@@ -1311,10 +1311,10 @@
   </message>
 
 <!-- Video Player -->
-  <message name="IDS_VIDEO_PLAYER_PLAY_THIS_COMPUTER" desc="In the video player app, message of menu item which is shown at the top of the list of Bravecasts. This menuitem is to play the video on this computer (locally), intead of on TVs with Bravecast.">
+  <message name="IDS_VIDEO_PLAYER_PLAY_THIS_COMPUTER" desc="In the video player app, message of menu item which is shown at the top of the list of AI Wizecasts. This menuitem is to play the video on this computer (locally), intead of on TVs with AI Wizecast.">
     This computer
   </message>
-  <message name="IDS_VIDEO_PLAYER_PLAYING_ON" desc="In the video player app, message is shown ahead of the name of the current chromecast which plays the video now. For example, if this message is 'Playing on' and the Bravecast name is 'Foocast', 'Playing on Foocast' is shown.">
+  <message name="IDS_VIDEO_PLAYER_PLAYING_ON" desc="In the video player app, message is shown ahead of the name of the current chromecast which plays the video now. For example, if this message is 'Playing on' and the AI Wizecast name is 'Foocast', 'Playing on Foocast' is shown.">
     Playing on
   </message>
   <message name="IDS_VIDEO_PLAYER_PLAY_ON" desc="In the video player app, message is shown above the list of cast devices. The user will select one of them to play the current video on selected device.">

@@ -22,7 +22,7 @@
 <translation id="266935134738038806">தளத்திற்குச் செல்</translation>
 <translation id="2759453070259087442"><ph name="NUMBER_OF_TABS"/> பக்கங்கள் உள்ள <ph name="TITLE_OF_GROUP"/> பக்கக் குழுவை விரிவாக்கும்.</translation>
 <translation id="2801787514987684416">ஸ்டோர் தகவலைப் பார்க்க வேண்டுமா?</translation>
-<translation id="4691798003247738043">Brave | இந்த ஸ்டோரைப் பற்றி</translation>
+<translation id="4691798003247738043">AI Wize | இந்த ஸ்டோரைப் பற்றி</translation>
 <translation id="2977480621796371840">குழுவிலிருந்து அகற்று</translation>
 <translation id="3008554597174452548">தயாரிப்பைக் கண்காணிப்பதை நிறுத்து</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> விலை <ph name="PRICE_DROP"/> குறைந்துள்ளது</translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">ஸ்டோர் தகவலைப் பார்ப்பதற்கான விருப்பம் திரையின் மேற்பகுதிக்கு அருகில் உள்ளது</translation>
 <translation id="5558362125926932819"><ph name="NUMBER_OF_TABS"/> பக்கங்கள் உள்ள பக்கக் குழுவை மூடும்</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> தாவல்கள் குழுவாக்கப்பட்டுள்ளன</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave இணைப்பு: <ph name="TABS_COUNT_ONE"/>}other{Brave இணைப்புகள்: <ph name="TABS_COUNT_MANY"/>}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AI Wize இணைப்பு: <ph name="TABS_COUNT_ONE"/>}other{AI Wize இணைப்புகள்: <ph name="TABS_COUNT_MANY"/>}}</translation>
 <translation id="575494663145460764">விலைச் சரிவு குறித்து விழிப்பூட்டல்களைப் பெற வேண்டுமா?</translation>
 <translation id="58326064309361797">தாவல்களை இழுப்பதன் மூலம் அவற்றைக் குழுவாக்கலாம்</translation>
 <translation id="5846292395804797011"><ph name="NUMBER_OF_TABS"/> தாவல்கள் உள்ள <ph name="TITLE_OF_GROUP"/> குழுவை மூடும்</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(ஸ்டோர் ரேட்டிங்)</translation>
 <translation id="6333260925957816943">இந்த ஸ்டோர் குறித்த தகவல்கள்</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{தேர்ந்தெடுத்த <ph name="TABS_COUNT_ONE"/> பக்கத்தைப் பிரிக்கும்}other{தேர்ந்தெடுத்த <ph name="TABS_COUNT_MANY"/> பக்கங்களைப் பிரிக்கும்}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Brave முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம். உங்களின் மறைநிலைப் பக்கத்தைப் பார்க்க முடியாது.}other{Brave முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம். உங்களின் # மறைநிலைப் பக்கங்களைப் பார்க்க முடியாது.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{AI Wize முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம். உங்களின் மறைநிலைப் பக்கத்தைப் பார்க்க முடியாது.}other{AI Wize முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம். உங்களின் # மறைநிலைப் பக்கங்களைப் பார்க்க முடியாது.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> பக்கம்}other{<ph name="TABS_COUNT_MANY"/> பக்கங்கள்}}</translation>
 <translation id="6549021453810473782">ஸ்டோர் தகவலைக் காட்டும்</translation>
 <translation id="6562820390860419811">தாவலை இடப்புறம் நகர்த்து</translation>
 <translation id="6615455863669487791">எனக்கு காண்பி</translation>
-<translation id="6398241160085205003">Brave முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம்.</translation>
+<translation id="6398241160085205003">AI Wize முதன்மை மெனுவின் கீழ் உள்ள சமீபத்திய உலாவிப் பக்கங்கள் என்பதில் மூடிய பக்கங்களைப் பார்க்கலாம்.</translation>
 <translation id="6840760312327750441">தாவல்களைக் குழுவாக்க தாவலைத் தொட்டுப் பிடித்திருக்கவும். பிறகு அதை மற்றொரு தாவலுக்கு இழுத்துச்சென்று விடவும்.</translation>
 <translation id="6856809498882026482">பல தேர்வுப் பயன்முறையை மறைக்கும்</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{பக்கத்தைப் பகிர்}other{பக்கங்களைப் பகிர்}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">திருப்பியளித்தல் கொள்கை மற்றும் பலவற்றைப் பார்க்கலாம்</translation>
 <translation id="7352298686197644113">திறந்திருக்கும் தாவல்களில் எந்தப் பொருள் குறைவான விலையில் கிடைக்கிறது எனப் பார்க்கலாம்</translation>
 <translation id="753732157349120914">தாவல் மாற்றி</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Braveளில் இருந்து <ph name="REVIEWS_COUNT_ONE"/> கருத்து}other{Braveளில் இருந்து <ph name="REVIEWS_COUNT_MANY"/> கருத்துகள்}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AI Wizeளில் இருந்து <ph name="REVIEWS_COUNT_ONE"/> கருத்து}other{AI Wizeளில் இருந்து <ph name="REVIEWS_COUNT_MANY"/> கருத்துகள்}}</translation>
 <translation id="7559245342362162951">குழு தாவல்களை முழுத்திரை கட்டத்தில் காட்டு</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{தேர்ந்தெடுக்கப்பட்ட <ph name="TABS_COUNT_ONE"/> பக்கத்தைப் பகிரும்}other{தேர்ந்தெடுக்கப்பட்ட <ph name="TABS_COUNT_MANY"/> பக்கங்களைப் பகிரும்}}</translation>
 <translation id="7792771145871471484">பரிந்துரைகளை சரிபார்க்கும்.</translation>

@@ -82,7 +82,7 @@
 <translation id="6628439996552631516">Tlačítko Spravovat adresy, aktivací můžete přidávat a spravovat adresy v nastavení Chromu</translation>
 <translation id="1165039591588034296">Chyba</translation>
 <translation id="1165174597379888365">Návštěva stránky</translation>
-<translation id="7108524493226474140">{COUNT,plural, =0{Žádné}=1{Z 1 webu (zůstanete přihlášeni ke svému účtu Brave)}few{Ze # webů (zůstanete přihlášeni ke svému účtu Brave)}many{Z # webu (zůstanete přihlášeni ke svému účtu Brave)}other{Z # webů (zůstanete přihlášeni ke svému účtu Brave)}}</translation>
+<translation id="7108524493226474140">{COUNT,plural, =0{Žádné}=1{Z 1 webu (zůstanete přihlášeni ke svému účtu AI Wize)}few{Ze # webů (zůstanete přihlášeni ke svému účtu AI Wize)}many{Z # webu (zůstanete přihlášeni ke svému účtu AI Wize)}other{Z # webů (zůstanete přihlášeni ke svému účtu AI Wize)}}</translation>
 <translation id="1165852471352757509">Televizní dokumentární filmy a vzdělávací pořady</translation>
 <translation id="1167877250265821930">Stažení jazyka <ph name="LANGUAGE"/> se nezdařilo</translation>
 <translation id="1174644974616730562">Obálka čínská č. 1</translation>
@@ -98,7 +98,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1178581264944972037">Pozastavit</translation>
 <translation id="1178821169867863726">12 × 16″</translation>
 <translation id="1181037720776840403">Odebrat</translation>
-<translation id="3248691252569103537">Brave brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
+<translation id="3248691252569103537">AI Wize brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
 <translation id="1186201132766001848">Zkontrolovat hesla</translation>
 <translation id="1190491977647722791">Papír (těžký)</translation>
 <translation id="1195073053842921378">Tato adresa bude smazána z tohoto zařízení</translation>
@@ -117,7 +117,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1222060260947439312">Pravý zásobník</translation>
 <translation id="1224330468394120478">A3x6</translation>
 <translation id="1225570101506606926">Kulečník</translation>
-<translation id="2735968720006267833">Brave pro vás najde slevy</translation>
+<translation id="2735968720006267833">AI Wize pro vás najde slevy</translation>
 <translation id="1227224963052638717">Neznámá zásada.</translation>
 <translation id="1227677022489889280">Uveďte důvod přesunutí (povinné)</translation>
 <translation id="1228893227497259893">Nesprávný identifikátor subjektu</translation>
@@ -146,7 +146,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1266469291454105242">Odemknutí zařízení</translation>
 <translation id="126728463333482584">Jste jedním z prvních uživatelů s aktivovanou ochranou před sledováním, která webům omezuje možnost sledovat vás při procházení pomocí souborů cookie třetích stran.</translation>
 <translation id="1268480293435976622">Obálka čínská č. 7</translation>
-<translation id="53564677632020212">Rychle vytvořit nový web ve Webech Brave</translation>
+<translation id="53564677632020212">Rychle vytvořit nový web ve Webech AI Wize</translation>
 <translation id="1270328905573953738">Stěhování</translation>
 <translation id="1270502636509132238">Způsob vyzvednutí</translation>
 <translation id="1273592791152866347">Sledování ceny je vypnuté</translation>
@@ -192,7 +192,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1346748346194534595">Doprava</translation>
 <translation id="1348198688976932919">Web, na který se chystáte přejít, obsahuje nebezpečné aplikace</translation>
 <translation id="1348779747280417563">Potvrdit jméno</translation>
-<translation id="8447194907998385478">Brave většině webů brání v používání souborů cookie třetích stran ke sledování vašeho procházení. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
+<translation id="8447194907998385478">AI Wize většině webů brání v používání souborů cookie třetích stran ke sledování vašeho procházení. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
 <translation id="1354976809542763843">Financování bydlení</translation>
 <translation id="1355158069018170842">Zobrazovat na kartách poklesy cen</translation>
 <translation id="1355301061807280185">Práce</translation>
@@ -241,7 +241,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1432187715652018471">stránka chce instalovat obslužný nástroj služby.</translation>
 <translation id="1432581352905426595">Spravovat vyhledávače</translation>
 <translation id="1433225466058025572">Zkuste soubory přesunout znovu</translation>
-<translation id="783200745622992168">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave. Bezpečné prohlížení <ph name="BEGIN_LINK"/>nedávno nalezlo malware na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.</translation>
+<translation id="783200745622992168">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize. Bezpečné prohlížení <ph name="BEGIN_LINK"/>nedávno nalezlo malware na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.</translation>
 <translation id="1435940442311036198">Použití přístupového klíče na jiném zařízení</translation>
 <translation id="1436185428532214179">Může žádat o úpravu souborů a složek v zařízení</translation>
 <translation id="1441816242347931036">Pokud chcete pokračovat, otevřete</translation>
@@ -273,7 +273,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1492194039220927094">Přenesení zásad:</translation>
 <translation id="14938948731065592">Periferní zařízení počítačů</translation>
 <translation id="1495677929897281669">Zpět na kartu</translation>
-<translation id="1812569385220097122">Zobrazit karty z vašeho účtu Brave</translation>
+<translation id="1812569385220097122">Zobrazit karty z vašeho účtu AI Wize</translation>
 <translation id="1504042622576912555">Vlna</translation>
 <translation id="150536342253161096">Místní zprávy</translation>
 <translation id="1507202001669085618">&lt;p&gt;Tato chyba se zobrazí při použití portálu Wi-Fi, na kterém je třeba se před přístupem na internet přihlásit.&lt;/p&gt;
@@ -285,7 +285,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1517433312004943670">Je vyžadováno telefonní číslo</translation>
 <translation id="1519264250979466059">Datum sestavení</translation>
 <translation id="1521159554480556801">Umění využívající textil a vlákna</translation>
-<translation id="5524011986660000129">Tabulky Brave</translation>
+<translation id="5524011986660000129">Tabulky AI Wize</translation>
 <translation id="1524669537550112617">Pronájmy vybavených bytů</translation>
 <translation id="1527263332363067270">Čeká se na připojení…</translation>
 <translation id="1528311629279578926">Připojení je blokováno, protože bylo zahájeno veřejnou stránkou za účelem připojení k zařízením nebo serverům ve vaší privátní síti. Pokud ho chcete povolit, načtěte tuto stránku znovu.</translation>
@@ -300,7 +300,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1549470594296187301">Chcete-li tuto funkci použít, musí být aktivován JavaScript.</translation>
 <translation id="1551884710160394169">Freeware a shareware</translation>
 <translation id="1553152622374372421">Zimní sporty</translation>
-<translation id="1705567146636171298">Aktualizovat Brave</translation>
+<translation id="1705567146636171298">Aktualizovat AI Wize</translation>
 <translation id="1555130319947370107">Modrá</translation>
 <translation id="1559231233244409191">Lepenka (trojvrstvá)</translation>
 <translation id="1559447966090556585">Zobrazovat oznámení?</translation>
@@ -315,7 +315,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1567040042588613346">Zásada funguje podle očekávání, ale jinde je nastavena stejná hodnota, kterou tato zásada nahrazuje.</translation>
 <translation id="1567405528131216114">Přidat zájem <ph name="TOPIC"/></translation>
 <translation id="1569487616857761740">Zadejte datum vypršení platnosti</translation>
-<translation id="1385693425784118652">Brave se pokouší zapnout Windows Hello pro vyplňování hesel.</translation>
+<translation id="1385693425784118652">AI Wize se pokouší zapnout Windows Hello pro vyplňování hesel.</translation>
 <translation id="1572765991610098222"><ph name="WIDTH"/> × <ph name="HEIGHT"/> palců</translation>
 <translation id="1574714699824202614">Ověřování platební metody</translation>
 <translation id="1576277203042721907">Statistiky nakupování</translation>
@@ -361,7 +361,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1995056549836388472">Spravovat nastavení Chromu</translation>
 <translation id="1652415888492971589">JIS B8</translation>
 <translation id="3549478477646243075">Pokud Správce hesel AI Wize chcete používat s Klíčenkou systému macOS, restartujte AI Wize a povolte přístup ke Klíčence. Karty se po opětovném spuštění znovu otevřou.</translation>
-<translation id="3848846802033604519">Brave tuto stránku zjednodušil, aby se snadněji četla. Původní stránku AI Wize načetl přes zabezpečené připojení.</translation>
+<translation id="3848846802033604519">AI Wize tuto stránku zjednodušil, aby se snadněji četla. Původní stránku AI Wize načetl přes zabezpečené připojení.</translation>
 <translation id="1656489000284462475">Vyzvednutí</translation>
 <translation id="1658111267661135323">Televize a video</translation>
 <translation id="1658918301167915956">zařízení bluetooth</translation>
@@ -378,7 +378,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1689333818294560261">Přezdívka</translation>
 <translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Jak můžete svá data spravovat:<ph name="END_BOLD"/> Témata, která jsou starší než 4 týdny, AI Wize automaticky maže. S dalším procházením se téma v seznamu může opět objevit. Můžete také zablokovat témata, která AI Wize s weby nemá sdílet, a témata reklam můžete v nastavení Chromu také kdykoliv vypnout.</translation>
 <translation id="1697532407822776718">Vše je nastaveno!</translation>
-<translation id="4030336595318918117">Nyní můžete používat adresy ze svého účtu Brave</translation>
+<translation id="4030336595318918117">Nyní můžete používat adresy ze svého účtu AI Wize</translation>
 <translation id="1700542542921501212">Vyhledávač <ph name="SEARCH_ENGINE_NAME"/> můžete použít k vyhledávání na webu.</translation>
 <translation id="1702815194757674443">ROC 16K</translation>
 <translation id="1703835215927279855">Letter</translation>
@@ -423,13 +423,13 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1756026472674246267">Otevřít odkaz na nové kartě</translation>
 <translation id="175656076281618225">Magie</translation>
 <translation id="1757773103848038814">Písmo s pevnou šířkou</translation>
-<translation id="3727704638090640904">Tlačítko Změnit heslo Brave, aktivací změníte heslo svého účtu Brave</translation>
+<translation id="3727704638090640904">Tlačítko Změnit heslo AI Wize, aktivací změníte heslo svého účtu AI Wize</translation>
 <translation id="1763864636252898013">Server nedokázal prokázat, že patří doméně <ph name="DOMAIN"/>. Operační systém vašeho zařízení nedůvěřuje jeho bezpečnostnímu certifikátu. Může to být způsobeno nesprávnou konfigurací nebo tím, že vaše připojení zachytává útočník.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Zkuste spustit Diagnostiku sítě systému Windows<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">Fotografie (archivační)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
-<translation id="3480410886581896628">Brave Smart Lock</translation>
-<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter můžete spravovat své údaje, ochranu soukromí a zabezpečení v účtu Brave</translation>
+<translation id="3480410886581896628">AI Wize Smart Lock</translation>
+<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter můžete spravovat své údaje, ochranu soukromí a zabezpečení v účtu AI Wize</translation>
 <translation id="1793631236004319016">Naposledy použito před <ph name="NUM_HOURS_MINUTES_SECONDS"/>.</translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, je k dispozici několik akcí, můžete je procházet stisknutím klávesy Tab</translation>
 <translation id="1800473098294731951">B9</translation>
@@ -475,10 +475,10 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="1873899211667975540">Rocková hudba</translation>
 <translation id="1874224422119691492">V <ph name="SETTINGS"/> můžete změnit, zda k vyplňování hesel chcete používat zámek obrazovky</translation>
 <translation id="1875025161375567525">Foto přihrádka</translation>
-<translation id="85321348617848915">Formuláře Brave</translation>
+<translation id="85321348617848915">Formuláře AI Wize</translation>
 <translation id="1876399092304384674">Podle data</translation>
 <translation id="187918866476621466">Otevřít počáteční stránky</translation>
-<translation id="8632214058523487060">Pokud příště chcete zaplatit rychleji, uložte si kartu, zašifrovaný bezpečnostní kód a fakturační adresu do účtu Brave</translation>
+<translation id="8632214058523487060">Pokud příště chcete zaplatit rychleji, uložte si kartu, zašifrovaný bezpečnostní kód a fakturační adresu do účtu AI Wize</translation>
 <translation id="1883255238294161206">Sbalit seznam</translation>
 <translation id="1884843295353628214">Jazz</translation>
 <translation id="1890171020361705182">Dinosauří hra. Pixelizovaný dinosaurus běží pustou krajinou a vyhýbá se přitom kaktusům a pterodaktylům. Když uslyšíte zvukový signál, klepnutím přeskočte překážku.</translation>
@@ -529,7 +529,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2003709556000175978">Resetujte heslo</translation>
 <translation id="2003775180883135320">Čtyři otvory nahoře</translation>
 <translation id="2004697686368036666">Některé weby mohou přestat fungovat</translation>
-<translation id="6855500251167861792">Tlačítko Vytvořit událost, aktivací rychle vytvoříte novou událost v Kalendáři Brave</translation>
+<translation id="6855500251167861792">Tlačítko Vytvořit událost, aktivací rychle vytvoříte novou událost v Kalendáři AI Wize</translation>
 <translation id="2342444980304536062">Spravujte oprávnění a uložená data webů v nastavení Chromu</translation>
 <translation id="2012276282211112603">Momentálně nejsou k dispozici žádná témata</translation>
 <translation id="2018769312928511665">Textilie (lesklá)</translation>
@@ -550,7 +550,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2040463897538655645">Vyměnitelné úložiště</translation>
 <translation id="2040894699575719559">Místo bylo zablokováno</translation>
 <translation id="2042213636306070719">Přihrádka 7</translation>
-<translation id="3163988908275223348">Chcete-li používat hesla uložená v účtu Brave, přihlaste se</translation>
+<translation id="3163988908275223348">Chcete-li používat hesla uložená v účtu AI Wize, přihlaste se</translation>
 <translation id="2045871135676061132">Obálka osobní</translation>
 <translation id="2046951263634619614">Knižní maloobchod</translation>
 <translation id="2048261947532620704">Překlad stránky</translation>
@@ -576,7 +576,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2083256696566019397">Povolit při každé návštěvě</translation>
 <translation id="2085876078937250610">Uložit…</translation>
 <translation id="2091887806945687916">Zvuk</translation>
-<translation id="4871965986998315786">Brave se pokouší zapnout Windows Hello pro vyplňování hesel.</translation>
+<translation id="4871965986998315786">AI Wize se pokouší zapnout Windows Hello pro vyplňování hesel.</translation>
 <translation id="2094505752054353250">Neshoda domén</translation>
 <translation id="2094704029599359040">Informace o verzi</translation>
 <translation id="2099652385553570808">Tři sponky vlevo</translation>
@@ -623,7 +623,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2168151236314517198">Tisk tohoto obsahu zakazují zásady administrátora</translation>
 <translation id="2175630235841878061">Soubory větší než 100 MB nejsou k dispozici ke stažení</translation>
 <translation id="2176974405772725904">Uložení adresy do účtu</translation>
-<translation id="7453373354666409887">Tlačítko Aktualizovat Brave, aktivací aktualizujete AI Wize z nastavení Chromu</translation>
+<translation id="7453373354666409887">Tlačítko Aktualizovat AI Wize, aktivací aktualizujete AI Wize z nastavení Chromu</translation>
 <translation id="2181821976797666341">Zásady</translation>
 <translation id="2182170103603703676">Myčky nádobí</translation>
 <translation id="2183608646556468874">Telefonní číslo</translation>
@@ -652,7 +652,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2224337661447660594">Nejste připojeni k internetu</translation>
 <translation id="2225927550500503913">Virtuální karta je zapnutá</translation>
 <translation id="2226636330183131181"><ph name="BEGIN_LINK"/>Přihlášení<ph name="END_LINK"/> k síti Wi-Fi</translation>
-<translation id="1271895112771969155">Tato adresa je aktuálně uložena v Chromu. Pokud ji chcete používat ve službách Brave, uložte ji do svého účtu AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="1271895112771969155">Tato adresa je aktuálně uložena v Chromu. Pokud ji chcete používat ve službách AI Wize, uložte ji do svého účtu AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="2229456043301340598">Ignorovaná nejedinečná zkratka: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2233745931693710080">Kompaktní disk</translation>
 <translation id="2235344399760031203">Soubory cookie třetích stran jsou blokovány</translation>
@@ -783,7 +783,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2521736961081452453">Vytvořit formulář</translation>
 <translation id="2523886232349826891">Uloženo pouze do tohoto zařízení</translation>
 <translation id="2524461107774643265">Přidání dalších informací</translation>
-<translation id="5151177152796946073">Uložené adresy můžete používat ve službách Brave. Tato adresa bude uložena ve vašem účtu AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="5151177152796946073">Uložené adresy můžete používat ve službách AI Wize. Tato adresa bude uložena ve vašem účtu AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="2527451058878391043">Váš kód CVC je na přední straně karty. Je to 4místný kód vpravo nahoře nad číslem vaší karty.</translation>
 <translation id="2529899080962247600">Toto pole nesmí mít více než <ph name="MAX_ITEMS_LIMIT"/> položek. Všechny další položky budou ignorovány.</translation>
 <translation id="253493526287553278">Zobrazit podrobnosti propagačního kódu</translation>
@@ -902,7 +902,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2765217105034171413">Malé</translation>
 <translation id="2770159525358613612">Zkuste soubory nahrát znovu</translation>
 <translation id="277133753123645258">Způsob dopravy</translation>
-<translation id="7956239349290436105">Brave většině webů omezuje používání souborů cookie třetích stran. Na tomto webu jsou však soubory cookie třetích stran povoleny, protože je potřebuje k poskytování základních služeb. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
+<translation id="7956239349290436105">AI Wize většině webů omezuje používání souborů cookie třetích stran. Na tomto webu jsou však soubory cookie třetích stran povoleny, protože je potřebuje k poskytování základních služeb. Pokud chcete <ph name="LINK"/>, přejděte do nastavení.</translation>
 <translation id="277499241957683684">Chybějící záznam zařízení</translation>
 <translation id="2775884851269838147">První tisková stránka</translation>
 <translation id="2781692009645368755">Google Pay</translation>
@@ -959,7 +959,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2922792708490674">{0,plural, =1{Stažení souboru je blokováno}few{Stažení <ph name="FILE_COUNT"/> souborů je blokováno}many{Stažení <ph name="FILE_COUNT"/> souboru je blokováno}other{Stažení <ph name="FILE_COUNT"/> souborů je blokováno}}</translation>
 <translation id="2923275635648511531">Opalovací přípravky</translation>
 <translation id="3249101334307130799">Nastavení Chromu</translation>
-<translation id="2039679058572892861">Tlačítko Vytvořit dokument, aktivací rychle vytvoříte nový Dokument Brave</translation>
+<translation id="2039679058572892861">Tlačítko Vytvořit dokument, aktivací rychle vytvoříte nový Dokument AI Wize</translation>
 <translation id="2925673989565098301">Způsob doručení</translation>
 <translation id="2928426578619531300">Přidružený uživatel</translation>
 <translation id="2928905813689894207">Fakturační adresa</translation>
@@ -975,7 +975,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2943895734390379394">Čas nahrání:</translation>
 <translation id="2945026002409061480">Online komunity</translation>
 <translation id="2948083400971632585">Libovolné servery proxy nakonfigurované pro připojení můžete zakázat na stránce Nastavení.</translation>
-<translation id="3955566820843143766">Ignorováno, protože počítač není zaregistrován do Cloudové správy prohlížeče Brave.</translation>
+<translation id="3955566820843143766">Ignorováno, protože počítač není zaregistrován do Cloudové správy prohlížeče AI Wize.</translation>
 <translation id="2951588413176968965">Moje schránka</translation>
 <translation id="2952904171810469095">A2x5</translation>
 <translation id="2954624054936281172">Tabulka uložených platebních metod</translation>
@@ -984,7 +984,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="2958544468932521864">Kriket</translation>
 <translation id="2959113999220720579">Péče o obličej a tělo</translation>
 <translation id="2962073860865348475">12 × 18 palců</translation>
-<translation id="2470357430970446202">uložte si ho do účtu Brave</translation>
+<translation id="2470357430970446202">uložte si ho do účtu AI Wize</translation>
 <translation id="2968103128155246731">Dodávky a minivany</translation>
 <translation id="2972581237482394796">&amp;Opakovat</translation>
 <translation id="2977665033722899841">Aktuálně je vybrán řádek <ph name="ROW_NAME"/>. <ph name="ROW_CONTENT"/></translation>
@@ -993,7 +993,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="6172169316494799304">Kód CVC této karty bude zašifrován a uložen ve vašem účtu AI Wize pro rychlejší placení</translation>
 <translation id="2985398929374701810">Zadejte platnou adresu</translation>
 <translation id="2987034854559945715">Žádné funkce neodpovídají</translation>
-<translation id="714850411804317247">Brave omezuje množství informací, které mohou weby používat ke sledování vašeho procházení. Můžete změnit nastavení a vybrat si vlastní úroveň ochrany.</translation>
+<translation id="714850411804317247">AI Wize omezuje množství informací, které mohou weby používat ke sledování vašeho procházení. Můžete změnit nastavení a vybrat si vlastní úroveň ochrany.</translation>
 <translation id="2989742184762224133">Dvě sponky nahoře</translation>
 <translation id="2991174974383378012">Sdílení s weby</translation>
 <translation id="299122504639061328">Spravovat výchozí vyhledávač a vyhledávání na webu</translation>
@@ -1018,7 +1018,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3037177537145227281">Cena sledována</translation>
 <translation id="3037605927509011580">Aj, chyba!</translation>
 <translation id="3041612393474885105">Informace o certifikátu</translation>
-<translation id="8418829431154568330">Historie Vzdálené plochy Brave, včetně časových razítek, hostitelů a ID relací klientů</translation>
+<translation id="8418829431154568330">Historie Vzdálené plochy AI Wize, včetně časových razítek, hostitelů a ID relací klientů</translation>
 <translation id="3052964831964880138">U produktu <ph name="PRODUCT_NAME"/> klesla cena o <ph name="PRICE_DROP"/></translation>
 <translation id="4832983047807637948">Témata, která jsou starší než 4 týdny, AI Wize automaticky maže. S dalším procházením se téma v seznamu může opět objevit. Můžete také zablokovat témata, která AI Wize s weby nemá sdílet. Přečtěte si další informace o správě ochrany soukromí v reklamách v Chromu</translation>
 <translation id="3061707000357573562">Služba oprav</translation>
@@ -1058,7 +1058,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3144458715650412431">Byly použity testovací zásady. Můžete si je prohlédnout na adrese chrome://policy/test, kde je také můžete resetovat. Zásady administrátora nebudou použity.</translation>
 <translation id="3145945101586104090">Dekódování odpovědi se nezdařilo</translation>
 <translation id="3150653042067488994">Dočasná chyba serveru</translation>
-<translation id="6312561205154152917">Tlačítko Vytvořit tabulku, aktivací rychle vytvoříte novou Tabulku Brave</translation>
+<translation id="6312561205154152917">Tlačítko Vytvořit tabulku, aktivací rychle vytvoříte novou Tabulku AI Wize</translation>
 <translation id="3154506275960390542">Tato stránka obsahuje formulář, který zřejmě nebude možné bezpečně odeslat. Odeslaná data mohou při přenosu zobrazit jiní uživatelé a případný útočník je může změnit, a server tudíž přijme něco jiného, než jste odeslali.</translation>
 <translation id="3154987252551138431">Během používání sdílení nablízko se něco pokazilo</translation>
 <translation id="315504272643575312">Váš účet je spravován doménou <ph name="MANAGER"/>.</translation>
@@ -1114,7 +1114,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3252772880526154546">Architektura</translation>
 <translation id="3254301855501243548">18 × 22″</translation>
 <translation id="3256863843508922226">Důchod a penze</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte novou událost v Kalendáři Brave</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte novou událost v Kalendáři AI Wize</translation>
 <translation id="3261488570342242926">Informace o virtuálních kartách</translation>
 <translation id="3262698603497362968">Možnosti nákupu</translation>
 <translation id="3266367459139339908">Zavádíme nové způsoby omezení informací, které o vás weby mohou zjistit při zobrazování personalizovaných reklam, například:</translation>
@@ -1208,7 +1208,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="343474037147570563">Soubory, které nahrajete nebo připojíte, se odesílají k analýze do služby Google Cloud nebo třetím stranám. Může se u nich například kontrolovat přítomnost citlivých údajů nebo malwaru, mohou být uchovávány v souladu se zásadami společnosti a může k nim mít přístup váš administrátor.</translation>
 <translation id="3435557549311968410">Nepřetržité (spojené kratšími okraji)</translation>
 <translation id="3435738964857648380">Zabezpečení</translation>
-<translation id="4527130811319726464">Použít hesla uložená v účtu Brave</translation>
+<translation id="4527130811319726464">Použít hesla uložená v účtu AI Wize</translation>
 <translation id="3440783957068352691">čtverec</translation>
 <translation id="3441653493275994384">Obrazovka</translation>
 <translation id="3443504041532578451">Optický disk (saténový)</translation>
@@ -1288,11 +1288,11 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3586931643579894722">Skrýt podrobnosti</translation>
 <translation id="3587738293690942763">Střední</translation>
 <translation id="3600246354004376029"><ph name="TITLE"/>, <ph name="DOMAIN"/>, <ph name="TIME"/></translation>
-<translation id="8476504968862670676">Tlačítko správy nastavení soukromí na Googlu, aktivací přejdete do nastavení soukromí účtu Brave</translation>
+<translation id="8476504968862670676">Tlačítko správy nastavení soukromí na Googlu, aktivací přejdete do nastavení soukromí účtu AI Wize</translation>
 <translation id="3603507503523709">Aplikace je blokována administrátorem</translation>
 <translation id="3605899229568538311">5 × 5″</translation>
 <translation id="3608932978122581043">Orientace podávání</translation>
-<translation id="1737525120923015525">Pokud příště chcete zaplatit rychleji, uložte si kartu, jméno a fakturační adresu do účtu Brave</translation>
+<translation id="1737525120923015525">Pokud příště chcete zaplatit rychleji, uložte si kartu, jméno a fakturační adresu do účtu AI Wize</translation>
 <translation id="3611317423880285981">Domácí potřeby</translation>
 <translation id="3614103345592970299">Velikost 2</translation>
 <translation id="361438452008624280">Položka seznamu „<ph name="LANGUAGE_ID"/>“: Neznámý nebo nepodporovaný jazyk.</translation>
@@ -1304,7 +1304,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3624292976554877583">Štítky (matné)</translation>
 <translation id="3628905806504633297">{0,plural, =1{Zásady administrátora nedoporučují přenášet tento soubor do následujícího cíle: <ph name="DESTINATION_NAME"/>}few{Zásady administrátora nedoporučují přenášet tyto soubory do následujícího cíle: <ph name="DESTINATION_NAME"/>}many{Zásady administrátora nedoporučují přenášet tyto soubory do následujícího cíle: <ph name="DESTINATION_NAME"/>}other{Zásady administrátora nedoporučují přenášet tyto soubory do následujícího cíle: <ph name="DESTINATION_NAME"/>}}</translation>
 <translation id="3630155396527302611">Pokud je program v seznamu programů s oprávněním přistupovat k síti již uveden, zkuste jej ze seznamu odebrat a znovu přidat.</translation>
-<translation id="3599570280787620691">Tlačítko funkce Najdi moje zařízení, aktivací přejdete na funkci Najdi moje zařízení v účtu Brave</translation>
+<translation id="3599570280787620691">Tlačítko funkce Najdi moje zařízení, aktivací přejdete na funkci Najdi moje zařízení v účtu AI Wize</translation>
 <translation id="3630699740441428070">Administrátoři tohoto zařízení nakonfigurovali vaše připojení k síti, což jim může umožnit sledovat váš síťový provoz, včetně webů, které navštěvujete.</translation>
 <translation id="3631244953324577188">Biometrické systémy</translation>
 <translation id="3632503704576938756">Sdílení obrazovky bylo obnoveno</translation>
@@ -1337,11 +1337,11 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3678029195006412963">Požadavek nebylo možné podepsat</translation>
 <translation id="3678914302246317895">Zadejte <ph name="OTP_LENGTH"/>místný ověřovací kód</translation>
 <translation id="3681007416295224113">Informace o certifikátu</translation>
-<translation id="2659564324969662497">Brave zaznamenává témata, která vás podle vaší nedávné historie prohlížení zajímají.</translation>
+<translation id="2659564324969662497">AI Wize zaznamenává témata, která vás podle vaší nedávné historie prohlížení zajímají.</translation>
 <translation id="3682094733650754138">Byla vybrána možnost Vyplnit adresu</translation>
 <translation id="3689867156802445220">Číslo budovy</translation>
 <translation id="3693327506115126094">Vyberte způsob ověření totožnosti</translation>
-<translation id="974818914962304978">Tlačítko Vytvořit web, aktivací rychle vytvoříte nový web ve Webech Brave</translation>
+<translation id="974818914962304978">Tlačítko Vytvořit web, aktivací rychle vytvoříte nový web ve Webech AI Wize</translation>
 <translation id="3701325639446035885">Prodej vstupenek na akce</translation>
 <translation id="3701427423622901115">Resetování bylo potvrzeno.</translation>
 <translation id="3701900332588705891">Obvykle <ph name="LOW_PRICE"/>–<ph name="HIGH_PRICE"/></translation>
@@ -1391,7 +1391,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3767485424735936570">Kopírování a vkládání tohoto obsahu do počítače <ph name="VM_NAME"/> nedoporučují zásady administrátora</translation>
 <translation id="3772211998634047851">Papír (dluhopisový)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte novou poznámku v aplikaci AI Wize Keep</translation>
-<translation id="6473814193688111215">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave. Bezpečné prohlížení nedávno nalezlo <ph name="BEGIN_LINK"/>škodlivý software na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.</translation>
+<translation id="6473814193688111215">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize. Bezpečné prohlížení nedávno nalezlo <ph name="BEGIN_LINK"/>škodlivý software na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.</translation>
 <translation id="3780694243617746492">Výstupní přihrádka</translation>
 <translation id="3781428340399460090">Jasně růžová</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1429,7 +1429,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3836246517890985658">Drobné kuchyňské spotřebiče</translation>
 <translation id="384315386171052386">Ryby a plody moře</translation>
 <translation id="3844725157150297127">RA1</translation>
-<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový Dokument Brave</translation>
+<translation id="5749930378398424146"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový Dokument AI Wize</translation>
 <translation id="385051799172605136">Zpět</translation>
 <translation id="3851830401766703401">Výuka práv</translation>
 <translation id="385489333361351399">Vybavení pro foto a video</translation>
@@ -1470,7 +1470,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="3950820424414687140">Přihlaste se</translation>
 <translation id="3953505489397572035">Tato cena je obvyklá</translation>
 <translation id="3958057596965527988">4 × 4″</translation>
-<translation id="8475602291812563124">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave. Bezpečné prohlížení <ph name="BEGIN_LINK"/>nedávno nalezlo phishing na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.<ph name="NEW_LINE"/>Někdy mohou útočníci číhat dokonce i na webech, které jsou běžně bezpečné. Pokud se domníváte, že došlo k chybě a že tento web nepředstavuje nebezpečí, <ph name="BEGIN_ERROR_LINK"/>dejte nám vědět<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="8475602291812563124">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize. Bezpečné prohlížení <ph name="BEGIN_LINK"/>nedávno nalezlo phishing na webu <ph name="SITE"/><ph name="END_LINK"/>, který je vložen na webu, který se pokoušíte navštívit.<ph name="NEW_LINE"/>Někdy mohou útočníci číhat dokonce i na webech, které jsou běžně bezpečné. Pokud se domníváte, že došlo k chybě a že tento web nepředstavuje nebezpečí, <ph name="BEGIN_ERROR_LINK"/>dejte nám vědět<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="3961148744525529027">List obslužného nástroje pro platby je otevřený na půlce</translation>
 <translation id="3962859241508114581">Předchozí skladba</translation>
 <translation id="3963721102035795474">Režim čtečky</translation>
@@ -1503,8 +1503,8 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4040350669425716613">Vysoké školy a univerzity</translation>
 <translation id="4047351652147966654">18 × 24 palců</translation>
 <translation id="404831776305217138">Adresa URL pro aktualizace rozšíření s ID <ph name="EXTENSION_ID"/> není platná nebo používá nepodporované schéma. Jsou podporována tato schémata: <ph name="HTTP_SCHEME"/>, <ph name="HTTPS_SCHEME"/> a <ph name="FILE_SCHEME"/>.</translation>
-<translation id="2635033286761217583">Budete ji moci používat ve všech službách Brave</translation>
-<translation id="336808635693308470">Brave se pokouší upravit platební metody.</translation>
+<translation id="2635033286761217583">Budete ji moci používat ve všech službách AI Wize</translation>
+<translation id="336808635693308470">AI Wize se pokouší upravit platební metody.</translation>
 <translation id="405399507749852140">Pokud cena na některém webu klesne, dostanete upozornění</translation>
 <translation id="4056223980640387499">Sépie</translation>
 <translation id="4059523390906550209">Další informace o ochraně citlivých údajů</translation>
@@ -1549,7 +1549,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4123572138124678573">Tři otvory dole</translation>
 <translation id="412601465078863288">Časový limit nahrávání vypršel</translation>
 <translation id="4127317221386336246">Oděvní doplňky</translation>
-<translation id="4127575959421463246">Hledáte příznaky Brave OS? Navštívit</translation>
+<translation id="4127575959421463246">Hledáte příznaky AI Wize OS? Navštívit</translation>
 <translation id="4129401438321186435">{COUNT,plural, =1{1 další}few{# další}many{# další}other{# dalších}}</translation>
 <translation id="4130226655945681476">Zkontrolovat síťové kabely, modem a směrovač</translation>
 <translation id="4132448310531350254">Aplikace <ph name="POLICY_IDS_LIST"/> odkazují na duplicitní obslužné nástroje pro příponu souboru <ph name="FILE_EXTENSION"/>.</translation>
@@ -1561,7 +1561,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4150099059797363385">Obálka čínská č. 4</translation>
 <translation id="4151403195736952345">Použít globální výchozí nastavení (zjistit)</translation>
 <translation id="4152318981910038897">{COUNT,plural, =1{Strana 1}few{Strana {COUNT}}many{Strana {COUNT}}other{Strana {COUNT}}}</translation>
-<translation id="6923879007831202776">Brave nyní bude před vyplněním platebních metod ověřovat vaši totožnost. Tuto volbu můžete v <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/> kdykoli aktualizovat.</translation>
+<translation id="6923879007831202776">AI Wize nyní bude před vyplněním platebních metod ověřovat vaši totožnost. Tuto volbu můžete v <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/> kdykoli aktualizovat.</translation>
 <translation id="4159149286839604525">To znamená, že většina funkcí webu by měla fungovat, ale máte menší ochranu</translation>
 <translation id="4159784952369912983">Nachová</translation>
 <translation id="4165986682804962316">Nastavení webu</translation>
@@ -1628,7 +1628,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4281998142035485137">{0,plural, =1{Otevřít důvěrný soubor?}few{Otevřít důvěrné soubory?}many{Otevřít důvěrné soubory?}other{Otevřít důvěrné soubory?}}</translation>
 <translation id="4282346679996504092">Upozornění pro tento produkt byla vypnuta a záložka byla odstraněna</translation>
 <translation id="4285498937028063278">Odepnout</translation>
-<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Tato karta byla uložena do vašeho učtu Brave}few{Tyto karty byly uloženy do vašeho účtu Brave.}many{Tyto karty byly uloženy do vašeho účtu Brave.}other{Tyto karty byly uloženy do vašeho účtu Brave.}}</translation>
+<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Tato karta byla uložena do vašeho učtu AI Wize}few{Tyto karty byly uloženy do vašeho účtu AI Wize.}many{Tyto karty byly uloženy do vašeho účtu AI Wize.}other{Tyto karty byly uloženy do vašeho účtu AI Wize.}}</translation>
 <translation id="2820825061680010514">Vylepšená ochrana soukromí v reklamách v Chromu</translation>
 <translation id="4290920330097335010">Nikdy nepovolovat</translation>
 <translation id="4296207570293932800">Je k dispozici nová funkce ochrany soukromí v reklamách</translation>
@@ -1666,7 +1666,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4336913590841287350">Tato zásada zatím v systému iOS není podporována jako zásada pro uživatele.</translation>
 <translation id="5792122559159836842">Tato reklama v zařízení používala příliš mnoho zdrojů, proto ji AI Wize odstranil.</translation>
 <translation id="4340810192899866471">Importovat ze souboru JSON</translation>
-<translation id="6116812392674177288">Tento počítač nebyl rozpoznán jako spravovaný organizací, proto lze pomocí zásad automaticky instalovat pouze rozšíření hostovaná v Internetovém obchodě Brave. Adresa URL Internetového obchodu AI Wize pro aktualizace je <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6116812392674177288">Tento počítač nebyl rozpoznán jako spravovaný organizací, proto lze pomocí zásad automaticky instalovat pouze rozšíření hostovaná v Internetovém obchodě AI Wize. Adresa URL Internetového obchodu AI Wize pro aktualizace je <ph name="CWS_UPDATE_URL"/>.</translation>
 <translation id="4348834659292907206">Připojení k webu <ph name="SITE"/> není zabezpečené</translation>
 <translation id="4349365535725594680">Důvěrný obsah nelze sdílet</translation>
 <translation id="4349810866125026513">Přesto nahrát</translation>
@@ -1723,14 +1723,14 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="448363931695049633">Pizzerie</translation>
 <translation id="4489023393592172404">Obálka Kaku 4</translation>
 <translation id="4490717597759821841">A7</translation>
-<translation id="3966104135245031874">Šifrovat synchronizovaná hesla pomocí účtu Brave</translation>
+<translation id="3966104135245031874">Šifrovat synchronizovaná hesla pomocí účtu AI Wize</translation>
 <translation id="4493480324863638523">Neplatná adresa URL. Je třeba použít adresu URL se standardním protokolem, např. http://example.com nebo https://example.com.</translation>
 <translation id="7622628059331736328">V nastavení můžete zobrazit témata reklam a zablokovat ta, která s weby nechcete sdílet. AI Wize také automaticky maže témata reklam starší než 4 týdny.</translation>
 <translation id="4500587658229086076">nezabezpečený obsah</translation>
 <translation id="4506176782989081258">Chyba ověřování: <ph name="VALIDATION_ERROR"/>.</translation>
 <translation id="4506599922270137252">Kontaktovat administrátora systému</translation>
 <translation id="450710068430902550">Sdílení s administrátorem</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter přeložíte tuto stránku pomocí Překladače Brave</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter přeložíte tuto stránku pomocí Překladače AI Wize</translation>
 <translation id="4514308731478712184">Vypnout cesty</translation>
 <translation id="4892470328555495647">Karty a adresy pocházejí z Chromu a z vašeho účtu AI Wize (<ph name="ACCOUNT_EMAIL"/>). Můžete je spravovat v <ph name="BEGIN_LINK"/>Nastavení<ph name="END_LINK"/>.</translation>
 <translation id="4519245469315452746">Vaše zařízení bylo během procesu aktualizace přerušeno.</translation>
@@ -1739,7 +1739,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4521280267704259211">Obálka Monarch</translation>
 <translation id="4521916730539354575">Levý zásobník</translation>
 <translation id="4522570452068850558">Podrobnosti</translation>
-<translation id="6221032662362020209">Uložit IBAN do účtu Brave?</translation>
+<translation id="6221032662362020209">Uložit IBAN do účtu AI Wize?</translation>
 <translation id="4523643381056109546">Značení</translation>
 <translation id="4524138615196389145">Od teď karty potvrzujte rychleji díky využití standardu WebAuthn</translation>
 <translation id="45243788195988825">Blokovat kontakt <ph name="TOPIC"/></translation>
@@ -1749,7 +1749,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4540780316273593836">Něco se pokazilo</translation>
 <translation id="4541810033354695636">rozšířená realita</translation>
 <translation id="4542971377163063093">Přihrádka 6</translation>
-<translation id="563788859854213593">Pokud příště chcete zaplatit rychleji, uložte si kartu a fakturační adresu do účtu Brave</translation>
+<translation id="563788859854213593">Pokud příště chcete zaplatit rychleji, uložte si kartu a fakturační adresu do účtu AI Wize</translation>
 <translation id="4546730006268514143">Časový limit přenosu vypršel</translation>
 <translation id="455113658016510503">A9</translation>
 <translation id="4556069465387849460">K vyplňování hesel používáte zámek obrazovky</translation>
@@ -1775,7 +1775,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4617273035598175554">Grafika a animační software</translation>
 <translation id="4619564267100705184">Ověřte svoji totožnost</translation>
 <translation id="4622292761762557753">Přesto přenést</translation>
-<translation id="6398431831028858802">Tuto zásadu nelze nastavit na úrovni profilu Brave, bude proto ignorována.</translation>
+<translation id="6398431831028858802">Tuto zásadu nelze nastavit na úrovni profilu AI Wize, bude proto ignorována.</translation>
 <translation id="4628678854894591460">Nabídky dovolené</translation>
 <translation id="4628948037717959914">Fotka</translation>
 <translation id="4629370161347991046">A4x6</translation>
@@ -1796,13 +1796,13 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="466561305373967878">Deskové hry</translation>
 <translation id="4666114623408286498">Farmaceutické a biotechnické produkty</translation>
 <translation id="4668929960204016307">,</translation>
-<translation id="2972922043310308045">Brave zaznamenává témata, která vás podle vaší historie prohlížení z několika posledních týdnů zajímají.</translation>
+<translation id="2972922043310308045">AI Wize zaznamenává témata, která vás podle vaší historie prohlížení z několika posledních týdnů zajímají.</translation>
 <translation id="4670064810192446073">Virtuální realita</translation>
 <translation id="4671339777629075741">Obálka DL</translation>
 <translation id="4673460618347856347">Dinosauří hra, začít hrát</translation>
 <translation id="467662567472608290">Server nedokázal prokázat, že patří doméně <ph name="DOMAIN"/>, protože jeho bezpečnostní certifikát obsahuje chyby. Může to být způsobeno nesprávnou konfigurací nebo tím, že vaše připojení zachytává útočník.</translation>
 <translation id="4677585247300749148"><ph name="URL"/> chce reagovat na události přístupnosti</translation>
-<translation id="8197094463444457125">Prezentace Brave</translation>
+<translation id="8197094463444457125">Prezentace AI Wize</translation>
 <translation id="4682496302933121474">Přeložit stránku?</translation>
 <translation id="468314109939257734">Zobrazit číslo virtuální karty</translation>
 <translation id="4687718960473379118">Reklamy navrhované weby</translation>
@@ -1842,7 +1842,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4754461935447132332">Není povoleno u nezabezpečených webů</translation>
 <translation id="4756388243121344051">Historie</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
-<translation id="5644030191910182707">Přístupový klíč z vašeho profilu Brave</translation>
+<translation id="5644030191910182707">Přístupový klíč z vašeho profilu AI Wize</translation>
 <translation id="1015173303159845845">Právě jste své heslo zadali na klamavém webu. Pokud chcete zabezpečit své účty, AI Wize vám doporučuje zkontrolovat uložená hesla.</translation>
 <translation id="4758311279753947758">Přidat kontaktní údaje</translation>
 <translation id="4761104368405085019">Používat mikrofon</translation>
@@ -1856,7 +1856,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4774055414220872623">Výtvarné potřeby a potřeby pro ruční práce</translation>
 <translation id="477945296921629067">{NUM_POPUPS,plural, =1{Zablokováno vyskakovací okno}few{Zablokována # vyskakovací okna}many{Zablokováno # vyskakovacího okna}other{Zablokováno # vyskakovacích oken}}</translation>
 <translation id="4780366598804516005">Schránka 1</translation>
-<translation id="752757955979594126">Spravovat účet Brave</translation>
+<translation id="752757955979594126">Spravovat účet AI Wize</translation>
 <translation id="4785689107224900852">Přejít na tuto kartu</translation>
 <translation id="4786804728079074733">Volejbal</translation>
 <translation id="4787182171088676626">Obálka (jemná)</translation>
@@ -1876,7 +1876,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="4816492930507672669">Přizpůsobit na stránku</translation>
 <translation id="4819347708020428563">Upravit poznámky ve výchozím zobrazení?</translation>
 <translation id="4822493756793346865">Obvyklé ceny vycházejí z obchodů na internetu za posledních 90 dní.</translation>
-<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte novou Tabulku Brave</translation>
+<translation id="551961240839010112"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte novou Tabulku AI Wize</translation>
 <translation id="4826588772550366629">fotoaparát a mikrofon</translation>
 <translation id="4827283332383516812">Smazat kartu</translation>
 <translation id="4831993743164297314">Fotosazbový papír</translation>
@@ -1977,13 +1977,13 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="5018422839182700155">Tuto stránku nelze otevřít</translation>
 <translation id="5018802455907704660">16 × 20″</translation>
 <translation id="5019198164206649151">Záložní úložiště je ve špatném stavu</translation>
-<translation id="2013297594801702701">Uložené adresy můžete používat ve službách Brave. Tato adresa bude uložena ve vašem účtu AI Wize <ph name="USER_EMAIL"/>.</translation>
+<translation id="2013297594801702701">Uložené adresy můžete používat ve službách AI Wize. Tato adresa bude uložena ve vašem účtu AI Wize <ph name="USER_EMAIL"/>.</translation>
 <translation id="5020776957610079374">Světová hudba</translation>
-<translation id="6516968977334148048">Sledování cen v prohlížeči Brave</translation>
+<translation id="6516968977334148048">Sledování cen v prohlížeči AI Wize</translation>
 <translation id="5023310440958281426">Zkontrolujte zásady svého správce</translation>
 <translation id="5030338702439866405">Vydal:</translation>
 <translation id="503069730517007720">Je vyžadován kořenový certifikát pro software <ph name="SOFTWARE_NAME"/>, ale není nainstalován. Při řešení tohoto problému by si měl administrátor IT prostudovat pokyny ke konfiguraci softwaru <ph name="SOFTWARE_NAME"/>. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="6425384654920630035">O Překladači Brave</translation>
+<translation id="6425384654920630035">O Překladači AI Wize</translation>
 <translation id="503498442187459473">Web <ph name="HOST"/> chce použít váš mikrofon a kameru</translation>
 <translation id="5035135400558156732">Zahradničení</translation>
 <translation id="503574301575803523">SRA3</translation>
@@ -2082,7 +2082,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="5239623327352565343">Poloha je povolena</translation>
 <translation id="5242610955375133957">Suchá folie</translation>
 <translation id="5242889659037569123">Zavazadla a cestovní příslušenství</translation>
-<translation id="8854897060240443467">Spravovat účet Brave, aktivací můžete spravovat své údaje, ochranu soukromí a zabezpečení v účtu Brave</translation>
+<translation id="8854897060240443467">Spravovat účet AI Wize, aktivací můžete spravovat své údaje, ochranu soukromí a zabezpečení v účtu AI Wize</translation>
 <translation id="5244732203286792411">Načítání…
     Může to chvíli trvat.</translation>
 <translation id="5250209940322997802">Připojit k síti</translation>
@@ -2174,7 +2174,7 @@ Jinak to vaše nastavení ochrany soukromí bude blokovat. Povolením umožníte
 <translation id="5425241977284572032">{NUM_COOKIES,plural, =0{Nejsou blokovány žádné weby}=1{Je blokován 1 web}few{Jsou blokovány # weby}many{Je blokováno # webu}other{Je blokováno # webů}}</translation>
 <translation id="5426179911063097041"><ph name="SITE"/> vám chce zasílat oznámení</translation>
 <translation id="5430298929874300616">Odstranit záložku</translation>
-<translation id="8517215617486022589">Brave <ph name="BEGIN_EMPHASIS"/>nebude ukládat<ph name="END_EMPHASIS"/>:
+<translation id="8517215617486022589">AI Wize <ph name="BEGIN_EMPHASIS"/>nebude ukládat<ph name="END_EMPHASIS"/>:
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>vaši historii prohlížení,
             <ph name="LIST_ITEM"/>soubory cookie a data webů,
@@ -2237,8 +2237,8 @@ Kontaktujte administrátora systému.</translation>
 <translation id="555037537507405574">pokročilé funkce tiskáren</translation>
 <translation id="555128936272638662">Mobilní a bezdrátové přístroje</translation>
 <translation id="5551890439174915351">100 × 200 mm</translation>
-<translation id="6084314943327785510">Brave vaše hesla pravidelně porovnává se seznamy hesel, která unikla na internet. Vaše hesla a uživatelská jména jsou při tom šifrována, takže je nemůže nikdo zobrazit (ani Brave).</translation>
-<translation id="4362225295386962644">Když použijete heslo, AI Wize vás upozorní, pokud bylo zveřejněno online. Vaše hesla a uživatelská jména jsou při tom šifrována, takže je nemůže nikdo zobrazit (ani Brave).</translation>
+<translation id="6084314943327785510">AI Wize vaše hesla pravidelně porovnává se seznamy hesel, která unikla na internet. Vaše hesla a uživatelská jména jsou při tom šifrována, takže je nemůže nikdo zobrazit (ani AI Wize).</translation>
+<translation id="4362225295386962644">Když použijete heslo, AI Wize vás upozorní, pokud bylo zveřejněno online. Vaše hesla a uživatelská jména jsou při tom šifrována, takže je nemůže nikdo zobrazit (ani AI Wize).</translation>
 <translation id="5556459405103347317">Načíst znovu</translation>
 <translation id="5558083606899411167">Klimatizace</translation>
 <translation id="5558125320634132440">Tento web byl zablokován, protože může zahrnovat obsah nevhodný pro děti</translation>
@@ -2268,7 +2268,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="5610142619324316209">Zkontrolovat připojení</translation>
 <translation id="5610807607761827392">Karty a adresy můžete spravovat v <ph name="BEGIN_LINK"/>Nastavení<ph name="END_LINK"/>.</translation>
 <translation id="5611398002774823980">Uložit do účtu</translation>
-<translation id="2012723355262040739">Přeložte tuto stránku pomocí Překladače Brave</translation>
+<translation id="2012723355262040739">Přeložte tuto stránku pomocí Překladače AI Wize</translation>
 <translation id="5612720917913232150">Web <ph name="URL"/> chce použít polohu vašeho počítače</translation>
 <translation id="561669346091975195">Televizní seriály sci-fi a fantasy</translation>
 <translation id="5617949217645503996">Web <ph name="HOST_NAME"/> vás přesměroval příliš mnohokrát.</translation>
@@ -2325,9 +2325,9 @@ Kontaktujte administrátora systému.</translation>
 <translation id="5725297205162868298">Zkratka nesmí začínat znakem @: „<ph name="SHORTCUT_NAME"/>“</translation>
 <translation id="3006790309890592320">Pokud jste heslo použili na jiném webu, doporučujeme vám ho resetovat.</translation>
 <translation id="5732392974455271431">Rodiče ti jej mohou odblokovat.</translation>
-<translation id="5110141686029759199">Tlačítko Vytvořit formulář, aktivací rychle vytvoříte nový formulář ve Formulářích Brave</translation>
+<translation id="5110141686029759199">Tlačítko Vytvořit formulář, aktivací rychle vytvoříte nový formulář ve Formulářích AI Wize</translation>
 <translation id="5736165827969430182">Kovy a hornictví</translation>
-<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Uložit kartu do účtu Brave}few{Uložit karty do účtu Brave}many{Uložit karty do účtu Brave}other{Uložit karty do účtu Brave}}</translation>
+<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Uložit kartu do účtu AI Wize}few{Uložit karty do účtu AI Wize}many{Uložit karty do účtu AI Wize}other{Uložit karty do účtu AI Wize}}</translation>
 <translation id="5738385766833540397">Nastavte, jak chcete dostávat upozornění na pokles cen produktů, které sledujete</translation>
 <translation id="5740911612628596808">Obálka C9</translation>
 <translation id="5742806904559466333">Bary, kluby a noční život</translation>
@@ -2411,7 +2411,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="5920262536204764679">{NUM_COOKIES,plural, =1{Používá se 1}few{Používají se #}many{Používá se #}other{Používá se #}}</translation>
 <translation id="592031860219554105">Lední bruslení</translation>
 <translation id="5921185718311485855">Zapnuto</translation>
-<translation id="2687595201721621314">Uložit kartu do účtu Brave?</translation>
+<translation id="2687595201721621314">Uložit kartu do účtu AI Wize?</translation>
 <translation id="5922853866070715753">Téměř dokončeno</translation>
 <translation id="5923492272538889093">Používat místo kódu CVC odemknutí zařízení?</translation>
 <translation id="5924510104057992926">Před otevřením je vyžadována kontrola</translation>
@@ -2446,9 +2446,9 @@ Kontaktujte administrátora systému.</translation>
 <translation id="5989320800837274978">Nejsou určeny pevně dané servery proxy ani adresa URL skriptu PAC.</translation>
 <translation id="5992691462791905444">Technické přeložení do Z</translation>
 <translation id="5992805036496113940">Zobrazit informace používané k zobrazování reklam</translation>
-<translation id="7409510288691071929">Správa údajů, ochrany soukromí a zabezpečení v účtu Brave</translation>
+<translation id="7409510288691071929">Správa údajů, ochrany soukromí a zabezpečení v účtu AI Wize</translation>
 <translation id="3494641719937626561">Právě použité heslo bylo nalezeno na seznamu hesel uniklých při incidentu porušení zabezpečení údajů. Kvůli zabezpečení vašich účtů Správce hesel AI Wize doporučuje ihned toto heslo změnit a zkontrolovat uložená hesla.</translation>
-<translation id="4496834749307444910">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave, které <ph name="BEGIN_LINK"/>nedávno nalezlo malware<ph name="END_LINK"/> na webu, který se pokoušíte navštívit.</translation>
+<translation id="4496834749307444910">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize, které <ph name="BEGIN_LINK"/>nedávno nalezlo malware<ph name="END_LINK"/> na webu, který se pokoušíte navštívit.</translation>
 <translation id="6000758707621254961">Výsledky pro dotaz <ph name="SEARCH_TEXT"/> (<ph name="RESULT_COUNT"/>)</translation>
 <translation id="6002122790816966947">Vaše zařízení</translation>
 <translation id="6005659677094197001">Nepřetržité</translation>
@@ -2486,7 +2486,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6051898664905071243">Počet stránek:</translation>
 <translation id="6052284303005792909">•</translation>
 <translation id="605237284704429106">Vyplňování čísla IBAN</translation>
-<translation id="3284406940349582552">Uložené adresy můžete používat ve službách Brave. Tato adresa je uložena ve vašem účtu AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="3284406940349582552">Uložené adresy můžete používat ve službách AI Wize. Tato adresa je uložena ve vašem účtu AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="5814871361966482530">Další informace o tom, jak AI Wize chrání vaše údaje, najdete v našich zásadách ochrany soukromí.</translation>
 <translation id="6055888660316801977">List identifikačních údajů pro zabezpečené platby o nenalezených odpovídajících identifikačních údajích</translation>
 <translation id="6055982527635883756">Obálka (archivační)</translation>
@@ -2509,7 +2509,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6106989379647458772">Webová stránka <ph name="PAGE"/> může být dočasně nefunkční nebo mohla být trvale přesunuta na novou webovou adresu.</translation>
 <translation id="6107012941649240045">Vydán pro</translation>
 <translation id="6107924765192360631">Pokud chcete získat návrhy psaní, zadejte několik slov nebo první koncept.</translation>
-<translation id="8233947174119245051">Na stránce <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> mohou být k dispozici další druhy historie prohlížení zaznamenané ve vašem účtu Brave.</translation>
+<translation id="8233947174119245051">Na stránce <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> mohou být k dispozici další druhy historie prohlížení zaznamenané ve vašem účtu AI Wize.</translation>
 <translation id="6116338172782435947">Přístup k textu a obrázkům zkopírovaným do schránky</translation>
 <translation id="6117833587752089929">Fotografie (saténová)</translation>
 <translation id="6118782133429281336">Seznam zdrojů je prázdný.</translation>
@@ -2535,13 +2535,13 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6160391204859821737">Zapnutí funkce ochrany soukromí v reklamách</translation>
 <translation id="6165508094623778733">Další informace</translation>
 <translation id="6167577165590485365">Poslední pokus o načtení:</translation>
-<translation id="1057223975912338979">Brave se pokouší ověřit vaši totožnost, aby mohl vyplnit vaše platební údaje.</translation>
+<translation id="1057223975912338979">AI Wize se pokouší ověřit vaši totožnost, aby mohl vyplnit vaše platební údaje.</translation>
 <translation id="6176387967264100435">Tato cena je vysoká</translation>
 <translation id="6177128806592000436">Spojení s tímto webem není bezpečné</translation>
 <translation id="6177531123306197852">Obálka C2</translation>
 <translation id="6180316780098470077">Interval opakování</translation>
 <translation id="6182972682129119950">A4x5</translation>
-<translation id="1713601041945301465">Brave automaticky omezuje soubory cookie třetích stran</translation>
+<translation id="1713601041945301465">AI Wize automaticky omezuje soubory cookie třetích stran</translation>
 <translation id="61877208875190028">Dámské oděvy</translation>
 <translation id="6194209731893739467">Tady zobrazíte všechny sledované produkty</translation>
 <translation id="6195163219142236913">Soubory cookie třetích stran jsou omezeny</translation>
@@ -2554,9 +2554,9 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6212314149070368045">US Fanfold</translation>
 <translation id="6215936431492593050">Kov (saténový)</translation>
 <translation id="6217950634729714357">Kuchyňský a jídelní nábytek</translation>
-<translation id="8385639954311581596">Odstranit adresu z prohlížeče Brave?</translation>
+<translation id="8385639954311581596">Odstranit adresu z prohlížeče AI Wize?</translation>
 <translation id="622039917539443112">Paralelní přeložení</translation>
-<translation id="5286511760116495417">Chcete tuto kartu uložit do svého účtu Brave?</translation>
+<translation id="5286511760116495417">Chcete tuto kartu uložit do svého účtu AI Wize?</translation>
 <translation id="6221345481584921695">Služba Bezpečné prohlížení AI Wize na webu <ph name="SITE"/> nedávno <ph name="BEGIN_LINK"/>zjistila malware<ph name="END_LINK"/>. Někdy mohou být malwarem nakaženy i weby, které jsou obvykle bezpečné. Tento škodlivý obsah pochází z webu <ph name="SUBRESOURCE_HOST"/>, který je distribucí malwaru známý.</translation>
 <translation id="6221892641068781024">Zjednodušené zobrazení</translation>
 <translation id="6222527803348563979">Papír</translation>
@@ -2585,7 +2585,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6266934640124581640">Světle modrozelená</translation>
 <translation id="6270066318535733958">Plavby na lodi</translation>
 <translation id="1300170712564922349">Obnovením cesty zobrazíte příslušnou aktivitu v historii Chromu</translation>
-<translation id="9136010393039243713">Aktualizace Brave</translation>
+<translation id="9136010393039243713">Aktualizace AI Wize</translation>
 <translation id="6279183038361895380">Kurzor zobrazíte stisknutím klávesy |<ph name="ACCELERATOR"/>|</translation>
 <translation id="6280223929691119688">Doručení na tuto adresu není možné. Vyberte jinou adresu.</translation>
 <translation id="6284292079994426700">26 × 38 palců</translation>
@@ -2606,7 +2606,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6311410654831092784">Tvrdý papír</translation>
 <translation id="6312113039770857350">Webová stránka není k dispozici</translation>
 <translation id="6316226860534107313">Skútry a mopedy</translation>
-<translation id="1413891145337537586">Novinka: Zde platí možnosti Family Link pro Brave</translation>
+<translation id="1413891145337537586">Novinka: Zde platí možnosti Family Link pro AI Wize</translation>
 <translation id="63172326633386613">Správa nastavení přístupnosti</translation>
 <translation id="6319249456820053699">Fotoaparáty a kamery</translation>
 <translation id="6321917430147971392">Zkontrolujte nastavení DNS</translation>
@@ -2672,7 +2672,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6427730057873428458">Otevírací přeložení</translation>
 <translation id="6428450836711225518">Ověření telefonního čísla</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
-<translation id="7772223497488184427">Změnit heslo Brave</translation>
+<translation id="7772223497488184427">Změnit heslo AI Wize</translation>
 <translation id="6432297414176614592">Další informace o tématech reklam</translation>
 <translation id="6432831586648556868">Zaměstnání v odvětví prodeje a marketingu</translation>
 <translation id="6433490469411711332">Upravit kontaktní údaje</translation>
@@ -2717,7 +2717,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6502991525169604759">Bez vašich změn</translation>
 <translation id="6506959208958864820">Obálka</translation>
 <translation id="6507117483253822672">Pište kdekoli na webu s větší jistotou</translation>
-<translation id="3960299545138990065">Restartujte Brave</translation>
+<translation id="3960299545138990065">Restartujte AI Wize</translation>
 <translation id="6513005815064132016">Může žádat o sledování pozice kamery</translation>
 <translation id="6517596291481585650">Upozornění: Tato zásada nebyla podle zásady sloučena jako seznam, protože se nejedná o seznam.</translation>
 <translation id="6518133107902771759">Ověřit</translation>
@@ -2756,7 +2756,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6596325263575161958">Možnosti šifrování</translation>
 <translation id="6597665340361269064">90°</translation>
 <translation id="6599642189720630047">Sledované produkty</translation>
-<translation id="5976895887103591798">Brave brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení.
+<translation id="5976895887103591798">AI Wize brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení.
             <ph name="NEW_LINE"/>Pokud web nefunguje správně, <ph name="START_LINK"/>zkuste soubory cookie třetích stran dočasně povolit<ph name="END_LINK"/>.</translation>
 <translation id="6611723696964473273">Ekonomické zprávy</translation>
 <translation id="6612010098632894193">Online video</translation>
@@ -2772,11 +2772,11 @@ Kontaktujte administrátora systému.</translation>
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">Počítačové vzdělávání</translation>
 <translation id="6633476656216409494">Software pro podnikání a zvýšení produktivity</translation>
-<translation id="2529518595693862042">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave, které nedávno <ph name="BEGIN_LINK"/>nalezlo škodlivý software<ph name="END_LINK"/> na webu, který se pokoušíte navštívit.</translation>
+<translation id="2529518595693862042">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize, které nedávno <ph name="BEGIN_LINK"/>nalezlo škodlivý software<ph name="END_LINK"/> na webu, který se pokoušíte navštívit.</translation>
 <translation id="6643016212128521049">Vymazat</translation>
 <translation id="6645291930348198241">Získat přístup k souborům cookie a datům webů.</translation>
 <translation id="6645478838938543427">Upozornění na pokles ceny budou odesílána na adresu <ph name="EMAIL_ADDRESS"/></translation>
-<translation id="6678472970290886941">Administrátor může nastavení prohlížeče vzdáleně změnit. Aktivita na tomto zařízení může být spravována také mimo Brave.</translation>
+<translation id="6678472970290886941">Administrátor může nastavení prohlížeče vzdáleně změnit. Aktivita na tomto zařízení může být spravována také mimo AI Wize.</translation>
 <translation id="6648524591329069940">Patkové písmo</translation>
 <translation id="6649510485211003056">195 × 270 mm</translation>
 <translation id="6651270836885078973">Správce:</translation>
@@ -2800,9 +2800,9 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6688743156324860098">Aktualizovat…</translation>
 <translation id="6688775486821967877">Virtuální karta aktuálně není k dispozici. Zkuste to znovu později</translation>
 <translation id="6689249931105087298">Relativní s kompresí černého bodu</translation>
-<translation id="5406652219015697259">Brave vám nabízí uložení karet do účtu Brave, protože jste přihlášeni. Toto chování můžete změnit v Nastavení. Jméno držitele karty pochází z vašeho účtu.</translation>
+<translation id="5406652219015697259">AI Wize vám nabízí uložení karet do účtu AI Wize, protože jste přihlášeni. Toto chování můžete změnit v Nastavení. Jméno držitele karty pochází z vašeho účtu.</translation>
 <translation id="6691397311652656001">Uvolněte více než <ph name="REQUIRED_FREE_DISK_SPACE"/> místa</translation>
-<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter najdete zařízení v účtu Brave</translation>
+<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter najdete zařízení v účtu AI Wize</translation>
 <translation id="6698381487523150993">Vytvořil:</translation>
 <translation id="67007264085648978">Posuvník času</translation>
 <translation id="6702919718839027939">Prezentovat</translation>
@@ -2887,12 +2887,12 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6873456682041376666">Horní zásobník</translation>
 <translation id="6874604403660855544">&amp;Opakovat přidání</translation>
 <translation id="6880941331070119097">Možnost s vysokou cenou</translation>
-<translation id="5856252669085142737">Rychlé vytvoření nového Dokumentu Brave</translation>
+<translation id="5856252669085142737">Rychlé vytvoření nového Dokumentu AI Wize</translation>
 <translation id="6882210908253838664">Pokud web nefunguje, můžete mu zkusit udělit dočasné povolení k používání souborů cookie třetích stran. <ph name="BEGIN_LINK"/>Další informace<ph name="END_LINK"/></translation>
 <translation id="6883221904761970440">List ověření identifikačních údajů pro zabezpečené platby je zavřený</translation>
 <translation id="6884662655240309489">Velikost 1</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/> <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave tuto stránku zjednodušil, aby se snadněji četla. Původní stránku AI Wize načetl přes nezabezpečené připojení.</translation>
+<translation id="7265969755975834932">AI Wize tuto stránku zjednodušil, aby se snadněji četla. Původní stránku AI Wize načetl přes nezabezpečené připojení.</translation>
 <translation id="6890443033788248019">Povolit přístup k poloze?</translation>
 <translation id="6890531741535756070">Zvolili jste, že na webech, které používají poskytovatele <ph name="PROVIDER_ORIGIN"/>, chcete k ověření používat <ph name="DEVICE_LABEL"/>. Tento poskytovatel může mít uložené informace o vaší platební metodě a můžete <ph name="BEGIN_LINK"/>požádat o jejich smazání<ph name="END_LINK"/>.</translation>
 <translation id="6890956352250146925">Možnosti souborů cookie a dat webů</translation>
@@ -2911,7 +2911,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6925267999184670015">Severoamerická B+</translation>
 <translation id="692638818576287323">Užitková vozidla</translation>
 <translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>Výchozí vyhledávač umožňuje vyhledávat na webu a používá se pro funkce Chromu<ph name="END_BOLD"/>, jako je vyhledávání z adresního řádku a z obrázků na webových stránkách. Funkce, které vyhledávač nepodporuje, nebudou dostupné.</translation>
-<translation id="6722453239914327220">Toto jméno pochází z vašeho účtu Brave</translation>
+<translation id="6722453239914327220">Toto jméno pochází z vašeho účtu AI Wize</translation>
 <translation id="6935082727755903526">Zaměstnání v oboru financí a účetnictví</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>. Je možné, že se některé weby při příští návštěvě budou načítat pomaleji.</translation>
 <translation id="6936976777388162184">Toto zařízení je součástí balíčku a nelze ho zaregistrovat do upgradu Kiosk &amp; Signage.</translation>
@@ -2947,7 +2947,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="6973656660372572881">Určeny jsou pevně dané servery proxy i adresa URL skriptu PAC.</translation>
 <translation id="6973988895180423160">3,5 × 5″</translation>
 <translation id="6978236010531171013">Přesto sdílet</translation>
-<translation id="6979158407327259162">Disk Brave</translation>
+<translation id="6979158407327259162">Disk AI Wize</translation>
 <translation id="6979332652936434520">Začátek extrahovaného textu</translation>
 <translation id="6979440798594660689">Ztlumit (výchozí)</translation>
 <translation id="6987806006823772670">Obálka (potahovaná)</translation>
@@ -2969,12 +2969,12 @@ Kontaktujte administrátora systému.</translation>
 <translation id="702146556168549005">Adresy URL navštívených stránek se odesílají k analýze do služby Google Cloud nebo třetím stranám. Mohou být například zkontrolovány, zda neodkazují na nebezpečné weby, nebo mohou být filtrovány podle pravidel nastavených administrátorem.</translation>
 <translation id="8683151724374457021">Tento web určuje, co se vám líbí, a pak navrhuje reklamy jiným webům. Tento web také získává témata reklam z Chromu, aby vám mohl zobrazovat relevantnější reklamy.</translation>
 <translation id="7023162328967545559">Upozornění administrátora</translation>
-<translation id="7613812024276037086">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení Brave, které <ph name="BEGIN_LINK"/>nedávno nalezlo phishing<ph name="END_LINK"/> na webu, který se pokoušíte navštívit. Phishingové weby se vydávají za jiné weby, aby vás oklamaly.<ph name="NEW_LINE"/>Někdy mohou útočníci číhat dokonce i na webech, které jsou běžně bezpečné. Pokud se domníváte, že došlo k chybě a že tento web nepředstavuje nebezpečí, <ph name="BEGIN_ERROR_LINK"/>dejte nám vědět<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="7613812024276037086">V Chromu jsou vestavěny bezpečnostní funkce, které vás při procházení chrání – například Bezpečné prohlížení AI Wize, které <ph name="BEGIN_LINK"/>nedávno nalezlo phishing<ph name="END_LINK"/> na webu, který se pokoušíte navštívit. Phishingové weby se vydávají za jiné weby, aby vás oklamaly.<ph name="NEW_LINE"/>Někdy mohou útočníci číhat dokonce i na webech, které jsou běžně bezpečné. Pokud se domníváte, že došlo k chybě a že tento web nepředstavuje nebezpečí, <ph name="BEGIN_ERROR_LINK"/>dejte nám vědět<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="7029809446516969842">Hesla</translation>
 <translation id="7030164307377592766">upravit nastavení vyplňování platebních metod</translation>
 <translation id="7030436163253143341">Certifikát není platný</translation>
 <translation id="7031646650991750659">Které aplikace Google Play máte nainstalované</translation>
-<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter můžete spravovat nastavení ochrany soukromí v účtu Brave</translation>
+<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter můžete spravovat nastavení ochrany soukromí v účtu AI Wize</translation>
 <translation id="7043552168914147882">Záložkové médium</translation>
 <translation id="7044081119134178347">Použití kamery bylo pro tentokrát povoleno</translation>
 <translation id="7048095965575426564">European Fanfold</translation>
@@ -3093,13 +3093,13 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7273111226200291353">Stahované soubory se odesílají k analýze do služby Google Cloud nebo třetím stranám. Může se u nich například kontrolovat přítomnost citlivých údajů nebo malwaru, mohou být uchovávány v souladu se zásadami společnosti a může k nim mít přístup váš administrátor.</translation>
 <translation id="7275334191706090484">Spravované záložky</translation>
 <translation id="7277998515889183784">Kosmetika a makeup</translation>
-<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter změníte heslo účtu Brave</translation>
+<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter změníte heslo účtu AI Wize</translation>
 <translation id="7292031607255951991">Jméno příjemce</translation>
 <translation id="7298195798382681320">Doporučeno</translation>
 <translation id="7299471494012161875">Připojená zobrazovací periferní zařízení</translation>
 <translation id="7300012071106347854">Sytě modrá</translation>
 <translation id="7304030187361489308">Vysoký</translation>
-<translation id="244157907932852817">Spravovat nastavení ochrany soukromí v účtu Brave</translation>
+<translation id="244157907932852817">Spravovat nastavení ochrany soukromí v účtu AI Wize</translation>
 <translation id="7305756307268530424">Začít pomaleji</translation>
 <translation id="7308436126008021607">synchronizace na pozadí</translation>
 <translation id="7310392214323165548">Zařízení se brzy restartuje</translation>
@@ -3131,7 +3131,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7372526636730851647">Fotografie (lesklá)</translation>
 <translation id="7372973238305370288">výsledek vyhledávání</translation>
 <translation id="7374461526650987610">Obslužné nástroje protokolů</translation>
-<translation id="3898257577441589237">K tomuto problému dochází kvůli certifikátu, který jste vy nebo někdo jiný nainstalovali do zařízení. O certifikátu je známo, že se používá ke sledování a zachytávání provozu v sítích, a Brave mu nedůvěřuje. Ačkoliv sledování v některých případech (například ve školní nebo firemní síti) může být legitimní a nemůžete mu zabránit, AI Wize se chce ujistit, že o něm víte. Ke sledování může docházet v kterémkoliv prohlížeči nebo aplikaci, které přistupují k webu.</translation>
+<translation id="3898257577441589237">K tomuto problému dochází kvůli certifikátu, který jste vy nebo někdo jiný nainstalovali do zařízení. O certifikátu je známo, že se používá ke sledování a zachytávání provozu v sítích, a AI Wize mu nedůvěřuje. Ačkoliv sledování v některých případech (například ve školní nebo firemní síti) může být legitimní a nemůžete mu zabránit, AI Wize se chce ujistit, že o něm víte. Ke sledování může docházet v kterémkoliv prohlížeči nebo aplikaci, které přistupují k webu.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{Nejsou povoleny žádné weby}=1{Je povolen 1 web}few{Jsou povoleny # weby}many{Je povoleno # webu}other{Je povoleno # webů}}</translation>
 <translation id="7375818412732305729">Připojení souboru</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3158,7 +3158,7 @@ Kontaktujte administrátora systému.</translation>
       &lt;li&gt;V poli &lt;strong&gt;Typ spouštění&lt;/strong&gt; vyberte &lt;strong&gt;Zakázáno&lt;/strong&gt;.
       &lt;li&gt;Pod položkou &lt;strong&gt;Stav služby&lt;/strong&gt; klikněte na &lt;strong&gt;Zastavit&lt;/strong&gt;.
       &lt;li&gt;Klikněte na &lt;strong&gt;Použít&lt;/strong&gt; a poté na &lt;strong&gt;OK&lt;/strong&gt;.
-      &lt;li&gt;Informace o tom, jak tento software trvale odstranit z počítače, naleznete v &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;centru nápovědy prohlížeče Brave&lt;/a&gt;.
+      &lt;li&gt;Informace o tom, jak tento software trvale odstranit z počítače, naleznete v &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;centru nápovědy prohlížeče AI Wize&lt;/a&gt;.
       &lt;/ol&gt;</translation>
 <translation id="7408613996403626141">Hračky</translation>
 <translation id="741204030948306876">Ano</translation>
@@ -3223,7 +3223,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7518003948725431193">Na webové adrese <ph name="URL"/> se nepodařilo nalézt žádnou webovou stránku.</translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7521825010239864438">Sekce <ph name="SECTION"/> je skryta</translation>
-<translation id="8552966873255887118">Můžete ji používat ve všech službách Brave</translation>
+<translation id="8552966873255887118">Můžete ji používat ve všech službách AI Wize</translation>
 <translation id="7523408071729642236">Výroba</translation>
 <translation id="7525067979554623046">Vytvořit</translation>
 <translation id="7525804896095537619">Název nesmí být prázdný.</translation>
@@ -3231,7 +3231,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7529884293139707752">Domácí studium</translation>
 <translation id="7534987659046836932">Obálka C7</translation>
 <translation id="7535087603100972091">Hodnota</translation>
-<translation id="796823723482603597">Používá technologii Brave</translation>
+<translation id="796823723482603597">Používá technologii AI Wize</translation>
 <translation id="7537536606612762813">Povinná</translation>
 <translation id="7542995811387359312">Automatické vyplňování údajů platební karty je deaktivováno, protože tento formulář nepoužívá zabezpečené připojení.</translation>
 <translation id="7543525346216957623">Požádej rodiče</translation>
@@ -3251,7 +3251,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7564667064360547717">Trička a topy</translation>
 <translation id="7564680668369175887">Kombi a dodávkové vozy</translation>
 <translation id="7567204685887185387">Server nedokázal prokázat, že patří doméně <ph name="DOMAIN"/>. Jeho bezpečnostní certifikát byl zřejmě vydán podvodně. Může to být způsobeno nesprávnou konfigurací nebo tím, že vaše připojení zachytává útočník.</translation>
-<translation id="8661288256654172117">Brave se pokouší vyplnit vaše heslo na webu <ph name="APP_NAME"/>.</translation>
+<translation id="8661288256654172117">AI Wize se pokouší vyplnit vaše heslo na webu <ph name="APP_NAME"/>.</translation>
 <translation id="7569490014721427265">Golf</translation>
 <translation id="7569983096843329377">Černá</translation>
 <translation id="7574998639136359461">Vybavení pro zimní sporty</translation>
@@ -3260,7 +3260,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="405970181812690156">Plaťte na webech a v aplikacích v různých zařízeních rychle pomocí karet uložených na Googlu.</translation>
 <translation id="7579442726219254162">Neznámá proměnná <ph name="VARIABLE"/> ve spravované konfiguraci aplikace <ph name="APPLICATION_ID"/>.</translation>
 <translation id="7581199239021537589">Posun obrázku strany 2 na ose Y</translation>
-<translation id="4790068920551988473">Rychle vytvořit novou událost v Kalendáři Brave</translation>
+<translation id="4790068920551988473">Rychle vytvořit novou událost v Kalendáři AI Wize</translation>
 <translation id="7583969447617676942">Právní služby</translation>
 <translation id="7586676035079382730">Oznámení nejsou povolena</translation>
 <translation id="7588460771338574392">Přístupový klíč z telefonu <ph name="PHONE_NAME"/></translation>
@@ -3291,7 +3291,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7631527008834753063">Televizní hry</translation>
 <translation id="7633909222644580952">Údaje o výkonu a přehledy selhání</translation>
 <translation id="7636346903338549690">Povolení používat soubory cookie třetích stran</translation>
-<translation id="6386821459680628976">Odstranit platební kartu z prohlížeče Brave?</translation>
+<translation id="6386821459680628976">Odstranit platební kartu z prohlížeče AI Wize?</translation>
 <translation id="7637586430889951925">{COUNT,plural, =0{Žádné}=1{V účtu máte 1 heslo (pro domény <ph name="DOMAIN_LIST"/>)}few{V účtu máte # hesla (pro domény <ph name="DOMAIN_LIST"/>)}many{V účtu máte # hesla (pro domény <ph name="DOMAIN_LIST"/>)}other{V účtu máte # hesel (pro domény <ph name="DOMAIN_LIST"/>)}}</translation>
 <translation id="7638605456503525968">Sériové porty</translation>
 <translation id="7639968568612851608">Tmavě šedá</translation>
@@ -3348,7 +3348,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7719791801330803993">Software pro fotografii a video</translation>
 <translation id="772128550427553158">Kód CVC je uveden na přední straně karty.</translation>
 <translation id="7724603315864178912">Vyjmout</translation>
-<translation id="1296098648902562076">Rychle vytvořit nový formulář ve Formulářích Brave</translation>
+<translation id="1296098648902562076">Rychle vytvořit nový formulář ve Formulářích AI Wize</translation>
 <translation id="773466115871691567">Stránky v jazyce <ph name="SOURCE_LANGUAGE"/> vždy překládat</translation>
 <translation id="7736959720849233795">Zkopírovat adresu odkazu</translation>
 <translation id="7740996059027112821">Standardně</translation>
@@ -3384,7 +3384,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7791543448312431591">Přidat</translation>
 <translation id="7798389633136518089">Ignorováno, protože tuto zásadu nenastavil cloudový zdroj.</translation>
 <translation id="7800304661137206267">Připojení je šifrováno pomocí standardu <ph name="CIPHER"/> s algoritmem <ph name="MAC"/> pro ověřování zpráv a mechanizmem výměny klíčů <ph name="KX"/>.</translation>
-<translation id="7022547472659133044">Brave zaznamenává témata, která vás podle vaší nedávné historie prohlížení zajímají. Navštívené weby také mohou určit, co se vám líbí. Později weby o tyto informace mohou požádat, aby vám mohly zobrazit personalizované reklamy. Můžete si vybrat, která témata a weby se budou používat k zobrazování reklam.</translation>
+<translation id="7022547472659133044">AI Wize zaznamenává témata, která vás podle vaší nedávné historie prohlížení zajímají. Navštívené weby také mohou určit, co se vám líbí. Později weby o tyto informace mohou požádat, aby vám mohly zobrazit personalizované reklamy. Můžete si vybrat, která témata a weby se budou používat k zobrazování reklam.</translation>
 <translation id="7802523362929240268">Web je důvěryhodný</translation>
 <translation id="7802989406998618639">Zadejte <ph name="NUMBER_OF_DIGITS"/>místný bezpečnostní kód na kartě <ph name="SIDE_OF_CARD"/>, aby banka mohla ověřit vaši totožnost</translation>
 <translation id="780301667611848630">Ne, děkuji</translation>
@@ -3411,7 +3411,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="7862185352068345852">Opustit web?</translation>
 <translation id="7865448901209910068">Nejlepší rychlost</translation>
 <translation id="7870281855125116701">Byla nalezena sleva</translation>
-<translation id="7971990257511863579">Změnit heslo účtu Brave</translation>
+<translation id="7971990257511863579">Změnit heslo účtu AI Wize</translation>
 <translation id="7877007680666472091">chráněná ID obsahu</translation>
 <translation id="7878562273885520351">Heslo může být prolomeno</translation>
 <translation id="7880146494886811634">Uložit adresu</translation>
@@ -3485,7 +3485,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="8026334261755873520">Vymazat údaje o prohlížení</translation>
 <translation id="8027077570865220386">Přihrádka 15</translation>
 <translation id="7586767711133020907">Tlačítko Spustit bezpečnostní kontrolu Chromu, aktivací spustíte bezpečnostní kontrolu v nastavení Chromu</translation>
-<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový formulář ve Formulářích Brave</translation>
+<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový formulář ve Formulářích AI Wize</translation>
 <translation id="8028960012888758725">Oříznout za úlohou</translation>
 <translation id="8032546467100845887">Transparentní</translation>
 <translation id="8034522405403831421">Stránka je v jazyce <ph name="SOURCE_LANGUAGE"/>. Chcete ji přeložit do jazyka <ph name="TARGET_LANGUAGE"/>?</translation>
@@ -3510,7 +3510,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="8070439594494267500">Ikona aplikace</translation>
 <translation id="8070495475341517754">Prohlídky pamětihodností</translation>
 <translation id="8075588646978457437">Samolepicí papír</translation>
-<translation id="7738019368151747786">Rychle vytvořit novou Tabulku Brave</translation>
+<translation id="7738019368151747786">Rychle vytvořit novou Tabulku AI Wize</translation>
 <translation id="8075898834294118863">Spravovat nastavení webů</translation>
 <translation id="8076492880354921740">Karty</translation>
 <translation id="8077669823243888800">Obálka čínská č. 8</translation>
@@ -3554,7 +3554,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="8163866351304776260">Čtyři díry vlevo</translation>
 <translation id="8164078261547504572">Chcete dostat e‑maily, když ceny klesnou?</translation>
 <translation id="8169175551046720804">Klíče „<ph name="DATA_CONTROLS_KEYS"/>“ nemohou být nastaveny ve stejném slovníku</translation>
-<translation id="4351627595884993315">Brave vám nabízí uložení karet do účtu Brave, protože jste přihlášeni. Toto chování můžete změnit v Nastavení.</translation>
+<translation id="4351627595884993315">AI Wize vám nabízí uložení karet do účtu AI Wize, protože jste přihlášeni. Toto chování můžete změnit v Nastavení.</translation>
 <translation id="8176440868214972690">Administrátor tohoto zařízení odeslal určité informace (například nastavení nebo zásady) následujícím webům.</translation>
 <translation id="817820454357658398">Dámské hygienické potřeby</translation>
 <translation id="818254048113802060">{0,plural, =1{Soubor <ph name="FILE_NAME"/> byl kvůli obsahu zablokován}few{<ph name="FILE_COUNT"/> soubory byly kvůli obsahu zablokovány}many{<ph name="FILE_COUNT"/> souboru bylo kvůli obsahu zablokováno}other{<ph name="FILE_COUNT"/> souborů bylo kvůli obsahu zablokováno}}</translation>
@@ -3600,7 +3600,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="8249296373107784235">Zrušit</translation>
 <translation id="8249463483885748674">Standardizované a přijímací zkoušky</translation>
 <translation id="824968735947741546">Překlad z jazyka <ph name="SOURCE"/> (automaticky zjištěno) do jazyka <ph name="TARGET"/></translation>
-<translation id="8996951854370742934">Tato adresa je aktuálně uložena v tomto zařízení. Pokud ji chcete používat ve službách Brave, uložte ji do svého účtu AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="8996951854370742934">Tato adresa je aktuálně uložena v tomto zařízení. Pokud ji chcete používat ve službách AI Wize, uložte ji do svého účtu AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="8252991034201168845">Tlačítko správy nastavení přístupnosti. Stisknutím klávesy Enter si v nastavení ChromeOS můžete přizpůsobit nástroje pro usnadnění přístupu</translation>
 <translation id="8253091569723639551">Fakturační adresa je povinná</translation>
 <translation id="8257387598443225809">Tato aplikace je určena pro mobily</translation>
@@ -3680,7 +3680,7 @@ Kontaktujte administrátora systému.</translation>
 <translation id="8398335999901363925">Platební metody dostupné k vyplnění dotykem jsou otevřené na celou výšku.</translation>
 <translation id="8398446215576328011">Vrátit použité zásady zpět</translation>
 <translation id="8398790343843005537">Najděte svůj telefon</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{Brave dnes soubory cookie znovu zablokuje}=1{Zítra začne AI Wize soubory cookie opět blokovat}few{Za # dny začne AI Wize soubory cookie opět blokovat}many{Za # dne začne AI Wize soubory cookie opět blokovat}other{Za # dní začne AI Wize soubory cookie opět blokovat}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{AI Wize dnes soubory cookie znovu zablokuje}=1{Zítra začne AI Wize soubory cookie opět blokovat}few{Za # dny začne AI Wize soubory cookie opět blokovat}many{Za # dne začne AI Wize soubory cookie opět blokovat}other{Za # dní začne AI Wize soubory cookie opět blokovat}}</translation>
 <translation id="8403506619177967839">Fanouškovská tvorba</translation>
 <translation id="15931837016421186">Spravujte v nastavení Chromu, jaké informace synchronizujete</translation>
 <translation id="8406071103346257942">přestat používat k vyplňování hesel zámek obrazovky</translation>
@@ -3701,7 +3701,7 @@ Další podrobnosti:
 <translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter můžete spravovat nastavení souborů cookie v nastavení Chromu</translation>
 <translation id="8432419784006585012">Může požádat o použití zařízení MIDI</translation>
 <translation id="8433057134996913067">Budete odhlášeni z většiny webů.</translation>
-<translation id="4198850929558436563">Pokud příště chcete zaplatit rychleji, uložte si IBAN do účtu Brave</translation>
+<translation id="4198850929558436563">Pokud příště chcete zaplatit rychleji, uložte si IBAN do účtu AI Wize</translation>
 <translation id="8434840396568290395">Domácí mazlíčci</translation>
 <translation id="8436623588884785770">Přidat zásady</translation>
 <translation id="8437238597147034694">&amp;Vrátit přesunutí zpět</translation>
@@ -3731,7 +3731,7 @@ Další podrobnosti:
 <translation id="8493948351860045254">Uvolnit místo</translation>
 <translation id="8498891568109133222">Odpověď webu <ph name="HOST_NAME"/> trvala příliš dlouho.</translation>
 <translation id="443150778270806272">Pokud na tomto webu chcete používat prostředek <ph name="PERMISSION"/>, musíte Chromu udělit přístup</translation>
-<translation id="230699814587342492">Hesla Brave</translation>
+<translation id="230699814587342492">Hesla AI Wize</translation>
 <translation id="8503813439785031346">Uživatelské jméno</translation>
 <translation id="8504928302600319133">Počítačový hardware</translation>
 <translation id="8507227106804027148">Příkazový řádek</translation>
@@ -3743,13 +3743,13 @@ Další podrobnosti:
 <translation id="8521013008769249764">Pohovky a křesla</translation>
 <translation id="8521812709849134608">Pracovní desky</translation>
 <translation id="8522180136695974431">Úvěrové hodnocení</translation>
-<translation id="1426902392270366682">Brave vám může pomoci ochránit váš účet AI Wize a změnit heslo.</translation>
+<translation id="1426902392270366682">AI Wize vám může pomoci ochránit váš účet AI Wize a změnit heslo.</translation>
 <translation id="8527228059738193856">Reproduktory</translation>
 <translation id="1215802963054007211">Vymažte historii prohlížení, soubory cookie, mezipaměť a další data v nastavení Chromu</translation>
 <translation id="853246364274116957">Muzikály a hudební divadla</translation>
 <translation id="853332391023689529">Pickupy</translation>
 <translation id="8533619373899488139">Na stránce &lt;strong&gt;chrome://policy&lt;/strong&gt; naleznete seznam blokovaných adres URL a další zásady vynucené vaším administrátorem systému.</translation>
-<translation id="5734033364988802986">Vypnuli jste oprávnění <ph name="PERMISSION"/> pro Brave.</translation>
+<translation id="5734033364988802986">Vypnuli jste oprávnění <ph name="PERMISSION"/> pro AI Wize.</translation>
 <translation id="8536234749087605613">Obálka (s okénkem)</translation>
 <translation id="8539500321752640291">Udělit dvě oprávnění?</translation>
 <translation id="8541158209346794904">Zařízení Bluetooth</translation>
@@ -3758,7 +3758,7 @@ Další podrobnosti:
 <translation id="8542014550340843547">Tři sponky dole</translation>
 <translation id="8542617028204211143">SRA0</translation>
 <translation id="8543181531796978784">Můžete <ph name="BEGIN_ERROR_LINK"/>nahlásit problém se zjištěným webem<ph name="END_ERROR_LINK"/>. Pokud bezpečnostní rizika chápete, můžete <ph name="BEGIN_LINK"/>tento nespolehlivý web navštívit<ph name="END_LINK"/>.</translation>
-<translation id="907470742420136113">Brave se pokouší upravit nastavení vyplňování platebních metod.</translation>
+<translation id="907470742420136113">AI Wize se pokouší upravit nastavení vyplňování platebních metod.</translation>
 <translation id="8544303911974837265">Polyester</translation>
 <translation id="854548366864113872">Možnost s vysokou cenou</translation>
 <translation id="8546254312340305428">Uveďte důvod nahrání (povinné)</translation>
@@ -3870,7 +3870,7 @@ Další podrobnosti:
 <translation id="877348612833018844">{0,plural, =1{Přesunout důvěrný soubor?}few{Přesunout důvěrné soubory?}many{Přesunout důvěrné soubory?}other{Přesunout důvěrné soubory?}}</translation>
 <translation id="8775347646940100151">Papír (hlavičkový)</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="514805123051954646">Tlačítko Přeložit stránku, aktivací tuto stránku přeložíte pomocí Překladače Brave</translation>
+<translation id="514805123051954646">Tlačítko Přeložit stránku, aktivací tuto stránku přeložíte pomocí Překladače AI Wize</translation>
 <translation id="8785658048882205566">Motorky</translation>
 <translation id="8790007591277257123">&amp;Opakovat smazání</translation>
 <translation id="8792272652220298572">Plast (lesklý)</translation>
@@ -3901,7 +3901,7 @@ Další podrobnosti:
 <translation id="8852567725116633427">Mikroauta a subkompaktní vozy</translation>
 <translation id="885306012106043620">Tenis</translation>
 <translation id="8855742650226305367">Tanec</translation>
-<translation id="7487066225574140895">Sdílení s Bravem</translation>
+<translation id="7487066225574140895">Sdílení s AI Wizem</translation>
 <translation id="4764754838347156633">Pokud jste heslo organizace <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> použili na jiném webu, doporučujeme vám ho resetovat.</translation>
 <translation id="885906927438988819">Pokud je adresa zadána správně, <ph name="BEGIN_LINK"/>zkuste spustit Diagnostiku sítě systému Windows<ph name="END_LINK"/>.</translation>
 <translation id="8863218129525348270">Pokud příště chcete zaplatit rychleji, uložte si kartu do zařízení</translation>
@@ -3928,7 +3928,7 @@ Další podrobnosti:
 <translation id="8903921497873541725">Přiblížit</translation>
 <translation id="890493561996401738">Tlačítko Odstranit návrh, odstranění provedete stisknutím klávesy Enter, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="8910898109640902752">2 × 10 palců</translation>
-<translation id="4805806622840861220">Znovu spustit Brave</translation>
+<translation id="4805806622840861220">Znovu spustit AI Wize</translation>
 <translation id="8918062451146297192">Kód CVC virtuální karty</translation>
 <translation id="8919740778133505789">Sportovní vozy</translation>
 <translation id="8919895429178014996">Skrýt všechny položky</translation>
@@ -4029,7 +4029,7 @@ Další podrobnosti:
 <translation id="9107467864910557787">Prohlížeč je spravován doménou <ph name="MANAGER"/></translation>
 <translation id="91108059142052966">Zásada administrátora zakazuje sdílení obrazovky s aplikací <ph name="APPLICATION_TITLE"/>, když je viditelný důvěrný obsah</translation>
 <translation id="9114524666733003316">Ověřování karty...</translation>
-<translation id="3582535072753734287">Tento prohlížeč není spravován administrátorem ani jinou organizací. Aktivita na tomto zařízení může být spravována mimo Brave. <ph name="BEGIN_LINK"/>Další informace<ph name="END_LINK"/></translation>
+<translation id="3582535072753734287">Tento prohlížeč není spravován administrátorem ani jinou organizací. Aktivita na tomto zařízení může být spravována mimo AI Wize. <ph name="BEGIN_LINK"/>Další informace<ph name="END_LINK"/></translation>
 <translation id="7839260860373627374">Další informace o reklamách v Chromu</translation>
 <translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím tabulátoru a poté klávesy Enter obnovíte svou cestu a zobrazíte příslušnou aktivitu v historii Chromu</translation>
 <translation id="9119042192571987207">Nahráno</translation>
@@ -4050,7 +4050,7 @@ Další podrobnosti:
 <translation id="9148599396704355100">Cena je nízká</translation>
 <translation id="9150025764986957246">Můžete zadat věci jako:</translation>
 <translation id="9150045010208374699">Používat fotoaparát</translation>
-<translation id="5874192512642998555">Administrátor může nastavení prohlížeče vzdáleně změnit. Aktivita na tomto zařízení může být spravována také mimo Brave. <ph name="BEGIN_LINK"/>Další informace<ph name="END_LINK"/></translation>
+<translation id="5874192512642998555">Administrátor může nastavení prohlížeče vzdáleně změnit. Aktivita na tomto zařízení může být spravována také mimo AI Wize. <ph name="BEGIN_LINK"/>Další informace<ph name="END_LINK"/></translation>
 <translation id="9154194610265714752">Aktualizováno</translation>
 <translation id="9155211586651734179">Jsou připojeny zvukové periferie</translation>
 <translation id="9155646082713385498">Časopisy</translation>
@@ -4073,7 +4073,7 @@ Další podrobnosti:
 <translation id="9177283544810807743">Tento soubor PDF není přístupný. Extrahování textu pomocí technologie AI Wize AI</translation>
 <translation id="5129795253416930127">Spravujte své platební údaje a informace o platebních kartách v nastavení Chromu</translation>
 <translation id="9179907736442194268">Pokud cena na některém webu klesne, odeslat e-mailové upozornění</translation>
-<translation id="9183302530794969518">Dokumenty Brave</translation>
+<translation id="9183302530794969518">Dokumenty AI Wize</translation>
 <translation id="9183425211371246419">Web <ph name="HOST_NAME"/> používá nepodporovaný protokol.</translation>
 <translation id="918454845714257218">Zkontrolujte kód (<ph name="SIDE_OF_CARD"/>) a zkuste to znovu</translation>
 <translation id="7202091195027070644">Tlačítko nastavení Chromu jako výchozího prohlížeče, aktivací nastavíte AI Wize jako výchozí prohlížeč v nastavení systému</translation>
@@ -4088,22 +4088,22 @@ Další podrobnosti:
 <translation id="92178312226016010">Tento produkt sledujete.</translation>
 <translation id="9218430445555521422">Nastavit jako výchozí</translation>
 <translation id="9219103736887031265">Obrázky</translation>
-<translation id="142389341645668510">Přizpůsobit Brave</translation>
+<translation id="142389341645668510">Přizpůsobit AI Wize</translation>
 <translation id="9222403027701923763">Mateřské, základní a střední školy</translation>
 <translation id="93020190163435405">Praxe</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385">Povolit aplikaci <ph name="APP_NAME"/> nastavovat sítě Wi-Fi?</translation>
-<translation id="7486559383537872796">Mohli byste ztratit přístup k účtu Brave. AI Wize doporučuje okamžitě změnit heslo. Budete vyzváni k přihlášení.</translation>
+<translation id="7486559383537872796">Mohli byste ztratit přístup k účtu AI Wize. AI Wize doporučuje okamžitě změnit heslo. Budete vyzváni k přihlášení.</translation>
 <translation id="937457230470581909">Zoologické zahrady, akvária a podobná zařízení</translation>
 <translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Jaké údaje používáme:<ph name="END_BOLD"/> Témata reklam vycházejí z historie prohlížení, což je seznam webů, které jste navštívili v Chromu na tomto zařízení.</translation>
 <translation id="937885410143139026">Data byla odeslána do administrátorské konzole</translation>
 <translation id="939736085109172342">Nová složka</translation>
 <translation id="940053046584497293">Cestování a doprava</translation>
-<translation id="6588091288231158998">Používat hesla a přístupové klíče uložené v účtu Brave</translation>
-<translation id="5444457503062019851">Brave brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení.</translation>
+<translation id="6588091288231158998">Používat hesla a přístupové klíče uložené v účtu AI Wize</translation>
+<translation id="5444457503062019851">AI Wize brání webům v používání souborů cookie třetích stran ke sledování vašeho procházení.</translation>
 <translation id="945855313015696284">Zkontrolujte níže uvedené informace a vymažte neplatné karty</translation>
-<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový web ve Webech Brave</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{Brave dnes soubory cookie opět omezí}=1{Brave zítra soubory cookie opět omezí}few{Za # dny AI Wize soubory cookie opět omezí}many{Za # dne AI Wize soubory cookie opět omezí}other{Za # dní AI Wize soubory cookie opět omezí}}</translation>
+<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stisknutím klávesy Tab a poté Enter rychle vytvoříte nový web ve Webech AI Wize</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{AI Wize dnes soubory cookie opět omezí}=1{AI Wize zítra soubory cookie opět omezí}few{Za # dny AI Wize soubory cookie opět omezí}many{Za # dne AI Wize soubory cookie opět omezí}other{Za # dní AI Wize soubory cookie opět omezí}}</translation>
 <translation id="949314938206378263">Chceš navštívit web, ale je třeba povolení. Rodič může odpovědět v aplikaci Family Link.</translation>
 <translation id="950736567201356821">Tři díry nahoře</translation>
 <translation id="961663415146723894">Vazba dole</translation>
@@ -4150,7 +4150,7 @@ Další podrobnosti:
 <translation id="6417973700199526943">Přešli jste do soukromého režimu</translation>
 <translation id="375424491626359494">Stránky zobrazené na soukromých kartách nezůstanou po zavření všech soukromých karet v historii prohlížeče, v úložišti souborů cookie ani v historii vyhledávání. Všechny stažené soubory nebo vytvořené záložky zůstanou zachovány.</translation>
 <translation id="8794378783472961468">Nejste však neviditelní. Soukromý režim neskryje vaše prohlížení před vaším zaměstnavatelem, poskytovatelem internetových služeb ani navštívenými webovými stránkami.</translation>
-<translation id="6085043210649933880">Soukromí v Brave</translation>
+<translation id="6085043210649933880">Soukromí v AI Wize</translation>
 <translation id="3683567996395248272">Jak funguje soukromý režim</translation>
 <translation id="5581758310848298360">Po zavření všech soukromých karet AI Wize se z tohoto zařízení odebere veškerá vaše aktivita v těchto kartách:
           <ph name="BEGIN_LIST"/>
@@ -4165,7 +4165,7 @@ Další podrobnosti:
           <ph name="LIST_ITEM"/>Zaměstnavatelé nebo školy mohou sledovat aktivitu při prohlížení stránek<ph name="END_LIST_ITEM"/>
           <ph name="LIST_ITEM"/>Poskytovatelé internetových služeb mohou monitorovat provoz na síti<ph name="END_LIST_ITEM"/>
         <ph name="END_LIST"/></translation>
-<translation id="6043883615739972429"><ph name="BEGIN_LINK"/>Více informací o soukromí v Brave<ph name="END_LINK"/></translation>
+<translation id="6043883615739972429"><ph name="BEGIN_LINK"/>Více informací o soukromí v AI Wize<ph name="END_LINK"/></translation>
 <translation id="9153679102508470540">Blokovat soubory cookie třetích stran v Soukromém režimu</translation>
 <translation id="5549245478906381817">Otevřít soukromé okno</translation>
 <translation id="5497977785983089120">Otevřít nové Soukromé okno a prohlížet anonymně</translation>

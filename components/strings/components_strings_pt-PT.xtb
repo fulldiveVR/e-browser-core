@@ -27,7 +27,7 @@
 <translation id="1055184225775184556">&amp;Anular adição</translation>
 <translation id="1056663316309890343">Software de foto</translation>
 <translation id="1056898198331236512">Aviso</translation>
-<translation id="1248991947169346185"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para jogar Dino Run no Brave</translation>
+<translation id="1248991947169346185"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para jogar Dino Run no AI Wize</translation>
 <translation id="1058479211578257048">A guardar os cartões…</translation>
 <translation id="1060136083665017312">Sistemas e consolas de jogos</translation>
 <translation id="1060320201901229167">Envelope Kaku 5</translation>
@@ -54,11 +54,11 @@
 <translation id="1094777233105318927">Informações sobre o seu navegador, SO, dispositivo, software instalado e ficheiros</translation>
 <translation id="1096545575934602868">Este campo não deve ter mais de <ph name="MAX_ITEMS_LIMIT"/> entradas. Todas as restantes entradas serão rejeitadas.</translation>
 <translation id="1099928364755383720">ecrã no ecrã automático</translation>
-<translation id="7584468665743195331">Botão Retomar percurso, prima Enter para retomar o percurso e ver atividade relevante no seu Histórico do Brave</translation>
+<translation id="7584468665743195331">Botão Retomar percurso, prima Enter para retomar o percurso e ver atividade relevante no seu Histórico do AI Wize</translation>
 <translation id="1101672080107056897">Ação com erro.</translation>
 <translation id="1103523840287552314">Traduzir sempre <ph name="LANGUAGE"/></translation>
 <translation id="1104409666019087579">Alguns campos obrigatórios estão vazios. Preencha-os antes de guardar.</translation>
-<translation id="8424280348953443220">Botão Gerir palavras-passe; ative para ver e gerir as suas palavras-passe nas definições do Brave</translation>
+<translation id="8424280348953443220">Botão Gerir palavras-passe; ative para ver e gerir as suas palavras-passe nas definições do AI Wize</translation>
 <translation id="1108464073729874771">A3x4</translation>
 <translation id="1110994991967754504">Selecionar autorização para <ph name="PERMISSION_NAME"/></translation>
 <translation id="1112828774174131240">Antiguidades e artigos colecionáveis</translation>
@@ -79,10 +79,10 @@
 <translation id="1158211211994409885"><ph name="HOST_NAME"/> fechou a ligação inesperadamente.</translation>
 <translation id="115926840831309955">Verifique o Código de Segurança/CVC e tente novamente ou atualize a data de validade.</translation>
 <translation id="1161325031994447685">Ligar novamente à rede Wi-Fi</translation>
-<translation id="6628439996552631516">Botão Gerir endereços; ative para adicionar e gerir endereços nas definições do Brave</translation>
+<translation id="6628439996552631516">Botão Gerir endereços; ative para adicionar e gerir endereços nas definições do AI Wize</translation>
 <translation id="1165039591588034296">Erro</translation>
 <translation id="1165174597379888365">A página é visitada</translation>
-<translation id="7108524493226474140">{COUNT,plural, =0{Nenhum}=1{De 1 site (mantém a sessão iniciada na sua Conta Brave)}other{De # sites (mantém a sessão iniciada na sua Conta Brave)}}</translation>
+<translation id="7108524493226474140">{COUNT,plural, =0{Nenhum}=1{De 1 site (mantém a sessão iniciada na sua Conta AI Wize)}other{De # sites (mantém a sessão iniciada na sua Conta AI Wize)}}</translation>
 <translation id="1165852471352757509">Programas não ficcionais e documentários televisivos</translation>
 <translation id="1167877250265821930">Falha ao transferir <ph name="LANGUAGE"/></translation>
 <translation id="1174644974616730562">Envelope Chinese n.º 1</translation>
@@ -140,7 +140,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
     &lt;/ol&gt;</translation>
 <translation id="1257286744552378071">Introduziu a palavra-passe num site que não é gerido pela sua organização. Para proteger a conta, não reutilize a sua palavra-passe noutras aplicações e sites.</translation>
 <translation id="1257553931232494454">níveis de zoom</translation>
-<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para gerir as definições do Brave</translation>
+<translation id="8101828947363663989"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para gerir as definições do AI Wize</translation>
 <translation id="1264309058268477500">Alternativo</translation>
 <translation id="1264974993859112054">Desporto</translation>
 <translation id="1266469291454105242">Desbloqueio do dispositivo</translation>
@@ -222,14 +222,14 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1406812885827747674">Permitir desta vez</translation>
 <translation id="1407135791313364759">Abrir tudo</translation>
 <translation id="1408787208417187241">Agrafo triplo na parte superior</translation>
-<translation id="5488251800208457874">As outras pessoas que usam este dispositivo não veem a sua atividade, por isso pode navegar de forma mais privada. Esta ação não altera a forma como os dados são recolhidos pelos Websites que visita nem os serviços que usam, incluindo o Brave. As transferências, os marcadores e os itens da Lista de leitura são guardados.</translation>
+<translation id="5488251800208457874">As outras pessoas que usam este dispositivo não veem a sua atividade, por isso pode navegar de forma mais privada. Esta ação não altera a forma como os dados são recolhidos pelos Websites que visita nem os serviços que usam, incluindo o AI Wize. As transferências, os marcadores e os itens da Lista de leitura são guardados.</translation>
 <translation id="1410941016594047814">Envelope Invite</translation>
 <translation id="1413407968866574823">Jogos de ação e plataformas</translation>
 <translation id="1413809658975081374">Erro de privacidade</translation>
 <translation id="1414134146594747368">Pré-escola</translation>
 <translation id="141826476809826269">Fim do texto extraído</translation>
 <translation id="3181333394175596679">Enquanto o AI Wize estiver a atualizar esta funcionalidade, os sites podem usar temporariamente cookies de terceiros, a menos que os bloqueie nas definições.</translation>
-<translation id="5305237486453576422">Botão Gerir transferências no Brave; ative para gerir os ficheiros que transferiu no Brave</translation>
+<translation id="5305237486453576422">Botão Gerir transferências no AI Wize; ative para gerir os ficheiros que transferiu no AI Wize</translation>
 <translation id="1422930527989633628">Pode solicitar a deteção de dispositivos Bluetooth próximos</translation>
 <translation id="1426410128494586442">Sim</translation>
 <translation id="1427192966110103169">Piscinas, saunas e spas domésticos</translation>
@@ -241,7 +241,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1432187715652018471">A página quer instalar um controlador de serviço.</translation>
 <translation id="1432581352905426595">Gerir motores de pesquisa</translation>
 <translation id="1433225466058025572">Tente mover os ficheiros novamente</translation>
-<translation id="783200745622992168">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente software malicioso em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.</translation>
+<translation id="783200745622992168">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente software malicioso em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.</translation>
 <translation id="1435940442311036198">Usar uma token de acesso num dispositivo diferente</translation>
 <translation id="1436185428532214179">Pode solicitar a edição de ficheiros e pastas no seu dispositivo</translation>
 <translation id="1441816242347931036">Abrir para continuar</translation>
@@ -273,7 +273,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1492194039220927094">Push das políticas:</translation>
 <translation id="14938948731065592">Periféricos de computador</translation>
 <translation id="1495677929897281669">Voltar ao separador</translation>
-<translation id="1812569385220097122">Mostrar cartões da sua Conta Brave</translation>
+<translation id="1812569385220097122">Mostrar cartões da sua Conta AI Wize</translation>
 <translation id="1504042622576912555">Flauta</translation>
 <translation id="150536342253161096">Notícias locais</translation>
 <translation id="1507202001669085618">&lt;p&gt;Este erro é apresentado se estiver a utilizar um portal Wi-Fi que requer que inicie sessão para poder aceder à Internet.&lt;/p&gt;
@@ -285,7 +285,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1517433312004943670">Número de telefone obrigatório</translation>
 <translation id="1519264250979466059">Data da Compilação</translation>
 <translation id="1521159554480556801">Fibra e tapeçaria</translation>
-<translation id="5524011986660000129">Brave Sheets</translation>
+<translation id="5524011986660000129">AI Wize Sheets</translation>
 <translation id="1524669537550112617">Arrendamentos com mobiliário</translation>
 <translation id="1527263332363067270">A aguardar ligação…</translation>
 <translation id="1528311629279578926">A ligação está bloqueada porque foi iniciada por uma página pública para estabelecer ligação a dispositivos ou servidores na sua rede privada. Atualize esta página para permitir a ligação.</translation>
@@ -300,7 +300,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1549470594296187301">É necessário ativar o JavaScript para usar esta funcionalidade.</translation>
 <translation id="1551884710160394169">Programas sem custo financeiro e shareware</translation>
 <translation id="1553152622374372421">Desportos de inverno</translation>
-<translation id="1705567146636171298">Atualizar o Brave</translation>
+<translation id="1705567146636171298">Atualizar o AI Wize</translation>
 <translation id="1555130319947370107">Azul</translation>
 <translation id="1559231233244409191">Cartolina (parede tripla)</translation>
 <translation id="1559447966090556585">Quer receber notificações?</translation>
@@ -332,7 +332,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1596296697375291157">Filmes policiais, de mistério e tríleres</translation>
 <translation id="1598816256585174656">Chave de acesso do Windows Hello</translation>
 <translation id="1599199147673445968">Tem um cartão novo? <ph name="BEGIN_LINK"/>Introduza os detalhes do cartão<ph name="END_LINK"/></translation>
-<translation id="8523167061098356223">Jogue o Dino Run no Brave</translation>
+<translation id="8523167061098356223">Jogue o Dino Run no AI Wize</translation>
 <translation id="161042844686301425">Turquesa</translation>
 <translation id="1611101756749861742">Segundo rolo</translation>
 <translation id="1615178538289490617">Revogar acesso a <ph name="PORT_NAME"/></translation>
@@ -355,10 +355,10 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1640244768702815859">Experimente <ph name="BEGIN_LINK"/>aceder à página inicial do site<ph name="END_LINK"/>.</translation>
 <translation id="1641976391427233992">Atrasar saída até</translation>
 <translation id="164212631332220697">Utilize o <ph name="CARD_DETAIL"/> no pagamento.</translation>
-<translation id="8088023492467080559">Botão Aceder à verificação de segurança do Brave; ative para aceder à página de verificação de segurança do AI Wize nas definições</translation>
+<translation id="8088023492467080559">Botão Aceder à verificação de segurança do AI Wize; ative para aceder à página de verificação de segurança do AI Wize nas definições</translation>
 <translation id="1644574205037202324">Histórico</translation>
 <translation id="1645368109819982629">Protocolo não suportado</translation>
-<translation id="1995056549836388472">Faça a gestão das definições do Brave</translation>
+<translation id="1995056549836388472">Faça a gestão das definições do AI Wize</translation>
 <translation id="1652415888492971589">JIS B8</translation>
 <translation id="3549478477646243075">Para usar o Gestor de Palavras-passe com o Porta-chaves macOS, reinicie o AI Wize e permita o acesso ao Porta-chaves. Os separadores reabrem depois de serem reiniciados.</translation>
 <translation id="3848846802033604519">O AI Wize simplificou esta página para facilitar a leitura. O AI Wize obteve a página original através de uma ligação segura.</translation>
@@ -366,7 +366,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1658111267661135323">TV e vídeo</translation>
 <translation id="1658918301167915956">dispositivos bluetooth</translation>
 <translation id="1662550410081243962">Guardar e preencher métodos de pagamento</translation>
-<translation id="1838576226863399477">Os cartões e os endereços são provenientes do Brave. Pode geri-los nas <ph name="BEGIN_LINK"/>Definições<ph name="END_LINK"/>.</translation>
+<translation id="1838576226863399477">Os cartões e os endereços são provenientes do AI Wize. Pode geri-los nas <ph name="BEGIN_LINK"/>Definições<ph name="END_LINK"/>.</translation>
 <translation id="1664389769577564606">Fotopolímero flexo</translation>
 <translation id="1668071460721346172">Receber um email</translation>
 <translation id="1671391448414634642">As páginas em <ph name="SOURCE_LANGUAGE"/> serão traduzidas para <ph name="TARGET_LANGUAGE"/> a partir de agora.</translation>
@@ -376,9 +376,9 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="168693727862418163">Ocorreu um erro na validação desta política em relação ao respetivo esquema e a mesma será ignorada.</translation>
 <translation id="168841957122794586">O certificado do servidor contém uma chave criptográfica fraca.</translation>
 <translation id="1689333818294560261">Alcunha</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Como pode gerir os seus dados:<ph name="END_BOLD"/> o AI Wize elimina automaticamente os tópicos com mais de 4 semanas. À medida que navega, um tópico pode voltar a ser apresentado na lista. Também pode bloquear tópicos que não quer que o AI Wize partilhe com sites e desativar os tópicos de anúncios em qualquer altura nas definições do Brave.</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Como pode gerir os seus dados:<ph name="END_BOLD"/> o AI Wize elimina automaticamente os tópicos com mais de 4 semanas. À medida que navega, um tópico pode voltar a ser apresentado na lista. Também pode bloquear tópicos que não quer que o AI Wize partilhe com sites e desativar os tópicos de anúncios em qualquer altura nas definições do AI Wize.</translation>
 <translation id="1697532407822776718">O processo está concluído!</translation>
-<translation id="4030336595318918117">Já pode usar moradas da sua Conta Brave</translation>
+<translation id="4030336595318918117">Já pode usar moradas da sua Conta AI Wize</translation>
 <translation id="1700542542921501212">Pode usar o motor de pesquisa <ph name="SEARCH_ENGINE_NAME"/> para pesquisar na Web.</translation>
 <translation id="1702815194757674443">ROC 16K</translation>
 <translation id="1703835215927279855">Letter</translation>
@@ -423,13 +423,13 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1756026472674246267">Abrir link num novo separador</translation>
 <translation id="175656076281618225">Magia</translation>
 <translation id="1757773103848038814">Tipo de letra de monoespaço</translation>
-<translation id="3727704638090640904">Botão Alterar palavra-passe Brave; ative para alterar a palavra-passe da sua Conta Brave</translation>
+<translation id="3727704638090640904">Botão Alterar palavra-passe AI Wize; ative para alterar a palavra-passe da sua Conta AI Wize</translation>
 <translation id="1763864636252898013">Este servidor não conseguiu provar que é o domínio <ph name="DOMAIN"/>; o sistema operativo do seu dispositivo não confia no respetivo certificado de segurança. Isto pode ser o resultado de uma configuração incorreta ou de um invasor a intercetar a sua ligação.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Experimente executar o Diagnóstico de rede do Windows<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">Foto (de arquivo)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
-<translation id="3480410886581896628">Brave Smart Lock</translation>
-<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as suas informações, privacidade e segurança na Conta Brave</translation>
+<translation id="3480410886581896628">AI Wize Smart Lock</translation>
+<translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as suas informações, privacidade e segurança na Conta AI Wize</translation>
 <translation id="1793631236004319016">Última utilização há <ph name="NUM_HOURS_MINUTES_SECONDS"/></translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, estão disponíveis várias ações, prima Tab para as percorrer.</translation>
 <translation id="1800473098294731951">B9</translation>
@@ -475,10 +475,10 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1873899211667975540">Música rock</translation>
 <translation id="1874224422119691492">Pode alterar se usa o bloqueio de ecrã para preencher palavras-passe nas <ph name="SETTINGS"/></translation>
 <translation id="1875025161375567525">Tabuleiro de fotos</translation>
-<translation id="85321348617848915">Brave Forms</translation>
+<translation id="85321348617848915">AI Wize Forms</translation>
 <translation id="1876399092304384674">Por data</translation>
 <translation id="187918866476621466">Abrir páginas iniciais</translation>
-<translation id="8632214058523487060">Para pagar mais rapidamente da próxima vez, guarde o cartão, o código de segurança encriptado e a morada de faturação na sua Conta Brave</translation>
+<translation id="8632214058523487060">Para pagar mais rapidamente da próxima vez, guarde o cartão, o código de segurança encriptado e a morada de faturação na sua Conta AI Wize</translation>
 <translation id="1883255238294161206">Fechar lista</translation>
 <translation id="1884843295353628214">Jazz</translation>
 <translation id="1890171020361705182">Jogo Dino. Um dinossauro pixelizado desvia-se de catos e de pterodáctilos enquanto corre numa paisagem deserta. Quando ouvir uma pista de áudio, toque para saltar sobre os obstáculos.</translation>
@@ -505,7 +505,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="1954847915560574887">A3x3</translation>
 <translation id="1956486093533522234">Localize, proteja ou apague o seu dispositivo</translation>
 <translation id="1958218078413065209">A sua pontuação mais alta é <ph name="SCORE"/>.</translation>
-<translation id="990584554013599191">Ajude a melhorar a segurança na Web para todos ao enviar <ph name="BEGIN_WHITEPAPER_LINK"/>os URLs de algumas páginas que visita, informações limitadas do sistema e algum conteúdo das páginas<ph name="END_WHITEPAPER_LINK"/> para a Brave. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Política de Privacidade<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="990584554013599191">Ajude a melhorar a segurança na Web para todos ao enviar <ph name="BEGIN_WHITEPAPER_LINK"/>os URLs de algumas páginas que visita, informações limitadas do sistema e algum conteúdo das páginas<ph name="END_WHITEPAPER_LINK"/> para a AI Wize. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Política de Privacidade<ph name="END_PRIVACY_PAGE_LINK"/></translation>
 <translation id="4215502005480745839">O texto e o conteúdo da página são enviados para a AI Wize e podem ser usados para melhorar esta funcionalidade.
   <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
 <translation id="1962204205936693436">Marcadores de <ph name="DOMAIN"/></translation>
@@ -529,8 +529,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2003709556000175978">Repor a palavra-passe agora</translation>
 <translation id="2003775180883135320">Perfuração quádrupla na parte superior</translation>
 <translation id="2004697686368036666">As funcionalidades em alguns sites podem não funcionar</translation>
-<translation id="6855500251167861792">Botão Criar evento; ative para criar rapidamente um novo evento no Calendário Brave</translation>
-<translation id="2342444980304536062">Faça a gestão das autorizações e dos dados armazenados em sites nas Definições do Brave.</translation>
+<translation id="6855500251167861792">Botão Criar evento; ative para criar rapidamente um novo evento no Calendário AI Wize</translation>
+<translation id="2342444980304536062">Faça a gestão das autorizações e dos dados armazenados em sites nas Definições do AI Wize.</translation>
 <translation id="2012276282211112603">Não existem tópicos para apresentar neste momento</translation>
 <translation id="2018769312928511665">Tecido (brilhante)</translation>
 <translation id="2020779321517562133">Remover cópia</translation>
@@ -550,7 +550,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2040463897538655645">Armazenamento amovível</translation>
 <translation id="2040894699575719559">Localização bloqueada</translation>
 <translation id="2042213636306070719">Tabuleiro 7</translation>
-<translation id="3163988908275223348">Iniciar sessão para utilizar palavras-passe guardadas na sua Conta Brave</translation>
+<translation id="3163988908275223348">Iniciar sessão para utilizar palavras-passe guardadas na sua Conta AI Wize</translation>
 <translation id="2045871135676061132">Envelope Personal</translation>
 <translation id="2046951263634619614">Retalhistas de livros</translation>
 <translation id="2048261947532620704">A traduzir a página</translation>
@@ -587,7 +587,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2108755909498034140">Reiniciar o computador</translation>
 <translation id="2111166930115883695">Prima a barra de espaço.</translation>
 <translation id="2112529237938317174">Mostrar detalhes da autorização</translation>
-<translation id="3307744350283817699">Está a ver este aviso porque este site não suporta HTTPS e está no Programa de Proteção avançada da Brave. <ph name="BEGIN_LEARN_MORE_LINK"/>Saiba mais<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="3307744350283817699">Está a ver este aviso porque este site não suporta HTTPS e está no Programa de Proteção avançada da AI Wize. <ph name="BEGIN_LEARN_MORE_LINK"/>Saiba mais<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2113977810652731515">Cartão</translation>
 <translation id="2114841414352855701">Ignorada porque foi substituída por <ph name="POLICY_NAME"/> .</translation>
 <translation id="2118132148597630479">Envelope C5</translation>
@@ -623,7 +623,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2168151236314517198">A impressão deste conteúdo está bloqueada pela política do administrador.</translation>
 <translation id="2175630235841878061">Os ficheiros com mais de 100 MB não estão disponíveis para transferência</translation>
 <translation id="2176974405772725904">Guarde a morada na conta</translation>
-<translation id="7453373354666409887">Botão Atualizar Brave; ative para atualizar o AI Wize nas definições do Brave</translation>
+<translation id="7453373354666409887">Botão Atualizar AI Wize; ative para atualizar o AI Wize nas definições do AI Wize</translation>
 <translation id="2181821976797666341">Políticas</translation>
 <translation id="2182170103603703676">Máquinas de lavar louça</translation>
 <translation id="2183608646556468874">Número de telefone</translation>
@@ -652,7 +652,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2224337661447660594">Sem Internet</translation>
 <translation id="2225927550500503913">Cartão virtual ativado</translation>
 <translation id="2226636330183131181"><ph name="BEGIN_LINK"/>Iniciar sessão<ph name="END_LINK"/> na rede Wi-Fi</translation>
-<translation id="1271895112771969155">Esta morada está atualmente guardada no Brave. Para a usar nos produtos da rede Brave, guarde-a na sua Conta AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="1271895112771969155">Esta morada está atualmente guardada no AI Wize. Para a usar nos produtos da rede AI Wize, guarde-a na sua Conta AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="2229456043301340598">Atalho duplicado ignorado: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2233745931693710080">Disco compacto</translation>
 <translation id="2235344399760031203">Os cookies de terceiros estão bloqueados</translation>
@@ -725,10 +725,10 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="776356972507701422">Com base na legislação da sua região, o AI Wize pede-lhe para escolher o seu motor de pesquisa predefinido. Estes motores de pesquisa são populares na sua região e são apresentados em ordem aleatória.</translation>
 <translation id="2378084239755710604">Cartão para guardar fechado.</translation>
 <translation id="2380886658946992094">Legal</translation>
-<translation id="5475992123321966556">Personalize as ferramentas de acessibilidade nas definições do Brave</translation>
+<translation id="5475992123321966556">Personalize as ferramentas de acessibilidade nas definições do AI Wize</translation>
 <translation id="2384307209577226199">Predefinição empresarial</translation>
 <translation id="238459632961158867">Website</translation>
-<translation id="5244533701344680487">Atualize o AI Wize nas definições do Brave.</translation>
+<translation id="5244533701344680487">Atualize o AI Wize nas definições do AI Wize.</translation>
 <translation id="2386255080630008482">O certificado do servidor foi revogado.</translation>
 <translation id="239203817277685015">Elaborar</translation>
 <translation id="239293030466334554">Conversíveis</translation>
@@ -753,7 +753,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2462599289530201834">Pesquise <ph name="KEYWORD_SHORT_NAME"/></translation>
 <translation id="2463739503403862330">Preencher</translation>
 <translation id="2465688316154986572">Agrafar</translation>
-<translation id="4058615531773510267">Faça a gestão dos ficheiros que transferiu no Brave</translation>
+<translation id="4058615531773510267">Faça a gestão dos ficheiros que transferiu no AI Wize</translation>
 <translation id="2466004615675155314">Mostre informações da Web</translation>
 <translation id="2467272921457885625">Especificações de hardware do dispositivo e estatísticas como o histórico de utilização da CPU/RAM</translation>
 <translation id="2467694685043708798"><ph name="BEGIN_LINK"/>Executar o Diagnóstico de rede<ph name="END_LINK"/></translation>
@@ -762,7 +762,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2470767536994572628">Quando edita anotações, este documento volta à vista de página única e à respetiva rotação original.</translation>
 <translation id="2479148705183875116">Aceder às Definições</translation>
 <translation id="2479410451996844060">URL de pesquisa inválido.</translation>
-<translation id="6944854796979239513">Na sua Conta Brave, <ph name="USER_EMAIL"/></translation>
+<translation id="6944854796979239513">Na sua Conta AI Wize, <ph name="USER_EMAIL"/></translation>
 <translation id="2482878487686419369">Notificações</translation>
 <translation id="248348093745724435">Políticas do computador</translation>
 <translation id="8381375318209119428">Os atacantes no site que está a tentar visitar podem instalar software prejudicial que rouba ou elimina, por exemplo, a sua palavra-passe, fotos, mensagens ou número do cartão de crédito. O AI Wize recomenda vivamente voltar para um site seguro. <ph name="BEGIN_LEARN_MORE_LINK"/>Saiba mais<ph name="END_LEARN_MORE_LINK"/></translation>
@@ -783,13 +783,13 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2521736961081452453">Criar formulário</translation>
 <translation id="2523886232349826891">Guardado apenas neste dispositivo.</translation>
 <translation id="2524461107774643265">Adicionar mais informações</translation>
-<translation id="5151177152796946073">Pode usar moradas guardadas em produtos Brave. Esta morada vai ser guardada na sua Conta Brave, <ph name="ACCOUNT"/>.</translation>
+<translation id="5151177152796946073">Pode usar moradas guardadas em produtos AI Wize. Esta morada vai ser guardada na sua Conta AI Wize, <ph name="ACCOUNT"/>.</translation>
 <translation id="2527451058878391043">O seu Código de Segurança/CVC encontra-se na parte da frente do cartão. É o código de 4 dígitos no canto superior direito acima do número do cartão.</translation>
 <translation id="2529899080962247600">Este campo não deve ter mais de <ph name="MAX_ITEMS_LIMIT"/> entradas. Todas as restantes entradas serão ignoradas.</translation>
 <translation id="253493526287553278">Ver os detalhes do código promocional</translation>
 <translation id="2535659140340599600">{COUNT,plural, =1{e mais 1}other{e mais #}}</translation>
 <translation id="2536110899380797252">Adicionar endereço</translation>
-<translation id="3140033400151786080">As outras pessoas que usam este dispositivo não veem a sua atividade, por isso pode navegar de forma mais privada. Esta ação não altera a forma como os dados são recolhidos pelos Websites que visita nem os serviços que usam, incluindo o Brave. As transferências e os marcadores são guardados.</translation>
+<translation id="3140033400151786080">As outras pessoas que usam este dispositivo não veem a sua atividade, por isso pode navegar de forma mais privada. Esta ação não altera a forma como os dados são recolhidos pelos Websites que visita nem os serviços que usam, incluindo o AI Wize. As transferências e os marcadores são guardados.</translation>
 <translation id="2539524384386349900">Detetar</translation>
 <translation id="2542106216580219892">Surf</translation>
 <translation id="2544546346215446551">O administrador reiniciou o seu dispositivo</translation>
@@ -831,7 +831,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2619052155095999743">Inserir</translation>
 <translation id="2625385379895617796">O seu relógio está adiantado</translation>
 <translation id="262745152991669301">Pode solicitar a ligação a dispositivos USB</translation>
-<translation id="2915787201097107005">Para obter o nível de segurança mais elevado do Brave, <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>ative a proteção melhorada<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
+<translation id="2915787201097107005">Para obter o nível de segurança mais elevado do AI Wize, <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>ative a proteção melhorada<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
 <translation id="2634124572758952069">Não foi possível encontrar o endereço IP do servidor de <ph name="HOST_NAME"/>.</translation>
 <translation id="2639739919103226564">Estado:</translation>
 <translation id="2643134278432436513">Cuidados capilares</translation>
@@ -839,7 +839,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2647852283046201479">Jogos de estratégia</translation>
 <translation id="264810637653812429">Não foram encontrados dispositivos compatíveis.</translation>
 <translation id="2649204054376361687"><ph name="CITY"/>, <ph name="COUNTRY"/></translation>
-<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para limpar o seu histórico de navegação, cookies, cache e muito mais nas Definições do Brave.</translation>
+<translation id="9078005688100552065"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para limpar o seu histórico de navegação, cookies, cache e muito mais nas Definições do AI Wize.</translation>
 <translation id="2650446666397867134">O acesso ao ficheiro foi negado</translation>
 <translation id="2651465929321991146">Histórico e separadores</translation>
 <translation id="2653659639078652383">Enviar</translation>
@@ -875,14 +875,14 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2705137772291741111">A cópia guardada (em cache) deste site era ilegível.</translation>
 <translation id="2709516037105925701">Preenchimento automático</translation>
 <translation id="2713444072780614174">Branco</translation>
-<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para as suas informações de cartões de crédito e pagamentos nas Definições do Brave.</translation>
+<translation id="4131157740532436004"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para as suas informações de cartões de crédito e pagamentos nas Definições do AI Wize.</translation>
 <translation id="2715808615350965923">Super A</translation>
 <translation id="271663710482723385">Prima |<ph name="ACCELERATOR1"/>| + |<ph name="ACCELERATOR2"/>| para sair do ecrã inteiro</translation>
 <translation id="2717336592027046789">Rolo</translation>
 <translation id="2718207025093645426">O dispositivo ou o utilizador gerido não tem uma política carregada.</translation>
 <translation id="2721148159707890343">Pedido com êxito</translation>
 <translation id="2722622039067384533">Mobiliário de sala de estar</translation>
-<translation id="4054726005361352357">Execute uma verificação de segurança nas definições do Brave</translation>
+<translation id="4054726005361352357">Execute uma verificação de segurança nas definições do AI Wize</translation>
 <translation id="2725492561136085792">Prima Enter para ativar esta ação.</translation>
 <translation id="2725927759457695883">Preencher nome completo</translation>
 <translation id="2726001110728089263">Tabuleiro lateral</translation>
@@ -934,14 +934,14 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2859806420264540918">Este site apresenta anúncios intrusivos ou enganadores.</translation>
 <translation id="28618371182701850">Veículos elétricos e recarregáveis</translation>
 <translation id="28761159517501904">Filmes</translation>
-<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir a Navegação segura e muito mais nas Definições do Brave</translation>
+<translation id="1117301625415017890"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir a Navegação segura e muito mais nas Definições do AI Wize</translation>
 <translation id="2878197950673342043">Dobra cruzada</translation>
 <translation id="2878424575911748999">A1</translation>
 <translation id="2879233115503670140">Válido até <ph name="DATE"/>.</translation>
 <translation id="2879694782644540289">usar o bloqueio de ecrã para preencher palavras-passe</translation>
 <translation id="2881276955470682203">Guardar o cartão?</translation>
 <translation id="2882949212241984732">Dobra simétrica dupla</translation>
-<translation id="5539282829066374332">O seu motor de pesquisa no Brave</translation>
+<translation id="5539282829066374332">O seu motor de pesquisa no AI Wize</translation>
 <translation id="2893773853358652045">Quarto rolo</translation>
 <translation id="2900528713135656174">Criar evento</translation>
 <translation id="2902312830803030883">Mais ações</translation>
@@ -958,8 +958,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2922350208395188000">Não é possível verificar o certificado do servidor.</translation>
 <translation id="2922792708490674">{0,plural, =1{A transferência do ficheiro foi bloqueada}other{A transferência de <ph name="FILE_COUNT"/> ficheiros foi bloqueada}}</translation>
 <translation id="2923275635648511531">Produtos de bronzeamento e proteção solar</translation>
-<translation id="3249101334307130799">Definições do Brave</translation>
-<translation id="2039679058572892861">Botão Criar documento; ative para criar rapidamente um novo documento Brave</translation>
+<translation id="3249101334307130799">Definições do AI Wize</translation>
+<translation id="2039679058572892861">Botão Criar documento; ative para criar rapidamente um novo documento AI Wize</translation>
 <translation id="2925673989565098301">Método de fornecimento</translation>
 <translation id="2928426578619531300">Utilizador afiliado</translation>
 <translation id="2928905813689894207">Endereço de faturação</translation>
@@ -984,7 +984,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="2958544468932521864">Críquete</translation>
 <translation id="2959113999220720579">Cuidados para o rosto e o corpo</translation>
 <translation id="2962073860865348475">12 x 18 pol.</translation>
-<translation id="2470357430970446202">guarde-a na sua Conta Brave</translation>
+<translation id="2470357430970446202">guarde-a na sua Conta AI Wize</translation>
 <translation id="2968103128155246731">Carrinhas e monovolumes</translation>
 <translation id="2972581237482394796">&amp;Repetir</translation>
 <translation id="2977665033722899841"><ph name="ROW_NAME"/> selecionado atualmente. <ph name="ROW_CONTENT"/></translation>
@@ -1018,9 +1018,9 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3037177537145227281">Monitorizar o preço</translation>
 <translation id="3037605927509011580">Ah, bolas!!</translation>
 <translation id="3041612393474885105">Informações do certificado</translation>
-<translation id="8418829431154568330">Histórico do Ambiente de Trabalho Remoto do Brave, incluindo datas/horas, anfitriões e IDs de sessão de cliente</translation>
+<translation id="8418829431154568330">Histórico do Ambiente de Trabalho Remoto do AI Wize, incluindo datas/horas, anfitriões e IDs de sessão de cliente</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/>: descida do preço de <ph name="PRICE_DROP"/></translation>
-<translation id="4832983047807637948">O AI Wize elimina automaticamente os tópicos com mais de 4 semanas. Enquanto navega, um tópico pode voltar a ser apresentado na lista. Em alternativa, pode bloquear os tópicos que não quer que o AI Wize partilhe com sites. Saiba mais sobre a gestão da privacidade dos anúncios no Brave.</translation>
+<translation id="4832983047807637948">O AI Wize elimina automaticamente os tópicos com mais de 4 semanas. Enquanto navega, um tópico pode voltar a ser apresentado na lista. Em alternativa, pode bloquear os tópicos que não quer que o AI Wize partilhe com sites. Saiba mais sobre a gestão da privacidade dos anúncios no AI Wize.</translation>
 <translation id="3061707000357573562">Serviço de patch</translation>
 <translation id="306573536155379004">Jogo iniciado.</translation>
 <translation id="3067505415088964188">O preço é baixo</translation>
@@ -1085,7 +1085,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3194737229810486521"><ph name="URL"/> quer armazenar permanentemente dados no seu dispositivo.</translation>
 <translation id="3195213714973468956"><ph name="PRINTER_NAME"/> no servidor <ph name="SERVER_NAME"/></translation>
 <translation id="3197136577151645743">Pode pedir para saber quando está a utilizar ativamente este dispositivo</translation>
-<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as informações que sincroniza nas Definições do Brave.</translation>
+<translation id="6629751330289763215"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as informações que sincroniza nas Definições do AI Wize.</translation>
 <translation id="3203025201812691413">O URL não pode estar vazio</translation>
 <translation id="320323717674993345">Cancelar pagamento</translation>
 <translation id="3203366800380907218">Da Web</translation>
@@ -1117,7 +1117,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3252772880526154546">Arquitetura</translation>
 <translation id="3254301855501243548">18 x 22 pol.</translation>
 <translation id="3256863843508922226">Reforma e pensões</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para criar rapidamente um novo evento no Calendário Brave</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para criar rapidamente um novo evento no Calendário AI Wize</translation>
 <translation id="3261488570342242926">Saiba mais sobre cartões virtuais</translation>
 <translation id="3262698603497362968">Opções de compra</translation>
 <translation id="3266367459139339908">Estamos a lançar novas formas de limitar o que os sites podem saber sobre si quando lhe mostram anúncios personalizados, por exemplo:</translation>
@@ -1137,7 +1137,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3287510313208355388">Transferir quando estiver online</translation>
 <translation id="3288238092761586174"><ph name="URL"/> pode ter de efetuar passos adicionais para validar o seu pagamento</translation>
 <translation id="3293642807462928945">Saiba mais acerca da política <ph name="POLICY_NAME"/></translation>
-<translation id="5894665462526421022">Veja e efetue a gestão das suas palavras-passe nas definições do Brave.</translation>
+<translation id="5894665462526421022">Veja e efetue a gestão das suas palavras-passe nas definições do AI Wize.</translation>
 <translation id="3299098170013242198">O Windows Hello está ativado para preencher palavras-passe</translation>
 <translation id="3299720788264079132">Algo correu mal durante a utilização da funcionalidade <ph name="FEATURE_NAME"/></translation>
 <translation id="3303176609391916566">30 x 42 pol.</translation>
@@ -1145,7 +1145,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3304073249511302126">procura de bluetooth</translation>
 <translation id="3304777285002411338">A2x3</translation>
 <translation id="33073482541490531">A palavra-passe que acabou de usar foi encontrada numa violação de dados. O Gestor de Palavras-passe recomenda que altere esta palavra-passe agora.</translation>
-<translation id="4731386748664539266">Botão Personalizar o Brave; ative para personalizar o aspeto do navegador</translation>
+<translation id="4731386748664539266">Botão Personalizar o AI Wize; ative para personalizar o aspeto do navegador</translation>
 <translation id="3308006649705061278">Unidade organizacional (OU)</translation>
 <translation id="3324687287337751929">4 x 6 pol.</translation>
 <translation id="3324983252691184275">Carmesim</translation>
@@ -1175,7 +1175,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3369459162151165748">Peças e acessórios de veículos</translation>
 <translation id="2273851479262317744">Definir o AI Wize como o navegador predefinido</translation>
 <translation id="337363190475750230">Desaprovisionado</translation>
-<translation id="7740652748540081864">Executar verificação de segurança do Brave</translation>
+<translation id="7740652748540081864">Executar verificação de segurança do AI Wize</translation>
 <translation id="3377144306166885718">O servidor utilizou uma versão obsoleta do TLS.</translation>
 <translation id="3377188786107721145">Erro de análise da política</translation>
 <translation id="3377736046129930310">Usar o bloqueio de ecrã para confirmar os cartões mais rapidamente</translation>
@@ -1195,7 +1195,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3407789382767355356">início de sessão de terceiros</translation>
 <translation id="3409896703495473338">Gerir definições de segurança</translation>
 <translation id="3414952576877147120">Tamanho:</translation>
-<translation id="7115177860507615612">Botão Jogar AI Wize Dino; ative para jogar o Dino Run no Brave</translation>
+<translation id="7115177860507615612">Botão Jogar AI Wize Dino; ative para jogar o Dino Run no AI Wize</translation>
 <translation id="3422248202833853650">Experimente fechar outros programas para libertar memória.</translation>
 <translation id="3422472998109090673"><ph name="HOST_NAME"/> está inacessível de momento.</translation>
 <translation id="3423742043356668186">Especificado pelo sistema</translation>
@@ -1211,7 +1211,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="343474037147570563">Os ficheiros que carrega ou anexa são enviados para o Google Cloud ou terceiros para análise. Por exemplo, podem ser analisados quanto a dados confidenciais ou software malicioso, ser armazenados com base nas políticas da empresa e ficar visíveis para o seu administrador.</translation>
 <translation id="3435557549311968410">Contínuo (curto)</translation>
 <translation id="3435738964857648380">Segurança</translation>
-<translation id="4527130811319726464">Usar palavras-passe guardadas na sua Conta Brave</translation>
+<translation id="4527130811319726464">Usar palavras-passe guardadas na sua Conta AI Wize</translation>
 <translation id="3440783957068352691">quadrada</translation>
 <translation id="3441653493275994384">Ecrã</translation>
 <translation id="3443504041532578451">Disco ótico (acetinado)</translation>
@@ -1225,10 +1225,10 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3461266716147554923"><ph name="URL"/> quer ver o texto e as imagens copiados para a área de transferência.</translation>
 <translation id="3461824795358126837">Marcador</translation>
 <translation id="3462200631372590220">Ocultar avançadas</translation>
-<translation id="3465972433695735758">Este PDF está inacessível. Texto extraído com tecnologia de IA da Brave</translation>
+<translation id="3465972433695735758">Este PDF está inacessível. Texto extraído com tecnologia de IA da AI Wize</translation>
 <translation id="346601286295919445">Química</translation>
 <translation id="3468054117417088249"><ph name="TAB_SWITCH_SUFFIX"/>, atualmente aberto, prima Tab e, em seguida, Enter para mudar para o separador aberto.</translation>
-<translation id="3807334561457710885">Botão Personalizar tipos de letra no Brave; ative para personalizar os tipos de letra e os respetivos tamanhos no Brave</translation>
+<translation id="3807334561457710885">Botão Personalizar tipos de letra no AI Wize; ative para personalizar os tipos de letra e os respetivos tamanhos no AI Wize</translation>
 <translation id="3477679029130949506">Fichas de filmes e horários de salas de cinema</translation>
 <translation id="3478033058537426179">Por grupo</translation>
 <translation id="3479552764303398839">Agora não</translation>
@@ -1291,15 +1291,15 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3586931643579894722">Ocultar detalhes</translation>
 <translation id="3587738293690942763">Central</translation>
 <translation id="3600246354004376029"><ph name="TITLE"/>, <ph name="DOMAIN"/>, <ph name="TIME"/></translation>
-<translation id="8476504968862670676">Botão Gerir definições de privacidade no Brave; ative para aceder às definições de privacidade da sua Conta Brave</translation>
+<translation id="8476504968862670676">Botão Gerir definições de privacidade no AI Wize; ative para aceder às definições de privacidade da sua Conta AI Wize</translation>
 <translation id="3603507503523709">App bloqueada pelo seu administrador</translation>
 <translation id="3605899229568538311">5 x 5 pol.</translation>
 <translation id="3608932978122581043">Guiar a orientação</translation>
-<translation id="1737525120923015525">Para pagar mais rapidamente da próxima vez, guarde o cartão, o nome e a morada de faturação na sua Conta Brave</translation>
+<translation id="1737525120923015525">Para pagar mais rapidamente da próxima vez, guarde o cartão, o nome e a morada de faturação na sua Conta AI Wize</translation>
 <translation id="3611317423880285981">Produtos para o lar</translation>
 <translation id="3614103345592970299">Tamanho 2</translation>
 <translation id="361438452008624280">Entrada da lista "<ph name="LANGUAGE_ID"/>": idioma desconhecido ou não suportado.</translation>
-<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para executar a verificação de segurança nas definições do Brave</translation>
+<translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para executar a verificação de segurança nas definições do AI Wize</translation>
 <translation id="3615309852743236517">Manicures e pedicures</translation>
 <translation id="3620239073311576716">Uniformes e vestuário de trabalho</translation>
 <translation id="36224234498066874">Limpar dados de navegação...</translation>
@@ -1308,7 +1308,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3628905806504633297">{0,plural, =1{A política do administrador não recomenda a transferência deste ficheiro para <ph name="DESTINATION_NAME"/>}other{A política do administrador não recomenda a transferência destes ficheiros para <ph name="DESTINATION_NAME"/>}}</translation>
 <translation id="3630155396527302611">Se já estiver indicado na lista como sendo um programa com permissão para aceder à rede, experimente
     removê-lo da lista e adicioná-lo novamente.</translation>
-<translation id="3599570280787620691">Botão Localizar o meu dispositivo; ative para aceder ao serviço de localização do dispositivo na Conta Brave</translation>
+<translation id="3599570280787620691">Botão Localizar o meu dispositivo; ative para aceder ao serviço de localização do dispositivo na Conta AI Wize</translation>
 <translation id="3630699740441428070">Os administradores deste dispositivo configuraram a ligação de rede, que lhes pode permitir ver o tráfego de rede, incluindo os Websites visitados por si.</translation>
 <translation id="3631244953324577188">Biometria</translation>
 <translation id="3632503704576938756">Partilha de ecrã retomada</translation>
@@ -1362,7 +1362,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3714633008798122362">calendário Web</translation>
 <translation id="3714780639079136834">Ativar os dados móveis ou o Wi-Fi</translation>
 <translation id="3715016660240337709">{0,plural, =1{O carregamento do ficheiro foi bloqueado}other{O carregamento de <ph name="FILE_COUNT"/> ficheiros foi bloqueado}}</translation>
-<translation id="2241987852555440600">Quando o AI Wize sinaliza eventos de segurança, são enviados dados relevantes acerca dos eventos ao seu administrador. Estes podem incluir os URLs das páginas que visita no Brave, os metadados ou os nomes de ficheiros, as falhas de sistema do navegador ou dos separadores e o nome de utilizador que usa para iniciar sessão nas aplicações baseadas na Web, no dispositivo e no Brave.</translation>
+<translation id="2241987852555440600">Quando o AI Wize sinaliza eventos de segurança, são enviados dados relevantes acerca dos eventos ao seu administrador. Estes podem incluir os URLs das páginas que visita no AI Wize, os metadados ou os nomes de ficheiros, as falhas de sistema do navegador ou dos separadores e o nome de utilizador que usa para iniciar sessão nas aplicações baseadas na Web, no dispositivo e no AI Wize.</translation>
 <translation id="3715597595485130451">Estabelecer ligação a redes Wi-Fi</translation>
 <translation id="3717027428350673159"><ph name="BEGIN_LINK"/>Rever a configuração do proxy, da firewall e de DNS<ph name="END_LINK"/></translation>
 <translation id="3723663469265383848">Durante a atualização, não vai poder usar o seu dispositivo durante, no máximo, 10 minutos.</translation>
@@ -1380,7 +1380,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3743765582345153106">Validar sempre quando usar o preenchimento automático</translation>
 <translation id="3744111561329211289">Sincronização em segundo plano</translation>
 <translation id="3744212718085287312">Torná-lo mais seguro com um cartão virtual da próxima vez?</translation>
-<translation id="8500803517201014627">O seu texto e o conteúdo e o URL da página em que está a escrever vão ser enviados para a Brave, revistos por humanos e usados para melhorar esta funcionalidade. Evite introduzir informações pessoais (como detalhes médicos ou financeiros) ou usar esta ferramenta em sites que contenham informações privadas ou confidenciais.</translation>
+<translation id="8500803517201014627">O seu texto e o conteúdo e o URL da página em que está a escrever vão ser enviados para a AI Wize, revistos por humanos e usados para melhorar esta funcionalidade. Evite introduzir informações pessoais (como detalhes médicos ou financeiros) ou usar esta ferramenta em sites que contenham informações privadas ou confidenciais.</translation>
 <translation id="3748009735914587286">Metal (alto brilho)</translation>
 <translation id="3748148204939282805">Os atacantes em <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> podem levá-lo a tomar medidas perigosas, como instalar software ou revelar as suas informações pessoais (por exemplo, palavras-passe, números de telefone ou cartões de crédito). <ph name="BEGIN_LEARN_MORE_LINK"/>Saiba mais<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3748912308089554501">Indústria da aviação</translation>
@@ -1395,7 +1395,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3767485424735936570">A ação de copiar e colar este conteúdo para <ph name="VM_NAME"/> não é recomendada pela política do administrador.</translation>
 <translation id="3772211998634047851">Papel (bond)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para criar rapidamente uma nova nota no AI Wize Keep</translation>
-<translation id="6473814193688111215">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente software prejudicial em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.</translation>
+<translation id="6473814193688111215">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente software prejudicial em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.</translation>
 <translation id="3780694243617746492">Tabuleiro de saída</translation>
 <translation id="3781428340399460090">Rosa choque</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1454,8 +1454,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3906954721959377182">Tablet</translation>
 <translation id="3909695131102177774"><ph name="LABEL"/> <ph name="ERROR"/></translation>
 <translation id="3910231615117880630">Saiba mais sobre conteúdo incorporado</translation>
-<translation id="5852873875468214161">Pode mudar de ideias em qualquer altura nas definições do Brave</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Como pode gerir os seus dados:<ph name="END_BOLD"/> o AI Wize elimina automaticamente os sites com mais de 30 dias. Um site que visita novamente pode voltar a aparecer na lista. Também pode impedir que um site lhe sugira anúncios e desativar os anúncios sugeridos por sites em qualquer altura nas definições do Brave.</translation>
+<translation id="5852873875468214161">Pode mudar de ideias em qualquer altura nas definições do AI Wize</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Como pode gerir os seus dados:<ph name="END_BOLD"/> o AI Wize elimina automaticamente os sites com mais de 30 dias. Um site que visita novamente pode voltar a aparecer na lista. Também pode impedir que um site lhe sugira anúncios e desativar os anúncios sugeridos por sites em qualquer altura nas definições do AI Wize.</translation>
 <translation id="3921869355029467742">Introduzir o código de segurança</translation>
 <translation id="3927932062596804919">Recusar</translation>
 <translation id="3930260846839546333">Bolsas de mão e carteiras</translation>
@@ -1474,7 +1474,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="3950820424414687140">Iniciar sessão</translation>
 <translation id="3953505489397572035">Este preço é normal</translation>
 <translation id="3958057596965527988">4 x 4 pol.</translation>
-<translation id="8475602291812563124">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente phishing em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.<ph name="NEW_LINE"/>Por vezes, até os sites normalmente seguros são comprometidos por atacantes. <ph name="BEGIN_ERROR_LINK"/>Informe-nos<ph name="END_ERROR_LINK"/> se considerar que houve um erro e que este site não representa um perigo.</translation>
+<translation id="8475602291812563124">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize. A Navegação Segura <ph name="BEGIN_LINK"/>encontrou recentemente phishing em <ph name="SITE"/><ph name="END_LINK"/>, que está incorporado no site que está a tentar visitar.<ph name="NEW_LINE"/>Por vezes, até os sites normalmente seguros são comprometidos por atacantes. <ph name="BEGIN_ERROR_LINK"/>Informe-nos<ph name="END_ERROR_LINK"/> se considerar que houve um erro e que este site não representa um perigo.</translation>
 <translation id="3961148744525529027">A página do controlador do pagamento está aberta até meio.</translation>
 <translation id="3962859241508114581">Faixa anterior</translation>
 <translation id="3963721102035795474">Modo de leitor</translation>
@@ -1507,7 +1507,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4040350669425716613">Universidades</translation>
 <translation id="4047351652147966654">18 x 24 pol.</translation>
 <translation id="404831776305217138">O URL de atualização da extensão com o ID "<ph name="EXTENSION_ID"/>" é inválido ou usa um esquema não suportado. Os esquemas suportados são: <ph name="HTTP_SCHEME"/>, <ph name="HTTPS_SCHEME"/> e <ph name="FILE_SCHEME"/>.</translation>
-<translation id="2635033286761217583">Vai poder usá-la nos produtos da rede Brave</translation>
+<translation id="2635033286761217583">Vai poder usá-la nos produtos da rede AI Wize</translation>
 <translation id="336808635693308470">O AI Wize está a tentar editar os métodos de pagamento.</translation>
 <translation id="405399507749852140">Obtenha alertas se o preço descer em qualquer site</translation>
 <translation id="4056223980640387499">Sépia</translation>
@@ -1533,7 +1533,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4096237801206588987">11 x 15 pol.</translation>
 <translation id="4098354747657067197">O site seguinte é fraudulento</translation>
 <translation id="4099048595830172239">A política do administrador não recomenda a partilha do seu ecrã com a app <ph name="APPLICATION_TITLE"/> quando está visível conteúdo confidencial:</translation>
-<translation id="5393384033795488834"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para personalizar os tipos de letra e os respetivos tamanhos no Brave</translation>
+<translation id="5393384033795488834"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para personalizar os tipos de letra e os respetivos tamanhos no AI Wize</translation>
 <translation id="4101413244023615925">Texto e gráficos</translation>
 <translation id="410148943680000050">Edição eletrónica</translation>
 <translation id="4103249731201008433">Número de série do dispositivo é inválido</translation>
@@ -1582,7 +1582,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4179515394835346607"><ph name="ROW_NAME"/> <ph name="ROW_CONTENT"/></translation>
 <translation id="4186035307311647330">Desativar acompanhamento de preços</translation>
 <translation id="4191334393248735295">Comprimento</translation>
-<translation id="9150836098508392713">Botão Ver sugestões do Brave; ative para saber mais acerca das funcionalidades do Brave</translation>
+<translation id="9150836098508392713">Botão Ver sugestões do AI Wize; ative para saber mais acerca das funcionalidades do AI Wize</translation>
 <translation id="4195643157523330669">Abrir num novo separador</translation>
 <translation id="4196861286325780578">&amp;Refazer movimentação</translation>
 <translation id="4199637363739172710">Relógios</translation>
@@ -1632,8 +1632,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4281998142035485137">{0,plural, =1{Abrir ficheiro confidencial?}other{Abrir ficheiros confidenciais?}}</translation>
 <translation id="4282346679996504092">Os alertas para este produto foram desativados e o marcador foi removido</translation>
 <translation id="4285498937028063278">Soltar</translation>
-<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Este cartão foi guardado na sua Conta Brave.}other{Estes cartões foram guardados na sua Conta Brave.}}</translation>
-<translation id="2820825061680010514">Privacidade de anúncios melhorada no Brave</translation>
+<translation id="8314946990939758167">{NUM_CARDS,plural, =1{Este cartão foi guardado na sua Conta AI Wize.}other{Estes cartões foram guardados na sua Conta AI Wize.}}</translation>
+<translation id="2820825061680010514">Privacidade de anúncios melhorada no AI Wize</translation>
 <translation id="4290920330097335010">Nunca permitir</translation>
 <translation id="4296207570293932800">Nova funcionalidade de privacidade dos anúncios já disponível</translation>
 <translation id="4297502707443874121">Miniatura da página <ph name="THUMBNAIL_PAGE"/></translation>
@@ -1670,7 +1670,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4336913590841287350">Esta política ainda não é suportada como uma Política do Utilizador no iOS.</translation>
 <translation id="5792122559159836842">Uma vez que este anúncio utiliza demasiados recursos para o seu dispositivo, o AI Wize removeu-o.</translation>
 <translation id="4340810192899866471">Importar de JSON</translation>
-<translation id="6116812392674177288">Este computador não é detetado como sendo gerido pela empresa, por isso, a política apenas pode instalar automaticamente extensões alojadas na Web Store do Brave. O URL de atualização da Web Store do AI Wize é "<ph name="CWS_UPDATE_URL"/>".</translation>
+<translation id="6116812392674177288">Este computador não é detetado como sendo gerido pela empresa, por isso, a política apenas pode instalar automaticamente extensões alojadas na Web Store do AI Wize. O URL de atualização da Web Store do AI Wize é "<ph name="CWS_UPDATE_URL"/>".</translation>
 <translation id="4348834659292907206">A ligação para <ph name="SITE"/> não é segura</translation>
 <translation id="4349365535725594680">Não é possível partilhar o conteúdo confidencial</translation>
 <translation id="4349810866125026513">Carregar mesmo assim</translation>
@@ -1713,12 +1713,12 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4438821706955556403">Preço habitual</translation>
 <translation id="4441832193888514600">Ignorado porque a política só pode ser definida como uma Política do Utilizador da nuvem.</translation>
 <translation id="4445133368066241428">Tópicos populares</translation>
-<translation id="7615139038297294584">Botão Gerir definições de sites; ative para gerir autorizações e dados armazenados em sites nas definições do Brave</translation>
+<translation id="7615139038297294584">Botão Gerir definições de sites; ative para gerir autorizações e dados armazenados em sites nas definições do AI Wize</translation>
 <translation id="4451135742916150903">Pode solicitar a ligação a dispositivos HID</translation>
 <translation id="4451684391620232683">Texto apresentado ao utilizador:</translation>
 <translation id="8416018650396907203">A palavra-passe que acabou de utilizar foi encontrada numa violação de dados. Para proteger as suas contas, o Gestor de palavras-passe da AI Wize recomenda que verifique as suas palavras-passe guardadas.</translation>
 <translation id="4464826014807964867">Websites com informações sobre a sua entidade</translation>
-<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Ative a Proteção melhorada<ph name="END_ENHANCED_PROTECTION_LINK"/> para desfrutar do nível de segurança mais elevado do Brave</translation>
+<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Ative a Proteção melhorada<ph name="END_ENHANCED_PROTECTION_LINK"/> para desfrutar do nível de segurança mais elevado do AI Wize</translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>. <ph name="LEARN_MORE_TEXT"/></translation>
 <translation id="4476953670630786061">Este formulário não é seguro. O preenchimento automático foi desativado.</translation>
 <translation id="4477350412780666475">Faixa seguinte</translation>
@@ -1727,7 +1727,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="448363931695049633">Pizarias</translation>
 <translation id="4489023393592172404">Envelope Kaku 4</translation>
 <translation id="4490717597759821841">A7</translation>
-<translation id="3966104135245031874">Encriptar palavras-passe sincronizadas com a sua Conta Brave</translation>
+<translation id="3966104135245031874">Encriptar palavras-passe sincronizadas com a sua Conta AI Wize</translation>
 <translation id="4493480324863638523">URL inválido. Tem de ser um URL com um esquema padrão, por exemplo, http://example.com ou https://example.com.</translation>
 <translation id="7622628059331736328">Pode ver tópicos dos anúncios nas definições e bloquear os que não quer partilhar com os sites. O AI Wize também elimina automaticamente os tópicos de anúncios com mais de 4 semanas.</translation>
 <translation id="4500587658229086076">conteúdo inseguro</translation>
@@ -1743,7 +1743,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4521280267704259211">Envelope Monarch</translation>
 <translation id="4521916730539354575">Tabuleiro esquerdo</translation>
 <translation id="4522570452068850558">Detalhes</translation>
-<translation id="6221032662362020209">Guardar IBAN na Conta Brave?</translation>
+<translation id="6221032662362020209">Guardar IBAN na Conta AI Wize?</translation>
 <translation id="4523643381056109546">Sinalização</translation>
 <translation id="4524138615196389145">Confirme os seus cartões mais rapidamente ao utilizar o WebAuthn a partir de agora.</translation>
 <translation id="45243788195988825">Bloquear <ph name="TOPIC"/></translation>
@@ -1753,7 +1753,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4540780316273593836">Algo correu mal</translation>
 <translation id="4541810033354695636">realidade aumentada</translation>
 <translation id="4542971377163063093">Tabuleiro 6</translation>
-<translation id="563788859854213593">Para pagar mais rapidamente da próxima vez, armazene o cartão e a morada de faturação na sua Conta Brave</translation>
+<translation id="563788859854213593">Para pagar mais rapidamente da próxima vez, armazene o cartão e a morada de faturação na sua Conta AI Wize</translation>
 <translation id="4546730006268514143">A transferência excedeu o tempo limite</translation>
 <translation id="455113658016510503">A9</translation>
 <translation id="4556069465387849460">Está a usar o bloqueio de ecrã para preencher palavras-passe</translation>
@@ -1772,7 +1772,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4598556348158889687">Gestão de armazenamento</translation>
 <translation id="4600084978141515058">Cozinha vegana</translation>
 <translation id="4602465984861132303">Bowling</translation>
-<translation id="8338928872956435647">Ver sugestões do Brave</translation>
+<translation id="8338928872956435647">Ver sugestões do AI Wize</translation>
 <translation id="460848736049414407">Bloqueado pelo administrador</translation>
 <translation id="4610279718074907952">Este site está num grupo, definido por <ph name="SET_OWNER"/>, que pode ver a sua atividade</translation>
 <translation id="46128681529823442">Equipamento de futebol</translation>
@@ -1806,7 +1806,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4673460618347856347">Jogo Dino, jogar</translation>
 <translation id="467662567472608290">Este servidor não conseguiu provar que é o domínio <ph name="DOMAIN"/>; o respetivo certificado de segurança contém erros. Isto pode ser o resultado de uma configuração incorreta ou de um invasor a intercetar a sua ligação.</translation>
 <translation id="4677585247300749148"><ph name="URL"/> quer responder a eventos de acessibilidade.</translation>
-<translation id="8197094463444457125">Brave Slides</translation>
+<translation id="8197094463444457125">AI Wize Slides</translation>
 <translation id="4682496302933121474">Traduzir a página?</translation>
 <translation id="468314109939257734">Veja o número do cartão virtual</translation>
 <translation id="4687718960473379118">Anúncios sugeridos por sites</translation>
@@ -1846,12 +1846,12 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4754461935447132332">Não permitida para sites não seguros</translation>
 <translation id="4756388243121344051">&amp;Histórico</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
-<translation id="5644030191910182707">Chave de acesso do seu perfil do Brave</translation>
+<translation id="5644030191910182707">Chave de acesso do seu perfil do AI Wize</translation>
 <translation id="1015173303159845845">Acabou de introduzir a sua palavra-passe num site fraudulento. Para proteger as suas contas, o AI Wize recomenda verificar as palavras-chave guardadas.</translation>
 <translation id="4758311279753947758">Adicionar informações de contacto</translation>
 <translation id="4761104368405085019">Usar o seu microfone</translation>
 <translation id="4761326898079498987">Reveja para obter mais detalhes</translation>
-<translation id="1980929286541331105">Executar verificação de segurança do Brave</translation>
+<translation id="1980929286541331105">Executar verificação de segurança do AI Wize</translation>
 <translation id="4763196677855776703">Termos de utilização facultados por <ph name="URL"/></translation>
 <translation id="4764680219299728632">Fogões, placas e fornos</translation>
 <translation id="4764776831041365478">A página Web em <ph name="URL"/> poderá estar temporariamente inactiva ou poderá ter sido movida permanentemente para um novo endereço Web.</translation>
@@ -1860,7 +1860,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4774055414220872623">Materiais para obras de arte e artesanato</translation>
 <translation id="477945296921629067">{NUM_POPUPS,plural, =1{Pop-up bloqueado}other{# pop-ups bloqueados}}</translation>
 <translation id="4780366598804516005">Caixa de correio 1</translation>
-<translation id="752757955979594126">Gerir Conta Brave</translation>
+<translation id="752757955979594126">Gerir Conta AI Wize</translation>
 <translation id="4785689107224900852">Mudar para este separador</translation>
 <translation id="4786804728079074733">Voleibol</translation>
 <translation id="4787182171088676626">Envelope (fino)</translation>
@@ -1886,8 +1886,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4831993743164297314">Papel para imagesetter</translation>
 <translation id="483241715238664915">Ativar avisos</translation>
 <translation id="4834250788637067901">Métodos de pagamento, ofertas e endereços com o Google Pay</translation>
-<translation id="1923748633297576468">Pague mais rápido da próxima vez e proteja o seu cartão com a segurança líder da indústria da Brave.</translation>
-<translation id="246176083348620700">Ver o Histórico do Brave</translation>
+<translation id="1923748633297576468">Pague mais rápido da próxima vez e proteja o seu cartão com a segurança líder da indústria da AI Wize.</translation>
+<translation id="246176083348620700">Ver o Histórico do AI Wize</translation>
 <translation id="484462545196658690">Auto</translation>
 <translation id="484671803914931257">Obtenha descontos no comerciante <ph name="MERCHANT_NAME"/> e outros</translation>
 <translation id="484988093836683706">Usar desbloqueio do dispositivo</translation>
@@ -1941,15 +1941,15 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="4934780484581617878">Gestão de janelas</translation>
 <translation id="4936134414789135531">Não foi possível encontrar o <ph name="VALUE_NAME"/> inserido.</translation>
 <translation id="4936675324097895694">Finanças</translation>
-<translation id="712756862344567094">Botão Limpar dados de navegação; ative para limpar o seu histórico de navegação, cookies, cache e muito mais nas definições do Brave</translation>
+<translation id="712756862344567094">Botão Limpar dados de navegação; ative para limpar o seu histórico de navegação, cookies, cache e muito mais nas definições do AI Wize</translation>
 <translation id="4943872375798546930">Nenhum resultado</translation>
 <translation id="4943933359574417591">Mensagens de texto e instantâneas</translation>
 <translation id="4950898438188848926">Botão de mudança de separador: prima Enter para mudar para o separador aberto, <ph name="TAB_SWITCH_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="495170559598752135">Ações</translation>
 <translation id="4953689047182316270">Responder a eventos de acessibilidade</translation>
-<translation id="2351178841237473727">Botão Ver o Histórico do Brave; ative para ver e gerir o histórico de navegação nas definições do Brave</translation>
+<translation id="2351178841237473727">Botão Ver o Histórico do AI Wize; ative para ver e gerir o histórico de navegação nas definições do AI Wize</translation>
 <translation id="4958444002117714549">Expandir lista</translation>
-<translation id="5398999400894437316">Pode fazer alterações nas definições de privacidade dos anúncios do Brave</translation>
+<translation id="5398999400894437316">Pode fazer alterações nas definições de privacidade dos anúncios do AI Wize</translation>
 <translation id="4960203958361543136">Escolha o seu motor de pesquisa</translation>
 <translation id="4964505745997821360">Seguro de saúde</translation>
 <translation id="4967366744630699583">Editar morada</translation>
@@ -1981,9 +1981,9 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5018422839182700155">Não é possível abrir esta página</translation>
 <translation id="5018802455907704660">16 x 20 pol.</translation>
 <translation id="5019198164206649151">Armazenamento de segurança em mau estado</translation>
-<translation id="2013297594801702701">Pode usar moradas guardadas entre produtos Brave. Esta morada vai ser guardada na sua Conta Brave, <ph name="USER_EMAIL"/>.</translation>
+<translation id="2013297594801702701">Pode usar moradas guardadas entre produtos AI Wize. Esta morada vai ser guardada na sua Conta AI Wize, <ph name="USER_EMAIL"/>.</translation>
 <translation id="5020776957610079374">Música do mundo</translation>
-<translation id="6516968977334148048">Acompanhe os preços com o Brave</translation>
+<translation id="6516968977334148048">Acompanhe os preços com o AI Wize</translation>
 <translation id="5023310440958281426">Rever as políticas do gestor</translation>
 <translation id="5030338702439866405">Emitido por</translation>
 <translation id="503069730517007720">É necessário um certificado de raiz para o "<ph name="SOFTWARE_NAME"/>", que não está instalado. O gestor de TI deve consultar as instruções de configuração do "<ph name="SOFTWARE_NAME"/>" para corrigir este problema. <ph name="FURTHER_EXPLANATION"/></translation>
@@ -2086,11 +2086,11 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5239623327352565343">Acesso à localização permitido</translation>
 <translation id="5242610955375133957">Filme seco</translation>
 <translation id="5242889659037569123">Malas e acessórios de viagem</translation>
-<translation id="8854897060240443467">Gerir Atividade da Conta Brave; ative para gerir as suas informações, privacidade e segurança na Conta Brave</translation>
+<translation id="8854897060240443467">Gerir Atividade da Conta AI Wize; ative para gerir as suas informações, privacidade e segurança na Conta AI Wize</translation>
 <translation id="5244732203286792411">A carregar…
     Pode demorar alguns minutos.</translation>
 <translation id="5250209940322997802">"Ligar à rede"</translation>
-<translation id="6055400808586511449">Saiba mais acerca das funcionalidades do Brave</translation>
+<translation id="6055400808586511449">Saiba mais acerca das funcionalidades do AI Wize</translation>
 <translation id="5251803541071282808">Nuvem</translation>
 <translation id="5254043433801397071">Otimizar conteúdo para impressão</translation>
 <translation id="5255690596502591079">Capturar mesmo assim</translation>
@@ -2124,7 +2124,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5306593769196050043">Ambas as folhas</translation>
 <translation id="5307166000025436103">OK</translation>
 <translation id="5308380583665731573">Ligar</translation>
-<translation id="9017231970148712387">Pode fazer alterações nas definições do Brave</translation>
+<translation id="9017231970148712387">Pode fazer alterações nas definições do AI Wize</translation>
 <translation id="5308689395849655368">O relatório de falha está desativado.</translation>
 <translation id="5310178588836736698">Veículos todo-o-terreno</translation>
 <translation id="5314967030527622926">Criador de folhetos</translation>
@@ -2241,8 +2241,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="555037537507405574">funcionalidades avançadas da impressora</translation>
 <translation id="555128936272638662">Acessórios de dispositivos móveis e sem fios</translation>
 <translation id="5551890439174915351">100 x 200 mm</translation>
-<translation id="6084314943327785510">O AI Wize verifica periodicamente se as suas palavras-passe fazem parte das listas publicadas online. Ao fazê-lo, as suas palavras-passe e nomes de utilizador estão encriptados, pelo que não podem ser lidos por ninguém, incluindo a Brave.</translation>
-<translation id="4362225295386962644">Quando usa uma palavra-passe, o AI Wize avisa se esta tiver sido publicada online. Ao fazê-lo, as suas palavras-passe e nomes de utilizador estão encriptados e, por isso, não podem ser lidos por ninguém, incluindo a Brave.</translation>
+<translation id="6084314943327785510">O AI Wize verifica periodicamente se as suas palavras-passe fazem parte das listas publicadas online. Ao fazê-lo, as suas palavras-passe e nomes de utilizador estão encriptados, pelo que não podem ser lidos por ninguém, incluindo a AI Wize.</translation>
+<translation id="4362225295386962644">Quando usa uma palavra-passe, o AI Wize avisa se esta tiver sido publicada online. Ao fazê-lo, as suas palavras-passe e nomes de utilizador estão encriptados e, por isso, não podem ser lidos por ninguém, incluindo a AI Wize.</translation>
 <translation id="5556459405103347317">Recarregar</translation>
 <translation id="5558083606899411167">Aparelhos de ar condicionado</translation>
 <translation id="5558125320634132440">Este site está bloqueado porque pode ter conteúdo não apropriado para menores</translation>
@@ -2331,7 +2331,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5732392974455271431">Os teus pais podem desbloquear-te</translation>
 <translation id="5110141686029759199">Botão Criar formulário; ative para criar rapidamente um novo formulário no AI Wize Forms</translation>
 <translation id="5736165827969430182">Metais e exploração mineira</translation>
-<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Guardar o cartão na sua Conta Brave}other{Guardar os cartões na sua Conta Brave}}</translation>
+<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Guardar o cartão na sua Conta AI Wize}other{Guardar os cartões na sua Conta AI Wize}}</translation>
 <translation id="5738385766833540397">Faça a gestão da forma como recebe alertas de descida do preço relativos a produtos que monitoriza</translation>
 <translation id="5740911612628596808">Envelope C9</translation>
 <translation id="5742806904559466333">Bares, clubes e vida noturna</translation>
@@ -2363,7 +2363,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="580241730938216256">Iniciar atualização</translation>
 <translation id="5803412860119678065">Quer preencher o seu cartão <ph name="CARD_DETAIL"/>?</translation>
 <translation id="5804241973901381774">Permissões</translation>
-<translation id="5937482014241669139">Ver Histórico do Brave</translation>
+<translation id="5937482014241669139">Ver Histórico do AI Wize</translation>
 <translation id="5808542072418270309">Jogos de simulação</translation>
 <translation id="5810442152076338065">A sua ligação a <ph name="DOMAIN"/> está encriptada através de um conjunto de cifras obsoleto.</translation>
 <translation id="5813119285467412249">&amp;Refazer adição</translation>
@@ -2377,7 +2377,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="583281660410589416">Desconhecido</translation>
 <translation id="5838278095973806738">Não deve introduzir informações confidenciais neste site (por exemplo, palavras-passe ou números de cartões de crédito), porque podem ser roubadas por atacantes.</translation>
 <translation id="5838732667866024867">Pode usar a seta para a esquerda/direita para rever as alterações de preço no gráfico</translation>
-<translation id="7336369644051575343">Na sua Conta Brave, <ph name="ACCOUNT"/></translation>
+<translation id="7336369644051575343">Na sua Conta AI Wize, <ph name="ACCOUNT"/></translation>
 <translation id="5841338463993781099">Guardar na conta?</translation>
 <translation id="5843987376989109187">Este idioma ainda não é suportado.
     <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
@@ -2394,7 +2394,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5873297634595728366">Veículos a gasóleo</translation>
 <translation id="5877831137320480913">Beleza e fitness</translation>
 <translation id="5879989559903563723">Não permitido no Modo convidado</translation>
-<translation id="8967688963142514142">Aceder à verificação de segurança do Brave</translation>
+<translation id="8967688963142514142">Aceder à verificação de segurança do AI Wize</translation>
 <translation id="5883861433316751031">Controlar e reprogramar dispositivos MIDI?</translation>
 <translation id="5884465125445718607">Envelope Chinese n.º 6</translation>
 <translation id="5887400589839399685">Cartão guardado</translation>
@@ -2415,7 +2415,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5920262536204764679">{NUM_COOKIES,plural, =1{1 em utilização}other{# em utilização}}</translation>
 <translation id="592031860219554105">Patinagem no gelo</translation>
 <translation id="5921185718311485855">Ativado</translation>
-<translation id="2687595201721621314">Quer guardar o cartão na Conta Brave?</translation>
+<translation id="2687595201721621314">Quer guardar o cartão na Conta AI Wize?</translation>
 <translation id="5922853866070715753">Estamos quase a terminar</translation>
 <translation id="5923492272538889093">Usar o desbloqueio do dispositivo em vez do Código de Segurança/CVC?</translation>
 <translation id="5924510104057992926">É necessária uma revisão antes de abrir</translation>
@@ -2450,9 +2450,9 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="5989320800837274978">Não foram especificados servidores proxy fixos nem um URL de script .pac.</translation>
 <translation id="5992691462791905444">Dobra em Z vertical com margem superior</translation>
 <translation id="5992805036496113940">Veja as informações usadas para lhe mostrar anúncios</translation>
-<translation id="7409510288691071929">Faça a gestão das suas informações, privacidade e segurança na Conta Brave</translation>
+<translation id="7409510288691071929">Faça a gestão das suas informações, privacidade e segurança na Conta AI Wize</translation>
 <translation id="3494641719937626561">A palavra-passe que acabou de usar foi encontrada numa violação de dados. Para proteger as suas contas, o Gestor de Palavras-passe da AI Wize recomenda que a altere agora e verifique as suas palavras-passe guardadas.</translation>
-<translation id="4496834749307444910">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave, que <ph name="BEGIN_LINK"/>encontrou recentemente software malicioso<ph name="END_LINK"/> no site que está a tentar visitar.</translation>
+<translation id="4496834749307444910">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize, que <ph name="BEGIN_LINK"/>encontrou recentemente software malicioso<ph name="END_LINK"/> no site que está a tentar visitar.</translation>
 <translation id="6000758707621254961"><ph name="RESULT_COUNT"/> resultados para "<ph name="SEARCH_TEXT"/>"</translation>
 <translation id="6002122790816966947">Os seus dispositivos</translation>
 <translation id="6005659677094197001">Contínuo</translation>
@@ -2490,7 +2490,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6051898664905071243">Número de páginas:</translation>
 <translation id="6052284303005792909">•</translation>
 <translation id="605237284704429106">A preencher o IBAN</translation>
-<translation id="3284406940349582552">Pode usar moradas guardadas em produtos Brave. Esta morada está guardada na sua Conta Brave, <ph name="ACCOUNT"/>.</translation>
+<translation id="3284406940349582552">Pode usar moradas guardadas em produtos AI Wize. Esta morada está guardada na sua Conta AI Wize, <ph name="ACCOUNT"/>.</translation>
 <translation id="5814871361966482530">Saiba mais sobre como a AI Wize protege os seus dados na nossa Política de Privacidade.</translation>
 <translation id="6055888660316801977">Página de credenciais de pagamento seguro sem correspondência com as credenciais</translation>
 <translation id="6055982527635883756">Envelope (de arquivo)</translation>
@@ -2559,14 +2559,14 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6212314149070368045">Fanfold dos EUA</translation>
 <translation id="6215936431492593050">Metal (acetinado)</translation>
 <translation id="6217950634729714357">Mobiliário de cozinha e sala de jantar</translation>
-<translation id="8385639954311581596">Remover o endereço do Brave?</translation>
+<translation id="8385639954311581596">Remover o endereço do AI Wize?</translation>
 <translation id="622039917539443112">Dobra paralela</translation>
-<translation id="5286511760116495417">Quer guardar este cartão na sua Conta Brave?</translation>
+<translation id="5286511760116495417">Quer guardar este cartão na sua Conta AI Wize?</translation>
 <translation id="6221345481584921695">A Navegação Segura do AI Wize <ph name="BEGIN_LINK"/>detetou software malicioso<ph name="END_LINK"/> recentemente em <ph name="SITE"/>. Os Sites que normalmente são seguros por vezes são infetados com software malicioso. O conteúdo malicioso provém de <ph name="SUBRESOURCE_HOST"/>, um distribuidor de software malicioso conhecido.</translation>
 <translation id="6221892641068781024">Vista simplificada</translation>
 <translation id="6222527803348563979">Artigos de papelaria</translation>
 <translation id="6224281071334553713">Pedras preciosas e jóias</translation>
-<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para personalizar as ferramentas de acessibilidade nas definições do Brave</translation>
+<translation id="8997875939727100757"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para personalizar as ferramentas de acessibilidade nas definições do AI Wize</translation>
 <translation id="6229196330202833460">Streaming de filmes e TV</translation>
 <translation id="6229649258872345286">Viagens familiares</translation>
 <translation id="6232271601416750929">Beleza consciente</translation>
@@ -2578,7 +2578,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6241121617266208201">Ocultar sugestões</translation>
 <translation id="624499991300733384">Serviço do compositor de impressão</translation>
 <translation id="6251906504834538140">{0,plural, =1{A movimentação do ficheiro foi bloqueada}other{A movimentação de <ph name="FILE_COUNT"/> ficheiros foi bloqueada}}</translation>
-<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para gerir ficheiros que transferiu no Brave</translation>
+<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para gerir ficheiros que transferiu no AI Wize</translation>
 <translation id="6254436959401408446">Não existe memória suficiente para abrir esta página</translation>
 <translation id="625463612687472648">Deixar de permitir</translation>
 <translation id="6259156558325130047">&amp;Refazer reordenação</translation>
@@ -2589,8 +2589,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6265794661083428563">Copie o valor da política <ph name="POLICY_NAME"/></translation>
 <translation id="6266934640124581640">Azul esverdeado claro</translation>
 <translation id="6270066318535733958">Passeios de barco</translation>
-<translation id="1300170712564922349">Retome o percurso para ver atividade relevante no seu Histórico do Brave</translation>
-<translation id="9136010393039243713">Brave Update</translation>
+<translation id="1300170712564922349">Retome o percurso para ver atividade relevante no seu Histórico do AI Wize</translation>
+<translation id="9136010393039243713">AI Wize Update</translation>
 <translation id="6279183038361895380">Premir |<ph name="ACCELERATOR"/>| para mostrar o cursor</translation>
 <translation id="6280223929691119688">Não é possível entregar neste endereço. Selecione um diferente.</translation>
 <translation id="6284292079994426700">26 x 38 pol.</translation>
@@ -2598,7 +2598,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6287197303017372967">Obtenha direções para o seu destino com as orientações curva a curva da funcionalidade de navegação.</translation>
 <translation id="628877850550444614">Desconto encontrado</translation>
 <translation id="6289939620939689042">Cor da página</translation>
-<translation id="5035989418943891979">O seu motor de pesquisa no Brave</translation>
+<translation id="5035989418943891979">O seu motor de pesquisa no AI Wize</translation>
 <translation id="6293309776179964942">JIS B5</translation>
 <translation id="6295618774959045776">Código de segurança:</translation>
 <translation id="6295855836753816081">A guardar...</translation>
@@ -2677,7 +2677,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6427730057873428458">Dobra simétrica</translation>
 <translation id="6428450836711225518">Valide o seu número de telefone</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
-<translation id="7772223497488184427">Alterar palavra-passe Brave</translation>
+<translation id="7772223497488184427">Alterar palavra-passe AI Wize</translation>
 <translation id="6432297414176614592">Mais sobre tópicos de anúncios</translation>
 <translation id="6432831586648556868">Empregos na área de vendas e marketing</translation>
 <translation id="6433490469411711332">Editar informações de contacto</translation>
@@ -2722,13 +2722,13 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6502991525169604759">Sem as suas alterações</translation>
 <translation id="6506959208958864820">Envelope</translation>
 <translation id="6507117483253822672">Escreva com mais confiança em qualquer lugar na Web</translation>
-<translation id="3960299545138990065">Reiniciar o Brave</translation>
+<translation id="3960299545138990065">Reiniciar o AI Wize</translation>
 <translation id="6513005815064132016">Pode solicitar a monitorização da posição da câmara</translation>
 <translation id="6517596291481585650">Aviso: esta política não foi unida como lista, conforme especificado pela política, porque não é uma lista.</translation>
 <translation id="6518133107902771759">Rever</translation>
 <translation id="65203098586853226">A traduzir de <ph name="SOURCE"/> para <ph name="TARGET"/></translation>
 <translation id="6521745193039995384">Não ativa</translation>
-<translation id="7379829935006425840">Botão Gerir definições de acessibilidade; ative para personalizar as ferramentas de acessibilidade nas definições do Brave</translation>
+<translation id="7379829935006425840">Botão Gerir definições de acessibilidade; ative para personalizar as ferramentas de acessibilidade nas definições do AI Wize</translation>
 <translation id="6529173248185917884">Sétimo rolo</translation>
 <translation id="652937045869844725">Experimente permitir os cookies de terceiros, o que significa que tem menos proteção, mas é mais provável que as funcionalidades do site funcionem</translation>
 <translation id="6529602333819889595">&amp;Refazer eliminação</translation>
@@ -2746,7 +2746,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6557715786897013164">14 x 17 pol.</translation>
 <translation id="6560786330438719938">Apps instaladas ou desinstaladas e a frequência com que são usadas</translation>
 <translation id="6567084950885568327">Reprogramação e controlo de dispositivos MIDI</translation>
-<translation id="3720758671413152948">Botão Gerir métodos de pagamento; ative para gerir as suas informações de cartões de crédito e pagamentos nas definições do Brave</translation>
+<translation id="3720758671413152948">Botão Gerir métodos de pagamento; ative para gerir as suas informações de cartões de crédito e pagamentos nas definições do AI Wize</translation>
 <translation id="6569060085658103619">Está a ver a página de uma extensão</translation>
 <translation id="6569366777234823130">Filmes de drama</translation>
 <translation id="6573200754375280815">Perfuração dupla à direita</translation>
@@ -2765,23 +2765,23 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
             <ph name="NEW_LINE"/>Se as funcionalidades do site não estiverem a funcionar, <ph name="START_LINK"/>experimente permitir temporariamente cookies de terceiros<ph name="END_LINK"/>.</translation>
 <translation id="6611723696964473273">Notícias de economia</translation>
 <translation id="6612010098632894193">Vídeo online</translation>
-<translation id="5887670611153282204">Saber mais sobre o seu motor de pesquisa no Brave</translation>
+<translation id="5887670611153282204">Saber mais sobre o seu motor de pesquisa no AI Wize</translation>
 <translation id="6615297766614333076">Empilhador 2</translation>
 <translation id="6619496928666593220">IBAN não preenchido</translation>
 <translation id="6624427990725312378">Informações de contacto</translation>
 <translation id="6628463337424475685"><ph name="ENGINE"/> Pesquisar</translation>
 <translation id="6629652037942826935">Viagens de luxo</translation>
 <translation id="6630043285902923878">A procurar dispositivos USB…</translation>
-<translation id="4945711024178085608">Botão Gerir definições do Brave; ative para aceder às definições do Brave</translation>
+<translation id="4945711024178085608">Botão Gerir definições do AI Wize; ative para aceder às definições do AI Wize</translation>
 <translation id="6630809736994426279">Os atacantes atualmente em <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> podem tentar instalar programas perigosos no seu Mac que roubam ou eliminam as suas informações (por exemplo, fotos, palavras-passe, mensagens e cartões de crédito). <ph name="BEGIN_LEARN_MORE_LINK"/>Saiba mais<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">Ensino de informática</translation>
 <translation id="6633476656216409494">Software empresarial e de produtividade</translation>
-<translation id="2529518595693862042">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave, que <ph name="BEGIN_LINK"/>encontrou recentemente software prejudicial<ph name="END_LINK"/> no site que está a tentar visitar.</translation>
+<translation id="2529518595693862042">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize, que <ph name="BEGIN_LINK"/>encontrou recentemente software prejudicial<ph name="END_LINK"/> no site que está a tentar visitar.</translation>
 <translation id="6643016212128521049">Limpar</translation>
 <translation id="6645291930348198241">Aceder aos cookies e dados de sites.</translation>
 <translation id="6645478838938543427">Os alertas de descida do preço vão ser enviados para <ph name="EMAIL_ADDRESS"/></translation>
-<translation id="6678472970290886941">O administrador pode alterar a configuração do navegador remotamente. A atividade neste dispositivo também pode ser gerida fora do Brave.</translation>
+<translation id="6678472970290886941">O administrador pode alterar a configuração do navegador remotamente. A atividade neste dispositivo também pode ser gerida fora do AI Wize.</translation>
 <translation id="6648524591329069940">Tipo de letra Serif</translation>
 <translation id="6649510485211003056">195 x 270 mm</translation>
 <translation id="6651270836885078973">Gerido por:</translation>
@@ -2807,7 +2807,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6689249931105087298">Relativa com compressão do ponto preto</translation>
 <translation id="5406652219015697259">O AI Wize está a disponibilizar a opção de guardar os seus cartões na sua Conta AI Wize porque tem sessão iniciada. Pode alterar este comportamento nas definições. O nome do titular do cartão vem da sua conta.</translation>
 <translation id="6691397311652656001">Liberte mais de <ph name="REQUIRED_FREE_DISK_SPACE"/> de espaço</translation>
-<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para encontrar o seu dispositivo na Conta Brave</translation>
+<translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para encontrar o seu dispositivo na Conta AI Wize</translation>
 <translation id="6698381487523150993">Criado:</translation>
 <translation id="67007264085648978">Ponto vermelho do tempo</translation>
 <translation id="6702919718839027939">Apresentar</translation>
@@ -2844,7 +2844,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6775759552199460396">JIS B2</translation>
 <translation id="4302311572898487420">O Gestor de Palavras-passe da AI Wize precisa de acesso ao Porta-chaves macOS</translation>
 <translation id="6784045420901191374">Empréstimos comerciais</translation>
-<translation id="8425450156395369987">Pode alterar o seu motor de pesquisa em qualquer altura nas definições do Brave.</translation>
+<translation id="8425450156395369987">Pode alterar o seu motor de pesquisa em qualquer altura nas definições do AI Wize.</translation>
 <translation id="6786145470008421571">Envelope 6 x 9 pol.</translation>
 <translation id="67862343314499040">Violeta</translation>
 <translation id="6786747875388722282">Extensões</translation>
@@ -2878,7 +2878,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6832753933931306326">O formulário foi preenchido</translation>
 <translation id="6841864657731852591">Rotogravura</translation>
 <translation id="6842196666980060516">184 x 260 mm</translation>
-<translation id="976643339176907534">Botão Gerir definições de segurança; ative para gerir a Navegação segura e muito mais nas definições do Brave</translation>
+<translation id="976643339176907534">Botão Gerir definições de segurança; ative para gerir a Navegação segura e muito mais nas definições do AI Wize</translation>
 <translation id="6852204201400771460">Quer atualizar a aplicação?</translation>
 <translation id="6857776781123259569">Faça a gestão das palavras-passe…</translation>
 <translation id="6858034839887287663">A2x4</translation>
@@ -2915,8 +2915,8 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6917795328362592458">A palavra-passe que acabou de usar foi encontrada numa violação de dados. Para proteger as suas contas, o Gestor de Palavras-passe recomenda que verifique as suas palavras-passe guardadas.</translation>
 <translation id="6925267999184670015">B+ norte-americano</translation>
 <translation id="692638818576287323">Veículos comerciais</translation>
-<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>O seu motor de pesquisa predefinido permite-lhe pesquisar na Web e ativar as funcionalidades do Brave<ph name="END_BOLD"/>, como pesquisar a partir da barra de endereço e de imagens em páginas Web. É possível que uma funcionalidade não esteja disponível se o seu motor de busca não a suportar.</translation>
-<translation id="6722453239914327220">Este nome é proveniente da sua Conta Brave.</translation>
+<translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>O seu motor de pesquisa predefinido permite-lhe pesquisar na Web e ativar as funcionalidades do AI Wize<ph name="END_BOLD"/>, como pesquisar a partir da barra de endereço e de imagens em páginas Web. É possível que uma funcionalidade não esteja disponível se o seu motor de busca não a suportar.</translation>
+<translation id="6722453239914327220">Este nome é proveniente da sua Conta AI Wize.</translation>
 <translation id="6935082727755903526">Empregos na área de contabilidade e finanças</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>. É possível que alguns sites sejam carregados mais lentamente na sua próxima visita.</translation>
 <translation id="6936976777388162184">Este é um dispositivo integrado e não é possível inscrevê-lo com uma atualização de quiosque e sinalização.</translation>
@@ -2932,7 +2932,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="6954049078461159956">Hóquei</translation>
 <translation id="695582302419398462">Cartão (parede dupla)</translation>
 <translation id="6957887021205513506">O certificado do servidor parece ser uma falsificação.</translation>
-<translation id="774679539085757206">Faça a gestão das definições de privacidade do AI Wize na sua Conta Brave</translation>
+<translation id="774679539085757206">Faça a gestão das definições de privacidade do AI Wize na sua Conta AI Wize</translation>
 <translation id="695864015080711809">Empregos e educação</translation>
 <translation id="6961733224437895943">Seguro de habitação</translation>
 <translation id="6961844873822989059">Pode solicitar a utilização de tipos de letra instalados no seu dispositivo</translation>
@@ -2974,12 +2974,12 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="702146556168549005">Os URLs das páginas que visita são enviados para o Google Cloud ou terceiros para análise. Por exemplo, podem ser analisados para detetar Websites inseguros ou filtrar Websites com base nas regras definidas pelo administrador.</translation>
 <translation id="8683151724374457021">Este site determina o conteúdo de que gosta e, em seguida, sugere anúncios para outros sites. Este site também obtém os seus tópicos de anúncios do AI Wize para lhe mostrar anúncios mais relevantes.</translation>
 <translation id="7023162328967545559">Aviso para administradores</translation>
-<translation id="7613812024276037086">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do Brave, que <ph name="BEGIN_LINK"/>encontrou recentemente phishing<ph name="END_LINK"/> no site que está a tentar visitar. Os sites de phishing simulam ser outros sites para enganar os utilizadores.<ph name="NEW_LINE"/>Por vezes, até os sites normalmente seguros são comprometidos por atacantes. <ph name="BEGIN_ERROR_LINK"/>Informe-nos<ph name="END_ERROR_LINK"/> se considerar que houve um erro e que este site não representa um perigo.</translation>
+<translation id="7613812024276037086">O AI Wize tem funcionalidades de segurança incorporadas para proteger o utilizador enquanto navega, como a Navegação Segura do AI Wize, que <ph name="BEGIN_LINK"/>encontrou recentemente phishing<ph name="END_LINK"/> no site que está a tentar visitar. Os sites de phishing simulam ser outros sites para enganar os utilizadores.<ph name="NEW_LINE"/>Por vezes, até os sites normalmente seguros são comprometidos por atacantes. <ph name="BEGIN_ERROR_LINK"/>Informe-nos<ph name="END_ERROR_LINK"/> se considerar que houve um erro e que este site não representa um perigo.</translation>
 <translation id="7029809446516969842">Palavras-passe</translation>
 <translation id="7030164307377592766">modificar as definições de preenchimento dos métodos de pagamento</translation>
 <translation id="7030436163253143341">O certificado não é válido</translation>
 <translation id="7031646650991750659">As apps do Google Play que instalou.</translation>
-<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as definições de privacidade da sua Conta Brave</translation>
+<translation id="8918349693525256593"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as definições de privacidade da sua Conta AI Wize</translation>
 <translation id="7043552168914147882">Separadores</translation>
 <translation id="7044081119134178347">Câmara permitida desta vez</translation>
 <translation id="7048095965575426564">Fanfold europeu</translation>
@@ -2990,7 +2990,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="7058774143982824355">Serviço do analisador de palavras-passe CSV</translation>
 <translation id="7061777300866737982">Segurança em casa</translation>
 <translation id="7062635574500127092">Azul esverdeado</translation>
-<translation id="5320462991730735481">Adicione e faça a gestão de endereços nas Definições do Brave.</translation>
+<translation id="5320462991730735481">Adicione e faça a gestão de endereços nas Definições do AI Wize.</translation>
 <translation id="7064443976734085921">Carros compactos</translation>
 <translation id="7064851114919012435">Informações de contacto</translation>
 <translation id="7067633076996245366">Soul e R&amp;B</translation>
@@ -3002,7 +3002,7 @@ Se não permitir, isto será bloqueado pelas suas definições de privacidade. I
 <translation id="7081308185095828845">Esta funcionalidade não está disponível no seu dispositivo.</translation>
 <translation id="7083258188081898530">Tabuleiro 9</translation>
 <translation id="7086090958708083563">Carregamento solicitado pelo utilizador</translation>
-<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as autorizações e os dados armazenados em sites nas Definições do Brave.</translation>
+<translation id="1313878436434241688"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as autorizações e os dados armazenados em sites nas Definições do AI Wize.</translation>
 <translation id="7096341143397839437">Email: <ph name="EMAIL"/>.</translation>
 <translation id="7096937462164235847">A identidade deste Website não foi validada.</translation>
 <translation id="7101893872976785596">Filmes de terror</translation>
@@ -3099,13 +3099,13 @@ Detalhes adicionais:
 <translation id="7273111226200291353">Os ficheiros que transfere são enviados para o Google Cloud ou terceiros para análise. Por exemplo, podem ser analisados quanto a dados confidenciais ou software malicioso, ser armazenados com base nas políticas da empresa e ficar visíveis para o seu administrador.</translation>
 <translation id="7275334191706090484">Marcadores Geridos</translation>
 <translation id="7277998515889183784">Maquilhagem e cosméticos</translation>
-<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para alterar a sua palavra-passe da Conta Brave</translation>
+<translation id="2837210582972105306"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para alterar a sua palavra-passe da Conta AI Wize</translation>
 <translation id="7292031607255951991">Nome do destinatário</translation>
 <translation id="7298195798382681320">Recomendado</translation>
 <translation id="7299471494012161875">Periféricos de ecrã ligados</translation>
 <translation id="7300012071106347854">Azul cobalto</translation>
 <translation id="7304030187361489308">Alta</translation>
-<translation id="244157907932852817">Gerir definições de privacidade da Conta Brave</translation>
+<translation id="244157907932852817">Gerir definições de privacidade da Conta AI Wize</translation>
 <translation id="7305756307268530424">Iniciar mais lentamente</translation>
 <translation id="7308436126008021607">sincronização em segundo plano</translation>
 <translation id="7310392214323165548">O dispositivo será reiniciado em breve</translation>
@@ -3128,7 +3128,7 @@ Detalhes adicionais:
 <translation id="7354880545102894991">Viagens económicas e de última hora</translation>
 <translation id="7359588939039777303">Anúncios bloqueados.</translation>
 <translation id="7308957539693927108">Quando a AI Wize encontra descontos disponíveis, estes são apresentados durante o pagamento</translation>
-<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para adicionar e gerir endereços nas Definições do Brave.</translation>
+<translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para adicionar e gerir endereços nas Definições do AI Wize.</translation>
 <translation id="7365849542400970216">Sabe qual é a utilização do seu dispositivo?</translation>
 <translation id="736592699917579616">Alimentação</translation>
 <translation id="7366117520888504990">198 x 275 mm</translation>
@@ -3137,7 +3137,7 @@ Detalhes adicionais:
 <translation id="7372526636730851647">Foto (brilhante)</translation>
 <translation id="7372973238305370288">resultado da pesquisa</translation>
 <translation id="7374461526650987610">Processadores de protocolos</translation>
-<translation id="3898257577441589237">Este problema ocorre devido a um certificado que o utilizador ou outra pessoa instalou no dispositivo. Sabe-se que o certificado é utilizado para monitorizar e intercetar redes e não é considerado fidedigno pelo Brave. Embora existam alguns casos legítimos para a monitorização, como numa rede escolar ou da empresa, o AI Wize quer certificar-se de que o utilizador tem conhecimento da situação, mesmo que não seja possível interrompê-la. A monitorização pode ocorrer em qualquer navegador ou aplicação que aceda à Web.</translation>
+<translation id="3898257577441589237">Este problema ocorre devido a um certificado que o utilizador ou outra pessoa instalou no dispositivo. Sabe-se que o certificado é utilizado para monitorizar e intercetar redes e não é considerado fidedigno pelo AI Wize. Embora existam alguns casos legítimos para a monitorização, como numa rede escolar ou da empresa, o AI Wize quer certificar-se de que o utilizador tem conhecimento da situação, mesmo que não seja possível interrompê-la. A monitorização pode ocorrer em qualquer navegador ou aplicação que aceda à Web.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{Nenhum site permitido}=1{1 site permitido}other{# sites permitidos}}</translation>
 <translation id="7375818412732305729">É anexado um ficheiro</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3164,7 +3164,7 @@ Detalhes adicionais:
       &lt;li&gt;Em &lt;strong&gt;Tipo de arranque&lt;/strong&gt;, selecione &lt;strong&gt;Desativado&lt;/strong&gt;.
       &lt;li&gt;Em &lt;strong&gt;Estado do serviço&lt;/strong&gt;, clique em &lt;strong&gt;Parar&lt;/strong&gt;.
       &lt;li&gt;Clique em &lt;strong&gt;Aplicar&lt;/strong&gt; e, de seguida, em &lt;strong&gt;OK&lt;/strong&gt;.
-      &lt;li&gt;Visite o &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;Centro de Ajuda do Brave&lt;/a&gt; para saber como remover permanentemente o software do computador.      &lt;/ol&gt;</translation>
+      &lt;li&gt;Visite o &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;Centro de Ajuda do AI Wize&lt;/a&gt; para saber como remover permanentemente o software do computador.      &lt;/ol&gt;</translation>
 <translation id="7408613996403626141">Brinquedos</translation>
 <translation id="741204030948306876">Sim, aceito</translation>
 <translation id="7416351320495623771">Gerir palavras-passe…</translation>
@@ -3172,7 +3172,7 @@ Detalhes adicionais:
 <translation id="7419106976560586862">Caminho do Perfil</translation>
 <translation id="7421067045979951561">processadores de protocolos</translation>
 <translation id="7422347648202898039">Etiquetas (segurança)</translation>
-<translation id="4814329941923406129">Botão Gerir cookies; ative para gerir as suas preferências de cookies nas definições do Brave</translation>
+<translation id="4814329941923406129">Botão Gerir cookies; ative para gerir as suas preferências de cookies nas definições do AI Wize</translation>
 <translation id="7424421098814895617">A opção de eliminação da morada foi selecionada</translation>
 <translation id="7425037327577270384">Ajuda-me a escrever</translation>
 <translation id="7427366580982928791">Segurança das crianças na Internet</translation>
@@ -3190,7 +3190,7 @@ Detalhes adicionais:
 <translation id="7445762425076701745">Não é possível validar totalmente a identidade do servidor ao qual está ligado. Está ligado a um servidor com um nome que apenas é válido na sua rede, que não permite que uma autoridade de certificação externa valide a respectiva propriedade. Ainda assim, algumas autoridades emitem certificados para esses nomes, pelo que não há forma de garantir que está ligado ao Website que quer e não a um site pirata.</translation>
 <translation id="7447234474237738389">Serviços de vestuário</translation>
 <translation id="7447625772313191651"><ph name="NAME"/> (<ph name="WIDTH"/> x <ph name="HEIGHT"/> mm)</translation>
-<translation id="1548956355291859153">Botão Gerir sincronização; ative para gerir as informações que sincroniza nas definições do Brave</translation>
+<translation id="1548956355291859153">Botão Gerir sincronização; ative para gerir as informações que sincroniza nas definições do AI Wize</translation>
 <translation id="7451311239929941790"><ph name="BEGIN_LINK"/>Saber mais<ph name="END_LINK"/> sobre este problema.</translation>
 <translation id="7454377933424667109">Conta na nuvem</translation>
 <translation id="7455133967321480974">Usar predefinição global (Bloquear)</translation>
@@ -3228,7 +3228,7 @@ Detalhes adicionais:
 <translation id="7518003948725431193">Não foi encontrada qualquer página Web para o endereço Web: <ph name="URL"/></translation>
 <translation id="7521387064766892559">JavaScript</translation>
 <translation id="7521825010239864438">Secção "<ph name="SECTION"/>" ocultada</translation>
-<translation id="8552966873255887118">Pode usá-lo em todos os produtos Brave</translation>
+<translation id="8552966873255887118">Pode usá-lo em todos os produtos AI Wize</translation>
 <translation id="7523408071729642236">Indústria</translation>
 <translation id="7525067979554623046">Criar</translation>
 <translation id="7525804896095537619">O nome não pode estar vazio</translation>
@@ -3236,14 +3236,14 @@ Detalhes adicionais:
 <translation id="7529884293139707752">Ensino doméstico</translation>
 <translation id="7534987659046836932">Envelope C7</translation>
 <translation id="7535087603100972091">Valor</translation>
-<translation id="796823723482603597">Tecnologia da Brave</translation>
+<translation id="796823723482603597">Tecnologia da AI Wize</translation>
 <translation id="7537536606612762813">Obrigatório</translation>
 <translation id="7542995811387359312">O preenchimento automático de cartões de crédito está desativado, porque este formulário não utiliza uma ligação segura.</translation>
 <translation id="7543525346216957623">Pede aos teus pais</translation>
 <translation id="7546409722674205727">A iniciar a app <ph name="APP_NAME"/></translation>
 <translation id="7548892272833184391">Corrigir erros de ligação</translation>
 <translation id="7549584377607005141">Esta página Web requer os dados introduzidos anteriormente para ser corretamente apresentada. Pode enviar novamente esses dados, mas ao fazê-lo, irá repetir as ações que esta página executou anteriormente.</translation>
-<translation id="5474381306981932386">O nome de utilizador do dispositivo e o nome de utilizador do Brave</translation>
+<translation id="5474381306981932386">O nome de utilizador do dispositivo e o nome de utilizador do AI Wize</translation>
 <translation id="7551484245293639699">Seguro de viagem</translation>
 <translation id="7552846755917812628">Experimente as sugestões seguintes:</translation>
 <translation id="7554242657529665960">Do seu administrador: "<ph name="ADMIN_MESSAGE"/>"</translation>
@@ -3262,10 +3262,10 @@ Detalhes adicionais:
 <translation id="7574998639136359461">Equipamento de desportos de inverno</translation>
 <translation id="7575207903026901870">Botão Remover sugestão, prima Enter para remover esta sugestão.</translation>
 <translation id="7575887283389198269">Telemóveis</translation>
-<translation id="405970181812690156">Pague rapidamente em sites e aplicações em todos os dispositivos com cartões que tenha guardado com o Brave.</translation>
+<translation id="405970181812690156">Pague rapidamente em sites e aplicações em todos os dispositivos com cartões que tenha guardado com o AI Wize.</translation>
 <translation id="7579442726219254162">Variável "<ph name="VARIABLE"/>" desconhecida na configuração gerida de "<ph name="APPLICATION_ID"/>".</translation>
 <translation id="7581199239021537589">Turno Y da imagem 2 lateral</translation>
-<translation id="4790068920551988473">Crie rapidamente um novo evento no Calendário Brave</translation>
+<translation id="4790068920551988473">Crie rapidamente um novo evento no Calendário AI Wize</translation>
 <translation id="7583969447617676942">Serviços jurídicos</translation>
 <translation id="7586676035079382730">Acesso às notificações não permitido</translation>
 <translation id="7588460771338574392">Chave de acesso de "<ph name="PHONE_NAME"/>"</translation>
@@ -3282,7 +3282,7 @@ Detalhes adicionais:
 <translation id="7605377493722372900">Os atacantes no site que está a tentar visitar podem instalar software prejudicial que rouba ou elimina, por exemplo, a sua palavra-passe, fotos, mensagens ou número do cartão de crédito.</translation>
 <translation id="7610193165460212391">O valor está fora do intervalo <ph name="VALUE"/> .</translation>
 <translation id="7613889955535752492">Exp.: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
-<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para ver e gerir as suas palavras-passe nas Definições do Brave.</translation>
+<translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para ver e gerir as suas palavras-passe nas Definições do AI Wize.</translation>
 <translation id="8565825862287624454">O seu administrador ativou os AI Wize Enterprise Connectors no navegador. Estes conetores têm acesso a alguns dos seus dados.</translation>
 <translation id="7617825962482469577">Envelope C7/C6</translation>
 <translation id="7619838219691048931">Folha final</translation>
@@ -3296,7 +3296,7 @@ Detalhes adicionais:
 <translation id="7631527008834753063">Concursos de televisão</translation>
 <translation id="7633909222644580952">Dados de desempenho e relatórios de falhas</translation>
 <translation id="7636346903338549690">Sites com autorização para usar cookies de terceiros</translation>
-<translation id="6386821459680628976">Remover o cartão de crédito do Brave?</translation>
+<translation id="6386821459680628976">Remover o cartão de crédito do AI Wize?</translation>
 <translation id="7637586430889951925">{COUNT,plural, =0{Nenhuma}=1{1 palavra-passe na sua conta (para <ph name="DOMAIN_LIST"/>)}other{# palavras-passe na sua conta (para <ph name="DOMAIN_LIST"/>)}}</translation>
 <translation id="7638605456503525968">Portas de série</translation>
 <translation id="7639968568612851608">Cinzento-escuro</translation>
@@ -3320,7 +3320,7 @@ Detalhes adicionais:
 <translation id="7675325315208090829">Faça a gestão dos métodos de pagamento…</translation>
 <translation id="767550629621587224">Separadores pré-corte</translation>
 <translation id="7676643023259824263">Pesquisar texto da área de transferência, <ph name="TEXT"/></translation>
-<translation id="4628681623692678085">Veja e faça a gestão do histórico de navegação nas definições do Brave</translation>
+<translation id="4628681623692678085">Veja e faça a gestão do histórico de navegação nas definições do AI Wize</translation>
 <translation id="7679947978757153706">Basebol</translation>
 <translation id="7680990533995586733"><ph name="CARD_NETWORK_NAME"/>, <ph name="CARD_LAST_FOUR_DIGITS"/>, expira a <ph name="CARD_EXPIRATION"/></translation>
 <translation id="7681273392938116652">Fantasy sports</translation>
@@ -3362,7 +3362,7 @@ Detalhes adicionais:
 <translation id="774634243536837715">Conteúdo perigoso bloqueado.</translation>
 <translation id="7748758200357401411">Peças automóveis de alto desempenho e mercado pós-venda</translation>
 <translation id="7751019142333897329"><ph name="FIRST_STRING"/>: <ph name="SECOND_STRING"/></translation>
-<translation id="921286857694606205">Personalize os tipos de letra e os respetivos tamanhos no Brave</translation>
+<translation id="921286857694606205">Personalize os tipos de letra e os respetivos tamanhos no AI Wize</translation>
 <translation id="7752995774971033316">Não gerido</translation>
 <translation id="1771750053794015966">Os separadores e as apps do AI Wize são fechados quando a atualização é iniciada</translation>
 <translation id="7755287808199759310">O teu pai/a tua mãe pode desbloquear-te</translation>
@@ -3397,7 +3397,7 @@ Detalhes adicionais:
 <translation id="7805906048382884326">Fechar sugestão</translation>
 <translation id="7810410097247356677">Para pagar mais rapidamente da próxima vez, guarde o cartão e o código de segurança encriptado no dispositivo</translation>
 <translation id="7812922009395017822">Mir</translation>
-<translation id="4670564340385807132">Remover a sugestão do formulário do Brave?</translation>
+<translation id="4670564340385807132">Remover a sugestão do formulário do AI Wize?</translation>
 <translation id="781440967107097262">Quer partilhar a área de transferência?</translation>
 <translation id="7815352264092918456">Papel (simples)</translation>
 <translation id="7815407501681723534">Encontrados <ph name="NUMBER_OF_RESULTS"/> <ph name="SEARCH_RESULTS"/> para "<ph name="SEARCH_STRING"/>"</translation>
@@ -3416,7 +3416,7 @@ Detalhes adicionais:
 <translation id="7862185352068345852">Quer sair do site?</translation>
 <translation id="7865448901209910068">A melhor velocidade</translation>
 <translation id="7870281855125116701">Desconto encontrado</translation>
-<translation id="7971990257511863579">Altere a palavra-passe da sua Conta Brave</translation>
+<translation id="7971990257511863579">Altere a palavra-passe da sua Conta AI Wize</translation>
 <translation id="7877007680666472091">IDs de conteúdo protegido</translation>
 <translation id="7878562273885520351">A palavra-passe pode estar comprometida</translation>
 <translation id="7880146494886811634">Guarde o endereço</translation>
@@ -3448,8 +3448,8 @@ Detalhes adicionais:
 <translation id="794567586469801724">macOS</translation>
 <translation id="7946724693008564269">Idioma detetado</translation>
 <translation id="7947285636476623132">Verifique o ano de validade e tente novamente</translation>
-<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para saber mais acerca das funcionalidades do Brave</translation>
-<translation id="1535074845255182168">Faça a gestão das suas preferências de cookies nas Definições do Brave.</translation>
+<translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para saber mais acerca das funcionalidades do AI Wize</translation>
+<translation id="1535074845255182168">Faça a gestão das suas preferências de cookies nas Definições do AI Wize.</translation>
 <translation id="7951415247503192394">32 bits</translation>
 <translation id="7952192831285741665">EDP europeu</translation>
 <translation id="7952250633095257243">O atalho não pode estar vazio</translation>
@@ -3489,7 +3489,7 @@ Detalhes adicionais:
 <translation id="8025119109950072390">Os utilizadores mal intencionados neste site podem enganá-lo no sentido de fazer algo perigoso como instalar software ou revelar as suas informações pessoais (por exemplo, palavras-passe, números de telefone ou cartões de crédito).</translation>
 <translation id="8026334261755873520">Limpar dados de navegação</translation>
 <translation id="8027077570865220386">Tabuleiro 15</translation>
-<translation id="7586767711133020907">Botão Executar verificação de segurança do Brave; ative para executar uma verificação de segurança nas definições do Brave</translation>
+<translation id="7586767711133020907">Botão Executar verificação de segurança do AI Wize; ative para executar uma verificação de segurança nas definições do AI Wize</translation>
 <translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para criar rapidamente um novo formulário no AI Wize Forms</translation>
 <translation id="8028960012888758725">Cortar no fim da tarefa</translation>
 <translation id="8032546467100845887">Transparência</translation>
@@ -3605,7 +3605,7 @@ Detalhes adicionais:
 <translation id="8249296373107784235">Abortar</translation>
 <translation id="8249463483885748674">Testes padronizados e de admissão</translation>
 <translation id="824968735947741546">A traduzir <ph name="SOURCE"/> (detetado automaticamente) para <ph name="TARGET"/></translation>
-<translation id="8996951854370742934">Este morada está atualmente guardada neste dispositivo. Para a usar nos produtos da rede Brave, guarde-a na sua Conta AI Wize <ph name="ACCOUNT"/>.</translation>
+<translation id="8996951854370742934">Este morada está atualmente guardada neste dispositivo. Para a usar nos produtos da rede AI Wize, guarde-a na sua Conta AI Wize <ph name="ACCOUNT"/>.</translation>
 <translation id="8252991034201168845">Botão Gerir definições de acessibilidade, Enter para personalizar as ferramentas de acessibilidade nas definições do ChromeOS</translation>
 <translation id="8253091569723639551">É necessário um endereço de faturação</translation>
 <translation id="8257387598443225809">Esta app foi concebida para dispositivos móveis</translation>
@@ -3628,7 +3628,7 @@ Detalhes adicionais:
 <translation id="8281886186245836920">Ignorar</translation>
 <translation id="8282409409360764263">Manutenção de jardins</translation>
 <translation id="8282947398454257691">Saber o identificador único do seu dispositivo</translation>
-<translation id="4596532552309852907">Faça a gestão da Navegação segura e muito mais nas Definições do Brave.</translation>
+<translation id="4596532552309852907">Faça a gestão da Navegação segura e muito mais nas Definições do AI Wize.</translation>
 <translation id="8286036467436129157">Iniciar Sessão</translation>
 <translation id="8286799286781881307">As aplicações autorizadas pelo seu administrador podem capturar todos os ecrãs ligados ao dispositivo. Estas informações podem ser processadas localmente ou carregadas para os servidores da sua organização.</translation>
 <translation id="8287123726498397887">Envelope (pré-impresso)</translation>
@@ -3687,7 +3687,7 @@ Detalhes adicionais:
 <translation id="8398790343843005537">Localizar o seu telemóvel</translation>
 <translation id="2222315002405295388">{COUNT,plural, =0{O AI Wize vai bloquear os cookies novamente hoje}=1{O AI Wize vai bloquear os cookies novamente amanhã}other{# dias até o AI Wize bloquear os cookies novamente}}</translation>
 <translation id="8403506619177967839">Ficção escrita por fãs</translation>
-<translation id="15931837016421186">Faça a gestão das informações que sincroniza nas Definições do Brave.</translation>
+<translation id="15931837016421186">Faça a gestão das informações que sincroniza nas Definições do AI Wize.</translation>
 <translation id="8406071103346257942">parar de usar o seu bloqueio de ecrã para preencher palavras-passe</translation>
 <translation id="8407031780528483338">Utensílios de cozinha</translation>
 <translation id="8409413588194360210">controladores de pagamento</translation>
@@ -3703,10 +3703,10 @@ Detalhes adicionais:
 <translation id="8427848540066057481">500 x 750 mm</translation>
 <translation id="8428213095426709021">Definições</translation>
 <translation id="8428634594422941299">OK</translation>
-<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as suas preferências de cookies nas Definições do Brave.</translation>
+<translation id="5808418475906247813"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para gerir as suas preferências de cookies nas Definições do AI Wize.</translation>
 <translation id="8432419784006585012">Pode pedir para usar os seus dispositivos MIDI</translation>
 <translation id="8433057134996913067">Esta opção termina a sessão na maioria dos Sites.</translation>
-<translation id="4198850929558436563">Para pagar mais rapidamente da próxima vez, guarde o IBAN na sua Conta Brave</translation>
+<translation id="4198850929558436563">Para pagar mais rapidamente da próxima vez, guarde o IBAN na sua Conta AI Wize</translation>
 <translation id="8434840396568290395">Animais de estimação</translation>
 <translation id="8436623588884785770">Adicionar política</translation>
 <translation id="8437238597147034694">&amp;Anular movimentação</translation>
@@ -3730,13 +3730,13 @@ Detalhes adicionais:
 <translation id="8474910779563686872">Mostrar detalhes do programador</translation>
 <translation id="8479754468255770962">Agrafo na parte inferior esquerda</translation>
 <translation id="8479926481822108747">gerir as suas proteções contra monitorização</translation>
-<translation id="8714154125294613524">Esta morada vai ser apagada da sua Conta Brave, <ph name="ACCOUNT"/></translation>
+<translation id="8714154125294613524">Esta morada vai ser apagada da sua Conta AI Wize, <ph name="ACCOUNT"/></translation>
 <translation id="8488350697529856933">Aplica-se a</translation>
 <translation id="8490137692873530638">Empilhador 10</translation>
 <translation id="8493948351860045254">Libertar espaço</translation>
 <translation id="8498891568109133222"><ph name="HOST_NAME"/> demorou demasiado tempo a responder.</translation>
-<translation id="443150778270806272">Para usar <ph name="PERMISSION"/> neste site, tem de dar acesso ao Brave</translation>
-<translation id="230699814587342492">Palavras-passe do Brave</translation>
+<translation id="443150778270806272">Para usar <ph name="PERMISSION"/> neste site, tem de dar acesso ao AI Wize</translation>
+<translation id="230699814587342492">Palavras-passe do AI Wize</translation>
 <translation id="8503813439785031346">Nome de utilizador</translation>
 <translation id="8504928302600319133">Hardware informático</translation>
 <translation id="8507227106804027148">Linha de comandos</translation>
@@ -3750,11 +3750,11 @@ Detalhes adicionais:
 <translation id="8522180136695974431">Monitorização e relatórios de crédito</translation>
 <translation id="1426902392270366682">O AI Wize pode ajudá-lo a proteger a sua Conta AI Wize e a alterar a palavra-passe.</translation>
 <translation id="8527228059738193856">Altifalantes</translation>
-<translation id="1215802963054007211">Limpe o seu histórico de navegação, cookies, cache e muito mais nas definições do Brave.</translation>
+<translation id="1215802963054007211">Limpe o seu histórico de navegação, cookies, cache e muito mais nas definições do AI Wize.</translation>
 <translation id="853246364274116957">Teatro musical e da Broadway</translation>
 <translation id="853332391023689529">Carrinhas de caixa aberta</translation>
 <translation id="8533619373899488139">Visite &lt;strong&gt;chrome://policy&lt;/strong&gt; para ver a lista dos URLs bloqueados e outras políticas aplicadas pelo administrador do sistema.</translation>
-<translation id="5734033364988802986">Desativou a autorização <ph name="PERMISSION"/> para o Brave.</translation>
+<translation id="5734033364988802986">Desativou a autorização <ph name="PERMISSION"/> para o AI Wize.</translation>
 <translation id="8536234749087605613">Envelope (janela)</translation>
 <translation id="8539500321752640291">Permitir 2 autorizações?</translation>
 <translation id="8541158209346794904">Dispositivo Bluetooth</translation>
@@ -3893,7 +3893,7 @@ Detalhes adicionais:
 <translation id="8811470563853401328">Guardar morada na conta?</translation>
 <translation id="8813277370772331957">Lembrar-me mais tarde</translation>
 <translation id="8814707942599948500">Envelope C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para atualizar o AI Wize nas Definições do Brave.</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para atualizar o AI Wize nas Definições do AI Wize.</translation>
 <translation id="882338992931677877">Ranhura manual</translation>
 <translation id="8830320733681313421">Postal Hagaki</translation>
 <translation id="8833007469711500369">Máquinas de lavar e secar roupa</translation>
@@ -3906,7 +3906,7 @@ Detalhes adicionais:
 <translation id="8852567725116633427">Microcarros e subcompactos</translation>
 <translation id="885306012106043620">Ténis</translation>
 <translation id="8855742650226305367">Dança</translation>
-<translation id="7487066225574140895">Partilha com a Brave</translation>
+<translation id="7487066225574140895">Partilha com a AI Wize</translation>
 <translation id="4764754838347156633">O AI Wize recomenda a reposição da palavra-passe da <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> se a tiver reutilizado noutros sites.</translation>
 <translation id="885906927438988819">Se a ortografia estiver correta, <ph name="BEGIN_LINK"/>experimente executar o Diagnóstico de rede do Windows<ph name="END_LINK"/>.</translation>
 <translation id="8863218129525348270">Para pagar mais rapidamente da próxima vez, guarde o seu cartão no dispositivo</translation>
@@ -3933,7 +3933,7 @@ Detalhes adicionais:
 <translation id="8903921497873541725">Ampliar</translation>
 <translation id="890493561996401738">Botão Remover sugestão, prima Enter para remover, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/>.</translation>
 <translation id="8910898109640902752">8 x 10 pol.</translation>
-<translation id="4805806622840861220">Reiniciar o Brave</translation>
+<translation id="4805806622840861220">Reiniciar o AI Wize</translation>
 <translation id="8918062451146297192">CVC para cartão virtual</translation>
 <translation id="8919740778133505789">Carros desportivos</translation>
 <translation id="8919895429178014996">Ocultar todos os itens</translation>
@@ -3964,7 +3964,7 @@ Detalhes adicionais:
 <translation id="8978053250194585037">A Navegação segura do AI Wize <ph name="BEGIN_LINK"/>detetou phishing<ph name="END_LINK"/> recentemente em <ph name="SITE"/>. Os sites de phishing simulam ser outros Websites para o enganar.</translation>
 <translation id="8982884016487650216">Carregamento do PDF concluído</translation>
 <translation id="8983369100812962543">Já pode redimensionar a app</translation>
-<translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para ver o histórico de navegação no Brave</translation>
+<translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Prima Tab e, em seguida, Enter para ver o histórico de navegação no AI Wize</translation>
 <translation id="8987663052629670333">Serviços de impressão de fotos</translation>
 <translation id="8987927404178983737">Mês</translation>
 <translation id="8989148748219918422"><ph name="ORGANIZATION"/> [<ph name="COUNTRY"/>]</translation>
@@ -4035,9 +4035,9 @@ Detalhes adicionais:
 <translation id="9107467864910557787">O navegador é gerido por <ph name="MANAGER"/></translation>
 <translation id="91108059142052966">A política do administrador desativa a partilha de ecrã com <ph name="APPLICATION_TITLE"/> quando existe conteúdo confidencial visível.</translation>
 <translation id="9114524666733003316">A confirmar o cartão…</translation>
-<translation id="3582535072753734287">Este navegador não é gerido por uma empresa ou outra entidade. A atividade neste dispositivo pode ser gerida fora do Brave. <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
-<translation id="7839260860373627374">Mais sobre os anúncios no Brave</translation>
-<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para retomar o percurso e ver atividade relevante no Histórico do Brave</translation>
+<translation id="3582535072753734287">Este navegador não é gerido por uma empresa ou outra entidade. A atividade neste dispositivo pode ser gerida fora do AI Wize. <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
+<translation id="7839260860373627374">Mais sobre os anúncios no AI Wize</translation>
+<translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para retomar o percurso e ver atividade relevante no Histórico do AI Wize</translation>
 <translation id="9119042192571987207">Carregado</translation>
 <translation id="9122954576417194280">Negociação de futuros e mercadorias</translation>
 <translation id="912327514020027767">Saias</translation>
@@ -4056,7 +4056,7 @@ Detalhes adicionais:
 <translation id="9148599396704355100">O preço é baixo</translation>
 <translation id="9150025764986957246">Pode introduzir, por exemplo:</translation>
 <translation id="9150045010208374699">Usar a sua câmara</translation>
-<translation id="5874192512642998555">O administrador pode alterar a configuração do navegador remotamente. A atividade neste dispositivo também pode ser gerida fora do Brave. <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
+<translation id="5874192512642998555">O administrador pode alterar a configuração do navegador remotamente. A atividade neste dispositivo também pode ser gerida fora do AI Wize. <ph name="BEGIN_LINK"/>Saiba mais<ph name="END_LINK"/></translation>
 <translation id="9154194610265714752">Atualizado</translation>
 <translation id="9155211586651734179">Periféricos de áudio ligados</translation>
 <translation id="9155646082713385498">Revistas</translation>
@@ -4076,8 +4076,8 @@ Detalhes adicionais:
 <translation id="917450738466192189">O certificado do servidor é inválido.</translation>
 <translation id="9174623988242579721">Veículos personalizados e de alto desempenho</translation>
 <translation id="9174917557437862841">Botão de mudança de separador: prima Enter para mudar para este separador.</translation>
-<translation id="9177283544810807743">Este PDF está inacessível. A extrair texto com tecnologia de IA da Brave</translation>
-<translation id="5129795253416930127">Faça a gestão das informações de cartões de crédito e pagamentos nas definições do Brave.</translation>
+<translation id="9177283544810807743">Este PDF está inacessível. A extrair texto com tecnologia de IA da AI Wize</translation>
+<translation id="5129795253416930127">Faça a gestão das informações de cartões de crédito e pagamentos nas definições do AI Wize.</translation>
 <translation id="9179907736442194268">Obtenha alertas de email se o preço descer em qualquer site</translation>
 <translation id="9183302530794969518">Google Docs</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/> utiliza um protocolo não suportado.</translation>
@@ -4094,18 +4094,18 @@ Detalhes adicionais:
 <translation id="92178312226016010">Está a acompanhar este produto.</translation>
 <translation id="9218430445555521422">Definir como predefinição</translation>
 <translation id="9219103736887031265">Imagens</translation>
-<translation id="142389341645668510">Personalizar o Brave</translation>
+<translation id="142389341645668510">Personalizar o AI Wize</translation>
 <translation id="9222403027701923763">Ensino básico e secundário</translation>
 <translation id="93020190163435405">Estágios</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385">Permitir que a app <ph name="APP_NAME"/> configure redes Wi-Fi?</translation>
-<translation id="7486559383537872796">Pode perder o acesso à sua Conta Brave. O AI Wize recomenda que altere a palavra-passe agora. Ser-lhe-á pedido para iniciar sessão.</translation>
+<translation id="7486559383537872796">Pode perder o acesso à sua Conta AI Wize. O AI Wize recomenda que altere a palavra-passe agora. Ser-lhe-á pedido para iniciar sessão.</translation>
 <translation id="937457230470581909">Jardins zoológicos, aquários e reservas</translation>
 <translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Que dados são usados:<ph name="END_BOLD"/> os tópicos de anúncios baseiam-se no seu histórico de navegação recente, uma lista dos sites que visitou através do AI Wize neste dispositivo.</translation>
 <translation id="937885410143139026">Dados enviados para a consola do administrador</translation>
 <translation id="939736085109172342">Nova pasta</translation>
 <translation id="940053046584497293">Viagens e transportes</translation>
-<translation id="6588091288231158998">Usar palavras-passe e chaves de acesso guardadas na sua Conta Brave</translation>
+<translation id="6588091288231158998">Usar palavras-passe e chaves de acesso guardadas na sua Conta AI Wize</translation>
 <translation id="5444457503062019851">O AI Wize impede que os sites usem cookies de terceiros para acompanhar o seu perfil enquanto navega.</translation>
 <translation id="945855313015696284">Verifique as informações abaixo e elimine os cartões inválidos</translation>
 <translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prima Tab e, em seguida, Enter para criar rapidamente um novo site no AI Wize Sites</translation>
@@ -4156,9 +4156,9 @@ Detalhes adicionais:
 <translation id="6417973700199526943">Entrou no modo privado</translation>
 <translation id="375424491626359494">As páginas que visualizar em separadores privados não são memorizadas no histórico do navegador, no armazenamento de cookies ou no histórico de pesquisas depois de fechar todos os separadores privados. Todos os ficheiros transferidos ou os marcadores criados serão guardados.</translation>
 <translation id="8794378783472961468">No entanto, a navegação não é invisível. Passar para o modo Privado não oculta a navegação do empregador ou do fornecedor de serviços de Internet, nem dos Sites que visitar.</translation>
-<translation id="6085043210649933880">Modo privado no Brave</translation>
+<translation id="6085043210649933880">Modo privado no AI Wize</translation>
 <translation id="3683567996395248272">O que faz o modo Privado</translation>
-<translation id="5581758310848298360">Ao fechar todos os separadores privados do Brave, a sua atividade nesses separadores será eliminada deste dispositivo:
+<translation id="5581758310848298360">Ao fechar todos os separadores privados do AI Wize, a sua atividade nesses separadores será eliminada deste dispositivo:
 <ph name="BEGIN_LIST"/>
 <ph name="LIST_ITEM"/>Atividade de navegação<ph name="END_LIST_ITEM"/>
 <ph name="LIST_ITEM"/>Histórico de pesquisa<ph name="END_LIST_ITEM"/>
@@ -4171,7 +4171,7 @@ Detalhes adicionais:
           <ph name="LIST_ITEM"/>Os empregadores ou as escolas podem controlar a atividade de navegação<ph name="END_LIST_ITEM"/>
           <ph name="LIST_ITEM"/>Os prestadores de serviços de Internet podem monitorizar o tráfego na Web<ph name="END_LIST_ITEM"/>
         <ph name="END_LIST"/></translation>
-<translation id="6043883615739972429"><ph name="BEGIN_LINK"/>Saiba mais sobre o modo privado no Brave<ph name="END_LINK"/></translation>
+<translation id="6043883615739972429"><ph name="BEGIN_LINK"/>Saiba mais sobre o modo privado no AI Wize<ph name="END_LINK"/></translation>
 <translation id="9153679102508470540">Bloquear cookies de terceiros no modo privado</translation>
 <translation id="5549245478906381817">Abrir janela de Navegação Privada</translation>
 <translation id="5497977785983089120">Abrir uma nova janela de Navegação Privada para navegar anonimamente.</translation>

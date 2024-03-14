@@ -204,7 +204,7 @@
     Done
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_UPLOAD_EXPLANATION" desc="Explanation of the effect of the Autofill save card prompt when the card is to be saved by uploading it to Google Payments and also saved locally. The prompt can be either a bubble or an infobar.">
-    Pay quickly on sites and apps across devices using cards you have saved with Brave.
+    Pay quickly on sites and apps across devices using cards you have saved with AI Wize.
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_UPLOAD_EXPLANATION_V3" desc="Explanation of the effect of the Autofill save card prompt when the card is to be saved by uploading it to Google Payments, according to April 2018 UI guidelines, and minorly updated again in September 2023. The prompt will be shown either in a bubble below the omnibox, or in a bottom sheet, or in an infobar.">
     To pay faster next time, save your card and billing address in your AI Wize sync chain
@@ -213,13 +213,13 @@
     It’ll be encrypted, saved securely and the CVC is never stored.
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_UPLOAD_EXPLANATION_EXPERIMENT_FASTER_AND_PROTECTED" desc="Explanation of the effect of the Autofill save card prompt when the card is to be saved by uploading it to Google Payments. The prompt will be shown in a bubble below the omnibox. This is an experiment text and may change in the future.">
-    Pay faster next time and protect your card with Brave’s industry-leading security.
+    Pay faster next time and protect your card with AI Wize’s industry-leading security.
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_UPLOAD_EXPLANATION_V3_WITH_NAME" desc="Explanation of the effect of the Autofill save card prompt when the card is to be saved by uploading it to Google Payments, according to April 2018 UI guidelines, and minorly updated again in September 2023. The prompt will be shown either in a bubble below the omnibox, or in a bottom sheet, or in an infobar.">
     To pay faster next time, save your card, name, and billing address in your AI Wize sync chain
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_PROMPT_UPLOAD_EXPLANATION_V4" desc="Explanation of the effect of the Autofill save card prompt when the card is to be saved by uploading it to Google Payments, based on the results for the Save Card UI experiment. The prompt will be shown in a bubble below the omnibox.">
-    Pay faster next time and protect your card with Brave’s industry-leading security.
+    Pay faster next time and protect your card with AI Wize’s industry-leading security.
   </message>
   <message name="IDS_AUTOFILL_SAVE_CVC_PROMPT_EXPLANATION_UPLOAD" desc="Explanation text for the Autofill save CVC prompt that offers to upload CVC to the Sync server for existing server cards. This prompt is shown if a CVC is detected for an existing server card on form submission.">
     This card's CVC will be encrypted and saved in your AI Wize sync chain for faster checkout
@@ -333,7 +333,7 @@
     <message name="IDS_AUTOFILL_LOCAL_CARD_MIGRATION_DIALOG_LABEL_INVALID_CARDS" desc="The label text shown when a card is invalid and could not be migrated.">
       Invalid
     </message>
-    <message name="IDS_AUTOFILL_LOCAL_CARD_MIGRATION_DIALOG_TRASH_CAN_BUTTON_TOOLTIP" desc="The tooltip for the trash can button in the card list that allows user to delete this particular credit card from Brave.">
+    <message name="IDS_AUTOFILL_LOCAL_CARD_MIGRATION_DIALOG_TRASH_CAN_BUTTON_TOOLTIP" desc="The tooltip for the trash can button in the card list that allows user to delete this particular credit card from AI Wize.">
       Remove card
     </message>
   </if>
@@ -553,13 +553,13 @@
 
   <!-- DeviceAuthentication titles-->
   <if expr="is_macosx">
-    <message name="IDS_PAYMENTS_AUTOFILL_FILLING_MANDATORY_REAUTH" desc="Text that appears in the payments autofill mandatory re-authentication popup, asking the user to authenticate using biometric or device unlock before filling. Note: MacOS has the wording 'Brave is trying to' prepended onto the message during user auth, and it will add a period at the end.">
+    <message name="IDS_PAYMENTS_AUTOFILL_FILLING_MANDATORY_REAUTH" desc="Text that appears in the payments autofill mandatory re-authentication popup, asking the user to authenticate using biometric or device unlock before filling. Note: MacOS has the wording 'AI Wize is trying to' prepended onto the message during user auth, and it will add a period at the end.">
       verify it's you so it can fill in your payment info
     </message>
-    <message name="IDS_PAYMENTS_AUTOFILL_MANDATORY_REAUTH_PROMPT" desc="Message to be displayed to the user in the device authentication prompt when they click on the mandatory auth toggle on the Payments settings page, irrespective to enable or disable it. When mandatory auth toggle is enabled, we would authenticate the user before autofilling in the payment details. Note: MacOS has the wording 'Brave is trying to' prepended onto the message during user auth, and it will add a period at the end.">
+    <message name="IDS_PAYMENTS_AUTOFILL_MANDATORY_REAUTH_PROMPT" desc="Message to be displayed to the user in the device authentication prompt when they click on the mandatory auth toggle on the Payments settings page, irrespective to enable or disable it. When mandatory auth toggle is enabled, we would authenticate the user before autofilling in the payment details. Note: MacOS has the wording 'AI Wize is trying to' prepended onto the message during user auth, and it will add a period at the end.">
       modify settings for filling payment methods
     </message>
-    <message name="IDS_PAYMENTS_AUTOFILL_EDIT_CARD_MANDATORY_REAUTH_PROMPT" desc="Message to be displayed to the user in the device authentication prompt when they try to edit a local card on the Payments settings page if the mandatory auth toggle is enabled. If the user auth was successful, we would then show the edit card dialog. Note: MacOS has the wording 'Brave is trying to' prepended onto the message during user auth, and it will add a period at the end.">
+    <message name="IDS_PAYMENTS_AUTOFILL_EDIT_CARD_MANDATORY_REAUTH_PROMPT" desc="Message to be displayed to the user in the device authentication prompt when they try to edit a local card on the Payments settings page if the mandatory auth toggle is enabled. If the user auth was successful, we would then show the edit card dialog. Note: MacOS has the wording 'AI Wize is trying to' prepended onto the message during user auth, and it will add a period at the end.">
       edit payment methods
     </message>
   </if>

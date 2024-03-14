@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Hierheen verplaatsen</translation>
 <translation id="1014147525163127655">Er zijn geen toegangssleutels voor <ph name="ORIGIN"/> op dit apparaat</translation>
 <translation id="1016498331642356377">Zoek snel met je stem. Tik en houd vast om deze snelkoppeling te bewerken.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925">Verzenden naar <ph name="DEVICE_NAME"/>…</translation>
 <translation id="103269572468856066">Ook gegevens van deze sites en apps wissen?</translation>
 <translation id="1034259925032978114">Venster is geopend</translation>
@@ -21,16 +21,16 @@
 <translation id="1108938384783527433">Geschiedenissynchronisatie</translation>
 <translation id="1111673857033749125">Hier zie je bookmarks die je op andere apparaten hebt opgeslagen.</translation>
 <translation id="1113597929977215864">Vereenvoudigde weergave bekijken</translation>
-<translation id="4470276443668654888">Betaalmethoden en adressen van Brave Pay worden niet versleuteld. De browsegeschiedenis in AI Wize wordt niet gesynchroniseerd.
-Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtwoordzin wordt niet verstuurd naar of opgeslagen door Brave. Als je je wachtwoordzin vergeet of deze instelling wilt wijzigen, moet je de synchronisatie opnieuw instellen. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
+<translation id="4470276443668654888">Betaalmethoden en adressen van AI Wize Pay worden niet versleuteld. De browsegeschiedenis in AI Wize wordt niet gesynchroniseerd.
+Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtwoordzin wordt niet verstuurd naar of opgeslagen door AI Wize. Als je je wachtwoordzin vergeet of deze instelling wilt wijzigen, moet je de synchronisatie opnieuw instellen. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Beschermt je niet tegen gevaarlijke websites, downloads en extensies. Je wordt voor andere services, zoals Gmail en Zoeken, nog steeds beschermd door Safe Browsing als dat beschikbaar is.</translation>
 <translation id="1129510026454351943">Details: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Niet aanbieden om deze sites te vertalen</translation>
 <translation id="1145536944570833626">Bestaande gegevens verwijderen.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> wordt geopend in Brave. Als je doorgaat, ga je akkoord met de <ph name="BEGIN_LINK1"/>Servicevoorwaarden van Brave<ph name="END_LINK1"/> en met de <ph name="BEGIN_LINK2"/>Aanvullende servicevoorwaarden van AI Wize en Brave OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> wordt geopend in AI Wize. Als je doorgaat, ga je akkoord met de <ph name="BEGIN_LINK1"/>Servicevoorwaarden van AI Wize<ph name="END_LINK1"/> en met de <ph name="BEGIN_LINK2"/>Aanvullende servicevoorwaarden van AI Wize en AI Wize OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Wachtwoord <ph name="PASSWORD"/> gebruiken</translation>
 <translation id="1173894706177603556">Naam wijzigen</translation>
-<translation id="7947699437047020219">Brave vraagt de mobiele site op als het scherm smal is</translation>
+<translation id="7947699437047020219">AI Wize vraagt de mobiele site op als het scherm smal is</translation>
 <translation id="1177863135347784049">Aangepast</translation>
 <translation id="1181037720776840403">Verwijderen</translation>
 <translation id="1181366777303791449">op <ph name="MAIN_FRAME_ETLD_PLUS_ONE"/></translation>
@@ -46,7 +46,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1231733316453485619">Synchronisatie aanzetten?</translation>
 <translation id="123724288017357924">De pagina opnieuw laden, gecachte content negeren</translation>
 <translation id="1239792311949352652">Deel deze pagina snel. Je kunt deze snelkoppeling bewerken via Instellingen.</translation>
-<translation id="3251315496493761426">Brave-tips</translation>
+<translation id="3251315496493761426">AI Wize-tips</translation>
 <translation id="1240288207750131269"><ph name="LANG"/> laden</translation>
 <translation id="1240903469550363138"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> deelt je naam, e-mailadres en profielfoto met deze site om door te gaan. Bekijk het <ph name="BEGIN_LINK1"/>privacybeleid<ph name="END_LINK1"/> en de <ph name="BEGIN_LINK2"/>servicevoorwaarden<ph name="END_LINK2"/> van deze site.</translation>
 <translation id="124116460088058876">Meer talen</translation>
@@ -54,14 +54,14 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1242883863226959074">apparaat</translation>
 <translation id="124678866338384709">Huidig tabblad sluiten</translation>
 <translation id="1246905108078336582">Suggestie verwijderen van klembord?</translation>
-<translation id="1996480094660735607">Brave-doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Je ziet nu content van en over <ph name="SITE_NAME"/> in Je volgt. De sites en zoekopdrachten die je volgt, worden opgeslagen in je Brave-account. Je kunt je gevolgde items altijd beheren via de instellingen.</translation>
+<translation id="1996480094660735607">AI Wize-doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="7074197713963877855">Je ziet nu content van en over <ph name="SITE_NAME"/> in Je volgt. De sites en zoekopdrachten die je volgt, worden opgeslagen in je AI Wize-account. Je kunt je gevolgde items altijd beheren via de instellingen.</translation>
 <translation id="1263231323834454256">Leeslijst</translation>
 <translation id="1266864766717917324">Kan <ph name="CONTENT_TYPE"/> niet delen</translation>
 <translation id="1269129608791067105">Hier vind je je geschiedenis</translation>
 <translation id="1273937721055267968"><ph name="DOMAIN"/> blokkeren</translation>
 <translation id="1283039547216852943">Tik om uit te vouwen</translation>
-<translation id="194557235473047967">Je wordt gevraagd in te loggen op je Brave-account.</translation>
+<translation id="194557235473047967">Je wordt gevraagd in te loggen op je AI Wize-account.</translation>
 <translation id="1291207594882862231">Geschiedenis, cookies, sitegegevens, cachegeheugen wissen</translation>
 <translation id="129553762522093515">Recent gesloten</translation>
 <translation id="1298077576058087471">Bespaar tot 60% data, lees het nieuws van vandaag</translation>
@@ -69,8 +69,8 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1303507811548703290"><ph name="DOMAIN"/>: verzonden vanaf <ph name="DEVICE_NAME"/></translation>
 <translation id="1320912611264252795">Proces voor bookmark opslaan is op volledige hoogte geopend</translation>
 <translation id="1327257854815634930">Navigatiegeschiedenis is geopend</translation>
-<translation id="6773423637732432200">Brave kan niet updaten. Meer opties</translation>
-<translation id="3169981355900570544">Functiesneltoetsen in Brave</translation>
+<translation id="6773423637732432200">AI Wize kan niet updaten. Meer opties</translation>
+<translation id="3169981355900570544">Functiesneltoetsen in AI Wize</translation>
 <translation id="1344653310988386453">Link naar markering opnemen</translation>
 <translation id="1347468774581902829">Activiteit beheren</translation>
 <translation id="1360432990279830238">Uitloggen en synchroniseren uitzetten?</translation>
@@ -86,7 +86,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1407069428457324124">Donker thema</translation>
 <translation id="1407135791313364759">Alles openen</translation>
 <translation id="1409879593029778104">Downloaden van <ph name="FILE_NAME"/> is voorkomen omdat het bestand al bestaat.</translation>
-<translation id="1853026300647876496">Contact opnemen met Brave. Dit kan even duren…</translation>
+<translation id="1853026300647876496">Contact opnemen met AI Wize. Dit kan even duren…</translation>
 <translation id="1416550906796893042">Appversie</translation>
 <translation id="1428770807407000502">Synchronisatie uitzetten?</translation>
 <translation id="1430915738399379752">Afdrukken</translation>
@@ -95,27 +95,27 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1437543266176261764">Wordt uitgevoerd in <ph name="APP_NAME"/></translation>
 <translation id="1448440926884431741">Orden je gevolgde producten in Bookmarks</translation>
 <translation id="1450753235335490080">Kan <ph name="CONTENT_TYPE"/> niet delen</translation>
-<translation id="5598889255595678761">Kies de taal voor Brave</translation>
+<translation id="5598889255595678761">Kies de taal voor AI Wize</translation>
 <translation id="1477626028522505441">Downloaden van <ph name="FILE_NAME"/> is mislukt door serverproblemen.</translation>
 <translation id="148482509007564431">Proces voor bookmark opslaan</translation>
 <translation id="1492417797159476138">Je hebt deze gebruikersnaam al opgeslagen voor deze site</translation>
 <translation id="1493287004536771723">Je volgt <ph name="SITE_NAME"/></translation>
-<translation id="1502010315804028179">Update Brave Play-services om je wachtwoorden te beheren</translation>
+<translation id="1502010315804028179">Update AI Wize Play-services om je wachtwoorden te beheren</translation>
 <translation id="1506061864768559482">Zoekmachine</translation>
 <translation id="1513352483775369820">Bookmarks en webgeschiedenis</translation>
 <translation id="1513814250881909472">Voer een synchronisatie uit om de tabbladen van je andere apparaten op te halen</translation>
 <translation id="1513858653616922153">Wachtwoord verwijderen</translation>
 <translation id="1521774566618522728">Vandaag actief</translation>
-<translation id="8090895580117672212">Tik op de knop 'Account beheren' om je Brave-account te beheren</translation>
+<translation id="8090895580117672212">Tik op de knop 'Account beheren' om je AI Wize-account te beheren</translation>
 <translation id="1549000191223877751">Naar ander venster</translation>
-<translation id="1705567146636171298">Brave updaten</translation>
+<translation id="1705567146636171298">AI Wize updaten</translation>
 <translation id="1568636008098739136">Deze pagina beluisteren. Tik en houd vast om deze sneltoets te bewerken.</translation>
 <translation id="1571304935088121812">Gebruikersnaam kopiëren</translation>
 <translation id="1592864538817356322">Standaardbeveiliging:</translation>
 <translation id="1594635596540195766"><ph name="SUGGESTIONS_COUNT"/> voorgestelde items in de onderstaande lijst.</translation>
 <translation id="1598163867407640634"><ph name="SITE_ETLD_PLUS_ONE"/> gebruiken met <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{1 geselecteerd item verwijderen}other{# geselecteerde items verwijderen}}</translation>
-<translation id="3122582044404611732">Ontdek nieuwe content op de homepage van Brave</translation>
+<translation id="3122582044404611732">Ontdek nieuwe content op de homepage van AI Wize</translation>
 <translation id="1641113438599504367">Safe Browsing</translation>
 <translation id="164269334534774161">Je bekijkt een offline exemplaar van deze pagina van <ph name="CREATION_TIME"/></translation>
 <translation id="1644574205037202324">Geschiedenis</translation>
@@ -124,7 +124,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1671236975893690980">Download in behandeling…</translation>
 <translation id="1672586136351118594">Niet opnieuw bekijken</translation>
 <translation id="1680919990519905526">Kopen met Google Lens <ph name="BEGIN_NEW"/>Nieuw<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Binnenkort zie je content van en over <ph name="SITE_NAME"/> in Je volgt. De sites en zoekopdrachten die je volgt, worden opgeslagen in je Brave-account. Je kunt je gevolgde items altijd beheren via de instellingen.</translation>
+<translation id="7870200641233500458">Binnenkort zie je content van en over <ph name="SITE_NAME"/> in Je volgt. De sites en zoekopdrachten die je volgt, worden opgeslagen in je AI Wize-account. Je kunt je gevolgde items altijd beheren via de instellingen.</translation>
 <translation id="1696555181932908973">Je kunt andere manieren proberen om door te gaan op <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">Instellingen voor donker thema wijzigen?</translation>
 <translation id="1702907158640575240">Beheerde browser</translation>
@@ -148,12 +148,12 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/> kan <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> niet meer gebruiken</translation>
 <translation id="1829244130665387512">Zoeken op pagina</translation>
 <translation id="5488575152752589250">Voer een synchronisatie uit om de meest relevante content van AI Wize op te halen</translation>
-<translation id="7175072311426658869">Openen in de Brave-browser</translation>
-<translation id="5173820533850252773">Brave is verouderd</translation>
+<translation id="7175072311426658869">Openen in de AI Wize-browser</translation>
+<translation id="5173820533850252773">AI Wize is verouderd</translation>
 <translation id="1883903952484604915">Mijn bestanden</translation>
 <translation id="189358972401248634">Andere talen</translation>
 <translation id="1900260903084164610">Door verder te gaan, ga je akkoord met de <ph name="BEGIN_TOS_LINK"/>Servicevoorwaarden<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">De URL's die je bezoekt, worden opgeslagen in je Brave-account</translation>
+<translation id="6893464351226208429">De URL's die je bezoekt, worden opgeslagen in je AI Wize-account</translation>
 <translation id="1910950723001426294">Lijst met deelopties is gesloten.</translation>
 <translation id="7021823858304886493">Inloggen bij AI Wize toestaan</translation>
 <translation id="1922362554271624559">Voorgestelde talen</translation>
@@ -175,12 +175,12 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="1984417487208496350">Geen beveiliging (niet aanbevolen)</translation>
 <translation id="1986685561493779662">Naam bestaat al</translation>
 <translation id="1995884366040846621"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> deelt je naam, e-mailadres, adres en profielfoto met deze site om door te gaan. Bekijk het <ph name="BEGIN_LINK1"/>privacybeleid<ph name="END_LINK1"/> van deze site.</translation>
-<translation id="6968892567705775281">Omringende tekst opnemen in Brave-zoekopdrachten?</translation>
+<translation id="6968892567705775281">Omringende tekst opnemen in AI Wize-zoekopdrachten?</translation>
 <translation id="2009341475524975924">Beperkte typen gegevens worden gedeeld tussen sites om de prestaties van een advertentie te meten. Denk bijvoorbeeld aan het tijdstip waarop je een advertentie te zien kreeg.</translation>
 <translation id="201060170519281460">Met de profielvergrendeling wordt je informatie beveiligd in de auto, waaronder gesynchroniseerde wachtwoorden en betalingen.</translation>
 <translation id="2021896219286479412">Siteopties op volledig scherm</translation>
 <translation id="2038563949887743358">'Desktopsite aanvragen' aanzetten</translation>
-<translation id="7675869148432102528"><ph name="APP_NAME"/> heeft ook gegevens in Brave</translation>
+<translation id="7675869148432102528"><ph name="APP_NAME"/> heeft ook gegevens in AI Wize</translation>
 <translation id="2046634576464120978">Registratie mislukt</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">Gebruik waar mogelijk HTTPS en krijg een waarschuwing voordat er sites worden geladen die dit niet ondersteunen. Je kunt deze instelling niet wijzigen, omdat je Geavanceerde beveiliging hebt aangezet.</translation>
@@ -202,7 +202,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2141396931810938595">Gebaseerd op je gebruik</translation>
 <translation id="2149973817440762519">Bookmark bewerken</translation>
 <translation id="2155214902713132423">Deze verificatiemethode is niet beschikbaar voor dit apparaat. Kies een andere optie op je andere apparaat.</translation>
-<translation id="4162910516440006395">Brave kan niet alle wachtwoorden checken</translation>
+<translation id="4162910516440006395">AI Wize kan niet alle wachtwoorden checken</translation>
 <translation id="2172688499998841696">Afbeeldingsbeschrijvingen staan uit</translation>
 <translation id="2172905120685242547">Venster sluiten?</translation>
 <translation id="2173302385160625112">Controleer je internetverbinding</translation>
@@ -221,7 +221,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2249635629516220541">Pas de informatie aan die sites gebruiken om advertenties te laten zien</translation>
 <translation id="2259659629660284697">Wachtwoorden exporteren…</translation>
 <translation id="8820144752830692527">Je kunt altijd in de <ph name="BEGIN_LINK1"/>instellingen<ph name="END_LINK1"/> bepalen wat je wilt synchroniseren. AI Wize kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
-<translation id="781982477617612877">Log in met je Brave-account om je wachtwoorden te checken</translation>
+<translation id="781982477617612877">Log in met je AI Wize-account om je wachtwoorden te checken</translation>
 <translation id="2278052315791335171">Als je dit wachtwoord verwijdert, wordt je account op <ph name="SITE"/> niet verwijderd</translation>
 <translation id="2286841657746966508">Factuuradres</translation>
 <translation id="228704530595896923">Lijst met deelopties.</translation>
@@ -232,8 +232,8 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2323763861024343754">Site-opslag</translation>
 <translation id="2328985652426384049">Kan niet inloggen</translation>
 <translation id="2341410551640223969">Kan <ph name="WEBAPK_NAME"/> niet installeren.</translation>
-<translation id="3587672679800759167">Totale gegevens gebruikt door Brave, inclusief accounts, bookmarks en opgeslagen instellingen</translation>
-<translation id="2767094839186957509">Privacybeleid van Brave</translation>
+<translation id="3587672679800759167">Totale gegevens gebruikt door AI Wize, inclusief accounts, bookmarks en opgeslagen instellingen</translation>
+<translation id="2767094839186957509">Privacybeleid van AI Wize</translation>
 <translation id="2359808026110333948">Doorgaan</translation>
 <translation id="2362083820973145409">Ingelogd als <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Hiermee worden de instellingen geopend.</translation>
 <translation id="2364539095045928896">Knop Sluiten om de privacyverklaring van de hub voor pagina-inzichten te sluiten.</translation>
@@ -255,11 +255,11 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2482878487686419369">Meldingen</translation>
 <translation id="2496180316473517155">Browsegeschiedenis</translation>
 <translation id="2497852260688568942">Synchronisatie is uitgezet door je beheerder</translation>
-<translation id="7229462727772664332">Je ziet je inlogstatus, browsegegevens en sitegegevens van <ph name="SITE_NAME"/> in Brave</translation>
+<translation id="7229462727772664332">Je ziet je inlogstatus, browsegegevens en sitegegevens van <ph name="SITE_NAME"/> in AI Wize</translation>
 <translation id="2510106555128151389"><ph name="WEBAPK_NAME"/> installeren...</translation>
-<translation id="7222718784508482526">Bekijk <ph name="BEGIN_LINK"/>Synchronisatie en Brave-services<ph name="END_LINK"/> voor meer instellingen die verband houden met privacy, beveiliging en gegevensverzameling.</translation>
+<translation id="7222718784508482526">Bekijk <ph name="BEGIN_LINK"/>Synchronisatie en AI Wize-services<ph name="END_LINK"/> voor meer instellingen die verband houden met privacy, beveiliging en gegevensverzameling.</translation>
 <translation id="2517113738956581680">Blad op volledig formaat</translation>
-<translation id="284843628681142937">Hiermee worden de URL's van pagina's die je bezoekt, verzonden naar Brave</translation>
+<translation id="284843628681142937">Hiermee worden de URL's van pagina's die je bezoekt, verzonden naar AI Wize</translation>
 <translation id="2527209463677295330">Door meer tekst van een pagina op te nemen, krijg je misschien betere resultaten</translation>
 <translation id="2527779675047087889">Content op het klembord verbergen</translation>
 <translation id="2532336938189706096">Webweergave</translation>
@@ -306,45 +306,45 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2760989362628427051">Zet het donkere thema aan als het donkere thema of de batterijbesparing van je apparaat aanstaat</translation>
 <translation id="2762000892062317888">zojuist</translation>
 <translation id="276969039800130567">Ingelogd als <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">Bekijk <ph name="BEGIN_LINK"/>Brave-services<ph name="END_LINK"/> voor meer instellingen over privacy, beveiliging en gegevensverzameling.</translation>
+<translation id="8312774691909088652">Bekijk <ph name="BEGIN_LINK"/>AI Wize-services<ph name="END_LINK"/> voor meer instellingen over privacy, beveiliging en gegevensverzameling.</translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> seconden resterend</translation>
 <translation id="2779651927720337254">mislukt</translation>
 <translation id="2781151931089541271">1 seconde resterend</translation>
 <translation id="2800066122460699237">Het tabblad <ph name="TAB_TITLE"/> wordt gesloten</translation>
-<translation id="7068873021383263704">Bekijk en beheer opgeslagen wachtwoorden in je <ph name="BEGIN_LINK"/>Brave-account<ph name="END_LINK"/></translation>
+<translation id="7068873021383263704">Bekijk en beheer opgeslagen wachtwoorden in je <ph name="BEGIN_LINK"/>AI Wize-account<ph name="END_LINK"/></translation>
 <translation id="2827278682606527653">Feedkaartmenu halve hoogte</translation>
 <translation id="2830783625999891985">Content van klembord verborgen</translation>
 <translation id="2838367486340230368">Uitleg over privacygids is op halve hoogte geopend</translation>
 <translation id="2839327205551510876"><ph name="SITE_NAME"/> wordt niet meer gevolgd</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{1 dag geleden gecheckt}other{# dagen geleden gecheckt}}</translation>
 <translation id="2842985007712546952">Bovenliggende map</translation>
-<translation id="6324134303015966238">Brave laadt vooraf de pagina's die je waarschijnlijk gaat bezoeken, zodat de pagina's sneller laden als je ze bezoekt</translation>
+<translation id="6324134303015966238">AI Wize laadt vooraf de pagina's die je waarschijnlijk gaat bezoeken, zodat de pagina's sneller laden als je ze bezoekt</translation>
 <translation id="2856503607207334158">Inloggen mislukt</translation>
 <translation id="2860954141821109167">Zorg ervoor dat een telefoon-app aanstaat op dit apparaat</translation>
-<translation id="6518254564747115579">Sommige Brave-functies zijn niet meer beschikbaar</translation>
+<translation id="6518254564747115579">Sommige AI Wize-functies zijn niet meer beschikbaar</translation>
 <translation id="2869430948265924908">Als je je gevoelige content in de auto wilt beschermen, stel je een profielvergrendeling voor je auto in.  Dit kun je doen met een pincode, code of wachtwoord.</translation>
 <translation id="2870560284913253234">Site</translation>
 <translation id="2871733351037274014">Pagina's vooraf laden</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> vraagt of je deze website wilt goedkeuren:</translation>
 <translation id="6756656512757374876">Meer informatie over <ph name="BEGIN_LINK"/>hoe AI Wize je gegevens privé houdt<ph name="END_LINK"/></translation>
-<translation id="8541922081612557424">Over Brave</translation>
+<translation id="8541922081612557424">Over AI Wize</translation>
 <translation id="2891154217021530873">Stoppen met het laden van de pagina</translation>
-<translation id="4013614219085422040">Brave kan je geschiedenis gebruiken om AI Wize Zoeken en andere Brave-services te personaliseren</translation>
+<translation id="4013614219085422040">AI Wize kan je geschiedenis gebruiken om AI Wize Zoeken en andere AI Wize-services te personaliseren</translation>
 <translation id="2894821468041866720">Je browser of apparaat wordt hier niet merkbaar langzamer van.</translation>
 <translation id="2900528713135656174">Afspraak maken</translation>
 <translation id="2901411048554510387">Suggesties bekijken voor <ph name="WEBSITE_TITLE"/></translation>
 <translation id="2904300462646366554">Gedownloade pdf's worden automatisch geopend met een van de pdf-viewers op je apparaat</translation>
 <translation id="2904414404539560095">De lijst met apparaten om een tabblad mee te delen, is op volledige hoogte geopend.</translation>
 <translation id="2908243544703713905">Ongelezen artikelen beschikbaar</translation>
-<translation id="7339921667754113786">Platform voor Brave-meldingen</translation>
+<translation id="7339921667754113786">Platform voor AI Wize-meldingen</translation>
 <translation id="2912296070571964914">Beheer de onderwerpen waarin je geïnteresseerd bent</translation>
 <translation id="2923908459366352541">Naam is ongeldig</translation>
 <translation id="6355102470683871794">Opslag van AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Je toetsenbord verandert niet</translation>
-<translation id="6537665929855787038">Brave-meldingen maken het je makkelijker</translation>
+<translation id="6537665929855787038">AI Wize-meldingen maken het je makkelijker</translation>
 <translation id="2940075786175545812">Optie om een website wel of niet goed te keuren</translation>
 <translation id="2942036813789421260">Voorbeeldtabblad is gesloten</translation>
-<translation id="4700262879698141140">Brave wordt geüpdatet om verbinding te maken met andere apparaten</translation>
+<translation id="4700262879698141140">AI Wize wordt geüpdatet om verbinding te maken met andere apparaten</translation>
 <translation id="2951071800649516099">Voeg pagina's aan je leeslijst toe voor later</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> ongelezen pagina}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> ongelezen pagina's}}</translation>
 <translation id="296370266220139811">Bespaar tijd en typ minder</translation>
@@ -353,59 +353,59 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="2979639724566107830">Openen in nieuw venster</translation>
 <translation id="2981364137500752533">Je kunt maximaal 5 vensters hebben.</translation>
 <translation id="2983102365694924129">Gebaseerd op je activiteit op een site. Deze instelling staat uit.</translation>
-<translation id="5948666439178419683">Omringende tekst opnemen in Brave-zoekopdrachten</translation>
+<translation id="5948666439178419683">Omringende tekst opnemen in AI Wize-zoekopdrachten</translation>
 <translation id="2987620471460279764">Gedeelde tekst van ander apparaat</translation>
 <translation id="2989523299700148168">Onlangs bezocht</translation>
 <translation id="2992473221983447149">Afbeeldingsbeschrijvingen</translation>
 <translation id="2996291259634659425">Wachtwoordzin maken</translation>
 <translation id="2996809686854298943">URL vereist</translation>
 <translation id="2996932914629936323">Hiermee wordt de geschiedenis van al je gesynchroniseerde apparaten gewist</translation>
-<translation id="2019027298133375428">Als een Brave-site vraagt om links op de sitepagina privé vooraf te laden, versleutelt en laadt AI Wize de pagina's vooraf via Brave-servers zonder cookies. Hierdoor wordt je identiteit voor de vooraf geladen site verborgen.</translation>
+<translation id="2019027298133375428">Als een AI Wize-site vraagt om links op de sitepagina privé vooraf te laden, versleutelt en laadt AI Wize de pagina's vooraf via AI Wize-servers zonder cookies. Hierdoor wordt je identiteit voor de vooraf geladen site verborgen.</translation>
 <translation id="5730179015008010982">URL's die je bezoekt, worden naar AI Wize gestuurd om te voorspellen naar welke sites je misschien daarna gaat en extra informatie te tonen over de pagina die je bezoekt</translation>
 <translation id="3016635187733453316">Controleer of dit apparaat verbinding heeft met internet</translation>
 <translation id="3026955690410463085">Link toevoegen</translation>
 <translation id="3027644380269727216">Gebaseerd op je activiteit op een site. Deze instelling staat aan.</translation>
 <translation id="3029276696788198026">Niet vooraf laden</translation>
 <translation id="3029704984691124060">Wachtwoordzinnen komen niet overeen</translation>
-<translation id="8678991866891573053">Brave bevat nieuwe experimentele functies waarmee sites dezelfde browsefunctionaliteit kunnen leveren terwijl er minder van je gegevens worden gebruikt</translation>
+<translation id="8678991866891573053">AI Wize bevat nieuwe experimentele functies waarmee sites dezelfde browsefunctionaliteit kunnen leveren terwijl er minder van je gegevens worden gebruikt</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Hulp krijgen<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Prijs wordt gevolgd</translation>
-<translation id="3251012123600267109">Toont prompts om in te loggen bij Brave</translation>
+<translation id="3251012123600267109">Toont prompts om in te loggen bij AI Wize</translation>
 <translation id="3038272154009688107">Alle sites bekijken</translation>
 <translation id="3046945242843292318">Ga de volgende keer sneller naar deze site</translation>
 <translation id="3055259925215945098">Bookmark verplaatst</translation>
-<translation id="4163313568284712797">Er wordt informatie naar AI Wize gestuurd over je Brave-gebruik, maar de informatie wordt niet aan jou gekoppeld\n\nAls AI Wize crasht, kunnen de gegevens over de crash wat persoonlijke informatie bevatten\n\nAls je synchronisatie aanzet, kunnen de statistieken ook informatie bevatten over de URL's die je bezoekt</translation>
+<translation id="4163313568284712797">Er wordt informatie naar AI Wize gestuurd over je AI Wize-gebruik, maar de informatie wordt niet aan jou gekoppeld\n\nAls AI Wize crasht, kunnen de gegevens over de crash wat persoonlijke informatie bevatten\n\nAls je synchronisatie aanzet, kunnen de statistieken ook informatie bevatten over de URL's die je bezoekt</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> bookmark}other{<ph name="BOOKMARKS_COUNT_MANY"/> bookmarks}}</translation>
-<translation id="6153252609477956632">Artikelen over je interesses in Brave</translation>
+<translation id="6153252609477956632">Artikelen over je interesses in AI Wize</translation>
 <translation id="3066573403916685335">Naar beneden</translation>
 <translation id="3070005020161560471">Automatisch vertalen</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> wordt geopend in Brave. Als je doorgaat, ga je akkoord met de <ph name="BEGIN_LINK1"/>Servicevoorwaarden van Brave<ph name="END_LINK1"/> en met de <ph name="BEGIN_LINK2"/>Aanvullende servicevoorwaarden van AI Wize en Brave OS<ph name="END_LINK2"/>. Het <ph name="BEGIN_LINK3"/>Privacybeleid<ph name="END_LINK3"/> is ook van toepassing.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> wordt geopend in AI Wize. Als je doorgaat, ga je akkoord met de <ph name="BEGIN_LINK1"/>Servicevoorwaarden van AI Wize<ph name="END_LINK1"/> en met de <ph name="BEGIN_LINK2"/>Aanvullende servicevoorwaarden van AI Wize en AI Wize OS<ph name="END_LINK2"/>. Het <ph name="BEGIN_LINK3"/>Privacybeleid<ph name="END_LINK3"/> is ook van toepassing.</translation>
 <translation id="3080525922482950719">Je kunt pagina's opslaan en later of offline lezen</translation>
 <translation id="3091010850649238832">Content op het klembord bekijken</translation>
 <translation id="821565628224723530">Sommige afbeeldingen worden naar AI Wize gestuurd om de beschrijvingen voor je te verbeteren</translation>
 <translation id="3114507951000454849">Lees het nieuws van vandaag <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Aankondigingen</translation>
-<translation id="5063487983358782016">Homepage van Brave</translation>
+<translation id="5063487983358782016">Homepage van AI Wize</translation>
 <translation id="3158667104057012316">Sorteren op handmatige volgorde</translation>
 <translation id="3166827708714933426">Sneltoetsen voor tabbladen en vensters</translation>
-<translation id="7249949543831830993">Brave is hier al actief.</translation>
+<translation id="7249949543831830993">AI Wize is hier al actief.</translation>
 <translation id="3167258285411721858">Je kunt de mobiele site opvragen voor <ph name="HOST_NAME"/></translation>
 <translation id="3169472444629675720">Discover</translation>
 <translation id="3187472288455401631">Advertentiemeting</translation>
 <translation id="3207960819495026254">Toegevoegd aan 'Bookmarks'</translation>
 <translation id="3208584281581115441">Nu checken</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> is verwijderd</translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Zoekgeschiedenis<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>andere vormen van activiteit<ph name="END_LINK2"/> kunnen worden opgeslagen op je Brave-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Zoekgeschiedenis<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>andere vormen van activiteit<ph name="END_LINK2"/> kunnen worden opgeslagen op je AI Wize-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
 <translation id="321773570071367578">Als je je wachtwoordzin bent vergeten of deze instelling wilt wijzigen, <ph name="BEGIN_LINK"/>stel je de synchronisatie opnieuw in<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Bevestig dat jij het bent als je je wachtwoorden wilt synchroniseren</translation>
-<translation id="9210457680074341078">Als je je bookmarks ook opslaat in je Brave-account, kun je productprijzen in AI Wize bijhouden en een melding krijgen als de prijs daalt</translation>
-<translation id="9047551989591319903">Brave als beveiligingssleutel</translation>
+<translation id="9210457680074341078">Als je je bookmarks ook opslaat in je AI Wize-account, kun je productprijzen in AI Wize bijhouden en een melding krijgen als de prijs daalt</translation>
+<translation id="9047551989591319903">AI Wize als beveiligingssleutel</translation>
 <translation id="3232754137068452469">Webapp</translation>
 <translation id="3236059992281584593">1 minuut resterend</translation>
 <translation id="3237087289225714896">Standaard vooraf laden:</translation>
 <translation id="3237433641417325993">Scroll omlaag om voorgestelde artikelen te bekijken</translation>
 <translation id="3244271242291266297">MM</translation>
-<translation id="7402642357351265733">Als je ook Brave-gebruiksrapporten deelt, bevatten die rapporten de URL's die je bezoekt</translation>
+<translation id="7402642357351265733">Als je ook AI Wize-gebruiksrapporten deelt, bevatten die rapporten de URL's die je bezoekt</translation>
 <translation id="3250563604907490871">Je ziet weer afbeeldingsbeschrijvingen als je verbinding maakt met wifi</translation>
 <translation id="3254409185687681395">Bookmark instellen voor deze pagina</translation>
 <translation id="3259831549858767975">Alles op de pagina verkleinen</translation>
@@ -414,7 +414,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="3265534588625245297">De sites beheren die je volgt</translation>
 <translation id="3269093882174072735">Afbeelding laden</translation>
 <translation id="3280562213547448728">Gesproken zoekopdracht</translation>
-<translation id="82609232232243542">Inloggen bij Brave</translation>
+<translation id="82609232232243542">Inloggen bij AI Wize</translation>
 <translation id="3290249595466894471">Stuurt ook een klein gedeelte pagina's, downloads, extensie-activiteit en systeeminformatie om nieuwe dreigingen te kunnen vinden</translation>
 <translation id="3293181007446299124">Je browsegeschiedenis blijft privé op je apparaat en rapporten worden met vertraging verstuurd om je identiteit te beschermen</translation>
 <translation id="3303414029551471755">Doorgaan met het downloaden van de content?</translation>
@@ -424,16 +424,16 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="3341262203274374114">Niet meer volgen is mislukt. Er is iets misgegaan.</translation>
 <translation id="3359667936385849800">Je huidige serviceprovider gebruiken</translation>
 <translation id="3373701465337594448">Als deze optie aanstaat, zie je hier een lijst met sites die je bezoekt en die je interesses raden</translation>
-<translation id="2746024117903470217">Als je deze pagina wilt delen met een ander apparaat, zet je op het andere apparaat de synchronisatie aan via de Brave-instellingen</translation>
-<translation id="8801234437789558906">Je bookmarks, geschiedenis, wachtwoorden en andere Brave-gegevens worden niet meer gesynchroniseerd met je Brave-account</translation>
+<translation id="2746024117903470217">Als je deze pagina wilt delen met een ander apparaat, zet je op het andere apparaat de synchronisatie aan via de AI Wize-instellingen</translation>
+<translation id="8801234437789558906">Je bookmarks, geschiedenis, wachtwoorden en andere AI Wize-gegevens worden niet meer gesynchroniseerd met je AI Wize-account</translation>
 <translation id="3384347053049321195">Afbeelding delen</translation>
 <translation id="3387650086002190359">Downloaden van <ph name="FILE_NAME"/> is mislukt door fouten in het bestandssysteem.</translation>
 <translation id="3389286852084373014">Tekst is te groot</translation>
 <translation id="3398320232533725830">Bookmarkbeheer openen</translation>
-<translation id="1081508498128395141">Er worden meer pagina's vooraf geladen. Pagina's kunnen op verzoek van andere sites vooraf worden geladen via de servers van Brave.</translation>
+<translation id="1081508498128395141">Er worden meer pagina's vooraf geladen. Pagina's kunnen op verzoek van andere sites vooraf worden geladen via de servers van AI Wize.</translation>
 <translation id="3414952576877147120">Grootte:</translation>
 <translation id="3421726884497337397">Kies wanneer je cookies van derden wilt blokkeren</translation>
-<translation id="5265419033369521352">Beschermt je op AI Wize en kan worden gebruikt om de beveiliging in andere Brave-apps te verbeteren als je bent ingelogd</translation>
+<translation id="5265419033369521352">Beschermt je op AI Wize en kan worden gebruikt om de beveiliging in andere AI Wize-apps te verbeteren als je bent ingelogd</translation>
 <translation id="3430670036890315772">Als je de profielvergrendeling uitzet, worden je opgeslagen gegevens verwijderd</translation>
 <translation id="3435465986463792564">Heb je veel vensters open? Beheer ze hier.</translation>
 <translation id="3435738964857648380">Beveiliging</translation>
@@ -484,14 +484,14 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="3714981814255182093">De zoekbalk openen</translation>
 <translation id="5805364706385912897">Omdat deze pagina te veel geheugen gebruikt, heeft AI Wize de pagina onderbroken.</translation>
 <translation id="3720422586473670527">Nee, bedankt</translation>
-<translation id="8397843425685839889">Jij en Brave</translation>
+<translation id="8397843425685839889">Jij en AI Wize</translation>
 <translation id="3737319253362202215">Vertaalinstellingen</translation>
 <translation id="3737402728074743863">Stel een schermvergrendeling in om dit apparaat als beveiligingssleutel te gebruiken</translation>
 <translation id="3738139272394829648">Tikken om te zoeken</translation>
 <translation id="3739899004075612870">Bookmark toegevoegd in <ph name="PRODUCT_NAME"/></translation>
 <translation id="3740525748616366977">Gesproken zoekopdracht is niet beschikbaar op dit apparaat</translation>
 <translation id="3771290962915251154">Deze instelling staat uit omdat ouderlijk toezicht is aangezet</translation>
-<translation id="1138681184697033370">Servicevoorwaarden van Brave</translation>
+<translation id="1138681184697033370">Servicevoorwaarden van AI Wize</translation>
 <translation id="3775705724665058594">Naar je apparaten sturen</translation>
 <translation id="3777796259512476958">Hiermee word je uitgelogd van de meeste sites</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 tabblad}other{# tabbladen}}</translation>
@@ -501,7 +501,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="381861209280417772">Wachtwoorden verwijderen</translation>
 <translation id="3819178904835489326"><ph name="NUMBER_OF_DOWNLOADS"/> downloads verwijderd</translation>
 <translation id="3819183753496523827">Je bent offline. Check de internetverbinding en probeer het opnieuw.</translation>
-<translation id="3830886834687455630">Update Brave Play-services om je wachtwoorden te checken</translation>
+<translation id="3830886834687455630">Update AI Wize Play-services om je wachtwoorden te checken</translation>
 <translation id="3847319713229060696">Helpen om het internet voor iedereen veiliger te maken</translation>
 <translation id="3856096718352044181">Controleer of dit een geldige provider is of probeer het later opnieuw</translation>
 <translation id="3858860766373142691">Naam</translation>
@@ -517,9 +517,9 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="3932390316856284148">Inlogblad onderaan is op volledige hoogte geopend.</translation>
 <translation id="393697183122708255">Gesproken zoekopdracht niet beschikbaar</translation>
 <translation id="395377504920307820">Gebruiken zonder account</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Brave laadt de pagina wanneer deze klaar is}other{Brave laadt de pagina's wanneer deze klaar zijn}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{AI Wize laadt de pagina wanneer deze klaar is}other{AI Wize laadt de pagina's wanneer deze klaar zijn}}</translation>
 <translation id="3962119236270174787">Standaardbeveiliging tegen websites, downloads en extensies die als gevaarlijk zijn bestempeld</translation>
-<translation id="1453002554835005700">Brave kan je wachtwoorden niet checken</translation>
+<translation id="1453002554835005700">AI Wize kan je wachtwoorden niet checken</translation>
 <translation id="3969863827134279083">Naar boven</translation>
 <translation id="397105322502079400">Berekenen...</translation>
 <translation id="397583555483684758">Synchronisatie werkt niet meer</translation>
@@ -540,7 +540,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="4062305924942672200">Juridische informatie</translation>
 <translation id="4072805772816336153">Probeer het later opnieuw</translation>
 <translation id="4084682180776658562">Bookmark maken</translation>
-<translation id="4521874409998847950">Van <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>geleverd door Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">Van <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>geleverd door AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Je kunt deze tablet gebruiken om in te loggen op het apparaat waarop deze QR-code wordt getoond.</translation>
 <translation id="7268155614575494857">Voeg je gebruikersnaam voor deze site toe, zodat AI Wize Wachtwoordmanager je inloggegevens kan opslaan</translation>
 <translation id="4095146165863963773">App-gegevens verwijderen?</translation>
@@ -555,7 +555,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="4126285640274188657">Pagina-inzichten</translation>
 <translation id="4135200667068010335">De lijst met apparaten om een tabblad mee te delen is gesloten.</translation>
 <translation id="4137746084635924146">Huidige apparaattaal</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Desktopsites standaard aangevraagd</translation>
 <translation id="4162867837470729563">Lijst met deelopties op volledige hoogte.</translation>
 <translation id="4170011742729630528">De service is niet beschikbaar. Probeer het later opnieuw.</translation>
@@ -573,7 +573,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="4225895483398857530">Snelkoppeling voor werkbalk</translation>
 <translation id="4242533952199664413">Instellingen openen</translation>
 <translation id="4248098802131000011">Bescherm je wachtwoorden tegen gegevenslekken en andere beveiligingsproblemen</translation>
-<translation id="7445061995866044926">Uitloggen bij Brave?</translation>
+<translation id="7445061995866044926">Uitloggen bij AI Wize?</translation>
 <translation id="4249955472157341256">Sorteren op nieuwste</translation>
 <translation id="4256782883801055595">Opensource-licenties</translation>
 <translation id="7404502124231907662">Wachtwoorden verwijderen uit AI Wize Wachtwoordmanager?</translation>
@@ -602,18 +602,18 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="4405224443901389797">Verplaatsen naar…</translation>
 <translation id="4405636711880428279">Je virtuele kaart verwijderen?</translation>
 <translation id="4409271659088619928">Je zoekmachine is <ph name="DSE"/>. Bekijk de instructies van je zoekmachine voor het verwijderen van je zoekgeschiedenis (indien van toepassing).</translation>
-<translation id="5749788945734786627">Je Brave-account beheren</translation>
+<translation id="5749788945734786627">Je AI Wize-account beheren</translation>
 <translation id="4425140285732600465">Prijs wordt gevolgd. Krijg meldingen bij een prijsdaling op een site.</translation>
 <translation id="4425173294238317796">Bevestigingsblad voor toegangssleutel</translation>
-<translation id="442518031075347249">Je kunt je virtuele kaart niet meer gebruiken met Brave Pay. <ph name="BEGIN_LINK1"/>Meer informatie over virtuele kaarten<ph name="END_LINK1"/></translation>
+<translation id="442518031075347249">Je kunt je virtuele kaart niet meer gebruiken met AI Wize Pay. <ph name="BEGIN_LINK1"/>Meer informatie over virtuele kaarten<ph name="END_LINK1"/></translation>
 <translation id="4452411734226507615">Tabblad <ph name="TAB_TITLE"/> sluiten</translation>
 <translation id="4452548195519783679">Bookmark gemaakt in <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Als je een ander apparaat koppelt via een QR-code, kan het apparaat deze telefoon gebruiken als beveiligingssleutel. Als je het verwijdert, moet je een QR-code scannen om het opnieuw te koppelen.</translation>
 <translation id="4478161224666880173">Je kunt je <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>-account gebruiken op deze site. Als je wilt doorgaan, log je in op <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="3133489217401741157"><ph name="MODULE"/> installeren voor Brave…</translation>
+<translation id="3133489217401741157"><ph name="MODULE"/> installeren voor AI Wize…</translation>
 <translation id="4484496141267039529">Geen verbinding. Probeer het later opnieuw.</translation>
 <translation id="53119194224775367">Alle app-gegevens voor AI Wize worden definitief verwijderd. Dit omvat alle bestanden, instellingen, accounts, databases, enzovoort.</translation>
-<translation id="3966104135245031874">Gesynchroniseerde wachtwoorden versleutelen met je Brave-account</translation>
+<translation id="3966104135245031874">Gesynchroniseerde wachtwoorden versleutelen met je AI Wize-account</translation>
 <translation id="4491323382106587961">Kies een account. Op dit moment geselecteerd: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">Wachtwoord opslaan is aangezet door je beheerder</translation>
 <translation id="4508528996305412043">Feedkaartmenu is geopend</translation>
@@ -622,7 +622,7 @@ Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtw
 <translation id="451872707440238414">Zoek in je bookmarks</translation>
 <translation id="1664855196866195614">De geselecteerde gegevens zijn verwijderd uit AI Wize en van je gesynchroniseerde apparaten.
 
-Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopdrachten en activiteit uit andere Brave-services) beschikbaar zijn via <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Voor je AI Wize-account kunnen andere vormen van browsegeschiedenis (zoals zoekopdrachten en activiteit uit andere AI Wize-services) beschikbaar zijn via <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">afgelopen uur</translation>
 <translation id="452750746583162491">Je gesynchroniseerde gegevens controleren</translation>
 <translation id="4532845899244822526">Map kiezen</translation>
@@ -650,7 +650,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/> bookmarks verwijderd</translation>
 <translation id="4668279686271488041">De gegevens van advertentiemetingen worden regelmatig van je apparaat verwijderd</translation>
 <translation id="4668347365065281350">Alle gegevens die zijn opgeslagen door sites, waaronder cookies en andere lokaal opgeslagen gegevens</translation>
-<translation id="6904731820418823295">Donker thema voor sites staat aan in Brave</translation>
+<translation id="6904731820418823295">Donker thema voor sites staat aan in AI Wize</translation>
 <translation id="4684427112815847243">Alles synchroniseren</translation>
 <translation id="4685741273709472646">Selecteren in het dropdownmenu</translation>
 <translation id="4687718960473379118">Door sites voorgestelde advertenties</translation>
@@ -685,8 +685,8 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="481574578487123132">Gekoppelde apparaten</translation>
 <translation id="4826163340425232009">Inlogblad onderaan.</translation>
 <translation id="4834007576107377210">Bekijk de instructies van je zoekmachine voor het verwijderen van je zoekgeschiedenis (indien van toepassing)</translation>
-<translation id="4834250788637067901">Betaalmethoden, aanbiedingen en adressen via Brave Pay</translation>
-<translation id="2593289874938379417">Brave heeft geen toegang tot de gevraagde bron.</translation>
+<translation id="4834250788637067901">Betaalmethoden, aanbiedingen en adressen via AI Wize Pay</translation>
+<translation id="2593289874938379417">AI Wize heeft geen toegang tot de gevraagde bron.</translation>
 <translation id="4837753911714442426">Afdrukopties voor de pagina openen</translation>
 <translation id="4842092870884894799">Pop-upvenster voor wachtwoord genereren wordt getoond</translation>
 <translation id="4842515939542199281">Tik op de microfoon om met je stem te zoeken</translation>
@@ -695,7 +695,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="4852014461738377247">Inloggen\u2026</translation>
 <translation id="4860895144060829044">Bellen</translation>
 <translation id="4864369630010738180">Inloggen...</translation>
-<translation id="5131234170665854056">Kan <ph name="MODULE"/> niet installeren voor Brave</translation>
+<translation id="5131234170665854056">Kan <ph name="MODULE"/> niet installeren voor AI Wize</translation>
 <translation id="4871568871368204250">Synchronisatie uitzetten</translation>
 <translation id="2875466387677348954">Als dit uitstaat, zie je nog steeds suggesties die AI Wize lokaal biedt</translation>
 <translation id="4875775213178255010">Contentsuggesties</translation>
@@ -703,9 +703,9 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="4880127995492972015">Vertalen…</translation>
 <translation id="4881695831933465202">Openen</translation>
 <translation id="488187801263602086">Naam van bestand wijzigen</translation>
-<translation id="1248710015876067820">Niet-ondersteund aantal Brave-instanties.</translation>
+<translation id="1248710015876067820">Niet-ondersteund aantal AI Wize-instanties.</translation>
 <translation id="4905823827770127520">Link naar de pagina opnemen</translation>
-<translation id="3217997482476578430">Discover van Brave</translation>
+<translation id="3217997482476578430">Discover van AI Wize</translation>
 <translation id="4909709702739934280">Je browser wordt beheerd door je beheerder</translation>
 <translation id="4910889077668685004">Betaal-apps</translation>
 <translation id="4912413785358399818">Tabblad verplaatsen</translation>
@@ -714,10 +714,10 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="4925120120285606924">Screenshot <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Je wachtwoorden worden geëxporteerd en gedownload als tekstbestand. Ze zijn zichtbaar voor iedereen en elke app met toegang tot de bestemmingsmap.</translation>
 <translation id="4926901776383726965">Je kunt afbeeldingen en bestanden opslaan om ze offline te bekijken of in andere apps te delen</translation>
-<translation id="1955495299630319741">Omdat je uitlogt van een account dat wordt beheerd door <ph name="DOMAIN_NAME"/>, worden je Brave-gegevens verwijderd. De gegevens blijven in je Brave-account staan.</translation>
+<translation id="1955495299630319741">Omdat je uitlogt van een account dat wordt beheerd door <ph name="DOMAIN_NAME"/>, worden je AI Wize-gegevens verwijderd. De gegevens blijven in je AI Wize-account staan.</translation>
 <translation id="4943703118917034429">Virtual reality</translation>
 <translation id="4943872375798546930">Geen resultaten</translation>
-<translation id="5742837711075932301">Als je bent ingelogd op hetzelfde Brave-account, kunnen andere apparaten deze telefoon gebruiken als beveiligingssleutel.</translation>
+<translation id="5742837711075932301">Als je bent ingelogd op hetzelfde AI Wize-account, kunnen andere apparaten deze telefoon gebruiken als beveiligingssleutel.</translation>
 <translation id="4957722034734105353">Meer informatie...</translation>
 <translation id="4961107849584082341">Vertaal deze pagina in een andere taal</translation>
 <translation id="7307583170263691471">Snellere, proactieve beveiliging tegen gevaarlijke websites, downloads en extensies. Stuurt een waarschuwing over wachtwoordlekken. Vereist dat browsegegevens naar AI Wize worden verstuurd.</translation>
@@ -727,7 +727,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="4991110219272367918">Optie om een gesloten website wel of niet goed te keuren</translation>
 <translation id="499724277181351974">Navigeren: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Volg deze site hier</translation>
-<translation id="6447211988989208781">Brave-activiteitsopties</translation>
+<translation id="6447211988989208781">AI Wize-activiteitsopties</translation>
 <translation id="5005498671520578047">Wachtwoord kopiëren</translation>
 <translation id="5010886807652684893">Visuele weergave</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> wil verbinding maken</translation>
@@ -737,11 +737,11 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5039804452771397117">Toestaan</translation>
 <translation id="5040262127954254034">Privacy</translation>
 <translation id="504456571576643789">Overwegingen</translation>
-<translation id="4858031288914533863">Er kunnen <ph name="BEGIN_LINK1"/>andere vormen van activiteit<ph name="END_LINK1"/> worden opgeslagen op je Brave-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
+<translation id="4858031288914533863">Er kunnen <ph name="BEGIN_LINK1"/>andere vormen van activiteit<ph name="END_LINK1"/> worden opgeslagen op je AI Wize-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
 <translation id="506254248375231072">Geen tabbladen</translation>
 <translation id="5062960805900435602">Update over samenvoegen van wachtwoorden is gesloten</translation>
 <translation id="5081960376148623587">Kiezen of pagina's vooraf worden geladen</translation>
-<translation id="4744980273298156620">Binnenkort zie je artikelen van <ph name="SITE_NAME"/> als je een nieuw tabblad opent. Sites die je volgt, worden opgeslagen in je Brave-account. Je kunt ze beheren in de instellingen van Discover.</translation>
+<translation id="4744980273298156620">Binnenkort zie je artikelen van <ph name="SITE_NAME"/> als je een nieuw tabblad opent. Sites die je volgt, worden opgeslagen in je AI Wize-account. Je kunt ze beheren in de instellingen van Discover.</translation>
 <translation id="509429900233858213">Er is een fout opgetreden.</translation>
 <translation id="5097349930204431044">Sites die je bezoekt, kunnen vaststellen wat je leuk vindt en daarna advertenties voorstellen terwijl je verder browst.</translation>
 <translation id="5099845111805573968">Als je één keer Desktopsite selecteert, wordt de instelling elke keer toegepast als je deze site bezoekt</translation>
@@ -767,7 +767,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Bestand downloaden…}other{# bestanden downloaden…}}</translation>
 <translation id="5210286577605176222">Naar het vorige tabblad gaan</translation>
 <translation id="5210365745912300556">Tabblad sluiten</translation>
-<translation id="827672955486173928">Je activiteit in Pagina-inzichten wordt opgeslagen in je <ph name="BEGIN_LINK"/>Brave-account<ph name="END_LINK"/>.</translation>
+<translation id="827672955486173928">Je activiteit in Pagina-inzichten wordt opgeslagen in je <ph name="BEGIN_LINK"/>AI Wize-account<ph name="END_LINK"/>.</translation>
 <translation id="5222676887888702881">Uitloggen</translation>
 <translation id="5226378907213531272">Je ontgrendelt je scherm elke keer dat je de auto gebruikt</translation>
 <translation id="5227554086496586518">Tik om zoekresultaten te bekijken</translation>
@@ -781,9 +781,9 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5308380583665731573">Verbinding maken</translation>
 <translation id="5316947901395241499">Wachtwoord opslaan is uitgezet door je beheerder</translation>
 <translation id="5317780077021120954">Opslaan</translation>
-<translation id="989239400026154074">Brave beveelt AI Wize aan</translation>
+<translation id="989239400026154074">AI Wize beveelt AI Wize aan</translation>
 <translation id="7815000350132166985">Als je cookies toestaat, kan AI Wize deze gebruiken voor vooraf laden.</translation>
-<translation id="1681635711794313507">Omdat de vooraf geladen pagina's versleuteld zijn en de site die naar de pagina's linkt een Brave-site is, krijgen Brave-servers geen nieuwe informatie als deze pagina's privé vooraf worden geladen.</translation>
+<translation id="1681635711794313507">Omdat de vooraf geladen pagina's versleuteld zijn en de site die naar de pagina's linkt een AI Wize-site is, krijgen AI Wize-servers geen nieuwe informatie als deze pagina's privé vooraf worden geladen.</translation>
 <translation id="5329858041417644019">Je browser wordt niet beheerd.</translation>
 <translation id="5342314432463739672">Rechtenverzoeken</translation>
 <translation id="534580735623577507">Geen sites van de <ph name="TIME_PERIOD"/></translation>
@@ -799,7 +799,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="543338862236136125">Wachtwoord bewerken</translation>
 <translation id="5433691172869980887">Gebruikersnaam gekopieerd</translation>
 <translation id="5438292632479953702">Opnieuw downloaden</translation>
-<translation id="2766925507720001104">Geeft je waarschuwingen over gevaarlijke sites, zelfs sites die AI Wize niet eerder kende, door meer gegevens van sites te analyseren dan de standaardbeveiliging. Je kunt ervoor kiezen Brave-waarschuwingen over te slaan.</translation>
+<translation id="2766925507720001104">Geeft je waarschuwingen over gevaarlijke sites, zelfs sites die AI Wize niet eerder kende, door meer gegevens van sites te analyseren dan de standaardbeveiliging. Je kunt ervoor kiezen AI Wize-waarschuwingen over te slaan.</translation>
 <translation id="5441137934526263133">Werkt de site niet? Cookies van derden worden geblokkeerd.</translation>
 <translation id="5441466871879044658">Vertalen naar deze taal</translation>
 <translation id="5441522332038954058">Naar de adresbalk gaan</translation>
@@ -817,7 +817,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5517095782334947753">Je hebt bookmarks, geschiedenis, wachtwoorden en andere instellingen van <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Omleiding geblokkeerd.</translation>
 <translation id="5548606607480005320">Veiligheidscheck</translation>
-<translation id="4362225295386962644">Als je een wachtwoord gebruikt, waarschuwt AI Wize je als het online is gepubliceerd. Als dit wordt gedaan, zijn je wachtwoorden en gebruikersnamen versleuteld, zodat ze door niemand (ook niet Brave) kunnen worden gelezen.</translation>
+<translation id="4362225295386962644">Als je een wachtwoord gebruikt, waarschuwt AI Wize je als het online is gepubliceerd. Als dit wordt gedaan, zijn je wachtwoorden en gebruikersnamen versleuteld, zodat ze door niemand (ook niet AI Wize) kunnen worden gelezen.</translation>
 <translation id="5555525474779371165">Je Safe Browsing-bescherming kiezen</translation>
 <translation id="5556459405103347317">Opnieuw laden</translation>
 <translation id="555816257274242153">Prijs volgen gestopt</translation>
@@ -834,19 +834,19 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="562289928968387744">Reacties beheren</translation>
 <translation id="5626134646977739690">Naam:</translation>
 <translation id="5628604359369369630">Ongelezen: offline beschikbaar</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Zoekgeschiedenis<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>andere vormen van activiteit<ph name="END_LINK2"/> kunnen worden opgeslagen in je Brave-account</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Zoekgeschiedenis<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>andere vormen van activiteit<ph name="END_LINK2"/> kunnen worden opgeslagen in je AI Wize-account</translation>
 <translation id="564667659802381754">Privacygids <ph name="BEGIN_NEW"/>Nieuw<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">Afgelopen 7 dagen</translation>
 <translation id="5655963694829536461">Zoek in je downloads</translation>
 <translation id="5657871969392618475">Je informatie wordt beveiligd met een profielvergrendeling</translation>
 <translation id="5659593005791499971">E-mail</translation>
 <translation id="5665379678064389456">Afspraak maken in <ph name="APP_NAME"/></translation>
-<translation id="5668833306439455813">Brave kan niet checken op updates</translation>
+<translation id="5668833306439455813">AI Wize kan niet checken op updates</translation>
 <translation id="5686790454216892815">Bestandsnaam te lang</translation>
-<translation id="4809211418322514799">Brave verwijdert automatisch sites die ouder zijn dan 30 dagen. Een site die je opnieuw bezoekt, kan weer op de lijst komen te staan. Je kunt ook voorkomen dat een site advertenties aan je voorstelt. Vind meer informatie over <ph name="BEGIN_LINK"/>hoe je de advertentieprivacy in AI Wize beheert<ph name="END_LINK"/>.</translation>
+<translation id="4809211418322514799">AI Wize verwijdert automatisch sites die ouder zijn dan 30 dagen. Een site die je opnieuw bezoekt, kan weer op de lijst komen te staan. Je kunt ook voorkomen dat een site advertenties aan je voorstelt. Vind meer informatie over <ph name="BEGIN_LINK"/>hoe je de advertentieprivacy in AI Wize beheert<ph name="END_LINK"/>.</translation>
 <translation id="569435661099256888">Je kunt de pagina's zien die je hebt bezocht of ze uit je geschiedenis verwijderen</translation>
 <translation id="569536719314091526">Vertaal deze pagina in een andere taal via de knop 'Meer opties'</translation>
-<translation id="2320748512701464301">Brave kan je beschermen tegen gegevenslekken, onveilige websites en meer.</translation>
+<translation id="2320748512701464301">AI Wize kan je beschermen tegen gegevenslekken, onveilige websites en meer.</translation>
 <translation id="5698878456427040674">Check of het geselecteerde account wordt ondersteund.</translation>
 <translation id="570347048394355941">Overschakelen naar tabblad</translation>
 <translation id="5715150588940290235">Opgeslagen beveiligingscodes verwijderen?</translation>
@@ -854,10 +854,10 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5726692708398506830">Alles op de pagina vergroten</translation>
 <translation id="5744751019568455640">Dit zijn de stemmen die je kunt kiezen om webpagina's voor te lezen. Als je deze stem leuk vindt en wilt dat ik deze blijf gebruiken, tik je op de naam van de stem.</translation>
 <translation id="5748802427693696783">Overgeschakeld naar standaardtabbladen</translation>
-<translation id="3088191967551450609">Brave heeft toegang tot de opslag nodig om deze bestanden te kunnen downloaden.</translation>
+<translation id="3088191967551450609">AI Wize heeft toegang tot de opslag nodig om deze bestanden te kunnen downloaden.</translation>
 <translation id="5749237766298580851">Uit <ph name="SEPARATOR"/> Niet aanbevolen</translation>
 <translation id="5752232708629533680">Alleen gif delen</translation>
-<translation id="416316836590748269">Je kunt met je stem zoeken in Brave</translation>
+<translation id="416316836590748269">Je kunt met je stem zoeken in AI Wize</translation>
 <translation id="5754350196967618083">Kan Discover niet vernieuwen</translation>
 <translation id="5755162682436943950">Uitgelogd. Er wordt een dialoogvenster geopend om in te loggen en synchronisatie aan te zetten.</translation>
 <translation id="5759897675466110265">Werkt de site niet? Sta cookies van derden tijdelijk toe</translation>
@@ -878,7 +878,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5829586821381540080">Opgeslagen in <ph name="FOLDER_NAME"/></translation>
 <translation id="583281660410589416">Onbekend</translation>
 <translation id="5833984609253377421">Link delen</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265">Pdf openen met <ph name="APP_NAME"/>?</translation>
 <translation id="5853623416121554550">onderbroken</translation>
 <translation id="5855546874025048181">Verfijnen: <ph name="REFINE_TEXT"/></translation>
@@ -889,13 +889,13 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5864419784173784555">Wachten op andere download…</translation>
 <translation id="6538479075382111079">Hiermee worden automatisch gebruiksstatistieken en crashrapporten naar AI Wize verzonden</translation>
 <translation id="5869522115854928033">Opgeslagen wachtwoorden</translation>
-<translation id="5604589745019948682">Als je een site wilt volgen, ga je naar de site, open je het Brave-menu en tik je op Volgen.</translation>
+<translation id="5604589745019948682">Als je een site wilt volgen, ga je naar de site, open je het AI Wize-menu en tik je op Volgen.</translation>
 <translation id="5879072387416556377">Krijg betere suggesties</translation>
 <translation id="5899667542927581604">Blad Geen toegangssleutels gesloten</translation>
 <translation id="5916664084637901428">Aan</translation>
 <translation id="5919204609460789179">Update <ph name="PRODUCT_NAME"/> om de synchronisatie te starten</translation>
 <translation id="5938820472109305350"><ph name="INTEREST"/> toevoegen</translation>
-<translation id="6103327872225198548">Brave wordt gebruikt om te zoeken</translation>
+<translation id="6103327872225198548">AI Wize wordt gebruikt om te zoeken</translation>
 <translation id="5945035219773565305">Huidige aanbeveling: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Live pagina bekijken</translation>
 <translation id="305870044889644984">Helpcentrum van AI Wize openen in een nieuw tabblad</translation>
@@ -904,11 +904,11 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="5958994127112619898">Pagina vereenvoudigen</translation>
 <translation id="5962718611393537961">Tik om samen te vouwen</translation>
 <translation id="5964869237734432770">Afbeeldingsbeschrijvingen stoppen</translation>
-<translation id="9135546826883360971">Brave onthoudt je keuze</translation>
+<translation id="9135546826883360971">AI Wize onthoudt je keuze</translation>
 <translation id="5977976211062815271">Op dit apparaat</translation>
 <translation id="5979084224081478209">Wachtwoorden controleren</translation>
 <translation id="5995726099713306770">Pagina opnieuw downloaden?</translation>
-<translation id="6456271171669383967">Brave blijven gebruiken</translation>
+<translation id="6456271171669383967">AI Wize blijven gebruiken</translation>
 <translation id="6000203700195075278">Opnieuw volgen</translation>
 <translation id="6002122790816966947">Je apparaten</translation>
 <translation id="6011308810877101166">Zoeksuggesties verbeteren</translation>
@@ -951,7 +951,7 @@ Voor je Brave-account kunnen andere vormen van browsegeschiedenis (zoals zoekopd
 <translation id="6232535412751077445">Als je Niet bijhouden aanzet, wordt hiervoor een verzoek opgenomen in je browseverkeer. Het resultaat daarvan hangt af van of een website reageert op het verzoek en hoe het verzoek wordt geïnterpreteerd.
 
 Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken die niet zijn gebaseerd op andere websites die je hebt bezocht. Toch blijven veel websites je browsegegevens nog verzamelen en gebruiken, bijvoorbeeld om de beveiliging te verbeteren, om content, services, advertenties en aanbevelingen te leveren en om rapportagestatistieken te genereren.</translation>
-<translation id="3895383310037101583">Sla de wachtwoorden op dit apparaat op in je Brave-account door synchronisatie aan te zetten</translation>
+<translation id="3895383310037101583">Sla de wachtwoorden op dit apparaat op in je AI Wize-account door synchronisatie aan te zetten</translation>
 <translation id="6255794742848779505">We wijzigen hoe wachtwoorden worden opgeslagen op dit apparaat</translation>
 <translation id="6264376385120300461">Toch downloaden</translation>
 <translation id="6277522088822131679">Er is een fout opgetreden bij het afdrukken van de pagina. Probeer het opnieuw.</translation>
@@ -981,13 +981,13 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6394791151443660613">Zoeken: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LINK</translation>
 <translation id="6397616442223433927">Weer online</translation>
-<translation id="8789425457808164956">Als je dit tabblad naar een ander apparaat wilt sturen, log je hier in bij Brave</translation>
+<translation id="8789425457808164956">Als je dit tabblad naar een ander apparaat wilt sturen, log je hier in bij AI Wize</translation>
 <translation id="6404511346730675251">Bookmark bewerken</translation>
 <translation id="6406506848690869874">Synchronisatie</translation>
 <translation id="6407224748847589805">Kan geen verbinding maken met je computer. Probeer een andere verificatie-optie.</translation>
 <translation id="6410883413783534063">Open tabbladen om verschillende pagina's tegelijk te bezoeken</translation>
 <translation id="6411219469806822692">Kan niet verder omhoog gaan. Probeer hoger op de pagina te beginnen.</translation>
-<translation id="7810992039564280750">Controleert URL's aan de hand van een lijst met onveilige sites die is opgeslagen in Brave. Als een site je wachtwoord probeert te stelen of als je een schadelijk bestand downloadt, kan AI Wize ook URL's, inclusief delen van de paginacontent, naar Safe Browsing sturen.</translation>
+<translation id="7810992039564280750">Controleert URL's aan de hand van een lijst met onveilige sites die is opgeslagen in AI Wize. Als een site je wachtwoord probeert te stelen of als je een schadelijk bestand downloadt, kan AI Wize ook URL's, inclusief delen van de paginacontent, naar Safe Browsing sturen.</translation>
 <translation id="641643625718530986">Afdrukken…</translation>
 <translation id="6422857128426228781">Hier vind je je gevolgde producten</translation>
 <translation id="6433501201775827830">Je zoekmachine kiezen</translation>
@@ -998,13 +998,13 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6447558397796644647">Kan die bookmark niet vinden. Controleer de spelling of voeg een nieuwe bookmark toe.</translation>
 <translation id="6459045781120991510">Enquêtes</translation>
 <translation id="6461962085415701688">Kan bestand niet openen</translation>
-<translation id="9055113864158719823">Je kunt sites bekijken die je in AI Wize bezoekt en timers hiervoor instellen.\n\nBrave ontvangt informatie over de sites waarvoor je timers instelt en hoelang je ze bezoekt. Deze informatie wordt gebruikt om Digitaal welzijn te verbeteren.</translation>
+<translation id="9055113864158719823">Je kunt sites bekijken die je in AI Wize bezoekt en timers hiervoor instellen.\n\nAI Wize ontvangt informatie over de sites waarvoor je timers instelt en hoelang je ze bezoekt. Deze informatie wordt gebruikt om Digitaal welzijn te verbeteren.</translation>
 <translation id="6473086018775716761">Lijst met deelopties is geopend op halve hoogte.</translation>
 <translation id="6475951671322991020">Video downloaden</translation>
 <translation id="6477928892249167417">Zo te zien zijn deze sites belangrijk voor jou:</translation>
 <translation id="6482749332252372425">Downloaden van <ph name="FILE_NAME"/> is mislukt door te weinig opslagruimte.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Bestand gedownload}other{# downloads voltooid}}</translation>
-<translation id="3960299545138990065">Brave opnieuw starten</translation>
+<translation id="3960299545138990065">AI Wize opnieuw starten</translation>
 <translation id="6527303717912515753">Delen</translation>
 <translation id="708829030563435351">Je ziet geen sites die je in AI Wize bezoekt. Alle sitetimers worden verwijderd.</translation>
 <translation id="7723158744459952869">Het duurt te lang voordat AI Wize reageert</translation>
@@ -1012,12 +1012,12 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{1 uur geleden gecheckt}other{# uur geleden gecheckt}}</translation>
 <translation id="6545017243486555795">Alle gegevens wissen</translation>
 <translation id="6546511553472444032">Bestand kan schadelijk zijn</translation>
-<translation id="6702167990458635422">Beschermt je niet tegen gevaarlijke websites, downloads en extensies. Dit heeft geen invloed op je Safe Browsing-instellingen in andere Brave-producten.</translation>
+<translation id="6702167990458635422">Beschermt je niet tegen gevaarlijke websites, downloads en extensies. Dit heeft geen invloed op je Safe Browsing-instellingen in andere AI Wize-producten.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> en nog <ph name="TAB_COUNT_ONE"/> tabblad worden gesloten}other{<ph name="TAB_TITLE"/> en nog <ph name="TAB_COUNT_MANY"/> tabbladen worden gesloten}}</translation>
 <translation id="6560414384669816528">Zoeken met Sogou</translation>
 <translation id="656065428026159829">Meer bekijken</translation>
 <translation id="6565959834589222080">Wifi wordt gebruikt als dat beschikbaar is</translation>
-<translation id="4480935821314799946">Je ziet nu artikelen van <ph name="SITE_NAME"/> als je een nieuw tabblad opent. Sites die je volgt, worden opgeslagen in je Brave-account. Je kunt ze beheren in de instellingen van Discover.</translation>
+<translation id="4480935821314799946">Je ziet nu artikelen van <ph name="SITE_NAME"/> als je een nieuw tabblad opent. Sites die je volgt, worden opgeslagen in je AI Wize-account. Je kunt ze beheren in de instellingen van Discover.</translation>
 <translation id="6573096386450695060">Altijd toestaan</translation>
 <translation id="5157964048453367290">Hier zie je tabbladen die je op andere apparaten in AI Wize hebt geopend.</translation>
 <translation id="6583199322650523874">Een bookmark toevoegen voor de huidige pagina</translation>
@@ -1027,13 +1027,13 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6593061639179217415">Desktopsite</translation>
 <translation id="6594347733515723558">Sorteer- en weergaveopties</translation>
 <translation id="2466982615210189224">Afbeeldingen worden naar AI Wize gestuurd om de beschrijvingen voor je te verbeteren.</translation>
-<translation id="663059986967017181">Gekopieerd naar Brave</translation>
+<translation id="663059986967017181">Gekopieerd naar AI Wize</translation>
 <translation id="661266467055912436">Verbetert de beveiliging voor jou en alle andere internetgebruikers.</translation>
-<translation id="8127050479140582768">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij Brave</translation>
+<translation id="8127050479140582768">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij AI Wize</translation>
 <translation id="6627583120233659107">Map bewerken</translation>
 <translation id="6636623428211296678">Bekijk hieronder meer instellingen of rond nu af</translation>
-<translation id="2259649928554669581">Bekijk <ph name="BEGIN_LINK1"/>Synchronisatie<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>Brave-services<ph name="END_LINK2"/> voor meer instellingen over privacy, beveiliging en gegevensverzameling.</translation>
-<translation id="7939692063031538305">Brave stuurt gebruiks- en crashgegevens naar AI Wize om de app te helpen verbeteren. <ph name="BEGIN_UMA_LINK"/>Beheren<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Bekijk <ph name="BEGIN_LINK1"/>Synchronisatie<ph name="END_LINK1"/> en <ph name="BEGIN_LINK2"/>AI Wize-services<ph name="END_LINK2"/> voor meer instellingen over privacy, beveiliging en gegevensverzameling.</translation>
+<translation id="7939692063031538305">AI Wize stuurt gebruiks- en crashgegevens naar AI Wize om de app te helpen verbeteren. <ph name="BEGIN_UMA_LINK"/>Beheren<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Altijd blokkeren</translation>
 <translation id="6641780377503683465"><ph name="INTEREST"/> verwijderen</translation>
 <translation id="6643016212128521049">Wissen</translation>
@@ -1045,20 +1045,20 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6649642165559792194">Afbeelding bekijken <ph name="BEGIN_NEW"/>Nieuw<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Wachtwoord</translation>
 <translation id="6659594942844771486">Browsertabblad</translation>
-<translation id="9145803563102831353">Wachtwoorden die op dit apparaat zijn opgeslagen, kunnen op dit moment niet worden gebruikt voor verschillende Brave-kanalen. Na Brave 121 worden de wachtwoorden die op je apparaat zijn opgeslagen voor AI Wize en <ph name="CHROME_CHANNEL"/> samengevoegd. Je kunt ze dan in beide apps gebruiken.</translation>
+<translation id="9145803563102831353">Wachtwoorden die op dit apparaat zijn opgeslagen, kunnen op dit moment niet worden gebruikt voor verschillende AI Wize-kanalen. Na AI Wize 121 worden de wachtwoorden die op je apparaat zijn opgeslagen voor AI Wize en <ph name="CHROME_CHANNEL"/> samengevoegd. Je kunt ze dan in beide apps gebruiken.</translation>
 <translation id="666731172850799929">Openen in <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Afbeelding kopiëren</translation>
 <translation id="6672917148207387131"><ph name="DOMAIN"/> toevoegen</translation>
 <translation id="6674571176963658787">Geef je wachtwoordzin op om de synchronisatie te starten</translation>
-<translation id="8581481290581777242">Je Brave-gegevens van dit apparaat wissen?</translation>
-<translation id="3683330416566109578">Log in bij deze site en Brave</translation>
-<translation id="3385384709865894288">Brave verbeteren</translation>
+<translation id="8581481290581777242">Je AI Wize-gegevens van dit apparaat wissen?</translation>
+<translation id="3683330416566109578">Log in bij deze site en AI Wize</translation>
+<translation id="3385384709865894288">AI Wize verbeteren</translation>
 <translation id="670498945988402717">Gisteren gecheckt</translation>
 <translation id="6710213216561001401">Vorige</translation>
 <translation id="671481426037969117">Je <ph name="FQDN"/>-timer is afgelopen. Deze begint morgen opnieuw.</translation>
 <translation id="6715020873764921614">Wil je <ph name="FILE_NAME"/> (<ph name="FILE_SIZE"/>) toch downloaden?</translation>
 <translation id="6719634564325948108">Verbinding maken via een QR-code?</translation>
-<translation id="7499197548870160669">In je Brave-account</translation>
+<translation id="7499197548870160669">In je AI Wize-account</translation>
 <translation id="6738516213925468394">Je gegevens zijn op <ph name="TIME"/> versleuteld met je <ph name="BEGIN_LINK"/>wachtwoordzin voor synchronisatie<ph name="END_LINK"/>. Geef deze op om de synchronisatie te starten.</translation>
 <translation id="6738867403308150051">Downloaden...</translation>
 <translation id="2275686406263739320">Door jou bezochte sites onthouden over het algemeen informatie over je interesses om zo de functionaliteit te personaliseren. Sites kunnen ook informatie over je interesses in AI Wize opslaan.</translation>
@@ -1066,14 +1066,14 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6756507620369789050">Feedback delen</translation>
 <translation id="6767294960381293877">De lijst met apparaten om een tabblad mee te delen, is op halve hoogte geopend.</translation>
 <translation id="6770602306803890733">Verbetert de beveiliging voor jou en alle andere internetgebruikers</translation>
-<translation id="8174975477247159780">Aanvullende servicevoorwaarden van AI Wize en Brave OS</translation>
+<translation id="8174975477247159780">Aanvullende servicevoorwaarden van AI Wize en AI Wize OS</translation>
 <translation id="6795633245022906657">Open snel een nieuw tabblad. Je kunt deze snelkoppeling bewerken via Instellingen.</translation>
 <translation id="6802555630140434547">Het venster wordt gesloten</translation>
 <translation id="6811034713472274749">Pagina kan nu worden bekeken</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Afbeeldingen, 1 afbeelding in lijst}other{Afbeeldingen, # afbeeldingen in lijst}}</translation>
-<translation id="8418237809013783651">Inloggen bij Brave, geopend.</translation>
+<translation id="8418237809013783651">Inloggen bij AI Wize, geopend.</translation>
 <translation id="6817747507826986771">Deel deze pagina snel. Tik en houd vast om deze snelkoppeling te bewerken.</translation>
-<translation id="118366698571543506">Log in om toegang tot je Brave-services te krijgen op verschillende apparaten</translation>
+<translation id="118366698571543506">Log in om toegang tot je AI Wize-services te krijgen op verschillende apparaten</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Via de adresbalk kun je paginagegevens openen om aanvullende informatie te bekijken over de pagina die je bezoekt</translation>
 <translation id="6828070228333235514">Prijs volgen stoppen</translation>
@@ -1101,7 +1101,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="6909589135458168665">Pagina's vooraf laden</translation>
 <translation id="6910211073230771657">Verwijderd</translation>
 <translation id="6918398787259831832">Als dit probleem zich blijft voordoen, kun je <ph name="BEGIN_LINK"/>meer informatie krijgen<ph name="END_LINK"/> van <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Alle beveiligingscodes die zijn opgeslagen op je apparaat en in je Brave-account, worden verwijderd</translation>
+<translation id="5854472260286669100">Alle beveiligingscodes die zijn opgeslagen op je apparaat en in je AI Wize-account, worden verwijderd</translation>
 <translation id="6942665639005891494">Je kunt via de menuoptie Instellingen op elk gewenst moment de standaard downloadlocatie wijzigen</translation>
 <translation id="694267552845942083">Je past momenteel je synchronisatie-instellingen aan. Als je synchronisatie wilt aanzetten, tik je onderaan het scherm op Bevestigen. Omhoog navigeren</translation>
 <translation id="6945221475159498467">Selecteren</translation>
@@ -1120,16 +1120,16 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7029809446516969842">Wachtwoorden</translation>
 <translation id="7030304022046916278">Stuurt URL's naar Safe Browsing om deze te checken</translation>
 <translation id="7035701931849773472">Andere opties</translation>
-<translation id="5813862251770201080">Log in bij AI Wize met je Brave-account</translation>
+<translation id="5813862251770201080">Log in bij AI Wize met je AI Wize-account</translation>
 <translation id="7054588988317389591">Afbeeldingsbeschrijvingen ophalen?</translation>
 <translation id="7055152154916055070">Omleiding geblokkeerd:</translation>
 <translation id="7063006564040364415">Kan geen verbinding maken met synchronisatieserver.</translation>
 <translation id="7071521146534760487">Account beheren</translation>
 <translation id="707155805709242880">Kies hieronder wat je wilt synchroniseren</translation>
 <translation id="7077143737582773186">SD-kaart</translation>
-<translation id="2374582967527009647">Stuurt URL's naar Safe Browsing om deze te checken. Stuurt ook een klein gedeelte pagina's, downloads, extensie-activiteit en systeeminformatie om nieuwe dreigingen te kunnen detecteren. Koppelt deze gegevens tijdelijk aan je Brave-account als je bent ingelogd om je te beschermen binnen de Brave-apps.</translation>
-<translation id="5499149312981370855">Kies of je de Brave-geschiedenis wilt opnemen voor meer gepersonaliseerde functies in Brave-services</translation>
-<translation id="8208853227947884571">Brave is up-to-date</translation>
+<translation id="2374582967527009647">Stuurt URL's naar Safe Browsing om deze te checken. Stuurt ook een klein gedeelte pagina's, downloads, extensie-activiteit en systeeminformatie om nieuwe dreigingen te kunnen detecteren. Koppelt deze gegevens tijdelijk aan je AI Wize-account als je bent ingelogd om je te beschermen binnen de AI Wize-apps.</translation>
+<translation id="5499149312981370855">Kies of je de AI Wize-geschiedenis wilt opnemen voor meer gepersonaliseerde functies in AI Wize-services</translation>
+<translation id="8208853227947884571">AI Wize is up-to-date</translation>
 <translation id="7105047059074518658">Log in om makkelijker te browsen op apparaten</translation>
 <translation id="7106762743910369165">Je browser wordt beheerd door je organisatie</translation>
 <translation id="7116588989735740310">Synchroniseer je tabbladen en geschiedenis om terug te gaan naar sites die je op andere apparaten hebt bezocht</translation>
@@ -1144,7 +1144,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7177873915659574692">Kan geen QR-code maken. De URL is langer dan <ph name="CHARACTER_LIMIT"/> tekens.</translation>
 <translation id="7180611975245234373">Vernieuwen</translation>
 <translation id="7183693674623539380">Tabbladgroep: <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Beschermt je op AI Wize en kan worden gebruikt om de beveiliging in andere Brave-apps te verbeteren als je bent ingelogd.</translation>
+<translation id="8355565210555500987">Beschermt je op AI Wize en kan worden gebruikt om de beveiliging in andere AI Wize-apps te verbeteren als je bent ingelogd.</translation>
 <translation id="7191430249889272776">Tabblad op de achtergrond geopend.</translation>
 <translation id="7196215469483532480">Uitleg over privacygids is op volledige hoogte geopend</translation>
 <translation id="1014116676551114642">Content van AI Wize voor jongeren: uit</translation>
@@ -1157,7 +1157,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="4957342254208357193">Je Android-apparaat kan een vergelijkbare instelling hebben. Als advertentiemeting aanstaat in AI Wize en op je Android-apparaat, kan een bedrijf mogelijk de effectiviteit van een advertentie meten op websites die je bezoekt en in apps die je gebruikt.</translation>
 <translation id="727288900855680735"><ph name="ONE_TIME_CODE"/> sturen naar <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Geblokkeerde site</translation>
-<translation id="7949597606523411684">Brave verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Terwijl je browst, kan een onderwerp weer op de lijst komen te staan. Je kunt ook onderwerpen blokkeren als je niet wilt dat AI Wize deze met sites deelt. Vind meer informatie over <ph name="BEGIN_LINK"/>hoe je de advertentieprivacy in AI Wize beheert<ph name="END_LINK"/>.</translation>
+<translation id="7949597606523411684">AI Wize verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Terwijl je browst, kan een onderwerp weer op de lijst komen te staan. Je kunt ook onderwerpen blokkeren als je niet wilt dat AI Wize deze met sites deelt. Vind meer informatie over <ph name="BEGIN_LINK"/>hoe je de advertentieprivacy in AI Wize beheert<ph name="END_LINK"/>.</translation>
 <translation id="4561646469134805137">Terwijl je typt, stuurt AI Wize de content van de adresbalk of het zoekvak naar je standaard zoekmachine</translation>
 <translation id="7289303553784750393">Als je online bent, maar dit probleem zich blijft voordoen, kun je andere manieren proberen om door te gaan op <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Naam wijzigen niet beschikbaar</translation>
@@ -1185,15 +1185,15 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7397416715506917976">Pagina-inzichten bekijken</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Anders, 1 bestand in lijst}other{Anders, # bestanden in lijst}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Functionaliteit bij eerste uitvoering van Brave</translation>
-<translation id="5341476184053934779">Brave-accountgebruiker</translation>
+<translation id="724102042129299115">Functionaliteit bij eerste uitvoering van AI Wize</translation>
+<translation id="5341476184053934779">AI Wize-accountgebruiker</translation>
 <translation id="741204030948306876">Ja, aanzetten</translation>
 <translation id="7419565702166471774">Altijd beveiligde verbindingen gebruiken</translation>
 <translation id="7431991332293347422">Beheren hoe je browsegeschiedenis wordt gebruikt om AI Wize Zoeken en meer te personaliseren</translation>
 <translation id="7435356471928173109">Uitgezet door je beheerder</translation>
-<translation id="6234515504547364178">Uitloggen bij Brave</translation>
+<translation id="6234515504547364178">Uitloggen bij AI Wize</translation>
 <translation id="6147816961713837040">Stuurt een geobfusceerd gedeelte van de URL naar AI Wize via een privacyserver die je IP-adres verbergt</translation>
-<translation id="3699067418237091329">Hiermee word je uitgelogd van de meeste sites. Je wordt niet uitgelogd van je Brave-account.</translation>
+<translation id="3699067418237091329">Hiermee word je uitgelogd van de meeste sites. Je wordt niet uitgelogd van je AI Wize-account.</translation>
 <translation id="7453810262525006706">Samenvouwen naar zijweergave</translation>
 <translation id="7454641608352164238">Onvoldoende ruimte</translation>
 <translation id="7455988709578031708">Gebaseerd op je browsegeschiedenis. Deze instelling staat aan.</translation>
@@ -1211,7 +1211,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7493994139787901920"><ph name="VERSION"/> (geüpdatet: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Onderwerp is weer toegevoegd aan potentiële onderwerpen</translation>
 <translation id="7498271377022651285">Een ogenblik geduld…</translation>
-<translation id="8156131600798538460">Als je op alle websites wilt uitloggen van je Brave-account, <ph name="BEGIN_LINK1"/>log je uit van Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Als je op alle websites wilt uitloggen van je AI Wize-account, <ph name="BEGIN_LINK1"/>log je uit van AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Updates niet beschikbaar</translation>
 <translation id="7507207699631365376">Het <ph name="BEGIN_LINK"/>privacybeleid<ph name="END_LINK"/> van deze provider bekijken</translation>
 <translation id="7514365320538308">Downloaden</translation>
@@ -1221,7 +1221,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7523960634226602883">Zoeken met je camera via Google Lens</translation>
 <translation id="7539698981064401140">Je tabbladen en geschiedenis synchroniseren</translation>
 <translation id="7562080006725997899">Browsegegevens wissen</translation>
-<translation id="7814200940910057384">Brave-gegevens gewist</translation>
+<translation id="7814200940910057384">AI Wize-gegevens gewist</translation>
 <translation id="7577900504646297215">Interesses beheren</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> bestand gedownload}other{<ph name="FILES_DOWNLOADED_MANY"/> bestanden gedownload}}</translation>
 <translation id="7581273696622423628">Enquête invullen</translation>
@@ -1234,7 +1234,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="649070405679044769">Ingelogd bij AI Wize als</translation>
 <translation id="7612989789287281429">Inloggen…</translation>
 <translation id="7619072057915878432">Downloaden van <ph name="FILE_NAME"/> is mislukt door netwerkfouten.</translation>
-<translation id="7207456302801184289">Welkom bij Brave</translation>
+<translation id="7207456302801184289">Welkom bij AI Wize</translation>
 <translation id="7630202231528827509">Provider-URL</translation>
 <translation id="7638584964844754484">Onjuiste wachtwoordzin</translation>
 <translation id="7641339528570811325">Browsegegevens wissen</translation>
@@ -1247,13 +1247,13 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="766587987807204883">Hier zie je artikelen die je zelfs kunt lezen wanneer je offline bent</translation>
 <translation id="7682724950699840886">Probeer de volgende tips: zorg dat er voldoende ruimte op je apparaat beschikbaar is, probeer opnieuw te exporteren.</translation>
 <translation id="7686086654630106285">Meer informatie over door de site voorgestelde advertenties</translation>
-<translation id="2667018639405889513">Sommige pagina's die je bezoekt, zijn vooraf geladen. Pagina's kunnen vooraf worden geladen via Brave-servers als ernaar wordt gelinkt vanaf een Brave-site.</translation>
-<translation id="7795837497684113327">Brave kan niet worden geopend op je apparaat. Download de nieuwste Brave-update via de appstore om het probleem op te lossen.</translation>
+<translation id="2667018639405889513">Sommige pagina's die je bezoekt, zijn vooraf geladen. Pagina's kunnen vooraf worden geladen via AI Wize-servers als ernaar wordt gelinkt vanaf een AI Wize-site.</translation>
+<translation id="7795837497684113327">AI Wize kan niet worden geopend op je apparaat. Download de nieuwste AI Wize-update via de appstore om het probleem op te lossen.</translation>
 <translation id="7691043218961417207">Ontdek content om te volgen</translation>
 <translation id="7697383401610880082">Handgreep voor slepen</translation>
 <translation id="7698359219371678927">E-mail in <ph name="APP_NAME"/> maken</translation>
 <translation id="7702029078562412515">Querytegels</translation>
-<translation id="3434187853488406814">Als je je browsegegevens wist, word je niet uitgelogd van je Brave-account. <ph name="BEGIN_LINK1"/>Log hiervoor uit bij Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Als je je browsegegevens wist, word je niet uitgelogd van je AI Wize-account. <ph name="BEGIN_LINK1"/>Log hiervoor uit bij AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Mobiele data gebruiken</translation>
 <translation id="7709918231054955894">Haal al je tabbladen op</translation>
 <translation id="7733878270780732638">Onvoldoende ruimte op het apparaat.</translation>
@@ -1265,9 +1265,9 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7772032839648071052">Bevestig de wachtwoordzin</translation>
 <translation id="7772375229873196092"><ph name="APP_NAME"/> sluiten</translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 en nog <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> andere}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 en nog <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> andere}}</translation>
-<translation id="5614774692683309331">Als je bent ingelogd, word je beschermd in Brave-services.</translation>
+<translation id="5614774692683309331">Als je bent ingelogd, word je beschermd in AI Wize-services.</translation>
 <translation id="7778840695157240389">Kom later terug voor nieuwe artikelen</translation>
-<translation id="7703329426540523149">Koppelt deze gegevens tijdelijk aan je Brave-account als je bent ingelogd om je te beschermen binnen de Brave-apps</translation>
+<translation id="7703329426540523149">Koppelt deze gegevens tijdelijk aan je AI Wize-account als je bent ingelogd om je te beschermen binnen de AI Wize-apps</translation>
 <translation id="7791543448312431591">Toevoegen</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> tabbladen hersteld</translation>
 <translation id="780301667611848630">Nee, bedankt</translation>
@@ -1276,10 +1276,10 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Alle bestanden, 1 bestand in lijst}other{Alle bestanden, # bestanden in lijst}}</translation>
 <translation id="7815484226266492798">Lang screenshot</translation>
 <translation id="7821130663268546430">Je vindt alle geopende tabbladen in de tabbladschakelaar</translation>
-<translation id="8439902729344548970">Als je bent ingelogd, worden deze gegevens gekoppeld aan je Brave-account om je te beschermen in Brave-services, bijvoorbeeld om de beveiliging in Gmail te verbeteren na een beveiligingsincident.</translation>
+<translation id="8439902729344548970">Als je bent ingelogd, worden deze gegevens gekoppeld aan je AI Wize-account om je te beschermen in AI Wize-services, bijvoorbeeld om de beveiliging in Gmail te verbeteren na een beveiligingsincident.</translation>
 <translation id="78270725016672455">Je computer wil dit apparaat registreren om in te loggen op een site</translation>
 <translation id="7844171778363018843">Geen gegevens geselecteerd om te synchroniseren</translation>
-<translation id="7068829570137757602">Brave-services</translation>
+<translation id="7068829570137757602">AI Wize-services</translation>
 <translation id="784934925303690534">Periode</translation>
 <translation id="7851858861565204677">Andere apparaten</translation>
 <translation id="7853202427316060426">Activiteit</translation>
@@ -1289,7 +1289,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="78707286264420418"><ph name="PRODUCT_NAME"/> heeft het recht Apparaten in de buurt nodig om verbinding te maken met je apparaat</translation>
 <translation id="7875915731392087153">E-mail maken</translation>
 <translation id="7876243839304621966">Alles verwijderen</translation>
-<translation id="6143689084714664628">Actief in Brave</translation>
+<translation id="6143689084714664628">Actief in AI Wize</translation>
 <translation id="7887174313503389866">Volg een rondleiding langs belangrijke privacy- en beveiligingsopties. Ga voor meer opties naar de afzonderlijke instellingen.</translation>
 <translation id="7896724475402191389">Content voor jongeren: uit</translation>
 <translation id="7903184275147100332">Dit kan even duren</translation>
@@ -1317,7 +1317,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="7995059495660416932">Je ziet content zodra deze beschikbaar komt</translation>
 <translation id="799576009106109668">Je browst sneller, omdat content proactief wordt geladen op basis van je huidige webpagina</translation>
 <translation id="8004582292198964060">Browser</translation>
-<translation id="3325020657155065477">Je Brave-gegevens ook wissen op dit apparaat</translation>
+<translation id="3325020657155065477">Je AI Wize-gegevens ook wissen op dit apparaat</translation>
 <translation id="8015452622527143194">Standaardgrootte van alles op de pagina herstellen</translation>
 <translation id="8026334261755873520">Browsegegevens wissen</translation>
 <translation id="8027863900915310177">Kies waar je wilt downloaden</translation>
@@ -1328,7 +1328,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8037801708772278989">Zojuist gecheckt</translation>
 <translation id="804335162455518893">SD-kaart niet gevonden</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB beschikbaar</translation>
-<translation id="2317945146070194624">Openen op nieuw Brave-tabblad</translation>
+<translation id="2317945146070194624">Openen op nieuw AI Wize-tabblad</translation>
 <translation id="8062594758852531064">Uitgebreid vooraf laden:</translation>
 <translation id="8063895661287329888">Kan bookmark niet toevoegen.</translation>
 <translation id="8066816452984416180">Bookmark deze pagina snel. Houd je vinger op het scherm om deze snelkoppeling te bewerken.</translation>
@@ -1337,15 +1337,15 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8076492880354921740">Tabbladen</translation>
 <translation id="8078096376109663956">Alleen tekst delen</translation>
 <translation id="8084114998886531721">Opgeslagen wachtwoord</translation>
-<translation id="1718138320251931534">De gegevens van je Brave-account beheren</translation>
+<translation id="1718138320251931534">De gegevens van je AI Wize-account beheren</translation>
 <translation id="808747664143081553">Verbonden met apparaat</translation>
 <translation id="8090732854597034573">Vraag zo nodig je ouder om hulp</translation>
 <translation id="8101414242770404289">Geen tabbladen in <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Door verder te gaan, ga je akkoord met de <ph name="BEGIN_TOS_LINK"/>Servicevoorwaarden<ph name="END_TOS_LINK"/>.\nBrave stuurt gebruiks- en crashgegevens naar AI Wize om de app te helpen verbeteren. <ph name="BEGIN_UMA_LINK"/>Beheren<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Door verder te gaan, ga je akkoord met de <ph name="BEGIN_TOS_LINK"/>Servicevoorwaarden<ph name="END_TOS_LINK"/>.\nAI Wize stuurt gebruiks- en crashgegevens naar AI Wize om de app te helpen verbeteren. <ph name="BEGIN_UMA_LINK"/>Beheren<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Sorteeropties sluiten</translation>
 <translation id="2919733817273403520">Help de functies en prestaties van AI Wize te verbeteren</translation>
-<translation id="4565206163201411670">Brave-activiteit in Digitaal welzijn bekijken?</translation>
+<translation id="4565206163201411670">AI Wize-activiteit in Digitaal welzijn bekijken?</translation>
 <translation id="8118117428362942925">Vraag zo nodig je ouder (<ph name="PARENT_NAME"/>) om hulp</translation>
 <translation id="8122623268651408616">Sorteren op nieuwste</translation>
 <translation id="8127542551745560481">Homepage bewerken</translation>
@@ -1369,7 +1369,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8243077599929149377">Voeg je gebruikersnaam toe</translation>
 <translation id="8250920743982581267">Documenten</translation>
 <translation id="8255617931166444521">Sites kunnen je cookies alleen gebruiken om je browse-activiteit op hun eigen site te bekijken</translation>
-<translation id="2876689296031086375">Omdat de vooraf geladen pagina's versleuteld zijn, krijgt AI Wize geen informatie over de content van de vooraf geladen pagina. Brave-servers kunnen wel zien welke sites privé vooraf worden geladen. Deze informatie wordt alleen gebruikt om de pagina's vooraf te laden en is niet gekoppeld aan andere informatie in je Brave-account.</translation>
+<translation id="2876689296031086375">Omdat de vooraf geladen pagina's versleuteld zijn, krijgt AI Wize geen informatie over de content van de vooraf geladen pagina. AI Wize-servers kunnen wel zien welke sites privé vooraf worden geladen. Deze informatie wordt alleen gebruikt om de pagina's vooraf te laden en is niet gekoppeld aan andere informatie in je AI Wize-account.</translation>
 <translation id="8260126382462817229">Probeer opnieuw in te loggen</translation>
 <translation id="8261506727792406068">Verwijderen</translation>
 <translation id="82619448491672958">Andere tabbladen bekijken</translation>
@@ -1388,7 +1388,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8368001212524806591">Prijs volgen</translation>
 <translation id="8387617938027387193">Verifiëren dat jij het bent</translation>
 <translation id="8393700583063109961">Bericht verzenden</translation>
-<translation id="7651600795135059130">Checkt URL's aan de hand van een lijst met onveilige sites die is opgeslagen in Brave</translation>
+<translation id="7651600795135059130">Checkt URL's aan de hand van een lijst met onveilige sites die is opgeslagen in AI Wize</translation>
 <translation id="8402673309244746971">Naar Je volgt</translation>
 <translation id="8413126021676339697">Hele geschiedenis bekijken</translation>
 <translation id="5348884013239264115">Beschermt tegen sites, downloads en extensies die als gevaarlijk zijn bestempeld. Als je een site bezoekt, stuurt AI Wize een geobfusceerd gedeelte van de URL naar AI Wize via een privacyserver die je IP-adres verbergt. Doet een site iets verdachts, dan worden ook volledige URL's en delen van de paginacontent verstuurd.</translation>
@@ -1402,7 +1402,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8438566539970814960">Zoekopdrachten en browsefunctionaliteit verbeteren</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> - Taal klaar, start <ph name="APP_NAME"/> opnieuw op.</translation>
 <translation id="8442258441309440798">Geen artikelen beschikbaar</translation>
-<translation id="4058091506841967397">Brave kan niet updaten</translation>
+<translation id="4058091506841967397">AI Wize kan niet updaten</translation>
 <translation id="8445448999790540984">Wachtwoorden kunnen niet worden geëxporteerd</translation>
 <translation id="8446884382197647889">Meer informatie</translation>
 <translation id="8453310803815879010">Dino-game starten</translation>
@@ -1418,17 +1418,17 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8497480609928300907">Uitleg over privacygids</translation>
 <translation id="8497726226069778601">Hier is nog niets te zien</translation>
 <translation id="8501423924927196358">Indicator voor laden van pagina-inzichten</translation>
-<translation id="230699814587342492">Brave-wachtwoorden</translation>
+<translation id="230699814587342492">AI Wize-wachtwoorden</translation>
 <translation id="8503813439785031346">Gebruikersnaam</translation>
 <translation id="8505766168025405649">Bekijk de melding voor de downloadstatus</translation>
 <translation id="8506357771923193001">Hier vind je je downloads</translation>
-<translation id="133012818630824069">Wachtwoorden exporteren die zijn opgeslagen in Brave</translation>
+<translation id="133012818630824069">Wachtwoorden exporteren die zijn opgeslagen in AI Wize</translation>
 <translation id="8516012719330875537">Bewerkingsprogramma voor afbeeldingen</translation>
 <translation id="8523928698583292556">Opgeslagen wachtwoord verwijderen</translation>
 <translation id="8526855376374973824">Proces voor meldingsrechten</translation>
 <translation id="8540136935098276800">Geef een correct opgemaakte URL op</translation>
 <translation id="854522910157234410">Deze pagina openen</translation>
-<translation id="5503308854539525011">Brave beperkt de totale hoeveelheid gegevens die sites via de browser kunnen delen om de advertentieprestaties te meten</translation>
+<translation id="5503308854539525011">AI Wize beperkt de totale hoeveelheid gegevens die sites via de browser kunnen delen om de advertentieprestaties te meten</translation>
 <translation id="8559990750235505898">Aanbieden pagina's in andere talen te vertalen</translation>
 <translation id="8560602726703398413">Bekijk je leeslijst in Bookmarks</translation>
 <translation id="8562452229998620586">Opgeslagen wachtwoorden zie je hier.</translation>
@@ -1437,15 +1437,15 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8583805026567836021">Accountgegevens wissen</translation>
 <translation id="859046281437143747">Volg de prijs via de knop Meer opties</translation>
 <translation id="860043288473659153">Naam kaarthouder</translation>
-<translation id="1673533133011266617">Inloggen bij Brave, gesloten.</translation>
+<translation id="1673533133011266617">Inloggen bij AI Wize, gesloten.</translation>
 <translation id="860282621117673749">Meldingen over prijsdalingen</translation>
-<translation id="5784514951651328424">Er kunnen andere vormen van browsegeschiedenis zijn opgeslagen voor je Brave-account op <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Er kunnen andere vormen van browsegeschiedenis zijn opgeslagen voor je AI Wize-account op <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">De voorgestelde URL in de gedownloade content openen?</translation>
 <translation id="8621068256433641644">telefoon</translation>
 <translation id="8636825310635137004">Zet synchronisatie aan om de tabbladen op je andere apparaten te bekijken</translation>
 <translation id="864544049772947936">Vensters beheren (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Voorspelt en waarschuwt je over gevaarlijke gebeurtenissen voordat deze plaatsvinden</translation>
-<translation id="2734140769649165081">Je kunt de gegevens wissen in de Brave-instellingen</translation>
+<translation id="2734140769649165081">Je kunt de gegevens wissen in de AI Wize-instellingen</translation>
 <translation id="7436978557885042606">Gebruik AI Wize op jouw manier</translation>
 <translation id="8664979001105139458">Bestandsnaam bestaat al</translation>
 <translation id="8676276370198826499">Aanmelden bij <ph name="SITE_ETLD_PLUS_ONE"/> met <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1485,12 +1485,12 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8856931513242997049">Proces voor meldingsrechten gesloten</translation>
 <translation id="1984646864943401749">Stuurt URL's van sommige pagina's die je bezoekt, beperkte systeeminformatie en bepaalde paginacontent naar AI Wize om nieuwe dreigingen te ontdekken en iedereen op internet te beschermen.</translation>
 <translation id="8909135823018751308">Delen</translation>
-<translation id="2684652081942622950">Brave-account</translation>
+<translation id="2684652081942622950">AI Wize-account</translation>
 <translation id="8921980840204105660">Voer een synchronisatie uit om de bookmarks van je andere apparaten op te halen</translation>
 <translation id="8922289737868596582">Download pagina's via de knop 'Meer opties' om ze offline te gebruiken</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> is klaar</translation>
-<translation id="1174893863889683998">Je Brave-activiteit verwijderen uit Digitaal welzijn?</translation>
+<translation id="1174893863889683998">Je AI Wize-activiteit verwijderen uit Digitaal welzijn?</translation>
 <translation id="179413535815682755">Afhankelijk van je instellingen kan AI Wize ook cookies, je huidige URL en je locatie sturen</translation>
 <translation id="8942627711005830162">Openen in een ander venster</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Deze taal kan niet worden gedownload. Probeer het later opnieuw.</translation>
@@ -1500,7 +1500,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="8987736167266086032">Ga verder waar je gebleven was</translation>
 <translation id="8996847606757455498">Een andere provider kiezen</translation>
 <translation id="8998289560386111590">Niet beschikbaar op je apparaat</translation>
-<translation id="3275122921244685452">Je logt in met een account dat wordt beheerd door <ph name="MANAGED_DOMAIN"/> waarmee je de eigenaar beheer geeft over je Brave-gegevens. Je gegevens worden permanent gekoppeld aan dit account. Als je uitlogt van Brave, worden je gegevens van dit apparaat verwijderd. Ze blijven echter opgeslagen in je Brave-account.</translation>
+<translation id="3275122921244685452">Je logt in met een account dat wordt beheerd door <ph name="MANAGED_DOMAIN"/> waarmee je de eigenaar beheer geeft over je AI Wize-gegevens. Je gegevens worden permanent gekoppeld aan dit account. Als je uitlogt van AI Wize, worden je gegevens van dit apparaat verwijderd. Ze blijven echter opgeslagen in je AI Wize-account.</translation>
 <translation id="8998837250940831980">Kan tabblad niet minimaliseren. Probeer het later opnieuw.</translation>
 <translation id="9012585441087414258">Beschermt tegen sites, downloads en extensies die als gevaarlijk zijn bestempeld. Als een pagina iets verdachts doet, worden URL's en delen van de paginacontent naar Google Safe Browsing gestuurd.</translation>
 <translation id="9019199799064251516">Doorgaan zonder profielvergrendeling voor de auto?</translation>
@@ -1536,7 +1536,7 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="9158770349521403363">Alleen content delen</translation>
 <translation id="9159716826369098114">Tabbladgroep van <ph name="TAB_COUNT"/> tabbladen herstellen als een nieuwe tabbladgroep op de achtergrond.</translation>
 <translation id="9169507124922466868">Navigatiegeschiedenis is half geopend</translation>
-<translation id="4947625801334180582">Brave Bèta</translation>
+<translation id="4947625801334180582">AI Wize Bèta</translation>
 <translation id="9190276265094487094">Je krijgt je geschiedenis op al je gesynchroniseerde apparaten, zodat je kunt doorgaan met waar je mee bezig was</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{1 minuut geleden gecheckt}other{# minuten geleden gecheckt}}</translation>
 <translation id="9204021776105550328">Verwijderen</translation>
@@ -1546,15 +1546,15 @@ Zo kunnen sommige websites op dit verzoek reageren door advertenties te bekijken
 <translation id="9209888181064652401">Kan niet bellen</translation>
 <translation id="9212845824145208577">Kan niet verder omlaag gaan. Probeer lager op de pagina te beginnen.</translation>
 <translation id="9219103736887031265">Afbeeldingen</translation>
-<translation id="6946179564366058239">Als een site vraagt om links op de sitepagina privé vooraf te laden, versleutelt en laadt AI Wize de pagina's vooraf via Brave-servers zonder cookies. Hierdoor wordt je identiteit voor de vooraf geladen site verborgen.</translation>
-<translation id="4596514158372210596">Je Brave-activiteit verwijderen uit Digitaal welzijn</translation>
+<translation id="6946179564366058239">Als een site vraagt om links op de sitepagina privé vooraf te laden, versleutelt en laadt AI Wize de pagina's vooraf via AI Wize-servers zonder cookies. Hierdoor wordt je identiteit voor de vooraf geladen site verborgen.</translation>
+<translation id="4596514158372210596">Je AI Wize-activiteit verwijderen uit Digitaal welzijn</translation>
 <translation id="2830145431802238213">Lite-versie van AI Wize gebruiken</translation>
 <translation id="928550791203542716"><ph name="SITE_NAME"/> volgen</translation>
 <translation id="93533588269984624">Alle wachtwoorden worden gedownload op je apparaat en verwijderd uit <ph name="CHROME_CHANNEL"/></translation>
 <translation id="938850635132480979">Fout: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">Wachtwoordzin opgeven</translation>
 <translation id="952301137339791907">Blad onderaan met pagina-inzichten is geopend</translation>
-<translation id="5406914950576900927">Brave kan <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> gebruiken voor zoekopdrachten in China. Je kunt dit wijzigen in <ph name="BEGIN_LINK"/>Instellingen<ph name="END_LINK"/>.</translation>
+<translation id="5406914950576900927">AI Wize kan <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> gebruiken voor zoekopdrachten in China. Je kunt dit wijzigen in <ph name="BEGIN_LINK"/>Instellingen<ph name="END_LINK"/>.</translation>
 <translation id="962979164594783469">Deze app installeren</translation>
 <translation id="96681097142096641">Vereenvoudigde pagina bekijken?</translation>
 <translation id="968900484120156207">Bezochte pagina's zie je hier</translation>

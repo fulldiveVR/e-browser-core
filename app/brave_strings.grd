@@ -277,7 +277,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
 
       <!--
         Even though AI Wize for Testing is a separate brand, there is
-        no separate file for it. Instead, we use the same file as Brave, with
+        no separate file for it. Instead, we use the same file as AI Wize, with
         a few select overrides for the most prominent end-user strings.
 
         Rationale: https://goo.gle/chrome-for-testing#bookmark=id.n1rat320av91
@@ -293,27 +293,27 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
         </then>
         <else>
           <message name="IDS_PRODUCT_NAME" desc="The AI Wize application name" translateable="false">
-            Brave
+            AI Wize
           </message>
           <message name="IDS_SHORT_PRODUCT_NAME" desc="The AI Wize application short name." translateable="false">
-            Brave
+            AI Wize
           </message>
         </else>
       </if>
       <if expr="is_win">
-        <message name="IDS_SXS_SHORTCUT_NAME">Brave Nightly</message>
-        <message name="IDS_SHORTCUT_NAME_BETA">Brave Beta</message>
-        <message name="IDS_SHORTCUT_NAME_DEV">Brave Dev</message>
+        <message name="IDS_SXS_SHORTCUT_NAME">AI Wize Nightly</message>
+        <message name="IDS_SHORTCUT_NAME_BETA">AI Wize Beta</message>
+        <message name="IDS_SHORTCUT_NAME_DEV">AI Wize Dev</message>
         <message name="IDS_PRODUCT_DESCRIPTION" desc="Browser description">
-          AI Wize is a web browser that runs webpages and applications with lightning speed. It's fast, stable, and easy to use. Browse the web more safely with malware and phishing protection built into Brave.
+          AI Wize is a web browser that runs webpages and applications with lightning speed. It's fast, stable, and easy to use. Browse the web more safely with malware and phishing protection built into AI Wize.
         </message>
         <message name="IDS_WELCOME_TO_CHROME" desc="Welcoming text announced via screen readers the first time AI Wize is launched at the conclusion of installation.">
-          Welcome to Brave; new browser window opened
+          Welcome to AI Wize; new browser window opened
         </message>
       </if>
       <if expr="is_macosx or is_linux">
         <message name="IDS_FIRST_RUN_DIALOG_WINDOW_TITLE" desc="Window title of First Run dialog on Mac and Linux, displayed in title bar">
-          Welcome to Brave
+          Welcome to AI Wize
         </message>
       </if>
       <if expr="chromeos_ash">
@@ -342,23 +342,23 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
       </if>
       <if expr="not is_macosx and not chromeos_ash">
         <message name="IDS_TASK_MANAGER_TITLE" desc="The title of the Task Manager window">
-          Task Manager - Brave
+          Task Manager - AI Wize
         </message>
       </if>
       <message name="IDS_SESSION_CRASHED_VIEW_UMA_OPTIN" desc="Text besides the checkbox to let users optin to UMA in the restore from previous crash bubble.">
-        Help make AI Wize better by sending crash reports and <ph name="UMA_LINK">$1<ex>usage statistics</ex></ph> to Brave
+        Help make AI Wize better by sending crash reports and <ph name="UMA_LINK">$1<ex>usage statistics</ex></ph> to AI Wize
       </message>
       <if expr="not chromeos_ash">
         <!-- Browser Window Title Format -->
         <if expr="_is_chrome_for_testing_branded">
           <then>
             <message name="IDS_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in tabs and popup windows">
-              <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - AI Wize for Testing
+              <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize for Testing
             </message>
           </then>
           <else>
             <message name="IDS_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in tabs and popup windows">
-              <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - Brave
+              <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize
             </message>
           </else>
         </if>
@@ -366,25 +366,25 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
       <if expr="chromeos_ash">
         <!-- Browser Window Title Format -->
         <message name="IDS_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in tabbed browser windows">
-          AI Wize - <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph>
+          AI Wize - <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph>
         </message>
       </if>
       <if expr="not chromeos_ash and not is_macosx">
         <!-- Captive Portal Browser Window Title Format -->
         <message name="IDS_CAPTIVE_PORTAL_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in captive portal popup windows">
-          <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - Network Sign-in - Brave
+          <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - Network Sign-in - AI Wize
         </message>
       </if>
       <if expr="chromeos_ash">
         <!-- Captive Portal Browser Window Title Format -->
         <message name="IDS_CAPTIVE_PORTAL_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in captive portal popup windows">
-          AI Wize - Network Sign-in - <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph>
+          AI Wize - Network Sign-in - <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph>
         </message>
       </if>
       <if expr="is_macosx">
         <!-- Captive Portal Browser Window Title Format -->
         <message name="IDS_CAPTIVE_PORTAL_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for titles displayed in captive portal popup windows">
-          <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - Network Sign-in
+          <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - Network Sign-in
         </message>
       </if>
       <!-- Accessible window title format - includes the channel, and the same
@@ -392,23 +392,23 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
       <if expr="_is_chrome_for_testing_branded">
         <then>
           <message name="IDS_ACCESSIBLE_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window">
-            <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - AI Wize for Testing
+            <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize for Testing
           </message>
         </then>
         <else>
           <message name="IDS_ACCESSIBLE_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window">
-            <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - Brave
+            <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize
           </message>
         </else>
       </if>
       <message name="IDS_ACCESSIBLE_BETA_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the beta channel version of the browser">
-        <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - AI Wize Beta
+        <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize Beta
       </message>
       <message name="IDS_ACCESSIBLE_DEV_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the developer (dev) channel version of the browser">
-        <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - AI Wize Dev
+        <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize Dev
       </message>
       <message name="IDS_ACCESSIBLE_CANARY_BROWSER_WINDOW_TITLE_FORMAT" desc="The format for the accessible name of a tabbed browser window for the canary (nightly build) channel version of the browser">
-        <ph name="PAGE_TITLE">$1<ex>Brave</ex></ph> - AI Wize Canary
+        <ph name="PAGE_TITLE">$1<ex>AI Wize</ex></ph> - AI Wize Canary
       </message>
       <if expr="_is_chrome_for_testing_branded">
         <then>
@@ -436,7 +436,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
           ChromeOS is made possible by additional <ph name="BEGIN_LINK_CROS_OSS">&lt;a target="_blank" href="$1"&gt;</ph>open source software<ph name="END_LINK_CROS_OSS">&lt;/a&gt;</ph>, as is <ph name="BEGIN_LINK_LINUX_OSS">&lt;a target="_blank" href="$2"&gt;</ph>Linux development environment<ph name="END_LINK_LINUX_OSS">&lt;/a&gt;</ph>.
         </message>
         <message name="IDS_ABOUT_SAFETY_INFORMATION" desc="The safety label in the About box." translateable="false">
-          Not used in Brave. Placeholder to keep resource maps in sync.
+          Not used in AI Wize. Placeholder to keep resource maps in sync.
         </message>
       </if>
       <if expr="_is_chrome_for_testing_branded">
@@ -447,7 +447,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
         </then>
         <else>
           <message name="IDS_ABOUT_TERMS_OF_SERVICE" desc="The terms of service label in the About box." translateable="false">
-            Not used in Brave. Placeholder to keep resource maps in sync.
+            Not used in AI Wize. Placeholder to keep resource maps in sync.
           </message>
         </else>
       </if>
@@ -482,7 +482,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
         </message>
       </if>
       <message name="IDS_ACCNAME_APP" desc="The accessible name for the app menu." translateable="false">
-        Brave
+        AI Wize
       </message>
       <!-- Hung Browser Detector -->
       <if expr="is_win">
@@ -506,10 +506,10 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
           Please close all AI Wize windows and try again.
         </message>
         <message name="IDS_UNINSTALL_VERIFY" desc="Message to confirm user wants to uninstall">
-          Are you sure you want to uninstall Brave?
+          Are you sure you want to uninstall AI Wize?
         </message>
         <message name="IDS_UNINSTALL_CHROME" desc="The title of the AI Wize uninstall dialog.">
-          Uninstall Brave
+          Uninstall AI Wize
         </message>
       </if>
       <message name="IDS_FR_CUSTOMIZE_DEFAULT_BROWSER" desc="Default browser checkbox label">
@@ -526,19 +526,19 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
         </message>
       </if>
       <message name="IDS_CANT_WRITE_USER_DIRECTORY_SUMMARY" desc="Summary of problem displayed in dialog when we can't create a directory for this user.">
-Brave cannot read and write to its data directory:
+AI Wize cannot read and write to its data directory:
 
-<ph name="USER_DATA_DIRECTORY">$1<ex>C:\Documents and Settings\devint\Local Settings\Application Data\Brave\Brave</ex></ph>
+<ph name="USER_DATA_DIRECTORY">$1<ex>C:\Documents and Settings\devint\Local Settings\Application Data\AI Wize\AI Wize</ex></ph>
       </message>
       <if expr="chromeos_ash">
         <message name="IDS_EULA_CHECKBOX_ENABLE_LOGGING" desc="The label of the checkbox to enable/disable crash and user metrics logging">
-          Optional: Help improve ChromeOS features and performance by automatically sending diagnostic and usage data to Brave.
+          Optional: Help improve ChromeOS features and performance by automatically sending diagnostic and usage data to AI Wize.
         </message>
       </if>
       <message name="IDS_PROFILE_TOO_NEW_ERROR" desc="Error displayed on startup when the profile is from a newer version of the product and can not be read">
-Your profile can not be used because it is from a newer version of Brave.
+Your profile can not be used because it is from a newer version of AI Wize.
 
-Some features may be unavailable. Please specify a different profile directory or use a newer version of Brave.
+Some features may be unavailable. Please specify a different profile directory or use a newer version of AI Wize.
       </message>
       <message name="IDS_PREFERENCES_UNREADABLE_ERROR" desc="Error displayed on startup when user preferences file can not be read">
 Your preferences can not be read.
@@ -548,7 +548,7 @@ Some features may be unavailable and changes to preferences won't be saved.
       <message name="IDS_PREFERENCES_CORRUPT_ERROR" desc="Error displayed on startup when user preferences file can not be read">
 Your preferences file is corrupt or invalid.
 
-Brave is unable to recover your settings.
+AI Wize is unable to recover your settings.
       </message>
       <!-- Add account dialog -->
       <if expr="chromeos_ash">
@@ -560,7 +560,7 @@ Permissions you've already given to websites and apps may apply to this account.
       </if>
       <!-- Crash Recovery Dialog -->
       <message name="IDS_CRASH_RECOVERY_TITLE" desc="Title of dialog shown when the browser crashes." translateable="false">
-        Brave
+        AI Wize
       </message>
       <if expr="is_win">
         <message name="IDS_CRASH_RECOVERY_CONTENT" desc="Text content telling the user the browser has crashed.">
@@ -576,7 +576,7 @@ Permissions you've already given to websites and apps may apply to this account.
         AI Wize lets you know if your passwords are ever compromised
       </message>
       <message name="IDS_PASSWORD_MANAGER_TITLE_BRAND" desc="The product name used in the title of the password bubble." translateable="false">
-        Brave
+        AI Wize
       </message>
       <message name="IDS_PASSWORD_BUBBLES_PASSWORD_MANAGER_LINK_TEXT_SAVING_ON_DEVICE" desc="The text of the AI Wize Password Manager links displayed on Password Manager bubbles footer when the credentials are stored only locally.">
         Password Manager
@@ -609,7 +609,7 @@ Permissions you've already given to websites and apps may apply to this account.
           AI Wize is trying to replace existing passwords. Type your Windows password to allow this.
         </message>
         <message name="IDS_INSTALL_HIGHER_VERSION" desc="Error displayed when higher version already exists.">
-          This computer already has a more recent version of Brave. If the software is not working, please uninstall AI Wize and try again.
+          This computer already has a more recent version of AI Wize. If the software is not working, please uninstall AI Wize and try again.
         </message>
         <message name="IDS_INSTALL_FAILED" desc="Error displayed if installation fails due to some unknown error.">
           Installation failed due to unspecified error. If AI Wize is currently running, please close it and try again.
@@ -641,7 +641,7 @@ Permissions you've already given to websites and apps may apply to this account.
         <message name="IDS_INSTALL_INSUFFICIENT_RIGHTS" desc="Error displayed when a non admin user tries to attempt system level install/uninstall.">
           You do not have appropriate rights for system-level install. Try running the installer again as Administrator.
         </message>
-        <message name="IDS_INSTALL_EXISTING_VERSION_LAUNCHED" desc="A message shown to users who try to install AI Wize in their user profile directory when their computer already has AI Wize installed for all users. In this case, the installer silently launches the existing version of AI Wize for all users rather than installing a second version of Brave.">
+        <message name="IDS_INSTALL_EXISTING_VERSION_LAUNCHED" desc="A message shown to users who try to install AI Wize in their user profile directory when their computer already has AI Wize installed for all users. In this case, the installer silently launches the existing version of AI Wize for all users rather than installing a second version of AI Wize.">
           AI Wize is already installed for all users on your computer.
         </message>
       </if>
@@ -699,12 +699,12 @@ Permissions you've already given to websites and apps may apply to this account.
         Learn why AI Wize blocks some downloads
       </message>
       <message name="IDS_DOWNLOAD_BUBBLE_SUBPAGE_SUMMARY_DEEP_SCANNING_PROMPT_LOCAL_DECRYPTION" desc="Subpage summary of warning for a file where we recommend providing the password for on-device decryption">
-        This file may be dangerous<ph name="LINE_BREAK">$1</ph>Brave can check this download for you if you provide the password. Info about the file gets sent to Google Safe Browsing, but the file content and password stay on your device.
+        This file may be dangerous<ph name="LINE_BREAK">$1</ph>AI Wize can check this download for you if you provide the password. Info about the file gets sent to Google Safe Browsing, but the file content and password stay on your device.
       </message>
 
       <!-- Download Shelf Items -->
       <message name="IDS_DOWNLOAD_STATUS_CRX_INSTALL_RUNNING" desc="Message shown when a CRX has been downloaded and is being unpacked.">
-        Adding to Brave...
+        Adding to AI Wize...
       </message>
 
       <message name="IDS_PROMPT_DOWNLOAD_CHANGES_SETTINGS" desc="Message shown on the download shelf when the download is known to change settings in the browser in a malicious way.">
@@ -779,7 +779,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <if expr="enable_extensions">
         <!-- Extension installed bubble -->
         <message name="IDS_EXTENSION_INSTALLED_HEADING" desc="Title of the extension-installed bubble. Instructs that the extension was installed.">
-          <ph name="EXTENSION_NAME">$1<ex>Gmail Checker</ex></ph> has been added to Brave
+          <ph name="EXTENSION_NAME">$1<ex>Gmail Checker</ex></ph> has been added to AI Wize
         </message>
 
         <!-- Extension uninstall prompt -->
@@ -818,10 +818,10 @@ Permissions you've already given to websites and apps may apply to this account.
         Warning: AI Wize cannot prevent extensions from recording your browsing history. To disable this extension in Private mode, unselect this option.
       </message>
       <message name="IDS_EXTENSIONS_UNINSTALL" desc="The link for uninstalling extensions.">
-        Remove from Brave
+        Remove from AI Wize
       </message>
       <message name="IDS_EXTENSIONS_SHORTCUT_SCOPE_IN_CHROME" desc="The label to indicate that a shortcut will be triggerable only from within the AI Wize application.">
-        In Brave
+        In AI Wize
       </message>
 
       <if expr="enable_extensions">
@@ -835,58 +835,58 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- Main AI Wize menu -->
       <message name="IDS_APPMENU_TOOLTIP" desc="The tooltip to show for the browser menu">
-        Customize and control Brave
+        Customize and control AI Wize
       </message>
 
       <message name="IDS_APPMENU_TOOLTIP_UPDATE_AVAILABLE" desc="The tooltip to show for the browser menu when an update is available">
-        Customize and control Brave. Update is available.
+        Customize and control AI Wize. Update is available.
       </message>
 
       <message name="IDS_APPMENU_TOOLTIP_ALERT" desc="The tooltip to show for the browser menu when a non-update alert is displayed">
-        Customize and control Brave. Something needs your attention - click for details.
+        Customize and control AI Wize. Something needs your attention - click for details.
       </message>
 
       <message name="IDS_OPEN_IN_CHROME" desc="The text label of the Open in AI Wize menu item for the Hosted App app menu">
-        &amp;Open in Brave
+        &amp;Open in AI Wize
       </message>
 
       <if expr="use_titlecase and not chromeos_ash">
         <if expr="_is_chrome_for_testing_branded">
           <then>
             <message name="IDS_ABOUT" desc="In Title Case: The text label of the About AI Wize for Testing menu item">
-              About &amp;Brave for Testing
+              About &amp;AI Wize for Testing
             </message>
           </then>
           <else>
             <message name="IDS_ABOUT" desc="In Title Case: The text label of the About AI Wize menu item">
-              About &amp;Brave
+              About &amp;AI Wize
             </message>
           </else>
         </if>
         <message name="IDS_RELAUNCH_TO_UPDATE" desc="In Title Case: The text label of the relaunch to update AI Wize menu item">
-          Relaunch to Update &amp;Brave
+          Relaunch to Update &amp;AI Wize
         </message>
       </if>
       <if expr="not use_titlecase and not chromeos_ash">
         <if expr="_is_chrome_for_testing_branded">
           <then>
             <message name="IDS_ABOUT" desc="The text label of the About AI Wize for Testing menu item">
-              About &amp;Brave for Testing
+              About &amp;AI Wize for Testing
             </message>
           </then>
           <else>
             <message name="IDS_ABOUT" desc="The text label of the About AI Wize menu item">
-              About &amp;Brave
+              About &amp;AI Wize
             </message>
           </else>
         </if>
         <message name="IDS_RELAUNCH_TO_UPDATE" desc="The text label of the relaunch to update AI Wize menu item">
-          Relaunch to update &amp;Brave
+          Relaunch to update &amp;AI Wize
         </message>
       </if>
       <if expr="chromeos_ash">
         <message name="IDS_ABOUT" desc="The text label of the About AI Wize menu item">
-          About &amp;Brave
+          About &amp;AI Wize
         </message>
         <message name="IDS_RELAUNCH_TO_UPDATE" desc="The text label of the relaunch to update ChromeOS menu item">
           Relaunch to update &amp;ChromeOS
@@ -895,13 +895,13 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <if expr="is_win or is_macosx or is_linux">
         <message name="IDS_RELAUNCH_TO_UPDATE_ALT" desc="Alternate text label of the relaunch to update AI Wize menu item" translateable="false">
-        Not used in Brave. Placeholder to keep resource maps in sync.
+        Not used in AI Wize. Placeholder to keep resource maps in sync.
         </message>
       </if>
 
       <if expr="is_macosx">
-        <message name="IDS_APP_MENU_PRODUCT_NAME" desc="The application's short name, used for the Mac's application menu, activity monitor, etc. This should be less than 16 characters. Example: Brave, not Brave." translateable="false">
-          Brave
+        <message name="IDS_APP_MENU_PRODUCT_NAME" desc="The application's short name, used for the Mac's application menu, activity monitor, etc. This should be less than 16 characters. Example: AI Wize, not AI Wize." translateable="false">
+          AI Wize
         </message>
         <message name="IDS_HELPER_NAME" desc="The helper application's name.  Should contain the AI Wize application name (IDS_PRODUCT_NAME). Example: AI Wize Helper.">
           AI Wize Helper
@@ -917,7 +917,7 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- AI Wize sign-in page -->
       <message name="IDS_CHROME_SIGNIN_TITLE" desc="Title on the about:chrome-signin page" translateable="false">
-        Brave
+        AI Wize
       </message>
 
       <!-- DICE sign-in promo strings -->
@@ -960,7 +960,7 @@ Permissions you've already given to websites and apps may apply to this account.
         </message>
         <!-- New one-click sign-in dialog contents for SAML support -->
         <message name="IDS_ONE_CLICK_SIGNIN_DIALOG_TITLE_NEW" desc="The title of the modal dialog window that opens when the user chooses to use one click sign-in.">
-          You're signed in to Brave!
+          You're signed in to AI Wize!
         </message>
         <message name="IDS_ONE_CLICK_SIGNIN_DIALOG_MESSAGE_NEW" desc="The message of the one click sign-in dialog.">
           You're signed in as <ph name="USER_EMAIL_ADDRESS">$1<ex>foo@gmail.com</ex></ph>. Now you can access your bookmarks, history, and other settings on all your signed in devices.
@@ -986,7 +986,7 @@ Permissions you've already given to websites and apps may apply to this account.
         </then>
         <else>
           <message name="IDS_NTP_CUSTOMIZE_BUTTON_LABEL" desc="Label for button on the New Tab Page that opens dialog to customize AI Wize browser.">
-            Customize Brave
+            Customize AI Wize
           </message>
         </else>
       </if>
@@ -994,7 +994,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- Signin Email Confirmation tab modal dialog -->
       <if expr="not chromeos_ash">
         <message name="IDS_SIGNIN_EMAIL_CONFIRMATION_TITLE" desc="Title of the signin email confirmation tab modal dialog.">
-          <ph name="USER_EMAIL_ADDRESS">$1<ex>foo@gmail.com</ex></ph> was previously using Brave
+          <ph name="USER_EMAIL_ADDRESS">$1<ex>foo@gmail.com</ex></ph> was previously using AI Wize
         </message>
       </if>
 
@@ -1025,13 +1025,13 @@ Permissions you've already given to websites and apps may apply to this account.
           Make AI Wize your own
         </message>
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_SUBTITLE" desc="Subtitle of the AI Wize Signin Bubble intercept that is shown when a signed out user signs in on the web with it's first account.">
-          Sign in to get the most out of Brave
+          Sign in to get the most out of AI Wize
         </message>
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_DECLINE_TEXT" desc="Label of the Decline button of the AI Wize Signin Bubble intercept that is shown when a signed out user signs in on the web with it's first account.">
           Use AI Wize without an account
         </message>
         <message name="IDS_AVATAR_BUTTON_INTERCEPT_BUBBLE_CHROME_SIGNIN_TEXT" desc="Text asking the user to sign into AI Wize while the AI Wize Signin Bubble intercept is shown.">
-          Sign in to Brave?
+          Sign in to AI Wize?
         </message>
       </if>
 
@@ -1076,7 +1076,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- App list -->
       <if expr="chromeos_ash">
         <message name="IDS_APP_LIST_EXTENSIONS_UNINSTALL" desc="Title text for the context menu item of a non-platform-app app list item that removes the app.">
-          Remove from Brave...
+          Remove from AI Wize...
         </message>
       </if>
 
@@ -1088,8 +1088,8 @@ Permissions you've already given to websites and apps may apply to this account.
         AI Wize Apps
       </message>
       <if expr="is_win">
-        <message name="IDS_APP_SHORTCUTS_SUBDIR_NAME_BETA">Brave Apps</message>
-        <message name="IDS_APP_SHORTCUTS_SUBDIR_NAME_DEV">Brave Apps</message>
+        <message name="IDS_APP_SHORTCUTS_SUBDIR_NAME_BETA">AI Wize Apps</message>
+        <message name="IDS_APP_SHORTCUTS_SUBDIR_NAME_DEV">AI Wize Apps</message>
       </if>
 
       <!-- ChromeOS OOBE Terms of Service screen-->
@@ -1131,7 +1131,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- ProcessSingleton -->
       <if expr="is_posix">
         <message name="IDS_PROFILE_IN_USE_POSIX" desc="Message shown when the browser cannot start because the profile is in use on a different host.">
-          The profile appears to be in use by another AI Wize process (<ph name="PROCESS_ID">$1<ex>12345</ex></ph>) on another computer (<ph name="HOST_NAME">$2<ex>example.com</ex></ph>). AI Wize has locked the profile so that it doesn't get corrupted. If you are sure no other processes are using this profile, you can unlock the profile and relaunch Brave.
+          The profile appears to be in use by another AI Wize process (<ph name="PROCESS_ID">$1<ex>12345</ex></ph>) on another computer (<ph name="HOST_NAME">$2<ex>example.com</ex></ph>). AI Wize has locked the profile so that it doesn't get corrupted. If you are sure no other processes are using this profile, you can unlock the profile and relaunch AI Wize.
         </message>
       </if>
 
@@ -1157,7 +1157,7 @@ Permissions you've already given to websites and apps may apply to this account.
           Now it's easier to use AI Wize with your AI Wize sync chain and on shared computers.
         </message>
         <message name="IDS_USER_MANAGER_TUTORIAL_SLIDE_YOUR_CHROME_TITLE" desc="Title of the slide about personalizing the browser">
-          This is your Brave
+          This is your AI Wize
         </message>
         <message name="IDS_USER_MANAGER_TUTORIAL_SLIDE_YOUR_CHROME_TEXT" desc="Main text of the slide about personalizing the browser">
           Your web, bookmarks, and other AI Wize stuff live here.
@@ -1172,7 +1172,7 @@ Permissions you've already given to websites and apps may apply to this account.
           Click your name to open AI Wize and start browsing.
         </message>
         <message name="IDS_USER_MANAGER_TUTORIAL_SLIDE_OUTRO_ADD_USER" desc="Text of the add a new user button">
-          Add yourself to Brave
+          Add yourself to AI Wize
         </message>
       </if>
 
@@ -1193,8 +1193,8 @@ Permissions you've already given to websites and apps may apply to this account.
       </if>
 
       <!-- Settings API bubble -->
-      <message name="IDS_EXTENSIONS_SETTINGS_API_SECOND_LINE_START_PAGES" desc="Second line in the Settings API bubble. Only shown if the secondary change by the extension was just the start pages. The triple single quotes are needed to preserve the space before and after the sentence which is needed when the language (Brave is being translated to) uses space as word separator. Please preserve them, unless the language being translated to does not use space as word separator.">
-        ''' It also controls what page is shown when you start Brave. '''
+      <message name="IDS_EXTENSIONS_SETTINGS_API_SECOND_LINE_START_PAGES" desc="Second line in the Settings API bubble. Only shown if the secondary change by the extension was just the start pages. The triple single quotes are needed to preserve the space before and after the sentence which is needed when the language (AI Wize is being translated to) uses space as word separator. Please preserve them, unless the language being translated to does not use space as word separator.">
+        ''' It also controls what page is shown when you start AI Wize. '''
       </message>
       <message name="IDS_EXTENSIONS_SETTINGS_API_SECOND_LINE_START_AND_SEARCH" desc="Second line in the Settings API bubble. Only shown if the secondary change by the extension was both the start page and the search engine. See IDS_EXTENSIONS_SETTINGS_API_SECOND_LINE_START_PAGES for reason for triple quotes.">
         ''' It also controls what page is shown when you start AI Wize or search from the Omnibox. '''
@@ -1202,7 +1202,7 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- Webstore strings -->
       <message name="IDS_WEBSTORE_APP_DESCRIPTION" desc="Description for the WebStore app.">
-        Discover great apps, games, extensions and themes for Brave.
+        Discover great apps, games, extensions and themes for AI Wize.
       </message>
 
       <!-- Windows firewall rule strings. -->
@@ -1210,9 +1210,9 @@ Permissions you've already given to websites and apps may apply to this account.
         <message name="IDS_INBOUND_MDNS_RULE_NAME" desc="The name of the firewall rule allowing inbound mDNS traffic.">
           AI Wize (mDNS-In)
         </message>
-        <message name="IDS_INBOUND_MDNS_RULE_NAME_BETA">Brave Beta (mDNS-In)</message>
-        <message name="IDS_INBOUND_MDNS_RULE_NAME_CANARY">Brave Nightly (mDNS-In)</message>
-        <message name="IDS_INBOUND_MDNS_RULE_NAME_DEV">Brave Dev (mDNS-In)</message>
+        <message name="IDS_INBOUND_MDNS_RULE_NAME_BETA">AI Wize Beta (mDNS-In)</message>
+        <message name="IDS_INBOUND_MDNS_RULE_NAME_CANARY">AI Wize Nightly (mDNS-In)</message>
+        <message name="IDS_INBOUND_MDNS_RULE_NAME_DEV">AI Wize Dev (mDNS-In)</message>
         <message name="IDS_INBOUND_MDNS_RULE_DESCRIPTION">
           Inbound rule for AI Wize to allow mDNS traffic.
         </message>
@@ -1222,14 +1222,14 @@ Permissions you've already given to websites and apps may apply to this account.
       </if>
 
       <if expr="not is_android">
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of AI Wize to Brave.">
-          If an image doesn’t have a useful description, AI Wize will try to provide one for you. To create descriptions, images are sent to Brave. You can turn this off in settings at any time.
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of AI Wize to AI Wize.">
+          If an image doesn’t have a useful description, AI Wize will try to provide one for you. To create descriptions, images are sent to AI Wize. You can turn this off in settings at any time.
         </message>
         <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT_ONCE" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of AI Wize to AI Wize just once.">
-          If an image doesn’t have a useful description, AI Wize will try to provide one for you. To create descriptions, images are sent to Brave.
+          If an image doesn’t have a useful description, AI Wize will try to provide one for you. To create descriptions, images are sent to AI Wize.
         </message>
-        <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the spelling service of AI Wize to Brave.">
-          This uses the same spell checker that's used in AI Wize search. Text you type in the browser is sent to Brave. You can always change this behavior in settings.
+        <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the spelling service of AI Wize to AI Wize.">
+          This uses the same spell checker that's used in AI Wize search. Text you type in the browser is sent to AI Wize. You can always change this behavior in settings.
         </message>
         <if expr="not use_titlecase">
           <message name="IDS_CONTENT_CONTEXT_OPENLINKNEWTAB_INAPP" desc="The name of the command to open a link in a newly created browser tab when the user is in an app window">
@@ -1252,7 +1252,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- Update Recommended dialog -->
       <if expr="not chromeos_ash">
         <message name="IDS_UPDATE_RECOMMENDED_DIALOG_TITLE" desc="The window title for the Update Recommended dialog.">
-          Relaunch Brave
+          Relaunch AI Wize
         </message>
         <message name="IDS_UPDATE_RECOMMENDED" desc="The main text of the Update Recommended dialog with a count of open Private windows.">
           {COUNT, plural,
@@ -1260,7 +1260,7 @@ Permissions you've already given to websites and apps may apply to this account.
           =1 {A new update for AI Wize is available and will be applied as soon as you relaunch. Your Private window won't reopen.}
           other {A new update for AI Wize is available and will be applied as soon as you relaunch. Your # Private windows won't reopen.}}
         </message>
-        <message name="IDS_RELAUNCH_AND_UPDATE" desc="The button in the Update Recommended dialog which updates and relaunches Brave.">
+        <message name="IDS_RELAUNCH_AND_UPDATE" desc="The button in the Update Recommended dialog which updates and relaunches AI Wize.">
           Relaunch
         </message>
       </if>
@@ -1278,16 +1278,16 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <if expr="is_win or is_macosx or is_linux">
         <message name="IDS_UPDATE_RECOMMENDED_DIALOG_TITLE_ALT" desc="Alternate window title for the Update Recommended dialog." translateable="false">
-          Not used in Brave. Placeholder to keep resource maps in sync.
+          Not used in AI Wize. Placeholder to keep resource maps in sync.
         </message>
         <message name="IDS_UPDATE_RECOMMENDED_ALT" desc="Alternate main text of the Update Recommended dialog with a count of open Private windows." translateable="false">
-          Not used in Brave. Placeholder to keep resource maps in sync.
+          Not used in AI Wize. Placeholder to keep resource maps in sync.
         </message>
       </if>
 
       <!-- Update bubble -->
       <message name="IDS_REINSTALL_APP" desc="Text for the button the user clicks to reinstall the app.">
-        Reinstall Brave
+        Reinstall AI Wize
       </message>
       <if expr="use_titlecase">
         <message name="IDS_UPGRADE_BUBBLE_MENU_ITEM" desc="In Title Case: Text for the AI Wize menu option replacing Update required.">
@@ -1300,7 +1300,7 @@ Permissions you've already given to websites and apps may apply to this account.
         </message>
       </if>
       <message name="IDS_UPGRADE_BUBBLE_TITLE" desc="Text for the title of the upgrade bubble view.">
-        Can't update Brave
+        Can't update AI Wize
       </message>
       <message name="IDS_UPGRADE_BUBBLE_TEXT" desc="Text for the upgrade bubble view full description.">
         AI Wize couldn't update to the latest version, so you're missing out on new features and security fixes.
@@ -1308,7 +1308,7 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- User menu errors -->
       <message name="IDS_SYNC_ERROR_USER_MENU_UPGRADE_BUTTON" desc="Button in the header of desktop user menu that prompts the user to update AI Wize to fix the out-of-date AI Wize client error.">
-        Update Brave
+        Update AI Wize
       </message>
 
       <!-- Sync errors. Android uses native UI to handle Sync settings -->
@@ -1317,7 +1317,7 @@ Permissions you've already given to websites and apps may apply to this account.
           Update AI Wize to start sync
         </message>
         <message name="IDS_SYNC_UPGRADE_CLIENT_BUTTON" desc="Button indicating client needs to be upgraded to the latest version.">
-          Update Brave
+          Update AI Wize
         </message>
       </if>
 
@@ -1327,12 +1327,12 @@ Permissions you've already given to websites and apps may apply to this account.
       </message>
       <if expr="use_titlecase">
         <message name="IDS_RUN_RECOVERY" desc="In Title Case: Text for the button the user clicks to recover chromium and its updater.">
-          Update Brave
+          Update AI Wize
         </message>
       </if>
       <if expr="not use_titlecase">
         <message name="IDS_RUN_RECOVERY" desc="Text for the button the user clicks to recover chromium and its updater.">
-          Update Brave
+          Update AI Wize
         </message>
       </if>
       <message name="IDS_RECOVERY_BUBBLE_TEXT" desc="Text for the chrome recovery bubble view full description.">
@@ -1415,7 +1415,7 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- Welcome page (chrome://welcome) strings -->
       <if expr="not chromeos_ash and not is_android">
         <message name="IDS_WELCOME_HEADER" desc="A message which will appear as the header on the Welcome UI if the user has never run AI Wize before.">
-          Welcome to Brave
+          Welcome to AI Wize
         </message>
       </if>
 
@@ -1447,19 +1447,19 @@ Permissions you've already given to websites and apps may apply to this account.
           </message>
           <message name="IDS_RELAUNCH_REQUIRED_TITLE_HOURS" desc="The title of a dialog that tells users the browser must be relaunched within one or more hours.">
             {0, plural,
-              =1 {Brave will relaunch in an hour}
-              other {Brave will relaunch in # hours}}
+              =1 {AI Wize will relaunch in an hour}
+              other {AI Wize will relaunch in # hours}}
           </message>
           <message name="IDS_RELAUNCH_REQUIRED_TITLE_MINUTES" desc="The title of a dialog that tells users the browser must be relaunched within one or more minutes.">
             {0, plural,
-              =1 {Brave will relaunch in 1 minute}
-              other {Brave will relaunch in # minutes}}
+              =1 {AI Wize will relaunch in 1 minute}
+              other {AI Wize will relaunch in # minutes}}
           </message>
           <message name="IDS_RELAUNCH_REQUIRED_TITLE_SECONDS" desc="The title of a dialog that tells users the browser must be relaunched within some number of seconds.">
             {0, plural,
-              =0 {Brave will relaunch now}
-              =1 {Brave will relaunch in 1 second}
-              other {Brave will relaunch in # seconds}}
+              =0 {AI Wize will relaunch now}
+              =1 {AI Wize will relaunch in 1 second}
+              other {AI Wize will relaunch in # seconds}}
           </message>
           <message name="IDS_RELAUNCH_REQUIRED_BODY" desc="The body text of a dialog that tells users the browser must be relaunched with Private counter.">
              {COUNT, plural,
@@ -1472,13 +1472,13 @@ Permissions you've already given to websites and apps may apply to this account.
       <!-- AI Wize launch blocking dialog. -->
       <if expr="not is_android and not chromeos_ash">
          <message name="IDS_ENTERPRISE_STARTUP_CLOUD_POLICY_ENROLLMENT_TOOLTIP" desc="The information message of AI Wize launch blocking dialog for machine level user cloud policy enrollment.">
-          Launching Brave...
+          Launching AI Wize...
         </message>
         <message name="IDS_ENTERPRISE_STARTUP_CLOUD_POLICY_ENROLLMENT_ERROR" desc="The error message of AI Wize launch blocking dialog when machine level user cloud policy enrollment failed.">
-          Couldn't launch Brave. Try again.
+          Couldn't launch AI Wize. Try again.
         </message>
         <message name="IDS_ENTERPRISE_STARTUP_RELAUNCH_BUTTON" desc="The text of relaunch button of AI Wize launch blocking dialog.">
-          Relaunch Brave
+          Relaunch AI Wize
         </message>
       </if>
       <message name="IDS_DESKTOP_MEDIA_PICKER_TITLE_WEB_CONTENTS_ONLY" desc="Title for the window picker dialog shown when desktop capture of a tab is requested by an app.">
@@ -1526,20 +1526,20 @@ Permissions you've already given to websites and apps may apply to this account.
           other {Your organization automatically closes AI Wize when it isn't used for # minutes. Browsing data is deleted. This could include history, autofill, and downloads.}}
         </message>
         <message name="IDS_IDLE_DISMISS_BUTTON" desc="Button label in the Idle Timeout dialog, this button dismisses the dialog and prevents browsers from closing automatically.">
-          Continue using Brave
+          Continue using AI Wize
         </message>
       </if>
       <!-- User happiness tracking survey UI -->
       <if expr="not is_android">
         <message name="IDS_HATS_BUBBLE_TITLE" translateable="false" desc="The title of Happiness Tracking Survey's invitation banner, it invites users to take a survey">
-          Help us improve Brave
+          Help us improve AI Wize
         </message>
       </if>
 
       <!-- AI Wize parent extension/app install blocking dialog. -->
       <if expr="enable_extensions and enable_supervised_users">
         <message name="IDS_EXTENSION_PERMISSIONS_BLOCKED_BY_PARENT_PROMPT_MESSAGE" desc="Text for the dialog indicating that a parent has blocked extensions and apps.">
-         Your parent has turned off "Permissions for sites, apps and extensions" for Brave
+         Your parent has turned off "Permissions for sites, apps and extensions" for AI Wize
         </message>
       </if>
 
@@ -1553,10 +1553,10 @@ Permissions you've already given to websites and apps may apply to this account.
             To access your AI Wize browser stuff across all your devices, sign in, then turn on sync
           </message>
           <message name="IDS_PROFILE_PICKER_PROFILE_CREATION_FLOW_ACCOUNT_SELECTION_LACROS_SUBTITLE" desc="Profile picker, account selection screen subtitle">
-            Sign in to Brave
+            Sign in to AI Wize
           </message>
           <message name="IDS_PROFILE_PICKER_PROFILE_CREATION_FLOW_ACCOUNT_SELECTION_LACROS_SUBTITLE_WITH_GUEST" desc="Profile picker, account selection screen subtitle">
-            Sign in to Brave. If you want to sign in an account one-time only, you can <ph name="GUEST_LINK_BEGIN">&lt;a id="guestModeLink" href="#"&gt;</ph>use the device as guest<ph name="GUEST_LINK_END">&lt;/a&gt;</ph>.
+            Sign in to AI Wize. If you want to sign in an account one-time only, you can <ph name="GUEST_LINK_BEGIN">&lt;a id="guestModeLink" href="#"&gt;</ph>use the device as guest<ph name="GUEST_LINK_END">&lt;/a&gt;</ph>.
           </message>
         </if>
         <if expr="not chromeos_lacros">
@@ -1564,7 +1564,7 @@ Permissions you've already given to websites and apps may apply to this account.
             Welcome to AI Wize profiles
           </message>
           <message name="IDS_PROFILE_PICKER_MAIN_VIEW_TITLE_V2" desc="Title of a screen that lets the user choose which profile to use when browsing the web. *If the EN source doesn't translate well in your language, an alternative string 'Which AI Wize profile would you like to use?' may be used instead">
-            Who's using Brave?
+            Who's using AI Wize?
           </message>
           <message name="IDS_PROFILE_PICKER_MAIN_VIEW_SUBTITLE" desc="Profile picker main view subtitle">
             With AI Wize profiles you can separate all your AI Wize stuff. Create profiles for friends and family, or split between work and fun.
@@ -1592,10 +1592,10 @@ Permissions you've already given to websites and apps may apply to this account.
         <!-- First Run Experience -->
         <if expr="chromeos_lacros">
           <message name="IDS_PRIMARY_PROFILE_FIRST_RUN_TITLE" desc="Title of the landing screen in first run experience for the primary profile. The screen promotes AI Wize sync.">
-            Welcome to Brave, <ph name="ACCOUNT_FIRST_NAME">$1<ex>Jane</ex></ph>
+            Welcome to AI Wize, <ph name="ACCOUNT_FIRST_NAME">$1<ex>Jane</ex></ph>
           </message>
           <message name="IDS_PRIMARY_PROFILE_FIRST_RUN_NO_NAME_TITLE" desc="Title of the screen shown when the user runs AI Wize for the first time. A simple, generic welcome message.">
-            Welcome to Brave
+            Welcome to AI Wize
           </message>
           <message name="IDS_PRIMARY_PROFILE_FIRST_RUN_SUBTITLE" desc="Subtitle of the landing screen in first run experience for the primary profile. The screen promotes AI Wize sync.">
             Get your AI Wize browser stuff from <ph name="ACCOUNT_EMAIL">$1<ex>Jane.Doe@gmail.com</ex></ph>
@@ -1606,13 +1606,13 @@ Permissions you've already given to websites and apps may apply to this account.
         </if>
         <if expr="not chromeos_lacros">
           <message name="IDS_FRE_SIGN_IN_TITLE_0" desc="This string appears as a heading on a full-page screen that asks the user to sign in to AI Wize with their AI Wize sync chain. It appears when the user launches AI Wize for the first time. When they sign in, they can personalize and customize AI Wize and remember their settings in their AI Wize sync chain. The tone should be inviting and alluring.">
-            Sign in to Brave
+            Sign in to AI Wize
           </message>
           <message name="IDS_FRE_SIGN_IN_TITLE_1" desc="This string appears as a heading on a full-page screen that asks the user to sign in to AI Wize with their AI Wize sync chain. It appears when the user launches AI Wize for the first time. When they sign in, they can personalize and customize AI Wize and remember their settings in their AI Wize sync chain. The tone should be inviting and alluring.">
             Make AI Wize your own
           </message>
-          <message name="IDS_FRE_SIGN_IN_TITLE_2" desc="This string appears as a heading on a full-page screen that tells users the benefits of signing in to Brave. It appears when the user launches AI Wize for the first time. When they sign in, they can personalize and customize AI Wize and remember their settings in their AI Wize sync chain. The tone should be inviting and alluring.">
-            Do more with Brave
+          <message name="IDS_FRE_SIGN_IN_TITLE_2" desc="This string appears as a heading on a full-page screen that tells users the benefits of signing in to AI Wize. It appears when the user launches AI Wize for the first time. When they sign in, they can personalize and customize AI Wize and remember their settings in their AI Wize sync chain. The tone should be inviting and alluring.">
+            Do more with AI Wize
           </message>
         </if>
 
@@ -1646,9 +1646,9 @@ Permissions you've already given to websites and apps may apply to this account.
         </message>
       </if>
 
-      <!-- BraveLabs bubble -->
+      <!-- AI WizeLabs bubble -->
       <message name="IDS_CHROMELABS_RELAUNCH_FOOTER_MESSAGE" desc="Text that shows in the footer of the AI Wize Labs bubble when relaunch is needed for changes to take effect.">
-        Your changes will take effect the next time you relaunch Brave.
+        Your changes will take effect the next time you relaunch AI Wize.
       </message>
 
       <!-- Device Chooser Prompt -->
@@ -1659,10 +1659,10 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- Tailored Security -->
       <message name="IDS_TAILORED_SECURITY_UNCONSENTED_PROMOTION_NOTIFICATION_TITLE" desc="Title of notification prompting the user to enable Enhanced Safe Browsing after they have enabled account-level protections.">
-        Get Brave's strongest security
+        Get AI Wize's strongest security
       </message>
       <message name="IDS_TAILORED_SECURITY_UNCONSENTED_PROMOTION_MESSAGE_TITLE" desc="Title shown in the message shown when a user changes their account-level tailored security setting encouraging them to enable Enhanced Safe Browsing">
-        Get Brave's strongest security
+        Get AI Wize's strongest security
       </message>
       <message name="IDS_TAILORED_SECURITY_UNCONSENTED_PROMOTION_MESSAGE_DESCRIPTION" desc="Description shown in the message shown when a user changes their account-level tailored security setting encouraging them to enable Enhanced Safe Browsing">
         Enhanced protection does more to block phishing and malware
@@ -1682,21 +1682,21 @@ Permissions you've already given to websites and apps may apply to this account.
         You can see and remove topics of interest sites use to show you ads. AI Wize estimates your interests based on your recent browsing history.
       </message>
       <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_LABEL" desc="Learn more link * Unfolds content within the page * The text that appears describes 2 ways in which a site can target ads: the “Topics API” and the “FLEDGE API”. You can see what those are at www.privacysanbox.com or they’re described for the user’s benefit in other text. * “ad personalization” can mean different things in different contexts. Here, we’re using it as a simple noun. In other words, it’s not the name of a control but a descriptive term used to describe the personalization of ads in the AI Wize browser. This “ad personalization” shouldn’t be confused with the setting in the AI Wize sync chain called “Ad personalization”.">
-        Learn more about ad personalization in Brave
+        Learn more about ad personalization in AI Wize
       </message>
-      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_HEADER" desc="TOPICS API A sub title that describes the first of 2 ways a site can get info from AI Wize in order to target ads to the user. Topics of interest include things like “Live comedy” and “Rock music”. AI Wize estimates these interests based on the sites users visit. * “Your”: we need to convey a sense of ownership, even if the user didn’t explicitly choose the interests we’re talking about. Without the “your”, it could sound like AI Wize is simply building a generic library of interests. * “estimated”: It’s an “estimation”, and we don’t want to suggest that we know with certainty the user’s interests. Avoid words like “guess”, “establish”, “define”, etc. (in place of “estimate”). * “by Brave”: This is new behavior for a browser (Brave) to take an active role in processing user data for the purposes of showing ads. It’s important to convey “Brave”, the actor in this case.">
-        Your interests as estimated by Brave
+      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_HEADER" desc="TOPICS API A sub title that describes the first of 2 ways a site can get info from AI Wize in order to target ads to the user. Topics of interest include things like “Live comedy” and “Rock music”. AI Wize estimates these interests based on the sites users visit. * “Your”: we need to convey a sense of ownership, even if the user didn’t explicitly choose the interests we’re talking about. Without the “your”, it could sound like AI Wize is simply building a generic library of interests. * “estimated”: It’s an “estimation”, and we don’t want to suggest that we know with certainty the user’s interests. Avoid words like “guess”, “establish”, “define”, etc. (in place of “estimate”). * “by AI Wize”: This is new behavior for a browser (AI Wize) to take an active role in processing user data for the purposes of showing ads. It’s important to convey “AI Wize”, the actor in this case.">
+        Your interests as estimated by AI Wize
       </message>
-      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_1" desc="TOPICS API Bullet 1 of 3 that appear beneath the “Your interests as estimated by Brave” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “What data is used:” is bold and serves as a label to help profiles skimming the page. * “Your browsing history”: The user’s browsing history is available beneath the “History” menu at Brave’s top level. The Topics API estimates topics of interest based on sites in the user’s browsing history that are participating in the trials.">
+      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_1" desc="TOPICS API Bullet 1 of 3 that appear beneath the “Your interests as estimated by AI Wize” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “What data is used:” is bold and serves as a label to help profiles skimming the page. * “Your browsing history”: The user’s browsing history is available beneath the “History” menu at AI Wize’s top level. The Topics API estimates topics of interest based on sites in the user’s browsing history that are participating in the trials.">
         <ph name="BEGIN_BOLD">&lt;b&gt;</ph>What data is used:<ph name="END_BOLD">&lt;/b&gt;</ph> Your browsing history, a record of sites you’ve visited using AI Wize on this device.
       </message>
-      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_2" desc="TOPICS API Bullet 2 of 3 that appear beneath the “Your interests as estimated by Brave” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “How we use this data:” is bold and serves as a label to help profiles skimming the page. * “estimate your interests”: Topics of interest include things like “Live comedy” and “Rock music”. AI Wize estimates these interests based on the sites users visit. It’s an “estimation”, and we don’t want to suggest that we know with certainty the user’s interests. Avoid words like “guess”, “establish”, “define”, etc. (in place of “estimate”).">
+      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_2" desc="TOPICS API Bullet 2 of 3 that appear beneath the “Your interests as estimated by AI Wize” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “How we use this data:” is bold and serves as a label to help profiles skimming the page. * “estimate your interests”: Topics of interest include things like “Live comedy” and “Rock music”. AI Wize estimates these interests based on the sites users visit. It’s an “estimation”, and we don’t want to suggest that we know with certainty the user’s interests. Avoid words like “guess”, “establish”, “define”, etc. (in place of “estimate”).">
         <ph name="BEGIN_BOLD">&lt;b&gt;</ph>How we use this data:<ph name="END_BOLD">&lt;/b&gt;</ph> AI Wize can estimate your interests. Later, a site you visit can ask AI Wize to see your interests in order to personalize the ads you see.
       </message>
-      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_3" desc="TOPICS API Bullet 3 of 3 that appear beneath the “Your interests as estimated by Brave” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “How you can manage your data:” is bold and serves as a label to help profiles skimming the page. * “To protect your privacy”: Today, most data is kept for long periods of time. This new Topics API doesn’t retain estimated topics for more than 3 weeks. The only reason for this feature is to protect the user’s privacy. * “auto”: isn’t strictly necessary, but it conveys that this feature is an ongoing part of the service. This isn’t describing, for example, a one-time deletion. * “older than 3 weeks”: We’re trying to convey a rolling delete. Imagine a user opens a browser for the very first time. As the user browses, AI Wize will estimate up to 5 topics of interest in the first week. In the second week, AI Wize will estimate up to 5 additional topics of interest. The same for the third week, for a total of 15 potential interests. In week 4, AI Wize will automatically delete the 5 interests from week 1 so that there aren’t ever more than 15 topics associated with a user at any given time. * “interests can refresh”: If a user loves horror films and reads about them for months on end, the interest “Horror movies” might get deleted and refreshed in the same week, so that “Horror movies” doesn’t ever disappear from the user’s list of interests. * “Or you can…”: A user might love horror movies but can’t stand the idea of seeing ads about horror movies (because even the visuals will ruin the surprise of opening night). In this case, the user can remove “Horror movies” from the list of interests AI Wize will consider. This removal remains in place indefinitely. Note that the user might still see ads about Horror movies from different ad networks or by other means than Brave’s “Browser-based ad personalization” setting.">
+      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_1_BULLET_POINT_3" desc="TOPICS API Bullet 3 of 3 that appear beneath the “Your interests as estimated by AI Wize” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “How you can manage your data:” is bold and serves as a label to help profiles skimming the page. * “To protect your privacy”: Today, most data is kept for long periods of time. This new Topics API doesn’t retain estimated topics for more than 3 weeks. The only reason for this feature is to protect the user’s privacy. * “auto”: isn’t strictly necessary, but it conveys that this feature is an ongoing part of the service. This isn’t describing, for example, a one-time deletion. * “older than 3 weeks”: We’re trying to convey a rolling delete. Imagine a user opens a browser for the very first time. As the user browses, AI Wize will estimate up to 5 topics of interest in the first week. In the second week, AI Wize will estimate up to 5 additional topics of interest. The same for the third week, for a total of 15 potential interests. In week 4, AI Wize will automatically delete the 5 interests from week 1 so that there aren’t ever more than 15 topics associated with a user at any given time. * “interests can refresh”: If a user loves horror films and reads about them for months on end, the interest “Horror movies” might get deleted and refreshed in the same week, so that “Horror movies” doesn’t ever disappear from the user’s list of interests. * “Or you can…”: A user might love horror movies but can’t stand the idea of seeing ads about horror movies (because even the visuals will ruin the surprise of opening night). In this case, the user can remove “Horror movies” from the list of interests AI Wize will consider. This removal remains in place indefinitely. Note that the user might still see ads about Horror movies from different ad networks or by other means than AI Wize’s “Browser-based ad personalization” setting.">
         <ph name="BEGIN_BOLD">&lt;b&gt;</ph>How you can manage your data:<ph name="END_BOLD">&lt;/b&gt;</ph> To protect your privacy, we auto-delete your interests that are older than 4 weeks. As you keep browsing, an interest might appear on the list again. Or you can remove interests you don’t want AI Wize to consider.
       </message>
-      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_2_BULLET_POINT_1" desc="FLEDGE APIBullet 1 of 3 that appear beneath the “Sites you visit that define your interests” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “What data is used:” is bold and serves as a label to help profiles skimming the page. * “Your browsing history”: The user’s browsing history is available beneath the “History” menu at Brave’s top level. This content taken in isolation is somewhat misleading. With FLEDGE, a site can store information in AI Wize about the user’s visit to their site. For example, the site might store “running_shoes_red_size_35” to indicate that the user showed interest in a particular shoe. We’re OK with the simplification in this bullet because 1) we explain it in the next bullet and 2) we want the user to understand that at the top level, both Topics &amp; Fledge are based on the same thing and that is the user’s browsing history.">
+      <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_2_BULLET_POINT_1" desc="FLEDGE APIBullet 1 of 3 that appear beneath the “Sites you visit that define your interests” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “What data is used:” is bold and serves as a label to help profiles skimming the page. * “Your browsing history”: The user’s browsing history is available beneath the “History” menu at AI Wize’s top level. This content taken in isolation is somewhat misleading. With FLEDGE, a site can store information in AI Wize about the user’s visit to their site. For example, the site might store “running_shoes_red_size_35” to indicate that the user showed interest in a particular shoe. We’re OK with the simplification in this bullet because 1) we explain it in the next bullet and 2) we want the user to understand that at the top level, both Topics &amp; Fledge are based on the same thing and that is the user’s browsing history.">
         <ph name="BEGIN_BOLD">&lt;b&gt;</ph>What data is used:<ph name="END_BOLD">&lt;/b&gt;</ph> Your browsing history, a record of sites you’ve visited using AI Wize on this device.
       </message>
       <message name="IDS_PRIVACY_SANDBOX_DIALOG_CONSENT_LEARN_MORE_SECTION_2_BULLET_POINT_2" desc="FLEDGE API Bullet 2 of 3 that appear beneath the “Sites you visit that define your interests” subtitle. We break the description into the 3 pieces users most care about: 1) what data, 2) why this data, 3) what can I do about it? * “How we use this data:” is bold and serves as a label to help profiles skimming the page.">
@@ -1717,19 +1717,19 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- Advanced security settings -->
       <message name="IDS_SETTINGS_SECURITY_V8_LINK_DESCRIPTION" desc="Description for the link row of the V8 security settings page.">
-        Turn on additional protection in Brave’s JavaScript and WebAssembly engine
+        Turn on additional protection in AI Wize’s JavaScript and WebAssembly engine
       </message>
       <message name="IDS_SETTINGS_SITE_SETTINGS_JAVASCRIPT_JIT_DESCRIPTION" desc="Description of the JavaScript optimizer content setting.">
-        V8 is Brave’s JavaScript and WebAssembly engine used to improve site performance
+        V8 is AI Wize’s JavaScript and WebAssembly engine used to improve site performance
       </message>
       <message name="IDS_SETTINGS_SITE_SETTINGS_JAVASCRIPT_JIT_ALLOWED_SUB_LABEL" desc="Sub-label for the enabled option of the JavaScript optimizer content setting.">
         AI Wize runs faster and features that use JavaScript should work as designed (recommended)
       </message>
 
-      <!-- BraveUpdater Strings -->
+      <!-- AI WizeUpdater Strings -->
       <if expr="is_win">
         <message name="IDS_FRIENDLY_COMPANY_NAME" desc="Company name" translateable="false">
-          Brave
+          AI Wize
         </message>
         <message name="IDS_NO_UPDATE_RESPONSE" desc="Updater response for no updates when handling install result.">
           No update is available.
@@ -1738,7 +1738,7 @@ Permissions you've already given to websites and apps may apply to this account.
           Installation failed. Please try again.
         </message>
         <message name="IDS_INSTALLER_DISPLAY_NAME" desc="Name for the updater metainstaller.">
-          <ph name="COMPANY_NAME">$1<ex>Brave</ex></ph> Installer
+          <ph name="COMPANY_NAME">$1<ex>AI Wize</ex></ph> Installer
         </message>
         <message name="IDS_CLOSE_BUTTON" desc="Close button tooltip">
           Close
@@ -1777,13 +1777,13 @@ Permissions you've already given to websites and apps may apply to this account.
           Canceling...
         </message>
         <message name="IDS_TEXT_RESTART_BROWSER" desc="For when a browser must be restarted to complete the installation.">
-          Thanks for installing. You must restart your browser before using <ph name="BUNDLE_NAME">$1<ex>Brave</ex></ph>.
+          Thanks for installing. You must restart your browser before using <ph name="BUNDLE_NAME">$1<ex>AI Wize</ex></ph>.
         </message>
         <message name="IDS_TEXT_RESTART_ALL_BROWSERS" desc="For when all browsers must be restarted to complete the installation.">
-          Thanks for installing. You must restart all your browsers before using <ph name="BUNDLE_NAME">$1<ex>Brave</ex></ph>.
+          Thanks for installing. You must restart all your browsers before using <ph name="BUNDLE_NAME">$1<ex>AI Wize</ex></ph>.
         </message>
         <message name="IDS_TEXT_RESTART_COMPUTER" desc="For when the computer must be restarted to complete the installation.">
-          Thanks for installing. You must restart your computer before using <ph name="BUNDLE_NAME">$1<ex>Brave</ex></ph>.
+          Thanks for installing. You must restart your computer before using <ph name="BUNDLE_NAME">$1<ex>AI Wize</ex></ph>.
         </message>
         <message name="IDS_UPDATER_CLOSE" desc="For close button on the UI post install completion.">
           Close
@@ -1823,7 +1823,7 @@ Permissions you've already given to websites and apps may apply to this account.
 
         <!--Network errors.-->
         <message name="IDS_NO_NETWORK_PRESENT_ERROR" desc="Error message displayed in the main dialog when the Updater is unable to connect to the network.">
-          Unable to connect to the Internet. If you use a firewall, please allowlist <ph name="PRODUCT_EXE_NAME">$1<ex>BraveUpdater.exe</ex></ph>.
+          Unable to connect to the Internet. If you use a firewall, please allowlist <ph name="PRODUCT_EXE_NAME">$1<ex>AI WizeUpdater.exe</ex></ph>.
         </message>
         <message name="IDS_ERROR_HTTPSTATUS_UNAUTHORIZED" desc="Error message displayed in the main dialog when an update check or download fails due to unauthorized access, usually due to proxy problems.">
           Unable to connect to the Internet. HTTP 401 Unauthorized. Please check your proxy configuration.
@@ -1925,7 +1925,7 @@ Permissions you've already given to websites and apps may apply to this account.
 
       <!-- Clear Browsing Data -->
       <message name="IDS_SETTINGS_CLEAR_BROWSING_DATA_SIGNED_IN" desc="Description in the footer of the Clear Browsing Data dialog when the user is signed.">
-        To clear browsing data from this device only, while keeping it in your AI Wize sync chain, <ph name="BEGIN_LINK">&lt;a href="#" target="_blank"&gt;</ph>sign out of Brave<ph name="END_LINK">&lt;/a&gt;</ph>.
+        To clear browsing data from this device only, while keeping it in your AI Wize sync chain, <ph name="BEGIN_LINK">&lt;a href="#" target="_blank"&gt;</ph>sign out of AI Wize<ph name="END_LINK">&lt;/a&gt;</ph>.
       </message>
     <message name="IDS_CHROME_SHORTCUT_NAME_BETA" desc="The Chrome shortcut name for beta channel">
           Google Chrome Beta

@@ -12,7 +12,7 @@ RegisterPolymerTemplateModifications({
   'settings-search-page': (templateContent) => {
     const enginesSubpageTrigger = templateContent.getElementById('enginesSubpageTrigger')
     if (!enginesSubpageTrigger) {
-      console.error(`[Brave Settings Overrides] Couldn't find enginesSubpageTrigger`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find enginesSubpageTrigger`)
     } else {
       enginesSubpageTrigger.insertAdjacentHTML(
         'beforebegin',

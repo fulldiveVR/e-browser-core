@@ -25,6 +25,7 @@
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer.h"
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer_claude.h"
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer_llama.h"
+#include "brave/components/ai_chat/core/browser/engine/engine_consumer_openai.h"
 #include "brave/components/ai_chat/core/browser/models.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom-shared.h"
@@ -263,6 +264,10 @@ void ConversationDriver::InitEngine() {
   if (model->engine_type == mojom::ModelEngineType::LLAMA_REMOTE) {
     VLOG(1) << "Started AI engine: llama";
     engine_ = std::make_unique<EngineConsumerLlamaRemote>(
+        *model, url_loader_factory_, credential_manager_.get());
+  } else if (model->engine_type == mojom::ModelEngineType::OPENAI_REMOTE){
+    VLOG(1) << "Started AI engine: openai";
+    engine_ = std::make_unique<EngineConsumerOpenAIRemote>(
         *model, url_loader_factory_, credential_manager_.get());
   } else {
     VLOG(1) << "Started AI engine: claude";

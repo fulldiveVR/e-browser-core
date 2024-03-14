@@ -34,7 +34,7 @@ RegisterPolymerTemplateModifications({
     // Append On exit tab page.
     const tabsElement = templateContent.querySelector('#tabs')
     if (!tabsElement) {
-      console.error(`[Brave Settings Overrides] cannot find #tabs in clear-browsing-data-dialog`)
+      console.error(`[AI Wize Settings Overrides] cannot find #tabs in clear-browsing-data-dialog`)
       return
     }
     tabsElement.insertAdjacentHTML(
@@ -49,7 +49,7 @@ RegisterPolymerTemplateModifications({
     // Append Save button.
     const confirmButtonElement = templateContent.querySelector('#clearBrowsingDataConfirm')
     if (!confirmButtonElement) {
-      console.error(`[Brave Settings Overrides] cannot find #clearBrowsingDataConfirm in clear-browsing-data-dialog`)
+      console.error(`[AI Wize Settings Overrides] cannot find #clearBrowsingDataConfirm in clear-browsing-data-dialog`)
       return
     }
     confirmButtonElement.insertAdjacentHTML(
@@ -64,7 +64,7 @@ RegisterPolymerTemplateModifications({
     const saveButton =
       templateContent.getElementById('saveOnExitSettingsConfirm')
     if (!saveButton) {
-      console.error('[Brave Settings Overrides] Couldn\'t find save button')
+      console.error('[AI Wize Settings Overrides] Couldn\'t find save button')
     } else {
       saveButton.textContent = loadTimeData.getString('save')
     }
@@ -72,7 +72,7 @@ RegisterPolymerTemplateModifications({
     // Append rewards reset data link
     const body = templateContent.querySelector('[slot="body"]')
     if (!body) {
-      console.error(`[Brave Settings Overrides] cannot find 'slot="body"' in clear-browsing-data-dialog`)
+      console.error(`[AI Wize Settings Overrides] cannot find 'slot="body"' in clear-browsing-data-dialog`)
       return
     }
     body.insertAdjacentHTML(
@@ -84,7 +84,7 @@ RegisterPolymerTemplateModifications({
       templateContent.getElementById('rewards-reset-data')
     if (!rewardsResetLink) {
       console.error(
-        '[Brave Settings Overrides] Couldn\'t find Rewards reset link')
+        '[AI Wize Settings Overrides] Couldn\'t find Rewards reset link')
     } else {
       rewardsResetLink.textContent = loadTimeData.getString('resetRewardsData')
     }
@@ -97,7 +97,7 @@ RegisterPolymerTemplateModifications({
       const cacheCheckbox = templateContent
         .querySelector('[id="cacheCheckbox"]')
       if (!cacheCheckbox) {
-        console.error(`[Brave Settings Overrides] cannot find
+        console.error(`[AI Wize Settings Overrides] cannot find
          'id="cacheCheckbox"' in clear-browsing-data-dialog`)
         return
       }
@@ -117,7 +117,7 @@ RegisterPolymerTemplateModifications({
         templateContent.querySelector('[id="leoResetCheckbox"]')
       if (!leoResetCheckbox) {
         console.error(
-          '[Brave Settings Overrides] Couldn\'t find AI Wize Chat reset link')
+          '[AI Wize Settings Overrides] Couldn\'t find AI Wize Chat reset link')
       }
     }
   }

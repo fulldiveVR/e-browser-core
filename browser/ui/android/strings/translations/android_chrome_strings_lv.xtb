@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Pārvietot šurp</translation>
 <translation id="1014147525163127655">Šajā ierīcē vietnei <ph name="ORIGIN"/> nav nevienas piekļuves atslēgas.</translation>
 <translation id="1016498331642356377">Ātra meklēšana ar balsi. Lai rediģētu šo īsinājumtaustiņu, pieskarieties un turiet.</translation>
-<translation id="2566435362010629810">Brave izstrādātāju versija</translation>
+<translation id="2566435362010629810">AI Wize izstrādātāju versija</translation>
 <translation id="1028699632127661925">Notiek sūtīšana uz: <ph name="DEVICE_NAME"/>...</translation>
 <translation id="103269572468856066">Dzēst arī šo vietņu un lietotņu datus?</translation>
 <translation id="1034259925032978114">Logs ir atvērts</translation>
@@ -16,18 +16,18 @@
 <translation id="1089606299949659462">Pārskatīšana ir pabeigta!</translation>
 <translation id="1095761715416917775">Parūpējieties, lai vienmēr varētu piekļūt sinhronizētajiem datiem</translation>
 <translation id="1100066534610197918">Atvērt jaunu cilni grupā</translation>
-<translation id="4660777881054855091">Palīdziet uzlabot Brave</translation>
+<translation id="4660777881054855091">Palīdziet uzlabot AI Wize</translation>
 <translation id="1105960400813249514">Ekrāna tveršana</translation>
 <translation id="1108938384783527433">Vēstures sinhronizēšana</translation>
 <translation id="1111673857033749125">Šeit būs redzamas grāmatzīmes, kuras esat saglabājis citās ierīcēs.</translation>
 <translation id="1113597929977215864">Rādīt vienkāršoto skatu</translation>
-<translation id="4470276443668654888">Maksājuma veidi un adreses no pakalpojuma Brave Pay netiks šifrētas. Pārlūkā AI Wize saglabātā pārlūkošanas vēsture netiks sinhronizēta.
-Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze. Ieejas frāze netiek sūtīta uzņēmumam Brave, un uzņēmums AI Wize to neuzglabā. Ja aizmirsīsiet ieejas frāzi vai vēlēsieties mainīt šo iestatījumu, jums būs jāveic sinhronizācijas atiestatīšana. <ph name="BEGIN_LINK"/>Uzziniet vairāk<ph name="END_LINK"/>.</translation>
+<translation id="4470276443668654888">Maksājuma veidi un adreses no pakalpojuma AI Wize Pay netiks šifrētas. Pārlūkā AI Wize saglabātā pārlūkošanas vēsture netiks sinhronizēta.
+Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze. Ieejas frāze netiek sūtīta uzņēmumam AI Wize, un uzņēmums AI Wize to neuzglabā. Ja aizmirsīsiet ieejas frāzi vai vēlēsieties mainīt šo iestatījumu, jums būs jāveic sinhronizācijas atiestatīšana. <ph name="BEGIN_LINK"/>Uzziniet vairāk<ph name="END_LINK"/>.</translation>
 <translation id="1295971429974142731">Netiek nodrošināta aizsardzība pret bīstamām vietnēm, lejupielādēm un paplašinājumiem. Jūs joprojām saņemsiet drošas pārlūkošanas aizsardzību, ja tā ir pieejama, citos AI Wize pakalpojumos, piemēram, Gmail un Meklēšana.</translation>
 <translation id="1129510026454351943">Informācija: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Nepiedāvāt tulkot šīs vietnes</translation>
 <translation id="1145536944570833626">Dzēst esošos datus.</translation>
-<translation id="7083341910267693582">Lietotne <ph name="APP_NAME"/> tiks atvērta pārlūkā Brave. Turpinot jūs piekrītat <ph name="BEGIN_LINK1"/>Brave pakalpojumu sniegšanas noteikumiem<ph name="END_LINK1"/>, kā arī <ph name="BEGIN_LINK2"/>Brave Brave un Brave OS pakalpojumu sniegšanas papildu noteikumiem<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">Lietotne <ph name="APP_NAME"/> tiks atvērta pārlūkā AI Wize. Turpinot jūs piekrītat <ph name="BEGIN_LINK1"/>AI Wize pakalpojumu sniegšanas noteikumiem<ph name="END_LINK1"/>, kā arī <ph name="BEGIN_LINK2"/>AI Wize AI Wize un AI Wize OS pakalpojumu sniegšanas papildu noteikumiem<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Izmantot paroli <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Pārdēvēt</translation>
 <translation id="7947699437047020219">Ja ekrāns būs šaurs, AI Wize pieprasīs mobilajām ierīcēm paredzēto vietni.</translation>
@@ -46,7 +46,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1231733316453485619">Vai ieslēgt sinhronizāciju?</translation>
 <translation id="123724288017357924">Atkārtoti ielādēt lapu, ignorējot saturu kešatmiņā</translation>
 <translation id="1239792311949352652">Ātra lapas kopīgošana. Lai rediģētu šo saīsni, pārejiet uz iestatījumiem.</translation>
-<translation id="3251315496493761426">Brave padomi</translation>
+<translation id="3251315496493761426">AI Wize padomi</translation>
 <translation id="1240288207750131269">Notiek valodas ielāde (<ph name="LANG"/>)</translation>
 <translation id="1240903469550363138">Lai turpinātu, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> kopīgos jūsu vārdu, e-pasta adresi, adresi un profila attēlu ar šo vietni. Skatiet šīs vietnes <ph name="BEGIN_LINK1"/>konfidencialitātes politiku<ph name="END_LINK1"/> un <ph name="BEGIN_LINK2"/>pakalpojumu sniegšanas noteikumus<ph name="END_LINK2"/>.</translation>
 <translation id="124116460088058876">Citas valodas…</translation>
@@ -54,7 +54,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1242883863226959074">ierīcē</translation>
 <translation id="124678866338384709">Aizvērt pašreizējo cilni</translation>
 <translation id="1246905108078336582">Vai noņemt ieteikumu no starpliktuves?</translation>
-<translation id="1996480094660735607">Brave svētku logotips: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="1996480094660735607">AI Wize svētku logotips: <ph name="DOODLE_DESCRIPTION"/></translation>
 <translation id="7074197713963877855">Tagad sadaļā “Sekojat” tiks rādīts saturs no vietnes <ph name="SITE_NAME"/> vai par šo vietni. Vietnes un meklēšanas vaicājumi, kuriem sekojat, tiek saglabāti jūsu AI Wize kontā. Jebkurā laikā iestatījumos varat pārvaldīt saturu, kam sekojat.</translation>
 <translation id="1263231323834454256">Lasīšanas saraksts</translation>
 <translation id="1266864766717917324">Nevarēja kopīgot: <ph name="CONTENT_TYPE"/></translation>
@@ -69,8 +69,8 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1303507811548703290"><ph name="DOMAIN"/> — nosūtīts no ierīces <ph name="DEVICE_NAME"/></translation>
 <translation id="1320912611264252795">Grāmatzīmes saglabāšanas plūsma ir atvērta pilna ekrāna augstumā</translation>
 <translation id="1327257854815634930">Navigācijas vēsture ir atvērta</translation>
-<translation id="6773423637732432200">Nevar atjaunināt Brave — citas opcijas</translation>
-<translation id="3169981355900570544">Brave Brave funkciju īsinājumtaustiņi</translation>
+<translation id="6773423637732432200">Nevar atjaunināt AI Wize — citas opcijas</translation>
+<translation id="3169981355900570544">AI Wize AI Wize funkciju īsinājumtaustiņi</translation>
 <translation id="1344653310988386453">Ietveriet saiti uz atzīmēto tekstu.</translation>
 <translation id="1347468774581902829">Pārvaldīt darbības</translation>
 <translation id="1360432990279830238">Izrakstīties un izslēgt sinhronizēšanu?</translation>
@@ -79,14 +79,14 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1376578503827013741">Notiek aprēķināšana...</translation>
 <translation id="1382912999714108023">Vai netiek rādīta jūsu pašreizējā informācija? Sazinieties ar banku, lai to atjauninātu.</translation>
 <translation id="1383876407941801731">Meklēt</translation>
-<translation id="1384704387250346179">Tulkot attēlu ar Brave Lens <ph name="BEGIN_NEW"/>Jaunums<ph name="END_NEW"/></translation>
+<translation id="1384704387250346179">Tulkot attēlu ar AI Wize Lens <ph name="BEGIN_NEW"/>Jaunums<ph name="END_NEW"/></translation>
 <translation id="1386674309198842382">Aktīvs pirms <ph name="LAST_UPDATED"/> dienām</translation>
 <translation id="13931502444227376">Lai turpinātu, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> kopīgos jūsu vārdu, e-pasta adresi un profila attēlu ar šo vietni. Skatiet šīs vietnes <ph name="BEGIN_LINK1"/>pakalpojumu sniegšanas noteikumus<ph name="END_LINK1"/>.</translation>
 <translation id="1397811292916898096">Meklēt, izmantojot meklētājprogramu <ph name="PRODUCT_NAME"/></translation>
 <translation id="1407069428457324124">Tumšais motīvs</translation>
 <translation id="1407135791313364759">Atvērt visas</translation>
 <translation id="1409879593029778104">Fails <ph name="FILE_NAME"/> netika lejupielādēts, jo tas jau pastāv.</translation>
-<translation id="1853026300647876496">Notiek sazināšanās ar Brave. Tas var ilgt kādu minūti...</translation>
+<translation id="1853026300647876496">Notiek sazināšanās ar AI Wize. Tas var ilgt kādu minūti...</translation>
 <translation id="1416550906796893042">Lietojumprogrammas versija</translation>
 <translation id="1428770807407000502">Vai izslēgt sinhronizāciju?</translation>
 <translation id="1430915738399379752">Drukāt</translation>
@@ -106,9 +106,9 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1513814250881909472">Veiciet sinhronizāciju, lai iegūtu cilnes no savām pārējām ierīcēm</translation>
 <translation id="1513858653616922153">Dzēst paroli</translation>
 <translation id="1521774566618522728">Aktīvs šodien</translation>
-<translation id="8090895580117672212">Lai pārvaldītu savu Brave kontu, pieskarieties pogai “Konta pārvaldība”</translation>
+<translation id="8090895580117672212">Lai pārvaldītu savu AI Wize kontu, pieskarieties pogai “Konta pārvaldība”</translation>
 <translation id="1549000191223877751">Pārvietot uz citu logu</translation>
-<translation id="1705567146636171298">Atjaunināt Brave</translation>
+<translation id="1705567146636171298">Atjaunināt AI Wize</translation>
 <translation id="1568636008098739136">Klausīties šīs lapas saturu. Lai rediģētu šo īsinājumtaustiņu, pieskarieties un turiet.</translation>
 <translation id="1571304935088121812">Kopēt lietotājvārdu</translation>
 <translation id="1592864538817356322">Standarta aizsardzība:</translation>
@@ -135,7 +135,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1749561566933687563">Sinhronizējiet grāmatzīmes</translation>
 <translation id="1750259112639922169">Ciļņu grupa — ciļņu skaits: <ph name="TAB_COUNT"/></translation>
 <translation id="17513872634828108">Atvērt cilnes</translation>
-<translation id="9207812657123271782">Brave paroļu pārvaldnieka brīdinājums</translation>
+<translation id="9207812657123271782">AI Wize paroļu pārvaldnieka brīdinājums</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Lapas, sarakstā ir 1 lapa}zero{Lapas, sarakstā ir # lapas}one{Lapas, sarakstā ir # lapa}other{Lapas, sarakstā ir # lapas}}</translation>
 <translation id="1778457539567749232">Atzīmēt kā nelasītu</translation>
 <translation id="1779766957982586368">Aizvērt logu</translation>
@@ -147,15 +147,15 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1810845389119482123">Sākotnējā sinhronizācijas iestatīšana nav pabeigta</translation>
 <translation id="1812027881030482584">Vietnē <ph name="SITE_ETLD_PLUS_ONE"/> nevar turpināt izmantot identitātes nodrošinātāju <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1829244130665387512">Atrast lapā</translation>
-<translation id="5488575152752589250">Aktivizējiet sinhronizāciju, lai saņemtu atbilstošāko saturu no Brave.</translation>
-<translation id="7175072311426658869">Atvērt pārlūkā Brave</translation>
-<translation id="5173820533850252773">Brave versija ir novecojusi.</translation>
+<translation id="5488575152752589250">Aktivizējiet sinhronizāciju, lai saņemtu atbilstošāko saturu no AI Wize.</translation>
+<translation id="7175072311426658869">Atvērt pārlūkā AI Wize</translation>
+<translation id="5173820533850252773">AI Wize versija ir novecojusi.</translation>
 <translation id="1883903952484604915">Mani faili</translation>
 <translation id="189358972401248634">Citas valodas</translation>
 <translation id="1900260903084164610">Turpinot jūs piekrītat <ph name="BEGIN_TOS_LINK"/>pakalpojumu sniegšanas noteikumiem<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">Jūsu apmeklētie URL tiek saglabāti Brave kontā</translation>
+<translation id="6893464351226208429">Jūsu apmeklētie URL tiek saglabāti AI Wize kontā</translation>
 <translation id="1910950723001426294">Kopīgošanas opciju saraksts ir aizvērts.</translation>
-<translation id="7021823858304886493">Atļaut pierakstīties pārlūkā Brave</translation>
+<translation id="7021823858304886493">Atļaut pierakstīties pārlūkā AI Wize</translation>
 <translation id="1922362554271624559">Ieteiktās valodas</translation>
 <translation id="1924255092154549435">Cilne ir izvērsta</translation>
 <translation id="1925021887439448749">Ievadiet pielāgotu tīmekļa adresi</translation>
@@ -166,7 +166,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1944535645109964458">Nav pieejama neviena piekļuves atslēga</translation>
 <translation id="1952172573699511566">Kad vien iespējams, vietnēs tiks rādīts teksts atlasītajā valodā.</translation>
 <translation id="1959679933317802873">Gaida saturu</translation>
-<translation id="3968054912784331254">Brave atjauninājumi vairs netiek atbalstīti šajā Android versijā</translation>
+<translation id="3968054912784331254">AI Wize atjauninājumi vairs netiek atbalstīti šajā Android versijā</translation>
 <translation id="1963976881984600709">Standarta aizsardzība</translation>
 <translation id="1966710179511230534">Lūdzu, atjauniniet pierakstīšanās informāciju.</translation>
 <translation id="197288927597451399">Paturēt</translation>
@@ -233,7 +233,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2328985652426384049">Nevar pierakstīties</translation>
 <translation id="2341410551640223969">Nevarēja instalēt: <ph name="WEBAPK_NAME"/></translation>
 <translation id="3587672679800759167">Kopējais pārlūkā AI Wize izmantoto datu apjoms, ieskaitot kontus, grāmatzīmes un saglabātos iestatījumus</translation>
-<translation id="2767094839186957509">Brave konfidencialitātes politika</translation>
+<translation id="2767094839186957509">AI Wize konfidencialitātes politika</translation>
 <translation id="2359808026110333948">Turpināt</translation>
 <translation id="2362083820973145409">Pierakstījies kā <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Tiek atvērti iestatījumi.</translation>
 <translation id="2364539095045928896">Poga Aizvērt, lai aizvērtu lapas ieskatu centra konfidencialitātes paziņojumu.</translation>
@@ -255,7 +255,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2482878487686419369">Paziņojumi</translation>
 <translation id="2496180316473517155">Pārlūkošanas vēsture</translation>
 <translation id="2497852260688568942">Administrators ir atspējojis sinhronizēšanu.</translation>
-<translation id="7229462727772664332">Tiks rādīts jūsu pierakstīšanās statuss vietnē <ph name="SITE_NAME"/>, pārlūkošanas dati un vietnes dati pārlūkā Brave.</translation>
+<translation id="7229462727772664332">Tiks rādīts jūsu pierakstīšanās statuss vietnē <ph name="SITE_NAME"/>, pārlūkošanas dati un vietnes dati pārlūkā AI Wize.</translation>
 <translation id="2510106555128151389">Notiek lietotnes <ph name="WEBAPK_NAME"/> instalēšana...</translation>
 <translation id="7222718784508482526">Papildu iestatījumus, kas attiecas uz konfidencialitāti, drošību un datu apkopošanu, skatiet lapā <ph name="BEGIN_LINK"/>Sinhronizēšana un AI Wize pakalpojumi<ph name="END_LINK"/>.</translation>
 <translation id="2517113738956581680">Pilna lieluma lapa</translation>
@@ -268,11 +268,11 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2546283357679194313">Sīkfaili un vietņu dati</translation>
 <translation id="2567385386134582609">ATTĒLS</translation>
 <translation id="2567545343356994513">Ātrāka, aktīva aizsardzība pret bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem.</translation>
-<translation id="5079947353572974060">Piedāvāt citās valodās pieejamās lapas tulkot ar Brave tulkotāju</translation>
+<translation id="5079947353572974060">Piedāvāt citās valodās pieejamās lapas tulkot ar AI Wize tulkotāju</translation>
 <translation id="2571834852878229351">Izveidot savu paroli</translation>
 <translation id="6995512410824092085">Uzziniet, kā iestatīt AI Wize par noklusējuma pārlūku.</translation>
-<translation id="7242554556818074465">Lai skatītu cilnes no ierīcēm, kurās lietojat pārlūku Brave, pierakstieties visās savās ierīcēs.</translation>
-<translation id="8661556138616664061">Brave saturs jauniešiem</translation>
+<translation id="7242554556818074465">Lai skatītu cilnes no ierīcēm, kurās lietojat pārlūku AI Wize, pierakstieties visās savās ierīcēs.</translation>
+<translation id="8661556138616664061">AI Wize saturs jauniešiem</translation>
 <translation id="2324920234469020158">Tādējādi tiks dzēsti sīkfaili, kešatmiņa un citi vietņu dati, kas pārlūkā AI Wize netiek uzskatīti par svarīgiem.</translation>
 <translation id="2587052924345400782">Pieejama jaunāka versija</translation>
 <translation id="2593272815202181319">Vienplatuma</translation>
@@ -281,7 +281,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2604446170045642109">Savos iestatījumos varat izslēgt tumšo motīvu vietnēm.</translation>
 <translation id="2612676031748830579">Kartes numurs</translation>
 <translation id="2625189173221582860">Parole ir nokopēta.</translation>
-<translation id="2634393460268044753">Nosūta jūsu apmeklēto vietņu vietrāžus URL un nelielu lapas satura fragmentu, informāciju par lejupielādēm un paplašinājumu darbību, kā arī sistēmas informāciju funkcijai “Brave droša pārlūkošana”, lai pārbaudītu, vai šie vietrāži nav kaitīgi.</translation>
+<translation id="2634393460268044753">Nosūta jūsu apmeklēto vietņu vietrāžus URL un nelielu lapas satura fragmentu, informāciju par lejupielādēm un paplašinājumu darbību, kā arī sistēmas informāciju funkcijai “AI Wize droša pārlūkošana”, lai pārbaudītu, vai šie vietrāži nav kaitīgi.</translation>
 <translation id="2642087927315268160">Pierakstīšanās ekrāna apakšdaļas lapa ir aizvērta.</translation>
 <translation id="2643064289437760082">Reklāmu izvērtēšanas datus jebkurā laikā varat dzēst, dzēšot pārlūkošanas datus</translation>
 <translation id="2647434099613338025">Pievienot valodu</translation>
@@ -295,7 +295,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2669454659051515572">Lejupielādētie faili ir redzami visiem šīs ierīces lietotājiem.</translation>
 <translation id="5806087344347665213">Ja kādā vietnē tiek mēģināts nozagt jūsu paroli vai ja jūs lejupielādējat kaitīgu failu, AI Wize var nosūtīt uz AI Wize serveriem attiecīgos URL, tostarp lapas satura fragmentus.</translation>
 <translation id="2702516483241149200">Jaunums: varat kopīgot saiti uz šo tekstu</translation>
-<translation id="3769942772151914580">Aktīva reāllaika aizsardzība pret bīstamām vietnēm, lejupielādēm un paplašinājumiem, kura tiek nodrošināta, sūtot jūsu pārlūkošanas datus uzņēmumam Brave.</translation>
+<translation id="3769942772151914580">Aktīva reāllaika aizsardzība pret bīstamām vietnēm, lejupielādēm un paplašinājumiem, kura tiek nodrošināta, sūtot jūsu pārlūkošanas datus uzņēmumam AI Wize.</translation>
 <translation id="2708226184420201102">Atvērt pārlūkā <ph name="PRODUCT_NAME"/></translation>
 <translation id="271033894570825754">Jauns</translation>
 <translation id="2718352093833049315">Tikai Wi-Fi</translation>
@@ -306,12 +306,12 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2760989362628427051">Ieslēgt tumšo motīvu, kad ierīcē ir ieslēgts tumšais motīvs vai akumulatora enerģijas taupīšanas režīms</translation>
 <translation id="2762000892062317888">tikko</translation>
 <translation id="276969039800130567">Pierakstīts ar adresi <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">Papildu iestatījumus, kas attiecas uz konfidencialitāti, drošību un datu vākšanu, skatiet sadaļā <ph name="BEGIN_LINK"/>Brave pakalpojumi<ph name="END_LINK"/>.</translation>
+<translation id="8312774691909088652">Papildu iestatījumus, kas attiecas uz konfidencialitāti, drošību un datu vākšanu, skatiet sadaļā <ph name="BEGIN_LINK"/>AI Wize pakalpojumi<ph name="END_LINK"/>.</translation>
 <translation id="2777555524387840389">Atlikušas <ph name="SECONDS"/> s</translation>
 <translation id="2779651927720337254">neizdevās</translation>
 <translation id="2781151931089541271">Atlikusi 1 s</translation>
 <translation id="2800066122460699237">Cilne “<ph name="TAB_TITLE"/>” tiks aizvērta.</translation>
-<translation id="7068873021383263704">Skatiet un pārvaldiet saglabātās paroles savā <ph name="BEGIN_LINK"/>Brave kontā<ph name="END_LINK"/></translation>
+<translation id="7068873021383263704">Skatiet un pārvaldiet saglabātās paroles savā <ph name="BEGIN_LINK"/>AI Wize kontā<ph name="END_LINK"/></translation>
 <translation id="2827278682606527653">Ir atvērta puse no plūsmas kartītes izvēlnes</translation>
 <translation id="2830783625999891985">Starpliktuves saturs ir paslēpts</translation>
 <translation id="2838367486340230368">Paskaidrojums par konfidencialitātes ceļvedi ir atvērts pusekrāna augstumā</translation>
@@ -327,21 +327,21 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="2871733351037274014">Lapu iepriekšēja ielāde</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> vēlas, lai jūs apstiprinātu piekļuvi šai vietnei:</translation>
 <translation id="6756656512757374876">Uzziniet vairāk par to, <ph name="BEGIN_LINK"/>kā pārlūkā AI Wize tiek saglabāta jūsu datu konfidencialitāte<ph name="END_LINK"/>.</translation>
-<translation id="8541922081612557424">Par Brave</translation>
+<translation id="8541922081612557424">Par AI Wize</translation>
 <translation id="2891154217021530873">Pārtraukt lapas ielādi</translation>
-<translation id="4013614219085422040">Brave var izmantot jūsu vēsturi, lai personalizētu Meklēšanu un citus AI Wize pakalpojumus.</translation>
+<translation id="4013614219085422040">AI Wize var izmantot jūsu vēsturi, lai personalizētu Meklēšanu un citus AI Wize pakalpojumus.</translation>
 <translation id="2894821468041866720">Šī funkcija īpaši nepalēnina jūsu pārlūkprogrammas vai ierīces darbību.</translation>
 <translation id="2900528713135656174">Izveidot pasākumu</translation>
 <translation id="2901411048554510387">Tiek rādīti ar vietni <ph name="WEBSITE_TITLE"/> saistīti ieteikumi</translation>
 <translation id="2904300462646366554">Lejupielādētie PDF faili automātiski tiek atvērti kādā no PDF skatītājiem jūsu ierīcē</translation>
 <translation id="2904414404539560095">Ierīču saraksts, ar ko kopīgot cilni, ir atvērts pilna ekrāna augstumā.</translation>
 <translation id="2908243544703713905">Ir pieejami nelasīti raksti</translation>
-<translation id="7339921667754113786">Brave Notifications Platform</translation>
+<translation id="7339921667754113786">AI Wize Notifications Platform</translation>
 <translation id="2912296070571964914">Pārvaldiet tēmas, kuras jums interesē</translation>
 <translation id="2923908459366352541">Vārds nav derīgs</translation>
-<translation id="6355102470683871794">Lietotnes Brave <ph name="APP_NAME"/> krātuve</translation>
+<translation id="6355102470683871794">Lietotnes AI Wize <ph name="APP_NAME"/> krātuve</translation>
 <translation id="2932222164150889403">Jūsu tastatūra netiks mainīta.</translation>
-<translation id="6537665929855787038">Brave paziņojumi atvieglo darbu</translation>
+<translation id="6537665929855787038">AI Wize paziņojumi atvieglo darbu</translation>
 <translation id="2940075786175545812">Iespēja apstiprināt vai neapstiprināt piekļuvi vietnei</translation>
 <translation id="2942036813789421260">Priekšskatījuma cilne ir aizvērta</translation>
 <translation id="4700262879698141140">Notiek AI Wize atjaunināšana, lai izveidotu savienojumu ar citām ierīcēm.</translation>
@@ -367,28 +367,28 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="3027644380269727216">Pamatojoties uz jūsu darbībām vietnē. Šis iestatījums ir ieslēgts.</translation>
 <translation id="3029276696788198026">Nav iepriekšējas ielādes</translation>
 <translation id="3029704984691124060">Ieejas frāzes neatbilst.</translation>
-<translation id="8678991866891573053">Brave pēta jaunas funkcijas, kas ļauj vietnēm nodrošināt tādas pašas pārlūkošanas iespējas, izmantojot mazāk datu.</translation>
+<translation id="8678991866891573053">AI Wize pēta jaunas funkcijas, kas ļauj vietnēm nodrošināt tādas pašas pārlūkošanas iespējas, izmantojot mazāk datu.</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Saņemt palīdzību<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Notiek cenas izsekošana</translation>
-<translation id="3251012123600267109">Tiek rādīti aicinājumi pierakstīties pārlūkā Brave.</translation>
+<translation id="3251012123600267109">Tiek rādīti aicinājumi pierakstīties pārlūkā AI Wize.</translation>
 <translation id="3038272154009688107">Skatīt visas vietnes</translation>
 <translation id="3046945242843292318">Nākamreiz uz šo vietni varat pāriet ātrāk</translation>
 <translation id="3055259925215945098">Grāmatzīme ir pārvietota</translation>
-<translation id="4163313568284712797">Uzņēmumam AI Wize tiek nosūtīta informācija par to, kā lietojat Brave, taču šī informācija netiek saistīta ar jums.\n\nJa notiek AI Wize avārija, informācijā par avāriju var būt iekļauta noteikta personas informācija.\n\nJa ieslēgsiet sinhronizāciju, rādītājos var tikt iekļauta arī informācija par jūsu apmeklētajiem URL.</translation>
+<translation id="4163313568284712797">Uzņēmumam AI Wize tiek nosūtīta informācija par to, kā lietojat AI Wize, taču šī informācija netiek saistīta ar jums.\n\nJa notiek AI Wize avārija, informācijā par avāriju var būt iekļauta noteikta personas informācija.\n\nJa ieslēgsiet sinhronizāciju, rādītājos var tikt iekļauta arī informācija par jūsu apmeklētajiem URL.</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> grāmatzīme}zero{<ph name="BOOKMARKS_COUNT_MANY"/> grāmatzīmju}one{<ph name="BOOKMARKS_COUNT_MANY"/> grāmatzīme}other{<ph name="BOOKMARKS_COUNT_MANY"/> grāmatzīmes}}</translation>
-<translation id="6153252609477956632">Ar jūsu interesēm saistīti raksti pārlūkā Brave</translation>
+<translation id="6153252609477956632">Ar jūsu interesēm saistīti raksti pārlūkā AI Wize</translation>
 <translation id="3066573403916685335">Pārvietot lejup</translation>
 <translation id="3070005020161560471">Automātiski tulkot</translation>
-<translation id="1094255666887095087">Lietotne <ph name="APP_NAME"/> tiks atvērta pārlūkā Brave. Turpinot jūs piekrītat <ph name="BEGIN_LINK1"/>Brave pakalpojumu sniegšanas noteikumiem<ph name="END_LINK1"/>, kā arī <ph name="BEGIN_LINK2"/>Brave Brave un Brave OS pakalpojumu sniegšanas papildu noteikumiem<ph name="END_LINK2"/>. Ir spēkā arī <ph name="BEGIN_LINK3"/>konfidencialitātes politika<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087">Lietotne <ph name="APP_NAME"/> tiks atvērta pārlūkā AI Wize. Turpinot jūs piekrītat <ph name="BEGIN_LINK1"/>AI Wize pakalpojumu sniegšanas noteikumiem<ph name="END_LINK1"/>, kā arī <ph name="BEGIN_LINK2"/>AI Wize AI Wize un AI Wize OS pakalpojumu sniegšanas papildu noteikumiem<ph name="END_LINK2"/>. Ir spēkā arī <ph name="BEGIN_LINK3"/>konfidencialitātes politika<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Varat saglabāt lapas lasīšanai vēlāk vai bezsaistē.</translation>
 <translation id="3091010850649238832">Rādīt starpliktuves saturu</translation>
 <translation id="821565628224723530">Daži attēli tiek sūtīti uz AI Wize serveriem, lai uzlabotu aprakstus</translation>
 <translation id="3114507951000454849">Lasiet šodienas ziņas <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Paziņojumi</translation>
-<translation id="5063487983358782016">Brave sākumlapa</translation>
+<translation id="5063487983358782016">AI Wize sākumlapa</translation>
 <translation id="3158667104057012316">Kārtošana manuāli</translation>
 <translation id="3166827708714933426">Ciļņu un logu īsinājumtaustiņi</translation>
-<translation id="7249949543831830993">Šajā ierīcē jau darbojas pārlūks Brave.</translation>
+<translation id="7249949543831830993">Šajā ierīcē jau darbojas pārlūks AI Wize.</translation>
 <translation id="3167258285411721858">Varat pieprasīt vietnes <ph name="HOST_NAME"/> versiju mobilajām ierīcēm.</translation>
 <translation id="3169472444629675720">Discover</translation>
 <translation id="3187472288455401631">Reklāmu novērtēšana</translation>
@@ -399,7 +399,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="321773570071367578">Ja esat aizmirsis ieejas frāzi vai vēlaties mainīt šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizāciju<ph name="END_LINK"/>.</translation>
 <translation id="3220943972464248773">Lai sinhronizētu paroles, apstipriniet savu identitāti</translation>
 <translation id="9210457680074341078">Ja saglabāsiet grāmatzīmes arī AI Wize kontā, varēsiet izsekot produktu cenām pārlūkā AI Wize un saņemt paziņojumus par cenu kritumiem.</translation>
-<translation id="9047551989591319903">Pārlūka Brave Brave izmantošana drošības atslēgas vietā</translation>
+<translation id="9047551989591319903">Pārlūka AI Wize AI Wize izmantošana drošības atslēgas vietā</translation>
 <translation id="3232754137068452469">Tīmekļa lietotne</translation>
 <translation id="3236059992281584593">Atlikusi 1 min</translation>
 <translation id="3237087289225714896">Standarta iepriekšēja ielāde:</translation>
@@ -414,7 +414,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="3265534588625245297">Pārvaldiet vietnes, kurām sekojat</translation>
 <translation id="3269093882174072735">Ielādēt attēlu</translation>
 <translation id="3280562213547448728">Meklēšana ar balsi</translation>
-<translation id="82609232232243542">Pierakstīties pārlūkā Brave</translation>
+<translation id="82609232232243542">Pierakstīties pārlūkā AI Wize</translation>
 <translation id="3290249595466894471">Lai palīdzētu atklāt jaunus draudus, tiek nosūtīti arī nelieli datu paraugi, kas ietver lapas, lejupielādes, paplašinājumu aktivitāti un sistēmas informāciju.</translation>
 <translation id="3293181007446299124">Pārlūkošanas vēsture tiek privāti glabāta jūsu ierīcē, un pārskati tiek nosūtīti ar kavēšanos, lai aizsargātu jūsu identitāti</translation>
 <translation id="3303414029551471755">Vai turpināt ar satura lejupielādi?</translation>
@@ -425,7 +425,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="3359667936385849800">Izmantot pašreizējo pakalpojumu sniedzēju</translation>
 <translation id="3373701465337594448">Kad šis iestatījums ir ieslēgts, šeit ir redzams saraksts ar jūsu apmeklētajām vietnēm, kurās tiek prognozētas jūsu intereses</translation>
 <translation id="2746024117903470217">Lai kopīgotu šo lapu ar citu ierīci, otras ierīces AI Wize iestatījumos ieslēdziet sinhronizāciju.</translation>
-<translation id="8801234437789558906">Jūsu grāmatzīmes, vēsture, paroles un citi AI Wize dati vairs netiks sinhronizēti ar jūsu Brave kontu</translation>
+<translation id="8801234437789558906">Jūsu grāmatzīmes, vēsture, paroles un citi AI Wize dati vairs netiks sinhronizēti ar jūsu AI Wize kontu</translation>
 <translation id="3384347053049321195">Kopīgot attēlu</translation>
 <translation id="3387650086002190359">Neizdevās lejupielādēt failu <ph name="FILE_NAME"/>, jo radās failu sistēmas kļūdas.</translation>
 <translation id="3389286852084373014">Teksts ir pārāk liels</translation>
@@ -433,7 +433,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="1081508498128395141">Iepriekš ielādēto lapu skaits ir lielāks. Lapas var ielādēt iepriekš, izmantojot AI Wize serverus, ja to ir pieprasījušas citas vietnes.</translation>
 <translation id="3414952576877147120">Lielums:</translation>
 <translation id="3421726884497337397">Izvēlieties, kad bloķēt trešās puses sīkfailus</translation>
-<translation id="5265419033369521352">Tiek nodrošināta jūsu aizsardzība pārlūkprogrammā Brave. Šis režīms var tikt izmantots jūsu drošības uzlabošanai citās AI Wize lietotnēs, kad esat pierakstījies.</translation>
+<translation id="5265419033369521352">Tiek nodrošināta jūsu aizsardzība pārlūkprogrammā AI Wize. Šis režīms var tikt izmantots jūsu drošības uzlabošanai citās AI Wize lietotnēs, kad esat pierakstījies.</translation>
 <translation id="3430670036890315772">Izslēdzot profila bloķēšanu, tiks noņemta jūsu saglabātā informācija.</translation>
 <translation id="3435465986463792564">Vai esat atvēris daudz logu? Šeit varat tos pārvaldīt.</translation>
 <translation id="3435738964857648380">Drošība</translation>
@@ -484,14 +484,14 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="3714981814255182093">Atvērt atrašanas joslu</translation>
 <translation id="5805364706385912897">Šī lapa izmanto pārāk daudz atmiņas, tādēļ AI Wize to apturēja.</translation>
 <translation id="3720422586473670527">Nē, paldies</translation>
-<translation id="8397843425685839889">Jūs un Brave</translation>
+<translation id="8397843425685839889">Jūs un AI Wize</translation>
 <translation id="3737319253362202215">Tulkošanas iestatījumi</translation>
 <translation id="3737402728074743863">Lai šo ierīci varētu izmantot kā drošības atslēgu, iestatiet ekrāna bloķēšanu.</translation>
 <translation id="3738139272394829648">Meklēšana pieskaroties</translation>
 <translation id="3739899004075612870">Pievienota grāmatzīme pārlūkā <ph name="PRODUCT_NAME"/></translation>
 <translation id="3740525748616366977">Meklēšana ar balsi šajā ierīcē nav pieejama.</translation>
 <translation id="3771290962915251154">Šis iestatījums ir atspējots, jo ir ieslēgta vecāku kontrole</translation>
-<translation id="1138681184697033370">Brave pakalpojumu sniegšanas noteikumi</translation>
+<translation id="1138681184697033370">AI Wize pakalpojumu sniegšanas noteikumi</translation>
 <translation id="3775705724665058594">Sūtīšana uz jūsu ierīcēm</translation>
 <translation id="3777796259512476958">Automātiski izrakstīsieties no lielākās daļas vietņu.</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 cilne}zero{# ciļņu}one{# cilne}other{# cilnes}}</translation>
@@ -501,7 +501,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="381861209280417772">Dzēst paroles</translation>
 <translation id="3819178904835489326">Izdzēsti <ph name="NUMBER_OF_DOWNLOADS"/> lejupielādētie vienumi</translation>
 <translation id="3819183753496523827">Esat bezsaistē. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.</translation>
-<translation id="3830886834687455630">Lai pārbaudītu paroles, atjauniniet Brave Play pakalpojumus</translation>
+<translation id="3830886834687455630">Lai pārbaudītu paroles, atjauniniet AI Wize Play pakalpojumus</translation>
 <translation id="3847319713229060696">Palīdzēt uzlabot drošību tīmeklī visiem lietotājiem</translation>
 <translation id="3856096718352044181">Pārbaudiet, vai pakalpojumu sniedzējs ir derīgs, vai arī vēlāk mēģiniet vēlreiz</translation>
 <translation id="3858860766373142691">Nosaukums</translation>
@@ -517,7 +517,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="3932390316856284148">Pierakstīšanās ekrāna apakšdaļas lapa ir atvērta pilnā augstumā.</translation>
 <translation id="393697183122708255">Nav iespējota meklēšana ar balsi.</translation>
 <translation id="395377504920307820">Izmantot bez konta</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Kad ierīce būs gatava, jūsu lapa tiks ielādēta pārlūkā Brave}zero{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā Brave}one{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā Brave}other{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā Brave}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Kad ierīce būs gatava, jūsu lapa tiks ielādēta pārlūkā AI Wize}zero{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā AI Wize}one{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā AI Wize}other{Kad ierīce būs gatava, jūsu lapas tiks ielādētas pārlūkā AI Wize}}</translation>
 <translation id="3962119236270174787">Standarta aizsardzība pret zināmām bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem.</translation>
 <translation id="1453002554835005700">Pārlūkprogrammā AI Wize nevar pārbaudīt jūsu paroles</translation>
 <translation id="3969863827134279083">Pārvietot augšup</translation>
@@ -540,7 +540,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="4062305924942672200">Juridiskā informācija</translation>
 <translation id="4072805772816336153">Vēlāk mēģiniet vēlreiz.</translation>
 <translation id="4084682180776658562">Grāmatzīme</translation>
-<translation id="4521874409998847950">No izdevēja <ph name="PUBLISHER_ORIGIN"/> — <ph name="BEGIN_DEEMPHASIZED"/>nodrošina Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">No izdevēja <ph name="PUBLISHER_ORIGIN"/> — <ph name="BEGIN_DEEMPHASIZED"/>nodrošina AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Izmantojot šo planšetdatoru, varat pierakstīties ierīcē, kurā tiek rādīts šis kvadrātkods.</translation>
 <translation id="7268155614575494857">Lai palīdzētu AI Wize paroļu pārvaldniekā saglabāt pierakstīšanās informāciju, pievienojiet savu lietotājvārdu šajā vietnē.</translation>
 <translation id="4095146165863963773">Vai dzēst lietotnes datus?</translation>
@@ -555,7 +555,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="4126285640274188657">Lapu ieskati</translation>
 <translation id="4135200667068010335">Ierīču saraksts, ar ko kopīgot cilni, ir aizvērts.</translation>
 <translation id="4137746084635924146">Pašreizējā ierīces valoda</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Pēc noklusējuma pieprasītās vietnes datoriem</translation>
 <translation id="4162867837470729563">Kopīgošanas opciju saraksts ir atvērts pilna ekrāna augstumā.</translation>
 <translation id="4170011742729630528">Pakalpojums nav pieejams. Vēlāk mēģiniet vēlreiz.</translation>
@@ -573,7 +573,7 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="4225895483398857530">Rīkjoslas saīsne</translation>
 <translation id="4242533952199664413">Atvērt iestatījumus</translation>
 <translation id="4248098802131000011">Aizsargājiet savas paroles pret datu pārkāpumiem un citām drošības problēmām.</translation>
-<translation id="7445061995866044926">Vai izrakstīties no pārlūka Brave?</translation>
+<translation id="7445061995866044926">Vai izrakstīties no pārlūka AI Wize?</translation>
 <translation id="4249955472157341256">Kārtot, sākot ar jaunāko saturu</translation>
 <translation id="4256782883801055595">Atklātā pirmkoda licences</translation>
 <translation id="7404502124231907662">Vai dzēst paroles no AI Wize paroļu pārvaldnieka?</translation>
@@ -602,15 +602,15 @@ Jūsu šifrētos datus var lasīt tikai personas, kurām ir jūsu ieejas frāze.
 <translation id="4405224443901389797">Pārvietot uz…</translation>
 <translation id="4405636711880428279">Vai noņemt virtuālo karti?</translation>
 <translation id="4409271659088619928">Jūsu meklētājprogramma ir <ph name="DSE"/>. Skatiet tās norādījumus par meklēšanas vēstures dzēšanu, ja šāda iespēja ir pieejama.</translation>
-<translation id="5749788945734786627">Brave konta pārvaldība</translation>
+<translation id="5749788945734786627">AI Wize konta pārvaldība</translation>
 <translation id="4425140285732600465">Notiek cenas izsekošana. Saņemiet paziņojumus, ja kādā vietnē tiek konstatēts cenas kritums.</translation>
 <translation id="4425173294238317796">Piekļuves atslēgas apstiprinājuma lapa</translation>
-<translation id="442518031075347249">Vairs nevarēsiet izmantot virtuālo karti pakalpojumā Brave Pay. <ph name="BEGIN_LINK1"/>Uzziniet vairāk par virtuālajām kartēm<ph name="END_LINK1"/>.</translation>
+<translation id="442518031075347249">Vairs nevarēsiet izmantot virtuālo karti pakalpojumā AI Wize Pay. <ph name="BEGIN_LINK1"/>Uzziniet vairāk par virtuālajām kartēm<ph name="END_LINK1"/>.</translation>
 <translation id="4452411734226507615">Aizvērt cilni <ph name="TAB_TITLE"/></translation>
 <translation id="4452548195519783679">Grāmatzīme saglabāta mapē <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Ja saistāt citu ierīci, izmantojot kvadrātkodu, otrā ierīcē var izmantot šo tālruni kā drošības atslēgu. Ja noņemsiet saistīto ierīci, būs jānoskenē kvadrātkods, lai to atkal saistītu.</translation>
 <translation id="4478161224666880173">Šajā vietnē varat izmantot savu <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> kontu. Lai turpinātu, pierakstieties kontā <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="3133489217401741157">Notiek moduļa <ph name="MODULE"/> instalēšana pārlūkprogrammai Brave…</translation>
+<translation id="3133489217401741157">Notiek moduļa <ph name="MODULE"/> instalēšana pārlūkprogrammai AI Wize…</translation>
 <translation id="4484496141267039529">Nav savienojuma. Vēlāk mēģiniet vēlreiz.</translation>
 <translation id="53119194224775367">Visi lietotnes AI Wize dati tiks neatgriezeniski izdzēsti. Tas attiecas uz visiem failiem, iestatījumiem, kontiem, datu bāzēm un citiem datiem.</translation>
 <translation id="3966104135245031874">Šifrēt sinhronizētās paroles, izmantojot jūsu AI Wize konta datus</translation>
@@ -677,7 +677,7 @@ Jūsu AI Wize kontam vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph nam
 <translation id="4778653490315793244">Vēl nav nekāda satura</translation>
 <translation id="4787736314074622408">Vai vēlaties dzēst failu <ph name="ITEM_TITLE"/>?</translation>
 <translation id="4794291718671962615">(<ph name="MEGABYTES"/>) <ph name="URL"/></translation>
-<translation id="4802417911091824046">Ieejas frāzes šifrējumā nav iekļauti maksājumu veidi un adreses no pakalpojuma Brave Pay.
+<translation id="4802417911091824046">Ieejas frāzes šifrējumā nav iekļauti maksājumu veidi un adreses no pakalpojuma AI Wize Pay.
 
 Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizāciju<ph name="END_LINK"/></translation>
 <translation id="4807098396393229769">Vārds uz kartes</translation>
@@ -685,8 +685,8 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="481574578487123132">Saistītās ierīces</translation>
 <translation id="4826163340425232009">Pierakstīšanās ekrāna apakšdaļas lapa.</translation>
 <translation id="4834007576107377210">Skatiet savas meklētājprogrammas norādījumus par meklēšanas vēstures dzēšanu, ja tādi ir pieejami.</translation>
-<translation id="4834250788637067901">Maksājumu veidi, piedāvājumi un adreses no pakalpojuma Brave Pay</translation>
-<translation id="2593289874938379417">Brave nevar piekļūt pieprasītajam resursam.</translation>
+<translation id="4834250788637067901">Maksājumu veidi, piedāvājumi un adreses no pakalpojuma AI Wize Pay</translation>
+<translation id="2593289874938379417">AI Wize nevar piekļūt pieprasītajam resursam.</translation>
 <translation id="4837753911714442426">Atvērt iespējas, lai izdrukātu lapu</translation>
 <translation id="4842092870884894799">Tiek rādīts paroles ģenerēšanas uznirstošais logs</translation>
 <translation id="4842515939542199281">Lai meklētu ar balsi, pieskarieties mikrofonam.</translation>
@@ -695,7 +695,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="4852014461738377247">Notiek pierakstīšanās\u2026</translation>
 <translation id="4860895144060829044">Zvanīt</translation>
 <translation id="4864369630010738180">Pierakstīšanās...</translation>
-<translation id="5131234170665854056">Nevar instalēt moduli <ph name="MODULE"/> pārlūkprogrammai Brave.</translation>
+<translation id="5131234170665854056">Nevar instalēt moduli <ph name="MODULE"/> pārlūkprogrammai AI Wize.</translation>
 <translation id="4871568871368204250">Sinhronizācijas izslēgšana</translation>
 <translation id="2875466387677348954">Ja šī funkcija būs izslēgta, jums joprojām tiks rādīti ieteikumi, kas pārlūkā AI Wize tiek nodrošināti lokāli.</translation>
 <translation id="4875775213178255010">Satura ieteikumi</translation>
@@ -705,7 +705,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="488187801263602086">Faila pārdēvēšana</translation>
 <translation id="1248710015876067820">Neatbalstīts AI Wize instanču skaits</translation>
 <translation id="4905823827770127520">Iekļaut saiti uz lapu</translation>
-<translation id="3217997482476578430">Brave funkcija Discover</translation>
+<translation id="3217997482476578430">AI Wize funkcija Discover</translation>
 <translation id="4909709702739934280">Jūsu pārlūku pārvalda administrators</translation>
 <translation id="4910889077668685004">Maksājumu lietotnes</translation>
 <translation id="4912413785358399818">Pārvietot cilni</translation>
@@ -720,14 +720,14 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5742837711075932301">Citās ierīcēs varat izmantot šo tālruni kā drošības atslēgu, ja esat pierakstījies tajā pašā AI Wize kontā.</translation>
 <translation id="4957722034734105353">Uzzināt vairāk...</translation>
 <translation id="4961107849584082341">Tulkojiet šīs lapas saturu jebkurā valodā.</translation>
-<translation id="7307583170263691471">Ātrāka, aktīva aizsardzība pret bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem. Jūs saņemat brīdinājumus par paroļu pārkāpumiem. Pārlūkošanas dati ir jāsūta uzņēmumam Brave.</translation>
+<translation id="7307583170263691471">Ātrāka, aktīva aizsardzība pret bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem. Jūs saņemat brīdinājumus par paroļu pārkāpumiem. Pārlūkošanas dati ir jāsūta uzņēmumam AI Wize.</translation>
 <translation id="497421865427891073">Doties uz priekšu</translation>
 <translation id="4987271110129728827">Nevar atrast šo lapu. Pārbaudiet pareizrakstību vai meklējiet tīmeklī.</translation>
 <translation id="4988526792673242964">Lapas</translation>
 <translation id="4991110219272367918">Iespēja apstiprināt vai neapstiprināt piekļuvi vietnei, kas ir aizvērta</translation>
 <translation id="499724277181351974">Doties uz vietni <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Šeit varat sekot šai vietnei</translation>
-<translation id="6447211988989208781">Brave aktivitātes vadīklas</translation>
+<translation id="6447211988989208781">AI Wize aktivitātes vadīklas</translation>
 <translation id="5005498671520578047">Paroles kopēšana</translation>
 <translation id="5010886807652684893">Vizuālais skats</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> vēlas izveidot savienojumu</translation>
@@ -741,7 +741,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="506254248375231072">Nav ciļņu</translation>
 <translation id="5062960805900435602">Brīdinājums par paroļu sapludināšanu ir aizvērts</translation>
 <translation id="5081960376148623587">Iespēja izvēlēties, vai iepriekš ielādēt lapas</translation>
-<translation id="4744980273298156620">Drīzumā, atverot jaunu cilni, būs redzami raksti no vietnes <ph name="SITE_NAME"/>. Vietnes, kurām sekojat, tiek saglabātas jūsu Brave kontā. Varat tās pārvaldīt Discover iestatījumu sadaļā.</translation>
+<translation id="4744980273298156620">Drīzumā, atverot jaunu cilni, būs redzami raksti no vietnes <ph name="SITE_NAME"/>. Vietnes, kurām sekojat, tiek saglabātas jūsu AI Wize kontā. Varat tās pārvaldīt Discover iestatījumu sadaļā.</translation>
 <translation id="509429900233858213">Radās kļūda.</translation>
 <translation id="5097349930204431044">Jūsu apmeklētās vietnes var izsecināt, kas jums patīk, un ieteikt reklāmas, kamēr turpināt pārlūkošanu</translation>
 <translation id="5099845111805573968">Ja vienreiz atlasīsiet vietni datoriem, šis iestatījums tiks lietots vietnei ikreiz, kad to apmeklēsiet.</translation>
@@ -751,7 +751,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5118713593561876160">Intereses</translation>
 <translation id="5122378528687922675">Ja vajadzīga palīdzība, palūdziet, lai jums palīdz vecāki (<ph name="PARENT_NAME_1"/> vai <ph name="PARENT_NAME_2"/>)</translation>
 <translation id="5132942445612118989">Sinhronizējiet paroles, vēsturi un citu saturu visās ierīcēs</translation>
-<translation id="5139940364318403933">Uzzināt, kā izmantot Brave disku</translation>
+<translation id="5139940364318403933">Uzzināt, kā izmantot AI Wize disku</translation>
 <translation id="5142281402488957685">Velciet lejup, lai saturs tiktu atsvaidzināts un tiktu rādīti jauni raksti.</translation>
 <translation id="5152843274749979095">Nav instalēta neviena atbalstīta lietotne</translation>
 <translation id="5161254044473106830">Jānorāda nosaukums</translation>
@@ -767,7 +767,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Notiek faila lejupielāde…}zero{Notiek # failu lejupielāde…}one{Notiek # faila lejupielāde…}other{Notiek # failu lejupielāde…}}</translation>
 <translation id="5210286577605176222">Pāriet uz iepriekšējo cilni</translation>
 <translation id="5210365745912300556">Aizvērt cilni</translation>
-<translation id="827672955486173928">Sadaļā “Lapu ieskati” veiktās darbības tiek saglabātas jūsu <ph name="BEGIN_LINK"/>Brave kontā<ph name="END_LINK"/>.</translation>
+<translation id="827672955486173928">Sadaļā “Lapu ieskati” veiktās darbības tiek saglabātas jūsu <ph name="BEGIN_LINK"/>AI Wize kontā<ph name="END_LINK"/>.</translation>
 <translation id="5222676887888702881">Izrakstīties</translation>
 <translation id="5226378907213531272">Jūs atbloķēsiet ekrānu ikreiz, kad izmantosiet automašīnu</translation>
 <translation id="5227554086496586518">Pieskarieties, lai skatītu meklēšanas rezultātus</translation>
@@ -781,7 +781,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5308380583665731573">Pievienot</translation>
 <translation id="5316947901395241499">Jūsu administrators ir izslēdzis paroļu saglabāšanu.</translation>
 <translation id="5317780077021120954">Saglabāt</translation>
-<translation id="989239400026154074">Brave iesaka pārlūku Brave</translation>
+<translation id="989239400026154074">AI Wize iesaka pārlūku AI Wize</translation>
 <translation id="7815000350132166985">Ja atļaujat sīkfailus, AI Wize var tos izmantot iepriekšējai ielādei.</translation>
 <translation id="1681635711794313507">Tā kā iepriekš ielādētās lapas ir šifrētas un vietne, kas novirza uz lapām, ir AI Wize vietne, AI Wize serveri nesaņem jaunu informāciju, ja šīs lapas tiek iepriekš ielādētas privāti.</translation>
 <translation id="5329858041417644019">Jūsu pārlūks netiek pārvaldīts</translation>
@@ -789,7 +789,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="534580735623577507">Nav vietņu no šāda laika perioda: <ph name="TIME_PERIOD"/></translation>
 <translation id="5355191726083956201">Uzlabota aizsardzība ir ieslēgta</translation>
 <translation id="5361107212971249203">ziņojumu</translation>
-<translation id="5375577065097716013">Meklēt attēlu ar Brave Lens <ph name="BEGIN_NEW"/>Jaunums<ph name="END_NEW"/></translation>
+<translation id="5375577065097716013">Meklēt attēlu ar AI Wize Lens <ph name="BEGIN_NEW"/>Jaunums<ph name="END_NEW"/></translation>
 <translation id="539881862970320163">Ieteicams izmantot drošu paroli. Tastatūra ir paslēpta.</translation>
 <translation id="5401851137404501592">Lai turpinātu, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> kopīgos jūsu vārdu, e-pasta adresi un profila attēlu ar šo vietni.</translation>
 <translation id="5409881200985013443">Vai iesniegt kodu “<ph name="ONE_TIME_CODE"/>” ierīcē “<ph name="CLIENT_NAME"/>”?</translation>
@@ -817,7 +817,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5517095782334947753">Ir pieejamas grāmatzīmes, vēsture, paroles un citi iestatījumi no konta <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Novirzīšana ir bloķēta.</translation>
 <translation id="5548606607480005320">Drošības pārbaude</translation>
-<translation id="4362225295386962644">Pārlūkā AI Wize tiek parādīts brīdinājums, ja izmantojat paroli, kas ir publicēta tiešsaistē. To darot, jūsu paroles un lietotājvārdi tiek šifrēti, lai neviens tos nevarētu lasīt, tostarp Brave.</translation>
+<translation id="4362225295386962644">Pārlūkā AI Wize tiek parādīts brīdinājums, ja izmantojat paroli, kas ir publicēta tiešsaistē. To darot, jūsu paroles un lietotājvārdi tiek šifrēti, lai neviens tos nevarētu lasīt, tostarp AI Wize.</translation>
 <translation id="5555525474779371165">Drošas pārlūkošanas aizsardzības opciju izvēle</translation>
 <translation id="5556459405103347317">Pārlādēt</translation>
 <translation id="555816257274242153">Cenas izsekošana ir apturēta.</translation>
@@ -843,10 +843,10 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5665379678064389456">Izveidojiet pasākumu lietotnē <ph name="APP_NAME"/>.</translation>
 <translation id="5668833306439455813">Pārlūkā AI Wize nevar pārbaudīt atjauninājumu pieejamību.</translation>
 <translation id="5686790454216892815">Faila nosaukums ir pārāk garš</translation>
-<translation id="4809211418322514799">Pārlūkā AI Wize tiek automātiski dzēstas vietnes, kas ir glabātas ilgāk nekā 30 dienas. Ja kādu vietni apmeklējat atkārtoti, tā var atkal tikt iekļauta sarakstā. Varat arī liegt vietnei ieteikt jums reklāmas. Uzziniet vairāk par <ph name="BEGIN_LINK"/>reklāmu konfidencialitātes pārvaldību pārlūkā Brave<ph name="END_LINK"/>.</translation>
+<translation id="4809211418322514799">Pārlūkā AI Wize tiek automātiski dzēstas vietnes, kas ir glabātas ilgāk nekā 30 dienas. Ja kādu vietni apmeklējat atkārtoti, tā var atkal tikt iekļauta sarakstā. Varat arī liegt vietnei ieteikt jums reklāmas. Uzziniet vairāk par <ph name="BEGIN_LINK"/>reklāmu konfidencialitātes pārvaldību pārlūkā AI Wize<ph name="END_LINK"/>.</translation>
 <translation id="569435661099256888">Varat skatīt apmeklētās lapas vai noņemt tās no vēstures</translation>
 <translation id="569536719314091526">Tulkojiet šīs lapas saturu jebkurā valodā, izmantojot pogu Vairāk opciju.</translation>
-<translation id="2320748512701464301">Brave var palīdzēt aizsargāt jūs pret datu noplūdi, nedrošām vietnēm un citiem apdraudējumiem.</translation>
+<translation id="2320748512701464301">AI Wize var palīdzēt aizsargāt jūs pret datu noplūdi, nedrošām vietnēm un citiem apdraudējumiem.</translation>
 <translation id="5698878456427040674">Pārbaudiet, vai atlasītais konts tiek atbalstīts.</translation>
 <translation id="570347048394355941">Pāriet uz cilni</translation>
 <translation id="5715150588940290235">Vai dzēst saglabātos drošības kodus?</translation>
@@ -854,10 +854,10 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5726692708398506830">Palielināt visu lapas saturu</translation>
 <translation id="5744751019568455640">Šīs ir balsis, ko varat izvēlēties savu tīmekļa lapu lasīšanai. Ja jums patīk šī balss un vēlaties, lai tā tiktu izmantota arī turpmāk, pieskarieties balss nosaukumam.</translation>
 <translation id="5748802427693696783">Notika pārslēgšanās uz standarta cilnēm</translation>
-<translation id="3088191967551450609">Brave ir nepieciešama piekļuve krātuvei, lai varētu lejupielādēt failus.</translation>
+<translation id="3088191967551450609">AI Wize ir nepieciešama piekļuve krātuvei, lai varētu lejupielādēt failus.</translation>
 <translation id="5749237766298580851">Izslēgta <ph name="SEPARATOR"/> Nav ieteicams</translation>
 <translation id="5752232708629533680">Kopīgot tikai GIF failu</translation>
-<translation id="416316836590748269">Varat izmantot meklēšanu ar balsi pārlūkā Brave.</translation>
+<translation id="416316836590748269">Varat izmantot meklēšanu ar balsi pārlūkā AI Wize.</translation>
 <translation id="5754350196967618083">Nevar atsvaidzināt Discover</translation>
 <translation id="5755162682436943950">Jūs esat izrakstījies. Tiek atvērts dialoglodziņš, lai pierakstītos un ieslēgtu sinhronizāciju.</translation>
 <translation id="5759897675466110265">Vai vietne nedarbojas? Varat mēģināt īslaicīgi atļaut trešo pušu sīkfailus.</translation>
@@ -878,7 +878,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5829586821381540080">Saglabāta mapē <ph name="FOLDER_NAME"/></translation>
 <translation id="583281660410589416">Nezināms</translation>
 <translation id="5833984609253377421">Kopīgot saiti</translation>
-<translation id="2225291765389142805">Brave dinozaurs</translation>
+<translation id="2225291765389142805">AI Wize dinozaurs</translation>
 <translation id="5848257610304005265">Vai atvērt PDF failu lietotnē <ph name="APP_NAME"/>?</translation>
 <translation id="5853623416121554550">apturēta</translation>
 <translation id="5855546874025048181">Precizēt: <ph name="REFINE_TEXT"/></translation>
@@ -895,7 +895,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5916664084637901428">Iesl.</translation>
 <translation id="5919204609460789179">Lai sāktu sinhronizēšanu, atjauniniet <ph name="PRODUCT_NAME"/></translation>
 <translation id="5938820472109305350">Pievienot interesi “<ph name="INTEREST"/>”</translation>
-<translation id="6103327872225198548">Tiek izmantota meklētājprogramma Brave</translation>
+<translation id="6103327872225198548">Tiek izmantota meklētājprogramma AI Wize</translation>
 <translation id="5945035219773565305">Pašreizējais ieteikums: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Tiek skatīta tiešsaistē pieejamā lapa</translation>
 <translation id="305870044889644984">Atvērt AI Wize palīdzības centru jaunā cilnē</translation>
@@ -908,7 +908,7 @@ Lai mainītu šo iestatījumu, <ph name="BEGIN_LINK"/>atiestatiet sinhronizācij
 <translation id="5977976211062815271">Šajā ierīcē</translation>
 <translation id="5979084224081478209">Pārbaudīt paroles</translation>
 <translation id="5995726099713306770">Vai vēlaties vēlreiz lejupielādēt lapu?</translation>
-<translation id="6456271171669383967">Arī turpmāk izmantot Brave</translation>
+<translation id="6456271171669383967">Arī turpmāk izmantot AI Wize</translation>
 <translation id="6000203700195075278">Atsākt sekošanu</translation>
 <translation id="6002122790816966947">Jūsu ierīces</translation>
 <translation id="6011308810877101166">Uzlabot meklēšanas ieteikumus</translation>
@@ -981,13 +981,13 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6394791151443660613">Meklēt: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">SAITE</translation>
 <translation id="6397616442223433927">Esat tiešsaistē</translation>
-<translation id="8789425457808164956">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā Brave</translation>
+<translation id="8789425457808164956">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā AI Wize</translation>
 <translation id="6404511346730675251">Rediģēt grāmatzīmi</translation>
 <translation id="6406506848690869874">Sinhronizācija</translation>
 <translation id="6407224748847589805">Nevar izveidot savienojumu ar jūsu datoru. Izmēģiniet citu verifikācijas opciju.</translation>
 <translation id="6410883413783534063">Atveriet cilnes, lai vienlaikus apmeklētu vairākas lapas</translation>
 <translation id="6411219469806822692">Augstāku ekrāna daļu nevar ietvert. Mēģiniet iegūt ekrānuzņēmumu no augstākas vietas lapā.</translation>
-<translation id="7810992039564280750">Vietrāži URL tiek pārbaudīti, salīdzinot ar nedrošu vietņu sarakstu, kas glabājas pārlūkprogrammā Brave. Ja kādā vietnē tiek mēģināts nozagt jūsu paroli vai ja jūs lejupielādējat kaitīgu failu, AI Wize var nosūtīt attiecīgo URL un lapas satura fragmentus uz funkciju Droša pārlūkošana.</translation>
+<translation id="7810992039564280750">Vietrāži URL tiek pārbaudīti, salīdzinot ar nedrošu vietņu sarakstu, kas glabājas pārlūkprogrammā AI Wize. Ja kādā vietnē tiek mēģināts nozagt jūsu paroli vai ja jūs lejupielādējat kaitīgu failu, AI Wize var nosūtīt attiecīgo URL un lapas satura fragmentus uz funkciju Droša pārlūkošana.</translation>
 <translation id="641643625718530986">Drukāt...</translation>
 <translation id="6422857128426228781">Šeit būs redzami jūsu izsekotie produkti</translation>
 <translation id="6433501201775827830">Meklētājprogrammas izvēle</translation>
@@ -998,16 +998,16 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6447558397796644647">Nevar atrast grāmatzīmi. Pārbaudiet pareizrakstību vai pievienojiet grāmatzīmi.</translation>
 <translation id="6459045781120991510">Aptaujas</translation>
 <translation id="6461962085415701688">Nevar atvērt failu.</translation>
-<translation id="9055113864158719823">Varat skatīt pārlūkā AI Wize apmeklētās vietnes un iestatīt tām taimerus.\n\nBrave saņem informāciju par vietnēm, kurām iestatāt taimerus, kā arī šo vietņu apmeklēšanas ilgumu. Šī informācija tiek izmantota, lai uzlabotu Digitālo labjutību.</translation>
+<translation id="9055113864158719823">Varat skatīt pārlūkā AI Wize apmeklētās vietnes un iestatīt tām taimerus.\n\nAI Wize saņem informāciju par vietnēm, kurām iestatāt taimerus, kā arī šo vietņu apmeklēšanas ilgumu. Šī informācija tiek izmantota, lai uzlabotu Digitālo labjutību.</translation>
 <translation id="6473086018775716761">Kopīgošanas opciju saraksts ir atvērts pusekrāna augstumā.</translation>
 <translation id="6475951671322991020">Lejupielādēt videoklipu</translation>
 <translation id="6477928892249167417">Šķiet, ka šīs vietnes jums ir svarīgas:</translation>
 <translation id="6482749332252372425">Neizdevās lejupielādēt failu <ph name="FILE_NAME"/>, jo krātuvē nav pietiekami daudz vietas.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Fails ir lejupielādēts.}zero{# lejupielādes ir pabeigtas.}one{# lejupielāde ir pabeigta.}other{# lejupielādes ir pabeigtas.}}</translation>
-<translation id="3960299545138990065">Restartējiet pārlūku Brave</translation>
+<translation id="3960299545138990065">Restartējiet pārlūku AI Wize</translation>
 <translation id="6527303717912515753">Kopīgot</translation>
-<translation id="708829030563435351">Netiks rādītas vietnes, ko apmeklējat pārlūkā Brave. Tiks izdzēsti visi vietņu taimeri.</translation>
-<translation id="7723158744459952869">Brave pārāk ilgi nereaģēja</translation>
+<translation id="708829030563435351">Netiks rādītas vietnes, ko apmeklējat pārlūkā AI Wize. Tiks izdzēsti visi vietņu taimeri.</translation>
+<translation id="7723158744459952869">AI Wize pārāk ilgi nereaģēja</translation>
 <translation id="6539092367496845964">Radās kļūda. Vēlāk mēģiniet vēlreiz.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Pārbaudīts: pirms 1 stundas}zero{Pārbaudīts: pirms # stundām}one{Pārbaudīts: pirms # stundas}other{Pārbaudīts: pirms # stundām}}</translation>
 <translation id="6545017243486555795">Notīrīt visus datus</translation>
@@ -1017,7 +1017,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6560414384669816528">Meklēšana, izmantojot Sogou</translation>
 <translation id="656065428026159829">Skatīt vairāk</translation>
 <translation id="6565959834589222080">Wi-Fi tiek izmantots, ja tas ir pieejams</translation>
-<translation id="4480935821314799946">Tagad, atverot jaunu cilni, būs redzami raksti no vietnes <ph name="SITE_NAME"/>. Vietnes, kurām sekojat, tiek saglabātas jūsu Brave kontā. Varat tās pārvaldīt Discover iestatījumu sadaļā.</translation>
+<translation id="4480935821314799946">Tagad, atverot jaunu cilni, būs redzami raksti no vietnes <ph name="SITE_NAME"/>. Vietnes, kurām sekojat, tiek saglabātas jūsu AI Wize kontā. Varat tās pārvaldīt Discover iestatījumu sadaļā.</translation>
 <translation id="6573096386450695060">Vienmēr atļaut</translation>
 <translation id="5157964048453367290">Šeit būs redzamas cilnes, kuras esat atvēris pārlūkā AI Wize citās ierīcēs.</translation>
 <translation id="6583199322650523874">Pievienot pašreizējo lapu grāmatzīmēm</translation>
@@ -1027,20 +1027,20 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6593061639179217415">Vietne datoriem</translation>
 <translation id="6594347733515723558">Kārtošana un skatīšana</translation>
 <translation id="2466982615210189224">Attēli tiek sūtīti uz AI Wize serveriem, lai uzlabotu aprakstus.</translation>
-<translation id="663059986967017181">Nokopēta pārlūkā Brave.</translation>
+<translation id="663059986967017181">Nokopēta pārlūkā AI Wize.</translation>
 <translation id="661266467055912436">Šis režīms efektīvāk aizsargā gan jūs, gan visus citus tīmekļa lietotājus.</translation>
-<translation id="8127050479140582768">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā Brave</translation>
+<translation id="8127050479140582768">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā AI Wize</translation>
 <translation id="6627583120233659107">Rediģēt mapi</translation>
 <translation id="6636623428211296678">Tālāk izpētīt citus iestatījumus vai beigt tūlīt</translation>
-<translation id="2259649928554669581">Papildu iestatījumus, kas attiecas uz konfidencialitāti, drošību un datu vākšanu, skatiet sadaļās <ph name="BEGIN_LINK1"/>Sinhronizēšana<ph name="END_LINK1"/> un <ph name="BEGIN_LINK2"/>Brave pakalpojumi<ph name="END_LINK2"/>.</translation>
-<translation id="7939692063031538305">Lai palīdzētu uzlabot lietotni, uzņēmumam AI Wize tiek sūtīti lietojuma un avāriju dati no pārlūka Brave. <ph name="BEGIN_UMA_LINK"/>Pārvaldīt<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Papildu iestatījumus, kas attiecas uz konfidencialitāti, drošību un datu vākšanu, skatiet sadaļās <ph name="BEGIN_LINK1"/>Sinhronizēšana<ph name="END_LINK1"/> un <ph name="BEGIN_LINK2"/>AI Wize pakalpojumi<ph name="END_LINK2"/>.</translation>
+<translation id="7939692063031538305">Lai palīdzētu uzlabot lietotni, uzņēmumam AI Wize tiek sūtīti lietojuma un avāriju dati no pārlūka AI Wize. <ph name="BEGIN_UMA_LINK"/>Pārvaldīt<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Vienmēr bloķēt</translation>
 <translation id="6641780377503683465">Noņemt interesi “<ph name="INTEREST"/>”</translation>
 <translation id="6643016212128521049">Notīrīt</translation>
 <translation id="6645629752388991326">Pārvaldiet, kurās ierīcēs var veikt pierakstīšanos, izmantojot šo ierīci kā drošības atslēgu.</translation>
-<translation id="2730188427562924169">Brave serveriem tiek nosūtīta pieslēpta URL daļa, izmantojot konfidencialitātes serveri, kas slēpj jūsu IP adresi. Ja kādā vietnē tiek mēģināts nozagt jūsu paroli vai ja jūs lejupielādējat kaitīgu failu, pārlūks AI Wize var arī nosūtīt AI Wize serveriem attiecīgos URL, tostarp lapas satura fragmentus.</translation>
+<translation id="2730188427562924169">AI Wize serveriem tiek nosūtīta pieslēpta URL daļa, izmantojot konfidencialitātes serveri, kas slēpj jūsu IP adresi. Ja kādā vietnē tiek mēģināts nozagt jūsu paroli vai ja jūs lejupielādējat kaitīgu failu, pārlūks AI Wize var arī nosūtīt AI Wize serveriem attiecīgos URL, tostarp lapas satura fragmentus.</translation>
 <translation id="7556503430569358637">Uzņēmumam AI Wize tiek sūtīti jūsu apmeklētie vietrāži URL, lai prognozētu, kuras vietnes jūs varētu apmeklēt turpmāk.</translation>
-<translation id="6678472970290886941">Jūsu administrators var attālināti mainīt jūsu pārlūka iestatījumus. Darbību šajā ierīcē var pārvaldīt arī ārpus Brave.</translation>
+<translation id="6678472970290886941">Jūsu administrators var attālināti mainīt jūsu pārlūka iestatījumus. Darbību šajā ierīcē var pārvaldīt arī ārpus AI Wize.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>… un vēl <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}zero{<ph name="CONTACT_PREVIEW"/>… un vēl <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}one{<ph name="CONTACT_PREVIEW"/>… un vēl <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>… un vēl <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Priekšskatīt attēlu <ph name="BEGIN_NEW"/>Jauns<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Parole</translation>
@@ -1051,27 +1051,27 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6672917148207387131">Pievienot vietni <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Lai sāktu sinhronizāciju, ievadiet savu ieejas frāzi</translation>
 <translation id="8581481290581777242">Vai dzēst jūsu AI Wize datus no šīs ierīces?</translation>
-<translation id="3683330416566109578">Pierakstieties šajā vietnē un pārlūkā Brave.</translation>
-<translation id="3385384709865894288">Uzlabojiet Brave</translation>
+<translation id="3683330416566109578">Pierakstieties šajā vietnē un pārlūkā AI Wize.</translation>
+<translation id="3385384709865894288">Uzlabojiet AI Wize</translation>
 <translation id="670498945988402717">Pārbaudīts: vakar</translation>
 <translation id="6710213216561001401">Iepriekšējais</translation>
 <translation id="671481426037969117">Jūsu lietotnes <ph name="FQDN"/> taimera laiks ir beidzies. Tas atkal sāksies rīt.</translation>
 <translation id="6715020873764921614">Vai tomēr vēlaties lejupielādēt failu “<ph name="FILE_NAME"/>” (<ph name="FILE_SIZE"/>)?</translation>
 <translation id="6719634564325948108">Vai izveidot savienojumu, izmantojot kvadrātkodu?</translation>
-<translation id="7499197548870160669">Brave kontā</translation>
+<translation id="7499197548870160669">AI Wize kontā</translation>
 <translation id="6738516213925468394">Jūsu dati tika šifrēti, izmantojot jūsu <ph name="BEGIN_LINK"/>sinhronizācijas ieejas frāzi<ph name="END_LINK"/>šādā datumā: <ph name="TIME"/>. Lai sāktu sinhronizāciju, ievadiet ieejas frāzi.</translation>
 <translation id="6738867403308150051">Notiek lejupielāde…</translation>
-<translation id="2275686406263739320">Bieži vien piedāvāto iespēju personalizēšanai jūsu apmeklētajās vietnēs tiek saglabāta informācija par jūsu interesēm. Vietnes var arī glabāt informāciju par jūsu interesēm pārlūkā Brave.</translation>
+<translation id="2275686406263739320">Bieži vien piedāvāto iespēju personalizēšanai jūsu apmeklētajās vietnēs tiek saglabāta informācija par jūsu interesēm. Vietnes var arī glabāt informāciju par jūsu interesēm pārlūkā AI Wize.</translation>
 <translation id="6751521182688001123">Ātra jaunas cilnes atvēršana. Lai rediģētu šo īsinājumtaustiņu, pieskarieties un turiet.</translation>
 <translation id="6756507620369789050">Sniegt atsauksmes</translation>
 <translation id="6767294960381293877">Ierīču saraksts, ar ko kopīgot cilni, ir atvērts pusekrāna augstumā.</translation>
 <translation id="6770602306803890733">Tiek nodrošināta gan jūsu, gan visu pārējo tīmekļa lietotāju aizsardzība.</translation>
-<translation id="8174975477247159780">Brave un Brave OS pakalpojumu sniegšanas papildu noteikumi</translation>
+<translation id="8174975477247159780">AI Wize un AI Wize OS pakalpojumu sniegšanas papildu noteikumi</translation>
 <translation id="6795633245022906657">Šeit varat ātri atvērt jaunu cilni. Lai rediģētu šo saīsni, pārejiet uz iestatījumiem.</translation>
 <translation id="6802555630140434547">Logs tiks aizvērts.</translation>
 <translation id="6811034713472274749">Lapu var skatīt</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Attēli, sarakstā ir 1 attēls}zero{Attēli, sarakstā ir # attēli}one{Attēli, sarakstā ir # attēls}other{Attēli, sarakstā ir # attēli}}</translation>
-<translation id="8418237809013783651">Lapa “Pierakstīšanās pārlūkā Brave”, atvērta.</translation>
+<translation id="8418237809013783651">Lapa “Pierakstīšanās pārlūkā AI Wize”, atvērta.</translation>
 <translation id="6817747507826986771">Ātra lapas kopīgošana. Lai rediģētu šo īsinājumtaustiņu, pieskarieties un turiet.</translation>
 <translation id="118366698571543506">Pierakstieties, lai izmantotu savu AI Wize saturu vairākās ierīcēs.</translation>
 <translation id="6820686453637990663">CVC</translation>
@@ -1085,7 +1085,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="6850409657436465440">Joprojām notiek lejupielāde</translation>
 <translation id="6850830437481525139">Aizvērtas <ph name="TAB_COUNT"/> cilnes</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Audio faili, sarakstā ir 1 audio fails}zero{Audio faili, sarakstā ir # audio faili}one{Audio faili, sarakstā ir # audio fails}other{Audio faili, sarakstā ir # audio faili}}</translation>
-<translation id="4046835482356054431">Brave funkcija Discover — izslēgta</translation>
+<translation id="4046835482356054431">AI Wize funkcija Discover — izslēgta</translation>
 <translation id="686366188661646310">Vai dzēst paroli?</translation>
 <translation id="6864459304226931083">Lejupielādēt attēlu</translation>
 <translation id="6865313869410766144">Automātiskās aizpildes veidlapas dati</translation>
@@ -1120,16 +1120,16 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7029809446516969842">Paroles</translation>
 <translation id="7030304022046916278">Vietrāži URL tiek sūtīti uz funkciju Droša pārlūkošana, lai tos pārbaudītu.</translation>
 <translation id="7035701931849773472">Citas opcijas</translation>
-<translation id="5813862251770201080">Pierakstieties pārlūkā Brave, izmantojot savu AI Wize kontu.</translation>
+<translation id="5813862251770201080">Pierakstieties pārlūkā AI Wize, izmantojot savu AI Wize kontu.</translation>
 <translation id="7054588988317389591">Vai vēlaties iespējot attēlu aprakstus?</translation>
 <translation id="7055152154916055070">Novirzīšana ir bloķēta:</translation>
 <translation id="7063006564040364415">Nevarēja izveidot savienojumu ar sinhronizācijas serveri.</translation>
 <translation id="7071521146534760487">Pārvaldīt kontu</translation>
 <translation id="707155805709242880">Tālāk izvēlieties, kādus datus sinhronizēt.</translation>
 <translation id="7077143737582773186">SD karte</translation>
-<translation id="2374582967527009647">Vietrāži URL tiek sūtīti uz funkciju Droša pārlūkošana, lai tos pārbaudītu. Lai palīdzētu atklāt jaunus draudus, tiek nosūtīti arī nelieli datu paraugi, kas ietver lapas, lejupielādes, paplašinājumu aktivitāti un sistēmas informāciju. Lai aizsargātu jūs dažādās Brave lietotnēs, šie dati tiek īslaicīgi saistīti ar jūsu Brave kontu, kad esat pierakstījies.</translation>
+<translation id="2374582967527009647">Vietrāži URL tiek sūtīti uz funkciju Droša pārlūkošana, lai tos pārbaudītu. Lai palīdzētu atklāt jaunus draudus, tiek nosūtīti arī nelieli datu paraugi, kas ietver lapas, lejupielādes, paplašinājumu aktivitāti un sistēmas informāciju. Lai aizsargātu jūs dažādās AI Wize lietotnēs, šie dati tiek īslaicīgi saistīti ar jūsu AI Wize kontu, kad esat pierakstījies.</translation>
 <translation id="5499149312981370855">Izvēlieties, vai iekļaut AI Wize vēsturi, lai iegūtu personalizētākas iespējas AI Wize pakalpojumos.</translation>
-<translation id="8208853227947884571">Brave jaunākā versija jau ir instalēta.</translation>
+<translation id="8208853227947884571">AI Wize jaunākā versija jau ir instalēta.</translation>
 <translation id="7105047059074518658">Pierakstieties, lai atvieglotu pārlūkošanu dažādās ierīcēs</translation>
 <translation id="7106762743910369165">Pārlūku pārvalda jūsu organizācija</translation>
 <translation id="7116588989735740310">Sinhronizējiet cilnes un vēsturi, lai varētu atgriezties citās ierīcēs apmeklētajās vietnēs</translation>
@@ -1144,10 +1144,10 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7177873915659574692">Nevar izveidot kvadrātkodu. URL garums pārsniedz <ph name="CHARACTER_LIMIT"/> rakstzīmes.</translation>
 <translation id="7180611975245234373">Atsvaidzināt</translation>
 <translation id="7183693674623539380">Ciļņu grupa — <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Tiek nodrošināta jūsu aizsardzība pārlūkprogrammā Brave. Šis režīms var tikt izmantots jūsu drošības uzlabošanai citās AI Wize lietotnēs, kad esat pierakstījies.</translation>
+<translation id="8355565210555500987">Tiek nodrošināta jūsu aizsardzība pārlūkprogrammā AI Wize. Šis režīms var tikt izmantots jūsu drošības uzlabošanai citās AI Wize lietotnēs, kad esat pierakstījies.</translation>
 <translation id="7191430249889272776">Cilne tika atvērta fonā.</translation>
 <translation id="7196215469483532480">Paskaidrojums par konfidencialitātes ceļvedi ir atvērts pilna ekrāna augstumā</translation>
-<translation id="1014116676551114642">Brave saturs jauniešiem — izslēgts</translation>
+<translation id="1014116676551114642">AI Wize saturs jauniešiem — izslēgts</translation>
 <translation id="7207760545532569765">Atjaunot cilnes kā jaunas fona cilnes. Ciļņu skaits ir <ph name="TAB_COUNT"/>.</translation>
 <translation id="7221869452894271364">Pārlādēt šo lapu</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{Tiek gaidīta 1 lejupielāde}zero{Tiek gaidītas # lejupielādes}one{Tiek gaidīta # lejupielāde}other{Tiek gaidītas # lejupielādes}}</translation>
@@ -1157,7 +1157,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="4957342254208357193">Android ierīcē var būt līdzīgs iestatījums. Ja pārlūkā AI Wize un jūsu Android ierīcē ir ieslēgta reklāmu izvērtēšana, uzņēmumi var izvērtēt reklāmas efektivitāti jūsu apmeklētajās vietnēs un izmantotajās lietotnēs.</translation>
 <translation id="727288900855680735">Vai iesniegt kodu <ph name="ONE_TIME_CODE"/> vietnē <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Bloķēta vietne</translation>
-<translation id="7949597606523411684">Pārlūkā AI Wize tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. Varat arī bloķēt kādas tēmas, ja nevēlaties, lai pārlūks AI Wize tās kopīgotu ar vietnēm. Uzziniet vairāk par <ph name="BEGIN_LINK"/>reklāmu konfidencialitātes pārvaldību pārlūkā Brave<ph name="END_LINK"/>.</translation>
+<translation id="7949597606523411684">Pārlūkā AI Wize tiek automātiski dzēstas tēmas, kas ir vecākas par četrām nedēļām. Turpinot pārlūkošanu, tēma var tikt atkārtoti iekļauta sarakstā. Varat arī bloķēt kādas tēmas, ja nevēlaties, lai pārlūks AI Wize tās kopīgotu ar vietnēm. Uzziniet vairāk par <ph name="BEGIN_LINK"/>reklāmu konfidencialitātes pārvaldību pārlūkā AI Wize<ph name="END_LINK"/>.</translation>
 <translation id="4561646469134805137">Kamēr rakstāt, AI Wize sūta adreses joslas vai meklēšanas lodziņa saturu uz jūsu noklusējuma meklētājprogrammu.</translation>
 <translation id="7289303553784750393">Ja esat tiešsaistē, taču šī problēma atkārtojas, varat izmēģināt citus veidus, kā turpināt darbu vietnē <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Pārdēvēšana nav pieejama</translation>
@@ -1169,7 +1169,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7313188324932846546">Pieskarieties, lai iestatītu sinhronizāciju</translation>
 <translation id="7324354302972299151">Sūtīt pieprasījumu “Do Not Track”</translation>
 <translation id="7332075081379534664">Pierakstīšanās sekmīga</translation>
-<translation id="8716243540027092298">Aktivizējiet sinhronizāciju, lai saņemtu atbilstošāko saturu no Brave.</translation>
+<translation id="8716243540027092298">Aktivizējiet sinhronizāciju, lai saņemtu atbilstošāko saturu no AI Wize.</translation>
 <translation id="7339898014177206373">Jauns logs</translation>
 <translation id="7340958967809483333">Discover iespējas</translation>
 <translation id="7352339641508007922">Velciet, lai izveidotu garu ekrānuzņēmumu</translation>
@@ -1185,15 +1185,15 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7397416715506917976">Skatīt lapu ieskatus</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Citi, sarakstā ir 1 fails}zero{Citi, sarakstā ir # faili}one{Citi, sarakstā ir # fails}other{Citi, sarakstā ir # faili}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Brave pirmās palaišanas pieredze</translation>
-<translation id="5341476184053934779">Brave konta lietotājs</translation>
+<translation id="724102042129299115">AI Wize pirmās palaišanas pieredze</translation>
+<translation id="5341476184053934779">AI Wize konta lietotājs</translation>
 <translation id="741204030948306876">Jā, piekrītu</translation>
 <translation id="7419565702166471774">Vienmēr izmantot drošus savienojumus</translation>
 <translation id="7431991332293347422">Kontrolējiet, kā jūsu pārlūkošanas vēsture tiek izmantota Meklēšanas un cita satura personalizēšanai</translation>
 <translation id="7435356471928173109">Izslēdza jūsu administrators</translation>
-<translation id="6234515504547364178">Izrakstīšanās no pārlūka Brave</translation>
-<translation id="6147816961713837040">Brave serveriem tiek nosūtīta pieslēpta URL daļa, izmantojot konfidencialitātes serveri, kas slēpj jūsu IP adresi.</translation>
-<translation id="3699067418237091329">Jūs tiksiet izrakstīts no lielākās daļas vietņu. Jūs netiksiet izrakstīts no Brave konta.</translation>
+<translation id="6234515504547364178">Izrakstīšanās no pārlūka AI Wize</translation>
+<translation id="6147816961713837040">AI Wize serveriem tiek nosūtīta pieslēpta URL daļa, izmantojot konfidencialitātes serveri, kas slēpj jūsu IP adresi.</translation>
+<translation id="3699067418237091329">Jūs tiksiet izrakstīts no lielākās daļas vietņu. Jūs netiksiet izrakstīts no AI Wize konta.</translation>
 <translation id="7453810262525006706">Sakļaut skatā no sāna</translation>
 <translation id="7454641608352164238">Nepietiek vietas</translation>
 <translation id="7455988709578031708">Pamatojoties uz jūsu pārlūkošanas vēsturi. Šis iestatījums ir ieslēgts.</translation>
@@ -1207,21 +1207,21 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7482656565088326534">Priekšskatījuma cilne</translation>
 <translation id="7484997419527351112">Funkcija Discover — izslēgta</translation>
 <translation id="7485033510383818941">Lai atsvaidzinātu plūsmas saturu, velciet lapu uz leju.</translation>
-<translation id="749294055653435199">Tehnoloģija Brave Lens šajā ierīcē nav pieejama.</translation>
+<translation id="749294055653435199">Tehnoloģija AI Wize Lens šajā ierīcē nav pieejama.</translation>
 <translation id="7493994139787901920"><ph name="VERSION"/> (atjaunināts: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Šī tēma atkal var tikt noteikta.</translation>
 <translation id="7498271377022651285">Lūdzu, uzgaidiet...</translation>
-<translation id="8156131600798538460">Lai izrakstītos no sava AI Wize konta visās vietnēs, <ph name="BEGIN_LINK1"/>izrakstieties no pārlūka Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Lai izrakstītos no sava AI Wize konta visās vietnēs, <ph name="BEGIN_LINK1"/>izrakstieties no pārlūka AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Atjauninājumi nav pieejami</translation>
 <translation id="7507207699631365376">Skatīt šī pakalpojumu sniedzēja <ph name="BEGIN_LINK"/>konfidencialitātes politiku<ph name="END_LINK"/></translation>
 <translation id="7514365320538308">Lejupielādēt</translation>
 <translation id="7518079994230200553">Šī iespēja pašlaik nav pieejama.</translation>
 <translation id="751961395872307827">Nevar izveidot savienojumu ar vietni.</translation>
 <translation id="752220631458524187">Kad esat pabeidzis darbu, atvienojiet tālruni</translation>
-<translation id="7523960634226602883">Meklēt ar kameru, izmantojot Brave Lens</translation>
+<translation id="7523960634226602883">Meklēt ar kameru, izmantojot AI Wize Lens</translation>
 <translation id="7539698981064401140">Ciļņu un vēstures sinhronizēšana</translation>
 <translation id="7562080006725997899">Notiek pārlūkošanas datu notīrīšana</translation>
-<translation id="7814200940910057384">Brave dati tika notīrīti</translation>
+<translation id="7814200940910057384">AI Wize dati tika notīrīti</translation>
 <translation id="7577900504646297215">Pārvaldīt intereses</translation>
 <translation id="757855969265046257">{FILES,plural, =1{Lejupielādēts <ph name="FILES_DOWNLOADED_ONE"/> fails}zero{Lejupielādēti <ph name="FILES_DOWNLOADED_MANY"/> faili}one{Lejupielādēts <ph name="FILES_DOWNLOADED_MANY"/> fails}other{Lejupielādēti <ph name="FILES_DOWNLOADED_MANY"/> faili}}</translation>
 <translation id="7581273696622423628">Piedalīties aptaujā</translation>
@@ -1234,7 +1234,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="649070405679044769">Pierakstījies AI Wize kontā kā</translation>
 <translation id="7612989789287281429">Notiek pierakstīšanās…</translation>
 <translation id="7619072057915878432">Neizdevās lejupielādēt failu <ph name="FILE_NAME"/>, jo radās tīkla kļūdas.</translation>
-<translation id="7207456302801184289">Laipni lūdzam pārlūkā Brave</translation>
+<translation id="7207456302801184289">Laipni lūdzam pārlūkā AI Wize</translation>
 <translation id="7630202231528827509">Piegādātāja URL</translation>
 <translation id="7638584964844754484">Nepareiza ieejas frāze</translation>
 <translation id="7641339528570811325">Pārlūkošanas datu notīrīšana…</translation>
@@ -1248,12 +1248,12 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="7682724950699840886">Ņemiet vērā šos ieteikumus: atbrīvojiet ierīcē vietu un mēģiniet eksportēt vēlreiz.</translation>
 <translation id="7686086654630106285">Vairāk par vietnēs ieteiktajām reklāmām</translation>
 <translation id="2667018639405889513">Dažas no jūsu apmeklētajām lapām ir ielādētas iepriekš. Lapas var tikt ielādētas iepriekš, izmantojot AI Wize serverus, ja novirzīšana tiek veikta no AI Wize vietnes.</translation>
-<translation id="7795837497684113327">Jūsu ierīcē nevarēja atvērt pārlūku Brave. Lai novērstu problēmu, no lietotņu veikala lejupielādējiet jaunāko AI Wize atjauninājumu.</translation>
+<translation id="7795837497684113327">Jūsu ierīcē nevarēja atvērt pārlūku AI Wize. Lai novērstu problēmu, no lietotņu veikala lejupielādējiet jaunāko AI Wize atjauninājumu.</translation>
 <translation id="7691043218961417207">Izpētiet saturu, kam sekot</translation>
 <translation id="7697383401610880082">Vilkšanas turis</translation>
 <translation id="7698359219371678927">Izveidojiet e-pasta ziņojumu lietotnē <ph name="APP_NAME"/>.</translation>
 <translation id="7702029078562412515">Vaicājumu elementi</translation>
-<translation id="3434187853488406814">Dzēšot pārlūkošanas datus, jūs netiekat izrakstīts no AI Wize konta. Lai to izdarītu, <ph name="BEGIN_LINK1"/>izrakstieties no pārlūka Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Dzēšot pārlūkošanas datus, jūs netiekat izrakstīts no AI Wize konta. Lai to izdarītu, <ph name="BEGIN_LINK1"/>izrakstieties no pārlūka AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Izmantot mobilos datus</translation>
 <translation id="7709918231054955894">Iegūstiet visas savas cilnes</translation>
 <translation id="7733878270780732638">Ierīcē nepietiek vietas.</translation>
@@ -1279,7 +1279,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8439902729344548970">Kad esat pierakstījies, šie dati tiek saistīti ar jūsu AI Wize kontu, lai aizsargātu jūs dažādos AI Wize pakalpojumos, piemēram, palielinot aizsardzību pakalpojumā Gmail pēc drošības incidenta.</translation>
 <translation id="78270725016672455">Lai varētu pierakstīties vietnē, datorā tiek pieprasīta atļauja reģistrēt šo ierīci</translation>
 <translation id="7844171778363018843">Sinhronizēšanai nav atlasīti dati.</translation>
-<translation id="7068829570137757602">Brave pakalpojumi</translation>
+<translation id="7068829570137757602">AI Wize pakalpojumi</translation>
 <translation id="784934925303690534">Laika periods</translation>
 <translation id="7851858861565204677">Citas ierīces</translation>
 <translation id="7853202427316060426">Aktivitāte</translation>
@@ -1289,7 +1289,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="78707286264420418">Pārlūkam <ph name="PRODUCT_NAME"/> ir nepieciešama atļauja “Tuvumā esošās ierīces”, lai varētu izveidot savienojumu ar jūsu ierīci.</translation>
 <translation id="7875915731392087153">Izveidojiet e-pasta ziņojumu.</translation>
 <translation id="7876243839304621966">Noņemt visu</translation>
-<translation id="6143689084714664628">Atvērta pārlūkā Brave</translation>
+<translation id="6143689084714664628">Atvērta pārlūkā AI Wize</translation>
 <translation id="7887174313503389866">Izmantojiet svarīgāko konfidencialitātes un drošības vadīklu ceļvedi. Papildu opcijas skatiet atsevišķos iestatījumos.</translation>
 <translation id="7896724475402191389">Saturs jauniešiem — izslēgts</translation>
 <translation id="7903184275147100332">Tas var ilgt kādu brīdi</translation>
@@ -1341,7 +1341,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="808747664143081553">Izveidots savienojums ar ierīci</translation>
 <translation id="8090732854597034573">Ja vajadzīga palīdzība, aiciniet palīgā vecākus</translation>
 <translation id="8101414242770404289">Nav ciļņu no šāda laika perioda: <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Turpinot jūs piekrītat <ph name="BEGIN_TOS_LINK"/>pakalpojumu sniegšanas noteikumiem<ph name="END_TOS_LINK"/>.\nLai palīdzētu uzlabot lietotni, uzņēmumam AI Wize tiek sūtīti lietojuma un avāriju dati no pārlūkprogrammas Brave. <ph name="BEGIN_UMA_LINK"/>Pārvaldīt<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Turpinot jūs piekrītat <ph name="BEGIN_TOS_LINK"/>pakalpojumu sniegšanas noteikumiem<ph name="END_TOS_LINK"/>.\nLai palīdzētu uzlabot lietotni, uzņēmumam AI Wize tiek sūtīti lietojuma un avāriju dati no pārlūkprogrammas AI Wize. <ph name="BEGIN_UMA_LINK"/>Pārvaldīt<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Aizvērt kārtošanas opcijas</translation>
 <translation id="2919733817273403520">Palīdzēt uzlabot AI Wize funkcijas un veiktspēju</translation>
@@ -1369,7 +1369,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8243077599929149377">Lietotājvārda pievienošana</translation>
 <translation id="8250920743982581267">Dokumenti</translation>
 <translation id="8255617931166444521">Vietnes var izmantot jūsu sīkfailus tikai jūsu pārlūkošanas darbību skatīšanai savā vietnē.</translation>
-<translation id="2876689296031086375">Tā kā iepriekš ielādētās lapas ir šifrētas, AI Wize neiegūs nekādu informāciju par iepriekš ielādēto lapu saturu. AI Wize serveri iegūs informāciju par to, kuras vietnes ir privāti iepriekš ielādētas. Šī informācija tiek izmantota tikai lapu iepriekšējai ielādei, un tā nav saistīta ar citu informāciju no Brave konta.</translation>
+<translation id="2876689296031086375">Tā kā iepriekš ielādētās lapas ir šifrētas, AI Wize neiegūs nekādu informāciju par iepriekš ielādēto lapu saturu. AI Wize serveri iegūs informāciju par to, kuras vietnes ir privāti iepriekš ielādētas. Šī informācija tiek izmantota tikai lapu iepriekšējai ielādei, un tā nav saistīta ar citu informāciju no AI Wize konta.</translation>
 <translation id="8260126382462817229">Mēģiniet pierakstīties vēlreiz</translation>
 <translation id="8261506727792406068">Dzēst</translation>
 <translation id="82619448491672958">Skatīt citas cilnes</translation>
@@ -1388,7 +1388,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8368001212524806591">Izsekot cenu</translation>
 <translation id="8387617938027387193">Apstipriniet, ka tas esat jūs</translation>
 <translation id="8393700583063109961">Sūtīt ziņojumu</translation>
-<translation id="7651600795135059130">Vietrāži URL tiek pārbaudīti, salīdzinot ar nedrošo vietņu sarakstu, kas ir saglabāts pārlūkprogrammā Brave.</translation>
+<translation id="7651600795135059130">Vietrāži URL tiek pārbaudīti, salīdzinot ar nedrošo vietņu sarakstu, kas ir saglabāts pārlūkprogrammā AI Wize.</translation>
 <translation id="8402673309244746971">Pāriet uz sadaļu “Sekojat”</translation>
 <translation id="8413126021676339697">Rādīt pilnu vēsturi</translation>
 <translation id="5348884013239264115">Tiek nodrošināta aizsardzība pret zināmām bīstamām vietnēm, lejupielādēm un paplašinājumiem. Kad apmeklējat kādu vietni, pārlūks AI Wize nosūta AI Wize serveriem pieslēptu URL daļu, izmantojot konfidencialitātes serveri, kas slēpj jūsu IP adresi. Ja vietnē tiek veiktas aizdomīgas darbības, tiek nosūtīti arī pilni URL un lapas satura fragmenti.</translation>
@@ -1402,7 +1402,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8438566539970814960">Uzlabot meklēšanu un pārlūkošanu</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> — valoda ir sagatavota. Restartējiet lietotni <ph name="APP_NAME"/>.</translation>
 <translation id="8442258441309440798">Nav pieejams neviens raksts</translation>
-<translation id="4058091506841967397">Nevar atjaunināt Brave</translation>
+<translation id="4058091506841967397">Nevar atjaunināt AI Wize</translation>
 <translation id="8445448999790540984">Nevar eksportēt paroles</translation>
 <translation id="8446884382197647889">Uzziniet vairāk</translation>
 <translation id="8453310803815879010">Sākt dinozaura spēli</translation>
@@ -1418,7 +1418,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8497480609928300907">Paskaidrojums par konfidencialitātes ceļvedi</translation>
 <translation id="8497726226069778601">Šeit vēl nekā nav...</translation>
 <translation id="8501423924927196358">Lapu ieskatu ielādes indikators</translation>
-<translation id="230699814587342492">Brave paroles</translation>
+<translation id="230699814587342492">AI Wize paroles</translation>
 <translation id="8503813439785031346">Lietotājvārds</translation>
 <translation id="8505766168025405649">Skatiet paziņojumu par lejupielādes statusu.</translation>
 <translation id="8506357771923193001">Šeit būs atrodamas jūsu lejupielādes.</translation>
@@ -1437,9 +1437,9 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8583805026567836021">Konta datu dzēšana</translation>
 <translation id="859046281437143747">Izsekojiet cenu, izmantojot pogu Citas opcijas</translation>
 <translation id="860043288473659153">Bankas kartes īpašnieka vārds</translation>
-<translation id="1673533133011266617">Lapa “Pierakstīšanās pārlūkā Brave”, aizvērta.</translation>
+<translation id="1673533133011266617">Lapa “Pierakstīšanās pārlūkā AI Wize”, aizvērta.</translation>
 <translation id="860282621117673749">Brīdinājumi par cenu kritumu</translation>
-<translation id="5784514951651328424">Jūsu Brave kontam var būt citu veidu pārlūkošanas vēstures dati vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Jūsu AI Wize kontam var būt citu veidu pārlūkošanas vēstures dati vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Vai atvērt lejupielādētajā saturā norādīto ieteikto URL?</translation>
 <translation id="8621068256433641644">tālrunī</translation>
 <translation id="8636825310635137004">Ieslēdziet sinhronizāciju, lai būtu pieejamas cilnes no citām jūsu ierīcēm.</translation>
@@ -1485,7 +1485,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8856931513242997049">Paziņojumu atļaujas plūsma ir aizvērta</translation>
 <translation id="1984646864943401749">Tiek nosūtīti dažu apmeklēto lapu vietrāži URL, ierobežota sistēmas informācija un noteiktu lapu saturs AI Wize serveriem, lai palīdzētu atklāt jaunus apdraudējumus un aizsargāt visus tīmekļa lietotājus.</translation>
 <translation id="8909135823018751308">Kopīgot...</translation>
-<translation id="2684652081942622950">Brave konts</translation>
+<translation id="2684652081942622950">AI Wize konts</translation>
 <translation id="8921980840204105660">Veiciet sinhronizāciju, lai iegūtu grāmatzīmes no savām pārējām ierīcēm</translation>
 <translation id="8922289737868596582">Izmantojiet pogu Vairāk opciju, lai lejupielādētu lapas un piekļūtu tām bezsaistē</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Uzzināt vairāk<ph name="END_LINK"/></translation>
@@ -1500,9 +1500,9 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="8987736167266086032">Turpiniet darbu no vietas, kur to pārtraucāt</translation>
 <translation id="8996847606757455498">Izvēlēties citu nodrošinātāju</translation>
 <translation id="8998289560386111590">Nav pieejams jūsu ierīcē</translation>
-<translation id="3275122921244685452">Jūs pierakstāties kontā, kas tiek pārvaldīts domēnā <ph name="MANAGED_DOMAIN"/>, un sniedzat tā administratoram kontroli pār saviem AI Wize datiem. Jūsu dati tiks neatgriezeniski saistīti ar šo kontu. Izrakstoties no pārlūka Brave, jūsu dati tiks dzēsti no šīs ierīces, taču tie tiks saglabāti jūsu Brave kontā.</translation>
+<translation id="3275122921244685452">Jūs pierakstāties kontā, kas tiek pārvaldīts domēnā <ph name="MANAGED_DOMAIN"/>, un sniedzat tā administratoram kontroli pār saviem AI Wize datiem. Jūsu dati tiks neatgriezeniski saistīti ar šo kontu. Izrakstoties no pārlūka AI Wize, jūsu dati tiks dzēsti no šīs ierīces, taču tie tiks saglabāti jūsu AI Wize kontā.</translation>
 <translation id="8998837250940831980">Nevarēja minimizēt cilni. Vēlāk mēģiniet vēlreiz.</translation>
-<translation id="9012585441087414258">Tiek nodrošināta aizsardzība pret zināmām bīstamām vietnēm, lejupielādēm un paplašinājumiem. Ja lapas darbība ir aizdomīga, funkcijai “Brave droša pārlūkošana” tiek nosūtīti vietrāži URL un lapas satura fragmenti.</translation>
+<translation id="9012585441087414258">Tiek nodrošināta aizsardzība pret zināmām bīstamām vietnēm, lejupielādēm un paplašinājumiem. Ja lapas darbība ir aizdomīga, funkcijai “AI Wize droša pārlūkošana” tiek nosūtīti vietrāži URL un lapas satura fragmenti.</translation>
 <translation id="9019199799064251516">Vai turpināt, neizmantojot automašīnas profila bloķēšanu?</translation>
 <translation id="9022774213089566801">Bieži apmeklētas vietnes</translation>
 <translation id="9022871169049522985">Vietnes un reklāmdevēji var izvērtēt savu reklāmu veiktspēju</translation>
@@ -1536,7 +1536,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="9158770349521403363">Kopīgot tikai saturu</translation>
 <translation id="9159716826369098114">Atjaunot ciļņu grupu kā jaunu fona ciļņu grupu. Ciļņu skaits šajā grupā ir <ph name="TAB_COUNT"/>.</translation>
 <translation id="9169507124922466868">Navigācijas vēsture ir atvērta līdz pusei.</translation>
-<translation id="4947625801334180582">Brave beta versija</translation>
+<translation id="4947625801334180582">AI Wize beta versija</translation>
 <translation id="9190276265094487094">Jūsu vēsture būs pieejama visās sinhronizētajās ierīcēs, tāpēc varēsiet turpināt iesākto.</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{Pārbaudīts: pirms 1 minūtes}zero{Pārbaudīts: pirms # minūtēm}one{Pārbaudīts: pirms # minūtes}other{Pārbaudīts: pirms # minūtēm}}</translation>
 <translation id="9204021776105550328">Notiek dzēšana</translation>
@@ -1547,8 +1547,8 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="9212845824145208577">Zemāku ekrāna daļu nevar ietvert. Mēģiniet iegūt ekrānuzņēmumu no zemākas vietas lapā.</translation>
 <translation id="9219103736887031265">Attēli</translation>
 <translation id="6946179564366058239">Kad vietnē tiek piedāvāts privāti iepriekš ielādēt saites vietnes lapā, AI Wize bez sīkfailiem šifrē un iepriekš ielādē lapas, izmantojot AI Wize serverus. Tādējādi jūsu identitāte tiek slēpta no iepriekš ielādētās lapas īpašniekiem.</translation>
-<translation id="4596514158372210596">Brave darbību noņemšana no Digitālās labjutības</translation>
-<translation id="2830145431802238213">Izmantojiet Brave Brave vienkāršoto režīmu.</translation>
+<translation id="4596514158372210596">AI Wize darbību noņemšana no Digitālās labjutības</translation>
+<translation id="2830145431802238213">Izmantojiet AI Wize AI Wize vienkāršoto režīmu.</translation>
 <translation id="928550791203542716">Jūs sekojat vietnei <ph name="SITE_NAME"/>.</translation>
 <translation id="93533588269984624">Visas paroles tiks lejupielādētas jūsu ierīcē un noņemtas no šī pārlūka: <ph name="CHROME_CHANNEL"/>.</translation>
 <translation id="938850635132480979">Kļūda: <ph name="ERROR_CODE"/></translation>
@@ -1567,7 +1567,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="996149300115483134">Plūsmas kartītes izvēlne ir aizvērta</translation>
 <translation id="5186185447130319458">Inkognito</translation>
 <translation id="79269250264141507">Kad rakstāt adreses joslā vai meklēšanas lodziņā, to, ko rakstāt, AI Wize nosūta uz jūsu noklusējuma meklētājprogrammu, lai iegūtu labākus ieteikumus. Inkognito režīmā šī opcija ir izslēgta.</translation>
-<translation id="5711390076756601471">Bloķēt privātās cilnes, kad atstājat Brave</translation>
+<translation id="5711390076756601471">Bloķēt privātās cilnes, kad atstājat AI Wize</translation>
 <translation id="1014490034578104945">Izmantojiet ekrāna bloķētāju, lai redzētu atvērtas inkognito cilnes</translation>
 <translation id="5722020415664104421">Bloķēt, kamēr tiek izmantots inkognito režīms</translation>
 <translation id="8915136961932734044">Inkognito režīmā vietnes nevar izmantot jūsu sīkfailus, lai sekotu jūsu darbībām dažādās vietnēs, piemēram, lai individuāli pielāgotu reklāmas. Dažām lapām var pārstāt darboties atsevišķas funkcijas.</translation>
@@ -1582,7 +1582,7 @@ Piemēram, dažas vietnes, reaģējot uz šo pieprasījumu, var rādīt jums rek
 <translation id="5248610748197335423">Aizvērt visas inkognito cilnes</translation>
 <translation id="4660964651149493586">Atbloķēt inkognito režīmu</translation>
 <translation id="5278260521317049275">Ieslēdziet privāto bloķēšanu</translation>
-<translation id="6302653771627628530">Izejot no Brave, privātās cilnes tiks aizvērtas</translation>
+<translation id="6302653771627628530">Izejot no AI Wize, privātās cilnes tiks aizvērtas</translation>
 <translation id="3763131702135887799">Palīdziet uzlabot AI Wize profiliem, kuri izmanto to tāpat kā jūs</translation>
 <translation id="4167670741834902166">Jauna inkognito cilne</translation>
 <translation id="9148151251783962691">Lai pārlūkotu privāti šajā ierīcē, izmēģiniet Inkognito režīmu</translation>

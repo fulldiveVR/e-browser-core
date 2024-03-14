@@ -22,7 +22,7 @@
 <translation id="266935134738038806">Joan webgunera</translation>
 <translation id="2759453070259087442">Zabaldu <ph name="NUMBER_OF_TABS"/> fitxa dituen <ph name="TITLE_OF_GROUP"/> fitxa taldea.</translation>
 <translation id="2801787514987684416">Dendari buruzko informazioa ikusi nahi duzu?</translation>
-<translation id="4691798003247738043">Brave | Denda honi buruz</translation>
+<translation id="4691798003247738043">AI Wize | Denda honi buruz</translation>
 <translation id="2977480621796371840">Kendu taldetik</translation>
 <translation id="3008554597174452548">Utzi produktuaren jarraipena egiteari</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> merkeagoa da <ph name="PRODUCT_NAME"/> produktua</translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">Ikusi dendari buruzko informazioa, pantailaren goialdean dago erabilgarri</translation>
 <translation id="5558362125926932819">Itxi <ph name="NUMBER_OF_TABS"/> fitxa dituen fitxa taldea</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> fitxa taldekatu dira</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave-ko <ph name="TABS_COUNT_ONE"/> esteka}other{Brave-ko <ph name="TABS_COUNT_MANY"/> esteka}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{AI Wize-ko <ph name="TABS_COUNT_ONE"/> esteka}other{AI Wize-ko <ph name="TABS_COUNT_MANY"/> esteka}}</translation>
 <translation id="575494663145460764">Prezio-jaitsierei buruzko alertak jaso nahi dituzu?</translation>
 <translation id="58326064309361797">Fitxak taldekatzeko, arrasta itzazu</translation>
 <translation id="5846292395804797011">Itxi <ph name="NUMBER_OF_TABS"/> fitxa dituen <ph name="TITLE_OF_GROUP"/> fitxa taldea</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(dendaren balorazioa)</translation>
 <translation id="6333260925957816943">Denda honi buruzko informazioa</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{Desegin hautatutako <ph name="TABS_COUNT_ONE"/> fitxaren taldea}other{Desegin hautatutako <ph name="TABS_COUNT_MANY"/> fitxen taldea}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Brave-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak. Zure ezkutuko moduko fitxa ez da egongo erabilgarri.}other{Brave-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak. Zure ezkutuko moduko # fitxak ez dira egongo erabilgarri.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{AI Wize-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak. Zure ezkutuko moduko fitxa ez da egongo erabilgarri.}other{AI Wize-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak. Zure ezkutuko moduko # fitxak ez dira egongo erabilgarri.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> fitxa}other{<ph name="TABS_COUNT_MANY"/> fitxa}}</translation>
 <translation id="6549021453810473782">Ikusi dendari buruzko informazioa</translation>
 <translation id="6562820390860419811">Eraman fitxa ezkerrera</translation>
 <translation id="6615455863669487791">Erakutsi</translation>
-<translation id="6398241160085205003">Brave-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak.</translation>
+<translation id="6398241160085205003">AI Wize-ren menu nagusiko Azken fitxak atalean ikusiko dituzu itxitako fitxak.</translation>
 <translation id="6840760312327750441">Fitxak taldekatzeko, eduki fitxa bat sakatuta eta, ondoren, arrasta ezazu beste batera.</translation>
 <translation id="6856809498882026482">Ezkutatu hautespen anizkoitzeko modua</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Partekatu fitxa}other{Partekatu fitxak}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">Ikusi dendaren itzultze-gidalerroak</translation>
 <translation id="7352298686197644113">Ikusi irekita dauzkazun fitxetako zein produkturen prezioa jaitsi den</translation>
 <translation id="753732157349120914">Fitxa-aldatzailea</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave-tik datorren <ph name="REVIEWS_COUNT_ONE"/> iritzi}other{Brave-tik datozen <ph name="REVIEWS_COUNT_MANY"/> iritzi}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{AI Wize-tik datorren <ph name="REVIEWS_COUNT_ONE"/> iritzi}other{AI Wize-tik datozen <ph name="REVIEWS_COUNT_MANY"/> iritzi}}</translation>
 <translation id="7559245342362162951">Erakutsi taldearen fitxak pantaila osoko saretan</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Partekatu hautatutako <ph name="TABS_COUNT_ONE"/> fitxa}other{Partekatu hautatutako <ph name="TABS_COUNT_MANY"/> fitxak}}</translation>
 <translation id="7792771145871471484">Berrikusi iradokizunak.</translation>

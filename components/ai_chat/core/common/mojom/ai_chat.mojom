@@ -26,6 +26,7 @@ enum APIError {
 };
 
 enum ModelEngineType {
+  OPENAI_REMOTE,
   LLAMA_REMOTE,
   CLAUDE_REMOTE,
 };

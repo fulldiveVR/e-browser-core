@@ -9,7 +9,7 @@ RegisterPolymerTemplateModifications({
     'settings-safety-check-page': (templateContent) => {
         const safetyCheckParentLabel = templateContent.querySelector('.flex,.cr-padded-text')
         if (!safetyCheckParentLabel) {
-            console.error('[Brave Settings Overrides] Could not find safetyCheckParentLabel on safety page.')
+            console.error('[AI Wize Settings Overrides] Could not find safetyCheckParentLabel on safety page.')
         } else {
             safetyCheckParentLabel.style.cssText = 'padding-right: 32px;'
         }

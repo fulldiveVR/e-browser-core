@@ -23,7 +23,7 @@
   <message name="IDS_WELCOME_BOOKMARKS_REMOVED" desc="String read for accessibility to inform the user that several bookmarks were removed.">
     Bookmarks removed
   </message>
-  <message name="IDS_DEFAULT_BROWSER_CHANGED" desc="text notifying users that their default browser is successfully changed to Brave">
+  <message name="IDS_DEFAULT_BROWSER_CHANGED" desc="text notifying users that their default browser is successfully changed to AI Wize">
     AI Wize is your default browser
   </message>
 
@@ -33,7 +33,7 @@
   </message>
   <if expr="_google_chrome">
     <message name="IDS_WELCOME_GOOGLE_SEARCH" desc="Label for a button that creates a bookmark to google.com, this should be the name of the brand.">
-      Brave
+      AI Wize
     </message>
   </if>
   <message name="IDS_WELCOME_GOOGLE_GMAIL" desc="Label for a button that creates a bookmark to gmail.com, this should be the name of the brand.">
@@ -96,13 +96,13 @@
   </message>
 
   <!-- Landing view -->
-  <message name="IDS_WELCOME_LANDING_TITLE" desc="Title for the page that prompts user to start setting up their new Brave.">
+  <message name="IDS_WELCOME_LANDING_TITLE" desc="Title for the page that prompts user to start setting up their new AI Wize.">
     Make AI Wize your own
   </message>
-  <message name="IDS_WELCOME_LANDING_DESCRIPTION" desc="Description for the page that prompts user to start setting up their new Brave.">
+  <message name="IDS_WELCOME_LANDING_DESCRIPTION" desc="Description for the page that prompts user to start setting up their new AI Wize.">
     Set up your browser in a few simple steps
   </message>
-  <message name="IDS_WELCOME_LANDING_NEW_USER" desc="Label for a button that prompts new users to start setting up their new Brave.">
+  <message name="IDS_WELCOME_LANDING_NEW_USER" desc="Label for a button that prompts new users to start setting up their new AI Wize.">
     Get Started
   </message>
   <message name="IDS_WELCOME_LANDING_EXISTING_USER" desc="Label for a button that prompts existing users to sign in.">
@@ -117,7 +117,7 @@
 
   <!-- Sign-in view -->
   <message name="IDS_WELCOME_SIGNIN_VIEW_HEADER" desc="Header for the page that prompts user to sign in to chrome.">
-    Your Brave, Everywhere
+    Your AI Wize, Everywhere
   </message>
   <message name="IDS_WELCOME_SIGNIN_VIEW_SUB_HEADER" desc="Sub-header for the page that prompts user to sign in to chrome.">
     Sign in and turn on sync to get your bookmarks, passwords and more on all devices

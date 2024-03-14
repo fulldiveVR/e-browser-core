@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">ইয়ালৈ আনক</translation>
 <translation id="1014147525163127655"><ph name="ORIGIN"/>ৰ বাবে এই ডিভাইচটোত কোনো পাছকী নাই</translation>
 <translation id="1016498331642356377">আপোনাৰ কণ্ঠস্বৰৰ দ্বাৰা ক্ষিপ্ৰভাৱে সন্ধান কৰক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ, স্পৰ্শ কৰি ধৰি ৰাখক।</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925"><ph name="DEVICE_NAME"/>লৈ পঠিয়াই থকা হৈছে...</translation>
 <translation id="103269572468856066">এই ছাইট আৰু এপৰ পৰাও ডেটা মচিবনে?</translation>
 <translation id="1034259925032978114">ৱিণ্ড’খন খোলা আছে</translation>
@@ -16,21 +16,21 @@
 <translation id="1089606299949659462">পৰ্যালোচনা সম্পূৰ্ণ হ’ল!</translation>
 <translation id="1095761715416917775">নিশ্চিত হৈ লওক যে আপুনি যাতে নিজৰ ছিংক ডেটা সদায়ে এক্সেছ কৰিব পাৰে</translation>
 <translation id="1100066534610197918">গোটৰ নতুন টেবত খোলক</translation>
-<translation id="4660777881054855091">Braveক উন্নত কৰাত সহায় কৰিবনে?</translation>
+<translation id="4660777881054855091">AI Wizeক উন্নত কৰাত সহায় কৰিবনে?</translation>
 <translation id="1105960400813249514">স্ক্ৰীন কেপচাৰ</translation>
 <translation id="1108938384783527433">ইতিহাস ছিংক কৰক</translation>
 <translation id="1111673857033749125">আপোনাৰ ডিভাইচত ছেভ কৰা বুকমাৰ্কবোৰ ইয়াত দেখা পোৱা যাব।</translation>
 <translation id="1113597929977215864">সৰলীকৃত ভিউ প্ৰদর্শন কৰক</translation>
-<translation id="4470276443668654888">Google Payৰ পৰা পৰিশোধ পদ্ধতি আৰু ঠিকনা এনক্ৰিপ্ট কৰা নহ’ব। Braveৰ পৰা ব্ৰাউজিঙৰ ইতিহাস ছিংক কৰা নহ’ব।
-আপোনাৰ পাছফ্ৰেজ থকাগৰাকীয়েহে আপোনাৰ এনক্ৰিপ্ট কৰা ডেটা পঢ়িব পাৰিব। পাছফ্ৰেজটো Braveলৈ পঠিওৱা নহয় অথবা Braveএ সেয়া ষ্ট’ৰ নকৰে। আপুনি যদি নিজৰ পাছফ্ৰেজটো পাহৰে অথবা এই ছেটিংটো সলাব বিচাৰে, তেন্তে আপুনি ছিংক ৰিছেট কৰিব লাগিব। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
+<translation id="4470276443668654888">Google Payৰ পৰা পৰিশোধ পদ্ধতি আৰু ঠিকনা এনক্ৰিপ্ট কৰা নহ’ব। AI Wizeৰ পৰা ব্ৰাউজিঙৰ ইতিহাস ছিংক কৰা নহ’ব।
+আপোনাৰ পাছফ্ৰেজ থকাগৰাকীয়েহে আপোনাৰ এনক্ৰিপ্ট কৰা ডেটা পঢ়িব পাৰিব। পাছফ্ৰেজটো AI Wizeলৈ পঠিওৱা নহয় অথবা AI Wizeএ সেয়া ষ্ট’ৰ নকৰে। আপুনি যদি নিজৰ পাছফ্ৰেজটো পাহৰে অথবা এই ছেটিংটো সলাব বিচাৰে, তেন্তে আপুনি ছিংক ৰিছেট কৰিব লাগিব। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">আপোনাক বিপজ্জনক ৱেবছাইট, ডাউনল’ড অথবা এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষা প্ৰদান নকৰে। Gmail আৰু Searchৰ দৰে অন্য AI Wize সেৱাসমূহ, য’ত সুৰক্ষিত ব্ৰাউজিঙৰ সুবিধাটো উপলব্ধ, সেইবিলাকত আপুনি তথাপি এই সুবিধাটো পাব।</translation>
 <translation id="1129510026454351943">সবিশেষ: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">এই ছাইটসমূহ অনুবাদ কৰাৰ সুবিধা প্ৰদান নকৰিব</translation>
 <translation id="1145536944570833626">পূর্বে থকা ডেটা মচক।</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> Braveত খুলিব। অব্যাহত ৰাখি আপুনি <ph name="BEGIN_LINK1"/>Braveৰ সেৱাৰ চৰ্তাৱলী<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>Brave আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী<ph name="END_LINK2"/>ত সন্মতি দিয়ে।</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> AI Wizeত খুলিব। অব্যাহত ৰাখি আপুনি <ph name="BEGIN_LINK1"/>AI Wizeৰ সেৱাৰ চৰ্তাৱলী<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>AI Wize আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী<ph name="END_LINK2"/>ত সন্মতি দিয়ে।</translation>
 <translation id="115483310321669804">পাছৱৰ্ড <ph name="PASSWORD"/> ব্যৱহাৰ কৰক</translation>
 <translation id="1173894706177603556">নতুন নাম দিয়ক</translation>
-<translation id="7947699437047020219">Braveএ স্ক্ৰীনখনৰ আকাৰ সৰু হ’লে ম’বাইল ছাইটৰ বাবে অনুৰোধ কৰিব</translation>
+<translation id="7947699437047020219">AI Wizeএ স্ক্ৰীনখনৰ আকাৰ সৰু হ’লে ম’বাইল ছাইটৰ বাবে অনুৰোধ কৰিব</translation>
 <translation id="1177863135347784049">কাষ্টম</translation>
 <translation id="1181037720776840403">আঁতৰাওক</translation>
 <translation id="1181366777303791449"><ph name="MAIN_FRAME_ETLD_PLUS_ONE"/>ত</translation>
@@ -46,7 +46,7 @@
 <translation id="1231733316453485619">ছিংক অন কৰিবনে?</translation>
 <translation id="123724288017357924">কেশ্ব কৰা সমল অৱজ্ঞা কৰি বর্তমানৰ পৃষ্ঠাটো পুনৰ ল'ড কৰক</translation>
 <translation id="1239792311949352652">এই পৃষ্ঠাখন ক্ষিপ্ৰভাৱে শ্বেয়াৰ কৰক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ ছেটিঙলৈ যাওক।</translation>
-<translation id="3251315496493761426">Braveৰ কিটিপ</translation>
+<translation id="3251315496493761426">AI Wizeৰ কিটিপ</translation>
 <translation id="1240288207750131269"><ph name="LANG"/> ল’ড কৰি থকা হৈছে</translation>
 <translation id="1240903469550363138">অব্যাহত ৰাখিবলৈ, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>এ আপোনাৰ নাম, ইমেইল, ঠিকনা আৰু প্ৰ’ফাইল চিত্ৰ এই ছাইটটোৰ সৈতে শ্বেয়াৰ কৰিব। এই ছাইটটোৰ <ph name="BEGIN_LINK1"/>গোপনীয়তাৰ নীতি<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>সেৱাৰ চৰ্তাৱলী<ph name="END_LINK2"/> চাওক।</translation>
 <translation id="124116460088058876">অধিক ভাষা</translation>
@@ -54,7 +54,7 @@
 <translation id="1242883863226959074">ডিভাইচ</translation>
 <translation id="124678866338384709">বর্তমানৰ টেবটো বন্ধ কৰক</translation>
 <translation id="1246905108078336582">ক্লিপব’ৰ্ডৰ পৰা পৰামৰ্শ আঁতৰাবনে?</translation>
-<translation id="1996480094660735607">Brave ডুডল্‌: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="1996480094660735607">AI Wize ডুডল্‌: <ph name="DOODLE_DESCRIPTION"/></translation>
 <translation id="7074197713963877855">আপুনি এতিয়া অনুসৰণ শিতানত <ph name="SITE_NAME"/>ৰ পৰা আৰু সেইটোৰ সৈতে সম্পৰ্কিত সমল দেখা পাব। আপুনি অনুসৰণ কৰা ছাইট আৰু সন্ধানসমূহ আপোনাৰ AI Wize একাউণ্টত ছেভ কৰা হয়। আপুনি ছেটিঙলৈ গৈ যিকোনো সময়তে আপুনি কৰা অনুসৰণসমূহ পৰিচালনা কৰিব পাৰে।</translation>
 <translation id="1263231323834454256">পঢ়াৰ সূচী</translation>
 <translation id="1266864766717917324"><ph name="CONTENT_TYPE"/> শ্বেয়াৰ কৰিব পৰা নগ’ল</translation>
@@ -69,8 +69,8 @@
 <translation id="1303507811548703290"><ph name="DOMAIN"/> - <ph name="DEVICE_NAME"/>ৰ পৰা পঠিওৱা</translation>
 <translation id="1320912611264252795">বুকমাৰ্ক ছেভ কৰাৰ ফ্ল’ৰ ফ'ল্ডাৰসমূহ পূৰ্ণ উচ্চতাত খোলা হৈছে</translation>
 <translation id="1327257854815634930">নেভিগেশ্বন ইতিহাস খোলা আছে</translation>
-<translation id="6773423637732432200">Brave আপডে’ট কৰিব নোৱাৰি। অধিক বিকল্প</translation>
-<translation id="3169981355900570544">Braveৰ সুবিধাৰ শ্বৰ্টকাট</translation>
+<translation id="6773423637732432200">AI Wize আপডে’ট কৰিব নোৱাৰি। অধিক বিকল্প</translation>
+<translation id="3169981355900570544">AI Wizeৰ সুবিধাৰ শ্বৰ্টকাট</translation>
 <translation id="1344653310988386453">হাইলাইটৰ লিংক অন্তৰ্ভুক্ত কৰক</translation>
 <translation id="1347468774581902829">কার্যকলাপ পৰিচালনা কৰক</translation>
 <translation id="1360432990279830238">ছাইন আউট কৰি ছিংক বন্ধ কৰিবনে?</translation>
@@ -86,7 +86,7 @@
 <translation id="1407069428457324124">গাঢ় ৰঙৰ থীম</translation>
 <translation id="1407135791313364759">সকলো খোলক</translation>
 <translation id="1409879593029778104"><ph name="FILE_NAME"/> ফাইলটো আগৰেপৰা থকাৰ বাবে ডাউনল’ড কৰাত বাধা দিয়া হ’ল।</translation>
-<translation id="1853026300647876496">Braveৰ সৈতে যোগাযোগ কৰি থকা হৈছে। এই কার্যৰ বাবে অলপ সময় লাগিব পাৰে…</translation>
+<translation id="1853026300647876496">AI Wizeৰ সৈতে যোগাযোগ কৰি থকা হৈছে। এই কার্যৰ বাবে অলপ সময় লাগিব পাৰে…</translation>
 <translation id="1416550906796893042">এপ্লিকেশ্বন সংস্কৰণ</translation>
 <translation id="1428770807407000502">ছিংক অফ কৰিবনে?</translation>
 <translation id="1430915738399379752">প্ৰিণ্ট কৰক</translation>
@@ -95,7 +95,7 @@
 <translation id="1437543266176261764"><ph name="APP_NAME"/>ত চলি আছে</translation>
 <translation id="1448440926884431741">আপুনি ট্ৰেক কৰা প্ৰ’ডাক্টসমূহ বুকমাৰ্কত শৃংখলাবদ্ধ কৰক</translation>
 <translation id="1450753235335490080"><ph name="CONTENT_TYPE"/> শ্বেয়াৰ কৰিব নোৱাৰি</translation>
-<translation id="5598889255595678761">Braveৰ ভাষা বাছনি কৰক</translation>
+<translation id="5598889255595678761">AI Wizeৰ ভাষা বাছনি কৰক</translation>
 <translation id="1477626028522505441">ছার্ভাৰৰ সমস্যাৰ বাবে <ph name="FILE_NAME"/> ডাউনল'ড কৰিব পৰা নগ'ল।</translation>
 <translation id="148482509007564431">বুকমাৰ্ক ছেভ কৰাৰ ফ্ল’</translation>
 <translation id="1492417797159476138">এই ছাইটটোৰ বাবে আপুনি ইতিমধ্যে এই ব্যৱহাৰকাৰীৰ নামটো ছেভ কৰিছে</translation>
@@ -108,14 +108,14 @@
 <translation id="1521774566618522728">আজি সক্ৰিয় হৈছে</translation>
 <translation id="8090895580117672212">আপোনাৰ AI Wize একাউণ্টটো পৰিচালনা কৰিবলৈ "একাউণ্ট পৰিচালনা কৰক" বুটামটোত টিপক</translation>
 <translation id="1549000191223877751">অন্য ৱিণ্ড’লৈ নিয়ক</translation>
-<translation id="1705567146636171298">Brave আপডে’ট কৰক</translation>
+<translation id="1705567146636171298">AI Wize আপডে’ট কৰক</translation>
 <translation id="1568636008098739136">এই পৃষ্ঠাটো শুনক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ, স্পৰ্শ কৰি ধৰি ৰাখক।</translation>
 <translation id="1571304935088121812">ব্যৱহাৰকাৰীৰ নামটোৰ প্ৰতিলিপি কৰক</translation>
 <translation id="1592864538817356322">মান্য সুৰক্ষা:</translation>
 <translation id="1594635596540195766">তলৰ সূচীখনত <ph name="SUGGESTIONS_COUNT"/> টা পৰামৰ্শ হিচাপে আগবঢ়োৱা বস্তু আছে।</translation>
 <translation id="1598163867407640634"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>ৰ জৰিয়তে <ph name="SITE_ETLD_PLUS_ONE"/> ব্যৱহাৰ কৰক</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{বাছনি কৰা ১টা বস্তু আঁতৰাওক}one{বাছনি কৰা #টা বস্তু আঁতৰাওক}other{বাছনি কৰা #টা বস্তু আঁতৰাওক}}</translation>
-<translation id="3122582044404611732">Braveৰ গৃহপৃষ্ঠাত নতুন সমলৰ সন্ধান কৰক</translation>
+<translation id="3122582044404611732">AI Wizeৰ গৃহপৃষ্ঠাত নতুন সমলৰ সন্ধান কৰক</translation>
 <translation id="1641113438599504367">সুৰক্ষিত ব্ৰাউজিং</translation>
 <translation id="164269334534774161">আপুনি <ph name="CREATION_TIME"/>ৰ পৰা এই পৃষ্ঠাটোৰ এটা অফলাইন প্ৰতিলিপি চাই আছে</translation>
 <translation id="1644574205037202324">ইতিহাস</translation>
@@ -131,12 +131,12 @@
 <translation id="1710099199314114079">সলনি কৰক অথবা টেব বন্ধ কৰক</translation>
 <translation id="1718835860248848330">যোৱা ১ ঘণ্টাৰ</translation>
 <translation id="1724977129262658800">আপোনাৰ পাছৱৰ্ডটো সম্পাদনা কৰিবলৈ আনলক কৰক</translation>
-<translation id="6493900814829428590">আপুনি যাব পৰাৰ সম্ভাৱনা থকা পৃষ্ঠাসমূহ Braveএ আগতীয়াকৈ ল’ড কৰিলে আপুনি খৰতকীয়াকৈ ব্ৰাউজ আৰু সন্ধান কৰিব পাৰে</translation>
+<translation id="6493900814829428590">আপুনি যাব পৰাৰ সম্ভাৱনা থকা পৃষ্ঠাসমূহ AI Wizeএ আগতীয়াকৈ ল’ড কৰিলে আপুনি খৰতকীয়াকৈ ব্ৰাউজ আৰু সন্ধান কৰিব পাৰে</translation>
 <translation id="5129323533070334129">ইনক’গনিট’ ম’ডৰ পৰা বাহিৰ হৈ পাছকী ছেভ কৰিবনে?</translation>
 <translation id="1749561566933687563">আপোনাৰ বুকমার্কসমূহ ছিংক কৰক</translation>
 <translation id="1750259112639922169">টেবৰ গোট - <ph name="TAB_COUNT"/> টা টেব</translation>
 <translation id="17513872634828108">খুলি ৰখা টেবসমূহ</translation>
-<translation id="9207812657123271782">Brave Password Managerৰ আপডে’ট</translation>
+<translation id="9207812657123271782">AI Wize Password Managerৰ আপডে’ট</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{পৃষ্ঠা, সূচীত ১ খন পৃষ্ঠা আছে}one{পৃষ্ঠা, সূচীত # খন পৃষ্ঠা আছে}other{পৃষ্ঠা, সূচীত # খন পৃষ্ঠা আছে}}</translation>
 <translation id="1778457539567749232">নপঢ়া হিচাপে চিহ্নিত কৰক</translation>
 <translation id="1779766957982586368">ৱিণ্ড’ বন্ধ কৰক</translation>
@@ -148,15 +148,15 @@
 <translation id="1810845389119482123">প্ৰাৰম্ভিক ছিংক ছেট আপ সমাপ্ত হোৱা নাই</translation>
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/>এ <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ব্যৱহাৰ কৰাটো অব্যাহত ৰাখিব নোৱাৰে</translation>
 <translation id="1829244130665387512">পৃষ্ঠাত বিচাৰক</translation>
-<translation id="5488575152752589250">Braveৰ পৰা আটাইতকৈ প্ৰাসংগিক সমল পাবলৈ ছিংক কৰক</translation>
-<translation id="7175072311426658869">Brave ব্ৰাউজাৰত খোলক</translation>
-<translation id="5173820533850252773">Braveৰ ম্যাদ উকলিছে</translation>
+<translation id="5488575152752589250">AI Wizeৰ পৰা আটাইতকৈ প্ৰাসংগিক সমল পাবলৈ ছিংক কৰক</translation>
+<translation id="7175072311426658869">AI Wize ব্ৰাউজাৰত খোলক</translation>
+<translation id="5173820533850252773">AI Wizeৰ ম্যাদ উকলিছে</translation>
 <translation id="1883903952484604915">মোৰ ফাইল</translation>
 <translation id="189358972401248634">অন্য ভাষা</translation>
 <translation id="1900260903084164610">অব্যাহত ৰাখি, আপুনি <ph name="BEGIN_TOS_LINK"/>সেৱাৰ চৰ্তাৱলী<ph name="END_TOS_LINK"/>ত সন্মত হৈছে।</translation>
 <translation id="6893464351226208429">আপুনি চোৱা URLসমূহ আপোনাৰ AI Wize একাউণ্টত ছেভ কৰা হৈছে</translation>
 <translation id="1910950723001426294">শ্বেয়াৰ কৰাৰ বিকল্পৰ সূচীখন বন্ধ কৰা হৈছে।</translation>
-<translation id="7021823858304886493">Braveত ছাইন ইন কৰিব দিয়ক</translation>
+<translation id="7021823858304886493">AI Wizeত ছাইন ইন কৰিব দিয়ক</translation>
 <translation id="1922362554271624559">পৰামৰ্শ হিচাপে আগবঢ়োৱা ভাষাসমূহ</translation>
 <translation id="1924255092154549435">টেবটো বিস্তাৰ কৰা হৈছে</translation>
 <translation id="1925021887439448749">কাষ্টম ৱেব ঠিকনা দিয়ক</translation>
@@ -176,12 +176,12 @@
 <translation id="1984417487208496350">কোনো সুৰক্ষা নাই (চুপাৰিছ কৰা নহয়)</translation>
 <translation id="1986685561493779662">নামটো ইতিমধ্যে আছেই</translation>
 <translation id="1995884366040846621">অব্যাহত ৰাখিবলৈ, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>এ আপোনাৰ নাম, ইমেইল, ঠিকনা আৰু প্ৰ’ফাইল চিত্ৰ এই ছাইটটোৰ সৈতে শ্বেয়াৰ কৰিব। এই ছাইটটোৰ <ph name="BEGIN_LINK1"/>গোপনীয়তাৰ নীতি<ph name="END_LINK1"/> চাওক।</translation>
-<translation id="6968892567705775281">Braveত কৰা সন্ধানত আশে-পাশে থকা পাঠ ব্যৱহাৰ কৰিবনে?</translation>
+<translation id="6968892567705775281">AI Wizeত কৰা সন্ধানত আশে-পাশে থকা পাঠ ব্যৱহাৰ কৰিবনে?</translation>
 <translation id="2009341475524975924">কোনো বিজ্ঞাপনৰ পাৰদৰ্শিতাৰ জোখ-মাখ কৰিবলৈ, ছাইটসমূহৰ মাজত সীমিত ধৰণৰ ডেটা শ্বেয়াৰ কৰিব পৰা যায়, যেনে- আপোনাক কোনো বিজ্ঞাপন দিনটোৰ কি সময়ত দেখুওৱা হৈছিল।</translation>
 <translation id="201060170519281460">আপোনাৰ প্ৰ’ফাইল লকে ছিংক কৰা পাছৱৰ্ড, পৰিশোধ আৰু অধিককে ধৰি আপোনাৰ তথ্য গাড়ীত সুৰক্ষিত কৰি ৰাখে।</translation>
 <translation id="2021896219286479412">সম্পূর্ণ স্ক্ৰীন ছাইটৰ নিয়ন্ত্ৰণ</translation>
 <translation id="2038563949887743358">ডেস্কটপ ছাইট অনুৰোধ কৰা সুবিধাটো অন কৰক</translation>
-<translation id="7675869148432102528"><ph name="APP_NAME"/>ও Braveত ডেটা আছে</translation>
+<translation id="7675869148432102528"><ph name="APP_NAME"/>ও AI Wizeত ডেটা আছে</translation>
 <translation id="2046634576464120978">পঞ্জীয়ন কৰিব পৰা নগ’ল</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">সম্ভৱ হ’লে HTTPS ব্যৱহাৰ কৰক আৰু এইটো সমৰ্থন নকৰা ছাইটসমূহ ল’ড কৰাৰ পূৰ্বে সকীয়নি লাভ কৰক। আপুনি এই ছেটিং সলনি কৰিব নোৱাৰে, কাৰণ আপুনি সুৰক্ষা সম্পৰ্কীয় উন্নত সুবিধা সক্ষম কৰিছে।</translation>
@@ -203,7 +203,7 @@
 <translation id="2141396931810938595">আপোনাৰ ব্যৱহাৰৰ ওপৰত আধাৰিত</translation>
 <translation id="2149973817440762519">বুকমার্ক সম্পাদনা কৰক</translation>
 <translation id="2155214902713132423">এই ডিভাইচটোৰ বাবে এই সত্যাপনৰ পদ্ধতিটো উপলব্ধ নহয়। আপোনাৰ অন্য এটা ডিভাইচত এটা অন্য বিকল্প বাছনি কৰক।</translation>
-<translation id="4162910516440006395">Braveএ সকলো পাছৱৰ্ড পৰীক্ষা কৰিব নোৱাৰিলে</translation>
+<translation id="4162910516440006395">AI Wizeএ সকলো পাছৱৰ্ড পৰীক্ষা কৰিব নোৱাৰিলে</translation>
 <translation id="2172688499998841696">প্ৰতিচ্ছবিৰ বিৱৰণ অফ আছে</translation>
 <translation id="2172905120685242547">ৱিণ্ড’ বন্ধ কৰিবনে?</translation>
 <translation id="2173302385160625112">আপোনাৰ ইণ্টাৰনেট সংযোগ পৰীক্ষা কৰক</translation>
@@ -218,10 +218,10 @@
 <translation id="2234827758954819389">গোপনীয়তা সম্পৰ্কীয় নিৰ্দেশনা</translation>
 <translation id="2239812875700136898">সন্ধান কৰক বুটামটোৰ বিকল্পসমূহৰ পৰা আপোনাৰ কাহিনীসমূহ নিয়ন্ত্ৰণ কৰক</translation>
 <translation id="2247789808226901522">কাৰ্ডৰ ম্যাদ উকলিছে</translation>
-<translation id="4808014761134300692">Brave পাছৱৰ্ড পৰিচালকত ছেভ কৰাৰ পূৰ্বে আপোনাৰ ডিভাইচত আপোনাৰ পাছৱৰ্ড এনক্ৰিপ্ট কৰা হয়</translation>
+<translation id="4808014761134300692">AI Wize পাছৱৰ্ড পৰিচালকত ছেভ কৰাৰ পূৰ্বে আপোনাৰ ডিভাইচত আপোনাৰ পাছৱৰ্ড এনক্ৰিপ্ট কৰা হয়</translation>
 <translation id="2249635629516220541">আপোনাক বিজ্ঞাপন দেখুৱাবলৈ ছাইটসমূহে ব্যৱহাৰ কৰা তথ্য কাষ্টমাইজ কৰক</translation>
 <translation id="2259659629660284697">পাছৱর্ডসমূহ ৰপ্তানি কৰক…</translation>
-<translation id="8820144752830692527">আপুনি কি ছিংক কৰিব লাগে সেয়া <ph name="BEGIN_LINK1"/>ছেটিঙ<ph name="END_LINK1"/>লৈ গৈ যেতিয়াই মন যায় তেতিয়াই বাছনি কৰিব পাৰে। Braveএ আপোনাৰ ইতিহাসৰ ওপৰত ভিত্তি কৰি Search আৰু অন্য সেৱা ব্যক্তিগতকৰণ কৰিব পাৰে।</translation>
+<translation id="8820144752830692527">আপুনি কি ছিংক কৰিব লাগে সেয়া <ph name="BEGIN_LINK1"/>ছেটিঙ<ph name="END_LINK1"/>লৈ গৈ যেতিয়াই মন যায় তেতিয়াই বাছনি কৰিব পাৰে। AI Wizeএ আপোনাৰ ইতিহাসৰ ওপৰত ভিত্তি কৰি Search আৰু অন্য সেৱা ব্যক্তিগতকৰণ কৰিব পাৰে।</translation>
 <translation id="781982477617612877">আপোনাৰ পাছৱৰ্ডসমূহ পৰীক্ষা কৰিবলৈ আপোনাৰ AI Wize একাউণ্টত ছাইন ইন কৰক</translation>
 <translation id="2278052315791335171">এই পাছৱৰ্ডটো মচাৰ ফলত <ph name="SITE"/>ত থকা আপোনাৰ একাউণ্টটো মচি পেলোৱা নহ’ব</translation>
 <translation id="2286841657746966508">বিলিঙৰ ঠিকনা</translation>
@@ -233,8 +233,8 @@
 <translation id="2323763861024343754">ছাইট ষ্ট’ৰেজ</translation>
 <translation id="2328985652426384049">ছাইন ইন কৰিব নোৱাৰি</translation>
 <translation id="2341410551640223969"><ph name="WEBAPK_NAME"/> ইনষ্টল কৰিব পৰা নগ’ল।</translation>
-<translation id="3587672679800759167">একাউণ্ট, বুকমার্ক আৰু ছেভ কৰি ৰখা ছেটিংসমূহকে লৈ Braveএ ব্যৱহাৰ কৰা মুঠ ডেটা</translation>
-<translation id="2767094839186957509">Braveৰ গোপনীয়তা নীতি</translation>
+<translation id="3587672679800759167">একাউণ্ট, বুকমার্ক আৰু ছেভ কৰি ৰখা ছেটিংসমূহকে লৈ AI Wizeএ ব্যৱহাৰ কৰা মুঠ ডেটা</translation>
+<translation id="2767094839186957509">AI Wizeৰ গোপনীয়তা নীতি</translation>
 <translation id="2359808026110333948">অব্যাহত ৰাখক</translation>
 <translation id="2362083820973145409"><ph name="USER_NAME"/> হিচাপে ছাইন ইন কৰিছে। <ph name="USER_EMAIL"/>। ছেটিং খোলে।</translation>
 <translation id="2364539095045928896">পৃষ্ঠাৰ ইনছাইটৰ হাবৰ গোপনীয়তাৰ জাননী বন্ধ কৰাৰ বুটাম।</translation>
@@ -256,11 +256,11 @@
 <translation id="2482878487686419369">জাননী</translation>
 <translation id="2496180316473517155">ব্ৰাউজিঙৰ ইতিহাস</translation>
 <translation id="2497852260688568942">আপোনাৰ প্ৰশাসকে ছিংক অক্ষম কৰিছে</translation>
-<translation id="7229462727772664332">আপুনি আপোনাৰ <ph name="SITE_NAME"/>ৰ ছাইন ইনৰ স্থিতি, ব্ৰাউজ কৰা ডেটা আৰু ছাইটৰ ডেটা Braveত দেখা পাব</translation>
+<translation id="7229462727772664332">আপুনি আপোনাৰ <ph name="SITE_NAME"/>ৰ ছাইন ইনৰ স্থিতি, ব্ৰাউজ কৰা ডেটা আৰু ছাইটৰ ডেটা AI Wizeত দেখা পাব</translation>
 <translation id="2510106555128151389"><ph name="WEBAPK_NAME"/> ইনষ্টল কৰি থকা হৈছে...</translation>
 <translation id="7222718784508482526">গোপনীয়তা, সুৰক্ষা আৰু ডেটা সংগ্ৰহৰ সৈতে জড়িত অধিক ছেটিঙৰ বাবে <ph name="BEGIN_LINK"/>ছিংক আৰু AI Wize সেৱা<ph name="END_LINK"/> চাওক</translation>
 <translation id="2517113738956581680">পূৰ্ণ-আকাৰৰ শ্বীট</translation>
-<translation id="284843628681142937">আপুনি চোৱা পৃষ্ঠাসমূহৰ URL Braveলৈ পঠিওৱা হয়</translation>
+<translation id="284843628681142937">আপুনি চোৱা পৃষ্ঠাসমূহৰ URL AI Wizeলৈ পঠিওৱা হয়</translation>
 <translation id="2527209463677295330">কোনো পৃষ্ঠাৰ অধিক পাঠ অন্তৰ্ভুক্ত কৰি, আপুনি হয়তো উন্নত ফলাফল দেখা পাব পাৰে</translation>
 <translation id="2527779675047087889">ক্লিপব'ৰ্ডৰ সমল লুকুৱাওক</translation>
 <translation id="2532336938189706096">ৱেব ভিউ</translation>
@@ -271,10 +271,10 @@
 <translation id="2567545343356994513">বিপজ্জনক ৱেবছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা ক্ষিপ্ৰ, আগতীয়া সুৰক্ষা</translation>
 <translation id="5079947353572974060">অন্য ভাষাত থকা পৃষ্ঠাসমূহ AI Wize Translateলৈ পঠিওৱাৰ সুবিধা দিয়ক</translation>
 <translation id="2571834852878229351">মোৰ নিজৰ সৃষ্টি কৰক</translation>
-<translation id="6995512410824092085">Braveক আপোনাৰ ডিফ’ল্ট হিচাপে কেনেকৈ ছেট কৰিব লাগে জানক</translation>
+<translation id="6995512410824092085">AI Wizeক আপোনাৰ ডিফ’ল্ট হিচাপে কেনেকৈ ছেট কৰিব লাগে জানক</translation>
 <translation id="7242554556818074465">আপুনি AI Wize ব্যৱহাৰ কৰা সকলো ডিভাইচৰ পৰা নিজৰ টেবসমূহ চাবলৈ আপোনাৰ সকলো ডিভাইচত ছাইন ইন কৰক</translation>
-<translation id="8661556138616664061">Braveএ নৱপ্ৰজন্মৰ বাবে আগবঢ়োৱা সমল</translation>
-<translation id="2324920234469020158">ই কুকি, কেশ্ব আৰু Braveএ গুৰুত্বপূর্ণ বুলি নভবা ছাইটসমূহৰ অন্য ডেটা মচিব।</translation>
+<translation id="8661556138616664061">AI Wizeএ নৱপ্ৰজন্মৰ বাবে আগবঢ়োৱা সমল</translation>
+<translation id="2324920234469020158">ই কুকি, কেশ্ব আৰু AI Wizeএ গুৰুত্বপূর্ণ বুলি নভবা ছাইটসমূহৰ অন্য ডেটা মচিব।</translation>
 <translation id="2587052924345400782">নতুন সংস্কৰণ উপলব্ধ</translation>
 <translation id="2593272815202181319">ম'ন'স্পেছ</translation>
 <translation id="2603212228005142861">আপোনাৰ অগ্ৰাধিকাৰসমূহ পৰিচালনা কৰিবলৈ ছাইন ইন কৰক</translation>
@@ -282,7 +282,7 @@
 <translation id="2604446170045642109">আপোনাৰ ছেটিঙত ছাইটসমূহৰ বাবে আপুনি গাঢ় ৰঙৰ থীম অফ কৰিব পাৰে।</translation>
 <translation id="2612676031748830579">কার্ড নম্বৰ</translation>
 <translation id="2625189173221582860">পাছৱর্ডৰ প্ৰতিলিপি কৰা হ’ল</translation>
-<translation id="2634393460268044753">আপুনি চোৱা ছাইটৰ URLসমূহ ক্ষতিকাৰক নেকি পৰীক্ষা কৰিবলৈ সেইসমূহ আৰু পৃষ্ঠাৰ সমল, ডাউনল’ড, এক্সটেনশ্বনৰ কাৰ্যকলাপ আৰু ছিষ্টেমৰ তথ্যৰ এটা সৰু নমুনা Braveৰ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়ায়।</translation>
+<translation id="2634393460268044753">আপুনি চোৱা ছাইটৰ URLসমূহ ক্ষতিকাৰক নেকি পৰীক্ষা কৰিবলৈ সেইসমূহ আৰু পৃষ্ঠাৰ সমল, ডাউনল’ড, এক্সটেনশ্বনৰ কাৰ্যকলাপ আৰু ছিষ্টেমৰ তথ্যৰ এটা সৰু নমুনা AI Wizeৰ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়ায়।</translation>
 <translation id="2642087927315268160">তলৰ শ্বীটখনত ছাইন ইন কৰাৰ সুবিধা বন্ধ কৰা হৈছে।</translation>
 <translation id="2643064289437760082">আপোনাৰ ব্ৰাউজিঙৰ ডেটা মচি আপুনি যিকোনো সময়তে বিজ্ঞাপনৰ জোখ-মাখৰ ডেটা মচিব পাৰে</translation>
 <translation id="2647434099613338025">ভাষা যোগ কৰক</translation>
@@ -294,9 +294,9 @@
 <translation id="265156376773362237">মান্য আগতীয়া ল’ডিং</translation>
 <translation id="2656405586795711023">ৱেব এপ্‌সমূহ</translation>
 <translation id="2669454659051515572">এই ডিভাইচটো ব্যৱহাৰ কৰা যিকোনো লোকে ডাউনল’ড কৰা ফাইল চাব পাৰে</translation>
-<translation id="5806087344347665213">যদি কোনো ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰিলে, Braveএ পৃষ্ঠাখনত থকা সমলৰ কিছু অংশকে ধৰি URLসমূহ Braveলৈ পঠিয়াব পাৰে</translation>
+<translation id="5806087344347665213">যদি কোনো ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰিলে, AI Wizeএ পৃষ্ঠাখনত থকা সমলৰ কিছু অংশকে ধৰি URLসমূহ AI Wizeলৈ পঠিয়াব পাৰে</translation>
 <translation id="2702516483241149200">নতুন: এই পাঠটোলৈ স্ক্ৰ’ল কৰা এটা লিংক শ্বেয়াৰ কৰা</translation>
-<translation id="3769942772151914580">Braveলৈ পঠিওৱা আপোনাৰ ব্ৰাউজিঙৰ ডেটাৰ ভিত্তিক বিপজ্জনক ছাইটসমূহ, ডাউনল’ড আৰু এক্সটেনশ্বনৰ পৰা ৰিয়েল টাইমত আগতীয়া সুৰক্ষা</translation>
+<translation id="3769942772151914580">AI Wizeলৈ পঠিওৱা আপোনাৰ ব্ৰাউজিঙৰ ডেটাৰ ভিত্তিক বিপজ্জনক ছাইটসমূহ, ডাউনল’ড আৰু এক্সটেনশ্বনৰ পৰা ৰিয়েল টাইমত আগতীয়া সুৰক্ষা</translation>
 <translation id="2708226184420201102"><ph name="PRODUCT_NAME"/> ব্ৰাউজাৰত খোলক</translation>
 <translation id="271033894570825754">নতুন</translation>
 <translation id="2718352093833049315">কেৱল ৱাই-ফাইত</translation>
@@ -307,42 +307,42 @@
 <translation id="2760989362628427051">আপোনাৰ ডিভাইচত গাঢ় থীম অথবা বেটাৰী সঞ্চয়কাৰী অন থাকিলে গাঢ় ৰঙৰ থীম অন কৰক</translation>
 <translation id="2762000892062317888">এইমাত্ৰ</translation>
 <translation id="276969039800130567"><ph name="USER_EMAIL_ADDRESS"/> হিচাপে ছাইন ইন কৰিছে।</translation>
-<translation id="8312774691909088652">গোপনীয়তা, সুৰক্ষা আৰু ডেটা সংগ্ৰহ সম্পৰ্কীয় অধিক ছেটিংসমূহৰ বাবে <ph name="BEGIN_LINK"/>Brave সেৱাসমূহ<ph name="END_LINK"/> চাওক</translation>
+<translation id="8312774691909088652">গোপনীয়তা, সুৰক্ষা আৰু ডেটা সংগ্ৰহ সম্পৰ্কীয় অধিক ছেটিংসমূহৰ বাবে <ph name="BEGIN_LINK"/>AI Wize সেৱাসমূহ<ph name="END_LINK"/> চাওক</translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> ছেকেণ্ড বাকী আছে</translation>
 <translation id="2779651927720337254">ডাউনল'ড কৰিব পৰা নগ'ল</translation>
 <translation id="2781151931089541271">১ ছেকেণ্ড বাকী আছে</translation>
 <translation id="2800066122460699237">টেবটো <ph name="TAB_TITLE"/> বন্ধ কৰা হ’ব</translation>
-<translation id="7068873021383263704">আপোনাৰ <ph name="BEGIN_LINK"/>Brave sync chain<ph name="END_LINK"/>ত ছেভ কৰি থোৱা পাছৱর্ডসমূহ চাওক আৰু পৰিচালনা কৰক</translation>
+<translation id="7068873021383263704">আপোনাৰ <ph name="BEGIN_LINK"/>AI Wize sync chain<ph name="END_LINK"/>ত ছেভ কৰি থোৱা পাছৱর্ডসমূহ চাওক আৰু পৰিচালনা কৰক</translation>
 <translation id="2827278682606527653">Feed card menu half height</translation>
 <translation id="2830783625999891985">ক্লিপব'ৰ্ডৰ সমল লুকুওৱা হ’ল</translation>
 <translation id="2838367486340230368">অৰ্ধ উচ্চতাত খোলা গোপনীয়তা সম্পৰ্কীয় নিৰ্দেশনাৰ ব্যাখ্যা</translation>
 <translation id="2839327205551510876"><ph name="SITE_NAME"/>ক আনফ’ল’ কৰিলে</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{১ দিনৰ আগত পৰীক্ষা কৰা হৈছিল}one{# দিনৰ আগত পৰীক্ষা কৰা হৈছিল}other{# দিনৰ আগত পৰীক্ষা কৰা হৈছিল}}</translation>
 <translation id="2842985007712546952">মূল ফ’ল্ডাৰ</translation>
-<translation id="6324134303015966238">Braveএ আপুনি চোৱাৰ সম্ভাৱনা থকা পৃষ্ঠাসমূহ আগতীয়াকৈ ল’ড কৰে, যাতে আপুনি চোৱাৰ সময়ত সেইবোৰ অধিক ক্ষিপ্ৰতাৰে ল’ড হয়</translation>
+<translation id="6324134303015966238">AI Wizeএ আপুনি চোৱাৰ সম্ভাৱনা থকা পৃষ্ঠাসমূহ আগতীয়াকৈ ল’ড কৰে, যাতে আপুনি চোৱাৰ সময়ত সেইবোৰ অধিক ক্ষিপ্ৰতাৰে ল’ড হয়</translation>
 <translation id="2856503607207334158">ছাইন ইন কৰিব পৰা নগ’ল</translation>
 <translation id="2860954141821109167">নিশ্চিত হৈ লওক যে এই ডিভাইচটোত এটা ফ’ন এপ্‌ সক্ৰিয় কৰা আছে</translation>
-<translation id="6518254564747115579">Braveৰ কিছুমান সুবিধা আৰু উপলব্ধ হৈ নাথাকিব</translation>
+<translation id="6518254564747115579">AI Wizeৰ কিছুমান সুবিধা আৰু উপলব্ধ হৈ নাথাকিব</translation>
 <translation id="2869430948265924908">গাড়ীত আপোনাৰ সংবেদনশীল সমল সুৰক্ষিত কৰি ৰাখিবলৈ, আপুনি এটা গাড়ীৰ প্ৰ’ফাইল লক সৃষ্টি কৰিবই লাগিব।  আপুনি এইটো এটা পিন, ক’ড অথবা পাছৱৰ্ডৰ জৰিয়তে কৰিব পাৰে।</translation>
 <translation id="2870560284913253234">ছাইট</translation>
 <translation id="2871733351037274014">পৃষ্ঠা আগতীয়াকৈ ল’ড কৰক</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/>এ আপুনি এই ৱেবছাইটটো অনুমোদন জনোৱাটো বিচাৰে:</translation>
-<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>Braveএ কেনেকৈ আপোনাৰ ডেটা ব্যক্তিগত কৰি ৰাখে<ph name="END_LINK"/> সেই বিষয়ে অধিক জানক</translation>
-<translation id="8541922081612557424">Braveৰ বিষয়ে</translation>
+<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>AI Wizeএ কেনেকৈ আপোনাৰ ডেটা ব্যক্তিগত কৰি ৰাখে<ph name="END_LINK"/> সেই বিষয়ে অধিক জানক</translation>
+<translation id="8541922081612557424">AI Wizeৰ বিষয়ে</translation>
 <translation id="2891154217021530873">পৃষ্ঠা ল’ড হোৱা কার্যটো বন্ধ কৰক</translation>
-<translation id="4013614219085422040">Braveএ Search আৰু অন্য AI Wize সেৱাসমূহ ব্যক্তিগতকৰণ কৰিবলৈ আপোনাৰ ইতিহাস ব্যৱহাৰ কৰিব পাৰে</translation>
+<translation id="4013614219085422040">AI Wizeএ Search আৰু অন্য AI Wize সেৱাসমূহ ব্যক্তিগতকৰণ কৰিবলৈ আপোনাৰ ইতিহাস ব্যৱহাৰ কৰিব পাৰে</translation>
 <translation id="2894821468041866720">আপোনাৰ ব্ৰাউজাৰ অথবা ডিভাইচটো লক্ষণীয়ভাৱে লেহেমীয়া নকৰে।</translation>
 <translation id="2900528713135656174">অনুষ্ঠান সৃষ্টি কৰক</translation>
 <translation id="2901411048554510387"><ph name="WEBSITE_TITLE"/>ৰ বাবে পৰামৰ্শ দেখুৱাই থকা হৈছে</translation>
 <translation id="2904300462646366554">ডাউনল’ড কৰা PDF আপোনাৰ ডিভাইচত থকা PDF ভিউৱাৰসমূহৰ এটাৰ জৰিয়তে স্বয়ংক্ৰিয়ভাৱে খোলে</translation>
 <translation id="2904414404539560095">টেব এটা শ্বেয়াৰ কৰিবলৈ সম্পূর্ণকৈ খোল খোৱা ডিভাইচসমূহৰ সূচী।</translation>
 <translation id="2908243544703713905">নপঢ়া কাহিনী সাজু আছে</translation>
-<translation id="7339921667754113786">Braveৰ জাননীসমূহৰ প্লেটফৰ্ম</translation>
+<translation id="7339921667754113786">AI Wizeৰ জাননীসমূহৰ প্লেটফৰ্ম</translation>
 <translation id="2912296070571964914">আপুনি আগ্ৰহ প্ৰকাশ কৰা বিষয়বস্তু পৰিচালনা কৰক</translation>
 <translation id="2923908459366352541">নামটো অমান্য</translation>
-<translation id="6355102470683871794">Brave <ph name="APP_NAME"/> ষ্ট'ৰেজ</translation>
+<translation id="6355102470683871794">AI Wize <ph name="APP_NAME"/> ষ্ট'ৰেজ</translation>
 <translation id="2932222164150889403">আপোনাৰ কীব’ৰ্ড সলনি নহ’ব</translation>
-<translation id="6537665929855787038">Braveৰ জাননীয়ে কথাবোৰ সহজ কৰি তোলে</translation>
+<translation id="6537665929855787038">AI Wizeৰ জাননীয়ে কথাবোৰ সহজ কৰি তোলে</translation>
 <translation id="2940075786175545812">এটা ৱেবছাইট অনুমোদন জনোৱা অথবা নজনোৱাৰ বিকল্প</translation>
 <translation id="2942036813789421260">পূৰ্বদৰ্শন টেবটো বন্ধ কৰা আছে</translation>
 <translation id="4700262879698141140">অন্য ডিভাইচৰ সৈতে সংযোগ কৰিবলৈ AI Wize আপডে’ট কৰি থকা হৈছে</translation>
@@ -354,39 +354,39 @@
 <translation id="2979639724566107830">নতুন ৱিণ্ড'ত খোলক</translation>
 <translation id="2981364137500752533">আপোনাৰ ৫ খনলৈকে ৱিণ্ড’ থাকিব পাৰে।</translation>
 <translation id="2983102365694924129">এটা ছাইটত আপোনাৰ কাৰ্যকলাপৰ ওপৰত ভিত্তি কৰি। এই ছেটিংটো অফ হৈ আছে।</translation>
-<translation id="5948666439178419683">Braveত কৰা সন্ধানত আশে-পাশে থকা পাঠ ব্যৱহাৰ কৰক</translation>
+<translation id="5948666439178419683">AI Wizeত কৰা সন্ধানত আশে-পাশে থকা পাঠ ব্যৱহাৰ কৰক</translation>
 <translation id="2987620471460279764">অন্য ডিভাইচৰ পৰা শ্বেয়াৰ কৰা পাঠ</translation>
 <translation id="2989523299700148168">শেহতীয়াকৈ চোৱা</translation>
 <translation id="2992473221983447149">প্ৰতিচ্ছবিৰ বিৱৰণ</translation>
 <translation id="2996291259634659425">পাছফ্ৰেজ সৃষ্টি কৰক</translation>
 <translation id="2996809686854298943">URL আৱশ্যক</translation>
 <translation id="2996932914629936323">আটাইবোৰ ছিংক কৰা ডিভাইচৰ পৰা ইতিহাস মচে</translation>
-<translation id="2019027298133375428">Braveৰ কোনো ছাইটে নিজৰ পৃষ্ঠাত থকা লিংকসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিবলৈ অনুৰোধ কৰিলে Braveএ কুকি অবিহনে AI Wize ছাৰ্ভাৰৰ জৰিয়তে পৃষ্ঠাসমূহ এনক্ৰিপ্ট কৰি আগতীয়াকৈ ল’ড কৰে। ই আগতীয়াকৈ ল’ড কৰা ছাইটৰ পৰা আপোনাৰ পৰিচয় লুকুৱায়।</translation>
-<translation id="5730179015008010982">আপুনি ইয়াৰ পাছত কি ছাইট চাব সেয়া অনুমান কৰিবলৈ আৰু আপুনি চোৱা পৃষ্ঠাখনৰ অতিৰিক্ত তথ্য দেখুৱাবলৈ আপুনি চোৱা URLসমূহ Braveলৈ পঠিওৱা হয়</translation>
+<translation id="2019027298133375428">AI Wizeৰ কোনো ছাইটে নিজৰ পৃষ্ঠাত থকা লিংকসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিবলৈ অনুৰোধ কৰিলে AI Wizeএ কুকি অবিহনে AI Wize ছাৰ্ভাৰৰ জৰিয়তে পৃষ্ঠাসমূহ এনক্ৰিপ্ট কৰি আগতীয়াকৈ ল’ড কৰে। ই আগতীয়াকৈ ল’ড কৰা ছাইটৰ পৰা আপোনাৰ পৰিচয় লুকুৱায়।</translation>
+<translation id="5730179015008010982">আপুনি ইয়াৰ পাছত কি ছাইট চাব সেয়া অনুমান কৰিবলৈ আৰু আপুনি চোৱা পৃষ্ঠাখনৰ অতিৰিক্ত তথ্য দেখুৱাবলৈ আপুনি চোৱা URLসমূহ AI Wizeলৈ পঠিওৱা হয়</translation>
 <translation id="3016635187733453316">নিশ্চিত হৈ লওক যে এই ডিভাইচটো ইণ্টাৰনেটৰ সৈতে সংযুক্ত হৈ আছে</translation>
 <translation id="3026955690410463085">লিংক অন্তৰ্ভুক্ত কৰক</translation>
 <translation id="3027644380269727216">এটা ছাইটত আপোনাৰ কাৰ্যকলাপৰ ওপৰত ভিত্তি কৰি। এই ছেটিংটো অন হৈ আছে।</translation>
 <translation id="3029276696788198026">কোনো আগতীয়া ল’ডিং নাই</translation>
 <translation id="3029704984691124060">পাছফ্ৰেজ নিমিলে</translation>
-<translation id="8678991866891573053">Braveএ নতুন সুবিধাসমূহ অন্বেষণ কৰি আছে, যিবোৰে ছাইটসমূহক আপোনাৰ ডেটা কমকৈ ব্যৱহাৰ কৰি একেই ব্ৰাউজিঙৰ অভিজ্ঞতা প্ৰদান কৰিবলৈ দিয়ে</translation>
+<translation id="8678991866891573053">AI Wizeএ নতুন সুবিধাসমূহ অন্বেষণ কৰি আছে, যিবোৰে ছাইটসমূহক আপোনাৰ ডেটা কমকৈ ব্যৱহাৰ কৰি একেই ব্ৰাউজিঙৰ অভিজ্ঞতা প্ৰদান কৰিবলৈ দিয়ে</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>সহায় লওক<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">মূল্য ট্ৰেক কৰি থকা হৈছে</translation>
-<translation id="3251012123600267109">Braveত ছাইন ইন কৰিবলৈ প্ৰম্প্‌ট প্ৰদৰ্শন কৰে</translation>
+<translation id="3251012123600267109">AI Wizeত ছাইন ইন কৰিবলৈ প্ৰম্প্‌ট প্ৰদৰ্শন কৰে</translation>
 <translation id="3038272154009688107">আটাইবোৰ ছাইট চাওক</translation>
 <translation id="3046945242843292318">পৰৱৰ্তী সময়ত এই ছাইটটোলৈ ক্ষিপ্ৰতাৰে আহক</translation>
 <translation id="3055259925215945098">বুকমাৰ্ক স্থানান্তৰ কৰা হৈছে</translation>
-<translation id="4163313568284712797">আপোনাৰ AI Wize ব্যৱহাৰ সম্পৰ্কীয় তথ্য Braveলৈ পঠিওৱা হয় কিন্তু ইয়াত আপোনাৰ ব্যক্তিগত তথ্য অন্তৰ্ভুক্ত কৰা নহয়\n\nBrave ক্ৰেশ্ব হ’লে ক্ৰেশ্বৰ সবিশেষত হয়তো কিছুমান ব্যক্তিগত তথ্য অন্তৰ্ভুক্ত হ’ব পাৰে\n\nআপুনি ছিংক কৰা সুবিধাটো অন কৰিলে মেট্ৰিকতো আপুনি চোৱা URLসমূহৰ তথ্য অন্তৰ্ভুক্ত কৰা হ’ব পাৰে</translation>
+<translation id="4163313568284712797">আপোনাৰ AI Wize ব্যৱহাৰ সম্পৰ্কীয় তথ্য AI Wizeলৈ পঠিওৱা হয় কিন্তু ইয়াত আপোনাৰ ব্যক্তিগত তথ্য অন্তৰ্ভুক্ত কৰা নহয়\n\nAI Wize ক্ৰেশ্ব হ’লে ক্ৰেশ্বৰ সবিশেষত হয়তো কিছুমান ব্যক্তিগত তথ্য অন্তৰ্ভুক্ত হ’ব পাৰে\n\nআপুনি ছিংক কৰা সুবিধাটো অন কৰিলে মেট্ৰিকতো আপুনি চোৱা URLসমূহৰ তথ্য অন্তৰ্ভুক্ত কৰা হ’ব পাৰে</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/>টা বুকমাৰ্ক}one{<ph name="BOOKMARKS_COUNT_MANY"/>টা বুকমাৰ্ক}other{<ph name="BOOKMARKS_COUNT_MANY"/>টা বুকমাৰ্ক}}</translation>
-<translation id="6153252609477956632">Braveত আপোনাৰ আগ্ৰহৰ বিষয়বস্তু সম্পৰ্কীয় প্ৰবন্ধসমূহ</translation>
+<translation id="6153252609477956632">AI Wizeত আপোনাৰ আগ্ৰহৰ বিষয়বস্তু সম্পৰ্কীয় প্ৰবন্ধসমূহ</translation>
 <translation id="3066573403916685335">তললৈ নিয়ক</translation>
 <translation id="3070005020161560471">স্বয়ংক্ৰিয়ভাৱে অনুবাদ কৰিবলগীয়া</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> Braveত খুলিব। অব্যাহত ৰাখি আপুনি <ph name="BEGIN_LINK1"/>Braveৰ সেৱাৰ চৰ্তাৱলী<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>Brave আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী<ph name="END_LINK2"/>ত সন্মতি দিয়ে। <ph name="BEGIN_LINK3"/>গোপনীয়তা নীতি<ph name="END_LINK3"/>টোও প্ৰযোজ্য।</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> AI Wizeত খুলিব। অব্যাহত ৰাখি আপুনি <ph name="BEGIN_LINK1"/>AI Wizeৰ সেৱাৰ চৰ্তাৱলী<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>AI Wize আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী<ph name="END_LINK2"/>ত সন্মতি দিয়ে। <ph name="BEGIN_LINK3"/>গোপনীয়তা নীতি<ph name="END_LINK3"/>টোও প্ৰযোজ্য।</translation>
 <translation id="3080525922482950719">আপুনি পাছত অথবা অফলাইনত পঢ়িবলৈ পৃষ্ঠাসমূহ ছেভ কৰিব পাৰে</translation>
 <translation id="3091010850649238832">ক্লিপব'ৰ্ডৰ সমল দেখুৱাওক</translation>
-<translation id="821565628224723530">আপোনাৰ বাবে বিৱৰণ উন্নত কৰিবলৈ Braveলৈ কিছুমান প্ৰতিচ্ছবি পঠিওৱা হয়</translation>
+<translation id="821565628224723530">আপোনাৰ বাবে বিৱৰণ উন্নত কৰিবলৈ AI Wizeলৈ কিছুমান প্ৰতিচ্ছবি পঠিওৱা হয়</translation>
 <translation id="3114507951000454849">আজিৰ বাতৰি পঢ়ক <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">ঘোষণাসমূহ</translation>
-<translation id="5063487983358782016">Braveৰ গৃহপৃষ্ঠা</translation>
+<translation id="5063487983358782016">AI Wizeৰ গৃহপৃষ্ঠা</translation>
 <translation id="3158667104057012316">মেনুৱেল ক্ৰম অনুসৰি সজাই থকা হৈছে</translation>
 <translation id="3166827708714933426">টেব আৰু ৱিণ্ড’ৰ শ্বৰ্টকাট</translation>
 <translation id="7249949543831830993">ইয়াত ইতিমধ্যে AI Wize চলি আছে।</translation>
@@ -399,8 +399,8 @@
 <translation id="1892217432793359605">আপুনি ছাইন ইন হৈ থকাৰ সময়ত আপোনাৰ AI Wize একাউণ্টত <ph name="BEGIN_LINK1"/>সন্ধানৰ ইতিহাস<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>অন্য প্ৰকাৰৰ কাৰ্যকলাপ<ph name="END_LINK2"/> ছেভ কৰা হ’ব পাৰে। আপুনি যিকোনো সময়তে সেইবোৰ মচিব পাৰে।</translation>
 <translation id="321773570071367578">আপুনি যদি নিজৰ পাছফ্ৰেজটো পাহৰিছে বা এই ছেটিংটো সলনি কৰিব বিচাৰিছে তেন্তে <ph name="BEGIN_LINK"/>ছিংক ৰিছেট কৰক<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">আপোনাৰ পাছৱৰ্ড ছিংক কৰিবলৈ এয়া আপুনি বুলি সত্যাপন কৰক</translation>
-<translation id="9210457680074341078">যদি আপুনি নিজৰ AI Wize একাউণ্টত নিজৰ বুকমাৰ্কসমূহো ছেভ কৰে, আপুনি Braveত প্ৰ’ডাক্টৰ দামসমূহ ট্ৰেক কৰিব পাৰে আৰু দাম কৰিলে জাননী পাব পাৰে</translation>
-<translation id="9047551989591319903">এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে Brave</translation>
+<translation id="9210457680074341078">যদি আপুনি নিজৰ AI Wize একাউণ্টত নিজৰ বুকমাৰ্কসমূহো ছেভ কৰে, আপুনি AI Wizeত প্ৰ’ডাক্টৰ দামসমূহ ট্ৰেক কৰিব পাৰে আৰু দাম কৰিলে জাননী পাব পাৰে</translation>
+<translation id="9047551989591319903">এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে AI Wize</translation>
 <translation id="3232754137068452469">ৱেব এপ্‌</translation>
 <translation id="3236059992281584593">১ মিনিট বাকী আছে</translation>
 <translation id="3237087289225714896">মান্য আগতীয়া ল’ডিং:</translation>
@@ -415,7 +415,7 @@
 <translation id="3265534588625245297">আপুনি ফ'ল' কৰা ছাইটসমূহ পৰিচালনা কৰক</translation>
 <translation id="3269093882174072735">ছবি ল’ড কৰক</translation>
 <translation id="3280562213547448728">কণ্ঠধ্বনিৰ দ্বাৰা সন্ধান</translation>
-<translation id="82609232232243542">Braveত ছাইন-ইন কৰক</translation>
+<translation id="82609232232243542">AI Wizeত ছাইন-ইন কৰক</translation>
 <translation id="3290249595466894471">নতুন ভাবুকিবোৰ বিচাৰি পোৱাত সহায় কৰিবলৈ পৃষ্ঠা, ডাউনল’ড, এক্সটেনশ্বনৰ কাৰ্যকলাপ আৰু ছিষ্টেমৰ তথ্যৰ এটা সৰু নমুনাও পঠিয়ায়</translation>
 <translation id="3293181007446299124">আপোনাৰ ডিভাইচটোত আপোনাৰ ব্ৰাউজিঙৰ ইতিহাস ব্যক্তিগত কৰি ৰখা হয় আৰু ৰিপ’ৰ্টসমূহ আপোনাৰ পৰিচয় সুৰক্ষিত কৰিবলৈ পলমকৈ পঠিওৱা হয়</translation>
 <translation id="3303414029551471755">সমলখিনি ডাউনল’ড কৰিবলৈ আগবাঢ়িবনে?</translation>
@@ -425,23 +425,23 @@
 <translation id="3341262203274374114">আনফ’ল’ কৰিব নোৱাৰি। কিবা ভুল হ’ল।</translation>
 <translation id="3359667936385849800">আপোনাৰ বৰ্তমানৰ সেৱা প্ৰদানকাৰী ব্যৱহাৰ কৰক</translation>
 <translation id="3373701465337594448">অন থাকিলে, আপুনি চোৱা ছাইটবোৰৰ সূচী ইয়াত প্ৰদৰ্শিত হয়, যিবোৰে আপোনাৰ আগ্ৰহসমূহ অনুমান কৰে</translation>
-<translation id="2746024117903470217">এই পৃষ্ঠাখন অন্য এটা ডিভাইচলৈ শ্বেয়াৰ কৰিবলৈ, অন্য ডিভাইচটোৰ Braveৰ ছেটিংসমূহত ছিংক অন কৰক</translation>
+<translation id="2746024117903470217">এই পৃষ্ঠাখন অন্য এটা ডিভাইচলৈ শ্বেয়াৰ কৰিবলৈ, অন্য ডিভাইচটোৰ AI Wizeৰ ছেটিংসমূহত ছিংক অন কৰক</translation>
 <translation id="8801234437789558906">আপোনাৰ বুকমাৰ্কসমূহ, ইতিহাস, পাছৱর্ডসমূহ আৰু অন্য AI Wize ডেটা এতিয়া আৰু আপোনাৰ AI Wize একাউণ্টত ছিংক কৰা নহ’ব</translation>
 <translation id="3384347053049321195">প্ৰতিচ্ছবি শ্বেয়াৰ কৰক</translation>
 <translation id="3387650086002190359">ফাইল ছিষ্টেম সম্পর্কীয় আসোঁৱাহৰ বাবে <ph name="FILE_NAME"/> ডাউনল’ড কৰিব পৰা নগ’ল।</translation>
 <translation id="3389286852084373014">পাঠখিনি যথেষ্ট দীঘল</translation>
 <translation id="3398320232533725830">বুকমাৰ্ক পৰিচালক খোলক</translation>
-<translation id="1081508498128395141">অধিক পৃষ্ঠা আগতীয়াকৈ ল’ড কৰা হৈছে। অন্য ছাইটে অনুৰোধ কৰিলে পৃষ্ঠাসমূহ Braveৰ ছাৰ্ভাৰৰ জৰিয়তে আগতীয়াকৈ ল’ড কৰা হ’ব পাৰে।</translation>
+<translation id="1081508498128395141">অধিক পৃষ্ঠা আগতীয়াকৈ ল’ড কৰা হৈছে। অন্য ছাইটে অনুৰোধ কৰিলে পৃষ্ঠাসমূহ AI Wizeৰ ছাৰ্ভাৰৰ জৰিয়তে আগতীয়াকৈ ল’ড কৰা হ’ব পাৰে।</translation>
 <translation id="3414952576877147120">আকাৰ:</translation>
 <translation id="3421726884497337397">কেতিয়া তৃতীয় পক্ষৰ কুকিসমূহ অৱৰোধ কৰিব লাগে সেয়া বাছনি কৰক</translation>
-<translation id="5265419033369521352">আপোনাক Braveত সুৰক্ষিত কৰি ৰাখে আৰু আপুনি ছাইন ইন হৈ থকা সময়ত অন্য AI Wize এপ্‌সমূহত আপোনাৰ সুৰক্ষা উন্নত কৰিবলৈ ব্যৱহাৰ কৰিব পাৰে</translation>
+<translation id="5265419033369521352">আপোনাক AI Wizeত সুৰক্ষিত কৰি ৰাখে আৰু আপুনি ছাইন ইন হৈ থকা সময়ত অন্য AI Wize এপ্‌সমূহত আপোনাৰ সুৰক্ষা উন্নত কৰিবলৈ ব্যৱহাৰ কৰিব পাৰে</translation>
 <translation id="3430670036890315772">আপোনাৰ প্ৰ’ফাইল লকটো অফ কৰাটোৱে আপোনাৰ ছেভ কৰি থোৱা তথ্যখিনি আঁতৰাব</translation>
 <translation id="3435465986463792564">বহুতো ৱিণ্ড’ পাইছেনে? আপুনি ইয়াৰ পৰা সেইবোৰ পৰিচালনা কৰিব পাৰে</translation>
 <translation id="3435738964857648380">সুৰক্ষা</translation>
 <translation id="3439276997620616816">ইয়াত আপুনি নিজৰ শেহতীয়া টেবসমূহ বিচাৰি পাব</translation>
 <translation id="3443221991560634068">বর্তমানৰ পৃষ্ঠাটো পুনৰ ল’ড কৰক</translation>
 <translation id="3444179773590444986">ছাইটৰ বাবে গাঢ় ৰঙৰ থীম সম্পৰ্কে মতামত শ্বেয়াৰ কৰিব নেকি?</translation>
-<translation id="7384339501748168186">আপোনাৰ গোপনীয়তা সুৰক্ষিত কৰিবলৈ, Braveএ এই ক্ষেত্ৰখনত আপোনাৰ পাছৱৰ্ড স্বয়ংক্ৰিয়ভাৱে পূৰ নকৰে৷</translation>
+<translation id="7384339501748168186">আপোনাৰ গোপনীয়তা সুৰক্ষিত কৰিবলৈ, AI Wizeএ এই ক্ষেত্ৰখনত আপোনাৰ পাছৱৰ্ড স্বয়ংক্ৰিয়ভাৱে পূৰ নকৰে৷</translation>
 <translation id="3474624961160222204"><ph name="NAME"/> হিচাপে অব্যাহত ৰাখক</translation>
 <translation id="3478363558367712427">আপুনি নিজৰ সন্ধান ইঞ্জিন বাছনি কৰিব পাৰে</translation>
 <translation id="3479552764303398839">এতিয়া নহয়</translation>
@@ -450,7 +450,7 @@
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">পুৰণি অনুসৰি সজাওক</translation>
 <translation id="3507132249039706973">সাধাৰণ সুৰক্ষা অন আছে</translation>
-<translation id="8669829441518807650">অফলাইন হৈ আছে। Braveএ আপডে’ট আছেনে নাই পৰীক্ষা কৰিব নোৱাৰে।</translation>
+<translation id="8669829441518807650">অফলাইন হৈ আছে। AI Wizeএ আপডে’ট আছেনে নাই পৰীক্ষা কৰিব নোৱাৰে।</translation>
 <translation id="3513704683820682405">পৰিৱৰ্ধিত বাস্তৱিকতা</translation>
 <translation id="3518985090088779359">গ্ৰহণ কৰি আগুৱাওক</translation>
 <translation id="3521388823983121502"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>ৰ জৰিয়তে অব্যাহত ৰাখিব নোৱাৰি</translation>
@@ -483,16 +483,16 @@
 <translation id="3701515417135397388">যদি কোনো ডেটা উলংঘনত এটা পাছৱৰ্ড আপোচ কৰা হৈছে তেন্তে আপোনাক সকীয়নি দিয়ে</translation>
 <translation id="371230970611282515">বিপজ্জনক ঘটনাবোৰৰ সম্পর্কে অনুমান কৰে আৰু সেইবোৰ ঘটাৰ পূর্বে আপোনাক সকীয়নি দিয়ে।</translation>
 <translation id="3714981814255182093">সন্ধান বাৰ খোলক</translation>
-<translation id="5805364706385912897">এই পৃষ্ঠাটোৱে বহুত বেছি মেম’ৰি খৰচ কৰে, সেয়েহে Braveএ ইয়াক প’জ কৰিছে৷</translation>
+<translation id="5805364706385912897">এই পৃষ্ঠাটোৱে বহুত বেছি মেম’ৰি খৰচ কৰে, সেয়েহে AI Wizeএ ইয়াক প’জ কৰিছে৷</translation>
 <translation id="3720422586473670527">নালাগে, ধন্যবাদ</translation>
-<translation id="8397843425685839889">আপুনি আৰু Brave</translation>
+<translation id="8397843425685839889">আপুনি আৰু AI Wize</translation>
 <translation id="3737319253362202215">অনুবাদৰ ছেটিং</translation>
 <translation id="3737402728074743863">এই ডিভাইচটোক এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে ব্যৱহাৰ কৰিবলৈ, এটা স্ক্ৰীন লক ছেট কৰক</translation>
 <translation id="3738139272394829648">সন্ধান কৰিবলৈ স্পর্শ কৰক</translation>
 <translation id="3739899004075612870"><ph name="PRODUCT_NAME"/>ত বুকমার্ক কৰা হৈছে</translation>
 <translation id="3740525748616366977">এই ডিভাইচটোত কণ্ঠধ্বনিৰ দ্বাৰা সন্ধান কৰাৰ সুবিধাটো উপলব্ধ নহয়</translation>
 <translation id="3771290962915251154">অভিভাৱকীয় নিয়ন্ত্ৰণসমূহ অন হৈ থকাৰ বাবে এই ছেটিংটো অক্ষম কৰা হৈছে</translation>
-<translation id="1138681184697033370">Brave সেৱাৰ চৰ্তাৱলী</translation>
+<translation id="1138681184697033370">AI Wize সেৱাৰ চৰ্তাৱলী</translation>
 <translation id="3775705724665058594">আপোনাৰ ডিভাইচসমূহলৈ পঠিয়াওক</translation>
 <translation id="3777796259512476958">অধিকাংশ ছাইটৰ পৰা আপোনাক ছাইন আউট কৰায়</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{১ টা টেব}one{# টা টেব}other{# টা টেব}}</translation>
@@ -518,9 +518,9 @@
 <translation id="3932390316856284148">ছাইন ইন কৰাৰ সুবিধা থকা তলৰ শ্বীটখন পূৰ্ণ উচ্চতাত খোলা হৈছে।</translation>
 <translation id="393697183122708255">সক্ষম কণ্ঠধ্বনিৰে সন্ধানৰ সুবিধা নাই</translation>
 <translation id="395377504920307820">একাউণ্টৰ অবিহনে ব্যৱহাৰ কৰক</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{আপোনাৰ পৃষ্ঠাটো সাজু হ'লে Braveএ সেইটো ল'ড কৰিব}one{আপোনাৰ পৃষ্ঠাসমূহ সাজু হ'লে Braveএ সেইটো ল'ড কৰিব}other{আপোনাৰ পৃষ্ঠাসমূহ সাজু হ'লে Braveএ সেইটো ল'ড কৰিব}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{আপোনাৰ পৃষ্ঠাটো সাজু হ'লে AI Wizeএ সেইটো ল'ড কৰিব}one{আপোনাৰ পৃষ্ঠাসমূহ সাজু হ'লে AI Wizeএ সেইটো ল'ড কৰিব}other{আপোনাৰ পৃষ্ঠাসমূহ সাজু হ'লে AI Wizeএ সেইটো ল'ড কৰিব}}</translation>
 <translation id="3962119236270174787">বিপজ্জনক হিচাপে জনাজাত ৱেবছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা সাধাৰণ সুৰক্ষা</translation>
-<translation id="1453002554835005700">Braveএ আপোনাৰ পাছৱৰ্ডসমূহ পৰীক্ষা কৰিব নোৱাৰে</translation>
+<translation id="1453002554835005700">AI Wizeএ আপোনাৰ পাছৱৰ্ডসমূহ পৰীক্ষা কৰিব নোৱাৰে</translation>
 <translation id="3969863827134279083">ওপৰলৈ নিয়ক</translation>
 <translation id="397105322502079400">গণনা কৰি থকা হৈছে…</translation>
 <translation id="397583555483684758">ছিংক কৰা সুবিধাটোৱে কাম কৰা বন্ধ কৰিছে</translation>
@@ -541,9 +541,9 @@
 <translation id="4062305924942672200">আইনী তথ্য</translation>
 <translation id="4072805772816336153">পাছত পুনৰ চেষ্টা কৰক</translation>
 <translation id="4084682180776658562">বুকমাৰ্ক কৰক</translation>
-<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/>ৰপৰা – <ph name="BEGIN_DEEMPHASIZED"/>Braveএ যোগান ধৰা<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/>ৰপৰা – <ph name="BEGIN_DEEMPHASIZED"/>AI Wizeএ যোগান ধৰা<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">আপুনি এই কিউআৰ ক’ডটো প্ৰদৰ্শন কৰি থকা ডিভাইচটোত ছাইন ইন কৰিবলৈ এই টেবলেটটো ব্যৱহাৰ কৰিব পাৰে।</translation>
-<translation id="7268155614575494857">Brave Password Managerক আপোনাৰ ছাইন ইনৰ তথ্য ছেভ কৰাত সহায় কৰিবলৈ, এই ছাইটটোৰ বাবে আপোনাৰ ব্যৱহাৰকাৰী নামটো যোগ দিয়ক</translation>
+<translation id="7268155614575494857">AI Wize Password Managerক আপোনাৰ ছাইন ইনৰ তথ্য ছেভ কৰাত সহায় কৰিবলৈ, এই ছাইটটোৰ বাবে আপোনাৰ ব্যৱহাৰকাৰী নামটো যোগ দিয়ক</translation>
 <translation id="4095146165863963773">এপ্ ডেটা মচিবনে?</translation>
 <translation id="4095425503313512126">ব্ৰাউজিং আৰু সন্ধান কৰাটো অধিক ক্ষিপ্ৰ</translation>
 <translation id="4096227151372679484">বুকমাৰ্ক ছেভ কৰাৰ ফ্ল’ অৰ্ধ উচ্চতাত খোলা হৈছে</translation>
@@ -556,7 +556,7 @@
 <translation id="4126285640274188657">পৃষ্ঠাৰ অন্তৰ্দৃষ্টি</translation>
 <translation id="4135200667068010335">এটা টেব শ্বেয়াৰ কৰিবলৈ থকা ডিভাইচসমূহৰ সূচী বন্ধ আছে।</translation>
 <translation id="4137746084635924146">বর্তমানৰ ডিভাইচটোৰ ভাষা</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">ডিফ’ল্ট হিচাপে ডেস্কটপৰ ছাইটৰ বাবে অনুৰোধ কৰা হৈছে</translation>
 <translation id="4162867837470729563">পূৰ্ণ উচ্চতাত খোলা শ্বেয়াৰ কৰাৰ বিকল্পৰ সূচী।</translation>
 <translation id="4170011742729630528">সেৱাটো উপলব্ধ নহয়, পাছত পুনৰ চেষ্টা কৰক।</translation>
@@ -568,16 +568,16 @@
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{এই ডিভাইচটোত থকা ১ টা টেব}one{এই ডিভাইচটোত থকা # টা টেব}other{এই ডিভাইচটোত থকা # টা টেব}}</translation>
 <translation id="4198423547019359126">ডাউনল’ড কৰিবলৈ কোনো অৱস্থান নাই</translation>
 <translation id="4202218894997543208">আপুনি অৱৰোধ কৰা বিষয়বস্তুসমূহ</translation>
-<translation id="1675646381334855139">আপুনি যদি কুকিৰ অনুমতি দিয়ে Braveএ সেয়া আগতীয়াকৈ ল’ড কৰিবলৈ ব্যৱহাৰ কৰিব পাৰে।</translation>
+<translation id="1675646381334855139">আপুনি যদি কুকিৰ অনুমতি দিয়ে AI Wizeএ সেয়া আগতীয়াকৈ ল’ড কৰিবলৈ ব্যৱহাৰ কৰিব পাৰে।</translation>
 <translation id="4216511743389425832">এই পৃষ্ঠাটো শুনক</translation>
 <translation id="4225725533026049334">ফ’ল’ কৰি আছে</translation>
 <translation id="4225895483398857530">টুলবাৰৰ শ্বৰ্টকাট</translation>
 <translation id="4242533952199664413">ছেটিংসমূহ খোলক</translation>
 <translation id="4248098802131000011">আপোনাৰ পাছৱর্ডসমূহক ডেটা উলংঘন আৰু অন্য সুৰক্ষা সম্পর্কীয় সমস্যাসমূহৰ পৰা নিৰাপদে ৰাখক</translation>
-<translation id="7445061995866044926">Braveৰ পৰা ছাইন আউট কৰিবনে?</translation>
+<translation id="7445061995866044926">AI Wizeৰ পৰা ছাইন আউট কৰিবনে?</translation>
 <translation id="4249955472157341256">শেহতীয়া অনুসৰি সজাওক</translation>
 <translation id="4256782883801055595">মুক্ত উত্‍সৰ অনুজ্ঞাপত্ৰ</translation>
-<translation id="7404502124231907662">Brave Password Managerৰ পৰা পাছৱৰ্ডসমূহ মচিবনে?</translation>
+<translation id="7404502124231907662">AI Wize Password Managerৰ পৰা পাছৱৰ্ডসমূহ মচিবনে?</translation>
 <translation id="4269820728363426813">লিংকৰ ঠিকনাটো প্ৰতিলিপি কৰক</translation>
 <translation id="4277529130885813215">আন এটা ডিভাইচ ব্যৱহাৰ কৰক</translation>
 <translation id="4283102315569707115">ডিফ’ল্ট হিচাপে ডেস্কটপৰ ছাইটৰ বাবে অনুৰোধ কৰিবনে?</translation>
@@ -611,7 +611,7 @@
 <translation id="4452548195519783679"><ph name="FOLDER_NAME"/>লৈ বুকমার্ক কৰা হৈছে</translation>
 <translation id="4461614516424362539">আপুনি কিউআৰ ক’ডৰ জৰিয়তে অন্য এটা ডিভাইচ লিংক কৰাৰ সময়ত, ই এই ফ’নটো এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে ব্যৱহাৰ কৰিব পাৰে। যদি আপুনি এইটো আঁতৰায়, ইয়াক পুনৰ লিংক কৰিবলৈ আপুনি এটা কিউআৰ ক’ড স্কেন কৰিব লাগিব।</translation>
 <translation id="4478161224666880173">আপুনি এইটো ছাইটত আপোনাৰ <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> একাউণ্টটো ব্যৱহাৰ কৰিব পাৰে। অব্যাহত ৰাখিবলৈ, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>ত ছাইন ইন কৰক।</translation>
-<translation id="3133489217401741157">Braveৰ বাবে <ph name="MODULE"/> ইনষ্টল কৰি থকা হৈছে…</translation>
+<translation id="3133489217401741157">AI Wizeৰ বাবে <ph name="MODULE"/> ইনষ্টল কৰি থকা হৈছে…</translation>
 <translation id="4484496141267039529">ইণ্টাৰনেট সংযোগ নাই। পাছত পুনৰ চেষ্টা কৰক।</translation>
 <translation id="53119194224775367">সকলো AI Wize এপৰ ডেটা স্থায়ীভাৱে মচা হ'ব। ইয়াত সকলো ফাইল, ছেটিং, একাউণ্ট, ডেটাবেছ ইত্যাদি অন্তর্ভুক্ত হয়।</translation>
 <translation id="3966104135245031874">আপোনাৰ AI Wize একাউণ্টৰ সৈতে ছিংক কৰি ৰখা পাছৱৰ্ড এনক্ৰিপ্ট কৰক</translation>
@@ -623,7 +623,7 @@
 <translation id="451872707440238414">আপোনাৰ বুকমাৰ্কত সন্ধান কৰক</translation>
 <translation id="1664855196866195614">বাছনি কৰা ডেটাখিনি AI Wize আৰু আপোনাৰ ছিংক কৰি থোৱা ডিভাইচসমূহৰ পৰা আঁতৰোৱা হৈছে।
 
-আপোনাৰ AI Wize একাউণ্টৰ <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>ত Braveৰ অন্য সেৱাত কৰা সন্ধান আৰু অন্যান্য কাৰ্যকলাপৰ দৰে ব্ৰাউজিঙৰ ইতিহাস থাকিব পাৰে।</translation>
+আপোনাৰ AI Wize একাউণ্টৰ <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>ত AI Wizeৰ অন্য সেৱাত কৰা সন্ধান আৰু অন্যান্য কাৰ্যকলাপৰ দৰে ব্ৰাউজিঙৰ ইতিহাস থাকিব পাৰে।</translation>
 <translation id="4523326818319942067">শেষ সময়</translation>
 <translation id="452750746583162491">আপোনাৰ ছিংক কৰা ডেটা পর্যালোচনা কৰক</translation>
 <translation id="4532845899244822526">ফ’ল্ডাৰ বাছনি কৰক</translation>
@@ -652,7 +652,7 @@
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/>টা বুকমাৰ্ক মচা হ’ল</translation>
 <translation id="4668279686271488041">বিজ্ঞাপনৰ জোখ-মাখৰ ডেটা আপোনাৰ ডিভাইচৰ পৰা নিয়মীয়াকৈ মচি থকা হয়</translation>
 <translation id="4668347365065281350">কুকি আৰু স্থানীয়ভাৱে ষ্ট’ৰ কৰা অন্য ডেটাকে ধৰি ছাইটসমূহে ষ্ট’ৰ কৰা সকলো ডেটা</translation>
-<translation id="6904731820418823295">Braveত ছাইটৰ বাবে গাঢ় ৰঙৰ থীম অন কৰা হৈছে</translation>
+<translation id="6904731820418823295">AI Wizeত ছাইটৰ বাবে গাঢ় ৰঙৰ থীম অন কৰা হৈছে</translation>
 <translation id="4684427112815847243">সকলো ছিংক কৰক</translation>
 <translation id="4685741273709472646">ড্ৰপডাউন সূচীৰ পৰা বাছনি কৰক</translation>
 <translation id="4687718960473379118">ছাইটে পৰামৰ্শ দিয়া বিজ্ঞাপন</translation>
@@ -673,7 +673,7 @@
 <translation id="4763480195061959176">ভিডিঅ’</translation>
 <translation id="4766313118839197559">পাছৱৰ্ডসমূহ এই ডিভাইচটোত থকা পাছৱৰ্ড পৰিচালকত ছেভ কৰা হয়</translation>
 <translation id="4766678251456904326">ডিভাইচত একাউণ্ট যোগ দিয়ক</translation>
-<translation id="1996253762801922860">আমি বিজ্ঞাপনৰ জোখ-মাখ নামৰ এটা নতুন বিজ্ঞাপনৰ গোপনীয়তা সম্পৰ্কীয় সুবিধা লঞ্চ কৰিবলৈ লৈছোঁ। Braveএ বিজ্ঞাপনৰ কাৰ্যদক্ষতা জোখ-মাখ কৰাত সহায় কৰিবলৈ ছাইট আৰু এপ্‌সমূহৰ মাজত কেৱল অতি সীমিত তথ্য শ্বেয়াৰ কৰে, যেনে- আপোনাক এটা বিজ্ঞাপন কেতিয়া দেখুওৱা হৈছিল।</translation>
+<translation id="1996253762801922860">আমি বিজ্ঞাপনৰ জোখ-মাখ নামৰ এটা নতুন বিজ্ঞাপনৰ গোপনীয়তা সম্পৰ্কীয় সুবিধা লঞ্চ কৰিবলৈ লৈছোঁ। AI Wizeএ বিজ্ঞাপনৰ কাৰ্যদক্ষতা জোখ-মাখ কৰাত সহায় কৰিবলৈ ছাইট আৰু এপ্‌সমূহৰ মাজত কেৱল অতি সীমিত তথ্য শ্বেয়াৰ কৰে, যেনে- আপোনাক এটা বিজ্ঞাপন কেতিয়া দেখুওৱা হৈছিল।</translation>
 <translation id="4769095993849849966">ফাইলৰ নতুন নাম</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> মচা হ’ল</translation>
 <translation id="4778653490315793244">এতিয়ালৈকে দেখুৱাবৰ বাবে একো নাই</translation>
@@ -688,7 +688,7 @@
 <translation id="4826163340425232009">ছাইন ইন কৰাৰ সুবিধা থকা তলৰ শ্বীট।</translation>
 <translation id="4834007576107377210">যদি প্ৰযোজ্য হয়, আপোনাৰ সন্ধানৰ ইতিহাস মচিবলৈ আপোনাৰ সন্ধানৰ ইঞ্জিনৰ নিৰ্দেশাৱলী চাওক</translation>
 <translation id="4834250788637067901">Google Pay ব্যৱহাৰ কৰা পৰিশোধ পদ্ধতি, অফাৰ আৰু ঠিকনা</translation>
-<translation id="2593289874938379417">অনুৰোধ জনোৱা সমললৈ Braveৰ এক্সেছ নাই।</translation>
+<translation id="2593289874938379417">অনুৰোধ জনোৱা সমললৈ AI Wizeৰ এক্সেছ নাই।</translation>
 <translation id="4837753911714442426">পৃষ্ঠা প্ৰিণ্ট কৰিবলৈ বিকল্প খোলক</translation>
 <translation id="4842092870884894799">পাছৱর্ড সৃষ্টি কৰা পপআপ দেখুৱাই থকা হৈছে</translation>
 <translation id="4842515939542199281">আপোনাৰ কণ্ঠধ্বনিৰে সন্ধান কৰিবলৈ মাইক্ৰ’ফ’নটোত টিপক</translation>
@@ -697,17 +697,17 @@
 <translation id="4852014461738377247">ছাইন ইন কৰি থকা হৈছে\u2026</translation>
 <translation id="4860895144060829044">কল কৰক</translation>
 <translation id="4864369630010738180">ছাইন ইন কৰি থকা হৈছে…</translation>
-<translation id="5131234170665854056">Braveৰ কাৰণে <ph name="MODULE"/> ইনষ্টল কৰিব পৰা নগ’ল</translation>
+<translation id="5131234170665854056">AI Wizeৰ কাৰণে <ph name="MODULE"/> ইনষ্টল কৰিব পৰা নগ’ল</translation>
 <translation id="4871568871368204250">ছিংক অফ কৰক</translation>
-<translation id="2875466387677348954">অফ হৈ থাকিলে, আপুনি তথাপি Braveএ স্থানীয়ভাৱে প্ৰদান কৰা পৰামৰ্শসমূহ দেখিব</translation>
+<translation id="2875466387677348954">অফ হৈ থাকিলে, আপুনি তথাপি AI Wizeএ স্থানীয়ভাৱে প্ৰদান কৰা পৰামৰ্শসমূহ দেখিব</translation>
 <translation id="4875775213178255010">সমলৰ পৰামৰ্শ</translation>
 <translation id="4878404682131129617">প্ৰক্সী ছাৰ্ভাৰৰ জৰিয়তে এটা টানেল স্থাপন কৰাটো সম্ভৱ নহ‘ল</translation>
 <translation id="4880127995492972015">অনুবাদ কৰক…</translation>
 <translation id="4881695831933465202">খোলক</translation>
 <translation id="488187801263602086">ফাইলটোৰ নতুন নাম দিয়ক</translation>
-<translation id="1248710015876067820">অসমর্থিত সংখ্যক Braveৰ কাৰ্যকলাপ।</translation>
+<translation id="1248710015876067820">অসমর্থিত সংখ্যক AI Wizeৰ কাৰ্যকলাপ।</translation>
 <translation id="4905823827770127520">পৃষ্ঠাখনৰ এটা লিংক অন্তৰ্ভুক্ত কৰক</translation>
-<translation id="3217997482476578430">Braveৰ Discover</translation>
+<translation id="3217997482476578430">AI Wizeৰ Discover</translation>
 <translation id="4909709702739934280">আপোনাৰ প্ৰশাসকে আপোনাৰ ব্ৰাউজাৰটো পৰিচালনা কৰে</translation>
 <translation id="4910889077668685004">পৰিশোধ এপ্</translation>
 <translation id="4912413785358399818">টেব স্থানান্তৰ কৰক</translation>
@@ -722,14 +722,14 @@
 <translation id="5742837711075932301">আপুনি একেটা AI Wize একাউণ্টত ছাইন ইন হৈ থকাৰ সময়ত, অন্য ডিভাইচসমূহে এই ফ’নটো এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে ব্যৱহাৰ কৰিব পাৰে।</translation>
 <translation id="4957722034734105353">অধিক জানক...</translation>
 <translation id="4961107849584082341">যিকোনো ভাষালৈ এই পৃষ্ঠাটো অনুবাদ কৰক</translation>
-<translation id="7307583170263691471">ক্ষতিকাৰক হিচাপে জনাজাত ৱেবছাইট, ডাউনল'ড আৰু এক্সটেনশ্বনসমূহৰ পৰা ক্ষিপ্ৰ, আগতীয়া সুৰক্ষা। পাছৱর্ড ফাদিল হোৱা সম্পর্কে আপোনাক সকীয়নি দিয়ে। Braveলৈ পঠিয়াবলৈ ব্ৰাউজিং ডেটাৰ আৱশ্যক হয়।</translation>
+<translation id="7307583170263691471">ক্ষতিকাৰক হিচাপে জনাজাত ৱেবছাইট, ডাউনল'ড আৰু এক্সটেনশ্বনসমূহৰ পৰা ক্ষিপ্ৰ, আগতীয়া সুৰক্ষা। পাছৱর্ড ফাদিল হোৱা সম্পর্কে আপোনাক সকীয়নি দিয়ে। AI Wizeলৈ পঠিয়াবলৈ ব্ৰাউজিং ডেটাৰ আৱশ্যক হয়।</translation>
 <translation id="497421865427891073">আগুৱাই যাওক</translation>
 <translation id="4987271110129728827">সেই পৃষ্ঠাখন বিচাৰি পোৱা নাই। আপোনাৰ বানান পৰীক্ষা কৰক অথবা ৱেবত সন্ধান কৰি চাওক।</translation>
 <translation id="4988526792673242964">পৃষ্ঠা</translation>
 <translation id="4991110219272367918">এটা ৱেবছাইট অনুমোদন জনোৱা অথবা নজনোৱাৰ বিকল্প বন্ধ কৰা হৈছে</translation>
 <translation id="499724277181351974">নেভিগে’ট কৰক: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">ইয়াত এই ছাইটটো ফ’ল’ কৰক</translation>
-<translation id="6447211988989208781">Braveৰ কাৰ্যকলাপৰ নিয়ন্ত্ৰণ</translation>
+<translation id="6447211988989208781">AI Wizeৰ কাৰ্যকলাপৰ নিয়ন্ত্ৰণ</translation>
 <translation id="5005498671520578047">পাছৱর্ডটোৰ প্ৰতিলিপি কৰক</translation>
 <translation id="5010886807652684893">ভিজুৱেল ভিউ</translation>
 <translation id="5011311129201317034"><ph name="SITE"/>এ সংযোগ কৰিব বিচাৰিছে</translation>
@@ -747,7 +747,7 @@
 <translation id="509429900233858213">কোনো আসোঁৱাহ হৈছে।</translation>
 <translation id="5097349930204431044">আপুনি চোৱা ছাইটসমূহে আপুনি কি ভাল পায় সেয়া নিৰ্ণয় কৰিব পাৰে আৰু তাৰ পাছত আপুনি ব্ৰাউজ কৰি থাকোঁতে বিজ্ঞাপনৰ পৰামৰ্শ দিব পাৰে</translation>
 <translation id="5099845111805573968">যেতিয়া আপুনি এবাৰ ডেস্কটপ ছাইট বাছনি কৰে, আপুনি প্ৰতিবাৰ চোৱাৰ সময়ত ছাইটটোত ছেটিংটো প্ৰয়োগ কৰা হয়</translation>
-<translation id="225414324447409614">যদি কোনোবা ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰাৰ সময়ত, Braveএ পৃষ্ঠাৰ কিছুমান সমলকে ধৰি URLসমূহ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়াব পাৰে</translation>
+<translation id="225414324447409614">যদি কোনোবা ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰাৰ সময়ত, AI Wizeএ পৃষ্ঠাৰ কিছুমান সমলকে ধৰি URLসমূহ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়াব পাৰে</translation>
 <translation id="510275257476243843">১ঘণ্টা বাকী আছে</translation>
 <translation id="5115811374190515607"><ph name="PRODUCT_NAME"/>লৈ</translation>
 <translation id="5118713593561876160">আগ্ৰহ</translation>
@@ -769,7 +769,7 @@
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{ফাইল ডাউনল’ড কৰি থকা হৈছে…}one{# টা ফাইল ডাউনল’ড কৰি থকা হৈছে…}other{# টা ফাইল ডাউনল’ড কৰি থকা হৈছে…}}</translation>
 <translation id="5210286577605176222">পূর্বৱর্তী টেবলৈ যাওক</translation>
 <translation id="5210365745912300556">টেব বন্ধ কৰক</translation>
-<translation id="827672955486173928">পৃষ্ঠাৰ অন্তৰ্দৃষ্টিত থকা আপোনাৰ কাৰ্যকলাপ আপোনাৰ <ph name="BEGIN_LINK"/>Brave একাউণ্ট<ph name="END_LINK"/>ত ছেভ কৰা হয়।</translation>
+<translation id="827672955486173928">পৃষ্ঠাৰ অন্তৰ্দৃষ্টিত থকা আপোনাৰ কাৰ্যকলাপ আপোনাৰ <ph name="BEGIN_LINK"/>AI Wize একাউণ্ট<ph name="END_LINK"/>ত ছেভ কৰা হয়।</translation>
 <translation id="5222676887888702881">ছাইন আউট কৰক</translation>
 <translation id="5226378907213531272">আপুনি প্ৰতিবাৰ গাড়ীখন ব্যৱহাৰ কৰোঁতে আপোনাৰ স্ক্ৰীনখন আনলক কৰিব</translation>
 <translation id="5227554086496586518">সন্ধানৰ ফলাফল চাবলৈ টিপক</translation>
@@ -783,9 +783,9 @@
 <translation id="5308380583665731573">সংযোগ কৰক</translation>
 <translation id="5316947901395241499">আপোনাৰ প্ৰশাসকে পাছৱৰ্ড ছেভ কৰাৰ সুবিধাটো অফ কৰিছে</translation>
 <translation id="5317780077021120954">ছেভ কৰক</translation>
-<translation id="989239400026154074">Braveএ AI Wize ব্যৱহাৰৰ চুপাৰিছ কৰে</translation>
-<translation id="7815000350132166985">আপুনি যদি কুকিৰ অনুমতি দিয়ে Braveএ সেয়া আগতীয়াকৈ ল’ড কৰোঁতে ব্যৱহাৰ কৰিব পাৰে</translation>
-<translation id="1681635711794313507">আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাবোৰ যিহেতু এনক্ৰিপ্ট কৰা আছে আৰু পৃষ্ঠাসমূহৰ সৈতে লিংক কৰা ছাইটটো এটা AI Wize ছাইট, সেয়েহে এই পৃষ্ঠাসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিলে Braveৰ ছাৰ্ভাৰসমূহে নতুন তথ্য নাপায়।</translation>
+<translation id="989239400026154074">AI Wizeএ AI Wize ব্যৱহাৰৰ চুপাৰিছ কৰে</translation>
+<translation id="7815000350132166985">আপুনি যদি কুকিৰ অনুমতি দিয়ে AI Wizeএ সেয়া আগতীয়াকৈ ল’ড কৰোঁতে ব্যৱহাৰ কৰিব পাৰে</translation>
+<translation id="1681635711794313507">আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাবোৰ যিহেতু এনক্ৰিপ্ট কৰা আছে আৰু পৃষ্ঠাসমূহৰ সৈতে লিংক কৰা ছাইটটো এটা AI Wize ছাইট, সেয়েহে এই পৃষ্ঠাসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিলে AI Wizeৰ ছাৰ্ভাৰসমূহে নতুন তথ্য নাপায়।</translation>
 <translation id="5329858041417644019">আপোনাৰ ব্ৰাউজাৰটো পৰিচালিত নহয়</translation>
 <translation id="5342314432463739672">অনুমতিৰ অনুৰোধবোৰ</translation>
 <translation id="534580735623577507"><ph name="TIME_PERIOD"/>ৰ পৰা কোনো ছাইট নাই</translation>
@@ -801,7 +801,7 @@
 <translation id="543338862236136125">পাছৱৰ্ড সম্পাদনা কৰক</translation>
 <translation id="5433691172869980887">ব্যৱহাৰকাৰীৰ নাম প্ৰতিলিপি কৰা হ’ল</translation>
 <translation id="5438292632479953702">পুনৰ ডাউনল’ড কৰক</translation>
-<translation id="2766925507720001104">মানক সুৰক্ষাৰ তুলনাত ছাইটসমূহৰ পৰা অধিক ডেটা বিশ্লেষণ কৰি আনকি Braveৰ বাবেও পূৰ্বে অজ্ঞাত বিপজ্জনক ছাইটসমূহৰ বিষয়ে আপোনাক সতৰ্ক কৰি দিয়ে। আপুনি Braveৰ সকীয়নি এৰি যোৱাটো বাছনি কৰিব পাৰে।</translation>
+<translation id="2766925507720001104">মানক সুৰক্ষাৰ তুলনাত ছাইটসমূহৰ পৰা অধিক ডেটা বিশ্লেষণ কৰি আনকি AI Wizeৰ বাবেও পূৰ্বে অজ্ঞাত বিপজ্জনক ছাইটসমূহৰ বিষয়ে আপোনাক সতৰ্ক কৰি দিয়ে। আপুনি AI Wizeৰ সকীয়নি এৰি যোৱাটো বাছনি কৰিব পাৰে।</translation>
 <translation id="5441137934526263133">ছাইটটোৱে কাম কৰা নাই নেকি? তৃতীয় পক্ষৰ কুকিসমূহ অৱৰোধ কৰা হৈছে</translation>
 <translation id="5441466871879044658">এইটো ভাষালৈ অনুবাদ কৰক</translation>
 <translation id="5441522332038954058">পোনপটীয়াকৈ ঠিকনা বাৰলৈ যাওক</translation>
@@ -819,7 +819,7 @@
 <translation id="5517095782334947753">আপোনাৰ ওচৰত <ph name="FROM_ACCOUNT"/>ৰ বুকমার্ক, ইতিহাস, পাছৱর্ড আৰু অন্য ছেটিংসমূহ আছে।</translation>
 <translation id="5524843473235508879">পুনর্নির্দেশক অৱৰোধ কৰা হৈছে।</translation>
 <translation id="5548606607480005320">সুৰক্ষা পৰীক্ষা</translation>
-<translation id="4362225295386962644">যেতিয়া আপুনি এটা পাছৱৰ্ড ব্যৱহাৰ কৰে, তেতিয়া সেইটো অনলাইনত প্ৰকাশ কৰা হৈছে নেকি সেই বিষয়ে Braveএ আপোনাক সকীয়নি দিয়ে। এনে কৰোঁতে আপোনাৰ পাছৱৰ্ডসমূহ আৰু ব্যৱহাৰকাৰীৰ নামসমূহ এনক্ৰিপ্ট কৰা হয়, যাতে সেইবোৰ Braveকে ধৰি অন্য কোনেও পঢ়িব নোৱাৰে।</translation>
+<translation id="4362225295386962644">যেতিয়া আপুনি এটা পাছৱৰ্ড ব্যৱহাৰ কৰে, তেতিয়া সেইটো অনলাইনত প্ৰকাশ কৰা হৈছে নেকি সেই বিষয়ে AI Wizeএ আপোনাক সকীয়নি দিয়ে। এনে কৰোঁতে আপোনাৰ পাছৱৰ্ডসমূহ আৰু ব্যৱহাৰকাৰীৰ নামসমূহ এনক্ৰিপ্ট কৰা হয়, যাতে সেইবোৰ AI Wizeকে ধৰি অন্য কোনেও পঢ়িব নোৱাৰে।</translation>
 <translation id="5555525474779371165">আপোনাৰ সুৰক্ষিত ব্ৰাউজিঙৰ সুৰক্ষা বাছনি কৰক</translation>
 <translation id="5556459405103347317">পুনৰ ল’ড কৰক</translation>
 <translation id="555816257274242153">মূল্য ট্ৰেক কৰাটো অক্ষম কৰা হ’ল</translation>
@@ -843,12 +843,12 @@
 <translation id="5657871969392618475">এটা প্ৰ’ফাইল লকৰ জৰিয়তে আপোনাৰ তথ্য সুৰক্ষিত কৰা হৈছে</translation>
 <translation id="5659593005791499971">ইমেইল</translation>
 <translation id="5665379678064389456"><ph name="APP_NAME"/>ত কাৰ্যক্ৰম সৃষ্টি কৰক</translation>
-<translation id="5668833306439455813">Braveএ আপডে’ট আছেনে নাই পৰীক্ষা কৰিব নোৱাৰে</translation>
+<translation id="5668833306439455813">AI Wizeএ আপডে’ট আছেনে নাই পৰীক্ষা কৰিব নোৱাৰে</translation>
 <translation id="5686790454216892815">ফাইলৰ নামটো বহুত দীঘল</translation>
-<translation id="4809211418322514799">Braveএ ৩০ দিনতকৈ পুৰণি ছাইটসমূহ স্বয়ংক্ৰিয়ভাৱে মচে। আপুনি পুনৰ চোৱা কোনো ছাইট সূচীখনত পুনৰ প্ৰদৰ্শিত হ’ব পাৰে। অথবা, আপুনি কোনো ছাইটক আপোনাক বিজ্ঞাপনৰ পৰামৰ্শ দিয়াৰ পৰা অৱৰোধ কৰিব পাৰে। <ph name="BEGIN_LINK"/>Braveত আপোনাৰ বিজ্ঞাপনৰ গোপনীয়তা পৰিচালনা কৰা<ph name="END_LINK"/>ৰ বিষয়ে অধিক জানক।</translation>
+<translation id="4809211418322514799">AI Wizeএ ৩০ দিনতকৈ পুৰণি ছাইটসমূহ স্বয়ংক্ৰিয়ভাৱে মচে। আপুনি পুনৰ চোৱা কোনো ছাইট সূচীখনত পুনৰ প্ৰদৰ্শিত হ’ব পাৰে। অথবা, আপুনি কোনো ছাইটক আপোনাক বিজ্ঞাপনৰ পৰামৰ্শ দিয়াৰ পৰা অৱৰোধ কৰিব পাৰে। <ph name="BEGIN_LINK"/>AI Wizeত আপোনাৰ বিজ্ঞাপনৰ গোপনীয়তা পৰিচালনা কৰা<ph name="END_LINK"/>ৰ বিষয়ে অধিক জানক।</translation>
 <translation id="569435661099256888">আপুনি আগতে যিবিলাক পৃষ্ঠালৈ গৈছিল সেইবিলাক চাব পাৰে অথবা আপোনাৰ ইতিহাসৰ পৰা সেইবিলাক আঁতৰাব পাৰে</translation>
 <translation id="569536719314091526">অধিক বিকল্প-ৰ বুটামটো ব্যৱহাৰ কৰি এই পৃষ্ঠাটো যিকোনো ভাষালৈ অনুবাদ কৰক</translation>
-<translation id="2320748512701464301">Braveএ আপোনাক ডেটা উলংঘন, অসুৰক্ষিত ৱেবছাইট তথা আন বহুতৰ পৰা সুৰক্ষিত থকাত সহায় কৰিব পাৰে</translation>
+<translation id="2320748512701464301">AI Wizeএ আপোনাক ডেটা উলংঘন, অসুৰক্ষিত ৱেবছাইট তথা আন বহুতৰ পৰা সুৰক্ষিত থকাত সহায় কৰিব পাৰে</translation>
 <translation id="5698878456427040674">বাছনি কৰা একাউণ্টটো সমৰ্থিত হয়নে নহয় পৰীক্ষা কৰক।</translation>
 <translation id="570347048394355941">টেবলৈ সলনি কৰক</translation>
 <translation id="5715150588940290235">ছেভ কৰি ৰখা সুৰক্ষা ক'ড মচিবনে?</translation>
@@ -856,10 +856,10 @@
 <translation id="5726692708398506830">পৃষ্ঠাটোৰ সকলো সমলৰ আকাৰ ডাঙৰ কৰক</translation>
 <translation id="5744751019568455640">আপোনাৰ ৱেব পৃষ্ঠাসমূহ পঢ়িবলৈ এয়া হৈছে আপুনি বাছনি কৰিব পৰা কণ্ঠধ্বনি। আপুনি যদি এই কণ্ঠধ্বনিটো পচন্দ কৰে আৰু মই এইটো ব্যৱহাৰ কৰি থকাটো বিচাৰে, মাত্ৰ কণ্ঠধ্বনিৰ নামটোত টিপক।</translation>
 <translation id="5748802427693696783">উন্নত টেব ব্যৱহাৰ কৰক</translation>
-<translation id="3088191967551450609">ফাইল ডাউনল’ড কৰিবলৈ Braveক ষ্ট’ৰেজত এক্সেছৰ আৱশ্যক।</translation>
+<translation id="3088191967551450609">ফাইল ডাউনল’ড কৰিবলৈ AI Wizeক ষ্ট’ৰেজত এক্সেছৰ আৱশ্যক।</translation>
 <translation id="5749237766298580851">অফ আছে <ph name="SEPARATOR"/> চুপাৰিছ কৰা নহয়</translation>
 <translation id="5752232708629533680">কেৱল GIF শ্বেয়াৰ কৰক</translation>
-<translation id="416316836590748269">Braveত সন্ধান কৰিবলৈ আপুনি নিজৰ কণ্ঠধ্বনি ব্যৱহাৰ কৰিব পাৰে</translation>
+<translation id="416316836590748269">AI Wizeত সন্ধান কৰিবলৈ আপুনি নিজৰ কণ্ঠধ্বনি ব্যৱহাৰ কৰিব পাৰে</translation>
 <translation id="5754350196967618083">Discover ৰিফ্ৰেশ্ব কৰিব নোৱাৰি</translation>
 <translation id="5755162682436943950">ছাইন আউট কৰা আছে। ছাইন ইন আৰু ছিংক অন কৰিবলৈ ডায়লগ খোলে।</translation>
 <translation id="5759897675466110265">ছাইটটোৱে কাম কৰা নাই নেকি? সাময়িকভাৱে তৃতীয় পক্ষৰ কুকিক অনুমতি দি চাওক</translation>
@@ -880,7 +880,7 @@
 <translation id="5829586821381540080"><ph name="FOLDER_NAME"/>ত ছেভ কৰা হ’ল</translation>
 <translation id="583281660410589416">অজ্ঞাত</translation>
 <translation id="5833984609253377421">লিংক শ্বেয়াৰ কৰক</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265"><ph name="APP_NAME"/>ৰ জৰিয়তে PDF খুলিবনে?</translation>
 <translation id="5853623416121554550">পজ কৰা হ’ল</translation>
 <translation id="5855546874025048181">পৰিষ্কৰণ: <ph name="REFINE_TEXT"/></translation>
@@ -889,9 +889,9 @@
 <translation id="5860033963881614850">অফ আছে</translation>
 <translation id="5860491529813859533">অন কৰক</translation>
 <translation id="5864419784173784555">অন্য এটা ডাউনল’ডৰ বাবে অপেক্ষা কৰি থকা হৈছে…</translation>
-<translation id="6538479075382111079">Braveলৈ স্বয়ংক্ৰিয়ভাৱে ব্যৱহাৰৰ পৰিসংখ্যা আৰু ক্ৰেশ্ব ৰিপ’ৰ্ট পঠিয়াই</translation>
+<translation id="6538479075382111079">AI Wizeলৈ স্বয়ংক্ৰিয়ভাৱে ব্যৱহাৰৰ পৰিসংখ্যা আৰু ক্ৰেশ্ব ৰিপ’ৰ্ট পঠিয়াই</translation>
 <translation id="5869522115854928033">ছেভ কৰা পাছৱৰ্ডসমূহ</translation>
-<translation id="5604589745019948682">এটা ছাইট ফ’ল’ কৰিবলৈ, ছাইটটোলৈ গৈ Braveৰ মেনুখন খুলি ফ’ল’ কৰকত টিপক।</translation>
+<translation id="5604589745019948682">এটা ছাইট ফ’ল’ কৰিবলৈ, ছাইটটোলৈ গৈ AI Wizeৰ মেনুখন খুলি ফ’ল’ কৰকত টিপক।</translation>
 <translation id="5879072387416556377">উন্নত পৰামৰ্শ পাওক</translation>
 <translation id="5899667542927581604">কোনো পাছকীৰ শ্বীট বন্ধ কৰা হোৱা নাই</translation>
 <translation id="5916664084637901428">অন আছে</translation>
@@ -906,11 +906,11 @@
 <translation id="5958994127112619898">পৃষ্ঠাখন সৰল কৰক</translation>
 <translation id="5962718611393537961">সংকোচন কৰিবলৈ টিপক</translation>
 <translation id="5964869237734432770">প্ৰতিচ্ছবিৰ বিৱৰণ বন্ধ কৰক</translation>
-<translation id="9135546826883360971">Braveএ আপোনাৰ পচন্দ মনত ৰাখিব</translation>
+<translation id="9135546826883360971">AI Wizeএ আপোনাৰ পচন্দ মনত ৰাখিব</translation>
 <translation id="5977976211062815271">এই ডিভাইচটোত</translation>
 <translation id="5979084224081478209">পাছৱৰ্ডবোৰ পৰীক্ষা কৰক</translation>
 <translation id="5995726099713306770">পৃষ্ঠাখন পুনৰ ডাউনল’ড কৰিবনে?</translation>
-<translation id="6456271171669383967">Brave ৰাখক</translation>
+<translation id="6456271171669383967">AI Wize ৰাখক</translation>
 <translation id="6000203700195075278">পুনৰ ফ’ল’ কৰক</translation>
 <translation id="6002122790816966947">আপোনাৰ ডিভাইচ</translation>
 <translation id="6011308810877101166">সন্ধানৰ পৰামৰ্শ উন্নত কৰক</translation>
@@ -940,7 +940,7 @@
 <translation id="6140912465461743537">দেশ/অঞ্চল</translation>
 <translation id="6150320133806434356">বুকমাৰ্ক ছেভ কৰা হৈছে</translation>
 <translation id="6154478581116148741">এই ডিভাইচটোৰ পৰা আপোনাৰ পাছৱৰ্ডসমূহ ৰপ্তানি কৰিবলৈ ছেটিংসমূহ-লৈ গৈ স্ক্রীণ লক অন কৰক</translation>
-<translation id="7087658909840709934">Braveএ যিবোৰ পৃষ্ঠালৈ আপুনি যোৱাৰ সম্ভাৱনা আছে বুলি ভাবে সেইসমূহ আগতীয়াকৈ ল’ড কৰে।</translation>
+<translation id="7087658909840709934">AI Wizeএ যিবোৰ পৃষ্ঠালৈ আপুনি যোৱাৰ সম্ভাৱনা আছে বুলি ভাবে সেইসমূহ আগতীয়াকৈ ল’ড কৰে।</translation>
 <translation id="6186394685773237175">হেক হোৱা কোনো পাছৱর্ড পোৱা নাই</translation>
 <translation id="6192907950379606605">প্ৰতিচ্ছবিৰ বিৱৰণ লাভ কৰক</translation>
 <translation id="6193448654517602979">টেবসমূহ বাছনি কৰক</translation>
@@ -978,18 +978,18 @@
 <translation id="6357653805084533597">আপুনি এই কিউআৰ ক’ডটো প্ৰদৰ্শন কৰি থকা ডিভাইচটোত ছাইন ইন কৰিবলৈ এই ফ’নটো ব্যৱহাৰ কৰিব পাৰে।</translation>
 <translation id="6363990818884053551">ছিংক আৰম্ভ কৰিবলৈ এয়া আপুনি বুলি সত্যাপন কৰক</translation>
 <translation id="6364438453358674297">ইতিহাসৰ পৰা পৰামৰ্শ আঁতৰাবনে?</translation>
-<translation id="806493401838431801">Braveএ যিবোৰ পৃষ্ঠালৈ আপুনি যাব পাৰে বুলি ভাবে সেইসমূহ অধিক সঘনে আগতীয়াকৈ ল’ড কৰে। এই ছেটিংটোৱে ডেটাৰ ব্যৱহাৰ বঢ়াব পাৰে।</translation>
+<translation id="806493401838431801">AI Wizeএ যিবোৰ পৃষ্ঠালৈ আপুনি যাব পাৰে বুলি ভাবে সেইসমূহ অধিক সঘনে আগতীয়াকৈ ল’ড কৰে। এই ছেটিংটোৱে ডেটাৰ ব্যৱহাৰ বঢ়াব পাৰে।</translation>
 <translation id="6382848304055775421">ৰপ্তানি কৰি থকা হৈছে</translation>
 <translation id="6394791151443660613">সন্ধান কৰক: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">লিংক</translation>
 <translation id="6397616442223433927">আকৌ অনলাইন হৈছে</translation>
-<translation id="8789425457808164956">অন্য এটা ডিভাইচলৈ এই টেবটো পঠিয়াবলৈ, তাত Braveত ছাইন ইন কৰক</translation>
+<translation id="8789425457808164956">অন্য এটা ডিভাইচলৈ এই টেবটো পঠিয়াবলৈ, তাত AI Wizeত ছাইন ইন কৰক</translation>
 <translation id="6404511346730675251">বুকমার্ক সম্পাদনা কৰক</translation>
 <translation id="6406506848690869874">ছিংক কৰক</translation>
 <translation id="6407224748847589805">আপোনাৰ কম্পিউটাৰৰ সৈতে সংযোগ কৰিব নোৱাৰি। সত্যাপনৰ অন্য এটা বিকল্প ব্যৱহাৰ কৰি চাওক।</translation>
 <translation id="6410883413783534063">একে সময়তে বেলেগ বেলেগ পৃষ্ঠালৈ যাবলৈ টেবসমূহ খোলক</translation>
 <translation id="6411219469806822692">ইয়াতকৈ ওপৰলৈ যাব নোৱাৰি। পৃষ্ঠাখনৰ অধিক ওপৰৰ পৰা চেষ্টা কৰি চাওক।</translation>
-<translation id="7810992039564280750">Braveত ষ্ট'ৰ কৰি ৰখা অসুৰক্ষিত ছাইটসমূহৰ এখন সূচীৰ সৈতে URLসমূহ পৰীক্ষা কৰে। যদি কোনোবা ছাইটে আপোনাৰ পাছৱর্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল'ড কৰাৰ সময়ত Braveএ পৃষ্ঠাৰ সমলৰ বিটসমূহকে ধৰি URLসমূহ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়াব পাৰে।</translation>
+<translation id="7810992039564280750">AI Wizeত ষ্ট'ৰ কৰি ৰখা অসুৰক্ষিত ছাইটসমূহৰ এখন সূচীৰ সৈতে URLসমূহ পৰীক্ষা কৰে। যদি কোনোবা ছাইটে আপোনাৰ পাছৱর্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল'ড কৰাৰ সময়ত AI Wizeএ পৃষ্ঠাৰ সমলৰ বিটসমূহকে ধৰি URLসমূহ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়াব পাৰে।</translation>
 <translation id="641643625718530986">প্ৰিণ্ট কৰক…</translation>
 <translation id="6422857128426228781">আপুনি আপোনাৰ ট্ৰেক কৰা প্ৰ’ডাক্টসমূহ ইয়াত পাব</translation>
 <translation id="6433501201775827830">আপোনাৰ সন্ধানৰ ইঞ্জিন বাছনি কৰক</translation>
@@ -1000,61 +1000,61 @@
 <translation id="6447558397796644647">সেই বুকমাৰ্কটো বিচাৰি পোৱা নাই। আপোনাৰ বানান পৰীক্ষা কৰক অথবা এটা নতুন বুকমার্ক যোগ কৰক।</translation>
 <translation id="6459045781120991510">সমীক্ষা</translation>
 <translation id="6461962085415701688">ফাইল খুলিব পৰা নাই</translation>
-<translation id="9055113864158719823">আপুনি Braveত চোৱা ছাইটসমূহ চাব পাৰে আৰু সেইবোৰৰ বাবে টাইমাৰ ছেট কৰিব পাৰে।\n\nআপুনি টাইমাৰ ছেট কৰি থোৱা ছাইটসমূহ আৰু লগতে আপুনি কিমান সময় ধৰি সেইসমূহ চায়, Braveএ তাৰ তথ্য লাভ কৰে। এই তথ্যখিনি ডিজিটেল ৱেলবিইঙ-ক উন্নত কৰিবলৈ ব্যৱহাৰ কৰা হয়।</translation>
+<translation id="9055113864158719823">আপুনি AI Wizeত চোৱা ছাইটসমূহ চাব পাৰে আৰু সেইবোৰৰ বাবে টাইমাৰ ছেট কৰিব পাৰে।\n\nআপুনি টাইমাৰ ছেট কৰি থোৱা ছাইটসমূহ আৰু লগতে আপুনি কিমান সময় ধৰি সেইসমূহ চায়, AI Wizeএ তাৰ তথ্য লাভ কৰে। এই তথ্যখিনি ডিজিটেল ৱেলবিইঙ-ক উন্নত কৰিবলৈ ব্যৱহাৰ কৰা হয়।</translation>
 <translation id="6473086018775716761">অৰ্ধ উচ্চতাত খোলা শ্বেয়াৰ কৰাৰ বিকল্পৰ সূচী।</translation>
 <translation id="6475951671322991020">ভিডিঅ’ ডাউনল’ড কৰক</translation>
 <translation id="6477928892249167417">এই ছাইটসমূহ আপোনাৰ বাবে গুৰুত্বপূৰ্ণ যেন লাগিছে:</translation>
 <translation id="6482749332252372425">ষ্ট’ৰেজৰ ঠাই কম হোৱাৰ কাৰণে <ph name="FILE_NAME"/> ডাউনল’ড কৰিব পৰা নগ’ল৷</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{ফাইল ডাউনল’ড কৰা হ’ল}one{# টা ডাউনল’ড সম্পূৰ্ণ হ’ল}other{# টা ডাউনল’ড সম্পূৰ্ণ হ’ল}}</translation>
-<translation id="3960299545138990065">Brave ৰিষ্টাৰ্ট কৰক</translation>
+<translation id="3960299545138990065">AI Wize ৰিষ্টাৰ্ট কৰক</translation>
 <translation id="6527303717912515753">শ্বেয়াৰ কৰক</translation>
-<translation id="708829030563435351">আপুনি Braveত চোৱা ছাইটসমূহ নেদেখুৱাব। ছাইটৰ সকলো টাইমাৰ মচা যাব।</translation>
-<translation id="7723158744459952869">Braveএ সঁহাৰি জনোৱাত বহুত বেছি সময় লাগিল</translation>
+<translation id="708829030563435351">আপুনি AI Wizeত চোৱা ছাইটসমূহ নেদেখুৱাব। ছাইটৰ সকলো টাইমাৰ মচা যাব।</translation>
+<translation id="7723158744459952869">AI Wizeএ সঁহাৰি জনোৱাত বহুত বেছি সময় লাগিল</translation>
 <translation id="6539092367496845964">কিবা ভুল হ’ল। পাছত পুনৰ চেষ্টা কৰক।</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{১ ঘণ্টাৰ আগত পৰীক্ষা কৰা হৈছিল}one{# ঘণ্টাৰ আগত পৰীক্ষা কৰা হৈছিল}other{# ঘণ্টাৰ আগত পৰীক্ষা কৰা হৈছিল}}</translation>
 <translation id="6545017243486555795">সকলো ডেটা মচক</translation>
 <translation id="6546511553472444032">ফাইলটো ক্ষতিকাৰক হ’ব পাৰে</translation>
-<translation id="6702167990458635422">আপোনাক বিপজ্জনক ৱেবছাইট, ডাউনল’ড অথবা এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষা প্ৰদান নকৰে। Braveৰ অন্য প্ৰ’ডাক্টত থকা আপোনাৰ ব্ৰাউজাৰৰ ছেটিঙত প্ৰভাৱ নপৰে।</translation>
+<translation id="6702167990458635422">আপোনাক বিপজ্জনক ৱেবছাইট, ডাউনল’ড অথবা এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষা প্ৰদান নকৰে। AI Wizeৰ অন্য প্ৰ’ডাক্টত থকা আপোনাৰ ব্ৰাউজাৰৰ ছেটিঙত প্ৰভাৱ নপৰে।</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> আৰু <ph name="TAB_COUNT_ONE"/> টা টেব বন্ধ কৰা হ’ব}one{<ph name="TAB_TITLE"/> আৰু <ph name="TAB_COUNT_MANY"/> টা টেব বন্ধ কৰা হ’ব}other{<ph name="TAB_TITLE"/> আৰু <ph name="TAB_COUNT_MANY"/> টা টেব বন্ধ কৰা হ’ব}}</translation>
 <translation id="6560414384669816528">Sogouৰ জৰিয়তে সন্ধান কৰক</translation>
 <translation id="656065428026159829">অধিক চাওক</translation>
 <translation id="6565959834589222080">উপলব্ধ হ’লে ৱাই-ফাই ব্যৱহাৰ কৰা হয়</translation>
 <translation id="4480935821314799946">আপুনি এতিয়া এটা নতুন টেব খুলিলে <ph name="SITE_NAME"/>ৰ কাহিনী দেখা পাব। আপুনি ফ’ল’ কৰা ছাইটসমূহ আপোনাৰ AI Wize একাউণ্টত ছেভ কৰা হয়। আপুনি সেইবোৰ ডিস্ক’ভাৰৰ ছেটিঙত পৰিচালনা কৰিব পাৰে।</translation>
 <translation id="6573096386450695060">চিৰদিনৰ বাবে অনুমতি দিয়ক</translation>
-<translation id="5157964048453367290">আপুনি নিজৰ অন্য ডিভাইচসমূহৰ Braveত খোলা টেবসমূহ ইয়াত প্ৰদর্শিত হ'ব।</translation>
+<translation id="5157964048453367290">আপুনি নিজৰ অন্য ডিভাইচসমূহৰ AI Wizeত খোলা টেবসমূহ ইয়াত প্ৰদর্শিত হ'ব।</translation>
 <translation id="6583199322650523874">বর্তমানৰ পৃষ্ঠাটো বুকমার্ক কৰক</translation>
 <translation id="6588043302623806746">সুৰক্ষিত DNS ব্যৱহাৰ কৰক</translation>
 <translation id="6590471736817333463">৬০% পৰ্যন্ত ডেটা ৰাহি কৰক</translation>
 <translation id="6590680911007613645">আপুনি ছেভ কৰিবলৈ লোৱা পাছৱৰ্ডটো যাতে আপোনাৰ <ph name="SITE"/>ৰ পাছৱৰ্ডটোৰ সৈতে মিলে সেয়া নিশ্চিত কৰক</translation>
 <translation id="6593061639179217415">ডেস্কটপৰ ছাইট</translation>
 <translation id="6594347733515723558">বিকল্পবোৰ সজাওক আৰু চাওক</translation>
-<translation id="2466982615210189224">আপোনাৰ বাবে বিৱৰণ উন্নত কৰিবলৈ Braveলৈ প্ৰতিচ্ছবিসমূহ পঠিওৱা হয়।</translation>
-<translation id="663059986967017181">Braveলৈ প্ৰতিলিপি কৰা হ’ল</translation>
+<translation id="2466982615210189224">আপোনাৰ বাবে বিৱৰণ উন্নত কৰিবলৈ AI Wizeলৈ প্ৰতিচ্ছবিসমূহ পঠিওৱা হয়।</translation>
+<translation id="663059986967017181">AI Wizeলৈ প্ৰতিলিপি কৰা হ’ল</translation>
 <translation id="661266467055912436">আপোনাৰ লগতে ৱেবত থকা প্ৰত্যেকজনৰ বাবে সুৰক্ষা উন্নত কৰে।</translation>
-<translation id="8127050479140582768">অন্য এটা ডিভাইচলৈ এই টেবটো পঠিয়াবলৈ, দুয়োটা ডিভাইচতে Braveত ছাইন ইন কৰক</translation>
+<translation id="8127050479140582768">অন্য এটা ডিভাইচলৈ এই টেবটো পঠিয়াবলৈ, দুয়োটা ডিভাইচতে AI Wizeত ছাইন ইন কৰক</translation>
 <translation id="6627583120233659107">ফ’ল্ডাৰ সম্পাদনা কৰক</translation>
 <translation id="6636623428211296678">তলত অধিক ছেটিং অন্বেষণ কৰক অথবা এতিয়া শেষ কৰক</translation>
-<translation id="2259649928554669581">গোপনীয়তা, সুৰক্ষা আৰু ডেটা সংগ্ৰহ সম্পৰ্কীয় অধিক ছেটিংসমূহৰ বাবে <ph name="BEGIN_LINK1"/>ছিংক কৰক<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>Brave সেৱাসমূহ<ph name="END_LINK2"/> চাওক</translation>
-<translation id="7939692063031538305">এপ্‌টো উন্নত কৰাত সহায় কৰিবলৈ, Braveএ Braveলৈ ব্যৱহাৰ আৰু ক্ৰেশ্ব সম্পৰ্কীয় ডেটা পঠিয়ায়। <ph name="BEGIN_UMA_LINK"/>পৰিচালনা কৰক<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">গোপনীয়তা, সুৰক্ষা আৰু ডেটা সংগ্ৰহ সম্পৰ্কীয় অধিক ছেটিংসমূহৰ বাবে <ph name="BEGIN_LINK1"/>ছিংক কৰক<ph name="END_LINK1"/> আৰু <ph name="BEGIN_LINK2"/>AI Wize সেৱাসমূহ<ph name="END_LINK2"/> চাওক</translation>
+<translation id="7939692063031538305">এপ্‌টো উন্নত কৰাত সহায় কৰিবলৈ, AI Wizeএ AI Wizeলৈ ব্যৱহাৰ আৰু ক্ৰেশ্ব সম্পৰ্কীয় ডেটা পঠিয়ায়। <ph name="BEGIN_UMA_LINK"/>পৰিচালনা কৰক<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">সকলো সময়তে অৱৰোধ কৰক</translation>
 <translation id="6641780377503683465"><ph name="INTEREST"/> আঁতৰাওক</translation>
 <translation id="6643016212128521049">মচক</translation>
 <translation id="6645629752388991326">এই ডিভাইচটো এটা সুৰক্ষা সম্পৰ্কীয় চাবি হিচাপে ব্যৱহাৰ কৰি কোনটো ডিভাইচে ছাইন ইন কৰিব পাৰে সেয়া নিয়ন্ত্ৰণ কৰক।</translation>
-<translation id="2730188427562924169">আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে Braveলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিওৱা হয়। যদি কোনোবা ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰাৰ সময়ত Braveএ পৃষ্ঠাৰ কিছুমান সমলকে ধৰি URLসমূহ Braveলৈ পঠিয়াব পাৰে।</translation>
-<translation id="7556503430569358637">আপুনি ইয়াৰ পাছত কি ছাইট চাব সেয়া অনুমান কৰিবলৈ আপুনি চোৱা URLসমূহ Braveলৈ পঠিওৱা হয়</translation>
-<translation id="6678472970290886941">আপোনাৰ প্ৰশাসকে দূৰৰ পৰাই আপোনাৰ ব্ৰাউজাৰৰ ছেটআপ সলনি কৰিব পাৰে। এই ডিভাইচটোত কৰা কাৰ্যকলাপ Braveৰ বাহিৰৰ পৰাও পৰিচালনা কৰা হ’ব পাৰে।</translation>
+<translation id="2730188427562924169">আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে AI Wizeলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিওৱা হয়। যদি কোনোবা ছাইটে আপোনাৰ পাছৱৰ্ড চুৰি কৰিবলৈ চেষ্টা কৰে অথবা আপুনি কোনো ক্ষতিকাৰক ফাইল ডাউনল’ড কৰাৰ সময়ত AI Wizeএ পৃষ্ঠাৰ কিছুমান সমলকে ধৰি URLসমূহ AI Wizeলৈ পঠিয়াব পাৰে।</translation>
+<translation id="7556503430569358637">আপুনি ইয়াৰ পাছত কি ছাইট চাব সেয়া অনুমান কৰিবলৈ আপুনি চোৱা URLসমূহ AI Wizeলৈ পঠিওৱা হয়</translation>
+<translation id="6678472970290886941">আপোনাৰ প্ৰশাসকে দূৰৰ পৰাই আপোনাৰ ব্ৰাউজাৰৰ ছেটআপ সলনি কৰিব পাৰে। এই ডিভাইচটোত কৰা কাৰ্যকলাপ AI Wizeৰ বাহিৰৰ পৰাও পৰিচালনা কৰা হ’ব পাৰে।</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>টা}one{<ph name="CONTACT_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>টা}other{<ph name="CONTACT_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>টা}}</translation>
 <translation id="6649642165559792194">প্ৰতিচ্ছবি পূৰ্বদৰ্শন কৰক <ph name="BEGIN_NEW"/>নতুন<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">পাছৱৰ্ড</translation>
 <translation id="6659594942844771486">ব্ৰাউজাৰ টেব</translation>
-<translation id="9145803563102831353">এই মুহূৰ্তত, এই ডিভাইচত ছেভ কৰি থোৱা পাছৱৰ্ডসমূহ Braveৰ চেনেলসমূহত ব্যৱহাৰ কৰিব নোৱাৰি। AI Wize 121ৰ পাছত আপোনাৰ ডিভাইচত AI Wize আৰু <ph name="CHROME_CHANNEL"/>ৰ বাবে ছেভ কৰি থোৱা পাছৱৰ্ডসমূহ একত্ৰিত কৰা হ’ব আৰু সেইসমূহ দুয়োটা এপতে ব্যৱহাৰ কৰিব পৰা যাব।</translation>
+<translation id="9145803563102831353">এই মুহূৰ্তত, এই ডিভাইচত ছেভ কৰি থোৱা পাছৱৰ্ডসমূহ AI Wizeৰ চেনেলসমূহত ব্যৱহাৰ কৰিব নোৱাৰি। AI Wize 121ৰ পাছত আপোনাৰ ডিভাইচত AI Wize আৰু <ph name="CHROME_CHANNEL"/>ৰ বাবে ছেভ কৰি থোৱা পাছৱৰ্ডসমূহ একত্ৰিত কৰা হ’ব আৰু সেইসমূহ দুয়োটা এপতে ব্যৱহাৰ কৰিব পৰা যাব।</translation>
 <translation id="666731172850799929"><ph name="APP_NAME"/>ত খোলক</translation>
 <translation id="6671495933530132209">প্ৰতিচ্ছবি প্ৰতিলিপি কৰক</translation>
 <translation id="6672917148207387131"><ph name="DOMAIN"/> যোগ দিয়ক</translation>
 <translation id="6674571176963658787">ছিংক আৰম্ভ কৰিবলৈ আপোনাৰ পাছফ্ৰেজ দিয়ক</translation>
 <translation id="8581481290581777242">এই ডিভাইচটোৰ পৰা AI Wize ডেটা মচিবনে?</translation>
-<translation id="3683330416566109578">এই ছাইটটোত আৰু Braveত ছাইন ইন কৰক</translation>
-<translation id="3385384709865894288">Braveক উন্নত কৰক</translation>
+<translation id="3683330416566109578">এই ছাইটটোত আৰু AI Wizeত ছাইন ইন কৰক</translation>
+<translation id="3385384709865894288">AI Wizeক উন্নত কৰক</translation>
 <translation id="670498945988402717">কালি পৰীক্ষা কৰা হৈছিল</translation>
 <translation id="6710213216561001401">পূৰ্বৱৰ্তী</translation>
 <translation id="671481426037969117">আপোনাৰ <ph name="FQDN"/>ৰ টাইমাৰৰ সময় শেষ হ’ল। এইটো কাইলৈ পুনৰ আৰম্ভ হ’ব।</translation>
@@ -1063,20 +1063,20 @@
 <translation id="7499197548870160669">আপোনাৰ AI Wize একাউণ্টত</translation>
 <translation id="6738516213925468394">আপোনাৰ ডেটাখিনি আপুনি <ph name="BEGIN_LINK"/>ছিংক কৰি থোৱা পাছফ্ৰে'জ<ph name="END_LINK"/>ৰ সহায়ত <ph name="TIME"/>ত এনক্রিপ্ট কৰা হৈছিল। ছিংক আৰম্ভ কৰিবলৈ এইটো দিয়ক।</translation>
 <translation id="6738867403308150051">ডাউনল’ড কৰি থকা হৈছে…</translation>
-<translation id="2275686406263739320">আপোনাৰ অভিজ্ঞতা ব্যক্তিগতকৰণ কৰিবলৈ, আপুনি চোৱা ছাইটসমূহে আপোনাৰ আগ্ৰহৰ বিষয়সমূহ মনত ৰখাটো সাধাৰণ কথা। ছাইটসমূহ আপোনাৰ আগ্ৰহৰ বিষয়ে তথ্য Braveৰ জৰিয়তেও ষ্ট’ৰ কৰিব পাৰে।</translation>
+<translation id="2275686406263739320">আপোনাৰ অভিজ্ঞতা ব্যক্তিগতকৰণ কৰিবলৈ, আপুনি চোৱা ছাইটসমূহে আপোনাৰ আগ্ৰহৰ বিষয়সমূহ মনত ৰখাটো সাধাৰণ কথা। ছাইটসমূহ আপোনাৰ আগ্ৰহৰ বিষয়ে তথ্য AI Wizeৰ জৰিয়তেও ষ্ট’ৰ কৰিব পাৰে।</translation>
 <translation id="6751521182688001123">ক্ষিপ্ৰভাৱে এটা নতুন টেব খোলক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ, স্পৰ্শ কৰি ধৰি ৰাখক।</translation>
 <translation id="6756507620369789050">মতামত শ্বেয়াৰ কৰক</translation>
 <translation id="6767294960381293877">টেব এটা শ্বেয়াৰ কৰিবলৈ আধাকৈ খোল খোৱা ডিভাইচসমূহৰ সূচী।</translation>
 <translation id="6770602306803890733">আপোনাৰ লগতে ৱেবত থকা প্ৰত্যেকজনৰ বাবে সুৰক্ষা উন্নত কৰে</translation>
 <translation id="2213938739750509524">যেতিয়া আপুনি ঠিকনাৰ বাৰ অথবা সন্ধান বাকচত টিপে অথবা টাইপ কৰে, আপুনি আপোনাৰ ডিফ’ল্ট সন্ধান ইঞ্জিনৰ পৰা পৰামৰ্শ দেখা পাব। এয়া ইনক’গনিট’ ম’ডত অফ কৰা আছে।</translation>
-<translation id="8174975477247159780">Brave আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী</translation>
+<translation id="8174975477247159780">AI Wize আৰু ChromeOSৰ সেৱাৰ অতিৰিক্ত চৰ্তাৱলী</translation>
 <translation id="6795633245022906657">ক্ষিপ্ৰভাৱে এটা নতুন টেব খোলক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ ছেটিঙলৈ যাওক।</translation>
 <translation id="6802555630140434547">ৱিণ্ড’খন বন্ধ কৰা হ’ব</translation>
 <translation id="6811034713472274749">পৃষ্ঠাটো চাবলৈ সাজু</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{প্ৰতিচ্ছবি, সূচীত ১ খন প্ৰতিচ্ছবি আছে}one{প্ৰতিচ্ছবি, সূচীত # খন প্ৰতিচ্ছবি আছে}other{প্ৰতিচ্ছবি, সূচীত # খন প্ৰতিচ্ছবি আছে}}</translation>
-<translation id="8418237809013783651">Braveত ছাইন ইন কৰা হ’ল, খোলা আছে।</translation>
+<translation id="8418237809013783651">AI Wizeত ছাইন ইন কৰা হ’ল, খোলা আছে।</translation>
 <translation id="6817747507826986771">এই পৃষ্ঠাখন ক্ষিপ্ৰভাৱে শ্বেয়াৰ কৰক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ, স্পৰ্শ কৰি ধৰি ৰাখক।</translation>
-<translation id="118366698571543506">সমগ্ৰ ডিভাইচত আপোনাৰ Braveৰ বস্তুবোৰ পাবলৈ ছাইন ইন কৰক</translation>
+<translation id="118366698571543506">সমগ্ৰ ডিভাইচত আপোনাৰ AI Wizeৰ বস্তুবোৰ পাবলৈ ছাইন ইন কৰক</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">ঠিকনাৰ বাৰৰ পৰা, আপুনি চোৱা পৃষ্ঠাখনৰ অতিৰিক্ত তথ্য চাবলৈ পৃষ্ঠাৰ তথ্য খুলিব পাৰে</translation>
 <translation id="6828070228333235514">মূল্য ট্ৰেক কৰাটো বন্ধ কৰক</translation>
@@ -1088,7 +1088,7 @@
 <translation id="6850409657436465440">আপোনাৰ ডাউনল’ড প্ৰক্ৰিয়া চলি আছে</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/>টা টেব বন্ধ কৰা হ’ল</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{অডিঅ’ ফাইল, সূচীত ১ টা অডিঅ’ ফাইল আছে}one{অডিঅ’ ফাইল, সূচীত # টা অডিঅ’ ফাইল আছে}other{অডিঅ’ ফাইল, সূচীত # টা অডিঅ’ ফাইল আছে}}</translation>
-<translation id="4046835482356054431">Braveৰ Discover - অফ আছে</translation>
+<translation id="4046835482356054431">AI Wizeৰ Discover - অফ আছে</translation>
 <translation id="686366188661646310">পাছৱৰ্ড মচিবনে?</translation>
 <translation id="6864459304226931083">প্ৰতিচ্ছবি ডাউনল'ড কৰক</translation>
 <translation id="6865313869410766144">স্বয়ংক্ৰিয়ভাৱে পূৰ কৰা ফৰ্মৰ ডেটা</translation>
@@ -1123,16 +1123,16 @@
 <translation id="7029809446516969842">পাছৱৰ্ডসমূহ</translation>
 <translation id="7030304022046916278">URLসমূহ পৰীক্ষা কৰিবলৈ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়ায়</translation>
 <translation id="7035701931849773472">অন্য বিকল্পসমূহ</translation>
-<translation id="5813862251770201080">আপোনাৰ AI Wize একাউণ্টৰ জৰিয়তে Braveত ছাইন ইন কৰক</translation>
+<translation id="5813862251770201080">আপোনাৰ AI Wize একাউণ্টৰ জৰিয়তে AI Wizeত ছাইন ইন কৰক</translation>
 <translation id="7054588988317389591">প্ৰতিচ্ছবিৰ বিৱৰণ লাভ কৰিবনে?</translation>
 <translation id="7055152154916055070">পুনৰ নির্দেশ কৰাটো অৱৰোধ কৰা হৈছে</translation>
 <translation id="7063006564040364415">ছিংক ছাৰ্ভাৰৰ সৈতে সংযোগ কৰিব পৰা নগ'ল।</translation>
 <translation id="7071521146534760487">একাউণ্ট পৰিচালনা কৰক</translation>
 <translation id="707155805709242880">কি ছিংক কৰিব লাগে তলত বাছনি কৰক</translation>
 <translation id="7077143737582773186">এছডি কাৰ্ড</translation>
-<translation id="2374582967527009647">URLসমূহ পৰীক্ষা কৰিবলৈ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়ায়। নতুন ভাবুকিবোৰ বিচাৰি পোৱাত সহায় কৰিবলৈ পৃষ্ঠা, ডাউনল’ড, এক্সটেনশ্বনৰ কাৰ্যকলাপ আৰু ছিষ্টেমৰ তথ্যৰ এটা সৰু নমুনাও পঠিয়ায়। আপুনি ছাইন ইন হৈ থকা অৱস্থাত আপোনাক Braveৰ সমগ্ৰ এপত সুৰক্ষা প্ৰদান কৰিবলৈ এই ডেটাখিনি অস্থায়ীভাৱে আপোনাৰ AI Wize একাউণ্টৰ সৈতে লিংক কৰে।</translation>
-<translation id="5499149312981370855">Brave সেৱাসমূহত অধিক ব্যক্তিগতকৃত অভিজ্ঞতা লাভ কৰিবলৈ Braveৰ ইতিহাস অন্তৰ্ভুক্ত কৰিবনে নকৰে সেয়া বাছনি কৰক</translation>
-<translation id="8208853227947884571">Brave আপ টু ডে’ট আছে</translation>
+<translation id="2374582967527009647">URLসমূহ পৰীক্ষা কৰিবলৈ সুৰক্ষিত ব্ৰাউজিঙলৈ পঠিয়ায়। নতুন ভাবুকিবোৰ বিচাৰি পোৱাত সহায় কৰিবলৈ পৃষ্ঠা, ডাউনল’ড, এক্সটেনশ্বনৰ কাৰ্যকলাপ আৰু ছিষ্টেমৰ তথ্যৰ এটা সৰু নমুনাও পঠিয়ায়। আপুনি ছাইন ইন হৈ থকা অৱস্থাত আপোনাক AI Wizeৰ সমগ্ৰ এপত সুৰক্ষা প্ৰদান কৰিবলৈ এই ডেটাখিনি অস্থায়ীভাৱে আপোনাৰ AI Wize একাউণ্টৰ সৈতে লিংক কৰে।</translation>
+<translation id="5499149312981370855">AI Wize সেৱাসমূহত অধিক ব্যক্তিগতকৃত অভিজ্ঞতা লাভ কৰিবলৈ AI Wizeৰ ইতিহাস অন্তৰ্ভুক্ত কৰিবনে নকৰে সেয়া বাছনি কৰক</translation>
+<translation id="8208853227947884571">AI Wize আপ টু ডে’ট আছে</translation>
 <translation id="7105047059074518658">বিভিন্ন ডিভাইচত সহজে ব্ৰাউজ কৰিবলৈ ছাইন ইন কৰক</translation>
 <translation id="7106762743910369165">আপোনাৰ প্ৰতিষ্ঠানে আপোনাৰ ব্ৰাউজাৰটো পৰিচালনা কৰে</translation>
 <translation id="7116588989735740310">আপুনি আন ডিভাইচসমূহত চোৱা ছাইটসমূহলৈ পুনৰ যাবলৈ আপোনাৰ টেবসমূহ আৰু ইতিহাস ছিংক কৰক</translation>
@@ -1147,33 +1147,33 @@
 <translation id="7177873915659574692">কিউআৰ ক’ড সৃষ্টি কৰিব নোৱাৰি। URLটোত <ph name="CHARACTER_LIMIT"/> টাতকৈ অধিক বৰ্ণ আছে।</translation>
 <translation id="7180611975245234373">ৰিফ্ৰেশ্ব কৰক</translation>
 <translation id="7183693674623539380">টেবৰ গোট - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">আপোনাক Braveত সুৰক্ষিত কৰি ৰাখে আৰু আপুনি ছাইন ইন হৈ থকা অৱস্থাত Braveৰ অন্য এপ্‌সমূহত আপোনাৰ সুৰক্ষা উন্নত কৰিবলৈ ব্যৱহাৰ কৰা হ’ব পাৰে।</translation>
+<translation id="8355565210555500987">আপোনাক AI Wizeত সুৰক্ষিত কৰি ৰাখে আৰু আপুনি ছাইন ইন হৈ থকা অৱস্থাত AI Wizeৰ অন্য এপ্‌সমূহত আপোনাৰ সুৰক্ষা উন্নত কৰিবলৈ ব্যৱহাৰ কৰা হ’ব পাৰে।</translation>
 <translation id="7191430249889272776">নেপথ্যত খোলা থকা টেব।</translation>
 <translation id="7196215469483532480">পূৰ্ণ উচ্চতাত খোলা গোপনীয়তা সম্পৰ্কীয় নিৰ্দেশনাৰ ব্যাখ্যা</translation>
-<translation id="1014116676551114642">Braveএ নৱপ্ৰজন্মৰ বাবে আগবঢ়োৱা সমল - অফ আছে</translation>
+<translation id="1014116676551114642">AI Wizeএ নৱপ্ৰজন্মৰ বাবে আগবঢ়োৱা সমল - অফ আছে</translation>
 <translation id="7207760545532569765"><ph name="TAB_COUNT"/> টা টেবক নতুন নেপথ্যৰ টেব হিচাপে পুনৰুদ্ধাৰ কৰক।</translation>
-<translation id="6302653771627628530">আপুনি Braveৰ পৰা বাহিৰ ওলালে ইনক’গ্নিট’ টেবসমূহ লক কৰা হ’ব</translation>
+<translation id="6302653771627628530">আপুনি AI Wizeৰ পৰা বাহিৰ ওলালে ইনক’গ্নিট’ টেবসমূহ লক কৰা হ’ব</translation>
 <translation id="7221869452894271364">এই পৃষ্ঠাটো পুনৰ ল'ড কৰক</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{১ টা ডাউনল’ড বাকী আছে}one{# টা ডাউনল’ড বাকী আছে}other{# টা ডাউনল’ড বাকী আছে}}</translation>
 <translation id="72415438529550637">পাছৱৰ্ডৰ পৰামৰ্শ বন্ধ কৰা হৈছে।</translation>
-<translation id="8287068819750208230">নিশ্চিত হৈ লওক যে Braveত <ph name="TARGET_DEVICE_NAME"/>ৰ ছিংক অন কৰা আছে</translation>
+<translation id="8287068819750208230">নিশ্চিত হৈ লওক যে AI Wizeত <ph name="TARGET_DEVICE_NAME"/>ৰ ছিংক অন কৰা আছে</translation>
 <translation id="7252076891734325316">আপোনাৰ ফ'নটো কম্পিউটাৰটোৰ ওচৰত ৰাখক</translation>
 <translation id="4957342254208357193">আপোনাৰ Android ডিভাইচত একেধৰণৰ এটা ছেটিং থাকিব পাৰে। যদি AI Wize আৰু আপোনাৰ Android ডিভাইচত বিজ্ঞাপনৰ জোখ-মাখ অন কৰা হয়, কোনো কোম্পানীয়ে আপুনি চোৱা সমগ্ৰ ছাইট আৰু আপুনি ব্যৱহাৰ কৰা এপত বিজ্ঞাপনৰ ফলপ্ৰসূতা জোখ-মাখ কৰিবলৈ সক্ষম হ’ব পাৰে।</translation>
 <translation id="727288900855680735"><ph name="ORIGIN"/>ত <ph name="ONE_TIME_CODE"/> দাখিল কৰিবনে?</translation>
 <translation id="7274013316676448362">অৱৰোধ কৰা ছাইট</translation>
-<translation id="7949597606523411684">Braveএ ৪ সপ্তাহতকৈ পুৰণি হোৱা বিষয়সমূহ স্বয়ংক্ৰিয়ভাৱে মচে। আপুনি ব্ৰাউজ কৰি থাকিলে, সূচীখনত পুনৰ কোনো এটা বিষয় প্ৰদৰ্শিত হ’ব পাৰে। অথবা আপুনি Braveএ ছাইটসমূহৰ সৈতে শ্বেয়াৰ কৰাটো নিবিচৰা বিষয়সমূহ অৱৰোধ কৰিব পাৰে। <ph name="BEGIN_LINK"/>Braveত আপোনাৰ বিজ্ঞাপনৰ গোপনীয়তা পৰিচালনা কৰা<ph name="END_LINK"/>ৰ বিষয়ে অধিক জানক।</translation>
-<translation id="4561646469134805137">আপুনি টাইপ কৰাৰ লগে লগে, Braveএ ঠিকনা বাৰ বা সন্ধান বাকচৰ সমল আপোনাৰ ডিফ’ল্ট সন্ধান ইঞ্জিনলৈ পঠিয়ায়</translation>
+<translation id="7949597606523411684">AI Wizeএ ৪ সপ্তাহতকৈ পুৰণি হোৱা বিষয়সমূহ স্বয়ংক্ৰিয়ভাৱে মচে। আপুনি ব্ৰাউজ কৰি থাকিলে, সূচীখনত পুনৰ কোনো এটা বিষয় প্ৰদৰ্শিত হ’ব পাৰে। অথবা আপুনি AI Wizeএ ছাইটসমূহৰ সৈতে শ্বেয়াৰ কৰাটো নিবিচৰা বিষয়সমূহ অৱৰোধ কৰিব পাৰে। <ph name="BEGIN_LINK"/>AI Wizeত আপোনাৰ বিজ্ঞাপনৰ গোপনীয়তা পৰিচালনা কৰা<ph name="END_LINK"/>ৰ বিষয়ে অধিক জানক।</translation>
+<translation id="4561646469134805137">আপুনি টাইপ কৰাৰ লগে লগে, AI Wizeএ ঠিকনা বাৰ বা সন্ধান বাকচৰ সমল আপোনাৰ ডিফ’ল্ট সন্ধান ইঞ্জিনলৈ পঠিয়ায়</translation>
 <translation id="7289303553784750393">যদি আপুনি অনলাইন কিন্তু এই সমস্যাটো হৈ আছে, তেন্তে <ph name="SITE_ETLD_PLUS_ONE"/>ত অব্যাহত ৰাখিবলৈ আপুনি আন উপায় চেষ্টা কৰিব পাৰে।</translation>
 <translation id="7290209999329137901">নতুন নাম দিয়াৰ সুবিধা উপলব্ধ নহয়</translation>
 <translation id="7291910923717764901">এই পৃষ্ঠাখনৰ বাবে প্ৰতিচ্ছবিৰ বিৱৰণ যোগ দিয়া হ'ল</translation>
 <translation id="7293429513719260019">ভাষা বাছনি কৰক</translation>
 <translation id="729975465115245577">পাছৱৰ্ডৰ ফাইলটো ষ্ট’ৰ কৰিবলৈ আপোনাৰ ডিভাইচত কোনো এপ্‌ নাই।</translation>
 <translation id="7581648335850642193">আপোনাৰ Android ডিভাইচত একেধৰণৰ এটা ছেটিং থাকিব পাৰে। যদি AI Wize আৰু আপোনাৰ Android ডিভাইচত এই ছেটিংটো অন কৰা হয়, কোনো কোম্পানীয়ে আপুনি চোৱা সমগ্ৰ ছাইট আৰু আপুনি ব্যৱহাৰ কৰা এপত বিজ্ঞাপনৰ ফলপ্ৰসূতা জোখ-মাখ কৰিবলৈ সক্ষম হ’ব পাৰে।</translation>
-<translation id="1382596880054356475">অফলাইন হৈ আছে। Braveএ আপোনাৰ পাছৱৰ্ডসমূহ পৰীক্ষা কৰিব নোৱাৰে।</translation>
+<translation id="1382596880054356475">অফলাইন হৈ আছে। AI Wizeএ আপোনাৰ পাছৱৰ্ডসমূহ পৰীক্ষা কৰিব নোৱাৰে।</translation>
 <translation id="7313188324932846546">ছিংক ছেট আপ কৰিবলৈ টিপক</translation>
 <translation id="7324354302972299151">"ট্ৰেক নকৰিব" বুলি এটা অনুৰোধ পঠিয়াওক</translation>
 <translation id="7332075081379534664">সফলভাৱে ছাইন ইন কৰা হ’ল</translation>
-<translation id="8716243540027092298">Braveৰ পৰা আটাইতকৈ প্ৰাসংগিক সমল পাবলৈ ছিংক কৰক</translation>
+<translation id="8716243540027092298">AI Wizeৰ পৰা আটাইতকৈ প্ৰাসংগিক সমল পাবলৈ ছিংক কৰক</translation>
 <translation id="7339898014177206373">নতুন ৱিণ্ড'</translation>
 <translation id="7340958967809483333">Discoverৰ বিকল্পসমূহ</translation>
 <translation id="7352339641508007922">এটা দীঘল স্ক্ৰীনশ্বট ল’বলৈ টানি আনি এৰক</translation>
@@ -1189,14 +1189,14 @@
 <translation id="7397416715506917976">পৃষ্ঠাৰ অন্তৰ্দৃষ্টি চাওক</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{অন্য, সূচীত ১ টা ফাইল আছে}one{অন্য, সূচীত # টা ফাইল আছে}other{অন্য, সূচীত # টা ফাইল আছে}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Brave প্ৰথমবাৰ চলোৱাৰ অভিজ্ঞতা</translation>
-<translation id="5341476184053934779">Brave একাউণ্টৰ ব্যৱহাৰকাৰী</translation>
+<translation id="724102042129299115">AI Wize প্ৰথমবাৰ চলোৱাৰ অভিজ্ঞতা</translation>
+<translation id="5341476184053934779">AI Wize একাউণ্টৰ ব্যৱহাৰকাৰী</translation>
 <translation id="741204030948306876">হয়, মই সন্মত</translation>
 <translation id="7419565702166471774">সদায় সুৰক্ষিত সংযোগ ব্যৱহাৰ কৰক</translation>
 <translation id="7431991332293347422">আপোনাক Search আৰু অন্য সেৱাসমূহত ব্যক্তিগতকৰণ কৰা অভিজ্ঞতা প্ৰদান কৰিবলৈ কেনেকৈ আপোনাৰ ব্ৰাউজিংৰ ইতিহাস ব্যৱহাৰ কৰা হয় সেয়া নিয়ন্ত্ৰণ কৰক</translation>
 <translation id="7435356471928173109">আপোনাৰ প্ৰশাসকে অফ কৰিছে</translation>
-<translation id="6234515504547364178">Braveৰ পৰা ছাইন আউট কৰক</translation>
-<translation id="6147816961713837040">আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে Braveলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিওৱা হয়</translation>
+<translation id="6234515504547364178">AI Wizeৰ পৰা ছাইন আউট কৰক</translation>
+<translation id="6147816961713837040">আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে AI Wizeলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিওৱা হয়</translation>
 <translation id="3699067418237091329">অধিকাংশ ছাইটৰ পৰাই আপোনাক ছাইন আউট কৰায়। আপোনাক নিজৰ AI Wize একাউণ্টৰ পৰা ছাইন আউট কৰোৱা নহয়।</translation>
 <translation id="7453810262525006706">ছাইড ভিউলৈ সংকোচন কৰক</translation>
 <translation id="7454641608352164238">পৰ্যাপ্ত খালী ঠাই নাই</translation>
@@ -1215,7 +1215,7 @@
 <translation id="7493994139787901920"><ph name="VERSION"/> ( <ph name="TIME_SINCE_UPDATE"/>ত আপডে'ট কৰা হৈছিল)</translation>
 <translation id="7497755084107113646">বিষয়বস্তুটো সম্ভাব্য বিষয়বস্তুৰ সূচীত পুনৰ যোগ দিয়া হৈছে</translation>
 <translation id="7498271377022651285">অনুগ্ৰহ কৰি অপেক্ষা কৰক…</translation>
-<translation id="8156131600798538460">আটাইবোৰ ৱেবছাইটত আপোনাৰ AI Wize একাউণ্টৰ পৰা ছাইন আউট কৰিবলৈ <ph name="BEGIN_LINK1"/>Braveৰ পৰা ছাইন আউট কৰক<ph name="END_LINK1"/>।</translation>
+<translation id="8156131600798538460">আটাইবোৰ ৱেবছাইটত আপোনাৰ AI Wize একাউণ্টৰ পৰা ছাইন আউট কৰিবলৈ <ph name="BEGIN_LINK1"/>AI Wizeৰ পৰা ছাইন আউট কৰক<ph name="END_LINK1"/>।</translation>
 <translation id="750228856503700085">আপডে’ট উপলব্ধ নহয়</translation>
 <translation id="7507207699631365376">এই প্ৰদানকাৰীৰ <ph name="BEGIN_LINK"/>গোপনীয়তাৰ নীতি<ph name="END_LINK"/> চাওক</translation>
 <translation id="7514365320538308">ডাউনল'ড কৰক</translation>
@@ -1236,10 +1236,10 @@
 <translation id="7596558890252710462">অপাৰেটিং ছিষ্টেম</translation>
 <translation id="7603168929588204083">অমান্য তাৰিখ</translation>
 <translation id="7605594153474022051">ছিংক কৰিব পৰা নাই</translation>
-<translation id="649070405679044769">এই হিচাপে Braveত ছাইন ইন কৰক</translation>
+<translation id="649070405679044769">এই হিচাপে AI Wizeত ছাইন ইন কৰক</translation>
 <translation id="7612989789287281429">আপোনাক ছাইন ইন কৰাই থকা হৈছে…</translation>
 <translation id="7619072057915878432">নেটৱর্কৰ সমস্যাৰ বাবে <ph name="FILE_NAME"/> ডাউনল'ড কৰিব পৰা নগ'ল।</translation>
-<translation id="7207456302801184289">Braveলৈ স্বাগতম</translation>
+<translation id="7207456302801184289">AI Wizeলৈ স্বাগতম</translation>
 <translation id="7630202231528827509">প্ৰদানকাৰীৰ URL</translation>
 <translation id="7638584964844754484">ভুল পাছফ্ৰেজ</translation>
 <translation id="7641339528570811325">ব্ৰাউজ কৰা ডেটা মচক…</translation>
@@ -1253,13 +1253,13 @@
 <translation id="766587987807204883">প্ৰৱন্ধসমূহ ইয়াত প্ৰদর্শিত হয়, যিবোৰ আপুনি অফলাইন হৈ থকা অৱস্থাটো পঢ়িব পাৰে</translation>
 <translation id="7682724950699840886">তলত উল্লেখ কৰা কিটিপসমূহ কৰি চাওক: আপোনাৰ ডিভাইচত পর্যাপ্ত পৰিমাণে খালী ঠাই থকাটো নিশ্চিত কৰি আকৌ আমদানি কৰিবলৈ চেষ্টা কৰক।</translation>
 <translation id="7686086654630106285">ছাইটে পৰামৰ্শ দিয়া বিজ্ঞাপনৰ বিষয়ে অধিক</translation>
-<translation id="2667018639405889513">আপুনি যোৱা কিছুমান পৃষ্ঠা আগতীয়াকৈ ল’ড কৰা হয়। কোনো Braveৰ ছাইটৰ পৰা লিংক কৰিলে পৃষ্ঠাসমূহ Braveৰ ছাৰ্ভাৰৰ পৰা আগতীয়াকৈ ল’ড কৰা হ’ব পাৰে।</translation>
-<translation id="7795837497684113327">আপোনাৰ ডিভাইচটোৱে AI Wize খুলিব নোৱাৰিলে। সমস্যাটো সমাধান কৰিবলৈ, আপোনাৰ এপ্‌ ষ্ট’ৰৰ পৰা Braveৰ শেহতীয়া আপডে'টটো ডাউনল'ড কৰক।</translation>
+<translation id="2667018639405889513">আপুনি যোৱা কিছুমান পৃষ্ঠা আগতীয়াকৈ ল’ড কৰা হয়। কোনো AI Wizeৰ ছাইটৰ পৰা লিংক কৰিলে পৃষ্ঠাসমূহ AI Wizeৰ ছাৰ্ভাৰৰ পৰা আগতীয়াকৈ ল’ড কৰা হ’ব পাৰে।</translation>
+<translation id="7795837497684113327">আপোনাৰ ডিভাইচটোৱে AI Wize খুলিব নোৱাৰিলে। সমস্যাটো সমাধান কৰিবলৈ, আপোনাৰ এপ্‌ ষ্ট’ৰৰ পৰা AI Wizeৰ শেহতীয়া আপডে'টটো ডাউনল'ড কৰক।</translation>
 <translation id="7691043218961417207">ফ’ল’ কৰিবলৈ সমল অন্বেষণ কৰক</translation>
 <translation id="7697383401610880082">টানি আনি এৰা হেণ্ডেল</translation>
 <translation id="7698359219371678927"><ph name="APP_NAME"/>ত ইমেইল সৃষ্টি কৰক</translation>
 <translation id="7702029078562412515">প্ৰশ্নৰ টাইল</translation>
-<translation id="3434187853488406814">আপোনাৰ ব্ৰাউজিঙৰ ডেটা মচাটোৱে আপোনাক নিজৰ AI Wize একাউণ্টৰ পৰা ছাইন আউট নকৰায়। এনে কৰিবলৈ, <ph name="BEGIN_LINK1"/>Braveৰ পৰা ছাইট আউট কৰক<ph name="END_LINK1"/>।</translation>
+<translation id="3434187853488406814">আপোনাৰ ব্ৰাউজিঙৰ ডেটা মচাটোৱে আপোনাক নিজৰ AI Wize একাউণ্টৰ পৰা ছাইন আউট নকৰায়। এনে কৰিবলৈ, <ph name="BEGIN_LINK1"/>AI Wizeৰ পৰা ছাইট আউট কৰক<ph name="END_LINK1"/>।</translation>
 <translation id="7707922173985738739">ম’বাইল ডেটা ব্যৱহাৰ কৰক</translation>
 <translation id="7709918231054955894">আপোনাৰ আটাইবোৰ টেব পাওক</translation>
 <translation id="7733878270780732638">ডিভাইচত পৰ্যাপ্ত খালী ঠাই নাই।</translation>
@@ -1271,9 +1271,9 @@
 <translation id="7772032839648071052">পাছফ্ৰেজ নিশ্চিত কৰক</translation>
 <translation id="7772375229873196092"><ph name="APP_NAME"/> বন্ধ কৰক</translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>টা}one{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>টা}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 আৰু অন্য <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>টা}}</translation>
-<translation id="5614774692683309331">আপুনি ছাইন ইন হৈ থকা অৱস্থাত, Braveৰ সমগ্ৰ সেৱাত আপোনাক সুৰক্ষা প্ৰদান কৰে।</translation>
+<translation id="5614774692683309331">আপুনি ছাইন ইন হৈ থকা অৱস্থাত, AI Wizeৰ সমগ্ৰ সেৱাত আপোনাক সুৰক্ষা প্ৰদান কৰে।</translation>
 <translation id="7778840695157240389">নতুন কাহিনীৰ বাবে পাছত আকৌ চাওক</translation>
-<translation id="7703329426540523149">আপুনি ছাইন ইন হৈ থকা অৱস্থাত আপোনাক Braveৰ সমগ্ৰ এপত সুৰক্ষা প্ৰদান কৰিবলৈ এই ডেটাখিনি অস্থায়ীভাৱে আপোনাৰ AI Wize একাউণ্টৰ সৈতে লিংক কৰে</translation>
+<translation id="7703329426540523149">আপুনি ছাইন ইন হৈ থকা অৱস্থাত আপোনাক AI Wizeৰ সমগ্ৰ এপত সুৰক্ষা প্ৰদান কৰিবলৈ এই ডেটাখিনি অস্থায়ীভাৱে আপোনাৰ AI Wize একাউণ্টৰ সৈতে লিংক কৰে</translation>
 <translation id="7791543448312431591">যোগ কৰক</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> টা টেব পুনঃস্থাপন কৰা হ’ল</translation>
 <translation id="780301667611848630">নালাগে, ধন্যবাদ</translation>
@@ -1285,7 +1285,7 @@
 <translation id="8439902729344548970">আপুনি ছাইন ইন হৈ থকা অৱস্থাত, আপোনাক সমগ্ৰ AI Wize সেৱাসমূহত সুৰক্ষিত কৰিবলৈ এই ডেটাখিনি আপোনাৰ AI Wize একাউণ্টৰ সৈতে লিংক কৰা হয়, উদাহৰণস্বৰূপে, কোনো সুৰক্ষা সম্পৰ্কীয় ঘটনাৰ পাছত Gmailত সুৰক্ষা বৃদ্ধি কৰা।</translation>
 <translation id="78270725016672455">আপোনাৰ কম্পিউটাৰটোৱে এটা ছাইটত ছাইন ইন কৰিবলৈ এই ডিভাইচটো পঞ্জীয়ন কৰিব বিচাৰে</translation>
 <translation id="7844171778363018843">ছিংক কৰিবলৈ কোনো ডেটা বাছনি কৰা হোৱা নাই</translation>
-<translation id="7068829570137757602">Brave সেৱাসমূহ</translation>
+<translation id="7068829570137757602">AI Wize সেৱাসমূহ</translation>
 <translation id="784934925303690534">সময় অৱধি</translation>
 <translation id="7851858861565204677">অন্য ডিভাইচ</translation>
 <translation id="7853202427316060426">কাৰ্যকলাপ</translation>
@@ -1295,7 +1295,7 @@
 <translation id="78707286264420418">আপোনাৰ ডিভাইচৰ সৈতে সংযুক্ত হ’বলৈ <ph name="PRODUCT_NAME"/>ক নিকটৱৰ্তী ডিভাইচৰ অনুমতিৰ প্ৰয়োজন</translation>
 <translation id="7875915731392087153">ইমেইল সৃষ্টি কৰক</translation>
 <translation id="7876243839304621966">সকলো আঁতৰাওক</translation>
-<translation id="6143689084714664628">Braveত চলি আছে</translation>
+<translation id="6143689084714664628">AI Wizeত চলি আছে</translation>
 <translation id="7887174313503389866">গোপনীয়তা আৰু সুৰক্ষা সম্পৰ্কীয় মুখ্য নিয়ন্ত্ৰণসমূহৰ বিষয়ে এক ধাৰণা লওক। অধিক বিকল্পৰ বাবে, ব্যক্তিগত ছেটিঙলৈ যাওক।</translation>
 <translation id="7896724475402191389">নৱপ্ৰজন্মৰ বাবে সমল - অফ আছে</translation>
 <translation id="7903184275147100332">এইটোৰ বাবে কিছু সময় লাগিব পাৰে</translation>
@@ -1347,11 +1347,11 @@
 <translation id="808747664143081553">ডিভাইচৰ সৈতে সংযোগ কৰা হ’ল</translation>
 <translation id="8090732854597034573">আপোনাক সহায়ৰ প্ৰয়োজন হ’লে আপোনাৰ অভিভাৱকক কওক</translation>
 <translation id="8101414242770404289"><ph name="TIME_PERIOD"/>ৰ পৰা কোনো টেব নাই</translation>
-<translation id="3249150807062904185">অব্যাহত ৰাখি, আপুনি <ph name="BEGIN_TOS_LINK"/>সেৱাৰ চৰ্তাৱলী<ph name="END_TOS_LINK"/>ত সন্মত হৈছে।\nএপ্‌টো উন্নত কৰাত সহায় কৰিবলৈ, Braveএ Braveলৈ ব্যৱহাৰ আৰু ক্ৰেশ্ব সম্পৰ্কীয় ডেটা পঠিয়ায়। <ph name="BEGIN_UMA_LINK"/>পৰিচালনা কৰক<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">অব্যাহত ৰাখি, আপুনি <ph name="BEGIN_TOS_LINK"/>সেৱাৰ চৰ্তাৱলী<ph name="END_TOS_LINK"/>ত সন্মত হৈছে।\nএপ্‌টো উন্নত কৰাত সহায় কৰিবলৈ, AI Wizeএ AI Wizeলৈ ব্যৱহাৰ আৰু ক্ৰেশ্ব সম্পৰ্কীয় ডেটা পঠিয়ায়। <ph name="BEGIN_UMA_LINK"/>পৰিচালনা কৰক<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">সজোৱাৰ বিকল্প বন্ধ কৰক</translation>
-<translation id="2919733817273403520">Braveৰ সুবিধাসমূহ আৰু কাৰ্যদক্ষতা উন্নত কৰাত সহায় কৰক</translation>
-<translation id="4565206163201411670">আপুনি Braveত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ত দেখুৱাবনে?</translation>
+<translation id="2919733817273403520">AI Wizeৰ সুবিধাসমূহ আৰু কাৰ্যদক্ষতা উন্নত কৰাত সহায় কৰক</translation>
+<translation id="4565206163201411670">আপুনি AI Wizeত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ত দেখুৱাবনে?</translation>
 <translation id="8118117428362942925">আপোনাক সহায়ৰ প্ৰয়োজন হ’লে আপোনাৰ অভিভাৱক (<ph name="PARENT_NAME"/>)ক কওক</translation>
 <translation id="8122623268651408616">একেবাৰে নতুন অনুসৰি সজাই থকা হৈছে</translation>
 <translation id="8127542551745560481">গৃহপৃষ্ঠা সম্পাদনা কৰক</translation>
@@ -1368,14 +1368,14 @@
 <translation id="8210770465353466621">ইয়াত আপুনি নিজৰ টেবসমূহ বিচাৰি পাব</translation>
 <translation id="8215740705341534369">ছাইড শ্বীট</translation>
 <translation id="8218622182176210845">আপোনাৰ একাউণ্টটো পৰিচালনা কৰক</translation>
-<translation id="4034729701971511794">আপুনি নিবিচৰা ছাইটসমূহ অৱৰোধ কৰিব পাৰে। Braveএ লগতে ৩০ দিনতকৈ পুৰণি ছাইটসমূহ সূচীখনৰ পৰা স্বয়ংক্ৰিয়ভাৱে মচে। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">আপুনি নিবিচৰা ছাইটসমূহ অৱৰোধ কৰিব পাৰে। AI Wizeএ লগতে ৩০ দিনতকৈ পুৰণি ছাইটসমূহ সূচীখনৰ পৰা স্বয়ংক্ৰিয়ভাৱে মচে। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">ফীড কাৰ্ড মেনু</translation>
 <translation id="8236097722223016103">বুকমাৰ্কত যোগ দিয়ক</translation>
 <translation id="8237871086242677046">পৃষ্ঠাৰ অন্তৰ্দৃষ্টি থকা তলৰ শ্বীটখন</translation>
 <translation id="8243077599929149377">আপোনাৰ ব্যৱহাৰকাৰীৰ নাম যোগ দিয়ক</translation>
 <translation id="8250920743982581267">নথিপত্রসমূহ</translation>
 <translation id="8255617931166444521">ছাইটসমূহে কেৱল নিজৰ ছাইটত আপোনাৰ ব্ৰাউজিঙৰ কাৰ্যকলাপ চাবলৈ কেৱল আপোনাৰ কুকিসমূহ ব্যৱহাৰ কৰিব পাৰে</translation>
-<translation id="2876689296031086375">আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাসমূহ যিহেতু এনক্ৰিপ্ট কৰা থাকে, আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাৰ সমলৰ বিষয়ে Braveএ একো নাজানিব। Braveৰ ছাৰ্ভাৰসমূহে কোনবোৰ ছাইট গোপনে আগতীয়াকৈ ল’ড কৰা হৈছে সেয়া জানিব। এই তথ্যখিনি কেৱল পৃষ্ঠাসমূহ আগতীয়াকৈ ল’ড কৰিবলৈহে ব্যৱহাৰ কৰা হয় আৰু সেয়া আপোনাৰ AI Wize একাউণ্টৰ অন্য তথ্যৰ সৈতে লিংক কৰা নহয়।</translation>
+<translation id="2876689296031086375">আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাসমূহ যিহেতু এনক্ৰিপ্ট কৰা থাকে, আগতীয়াকৈ ল’ড হোৱা পৃষ্ঠাৰ সমলৰ বিষয়ে AI Wizeএ একো নাজানিব। AI Wizeৰ ছাৰ্ভাৰসমূহে কোনবোৰ ছাইট গোপনে আগতীয়াকৈ ল’ড কৰা হৈছে সেয়া জানিব। এই তথ্যখিনি কেৱল পৃষ্ঠাসমূহ আগতীয়াকৈ ল’ড কৰিবলৈহে ব্যৱহাৰ কৰা হয় আৰু সেয়া আপোনাৰ AI Wize একাউণ্টৰ অন্য তথ্যৰ সৈতে লিংক কৰা নহয়।</translation>
 <translation id="8260126382462817229">আকৌ ছাইন ইন কৰিবলৈ চেষ্টা কৰক</translation>
 <translation id="8261506727792406068">মচক</translation>
 <translation id="82619448491672958">অন্য টেবসমূহ চাওক</translation>
@@ -1386,7 +1386,7 @@
 <translation id="829672787777123339">আপোনাৰ ডিভাইচটোৰ সৈতে সংযোগ কৰি থকা হৈছে…</translation>
 <translation id="8310344678080805313">মান্য টেব</translation>
 <translation id="831192587911042850">বৰ্তমানৰ ৱেবছাইটটোক আপুনি ফ’ল’ কৰি থকা ৱেবছাইটসমূহৰ সূচীত যোগ দিয়ে।</translation>
-<translation id="5665071699503384089">আপুনি ছাইটসমূহৰ সৈতে শ্বেয়াৰ কৰিবলৈ নিবিচৰা বিষয়বস্তু অৱৰোধ কৰিব পাৰে। Braveএ ৪ সপ্তাহতকৈ পুৰণি হোৱা আপোনাৰ বিষয়সমূহো স্বয়ংক্ৰিয়ভাৱে মচে। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">আপুনি ছাইটসমূহৰ সৈতে শ্বেয়াৰ কৰিবলৈ নিবিচৰা বিষয়বস্তু অৱৰোধ কৰিব পাৰে। AI Wizeএ ৪ সপ্তাহতকৈ পুৰণি হোৱা আপোনাৰ বিষয়সমূহো স্বয়ংক্ৰিয়ভাৱে মচে। <ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">কেতিয়াও অনুবাদ কৰিব নলগীয়া ছাইট</translation>
 <translation id="8348430946834215779">সম্ভৱ হ’লে HTTPS ব্যৱহাৰ কৰক আৰু এইটো সমৰ্থন নকৰা ছাইটসমূহ ল’ড কৰাৰ পূৰ্বে সকীয়নি লাভ কৰক</translation>
 <translation id="8354977102499939946">আপোনাৰ কণ্ঠস্বৰৰ দ্বাৰা ক্ষিপ্ৰভাৱে সন্ধান কৰক। এই শ্বৰ্টকাটটো সম্পাদনা কৰিবলৈ ছেটিঙলৈ যাওক।</translation>
@@ -1394,10 +1394,10 @@
 <translation id="8368001212524806591">মূল্য ট্ৰেক কৰক</translation>
 <translation id="8387617938027387193">এইয়া আপুনিয়েই বুলি সত্যাপন কৰক</translation>
 <translation id="8393700583063109961">বাৰ্তা পঠিয়াওক</translation>
-<translation id="7651600795135059130">Braveত ষ্ট’ৰ কৰি ৰখা অসুৰক্ষিত ছাইটসমূহৰ এখন সূচীৰ সৈতে URLসমূহ পৰীক্ষা কৰে</translation>
+<translation id="7651600795135059130">AI Wizeত ষ্ট’ৰ কৰি ৰখা অসুৰক্ষিত ছাইটসমূহৰ এখন সূচীৰ সৈতে URLসমূহ পৰীক্ষা কৰে</translation>
 <translation id="8402673309244746971">ফ’ল’ কৰি থকা হৈছেলৈ যাওক</translation>
 <translation id="8413126021676339697">সম্পূৰ্ণ ইতিহাস দেখুৱাওক</translation>
-<translation id="5348884013239264115">বিপজ্জনক হিচাপে জনাজাত ছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষিত কৰে। আপুনি কোনো ছাইটলৈ গ’লে, Braveএ আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে Braveলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিয়ায়। যদি কোনো ছাইটে কোনো সন্দেহজনক কাৰ্য কৰে, তেন্তে সম্পূৰ্ণ URL আৰু পৃষ্ঠাৰ কিছুমান সমলো পঠিওৱা হয়।</translation>
+<translation id="5348884013239264115">বিপজ্জনক হিচাপে জনাজাত ছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষিত কৰে। আপুনি কোনো ছাইটলৈ গ’লে, AI Wizeএ আপোনাৰ IP ঠিকনা লুকুৱাই ৰখা এটা গোপনীয়তা সম্পৰ্কীয় ছাৰ্ভাৰৰ জৰিয়তে AI Wizeলৈ সেই URLটোৰ এটা অস্পষ্ট অংশ পঠিয়ায়। যদি কোনো ছাইটে কোনো সন্দেহজনক কাৰ্য কৰে, তেন্তে সম্পূৰ্ণ URL আৰু পৃষ্ঠাৰ কিছুমান সমলো পঠিওৱা হয়।</translation>
 <translation id="8414396119627470038"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>ৰ জৰিয়তে <ph name="SITE_ETLD_PLUS_ONE"/>ত ছাইন ইন কৰক</translation>
 <translation id="8419244640277402268">অন্তৰ্ভুক্ত কৰক</translation>
 <translation id="8422250855136581222">এই ডিভাইচটোত কোনো টেব নাই</translation>
@@ -1408,7 +1408,7 @@
 <translation id="8438566539970814960">সন্ধান আৰু ব্ৰাউজিং উন্নত কৰক</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> - ভাষা সাজু আছে, <ph name="APP_NAME"/> ৰিষ্টাৰ্ট কৰক।</translation>
 <translation id="8442258441309440798">কোনো কাহিনী উপলব্ধ নহয়</translation>
-<translation id="4058091506841967397">Brave আপডে’ট কৰিব নোৱাৰি</translation>
+<translation id="4058091506841967397">AI Wize আপডে’ট কৰিব নোৱাৰি</translation>
 <translation id="8445448999790540984">পাছৱর্ড ৰপ্তানি কৰিব নোৱাৰি</translation>
 <translation id="8446884382197647889">অধিক জানক</translation>
 <translation id="8453310803815879010">Dino গে’ম আৰম্ভ কৰক</translation>
@@ -1424,17 +1424,17 @@
 <translation id="8497480609928300907">গোপনীয়তা সম্পৰ্কীয় নিৰ্দেশনাৰ ব্যাখ্যা</translation>
 <translation id="8497726226069778601">ইয়াত চাবলৈ এতিয়ালৈকে একো নাই…</translation>
 <translation id="8501423924927196358">পৃষ্ঠাৰ অন্তৰ্দৃষ্টি ল’ড হোৱাৰ সূচক</translation>
-<translation id="230699814587342492">Braveৰ পাছৱৰ্ড</translation>
+<translation id="230699814587342492">AI Wizeৰ পাছৱৰ্ড</translation>
 <translation id="8503813439785031346">ব্যৱহাৰকাৰীৰ নাম</translation>
 <translation id="8505766168025405649">ডাউনল’ডৰ স্থিতি জানিবলৈ জাননী চাওক</translation>
 <translation id="8506357771923193001">আপুনি ইয়াত ডাউনল’ড কৰা অধিক ফাইল পাব</translation>
-<translation id="133012818630824069">Braveত ছেভ কৰি ৰখা পাছৱৰ্ড ৰপ্তানি কৰক</translation>
+<translation id="133012818630824069">AI Wizeত ছেভ কৰি ৰখা পাছৱৰ্ড ৰপ্তানি কৰক</translation>
 <translation id="8516012719330875537">প্ৰতিচ্ছবিৰ সম্পাদক</translation>
 <translation id="8523928698583292556">ষ্ট’ৰ কৰি ৰখা পাছৱৰ্ড মচক</translation>
 <translation id="8526855376374973824">জাননীৰ অনুমতিৰ প্ৰৱাহ</translation>
 <translation id="8540136935098276800">এটা সঠিকভাৱে ফর্মেট কৰা URL দিয়ক</translation>
 <translation id="854522910157234410">এই পৃষ্ঠাটো খোলক</translation>
-<translation id="5503308854539525011">Braveএ ছাইটসমূহে বিজ্ঞাপন পাৰদৰ্শিতা জোখ-মাখ কৰিবলৈ ব্ৰাউজাৰটোৰ জৰিয়তে শ্বেয়াৰ কৰিব পৰা মুঠ ডেটা সীমিত কৰে</translation>
+<translation id="5503308854539525011">AI Wizeএ ছাইটসমূহে বিজ্ঞাপন পাৰদৰ্শিতা জোখ-মাখ কৰিবলৈ ব্ৰাউজাৰটোৰ জৰিয়তে শ্বেয়াৰ কৰিব পৰা মুঠ ডেটা সীমিত কৰে</translation>
 <translation id="8559990750235505898">অন্য ভাষাত পৃষ্ঠাসমূহ অনুবাদ কৰাৰ সুবিধা দিয়ক</translation>
 <translation id="8560602726703398413">আপোনাৰ পঢ়াৰ সূচীখন বুকমাৰ্কসমূহত বিচাৰক</translation>
 <translation id="8562452229998620586">ছেভ কৰি থোৱা পাছৱৰ্ডসমূহ ইয়াত দেখা যাব।</translation>
@@ -1443,7 +1443,7 @@
 <translation id="8583805026567836021">একাউণ্টৰ ডেটা মচি থকা হৈছে</translation>
 <translation id="859046281437143747">অধিক বিকল্পৰ বুটামটোৰ জৰিয়তে মূল্য ট্ৰেক কৰক</translation>
 <translation id="860043288473659153">কার্ডৰ গৰাকীৰ নাম</translation>
-<translation id="1673533133011266617">Braveত ছাইন ইন কৰা হ’ল, বন্ধ আছে।</translation>
+<translation id="1673533133011266617">AI Wizeত ছাইন ইন কৰা হ’ল, বন্ধ আছে।</translation>
 <translation id="860282621117673749">মূল্য কমাৰ সতৰ্কবাৰ্তা</translation>
 <translation id="5784514951651328424">আপোনাৰ AI Wize একাউণ্টৰ <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>ত অন্য ধৰণৰ ব্ৰাউজিং ইতিহাস থাকিব পাৰে।</translation>
 <translation id="8617240290563765734">ডাউনল’ড কৰা সমলত উল্লিখিত চুপাৰিছ কৰা URLটো খুলিবনে?</translation>
@@ -1468,7 +1468,7 @@
 <translation id="8748850008226585750">সমল লুকাই ৰখা হৈছে</translation>
 <translation id="8754448020583829686">লিংকৰ অবিহনে প্ৰতিলিপি কৰক</translation>
 <translation id="8756969031206844760">পাছৱৰ্ড আপডে’ট কৰিবনে?</translation>
-<translation id="79269250264141507">যেতিয়া আপুনি ঠিকনাৰ বাৰ অথবা সন্ধান বাকচত টাইপ কৰে, তেতিয়া উন্নত পৰামৰ্শ লাভ কৰিবলৈ Braveএ আপুনি যি টাইপ কৰে সেয়া আপোনাৰ ডিফ’ল্ট সন্ধান ইঞ্জিনলৈ পঠিয়ায়। এয়া ইনক’গনিট’ত অফ কৰা থাকে।</translation>
+<translation id="79269250264141507">যেতিয়া আপুনি ঠিকনাৰ বাৰ অথবা সন্ধান বাকচত টাইপ কৰে, তেতিয়া উন্নত পৰামৰ্শ লাভ কৰিবলৈ AI Wizeএ আপুনি যি টাইপ কৰে সেয়া আপোনাৰ ডিফ’ল্ট সন্ধান ইঞ্জিনলৈ পঠিয়ায়। এয়া ইনক’গনিট’ত অফ কৰা থাকে।</translation>
 <translation id="8766529642647037772">এইটোৰ দৰে এটা হাইলাইট কৰা লিংক সৃষ্টি কৰিবনে?</translation>
 <translation id="8773160212632396039">অনুৰোধৰ প্ৰক্ৰিয়াকৰণ কৰি থকা হৈছে</translation>
 <translation id="8788265440806329501">নেভিগেশ্বন ইতিহাস বন্ধ কৰা আছে</translation>
@@ -1490,15 +1490,15 @@
 <translation id="885480114717186641">আপুনি <ph name="HOST_NAME"/>ৰ ডেস্কটপৰ ছাইটৰ বাবে অনুৰোধ কৰিব পাৰে</translation>
 <translation id="8856607253650333758">বিৱৰণ লাভ কৰক</translation>
 <translation id="8856931513242997049">জাননীৰ অনুমতিৰ প্ৰৱাহ বন্ধ কৰা হৈছে</translation>
-<translation id="1984646864943401749">নতুন ভাবুকিবোৰ বিচাৰি পোৱাত আৰু ৱেবত থকা সকলোকে সুৰক্ষিত কৰাত সহায় কৰিবলৈ আপুনি চোৱা কিছুমান পৃষ্ঠাৰ URLসমূহ, সীমিত ছিষ্টেমৰ তথ্য আৰু কিছুমান পৃষ্ঠাৰ সমল Braveলৈ পঠিয়ায়।</translation>
+<translation id="1984646864943401749">নতুন ভাবুকিবোৰ বিচাৰি পোৱাত আৰু ৱেবত থকা সকলোকে সুৰক্ষিত কৰাত সহায় কৰিবলৈ আপুনি চোৱা কিছুমান পৃষ্ঠাৰ URLসমূহ, সীমিত ছিষ্টেমৰ তথ্য আৰু কিছুমান পৃষ্ঠাৰ সমল AI Wizeলৈ পঠিয়ায়।</translation>
 <translation id="8909135823018751308">শ্বেয়াৰ কৰক…</translation>
-<translation id="2684652081942622950">Brave একাউণ্ট</translation>
+<translation id="2684652081942622950">AI Wize একাউণ্ট</translation>
 <translation id="8921980840204105660">আপোনাৰ অন্য ডিভাইচৰ পৰা নিজৰ বুকমাৰ্কসমূহ পাবলৈ ছিংক কৰক</translation>
 <translation id="8922289737868596582">পৃষ্ঠাসমূহ অফলাইনত ব্যৱহাৰ কৰিবলৈ সেইসমূহ 'অধিক' বিকল্পৰ বুটামটোৰ পৰা ডাউনল’ড কৰক</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>অধিক জানক<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> সাজু আছে</translation>
-<translation id="1174893863889683998">আপুনি Braveত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ৰ পৰা আঁতৰাবনে?</translation>
-<translation id="179413535815682755">আপোনাৰ ছেটিঙৰ ওপৰত নিৰ্ভৰ কৰি, Braveএ লগতে কুকি আৰু আপোনাৰ বৰ্তমানৰ URL আৰু আপোনাৰ অৱস্থান পঠিয়াব পাৰে</translation>
+<translation id="1174893863889683998">আপুনি AI Wizeত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ৰ পৰা আঁতৰাবনে?</translation>
+<translation id="179413535815682755">আপোনাৰ ছেটিঙৰ ওপৰত নিৰ্ভৰ কৰি, AI Wizeএ লগতে কুকি আৰু আপোনাৰ বৰ্তমানৰ URL আৰু আপোনাৰ অৱস্থান পঠিয়াব পাৰে</translation>
 <translation id="8942627711005830162">অন্য উইণ্ড’ত খোলক</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - এই ভাষাটো ডাউনল'ড কৰিব পৰা নগ'ল। পাছত পুনৰ চেষ্টা কৰক।</translation>
 <translation id="8965591936373831584">বিবেচনাধীন হৈ আছে</translation>
@@ -1507,9 +1507,9 @@
 <translation id="8987736167266086032">আপুনি য’ত এৰিছিল তাৰ পৰা আৰম্ভ কৰক</translation>
 <translation id="8996847606757455498">অন্য এক প্ৰদানকাৰী বাছনি কৰক</translation>
 <translation id="8998289560386111590">আপোনাৰ ডিভাইচত উপলব্ধ নহয়</translation>
-<translation id="3275122921244685452">আপুনি <ph name="MANAGED_DOMAIN"/>এ পৰিচালনা কৰা এটা একাউণ্টৰ জৰিয়তে ছাইন ইন কৰিছে আৰু সেইটোৰ প্ৰশাসকে আপোনাৰ AI Wize ডেটা নিয়ন্ত্ৰণ কৰিবলৈ সুবিধা দিছে। আপোনাৰ ডেটা এই একাউণ্টটোৰ সৈতে স্থায়ীভাৱে সংযুক্তহৈ থাকিব। Braveৰ পৰা ছাইন আউট কৰিলে আপোনাৰ ডেটা মচা যাব কিন্ত সেইবোৰ আপোনাৰ AI Wize একাউণ্টত জমা হৈয়ে থাকিব।</translation>
+<translation id="3275122921244685452">আপুনি <ph name="MANAGED_DOMAIN"/>এ পৰিচালনা কৰা এটা একাউণ্টৰ জৰিয়তে ছাইন ইন কৰিছে আৰু সেইটোৰ প্ৰশাসকে আপোনাৰ AI Wize ডেটা নিয়ন্ত্ৰণ কৰিবলৈ সুবিধা দিছে। আপোনাৰ ডেটা এই একাউণ্টটোৰ সৈতে স্থায়ীভাৱে সংযুক্তহৈ থাকিব। AI Wizeৰ পৰা ছাইন আউট কৰিলে আপোনাৰ ডেটা মচা যাব কিন্ত সেইবোৰ আপোনাৰ AI Wize একাউণ্টত জমা হৈয়ে থাকিব।</translation>
 <translation id="8998837250940831980">টেব মিনিমাইজ কৰিব পৰা নগ’ল। পাছত পুনৰ চেষ্টা কৰক।</translation>
-<translation id="9012585441087414258">বিপজ্জনক হিচাপে জনাজাত ছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষিত কৰে। যদি কোনো পৃষ্ঠাই কোনো সন্দেহজনক কাৰ্য কৰে, তেন্তে URL আৰু পৃষ্ঠাৰ কিছুমান সমল Braveৰ সুৰক্ষিত ব্ৰাউজিং লৈ পঠিওৱা হয়।</translation>
+<translation id="9012585441087414258">বিপজ্জনক হিচাপে জনাজাত ছাইট, ডাউনল’ড আৰু এক্সটেনশ্বনসমূহৰ পৰা সুৰক্ষিত কৰে। যদি কোনো পৃষ্ঠাই কোনো সন্দেহজনক কাৰ্য কৰে, তেন্তে URL আৰু পৃষ্ঠাৰ কিছুমান সমল AI Wizeৰ সুৰক্ষিত ব্ৰাউজিং লৈ পঠিওৱা হয়।</translation>
 <translation id="9019199799064251516">গাড়ীখনৰ এটা প্ৰ’ফাইল লকৰ অবিহনে অব্যাহত ৰাখিবনে?</translation>
 <translation id="9022774213089566801">সঘনাই যোৱা</translation>
 <translation id="9022871169049522985">ছাইট আৰু বিজ্ঞাপনদাতাসকলে তেওঁলোকৰ বিজ্ঞাপনৰ পাৰদৰ্শিতা জোখ-মাখ কৰিব পাৰে</translation>
@@ -1519,7 +1519,7 @@
 <translation id="9055497320631373736">ছাইটটো বিজ্ঞাপনৰ পৰামৰ্শ দিব পৰা সম্ভাব্য ছাইটৰ সূচীত পুনৰ যোগ দিয়া হৈছে</translation>
 <translation id="9063523880881406963">ডেস্কটপ ছাইট অনুৰোধ কৰা সুবিধাটি বন্ধ কৰক</translation>
 <translation id="9065203028668620118">সম্পাদনা কৰক</translation>
-<translation id="5496925146144075335">Braveএ গুৰুত্বপূৰ্ণ বুলি গণ্য নকৰা ষ্ট’ৰ কৰি ৰখা ডেটা (যেনে, এনে ছাইট যিবিলাকৰ ছেটিংসমূহ ছেভ কৰি ৰখা হোৱা নাই অথবা যিবিলাক আপুনি সঘনাই নাচায়)</translation>
+<translation id="5496925146144075335">AI Wizeএ গুৰুত্বপূৰ্ণ বুলি গণ্য নকৰা ষ্ট’ৰ কৰি ৰখা ডেটা (যেনে, এনে ছাইট যিবিলাকৰ ছেটিংসমূহ ছেভ কৰি ৰখা হোৱা নাই অথবা যিবিলাক আপুনি সঘনাই নাচায়)</translation>
 <translation id="9067341854474068781">পাছকীৰ কোনো শ্বীট সম্পূৰ্ণ উচ্চতাত খোলা নাই</translation>
 <translation id="906781307897697745"><ph name="PRODUCT_NAME"/>ত</translation>
 <translation id="9069999660519089861">কোনো নপঢ়া পৃষ্ঠা নাই</translation>
@@ -1543,7 +1543,7 @@
 <translation id="9158770349521403363">কেৱল সমল শ্বেয়াৰ কৰক</translation>
 <translation id="9159716826369098114"><ph name="TAB_COUNT"/> টা টেব থকা টেবৰ গোটক এটা নতুন নেপথ্যৰ টেবৰ গোট হিচাপে পুনৰুদ্ধাৰ কৰক।</translation>
 <translation id="9169507124922466868">নেভিগেশ্বন ইতিহাস আধা খোলা আছে</translation>
-<translation id="4947625801334180582">Brave বিটা</translation>
+<translation id="4947625801334180582">AI Wize বিটা</translation>
 <translation id="9190276265094487094">আপোনাৰ আটাইবোৰ ছিংক কৰা ডিভাইচত আপোনাৰ ইতিহাস থাকিব যাতে আপুনি যি কৰি আছিল সেয়া অব্যাহত ৰাখিব পাৰে</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{১ মিনিটৰ আগত পৰীক্ষা কৰা হৈছে}one{# মিনিটৰ আগত পৰীক্ষা কৰা হৈছে}other{# মিনিটৰ আগত পৰীক্ষা কৰা হৈছে}}</translation>
 <translation id="9204021776105550328">মচি থকা হৈছে</translation>
@@ -1553,15 +1553,15 @@
 <translation id="9209888181064652401">কল কৰিব নোৱাৰি</translation>
 <translation id="9212845824145208577">ইয়াতকৈ তললৈ যাব নোৱাৰি। পৃষ্ঠাখনৰ অধিক তলৰ পৰা চেষ্টা কৰি চাওক।</translation>
 <translation id="9219103736887031265">Images</translation>
-<translation id="6946179564366058239">কোনো ছাইটে নিজৰ পৃষ্ঠাত থকা লিংকসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিবলৈ অনুৰোধ কৰিলে Braveএ কুকি অবিহনে AI Wize ছাৰ্ভাৰৰ জৰিয়তে পৃষ্ঠাসমূহ এনক্ৰিপ্ট কৰি আগতীয়াকৈ ল’ড কৰে। ই আগতীয়াকৈ ল’ড কৰা ছাইটৰ পৰা আপোনাৰ পৰিচয় লুকুৱায়।</translation>
-<translation id="4596514158372210596">আপুনি Braveত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ৰ পৰা আঁতৰাওক</translation>
-<translation id="2830145431802238213">Braveত লাইট ম’ড ব্যৱহাৰ কৰক</translation>
+<translation id="6946179564366058239">কোনো ছাইটে নিজৰ পৃষ্ঠাত থকা লিংকসমূহ গোপনে আগতীয়াকৈ ল’ড কৰিবলৈ অনুৰোধ কৰিলে AI Wizeএ কুকি অবিহনে AI Wize ছাৰ্ভাৰৰ জৰিয়তে পৃষ্ঠাসমূহ এনক্ৰিপ্ট কৰি আগতীয়াকৈ ল’ড কৰে। ই আগতীয়াকৈ ল’ড কৰা ছাইটৰ পৰা আপোনাৰ পৰিচয় লুকুৱায়।</translation>
+<translation id="4596514158372210596">আপুনি AI Wizeত কৰা কাৰ্যকলাপ ডিজিটেল ৱেলবিইঙ-ৰ পৰা আঁতৰাওক</translation>
+<translation id="2830145431802238213">AI Wizeত লাইট ম’ড ব্যৱহাৰ কৰক</translation>
 <translation id="928550791203542716"><ph name="SITE_NAME"/> ফ’ল’ কৰি থকা হৈছে</translation>
 <translation id="93533588269984624">আটাইবোৰ পাছৱৰ্ড আপোনাৰ ডিভাইচত ডাউনল’ড কৰা হ’ব আৰু <ph name="CHROME_CHANNEL"/>ৰ পৰা আঁতৰোৱা হ’ব</translation>
 <translation id="938850635132480979">আসোঁৱাহ: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">পাছফ্ৰেজ দিয়ক</translation>
 <translation id="952301137339791907">পৃষ্ঠাৰ অন্তৰ্দৃষ্টি থকা তলৰ শ্বীটখন খোলা আছে</translation>
-<translation id="5406914950576900927">Braveএ চীনত সন্ধানৰ বাবে <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> ব্যৱহাৰ কৰিব পাৰে। আপুনি এইটো <ph name="BEGIN_LINK"/>ছেটিংসমূহ<ph name="END_LINK"/>-ত সলনি কৰিব পাৰে।</translation>
+<translation id="5406914950576900927">AI Wizeএ চীনত সন্ধানৰ বাবে <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> ব্যৱহাৰ কৰিব পাৰে। আপুনি এইটো <ph name="BEGIN_LINK"/>ছেটিংসমূহ<ph name="END_LINK"/>-ত সলনি কৰিব পাৰে।</translation>
 <translation id="962979164594783469">এই এপ্‌টো ইনষ্টল কৰক</translation>
 <translation id="96681097142096641">সৰলীকৃত পৃষ্ঠা চাবনে?</translation>
 <translation id="968900484120156207">আপুনি যিবোৰ ছাইট চায় সেইবোৰ ইয়াত দেখা যায়</translation>
@@ -1573,7 +1573,7 @@
 <translation id="993520549480398880">এই গাড়ীখনৰ পৰা বুকমাৰ্ক, ইতিহাস আৰু অধিক তথ্যও মচক</translation>
 <translation id="996149300115483134">ফীড কাৰ্ড মেনু বন্ধ কৰা আছে</translation>
 <translation id="5186185447130319458">ইনক’গনিট’</translation>
-<translation id="5711390076756601471">আপুনি Braveৰ পৰা বাহিৰ ওলালে ইনক’গনিট’ টেবসমূহ লক কৰক</translation>
+<translation id="5711390076756601471">আপুনি AI Wizeৰ পৰা বাহিৰ ওলালে ইনক’গনিট’ টেবসমূহ লক কৰক</translation>
 <translation id="1014490034578104945">খোলা ইনক’গনিট’ টেব চাবলৈ স্ক্ৰীন লক ব্যৱহাৰ কৰক</translation>
 <translation id="2633278372998075009">ইনক'গনিট' টেব</translation>
 <translation id="8737444348664175738">ইনক’গনিট’ টেবলৈ সলনি কৰক</translation>

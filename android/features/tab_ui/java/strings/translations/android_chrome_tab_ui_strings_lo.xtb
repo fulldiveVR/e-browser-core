@@ -22,7 +22,7 @@
 <translation id="266935134738038806">ເຂົ້າເບິ່ງເວັບໄຊ</translation>
 <translation id="2759453070259087442">ຂະຫຍາຍກຸ່ມແຖບ <ph name="TITLE_OF_GROUP"/> ດ້ວຍແຖບ <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">ເບິ່ງຂໍ້ມູນຮ້ານຄ້າບໍ?</translation>
-<translation id="4691798003247738043">Brave | ກ່ຽວກັບຮ້ານຄ້ານີ້</translation>
+<translation id="4691798003247738043">AI Wize | ກ່ຽວກັບຮ້ານຄ້ານີ້</translation>
 <translation id="2977480621796371840">ລຶບອອກຈາກກຸ່ມ</translation>
 <translation id="3008554597174452548">ຢຸດການຕິດຕາມສິນຄ້າ</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> ຫຼຸດລາຄາ <ph name="PRICE_DROP"/></translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">ເບິ່ງຂໍ້ມູນຮ້ານຄ້າ, ມີຕົວເລືອກຢູ່ເທິງສຸດຂອງໜ້າຈໍ</translation>
 <translation id="5558362125926932819">ປິດກຸ່ມແຖບທີ່ມີ <ph name="NUMBER_OF_TABS"/> ແຖບ</translation>
 <translation id="5580090775658607195">ຈັດກຸ່ມ <ph name="TAB_COUNT"/> ແຖບແລ້ວ</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ລິ້ງຈາກ Brave}other{<ph name="TABS_COUNT_MANY"/> ລິ້ງຈາກ Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ລິ້ງຈາກ AI Wize}other{<ph name="TABS_COUNT_MANY"/> ລິ້ງຈາກ AI Wize}}</translation>
 <translation id="575494663145460764">ຮັບແຈ້ງເຕືອນການຫຼຸດລາຄາບໍ?</translation>
 <translation id="58326064309361797">ລາກແຖບເພື່ອຈັດກຸ່ມພວກມັນ</translation>
 <translation id="5846292395804797011">ປິດກຸ່ມ <ph name="TITLE_OF_GROUP"/> ທີ່ມີ <ph name="NUMBER_OF_TABS"/> ແຖບ</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(ຄະແນນຮ້ານຄ້າ)</translation>
 <translation id="6333260925957816943">ຂໍ້ມູນກ່ຽວກັບຮ້ານຄ້ານີ້</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{ເຊົາຈັດກຸ່ມ <ph name="TABS_COUNT_ONE"/> ແຖບທີ່ເລືອກໄວ້}other{ເຊົາຈັດກຸ່ມ <ph name="TABS_COUNT_MANY"/> ແຖບທີ່ເລືອກໄວ້}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ Brave. ແຖບບໍ່ເປີດເຜີຍຕົວຕົນຂອງທ່ານຈະໃຊ້ບໍ່ໄດ້.}other{ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ Brave. ແຖບບໍ່ເປີດເຜີຍຕົວຕົນ # ແຖບຂອງທ່ານຈະໃຊ້ບໍ່ໄດ້.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ AI Wize. ແຖບບໍ່ເປີດເຜີຍຕົວຕົນຂອງທ່ານຈະໃຊ້ບໍ່ໄດ້.}other{ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ AI Wize. ແຖບບໍ່ເປີດເຜີຍຕົວຕົນ # ແຖບຂອງທ່ານຈະໃຊ້ບໍ່ໄດ້.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ແຖບ}other{<ph name="TABS_COUNT_MANY"/> ແຖບ}}</translation>
 <translation id="6549021453810473782">ເບິ່ງຂໍ້ມູນຮ້ານຄ້າ</translation>
 <translation id="6562820390860419811">ຍ້າຍແຖບໄປຊ້າຍ</translation>
 <translation id="6615455863669487791">ສະ​ແດງຂ້ອຍ</translation>
-<translation id="6398241160085205003">ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ Brave.</translation>
+<translation id="6398241160085205003">ທ່ານສາມາດຊອກຫາແຖບທີ່ປິດໄປແລ້ວໄດ້ໃນແຖບຫຼ້າສຸດຢູ່ພາຍໃຕ້ເມນູຫຼັກຂອງ AI Wize.</translation>
 <translation id="6840760312327750441">ເພື່ອຈັດກຸ່ມແຖບ, ແຕະແຖບໃດໜຶ່ງຄ້າງໄວ້. ຈາກນັ້ນ, ລາກມັນໄປໃສ່ແຖບອື່ນ.</translation>
 <translation id="6856809498882026482">ເຊື່ອງໂໝດເລືອກຫຼາຍລາຍການ</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{ແບ່ງປັນແຖບ}other{ແບ່ງປັນແຖບ}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">ເບິ່ງນະໂຍບາຍການສົ່ງຄືນ ແລະ ອື່ນໆ</translation>
 <translation id="7352298686197644113">ເບິ່ງວ່າລາຍການໃດໃນແຖບທີ່ເປີດຢູ່ຂອງທ່ານມີລາຄາຕໍ່າກວ່າ</translation>
 <translation id="753732157349120914">ຕົວປ່ຽນແຖບ</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ຄຳຕິຊົມຈາກ Brave}other{<ph name="REVIEWS_COUNT_MANY"/> ຄຳຕິຊົມຈາກ Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ຄຳຕິຊົມຈາກ AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> ຄຳຕິຊົມຈາກ AI Wize}}</translation>
 <translation id="7559245342362162951">ສະແດງແຖບຂອງກຸ່ມໃນຕາໜ່າງແບບເຕັມຈໍ</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{ແບ່ງປັນ <ph name="TABS_COUNT_ONE"/> ແຖບທີ່ເລືອກ}other{ແບ່ງປັນ <ph name="TABS_COUNT_MANY"/> ແຖບທີ່ເລືອກ}}</translation>
 <translation id="7792771145871471484">ກວດເບິ່ງການແນະນຳ.</translation>

@@ -223,23 +223,23 @@
     Make searches and browsing better
   </message>
   <message name="IDS_SETTINGS_ENABLE_URL_KEYED_ANONYMIZED_DATA_COLLECTION_DESC" desc="The description of the checkbox to enable/disable url keyed anonymized data collection.">
-    Sends URLs of pages you visit to Brave
+    Sends URLs of pages you visit to AI Wize
   </message>
   <message name="IDS_SETTINGS_SPELLING_PREF" desc="The documentation string of the 'Use Spelling' preference">
     Enhanced spell check
   </message>
-  <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF" desc="The label of the checkbox to enable/disable crash and user metrics logging. This string does not need a AI Wize counter-part because it will only be visible if Brave-branded.">
-    Help improve Brave's features and performance
+  <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF" desc="The label of the checkbox to enable/disable crash and user metrics logging. This string does not need a AI Wize counter-part because it will only be visible if AI Wize-branded.">
+    Help improve AI Wize's features and performance
   </message>
   <if expr="is_fuchsia">
     <then>
       <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF_DESC" desc="The description of the checkbox to enable/disable crash and user metrics logging">
-        Automatically sends usage statistics to Brave. You can turn crash reports on or off in your device's settings.
+        Automatically sends usage statistics to AI Wize. You can turn crash reports on or off in your device's settings.
       </message>
     </then>
     <else>
       <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF_DESC" desc="The description of the checkbox to enable/disable crash and user metrics logging">
-        Automatically sends usage statistics and crash reports to Brave
+        Automatically sends usage statistics and crash reports to AI Wize
       </message>
     </else>
   </if>
@@ -247,7 +247,7 @@
     Show suggestions for similar pages when a page can't be found
   </message>
   <message name="IDS_SETTINGS_LINKDOCTOR_PREF_DESC" desc="The description of the 'Use Link Doctor' preference to help with navigation errors.">
-    Sends the web address of the page you're trying to reach to Brave
+    Sends the web address of the page you're trying to reach to AI Wize
   </message>
   <message name="IDS_SETTINGS_SUGGEST_PREF" desc="The label of the checkbox to enable/disable sending omnibox input to the user's default search engine to get additional suggestions.">
     Improve search suggestions
@@ -267,7 +267,7 @@
     Sync is paused
   </message>
   <message name="IDS_SETTINGS_PEOPLE_SIGN_IN_PROMPT" desc="The text displayed to prompt users to sign in to chrome.">
-    Get AI Wize smarts in Brave
+    Get AI Wize smarts in AI Wize
   </message>
   <message name="IDS_SETTINGS_PEOPLE_SYNC_TURN_OFF" desc="The label for the button that lets the user turn off profile syncing with their gaia account.">
     Turn off
@@ -295,7 +295,7 @@
   <message name="IDS_SETTINGS_SYNC_DISCONNECT_CONFIRM" desc="The text to display on the button to confirm the user wishes to stop syncing.">
     Delete and Sign Out
   </message>
-  <message name="IDS_SETTINGS_PEOPLE_SIGN_OUT" desc="The label of the button that lets user sign-out of Brave.">
+  <message name="IDS_SETTINGS_PEOPLE_SIGN_OUT" desc="The label of the button that lets user sign-out of AI Wize.">
     Sign out
   </message>
   <!-- Sync Control Subpage (strings used by the <settings-sync-controls> element) -->

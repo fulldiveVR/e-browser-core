@@ -45,7 +45,7 @@ namespace ai_chat {
 const std::vector<ai_chat::mojom::Model>& GetAllModels() {
   static const base::NoDestructor<std::vector<mojom::Model>> kModels({
       {"chat-basic", "gpt-3.5-turbo", "AI Wize Chat", "AI Wize",
-       mojom::ModelEngineType::LLAMA_REMOTE, mojom::ModelCategory::CHAT,
+       mojom::ModelEngineType::OPENAI_REMOTE, mojom::ModelCategory::CHAT,
        mojom::ModelAccess::BASIC, 8000, 9700},
   });
   return *kModels;

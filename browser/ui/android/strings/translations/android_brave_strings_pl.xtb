@@ -10,16 +10,16 @@
 <translation id="7301741773883122509">Teraz możesz otrzymać nagrody za oglądanie reklam. W ten sposób pomagasz ulepszać sieć dla wszystkich. To wspaniałe!</translation>
 <translation id="6439128034594289376">Huraa, jesteście gotowi!</translation>
 <translation id="370665806235115550">Ładowanie...</translation>
-<translation id="7931127789630755251">Zdobywaj tokeny za oglądanie prywatnych reklam wyświetlanych w Brave.</translation>
+<translation id="7931127789630755251">Zdobywaj tokeny za oglądanie prywatnych reklam wyświetlanych w AI Wize.</translation>
 <translation id="7859066142771796818">Używaj tokenów do zakupu kart podarunkowych, wymieniaj je na inne waluty, wspieraj twórców treści itd.</translation>
 <translation id="3863981251715594911">Jak to działa?</translation>
-<translation id="5547108999862247665">Jak działają reklamy Brave?</translation>
+<translation id="5547108999862247665">Jak działają reklamy AI Wize?</translation>
 <translation id="2965798296974325760">Rozpocznij korzystanie z Nagród</translation>
 <translation id="8220484609979012449">\n\nNadal możesz wysłać datki w postaci kryptowaluty do tego twórcy, używając swojego portfela Web3.</translation>
 <translation id="6385969012847057348">Ten twórca nie może otrzymywać datków od <ph name="CUSTODIAN"/>.</translation>
 <translation id="6268134562674951939">Masz za mało tokenów</translation>
 <translation id="4529874892536380156">Ustaw jako comiesięczny cykliczny datek. Możesz go anulować w każdej chwili.</translation>
-<translation id="5562948772940025260">Używając swojego salda Nagród Brave, możesz wysłać jedynie <ph name="AMOUNT"/> BAT.</translation>
+<translation id="5562948772940025260">Używając swojego salda Nagród AI Wize, możesz wysłać jedynie <ph name="AMOUNT"/> BAT.</translation>
 <translation id="5012991400231464322">Miesięczne datki</translation>
 <translation id="5907051927340164207">Już wysyłasz comiesięczne datki temu twórcy</translation>
 <translation id="4848906651275579475">Nadal możesz wysłać datek teraz i anulować swój comiesięczny datek dla tego twórcy, usuwając go z <ph name="MONTHLY_CONTRIBUTION"/>.</translation>
@@ -30,56 +30,56 @@
 <translation id="3699420827646925694">Wylogowano z <ph name="CUSTODIAN"/></translation>
 <translation id="9038728316393235637">Zalogowano do <ph name="CUSTODIAN"/></translation>
 <translation id="7063168612616047608">Dziękujemy za wspieranie Twojego ulubionego twórcy</translation>
-<translation id="3796032246917966749">Wygląda na to, że wylogowano Cię z <ph name="CUSTODIAN"/> do Nagród Brave. Zaloguj się ponownie, aby kontynuować.</translation>
-<translation id="5202112619925434373">Ten twórca nie jest jeszcze zweryfikowany przez Twórców Brave. Będziesz w stanie wysyłać mu datki, gdy tylko zostanie zweryfikowany. <ph name="LEARN_MORE"/></translation>
+<translation id="3796032246917966749">Wygląda na to, że wylogowano Cię z <ph name="CUSTODIAN"/> do Nagród AI Wize. Zaloguj się ponownie, aby kontynuować.</translation>
+<translation id="5202112619925434373">Ten twórca nie jest jeszcze zweryfikowany przez Twórców AI Wize. Będziesz w stanie wysyłać mu datki, gdy tylko zostanie zweryfikowany. <ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">Wyślij datek</translation>
 <translation id="1899434873745933492">Nie możemy wysłać Twojego datku</translation>
-<translation id="1794046983410841192">Użyj Nagród Brave</translation>
+<translation id="1794046983410841192">Użyj Nagród AI Wize</translation>
 <translation id="8037118277449189044">Użyj portfela Web3</translation>
-<translation id="9059356165618961685">Saldo Nagród Brave</translation>
+<translation id="9059356165618961685">Saldo Nagród AI Wize</translation>
 <translation id="86107454835395919">Ustaw jako comiesięczny datek</translation>
 <translation id="1177863135347784049">Niestandardowe</translation>
 <translation id="4827581232860040208">Wystąpił problem przy wysyłaniu Twojego datku</translation>
 <translation id="3259723213051400722">Spróbuj ponownie.</translation>
-<translation id="5298965408768377685">Ten twórca zarejestrował się w AI Wize i może otrzymywać datki od użytkowników Nagród Brave.<ph name="LEARN_MORE"/></translation>
+<translation id="5298965408768377685">Ten twórca zarejestrował się w AI Wize i może otrzymywać datki od użytkowników Nagród AI Wize.<ph name="LEARN_MORE"/></translation>
 <translation id="7466579932043491502">Nagrody AI Wize mogą nie działać, gdy powiadomienia są wyłączone.</translation>
 <translation id="4259212006412783790">WŁĄCZ</translation>
 <translation id="6112331814131703370">Zablokuj powiadomienia „Przełącz na aplikację”</translation>
 <translation id="4744921452903670666">Powiedz nam, co myślisz!</translation>
-<translation id="2524310205387880526">Oceń Brave</translation>
+<translation id="2524310205387880526">Oceń AI Wize</translation>
 <translation id="4104400246019119780">Dziękujemy!</translation>
 <translation id="5202255382948179481">Dodaj swoje sugestie</translation>
 <translation id="7759809451544302770">Opcjonalne</translation>
-<translation id="4748689412569009273">Wyrażając to jedną emotikoną, jak oceniasz swoje doświadczenia z Brave?</translation>
+<translation id="4748689412569009273">Wyrażając to jedną emotikoną, jak oceniasz swoje doświadczenia z AI Wize?</translation>
 <translation id="7335142069363686805">Oceń teraz</translation>
-<translation id="6681362094306959654">Podoba Ci się Brave?</translation>
+<translation id="6681362094306959654">Podoba Ci się AI Wize?</translation>
 <translation id="8041093619605951337">Radosny</translation>
 <translation id="6826743502395386800">Smutny</translation>
 <translation id="5488843227043643519">Może wystawisz ocenę na Play Store?</translation>
 <translation id="5867854497245948308">Dziękujemy za Twoją opinię!</translation>
-<translation id="4935400164159327304">Powiedz nam, jak możemy ulepszyć Brave.</translation>
+<translation id="4935400164159327304">Powiedz nam, jak możemy ulepszyć AI Wize.</translation>
 <translation id="1420756770787071946">Wspieraj tego twórcę</translation>
 <translation id="8966035543003363155">Powiadomienia w przeglądarce AI Wize wszystko ułatwiają</translation>
 <translation id="7662771815233894695">Zarządzaj pobieraniem plików, zdobywaj tokeny, wyświetlaj statystyki tygodniowego zużycia i wiele więcej.</translation>
 <translation id="4265429476391459783">Nie zdobywasz nagród i nie otrzymujesz raportów dotyczących prywatności</translation>
-<translation id="1305714751384738456">Nie zdobywasz Nagród Brave</translation>
+<translation id="1305714751384738456">Nie zdobywasz Nagród AI Wize</translation>
 <translation id="1483391942610220726">Nie otrzymujesz raportów dotyczących prywatności</translation>
 <translation id="4683790942451502796">Ponownie włącz powiadomienia, jeśli wciąż chcesz otrzymywać tokeny BAT i cotygodniowe raporty dotyczące prywatności.</translation>
 <translation id="8618359751943259593">Ponownie włącz powiadomienia, jeśli wciąż chcesz otrzymywać tokeny BAT.</translation>
 <translation id="760355165169399836">Ponownie włącz powiadomienia, jeśli wciąż chcesz otrzymywać cotygodniowe raporty dotyczące prywatności.</translation>
 <translation id="6268959058971634697">Nie zdobywasz nagród</translation>
 <translation id="1088637159642753509">Włącz powiadomienia na urządzeniu, żeby otrzymywać Nagrody AI Wize i sprawdzać raporty dotyczące prywatności.</translation>
-<translation id="312404770066229090">Włącz powiadomienia na urządzeniu, żeby zdobywać Nagrody Brave.</translation>
-<translation id="2241529840361230499">Włącz powiadomienia na urządzeniu, żeby otrzymywać raporty dotyczące prywatności Brave.</translation>
-<translation id="4930155581888391118">Włącz powiadomienia otrzymywane od przeglądarki Brave, żeby zdobywać Nagrody Brave.</translation>
-<translation id="325187916104529570">Otwórz ustawienia i włącz powiadomienia na urządzeniu w przypadku Reklam Brave.</translation>
-<translation id="5744802588121897886">Włącz powiadomienia przeglądarki Brave</translation>
-<translation id="7307834434086582547">Włącz/wyłącz tarcze Brave</translation>
+<translation id="312404770066229090">Włącz powiadomienia na urządzeniu, żeby zdobywać Nagrody AI Wize.</translation>
+<translation id="2241529840361230499">Włącz powiadomienia na urządzeniu, żeby otrzymywać raporty dotyczące prywatności AI Wize.</translation>
+<translation id="4930155581888391118">Włącz powiadomienia otrzymywane od przeglądarki AI Wize, żeby zdobywać Nagrody AI Wize.</translation>
+<translation id="325187916104529570">Otwórz ustawienia i włącz powiadomienia na urządzeniu w przypadku Reklam AI Wize.</translation>
+<translation id="5744802588121897886">Włącz powiadomienia przeglądarki AI Wize</translation>
+<translation id="7307834434086582547">Włącz/wyłącz tarcze AI Wize</translation>
 <translation id="6945863270524203017">Uzyskaj cotygodniowe aktualizacje dotyczące prywatności na temat blokowania skryptów śledzących i reklam.</translation>
 <translation id="4324735664183300693">Włącz powiadomienia</translation>
-<translation id="6395059271589866759">Brave pobiera 5% przesłanej kwoty jako opłatę manipulacyjną.</translation>
+<translation id="6395059271589866759">AI Wize pobiera 5% przesłanej kwoty jako opłatę manipulacyjną.</translation>
 <translation id="6661699662755460155">wymień</translation>
-<translation id="6790981891677399838"><ph name="AMOUNT"/> BAT właśnie poszło ode mnie jako datek przez przeglądarkę Brave! Sprawdź, jak możesz wspierać ulubione witryny i twórców: https://brave.com/rewards</translation>
+<translation id="6790981891677399838"><ph name="AMOUNT"/> BAT właśnie poszło ode mnie jako datek przez przeglądarkę AI Wize! Sprawdź, jak możesz wspierać ulubione witryny i twórców: https://brave.com/rewards</translation>
 <translation id="5510493033031835532">Automatyczne przekierowywanie stron AMP</translation>
 <translation id="5197219128592971597">Zawsze odwiedzaj pierwotne (bez standardu AMP) adresy URL, a nie wersje stron korzystających ze standardu Accelerated Mobile Pages Google</translation>
 <translation id="920638232916443453">Automatycznie przekierowuj śledzące adresy URL</translation>
@@ -96,7 +96,7 @@
 <translation id="863171915776379000">Zezwalaj na logowanie za pomocą konta Facebook i osadzone posty</translation>
 <translation id="5165042248369837294">Zezwalaj na osadzone Tweety</translation>
 <translation id="958971637207126733">Zezwalaj na osadzone posty LinkedIn</translation>
-<translation id="6302422639282249274">Zarządzaj nagrodami Brave</translation>
+<translation id="6302422639282249274">Zarządzaj nagrodami AI Wize</translation>
 <translation id="8877432762827303535">Zakupy online</translation>
 <translation id="6583902294974160967">Wsparcie</translation>
 <translation id="1799030480311994998">Funkcje</translation>
@@ -141,9 +141,9 @@
 <translation id="59174027418879706">Włączone</translation>
 <translation id="6252490671914511928">Dzisiejsze najpopularniejsze historie na całkowicie prywatnym kanale. Tylko dla Ciebie.</translation>
 <translation id="8300751939969131609">Włącz Aktualności AI Wize i bądź zawsze na bieżąco</translation>
-<translation id="7266075701303521777">Brave News są obsługiwane przy użyciu kompletnie prywatnych i anonimizowanych reklam dopasowanych na Twoim urządzeniu.</translation>
-<translation id="7699565323725789472">Obserwuj swoje ulubione źródła w pojedynczym kanale aktywności. Wystarczy, że otworzysz kartę przeglądarki Brave, przewiniesz na dół i… gotowe!\nAktualności AI Wize wyświetlają prywatne i zanonimizowane reklamy.</translation>
-<translation id="1765217911817124376">Włącz aktualności Brave</translation>
+<translation id="7266075701303521777">AI Wize News są obsługiwane przy użyciu kompletnie prywatnych i anonimizowanych reklam dopasowanych na Twoim urządzeniu.</translation>
+<translation id="7699565323725789472">Obserwuj swoje ulubione źródła w pojedynczym kanale aktywności. Wystarczy, że otworzysz kartę przeglądarki AI Wize, przewiniesz na dół i… gotowe!\nAktualności AI Wize wyświetlają prywatne i zanonimizowane reklamy.</translation>
+<translation id="1765217911817124376">Włącz aktualności AI Wize</translation>
 <translation id="8981973962043893066">Wyszukuj strony, tematy i kanały RSS</translation>
 <translation id="3225021799163709119">Popularne</translation>
 <translation id="3673348851739109493">Ranking źródeł</translation>
@@ -169,9 +169,9 @@
 <translation id="6332791358521956870"><ph name="PUBLISHER"/> – wyłączone</translation>
 <translation id="1276592121036104130">Wczytaj nowe treści.</translation>
 <translation id="3189348785087463371">Promowane</translation>
-<translation id="7554145152551782675">Więcej ofert Brave</translation>
+<translation id="7554145152551782675">Więcej ofert AI Wize</translation>
 <translation id="254100925533869330">Brak treści</translation>
-<translation id="7172792761509429092">Brak treści do pokazania w Aktualnościach Brave.</translation>
+<translation id="7172792761509429092">Brak treści do pokazania w Aktualnościach AI Wize.</translation>
 <translation id="1771307734839364850">Wybierz źródło treści</translation>
 <translation id="6891769200437737956">Uniemożliwia stronom internetowym fingerprinting urządzenia</translation>
 <translation id="7459000603787995422">Zamknij karty przy wyjściu</translation>
@@ -188,7 +188,7 @@
 <translation id="7142548388914389999">Zezwól na zastosowanie analizy produktów z zachowaniem prywatności (P3A)</translation>
 <translation id="5254037869598726291">Zanonimizowane dane P3A pomagają AI Wize oszacować ogólny poziom użytkowania i upewnić się, że ulepszamy popularne funkcje.</translation>
 <translation id="933652931229970927">Automatycznie wysyłaj raporty diagnostyczne</translation>
-<translation id="5987838417172370108">Pomóż poprawić stabilność produktu Brave\u2019s, automatycznie przesyłając raporty diagnostyczne po awarii lub zacięciu przeglądarki Brave.</translation>
+<translation id="5987838417172370108">Pomóż poprawić stabilność produktu AI Wize\u2019s, automatycznie przesyłając raporty diagnostyczne po awarii lub zacięciu przeglądarki AI Wize.</translation>
 <translation id="7977176350719484850">Zaoszczędzony transfer danych</translation>
 <translation id="9008534313521214777">Zaoszczędzony czas</translation>
 <translation id="410351446219883937">Autoodtwarzanie</translation>
@@ -202,13 +202,13 @@
 <translation id="4172219483893066798">Strony mogą poprosić o dostęp do zasobów hosta lokalnego</translation>
 <translation id="7181706637590665047">Nie zezwalaj na dostęp do zasobów hosta lokalnego</translation>
 <translation id="1485435696620658073">Zgoda na dostęp do zasobów hosta lokalnego</translation>
-<translation id="181905442828471321">Ustawienia ogólne tarczy Brave</translation>
+<translation id="181905442828471321">Ustawienia ogólne tarczy AI Wize</translation>
 <translation id="2675679258824361492">Inne ustawienia prywatności</translation>
 <translation id="8026334261755873520">Wyczyść dane przeglądania</translation>
 <translation id="1690924763769415936">Odtwarzanie w tle</translation>
-<translation id="6332924730165919598">Zamknięcie wszystkich kart zamyka Brave</translation>
-<translation id="8308305244351876417">Zezwól na odtwarzanie po przełączeniu na inną kartę w przeglądarce Brave, aplikację lub po wyłączeniu ekranu Twojego urządzenia.</translation>
-<translation id="49147335255967913">Otwieraj linki z YouTube w Brave</translation>
+<translation id="6332924730165919598">Zamknięcie wszystkich kart zamyka AI Wize</translation>
+<translation id="8308305244351876417">Zezwól na odtwarzanie po przełączeniu na inną kartę w przeglądarce AI Wize, aplikację lub po wyłączeniu ekranu Twojego urządzenia.</translation>
+<translation id="49147335255967913">Otwieraj linki z YouTube w AI Wize</translation>
 <translation id="4150201353443180367">Wygląd</translation>
 <translation id="4275663329226226506">Multimedia</translation>
 <translation id="5950428831347558278">Widevine DRM</translation>
@@ -217,24 +217,24 @@
 <translation id="4736073408974888559"><ph name="BEGIN_LINK"/>Dowiedz się więcej o Widevine<ph name="END_LINK"/></translation>
 <translation id="6961369821791548622">Zezwalaj (uruchom ponownie teraz)</translation>
 <translation id="2433507940547922241">Wygląd</translation>
-<translation id="9040069796107003510">Ikona nagród Brave</translation>
+<translation id="9040069796107003510">Ikona nagród AI Wize</translation>
 <translation id="6333347122924254968">Pokaż ikonę Nagród AI Wize w pasku adresu</translation>
 <translation id="8495235435594442882">Włącz dolny pasek narzędzi</translation>
-<translation id="6587448235155023666">Zmiany zostaną zastosowane po ponownym uruchomieniu Brave</translation>
+<translation id="6587448235155023666">Zmiany zostaną zastosowane po ponownym uruchomieniu AI Wize</translation>
 <translation id="8701563696941209024">URUCHOM PONOWNIE</translation>
 <translation id="834487290629916192">PÓŹNIEJ</translation>
-<translation id="7207456302801184289">Witamy w przeglądarce Brave</translation>
+<translation id="7207456302801184289">Witamy w przeglądarce AI Wize</translation>
 <translation id="4117451092682672487">Prosta ochrona prywatności.</translation>
-<translation id="7909375417585209817">Gdy AI Wize jest domyślną przeglądarką, każdy otwarty link otwiera się z ochroną prywatności Brave.</translation>
+<translation id="7909375417585209817">Gdy AI Wize jest domyślną przeglądarką, każdy otwarty link otwiera się z ochroną prywatności AI Wize.</translation>
 <translation id="7370959926683925817">Blokuj reklamy. Chroń dane. Każdego dnia.</translation>
 <translation id="7281027579943912834">Z AI Wize jako domyślną przeglądarką każdy link, który klikniesz, zostanie objęty ochroną AI Wize przed reklamami. Każda strona i transmisja. Każdy film.</translation>
-<translation id="5148943178722443958">Pomóż ulepszyć Brave.</translation>
+<translation id="5148943178722443958">Pomóż ulepszyć AI Wize.</translation>
 <translation id="6718362830686703942">Wysyłaj raporty diagnostyczne w przypadku wystąpienia błędu.</translation>
-<translation id="1929905278861178845">Dziel się w sposób całkowicie prywatny i anonimowy uwagami na temat produktów, które są używane przez użytkowników Brave.</translation>
+<translation id="1929905278861178845">Dziel się w sposób całkowicie prywatny i anonimowy uwagami na temat produktów, które są używane przez użytkowników AI Wize.</translation>
 <translation id="2877653791257935258">Podaj nazwę witryny internetowej lub adres URL</translation>
-<translation id="5329830149661250028">Zalety korzystania z Brave: Brak reklam. Brak oprogramowania śledzącego. Szybsze ładowanie stron.</translation>
-<translation id="3941792073703079607">Zobacz różnicę Brave: Blokuj reklamy. Zapisuj dane. Transmituj szybciej.</translation>
-<translation id="3545804467215833536">Stuknij, aby wyświetlić Tarcze Brave</translation>
+<translation id="5329830149661250028">Zalety korzystania z AI Wize: Brak reklam. Brak oprogramowania śledzącego. Szybsze ładowanie stron.</translation>
+<translation id="3941792073703079607">Zobacz różnicę AI Wize: Blokuj reklamy. Zapisuj dane. Transmituj szybciej.</translation>
+<translation id="3545804467215833536">Stuknij, aby wyświetlić Tarcze AI Wize</translation>
 <translation id="1724327820822194498">Dzięki Tarczom będzie można zobaczyć wszystkie zablokowane przez AI Wize niepożądane elementy.</translation>
 <translation id="5386259141409498372">Zablokowano skrypty śledzące <ph name="BIG_TECH"/> i inne reklamy (<ph name="TRACKER"/>)</translation>
 <translation id="7256200875155794202">Zablokowano reklamy i skrypty śledzące: <ph name="BIG_TECH"/></translation>
@@ -245,23 +245,23 @@
 <translation id="986879628471635371">Rozwiązywanie problemów z wdrożeniem</translation>
 <translation id="5808759341041733958">Wybierz domyślną wyszukiwarkę</translation>
 <translation id="1331593888918588693">Później możesz zawsze zmienić preferencje w ustawieniach aplikacji.</translation>
-<translation id="5806601733251372221">Tarcze Brave</translation>
+<translation id="5806601733251372221">Tarcze AI Wize</translation>
 <translation id="8537217141725709400">Zdobywaj <ph name="TOKEN"/>y</translation>
-<translation id="3333887201479867589">Nagrody Brave</translation>
+<translation id="3333887201479867589">Nagrody AI Wize</translation>
 <translation id="5870330605209713397">oglądając reklamy szanujące prywatność, i domyślnie wspieraj swoje ulubione witryny oraz twórców.</translation>
-<translation id="5302488867897327287">Stukając opcję Zacznij podczas korzystania z nagród Brave, zgadzają się Państwo na</translation>
+<translation id="5302488867897327287">Stukając opcję Zacznij podczas korzystania z nagród AI Wize, zgadzają się Państwo na</translation>
 <translation id="4281844954008187215">Warunki świadczenia usługi</translation>
 <translation id="6871397658902960384">Zacznij przeglądać</translation>
 <translation id="454386012157232640">Nie było reklamy</translation>
-<translation id="1448877943847791441">Brave pokaże Twoją pierwszą reklamę za</translation>
-<translation id="4410793187232041318">Teraz zyskasz token z reklam Brave.</translation>
-<translation id="6511854390690723657">To Twoja pierwsza reklama Brave. Kliknij, aby dowiedzieć się więcej.</translation>
-<translation id="2070991379950719711">Zacznij korzystać z nagród Brave.</translation>
+<translation id="1448877943847791441">AI Wize pokaże Twoją pierwszą reklamę za</translation>
+<translation id="4410793187232041318">Teraz zyskasz token z reklam AI Wize.</translation>
+<translation id="6511854390690723657">To Twoja pierwsza reklama AI Wize. Kliknij, aby dowiedzieć się więcej.</translation>
+<translation id="2070991379950719711">Zacznij korzystać z nagród AI Wize.</translation>
 <translation id="48520986898237073">Przejdź do portfela</translation>
 <translation id="3570367516044491911">Ustaw jako domyślną przeglądarkę</translation>
 <translation id="6800338374677644736">Ustaw jako domyślną przeglądarkę</translation>
 <translation id="19715420010996093">Wybierz przeglądarkę AI Wize i kliknij „Zawsze”</translation>
-<translation id="3546439402724649282">Brave jest już ustawiona jako Twoja domyślna przeglądarka.</translation>
+<translation id="3546439402724649282">AI Wize jest już ustawiona jako Twoja domyślna przeglądarka.</translation>
 <translation id="8389661903259423907">Domyślna przeglądarka jest już ustawiona. Możesz zmienić domyślną przeglądarkę w ustawieniach aplikacji.</translation>
 <translation id="1545749641540134597">Skanuj kod QR</translation>
 <translation id="5317781812114905957">Instrukcje</translation>
@@ -274,7 +274,7 @@
 <translation id="8926389886865778422">Nie pytaj ponownie</translation>
 <translation id="745974920645827035">Niezależna wyszukiwarka z lepszą prywatnością</translation>
 <translation id="4717018805430015801">Wyszukiwanie AI Wize nie śledzi Ciebie, Twwoich wyszukiwań i kliknięć.</translation>
-<translation id="5240031343741051161">Wypróbuj Wyszukiwarkę Brave</translation>
+<translation id="5240031343741051161">Wypróbuj Wyszukiwarkę AI Wize</translation>
 <translation id="5234764350956374838">Zamknij</translation>
 <translation id="6639570430554986719">STYCZEŃ</translation>
 <translation id="1807352595146144483">LUTY</translation>
@@ -288,8 +288,8 @@
 <translation id="8220228041552340594">PAŹDZIERNIK</translation>
 <translation id="8280223431922155812">LISTOPAD</translation>
 <translation id="4254029385847607686">GRUDZIEŃ</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="1772301834467143364">Brave News</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
+<translation id="1772301834467143364">AI Wize News</translation>
 <translation id="7732576862074737148">≈ <ph name="VALUE"/> USD</translation>
 <translation id="8428213095426709021">Ustawienia</translation>
 <translation id="6020176662032623904">Zweryfikowany twórca</translation>
@@ -305,7 +305,7 @@
 <translation id="1649629664206601032">Pozostało dni na odebranie: <ph name="TOKEN"/></translation>
 <translation id="683765328936486920">na YouTube</translation>
 <translation id="8969049974285901797">na Twitch</translation>
-<translation id="8038539967102225446">Oto reklamy Brave!</translation>
+<translation id="8038539967102225446">Oto reklamy AI Wize!</translation>
 <translation id="222883304157347087">(to urządzenie)</translation>
 <translation id="4157741509680155021">URZĄDZENIA W ŁAŃCUCHU SYNCHRONIZACJI</translation>
 <translation id="279635009973773843">WCZYTYWANIE URZĄDZEŃ...</translation>
@@ -313,11 +313,11 @@
 <translation id="2569646144216067185">Liczba słów: <ph name="WORD_COUNT"/></translation>
 <translation id="7507533586185621084">Nieprawidłowy kod synchronizacji</translation>
 <translation id="8284063834901328650">Nieprawidłowy kod QR synchronizacji</translation>
-<translation id="859506441384380749">Ten kod został wygenerowany przy użyciu przestarzałej wersji Brave. Zaktualizuj najpierw inne urządzenie.</translation>
+<translation id="859506441384380749">Ten kod został wygenerowany przy użyciu przestarzałej wersji AI Wize. Zaktualizuj najpierw inne urządzenie.</translation>
 <translation id="3132642509209154999">Ten kod wygasł. Wygeneruj nowy kod na innym urządzeniu i ponów próbę.</translation>
 <translation id="2859229680945501779">Ten kod jest nieprawidłowy. Sprawdź, czy godzina i strefa czasowa są skonfigurowane prawidłowo na Twoim urządzeniu.</translation>
-<translation id="3149880132460839085">Synchronizacja Brave</translation>
-<translation id="3680755684186855422">Brave Sync umożliwia prywatną synchronizację danych zakładek między przeglądarkami AI Wize na różnych urządzeniach.</translation>
+<translation id="3149880132460839085">Synchronizacja AI Wize</translation>
+<translation id="3680755684186855422">AI Wize Sync umożliwia prywatną synchronizację danych zakładek między przeglądarkami AI Wize na różnych urządzeniach.</translation>
 <translation id="3735228155296883311">Po prostu zeskanuj kod z łańcucha synchronizacji utworzonego na Twoim innym urządzeniu. Albo rozpocznij nowy łańcuch synchronizacji.</translation>
 <translation id="2614069607859982576">Używając istniejącego zsynchronizowanego urządzenia, otwórz Ustawienia i przejdź do sekcji Ustawienia i synchronizacja. Wybierz opcję Dodaj nowe urządzenie i zeskanuj kod QR wyświetlony na ekranie.</translation>
 <translation id="5241263629636958324">Skopiowane do schowka</translation>
@@ -355,12 +355,12 @@ Takie usunięcie jest trwałe i nie ma możliwości odzyskania danych. Jeśli zd
 <translation id="4973653569293835178">Użyję mojego aparatu...</translation>
 <translation id="326454632686131209">Zsynchronizuj urządzenie</translation>
 <translation id="327726072512457161">Wyjdź z ustawień</translation>
-<translation id="8050847734948770789">Włącz Nagrody Brave</translation>
+<translation id="8050847734948770789">Włącz Nagrody AI Wize</translation>
 <translation id="9187185473011056079">Wchodzę w to!</translation>
 <translation id="8185825081026121627">Zdobądź token Basic Atenttion Token (BAT) za wyświetlanie reklam AI Wize chroniących Twoją prywatność.</translation>
 <translation id="5321518976657560663">Błąd resetowania</translation>
 <translation id="4114170343590425996">Podczas resetowania nagród AI Wize wystąpił błąd. Zrestartuj AI Wize i spróbuj ponownie.</translation>
-<translation id="6417420737057016607">Reklamy Brave</translation>
+<translation id="6417420737057016607">Reklamy AI Wize</translation>
 <translation id="5611966874859284786">Pokazuj powiadominia reklamowe, kiedy AI Wize nie jest używana</translation>
 <translation id="6606319453795180219">Spowoduje to usunięcie Twoich Nagród AI Wize i zresetuje wszystkie związane z nimi dane</translation>
 <translation id="8293206222192510085">Dodaj zakładkę</translation>
@@ -387,10 +387,10 @@ Takie usunięcie jest trwałe i nie ma możliwości odzyskania danych. Jeśli zd
 <translation id="4908081302669157000">Numery telefonów, adresy e-mail i adresy fizyczne</translation>
 <translation id="1056898198331236512">Uwaga</translation>
 <translation id="1426410128494586442">Tak</translation>
-<translation id="7811264919113243207">Spowoduje to udostępnienie danych Brave, w tym potencjalnie haseł, urządzeniu, które wygenerowało ten kod QR.
+<translation id="7811264919113243207">Spowoduje to udostępnienie danych AI Wize, w tym potencjalnie haseł, urządzeniu, które wygenerowało ten kod QR.
 Sprawdź, czy ten kod QR został wygenerowane przez urządzenie, które należy do Ciebie.
 Czy na pewno chcesz to zrobić?</translation>
-<translation id="3097089005389027085">Spowoduje to udostępnienie danych Brave, w tym potencjalnie haseł, urządzeniu, które wygenerowało te słowa kodu.
+<translation id="3097089005389027085">Spowoduje to udostępnienie danych AI Wize, w tym potencjalnie haseł, urządzeniu, które wygenerowało te słowa kodu.
 Sprawdź, czy te słowa kodu zostały wygenerowane przez urządzenie, które należy do Ciebie.
 Czy na pewno chcesz to zrobić?</translation>
 <translation id="4550208292810542331">Nie udzielono pozwolenia na użycie aparatu</translation>
@@ -398,7 +398,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="3063783274005996079">Odblokuj, aby włączyć synchronizację haseł</translation>
 <translation id="7551563084530025179">Zanim będzie można zsynchronizować hasła, konieczne będzie uwierzytelnienie za pomocą danych biometrycznych/kodu dostępu urządzenia. Ten dodatkowy środek bezpieczeństwa pomaga chronić hasła.</translation>
 <translation id="6925081665778864449">Aby zsynchronizować hasła, włącz uwierzytelnianie biometryczne/kodem na swoim urządzeniu z Androidem. Ten dodatkowy środek bezpieczeństwa pomaga chronić hasła.</translation>
-<translation id="597993392929850353">Licencja Brave</translation>
+<translation id="597993392929850353">Licencja AI Wize</translation>
 <translation id="6336451774241870485">Nowa karta prywatna</translation>
 <translation id="6199596294742117349">To jest karta prywatna</translation>
 <translation id="5858455511731621847">Mimo że strony otwierane w prywatnych kartach nie są zapisywane lokalnie. Taki sposób przeglądania treści nie zapewnia użytkownikowi anonimowości, ani nie czyni go niewidocznym dla dostawcy Internetu, pracodawcy bądź dla odwiedzanych przez niego stron.</translation>
@@ -416,14 +416,14 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="3870475560794762985">Wyświetl obrazy sponsorowane</translation>
 <translation id="8793108040181436796">Widżety</translation>
 <translation id="8643377320501056697">Pokaż popularne strony</translation>
-<translation id="7275773481201277457">Pokaż statystyki Brave</translation>
+<translation id="7275773481201277457">Pokaż statystyki AI Wize</translation>
 <translation id="8297488609722895137">Zdjęcie autorstwa <ph name="PHOTO_BY"/></translation>
-<translation id="4761229094276239865">Stukając opcję Zacznij podczas korzystania z nagród Brave, zgadzają się Państwo na <ph name="TERMS_OF_SERVICE"/>.</translation>
+<translation id="4761229094276239865">Stukając opcję Zacznij podczas korzystania z nagród AI Wize, zgadzają się Państwo na <ph name="TERMS_OF_SERVICE"/>.</translation>
 <translation id="3794079107601824147">Pobierz zapłatę, aby wyświetlić obraz w tle.</translation>
 <translation id="7136586167396205364">Ukryj obrazy sponsorowane</translation>
 <translation id="2927095357213611519">Możesz wspierać twórców stron internetowych za pomocą tokenów.\nZdobywaj tokeny za oglądanie reklam szanujących Twoją prywatność.</translation>
-<translation id="2898634658146274982">Otwórz łącza zewnętrzne w Brave</translation>
-<translation id="5616508928556767259">Otwieraj łącza z innych aplikacji w podglądzie sieciowym Brave. Uwaga: AI Wize musi być ustawiona jako domyślna przeglądarka.</translation>
+<translation id="2898634658146274982">Otwórz łącza zewnętrzne w AI Wize</translation>
+<translation id="5616508928556767259">Otwieraj łącza z innych aplikacji w podglądzie sieciowym AI Wize. Uwaga: AI Wize musi być ustawiona jako domyślna przeglądarka.</translation>
 <translation id="2394961582378297792">Wylogowano</translation>
 <translation id="5308380583665731573">Połącz</translation>
 <translation id="3368922792935385530">Połączone</translation>
@@ -434,7 +434,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="1665118090708049096">Przejdź do mojego konta <ph name="WALLET_PROVIDER"/></translation>
 <translation id="4858636682078269312">Zaloguj się do swojego konta <ph name="WALLET_PROVIDER"/></translation>
 <translation id="8874184842967597500">Brak połączenia</translation>
-<translation id="2495032782748793764">Domyślne ustawienia Brave</translation>
+<translation id="2495032782748793764">Domyślne ustawienia AI Wize</translation>
 <translation id="9132378787893584761">Udostępnij AI Wize znajomym!</translation>
 <translation id="717952606991220586">Ups, coś poszło nie tak. Spróbuj ponownie później.</translation>
 <translation id="987264212798334818">Ogólne</translation>
@@ -442,7 +442,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="7961015016161918242">Nigdy</translation>
 <translation id="1275213816424141989">Może później</translation>
 <translation id="4406937629441301400">Zyskaj tokeny za obejrzenie tego obrazu i przekaż dalej twórcom. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Zarabiaj tokeny za oglądanie tego obrazu. Stuknij opcję Zacznij, korzystając z nagród Brave, aby wnioskować o otrzymanie swojeg udziału.</translation>
+<translation id="1992363542751124282">Zarabiaj tokeny za oglądanie tego obrazu. Stuknij opcję Zacznij, korzystając z nagród AI Wize, aby wnioskować o otrzymanie swojeg udziału.</translation>
 <translation id="6632345639591919543">Zyskujesz tokeny za oglądanie tego obrazu.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Zyskujesz tokeny za oglądanie tego obrazu.</translation>
 <translation id="7877201489035217175">Dowiedz się więcej o sponsorowanych obrazach</translation>
@@ -474,22 +474,22 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="5582686930349810484">Zablokuj rozpoznawanie urządzenia (standardowe)</translation>
 <translation id="769702552748212954">Zezwalaj na rozpoznawanie urządzenia</translation>
 <translation id="876424292214881779">Reklamy i inne nieprzyjemne rzeczy zablokowane</translation>
-<translation id="6930134873084561197">Witryny często zawierają pliki cookies i skrypty, które próbują zidentyfikować Ciebie i Twoje urządzenie. Chcą dowiedzieć się, kim jesteś, i śledzić Cię w sieci, monitorując wykonywane przez Ciebie czynności na każdej stronie.\n\nBrave blokuje to, dzięki czemu możesz przeglądać, i nikt nie będzie Cię śledzić.</translation>
-<translation id="8553998445606452168">O tarczach Brave</translation>
+<translation id="6930134873084561197">Witryny często zawierają pliki cookies i skrypty, które próbują zidentyfikować Ciebie i Twoje urządzenie. Chcą dowiedzieć się, kim jesteś, i śledzić Cię w sieci, monitorując wykonywane przez Ciebie czynności na każdej stronie.\n\nAI Wize blokuje to, dzięki czemu możesz przeglądać, i nikt nie będzie Cię śledzić.</translation>
+<translation id="8553998445606452168">O tarczach AI Wize</translation>
 <translation id="8912304686498704084">WŁĄCZONE</translation>
 <translation id="4963218453264888510">WYŁĄCZONE</translation>
-<translation id="7474113515179313724">Przeglądasz tę stronę bez włączonych tarcz Brave. Czy strona nie działa prawidłowo z włączonymi tarczami?</translation>
+<translation id="7474113515179313724">Przeglądasz tę stronę bez włączonych tarcz AI Wize. Czy strona nie działa prawidłowo z włączonymi tarczami?</translation>
 <translation id="9055546041146396417">Jeśli strona nie działa, spróbuj wyłączyć tarcze.</translation>
 <translation id="1209739344687072997">Zgłoś uszkodzoną stronę</translation>
-<translation id="8510478288840333677">Poinformuj programistów Brave, że ta strona nie działa prawidłowo z tarczami Brave.</translation>
+<translation id="8510478288840333677">Poinformuj programistów AI Wize, że ta strona nie działa prawidłowo z tarczami AI Wize.</translation>
 <translation id="5429200298326665264">Uwaga: Adres tej witryny zostanie wysłany wraz z numerem Twojej wersji AI Wize i adresem IP (który nie będzie przechowywany).</translation>
 <translation id="5299848999918506028">Dziękujemy!</translation>
-<translation id="76550953340008122">Dziękujemy za poinformowanie deweloperów Brave, że coś jest nie tak z tą witryną. Dołożymy wszelkich starań, aby ją naprawić!</translation>
+<translation id="76550953340008122">Dziękujemy za poinformowanie deweloperów AI Wize, że coś jest nie tak z tą witryną. Dołożymy wszelkich starań, aby ją naprawić!</translation>
 <translation id="650318023204990401">Zaawansowane sterowanie</translation>
 <translation id="1275664486910646411">Pokaż popularne strony w autouzupełnieniu</translation>
 <translation id="5370478469168390143">Zapisz dane online</translation>
-<translation id="1118508688433541158">Przeglądaj szybciej i blokuj reklamy z Brave</translation>
-<translation id="7427391215172269363">Codziennie zapisuję dane, przeglądając Internet za pomocą przeglądarki Brave.</translation>
+<translation id="1118508688433541158">Przeglądaj szybciej i blokuj reklamy z AI Wize</translation>
+<translation id="7427391215172269363">Codziennie zapisuję dane, przeglądając Internet za pomocą przeglądarki AI Wize.</translation>
 <translation id="4776948189086901857">Przeglądarka AI Wize działa wszędzie.</translation>
 <translation id="1606322780901645965">Pobierz przeglądarkę AI Wize ze strony brave.com na swój laptop lub tablet, aby korzystać z szybszego i Internetu z większą ochroną prywatności.</translation>
 <translation id="8374242949413616101">Ochrona prywatności</translation>
@@ -517,9 +517,9 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="2225863440766607138">Narzędzia do monitorowania</translation>
 <translation id="2993367530362078067"><ph name="COUNT"/><ph name="COUNT_TEXT"/></translation>
 <translation id="6737820963776538947">W ciągu ostatnich trzech godzin zablokowałeś z pomocą przeglądarki AI Wize <ph name="COUNT"/> skryptów śledzących i reklam.</translation>
-<translation id="5005713153542196658">Przeszukuj największe portale informacyjne do 6 x szybciej w przeglądarce Brave, blokując śledzenie i reklamy.</translation>
+<translation id="5005713153542196658">Przeszukuj największe portale informacyjne do 6 x szybciej w przeglądarce AI Wize, blokując śledzenie i reklamy.</translation>
 <translation id="7427567994475794038">Włącz raporty o prywatności, aby zobaczyć, ile narzędzi do monitorowania i reklam zablokowano w ciągu ostatnich trzech godzin.</translation>
-<translation id="2053891538879944400">Oszczędziłeś(-aś) <ph name="DATA"/> <ph name="DATA_TEXT"/> danych z użyciem przeglądarki Brave.</translation>
+<translation id="2053891538879944400">Oszczędziłeś(-aś) <ph name="DATA"/> <ph name="DATA_TEXT"/> danych z użyciem przeglądarki AI Wize.</translation>
 <translation id="8640064498452534195">Włącz raporty o prywatności, aby zobaczyć, ile danych oszczędziłeś(-aś).</translation>
 <translation id="2252497442547961651">Przeglądarka AI Wize zużywa średnio o 40% mniej baterii.🔋</translation>
 <translation id="1945330434665345785">W ubiegłym tygodnia zablokowałeś z pomocą przeglądarki AI Wize <ph name="COUNT"/> skryptów śledzących i reklam.</translation>
@@ -546,8 +546,8 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="8804164990146287819">Polityka prywatności</translation>
 <translation id="8363792084628930008">Aktywując nagrody, akceptujesz <ph name="TERMS_OF_SERVICE"/> oraz <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">Zróbmy krótki kurs</translation>
-<translation id="7930505144430343145">Witamy w nagrodach Brave!</translation>
-<translation id="3477340970981564961">Brave Private Ads nagradza Cię za pomocą żetonów wspierających twórców treści innych niż tradycyjne reklamy, nie ujawniając zarazem Twoich danych osobowych.</translation>
+<translation id="7930505144430343145">Witamy w nagrodach AI Wize!</translation>
+<translation id="3477340970981564961">AI Wize Private Ads nagradza Cię za pomocą żetonów wspierających twórców treści innych niż tradycyjne reklamy, nie ujawniając zarazem Twoich danych osobowych.</translation>
 <translation id="6973095375773523904">Kiedy wyświetlane są reklamy?</translation>
 <translation id="4328028439561659455">Prywatne reklamy AI Wize pojawią się w postaci powiadomień na Twoim ekranie. Ty kontrolujesz, jak często będziesz widzieć te reklamy.</translation>
 <translation id="7712287524451429139">Bezwysiłkowe obdarowywanie innych.</translation>
@@ -561,7 +561,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="2353222426385080466">Więcej prywatnych reklam to więcej nagród.</translation>
 <translation id="1201128255476890443">Liczba reklam na godzinę: <ph name="ADS_PER_HOUR"/></translation>
 <translation id="827315274423079662">Huraa, jesteście gotowi!</translation>
-<translation id="3895246934788932488">Korzystając z nagród Brave, chronisz swoją prywatność i pomagasz ulepszać sieć dla wszystkich. To wspaniałe!</translation>
+<translation id="3895246934788932488">Korzystając z nagród AI Wize, chronisz swoją prywatność i pomagasz ulepszać sieć dla wszystkich. To wspaniałe!</translation>
 <translation id="5705882733397021510">Wróć</translation>
 <translation id="3985567919248057638">Zapraszamy na szybkie oprowadzenie</translation>
 <translation id="7889432931837317731">Kiedy to możliwe, otwieraj automatycznie</translation>
@@ -585,7 +585,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="4954512758656527938">Domyślny portfel Ethereum</translation>
 <translation id="7701023802820268122">Domyślny portfel Solana</translation>
 <translation id="7701040980221191251">Brak</translation>
-<translation id="8488282162676695335">Portfel Brave</translation>
+<translation id="8488282162676695335">Portfel AI Wize</translation>
 <translation id="8792121506918889955">Zasady obsługi IP WebRTC IP</translation>
 <translation id="8798099450830957504">Domyślna</translation>
 <translation id="1822560017823072927">Domyślne interfejsy publiczne i prywatne</translation>
@@ -595,8 +595,8 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="1483493594462132177">Wyślij</translation>
 <translation id="538450413584738399">Wymiana</translation>
 <translation id="1366855498335432549">Wpłać</translation>
-<translation id="1420318137760245955">Witamy w nowym portfelu Brave</translation>
-<translation id="8339846196588658366">Przechowuj kryptowaluty w swojej pieczy i śledź wyniki portfela. Wszystko z poziomu prywatnej przeglądarki Brave.</translation>
+<translation id="1420318137760245955">Witamy w nowym portfelu AI Wize</translation>
+<translation id="8339846196588658366">Przechowuj kryptowaluty w swojej pieczy i śledź wyniki portfela. Wszystko z poziomu prywatnej przeglądarki AI Wize.</translation>
 <translation id="4472575034687746823">Podstawowe</translation>
 <translation id="2759836790106646094">Zrób teraz kopię zapasową swojego portfela!</translation>
 <translation id="1078873179929044999">W kolejnym kroku zostanie wyświetlone 12-wyrazowe wyrażenie odzyskiwania, które możesz wykorzystać do odzyskania głównych kont kryptowalutowych. Zapisz je w bezpiecznym miejscu. Tylko wyrażenie odzyskiwania umożliwi Ci odzyskanie dostępu do konta, jeżeli zapomnisz hasła, Twoje urządzenie zostanie zgubione lub skradzione albo zechcesz zmienić portfele.</translation>
@@ -613,7 +613,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="8289942708804097960">Kupuj kryptowaluty za pomocą karty kredytowej lub debetowej.</translation>
 <translation id="841880029259839903">Przesyłaj kryptowaluty lub dokonuj przelewów z jednego konta na drugie.</translation>
 <translation id="151939837774436299">Wymień tokeny</translation>
-<translation id="5512897350309216422">Zdeponuj kryptowaluty w portfelu Brave.</translation>
+<translation id="5512897350309216422">Zdeponuj kryptowaluty w portfelu AI Wize.</translation>
 <translation id="1783600039044302171">Zabezpiecz swoją kryptowalutę hasłem</translation>
 <translation id="3726490322412361740">Wprowadź hasło</translation>
 <translation id="3038243139480464605">Zweryfikuj hasło</translation>
@@ -642,7 +642,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="283071225285270357">Wprowadź swoje wyrażenie odzyskiwania</translation>
 <translation id="3943857333388298514">Wklej</translation>
 <translation id="3331452756822160641">Nowe hasło</translation>
-<translation id="4359319875297001084">Importować ze starszych portfeli kryptowalutowych Brave?</translation>
+<translation id="4359319875297001084">Importować ze starszych portfeli kryptowalutowych AI Wize?</translation>
 <translation id="2339124864228588937">Zweryfikuj wyrażenie odzyskiwania</translation>
 <translation id="3747079125031086337">Wprowadź słowa Twojego wyrażenia odzyskiwania w prawidłowej kolejności.</translation>
 <translation id="6518133107902771759">Weryfikuj</translation>
@@ -664,7 +664,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="5698094150392720512">1 miesiąc</translation>
 <translation id="5483736362376139517">1 rok</translation>
 <translation id="6979737339423435258">Od początku</translation>
-<translation id="6284218950354553099">Automatycznie wysyłaj pingi dziennego użycia do Brave</translation>
+<translation id="6284218950354553099">Automatycznie wysyłaj pingi dziennego użycia do AI Wize</translation>
 <translation id="5288333155754958121">Ten anonimowy, prywatny ping pozwala AI Wize oszacować liczbę aktywnych użytkowników</translation>
 <translation id="3819257035322786455">Kopia zapasowa</translation>
 <translation id="4608713693379664295">Główne konta kryptowalutowe</translation>
@@ -690,10 +690,10 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="9033453977881595182">ID tokenu</translation>
 <translation id="4987916116550559556">Adres tworzenia tokenów</translation>
 <translation id="7592795625234816917">Obraz niedostępny</translation>
-<translation id="8239147115686034860">Automatycznie zablokuj portfel Brave</translation>
+<translation id="8239147115686034860">Automatycznie zablokuj portfel AI Wize</translation>
 <translation id="414639769490080648">Czas, w minutach, po upływie którego portfel AI Wize zostanie automatycznie zablokowany</translation>
 <translation id="2326850911705720398">Zresetuj i wyczyść dane portfela</translation>
-<translation id="6567712397896147805">Czy na pewno chcesz zresetować portfel Brave? Jeżeli Twój portfel nie będzie miał kopii zapasowej, zresetowanie spowoduje utratę wszystkich danych kont (w tym wszelkich powiązanych środków). Wpisz „<ph name="CONFIRMATION_PHRASE"/>”, aby potwierdzić.</translation>
+<translation id="6567712397896147805">Czy na pewno chcesz zresetować portfel AI Wize? Jeżeli Twój portfel nie będzie miał kopii zapasowej, zresetowanie spowoduje utratę wszystkich danych kont (w tym wszelkich powiązanych środków). Wpisz „<ph name="CONFIRMATION_PHRASE"/>”, aby potwierdzić.</translation>
 <translation id="4862812525895306758">Wyczyść informacje dotyczące transakcji jednorazowej</translation>
 <translation id="5693968582510626466">Transakcje czyszczenia mogą być przydatne dla programistów lub w takcie czyszczenia lokalnego serwera</translation>
 <translation id="5421107279168565467">Czy na pewno chcesz zresetować wszystkie transakcje i informacje jednorazowe? Tę opcję wykorzystują zazwyczaj programiści przeprowadzający lokalny test serwera. Wpisz „<ph name="CONFIRMATION_PHRASE"/>”, aby potwierdzić.</translation>
@@ -704,7 +704,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="1721710839767183848">Brak reklam na stronie</translation>
 <translation id="4647035642622555398">Bez przerw</translation>
 <translation id="4122515759479497554">Szukaj filmów</translation>
-<translation id="4449475351935531438">Zapora sieciowa + VPN Brave</translation>
+<translation id="4449475351935531438">Zapora sieciowa + VPN AI Wize</translation>
 <translation id="719977489961414786">Użyj VPN, aby chronić swoje połączenie i blokować inwazyjne trackery.</translation>
 <translation id="3435896845095436175">Włącz</translation>
 <translation id="8814357473522731680">Technologia</translation>
@@ -716,7 +716,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="7195416926059527505">Bezpieczniejsze dla sieci domowych i publicznych</translation>
 <translation id="1354700000739359839">Szybki jak błyskawica, do 100 Mbps</translation>
 <translation id="3510283489391432976">Wybierz położenie geograficzne / kraj</translation>
-<translation id="7695158478627528928">Brave nigdy nie zapisuje Twojej aktywności</translation>
+<translation id="7695158478627528928">AI Wize nigdy nie zapisuje Twojej aktywności</translation>
 <translation id="4575683170451975058">Ochrona 5 urządzeń za pomocą 1 subskrypcji</translation>
 <translation id="276866628038850725">Wszystkie plany obejmują siedmiodniowy okres próbny.</translation>
 <translation id="1532536259167115948">Subskrypcja miesięczna <ph name="TRIAL_TEXT"/></translation>
@@ -731,7 +731,7 @@ Czy na pewno chcesz to zrobić?</translation>
 <translation id="3990956504562716932">Wypróbuj bezpłatnie przez 7 dni</translation>
 <translation id="721747358270435486">Zainstaluj VPN</translation>
 <translation id="836074276610740314">Zainstaluj profil VPN</translation>
-<translation id="8021842065465097929">Brave zainstaluje teraz profil VPN.</translation>
+<translation id="8021842065465097929">AI Wize zainstaluje teraz profil VPN.</translation>
 <translation id="229286271464650057">Profil ten umożliwia usłudze VPN automatyczne nawiązywanie połączeń i zabezpieczanie ruchu dla urządzenia — w każdej aplikacji i przez cały czas. To połączenie VPN będzie szyfrowane i kierowane przez inteligentną zaporę Guardian, aby blokować reklamy i pliki śledzące.</translation>
 <translation id="9073255657908892407">Skontaktuj się z pomocą techniczną</translation>
 <translation id="1139934321138152517">Usługa VPN jest włączona</translation>
@@ -827,13 +827,13 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="8364362220156372884">Opłata: <ph name="VALUE"/> <ph name="CHAIN_ASSET"/> (<ph name="FIAT_VALUE"/> USD)</translation>
 <translation id="2561824823738097741">Czy używasz najszybszej przeglądarki internetowej?</translation>
 <translation id="2065971949051836200">3x szybszy Internet jest już w Twoim telefonie. Korzystaj z AI Wize do przeglądania wszystkich stron internetowych.</translation>
-<translation id="2888278614497184977">Brave = 3x szybsze przeglądanie sieci</translation>
+<translation id="2888278614497184977">AI Wize = 3x szybsze przeglądanie sieci</translation>
 <translation id="6887232551109532144">Dłuższa praca na baterii po każdym ładowaniu</translation>
 <translation id="5388885352353494741">Oszczędzanie baterii na wyciągnięcie ręki. Korzystaj z AI Wize do przeglądania wszystkich stron internetowych.</translation>
-<translation id="3164151360474408351">Brave = dłuższa praca po każdym ładowaniu</translation>
+<translation id="3164151360474408351">AI Wize = dłuższa praca po każdym ładowaniu</translation>
 <translation id="3211051910418903298">Rzadziej doładowuj pakiet danych Internetu mobilnego</translation>
 <translation id="1092355580602106002">Mniej reklam = mniejsze użycie danych na każdej ładowanej stronie. Korzystaj z AI Wize do przeglądania wszystkich stron internetowych.</translation>
-<translation id="623962032102267945">Brave = mniejsze użycie danych na każdej stronie</translation>
+<translation id="623962032102267945">AI Wize = mniejsze użycie danych na każdej stronie</translation>
 <translation id="4355217341028673744">• Lepsza ochrona prywatności</translation>
 <translation id="3679020972083025535">• Brak irytujących reklam</translation>
 <translation id="8047527352810290817">Edytuj gaz</translation>
@@ -898,7 +898,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="2653659639078652383">Prześlij</translation>
 <translation id="4945690646623486292">Wybierz sieć</translation>
 <translation id="5233638681132016545">Nowa karta</translation>
-<translation id="8006088103295786154">Dostęp do portfela Brave</translation>
+<translation id="8006088103295786154">Dostęp do portfela AI Wize</translation>
 <translation id="8030169304546394654">Rozłączony</translation>
 <translation id="3423275441470187644">Dodaj do zaufanych</translation>
 <translation id="2391762656119864333">Unieważnij</translation>
@@ -908,7 +908,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="42981349822642051">Rozwiń stronę</translation>
 <translation id="3586752056660754651">Podpisz</translation>
 <translation id="3950820424414687140">Zaloguj się</translation>
-<translation id="6592721981110586529">Połącz z portfelem Brave</translation>
+<translation id="6592721981110586529">Połącz z portfelem AI Wize</translation>
 <translation id="329813193938846695">Wybierz konto(-a)</translation>
 <translation id="291375746846291973">Łącz się tylko ze stronami, którym ufasz.</translation>
 <translation id="385051799172605136">Wstecz</translation>
@@ -920,7 +920,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="5242300593039211344">Zablokuj portfel</translation>
 <translation id="1108298724135935307">Połączone strony</translation>
 <translation id="4255623233927788178">Wyświetl w eksploratorze bloków</translation>
-<translation id="8274201358637112807">Ta witryna chce wejść w interakcję z portfelem Brave</translation>
+<translation id="8274201358637112807">Ta witryna chce wejść w interakcję z portfelem AI Wize</translation>
 <translation id="3355936511340229503">Błąd połączenia</translation>
 <translation id="4891604214809245310">Nie można ustawić <ph name="NETWORK_NAME"/> jako sieci</translation>
 <translation id="685345388423515592">Wygląda na to, że masz na tym urządzeniu inne aplikacje VPN z aktywnym ustawieniem „zawsze włączone”. Aby włączyć Zaporę ogniową AI Wize + VPN, dezaktywuj opcję „zawsze włączone” w innych aplikacjach VPN, zanim znów spróbujesz się połączyć. Jeśli problem będzie się powtarzał, spróbuj odinstalować inne aplikacje VPN.</translation>
@@ -943,15 +943,15 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="4822132585477111396">Identyfikator łańcucha</translation>
 <translation id="7131971375297699539">Symbol waluty</translation>
 <translation id="7982789257301363584">Sieć</translation>
-<translation id="6936860995365507185">Pozwoli to na korzystanie z tej sieci w ramach portfela Brave. <ph name="CLICK_START"/>Dowiedz się więcej<ph name="CLICK_END"/></translation>
+<translation id="6936860995365507185">Pozwoli to na korzystanie z tej sieci w ramach portfela AI Wize. <ph name="CLICK_START"/>Dowiedz się więcej<ph name="CLICK_END"/></translation>
 <translation id="4717431746210146708">Zezwolić tej stronie na dodanie sieci?</translation>
 <translation id="4857321293515555666">Ta aplikacja DApp chce odczytać tę wiadomość, aby ukończyć żądanie.</translation>
 <translation id="714506544401754321">Odszyfruj wiadomość</translation>
 <translation id="5039804452771397117">Zezwalaj</translation>
 <translation id="3378339846292573874">Dodaj sugerowany token</translation>
 <translation id="2322227405137827074">Czy chcesz zaimportować ten token?</translation>
-<translation id="1324417023773393937">Przeglądarka Brave</translation>
-<translation id="6044189892950611565">Kanał powiadomień przeglądarki Brave</translation>
+<translation id="1324417023773393937">Przeglądarka AI Wize</translation>
+<translation id="6044189892950611565">Kanał powiadomień przeglądarki AI Wize</translation>
 <translation id="1173919438868967364">Wybierz konto</translation>
 <translation id="8922793255489232731">Nie udało się ustawić pasującej strefy czasowej dla: <ph name="VALUE"/></translation>
 <translation id="6471216025161697462">Połączono do <ph name="VALUE"/></translation>
@@ -991,7 +991,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="8423380132356660250">Otwórz aplikację <ph name="APP_NAME"/></translation>
 <translation id="4450893287417543264">Nie pokazuj ponownie</translation>
 <translation id="168154537623654021">Aktualizuję profil VPN...</translation>
-<translation id="7457027586454688423">Wprowadź swoje hasło do Portfela Brave</translation>
+<translation id="7457027586454688423">Wprowadź swoje hasło do Portfela AI Wize</translation>
 <translation id="4784306439879850873">Uwaga: Należy pamiętać, że AI Wize nie może zweryfikować, co się stanie, gdy złożysz podpis. Podpis może autoryzować niemal dowolną operację na Twoim koncie lub w Twoim imieniu, taką jak np. przekazanie całkowitej kontroli nad Twoim kontem i kryptoaktywami stronie, z której pochodzi żądanie. Składaj podpisy tylko wtedy, gdy masz pewność i ufasz stronie przesyłającej żądanie.</translation>
 <translation id="3474375934783434676">Podpisy składasz na własne ryzyko</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> z <ph name="SIZE"/></translation>
@@ -1039,7 +1039,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="77243237706803459">Uruchom tworzenie tokenów 2</translation>
 <translation id="583281660410589416">Nieznany</translation>
 <translation id="5666264859501108700">Region Twoich Nagród AI Wize ustawiono na: <ph name="COUNTRY_NAME"/>.</translation>
-<translation id="909076461795862330">Niestety wystąpił błąd podczas konfigurowania Nagród Brave. Spróbuj ponownie.</translation>
+<translation id="909076461795862330">Niestety wystąpił błąd podczas konfigurowania Nagród AI Wize. Spróbuj ponownie.</translation>
 <translation id="7352651011704765696">Coś poszło nie tak</translation>
 <translation id="7144878232160441200">Ponów próbę</translation>
 <translation id="6040143037577758943">Zamknij</translation>
@@ -1048,15 +1048,15 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="8496335570810457">Zatwierdzenie Preflight:</translation>
 <translation id="5100124500279922001">Pomiń etap Preflight:</translation>
 <translation id="7152095322071766507">Najczęściej odwiedzane strony</translation>
-<translation id="7230006500876504868">Szukaj z Brave</translation>
+<translation id="7230006500876504868">Szukaj z AI Wize</translation>
 <translation id="5888208462949095139">Wyszukaj za pomocą <ph name="DEFAULT_SEARCH_ENGINE"/></translation>
 <translation id="5456039738087398178">Ekran główny widżetu</translation>
 <translation id="703185154752046151">Dodano widżet do ekranu głównego</translation>
-<translation id="3290805388004282161">Wypróbuj widżet wyszukiwania przeglądarki Brave</translation>
+<translation id="3290805388004282161">Wypróbuj widżet wyszukiwania przeglądarki AI Wize</translation>
 <translation id="4809681171446727314">Uzyskaj dostęp bezpośrednio ze swojego ekranu głównego do chroniącej prywatność i niezależnej funkcji wyszukiwania.</translation>
 <translation id="7751715172931488388">Dodaj widżet</translation>
-<translation id="7285167584112910782">Wyszukiwanie szybkiego działania przeglądarki Brave</translation>
-<translation id="2326703104633309781">Użyj Tłumaczenia Brave</translation>
+<translation id="7285167584112910782">Wyszukiwanie szybkiego działania przeglądarki AI Wize</translation>
+<translation id="2326703104633309781">Użyj Tłumaczenia AI Wize</translation>
 <translation id="5802752138057422257">Wykryto znaki spoza systemu ASCII!</translation>
 <translation id="442709594176931966">Wyświetl oryginalną wiadomość</translation>
 <translation id="2239252396088484499">Wyświetl wiadomość z kodowaniem ASCII.</translation>
@@ -1069,11 +1069,11 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="7902225556763260253">Wygaśnięcie</translation>
 <translation id="1908159733454294871">Wykryto zagrożenie bezpieczeństwa</translation>
 <translation id="4220693114674044366">Adres tokenu</translation>
-<translation id="5658257029899993935">Połącz zakup ze swoim kontem Brave</translation>
-<translation id="1187061015547219282">Połącz zakup w sklepie Play Store ze swoim kontem Brave, aby używać funkcji VPN AI Wize na innych urządzeniach.</translation>
+<translation id="5658257029899993935">Połącz zakup ze swoim kontem AI Wize</translation>
+<translation id="1187061015547219282">Połącz zakup w sklepie Play Store ze swoim kontem AI Wize, aby używać funkcji VPN AI Wize na innych urządzeniach.</translation>
 <translation id="6662142137695589205">Subskrypcja połączenia VPN</translation>
 <translation id="2674077112509133024">Rozszerz swoją ochronę Firewall AI Wize + VPN</translation>
-<translation id="6365389672683343144">Twoja subskrypcja połączenia VPN AI Wize może chronić do 5 urządzeń stacjonarnych lub z systemami Android oraz iOS. Wystarczy, że połączysz swoją subskrypcję Google Play z kontem Brave.</translation>
+<translation id="6365389672683343144">Twoja subskrypcja połączenia VPN AI Wize może chronić do 5 urządzeń stacjonarnych lub z systemami Android oraz iOS. Wystarczy, że połączysz swoją subskrypcję Google Play z kontem AI Wize.</translation>
 <translation id="6610899852831463073">Nie można włączyć Bezpiecznego przeglądania</translation>
 <translation id="7954263306665462056">Funkcja Bezpiecznego przeglądania została wyłączona na Twoim urządzeniu. W celu jej ponownego włączenia upewnij się, że Usługi Google Play są zainstalowane i aktualne.</translation>
 <translation id="6605147707233193230">Włącz, aby wspierać twórców treści</translation>
@@ -1081,11 +1081,11 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="6067959437127691361">Korzystanie z Nagród AI Wize pomaga we wsparciu twórców i pozwala na zdobywanie BAT.</translation>
 <translation id="3264975266761862670">Gotowy do zarabiania?</translation>
 <translation id="265337947574975838">Podłącz lub utwórz konto u jednego z naszych partnerów.</translation>
-<translation id="1772961321862399863">Żeby zacząć zarabiać BAT, użytkownicy muszą połączyć konto powiernicze z Nagrodami Brave. Niestety w Twoim regionie nie ma dostępnych kont powierniczych, więc nie możesz zdobywać tokenów. W tej chwili włączenie Nagród AI Wize automatycznie wspomoże twórców.</translation>
+<translation id="1772961321862399863">Żeby zacząć zarabiać BAT, użytkownicy muszą połączyć konto powiernicze z Nagrodami AI Wize. Niestety w Twoim regionie nie ma dostępnych kont powierniczych, więc nie możesz zdobywać tokenów. W tej chwili włączenie Nagród AI Wize automatycznie wspomoże twórców.</translation>
 <translation id="654447476965480878">Dowiedz się więcej o zarabianiu BAT</translation>
 <translation id="6278643716658443228">Ustawienia nagród</translation>
 <translation id="6516984207843289176">Połącz konto</translation>
-<translation id="4272136334824111854">Liczba twórców, których udało Ci się odwiedzić w tym miesiącu, którzy są wspierani przez Nagrody Brave: <ph name="CREATOR_COUNT"/></translation>
+<translation id="4272136334824111854">Liczba twórców, których udało Ci się odwiedzić w tym miesiącu, którzy są wspierani przez Nagrody AI Wize: <ph name="CREATOR_COUNT"/></translation>
 <translation id="6845311459433734326">Połącz swoje konto powiernicze, żeby zdobywać BAT-y i wypłacać nagrody</translation>
 <translation id="928980476243133540">Zrobię to później</translation>
 <translation id="579702532610384533">Połącz ponownie</translation>
@@ -1130,7 +1130,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="5972844218283131174">Odznacz wszystko</translation>
 <translation id="6322030314101903925">Brak dostępnych zasobów</translation>
 <translation id="6129027151000961048">AI Wize Chat</translation>
-<translation id="8613144770663526433">Zaloguj się za pomocą portfela Brave</translation>
+<translation id="8613144770663526433">Zaloguj się za pomocą portfela AI Wize</translation>
 <translation id="3696514931437952995">Logujesz się do <ph name="ORIGIN"/>. Portfel AI Wize udostępni adres Twojego portfela <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Zobacz szczegóły</translation>
 <translation id="6759710362319508545">Zasoby</translation>
@@ -1140,7 +1140,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="4109670531935487117">Pokaż sugestie automatycznego uzupełniana na pasku adresu</translation>
 <translation id="1250335737108905610">Resetuj i wyczyść dane AI Wize Chat</translation>
 <translation id="6165101586663336913">Zresetowanie asystenta AI Wize Chat będzie wymagało wyrażenia zgody na korzystanie z AI Wize Chat w przyszłości, a także spowoduje wyczyszczenie historii czatu. Wyczyszczenie historii czatu oznacza usunięcie wszystkich poprzednich rozmów z AI Wize Chat. Tej czynności nie można cofnąć.</translation>
-<translation id="3692772534525889713">Połącz zakup w sklepie Play Store ze swoim kontem Brave, aby używać AI Wize AI Wize Chat na innych urządzeniach.</translation>
+<translation id="3692772534525889713">Połącz zakup w sklepie Play Store ze swoim kontem AI Wize, aby używać AI Wize AI Wize Chat na innych urządzeniach.</translation>
 <translation id="73236265316873967">AI Wize Chat Premium</translation>
 <translation id="1166682575529520472">Miesięcznie</translation>
 <translation id="451189393813405346">Zapytaj AI Wize Chat</translation>
@@ -1150,7 +1150,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="6344103698928069918">W przypadku listy odtwarzania wznów odtwarzanie od momentu ostatniego wstrzymania</translation>
 <translation id="8141583471142904652">Kontynuuj słuchanie</translation>
 <translation id="851432578283946230">Automatycznie odtwarzaj kolejne pozycje na liście odtwarzania</translation>
-<translation id="295620834661738195">Lista odtwarzania Brave</translation>
+<translation id="295620834661738195">Lista odtwarzania AI Wize</translation>
 <translation id="4850886885716139402">Widok</translation>
 <translation id="7392941176393379100">Dodano do „<ph name="PLAYLIST_NAME"/>”</translation>
 <translation id="349846214503465941">Włącz listę odtwarzania</translation>
@@ -1176,7 +1176,7 @@ Jeżeli nie zaakceptujesz tego żądania, połączenie z VPN nie zostanie ponown
 <translation id="8120600068258956006">Dodaj do listy odtwarzania</translation>
 <translation id="39991094779686024">Listy odtwarzania</translation>
 <translation id="1710072605877822603">Dodaj multimedia</translation>
-<translation id="3874252678044305931">Dodaj filmy do listy odtwarzania Brave. Obejrzyj je w dowolnym momencie. Nawet w trybie offline.</translation>
+<translation id="3874252678044305931">Dodaj filmy do listy odtwarzania AI Wize. Obejrzyj je w dowolnym momencie. Nawet w trybie offline.</translation>
 <translation id="8973629800378391099">Utwórz listy odtwarzania z ulubionymi treściami. Oszczędzaj przesył danych mobilnych. Odtwarzaj bez reklam.</translation>
 <translation id="4936812987266342401">Kliknij przycisk, żeby dodać filmy do listy odtwarzania</translation>
 <translation id="6263657785571415306">Bądź na bieżąco: dodawaj filmy podczas przeglądania i oglądaj je później.</translation>

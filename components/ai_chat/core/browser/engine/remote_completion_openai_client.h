@@ -49,6 +49,8 @@ class RemoteCompletionOpenAIClient : RemoteCompletionClient {
       GenerationCompletedCallback data_completed_callback,
       GenerationDataCallback data_received_callback = base::NullCallback()) override;
 
+  void ClearAllQueries() override;
+
  private:
   void OnQueryDataReceived(EngineConsumer::GenerationDataCallback callback,
                            base::expected<base::Value, std::string> result);

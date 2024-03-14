@@ -22,7 +22,7 @@
 <translation id="266935134738038806">Fara á vefsvæði</translation>
 <translation id="2759453070259087442">Stækka <ph name="TITLE_OF_GROUP"/> flipahóp með <ph name="NUMBER_OF_TABS"/> flipum.</translation>
 <translation id="2801787514987684416">Skoða upplýsingar verslunar?</translation>
-<translation id="4691798003247738043">Brave | Um þessa verslun</translation>
+<translation id="4691798003247738043">AI Wize | Um þessa verslun</translation>
 <translation id="2977480621796371840">Fjarlægja úr hópi</translation>
 <translation id="3008554597174452548">Hætta að fylgjast með vöru</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> verðlækkun á <ph name="PRODUCT_NAME"/></translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">Skoða upplýsingar um verslun, valkostir eru ofarlega á skjánum</translation>
 <translation id="5558362125926932819">Loka flipahópi með <ph name="NUMBER_OF_TABS"/> flipum</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> flipar sameinaðir.</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> tengill frá Brave}one{<ph name="TABS_COUNT_MANY"/> tengill frá Brave}other{<ph name="TABS_COUNT_MANY"/> tenglar frá Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> tengill frá AI Wize}one{<ph name="TABS_COUNT_MANY"/> tengill frá AI Wize}other{<ph name="TABS_COUNT_MANY"/> tenglar frá AI Wize}}</translation>
 <translation id="575494663145460764">Fá tilkynningar um verðlækkanir?</translation>
 <translation id="58326064309361797">Dragðu flipa til að sameina þá</translation>
 <translation id="5846292395804797011">Loka <ph name="TITLE_OF_GROUP"/>-hópi með <ph name="NUMBER_OF_TABS"/> flipum</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(einkunn verslunar)</translation>
 <translation id="6333260925957816943">Upplýsingar um þessa verslun</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{Taka <ph name="TABS_COUNT_ONE"/> valinn flipa úr hópi}one{Taka <ph name="TABS_COUNT_MANY"/> valinn flipa úr hópi}other{Taka <ph name="TABS_COUNT_MANY"/> valda flipa úr hópi}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd Brave. Huliðsflipinn verður ekki sýnilegur.}one{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd Brave. # huliðsflipi verður ekki sýnilegur.}other{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd Brave. # huliðsflipar verða ekki sýnilegir}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd AI Wize. Huliðsflipinn verður ekki sýnilegur.}one{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd AI Wize. # huliðsflipi verður ekki sýnilegur.}other{Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd AI Wize. # huliðsflipar verða ekki sýnilegir}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> flipi}one{<ph name="TABS_COUNT_MANY"/> flipi}other{<ph name="TABS_COUNT_MANY"/> flipar}}</translation>
 <translation id="6549021453810473782">Skoða upplýsingar um verslun</translation>
 <translation id="6562820390860419811">Færa flipa til vinstri</translation>
 <translation id="6615455863669487791">Sýndu mér</translation>
-<translation id="6398241160085205003">Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd Brave.</translation>
+<translation id="6398241160085205003">Þú finnur flipa sem þú hefur lokað í „Nýlegir flipar“ á aðalvalmynd AI Wize.</translation>
 <translation id="6840760312327750441">Haltu fingri á flipa til að flokka hann. Dragðu hann svo ofan á annan flipa.</translation>
 <translation id="6856809498882026482">Fela stillingu til að velja marga</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Deila flipa}one{Deila flipum}other{Deila flipum}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">Sjá skilareglur og fleira</translation>
 <translation id="7352298686197644113">Sjáðu hvaða vara á opnum flipum er ódýrust</translation>
 <translation id="753732157349120914">Flipaval</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> umsögn frá Brave}one{<ph name="REVIEWS_COUNT_MANY"/> umsögn frá Brave}other{<ph name="REVIEWS_COUNT_MANY"/> umsagnir frá Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> umsögn frá AI Wize}one{<ph name="REVIEWS_COUNT_MANY"/> umsögn frá AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> umsagnir frá AI Wize}}</translation>
 <translation id="7559245342362162951">Sýna flipa hóps á öllum skjánum</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Deila <ph name="TABS_COUNT_ONE"/> völdum flipa}one{Deila <ph name="TABS_COUNT_MANY"/> völdum flipa}other{Deila <ph name="TABS_COUNT_MANY"/> völdum flipum}}</translation>
 <translation id="7792771145871471484">Skoða tillögurnar.</translation>

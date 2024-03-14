@@ -12,7 +12,7 @@ import {SettingsRoutes} from 'chrome://settings/settings.js';
 export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   const isGuest = loadTimeData.getBoolean('isGuest')
   if (!r.BASIC) {
-    console.error('[Brave Settings Overrides] Routes: could not find BASIC page')
+    console.error('[AI Wize Settings Overrides] Routes: could not find BASIC page')
   }
   if (pageVisibility.getStarted) {
     r.GET_STARTED = r.BASIC.createSection('/getStarted', 'getStarted')
@@ -31,7 +31,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     if (r.SYSTEM) {
       r.SHORTCUTS = r.SYSTEM.createChild('/system/shortcuts')
     } else if (!isGuest) {
-      console.error('[Brave Settings Overrides] Routes: could not find SYSTEM page')
+      console.error('[AI Wize Settings Overrides] Routes: could not find SYSTEM page')
     }
   }
   r.SOCIAL_BLOCKING = r.BASIC.createSection('/socialBlocking', 'socialBlocking')
@@ -56,14 +56,14 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   if (r.ADVANCED) {
     r.BRAVE_HELP_TIPS = r.ADVANCED.createSection('/braveHelpTips', 'braveHelpTips')
   } else if (!isGuest) {
-    console.error('[Brave Settings Overrides] Could not find ADVANCED page', r)
+    console.error('[AI Wize Settings Overrides] Could not find ADVANCED page', r)
   }
   r.BRAVE_NEW_TAB = r.BASIC.createSection('/newTab', 'newTab')
   if (r.SITE_SETTINGS_SITE_DETAILS) {
     r.BRAVE_SITE_SETTINGS_COOKIES_DETAILS =
       r.SITE_SETTINGS_SITE_DETAILS.createChild('/cookies/detail');
   } else if (!isGuest) {
-    console.error('[Brave Settings Overrides] could not find expected route /content/siteDetails')
+    console.error('[AI Wize Settings Overrides] could not find expected route /content/siteDetails')
   }
   if (pageVisibility.leoAssistant) {
     r.BRAVE_LEO_ASSISTANT =
@@ -93,17 +93,17 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     if (r.SITE_SETTINGS_ADS) {
       delete r.SITE_SETTINGS_ADS
     } else {
-      console.error('[Brave Settings Overrides] could not find expected route site_settings_ads')
+      console.error('[AI Wize Settings Overrides] could not find expected route site_settings_ads')
     }
   } else if (!isGuest) {
-    console.error('[Brave Settings Overrides] Routes: could not find SITE_SETTINGS page')
+    console.error('[AI Wize Settings Overrides] Routes: could not find SITE_SETTINGS page')
   }
   // Autofill route is moved to advanced,
   // otherwise its sections won't show up when opened.
   if (r.AUTOFILL && r.ADVANCED) {
     r.AUTOFILL.parent = r.ADVANCED
   } else if (!isGuest) {
-    console.error('[Brave Settings Overrides] Could not move autofill route to advanced route', r)
+    console.error('[AI Wize Settings Overrides] Could not move autofill route to advanced route', r)
   }
   // Deleted performance menu and system menu includes it instead.
   if (r.PERFORMANCE) {
@@ -113,6 +113,6 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   if (r.SAFETY_CHECK && r.ADVANCED) {
     r.SAFETY_CHECK.parent = r.ADVANCED
   } else if (!isGuest) {
-    console.error('[Brave Settings Overrides] Could not move safety check route to advanced route', r)
+    console.error('[AI Wize Settings Overrides] Could not move safety check route to advanced route', r)
   }
 }

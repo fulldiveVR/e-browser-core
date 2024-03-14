@@ -25,6 +25,8 @@ static_library("browser") {
     "engine/engine_consumer_claude.h",
     "engine/engine_consumer_llama.cc",
     "engine/engine_consumer_llama.h",
+    "engine/engine_consumer_openai.cc",
+    "engine/engine_consumer_openai.h",
     "engine/remote_completion_client.cc",
     "engine/remote_completion_client.h",
     "engine/remote_completion_openai_client.cc",

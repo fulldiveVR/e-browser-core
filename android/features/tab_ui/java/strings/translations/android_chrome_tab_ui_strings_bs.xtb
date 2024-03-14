@@ -22,7 +22,7 @@
 <translation id="266935134738038806">Posjetite web lokaciju</translation>
 <translation id="2759453070259087442">Proširivanje grupe kartica <ph name="TITLE_OF_GROUP"/> sa sljedećim brojem kartica: <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Prikazati informacije o trgovini?</translation>
-<translation id="4691798003247738043">Brave | O ovoj trgovini</translation>
+<translation id="4691798003247738043">AI Wize | O ovoj trgovini</translation>
 <translation id="2977480621796371840">Ukloni iz grupe</translation>
 <translation id="3008554597174452548">Prestanite pratiti proizvod</translation>
 <translation id="3052964831964880138">Pad cijene od <ph name="PRICE_DROP"/> za proizvod <ph name="PRODUCT_NAME"/></translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">Prikaz informacija o trgovini. Opcija je dostupna pri vrhu ekrana</translation>
 <translation id="5558362125926932819">Zatvaranje grupe kartica sa sljedećim brojem kartica: <ph name="NUMBER_OF_TABS"/></translation>
 <translation id="5580090775658607195">Grupisan je sljedeći broj kartica: <ph name="TAB_COUNT"/></translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link iz Bravea}one{<ph name="TABS_COUNT_MANY"/> link iz Bravea}few{<ph name="TABS_COUNT_MANY"/> linka iz Bravea}other{<ph name="TABS_COUNT_MANY"/> linkova iz Bravea}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link iz AI Wizea}one{<ph name="TABS_COUNT_MANY"/> link iz AI Wizea}few{<ph name="TABS_COUNT_MANY"/> linka iz AI Wizea}other{<ph name="TABS_COUNT_MANY"/> linkova iz AI Wizea}}</translation>
 <translation id="575494663145460764">Slati obavještenja o padu cijena?</translation>
 <translation id="58326064309361797">Prevucite kartice da ih grupišete</translation>
 <translation id="5846292395804797011">Zatvaranje grupe kartica <ph name="TITLE_OF_GROUP"/> sa sljedećim brojem kartica: <ph name="NUMBER_OF_TABS"/></translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(ocjena trgovine)</translation>
 <translation id="6333260925957816943">Informacije o ovoj trgovini</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{Razgrupisanje <ph name="TABS_COUNT_ONE"/> odabrane kartice}one{Razgrupisanje <ph name="TABS_COUNT_MANY"/> odabrane kartice}few{Razgrupisanje <ph name="TABS_COUNT_MANY"/> odabranih kartica}other{Razgrupisanje <ph name="TABS_COUNT_MANY"/> odabranih kartica}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju Bravea. Anonimna kartica neće biti dostupna.}one{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju Bravea. # anonimna kartica neće biti dostupna.}few{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju Bravea. # anonimne kartice neće biti dostupne.}other{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju Bravea. # anonimnih kartica neće biti dostupno.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju AI Wizea. Anonimna kartica neće biti dostupna.}one{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju AI Wizea. # anonimna kartica neće biti dostupna.}few{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju AI Wizea. # anonimne kartice neće biti dostupne.}other{Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju AI Wizea. # anonimnih kartica neće biti dostupno.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> kartica}one{<ph name="TABS_COUNT_MANY"/> kartica}few{<ph name="TABS_COUNT_MANY"/> kartice}other{<ph name="TABS_COUNT_MANY"/> kartica}}</translation>
 <translation id="6549021453810473782">Pregledajte informacije o trgovini</translation>
 <translation id="6562820390860419811">Pomjeranje kartice ulijevo</translation>
 <translation id="6615455863669487791">Pokaži mi</translation>
-<translation id="6398241160085205003">Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju Bravea.</translation>
+<translation id="6398241160085205003">Zatvorene kartice možete pronaći u Nedavnim karticama u glavnom meniju AI Wizea.</translation>
 <translation id="6840760312327750441">Da grupirate kartice, dodirnite i zadržite jednu karticu. Nakon toga je prevucite na drugu karticu.</translation>
 <translation id="6856809498882026482">Skrivanje načina rada višestrukog izbora</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Dijeli karticu}one{Dijeli kartice}few{Dijeli kartice}other{Dijeli kartice}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">Pogledajte pravila povrata i drugo</translation>
 <translation id="7352298686197644113">Pogledajte koja stavka u otvorenim karticama ima nižu cijenu</translation>
 <translation id="753732157349120914">Prebacivač kartica</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzija s Bravea}one{<ph name="REVIEWS_COUNT_MANY"/> recenzija s Bravea}few{<ph name="REVIEWS_COUNT_MANY"/> recenzije s Bravea}other{<ph name="REVIEWS_COUNT_MANY"/> recenzija s Bravea}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzija s AI Wizea}one{<ph name="REVIEWS_COUNT_MANY"/> recenzija s AI Wizea}few{<ph name="REVIEWS_COUNT_MANY"/> recenzije s AI Wizea}other{<ph name="REVIEWS_COUNT_MANY"/> recenzija s AI Wizea}}</translation>
 <translation id="7559245342362162951">Prikaži kartice grupe na mreži cijelog ekrana</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Dijeljenje <ph name="TABS_COUNT_ONE"/> odabrane kartice}one{Dijeljenje <ph name="TABS_COUNT_MANY"/> odabrane kartice}few{Dijeljenje <ph name="TABS_COUNT_MANY"/> odabranih kartica}other{Dijeljenje <ph name="TABS_COUNT_MANY"/> odabranih kartica}}</translation>
 <translation id="7792771145871471484">Pregled prijedloga.</translation>

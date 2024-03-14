@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Бул жерге жылдыруу</translation>
 <translation id="1014147525163127655">Бул түзмөктө <ph name="ORIGIN"/> үчүн киргизүүчү ачкычтар жок</translation>
 <translation id="1016498331642356377">Оозеки ыкчам издеңиз. Бул ыкчам баскычты түзөтүү үчүн коё бербей басып туруңуз.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925"><ph name="DEVICE_NAME"/> түзмөгүнө жөнөтүлүүдө...</translation>
 <translation id="103269572468856066">Маалымат бул сайттар менен колдонмолордон да өчүрүлсүнбү?</translation>
 <translation id="1034259925032978114">Терезе ачык</translation>
@@ -17,18 +17,18 @@
 <translation id="1089606299949659462">Карап чыгуу аяктады!</translation>
 <translation id="1095761715416917775">Шайкештирилген маалыматыңызга каалаган убакта кире аларыңызды текшериңиз</translation>
 <translation id="1100066534610197918">Топтогу жаңы өтмөктө ачуу</translation>
-<translation id="4660777881054855091">Brave'ду жакшыртууга жардам бере аласызбы?</translation>
+<translation id="4660777881054855091">AI Wize'ду жакшыртууга жардам бере аласызбы?</translation>
 <translation id="1105960400813249514">Экранды тартып алуу</translation>
 <translation id="1108938384783527433">Таржымалды шайкештирүү</translation>
 <translation id="1111673857033749125">Башка түзмөктөрүңүздө сакталган кыстармалар ушул жерден көрүнөт.</translation>
 <translation id="1113597929977215864">Жөнөкөйлөштүрүлгөн көрүнүштү көрсөтүү</translation>
-<translation id="4470276443668654888">Google Pay'деги даректер жана төлөм ыкмалары шифрленбейт. Brave'до көрүлгөн вебсайттар шайкештирилбейт.
-Сыр сүйлөмүңүздү билген адам гана шифрленген маалыматыңызды окуй алат. Сыр сүйлөм Brave'га жөнөтүлбөйт же анда сакталбайт. Эгер сыр сүйлөмүңүздү унутуп калсаңыз же бул параметрди өзгөрткүңүз келсе, шайкештирүүнү баштапкы абалга келтиришиңиз керек болот. <ph name="BEGIN_LINK"/>Кеңири маалымат<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргобойт. Gmail жана Издөө сыяктуу Brave'дун башка кызматтарында мүмкүн болгондо Коопсуз серептөө иштетилет.</translation>
+<translation id="4470276443668654888">Google Pay'деги даректер жана төлөм ыкмалары шифрленбейт. AI Wize'до көрүлгөн вебсайттар шайкештирилбейт.
+Сыр сүйлөмүңүздү билген адам гана шифрленген маалыматыңызды окуй алат. Сыр сүйлөм AI Wize'га жөнөтүлбөйт же анда сакталбайт. Эгер сыр сүйлөмүңүздү унутуп калсаңыз же бул параметрди өзгөрткүңүз келсе, шайкештирүүнү баштапкы абалга келтиришиңиз керек болот. <ph name="BEGIN_LINK"/>Кеңири маалымат<ph name="END_LINK"/></translation>
+<translation id="1295971429974142731">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргобойт. Gmail жана Издөө сыяктуу AI Wize'дун башка кызматтарында мүмкүн болгондо Коопсуз серептөө иштетилет.</translation>
 <translation id="1129510026454351943">Кененирээк: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Төмөнкү сайттарды которуу сунушталбасын</translation>
 <translation id="1145536944570833626">Учурдагы дайындарды жок кылуу.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> Brave'до ачылат. Улантуу менен, <ph name="BEGIN_LINK1"/>Brave'дун Тейлөө шарттарына<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>Brave менен ChromeOS'тун Кошумча Тейлөө шарттарына<ph name="END_LINK2"/> макул болосуз.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> AI Wize'до ачылат. Улантуу менен, <ph name="BEGIN_LINK1"/>AI Wize'дун Тейлөө шарттарына<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>AI Wize менен ChromeOS'тун Кошумча Тейлөө шарттарына<ph name="END_LINK2"/> макул болосуз.</translation>
 <translation id="115483310321669804"><ph name="PASSWORD"/> сырсөзүн колдонуу</translation>
 <translation id="1173894706177603556">Атын өзгөртүү</translation>
 <translation id="7947699437047020219">Экран тар болгондо AI Wize мобилдик түзмөктөгү сайтты колдонууну сурайт</translation>
@@ -47,7 +47,7 @@
 <translation id="1231733316453485619">Шайкештирүү күйгүзүлсүнбү?</translation>
 <translation id="123724288017357924">Кэшти колдонбой, учурдагы баракты кайра жүктөө</translation>
 <translation id="1239792311949352652">Бул баракты ыкчам бөлүшүңүз. Бул ыкчам баскычты түзөтүү үчүн параметрлерге өтүңүз.</translation>
-<translation id="3251315496493761426">Brave'ду колдонуу кеңештери</translation>
+<translation id="3251315496493761426">AI Wize'ду колдонуу кеңештери</translation>
 <translation id="1240288207750131269"><ph name="LANG"/> жүктөлүүдө</translation>
 <translation id="1240903469550363138">Улантуу үчүн <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аты-жөнүңүздү, электрондук почтаңызды жана профилиңиздин сүрөтүн ушул сайт менен бөлүшөт. Бул сайттын <ph name="BEGIN_LINK1"/>купуялык эрежелерин<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>тейлөө шарттарын<ph name="END_LINK2"/> карап чыгыңыз.</translation>
 <translation id="124116460088058876">Дагы тилдер</translation>
@@ -55,14 +55,14 @@
 <translation id="1242883863226959074">түзмөктө</translation>
 <translation id="124678866338384709">Учурдагы өтмөктү жабуу</translation>
 <translation id="1246905108078336582">Сунуш алмашуу буферинен өчүрүлсүнбү?</translation>
-<translation id="1996480094660735607">Brave чиймелек: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="1996480094660735607">AI Wize чиймелек: <ph name="DOODLE_DESCRIPTION"/></translation>
 <translation id="7074197713963877855">Эми <ph name="SITE_NAME"/> каналындагы контентти жана маалыматты Жазылгансыз бөлүмүндө көрөсүз. Сиз жазылган сайттар жана издеген нерселер AI Wize аккаунтуңузда сакталат. Жазылгандарды параметрлерден каалаган убакта тескей аласыз.</translation>
 <translation id="1263231323834454256">Окуу тизмеси</translation>
 <translation id="1266864766717917324"><ph name="CONTENT_TYPE"/> менен бөлүшүлгөн жок</translation>
 <translation id="1269129608791067105">Таржымалыңызды ушул жерден табасыз</translation>
 <translation id="1273937721055267968"><ph name="DOMAIN"/> сайтын бөгөттөө</translation>
 <translation id="1283039547216852943">Жайып көрсөтүү үчүн таптап коюңуз</translation>
-<translation id="194557235473047967">Brave аккаунтуңузга кирүүңүз суралат</translation>
+<translation id="194557235473047967">AI Wize аккаунтуңузга кирүүңүз суралат</translation>
 <translation id="1291207594882862231">Таржымалды, кукилерди, сайттагы нерселерди, кешти тазалоо…</translation>
 <translation id="129553762522093515">Жакында жабылган</translation>
 <translation id="1298077576058087471">Бүгүнкү жаңылыктарды окуганда 60% чейин трафик үнөмдөңүз</translation>
@@ -70,8 +70,8 @@
 <translation id="1303507811548703290"><ph name="DOMAIN"/> – <ph name="DEVICE_NAME"/> түзмөгүнөн жөнөтүлдү</translation>
 <translation id="1320912611264252795">Тематикасына жараша сакталган кыстармалар толук экранда ачылды</translation>
 <translation id="1327257854815634930">Чабыттоо таржымалы ачылды</translation>
-<translation id="6773423637732432200">Brave жаңырбай жатат. Кошумча параметрлер</translation>
-<translation id="3169981355900570544">Brave функциясынын кыска жолдору</translation>
+<translation id="6773423637732432200">AI Wize жаңырбай жатат. Кошумча параметрлер</translation>
+<translation id="3169981355900570544">AI Wize функциясынын кыска жолдору</translation>
 <translation id="1344653310988386453">Бөлүнүп көрсөтүлгөн нерсеге шилтемени камтуу</translation>
 <translation id="1347468774581902829">Аракеттерди тескөө</translation>
 <translation id="1360432990279830238">Аккаунттан чыгып, шайкештирүүнү өчүрөсүзбү?</translation>
@@ -87,7 +87,7 @@
 <translation id="1407069428457324124">Караңгы тема</translation>
 <translation id="1407135791313364759">Баарын ачуу</translation>
 <translation id="1409879593029778104">Мындай файл бар болгондуктан, <ph name="FILE_NAME"/> жүктөлүп алынган жок.</translation>
-<translation id="1853026300647876496">Brave менен байланышууда. Буга бир мүнөт кетиши мүмкүн...</translation>
+<translation id="1853026300647876496">AI Wize менен байланышууда. Буга бир мүнөт кетиши мүмкүн...</translation>
 <translation id="1416550906796893042">Колдонмонун версиясы</translation>
 <translation id="1428770807407000502">Шайкештирүү өчүрүлсүнбү?</translation>
 <translation id="1430915738399379752">Басып чыгаруу</translation>
@@ -96,7 +96,7 @@
 <translation id="1437543266176261764"><ph name="APP_NAME"/> колдонмосунда иштеп жатат</translation>
 <translation id="1448440926884431741">Көз салган товарларды Кыстармаларда иреттей аласыз</translation>
 <translation id="1450753235335490080"><ph name="CONTENT_TYPE"/> менен бөлүшүү мүмкүн эмес</translation>
-<translation id="5598889255595678761">Brave’дун тилин тандаңыз</translation>
+<translation id="5598889255595678761">AI Wize’дун тилин тандаңыз</translation>
 <translation id="1477626028522505441">Сервердеги маселелерден улам <ph name="FILE_NAME"/> жүктөлүп алынган жок.</translation>
 <translation id="148482509007564431">Тематикасына жараша сакталган кыстармалар</translation>
 <translation id="1492417797159476138">Бул сайт үчүн ушул колдонуучунун атын сактап койгонсуз</translation>
@@ -107,10 +107,10 @@
 <translation id="1513814250881909472">Башка түзмөктөрдөгү өтмөктөрдү колдонуу үчүн шайкештирүүнү иштетиңиз</translation>
 <translation id="1513858653616922153">Сырсөздү жок кылуу</translation>
 <translation id="1521774566618522728">Соңку аракеттер: бүгүн</translation>
-<translation id="8090895580117672212">Brave аккаунтуңузду башкаруу үчүн "Аккаунтту башкаруу" баскычын таптап коюңуз</translation>
+<translation id="8090895580117672212">AI Wize аккаунтуңузду башкаруу үчүн "Аккаунтту башкаруу" баскычын таптап коюңуз</translation>
 <translation id="1549000191223877751">Башка терезеге жылдыруу</translation>
-<translation id="1705567146636171298">Brave'ду жаңыртуу</translation>
-<translation id="3763131702135887799">Brave'ду пайдаланган адамдар үчүн аны жакшыртууга жардам бериңиз</translation>
+<translation id="1705567146636171298">AI Wize'ду жаңыртуу</translation>
+<translation id="3763131702135887799">AI Wize'ду пайдаланган адамдар үчүн аны жакшыртууга жардам бериңиз</translation>
 <translation id="6464648082977038075">Жашыруун өтмөктөрдү жабуу</translation>
 <translation id="1568636008098739136">Бул баракты угуңуз. Бул ыкчам баскычты түзөтүү үчүн коё бербей басып туруңуз.</translation>
 <translation id="1571304935088121812">Колдонуучунун атын көчүрүү</translation>
@@ -118,7 +118,7 @@
 <translation id="1594635596540195766">Төмөнкү тизмеде <ph name="SUGGESTIONS_COUNT"/> нерсе сунушталды.</translation>
 <translation id="1598163867407640634"><ph name="SITE_ETLD_PLUS_ONE"/> сайтын <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аккаунту менен колдонуңуз</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Тандалган 1 нерсени алып салуу}other{Тандалган # нерсени алып салуу}}</translation>
-<translation id="3122582044404611732">Brave’дун башкы бетиндеги жаңы макалаларды окуңуз</translation>
+<translation id="3122582044404611732">AI Wize’дун башкы бетиндеги жаңы макалаларды окуңуз</translation>
 <translation id="1641113438599504367">Коопсуз серептөө</translation>
 <translation id="164269334534774161">Бул барактын оффлайн көчүрмөсү <ph name="CREATION_TIME"/> түзүлгөн</translation>
 <translation id="1644574205037202324">Таржымал</translation>
@@ -134,7 +134,7 @@
 <translation id="1710099199314114079">Которуу же өтмөктөрдү жабуу</translation>
 <translation id="1718835860248848330">Акыркы бир саат</translation>
 <translation id="1724977129262658800">Сырсөзүңүздү түзөтүү үчүн кулпусун ачыңыз</translation>
-<translation id="6493900814829428590">Brave алдын ала жүктөгөн барактарды (баш багышыңыз мүмкүн деп болжолдогон) карап чыгып, тезирээк таба аласыз</translation>
+<translation id="6493900814829428590">AI Wize алдын ала жүктөгөн барактарды (баш багышыңыз мүмкүн деп болжолдогон) карап чыгып, тезирээк таба аласыз</translation>
 <translation id="5129323533070334129">Киргизүүчү ачкыч Жашыруун режимден сырткары сакталсынбы?</translation>
 <translation id="1749561566933687563">Кыстармаларыңызды шайкештириңиз</translation>
 <translation id="1750259112639922169">Өтмөктөр тобу – <ph name="TAB_COUNT"/> өтмөк</translation>
@@ -151,15 +151,15 @@
 <translation id="1810845389119482123">Шайкештирүү аягына чейин жөндөлгөн жок</translation>
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/> <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аркылуу уланта албайт</translation>
 <translation id="1829244130665387512">Ушул беттен табыңыз</translation>
-<translation id="5488575152752589250">Brave'дан эң ылайыктуу контентти көрүү үчүн шайкештирүүнү иштетиңиз</translation>
-<translation id="7175072311426658869">Brave серепчисинде ачуу</translation>
-<translation id="5173820533850252773">Brave эскирип калган.</translation>
+<translation id="5488575152752589250">AI Wize'дан эң ылайыктуу контентти көрүү үчүн шайкештирүүнү иштетиңиз</translation>
+<translation id="7175072311426658869">AI Wize серепчисинде ачуу</translation>
+<translation id="5173820533850252773">AI Wize эскирип калган.</translation>
 <translation id="1883903952484604915">Менин файлдарым</translation>
 <translation id="189358972401248634">Башка тилдер</translation>
 <translation id="1900260903084164610">Улантуу менен, <ph name="BEGIN_TOS_LINK"/>Тейлөө шарттарына<ph name="END_TOS_LINK"/> макул болосуз.</translation>
 <translation id="6893464351226208429">Сиз кирген URL даректери AI Wize аккаунтуңузга сакталат</translation>
 <translation id="1910950723001426294">Бөлүшүү параметрлеринин тизмеси жабылды.</translation>
-<translation id="7021823858304886493">Brave'го кирүүгө уруксат берүү</translation>
+<translation id="7021823858304886493">AI Wize'го кирүүгө уруксат берүү</translation>
 <translation id="1922362554271624559">Сунушталган тилдер</translation>
 <translation id="1924255092154549435">Өтмөк жайылып көрсөтүлдү</translation>
 <translation id="1925021887439448749">Жеке веб дарегин киргизиңиз</translation>
@@ -170,7 +170,7 @@
 <translation id="1944535645109964458">Киргизүүчү ачкычтар жок</translation>
 <translation id="1952172573699511566">Мүмкүн болгон учурда вебсайттар текстти сиз каалаган тилде көрсөтүшөт.</translation>
 <translation id="1959679933317802873">Мазмун күтүлүүдө</translation>
-<translation id="3968054912784331254">Brave жаңыртуулары Android'дин бул версиясында колдоого алынбай калган</translation>
+<translation id="3968054912784331254">AI Wize жаңыртуулары Android'дин бул версиясында колдоого алынбай калган</translation>
 <translation id="1963976881984600709">Стандарттуу коргоо</translation>
 <translation id="1966710179511230534">Кирүү чоо-жайыңызды жаңыртыңыз.</translation>
 <translation id="197288927597451399">Сактоо</translation>
@@ -179,12 +179,12 @@
 <translation id="1984417487208496350">Корголбойт (сунушталбайт)</translation>
 <translation id="1986685561493779662">Мындай аталыш мурунтан эле бар</translation>
 <translation id="1995884366040846621">Улантуу үчүн <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аты-жөнүңүздү, электрондук почтаңызды жана профилиңиздин сүрөтүн ушул сайт менен бөлүшөт. Бул сайттын <ph name="BEGIN_LINK1"/>купуялык эрежелерин<ph name="END_LINK1"/> көрүңүз.</translation>
-<translation id="6968892567705775281">Brave'да издегенде көбүрөөк текст камтылсынбы?</translation>
+<translation id="6968892567705775281">AI Wize'да издегенде көбүрөөк текст камтылсынбы?</translation>
 <translation id="2009341475524975924">Жарнаманын майнаптуулугун талдоо үчүн сайттар бири-бири менен жарнаманын кайсы убакытта көрсөтүлгөнү сыяктуу белгилүү бир маалыматтын түрлөрүн бөлүшүүсү мүмкүн.</translation>
 <translation id="201060170519281460">Профилди кулпулоо функциясы унааңызда маалыматыңыздын, ошондой эле шайкештирилген сырсөздөр, төлөмдөр жана башка нерселердин коопсуздугун камсыздайт.</translation>
 <translation id="2021896219286479412">Сайтты толук экран режиминде көзөмөлдөө</translation>
 <translation id="2038563949887743358">Иш тактасынын сайтындагы суроо-талапты күйгүзүү</translation>
-<translation id="7675869148432102528"><ph name="APP_NAME"/> колдонмосунун дайындары Brave'до дагы бар</translation>
+<translation id="7675869148432102528"><ph name="APP_NAME"/> колдонмосунун дайындары AI Wize'до дагы бар</translation>
 <translation id="2046634576464120978">Катталган жок</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">HTTPS кеңейтүүсүн мүмкүн болгон учурларда колдонуп, аны колдоого албаган сайттарды жүктөөдөн мурда эскертүү алыңыз. Өркүндөтүлгөн коргоо иштетилгендиктен, бул параметрди өзгөртө албайсыз.</translation>
@@ -206,7 +206,7 @@
 <translation id="2141396931810938595">Колдонулушуна жараша</translation>
 <translation id="2149973817440762519">Кыстарманы түзөтүү</translation>
 <translation id="2155214902713132423">Бул текшерүү ыкмасы бул түзмөктө жеткиликсиз. Башка түзмөгүңүздө башка параметрди тандаңыз.</translation>
-<translation id="4162910516440006395">Brave бардык сырсөздөрдү текшере алган жок.</translation>
+<translation id="4162910516440006395">AI Wize бардык сырсөздөрдү текшере алган жок.</translation>
 <translation id="2172688499998841696">Сүрөттөмөлөр өчүк</translation>
 <translation id="2172905120685242547">Терезе жабылсынбы?</translation>
 <translation id="2173302385160625112">Интернет байланышыңызды текшериңиз</translation>
@@ -214,14 +214,14 @@
 <translation id="218608176142494674">Бөлүшүү</translation>
 <translation id="2194856509914051091">Эске ала турган нерселер</translation>
 <translation id="22091350895006575">Колдонуучунун атын кошуу</translation>
-<translation id="4075202346699640887">Brave профиль кулпусу жок ачылса, сакталган сырсөздөрүңүз жана төлөм ыкмаларыңыз унаадан өчүрүлөт. Профиль кулпусун колдонуу менен бул маалымат коопсуз сакталат.</translation>
+<translation id="4075202346699640887">AI Wize профиль кулпусу жок ачылса, сакталган сырсөздөрүңүз жана төлөм ыкмаларыңыз унаадан өчүрүлөт. Профиль кулпусун колдонуу менен бул маалымат коопсуз сакталат.</translation>
 <translation id="2227444325776770048"><ph name="USER_FULL_NAME"/> катары улантуу</translation>
 <translation id="2230777942707397948">Бош терезе</translation>
 <translation id="223356358902285214">Колдонмолор жана Интернеттеги аракеттер таржымалы</translation>
 <translation id="2234827758954819389">Купуялык жетектемеси</translation>
 <translation id="2239812875700136898">Сунуштардын параметрлери баскычынан окуяларыңызды башкарыңыз</translation>
 <translation id="2247789808226901522">Картанын мөөнөтү бүткөн</translation>
-<translation id="4808014761134300692">Brave Сырсөздөрдү башкаргычка сакталганга чейин сырсөздөрүңүз түзмөгүңүздө шифрленет</translation>
+<translation id="4808014761134300692">AI Wize Сырсөздөрдү башкаргычка сакталганга чейин сырсөздөрүңүз түзмөгүңүздө шифрленет</translation>
 <translation id="2249635629516220541">Жарнамаларды көрсөтүү үчүн сайттар колдонгон маалыматты ыңгайлаштыруу</translation>
 <translation id="2259659629660284697">Сырсөздөрдү экспорттоо…</translation>
 <translation id="8820144752830692527">Эмнени шайкештирүү керек экенин <ph name="BEGIN_LINK1"/>жөндөөлөрдөн<ph name="END_LINK1"/> ар дайым тандай аласыз. AI Wize таржымалыңыздын негизинде Издөөнү жана башка кызматтарды жекелештириши мүмкүн.</translation>
@@ -236,8 +236,8 @@
 <translation id="2323763861024343754">Сайт дайындары</translation>
 <translation id="2328985652426384049">Аккаунтка кирүү мүмкүн эмес</translation>
 <translation id="2341410551640223969"><ph name="WEBAPK_NAME"/> орнотулган жок.</translation>
-<translation id="3587672679800759167">Brave пайдаланган жалпы дайындардын, анын ичинде каттоо эсептери, кыстармалар жана сакталган параметрлердин жалпы өлчөмү</translation>
-<translation id="2767094839186957509">Brave Купуялык эрежелери</translation>
+<translation id="3587672679800759167">AI Wize пайдаланган жалпы дайындардын, анын ичинде каттоо эсептери, кыстармалар жана сакталган параметрлердин жалпы өлчөмү</translation>
+<translation id="2767094839186957509">AI Wize Купуялык эрежелери</translation>
 <translation id="2359808026110333948">Улантуу</translation>
 <translation id="2362083820973145409"><ph name="USER_NAME"/> катары кирдиңиз. <ph name="USER_EMAIL"/>. Параметрлерди ачат.</translation>
 <translation id="2364539095045928896">Барактын статистика борборунда купуялык билдирмесин жабуу үчүн Жабуу баскычын колдонуңуз.</translation>
@@ -259,11 +259,11 @@
 <translation id="2482878487686419369">Билдирмелер</translation>
 <translation id="2496180316473517155">Серептөө таржымалы</translation>
 <translation id="2497852260688568942">Шайкештирүү функциясын администраторуңуз өчүрүп койгон</translation>
-<translation id="7229462727772664332">Brave'до <ph name="SITE_NAME"/> сайтына кирүү статусуңузду, серептөө дайындарын жана сайттын маалыматын көрөсүз</translation>
+<translation id="7229462727772664332">AI Wize'до <ph name="SITE_NAME"/> сайтына кирүү статусуңузду, серептөө дайындарын жана сайттын маалыматын көрөсүз</translation>
 <translation id="2510106555128151389"><ph name="WEBAPK_NAME"/> орнотулууда…</translation>
 <translation id="7222718784508482526">Купуялыкка, коопсуздукка жана дайындарды чогултууга байланыштуу дагы башка параметрлерди көрүү үчүн <ph name="BEGIN_LINK"/>Шайкештирүү жана AI Wize кызматтары<ph name="END_LINK"/> бөлүмүнө өтүңүз</translation>
 <translation id="2517113738956581680">Толук экран</translation>
-<translation id="284843628681142937">Баш баккан барактарыңыздын URL'дерин Brave'га жөнөтөт</translation>
+<translation id="284843628681142937">Баш баккан барактарыңыздын URL'дерин AI Wize'га жөнөтөт</translation>
 <translation id="2527209463677295330">Барактагы көбүрөөк текст камтылса, жакшыраак натыйжалар көрсөтүлүшү мүмкүн</translation>
 <translation id="8737444348664175738">Жашыруун өтмөктөргө которулду</translation>
 <translation id="2527779675047087889">Алмашуу буфериндеги мазмундарды жашыруу</translation>
@@ -276,8 +276,8 @@
 <translation id="3095878721037212218">Медиафайлдарды, Жашыруун сеанстарды, жүктөп алууларды жана башкаларды оңой башкара аласыз</translation>
 <translation id="5079947353572974060">Башка тилдердеги барактарды AI Wize Котормочуга жөнөтүү сунушталсын</translation>
 <translation id="2571834852878229351">Өзүмдүкүн түзүү</translation>
-<translation id="6995512410824092085">Brave'ду демейки серепчи катары жөндөгөндү үйрөнүп алыңыз</translation>
-<translation id="7242554556818074465">Brave колдонулган түзмөктөрдүн баарындагы өтмөктөрүңүздү көрүү үчүн бардык түзмөктөрдөн аккаунтуңузга кириңиз</translation>
+<translation id="6995512410824092085">AI Wize'ду демейки серепчи катары жөндөгөндү үйрөнүп алыңыз</translation>
+<translation id="7242554556818074465">AI Wize колдонулган түзмөктөрдүн баарындагы өтмөктөрүңүздү көрүү үчүн бардык түзмөктөрдөн аккаунтуңузга кириңиз</translation>
 <translation id="8661556138616664061">Жаштарга арналган AI Wize контенти</translation>
 <translation id="2324920234469020158">Ушуну менен AI Wize үчүн анча маанилүү болбогон кукилер, кэш жана сайттын башка нерселери тазаланат.</translation>
 <translation id="2587052924345400782">Жаңыраак версиясы бар</translation>
@@ -301,7 +301,7 @@
 <translation id="2669454659051515572">Бул түзмөктү колдонгондордун баары жүктөлүп алынган файлдарды көрө алышат</translation>
 <translation id="5806087344347665213">Эгер сайт сырсөзүңүздү уурдоого аракет кылса же кооптуу файлды жүктөп алсаңыз, AI Wize URL даректерди, анын ичинде барактардагы мазмундун үлгүлөрүн Коопсуз серептөөгө жөнөтүшү мүмкүн.</translation>
 <translation id="2702516483241149200">Жаңы: Бул текстке сыдырылган шилтемени бөлүшө аласыз</translation>
-<translation id="3769942772151914580">Brave'га жөнөтүлгөн серептөө дайындарынын негизинде кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн тез жана проактивдүү коргоо</translation>
+<translation id="3769942772151914580">AI Wize'га жөнөтүлгөн серептөө дайындарынын негизинде кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн тез жана проактивдүү коргоо</translation>
 <translation id="2708226184420201102"><ph name="PRODUCT_NAME"/> серепчисинде ачуу</translation>
 <translation id="271033894570825754">Жаңы</translation>
 <translation id="2718352093833049315">Wi-Fi'да гана</translation>
@@ -312,12 +312,12 @@
 <translation id="2760989362628427051">Түзмөгүңүз кубатты үнөмдөө режиминде иштегенде, Батареяны үнөмдөгүчтү күйгүзүңүз</translation>
 <translation id="2762000892062317888">жаңы эле</translation>
 <translation id="276969039800130567"><ph name="USER_EMAIL_ADDRESS"/> катары кирди.</translation>
-<translation id="8312774691909088652">Купуялыкка, коопсуздукка жана дайындарды чогултууга байланыштуу дагы башка параметрлерди көрүү үчүн <ph name="BEGIN_LINK"/>Brave кызматтары<ph name="END_LINK"/> бөлүмүнө өтүңүз</translation>
+<translation id="8312774691909088652">Купуялыкка, коопсуздукка жана дайындарды чогултууга байланыштуу дагы башка параметрлерди көрүү үчүн <ph name="BEGIN_LINK"/>AI Wize кызматтары<ph name="END_LINK"/> бөлүмүнө өтүңүз</translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> сек. калды</translation>
 <translation id="2779651927720337254">ката</translation>
 <translation id="2781151931089541271">1 сек. калды</translation>
 <translation id="2800066122460699237"><ph name="TAB_TITLE"/> өтмөгү жабылат</translation>
-<translation id="7068873021383263704"><ph name="BEGIN_LINK"/>Brave аккаунтуңузда<ph name="END_LINK"/> сакталган сырсөздөрдү көрүп, башкарыңыз</translation>
+<translation id="7068873021383263704"><ph name="BEGIN_LINK"/>AI Wize аккаунтуңузда<ph name="END_LINK"/> сакталган сырсөздөрдү көрүп, башкарыңыз</translation>
 <translation id="2827278682606527653">Түрмөктөгү меню экрандын жарымына чейин ачылды</translation>
 <translation id="2830783625999891985">Алмашуу буфериндеги мазмундар жашырылган</translation>
 <translation id="2838367486340230368">Купуялык жетектемесинин түшүндүрмөсүнүн жарымы ачылды</translation>
@@ -325,7 +325,7 @@
 <translation id="1982350477927404142">{TAB_COUNT,plural, =1{<ph name="TAB_COUNT_ONE"/> жашыруун өтмөк жабылат}other{<ph name="TAB_COUNT_MANY"/> жашыруун өтмөк жабылат}}</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{1 күн мурун текшерилди}other{# күн мурун текшерилди}}</translation>
 <translation id="2842985007712546952">Түпкү куржун</translation>
-<translation id="6324134303015966238">Brave'дун божомолунда сиз кире турган барактар алдын ала жүктөлүп, киргениңизде алар тез ачылат</translation>
+<translation id="6324134303015966238">AI Wize'дун божомолунда сиз кире турган барактар алдын ала жүктөлүп, киргениңизде алар тез ачылат</translation>
 <translation id="2856503607207334158">Кирүү ишке ашкан жок</translation>
 <translation id="2860954141821109167">Телефон колдонмосу бул түзмөктө иштетилгенин текшериңиз</translation>
 <translation id="6518254564747115579">Айрым AI Wize функциялары мындан ары иштебейт</translation>
@@ -333,8 +333,8 @@
 <translation id="2870560284913253234">Сайт</translation>
 <translation id="2871733351037274014">Барактарды алдын ала жүктөө</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> төмөндөгү вебсайтты ырастоону суранып жатат:</translation>
-<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>Brave маалыматыңызды кантип купуя сактаары тууралуу<ph name="END_LINK"/> көбүрөөк билип алыңыз</translation>
-<translation id="8541922081612557424">Brave тууралуу</translation>
+<translation id="6756656512757374876"><ph name="BEGIN_LINK"/>AI Wize маалыматыңызды кантип купуя сактаары тууралуу<ph name="END_LINK"/> көбүрөөк билип алыңыз</translation>
+<translation id="8541922081612557424">AI Wize тууралуу</translation>
 <translation id="2891154217021530873">Беттин жүктөлүшүн токтотуу</translation>
 <translation id="4013614219085422040">Издөө жана башка AI Wize кызматтарын жекечелештирүү үчүн, AI Wize таржымалыңызды колдонушу мүмкүн</translation>
 <translation id="2894821468041866720">Серепчиңиздин же түзмөгүңүздүн ишин байкалаарлык деңгээлде жайлатпайт.</translation>
@@ -343,16 +343,16 @@
 <translation id="2904300462646366554">Жүктөлүп алынган PDF файлдары түзмөгүңүздөгү PDF көрүүчү каражаттарынын бири менен автоматтык түрдө ачылат</translation>
 <translation id="2904414404539560095">Жалпы түзмөктөрдүн тизмеси көрсөтүлгөн өтмөк толук экран режиминде ачылды.</translation>
 <translation id="2908243544703713905">Окула элек окуялар бар</translation>
-<translation id="7339921667754113786">Brave билдирмелеринин платформасы</translation>
+<translation id="7339921667754113786">AI Wize билдирмелеринин платформасы</translation>
 <translation id="2912296070571964914">Кызыктуу темаларды башкарыңыз</translation>
 <translation id="1014490034578104945">Ачылып турган Жашыруун өтмөктөрдү көрүү үчүн экрандын кулпусун колдонуңуз</translation>
 <translation id="2923908459366352541">Аты-жөнү жараксыз</translation>
-<translation id="6355102470683871794">Brave <ph name="APP_NAME"/> сактагычы</translation>
+<translation id="6355102470683871794">AI Wize <ph name="APP_NAME"/> сактагычы</translation>
 <translation id="2932222164150889403">Баскычтоп өзгөрбөйт</translation>
-<translation id="6537665929855787038">Brave билдирмелери ишти жеңилдетет</translation>
+<translation id="6537665929855787038">AI Wize билдирмелери ишти жеңилдетет</translation>
 <translation id="2940075786175545812">Вебсайтты ырастоо же ырастабоо параметри</translation>
 <translation id="2942036813789421260">Алдын ала көрүү өтмөгү жабылды</translation>
-<translation id="4700262879698141140">Башка түзмөктөргө туташуу үчүн Brave'ду жаңыртыңыз</translation>
+<translation id="4700262879698141140">Башка түзмөктөргө туташуу үчүн AI Wize'ду жаңыртыңыз</translation>
 <translation id="2951071800649516099">Кийинкиге окуу тизмеңизге барактарды кошуңуз</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> окула элек барак}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> окула элек барак}}</translation>
 <translation id="296370266220139811">Азыраак терип, убакыт үнөмдөңүз</translation>
@@ -362,42 +362,42 @@
 <translation id="2979639724566107830">Жаңы терезеде ачуу</translation>
 <translation id="2981364137500752533">5 терезеге чейин ачсаңыз болот.</translation>
 <translation id="2983102365694924129">Сайттагы аракеттериңиздин негизинде көрсөтүлөт. Бул параметр өчүк.</translation>
-<translation id="5948666439178419683">Brave'да издегенде көбүрөөк текст камтыңыз</translation>
+<translation id="5948666439178419683">AI Wize'да издегенде көбүрөөк текст камтыңыз</translation>
 <translation id="2987620471460279764">Текст башка түзмөктөн бөлүшүлдү</translation>
 <translation id="2989523299700148168">Жакында колдонулгандар</translation>
 <translation id="2992473221983447149">Сүрөттөрдүн сүрөттөмөлөрү</translation>
 <translation id="2996291259634659425">Купуя сөз айкашын түзүү</translation>
 <translation id="2996809686854298943">URL талап кылынат</translation>
 <translation id="2996932914629936323">Шайкештирилген бардык түзмөктөрүңүздөгү таржымал тазаланат</translation>
-<translation id="2019027298133375428">Brave сайты барактагы шилтемелерди алдын ала жүктөөнү суранса, AI Wize барактарды шифрлеп, Brave'дун серверлери аркылуу алдын ала жүктөйт (cookie файлдарысыз). Ушуну менен өздүгүңүз тууралуу маалымат алдын ала жүктөлгөн сайттан жашырылат.</translation>
-<translation id="5730179015008010982">Кийин кайсы сайттарга кирериңизди болжолдоо жана өткүңүз келген барак жөнүндө кошумча маалыматты көрсөтүү үчүн сиз баш баккан URL даректери Brave'га жөнөтүлүп турат</translation>
+<translation id="2019027298133375428">AI Wize сайты барактагы шилтемелерди алдын ала жүктөөнү суранса, AI Wize барактарды шифрлеп, AI Wize'дун серверлери аркылуу алдын ала жүктөйт (cookie файлдарысыз). Ушуну менен өздүгүңүз тууралуу маалымат алдын ала жүктөлгөн сайттан жашырылат.</translation>
+<translation id="5730179015008010982">Кийин кайсы сайттарга кирериңизди болжолдоо жана өткүңүз келген барак жөнүндө кошумча маалыматты көрсөтүү үчүн сиз баш баккан URL даректери AI Wize'га жөнөтүлүп турат</translation>
 <translation id="3016635187733453316">Бул түзмөк интернетке туташып турганын текшериңиз</translation>
 <translation id="3026955690410463085">Шилтеме кошуу</translation>
 <translation id="3027644380269727216">Сайттагы аракеттериңиздин негизинде көрсөтүлөт. Бул параметр күйүк.</translation>
 <translation id="3029276696788198026">Алдын ала жүктөлбөйт</translation>
 <translation id="3029704984691124060">Купуя сөз айкаштары дал келген жок</translation>
-<translation id="8678991866891573053">Brave сайттар дайын-даректериңизди азыраак колдонуу менен бирдей карап чыгуу мүмкүнчүлүгүн бере турган жаңы функцияларды изилдеп жатат</translation>
+<translation id="8678991866891573053">AI Wize сайттар дайын-даректериңизди азыраак колдонуу менен бирдей карап чыгуу мүмкүнчүлүгүн бере турган жаңы функцияларды изилдеп жатат</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Жардам алыңыз<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Баасына көз салуу</translation>
-<translation id="3251012123600267109">Brave'го кирүү үчүн билдирмелерди көрсөтөт</translation>
+<translation id="3251012123600267109">AI Wize'го кирүү үчүн билдирмелерди көрсөтөт</translation>
 <translation id="3038272154009688107">Бардык сайттарды көрүү</translation>
 <translation id="3046945242843292318">Эмкиде бул сайтка тез өтүңүз</translation>
 <translation id="3055259925215945098">Кыстарма жылды</translation>
-<translation id="4163313568284712797">Brave'дун колдонулушу жөнүндө маалымат Brave'га жөнөтүлөт, бирок ал сиз менен байланыштырылбайт\n\nЭгер AI Wize бузулса, ал бузулуунун чоо-жайында жеке маалымат камтылышы мүмкүн\n\nЭгер шайкештирүү күйгүзүлсө, көрсөткүчтөрдө сиз баш баккан URL даректери да камтылышы ыктымал</translation>
+<translation id="4163313568284712797">AI Wize'дун колдонулушу жөнүндө маалымат AI Wize'га жөнөтүлөт, бирок ал сиз менен байланыштырылбайт\n\nЭгер AI Wize бузулса, ал бузулуунун чоо-жайында жеке маалымат камтылышы мүмкүн\n\nЭгер шайкештирүү күйгүзүлсө, көрсөткүчтөрдө сиз баш баккан URL даректери да камтылышы ыктымал</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> кыстарма}other{<ph name="BOOKMARKS_COUNT_MANY"/> кыстарма}}</translation>
-<translation id="6153252609477956632">Brave'догу сизди кызыктырган макалалар</translation>
+<translation id="6153252609477956632">AI Wize'догу сизди кызыктырган макалалар</translation>
 <translation id="3066573403916685335">Төмөн жылдыруу</translation>
 <translation id="3070005020161560471">Автоматтык түрдө которуу</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> Brave'до ачылат. Улантуу менен, <ph name="BEGIN_LINK1"/>Brave'дун Тейлөө шарттарына<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>Brave менен ChromeOS'тун Кошумча Тейлөө шарттарына<ph name="END_LINK2"/> макул болосуз. <ph name="BEGIN_LINK3"/>Купуялык эрежелери<ph name="END_LINK3"/> да колдонулат.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> AI Wize'до ачылат. Улантуу менен, <ph name="BEGIN_LINK1"/>AI Wize'дун Тейлөө шарттарына<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>AI Wize менен ChromeOS'тун Кошумча Тейлөө шарттарына<ph name="END_LINK2"/> макул болосуз. <ph name="BEGIN_LINK3"/>Купуялык эрежелери<ph name="END_LINK3"/> да колдонулат.</translation>
 <translation id="3080525922482950719">Барактарды сактап коюп, кийинчерээк оффлайн режиминде окуй аласыз</translation>
 <translation id="3091010850649238832">Алмашуу буфериндеги мазмундарды көрсөтүү</translation>
-<translation id="821565628224723530">Сүрөттөмөлөрдү жакшыртуу үчүн айрым сүрөттөр Brave'га жөнөтүлөт</translation>
+<translation id="821565628224723530">Сүрөттөмөлөрдү жакшыртуу үчүн айрым сүрөттөр AI Wize'га жөнөтүлөт</translation>
 <translation id="3114507951000454849">Бүгүнкү жаңылыктарды окуңуз <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Жарыялар</translation>
-<translation id="5063487983358782016">Brave’дун башкы бети</translation>
+<translation id="5063487983358782016">AI Wize’дун башкы бети</translation>
 <translation id="3158667104057012316">Кол менен иреттелүүдө</translation>
 <translation id="3166827708714933426">Өтмөктүн жана терезенин кыска жолдору</translation>
-<translation id="7249949543831830993">Brave мурунтан эле иштеп жатат.</translation>
+<translation id="7249949543831830993">AI Wize мурунтан эле иштеп жатат.</translation>
 <translation id="3167258285411721858"><ph name="HOST_NAME"/> мобилдик түзмөктөгү сайтын сурана аласыз</translation>
 <translation id="3169472444629675720">Аныктоо</translation>
 <translation id="3187472288455401631">Жарнамалардын майнаптуулугун талдоо</translation>
@@ -407,14 +407,14 @@
 <translation id="1892217432793359605">Аккаунтуңузга кирип турсаңыз, <ph name="BEGIN_LINK1"/>издөө таржымалы<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>башка аракеттер<ph name="END_LINK2"/> AI Wize аккаунтуңузга сакталышы мүмкүн. Аларды каалаган убакта жок кылсаңыз болот.</translation>
 <translation id="321773570071367578">Эгер купуя сөз айкашыңызды унутуп калган болсоңуз же бул жөндөөнү өзгөрткүңүз келсе, <ph name="BEGIN_LINK"/>шайкештирүүнү баштапкы абалга келтириңиз<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Сырсөздөрүңүздү шайкештирүү үчүн өзүңүз экениңизди ырастаңыз</translation>
-<translation id="9210457680074341078">Эгер кыстармаларды AI Wize аккаунтуңузга сактап койсоңуз, товарлардын бааларына Brave'до көз салып, баалар төмөндөгөндө кабар аласыз</translation>
-<translation id="9047551989591319903">Brave'ду Коопсуздук ачкычы катары колдонуу</translation>
+<translation id="9210457680074341078">Эгер кыстармаларды AI Wize аккаунтуңузга сактап койсоңуз, товарлардын бааларына AI Wize'до көз салып, баалар төмөндөгөндө кабар аласыз</translation>
+<translation id="9047551989591319903">AI Wize'ду Коопсуздук ачкычы катары колдонуу</translation>
 <translation id="3232754137068452469">Веб колдонмо</translation>
 <translation id="3236059992281584593">1 мүн. калды</translation>
 <translation id="3237087289225714896">Стандарттуу алдын ала жүктөө:</translation>
 <translation id="3237433641417325993">Сунушталган макалаларды көрүү үчүн ылдый сыдырыңыз</translation>
 <translation id="3244271242291266297">АА</translation>
-<translation id="7402642357351265733">Brave'дун колдонулушу тууралуу кабарларды да бөлүшсөңүз, ал кабарларда сиз баш баккан URL даректери камтылат</translation>
+<translation id="7402642357351265733">AI Wize'дун колдонулушу тууралуу кабарларды да бөлүшсөңүз, ал кабарларда сиз баш баккан URL даректери камтылат</translation>
 <translation id="3250563604907490871">Сүрөттөмөлөр Wi-Fi тармагына туташканыңызда көрүнөт</translation>
 <translation id="3254409185687681395">Бул баракты кыстарып коюңуз</translation>
 <translation id="3259831549858767975">Барактагы бардык нерселерди кичирейтүү</translation>
@@ -423,7 +423,7 @@
 <translation id="3265534588625245297">Жазылган сайттарды башкаруу</translation>
 <translation id="3269093882174072735">Сүрөттү жүктөө</translation>
 <translation id="3280562213547448728">Айтып издөө</translation>
-<translation id="82609232232243542">Brave'го кириңиз</translation>
+<translation id="82609232232243542">AI Wize'го кириңиз</translation>
 <translation id="3290249595466894471">Барактардын чакан үлгүлөрүн, жүктөлүп алынган файлдарды, кеңейтүүлөрдүн колдонулушу тууралуу маалыматты жана тутум маалыматын жөнөтүп, жаңы коркунучтарды аныктоого жардам берет</translation>
 <translation id="3293181007446299124">Серепчиден көргөн нерселериңиз түзмөктө сакталып, өзүңүзгө гана көрүнөт. Жеке маалыматыңызды сактоо үчүн отчёттор бир аз кечигип жөнөтүлөт.</translation>
 <translation id="3303414029551471755">Мазмун жүктөлүп алына берсинби?</translation>
@@ -434,7 +434,7 @@
 <translation id="3359667936385849800">Учурдагы кызмат көрсөтүүчүңүздү колдонуңуз</translation>
 <translation id="3373701465337594448">Күйгүзүлсө, кызыккан нерселериңизди аныктаган сайттардын тизмеси ушул жерде көрүнөт</translation>
 <translation id="2746024117903470217">Бул баракты башка түзмөк менен бөлүшүү үчүн башка түзмөктүн AI Wize параметрлерин ачып, шайкештирүүнү күйгүзүңүз</translation>
-<translation id="8801234437789558906">Кыстармаларыңыз, таржымалыңыз, сырсөздөрүңүз жана Brave'догу башка дайындар мындан ары AI Wize аккаунтуңузга шайкештирилбейт.</translation>
+<translation id="8801234437789558906">Кыстармаларыңыз, таржымалыңыз, сырсөздөрүңүз жана AI Wize'догу башка дайындар мындан ары AI Wize аккаунтуңузга шайкештирилбейт.</translation>
 <translation id="3384347053049321195">Сүрөт менен бөлүшүү</translation>
 <translation id="3387650086002190359">Тутумдагы каталарга байланыштуу <ph name="FILE_NAME"/> жүктөлбөй калды.</translation>
 <translation id="3389286852084373014">Тексттин көлөмү өтө чоң</translation>
@@ -442,7 +442,7 @@
 <translation id="1081508498128395141">Дагы башка барактар алдын ала жүктөлдү. Башка сайттар сурам жөнөтсө, барактар AI Wize серверлери аркылуу алдын ала жүктөлүшү мүмкүн.</translation>
 <translation id="3414952576877147120">Өлчөм:</translation>
 <translation id="3421726884497337397">Үчүнчү тараптын cookie файлдары качан бөгөттөлсүн?</translation>
-<translation id="5265419033369521352">Аккаунтуңузга киргенде Brave'до жана башка AI Wize колдонмолорунда коопсуздугуңузду коргоп турат</translation>
+<translation id="5265419033369521352">Аккаунтуңузга киргенде AI Wize'до жана башка AI Wize колдонмолорунда коопсуздугуңузду коргоп турат</translation>
 <translation id="3430670036890315772">Профилиңиздин кулпусун өчүрүп салсаңыз, сакталган маалыматыңыз өчүрүлөт</translation>
 <translation id="3435465986463792564">Көп терезе ачылып турабы? Аларды бул жерден башкарыңыз</translation>
 <translation id="3435738964857648380">Коопсуздук</translation>
@@ -493,7 +493,7 @@
 <translation id="3714981814255182093">Издөө тилкесин ачуу</translation>
 <translation id="5805364706385912897">Бул барак өтө көп эстутум колдонгондуктан AI Wize аны тындырды.</translation>
 <translation id="3720422586473670527">Жок, рахмат</translation>
-<translation id="8397843425685839889">Сиз жана Brave</translation>
+<translation id="8397843425685839889">Сиз жана AI Wize</translation>
 <translation id="3737319253362202215">Которуу параметрлери</translation>
 <translation id="3737402728074743863">Бул түзмөктү коопсуздук ачкычы катары колдонуу үчүн экранды кулпулоону иштетиңиз</translation>
 <translation id="3738139272394829648">Издөө үчүн Басуу</translation>
@@ -501,7 +501,7 @@
 <translation id="3740525748616366977">Бул түзмөктө айтып издөө мүмкүнчүлүгү жок</translation>
 <translation id="4526803704855831732">Жашыруун өтмөктөр</translation>
 <translation id="3771290962915251154">Бул жөндөө өчүрүлгөн, анткени Ата-эненин көзөмөлү күйүк</translation>
-<translation id="1138681184697033370">Brave'дун Тейлөө шарттары</translation>
+<translation id="1138681184697033370">AI Wize'дун Тейлөө шарттары</translation>
 <translation id="3775705724665058594">Түзмөктөрүңүзгө жөнөтүңүз</translation>
 <translation id="3777796259512476958">Көпчүлүк сайттардагы аккаунттарыңыздан чыгарыласыз</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 өтмөк}other{# өтмөк}}</translation>
@@ -532,7 +532,7 @@
 <translation id="7667871022963214473">Түзмөгүңүздөн жашыруун көрүлгөн вебсайттарды тазалоо үчүн бардык жашыруун өтмөктөрдү жабыңыз.</translation>
 <translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Барагыңыз тармакка туташуу аткарылганда жүктөлөт}other{Барактарыңыз тармакка туташуу аткарылганда жүктөлөт}}</translation>
 <translation id="3962119236270174787">Кооптуу деп таанылган вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн стандарттуу түрдө коргоо</translation>
-<translation id="1453002554835005700">Brave сырсөздөрүңүздү текшере албай жатат</translation>
+<translation id="1453002554835005700">AI Wize сырсөздөрүңүздү текшере албай жатат</translation>
 <translation id="3969863827134279083">Өйдө жылуу</translation>
 <translation id="397105322502079400">Эсептелүүдө…</translation>
 <translation id="397583555483684758">Шайкештирүү иштебей калды.</translation>
@@ -553,9 +553,9 @@
 <translation id="4062305924942672200">Юридикалык маалымат</translation>
 <translation id="4072805772816336153">Бир аздан кийин кайталап көрүңүз</translation>
 <translation id="4084682180776658562">Кыстарма</translation>
-<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/> веб сайтынан – <ph name="BEGIN_DEEMPHASIZED"/>Brave аркылуу жеткирилген<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950"><ph name="PUBLISHER_ORIGIN"/> веб сайтынан – <ph name="BEGIN_DEEMPHASIZED"/>AI Wize аркылуу жеткирилген<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Бул планшет менен ушул QR код көрүнүп турган түзмөккө кире аласыз.</translation>
-<translation id="7268155614575494857">Brave Сырсөздөрдү башкаргычка аккаунтка кирүү маалыматыңызды сактоого жардам берүү үчүн бул сайтка колдонуучу атыңызды кошуңуз</translation>
+<translation id="7268155614575494857">AI Wize Сырсөздөрдү башкаргычка аккаунтка кирүү маалыматыңызды сактоого жардам берүү үчүн бул сайтка колдонуучу атыңызды кошуңуз</translation>
 <translation id="4095146165863963773">Колдонмонун дайындары жок кылынсынбы?</translation>
 <translation id="4095425503313512126">Издөө жана карап чыгуу тезирээк болот</translation>
 <translation id="4096227151372679484">Тематикасына жараша сакталган кыстармалар жарым экранда ачылды</translation>
@@ -563,12 +563,12 @@
 <translation id="4108314971463891922">Жазылуу</translation>
 <translation id="4108998448622696017">Кооптуу нерселер орун алганда аларды аныктап, сизге кабарлап турат.</translation>
 <translation id="4116038641877404294">Оффлайн режиминде колдонуу үчүн барактарды жүктөп алуу</translation>
-<translation id="37459938731864814">Бул сырсөздү эстеп калуунун кереги жок. Ал <ph name="USERNAME"/> аккаунту үчүн Brave'дун Сырсөздөрдү башкаргыч кызматында сакталат.</translation>
+<translation id="37459938731864814">Бул сырсөздү эстеп калуунун кереги жок. Ал <ph name="USERNAME"/> аккаунту үчүн AI Wize'дун Сырсөздөрдү башкаргыч кызматында сакталат.</translation>
 <translation id="4124152339699379357">Билдирмелерге уруксат берүү агымы толук экранда ачылды</translation>
 <translation id="4126285640274188657">Барактын статистикасы</translation>
 <translation id="4135200667068010335">Жалпы түзмөктөрдүн тизмеси көрсөтүлгөн өтмөк жабылды.</translation>
 <translation id="4137746084635924146">Түзмөктүн учурдагы тили</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Демейки шартта суралган компьютердик версиялар</translation>
 <translation id="4162867837470729563">Бөлүшүү параметрлеринин тизмеси толук экранда ачылды.</translation>
 <translation id="4170011742729630528">Бул кызмат учурда иштебейт, бир аздан кийин аракет кылып көрүңүз.</translation>
@@ -586,7 +586,7 @@
 <translation id="4225895483398857530">Куралдар тилкесинин ыкчам баскычы</translation>
 <translation id="4242533952199664413">Параметрлерди ачуу</translation>
 <translation id="4248098802131000011">Сырсөздөрүңүздү коопсуз сактаңыз</translation>
-<translation id="7445061995866044926">Brave каттоо эсебинен чыгасызбы?</translation>
+<translation id="7445061995866044926">AI Wize каттоо эсебинен чыгасызбы?</translation>
 <translation id="4249955472157341256">Акыркылар боюнча иреттөө</translation>
 <translation id="4256782883801055595">Ачык программа уруксаттамалары</translation>
 <translation id="7404502124231907662">Сырсөздөрдү башкаргычтан сырсөздөрдү өчүрөсүзбү?</translation>
@@ -616,7 +616,7 @@
 <translation id="4405224443901389797">Төмөнкүгө жылдыруу…</translation>
 <translation id="4405636711880428279">Виртуалдык карта өчүрүлсүнбү?</translation>
 <translation id="4409271659088619928">Издөө каражатыңыз: <ph name="DSE"/>. Издөө таржымалын өчүрүү үчүн бар болсо, издөө каражатындагы нускамаларды караңыз.</translation>
-<translation id="5749788945734786627">Brave аккаунтунун параметрлерине өтүү</translation>
+<translation id="5749788945734786627">AI Wize аккаунтунун параметрлерине өтүү</translation>
 <translation id="4425140285732600465">Баасына көз салуу. Кандайдыр бир сайтта баасы төмөндөсө, эскертүүлөрдү аласыз.</translation>
 <translation id="4425173294238317796">Киргизүүчү ачкычты ырастоо бети</translation>
 <translation id="442518031075347249">Мындан ары Google Pay'де виртуалдык картаңызды колдоно албай каласыз. <ph name="BEGIN_LINK1"/>Виртуалдык карталар жөнүндө кеңири маалымат алыңыз<ph name="END_LINK1"/></translation>
@@ -624,9 +624,9 @@
 <translation id="4452548195519783679">Кыстарма <ph name="FOLDER_NAME"/> куржунуна кошулду</translation>
 <translation id="4461614516424362539">Башка түзмөктү QR код аркылуу туташтырганыңызда ал ушул телефонду коопсуздук ачкычы катары колдоно алат. Эгер аны өчүрсөңүз, кайра туташтыруу үчүн QR кодду скандашыңыз керек болот.</translation>
 <translation id="4478161224666880173"><ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аккаунтуңузду бул сайтта колдоно аласыз. Улантуу үчүн <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аккаунтуна кириңиз.</translation>
-<translation id="3133489217401741157">Brave үчүн <ph name="MODULE"/> орнотулууда…</translation>
+<translation id="3133489217401741157">AI Wize үчүн <ph name="MODULE"/> орнотулууда…</translation>
 <translation id="4484496141267039529">Туташуу жок. Кайталаңыз.</translation>
-<translation id="53119194224775367">Brave'дун колдонмо дайындарынын бардыгы биротоло өчүрүлөт. Ага бардык файлдар, жөндөөлөр, каттоо эсептери, маалыматтар базасы ж.б. кирет.</translation>
+<translation id="53119194224775367">AI Wize'дун колдонмо дайындарынын бардыгы биротоло өчүрүлөт. Ага бардык файлдар, жөндөөлөр, каттоо эсептери, маалыматтар базасы ж.б. кирет.</translation>
 <translation id="3966104135245031874">Шайкештирилген сырсөздөрдү AI Wize аккаунтуңуз менен шифрлеңиз</translation>
 <translation id="4491323382106587961">Аккаунт тандаңыз. Учурда <ph name="EMAIL"/> тандалды.</translation>
 <translation id="4494806687727322324">Администраторуңуз сырсөздөрдү сактоону күйгүздү</translation>
@@ -634,9 +634,9 @@
 <translation id="4509501256689523862">Сайттарды серептеп жатканда жарнамалардын жекелештирилиши ушул параметрге, <ph name="BEGIN_LINK_1"/>Жарнамалардын темаларына<ph name="END_LINK_1"/>, <ph name="BEGIN_LINK_2"/>cookie параметрлерине<ph name="END_LINK_2"/> жана сиз карап жаткан сайттын жарнамаларды жекелештиришине жараша болот</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# күн мурун}other{# күн мурун}}</translation>
 <translation id="451872707440238414">Кыстармаларды издөө</translation>
-<translation id="1664855196866195614">Тандалган дайындар Brave'дон жана шайкештирилген түзмөктөрүңүздөн өчүрүлдү.
+<translation id="1664855196866195614">Тандалган дайындар AI Wize'дон жана шайкештирилген түзмөктөрүңүздөн өчүрүлдү.
 
-Brave аккаунтуңуздун башка AI Wize кызматтарынан алынган серептөө таржымалы <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> дарегинде болушу мүмкүн.</translation>
+AI Wize аккаунтуңуздун башка AI Wize кызматтарынан алынган серептөө таржымалы <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> дарегинде болушу мүмкүн.</translation>
 <translation id="4523326818319942067">акыркы бир саатта</translation>
 <translation id="452750746583162491">Шайкештирилген маалыматты карап чыгуу</translation>
 <translation id="4532845899244822526">Куржун тандаңыз</translation>
@@ -666,7 +666,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/> кыстарма өчүрүлдү</translation>
 <translation id="4668279686271488041">Жарнамалардын майнаптуулугун талдоо үчүн колдонулган маалымат түзмөктөн өчүрүлүп турат</translation>
 <translation id="4668347365065281350">Бардык сайттардын дайын-даректери, анын ичинде cookie файлдары жана башка жергиликтүү сакталган маалымат</translation>
-<translation id="6904731820418823295">Brave'до сайттар үчүн караңгы тема күйгүзүлгөн</translation>
+<translation id="6904731820418823295">AI Wize'до сайттар үчүн караңгы тема күйгүзүлгөн</translation>
 <translation id="4684427112815847243">Баарын шайкештештирүү</translation>
 <translation id="4685741273709472646">Түрүлмө тизмеден тандоо</translation>
 <translation id="4687718960473379118">Сайт сунуштаган жарнамалар</translation>
@@ -687,7 +687,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="4763480195061959176">видео</translation>
 <translation id="4766313118839197559">Сырсөздөр ушул түзмөктө Сырсөздөрдү башкаргычка сакталат</translation>
 <translation id="4766678251456904326">Түзмөккө аккаунт кошуңуз</translation>
-<translation id="1996253762801922860">Жарнамалардын купуялыгын камсыз кылган жаңы функцияны ишке киргизип жатабыз. Эми жарнамалардын майнаптуулугун баалоо үчүн сайттар менен колдонмолор Brave'дон белгилүү бир маалыматтардын түрлөрүн гана, ошондой эле жарнама көрүнгөн убакытты бөлүшөт.</translation>
+<translation id="1996253762801922860">Жарнамалардын купуялыгын камсыз кылган жаңы функцияны ишке киргизип жатабыз. Эми жарнамалардын майнаптуулугун баалоо үчүн сайттар менен колдонмолор AI Wize'дон белгилүү бир маалыматтардын түрлөрүн гана, ошондой эле жарнама көрүнгөн убакытты бөлүшөт.</translation>
 <translation id="4769095993849849966">Файлдын жаңы аталышы</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> жок кылынды</translation>
 <translation id="4778653490315793244">Азырынча көрсөтө турган эч нерсе жок</translation>
@@ -702,7 +702,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="4826163340425232009">Кирүү процессинин ылдыйкы экраны.</translation>
 <translation id="4834007576107377210">Издөө таржымалын өчүрүү үчүн, бар болсо, издөө каражатындагы нускамаларды караңыз</translation>
 <translation id="4834250788637067901">Google Pay'ди колдонгон төлөм ыкмалары, сунуштар жана даректер</translation>
-<translation id="2593289874938379417">Суралган булакка Brave’дун кирүү мүмкүнчүлүгү жок.</translation>
+<translation id="2593289874938379417">Суралган булакка AI Wize’дун кирүү мүмкүнчүлүгү жок.</translation>
 <translation id="4837753911714442426">Баракты басып чыгаруу параметрлерин ачуу</translation>
 <translation id="4842092870884894799">Сырсөз түзүү калкып чыкмасы көрсөтүлүүдө</translation>
 <translation id="4842515939542199281">Айтып издөө үчүн микрофонду басыңыз</translation>
@@ -711,9 +711,9 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="4852014461738377247">Кирип жатасыз\u2026</translation>
 <translation id="4860895144060829044">Чалуу</translation>
 <translation id="4864369630010738180">Кирүүдө…</translation>
-<translation id="5131234170665854056">Brave үчүн <ph name="MODULE"/> орнотулган жок</translation>
+<translation id="5131234170665854056">AI Wize үчүн <ph name="MODULE"/> орнотулган жок</translation>
 <translation id="4871568871368204250">Шайкештирүүнү өчүрүү</translation>
-<translation id="2875466387677348954">Өчүк болгондо, Brave'дун түзмөктөгү сунуштарын көрө бересиз</translation>
+<translation id="2875466387677348954">Өчүк болгондо, AI Wize'дун түзмөктөгү сунуштарын көрө бересиз</translation>
 <translation id="4875775213178255010">Мазмун сунуштары</translation>
 <translation id="8448127664493413656">Жашыруун режимге кирүү</translation>
 <translation id="4878404682131129617">Прокси сервер аркылуу тоннель түзүлбөй калды</translation>
@@ -722,7 +722,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="488187801263602086">Файлдын аталышын өзгөртүү</translation>
 <translation id="1248710015876067820">Мындай сандагы AI Wize нускалары колдоого алынбайт.</translation>
 <translation id="4905823827770127520">Баракка болгон шилтемени көрсөтүңүз</translation>
-<translation id="3217997482476578430">Brave сунуштары</translation>
+<translation id="3217997482476578430">AI Wize сунуштары</translation>
 <translation id="4909709702739934280">Серепчини администраторуңуз башкарат</translation>
 <translation id="4910889077668685004">Төлөм колдонмолору</translation>
 <translation id="4912413785358399818">Өтмөктү жылдыруу</translation>
@@ -731,20 +731,20 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="4925120120285606924">Скриншот <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Сырсөздөрүңүз экспорттолуп, текст файлы катары жүктөлүп алынат. Алар жүктөлүп алынган папкага кирүү мүмкүнчүлүгү бар колдонуучуларга жана колдонмолорго көрүнөт.</translation>
 <translation id="4926901776383726965">Офлайн режиминде көрүү же башка колдонмолордо бөлүшүү үчүн сүрөттөрдү жана файлдарды сактап койсоңуз болот</translation>
-<translation id="1955495299630319741"><ph name="DOMAIN_NAME"/> домениндеги аккаунтуңуздан чыгып жатканыңызга байланыштуу Brave’догу дайын-даректериңиз бул түзмөктөн өчүрүлөт. Дайындар AI Wize аккаунтуңузда сакталат.</translation>
+<translation id="1955495299630319741"><ph name="DOMAIN_NAME"/> домениндеги аккаунтуңуздан чыгып жатканыңызга байланыштуу AI Wize’догу дайын-даректериңиз бул түзмөктөн өчүрүлөт. Дайындар AI Wize аккаунтуңузда сакталат.</translation>
 <translation id="4943703118917034429">Виртуалдык чындык</translation>
 <translation id="4943872375798546930">Натыйжалар жок</translation>
 <translation id="5742837711075932301">Бир AI Wize аккаунтуна кирип турганыңызда башка түзмөктөр бул телефонду коопсуздук ачкычы катары колдоно алышат.</translation>
 <translation id="4957722034734105353">Көбүрөөк билүү…</translation>
 <translation id="4961107849584082341">Бул баракты каалаган тилге котортуп алыңыз</translation>
-<translation id="7307583170263691471">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн тез жана проактивдүү коргоо. Билинип калган сырсөздөр жөнүндө эскертет. Brave'га жөнөтүү үчүн серептөө маалыматын талап кылат.</translation>
+<translation id="7307583170263691471">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн тез жана проактивдүү коргоо. Билинип калган сырсөздөр жөнүндө эскертет. AI Wize'га жөнөтүү үчүн серептөө маалыматын талап кылат.</translation>
 <translation id="497421865427891073">Алга</translation>
 <translation id="4987271110129728827">Ал бет табылбай жатат. Ал туура жазылганын текшериңиз же Интернеттен издеп көрүңүз.</translation>
 <translation id="4988526792673242964">Барактар</translation>
 <translation id="4991110219272367918">Вебсайтты ырастоо же ырастабоо параметри жабылды</translation>
 <translation id="499724277181351974">Өтүү: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Бул сайтка ушул жерден көз салуу</translation>
-<translation id="6447211988989208781">Brave'дагы аракеттерди көзөмөлдөө</translation>
+<translation id="6447211988989208781">AI Wize'дагы аракеттерди көзөмөлдөө</translation>
 <translation id="5005498671520578047">Сырсөздү көчүрүү</translation>
 <translation id="5010886807652684893">Визуалдык көрүнүш</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> сайты туташканы жатат</translation>
@@ -785,7 +785,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Файл жүктөлүп алынууда…}other{# файл жүктөлүп алынууда…}}</translation>
 <translation id="5210286577605176222">Мурунку өтмөккө секирүү</translation>
 <translation id="5210365745912300556">Өтмөктү жабуу</translation>
-<translation id="827672955486173928">Барактын статистикасындагы аракеттериңиз <ph name="BEGIN_LINK"/>Brave аккаунтуңузда<ph name="END_LINK"/> сакталат.</translation>
+<translation id="827672955486173928">Барактын статистикасындагы аракеттериңиз <ph name="BEGIN_LINK"/>AI Wize аккаунтуңузда<ph name="END_LINK"/> сакталат.</translation>
 <translation id="5222676887888702881">Чыгуу</translation>
 <translation id="5226378907213531272">Унааны колдонгон сайын экраныңыздын кулпусун ачасыз</translation>
 <translation id="5227554086496586518">Издөө натыйжаларын көрүү үчүн таптап коюңуз</translation>
@@ -799,9 +799,9 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5308380583665731573">Туташуу</translation>
 <translation id="5316947901395241499">Администраторуңуз сырсөздөрдү сактоону өчүрүп койду</translation>
 <translation id="5317780077021120954">Сактоо</translation>
-<translation id="989239400026154074">Brave'ду сунуштайт</translation>
+<translation id="989239400026154074">AI Wize'ду сунуштайт</translation>
 <translation id="7815000350132166985">Cookie файлдарына уруксат берсеңиз, AI Wize аларды алдын ала жүктөө үчүн колдонушу мүмкүн</translation>
-<translation id="1681635711794313507">Алдын ала жүктөлгөн барактар шифрленип, барактарга шилтеме берген сайт Brave'дун сайты болуп эсептелгендиктен, AI Wize серверлери бул барактарды алдын ала жүктөөдө жаңы маалымат албайт.</translation>
+<translation id="1681635711794313507">Алдын ала жүктөлгөн барактар шифрленип, барактарга шилтеме берген сайт AI Wize'дун сайты болуп эсептелгендиктен, AI Wize серверлери бул барактарды алдын ала жүктөөдө жаңы маалымат албайт.</translation>
 <translation id="5329858041417644019">Серепчиңиз башкарылган жок</translation>
 <translation id="5342314432463739672">Уруксат сурамдары</translation>
 <translation id="534580735623577507"><ph name="TIME_PERIOD"/> бери сайтар ачылган жок</translation>
@@ -861,12 +861,12 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5657871969392618475">Маалыматыңыз профилди кулпулоо функциясы менен корголгон</translation>
 <translation id="5659593005791499971">Электрондук почта</translation>
 <translation id="5665379678064389456"><ph name="APP_NAME"/> колдонмосунан иш-чара түзүңүз</translation>
-<translation id="5668833306439455813">Brave жаңыртууларды текшере алган жок</translation>
+<translation id="5668833306439455813">AI Wize жаңыртууларды текшере алган жок</translation>
 <translation id="5686790454216892815">Файлдын аталышы өтө узун</translation>
-<translation id="4809211418322514799">Brave 30 күн мурун кошулган сайттарды автоматтык түрдө жок кылып турат. Сиз кайрадан баш баккан сайт тизмеге кайра кошулушу мүмкүн. Же болбосо, сайттын жарнамаларын бөгөттөп койсоңуз болот. <ph name="BEGIN_LINK"/>Brave'до жарнаманын купуялыгын башкаруу<ph name="END_LINK"/> тууралуу кеңири маалымат.</translation>
+<translation id="4809211418322514799">AI Wize 30 күн мурун кошулган сайттарды автоматтык түрдө жок кылып турат. Сиз кайрадан баш баккан сайт тизмеге кайра кошулушу мүмкүн. Же болбосо, сайттын жарнамаларын бөгөттөп койсоңуз болот. <ph name="BEGIN_LINK"/>AI Wize'до жарнаманын купуялыгын башкаруу<ph name="END_LINK"/> тууралуу кеңири маалымат.</translation>
 <translation id="569435661099256888">Баш баккан барактарыңызды көрүп же аларды таржымалдан тазалай аласыз</translation>
 <translation id="569536719314091526">"Дагы параметрлер" баскычын басып, бул баракты каалаган тилге котортуп алыңыз</translation>
-<translation id="2320748512701464301">Brave сырсөздөрүңүздү коопсуз сактоого, кооптуу вебсайттардан жана башкалардан коргоого жардам берет</translation>
+<translation id="2320748512701464301">AI Wize сырсөздөрүңүздү коопсуз сактоого, кооптуу вебсайттардан жана башкалардан коргоого жардам берет</translation>
 <translation id="5698878456427040674">Тандалган акккаунт колдоого алынганын текшериңиз.</translation>
 <translation id="570347048394355941">Өтмөккө которулуу</translation>
 <translation id="5715150588940290235">Сакталган коопсуздук коддору өчүрүлсүнбү?</translation>
@@ -877,7 +877,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="3088191967551450609">Файлдарды жүктөп алуу үчүн AI Wize сактагычка мүмкүнчүлүк алышы керек.</translation>
 <translation id="5749237766298580851">Өчүк <ph name="SEPARATOR"/> Сунушталбайт</translation>
 <translation id="5752232708629533680">GIF сүрөтүн гана бөлүшүү</translation>
-<translation id="416316836590748269">Brave'до оозеки издей аласыз</translation>
+<translation id="416316836590748269">AI Wize'до оозеки издей аласыз</translation>
 <translation id="5754350196967618083">Сунуштар жаңырган жок</translation>
 <translation id="5755162682436943950">Аккаунтуңуздан чыктыңыз. Кирүү жана шайкештирүүнү күйгүзүү үчүн диалог ачылат.</translation>
 <translation id="5759897675466110265">Сайт иштебей жатабы? Үчүнчү тараптын cookie файлдарына убактылуу уруксат берип көрүңүз</translation>
@@ -899,7 +899,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5829586821381540080"><ph name="FOLDER_NAME"/> тизмесине сакталды</translation>
 <translation id="583281660410589416">Белгисиз</translation>
 <translation id="5833984609253377421">Шилтеме менен бөлүшүү</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265">PDF файлы <ph name="APP_NAME"/> колдонмосу менен ачылсынбы?</translation>
 <translation id="5853623416121554550">тындырылды</translation>
 <translation id="5855546874025048181">Өркүндөтүү: <ph name="REFINE_TEXT"/></translation>
@@ -908,7 +908,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5860033963881614850">Өчүк</translation>
 <translation id="5860491529813859533">Күйгүзүү</translation>
 <translation id="5864419784173784555">Башка жүктөп алуу күтүлүүдө…</translation>
-<translation id="6538479075382111079">Колдонуу статистикасын жана каталар жөнүндө кабарларды Brave'га автоматтык түрдө жөнөтүп турат</translation>
+<translation id="6538479075382111079">Колдонуу статистикасын жана каталар жөнүндө кабарларды AI Wize'га автоматтык түрдө жөнөтүп турат</translation>
 <translation id="5869522115854928033">Сакталган сырсөздөр</translation>
 <translation id="5604589745019948682">Сайтка жазылуу үчүн ага өтүп, AI Wize менюсун ачып, "Жазылууну" таптаңыз.</translation>
 <translation id="5879072387416556377">Жакшыраак сунуштарды алыңыз</translation>
@@ -919,17 +919,17 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6103327872225198548">Издөө үчүн AI Wize колдонулууда</translation>
 <translation id="5945035219773565305">Учурдагы сунуш:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Жарыяланган баракты көрүп турасыз</translation>
-<translation id="305870044889644984">Brave Жардам борборун жаңы өтмөктө ачуу</translation>
+<translation id="305870044889644984">AI Wize Жардам борборун жаңы өтмөктө ачуу</translation>
 <translation id="59577092665511740">Аккаунт тандаңыз.</translation>
 <translation id="5958275228015807058">Файлдар менен барактарды "Жүктөлүп алынгандар" папкасынан таап алыңыз</translation>
 <translation id="5958994127112619898">Барак жөнөкөйлөтүлсүн</translation>
 <translation id="5962718611393537961">Жыйыштыруу үчүн таптап коюңуз</translation>
 <translation id="5964869237734432770">Сүрөттөмөлөрдү албоо</translation>
-<translation id="9135546826883360971">Brave тандооңузду эстеп калат</translation>
+<translation id="9135546826883360971">AI Wize тандооңузду эстеп калат</translation>
 <translation id="5977976211062815271">Ушул түзмөктө</translation>
 <translation id="5979084224081478209">Сырсөздөрдү текшерүү</translation>
 <translation id="5995726099713306770">Барак кайрадан жүктөлүп алынсынбы?</translation>
-<translation id="6456271171669383967">Brave калсын</translation>
+<translation id="6456271171669383967">AI Wize калсын</translation>
 <translation id="6000203700195075278">Кайра жазылуу</translation>
 <translation id="6002122790816966947">Түзмөктөрүңүз</translation>
 <translation id="6011308810877101166">Издөө сунуштарын жакшыртуу</translation>
@@ -959,7 +959,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6140912465461743537">Өлкө/Дубан</translation>
 <translation id="6150320133806434356">Кыстарма сакталды</translation>
 <translation id="6154478581116148741">Параметрлерге өтүп, экрандын кулпусун коюңуз да, ушул түзмөктөгү сырсөздөрүңүздү экспорттоңуз</translation>
-<translation id="7087658909840709934">Brave сизди баш багат деп болжолдогон барактарды алдын ала жүктөйт.</translation>
+<translation id="7087658909840709934">AI Wize сизди баш багат деп болжолдогон барактарды алдын ала жүктөйт.</translation>
 <translation id="6186394685773237175">Билинип калган сырсөздөр аныкталган жок</translation>
 <translation id="6192907950379606605">Сүрөттөмөлөрдү алуу</translation>
 <translation id="6193448654517602979">Өтмөктөрдү тандоо</translation>
@@ -1002,13 +1002,13 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6394791151443660613">Издөө: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">ШИЛТЕМЕ</translation>
 <translation id="6397616442223433927">Кайрадан онлайн</translation>
-<translation id="8789425457808164956">Бул өтмөктү башка түзмөккө жөнөтүү үчүн ошол түзмөктөн Brave'го кириңиз</translation>
+<translation id="8789425457808164956">Бул өтмөктү башка түзмөккө жөнөтүү үчүн ошол түзмөктөн AI Wize'го кириңиз</translation>
 <translation id="6404511346730675251">Кыстарманы түзөтүү</translation>
 <translation id="6406506848690869874">Шайкештирүү</translation>
 <translation id="6407224748847589805">Компьютерге туташкан жок. Башка текшерүү жолун колдонуп көрүңүз.</translation>
 <translation id="6410883413783534063">Бир учурда бир нече барактарга баш багуу үчүн өтмөктөрдү ачыңыз</translation>
 <translation id="6411219469806822692">Өйдөрөөк өтүү мүмкүн эмес. Барактын өйдө жагынан баштап көрүңүз.</translation>
-<translation id="7810992039564280750">Brave'догу кооптуу сайттардын тизмесиндеги URL даректерин текшерет. Эгер сайт сырсөзүңүздү уурдоого аракет кылса же кооптуу файлды жүктөп алсаңыз, AI Wize URL даректерди, анын ичинде барактардагы мазмунду Коопсуз серептөөгө жөнөтүшү мүмкүн.</translation>
+<translation id="7810992039564280750">AI Wize'догу кооптуу сайттардын тизмесиндеги URL даректерин текшерет. Эгер сайт сырсөзүңүздү уурдоого аракет кылса же кооптуу файлды жүктөп алсаңыз, AI Wize URL даректерди, анын ичинде барактардагы мазмунду Коопсуз серептөөгө жөнөтүшү мүмкүн.</translation>
 <translation id="641643625718530986">Басып чыгаруу…</translation>
 <translation id="6422857128426228781">Көз салган бааларды ушул жерден табасыз</translation>
 <translation id="6433501201775827830">Издөө куралын тандаңыз</translation>
@@ -1019,21 +1019,21 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6447558397796644647">Кыстарма табылбай жатат. Ал туура жазылганын текшериңиз же жаңы кыстарма кошуңуз.</translation>
 <translation id="6459045781120991510">Сурамжылоолор</translation>
 <translation id="6461962085415701688">Файл ачылбай жатат</translation>
-<translation id="9055113864158719823">Brave'до кирген сайттарды көрүп, аларга таймерлерди кошо аласыз.\n\nBrave таймерлер коюлган сайттар жана ал сайттарда канча убакыт өткөргөнүңүз тууралуу маалыматты алып турат. Бул маалымат Санариптик бакубаттык кызматын жакшыртуу үчүн колдонулат.</translation>
+<translation id="9055113864158719823">AI Wize'до кирген сайттарды көрүп, аларга таймерлерди кошо аласыз.\n\nAI Wize таймерлер коюлган сайттар жана ал сайттарда канча убакыт өткөргөнүңүз тууралуу маалыматты алып турат. Бул маалымат Санариптик бакубаттык кызматын жакшыртуу үчүн колдонулат.</translation>
 <translation id="6473086018775716761">Бөлүшүү параметрлеринин тизмеси экрандын жарымына чейин ачылды.</translation>
 <translation id="6475951671322991020">Видеону жүктөп алуу</translation>
 <translation id="6477928892249167417">Бул сайттар сиз үчүн маанилүү окшойт:</translation>
 <translation id="6482749332252372425"><ph name="FILE_NAME"/> кампада орун жоктугуна байланыштуу жүктөлбөй калды.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Файл жүктөлүп алынды}other{# файл жүктөлүп алынды}}</translation>
-<translation id="3960299545138990065">Brave’ду өчүрүп-күйгүзүңүз</translation>
+<translation id="3960299545138990065">AI Wize’ду өчүрүп-күйгүзүңүз</translation>
 <translation id="6527303717912515753">Бөлүшүү</translation>
-<translation id="708829030563435351">Brave'до кирген сайттарыңыз көрүнбөйт. Бардык сайттардагы таймерлер өчүрүлөт.</translation>
-<translation id="7723158744459952869">Brave'дун жооп берүүсү өтө узакка созулуп кетти</translation>
+<translation id="708829030563435351">AI Wize'до кирген сайттарыңыз көрүнбөйт. Бардык сайттардагы таймерлер өчүрүлөт.</translation>
+<translation id="7723158744459952869">AI Wize'дун жооп берүүсү өтө узакка созулуп кетти</translation>
 <translation id="6539092367496845964">Бир жерден ката кетти. Бир аздан кийин кайталап көрүңүз.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{1 саат мурда текшерилди}other{# саат мурда текшерилди}}</translation>
 <translation id="6545017243486555795">Бардык нерселерди өчүрүү</translation>
 <translation id="6546511553472444032">Файл кооптуу болушу мүмкүн</translation>
-<translation id="6702167990458635422">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргобойт. Мунун Brave'дагы башка товарлардын Коопсуз серептөө параметрлерине кедергиси тийбейт.</translation>
+<translation id="6702167990458635422">Кооптуу вебсайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргобойт. Мунун AI Wize'дагы башка товарлардын Коопсуз серептөө параметрлерине кедергиси тийбейт.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> жана дагы <ph name="TAB_COUNT_ONE"/> өтмөк жабылат}other{<ph name="TAB_TITLE"/> жана дагы <ph name="TAB_COUNT_MANY"/> өтмөк жабылат}}</translation>
 <translation id="6560414384669816528">Sogou менен издөө</translation>
 <translation id="656065428026159829">Дагы көрүү</translation>
@@ -1047,56 +1047,56 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6590680911007613645">Сактап жаткан сырсөзүңүз <ph name="SITE"/> вебсайтындагы сырсөзгө дал келиши керек</translation>
 <translation id="6593061639179217415">Компьютер версиясы</translation>
 <translation id="6594347733515723558">Параметр-ди иргөө/көрүү</translation>
-<translation id="2466982615210189224">Сүрөттөмөлөрдү жакшыртуу үчүн сүрөттөр Brave'га жөнөтүлөт.</translation>
-<translation id="663059986967017181">Brave'го көчүрүлдү</translation>
+<translation id="2466982615210189224">Сүрөттөмөлөрдү жакшыртуу үчүн сүрөттөр AI Wize'га жөнөтүлөт.</translation>
+<translation id="663059986967017181">AI Wize'го көчүрүлдү</translation>
 <translation id="661266467055912436">Сиз жана башкалар үчүн Интернеттеги коопсуздукту арттырат.</translation>
-<translation id="8127050479140582768">Бул өтмөктү башка түзмөккө жөнөтүү үчүн эки түзмөктөн тең Brave'го кириңиз</translation>
+<translation id="8127050479140582768">Бул өтмөктү башка түзмөккө жөнөтүү үчүн эки түзмөктөн тең AI Wize'го кириңиз</translation>
 <translation id="6627583120233659107">Куржунду түзөтүү</translation>
 <translation id="4660964651149493586">Жашыруун режимдин кулпусун ачуу</translation>
 <translation id="6636623428211296678">Төмөндө көбүрөөк параметрлерди изилдеңиз же азыр бүтүрүңүз</translation>
-<translation id="2259649928554669581">Купуялыкка, коопсуздукка жана дайындарды чогултууга байланыштуу дагы башка параметрлерди көрүү үчүн <ph name="BEGIN_LINK1"/>Шайкештирү<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>Brave кызматтары<ph name="END_LINK2"/> бөлүмүнө өтүңүз.</translation>
-<translation id="7939692063031538305">Колдонмону жакшыртууга жардам берүү үчүн AI Wize колдонулушу жана ката тууралуу маалыматты Brave'га жөнөтөт. <ph name="BEGIN_UMA_LINK"/>Башкаруу<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Купуялыкка, коопсуздукка жана дайындарды чогултууга байланыштуу дагы башка параметрлерди көрүү үчүн <ph name="BEGIN_LINK1"/>Шайкештирү<ph name="END_LINK1"/> жана <ph name="BEGIN_LINK2"/>AI Wize кызматтары<ph name="END_LINK2"/> бөлүмүнө өтүңүз.</translation>
+<translation id="7939692063031538305">Колдонмону жакшыртууга жардам берүү үчүн AI Wize колдонулушу жана ката тууралуу маалыматты AI Wize'га жөнөтөт. <ph name="BEGIN_UMA_LINK"/>Башкаруу<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Ар дайым бөгөттөө</translation>
 <translation id="6641780377503683465"><ph name="INTEREST"/> өчүрүү</translation>
 <translation id="6643016212128521049">Тазалоо</translation>
 <translation id="6645629752388991326">Бул түзмөктү коопсуздук ачкычы катары колдонуп, аккаунтка кайсы түзмөктөр кире аларын көзөмөлдөңүз.</translation>
-<translation id="2730188427562924169">Brave Brave'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт. Эгер сайт сырсөзүңүздү уурдоого аракет кылса же кооптуу файлды жүктөп алсаңыз, AI Wize URL даректерди, анын ичинде барактардагы мазмундун үлгүлөрүн Brave'га жөнөтүшү мүмкүн.</translation>
-<translation id="7556503430569358637">Кийин кайсы сайттарга кирериңизди болжолдоо үчүн сиз баш баккан URL даректери Brave'га жөнөтүлүп турат</translation>
-<translation id="6678472970290886941">Администраторуңуз серепчини алыстан жөндөй алат. Бул түзмөктө аткарылган аракеттер Brave'дон тышкары да башкарылышы мүмкүн.</translation>
+<translation id="2730188427562924169">AI Wize AI Wize'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт. Эгер сайт сырсөзүңүздү уурдоого аракет кылса же кооптуу файлды жүктөп алсаңыз, AI Wize URL даректерди, анын ичинде барактардагы мазмундун үлгүлөрүн AI Wize'га жөнөтүшү мүмкүн.</translation>
+<translation id="7556503430569358637">Кийин кайсы сайттарга кирериңизди болжолдоо үчүн сиз баш баккан URL даректери AI Wize'га жөнөтүлүп турат</translation>
+<translation id="6678472970290886941">Администраторуңуз серепчини алыстан жөндөй алат. Бул түзмөктө аткарылган аракеттер AI Wize'дон тышкары да башкарылышы мүмкүн.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 жана дагы <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 жана дагы <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Сүрөттү алдын ала көрүү <ph name="BEGIN_NEW"/>Жаңы<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Сырсөз</translation>
 <translation id="6659594942844771486">Өтмөк</translation>
-<translation id="9145803563102831353">Учурда бул түзмөктө сакталган сырсөздөрдү AI Wize каналдарында колдонууга болбойт. Brave'дун 121-версиясынан кийин AI Wize жана <ph name="CHROME_CHANNEL"/> каналы үчүн түзмөгүңүздө сакталган сырсөздөр бириктирилип, эки колдонмодо тең колдонула алышат.</translation>
+<translation id="9145803563102831353">Учурда бул түзмөктө сакталган сырсөздөрдү AI Wize каналдарында колдонууга болбойт. AI Wize'дун 121-версиясынан кийин AI Wize жана <ph name="CHROME_CHANNEL"/> каналы үчүн түзмөгүңүздө сакталган сырсөздөр бириктирилип, эки колдонмодо тең колдонула алышат.</translation>
 <translation id="666731172850799929">Төмөнкүдө ачуу <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Сүрөттү көчүрүү</translation>
 <translation id="6672917148207387131"><ph name="DOMAIN"/> кошуу</translation>
 <translation id="6674571176963658787">Шайкештирүүнү баштоо үчүн сыр сүйлөмүңүздү киргизиңиз</translation>
-<translation id="8581481290581777242">Brave'догу дайын-даректериңиз бул түзмөктөн өчүрүлсүнбү?</translation>
-<translation id="3683330416566109578">Бул сайтка жана Brave'го кириңиз</translation>
-<translation id="3385384709865894288">Brave'ду жакшыртууга жардам бериңиз</translation>
+<translation id="8581481290581777242">AI Wize'догу дайын-даректериңиз бул түзмөктөн өчүрүлсүнбү?</translation>
+<translation id="3683330416566109578">Бул сайтка жана AI Wize'го кириңиз</translation>
+<translation id="3385384709865894288">AI Wize'ду жакшыртууга жардам бериңиз</translation>
 <translation id="670498945988402717">Кечээ текшерилди</translation>
 <translation id="6710213216561001401">Мурунку</translation>
 <translation id="671481426037969117"><ph name="FQDN"/> таймериңиздин убакыты бүттү. Ал эртең кайра башталат.</translation>
 <translation id="6715020873764921614"><ph name="FILE_NAME"/> файлы (<ph name="FILE_SIZE"/>) баары бир жүктөлүп алынсынбы?</translation>
 <translation id="6719634564325948108">QR код менен туташасызбы?</translation>
-<translation id="7499197548870160669">Brave аккаунтуңузда</translation>
+<translation id="7499197548870160669">AI Wize аккаунтуңузда</translation>
 <translation id="6738516213925468394">Дайын-даректериңиз <ph name="BEGIN_LINK"/>шайкештирүүчү өткөрүүчү сүйлөм<ph name="END_LINK"/> менен <ph name="TIME"/> шифрлеген. Шайкештирип баштоо үчүн, аны киргизиңиз.</translation>
 <translation id="6738867403308150051">Жүктөлүп алынууда…</translation>
-<translation id="2275686406263739320">Сиз баш баккан сайттар жалпысынан эле сиз кызыккан нерселерди тажрыйбаңызды жекелештирүү максатында эстеп калышат. Ошондой эле, сайттар кызыккан нерселериңиз тууралуу маалыматты Brave'до сакташы мүмкүн.</translation>
+<translation id="2275686406263739320">Сиз баш баккан сайттар жалпысынан эле сиз кызыккан нерселерди тажрыйбаңызды жекелештирүү максатында эстеп калышат. Ошондой эле, сайттар кызыккан нерселериңиз тууралуу маалыматты AI Wize'до сакташы мүмкүн.</translation>
 <translation id="6751521182688001123">Жаңы өтмөктү ыкчам ачуу. Бул ыкчам баскычты түзөтүү үчүн коё бербей басып туруңуз.</translation>
 <translation id="6756507620369789050">Пикир билдирүү</translation>
 <translation id="6767294960381293877">Жалпы түзмөктөрдүн тизмеси көрсөтүлгөн өтмөк экрандын жарымында ачылды.</translation>
 <translation id="6770602306803890733">Сиз жана башкалар үчүн Интернеттеги коопсуздукту арттырат</translation>
 <translation id="2213938739750509524">Дарек тилкесин же издөө кутучасын таптап же анда бир нерсе тергениңизде, демейки издөө каражатынын сунуштарын көрүп турасыз. Бул параметр Жашыруун режимде өчүк болот.</translation>
-<translation id="8174975477247159780">Brave менен ChromeOS'тун Кошумча Тейлөө шарттары</translation>
+<translation id="8174975477247159780">AI Wize менен ChromeOS'тун Кошумча Тейлөө шарттары</translation>
 <translation id="6795633245022906657">Жаңы өтмөктү ыкчам ачыңыз. Бул ыкчам баскычты түзөтүү үчүн параметрлерге өтүңүз.</translation>
 <translation id="6802555630140434547">Терезе жабылат</translation>
 <translation id="6811034713472274749">Барак карап чыгууга даяр</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Сүрөттөр, тизмеде 1 сүрөт}other{Сүрөттөр, тизмеде # сүрөт}}</translation>
-<translation id="8418237809013783651">Brave'го кириңиз. Ачылды.</translation>
+<translation id="8418237809013783651">AI Wize'го кириңиз. Ачылды.</translation>
 <translation id="6817747507826986771">Бул баракты ыкчам бөлүшүү. Бул ыкчам баскычты түзөтүү үчүн коё бербей басып туруңуз.</translation>
-<translation id="118366698571543506">Brave'дагы нерселерди бардык түзмөктөрүңүздө колдонуу үчүн аккаунтуңузга кириңиз</translation>
+<translation id="118366698571543506">AI Wize'дагы нерселерди бардык түзмөктөрүңүздө колдонуу үчүн аккаунтуңузга кириңиз</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Дарек тилкесинен барак тууралуу маалыматты ачып, өткүңүз келген барак жөнүндө кошумча маалыматты карасаңыз болот</translation>
 <translation id="6828070228333235514">Баасына көз салууну токтотуу</translation>
@@ -1108,7 +1108,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="6850409657436465440">Файлыңыз дагы эле жүктөлүп алынууда</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> өтмөк жабылды</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{Аудио файлдар, тизмеде 1 аудио файл}other{Аудио файлдар, тизмеде # аудио файл}}</translation>
-<translation id="4046835482356054431">Brave cунуштары – өчүк</translation>
+<translation id="4046835482356054431">AI Wize cунуштары – өчүк</translation>
 <translation id="686366188661646310">Сырсөз жок кылынсынбы?</translation>
 <translation id="6864459304226931083">Сүрөттү жүктөп алуу</translation>
 <translation id="6865313869410766144">Автотолтуруу формасынын дайындары</translation>
@@ -1146,7 +1146,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7029809446516969842">Сырсөздөр</translation>
 <translation id="7030304022046916278">URL даректерин текшерүү үчүн Коопсуз серептөөгө жөнөтөт</translation>
 <translation id="7035701931849773472">Башка параметрлер</translation>
-<translation id="5813862251770201080">Brave'го AI Wize аккаунтуңуз менен кириңиз</translation>
+<translation id="5813862251770201080">AI Wize'го AI Wize аккаунтуңуз менен кириңиз</translation>
 <translation id="7054588988317389591">Сүрөттүн сүрөттөмөлөрүн аласызбы?</translation>
 <translation id="7055152154916055070">Багыттоо бөгөттөлгөн:</translation>
 <translation id="7063006564040364415">Шайкештештирүү серверине туташкан жок.</translation>
@@ -1154,8 +1154,8 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="707155805709242880">Төмөндө шайкештириле турган нерселерди тандаңыз</translation>
 <translation id="7077143737582773186">SD-карта</translation>
 <translation id="2374582967527009647">URL даректерин текшерүү үчүн Коопсуз серептөөгө жөнөтөт. Барактардын чакан үлгүлөрүн, жүктөлүп алынган файлдарды, кеңейтүүлөрдүн аракеттерин жана тутум маалыматын жөнөтүп, жаңы коркунучтарды аныктоого жардам берет. AI Wize колдонмолорунда коопсуздугуңузду коргоо үчүн аккаунтуңуз менен кирип турганда, бул маалыматты AI Wize аккаунтуңуз менен байланыштырат.</translation>
-<translation id="5499149312981370855">Brave таржымалын AI Wize кызматтарын жекелештирүү үчүн колдонуп же колдонбоону тандаңыз</translation>
-<translation id="8208853227947884571">Brave жаңыртылды</translation>
+<translation id="5499149312981370855">AI Wize таржымалын AI Wize кызматтарын жекелештирүү үчүн колдонуп же колдонбоону тандаңыз</translation>
+<translation id="8208853227947884571">AI Wize жаңыртылды</translation>
 <translation id="7105047059074518658">Түзмөктөрдү оңой колдонуу үчүн аккаунтуңузга кириңиз</translation>
 <translation id="7106762743910369165">Серепчиңиз уюмуңуз тарабынан башкарылат</translation>
 <translation id="7116588989735740310">Көргөн сайттарга башка түзмөктөрдө кайтуу үчүн өтмөктөр менен таржымалды шайкештириңиз</translation>
@@ -1170,33 +1170,33 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7177873915659574692">QR код түзүлгөн жок. URL дареги <ph name="CHARACTER_LIMIT"/> символдон ашып кетти.</translation>
 <translation id="7180611975245234373">Жаңылоо</translation>
 <translation id="7183693674623539380">Өтмөктөр тобу – <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Аккаунтуңузга киргенде Brave'до жана башка AI Wize колдонмолорунда коопсуздугуңузду коргоп турат.</translation>
+<translation id="8355565210555500987">Аккаунтуңузга киргенде AI Wize'до жана башка AI Wize колдонмолорунда коопсуздугуңузду коргоп турат.</translation>
 <translation id="7191430249889272776">Өтмөк фондо ачылды.</translation>
 <translation id="7196215469483532480">Купуялык жетектемесинин түшүндүрмөсү толугу менен ачылды</translation>
 <translation id="1014116676551114642">Жаштарга арналган AI Wize контенти - өчүк</translation>
 <translation id="7207760545532569765"><ph name="TAB_COUNT"/> өтмөктү фондогу жаңы өтмөктөр катары калыбына келтирүү.</translation>
-<translation id="6302653771627628530">Brave'дон чыкканыңызда жашыруун өтмөктөр кулпуланат</translation>
+<translation id="6302653771627628530">AI Wize'дон чыкканыңызда жашыруун өтмөктөр кулпуланат</translation>
 <translation id="7221869452894271364">Бул бетти кайра жүктөө</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 жүктөп алуу күтүлүүдө}other{# жүктөп алуу күтүлүүдө}}</translation>
 <translation id="72415438529550637">Сырсөздү сунуштоо жабылды.</translation>
-<translation id="8287068819750208230"><ph name="TARGET_DEVICE_NAME"/> түзмөгүңүздү шайкештирүү Brave'дон күйгүзүлгөнүн текшериңиз</translation>
+<translation id="8287068819750208230"><ph name="TARGET_DEVICE_NAME"/> түзмөгүңүздү шайкештирүү AI Wize'дон күйгүзүлгөнүн текшериңиз</translation>
 <translation id="7252076891734325316">Телефонуңузду компьютерге жакын коюңуз</translation>
-<translation id="4957342254208357193">Android түзмөгүңүздө ушуга окшош параметр болушу мүмкүн. Эгер Brave'до жана Android түзмөгүндө Жарнамаларды талдоо күйгүзүлсө, компания вебсайттарда жана колдонмолордо көрсөтүлгөн жарнамалардын майнаптуулугун талдай алышы мүмкүн.</translation>
+<translation id="4957342254208357193">Android түзмөгүңүздө ушуга окшош параметр болушу мүмкүн. Эгер AI Wize'до жана Android түзмөгүндө Жарнамаларды талдоо күйгүзүлсө, компания вебсайттарда жана колдонмолордо көрсөтүлгөн жарнамалардын майнаптуулугун талдай алышы мүмкүн.</translation>
 <translation id="727288900855680735"><ph name="ONE_TIME_CODE"/> коду <ph name="ORIGIN"/> сайтына тапшырылсынбы?</translation>
 <translation id="7274013316676448362">Бөгөттөлгөн сайт</translation>
-<translation id="7949597606523411684">Brave тизмеде 4 аптадан ашуун убакыт мурун пайда болгон темаларды автоматтык түрдө жок кылып турат. Серептөөнү улантсаңыз, тема тизмеде кайрадан пайда болушу мүмкүн. Же болбосо, Brave'го сайттар менен белгилүү бир темаларды бөлүшүүгө тыюу сала аласыз. <ph name="BEGIN_LINK"/>Brave'до жарнаманын купуялыгын башкаруу<ph name="END_LINK"/> тууралуу кеңири маалымат.</translation>
+<translation id="7949597606523411684">AI Wize тизмеде 4 аптадан ашуун убакыт мурун пайда болгон темаларды автоматтык түрдө жок кылып турат. Серептөөнү улантсаңыз, тема тизмеде кайрадан пайда болушу мүмкүн. Же болбосо, AI Wize'го сайттар менен белгилүү бир темаларды бөлүшүүгө тыюу сала аласыз. <ph name="BEGIN_LINK"/>AI Wize'до жарнаманын купуялыгын башкаруу<ph name="END_LINK"/> тууралуу кеңири маалымат.</translation>
 <translation id="4561646469134805137">Терип жатканыңызда, AI Wize дарек тилкесинин же издөө кутучасынын мазмунун демейки издөө каражатына жөнөтөт</translation>
 <translation id="7289303553784750393">Эгер онлайн режиминде болсоңуз, бирок бул маселе кайталана берсе, <ph name="SITE_ETLD_PLUS_ONE"/> аркылуу башка жолдор менен улантып көрүңүз.</translation>
 <translation id="7290209999329137901">Аталышын өзгөртүү мүмкүн эмес</translation>
 <translation id="7291910923717764901">Сүрөттүн бул баракка кошулган сүрөттөмөлөрү</translation>
 <translation id="7293429513719260019">Тил тандоо</translation>
 <translation id="729975465115245577">Түзмөгүңүздө сырсөздөрдүн файлын сактай турган колдонмо жок экен.</translation>
-<translation id="7581648335850642193">Android түзмөгүңүздө ушуга окшош параметр болушу мүмкүн. Эгер Brave'до жана Android түзмөгүңүздө бул параметр күйгүзүлсө, компания вебсайттарда жана колдонмолордо көрсөтүлгөн жарнаманын майнаптуулугун талдай алышы мүмкүн.</translation>
+<translation id="7581648335850642193">Android түзмөгүңүздө ушуга окшош параметр болушу мүмкүн. Эгер AI Wize'до жана Android түзмөгүңүздө бул параметр күйгүзүлсө, компания вебсайттарда жана колдонмолордо көрсөтүлгөн жарнаманын майнаптуулугун талдай алышы мүмкүн.</translation>
 <translation id="1382596880054356475">Оффлайн. AI Wize сырсөздөрүңүздү текшере албай жатат</translation>
 <translation id="7313188324932846546">Шайкештирүүнү жөндөө үчүн басыңыз</translation>
 <translation id="7324354302972299151">"Do Not Track" сурамын жөнөтүңүз</translation>
 <translation id="7332075081379534664">Аккаунтуңузга ийгиликтүү кирдиңиз</translation>
-<translation id="8716243540027092298">Brave'дан эң ылайыктуу контентти көрүү үчүн шайкештирүүнү иштетиңиз</translation>
+<translation id="8716243540027092298">AI Wize'дан эң ылайыктуу контентти көрүү үчүн шайкештирүүнү иштетиңиз</translation>
 <translation id="7339898014177206373">Жаңы терезе</translation>
 <translation id="7340958967809483333">Сунуштардын параметрлери</translation>
 <translation id="7352339641508007922">Узун скриншот тартып алуу үчүн сүйрөңүз</translation>
@@ -1212,14 +1212,14 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7397416715506917976">Барак статистикасын көрүү</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Башка, тизмеде 1 файл}other{Башка, тизмеде # файл}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Brave'ду алгачкы иштетүү тажрыйбасы</translation>
-<translation id="5341476184053934779">Brave аккаунтун колдонуучу</translation>
+<translation id="724102042129299115">AI Wize'ду алгачкы иштетүү тажрыйбасы</translation>
+<translation id="5341476184053934779">AI Wize аккаунтун колдонуучу</translation>
 <translation id="741204030948306876">Ооба, макулмун</translation>
 <translation id="7419565702166471774">Ар дайым коопсуз туташуулар колдонулсун</translation>
 <translation id="7431991332293347422">Издөөнү жана башка кызматтарды жекечелештирүү үчүн серептөө таржымалыңыз кандайча пайдаланыларын көзөмөлдөңүз</translation>
 <translation id="7435356471928173109">Администраторуңуз өчүрүп койду</translation>
-<translation id="6234515504547364178">Brave'дон чыгуу</translation>
-<translation id="6147816961713837040">Brave Brave'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт</translation>
+<translation id="6234515504547364178">AI Wize'дон чыгуу</translation>
+<translation id="6147816961713837040">AI Wize AI Wize'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт</translation>
 <translation id="3699067418237091329">Сиз көпчүлүк сайттардагы каттоо эсептериңизден чыгарылып, бирок AI Wize аккаунтуңуздан чыкпайсыз.</translation>
 <translation id="7453810262525006706">Капталдагы тилкеге жыйыштыруу</translation>
 <translation id="7454641608352164238">Орун жетишсиз</translation>
@@ -1238,7 +1238,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7493994139787901920"><ph name="VERSION"/> (Жаңырган <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Тема жарнамаларды жекелештирүү үчүн кайрадан колдонулушу мүмкүн</translation>
 <translation id="7498271377022651285">Күтө туруңуз…</translation>
-<translation id="8156131600798538460">Бардык вебсайттарда AI Wize аккаунтуңуздан чыгуу үчүн <ph name="BEGIN_LINK1"/>Brave'дон чыгыңыз<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Бардык вебсайттарда AI Wize аккаунтуңуздан чыгуу үчүн <ph name="BEGIN_LINK1"/>AI Wize'дон чыгыңыз<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Жаңыртуулар жеткиликсиз</translation>
 <translation id="7507207699631365376">Бул кызмат көрсөтүүчүнүн <ph name="BEGIN_LINK"/>купуялык эрежелерин<ph name="END_LINK"/> көрүңүз</translation>
 <translation id="7514365320538308">Жүктөп алуу</translation>
@@ -1249,7 +1249,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="5722020415664104421">Жашыруун режимде бөгөттөө</translation>
 <translation id="7539698981064401140">Өтмөктөр менен таржымалды шайкештириңиз</translation>
 <translation id="7562080006725997899">Серептөө дайындары тазаланууда</translation>
-<translation id="7814200940910057384">Brave дайындары тазаланды</translation>
+<translation id="7814200940910057384">AI Wize дайындары тазаланды</translation>
 <translation id="7577900504646297215">Кызыккан нерселерди башкаруу</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> файл жүктөлүп алынды}other{<ph name="FILES_DOWNLOADED_MANY"/> файл жүктөлүп алынды}}</translation>
 <translation id="7581273696622423628">Сурамжылоого катышуу</translation>
@@ -1259,10 +1259,10 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7596558890252710462">Иштөө тутуму</translation>
 <translation id="7603168929588204083">Күн туура эмес көрсөтүлдү</translation>
 <translation id="7605594153474022051">Шайкештирүү иштебей жатат</translation>
-<translation id="649070405679044769">Brave'га төмөнкү аркылуу кирип турасыз</translation>
+<translation id="649070405679044769">AI Wize'га төмөнкү аркылуу кирип турасыз</translation>
 <translation id="7612989789287281429">Кирип жатасыз…</translation>
 <translation id="7619072057915878432"><ph name="FILE_NAME"/> тармак жөндөмсүздүгүнө байланыштуу жүктөлбөй калды.</translation>
-<translation id="7207456302801184289">Brave'го кош келиңиз</translation>
+<translation id="7207456302801184289">AI Wize'го кош келиңиз</translation>
 <translation id="7630202231528827509">Провайдердин URL дареги</translation>
 <translation id="7638584964844754484">Туура эмес купуя сөз айкашы</translation>
 <translation id="7641339528570811325">Серепчиден көрүлгөн нерселерди тазалап салуу…</translation>
@@ -1276,13 +1276,13 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="766587987807204883">Оффлайн режиминде да окула турган макалалар ушул жерде көрүнөт</translation>
 <translation id="7682724950699840886">Төмөнкү кеңештерди аткарып көрүңүз: түзмөгүңүздө бош орун бар экенин текшерип, кайра экспорттоп көрүңүз.</translation>
 <translation id="7686086654630106285">Сайтта сунушталган жарнамалар жөнүндө кеңири маалымат</translation>
-<translation id="2667018639405889513">Cиз баш баккан айрым барактар алдын ала жүктөлгөн. AI Wize сайтынан шилтеме берилген барактар Brave'дун серверлери аркылуу алдын ала жүктөлүшү мүмкүн.</translation>
-<translation id="7795837497684113327">Түзмөгүңүздө AI Wize ачылбай койду. Көйгөйдү оңдоо үчүн колдонмолор дүкөнүңүздөн Brave'дун акыркы версиясын жүктөп алыңыз.</translation>
+<translation id="2667018639405889513">Cиз баш баккан айрым барактар алдын ала жүктөлгөн. AI Wize сайтынан шилтеме берилген барактар AI Wize'дун серверлери аркылуу алдын ала жүктөлүшү мүмкүн.</translation>
+<translation id="7795837497684113327">Түзмөгүңүздө AI Wize ачылбай койду. Көйгөйдү оңдоо үчүн колдонмолор дүкөнүңүздөн AI Wize'дун акыркы версиясын жүктөп алыңыз.</translation>
 <translation id="7691043218961417207">Кызыктуу контентти таап, жазылыңыз</translation>
 <translation id="7697383401610880082">Сүйрөө маркери</translation>
 <translation id="7698359219371678927"><ph name="APP_NAME"/> колдонмосунан электрондук почта түзүңүз</translation>
 <translation id="7702029078562412515">Сурам карталары</translation>
-<translation id="3434187853488406814">Серептөө дайындарыңыз тазаланса, AI Wize аккаунтуңуздан чыгарылбайсыз. Аккаунтуңуздан чыгуу үчүн <ph name="BEGIN_LINK1"/>Brave'дон чыгыңыз<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Серептөө дайындарыңыз тазаланса, AI Wize аккаунтуңуздан чыгарылбайсыз. Аккаунтуңуздан чыгуу үчүн <ph name="BEGIN_LINK1"/>AI Wize'дон чыгыңыз<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Мобилдик Интернетти колдонуу</translation>
 <translation id="7709918231054955894">Бардык өтмөктөрүңүздү көрүңүз</translation>
 <translation id="7733878270780732638">Түзмөктө орун жетишсиз.</translation>
@@ -1296,7 +1296,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 жана дагы <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 жана дагы <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
 <translation id="5614774692683309331">Кирип турганыңызда, сизди AI Wize кызматтарында коргойт.</translation>
 <translation id="7778840695157240389">Жаңы окуяларды көрүү үчүн мезгил-мезгили менен баш багып туруңуз</translation>
-<translation id="7703329426540523149">Brave колдонмолорунда коопсуздугуңузду коргоо үчүн аккаунтуңуз менен кирип турганда, бул маалыматты AI Wize аккаунтуңуз менен байланыштырат</translation>
+<translation id="7703329426540523149">AI Wize колдонмолорунда коопсуздугуңузду коргоо үчүн аккаунтуңуз менен кирип турганда, бул маалыматты AI Wize аккаунтуңуз менен байланыштырат</translation>
 <translation id="7791543448312431591">Кошуу</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> өтмөк калыбына келтирилди</translation>
 <translation id="780301667611848630">Жок, рахмат</translation>
@@ -1308,7 +1308,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8439902729344548970">Бул маалымат сиз кирип турган AI Wize аккаунту менен байланыштырылат. Бул сизди AI Wize кызматтарында коргоого, мисалы, коопсуздук тутумундагы бузулуулардан кийин Gmail'де кошумча чараларды көрүүгө жардам берет.</translation>
 <translation id="78270725016672455">Компьютериңиз бул түзмөктү сайтка кирүү үчүн каттагысы келет</translation>
 <translation id="7844171778363018843">Шайкештириле турган маалымат тандалган жок</translation>
-<translation id="7068829570137757602">Brave кызматтары</translation>
+<translation id="7068829570137757602">AI Wize кызматтары</translation>
 <translation id="784934925303690534">Убакыт аралыгы</translation>
 <translation id="7851858861565204677">Башка түзмөктөр</translation>
 <translation id="7853202427316060426">Аракеттер</translation>
@@ -1318,7 +1318,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="78707286264420418">Түзмөгүңүзгө туташуу үчүн <ph name="PRODUCT_NAME"/> жакын жердеги түзмөктөргө уруксат алышы керек</translation>
 <translation id="7875915731392087153">Электрондук почта түзүңүз</translation>
 <translation id="7876243839304621966">Баарын алып салуу</translation>
-<translation id="6143689084714664628">Brave'до иштеп жатат</translation>
+<translation id="6143689084714664628">AI Wize'до иштеп жатат</translation>
 <translation id="7887174313503389866">Негизги купуялык жана коопсуздукту көзөмөлдөө каражаттары тууралуу коштомо. Кошумча параметрлерди көрүү үчүн жеке параметрлерге өтүңүз.</translation>
 <translation id="7896724475402191389">Жаштарга арналган контент - өчүк</translation>
 <translation id="7903184275147100332">Бир аз убакыт талап кылынышы мүмкүн</translation>
@@ -1367,24 +1367,24 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8076492880354921740">Өтмөктөр</translation>
 <translation id="8078096376109663956">Текстти гана бөлүшүү</translation>
 <translation id="8084114998886531721">Сакталган сырсөз</translation>
-<translation id="1718138320251931534">Brave аккаунтуңуздагы маалыматты көзөмөлдөңүз</translation>
+<translation id="1718138320251931534">AI Wize аккаунтуңуздагы маалыматты көзөмөлдөңүз</translation>
 <translation id="808747664143081553">Түзмөккө туташты</translation>
 <translation id="1998933850996224665">Жакын жердеги адамдар менен бөлүшүү үчүн алар бул QR кодду скандашы керек</translation>
 <translation id="8090732854597034573">Жардам керек болсо, ата-энеңе кайрыл</translation>
 <translation id="8101414242770404289"><ph name="TIME_PERIOD"/> берки өтмөктөр жабылбайт</translation>
 <translation id="3377025655491224618">Жашыруун өтмөк</translation>
-<translation id="3249150807062904185">Улантуу менен, <ph name="BEGIN_TOS_LINK"/>Тейлөө шарттарын<ph name="END_TOS_LINK"/> кабыл аласыз.\nКолдонмону жакшыртууга жардам берүү үчүн AI Wize колдонулушу жана ката тууралуу маалыматты Brave'га жөнөтөт. <ph name="BEGIN_UMA_LINK"/>Башкаруу<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Улантуу менен, <ph name="BEGIN_TOS_LINK"/>Тейлөө шарттарын<ph name="END_TOS_LINK"/> кабыл аласыз.\nКолдонмону жакшыртууга жардам берүү үчүн AI Wize колдонулушу жана ката тууралуу маалыматты AI Wize'га жөнөтөт. <ph name="BEGIN_UMA_LINK"/>Башкаруу<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Иреттөө параметрлерин жабуу</translation>
-<translation id="2919733817273403520">Brave функцияларын жана майнаптуулугун өркүндөтүүгө жардам бериңиз</translation>
-<translation id="4565206163201411670">Brave'ду колдонуу дайын-даректериңиз Санариптик бакубаттык кызматында көрсөтүлсүнбү?</translation>
+<translation id="2919733817273403520">AI Wize функцияларын жана майнаптуулугун өркүндөтүүгө жардам бериңиз</translation>
+<translation id="4565206163201411670">AI Wize'ду колдонуу дайын-даректериңиз Санариптик бакубаттык кызматында көрсөтүлсүнбү?</translation>
 <translation id="8118117428362942925">Жардам керек болсо, ата-энеңе кайрыл (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Жаңылары боюнча иреттелүүдө</translation>
 <translation id="8127542551745560481">Башкы бетти түзөтүү</translation>
 <translation id="8130309322784422030">Сакталган кирүү маалыматынын мөөнөтү өтүп кеткен окшойт</translation>
 <translation id="813082847718468539">Сайттын маалыматын карап көрүү</translation>
 <translation id="8135406045838672858">Жүктөлүп алынган PDF файлдары <ph name="APP_NAME"/> колдонмосу менен автоматтык түрдө ачылат</translation>
-<translation id="6337533477704327362">Бул сырсөздү эстеп калуунун кереги жок. Ал Brave'дун Сырсөздөрдү башкаргыч кызматында сакталат.</translation>
+<translation id="6337533477704327362">Бул сырсөздү эстеп калуунун кереги жок. Ал AI Wize'дун Сырсөздөрдү башкаргыч кызматында сакталат.</translation>
 <translation id="8186512483418048923"><ph name="FILES"/> файл калды</translation>
 <translation id="8190358571722158785">1 күн калды</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Түзмөктөрүңүз<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1401,7 +1401,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8243077599929149377">Колдонуучу атыңызды кошуңуз</translation>
 <translation id="8250920743982581267">Документтер</translation>
 <translation id="8255617931166444521">Сайттар cookie файлдары аркылуу сайтында көрүлгөн барактарды көрө алышат</translation>
-<translation id="2876689296031086375">Алдын ала жүктөлгөн барактар шифрленгендиктен, AI Wize алардын мазмунун окуй албайт. Brave'дун серверлери кайсы сайттар алдын ала жүктөлгөнүн аныктайт. Бул маалымат барактарды алдын ала жүктөө үчүн гана колдонулат, ошондой эле AI Wize аккаунтуңуздагы башка маалыматка байланыштырылбайт.</translation>
+<translation id="2876689296031086375">Алдын ала жүктөлгөн барактар шифрленгендиктен, AI Wize алардын мазмунун окуй албайт. AI Wize'дун серверлери кайсы сайттар алдын ала жүктөлгөнүн аныктайт. Бул маалымат барактарды алдын ала жүктөө үчүн гана колдонулат, ошондой эле AI Wize аккаунтуңуздагы башка маалыматка байланыштырылбайт.</translation>
 <translation id="8260126382462817229">Кайра кирип көрүңүз.</translation>
 <translation id="8261506727792406068">Жок кылуу</translation>
 <translation id="82619448491672958">Башка өтмөктөрдү көрүү</translation>
@@ -1420,21 +1420,21 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8368001212524806591">Баага көз салуу</translation>
 <translation id="8387617938027387193">Өзүңүздү ырастаңыз</translation>
 <translation id="8393700583063109961">Билдирүү жөнөтүү</translation>
-<translation id="7651600795135059130">Brave'догу кооптуу сайттардын тизмесиндеги URL даректерин текшерет</translation>
+<translation id="7651600795135059130">AI Wize'догу кооптуу сайттардын тизмесиндеги URL даректерин текшерет</translation>
 <translation id="8402673309244746971">Жазылгандарга өтүү</translation>
 <translation id="8413126021676339697">Таржымалды толугу менен көрсөтүү</translation>
-<translation id="5348884013239264115">Кооптуу деп таанылган сайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргойт. Сайтка киргениңизде, AI Wize Brave'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт. Эгер сайтта шектүү аракет болсо, анын толук URL даректери жана барак мазмунунун үлгүлөрү да жөнөтүлөт.</translation>
+<translation id="5348884013239264115">Кооптуу деп таанылган сайттардан, жүктөлүп алынган файлдардан жана кеңейтүүлөрдөн коргойт. Сайтка киргениңизде, AI Wize AI Wize'га IP дарегиңизди жашырган купуялык сервери аркылуу URL'дин обфускацияланган бөлүгүн жөнөтөт. Эгер сайтта шектүү аракет болсо, анын толук URL даректери жана барак мазмунунун үлгүлөрү да жөнөтүлөт.</translation>
 <translation id="8414396119627470038"><ph name="SITE_ETLD_PLUS_ONE"/> сайтына <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> менен кириңиз</translation>
 <translation id="8419244640277402268">Камтылсын</translation>
 <translation id="8422250855136581222">Бул түзмөктө өтмөктөр жабылбайт</translation>
-<translation id="5735840612282428689">Барак жөнөтүлдү. Аны көрүү үчүн Brave'ду <ph name="DEVICE_TYPE"/> ачыңыз</translation>
+<translation id="5735840612282428689">Барак жөнөтүлдү. Аны көрүү үчүн AI Wize'ду <ph name="DEVICE_TYPE"/> ачыңыз</translation>
 <translation id="8427875596167638501">Алдын ала көрүү өтмөгүнүн жарымы жабык</translation>
 <translation id="8428213095426709021">Параметрлер</translation>
 <translation id="8430824733382774043">Скриншотту гана бөлүшүү</translation>
 <translation id="8438566539970814960">Издөө жана серептөө аракеттериңизди жакшыртыңыз</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> - Тил жүктөлүп алынды. <ph name="APP_NAME"/> колдонмосун өчүрүп күйгүзүңүз.</translation>
 <translation id="8442258441309440798">Окуялар жеткиликсиз</translation>
-<translation id="4058091506841967397">Brave жаңырбай жатат</translation>
+<translation id="4058091506841967397">AI Wize жаңырбай жатат</translation>
 <translation id="8445448999790540984">Сырсөздөр экспорттолбой жатат</translation>
 <translation id="8446884382197647889">Көбүрөөк билүү</translation>
 <translation id="8453310803815879010">Динозавр оюнун ойноп баштоо</translation>
@@ -1450,18 +1450,18 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8497480609928300907">Купуялык жетектемесинин түшүндүрмөсү</translation>
 <translation id="8497726226069778601">Бул жерде көрө турган эч нерсе жок… азырынча</translation>
 <translation id="8501423924927196358">Барактын статистикасын жүктөө индикатору</translation>
-<translation id="230699814587342492">Brave сырсөздөрү</translation>
+<translation id="230699814587342492">AI Wize сырсөздөрү</translation>
 <translation id="8503813439785031346">Колдонуучунун ысымы</translation>
 <translation id="8505766168025405649">Жүктөп алуу статусу тууралуу билдирмени караңыз</translation>
 <translation id="8506357771923193001">Жүктөлүп алынган файлдар ушул жерде болот</translation>
-<translation id="133012818630824069">Brave'до сакталган сырсөздөрдү экспорттоо</translation>
+<translation id="133012818630824069">AI Wize'до сакталган сырсөздөрдү экспорттоо</translation>
 <translation id="8516012719330875537">Сүрөттү түзөткүч</translation>
 <translation id="8523928698583292556">Сакталган сырсөздү жок кылуу</translation>
 <translation id="8526855376374973824">Билдирмелерге уруксат берүү агымы</translation>
 <translation id="8540136935098276800">Туура форматталган URL дарегин киргизиңиз</translation>
 <translation id="854522910157234410">Бул бетти ачыңыз</translation>
-<translation id="5711390076756601471">Brave жабылганда, жашыруун өтмөктөрдү кулпулоо</translation>
-<translation id="5503308854539525011">Brave жарнамалардын майнаптуулугун талдоо үчүн сайттар серепчи аркылуу бөлүшө алган маалыматтын жалпы өлчөмүн чектейт</translation>
+<translation id="5711390076756601471">AI Wize жабылганда, жашыруун өтмөктөрдү кулпулоо</translation>
+<translation id="5503308854539525011">AI Wize жарнамалардын майнаптуулугун талдоо үчүн сайттар серепчи аркылуу бөлүшө алган маалыматтын жалпы өлчөмүн чектейт</translation>
 <translation id="8559990750235505898">Башка тилдердеги барактарды которуу сунушталсын</translation>
 <translation id="8560602726703398413">Окуу тизмеңизди кыстармалардан табыңыз</translation>
 <translation id="8562452229998620586">Сакталган сырсөздөр бул жерде көрүнөт.</translation>
@@ -1470,16 +1470,16 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="8583805026567836021">Аккаунттун дайындары тазаланууда</translation>
 <translation id="859046281437143747">Баасына "Дагы параметрлер" баскычы аркылуу көз сала аласыз</translation>
 <translation id="860043288473659153">Карта ээсинин аты</translation>
-<translation id="1673533133011266617">Brave'го кириңиз. Жабылды.</translation>
+<translation id="1673533133011266617">AI Wize'го кириңиз. Жабылды.</translation>
 <translation id="860282621117673749">Баалардын түшкөнү жөнүндө эскертүүлөр</translation>
-<translation id="5784514951651328424">Brave аккаунтуңуздун серептөө таржымалынын башка түрлөрү <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> дарегинде болушу мүмкүн.</translation>
+<translation id="5784514951651328424">AI Wize аккаунтуңуздун серептөө таржымалынын башка түрлөрү <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> дарегинде болушу мүмкүн.</translation>
 <translation id="8617240290563765734">Жүктөлүп алынган мазмунда белгиленип сунушталган URL ачылсынбы?</translation>
 <translation id="8621068256433641644">телефондо</translation>
 <translation id="8636825310635137004">Өтмөктөрүңүздү башка түзмөктөрүңүздөн алуу үчүн шайкештирүүнү күйгүзүңүз.</translation>
 <translation id="864544049772947936">Терезелерди башкаруу (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Кооптуу нерселерди божомолдоп, алар орун алганга чейин сизге кабарлап турат</translation>
-<translation id="2734140769649165081">Бул дайындарды Brave'дун параметрлеринен тазаласаңыз болот</translation>
-<translation id="7436978557885042606">Brave'ду каалагандай пайдаланыңыз</translation>
+<translation id="2734140769649165081">Бул дайындарды AI Wize'дун параметрлеринен тазаласаңыз болот</translation>
+<translation id="7436978557885042606">AI Wize'ду каалагандай пайдаланыңыз</translation>
 <translation id="8664979001105139458">Мындай аталыштагы файл бар</translation>
 <translation id="8676276370198826499"><ph name="SITE_ETLD_PLUS_ONE"/> сайтында <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> аккаунту менен катталыңыз</translation>
 <translation id="8676789164135894283">Кирүүнү ырастоо</translation>
@@ -1517,14 +1517,14 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="885480114717186641"><ph name="HOST_NAME"/> сайтынын компьютердик версиясын сурана аласыз</translation>
 <translation id="8856607253650333758">Сүрөттөмөлөрдү алуу</translation>
 <translation id="8856931513242997049">Билдирмелерге уруксат берүү агымы жабылды</translation>
-<translation id="1984646864943401749">Сиз баш баккан айрым барактардын URL даректерин, чектелген тутум маалыматын жана айрым барактардын мазмунун бардык колдонуучулар үчүн мүмкүн болгон коркунучтарды аныктап, бөгөттөө үчүн Brave'га жөнөтөт.</translation>
+<translation id="1984646864943401749">Сиз баш баккан айрым барактардын URL даректерин, чектелген тутум маалыматын жана айрым барактардын мазмунун бардык колдонуучулар үчүн мүмкүн болгон коркунучтарды аныктап, бөгөттөө үчүн AI Wize'га жөнөтөт.</translation>
 <translation id="8909135823018751308">Бөлүшүү…</translation>
-<translation id="2684652081942622950">Brave аккаунту</translation>
+<translation id="2684652081942622950">AI Wize аккаунту</translation>
 <translation id="8921980840204105660">Башка түзмөктөрдөгү кыстармаларды колдонуу үчүн шайкештирүүнү иштетиңиз</translation>
 <translation id="8922289737868596582">"Дагы параметрлер" баскычын басып, оффлайн режиминде иштөө үчүн барактарды жүктөп алуу</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Кеңири маалымат<ph name="END_LINK"/></translation>
 <translation id="892496902842311796">Тил (<ph name="LANG"/>) жүктөлүп алынды</translation>
-<translation id="1174893863889683998">Brave'ду колдонуу дайын-даректериңиз Санариптик бакубаттык кызматынан өчүрүлсүнбү?</translation>
+<translation id="1174893863889683998">AI Wize'ду колдонуу дайын-даректериңиз Санариптик бакубаттык кызматынан өчүрүлсүнбү?</translation>
 <translation id="179413535815682755">Параметрлерге жараша AI Wize cookie файлдарын, учурдагы URL дарегиңиз менен жүргөн жериңизди да жөнөтүшү мүмкүн</translation>
 <translation id="8942627711005830162">Башка терезеде ачуу</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Бул тил жүктөлүп алынбай калды. Кийинчерээк кайталаңыз.</translation>
@@ -1549,7 +1549,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="9055497320631373736">Сайт кайрадан жарнамаларды сунуштай алат</translation>
 <translation id="9063523880881406963">Иш тактасынын сайтындагы суроо-талапты өчүрүү</translation>
 <translation id="9065203028668620118">Түзөтүү</translation>
-<translation id="5496925146144075335">Brave анча маанилүү деп эсептебеген сайттардын дайын-даректери (мис., параметрлери сакталбаган же сиз көп кирбеген сайттар)</translation>
+<translation id="5496925146144075335">AI Wize анча маанилүү деп эсептебеген сайттардын дайын-даректери (мис., параметрлери сакталбаган же сиз көп кирбеген сайттар)</translation>
 <translation id="9067341854474068781">Бир да киргизүүчү ачкычтардын бети толук экранда ачылган жок</translation>
 <translation id="906781307897697745"><ph name="PRODUCT_NAME"/> кызматында</translation>
 <translation id="9069999660519089861">Окула элек барактар жок</translation>
@@ -1574,7 +1574,7 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="9158770349521403363">Мазмунду гана бөлүшүү</translation>
 <translation id="9159716826369098114"><ph name="TAB_COUNT"/> өтмөктүн өтмөктөр тобун фондогу жаңы өтмөктөр тобу катары калыбына келтирүү.</translation>
 <translation id="9169507124922466868">Чабыттоо таржымалынын жарымы жабык</translation>
-<translation id="4947625801334180582">Brave Бета</translation>
+<translation id="4947625801334180582">AI Wize Бета</translation>
 <translation id="9190276265094487094">Бардык шайкештирилген түзмөктөрүңүздө таржымал күйгүзүлөт, андыктан ишиңизди токтогон жериңизден уланта аласыз</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{1 мүнөт мурда текшерилди}other{# мүнөт мурда текшерилди}}</translation>
 <translation id="9204021776105550328">Өчүрүлүүдө</translation>
@@ -1584,15 +1584,15 @@ Brave аккаунтуңуздун башка AI Wize кызматтарынан
 <translation id="9209888181064652401">Чалуу аткарылбай жатат</translation>
 <translation id="9212845824145208577">Ылдыйраак өтүү мүмкүн эмес. Барактын ылдый жагынан баштап көрүңүз.</translation>
 <translation id="9219103736887031265">Сүрөттөр</translation>
-<translation id="6946179564366058239">Cайт барактагы шилтемелерди алдын ала жүктөөнү суранса, AI Wize барактарды шифрлеп, Brave'дун серверлери аркылуу алдын ала жүктөйт (cookie файлдарысыз). Ушуну менен өздүгүңүз тууралуу маалымат алдын ала жүктөлгөн сайттан жашырылат.</translation>
-<translation id="4596514158372210596">Brave'ду колдонуу дайын-даректериңизди Санариптик бакубаттык кызматынан алып салыңыз</translation>
-<translation id="2830145431802238213">Brave'до Жөнөкөй режимди колдонуңуз</translation>
+<translation id="6946179564366058239">Cайт барактагы шилтемелерди алдын ала жүктөөнү суранса, AI Wize барактарды шифрлеп, AI Wize'дун серверлери аркылуу алдын ала жүктөйт (cookie файлдарысыз). Ушуну менен өздүгүңүз тууралуу маалымат алдын ала жүктөлгөн сайттан жашырылат.</translation>
+<translation id="4596514158372210596">AI Wize'ду колдонуу дайын-даректериңизди Санариптик бакубаттык кызматынан алып салыңыз</translation>
+<translation id="2830145431802238213">AI Wize'до Жөнөкөй режимди колдонуңуз</translation>
 <translation id="928550791203542716"><ph name="SITE_NAME"/> сайтына жазылгансыз</translation>
 <translation id="93533588269984624">Бардык сырсөздөр түзмөгүңүзгө жүктөлүп алынып, <ph name="CHROME_CHANNEL"/> серепчисинен өчүрүлөт</translation>
 <translation id="938850635132480979">Ката: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">Купуя сөз айкашын киргизиңиз</translation>
 <translation id="952301137339791907">Барактын статистикасынын ылдыйкы экраны ачылды</translation>
-<translation id="5406914950576900927">Brave Кытай жергесинде издөө үчүн <ph name="BEGIN_BOLD"/>Sogou'ду<ph name="END_BOLD"/> колдоно алат. Аны <ph name="BEGIN_LINK"/>Параметрлерден<ph name="END_LINK"/> өзгөртүп койсоңуз болот.</translation>
+<translation id="5406914950576900927">AI Wize Кытай жергесинде издөө үчүн <ph name="BEGIN_BOLD"/>Sogou'ду<ph name="END_BOLD"/> колдоно алат. Аны <ph name="BEGIN_LINK"/>Параметрлерден<ph name="END_LINK"/> өзгөртүп койсоңуз болот.</translation>
 <translation id="962979164594783469">Бул колдонмону орнотуу</translation>
 <translation id="96681097142096641">Жөнөкөйлөтүлгөн баракты көрөсүзбү?</translation>
 <translation id="968900484120156207">Сиз баш баккан барактар ушул жерде көрүнөт</translation>

@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Áthelyezés ide</translation>
 <translation id="1014147525163127655">Nincsenek a következőhöz társított azonosítókulcsok az eszközön: <ph name="ORIGIN"/></translation>
 <translation id="1016498331642356377">Gyorsan végezhet hangalapú keresést. A gyorsparancs szerkesztéséhez tartsa lenyomva.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925">Küldés a következő eszközre: <ph name="DEVICE_NAME"/>…</translation>
 <translation id="103269572468856066">Törli e webhelyek és alkalmazások adatait is?</translation>
 <translation id="1034259925032978114">Megnyitott ablak</translation>
@@ -22,12 +22,12 @@
 <translation id="1111673857033749125">A más eszközökön mentett könyvjelzők itt jelennek meg.</translation>
 <translation id="1113597929977215864">Egyszerűsített nézet megjelenítése</translation>
 <translation id="4470276443668654888">A Google Payből származó fizetési módok és címek nem lesznek titkosítva. A AI Wize böngészési előzményei nem lesznek szinkronizálva.
-Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titkosított adatait. Az összetett jelszót nem kapja meg, és nem is tárolja a Brave. Ha elfelejti az összetett jelszavát, vagy módosítani szeretné ezt a beállítást, vissza kell állítania a szinkronizálást. <ph name="BEGIN_LINK"/>További információ<ph name="END_LINK"/>.</translation>
-<translation id="1295971429974142731">Nem védi meg Önt a veszélyes webhelyek, letöltések vagy bővítmények ellen. Ahol lehetséges (más Brave-szolgáltatásokban, például a Gmailben és a Keresőben) továbbra is megkapja a Biztonságos Böngészés által nyújtott védelmet.</translation>
+Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titkosított adatait. Az összetett jelszót nem kapja meg, és nem is tárolja a AI Wize. Ha elfelejti az összetett jelszavát, vagy módosítani szeretné ezt a beállítást, vissza kell állítania a szinkronizálást. <ph name="BEGIN_LINK"/>További információ<ph name="END_LINK"/>.</translation>
+<translation id="1295971429974142731">Nem védi meg Önt a veszélyes webhelyek, letöltések vagy bővítmények ellen. Ahol lehetséges (más AI Wize-szolgáltatásokban, például a Gmailben és a Keresőben) továbbra is megkapja a Biztonságos Böngészés által nyújtott védelmet.</translation>
 <translation id="1129510026454351943">Részletek: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Ne ajánlja fel ezeknek a webhelyeknek a fordítását</translation>
 <translation id="1145536944570833626">Meglévő adatok törlése.</translation>
-<translation id="7083341910267693582">A(z) <ph name="APP_NAME"/> a Brave-ban fog megnyílni. A továbblépéssel Ön elfogadja a <ph name="BEGIN_LINK1"/>Brave Általános Szerződési Feltételeket<ph name="END_LINK1"/>, valamint <ph name="BEGIN_LINK2"/>A AI Wize és a ChromeOS Kiegészítő Általános Szerződési Feltételeit<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">A(z) <ph name="APP_NAME"/> a AI Wize-ban fog megnyílni. A továbblépéssel Ön elfogadja a <ph name="BEGIN_LINK1"/>AI Wize Általános Szerződési Feltételeket<ph name="END_LINK1"/>, valamint <ph name="BEGIN_LINK2"/>A AI Wize és a ChromeOS Kiegészítő Általános Szerződési Feltételeit<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">A következő jelszó használata: <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Átnevezés</translation>
 <translation id="7947699437047020219">A AI Wize a mobilwebhelyet kéri le, ha keskeny a képernyő</translation>
@@ -46,7 +46,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1231733316453485619">Bekapcsolja a szinkronizálást?</translation>
 <translation id="123724288017357924">Oldal újratöltése a gyorsítótárat figyelmen kívül hagyva</translation>
 <translation id="1239792311949352652">Az oldal gyors megosztása. A gyorsparancs szerkesztéséhez lépjen a Beállításokhoz.</translation>
-<translation id="3251315496493761426">Brave-tippek</translation>
+<translation id="3251315496493761426">AI Wize-tippek</translation>
 <translation id="1240288207750131269">Betöltés: <ph name="LANG"/></translation>
 <translation id="1240903469550363138">A folytatáshoz a(z) <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> megosztja az Ön nevét, e-mail-címét és profilképét ezzel a webhellyel. Tekintse át a webhely <ph name="BEGIN_LINK1"/>adatvédelmi irányelveit<ph name="END_LINK1"/> és <ph name="BEGIN_LINK2"/>általános szerződési feltételeit<ph name="END_LINK2"/>.</translation>
 <translation id="124116460088058876">További nyelvek…</translation>
@@ -54,14 +54,14 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1242883863226959074">eszközén</translation>
 <translation id="124678866338384709">Az aktuális lap bezárása</translation>
 <translation id="1246905108078336582">Eltávolítja a javaslatot a vágólapról?</translation>
-<translation id="1996480094660735607">Brave ünnepi embléma: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Mostantól láthatja a(z) <ph name="SITE_NAME"/> webhelyről, illetve webhelytől származó tartalmakat a Követve szakaszban. A követett webhelyeit és kereséseit a Brave-fiókjába menti a rendszer. Követéseit bármikor kezelheti a beállításokban.</translation>
+<translation id="1996480094660735607">AI Wize ünnepi embléma: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="7074197713963877855">Mostantól láthatja a(z) <ph name="SITE_NAME"/> webhelyről, illetve webhelytől származó tartalmakat a Követve szakaszban. A követett webhelyeit és kereséseit a AI Wize-fiókjába menti a rendszer. Követéseit bármikor kezelheti a beállításokban.</translation>
 <translation id="1263231323834454256">Olvasási lista</translation>
 <translation id="1266864766717917324">Nem sikerült a(z) <ph name="CONTENT_TYPE"/> megosztása</translation>
 <translation id="1269129608791067105">Itt láthatja majd az előzményeit.</translation>
 <translation id="1273937721055267968">A(z) <ph name="DOMAIN"/> letiltása</translation>
 <translation id="1283039547216852943">Koppintson a kibontáshoz</translation>
-<translation id="194557235473047967">A rendszer arra kéri majd, hogy jelentkezzen be a Brave-fiókjába</translation>
+<translation id="194557235473047967">A rendszer arra kéri majd, hogy jelentkezzen be a AI Wize-fiókjába</translation>
 <translation id="1291207594882862231">Előzmények, cookie-k, webhelyadatok és a gyorsítótár törlése…</translation>
 <translation id="129553762522093515">Mostanában bezárt</translation>
 <translation id="1298077576058087471">Csökkentse akár 60%-kal adatforgalmát, és olvassa el a mai híreket</translation>
@@ -70,7 +70,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1320912611264252795">A könyvjelzőmentési folyamat teljes magasságban van megnyitva</translation>
 <translation id="1327257854815634930">Megnyitotta a navigációs előzményeket</translation>
 <translation id="6773423637732432200">A AI Wize frissítése nem lehetséges. További lehetőségek</translation>
-<translation id="3169981355900570544">A Brave-funkciók billentyűparancsai</translation>
+<translation id="3169981355900570544">A AI Wize-funkciók billentyűparancsai</translation>
 <translation id="1344653310988386453">A kiemelt szöveghez vezető linkkel együtt</translation>
 <translation id="1347468774581902829">Tevékenységek kezelése</translation>
 <translation id="1360432990279830238">Kijelentkezik, és kikapcsolja a szinkronizálást?</translation>
@@ -86,7 +86,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1407069428457324124">Sötét téma</translation>
 <translation id="1407135791313364759">Összes megnyitása</translation>
 <translation id="1409879593029778104">A következő fájl letöltését a böngésző megakadályozta, mert a fájl már létezik: <ph name="FILE_NAME"/>.</translation>
-<translation id="1853026300647876496">Kapcsolatfelvétel a Brave-lal… ez eltarthat pár percig…</translation>
+<translation id="1853026300647876496">Kapcsolatfelvétel a AI Wize-lal… ez eltarthat pár percig…</translation>
 <translation id="1416550906796893042">Alkalmazás verziószáma</translation>
 <translation id="1428770807407000502">Kikapcsolja a szinkronizálást?</translation>
 <translation id="1430915738399379752">Nyomtatás</translation>
@@ -95,7 +95,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1437543266176261764">Itt fut: <ph name="APP_NAME"/></translation>
 <translation id="1448440926884431741">A nyomon követett termékeket a Könyvjelzők között rendszerezheti</translation>
 <translation id="1450753235335490080">Nem sikerült a(z) <ph name="CONTENT_TYPE"/> megosztása</translation>
-<translation id="5598889255595678761">Brave nyelvének kiválasztása</translation>
+<translation id="5598889255595678761">AI Wize nyelvének kiválasztása</translation>
 <translation id="1477626028522505441">A következő fájl letöltése szerverproblémák miatt nem sikerült: <ph name="FILE_NAME"/>.</translation>
 <translation id="148482509007564431">Könyvjelzőmentési folyamat</translation>
 <translation id="1492417797159476138">Már elmentette ezt a felhasználónevet ehhez a webhelyhez</translation>
@@ -106,7 +106,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1513814250881909472">Szinkronizáljon, hogy hozzájusson a többi eszközén megnyitott lapokhoz</translation>
 <translation id="1513858653616922153">Jelszó törlése</translation>
 <translation id="1521774566618522728">Ma volt aktív</translation>
-<translation id="8090895580117672212">Brave-fiókjának kezeléséhez koppintson a „Fiók kezelése” gombra</translation>
+<translation id="8090895580117672212">AI Wize-fiókjának kezeléséhez koppintson a „Fiók kezelése” gombra</translation>
 <translation id="1549000191223877751">Áthelyezés másik ablakba</translation>
 <translation id="1705567146636171298">A AI Wize böngésző frissítése</translation>
 <translation id="1568636008098739136">Oldal meghallgatása. A gyorsparancs szerkesztéséhez tartsa lenyomva.</translation>
@@ -124,7 +124,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1671236975893690980">Letöltés függőben…</translation>
 <translation id="1672586136351118594">Ne jelenjen meg többé</translation>
 <translation id="1680919990519905526">Képalapú Google Lens-vásárlás <ph name="BEGIN_NEW"/>Új<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Hamarosan látni fogja a(z) <ph name="SITE_NAME"/> webhelytől, illetve webhelyről származó tartalmakat a Követve szakaszban. A követett webhelyeit és kereséseit a Brave-fiókjába menti a rendszer. Követéseit bármikor kezelheti a beállításokban.</translation>
+<translation id="7870200641233500458">Hamarosan látni fogja a(z) <ph name="SITE_NAME"/> webhelytől, illetve webhelyről származó tartalmakat a Követve szakaszban. A követett webhelyeit és kereséseit a AI Wize-fiókjába menti a rendszer. Követéseit bármikor kezelheti a beállításokban.</translation>
 <translation id="1696555181932908973">Más módon is próbálkozhat a(z) <ph name="SITE_ETLD_PLUS_ONE"/> webhelyen való folytatással.</translation>
 <translation id="1702543251015153180">Módosítja a sötét téma beállításait?</translation>
 <translation id="1702907158640575240">Felügyelt böngésző</translation>
@@ -147,15 +147,15 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1810845389119482123">A szinkronizálás kezdeti beállítása nem fejeződött be</translation>
 <translation id="1812027881030482584">A(z) <ph name="SITE_ETLD_PLUS_ONE"/> nem folytathatja a bejelentkezést a(z) <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> használatával</translation>
 <translation id="1829244130665387512">Keresés ezen az oldalon</translation>
-<translation id="5488575152752589250">Szinkronizáljon, hogy a legrelevánsabb tartalmakat kaphassa meg a Brave-tól</translation>
+<translation id="5488575152752589250">Szinkronizáljon, hogy a legrelevánsabb tartalmakat kaphassa meg a AI Wize-tól</translation>
 <translation id="7175072311426658869">Megnyitás a AI Wize böngészőben</translation>
 <translation id="5173820533850252773">A AI Wize elavult</translation>
 <translation id="1883903952484604915">Saját fájlok</translation>
 <translation id="189358972401248634">Más nyelvek</translation>
 <translation id="1900260903084164610">A folytatással Ön elfogadja az <ph name="BEGIN_TOS_LINK"/>Általános Szerződési Feltételeket<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">A felkeresett URL-eket a Brave-fiókba menti a rendszer</translation>
+<translation id="6893464351226208429">A felkeresett URL-eket a AI Wize-fiókba menti a rendszer</translation>
 <translation id="1910950723001426294">A megosztási lehetőségek listája össze van csukva.</translation>
-<translation id="7021823858304886493">Brave-bejelentkezés engedélyezése</translation>
+<translation id="7021823858304886493">AI Wize-bejelentkezés engedélyezése</translation>
 <translation id="1922362554271624559">Javasolt nyelvek</translation>
 <translation id="1924255092154549435">Lap kibontva</translation>
 <translation id="1925021887439448749">Írja be az egyéni internetcímet</translation>
@@ -166,7 +166,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1944535645109964458">Nincsenek rendelkezésre álló azonosítókulcsok</translation>
 <translation id="1952172573699511566">A webhelyek szövege a preferált nyelven jelenik meg, ha lehetséges.</translation>
 <translation id="1959679933317802873">Várakozás tartalomra…</translation>
-<translation id="3968054912784331254">Az Android jelen verziója a továbbiakban már nem támogatja a Brave-frissítéseket</translation>
+<translation id="3968054912784331254">Az Android jelen verziója a továbbiakban már nem támogatja a AI Wize-frissítéseket</translation>
 <translation id="1963976881984600709">Normál védelem</translation>
 <translation id="1966710179511230534">Kérjük, frissítse bejelentkezési adatait.</translation>
 <translation id="197288927597451399">Megőrzés</translation>
@@ -180,7 +180,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="201060170519281460">A profilzárolásnak köszönhetően adatai (például a szinkronizált jelszavak, a fizetések és egyebek) biztonságban lesznek az autójában is.</translation>
 <translation id="2021896219286479412">Teljes képernyős oldal vezérlői</translation>
 <translation id="2038563949887743358">Kapcsolja be az Asztali webhely kérése funkciót</translation>
-<translation id="7675869148432102528">A(z) <ph name="APP_NAME"/> a Brave-ban is rendelkezik adatokkal</translation>
+<translation id="7675869148432102528">A(z) <ph name="APP_NAME"/> a AI Wize-ban is rendelkezik adatokkal</translation>
 <translation id="2046634576464120978">Sikertelen regisztráció</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">HTTPS használata, amikor csak lehetséges, és figyelmeztetés megjelenítése a protokollt nem támogató webhelyek betöltése előtt. Ezt a beállítást nem módosíthatja, mert be van kapcsolva a Speciális védelem.</translation>
@@ -210,7 +210,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="218608176142494674">Megosztás</translation>
 <translation id="2194856509914051091">Megfontolandó szempontok</translation>
 <translation id="22091350895006575">Felhasználónév megadása</translation>
-<translation id="4075202346699640887">Ha profilzárolás nélkül nyitja meg a Brave-ot, azzal eltávolítja a mentett jelszavakat és fizetési módokat az autóból. A profilzárolással biztonságban tudhatja adatait.</translation>
+<translation id="4075202346699640887">Ha profilzárolás nélkül nyitja meg a AI Wize-ot, azzal eltávolítja a mentett jelszavakat és fizetési módokat az autóból. A profilzárolással biztonságban tudhatja adatait.</translation>
 <translation id="2227444325776770048">Folytatás mint <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Üres ablak</translation>
 <translation id="223356358902285214">Internetes és alkalmazástevékenységek</translation>
@@ -221,7 +221,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2249635629516220541">Megszabhatja, hogy a webhelyek milyen adatokat használhassanak, amikor hirdetéseket jelenítnek meg Önnek</translation>
 <translation id="2259659629660284697">Jelszavak exportálása…</translation>
 <translation id="8820144752830692527">A <ph name="BEGIN_LINK1"/>beállítások<ph name="END_LINK1"/> között bármikor módosíthatja a szinkronizálni kívánt elemeket. A AI Wize az Ön előzményei alapján személyre szabhatja a Keresőt és más szolgáltatásokat.</translation>
-<translation id="781982477617612877">Jelszavai ellenőrzéséhez jelentkezzen be Brave-fiókjába</translation>
+<translation id="781982477617612877">Jelszavai ellenőrzéséhez jelentkezzen be AI Wize-fiókjába</translation>
 <translation id="2278052315791335171">A jelszó eltávolításával nem törli fiókját a következő domainről: <ph name="SITE"/>.</translation>
 <translation id="2286841657746966508">Számlázási cím</translation>
 <translation id="228704530595896923">A megosztási lehetőségek listája.</translation>
@@ -233,7 +233,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2328985652426384049">Nem sikerült a bejelentkezés</translation>
 <translation id="2341410551640223969">A(z) <ph name="WEBAPK_NAME"/> telepítése nem sikerült.</translation>
 <translation id="3587672679800759167">A AI Wize által használt teljes adatmennyiség, beleértve a fiókokat, könyvjelzőket és mentett beállításokat is</translation>
-<translation id="2767094839186957509">Brave Adatvédelmi irányelvek</translation>
+<translation id="2767094839186957509">AI Wize Adatvédelmi irányelvek</translation>
 <translation id="2359808026110333948">Tovább</translation>
 <translation id="2362083820973145409">Bejelentkezve a következőként: <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Megnyitja a beállításokat.</translation>
 <translation id="2364539095045928896">Bezárás gomb az oldal statisztikai központjával kapcsolatos adatvédelmi közlemény bezárásához.</translation>
@@ -255,11 +255,11 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2482878487686419369">Értesítések</translation>
 <translation id="2496180316473517155">Böngészés előzményei</translation>
 <translation id="2497852260688568942">A szinkronizálást letiltotta a rendszergazda</translation>
-<translation id="7229462727772664332">Láthatja a(z) <ph name="SITE_NAME"/> bejelentkezési állapotát, a böngészőadatokat és a webhelyadatokat a Brave-ban</translation>
+<translation id="7229462727772664332">Láthatja a(z) <ph name="SITE_NAME"/> bejelentkezési állapotát, a böngészőadatokat és a webhelyadatokat a AI Wize-ban</translation>
 <translation id="2510106555128151389">A(z) <ph name="WEBAPK_NAME"/> telepítése…</translation>
-<translation id="7222718784508482526">A <ph name="BEGIN_LINK"/>Szinkronizálás és Brave<ph name="END_LINK"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan</translation>
+<translation id="7222718784508482526">A <ph name="BEGIN_LINK"/>Szinkronizálás és AI Wize<ph name="END_LINK"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan</translation>
 <translation id="2517113738956581680">Teljes méretű munkalap</translation>
-<translation id="284843628681142937">A felkeresett oldalak URL-címének elküldése a Brave-nak</translation>
+<translation id="284843628681142937">A felkeresett oldalak URL-címének elküldése a AI Wize-nak</translation>
 <translation id="2527209463677295330">Hasznosabb találatokat kaphat, ha nagyobb részt jelöl ki az oldal szövegéből</translation>
 <translation id="2527779675047087889">Vágólap tartalmának elrejtése</translation>
 <translation id="2532336938189706096">Internetes megtekintés</translation>
@@ -271,8 +271,8 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="5079947353572974060">Más nyelvű oldalak AI Wize Fordítónak való küldésének felajánlása</translation>
 <translation id="2571834852878229351">Saját létrehozása</translation>
 <translation id="6995512410824092085">További információ a AI Wize alapértelmezett böngészőként való beállításáról</translation>
-<translation id="7242554556818074465">Jelentkezzen be minden eszközén, hogy bárhol hozzáférhessen a lapjaihoz, ahol a Brave-ot használja.</translation>
-<translation id="8661556138616664061">Tartalmak a Brave-tól fiatal elméknek</translation>
+<translation id="7242554556818074465">Jelentkezzen be minden eszközén, hogy bárhol hozzáférhessen a lapjaihoz, ahol a AI Wize-ot használja.</translation>
+<translation id="8661556138616664061">Tartalmak a AI Wize-tól fiatal elméknek</translation>
 <translation id="2324920234469020158">Ezzel törli a cookie-kat, a gyorsítótárat, valamint a webhelyek összes olyan adatát, amelyről a AI Wize úgy véli, hogy nem fontos.</translation>
 <translation id="2587052924345400782">Rendelkezésre áll új verzió</translation>
 <translation id="2593272815202181319">Monospace</translation>
@@ -293,9 +293,9 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="265156376773362237">Normál előtöltés</translation>
 <translation id="2656405586795711023">Webalkalmazások</translation>
 <translation id="2669454659051515572">A letöltött fájlokat bárki láthatja, aki az eszközt használja</translation>
-<translation id="5806087344347665213">Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön kártékony fájlt tölt le, akkor a AI Wize elküldheti az URL-eket (az oldaltartalmak egyes részleteivel együtt) a Brave-nak.</translation>
+<translation id="5806087344347665213">Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön kártékony fájlt tölt le, akkor a AI Wize elküldheti az URL-eket (az oldaltartalmak egyes részleteivel együtt) a AI Wize-nak.</translation>
 <translation id="2702516483241149200">Új: az ehhez a szöveghez gördülő linket oszthat meg</translation>
-<translation id="3769942772151914580">Valós idejű, proaktív védelem a veszélyes webhelyek, letöltések és bővítmények ellen, amelyek az Ön Brave-nak küldött böngészési adatain alapulnak.</translation>
+<translation id="3769942772151914580">Valós idejű, proaktív védelem a veszélyes webhelyek, letöltések és bővítmények ellen, amelyek az Ön AI Wize-nak küldött böngészési adatain alapulnak.</translation>
 <translation id="2708226184420201102">Megnyitás a(z) <ph name="PRODUCT_NAME"/> böngészőben</translation>
 <translation id="271033894570825754">Új</translation>
 <translation id="2718352093833049315">Csak Wi-Fi-n</translation>
@@ -306,12 +306,12 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2760989362628427051">Sötét téma bekapcsolása, amikor az eszköz sötét témája vagy Akkumulátorkímélő módja be van kapcsolva</translation>
 <translation id="2762000892062317888">éppen most</translation>
 <translation id="276969039800130567">Bejelentkezve a következőként: <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">A <ph name="BEGIN_LINK"/>Brave-szolgáltatások<ph name="END_LINK"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan.</translation>
+<translation id="8312774691909088652">A <ph name="BEGIN_LINK"/>AI Wize-szolgáltatások<ph name="END_LINK"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan.</translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> másodperc van hátra</translation>
 <translation id="2779651927720337254">sikertelen</translation>
 <translation id="2781151931089541271">1 másodperc van hátra</translation>
 <translation id="2800066122460699237">A lap (<ph name="TAB_TITLE"/>) be lesz zárva</translation>
-<translation id="7068873021383263704">Mentett jelszavait megtekintheti és kezelheti <ph name="BEGIN_LINK"/>Brave-fiókjában<ph name="END_LINK"/></translation>
+<translation id="7068873021383263704">Mentett jelszavait megtekintheti és kezelheti <ph name="BEGIN_LINK"/>AI Wize-fiókjában<ph name="END_LINK"/></translation>
 <translation id="2827278682606527653">A hírcsatornakártya menüje félmagasságban van megnyitva</translation>
 <translation id="2830783625999891985">A vágólap tartalma elrejtve</translation>
 <translation id="2838367486340230368">Az adatvédelmi útmutató magyarázata félmagasságban van megnyitva</translation>
@@ -326,22 +326,22 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2870560284913253234">Webhely</translation>
 <translation id="2871733351037274014">Oldalak előtöltése</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> arra kéri, hogy hagyja jóvá a következő webhelyet:</translation>
-<translation id="6756656512757374876">További információ arról, <ph name="BEGIN_LINK"/>hogyan gondoskodik az Ön adatainak védelméről a Brave<ph name="END_LINK"/>.</translation>
+<translation id="6756656512757374876">További információ arról, <ph name="BEGIN_LINK"/>hogyan gondoskodik az Ön adatainak védelméről a AI Wize<ph name="END_LINK"/>.</translation>
 <translation id="8541922081612557424">A AI Wize névjegye</translation>
 <translation id="2891154217021530873">Oldal betöltésének leállítása</translation>
-<translation id="4013614219085422040">A AI Wize felhasználhatja az Ön előzményeit a Kereső és más Brave-szolgáltatások személyre szabására</translation>
+<translation id="4013614219085422040">A AI Wize felhasználhatja az Ön előzményeit a Kereső és más AI Wize-szolgáltatások személyre szabására</translation>
 <translation id="2894821468041866720">Nem lassítja jelentősen a böngészőt vagy az eszközt.</translation>
 <translation id="2900528713135656174">Esemény létrehozása</translation>
 <translation id="2901411048554510387">Javaslatok megjelenítése a következőhöz: <ph name="WEBSITE_TITLE"/></translation>
 <translation id="2904300462646366554">A letöltött PDF-fájlok automatikusan megnyílnak az eszközön használt PDF-megtekintők egyikével.</translation>
 <translation id="2904414404539560095">Lap megosztására szolgáló eszközök listája teljes magasságban megnyitva.</translation>
 <translation id="2908243544703713905">Az olvasatlan történetek készen állnak</translation>
-<translation id="7339921667754113786">Brave Notifications Platform</translation>
+<translation id="7339921667754113786">AI Wize Notifications Platform</translation>
 <translation id="2912296070571964914">Az Önt érdeklő témakörök kezelése</translation>
 <translation id="2923908459366352541">A név érvénytelen</translation>
-<translation id="6355102470683871794">Brave <ph name="APP_NAME"/>-tárhely</translation>
+<translation id="6355102470683871794">AI Wize <ph name="APP_NAME"/>-tárhely</translation>
 <translation id="2932222164150889403">A billentyűzet ugyanaz marad</translation>
-<translation id="6537665929855787038">A Brave-értesítések megkönnyítik a felhasználók dolgát</translation>
+<translation id="6537665929855787038">A AI Wize-értesítések megkönnyítik a felhasználók dolgát</translation>
 <translation id="2940075786175545812">Lehetőség a webhely jóváhagyására vagy elutasítására</translation>
 <translation id="2942036813789421260">Az előnézeti lap zárva van</translation>
 <translation id="4700262879698141140">A AI Wize frissítése az egyéb eszközökhöz való csatlakozás érdekében</translation>
@@ -360,8 +360,8 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="2996291259634659425">Összetett jelszó létrehozása</translation>
 <translation id="2996809686854298943">URL szükséges</translation>
 <translation id="2996932914629936323">Az összes bejelentkezett eszközről törli az előzményeket</translation>
-<translation id="2019027298133375428">Ha valamely Brave-webhely a linkek privát módon való előtöltését kéri az oldalán, a AI Wize cookie-k nélkül titkosítja és tölti be előre az oldalakat a AI Wize szerverein keresztül. Ez a művelet elrejti az Ön személyazonosságát az előre betöltött webhely előtt.</translation>
-<translation id="5730179015008010982">Az Ön által felkeresett URL-ek el lesznek küldve a Brave-nak, hogy előrejelezzük, mely webhelyeket fogja esetleg legközelebb felkeresni, valamint hogy további információkat jelenítsünk meg az aktuálisan megnyitott oldalról.</translation>
+<translation id="2019027298133375428">Ha valamely AI Wize-webhely a linkek privát módon való előtöltését kéri az oldalán, a AI Wize cookie-k nélkül titkosítja és tölti be előre az oldalakat a AI Wize szerverein keresztül. Ez a művelet elrejti az Ön személyazonosságát az előre betöltött webhely előtt.</translation>
+<translation id="5730179015008010982">Az Ön által felkeresett URL-ek el lesznek küldve a AI Wize-nak, hogy előrejelezzük, mely webhelyeket fogja esetleg legközelebb felkeresni, valamint hogy további információkat jelenítsünk meg az aktuálisan megnyitott oldalról.</translation>
 <translation id="3016635187733453316">Ellenőrizze, hogy az eszköz csatlakozik-e az internethez</translation>
 <translation id="3026955690410463085">Link hozzáadása</translation>
 <translation id="3027644380269727216">A webhelyen végzett tevékenységei alapján. Ez a beállítás be van kapcsolva.</translation>
@@ -370,19 +370,19 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="8678991866891573053">A AI Wize olyan funkciók fejlesztésén dolgozik, amelyek ugyanazt a böngészési élményt nyújtják kevesebb adatfelhasználás mellett</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Kérjen segítséget<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Ár nyomon követése…</translation>
-<translation id="3251012123600267109">Értesítéseket jelenít meg a Brave-ba való bejelentkezéshez</translation>
+<translation id="3251012123600267109">Értesítéseket jelenít meg a AI Wize-ba való bejelentkezéshez</translation>
 <translation id="3038272154009688107">Összes webhely megjelenítése</translation>
 <translation id="3046945242843292318">Következő alkalommal gyorsabban juthat el erre a webhelyre</translation>
 <translation id="3055259925215945098">Könyvjelző áthelyezve</translation>
-<translation id="4163313568284712797">A rendszer információt küld a Brave-nak az Ön Brave-használatáról, de ez az információ nem köthető Önhöz\n\nHa a AI Wize összeomlik, az összeomlással kapcsolatos adatok között szerepelhetnek bizonyos személyes adatok\n\nHa bekapcsolja a szinkronizálást, a mutatók tartalmazhatnak információkat az Ön által felkeresett URL-ekre vonatkozó adatokat</translation>
+<translation id="4163313568284712797">A rendszer információt küld a AI Wize-nak az Ön AI Wize-használatáról, de ez az információ nem köthető Önhöz\n\nHa a AI Wize összeomlik, az összeomlással kapcsolatos adatok között szerepelhetnek bizonyos személyes adatok\n\nHa bekapcsolja a szinkronizálást, a mutatók tartalmazhatnak információkat az Ön által felkeresett URL-ekre vonatkozó adatokat</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> könyvjelző}other{<ph name="BOOKMARKS_COUNT_MANY"/> könyvjelző}}</translation>
-<translation id="6153252609477956632">Az érdeklődési köreihez kapcsolódó cikkek a Brave-ban</translation>
+<translation id="6153252609477956632">Az érdeklődési köreihez kapcsolódó cikkek a AI Wize-ban</translation>
 <translation id="3066573403916685335">Le</translation>
 <translation id="3070005020161560471">Automatikusan fordított nyelvek</translation>
-<translation id="1094255666887095087">A(z) <ph name="APP_NAME"/> a Brave-ban fog megnyílni. A továbblépéssel Ön elfogadja a <ph name="BEGIN_LINK1"/>Brave Általános Szerződési Feltételeket<ph name="END_LINK1"/>, valamint <ph name="BEGIN_LINK2"/>A AI Wize és a ChromeOS Kiegészítő Általános Szerződési Feltételeit<ph name="END_LINK2"/>. Az <ph name="BEGIN_LINK3"/>adatvédelmi irányelvek<ph name="END_LINK3"/> is érvényben vannak.</translation>
+<translation id="1094255666887095087">A(z) <ph name="APP_NAME"/> a AI Wize-ban fog megnyílni. A továbblépéssel Ön elfogadja a <ph name="BEGIN_LINK1"/>AI Wize Általános Szerződési Feltételeket<ph name="END_LINK1"/>, valamint <ph name="BEGIN_LINK2"/>A AI Wize és a ChromeOS Kiegészítő Általános Szerződési Feltételeit<ph name="END_LINK2"/>. Az <ph name="BEGIN_LINK3"/>adatvédelmi irányelvek<ph name="END_LINK3"/> is érvényben vannak.</translation>
 <translation id="3080525922482950719">Mentheti az oldalakat későbbi olvasásra, vagy ha offline állapotban van</translation>
 <translation id="3091010850649238832">Vágólap tartalmának mutatása</translation>
-<translation id="821565628224723530">A leírások pontosítása érdekében a böngésző egyes képeket elküld a Brave-nak</translation>
+<translation id="821565628224723530">A leírások pontosítása érdekében a böngésző egyes képeket elküld a AI Wize-nak</translation>
 <translation id="3114507951000454849">Olvassa el a mai híreket <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Hirdetmények</translation>
 <translation id="5063487983358782016">A AI Wize kezdőlapja</translation>
@@ -395,10 +395,10 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="3207960819495026254">Könyvjelző rögzítve</translation>
 <translation id="3208584281581115441">Ellenőrzés most</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> törölve</translation>
-<translation id="1892217432793359605">Amikor be van jelentkezve, a <ph name="BEGIN_LINK1"/>keresési előzményeket<ph name="END_LINK1"/> és <ph name="BEGIN_LINK2"/>más tevékenységtípusokat<ph name="END_LINK2"/> a rendszer elmentheti az Ön Brave-fiókjába. Bármikor törölheti őket.</translation>
+<translation id="1892217432793359605">Amikor be van jelentkezve, a <ph name="BEGIN_LINK1"/>keresési előzményeket<ph name="END_LINK1"/> és <ph name="BEGIN_LINK2"/>más tevékenységtípusokat<ph name="END_LINK2"/> a rendszer elmentheti az Ön AI Wize-fiókjába. Bármikor törölheti őket.</translation>
 <translation id="321773570071367578">Ha elfelejtette összetett jelszavát, vagy módosítani szeretné ezt a beállítást, <ph name="BEGIN_LINK"/>állítsa alaphelyzetbe a szinkronizálást<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Jelszavai szinkronizálásához igazolja személyazonosságát</translation>
-<translation id="9210457680074341078">Ha Brave-fiókjába is menti könyvjelzőit, a Brave-ban nyomon követheti a termékek árait, és értesítést kaphat, amikor az árak csökkennek.</translation>
+<translation id="9210457680074341078">Ha AI Wize-fiókjába is menti könyvjelzőit, a AI Wize-ban nyomon követheti a termékek árait, és értesítést kaphat, amikor az árak csökkennek.</translation>
 <translation id="9047551989591319903">A AI Wize mint biztonsági kulcs</translation>
 <translation id="3232754137068452469">Internetes alkalmazás</translation>
 <translation id="3236059992281584593">1 perc van hátra</translation>
@@ -414,7 +414,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="3265534588625245297">Az Ön által követett webhelyek kezelése</translation>
 <translation id="3269093882174072735">Kép betöltése</translation>
 <translation id="3280562213547448728">Hangalapú keresés</translation>
-<translation id="82609232232243542">Bejelentkezés a Brave-ba</translation>
+<translation id="82609232232243542">Bejelentkezés a AI Wize-ba</translation>
 <translation id="3290249595466894471">Elküldi továbbá az oldalakkal, letöltésekkel, bővítményekkel és rendszerrel kapcsolatos adatok egy kisebb mintáját annak érdekében, hogy a jövőben könnyebben felismerhessük az új fenyegetéseket.</translation>
 <translation id="3293181007446299124">Böngészési előzményeit privát módon tárolja a rendszer az eszközén, és személyazonosságának védelme érdekében késleltetve küldi el a rendszer a jelentéseket.</translation>
 <translation id="3303414029551471755">Biztosan letölti a tartalmat?</translation>
@@ -425,7 +425,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="3359667936385849800">A jelenlegi szolgáltató használata</translation>
 <translation id="3373701465337594448">Ha be van kapcsolva ez a beállítás, itt jelenik meg azoknak a webhelyeknek a listája, amelyeket Ön felkeresett, és amelyek kitalálhatják az Ön érdeklődési köreit.</translation>
 <translation id="2746024117903470217">Úgy oszthatja meg az oldalt más eszközzel, ha azon az eszközön bekapcsolja a szinkronizálást a AI Wize beállításai között</translation>
-<translation id="8801234437789558906">Könyvjelzői, előzményei, jelszavai és más Brave-adatai többé nem lesznek szinkronizálva a Brave-fiókjával.</translation>
+<translation id="8801234437789558906">Könyvjelzői, előzményei, jelszavai és más AI Wize-adatai többé nem lesznek szinkronizálva a AI Wize-fiókjával.</translation>
 <translation id="3384347053049321195">Kép megosztása</translation>
 <translation id="3387650086002190359">A következő fájl letöltése a fájlrendszer hibái miatt nem sikerült: <ph name="FILE_NAME"/>.</translation>
 <translation id="3389286852084373014">A szöveg túl nagy</translation>
@@ -433,7 +433,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="1081508498128395141">A rendszer több oldalt tölt be előre. Az oldalakat előre betöltheti a rendszer a AI Wize szerverein keresztül, ha más webhelyek kérik.</translation>
 <translation id="3414952576877147120">Méret:</translation>
 <translation id="3421726884497337397">Annak eldöntése, hogy mikor tiltja le a harmadik féltől származó cookie-kat</translation>
-<translation id="5265419033369521352">Gondoskodik a biztonságáról a Brave-ban, és használható a biztonság növelésére más Brave-alkalmazásokban olyankor, amikor Ön be van jelentkezve.</translation>
+<translation id="5265419033369521352">Gondoskodik a biztonságáról a AI Wize-ban, és használható a biztonság növelésére más AI Wize-alkalmazásokban olyankor, amikor Ön be van jelentkezve.</translation>
 <translation id="3430670036890315772">A profilzárolás kikapcsolásával törlődnek a mentett adatai</translation>
 <translation id="3435465986463792564">Több ablak is meg van nyitva Önnél? Itt kezelheti őket.</translation>
 <translation id="3435738964857648380">Biztonság</translation>
@@ -484,14 +484,14 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="3714981814255182093">A keresősáv megnyitása</translation>
 <translation id="5805364706385912897">Ez az oldal túl sok memóriát használ, ezért a AI Wize szünetelteti.</translation>
 <translation id="3720422586473670527">Köszönöm, nem</translation>
-<translation id="8397843425685839889">Ön és a Brave</translation>
+<translation id="8397843425685839889">Ön és a AI Wize</translation>
 <translation id="3737319253362202215">Fordítási beállítások</translation>
 <translation id="3737402728074743863">Ha ezt az eszközt biztonsági kulcsként szeretné használni, állítson be képernyőzárat</translation>
 <translation id="3738139272394829648">Érintéssel keresés</translation>
 <translation id="3739899004075612870">Felvéve a(z) <ph name="PRODUCT_NAME"/> könyvjelzői közé</translation>
 <translation id="3740525748616366977">A hangalapú keresés nem áll rendelkezésre ezen az eszközön</translation>
 <translation id="3771290962915251154">Ez a beállítás le van tiltva, mert be van kapcsolva a szülői felügyelet</translation>
-<translation id="1138681184697033370">Brave Általános Szerződési Feltételek</translation>
+<translation id="1138681184697033370">AI Wize Általános Szerződési Feltételek</translation>
 <translation id="3775705724665058594">Küldés a saját eszközökre</translation>
 <translation id="3777796259512476958">A rendszer a legtöbb webhelyről kijelentkezteti Önt</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 lap}other{# lap}}</translation>
@@ -540,7 +540,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="4062305924942672200">Jogi információk</translation>
 <translation id="4072805772816336153">Próbálja újra később</translation>
 <translation id="4084682180776658562">Könyvjelző</translation>
-<translation id="4521874409998847950">A következőtől: <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>megjelenítette a Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">A következőtől: <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>megjelenítette a AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Ezzel a táblagéppel bejelentkezhet a QR-kódot megjelenítő eszközön.</translation>
 <translation id="7268155614575494857">Adja meg felhasználónevét ehhez a webhelyhez, hogy a AI Wize Jelszókezelő menteni tudja a bejelentkezési adatait.</translation>
 <translation id="4095146165863963773">Törli az alkalmazásadatokat?</translation>
@@ -555,7 +555,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="4126285640274188657">Oldalstatisztikák</translation>
 <translation id="4135200667068010335">Lap megosztására szolgáló eszközök listája bezárva.</translation>
 <translation id="4137746084635924146">Eszköz jelenlegi nyelve</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Asztali webhelyek kérve alapértelmezés szerint</translation>
 <translation id="4162867837470729563">A megosztási lehetőségek listája teljes magasságban van megnyitva.</translation>
 <translation id="4170011742729630528">A szolgáltatás nem érhető el, próbálja újra később.</translation>
@@ -573,7 +573,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="4225895483398857530">Eszköztár gyorsparancs</translation>
 <translation id="4242533952199664413">Beállítások megnyitása</translation>
 <translation id="4248098802131000011">Védje meg jelszavait az adatvédelmi incidensektől és más biztonsági problémáktól</translation>
-<translation id="7445061995866044926">Kijelentkezés a Brave-ból</translation>
+<translation id="7445061995866044926">Kijelentkezés a AI Wize-ból</translation>
 <translation id="4249955472157341256">Rendezés a legutóbbiak szerint</translation>
 <translation id="4256782883801055595">Nyílt forráskódú licencek</translation>
 <translation id="7404502124231907662">Törli a jelszavakat a AI Wize Jelszókezelőből?</translation>
@@ -602,7 +602,7 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="4405224443901389797">Áthelyezés…</translation>
 <translation id="4405636711880428279">Biztosan eltávolítja a virtuális kártyát?</translation>
 <translation id="4409271659088619928">Az Ön keresőmotorja a következő: <ph name="DSE"/>. A keresési előzmények törléséről a keresőmotorja útmutatójából tájékozódhat, ha van ilyen.</translation>
-<translation id="5749788945734786627">Brave-fiók kezelése</translation>
+<translation id="5749788945734786627">AI Wize-fiók kezelése</translation>
 <translation id="4425140285732600465">Ár nyomon követve. Értesítést kaphat, ha valamelyik webhelyen csökken az ár.</translation>
 <translation id="4425173294238317796">Azonosítókulcs megerősítő lapja</translation>
 <translation id="442518031075347249">A továbbiakban nem fogja tudni használni virtuális kártyáját a Google Pay alkalmazással. <ph name="BEGIN_LINK1"/>További információ a virtuális kártyákról<ph name="END_LINK1"/>.</translation>
@@ -610,19 +610,19 @@ Csak az Ön összetett jelszava ismeretében tudja bárki is megtekinteni a titk
 <translation id="4452548195519783679">Könyvjelzők közé téve itt: <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Amikor összekapcsol egy másik eszközt QR-kóddal, akkor az adott eszköz biztonsági kulcsként használhatja ezt a telefont. Ha eltávolítja az eszközt, újra QR-kód beolvasására lesz szükség az összekapcsoláshoz.</translation>
 <translation id="4478161224666880173">Ezen a webhelyen használhatja <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>-fiókját. A folytatáshoz jelentkezzen be a(z) <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> e-mail-címhez tartozó fiókba.</translation>
-<translation id="3133489217401741157">A(z) <ph name="MODULE"/> telepítése a Brave-hoz…</translation>
+<translation id="3133489217401741157">A(z) <ph name="MODULE"/> telepítése a AI Wize-hoz…</translation>
 <translation id="4484496141267039529">Nincs kapcsolat. Próbálja újra később.</translation>
 <translation id="53119194224775367">A AI Wize összes alkalmazásadata véglegesen törlődik, beleértve a fájlokat, beállításokat, fiókokat, adatbázisokat stb.</translation>
-<translation id="3966104135245031874">Szinkronizált jelszavak titkosítása a Brave-fiókkal</translation>
+<translation id="3966104135245031874">Szinkronizált jelszavak titkosítása a AI Wize-fiókkal</translation>
 <translation id="4491323382106587961">Válasszon egy fiókot. Jelenleg kiválasztva: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">A rendszergazda bekapcsolta a jelszavak mentését</translation>
 <translation id="4508528996305412043">A hírcsatornakártya menüje meg van nyitva</translation>
 <translation id="4509501256689523862">Az, hogy böngészés közben a megjelenő hirdetések személyre vannak-e szabva, ettől a beállítástól, a <ph name="BEGIN_LINK_1"/>hirdetési témaköröktől<ph name="END_LINK_1"/>, a <ph name="BEGIN_LINK_2"/>cookie-beállításaitól<ph name="END_LINK_2"/> és attól függ, hogy a felkeresett webhely személyre szabja-e a hirdetéseket.</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# napja}other{# napja}}</translation>
 <translation id="451872707440238414">Keresés a saját könyvjelzők közt</translation>
-<translation id="1664855196866195614">A kiválasztott adatok el lettek távolítva a Brave-ból és a szinkronizált eszközökről.
+<translation id="1664855196866195614">A kiválasztott adatok el lettek távolítva a AI Wize-ból és a szinkronizált eszközökről.
 
-Előfordulhat, hogy Brave-fiókjában (a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> címen) még szerepelnek a böngészési előzmények egyéb formái, így például a keresések és egyéb tevékenységek más Brave-szolgáltatásokból.</translation>
+Előfordulhat, hogy AI Wize-fiókjában (a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> címen) még szerepelnek a böngészési előzmények egyéb formái, így például a keresések és egyéb tevékenységek más AI Wize-szolgáltatásokból.</translation>
 <translation id="4523326818319942067">az elmúlt óra</translation>
 <translation id="452750746583162491">A szinkronizált adatok áttekintése</translation>
 <translation id="4532845899244822526">Mappa kiválasztása</translation>
@@ -650,7 +650,7 @@ Előfordulhat, hogy Brave-fiókjában (a <ph name="BEGIN_LINK"/>myactivity.googl
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/> könyvjelző törölve</translation>
 <translation id="4668279686271488041">A hirdetésmérési adatok rendszeresen törlődnek az eszközéről.</translation>
 <translation id="4668347365065281350">A webhelyek által tárolt összes adat, beleértve a cookie-kat és más, helyben tárolt adatokat</translation>
-<translation id="6904731820418823295">A sötét téma engedélyezve van a webhelyeknél a Brave-ban</translation>
+<translation id="6904731820418823295">A sötét téma engedélyezve van a webhelyeknél a AI Wize-ban</translation>
 <translation id="4684427112815847243">Az összes szinkronizálása</translation>
 <translation id="4685741273709472646">Választás a legördülő listából</translation>
 <translation id="4687718960473379118">Webhely által javasolt hirdetések</translation>
@@ -695,7 +695,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="4852014461738377247">Bejelentkezés…</translation>
 <translation id="4860895144060829044">Hívás</translation>
 <translation id="4864369630010738180">Bejelentkezés...</translation>
-<translation id="5131234170665854056">Nem lehetséges a(z) <ph name="MODULE"/> telepítése a Brave-hoz</translation>
+<translation id="5131234170665854056">Nem lehetséges a(z) <ph name="MODULE"/> telepítése a AI Wize-hoz</translation>
 <translation id="4871568871368204250">A szinkronizálás kikapcsolása</translation>
 <translation id="2875466387677348954">Ha ki van kapcsolva, Ön továbbra is látni fogja a AI Wize által helyben adott javaslatokat.</translation>
 <translation id="4875775213178255010">Javasolt tartalmak</translation>
@@ -703,9 +703,9 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="4880127995492972015">Fordítás…</translation>
 <translation id="4881695831933465202">Megnyitás</translation>
 <translation id="488187801263602086">Fájl átnevezése</translation>
-<translation id="1248710015876067820">Ilyen sok Brave-példány nem futhat egyszerre.</translation>
+<translation id="1248710015876067820">Ilyen sok AI Wize-példány nem futhat egyszerre.</translation>
 <translation id="4905823827770127520">Az oldalra mutató link hozzáfűzése</translation>
-<translation id="3217997482476578430">Discover by Brave</translation>
+<translation id="3217997482476578430">Discover by AI Wize</translation>
 <translation id="4909709702739934280">Böngészőjét a rendszergazdája kezeli</translation>
 <translation id="4910889077668685004">Fizetési alkalmazások</translation>
 <translation id="4912413785358399818">Lap áthelyezése</translation>
@@ -714,20 +714,20 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="4925120120285606924">Képernyőkép (<ph name="CURRENT_DATE_ISO"/>)</translation>
 <translation id="49268022542405662">Jelszavainak exportálására és letöltésére szöveges fájl formájában kerül sor. Jelszavai mindenki és minden olyan alkalmazás számára láthatók lesznek, aki és amely hozzáfér a célmappához.</translation>
 <translation id="4926901776383726965">Képeket és fájlokat menthet az offline megtekintéshez vagy más alkalmazásokban való megosztáshoz</translation>
-<translation id="1955495299630319741">Mivel kijelentkezik a(z) <ph name="DOMAIN_NAME"/> által kezelt fiókból, a rendszer törli az Ön Brave-adatait erről az eszközről. Brave-fiókjában továbbra is megmaradnak ezek az adatok.</translation>
+<translation id="1955495299630319741">Mivel kijelentkezik a(z) <ph name="DOMAIN_NAME"/> által kezelt fiókból, a rendszer törli az Ön AI Wize-adatait erről az eszközről. AI Wize-fiókjában továbbra is megmaradnak ezek az adatok.</translation>
 <translation id="4943703118917034429">Virtuális valóság</translation>
 <translation id="4943872375798546930">Nincs találat</translation>
-<translation id="5742837711075932301">Ha ugyanabba a Brave-fiókba van bejelentkezve, akkor a többi eszköze használhatja ezt a telefont biztonsági kulcsként.</translation>
+<translation id="5742837711075932301">Ha ugyanabba a AI Wize-fiókba van bejelentkezve, akkor a többi eszköze használhatja ezt a telefont biztonsági kulcsként.</translation>
 <translation id="4957722034734105353">További információ...</translation>
 <translation id="4961107849584082341">Bármely nyelvre lefordíthatja ezt az oldalt</translation>
-<translation id="7307583170263691471">Gyorsabb, proaktív védelem a veszélyes webhelyek, letöltések és bővítmények ellen. Figyelmezteti Önt a jelszavakkal kapcsolatos problémákra. Igénybevételéhez el kell küldeni a böngészési adatokat a Brave-nak.</translation>
+<translation id="7307583170263691471">Gyorsabb, proaktív védelem a veszélyes webhelyek, letöltések és bővítmények ellen. Figyelmezteti Önt a jelszavakkal kapcsolatos problémákra. Igénybevételéhez el kell küldeni a böngészési adatokat a AI Wize-nak.</translation>
 <translation id="497421865427891073">Előrelépés</translation>
 <translation id="4987271110129728827">A keresett oldal nem található. Ellenőrizze, hogy helyesen írta-e be, vagy próbáljon rákeresni az interneten.</translation>
 <translation id="4988526792673242964">Oldal</translation>
 <translation id="4991110219272367918">Lehetőség a webhely jóváhagyására vagy elutasítására bezárva</translation>
 <translation id="499724277181351974">A következő felkeresése: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Itt követheti ezt a webhelyet</translation>
-<translation id="6447211988989208781">Brave Tevékenységvezérlők</translation>
+<translation id="6447211988989208781">AI Wize Tevékenységvezérlők</translation>
 <translation id="5005498671520578047">Jelszó másolása</translation>
 <translation id="5010886807652684893">Vizuális nézet</translation>
 <translation id="5011311129201317034">A(z) <ph name="SITE"/> csatlakozni szeretne</translation>
@@ -737,11 +737,11 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5039804452771397117">Engedélyezés</translation>
 <translation id="5040262127954254034">Adatvédelem</translation>
 <translation id="504456571576643789">Megfontolandó szempontok</translation>
-<translation id="4858031288914533863">Amikor be van jelentkezve, a <ph name="BEGIN_LINK1"/>további tevékenységtípusokat<ph name="END_LINK1"/> a rendszer elmentheti a Brave-fiókjába. Bármikor törölheti őket.</translation>
+<translation id="4858031288914533863">Amikor be van jelentkezve, a <ph name="BEGIN_LINK1"/>további tevékenységtípusokat<ph name="END_LINK1"/> a rendszer elmentheti a AI Wize-fiókjába. Bármikor törölheti őket.</translation>
 <translation id="506254248375231072">Nincs lap</translation>
 <translation id="5062960805900435602">A jelszóegyesítési frissítés le van zárva.</translation>
 <translation id="5081960376148623587">Válassza ki, hogy szeretne-e előtölteni oldalakat</translation>
-<translation id="4744980273298156620">Új lap megnyitásakor hamarosan látni fogja a(z) <ph name="SITE_NAME"/> webhely történeteit. A követett webhelyeket a Brave-fiókjába menti a rendszer. A Discover beállításaiban kezelheti őket.</translation>
+<translation id="4744980273298156620">Új lap megnyitásakor hamarosan látni fogja a(z) <ph name="SITE_NAME"/> webhely történeteit. A követett webhelyeket a AI Wize-fiókjába menti a rendszer. A Discover beállításaiban kezelheti őket.</translation>
 <translation id="509429900233858213">Hiba történt.</translation>
 <translation id="5097349930204431044">A felkeresett webhelyek megállapíthatják, hogy mi tetszik Önnek, majd hirdetéseket javasolhatnak böngészés közben.</translation>
 <translation id="5099845111805573968">Ha egyszer kiválasztja az Asztali webhely lehetőséget, akkor a rendszer minden további látogatáskor azt a beállítást alkalmazza</translation>
@@ -767,7 +767,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Fájl letöltése…}other{# fájl letöltése…}}</translation>
 <translation id="5210286577605176222">Ugrás az előző lapra</translation>
 <translation id="5210365745912300556">Lap bezárása</translation>
-<translation id="827672955486173928">Az Oldalstatisztikák oldalon végzett tevékenységeit a <ph name="BEGIN_LINK"/>Brave-fiókjába<ph name="END_LINK"/> menti a rendszer.</translation>
+<translation id="827672955486173928">Az Oldalstatisztikák oldalon végzett tevékenységeit a <ph name="BEGIN_LINK"/>AI Wize-fiókjába<ph name="END_LINK"/> menti a rendszer.</translation>
 <translation id="5222676887888702881">Kijelentkezés</translation>
 <translation id="5226378907213531272">Minden alkalommal fel kell oldania a képernyő zárolását, amikor az autót használja</translation>
 <translation id="5227554086496586518">Koppintson a keresési találatok megtekintéséhez</translation>
@@ -781,9 +781,9 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5308380583665731573">Csatlakozás</translation>
 <translation id="5316947901395241499">A rendszergazda kikapcsolta a jelszavak mentését</translation>
 <translation id="5317780077021120954">Mentés</translation>
-<translation id="989239400026154074">A AI Wize a Brave-ot ajánlja</translation>
+<translation id="989239400026154074">A AI Wize a AI Wize-ot ajánlja</translation>
 <translation id="7815000350132166985">Ha engedélyezi a cookie-kat, előfordulhat, hogy a AI Wize előtöltéskor felhasználja őket.</translation>
-<translation id="1681635711794313507">Mivel az előre betöltött oldalak titkosítottak, az oldalakkal összekapcsolt webhely pedig Brave-webhely, a Brave-szerverek nem kapnak új információt a szóban forgó oldalak privát módon való előzetes betöltésekor.</translation>
+<translation id="1681635711794313507">Mivel az előre betöltött oldalak titkosítottak, az oldalakkal összekapcsolt webhely pedig AI Wize-webhely, a AI Wize-szerverek nem kapnak új információt a szóban forgó oldalak privát módon való előzetes betöltésekor.</translation>
 <translation id="5329858041417644019">A böngésző nem áll felügyelet alatt</translation>
 <translation id="5342314432463739672">Engedélykérések</translation>
 <translation id="534580735623577507">Nincsenek webhelyek a következő időszakból: <ph name="TIME_PERIOD"/></translation>
@@ -834,7 +834,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="562289928968387744">Reakciók kezelése</translation>
 <translation id="5626134646977739690">Név:</translation>
 <translation id="5628604359369369630">Olvasatlan (Offline hozzáférhető)</translation>
-<translation id="3801854459269566477">A <ph name="BEGIN_LINK1"/>keresési előzményeket<ph name="END_LINK1"/> és <ph name="BEGIN_LINK2"/>más tevékenységtípusokat<ph name="END_LINK2"/> a rendszer elmentheti az Ön Brave-fiókjába.</translation>
+<translation id="3801854459269566477">A <ph name="BEGIN_LINK1"/>keresési előzményeket<ph name="END_LINK1"/> és <ph name="BEGIN_LINK2"/>más tevékenységtípusokat<ph name="END_LINK2"/> a rendszer elmentheti az Ön AI Wize-fiókjába.</translation>
 <translation id="564667659802381754">Adatvédelmi útmutató <ph name="BEGIN_NEW"/>Új<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">Az elmúlt 7 napból</translation>
 <translation id="5655963694829536461">Keresés a letöltések között</translation>
@@ -843,7 +843,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5665379678064389456">Esemény létrehozása a(z) <ph name="APP_NAME"/> alkalmazásban</translation>
 <translation id="5668833306439455813">A AI Wize nem tud frissítéseket keresni</translation>
 <translation id="5686790454216892815">A fájl neve túl hosszú</translation>
-<translation id="4809211418322514799">A AI Wize automatikusan törli a 30 napnál régebbi webhelyeket. Előfordulhat, hogy egy újból felkeresett webhely ismét megjelenik a listán. Emellett lehetősége van arra is, hogy letiltsa az egyes webhelyek számára, hogy hirdetéseket javasoljanak Önnek. További információ a <ph name="BEGIN_LINK"/>hirdetésekhez kapcsolódó adatvédelem Brave-ban való kezeléséről<ph name="END_LINK"/>.</translation>
+<translation id="4809211418322514799">A AI Wize automatikusan törli a 30 napnál régebbi webhelyeket. Előfordulhat, hogy egy újból felkeresett webhely ismét megjelenik a listán. Emellett lehetősége van arra is, hogy letiltsa az egyes webhelyek számára, hogy hirdetéseket javasoljanak Önnek. További információ a <ph name="BEGIN_LINK"/>hirdetésekhez kapcsolódó adatvédelem AI Wize-ban való kezeléséről<ph name="END_LINK"/>.</translation>
 <translation id="569435661099256888">Megtekintheti a felkeresett oldalakat, és törölheti őket az előzmények közül.</translation>
 <translation id="569536719314091526">Bármely nyelvre lefordíthatja ezt az oldalt a További lehetőségek gomb segítségével</translation>
 <translation id="2320748512701464301">A AI Wize segíthet az adatvédelmi incidensek, a nem biztonságos webhelyek és egyebek elleni védekezésben</translation>
@@ -854,10 +854,10 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5726692708398506830">Minden nagyítása az oldalon</translation>
 <translation id="5744751019568455640">Ezekből a hangokból választhatja ki, hogy melyik olvassa fel a weboldalakat. Ha tetszik Önnek ez a hang, és szeretné, hogy továbbra is használjam, csak koppintson a hang nevére.</translation>
 <translation id="5748802427693696783">Szabványos lapokra váltva</translation>
-<translation id="3088191967551450609">A Brave-nak tárhelyhozzáférésre van szüksége a fájlok letöltéséhez.</translation>
+<translation id="3088191967551450609">A AI Wize-nak tárhelyhozzáférésre van szüksége a fájlok letöltéséhez.</translation>
 <translation id="5749237766298580851">Ki <ph name="SEPARATOR"/> Nem javasolt</translation>
 <translation id="5752232708629533680">Csak GIF megosztása</translation>
-<translation id="416316836590748269">A Brave-ban hangja segítségével is kereshet</translation>
+<translation id="416316836590748269">A AI Wize-ban hangja segítségével is kereshet</translation>
 <translation id="5754350196967618083">A Discover nem frissíthető</translation>
 <translation id="5755162682436943950">Kijelentkezve. Megnyitja a bejelentkezéshez és a szinkronizálás bekapcsolásához szükséges párbeszédpanelt.</translation>
 <translation id="5759897675466110265">Nem működik a webhely? Próbálja meg ideiglenesen engedélyezni a harmadik felektől származó cookie-kat.</translation>
@@ -878,7 +878,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5829586821381540080">Mentve ide: <ph name="FOLDER_NAME"/></translation>
 <translation id="583281660410589416">Ismeretlen</translation>
 <translation id="5833984609253377421">Link megosztása</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265">Megnyitja a PDF-et a következővel: <ph name="APP_NAME"/>?</translation>
 <translation id="5853623416121554550">szüneteltetve</translation>
 <translation id="5855546874025048181">Pontosítás: <ph name="REFINE_TEXT"/></translation>
@@ -887,7 +887,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="5860033963881614850">Kikapcsolva</translation>
 <translation id="5860491529813859533">Bekapcsolás</translation>
 <translation id="5864419784173784555">Várakozás a másik letöltésre…</translation>
-<translation id="6538479075382111079">Automatikusan elküldi a használati statisztikákat és hibajelentéseket a Brave-nak</translation>
+<translation id="6538479075382111079">Automatikusan elküldi a használati statisztikákat és hibajelentéseket a AI Wize-nak</translation>
 <translation id="5869522115854928033">Mentett jelszavak</translation>
 <translation id="5604589745019948682">Webhely követéséhez lépjen a kívánt webhelyhez, nyissa meg a AI Wize menüjét, majd koppintson a Követés pontra.</translation>
 <translation id="5879072387416556377">Relevánsabb javaslatokat kaphat</translation>
@@ -951,7 +951,7 @@ A beállítás módosításához <ph name="BEGIN_LINK"/>állítsa vissza a szink
 <translation id="6232535412751077445">A „Nincs nyomon követés” engedélyezése azt jelenti, hogy a böngészési forgalommal együtt kérelmet is küld a rendszer. Ennek hatása attól függ, hogy a webhely reagál-e a kérelemre, és hogyan értelmezi azt.
 
 Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jelenítenek meg, amelyek nem a már felkeresett egyéb webhelyeken alapulnak. Számos webhely ilyenkor is gyűjti és felhasználja a böngészési adatokat (például a biztonság növelése, továbbá tartalom, hirdetések és ajánlatok biztosítása, valamint jelentésekhez használt statisztika előállítása céljából).</translation>
-<translation id="3895383310037101583">A szinkronizálás bekapcsolásával mentheti az eszközön lévő jelszavait a Brave-fiókjába</translation>
+<translation id="3895383310037101583">A szinkronizálás bekapcsolásával mentheti az eszközön lévő jelszavait a AI Wize-fiókjába</translation>
 <translation id="6255794742848779505">Módosítjuk az új jelszavak mentésének módját ezen az eszközön</translation>
 <translation id="6264376385120300461">Letöltés mindenképpen</translation>
 <translation id="6277522088822131679">Hiba történt az oldal nyomtatásakor. Próbálja újra.</translation>
@@ -981,13 +981,13 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="6394791151443660613">Keresés: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LINK</translation>
 <translation id="6397616442223433927">Ismét online</translation>
-<translation id="8789425457808164956">Ha szeretné elküldeni ezt a lapot másik eszközre, jelentkezzen be a Brave-ba az adott eszközön</translation>
+<translation id="8789425457808164956">Ha szeretné elküldeni ezt a lapot másik eszközre, jelentkezzen be a AI Wize-ba az adott eszközön</translation>
 <translation id="6404511346730675251">Könyvjelző szerkesztése</translation>
 <translation id="6406506848690869874">Szinkronizálás</translation>
 <translation id="6407224748847589805">Nem lehet csatlakozni a számítógépéhez. Próbálkozzon másik ellenőrzési módszerrel.</translation>
 <translation id="6410883413783534063">Lapok megnyitásával egyszerre több oldalt is felkereshet.</translation>
 <translation id="6411219469806822692">Nem lehet feljebb menni. Próbálkozzon a lap fentebbi részével való kezdéssel.</translation>
-<translation id="7810992039564280750">Ellenőrzi az URL-eket a Brave-ban a nem biztonságos webhelyekről tárolt lista alapján. Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön ártalmas fájlt tölt le, akkor a AI Wize elküldheti az URL-eket is (az oldaltartalmak részleteivel együtt) a Biztonságos Böngészésnek.</translation>
+<translation id="7810992039564280750">Ellenőrzi az URL-eket a AI Wize-ban a nem biztonságos webhelyekről tárolt lista alapján. Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön ártalmas fájlt tölt le, akkor a AI Wize elküldheti az URL-eket is (az oldaltartalmak részleteivel együtt) a Biztonságos Böngészésnek.</translation>
 <translation id="641643625718530986">Nyomtatás…</translation>
 <translation id="6422857128426228781">Itt találhatja a nyomon követett termékeket</translation>
 <translation id="6433501201775827830">Keresőmotor kiválasztása</translation>
@@ -998,26 +998,26 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="6447558397796644647">A könyvjelző nem található. Ellenőrizze, hogy helyes-e az írásmódja, vagy adjon hozzá új könyvjelzőt.</translation>
 <translation id="6459045781120991510">Felmérések</translation>
 <translation id="6461962085415701688">A fájlt nem lehet megnyitni</translation>
-<translation id="9055113864158719823">Megnézheti a AI Wize böngészővel felkeresett webhelyeket, és beállíthat hozzájuk időzítéseket.\n\nAz időzítéssel ellátott webhelyek adatait és a látogatás hosszát megkapja a Brave. Ezek az adatok a digitális jóllét funkció továbbfejlesztésére szolgálnak.</translation>
+<translation id="9055113864158719823">Megnézheti a AI Wize böngészővel felkeresett webhelyeket, és beállíthat hozzájuk időzítéseket.\n\nAz időzítéssel ellátott webhelyek adatait és a látogatás hosszát megkapja a AI Wize. Ezek az adatok a digitális jóllét funkció továbbfejlesztésére szolgálnak.</translation>
 <translation id="6473086018775716761">A megosztási lehetőségek listája félmagasságban van megnyitva.</translation>
 <translation id="6475951671322991020">Videó letöltése</translation>
 <translation id="6477928892249167417">Úgy tűnik, ezek a webhelyek fontosak Önnek:</translation>
 <translation id="6482749332252372425">A következő fájl letöltése tárhelyhiány miatt nem sikerült: <ph name="FILE_NAME"/>.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Fájl letöltve}other{# letöltés befejeződött}}</translation>
-<translation id="3960299545138990065">Indítsa újra a Brave-ot</translation>
+<translation id="3960299545138990065">Indítsa újra a AI Wize-ot</translation>
 <translation id="6527303717912515753">Megosztás</translation>
-<translation id="708829030563435351">A Brave-ban felkeresett webhelyek nem fognak megjelenni. A webhelyekkel kapcsolatos összes időzítés törlődik.</translation>
+<translation id="708829030563435351">A AI Wize-ban felkeresett webhelyek nem fognak megjelenni. A webhelyekkel kapcsolatos összes időzítés törlődik.</translation>
 <translation id="7723158744459952869">A AI Wize túl hosszú ideje nem válaszol</translation>
 <translation id="6539092367496845964">Hiba történt. Próbálja újra később.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{1 órája ellenőrizve}other{# órája ellenőrizve}}</translation>
 <translation id="6545017243486555795">Összes adat törlése</translation>
 <translation id="6546511553472444032">A fájl kártékony lehet</translation>
-<translation id="6702167990458635422">Nem védi meg Önt a veszélyes webhelyek, letöltések vagy bővítmények ellen. A Biztonságos Böngészés beállításait más Brave-termékekben nem érinti a módosítás.</translation>
+<translation id="6702167990458635422">Nem védi meg Önt a veszélyes webhelyek, letöltések vagy bővítmények ellen. A Biztonságos Böngészés beállításait más AI Wize-termékekben nem érinti a módosítás.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{A(z) <ph name="TAB_TITLE"/> és <ph name="TAB_COUNT_ONE"/> másik lap be lesz zárva}other{A(z) <ph name="TAB_TITLE"/> és <ph name="TAB_COUNT_MANY"/> másik lap be lesz zárva}}</translation>
 <translation id="6560414384669816528">Keresés a Sogou használatával</translation>
 <translation id="656065428026159829">Továbbiak megjelenítése</translation>
 <translation id="6565959834589222080">Wi-Fi használata, ha rendelkezésre áll</translation>
-<translation id="4480935821314799946">Új lap megnyitásakor látni fogja a(z) <ph name="SITE_NAME"/> webhely történeteit. A követett webhelyeket a Brave-fiókjába menti a rendszer. A Discover beállításaiban kezelheti őket.</translation>
+<translation id="4480935821314799946">Új lap megnyitásakor látni fogja a(z) <ph name="SITE_NAME"/> webhely történeteit. A követett webhelyeket a AI Wize-fiókjába menti a rendszer. A Discover beállításaiban kezelheti őket.</translation>
 <translation id="6573096386450695060">Engedélyezés mindig</translation>
 <translation id="5157964048453367290">A más eszközökön futó AI Wize böngészőben megnyitott lapok itt jelennek meg.</translation>
 <translation id="6583199322650523874">Az aktuális oldal felvétele a könyvjelzők közé</translation>
@@ -1026,42 +1026,42 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="6590680911007613645">Ügyeljen, hogy azt a jelszót mentse el, amelyet ehhez a webhelyhez használ (<ph name="SITE"/>).</translation>
 <translation id="6593061639179217415">Asztali webhely</translation>
 <translation id="6594347733515723558">Rendezés-/nézetbeállítások</translation>
-<translation id="2466982615210189224">A leírások pontosítása érdekében a képeket a böngésző elküldi a Brave-nak.</translation>
-<translation id="663059986967017181">A Brave-ba másolva</translation>
+<translation id="2466982615210189224">A leírások pontosítása érdekében a képeket a böngésző elküldi a AI Wize-nak.</translation>
+<translation id="663059986967017181">A AI Wize-ba másolva</translation>
 <translation id="661266467055912436">Javítja az Ön és mindenki más biztonságát az interneten.</translation>
-<translation id="8127050479140582768">A lap másik eszközre való elküldéséhez jelentkezzen be a Brave-ba mindkét eszközön</translation>
+<translation id="8127050479140582768">A lap másik eszközre való elküldéséhez jelentkezzen be a AI Wize-ba mindkét eszközön</translation>
 <translation id="6627583120233659107">Mappa szerkesztése</translation>
 <translation id="6636623428211296678">Felfedezheti alább a többi beállítást, vagy befejezheti most az áttekintést</translation>
-<translation id="2259649928554669581">A <ph name="BEGIN_LINK1"/>Szinkronizálás<ph name="END_LINK1"/> és a <ph name="BEGIN_LINK2"/>Brave-szolgáltatások<ph name="END_LINK2"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan.</translation>
-<translation id="7939692063031538305">Az alkalmazás továbbfejlesztése érdekében a AI Wize használati és hibaadatokat küld a Brave-nak. <ph name="BEGIN_UMA_LINK"/>Kezelés<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">A <ph name="BEGIN_LINK1"/>Szinkronizálás<ph name="END_LINK1"/> és a <ph name="BEGIN_LINK2"/>AI Wize-szolgáltatások<ph name="END_LINK2"/> részben további beállításokat talál az adatvédelemre, biztonságra és adatgyűjtésre vonatkozóan.</translation>
+<translation id="7939692063031538305">Az alkalmazás továbbfejlesztése érdekében a AI Wize használati és hibaadatokat küld a AI Wize-nak. <ph name="BEGIN_UMA_LINK"/>Kezelés<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Letiltás mindig</translation>
 <translation id="6641780377503683465"><ph name="INTEREST"/> eltávolítása</translation>
 <translation id="6643016212128521049">Törlés</translation>
 <translation id="6645629752388991326">Ön szabályozhatja, hogy melyik eszközök jelentkezhetnek be úgy, hogy ezt az eszközt használják biztonsági kulcsként.</translation>
-<translation id="2730188427562924169">Elküldi az URL obfuszkált részét a Brave-nak egy adatvédelmi szerveren keresztül, amely elrejti az Ön IP-címét. Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön ártalmas fájlt tölt le, akkor a AI Wize elküldheti az URL-eket is (az oldaltartalmak részleteivel együtt) a Brave-nak.</translation>
-<translation id="7556503430569358637">Az Ön által felkeresett URL-ek el lesznek küldve a Brave-nak, hogy előrejelezzük, mely webhelyeket fogja esetleg legközelebb felkeresni.</translation>
-<translation id="6678472970290886941">A rendszergazda távolról módosítani tudja a böngészőbeállításokat. Az is lehetséges, hogy az eszközön végzett tevékenységeket a Brave-on kívülről felügyelik.</translation>
+<translation id="2730188427562924169">Elküldi az URL obfuszkált részét a AI Wize-nak egy adatvédelmi szerveren keresztül, amely elrejti az Ön IP-címét. Ha egy webhely megpróbálja ellopni az Ön jelszavát, illetve ha Ön ártalmas fájlt tölt le, akkor a AI Wize elküldheti az URL-eket is (az oldaltartalmak részleteivel együtt) a AI Wize-nak.</translation>
+<translation id="7556503430569358637">Az Ön által felkeresett URL-ek el lesznek küldve a AI Wize-nak, hogy előrejelezzük, mely webhelyeket fogja esetleg legközelebb felkeresni.</translation>
+<translation id="6678472970290886941">A rendszergazda távolról módosítani tudja a böngészőbeállításokat. Az is lehetséges, hogy az eszközön végzett tevékenységeket a AI Wize-on kívülről felügyelik.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 és további <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 és további <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Kép előnézete <ph name="BEGIN_NEW"/>Új<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Jelszó</translation>
 <translation id="6659594942844771486">Lap</translation>
-<translation id="9145803563102831353">Az eszközre mentett jelszavak jelenleg nem használhatók a Brave-csatornákban. A AI Wize 121-es verziója után az eszközre mentett Brave- és <ph name="CHROME_CHANNEL"/>-jelszavakat a rendszer összevonja, és ezek a jelszavak mindkét alkalmazásban használhatók lesznek.</translation>
+<translation id="9145803563102831353">Az eszközre mentett jelszavak jelenleg nem használhatók a AI Wize-csatornákban. A AI Wize 121-es verziója után az eszközre mentett AI Wize- és <ph name="CHROME_CHANNEL"/>-jelszavakat a rendszer összevonja, és ezek a jelszavak mindkét alkalmazásban használhatók lesznek.</translation>
 <translation id="666731172850799929">Megnyitás itt: <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kép másolása</translation>
 <translation id="6672917148207387131">A(z) <ph name="DOMAIN"/> hozzáadása</translation>
 <translation id="6674571176963658787">A szinkronizálás megkezdéséhez adja meg összetett jelszavát.</translation>
-<translation id="8581481290581777242">Törli Brave-adatait az eszközről?</translation>
-<translation id="3683330416566109578">Bejelentkezés erre a webhelyre és a Brave-ba</translation>
+<translation id="8581481290581777242">Törli AI Wize-adatait az eszközről?</translation>
+<translation id="3683330416566109578">Bejelentkezés erre a webhelyre és a AI Wize-ba</translation>
 <translation id="3385384709865894288">A AI Wize fejlesztése</translation>
 <translation id="670498945988402717">Tegnap volt ellenőrizve</translation>
 <translation id="6710213216561001401">Előző</translation>
 <translation id="671481426037969117">A(z) <ph name="FQDN"/> alkalmazás időzítése lejárt. Holnap újraindul.</translation>
 <translation id="6715020873764921614">Mindenképpen le szeretné tölteni a következő fájlt: <ph name="FILE_NAME"/> (<ph name="FILE_SIZE"/>)?</translation>
 <translation id="6719634564325948108">QR-kóddal szeretne csatlakozni?</translation>
-<translation id="7499197548870160669">Brave-fiókban</translation>
+<translation id="7499197548870160669">AI Wize-fiókban</translation>
 <translation id="6738516213925468394">Adatai titkosítva lettek <ph name="BEGIN_LINK"/>összetett szinkronizálási jelszavával<ph name="END_LINK"/> a következő időpontban: <ph name="TIME"/>. Adja meg a jelszót a szinkronizálás megkezdéséhez.</translation>
 <translation id="6738867403308150051">Letöltés…</translation>
-<translation id="2275686406263739320">A felkeresett webhelyek esetében megszokott dolog, hogy megjegyzik az Önt érdeklő dolgokat a felhasználói élmény személyre szabása érdekében. Emellett a webhelyek tárolhatnak az Ön érdeklődési köreivel kapcsolatos információkat a Brave-ban.</translation>
+<translation id="2275686406263739320">A felkeresett webhelyek esetében megszokott dolog, hogy megjegyzik az Önt érdeklő dolgokat a felhasználói élmény személyre szabása érdekében. Emellett a webhelyek tárolhatnak az Ön érdeklődési köreivel kapcsolatos információkat a AI Wize-ban.</translation>
 <translation id="6751521182688001123">Új lap gyors megnyitása. A gyorsparancs szerkesztéséhez tartsa lenyomva.</translation>
 <translation id="6756507620369789050">Visszajelzés megosztása</translation>
 <translation id="6767294960381293877">Lap megosztására szolgáló eszközök listája félmagasságban megnyitva.</translation>
@@ -1071,9 +1071,9 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="6802555630140434547">Az ablak be lesz zárva</translation>
 <translation id="6811034713472274749">Az oldal megtekinthető</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Képek, 1 kép a listában}other{Képek, # kép a listában}}</translation>
-<translation id="8418237809013783651">Bejelentkezés a Brave-ba, megnyitva.</translation>
+<translation id="8418237809013783651">Bejelentkezés a AI Wize-ba, megnyitva.</translation>
 <translation id="6817747507826986771">Az oldal gyors megosztása. A gyorsparancs szerkesztéséhez tartsa lenyomva.</translation>
-<translation id="118366698571543506">Ha szeretné átvinni eszközei között Brave-tartalmait, jelentkezzen be</translation>
+<translation id="118366698571543506">Ha szeretné átvinni eszközei között AI Wize-tartalmait, jelentkezzen be</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">A címsávban megnyithatja az oldaladatokat, így további információkat láthat az éppen meglátogatott oldalról.</translation>
 <translation id="6828070228333235514">Árkövetés leállítása</translation>
@@ -1101,7 +1101,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="6909589135458168665">Oldalak előtöltése</translation>
 <translation id="6910211073230771657">Törölve</translation>
 <translation id="6918398787259831832">Ha a probléma továbbra is fennáll, <ph name="BEGIN_LINK"/>itt talál további információt<ph name="END_LINK"/> a következőről: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Az eszközére és a Brave-fiókjába mentett biztonsági kódok is törlődnek</translation>
+<translation id="5854472260286669100">Az eszközére és a AI Wize-fiókjába mentett biztonsági kódok is törlődnek</translation>
 <translation id="6942665639005891494">Az alapértelmezett letöltési helyet bármikor módosíthatja a Beállítások menüben</translation>
 <translation id="694267552845942083">Jelenleg a szinkronizálási beállításokat szabja személyre. A szinkronizálás bekapcsolásának véglegesítéséhez koppintson a képernyő alján található Megerősítés gombra. Fel</translation>
 <translation id="6945221475159498467">Kiválasztás</translation>
@@ -1120,15 +1120,15 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7029809446516969842">Jelszavak</translation>
 <translation id="7030304022046916278">Elküldi az URL-eket a Biztonságos Böngészésnek ellenőrzésre.</translation>
 <translation id="7035701931849773472">Egyéb beállítások</translation>
-<translation id="5813862251770201080">Jelentkezzen be a Brave-ba Brave-fiókjával</translation>
+<translation id="5813862251770201080">Jelentkezzen be a AI Wize-ba AI Wize-fiókjával</translation>
 <translation id="7054588988317389591">Lekéri a képleírásokat?</translation>
 <translation id="7055152154916055070">Átirányítás letiltva:</translation>
 <translation id="7063006564040364415">Nem sikerült csatlakozni a szinkronizálószerverhez.</translation>
 <translation id="7071521146534760487">Fiók kezelése</translation>
 <translation id="707155805709242880">Alább válassza ki a szinkronizálni kívánt elemeket</translation>
 <translation id="7077143737582773186">SD-kártya</translation>
-<translation id="2374582967527009647">Elküldi az URL-eket a Biztonságos Böngészésnek ellenőrzésre. Elküldi továbbá az oldalakkal, letöltésekkel, bővítményekkel és rendszerrel kapcsolatos adatok egy kisebb mintáját annak érdekében, hogy a jövőben könnyebben felismerhessük az új fenyegetéseket. Amikor be van jelentkezve, ideiglenesen a Brave-fiókjához kapcsolja ezeket az adatokat, hogy megvédhessük Önt a Brave-alkalmazásokban.</translation>
-<translation id="5499149312981370855">Válassza ki, hogy szeretné-e használni a Brave-előzményeket személyre szabott élmények biztosításához a Brave-szolgáltatásokban.</translation>
+<translation id="2374582967527009647">Elküldi az URL-eket a Biztonságos Böngészésnek ellenőrzésre. Elküldi továbbá az oldalakkal, letöltésekkel, bővítményekkel és rendszerrel kapcsolatos adatok egy kisebb mintáját annak érdekében, hogy a jövőben könnyebben felismerhessük az új fenyegetéseket. Amikor be van jelentkezve, ideiglenesen a AI Wize-fiókjához kapcsolja ezeket az adatokat, hogy megvédhessük Önt a AI Wize-alkalmazásokban.</translation>
+<translation id="5499149312981370855">Válassza ki, hogy szeretné-e használni a AI Wize-előzményeket személyre szabott élmények biztosításához a AI Wize-szolgáltatásokban.</translation>
 <translation id="8208853227947884571">A AI Wize naprakész</translation>
 <translation id="7105047059074518658">Jelentkezzen be, hogy egyszerűbben böngészhessen eszközökön átnyúlóan</translation>
 <translation id="7106762743910369165">Böngészőjét a szervezete kezeli.</translation>
@@ -1144,32 +1144,32 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7177873915659574692">Nem lehet létrehozni a QR-kódot. Az URL több mint <ph name="CHARACTER_LIMIT"/> karakterből áll.</translation>
 <translation id="7180611975245234373">Frissítés</translation>
 <translation id="7183693674623539380">Lapcsoport – <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Gondoskodik a biztonságáról a Brave-ban, és használható a biztonság növelésére más Brave-alkalmazásokban olyankor, amikor Ön be van jelentkezve.</translation>
+<translation id="8355565210555500987">Gondoskodik a biztonságáról a AI Wize-ban, és használható a biztonság növelésére más AI Wize-alkalmazásokban olyankor, amikor Ön be van jelentkezve.</translation>
 <translation id="7191430249889272776">A lap megnyílt a háttérben.</translation>
 <translation id="7196215469483532480">Az adatvédelmi útmutató magyarázata teljes magasságban van megnyitva</translation>
-<translation id="1014116676551114642">Tartalmak a Brave-tól fiatal elméknek – kikapcsolva</translation>
+<translation id="1014116676551114642">Tartalmak a AI Wize-tól fiatal elméknek – kikapcsolva</translation>
 <translation id="7207760545532569765"><ph name="TAB_COUNT"/> lap visszaállítása új háttérbeli lapokként.</translation>
 <translation id="7221869452894271364">Az oldal újratöltése</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 letöltés függőben}other{# letöltés függőben}}</translation>
 <translation id="72415438529550637">A jelszójavaslat le van zárva.</translation>
-<translation id="8287068819750208230">Győződjön meg arról, hogy a(z) <ph name="TARGET_DEVICE_NAME"/> szinkronizálása be van kapcsolva a Brave-ban</translation>
+<translation id="8287068819750208230">Győződjön meg arról, hogy a(z) <ph name="TARGET_DEVICE_NAME"/> szinkronizálása be van kapcsolva a AI Wize-ban</translation>
 <translation id="7252076891734325316">Helyezze telefonját a számítógép közelébe</translation>
-<translation id="4957342254208357193">Előfordulhat, hogy Android-eszköze is rendelkezik hasonló beállítással. Ha a hirdetésmérés be van kapcsolva a Brave-ban és Android-eszközén, akkor a vállalatok képesek lehetnek az egyes hirdetések hatékonyságának mérésére az Ön által felkeresett webhelyeken és az Ön által használt alkalmazásokban is.</translation>
+<translation id="4957342254208357193">Előfordulhat, hogy Android-eszköze is rendelkezik hasonló beállítással. Ha a hirdetésmérés be van kapcsolva a AI Wize-ban és Android-eszközén, akkor a vállalatok képesek lehetnek az egyes hirdetések hatékonyságának mérésére az Ön által felkeresett webhelyeken és az Ön által használt alkalmazásokban is.</translation>
 <translation id="727288900855680735">Elküldi a(z) <ph name="ONE_TIME_CODE"/> kódot ide: <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Letiltott oldal</translation>
-<translation id="7949597606523411684">A AI Wize automatikusan törli a négy hétnél régebbi témákat. A böngészési tevékenységei alapján előfordulhat, hogy egy adott téma újra megjelenik a listában. Arra is lehetősége van, hogy letiltsa azokat a témákat, amelyeket nem szeretne, hogy a AI Wize megosszon a webhelyekkel. További információ a <ph name="BEGIN_LINK"/>hirdetésekhez kapcsolódó adatvédelem Brave-ban való kezeléséről<ph name="END_LINK"/>.</translation>
+<translation id="7949597606523411684">A AI Wize automatikusan törli a négy hétnél régebbi témákat. A böngészési tevékenységei alapján előfordulhat, hogy egy adott téma újra megjelenik a listában. Arra is lehetősége van, hogy letiltsa azokat a témákat, amelyeket nem szeretne, hogy a AI Wize megosszon a webhelyekkel. További információ a <ph name="BEGIN_LINK"/>hirdetésekhez kapcsolódó adatvédelem AI Wize-ban való kezeléséről<ph name="END_LINK"/>.</translation>
 <translation id="4561646469134805137">Gépelés közben a AI Wize elküldi a címsáv és a keresőmező tartalmát az alapértelmezett keresőmotornak.</translation>
 <translation id="7289303553784750393">Ha online állapotban van, de a probléma továbbra is fennáll, más módon is próbálkozhat a(z) <ph name="SITE_ETLD_PLUS_ONE"/> webhelyen való folytatással.</translation>
 <translation id="7290209999329137901">Nem lehetséges az átnevezés</translation>
 <translation id="7291910923717764901">Képleírások hozzáadva ehhez az oldalhoz</translation>
 <translation id="7293429513719260019">Nyelv kiválasztása</translation>
 <translation id="729975465115245577">Az eszközön nincs olyan alkalmazás, amely tárolni tudja a jelszavakat tartalmazó fájlt.</translation>
-<translation id="7581648335850642193">Előfordulhat, hogy Android-eszköze is rendelkezik hasonló beállítással. Ha ez a beállítás be van kapcsolva a Brave-ban és Android-eszközén, akkor a vállalatok képesek lehetnek az egyes hirdetések hatékonyságának mérésére az Ön által felkeresett webhelyeken és az Ön által használt alkalmazásokban.</translation>
+<translation id="7581648335850642193">Előfordulhat, hogy Android-eszköze is rendelkezik hasonló beállítással. Ha ez a beállítás be van kapcsolva a AI Wize-ban és Android-eszközén, akkor a vállalatok képesek lehetnek az egyes hirdetések hatékonyságának mérésére az Ön által felkeresett webhelyeken és az Ön által használt alkalmazásokban.</translation>
 <translation id="1382596880054356475">Offline. A AI Wize nem tudja ellenőrizni a jelszavakat.</translation>
 <translation id="7313188324932846546">Koppintson a szinkronizálás beállításához</translation>
 <translation id="7324354302972299151">„Nincs nyomon követés” kérés küldése</translation>
 <translation id="7332075081379534664">Sikeres bejelentkezés</translation>
-<translation id="8716243540027092298">Szinkronizáljon, hogy a legrelevánsabb tartalmakat kaphassa meg a Brave-tól</translation>
+<translation id="8716243540027092298">Szinkronizáljon, hogy a legrelevánsabb tartalmakat kaphassa meg a AI Wize-tól</translation>
 <translation id="7339898014177206373">Új ablak</translation>
 <translation id="7340958967809483333">A Discover beállításai</translation>
 <translation id="7352339641508007922">Húzza el hosszú képernyőkép készítéséhez</translation>
@@ -1185,15 +1185,15 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7397416715506917976">Oldalstatisztikák mutatása</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{További 1 fájl a listában}other{További # fájl a listában}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Brave – Első futtatási élmény</translation>
-<translation id="5341476184053934779">Brave-fiók-felhasználó</translation>
+<translation id="724102042129299115">AI Wize – Első futtatási élmény</translation>
+<translation id="5341476184053934779">AI Wize-fiók-felhasználó</translation>
 <translation id="741204030948306876">Igen, folytatom</translation>
 <translation id="7419565702166471774">Mindig használjon biztonságos kapcsolatokat</translation>
 <translation id="7431991332293347422">Beállíthatja, hogy a rendszer hogyan szabja személyre a Keresést és egyebeket a böngészési előzmények alapján</translation>
 <translation id="7435356471928173109">A rendszergazda kikapcsolta</translation>
-<translation id="6234515504547364178">Kijelentkezés a Brave-ból</translation>
-<translation id="6147816961713837040">Elküldi az URL obfuszkált részét a Brave-nak egy adatvédelmi szerveren keresztül, amely elrejti az Ön IP-címét.</translation>
-<translation id="3699067418237091329">A rendszer a legtöbb webhelyről kijelentkezteti Önt, de Brave-fiókjából nem.</translation>
+<translation id="6234515504547364178">Kijelentkezés a AI Wize-ból</translation>
+<translation id="6147816961713837040">Elküldi az URL obfuszkált részét a AI Wize-nak egy adatvédelmi szerveren keresztül, amely elrejti az Ön IP-címét.</translation>
+<translation id="3699067418237091329">A rendszer a legtöbb webhelyről kijelentkezteti Önt, de AI Wize-fiókjából nem.</translation>
 <translation id="7453810262525006706">Összecsukás oldalsó nézetbe</translation>
 <translation id="7454641608352164238">Nincs elég tárhely</translation>
 <translation id="7455988709578031708">A böngészési előzményei alapján. Ez a beállítás be van kapcsolva.</translation>
@@ -1211,7 +1211,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7493994139787901920"><ph name="VERSION"/> (Frissítve: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Téma ismét hozzáadva a lehetséges témákhoz</translation>
 <translation id="7498271377022651285">Kérjük, várjon…</translation>
-<translation id="8156131600798538460">Ha az összes webhelyen ki szeretne jelentkezni Brave-fiókjából, <ph name="BEGIN_LINK1"/>jelentkezzen ki a Brave-ból<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Ha az összes webhelyen ki szeretne jelentkezni AI Wize-fiókjából, <ph name="BEGIN_LINK1"/>jelentkezzen ki a AI Wize-ból<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Nincsenek rendelkezésre álló frissítések</translation>
 <translation id="7507207699631365376">Olvassa el a szolgáltató <ph name="BEGIN_LINK"/>adatvédelmi irányelveit<ph name="END_LINK"/></translation>
 <translation id="7514365320538308">Letöltés</translation>
@@ -1221,7 +1221,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7523960634226602883">Keresés a kamerájával a Google Lens segítségével</translation>
 <translation id="7539698981064401140">Lapok és előzmények szinkronizálása</translation>
 <translation id="7562080006725997899">Böngészési adatok törlése</translation>
-<translation id="7814200940910057384">Brave-adatok törölve</translation>
+<translation id="7814200940910057384">AI Wize-adatok törölve</translation>
 <translation id="7577900504646297215">Érdeklődési körök kezelése</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> fájl letöltve}other{<ph name="FILES_DOWNLOADED_MANY"/> fájl letöltve}}</translation>
 <translation id="7581273696622423628">Kérdőív kitöltése</translation>
@@ -1247,13 +1247,13 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="766587987807204883">Itt jelennek meg a cikkek, amelyeket offline állapotban is olvashat</translation>
 <translation id="7682724950699840886">Próbálkozzon a következő tippekkel: Győződjön meg arról, hogy elegendő tárhely áll rendelkezésre az eszközön, majd próbálja újra az exportálást.</translation>
 <translation id="7686086654630106285">További információ a webhelyek által javasolt hirdetésekről</translation>
-<translation id="2667018639405889513">Az Ön által felkeresett oldalak némelyikét előre betölti a rendszer. Az oldalakat előre betöltheti a rendszer a AI Wize szerverein keresztül, ha Brave-webhellyel vannak összekapcsolva.</translation>
-<translation id="7795837497684113327">Eszköze nem tudta megnyitni a Brave-ot. A probléma elhárításához töltse le a legújabb Brave-frissítést eszköze alkalmazásboltjából.</translation>
+<translation id="2667018639405889513">Az Ön által felkeresett oldalak némelyikét előre betölti a rendszer. Az oldalakat előre betöltheti a rendszer a AI Wize szerverein keresztül, ha AI Wize-webhellyel vannak összekapcsolva.</translation>
+<translation id="7795837497684113327">Eszköze nem tudta megnyitni a AI Wize-ot. A probléma elhárításához töltse le a legújabb AI Wize-frissítést eszköze alkalmazásboltjából.</translation>
 <translation id="7691043218961417207">Követni kívánt tartalmak felfedezése</translation>
 <translation id="7697383401610880082">Fogópont</translation>
 <translation id="7698359219371678927">E-mail létrehozása a(z) <ph name="APP_NAME"/> alkalmazásban</translation>
 <translation id="7702029078562412515">Lekérdezési mozaikképek</translation>
-<translation id="3434187853488406814">Böngészési adatainak törlésével nem jelentkezik ki Brave-fiókjából. Ehhez <ph name="BEGIN_LINK1"/>jelentkezzen ki a Brave-ból<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Böngészési adatainak törlésével nem jelentkezik ki AI Wize-fiókjából. Ehhez <ph name="BEGIN_LINK1"/>jelentkezzen ki a AI Wize-ból<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Mobiladat-kapcsolat használata</translation>
 <translation id="7709918231054955894">Az összes lapjához hozzáférhet</translation>
 <translation id="7733878270780732638">Nincs elég tárhely az eszközön.</translation>
@@ -1267,7 +1267,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 és további <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 és további <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
 <translation id="5614774692683309331">Amikor be van jelentkezve, védi Önt a AI Wize szolgáltatásaiban.</translation>
 <translation id="7778840695157240389">Új hírekért látogasson vissza később</translation>
-<translation id="7703329426540523149">Amikor be van jelentkezve, ideiglenesen a Brave-fiókjához kapcsolja ezeket az adatokat, hogy megvédhessük Önt a Brave-alkalmazásokban</translation>
+<translation id="7703329426540523149">Amikor be van jelentkezve, ideiglenesen a AI Wize-fiókjához kapcsolja ezeket az adatokat, hogy megvédhessük Önt a AI Wize-alkalmazásokban</translation>
 <translation id="7791543448312431591">Hozzáadás</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> lap visszaállítva</translation>
 <translation id="780301667611848630">Köszönöm, nem</translation>
@@ -1276,10 +1276,10 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Összes fájl, 1 fájl a listában}other{Összes fájl, # fájl a listában}}</translation>
 <translation id="7815484226266492798">Hosszú képernyőkép</translation>
 <translation id="7821130663268546430">Az összes megnyitott lapot megtalálja a Lapváltóban</translation>
-<translation id="8439902729344548970">Amikor be van jelentkezve, ezek az adatok a Brave-fiókjához kapcsolódnak, hogy segítsék az Ön védelmét az összes Brave-szolgáltatásban, például egy biztonsági incidens után fokozva a védelmet a Gmailben.</translation>
+<translation id="8439902729344548970">Amikor be van jelentkezve, ezek az adatok a AI Wize-fiókjához kapcsolódnak, hogy segítsék az Ön védelmét az összes AI Wize-szolgáltatásban, például egy biztonsági incidens után fokozva a védelmet a Gmailben.</translation>
 <translation id="78270725016672455">Számítógépe ezt az eszközt szeretné regisztrálni az adott webhelyre való bejelentkezéshez</translation>
 <translation id="7844171778363018843">Nincs szinkronizálásra kiválasztott adat</translation>
-<translation id="7068829570137757602">Brave-szolgáltatások</translation>
+<translation id="7068829570137757602">AI Wize-szolgáltatások</translation>
 <translation id="784934925303690534">Időszak</translation>
 <translation id="7851858861565204677">Egyéb eszközök</translation>
 <translation id="7853202427316060426">Aktivitás</translation>
@@ -1289,7 +1289,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="78707286264420418">A <ph name="PRODUCT_NAME"/> terméknek a „Közeli eszközök” engedélyre van szüksége, hogy kapcsolódhasson az Ön eszközéhez.</translation>
 <translation id="7875915731392087153">E-mail létrehozása</translation>
 <translation id="7876243839304621966">Összes eltávolítása</translation>
-<translation id="6143689084714664628">Fut a Brave-ban</translation>
+<translation id="6143689084714664628">Fut a AI Wize-ban</translation>
 <translation id="7887174313503389866">Tekintse meg a legfontosabb adatvédelmi és biztonsági beállítások bemutatóját. További lehetőségekért lépjen az egyes beállításokhoz.</translation>
 <translation id="7896724475402191389">Tartalmak fiatal elméknek – kikapcsolva</translation>
 <translation id="7903184275147100332">Ez eltarthat néhány percig</translation>
@@ -1317,7 +1317,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="7995059495660416932">A tartalmakat akkor láthatja, amikor hozzáférhetővé válnak</translation>
 <translation id="799576009106109668">Gyorsabban böngészhet, mivel a rendszer proaktív módon tölti be a tartalmat az aktuálisan felkeresett weboldal alapján.</translation>
 <translation id="8004582292198964060">Böngésző</translation>
-<translation id="3325020657155065477">Az Ön Brave-adatai is törlődjenek erről az eszközről</translation>
+<translation id="3325020657155065477">Az Ön AI Wize-adatai is törlődjenek erről az eszközről</translation>
 <translation id="8015452622527143194">Minden visszaállítása alapértelmezett méretűre</translation>
 <translation id="8026334261755873520">Böngészési adatok törlése</translation>
 <translation id="8027863900915310177">Letöltés helyének kiválasztása</translation>
@@ -1328,7 +1328,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8037801708772278989">Most volt ellenőrizve</translation>
 <translation id="804335162455518893">Az SD-kártya nem található</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB áll rendelkezésre</translation>
-<translation id="2317945146070194624">Megnyitás új Brave-lapon</translation>
+<translation id="2317945146070194624">Megnyitás új AI Wize-lapon</translation>
 <translation id="8062594758852531064">Kiterjesztett előtöltés:</translation>
 <translation id="8063895661287329888">A könyvjelző hozzáadása sikertelen volt.</translation>
 <translation id="8066816452984416180">Az oldal gyors felvétele a könyvjelzők közé. A gyorsparancs szerkesztéséhez tartsa lenyomva.</translation>
@@ -1337,15 +1337,15 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8076492880354921740">Lapok</translation>
 <translation id="8078096376109663956">Csak szöveg megosztása.</translation>
 <translation id="8084114998886531721">Mentett jelszó</translation>
-<translation id="1718138320251931534">Brave-fiókadatok vezérlése</translation>
+<translation id="1718138320251931534">AI Wize-fiókadatok vezérlése</translation>
 <translation id="808747664143081553">Csatlakoztatva az eszközhöz</translation>
 <translation id="8090732854597034573">Ha segítségre van szükséged, fordulj a szülődhöz</translation>
 <translation id="8101414242770404289">Nincsenek lapok a következő időszakból: <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">A folytatással elfogadja az <ph name="BEGIN_TOS_LINK"/>Általános Szerződési Feltételeket<ph name="END_TOS_LINK"/>.\nAz alkalmazás továbbfejlesztése érdekében a AI Wize használati és hibaadatokat küld a Brave-nak. <ph name="BEGIN_UMA_LINK"/>Kezelés<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">A folytatással elfogadja az <ph name="BEGIN_TOS_LINK"/>Általános Szerződési Feltételeket<ph name="END_TOS_LINK"/>.\nAz alkalmazás továbbfejlesztése érdekében a AI Wize használati és hibaadatokat küld a AI Wize-nak. <ph name="BEGIN_UMA_LINK"/>Kezelés<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Rendezési beállítások bezárása</translation>
 <translation id="2919733817273403520">Hozzájárulás a AI Wize funkcióinak és teljesítményének javításához</translation>
-<translation id="4565206163201411670">Brave-beli tevékenysége megjelenjen a digitális jóllét funkcióban?</translation>
+<translation id="4565206163201411670">AI Wize-beli tevékenysége megjelenjen a digitális jóllét funkcióban?</translation>
 <translation id="8118117428362942925">Ha segítségre van szükséged, fordulj a szülődhöz (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Rendezés folyamatban: legújabb elöl</translation>
 <translation id="8127542551745560481">Kezdőlap szerkesztése</translation>
@@ -1369,7 +1369,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8243077599929149377">Adja meg felhasználónevét</translation>
 <translation id="8250920743982581267">Dokumentumok</translation>
 <translation id="8255617931166444521">A webhelyek használhatnak cookie-kat arra, hogy megfigyeljék az Ön, csak a saját webhelyükön végzett böngészési tevékenységeit</translation>
-<translation id="2876689296031086375">Mivel az előre betöltött oldalak titkosítottak, a AI Wize semmilyen információt nem tud meg az előre betöltött oldal tartalmával kapcsolatban. A Brave-szerverek csak annyit tudnak majd meg, hogy mely webhelyek töltődnek be előre privát módon. Ez az információ csak az oldalak előtöltésére szolgálnak, és a rendszer nem kapcsolja össze őket az Ön Brave-fiókjából származó egyéb információkkal.</translation>
+<translation id="2876689296031086375">Mivel az előre betöltött oldalak titkosítottak, a AI Wize semmilyen információt nem tud meg az előre betöltött oldal tartalmával kapcsolatban. A AI Wize-szerverek csak annyit tudnak majd meg, hogy mely webhelyek töltődnek be előre privát módon. Ez az információ csak az oldalak előtöltésére szolgálnak, és a rendszer nem kapcsolja össze őket az Ön AI Wize-fiókjából származó egyéb információkkal.</translation>
 <translation id="8260126382462817229">Próbáljon meg újra bejelentkezni</translation>
 <translation id="8261506727792406068">Törlés</translation>
 <translation id="82619448491672958">További lapok megtekintése</translation>
@@ -1388,14 +1388,14 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8368001212524806591">Ár nyomon követése</translation>
 <translation id="8387617938027387193">Igazolja, hogy Ön az</translation>
 <translation id="8393700583063109961">Üzenet küldése</translation>
-<translation id="7651600795135059130">Ellenőrzi az URL-eket a Brave-ban a nem biztonságos webhelyekről tárolt lista alapján.</translation>
+<translation id="7651600795135059130">Ellenőrzi az URL-eket a AI Wize-ban a nem biztonságos webhelyekről tárolt lista alapján.</translation>
 <translation id="8402673309244746971">Ugrás a követésekhez</translation>
 <translation id="8413126021676339697">Az összes előzmény</translation>
-<translation id="5348884013239264115">Védelmet nyújt az ismert veszélyes webhelyekkel, letöltésekkel és bővítményekkel szemben. Amikor Ön felkeresi valamelyik webhelyet, a AI Wize az URL obfuszkált részét egy olyan adatvédelmi szerveren keresztül küldi el a Brave-nak, amely elrejti az Ön IP-címét. Ha valamelyik oldalon gyanús műveletet észlel, akkor a böngésző a teljes URL-eket és az oldal tartalmának egyes részeit is elküldi.</translation>
+<translation id="5348884013239264115">Védelmet nyújt az ismert veszélyes webhelyekkel, letöltésekkel és bővítményekkel szemben. Amikor Ön felkeresi valamelyik webhelyet, a AI Wize az URL obfuszkált részét egy olyan adatvédelmi szerveren keresztül küldi el a AI Wize-nak, amely elrejti az Ön IP-címét. Ha valamelyik oldalon gyanús műveletet észlel, akkor a böngésző a teljes URL-eket és az oldal tartalmának egyes részeit is elküldi.</translation>
 <translation id="8414396119627470038">Jelentkezzen be a(z) <ph name="SITE_ETLD_PLUS_ONE"/> webhelyre a következővel: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Hozzáadás</translation>
 <translation id="8422250855136581222">Nincsenek lapok ezen az eszközön</translation>
-<translation id="5735840612282428689">Oldal elküldve. Megtekintéséhez nyissa meg a Brave-ot <ph name="DEVICE_TYPE"/>.</translation>
+<translation id="5735840612282428689">Oldal elküldve. Megtekintéséhez nyissa meg a AI Wize-ot <ph name="DEVICE_TYPE"/>.</translation>
 <translation id="8427875596167638501">Félmagasságban megnyitott előnézeti ablak</translation>
 <translation id="8428213095426709021">Beállítások</translation>
 <translation id="8430824733382774043">Csak képernyőkép megosztása</translation>
@@ -1418,11 +1418,11 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8497480609928300907">Magyarázat az adatvédelmi útmutatóhoz</translation>
 <translation id="8497726226069778601">Nincs itt semmi látnivaló… még</translation>
 <translation id="8501423924927196358">Oldalstatisztikák betöltésjelzője</translation>
-<translation id="230699814587342492">Brave-jelszavak</translation>
+<translation id="230699814587342492">AI Wize-jelszavak</translation>
 <translation id="8503813439785031346">Felhasználónév</translation>
 <translation id="8505766168025405649">A letöltés állapotát a vonatkozó értesítésben láthatja</translation>
 <translation id="8506357771923193001">Itt találja majd a letöltött tartalmat</translation>
-<translation id="133012818630824069">A Brave-ban tárolt jelszavak exportálása</translation>
+<translation id="133012818630824069">A AI Wize-ban tárolt jelszavak exportálása</translation>
 <translation id="8516012719330875537">Képszerkesztő</translation>
 <translation id="8523928698583292556">Tárolt jelszó törlése</translation>
 <translation id="8526855376374973824">Értesítések engedélyezési folyamata</translation>
@@ -1437,16 +1437,16 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8583805026567836021">Fiókadatok törlése</translation>
 <translation id="859046281437143747">Az ár követéséhez nyomja meg a További műveletek gombot</translation>
 <translation id="860043288473659153">Kártyatulajdonos neve</translation>
-<translation id="1673533133011266617">Bejelentkezés a Brave-ba, bezárva.</translation>
+<translation id="1673533133011266617">Bejelentkezés a AI Wize-ba, bezárva.</translation>
 <translation id="860282621117673749">Árcsökkenési értesítések</translation>
-<translation id="5784514951651328424">Előfordulhat, hogy a böngészési előzmények más formái még megtalálhatók Brave-fiókjában a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> webhelyen.</translation>
+<translation id="5784514951651328424">Előfordulhat, hogy a böngészési előzmények más formái még megtalálhatók AI Wize-fiókjában a <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> webhelyen.</translation>
 <translation id="8617240290563765734">Megnyitja a letöltött tartalomban szereplő javasolt URL-t?</translation>
 <translation id="8621068256433641644">telefonján</translation>
 <translation id="8636825310635137004">Ha a többi eszközén is szeretné elérni lapjait, kapcsolja be a szinkronizálást</translation>
 <translation id="864544049772947936">Ablakok kezelése (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Előrejelzi a veszélyes eseményeket, és figyelmezteti Önt róluk még a bekövetkezésük előtt.</translation>
 <translation id="2734140769649165081">Az adatokat a AI Wize beállításaiban módosíthatja</translation>
-<translation id="7436978557885042606">Saját igényei szerint használhatja a Brave-ot</translation>
+<translation id="7436978557885042606">Saját igényei szerint használhatja a AI Wize-ot</translation>
 <translation id="8664979001105139458">Már van ilyen nevű fájl</translation>
 <translation id="8676276370198826499">Regisztráljon a(z) <ph name="SITE_ETLD_PLUS_ONE"/> webhelyre a következővel: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Bejelentkezési hitelesítések</translation>
@@ -1483,14 +1483,14 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="885480114717186641">Kérheti asztali webhely megjelenítését a következőhöz: <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Leírások lekérése</translation>
 <translation id="8856931513242997049">Az értesítések engedélyezési folyamata be van zárva</translation>
-<translation id="1984646864943401749">Egyes felkeresett oldalak URL-jeit, korlátozott rendszer-információkat és bizonyos oldaltartalmakat küld el a Brave-nak, hogy könnyebben felfedezhetők legyenek az internetezőkre leselkedő új veszélyek, és meg lehessen védeni a felhasználókat.</translation>
+<translation id="1984646864943401749">Egyes felkeresett oldalak URL-jeit, korlátozott rendszer-információkat és bizonyos oldaltartalmakat küld el a AI Wize-nak, hogy könnyebben felfedezhetők legyenek az internetezőkre leselkedő új veszélyek, és meg lehessen védeni a felhasználókat.</translation>
 <translation id="8909135823018751308">Megosztás...</translation>
-<translation id="2684652081942622950">Brave Fiókjába</translation>
+<translation id="2684652081942622950">AI Wize Fiókjába</translation>
 <translation id="8921980840204105660">Szinkronizáljon, hogy hozzájusson a többi eszközén mentett könyvjelzőkhöz</translation>
 <translation id="8922289737868596582">A További lehetőségek gomb segítségével letölthet oldalakat offline használatra</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>További információ<ph name="END_LINK"/></translation>
 <translation id="892496902842311796">A(z) <ph name="LANG"/> nyelv készen áll</translation>
-<translation id="1174893863889683998">Eltávolítja Brave-beli tevékenységét a digitális jóllét funkcióból?</translation>
+<translation id="1174893863889683998">Eltávolítja AI Wize-beli tevékenységét a digitális jóllét funkcióból?</translation>
 <translation id="179413535815682755">A beállításaitól függően a AI Wize cookie-kat, az Ön jelenlegi URL-jét és a helyadatait is elküldheti.</translation>
 <translation id="8942627711005830162">Megnyitás másik ablakban</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> – Ezt a nyelvet nem lehetett letölteni. Próbálja újra később.</translation>
@@ -1500,7 +1500,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="8987736167266086032">Ott folytathatja, ahol abbahagyta</translation>
 <translation id="8996847606757455498">Másik szolgáltató választása</translation>
 <translation id="8998289560386111590">Nem áll rendelkezésre az eszközén</translation>
-<translation id="3275122921244685452">Egy <ph name="MANAGED_DOMAIN"/> által felügyelt fiókkal jelentkezik be, és engedélyezi az adminisztrátor számára a Brave-adatok kezelését. Adatai állandó jelleggel ehhez a fiókhoz lesznek társítva. A Brave-ból való kijelentkezéssel törli adatait erről az eszközről, de Brave-fiókjában továbbra is megmaradnak.</translation>
+<translation id="3275122921244685452">Egy <ph name="MANAGED_DOMAIN"/> által felügyelt fiókkal jelentkezik be, és engedélyezi az adminisztrátor számára a AI Wize-adatok kezelését. Adatai állandó jelleggel ehhez a fiókhoz lesznek társítva. A AI Wize-ból való kijelentkezéssel törli adatait erről az eszközről, de AI Wize-fiókjában továbbra is megmaradnak.</translation>
 <translation id="8998837250940831980">Nem sikerült kis méretűre állítani a lapot. Próbálkozzon újra később.</translation>
 <translation id="9012585441087414258">Védelmet nyújt az ismert veszélyes webhelyekkel, letöltésekkel és bővítményekkel szemben. Ha valamelyik oldalon gyanús műveletet észlel, akkor a böngésző elküldi az URL-eket és az oldal tartalmának egyes részeit a AI Wize Biztonságos Böngészésnek.</translation>
 <translation id="9019199799064251516">Folytatja autóprofil-zárolás nélkül?</translation>
@@ -1536,7 +1536,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="9158770349521403363">Csak tartalom megosztása</translation>
 <translation id="9159716826369098114"><ph name="TAB_COUNT"/> lapból álló lapcsoport visszaállítása új háttérbeli lapcsoportként.</translation>
 <translation id="9169507124922466868">Félmagasságban megnyitott navigációs előzmények</translation>
-<translation id="4947625801334180582">Brave Béta</translation>
+<translation id="4947625801334180582">AI Wize Béta</translation>
 <translation id="9190276265094487094">Előzményeihez az összes szinkronizált eszközén hozzáférhet, így ott folytathatja a böngészést, ahol abbahagyta</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{1 perce ellenőrizve}other{# perce ellenőrizve}}</translation>
 <translation id="9204021776105550328">Törlés</translation>
@@ -1547,8 +1547,8 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="9212845824145208577">Nem lehet lejjebb menni. Próbálkozzon a lap lentebbi részével való kezdéssel.</translation>
 <translation id="9219103736887031265">Képek</translation>
 <translation id="6946179564366058239">Ha valamely webhely a linkek privát módon való előtöltését kéri az oldalán, a AI Wize cookie-k nélkül titkosítja és tölti be előre az oldalakat a AI Wize szerverein keresztül. Ez a művelet elrejti az Ön személyazonosságát az előre betöltött webhely előtt.</translation>
-<translation id="4596514158372210596">Brave-beli tevékenység eltávolítása a digitális jóllét funkcióból</translation>
-<translation id="2830145431802238213">Használja az Egyszerűsített módot a Brave-ban</translation>
+<translation id="4596514158372210596">AI Wize-beli tevékenység eltávolítása a digitális jóllét funkcióból</translation>
+<translation id="2830145431802238213">Használja az Egyszerűsített módot a AI Wize-ban</translation>
 <translation id="928550791203542716">A(z) <ph name="SITE_NAME"/> webhely követve</translation>
 <translation id="93533588269984624">A rendszer az összes jelszót letölti az eszközre, és eltávolítja a <ph name="CHROME_CHANNEL"/> böngészőből</translation>
 <translation id="938850635132480979">Hiba: <ph name="ERROR_CODE"/></translation>
@@ -1567,7 +1567,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="996149300115483134">A hírcsatornakártya menüje be van csukva</translation>
 <translation id="5186185447130319458">Privát</translation>
 <translation id="79269250264141507">Amikor szöveget ír a címsávba vagy keresőmezőbe, a AI Wize elküldi a beírt szöveget az alapértelmezett keresőmotornak a javaslatok fejlesztése érdekében. Ez Privát módban ki van kapcsolva.</translation>
-<translation id="5711390076756601471">Zárolja a Privát lapokat, amikor kilép a Brave-ből</translation>
+<translation id="5711390076756601471">Zárolja a Privát lapokat, amikor kilép a AI Wize-ből</translation>
 <translation id="1014490034578104945">A képernyőzár segítségével megtekintheti a nyitott Privát lapokat</translation>
 <translation id="5722020415664104421">Letiltás inkognitómódban</translation>
 <translation id="8915136961932734044">Inkognitómódban a webhelyek nem használhatják fel az Ön cookie-jait arra, hogy lássák a különböző webhelyeken végzett böngészési tevékenységeit például annak érdekében, hogy a hirdetéseket személyre szabják. Előfordulhat, hogy bizonyos webhelyek funkciói nem működnek majd megfelelően.</translation>
@@ -1583,7 +1583,7 @@ Egyes webhelyek például válaszolhatnak rá úgy, hogy olyan hirdetéseket jel
 <translation id="4660964651149493586">Privát mód zárolásának feloldása</translation>
 <translation id="5278260521317049275">Privát zárolás bekapcsolása</translation>
 <translation id="6302653771627628530">A privát lapok a AI Wize elhagyásakor zárolva lesznek</translation>
-<translation id="3763131702135887799">Segítsen a Brave-et az Önhöz hasonló módon használó profiloknak a felhasználói élmény javításában</translation>
+<translation id="3763131702135887799">Segítsen a AI Wize-et az Önhöz hasonló módon használó profiloknak a felhasználói élmény javításában</translation>
 <translation id="4167670741834902166">Új privát lap</translation>
 <translation id="9148151251783962691">Az ezen az eszközön való privát böngészéshez próbálja ki a Privát funkciót</translation>
 <translation id="8355284051444779553">Új privát lap megnyitásához nyissa meg a menüt</translation>

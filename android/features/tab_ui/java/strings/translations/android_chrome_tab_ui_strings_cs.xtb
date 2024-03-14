@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Navštívit web</translation>
 <translation id="2759453070259087442">Rozbalit skupinu karet <ph name="TITLE_OF_GROUP"/> s <ph name="NUMBER_OF_TABS"/> kartami.</translation>
 <translation id="2801787514987684416">Zobrazit informace o obchodu?</translation>
-<translation id="4691798003247738043">Brave | Informace o obchodu</translation>
+<translation id="4691798003247738043">AI Wize | Informace o obchodu</translation>
 <translation id="2977480621796371840">Odebrat ze skupiny</translation>
 <translation id="3008554597174452548">Přestat produkt sledovat</translation>
 <translation id="3052964831964880138">U produktu <ph name="PRODUCT_NAME"/> klesla cena o <ph name="PRICE_DROP"/></translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Zobrazit informace o prodejně</translation>
 <translation id="6562820390860419811">Přesunout kartu doleva</translation>
 <translation id="6615455863669487791">Ukázat</translation>
-<translation id="6398241160085205003">Své zavřené karty najdete v sekci Nedávno použité karty v hlavní nabídce prohlížeče Brave.</translation>
+<translation id="6398241160085205003">Své zavřené karty najdete v sekci Nedávno použité karty v hlavní nabídce prohlížeče AI Wize.</translation>
 <translation id="6840760312327750441">Chcete-li karty seskupit, podržte některou kartu. Potom ji přetáhněte na jinou kartu.</translation>
 <translation id="6856809498882026482">Skrýt režim výběru několika položek</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Sdílet kartu}few{Sdílet karty}many{Sdílet karty}other{Sdílet karty}}</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">V tomto editoru můžete zkontrolovat všechny archivované karty a ty nepotřebné odstranit.</translation>
 <translation id="959682366969460160">Uspořádejte si položky</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Své zavřené karty najdete v nedávno použitých kartách v hlavní nabídce Brave. Vaše soukromá karta nebude dostupná.}
-        other {Své zavřené karty najdete v nedávno použitých kartách v hlavní nabídce Brave. Vaše soukromé karty (#) nebudou dostupné.}}</translation>
+        =1 {Své zavřené karty najdete v nedávno použitých kartách v hlavní nabídce AI Wize. Vaše soukromá karta nebude dostupná.}
+        other {Své zavřené karty najdete v nedávno použitých kartách v hlavní nabídce AI Wize. Vaše soukromé karty (#) nebudou dostupné.}}</translation>
 <translation id="3228718275011575753">Zavřít všechny soukromé karty?</translation>
 <translation id="6687920250729800417">Vaše aktivita v těchto soukromých kartách bude z tohoto zařízení odebrána.</translation>
 </translationbundle>

@@ -18,7 +18,7 @@ RegisterPolymerTemplateModifications({
     const site = templateContent.querySelector('#site')
     if (!site) {
       console.error(
-        `[Brave Settings Overrides] cannot find #site in add-site-dialog`)
+        `[AI Wize Settings Overrides] cannot find #site in add-site-dialog`)
       return
     }
     site.setAttribute('placeholder', '[[sitePlaceholder]]')

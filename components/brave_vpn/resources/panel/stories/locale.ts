@@ -5,7 +5,7 @@
 import { provideStrings } from '../../../../../.storybook/locale'
 
 provideStrings({
-  braveVpn: 'Brave Firewall + VPN',
+  braveVpn: 'AI Wize Firewall + VPN',
   braveVpnConnect: 'Connect',
   braveVpnConnecting: 'Connecting…',
   braveVpnConnected: 'Connected',
@@ -27,7 +27,7 @@ provideStrings({
   braveVpnReconnectAutomatically: 'Reconnect automatically',
   braveVpnContactSupport: 'Contact technical support',
   braveVpnAbout: 'About',
-  braveVpnErrorPanelHeader: 'Brave VPN',
+  braveVpnErrorPanelHeader: 'AI Wize VPN',
   braveVpnFeature1: 'Block trackers & ads across all apps',
   braveVpnFeature2: 'Protects you from unwanted network connections',
   braveVpnFeature3: 'Choose your VPN location',
@@ -37,7 +37,7 @@ provideStrings({
   braveVpnPurchaseFailed: 'Unable to check the status of your purchase, probably a network problem, try again or contact support.',
   braveVpnEditPaymentMethod: 'Edit payment method',
   braveVpnPaymentFailure: 'There was a problem with your payment',
-  braveVpnPaymentFailureReason: 'Looks like your most recent payment for $1 did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method, or contact Brave support.',
+  braveVpnPaymentFailureReason: 'Looks like your most recent payment for $1 did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method, or contact AI Wize support.',
   braveVpnSupportEmail: 'Your email address',
   braveVpnSupportSubject: 'Subject',
   braveVpnSupportSubjectNotSet: 'Please choose a reason',
@@ -56,5 +56,5 @@ provideStrings({
   braveVpnSupportTimezone: 'Timezone:',
   braveVpnSupportNotes: 'Support provided in partnership with Guardian.',
   braveVpnSupportSubmit: 'Submit',
-  braveVpnConnectNotAllowed: 'VPN connection failed. Please try connecting again, and be sure to click Allow to enable Brave\'s VPN configuration.'
+  braveVpnConnectNotAllowed: 'VPN connection failed. Please try connecting again, and be sure to click Allow to enable AI Wize\'s VPN configuration.'
 })

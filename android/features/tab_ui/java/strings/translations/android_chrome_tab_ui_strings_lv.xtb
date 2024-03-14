@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Apmeklēt vietni</translation>
 <translation id="2759453070259087442">Izvērst ciļņu grupu <ph name="TITLE_OF_GROUP"/>. Ciļņu skaits šajā grupā ir <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Vai skatīt veikala informāciju?</translation>
-<translation id="4691798003247738043">Brave | Par šo veikalu</translation>
+<translation id="4691798003247738043">AI Wize | Par šo veikalu</translation>
 <translation id="2977480621796371840">Noņemt no grupas</translation>
 <translation id="3008554597174452548">Vairs neizsekot produktam</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> cenas kritums produktam “<ph name="PRODUCT_NAME"/>”</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Skatiet veikala informāciju; opcija ir pieejama ekrāna augšdaļā</translation>
 <translation id="5558362125926932819">Aizvērt ciļņu grupu. Ciļņu skaits šajā grupā ir <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="5580090775658607195">Grupētas <ph name="TAB_COUNT"/> cilnes</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> saite no pārlūka Brave}zero{<ph name="TABS_COUNT_MANY"/> saišu no pārlūka Brave}one{<ph name="TABS_COUNT_MANY"/> saite no pārlūka Brave}other{<ph name="TABS_COUNT_MANY"/> saites no pārlūka Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> saite no pārlūka AI Wize}zero{<ph name="TABS_COUNT_MANY"/> saišu no pārlūka AI Wize}one{<ph name="TABS_COUNT_MANY"/> saite no pārlūka AI Wize}other{<ph name="TABS_COUNT_MANY"/> saites no pārlūka AI Wize}}</translation>
 <translation id="575494663145460764">Vai saņemt brīdinājumus par cenu kritumu?</translation>
 <translation id="58326064309361797">Velciet cilnes, lai tās sagrupētu</translation>
 <translation id="5846292395804797011">Aizvērt ciļņu grupu “<ph name="TITLE_OF_GROUP"/>”. Ciļņu skaits šajā grupā ir <ph name="NUMBER_OF_TABS"/>.</translation>

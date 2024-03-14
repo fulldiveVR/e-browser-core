@@ -16,7 +16,7 @@
     </message>
   </if>
   <message name="IDS_COMPOSE_SUGGESTION_LABEL" desc="The label beneath the main text in the Autofill suggestion that a user sees after interacting with a supported text element.">
-    Powered by Brave
+    Powered by AI Wize
   </message>
   <message name="IDS_COMPOSE_SUGGESTION_SAVED_TEXT" desc="The main text displayed in the Autofill suggestion that a user sees after interacting with a supported text element, indicating that user state was saved.">
     Resume writing
@@ -36,7 +36,7 @@
     Just start with a few words or a first draft to get writing suggestions.
   </message>
   <message name="IDS_COMPOSE_FRE_MAIN_MID" desc="The middle main text of the Help me write disclaimer dialog.">
-    Your text and the content and URL of the page you're writing on will be sent to Brave, reviewed by humans, and used to improve this feature. Avoid entering personal information (like medical or financial details) or using this tool on sites that contain private or sensitive information.
+    Your text and the content and URL of the page you're writing on will be sent to AI Wize, reviewed by humans, and used to improve this feature. Avoid entering personal information (like medical or financial details) or using this tool on sites that contain private or sensitive information.
   </message>
   <message name="IDS_COMPOSE_FRE_OK_BUTTON" desc="The button to acknowledge the Help me write disclaimer message.">
     OK

@@ -3,7 +3,7 @@
 <translationbundle lang="zh-CN">
 <translation id="8631427463833030968">管理广告</translation>
 <translation id="7630214457764713113">复制干净的链接</translation>
-<translation id="885805571521218129">这反映了你对本月Brave 广告的预期收益范围。</translation>
+<translation id="885805571521218129">这反映了你对本月AI Wize 广告的预期收益范围。</translation>
 <translation id="3478449063771497234">通知被禁用</translation>
 <translation id="2862978891748913252">选择国家/地点</translation>
 <translation id="3970520675790340955">请选择您所在的国家/地区，以便我们为您提供适合您所在地区的正确选项和广告。</translation>
@@ -13,7 +13,7 @@
 <translation id="7931127789630755251">从您在 AI Wize 中看到的私人广告中赚取代币</translation>
 <translation id="7859066142771796818">使用代币购买礼品卡、兑换其他货币、支持内容创作者等等。</translation>
 <translation id="3863981251715594911">如何运作？</translation>
-<translation id="5547108999862247665">Brave 奖励是如何运作的？</translation>
+<translation id="5547108999862247665">AI Wize 奖励是如何运作的？</translation>
 <translation id="2965798296974325760">开始使用 Rewards</translation>
 <translation id="8220484609979012449">\\n\n 您仍然可以使用 Web3 钱包向该创作者发送加密捐款。</translation>
 <translation id="6385969012847057348">此创作者无法接收到来自 <ph name="CUSTODIAN"/>的捐款。</translation>
@@ -36,13 +36,13 @@
 <translation id="1899434873745933492">无法发送捐款</translation>
 <translation id="1794046983410841192">使用 AI Wize 奖励</translation>
 <translation id="8037118277449189044">使用 Web3 钱包</translation>
-<translation id="9059356165618961685">Brave 奖励余额</translation>
+<translation id="9059356165618961685">AI Wize 奖励余额</translation>
 <translation id="86107454835395919">设置为每月捐款</translation>
 <translation id="1177863135347784049">自定义</translation>
 <translation id="4827581232860040208">在发送您的捐款时出了问题</translation>
 <translation id="3259723213051400722">请重试。</translation>
-<translation id="5298965408768377685">这位创作者已注册 Brave，能接收 AI Wize Rewards 用户的捐款。<ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">当通知被禁用时，Brave 奖励可能无法运行。</translation>
+<translation id="5298965408768377685">这位创作者已注册 AI Wize，能接收 AI Wize Rewards 用户的捐款。<ph name="LEARN_MORE"/></translation>
+<translation id="7466579932043491502">当通知被禁用时，AI Wize 奖励可能无法运行。</translation>
 <translation id="4259212006412783790">打开</translation>
 <translation id="6112331814131703370">封鎖「切換至應用程式」通知</translation>
 <translation id="4744921452903670666">请将您的想法告诉我们！</translation>
@@ -57,9 +57,9 @@
 <translation id="6826743502395386800">悲伤</translation>
 <translation id="5488843227043643519">为 Play Store 评分？</translation>
 <translation id="5867854497245948308">感谢您的宝贵意见！</translation>
-<translation id="4935400164159327304">让我们知道如何改善 Brave。</translation>
+<translation id="4935400164159327304">让我们知道如何改善 AI Wize。</translation>
 <translation id="1420756770787071946">支持此创作者</translation>
-<translation id="8966035543003363155">Brave 通知让一切变得更方便</translation>
+<translation id="8966035543003363155">AI Wize 通知让一切变得更方便</translation>
 <translation id="7662771815233894695">管理下载，赚取代币，查看每周使用统计数据等。</translation>
 <translation id="4265429476391459783">您将不会获得奖励或收到隐私报告</translation>
 <translation id="1305714751384738456">您将不会获得 AI Wize 奖励</translation>
@@ -77,7 +77,7 @@
 <translation id="7307834434086582547">启用/关闭 AI Wize 屏蔽</translation>
 <translation id="6945863270524203017">获取有关跟踪器和广告拦截的的每周隐私更新。</translation>
 <translation id="4324735664183300693">開啟通知</translation>
-<translation id="6395059271589866759">Brave 收取发送金额的5%作为手续费。</translation>
+<translation id="6395059271589866759">AI Wize 收取发送金额的5%作为手续费。</translation>
 <translation id="6661699662755460155">兑换</translation>
 <translation id="6790981891677399838">我刚刚使用了 AI Wize 浏览器捐赠了<ph name="AMOUNT"/> BAT。了解如何支持您喜爱的创作者和网站：https://brave.com/rewards</translation>
 <translation id="5510493033031835532">自动重定向 AMP 页面</translation>
@@ -100,7 +100,7 @@
 <translation id="8877432762827303535">在线结算</translation>
 <translation id="6583902294974160967">支持</translation>
 <translation id="1799030480311994998">功能</translation>
-<translation id="2005732746077850308">Brave 屏障和隐私</translation>
+<translation id="2005732746077850308">AI Wize 屏障和隐私</translation>
 <translation id="4692623383562244444">搜索引擎</translation>
 <translation id="1468415711258933398">标准标签页</translation>
 <translation id="3377025655491224618">无痕标签页</translation>
@@ -141,8 +141,8 @@
 <translation id="59174027418879706">已启用</translation>
 <translation id="6252490671914511928">完全私密的今日热门新闻，专为您打造。</translation>
 <translation id="8300751939969131609">打开 AI Wize News，别错过任何一个故事</translation>
-<translation id="7266075701303521777">Brave 新闻有广告支持，为您的设备匹配完全私密的匿名广告。</translation>
-<translation id="7699565323725789472">在单个提要中跟踪您最喜欢的来源。在 AI Wize 中打开一个标签，向下滚动，然后……就可以了！\nBrave News 支持私人匿名投放广告。</translation>
+<translation id="7266075701303521777">AI Wize 新闻有广告支持，为您的设备匹配完全私密的匿名广告。</translation>
+<translation id="7699565323725789472">在单个提要中跟踪您最喜欢的来源。在 AI Wize 中打开一个标签，向下滚动，然后……就可以了！\nAI Wize News 支持私人匿名投放广告。</translation>
 <translation id="1765217911817124376">开启 AI Wize 新闻</translation>
 <translation id="8981973962043893066">搜索网站、主题或 RSS 源</translation>
 <translation id="3225021799163709119">热门</translation>
@@ -171,7 +171,7 @@
 <translation id="3189348785087463371">已宣传</translation>
 <translation id="7554145152551782675">更多 AI Wize 优惠</translation>
 <translation id="254100925533869330">没有内容</translation>
-<translation id="7172792761509429092">Brave News 没有内容可以显示。</translation>
+<translation id="7172792761509429092">AI Wize News 没有内容可以显示。</translation>
 <translation id="1771307734839364850">选择内容来源</translation>
 <translation id="6891769200437737956">防止网站对我进行指纹验证</translation>
 <translation id="7459000603787995422">退出时关闭标签页</translation>
@@ -188,7 +188,7 @@
 <translation id="7142548388914389999">允许保留隐私的产品分析 (P3A)</translation>
 <translation id="5254037869598726291">匿名的 P3A 信息有助于 AI Wize 估计总体使用量，并确保我们’在改进受欢迎的功能。</translation>
 <translation id="933652931229970927">自动发送诊断报告</translation>
-<translation id="5987838417172370108">Brave 浏览器崩溃或无响应时自动发送诊断报告，帮助提高 Brave\u2019s 产品稳定性。</translation>
+<translation id="5987838417172370108">AI Wize 浏览器崩溃或无响应时自动发送诊断报告，帮助提高 AI Wize\u2019s 产品稳定性。</translation>
 <translation id="7977176350719484850">预计\n节省的数据</translation>
 <translation id="9008534313521214777">预计节省的\n时间</translation>
 <translation id="410351446219883937">自动播放</translation>
@@ -202,11 +202,11 @@
 <translation id="4172219483893066798">网站可以请求访问本地主机资源</translation>
 <translation id="7181706637590665047">不允许访问本地主机资源</translation>
 <translation id="1485435696620658073">允许访问本地主机资源</translation>
-<translation id="181905442828471321">Brave Shields 全局默认值</translation>
+<translation id="181905442828471321">AI Wize Shields 全局默认值</translation>
 <translation id="2675679258824361492">其他隐私设置</translation>
 <translation id="8026334261755873520">清除浏览数据</translation>
 <translation id="1690924763769415936">在后台播放</translation>
-<translation id="6332924730165919598">关闭所有标签页即会关闭 Brave</translation>
+<translation id="6332924730165919598">关闭所有标签页即会关闭 AI Wize</translation>
 <translation id="8308305244351876417">当您切换到 AI Wize 或其他应用程序的另一个标签或设备屏幕关闭时，允许继续播放音频。</translation>
 <translation id="49147335255967913">在 AI Wize 中打开 YouTube 链接</translation>
 <translation id="4150201353443180367">显示</translation>
@@ -217,13 +217,13 @@
 <translation id="4736073408974888559"><ph name="BEGIN_LINK"/>了解更多关于 Widevine 的信息<ph name="END_LINK"/></translation>
 <translation id="6961369821791548622">允许（立即重新启动）</translation>
 <translation id="2433507940547922241">外观</translation>
-<translation id="9040069796107003510">Brave 奖励图标</translation>
+<translation id="9040069796107003510">AI Wize 奖励图标</translation>
 <translation id="6333347122924254968">在地址栏显示 AI Wize 奖励图标</translation>
 <translation id="8495235435594442882">启用底部工具栏</translation>
 <translation id="6587448235155023666">您所做的更改将在您下次重新启动 AI Wize 时生效</translation>
 <translation id="8701563696941209024">立即重新启动</translation>
 <translation id="834487290629916192">后来</translation>
-<translation id="7207456302801184289">欢迎使用 Brave</translation>
+<translation id="7207456302801184289">欢迎使用 AI Wize</translation>
 <translation id="4117451092682672487">轻松保护个人隐私。</translation>
 <translation id="7909375417585209817">只要将 AI Wize 作为默认设置，您轻击的每个链接都会在 AI Wize 的隐私保护下打开。</translation>
 <translation id="7370959926683925817">每一天都屏蔽广告、保存数据。</translation>
@@ -245,15 +245,15 @@
 <translation id="986879628471635371">对启动过程进行故障排除</translation>
 <translation id="5808759341041733958">请选择默认搜索引擎</translation>
 <translation id="1331593888918588693">您以后随时可以在应用设置中更改自己的偏好。</translation>
-<translation id="5806601733251372221">Brave 屏蔽</translation>
+<translation id="5806601733251372221">AI Wize 屏蔽</translation>
 <translation id="8537217141725709400">赚取<ph name="TOKEN"/>s</translation>
-<translation id="3333887201479867589">Brave 奖励</translation>
+<translation id="3333887201479867589">AI Wize 奖励</translation>
 <translation id="5870330605209713397">默认查看尊重隐私的广告并支持你喜爱的站点和创作者</translation>
 <translation id="5302488867897327287">轻按 “开始使用 AI Wize 奖励” 意味着你同意</translation>
 <translation id="4281844954008187215">服务条款</translation>
 <translation id="6871397658902960384">开始浏览</translation>
 <translation id="454386012157232640">我没看到广告</translation>
-<translation id="1448877943847791441">Brave 会在以下月份展示您的第一个广告：</translation>
+<translation id="1448877943847791441">AI Wize 会在以下月份展示您的第一个广告：</translation>
 <translation id="4410793187232041318">现在你可以从 AI Wize 广告中获得代币。</translation>
 <translation id="6511854390690723657">这是您的第一个 AI Wize 广告。点按以了解更多信息。</translation>
 <translation id="2070991379950719711">开始使用 AI Wize Rewards</translation>
@@ -261,7 +261,7 @@
 <translation id="3570367516044491911">设置为默认浏览器</translation>
 <translation id="6800338374677644736">设置为默认浏览器</translation>
 <translation id="19715420010996093">选择 AI Wize 浏览器并轻按 "始终"</translation>
-<translation id="3546439402724649282">Brave 已被设置为您的默认浏览器。</translation>
+<translation id="3546439402724649282">AI Wize 已被设置为您的默认浏览器。</translation>
 <translation id="8389661903259423907">您已经设置了默认浏览器。您可以在应用设置中更改默认浏览器。</translation>
 <translation id="1545749641540134597">扫描二维码</translation>
 <translation id="5317781812114905957">说明</translation>
@@ -270,11 +270,11 @@
 <translation id="7658239707568436148">取消</translation>
 <translation id="1201402288615127009">下一步</translation>
 <translation id="8481779960444041069">要改善隐私，将 AI Wize 设为默认浏览器</translation>
-<translation id="1938402585819943124">在下个屏幕中选中 Brave。</translation>
+<translation id="1938402585819943124">在下个屏幕中选中 AI Wize。</translation>
 <translation id="8926389886865778422">不再询问</translation>
 <translation id="745974920645827035">在进行独立搜索时可受到更好的隐私保护</translation>
-<translation id="4717018805430015801">Brave 搜尋不會追蹤您、您的查詢內容或點擊項目。</translation>
-<translation id="5240031343741051161">尝试Brave搜索</translation>
+<translation id="4717018805430015801">AI Wize 搜尋不會追蹤您、您的查詢內容或點擊項目。</translation>
+<translation id="5240031343741051161">尝试AI Wize搜索</translation>
 <translation id="5234764350956374838">关闭</translation>
 <translation id="6639570430554986719">一月</translation>
 <translation id="1807352595146144483">二月</translation>
@@ -288,8 +288,8 @@
 <translation id="8220228041552340594">十月</translation>
 <translation id="8280223431922155812">十一月</translation>
 <translation id="4254029385847607686">十二月</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="1772301834467143364">Brave 新闻</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
+<translation id="1772301834467143364">AI Wize 新闻</translation>
 <translation id="7732576862074737148">≈ <ph name="VALUE"/> USD</translation>
 <translation id="8428213095426709021">设置</translation>
 <translation id="6020176662032623904">已验证的创建者</translation>
@@ -305,7 +305,7 @@
 <translation id="1649629664206601032">您可以在<ph name="TOKEN"/>天内领取</translation>
 <translation id="683765328936486920">在 YouTube 上</translation>
 <translation id="8969049974285901797">在 Twitch 上</translation>
-<translation id="8038539967102225446">Brave 的广告在这里！</translation>
+<translation id="8038539967102225446">AI Wize 的广告在这里！</translation>
 <translation id="222883304157347087">（此设备）</translation>
 <translation id="4157741509680155021">同步链上的设备</translation>
 <translation id="279635009973773843">加载设备...</translation>
@@ -316,8 +316,8 @@
 <translation id="859506441384380749">此代码由已弃用的 AI Wize 版本生成，请先升级您的其他设备</translation>
 <translation id="3132642509209154999">此代码已过期。请在其他设备上生成新的代码，然后重试。</translation>
 <translation id="2859229680945501779">此代码无效。请检查您设备上的时间和时区设置是否正确。</translation>
-<translation id="3149880132460839085">Brave 同步</translation>
-<translation id="3680755684186855422">Brave 同步使您能够在您的各种设备上的 AI Wize 浏览器之间私密同步书签数据。</translation>
+<translation id="3149880132460839085">AI Wize 同步</translation>
+<translation id="3680755684186855422">AI Wize 同步使您能够在您的各种设备上的 AI Wize 浏览器之间私密同步书签数据。</translation>
 <translation id="3735228155296883311">只需扫描您在另一台设备上创建的同步链中的代码即可。或开始一个新的同步链。</translation>
 <translation id="2614069607859982576">使用现有的同步设备，打开 AI Wize 设置并导航到 “设置 &gt; 同步 ”。选择 “添加新设备”，并扫描屏幕上显示的二维码。</translation>
 <translation id="5241263629636958324">已复制到剪贴板</translation>
@@ -336,11 +336,11 @@
 <translation id="1475223680121592371">添加移动设备</translation>
 <translation id="2965377893636908578">添加电脑</translation>
 <translation id="6604289897677913048">在使用备用电话或平板电脑时，转到 AI Wize 设置、同步和扫描</translation>
-<translation id="8508856434435157945">在您的移动设备上，导航到“设置”面板上的“Brave 同步”，然后点击“扫描同步代码”按钮。使用摄像头扫描以下 QR 码。</translation>
+<translation id="8508856434435157945">在您的移动设备上，导航到“设置”面板上的“AI Wize 同步”，然后点击“扫描同步代码”按钮。使用摄像头扫描以下 QR 码。</translation>
 <translation id="2590683710114839102">在您的电脑上转到 AI Wize 设置、同步。选择“输入同步链代码”。</translation>
 <translation id="65315202420929965">扫描此同步代码</translation>
 <translation id="6764016175302339802">将该代码用作密码。如果他人获取了该信息，那他们就可以读取和修改您已同步的数据。</translation>
-<translation id="6707003343517029414">在目标计算机上，导航至设置中的“Brave Sync”然后单击“我有一个同步代码”按钮。\n输入下方显示的同步链码字。</translation>
+<translation id="6707003343517029414">在目标计算机上，导航至设置中的“AI Wize Sync”然后单击“我有一个同步代码”按钮。\n输入下方显示的同步链码字。</translation>
 <translation id="2731921493694251495">输入同步链代码</translation>
 <translation id="2175927920773552910">二维码</translation>
 <translation id="8653433343015102968">码字</translation>
@@ -357,10 +357,10 @@
 <translation id="327726072512457161">设置退出</translation>
 <translation id="8050847734948770789">启用 AI Wize 奖励</translation>
 <translation id="9187185473011056079">算我一个！</translation>
-<translation id="8185825081026121627">通过查看“Brave 奖励”计划中保护隐私的广告来赚取基本的代币。</translation>
+<translation id="8185825081026121627">通过查看“AI Wize 奖励”计划中保护隐私的广告来赚取基本的代币。</translation>
 <translation id="5321518976657560663">重置错误</translation>
-<translation id="4114170343590425996">重置 AI Wize 奖励时出错。请重新启动 Brave，然后重试。</translation>
-<translation id="6417420737057016607">Brave广告</translation>
+<translation id="4114170343590425996">重置 AI Wize 奖励时出错。请重新启动 AI Wize，然后重试。</translation>
+<translation id="6417420737057016607">AI Wize广告</translation>
 <translation id="5611966874859284786">在不使用 AI Wize 时显示通知广告</translation>
 <translation id="6606319453795180219">这将会删除您的 AI Wize Rewards 并重置您的所有 AI Wize Rewards 数据</translation>
 <translation id="8293206222192510085">添加书签</translation>
@@ -398,7 +398,7 @@
 <translation id="3063783274005996079">解锁以启用密码同步</translation>
 <translation id="7551563084530025179">同步密码前，您必须先使用装置的生物辨识功能/密码完成验证。采用这项额外的安全措施有助于确保密码安全。</translation>
 <translation id="6925081665778864449">如需同步密码，请先在您的 Android 设备上启用生物辨识功能/密码。采用这项额外的安全措施有助于确保密码安全。</translation>
-<translation id="597993392929850353">Brave 执照</translation>
+<translation id="597993392929850353">AI Wize 执照</translation>
 <translation id="6336451774241870485">新的私有标签页</translation>
 <translation id="6199596294742117349">这是一个私人标签页</translation>
 <translation id="5858455511731621847">即使您在私有选项卡上访问的网站没有保存在本地，它们也不会让您匿名或让 ISP、您的雇主或您正在访问的站点看不见您。</translation>
@@ -406,7 +406,7 @@
 <translation id="4973347371961481083">贡献</translation>
 <translation id="7047578174221019462">您的每月供款已处理完毕。</translation>
 <translation id="3124090095880236567">开启广告</translation>
-<translation id="2975780980638932742">Brave Ads 来啦！</translation>
+<translation id="2975780980638932742">AI Wize Ads 来啦！</translation>
 <translation id="7541582550122501404">待处理的捐款</translation>
 <translation id="8520059774736886747">创建者 <ph name="PUBLISHER_NAME"/> 最近通过验证</translation>
 <translation id="1486343603936278248">代币</translation>
@@ -434,15 +434,15 @@
 <translation id="1665118090708049096">转至我的 <ph name="WALLET_PROVIDER"/> 账户</translation>
 <translation id="4858636682078269312">登录到您的<ph name="WALLET_PROVIDER"/>账户</translation>
 <translation id="8874184842967597500">未连接</translation>
-<translation id="2495032782748793764">Brave 默认</translation>
-<translation id="9132378787893584761">与您的朋友分享 Brave！</translation>
+<translation id="2495032782748793764">AI Wize 默认</translation>
+<translation id="9132378787893584761">与您的朋友分享 AI Wize！</translation>
 <translation id="717952606991220586">哎呀，有些不对劲。请稍后再试。</translation>
 <translation id="987264212798334818">常规</translation>
 <translation id="1116694919640316211">关于</translation>
 <translation id="7961015016161918242">一律不</translation>
 <translation id="1275213816424141989">可能在稍后</translation>
 <translation id="4406937629441301400">获取观看此图片的代币，并将其支付给创作者。<ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">快来通过查看此图片赚取代币吧。轻击“开始使用Brave Rewards”领取您的那一份。</translation>
+<translation id="1992363542751124282">快来通过查看此图片赚取代币吧。轻击“开始使用AI Wize Rewards”领取您的那一份。</translation>
 <translation id="6632345639591919543">您在为观看这张图片赚取代币。\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">您在为观看这张图片赚取代币。</translation>
 <translation id="7877201489035217175">了解有关赞助图片的更多信息</translation>
@@ -474,7 +474,7 @@
 <translation id="5582686930349810484">已拦截指纹识别（标准）</translation>
 <translation id="769702552748212954">允许所有指纹识别</translation>
 <translation id="876424292214881779">拦截了广告和其他令人毛骨悚然的东西</translation>
-<translation id="6930134873084561197">网站通常包括 cookie 和脚本，它们试图识别您和您的设备。它们想找出您是谁，然后在网上跟踪您在每个网站上做的事情。\n\nBrave 阻止这些事情，使得您可以在不被跟踪的情况下浏览。</translation>
+<translation id="6930134873084561197">网站通常包括 cookie 和脚本，它们试图识别您和您的设备。它们想找出您是谁，然后在网上跟踪您在每个网站上做的事情。\n\nAI Wize 阻止这些事情，使得您可以在不被跟踪的情况下浏览。</translation>
 <translation id="8553998445606452168">关于 AI Wize Shields</translation>
 <translation id="8912304686498704084">开启</translation>
 <translation id="4963218453264888510">关闭</translation>
@@ -490,16 +490,16 @@
 <translation id="5370478469168390143">在线保存数据</translation>
 <translation id="1118508688433541158">利用 AI Wize 更快速的流量并能拦截广告</translation>
 <translation id="7427391215172269363">我每天都用 AI Wize 浏览网页，节省数据。</translation>
-<translation id="4776948189086901857">Brave 无处不在</translation>
+<translation id="4776948189086901857">AI Wize 无处不在</translation>
 <translation id="1606322780901645965">要想获取更快、更隐私的网络，赶快在您的笔记本电脑或平板电脑上到 brave.com 上下载 AI Wize 吧。</translation>
 <translation id="8374242949413616101">隐私保护</translation>
-<translation id="4955406228638026265">Brave 会阻止广告和跟踪者在未经您同意的情况下收集有关您的信息。</translation>
+<translation id="4955406228638026265">AI Wize 会阻止广告和跟踪者在未经您同意的情况下收集有关您的信息。</translation>
 <translation id="752842701893882688">保存数据和电池</translation>
 <translation id="1685837926613452362">没有广告和跟踪器，网站使用的数据和电池更少。您甚至可以节省承运人收取的费用。</translation>
 <translation id="5440744330377972191">网站加载速度更快</translation>
 <translation id="3000738865641747653">加载的数据较少意味着 AI Wize 上的网站的加载速度更快 - 其速度是其他浏览器的 8 倍。</translation>
 <translation id="8903462729414407077">获取每周更新</translation>
-<translation id="7450323860390658083">知道你访问的站点中，哪些对用户隐私的侵犯最严重。\n\n只有你能看到这些隐私统计数据。没有个人数据或浏览历史会离开你的设备上的Brave浏览器。</translation>
+<translation id="7450323860390658083">知道你访问的站点中，哪些对用户隐私的侵犯最严重。\n\n只有你能看到这些隐私统计数据。没有个人数据或浏览历史会离开你的设备上的AI Wize浏览器。</translation>
 <translation id="6170159749517116894">打开隐私报告</translation>
 <translation id="1669047024429367828">可见性</translation>
 <translation id="5966707198760109579">周</translation>
@@ -521,7 +521,7 @@
 <translation id="7427567994475794038">启用“隐私报告”查看一下在过去 3 小时内有多少跟踪器和广告被屏蔽了。</translation>
 <translation id="2053891538879944400">您用 AI Wize 浏览器节省了 <ph name="DATA"/> <ph name="DATA_TEXT"/> 的数据。</translation>
 <translation id="8640064498452534195">打开“隐私报告”看看您已节省了多少数据。</translation>
-<translation id="2252497442547961651">Brave 的浏览器平均节省 40% 的电池。🔋</translation>
+<translation id="2252497442547961651">AI Wize 的浏览器平均节省 40% 的电池。🔋</translation>
 <translation id="1945330434665345785">您上周用 AI Wize  屏蔽了 <ph name="COUNT"/> 个跟踪器和广告。</translation>
 <translation id="2883868922264431515">通过查看尊重隐私的广告来赚取令牌和支持您喜欢的网站。</translation>
 <translation id="7408493389591475748">开始浏览以查看隐私报告</translation>
@@ -547,9 +547,9 @@
 <translation id="8363792084628930008">启用奖励，即表示您同意<ph name="TERMS_OF_SERVICE"/>和<ph name="PRIVACY_POLICY"/>。</translation>
 <translation id="185034574799484512">让我们一起来快速浏览一下</translation>
 <translation id="7930505144430343145">欢迎使用 AI Wize Rewards！</translation>
-<translation id="3477340970981564961">与传统广告不同的是，Brave Private Ads 会奖励您代币以支持内容创作者，同时还会将您的个人信息保密。</translation>
+<translation id="3477340970981564961">与传统广告不同的是，AI Wize Private Ads 会奖励您代币以支持内容创作者，同时还会将您的个人信息保密。</translation>
 <translation id="6973095375773523904">广告在哪里显示？</translation>
-<translation id="4328028439561659455">Brave 的私人广告将以通知的形式出现在您的屏幕。您可以控制观看这些广告的频率。</translation>
+<translation id="4328028439561659455">AI Wize 的私人广告将以通知的形式出现在您的屏幕。您可以控制观看这些广告的频率。</translation>
 <translation id="7712287524451429139">给予回馈变得毫不费力了</translation>
 <translation id="105037569026952831">创建者会根据您的参与度（我们将其衡量为“Attention”）来自动接收您的代币捐款。</translation>
 <translation id="3025802705256919103">通过捐款表示感谢</translation>
@@ -585,7 +585,7 @@
 <translation id="4954512758656527938">默认以太坊钱包</translation>
 <translation id="7701023802820268122">默认 Solana 钱包</translation>
 <translation id="7701040980221191251">无</translation>
-<translation id="8488282162676695335">Brave 钱包</translation>
+<translation id="8488282162676695335">AI Wize 钱包</translation>
 <translation id="8792121506918889955">WebRTC IP 处理政策</translation>
 <translation id="8798099450830957504">默认</translation>
 <translation id="1822560017823072927">默认公共和私人接口</translation>
@@ -704,7 +704,7 @@
 <translation id="1721710839767183848">网页上没有广告</translation>
 <translation id="4647035642622555398">无中断</translation>
 <translation id="4122515759479497554">搜索视频</translation>
-<translation id="4449475351935531438">Brave 防火墙 + VPN</translation>
+<translation id="4449475351935531438">AI Wize 防火墙 + VPN</translation>
 <translation id="719977489961414786">升级到 VPN 来保护您的连接，并阻止无处不在的入侵跟踪器。</translation>
 <translation id="3435896845095436175">启用</translation>
 <translation id="8814357473522731680">技术支持：</translation>
@@ -716,7 +716,7 @@
 <translation id="7195416926059527505">更安全的家庭或公共 Wi-Fi 环境</translation>
 <translation id="1354700000739359839">极速，最高可达 100 Mbps</translation>
 <translation id="3510283489391432976">选择地理/国家位置</translation>
-<translation id="7695158478627528928">Brave 永远不会记录您的活动</translation>
+<translation id="7695158478627528928">AI Wize 永远不会记录您的活动</translation>
 <translation id="4575683170451975058">一个订阅可保护 5 个设备</translation>
 <translation id="276866628038850725">所有计划都包括 7 天免费试用期！</translation>
 <translation id="1532536259167115948">按月订阅 <ph name="TRIAL_TEXT"/></translation>
@@ -731,7 +731,7 @@
 <translation id="3990956504562716932">免费试用 7 天</translation>
 <translation id="721747358270435486">安装 VPN</translation>
 <translation id="836074276610740314">安装 VPN 配置文件</translation>
-<translation id="8021842065465097929">Brave 将安装一个 VPN 配置文件。</translation>
+<translation id="8021842065465097929">AI Wize 将安装一个 VPN 配置文件。</translation>
 <translation id="229286271464650057">这个配置文件允许 VPN 自动连接并保护您设备上每个应用的流量，且一直如此。这个 VPN 连接将被加密，其流量将由 Guardian 智能防火墙路由，以阻止广告和追踪器。</translation>
 <translation id="9073255657908892407">联系技术支持</translation>
 <translation id="1139934321138152517">已启用 VPN</translation>
@@ -827,13 +827,13 @@
 <translation id="8364362220156372884">费用：<ph name="VALUE"/> <ph name="CHAIN_ASSET"/> ($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">您在用高速浏览器吗？</translation>
 <translation id="2065971949051836200">您的手机已可体验 3 倍网速。使用 AI Wize 浏览网页。</translation>
-<translation id="2888278614497184977">Brave = 享受 3 倍网页浏览速度</translation>
+<translation id="2888278614497184977">AI Wize = 享受 3 倍网页浏览速度</translation>
 <translation id="6887232551109532144">每次充电都能超长续航</translation>
 <translation id="5388885352353494741">轻松节省电量。使用 AI Wize 浏览网页。</translation>
-<translation id="3164151360474408351">Brave = 每次充电都能超长续航</translation>
+<translation id="3164151360474408351">AI Wize = 每次充电都能超长续航</translation>
 <translation id="3211051910418903298">无需频繁为移动流量充值</translation>
 <translation id="1092355580602106002">少量广告 = 每个加载页面更少量数据。使用 AI Wize 浏览网页。</translation>
-<translation id="623962032102267945">Brave = 每个页面耗用少量移动数据</translation>
+<translation id="623962032102267945">AI Wize = 每个页面耗用少量移动数据</translation>
 <translation id="4355217341028673744">• 更多隐私</translation>
 <translation id="3679020972083025535">• 没有烦人的广告</translation>
 <translation id="8047527352810290817">编辑 gas</translation>
@@ -950,8 +950,8 @@
 <translation id="5039804452771397117">允许</translation>
 <translation id="3378339846292573874">添加建议的代币</translation>
 <translation id="2322227405137827074">要导入此代币吗？</translation>
-<translation id="1324417023773393937">Brave 的浏览器</translation>
-<translation id="6044189892950611565">Brave 浏览器的通知通道</translation>
+<translation id="1324417023773393937">AI Wize 的浏览器</translation>
+<translation id="6044189892950611565">AI Wize 浏览器的通知通道</translation>
 <translation id="1173919438868967364">选择帐户</translation>
 <translation id="8922793255489232731">找不到相匹配的时区：<ph name="VALUE"/></translation>
 <translation id="6471216025161697462">已连接到 <ph name="VALUE"/></translation>
@@ -992,7 +992,7 @@
 <translation id="4450893287417543264">不再显示</translation>
 <translation id="168154537623654021">正在更新 VPN 配置文件...</translation>
 <translation id="7457027586454688423">输入您的 AI Wize Wallet 密码</translation>
-<translation id="4784306439879850873">请注意，Brave 无法验证您签名后会发生什么。签名可以授权他人进行账户的几乎任何操作，包括（但不限于）将您的账户和加密资产的完全控制权交给提出此请求的网站。因此只有在您确定要执行此操作并信任提出请求的网站时才能签名。</translation>
+<translation id="4784306439879850873">请注意，AI Wize 无法验证您签名后会发生什么。签名可以授权他人进行账户的几乎任何操作，包括（但不限于）将您的账户和加密资产的完全控制权交给提出此请求的网站。因此只有在您确定要执行此操作并信任提出请求的网站时才能签名。</translation>
 <translation id="3474375934783434676">签名风险自担</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> 个交易（共  <ph name="SIZE"/> 个交易)</translation>
 <translation id="756701799684433105">核准交易</translation>
@@ -1055,7 +1055,7 @@
 <translation id="3290805388004282161">尝试 AI Wize 搜索小部件</translation>
 <translation id="4809681171446727314">从您的主屏幕访问私人、独立搜索的权利。</translation>
 <translation id="7751715172931488388">添加小部件</translation>
-<translation id="7285167584112910782">Brave 快捷搜索</translation>
+<translation id="7285167584112910782">AI Wize 快捷搜索</translation>
 <translation id="2326703104633309781">使用 AI Wize 翻译</translation>
 <translation id="5802752138057422257">检测到非 ASCII 字符！</translation>
 <translation id="442709594176931966">查看原始消息</translation>
@@ -1096,7 +1096,7 @@
 <translation id="5382684862562314222">您所在地区的 Uphold 尚不支持 BAT。</translation>
 <translation id="6996157559236886133">错误：Uphold 账户功能受限</translation>
 <translation id="1677961202754619328">据 Uphold 称，目前您的 Uphold 账户受到一些限制。请登录您的 Uphold 账户并检查是否有任何通知或其他账户要求需要完成，然后重试。</translation>
-<translation id="5425006356459378415">Brave Rewards 不可用</translation>
+<translation id="5425006356459378415">AI Wize Rewards 不可用</translation>
 <translation id="833643743158564518">您所在地区目前已禁用 AI Wize 奖励的新注册。但是，您可以稍后再试。<ph name="LEARN_MORE"/></translation>
 <translation id="8528916244724490964">所有网络</translation>
 <translation id="7748944510530490017">主要网络</translation>
@@ -1116,7 +1116,7 @@
 <translation id="9085765419770918643">这里还没有 NFT。</translation>
 <translation id="8445532667841598737">准备好添加内容了吗？只需点击下面的按钮即可导入。</translation>
 <translation id="5925465310724910998">想要自动显示 NFT吗？</translation>
-<translation id="2827460859891872324">Brave 钱包可以使用第三方服务自动显示您的 NFT。Brave 将与 <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> 共享您的钱包地址，以提供此服务。<ph name="BEGIN_LINK_2"/>了解更多。<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">AI Wize 钱包可以使用第三方服务自动显示您的 NFT。AI Wize 将与 <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> 共享您的钱包地址，以提供此服务。<ph name="BEGIN_LINK_2"/>了解更多。<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">启用 NFT 发现</translation>
 <translation id="622372328961630111">使用第三方 API 自动将您拥有的 NFT 添加到钱包中。<ph name="BEGIN_LINK_1"/>了解更多。<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">地址查找表账户：</translation>
@@ -1131,7 +1131,7 @@
 <translation id="6322030314101903925">没有可用资产</translation>
 <translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">用 AI Wize Wallet 登录</translation>
-<translation id="3696514931437952995">你正在登录<ph name="ORIGIN"/>。Brave 钱包将与<ph name="ORIGIN"/>共享钱包地址。</translation>
+<translation id="3696514931437952995">你正在登录<ph name="ORIGIN"/>。AI Wize 钱包将与<ph name="ORIGIN"/>共享钱包地址。</translation>
 <translation id="1028781062521375153">查看详情</translation>
 <translation id="6759710362319508545">资源</translation>
 <translation id="2471230424465522689">以前没有</translation>
@@ -1150,7 +1150,7 @@
 <translation id="6344103698928069918">对于播放列表，从上次暂停的点开始继续播放</translation>
 <translation id="8141583471142904652">连续听</translation>
 <translation id="851432578283946230">自动播放播放列表中的下一个项目</translation>
-<translation id="295620834661738195">Brave 播放列表</translation>
+<translation id="295620834661738195">AI Wize 播放列表</translation>
 <translation id="4850886885716139402">视图</translation>
 <translation id="7392941176393379100">添加至“<ph name="PLAYLIST_NAME"/>”</translation>
 <translation id="349846214503465941">启用播放列表</translation>

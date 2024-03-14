@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Перамясціць сюды</translation>
 <translation id="1014147525163127655">Для сайта <ph name="ORIGIN"/> на гэтай прыладзе няма ключоў доступу</translation>
 <translation id="1016498331642356377">Хуткі пошук з дапамогай галасавых каманд. Каб змяніць функцыю гэтай кнопкі, націсніце на яе і ўтрымлівайце.</translation>
-<translation id="2566435362010629810">Brave для распрацоўшчыкаў</translation>
+<translation id="2566435362010629810">AI Wize для распрацоўшчыкаў</translation>
 <translation id="1028699632127661925">Ідзе адпраўка на прыладу "<ph name="DEVICE_NAME"/>"...</translation>
 <translation id="103269572468856066">Выдаліць і гэтыя даныя?</translation>
 <translation id="1034259925032978114">Акно адкрыта</translation>
@@ -16,18 +16,18 @@
 <translation id="1089606299949659462">Праверка завершана!</translation>
 <translation id="1095761715416917775">Падбайце аб тым, каб не страціць доступ да сінхранізаваных даных</translation>
 <translation id="1100066534610197918">У новай укладцы ў групе</translation>
-<translation id="4660777881054855091">Ці не маглі б вы дапамагчы палепшыць Brave?</translation>
+<translation id="4660777881054855091">Ці не маглі б вы дапамагчы палепшыць AI Wize?</translation>
 <translation id="1105960400813249514">Здымак экрана</translation>
 <translation id="1108938384783527433">Сінхранізацыя гісторыі</translation>
 <translation id="1111673857033749125">Тут з'явяцца закладкі, захаваныя на вашых іншых прыладах.</translation>
 <translation id="1113597929977215864">Паказаць у спрошчаным выглядзе</translation>
 <translation id="4470276443668654888">Спосабы аплаты і адрасы з Google Pay не будуць шыфравацца. Гісторыя прагляду сайтаў у браўзеры AI Wize не будзе сінхранізавацца.
 Толькі карыстальнікі, якія ведаюць фразу-пароль, могуць чытаць вашы зашыфраваныя даныя. AI Wize не атрымлівае і не захоўвае фразу-пароль. Калі вы забудзеце фразу-пароль або захочаце змяніць гэту наладу, вам трэба будзе скінуць параметры сінхранізацыі. <ph name="BEGIN_LINK"/>Даведацца больш<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Не абараняе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Вы застаняцеся пад абаронай Бяспечнага прагляду пры карыстанні іншымі сэрвісамі Brave, у якіх ён даступны, такімі як Gmail і Пошук.</translation>
+<translation id="1295971429974142731">Не абараняе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Вы застаняцеся пад абаронай Бяспечнага прагляду пры карыстанні іншымі сэрвісамі AI Wize, у якіх ён даступны, такімі як Gmail і Пошук.</translation>
 <translation id="1129510026454351943">Падрабязнасці: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Не прапаноўваць перакладаць гэтыя сайты</translation>
 <translation id="1145536944570833626">Выдаліць існуючыя даныя.</translation>
-<translation id="7083341910267693582">Праграма "<ph name="APP_NAME"/>" адкрыецца ў Brave. Працягваючы, вы згаджаецеся з <ph name="BEGIN_LINK1"/>Умовамі выкарыстання Brave<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>Дадатковымі ўмовамі выкарыстання AI Wize і Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">Праграма "<ph name="APP_NAME"/>" адкрыецца ў AI Wize. Працягваючы, вы згаджаецеся з <ph name="BEGIN_LINK1"/>Умовамі выкарыстання AI Wize<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>Дадатковымі ўмовамі выкарыстання AI Wize і Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Выкарыстаць пароль <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Перайменаваць</translation>
 <translation id="7947699437047020219">Пры наяўнасці вузкага экрана AI Wize будзе кожны раз запытваць мабільны сайт</translation>
@@ -46,7 +46,7 @@
 <translation id="1231733316453485619">Уключыць сінхранізацыю?</translation>
 <translation id="123724288017357924">Перазагрузіць бягучую старонку, ігнаруючы змесціва кэша</translation>
 <translation id="1239792311949352652">Хуткае абагульванне гэтай старонкі. Каб змяніць функцыю гэтай кнопкі, перайдзіце ў Налады.</translation>
-<translation id="3251315496493761426">Парады адносна Brave</translation>
+<translation id="3251315496493761426">Парады адносна AI Wize</translation>
 <translation id="1240288207750131269">Ідзе загрузка пакета для наступнай мовы: <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Каб працягнуць, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> абагуліць ваша імя, адрас электроннай пошты і відарыс профілю з гэтым сайтам. Азнаёмцеся з <ph name="BEGIN_LINK1"/>палітыкай прыватнасці<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>ўмовамі выкарыстання<ph name="END_LINK2"/> сайта.</translation>
 <translation id="124116460088058876">Іншыя мовы</translation>
@@ -54,14 +54,14 @@
 <translation id="1242883863226959074">прыладзе</translation>
 <translation id="124678866338384709">Закрыць бягучую ўкладку</translation>
 <translation id="1246905108078336582">Выдаліць прапанову з буфера абмену?</translation>
-<translation id="1996480094660735607">Дудл Brave: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Цяпер вы будзеце бачыць змесціва канала "<ph name="SITE_NAME"/>" і інфармацыю пра яго ў раздзеле "Вы падпісаны". Сайты і вынікі пошуку, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе Brave. Падпіскамі можна кіраваць у наладах у любы час.</translation>
+<translation id="1996480094660735607">Дудл AI Wize: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="7074197713963877855">Цяпер вы будзеце бачыць змесціва канала "<ph name="SITE_NAME"/>" і інфармацыю пра яго ў раздзеле "Вы падпісаны". Сайты і вынікі пошуку, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе AI Wize. Падпіскамі можна кіраваць у наладах у любы час.</translation>
 <translation id="1263231323834454256">Спіс чытання</translation>
 <translation id="1266864766717917324">Не ўдалося абагуліць змесціва наступнага тыпу: <ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">Ваша гісторыя знаходзіцца тут</translation>
 <translation id="1273937721055267968">Заблакіраваць <ph name="DOMAIN"/></translation>
 <translation id="1283039547216852943">Дакраніцеся, каб разгарнуць</translation>
-<translation id="194557235473047967">Вам трэба будзе ўвайсці ва Уліковы запіс Brave</translation>
+<translation id="194557235473047967">Вам трэба будзе ўвайсці ва Уліковы запіс AI Wize</translation>
 <translation id="1291207594882862231">Ачысціць гісторыю, файлы cookie, даныя сайта, кэш…</translation>
 <translation id="129553762522093515">Нядаўна закрытыя</translation>
 <translation id="1298077576058087471">Чытайце сённяшнія навіны. Эканомце да 60% трафіка</translation>
@@ -69,8 +69,8 @@
 <translation id="1303507811548703290"><ph name="DOMAIN"/> – адпраўлена з прылады <ph name="DEVICE_NAME"/></translation>
 <translation id="1320912611264252795">Укладка захоўвання закладкі разгорнута на ўвесь экран</translation>
 <translation id="1327257854815634930">Гісторыя навігацыі адкрыта</translation>
-<translation id="6773423637732432200">Немагчыма абнавіць Brave. Дадатковыя параметры</translation>
-<translation id="3169981355900570544">Спалучэнні клавіш для функцый Brave</translation>
+<translation id="6773423637732432200">Немагчыма абнавіць AI Wize. Дадатковыя параметры</translation>
+<translation id="3169981355900570544">Спалучэнні клавіш для функцый AI Wize</translation>
 <translation id="1344653310988386453">Далучыць спасылку на вылучаны тэкст</translation>
 <translation id="1347468774581902829">Кіраваць дзеяннямі</translation>
 <translation id="1360432990279830238">Выйсці і выключыць сінхранізацыю?</translation>
@@ -86,7 +86,7 @@
 <translation id="1407069428457324124">Цёмная тэма</translation>
 <translation id="1407135791313364759">Адкрыць усе</translation>
 <translation id="1409879593029778104">Спампоўка файла "<ph name="FILE_NAME"/>" скасавана, паколькі такі файл ужо існуе.</translation>
-<translation id="1853026300647876496">Ідзе падключэнне да Brave. Пачакайце…</translation>
+<translation id="1853026300647876496">Ідзе падключэнне да AI Wize. Пачакайце…</translation>
 <translation id="1416550906796893042">Версія праграмы</translation>
 <translation id="1428770807407000502">Выключыць сінхранізацыю?</translation>
 <translation id="1430915738399379752">Друк</translation>
@@ -95,7 +95,7 @@
 <translation id="1437543266176261764">Выконваецца ў <ph name="APP_NAME"/></translation>
 <translation id="1448440926884431741">Упарадкоўвайце тавары, за якімі сочыце, у Закладках</translation>
 <translation id="1450753235335490080">Не ўдалося абагуліць наступнае змесціва: <ph name="CONTENT_TYPE"/></translation>
-<translation id="5598889255595678761">Выберыце мову Brave</translation>
+<translation id="5598889255595678761">Выберыце мову AI Wize</translation>
 <translation id="1477626028522505441">Збой спампоўкі файла "<ph name="FILE_NAME"/>" з-за праблем на серверы.</translation>
 <translation id="148482509007564431">Укладка захоўвання закладкі</translation>
 <translation id="1492417797159476138">Вы ўжо захавалі гэта імя карыстальніка для гэтага сайта</translation>
@@ -106,16 +106,16 @@
 <translation id="1513814250881909472">Каб укладкі з іншых прылад сталі даступнымі, уключыце сінхранізацыю</translation>
 <translation id="1513858653616922153">Выдаліць пароль</translation>
 <translation id="1521774566618522728">Апошнія дзеянні адбываліся сёння</translation>
-<translation id="8090895580117672212">Каб змяніць налады вашага ўліковага запісу Brave, націсніце кнопку "Кіраваць уліковым запісам"</translation>
+<translation id="8090895580117672212">Каб змяніць налады вашага ўліковага запісу AI Wize, націсніце кнопку "Кіраваць уліковым запісам"</translation>
 <translation id="1549000191223877751">Перамясціць у іншае акно</translation>
-<translation id="1705567146636171298">Абнавіць Brave</translation>
+<translation id="1705567146636171298">Абнавіць AI Wize</translation>
 <translation id="1568636008098739136">Агучыць гэту старонку. Каб змяніць функцыю гэтай кнопкі, націсніце на яе і ўтрымлівайце.</translation>
 <translation id="1571304935088121812">Капіраваць імя карыстальніка</translation>
 <translation id="1592864538817356322">Стандартная абарона:</translation>
 <translation id="1594635596540195766">У размешчаным ніжэй спісе наступная колькасць прапанаваных элементаў: <ph name="SUGGESTIONS_COUNT"/>.</translation>
 <translation id="1598163867407640634">Выкарыстоўвайце вэб-сайт <ph name="SITE_ETLD_PLUS_ONE"/> праз сэрвіс "<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>"</translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Выдаліць 1 выбраны элемент}one{Выдаліць # выбраны элемент}few{Выдаліць # выбраныя элементы}many{Выдаліць # выбраных элементаў}other{Выдаліць # выбранага элемента}}</translation>
-<translation id="3122582044404611732">Праглядайце рэкамендацыі новага змесціва на галоўнай старонцы Brave</translation>
+<translation id="3122582044404611732">Праглядайце рэкамендацыі новага змесціва на галоўнай старонцы AI Wize</translation>
 <translation id="1641113438599504367">Бяспечны прагляд</translation>
 <translation id="164269334534774161">Вы праглядаеце пазасеткавую копію гэтай старонкі ад <ph name="CREATION_TIME"/></translation>
 <translation id="1644574205037202324">Гісторыя</translation>
@@ -124,7 +124,7 @@
 <translation id="1671236975893690980">Чакаецца спампоўванне…</translation>
 <translation id="1672586136351118594">Больш не паказваць</translation>
 <translation id="1680919990519905526">Аб'ектыў: пошук тавару<ph name="BEGIN_NEW"/>Навінка<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Хутка вы ўбачыце змесціва канала "<ph name="SITE_NAME"/>" і інфармацыю пра яго ў раздзеле "Вы падпісаны". Сайты і вынікі пошуку, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе Brave. Падпіскамі можна кіраваць у наладах у любы час.</translation>
+<translation id="7870200641233500458">Хутка вы ўбачыце змесціва канала "<ph name="SITE_NAME"/>" і інфармацыю пра яго ў раздзеле "Вы падпісаны". Сайты і вынікі пошуку, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе AI Wize. Падпіскамі можна кіраваць у наладах у любы час.</translation>
 <translation id="1696555181932908973">Каб працягнуць работу на сайце <ph name="SITE_ETLD_PLUS_ONE"/>, паспрабуйце іншыя спосабы ўваходу.</translation>
 <translation id="1702543251015153180">Змяніць налады цёмнай тэмы?</translation>
 <translation id="1702907158640575240">Браўзер пад кіраваннем</translation>
@@ -136,7 +136,7 @@
 <translation id="1749561566933687563">Сінхранізуйце закладкі</translation>
 <translation id="1750259112639922169">Група ўкладак – Колькасць: <ph name="TAB_COUNT"/></translation>
 <translation id="17513872634828108">Адкрытыя ўкладкі</translation>
-<translation id="9207812657123271782">Паведамленне Менеджара пароляў Brave</translation>
+<translation id="9207812657123271782">Паведамленне Менеджара пароляў AI Wize</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Старонкі, 1 старонка ў спісе}one{Старонкі, # старонка ў спісе}few{Старонкі, # старонкі ў спісе}many{Старонкі, # старонак у спісе}other{Старонкі, # старонкі ў спісе}}</translation>
 <translation id="1778457539567749232">Пазначыць як непрачытанае</translation>
 <translation id="1779766957982586368">Закрыць акно</translation>
@@ -148,15 +148,15 @@
 <translation id="1810845389119482123">Першапачатковая наладка сінхранізацыі не завершана</translation>
 <translation id="1812027881030482584">Нельга выканаць уваход на сайце <ph name="SITE_ETLD_PLUS_ONE"/> з дапамогай сэрвісу "<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>"</translation>
 <translation id="1829244130665387512">Пошук на старонцы</translation>
-<translation id="5488575152752589250">Каб атрымліваць найбольш адпаведнае змесціва ад Brave, уключыце сінхранізацыю</translation>
-<translation id="7175072311426658869">Адкрываць у браўзеры Brave</translation>
-<translation id="5173820533850252773">Brave састарэў</translation>
+<translation id="5488575152752589250">Каб атрымліваць найбольш адпаведнае змесціва ад AI Wize, уключыце сінхранізацыю</translation>
+<translation id="7175072311426658869">Адкрываць у браўзеры AI Wize</translation>
+<translation id="5173820533850252773">AI Wize састарэў</translation>
 <translation id="1883903952484604915">Мае файлы</translation>
 <translation id="189358972401248634">Іншыя мовы</translation>
 <translation id="1900260903084164610">Працягваючы, вы прымаеце <ph name="BEGIN_TOS_LINK"/>Умовы выкарыстання<ph name="END_TOS_LINK"/>.</translation>
-<translation id="6893464351226208429">URL-адрасы, якія вы наведвалі, захоўваюцца ва Уліковы запіс Brave</translation>
+<translation id="6893464351226208429">URL-адрасы, якія вы наведвалі, захоўваюцца ва Уліковы запіс AI Wize</translation>
 <translation id="1910950723001426294">Спіс варыянтаў абагульвання закрыты.</translation>
-<translation id="7021823858304886493">Дазволіць уваход ва ўліковы запіс Brave</translation>
+<translation id="7021823858304886493">Дазволіць уваход ва ўліковы запіс AI Wize</translation>
 <translation id="1922362554271624559">Прапанаваныя мовы</translation>
 <translation id="1924255092154549435">Укладка разгорнута</translation>
 <translation id="1925021887439448749">Увядзіце карыстальніцкі вэб-адрас</translation>
@@ -176,12 +176,12 @@
 <translation id="1984417487208496350">Без абароны (не рэкамендуецца)</translation>
 <translation id="1986685561493779662">Такая назва ўжо існуе</translation>
 <translation id="1995884366040846621">Каб працягнуць, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> абагуліць ваша імя, адрас электроннай пошты і відарыс профілю з гэтым сайтам. Азнаёмцеся з <ph name="BEGIN_LINK1"/>палітыкай прыватнасці<ph name="END_LINK1"/> сайта.</translation>
-<translation id="6968892567705775281">Дадаваць кантэкст у пошукавыя запыты Brave?</translation>
+<translation id="6968892567705775281">Дадаваць кантэкст у пошукавыя запыты AI Wize?</translation>
 <translation id="2009341475524975924">Для ацэнкі эфектыўнасці рэкламнай аб'явы сайты могуць абагульваць адзін з адным даныя пэўных тыпаў (напрыклад, пра час сутак, калі вам паказвалася пэўная аб'ява).</translation>
 <translation id="201060170519281460">Блакіроўка профілю забяспечвае бяспеку вашай інфармацыі ў аўтамабілі, у тым ліку сінхранізаваныя паролі, плацяжы і іншае.</translation>
 <translation id="2021896219286479412">Кіраванне сайтам на ўвесь экран</translation>
 <translation id="2038563949887743358">Уключыць запытванне версіі для настольнага камп'ютара</translation>
-<translation id="7675869148432102528">Праграма "<ph name="APP_NAME"/>" таксама мае змесціва ў Brave</translation>
+<translation id="7675869148432102528">Праграма "<ph name="APP_NAME"/>" таксама мае змесціва ў AI Wize</translation>
 <translation id="2046634576464120978">Збой рэгістрацыі</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">Выкарыстоўваць HTTPS калі магчыма і паказваць папярэджанне перад загрузкай сайтаў, якія не падтрымліваюць гэты пратакол. Паколькі ўключана Палепшаная абарона, вы не можаце змяніць гэту наладу.</translation>
@@ -218,11 +218,11 @@
 <translation id="2234827758954819389">Дапаможнік па прыватнасці</translation>
 <translation id="2239812875700136898">Кіруйце паказам артыкулаў з дапамогай кнопкі "Параметры рэкамендацый"</translation>
 <translation id="2247789808226901522">Тэрмін дзеяння карткі скончыўся</translation>
-<translation id="4808014761134300692">Вашы паролі шыфруюцца на прыладзе і толькі потым захоўваюцца ў Менеджары пароляў Brave</translation>
+<translation id="4808014761134300692">Вашы паролі шыфруюцца на прыладзе і толькі потым захоўваюцца ў Менеджары пароляў AI Wize</translation>
 <translation id="2249635629516220541">Кіраванне данымі, якія сайты выкарыстоўваюць для паказу вам рэкламы</translation>
 <translation id="2259659629660284697">Экспарт пароляў…</translation>
 <translation id="8820144752830692527">Вы заўсёды можаце выбраць, што сінхранізаваць, <ph name="BEGIN_LINK1"/>у наладах<ph name="END_LINK1"/>. AI Wize можа персаналізаваць Пошук і іншыя сэрвісы на аснове гісторыі прагляду вамі сайтаў.</translation>
-<translation id="781982477617612877">Для праверкі пароляў увайдзіце ва Уліковы запіс Brave</translation>
+<translation id="781982477617612877">Для праверкі пароляў увайдзіце ва Уліковы запіс AI Wize</translation>
 <translation id="2278052315791335171">Пры выдаленні гэтага пароля ўліковы запіс на сайце <ph name="SITE"/> не выдаліцца</translation>
 <translation id="2286841657746966508">Адрас для выстаўлення рахункаў</translation>
 <translation id="228704530595896923">Спіс варыянтаў абагульвання.</translation>
@@ -233,8 +233,8 @@
 <translation id="2323763861024343754">Сховішча сайта</translation>
 <translation id="2328985652426384049">Не ўдалося ўвайсці ў сістэму</translation>
 <translation id="2341410551640223969">Не ўдалося ўсталяваць праграму "<ph name="WEBAPK_NAME"/>".</translation>
-<translation id="3587672679800759167">Агульны аб'ём даных Brave, у тым ліку закладкі, уліковыя запісы і захаваныя налады</translation>
-<translation id="2767094839186957509">Палітыка прыватнасці Brave</translation>
+<translation id="3587672679800759167">Агульны аб'ём даных AI Wize, у тым ліку закладкі, уліковыя запісы і захаваныя налады</translation>
+<translation id="2767094839186957509">Палітыка прыватнасці AI Wize</translation>
 <translation id="2359808026110333948">Працягнуць</translation>
 <translation id="2362083820973145409">Вы ўвайшлі як <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Кнопка адкрывае налады.</translation>
 <translation id="2364539095045928896">Кнопка "Закрыць"; закрывае паведамленне аб прыватнасці раздзела статыстыкі старонкі</translation>
@@ -256,11 +256,11 @@
 <translation id="2482878487686419369">Апавяшчэнні</translation>
 <translation id="2496180316473517155">Гісторыя прагляду сайтаў</translation>
 <translation id="2497852260688568942">Сінхранізацыя выключана вашым адміністратарам</translation>
-<translation id="7229462727772664332">Вы ўбачыце, ці выкананы ўваход на сайт <ph name="SITE_NAME"/>, гісторыю праглядаў і даныя сайтаў у Brave</translation>
+<translation id="7229462727772664332">Вы ўбачыце, ці выкананы ўваход на сайт <ph name="SITE_NAME"/>, гісторыю праглядаў і даныя сайтаў у AI Wize</translation>
 <translation id="2510106555128151389">Ідзе ўсталяванне праграмы "<ph name="WEBAPK_NAME"/>"...</translation>
-<translation id="7222718784508482526">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзеле <ph name="BEGIN_LINK"/>Сінхранізацыя і сэрвісы Brave<ph name="END_LINK"/></translation>
+<translation id="7222718784508482526">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзеле <ph name="BEGIN_LINK"/>Сінхранізацыя і сэрвісы AI Wize<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Поўнаразмерны аркуш</translation>
-<translation id="284843628681142937">Адпраўка URL-адрасоў наведаных вамі старонак у Brave</translation>
+<translation id="284843628681142937">Адпраўка URL-адрасоў наведаных вамі старонак у AI Wize</translation>
 <translation id="2527209463677295330">Дадаючы больш тэксту са старонкі, можна атрымліваць лепшыя вынікі</translation>
 <translation id="2527779675047087889">Схаваць змесціва буфера абмену</translation>
 <translation id="2532336938189706096">Прагляд вэб-змесціва</translation>
@@ -269,10 +269,10 @@
 <translation id="2546283357679194313">Файлы сookie і даныя сайтаў</translation>
 <translation id="2567385386134582609">ВІДАРЫС</translation>
 <translation id="2567545343356994513">Больш хуткая актыўная абарона ад небяспечных вэб-сайтаў, спамповак і пашырэнняў</translation>
-<translation id="5079947353572974060">Прапаноўваць адпраўляць старонкі на іншых мовах у Перакладчык Brave</translation>
+<translation id="5079947353572974060">Прапаноўваць адпраўляць старонкі на іншых мовах у Перакладчык AI Wize</translation>
 <translation id="2571834852878229351">Стварыць уласны</translation>
 <translation id="6995512410824092085">Даведайцеся, як зрабіць AI Wize стандартным браўзерам</translation>
-<translation id="7242554556818074465">Каб мець доступ да сваіх укладак з усіх прылад, на якіх вы выкарыстоўваеце Brave, увайдзіце на іх ва ўліковы запіс</translation>
+<translation id="7242554556818074465">Каб мець доступ да сваіх укладак з усіх прылад, на якіх вы выкарыстоўваеце AI Wize, увайдзіце на іх ва ўліковы запіс</translation>
 <translation id="8661556138616664061">Змесціва ад AI Wize для дзяцей</translation>
 <translation id="2324920234469020158">Пры гэтым ачысціцца кэш, будуць выдалены файлы cookie і іншыя даныя сайтаў, якія AI Wize не лічыць важнымі.</translation>
 <translation id="2587052924345400782">Даступная навейшая версія</translation>
@@ -296,7 +296,7 @@
 <translation id="2669454659051515572">Усе, хто карыстаецца гэтай прыладай, могуць бачыць спампаваныя файлы</translation>
 <translation id="5806087344347665213">Калі сайт спрабуе ўкрасці ваш пароль або вы спампоўваеце шкодны файл, AI Wize таксама можа адпраўляць у AI Wize URL-адрасы і фрагменты змесціва старонак</translation>
 <translation id="2702516483241149200">Навінка: абагульце спасылку, пры выкарыстанні якой старонка прагартаецца гэтага фрагмента тэксту</translation>
-<translation id="3769942772151914580">Актыўная абарона ў рэальным часе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Яе эфектыўнасць забяспечваюць даныя пра вашу работу ў браўзеры, якія адпраўляюцца ў Brave.</translation>
+<translation id="3769942772151914580">Актыўная абарона ў рэальным часе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Яе эфектыўнасць забяспечваюць даныя пра вашу работу ў браўзеры, якія адпраўляюцца ў AI Wize.</translation>
 <translation id="2708226184420201102">Адкрыць у браўзеры <ph name="PRODUCT_NAME"/></translation>
 <translation id="271033894570825754">Новае</translation>
 <translation id="2718352093833049315">Толькі па Wi-Fi</translation>
@@ -307,19 +307,19 @@
 <translation id="2760989362628427051">Выкарыстоўваць цёмную тэму, калі на прыладзе ўключаны рэжым энергазберажэння або цёмная тэма</translation>
 <translation id="2762000892062317888">толькі што</translation>
 <translation id="276969039800130567">Вы ўвайшлі як <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзеле <ph name="BEGIN_LINK"/>сэрвісы Brave<ph name="END_LINK"/></translation>
+<translation id="8312774691909088652">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзеле <ph name="BEGIN_LINK"/>сэрвісы AI Wize<ph name="END_LINK"/></translation>
 <translation id="2777555524387840389">Засталося <ph name="SECONDS"/> с</translation>
 <translation id="2779651927720337254">не выканана</translation>
 <translation id="2781151931089541271">Засталася 1 секунда</translation>
 <translation id="2800066122460699237">Укладка "<ph name="TAB_TITLE"/>" будзе закрыта</translation>
-<translation id="7068873021383263704">Праглядайце захаваныя паролі і кіруйце імі праз <ph name="BEGIN_LINK"/>Уліковы запіс Brave<ph name="END_LINK"/></translation>
+<translation id="7068873021383263704">Праглядайце захаваныя паролі і кіруйце імі праз <ph name="BEGIN_LINK"/>Уліковы запіс AI Wize<ph name="END_LINK"/></translation>
 <translation id="2827278682606527653">Меню карткі стужкі адкрыта на палову вышыні</translation>
 <translation id="2830783625999891985">Змесціва буфера абмену схавана</translation>
 <translation id="2838367486340230368">Тлумачэнні адносна дапаможніка па прыватнасці разгорнуты на палову экрана</translation>
 <translation id="2839327205551510876">Вы адпісаліся ад сайта "<ph name="SITE_NAME"/>"</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{Праверка праводзілася дзень таму}one{Праверка праводзілася # дзень таму}few{Праверка праводзілася # дні таму}many{Праверка праводзілася # дзён таму}other{Праверка праводзілася # дня таму}}</translation>
 <translation id="2842985007712546952">Бацькоўская папка</translation>
-<translation id="6324134303015966238">Brave перадзагружае старонкі, на якія вы з высокай імавернасцю можаце перайсці, каб яны адкрыліся хутчэй, калі вы іх наведаеце</translation>
+<translation id="6324134303015966238">AI Wize перадзагружае старонкі, на якія вы з высокай імавернасцю можаце перайсці, каб яны адкрыліся хутчэй, калі вы іх наведаеце</translation>
 <translation id="2856503607207334158">Збой уваходу ў сістэму</translation>
 <translation id="2860954141821109167">Праверце, ці ўключана на гэтай прыладзе праграма для тэлефона</translation>
 <translation id="6518254564747115579">Некаторыя функцыі AI Wize перастануць быць даступнымі</translation>
@@ -328,16 +328,16 @@
 <translation id="2871733351037274014">Перадзагрузка старонак</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> просіць ухваліць гэты вэб-сайт:</translation>
 <translation id="6756656512757374876">Даведайцеся больш пра тое, <ph name="BEGIN_LINK"/>як AI Wize забяспечвае прыватнасць вашых даных<ph name="END_LINK"/></translation>
-<translation id="8541922081612557424">Пра браўзер Brave</translation>
+<translation id="8541922081612557424">Пра браўзер AI Wize</translation>
 <translation id="2891154217021530873">Спыніць загрузку старонкі</translation>
-<translation id="4013614219085422040">Brave можа выкарыстоўваць вашу гісторыю, каб персаналізаваць пошук і іншыя сэрвісы Brave</translation>
+<translation id="4013614219085422040">AI Wize можа выкарыстоўваць вашу гісторыю, каб персаналізаваць пошук і іншыя сэрвісы AI Wize</translation>
 <translation id="2894821468041866720">Не выклікае прыметнага запаволення працы браўзера або прылады.</translation>
 <translation id="2900528713135656174">Стварыце падзею</translation>
 <translation id="2901411048554510387">Паказваюцца прапановы для сайта "<ph name="WEBSITE_TITLE"/>"</translation>
 <translation id="2904300462646366554">Спампаваныя PDF аўтаматычна адкрываюцца ў адной з праграм для іх прагляду, усталяванай на прыладзе</translation>
 <translation id="2904414404539560095">Спіс прылад, з якімі можна абагуліць укладку, разгорнуты на ўвесь экран.</translation>
 <translation id="2908243544703713905">Ёсць непрачытаныя навіны</translation>
-<translation id="7339921667754113786">Платформа апавяшчэнняў Brave</translation>
+<translation id="7339921667754113786">Платформа апавяшчэнняў AI Wize</translation>
 <translation id="2912296070571964914">Кіруйце цікавымі для вас тэмамі</translation>
 <translation id="2923908459366352541">Няправільная назва.</translation>
 <translation id="6355102470683871794">Сховішча AI Wize <ph name="APP_NAME"/></translation>
@@ -345,7 +345,7 @@
 <translation id="6537665929855787038">Апавяшчэнні AI Wize спрашчаюць жыццё</translation>
 <translation id="2940075786175545812">Старонка, на якой можна ўхваліць вэб-сайт</translation>
 <translation id="2942036813789421260">Укладка перадпрагляду закрыта</translation>
-<translation id="4700262879698141140">Brave абнаўляецца, каб мець магчымасць падключацца да іншых прылад</translation>
+<translation id="4700262879698141140">AI Wize абнаўляецца, каб мець магчымасць падключацца да іншых прылад</translation>
 <translation id="2951071800649516099">Захоўвайце старонкі, каб прачытаць іх пазней, – дадавайце іх у спіс на прагляд</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> непрачытаная старонка}one{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> непрачытаная старонка}few{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> непрачытаныя старонкі}many{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> непрачытаных старонак}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> непрачытанай старонкі}}</translation>
 <translation id="296370266220139811">Эканомце час, менш пішыце</translation>
@@ -354,39 +354,39 @@
 <translation id="2979639724566107830">Адкрыць у новым акне</translation>
 <translation id="2981364137500752533">Вы можаце адкрываць не больш за 5 вокнаў.</translation>
 <translation id="2983102365694924129">Выкарыстоўваюцца даныя пра вашы дзеянні на сайце. Гэта налада выключана.</translation>
-<translation id="5948666439178419683">Дадаваць кантэкст у пошукавыя запыты Brave</translation>
+<translation id="5948666439178419683">Дадаваць кантэкст у пошукавыя запыты AI Wize</translation>
 <translation id="2987620471460279764">Тэкст, абагулены з іншай прылады</translation>
 <translation id="2989523299700148168">Нядаўнія</translation>
 <translation id="2992473221983447149">Апісанні відарысаў</translation>
 <translation id="2996291259634659425">Стварыць фразу-пароль</translation>
 <translation id="2996809686854298943">Патрабуецца URL-адрас</translation>
 <translation id="2996932914629936323">З усіх сінхранізаваных прылад будзе выдалена гісторыя</translation>
-<translation id="2019027298133375428">Калі сайт AI Wize па спасылках на ім запытвае перадзагрузку старонак у прыватным рэжыме, AI Wize шыфруе і перадзагружае старонкі праз серверы Brave, не выкарыстоўваючы файлы cookie. Дзякуючы гэтаму перадзагружаны сайт не атрымлівае звестак пра вашу асобу.</translation>
-<translation id="5730179015008010982">URL-адрасы старонак, якія вы наведваеце, адпраўляюцца ў Brave, каб можна было прадказваць, якія сайты вы можаце наведаць далей, і паказваць вам дадатковую інфармацыю пра старонку, на якой вы знаходзіцеся</translation>
+<translation id="2019027298133375428">Калі сайт AI Wize па спасылках на ім запытвае перадзагрузку старонак у прыватным рэжыме, AI Wize шыфруе і перадзагружае старонкі праз серверы AI Wize, не выкарыстоўваючы файлы cookie. Дзякуючы гэтаму перадзагружаны сайт не атрымлівае звестак пра вашу асобу.</translation>
+<translation id="5730179015008010982">URL-адрасы старонак, якія вы наведваеце, адпраўляюцца ў AI Wize, каб можна было прадказваць, якія сайты вы можаце наведаць далей, і паказваць вам дадатковую інфармацыю пра старонку, на якой вы знаходзіцеся</translation>
 <translation id="3016635187733453316">Праверце, ці падключана прылада да інтэрнэту</translation>
 <translation id="3026955690410463085">Абагуліць разам са спасылкай</translation>
 <translation id="3027644380269727216">Выкарыстоўваюцца даныя пра вашы дзеянні на сайце. Гэта налада ўключана.</translation>
 <translation id="3029276696788198026">Без перадзагрузкі</translation>
 <translation id="3029704984691124060">Фразы-паролі не супадаюць</translation>
-<translation id="8678991866891573053">Brave апрабоўвае новыя функцыі, якія дазваляюць сайтам працаваць так, як і раней, але пры гэтым выкарыстоўваць менш вашых даных.</translation>
+<translation id="8678991866891573053">AI Wize апрабоўвае новыя функцыі, якія дазваляюць сайтам працаваць так, як і раней, але пры гэтым выкарыстоўваць менш вашых даных.</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Даведка<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Цана адсочваецца</translation>
-<translation id="3251012123600267109">Будуць паказвацца запыты ўваходу ў Brave</translation>
+<translation id="3251012123600267109">Будуць паказвацца запыты ўваходу ў AI Wize</translation>
 <translation id="3038272154009688107">Паказаць усе сайты</translation>
 <translation id="3046945242843292318">У наступны раз вы зможаце перайсці на гэты сайт хутчэй</translation>
 <translation id="3055259925215945098">Закладка перамешчана</translation>
-<translation id="4163313568284712797">Інфармацыя пра выкарыстанне вамі AI Wize адпраўляецца ў Brave, але яна не прывязана да вашай асобы\n\nКалі ў AI Wize адбываецца збой, падрабязныя звесткі пра яго могуць уключаць у сябе пэўную асабістую інфармацыю\n\nКалі вы ўключылі сінхранізацыю, паказчыкі могуць таксама ўключаць у сябе інфармацыю пра наведаныя вамі URL-адрасы</translation>
+<translation id="4163313568284712797">Інфармацыя пра выкарыстанне вамі AI Wize адпраўляецца ў AI Wize, але яна не прывязана да вашай асобы\n\nКалі ў AI Wize адбываецца збой, падрабязныя звесткі пра яго могуць уключаць у сябе пэўную асабістую інфармацыю\n\nКалі вы ўключылі сінхранізацыю, паказчыкі могуць таксама ўключаць у сябе інфармацыю пра наведаныя вамі URL-адрасы</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> закладка}one{<ph name="BOOKMARKS_COUNT_MANY"/> закладка}few{<ph name="BOOKMARKS_COUNT_MANY"/> закладкі}many{<ph name="BOOKMARKS_COUNT_MANY"/> закладак}other{<ph name="BOOKMARKS_COUNT_MANY"/> закладкі}}</translation>
-<translation id="6153252609477956632">Цікавыя для вас артыкулы ў Brave</translation>
+<translation id="6153252609477956632">Цікавыя для вас артыкулы ў AI Wize</translation>
 <translation id="3066573403916685335">Перамясціць уніз</translation>
 <translation id="3070005020161560471">Аўтаматычна перакладаць з наступных моў:</translation>
-<translation id="1094255666887095087">Праграма "<ph name="APP_NAME"/>" адкрыецца ў Brave. Працягваючы, вы згаджаецеся з <ph name="BEGIN_LINK1"/>Умовамі выкарыстання Brave<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>Дадатковымі ўмовамі выкарыстання AI Wize і Chrome OS<ph name="END_LINK2"/>. Прымяняецца таксама <ph name="BEGIN_LINK3"/>Палітыка прыватнасці<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087">Праграма "<ph name="APP_NAME"/>" адкрыецца ў AI Wize. Працягваючы, вы згаджаецеся з <ph name="BEGIN_LINK1"/>Умовамі выкарыстання AI Wize<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>Дадатковымі ўмовамі выкарыстання AI Wize і Chrome OS<ph name="END_LINK2"/>. Прымяняецца таксама <ph name="BEGIN_LINK3"/>Палітыка прыватнасці<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Захоўвайце старонкі, каб прачытаць іх пазней або без падключэння да інтэрнэту</translation>
 <translation id="3091010850649238832">Паказаць змесціва буфера абмену</translation>
-<translation id="821565628224723530">Некаторыя відарысы адпраўляюцца ў Brave, каб палепшыць іх апісанне</translation>
+<translation id="821565628224723530">Некаторыя відарысы адпраўляюцца ў AI Wize, каб палепшыць іх апісанне</translation>
 <translation id="3114507951000454849">Чытайце сённяшнія навіны <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Апавяшчэнні</translation>
-<translation id="5063487983358782016">Галоўная старонка Brave</translation>
+<translation id="5063487983358782016">Галоўная старонка AI Wize</translation>
 <translation id="3158667104057012316">Адсартавана ўручную</translation>
 <translation id="3166827708714933426">Спалучэнні клавіш для працы з укладкамі і вокнамі</translation>
 <translation id="7249949543831830993">Браўзер AI Wize ужо запушчаны.</translation>
@@ -396,17 +396,17 @@
 <translation id="3207960819495026254">Дададзена ў закладкі</translation>
 <translation id="3208584281581115441">Праверыць</translation>
 <translation id="3211426585530211793">Выдалена: <ph name="ITEM_TITLE"/></translation>
-<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Гісторыя пошуку<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>іншыя дзеянні<ph name="END_LINK2"/> могуць захоўвацца ва Уліковым запісе Brave, у які вы ўвайшлі. Іх можна выдаліць у любы час.</translation>
+<translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Гісторыя пошуку<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>іншыя дзеянні<ph name="END_LINK2"/> могуць захоўвацца ва Уліковым запісе AI Wize, у які вы ўвайшлі. Іх можна выдаліць у любы час.</translation>
 <translation id="321773570071367578">Калі вы забылі фразу-пароль або хочаце змяніць гэту наладу, <ph name="BEGIN_LINK"/>скіньце сінхранізацыю<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Каб сінхранізаваць паролі, пацвердзіце сваю асобу</translation>
-<translation id="9210457680074341078">Калі вы захаваеце закладкі таксама ў сваім Уліковым запісе Brave, вы зможаце сачыць за цэнамі на тавары ў AI Wize і атрымліваць апавяшчэнні аб іх зніжэнні</translation>
-<translation id="9047551989591319903">Brave як ключ бяспекі</translation>
+<translation id="9210457680074341078">Калі вы захаваеце закладкі таксама ў сваім Уліковым запісе AI Wize, вы зможаце сачыць за цэнамі на тавары ў AI Wize і атрымліваць апавяшчэнні аб іх зніжэнні</translation>
+<translation id="9047551989591319903">AI Wize як ключ бяспекі</translation>
 <translation id="3232754137068452469">Вэб-праграма</translation>
 <translation id="3236059992281584593">Засталася 1 хвіліна</translation>
 <translation id="3237087289225714896">Стандартная перадзагрузка:</translation>
 <translation id="3237433641417325993">Каб паглядзець прапанаваныя артыкулы, прагартайце ўніз</translation>
 <translation id="3244271242291266297">ММ</translation>
-<translation id="7402642357351265733">Калі вы абагульваеце справаздачы пра выкарыстанне браўзера Brave, у іх уключаюцца URL-адрасы наведаных вамі старонак.</translation>
+<translation id="7402642357351265733">Калі вы абагульваеце справаздачы пра выкарыстанне браўзера AI Wize, у іх уключаюцца URL-адрасы наведаных вамі старонак.</translation>
 <translation id="3250563604907490871">Апісанні відарысаў стануць даступнымі пры падключэнні да Wi-Fi</translation>
 <translation id="3254409185687681395">Дадаць гэту старонку ў закладкі</translation>
 <translation id="3259831549858767975">Паменшыць усё на старонцы</translation>
@@ -415,7 +415,7 @@
 <translation id="3265534588625245297">Кіруйце сайтамі, на якія вы падпісаны</translation>
 <translation id="3269093882174072735">Загрузіць відарыс</translation>
 <translation id="3280562213547448728">Галасавы пошук</translation>
-<translation id="82609232232243542">Увайсці ў Brave</translation>
+<translation id="82609232232243542">Увайсці ў AI Wize</translation>
 <translation id="3290249595466894471">Таксама адпраўляе невялікія прыклады старонак, спамповак, дзеянняў пашырэнняў і інфармацыі пра сістэму, каб дапамагчы выяўляць новыя пагрозы</translation>
 <translation id="3293181007446299124">Ваша гісторыя прагляду сайтаў пры гэтым захоўваецца прыватна на вашай прыладзе, а справаздачы адпраўляюцца з затрымкай, каб прадухіліць раскрыццё вашай асобы.</translation>
 <translation id="3303414029551471755">Перайсці да спампоўкі змесціва?</translation>
@@ -426,7 +426,7 @@
 <translation id="3359667936385849800">Выкарыстоўваць бягучага пастаўшчыка паслуг</translation>
 <translation id="3373701465337594448">Калі гэта налада ўключана, спіс наведаных вамі сайтаў, якія спрабуюць вызначаць вашы інтарэсы, будзе паказвацца тут</translation>
 <translation id="2746024117903470217">Каб абагуліць гэту старонку і мець да яе доступ з іншай прылады, уключыце сінхранізацыю ў наладах AI Wize на іншай прыладзе.</translation>
-<translation id="8801234437789558906">Закладкі, гісторыя, паролі і іншыя даныя AI Wize больш не будуць сінхранізавацца з Уліковым запісам Brave</translation>
+<translation id="8801234437789558906">Закладкі, гісторыя, паролі і іншыя даныя AI Wize больш не будуць сінхранізавацца з Уліковым запісам AI Wize</translation>
 <translation id="3384347053049321195">Абагуліць відарыс</translation>
 <translation id="3387650086002190359">Не ўдалося спампаваць файл "<ph name="FILE_NAME"/>" з-за памылак файлавай сістэмы.</translation>
 <translation id="3389286852084373014">Тэкст занадта вялікі</translation>
@@ -434,7 +434,7 @@
 <translation id="1081508498128395141">Перадзагружаецца больш старонак. Перадзагрузка можа ажыццяўляцца праз серверы AI Wize па запыце іншых сайтаў.</translation>
 <translation id="3414952576877147120">Памер:</translation>
 <translation id="3421726884497337397">Выберыце, калі блакіраваць староннія файлы cookie</translation>
-<translation id="5265419033369521352">Абараняе вас у браўзеры AI Wize і можа выкарыстоўвацца для паляпшэння бяспекі ў іншых праграмах Brave, калі вы ўвайшлі ва ўліковы запіс</translation>
+<translation id="5265419033369521352">Абараняе вас у браўзеры AI Wize і можа выкарыстоўвацца для паляпшэння бяспекі ў іншых праграмах AI Wize, калі вы ўвайшлі ва ўліковы запіс</translation>
 <translation id="3430670036890315772">Калі вы выключыце блакіроўку профілю, уся захаваная вамі інфармацыя будзе выдалена</translation>
 <translation id="3435465986463792564">Адкрылі шмат акон? Кіраваць імі можна тут</translation>
 <translation id="3435738964857648380">Бяспека</translation>
@@ -485,14 +485,14 @@
 <translation id="3714981814255182093">Адкрыць панэль пошуку</translation>
 <translation id="5805364706385912897">Гэта старонка выкарыстоўвае занадта многа памяці, таму AI Wize прыпыніў яе.</translation>
 <translation id="3720422586473670527">Не, дзякуй</translation>
-<translation id="8397843425685839889">Вы і Brave</translation>
+<translation id="8397843425685839889">Вы і AI Wize</translation>
 <translation id="3737319253362202215">Налады перакладу</translation>
 <translation id="3737402728074743863">Каб выкарыстоўваць гэту прыладу ў якасці ключа бяспекі, наладзьце блакіроўку экрана</translation>
 <translation id="3738139272394829648">Пошук дотыкам</translation>
 <translation id="3739899004075612870">Закладка дададзена ў <ph name="PRODUCT_NAME"/></translation>
 <translation id="3740525748616366977">Галасавы пошук недаступны на гэтай прыладзе</translation>
 <translation id="3771290962915251154">Гэта налада выключана, бо ўключаны бацькоўскі кантроль</translation>
-<translation id="1138681184697033370">Умовы выкарыстання Brave</translation>
+<translation id="1138681184697033370">Умовы выкарыстання AI Wize</translation>
 <translation id="3775705724665058594">Адпраўка на вашы прылады</translation>
 <translation id="3777796259512476958">Будзе выкананы выхад з уліковых запісаў на большасці сайтаў</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 укладка}one{# укладка}few{# укладкі}many{# укладак}other{# укладкі}}</translation>
@@ -518,7 +518,7 @@
 <translation id="3932390316856284148">Ніжні аркуш са спісам даступных для выбару ўліковых запісаў разгорнуты на ўвесь экран.</translation>
 <translation id="393697183122708255">Уключаны галасавы пошук недаступны</translation>
 <translation id="395377504920307820">Выкарыстоўваць без уліковага запісу</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Brave загрузіць старонку па гатоўнасці}one{Brave загрузіць старонкі па гатоўнасці}few{Brave загрузіць старонкі па гатоўнасці}many{Brave загрузіць старонкі па гатоўнасці}other{Brave загрузіць старонкі па гатоўнасці}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{AI Wize загрузіць старонку па гатоўнасці}one{AI Wize загрузіць старонкі па гатоўнасці}few{AI Wize загрузіць старонкі па гатоўнасці}many{AI Wize загрузіць старонкі па гатоўнасці}other{AI Wize загрузіць старонкі па гатоўнасці}}</translation>
 <translation id="3962119236270174787">Стандартная абарона ад вэб-сайтаў, спамповак і пашырэнняў, вядомых як небяспечныя</translation>
 <translation id="1453002554835005700">Браўзеру AI Wize не ўдаецца праверыць паролі</translation>
 <translation id="3969863827134279083">Перамясціць уверх</translation>
@@ -541,7 +541,7 @@
 <translation id="4062305924942672200">Юрыдычная інфармацыя</translation>
 <translation id="4072805772816336153">Паўтарыце спробу пазней</translation>
 <translation id="4084682180776658562">Дадаць у закладкі</translation>
-<translation id="4521874409998847950">Выдавец – <ph name="PUBLISHER_ORIGIN"/>, <ph name="BEGIN_DEEMPHASIZED"/>пастаўшчык – Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">Выдавец – <ph name="PUBLISHER_ORIGIN"/>, <ph name="BEGIN_DEEMPHASIZED"/>пастаўшчык – AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Вы можаце выкарыстоўваць гэты планшэт, каб уваходзіць ва ўліковы запіс на прыладзе, на якой паказваецца гэты QR-код.</translation>
 <translation id="7268155614575494857">Укажыце сваё імя карыстальніка для гэтага сайта, каб захаваць у Менеджары пароляў AI Wize усе даныя для ўваходу</translation>
 <translation id="4095146165863963773">Выдаліць даныя праграмы?</translation>
@@ -556,7 +556,7 @@
 <translation id="4126285640274188657">Статыстыка старонкі</translation>
 <translation id="4135200667068010335">Спіс прылад, з якімі можна абагуліць укладку, закрыты.</translation>
 <translation id="4137746084635924146">Бягучая мова прылады</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Стандартна запытваюцца сайты для камп'ютараў</translation>
 <translation id="4162867837470729563">Спіс варыянтаў абагульвання разгорнуты на ўвесь экран.</translation>
 <translation id="4170011742729630528">Сэрвіс недаступны. Паўтарыце спробу пазней.</translation>
@@ -574,10 +574,10 @@
 <translation id="4225895483398857530">Кнопка-ярлык на панэлі інструментаў</translation>
 <translation id="4242533952199664413">Адкрыць налады</translation>
 <translation id="4248098802131000011">Захоўвайце паролі ў бяспечным месцы, каб прадухіліць іх раскрыццё ў выпадку ўцечкі даных або іншых праблем з бяспекай</translation>
-<translation id="7445061995866044926">Выйсці з Brave?</translation>
+<translation id="7445061995866044926">Выйсці з AI Wize?</translation>
 <translation id="4249955472157341256">Сартаваць па апошняй даце</translation>
 <translation id="4256782883801055595">Ліцэнзіі на ПЗ з адкрытым зыходным кодам</translation>
-<translation id="7404502124231907662">Выдаліць паролі з Менеджара пароляў Brave?</translation>
+<translation id="7404502124231907662">Выдаліць паролі з Менеджара пароляў AI Wize?</translation>
 <translation id="4269820728363426813">Капіраваць спасылку</translation>
 <translation id="4277529130885813215">Скарыстаць іншую прыладу</translation>
 <translation id="4283102315569707115">Запытваць сайты для камп'ютараў стандартна?</translation>
@@ -603,7 +603,7 @@
 <translation id="4405224443901389797">Перамясціць у…</translation>
 <translation id="4405636711880428279">Выдаліць віртуальную картку?</translation>
 <translation id="4409271659088619928">Ваша пошукавая сістэма – <ph name="DSE"/>. Каб выдаліць гісторыю пошуку, выканайце інструкцыі гэтай сістэмы (калі яны даступныя).</translation>
-<translation id="5749788945734786627">Кіраванне Уліковым запісам Brave</translation>
+<translation id="5749788945734786627">Кіраванне Уліковым запісам AI Wize</translation>
 <translation id="4425140285732600465">Цана адсочваецца. Пры зніжэнні цаны на любым з сайтаў вы будзеце атрымліваць абвесткі.</translation>
 <translation id="4425173294238317796">Аркуш з просьбай пацвердзіць стварэнне ключа доступу</translation>
 <translation id="442518031075347249">Вы больш не зможаце выкарыстоўваць віртуальную картку для аплаты праз Google Pay. <ph name="BEGIN_LINK1"/>Даведацца больш пра віртуальныя карткі<ph name="END_LINK1"/></translation>
@@ -611,10 +611,10 @@
 <translation id="4452548195519783679">Закладка дададзена ў папку "<ph name="FOLDER_NAME"/>"</translation>
 <translation id="4461614516424362539">Прывязаўшы іншую прыладу з дапамогай QR-кода, вы зможаце выкарыстоўваць з ёй гэты тэлефон як ключ бяспекі. Калі вы выдаліце яе са спіса звязаных прылад, вам трэба будзе адсканіраваць QR-код, каб звязаць яе зноў.</translation>
 <translation id="4478161224666880173">Вы можаце выкарыстоўваць уліковы запіс <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> на гэтым вэб-сайце. Каб працягнуць, увайдзіце ва ўліковы запіс <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="3133489217401741157">Усталёўваецца <ph name="MODULE"/> для Brave…</translation>
+<translation id="3133489217401741157">Усталёўваецца <ph name="MODULE"/> для AI Wize…</translation>
 <translation id="4484496141267039529">Няма падключэння. Паўтарыце спробу пазней.</translation>
 <translation id="53119194224775367">Усе даныя праграмы AI Wize будуць назаўсёды выдалены. Гэта датычыцца ўсіх файлаў, налад, уліковых запісаў, баз даных і г. д.</translation>
-<translation id="3966104135245031874">Шыфраваць сінхранізаваныя паролі з дапамогай даных Уліковага запісу Brave</translation>
+<translation id="3966104135245031874">Шыфраваць сінхранізаваныя паролі з дапамогай даных Уліковага запісу AI Wize</translation>
 <translation id="4491323382106587961">Выберыце ўліковы запіс. Зараз выбраны: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">Адміністратар уключыў магчымасць захоўваць паролі</translation>
 <translation id="4508528996305412043">Меню карткі стужкі адкрыта</translation>
@@ -623,7 +623,7 @@
 <translation id="451872707440238414">Пошук закладак</translation>
 <translation id="1664855196866195614">Выбраныя даныя выдалены з AI Wize і сінхранізаваных прылад.
 
-На сайце <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> могуць быць размешчаны іншыя формы гісторыі праглядаў сайтаў для вашага Уліковага запісу Brave: напрыклад, пошукавыя запыты і дзеянні ў іншых сэрвісах Brave.</translation>
+На сайце <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> могуць быць размешчаны іншыя формы гісторыі праглядаў сайтаў для вашага Уліковага запісу AI Wize: напрыклад, пошукавыя запыты і дзеянні ў іншых сэрвісах AI Wize.</translation>
 <translation id="4523326818319942067">апошнюю гадзіну</translation>
 <translation id="452750746583162491">Праверыць сінхранізаваныя даныя</translation>
 <translation id="4532845899244822526">Выберыце папку</translation>
@@ -688,26 +688,26 @@
 <translation id="4826163340425232009">Ніжні аркуш са спісам даступных для выбару ўліковых запісаў.</translation>
 <translation id="4834007576107377210">Каб выдаліць гісторыю пошуку, выканайце інструкцыі вашай пошукавай сістэмы (калі яны даступныя)</translation>
 <translation id="4834250788637067901">Спосабы аплаты, прапановы і адрасы, якія выкарыстоўваюць Google Pay</translation>
-<translation id="2593289874938379417">Brave не мае доступу да запытанай крыніцы.</translation>
+<translation id="2593289874938379417">AI Wize не мае доступу да запытанай крыніцы.</translation>
 <translation id="4837753911714442426">Адкрыць параметры друку старонкі</translation>
 <translation id="4842092870884894799">Паказана выплыўное акно для стварэння пароля</translation>
 <translation id="4842515939542199281">Каб выканаць галасавы пошук, націсніце значок мікрафона</translation>
-<translation id="6195403640086187022">Дзеля дадатковай бяспекі зашыфроўвайце паролі на прыладзе, перш чым захоўваць іх у Менеджары пароляў Brave</translation>
+<translation id="6195403640086187022">Дзеля дадатковай бяспекі зашыфроўвайце паролі на прыладзе, перш чым захоўваць іх у Менеджары пароляў AI Wize</translation>
 <translation id="4850886885716139402">Праглядзець</translation>
 <translation id="4852014461738377247">Уваход…</translation>
 <translation id="4860895144060829044">Выклік</translation>
 <translation id="4864369630010738180">Уваход...</translation>
-<translation id="5131234170665854056">Не ўдалося ўсталяваць модуль "<ph name="MODULE"/>" для Brave</translation>
+<translation id="5131234170665854056">Не ўдалося ўсталяваць модуль "<ph name="MODULE"/>" для AI Wize</translation>
 <translation id="4871568871368204250">Выключыць сінхранізацыю</translation>
-<translation id="2875466387677348954">Калі гэта налада выключана, вы ўсё роўна будзеце бачыць лакальныя прапановы ад Brave</translation>
+<translation id="2875466387677348954">Калі гэта налада выключана, вы ўсё роўна будзеце бачыць лакальныя прапановы ад AI Wize</translation>
 <translation id="4875775213178255010">Рэкамендацыі змесціва</translation>
 <translation id="4878404682131129617">Не ўдалося стварыць тунэль праз проксі-сервер</translation>
 <translation id="4880127995492972015">Перакласці…</translation>
 <translation id="4881695831933465202">Адкрыць</translation>
 <translation id="488187801263602086">Перайменаваць файл</translation>
-<translation id="1248710015876067820">Недапушчальная колькасць версій Brave.</translation>
+<translation id="1248710015876067820">Недапушчальная колькасць версій AI Wize.</translation>
 <translation id="4905823827770127520">Дадаць спасылку на старонку</translation>
-<translation id="3217997482476578430">Рэкамендацыі ад Brave</translation>
+<translation id="3217997482476578430">Рэкамендацыі ад AI Wize</translation>
 <translation id="4909709702739934280">Браўзерам кіруе адміністратар</translation>
 <translation id="4910889077668685004">Плацежныя праграмы</translation>
 <translation id="4912413785358399818">Перамясціць укладку</translation>
@@ -716,20 +716,20 @@
 <translation id="4925120120285606924">Здымак экрана <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Паролі будуць экспартаваны і спампаваны як тэкставы файл. Яны будуць бачныя ўсім карыстальнікам і праграмам з доступам да папкі, у якую гэты файл будзе захаваны.</translation>
 <translation id="4926901776383726965">Вы можаце захоўваць відарысы і файлы для прагляду па-за сеткай ці абагульваць іх з іншымі праграмамі</translation>
-<translation id="1955495299630319741">Даныя AI Wize будуць выдалены з гэтай прылады, паколькі вы выходзіце з уліковага запісу, якім кіруе <ph name="DOMAIN_NAME"/>. Яны застануцца ва Уліковым запісе Brave.</translation>
+<translation id="1955495299630319741">Даныя AI Wize будуць выдалены з гэтай прылады, паколькі вы выходзіце з уліковага запісу, якім кіруе <ph name="DOMAIN_NAME"/>. Яны застануцца ва Уліковым запісе AI Wize.</translation>
 <translation id="4943703118917034429">Віртуальная рэальнасць</translation>
 <translation id="4943872375798546930">Няма вынікаў</translation>
-<translation id="5742837711075932301">Пасля таго як вы ўвойдзеце з некалькіх прылад у адзін і той жа Уліковы запіс Brave, гэтыя прылады змогуць выкарыстоўваць дадзены тэлефон у якасці ключа бяспекі.</translation>
+<translation id="5742837711075932301">Пасля таго як вы ўвойдзеце з некалькіх прылад у адзін і той жа Уліковы запіс AI Wize, гэтыя прылады змогуць выкарыстоўваць дадзены тэлефон у якасці ключа бяспекі.</translation>
 <translation id="4957722034734105353">Даведацца больш...</translation>
 <translation id="4961107849584082341">Гэту старонку можна перакласці на любую мову</translation>
-<translation id="7307583170263691471">Больш хуткая актыўная абарона ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Папярэджвае пра ўцечкі пароляў. Патрабуе адпраўкі даных прагляду сайтаў у Brave.</translation>
+<translation id="7307583170263691471">Больш хуткая актыўная абарона ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Папярэджвае пра ўцечкі пароляў. Патрабуе адпраўкі даных прагляду сайтаў у AI Wize.</translation>
 <translation id="497421865427891073">Наперад</translation>
 <translation id="4987271110129728827">Не ўдалося знайсці старонку. Праверце правільнасць напісання запыту або паспрабуйце выканаць пошук у інтэрнэце.</translation>
 <translation id="4988526792673242964">Старонкі</translation>
 <translation id="4991110219272367918">Старонка, на якой можна ўхваліць вэб-сайт, закрыта</translation>
 <translation id="499724277181351974">Перайсці на сайт <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Падпісацца на сайт можна тут</translation>
-<translation id="6447211988989208781">Параметры дзейнасці Brave</translation>
+<translation id="6447211988989208781">Параметры дзейнасці AI Wize</translation>
 <translation id="5005498671520578047">Капіраваць пароль</translation>
 <translation id="5010886807652684893">Нагляднае адлюстраванне</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> хоча падключыцца</translation>
@@ -739,11 +739,11 @@
 <translation id="5039804452771397117">Дазволіць</translation>
 <translation id="5040262127954254034">Прыватнасць</translation>
 <translation id="504456571576643789">Інфармацыя для разгляду</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Іншыя дзеянні<ph name="END_LINK1"/> могуць захоўвацца ва Уліковым запісе Brave, у які вы ўвайшлі. Іх можна выдаліць у любы час.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Іншыя дзеянні<ph name="END_LINK1"/> могуць захоўвацца ва Уліковым запісе AI Wize, у які вы ўвайшлі. Іх можна выдаліць у любы час.</translation>
 <translation id="506254248375231072">Няма ўкладак</translation>
 <translation id="5062960805900435602">Паведамленне пра аб'яднанне пароляў закрыта</translation>
 <translation id="5081960376148623587">Укажыце, ці трэба перадзагружаць старонкі</translation>
-<translation id="4744980273298156620">Неўзабаве пры адкрыцці новай укладкі вы будзеце бачыць гісторыі з сайта <ph name="SITE_NAME"/>. Сайты, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе Brave. Кіраваць імі можна ў наладах Рэкамендацый.</translation>
+<translation id="4744980273298156620">Неўзабаве пры адкрыцці новай укладкі вы будзеце бачыць гісторыі з сайта <ph name="SITE_NAME"/>. Сайты, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе AI Wize. Кіраваць імі можна ў наладах Рэкамендацый.</translation>
 <translation id="509429900233858213">Адбылася памылка.</translation>
 <translation id="5097349930204431044">Сайты, якія вы наведваеце, могуць вызначаць, што вам падабаецца, і пазней паказваць вам больш рэлевантную для вас рэкламу</translation>
 <translation id="5099845111805573968">Калі вы адзін раз выбераце версію сайта для ПК, гэта версія будзе загружацца пры кожным яго наведванні.</translation>
@@ -769,7 +769,7 @@
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Ідзе спампоўванне файла…}one{Ідзе спампоўванне # файла…}few{Ідзе спампоўванне # файлаў…}many{Ідзе спампоўванне # файлаў…}other{Ідзе спампоўванне # файла…}}</translation>
 <translation id="5210286577605176222">Перайсці на папярэднюю ўкладку</translation>
 <translation id="5210365745912300556">Закрыць укладку</translation>
-<translation id="827672955486173928">Інфармацыя пра вашы дзеянні ў раздзеле "Статыстыка старонкі" захоўваецца ва <ph name="BEGIN_LINK"/>Уліковым запісе Brave<ph name="END_LINK"/>.</translation>
+<translation id="827672955486173928">Інфармацыя пра вашы дзеянні ў раздзеле "Статыстыка старонкі" захоўваецца ва <ph name="BEGIN_LINK"/>Уліковым запісе AI Wize<ph name="END_LINK"/>.</translation>
 <translation id="5222676887888702881">Выйсці</translation>
 <translation id="5226378907213531272">Вам трэба будзе разблакіраваць экран пры кожным выкарыстанні аўтамабіля</translation>
 <translation id="5227554086496586518">Націсніце, каб праглядзець вынікі пошуку</translation>
@@ -783,9 +783,9 @@
 <translation id="5308380583665731573">Падключыцца</translation>
 <translation id="5316947901395241499">Адміністратар адключыў магчымасць захоўваць паролі</translation>
 <translation id="5317780077021120954">Захаваць</translation>
-<translation id="989239400026154074">Brave рэкамендуе браўзер Brave</translation>
+<translation id="989239400026154074">AI Wize рэкамендуе браўзер AI Wize</translation>
 <translation id="7815000350132166985">Калі вы дазволіце прымяняць файлы cookie, AI Wize зможа выкарыстоўваць іх падчас перадзагрузкі</translation>
-<translation id="1681635711794313507">Паколькі перадзагружаныя старонкі зашыфраваны, а сайт, які спасылаецца на гэтыя старонкі, з'яўляецца сайтам Brave, то пры перадзагрузцы гэтых старонак у прыватным рэжыме серверы AI Wize не атрымліваюць новай інфармацыі.</translation>
+<translation id="1681635711794313507">Паколькі перадзагружаныя старонкі зашыфраваны, а сайт, які спасылаецца на гэтыя старонкі, з'яўляецца сайтам AI Wize, то пры перадзагрузцы гэтых старонак у прыватным рэжыме серверы AI Wize не атрымліваюць новай інфармацыі.</translation>
 <translation id="5329858041417644019">Ваш браўзер не знаходзіцца пад кіраваннем</translation>
 <translation id="5342314432463739672">Запыты дазволаў</translation>
 <translation id="534580735623577507">Няма сайтаў за <ph name="TIME_PERIOD"/></translation>
@@ -819,7 +819,7 @@
 <translation id="5517095782334947753">У вас ёсць закладкі, гісторыя, паролі і іншыя налады з уліковага запісу <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Перанакіраванне заблакіравана.</translation>
 <translation id="5548606607480005320">Праверка бяспекі</translation>
-<translation id="4362225295386962644">Brave папярэджвае, калі пароль, які вы выкарыстоўваеце, быў апублікаваны ў інтэрнэце. Пры гэтым вашы паролі і імёны карыстальніка зашыфраваны – прачытаць іх не можа ніхто, нават Brave.</translation>
+<translation id="4362225295386962644">AI Wize папярэджвае, калі пароль, які вы выкарыстоўваеце, быў апублікаваны ў інтэрнэце. Пры гэтым вашы паролі і імёны карыстальніка зашыфраваны – прачытаць іх не можа ніхто, нават AI Wize.</translation>
 <translation id="5555525474779371165">Выберыце ўзровень абароны для Бяспечнага прагляду</translation>
 <translation id="5556459405103347317">Перазагрузіць</translation>
 <translation id="555816257274242153">Адсочванне цаны спынена</translation>
@@ -836,7 +836,7 @@
 <translation id="562289928968387744">Кіраваць рэакцыямі</translation>
 <translation id="5626134646977739690">Назва:</translation>
 <translation id="5628604359369369630">Непрачытана – Даступна па-за сеткай</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Гісторыя пошуку<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>звесткі пра іншыя дзеянні<ph name="END_LINK2"/> могуць захоўвацца ва Уліковым запісе Brave</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Гісторыя пошуку<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>звесткі пра іншыя дзеянні<ph name="END_LINK2"/> могуць захоўвацца ва Уліковым запісе AI Wize</translation>
 <translation id="564667659802381754">Дапаможнік па прыватнасці <ph name="BEGIN_NEW"/>Новае<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">За апошнія 7 дзён</translation>
 <translation id="5655963694829536461">Шукаць у спампоўках</translation>
@@ -845,10 +845,10 @@
 <translation id="5665379678064389456">Стварыце падзею ў праграме <ph name="APP_NAME"/></translation>
 <translation id="5668833306439455813">Браўзеру AI Wize не ўдаецца праверыць наяўнасць абнаўленняў</translation>
 <translation id="5686790454216892815">Назва файла занадта доўгая</translation>
-<translation id="4809211418322514799">Brave аўтаматычна выдаляе сайты, наведаныя больш чым 30 дзён таму назад. Сайт, які вы наведаеце паўторна, можа з'явіцца ў спісе зноў, але вы можаце забараніць яму прапаноўваць вам рэкламу. Даведайцеся больш пра кіраванне <ph name="BEGIN_LINK"/>прыватнасцю ў рэкламе ў Brave.<ph name="END_LINK"/></translation>
+<translation id="4809211418322514799">AI Wize аўтаматычна выдаляе сайты, наведаныя больш чым 30 дзён таму назад. Сайт, які вы наведаеце паўторна, можа з'явіцца ў спісе зноў, але вы можаце забараніць яму прапаноўваць вам рэкламу. Даведайцеся больш пра кіраванне <ph name="BEGIN_LINK"/>прыватнасцю ў рэкламе ў AI Wize.<ph name="END_LINK"/></translation>
 <translation id="569435661099256888">Вы можаце прагледзець наведаныя старонкі або выдаліць іх з гісторыі</translation>
 <translation id="569536719314091526">Перакладзіце гэту старонку на любую мову з дапамогай кнопкі "Дадатковыя параметры"</translation>
-<translation id="2320748512701464301">Brave дапамагае прадухіляць праблемы, звязаныя з уцечкай даных, наведваннем небяспечных вэб-сайтаў і г. д.</translation>
+<translation id="2320748512701464301">AI Wize дапамагае прадухіляць праблемы, звязаныя з уцечкай даных, наведваннем небяспечных вэб-сайтаў і г. д.</translation>
 <translation id="5698878456427040674">Праверце, ці падтрымліваецца выбраны ўліковы запіс.</translation>
 <translation id="570347048394355941">Пераключыцца на ўкладку</translation>
 <translation id="5715150588940290235">Выдаліць захаваныя коды бяспекі?</translation>
@@ -859,7 +859,7 @@
 <translation id="3088191967551450609">Для спампоўвання файлаў AI Wize патрабуецца доступ да сховішча.</translation>
 <translation id="5749237766298580851">Выключана <ph name="SEPARATOR"/> Не рэкамендуецца</translation>
 <translation id="5752232708629533680">Абагуліць толькі файл GIF</translation>
-<translation id="416316836590748269">Вы можаце выкарыстоўваць галасавыя каманды для пошуку ў Brave</translation>
+<translation id="416316836590748269">Вы можаце выкарыстоўваць галасавыя каманды для пошуку ў AI Wize</translation>
 <translation id="5754350196967618083">Не ўдаецца абнавіць рэкамендацыі</translation>
 <translation id="5755162682436943950">Выкананы выхад. Кнопка адкрывае дыялогавае акно, якое дазваляе ўвайсці ва ўліковы запіс і ўключыць сінхранізацыю.</translation>
 <translation id="5759897675466110265">Сайт не працуе? Паспрабуйце часова дазволіць выкарыстанне старонніх файлаў cookie.</translation>
@@ -880,7 +880,7 @@
 <translation id="5829586821381540080">Захавана ў папцы "<ph name="FOLDER_NAME"/>"</translation>
 <translation id="583281660410589416">Невядома</translation>
 <translation id="5833984609253377421">Абагуліць спасылку</translation>
-<translation id="2225291765389142805">Дыназаўр у Brave</translation>
+<translation id="2225291765389142805">Дыназаўр у AI Wize</translation>
 <translation id="5848257610304005265">Адкрываць PDF у праграме "<ph name="APP_NAME"/>"?</translation>
 <translation id="5853623416121554550">прыпынена</translation>
 <translation id="5855546874025048181">Удакладніць: <ph name="REFINE_TEXT"/></translation>
@@ -897,7 +897,7 @@
 <translation id="5916664084637901428">Уключана</translation>
 <translation id="5919204609460789179">Каб запусціць сінхранізацыю, абнавіце <ph name="PRODUCT_NAME"/></translation>
 <translation id="5938820472109305350">Дадаць: <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">Выкарыстоўваецца пошукавая сістэма Brave</translation>
+<translation id="6103327872225198548">Выкарыстоўваецца пошукавая сістэма AI Wize</translation>
 <translation id="5945035219773565305">Бягучая рэкамендацыя:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Праглядаецца апублікаваная версія старонкі</translation>
 <translation id="305870044889644984">Адкрыць Даведачны цэнтр AI Wize у новай укладцы</translation>
@@ -906,11 +906,11 @@
 <translation id="5958994127112619898">Спрасціць выгляд старонкі</translation>
 <translation id="5962718611393537961">Каб згарнуць, націсніце тут</translation>
 <translation id="5964869237734432770">Не атр. апісанні відарысаў</translation>
-<translation id="9135546826883360971">Brave запомніць ваш выбар</translation>
+<translation id="9135546826883360971">AI Wize запомніць ваш выбар</translation>
 <translation id="5977976211062815271">На гэтай прыладзе</translation>
 <translation id="5979084224081478209">Праверыць паролі</translation>
 <translation id="5995726099713306770">Спампаваць старонку зноў?</translation>
-<translation id="6456271171669383967">Пакінуць Brave</translation>
+<translation id="6456271171669383967">Пакінуць AI Wize</translation>
 <translation id="6000203700195075278">Падпісацца зноў</translation>
 <translation id="6002122790816966947">Вашы прылады</translation>
 <translation id="6011308810877101166">Паляпшаць прапановы пошуку</translation>
@@ -940,7 +940,7 @@
 <translation id="6140912465461743537">Краіна або рэгіён</translation>
 <translation id="6150320133806434356">Закладка захавана</translation>
 <translation id="6154478581116148741">Каб экспартаваць паролі з гэтай прылады, уключыце блакіроўку экрана ў Наладах</translation>
-<translation id="7087658909840709934">Brave перадзагружае старонкі, якія вы, імаверна, наведаеце.</translation>
+<translation id="7087658909840709934">AI Wize перадзагружае старонкі, якія вы, імаверна, наведаеце.</translation>
 <translation id="6186394685773237175">Не знойдзена раскрытых пароляў</translation>
 <translation id="6192907950379606605">Атрымл. апісанні відарысаў</translation>
 <translation id="6193448654517602979">Выберыце ўкладкі</translation>
@@ -953,7 +953,7 @@
 <translation id="6232535412751077445">Калі функцыя "Не адсочваць" уключана, пры праглядзе старонак у інтэрнэце браўзер будзе адпраўляць адпаведны запыт. Сайты могуць апрацоўваць і інтэрпрэтаваць гэты запыт па-рознаму.
 
 Напрыклад, некаторыя вэб-сайты могуць пачаць паказ неперсаналізаванай рэкламы. Многія сайты працягнуць збіраць і выкарыстоўваць даныя аб вашых дзеяннях у браўзеры, напрыклад для павышэння бяспекі, паказу змесціва, рэкламы і рэкамендацый або генерацыі статыстыкі для справаздач.</translation>
-<translation id="3895383310037101583">Захавайце паролі з гэтай прылады ў сваім Уліковым запісе Brave, уключыўшы сінхранізацыю</translation>
+<translation id="3895383310037101583">Захавайце паролі з гэтай прылады ў сваім Уліковым запісе AI Wize, уключыўшы сінхранізацыю</translation>
 <translation id="6255794742848779505">Мы змяняем працэдуру захоўвання пароляў на гэтай прыладзе</translation>
 <translation id="6264376385120300461">Усё роўна спампаваць</translation>
 <translation id="6277522088822131679">Узнікла праблема з друкам старонкі. Паўтарыце спробу.</translation>
@@ -978,18 +978,18 @@
 <translation id="6357653805084533597">Вы можаце выкарыстоўваць гэты тэлефон, каб уваходзіць ва ўліковы запіс на прыладзе, на якой паказваецца гэты QR-код.</translation>
 <translation id="6363990818884053551">Каб пачаць сінхранізацыю, пацвердзіце сваю асобу</translation>
 <translation id="6364438453358674297">Выдаліць прапанову з гісторыі?</translation>
-<translation id="806493401838431801">Brave часцей перадзагружае старонкі, якія вы з вялікай імавернасцю наведаеце. Пры выкарыстанні гэтай налады можа павялічыцца расход трафіка.</translation>
+<translation id="806493401838431801">AI Wize часцей перадзагружае старонкі, якія вы з вялікай імавернасцю наведаеце. Пры выкарыстанні гэтай налады можа павялічыцца расход трафіка.</translation>
 <translation id="6382848304055775421">Ідзе экспарт</translation>
 <translation id="6394791151443660613">Пошук: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">СУВЯЗЬ</translation>
 <translation id="6397616442223433927">Зноў у інтэрнэце</translation>
-<translation id="8789425457808164956">Каб адправіць гэту ўкладку на іншую прыладу, увайдзіце з гэтай прылады ў Brave</translation>
+<translation id="8789425457808164956">Каб адправіць гэту ўкладку на іншую прыладу, увайдзіце з гэтай прылады ў AI Wize</translation>
 <translation id="6404511346730675251">Змяніце закладку</translation>
 <translation id="6406506848690869874">Сінхранізаваць</translation>
 <translation id="6407224748847589805">Не ўдалося падключыцца да вашага камп'ютара. Паспрабуйце іншы спосаб спраўджання.</translation>
 <translation id="6410883413783534063">Каб праглядаць некалькі старонак адначасова, карыстайцеся ўкладкамі</translation>
 <translation id="6411219469806822692">Не ўдаецца перамясціцца вышэй. Паспрабуйце пачаць з месца, якое б знаходзілася вышэй на старонцы.</translation>
-<translation id="7810992039564280750">Правярае, ці знаходзяцца URL-адрасы ў спісе небяспечных сайтаў, захаваным у Brave. Пры спробе сайта выкрасці пароль або пры спампоўванні шкоднага файла браўзер AI Wize можа таксама адпраўляць у Бяспечны прагляд URL-адрасы, уключаючы фрагменты змесціва старонкі.</translation>
+<translation id="7810992039564280750">Правярае, ці знаходзяцца URL-адрасы ў спісе небяспечных сайтаў, захаваным у AI Wize. Пры спробе сайта выкрасці пароль або пры спампоўванні шкоднага файла браўзер AI Wize можа таксама адпраўляць у Бяспечны прагляд URL-адрасы, уключаючы фрагменты змесціва старонкі.</translation>
 <translation id="641643625718530986">Друк…</translation>
 <translation id="6422857128426228781">Тут вы можаце бачыць прадукты, за якімі сочыце</translation>
 <translation id="6433501201775827830">Выберыце пошукавую сістэму</translation>
@@ -1000,26 +1000,26 @@
 <translation id="6447558397796644647">Не ўдалося знайсці закладку. Праверце правільнасць напісання або дадайце новую закладку.</translation>
 <translation id="6459045781120991510">Апытанні</translation>
 <translation id="6461962085415701688">Не ўдалося адкрыць файл</translation>
-<translation id="9055113864158719823">Вы можаце бачыць сайты, якія наведвалі ў Brave, і задаваць для іх таймеры.\n\nBrave атрымлівае інфармацыю пра сайты, для якіх вы задалі таймеры, і працягласць іх наведвання. Гэта інфармацыя выкарыстоўваецца для паляпшэння якасці лічбавага камфорту.</translation>
+<translation id="9055113864158719823">Вы можаце бачыць сайты, якія наведвалі ў AI Wize, і задаваць для іх таймеры.\n\nAI Wize атрымлівае інфармацыю пра сайты, для якіх вы задалі таймеры, і працягласць іх наведвання. Гэта інфармацыя выкарыстоўваецца для паляпшэння якасці лічбавага камфорту.</translation>
 <translation id="6473086018775716761">Спіс варыянтаў абагульвання разгорнуты на палову экрана.</translation>
 <translation id="6475951671322991020">Спампаваць відэа</translation>
 <translation id="6477928892249167417">Гэтыя сайты могуць быць важнымі для вас:</translation>
 <translation id="6482749332252372425">Не ўдалося спампаваць файл <ph name="FILE_NAME"/> з-за недахопу месца ў сховішчы.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Файл спампаваны}one{Завершана # спампоўка}few{Завершана # спампоўкі}many{Завершана # спамповак}other{Завершана # спампоўкі}}</translation>
-<translation id="3960299545138990065">Перазапусціце Brave</translation>
+<translation id="3960299545138990065">Перазапусціце AI Wize</translation>
 <translation id="6527303717912515753">Абагуліць</translation>
-<translation id="708829030563435351">Не будуць паказвацца сайты, наведаныя вамі ў Brave. Усе таймеры сайтаў будуць выдалены.</translation>
+<translation id="708829030563435351">Не будуць паказвацца сайты, наведаныя вамі ў AI Wize. Усе таймеры сайтаў будуць выдалены.</translation>
 <translation id="7723158744459952869">Чаканне адказу ад AI Wize заняло занадта шмат часу</translation>
 <translation id="6539092367496845964">Нешта пайшло не так. Паўтарыце спробу пазней.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Праверка праводзілася гадзіну таму}one{Праверка праводзілася # гадзіну таму}few{Праверка праводзілася # гадзіны таму}many{Праверка праводзілася # гадзін таму}other{Праверка праводзілася # гадзіны таму}}</translation>
 <translation id="6545017243486555795">Ачысціць усе даныя</translation>
 <translation id="6546511553472444032">Файл можа быць шкодным</translation>
-<translation id="6702167990458635422">Не абараняе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Гэты рэжым не паўплывае на налады Бяспечнага прагляду ў іншых прадуктах Brave.</translation>
+<translation id="6702167990458635422">Не абараняе ад небяспечных вэб-сайтаў, спамповак і пашырэнняў. Гэты рэжым не паўплывае на налады Бяспечнага прагляду ў іншых прадуктах AI Wize.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{Укладка "<ph name="TAB_TITLE"/>" і яшчэ <ph name="TAB_COUNT_ONE"/> укладка будуць закрыты}one{Укладка "<ph name="TAB_TITLE"/>" і яшчэ <ph name="TAB_COUNT_MANY"/> укладка будуць закрыты}few{Укладка "<ph name="TAB_TITLE"/>" і яшчэ <ph name="TAB_COUNT_MANY"/> укладкі будуць закрыты}many{Укладка "<ph name="TAB_TITLE"/>" і яшчэ <ph name="TAB_COUNT_MANY"/> укладак будуць закрыты}other{Укладка "<ph name="TAB_TITLE"/>" і яшчэ <ph name="TAB_COUNT_MANY"/> укладкі будуць закрыты}}</translation>
 <translation id="6560414384669816528">Пошук праз Sogou</translation>
 <translation id="656065428026159829">Яшчэ</translation>
 <translation id="6565959834589222080">Калі сетка Wi-Fi даступная, будзе выкарыстоўвацца яна</translation>
-<translation id="4480935821314799946">Цяпер пры адкрыцці новай укладкі вы будзеце бачыць гісторыі з сайта "<ph name="SITE_NAME"/>". Сайты, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе Brave. Кіраваць імі можна ў наладах Рэкамендацый.</translation>
+<translation id="4480935821314799946">Цяпер пры адкрыцці новай укладкі вы будзеце бачыць гісторыі з сайта "<ph name="SITE_NAME"/>". Сайты, на якія вы падпісаны, захоўваюцца ў вашым Уліковым запісе AI Wize. Кіраваць імі можна ў наладах Рэкамендацый.</translation>
 <translation id="6573096386450695060">Заўсёды дазваляць</translation>
 <translation id="5157964048453367290">Тут з'явяцца ўкладкі, адкрытыя вамі ў браўзеры AI Wize на іншых прыладах.</translation>
 <translation id="6583199322650523874">Дадаць бягучую старонку ў закладкі</translation>
@@ -1029,41 +1029,41 @@
 <translation id="6593061639179217415">Версія для ПК</translation>
 <translation id="6594347733515723558">Сартаванне і паказ</translation>
 <translation id="2466982615210189224">Відарысы перасылаюцца ў AI Wize з мэтай паляпшэння апісанняў для вас.</translation>
-<translation id="663059986967017181">Скапіравана ў Brave</translation>
+<translation id="663059986967017181">Скапіравана ў AI Wize</translation>
 <translation id="661266467055912436">Павышае бяспеку для вас і іншых карыстальнікаў у інтэрнэце.</translation>
 <translation id="8127050479140582768">Каб адправіць гэту ўкладку на іншую прыладу, увайдзіце ў AI Wize з абедзвюх прылад</translation>
 <translation id="6627583120233659107">Рэдагаваць папку</translation>
 <translation id="6636623428211296678">Вы можаце азнаёміцца з іншымі наладамі ніжэй або завяршыць праверку</translation>
-<translation id="2259649928554669581">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзелах <ph name="BEGIN_LINK1"/>Сінхранізацыя<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>сэрвісы Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Brave адпраўляе ў AI Wize даныя пра збоі і выкарыстанне, якія дапамогуць палепшыць праграму. <ph name="BEGIN_UMA_LINK"/>Кіраваць<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Дадатковыя налады прыватнасці, бяспекі і збору даных глядзіце ў раздзелах <ph name="BEGIN_LINK1"/>Сінхранізацыя<ph name="END_LINK1"/> і <ph name="BEGIN_LINK2"/>сэрвісы AI Wize<ph name="END_LINK2"/></translation>
+<translation id="7939692063031538305">AI Wize адпраўляе ў AI Wize даныя пра збоі і выкарыстанне, якія дапамогуць палепшыць праграму. <ph name="BEGIN_UMA_LINK"/>Кіраваць<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Блакіраваць заўсёды</translation>
 <translation id="6641780377503683465">Выдаліць: <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Ачысціць</translation>
 <translation id="6645629752388991326">Выкарыстоўвайце гэту прыладу ў якасці ключа бяспекі, каб кантраляваць, якім прыладам можна ўваходзіць ва ўліковы запіс.</translation>
 <translation id="2730188427562924169">Адпраўляе замаскіраваную частку URL-адраса ў AI Wize праз прыватны сервер, які хавае ваш IP-адрас. Пры спробе сайта выкрасці пароль або пры спампоўванні шкоднага файла браўзер AI Wize можа таксама адпраўляць у AI Wize URL-адрасы, уключаючы фрагменты змесціва старонкі.</translation>
-<translation id="7556503430569358637">URL-адрасы старонак, якія вы наведваеце, адпраўляюцца ў Brave, каб прадказваць, якія сайты вы можаце наведаць далей</translation>
+<translation id="7556503430569358637">URL-адрасы старонак, якія вы наведваеце, адпраўляюцца ў AI Wize, каб прадказваць, якія сайты вы можаце наведаць далей</translation>
 <translation id="6678472970290886941">Адміністратар можа аддалена змяняць налады браўзера. Сама прылада таксама можа знаходзіцца пад знешнім кіраваннем.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}one{<ph name="CONTACT_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}few{<ph name="CONTACT_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}many{<ph name="CONTACT_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Перадпрагляд відарыса <ph name="BEGIN_NEW"/>Навінка<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Пароль</translation>
 <translation id="6659594942844771486">Укладка</translation>
-<translation id="9145803563102831353">Пакуль што паролі, захаваныя на гэтай прыладзе, нельга выкарыстоўваць ва ўсіх каналах Brave. Пасля AI Wize 121 паролі, захаваныя на прыладзе для AI Wize і <ph name="CHROME_CHANNEL"/>, будуць аб'яднаны, і іх можна будзе выкарыстоўваць у абедзвюх праграмах.</translation>
+<translation id="9145803563102831353">Пакуль што паролі, захаваныя на гэтай прыладзе, нельга выкарыстоўваць ва ўсіх каналах AI Wize. Пасля AI Wize 121 паролі, захаваныя на прыладзе для AI Wize і <ph name="CHROME_CHANNEL"/>, будуць аб'яднаны, і іх можна будзе выкарыстоўваць у абедзвюх праграмах.</translation>
 <translation id="666731172850799929">Адкрыць у праграме <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Скапіраваць відарыс</translation>
 <translation id="6672917148207387131">Дадаць <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Каб пачаць сінхранізацыю, увядзіце фразу-пароль</translation>
 <translation id="8581481290581777242">Выдаліць даныя AI Wize з гэтай прылады?</translation>
-<translation id="3683330416566109578">Будзе выкананы ўваход на сайт і ў Brave</translation>
+<translation id="3683330416566109578">Будзе выкананы ўваход на сайт і ў AI Wize</translation>
 <translation id="3385384709865894288">Зрабіце браўзер AI Wize лепшым</translation>
 <translation id="670498945988402717">Праверка праводзілася ўчора</translation>
 <translation id="6710213216561001401">Назад</translation>
 <translation id="671481426037969117">Спрацаваў таймер праграмы "<ph name="FQDN"/>". Заўтра ён зноў будзе запушчаны.</translation>
 <translation id="6715020873764921614">Усё роўна спампаваць файл "<ph name="FILE_NAME"/>" (<ph name="FILE_SIZE"/>)?</translation>
 <translation id="6719634564325948108">Падключацца з дапамогай QR-кода?</translation>
-<translation id="7499197548870160669">У вашым Уліковым запісе Brave</translation>
+<translation id="7499197548870160669">У вашым Уліковым запісе AI Wize</translation>
 <translation id="6738516213925468394">Даныя былі зашыфраваны з дапамогай <ph name="BEGIN_LINK"/>фразы-пароля для сінхранізацыі<ph name="END_LINK"/> <ph name="TIME"/>. Увядзіце яе, каб пачаць сінхранізацыю.</translation>
 <translation id="6738867403308150051">Ідзе спампоўка…</translation>
-<translation id="2275686406263739320">Гэта звычайная практыка, калі сайты, якія вы наведваеце, запамінаюць, што іменна вас цікавіць, каб персаналізаваць для вас сваё змесціва. Сайты таксама могуць захоўваць звесткі пра вашы інтарэсы ў браўзеры Brave.</translation>
+<translation id="2275686406263739320">Гэта звычайная практыка, калі сайты, якія вы наведваеце, запамінаюць, што іменна вас цікавіць, каб персаналізаваць для вас сваё змесціва. Сайты таксама могуць захоўваць звесткі пра вашы інтарэсы ў браўзеры AI Wize.</translation>
 <translation id="6751521182688001123">Хуткае адкрыццё новай укладкі. Каб змяніць функцыю гэтай кнопкі, націсніце на яе і ўтрымлівайце.</translation>
 <translation id="6756507620369789050">Пакінуць водгук</translation>
 <translation id="6767294960381293877">Спіс прылад, з якімі можна абагуліць укладку, разгорнуты на палову экрана.</translation>
@@ -1074,7 +1074,7 @@
 <translation id="6802555630140434547">Акно будзе закрыта</translation>
 <translation id="6811034713472274749">Старонка гатовая да прагляду</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Відарысы, 1 відарыс у спісе}one{Відарысы, # відарыс у спісе}few{Відарысы, # відарысы ў спісе}many{Відарысы, # відарысаў у спісе}other{Відарысы, # відарыса ў спісе}}</translation>
-<translation id="8418237809013783651">Аркуш "Увайсці ў Brave" адкрыты.</translation>
+<translation id="8418237809013783651">Аркуш "Увайсці ў AI Wize" адкрыты.</translation>
 <translation id="6817747507826986771">Хуткае абагульванне гэтай старонкі. Каб змяніць функцыю гэтай кнопкі, націсніце на яе і ўтрымлівайце.</translation>
 <translation id="118366698571543506">Увайдзіце ва ўліковы запіс, каб карыстацца прадуктамі AI Wize на некалькіх прыладах</translation>
 <translation id="6820686453637990663">CVC</translation>
@@ -1104,7 +1104,7 @@
 <translation id="6909589135458168665">Перадзагрузка старонак</translation>
 <translation id="6910211073230771657">Выдалена</translation>
 <translation id="6918398787259831832">Калі праблема не знікае, <ph name="BEGIN_LINK"/>атрымаць больш інфармацыі пра памылку<ph name="END_LINK"/> можна ад сэрвісу "<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>".</translation>
-<translation id="5854472260286669100">Усе коды бяспекі, захаваныя на вашай прыладзе і ва Уліковым запісе Brave, будуць выдалены</translation>
+<translation id="5854472260286669100">Усе коды бяспекі, захаваныя на вашай прыладзе і ва Уліковым запісе AI Wize, будуць выдалены</translation>
 <translation id="6942665639005891494">Стандартнае размяшчэнне спамповак можна змяніць у наладах</translation>
 <translation id="694267552845942083">Вы знаходзіцеся на старонцы налад сінхранізацыі. Каб завяршыць уключэнне сінхранізацыі, націсніце кнопку "Пацвердзіць" унізе экрана. Перайсці ўверх</translation>
 <translation id="6945221475159498467">Выбраць</translation>
@@ -1123,16 +1123,16 @@
 <translation id="7029809446516969842">Паролі</translation>
 <translation id="7030304022046916278">Адпраўляе URL-адрасы на праверку ў Бяспечны прагляд</translation>
 <translation id="7035701931849773472">Іншыя параметры</translation>
-<translation id="5813862251770201080">Увайдзіце ў AI Wize праз свой Уліковы запіс Brave</translation>
+<translation id="5813862251770201080">Увайдзіце ў AI Wize праз свой Уліковы запіс AI Wize</translation>
 <translation id="7054588988317389591">Атрымліваць апісанні відарысаў?</translation>
 <translation id="7055152154916055070">Перанакіраванне заблакіравана:</translation>
 <translation id="7063006564040364415">Не ўдалося падключыцца да сервера сінхранізацыі.</translation>
 <translation id="7071521146534760487">Кіраваць уліковым запісам</translation>
 <translation id="707155805709242880">Выберыце, што сінхранізаваць</translation>
 <translation id="7077143737582773186">SD-карта</translation>
-<translation id="2374582967527009647">Адпраўляе URL-адрасы на праверку ў Бяспечны прагляд. Таксама адпраўляе невялікія прыклады старонак, спамповак, дзеянняў пашырэнняў і інфармацыі пра сістэму, каб дапамагчы выяўляць новыя пагрозы. Часова звязвае гэтыя даныя з Уліковым запісам Brave, у які вы ўвайшлі, каб абараніць вас у праграмах Brave.</translation>
-<translation id="5499149312981370855">Выберыце, ці выкарыстоўваць гісторыю AI Wize для персаналізацыі сэрвісаў Brave</translation>
-<translation id="8208853227947884571">Brave не патрабуе абнаўлення</translation>
+<translation id="2374582967527009647">Адпраўляе URL-адрасы на праверку ў Бяспечны прагляд. Таксама адпраўляе невялікія прыклады старонак, спамповак, дзеянняў пашырэнняў і інфармацыі пра сістэму, каб дапамагчы выяўляць новыя пагрозы. Часова звязвае гэтыя даныя з Уліковым запісам AI Wize, у які вы ўвайшлі, каб абараніць вас у праграмах AI Wize.</translation>
+<translation id="5499149312981370855">Выберыце, ці выкарыстоўваць гісторыю AI Wize для персаналізацыі сэрвісаў AI Wize</translation>
+<translation id="8208853227947884571">AI Wize не патрабуе абнаўлення</translation>
 <translation id="7105047059074518658">Увайдзіце, каб вам было прасцей выкарыстоўваць браўзер на розных прыладах</translation>
 <translation id="7106762743910369165">Вашым браўзерам кіруе арганізацыя</translation>
 <translation id="7116588989735740310">Каб вяртацца на сайты, якія вы наведвалі на іншых прыладах, сінхранізуйце свае ўкладкі і гісторыю</translation>
@@ -1147,7 +1147,7 @@
 <translation id="7177873915659574692">Не ўдалося стварыць QR-код. URL-адрас перавышае дапушчальную колькасць знакаў (<ph name="CHARACTER_LIMIT"/>).</translation>
 <translation id="7180611975245234373">Абнавіць</translation>
 <translation id="7183693674623539380">Група ўкладак – <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Абараняе вас у браўзеры AI Wize і можа выкарыстоўвацца для паляпшэння бяспекі ў іншых праграмах Brave, калі вы ўвайшлі ва ўліковы запіс.</translation>
+<translation id="8355565210555500987">Абараняе вас у браўзеры AI Wize і можа выкарыстоўвацца для паляпшэння бяспекі ў іншых праграмах AI Wize, калі вы ўвайшлі ва ўліковы запіс.</translation>
 <translation id="7191430249889272776">Укладка адкрыта ў фоне.</translation>
 <translation id="7196215469483532480">Тлумачэнні адносна дапаможніка па прыватнасці разгорнуты на ўвесь экран</translation>
 <translation id="1014116676551114642">Змесціва ад AI Wize для дзяцей – выключана</translation>
@@ -1156,12 +1156,12 @@
 <translation id="7221869452894271364">Перазагрузіце старонку</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{Чакаецца 1 спампоўка}one{Чакаецца # спампоўка}few{Чакаецца # спампоўкі}many{Чакаецца # спамповак}other{Чакаецца # спампоўкі}}</translation>
 <translation id="72415438529550637">Прапанова пароля закрыта.</translation>
-<translation id="8287068819750208230">Праверце, ці ўключана на прыладзе "<ph name="TARGET_DEVICE_NAME"/>" сінхранізацыя ў браўзеры Brave</translation>
+<translation id="8287068819750208230">Праверце, ці ўключана на прыладзе "<ph name="TARGET_DEVICE_NAME"/>" сінхранізацыя ў браўзеры AI Wize</translation>
 <translation id="7252076891734325316">Размясціце тэлефон каля камп’ютара</translation>
 <translation id="4957342254208357193">На вашай прыладзе Android можа быць падобная налада. Калі вымярэнне паказчыкаў, звязаных з рэкламай, уключана ў AI Wize і на вашай прыладзе Android, кампаніі змогуць ацэньваць эфектыўнасць рэкламы на сайтах, якія вы наведваеце, і ў праграмах, якімі вы карыстаецеся.</translation>
 <translation id="727288900855680735">Адправіць код <ph name="ONE_TIME_CODE"/> на сайт <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Заблакіраваны сайт</translation>
-<translation id="7949597606523411684">Brave аўтаматычна выдаляе тэмы, дададзеныя больш чым 4 тыдні таму назад. Па меры прагляду сайтаў у інтэрнэце пэўныя тэмы могуць з'яўляцца ў спісе зноў, але вы можаце забараніць браўзеру AI Wize абагульваць іх з сайтамі. Даведайцеся больш пра кіраванне <ph name="BEGIN_LINK"/>прыватнасцю ў рэкламе ў Brave.<ph name="END_LINK"/></translation>
+<translation id="7949597606523411684">AI Wize аўтаматычна выдаляе тэмы, дададзеныя больш чым 4 тыдні таму назад. Па меры прагляду сайтаў у інтэрнэце пэўныя тэмы могуць з'яўляцца ў спісе зноў, але вы можаце забараніць браўзеру AI Wize абагульваць іх з сайтамі. Даведайцеся больш пра кіраванне <ph name="BEGIN_LINK"/>прыватнасцю ў рэкламе ў AI Wize.<ph name="END_LINK"/></translation>
 <translation id="4561646469134805137">Падчас уводу запыту AI Wize адпраўляе змесціва адраснага радка або поля пошуку ў пошукавую сістэму, выбраную ў якасці стандартнай</translation>
 <translation id="7289303553784750393">Калі ў вас ёсць падключэнне да інтэрнэту, а праблема не знікае, паспрабуйце іншыя спосабы ўваходу, каб працягнуць работу на сайце <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Перайменаванне недаступнае</translation>
@@ -1173,7 +1173,7 @@
 <translation id="7313188324932846546">Дакраніцеся, каб наладзіць сінхранізацыю</translation>
 <translation id="7324354302972299151">Адправіць запыт “Do Not Track”</translation>
 <translation id="7332075081379534664">Уваход выкананы</translation>
-<translation id="8716243540027092298">Каб атрымліваць найбольш адпаведнае змесціва ад Brave, уключыце сінхранізацыю</translation>
+<translation id="8716243540027092298">Каб атрымліваць найбольш адпаведнае змесціва ад AI Wize, уключыце сінхранізацыю</translation>
 <translation id="7339898014177206373">Новае акно</translation>
 <translation id="7340958967809483333">Параметры рэкамендацый</translation>
 <translation id="7352339641508007922">Перацягніце край здымка экрана, калі вам патрэбны доўгі здымак</translation>
@@ -1189,13 +1189,13 @@
 <translation id="7397416715506917976">Праглядзець статыстыку</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Іншае, 1 файл у спісе}one{Іншае, # файл у спісе}few{Іншае, # файлы ў спісе}many{Іншае, # файлаў у спісе}other{Іншае, # файла ў спісе}}</translation>
 <translation id="7400418766976504921">URL-адрас</translation>
-<translation id="724102042129299115">Першы запуск Brave</translation>
-<translation id="5341476184053934779">Карыстальнік Уліковага запісу Brave</translation>
+<translation id="724102042129299115">Першы запуск AI Wize</translation>
+<translation id="5341476184053934779">Карыстальнік Уліковага запісу AI Wize</translation>
 <translation id="741204030948306876">Так, я згаджаюся</translation>
 <translation id="7419565702166471774">Заўсёды выкарыстоўваць бяспечнае падключэнне</translation>
 <translation id="7431991332293347422">Кіраванне тым, як ваша гісторыя прагляду сайтаў выкарыстоўваецца для персаналізацыі пошуку і ў іншых мэтах</translation>
 <translation id="7435356471928173109">Выключаны адміністратарам</translation>
-<translation id="6234515504547364178">Выйсці з Brave</translation>
+<translation id="6234515504547364178">Выйсці з AI Wize</translation>
 <translation id="6147816961713837040">Адпраўляе ў AI Wize абфускаваную частку URL-адраса праз сервер прыватнасці, які хавае ваш IP-адрас</translation>
 <translation id="3699067418237091329">Будзе выкананы выхад з большасці сайтаў. З Уліковага запісу AI Wize вы не выйдзеце.</translation>
 <translation id="7453810262525006706">Згарнуць да віду збоку</translation>
@@ -1211,11 +1211,11 @@
 <translation id="7482656565088326534">Укладка перадпрагляду</translation>
 <translation id="7484997419527351112">Рэкамендацыі выключаны</translation>
 <translation id="7485033510383818941">Каб абнавіць змесціва стужкі, пацягніце старонку ўніз</translation>
-<translation id="749294055653435199">Brave Аб'ектыў недаступны на гэтай прыладзе</translation>
+<translation id="749294055653435199">AI Wize Аб'ектыў недаступны на гэтай прыладзе</translation>
 <translation id="7493994139787901920"><ph name="VERSION"/> (абноўлена <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Тэма зноў дададзена ў спіс патэнцыйных</translation>
 <translation id="7498271377022651285">Пачакайце…</translation>
-<translation id="8156131600798538460">Каб выйсці з Уліковага запісу AI Wize на ўсіх вэб-сайтах, <ph name="BEGIN_LINK1"/>выйдзіце з Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Каб выйсці з Уліковага запісу AI Wize на ўсіх вэб-сайтах, <ph name="BEGIN_LINK1"/>выйдзіце з AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Абнаўленні недаступныя</translation>
 <translation id="7507207699631365376">Азнаёміцца з <ph name="BEGIN_LINK"/>палітыкай прыватнасці<ph name="END_LINK"/> гэтага пастаўшчыка</translation>
 <translation id="7514365320538308">Спампаваць</translation>
@@ -1239,7 +1239,7 @@
 <translation id="649070405679044769">Уваход у AI Wize выкананы ад імя</translation>
 <translation id="7612989789287281429">Выконваецца ўваход…</translation>
 <translation id="7619072057915878432">Не ўдалося спампаваць файл "<ph name="FILE_NAME"/>" з-за збояў сеткі.</translation>
-<translation id="7207456302801184289">Вас вітае Brave</translation>
+<translation id="7207456302801184289">Вас вітае AI Wize</translation>
 <translation id="7630202231528827509">URL-адрас пастаўшчыка DNS</translation>
 <translation id="7638584964844754484">Няправільная фраза-пароль</translation>
 <translation id="7641339528570811325">Выдаліць даныя пра работу ў браўзеры…</translation>
@@ -1253,13 +1253,13 @@
 <translation id="766587987807204883">Тут паказваюцца артыкулы, якія можна чытаць нават па-за сеткай</translation>
 <translation id="7682724950699840886">Паспрабуйце наступнае: праверце, ці дастаткова месца на прыладзе, затым паўтарыце экспарт.</translation>
 <translation id="7686086654630106285">Падрабязней пра рэкламу, якая прапануецца сайтамі</translation>
-<translation id="2667018639405889513">Некаторыя са старонак, якія вы наведваеце, перадзагружаюцца. Калі пераход на іх ажыццяўляецца з сайта Brave, перадзагрузка можа ажыццяўляцца праз серверы Brave.</translation>
-<translation id="7795837497684113327">Запусціць AI Wize на вашай прыладзе не ўдалося. Устараніце праблему, спампаваўшы з крамы праграм апошняе абнаўленне браўзера Brave.</translation>
+<translation id="2667018639405889513">Некаторыя са старонак, якія вы наведваеце, перадзагружаюцца. Калі пераход на іх ажыццяўляецца з сайта AI Wize, перадзагрузка можа ажыццяўляцца праз серверы AI Wize.</translation>
+<translation id="7795837497684113327">Запусціць AI Wize на вашай прыладзе не ўдалося. Устараніце праблему, спампаваўшы з крамы праграм апошняе абнаўленне браўзера AI Wize.</translation>
 <translation id="7691043218961417207">Шукайце змесціва, на якое варта падпісацца</translation>
 <translation id="7697383401610880082">Маркер перацягвання</translation>
 <translation id="7698359219371678927">Напісаць электронны ліст у праграме "<ph name="APP_NAME"/>"</translation>
 <translation id="7702029078562412515">Пліткі запытаў</translation>
-<translation id="3434187853488406814">Пры выдаленні даных пра работу ў браўзеры вы не выйдзеце з Уліковага запісу Brave. Калі вам неабходна гэта зрабіць, <ph name="BEGIN_LINK1"/>выйдзіце з Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Пры выдаленні даных пра работу ў браўзеры вы не выйдзеце з Уліковага запісу AI Wize. Калі вам неабходна гэта зрабіць, <ph name="BEGIN_LINK1"/>выйдзіце з AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Выкарыстоўваць мабільную перадачу даных</translation>
 <translation id="7709918231054955894">Праглядайце ўсе свае ўкладкі</translation>
 <translation id="7733878270780732638">Недастаткова месца на прыладзе.</translation>
@@ -1271,9 +1271,9 @@
 <translation id="7772032839648071052">Пацвердзіце фразу-пароль</translation>
 <translation id="7772375229873196092">Закрыццё праграмы "<ph name="APP_NAME"/>"</translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}one{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}few{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}many{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 і яшчэ <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
-<translation id="5614774692683309331">Калі вы ўвайшлі ва ўліковы запіс, абараняе вас ва ўсіх сэрвісах Brave.</translation>
+<translation id="5614774692683309331">Калі вы ўвайшлі ва ўліковы запіс, абараняе вас ва ўсіх сэрвісах AI Wize.</translation>
 <translation id="7778840695157240389">Каб праверыць, ці з'явіліся новыя артыкулы, загляніце сюды пазней</translation>
-<translation id="7703329426540523149">Часова звязвае гэтыя даныя з Уліковым запісам Brave, у які вы ўвайшлі, каб абараніць вас у праграмах Brave</translation>
+<translation id="7703329426540523149">Часова звязвае гэтыя даныя з Уліковым запісам AI Wize, у які вы ўвайшлі, каб абараніць вас у праграмах AI Wize</translation>
 <translation id="7791543448312431591">Дадаць</translation>
 <translation id="7798392620021911922">Адноўлена ўкладак: <ph name="TAB_COUNT"/></translation>
 <translation id="780301667611848630">Не, дзякуй</translation>
@@ -1282,10 +1282,10 @@
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Усе файлы, 1 файл у спісе}one{Усе файлы, # файл у спісе}few{Усе файлы, # файлы ў спісе}many{Усе файлы, # файлаў у спісе}other{Усе файлы, # файла ў спісе}}</translation>
 <translation id="7815484226266492798">Доўгі здымак экрана</translation>
 <translation id="7821130663268546430">Усе адкрытыя ўкладкі можна знайсці ў пераключальніку ўкладак</translation>
-<translation id="8439902729344548970">Даныя будуць звязаны з Уліковым запісам Brave, у які вы ўвайшлі. Гэта дазволіць абараніць вас у сэрвісах AI Wize (напрыклад, узмацніць абарону ў Gmail пасля парушэння бяспекі).</translation>
+<translation id="8439902729344548970">Даныя будуць звязаны з Уліковым запісам AI Wize, у які вы ўвайшлі. Гэта дазволіць абараніць вас у сэрвісах AI Wize (напрыклад, узмацніць абарону ў Gmail пасля парушэння бяспекі).</translation>
 <translation id="78270725016672455">Ваш камп’ютар прапануе зарэгістраваць гэту прыладу і выкарыстоўваць яе для ўваходу на сайт</translation>
 <translation id="7844171778363018843">Не выбраны даныя для сінхранізацыі</translation>
-<translation id="7068829570137757602">Сэрвісы Brave</translation>
+<translation id="7068829570137757602">Сэрвісы AI Wize</translation>
 <translation id="784934925303690534">Прамежак часу</translation>
 <translation id="7851858861565204677">Іншыя прылады</translation>
 <translation id="7853202427316060426">Дзеянні</translation>
@@ -1295,7 +1295,7 @@
 <translation id="78707286264420418">Каб браўзер <ph name="PRODUCT_NAME"/> мог падключыцца да прылады, трэба ўключыць дазвол "Прылады паблізу" ў праграме "Налады"</translation>
 <translation id="7875915731392087153">Стварыць ліст электроннай пошты</translation>
 <translation id="7876243839304621966">Выдаліць усе</translation>
-<translation id="6143689084714664628">Выконваецца ў браўзеры Brave</translation>
+<translation id="6143689084714664628">Выконваецца ў браўзеры AI Wize</translation>
 <translation id="7887174313503389866">Даведайцеся пра ключавыя налады бяспекі і прыватнасці. Больш інфармацыі вы можаце атрымаць, знаёмячыся з кожнай наладай асобна.</translation>
 <translation id="7896724475402191389">Змесціва для дзяцей – выключана</translation>
 <translation id="7903184275147100332">Пачакайце</translation>
@@ -1334,7 +1334,7 @@
 <translation id="8037801708772278989">Праверка праводзілася толькі што</translation>
 <translation id="804335162455518893">SD-карта не знойдзена</translation>
 <translation id="8051695050440594747">Даступна <ph name="MEGABYTES"/> МБ</translation>
-<translation id="2317945146070194624">Адкрыць у новай укладцы Brave</translation>
+<translation id="2317945146070194624">Адкрыць у новай укладцы AI Wize</translation>
 <translation id="8062594758852531064">Пашыраная перадзагрузка:</translation>
 <translation id="8063895661287329888">Не ўдалося дадаць закладку.</translation>
 <translation id="8066816452984416180">Хутка дадаць гэту старонку ў закладкі. Каб змяніць функцыю гэтай кнопкі, націсніце на яе і ўтрымлівайце.</translation>
@@ -1343,22 +1343,22 @@
 <translation id="8076492880354921740">Укладкі</translation>
 <translation id="8078096376109663956">Абагульце толькі тэкст</translation>
 <translation id="8084114998886531721">Захаваны пароль</translation>
-<translation id="1718138320251931534">Кіруйце данымі Уліковага запісу Brave</translation>
+<translation id="1718138320251931534">Кіруйце данымі Уліковага запісу AI Wize</translation>
 <translation id="808747664143081553">Падключана</translation>
 <translation id="8090732854597034573">Калі табе патрабуецца дапамога, звярніся да аднаго з бацькоў</translation>
 <translation id="8101414242770404289">Няма ўкладак за <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Працягваючы, вы прымаеце <ph name="BEGIN_TOS_LINK"/>Умовы выкарыстання<ph name="END_TOS_LINK"/>.\nBrave адпраўляе даныя пра выкарыстанне і збоі ў Brave, якія дапамогуць палепшыць праграму. <ph name="BEGIN_UMA_LINK"/>Кіраваць<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Працягваючы, вы прымаеце <ph name="BEGIN_TOS_LINK"/>Умовы выкарыстання<ph name="END_TOS_LINK"/>.\nAI Wize адпраўляе даныя пра выкарыстанне і збоі ў AI Wize, якія дапамогуць палепшыць праграму. <ph name="BEGIN_UMA_LINK"/>Кіраваць<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Закрыць параметры сартавання</translation>
-<translation id="2919733817273403520">Дапамагаць паляпшаць функцыі і прадукцыйнасць Brave</translation>
-<translation id="4565206163201411670">Паказваць у службе лічбавага камфорту вашы дзеянні ў Brave?</translation>
+<translation id="2919733817273403520">Дапамагаць паляпшаць функцыі і прадукцыйнасць AI Wize</translation>
+<translation id="4565206163201411670">Паказваць у службе лічбавага камфорту вашы дзеянні ў AI Wize?</translation>
 <translation id="8118117428362942925">Калі табе патрабуецца дапамога, звярніся да аднаго з бацькоў (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Адсартавана па самых новых</translation>
 <translation id="8127542551745560481">Змяніць галоўную старонку</translation>
 <translation id="8130309322784422030">Уліковыя даныя могуць быць устарэлымі</translation>
 <translation id="813082847718468539">Прагляд звестак пра сайт</translation>
 <translation id="8135406045838672858">Спампаваныя PDF аўтаматычна адкрываюцца ў праграме "<ph name="APP_NAME"/>"</translation>
-<translation id="6337533477704327362">Вам не трэба запамінаць гэты пароль. Ён будзе захаваны ў Менеджары пароляў Brave.</translation>
+<translation id="6337533477704327362">Вам не трэба запамінаць гэты пароль. Ён будзе захаваны ў Менеджары пароляў AI Wize.</translation>
 <translation id="8186512483418048923">Засталося файлаў: <ph name="FILES"/></translation>
 <translation id="8190358571722158785">Застаўся 1 дзень</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Вашы прылады<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1375,7 +1375,7 @@
 <translation id="8243077599929149377">Дадайце сваё імя карыстальніка</translation>
 <translation id="8250920743982581267">Дакументы</translation>
 <translation id="8255617931166444521">Сайты могуць выкарыстоўваць файлы cookie для адсочвання вашых дзеянняў у браўзеры толькі на сваіх старонках</translation>
-<translation id="2876689296031086375">Паколькі перадзагружаныя старонкі зашыфраваны, AI Wize не будзе нічога ведаць пра іх змесціва. Серверы AI Wize атрымаюць інфармацыю, якія сайты перадзагружаны ў прыватным рэжыме. Гэта інфармацыя выкарыстоўваецца толькі для перадзагрузкі старонак і не звязана з іншай інфармацыяй з вашага Уліковага запісу Brave.</translation>
+<translation id="2876689296031086375">Паколькі перадзагружаныя старонкі зашыфраваны, AI Wize не будзе нічога ведаць пра іх змесціва. Серверы AI Wize атрымаюць інфармацыю, якія сайты перадзагружаны ў прыватным рэжыме. Гэта інфармацыя выкарыстоўваецца толькі для перадзагрузкі старонак і не звязана з іншай інфармацыяй з вашага Уліковага запісу AI Wize.</translation>
 <translation id="8260126382462817229">Увайдзіце яшчэ раз</translation>
 <translation id="8261506727792406068">Выдаліць</translation>
 <translation id="82619448491672958">Паказаць іншыя ўкладкі</translation>
@@ -1394,7 +1394,7 @@
 <translation id="8368001212524806591">Адсочваць цану</translation>
 <translation id="8387617938027387193">Прайдзіце спраўджанне асобы</translation>
 <translation id="8393700583063109961">Адправіць паведамленне</translation>
-<translation id="7651600795135059130">Правярае, ці знаходзяцца URL-адрасы ў спісе небяспечных сайтаў, захаваным у Brave</translation>
+<translation id="7651600795135059130">Правярае, ці знаходзяцца URL-адрасы ў спісе небяспечных сайтаў, захаваным у AI Wize</translation>
 <translation id="8402673309244746971">Перайсці да стужкі падпісак</translation>
 <translation id="8413126021676339697">Паказаць усю гісторыю</translation>
 <translation id="5348884013239264115">Абараняе ад заведама небяспечных сайтаў, спамповак і пашырэнняў. Калі вы наведваеце сайт, AI Wize адпраўляе замаскіраваную частку URL-адраса ў AI Wize праз прыватны сервер, які хавае ваш IP-адрас. Калі сайт робіць нешта падазронае, таксама адпраўляюцца поўныя URL-адрасы і фрагменты змесціва на старонцы.</translation>
@@ -1408,7 +1408,7 @@
 <translation id="8438566539970814960">Палепшыць пошук і прагляд</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> – мова гатовая да выкарыстання, перазапусціце <ph name="APP_NAME"/>.</translation>
 <translation id="8442258441309440798">Няма новых артыкулаў</translation>
-<translation id="4058091506841967397">Немагчыма абнавіць Brave</translation>
+<translation id="4058091506841967397">Немагчыма абнавіць AI Wize</translation>
 <translation id="8445448999790540984">Не ўдалося экспартаваць паролі</translation>
 <translation id="8446884382197647889">Даведацца больш</translation>
 <translation id="8453310803815879010">Пачаць гульню з дыназаўрам</translation>
@@ -1424,17 +1424,17 @@
 <translation id="8497480609928300907">Тлумачэнні адносна дапаможніка па прыватнасці</translation>
 <translation id="8497726226069778601">Тут нічога няма… пакуль што</translation>
 <translation id="8501423924927196358">Індыкатар загрузкі на старонцы статыстыкі</translation>
-<translation id="230699814587342492">Паролі Brave</translation>
+<translation id="230699814587342492">Паролі AI Wize</translation>
 <translation id="8503813439785031346">Імя карыстальніка</translation>
 <translation id="8505766168025405649">Стан спампоўкі можна паглядзець у апавяшчэнні</translation>
 <translation id="8506357771923193001">Тут з'явяцца вашы спампоўкі</translation>
-<translation id="133012818630824069">Экспартаваць паролі, захаваныя ў Brave</translation>
+<translation id="133012818630824069">Экспартаваць паролі, захаваныя ў AI Wize</translation>
 <translation id="8516012719330875537">Рэдактар відарысаў</translation>
 <translation id="8523928698583292556">Выдаліць захаваны пароль</translation>
 <translation id="8526855376374973824">Ніжні аркуш з інфармацыяй пра дазвол апавяшчэнняў</translation>
 <translation id="8540136935098276800">Увядзіце URL-адрас у правільным фармаце</translation>
 <translation id="854522910157234410">Адкрыць гэту старонку</translation>
-<translation id="5503308854539525011">Brave абмяжоўвае агульны аб'ём даных, якія сайты могуць абагульваць праз браўзер для ацэнкі эфектыўнасці рэкламы.</translation>
+<translation id="5503308854539525011">AI Wize абмяжоўвае агульны аб'ём даных, якія сайты могуць абагульваць праз браўзер для ацэнкі эфектыўнасці рэкламы.</translation>
 <translation id="8559990750235505898">Прапаноўваць перакладаць старонкі на іншых мовах</translation>
 <translation id="8560602726703398413">Шукайце спіс чытання ў Закладках</translation>
 <translation id="8562452229998620586">Захаваныя паролі з'явяцца тут.</translation>
@@ -1443,16 +1443,16 @@
 <translation id="8583805026567836021">Ідзе выдаленне даных уліковага запісу</translation>
 <translation id="859046281437143747">Адсочвайце цану, выкарыстоўваючы кнопку "Дадатковыя параметры"</translation>
 <translation id="860043288473659153">Імя ўладальніка карткі</translation>
-<translation id="1673533133011266617">Аркуш "Увайсці ў Brave" закрыты.</translation>
+<translation id="1673533133011266617">Аркуш "Увайсці ў AI Wize" закрыты.</translation>
 <translation id="860282621117673749">Абвесткі пра зніжэнне цэн</translation>
-<translation id="5784514951651328424">На старонцы <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> могуць размяшчацца іншыя формы гісторыі прагляду сайтаў для вашага Уліковага запісу Brave.</translation>
+<translation id="5784514951651328424">На старонцы <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> могуць размяшчацца іншыя формы гісторыі прагляду сайтаў для вашага Уліковага запісу AI Wize.</translation>
 <translation id="8617240290563765734">Адкрыць прапанаваны URL-адрас, указаны ў спампаваным змесціве?</translation>
 <translation id="8621068256433641644">тэлефоне</translation>
 <translation id="8636825310635137004">Каб глядзець укладкі са сваіх іншых прылад, уключыце сінхранізацыю.</translation>
 <translation id="864544049772947936">Кіраваць вокнамі (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Прадказвае небяспечныя падзеі і папярэджвае пра іх да таго, як яны здараюцца</translation>
-<translation id="2734140769649165081">Даныя можна выдаліць у наладах Brave</translation>
-<translation id="7436978557885042606">Персаналізуйце выкарыстанне Brave</translation>
+<translation id="2734140769649165081">Даныя можна выдаліць у наладах AI Wize</translation>
+<translation id="7436978557885042606">Персаналізуйце выкарыстанне AI Wize</translation>
 <translation id="8664979001105139458">Файл з такой назвай ужо існуе</translation>
 <translation id="8676276370198826499">Зарэгіструйцеся на вэб-сайце <ph name="SITE_ETLD_PLUS_ONE"/> праз сэрвіс "<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>"</translation>
 <translation id="8676789164135894283">Спраўджанне ўваходу</translation>
@@ -1490,9 +1490,9 @@
 <translation id="885480114717186641">Вы можаце запытаць версію сайта <ph name="HOST_NAME"/> для камп'ютараў</translation>
 <translation id="8856607253650333758">Атрымліваць апісанні</translation>
 <translation id="8856931513242997049">Ніжні аркуш з інфармацыяй пра дазвол апавяшчэнняў закрыты</translation>
-<translation id="1984646864943401749">Адпраўляе URL-адрасы некаторых наведаных вамі старонак, пэўную сістэмную інфармацыю і фрагменты змесціва старонак у сэрвісы Brave, каб дапамагаць выяўляць новыя кіберпагрозы і абараняць усіх у інтэрнэце.</translation>
+<translation id="1984646864943401749">Адпраўляе URL-адрасы некаторых наведаных вамі старонак, пэўную сістэмную інфармацыю і фрагменты змесціва старонак у сэрвісы AI Wize, каб дапамагаць выяўляць новыя кіберпагрозы і абараняць усіх у інтэрнэце.</translation>
 <translation id="8909135823018751308">Абагуліць…</translation>
-<translation id="2684652081942622950">Уліковы запіс Brave</translation>
+<translation id="2684652081942622950">Уліковы запіс AI Wize</translation>
 <translation id="8921980840204105660">Каб закладкі з іншых прылад сталі даступнымі, уключыце сінхранізацыю</translation>
 <translation id="8922289737868596582">Спампуйце старонкі з меню кнопкі Дадатковыя параметры, каб праглядаць іх па-за сеткай</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Даведацца больш<ph name="END_LINK"/></translation>
@@ -1507,7 +1507,7 @@
 <translation id="8987736167266086032">Працягвайце з месца, дзе спыніліся</translation>
 <translation id="8996847606757455498">Выбраць іншага пастаўшчыка</translation>
 <translation id="8998289560386111590">Недаступна на вашай прыладзе</translation>
-<translation id="3275122921244685452">Вы ўваходзіце праз уліковы запіс, які кіруецца даменам <ph name="MANAGED_DOMAIN"/>, што дае адміністратару кантроль над вашымі данымі з браўзера Brave. Вашы даныя будуць назаўсёды прывязаны да гэтага ўліковага запісу. Калі выйсці з браўзера Brave, вашы даныя будуць выдалены з гэтай прылады, але застануцца ва Уліковым запісе Brave.</translation>
+<translation id="3275122921244685452">Вы ўваходзіце праз уліковы запіс, які кіруецца даменам <ph name="MANAGED_DOMAIN"/>, што дае адміністратару кантроль над вашымі данымі з браўзера AI Wize. Вашы даныя будуць назаўсёды прывязаны да гэтага ўліковага запісу. Калі выйсці з браўзера AI Wize, вашы даныя будуць выдалены з гэтай прылады, але застануцца ва Уліковым запісе AI Wize.</translation>
 <translation id="8998837250940831980">Не ўдалося згарнуць укладку. Паўтарыце спробу пазней.</translation>
 <translation id="9012585441087414258">Абараняе ад заведама небяспечных сайтаў, спамповак і пашырэнняў. Калі старонка выконвае падазроныя дзеянні, URL-адрасы разам з фрагментамі змесціва старонкі адпраўляюцца на сервер AI Wize Бяспечнага прагляду.</translation>
 <translation id="9019199799064251516">Працягнуць без блакіроўкі профілю аўтамабіля?</translation>
@@ -1543,7 +1543,7 @@
 <translation id="9158770349521403363">Абагуліць толькі змесціва</translation>
 <translation id="9159716826369098114">Аднавіць групу з некалькіх (<ph name="TAB_COUNT"/>) укладак як новую фонавую групу ўкладак.</translation>
 <translation id="9169507124922466868">Гісторыя навігацыі адкрыта напалову</translation>
-<translation id="4947625801334180582">Бэта-версія Brave</translation>
+<translation id="4947625801334180582">Бэта-версія AI Wize</translation>
 <translation id="9190276265094487094">Ваша гісторыя будзе захоўвацца на ўсіх сінхранізаваных прыладах, каб вы заўжды маглі працягнуць рабіць на любой з гэтых прылад тое, што перад гэтым рабілі на іншай</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{Праверка праводзілася хвіліну таму}one{Праверка праводзілася # хвіліну таму}few{Праверка праводзілася # хвіліны таму}many{Праверка праводзілася # хвілін таму}other{Праверка праводзілася # хвіліны таму}}</translation>
 <translation id="9204021776105550328">Ідзе выдаленне</translation>
@@ -1553,9 +1553,9 @@
 <translation id="9209888181064652401">Нельга рабіць выклікі</translation>
 <translation id="9212845824145208577">Не ўдаецца перамясціцца ніжэй. Паспрабуйце пачаць з месца, якое б знаходзілася ніжэй на старонцы.</translation>
 <translation id="9219103736887031265">Відарысы</translation>
-<translation id="6946179564366058239">Калі сайт па спасылках на ім запытвае перадзагрузку старонак у прыватным рэжыме, AI Wize шыфруе і перадзагружае старонкі праз серверы Brave, не выкарыстоўваючы файлы cookie. Дзякуючы гэтаму перадзагружаны сайт не атрымлівае звестак пра вашу асобу.</translation>
+<translation id="6946179564366058239">Калі сайт па спасылках на ім запытвае перадзагрузку старонак у прыватным рэжыме, AI Wize шыфруе і перадзагружае старонкі праз серверы AI Wize, не выкарыстоўваючы файлы cookie. Дзякуючы гэтаму перадзагружаны сайт не атрымлівае звестак пра вашу асобу.</translation>
 <translation id="4596514158372210596">Выдаліць дзеянні ў AI Wize са службы лічбавага камфорту</translation>
-<translation id="2830145431802238213">Выкарыстоўвайце Brave, уключыўшы спрошчаны рэжым</translation>
+<translation id="2830145431802238213">Выкарыстоўвайце AI Wize, уключыўшы спрошчаны рэжым</translation>
 <translation id="928550791203542716"><ph name="SITE_NAME"/>: вы падпісаны</translation>
 <translation id="93533588269984624">Усе паролі будуць спампаваны на вашу прыладу і выдалены з праграмы "<ph name="CHROME_CHANNEL"/>"</translation>
 <translation id="938850635132480979">Памылка: <ph name="ERROR_CODE"/></translation>
@@ -1573,7 +1573,7 @@
 <translation id="993520549480398880">Таксама выдаліць закладкі, гісторыю і іншыя даныя, захаваныя для гэтага аўтамабіля</translation>
 <translation id="996149300115483134">Меню карткі стужкі закрыта</translation>
 <translation id="5186185447130319458">Інкогніта</translation>
-<translation id="5711390076756601471">Блакіраваць укладкі ў рэжыме інкогніта пры закрыцці Brave</translation>
+<translation id="5711390076756601471">Блакіраваць укладкі ў рэжыме інкогніта пры закрыцці AI Wize</translation>
 <translation id="1014490034578104945">Выкарыстоўваць блакіроўку экрана для прагляду адкрытых укладак у рэжыме інкогніта</translation>
 <translation id="2633278372998075009">Укладкі інкогніта</translation>
 <translation id="8737444348664175738">Адбылося пераключэнне на ўкладкі ў рэжыме інкогніта</translation>

@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Flytja hingað</translation>
 <translation id="1014147525163127655">Það eru engir aðgangslyklar fyrir <ph name="ORIGIN"/> í tækinu</translation>
 <translation id="1016498331642356377">Beittu röddinni til að leita á skjótan hátt. Haltu fingri á þessari flýtileið til að breyta henni.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925">Sendir í <ph name="DEVICE_NAME"/>...</translation>
 <translation id="103269572468856066">Hreinsa líka gögn af þessum svæðum og forritum?</translation>
 <translation id="1034259925032978114">Gluggi er opinn</translation>
@@ -17,21 +17,21 @@
 <translation id="1089606299949659462">Yfirferð lokið!</translation>
 <translation id="1095761715416917775">Vertu viss um að hafa alltaf aðgang að samtilltu gögnunum þínum</translation>
 <translation id="1100066534610197918">Opna á nýjum flipa í hópi</translation>
-<translation id="4660777881054855091">Viltu hjálpa við að bæta Brave?</translation>
+<translation id="4660777881054855091">Viltu hjálpa við að bæta AI Wize?</translation>
 <translation id="1105960400813249514">Skjámyndataka</translation>
 <translation id="1108938384783527433">Samstilla feril</translation>
 <translation id="1111673857033749125">Bókamerki vistuð í öðrum tækjum munu birtast hér.</translation>
 <translation id="1113597929977215864">Sýna einfaldað yfirlit</translation>
 <translation id="4470276443668654888">Upplýsingar um greiðslumáta og heimilisföng frá Google Pay verða ekki dulkóðaðar. Vafraferill AI Wize samstillist ekki.
-Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuðu gögnin þín. Aðgangsorðið er hvorki sent til né vistað hjá Brave. Ef þú gleymir aðgangsorðinu eða vilt breyta þessari stillingu þarftu að endurstilla samstillingu. <ph name="BEGIN_LINK"/>Nánar<ph name="END_LINK"/></translation>
+Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuðu gögnin þín. Aðgangsorðið er hvorki sent til né vistað hjá AI Wize. Ef þú gleymir aðgangsorðinu eða vilt breyta þessari stillingu þarftu að endurstilla samstillingu. <ph name="BEGIN_LINK"/>Nánar<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Ver þig ekki gegn hættulegum vefsvæðum, niðurhali eða viðbótum. Þú munt áfram geta notað örugga vefskoðun, þar sem hún er í boði, í annarri þjónustu AI Wize á borð við Gmail og leit.</translation>
 <translation id="1129510026454351943">Upplýsingar: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Ekki bjóða upp á að þýða þessi vefsvæði</translation>
 <translation id="1145536944570833626">Eyða fyrirliggjandi gögnum.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> opnast í Brave. Með því að halda áfram samþykkirðu <ph name="BEGIN_LINK1"/>þjónustuskilmála Brave<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>viðbótarþjónustuskilmála AI Wize og ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> opnast í AI Wize. Með því að halda áfram samþykkirðu <ph name="BEGIN_LINK1"/>þjónustuskilmála AI Wize<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>viðbótarþjónustuskilmála AI Wize og ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Nota aðgangsorð <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Endurnefna</translation>
-<translation id="7947699437047020219">Brave biður um snjallvefinn þegar skjárinn er þröngur</translation>
+<translation id="7947699437047020219">AI Wize biður um snjallvefinn þegar skjárinn er þröngur</translation>
 <translation id="1177863135347784049">Sérsniðið</translation>
 <translation id="1181037720776840403">Fjarlægja</translation>
 <translation id="1181366777303791449"><ph name="MAIN_FRAME_ETLD_PLUS_ONE"/></translation>
@@ -47,22 +47,22 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1231733316453485619">Kveikja á samstillingu?</translation>
 <translation id="123724288017357924">Endurhlaða núverandi síðu, hunsa efni í skyndiminni</translation>
 <translation id="1239792311949352652">Deildu þessari síðu á skjótan hátt. Opnaðu stillingar til að breyta þessari flýtileið.</translation>
-<translation id="3251315496493761426">Ábendingar fyrir Brave</translation>
+<translation id="3251315496493761426">Ábendingar fyrir AI Wize</translation>
 <translation id="1240288207750131269">Hleður <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Til að halda áfram mun <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> deila nafni þínu, netfangi og prófílmynd með þessu vefsvæði. Sjá <ph name="BEGIN_LINK1"/>persónuverndarstefnu<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>þjónustuskilmála<ph name="END_LINK2"/> vefsvæðisins.</translation>
 <translation id="124116460088058876">Fleiri tungumál</translation>
-<translation id="4078574862195461280">Aðgangsorðunum þínum verður eytt úr Brave-aðgangsorðastjórnun fyrir <ph name="CHROME_CHANNEL"/>. Þú munt halda aðgangsorðaskránni sem þú varst að sækja.</translation>
+<translation id="4078574862195461280">Aðgangsorðunum þínum verður eytt úr AI Wize-aðgangsorðastjórnun fyrir <ph name="CHROME_CHANNEL"/>. Þú munt halda aðgangsorðaskránni sem þú varst að sækja.</translation>
 <translation id="1242883863226959074">tæki</translation>
 <translation id="124678866338384709">Loka núverandi flipa</translation>
 <translation id="1246905108078336582">Fjarlægja tillögu af klippiborði?</translation>
-<translation id="1996480094660735607">Brave dúlla: <ph name="DOODLE_DESCRIPTION"/></translation>
-<translation id="7074197713963877855">Nú sérðu efni frá og um <ph name="SITE_NAME"/> í „Fylgir“. Vefsvæði og leitir sem þú fylgir eru vistuð á Brave-reikningnum þínum. Þú getur stjórnað stillingum „Fylgir“ hvenær sem er.</translation>
+<translation id="1996480094660735607">AI Wize dúlla: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="7074197713963877855">Nú sérðu efni frá og um <ph name="SITE_NAME"/> í „Fylgir“. Vefsvæði og leitir sem þú fylgir eru vistuð á AI Wize-reikningnum þínum. Þú getur stjórnað stillingum „Fylgir“ hvenær sem er.</translation>
 <translation id="1263231323834454256">Leslisti</translation>
 <translation id="1266864766717917324">Ekki tókst að deila <ph name="CONTENT_TYPE"/></translation>
 <translation id="1269129608791067105">Þú finnur ferilinn þinn hér</translation>
 <translation id="1273937721055267968">Setja <ph name="DOMAIN"/> á bannlista</translation>
 <translation id="1283039547216852943">Ýttu til að stækka</translation>
-<translation id="194557235473047967">Þú færð beiðni um að skrá þig inn á Brave-reikninginn þinn</translation>
+<translation id="194557235473047967">Þú færð beiðni um að skrá þig inn á AI Wize-reikninginn þinn</translation>
 <translation id="1291207594882862231">Hreinsa feril, fótspor, svæði, gögn, skyndiminni…</translation>
 <translation id="129553762522093515">Nýlega lokað</translation>
 <translation id="1298077576058087471">Sparaðu allt að 60% af gögnum, lestu fréttir dagsins</translation>
@@ -70,8 +70,8 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1303507811548703290"><ph name="DOMAIN"/> - Sent úr <ph name="DEVICE_NAME"/></translation>
 <translation id="1320912611264252795">Möppur vistunar bókamerkja opnaðar á öllum skjánum</translation>
 <translation id="1327257854815634930">Ferill er opinn</translation>
-<translation id="6773423637732432200">Ekki er hægt að uppfæra Brave. Fleiri valkostir.</translation>
-<translation id="3169981355900570544">Flýtilyklar eiginleika Brave</translation>
+<translation id="6773423637732432200">Ekki er hægt að uppfæra AI Wize. Fleiri valkostir.</translation>
+<translation id="3169981355900570544">Flýtilyklar eiginleika AI Wize</translation>
 <translation id="1344653310988386453">Taka með tengil í merktan texta</translation>
 <translation id="1347468774581902829">Stjórna virkni</translation>
 <translation id="1360432990279830238">Skrá út og slökkva á samstillingu?</translation>
@@ -87,7 +87,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1407069428457324124">Dökkt þema</translation>
 <translation id="1407135791313364759">Opna alla</translation>
 <translation id="1409879593029778104">Komið í veg fyrir niðurhal á <ph name="FILE_NAME"/> því að skráin er nú þegar til.</translation>
-<translation id="1853026300647876496">Hefur samband við Brave. Þetta gæti tekið smástund…</translation>
+<translation id="1853026300647876496">Hefur samband við AI Wize. Þetta gæti tekið smástund…</translation>
 <translation id="1416550906796893042">Útgáfa forrits</translation>
 <translation id="1428770807407000502">Slökkva á samstillingu?</translation>
 <translation id="1430915738399379752">Prenta</translation>
@@ -96,7 +96,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1437543266176261764">Keyrt í <ph name="APP_NAME"/></translation>
 <translation id="1448440926884431741">Notaðu bókamerki til að flokka vörur sem þú vaktar</translation>
 <translation id="1450753235335490080">Ekki er hægt að deila <ph name="CONTENT_TYPE"/></translation>
-<translation id="5598889255595678761">Velja tungumál Brave</translation>
+<translation id="5598889255595678761">Velja tungumál AI Wize</translation>
 <translation id="1477626028522505441">Niðurhal á <ph name="FILE_NAME"/> mistókst vegna vandamála á netþjóni.</translation>
 <translation id="148482509007564431">Vistun bókamerkja</translation>
 <translation id="1492417797159476138">Þú varst þegar búin(n) að vista þetta notandanafn fyrir vefsvæðið</translation>
@@ -109,7 +109,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1521774566618522728">Virkt í dag</translation>
 <translation id="8090895580117672212">Til að hafa umsjón með AI Wize reikningnum þínum skaltu velja hnappinn „Stjórna reikningi“</translation>
 <translation id="1549000191223877751">Færa í annan glugga</translation>
-<translation id="1705567146636171298">Uppfæra Brave</translation>
+<translation id="1705567146636171298">Uppfæra AI Wize</translation>
 <translation id="3763131702135887799">Hjálpaðu okkur að bæta AI Wize fyrir fólk sem notar það á sama hátt og þú</translation>
 <translation id="6464648082977038075">Loka huliðsflipum</translation>
 <translation id="1568636008098739136">Hlusta á þessa síðu Haltu flýtileiðinni inni til að breyta henni.</translation>
@@ -118,7 +118,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1594635596540195766"><ph name="SUGGESTIONS_COUNT"/> ráðlögð atriði á lista fyrir neðan.</translation>
 <translation id="1598163867407640634">Notaðu <ph name="SITE_ETLD_PLUS_ONE"/> með <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Fjarlægja 1 valið atriði}one{Fjarlægja # valið atriði}other{Fjarlægja # valin atriði}}</translation>
-<translation id="3122582044404611732">Uppgötvaðu nýtt efni á heimasíðu Brave</translation>
+<translation id="3122582044404611732">Uppgötvaðu nýtt efni á heimasíðu AI Wize</translation>
 <translation id="1641113438599504367">Örugg vefnotkun</translation>
 <translation id="164269334534774161">Þú ert að skoða ónettengt afrit af þessari síðu frá <ph name="CREATION_TIME"/></translation>
 <translation id="1644574205037202324">Ferill</translation>
@@ -127,7 +127,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1671236975893690980">Niðurhal í bið…</translation>
 <translation id="1672586136351118594">Ekki sýna þetta aftur</translation>
 <translation id="1680919990519905526">Kaupa með AI Wize linsu <ph name="BEGIN_NEW"/>Nýtt<ph name="END_NEW"/></translation>
-<translation id="7870200641233500458">Bráðlega sérðu efni frá og um <ph name="SITE_NAME"/> í „Fylgir“. Vefsvæði og leitir sem þú fylgir eru vistuð á Brave-reikningnum þínum. Þú getur stjórnað stillingum „Fylgir“ hvenær sem er.</translation>
+<translation id="7870200641233500458">Bráðlega sérðu efni frá og um <ph name="SITE_NAME"/> í „Fylgir“. Vefsvæði og leitir sem þú fylgir eru vistuð á AI Wize-reikningnum þínum. Þú getur stjórnað stillingum „Fylgir“ hvenær sem er.</translation>
 <translation id="1696555181932908973">Þú getur prófað aðrar leiðir til að halda áfram í <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="1702543251015153180">Breyta stillingum dökka þemans?</translation>
 <translation id="1702907158640575240">Stýrður vafri</translation>
@@ -139,7 +139,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1749561566933687563">Samstilltu bókamerkin þín</translation>
 <translation id="1750259112639922169">Flipahópur – <ph name="TAB_COUNT"/> flipar</translation>
 <translation id="17513872634828108">Opnir flipar</translation>
-<translation id="9207812657123271782">Tilkynning frá Brave-aðgangsorðastjórnun</translation>
+<translation id="9207812657123271782">Tilkynning frá AI Wize-aðgangsorðastjórnun</translation>
 <translation id="1760873718737761808">{FILE_COUNT,plural, =1{Síður, 1 síða á lista}one{Síður, # síða á lista}other{Síður, # síður á lista}}</translation>
 <translation id="1778457539567749232">Merkja sem ólesið</translation>
 <translation id="1779766957982586368">Loka glugga</translation>
@@ -151,15 +151,15 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1810845389119482123">Fyrstu uppsetningu samstillingar ekki lokið</translation>
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/> getur ekki haldið áfram að nota <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1829244130665387512">Finna á síðu</translation>
-<translation id="5488575152752589250">Samstilltu til að fá meira viðeigandi efni frá Brave</translation>
+<translation id="5488575152752589250">Samstilltu til að fá meira viðeigandi efni frá AI Wize</translation>
 <translation id="7175072311426658869">Opna í AI Wize vafra</translation>
-<translation id="5173820533850252773">Brave er úrelt</translation>
+<translation id="5173820533850252773">AI Wize er úrelt</translation>
 <translation id="1883903952484604915">Skrárnar mínar</translation>
 <translation id="189358972401248634">Önnur tungumál</translation>
 <translation id="1900260903084164610">Með því að halda áfram samþykkirðu <ph name="BEGIN_TOS_LINK"/>þjónustuskilmálana<ph name="END_TOS_LINK"/></translation>
 <translation id="6893464351226208429">Vefslóðirnar sem þú opnar eru vistaðar á AI Wize reikningnum þínum</translation>
 <translation id="1910950723001426294">Listi yfir deilingarvalkosti er lokaður.</translation>
-<translation id="7021823858304886493">Leyfa innskráningu í Brave</translation>
+<translation id="7021823858304886493">Leyfa innskráningu í AI Wize</translation>
 <translation id="1922362554271624559">Tillögur að tungumálum</translation>
 <translation id="1924255092154549435">Flipi er stækkaður</translation>
 <translation id="1925021887439448749">Færðu inn sérsniðna vefslóð</translation>
@@ -170,7 +170,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1944535645109964458">Engir aðgangslyklar tiltækir</translation>
 <translation id="1952172573699511566">Vefsvæði birta texta á því tungumáli sem þú hefur valið þegar hægt er.</translation>
 <translation id="1959679933317802873">Bíður eftir efni</translation>
-<translation id="3968054912784331254">Brave uppfærslur eru ekki lengur studdar fyrir þessa útgáfu af Android</translation>
+<translation id="3968054912784331254">AI Wize uppfærslur eru ekki lengur studdar fyrir þessa útgáfu af Android</translation>
 <translation id="1963976881984600709">Hefðbundin vörn</translation>
 <translation id="1966710179511230534">Uppfærðu innskráningarupplýsingarnar þínar.</translation>
 <translation id="197288927597451399">Halda</translation>
@@ -184,7 +184,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="201060170519281460">Prófíllásinn gætir að öryggi upplýsinga í bílnum, þ.m.t. samstilltra aðgangsorða, greiðslna og fleira.</translation>
 <translation id="2021896219286479412">Stýringar vefsvæðis á öllum skjá</translation>
 <translation id="2038563949887743358">Kveikja á beiðni um vefsvæði fyrir tölvur</translation>
-<translation id="7675869148432102528"><ph name="APP_NAME"/> er einnig með gögn í Brave</translation>
+<translation id="7675869148432102528"><ph name="APP_NAME"/> er einnig með gögn í AI Wize</translation>
 <translation id="2046634576464120978">Skráning mistókst</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">Nota HTTPS þegar hægt er og fá viðvörun áður en síðum sem styðja það ekki er hlaðið. Þú getur ekki breytt þessari stillingu vegna þess að þú ert með kveikt á ítarlegri vernd.</translation>
@@ -206,7 +206,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2141396931810938595">Miðað við notkun þína</translation>
 <translation id="2149973817440762519">Breyta bókamerki</translation>
 <translation id="2155214902713132423">Þessi staðfestingaraðferð er ekki í boði fyrir þetta tæki. Veldu annan valkost í hinu tækinu þínu.</translation>
-<translation id="4162910516440006395">Brave gat ekki athugað öll aðgangsorð</translation>
+<translation id="4162910516440006395">AI Wize gat ekki athugað öll aðgangsorð</translation>
 <translation id="2172688499998841696">Slökkt er á lýsingum mynda</translation>
 <translation id="2172905120685242547">Loka glugga?</translation>
 <translation id="2173302385160625112">Athugaðu nettenginguna</translation>
@@ -221,7 +221,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2234827758954819389">Leiðbeiningar um persónuvernd</translation>
 <translation id="2239812875700136898">Stjórnaðu fréttunum þínum með hnappinum Valkostir fyrir Tillögur</translation>
 <translation id="2247789808226901522">Kortið er útrunnið</translation>
-<translation id="4808014761134300692">Aðgangsorðin þín eru dulkóðuð í tækinu áður en þau eru vistuð í aðgangsorðastjórnun Brave</translation>
+<translation id="4808014761134300692">Aðgangsorðin þín eru dulkóðuð í tækinu áður en þau eru vistuð í aðgangsorðastjórnun AI Wize</translation>
 <translation id="2249635629516220541">Sérsníddu upplýsingarnar sem vefsvæði nota til að birta þér auglýsingar</translation>
 <translation id="2259659629660284697">Flytja út aðgangsorð…</translation>
 <translation id="8820144752830692527">Þú getur alltaf valið hvað á að samstilla í <ph name="BEGIN_LINK1"/>stillingunum<ph name="END_LINK1"/>. AI Wize kann að sérsníða Leit og aðrar þjónustur í samræmi við ferilinn þinn.</translation>
@@ -237,7 +237,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2328985652426384049">Innskráning mistókst</translation>
 <translation id="2341410551640223969">Ekki tókst að setja upp <ph name="WEBAPK_NAME"/>.</translation>
 <translation id="3587672679800759167">Gögn sem AI Wize notar alls, þ.m.t. reikningar, bókamerki og vistaðar stillingar</translation>
-<translation id="2767094839186957509">Persónuverndarstefna Brave</translation>
+<translation id="2767094839186957509">Persónuverndarstefna AI Wize</translation>
 <translation id="2359808026110333948">Halda áfram</translation>
 <translation id="2362083820973145409">Skráð(ur) inn sem <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Opnar stillingar.</translation>
 <translation id="2364539095045928896">Hnappur til að loka upplýsingum um persónuvernd á síðu miðstöðvar innsýnar.</translation>
@@ -259,11 +259,11 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2482878487686419369">Tilkynningar</translation>
 <translation id="2496180316473517155">Vafraferill</translation>
 <translation id="2497852260688568942">Kerfisstjóri hefur gert samstillingu óvirka</translation>
-<translation id="7229462727772664332">Þú sérð innskráningarstöðu þína, vafragögn og vefsvæðagögn fyrir <ph name="SITE_NAME"/> í Brave.</translation>
+<translation id="7229462727772664332">Þú sérð innskráningarstöðu þína, vafragögn og vefsvæðagögn fyrir <ph name="SITE_NAME"/> í AI Wize.</translation>
 <translation id="2510106555128151389">Setur upp <ph name="WEBAPK_NAME"/>…</translation>
 <translation id="7222718784508482526">Frekari upplýsingar sem tengjast persónuvernd, öryggi og gagnasöfnun má finna í <ph name="BEGIN_LINK"/>Samstilling og sérstillingar<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Blað í fullri stærð</translation>
-<translation id="284843628681142937">Sendir vefslóðir síðna sem þú skoðar til Brave</translation>
+<translation id="284843628681142937">Sendir vefslóðir síðna sem þú skoðar til AI Wize</translation>
 <translation id="2527209463677295330">Hægt er að fá betri niðurstöður með því að setja inn meira af texta síðunnar</translation>
 <translation id="8737444348664175738">Skipt yfir í huliðsflipa</translation>
 <translation id="2527779675047087889">Fela innihald klippiborðs</translation>
@@ -277,7 +277,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="5079947353572974060">Bjóðast til að þýða síður á öðrum tungumálum í AI Wize Translate</translation>
 <translation id="2571834852878229351">Búa til mitt eigið</translation>
 <translation id="6995512410824092085">Kynntu þér hvernig þú gerir AI Wize að sjálfgefnum vafra</translation>
-<translation id="7242554556818074465">Skráðu þig inn í öllum tækjunum þínum til að sjá flipana þína hvar sem þú notar Brave</translation>
+<translation id="7242554556818074465">Skráðu þig inn í öllum tækjunum þínum til að sjá flipana þína hvar sem þú notar AI Wize</translation>
 <translation id="8661556138616664061">Efni frá AI Wize fyrir yngri notendur</translation>
 <translation id="2324920234469020158">Þetta mun eyða fótsporum, skyndiminni og öðrum gögnum frá vefsvæðum sem AI Wize telur ekki mikilvæg.</translation>
 <translation id="2587052924345400782">Nýrri útgáfa er í boði</translation>
@@ -299,9 +299,9 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="265156376773362237">Hefðbundin forhleðsla</translation>
 <translation id="2656405586795711023">Vefforrit</translation>
 <translation id="2669454659051515572">Allir sem nota þetta tæki geta séð sóttar skrár</translation>
-<translation id="5806087344347665213">Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize sent vefslóðir til Brave, þar á meðal hluta af efni síðna</translation>
+<translation id="5806087344347665213">Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize sent vefslóðir til AI Wize, þar á meðal hluta af efni síðna</translation>
 <translation id="2702516483241149200">Nýtt: Deildu tengli sem flettir að þessum texta</translation>
-<translation id="3769942772151914580">Forvirk vörn í rauntíma gegn hættulegum vefsvæðum, niðurhali og viðbótum sem byggir á vefskoðunargögnunum þínum sem eru send til Brave</translation>
+<translation id="3769942772151914580">Forvirk vörn í rauntíma gegn hættulegum vefsvæðum, niðurhali og viðbótum sem byggir á vefskoðunargögnunum þínum sem eru send til AI Wize</translation>
 <translation id="2708226184420201102">Opna í <ph name="PRODUCT_NAME"/>-vafranum</translation>
 <translation id="271033894570825754">Nýtt</translation>
 <translation id="2718352093833049315">Aðeins um Wi-Fi</translation>
@@ -312,12 +312,12 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2760989362628427051">Kveikja á dökku þema þegar kveikt er á dökku þema eða rafhlöðusparnaði í tækinu</translation>
 <translation id="2762000892062317888">rétt í þessu</translation>
 <translation id="276969039800130567">Skráð(ur) inn sem <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">Fleiri stillingar sem tengjast persónuvernd, öryggi og gagnasöfnun má finna í <ph name="BEGIN_LINK"/>Brave þjónustur<ph name="END_LINK"/></translation>
+<translation id="8312774691909088652">Fleiri stillingar sem tengjast persónuvernd, öryggi og gagnasöfnun má finna í <ph name="BEGIN_LINK"/>AI Wize þjónustur<ph name="END_LINK"/></translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> sek. eftir</translation>
 <translation id="2779651927720337254">mistókst</translation>
 <translation id="2781151931089541271">Ein sek. eftir</translation>
 <translation id="2800066122460699237">Flipanum <ph name="TAB_TITLE"/> verður lokað</translation>
-<translation id="7068873021383263704">Þú getur skoðað og haft umsjón með vistuðum aðgangsorðum á <ph name="BEGIN_LINK"/>Brave reikningnum<ph name="END_LINK"/> þínum</translation>
+<translation id="7068873021383263704">Þú getur skoðað og haft umsjón með vistuðum aðgangsorðum á <ph name="BEGIN_LINK"/>AI Wize reikningnum<ph name="END_LINK"/> þínum</translation>
 <translation id="2827278682606527653">Feed card menu half height</translation>
 <translation id="2830783625999891985">Efni klippiborðs falið</translation>
 <translation id="2838367486340230368">Útskýring á leiðbeiningum um persónuvernd opnuð á hálfum skjánum</translation>
@@ -325,7 +325,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1982350477927404142">{TAB_COUNT,plural, =1{<ph name="TAB_COUNT_ONE"/> huliðsflipa verður lokað}one{<ph name="TAB_COUNT_MANY"/> huliðsflipa verður lokað}other{<ph name="TAB_COUNT_MANY"/> huliðsflipum verður lokað}}</translation>
 <translation id="2841216154655874070">{NUM_DAYS,plural, =1{Síðast athugað fyrir 1 degi}one{Síðast athugað fyrir # degi}other{Síðast athugað fyrir # dögum}}</translation>
 <translation id="2842985007712546952">Yfirmappa</translation>
-<translation id="6324134303015966238">Brave forhleður síðum sem er líklegt að þú munir skoða svo þær hlaðist fyrr þegar þú opnar þær</translation>
+<translation id="6324134303015966238">AI Wize forhleður síðum sem er líklegt að þú munir skoða svo þær hlaðist fyrr þegar þú opnar þær</translation>
 <translation id="2856503607207334158">Innskráning mistókst</translation>
 <translation id="2860954141821109167">Gakktu úr skugga um að símaforritið sé virkt í þessu tæki</translation>
 <translation id="6518254564747115579">Tilteknir AI Wize eiginleikar verða ekki tiltækir lengur</translation>
@@ -334,22 +334,22 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="2871733351037274014">Forhlaða síðum</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> biður þig um að samþykkja þetta vefsvæði:</translation>
 <translation id="6756656512757374876">Nánar um <ph name="BEGIN_LINK"/>hvernig AI Wize heldur gögnunum þínum leyndum<ph name="END_LINK"/></translation>
-<translation id="8541922081612557424">Um Brave</translation>
+<translation id="8541922081612557424">Um AI Wize</translation>
 <translation id="2891154217021530873">Stöðva hleðslu síðu</translation>
-<translation id="4013614219085422040">Brave notar hugsanlega ferilinn þinn til að sérsníða leitina og aðra þjónustu Brave</translation>
+<translation id="4013614219085422040">AI Wize notar hugsanlega ferilinn þinn til að sérsníða leitina og aðra þjónustu AI Wize</translation>
 <translation id="2894821468041866720">Hægir ekki greinilega á vafranum eða tækinu.</translation>
 <translation id="2900528713135656174">Búa til viðburð</translation>
 <translation id="2901411048554510387">Birtir tillögur fyrir <ph name="WEBSITE_TITLE"/></translation>
 <translation id="2904300462646366554">Sóttar PDF-skrár opnast sjálfkrafa í einum af PDF-lesurum tækisins</translation>
 <translation id="2904414404539560095">Tækjalisti fyrir deilingu flipa sem er opinn á öllum skjánum.</translation>
 <translation id="2908243544703713905">Ólesnar sögur tilbúnar</translation>
-<translation id="7339921667754113786">Tilkynningakerfi Brave</translation>
+<translation id="7339921667754113786">Tilkynningakerfi AI Wize</translation>
 <translation id="2912296070571964914">Stjórna umfjöllunarefnum sem þú hefur áhuga á</translation>
 <translation id="1014490034578104945">Nota skjálás til að sjá opna huliðsflipa</translation>
 <translation id="2923908459366352541">Nafnið er ógilt</translation>
-<translation id="6355102470683871794">Brave <ph name="APP_NAME"/> geymslurými</translation>
+<translation id="6355102470683871794">AI Wize <ph name="APP_NAME"/> geymslurými</translation>
 <translation id="2932222164150889403">Lyklaborðið þitt breytist ekki</translation>
-<translation id="6537665929855787038">Brave tilkynningar auðvelda málin</translation>
+<translation id="6537665929855787038">AI Wize tilkynningar auðvelda málin</translation>
 <translation id="2940075786175545812">Valkostur til að samþykkja eða samþykkja ekki vefsvæði</translation>
 <translation id="2942036813789421260">Forskoðunarflipi er lokaður</translation>
 <translation id="4700262879698141140">Uppfærir AI Wize til að tengjast öðrum tækjum</translation>
@@ -376,28 +376,28 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="3027644380269727216">Byggt á virkni þinni á vefsvæði. Kveikt er á þessari stillingu.</translation>
 <translation id="3029276696788198026">Engin forhleðsla</translation>
 <translation id="3029704984691124060">Aðgangsorð stemma ekki</translation>
-<translation id="8678991866891573053">Brave er að kanna nýja eiginleika sem gera vefsvæðum kleift að skila sömu vafraupplifun án þess að nota jafn mikið af gögnum frá þér</translation>
+<translation id="8678991866891573053">AI Wize er að kanna nýja eiginleika sem gera vefsvæðum kleift að skila sömu vafraupplifun án þess að nota jafn mikið af gögnum frá þér</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Fá aðstoð<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Vaktar verð</translation>
-<translation id="3251012123600267109">Sýnir innskráningartilkynningar í Brave</translation>
+<translation id="3251012123600267109">Sýnir innskráningartilkynningar í AI Wize</translation>
 <translation id="3038272154009688107">Sjá öll vefsvæði</translation>
 <translation id="3046945242843292318">Opna þetta vefsvæði hraðar í næsta sinn</translation>
 <translation id="3055259925215945098">Bókamerki fært</translation>
-<translation id="4163313568284712797">Brave fær sendar upplýsingar um notkun þína á AI Wize en þær eru ekki tengdar við þig\n\nEf AI Wize hrynur er hugsanlegt að upplýsingar um hrunið feli í sér einhverjar persónuupplýsingar\n\nEf þú kveikir á samstillingu kunna mæligildi einnig að innihalda upplýsingar um vefslóðirnar sem þú opnar</translation>
+<translation id="4163313568284712797">AI Wize fær sendar upplýsingar um notkun þína á AI Wize en þær eru ekki tengdar við þig\n\nEf AI Wize hrynur er hugsanlegt að upplýsingar um hrunið feli í sér einhverjar persónuupplýsingar\n\nEf þú kveikir á samstillingu kunna mæligildi einnig að innihalda upplýsingar um vefslóðirnar sem þú opnar</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> bókamerki}one{<ph name="BOOKMARKS_COUNT_MANY"/> bókamerki}other{<ph name="BOOKMARKS_COUNT_MANY"/> bókamerki}}</translation>
-<translation id="6153252609477956632">Greinar sem tengjast áhugamálum þínum í Brave</translation>
+<translation id="6153252609477956632">Greinar sem tengjast áhugamálum þínum í AI Wize</translation>
 <translation id="3066573403916685335">Færa niður</translation>
 <translation id="3070005020161560471">Þýða sjálfkrafa</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> opnast í Brave. Með því að halda áfram samþykkirðu <ph name="BEGIN_LINK1"/>þjónustuskilmála Brave<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>viðbótarþjónustuskilmála AI Wize og ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Persónuverndarstefnan<ph name="END_LINK3"/> gildir einnig.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> opnast í AI Wize. Með því að halda áfram samþykkirðu <ph name="BEGIN_LINK1"/>þjónustuskilmála AI Wize<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>viðbótarþjónustuskilmála AI Wize og ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Persónuverndarstefnan<ph name="END_LINK3"/> gildir einnig.</translation>
 <translation id="3080525922482950719">Þú getur vistað síður til að lesa þær síðar eða án nettengingar</translation>
 <translation id="3091010850649238832">Sýna innihald klippiborðs</translation>
 <translation id="821565628224723530">Sumar myndir eru sendar til AI Wize til að bæta lýsingar</translation>
 <translation id="3114507951000454849">Lestu fréttir dagsins <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Tilkynningar</translation>
-<translation id="5063487983358782016">Heimasíða Brave</translation>
+<translation id="5063487983358782016">Heimasíða AI Wize</translation>
 <translation id="3158667104057012316">Raðað handvirkt</translation>
 <translation id="3166827708714933426">Flýtilyklar flipa og glugga</translation>
-<translation id="7249949543831830993">Brave er þegar í gangi hér.</translation>
+<translation id="7249949543831830993">AI Wize er þegar í gangi hér.</translation>
 <translation id="3167258285411721858">Þú getur óskað eftir snjallvef fyrir <ph name="HOST_NAME"/></translation>
 <translation id="3169472444629675720">Discover</translation>
 <translation id="3187472288455401631">Auglýsingamælingar</translation>
@@ -407,8 +407,8 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Leitarferill<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>aðrar aðgerðir<ph name="END_LINK2"/> kunna að vera vistaðar á AI Wize reikningnum þínum ef þú ert innskráð(ur). Þú getur eytt þessu hvenær sem er.</translation>
 <translation id="321773570071367578">Ef þú hefur gleymt aðgangsorðinu eða þig langar að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla samstillingu<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Staðfestu að þetta sért þú til að samstilla aðgangsorðin þín</translation>
-<translation id="9210457680074341078">Ef þú vistar bókamerkin þín einnig á Brave-reikningnum þínum geturðu vaktað verð á vörum í AI Wize og fengið tilkynningar þegar verð lækka</translation>
-<translation id="9047551989591319903">Brave sem öryggislykill</translation>
+<translation id="9210457680074341078">Ef þú vistar bókamerkin þín einnig á AI Wize-reikningnum þínum geturðu vaktað verð á vörum í AI Wize og fengið tilkynningar þegar verð lækka</translation>
+<translation id="9047551989591319903">AI Wize sem öryggislykill</translation>
 <translation id="3232754137068452469">Vefforrit</translation>
 <translation id="3236059992281584593">Ein mín. eftir</translation>
 <translation id="3237087289225714896">Hefðbundin forhleðsla:</translation>
@@ -423,7 +423,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="3265534588625245297">Stjórna vefsvæðunum sem þú fylgir</translation>
 <translation id="3269093882174072735">Hlaða mynd</translation>
 <translation id="3280562213547448728">Raddleit</translation>
-<translation id="82609232232243542">Skráðu þig inn á Brave</translation>
+<translation id="82609232232243542">Skráðu þig inn á AI Wize</translation>
 <translation id="3290249595466894471">Sendir einnig lítið brot af síðum, niðurhali, virkni viðbóta og kerfisupplýsingar til að auðvelda leit að nýjum ógnum</translation>
 <translation id="3293181007446299124">Aðeins þú getur séð vafraferilinn þinn í tækinu og sendingum skýrslna er seinkað til að vernda auðkenni þitt</translation>
 <translation id="3303414029551471755">Viltu halda áfram og sækja efnið?</translation>
@@ -491,9 +491,9 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="3701515417135397388">Vara þig við ef aðgangsorð er í hættu vegna öryggisbrots</translation>
 <translation id="371230970611282515">Spáir fyrir um og varar þig við hættulegum viðburðum áður en þeir gerast.</translation>
 <translation id="3714981814255182093">Opna leitarstikuna</translation>
-<translation id="5805364706385912897">Brave stöðvaði þessa síðu því hún notar of mikið minni.</translation>
+<translation id="5805364706385912897">AI Wize stöðvaði þessa síðu því hún notar of mikið minni.</translation>
 <translation id="3720422586473670527">Nei takk</translation>
-<translation id="8397843425685839889">Þú og Brave</translation>
+<translation id="8397843425685839889">Þú og AI Wize</translation>
 <translation id="3737319253362202215">Þýðingarstillingar</translation>
 <translation id="3737402728074743863">Stilltu skjálás til að nota þetta tæki sem öryggislykil</translation>
 <translation id="3738139272394829648">Snertileit</translation>
@@ -501,7 +501,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="3740525748616366977">Raddleit er ekki í boði í þessu tæki</translation>
 <translation id="4526803704855831732">Huliðsflipar</translation>
 <translation id="3771290962915251154">Þar sem kveikt er á barnalæsingu er slökkt á þessari stillingu</translation>
-<translation id="1138681184697033370">Þjónustuskilmálar Brave</translation>
+<translation id="1138681184697033370">Þjónustuskilmálar AI Wize</translation>
 <translation id="3775705724665058594">Senda í tækin þín</translation>
 <translation id="3777796259512476958">Skráir þig út af flestum vefsvæðum</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 flipi}one{# flipi}other{# flipar}}</translation>
@@ -530,9 +530,9 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="393697183122708255">Engin virk raddleit er í boði</translation>
 <translation id="395377504920307820">Nota án reiknings</translation>
 <translation id="7667871022963214473">Lokaðu öllum huliðsflipum til að hreinsa vafraferil huliðsstillingar.</translation>
-<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{Brave hleður síðunni þegar hún er tilbúin}one{Brave hleður síðunum þegar þær eru tilbúnar}other{Brave hleður síðunum þegar þær eru tilbúnar}}</translation>
+<translation id="6945986954012067786">{NUM_IN_PROGRESS,plural, =1{AI Wize hleður síðunni þegar hún er tilbúin}one{AI Wize hleður síðunum þegar þær eru tilbúnar}other{AI Wize hleður síðunum þegar þær eru tilbúnar}}</translation>
 <translation id="3962119236270174787">Hefðbundin vörn gegn vefsvæðum, niðurhali og viðbótum sem vitað er að eru hættuleg</translation>
-<translation id="1453002554835005700">Brave getur ekki athugað aðgangsorðin þín</translation>
+<translation id="1453002554835005700">AI Wize getur ekki athugað aðgangsorðin þín</translation>
 <translation id="3969863827134279083">Færa upp</translation>
 <translation id="397105322502079400">Reiknar...</translation>
 <translation id="397583555483684758">Samstilling er hætt að virka</translation>
@@ -553,9 +553,9 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="4062305924942672200">Lagalegar upplýsingar</translation>
 <translation id="4072805772816336153">Reyndu aftur síðar</translation>
 <translation id="4084682180776658562">Bókamerki</translation>
-<translation id="4521874409998847950">Frá <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>birt af Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">Frá <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>birt af AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Þú getur notað þessa spjaldtölvu til að skrá þig inn í tækinu sem birtir þennan QR-kóða.</translation>
-<translation id="7268155614575494857">Bættu við notandanafni þínu fyrir þetta vefsvæði til að hjálpa Brave-aðgangsorðastjórnun að vista innskráningarupplýsingarnar þínar</translation>
+<translation id="7268155614575494857">Bættu við notandanafni þínu fyrir þetta vefsvæði til að hjálpa AI Wize-aðgangsorðastjórnun að vista innskráningarupplýsingarnar þínar</translation>
 <translation id="4095146165863963773">Eyða forritsgögnum?</translation>
 <translation id="4095425503313512126">Það er fljótlegra að fletta og leita</translation>
 <translation id="4096227151372679484">Vistun bókamerkja opnuð á hálfum skjánum</translation>
@@ -563,12 +563,12 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="4108314971463891922">Fylgja</translation>
 <translation id="4108998448622696017">Greinir hættuleg atvik og varar þig við þeim þegar þau eiga sér stað.</translation>
 <translation id="4116038641877404294">Náðu í síður til að nota þær án nettengingar</translation>
-<translation id="37459938731864814">Þú þarft ekki að muna þetta aðgangsorð. Það verður vistað í Brave-aðgangsorðastjórnun fyrir <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Þú þarft ekki að muna þetta aðgangsorð. Það verður vistað í AI Wize-aðgangsorðastjórnun fyrir <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Flæði tilkynningaheimildar opnað í fullri hæð</translation>
 <translation id="4126285640274188657">Upplýsingar um síðu</translation>
 <translation id="4135200667068010335">Tækjalisti fyrir deilingu flipa er lokaður.</translation>
 <translation id="4137746084635924146">Núverandi tungumál tækis</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Sjálfgefið beðið um tölvuvefsvæði</translation>
 <translation id="4162867837470729563">Listi yfir deilingarvalkosti á öllum skjánum.</translation>
 <translation id="4170011742729630528">Þjónustan er ekki aðgengileg; reyndu aftur síðar.</translation>
@@ -580,16 +580,16 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 flipi í þessu tæki}one{# flipi í þessu tæki}other{# flipar í þessu tæki}}</translation>
 <translation id="4198423547019359126">Engar tiltækar niðurhalsstaðsetningar</translation>
 <translation id="4202218894997543208">Umfjöllunarefni sem þú hefur sett á bannlista</translation>
-<translation id="1675646381334855139">Brave kann að nota fótspor við forhleðslu ef þú leyfir fótspor.</translation>
+<translation id="1675646381334855139">AI Wize kann að nota fótspor við forhleðslu ef þú leyfir fótspor.</translation>
 <translation id="4216511743389425832">Hlusta á þessa síðu</translation>
 <translation id="4225725533026049334">Fylgir</translation>
 <translation id="4225895483398857530">Flýtileið á tækjastiku</translation>
 <translation id="4242533952199664413">Opna stillingar</translation>
 <translation id="4248098802131000011">Tryggðu öryggi aðgangsorðanna gagnvart öryggisbrotum og öðrum öryggisvandamálum</translation>
-<translation id="7445061995866044926">Viltu skrá þig út úr Brave?</translation>
+<translation id="7445061995866044926">Viltu skrá þig út úr AI Wize?</translation>
 <translation id="4249955472157341256">Raða eftir nýjasta</translation>
 <translation id="4256782883801055595">Leyfi opins kóða</translation>
-<translation id="7404502124231907662">Eyða aðgangsorðum úr Brave-aðgangsorðastjórnun?</translation>
+<translation id="7404502124231907662">Eyða aðgangsorðum úr AI Wize-aðgangsorðastjórnun?</translation>
 <translation id="4269820728363426813">Afrita slóð tengils</translation>
 <translation id="4277529130885813215">Nota annað tæki</translation>
 <translation id="4283102315569707115">Biðja sjálfgefið um tölvuvefi?</translation>
@@ -624,7 +624,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="4452548195519783679">Bókamerki var búið til í <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Þegar þú notar QR-kóða til að tengja annað tæki getur það notað þennan síma sem öryggislykil. Ef þú fjarlægir það þarftu að skanna QR-kóða til að tengja það aftur.</translation>
 <translation id="4478161224666880173">Þú getur notað <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>-reikninginn þinn á þessu vefsvæði. Skráðu þig inn á <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> til að halda áfram.</translation>
-<translation id="3133489217401741157">Setur upp <ph name="MODULE"/> fyrir Brave…</translation>
+<translation id="3133489217401741157">Setur upp <ph name="MODULE"/> fyrir AI Wize…</translation>
 <translation id="4484496141267039529">Engin tenging. Reyndu aftur síðar.</translation>
 <translation id="53119194224775367">Öllum forritsgögnum AI Wize verður eytt fyrir fullt og allt. Þar með taldar eru allar skrár, stillingar, reikningar, gagnagrunnar o.s.frv.</translation>
 <translation id="3966104135245031874">Dulkóða samstillt aðgangsorð með AI Wize reikningnum þínum</translation>
@@ -636,7 +636,7 @@ Aðeins einstaklingar sem eru með aðgangsorðið þitt geta lesið dulkóðuð
 <translation id="451872707440238414">Leita í bókamerkjunum þínum</translation>
 <translation id="1664855196866195614">Völdu gögnin hafa verið fjarlægð af AI Wize og samstilltum tækjum.
 
-Brave reikningurinn þinn kann að vera með annars konar vefskoðunarferil, svo sem yfir leit og virkni í annarri þjónustu Brave, á <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+AI Wize reikningurinn þinn kann að vera með annars konar vefskoðunarferil, svo sem yfir leit og virkni í annarri þjónustu AI Wize, á <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">síðustu klukkustund</translation>
 <translation id="452750746583162491">Fara yfir samstillt gögn</translation>
 <translation id="4532845899244822526">Velja möppu</translation>
@@ -666,7 +666,7 @@ Brave reikningurinn þinn kann að vera með annars konar vefskoðunarferil, svo
 <translation id="4663756553811254707"><ph name="NUMBER_OF_BOOKMARKS"/> bókamerkjum eytt</translation>
 <translation id="4668279686271488041">Auglýsingamæligögnum er reglulega eytt úr tækinu þínu</translation>
 <translation id="4668347365065281350">Öll gögn sem vefsvæði geyma, þar á meðal fótspor og önnur gögn sem eru vistuð í tækinu</translation>
-<translation id="6904731820418823295">Kveikt er á dökku þema fyrir vefsvæði í Brave</translation>
+<translation id="6904731820418823295">Kveikt er á dökku þema fyrir vefsvæði í AI Wize</translation>
 <translation id="4684427112815847243">Samstilla allt</translation>
 <translation id="4685741273709472646">Velja af fellilistanum</translation>
 <translation id="4687718960473379118">Auglýsingatillögur vefsvæða</translation>
@@ -702,7 +702,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="4826163340425232009">Innskráningarblað neðst.</translation>
 <translation id="4834007576107377210">Skoðaðu leiðbeiningar leitarvélarinnar um að eyða leitarferlinum ef það á við</translation>
 <translation id="4834250788637067901">Greiðslumátar, tilboð og heimilisföng sem nota Google Pay</translation>
-<translation id="2593289874938379417">Brave hefur ekki aðgang að umbeðnu tilfangi.</translation>
+<translation id="2593289874938379417">AI Wize hefur ekki aðgang að umbeðnu tilfangi.</translation>
 <translation id="4837753911714442426">Opna valkosti fyrir prentun síðunnar</translation>
 <translation id="4842092870884894799">Sýnir sprettiglugga fyrir myndun aðgangsorðs</translation>
 <translation id="4842515939542199281">Ýttu á hljóðnemann til að leita með röddinni</translation>
@@ -711,9 +711,9 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="4852014461738377247">Skráir inn\u2026</translation>
 <translation id="4860895144060829044">Hringja</translation>
 <translation id="4864369630010738180">Skráir inn...</translation>
-<translation id="5131234170665854056">Ekki tókst að setja upp <ph name="MODULE"/> fyrir Brave</translation>
+<translation id="5131234170665854056">Ekki tókst að setja upp <ph name="MODULE"/> fyrir AI Wize</translation>
 <translation id="4871568871368204250">Slökkva á samstillingu</translation>
-<translation id="2875466387677348954">Þegar slökkt er á þessu sérðu áfram staðbundnar tillögur frá Brave</translation>
+<translation id="2875466387677348954">Þegar slökkt er á þessu sérðu áfram staðbundnar tillögur frá AI Wize</translation>
 <translation id="4875775213178255010">Tillögur að efni</translation>
 <translation id="8448127664493413656">Kveikja á huliðsstillingu</translation>
 <translation id="4878404682131129617">Ekki tókst að koma á göngum um staðgengilsþjón</translation>
@@ -722,7 +722,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="488187801263602086">Endurnefna skrá</translation>
 <translation id="1248710015876067820">Óstuddur fjöldi AI Wize tilvika.</translation>
 <translation id="4905823827770127520">Hafa með tengil á síðuna</translation>
-<translation id="3217997482476578430">Tillögur frá Brave</translation>
+<translation id="3217997482476578430">Tillögur frá AI Wize</translation>
 <translation id="4909709702739934280">Vafranum er stjórnað af kerfisstjóranum þínum</translation>
 <translation id="4910889077668685004">Greiðsluforrit</translation>
 <translation id="4912413785358399818">Færa flipa</translation>
@@ -737,14 +737,14 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5742837711075932301">Önnur tæki geta notað þennan síma sem öryggislykil þegar þú ert skráð(ur) inn á sama AI Wize reikninginn.</translation>
 <translation id="4957722034734105353">Frekari upplýsingar...</translation>
 <translation id="4961107849584082341">Þýddu þessa síðu yfir á hvaða tungumál sem er</translation>
-<translation id="7307583170263691471">Hraðari forvirk vörn gegn hættulegum vefsvæðum, niðurhali og viðbótum. Varar þig við berskjölduðum aðgangsorðum. Krefst þess að vefskoðunargögn verði send til Brave.</translation>
+<translation id="7307583170263691471">Hraðari forvirk vörn gegn hættulegum vefsvæðum, niðurhali og viðbótum. Varar þig við berskjölduðum aðgangsorðum. Krefst þess að vefskoðunargögn verði send til AI Wize.</translation>
 <translation id="497421865427891073">Áfram</translation>
 <translation id="4987271110129728827">Finn ekki síðuna. Athugaðu stafsetninguna eða prófaðu vefleit.</translation>
 <translation id="4988526792673242964">Síður</translation>
 <translation id="4991110219272367918">Valkosti til að samþykkja eða samþykkja ekki vefsvæði lokað</translation>
 <translation id="499724277181351974">Opna: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Fylgja þessu vefsvæði hér</translation>
-<translation id="6447211988989208781">Virknistýringar Brave</translation>
+<translation id="6447211988989208781">Virknistýringar AI Wize</translation>
 <translation id="5005498671520578047">Afrita aðgangsorð</translation>
 <translation id="5010886807652684893">Myndrænt yfirlit</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> vill tengjast</translation>
@@ -785,7 +785,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Sækir skrá…}one{Sækir # skrá…}other{Sækir # skrár…}}</translation>
 <translation id="5210286577605176222">Stökkva í fyrri flipa</translation>
 <translation id="5210365745912300556">Loka flipa</translation>
-<translation id="827672955486173928">Virkni þín á „Upplýsingar um síðu“ er vistuð á <ph name="BEGIN_LINK"/>Brave-reikningnum þínum<ph name="END_LINK"/>.</translation>
+<translation id="827672955486173928">Virkni þín á „Upplýsingar um síðu“ er vistuð á <ph name="BEGIN_LINK"/>AI Wize-reikningnum þínum<ph name="END_LINK"/>.</translation>
 <translation id="5222676887888702881">Skrá út</translation>
 <translation id="5226378907213531272">Þú tekur skjáinn úr lás í hvert skipti sem þú notar bílinn</translation>
 <translation id="5227554086496586518">Ýttu til að sjá leitarniðurstöður</translation>
@@ -799,7 +799,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5308380583665731573">Tengjast</translation>
 <translation id="5316947901395241499">Stjórnandinn þinn hefur slökkt á vistun á aðgangsorðum</translation>
 <translation id="5317780077021120954">Vista</translation>
-<translation id="989239400026154074">Brave mælir með Brave</translation>
+<translation id="989239400026154074">AI Wize mælir með AI Wize</translation>
 <translation id="7815000350132166985">Ef þú leyfir fótspor kann AI Wize að nota þau við forhleðslu</translation>
 <translation id="1681635711794313507">Forhlaðnar síður eru dulkóðaðar og vefsvæðið sem tengist síðunum er AI Wize vefsvæði. Þess vegna fá netþjónar AI Wize ekki nýjar upplýsingar þegar þessum síðum er forhlaðið á lokaðan hátt.</translation>
 <translation id="5329858041417644019">Vafrinn þinn er ekki í umsjón</translation>
@@ -818,7 +818,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="543338862236136125">Breyta aðgangsorði</translation>
 <translation id="5433691172869980887">Notandanafn afritað</translation>
 <translation id="5438292632479953702">Sækja aftur</translation>
-<translation id="2766925507720001104">Varar þig við hættulegum vefsvæðum, jafnvel þeim sem AI Wize hafði enga vitneskju um, með því að greina fleiri gögn frá vefsvæðum en hefðbundin vörn. Þú getur valið að sleppa Brave-viðvörunum.</translation>
+<translation id="2766925507720001104">Varar þig við hættulegum vefsvæðum, jafnvel þeim sem AI Wize hafði enga vitneskju um, með því að greina fleiri gögn frá vefsvæðum en hefðbundin vörn. Þú getur valið að sleppa AI Wize-viðvörunum.</translation>
 <translation id="5441137934526263133">Virkar vefsvæðið ekki? Lokað er á fótspor frá þriðju aðilum</translation>
 <translation id="5441466871879044658">Þýða yfir á þetta tungumál</translation>
 <translation id="5441522332038954058">Stökkva í veffangastikuna</translation>
@@ -836,7 +836,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5517095782334947753">Þú ert með bókamerki, feril, aðgangsorð og aðrar stillingar frá <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Lokað á framsendingu.</translation>
 <translation id="5548606607480005320">Öryggisathugun</translation>
-<translation id="4362225295386962644">Þegar þú notar aðgangsorð varar AI Wize þig við ef það hefur verið birt á netinu. Meðan á þessu stendur eru aðgangsorðin þín og notandanöfnin dulkóðuð svo enginn geti lesið þau, þ.m.t. Brave.</translation>
+<translation id="4362225295386962644">Þegar þú notar aðgangsorð varar AI Wize þig við ef það hefur verið birt á netinu. Meðan á þessu stendur eru aðgangsorðin þín og notandanöfnin dulkóðuð svo enginn geti lesið þau, þ.m.t. AI Wize.</translation>
 <translation id="5555525474779371165">Veldu vernd öruggrar vefskoðunar</translation>
 <translation id="5556459405103347317">Endurhlaða</translation>
 <translation id="555816257274242153">Hætti að vakta verð</translation>
@@ -854,19 +854,19 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="562289928968387744">Stjórna viðbrögðum</translation>
 <translation id="5626134646977739690">Nafn:</translation>
 <translation id="5628604359369369630">Ólesið – aðgengilegt án nettengingar</translation>
-<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Leitarferill<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>aðrar aðgerðir<ph name="END_LINK2"/> kunna að vera vistaðar á Brave-reikningnum þínum</translation>
+<translation id="3801854459269566477"><ph name="BEGIN_LINK1"/>Leitarferill<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>aðrar aðgerðir<ph name="END_LINK2"/> kunna að vera vistaðar á AI Wize-reikningnum þínum</translation>
 <translation id="564667659802381754">Leiðbeiningar um persónuvernd <ph name="BEGIN_NEW"/>Nýtt<ph name="END_NEW"/></translation>
 <translation id="5648166631817621825">Síðastliðna sjö daga</translation>
 <translation id="5655963694829536461">Leita í niðurhali</translation>
 <translation id="5657871969392618475">Upplýsingunum þínum er læst með prófíllás</translation>
 <translation id="5659593005791499971">Netfang</translation>
 <translation id="5665379678064389456">Búa til viðburð í <ph name="APP_NAME"/></translation>
-<translation id="5668833306439455813">Brave getur ekki leitað að uppfærslum.</translation>
+<translation id="5668833306439455813">AI Wize getur ekki leitað að uppfærslum.</translation>
 <translation id="5686790454216892815">Skráarheiti of langt</translation>
-<translation id="4809211418322514799">Brave eyðir vefsvæðum sem eru eldri en 30 daga sjálfkrafa. Vefsvæði sem þú heimsækir aftur gæti birst aftur á listanum. Þú getur einnig bannað vefsvæði að birta þér tillögur að auglýsingum. Nánar um <ph name="BEGIN_LINK"/>umsjón með persónuvernd auglýsinga í Brave.<ph name="END_LINK"/></translation>
+<translation id="4809211418322514799">AI Wize eyðir vefsvæðum sem eru eldri en 30 daga sjálfkrafa. Vefsvæði sem þú heimsækir aftur gæti birst aftur á listanum. Þú getur einnig bannað vefsvæði að birta þér tillögur að auglýsingum. Nánar um <ph name="BEGIN_LINK"/>umsjón með persónuvernd auglýsinga í AI Wize.<ph name="END_LINK"/></translation>
 <translation id="569435661099256888">Þú getur séð vefsíðurnar sem þú hefur opnað eða hreinsað þær úr ferlinum</translation>
 <translation id="569536719314091526">Notaðu hnappinn „Fleiri valkostir“ til að þýða þessa síðu yfir á hvaða tungumál sem er</translation>
-<translation id="2320748512701464301">Brave getur veitt þér vernd gegn öryggisbrotum, hættulegum vefsvæðum og fleira</translation>
+<translation id="2320748512701464301">AI Wize getur veitt þér vernd gegn öryggisbrotum, hættulegum vefsvæðum og fleira</translation>
 <translation id="5698878456427040674">Kannaðu hvort valinn reikningur er studdur.</translation>
 <translation id="570347048394355941">Skipta yfir á flipa</translation>
 <translation id="5715150588940290235">Eyða vistuðum öryggisnúmerum?</translation>
@@ -874,10 +874,10 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5726692708398506830">Stækka allt á síðunni</translation>
 <translation id="5744751019568455640">Hér eru raddirnar sem þú getur valið um til að lesa af vefsíðunum þínum. Ef þér líkar við þessa rödd og vilt að ég haldi áfram að nota hana skaltu ýta á heiti raddarinnar.</translation>
 <translation id="5748802427693696783">Skipt yfir í staðlaða flipa</translation>
-<translation id="3088191967551450609">Brave þarf aðgang að geymslu til að geta sótt skrár.</translation>
+<translation id="3088191967551450609">AI Wize þarf aðgang að geymslu til að geta sótt skrár.</translation>
 <translation id="5749237766298580851">Slökkt <ph name="SEPARATOR"/> Ekki mælt með</translation>
 <translation id="5752232708629533680">Aðeins deila GIF</translation>
-<translation id="416316836590748269">Þú getur notað röddina til að leita í Brave</translation>
+<translation id="416316836590748269">Þú getur notað röddina til að leita í AI Wize</translation>
 <translation id="5754350196967618083">Ekki er hægt að endurnýja Tillögur</translation>
 <translation id="5755162682436943950">Útskráð(ur). Opnar glugga fyrir innskráningu og til að kveikja á samstillingu.</translation>
 <translation id="5759897675466110265">Virkar vefsvæðið ekki? Prófaðu að leyfa fótspor þriðju aðila tímabundið</translation>
@@ -899,7 +899,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5829586821381540080">Vistað í <ph name="FOLDER_NAME"/></translation>
 <translation id="583281660410589416">Óþekkt</translation>
 <translation id="5833984609253377421">Deila tengli</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265">Opna PDF-skrá í <ph name="APP_NAME"/>?</translation>
 <translation id="5853623416121554550">hlé</translation>
 <translation id="5855546874025048181">Þrengja: <ph name="REFINE_TEXT"/></translation>
@@ -908,7 +908,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5860033963881614850">Slökkt</translation>
 <translation id="5860491529813859533">Kveikja</translation>
 <translation id="5864419784173784555">Bíður eftir öðru niðurhali…</translation>
-<translation id="6538479075382111079">Sendir sjálfkrafa talnagögn um notkun og tilkynningar um hrun til Brave</translation>
+<translation id="6538479075382111079">Sendir sjálfkrafa talnagögn um notkun og tilkynningar um hrun til AI Wize</translation>
 <translation id="5869522115854928033">Vistuð aðgangsorð</translation>
 <translation id="5604589745019948682">Til að fylgja vefsvæði skaltu opna vefsvæðið, opna AI Wize valmyndina og smella á „Fylgja“.</translation>
 <translation id="5879072387416556377">Fáðu betri tillögur</translation>
@@ -925,7 +925,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="5958994127112619898">Einfalda síðu</translation>
 <translation id="5962718611393537961">Ýttu til að draga saman</translation>
 <translation id="5964869237734432770">Slökkva á myndlýsingum</translation>
-<translation id="9135546826883360971">Brave man valið þitt</translation>
+<translation id="9135546826883360971">AI Wize man valið þitt</translation>
 <translation id="5977976211062815271">Í þessu tæki</translation>
 <translation id="5979084224081478209">Yfirfara aðgangsorð</translation>
 <translation id="5995726099713306770">Sækja síðu aftur?</translation>
@@ -972,7 +972,7 @@ Til að breyta þessari stillingu skaltu <ph name="BEGIN_LINK"/>endurstilla sams
 <translation id="6232535412751077445">Ef kveikt er á „Ekki rekja“ er beiðni látin fylgja með vefumferðinni þinni. Áhrifin velta á því hvort vefsvæði verður við beiðninni og hvernig beiðnin er túlkuð.
 
 Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að birta þér auglýsingar sem ekki byggja á öðrum vefsvæðum sem þú hefur heimsótt. Mörg vefsvæði munu áfram safna vefnotkunargögnunum þínum og nota þau, til dæmis til að auka öryggi, birta efni, auglýsingar og tillögur og útbúa talnagögn um notkun.</translation>
-<translation id="3895383310037101583">Vistaðu aðgangsorð í þessu tæki á Brave-reikningnum þínum með því að kveikja á samstillingu</translation>
+<translation id="3895383310037101583">Vistaðu aðgangsorð í þessu tæki á AI Wize-reikningnum þínum með því að kveikja á samstillingu</translation>
 <translation id="6255794742848779505">Við erum að breyta því hvernig aðgangsorð eru vistuð í þessu tæki</translation>
 <translation id="6264376385120300461">Sækja samt</translation>
 <translation id="6277522088822131679">Vandamál kom upp við að prenta síðuna. Reyndu aftur.</translation>
@@ -1002,13 +1002,13 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="6394791151443660613">Leit: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">TENGILL</translation>
 <translation id="6397616442223433927">Nettenging komin aftur</translation>
-<translation id="8789425457808164956">Til að senda þennan flipa í annað tæki þarftu að skrá þig þar inn í Brave</translation>
+<translation id="8789425457808164956">Til að senda þennan flipa í annað tæki þarftu að skrá þig þar inn í AI Wize</translation>
 <translation id="6404511346730675251">Breyta bókamerki</translation>
 <translation id="6406506848690869874">Samstilling</translation>
 <translation id="6407224748847589805">Ekki næst tenging við tölvuna þína. Prófaðu aðra staðfestingaraðferð.</translation>
 <translation id="6410883413783534063">Opnaðu flipa til að skoða mismunandi síður samtímis</translation>
 <translation id="6411219469806822692">Kemst ekki ofar. Prófaðu að byrja ofar á síðunni.</translation>
-<translation id="7810992039564280750">Ber vefslóðir saman við lista yfir óörugg vefsvæði sem er vistaður í Brave. Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize einnig sent vefslóðir í Örugga vefskoðun, þar á meðal hluta af innihaldi síðna.</translation>
+<translation id="7810992039564280750">Ber vefslóðir saman við lista yfir óörugg vefsvæði sem er vistaður í AI Wize. Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize einnig sent vefslóðir í Örugga vefskoðun, þar á meðal hluta af innihaldi síðna.</translation>
 <translation id="641643625718530986">Prenta...</translation>
 <translation id="6422857128426228781">Hér sérðu vörur sem þú vaktar</translation>
 <translation id="6433501201775827830">Veldu leitarvélina þína</translation>
@@ -1019,21 +1019,21 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="6447558397796644647">Bókamerki finnst ekki. Athugaðu stafsetninguna eða bættu við nýju bókamerki.</translation>
 <translation id="6459045781120991510">Kannanir</translation>
 <translation id="6461962085415701688">Ekki hægt að opna skrá</translation>
-<translation id="9055113864158719823">Þú sérð vefsvæðin sem þú opnar í AI Wize og velur teljara fyrir þau.\n\nBrave fær upplýsingar um þau vefsvæði sem þú velur teljara fyrir og hversu lengi þú ert á þeim. Þessar upplýsingar eru notaðar til að bæta virkni stafrænnar vellíðunar.</translation>
+<translation id="9055113864158719823">Þú sérð vefsvæðin sem þú opnar í AI Wize og velur teljara fyrir þau.\n\nAI Wize fær upplýsingar um þau vefsvæði sem þú velur teljara fyrir og hversu lengi þú ert á þeim. Þessar upplýsingar eru notaðar til að bæta virkni stafrænnar vellíðunar.</translation>
 <translation id="6473086018775716761">Listi yfir deilingarkosti á hálfum skjánum.</translation>
 <translation id="6475951671322991020">Sækja myndskeið</translation>
 <translation id="6477928892249167417">Þessi vefsvæði virðast vera þér mikilvæg:</translation>
 <translation id="6482749332252372425"><ph name="FILE_NAME"/> niðurhal mistókst vegna skorts á geymslurými.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Skrá sótt}one{# skrá sótt}other{# skrár sóttar}}</translation>
-<translation id="3960299545138990065">Endurræsa Brave</translation>
+<translation id="3960299545138990065">Endurræsa AI Wize</translation>
 <translation id="6527303717912515753">Deila</translation>
 <translation id="708829030563435351">Vefsvæði sem þú opnar í AI Wize birtast ekki. Öllum teljurum vefsvæða verður eytt.</translation>
-<translation id="7723158744459952869">Brave var of lengi að svara</translation>
+<translation id="7723158744459952869">AI Wize var of lengi að svara</translation>
 <translation id="6539092367496845964">Eitthvað fór úrskeiðis. Reyndu aftur síðar.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Síðast athugað fyrir 1 klukkustund}one{Síðast athugað fyrir # klukkustund}other{Síðast athugað fyrir # klukkustundum}}</translation>
 <translation id="6545017243486555795">Hreinsa öll gögn</translation>
 <translation id="6546511553472444032">Skráin er hugsanlega skaðleg</translation>
-<translation id="6702167990458635422">Ver þig ekki gegn hættulegum vefsvæðum, niðurhali eða viðbótum. Þetta hefur ekki áhrif á stillingar fyrir örugga vefskoðun í öðrum Brave-vörum.</translation>
+<translation id="6702167990458635422">Ver þig ekki gegn hættulegum vefsvæðum, niðurhali eða viðbótum. Þetta hefur ekki áhrif á stillingar fyrir örugga vefskoðun í öðrum AI Wize-vörum.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> og <ph name="TAB_COUNT_ONE"/> flipa til viðbótar verður lokað}one{<ph name="TAB_TITLE"/> og <ph name="TAB_COUNT_MANY"/> flipa til viðbótar verður lokað}other{<ph name="TAB_TITLE"/> og <ph name="TAB_COUNT_MANY"/> flipum til viðbótar verður lokað}}</translation>
 <translation id="6560414384669816528">Leita með Sogou</translation>
 <translation id="656065428026159829">Sjá meira</translation>
@@ -1048,33 +1048,33 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="6593061639179217415">Tölvuvefsvæði</translation>
 <translation id="6594347733515723558">Val í „Flokka og skoða“</translation>
 <translation id="2466982615210189224">Myndir eru sendar til AI Wize til að bæta lýsingar.</translation>
-<translation id="663059986967017181">Afritað yfir í Brave</translation>
+<translation id="663059986967017181">Afritað yfir í AI Wize</translation>
 <translation id="661266467055912436">Eykur öryggi þitt og allra á vefnum.</translation>
 <translation id="8127050479140582768">Til að senda þennan flipa í annað tæki þarftu að skrá þig inn í AI Wize í báðum tækjum</translation>
 <translation id="6627583120233659107">Breyta möppu</translation>
 <translation id="4660964651149493586">Taka huliðsstillingu úr lás</translation>
 <translation id="6636623428211296678">Skoðaðu fleiri stillingar hér að neðan eða ljúktu þessu núna</translation>
-<translation id="2259649928554669581">Frekari upplýsingar sem tengjast persónuvernd, öryggi og gagnasöfnun má finna í <ph name="BEGIN_LINK1"/>Samstilling<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>Brave þjónustur<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Brave sendir gögn um notkun og hrun til AI Wize til að bæta forritið. <ph name="BEGIN_UMA_LINK"/>Stjórna<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Frekari upplýsingar sem tengjast persónuvernd, öryggi og gagnasöfnun má finna í <ph name="BEGIN_LINK1"/>Samstilling<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>AI Wize þjónustur<ph name="END_LINK2"/></translation>
+<translation id="7939692063031538305">AI Wize sendir gögn um notkun og hrun til AI Wize til að bæta forritið. <ph name="BEGIN_UMA_LINK"/>Stjórna<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Útiloka alltaf</translation>
 <translation id="6641780377503683465">Fjarlægja <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Hreinsa</translation>
 <translation id="6645629752388991326">Stjórnaðu því hvaða tæki geta skráð sig inn með því að nota þetta tæki sem öryggislykil.</translation>
-<translation id="2730188427562924169">Sendir ruglaðan hluta vefslóðarinnar til AI Wize í gegnum traustan þjón sem felur IP-töluna þína. Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize einnig sent vefslóðir til Brave, þar á meðal hluta af efni síðna.</translation>
+<translation id="2730188427562924169">Sendir ruglaðan hluta vefslóðarinnar til AI Wize í gegnum traustan þjón sem felur IP-töluna þína. Ef vefsvæði reynir að stela aðgangsorðinu þínu, eða ef þú sækir skaðlega skrá, gæti AI Wize einnig sent vefslóðir til AI Wize, þar á meðal hluta af efni síðna.</translation>
 <translation id="7556503430569358637">Vefslóðir sem þú opnar eru sendar til AI Wize til að spá fyrir um hvaða vefsvæði þú kannt að opna næst</translation>
-<translation id="6678472970290886941">Kerfisstjórinn þinn getur breytt uppsetningu vafrans með fjartengingu. Virkni þinni í þessu tæki er einnig hægt að stjórna utan Brave.</translation>
+<translation id="6678472970290886941">Kerfisstjórinn þinn getur breytt uppsetningu vafrans með fjartengingu. Virkni þinni í þessu tæki er einnig hægt að stjórna utan AI Wize.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> í viðbót}one{<ph name="CONTACT_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> í viðbót}other{<ph name="CONTACT_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/> í viðbót}}</translation>
 <translation id="6649642165559792194">Forskoða mynd <ph name="BEGIN_NEW"/>Nýtt<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Aðgangsorð</translation>
 <translation id="6659594942844771486">Flipi</translation>
-<translation id="9145803563102831353">Eins og stendur er ekki hægt að nota aðgangsorð sem eru vistuð í þessu tæki á öllum Brave-rásum. Frá útgáfu AI Wize 121 verða aðgangsorð sem eru vistuð í tækinu fyrir AI Wize og <ph name="CHROME_CHANNEL"/> sameinuð og hægt verður að nota þau í báðum forritunum.</translation>
+<translation id="9145803563102831353">Eins og stendur er ekki hægt að nota aðgangsorð sem eru vistuð í þessu tæki á öllum AI Wize-rásum. Frá útgáfu AI Wize 121 verða aðgangsorð sem eru vistuð í tækinu fyrir AI Wize og <ph name="CHROME_CHANNEL"/> sameinuð og hægt verður að nota þau í báðum forritunum.</translation>
 <translation id="666731172850799929">Opna í <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Afrita mynd</translation>
 <translation id="6672917148207387131">Bæta <ph name="DOMAIN"/> við</translation>
 <translation id="6674571176963658787">Sláðu inn aðgangsorðið þitt til að hefja samstillingu</translation>
 <translation id="8581481290581777242">Viltu hreinsa AI Wize gögnin úr þessu tæki?</translation>
-<translation id="3683330416566109578">Skráðu þig inn á þetta vefsvæði og Brave</translation>
-<translation id="3385384709865894288">Bættu Brave</translation>
+<translation id="3683330416566109578">Skráðu þig inn á þetta vefsvæði og AI Wize</translation>
+<translation id="3385384709865894288">Bættu AI Wize</translation>
 <translation id="670498945988402717">Athugað í gær</translation>
 <translation id="6710213216561001401">Til baka</translation>
 <translation id="671481426037969117">Tímamælir <ph name="FQDN"/> rann út. Hann byrjar aftur á morgun.</translation>
@@ -1083,7 +1083,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7499197548870160669">Á AI Wize reikningnum þínum</translation>
 <translation id="6738516213925468394">Gögnin þín voru dulkóðuð með <ph name="BEGIN_LINK"/>aðgangsorði samstillingar<ph name="END_LINK"/> <ph name="TIME"/>. Sláðu það inn til að hefja samstillingu.</translation>
 <translation id="6738867403308150051">Sækir…</translation>
-<translation id="2275686406263739320">Algengt er að vefsvæði sem þú heimsækir muni atriði sem höfða til þín til að sérsníða upplifun þína. Vefsvæði geta einnig vistað upplýsingar um áhugasvið þín í Brave.</translation>
+<translation id="2275686406263739320">Algengt er að vefsvæði sem þú heimsækir muni atriði sem höfða til þín til að sérsníða upplifun þína. Vefsvæði geta einnig vistað upplýsingar um áhugasvið þín í AI Wize.</translation>
 <translation id="6751521182688001123">Opna nýjan flipa hratt. Haltu fingri á þessari flýtileið til að breyta henni.</translation>
 <translation id="6756507620369789050">Deila ábendingu</translation>
 <translation id="6767294960381293877">Tækjalisti fyrir deilingu flipa opinn á hálfum skjánum.</translation>
@@ -1094,7 +1094,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="6802555630140434547">Glugganum verður lokað</translation>
 <translation id="6811034713472274749">Hægt er að skoða síðuna</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Myndir, 1 mynd á lista}one{Myndir, # mynd á lista}other{Myndir, # myndir á lista}}</translation>
-<translation id="8418237809013783651">Skrá inn á Brave, opnað.</translation>
+<translation id="8418237809013783651">Skrá inn á AI Wize, opnað.</translation>
 <translation id="6817747507826986771">Deildu þessari síðu á skjótan hátt. Haltu fingri á þessari flýtileið til að breyta henni.</translation>
 <translation id="118366698571543506">Skráðu þig inn til að fá aðgang að AI Wize efninu þínu í öllum tækjum</translation>
 <translation id="6820686453637990663">CVC</translation>
@@ -1125,7 +1125,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="6909589135458168665">Forhlaða síðum</translation>
 <translation id="6910211073230771657">Eytt</translation>
 <translation id="6918398787259831832">Ef þetta vandamál heldur áfram að koma upp <ph name="BEGIN_LINK"/>geturðu fengið meiri upplýsingar<ph name="END_LINK"/> frá <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Öllum öryggisnúmerum sem vistuð eru í tækinu og á Brave-reikningnum þínum verður eytt</translation>
+<translation id="5854472260286669100">Öllum öryggisnúmerum sem vistuð eru í tækinu og á AI Wize-reikningnum þínum verður eytt</translation>
 <translation id="6942665639005891494">Þú getur breytt staðsetningu niðurhals hvenær sem er með því að nota valkostinn í stillingavalmyndinni</translation>
 <translation id="694267552845942083">Þú ert að sérstilla samstillingu. Til að ljúka við að kveikja á samstillingu skaltu ýta á hnappinn „Staðfesta“ neðarlega á skjánum. Fara upp</translation>
 <translation id="6945221475159498467">Velja</translation>
@@ -1155,7 +1155,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7077143737582773186">SD-kort</translation>
 <translation id="2374582967527009647">Sendir vefslóðir til athugunar í Öruggri vefskoðun. Sendir einnig lítið brot af síðum, niðurhali, virkni viðbóta og kerfisupplýsingar til að auðvelda leit að nýjum ógnum. Tengir þessi gögn tímabundið við AI Wize reikninginn þinn þegar þú ert skráð(ur) inn til að auka öryggi þitt í AI Wize forritum.</translation>
 <translation id="5499149312981370855">Veldu hvort að AI Wize ferill eigi að fylgja með til að fá sérsniðnari upplifun í AI Wize þjónustum</translation>
-<translation id="8208853227947884571">Brave er uppfærður</translation>
+<translation id="8208853227947884571">AI Wize er uppfærður</translation>
 <translation id="7105047059074518658">Skráðu þig inn svo að vafrinn virki betur í öllum tækjunum þínum</translation>
 <translation id="7106762743910369165">Vafranum er stjórnað af fyrirtækinu þínu</translation>
 <translation id="7116588989735740310">Samstilltu flipa og feril til að fara aftur á vefsvæði sem þú skoðaðir í öðrum tækjum</translation>
@@ -1175,7 +1175,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7196215469483532480">Útskýring á leiðbeiningum um persónuvernd opnuð á öllum skjánum</translation>
 <translation id="1014116676551114642">Efni frá AI Wize fyrir yngri notendur - slökkt</translation>
 <translation id="7207760545532569765">Endurheimta <ph name="TAB_COUNT"/> flipa sem nýja bakgrunnsflipa.</translation>
-<translation id="6302653771627628530">Huliðsflipum verður læst þegar þú lokar Brave</translation>
+<translation id="6302653771627628530">Huliðsflipum verður læst þegar þú lokar AI Wize</translation>
 <translation id="7221869452894271364">Endurhlaða þessa síðu</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{Ein skrá bíður niðurhals}one{# skrá bíður niðurhals}other{# skrár bíða niðurhals}}</translation>
 <translation id="72415438529550637">Tillögu að aðgangsorði lokað.</translation>
@@ -1184,7 +1184,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="4957342254208357193">Hugsanlega er svipuð stilling í Android-tækinu þínu. Ef kveikt er á auglýsingamælingum í AI Wize og Android-tækinu þínu getur fyrirtæki hugsanlega mælt árangur auglýsingar á vefsvæðum sem þú heimsækir og í forritum sem þú notar.</translation>
 <translation id="727288900855680735">Senda <ph name="ONE_TIME_CODE"/> til <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Vefsvæði á bannlista</translation>
-<translation id="7949597606523411684">Brave eyðir umfjöllunarefnum sem eru eldri en 4 vikna sjálfkrafa. Þegar þú heldur áfram að vafra gæti umfjöllunarefni birst aftur á listanum. Þú getur einnig lokað á umfjöllunarefni sem þú vilt ekki að AI Wize deili með vefsvæðum. Nánar um <ph name="BEGIN_LINK"/>umsjón með persónuvernd auglýsinga í Brave.<ph name="END_LINK"/></translation>
+<translation id="7949597606523411684">AI Wize eyðir umfjöllunarefnum sem eru eldri en 4 vikna sjálfkrafa. Þegar þú heldur áfram að vafra gæti umfjöllunarefni birst aftur á listanum. Þú getur einnig lokað á umfjöllunarefni sem þú vilt ekki að AI Wize deili með vefsvæðum. Nánar um <ph name="BEGIN_LINK"/>umsjón með persónuvernd auglýsinga í AI Wize.<ph name="END_LINK"/></translation>
 <translation id="4561646469134805137">Um leið og þú slærð inn sendir AI Wize innihald veffangastikunnar eða leitarreitsins á sjálfgefna leitarvél</translation>
 <translation id="7289303553784750393">Ef þú ert nettengd(ur) en þetta vandamál heldur áfram að koma upp geturðu prófað aðrar leiðir til að halda áfram í <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Ekki er hægt að endurnefna</translation>
@@ -1196,7 +1196,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7313188324932846546">Ýttu til að setja upp samstillingu</translation>
 <translation id="7324354302972299151">Senda „Do Not Track“ beiðni</translation>
 <translation id="7332075081379534664">Innskráning tókst</translation>
-<translation id="8716243540027092298">Samstilltu til að fá meira viðeigandi efni frá Brave</translation>
+<translation id="8716243540027092298">Samstilltu til að fá meira viðeigandi efni frá AI Wize</translation>
 <translation id="7339898014177206373">Nýr gluggi</translation>
 <translation id="7340958967809483333">Valkostir fyrir Tillögur</translation>
 <translation id="7352339641508007922">Dragðu til að taka langa skjámynd</translation>
@@ -1212,13 +1212,13 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7397416715506917976">Skoða upplýsingar um síðu</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Önnur 1 skrá á lista}one{Önnur # skrá á lista}other{Aðrar # skrár á lista}}</translation>
 <translation id="7400418766976504921">Vefslóð</translation>
-<translation id="724102042129299115">Fyrsta notkun Brave</translation>
-<translation id="5341476184053934779">Notandi Brave-reiknings</translation>
+<translation id="724102042129299115">Fyrsta notkun AI Wize</translation>
+<translation id="5341476184053934779">Notandi AI Wize-reiknings</translation>
 <translation id="741204030948306876">Hljómar vel</translation>
 <translation id="7419565702166471774">Nota ávallt öruggar tengingar</translation>
 <translation id="7431991332293347422">Stjórnaðu því hvernig vefskoðunarferillinn þinn er notaður til að sérsníða leit og fleira</translation>
 <translation id="7435356471928173109">Kerfisstjórinn slökkti á þessu</translation>
-<translation id="6234515504547364178">Skrá út af Brave</translation>
+<translation id="6234515504547364178">Skrá út af AI Wize</translation>
 <translation id="6147816961713837040">Sendir ruglaðan hluta vefslóðarinnar til AI Wize í gegnum traustan þjón sem felur IP-töluna þína</translation>
 <translation id="3699067418237091329">Skráir þig út af flestum vefsvæðum. Þú verður ekki skráð(ur) út af AI Wize reikningnum þínum.</translation>
 <translation id="7453810262525006706">Draga saman í hliðarglugga</translation>
@@ -1234,11 +1234,11 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7482656565088326534">Forskoðunarflipi</translation>
 <translation id="7484997419527351112">Tillögur – slökkt</translation>
 <translation id="7485033510383818941">Dragðu síðuna niður til að endurnýja efni straumsins</translation>
-<translation id="749294055653435199">Brave linsa er ekki í boði í þessu tæki</translation>
+<translation id="749294055653435199">AI Wize linsa er ekki í boði í þessu tæki</translation>
 <translation id="7493994139787901920"><ph name="VERSION"/> (uppfært <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Umfjöllunarefni bætt aftur við sem mögulegu umfjöllunarefni</translation>
 <translation id="7498271377022651285">Augnablik…</translation>
-<translation id="8156131600798538460">Til að skrá þig út af AI Wize reikningnum þínum á öllum vefsvæðum skaltu <ph name="BEGIN_LINK1"/>skrá þig út af Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Til að skrá þig út af AI Wize reikningnum þínum á öllum vefsvæðum skaltu <ph name="BEGIN_LINK1"/>skrá þig út af AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Uppfærslur eru ekki tiltækar</translation>
 <translation id="7507207699631365376">Sjá <ph name="BEGIN_LINK"/>persónuverndarstefnu<ph name="END_LINK"/> þjónustuveitu</translation>
 <translation id="7514365320538308">Sækja</translation>
@@ -1249,7 +1249,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="5722020415664104421">Útiloka þegar huliðsstilling er notuð</translation>
 <translation id="7539698981064401140">Samstilltu flipa og feril</translation>
 <translation id="7562080006725997899">Hreinsar vefskoðunargögn</translation>
-<translation id="7814200940910057384">Brave gögnum eytt</translation>
+<translation id="7814200940910057384">AI Wize gögnum eytt</translation>
 <translation id="7577900504646297215">Stjórna áhugamálum</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> skrá sótt}one{<ph name="FILES_DOWNLOADED_MANY"/> skrá sótt}other{<ph name="FILES_DOWNLOADED_MANY"/> skrár sóttar}}</translation>
 <translation id="7581273696622423628">Svara könnun</translation>
@@ -1262,7 +1262,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="649070405679044769">Innskráð(ur) á AI Wize sem</translation>
 <translation id="7612989789287281429">Skráir þig inn…</translation>
 <translation id="7619072057915878432">Niðurhal á <ph name="FILE_NAME"/> mistókst vegna villu í netkerfi.</translation>
-<translation id="7207456302801184289">Velkomin(n) í Brave</translation>
+<translation id="7207456302801184289">Velkomin(n) í AI Wize</translation>
 <translation id="7630202231528827509">Vefslóð veitu</translation>
 <translation id="7638584964844754484">Rangt aðgangsorð</translation>
 <translation id="7641339528570811325">Hreinsa vafragögn…</translation>
@@ -1277,12 +1277,12 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7682724950699840886">Prófaðu eftirfarandi: Gakktu úr skugga um að nóg pláss sé á tækinu og reyndu að flytja út aftur.</translation>
 <translation id="7686086654630106285">Nánar um auglýsingar sem vefsvæði leggja til</translation>
 <translation id="2667018639405889513">Sumar síður sem þú opnar eru forhlaðnar. Síður kunna að forhlaðast í gegnum netþjóna AI Wize þegar þær eru tengdar AI Wize vefsvæði.</translation>
-<translation id="7795837497684113327">Tækið þitt gat ekki opnað Brave. Sæktu nýjustu Brave-uppfærsluna úr forritaverslun til að lagfæra vandamálið.</translation>
+<translation id="7795837497684113327">Tækið þitt gat ekki opnað AI Wize. Sæktu nýjustu AI Wize-uppfærsluna úr forritaverslun til að lagfæra vandamálið.</translation>
 <translation id="7691043218961417207">Skoðaðu efni til að fylgja</translation>
 <translation id="7697383401610880082">Dragkló</translation>
 <translation id="7698359219371678927">Skrifa tölvupóst í <ph name="APP_NAME"/></translation>
 <translation id="7702029078562412515">Fyrirspurnarreitir</translation>
-<translation id="3434187853488406814">Hreinsun vefskoðunargagna skráir þig ekki út af Brave-reikningnum þínum. Til að gera það skaltu <ph name="BEGIN_LINK1"/>skrá þig út úr Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Hreinsun vefskoðunargagna skráir þig ekki út af AI Wize-reikningnum þínum. Til að gera það skaltu <ph name="BEGIN_LINK1"/>skrá þig út úr AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Nota farsímagögn</translation>
 <translation id="7709918231054955894">Skoðaðu alla flipana þína</translation>
 <translation id="7733878270780732638">Ekki nóg pláss í tæki.</translation>
@@ -1294,7 +1294,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7772032839648071052">Staðfestu aðgangsorðið</translation>
 <translation id="7772375229873196092">Loka <ph name="APP_NAME"/></translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> í viðbót}one{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> í viðbót}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 og <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> í viðbót}}</translation>
-<translation id="5614774692683309331">Verndar þig í Brave-þjónustum þegar þú ert innskráð(ur).</translation>
+<translation id="5614774692683309331">Verndar þig í AI Wize-þjónustum þegar þú ert innskráð(ur).</translation>
 <translation id="7778840695157240389">Kíktu aftur síðar til að fá nýjar sögur</translation>
 <translation id="7703329426540523149">Tengir þessi gögn tímabundið við AI Wize reikninginn þinn þegar þú ert skráð(ur) inn til að auka öryggi þitt í AI Wize forritum</translation>
 <translation id="7791543448312431591">Bæta við</translation>
@@ -1305,10 +1305,10 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Allar skrár, 1 skrá á lista}one{Allar skrár, # skrá á lista}other{Allar skrár, # skrár á lista}}</translation>
 <translation id="7815484226266492798">Löng skjámynd</translation>
 <translation id="7821130663268546430">Þú finnur alla opna flipa í flipavalinu</translation>
-<translation id="8439902729344548970">Þegar þú ert innskráð(ur) eru þessi gögn tengd við Brave-reikninginn þinn til að vernda þig í Brave-þjónustum, t.d. með því að auka vernd í Gmail eftir öryggistilvik.</translation>
+<translation id="8439902729344548970">Þegar þú ert innskráð(ur) eru þessi gögn tengd við AI Wize-reikninginn þinn til að vernda þig í AI Wize-þjónustum, t.d. með því að auka vernd í Gmail eftir öryggistilvik.</translation>
 <translation id="78270725016672455">Tölvan biður um að skrá þetta tæki við skráningu inn á vefsvæði</translation>
 <translation id="7844171778363018843">Engin gögn valin fyrir samstillingu</translation>
-<translation id="7068829570137757602">Brave þjónusta</translation>
+<translation id="7068829570137757602">AI Wize þjónusta</translation>
 <translation id="784934925303690534">Tímabil</translation>
 <translation id="7851858861565204677">Önnur tæki</translation>
 <translation id="7853202427316060426">Virkni</translation>
@@ -1318,7 +1318,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="78707286264420418"><ph name="PRODUCT_NAME"/> þarf heimild fyrir „Nálæg tæki“ til að tengjast tækinu þínu</translation>
 <translation id="7875915731392087153">Skrifa tölvupóst</translation>
 <translation id="7876243839304621966">Fjarlægja allt</translation>
-<translation id="6143689084714664628">Keyrir í Brave</translation>
+<translation id="6143689084714664628">Keyrir í AI Wize</translation>
 <translation id="7887174313503389866">Fáðu kynningu með leiðsögn um helstu öryggis- og persónuverndarstýringar Opnaðu hverja stillingu fyrir sig til að fá að sjá fleiri valkosti.</translation>
 <translation id="7896724475402191389">Efni fyrir yngri notendur - slökkt</translation>
 <translation id="7903184275147100332">Þetta gæti tekið smástund</translation>
@@ -1358,7 +1358,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="804335162455518893">SD-kort fannst ekki</translation>
 <translation id="5048396920203761159">{TAB_COUNT,plural, =1{<ph name="TAB_COUNT_ONE"/> huliðsflipi}one{<ph name="TAB_COUNT_NORMAL"/> huliðsflipi}other{<ph name="TAB_COUNT_NORMAL"/> huliðsflipar}}</translation>
 <translation id="8051695050440594747"><ph name="MEGABYTES"/> MB tiltæk</translation>
-<translation id="2317945146070194624">Opna í nýjum flipa Brave</translation>
+<translation id="2317945146070194624">Opna í nýjum flipa AI Wize</translation>
 <translation id="8062594758852531064">Aukin forhleðsla:</translation>
 <translation id="8063895661287329888">Ekki tókst að bæta bókamerki við.</translation>
 <translation id="8066816452984416180">Bókamerktu þessa síðu í snatri. Haltu flýtileiðinni inni til að breyta henni.</translation>
@@ -1373,10 +1373,10 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8090732854597034573">Ef þú þarft aðstoð skaltu biðja foreldri um hjálp</translation>
 <translation id="8101414242770404289">Engir flipar frá <ph name="TIME_PERIOD"/></translation>
 <translation id="3377025655491224618">Huliðsflipi</translation>
-<translation id="3249150807062904185">Með því að halda áfram samþykkirðu <ph name="BEGIN_TOS_LINK"/>þjónustuskilmálana<ph name="END_TOS_LINK"/>.\nBrave sendir gögn um notkun og hrun til AI Wize til að bæta forritið. <ph name="BEGIN_UMA_LINK"/>Stjórna<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Með því að halda áfram samþykkirðu <ph name="BEGIN_TOS_LINK"/>þjónustuskilmálana<ph name="END_TOS_LINK"/>.\nAI Wize sendir gögn um notkun og hrun til AI Wize til að bæta forritið. <ph name="BEGIN_UMA_LINK"/>Stjórna<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Loka röðunarvalkostum</translation>
-<translation id="2919733817273403520">Hjálpa til við að bæta eiginleika og afköst Brave</translation>
+<translation id="2919733817273403520">Hjálpa til við að bæta eiginleika og afköst AI Wize</translation>
 <translation id="4565206163201411670">Viltu sjá það sem þú gerir í AI Wize í stafrænni vellíðan?</translation>
 <translation id="8118117428362942925">Ef þú þarft aðstoð skaltu biðja foreldri um hjálp (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Raðað eftir nýjasta</translation>
@@ -1384,7 +1384,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8130309322784422030">Vistuðu innskráningarupplýsingarnar þínar gætu verið úreltar</translation>
 <translation id="813082847718468539">Skoða upplýsingar um vefsvæði</translation>
 <translation id="8135406045838672858">Sóttar PDF-skrár opnast sjálfkrafa í <ph name="APP_NAME"/></translation>
-<translation id="6337533477704327362">Þú þarft ekki að muna þetta aðgangsorð. Það verður vistað í Brave-aðgangsorðastjórnun.</translation>
+<translation id="6337533477704327362">Þú þarft ekki að muna þetta aðgangsorð. Það verður vistað í AI Wize-aðgangsorðastjórnun.</translation>
 <translation id="8186512483418048923"><ph name="FILES"/> skrár eftir</translation>
 <translation id="8190358571722158785">Einn dagur eftir</translation>
 <translation id="8193953846147532858"><ph name="BEGIN_LINK"/>Tækin þín<ph name="END_LINK"/> · <ph name="EMAIL"/></translation>
@@ -1420,7 +1420,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8368001212524806591">Vakta verð</translation>
 <translation id="8387617938027387193">Staðfestu hver þú ert</translation>
 <translation id="8393700583063109961">Senda skilaboð</translation>
-<translation id="7651600795135059130">Ber vefslóðir saman við lista yfir óörugg vefsvæði sem er vistaður í Brave</translation>
+<translation id="7651600795135059130">Ber vefslóðir saman við lista yfir óörugg vefsvæði sem er vistaður í AI Wize</translation>
 <translation id="8402673309244746971">Opna „Fylgist með“</translation>
 <translation id="8413126021676339697">Sýna allan feril</translation>
 <translation id="5348884013239264115">Verndar gegn vefsvæðum, niðurhali og viðbótum sem vitað er að eru hættuleg. Þegar þú opnar vefsvæði sendir AI Wize ruglaðan hluta vefslóðarinnar til AI Wize í gegnum traustan þjón sem felur IP-töluna þína. Ef vefsvæði gerir eitthvað grunsamlegt eru heilar vefslóðir og efnisbútar af síðu einnig sendir.</translation>
@@ -1450,18 +1450,18 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8497480609928300907">Útskýring á leiðbeiningum um persónuvernd</translation>
 <translation id="8497726226069778601">Ekkert hér… enn sem komið er</translation>
 <translation id="8501423924927196358">Hleðsluvísir síðuinnsýnar</translation>
-<translation id="230699814587342492">Aðgangsorð í Brave</translation>
+<translation id="230699814587342492">Aðgangsorð í AI Wize</translation>
 <translation id="8503813439785031346">Notandanafn</translation>
 <translation id="8505766168025405649">Sjá tilkynningu um stöðu niðurhals</translation>
 <translation id="8506357771923193001">Þú finnur niðurhal hér</translation>
-<translation id="133012818630824069">Flytja aðgangsorð út úr Brave</translation>
+<translation id="133012818630824069">Flytja aðgangsorð út úr AI Wize</translation>
 <translation id="8516012719330875537">Myndvinnsla</translation>
 <translation id="8523928698583292556">Eyða vistuðu aðgangsorði</translation>
 <translation id="8526855376374973824">Flæði tilkynningaheimildar</translation>
 <translation id="8540136935098276800">Sláðu inn vefslóð á réttu sniði</translation>
 <translation id="854522910157234410">Opna þessa síðu</translation>
-<translation id="5711390076756601471">Læsa huliðsflipum um leið og þú hættir í Brave</translation>
-<translation id="5503308854539525011">Brave takmarkar heildarmagn gagna sem vefsvæði geta deilt í gegnum vafrann til að mæla árangur auglýsinga</translation>
+<translation id="5711390076756601471">Læsa huliðsflipum um leið og þú hættir í AI Wize</translation>
+<translation id="5503308854539525011">AI Wize takmarkar heildarmagn gagna sem vefsvæði geta deilt í gegnum vafrann til að mæla árangur auglýsinga</translation>
 <translation id="8559990750235505898">Bjóðast til að þýða síður á önnur tungumál</translation>
 <translation id="8560602726703398413">Finndu leslistann þinn í bókamerkjum</translation>
 <translation id="8562452229998620586">Vistuð aðgangsorð munu birtast hér.</translation>
@@ -1470,15 +1470,15 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8583805026567836021">Hreinsar reikningsgögn</translation>
 <translation id="859046281437143747">Nota hnappinn „Fleiri valkostir“ til að vakta verð</translation>
 <translation id="860043288473659153">Nafn korthafa</translation>
-<translation id="1673533133011266617">Skrá inn á Brave, lokað.</translation>
+<translation id="1673533133011266617">Skrá inn á AI Wize, lokað.</translation>
 <translation id="860282621117673749">Tilkynningar um verðlækkanir</translation>
-<translation id="5784514951651328424">Brave reikningurinn þinn kann að vera með annars konar vefskoðunarferil á <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">AI Wize reikningurinn þinn kann að vera með annars konar vefskoðunarferil á <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Opna ráðlögðu vefslóðina sem tilgreind er í sótta efninu?</translation>
 <translation id="8621068256433641644">sími</translation>
 <translation id="8636825310635137004">Kveiktu á samstillingu til að fá aðgang að flipunum þínum í öðrum tækjum.</translation>
 <translation id="864544049772947936">Stjórna gluggum (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Spáir fyrir um og varar þig við hættulegum atvikum áður en þau eiga sér stað</translation>
-<translation id="2734140769649165081">Þú getur hreinsað gögnin í stillingum Brave</translation>
+<translation id="2734140769649165081">Þú getur hreinsað gögnin í stillingum AI Wize</translation>
 <translation id="7436978557885042606">Notaðu AI Wize eins og þér hentar best</translation>
 <translation id="8664979001105139458">Skráarheiti er þegar til</translation>
 <translation id="8676276370198826499">Skráðu þig á <ph name="SITE_ETLD_PLUS_ONE"/> með <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1519,13 +1519,13 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8856931513242997049">Flæði tilkynningaheimildar lokað</translation>
 <translation id="1984646864943401749">Sendir vefslóðir sumra vefsíðna sem þú skoðar, takmarkaðar kerfisupplýsingar og tiltekið innihald síðna til AI Wize til að hjálpa til við að finna og loka á nýjar ógnir og vernda alla vefnotendur.</translation>
 <translation id="8909135823018751308">Deila…</translation>
-<translation id="2684652081942622950">Brave reikningur</translation>
+<translation id="2684652081942622950">AI Wize reikningur</translation>
 <translation id="8921980840204105660">Samstilltu til að sækja bókamerkin þín úr öðrum tækjum</translation>
 <translation id="8922289737868596582">Náðu í síður með hnappnum „Fleiri valkostir“ til að nota þær án nettengingar</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Nánar<ph name="END_LINK"/></translation>
 <translation id="892496902842311796"><ph name="LANG"/> er til reiðu</translation>
 <translation id="1174893863889683998">Viltu fjarlægja það sem þú gerir í AI Wize úr stafrænni vellíðan?</translation>
-<translation id="179413535815682755">Brave kann einnig að senda fótspor, núverandi vefslóð þína og staðsetningu þína, allt eftir því hvaða stillingar eru valdar</translation>
+<translation id="179413535815682755">AI Wize kann einnig að senda fótspor, núverandi vefslóð þína og staðsetningu þína, allt eftir því hvaða stillingar eru valdar</translation>
 <translation id="8942627711005830162">Opna í öðrum glugga</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Ekki tókst að hlaða þessu tungumáli niður. Reyndu aftur síðar.</translation>
 <translation id="8355284051444779553">Opnaðu valmyndina til að opna nýjan huliðsflipa</translation>
@@ -1539,7 +1539,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="8998289560386111590">Ekki í boði í tækinu þínu</translation>
 <translation id="3275122921244685452">Þú ert að skrá þig út af reikningi sem <ph name="MANAGED_DOMAIN"/> stýrir og veitir í leiðinni stjórnanda lénsins umsjón með AI Wize gögnunum þínum. Gögnin þín verða tengd við þennan reikning til frambúðar. Ef þú skráir þig út af AI Wize verður gögnunum þínum á þessu tæki eytt, en þau verða áfram geymd á AI Wize reikningnum þínum.</translation>
 <translation id="8998837250940831980">Ekki tókst að minnka flipa. Reyndu aftur síðar.</translation>
-<translation id="9012585441087414258">Vernda þig gegn vefsvæðum, niðurhali og viðbótum sem vitað er að eru hættuleg. Ef grunsamleg virkni greinist á síðu eru vefslóðir og hlutar af innihaldi síðna sendir í örugga vefskoðun Brave.</translation>
+<translation id="9012585441087414258">Vernda þig gegn vefsvæðum, niðurhali og viðbótum sem vitað er að eru hættuleg. Ef grunsamleg virkni greinist á síðu eru vefslóðir og hlutar af innihaldi síðna sendir í örugga vefskoðun AI Wize.</translation>
 <translation id="9019199799064251516">Halda áfram án þess að nota prófíllás bílsins?</translation>
 <translation id="9022774213089566801">Oft skoðað</translation>
 <translation id="9022871169049522985">Vefsvæði og auglýsendur geta mælt árangur auglýsinga sinna</translation>
@@ -1574,7 +1574,7 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="9158770349521403363">Aðeins deila efni</translation>
 <translation id="9159716826369098114">Endurheimta flipahóp með <ph name="TAB_COUNT"/> flipum sem nýjan flipahóp í bakgrunni.</translation>
 <translation id="9169507124922466868">Ferill er hálfopinn</translation>
-<translation id="4947625801334180582">Brave Beta</translation>
+<translation id="4947625801334180582">AI Wize Beta</translation>
 <translation id="9190276265094487094">Ferilinn þinn verður í öllum samstilltum tækjum svo þú getir haldið áfram þar sem frá var horfið</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{Athugað fyrir 1 mínútu}one{Athugað fyrir # mínútu}other{Athugað fyrir # mínútum}}</translation>
 <translation id="9204021776105550328">Eyðir</translation>
@@ -1586,13 +1586,13 @@ Sum vefsvæði kunna til dæmis að bregðast við beiðninni með því að bir
 <translation id="9219103736887031265">Myndir</translation>
 <translation id="6946179564366058239">Þegar vefsvæði biður um að forhlaða tenglum á lokaðan hátt, dulkóðar AI Wize og forhleður síðum í gegnum þjóna AI Wize án fótspora. Þetta kemur í veg fyrir að forhlaðna vefsvæðið geti auðkennt þig.</translation>
 <translation id="4596514158372210596">Fjarlægja það sem þú gerir í AI Wize úr stafrænni vellíðan</translation>
-<translation id="2830145431802238213">Nota Léttútgáfu í Brave</translation>
+<translation id="2830145431802238213">Nota Léttútgáfu í AI Wize</translation>
 <translation id="928550791203542716">Fylgist með <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Öll aðgangsorð verða sótt í tækið þitt og fjarlægð úr <ph name="CHROME_CHANNEL"/></translation>
 <translation id="938850635132480979">Villa: <ph name="ERROR_CODE"/></translation>
 <translation id="939598580284253335">Sláðu inn aðgangsorð</translation>
 <translation id="952301137339791907">Blað neðst með síðuinnsýn er opið.</translation>
-<translation id="5406914950576900927">Brave getur notast við <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> fyrir leit í Kína. Þú getur breytt þessu í <ph name="BEGIN_LINK"/>stillingunum<ph name="END_LINK"/>.</translation>
+<translation id="5406914950576900927">AI Wize getur notast við <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> fyrir leit í Kína. Þú getur breytt þessu í <ph name="BEGIN_LINK"/>stillingunum<ph name="END_LINK"/>.</translation>
 <translation id="962979164594783469">Setja þetta forrit upp</translation>
 <translation id="96681097142096641">Skoða einfaldaða síðu?</translation>
 <translation id="968900484120156207">Síður sem þú heimsækir birtast hér</translation>

@@ -22,7 +22,7 @@
 <translation id="266935134738038806">საიტზე გადასვლა</translation>
 <translation id="2759453070259087442">გააფართოეთ ჩანართების ჯგუფი „<ph name="TITLE_OF_GROUP"/>“ <ph name="NUMBER_OF_TABS"/> ჩანართით.</translation>
 <translation id="2801787514987684416">გსურთ მაღაზიის ინფორმაციის ნახვა?</translation>
-<translation id="4691798003247738043">Brave | ამ მაღაზიის შესახებ</translation>
+<translation id="4691798003247738043">AI Wize | ამ მაღაზიის შესახებ</translation>
 <translation id="2977480621796371840">ჯგუფიდან ამოშლა</translation>
 <translation id="3008554597174452548">პროდუქტისთვის თვალის მიდევნების შეწყვეტა</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/>-ზე ფასის <ph name="PRICE_DROP"/>-ით შემცირება</translation>
@@ -59,7 +59,7 @@
 <translation id="5556417849629758491">მაღაზიის ინფორმაციის ნახვა, ვარიანტი ხელმისაწვდომია ეკრანის ზედა ნაწილთან</translation>
 <translation id="5558362125926932819">ჩანართების <ph name="NUMBER_OF_TABS"/>-ჩანართიანი ჯგუფის დახურვა</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> ჩანართი დაჯგუფდა</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ბმული Brave-იდან}other{<ph name="TABS_COUNT_MANY"/> ბმული Brave-იდან}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ბმული AI Wize-იდან}other{<ph name="TABS_COUNT_MANY"/> ბმული AI Wize-იდან}}</translation>
 <translation id="575494663145460764">გსურთ, მიიღოთ გაფრთხილებები ფასის დაწევის შესახებ?</translation>
 <translation id="58326064309361797">ჩანართების დასაჯგუფებლად ჩავლებით გადაიტანეთ ისინი</translation>
 <translation id="5846292395804797011"><ph name="NUMBER_OF_TABS"/>-ჩანართიანი ჯგუფის „<ph name="TITLE_OF_GROUP"/>“ დახურვა</translation>
@@ -69,12 +69,12 @@
 <translation id="6228793724645064692">(მაღაზიის შეფასება)</translation>
 <translation id="6333260925957816943">ინფორმაცია ამ მაღაზიის შესახებ</translation>
 <translation id="639823877092900621">{TABS_COUNT,plural, =1{გააუქმეთ <ph name="TABS_COUNT_ONE"/> არჩეული ჩანართის დაჯგუფება}other{გააუქმეთ <ph name="TABS_COUNT_MANY"/> არჩეული ჩანართის დაჯგუფება}}</translation>
-<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{თქვენი დახურული ჩანართების პოვნა შეგიძლიათ Brave-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“. თქვენი ინკოგნიტო ჩანართი მიუწვდომელი იქნება.}other{თქვენი დახურული ჩანართების პოვნა შეგიძლიათ Brave-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“. თქვენი # ინკოგნიტო ჩანართი მიუწვდომელი იქნება.}}</translation>
+<translation id="6057673771413791768">{INCOGNITO_TABS_COUNT,plural, =1{თქვენი დახურული ჩანართების პოვნა შეგიძლიათ AI Wize-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“. თქვენი ინკოგნიტო ჩანართი მიუწვდომელი იქნება.}other{თქვენი დახურული ჩანართების პოვნა შეგიძლიათ AI Wize-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“. თქვენი # ინკოგნიტო ჩანართი მიუწვდომელი იქნება.}}</translation>
 <translation id="6422650314852876533">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ჩანართი}other{<ph name="TABS_COUNT_MANY"/> ჩანართი}}</translation>
 <translation id="6549021453810473782">მაღაზიის ინფორმაციის ნახვა</translation>
 <translation id="6562820390860419811">ჩანართის მარცხნივ გადატანა</translation>
 <translation id="6615455863669487791">მაჩვენე</translation>
-<translation id="6398241160085205003">თქვენი დახურული ჩანართების პოვნა შეგიძლიათ Brave-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“.</translation>
+<translation id="6398241160085205003">თქვენი დახურული ჩანართების პოვნა შეგიძლიათ AI Wize-ის მთავარი მენიუს სექციაში „ბოლოდროინდელი ჩანართები“.</translation>
 <translation id="6840760312327750441">ჩანართების დასაჯგუფებლად ხანგრძლივად შეეხეთ ჩანართს. შემდეგ კი ჩავლებით გადაიტანეს ის სხვა ჩანართზე.</translation>
 <translation id="6856809498882026482">რამდენიმეარჩევანიანი რეჟიმის დამალვა</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{ჩანართის გაზიარება}other{ჩანართების გაზიარება}}</translation>
@@ -83,7 +83,7 @@
 <translation id="7326879924029668159">იხილეთ დაბრუნების წესები და სხვა ინფორმაცია</translation>
 <translation id="7352298686197644113">იხილეთ, რომელ ერთეულს აქვს უფრო დაბალი ფასი თქვენს გახსნილ ჩანართებში</translation>
 <translation id="753732157349120914">ჩანართების გადამრთველი</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> მიმოხილვა Brave-იდან}other{<ph name="REVIEWS_COUNT_MANY"/> მიმოხილვა Brave-იდან}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> მიმოხილვა AI Wize-იდან}other{<ph name="REVIEWS_COUNT_MANY"/> მიმოხილვა AI Wize-იდან}}</translation>
 <translation id="7559245342362162951">ჯგუფის ჩანართების სრულეკრანიან ბადეში ჩვენება</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> არჩეული ჩანართის გაზიარება}other{<ph name="TABS_COUNT_MANY"/> არჩეული ჩანართის გაზიარება}}</translation>
 <translation id="7792771145871471484">შემოთავაზებების გადახედვა.</translation>

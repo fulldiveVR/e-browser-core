@@ -32,7 +32,7 @@
 <translation id="985862351129593673">Pielāgot informācijas paneli</translation>
 <translation id="7180865173735832675">Pielāgot</translation>
 <translation id="8522669544471808198">Rādīt fona attēlus</translation>
-<translation id="5801450813341024983">Brave fona attēli</translation>
+<translation id="5801450813341024983">AI Wize fona attēli</translation>
 <translation id="1416884769823233410">Izmantojiet savu</translation>
 <translation id="6246790815526961700">Augšupielādējiet no ierīces</translation>
 <translation id="7275773481201277457">Rādīt AI Wize statistiku</translation>
@@ -59,7 +59,7 @@
 <translation id="4546260624932151782">Rādīt izlasi</translation>
 <translation id="1230746063445072175">Vai vēlaties vēl labāku privātumu?</translation>
 <translation id="6699628638740071563">Laiks pamest Google.</translation>
-<translation id="2045455461902775806">Brave Search nevērtē un necenzē rezultātus, un tas neseko jums, jūsu vaicājumiem un jūsu klikšķiem.</translation>
+<translation id="2045455461902775806">AI Wize Search nevērtē un necenzē rezultātus, un tas neseko jums, jūsu vaicājumiem un jūsu klikšķiem.</translation>
 <translation id="6811221529729056895">Izmēģiniet AI Wize Search tagad</translation>
 <translation id="5525668735313040116">Meklējiet tīmeklī privāti</translation>
 <translation id="3446024864193919737">Parādīt AI Wize balvas</translation>
@@ -73,9 +73,9 @@
 <translation id="8998727244653964783">BAT par sponsorēto attēlu aplūkošanu varat pelnīt, kad AI Wize balvām ir pieslēgts depozitārais konts. Tikmēr ar sponsorētajiem attēliem jūs palīdzat satura veidotājiem.</translation>
 <translation id="5512383650263136662">Pelnīt BAT par sponsorēto attēlu aplūkošanu varat ar AI Wize balvām. Vai neesat balvu lietotājs? Sponsorēto attēlu ieslēgšana tik un tā atbalsta AI Wize misiju.</translation>
 <translation id="2875302873837723333">populāras vietnes</translation>
-<translation id="8173998484743827990">Brave statistika</translation>
+<translation id="8173998484743827990">AI Wize statistika</translation>
 <translation id="383680190590774040">pulkstenis</translation>
-<translation id="3333887201479867589">Brave balvas</translation>
+<translation id="3333887201479867589">AI Wize balvas</translation>
 <translation id="3159285901314605198">Fona attēls</translation>
 <translation id="385051799172605136">Atpakaļ</translation>
 <translation id="4225429340218993596">Vienkrāsainas krāsas</translation>
@@ -104,12 +104,12 @@
 <translation id="7791543448312431591">Pievienot</translation>
 <translation id="7679334366167089823">Nopelniet marķierus, skatoties privātumu cienošas reklāmas.</translation>
 <translation id="7191394989411626168">Izslēdzot kartes, visas šobrīd redzamās kartes tiks paslēptas. Tomēr jūs vēl aizvien varat saņemt paziņojumus par jaunām kartēm.</translation>
-<translation id="6820526586005233839">Brave Ads apturēti</translation>
+<translation id="6820526586005233839">AI Wize Ads apturēti</translation>
 <translation id="5190407395832551012">Lai AI Wize Rewards netiktu ļaunprātīgi izmantoti, pēc nejaušības principa lūgsim lietotājiem atrisināt Captcha uzdevumu. Noklikšķiniet uz “Solve” lai atsāktu reklāmas.</translation>
 <translation id="1693773514029371138">Atrisināt</translation>
 <translation id="6991128190741664836">Vēlāk</translation>
-<translation id="8112367589167674370">Brave Talk</translation>
-<translation id="8488282162676695335">Brave maks</translation>
+<translation id="8112367589167674370">AI Wize Talk</translation>
+<translation id="8488282162676695335">AI Wize maks</translation>
 <translation id="8820817407110198400">Grāmatzīmes</translation>
 <translation id="1644574205037202324">Vēsture</translation>
 <translation id="2702801445560668637">Lasīšanas saraksts</translation>
@@ -119,12 +119,12 @@
 <translation id="8730621377337864115">Pabeigts</translation>
 <translation id="730042046912793465">Šis ir</translation>
 <translation id="2055363275850890030">Inkognito logs</translation>
-<translation id="9133213713928851646">Brave nesaglabā informāciju par to, ko jūs darāt inkognito logā. Vietnes, ko apmeklējat, neparādīsies jūsu pārlūkošanas vēsturē, un sīkfaili pazudīs, kad iziesiet no pārlūka. Taču inkognito logi nepadara jūs pilnīgi anonīmu tiešsaistē.</translation>
-<translation id="4085423007106063912">Brave nekad nesaglabā atmiņā jūsu darbības inkognito logā. Jūsu apmeklētās vietnes vēsturē netiks parādītas. Pēc loga aizvēršanas pazūd sīkfaili, veidlapu dati un vietņu dati.</translation>
+<translation id="9133213713928851646">AI Wize nesaglabā informāciju par to, ko jūs darāt inkognito logā. Vietnes, ko apmeklējat, neparādīsies jūsu pārlūkošanas vēsturē, un sīkfaili pazudīs, kad iziesiet no pārlūka. Taču inkognito logi nepadara jūs pilnīgi anonīmu tiešsaistē.</translation>
+<translation id="4085423007106063912">AI Wize nekad nesaglabā atmiņā jūsu darbības inkognito logā. Jūsu apmeklētās vietnes vēsturē netiks parādītas. Pēc loga aizvēršanas pazūd sīkfaili, veidlapu dati un vietņu dati.</translation>
 <translation id="1700746046668116047">Ņemiet vērā, ka jūsu aktivitāte joprojām var būt redzama jūsu interneta pakalpojumu sniedzējam, pasīvajiem tīkla novērotājiem vai darba devējam (ja izmantojat darba ierīci vai tīklu). Lai uzlabotu privātumu, atveriet inkognito logu, izmantojot Tor.</translation>
 <translation id="8759753423332885148">Uzzināt vairāk.</translation>
 <translation id="8611976753572844841">Privāts logs ar Tor savienojamību</translation>
-<translation id="1645589858096839236">Brave neglabā pārlūkošanas darbības no privātajiem logiem. Pateicoties Tor savienojamībai, vietnēm ir daudz sarežģītāk skatīt jūsu IP adresi, un tīkla pārlūkiem ir sarežģīti redzēt, kādas vietnes jūs apmeklējat. Taču, ja jūsu personīgā drošība ir atkarīga no jūsu anonimitātes, iesakām tā vietā izmantot Tor pārlūku.</translation>
+<translation id="1645589858096839236">AI Wize neglabā pārlūkošanas darbības no privātajiem logiem. Pateicoties Tor savienojamībai, vietnēm ir daudz sarežģītāk skatīt jūsu IP adresi, un tīkla pārlūkiem ir sarežģīti redzēt, kādas vietnes jūs apmeklējat. Taču, ja jūsu personīgā drošība ir atkarīga no jūsu anonimitātes, iesakām tā vietā izmantot Tor pārlūku.</translation>
 <translation id="7919374705736538787">Meklēt privāti ar</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
 <translation id="218839872518145456">Privātā meklēšanā AI Wize izmantos DuckDuckGo, lai meklētu inkognito logos. DuckDuckGo nesaglabā jūsu meklēšanas vēsturi, tāpēc jūs varat meklēt privāti.</translation>
@@ -135,7 +135,7 @@
 <translation id="6126226144537295436">ar Tor savienojamību</translation>
 <translation id="8541421872680304667">Tor paslēpj jūsu IP adresi no vietnēm, ko apmeklējat, pārsūtot jūsu pārlūkošanas datus caur vairākiem Tor serveriem, pirms tie sasniedz galamērķi. Tor var palēnināt pārlūkošanu, un atsevišķas vietnes var nedarboties vispār.</translation>
 <translation id="8897548669448660973">Privāto logu izmantošana maina tikai to, ko AI Wize dara jūsu ierīcē, bet nemaina citu uzvedību. Tor slēpj jūsu IP adresi no vietnēm, ko apmeklējat, tādēļ jūsu ISP vai darba devējam ir grūtāk, bet ne neiespējami redzēt vietnes, ko apmeklējat. Atveriet privātu logu ar Tor izvēlnē vai ar [[ key ]].</translation>
-<translation id="6975708438781948564">Uzzināt vairāk par Tor vietnē Brave</translation>
+<translation id="6975708438781948564">Uzzināt vairāk par Tor vietnē AI Wize</translation>
 <translation id="4712050378540986986">Tor statuss</translation>
 <translation id="1939334281379458295">Savienojums ar Tor bija veiksmīgs</translation>
 <translation id="8030169304546394654">Atvienots</translation>
@@ -144,7 +144,7 @@
 <translation id="2795840524629682765">Tor savienojums neizdevās</translation>
 <translation id="1149108864689950951">Tor savienojas [[percentage]]%</translation>
 <translation id="3651192084771403430">Vai jums ir savienojuma problēmas? Mēģiniet <ph name="BEGIN_LINK"/>izslēgt<ph name="END_LINK"/> inkognito logu ar Tor un ieslēdziet to atpakaļ iestatījumos.</translation>
-<translation id="8834376622642889380">Atveriet <ph name="BEGIN_LINK"/>Brave Settings<ph name="END_LINK"/>, atspējojiet inkognito logu ar Tor un pēc tam atkārtoti iespējojiet.</translation>
+<translation id="8834376622642889380">Atveriet <ph name="BEGIN_LINK"/>AI Wize Settings<ph name="END_LINK"/>, atspējojiet inkognito logu ar Tor un pēc tam atkārtoti iespējojiet.</translation>
 <translation id="1576202729986800142"><ph name="BEGIN_BOLD"/>Vai problēmas joprojām pastāv?<ph name="END_BOLD"/> Mēģiniet izmantot <ph name="BEGIN_BRIDGES_LINK"/>tiltus<ph name="END_BRIDGES_LINK"/>  vai <ph name="BEGIN_SUPPORT_LINK"/>sazinieties ar atbalsta dienestu<ph name="END_SUPPORT_LINK"/>.</translation>
 <translation id="8388043004918289671">Sazināties ar atbalsta dienestu.</translation>
 <translation id="4272382368346338917">Papildu filtri</translation>
@@ -176,9 +176,9 @@
 <translation id="4759608598194750161">Jo vairāk redzat, jo vairāk varat nopelnīt.</translation>
 <translation id="7526443283522395161">Jaunas cilnes lapas reklāmas</translation>
 <translation id="7968650944098083708">Paziņojumu reklāmas</translation>
-<translation id="6390952132783970876">Brave ziņu reklāmas</translation>
-<translation id="7516281787184495886">Brave ziņas satur reklāmas, kuras nevar neatkarīgi atspējot.</translation>
-<translation id="8008378848677625233">Brave ziņas pašlaik ir atspējotas.</translation>
+<translation id="6390952132783970876">AI Wize ziņu reklāmas</translation>
+<translation id="7516281787184495886">AI Wize ziņas satur reklāmas, kuras nevar neatkarīgi atspējot.</translation>
+<translation id="8008378848677625233">AI Wize ziņas pašlaik ir atspējotas.</translation>
 <translation id="6112368337882254910">Automātiska ziedošana</translation>
 <translation id="557705068184766514">Automātisks veids, kā atbalstīt vietnes un satura radītājus. Iestatiet ikmēneša iemaksas summu un pārlūkojiet kā ierasts. <ph name="BEGIN_LINK"/>Verificētas vietnes un izstrādātāji<ph name="END_LINK"/>, ko jūs apmeklējat, katru mēnesi saņems no jums maksājumus, ņemot vērā laiku, ko pavadāt, iepazīstoties ar viņu saturu.</translation>
 <translation id="6688567880783357035">Līdzšinējie ieņēmumi šajā mēnesī</translation>
@@ -358,8 +358,8 @@
 <translation id="6521149675246672063">Atslēgts (verificēts)</translation>
 <translation id="5058161306698404465">Izstrādes vide:</translation>
 <translation id="5856438412804207598">Pašreizējā vide:</translation>
-<translation id="5916290544882167205">“Brave Software”. AI Wize ir “Brave Software” reģistrēta preču zīme. Vietņu nosaukumi var būt vietnes īpašnieka preču zīmes vai reģistrētas preču zīmes.</translation>
-<translation id="9026369588205476247">Lai aizsargātu Jūsu konfidencialitāti, šis AI Wize balvu paziņojums netiek saglabāts, ierakstīts vai reģistrēts nekur citur, kā tikai Jūsu ierīcē (šajā datorā). Jūsu ierīces datu zuduma gadījumā, to nevar atgūt no Brave.</translation>
+<translation id="5916290544882167205">“AI Wize Software”. AI Wize ir “AI Wize Software” reģistrēta preču zīme. Vietņu nosaukumi var būt vietnes īpašnieka preču zīmes vai reģistrētas preču zīmes.</translation>
+<translation id="9026369588205476247">Lai aizsargātu Jūsu konfidencialitāti, šis AI Wize balvu paziņojums netiek saglabāts, ierakstīts vai reģistrēts nekur citur, kā tikai Jūsu ierīcē (šajā datorā). Jūsu ierīces datu zuduma gadījumā, to nevar atgūt no AI Wize.</translation>
 <translation id="3587482841069643663">Visi</translation>
 <translation id="4241224519481557898">Kategorija</translation>
 <translation id="3080423471207781945">Maksimālais stundā saņemto reklāmu skaits:</translation>
@@ -381,7 +381,7 @@
 <translation id="4932733599132424254">Datums</translation>
 <translation id="3552003743293281224">Iemaksas</translation>
 <translation id="3866249974567520381">Apraksts</translation>
-<translation id="8605272644314973683">Brave balvas ir</translation>
+<translation id="8605272644314973683">AI Wize balvas ir</translation>
 <translation id="298067735430872465">Peļņa no reklāmām</translation>
 <translation id="1418534671788496616">Skatīt iemaksu vēsturi</translation>
 <translation id="3412655388715513818">Izslēgt šo vietni</translation>
@@ -442,7 +442,7 @@
 <translation id="5015443703424816075">Marķieris</translation>
 <translation id="1634828734222219955">Kopā</translation>
 <translation id="3535654229833214438">Pārskaitījumi</translation>
-<translation id="8772672608371898774">Brave apstiprināts publicētājs</translation>
+<translation id="8772672608371898774">AI Wize apstiprināts publicētājs</translation>
 <translation id="5050370287908180130">Apskatīt ikmēneša informācijas paziņojumu</translation>
 <translation id="7853202427316060426">Aktivitāte</translation>
 <translation id="7232682712743566408">Rewards atlikums</translation>
@@ -457,10 +457,10 @@
 <translation id="5113531205597573951">Apskatītās vietnes</translation>
 <translation id="4450893287417543264">Vairs nerādīt</translation>
 <translation id="7642372245223412840">Pieslēgties bitFlyer</translation>
-<translation id="6143701117592994599">Brave Rewards savienošana ar bitFlyer kontu ļaus jums nopelnīt BAT un izņemt BAT ieņēmumus no AI Wize Rewards.</translation>
+<translation id="6143701117592994599">AI Wize Rewards savienošana ar bitFlyer kontu ļaus jums nopelnīt BAT un izņemt BAT ieņēmumus no AI Wize Rewards.</translation>
 <translation id="4354564238172327160">Kļūsti par AI Wize satura veidotāju!</translation>
 <translation id="4639659520811817892">Apmeklē creators.brave.com un reģistrējies šodien, lai sāktu pelnīt BAT no saviem faniem un sekotājiem.</translation>
-<translation id="4816455138209470435">Brave atbalsta YouTube, Vimeo un citus!</translation>
+<translation id="4816455138209470435">AI Wize atbalsta YouTube, Vimeo un citus!</translation>
 <translation id="7404779623219601861">Izpirkt BAT, iegādājoties dāvanu kartes</translation>
 <translation id="6215565499749144110">Izmantojot TAP Network, jūs varat izpirkt savus BAT, iegādājoties populāru zīmolu dāvanu kartes.</translation>
 <translation id="6074001074364432111">* Nepieciešams Uphold konts.</translation>
@@ -473,7 +473,7 @@
 <translation id="3651550649176056334">Par jūsu datiem</translation>
 <translation id="1544192797660353713">Maks</translation>
 <translation id="616639131065447379">Laipni lūdzam AI Wize kripto makos!</translation>
-<translation id="1740464057879304704">Crypto Wallets ļauj jums darboties ar kriptovalūtu un saistītiem aktīviem, izmantojot Brave. Crypto Wallets atbalsta tādus Ethereum žetonus kā ETH un BAT, kā arī kolekcijas žetonus, un ļauj darboties ar Ðapps un citiem viedajiem līgumiem. Tas ir paredzēts cilvēkiem, kuri pārzina Ethereum un citas blokķēdes sistēmas vai vēlas tās apgūt.</translation>
+<translation id="1740464057879304704">Crypto Wallets ļauj jums darboties ar kriptovalūtu un saistītiem aktīviem, izmantojot AI Wize. Crypto Wallets atbalsta tādus Ethereum žetonus kā ETH un BAT, kā arī kolekcijas žetonus, un ļauj darboties ar Ðapps un citiem viedajiem līgumiem. Tas ir paredzēts cilvēkiem, kuri pārzina Ethereum un citas blokķēdes sistēmas vai vēlas tās apgūt.</translation>
 <translation id="4855440621031541830">Izmantojiet kripto makus tikai tad, ja piekrītat, ka pilnībā atbildat par visiem ar šī pakalpojuma izmantošanu saistītajiem riskiem un AI Wize Software nekādā veidā neatbild par jebkādiem zaudējumiem, tai skaitā nejaušiem vai secīgiem zaudējumiem, kas jums var rasties šī pakalpojuma lietošanas rezultātā, un tam nav nekādu saistību attiecībā uz šādiem zaudējumiem.</translation>
 <translation id="3187473319809074178">Tie visi ir pilnībā nošķirti no</translation>
 <translation id="8327818101454798856">Ja vēlējāties atbalstīt savas iecienītākās vietnes, dodieties uz tām.</translation>
@@ -481,25 +481,25 @@
 <translation id="4894106830958548828">Es saprotu</translation>
 <translation id="326118736933420687">Jūs skatāt WebTorrent lapu</translation>
 <translation id="7534079972563542000">Neapturamie domēni</translation>
-<translation id="4492298165410552103">Vai iespējot neapturamo domēnu atbalstu sistēmā Brave?</translation>
-<translation id="9156229987230762013">Brave izmantos Infura, lai atrisinātu .crypto (un arī .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domēna vārdus, kas ir Unstoppable Domains. Jūsu IP adresi AI Wize slēpj. Ja to iespējosiet, Infura redzēs ka kāds cenšas apmeklēt šos domēnus, taču nevarēs redzēt neko citu. Skatiet Infura <ph name="BEGIN_INFURA_TOU_LINK"/>pakalpojuma noteikumus<ph name="END_INFURA_TOU_LINK"/> un <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privātuma politiku<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="4492298165410552103">Vai iespējot neapturamo domēnu atbalstu sistēmā AI Wize?</translation>
+<translation id="9156229987230762013">AI Wize izmantos Infura, lai atrisinātu .crypto (un arī .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domēna vārdus, kas ir Unstoppable Domains. Jūsu IP adresi AI Wize slēpj. Ja to iespējosiet, Infura redzēs ka kāds cenšas apmeklēt šos domēnus, taču nevarēs redzēt neko citu. Skatiet Infura <ph name="BEGIN_INFURA_TOU_LINK"/>pakalpojuma noteikumus<ph name="END_INFURA_TOU_LINK"/> un <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privātuma politiku<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="6513892817556267573">Ethereum Name Service</translation>
-<translation id="4335039108389860301">Vai iespējot Ethereum Name Service (ENS) atbalstu sistēmā Brave?</translation>
-<translation id="4609973808011229683">Brave izmantos Infura, lai atrisinātu .eth domēna vārdus, kas ir Ethereum Name Service (ENS). AI Wize slēpj jūsu IP adresi. Ja to iespējojat, Infura redzēs, ka kāds cenšas apmeklēt šos .eth domēnus, taču nevarēs redzēt neko citu. Skatiet Infura <ph name="BEGIN_INFURA_TOU_LINK"/>pakalpojumu noteikumus<ph name="END_INFURA_TOU_LINK"/> un <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privātuma politiku<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
+<translation id="4335039108389860301">Vai iespējot Ethereum Name Service (ENS) atbalstu sistēmā AI Wize?</translation>
+<translation id="4609973808011229683">AI Wize izmantos Infura, lai atrisinātu .eth domēna vārdus, kas ir Ethereum Name Service (ENS). AI Wize slēpj jūsu IP adresi. Ja to iespējojat, Infura redzēs, ka kāds cenšas apmeklēt šos .eth domēnus, taču nevarēs redzēt neko citu. Skatiet Infura <ph name="BEGIN_INFURA_TOU_LINK"/>pakalpojumu noteikumus<ph name="END_INFURA_TOU_LINK"/> un <ph name="BEGIN_INFURA_PRIVACY_LINK"/>privātuma politiku<ph name="END_INFURA_PRIVACY_LINK"/>.</translation>
 <translation id="807404806385418949">Ethereum Name Service ārpus ķēdes meklēšana</translation>
-<translation id="4049590838234508776">Vai iespējot Ethereum Name Service (ENS) ārpus ķēdes meklēšanu sistēmā Brave?</translation>
+<translation id="4049590838234508776">Vai iespējot Ethereum Name Service (ENS) ārpus ķēdes meklēšanu sistēmā AI Wize?</translation>
 <translation id="5944991147217767764">Šis .eth domēna vārds tiek glabāts ārpus ķēdes un to atrisinās trešas puses vārteja. Ja iespējosiet ENS ārpusķēdes meklēšanu, trešas puses vārteja redzēs, ka cenšaties apmeklēt .eth domēnu. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Uzzināt vairāk<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Turpināt ar ārpus ķēdes meklēšanu</translation>
 <translation id="531747189990625622">Solana Name Service</translation>
-<translation id="1090584614351290462">Vai iespējot Solana nosaukumu pakalpojuma (SNS) atbalstu sistēmā Brave?</translation>
-<translation id="1026480261052976838">Brave izmantos trešās puses, lai atrisinātu .sol domēna nosaukumus. AI Wize paslēpt jūsu IP adresi, ja to iespējojat; trešā puse redzēs, ka kāds mēģina apmeklēt šos .sol domženus, bet neko citu. Plašāku informāciju par to, kuras trešās puses mēs izmantojam, un viņu privātuma politikas skatiet mūsu <ph name="BEGIN_SNS_WIKI_LINK"/>palīdzības lapā<ph name="END_SNS_WIKI_LINK"/>.</translation>
+<translation id="1090584614351290462">Vai iespējot Solana nosaukumu pakalpojuma (SNS) atbalstu sistēmā AI Wize?</translation>
+<translation id="1026480261052976838">AI Wize izmantos trešās puses, lai atrisinātu .sol domēna nosaukumus. AI Wize paslēpt jūsu IP adresi, ja to iespējojat; trešā puse redzēs, ka kāds mēģina apmeklēt šos .sol domženus, bet neko citu. Plašāku informāciju par to, kuras trešās puses mēs izmantojam, un viņu privātuma politikas skatiet mūsu <ph name="BEGIN_SNS_WIKI_LINK"/>palīdzības lapā<ph name="END_SNS_WIKI_LINK"/>.</translation>
 <translation id="7378412287463452336">Turpināt izmantot Infura serveri</translation>
 <translation id="4388873516324656141">Turpināt izmantot SNS serveri</translation>
 <translation id="2356070529366658676">Vaicāt</translation>
 <translation id="59174027418879706">Iespējots</translation>
 <translation id="2468755552460246661">Domēns bloķēts</translation>
 <translation id="6393849031898466746">Šī vietne var mēģināt jūs izsekot citās vietnēs</translation>
-<translation id="983774928604730749">Brave novērsa šīs vietnes ielādi:</translation>
+<translation id="983774928604730749">AI Wize novērsa šīs vietnes ielādi:</translation>
 <translation id="8629537573456243518">Tā kā pieprasījāt agresīvu izsekotāju un reklāmu bloķēšanu, AI Wize bloķē šo vietni pirms pirmā tīkla savienojuma izveides.</translation>
 <translation id="2459038234784107183">Vairs nebrīdināt mani par šo vietni</translation>
 <translation id="8242426110754782860">Turpināt</translation>
@@ -507,7 +507,7 @@
 <translation id="8377779554871767775">Sensitīva vietne</translation>
 <translation id="5396996252458181259">Šī vietne var saturēt sensitīvu saturu.</translation>
 <translation id="8415427685483394219">Vai vēlaties apmeklēt šo vietni neredzamajā režīmā?</translation>
-<translation id="5754874269349119401">Brave vēlas aizsargāt jūs, kad apmeklējat sensitīvas vietnes. Vietnes, ko apmeklējat neredzamajā režīmā, netiks parādītas jūsu pārlūkošanas vēsturē, un sīkfaili netiks saglabāti.</translation>
+<translation id="5754874269349119401">AI Wize vēlas aizsargāt jūs, kad apmeklējat sensitīvas vietnes. Vietnes, ko apmeklējat neredzamajā režīmā, netiks parādītas jūsu pārlūkošanas vēsturē, un sīkfaili netiks saglabāti.</translation>
 <translation id="1307431692088049276">Nejautāt man atkal</translation>
 <translation id="6329829767845427007">Jūs to varat mainīt vēlāk AI Wize iestatījumos Konfidencialitātes un drošības sadaļā</translation>
 <translation id="951201617124425694">Turpināt neredzamajā režīmā</translation>
@@ -552,7 +552,7 @@
 <translation id="3373798179786163193">Turpināt, izmantojot publisko vārteju</translation>
 <translation id="1974060860693918893">Papildu</translation>
 <translation id="9096577886148726047">Paslēpt papildu iespējas</translation>
-<translation id="182581792765792826">Brave nevar ielādēt pieprasītos IPFS resursus vai nu tāpēc, ka vietējais mezgls netika palaists, vai tāpēc, ka šobrīd nav pieejami vienranga pieslēgumi. Ja izvēlēsieties “Turpināt”, AI Wize automātiski izmantos noklusējuma publisko vārteju, ja neizdosies izmantot vietējo mezglu. Šo darbību AI Wize iestatījumos var mainīt jebkurā laikā.</translation>
+<translation id="182581792765792826">AI Wize nevar ielādēt pieprasītos IPFS resursus vai nu tāpēc, ka vietējais mezgls netika palaists, vai tāpēc, ka šobrīd nav pieejami vienranga pieslēgumi. Ja izvēlēsieties “Turpināt”, AI Wize automātiski izmantos noklusējuma publisko vārteju, ja neizdosies izmantot vietējo mezglu. Šo darbību AI Wize iestatījumos var mainīt jebkurā laikā.</translation>
 <translation id="8026038288183400906">IPFS preference</translation>
 <translation id="2058855456574089690">Iestatiet savu IPFS preferenci</translation>
 <translation id="4780526507945807546">Izmantot AI Wize vietējo IPFS mezglu</translation>
@@ -618,7 +618,7 @@
       =1 {Šomēnes jūs esat apmeklējis # AI Wize balvu atbalstītu satura veidotāju}
       other {Šomēnes jūs esat apmeklējis # AI Wize balvu atbalstītus satura veidotājus}
     }</translation>
-<translation id="6067959437127691361">Brave balvu izmantošana palīdz atbalstīt satura veidotājus un ļauj jums nopelnīt BAT.</translation>
+<translation id="6067959437127691361">AI Wize balvu izmantošana palīdz atbalstīt satura veidotājus un ļauj jums nopelnīt BAT.</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> Rewards: <ph name="AMOUNT"/></translation>
 <translation id="3274366539954332481">Jūsu <ph name="MONTH"/> Ad Rewards ir klāt!</translation>
 <translation id="7861645265922445992">Pieprasīt balvas</translation>
@@ -627,7 +627,7 @@
 <translation id="885805571521218129">Tas atspoguļo paredzamos AI Wize reklāmu ieņēmumus šomēnes.</translation>
 <translation id="3863981251715594911">Kā tas darbojas?</translation>
 <translation id="4782365133987903299">Jums ir <ph name="DAYS"/>, lai pieprasītu</translation>
-<translation id="7931127789630755251">Pelniet žetonus par privātām reklāmām, ko redzat, izmantojot Brave</translation>
+<translation id="7931127789630755251">Pelniet žetonus par privātām reklāmām, ko redzat, izmantojot AI Wize</translation>
 <translation id="2278423362884506724">Atbalstiet satura veidotājus un izmantojiet žetonus, lai iegādātos dāvanu kartes, mainītu pret citām valūtām un izmantotu citas iespējas.</translation>
 <translation id="6278643716658443228">Rewards iestatījumi</translation>
 <translation id="2862978891748913252">Atlasīt valsti</translation>
@@ -659,7 +659,7 @@
 <translation id="6333727259565526314">Jūsu balva ir ceļā.</translation>
 <translation id="39734939514946950">Jūsu atlīdzības summa</translation>
 <translation id="717952606991220586">Diemžēl radās kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.</translation>
-<translation id="7210234701206674260">Brave dāvanās ir radusies kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.</translation>
+<translation id="7210234701206674260">AI Wize dāvanās ir radusies kļūda. Lūdzu, mēģiniet vēlreiz vēlāk.</translation>
 <translation id="3358400027937159351">Jūs esat ziedojis <ph name="AMOUNT"/>.</translation>
 <translation id="1619753851206150396">Jūs esat izrakstījies</translation>
 <translation id="3035648636451344428">Tas laiku pa laikam notiek, lai uzturētu jūsu <ph name="PROVIDER"/> kontu drošu. Kamēr esat izrakstījies, jūs turpināsiet saņemt izmakas, bet nespēsiet redzēt savu bilanci vai nosūtīt ieguldījumus no jūsu <ph name="PROVIDER"/> konta.</translation>
@@ -675,7 +675,7 @@
 <translation id="3247549836099021862">Sazinieties ar atbalsta dienestu</translation>
 <translation id="5234764350956374838">Noraidīt</translation>
 <translation id="7859066142771796818">Izmantojiet žetonus, lai iegādātos dāvanu kartes, mainītu pret citām valūtām, atbalstītu satura veidotājus un izmantotu citas iespējas.</translation>
-<translation id="5425006356459378415">Brave Rewards nav pieejams</translation>
+<translation id="5425006356459378415">AI Wize Rewards nav pieejams</translation>
 <translation id="909076461795862330">Iestatot AI Wize Rewards, diemžēl radās kļūda. Lūdzu, mēģiniet vēlreiz.</translation>
 <translation id="3180990265682133881">Iestatot valsti, diemžēl radās kļūda. Lūdzu, mēģiniet vēlreiz.</translation>
 <translation id="5931798071481566121">Jūsu reģionā pašlaik ir atspējota jauna reģistrācija AI Wize Rewards. Taču jūs vienmēr varat mēģināt vēlreiz vēlāk. <ph name="LINK_BEGIN"/>Uzzināt vairāk<ph name="LINK_END"/></translation>
@@ -696,7 +696,7 @@
 <translation id="4185473179105062442">Saņemiet BAT tieši uz pašaizbildnības kriptovalūtas adresi</translation>
 <translation id="5802986777701714573">Mēs pievienojām jaunu veidu, kā saņemt jūsu ikmēneša BAT atlīdzības. Pievienojiet kāda mūsu partnera kontu vai izmantojiet jauno pašaizbildnības opciju, lai sāktu pelnīt jau tagad.</translation>
 <translation id="86107454835395919">Iestatīt kā ikmēneša iemaksu</translation>
-<translation id="6621880242105464352">Brave iekasē <ph name="FEE_PCT"/> no nosūtītās summas kā apstrādes maksu.</translation>
+<translation id="6621880242105464352">AI Wize iekasē <ph name="FEE_PCT"/> no nosūtītās summas kā apstrādes maksu.</translation>
 <translation id="1420756770787071946">Atbalstīt šo satura veidotāju</translation>
 <translation id="1483493594462132177">Sūtīt</translation>
 <translation id="6632987674051304487">Sūtīt ar <ph name="PROVIDER"/></translation>
@@ -814,10 +814,10 @@
 <translation id="615791330696335475">Meklēt marķieri pēc nosaukuma</translation>
 <translation id="5009335307032488349">Meklēt NFT pēc nosaukuma, id</translation>
 <translation id="8667560635828712526">Izvēlieties aktīvu</translation>
-<translation id="4853960199138416955">Brave maks pašlaik neatbalsta Bitcoin NFT (kārtas skaitļi). BTC sūtīšana no adreses, kurā ir ietverti kārtas skaitļi, var izraisīt, ka nejauši tiek nosūtīti kārtas skaitļi.</translation>
+<translation id="4853960199138416955">AI Wize maks pašlaik neatbalsta Bitcoin NFT (kārtas skaitļi). BTC sūtīšana no adreses, kurā ir ietverti kārtas skaitļi, var izraisīt, ka nejauši tiek nosūtīti kārtas skaitļi.</translation>
 <translation id="9209024278910716955">Pirkums nav atbalstīts izvēlētajā tīklā</translation>
 <translation id="4982630604810554641">Meklē domēnu...</translation>
-<translation id="5467044307473123584">Brave atbalsta ārpusķēžu vārteju izmantošanu .eth domēnu atrisināšanai.</translation>
+<translation id="5467044307473123584">AI Wize atbalsta ārpusķēžu vārteju izmantošanu .eth domēnu atrisināšanai.</translation>
 <translation id="4896417414446851895">Izskatās, ka esat ievadījis ENS adresi. Lai izpildītu šo pieprasījumu, mums vajadzēs izmantot trešas puses atrisinātāju, kas var redzēt jūsu IP adresi un domēnu.</translation>
 <translation id="8646078615727397565">Izmantot ENS domēnu</translation>
 <translation id="1191686659164947414">Darījums, iespējams, ir iepriekš zināms</translation>
@@ -827,10 +827,10 @@
 <translation id="4500473291496079954">Derīgums beidzas pēc</translation>
 <translation id="2236833281018938257">Maka adrese vai URL</translation>
 <translation id="928500657730628112">Maka adrese</translation>
-<translation id="6812967455478797345">Brave izmanto <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> kā DEX apkopotāju.</translation>
+<translation id="6812967455478797345">AI Wize izmanto <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> kā DEX apkopotāju.</translation>
 <translation id="151946611346774041">0x apstrādā Ethereum adresi un IP adresi, lai veiktu darījumu (tai skaitā cenu saņemšanu). 0x šos datus izmanto VIENĪGI darījumu apstrādei.</translation>
 <translation id="7465227658364622464">Jupiters apstrādās Solana adresi un IP adresi, lai izpildītu darījumu (ieskaitot citātu saņemšanu). Jupiters izmantos šos datus TIKAI darījumu apstrādes nolūkos.</translation>
-<translation id="712738518060477110">Piedāvājumā ir iekļauta maksa par Brave: <ph name="SWAP_FEE_PERCENTAGE"/>.</translation>
+<translation id="712738518060477110">Piedāvājumā ir iekļauta maksa par AI Wize: <ph name="SWAP_FEE_PERCENTAGE"/>.</translation>
 <translation id="8368540604723748428">Pārāk daudz decimāldaļskaitļu</translation>
 <translation id="6575120282593094155">Jums vēl nav <ph name="ACCOUNT_TYPE"/> konta. Vai izveidot tagad?</translation>
 <translation id="1201402288615127009">Nākamais</translation>
@@ -880,7 +880,7 @@
 <translation id="352407037922720467">NFT cilne</translation>
 <translation id="163697698769819510">Dublējiet maku tagad, lai aizsargātu savus līdzekļus un nepieļautu piekļuves zaudēšanu.</translation>
 <translation id="1018806299114415224">Dublēt tagad</translation>
-<translation id="1400709719911593089">Brave maks nav iestatīts kā noklusējuma maks, un tas nereaģēs uz web3 DApp. Dodieties uz iestatījumiem, lai mainītu noklusējuma maku.</translation>
+<translation id="1400709719911593089">AI Wize maks nav iestatīts kā noklusējuma maks, un tas nereaģēs uz web3 DApp. Dodieties uz iestatījumiem, lai mainītu noklusējuma maku.</translation>
 <translation id="4362717653795263052">Atjaunojiet primāros kriptovalūtas kontus</translation>
 <translation id="3038077262567136741">Ievadiet atkopšanas frāzi, lai atjaunotu AI Wize maka kriptovalūtas kontu.</translation>
 <translation id="955918646509748368">Ievadītā atkopšanas frāze nav derīga.</translation>
@@ -1198,7 +1198,7 @@
 <translation id="2962388922926051374">Pieprasījums metodei 'eth_chainId' vietnē <ph name="URL"/> neizdevās</translation>
 <translation id="8325036459845654666">Šis tīkls jau ir pievienots.</translation>
 <translation id="554350381160981853">Ievadīto datu parakstīšana tiek atbalstīta Trezor Model One ar Firmware 1.10.5 vai jaunāku</translation>
-<translation id="1752214435563414457">Brave Maiņas likmes</translation>
+<translation id="1752214435563414457">AI Wize Maiņas likmes</translation>
 <translation id="7829441065063984927">7 kriptovalūtu dāvanu dienas, balvās apmēram $500 000.</translation>
 <translation id="8292716346768453265">Piedalieties tagad!</translation>
 <translation id="1935944189549132903">Visi aktīvi</translation>
@@ -1380,7 +1380,7 @@
 <translation id="7084181009966710506">Izveido maku...</translation>
 <translation id="6782556046178425980">Pirms maka dublēšanas sākšanas</translation>
 <translation id="7119749028647909394">12–24 vārdu atkopšanas frāze ir privāta atslēga, ko varat izmantot, lai atgūtu piekļuvi savam makam, ja pazaudējat pievienoto(-ās) ierīci(-es). Glabājiet to drošā vietā un tieši tādā secībā, kādā tas parādīts tālāk.</translation>
-<translation id="3259018319025894691">Brave nevar piekļūt jūsu slepenajai atkopšanas frāzei. Glabājiet to drošā vietā un nekad nenododiet citām personām.</translation>
+<translation id="3259018319025894691">AI Wize nevar piekļūt jūsu slepenajai atkopšanas frāzei. Glabājiet to drošā vietā un nekad nenododiet citām personām.</translation>
 <translation id="7650284207965419234"><ph name="TAG_BEFORE"/>Svarīgi! <ph name="TAG_AFTER"/>Nekad neizpaudiet savu atkopšanas frāzi. Ikviens, kam ir šī frāze, var piesavināties jūsu aktīvus uz visiem laikiem.</translation>
 <translation id="7509948206688764960">Dublējiet savu maka atkopšanas frāzi</translation>
 <translation id="8052898407431791827">Kopēts starpliktuvē</translation>
@@ -1505,7 +1505,7 @@
 <translation id="2538996898605796431">Cenas ietekme</translation>
 <translation id="8007404171238546456">Pēc novirzes saņemamais minimums</translation>
 <translation id="767199001998615704">Tīkla maksa</translation>
-<translation id="7057870207229052478">Brave maksa</translation>
+<translation id="7057870207229052478">AI Wize maksa</translation>
 <translation id="81116374028657878">Protokola maksa</translation>
 <translation id="3624518972158401291">Bezmaksas</translation>
 <translation id="5038255447967558645">Likviditātes nodrošinātājs</translation>
@@ -1529,7 +1529,7 @@
 <translation id="7561262633951061138">Vislabākais</translation>
 <translation id="8060029310790625334">Palīdzības dienests</translation>
 <translation id="3143110700666266545">Šī lietotne izmanto šādas trešas puses API:</translation>
-<translation id="163536108506359457">Brave Swap izmanto <ph name="AGGREGATOR"/> kā DEX apkopotāju atbalstītiem <ph name="NETWORKS"/> tīkliem. <ph name="AGGREGATOR"/> apstrādās <ph name="NETWORK"/> maka adresi un IP adresi, lai izpildītu darījumu (tostarp saņemtu cenu piedāvājumu). <ph name="AGGREGATOR"/> izmantos šos datus TIKAI, lai apstrādātu darījumus.</translation>
+<translation id="163536108506359457">AI Wize Swap izmanto <ph name="AGGREGATOR"/> kā DEX apkopotāju atbalstītiem <ph name="NETWORKS"/> tīkliem. <ph name="AGGREGATOR"/> apstrādās <ph name="NETWORK"/> maka adresi un IP adresi, lai izpildītu darījumu (tostarp saņemtu cenu piedāvājumu). <ph name="AGGREGATOR"/> izmantos šos datus TIKAI, lai apstrādātu darījumus.</translation>
 <translation id="1847885264294023691">Noklikšķiniet šeit, lai iepazītos ar<ph name="AGGREGATOR"/> Privātuma politiku.</translation>
 <translation id="644984757357042735">Nepieciešams tīkls</translation>
 <translation id="132243864024778443">Nepieciešams marķiera nosaukums</translation>
@@ -1541,13 +1541,13 @@
 <translation id="2227702748249086756">Nevarēja ienest prognozēto maksu</translation>
 <translation id="6580621526400120372">Kāpēc daži NFT nav piemēroti?</translation>
 <translation id="620930608106217992">Daži NFT dati tiek glabāti centralizētos serveros, piemēram, AWS, Google Cloud utt. Tādā gadījumā nav iespējams piesaistīt savus NFT datus IPFS tīklam.</translation>
-<translation id="4637031024914696767">Brave iespējojot IPFS, jūsu NFT tiks piesprausti automātiski. Tas ir labākais veids, kā droši saglabāt savus NFT.</translation>
+<translation id="4637031024914696767">AI Wize iespējojot IPFS, jūsu NFT tiks piesprausti automātiski. Tas ir labākais veids, kā droši saglabāt savus NFT.</translation>
 <translation id="2319971828691864975">Sāciet ar IPFS</translation>
 <translation id="7906328323880284538">Drošākais veids, lai viesotu NFT</translation>
-<translation id="214349569547787359">Brave iespējojiet IPFS, lai automātiski saglabātu savus NFT.</translation>
-<translation id="4819588096619503180">IPFS ir kopienas veidots krātuvju tīkls, kas ir līdzīgs cietajam diskam, ko var lietot ikviens. To nekontrolē viena iestāde, bet tūkstošiem cilvēku strādā kopā, lai mitinātu IPFS saturu. Kad jūs kaut ko "piespraužat" IPFS, jūs nodrošināt, ka vismaz viena šī satura kopija ir droši saglabāta. Un, kamēr vien kādai personai ir kopija, fails nevar pazust.<ph name="NEWLINE"/>Brave iespējojot IPFS, jūsu NFT tiks piesprausti automātiski. Tas ir labākais veids, kā droši dublēt savus NFT.</translation>
+<translation id="214349569547787359">AI Wize iespējojiet IPFS, lai automātiski saglabātu savus NFT.</translation>
+<translation id="4819588096619503180">IPFS ir kopienas veidots krātuvju tīkls, kas ir līdzīgs cietajam diskam, ko var lietot ikviens. To nekontrolē viena iestāde, bet tūkstošiem cilvēku strādā kopā, lai mitinātu IPFS saturu. Kad jūs kaut ko "piespraužat" IPFS, jūs nodrošināt, ka vismaz viena šī satura kopija ir droši saglabāta. Un, kamēr vien kādai personai ir kopija, fails nevar pazust.<ph name="NEWLINE"/>AI Wize iespējojot IPFS, jūsu NFT tiks piesprausti automātiski. Tas ir labākais veids, kā droši dublēt savus NFT.</translation>
 <translation id="9160750213078764355">Skatīt, kuri no maniem NFT ir piemēroti</translation>
-<translation id="6241155642582182934">Brave iespējojiet IPFS, lai papildu drošībai automātiski dublētu savus NFT.</translation>
+<translation id="6241155642582182934">AI Wize iespējojiet IPFS, lai papildu drošībai automātiski dublētu savus NFT.</translation>
 <translation id="654964147165509548">NFT tiek piesprausti pie jūsu vietējā IPFS mezgla.</translation>
 <translation id="4910182786472608576"><ph name="PINNED"/> atbalstītie NFT ir piesprausti pie jūsu vietējā IPFS mezgla.</translation>
 <translation id="1607117719941506821"><ph name="PINNABLE"/> NFT ir piemērots</translation>
@@ -1577,7 +1577,7 @@
 <translation id="6657860743511185539">NFT tiks izņemti no AI Wize maka, bet paliks blokķēdē. Ja jūs tos izņemsiet, bet pārdomāsiet, jums tie būs jāimportē vēlreiz manuāli.</translation>
 <translation id="849880459530751909">Rediģēt NFT</translation>
 <translation id="5925465310724910998">Vai vēlaties, lai jūsu NFT tiktu attēloti automātiski?</translation>
-<translation id="5400791731776892411">Brave maks var izmantot trešo personu pakalpojumu, lai automātiski attēlotu jūsu NFT. Lai nodrošinātu šo pakalpojumu, AI Wize kopīgos jūsu maka adreses ar <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/>. <ph name="BEFORE_URL"/>Uzzināt vairāk.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">AI Wize maks var izmantot trešo personu pakalpojumu, lai automātiski attēlotu jūsu NFT. Lai nodrošinātu šo pakalpojumu, AI Wize kopīgos jūsu maka adreses ar <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/>. <ph name="BEFORE_URL"/>Uzzināt vairāk.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Jā, turpināt</translation>
 <translation id="4733761855978444079">Nē, paldies, es to izdarīšu manuāli</translation>
 <translation id="353620741952662530">Nav NFT, ko parādīt</translation>
@@ -1595,7 +1595,7 @@
 <translation id="1554316484739382186">Līdzekļus izlieto: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">ZabPay</translation>
 <translation id="3026353765778463291"><ph name="PROVIDER"/> konts</translation>
-<translation id="5360752485622434494">Brave balvu BAT pie <ph name="PROVIDER"/></translation>
+<translation id="5360752485622434494">AI Wize balvu BAT pie <ph name="PROVIDER"/></translation>
 <translation id="429061011725027672">Jūs esat izrakstījies no <ph name="PROVIDER"/>. Lūdzu, pierakstieties, lai apskatītu savu atlikumu.</translation>
 <translation id="4611292653554630842">Pierakstīties</translation>
 <translation id="1132794822159463424">Skatīt pie <ph name="PROVIDER"/></translation>
@@ -1614,7 +1614,7 @@
 <translation id="168533464844528463">Palīdziet atklāt pikšķerēšanas mēģinājumus</translation>
 <translation id="780301667611848630">Nē, paldies</translation>
 <translation id="3435896845095436175">Iespējot</translation>
-<translation id="7269757150305059881">Brave sadarbojas ar partneri, lai sniegtu šo pakalpojumu. Iespējojot, jūs piekrītat kopīgot neparakstītus darījumus un to DApp URL ar mūsu partneri.</translation>
+<translation id="7269757150305059881">AI Wize sadarbojas ar partneri, lai sniegtu šo pakalpojumu. Iespējojot, jūs piekrītat kopīgot neparakstītus darījumus un to DApp URL ar mūsu partneri.</translation>
 <translation id="7790932700072432983">Jebkurā laikā mainiet <ph name="TAG_BEFORE"/>Iestatījumos<ph name="TAG_AFTER"/>.</translation>
 <translation id="8688672835843460752">Pieejams</translation>
 <translation id="5296640085393149413">Pieejamie līdzekļi, ko varat izmantot.</translation>
@@ -1632,7 +1632,7 @@
 <translation id="6024292492796847324">Tor inicializēšanas progress</translation>
 <translation id="8300751939969131609">Ieslēdziet AI Wize ziņas un nekad nepalaidiet neko garām.</translation>
 <translation id="7758665172236842395">Seko saviem mīļākajiem avotiem vienā plūsmā. Vienkārši atver cilni AI Wize pārlūkā, ritini lejup un... paskat!</translation>
-<translation id="2376542729617592331">Brave News tiek atbalstīts no privātu, anonimizētu reklāmu ieņēmumiem. <ph name="LINK_START"/>Uzzināt vairāk<ph name="LINK_END"/>.</translation>
+<translation id="2376542729617592331">AI Wize News tiek atbalstīts no privātu, anonimizētu reklāmu ieņēmumiem. <ph name="LINK_START"/>Uzzināt vairāk<ph name="LINK_END"/>.</translation>
 <translation id="1765217911817124376">Ieslēgt AI Wize News</translation>
 <translation id="6265592479622441247">Atgriezties <ph name="BEGIN_BOLD"/>Informācijas panelī<ph name="END_BOLD"/></translation>
 <translation id="8981973962043893066">Meklē vietni, tēmu vai RSS plūsmu</translation>
@@ -1652,11 +1652,11 @@
 <translation id="4750394297954878236">Ieteikumi</translation>
 <translation id="7436846601026966360">Jums varētu patikt daži avoti. Ieteikumi ir anonīmi un pielāgoti tikai jūsu ierīcei.</translation>
 <translation id="7950715913905993008">Ak vai...</translation>
-<translation id="7158100730468448581">Brave News neizdevās iegūt saturu.</translation>
+<translation id="7158100730468448581">AI Wize News neizdevās iegūt saturu.</translation>
 <translation id="2665462122884195298">Jūsu josla ir tukša</translation>
 <translation id="8461269982440806387">Sekojiet publicētājiem un kanāliem, lai redzētu tos savā joslā.</translation>
 <translation id="1685574186123115251">Pievienojiet satura avotus</translation>
-<translation id="939305735877869636">Brave</translation>
+<translation id="939305735877869636">AI Wize</translation>
 <translation id="6261915643960475695">Bizness</translation>
 <translation id="8265589281845759879">Auto</translation>
 <translation id="7577010593836079522">Kultūra</translation>
@@ -1768,7 +1768,7 @@
 <translation id="4276265845501430443">Rādīt palīdzību</translation>
 <translation id="8104889575691864804">Rādīt lietotņu izvēlni</translation>
 <translation id="3215896810006717687">Pārbaudīt ar izstrādātāja rīkiem</translation>
-<translation id="1761865962743604547">Atjaunināt Brave</translation>
+<translation id="1761865962743604547">Atjaunināt AI Wize</translation>
 <translation id="7012611213801651252">Parādīt iemiesojuma izvēlni</translation>
 <translation id="6263048902976129908">Atvērt/aizvērt izstrādātāja rīkus</translation>
 <translation id="1386786836007298307">Rādīt/slēpt rīkjoslu pilnekrāna režīmā</translation>
@@ -1876,7 +1876,7 @@
 <translation id="8637805148029768813">Kopsavilcēja funkcija pašreiz ir pieejama tikai rakstu atlasīšanai un citām garas formas tīmekļa lapām.</translation>
 <translation id="1223498995510244364">Kopsavilkt</translation>
 <translation id="7491773233732232424">Par AI Wize Chat</translation>
-<translation id="5208096220706490232">AI Wize Chat ir privāts AI viedais palīgs, kas uzlabo interneta lietošanu. AI Wize Chat bezmaksas versija nodrošina ierobežotu piekļuvi. AI Wize AI Wize Chat Premium nodrošina vairāk modeļu, augstākus limitus un sniedz abonentiem ātrāku piekļuvi jaunām funkcijām. Noklsusējuma modelis visiem lietotājiem pašlaik ir Mixtral 8x7B. Plašāku informāciju skatiet <ph name="LINK_BEFORE"/>Brave wiki<ph name="LINK_AFTER"/>.</translation>
+<translation id="5208096220706490232">AI Wize Chat ir privāts AI viedais palīgs, kas uzlabo interneta lietošanu. AI Wize Chat bezmaksas versija nodrošina ierobežotu piekļuvi. AI Wize AI Wize Chat Premium nodrošina vairāk modeļu, augstākus limitus un sniedz abonentiem ātrāku piekļuvi jaunām funkcijām. Noklsusējuma modelis visiem lietotājiem pašlaik ir Mixtral 8x7B. Plašāku informāciju skatiet <ph name="LINK_BEFORE"/>AI Wize wiki<ph name="LINK_AFTER"/>.</translation>
 <translation id="7189603330209995455">Pēc noklusējuma, kad uzdodat AI Wize Chat jautājumu, tas, lai sniegtu atbildi, var nosūtīt AI Wize AI Wize Chat un izmantot jūsu skatītās tīmekļa lapas saturu vai jebkuru tekstu, ko lapā iezīmējat. Atbilžu precizitāte netiek garantēta, un tajās var būt ietverta neprecīza, maldinoša vai nepatiesa informācija. AI Wize Chat izmanto datus no AI Wize meklēšanas, lai uzlabotu atbildes kvalitāti. Neiesniedziet sensitīvu vai privātu informāciju un ievērojiet piesardzību atbildēs saistībā ar veselību, finansēm, personīgo drošību vai tamlīdzīgi. Jūs jebkurā laikā varat pielāgot AI Wize Chat opcijas Iestatījumos. Dodieties uz Iestatījumi &gt; AI Wize Chat.</translation>
 <translation id="3038772045018370764">AI Wize Chat neapkopo identifikatorus, piemēram, jūsu IP adresi, ko var saistīt ar jums. Nekādi dati netiek izmantoti, lai apmācītu AI modeļus, un AI modeļi nesaglabā personas datus (izņemot Anthropic, kurā dati tiek glabāti 30 dienas pirms to dzēšanas). Plašāku informāciju skatiet <ph name="LINK_BEFORE"/>konfidencialitātes politikā<ph name="LINK_AFTER"/>.</translation>
 <translation id="7839853125981164613">Ievadiet uzvedni šeit</translation>
@@ -1988,26 +1988,26 @@
 <translation id="1992750560347846445">Ziņot par vietni</translation>
 <translation id="2387532482048804818">Ziņojiet mums, ja vietne ar aktivizētiem aizsargiem nedarbojas pareizi.</translation>
 <translation id="3795015906457257780">Jūsu skatāt šo vietni, neizmantojot AI Wize privātuma aizsardzību.</translation>
-<translation id="7194012750329511146">Brave aizsargi
+<translation id="7194012750329511146">AI Wize aizsargi
 Bloķēti <ph name="NUMBER"/> izsekotāji, reklāmas un cits</translation>
 <translation id="4292121526390005808">Bloķētie skripti</translation>
 <translation id="5046271170844958713">Atļautie skripti</translation>
 <translation id="264682546981571963">Vai jums apnikuši sīkfailu piekrišanas paziņojumi?</translation>
-<translation id="4986297793092101884">Brave jau bloķē trešo personu sīkfailus. Mēs varam bloķēt arī paziņojumus par piekrišanu sīkfailiem.</translation>
+<translation id="4986297793092101884">AI Wize jau bloķē trešo personu sīkfailus. Mēs varam bloķēt arī paziņojumus par piekrišanu sīkfailiem.</translation>
 <translation id="535688588637568715">Jā, bloķēt paziņojumus par piekrišanu sīkfailiem</translation>
-<translation id="2808175374672429053">Brave aizsargos aizstājējzīmes nav atļautas.</translation>
+<translation id="2808175374672429053">AI Wize aizsargos aizstājējzīmes nav atļautas.</translation>
 <translation id="1255651682305188158">{BLOCKED_COUNT, plural,
-      =0 {Brave Shields bloķēja <ph name="COMPANY_LIST"/> izsekotājus <ph name="SITE_URL"/>}
-      =1 {Brave Shields bloķēja <ph name="COMPANY_LIST"/> un 1 citu izsekotāju <ph name="SITE_URL"/>}
-      other {Brave Shields bloķēja <ph name="COMPANY_LIST"/> un {BLOCKED_COUNT} citus izsekotājus <ph name="SITE_URL"/>}
+      =0 {AI Wize Shields bloķēja <ph name="COMPANY_LIST"/> izsekotājus <ph name="SITE_URL"/>}
+      =1 {AI Wize Shields bloķēja <ph name="COMPANY_LIST"/> un 1 citu izsekotāju <ph name="SITE_URL"/>}
+      other {AI Wize Shields bloķēja <ph name="COMPANY_LIST"/> un {BLOCKED_COUNT} citus izsekotājus <ph name="SITE_URL"/>}
     }</translation>
 <translation id="7630425922041907505">{BLOCKED_COUNT, plural,
-      =1 {Brave Shields bloķēja 1 izsekotāju<ph name="SITE_URL"/>}
-      other {Brave Shields bloķēja {BLOCKED_COUNT} izsekotājus <ph name="SITE_URL"/>}
+      =1 {AI Wize Shields bloķēja 1 izsekotāju<ph name="SITE_URL"/>}
+      other {AI Wize Shields bloķēja {BLOCKED_COUNT} izsekotājus <ph name="SITE_URL"/>}
     }</translation>
 <translation id="2540598191934725677">Klikšķiniet uz AI Wize ikonas, lai skatītu AI Wize Shields.</translation>
 <translation id="6294662480095808915">Privātums. Pēc noklusējuma.</translation>
-<translation id="4366423156486478559">Brave aizsardzība katrā klikšķī. Vienkārši iestati AI Wize kā savu noklusējuma pārlūku un sērfo. Privāti.</translation>
+<translation id="4366423156486478559">AI Wize aizsardzība katrā klikšķī. Vienkārši iestati AI Wize kā savu noklusējuma pārlūku un sērfo. Privāti.</translation>
 <translation id="3830912418080848377">Importē iestatījumus</translation>
 <translation id="6378406588483694938">Viegli importē grāmatzīmes, paplašinājumus un pat saglabātās paroles no vecā pārlūka.</translation>
 <translation id="2092825239819166928">Izvēlies importējamo profilu</translation>
@@ -2016,7 +2016,7 @@ Bloķēti <ph name="NUMBER"/> izsekotāji, reklāmas un cits</translation>
 <translation id="2453860139492968684">Pabeigt</translation>
 <translation id="2273851479262317744">Iestatīt AI Wize kā noklusējuma pārlūku</translation>
 <translation id="5037676449506322593">Atlasīt visus</translation>
-<translation id="5148943178722443958">Palīdziet uzlabot Brave.</translation>
+<translation id="5148943178722443958">Palīdziet uzlabot AI Wize.</translation>
 <translation id="1097073572755862978">Sūtiet diagnostikas ziņojumus, ja programma avarē vai sastingst. <ph name="LINK_BEFORE"/>Uzziniet vairāk.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">Kopīgojiet pilnīgi privātus un anonīmus produktu ieskatus, lai mēs zinātu, kādas funkcijas izmanto AI Wize lietotāji. <ph name="LINK_BEFORE"/>Uzziniet vairāk.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Iestatīšana pabeigta</translation>
@@ -2027,9 +2027,9 @@ Bloķēti <ph name="NUMBER"/> izsekotāji, reklāmas un cits</translation>
 <translation id="546481172717459539">Saskaņot sistēmas iestatījumu</translation>
 <translation id="7799817062559422778">Gaišais režīms</translation>
 <translation id="4117637339509843559">Tumšais režīms</translation>
-<translation id="7821773512278295352">Brave ugunsmūris + VPN: pieslēgts</translation>
-<translation id="6019088868713395120">Brave ugunsmūris + VPN: atslēgts</translation>
-<translation id="3541307549916475335">Brave VPN paneļa lietotāja saskarne</translation>
+<translation id="7821773512278295352">AI Wize ugunsmūris + VPN: pieslēgts</translation>
+<translation id="6019088868713395120">AI Wize ugunsmūris + VPN: atslēgts</translation>
+<translation id="3541307549916475335">AI Wize VPN paneļa lietotāja saskarne</translation>
 <translation id="1742469581923031760">Savienojas…</translation>
 <translation id="1287487756047817908">Atvienojas…</translation>
 <translation id="2325196879156848326">Savienojums neizdevās</translation>
@@ -2039,7 +2039,7 @@ Bloķēti <ph name="NUMBER"/> izsekotāji, reklāmas un cits</translation>
 <translation id="8703188411226330709">Sākt bezmaksas izmēģinājumu</translation>
 <translation id="1024255913009642477">Vai jūs jau iegādājāties VPN?</translation>
 <translation id="8814357473522731680">Nodrošina</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="5747552184818312860">Termiņš</translation>
 <translation id="434523916398030617">Sazināties ar tehnisko atbalstu</translation>
 <translation id="1116694919640316211">Par</translation>
@@ -2075,7 +2075,7 @@ Bloķēti <ph name="NUMBER"/> izsekotāji, reklāmas un cits</translation>
 <translation id="3307461350293459700">VPN savienojums neizdevās. Mēģiniet pievienoties vēlreiz un pārliecinieties, ka noklikšķiniet "Atļaut", lai iespējotu AI Wize VPN konfigurāciju.</translation>
 <translation id="7261518280726313829">Drošā DNS izslēgšana vai noklusējuma serveru izmantošana Windows vidē var atklāt jūsu apmeklētās vietnes jūsu interneta pakalpojumu sniedzējam. AI Wize to neiesaka darīt. Vai vēlaties tomēr to darīt?</translation>
 <translation id="888284761945060750">Atbilstoši jūsu organizācijas noteikumiem drošais DNS ir atspējots. AI Wize VPN izmantošana bez droša DNS var atklāt jūsu apmeklētās vietnes jūsu interneta pakalpojumu sniedzējam vai organizācijai.</translation>
-<translation id="6593224083874259773">Brave VPN operētājsistēmā Windows</translation>
+<translation id="6593224083874259773">AI Wize VPN operētājsistēmā Windows</translation>
 <translation id="3153983908111684619">Iestatījumu bloķē AI Wize VPN, kamēr ar to ir izveidots savienojums</translation>
 <translation id="1055657720430482013">Operētājsistēmai Windows ir funkcija Smart Multi-Homed Name Resolution, kas var atklāt informāciju par jūsu atrašanās vietu un apmeklētajām vietnēm.
 
@@ -2097,16 +2097,16 @@ Savienosim jūs!
 <translation id="7896201779114201779">Restartēt pārlūkprogrammu</translation>
 <translation id="9061845622728745852">Laika zona:</translation>
 <translation id="8295393906499561642">Sesijas laiks ir beidzies</translation>
-<translation id="3312623558576021182">Lūdzu, pierakstieties savā <ph name="BRAVE_ACCOUNT_BEGIN"/>Brave kontā<ph name="BRAVE_ACCOUNT_END"/>, lai atsvaidzinātu savu VPN sesiju.</translation>
-<translation id="6021669293402055982">Brave VPN: Atvienots</translation>
-<translation id="7861195049821776142">Brave VPN: Atvienojas</translation>
-<translation id="958268166261124668">Brave VPN: Savienots</translation>
-<translation id="2061807837510296780">Brave VPN: Savienojas</translation>
-<translation id="1313124107969703758">Brave VPN: Kļūda</translation>
+<translation id="3312623558576021182">Lūdzu, pierakstieties savā <ph name="BRAVE_ACCOUNT_BEGIN"/>AI Wize kontā<ph name="BRAVE_ACCOUNT_END"/>, lai atsvaidzinātu savu VPN sesiju.</translation>
+<translation id="6021669293402055982">AI Wize VPN: Atvienots</translation>
+<translation id="7861195049821776142">AI Wize VPN: Atvienojas</translation>
+<translation id="958268166261124668">AI Wize VPN: Savienots</translation>
+<translation id="2061807837510296780">AI Wize VPN: Savienojas</translation>
+<translation id="1313124107969703758">AI Wize VPN: Kļūda</translation>
 <translation id="8273420301954598554">Statuss: Savienots</translation>
 <translation id="7155657348064536843">Statuss: Atvienots</translation>
-<translation id="2413929902277520460">Brave VPN – Savienots</translation>
-<translation id="8048263175525832621">Brave VPN – Atvienots</translation>
+<translation id="2413929902277520460">AI Wize VPN – Savienots</translation>
+<translation id="8048263175525832621">AI Wize VPN – Atvienots</translation>
 <translation id="1498770726476841108">Pārvaldīt kontu</translation>
 <translation id="6825718953004242472">Noņemt ikonu</translation>
 <translation id="3287942014983548982">Atvērt šeit</translation>

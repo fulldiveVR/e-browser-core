@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Apsilankyti svetainėje</translation>
 <translation id="2759453070259087442">Išskleisti skirtukų grupę „<ph name="TITLE_OF_GROUP"/>“, kurioje yra tiek skirtukų: <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Peržiūrėti parduotuvės informaciją?</translation>
-<translation id="4691798003247738043">„Brave“ | Apie šią parduotuvę</translation>
+<translation id="4691798003247738043">„AI Wize“ | Apie šią parduotuvę</translation>
 <translation id="2977480621796371840">Pašalinti iš grupės</translation>
 <translation id="3008554597174452548">Stabdyti produkto stebėjimą</translation>
 <translation id="3052964831964880138">„<ph name="PRODUCT_NAME"/>“ <ph name="PRICE_DROP"/> kainos sumažėjimas</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Peržiūrėkite parduotuvės informaciją; parinktis pasiekiama ekrano viršuje</translation>
 <translation id="5558362125926932819">Uždaryti skirtukų grupę, kurioje yra tiek skirtukų: <ph name="NUMBER_OF_TABS"/></translation>
 <translation id="5580090775658607195">Sugrupuota tiek skirtukų: <ph name="TAB_COUNT"/></translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> nuoroda iš „Brave“}one{<ph name="TABS_COUNT_MANY"/> nuoroda iš „Brave“}few{<ph name="TABS_COUNT_MANY"/> nuorodos iš „Brave“}many{<ph name="TABS_COUNT_MANY"/> nuorodos iš „Brave“}other{<ph name="TABS_COUNT_MANY"/> nuorodų iš „Brave“}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> nuoroda iš „AI Wize“}one{<ph name="TABS_COUNT_MANY"/> nuoroda iš „AI Wize“}few{<ph name="TABS_COUNT_MANY"/> nuorodos iš „AI Wize“}many{<ph name="TABS_COUNT_MANY"/> nuorodos iš „AI Wize“}other{<ph name="TABS_COUNT_MANY"/> nuorodų iš „AI Wize“}}</translation>
 <translation id="575494663145460764">Norite gauti įspėjimus apie sumažintas kainas?</translation>
 <translation id="58326064309361797">Vilkite skirtukus, kad juos sugrupuotumėte</translation>
 <translation id="5846292395804797011">Uždaryti grupę „<ph name="TITLE_OF_GROUP"/>“, kurioje yra tiek skirtukų: <ph name="NUMBER_OF_TABS"/></translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Peržiūrėti parduotuvės informaciją</translation>
 <translation id="6562820390860419811">Perkelti skirtuką į kairę</translation>
 <translation id="6615455863669487791">Rodyti</translation>
-<translation id="6398241160085205003">Uždarytus skirtukus rasite prie naujausių skirtukų „Brave“ pagrindiniame meniu.</translation>
+<translation id="6398241160085205003">Uždarytus skirtukus rasite prie naujausių skirtukų „AI Wize“ pagrindiniame meniu.</translation>
 <translation id="6840760312327750441">Norėdami grupuoti skirtukus, palieskite ir palaikykite skirtuką. Tada nuvilkite jį į kitą skirtuką.</translation>
 <translation id="6856809498882026482">Slėpti kelių elementų pasirinkimo režimą</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Bendrinti skirtuką}one{Bendrinti skirtukus}few{Bendrinti skirtukus}many{Bendrinti skirtukus}other{Bendrinti skirtukus}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Peržiūrėkite grąžinimo politiką ir kt.</translation>
 <translation id="7352298686197644113">Žr., kurio elemento jūsų atidarytuose skirtukuose kaina žemesnė</translation>
 <translation id="753732157349120914">Skirtukų perjungiklis</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> apžvalga iš „Brave“}one{<ph name="REVIEWS_COUNT_MANY"/> apžvalga iš „Brave“}few{<ph name="REVIEWS_COUNT_MANY"/> apžvalgos iš „Brave“}many{<ph name="REVIEWS_COUNT_MANY"/> apžvalgos iš „Brave“}other{<ph name="REVIEWS_COUNT_MANY"/> apžvalgų iš „Brave“}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> apžvalga iš „AI Wize“}one{<ph name="REVIEWS_COUNT_MANY"/> apžvalga iš „AI Wize“}few{<ph name="REVIEWS_COUNT_MANY"/> apžvalgos iš „AI Wize“}many{<ph name="REVIEWS_COUNT_MANY"/> apžvalgos iš „AI Wize“}other{<ph name="REVIEWS_COUNT_MANY"/> apžvalgų iš „AI Wize“}}</translation>
 <translation id="7559245342362162951">Rodyti grupės skirtukus viso ekrano tinklelyje</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Bendrinti <ph name="TABS_COUNT_ONE"/> pasirinktą skirtuką}one{Bendrinti <ph name="TABS_COUNT_MANY"/> pasirinktą skirtuką}few{Bendrinti <ph name="TABS_COUNT_MANY"/> pasirinktus skirtukus}many{Bendrinti <ph name="TABS_COUNT_MANY"/> pasirinkto skirtuko}other{Bendrinti <ph name="TABS_COUNT_MANY"/> pasirinktus skirtukus}}</translation>
 <translation id="7792771145871471484">Peržiūrėkite pasiūlymus.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Atidarę šią redagavimo priemonę peržiūrėkite ir išvalykite visus suarchyvuotus skirtukus.</translation>
 <translation id="959682366969460160">Sutvarkykite</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
- =1 {Uždarytus skirtukus galite rasti „Brave“ pagrindinio meniu skiltyje „Naujausi skirtukai“. Jūsų inkognito režimu atidaryti ir uždaryti skirtukai nebus prieinami.}
- other {Uždarytus skirtukus galite rasti „Brave“ pagrindinio meniu skiltyje „Naujausi skirtukai“. Jūsų # inkognito režimu atidaryti ir uždaryti skirtukai nebus prieinami.}}</translation>
+ =1 {Uždarytus skirtukus galite rasti „AI Wize“ pagrindinio meniu skiltyje „Naujausi skirtukai“. Jūsų inkognito režimu atidaryti ir uždaryti skirtukai nebus prieinami.}
+ other {Uždarytus skirtukus galite rasti „AI Wize“ pagrindinio meniu skiltyje „Naujausi skirtukai“. Jūsų # inkognito režimu atidaryti ir uždaryti skirtukai nebus prieinami.}}</translation>
 <translation id="3228718275011575753">Užverti visus inkognito skirtukus?</translation>
 <translation id="6687920250729800417">Jūsų veikla šiuose inkognito skirtukuose bus pašalinta iš šio įrenginio.</translation>
 </translationbundle>

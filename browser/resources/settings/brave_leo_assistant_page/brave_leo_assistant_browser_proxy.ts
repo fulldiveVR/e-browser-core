@@ -8,6 +8,7 @@
  // TODO(nullhook): get the types from the generated mojom file
 
 enum ModelEngineType {
+  OPENAI_REMOTE,
   LLAMA_REMOTE,
   CLAUDE_REMOTE,
 }

@@ -82,7 +82,7 @@
 <translation id="6628439996552631516">주소 관리 버튼, AI Wize 설정에서 주소를 추가 및 관리하려면 활성화하세요.</translation>
 <translation id="1165039591588034296">오류</translation>
 <translation id="1165174597379888365">페이지를 방문함</translation>
-<translation id="7108524493226474140">{COUNT,plural, =0{없음}=1{사이트 1개(Brave 계정에 로그인된 상태가 유지됨)}other{사이트 #개(Brave 계정에 로그인된 상태가 유지됨)}}</translation>
+<translation id="7108524493226474140">{COUNT,plural, =0{없음}=1{사이트 1개(AI Wize 계정에 로그인된 상태가 유지됨)}other{사이트 #개(AI Wize 계정에 로그인된 상태가 유지됨)}}</translation>
 <translation id="1165852471352757509">TV 다큐멘터리 및 논픽션</translation>
 <translation id="1167877250265821930"><ph name="LANGUAGE"/>를 다운로드할 수 없습니다</translation>
 <translation id="1174644974616730562">봉투 Chinese #1</translation>
@@ -98,7 +98,7 @@
 <translation id="1178581264944972037">일시중지</translation>
 <translation id="1178821169867863726">12x16인치</translation>
 <translation id="1181037720776840403">삭제</translation>
-<translation id="3248691252569103537">Brave에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다. <ph name="LINK"/>하려면 설정으로 이동하세요.</translation>
+<translation id="3248691252569103537">AI Wize에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다. <ph name="LINK"/>하려면 설정으로 이동하세요.</translation>
 <translation id="1186201132766001848">비밀번호 확인</translation>
 <translation id="1190491977647722791">용지(중량)</translation>
 <translation id="1195073053842921378">이 주소가 기기에서 삭제됩니다.</translation>
@@ -117,7 +117,7 @@
 <translation id="1222060260947439312">오른쪽 트레이</translation>
 <translation id="1224330468394120478">A3x6</translation>
 <translation id="1225570101506606926">당구</translation>
-<translation id="2735968720006267833">Brave이 나에게 맞는 할인 혜택을 찾습니다</translation>
+<translation id="2735968720006267833">AI Wize이 나에게 맞는 할인 혜택을 찾습니다</translation>
 <translation id="1227224963052638717">알 수 없는 정책입니다.</translation>
 <translation id="1227677022489889280">이전 사유 입력(필수)</translation>
 <translation id="1228893227497259893">잘못된 개체 식별자</translation>
@@ -146,7 +146,7 @@
 <translation id="1266469291454105242">기기 잠금 해제</translation>
 <translation id="126728463333482584">사이트에서 사용자의 탐색 활동을 추적하기 위해 서드 파티 쿠키를 사용하지 못하도록 제한하는 추적 보호 기능을 가장 먼저 체험해 보실 수 있습니다.</translation>
 <translation id="1268480293435976622">봉투 Chinese #7</translation>
-<translation id="53564677632020212">Brave Sites에서 빠르게 새 사이트 만들기</translation>
+<translation id="53564677632020212">AI Wize Sites에서 빠르게 새 사이트 만들기</translation>
 <translation id="1270328905573953738">이사 및 이전</translation>
 <translation id="1270502636509132238">픽업 방법</translation>
 <translation id="1273592791152866347">가격 추적 사용 중지됨</translation>
@@ -157,7 +157,7 @@
 <translation id="1285320974508926690">이 사이트 번역 안함</translation>
 <translation id="1288548991597756084">카드 안전하게 저장하기</translation>
 <translation id="1292571435393770077">트레이 16</translation>
-<translation id="1209478311331937175">'컴퓨터의 소프트웨어로 인해 Brave이 안전하게 웹에 접속할 수 없습니다'(Windows 컴퓨터만 해당)</translation>
+<translation id="1209478311331937175">'컴퓨터의 소프트웨어로 인해 AI Wize이 안전하게 웹에 접속할 수 없습니다'(Windows 컴퓨터만 해당)</translation>
 <translation id="1293797321964802402">봉투 9 x 11 in</translation>
 <translation id="1294154142200295408">명령줄 변형</translation>
 <translation id="129553762522093515">최근에 닫은 탭</translation>
@@ -178,7 +178,7 @@
 <translation id="132390688737681464">주소 저장 및 자동 입력</translation>
 <translation id="1329916999021038454">보고서 보내기</translation>
 <translation id="1330449323196174374">왼쪽 게이트 폴드</translation>
-<translation id="4274264486214599895">Brave 공룡 게임 플레이</translation>
+<translation id="4274264486214599895">AI Wize 공룡 게임 플레이</translation>
 <translation id="1333989956347591814">다음의 관계자는 내 활동 내역을 <ph name="BEGIN_EMPHASIS"/>확인할 수도 있습니다<ph name="END_EMPHASIS"/>.
         <ph name="BEGIN_LIST"/>
           <ph name="LIST_ITEM"/>방문한 웹사이트
@@ -192,7 +192,7 @@
 <translation id="1346748346194534595">오른쪽</translation>
 <translation id="1348198688976932919">방문하려는 사이트에 위험한 앱이 있습니다.</translation>
 <translation id="1348779747280417563">이름 확인</translation>
-<translation id="8447194907998385478">Brave은 대부분의 사이트에 대해 서드 파티 쿠키를 사용하여 탐색 중인 사용자를 추적하지 못하도록 제한합니다. <ph name="LINK"/>를 하려면 설정으로 이동하세요.</translation>
+<translation id="8447194907998385478">AI Wize은 대부분의 사이트에 대해 서드 파티 쿠키를 사용하여 탐색 중인 사용자를 추적하지 못하도록 제한합니다. <ph name="LINK"/>를 하려면 설정으로 이동하세요.</translation>
 <translation id="1354976809542763843">주택 담보 대출</translation>
 <translation id="1355158069018170842">탭에 가격 인하 표시</translation>
 <translation id="1355301061807280185">채용 정보</translation>
@@ -222,14 +222,14 @@
 <translation id="1406812885827747674">이번에만 허용</translation>
 <translation id="1407135791313364759">모두 열기</translation>
 <translation id="1408787208417187241">상단 트리플 스테이플</translation>
-<translation id="5488251800208457874">이 기기를 사용하는 다른 사용자가 내 활동을 볼 수 없으므로 비공개로 탐색할 수 있습니다. 방문하는 웹사이트와 Brave을 비롯하여 해당 웹사이트에서 사용하는 서비스에서 데이터를 수집하는 방식은 변경되지 않습니다. 다운로드, 북마크, 읽기 목록 항목은 계속해서 저장됩니다</translation>
+<translation id="5488251800208457874">이 기기를 사용하는 다른 사용자가 내 활동을 볼 수 없으므로 비공개로 탐색할 수 있습니다. 방문하는 웹사이트와 AI Wize을 비롯하여 해당 웹사이트에서 사용하는 서비스에서 데이터를 수집하는 방식은 변경되지 않습니다. 다운로드, 북마크, 읽기 목록 항목은 계속해서 저장됩니다</translation>
 <translation id="1410941016594047814">봉투 Invite</translation>
 <translation id="1413407968866574823">액션 및 플랫폼 게임</translation>
 <translation id="1413809658975081374">개인 정보 보호 오류</translation>
 <translation id="1414134146594747368">유치원</translation>
 <translation id="141826476809826269">추출된 텍스트의 끝</translation>
-<translation id="3181333394175596679">설정에서 차단하지 않으면 Brave에서 이 기능을 업데이트하는 동안 사이트에서 서드 파티 쿠키를 일시적으로 사용할 수 있습니다.</translation>
-<translation id="5305237486453576422">Brave 다운로드 관리 버튼, Brave에서 다운로드한 파일을 관리하려면 활성화하세요.</translation>
+<translation id="3181333394175596679">설정에서 차단하지 않으면 AI Wize에서 이 기능을 업데이트하는 동안 사이트에서 서드 파티 쿠키를 일시적으로 사용할 수 있습니다.</translation>
+<translation id="5305237486453576422">AI Wize 다운로드 관리 버튼, AI Wize에서 다운로드한 파일을 관리하려면 활성화하세요.</translation>
 <translation id="1422930527989633628">주변 블루투스 기기를 조회하도록 요청할 수 있음</translation>
 <translation id="1426410128494586442">예</translation>
 <translation id="1427192966110103169">가정용 수영장, 사우나, 스파</translation>
@@ -241,7 +241,7 @@
 <translation id="1432187715652018471">페이지에서 서비스 핸들러를 설치하려고 합니다.</translation>
 <translation id="1432581352905426595">검색엔진 관리</translation>
 <translation id="1433225466058025572">파일을 다시 이동해 보세요.</translation>
-<translation id="783200745622992168">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/> 사이트에 멀웨어가 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다.</translation>
+<translation id="783200745622992168">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/> 사이트에 멀웨어가 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다.</translation>
 <translation id="1435940442311036198">다른 기기의 패스키 사용</translation>
 <translation id="1436185428532214179">기기의 파일 및 폴더 수정을 요청할 수 있음</translation>
 <translation id="1441816242347931036">계속하려면 열기</translation>
@@ -273,7 +273,7 @@
 <translation id="1492194039220927094">정책 푸시:</translation>
 <translation id="14938948731065592">컴퓨터 주변기기</translation>
 <translation id="1495677929897281669">탭으로 돌아가기</translation>
-<translation id="1812569385220097122">Brave 계정에 저장된 카드 표시</translation>
+<translation id="1812569385220097122">AI Wize 계정에 저장된 카드 표시</translation>
 <translation id="1504042622576912555">골판지</translation>
 <translation id="150536342253161096">지역 뉴스</translation>
 <translation id="1507202001669085618">&lt;p&gt;온라인에 접속하기 위해 로그인해야 하는 Wi-Fi 포털을 사용하면 이 오류가 표시됩니다.&lt;/p&gt;
@@ -285,7 +285,7 @@
 <translation id="1517433312004943670">전화번호 필요</translation>
 <translation id="1519264250979466059">생성 날짜</translation>
 <translation id="1521159554480556801">섬유 및 직물 예술</translation>
-<translation id="5524011986660000129">Brave Sheets</translation>
+<translation id="5524011986660000129">AI Wize Sheets</translation>
 <translation id="1524669537550112617">풀옵션 임대</translation>
 <translation id="1527263332363067270">연결 대기 중...</translation>
 <translation id="1528311629279578926">공개 페이지에서 비공개 네트워크에 있는 기기나 서버에 연결하려 했기 때문에 연결이 차단되었습니다. 연결을 허용하려면 이 페이지를 새로고침하세요.</translation>
@@ -300,7 +300,7 @@
 <translation id="1549470594296187301">이 기능을 이용하려면 자바스크립트를 사용하도록 설정해야 합니다.</translation>
 <translation id="1551884710160394169">프리웨어 및 셰어웨어</translation>
 <translation id="1553152622374372421">동계 스포츠</translation>
-<translation id="1705567146636171298">Brave 업데이트</translation>
+<translation id="1705567146636171298">AI Wize 업데이트</translation>
 <translation id="1555130319947370107">파란색</translation>
 <translation id="1559231233244409191">골판지(삼중양면)</translation>
 <translation id="1559447966090556585">알림을 받으시겠습니까?</translation>
@@ -315,7 +315,7 @@
 <translation id="1567040042588613346">이 정책은 정상 작동 중이나 다른 위치에 같은 값이 설정되었으므로 이 정책에 의해 대체되었습니다.</translation>
 <translation id="1567405528131216114"><ph name="TOPIC"/> 추가</translation>
 <translation id="1569487616857761740">만료일 입력</translation>
-<translation id="1385693425784118652">Brave에서 비밀번호 입력에 Windows Hello를 사용하려고 합니다.</translation>
+<translation id="1385693425784118652">AI Wize에서 비밀번호 입력에 Windows Hello를 사용하려고 합니다.</translation>
 <translation id="1572765991610098222"><ph name="WIDTH"/>x<ph name="HEIGHT"/>인치</translation>
 <translation id="1574714699824202614">결제 수단 확인 중</translation>
 <translation id="1576277203042721907">쇼핑 통계</translation>
@@ -332,7 +332,7 @@
 <translation id="1596296697375291157">스릴러, 범죄 및 미스터리 영화</translation>
 <translation id="1598816256585174656">Windows Hello의 패스키</translation>
 <translation id="1599199147673445968">새 카드인가요? <ph name="BEGIN_LINK"/>카드 세부정보 입력<ph name="END_LINK"/></translation>
-<translation id="8523167061098356223">Brave 공룡 달리기 게임 플레이</translation>
+<translation id="8523167061098356223">AI Wize 공룡 달리기 게임 플레이</translation>
 <translation id="161042844686301425">청록색</translation>
 <translation id="1611101756749861742">2번째 롤</translation>
 <translation id="1615178538289490617"><ph name="PORT_NAME"/>의 액세스 권한 취소</translation>
@@ -355,18 +355,18 @@
 <translation id="1640244768702815859"><ph name="BEGIN_LINK"/>사이트의 홈페이지를 방문<ph name="END_LINK"/>해 보세요.</translation>
 <translation id="1641976391427233992">다음까지 출력 지연</translation>
 <translation id="164212631332220697">결제 시 <ph name="CARD_DETAIL"/> 사용</translation>
-<translation id="8088023492467080559">Brave 안전 확인으로 이동 버튼, 설정의 AI Wize 안전 확인 페이지로 이동하려면 활성화하세요.</translation>
+<translation id="8088023492467080559">AI Wize 안전 확인으로 이동 버튼, 설정의 AI Wize 안전 확인 페이지로 이동하려면 활성화하세요.</translation>
 <translation id="1644574205037202324">방문 기록</translation>
 <translation id="1645368109819982629">지원되지 않는 프로토콜</translation>
-<translation id="1995056549836388472">Brave 설정 관리</translation>
+<translation id="1995056549836388472">AI Wize 설정 관리</translation>
 <translation id="1652415888492971589">JIS B8</translation>
-<translation id="3549478477646243075">비밀번호 관리자를 MacOS 키체인과 함께 사용하려면 Brave을 다시 실행한 다음 키체인 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
-<translation id="3848846802033604519">Brave에서 페이지를 읽기 쉽도록 간소화했습니다. Brave에서 보안 연결을 통해 원본 페이지를 가져왔습니다.</translation>
+<translation id="3549478477646243075">비밀번호 관리자를 MacOS 키체인과 함께 사용하려면 AI Wize을 다시 실행한 다음 키체인 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
+<translation id="3848846802033604519">AI Wize에서 페이지를 읽기 쉽도록 간소화했습니다. AI Wize에서 보안 연결을 통해 원본 페이지를 가져왔습니다.</translation>
 <translation id="1656489000284462475">수령</translation>
 <translation id="1658111267661135323">TV 및 동영상</translation>
 <translation id="1658918301167915956">블루투스 기기</translation>
 <translation id="1662550410081243962">결제 수단 저장 및 자동 입력</translation>
-<translation id="1838576226863399477">카드와 주소는 Brave에서 가져왔습니다. 이 정보는 <ph name="BEGIN_LINK"/>설정<ph name="END_LINK"/>에서 관리할 수 있습니다.</translation>
+<translation id="1838576226863399477">카드와 주소는 AI Wize에서 가져왔습니다. 이 정보는 <ph name="BEGIN_LINK"/>설정<ph name="END_LINK"/>에서 관리할 수 있습니다.</translation>
 <translation id="1664389769577564606">Flexo 포토폴리머</translation>
 <translation id="1668071460721346172">이메일 받기</translation>
 <translation id="1671391448414634642">지금부터 <ph name="SOURCE_LANGUAGE"/>로 된 페이지가 <ph name="TARGET_LANGUAGE"/>로 번역됩니다.</translation>
@@ -376,7 +376,7 @@
 <translation id="168693727862418163">이 정책 값은 스키마에 대해 유효성이 확인되지 않았으므로 무시됩니다.</translation>
 <translation id="168841957122794586">서버 인증서에 안전성이 낮은 암호화 키가 포함되어 있습니다.</translation>
 <translation id="1689333818294560261">닉네임</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>사용자가 데이터를 관리하는 방법:<ph name="END_BOLD"/> Brave에서는 4주가 지난 주제를 자동 삭제합니다. 인터넷을 사용하다 보면 동일한 주제가 목록에 다시 표시될 수 있습니다. 사용자는 언제든지 AI Wize 설정에서 Brave이 사이트와 공유하길 원하지 않는 주제를 차단하고 광고 주제를 사용 중지할 수도 있습니다.</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>사용자가 데이터를 관리하는 방법:<ph name="END_BOLD"/> AI Wize에서는 4주가 지난 주제를 자동 삭제합니다. 인터넷을 사용하다 보면 동일한 주제가 목록에 다시 표시될 수 있습니다. 사용자는 언제든지 AI Wize 설정에서 AI Wize이 사이트와 공유하길 원하지 않는 주제를 차단하고 광고 주제를 사용 중지할 수도 있습니다.</translation>
 <translation id="1697532407822776718">설정 완료</translation>
 <translation id="4030336595318918117">이제 AI Wize 계정의 주소를 사용할 수 있습니다</translation>
 <translation id="1700542542921501212"><ph name="SEARCH_ENGINE_NAME"/>에서 웹을 검색할 수 있습니다.</translation>
@@ -411,7 +411,7 @@
 <translation id="1736420071277903564">컴퓨터</translation>
 <translation id="1741613555002899862">DnsOverHttpsMode가 <ph name="SECURE_DNS_MODE_SECURE"/>일 때 반드시 지정되어야 하며 유효한 문자열이어야 합니다.</translation>
 <translation id="1743393865165844832">침구</translation>
-<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Brave의 데이터 사용 방식:<ph name="END_BOLD"/> Brave에서 내가 인터넷을 사용하는 동안 관심 주제를 파악합니다. 주제 라벨은 사전 정의되어 있으며 예술 및 엔터테인먼트, 쇼핑, 스포츠 등을 포함합니다. 나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 내 관심 주제 몇 가지를 Brave에 요청할 수 있습니다(방문 기록 제외).</translation>
+<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>AI Wize의 데이터 사용 방식:<ph name="END_BOLD"/> AI Wize에서 내가 인터넷을 사용하는 동안 관심 주제를 파악합니다. 주제 라벨은 사전 정의되어 있으며 예술 및 엔터테인먼트, 쇼핑, 스포츠 등을 포함합니다. 나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 내 관심 주제 몇 가지를 AI Wize에 요청할 수 있습니다(방문 기록 제외).</translation>
 <translation id="1746113442205726301">이미지 Y 시프트</translation>
 <translation id="1746531169546376413">0도</translation>
 <translation id="1748225549612934682">작성 지원 기능을 이용하려면 텍스트 길이를 줄이세요.</translation>
@@ -423,12 +423,12 @@
 <translation id="1756026472674246267">새 탭에서 링크 열기</translation>
 <translation id="175656076281618225">마술</translation>
 <translation id="1757773103848038814">고정폭 글꼴</translation>
-<translation id="3727704638090640904">Brave 비밀번호 변경 버튼, AI Wize 계정 비밀번호를 변경하려면 활성화하세요.</translation>
+<translation id="3727704638090640904">AI Wize 비밀번호 변경 버튼, AI Wize 계정 비밀번호를 변경하려면 활성화하세요.</translation>
 <translation id="1763864636252898013">이 서버가 <ph name="DOMAIN"/>임을 입증할 수 없으며 기기의 운영체제에서 신뢰하는 보안 인증서가 아닙니다. 서버를 잘못 설정했거나 불법 사용자가 연결을 가로채고 있기 때문일 수 있습니다.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Windows 네트워크 진단 프로그램을 실행<ph name="END_LINK"/>해 보세요.</translation>
 <translation id="1777422078676229054">사진(보관용)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
-<translation id="3480410886581896628">Brave Smart Lock</translation>
+<translation id="3480410886581896628">AI Wize Smart Lock</translation>
 <translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize 계정에서 정보, 개인 정보 보호 및 보안 설정 관리</translation>
 <translation id="1793631236004319016">마지막 사용: <ph name="NUM_HOURS_MINUTES_SECONDS"/> 전</translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, 여러 작업 이용 가능, Tab을 눌러 작업 둘러보기</translation>
@@ -464,7 +464,7 @@
 <translation id="1854180393107901205">전송 중지</translation>
 <translation id="1855370856221982654">복싱</translation>
 <translation id="1862788842908766795">임원 및 관리 직업</translation>
-<translation id="7675404561163771060">추적 보호 기능을 일시적으로 사용할 수 없습니다. Brave에서 이 기능을 업데이트하는 동안 사이트에서 서드 파티 쿠키를 차단하지 않으면 일시적으로 쿠키를 사용할 수 있습니다. <ph name="BEGIN_LINK"/>자세히 알아보기<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">추적 보호 기능을 일시적으로 사용할 수 없습니다. AI Wize에서 이 기능을 업데이트하는 동안 사이트에서 서드 파티 쿠키를 차단하지 않으면 일시적으로 쿠키를 사용할 수 있습니다. <ph name="BEGIN_LINK"/>자세히 알아보기<ph name="END_LINK"/></translation>
 <translation id="1863257867908022953">트레이 12</translation>
 <translation id="1864927262126810325">출처: <ph name="SOURCE_NAME"/></translation>
 <translation id="186539747722034544">케이블 및 위성 사업자</translation>
@@ -475,7 +475,7 @@
 <translation id="1873899211667975540">록 음악</translation>
 <translation id="1874224422119691492"><ph name="SETTINGS"/>에서 비밀번호를 입력할 때 화면 잠금을 사용할지를 변경할 수 있습니다.</translation>
 <translation id="1875025161375567525">사진 트레이</translation>
-<translation id="85321348617848915">Brave Forms</translation>
+<translation id="85321348617848915">AI Wize Forms</translation>
 <translation id="1876399092304384674">날짜순</translation>
 <translation id="187918866476621466">시작 페이지 열기</translation>
 <translation id="8632214058523487060">다음번에 더 빠르게 결제할 수 있도록 AI Wize 계정에 카드, 암호화된 보안 코드, 청구서 수신 주소를 저장하세요.</translation>
@@ -505,11 +505,11 @@
 <translation id="1954847915560574887">A3x3</translation>
 <translation id="1956486093533522234">기기 찾기, 잠그기 또는 삭제</translation>
 <translation id="1958218078413065209">최고 점수는 <ph name="SCORE"/>점입니다.</translation>
-<translation id="990584554013599191"><ph name="BEGIN_WHITEPAPER_LINK"/>방문한 일부 페이지의 URL, 제한된 시스템 정보, 일부 페이지 콘텐츠<ph name="END_WHITEPAPER_LINK"/>를 Brave에 전송하여 모든 웹 사용자를 위해 보안을 강화하는 데 참여해 주세요. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>개인정보처리방침<ph name="END_PRIVACY_PAGE_LINK"/></translation>
-<translation id="4215502005480745839">텍스트 및 페이지 콘텐츠가 Brave로 전송되며, 이 기능을 개선하는 데 사용될 수 있습니다.
+<translation id="990584554013599191"><ph name="BEGIN_WHITEPAPER_LINK"/>방문한 일부 페이지의 URL, 제한된 시스템 정보, 일부 페이지 콘텐츠<ph name="END_WHITEPAPER_LINK"/>를 AI Wize에 전송하여 모든 웹 사용자를 위해 보안을 강화하는 데 참여해 주세요. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>개인정보처리방침<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="4215502005480745839">텍스트 및 페이지 콘텐츠가 AI Wize로 전송되며, 이 기능을 개선하는 데 사용될 수 있습니다.
   <ph name="BEGIN_LINK"/>자세히 알아보기<ph name="END_LINK"/></translation>
 <translation id="1962204205936693436"><ph name="DOMAIN"/> 북마크</translation>
-<translation id="889162891089808318">일반적으로 사이트에 안전하게 연결되지만, 이번에는 Brave에서 보안 연결을 사용할 수 없습니다. 공격자가 네트워크 연결을 도청하거나 수정하려고 시도하는 것일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="889162891089808318">일반적으로 사이트에 안전하게 연결되지만, 이번에는 AI Wize에서 보안 연결을 사용할 수 없습니다. 공격자가 네트워크 연결을 도청하거나 수정하려고 시도하는 것일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="1973335181906896915">일련화 오류</translation>
 <translation id="1973785048533660168">사무 관리직</translation>
 <translation id="1974060860693918893">고급</translation>
@@ -530,7 +530,7 @@
 <translation id="2003775180883135320">상단 4공 펀칭</translation>
 <translation id="2004697686368036666">일부 사이트에서 기능이 작동하지 않을 수 있음</translation>
 <translation id="6855500251167861792">일정 만들기 버튼, AI Wize Calendar에서 새 일정을 빠르게 만들려면 활성화하세요.</translation>
-<translation id="2342444980304536062">Brave 설정에서 여러 사이트의 권한 및 저장된 데이터 관리</translation>
+<translation id="2342444980304536062">AI Wize 설정에서 여러 사이트의 권한 및 저장된 데이터 관리</translation>
 <translation id="2012276282211112603">현재 표시할 주제 없음</translation>
 <translation id="2018769312928511665">패브릭(유광)</translation>
 <translation id="2020779321517562133">사본 삭제</translation>
@@ -550,13 +550,13 @@
 <translation id="2040463897538655645">이동식 저장소</translation>
 <translation id="2040894699575719559">위치가 차단됨</translation>
 <translation id="2042213636306070719">트레이 7</translation>
-<translation id="3163988908275223348">Brave 계정에 저장된 비밀번호를 사용하여 로그인</translation>
+<translation id="3163988908275223348">AI Wize 계정에 저장된 비밀번호를 사용하여 로그인</translation>
 <translation id="2045871135676061132">봉투 Personal</translation>
 <translation id="2046951263634619614">서점</translation>
 <translation id="2048261947532620704">페이지 번역 중</translation>
 <translation id="205212645995975601">바비큐 및 그릴</translation>
 <translation id="2053111141626950936"><ph name="LANGUAGE"/>로 된 페이지를 번역하지 않습니다.</translation>
-<translation id="5469355573019315764">사이트에서 광고 개인 최적화에 도움이 되는 정보를 Brave에 요청할 수 있습니다.</translation>
+<translation id="5469355573019315764">사이트에서 광고 개인 최적화에 도움이 되는 정보를 AI Wize에 요청할 수 있습니다.</translation>
 <translation id="2059166748188874810">지방 자치제</translation>
 <translation id="2059202684901022309">22x34인치</translation>
 <translation id="2064568741209980952">신용 및 대출</translation>
@@ -576,7 +576,7 @@
 <translation id="2083256696566019397">방문할 때마다 허용</translation>
 <translation id="2085876078937250610">저장…</translation>
 <translation id="2091887806945687916">소리</translation>
-<translation id="4871965986998315786">Brave에서 비밀번호 입력에 Windows Hello를 사용하지 않으려고 합니다.</translation>
+<translation id="4871965986998315786">AI Wize에서 비밀번호 입력에 Windows Hello를 사용하지 않으려고 합니다.</translation>
 <translation id="2094505752054353250">도메인이 일치하지 않음</translation>
 <translation id="2094704029599359040">버전 정보</translation>
 <translation id="2099652385553570808">왼쪽 트리플 스테이플</translation>
@@ -587,7 +587,7 @@
 <translation id="2108755909498034140">컴퓨터 다시 시작</translation>
 <translation id="2111166930115883695">플레이하려면 스페이스바를 누르세요.</translation>
 <translation id="2112529237938317174">권한 세부정보 표시</translation>
-<translation id="3307744350283817699">이 사이트에서 HTTPS를 지원하지 않으며, 현재 Brave의 고급 보호 프로그램을 사용하고 있으므로 경고가 표시되었습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="3307744350283817699">이 사이트에서 HTTPS를 지원하지 않으며, 현재 AI Wize의 고급 보호 프로그램을 사용하고 있으므로 경고가 표시되었습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2113977810652731515">카드</translation>
 <translation id="2114841414352855701"><ph name="POLICY_NAME"/>이(가) 우선 적용되었기 때문에 무시됩니다.</translation>
 <translation id="2118132148597630479">봉투 C5</translation>
@@ -623,7 +623,7 @@
 <translation id="2168151236314517198">관리자 정책에서 이 콘텐츠 인쇄를 차단했습니다.</translation>
 <translation id="2175630235841878061">100MB를 초과하는 파일은 다운로드할 수 없습니다.</translation>
 <translation id="2176974405772725904">계정에 주소 저장</translation>
-<translation id="7453373354666409887">Brave 업데이트 버튼, AI Wize 설정에서 Brave을 업데이트하려면 활성화하세요.</translation>
+<translation id="7453373354666409887">AI Wize 업데이트 버튼, AI Wize 설정에서 AI Wize을 업데이트하려면 활성화하세요.</translation>
 <translation id="2181821976797666341">정책</translation>
 <translation id="2182170103603703676">식기세척기</translation>
 <translation id="2183608646556468874">전화번호</translation>
@@ -652,7 +652,7 @@
 <translation id="2224337661447660594">인터넷 연결 없음</translation>
 <translation id="2225927550500503913">가상 카드 사용 설정됨</translation>
 <translation id="2226636330183131181">Wi-Fi 네트워크에 <ph name="BEGIN_LINK"/>로그인<ph name="END_LINK"/></translation>
-<translation id="1271895112771969155">이 주소는 현재 Brave에 저장되어 있습니다. AI Wize 제품에서 사용하려면 AI Wize 계정(<ph name="ACCOUNT"/>)에 저장하세요.</translation>
+<translation id="1271895112771969155">이 주소는 현재 AI Wize에 저장되어 있습니다. AI Wize 제품에서 사용하려면 AI Wize 계정(<ph name="ACCOUNT"/>)에 저장하세요.</translation>
 <translation id="2229456043301340598">고유하지 않은 단축어는 무시됩니다. <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2233745931693710080">컴팩트 디스크</translation>
 <translation id="2235344399760031203">타사 쿠키가 차단됨</translation>
@@ -707,7 +707,7 @@
 <translation id="2350796302381711542"><ph name="HANDLER_HOSTNAME"/>에서 <ph name="REPLACED_HANDLER_TITLE"/> 대신 모든 <ph name="PROTOCOL"/> 링크를 열도록 허용하시겠습니까?</translation>
 <translation id="2353297238722298836">카메라 및 마이크 허용됨</translation>
 <translation id="2354001756790975382">기타 북마크</translation>
-<translation id="2354430244986887761">Brave 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>유해한 앱을 발견<ph name="END_LINK"/>했습니다.</translation>
+<translation id="2354430244986887761">AI Wize 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>유해한 앱을 발견<ph name="END_LINK"/>했습니다.</translation>
 <translation id="2355395290879513365">공격자는 사용자가 이 사이트에서 보고 있는 이미지를 볼 수 있으며 이미지를 수정하여 사용자를 속일 수 있습니다.</translation>
 <translation id="2356070529366658676">확인</translation>
 <translation id="2356926036049612643">V8 옵티마이저</translation>
@@ -722,13 +722,13 @@
 <translation id="2366689192918515749">육류 및 해산물</translation>
 <translation id="2367567093518048410">수준</translation>
 <translation id="23703388716193220">골프 장비</translation>
-<translation id="776356972507701422">거주 지역의 법률에 따라 사용자에게 기본 검색엔진을 선택하도록 요청하는 메시지가 Brave에 표시됩니다. 거주 지역에서 인기 있는 검색엔진이 임의의 순서로 표시됩니다.</translation>
+<translation id="776356972507701422">거주 지역의 법률에 따라 사용자에게 기본 검색엔진을 선택하도록 요청하는 메시지가 AI Wize에 표시됩니다. 거주 지역에서 인기 있는 검색엔진이 임의의 순서로 표시됩니다.</translation>
 <translation id="2378084239755710604">저장 카드가 닫혔습니다.</translation>
 <translation id="2380886658946992094">Legal</translation>
-<translation id="5475992123321966556">Brave 설정에서 접근성 도구 맞춤설정</translation>
+<translation id="5475992123321966556">AI Wize 설정에서 접근성 도구 맞춤설정</translation>
 <translation id="2384307209577226199">엔터프라이즈 기본값</translation>
 <translation id="238459632961158867">웹사이트</translation>
-<translation id="5244533701344680487">Brave 설정에서 Brave을 업데이트하세요.</translation>
+<translation id="5244533701344680487">AI Wize 설정에서 AI Wize을 업데이트하세요.</translation>
 <translation id="2386255080630008482">서버 인증서가 폐기되었습니다.</translation>
 <translation id="239203817277685015">더 상세하게 작성</translation>
 <translation id="239293030466334554">컨버터블</translation>
@@ -753,7 +753,7 @@
 <translation id="2462599289530201834"><ph name="KEYWORD_SHORT_NAME"/> 검색</translation>
 <translation id="2463739503403862330">입력</translation>
 <translation id="2465688316154986572">스테이플</translation>
-<translation id="4058615531773510267">Brave에서 다운로드한 파일 관리</translation>
+<translation id="4058615531773510267">AI Wize에서 다운로드한 파일 관리</translation>
 <translation id="2466004615675155314">웹에서 찾은 정보 표시</translation>
 <translation id="2467272921457885625">CPU/RAM 사용 기록과 같은 기기 하드웨어 사양 및 통계</translation>
 <translation id="2467694685043708798"><ph name="BEGIN_LINK"/>네트워크 진단 프로그램 실행<ph name="END_LINK"/></translation>
@@ -762,10 +762,10 @@
 <translation id="2470767536994572628">주석을 수정하면 문서가 원래 방향의 단일 페이지 뷰로 돌아갑니다.</translation>
 <translation id="2479148705183875116">설정으로 이동</translation>
 <translation id="2479410451996844060">검색 URL이 잘못됨</translation>
-<translation id="6944854796979239513">Brave 계정(<ph name="USER_EMAIL"/>)에 저장됩니다</translation>
+<translation id="6944854796979239513">AI Wize 계정(<ph name="USER_EMAIL"/>)에 저장됩니다</translation>
 <translation id="2482878487686419369">알림</translation>
 <translation id="248348093745724435">컴퓨터 정책</translation>
-<translation id="8381375318209119428">방문하려는 사이트의 공격자가 비밀번호, 사진, 메시지, 신용카드 번호 등을 도용하거나 삭제하는 유해한 소프트웨어를 설치할 수도 있습니다. Brave에서는 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8381375318209119428">방문하려는 사이트의 공격자가 비밀번호, 사진, 메시지, 신용카드 번호 등을 도용하거나 삭제하는 유해한 소프트웨어를 설치할 수도 있습니다. AI Wize에서는 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2491120439723279231">서버 인증서에 오류가 있습니다.</translation>
 <translation id="2491414235131909199">확장 프로그램에서 차단한 페이지입니다.</translation>
 <translation id="2495083838625180221">JSON 파서</translation>
@@ -776,20 +776,20 @@
 <translation id="2505268675989099013">계정 보호</translation>
 <translation id="2509167091171468975">식료품점 및 식품점</translation>
 <translation id="2512101340618156538">허용 안함(기본값)</translation>
-<translation id="3233967599412104589">Brave을 기본 브라우저로 설정하는 버튼, Enter 키를 눌러 iOS 설정에서 Brave을 시스템 기본 브라우저로 설정</translation>
+<translation id="3233967599412104589">AI Wize을 기본 브라우저로 설정하는 버튼, Enter 키를 눌러 iOS 설정에서 AI Wize을 시스템 기본 브라우저로 설정</translation>
 <translation id="2515629240566999685">현재 지역의 신호 확인</translation>
 <translation id="2515761554693942801"><ph name="PROVIDER_ORIGIN"/> 주소를 사용하는 웹사이트의 인증 방식으로 Touch ID를 선택했습니다. 이 제공업체에서 내 결제 수단 정보를 저장했을 수 있으며 직접 <ph name="LINK_TEXT"/>할 수 있습니다.</translation>
 <translation id="2521385132275182522">오른쪽 하단 스테이플</translation>
 <translation id="2521736961081452453">양식 만들기</translation>
 <translation id="2523886232349826891">이 기기에만 저장됨</translation>
 <translation id="2524461107774643265">자세한 정보 추가</translation>
-<translation id="5151177152796946073">Brave 제품 전반에서 저장된 주소를 사용할 수 있습니다. 이 주소는 AI Wize 계정(<ph name="ACCOUNT"/>)에 저장됩니다.</translation>
+<translation id="5151177152796946073">AI Wize 제품 전반에서 저장된 주소를 사용할 수 있습니다. 이 주소는 AI Wize 계정(<ph name="ACCOUNT"/>)에 저장됩니다.</translation>
 <translation id="2527451058878391043">CVC는 카드 앞면에 있습니다. 카드 번호 오른쪽 상단의 4자리 코드입니다.</translation>
 <translation id="2529899080962247600">입력란에 항목이 <ph name="MAX_ITEMS_LIMIT"/>개 넘게 있으면 안 됩니다. 이후 항목은 모두 무시됩니다.</translation>
 <translation id="253493526287553278">프로모션 코드 세부정보 보기</translation>
 <translation id="2535659140340599600">{COUNT,plural, =1{외 1개}other{외 #개}}</translation>
 <translation id="2536110899380797252">주소 추가</translation>
-<translation id="3140033400151786080">이 기기를 사용하는 다른 사용자가 내 활동을 볼 수 없으므로 비공개로 탐색할 수 있습니다. 방문하는 웹사이트와 Brave을 비롯하여 해당 웹사이트에서 사용하는 서비스에서 데이터를 수집하는 방식은 변경되지 않습니다. 다운로드 및 북마크 항목은 계속해서 저장됩니다</translation>
+<translation id="3140033400151786080">이 기기를 사용하는 다른 사용자가 내 활동을 볼 수 없으므로 비공개로 탐색할 수 있습니다. 방문하는 웹사이트와 AI Wize을 비롯하여 해당 웹사이트에서 사용하는 서비스에서 데이터를 수집하는 방식은 변경되지 않습니다. 다운로드 및 북마크 항목은 계속해서 저장됩니다</translation>
 <translation id="2539524384386349900">감지</translation>
 <translation id="2542106216580219892">서핑</translation>
 <translation id="2544546346215446551">관리자가 기기를 다시 시작했습니다</translation>
@@ -831,7 +831,7 @@
 <translation id="2619052155095999743">삽입</translation>
 <translation id="2625385379895617796">시간이 너무 먼 미래로 설정되어 있습니다.</translation>
 <translation id="262745152991669301">USB 기기에 연결하도록 요청할 수 있음</translation>
-<translation id="2915787201097107005">Brave에서 가장 강력한 보안 기능을 사용하려면 <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>향상된 보호 모드를 사용 설정<ph name="END_ENHANCED_PROTECTION_LINK"/>하세요.</translation>
+<translation id="2915787201097107005">AI Wize에서 가장 강력한 보안 기능을 사용하려면 <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>향상된 보호 모드를 사용 설정<ph name="END_ENHANCED_PROTECTION_LINK"/>하세요.</translation>
 <translation id="2634124572758952069"><ph name="HOST_NAME"/>의 서버 IP 주소를 찾을 수 없습니다.</translation>
 <translation id="2639739919103226564">상태:</translation>
 <translation id="2643134278432436513">모발 관리</translation>
@@ -882,7 +882,7 @@
 <translation id="2718207025093645426">관리 사용자 또는 기기에 로드된 정책이 없습니다.</translation>
 <translation id="2721148159707890343">요청 성공</translation>
 <translation id="2722622039067384533">거실 가구</translation>
-<translation id="4054726005361352357">Brave 설정의 안전 확인 실행</translation>
+<translation id="4054726005361352357">AI Wize 설정의 안전 확인 실행</translation>
 <translation id="2725492561136085792">이 작업을 활성화하려면 Enter를 누르세요.</translation>
 <translation id="2725927759457695883">전체 이름 입력</translation>
 <translation id="2726001110728089263">측면 트레이</translation>
@@ -891,7 +891,7 @@
 <translation id="2730326759066348565"><ph name="BEGIN_LINK"/>연결 진단 프로그램 실행<ph name="END_LINK"/></translation>
 <translation id="2730600605555029057">클래식 음악</translation>
 <translation id="2731382536835015353">44x68인치</translation>
-<translation id="3163800392243881597">Brave이 내 장바구니를 사용하여 나에게 맞는 할인 혜택을 찾을 수 있도록 허용합니다. 할인이 제공되는 경우, 장바구니에 할인이 자동으로 표시됩니다.</translation>
+<translation id="3163800392243881597">AI Wize이 내 장바구니를 사용하여 나에게 맞는 할인 혜택을 찾을 수 있도록 허용합니다. 할인이 제공되는 경우, 장바구니에 할인이 자동으로 표시됩니다.</translation>
 <translation id="273785062888389088">냉난방 및 온도 조절</translation>
 <translation id="2740531572673183784">확인</translation>
 <translation id="2742511345840685325">탁구</translation>
@@ -902,7 +902,7 @@
 <translation id="2765217105034171413">작게</translation>
 <translation id="2770159525358613612">파일을 다시 업로드해 보세요.</translation>
 <translation id="277133753123645258">배송 방법</translation>
-<translation id="7956239349290436105">Brave은 대부분의 사이트에서 서드 파티 쿠키를 사용하지 못하도록 제한합니다. 하지만 이 사이트에서는 서드 파티 쿠키를 사용하여 기본 서비스를 제공하기 때문에 서드 파티 쿠키가 허용됩니다. <ph name="LINK"/>하려면 설정으로 이동하세요.</translation>
+<translation id="7956239349290436105">AI Wize은 대부분의 사이트에서 서드 파티 쿠키를 사용하지 못하도록 제한합니다. 하지만 이 사이트에서는 서드 파티 쿠키를 사용하여 기본 서비스를 제공하기 때문에 서드 파티 쿠키가 허용됩니다. <ph name="LINK"/>하려면 설정으로 이동하세요.</translation>
 <translation id="277499241957683684">기기 기록 없음</translation>
 <translation id="2775884851269838147">첫 인쇄 페이지</translation>
 <translation id="2781692009645368755">Google Pay</translation>
@@ -941,7 +941,7 @@
 <translation id="2879694782644540289">비밀번호 입력 시 화면 잠금 사용</translation>
 <translation id="2881276955470682203">카드를 저장하시겠습니까?</translation>
 <translation id="2882949212241984732">더블 게이트 폴드</translation>
-<translation id="5539282829066374332">Brave의 검색엔진</translation>
+<translation id="5539282829066374332">AI Wize의 검색엔진</translation>
 <translation id="2893773853358652045">4번째 롤</translation>
 <translation id="2900528713135656174">일정 만들기</translation>
 <translation id="2902312830803030883">추가 작업</translation>
@@ -958,7 +958,7 @@
 <translation id="2922350208395188000">서버 인증서를 확인할 수 없습니다.</translation>
 <translation id="2922792708490674">{0,plural, =1{파일 다운로드 차단됨}other{파일 <ph name="FILE_COUNT"/>개의 다운로드 차단됨}}</translation>
 <translation id="2923275635648511531">썬케어 및 태닝 제품</translation>
-<translation id="3249101334307130799">Brave 설정</translation>
+<translation id="3249101334307130799">AI Wize 설정</translation>
 <translation id="2039679058572892861">문서 만들기 버튼, 새 AI Wize 문서를 빠르게 만들려면 활성화하세요.</translation>
 <translation id="2925673989565098301">배달 방법</translation>
 <translation id="2928426578619531300">연결된 사용자</translation>
@@ -975,7 +975,7 @@
 <translation id="2943895734390379394">업로드 시간:</translation>
 <translation id="2945026002409061480">온라인 커뮤니티</translation>
 <translation id="2948083400971632585">설정 페이지의 연결을 구성하는 프록시를 사용 중지할 수 있습니다.</translation>
-<translation id="3955566820843143766">Brave 브라우저 클라우드 관리에 등록되지 않은 컴퓨터이므로 무시되었습니다.</translation>
+<translation id="3955566820843143766">AI Wize 브라우저 클라우드 관리에 등록되지 않은 컴퓨터이므로 무시되었습니다.</translation>
 <translation id="2951588413176968965">내 메일박스</translation>
 <translation id="2952904171810469095">A2x5</translation>
 <translation id="2954624054936281172">저장된 결제 수단 표</translation>
@@ -984,7 +984,7 @@
 <translation id="2958544468932521864">크리켓</translation>
 <translation id="2959113999220720579">얼굴 및 몸 관리</translation>
 <translation id="2962073860865348475">12x18인치</translation>
-<translation id="2470357430970446202">Brave 계정에 저장</translation>
+<translation id="2470357430970446202">AI Wize 계정에 저장</translation>
 <translation id="2968103128155246731">밴 및 미니밴</translation>
 <translation id="2972581237482394796">다시 실행(&amp;R)</translation>
 <translation id="2977665033722899841"><ph name="ROW_NAME"/>이(가) 현재 선택되어 있습니다. <ph name="ROW_CONTENT"/></translation>
@@ -993,7 +993,7 @@
 <translation id="6172169316494799304">더 빠른 결제를 위해 이 카드의 CVC가 암호화되고 AI Wize 계정에 저장됩니다.</translation>
 <translation id="2985398929374701810">올바른 주소를 입력하세요.</translation>
 <translation id="2987034854559945715">일치하는 기능 없음</translation>
-<translation id="714850411804317247">Brave에서는 탐색 중인 사용자를 사이트에서 추적하는 데 사용할 수 있는 정보의 양을 제한합니다. 설정을 변경하여 원하는 보호 수준을 선택할 수 있습니다.</translation>
+<translation id="714850411804317247">AI Wize에서는 탐색 중인 사용자를 사이트에서 추적하는 데 사용할 수 있는 정보의 양을 제한합니다. 설정을 변경하여 원하는 보호 수준을 선택할 수 있습니다.</translation>
 <translation id="2989742184762224133">상단 듀얼 스테이플</translation>
 <translation id="2991174974383378012">웹사이트와 공유</translation>
 <translation id="299122504639061328">기본 검색엔진 및 사이트 검색 관리</translation>
@@ -1020,14 +1020,14 @@
 <translation id="3041612393474885105">인증서 정보</translation>
 <translation id="8418829431154568330">타임스탬프, 호스트, 클라이언트 세션 ID를 포함한 AI Wize 원격 데스크톱 기록</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> 가격 <ph name="PRICE_DROP"/> 인하</translation>
-<translation id="4832983047807637948">Brave은 4주 이상 된 주제를 자동 삭제합니다. 인터넷 사용에 따라 특정 주제가 목록에 다시 표시될 수 있습니다. 또는 사용자가 Brave에서 사이트와 공유하지 않았으면 하는 주제를 차단할 수 있습니다. Brave에서 광고 개인 정보 보호 관리에 대해 자세히 알아보세요.</translation>
+<translation id="4832983047807637948">AI Wize은 4주 이상 된 주제를 자동 삭제합니다. 인터넷 사용에 따라 특정 주제가 목록에 다시 표시될 수 있습니다. 또는 사용자가 AI Wize에서 사이트와 공유하지 않았으면 하는 주제를 차단할 수 있습니다. AI Wize에서 광고 개인 정보 보호 관리에 대해 자세히 알아보세요.</translation>
 <translation id="3061707000357573562">서비스 패치</translation>
 <translation id="306573536155379004">게임이 시작되었습니다.</translation>
 <translation id="3067505415088964188">가격이 저렴함</translation>
 <translation id="3068991664510324412">컴퓨터 및 비디오 게임</translation>
 <translation id="3080254622891793721">그래픽</translation>
 <translation id="3081538120861307764">광고 실적을 측정하기 위해 광고가 표시된 시간과 같이 제한된 유형의 데이터가 사이트 간에 공유됩니다.</translation>
-<translation id="254030672859277244">Brave이 내 장바구니를 사용하여 나에게 맞는 할인을 찾을 수 있도록 허용합니다.</translation>
+<translation id="254030672859277244">AI Wize이 내 장바구니를 사용하여 나에게 맞는 할인을 찾을 수 있도록 허용합니다.</translation>
 <translation id="3086579638707268289">웹상의 활동이 모니터링되고 있음</translation>
 <translation id="3087734570205094154">맨 아래</translation>
 <translation id="3090667236485488075">광택</translation>
@@ -1120,7 +1120,7 @@
 <translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize Calendar에서 빠르게 새 일정 만들기</translation>
 <translation id="3261488570342242926">가상 카드 자세히 알아보기</translation>
 <translation id="3262698603497362968">구매 옵션</translation>
-<translation id="3266367459139339908">Brave에서는 사이트에서 개인 맞춤 광고를 표시할 때 수집할 수 있는 사용자에 관한 정보를 제한하는 새로운 방법을 도입합니다. 예를 들면 다음과 같습니다.</translation>
+<translation id="3266367459139339908">AI Wize에서는 사이트에서 개인 맞춤 광고를 표시할 때 수집할 수 있는 사용자에 관한 정보를 제한하는 새로운 방법을 도입합니다. 예를 들면 다음과 같습니다.</translation>
 <translation id="3266793032086590337">값(충돌)</translation>
 <translation id="3266972086368072861">{NUM_COOKIES,plural, =0{관련 사이트를 포함하여 차단된 사이트 없음}=1{관련 사이트를 포함하여 차단된 사이트 1개}other{관련 사이트를 포함하여 차단된 사이트 #개}}</translation>
 <translation id="3268451620468152448">열린 탭</translation>
@@ -1137,7 +1137,7 @@
 <translation id="3287510313208355388">온라인 상태일 때 다운로드</translation>
 <translation id="3288238092761586174">결제 인증을 위해 <ph name="URL"/>에서 추가 단계를 진행해야 할 수 있습니다.</translation>
 <translation id="3293642807462928945"><ph name="POLICY_NAME"/> 정책에 관해 자세히 알아보기</translation>
-<translation id="5894665462526421022">Brave 설정에서 비밀번호를 확인하고 관리하세요.</translation>
+<translation id="5894665462526421022">AI Wize 설정에서 비밀번호를 확인하고 관리하세요.</translation>
 <translation id="3299098170013242198">비밀번호 입력 시 Windows Hello 사용</translation>
 <translation id="3299720788264079132"><ph name="FEATURE_NAME"/> 사용 중에 문제가 발생했습니다.</translation>
 <translation id="3303176609391916566">30x42인치</translation>
@@ -1145,7 +1145,7 @@
 <translation id="3304073249511302126">블루투스 검색</translation>
 <translation id="3304777285002411338">A2x3</translation>
 <translation id="33073482541490531">방금 사용한 비밀번호가 정보 유출로 인해 노출된 것으로 확인됩니다. 비밀번호 관리자에서 지금 바로 비밀번호를 변경하시기를 바랍니다.</translation>
-<translation id="4731386748664539266">Brave 맞춤설정 버튼, 브라우저 테마를 맞춤설정하려면 활성화하세요.</translation>
+<translation id="4731386748664539266">AI Wize 맞춤설정 버튼, 브라우저 테마를 맞춤설정하려면 활성화하세요.</translation>
 <translation id="3308006649705061278">조직 구성 단위(OU)</translation>
 <translation id="3324687287337751929">4x6인치</translation>
 <translation id="3324983252691184275">진홍색</translation>
@@ -1173,9 +1173,9 @@
 <translation id="3366477098757335611">카드 보기</translation>
 <translation id="3369192424181595722">시계 오류</translation>
 <translation id="3369459162151165748">자동차 부품 및 액세서리</translation>
-<translation id="2273851479262317744">Brave을 기본 브라우저로 설정</translation>
+<translation id="2273851479262317744">AI Wize을 기본 브라우저로 설정</translation>
 <translation id="337363190475750230">사용 중단됨</translation>
-<translation id="7740652748540081864">Brave 안전 확인 실행</translation>
+<translation id="7740652748540081864">AI Wize 안전 확인 실행</translation>
 <translation id="3377144306166885718">서버에서 지원 중단된 TLS 버전을 사용했습니다.</translation>
 <translation id="3377188786107721145">정책 파싱 오류</translation>
 <translation id="3377736046129930310">화면 잠금을 사용하여 빠르게 카드 확인</translation>
@@ -1195,7 +1195,7 @@
 <translation id="3407789382767355356">서드 파티 로그인</translation>
 <translation id="3409896703495473338">보안 설정 관리</translation>
 <translation id="3414952576877147120">크기:</translation>
-<translation id="7115177860507615612">Brave 공룡 게임 플레이 버튼, Brave에서 공룡 게임을 플레이하려면 활성화하세요.</translation>
+<translation id="7115177860507615612">AI Wize 공룡 게임 플레이 버튼, AI Wize에서 공룡 게임을 플레이하려면 활성화하세요.</translation>
 <translation id="3422248202833853650">다른 프로그램을 종료하여 메모리를 확보하세요.</translation>
 <translation id="3422472998109090673">현재 <ph name="HOST_NAME"/>에 연결할 수 없습니다.</translation>
 <translation id="3423742043356668186">시스템 지정 값</translation>
@@ -1207,11 +1207,11 @@
 <translation id="3432601291244612633">페이지 닫기</translation>
 <translation id="3433111389595862568">협업 및 회의용 소프트웨어</translation>
 <translation id="3433144818443565002">음성 및 영상 채팅</translation>
-<translation id="3044702330949941099">Brave 비밀번호 관리자에 추가 액세스 권한 필요</translation>
+<translation id="3044702330949941099">AI Wize 비밀번호 관리자에 추가 액세스 권한 필요</translation>
 <translation id="343474037147570563">업로드 또는 첨부한 파일은 분석을 위해 Google Cloud 또는 서드 파티로 전송됩니다. 예를 들어, 민감한 정보 또는 멀웨어를 찾기 위해 파일을 스캔할 수 있으며 회사 정책에 따라 보관되어 관리자가 볼 수도 있습니다.</translation>
 <translation id="3435557549311968410">연속(짧음)</translation>
 <translation id="3435738964857648380">보안</translation>
-<translation id="4527130811319726464">Brave 계정에 저장된 비밀번호 사용</translation>
+<translation id="4527130811319726464">AI Wize 계정에 저장된 비밀번호 사용</translation>
 <translation id="3440783957068352691">정사각형</translation>
 <translation id="3441653493275994384">화면</translation>
 <translation id="3443504041532578451">광디스크(새틴)</translation>
@@ -1228,7 +1228,7 @@
 <translation id="3465972433695735758">이 PDF에 액세스할 수 없습니다. AI Wize AI를 통해 텍스트가 추출되었습니다</translation>
 <translation id="346601286295919445">화학</translation>
 <translation id="3468054117417088249"><ph name="TAB_SWITCH_SUFFIX"/>, 현재 열려 있음, Tab을 누른 다음 Enter를 눌러 열린 탭으로 전환</translation>
-<translation id="3807334561457710885">Brave의 글꼴 맞춤설정 버튼, AI Wize 글꼴 크기와 서체를 맞춤설정하려면 활성화하세요.</translation>
+<translation id="3807334561457710885">AI Wize의 글꼴 맞춤설정 버튼, AI Wize 글꼴 크기와 서체를 맞춤설정하려면 활성화하세요.</translation>
 <translation id="3477679029130949506">영화 상영 시간표</translation>
 <translation id="3478033058537426179">그룹별</translation>
 <translation id="3479552764303398839">나중에</translation>
@@ -1282,7 +1282,7 @@
 <translation id="3576616784287504635"><ph name="SITE"/>에 삽입된 페이지 내용:</translation>
 <translation id="3577473026931028326">문제가 발생했습니다. 다시 시도하세요.</translation>
 <translation id="3577902790357386792">체조</translation>
-<translation id="230476913390177517">이 페이지가 준비되면 Brave에서 알려드립니다. &lt;a&gt;취소&lt;/a&gt;</translation>
+<translation id="230476913390177517">이 페이지가 준비되면 AI Wize에서 알려드립니다. &lt;a&gt;취소&lt;/a&gt;</translation>
 <translation id="3582930987043644930">이름 추가</translation>
 <translation id="3583757800736429874">이동 다시 실행(&amp;R)</translation>
 <translation id="3584299510153766161">하단 2공 펀칭</translation>
@@ -1291,7 +1291,7 @@
 <translation id="3586931643579894722">세부정보 숨기기</translation>
 <translation id="3587738293690942763">보통</translation>
 <translation id="3600246354004376029"><ph name="TITLE"/>, <ph name="DOMAIN"/>, <ph name="TIME"/></translation>
-<translation id="8476504968862670676">Brave 개인 정보 보호 설정 관리 버튼, AI Wize 계정 개인 정보 보호 설정 페이지를 방문하려면 활성화하세요.</translation>
+<translation id="8476504968862670676">AI Wize 개인 정보 보호 설정 관리 버튼, AI Wize 계정 개인 정보 보호 설정 페이지를 방문하려면 활성화하세요.</translation>
 <translation id="3603507503523709">관리자가 차단한 애플리케이션</translation>
 <translation id="3605899229568538311">5x5인치</translation>
 <translation id="3608932978122581043">종이 공급 방향</translation>
@@ -1341,7 +1341,7 @@
 <translation id="3678029195006412963">요청을 서명할 수 없음</translation>
 <translation id="3678914302246317895"><ph name="OTP_LENGTH"/>자리 인증 코드 입력</translation>
 <translation id="3681007416295224113">인증서 정보</translation>
-<translation id="2659564324969662497">Brave에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악합니다.</translation>
+<translation id="2659564324969662497">AI Wize에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악합니다.</translation>
 <translation id="3682094733650754138">주소 입력 옵션이 선택됨</translation>
 <translation id="3689867156802445220">건물 번호</translation>
 <translation id="3693327506115126094">본인 인증 방법 선택</translation>
@@ -1362,13 +1362,13 @@
 <translation id="3714633008798122362">웹 캘린더</translation>
 <translation id="3714780639079136834">모바일 데이터 또는 Wi-Fi 사용 설정</translation>
 <translation id="3715016660240337709">{0,plural, =1{파일 업로드 차단됨}other{파일 <ph name="FILE_COUNT"/>개 업로드 차단됨}}</translation>
-<translation id="2241987852555440600">Brave에서 보안 관련 활동을 신고한 경우 활동에 관한 데이터가 관리자에게 전송됩니다. 여기에는 Brave에서 방문한 페이지 URL, 파일 이름 또는 메타데이터, 브라우저 또는 탭 비정상 종료와 더불어 웹 기반 애플리케이션, 기기, Brave에 로그인할 때 사용한 사용자 이름이 포함될 수 있습니다.</translation>
+<translation id="2241987852555440600">AI Wize에서 보안 관련 활동을 신고한 경우 활동에 관한 데이터가 관리자에게 전송됩니다. 여기에는 AI Wize에서 방문한 페이지 URL, 파일 이름 또는 메타데이터, 브라우저 또는 탭 비정상 종료와 더불어 웹 기반 애플리케이션, 기기, AI Wize에 로그인할 때 사용한 사용자 이름이 포함될 수 있습니다.</translation>
 <translation id="3715597595485130451">Wi-Fi 연결</translation>
 <translation id="3717027428350673159"><ph name="BEGIN_LINK"/>프록시, 방화벽, DNS 설정 확인<ph name="END_LINK"/></translation>
 <translation id="3723663469265383848">업데이트 중에는 최대 10분 동안 기기를 사용할 수 없습니다.</translation>
 <translation id="372429172604983730">이 오류를 일으키는 애플리케이션에는 바이러스 백신, 방화벽, 웹 필터링 또는 프록시 소프트웨어 등이 있습니다.</translation>
 <translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 Slides에서 빠르게 새 AI Wize 프레젠테이션 만들기</translation>
-<translation id="8077319455765501118">Brave 비밀번호 관리자를 MacOS 키체인과 함께 사용하려면 Brave을 다시 실행한 다음 키체인 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
+<translation id="8077319455765501118">AI Wize 비밀번호 관리자를 MacOS 키체인과 함께 사용하려면 AI Wize을 다시 실행한 다음 키체인 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
 <translation id="3733139489341305600">자율 주행 자동차</translation>
 <translation id="3736520371357197498">보안 관련 위험을 이해한다면 위험한 프로그램이 삭제되기 전에 <ph name="BEGIN_LINK"/>안전하지 않은 사이트<ph name="END_LINK"/>에 방문해도 됩니다.</translation>
 <translation id="3736739313435669994">탐색 중인 사용자를 추적하기 위해 사이트에서 서드 파티 쿠키를 사용하지 못하도록 차단했습니다. <ph name="LINK"/>하려면 설정으로 이동하세요.</translation>
@@ -1380,7 +1380,7 @@
 <translation id="3743765582345153106">자동 완성 사용 시 항상 확인</translation>
 <translation id="3744111561329211289">백그라운드 동기화</translation>
 <translation id="3744212718085287312">다음번에는 가상 카드로 보안을 강화하시겠어요?</translation>
-<translation id="8500803517201014627">텍스트와 작성 중인 페이지의 콘텐츠 및 URL이 Brave로 전송되어 담당자가 검토한 후 이 기능을 개선하는 데 사용됩니다. 의료 또는 금융 정보와 같은 개인 정보를 입력하거나 비공개 정보 또는 민감한 정보가 포함된 사이트에서는 이 도구를 사용하지 마세요.</translation>
+<translation id="8500803517201014627">텍스트와 작성 중인 페이지의 콘텐츠 및 URL이 AI Wize로 전송되어 담당자가 검토한 후 이 기능을 개선하는 데 사용됩니다. 의료 또는 금융 정보와 같은 개인 정보를 입력하거나 비공개 정보 또는 민감한 정보가 포함된 사이트에서는 이 도구를 사용하지 마세요.</translation>
 <translation id="3748009735914587286">금속(고광택)</translation>
 <translation id="3748148204939282805"><ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/>의 공격자가 소프트웨어를 설치하거나 개인정보(예: 비밀번호, 전화번호, 신용카드)를 공개하는 등의 위험한 행동을 하도록 사용자를 속일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3748912308089554501">항공 산업</translation>
@@ -1395,7 +1395,7 @@
 <translation id="3767485424735936570">이 콘텐츠를 복사하여 <ph name="VM_NAME"/>에 붙여넣는 작업은 관리자 정책에 따라 권장되지 않습니다.</translation>
 <translation id="3772211998634047851">용지(본드)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize Keep에서 빠르게 새 메모 만들기</translation>
-<translation id="6473814193688111215">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/> 사이트에 위험한 소프트웨어가 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다</translation>
+<translation id="6473814193688111215">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/> 사이트에 위험한 소프트웨어가 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다</translation>
 <translation id="3780694243617746492">출력함</translation>
 <translation id="3781428340399460090">진한 분홍색</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1408,7 +1408,7 @@
 <translation id="3799805948399000906">글꼴 요청됨</translation>
 <translation id="3801265110651850478">탐색 트래픽과 함께 ‘추적 안함’ 요청 전송</translation>
 <translation id="380329542618494757">이름</translation>
-<translation id="4435991890010083520">방문하려는 사이트의 공격자가 속임수를 써서 소프트웨어를 설치하거나 비밀번호, 전화번호, 신용카드 번호 등을 공개하도록 유도할 수 있습니다. Brave에서는 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4435991890010083520">방문하려는 사이트의 공격자가 속임수를 써서 소프트웨어를 설치하거나 비밀번호, 전화번호, 신용카드 번호 등을 공개하도록 유도할 수 있습니다. AI Wize에서는 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3807270098669886186">전화 서비스 제공업체</translation>
 <translation id="3807366285948165054">이미지 X 시프트</translation>
 <translation id="3807873520724684969">유해한 콘텐츠 차단됨</translation>
@@ -1455,7 +1455,7 @@
 <translation id="3909695131102177774"><ph name="LABEL"/> <ph name="ERROR"/></translation>
 <translation id="3910231615117880630">삽입된 콘텐츠에 대해 자세히 알아보기</translation>
 <translation id="5852873875468214161">언제든지 AI Wize 설정에서 선택을 변경할 수 있습니다.</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>데이터 관리 방법:<ph name="END_BOLD"/> Brave에서는 30일이 지난 사이트를 자동 삭제합니다. 재방문한 사이트는 목록에 다시 표시될 수 있습니다. 또한 AI Wize 설정에서 광고를 추천하지 못하도록 언제든지 특정 사이트를 차단하고 사이트 추천 광고 설정을 사용 중지할 수 있습니다.</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>데이터 관리 방법:<ph name="END_BOLD"/> AI Wize에서는 30일이 지난 사이트를 자동 삭제합니다. 재방문한 사이트는 목록에 다시 표시될 수 있습니다. 또한 AI Wize 설정에서 광고를 추천하지 못하도록 언제든지 특정 사이트를 차단하고 사이트 추천 광고 설정을 사용 중지할 수 있습니다.</translation>
 <translation id="3921869355029467742">보안 코드 입력하기</translation>
 <translation id="3927932062596804919">거부</translation>
 <translation id="3930260846839546333">핸드백 및 지갑</translation>
@@ -1474,7 +1474,7 @@
 <translation id="3950820424414687140">로그인</translation>
 <translation id="3953505489397572035">일반적인 가격</translation>
 <translation id="3958057596965527988">4x4인치</translation>
-<translation id="8475602291812563124">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/>사이트에 피싱이 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다.<ph name="NEW_LINE"/>평소에 안전한 사이트도 가끔은 공격자에 의해 해킹당할 수 있습니다. 세이프 브라우징 기능의 오류이며 이 사이트가 위험을 초래하고 있지 않다고 생각되면 <ph name="BEGIN_ERROR_LINK"/>Brave에 알려주시기 바랍니다<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="8475602291812563124">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있습니다. 최근 세이프 브라우징에서 사용자님이 방문하고자 한 <ph name="BEGIN_LINK"/><ph name="SITE"/>사이트에 피싱이 삽입되어 있음을 발견<ph name="END_LINK"/>했습니다.<ph name="NEW_LINE"/>평소에 안전한 사이트도 가끔은 공격자에 의해 해킹당할 수 있습니다. 세이프 브라우징 기능의 오류이며 이 사이트가 위험을 초래하고 있지 않다고 생각되면 <ph name="BEGIN_ERROR_LINK"/>AI Wize에 알려주시기 바랍니다<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="3961148744525529027">결제 핸들러 시트가 절반 높이로 열림</translation>
 <translation id="3962859241508114581">이전 트랙</translation>
 <translation id="3963721102035795474">리더 모드</translation>
@@ -1507,12 +1507,12 @@
 <translation id="4040350669425716613">대학(단과/종합)</translation>
 <translation id="4047351652147966654">18x24인치</translation>
 <translation id="404831776305217138">ID가 "<ph name="EXTENSION_ID"/>"인 확장 프로그램의 업데이트 URL이 잘못되었거나 지원되지 않는 스키마를 사용합니다. 지원되는 스키마는 <ph name="HTTP_SCHEME"/>, <ph name="HTTPS_SCHEME"/>, <ph name="FILE_SCHEME"/>입니다.</translation>
-<translation id="2635033286761217583">Brave 제품에서 사용할 수 있습니다.</translation>
-<translation id="336808635693308470">Brave에서 결제 수단을 수정하려고 합니다.</translation>
+<translation id="2635033286761217583">AI Wize 제품에서 사용할 수 있습니다.</translation>
+<translation id="336808635693308470">AI Wize에서 결제 수단을 수정하려고 합니다.</translation>
 <translation id="405399507749852140">사이트에서 가격이 인하되면 알림이 전송됩니다</translation>
 <translation id="4056223980640387499">세피아</translation>
 <translation id="4059523390906550209">Sensitive Data Protection에 관해 자세히 알아보기</translation>
-<translation id="4161619938555288542">Brave이 내 장바구니에 맞는 할인 혜택을 찾도록 허용</translation>
+<translation id="4161619938555288542">AI Wize이 내 장바구니에 맞는 할인 혜택을 찾도록 허용</translation>
 <translation id="406358100705415968">작업 안전 보호 장구</translation>
 <translation id="4063924980214801036">기기 잠금 해제를 사용하여 빠르게 카드 확인</translation>
 <translation id="4065659219963895623">음식점</translation>
@@ -1533,7 +1533,7 @@
 <translation id="4096237801206588987">11x15인치</translation>
 <translation id="4098354747657067197">사기성 사이트 주의</translation>
 <translation id="4099048595830172239">관리자 정책에 따라 기밀 콘텐츠가 화면에 표시되어 있을 때 <ph name="APPLICATION_TITLE"/> 앱과 화면을 공유하지 않는 것이 좋습니다.</translation>
-<translation id="5393384033795488834"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 Brave의 글꼴 크기와 서체 맞춤설정</translation>
+<translation id="5393384033795488834"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize의 글꼴 크기와 서체 맞춤설정</translation>
 <translation id="4101413244023615925">텍스트 및 그래픽</translation>
 <translation id="410148943680000050">탁상출판</translation>
 <translation id="4103249731201008433">기기 일련번호가 잘못됨</translation>
@@ -1565,7 +1565,7 @@
 <translation id="4150099059797363385">봉투 Chinese #4</translation>
 <translation id="4151403195736952345">글로벌 기본값 사용(감지)</translation>
 <translation id="4152318981910038897">{COUNT,plural, =1{페이지 1}other{페이지 {COUNT}}}</translation>
-<translation id="6923879007831202776">이제 Brave에서 결제 수단을 입력하기 전에 본인 인증을 진행합니다. 언제든지 <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>에서 업데이트할 수 있습니다.</translation>
+<translation id="6923879007831202776">이제 AI Wize에서 결제 수단을 입력하기 전에 본인 인증을 진행합니다. 언제든지 <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>에서 업데이트할 수 있습니다.</translation>
 <translation id="4159149286839604525">대부분의 사이트 기능은 작동하지만 보안이 취약해집니다.</translation>
 <translation id="4159784952369912983">보라색</translation>
 <translation id="4165986682804962316">사이트 설정</translation>
@@ -1582,7 +1582,7 @@
 <translation id="4179515394835346607"><ph name="ROW_NAME"/> <ph name="ROW_CONTENT"/></translation>
 <translation id="4186035307311647330">가격 추적 취소</translation>
 <translation id="4191334393248735295">길이</translation>
-<translation id="9150836098508392713">Brave 도움말 보기 버튼, AI Wize 기능에 관해 자세히 알아보려면 활성화하세요.</translation>
+<translation id="9150836098508392713">AI Wize 도움말 보기 버튼, AI Wize 기능에 관해 자세히 알아보려면 활성화하세요.</translation>
 <translation id="4195643157523330669">새 탭에서 열기</translation>
 <translation id="4196861286325780578">이동 다시 실행(&amp;R)</translation>
 <translation id="4199637363739172710">시계</translation>
@@ -1603,7 +1603,7 @@
 <translation id="422722221769396062">음식 배달 서비스</translation>
 <translation id="4230204356098880324">카메라 사용 및 이동을 요청할 수 있음</translation>
 <translation id="4231448684371260244">8x13인치</translation>
-<translation id="2706343222967082402">Brave에서는 30일 이내에 광고를 추천하는 주제와 사이트를 자동 삭제합니다. 원하지 않는 특정 주제 및 사이트를 차단할 수도 있습니다.</translation>
+<translation id="2706343222967082402">AI Wize에서는 30일 이내에 광고를 추천하는 주제와 사이트를 자동 삭제합니다. 원하지 않는 특정 주제 및 사이트를 차단할 수도 있습니다.</translation>
 <translation id="4235360514405112390">유효</translation>
 <translation id="4239799716689808527">라벨</translation>
 <translation id="4242380780309416996">봉투(중량)</translation>
@@ -1633,7 +1633,7 @@
 <translation id="4282346679996504092">제품 관련 알림이 사용 중지되었으며 북마크가 삭제되었습니다.</translation>
 <translation id="4285498937028063278">고정 해제</translation>
 <translation id="8314946990939758167">{NUM_CARDS,plural, =1{다음 카드가 AI Wize 계정에 저장되었습니다.}other{다음 카드가 AI Wize 계정에 저장되었습니다.}}</translation>
-<translation id="2820825061680010514">Brave의 개선된 광고 개인 정보 보호</translation>
+<translation id="2820825061680010514">AI Wize의 개선된 광고 개인 정보 보호</translation>
 <translation id="4290920330097335010">허용 안함</translation>
 <translation id="4296207570293932800">새로운 광고 개인 정보 보호 기능 사용 가능</translation>
 <translation id="4297502707443874121"><ph name="THUMBNAIL_PAGE"/> 페이지 미리보기 이미지</translation>
@@ -1668,7 +1668,7 @@
 <translation id="4333561522337981382">모든 디스플레이의 창 관리</translation>
 <translation id="4336219115486912529">{COUNT,plural, =1{내일 만료됨}other{#일 후에 만료됨}}</translation>
 <translation id="4336913590841287350">이 정책은 iOS에서 아직 사용자 정책으로 지원되지 않습니다.</translation>
-<translation id="5792122559159836842">이 광고는 기기에서 너무 많은 리소스를 사용했기 때문에 Brave에서 삭제했습니다.</translation>
+<translation id="5792122559159836842">이 광고는 기기에서 너무 많은 리소스를 사용했기 때문에 AI Wize에서 삭제했습니다.</translation>
 <translation id="4340810192899866471">JSON에서 가져오기</translation>
 <translation id="6116812392674177288">이 컴퓨터는 기업에서 관리하는 기기가 아닌 것으로 파악되므로, AI Wize 웹 스토어에 호스팅된 확장 프로그램만 정책을 통해 자동으로 설치할 수 있습니다. AI Wize 웹 스토어의 업데이트 URL은 '<ph name="CWS_UPDATE_URL"/>'입니다.</translation>
 <translation id="4348834659292907206"><ph name="SITE"/>에 대한 연결이 안전하지 않음</translation>
@@ -1685,7 +1685,7 @@
 <translation id="437040971055499437">보안 관련 활동 발생</translation>
 <translation id="4371591986692297148">비활성</translation>
 <translation id="4372948949327679948">예상 <ph name="VALUE_TYPE"/> 값입니다.</translation>
-<translation id="7617743757131201121">관심분야를 예측할 때 Brave에서 선택할 수 있는 주제 풀에 원하는 항목을 다시 추가하세요.</translation>
+<translation id="7617743757131201121">관심분야를 예측할 때 AI Wize에서 선택할 수 있는 주제 풀에 원하는 항목을 다시 추가하세요.</translation>
 <translation id="437620492464254965">창호</translation>
 <translation id="4377125064752653719"><ph name="DOMAIN"/>에 접속하려 했으나 발행기관에서 서버가 전달한 인증서를 폐기했습니다. 이는 서버가 제시한 보안 자격증명 정보를 신뢰할 수 없음을 의미합니다. 사용자는 현재 공격자와 통신 중일 수도 있습니다.</translation>
 <translation id="4378154925671717803">전화기</translation>
@@ -1718,7 +1718,7 @@
 <translation id="4451684391620232683">사용자에게 표시되는 텍스트:</translation>
 <translation id="8416018650396907203">방금 사용한 비밀번호가 정보 유출로 인해 노출된 것으로 확인됩니다. 계정을 보호하기 위해 AI Wize 비밀번호 관리자에서 저장된 비밀번호를 확인하시기 바랍니다.</translation>
 <translation id="4464826014807964867">조직의 정보가 포함된 웹사이트</translation>
-<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>향상된 보호 모드를 사용 설정<ph name="END_ENHANCED_PROTECTION_LINK"/>하여 Brave의 가장 강력한 보안을 활용하세요.</translation>
+<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>향상된 보호 모드를 사용 설정<ph name="END_ENHANCED_PROTECTION_LINK"/>하여 AI Wize의 가장 강력한 보안을 활용하세요.</translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>. <ph name="LEARN_MORE_TEXT"/></translation>
 <translation id="4476953670630786061">안전하지 않은 양식입니다. 자동 완성이 사용 중지되었습니다.</translation>
 <translation id="4477350412780666475">다음 트랙</translation>
@@ -1727,9 +1727,9 @@
 <translation id="448363931695049633">피자 가게</translation>
 <translation id="4489023393592172404">봉투 Kaku 4</translation>
 <translation id="4490717597759821841">A7</translation>
-<translation id="3966104135245031874">Brave 계정을 사용해 동기화된 비밀번호 암호화</translation>
+<translation id="3966104135245031874">AI Wize 계정을 사용해 동기화된 비밀번호 암호화</translation>
 <translation id="4493480324863638523">잘못된 URL입니다. URL에는 표준 스키마가 있어야 합니다(예: http://example.com 또는 https://example.com).</translation>
-<translation id="7622628059331736328">설정에서 광고 주제를 확인하고 사이트와 공유하길 원하지 않는 주제를 차단할 수 있습니다. Brave에서는 4주가 지난 광고 주제를 자동 삭제합니다.</translation>
+<translation id="7622628059331736328">설정에서 광고 주제를 확인하고 사이트와 공유하길 원하지 않는 주제를 차단할 수 있습니다. AI Wize에서는 4주가 지난 광고 주제를 자동 삭제합니다.</translation>
 <translation id="4500587658229086076">안전하지 않은 콘텐츠</translation>
 <translation id="4506176782989081258">유효성 검사 오류 <ph name="VALIDATION_ERROR"/></translation>
 <translation id="4506599922270137252">시스템 관리자에게 문의</translation>
@@ -1772,7 +1772,7 @@
 <translation id="4598556348158889687">저장용량 관리</translation>
 <translation id="4600084978141515058">비건 요리</translation>
 <translation id="4602465984861132303">볼링</translation>
-<translation id="8338928872956435647">Brave 도움말 보기</translation>
+<translation id="8338928872956435647">AI Wize 도움말 보기</translation>
 <translation id="460848736049414407">관리자가 차단함</translation>
 <translation id="4610279718074907952"><ph name="SET_OWNER"/>에서 정의한 그룹(내 활동을 볼 수 있음)에 속하는 사이트입니다.</translation>
 <translation id="46128681529823442">축구 장비</translation>
@@ -1800,13 +1800,13 @@
 <translation id="466561305373967878">보드게임</translation>
 <translation id="4666114623408286498">제약 및 바이오테크</translation>
 <translation id="4668929960204016307">,</translation>
-<translation id="2972922043310308045">Brave은 지난 몇 주간의 방문 기록을 토대로 관심 있는 주제를 기록합니다.</translation>
+<translation id="2972922043310308045">AI Wize은 지난 몇 주간의 방문 기록을 토대로 관심 있는 주제를 기록합니다.</translation>
 <translation id="4670064810192446073">가상 현실</translation>
 <translation id="4671339777629075741">봉투 DL</translation>
 <translation id="4673460618347856347">공룡 게임 플레이</translation>
 <translation id="467662567472608290">이 서버가 <ph name="DOMAIN"/>임을 입증할 수 없으며 서버의 보안 인증서에 오류가 있습니다. 서버를 잘못 설정했거나 불법 사용자가 연결을 가로채고 있기 때문일 수 있습니다.</translation>
 <translation id="4677585247300749148"><ph name="URL"/>에서 접근성 이벤트에 응답하려고 합니다</translation>
-<translation id="8197094463444457125">Brave Slides</translation>
+<translation id="8197094463444457125">AI Wize Slides</translation>
 <translation id="4682496302933121474">페이지를 번역하시겠습니까?</translation>
 <translation id="468314109939257734">가상 카드 번호 보기</translation>
 <translation id="4687718960473379118">사이트 추천 광고</translation>
@@ -1846,12 +1846,12 @@
 <translation id="4754461935447132332">안전하지 않은 사이트에서 허용되지 않음</translation>
 <translation id="4756388243121344051">방문 기록(&amp;H)</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
-<translation id="5644030191910182707">Brave 프로필의 패스키</translation>
+<translation id="5644030191910182707">AI Wize 프로필의 패스키</translation>
 <translation id="1015173303159845845">사기성 사이트에 비밀번호를 입력했습니다. 계정을 안전하게 보호하려면 저장된 비밀번호를 확인해 보시기 바랍니다.</translation>
 <translation id="4758311279753947758">연락처 정보 추가</translation>
 <translation id="4761104368405085019">마이크 사용</translation>
 <translation id="4761326898079498987">추가 세부정보를 검토하세요</translation>
-<translation id="1980929286541331105">Brave 안전 확인 실행</translation>
+<translation id="1980929286541331105">AI Wize 안전 확인 실행</translation>
 <translation id="4763196677855776703"><ph name="URL"/>에서 제공한 이용약관</translation>
 <translation id="4764680219299728632">레인지, 쿡탑, 오븐</translation>
 <translation id="4764776831041365478"><ph name="URL"/>의 웹페이지가 일시적으로 다운되었거나 새 웹 주소로 완전히 이동했을 수 있습니다.</translation>
@@ -1860,7 +1860,7 @@
 <translation id="4774055414220872623">미술 및 공예용품</translation>
 <translation id="477945296921629067">{NUM_POPUPS,plural, =1{팝업 1개 차단됨}other{팝업 #개 차단됨}}</translation>
 <translation id="4780366598804516005">메일박스 1</translation>
-<translation id="752757955979594126">Brave 계정 관리</translation>
+<translation id="752757955979594126">AI Wize 계정 관리</translation>
 <translation id="4785689107224900852">이 탭으로 전환</translation>
 <translation id="4786804728079074733">배구</translation>
 <translation id="4787182171088676626">봉투(고운)</translation>
@@ -1886,14 +1886,14 @@
 <translation id="4831993743164297314">이미지 설정용 용지</translation>
 <translation id="483241715238664915">경고 켜기</translation>
 <translation id="4834250788637067901">Google Pay에 사용되는 결제 수단, 쿠폰, 주소</translation>
-<translation id="1923748633297576468">다음에는 Brave의 선도적인 보안 기술로 더 빠르고 안전한 카드 결제를 이용해 보세요.</translation>
-<translation id="246176083348620700">Brave 방문 기록 보기</translation>
+<translation id="1923748633297576468">다음에는 AI Wize의 선도적인 보안 기술로 더 빠르고 안전한 카드 결제를 이용해 보세요.</translation>
+<translation id="246176083348620700">AI Wize 방문 기록 보기</translation>
 <translation id="484462545196658690">자동</translation>
 <translation id="484671803914931257"><ph name="MERCHANT_NAME"/> 등에서 할인을 받으세요</translation>
 <translation id="484988093836683706">기기 잠금 해제 사용</translation>
 <translation id="4850886885716139402">보기</translation>
 <translation id="4852429274334674023">운영체제</translation>
-<translation id="3418609161696289726">Brave Keep에서 빠르게 새 메모 만들기</translation>
+<translation id="3418609161696289726">AI Wize Keep에서 빠르게 새 메모 만들기</translation>
 <translation id="485902285759009870">코드 인증 중...</translation>
 <translation id="4864406669374375262">버전 문자열이 클립보드에 복사되었습니다.</translation>
 <translation id="486459320933704969">부모님 또는 보호자가 이 웹사이트를 방문해도 괜찮다고 말해야 합니다.</translation>
@@ -1930,7 +1930,7 @@
 <translation id="4918221908152712722"><ph name="APP_NAME"/> 설치(다운로드 필요 없음)</translation>
 <translation id="4920457992177678649">휴가철 임대 및 단기 체류</translation>
 <translation id="4920710383559189047">슬리브</translation>
-<translation id="1298471559729553235">운영체제에서 비밀번호 관리자를 사용하려면 Brave을 다시 실행하고 비밀번호 관리자에 대한 컴퓨터의 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
+<translation id="1298471559729553235">운영체제에서 비밀번호 관리자를 사용하려면 AI Wize을 다시 실행하고 비밀번호 관리자에 대한 컴퓨터의 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
 <translation id="4923459931733593730">결제</translation>
 <translation id="4926049483395192435">지정해야 합니다.</translation>
 <translation id="4926159001844873046"><ph name="SITE"/> 내용:</translation>
@@ -1947,9 +1947,9 @@
 <translation id="4950898438188848926">탭 전환 버튼, <ph name="TAB_SWITCH_FOCUSED_FRIENDLY_MATCH_TEXT"/> 열린 탭으로 전환하려면 Enter를 누르세요</translation>
 <translation id="495170559598752135">작업</translation>
 <translation id="4953689047182316270">접근성 이벤트에 응답</translation>
-<translation id="2351178841237473727">Brave 방문 기록 보기 버튼, AI Wize 설정에서 방문 기록을 보고 관리하려면 활성화하세요.</translation>
+<translation id="2351178841237473727">AI Wize 방문 기록 보기 버튼, AI Wize 설정에서 방문 기록을 보고 관리하려면 활성화하세요.</translation>
 <translation id="4958444002117714549">펼치기 목록</translation>
-<translation id="5398999400894437316">Brave 광고 개인 정보 보호 설정에서 변경할 수 있습니다.</translation>
+<translation id="5398999400894437316">AI Wize 광고 개인 정보 보호 설정에서 변경할 수 있습니다.</translation>
 <translation id="4960203958361543136">검색엔진 선택</translation>
 <translation id="4964505745997821360">건강보험</translation>
 <translation id="4967366744630699583">주소 수정</translation>
@@ -1972,7 +1972,7 @@
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 사이트 검색과 기본 검색엔진 관리</translation>
 <translation id="4998950033665438990">단면</translation>
 <translation id="5001526427543320409">서드 파티 쿠키</translation>
-<translation id="3676215163710610678">선택하면 Brave에서 양식을 더 빠르게 작성할 수 있도록 이 기기에 카드 사본을 저장합니다.</translation>
+<translation id="3676215163710610678">선택하면 AI Wize에서 양식을 더 빠르게 작성할 수 있도록 이 기기에 카드 사본을 저장합니다.</translation>
 <translation id="5007392906805964215">검토</translation>
 <translation id="5011561501798487822">감지된 언어</translation>
 <translation id="5015510746216210676">컴퓨터 이름:</translation>
@@ -1981,13 +1981,13 @@
 <translation id="5018422839182700155">이 페이지를 열 수 없음</translation>
 <translation id="5018802455907704660">16x20인치</translation>
 <translation id="5019198164206649151">보조 기억 장치 상태가 잘못됨</translation>
-<translation id="2013297594801702701">Brave 제품 전반에서 저장된 주소를 사용할 수 있습니다. 이 주소는 AI Wize 계정(<ph name="USER_EMAIL"/>)에 저장됩니다.</translation>
+<translation id="2013297594801702701">AI Wize 제품 전반에서 저장된 주소를 사용할 수 있습니다. 이 주소는 AI Wize 계정(<ph name="USER_EMAIL"/>)에 저장됩니다.</translation>
 <translation id="5020776957610079374">제3세계 음악</translation>
-<translation id="6516968977334148048">Brave으로 가격 추적</translation>
+<translation id="6516968977334148048">AI Wize으로 가격 추적</translation>
 <translation id="5023310440958281426">관리자 정책을 확인하세요.</translation>
 <translation id="5030338702439866405">발급 기관</translation>
 <translation id="503069730517007720">'<ph name="SOFTWARE_NAME"/>'의 루트 인증서가 필요하지만 설치되어 있지 않습니다. IT 관리자가 '<ph name="SOFTWARE_NAME"/>'의 설정 안내에 따라 이 문제를 해결해야 합니다. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="6425384654920630035">Brave 번역 정보</translation>
+<translation id="6425384654920630035">AI Wize 번역 정보</translation>
 <translation id="503498442187459473"><ph name="HOST"/>에서 카메라와 마이크를 사용하려고 합니다.</translation>
 <translation id="5035135400558156732">원예</translation>
 <translation id="503574301575803523">SRA3</translation>
@@ -2017,7 +2017,7 @@
 <translation id="5087580092889165836">카드 추가</translation>
 <translation id="5088142053160410913">운영자에게 보내는 메시지</translation>
 <translation id="5093232627742069661">Z 폴드</translation>
-<translation id="4906192414477726331">이 서버가 <ph name="DOMAIN"/>임을 입증할 수 없으며 Brave에서 신뢰하는 보안 인증서가 아닙니다. 서버를 잘못 설정했거나 불법 사용자가 연결을 가로채고 있기 때문일 수 있습니다.</translation>
+<translation id="4906192414477726331">이 서버가 <ph name="DOMAIN"/>임을 입증할 수 없으며 AI Wize에서 신뢰하는 보안 인증서가 아닙니다. 서버를 잘못 설정했거나 불법 사용자가 연결을 가로채고 있기 때문일 수 있습니다.</translation>
 <translation id="5097099694988056070">CPU/RAM 사용 등의 기기 통계</translation>
 <translation id="5097468150760963273">27x39인치</translation>
 <translation id="5097501891273180634">A2</translation>
@@ -2086,11 +2086,11 @@
 <translation id="5239623327352565343">위치 허용됨</translation>
 <translation id="5242610955375133957">드라이 필름</translation>
 <translation id="5242889659037569123">여행 가방 및 여행용품</translation>
-<translation id="8854897060240443467">Brave 계정 관리 버튼, AI Wize 계정에서 정보, 개인 정보 보호, 보안 설정을 관리하려면 활성화하세요.</translation>
+<translation id="8854897060240443467">AI Wize 계정 관리 버튼, AI Wize 계정에서 정보, 개인 정보 보호, 보안 설정을 관리하려면 활성화하세요.</translation>
 <translation id="5244732203286792411">로드 중입니다.
     시간이 조금 걸릴 수 있습니다.</translation>
 <translation id="5250209940322997802">'네트워크에 연결'</translation>
-<translation id="6055400808586511449">Brave 기능 자세히 알아보기</translation>
+<translation id="6055400808586511449">AI Wize 기능 자세히 알아보기</translation>
 <translation id="5251803541071282808">클라우드</translation>
 <translation id="5254043433801397071">인쇄 콘텐츠 최적화</translation>
 <translation id="5255690596502591079">무시하고 캡처</translation>
@@ -2124,7 +2124,7 @@
 <translation id="5306593769196050043">모든 시트</translation>
 <translation id="5307166000025436103">확인</translation>
 <translation id="5308380583665731573">연결</translation>
-<translation id="9017231970148712387">Brave 설정에서 변경할 수 있습니다.</translation>
+<translation id="9017231970148712387">AI Wize 설정에서 변경할 수 있습니다.</translation>
 <translation id="5308689395849655368">비정상 종료 보고가 사용 중지되었습니다.</translation>
 <translation id="5310178588836736698">오프로드 자동차</translation>
 <translation id="5314967030527622926">소책자 제작기</translation>
@@ -2178,7 +2178,7 @@
 <translation id="5425241977284572032">{NUM_COOKIES,plural, =0{차단된 사이트 없음}=1{차단된 사이트 1개}other{차단된 사이트 #개}}</translation>
 <translation id="5426179911063097041"><ph name="SITE"/>에서 알림을 보내려고 합니다.</translation>
 <translation id="5430298929874300616">북마크 삭제</translation>
-<translation id="8517215617486022589">Brave에 <ph name="BEGIN_EMPHASIS"/>저장되지 않는 항목<ph name="END_EMPHASIS"/>:
+<translation id="8517215617486022589">AI Wize에 <ph name="BEGIN_EMPHASIS"/>저장되지 않는 항목<ph name="END_EMPHASIS"/>:
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>방문 기록
             <ph name="LIST_ITEM"/>쿠키 및 사이트 데이터
@@ -2241,8 +2241,8 @@
 <translation id="555037537507405574">고급 프린터 기능</translation>
 <translation id="555128936272638662">모바일 및 무선 액세서리</translation>
 <translation id="5551890439174915351">100x200mm</translation>
-<translation id="6084314943327785510">Brave에서는 온라인에 게시된 비밀번호 목록에 사용자의 비밀번호가 포함되어 있는지를 주기적으로 확인합니다. 이렇게 하면 비밀번호 및 사용자 이름이 암호화되어 Brave을 포함해 누구도 읽을 수 없습니다.</translation>
-<translation id="4362225295386962644">비밀번호를 사용하면 온라인에 비밀번호가 게시된 경우 Brave에서 경고를 표시합니다. 이렇게 하면 비밀번호 및 사용자 이름이 암호화되어 Brave을 포함해 누구도 읽을 수 없습니다.</translation>
+<translation id="6084314943327785510">AI Wize에서는 온라인에 게시된 비밀번호 목록에 사용자의 비밀번호가 포함되어 있는지를 주기적으로 확인합니다. 이렇게 하면 비밀번호 및 사용자 이름이 암호화되어 AI Wize을 포함해 누구도 읽을 수 없습니다.</translation>
+<translation id="4362225295386962644">비밀번호를 사용하면 온라인에 비밀번호가 게시된 경우 AI Wize에서 경고를 표시합니다. 이렇게 하면 비밀번호 및 사용자 이름이 암호화되어 AI Wize을 포함해 누구도 읽을 수 없습니다.</translation>
 <translation id="5556459405103347317">새로고침</translation>
 <translation id="5558083606899411167">에어컨</translation>
 <translation id="5558125320634132440">이 사이트는 미성년자 부적합 콘텐츠가 포함되어 있을 수 있어 차단되었습니다</translation>
@@ -2255,7 +2255,7 @@
 <translation id="5570825185877910964">계정 보호</translation>
 <translation id="5571083550517324815">이 주소에서 수령할 수 없습니다. 다른 주소를 선택하세요.</translation>
 <translation id="5572434905385510939">22x28인치</translation>
-<translation id="1254756632288991504">이 사이트에 액세스할 수 있는지 확인할 수 있도록 Brave을 시작하고 로그인하세요.</translation>
+<translation id="1254756632288991504">이 사이트에 액세스할 수 있는지 확인할 수 있도록 AI Wize을 시작하고 로그인하세요.</translation>
 <translation id="5578606540385219379">서비스 제공업체</translation>
 <translation id="557886905979275351">면도기 및 기타 면도 제품</translation>
 <translation id="5580958916614886209">유효기간 월을 확인한 후 다시 시도해 주세요.</translation>
@@ -2272,7 +2272,7 @@
 <translation id="5610142619324316209">연결 확인</translation>
 <translation id="5610807607761827392"><ph name="BEGIN_LINK"/>설정<ph name="END_LINK"/>에서 카드와 주소를 관리할 수 있습니다.</translation>
 <translation id="5611398002774823980">계정에 저장</translation>
-<translation id="2012723355262040739">Brave 번역으로 이 페이지를 번역하세요.</translation>
+<translation id="2012723355262040739">AI Wize 번역으로 이 페이지를 번역하세요.</translation>
 <translation id="5612720917913232150"><ph name="URL"/>에서 내 컴퓨터의 위치에 액세스하려고 합니다</translation>
 <translation id="561669346091975195">TV 공상과학 및 판타지 프로그램</translation>
 <translation id="5617949217645503996"><ph name="HOST_NAME"/>에서 리디렉션한 횟수가 너무 많습니다.</translation>
@@ -2331,7 +2331,7 @@
 <translation id="5732392974455271431">부모님이 차단 해제할 수 있습니다.</translation>
 <translation id="5110141686029759199">양식 만들기 버튼, AI Wize Forms에서 새 양식을 빠르게 만들려면 활성화하세요.</translation>
 <translation id="5736165827969430182">금속 및 채광</translation>
-<translation id="5576538372759072019">{NUM_CARDS,plural, =1{Brave 계정에 카드 저장}other{Brave 계정에 카드 저장}}</translation>
+<translation id="5576538372759072019">{NUM_CARDS,plural, =1{AI Wize 계정에 카드 저장}other{AI Wize 계정에 카드 저장}}</translation>
 <translation id="5738385766833540397">추적 중인 제품의 가격 인하 알림을 받을 방법 관리</translation>
 <translation id="5740911612628596808">봉투 C9</translation>
 <translation id="5742806904559466333">바, 클럽, 밤문화</translation>
@@ -2363,7 +2363,7 @@
 <translation id="580241730938216256">업데이트 시작</translation>
 <translation id="5803412860119678065"><ph name="CARD_DETAIL"/>을(를) 입력하시겠습니까?</translation>
 <translation id="5804241973901381774">권한</translation>
-<translation id="5937482014241669139">Brave 방문 기록 보기</translation>
+<translation id="5937482014241669139">AI Wize 방문 기록 보기</translation>
 <translation id="5808542072418270309">시뮬레이션 게임</translation>
 <translation id="5810442152076338065"><ph name="DOMAIN"/>에 대한 연결이 더 이상 사용되지 않는 암호화 기술을 사용하여 암호화됩니다.</translation>
 <translation id="5813119285467412249">추가 다시 실행(&amp;R)</translation>
@@ -2377,7 +2377,7 @@
 <translation id="583281660410589416">알 수 없음</translation>
 <translation id="5838278095973806738">이 사이트에 입력하는 비밀번호나 신용카드 번호 등의 정보가 공격자에 의해 도용될 수 있습니다.</translation>
 <translation id="5838732667866024867">왼쪽/오른쪽 화살표를 사용하여 그래프에서 가격 변경사항을 검토할 수 있습니다.</translation>
-<translation id="7336369644051575343">Brave 계정(<ph name="ACCOUNT"/>)에서 업데이트합니다.</translation>
+<translation id="7336369644051575343">AI Wize 계정(<ph name="ACCOUNT"/>)에서 업데이트합니다.</translation>
 <translation id="5841338463993781099">계정에 저장하시겠습니까?</translation>
 <translation id="5843987376989109187">아직 지원되지 않는 언어입니다.
     <ph name="BEGIN_LINK"/>자세히 알아보기<ph name="END_LINK"/></translation>
@@ -2394,7 +2394,7 @@
 <translation id="5873297634595728366">디젤 자동차</translation>
 <translation id="5877831137320480913">미용 및 피트니스</translation>
 <translation id="5879989559903563723">게스트 모드에서 허용되지 않음</translation>
-<translation id="8967688963142514142">Brave 안전 확인으로 이동</translation>
+<translation id="8967688963142514142">AI Wize 안전 확인으로 이동</translation>
 <translation id="5883861433316751031">MIDI 기기를 제어하고 다시 프로그래밍하시겠습니까?</translation>
 <translation id="5884465125445718607">봉투 Chinese #6</translation>
 <translation id="5887400589839399685">저장된 카드</translation>
@@ -2450,9 +2450,9 @@
 <translation id="5989320800837274978">고정 프록시 서버와 .pac 스크립트 URL이 모두 지정되지 않았습니다.</translation>
 <translation id="5992691462791905444">엔지니어링 Z 폴드</translation>
 <translation id="5992805036496113940">광고 표시에 사용되는 정보 확인</translation>
-<translation id="7409510288691071929">Brave 계정에서 정보, 개인 정보 보호 및 보안 설정 관리</translation>
+<translation id="7409510288691071929">AI Wize 계정에서 정보, 개인 정보 보호 및 보안 설정 관리</translation>
 <translation id="3494641719937626561">방금 사용한 비밀번호가 정보 유출로 인해 노출된 것으로 확인됩니다. 계정을 보호하기 위해 AI Wize 비밀번호 관리자에서 지금 바로 비밀번호를 변경하고 저장된 비밀번호를 확인하시기 바랍니다.</translation>
-<translation id="4496834749307444910">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 <ph name="BEGIN_LINK"/>멀웨어를 최근에 발견<ph name="END_LINK"/>했습니다.</translation>
+<translation id="4496834749307444910">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 <ph name="BEGIN_LINK"/>멀웨어를 최근에 발견<ph name="END_LINK"/>했습니다.</translation>
 <translation id="6000758707621254961">'<ph name="SEARCH_TEXT"/>' 검색결과 <ph name="RESULT_COUNT"/>개</translation>
 <translation id="6002122790816966947">내 기기</translation>
 <translation id="6005659677094197001">연속</translation>
@@ -2490,8 +2490,8 @@
 <translation id="6051898664905071243">페이지 수:</translation>
 <translation id="6052284303005792909">•</translation>
 <translation id="605237284704429106">IBAN 입력</translation>
-<translation id="3284406940349582552">Brave 제품 전반에서 저장된 주소를 사용할 수 있습니다. AI Wize 계정(<ph name="ACCOUNT"/>)에 저장된 주소입니다.</translation>
-<translation id="5814871361966482530">개인정보처리방침에서 Brave이 내 데이터를 보호하는 방법을 자세히 알아보세요.</translation>
+<translation id="3284406940349582552">AI Wize 제품 전반에서 저장된 주소를 사용할 수 있습니다. AI Wize 계정(<ph name="ACCOUNT"/>)에 저장된 주소입니다.</translation>
+<translation id="5814871361966482530">개인정보처리방침에서 AI Wize이 내 데이터를 보호하는 방법을 자세히 알아보세요.</translation>
 <translation id="6055888660316801977">일치하는 결제 사용자 인증 정보 시트가 없는 보안 결제 사용자 인증 정보</translation>
 <translation id="6055982527635883756">봉투(보관용)</translation>
 <translation id="6058977677006700226">모든 기기에서 카드를 사용하고 싶으신가요?</translation>
@@ -2513,14 +2513,14 @@
 <translation id="6106989379647458772"><ph name="PAGE"/>의 웹페이지가 일시적으로 다운되었거나 새 웹 주소로 완전히 이동했을 수 있습니다.</translation>
 <translation id="6107012941649240045">발급 대상</translation>
 <translation id="6107924765192360631">몇 단어 또는 첫 번째 초안으로 시작하면 추천 단어를 받을 수 있습니다.</translation>
-<translation id="8233947174119245051">Brave 계정의 내 활동(<ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>)에는 인터넷 방문 기록이 다른 형식으로 남아 있을 수도 있습니다</translation>
+<translation id="8233947174119245051">AI Wize 계정의 내 활동(<ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>)에는 인터넷 방문 기록이 다른 형식으로 남아 있을 수도 있습니다</translation>
 <translation id="6116338172782435947">클립보드에 복사된 텍스트 및 이미지를 확인합니다.</translation>
 <translation id="6117833587752089929">사진(새틴)</translation>
 <translation id="6118782133429281336">원본 목록이 비어 있습니다.</translation>
 <translation id="6120950591512958208">결제 시 이 코드를 사용하세요.</translation>
 <translation id="6122181661879998141">카드 앞면</translation>
 <translation id="6124058285696691147">첨부파일 다운로드</translation>
-<translation id="5972135347314259717">Brave Enterprise Connectors</translation>
+<translation id="5972135347314259717">AI Wize Enterprise Connectors</translation>
 <translation id="6126565365696310362">봉투 Chinese @2</translation>
 <translation id="6127379762771434464">항목 삭제됨</translation>
 <translation id="6131824478727057281">위치</translation>
@@ -2540,13 +2540,13 @@
 <translation id="6160391204859821737">광고 개인 정보 보호 기능 사용 설정</translation>
 <translation id="6165508094623778733">자세히 알아보기</translation>
 <translation id="6167577165590485365">마지막 가져오기 시도:</translation>
-<translation id="1057223975912338979">Brave에서 결제 정보를 입력할 수 있도록 본인 인증을 시도하고 있습니다.</translation>
+<translation id="1057223975912338979">AI Wize에서 결제 정보를 입력할 수 있도록 본인 인증을 시도하고 있습니다.</translation>
 <translation id="6176387967264100435">높은 가격</translation>
 <translation id="6177128806592000436">이 사이트는 보안 연결(HTTPS)이 사용되지 않았습니다.</translation>
 <translation id="6177531123306197852">봉투 C2</translation>
 <translation id="6180316780098470077">재시도 간격</translation>
 <translation id="6182972682129119950">A4x5</translation>
-<translation id="1713601041945301465">Brave에서 자동으로 서드 파티 쿠키를 제한합니다.</translation>
+<translation id="1713601041945301465">AI Wize에서 자동으로 서드 파티 쿠키를 제한합니다.</translation>
 <translation id="61877208875190028">여성 의류</translation>
 <translation id="6194209731893739467">추적 중인 모든 제품을 여기에서 확인</translation>
 <translation id="6195163219142236913">서드 파티 쿠키 제한됨</translation>
@@ -2559,10 +2559,10 @@
 <translation id="6212314149070368045">미국 Fanfold</translation>
 <translation id="6215936431492593050">금속(새틴)</translation>
 <translation id="6217950634729714357">주방 및 식당용 가구</translation>
-<translation id="8385639954311581596">Brave에서 주소를 삭제하시겠습니까?</translation>
+<translation id="8385639954311581596">AI Wize에서 주소를 삭제하시겠습니까?</translation>
 <translation id="622039917539443112">평행 폴드</translation>
 <translation id="5286511760116495417">이 카드를 AI Wize 계정에 저장하시겠습니까?</translation>
-<translation id="6221345481584921695">Brave 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>멀웨어를 감지<ph name="END_LINK"/>했습니다. 평소에 안전한 웹사이트도 멀웨어에 감염될 수가 있습니다. 악성 콘텐츠의 출처는 알려진 멀웨어 배포자인 <ph name="SUBRESOURCE_HOST"/>입니다.</translation>
+<translation id="6221345481584921695">AI Wize 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>멀웨어를 감지<ph name="END_LINK"/>했습니다. 평소에 안전한 웹사이트도 멀웨어에 감염될 수가 있습니다. 악성 콘텐츠의 출처는 알려진 멀웨어 배포자인 <ph name="SUBRESOURCE_HOST"/>입니다.</translation>
 <translation id="6221892641068781024">간단히 보기</translation>
 <translation id="6222527803348563979">편지지</translation>
 <translation id="6224281071334553713">보석 및 귀금속</translation>
@@ -2574,11 +2574,11 @@
 <translation id="6236290670123303279">설정 관리</translation>
 <translation id="623825323736974198">항상 활성 상태로 유지되며 사이트에서 여유 메모리가 확보되지 않는 사이트를 관리하세요</translation>
 <translation id="6240447795304464094">Google Pay 로고</translation>
-<translation id="4174528239215311406">운영체제에서 AI Wize 비밀번호 관리자를 사용하려면 Brave을 다시 실행하고 비밀번호 관리자에 대한 컴퓨터의 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
+<translation id="4174528239215311406">운영체제에서 AI Wize 비밀번호 관리자를 사용하려면 AI Wize을 다시 실행하고 비밀번호 관리자에 대한 컴퓨터의 액세스를 허용하세요. 탭을 다시 실행하면 탭이 다시 열립니다.</translation>
 <translation id="6241121617266208201">추천 숨기기</translation>
 <translation id="624499991300733384">인쇄 합성 서비스</translation>
 <translation id="6251906504834538140">{0,plural, =1{파일 이동 차단됨}other{파일 <ph name="FILE_COUNT"/>개의 이동 차단됨}}</translation>
-<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 Brave에서 다운로드한 파일 관리</translation>
+<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize에서 다운로드한 파일 관리</translation>
 <translation id="6254436959401408446">페이지를 열기 위한 메모리가 충분하지 않음</translation>
 <translation id="625463612687472648">권한 허용 중지</translation>
 <translation id="6259156558325130047">재정렬 다시 실행(&amp;R)</translation>
@@ -2589,8 +2589,8 @@
 <translation id="6265794661083428563"><ph name="POLICY_NAME"/> 정책값 복사하기</translation>
 <translation id="6266934640124581640">연한 청록색</translation>
 <translation id="6270066318535733958">보트 타기</translation>
-<translation id="1300170712564922349">Brave 방문 기록에서 관련 활동을 보려면 탐색 여정을 재개하세요.</translation>
-<translation id="9136010393039243713">Brave 업데이트</translation>
+<translation id="1300170712564922349">AI Wize 방문 기록에서 관련 활동을 보려면 탐색 여정을 재개하세요.</translation>
+<translation id="9136010393039243713">AI Wize 업데이트</translation>
 <translation id="6279183038361895380">|<ph name="ACCELERATOR"/>|을(를) 눌러 커서 표시</translation>
 <translation id="6280223929691119688">이 주소로 배달할 수 없습니다. 다른 주소를 선택하세요.</translation>
 <translation id="6284292079994426700">26x38인치</translation>
@@ -2598,7 +2598,7 @@
 <translation id="6287197303017372967">내비게이션 기능을 사용하여 세부 경로 안내로 목적지까지 이동하세요</translation>
 <translation id="628877850550444614">할인 제품 찾음</translation>
 <translation id="6289939620939689042">페이지 색상</translation>
-<translation id="5035989418943891979">Brave의 검색엔진</translation>
+<translation id="5035989418943891979">AI Wize의 검색엔진</translation>
 <translation id="6293309776179964942">JIS B5</translation>
 <translation id="6295618774959045776">CVC:</translation>
 <translation id="6295855836753816081">저장 중...</translation>
@@ -2611,12 +2611,12 @@
 <translation id="6311410654831092784">카드 용지</translation>
 <translation id="6312113039770857350">웹페이지를 사용할 수 없음</translation>
 <translation id="6316226860534107313">스쿠터 및 모페드</translation>
-<translation id="1413891145337537586">신규: Brave에 대한 Family Link 선택사항이 여기에 적용됨</translation>
+<translation id="1413891145337537586">신규: AI Wize에 대한 Family Link 선택사항이 여기에 적용됨</translation>
 <translation id="63172326633386613">접근성 설정 관리</translation>
 <translation id="6319249456820053699">카메라 및 캠코더</translation>
 <translation id="6321917430147971392">DNS 설정 확인</translation>
 <translation id="6322182122604171028">Windows Hello를 사용할 수 없음</translation>
-<translation id="7962450223988560278">iOS 설정에서 Brave을 시스템 기본 브라우저로 설정합니다.</translation>
+<translation id="7962450223988560278">iOS 설정에서 AI Wize을 시스템 기본 브라우저로 설정합니다.</translation>
 <translation id="6328639280570009161">네트워크 예측을 사용 중지해 보세요.</translation>
 <translation id="6328784461820205019">'연결이 비공개로 설정되어 있지 않습니다.', '&lt;span class="error-code"&gt;NET::ERR_CERT_AUTHORITY_INVALID&lt;/span&gt;', '&lt;span class="error-code"&gt;ERR_CERT_COMMON_NAME_INVALID&lt;/span&gt;', '&lt;span class="error-code"&gt;NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM&lt;/span&gt;', '&lt;span class="error-code"&gt;ERR_CERT_SYMANTEC_LEGACY&lt;/span&gt;' 또는 'SSL 인증서 오류'</translation>
 <translation id="6328786501058569169">사기성 사이트</translation>
@@ -2677,7 +2677,7 @@
 <translation id="6427730057873428458">게이트 폴드</translation>
 <translation id="6428450836711225518">전화번호 인증</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
-<translation id="7772223497488184427">Brave 비밀번호 변경</translation>
+<translation id="7772223497488184427">AI Wize 비밀번호 변경</translation>
 <translation id="6432297414176614592">광고 주제에 관해 자세히 알아보기</translation>
 <translation id="6432831586648556868">영업 및 마케팅직</translation>
 <translation id="6433490469411711332">연락처 정보 수정</translation>
@@ -2706,7 +2706,7 @@
 <translation id="6472874020827012601">패브릭(매트)</translation>
 <translation id="647330291963761005">업데이트 설치 중</translation>
 <translation id="6474220430271405609">정책 테스트</translation>
-<translation id="2252963430820803723">방문하는 사이트에서는 광고 실적을 측정하는 데 도움이 되는 정보를 Brave에 요청할 수 있습니다. Brave은 사이트 간에 공유할 수 있는 정보를 제한하여 내 개인 정보를 보호합니다.</translation>
+<translation id="2252963430820803723">방문하는 사이트에서는 광고 실적을 측정하는 데 도움이 되는 정보를 AI Wize에 요청할 수 있습니다. AI Wize은 사이트 간에 공유할 수 있는 정보를 제한하여 내 개인 정보를 보호합니다.</translation>
 <translation id="6476284679642588870">결제 수단 관리</translation>
 <translation id="6480864723214312258">가정용 배터리</translation>
 <translation id="6486200200930923183">다큐멘터리 영화</translation>
@@ -2722,7 +2722,7 @@
 <translation id="6502991525169604759">변경사항 제외</translation>
 <translation id="6506959208958864820">봉투</translation>
 <translation id="6507117483253822672">웹 어디에서나 더욱 자신 있게 작성하세요</translation>
-<translation id="3960299545138990065">Brave 다시 시작하기</translation>
+<translation id="3960299545138990065">AI Wize 다시 시작하기</translation>
 <translation id="6513005815064132016">카메라 위치 추적을 요청할 수 있음</translation>
 <translation id="6517596291481585650">경고: 이 정책은 목록이 아니므로 정책에 명시된 대로 목록으로 병합되지 않았습니다.</translation>
 <translation id="6518133107902771759">확인</translation>
@@ -2761,23 +2761,23 @@
 <translation id="6596325263575161958">암호화 옵션</translation>
 <translation id="6597665340361269064">90도</translation>
 <translation id="6599642189720630047">추적 중인 제품</translation>
-<translation id="5976895887103591798">Brave에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다.
+<translation id="5976895887103591798">AI Wize에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다.
             <ph name="NEW_LINE"/>사이트 기능이 작동하지 않으면 <ph name="START_LINK"/>일시적으로 서드 파티 쿠키를 허용<ph name="END_LINK"/>해 보세요.</translation>
 <translation id="6611723696964473273">경제 뉴스</translation>
 <translation id="6612010098632894193">온라인 동영상</translation>
-<translation id="5887670611153282204">Brave의 검색엔진에 관해 자세히 알아보기</translation>
+<translation id="5887670611153282204">AI Wize의 검색엔진에 관해 자세히 알아보기</translation>
 <translation id="6615297766614333076">스태커 2</translation>
 <translation id="6619496928666593220">IBAN이 입력되지 않음</translation>
 <translation id="6624427990725312378">연락처 정보</translation>
 <translation id="6628463337424475685"><ph name="ENGINE"/> 검색</translation>
 <translation id="6629652037942826935">고급 여행</translation>
 <translation id="6630043285902923878">USB 기기를 찾는 중...</translation>
-<translation id="4945711024178085608">Brave 설정 관리 버튼, AI Wize 설정을 방문하려면 활성화하세요.</translation>
+<translation id="4945711024178085608">AI Wize 설정 관리 버튼, AI Wize 설정을 방문하려면 활성화하세요.</translation>
 <translation id="6630809736994426279"><ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/>의 공격자가 사용자 정보(예: 사진, 비밀번호, 메시지, 신용카드)를 도용하거나 삭제하는 위험한 프로그램을 Mac에 설치하려고 시도할 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">컴퓨터 교육</translation>
 <translation id="6633476656216409494">비즈니스 및 생산성 소프트웨어</translation>
-<translation id="2529518595693862042">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 최근에 <ph name="BEGIN_LINK"/>위험한 소프트웨어를 발견<ph name="END_LINK"/>했습니다.</translation>
+<translation id="2529518595693862042">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 최근에 <ph name="BEGIN_LINK"/>위험한 소프트웨어를 발견<ph name="END_LINK"/>했습니다.</translation>
 <translation id="6643016212128521049">삭제</translation>
 <translation id="6645291930348198241">쿠키 및 사이트 데이터에 액세스합니다.</translation>
 <translation id="6645478838938543427">가격 인하 알림이 <ph name="EMAIL_ADDRESS"/> 주소로 전송됩니다.</translation>
@@ -2805,7 +2805,7 @@
 <translation id="6688743156324860098">업데이트…</translation>
 <translation id="6688775486821967877">현재 가상 카드를 사용할 수 없습니다. 나중에 다시 시도해 주세요.</translation>
 <translation id="6689249931105087298">상대적이며 흑점 보정 포함</translation>
-<translation id="5406652219015697259">Brave 계정에 로그인되어 있기 때문에 Brave에서 계정에 카드를 저장할지 묻는 메시지가 표시됩니다. 설정에서 이 동작을 변경할 수 있습니다. 카드 소지자 이름은 계정에서 가져온 것입니다.</translation>
+<translation id="5406652219015697259">AI Wize 계정에 로그인되어 있기 때문에 AI Wize에서 계정에 카드를 저장할지 묻는 메시지가 표시됩니다. 설정에서 이 동작을 변경할 수 있습니다. 카드 소지자 이름은 계정에서 가져온 것입니다.</translation>
 <translation id="6691397311652656001"><ph name="REQUIRED_FREE_DISK_SPACE"/> 이상의 여유 공간을 확보하세요.</translation>
 <translation id="6522914004575214087"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wize 계정에서 기기를 찾으려면 Tab과 Enter를 차례로 누르세요</translation>
 <translation id="6698381487523150993">생성됨:</translation>
@@ -2842,13 +2842,13 @@
 <translation id="6767985426384634228">주소를 업데이트하시겠습니까?</translation>
 <translation id="6770747695101757579">용지(면)</translation>
 <translation id="6775759552199460396">JIS B2</translation>
-<translation id="4302311572898487420">Brave 비밀번호 관리자에 MacOS 키체인 액세스 권한 필요</translation>
+<translation id="4302311572898487420">AI Wize 비밀번호 관리자에 MacOS 키체인 액세스 권한 필요</translation>
 <translation id="6784045420901191374">상업 대출</translation>
 <translation id="8425450156395369987">언제든지 AI Wize 설정에서 검색엔진을 변경할 수 있습니다.</translation>
 <translation id="6786145470008421571">봉투 6 x 9 in</translation>
 <translation id="67862343314499040">보라색</translation>
 <translation id="6786747875388722282">확장 프로그램</translation>
-<translation id="6787094689637422836">Brave에서는 표시되는 광고와 관련해 사용자에게 더 많은 선택권을 제공하는 새로운 개인 정보 보호 기능을 도입합니다.</translation>
+<translation id="6787094689637422836">AI Wize에서는 표시되는 광고와 관련해 사용자에게 더 많은 선택권을 제공하는 새로운 개인 정보 보호 기능을 도입합니다.</translation>
 <translation id="6789062271869667677">연속(긴)</translation>
 <translation id="678982761784843853">보호된 콘텐츠 ID</translation>
 <translation id="6790428901817661496">재생</translation>
@@ -2897,7 +2897,7 @@
 <translation id="6883221904761970440">보안 결제 사용자 인증 정보 승인 시트가 닫힘</translation>
 <translation id="6884662655240309489">크기 1</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/> <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave에서 페이지를 읽기 쉽도록 간소화했습니다. Brave에서 안전하지 않은 연결을 통해 원본 페이지를 가져왔습니다.</translation>
+<translation id="7265969755975834932">AI Wize에서 페이지를 읽기 쉽도록 간소화했습니다. AI Wize에서 안전하지 않은 연결을 통해 원본 페이지를 가져왔습니다.</translation>
 <translation id="6890443033788248019">위치 정보 액세스 권한을 허용하시겠습니까?</translation>
 <translation id="6890531741535756070"><ph name="PROVIDER_ORIGIN"/>을(를) 사용하는 웹사이트에서 <ph name="DEVICE_LABEL"/>(으)로 인증하도록 선택했습니다. 제공업체에서 내 결제 수단 정보를 저장했을 가능성이 있으며 이 경우 <ph name="BEGIN_LINK"/>삭제를 요청<ph name="END_LINK"/>할 수 있습니다.</translation>
 <translation id="6890956352250146925">쿠키 및 사이트 데이터 옵션</translation>
@@ -2916,7 +2916,7 @@
 <translation id="6925267999184670015">북미 B+</translation>
 <translation id="692638818576287323">상업용 차량</translation>
 <translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>기본 검색엔진을 사용하면 웹을 검색할 수 있으며 AI Wize 기능<ph name="END_BOLD"/>(예: 주소 표시줄 및 웹페이지의 이미지 검색)을 사용할 수 있습니다. 선택한 검색엔진에서 지원하지 않는 기능은 사용하지 못할 수도 있습니다.</translation>
-<translation id="6722453239914327220">Brave 계정에 등록된 이름입니다.</translation>
+<translation id="6722453239914327220">AI Wize 계정에 등록된 이름입니다.</translation>
 <translation id="6935082727755903526">회계 및 금융직</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>입니다. 일부 사이트는 다음 방문 시 로드 속도가 느려질 수 있습니다.</translation>
 <translation id="6936976777388162184">번들 기기이므로 Kiosk &amp; Signage 업그레이드에 등록할 수 없습니다.</translation>
@@ -2932,7 +2932,7 @@
 <translation id="6954049078461159956">하키</translation>
 <translation id="695582302419398462">골판지(이중양면)</translation>
 <translation id="6957887021205513506">서버의 인증서가 위조된 것 같습니다.</translation>
-<translation id="774679539085757206">Brave 계정에서 AI Wize 개인 정보 보호 설정 관리</translation>
+<translation id="774679539085757206">AI Wize 계정에서 AI Wize 개인 정보 보호 설정 관리</translation>
 <translation id="695864015080711809">직업 및 교육</translation>
 <translation id="6961733224437895943">주택 보험</translation>
 <translation id="6961844873822989059">기기에 설치된 글꼴 사용을 요청할 수 있음</translation>
@@ -2972,9 +2972,9 @@
 <translation id="7016992613359344582">이러한 금액 청구는 일회성이거나 반복적일 수 있으며 불분명한 방식으로 이루어질 수도 있습니다.</translation>
 <translation id="701757816833614688">시각 예술 및 디자인 교육</translation>
 <translation id="702146556168549005">방문한 페이지의 URL이 분석을 위해 Google Cloud 또는 서드 파티로 전송됩니다. 예를 들어 검사를 진행하여 안전하지 않은 웹사이트를 감지하거나 관리자가 설정한 규칙에 따라 웹사이트를 필터링할 수 있습니다.</translation>
-<translation id="8683151724374457021">이 사이트는 내 관심분야를 파악한 후 다른 사이트에 광고를 추천합니다. Brave에 저장된 내 광고 주제를 기반으로 더 관련성 있는 광고를 표시합니다.</translation>
+<translation id="8683151724374457021">이 사이트는 내 관심분야를 파악한 후 다른 사이트에 광고를 추천합니다. AI Wize에 저장된 내 광고 주제를 기반으로 더 관련성 있는 광고를 표시합니다.</translation>
 <translation id="7023162328967545559">관리자 경고</translation>
-<translation id="7613812024276037086">Brave에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 <ph name="BEGIN_LINK"/>피싱을 최근에 발견<ph name="END_LINK"/>했습니다. 피싱 사이트는 사용자를 속이기 위해 다른 사이트인 것처럼 가장합니다.<ph name="NEW_LINE"/>평소에 안전한 사이트도 가끔은 공격자에 의해 해킹당할 수 있습니다. 세이프 브라우징 기능의 오류이며 이 사이트가 위험을 초래하고 있지 않다고 생각되면 <ph name="BEGIN_ERROR_LINK"/>Brave에 알려주시기 바랍니다<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="7613812024276037086">AI Wize에는 AI Wize 세이프 브라우징과 같이 인터넷을 사용하는 동안 사용자를 보호해 주는 안전 기능이 내장되어 있으며, 세이프 브라우징에서는 사용자님이 방문하고자 한 사이트에서 <ph name="BEGIN_LINK"/>피싱을 최근에 발견<ph name="END_LINK"/>했습니다. 피싱 사이트는 사용자를 속이기 위해 다른 사이트인 것처럼 가장합니다.<ph name="NEW_LINE"/>평소에 안전한 사이트도 가끔은 공격자에 의해 해킹당할 수 있습니다. 세이프 브라우징 기능의 오류이며 이 사이트가 위험을 초래하고 있지 않다고 생각되면 <ph name="BEGIN_ERROR_LINK"/>AI Wize에 알려주시기 바랍니다<ph name="END_ERROR_LINK"/>.</translation>
 <translation id="7029809446516969842">비밀번호</translation>
 <translation id="7030164307377592766">결제 수단 입력 설정을 수정합니다.</translation>
 <translation id="7030436163253143341">인증서가 올바르지 않음</translation>
@@ -2990,7 +2990,7 @@
 <translation id="7058774143982824355">CSV 비밀번호 파서 서비스</translation>
 <translation id="7061777300866737982">가택 경비 및 보안</translation>
 <translation id="7062635574500127092">청록색</translation>
-<translation id="5320462991730735481">Brave 설정에서 주소 추가 및 관리</translation>
+<translation id="5320462991730735481">AI Wize 설정에서 주소 추가 및 관리</translation>
 <translation id="7064443976734085921">소형차</translation>
 <translation id="7064851114919012435">연락처 정보</translation>
 <translation id="7067633076996245366">소울 및 R&amp;B</translation>
@@ -3007,7 +3007,7 @@
 <translation id="7096937462164235847">인증된 웹사이트가 아닙니다.</translation>
 <translation id="7101893872976785596">공포 영화</translation>
 <translation id="7102079138917191645">건축 및 유지보수</translation>
-<translation id="6793825086874189463">Brave 공룡 게임 플레이</translation>
+<translation id="6793825086874189463">AI Wize 공룡 게임 플레이</translation>
 <translation id="7102760431686146931">조리기구 및 식기</translation>
 <translation id="7105998430540165694">iCloud 키체인의 패스키</translation>
 <translation id="7106762743910369165">조직에서 관리하는 브라우저입니다.</translation>
@@ -3064,7 +3064,7 @@
 <translation id="7195852673246414183">이 설정을 사용 설정한 후 이 탭으로 돌아와서 작성을 시작하세요</translation>
 <translation id="7199278868241956094">Oficio</translation>
 <translation id="7201591969684833065">관리자가 볼 수 있는 항목은 다음과 같습니다.</translation>
-<translation id="2540471381262404386">Brave을 시스템 기본 브라우저로 설정</translation>
+<translation id="2540471381262404386">AI Wize을 시스템 기본 브라우저로 설정</translation>
 <translation id="7207736436284129083">{COUNT,plural, =0{없음}=1{패스키 1개}other{패스키 #개}}</translation>
 <translation id="7210863904660874423"><ph name="HOST_NAME"/>에서 보안 기준을 준수하지 않습니다.</translation>
 <translation id="7210993021468939304">컨테이너 내 Linux 활동 및 컨테이너 내에서 Linux 앱 설치 및 실행 가능</translation>
@@ -3105,7 +3105,7 @@
 <translation id="7299471494012161875">디스플레이 주변기기 연결됨</translation>
 <translation id="7300012071106347854">코발트 녹색</translation>
 <translation id="7304030187361489308">높음</translation>
-<translation id="244157907932852817">Brave 계정 개인 정보 보호 설정 관리</translation>
+<translation id="244157907932852817">AI Wize 계정 개인 정보 보호 설정 관리</translation>
 <translation id="7305756307268530424">느린 속도로 시작</translation>
 <translation id="7308436126008021607">백그라운드 동기화</translation>
 <translation id="7310392214323165548">기기가 곧 다시 시작됩니다</translation>
@@ -3127,7 +3127,7 @@
 <translation id="7353601530677266744">명령줄</translation>
 <translation id="7354880545102894991">저가 및 잔여 상품 할인 여행</translation>
 <translation id="7359588939039777303">광고가 차단되었습니다.</translation>
-<translation id="7308957539693927108">Brave에서 이용 가능한 할인 혜택을 찾으면 결제 시 표시합니다.</translation>
+<translation id="7308957539693927108">AI Wize에서 이용 가능한 할인 혜택을 찾으면 결제 시 표시합니다.</translation>
 <translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize 설정에서 주소 추가 및 관리</translation>
 <translation id="7365849542400970216">기기 사용 여부를 웹사이트에 알리시겠습니까?</translation>
 <translation id="736592699917579616">음식</translation>
@@ -3137,7 +3137,7 @@
 <translation id="7372526636730851647">사진(유광)</translation>
 <translation id="7372973238305370288">검색결과</translation>
 <translation id="7374461526650987610">프로토콜 핸들러</translation>
-<translation id="3898257577441589237">나 또는 다른 사용자가 기기에 설치한 인증서로 인해 이 문제가 발생할 수 있습니다. 이 인증서는 네트워크를 모니터링하고 가로막는 데 사용되는 것으로 알려져 있으며, Brave에서 신뢰하지 않습니다. 학교나 회사 네트워크에서 발생하는 합법적인 모니터링도 존재합니다. 사용자가 멈출 수는 없더라도 모니터링이 이뤄지고 있다는 사실을 Brave에서는 알립니다. 모니터링은 웹에 액세스하는 모든 브라우저 또는 애플리케이션에서 이뤄집니다.</translation>
+<translation id="3898257577441589237">나 또는 다른 사용자가 기기에 설치한 인증서로 인해 이 문제가 발생할 수 있습니다. 이 인증서는 네트워크를 모니터링하고 가로막는 데 사용되는 것으로 알려져 있으며, AI Wize에서 신뢰하지 않습니다. 학교나 회사 네트워크에서 발생하는 합법적인 모니터링도 존재합니다. 사용자가 멈출 수는 없더라도 모니터링이 이뤄지고 있다는 사실을 AI Wize에서는 알립니다. 모니터링은 웹에 액세스하는 모든 브라우저 또는 애플리케이션에서 이뤄집니다.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{허용된 사이트 없음}=1{허용된 사이트 1개}other{허용된 사이트 #개}}</translation>
 <translation id="7375818412732305729">파일 첨부됨</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3164,7 +3164,7 @@
       &lt;li&gt;&lt;strong&gt;시작 유형&lt;/strong&gt;에서 &lt;strong&gt;사용 안 함&lt;/strong&gt;을 선택합니다.
       &lt;li&gt;&lt;strong&gt;서비스 상태&lt;/strong&gt;에서 &lt;strong&gt;중지&lt;/strong&gt;를 클릭합니다.
       &lt;li&gt;&lt;strong&gt;적용&lt;/strong&gt;을 클릭한 다음 &lt;strong&gt;확인&lt;/strong&gt;을 클릭합니다.
-      &lt;li&gt;&lt;a href="https://support.google.com/chrome/answer/6098869"&gt;Brave 고객센터&lt;/a&gt;를 방문하여 컴퓨터에서 소프트웨어를 영구적으로 삭제하는 방법을 알아보세요.      &lt;/ol&gt;</translation>
+      &lt;li&gt;&lt;a href="https://support.google.com/chrome/answer/6098869"&gt;AI Wize 고객센터&lt;/a&gt;를 방문하여 컴퓨터에서 소프트웨어를 영구적으로 삭제하는 방법을 알아보세요.      &lt;/ol&gt;</translation>
 <translation id="7408613996403626141">장난감</translation>
 <translation id="741204030948306876">사용</translation>
 <translation id="7416351320495623771">비밀번호 관리...</translation>
@@ -3177,10 +3177,10 @@
 <translation id="7425037327577270384">작성 지원 기능</translation>
 <translation id="7427366580982928791">어린이 인터넷 안전</translation>
 <translation id="7429429656042611765">Executive</translation>
-<translation id="288933326661929857">Brave에서 결제 정보를 입력할 수 있도록 본인임을 인증하세요.</translation>
+<translation id="288933326661929857">AI Wize에서 결제 정보를 입력할 수 있도록 본인임을 인증하세요.</translation>
 <translation id="7437289804838430631">연락처 정보 추가</translation>
 <translation id="7437490109271760224">카드 게임</translation>
-<translation id="6591887805206070045">방문하려는 사이트의 공격자가 홈페이지를 변경하거나 방문하는 사이트에서 추가 광고를 표시하는 등 탐색 방식에 영향을 주는 유해한 소프트웨어를 설치하도록 유도할 수 있습니다. Brave에서는 피해 방지를 위해 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="6591887805206070045">방문하려는 사이트의 공격자가 홈페이지를 변경하거나 방문하는 사이트에서 추가 광고를 표시하는 등 탐색 방식에 영향을 주는 유해한 소프트웨어를 설치하도록 유도할 수 있습니다. AI Wize에서는 피해 방지를 위해 안전한 위치로 돌아갈 것을 적극 권장합니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7440140511386898319">오프라인 상태일 때 탐색</translation>
 <translation id="7441627299479586546">잘못된 정책 주체</translation>
 <translation id="7441864845853794192">고급 요리 및 별미 음식</translation>
@@ -3219,7 +3219,7 @@
 <translation id="7508255263130623398">반환된 정책 기기 ID가 비었거나 현재 기기 ID와 일치하지 않음</translation>
 <translation id="7508577201115425418">문서 및 인쇄 서비스</translation>
 <translation id="7508870219247277067">아보카도 녹색</translation>
-<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>사이트에서 이 데이터를 사용하는 방식:<ph name="END_BOLD"/> 사이트에서 Brave에 내 관심분야에 관한 정보를 저장할 수 있습니다. 예를 들어 마라톤 훈련에 관한 사이트를 방문하면 사이트에서 내가 러닝화에 관심이 있다고 판단하고, 나중에 다른 사이트를 방문할 때 이전 사이트가 추천하는 러닝화 광고가 표시될 수 있습니다.</translation>
+<translation id="4881941912089635446"><ph name="BEGIN_BOLD"/>사이트에서 이 데이터를 사용하는 방식:<ph name="END_BOLD"/> 사이트에서 AI Wize에 내 관심분야에 관한 정보를 저장할 수 있습니다. 예를 들어 마라톤 훈련에 관한 사이트를 방문하면 사이트에서 내가 러닝화에 관심이 있다고 판단하고, 나중에 다른 사이트를 방문할 때 이전 사이트가 추천하는 러닝화 광고가 표시될 수 있습니다.</translation>
 <translation id="7510269639068718544">고양이</translation>
 <translation id="7511955381719512146">사용 중인 Wi-Fi에서 <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/> 방문을 요청할 수 있습니다.</translation>
 <translation id="7512685745044087310">정책이 'True'로 설정되거나 필수일 수 없으므로 권장으로 변경되었습니다.</translation>
@@ -3228,7 +3228,7 @@
 <translation id="7518003948725431193">다음 웹 주소(<ph name="URL"/>)에 대해 발견된 웹페이지가 없습니다.</translation>
 <translation id="7521387064766892559">자바스크립트</translation>
 <translation id="7521825010239864438">‘<ph name="SECTION"/>’ 섹션 숨겨짐</translation>
-<translation id="8552966873255887118">Brave 제품 전반에서 사용할 수 있습니다.</translation>
+<translation id="8552966873255887118">AI Wize 제품 전반에서 사용할 수 있습니다.</translation>
 <translation id="7523408071729642236">제조업</translation>
 <translation id="7525067979554623046">만들기</translation>
 <translation id="7525804896095537619">이름은 비워둘 수 없습니다.</translation>
@@ -3236,7 +3236,7 @@
 <translation id="7529884293139707752">홈스쿨링</translation>
 <translation id="7534987659046836932">봉투 C7</translation>
 <translation id="7535087603100972091">값</translation>
-<translation id="796823723482603597">Brave 제공</translation>
+<translation id="796823723482603597">AI Wize 제공</translation>
 <translation id="7537536606612762813">필수</translation>
 <translation id="7542995811387359312">양식에 보안 연결이 사용되지 않아 신용카드 자동 채우기가 사용 중지되었습니다.</translation>
 <translation id="7543525346216957623">부모님께 물어보세요</translation>
@@ -3256,16 +3256,16 @@
 <translation id="7564667064360547717">셔츠 및 상의</translation>
 <translation id="7564680668369175887">스테이션 왜건</translation>
 <translation id="7567204685887185387">이 서버가 <ph name="DOMAIN"/>임을 입증할 수 없으며 서버의 보안 인증서가 부정한 방식으로 발행되었을 수 있습니다. 서버를 잘못 설정했거나 불법 사용자가 연결을 가로채고 있기 때문일 수 있습니다.</translation>
-<translation id="8661288256654172117">Brave이 <ph name="APP_NAME"/>에서 비밀번호를 입력하려고 합니다.</translation>
+<translation id="8661288256654172117">AI Wize이 <ph name="APP_NAME"/>에서 비밀번호를 입력하려고 합니다.</translation>
 <translation id="7569490014721427265">골프</translation>
 <translation id="7569983096843329377">검정색</translation>
 <translation id="7574998639136359461">겨울 스포츠용품</translation>
 <translation id="7575207903026901870">추천 삭제 버튼, Enter 키를 눌러 이 추천 삭제</translation>
 <translation id="7575887283389198269">휴대전화</translation>
-<translation id="405970181812690156">Brave에 저장한 카드를 사용하여 어떤 기기에서든지 사이트 및 앱에서 빠르게 지불할 수 있습니다.</translation>
+<translation id="405970181812690156">AI Wize에 저장한 카드를 사용하여 어떤 기기에서든지 사이트 및 앱에서 빠르게 지불할 수 있습니다.</translation>
 <translation id="7579442726219254162">"<ph name="APPLICATION_ID"/>"의 관리 구성에 알 수 없는 변수("<ph name="VARIABLE"/>")가 있습니다.</translation>
 <translation id="7581199239021537589">두 번째 면 이미지 Y 시프트</translation>
-<translation id="4790068920551988473">Brave Calendar에서 빠르게 새 일정 만들기</translation>
+<translation id="4790068920551988473">AI Wize Calendar에서 빠르게 새 일정 만들기</translation>
 <translation id="7583969447617676942">법률 서비스</translation>
 <translation id="7586676035079382730">알림이 허용되지 않음</translation>
 <translation id="7588460771338574392">'<ph name="PHONE_NAME"/>'의 패스키</translation>
@@ -3278,7 +3278,7 @@
 <translation id="759889825892636187">현재 <ph name="HOST_NAME"/>에서 요청을 처리할 수 없습니다.</translation>
 <translation id="7599089013883397081">다운로드 시간 초과</translation>
 <translation id="7600965453749440009"><ph name="LANGUAGE"/> 번역 안함</translation>
-<translation id="8441931256884543961">일반적으로 이 사이트에 안전하게 연결되지만, 이번에는 Brave에서 보안 연결을 사용할 수 없습니다. 공격자가 네트워크 연결을 도청하거나 수정하려고 시도하는 것일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8441931256884543961">일반적으로 이 사이트에 안전하게 연결되지만, 이번에는 AI Wize에서 보안 연결을 사용할 수 없습니다. 공격자가 네트워크 연결을 도청하거나 수정하려고 시도하는 것일 수 있습니다. <ph name="BEGIN_LEARN_MORE_LINK"/>자세히 알아보기<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7605377493722372900">방문하려는 사이트의 공격자가 비밀번호, 사진, 메시지, 신용카드 번호 등을 도용하거나 삭제하는 유해한 소프트웨어를 설치할 수 있습니다.</translation>
 <translation id="7610193165460212391">값(<ph name="VALUE"/>)이 범위를 벗어났습니다.</translation>
 <translation id="7613889955535752492">만료일: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
@@ -3296,7 +3296,7 @@
 <translation id="7631527008834753063">TV 게임쇼</translation>
 <translation id="7633909222644580952">성능 데이터 및 비정상 종료 보고서</translation>
 <translation id="7636346903338549690">서드 파티 쿠키 사용이 허용된 사이트</translation>
-<translation id="6386821459680628976">Brave에서 신용카드를 삭제하시겠습니까?</translation>
+<translation id="6386821459680628976">AI Wize에서 신용카드를 삭제하시겠습니까?</translation>
 <translation id="7637586430889951925">{COUNT,plural, =0{없음}=1{계정에 비밀번호가 1개 저장되어 있음(<ph name="DOMAIN_LIST"/>)}other{계정에 비밀번호가 #개 저장되어 있음(<ph name="DOMAIN_LIST"/>)}}</translation>
 <translation id="7638605456503525968">직렬 포트</translation>
 <translation id="7639968568612851608">짙은 회색</translation>
@@ -3320,7 +3320,7 @@
 <translation id="7675325315208090829">결제 수단 관리...</translation>
 <translation id="767550629621587224">미리 커팅된 탭</translation>
 <translation id="7676643023259824263">클립보드 텍스트 <ph name="TEXT"/> 검색</translation>
-<translation id="4628681623692678085">Brave 설정에서 방문 기록 보기 및 관리</translation>
+<translation id="4628681623692678085">AI Wize 설정에서 방문 기록 보기 및 관리</translation>
 <translation id="7679947978757153706">야구</translation>
 <translation id="7680990533995586733"><ph name="CARD_NETWORK_NAME"/>, <ph name="CARD_LAST_FOUR_DIGITS"/>, 만료일: <ph name="CARD_EXPIRATION"/></translation>
 <translation id="7681273392938116652">판타지 스포츠</translation>
@@ -3353,7 +3353,7 @@
 <translation id="7719791801330803993">사진 및 동영상 소프트웨어</translation>
 <translation id="772128550427553158">CVC는 카드 앞면에 있습니다.</translation>
 <translation id="7724603315864178912">잘라내기</translation>
-<translation id="1296098648902562076">Brave Forms에서 빠르게 새 양식 만들기</translation>
+<translation id="1296098648902562076">AI Wize Forms에서 빠르게 새 양식 만들기</translation>
 <translation id="773466115871691567"><ph name="SOURCE_LANGUAGE"/>로 된 페이지를 항상 번역</translation>
 <translation id="7736959720849233795">링크 주소 복사</translation>
 <translation id="7740996059027112821">표준</translation>
@@ -3362,7 +3362,7 @@
 <translation id="774634243536837715">위험한 콘텐츠 차단됨</translation>
 <translation id="7748758200357401411">고성능 및 애프터마켓 자동차 부품</translation>
 <translation id="7751019142333897329"><ph name="FIRST_STRING"/> <ph name="SECOND_STRING"/></translation>
-<translation id="921286857694606205">Brave의 글꼴 크기 및 서체 맞춤설정</translation>
+<translation id="921286857694606205">AI Wize의 글꼴 크기 및 서체 맞춤설정</translation>
 <translation id="7752995774971033316">관리되지 않음</translation>
 <translation id="1771750053794015966">업데이트가 시작되면 AI Wize 탭과 앱이 닫힙니다</translation>
 <translation id="7755287808199759310">부모님이 차단 해제할 수 있습니다.</translation>
@@ -3383,13 +3383,13 @@
 <translation id="7785790577395078482">이 태블릿</translation>
 <translation id="7786368602962652765">필수 입력란이 비어 있습니다. 저장하기 전에 필수 입력란을 작성하세요.</translation>
 <translation id="7786432318297177736">검색엔진은 임의의 순서로 표시됩니다. 언제든지 설정에서 기본 검색엔진을 변경할 수 있습니다.</translation>
-<translation id="6865562781710080368">방문하는 사이트에서는 광고 실적을 측정하는 데 도움이 되는 정보를 Brave에 요청할 수 있습니다. Brave에서는 사이트가 제한된 유형의 데이터(예: 광고가 표시된 시간)를 수집하도록 허용합니다.</translation>
+<translation id="6865562781710080368">방문하는 사이트에서는 광고 실적을 측정하는 데 도움이 되는 정보를 AI Wize에 요청할 수 있습니다. AI Wize에서는 사이트가 제한된 유형의 데이터(예: 광고가 표시된 시간)를 수집하도록 허용합니다.</translation>
 <translation id="7791011319128895129">미공개</translation>
 <translation id="7791196057686275387">베일</translation>
 <translation id="7791543448312431591">추가</translation>
 <translation id="7798389633136518089">클라우드 소스에서 정책을 설정하지 않아 무시되었습니다.</translation>
 <translation id="7800304661137206267">메시지 인증(<ph name="MAC"/>)과 키 교환 메커니즘(<ph name="KX"/>)을 설정하고 <ph name="CIPHER"/>을(를) 사용하여 연결이 암호화되어 있습니다.</translation>
-<translation id="7022547472659133044">Brave에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악합니다. 방문하는 사이트에서 관심분야를 파악할 수도 있습니다. 나중에 사이트에서 개인 맞춤 광고를 표시하기 위해 이 정보를 요청할 수 있습니다. 나에게 광고를 표시하는 데 사용되는 주제와 사이트를 직접 선택할 수 있습니다.</translation>
+<translation id="7022547472659133044">AI Wize에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악합니다. 방문하는 사이트에서 관심분야를 파악할 수도 있습니다. 나중에 사이트에서 개인 맞춤 광고를 표시하기 위해 이 정보를 요청할 수 있습니다. 나에게 광고를 표시하는 데 사용되는 주제와 사이트를 직접 선택할 수 있습니다.</translation>
 <translation id="7802523362929240268">정상적인 사이트</translation>
 <translation id="7802989406998618639">은행에서 본인 인증을 할 수 있도록 <ph name="SIDE_OF_CARD"/>의 <ph name="NUMBER_OF_DIGITS"/>자리 보안 코드를 입력하세요.</translation>
 <translation id="780301667611848630">취소</translation>
@@ -3397,7 +3397,7 @@
 <translation id="7805906048382884326">도움말 닫기</translation>
 <translation id="7810410097247356677">다음번에 더 빠르게 결제할 수 있도록 기기에 카드와 암호화된 보안 코드를 저장하세요.</translation>
 <translation id="7812922009395017822">Mir</translation>
-<translation id="4670564340385807132">Brave에서 추천검색어를 삭제하시겠습니까?</translation>
+<translation id="4670564340385807132">AI Wize에서 추천검색어를 삭제하시겠습니까?</translation>
 <translation id="781440967107097262">클립보드를 공유하시겠습니까?</translation>
 <translation id="7815352264092918456">용지(일반)</translation>
 <translation id="7815407501681723534">'<ph name="SEARCH_STRING"/>'에 대해 <ph name="SEARCH_RESULTS"/> <ph name="NUMBER_OF_RESULTS"/>개의 검색 결과를 찾았습니다.</translation>
@@ -3411,12 +3411,12 @@
 <translation id="784404208867107517">그룹화된 기록</translation>
 <translation id="7844689747373518809">{COUNT,plural, =0{없음}=1{앱 1개(<ph name="EXAMPLE_APP_1"/>)}=2{앱 2개(<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>)}other{앱 #개(<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>, <ph name="AND_MORE"/>)}}</translation>
 <translation id="7855695075675558090"><ph name="TOTAL_LABEL"/> <ph name="CURRENCY_CODE"/> <ph name="FORMATTED_TOTAL_AMOUNT"/></translation>
-<translation id="7162988054835087448">나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 내 주제를 Brave에 요청할 수 있습니다. Brave은 최대 3개의 주제를 공유하는 동시에 방문 기록과 ID를 보호합니다.</translation>
+<translation id="7162988054835087448">나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 내 주제를 AI Wize에 요청할 수 있습니다. AI Wize은 최대 3개의 주제를 공유하는 동시에 방문 기록과 ID를 보호합니다.</translation>
 <translation id="7860345425589240791"><ph name="SIDE_OF_CARD"/>의 새 만료일과 CVC를 입력하세요.</translation>
 <translation id="7862185352068345852">사이트에서 나가시겠습니까?</translation>
 <translation id="7865448901209910068">최고 속도</translation>
 <translation id="7870281855125116701">할인 제품 찾음</translation>
-<translation id="7971990257511863579">Brave 계정 비밀번호 변경</translation>
+<translation id="7971990257511863579">AI Wize 계정 비밀번호 변경</translation>
 <translation id="7877007680666472091">보호된 콘텐츠 ID</translation>
 <translation id="7878562273885520351">비밀번호가 도용될 수도 있음</translation>
 <translation id="7880146494886811634">주소 저장</translation>
@@ -3433,7 +3433,7 @@
 <translation id="793209273132572360">주소를 업데이트하시겠습니까?</translation>
 <translation id="7932579305932748336">코팅</translation>
 <translation id="79338296614623784">올바른 전화번호를 입력하세요.</translation>
-<translation id="8329449853370113380"><ph name="URL"/>에서 보호된 콘텐츠를 재생하려고 합니다. Brave에서 기기의 ID를 인증해야 합니다.</translation>
+<translation id="8329449853370113380"><ph name="URL"/>에서 보호된 콘텐츠를 재생하려고 합니다. AI Wize에서 기기의 ID를 인증해야 합니다.</translation>
 <translation id="7935318582918952113">DOM Distiller</translation>
 <translation id="7937163678541954811">더 빠른 결제를 위해 이 카드의 CVC가 암호화되고 기기에 저장됩니다.</translation>
 <translation id="7937554595067888181">만료일: <ph name="EXPIRATION_DATE_ABBR"/></translation>
@@ -3449,7 +3449,7 @@
 <translation id="7946724693008564269">감지된 언어</translation>
 <translation id="7947285636476623132">유효기간 연도를 확인한 후 다시 시도해 주세요.</translation>
 <translation id="3227327027957060968"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize 기능 자세히 알아보기</translation>
-<translation id="1535074845255182168">Brave 설정에서 쿠키 환경설정 관리</translation>
+<translation id="1535074845255182168">AI Wize 설정에서 쿠키 환경설정 관리</translation>
 <translation id="7951415247503192394">(32비트)</translation>
 <translation id="7952192831285741665">European EDP</translation>
 <translation id="7952250633095257243">단축어는 비워 둘 수 없습니다.</translation>
@@ -3469,7 +3469,7 @@
 <translation id="7981129096182302364">댄스 및 전자 음악</translation>
 <translation id="798134797138789862">가상 현실 기기 및 데이터의 사용을 요청할 수 있음</translation>
 <translation id="7983008347525536475">SUV</translation>
-<translation id="8896585555528145662">현재 <ph name="SITE"/>에서 Brave이 처리할 수 없는 암호화된 자격증명 정보를 전송했기 때문에 방문할 수 없습니다. 네트워크 오류와 공격은 대부분 일시적이므로 잠시 후 페이지가 정상화될 것입니다.</translation>
+<translation id="8896585555528145662">현재 <ph name="SITE"/>에서 AI Wize이 처리할 수 없는 암호화된 자격증명 정보를 전송했기 때문에 방문할 수 없습니다. 네트워크 오류와 공격은 대부분 일시적이므로 잠시 후 페이지가 정상화될 것입니다.</translation>
 <translation id="7986319120639858961"><ph name="CARD_TITLE"/> <ph name="TIME"/> <ph name="BOOKMARKED"/> <ph name="TITLE"/> <ph name="DOMAIN"/></translation>
 <translation id="799149739215780103">바인드</translation>
 <translation id="7992044431894087211"><ph name="APPLICATION_TITLE"/>과(와)의 화면 공유가 재개되었습니다.</translation>
@@ -3485,11 +3485,11 @@
 <translation id="8012647001091218357">현재 부모님께 연락할 수 없습니다. 나중에 다시 시도해 주세요.</translation>
 <translation id="8019861005170389898"><ph name="TRADITIONAL_TEXT"/>(<ph name="ADDITIONAL_TEXT"/>)</translation>
 <translation id="8022542098135319050">여행사 및 여행 서비스</translation>
-<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab과 Enter를 차례로 눌러 Brave을 시스템 기본 브라우저로 설정</translation>
+<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab과 Enter를 차례로 눌러 AI Wize을 시스템 기본 브라우저로 설정</translation>
 <translation id="8025119109950072390">이 사이트의 공격자가 소프트웨어를 설치하거나 개인정보(예: 비밀번호, 전화번호, 신용카드)를 공개하는 등의 위험한 행동을 하도록 사용자를 속일 수 있습니다.</translation>
 <translation id="8026334261755873520">인터넷 사용 기록 삭제</translation>
 <translation id="8027077570865220386">트레이 15</translation>
-<translation id="7586767711133020907">Brave 안전 확인 실행 버튼, AI Wize 설정에서 안전 확인을 실행하려면 활성화하세요.</translation>
+<translation id="7586767711133020907">AI Wize 안전 확인 실행 버튼, AI Wize 설정에서 안전 확인을 실행하려면 활성화하세요.</translation>
 <translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize Forms에서 빠르게 새 양식 만들기</translation>
 <translation id="8028960012888758725">각 작업 뒤에 트림</translation>
 <translation id="8032546467100845887">투명</translation>
@@ -3511,7 +3511,7 @@
 <translation id="8058603697124206642">필요하지 않음</translation>
 <translation id="8063875539456488183">가격 저장 및 추적</translation>
 <translation id="8066225060526005217">쿠키 설정에서 관리</translation>
-<translation id="5442778523450464826">사기성 사이트에 비밀번호를 입력했습니다. Brave이 계정 보호를 도와드립니다. 비밀번호를 변경하고 계정 보안 위험에 관해 Brave에 알리려면 계정 보호를 클릭하세요.</translation>
+<translation id="5442778523450464826">사기성 사이트에 비밀번호를 입력했습니다. AI Wize이 계정 보호를 도와드립니다. 비밀번호를 변경하고 계정 보안 위험에 관해 AI Wize에 알리려면 계정 보호를 클릭하세요.</translation>
 <translation id="8070439594494267500">앱 아이콘</translation>
 <translation id="8070495475341517754">투어 여행</translation>
 <translation id="8075588646978457437">접착지</translation>
@@ -3559,7 +3559,7 @@
 <translation id="8163866351304776260">왼쪽 4공 펀칭</translation>
 <translation id="8164078261547504572">가격이 인하되면 이메일을 받고 싶으신가요?</translation>
 <translation id="8169175551046720804">"<ph name="DATA_CONTROLS_KEYS"/>" 키는 동일한 사전에 설정할 수 없습니다.</translation>
-<translation id="4351627595884993315">로그인되어 있는 경우 Brave에서 AI Wize 계정에 카드를 저장할지 묻는 메시지가 표시됩니다. 설정에서 이 동작을 변경할 수 있습니다.</translation>
+<translation id="4351627595884993315">로그인되어 있는 경우 AI Wize에서 AI Wize 계정에 카드를 저장할지 묻는 메시지가 표시됩니다. 설정에서 이 동작을 변경할 수 있습니다.</translation>
 <translation id="8176440868214972690">기기 관리자가 다음 웹사이트로 설정 또는 정책과 같은 정보를 전송했습니다.</translation>
 <translation id="817820454357658398">여성용품</translation>
 <translation id="818254048113802060">{0,plural, =1{콘텐츠로 인해 <ph name="FILE_NAME"/> 파일이 차단되었습니다}other{콘텐츠로 인해 파일 <ph name="FILE_COUNT"/>개가 차단되었습니다}}</translation>
@@ -3622,13 +3622,13 @@
 <translation id="8275952078857499577">이 사이트 번역 옵션을 제공하지 않음</translation>
 <translation id="8277900682056760511">결제 핸들러 시트가 열림</translation>
 <translation id="827820107214076967">로그 새로고침</translation>
-<translation id="2164614088382669062">Brave 알림이 사용 설정되어 있어야 합니다. <ph name="BEGIN_LINK"/><ph name="NOTIFICATION_SETTINGS"/><ph name="END_LINK"/>에서 사용 설정할 수 있습니다.</translation>
+<translation id="2164614088382669062">AI Wize 알림이 사용 설정되어 있어야 합니다. <ph name="BEGIN_LINK"/><ph name="NOTIFICATION_SETTINGS"/><ph name="END_LINK"/>에서 사용 설정할 수 있습니다.</translation>
 <translation id="8280630997017109758">트레이 11</translation>
 <translation id="8281730697546299650">기타 광고 개인 정보 보호 기능 사용 가능</translation>
 <translation id="8281886186245836920">건너뛰기</translation>
 <translation id="8282409409360764263">마당 관리</translation>
 <translation id="8282947398454257691">고유 기기 식별자 조회</translation>
-<translation id="4596532552309852907">Brave 설정에서 세이프 브라우징 등 관리</translation>
+<translation id="4596532552309852907">AI Wize 설정에서 세이프 브라우징 등 관리</translation>
 <translation id="8286036467436129157">로그인</translation>
 <translation id="8286799286781881307">관리자가 승인한 애플리케이션은 기기에 연결된 모든 화면을 캡처할 수 있습니다. 이 정보는 로컬에서 처리되거나 조직의 서버에 업로드될 수 있습니다.</translation>
 <translation id="8287123726498397887">봉투(사전 인쇄)</translation>
@@ -3685,9 +3685,9 @@
 <translation id="8398335999901363925">터치하여 입력할 수 있는 결제 수단이 전체 높이로 열렸습니다.</translation>
 <translation id="8398446215576328011">적용된 정책 되돌리기</translation>
 <translation id="8398790343843005537">휴대전화 찾기</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{오늘 Brave에서 쿠키를 다시 차단합니다}=1{내일 Brave에서 다시 쿠키를 차단합니다}other{#일 후 Brave에서 다시 쿠키를 차단합니다}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{오늘 AI Wize에서 쿠키를 다시 차단합니다}=1{내일 AI Wize에서 다시 쿠키를 차단합니다}other{#일 후 AI Wize에서 다시 쿠키를 차단합니다}}</translation>
 <translation id="8403506619177967839">팬 픽션</translation>
-<translation id="15931837016421186">Brave 설정에서 내가 동기화하는 정보 관리</translation>
+<translation id="15931837016421186">AI Wize 설정에서 내가 동기화하는 정보 관리</translation>
 <translation id="8406071103346257942">비밀번호 입력 시 화면 잠금 사용 중지</translation>
 <translation id="8407031780528483338">조리 기구</translation>
 <translation id="8409413588194360210">결제 핸들러</translation>
@@ -3735,8 +3735,8 @@
 <translation id="8490137692873530638">스태커 10</translation>
 <translation id="8493948351860045254">저장 공간 확보하기</translation>
 <translation id="8498891568109133222"><ph name="HOST_NAME"/>에서 응답하는 데 시간이 너무 오래 걸립니다.</translation>
-<translation id="443150778270806272">이 사이트에서 <ph name="PERMISSION"/> 권한을 사용하려면 Brave에 액세스 권한을 부여해야 합니다.</translation>
-<translation id="230699814587342492">Brave 비밀번호</translation>
+<translation id="443150778270806272">이 사이트에서 <ph name="PERMISSION"/> 권한을 사용하려면 AI Wize에 액세스 권한을 부여해야 합니다.</translation>
+<translation id="230699814587342492">AI Wize 비밀번호</translation>
 <translation id="8503813439785031346">사용자 이름</translation>
 <translation id="8504928302600319133">컴퓨터 하드웨어</translation>
 <translation id="8507227106804027148">명령줄</translation>
@@ -3748,22 +3748,22 @@
 <translation id="8521013008769249764">소파 및 안락의자</translation>
 <translation id="8521812709849134608">조리대</translation>
 <translation id="8522180136695974431">신용 보고 및 모니터링</translation>
-<translation id="1426902392270366682">Brave을 통해 AI Wize 계정을 보호하고 비밀번호를 변경할 수 있습니다.</translation>
+<translation id="1426902392270366682">AI Wize을 통해 AI Wize 계정을 보호하고 비밀번호를 변경할 수 있습니다.</translation>
 <translation id="8527228059738193856">스피커</translation>
-<translation id="1215802963054007211">Brave 설정에서 방문 기록, 쿠키, 캐시 등을 삭제하세요.</translation>
+<translation id="1215802963054007211">AI Wize 설정에서 방문 기록, 쿠키, 캐시 등을 삭제하세요.</translation>
 <translation id="853246364274116957">브로드웨이 및 뮤지컬 극장</translation>
 <translation id="853332391023689529">픽업트럭</translation>
 <translation id="8533619373899488139">차단된 URL 및 시스템 관리자가 설정한 기타 정책 목록을 확인하려면 &lt;strong&gt;chrome://policy&lt;/strong&gt;를 방문하세요.</translation>
-<translation id="5734033364988802986">Brave에서 <ph name="PERMISSION"/> 권한이 사용 중지되었습니다.</translation>
+<translation id="5734033364988802986">AI Wize에서 <ph name="PERMISSION"/> 권한이 사용 중지되었습니다.</translation>
 <translation id="8536234749087605613">봉투(창)</translation>
 <translation id="8539500321752640291">2개 권한을 허용하시겠습니까?</translation>
 <translation id="8541158209346794904">블루투스 기기</translation>
-<translation id="3275395224965468352">이 사이트는 Brave에 저장된 내 광고 주제를 기반으로 더 관련성 있는 광고를 표시합니다.</translation>
+<translation id="3275395224965468352">이 사이트는 AI Wize에 저장된 내 광고 주제를 기반으로 더 관련성 있는 광고를 표시합니다.</translation>
 <translation id="8541579497401304453">전화를 걸어 비즈니스와 연결하세요</translation>
 <translation id="8542014550340843547">하단 트리플 스테이플</translation>
 <translation id="8542617028204211143">SRA0</translation>
 <translation id="8543181531796978784"><ph name="BEGIN_ERROR_LINK"/>감지 문제를 신고<ph name="END_ERROR_LINK"/>할 수 있으며, 보안에 미치는 위험을 감수한다면 <ph name="BEGIN_LINK"/>이 안전하지 않은 사이트를 방문<ph name="END_LINK"/>할 수 있습니다.</translation>
-<translation id="907470742420136113">Brave에서 결제 수단 입력 설정을 수정하려고 합니다.</translation>
+<translation id="907470742420136113">AI Wize에서 결제 수단 입력 설정을 수정하려고 합니다.</translation>
 <translation id="8544303911974837265">폴리에스테르</translation>
 <translation id="854548366864113872">높은 가격 옵션</translation>
 <translation id="8546254312340305428">업로드 사유 입력(필수)</translation>
@@ -3793,10 +3793,10 @@
 <translation id="8590264442799989746"><ph name="HOST_NAME"/> 등</translation>
 <translation id="8600271352425265729">이번만 허용</translation>
 <translation id="860043288473659153">카드 명의자 이름</translation>
-<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>사용되는 데이터:<ph name="END_BOLD"/> 이 기기에서 Brave을 사용하여 방문한 사이트에서 이루어진 내 활동</translation>
+<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>사용되는 데이터:<ph name="END_BOLD"/> 이 기기에서 AI Wize을 사용하여 방문한 사이트에서 이루어진 내 활동</translation>
 <translation id="8601456038554914806">수상 스포츠 장비</translation>
 <translation id="8606726445206553943">MIDI 기기를 사용합니다.</translation>
-<translation id="5017966143250326204">광고 주제는 사이트에서 내 방문 기록과 신원 정보를 보호하면서 관련성 있는 광고를 표시하는 데 도움이 됩니다. Brave에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악할 수 있습니다. 나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 관련 주제를 Brave에 요청할 수 있습니다.</translation>
+<translation id="5017966143250326204">광고 주제는 사이트에서 내 방문 기록과 신원 정보를 보호하면서 관련성 있는 광고를 표시하는 데 도움이 됩니다. AI Wize에서는 내 최근 방문 기록을 기반으로 관심 주제를 파악할 수 있습니다. 나중에 사이트를 방문하면 사이트에서 광고 개인 최적화를 위해 관련 주제를 AI Wize에 요청할 수 있습니다.</translation>
 <translation id="8617269623452051934">기기 사용 여부</translation>
 <translation id="861775596732816396">크기 4</translation>
 <translation id="8620276786115098679">봉투 Kaku 7</translation>
@@ -3847,11 +3847,11 @@
 <translation id="8726549941689275341">페이지 크기:</translation>
 <translation id="8730621377337864115">완료</translation>
 <translation id="8731268612289859741">보안 코드</translation>
-<translation id="2184048523283917559">사이트와 공유하고 싶지 않은 주제를 차단할 수 있습니다. 또한 Brave에서는 4주가 지난 주제를 자동으로 삭제합니다. 자세히 알아보기</translation>
+<translation id="2184048523283917559">사이트와 공유하고 싶지 않은 주제를 차단할 수 있습니다. 또한 AI Wize에서는 4주가 지난 주제를 자동으로 삭제합니다. 자세히 알아보기</translation>
 <translation id="8734529307927223492">내 <ph name="DEVICE_TYPE"/>은(는) <ph name="MANAGER"/>에서 관리합니다</translation>
 <translation id="8736059027199600831">30x40인치</translation>
 <translation id="8737685506611670901"><ph name="REPLACED_HANDLER_TITLE"/> 대신 <ph name="PROTOCOL"/> 링크 열기</translation>
-<translation id="6326805297893828864">보안 연결을 설정하려면 시계가 올바로 설정되어 있어야 합니다. 웹사이트가 자신을 식별하는 데 사용하는 인증서가 특정 기간에만 유효하기 때문입니다. 기기의 시계가 잘못 설정되어 Brave에서 이 인증서를 확인할 수 없습니다.</translation>
+<translation id="6326805297893828864">보안 연결을 설정하려면 시계가 올바로 설정되어 있어야 합니다. 웹사이트가 자신을 식별하는 데 사용하는 인증서가 특정 기간에만 유효하기 때문입니다. 기기의 시계가 잘못 설정되어 AI Wize에서 이 인증서를 확인할 수 없습니다.</translation>
 <translation id="8740359287975076522"><ph name="HOST_NAME"/>의 &lt;abbr id="dnsDefinition"&gt;DNS 주소&lt;/abbr&gt;를 찾을 수 없습니다. 문제를 진단하는 중입니다.</translation>
 <translation id="8742371904523228557"><ph name="ORIGIN"/> 코드는 <ph name="ONE_TIME_CODE"/>입니다.</translation>
 <translation id="874918643257405732">현재 탭을 북마크에 추가</translation>
@@ -3864,7 +3864,7 @@
 <translation id="8758885506338294482">e스포츠</translation>
 <translation id="8759274551635299824">만료된 카드입니다.</translation>
 <translation id="87601671197631245">이 사이트에서는 오래된 보안 설정을 사용하므로 개인정보(예: 비밀번호, 메시지 또는 신용카드)를 이 사이트로 전송할 경우 정보가 유출될 수도 있습니다.</translation>
-<translation id="8761567432415473239">Brave 세이프 브라우징 결과 <ph name="SITE"/>에서 최근 <ph name="BEGIN_LINK"/>악성 프로그램이 발견<ph name="END_LINK"/>되었습니다.</translation>
+<translation id="8761567432415473239">AI Wize 세이프 브라우징 결과 <ph name="SITE"/>에서 최근 <ph name="BEGIN_LINK"/>악성 프로그램이 발견<ph name="END_LINK"/>되었습니다.</translation>
 <translation id="8763927697961133303">USB 기기</translation>
 <translation id="8766943070169463815">보안 결제 사용자 인증 정보 승인 시트가 열림</translation>
 <translation id="8767765348545497220">도움말 풍선 닫기</translation>
@@ -3892,7 +3892,7 @@
 <translation id="8811470563853401328">계정에 주소를 저장하시겠습니까?</translation>
 <translation id="8813277370772331957">나중에 알림</translation>
 <translation id="8814707942599948500">봉투 C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wize 설정에서 Brave을 업데이트하려면 Tab을 누른 다음 Enter 누르기</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, AI Wize 설정에서 AI Wize을 업데이트하려면 Tab을 누른 다음 Enter 누르기</translation>
 <translation id="882338992931677877">수동 슬롯</translation>
 <translation id="8830320733681313421">Hagaki 엽서</translation>
 <translation id="8833007469711500369">세탁기 및 건조기</translation>
@@ -3905,7 +3905,7 @@
 <translation id="8852567725116633427">경차 및 소형 자동차</translation>
 <translation id="885306012106043620">테니스</translation>
 <translation id="8855742650226305367">댄스</translation>
-<translation id="7487066225574140895">Brave과 공유</translation>
+<translation id="7487066225574140895">AI Wize과 공유</translation>
 <translation id="4764754838347156633">다른 사이트에서 비밀번호를 재사용했다면 <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> 비밀번호를 재설정하는 것이 좋습니다.</translation>
 <translation id="885906927438988819">철자가 올바르다면 <ph name="BEGIN_LINK"/>Windows 네트워크 진단을 실행<ph name="END_LINK"/>해 보세요.</translation>
 <translation id="8863218129525348270">다음번에 더 빠르게 결제할 수 있도록 기기에 카드를 저장하세요</translation>
@@ -3932,7 +3932,7 @@
 <translation id="8903921497873541725">확대</translation>
 <translation id="890493561996401738">추천 삭제 버튼, Enter 키를 눌러 삭제, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="8910898109640902752">8x10인치</translation>
-<translation id="4805806622840861220">Brave 다시 시작</translation>
+<translation id="4805806622840861220">AI Wize 다시 시작</translation>
 <translation id="8918062451146297192">가상 카드용 CVC</translation>
 <translation id="8919740778133505789">스포츠카</translation>
 <translation id="8919895429178014996">모든 항목 숨기기</translation>
@@ -3960,7 +3960,7 @@
 <translation id="8971063699422889582">서버 인증서가 만료되었습니다.</translation>
 <translation id="8975012916872825179">전화번호, 이메일 주소, 배송지 주소 등의 정보를 포함합니다.</translation>
 <translation id="8975263830901772334">인쇄하는 파일의 이름</translation>
-<translation id="8978053250194585037">Brave 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>피싱을 감지<ph name="END_LINK"/>했습니다. 피싱 사이트는 사용자를 속이기 위해 다른 웹사이트인 것처럼 가장합니다.</translation>
+<translation id="8978053250194585037">AI Wize 세이프 브라우징이 최근 <ph name="SITE"/>에서 <ph name="BEGIN_LINK"/>피싱을 감지<ph name="END_LINK"/>했습니다. 피싱 사이트는 사용자를 속이기 위해 다른 웹사이트인 것처럼 가장합니다.</translation>
 <translation id="8982884016487650216">PDF 로드 완료</translation>
 <translation id="8983369100812962543">이제 앱 크기를 조절할 수 있습니다.</translation>
 <translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize 방문 기록 보기</translation>
@@ -4005,7 +4005,7 @@
 <translation id="9051072642122229460">커피 및 에스프레소 메이커</translation>
 <translation id="9051260467258969162">다시 <ph name="BEGIN_LINK"/>로그인<ph name="END_LINK"/>한 후 
     이 탭으로 돌아와 작성 지원 기능을 이용하세요.</translation>
-<translation id="104719866786855422">광고 측정이라는 새로운 광고 개인 정보 보호 기능이 출시됩니다. Brave에서 광고가 사용자에게 게시된 시기 등의 제한된 정보만 사이트 간에 공유되어 사이트의 광고 실적을 측정하도록 돕습니다.</translation>
+<translation id="104719866786855422">광고 측정이라는 새로운 광고 개인 정보 보호 기능이 출시됩니다. AI Wize에서 광고가 사용자에게 게시된 시기 등의 제한된 정보만 사이트 간에 공유되어 사이트의 광고 실적을 측정하도록 돕습니다.</translation>
 <translation id="9056953843249698117">스토어</translation>
 <translation id="9062620674789239642">이동, 수정 또는 삭제되었을 수 있습니다.</translation>
 <translation id="9063398205799684336">봉투 Kaku 2</translation>
@@ -4026,16 +4026,16 @@
 <translation id="9093723786115107672">수면용품</translation>
 <translation id="9094544726794842788">싫어요를 누르면 이러한 결과가 마음에 들지 않는 이유에 관해 자세한 의견을 제출할 수 있는 양식이 열립니다</translation>
 <translation id="9095388113577226029">다른 언어...</translation>
-<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, tab 키를 누른 다음 Enter 키를 눌러 iOS 설정에서 Brave을 시스템 기본 브라우저로 설정</translation>
+<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, tab 키를 누른 다음 Enter 키를 눌러 iOS 설정에서 AI Wize을 시스템 기본 브라우저로 설정</translation>
 <translation id="9096679202588811390">TV 프로그램</translation>
 <translation id="9101630580131696064">트레이 1</translation>
 <translation id="9103537084693478942">동영상 소프트웨어</translation>
-<translation id="6373940988468425649"><ph name="SITE"/>에서는 사용자 정보를 보호하기 위해 일반적으로 암호화를 사용합니다. 이번에 Brave에서 <ph name="SITE"/>에 연결을 시도했을 때 웹사이트에서 비정상적이고 잘못된 사용자 인증 정보를 반환했습니다. 이는 공격자가 <ph name="SITE"/>인 것처럼 가장하려고 하거나 Wi-Fi 로그인 화면이 연결을 방해했기 때문일 수 있습니다. 데이터 교환이 발생하기 전에 Brave에서 연결을 중단했으므로 사용자 정보는 안전합니다.</translation>
+<translation id="6373940988468425649"><ph name="SITE"/>에서는 사용자 정보를 보호하기 위해 일반적으로 암호화를 사용합니다. 이번에 AI Wize에서 <ph name="SITE"/>에 연결을 시도했을 때 웹사이트에서 비정상적이고 잘못된 사용자 인증 정보를 반환했습니다. 이는 공격자가 <ph name="SITE"/>인 것처럼 가장하려고 하거나 Wi-Fi 로그인 화면이 연결을 방해했기 때문일 수 있습니다. 데이터 교환이 발생하기 전에 AI Wize에서 연결을 중단했으므로 사용자 정보는 안전합니다.</translation>
 <translation id="9107467864910557787">내 브라우저는 <ph name="MANAGER"/>에서 관리합니다</translation>
 <translation id="91108059142052966">관리자 정책에 따라 기밀 콘텐츠가 보일 때 <ph name="APPLICATION_TITLE"/>과(와)의 화면 공유가 중지됩니다.</translation>
 <translation id="9114524666733003316">카드 확인 중...</translation>
 <translation id="3582535072753734287">이 브라우저는 회사 또는 다른 조직에서 관리하지 않습니다. 이 기기의 활동은 AI Wize 외부에서도 관리할 수 있습니다. <ph name="BEGIN_LINK"/>자세히 알아보기<ph name="END_LINK"/></translation>
-<translation id="7839260860373627374">Brave 광고에 관해 자세히 알아보기</translation>
+<translation id="7839260860373627374">AI Wize 광고에 관해 자세히 알아보기</translation>
 <translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, 검색을 계속하고 AI Wize 방문 기록에서 관련 활동을 보려면 Tab과 Enter를 차례로 누르세요</translation>
 <translation id="9119042192571987207">업로드됨</translation>
 <translation id="9122954576417194280">상품 및 선물 거래</translation>
@@ -4046,7 +4046,7 @@
 <translation id="913552870853451045"><ph name="IDS_AUTOFILL_VIRTUAL_CARD_NAME_AND_LAST_FOUR_DIGITS"/>, 가상 카드</translation>
 <translation id="9136861683332321024">고급형 자동차</translation>
 <translation id="9137013805542155359">원본 보기</translation>
-<translation id="3480834636742786788">이 앱을 사용하기 전에 Brave을 시작하고 로그인하세요.</translation>
+<translation id="3480834636742786788">이 앱을 사용하기 전에 AI Wize을 시작하고 로그인하세요.</translation>
 <translation id="9138037198177304356">알림 허용됨</translation>
 <translation id="9139318394846604261">쇼핑</translation>
 <translation id="9141013498910525015">주소 관리</translation>
@@ -4076,12 +4076,12 @@
 <translation id="9174623988242579721">커스텀 및 고성능 자동차</translation>
 <translation id="9174917557437862841">탭 전환 버튼, 이 탭으로 전환하려면 Enter를 누르세요</translation>
 <translation id="9177283544810807743">이 PDF에 액세스할 수 없습니다. AI Wize AI를 통해 텍스트를 추출하고 있습니다</translation>
-<translation id="5129795253416930127">Brave 설정에서 결제 및 신용카드 정보를 관리하세요.</translation>
+<translation id="5129795253416930127">AI Wize 설정에서 결제 및 신용카드 정보를 관리하세요.</translation>
 <translation id="9179907736442194268">사이트에서 가격이 인하되면 이메일 알림이 전송됩니다.</translation>
 <translation id="9183302530794969518">Google Docs</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/>에서 지원되지 않는 프로토콜을 사용합니다.</translation>
 <translation id="918454845714257218"><ph name="SIDE_OF_CARD"/>에서 코드를 확인한 후 다시 시도해 주세요.</translation>
-<translation id="7202091195027070644">Brave을 기본 브라우저로 설정 버튼, Brave을 시스템 기본 브라우저로 설정하려면 활성화하세요.</translation>
+<translation id="7202091195027070644">AI Wize을 기본 브라우저로 설정 버튼, AI Wize을 시스템 기본 브라우저로 설정하려면 활성화하세요.</translation>
 <translation id="9187461866967718678">익스트림 스포츠</translation>
 <translation id="9191834167571392248">왼쪽 하단 펀칭</translation>
 <translation id="9192361865877479444">금속(매트)</translation>
@@ -4089,26 +4089,26 @@
 <translation id="9205078245616868884">동기화 암호로 데이터가 암호화되어 있습니다. 동기화를 시작하려면 입력하세요.</translation>
 <translation id="9207861905230894330">글을 추가하지 못했습니다.</translation>
 <translation id="9213433120051936369">디자인 사용자설정</translation>
-<translation id="2206050430829841793">애플리케이션으로 인해 Brave이 안전하게 이 사이트에 접속할 수 없음</translation>
+<translation id="2206050430829841793">애플리케이션으로 인해 AI Wize이 안전하게 이 사이트에 접속할 수 없음</translation>
 <translation id="92178312226016010">추적 중인 제품입니다.</translation>
 <translation id="9218430445555521422">기본값으로 설정</translation>
 <translation id="9219103736887031265">이미지</translation>
-<translation id="142389341645668510">Brave 맞춤설정</translation>
+<translation id="142389341645668510">AI Wize 맞춤설정</translation>
 <translation id="9222403027701923763">초중고교(K-12)</translation>
 <translation id="93020190163435405">인턴십</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385"><ph name="APP_NAME"/> 앱이 Wi-Fi 네트워크를 설정하도록 허용하시겠습니까?</translation>
-<translation id="7486559383537872796">Brave 계정에 액세스하지 못할 수 있습니다. 따라서 지금 비밀번호를 변경하는 것이 좋습니다. 로그인하라는 메시지가 표시됩니다.</translation>
+<translation id="7486559383537872796">AI Wize 계정에 액세스하지 못할 수 있습니다. 따라서 지금 비밀번호를 변경하는 것이 좋습니다. 로그인하라는 메시지가 표시됩니다.</translation>
 <translation id="937457230470581909">동물원, 수족관 및 보호구역</translation>
-<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>사용되는 데이터:<ph name="END_BOLD"/> 광고 주제는 내가 이 기기에서 Brave을 사용하여 방문한 사이트의 목록인 최근 방문 기록을 기반으로 합니다.</translation>
+<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>사용되는 데이터:<ph name="END_BOLD"/> 광고 주제는 내가 이 기기에서 AI Wize을 사용하여 방문한 사이트의 목록인 최근 방문 기록을 기반으로 합니다.</translation>
 <translation id="937885410143139026">관리 콘솔로 전송된 데이터</translation>
 <translation id="939736085109172342">새 폴더</translation>
 <translation id="940053046584497293">여행 및 교통수단</translation>
-<translation id="6588091288231158998">Brave 계정에 저장된 비밀번호 및 패스키 사용</translation>
-<translation id="5444457503062019851">Brave에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다.</translation>
+<translation id="6588091288231158998">AI Wize 계정에 저장된 비밀번호 및 패스키 사용</translation>
+<translation id="5444457503062019851">AI Wize에서는 사이트가 서드 파티 쿠키를 사용하여 사용자의 탐색 활동을 추적하지 못하도록 사이트를 차단합니다.</translation>
 <translation id="945855313015696284">아래 정보를 확인하고 잘못된 카드를 삭제하세요.</translation>
 <translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab을 누른 다음 Enter를 눌러 AI Wize Sites에서 빠르게 새 사이트 만들기</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{오늘 Brave에서 다시 쿠키를 제한합니다.}=1{내일 Brave에서 다시 쿠키를 제한합니다}other{#일 후 Brave에서 다시 쿠키를 제한합니다.}}</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{오늘 AI Wize에서 다시 쿠키를 제한합니다.}=1{내일 AI Wize에서 다시 쿠키를 제한합니다}other{#일 후 AI Wize에서 다시 쿠키를 제한합니다.}}</translation>
 <translation id="949314938206378263">이 사이트의 방문을 요청했습니다. 부모님이 Family Link에서 답장을 보낼 수 있습니다.</translation>
 <translation id="950736567201356821">상단 3공 펀칭</translation>
 <translation id="961663415146723894">하단 바인드</translation>
@@ -4155,9 +4155,9 @@
 <translation id="6417973700199526943">시크릿 모드로 전환됨</translation>
 <translation id="375424491626359494">시크릿 탭을 모두 닫으면 시크릿 탭에서 보는 페이지는 브라우저의 방문 기록, 쿠키 저장소, 검색 기록 어디에도 남지 않습니다. 단, 다운로드한 파일이나 생성한 북마크는 유지됩니다.</translation>
 <translation id="8794378783472961468">하지만 흔적이 아예 남지 않는 것은 아닙니다. 시크릿 모드로 탐색해도 회사, 인터넷 서비스 제공업체 또는 방문한 웹사이트에 저장된 흔적까지 없앨 수는 없습니다.</translation>
-<translation id="6085043210649933880">프라이버시를 보호하는 Brave</translation>
+<translation id="6085043210649933880">프라이버시를 보호하는 AI Wize</translation>
 <translation id="3683567996395248272">시크릿 모드의 기능</translation>
-<translation id="5581758310848298360">Brave 비공개 탭을 모두 닫으면 해당 탭에서의 다음 활동 내역이 디바이스에서 제거됩니다.
+<translation id="5581758310848298360">AI Wize 비공개 탭을 모두 닫으면 해당 탭에서의 다음 활동 내역이 디바이스에서 제거됩니다.
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>인터넷 사용 기록<ph name="END_LIST_ITEM"/>
             <ph name="LIST_ITEM"/>검색 기록<ph name="END_LIST_ITEM"/>

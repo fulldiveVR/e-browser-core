@@ -53,7 +53,7 @@ class RemoteCompletionClient {
       GenerationCompletedCallback data_completed_callback,
       GenerationDataCallback data_received_callback = base::NullCallback());
   // Clears all in-progress requests
-  void ClearAllQueries();
+  virtual void ClearAllQueries();
 
  private:
   void OnQueryDataReceived(GenerationDataCallback callback,

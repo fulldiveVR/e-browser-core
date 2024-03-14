@@ -4,7 +4,7 @@
 <translation id="1011749477052068769">Ilipat dito</translation>
 <translation id="1014147525163127655">Walang anumang passkey para sa <ph name="ORIGIN"/> sa device na ito</translation>
 <translation id="1016498331642356377">Mabilis na maghanap gamit ang iyong boses. Para i-edit ang shortcut na ito, pindutin ito nang matagal.</translation>
-<translation id="2566435362010629810">Brave Dev</translation>
+<translation id="2566435362010629810">AI Wize Dev</translation>
 <translation id="1028699632127661925">Ipinapadala sa <ph name="DEVICE_NAME"/>...</translation>
 <translation id="103269572468856066">I-clear ang data sa mga site at app?</translation>
 <translation id="1034259925032978114">Bukas ang window</translation>
@@ -16,18 +16,18 @@
 <translation id="1089606299949659462">Tapos na ang pagsusuri!</translation>
 <translation id="1095761715416917775">Tiyaking maa-access mo sa anumang oras ang iyong sini-sync na data</translation>
 <translation id="1100066534610197918">Buksan sa bagong tab sa grupo</translation>
-<translation id="4660777881054855091">Tumulong na pahusayin ang Brave?</translation>
+<translation id="4660777881054855091">Tumulong na pahusayin ang AI Wize?</translation>
 <translation id="1105960400813249514">Screen Capture</translation>
 <translation id="1108938384783527433">Pag-sync ng history</translation>
 <translation id="1111673857033749125">Dito lalabas ang mga naka-save na bookmark sa iba mo pang mga device.</translation>
 <translation id="1113597929977215864">Ipakita ang pinasimpleng view</translation>
-<translation id="4470276443668654888">Hindi mae-encrypt ang mga paraan ng pagbabayad at address mula sa Google Pay. Hindi masi-sync ang history ng pag-browse mula sa Brave.
+<translation id="4470276443668654888">Hindi mae-encrypt ang mga paraan ng pagbabayad at address mula sa Google Pay. Hindi masi-sync ang history ng pag-browse mula sa AI Wize.
 Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na data. Hindi ipinadala sa o na-store ng AI Wize ang passphrase. Kung makalimutan mo ang iyong passphrase o gusto mong baguhin ang setting na ito, kakailanganin mong i-reset ang pag-sync. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
-<translation id="1295971429974142731">Hindi ka pinoprotektahan laban sa mga mapanganib na website, download, at extension. Magkakaroon ka pa rin ng proteksyon ng Ligtas na Pag-browse, kung available, sa iba pang serbisyo ng Brave, tulad ng Gmail at Search.</translation>
+<translation id="1295971429974142731">Hindi ka pinoprotektahan laban sa mga mapanganib na website, download, at extension. Magkakaroon ka pa rin ng proteksyon ng Ligtas na Pag-browse, kung available, sa iba pang serbisyo ng AI Wize, tulad ng Gmail at Search.</translation>
 <translation id="1129510026454351943">Mga Detalye: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Huwag mag-alok na isalin ang mga site na ito</translation>
 <translation id="1145536944570833626">I-delete ang kasalukuyang data.</translation>
-<translation id="7083341910267693582">Bubukas ang <ph name="APP_NAME"/> sa Brave. Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_LINK1"/>Mga Tuntunin ng Serbisyo ng Brave<ph name="END_LINK1"/>, at sa <ph name="BEGIN_LINK2"/>Mga Karagdagang Tuntunin ng Serbisyo ng AI Wize at ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">Bubukas ang <ph name="APP_NAME"/> sa AI Wize. Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_LINK1"/>Mga Tuntunin ng Serbisyo ng AI Wize<ph name="END_LINK1"/>, at sa <ph name="BEGIN_LINK2"/>Mga Karagdagang Tuntunin ng Serbisyo ng AI Wize at ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Gamitin ang password na <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Pangalanang muli</translation>
 <translation id="7947699437047020219">Ire-request ng AI Wize ang pang-mobile na site kapag makitid ang screen</translation>
@@ -46,7 +46,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1231733316453485619">I-on ang pag-sync?</translation>
 <translation id="123724288017357924">I-reload ang page, balewalain ang cached content</translation>
 <translation id="1239792311949352652">Mabilis na ibahagi ang page na ito. Para i-edit ang shortcut na ito, pumunta sa Mga Setting.</translation>
-<translation id="3251315496493761426">Mga tip sa Brave</translation>
+<translation id="3251315496493761426">Mga tip sa AI Wize</translation>
 <translation id="1240288207750131269">Nilo-load ang <ph name="LANG"/></translation>
 <translation id="1240903469550363138">Para magpatuloy, ibabahagi ng <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ang iyong pangalan, email address, at larawan sa profile sa site na ito. Tingnan ang <ph name="BEGIN_LINK1"/>patakaran sa privacy<ph name="END_LINK1"/> at <ph name="BEGIN_LINK2"/>mga tuntunin ng serbisyo<ph name="END_LINK2"/> ng site na ito.</translation>
 <translation id="124116460088058876">Higit pang wika</translation>
@@ -54,7 +54,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1242883863226959074">device</translation>
 <translation id="124678866338384709">Isara ang kasalukuyang tab</translation>
 <translation id="1246905108078336582">Alisin ang suhestyon mula sa clipboard?</translation>
-<translation id="1996480094660735607">Brave doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="1996480094660735607">AI Wize doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
 <translation id="7074197713963877855">Makakakita ka na ngayon ng content mula at tungkol sa <ph name="SITE_NAME"/> sa Sinusubaybayan. Mase-save sa iyong AI Wize sync chain ang mga site at paghahanap na sinusubaybayan mo. Mapapamahalaan mo ang iyong mga sinusubaybayan sa mga setting anumang oras.</translation>
 <translation id="1263231323834454256">Listahan ng babasahin</translation>
 <translation id="1266864766717917324">Hindi maibahagi ang <ph name="CONTENT_TYPE"/></translation>
@@ -69,8 +69,8 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1303507811548703290"><ph name="DOMAIN"/> - Ipinadala mula sa <ph name="DEVICE_NAME"/></translation>
 <translation id="1320912611264252795">Nakabukas nang buo ang mga folder ng proseso ng pag-save ng bookmark</translation>
 <translation id="1327257854815634930">Nakabukas ang history ng pag-navigate</translation>
-<translation id="6773423637732432200">Hindi ma-update ang Brave. Higit pang opsyon</translation>
-<translation id="3169981355900570544">Mga shortcut ng feature ng Brave</translation>
+<translation id="6773423637732432200">Hindi ma-update ang AI Wize. Higit pang opsyon</translation>
+<translation id="3169981355900570544">Mga shortcut ng feature ng AI Wize</translation>
 <translation id="1344653310988386453">Isama ang link sa highlight</translation>
 <translation id="1347468774581902829">Pamahalaan ang aktibidad</translation>
 <translation id="1360432990279830238">Mag-sign out at i-off ang pag-sync?</translation>
@@ -86,7 +86,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1407069428457324124">Madilim na tema</translation>
 <translation id="1407135791313364759">Buksan lahat</translation>
 <translation id="1409879593029778104">Pinigilan ang pag-download sa <ph name="FILE_NAME"/> dahil may ganitong file na sa kasalukuyan.</translation>
-<translation id="1853026300647876496">Nakikipag-ugnayan sa Brave. Maaari itong umabot nang isang minuto…</translation>
+<translation id="1853026300647876496">Nakikipag-ugnayan sa AI Wize. Maaari itong umabot nang isang minuto…</translation>
 <translation id="1416550906796893042">Bersyon ng application</translation>
 <translation id="1428770807407000502">I-off ang pag-sync?</translation>
 <translation id="1430915738399379752">I-print</translation>
@@ -95,7 +95,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1437543266176261764">Tumatakbo sa <ph name="APP_NAME"/></translation>
 <translation id="1448440926884431741">Ayusin ang mga sinusubaybayan mong produkto sa Mga Bookmark</translation>
 <translation id="1450753235335490080">Hindi maibahagi ang <ph name="CONTENT_TYPE"/></translation>
-<translation id="5598889255595678761">Piliin ang wika ng Brave</translation>
+<translation id="5598889255595678761">Piliin ang wika ng AI Wize</translation>
 <translation id="1477626028522505441">Hindi na-download ang <ph name="FILE_NAME"/> dahil sa mga isyu sa server.</translation>
 <translation id="148482509007564431">Proseso ng pag-save ng bookmark</translation>
 <translation id="1492417797159476138">Na-save mo na ang username na ito para sa site na ito</translation>
@@ -108,14 +108,14 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1521774566618522728">Aktibo ngayong araw</translation>
 <translation id="8090895580117672212">Para pamahalaan ang iyong AI Wize account, i-tap ang button na "Pamahalaan ang account"</translation>
 <translation id="1549000191223877751">Lumipat sa ibang window</translation>
-<translation id="1705567146636171298">I-update ang Brave</translation>
+<translation id="1705567146636171298">I-update ang AI Wize</translation>
 <translation id="1568636008098739136">Makinig sa page na ito. Para i-edit ang shortcut na ito, pindutin ito nang matagal.</translation>
 <translation id="1571304935088121812">Kopyahin ang username</translation>
 <translation id="1592864538817356322">Karaniwang proteksyon:</translation>
 <translation id="1594635596540195766"><ph name="SUGGESTIONS_COUNT"/> (na) iminumungkahing item sa listahan sa ibaba.</translation>
 <translation id="1598163867407640634">Gamitin ang <ph name="SITE_ETLD_PLUS_ONE"/> gamit ang <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1628019612362412531">{NUM_SELECTED,plural, =1{Alisin ang 1 piniling item}one{Alisin ang # piniling item}other{Alisin ang # na piniling item}}</translation>
-<translation id="3122582044404611732">Tumuklas ng bagong content sa homepage ng Brave</translation>
+<translation id="3122582044404611732">Tumuklas ng bagong content sa homepage ng AI Wize</translation>
 <translation id="1641113438599504367">Ligtas na Pagba-browse</translation>
 <translation id="164269334534774161">Tinitingnan mo ang offline na kopya ng page na ito mula sa <ph name="CREATION_TIME"/></translation>
 <translation id="1644574205037202324">History</translation>
@@ -147,15 +147,15 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1810845389119482123">Hindi natapos ang paunang pag-set up ng pag-sync</translation>
 <translation id="1812027881030482584">Hindi makapagpatuloy ang <ph name="SITE_ETLD_PLUS_ONE"/> gamit ang <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1829244130665387512">Hanapin sa page</translation>
-<translation id="5488575152752589250">Mag-sync para makuha ang pinakanauugnay na content mula sa Brave</translation>
+<translation id="5488575152752589250">Mag-sync para makuha ang pinakanauugnay na content mula sa AI Wize</translation>
 <translation id="7175072311426658869">Buksan sa AI Wize browser</translation>
-<translation id="5173820533850252773">Luma na ang Brave</translation>
+<translation id="5173820533850252773">Luma na ang AI Wize</translation>
 <translation id="1883903952484604915">Aking Mga File</translation>
 <translation id="189358972401248634">Iba pang mga wika</translation>
 <translation id="1900260903084164610">Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_TOS_LINK"/>Mga Tuntunin ng Serbisyo<ph name="END_TOS_LINK"/>.</translation>
 <translation id="6893464351226208429">Naka-save sa iyong AI Wize sync chain ang mga URL na iyong binibisita</translation>
 <translation id="1910950723001426294">Nakasara ang listahan ng mga opsyon sa pagbabahagi.</translation>
-<translation id="7021823858304886493">Pagayan ang pag-sign in sa Brave</translation>
+<translation id="7021823858304886493">Pagayan ang pag-sign in sa AI Wize</translation>
 <translation id="1922362554271624559">Mga iminumungkahing wika</translation>
 <translation id="1924255092154549435">Pinalawak ang tab</translation>
 <translation id="1925021887439448749">Maglagay ng custom na address sa web</translation>
@@ -175,12 +175,12 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="1984417487208496350">Walang proteksyon (hindi inirerekomenda)</translation>
 <translation id="1986685561493779662">May ganito nang pangalan</translation>
 <translation id="1995884366040846621">Para magpatuloy, ibabahagi ng <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ang iyong pangalan, email address, at larawan sa profile sa site na ito. Tingnan ang <ph name="BEGIN_LINK1"/>patakaran sa privacy<ph name="END_LINK1"/> ng site na ito.</translation>
-<translation id="6968892567705775281">Isama ang katabing text sa mga paghahanap sa Brave?</translation>
+<translation id="6968892567705775281">Isama ang katabing text sa mga paghahanap sa AI Wize?</translation>
 <translation id="2009341475524975924">Para masukat ang performance ng ad, puwedeng ma-share ang mga limitadong uri ng data sa mga site, gaya ng oras sa isang araw kung kailan ipinakita sa iyo ang isang ad.</translation>
 <translation id="201060170519281460">Pinapanatiling secure ng iyong lock ng profile ang impormasyon mo sa kotse, kasama na ang mga naka-sync na password, pagbabayad, at higit pa.</translation>
 <translation id="2021896219286479412">Control ng full screen sa site</translation>
 <translation id="2038563949887743358">I-on ang Hilingin ang site sa desktop</translation>
-<translation id="7675869148432102528">May data rin ang <ph name="APP_NAME"/> sa Brave</translation>
+<translation id="7675869148432102528">May data rin ang <ph name="APP_NAME"/> sa AI Wize</translation>
 <translation id="2046634576464120978">Pumalya ang pagpaparehistro</translation>
 <translation id="2049574241039454490"><ph name="FILE_SIZE_OF_TOTAL"/> <ph name="SEPARATOR"/> <ph name="DESCRIPTION"/></translation>
 <translation id="2051669996101374349">Gamitin ang HTTPS sa tuwing posible at makatanggap ng babala bago mag-load ng mga site na hindi sumusuporta rito. Hindi mo mababago ang setting na ito dahil naka-enable sa iyo ang Advanced na Proteksyon.</translation>
@@ -232,8 +232,8 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="2323763861024343754">Storage ng site</translation>
 <translation id="2328985652426384049">Hindi makapag-sign in</translation>
 <translation id="2341410551640223969">Hindi ma-install ang <ph name="WEBAPK_NAME"/>.</translation>
-<translation id="3587672679800759167">Kabuuang data na ginagamit ng Brave, kabilang ang mga account, bookmark at naka-save na setting</translation>
-<translation id="2767094839186957509">Patakaran sa Privacy ng Brave</translation>
+<translation id="3587672679800759167">Kabuuang data na ginagamit ng AI Wize, kabilang ang mga account, bookmark at naka-save na setting</translation>
+<translation id="2767094839186957509">Patakaran sa Privacy ng AI Wize</translation>
 <translation id="2359808026110333948">Magpatuloy</translation>
 <translation id="2362083820973145409">Naka-sign in bilang <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Binubuksan ang mga setting.</translation>
 <translation id="2364539095045928896">Button na Isara para isara ang notification ng privacy ng hub ng mga insight ng page.</translation>
@@ -257,7 +257,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="2497852260688568942">Na-disable ng iyong administrator ang pag-sync</translation>
 <translation id="7229462727772664332">Makikita mo sa AI Wize ang iyong status ng pag-sign in sa <ph name="SITE_NAME"/>, data mula sa pag-browse, at data ng site</translation>
 <translation id="2510106555128151389">Ini-install ang <ph name="WEBAPK_NAME"/>...</translation>
-<translation id="7222718784508482526">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pangongolekta ng data, tingnan ang <ph name="BEGIN_LINK"/>Pag-sync at mga serbisyo ng Brave<ph name="END_LINK"/></translation>
+<translation id="7222718784508482526">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pangongolekta ng data, tingnan ang <ph name="BEGIN_LINK"/>Pag-sync at mga serbisyo ng AI Wize<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Full-size sheet</translation>
 <translation id="284843628681142937">Ipinapadala sa AI Wize ang mga URL ng mga page na binibisita mo</translation>
 <translation id="2527209463677295330">Kapag nagsama ka ng mas maraming text ng isang page, posibleng makakita ka ng mas magagandang resulta</translation>
@@ -271,7 +271,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="5079947353572974060">Mag-alok na ipadala sa AI Wize Translate ang mga page na nasa iba pang wika</translation>
 <translation id="2571834852878229351">Gumawa ng sarili kong password</translation>
 <translation id="6995512410824092085">Alamin kung paano itakda ang AI Wize bilang iyong default</translation>
-<translation id="7242554556818074465">Para makita ang iyong mga tab sa kahit saan ka man gumagamit ng Brave, mag-sign in sa lahat ng device mo</translation>
+<translation id="7242554556818074465">Para makita ang iyong mga tab sa kahit saan ka man gumagamit ng AI Wize, mag-sign in sa lahat ng device mo</translation>
 <translation id="8661556138616664061">Content ng AI Wize para sa kabataan</translation>
 <translation id="2324920234469020158">Iki-clear nito ang cookies, cache at iba pang data ng mga site na sa tingin ng AI Wize ay hindi mahalaga.</translation>
 <translation id="2587052924345400782">May available na mas bagong bersyon</translation>
@@ -295,7 +295,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="2669454659051515572">Makikita ng sinumang gumagamit ng device na ito ang mga na-download na file</translation>
 <translation id="5806087344347665213">Kung susubukan ng site na nakawin ang iyong password, o kapag nag-download ka ng mapaminsalang file, posibleng magpadala ang AI Wize sa AI Wize ng mga URL kabilang ang ilang content ng page</translation>
 <translation id="2702516483241149200">Bago: magbahagi ng link na nagso-scroll papunta sa text na ito</translation>
-<translation id="3769942772151914580">Real-time at proactive na proteksyon laban sa mga mapanganib na site, download, at extension na nakabatay sa iyong data mula sa pag-browse na ipinapadala sa Brave</translation>
+<translation id="3769942772151914580">Real-time at proactive na proteksyon laban sa mga mapanganib na site, download, at extension na nakabatay sa iyong data mula sa pag-browse na ipinapadala sa AI Wize</translation>
 <translation id="2708226184420201102">Buksan sa <ph name="PRODUCT_NAME"/> browser</translation>
 <translation id="271033894570825754">Bago</translation>
 <translation id="2718352093833049315">Sa Wi-Fi lang</translation>
@@ -306,12 +306,12 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="2760989362628427051">I-on ang madilim na tema kapag naka-on ang madilim na tema o Pantipid ng Baterya ng iyong device</translation>
 <translation id="2762000892062317888">ngayon lang</translation>
 <translation id="276969039800130567">Naka-sign in bilang <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="8312774691909088652">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pagkolekta ng data, tingnan ang <ph name="BEGIN_LINK"/>Mga serbisyo ng Brave<ph name="END_LINK"/></translation>
+<translation id="8312774691909088652">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pagkolekta ng data, tingnan ang <ph name="BEGIN_LINK"/>Mga serbisyo ng AI Wize<ph name="END_LINK"/></translation>
 <translation id="2777555524387840389"><ph name="SECONDS"/> (na) segundo na lang ang natitira</translation>
 <translation id="2779651927720337254">nabigo</translation>
 <translation id="2781151931089541271">1 segundo na lang ang natitira</translation>
 <translation id="2800066122460699237">Isasara ang tab na <ph name="TAB_TITLE"/></translation>
-<translation id="7068873021383263704">Tingnan at pamahalaan ang mga naka-save na password sa iyong <ph name="BEGIN_LINK"/>Brave sync chain<ph name="END_LINK"/></translation>
+<translation id="7068873021383263704">Tingnan at pamahalaan ang mga naka-save na password sa iyong <ph name="BEGIN_LINK"/>AI Wize sync chain<ph name="END_LINK"/></translation>
 <translation id="2827278682606527653">Half height ng menu ng feed card</translation>
 <translation id="2830783625999891985">Nakatago ang mga content ng clipboard</translation>
 <translation id="2838367486340230368">Nakabukas ang paliwanag sa gabay sa privacy sa kalahati ng screen</translation>
@@ -321,25 +321,25 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="6324134303015966238">Nagpi-preload ang AI Wize ng mga page na malamang na bisitahin mo, para mas mabilis na mag-load ang mga ito kapag binisita mo</translation>
 <translation id="2856503607207334158">Pumalya ang pag-sign in</translation>
 <translation id="2860954141821109167">Tiyaking may naka-enable na phone app sa device na ito</translation>
-<translation id="6518254564747115579">Hindi na magiging available ang ilang feature ng Brave</translation>
+<translation id="6518254564747115579">Hindi na magiging available ang ilang feature ng AI Wize</translation>
 <translation id="2869430948265924908">Para maprotektahan ang iyong sensitibong content sa kotse, dapat kang gumawa ng lock ng profile ng kotse.  Magagawa mo ito gamit ang isang pin, code, o password.</translation>
 <translation id="2870560284913253234">Site</translation>
 <translation id="2871733351037274014">Mag-preload ng mga page</translation>
 <translation id="2876136027428473467">Gusto ni <ph name="CHILD_NAME"/> na aprubahan mo ang website na ito:</translation>
 <translation id="6756656512757374876">Matuto pa tungkol sa kung <ph name="BEGIN_LINK"/>paano pinapanatiling pribado ng AI Wize ang iyong data<ph name="END_LINK"/></translation>
-<translation id="8541922081612557424">Tungkol sa Brave</translation>
+<translation id="8541922081612557424">Tungkol sa AI Wize</translation>
 <translation id="2891154217021530873">Ihinto ang pag-load ng page</translation>
-<translation id="4013614219085422040">Maaaring gamitin ng AI Wize ang iyong history para i-personalize ang Search at iba pang serbisyo ng Brave</translation>
+<translation id="4013614219085422040">Maaaring gamitin ng AI Wize ang iyong history para i-personalize ang Search at iba pang serbisyo ng AI Wize</translation>
 <translation id="2894821468041866720">Hindi kapansin-pansing pababagalin ang iyong browser o device.</translation>
 <translation id="2900528713135656174">Gumawa ng event</translation>
 <translation id="2901411048554510387">Ipinapakita ang mga suhestyon para sa <ph name="WEBSITE_TITLE"/></translation>
 <translation id="2904300462646366554">Awtomatikong magbubukas ang mga PDF gamit ang isa sa mga PDF viewer sa iyong device</translation>
 <translation id="2904414404539560095">Nakabukas ang listahan ng mga device kung saan magbabahagi ng tab nang buo ang taas.</translation>
 <translation id="2908243544703713905">Handa na ang mga hindi pa nababasang kuwento</translation>
-<translation id="7339921667754113786">Brave Notifications Platform</translation>
+<translation id="7339921667754113786">AI Wize Notifications Platform</translation>
 <translation id="2912296070571964914">Pamahalaan ang mga paksa kung saan ka interesado</translation>
 <translation id="2923908459366352541">Di-wasto ang pangalan</translation>
-<translation id="6355102470683871794">Storage ng <ph name="APP_NAME"/> sa Brave</translation>
+<translation id="6355102470683871794">Storage ng <ph name="APP_NAME"/> sa AI Wize</translation>
 <translation id="2932222164150889403">Hindi magbabago ang iyong keyboard</translation>
 <translation id="6537665929855787038">Mas pinapadali ng mga notification ng AI Wize ang mga bagay</translation>
 <translation id="2940075786175545812">Opsyong aprubahan o huwag aprubahan ang isang website</translation>
@@ -353,7 +353,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="2979639724566107830">Buksan ng bagong window</translation>
 <translation id="2981364137500752533">Puwede kang magkaroon ng hanggang 5 window.</translation>
 <translation id="2983102365694924129">Batay sa iyong aktibidad sa isang site. Naka-off ang setting na ito.</translation>
-<translation id="5948666439178419683">Isama ang katabing text sa mga paghahanap sa Brave</translation>
+<translation id="5948666439178419683">Isama ang katabing text sa mga paghahanap sa AI Wize</translation>
 <translation id="2987620471460279764">Ibinahaging text mula sa ibang device</translation>
 <translation id="2989523299700148168">Mga kamakailang binisita</translation>
 <translation id="2992473221983447149">Mga paglalarawan ng larawan</translation>
@@ -370,22 +370,22 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="8678991866891573053">Nag-e-explore ang AI Wize ng mga bagong feature na nagbibigay-daan sa mga site na ihatid ang parehong karanasan sa pag-browse nang hindi gaanong gumagamit ng iyong data</translation>
 <translation id="3036750288708366620"><ph name="BEGIN_LINK"/>Humingi ng tulong<ph name="END_LINK"/></translation>
 <translation id="3037177537145227281">Sinusubaybayan ang presyo</translation>
-<translation id="3251012123600267109">Nagpapakita ng mga prompt na mag-sign in sa Brave</translation>
+<translation id="3251012123600267109">Nagpapakita ng mga prompt na mag-sign in sa AI Wize</translation>
 <translation id="3038272154009688107">Tingnan ang lahat ng site</translation>
 <translation id="3046945242843292318">Mas mabilis na makapunta sa site na ito sa ibang pagkakataon</translation>
 <translation id="3055259925215945098">Inilipat ang bookmark</translation>
-<translation id="4163313568284712797">Magpapadala ng impormasyon sa AI Wize tungkol sa iyong paggamit ng Brave, pero hindi ito iuugnay sa iyo\n\nKung magka-crash ang Brave, posibleng may kasamang ilang personal na impormasyon ang mga detalye tungkol sa crash\n\nKung io-on mo ang pag-sync, posibleng may kasama ring impormasyon tungkol sa mga URL na binibisita mo ang mga sukatan</translation>
+<translation id="4163313568284712797">Magpapadala ng impormasyon sa AI Wize tungkol sa iyong paggamit ng AI Wize, pero hindi ito iuugnay sa iyo\n\nKung magka-crash ang AI Wize, posibleng may kasamang ilang personal na impormasyon ang mga detalye tungkol sa crash\n\nKung io-on mo ang pag-sync, posibleng may kasama ring impormasyon tungkol sa mga URL na binibisita mo ang mga sukatan</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> bookmark}one{<ph name="BOOKMARKS_COUNT_MANY"/> bookmark}other{<ph name="BOOKMARKS_COUNT_MANY"/> na bookmark}}</translation>
-<translation id="6153252609477956632">Mga artikulo tungkol sa iyong mga interes sa Brave</translation>
+<translation id="6153252609477956632">Mga artikulo tungkol sa iyong mga interes sa AI Wize</translation>
 <translation id="3066573403916685335">Lumipat Pababa</translation>
 <translation id="3070005020161560471">Awtomatikong isalin</translation>
-<translation id="1094255666887095087">Bubukas ang <ph name="APP_NAME"/> sa Brave. Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_LINK1"/>Mga Tuntunin ng Serbisyo ng Brave<ph name="END_LINK1"/>, at sa <ph name="BEGIN_LINK2"/>Mga Karagdagang Tuntunin ng Serbisyo ng AI Wize at ChromeOS<ph name="END_LINK2"/>. Nalalapat din ang <ph name="BEGIN_LINK3"/>Patakaran sa Privacy<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087">Bubukas ang <ph name="APP_NAME"/> sa AI Wize. Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_LINK1"/>Mga Tuntunin ng Serbisyo ng AI Wize<ph name="END_LINK1"/>, at sa <ph name="BEGIN_LINK2"/>Mga Karagdagang Tuntunin ng Serbisyo ng AI Wize at ChromeOS<ph name="END_LINK2"/>. Nalalapat din ang <ph name="BEGIN_LINK3"/>Patakaran sa Privacy<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Puwede kang mag-save ng mga page para basahin sa ibang pagkakataon o nang offline</translation>
 <translation id="3091010850649238832">Ipakita ang mga content ng clipboard</translation>
 <translation id="821565628224723530">Ipinapadala sa AI Wize ang ilang larawan para mapahusay ang mga paglalarawan para sa iyo</translation>
 <translation id="3114507951000454849">Basahin ang balita ngayong araw <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Mga Anunsyo</translation>
-<translation id="5063487983358782016">Homepage ng Brave</translation>
+<translation id="5063487983358782016">Homepage ng AI Wize</translation>
 <translation id="3158667104057012316">Ibinubukod-bukod ayon sa manual na pagkakasunod-sunod</translation>
 <translation id="3166827708714933426">Mga shortcut ng tab at window</translation>
 <translation id="7249949543831830993">Tumatakbo na ang AI Wize dito.</translation>
@@ -399,13 +399,13 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="321773570071367578">Kung nakalimutan mo ang iyong passphrase o gusto mong baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Para ma-sync ang iyong mga password, i-verify na ikaw ito</translation>
 <translation id="9210457680074341078">Kung sine-save mo rin ang iyong mga bookmark sa AI Wize sync chain mo, puwede mong subaybayan sa AI Wize ang mga presyo ng produkto at puwede kang maabisuhan kapag bumaba ang presyo</translation>
-<translation id="9047551989591319903">Brave bilang Security Key</translation>
+<translation id="9047551989591319903">AI Wize bilang Security Key</translation>
 <translation id="3232754137068452469">Web App</translation>
 <translation id="3236059992281584593">1 minuto na lang ang natitira</translation>
 <translation id="3237087289225714896">Karaniwang pag-preload:</translation>
 <translation id="3237433641417325993">Mag-scroll pababa para makakita ng mga iminumungkahing artikulo</translation>
 <translation id="3244271242291266297">MM</translation>
-<translation id="7402642357351265733">Kung nagbabahagi ka rin ng mga ulat ng paggamit sa Brave, isasama sa mga ulat na iyon ang mga URL na binibisita mo</translation>
+<translation id="7402642357351265733">Kung nagbabahagi ka rin ng mga ulat ng paggamit sa AI Wize, isasama sa mga ulat na iyon ang mga URL na binibisita mo</translation>
 <translation id="3250563604907490871">Magpapatuloy ang mga paglalarawan ng larawan kapag kumonekta ka sa Wi-Fi</translation>
 <translation id="3254409185687681395">I-bookmark ang page na ito</translation>
 <translation id="3259831549858767975">Paliitin ang lahat ng nasa page</translation>
@@ -414,7 +414,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="3265534588625245297">Pamahalaan ang mga site na sinusubaybayan mo</translation>
 <translation id="3269093882174072735">I-load ang larawan</translation>
 <translation id="3280562213547448728">Paghahanap gamit ang boses</translation>
-<translation id="82609232232243542">Mag-sign in sa Brave</translation>
+<translation id="82609232232243542">Mag-sign in sa AI Wize</translation>
 <translation id="3290249595466894471">Nagpapadala rin ng maliit na sample ng mga page, download, aktibidad ng extension, at impormasyon ng system para makatulong na tumuklas ng mga bagong banta</translation>
 <translation id="3293181007446299124">Pinapanatiling pribado ang iyong history ng pag-browse sa device mo at inaantala ang pagpapadala ng mga ulat para maprotektahan ang iyong pagkakakilanlan</translation>
 <translation id="3303414029551471755">Magpatuloy na i-download ang content?</translation>
@@ -482,16 +482,16 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="3701515417135397388">Balaan ka kung nakompromiso ang isang password sa paglabag sa data</translation>
 <translation id="371230970611282515">Hinuhulaan ang mga mapanganib na event at binibigyan ka ng babala tungkol sa mga ito bago mangyari ang mga ito.</translation>
 <translation id="3714981814255182093">Buksan ang Bar sa Paghahanap</translation>
-<translation id="5805364706385912897">Masyadong malaki ang ginagamit na memory ng page na ito kaya na-pause ito ng Brave.</translation>
+<translation id="5805364706385912897">Masyadong malaki ang ginagamit na memory ng page na ito kaya na-pause ito ng AI Wize.</translation>
 <translation id="3720422586473670527">Huwag na lang</translation>
-<translation id="8397843425685839889">Ikaw at ang Brave</translation>
+<translation id="8397843425685839889">Ikaw at ang AI Wize</translation>
 <translation id="3737319253362202215">Mga setting ng pagsasalin</translation>
 <translation id="3737402728074743863">Para magamit ang device na ito bilang security key, magtakda ng lock ng screen</translation>
 <translation id="3738139272394829648">Pindutin upang Hanapin</translation>
 <translation id="3739899004075612870">Naka-bookmark sa <ph name="PRODUCT_NAME"/></translation>
 <translation id="3740525748616366977">Hindi available ang Paghahanap gamit ang boses sa device na ito</translation>
 <translation id="3771290962915251154">Naka-disable ang setting na ito dahil naka-on ang parental controls</translation>
-<translation id="1138681184697033370">Mga Tuntunin ng Serbisyo ng Brave</translation>
+<translation id="1138681184697033370">Mga Tuntunin ng Serbisyo ng AI Wize</translation>
 <translation id="3775705724665058594">Ipadala sa iyong mga device</translation>
 <translation id="3777796259512476958">Isa-sign out ka sa karamihan ng site</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 tab}one{# tab}other{# na tab}}</translation>
@@ -540,7 +540,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="4062305924942672200">Impormasyong legal</translation>
 <translation id="4072805772816336153">Subukan ulit sa ibang pagkakataon</translation>
 <translation id="4084682180776658562">Bookmark</translation>
-<translation id="4521874409998847950">Mula sa <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>ihinatid ng Brave<ph name="END_DEEMPHASIZED"/></translation>
+<translation id="4521874409998847950">Mula sa <ph name="PUBLISHER_ORIGIN"/> – <ph name="BEGIN_DEEMPHASIZED"/>ihinatid ng AI Wize<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Puwede mong gamitin ang tablet na ito para mag-sign in sa device na nagpapakita ng QR code na ito.</translation>
 <translation id="7268155614575494857">Para makatulong na ma-save ng AI Wize Password Manager ang iyong impormasyon sa pag-sign in, idagdag ang username mo para sa site na ito</translation>
 <translation id="4095146165863963773">I-delete ang data ng app?</translation>
@@ -555,7 +555,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="4126285640274188657">Mga Insight ng Page</translation>
 <translation id="4135200667068010335">Nakasara ang listahan ng mga device kung saan magbabahagi ng tab.</translation>
 <translation id="4137746084635924146">Kasalukuyang wika ng device</translation>
-<translation id="2244754938072041239">Brave Canary</translation>
+<translation id="2244754938072041239">AI Wize Canary</translation>
 <translation id="414128724510021958">Hinihiling bilang default ang mga pang-desktop na site</translation>
 <translation id="4162867837470729563">Nakabukas nang buo ang taas ang listahan ng mga opsyon sa pagbabahagi.</translation>
 <translation id="4170011742729630528">Hindi available ang serbisyo; subukan ulit sa ibang pagkakataon.</translation>
@@ -573,7 +573,7 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="4225895483398857530">Shortcut ng toolbar</translation>
 <translation id="4242533952199664413">Buksan ang mga setting</translation>
 <translation id="4248098802131000011">Panatilihing ligtas ang iyong mga password mula sa mga paglabag sa data breaches at iba pang isyu sa seguridad</translation>
-<translation id="7445061995866044926">Mag-sign out sa Brave?</translation>
+<translation id="7445061995866044926">Mag-sign out sa AI Wize?</translation>
 <translation id="4249955472157341256">Pagbukud-bukurin ayon sa Pinakabago</translation>
 <translation id="4256782883801055595">Mga lisensya ng open source</translation>
 <translation id="7404502124231907662">Mag-delete ng mga password mula sa AI Wize Password Manager?</translation>
@@ -610,9 +610,9 @@ Ang sinumang may passphrase mo lang ang makakapagbasa sa iyong naka-encrypt na d
 <translation id="4452548195519783679">Na-bookmark sa <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Kapag nag-link ka ng ibang device gamit ang isang QR code, puwede nitong gamitin ang teleponong ito bilang security key. Kung aalisin mo ito, kakailanganin mong mag-scan ng QR code para i-link ulit ito.</translation>
 <translation id="4478161224666880173">Magagamit mo ang iyong <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> account sa site na ito. Para magpatuloy, mag-sign in sa <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="3133489217401741157">Ini-install ang <ph name="MODULE"/> para sa Brave…</translation>
+<translation id="3133489217401741157">Ini-install ang <ph name="MODULE"/> para sa AI Wize…</translation>
 <translation id="4484496141267039529">Walang koneksyon. Subukan ulit sa ibang pagkakataon.</translation>
-<translation id="53119194224775367">Permanenteng ide-delete ang lahat ng data ng app ng Brave. Kabilang dito ang lahat ng file, setting, account, database, atbp.</translation>
+<translation id="53119194224775367">Permanenteng ide-delete ang lahat ng data ng app ng AI Wize. Kabilang dito ang lahat ng file, setting, account, database, atbp.</translation>
 <translation id="3966104135245031874">I-encrypt ang mga naka-sync na password gamit ang iyong AI Wize sync chain</translation>
 <translation id="4491323382106587961">Pumili ng account. Kasalukuyang napili ang <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">In-on ng iyong administrator ang pag-save ng password</translation>
@@ -695,17 +695,17 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="4852014461738377247">Nagsa-sign in\u2026</translation>
 <translation id="4860895144060829044">Tawagan</translation>
 <translation id="4864369630010738180">Nagsa-sign in...</translation>
-<translation id="5131234170665854056">Hindi ma-install ang <ph name="MODULE"/> para sa Brave</translation>
+<translation id="5131234170665854056">Hindi ma-install ang <ph name="MODULE"/> para sa AI Wize</translation>
 <translation id="4871568871368204250">I-off ang pag-sync</translation>
-<translation id="2875466387677348954">Kapag naka-off ito, makikita mo pa rin ang mga suhestyong lokal na ibinibigay ng Brave</translation>
+<translation id="2875466387677348954">Kapag naka-off ito, makikita mo pa rin ang mga suhestyong lokal na ibinibigay ng AI Wize</translation>
 <translation id="4875775213178255010">Mga Iminumungkahing Content</translation>
 <translation id="4878404682131129617">Hindi nakagawa ng tunnel sa pamamagitan ng proxy server</translation>
 <translation id="4880127995492972015">Isalin…</translation>
 <translation id="4881695831933465202">Buksan</translation>
 <translation id="488187801263602086">Palitan ang pangalan ng file</translation>
-<translation id="1248710015876067820">Hindi sinusuportahang bilang ng mga instance ng Brave.</translation>
+<translation id="1248710015876067820">Hindi sinusuportahang bilang ng mga instance ng AI Wize.</translation>
 <translation id="4905823827770127520">Magsama ng link sa page</translation>
-<translation id="3217997482476578430">Discover ng Brave</translation>
+<translation id="3217997482476578430">Discover ng AI Wize</translation>
 <translation id="4909709702739934280">Pinapamahalaan ng iyong administrator ang browser mo</translation>
 <translation id="4910889077668685004">Mga app sa pagbabayad</translation>
 <translation id="4912413785358399818">Ilipat ang tab</translation>
@@ -720,14 +720,14 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5742837711075932301">Kapag naka-sign in ka sa iisang AI Wize sync chain, puwedeng gamitin ng iba pang device ang teleponong ito bilang security key.</translation>
 <translation id="4957722034734105353">Matuto pa...</translation>
 <translation id="4961107849584082341">Isalin ang page na ito sa anumang wika</translation>
-<translation id="7307583170263691471">Mas mabilis at proactive na proteksyon laban sa mga mapanganib na website, download, at extension. Binibigyan ka ng babala tungkol sa mga paglabag sa password. Kinakailangang magpadala ng data mula sa pag-browse sa Brave.</translation>
+<translation id="7307583170263691471">Mas mabilis at proactive na proteksyon laban sa mga mapanganib na website, download, at extension. Binibigyan ka ng babala tungkol sa mga paglabag sa password. Kinakailangang magpadala ng data mula sa pag-browse sa AI Wize.</translation>
 <translation id="497421865427891073">Sumulong</translation>
 <translation id="4987271110129728827">Hindi makita ang page na iyon. Suriin ang iyong spelling o sumubok ng paghahanap sa web.</translation>
 <translation id="4988526792673242964">Mga Page</translation>
 <translation id="4991110219272367918">Opsyong aprubahan o huwag aprubahan ang isang website na isinara</translation>
 <translation id="499724277181351974">Mag-navigate: <ph name="WEBSITE_TITLE"/>: <ph name="WEBSITE_URL"/></translation>
 <translation id="5001388021414335527">Subaybayan ang site na ito dito</translation>
-<translation id="6447211988989208781">Mga kontrol ng aktibidad sa Brave</translation>
+<translation id="6447211988989208781">Mga kontrol ng aktibidad sa AI Wize</translation>
 <translation id="5005498671520578047">Kopyahin password</translation>
 <translation id="5010886807652684893">Visual view</translation>
 <translation id="5011311129201317034">Gustong kumonekta ng <ph name="SITE"/></translation>
@@ -767,7 +767,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5206168361184759344">{FILE_COUNT,plural, =1{Dina-download ang file…}one{Nagda-download ng # file…}other{Nagda-download ng # na file…}}</translation>
 <translation id="5210286577605176222">Pumunta sa nakaraang tab</translation>
 <translation id="5210365745912300556">Isara ang tab</translation>
-<translation id="827672955486173928">Naka-save ang iyong aktibidad sa Mga Insight sa Page sa iyong <ph name="BEGIN_LINK"/>Brave sync chain<ph name="END_LINK"/>.</translation>
+<translation id="827672955486173928">Naka-save ang iyong aktibidad sa Mga Insight sa Page sa iyong <ph name="BEGIN_LINK"/>AI Wize sync chain<ph name="END_LINK"/>.</translation>
 <translation id="5222676887888702881">Mag-sign out</translation>
 <translation id="5226378907213531272">Ia-unlock mo ang iyong screen sa tuwing gagamitin mo ang kotse</translation>
 <translation id="5227554086496586518">I-tap para makita ang mga resulta ng paghahanap</translation>
@@ -781,9 +781,9 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5308380583665731573">Kumonekta</translation>
 <translation id="5316947901395241499">In-off ng iyong administrator ang pag-save ng password</translation>
 <translation id="5317780077021120954">I-save</translation>
-<translation id="989239400026154074">Inirerekomenda ng AI Wize ang Brave</translation>
+<translation id="989239400026154074">Inirerekomenda ng AI Wize ang AI Wize</translation>
 <translation id="7815000350132166985">Kung papayagan mo ang cookies, posibleng gamitin ng AI Wize ang mga ito kapag nagpi-preload</translation>
-<translation id="1681635711794313507">Dahil naka-encrypt ang mga na-preload na page, at ang site na nagli-link sa mga page ay site ng Brave, hindi nakakatanggap ng bagong impormasyon ang mga server ng AI Wize kapag pribadong pini-preload ang mga page na ito.</translation>
+<translation id="1681635711794313507">Dahil naka-encrypt ang mga na-preload na page, at ang site na nagli-link sa mga page ay site ng AI Wize, hindi nakakatanggap ng bagong impormasyon ang mga server ng AI Wize kapag pribadong pini-preload ang mga page na ito.</translation>
 <translation id="5329858041417644019">Hindi pinapamahalaan ang iyong browser</translation>
 <translation id="5342314432463739672">Mga kahilingan sa pahintulot</translation>
 <translation id="534580735623577507">Walang site mula sa <ph name="TIME_PERIOD"/></translation>
@@ -799,7 +799,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="543338862236136125">I-edit ang password</translation>
 <translation id="5433691172869980887">Nakopya ang username</translation>
 <translation id="5438292632479953702">I-download ulit</translation>
-<translation id="2766925507720001104">Babalaan ka tungkol sa mga mapanganib na site, kahit iyong mga hindi alam ng AI Wize noon, sa pamamagitan ng pagsusuri sa higit pang data mula sa mga site kaysa sa karaniwang proteksyon. Puwede mong piliing laktawan ang mga babala ng Brave.</translation>
+<translation id="2766925507720001104">Babalaan ka tungkol sa mga mapanganib na site, kahit iyong mga hindi alam ng AI Wize noon, sa pamamagitan ng pagsusuri sa higit pang data mula sa mga site kaysa sa karaniwang proteksyon. Puwede mong piliing laktawan ang mga babala ng AI Wize.</translation>
 <translation id="5441137934526263133">Hindi gumagana ang site? Bina-block ang third-party na cookies</translation>
 <translation id="5441466871879044658">Isalin sa wikang ito</translation>
 <translation id="5441522332038954058">Pumunta sa address bar</translation>
@@ -817,7 +817,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5517095782334947753">Mayroon kang mga bookmark, history, password at iba pang mga setting mula sa <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Na-block ang pag-redirect.</translation>
 <translation id="5548606607480005320">Pag-check sa kaligtasan</translation>
-<translation id="4362225295386962644">Kapag gumamit ka ng password, babalaan ka ng AI Wize kung na-publish na ito online. Kapag ginagawa ito, naka-encrypt ang iyong mga password at username para hindi mabasa ng sinuman ang mga ito, kabilang ang Brave.</translation>
+<translation id="4362225295386962644">Kapag gumamit ka ng password, babalaan ka ng AI Wize kung na-publish na ito online. Kapag ginagawa ito, naka-encrypt ang iyong mga password at username para hindi mabasa ng sinuman ang mga ito, kabilang ang AI Wize.</translation>
 <translation id="5555525474779371165">Piliin ang iyong proteksyon sa Ligtas na Pag-browse</translation>
 <translation id="5556459405103347317">I-reload</translation>
 <translation id="555816257274242153">Ihininto ang pagsubaybay ng presyo</translation>
@@ -843,7 +843,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5665379678064389456">Gumawa ng event sa <ph name="APP_NAME"/></translation>
 <translation id="5668833306439455813">Hindi matingnan ng AI Wize kung may mga update</translation>
 <translation id="5686790454216892815">Masyadong mahaba ang pangalan ng file</translation>
-<translation id="4809211418322514799">Awtomatikong dine-delete ng AI Wize ang mga site na mahigit 30 araw na. Posibleng makita ulit sa listahan ang site na binalikan mo. O puwede kang mag-block ng site sa pagmumungkahi ng mga ad para sa iyo. Matuto pa tungkol sa <ph name="BEGIN_LINK"/>pamamahala ng iyong privacy sa ad sa Brave.<ph name="END_LINK"/></translation>
+<translation id="4809211418322514799">Awtomatikong dine-delete ng AI Wize ang mga site na mahigit 30 araw na. Posibleng makita ulit sa listahan ang site na binalikan mo. O puwede kang mag-block ng site sa pagmumungkahi ng mga ad para sa iyo. Matuto pa tungkol sa <ph name="BEGIN_LINK"/>pamamahala ng iyong privacy sa ad sa AI Wize.<ph name="END_LINK"/></translation>
 <translation id="569435661099256888">Makikita mo ang mga page na binisita mo o maki-clear mo ang mga ito sa iyong history</translation>
 <translation id="569536719314091526">Isalin ang page na ito sa anumang wika mula sa button na Higit pang opsyon</translation>
 <translation id="2320748512701464301">Makakatulong ang AI Wize na panatilihin kang ligtas laban sa mga paglabag sa data, hindi ligtas na website, at higit pa</translation>
@@ -857,7 +857,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="3088191967551450609">Kailangan ng AI Wize ng access sa storage para mag-download ng mga file.</translation>
 <translation id="5749237766298580851">Naka-off <ph name="SEPARATOR"/> Hindi inirerekomenda</translation>
 <translation id="5752232708629533680">Ibahagi lang ang GIF</translation>
-<translation id="416316836590748269">Puwede mong gamitin ang iyong boses para maghanap sa Brave</translation>
+<translation id="416316836590748269">Puwede mong gamitin ang iyong boses para maghanap sa AI Wize</translation>
 <translation id="5754350196967618083">Hindi ma-refresh ang Discover</translation>
 <translation id="5755162682436943950">Naka-sign out. Binubuksan ang dialog para mag-sign in at i-on ang pag-sync.</translation>
 <translation id="5759897675466110265">Hindi gumagana ang site? Subukang pansamantalang payagan ang third-party na cookies</translation>
@@ -878,7 +878,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5829586821381540080">Na-save sa <ph name="FOLDER_NAME"/></translation>
 <translation id="583281660410589416">Hindi-alam</translation>
 <translation id="5833984609253377421">Ibahagi ang link</translation>
-<translation id="2225291765389142805">Brave Dino</translation>
+<translation id="2225291765389142805">AI Wize Dino</translation>
 <translation id="5848257610304005265">Buksan ang PDF gamit ang <ph name="APP_NAME"/>?</translation>
 <translation id="5853623416121554550">naka-pause</translation>
 <translation id="5855546874025048181">Pinuhin: <ph name="REFINE_TEXT"/></translation>
@@ -889,7 +889,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5864419784173784555">Naghihintay ng isa pang download…</translation>
 <translation id="6538479075382111079">Awtomatikong nagpapadala sa AI Wize ng mga istatistika ng paggamit at ulat ng pag-crash</translation>
 <translation id="5869522115854928033">Mga naka-save na password</translation>
-<translation id="5604589745019948682">Para subaybayan ang isang site, pumunta sa site, buksan ang menu ng Brave, at i-tap ang Subaybayan.</translation>
+<translation id="5604589745019948682">Para subaybayan ang isang site, pumunta sa site, buksan ang menu ng AI Wize, at i-tap ang Subaybayan.</translation>
 <translation id="5879072387416556377">Makakuha ng mas magagandang suhestyon</translation>
 <translation id="5899667542927581604">Isinara ang sheet na walang passkey</translation>
 <translation id="5916664084637901428">Naka-on</translation>
@@ -908,7 +908,7 @@ Para baguhin ang setting na ito, <ph name="BEGIN_LINK"/>i-reset ang pag-sync<ph 
 <translation id="5977976211062815271">Sa device na ito</translation>
 <translation id="5979084224081478209">Suriin ang mga password</translation>
 <translation id="5995726099713306770">I-download ulit ang page?</translation>
-<translation id="6456271171669383967">Panatilihin ang Brave</translation>
+<translation id="6456271171669383967">Panatilihin ang AI Wize</translation>
 <translation id="6000203700195075278">Subaybayan ulit</translation>
 <translation id="6002122790816966947">Ang iyong mga device</translation>
 <translation id="6011308810877101166">Pahusayin ang mga suhestyon sa paghahanap</translation>
@@ -987,7 +987,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="6407224748847589805">Hindi makakonekta sa iyong computer. Sumubok ng ibang opsyon para sa pag-verify.</translation>
 <translation id="6410883413783534063">Magbukas ng mga tab para mabisita ang iba't ibang page nang sabay-sabay</translation>
 <translation id="6411219469806822692">Hindi na maitataas pa. Subukang magsimula sa mas mataas na bahagi ng page.</translation>
-<translation id="7810992039564280750">Sinusuri ang mga URL sa pamamagitan ng listahan ng mga hindi ligtas na site na naka-store sa Brave. Kung susubukan ng site na nakawin ang iyong password, o kapag nag-download ka ng mapaminsalang file, posible ring magpadala ang AI Wize sa Ligtas na Pag-browse ng mga URL, kabilang ang ilang content ng page</translation>
+<translation id="7810992039564280750">Sinusuri ang mga URL sa pamamagitan ng listahan ng mga hindi ligtas na site na naka-store sa AI Wize. Kung susubukan ng site na nakawin ang iyong password, o kapag nag-download ka ng mapaminsalang file, posible ring magpadala ang AI Wize sa Ligtas na Pag-browse ng mga URL, kabilang ang ilang content ng page</translation>
 <translation id="641643625718530986">I-print…</translation>
 <translation id="6422857128426228781">Makikita mo rito ang iyong mga sinusubaybayang produkto</translation>
 <translation id="6433501201775827830">Pumili ng iyong search engine</translation>
@@ -1004,15 +1004,15 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="6477928892249167417">Mukhang mahalaga sa iyo ang mga site na ito:</translation>
 <translation id="6482749332252372425">Hindi na-download ang <ph name="FILE_NAME"/> dahil kulang ang espasyo sa storage.</translation>
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{Na-download ang file}one{Tapos na ang # pag-download}other{Tapos na ang # na pag-download}}</translation>
-<translation id="3960299545138990065">I-restart ang Brave</translation>
+<translation id="3960299545138990065">I-restart ang AI Wize</translation>
 <translation id="6527303717912515753">Ibahagi</translation>
-<translation id="708829030563435351">Hindi lalabas ang mga site na binibisita mo sa Brave. Ide-delete ang lahat ng timer sa site.</translation>
-<translation id="7723158744459952869">Masyadong matagal bago nakatugon ang Brave</translation>
+<translation id="708829030563435351">Hindi lalabas ang mga site na binibisita mo sa AI Wize. Ide-delete ang lahat ng timer sa site.</translation>
+<translation id="7723158744459952869">Masyadong matagal bago nakatugon ang AI Wize</translation>
 <translation id="6539092367496845964">Nagkaproblema. Subukan ulit sa ibang pagkakataon.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Nagsuri 1 oras ang nakalipas}one{Nagsuri # oras ang nakalipas}other{Nagsuri # na oras ang nakalipas}}</translation>
 <translation id="6545017243486555795">I-clear ang Lahat ng Data</translation>
 <translation id="6546511553472444032">Posibleng mapaminsala ang file</translation>
-<translation id="6702167990458635422">Hindi ka poprotektahan laban sa mga mapanganib na website, download, at extension. Hindi maaapektuhan ang mga setting ng Ligtas na Pag-browse mo sa iba pang produkto ng Brave.</translation>
+<translation id="6702167990458635422">Hindi ka poprotektahan laban sa mga mapanganib na website, download, at extension. Hindi maaapektuhan ang mga setting ng Ligtas na Pag-browse mo sa iba pang produkto ng AI Wize.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{Isasara ang <ph name="TAB_TITLE"/> at <ph name="TAB_COUNT_ONE"/> pang tab}one{Isasara ang <ph name="TAB_TITLE"/> at <ph name="TAB_COUNT_MANY"/> pang tab}other{Isasara ang <ph name="TAB_TITLE"/> at <ph name="TAB_COUNT_MANY"/> pang tab}}</translation>
 <translation id="6560414384669816528">Maghanap gamit ang Sogou</translation>
 <translation id="656065428026159829">Tumingin pa</translation>
@@ -1027,13 +1027,13 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="6593061639179217415">Desktop site</translation>
 <translation id="6594347733515723558">Mga pag-sort at pag-view</translation>
 <translation id="2466982615210189224">Ipinapadala sa AI Wize ang mga larawan para mapahusay ang mga paglalarawan para sa iyo.</translation>
-<translation id="663059986967017181">Kinopya sa Brave</translation>
+<translation id="663059986967017181">Kinopya sa AI Wize</translation>
 <translation id="661266467055912436">Pinapahusay ang seguridad para sa iyo at sa lahat ng tao sa web.</translation>
 <translation id="8127050479140582768">Para ipadala ang tab na ito sa ibang device, mag-sign in sa AI Wize sa dalawang device</translation>
 <translation id="6627583120233659107">I-edit ang folder</translation>
 <translation id="6636623428211296678">Mag-explore pa ng mga setting sa ibaba o tapusin ngayon</translation>
-<translation id="2259649928554669581">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pagkolekta ng data, tingnan ang <ph name="BEGIN_LINK1"/>Pag-sync<ph name="END_LINK1"/> at <ph name="BEGIN_LINK2"/>Mga serbisyo ng Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Para makatulong na mapaganda ang app, nagpapadala ang AI Wize ng data ng paggamit at pag-crash sa Brave. <ph name="BEGIN_UMA_LINK"/>Pamahalaan<ph name="END_UMA_LINK"/></translation>
+<translation id="2259649928554669581">Para sa higit pang setting na nauugnay sa privacy, seguridad, at pagkolekta ng data, tingnan ang <ph name="BEGIN_LINK1"/>Pag-sync<ph name="END_LINK1"/> at <ph name="BEGIN_LINK2"/>Mga serbisyo ng AI Wize<ph name="END_LINK2"/></translation>
+<translation id="7939692063031538305">Para makatulong na mapaganda ang app, nagpapadala ang AI Wize ng data ng paggamit at pag-crash sa AI Wize. <ph name="BEGIN_UMA_LINK"/>Pamahalaan<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">I-block sa lahat ng pagkakataon</translation>
 <translation id="6641780377503683465">Alisin ang <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">I-clear</translation>
@@ -1051,8 +1051,8 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="6672917148207387131">Idagdag ang <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Para simulan ang pag-sync, ilagay ang iyong passphrase</translation>
 <translation id="8581481290581777242">I-clear ang iyong data sa AI Wize sa device na ito?</translation>
-<translation id="3683330416566109578">Mag-sign in sa site na ito at sa Brave</translation>
-<translation id="3385384709865894288">Pahusayin ang Brave</translation>
+<translation id="3683330416566109578">Mag-sign in sa site na ito at sa AI Wize</translation>
+<translation id="3385384709865894288">Pahusayin ang AI Wize</translation>
 <translation id="670498945988402717">Nagsuri kahapon</translation>
 <translation id="6710213216561001401">Nauna</translation>
 <translation id="671481426037969117">Natapos na ang iyong timer ng <ph name="FQDN"/>. Magsisimula itong muli bukas.</translation>
@@ -1071,9 +1071,9 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="6802555630140434547">Isasara ang window</translation>
 <translation id="6811034713472274749">Maaari nang tingnan ang page</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Mga Larawan, may 1 larawan sa listahan}one{Mga Larawan, may # larawan sa listahan}other{Mga Larawan, may # na larawan sa listahan}}</translation>
-<translation id="8418237809013783651">Nakabukas ang pag-sign in sa Brave.</translation>
+<translation id="8418237809013783651">Nakabukas ang pag-sign in sa AI Wize.</translation>
 <translation id="6817747507826986771">Mabilis na ibahagi ang page na ito. Para i-edit ang shortcut na ito, pindutin ito nang matagal.</translation>
-<translation id="118366698571543506">Mag-sign in para ma-sync sa lahat ng device ang iyong content ng Brave</translation>
+<translation id="118366698571543506">Mag-sign in para ma-sync sa lahat ng device ang iyong content ng AI Wize</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Mula sa address bar, puwede mong buksan ang impormasyon ng page para makakita ng karagdagang impormasyon tungkol sa page na binibisita mo</translation>
 <translation id="6828070228333235514">Ihinto ang pagsubaybay ng presyo</translation>
@@ -1128,8 +1128,8 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="707155805709242880">Piliin kung ano ang isi-sync sa ibaba</translation>
 <translation id="7077143737582773186">SD Card</translation>
 <translation id="2374582967527009647">Nagpapadala ng mga URL sa Ligtas na Pag-browse para masuri ang mga ito. Nagpapadala rin ng maliit na sample ng mga page, download, aktibidad ng extension, at impormasyon ng system para makatulong na tumuklas ng mga bagong banta. Pansamantalang nili-link ang data na ito sa iyong AI Wize sync chain kapag naka-sign in ka, para protektahan ka sa lahat ng AI Wize app.</translation>
-<translation id="5499149312981370855">Piliin kung isasama ang history ng AI Wize para sa mas naka-personalize na mga karanasan sa mga serbisyo ng Brave</translation>
-<translation id="8208853227947884571">Updated ang Brave</translation>
+<translation id="5499149312981370855">Piliin kung isasama ang history ng AI Wize para sa mas naka-personalize na mga karanasan sa mga serbisyo ng AI Wize</translation>
+<translation id="8208853227947884571">Updated ang AI Wize</translation>
 <translation id="7105047059074518658">Mag-sign in para mag-browse nang mas madali sa lahat ng device</translation>
 <translation id="7106762743910369165">Pinapamahalaan ng iyong organisasyon ang browser mo</translation>
 <translation id="7116588989735740310">Para makabalik sa mga site na binisita mo sa iba pang device, i-sync ang iyong mga tab at history</translation>
@@ -1152,12 +1152,12 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7221869452894271364">I-reload ang page na ito</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{Nakabinbin ang 1 pag-download}one{Nakabinbin ang # pag-download}other{Nakabinbin ang # na pag-download}}</translation>
 <translation id="72415438529550637">Nakasara ang mungkahi sa password.</translation>
-<translation id="8287068819750208230">Tiyaking naka-on sa <ph name="TARGET_DEVICE_NAME"/> ang pag-sync sa Brave</translation>
+<translation id="8287068819750208230">Tiyaking naka-on sa <ph name="TARGET_DEVICE_NAME"/> ang pag-sync sa AI Wize</translation>
 <translation id="7252076891734325316">Ilapit ang iyong telepono sa computer</translation>
 <translation id="4957342254208357193">Posibleng may kasamang katulad na setting ang iyong Android device. Kung naka-on ang pagsukat ng Ad sa AI Wize at sa iyong Android device, posibleng masukat ng kumpanya ang pagiging epektibo ng isang ad sa lahat ng binibisita mong web site at ginagamit mong app.</translation>
 <translation id="727288900855680735">Isumite ang <ph name="ONE_TIME_CODE"/> sa <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Naka-block na site</translation>
-<translation id="7949597606523411684">Awtomatikong dine-delete ng AI Wize ang mga paksang mahigit 4 na linggo na. Habang patuloy kang nagba-browse, posibleng makita ulit ang isang paksa sa listahan. O puwede mong i-block ang mga paksang ayaw mong i-share ng AI Wize sa mga site. Matuto pa tungkol sa <ph name="BEGIN_LINK"/>pamamahala ng iyong privacy sa ad sa Brave.<ph name="END_LINK"/></translation>
+<translation id="7949597606523411684">Awtomatikong dine-delete ng AI Wize ang mga paksang mahigit 4 na linggo na. Habang patuloy kang nagba-browse, posibleng makita ulit ang isang paksa sa listahan. O puwede mong i-block ang mga paksang ayaw mong i-share ng AI Wize sa mga site. Matuto pa tungkol sa <ph name="BEGIN_LINK"/>pamamahala ng iyong privacy sa ad sa AI Wize.<ph name="END_LINK"/></translation>
 <translation id="4561646469134805137">Habang nagta-type ka, ipinapadala ng AI Wize ang content ng address bar o box para sa paghahanap sa iyong default na search engine</translation>
 <translation id="7289303553784750393">Kung online ka pero patuloy na nangyayari ang isyung ito, puwede kang sumubok ng iba pang paraan para magpatuloy sa <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Hindi available ang pag-rename</translation>
@@ -1169,7 +1169,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7313188324932846546">Mag-tap para i-set up ang pag-sync</translation>
 <translation id="7324354302972299151">Magpadala ng request na “Do Not Track”</translation>
 <translation id="7332075081379534664">Matagumpay ang pag-sign in</translation>
-<translation id="8716243540027092298">Mag-sync para makuha ang pinakanauugnay na content mula sa Brave</translation>
+<translation id="8716243540027092298">Mag-sync para makuha ang pinakanauugnay na content mula sa AI Wize</translation>
 <translation id="7339898014177206373">Bagong window</translation>
 <translation id="7340958967809483333">Mga opsyon para sa Discover</translation>
 <translation id="7352339641508007922">I-drag para kumuha ng mahabang screenshot</translation>
@@ -1185,13 +1185,13 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7397416715506917976">Tingnan ang Insight ng Page</translation>
 <translation id="7400003506822844357">{FILE_COUNT,plural, =1{Iba pa, may 1 file sa listahan}one{Iba pa, may # file sa listahan}other{Iba pa, may # na file sa listahan}}</translation>
 <translation id="7400418766976504921">URL</translation>
-<translation id="724102042129299115">Unang Karanasan sa Pagtakbo ng Brave</translation>
+<translation id="724102042129299115">Unang Karanasan sa Pagtakbo ng AI Wize</translation>
 <translation id="5341476184053934779">User ng AI Wize sync chain</translation>
 <translation id="741204030948306876">Oo, sali ako</translation>
 <translation id="7419565702166471774">Palaging gumamit ng mga secure na koneksyon</translation>
 <translation id="7431991332293347422">Kontrolin kung paano ginagamit ang iyong history ng pag-browse para i-personalize ang Paghahanap at higit pa</translation>
 <translation id="7435356471928173109">Na-off ng iyong administrator</translation>
-<translation id="6234515504547364178">Mag-sign out sa Brave</translation>
+<translation id="6234515504547364178">Mag-sign out sa AI Wize</translation>
 <translation id="6147816961713837040">Magpapadala ng na-obfuscate na bahagi ng URL sa AI Wize sa pamamagitan ng server ng privacy na nagha-hide ng iyong IP address</translation>
 <translation id="3699067418237091329">Isa-sign out ka sa karamihan ng mga site. Hindi ka masa-sign out sa iyong AI Wize sync chain.</translation>
 <translation id="7453810262525006706">I-collapse sa side view</translation>
@@ -1211,7 +1211,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7493994139787901920"><ph name="VERSION"/> (Na-update <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Idinagdag muli ang paksa sa mga potensyal na paksa</translation>
 <translation id="7498271377022651285">Mangyaring maghintay…</translation>
-<translation id="8156131600798538460">Para mag-sign out sa iyong AI Wize sync chain sa lahat ng website, <ph name="BEGIN_LINK1"/>mag-sign out sa Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Para mag-sign out sa iyong AI Wize sync chain sa lahat ng website, <ph name="BEGIN_LINK1"/>mag-sign out sa AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Hindi Available ang Mga Update</translation>
 <translation id="7507207699631365376">Tingnan ang <ph name="BEGIN_LINK"/>patakaran sa privacy<ph name="END_LINK"/> ng provider na ito</translation>
 <translation id="7514365320538308">I-download</translation>
@@ -1221,7 +1221,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7523960634226602883">Maghanap sa pamamagitan ng iyong camera gamit ang Google Lens</translation>
 <translation id="7539698981064401140">I-sync ang iyong mga tab at history</translation>
 <translation id="7562080006725997899">Kini-clear ang data sa pag-browse</translation>
-<translation id="7814200940910057384">Na-clear ang data ng Brave</translation>
+<translation id="7814200940910057384">Na-clear ang data ng AI Wize</translation>
 <translation id="7577900504646297215">Pamahalaan ang mga interes</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> file ang na-download}one{<ph name="FILES_DOWNLOADED_MANY"/> file ang na-download}other{<ph name="FILES_DOWNLOADED_MANY"/> na file ang na-download}}</translation>
 <translation id="7581273696622423628">Sagutan ang survey</translation>
@@ -1234,7 +1234,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="649070405679044769">Naka-sign in sa AI Wize bilang</translation>
 <translation id="7612989789287281429">Sina-sign in ka…</translation>
 <translation id="7619072057915878432">Hindi na-download ang <ph name="FILE_NAME"/> dahil sa mga problema sa network.</translation>
-<translation id="7207456302801184289">Welcome sa Brave</translation>
+<translation id="7207456302801184289">Welcome sa AI Wize</translation>
 <translation id="7630202231528827509">URL ng provider</translation>
 <translation id="7638584964844754484">Maling passphrase</translation>
 <translation id="7641339528570811325">I-clear ang data sa pag-browse...</translation>
@@ -1247,13 +1247,13 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="766587987807204883">Lalabas dito ang mga artikulong mababasa mo kahit offline ka</translation>
 <translation id="7682724950699840886">Subukan ang mga sumusunod na tip: tiyaking may sapat na espasyo sa iyong device, at subukang mag-export muli.</translation>
 <translation id="7686086654630106285">Higit pa tungkol sa mga ad na iminumungkahi ng site</translation>
-<translation id="2667018639405889513">Na-preload ang ilan sa mga page na binibisita mo. Posibleng mag-preload ng mga page sa pamamagitan ng mga server ng AI Wize kapag naka-link mula sa isang site ng Brave.</translation>
-<translation id="7795837497684113327">Hindi mabuksan ng iyong device ang Brave. Para ayusin ang isyu, i-download ang pinakabagong update sa AI Wize sa iyong app store.</translation>
+<translation id="2667018639405889513">Na-preload ang ilan sa mga page na binibisita mo. Posibleng mag-preload ng mga page sa pamamagitan ng mga server ng AI Wize kapag naka-link mula sa isang site ng AI Wize.</translation>
+<translation id="7795837497684113327">Hindi mabuksan ng iyong device ang AI Wize. Para ayusin ang isyu, i-download ang pinakabagong update sa AI Wize sa iyong app store.</translation>
 <translation id="7691043218961417207">Mag-explore ng content na susubaybayan</translation>
 <translation id="7697383401610880082">Handle sa pag-drag</translation>
 <translation id="7698359219371678927">Gumawa ng email sa <ph name="APP_NAME"/></translation>
 <translation id="7702029078562412515">Mga tile ng query</translation>
-<translation id="3434187853488406814">Hindi ka masa-sign out sa AI Wize sync chain mo kapag nag-clear ka ng iyong data mula sa pag-browse. Para magawa ito, <ph name="BEGIN_LINK1"/>mag-sign out sa Brave<ph name="END_LINK1"/>.</translation>
+<translation id="3434187853488406814">Hindi ka masa-sign out sa AI Wize sync chain mo kapag nag-clear ka ng iyong data mula sa pag-browse. Para magawa ito, <ph name="BEGIN_LINK1"/>mag-sign out sa AI Wize<ph name="END_LINK1"/>.</translation>
 <translation id="7707922173985738739">Gumamit ng mobile data</translation>
 <translation id="7709918231054955894">Kunin ang lahat ng iyong tab</translation>
 <translation id="7733878270780732638">Walang sapat na espasyo sa device.</translation>
@@ -1265,7 +1265,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7772032839648071052">Kumpirmahin ang passphrase</translation>
 <translation id="7772375229873196092">Isara ang <ph name="APP_NAME"/></translation>
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 at <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> iba pa}one{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 at <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> iba pa}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 at <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/> na iba pa}}</translation>
-<translation id="5614774692683309331">Kapag naka-sign in ka, poprotektahan ka nito sa lahat ng serbisyo ng Brave.</translation>
+<translation id="5614774692683309331">Kapag naka-sign in ka, poprotektahan ka nito sa lahat ng serbisyo ng AI Wize.</translation>
 <translation id="7778840695157240389">Bumalik sa ibang pagkakataon para sa mga bagong kuwento</translation>
 <translation id="7703329426540523149">Pansamantalang nili-link ang data na ito sa iyong AI Wize sync chain kapag naka-sign in ka, para protektahan ka sa lahat ng AI Wize app</translation>
 <translation id="7791543448312431591">Idagdag</translation>
@@ -1276,10 +1276,10 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Lahat ng file, may 1 file sa listahan}one{Lahat ng file, may # file sa listahan}other{Lahat ng file, may # na file sa listahan}}</translation>
 <translation id="7815484226266492798">Mahabang Screenshot</translation>
 <translation id="7821130663268546430">Mahahanap mo ang lahat ng bukas na tab sa tab switcher</translation>
-<translation id="8439902729344548970">Kapag naka-sign in ka, naka-link ang data na ito sa iyong AI Wize sync chain para protektahan ka sa lahat ng serbisyo ng Brave, halimbawa, pagpapaigting ng proteksyon sa Gmail pagkatapos ng isang insidente sa seguridad.</translation>
+<translation id="8439902729344548970">Kapag naka-sign in ka, naka-link ang data na ito sa iyong AI Wize sync chain para protektahan ka sa lahat ng serbisyo ng AI Wize, halimbawa, pagpapaigting ng proteksyon sa Gmail pagkatapos ng isang insidente sa seguridad.</translation>
 <translation id="78270725016672455">Gustong irehistro ng iyong computer ang device na ito para sa pag-sign in sa isang site</translation>
 <translation id="7844171778363018843">Walang piniling data para i-sync</translation>
-<translation id="7068829570137757602">Mga serbisyo ng Brave</translation>
+<translation id="7068829570137757602">Mga serbisyo ng AI Wize</translation>
 <translation id="784934925303690534">Sakop na oras</translation>
 <translation id="7851858861565204677">Iba pang device</translation>
 <translation id="7853202427316060426">Aktibidad</translation>
@@ -1289,7 +1289,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="78707286264420418">Nangangailangan ang <ph name="PRODUCT_NAME"/> ng Pahintulot sa mga kalapit na device para makakonekta sa iyong device</translation>
 <translation id="7875915731392087153">Gumawa ng email</translation>
 <translation id="7876243839304621966">Alisin lahat</translation>
-<translation id="6143689084714664628">Gumagana sa Brave</translation>
+<translation id="6143689084714664628">Gumagana sa AI Wize</translation>
 <translation id="7887174313503389866">Magsagawa ng guided tour tungkol sa mga pangunahing kontrol sa privacy at seguridad. Para sa higit pang opsyon, pumunta sa mga indibidwal na setting.</translation>
 <translation id="7896724475402191389">Content para sa kabataan - naka-off</translation>
 <translation id="7903184275147100332">Puwede itong abutin nang ilang sandali</translation>
@@ -1328,7 +1328,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8037801708772278989">Kakasuri lang</translation>
 <translation id="804335162455518893">Hindi nakita ang SD card</translation>
 <translation id="8051695050440594747">Available ang <ph name="MEGABYTES"/> MB</translation>
-<translation id="2317945146070194624">Buksan sa bagong tab ng Brave</translation>
+<translation id="2317945146070194624">Buksan sa bagong tab ng AI Wize</translation>
 <translation id="8062594758852531064">Na-extend na pag-preload:</translation>
 <translation id="8063895661287329888">Hindi naidagdag ang bookmark.</translation>
 <translation id="8066816452984416180">Mabilis na i-bookmark ang page na ito. Para i-edit ang shortcut na ito, pindutin ito nang matagal.</translation>
@@ -1341,11 +1341,11 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="808747664143081553">Nakakonekta sa device</translation>
 <translation id="8090732854597034573">Kung kailangan mo ng tulong, magpatulong sa iyong magulang</translation>
 <translation id="8101414242770404289">Walang tab mula sa <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_TOS_LINK"/>Mga Tuntunin ng Serbisyo<ph name="END_TOS_LINK"/>.\nPara makatulong na mapaganda ang app, nagpapadala ang AI Wize ng data ng paggamit at pag-crash sa Brave. <ph name="BEGIN_UMA_LINK"/>Pamahalaan<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Sa pamamagitan ng pagpapatuloy, sumasang-ayon ka sa <ph name="BEGIN_TOS_LINK"/>Mga Tuntunin ng Serbisyo<ph name="END_TOS_LINK"/>.\nPara makatulong na mapaganda ang app, nagpapadala ang AI Wize ng data ng paggamit at pag-crash sa AI Wize. <ph name="BEGIN_UMA_LINK"/>Pamahalaan<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Isara ang mga opsyon sa pagbubukod-bukod</translation>
-<translation id="2919733817273403520">Tumulong na pahusayin ang mga feature at performance ng Brave</translation>
-<translation id="4565206163201411670">Ipakita sa Digital Wellness ang aktibidad mo sa Brave?</translation>
+<translation id="2919733817273403520">Tumulong na pahusayin ang mga feature at performance ng AI Wize</translation>
+<translation id="4565206163201411670">Ipakita sa Digital Wellness ang aktibidad mo sa AI Wize?</translation>
 <translation id="8118117428362942925">Kung kailangan mo ng tulong, magpatulong sa iyong magulang (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Ibinubukod-bukod ayon sa pinakabago</translation>
 <translation id="8127542551745560481">I-edit ang homepage</translation>
@@ -1388,7 +1388,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8368001212524806591">Subaybayan ang presyo</translation>
 <translation id="8387617938027387193">I-verify na ikaw ito</translation>
 <translation id="8393700583063109961">Ipadala ang mensahe</translation>
-<translation id="7651600795135059130">Sinusuri ang mga URL sa pamamagitan ng listahan ng mga hindi ligtas na site na naka-store sa Brave</translation>
+<translation id="7651600795135059130">Sinusuri ang mga URL sa pamamagitan ng listahan ng mga hindi ligtas na site na naka-store sa AI Wize</translation>
 <translation id="8402673309244746971">Pumunta sa Sinusubaybayan</translation>
 <translation id="8413126021676339697">Ipakita ang buong history</translation>
 <translation id="5348884013239264115">Nagpoprotekta laban sa mga site, download, at extension na kilalang mapanganib. Kapag bumisita ka sa isang site, magpapadala ang AI Wize ng na-obfuscate na bahagi ng URL sa AI Wize sa pamamagitan ng server ng privacy na nagha-hide ng IP address. Kung may gagawing kahina-hinala ang isang site, ipapadala rin ang mga buong URL at bahagi ng content page.</translation>
@@ -1402,7 +1402,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8438566539970814960">Mas pahusayin ang mga paghahanap at pag-browse</translation>
 <translation id="8439974325294139057"><ph name="LANG"/> - Handa na ang wika, i-restart ang <ph name="APP_NAME"/>.</translation>
 <translation id="8442258441309440798">Walang available na kuwento</translation>
-<translation id="4058091506841967397">Hindi ma-update: Brave</translation>
+<translation id="4058091506841967397">Hindi ma-update: AI Wize</translation>
 <translation id="8445448999790540984">Hindi ma-export ang mga password</translation>
 <translation id="8446884382197647889">Matuto Pa</translation>
 <translation id="8453310803815879010">Simulan ang Dino Game</translation>
@@ -1418,11 +1418,11 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8497480609928300907">Paliwanag sa gabay sa privacy</translation>
 <translation id="8497726226069778601">Walang makikita dito... sa ngayon</translation>
 <translation id="8501423924927196358">Indicator na Naglo-Load ang Page insights</translation>
-<translation id="230699814587342492">Mga Password sa Brave</translation>
+<translation id="230699814587342492">Mga Password sa AI Wize</translation>
 <translation id="8503813439785031346">Username</translation>
 <translation id="8505766168025405649">Tingnan ang notification para sa status ng pag-download</translation>
 <translation id="8506357771923193001">Makikita mo ang mga download mo rito</translation>
-<translation id="133012818630824069">Mag-export ng mga password na naka-store sa Brave</translation>
+<translation id="133012818630824069">Mag-export ng mga password na naka-store sa AI Wize</translation>
 <translation id="8516012719330875537">Editor ng Larawan</translation>
 <translation id="8523928698583292556">I-delete ang naka-store na password</translation>
 <translation id="8526855376374973824">Proseso ng pahintulot sa notification</translation>
@@ -1437,7 +1437,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8583805026567836021">Kini-clear ang data ng account</translation>
 <translation id="859046281437143747">Subaybayan ang presyo mula sa button na Higit pang opsyon</translation>
 <translation id="860043288473659153">Pangalan ng cardholder</translation>
-<translation id="1673533133011266617">Nakasara ang pag-sign in sa Brave.</translation>
+<translation id="1673533133011266617">Nakasara ang pag-sign in sa AI Wize.</translation>
 <translation id="860282621117673749">Mga alerto sa pagbaba ng presyo</translation>
 <translation id="5784514951651328424">Maaaring may iba pang anyo ng history ng pag-browse ang iyong AI Wize sync chain sa <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Buksan ang iminumungkahing URL na tinukoy sa na-download na content?</translation>
@@ -1445,7 +1445,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8636825310635137004">Upang makuha ang iyong mga tab mula sa iba mo pang mga device, i-on ang pag-sync.</translation>
 <translation id="864544049772947936">Pamahalaan ang mga window (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Hinuhulaan ang mga mapanganib na event at binabalaan ka tungkol sa mga ito bago mangyari ang mga ito</translation>
-<translation id="2734140769649165081">Maaari mong i-clear ang data sa Mga Setting ng Brave</translation>
+<translation id="2734140769649165081">Maaari mong i-clear ang data sa Mga Setting ng AI Wize</translation>
 <translation id="7436978557885042606">Gamitin ang AI Wize sa paraang gusto mo</translation>
 <translation id="8664979001105139458">May ganito nang pangalan ng file</translation>
 <translation id="8676276370198826499">Mag-sign up sa <ph name="SITE_ETLD_PLUS_ONE"/> gamit ang <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1483,14 +1483,14 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="885480114717186641">Puwede mong i-request ang pang-desktop na site para sa <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Makakuha ng mga paglalarawan</translation>
 <translation id="8856931513242997049">Nakasara ang proseso ng pahintulot sa notification</translation>
-<translation id="1984646864943401749">Nagpapadala ng mga URL ng ilang page na binibisita mo, limitadong impormasyon ng system, at ilang content ng page sa Brave, para makatulong na tumuklas ng mga bagong banta at protektahan ang lahat ng nasa web.</translation>
+<translation id="1984646864943401749">Nagpapadala ng mga URL ng ilang page na binibisita mo, limitadong impormasyon ng system, at ilang content ng page sa AI Wize, para makatulong na tumuklas ng mga bagong banta at protektahan ang lahat ng nasa web.</translation>
 <translation id="8909135823018751308">Ibahagi…</translation>
-<translation id="2684652081942622950">Brave sync chain</translation>
+<translation id="2684652081942622950">AI Wize sync chain</translation>
 <translation id="8921980840204105660">Mag-sync para makuha ang iyong mga bookmark mula sa iba pang device mo</translation>
 <translation id="8922289737868596582">I-download ang mga page mula sa button na Higit pang opsyon para magamit ang mga ito offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Matuto Pa<ph name="END_LINK"/></translation>
 <translation id="892496902842311796">Handa na ang <ph name="LANG"/></translation>
-<translation id="1174893863889683998">Alisin sa Digital Wellness ang aktibidad mo sa Brave?</translation>
+<translation id="1174893863889683998">Alisin sa Digital Wellness ang aktibidad mo sa AI Wize?</translation>
 <translation id="179413535815682755">Depende sa iyong mga setting, posible ring magpadala ang AI Wize ng cookies, kasalukuyang URL mo, at iyong lokasyon</translation>
 <translation id="8942627711005830162">Buksan sa ibang window</translation>
 <translation id="8945143127965743188"><ph name="LANG"/> - Hindi ma-download ang wikang ito. Subukan ulit sa ibang pagkakataon.</translation>
@@ -1500,7 +1500,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="8987736167266086032">Bumalik kung saan ka tumigil</translation>
 <translation id="8996847606757455498">Pumili ng ibang provider</translation>
 <translation id="8998289560386111590">Hindi available sa iyong device</translation>
-<translation id="3275122921244685452">Nagsa-sign in ka gamit ang isang account na pinamamahalaan ng <ph name="MANAGED_DOMAIN"/> at binibigyan mo ang administrator nito ng kontrol sa iyong data sa Brave. Permanenteng mauugnay ang iyong data sa account na ito. Made-delete ang data mo sa device na ito kapag nag-sign out ka sa Brave, ngunit mananatili itong naka-store sa iyong AI Wize sync chain.</translation>
+<translation id="3275122921244685452">Nagsa-sign in ka gamit ang isang account na pinamamahalaan ng <ph name="MANAGED_DOMAIN"/> at binibigyan mo ang administrator nito ng kontrol sa iyong data sa AI Wize. Permanenteng mauugnay ang iyong data sa account na ito. Made-delete ang data mo sa device na ito kapag nag-sign out ka sa AI Wize, ngunit mananatili itong naka-store sa iyong AI Wize sync chain.</translation>
 <translation id="8998837250940831980">Hindi ma-minimize ang tab. Subukan ulit sa ibang pagkakataon.</translation>
 <translation id="9012585441087414258">Nagpoprotekta laban sa mga site, download, at extension na kilalang mapanganib. Kung may kahina-hinalang ginagawa ang isang page, ipinapadala sa Ligtas na Pag-browse sa AI Wize ang mga URL at bit ng content ng page.</translation>
 <translation id="9019199799064251516">Magpatuloy nang walang lock ng profile ng kotse?</translation>
@@ -1536,7 +1536,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="9158770349521403363">Ibahagi lang ang content</translation>
 <translation id="9159716826369098114">I-restore ang grupo ng tab na <ph name="TAB_COUNT"/> (na) tab bilang bagong background na grupo ng tab.</translation>
 <translation id="9169507124922466868">Nakabukas nang kalahati ang history ng pag-navigate</translation>
-<translation id="4947625801334180582">Brave Beta</translation>
+<translation id="4947625801334180582">AI Wize Beta</translation>
 <translation id="9190276265094487094">Makikita mo ang iyong history sa lahat ng naka-sync mong device, para maipagpatuloy mo ang iyong ginagawa</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{Nagsuri 1 minuto ang nakalipas}one{Nagsuri # minuto ang nakalipas}other{Nagsuri # na minuto ang nakalipas}}</translation>
 <translation id="9204021776105550328">Dine-delete</translation>
@@ -1547,8 +1547,8 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="9212845824145208577">Hindi na maibababa pa. Subukang magsimula sa mas mababang bahagi ng page.</translation>
 <translation id="9219103736887031265">Mga Larawan</translation>
 <translation id="6946179564366058239">Kapag humiling ang isang site na pribadong mag-preload ng mga link sa page nito, mag-e-encrypt at magpi-preload ng mga page ang AI Wize sa pamamagitan ng mga server ng AI Wize nang walang cookies. Maitatago nito ang iyong pagkakakilanlan sa na-preload na site.</translation>
-<translation id="4596514158372210596">Alisin sa Digital Wellness ang iyong aktibidad sa Brave</translation>
-<translation id="2830145431802238213">Gamitin ang Lite mode sa Brave</translation>
+<translation id="4596514158372210596">Alisin sa Digital Wellness ang iyong aktibidad sa AI Wize</translation>
+<translation id="2830145431802238213">Gamitin ang Lite mode sa AI Wize</translation>
 <translation id="928550791203542716">Sinusubaybayan ang <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Mada-download ang lahat ng password sa iyong device at maaalis ang mga ito sa <ph name="CHROME_CHANNEL"/></translation>
 <translation id="938850635132480979">Error: <ph name="ERROR_CODE"/></translation>
@@ -1567,7 +1567,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="996149300115483134">Nakasara ang menu ng feed card</translation>
 <translation id="5186185447130319458">Pribado</translation>
 <translation id="79269250264141507">Kapag nag-type ka sa address bar o box para sa paghahanap, ipinapadala ng AI Wize ang tina-type mo sa iyong default na search engine para makakuha ng mas mahuhusay na suhestyon. Naka-off ito sa Pribado.</translation>
-<translation id="5711390076756601471">Mag-lock ng mga Pribadong tab kapag aalis ka sa Brave.</translation>
+<translation id="5711390076756601471">Mag-lock ng mga Pribadong tab kapag aalis ka sa AI Wize.</translation>
 <translation id="1014490034578104945">Gumamit ng lock ng screen para makakita ng mga Pribadong tab</translation>
 <translation id="5722020415664104421">I-block habang naka-Pribado</translation>
 <translation id="8915136961932734044">Habang naka-Pribado, hindi magagamit ng mga site ang iyong cookies para makita ang aktibidad mo sa pag-browse sa iba't ibang site, halimbawa, para mag-personalize ng mga ad. Puwedeng masira ang mga feature sa ilang site.</translation>
@@ -1582,7 +1582,7 @@ Halimbawa, puwedeng tumugon ang ilang website sa kahilingang ito sa pamamagitan 
 <translation id="5248610748197335423">Isara ang lahat ng Pribadong tab</translation>
 <translation id="4660964651149493586">I-unlock ang Private</translation>
 <translation id="5278260521317049275">I-on ang Pribadong lock</translation>
-<translation id="6302653771627628530">Ila-lock ang mga private tab kapag umalis ka sa Brave</translation>
+<translation id="6302653771627628530">Ila-lock ang mga private tab kapag umalis ka sa AI Wize</translation>
 <translation id="3763131702135887799">Tumulong na gawing mas mahusay ang AI Wize para sa mga profile na gumagamit nito sa paraang ginagawa mo</translation>
 <translation id="4167670741834902166">Bagong Pribadong tab</translation>
 <translation id="9148151251783962691">Para maka-browse nang private sa device na ito, subukan ang Private</translation>

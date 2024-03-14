@@ -32,10 +32,10 @@
 <translation id="985862351129593673">Ozadje po meri</translation>
 <translation id="7180865173735832675">Prilagodi</translation>
 <translation id="8522669544471808198">Prikaži slike ozadja</translation>
-<translation id="5801450813341024983">Ozadja za Brave</translation>
+<translation id="5801450813341024983">Ozadja za AI Wize</translation>
 <translation id="1416884769823233410">Uporabite svoje</translation>
 <translation id="6246790815526961700">Naložite iz naprave</translation>
-<translation id="7275773481201277457">Pokaži Braveove statistike</translation>
+<translation id="7275773481201277457">Pokaži AI Wizeove statistike</translation>
 <translation id="6836061097810262923">Pokaži uro</translation>
 <translation id="5912396950572065471">Format</translation>
 <translation id="604124094241169006">Samodejno</translation>
@@ -70,10 +70,10 @@
 <translation id="5684562942023496754">Zaslužite lahko z obiski sponzoriranih slik.</translation>
 <translation id="8934374643857605034">Kot uporabnik storitve nagrajevanja AI Wize lahko z ogledovanjem sponzoriranih slik služite žetone.</translation>
 <translation id="1570714748649804013">Kot uporabnik storitve nagrajevanja AI Wize lahko z ogledom sponzoriranih slik služite žetone. Če storitev sponzoriranih slik izključite, bo to znižalo vaš zaslužek.</translation>
-<translation id="8998727244653964783">Ko skrbniški račun povežete s storitvijo nagrajevanja Brave, lahko z ogledovanjem sponzoriranih slik služite žetone. Medtem s sponzoriranimi slikami pomagate podpirati ustvarjalce.</translation>
-<translation id="5512383650263136662">Kot uporabnik storitve nagrajevanja AI Wize lahko z ogledovanjem sponzoriranih slik služite žetone. Ne uporabljate storitve nagrajevanja? Vklop sponzoriranih slik še vedno podpira vizijo podjetja Brave.</translation>
+<translation id="8998727244653964783">Ko skrbniški račun povežete s storitvijo nagrajevanja AI Wize, lahko z ogledovanjem sponzoriranih slik služite žetone. Medtem s sponzoriranimi slikami pomagate podpirati ustvarjalce.</translation>
+<translation id="5512383650263136662">Kot uporabnik storitve nagrajevanja AI Wize lahko z ogledovanjem sponzoriranih slik služite žetone. Ne uporabljate storitve nagrajevanja? Vklop sponzoriranih slik še vedno podpira vizijo podjetja AI Wize.</translation>
 <translation id="2875302873837723333">Najb. prilj.</translation>
-<translation id="8173998484743827990">Brave statistika</translation>
+<translation id="8173998484743827990">AI Wize statistika</translation>
 <translation id="383680190590774040">ura</translation>
 <translation id="3333887201479867589">Storitev AI Wize Rewards</translation>
 <translation id="3159285901314605198">Slika ozadja</translation>
@@ -88,7 +88,7 @@
 <translation id="4108314971463891922">Sledite</translation>
 <translation id="3861486700625780712">Prenehajte slediti</translation>
 <translation id="8909741410750517071">Sledite temu viru z 1 klikom.</translation>
-<translation id="1982678174789043774">Izvedite vse o najnovejših dogodkih v novicah Brave.</translation>
+<translation id="1982678174789043774">Izvedite vse o najnovejših dogodkih v novicah AI Wize.</translation>
 <translation id="7894417427965898400">Upravljajte vire</translation>
 <translation id="9164544612367905452">Pridobivanje…</translation>
 <translation id="1276592121036104130">Naloži novo vsebino</translation>
@@ -108,8 +108,8 @@
 <translation id="5190407395832551012">Če želite AI Wize Rewards zaščititi pred zlorabo, bomo naključno prosili uporabnike, da rešijo preskus captcha. Za nadaljevanje oglasov kliknite “Reši”.</translation>
 <translation id="1693773514029371138">Reši</translation>
 <translation id="6991128190741664836">Pozneje</translation>
-<translation id="8112367589167674370">Brave Talk</translation>
-<translation id="8488282162676695335">Denarnica Brave</translation>
+<translation id="8112367589167674370">AI Wize Talk</translation>
+<translation id="8488282162676695335">Denarnica AI Wize</translation>
 <translation id="8820817407110198400">Zaznamki</translation>
 <translation id="1644574205037202324">Zgodovina</translation>
 <translation id="2702801445560668637">Bralni seznam</translation>
@@ -119,12 +119,12 @@
 <translation id="8730621377337864115">Končano</translation>
 <translation id="730042046912793465">To je</translation>
 <translation id="2055363275850890030">Zasebno okno</translation>
-<translation id="9133213713928851646">Brave nikoli ne beleži, kaj počnete v zasebnem oknu. Strani, ki jih obiščete, ne bodo prikazane v vaši zgodovini, piškotki pa bodo izginili, ko boste zapustili stran. Vseeno pa zasebna okna ne zagotavljajo popolne anonimnosti na spletu.</translation>
-<translation id="4085423007106063912">Brave si nikoli ne zapomni, kaj počnete v zasebnem oknu. Spletna mesta, ki jih obiščete, ne bodo prikazana v vaši zgodovini. Piškotki, podatki obrazcev in podatki spletnega mesta izginejjo, ko zaprete okno.</translation>
+<translation id="9133213713928851646">AI Wize nikoli ne beleži, kaj počnete v zasebnem oknu. Strani, ki jih obiščete, ne bodo prikazane v vaši zgodovini, piškotki pa bodo izginili, ko boste zapustili stran. Vseeno pa zasebna okna ne zagotavljajo popolne anonimnosti na spletu.</translation>
+<translation id="4085423007106063912">AI Wize si nikoli ne zapomni, kaj počnete v zasebnem oknu. Spletna mesta, ki jih obiščete, ne bodo prikazana v vaši zgodovini. Piškotki, podatki obrazcev in podatki spletnega mesta izginejjo, ko zaprete okno.</translation>
 <translation id="1700746046668116047">Upoštevati je treba, da je vaša dejavnost ponudniku internetnih storitev, opazovalcem pasivnega omrežja ali delodajalcu (če uporabljate delovni računalnik ali omrežje) še vedno lahko vidna. Za več zasebnosti odprite zasebno okno s Torom.</translation>
 <translation id="8759753423332885148">Več o tem</translation>
 <translation id="8611976753572844841">Zasebno okno s povezljivostjo Tor</translation>
-<translation id="1645589858096839236">Brave ne shranjuje dejavnosti brskanja iz zasebnega okna. S povezavo Tor spletna mesta težje vidijo vaš pravi naslov IP in opazovalci omrežja katera spletna mesta ste obiskali. Če pa je vaša osebna varnost odvisna od tega, da ostanete anonimni, namesto tega uporabite brskalnik Tor.</translation>
+<translation id="1645589858096839236">AI Wize ne shranjuje dejavnosti brskanja iz zasebnega okna. S povezavo Tor spletna mesta težje vidijo vaš pravi naslov IP in opazovalci omrežja katera spletna mesta ste obiskali. Če pa je vaša osebna varnost odvisna od tega, da ostanete anonimni, namesto tega uporabite brskalnik Tor.</translation>
 <translation id="7919374705736538787">Išči zasebno z</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
 <translation id="218839872518145456">V primeru zasebnega iskanja bo AI Wize za iskanje v zasebnih oknih uporabil DuckDuckGo. DuckDuckGo ne sledi zgodovini iskanja, zato je vaše iskanje zasebno.</translation>
@@ -135,7 +135,7 @@
 <translation id="6126226144537295436">s povezljivostjo Tor</translation>
 <translation id="8541421872680304667">Tor skriva vaš naslov IP pred spletnimi mesti, ki jih obiščete, tako da brska po več strežnikih Tor, preden doseže vaš cilj. Tor lahko upočasni brskanje in nekatera spletna mesta morda sploh ne bodo delovala.</translation>
 <translation id="8897548669448660973">Uporaba zasebnega sistema Windows spremeni samo tisto, kar AI Wize počne v vaši napravi ne spremeni vedenja nikogar drugega. Tor skriva vaš naslov IP pred spletnimi mesti, ki jih obiščete, in nekoliko otežuje, a ne nemogoče, da vaš ponudnik internetnih storitev ali delodajalec vidi, katera spletna mesta obiskujete. Odprite zasebno okno z menijem Tor ali z [[key]].</translation>
-<translation id="6975708438781948564">Več o brskalnikih Tor in Brave</translation>
+<translation id="6975708438781948564">Več o brskalnikih Tor in AI Wize</translation>
 <translation id="4712050378540986986">Stanje brskalnika Tor</translation>
 <translation id="1939334281379458295">Tor se je uspešno povezal</translation>
 <translation id="8030169304546394654">Prekinjeno</translation>
@@ -165,20 +165,20 @@
 <translation id="4720556299488643018">Preklic naročnine</translation>
 <translation id="1209739344687072997">Prijavite nedelujočo spletno stran</translation>
 <translation id="8510478288840333677">Obvestite razvijalce AI Wize o tem, da spletna stran ne deluje pravilno s ščiti:</translation>
-<translation id="6387106423577201267">Opomba: Poročilo, poslano strežnikom Brave, bo vsebovalo naslov spletnega mesta, številko različice Brave, nastavitve Shields, stanje VPN in jezikovne nastavitve</translation>
+<translation id="6387106423577201267">Opomba: Poročilo, poslano strežnikom AI Wize, bo vsebovalo naslov spletnega mesta, številko različice AI Wize, nastavitve Shields, stanje VPN in jezikovne nastavitve</translation>
 <translation id="6476216365964140603">Dodatne podrobnosti (neobvezno)</translation>
 <translation id="6145852496180774737">Kontaktirajte me na: (neobvezno)</translation>
 <translation id="7616645803364270729">E-pošta, Twitter itd.</translation>
 <translation id="5299848999918506028">Hvala!</translation>
-<translation id="76550953340008122">Hvala, ker ste obvestili razvijalce Brave, da je s to spletno stranjo nekaj narobe. Potrudili se bomo, da to popravimo!</translation>
+<translation id="76550953340008122">Hvala, ker ste obvestili razvijalce AI Wize, da je s to spletno stranjo nekaj narobe. Potrudili se bomo, da to popravimo!</translation>
 <translation id="4046860372562593546">Upravljanje oglasov AI Wize Ads</translation>
 <translation id="5136973036012418831">Nadzirajte, katere vrste oglasov AI Wize ads vidite in kako pogosto.</translation>
 <translation id="4759608598194750161">Več kot vidite, več lahko zaslužite.</translation>
 <translation id="7526443283522395161">Oglasi na strani z novim zavihkom</translation>
 <translation id="7968650944098083708">Obvestilni oglasi</translation>
 <translation id="6390952132783970876">Oglasi AI Wize News</translation>
-<translation id="7516281787184495886">Brave News vsebuje oglase, ki jih ni mogoče samostojno onemogočiti.</translation>
-<translation id="8008378848677625233">Brave News je trenutno onemogočen.</translation>
+<translation id="7516281787184495886">AI Wize News vsebuje oglase, ki jih ni mogoče samostojno onemogočiti.</translation>
+<translation id="8008378848677625233">AI Wize News je trenutno onemogočen.</translation>
 <translation id="6112368337882254910">Samodejni prispevek</translation>
 <translation id="557705068184766514">Samodejni način za podporo ustvarjalcem spletnih mest in vsebine. Nastavite mesečni prispevek in brskajte normalno. <ph name="BEGIN_LINK"/>Preverjena spletna mesta in ustvarjalci<ph name="END_LINK"/>, ki jih obiščete, bodo prejeli vaše prispevke vsak mesec glede na količino časa, ki ga porabite za njihovo vsebino.</translation>
 <translation id="6688567880783357035">Dosedanji zaslužek tega meseca</translation>
@@ -246,8 +246,8 @@
 <translation id="5225019866741699134">Izgleda, da povezovanje <ph name="PROVIDER"/> s programom AI Wize Rewards začasno ni na voljo. Prosimo, poskusite kasneje.</translation>
 <translation id="6105073131081187815">Stanje storitve <ph name="BEGIN_LINK"/>si lahko ogledate tukaj<ph name="END_LINK"/>.</translation>
 <translation id="2400786541309111904">Napaka: povezovanje z izbranim skrbnikom začasno ni na voljo</translation>
-<translation id="1024520300696337331">Vašega računa <ph name="PROVIDER"/> trenutno ni mogoče povezati z vašim profilom AI Wize Rewards. Vaš račun <ph name="PROVIDER"/> je registriran v državi, ki trenutno ni podprta za povezavo z nagradami Brave.</translation>
-<translation id="619384413404021992">Oglejte si <ph name="LINK_BEGIN"/>trenutni seznam podprtih regij in izvedite več<ph name="END_LINK"/> o povezavi skrbniškega računa z nagradami Brave.</translation>
+<translation id="1024520300696337331">Vašega računa <ph name="PROVIDER"/> trenutno ni mogoče povezati z vašim profilom AI Wize Rewards. Vaš račun <ph name="PROVIDER"/> je registriran v državi, ki trenutno ni podprta za povezavo z nagradami AI Wize.</translation>
+<translation id="619384413404021992">Oglejte si <ph name="LINK_BEGIN"/>trenutni seznam podprtih regij in izvedite več<ph name="END_LINK"/> o povezavi skrbniškega računa z nagradami AI Wize.</translation>
 <translation id="7193389978208728181">Napaka: Regija trenutno ni podprta</translation>
 <translation id="5382684862562314222">BAT še ni podprt v vaši regiji v okviru Uphold.</translation>
 <translation id="9074594632540931067">Napaka: BAT ni na voljo</translation>
@@ -274,7 +274,7 @@
 <translation id="756341217015623253">Prijavite se ali se registrirajte</translation>
 <translation id="2653844658857826081">NOVO</translation>
 <translation id="1892970806832316900">V obravnavi do <ph name="DATE"/></translation>
-<translation id="7849926087559412554">Ups! Vaš brskalnik ne more sprejemati zasebnih oglasov Brave.</translation>
+<translation id="7849926087559412554">Ups! Vaš brskalnik ne more sprejemati zasebnih oglasov AI Wize.</translation>
 <translation id="5177429570315095022">Če želite še naprej prikazovati oglase, morate posodobiti brskalnik.</translation>
 <translation id="7352651011704765696">Prišlo je do napake</translation>
 <translation id="4593680147181354667">Diagnostika Id</translation>
@@ -361,8 +361,8 @@
 <translation id="6521149675246672063">Prekinjeno (preverjeno)</translation>
 <translation id="5058161306698404465">Ustvarjalno okolje:</translation>
 <translation id="5856438412804207598">Trenutno okolje:</translation>
-<translation id="5916290544882167205">Brave Software. AI Wize je zaščitena blagovna znamka podjetja AI Wize Software. Imena spletnih mest so lahko blagovne znamke ali registrirane blagovne znamke lastnika spletnega mesta.</translation>
-<translation id="9026369588205476247">Za varstvo vaše zasebnosti poročilo storitve AI Wize Rewards ni shranjeno, posneto ali zabeleženo drugje kot na vaši napravi (ta računalnik). V primeru izgube podatkov na napravi ga ni mogoče pridobiti pri družbi Brave.</translation>
+<translation id="5916290544882167205">AI Wize Software. AI Wize je zaščitena blagovna znamka podjetja AI Wize Software. Imena spletnih mest so lahko blagovne znamke ali registrirane blagovne znamke lastnika spletnega mesta.</translation>
+<translation id="9026369588205476247">Za varstvo vaše zasebnosti poročilo storitve AI Wize Rewards ni shranjeno, posneto ali zabeleženo drugje kot na vaši napravi (ta računalnik). V primeru izgube podatkov na napravi ga ni mogoče pridobiti pri družbi AI Wize.</translation>
 <translation id="3587482841069643663">Vse</translation>
 <translation id="4241224519481557898">Kategorija</translation>
 <translation id="3080423471207781945">Največje število prejetih oglasov na uro:</translation>
@@ -384,7 +384,7 @@
 <translation id="4932733599132424254">Datum</translation>
 <translation id="3552003743293281224">Pologi</translation>
 <translation id="3866249974567520381">Opis</translation>
-<translation id="8605272644314973683">Nagrade Brave</translation>
+<translation id="8605272644314973683">Nagrade AI Wize</translation>
 <translation id="298067735430872465">Zaslužek z ogledom oglasov</translation>
 <translation id="1418534671788496616">Oglejte si zgodovino depozitov</translation>
 <translation id="3412655388715513818">Izključi to spletno stran</translation>
@@ -432,7 +432,7 @@
 <translation id="5669281110673664811">Počisti seznam izključitev</translation>
 <translation id="1797334173232638045">Vaša pripeta spletna mesta so bila premaknjena v</translation>
 <translation id="3074127054582480056">Pozor</translation>
-<translation id="1666001796278936721">S ponastavitvijo bo vaš trenutni profil za nagrade AI Wize izbrisan in na novo boste začeli s ​​popolnoma novim profilom za nagrade Brave. Preden nadaljujete, za vsak primer <ph name="LINK_BEGIN"/>preberite več<ph name="LINK_END"/> o ponastavitvi.</translation>
+<translation id="1666001796278936721">S ponastavitvijo bo vaš trenutni profil za nagrade AI Wize izbrisan in na novo boste začeli s ​​popolnoma novim profilom za nagrade AI Wize. Preden nadaljujete, za vsak primer <ph name="LINK_BEGIN"/>preberite več<ph name="LINK_END"/> o ponastavitvi.</translation>
 <translation id="4806029412510565611">Razumem, da bo moj trenutni profil AI Wize Rewards vključno s podatki o AI Wize Rewards izbrisan iz moje naprave, hkrati pa sem prebral(a) <ph name="LINK_BEGIN"/>članek s koristnimi informacijami o ponastavitvi<ph name="LINK_END"/>.</translation>
 <translation id="3494964159182650590">Povzetek nagrad</translation>
 <translation id="2913994227901456490">Oglejte si vse elemente: [[numItems]]</translation>
@@ -445,7 +445,7 @@
 <translation id="5015443703424816075">Žeton</translation>
 <translation id="1634828734222219955">Skupno</translation>
 <translation id="3535654229833214438">Transakcije</translation>
-<translation id="8772672608371898774">Preverjena oseba Brave, ki objavlja vsebino</translation>
+<translation id="8772672608371898774">Preverjena oseba AI Wize, ki objavlja vsebino</translation>
 <translation id="5050370287908180130">Ogled mesečnega poročila za več podrobnosti</translation>
 <translation id="7853202427316060426">Dejavnost</translation>
 <translation id="7232682712743566408">Stanje nagrad</translation>
@@ -461,9 +461,9 @@
 <translation id="4450893287417543264">Ne prikazuj več</translation>
 <translation id="7642372245223412840">Poveži se z bitFlyer</translation>
 <translation id="6143701117592994599">Povezovanje AI Wize Rewards z računom bitFlyer vam bo omogočilo, da zaslužite BAT in dvignete svoj BAT zaslužek iz AI Wize Rewards.</translation>
-<translation id="4354564238172327160">Postanite avtor Brave!</translation>
+<translation id="4354564238172327160">Postanite avtor AI Wize!</translation>
 <translation id="4639659520811817892">Obiščite creators.brave.com, da se prijavite še danes in začnite pridobivati sredstva BAT od svojih navdušencev in sledilcev.</translation>
-<translation id="4816455138209470435">Brave podpira YouTube, Twitch, Vimeo in več!</translation>
+<translation id="4816455138209470435">AI Wize podpira YouTube, Twitch, Vimeo in več!</translation>
 <translation id="7404779623219601861">Unovčite BAT za darilne kartice</translation>
 <translation id="6215565499749144110">Z omrežjem TAP Network lahko svoj BAT unovčite za darilne kartice priljubljene blagovne znamke.</translation>
 <translation id="6074001074364432111">* Zahteva račun Uphold.</translation>
@@ -475,8 +475,8 @@
 <translation id="8863928195533744356">Začni klic</translation>
 <translation id="3651550649176056334">O vaših podatkih</translation>
 <translation id="1544192797660353713">Denarnica</translation>
-<translation id="616639131065447379">Dobrodošli v kripto denarnicah Brave</translation>
-<translation id="1740464057879304704">Kripto denarnice vam omogočajo delo s kriptovalutami in povezanimi sredstvi v podjetju Brave. Crypto Wallets podpira žetone Ethereum, kot sta ETH in BAT, pa tudi zbirateljske predmete in vam omogoča delo z Ðapps in drugimi pametnimi pogodbami. Vse to je namenjeno ljudem, ki poznajo Ethereum in druge blockchain sisteme - ali pa se veselijo učenja.</translation>
+<translation id="616639131065447379">Dobrodošli v kripto denarnicah AI Wize</translation>
+<translation id="1740464057879304704">Kripto denarnice vam omogočajo delo s kriptovalutami in povezanimi sredstvi v podjetju AI Wize. Crypto Wallets podpira žetone Ethereum, kot sta ETH in BAT, pa tudi zbirateljske predmete in vam omogoča delo z Ðapps in drugimi pametnimi pogodbami. Vse to je namenjeno ljudem, ki poznajo Ethereum in druge blockchain sisteme - ali pa se veselijo učenja.</translation>
 <translation id="4855440621031541830">Kripto denarnice uporabljajte samo, če sprejemate, da ste izključno sami odgovorni za vsa tveganja, povezana s tovrstno uporabo, in da podejetje AI Wize Software ne prevzema pravne ali škodne odgovornosti za morebite izgube, vključno z naključnimi in posledičnimi izgubami, do katerih pride pri uporabi.</translation>
 <translation id="3187473319809074178">Vse to je povsem ločeno od</translation>
 <translation id="8327818101454798856">Če želite podpreti svoja priljubljena spletna mesta, pojdite raje tja.</translation>
@@ -484,25 +484,25 @@
 <translation id="4894106830958548828">Razumem</translation>
 <translation id="326118736933420687">Ogledujete si stran WebTorrent</translation>
 <translation id="7534079972563542000">Neustavljive domene</translation>
-<translation id="4492298165410552103">Omogočim podporo neustavljivih domen v Brave-u?</translation>
-<translation id="9156229987230762013">Brave bo uporabljal Infuro za razreševanje domenskih imen .crypto (in tudi .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) na Unstoppable Domains. AI Wize pri tem prikrije vaš IP naslov. Če to omogočite, bo Infura videla le, da nekdo poskuša obiskati domeno, in ničesar drugega. Oglejte si <ph name="BEGIN_INFURA_TOU_LINK"/>pogoje uporabe<ph name="END_INFURA_TOU_LINK"/> in <ph name="BEGIN_INFURA_PRIVACY_LINK"/>politiko zasebnosti<ph name="END_INFURA_PRIVACY_LINK"/>družbe Infura.</translation>
+<translation id="4492298165410552103">Omogočim podporo neustavljivih domen v AI Wize-u?</translation>
+<translation id="9156229987230762013">AI Wize bo uporabljal Infuro za razreševanje domenskih imen .crypto (in tudi .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) na Unstoppable Domains. AI Wize pri tem prikrije vaš IP naslov. Če to omogočite, bo Infura videla le, da nekdo poskuša obiskati domeno, in ničesar drugega. Oglejte si <ph name="BEGIN_INFURA_TOU_LINK"/>pogoje uporabe<ph name="END_INFURA_TOU_LINK"/> in <ph name="BEGIN_INFURA_PRIVACY_LINK"/>politiko zasebnosti<ph name="END_INFURA_PRIVACY_LINK"/>družbe Infura.</translation>
 <translation id="6513892817556267573">Imenske storitve Ethereum</translation>
-<translation id="4335039108389860301">Omogočiti podporo imensko storitev Ethereum (ENS) v Brave-u?</translation>
-<translation id="4609973808011229683">Brave bo uporabljal Infuro za razreševanje domenskih imen .eth na Ethereum Name Service (ENS). AI Wize pri tem prikrije vaš IP naslov. Če to omogočite, bo Infura videla le, da nekdo poskuša obiskati domeno, in ničesar drugega. Oglejte si <ph name="BEGIN_INFURA_TOU_LINK"/>pogoje uporabe<ph name="END_INFURA_TOU_LINK"/> in <ph name="BEGIN_INFURA_PRIVACY_LINK"/>politiko zasebnosti<ph name="END_INFURA_PRIVACY_LINK"/> družbe Infura.</translation>
+<translation id="4335039108389860301">Omogočiti podporo imensko storitev Ethereum (ENS) v AI Wize-u?</translation>
+<translation id="4609973808011229683">AI Wize bo uporabljal Infuro za razreševanje domenskih imen .eth na Ethereum Name Service (ENS). AI Wize pri tem prikrije vaš IP naslov. Če to omogočite, bo Infura videla le, da nekdo poskuša obiskati domeno, in ničesar drugega. Oglejte si <ph name="BEGIN_INFURA_TOU_LINK"/>pogoje uporabe<ph name="END_INFURA_TOU_LINK"/> in <ph name="BEGIN_INFURA_PRIVACY_LINK"/>politiko zasebnosti<ph name="END_INFURA_PRIVACY_LINK"/> družbe Infura.</translation>
 <translation id="807404806385418949">Iskanje izven verige imenske storitve Ethereum</translation>
-<translation id="4049590838234508776">Omogočiti podporo za iskanje izven verige imenske storitve Ethereum (ENS) v Brave?</translation>
+<translation id="4049590838234508776">Omogočiti podporo za iskanje izven verige imenske storitve Ethereum (ENS) v AI Wize?</translation>
 <translation id="5944991147217767764">Ime domene .eth je shranjeno izven verige in bo razrešeno s strani prehoda tretje osebe. Če omogočite iskanje ENS izven verige, bodo prehodi tretjih oseb videli, da poskušate obiskati domeno .eth.<ph name="BEGIN_BRAVE_LEARN_MORE_LINK"/>Več o tem<ph name="END_BRAVE_LEARN_MORE_LINK"/>.</translation>
 <translation id="4047002754575891955">Nadaljujte z iskanjem izven verige</translation>
 <translation id="531747189990625622">Imenske storitve Solana</translation>
-<translation id="1090584614351290462">Omogočiti podporo imenski storitvi Solana (SNS) v Brave-u?</translation>
-<translation id="1026480261052976838">Brave bo za razrešitev domenskih imen .sol uporabljal tretjo osebo. AI Wize skriva vaš naslov IP. Če to omogočite, bo tretja oseba videla, da nekdo poskuša obiskati te domene .sol, vendar nič drugega. Za več informacij o tem, katere tretje osebe uporabljamo in kakšne so njihove politike zasebnosti, glejte našo <ph name="BEGIN_SNS_WIKI_LINK"/>stran za pomoč<ph name="END_SNS_WIKI_LINK"/>.</translation>
+<translation id="1090584614351290462">Omogočiti podporo imenski storitvi Solana (SNS) v AI Wize-u?</translation>
+<translation id="1026480261052976838">AI Wize bo za razrešitev domenskih imen .sol uporabljal tretjo osebo. AI Wize skriva vaš naslov IP. Če to omogočite, bo tretja oseba videla, da nekdo poskuša obiskati te domene .sol, vendar nič drugega. Za več informacij o tem, katere tretje osebe uporabljamo in kakšne so njihove politike zasebnosti, glejte našo <ph name="BEGIN_SNS_WIKI_LINK"/>stran za pomoč<ph name="END_SNS_WIKI_LINK"/>.</translation>
 <translation id="7378412287463452336">Nadaljujte z uporabo strežnika Infura</translation>
 <translation id="4388873516324656141">Nadaljujte z uporabo strežnika SNS</translation>
 <translation id="2356070529366658676">Vprašaj</translation>
 <translation id="59174027418879706">Omogočeno</translation>
 <translation id="2468755552460246661">Domena blokirana</translation>
 <translation id="6393849031898466746">To spletno mesto vam bo morda poskušalo slediti na drugih spletnih mestih</translation>
-<translation id="983774928604730749">Brave je preprečil nalaganje naslednje strani:</translation>
+<translation id="983774928604730749">AI Wize je preprečil nalaganje naslednje strani:</translation>
 <translation id="8629537573456243518">Ker ste zahtevali agresivno blokiranje sledilcev in oglasov, AI Wize blokira to spletno mesto pred prvo omrežno povezavo.</translation>
 <translation id="2459038234784107183">Ne opozarjaj me več o tej strani</translation>
 <translation id="8242426110754782860">Nadaljuj</translation>
@@ -510,7 +510,7 @@
 <translation id="8377779554871767775">Občutljivo spletno mesto</translation>
 <translation id="5396996252458181259">To spletno mesto morda vsebuje občutljivo vsebino.</translation>
 <translation id="8415427685483394219">Ali želite obiskati to spletno mesto v Nebeleženem načinu?</translation>
-<translation id="5754874269349119401">Brave vas želi zaščititi pri obisku občutljivih spletnih mest. Spletna mesta, ki jih obiščete v Nebeleženem načinu, ne bodo prikazana v vaši zgodovini brskanja in piškotki ne bodo shranjeni.</translation>
+<translation id="5754874269349119401">AI Wize vas želi zaščititi pri obisku občutljivih spletnih mest. Spletna mesta, ki jih obiščete v Nebeleženem načinu, ne bodo prikazana v vaši zgodovini brskanja in piškotki ne bodo shranjeni.</translation>
 <translation id="1307431692088049276">Ne sprašuj več</translation>
 <translation id="6329829767845427007">To lahko spremenite pozneje v nastavitvah AI Wize v razdelku Zasebnost in varnost</translation>
 <translation id="951201617124425694">Nadaljuj v Nebeleženem načinu</translation>
@@ -550,15 +550,15 @@
 <translation id="7691598647605453992">IPFS</translation>
 <translation id="1886162073868201257">Napaka pri zagonu storitve IPFS</translation>
 <translation id="5357895013476183089">IPFS ni povezan</translation>
-<translation id="7662930734991751511">Virov IPFS ni mogoče naložiti z uporabo lokalnega vozlišča IPFS Brave</translation>
+<translation id="7662930734991751511">Virov IPFS ni mogoče naložiti z uporabo lokalnega vozlišča IPFS AI Wize</translation>
 <translation id="1141556610026845297">Za nalaganje zahtevanih virov IPFS lokalnega vozlišča IPFS ni uspelo. Kliknite gumb "Nadaljuj", če želite namesto tega uporabiti javni prehod in se v prihodnosti samodejno vrniti na javni prehod.</translation>
 <translation id="3373798179786163193">Nadaljuj z javnim prehodom</translation>
 <translation id="1974060860693918893">Dodatno</translation>
 <translation id="9096577886148726047">Skrij napredno</translation>
-<translation id="182581792765792826">Brave ne more naložiti zahtevanih virov IPFS, ker se lokalno vozlišče IPFS AI Wize ni zagnalo ali ker trenutno ni na voljo nobenih povezanih enakovrednih. Če izberete »Nadaljuj«, se bo AI Wize samodejno vrnil na privzeti javni prehod, ko bo uporaba lokalnega vozlišča IPFS AI Wize neuspešna. To vedenje lahko kadar koli spremenite v nastavitvah Brave.</translation>
+<translation id="182581792765792826">AI Wize ne more naložiti zahtevanih virov IPFS, ker se lokalno vozlišče IPFS AI Wize ni zagnalo ali ker trenutno ni na voljo nobenih povezanih enakovrednih. Če izberete »Nadaljuj«, se bo AI Wize samodejno vrnil na privzeti javni prehod, ko bo uporaba lokalnega vozlišča IPFS AI Wize neuspešna. To vedenje lahko kadar koli spremenite v nastavitvah AI Wize.</translation>
 <translation id="8026038288183400906">Nastavitev IPFS</translation>
 <translation id="2058855456574089690">Nastavite svojo nastavitev IPFS</translation>
-<translation id="4780526507945807546">Uporabite lokalno vozlišče IPFS Brave</translation>
+<translation id="4780526507945807546">Uporabite lokalno vozlišče IPFS AI Wize</translation>
 <translation id="8148464361648742409">Uporabite javni prehod</translation>
 <translation id="5123478056123923857">IPFS (InterPlanetary File System) je javno omrežje za medsebojno shranjevanje in dostavo podatkov. Ta protokol se glede zasebnosti razlikuje od HTTP(S).</translation>
 <translation id="1216911189668016151">Vaš računalnik sodeluje v javnem omrežju, vendar so lahko vaš naslov IP in vsebina, ki jo zahtevate ali posredujete, izpostavljeni. Vsebina, ki jo zahtevate prek sistema IPFS, se preveri, preden vam je posredovana. Pri omrežnih zahtevah se ne smejo uporabljati nastavitve posredniškega strežnika brskalnika in nastavitve DNS.</translation>
@@ -630,11 +630,11 @@
 <translation id="885805571521218129">To odraža vaš predvideni razpon zaslužka za AI Wize Oglase ta mesec.</translation>
 <translation id="3863981251715594911">Kako deluje?</translation>
 <translation id="4782365133987903299">Za zahtevo imate še <ph name="DAYS"/></translation>
-<translation id="7931127789630755251">Zaslužite žetone za zasebne oglase, ki jih vidite v Brave</translation>
+<translation id="7931127789630755251">Zaslužite žetone za zasebne oglase, ki jih vidite v AI Wize</translation>
 <translation id="2278423362884506724">Podprite ustvarjalce vsebine in uporabite svoje žetone za nakup darilnih kartic, menjavo za druge valute in še več.</translation>
 <translation id="6278643716658443228">Nastavitve za nagrade Rewards</translation>
 <translation id="2862978891748913252">Izberite svojo državo</translation>
-<translation id="3717922248131893262">Če želite še naprej uporabljati nagrade Brave, izberite svojo državo, da vam bomo lahko prikazali prave možnosti in oglase za vašo regijo. <ph name="LINK_BEGIN"/>Politika zasebnosti<ph name="LINK_END"/></translation>
+<translation id="3717922248131893262">Če želite še naprej uporabljati nagrade AI Wize, izberite svojo državo, da vam bomo lahko prikazali prave možnosti in oglase za vašo regijo. <ph name="LINK_BEGIN"/>Politika zasebnosti<ph name="LINK_END"/></translation>
 <translation id="2965798296974325760">Začnite uporabljati Rewards</translation>
 <translation id="2221902203895354376">Na voljo je donacija za žeton!</translation>
 <translation id="2956070106555335453">Povzetek</translation>
@@ -662,7 +662,7 @@
 <translation id="6333727259565526314">Vaša nagrada je na poti.</translation>
 <translation id="39734939514946950">Vaš znesek nagrade</translation>
 <translation id="717952606991220586">Ups, nekaj je šlo narobe. Poskusite znova kasneje.</translation>
-<translation id="7210234701206674260">Brave Rewards ima težave. Poskusite znova kasneje.</translation>
+<translation id="7210234701206674260">AI Wize Rewards ima težave. Poskusite znova kasneje.</translation>
 <translation id="3358400027937159351">Prispevali ste <ph name="AMOUNT"/>.</translation>
 <translation id="1619753851206150396">Odjavljeni ste</translation>
 <translation id="3035648636451344428">To se dogaja občasno, da bi zagotovili varnost vašega računa <ph name="PROVIDER"/>. Ko boste odjavljeni, boste še naprej prejemali izplačila, vendar ne boste mogli videti svojega stanja ali pošiljati prispevkov z računa <ph name="PROVIDER"/>.</translation>
@@ -684,7 +684,7 @@
 <translation id="5931798071481566121">Nove prijave za nagrade AI Wize so v vaši regij trenutno onemogočene. Vendar lahko poskusite znova pozneje. <ph name="LINK_BEGIN"/>Več o tem<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">Juhu! Vse je pripravljeno!</translation>
 <translation id="6136350726756049410">Zdaj lahko prejmete nagrado za ogled oglasov. Splet pomagate narediti boljše mesto za vse. In to je super!</translation>
-<translation id="5547108999862247665">Kako delujejo Nagrade Brave?</translation>
+<translation id="5547108999862247665">Kako delujejo Nagrade AI Wize?</translation>
 <translation id="3970520675790340955">Izberite svojo državo, da vam lahko pokažemo prave možnosti in oglase za vašo regijo.</translation>
 <translation id="6945221475159498467">Izberi</translation>
 <translation id="3279158300746391749">Pritisnite ikono<ph name="BAT_ICON"/>BAT v vrstici URL za začetek.</translation>
@@ -699,7 +699,7 @@
 <translation id="4185473179105062442">Prejemanje BAT neposredno na kriptografski naslov za lastno hrambo</translation>
 <translation id="5802986777701714573">Dodali smo nov način prejemanja mesečnih nagrad BAT. Povežite račun enega od naših partnerjev ali uporabite novo možnost samostojnega skrbništva in začnite zaslužiti že zdaj.</translation>
 <translation id="86107454835395919">Nastavite kot mesečni prispevek</translation>
-<translation id="6621880242105464352">Brave pobere <ph name="FEE_PCT"/> poslanega zneska kot provizijo za obdelavo.</translation>
+<translation id="6621880242105464352">AI Wize pobere <ph name="FEE_PCT"/> poslanega zneska kot provizijo za obdelavo.</translation>
 <translation id="1420756770787071946">Podprite tega ustvarjalca</translation>
 <translation id="1483493594462132177">Pošlji</translation>
 <translation id="6632987674051304487">Pošlji z <ph name="PROVIDER"/></translation>
@@ -724,7 +724,7 @@
 <translation id="5379685283876547860">Prispevek je poslan!</translation>
 <translation id="7063168612616047608">Hvala, ker podpirate svoje najljubše ustvarjalce</translation>
 <translation id="1041398280582063935">Delite svojo podporo</translation>
-<translation id="4001190813297686107">Pravkar sem prispeval <ph name="AMOUNT"/> BAT z brskalnikom Brave! Oglejte si, kako lahko podprete tudi svoje najljubše ustvarjalce in spletna mesta: https://brave.com/rewards</translation>
+<translation id="4001190813297686107">Pravkar sem prispeval <ph name="AMOUNT"/> BAT z brskalnikom AI Wize! Oglejte si, kako lahko podprete tudi svoje najljubše ustvarjalce in spletna mesta: https://brave.com/rewards</translation>
 <translation id="1950340257946519340">Prišlo je do nepričakovane napake</translation>
 <translation id="2605703631071131439">Ponovno odprite ploščo s prispevki in poskusite znova.</translation>
 <translation id="8855543392451028706">Dobrodošli! Uporabniki lahko podprejo tega ustvarjalca vsebin tako, da mu pošljejo prispevke. To je način zahvale za ustvarjanje odlične vsebine.</translation>
@@ -820,7 +820,7 @@
 <translation id="4853960199138416955">Pogumna denarnica AI Wize trenutno ne podpira bitcoinovih NFT (vrstilcev). Pošiljanje BTC z naslova, ki ima ordinale, lahko povzroči nenameren prenos njegovih ordinalov.</translation>
 <translation id="9209024278910716955">Nakup za izbrano omrežje ni podprt</translation>
 <translation id="4982630604810554641">Iskanje domene ...</translation>
-<translation id="5467044307473123584">Brave podpira uporabo prehodov zunaj verige za razreševanje domen .eth.</translation>
+<translation id="5467044307473123584">AI Wize podpira uporabo prehodov zunaj verige za razreševanje domen .eth.</translation>
 <translation id="4896417414446851895">Kaže, da ste vnesli naslov ENS. Ta zahteva bo razrešena s strani prehoda tretje osebe, ta pa bo morda lahko videla vaš IP naslov in domeno.</translation>
 <translation id="8646078615727397565">Uporabite domeno ENS</translation>
 <translation id="1191686659164947414">Transakcija je lahko vnaprejšnja</translation>
@@ -830,10 +830,10 @@
 <translation id="4500473291496079954">Poteče čez</translation>
 <translation id="2236833281018938257">Naslov denarnice ali URL</translation>
 <translation id="928500657730628112">Naslov denarnice</translation>
-<translation id="6812967455478797345">Brave uporablja <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> kot zbiralnik DEX.</translation>
+<translation id="6812967455478797345">AI Wize uporablja <ph name="LINK_BEFORE"/><ph name="SWAP_PROVIDER"/><ph name="LINK_AFTER"/> kot zbiralnik DEX.</translation>
 <translation id="151946611346774041">0x bo obdelal naslov Ethereum in naslov IP za izvedbo transakcije (vključno s pridobivanjem ponudb). 0x bo te podatke uporabil SAMO za namene obdelave transakcij.</translation>
 <translation id="7465227658364622464">Jupiter bo obdelal naslov Solana in naslov IP za izpolnitev transakcije (vključno s pridobivanjem ponudb). Jupiter bo te podatke uporabil SAMO za namene obdelave transakcij.</translation>
-<translation id="712738518060477110">Ponudba vključuje <ph name="SWAP_FEE_PERCENTAGE"/> pristojbino za Brave.</translation>
+<translation id="712738518060477110">Ponudba vključuje <ph name="SWAP_FEE_PERCENTAGE"/> pristojbino za AI Wize.</translation>
 <translation id="8368540604723748428">Preveč decimalnih mest</translation>
 <translation id="6575120282593094155">Nimate računa <ph name="ACCOUNT_TYPE"/>. Ga želite ustvariti?</translation>
 <translation id="1201402288615127009">Naprej</translation>
@@ -1069,7 +1069,7 @@
 <translation id="1658834457013045127">Za vedno</translation>
 <translation id="2770851145415891830">Zaznane so obstoječe kripto denarnice</translation>
 <translation id="2237759620789871865">Če bi raje preskočili uvoz in obdržali staro izkušnjo s kripto denarnicami, se pomaknite do <ph name="LINK_BEFORE"/>Nastavitev<ph name="LINK_AFTER"/> brskalnika AI Wize in spremenite privzeto nazaj na Crypto denarnice. Prav tako lahko uvozite, preizkusite novo AI Wize denarnico in kadar koli spremenite nazaj.</translation>
-<translation id="5590175005414413980">Vnesite geslo za obstoječe kripto denarnice za uvoz v denarnico Brave. Uživajte v hitrejšem in varnejšem načinu upravljanja kripto sredstev in interakcije z aplikacijami Web3 DApps.</translation>
+<translation id="5590175005414413980">Vnesite geslo za obstoječe kripto denarnice za uvoz v denarnico AI Wize. Uživajte v hitrejšem in varnejšem načinu upravljanja kripto sredstev in interakcije z aplikacijami Web3 DApps.</translation>
 <translation id="880619123281809987">Vnesite geslo za kripto denarnice</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> povezana</translation>
 <translation id="7051244143160304048"><ph name="DEVICE_NAME"/> prekinjena</translation>
@@ -1139,7 +1139,7 @@
 <translation id="8464365289405373974">Dodajte naslovnika</translation>
 <translation id="4884792073752467460">Neveljaven naslov prejemnika</translation>
 <translation id="8585995109882455949">Kako naj poiščem pravi naslov?</translation>
-<translation id="8395402412470376435">Brave preverja in preprečuje, da bi uporabniki zaradi nepravilne uporabe velikih in malih začetnic sredstva pošiljali na napačen naslov. Gre za postopek "kontrolne vsote", s katerim preverimo, ali gre za veljaven naslov Ethereum.</translation>
+<translation id="8395402412470376435">AI Wize preverja in preprečuje, da bi uporabniki zaradi nepravilne uporabe velikih in malih začetnic sredstva pošiljali na napačen naslov. Gre za postopek "kontrolne vsote", s katerim preverimo, ali gre za veljaven naslov Ethereum.</translation>
 <translation id="4583433813614292221">1. Obiščite</translation>
 <translation id="8061317754447191238">Obiščite etherscan in prilepite naslov denarnice, na katero želite poslati žetone. Nato vstopite</translation>
 <translation id="5393164213211430081">2. Kopirajte in vnesite naslov ETH</translation>
@@ -1387,7 +1387,7 @@
 <translation id="7084181009966710506">Ustvarjanje denarnice...</translation>
 <translation id="6782556046178425980">Preden začnete varnostno kopirati denarnico</translation>
 <translation id="7119749028647909394">Beseda fraza z dolžino med 12 in 24 besed za obnovitev je zasebni ključ, ki ga lahko uporabite za ponovni dostop do denarnice, če izgubite povezano(-e) napravo(-e). Shranjujte ga na varnem mestu in v točno takšnem vrstnem redu, kot je prikazan spodaj.</translation>
-<translation id="3259018319025894691">Brave ne more dostopati do skrivne obnovitvene besedne zveze. Shranjujte jo na varnem in jo nikoli ne delite z nikomer drugim.</translation>
+<translation id="3259018319025894691">AI Wize ne more dostopati do skrivne obnovitvene besedne zveze. Shranjujte jo na varnem in jo nikoli ne delite z nikomer drugim.</translation>
 <translation id="7650284207965419234"><ph name="TAG_BEFORE"/>Pomembno: <ph name="TAG_AFTER"/>Nikoli ne delite svoje besedne zveze za obnovitev. Vsakdo s to besedno zvezo lahko za vedno vzame vaše premoženje.</translation>
 <translation id="7509948206688764960">Varnostno kopirajte besedno zvezo za obnovitev denarnice</translation>
 <translation id="8052898407431791827">Kopirano v odložišče</translation>
@@ -1408,7 +1408,7 @@
 <translation id="7992766987062040279">rd</translation>
 <translation id="2295726992010694229">th</translation>
 <translation id="8241405611628876973">Čestitke! Vaša AI Wize Wallet je pripravljena za uporabo!</translation>
-<translation id="6828327990705355767">Za dostop do denarnice preprosto kliknite ikono denarnice v zgornjem desnem kotu katerega koli okna brskalnika Brave.</translation>
+<translation id="6828327990705355767">Za dostop do denarnice preprosto kliknite ikono denarnice v zgornjem desnem kotu katerega koli okna brskalnika AI Wize.</translation>
 <translation id="396152018598329740">Kako uporabljati kripto denarnico?</translation>
 <translation id="7512061585041489067">Katera je najboljša kripto denarnica?</translation>
 <translation id="1342755158522323177">Kaj je kripto brskalnik?</translation>
@@ -1422,7 +1422,7 @@
 <translation id="3551682252653406110">Če želite povezati denarnico, ki jo že imate, boste morda morali vnesti obnovitveno besedno zvezo. Trenutno podpiramo obnovitev/uvoz iz denarnic Ethereum in Solana.</translation>
 <translation id="346929827081904572">Obnovi iz semenske besedne zveze</translation>
 <translation id="5645597512426471834">12-24 besed</translation>
-<translation id="8158505311297755780">Vnesite besedno zvezo za obnovitev denarnice Brave, ki obsega od 12 do 24 besed.</translation>
+<translation id="8158505311297755780">Vnesite besedno zvezo za obnovitev denarnice AI Wize, ki obsega od 12 do 24 besed.</translation>
 <translation id="5419707890586509000">Uvoz iz MetaMask</translation>
 <translation id="2265945811107390939">Uporabite svoje geslo MetaMask, da uvozite svojo semensko besedno zvezo</translation>
 <translation id="7060680423657442298">Nič hudega, ustvaril bom novo denarnico</translation>
@@ -1436,7 +1436,7 @@
 <translation id="7781090633800450517">Prebral sem in se strinjam s <ph name="LINK_BEFORE"/>pogoji uporabe<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">Kupite kripto</translation>
 <translation id="3887541341068007345">Preverjanje za razširitev denarnice ...</translation>
-<translation id="3567994771568272606">Uvoz iz podedovanih kripto denarnic Brave</translation>
+<translation id="3567994771568272606">Uvoz iz podedovanih kripto denarnic AI Wize</translation>
 <translation id="8407091560429310499">Izberite sredstvo</translation>
 <translation id="756590380936155533">Če želite dokončati nakup za <ph name="ASSET_TICKER"/>, izberite enega od naših partnerjev</translation>
 <translation id="7880860489474966219">Po zaključku bodo vaša sredstva prenesena v vašo AI Wize Wallet</translation>
@@ -1492,7 +1492,7 @@
 <translation id="2612436523196658045">Naslov ETH bo preveden v naslov Filecoin.</translation>
 <translation id="3282354360699748542"><ph name="FILECOIN_ADDRESS"/>naslov v imeniku Filecoin bo uporabljen za transakcijo.</translation>
 <translation id="2540568096903252632">Za nadaljevanje vnesite geslo</translation>
-<translation id="3356580495013324916">Vnesite geslo za denarnico Brave, da jo začnete varnostno kopirati.</translation>
+<translation id="3356580495013324916">Vnesite geslo za denarnico AI Wize, da jo začnete varnostno kopirati.</translation>
 <translation id="7545441766078366279">Potrdi <ph name="TOKEN"/></translation>
 <translation id="3115303896544539834">Prenizko stanje <ph name="TOKEN"/></translation>
 <translation id="3453833142586986467">Izberite žeton</translation>
@@ -1512,7 +1512,7 @@
 <translation id="2538996898605796431">Vpliv na ceno</translation>
 <translation id="8007404171238546456">Minimalni prejemek po spremembi</translation>
 <translation id="767199001998615704">Strošek omrežja</translation>
-<translation id="7057870207229052478">Strošek omrežja Brave</translation>
+<translation id="7057870207229052478">Strošek omrežja AI Wize</translation>
 <translation id="81116374028657878">Protokolarna pristojbina</translation>
 <translation id="3624518972158401291">Brezplačno</translation>
 <translation id="5038255447967558645">Ponudnik likvidnosti</translation>
@@ -1529,14 +1529,14 @@
 <translation id="6778140392042462129">Menjave</translation>
 <translation id="6173494033320397682">Samo neposredna pot</translation>
 <translation id="2440960581098655899">Zagotavlja izključno neposredno usmerjanje in hkrati onemogoča trgovanje z razdeljenimi naročili</translation>
-<translation id="6245314729809503023">Brave za vmesno usmerjanje za namen optimizacije delovanja uporablja 60 najboljših žetonov</translation>
+<translation id="6245314729809503023">AI Wize za vmesno usmerjanje za namen optimizacije delovanja uporablja 60 najboljših žetonov</translation>
 <translation id="2379187373676242615"><ph name="VALUE"/>% ceneje kot CoinGecko</translation>
 <translation id="5351867352310722022">V okviru <ph name="VALUE"/>% od CoinGecko</translation>
 <translation id="7695501918490163821"><ph name="VALUE"/>% dražje kot CoinGecko</translation>
 <translation id="7561262633951061138">Najboljše</translation>
 <translation id="8060029310790625334">Središče za pomoč</translation>
 <translation id="3143110700666266545">Ta aplikacija uporablja naslednje API-je tretjih oseb:</translation>
-<translation id="163536108506359457">Brave Swap uporablja <ph name="AGGREGATOR"/> kot agregator DEX za podprta <ph name="NETWORKS"/>omrežja. <ph name="AGGREGATOR"/>bo obdelal<ph name="NETWORK"/> naslov denarnice in naslov IP za izvedbo transakcije (vključno s pridobivanjem ponudb). <ph name="AGGREGATOR"/>bo te podatke uporabil SAMO za namene obdelave transakcij.</translation>
+<translation id="163536108506359457">AI Wize Swap uporablja <ph name="AGGREGATOR"/> kot agregator DEX za podprta <ph name="NETWORKS"/>omrežja. <ph name="AGGREGATOR"/>bo obdelal<ph name="NETWORK"/> naslov denarnice in naslov IP za izvedbo transakcije (vključno s pridobivanjem ponudb). <ph name="AGGREGATOR"/>bo te podatke uporabil SAMO za namene obdelave transakcij.</translation>
 <translation id="1847885264294023691">Kliknite tukaj za <ph name="AGGREGATOR"/> pravilnik o zasebnosti.</translation>
 <translation id="644984757357042735">Zahtevano je omrežje</translation>
 <translation id="132243864024778443">Zahtevano je ime žetona</translation>
@@ -1548,11 +1548,11 @@
 <translation id="2227702748249086756">Približnih ocen plačil ni možno pridobiti</translation>
 <translation id="6580621526400120372">Zakaj nekateri NFT-ji niso primerni?</translation>
 <translation id="620930608106217992">Nekateri podatki NFT so shranjeni na centraliziranih strežnikih, kot so AWS, Google Cloud itd. V tem primeru vaših podatkov NFT ni mogoče pripeti na omrežje IPFS.</translation>
-<translation id="4637031024914696767">Če omogočite IPFS v Brave, bodo vaši NFT-ji samodejno pripeti. To je najboljši način za varno varnostno kopiranje vaših NFT-jev.</translation>
+<translation id="4637031024914696767">Če omogočite IPFS v AI Wize, bodo vaši NFT-ji samodejno pripeti. To je najboljši način za varno varnostno kopiranje vaših NFT-jev.</translation>
 <translation id="2319971828691864975">Začnete uporabljati IPFS</translation>
 <translation id="7906328323880284538">Najvarnejši način gostovanja NFT-jev</translation>
 <translation id="214349569547787359">Omogočite IPFS v AI Wize za samodejno varnostno kopiranje vaših NFT-jev</translation>
-<translation id="4819588096619503180">IPFS je omrežje za shranjevanje, ki ga vodi skupnost, kot trdi disk, ki ga lahko uporablja vsak. Toda namesto da bi jih nadzoroval en organ, na tisoče posameznikov sodeluje pri gostovanju vsebine na IPFS. Ko nekaj »pripnete« na IPFS, zagotovite, da je vsaj ena kopija te vsebine varno shranjena. In dokler ima ena oseba kopijo, datoteka ne more nikoli izginiti.<ph name="NEWLINE"/>Če omogočite IPFS v Brave, bodo vaši NFT-ji samodejno pripeti. To je najboljši način za varno varnostno kopiranje vaših NFT-jev.</translation>
+<translation id="4819588096619503180">IPFS je omrežje za shranjevanje, ki ga vodi skupnost, kot trdi disk, ki ga lahko uporablja vsak. Toda namesto da bi jih nadzoroval en organ, na tisoče posameznikov sodeluje pri gostovanju vsebine na IPFS. Ko nekaj »pripnete« na IPFS, zagotovite, da je vsaj ena kopija te vsebine varno shranjena. In dokler ima ena oseba kopijo, datoteka ne more nikoli izginiti.<ph name="NEWLINE"/>Če omogočite IPFS v AI Wize, bodo vaši NFT-ji samodejno pripeti. To je najboljši način za varno varnostno kopiranje vaših NFT-jev.</translation>
 <translation id="9160750213078764355">Oglejte si, kateri od mojih NFT-jev so primerni</translation>
 <translation id="6241155642582182934">Omogočite IPFS v AI Wize za samodejno varnostno kopiranje vaših NFT-jev za dodatno varnost.</translation>
 <translation id="654964147165509548">NFT-ji so pripeti na vaše lokalno vozlišče IPFS.</translation>
@@ -1584,7 +1584,7 @@
 <translation id="6657860743511185539">NFT bo odstranjen iz AI Wize Wallet, vendar bo ostal v verigi blokov. Če ga odstranite in si nato premislite, ga boste morali znova uvoziti ročno.</translation>
 <translation id="849880459530751909">Uredi NFT</translation>
 <translation id="5925465310724910998">Želite, da se vaši NFT-ji samodejno prikažejo?</translation>
-<translation id="5400791731776892411">Brave Wallet lahko uporabi storitev tretje osebe za samodejni prikaz vaših NFT-jev. AI Wize bo za zagotavljanje te storitve delil vaše naslove denarnice s <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/>. <ph name="BEFORE_URL"/>Več o tem.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">AI Wize Wallet lahko uporabi storitev tretje osebe za samodejni prikaz vaših NFT-jev. AI Wize bo za zagotavljanje te storitve delil vaše naslove denarnice s <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/>. <ph name="BEFORE_URL"/>Več o tem.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">Da, nadaljuj</translation>
 <translation id="4733761855978444079">Ne hvala, to bom naredil/a ročno</translation>
 <translation id="353620741952662530">Ni NFT-jev za prikaz</translation>
@@ -1603,7 +1603,7 @@
 <translation id="1554316484739382186">Porabnik: <ph name="ADDRESS"/></translation>
 <translation id="4265415116535094892">Zebpay</translation>
 <translation id="3026353765778463291"><ph name="PROVIDER"/> račun</translation>
-<translation id="5360752485622434494">Brave Nagrade BAT vklopljene
+<translation id="5360752485622434494">AI Wize Nagrade BAT vklopljene
 <ph name="PROVIDER"/></translation>
 <translation id="429061011725027672">Trenutno ste odjavljeni iz
 <ph name="PROVIDER"/>. Prijavite se za ogled stanja.</translation>
@@ -1624,7 +1624,7 @@
 <translation id="168533464844528463">Pomoč pri odkrivanju poskusov goljufanja</translation>
 <translation id="780301667611848630">Ne, hvala</translation>
 <translation id="3435896845095436175">Omogoči</translation>
-<translation id="7269757150305059881">Brave pri zagotavljanju te storitve sodeluje s partnerjem. Če to omogočite, se strinjate, da lahko nepodpisane transakcije in njihove naslove URL DApp delite z našim partnerjem.</translation>
+<translation id="7269757150305059881">AI Wize pri zagotavljanju te storitve sodeluje s partnerjem. Če to omogočite, se strinjate, da lahko nepodpisane transakcije in njihove naslove URL DApp delite z našim partnerjem.</translation>
 <translation id="7790932700072432983">Spremeni kadar koli v <ph name="TAG_BEFORE"/>Nastavitvah<ph name="TAG_AFTER"/></translation>
 <translation id="8688672835843460752">Na voljo</translation>
 <translation id="5296640085393149413">Sredstva, ki so vam na voljo za uporabo.</translation>
@@ -1641,7 +1641,7 @@
 <translation id="1671503397662036257">Stanje povezave Tor</translation>
 <translation id="6024292492796847324">Napredek pri inicializaciji Tor</translation>
 <translation id="8300751939969131609">Vklopite novice AI Wize in nikoli ne zamudite zgodbe</translation>
-<translation id="7758665172236842395">Sledite svojim priljubljenim virom v enem samem viru. Preprosto odprite zavihek v Brave, se pomaknite navzdol in ... tukaj je!</translation>
+<translation id="7758665172236842395">Sledite svojim priljubljenim virom v enem samem viru. Preprosto odprite zavihek v AI Wize, se pomaknite navzdol in ... tukaj je!</translation>
 <translation id="2376542729617592331">Novice AI Wize podpirajo oglasi s popolnoma zasebnimi in anonimiziranimi oglasi. <ph name="LINK_START"/>Izvedite več.<ph name="LINK_END"/>.</translation>
 <translation id="1765217911817124376">Vklopite AI Wize novice</translation>
 <translation id="6265592479622441247">Nazaj na <ph name="BEGIN_BOLD"/>nadzorno ploščo<ph name="END_BOLD"/></translation>
@@ -1666,7 +1666,7 @@
 <translation id="2665462122884195298">Vaš feed je prazen</translation>
 <translation id="8461269982440806387">Spremljajte založnike in kanale, da jih boste videli v svojih feedih.</translation>
 <translation id="1685574186123115251">Dodajte vire vsebine</translation>
-<translation id="939305735877869636">Brave</translation>
+<translation id="939305735877869636">AI Wize</translation>
 <translation id="6261915643960475695">Posel</translation>
 <translation id="8265589281845759879">Avtomobili</translation>
 <translation id="7577010593836079522">Kultura</translation>
@@ -1778,7 +1778,7 @@
 <translation id="4276265845501430443">Pokaži pomoč</translation>
 <translation id="8104889575691864804">Pokaži meni aplikacije</translation>
 <translation id="3215896810006717687">Pregled orodij za razvijalce</translation>
-<translation id="1761865962743604547">Nadgradi Brave</translation>
+<translation id="1761865962743604547">Nadgradi AI Wize</translation>
 <translation id="7012611213801651252">Prikaži meni z avatarji</translation>
 <translation id="6263048902976129908">Preklop orodij za razvijalce</translation>
 <translation id="1386786836007298307">Preklopi celozaslonsko orodno vrstico</translation>
@@ -1809,8 +1809,8 @@
 <translation id="6938154350999993769">Preklop načina za odpravljanje napak v tabličnem računalniku</translation>
 <translation id="5854741377790551127">Odpravljanje napak v drevesu pogleda tiskanja</translation>
 <translation id="8199130368328220410">Preklopi podnapise v živo</translation>
-<translation id="9055778350624039365">Prikaži ploščo Denarnice Brave</translation>
-<translation id="2548853975094084059">Zapri ploščo Denarnice Brave</translation>
+<translation id="9055778350624039365">Prikaži ploščo Denarnice AI Wize</translation>
+<translation id="2548853975094084059">Zapri ploščo Denarnice AI Wize</translation>
 <translation id="3765209580429944524">Prikaži ploščo AI Wize VPN</translation>
 <translation id="5989009326527614692">Preklopi gumb v orodni vrstici AI Wize VPN</translation>
 <translation id="7334332308395652803">Preklopite ikono v pladnju AI Wize VPN</translation>
@@ -1887,7 +1887,7 @@
 <translation id="1223498995510244364">Povzemi</translation>
 <translation id="7491773233732232424">O Leu</translation>
 <translation id="5208096220706490232">AI Wize Chat je zasebni pametni pomočnik z umetno inteligenco, ki izboljša vašo uporabo interneta. AI Wize Chat je brezplačen z omejenim dostopom. AI Wize AI Wize Chat Premium ponuja več modelov, višje omejitve in naročnikom omogoča zgodnji dostop do novih funkcij. Privzeti model za vse uporabnike je trenutno Mixtral 8x7B. Za več<ph name="LINK_BEFORE"/>podrobnosti glejte
-<ph name="LINK_AFTER"/> wiki Brave.</translation>
+<ph name="LINK_AFTER"/> wiki AI Wize.</translation>
 <translation id="7189603330209995455">Ko Leu zastavite vprašanje, lahko privzeto pošlje in uporabi vsebino spletne strani, ki si jo ogledujete, ali besedilo, ki ga označite na strani, in ga pošlje AI Wize Leu, da zagotovi odgovor. Natančnost odgovorov ni zagotovljena in lahko vsebujejo netočne, zavajajoče ali napačne informacije. AI Wize Chat uporablja podatke iz iskalnika AI Wize Search za izboljšanje kakovosti odgovorov. Ne pošiljajte občutljivih ali zasebnih informacij in bodite previdni pri vseh odgovorih, povezanih z zdravjem, financami, osebno varnostjo in podobno. AI Wize Chatve možnosti lahko kadar koli prilagodite v nastavitvah. Pojdite v Nastavitve &gt; AI Wize Chat.</translation>
 <translation id="3038772045018370764">AI Wize Chat ne zbira identifikatorjev, kot je vaš naslov IP, ki bi jih lahko povezali z vami. Za usposabljanje modelov umetne inteligence se ne uporabljajo nobeni podatki in modeli umetne inteligence ne hranijo osebnih podatkov (razen modela Anthropic, ki podatke hrani 30 dni, preden jih izbriše). Za več informacij glejte<ph name="LINK_BEFORE"/>
 <ph name="LINK_AFTER"/> pravilnik o zasebnosti.</translation>
@@ -1899,8 +1899,8 @@
 <translation id="1167803637855350748">Pri povezovanju z AI Wize Chatm je prišlo do težave z omrežjem, preverite povezavo in poskusite znova.</translation>
 <translation id="5095201428204952524">AI Wize Chat je trenutno preveč zaposlen. Poskusite znova čez nekaj minut.</translation>
 <translation id="7144878232160441200">Poskusi znova</translation>
-<translation id="2505565639170795978">Živjo, jaz sem AI Wize Chat. Sem v celoti gostujoči pomočnik AI pri Brave. Poganja me Llama 13B, model, ki ga je ustvarila Meta, da je zmogljiv in uporaben v številnih primerih uporabe.</translation>
-<translation id="8030558642460377506">Živjo, sem AI Wize Chat. Sem popolnoma gostujoči pomočnik z umetno inteligenco podjetja Brave. Poganja me model Mixtral 8x7B, ki ga je ustvarila družba Mistral AI za opravljanje naprednih nalog.</translation>
+<translation id="2505565639170795978">Živjo, jaz sem AI Wize Chat. Sem v celoti gostujoči pomočnik AI pri AI Wize. Poganja me Llama 13B, model, ki ga je ustvarila Meta, da je zmogljiv in uporaben v številnih primerih uporabe.</translation>
+<translation id="8030558642460377506">Živjo, sem AI Wize Chat. Sem popolnoma gostujoči pomočnik z umetno inteligenco podjetja AI Wize. Poganja me model Mixtral 8x7B, ki ga je ustvarila družba Mistral AI za opravljanje naprednih nalog.</translation>
 <translation id="2489317965865266353">Živjo, jaz sem AI Wize Chat. Posreduje me AI Wize in poganja Claude Instant, model, ki ga je ustvaril Anthropic za opravljanje pogovorov in obdelave besedil.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/> od<ph name="COMPANY_NAME"/></translation>
 <translation id="8944485226638699751">Omejeno</translation>
@@ -1951,7 +1951,7 @@
 <translation id="3185367320601718531">Pogovor in ustvarjanje besedila</translation>
 <translation id="3965507912994218570">Nastavitve Lea</translation>
 <translation id="1037324977127422019">Živjo, jaz sem AI Wize Chat!</translation>
-<translation id="8930348081963284873">Inteligentni pomočnik, ki ga poganja AI, vgrajen neposredno v Brave.</translation>
+<translation id="8930348081963284873">Inteligentni pomočnik, ki ga poganja AI, vgrajen neposredno v AI Wize.</translation>
 <translation id="3528849152231418380">Potrebujete pomoč pri spletnem mestu?</translation>
 <translation id="1558192229187362674">Lahko vam pomagam pri povzemanju člankov, razširitvi vsebine spletnega mesta in še veliko več.</translation>
 <translation id="861953757568623294">Lahko vam pomagam pri povzemanju člankov, razširitvi vsebine spletnega mesta in še veliko več. Niste prepričani, kje začeti? Poskusite to:</translation>
@@ -1962,11 +1962,11 @@
 <translation id="8599503173207256429">Preklopite in vprašajte o tej strani. Njena vsebina bo poslana AI Wize AI Wize Chat skupaj z vašimi sporočili.</translation>
 <translation id="318819763888864209">Vse naročnine se samodejno podaljšajo, vendar jih lahko kadar koli pred podaljšanjem prekličete.</translation>
 <translation id="6303294677342628402">Ščiti</translation>
-<translation id="8458987127502506209">Omogoči zaščito Ščiti Brave</translation>
+<translation id="8458987127502506209">Omogoči zaščito Ščiti AI Wize</translation>
 <translation id="7509914170164691086">Ščit je VKOPLJEN <ph name="LINK_BEFORE"/>za<ph name="LINK_AFTER"/></translation>
 <translation id="260764436039299868">Ščit je IZKLOPLJEN <ph name="LINK_BEFORE"/>za<ph name="LINK_AFTER"/></translation>
 <translation id="3907405056878805220">Če se zdi, da je to spletno mesto pokvarjeno, poskusite Shields down.
- <ph name="LINK_BEFORE"/>Opomba: to lahko zmanjša zaščito zasebnosti Brave.<ph name="LINK_AFTER"/></translation>
+ <ph name="LINK_BEFORE"/>Opomba: to lahko zmanjša zaščito zasebnosti AI Wize.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Sledilniki, oglasi in vse drugo so blokirani <ph name="LINK_BEFORE"/>Več o tem<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Nimate zaščite AI Wize Shields <ph name="LINK_BEFORE"/>Več o tem<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">Napredne nastavitve</translation>
@@ -1999,25 +1999,25 @@
 <translation id="2570787596946026998">Povezava samo s HTTPS</translation>
 <translation id="1992750560347846445">Prijavite spletno mesto</translation>
 <translation id="2387532482048804818">Povejte nam, če je spletno mesto z vklopljenimi ščiti delovalo pravilno.</translation>
-<translation id="3795015906457257780">To spletno mesto si ogledujete brez zaščite zasebnosti družbe Brave.</translation>
+<translation id="3795015906457257780">To spletno mesto si ogledujete brez zaščite zasebnosti družbe AI Wize.</translation>
 <translation id="7194012750329511146">Ščit AI Wize 
 <ph name="NUMBER"/> Blokirani sledilniki, oglasi in drugo</translation>
 <translation id="4292121526390005808">Blokirane skripte</translation>
 <translation id="5046271170844958713">Dovoljene skripte</translation>
 <translation id="264682546981571963">Ste naveličani obvestil o soglasju za piškotke?</translation>
-<translation id="4986297793092101884">Brave že blokira piškotke tretjih oseb. Prav tako lahko blokiramo obvestila o soglasju za piškotke.</translation>
+<translation id="4986297793092101884">AI Wize že blokira piškotke tretjih oseb. Prav tako lahko blokiramo obvestila o soglasju za piškotke.</translation>
 <translation id="535688588637568715">Da, blokiraj obvestila o soglasju za piškotke</translation>
 <translation id="2808175374672429053">Nadomestni znaki za AI Wize Shields niso dovoljeni.</translation>
 <translation id="1255651682305188158">{BLOCKED_COUNT, plural,
-=0 {Brave ščiti so blokirali <ph name="COMPANY_LIST"/> sledilca na <ph name="SITE_URL"/> }
-=1 {Brave ščiti so blokirali <ph name="COMPANY_LIST"/> in 1 drugega sledilca na <ph name="SITE_URL"/>}
- other {Brave ščiti so blokirali <ph name="COMPANY_LIST"/> in {BLOCKED_COUNT} druge sledilce na <ph name="SITE_URL"/>}
+=0 {AI Wize ščiti so blokirali <ph name="COMPANY_LIST"/> sledilca na <ph name="SITE_URL"/> }
+=1 {AI Wize ščiti so blokirali <ph name="COMPANY_LIST"/> in 1 drugega sledilca na <ph name="SITE_URL"/>}
+ other {AI Wize ščiti so blokirali <ph name="COMPANY_LIST"/> in {BLOCKED_COUNT} druge sledilce na <ph name="SITE_URL"/>}
  }</translation>
 <translation id="7630425922041907505">{BLOCKED_COUNT, plural,
-=1 {Brave ščiti so blokirali 1 sledilca na <ph name="SITE_URL"/> }
-other {Brave ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL"/>}
+=1 {AI Wize ščiti so blokirali 1 sledilca na <ph name="SITE_URL"/> }
+other {AI Wize ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL"/>}
  }</translation>
-<translation id="2540598191934725677">Kliknite ikono Brave, da si ogledate zaščito AI Wize Shields.</translation>
+<translation id="2540598191934725677">Kliknite ikono AI Wize, da si ogledate zaščito AI Wize Shields.</translation>
 <translation id="6294662480095808915">Zasebnost. Privzeto.</translation>
 <translation id="4366423156486478559">Zagotovite si zaščito AI Wize za vsako povezavo, na katero kliknete. Preprosto nastavite brskalnik AI Wize kot privzet in brskajte. Zasebno.</translation>
 <translation id="3830912418080848377">Uvozite nastavitve</translation>
@@ -2028,14 +2028,14 @@ other {Brave ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL
 <translation id="2453860139492968684">Dokončaj</translation>
 <translation id="2273851479262317744">Nastavite AI Wize kot privzeti brskalnik</translation>
 <translation id="5037676449506322593">Izberite vse</translation>
-<translation id="5148943178722443958">Pomagajte izboljšati Brave.</translation>
+<translation id="5148943178722443958">Pomagajte izboljšati AI Wize.</translation>
 <translation id="1097073572755862978">Pošljite diagnostična poročila, če pride do okvare ali zamrznitve. <ph name="LINK_BEFORE"/>Več o tem.<ph name="LINK_AFTER"/></translation>
-<translation id="5099408825243658796">Delite popolnoma zasebne in anonimne vpoglede v izdelek o tem, katere funkcije uporabljajo uporabniki sistema Brave. <ph name="LINK_BEFORE"/>Več o tem.<ph name="LINK_AFTER"/></translation>
+<translation id="5099408825243658796">Delite popolnoma zasebne in anonimne vpoglede v izdelek o tem, katere funkcije uporabljajo uporabniki sistema AI Wize. <ph name="LINK_BEFORE"/>Več o tem.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">Namestitev končana</translation>
 <translation id="3141206739023333979">Te izbire lahko kadar koli spremenite v AI Wize na povezavi<ph name="LINK_BEFORE1"/>brave://settings/privacy<ph name="LINK_AFTER2"/>.</translation>
 <translation id="8321985064212130832">Preberite našo celotno <ph name="LINK_BEFORE"/>politiko zasebnosti<ph name="LINK_AFTER"/></translation>
 <translation id="2801098717523961746">Izberite temo</translation>
-<translation id="6262510489122516114">To lahko kadar koli spremenite v nastavitvah sistema Brave.</translation>
+<translation id="6262510489122516114">To lahko kadar koli spremenite v nastavitvah sistema AI Wize.</translation>
 <translation id="546481172717459539">Ujemanje nastavitev sistema</translation>
 <translation id="7799817062559422778">Svetli način</translation>
 <translation id="4117637339509843559">Temni način</translation>
@@ -2051,7 +2051,7 @@ other {Brave ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL
 <translation id="8703188411226330709">Začni brezplačni preizkus</translation>
 <translation id="1024255913009642477">Ste že kupili VPN?</translation>
 <translation id="8814357473522731680">Poganja</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="5747552184818312860">Poteče</translation>
 <translation id="434523916398030617">Obrnite se na tehnično podporo</translation>
 <translation id="1116694919640316211">O možnostih</translation>
@@ -2067,7 +2067,7 @@ other {Brave ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL
 <translation id="427718751211990320">Datum poteka veljavnosti poverilnic je potekel.</translation>
 <translation id="8670619630771851260">Poverilnic ni mogoče naložiti.</translation>
 <translation id="1594643509610625766">Žeton ni več veljaven.</translation>
-<translation id="8373427068383038263">Vaše zadnje plačilo za <ph name="VALUE"/> morda ni bilo izvedeno. Dostop do te naročnine bo prekinjen, dokler ne bo rešeno vprašanje plačila. Poskusite urediti način plačila ali se obrnite na podporo Brave.</translation>
+<translation id="8373427068383038263">Vaše zadnje plačilo za <ph name="VALUE"/> morda ni bilo izvedeno. Dostop do te naročnine bo prekinjen, dokler ne bo rešeno vprašanje plačila. Poskusite urediti način plačila ali se obrnite na podporo AI Wize.</translation>
 <translation id="1839021455997460752">Vaš e-poštni naslov</translation>
 <translation id="8054563304616131773">Vnesite veljaven e-poštni naslov</translation>
 <translation id="5154702632169343078">Zadeva</translation>
@@ -2084,11 +2084,11 @@ other {Brave ščiti so blokirali {BLOCKED_COUNT} sledilce na <ph name="SITE_URL
 <translation id="6676791921618140305">Različica OS:</translation>
 <translation id="1156325797949437777">Podpora se zagotavlja v sodelovanju z družbo Guardian.</translation>
 <translation id="8146777497879160283">Konfiguracije VPN ni bilo mogoče napisati. To se lahko zgodi, če nimate dovoljenja ali če nedavno niste zagnali storitve Windows Update.</translation>
-<translation id="3307461350293459700">Povezava VPN ni uspela. Poskusite se ponovno povezati in kliknite Dovoli, da omogočite konfiguracijo VPN v Braveu.</translation>
+<translation id="3307461350293459700">Povezava VPN ni uspela. Poskusite se ponovno povezati in kliknite Dovoli, da omogočite konfiguracijo VPN v AI Wizeu.</translation>
 <translation id="7261518280726313829">Če v sistemu Windows izklopite varen DNS ali uporabljate privzete strežnike, lahko ponudniku internetnih storitev razkrijete imena spletnih mest, ki jih obiščete. AI Wize tega ne priporoča. Ali to vseeno želite storiti?</translation>
 <translation id="888284761945060750">Varni DNS je onemogočen v skladu s pravili vaše organizacije. Uporaba storitve AI Wize VPN brez Secure DNS lahko vašemu ponudniku internetnih storitev ali organizaciji razkrije imena spletnih mest, ki jih obiščete.</translation>
-<translation id="6593224083874259773">Brave VPN na sistemu Windows</translation>
-<translation id="3153983908111684619">BraveVPN zaklene nastavitev, ko je povezava vzpostavljena</translation>
+<translation id="6593224083874259773">AI Wize VPN na sistemu Windows</translation>
+<translation id="3153983908111684619">AI WizeVPN zaklene nastavitev, ko je povezava vzpostavljena</translation>
 <translation id="1055657720430482013">V sistemu Windows je na voljo funkcija, imenovana Pametno reševanje imen z več domovi, ki lahko razkrije informacije o vaši lokaciji in spletnih mestih, ki jih obiskujete. AI Wize ima storitev pomoči, ki vas ščiti pred to izpostavljenostjo s filtriranjem načina izvajanja poizvedb DNS na vaši povezavi VPN. Vendar pa smo opazili, da ta pomožna storitev ne deluje – in ne želimo, da ste nezaščiteni. Spremenili smo nastavitve DNS v brskalniku, da bi se zaščitili pred tem razkritjem. Nastavitve bodo ostale v veljavi in zaklenjene, ko bo vzpostavljena povezava VPN. <ph name="LEARN_MORE"/></translation>
 <translation id="5004375364898143117">Videti je, da je nekaj težav s povezavo WireGuard. Ali želite omogočiti nadomestni IKEv2 za zanesljiv VPN? Preprosto znova zaženite brskalnik.
 
@@ -2103,16 +2103,16 @@ Povežimo vas!
 <translation id="7896201779114201779">Ponovno zaženi brskalnik</translation>
 <translation id="9061845622728745852">Časovni pas</translation>
 <translation id="8295393906499561642">Seja je potekla</translation>
-<translation id="3312623558576021182">Vpišite se v svoj<ph name="BRAVE_ACCOUNT_BEGIN"/>uporabniški račun Brave<ph name="BRAVE_ACCOUNT_END"/> in osvežite svojo sejo VPN.</translation>
-<translation id="6021669293402055982">Brave VPN: povezava prekinjena</translation>
-<translation id="7861195049821776142">Brave VPN: Prekinitev povezave</translation>
-<translation id="958268166261124668">Brave VPN: povezan</translation>
-<translation id="2061807837510296780">Brave VPN: Povezovanje</translation>
-<translation id="1313124107969703758">Brave VPN: napaka</translation>
+<translation id="3312623558576021182">Vpišite se v svoj<ph name="BRAVE_ACCOUNT_BEGIN"/>uporabniški račun AI Wize<ph name="BRAVE_ACCOUNT_END"/> in osvežite svojo sejo VPN.</translation>
+<translation id="6021669293402055982">AI Wize VPN: povezava prekinjena</translation>
+<translation id="7861195049821776142">AI Wize VPN: Prekinitev povezave</translation>
+<translation id="958268166261124668">AI Wize VPN: povezan</translation>
+<translation id="2061807837510296780">AI Wize VPN: Povezovanje</translation>
+<translation id="1313124107969703758">AI Wize VPN: napaka</translation>
 <translation id="8273420301954598554">Stanje: povezan</translation>
 <translation id="7155657348064536843">Stanje: povezava prekinjena</translation>
-<translation id="2413929902277520460">Brave VPN - Povezan</translation>
-<translation id="8048263175525832621">Brave VPN – Povezava prekinjena</translation>
+<translation id="2413929902277520460">AI Wize VPN - Povezan</translation>
+<translation id="8048263175525832621">AI Wize VPN – Povezava prekinjena</translation>
 <translation id="1498770726476841108">Upravljaj račun</translation>
 <translation id="6825718953004242472">Odstrani ikono</translation>
 <translation id="3287942014983548982">Odpri tukaj</translation>

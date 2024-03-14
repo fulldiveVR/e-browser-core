@@ -23,20 +23,20 @@ RegisterPolymerTemplateModifications({
     if (!loadTimeData.getBoolean('isIdleDetectionFeatureEnabled')) {
       const idleDetectionItem = templateContent.querySelector('[category="[[contentSettingsTypesEnum_.IDLE_DETECTION]]"]')
       if (!idleDetectionItem) {
-        console.error(`[Brave Settings Overrides] Couldn't find idle detection item`)
+        console.error(`[AI Wize Settings Overrides] Couldn't find idle detection item`)
       } else {
         idleDetectionItem.hidden = true
       }
     }
     const adsItem = templateContent.querySelector('[category="[[contentSettingsTypesEnum_.ADS]]"]')
     if (!adsItem) {
-      console.error(`[Brave Settings Overrides] Couldn't find ads item`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find ads item`)
     } else {
       adsItem.hidden = true
     }
     const firstPermissionItem = templateContent.querySelector('div.list-frame > site-details-permission:nth-child(1)')
     if (!firstPermissionItem) {
-      console.error(`[Brave Settings Overrides] Couldn't find first permission item`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find first permission item`)
     } else {
       firstPermissionItem.insertAdjacentHTML(
         'beforebegin',
@@ -51,7 +51,7 @@ RegisterPolymerTemplateModifications({
         querySelector(`div.list-frame > site-details-permission:nth-child(${curChild})`)
       if (!autoplaySettings) {
         console.error(
-          '[Brave Settings Overrides] Couldn\'t find autoplay settings')
+          '[AI Wize Settings Overrides] Couldn\'t find autoplay settings')
       }
       else {
         autoplaySettings.setAttribute(
@@ -74,7 +74,7 @@ RegisterPolymerTemplateModifications({
           querySelector(`div.list-frame > site-details-permission:nth-child(${curChild})`)
         if (!googleSignInSettings) {
           console.error(
-            '[Brave Settings Overrides] Couldn\'t find Google signin settings')
+            '[AI Wize Settings Overrides] Couldn\'t find Google signin settings')
         }
         else {
           googleSignInSettings.setAttribute(
@@ -98,7 +98,7 @@ RegisterPolymerTemplateModifications({
           `div.list-frame > site-details-permission:nth-child(${curChild})`)
         if (!localhostAccessSettings) {
           console.error(
-            '[Brave Settings Overrides] Localhost access settings not found')
+            '[AI Wize Settings Overrides] Localhost access settings not found')
         } else {
           localhostAccessSettings.setAttribute(
             'label', loadTimeData.getString('siteSettingsLocalhostAccess'))
@@ -119,7 +119,7 @@ RegisterPolymerTemplateModifications({
           querySelector(`div.list-frame > site-details-permission:nth-child(${curChild})`)
         if (!ethereumSettings) {
           console.error(
-              '[Brave Settings Overrides] Couldn\'t find Ethereum settings')
+              '[AI Wize Settings Overrides] Couldn\'t find Ethereum settings')
         } else {
           ethereumSettings.setAttribute(
             'label', loadTimeData.getString('siteSettingsEthereum'))
@@ -137,7 +137,7 @@ RegisterPolymerTemplateModifications({
           querySelector(`div.list-frame > site-details-permission:nth-child(${curChild})`)
         if (!solanaSettings) {
           console.error(
-            '[Brave Settings Overrides] Couldn\'t find Solana settings')
+            '[AI Wize Settings Overrides] Couldn\'t find Solana settings')
         } else {
           solanaSettings.setAttribute(
               'label', loadTimeData.getString('siteSettingsSolana'))
@@ -150,7 +150,7 @@ RegisterPolymerTemplateModifications({
 
     const usageSection = templateContent.querySelector('div#usage')
     if (!usageSection) {
-      console.error(`[Brave Settings Overrides] Couldn't find usageSection item`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find usageSection item`)
     } else {
       usageSection.insertAdjacentHTML(
         'afterend',
@@ -164,7 +164,7 @@ RegisterPolymerTemplateModifications({
         templateContent.querySelector('#cookiesLink')
       if (!cookiesDetail) {
         console.error(
-          '[Brave Settings Overrides] Couldn\'t find cookies link')
+          '[AI Wize Settings Overrides] Couldn\'t find cookies link')
       } else {
         cookiesDetail.setAttribute('label',
             loadTimeData.getString('siteCookiesLinkLabel'))

@@ -37,7 +37,7 @@ export function getSectionElement (templateContent, sectionName) {
     templateContent.querySelector(`template[if*='pageVisibility.${sectionName}']`) ||
     templateContent.querySelector(`settings-section[section="${sectionName}"]`)
   if (!sectionEl) {
-    console.error(`[Brave Settings Overrides] Could not find section '${sectionName}'`)
+    console.error(`[AI Wize Settings Overrides] Could not find section '${sectionName}'`)
   }
   return sectionEl
 }
@@ -99,16 +99,16 @@ RegisterPolymerTemplateModifications({
     // Entire content is wrapped in another conditional template
     const actualTemplate = templateContent.querySelector('template')
     if (!actualTemplate) {
-      console.error('[Brave Settings Overrides] Could not find basic-page template')
+      console.error('[AI Wize Settings Overrides] Could not find basic-page template')
       return
     }
     const basicPageEl = actualTemplate.content.querySelector('#basicPage')
     if (!basicPageEl) {
-      console.error('[Brave Settings Overrides] Could not find basicPage element to insert Getting Started section')
+      console.error('[AI Wize Settings Overrides] Could not find basicPage element to insert Getting Started section')
     } else {
       const privacyGuidePromoSection = actualTemplate.content.querySelector('#privacyGuidePromoSection')
       if (!privacyGuidePromoSection) {
-        console.error('[Brave Settings Overrides] Could not find privacyGuidePromoSection element to hide')
+        console.error('[AI Wize Settings Overrides] Could not find privacyGuidePromoSection element to hide')
       } else {
         privacyGuidePromoSection.remove()
       }
@@ -419,11 +419,11 @@ RegisterPolymerTemplateModifications({
       // Advanced
       const advancedTemplate = templateContent.querySelector('template[if="[[showAdvancedSettings_(pageVisibility.advancedSettings)]]"]')
       if (!advancedTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced section')
+        console.error('[AI Wize Settings Overrides] Could not find advanced section')
       }
       const advancedSubSectionsTemplate = advancedTemplate.content.querySelector('settings-idle-load template')
       if (!advancedSubSectionsTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced sub-sections container')
+        console.error('[AI Wize Settings Overrides] Could not find advanced sub-sections container')
       }
       // Move autofill to before languages
       const sectionAutofill = getSectionElement(actualTemplate.content, 'autofill')

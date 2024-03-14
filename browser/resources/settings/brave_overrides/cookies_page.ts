@@ -13,7 +13,7 @@ RegisterPolymerTemplateModifications({
       )
     if (!is3pcdRedesignEnabledTemplate) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with ' +
+        '[AI Wize Settings Overrides] Could not find template with ' +
         'if*=!is3pcdRedesignEnabledTemplate on cookies page.')
     } else {
       const blockThirdPartyIncognitoRadioButton =
@@ -21,7 +21,7 @@ RegisterPolymerTemplateModifications({
           getElementById('blockThirdPartyIncognito')
       if (!blockThirdPartyIncognitoRadioButton) {
         console.error(
-          '[Brave Settings Overrides] Could not find ' +
+          '[AI Wize Settings Overrides] Could not find ' +
           'blockThirdPartyIncognito id on cookies page.')
       } else {
         blockThirdPartyIncognitoRadioButton.setAttribute('hidden', 'true')

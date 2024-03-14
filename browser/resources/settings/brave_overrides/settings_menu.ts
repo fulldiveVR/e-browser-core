@@ -44,7 +44,7 @@ function getMenuElement(templateContent, href) {
         return menuEl
       }
     }
-    console.error(`[Brave Settings Overrides] Could not find menu item '${href}'`)
+    console.error(`[AI Wize Settings Overrides] Could not find menu item '${href}'`)
   }
   return menuEl
 }
@@ -312,13 +312,13 @@ RegisterPolymerTemplateModifications({
     // Remove extensions link
     const extensionsLinkEl = templateContent.querySelector('#extensionsLink')
     if (!extensionsLinkEl) {
-      console.error('[Brave Settings Overrides] Could not find extensionsLinkEl to remove')
+      console.error('[AI Wize Settings Overrides] Could not find extensionsLinkEl to remove')
     }
     extensionsLinkEl.remove()
     // Add version number to 'about' link
     const aboutEl = templateContent.querySelector('#about-menu')
     if (!aboutEl) {
-      console.error('[Brave Settings Overrides] Could not find about-menu element')
+      console.error('[AI Wize Settings Overrides] Could not find about-menu element')
       return
     }
     const parent = aboutEl.parentNode

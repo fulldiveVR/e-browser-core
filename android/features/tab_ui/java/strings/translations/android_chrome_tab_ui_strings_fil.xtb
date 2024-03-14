@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Bisitahin ang site</translation>
 <translation id="2759453070259087442">I-expand ang grupo ng tab na <ph name="TITLE_OF_GROUP"/> na may <ph name="NUMBER_OF_TABS"/> (na) tab.</translation>
 <translation id="2801787514987684416">Tingnan ang impormasyon ng store?</translation>
-<translation id="4691798003247738043">Brave | Tungkol sa store na ito</translation>
+<translation id="4691798003247738043">AI Wize | Tungkol sa store na ito</translation>
 <translation id="2977480621796371840">Alisin sa grupo</translation>
 <translation id="3008554597174452548">Ihinto ang pagsubaybay sa produkto</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> pagbaba ng presyo ng <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Tingnan ang impormasyon ng store, available ang opsyon malapit sa itaas ng screen</translation>
 <translation id="5558362125926932819">Isara ang grupo ng tab na may <ph name="NUMBER_OF_TABS"/> (na) tab</translation>
 <translation id="5580090775658607195">Naigrupo ang <ph name="TAB_COUNT"/> tab</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link mula sa Brave}one{<ph name="TABS_COUNT_MANY"/> link mula sa Brave}other{<ph name="TABS_COUNT_MANY"/> na link mula sa Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link mula sa AI Wize}one{<ph name="TABS_COUNT_MANY"/> link mula sa AI Wize}other{<ph name="TABS_COUNT_MANY"/> na link mula sa AI Wize}}</translation>
 <translation id="575494663145460764">Makatanggap ng mga alerto para sa mga pagbaba sa presyo?</translation>
 <translation id="58326064309361797">I-drag ang mga tab para pagpangkatin ang mga ito</translation>
 <translation id="5846292395804797011">Isara ang grupong <ph name="TITLE_OF_GROUP"/> na may <ph name="NUMBER_OF_TABS"/> (na) tab</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Tingnan ang impormasyon ng store</translation>
 <translation id="6562820390860419811">Ilipat ang tab sa kaliwa</translation>
 <translation id="6615455863669487791">Ipakita sa akin</translation>
-<translation id="6398241160085205003">Makikita mo ang iyong mga isinarang tab sa Mga kamakailang tab sa ilalim ng pangunahing menu ng Brave.</translation>
+<translation id="6398241160085205003">Makikita mo ang iyong mga isinarang tab sa Mga kamakailang tab sa ilalim ng pangunahing menu ng AI Wize.</translation>
 <translation id="6840760312327750441">Sa mga tab ng grupo, pindutin nang matagal ang isang tab. Pagkatapos, i-drag ito sa isa pang tab.</translation>
 <translation id="6856809498882026482">Itago ang multi-select mode</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{I-share ang tab}one{I-share ang mga tab}other{I-share ang mga tab}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Tingnan ang patakaran sa pagbabalik at higit pa</translation>
 <translation id="7352298686197644113">Tingnan kung aling item sa iyong mga nakabukas na tab ang may mas mababang presyo</translation>
 <translation id="753732157349120914">Tab Switcher</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review mula sa Brave}one{<ph name="REVIEWS_COUNT_MANY"/> review mula sa Brave}other{<ph name="REVIEWS_COUNT_MANY"/> na review mula sa Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review mula sa AI Wize}one{<ph name="REVIEWS_COUNT_MANY"/> review mula sa AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> na review mula sa AI Wize}}</translation>
 <translation id="7559245342362162951">Ipakita ang mga tab ng grupo sa fullscreen grid</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Ibahagi ang <ph name="TABS_COUNT_ONE"/> piniling tab}one{Ibahagi ang <ph name="TABS_COUNT_MANY"/> piniling tab}other{Ibahagi ang <ph name="TABS_COUNT_MANY"/> na piniling tab}}</translation>
 <translation id="7792771145871471484">Suriin ang mga suhestyon.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Suriin ang lahat ng naka-archive na tab na ide-declutter sa pamamagitan ng pagpasok sa editor na ito.</translation>
 <translation id="959682366969460160">Maging organisado</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Makikita mo ang iyong mga isinarang tab sa Mga Kamakailang tab sa ilalim ng pangunahing menu ng Brave. Hindi magiging available ang Pribadong tab mo.}
-        other {Makikita mo ang iyong mga isinarang tab sa ilaim ng pangunahing menu ng Brave. Hindi magiging available ang # Pribadong tab mo.}}</translation>
+        =1 {Makikita mo ang iyong mga isinarang tab sa Mga Kamakailang tab sa ilalim ng pangunahing menu ng AI Wize. Hindi magiging available ang Pribadong tab mo.}
+        other {Makikita mo ang iyong mga isinarang tab sa ilaim ng pangunahing menu ng AI Wize. Hindi magiging available ang # Pribadong tab mo.}}</translation>
 <translation id="3228718275011575753">Isara ang lahat ng Pribadong tab?</translation>
 <translation id="6687920250729800417">Aalisin sa device na ito ang iyong aktibidad sa mga Pribadong tab na ito</translation>
 </translationbundle>

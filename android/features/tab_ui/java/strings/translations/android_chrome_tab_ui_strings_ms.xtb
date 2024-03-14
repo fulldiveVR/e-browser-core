@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Lawati laman</translation>
 <translation id="2759453070259087442">Kembangkan kumpulan tab <ph name="TITLE_OF_GROUP"/> dengan <ph name="NUMBER_OF_TABS"/> tab.</translation>
 <translation id="2801787514987684416">Lihat maklumat kedai?</translation>
-<translation id="4691798003247738043">Brave | Perihal kedai ini</translation>
+<translation id="4691798003247738043">AI Wize | Perihal kedai ini</translation>
 <translation id="2977480621796371840">Alih keluar daripada kumpulan</translation>
 <translation id="3008554597174452548">Hentikan penjejakan produk</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> penurunan harga pada <ph name="PRODUCT_NAME"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Lihat maklumat kedai, pilihan tersedia berhampiran bahagian atas skrin</translation>
 <translation id="5558362125926932819">Tutup kumpulan tab dengan <ph name="NUMBER_OF_TABS"/> tab</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> tab dihimpunkan</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> pautan daripada Brave}other{<ph name="TABS_COUNT_MANY"/> pautan daripada Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> pautan daripada AI Wize}other{<ph name="TABS_COUNT_MANY"/> pautan daripada AI Wize}}</translation>
 <translation id="575494663145460764">Dapatkan makluman untuk penurunan harga?</translation>
 <translation id="58326064309361797">Seret tab untuk dihimpunkan</translation>
 <translation id="5846292395804797011">Tutup kumpulan <ph name="TITLE_OF_GROUP"/> dengan <ph name="NUMBER_OF_TABS"/> tab</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Lihat maklumat kedai</translation>
 <translation id="6562820390860419811">Alihkan tab ke kiri</translation>
 <translation id="6615455863669487791">Tunjukkan kepada saya</translation>
-<translation id="6398241160085205003">Anda boleh menemukan tab anda yang ditutup dalam tab Terbaharu ini dalam bahagian menu utama Brave.</translation>
+<translation id="6398241160085205003">Anda boleh menemukan tab anda yang ditutup dalam tab Terbaharu ini dalam bahagian menu utama AI Wize.</translation>
 <translation id="6840760312327750441">Untuk menghimpunkan tab, sentuh &amp; tahan tab. Kemudian, seret tab itu ke tab lain.</translation>
 <translation id="6856809498882026482">Sembunyikan mod berbilang pilihan</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Kongsi tab}other{Kongsi tab}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Lihat dasar pemulangan dan pelbagai lagi</translation>
 <translation id="7352298686197644113">Lihat item yang lebih murah dalam tab yang terbuka</translation>
 <translation id="753732157349120914">Penukar Tab</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ulasan daripada Brave}other{<ph name="REVIEWS_COUNT_MANY"/> ulasan daripada Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ulasan daripada AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> ulasan daripada AI Wize}}</translation>
 <translation id="7559245342362162951">Tunjukkan tab kumpulan dalam grid skrin penuh</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Kongsi <ph name="TABS_COUNT_ONE"/> tab yang dipilih}other{Kongsi <ph name="TABS_COUNT_MANY"/> tab yang dipilih}}</translation>
 <translation id="7792771145871471484">Semak cadangan.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">Semak semua tab yang diarkibkan untuk mengurangkan selerak dengan memasukkan editor ini.</translation>
 <translation id="959682366969460160">Jadi teratur</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Anda boleh menemukan tab tertutup anda dalam tab Terkini di bawah menu utama Brave. Tab Peribadi anda tidak akan tersedia.}
-        other {Anda boleh menemukan tab tertutup anda dalam tab Terkini di bawah menu utama Brave. # Tab Peribadi anda tidak akan tersedia.}}</translation>
+        =1 {Anda boleh menemukan tab tertutup anda dalam tab Terkini di bawah menu utama AI Wize. Tab Peribadi anda tidak akan tersedia.}
+        other {Anda boleh menemukan tab tertutup anda dalam tab Terkini di bawah menu utama AI Wize. # Tab Peribadi anda tidak akan tersedia.}}</translation>
 <translation id="3228718275011575753">Tutup semua tab Peribadi?</translation>
 <translation id="6687920250729800417">Aktiviti anda dalam tab Private ini akan dialih keluar daripada peranti ini</translation>
 </translationbundle>

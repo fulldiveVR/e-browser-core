@@ -16,7 +16,7 @@
     About AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION" desc="Outlining the functioning of AIChat (paragraph 1 of 3)">
-    AI Wize AI Wize Chat is a private AI smart assistant that enhances your use of the Internet. AI Wize Chat is free to use with limited access. AI Wize AI Wize Chat Premium offers more models, higher limits and gives subscribers early access to new features. The default model for all users is currently Mixtral 8x7B. See the <ph name="LINK_BEFORE">$1</ph>Brave wiki<ph name="LINK_AFTER">$2</ph> for more details.
+    AI Wize AI Wize Chat is a private AI smart assistant that enhances your use of the Internet. AI Wize Chat is free to use with limited access. AI Wize AI Wize Chat Premium offers more models, higher limits and gives subscribers early access to new features. The default model for all users is currently Mixtral 8x7B. See the <ph name="LINK_BEFORE">$1</ph>AI Wize wiki<ph name="LINK_AFTER">$2</ph> for more details.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_2" desc="Outlining the functioning of AIChat (paragraph 2 of 3)">
     By default, when you ask AI Wize Chat a question it may send and use the content of the web page you are viewing or any text you highlight on a page to AI Wize AI Wize Chat to provide a response. The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. AI Wize Chat uses data from AI Wize Search to improve response quality. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust AI Wize Chat’s options in Settings any time. Go to Settings > AI Wize Chat.
@@ -49,10 +49,10 @@
      Retry
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the default model">
-    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by Brave. I'm powered by Llama 13B, a model created by Meta to be performant and applicable to many use cases.
+    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by AI Wize. I'm powered by Llama 13B, a model created by Meta to be performant and applicable to many use cases.
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_EXPANDED" desc="AI Chat intro message for the expanded model">
-    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by Brave. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks.
+    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by AI Wize. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks.
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model">
     Hi, I'm AI Wize Chat. I'm proxied by AI Wize and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.
@@ -232,7 +232,7 @@
     Hi, I'm AI Wize Chat!
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users">
-    An AI-powered intelligent assistant, built right into Brave.
+    An AI-powered intelligent assistant, built right into AI Wize.
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SITE_HELP_CARD_TITLE" desc="This is the title for a user prompt card designed to offer assistance with website-related tasks.">
     Need help with a website?

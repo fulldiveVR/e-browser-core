@@ -82,7 +82,7 @@
 <translation id="6628439996552631516">「管理地址」按鈕，啟動後即可在 AI Wize 設定中新增及管理地址</translation>
 <translation id="1165039591588034296">錯誤</translation>
 <translation id="1165174597379888365">已造訪網頁</translation>
-<translation id="7108524493226474140">{COUNT,plural, =0{無}=1{1 個網站 (Brave 帳戶會保持登入狀態)}other{# 個網站 (Brave 帳戶會保持登入狀態)}}</translation>
+<translation id="7108524493226474140">{COUNT,plural, =0{無}=1{1 個網站 (AI Wize 帳戶會保持登入狀態)}other{# 個網站 (AI Wize 帳戶會保持登入狀態)}}</translation>
 <translation id="1165852471352757509">電視紀錄片與紀實</translation>
 <translation id="1167877250265821930">無法下載<ph name="LANGUAGE"/></translation>
 <translation id="1174644974616730562">Envelope Chinese #1</translation>
@@ -98,7 +98,7 @@
 <translation id="1178581264944972037">暫停</translation>
 <translation id="1178821169867863726">12 x 16 吋</translation>
 <translation id="1181037720776840403">移除</translation>
-<translation id="3248691252569103537">Brave 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。前往「<ph name="LINK"/>」設定頁面。</translation>
+<translation id="3248691252569103537">AI Wize 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。前往「<ph name="LINK"/>」設定頁面。</translation>
 <translation id="1186201132766001848">檢查密碼</translation>
 <translation id="1190491977647722791">紙 (重磅紙)</translation>
 <translation id="1195073053842921378">這個地址將從這部裝置中刪除</translation>
@@ -117,7 +117,7 @@
 <translation id="1222060260947439312">右匣</translation>
 <translation id="1224330468394120478">A3 x 6</translation>
 <translation id="1225570101506606926">撞球</translation>
-<translation id="2735968720006267833">Brave 會為你尋找折扣訊息</translation>
+<translation id="2735968720006267833">AI Wize 會為你尋找折扣訊息</translation>
 <translation id="1227224963052638717">不明政策。</translation>
 <translation id="1227677022489889280">請提供要移動的原因 (必填)</translation>
 <translation id="1228893227497259893">實體 ID 錯誤</translation>
@@ -192,7 +192,7 @@
 <translation id="1346748346194534595">向右</translation>
 <translation id="1348198688976932919">你要造訪的網站含有不安全的應用程式</translation>
 <translation id="1348779747280417563">確認姓名</translation>
-<translation id="8447194907998385478">Brave 會限制大多數網站使用第三方 Cookie 追蹤瀏覽網站的使用者。前往「<ph name="LINK"/>」設定頁面。</translation>
+<translation id="8447194907998385478">AI Wize 會限制大多數網站使用第三方 Cookie 追蹤瀏覽網站的使用者。前往「<ph name="LINK"/>」設定頁面。</translation>
 <translation id="1354976809542763843">房屋貸款</translation>
 <translation id="1355158069018170842">在分頁顯示降價資訊</translation>
 <translation id="1355301061807280185">工作機會</translation>
@@ -222,13 +222,13 @@
 <translation id="1406812885827747674">這次允許</translation>
 <translation id="1407135791313364759">全部開啟</translation>
 <translation id="1408787208417187241">三釘 (頂端)</translation>
-<translation id="5488251800208457874">這部裝置的其他使用者不會看到你的活動，瀏覽活動記錄的隱私更有保障。無痕模式不會影響網站及其使用的服務 (包括 Brave) 收集資料的方式，而且下載內容、新增的書籤及加入閱讀清單中的項目仍會保留在裝置上。</translation>
+<translation id="5488251800208457874">這部裝置的其他使用者不會看到你的活動，瀏覽活動記錄的隱私更有保障。無痕模式不會影響網站及其使用的服務 (包括 AI Wize) 收集資料的方式，而且下載內容、新增的書籤及加入閱讀清單中的項目仍會保留在裝置上。</translation>
 <translation id="1410941016594047814">Envelope Invite</translation>
 <translation id="1413407968866574823">動作與平台類遊戲</translation>
 <translation id="1413809658975081374">隱私權設定發生錯誤</translation>
 <translation id="1414134146594747368">幼稚園</translation>
 <translation id="141826476809826269">擷取的文字內容結尾</translation>
-<translation id="3181333394175596679">Brave 更新這項功能時，網站可能會暫時使用第三方 Cookie，除非你在設定中封鎖這類 Cookie。</translation>
+<translation id="3181333394175596679">AI Wize 更新這項功能時，網站可能會暫時使用第三方 Cookie，除非你在設定中封鎖這類 Cookie。</translation>
 <translation id="5305237486453576422">「管理 AI Wize 下載內容」按鈕，啟動後即可管理在 AI Wize 中下載的檔案</translation>
 <translation id="1422930527989633628">可以要求搜尋附近的藍牙裝置</translation>
 <translation id="1426410128494586442">是</translation>
@@ -241,7 +241,7 @@
 <translation id="1432187715652018471">網頁想要安裝服務處理常式。</translation>
 <translation id="1432581352905426595">管理搜尋引擎</translation>
 <translation id="1433225466058025572">再次嘗試移動檔案</translation>
-<translation id="783200745622992168">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近在 <ph name="SITE"/> 發現惡意軟體<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該軟體。</translation>
+<translation id="783200745622992168">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近在 <ph name="SITE"/> 發現惡意軟體<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該軟體。</translation>
 <translation id="1435940442311036198">在其他裝置上使用密碼金鑰</translation>
 <translation id="1436185428532214179">可以要求編輯裝置上的檔案和資料夾</translation>
 <translation id="1441816242347931036">開啟即可繼續</translation>
@@ -284,7 +284,7 @@
 <translation id="1517433312004943670">必須輸入電話號碼</translation>
 <translation id="1519264250979466059">建立日期</translation>
 <translation id="1521159554480556801">纖維與紡織藝術</translation>
-<translation id="5524011986660000129">Brave 試算表</translation>
+<translation id="5524011986660000129">AI Wize 試算表</translation>
 <translation id="1524669537550112617">附家具租屋</translation>
 <translation id="1527263332363067270">正在等待連線…</translation>
 <translation id="1528311629279578926">公開頁面要連線到私人網路上的裝置或伺服器，因此系統封鎖連線。請重新載入這個頁面允許連線。</translation>
@@ -299,7 +299,7 @@
 <translation id="1549470594296187301">您必須啟用 JavaScript 才能使用這項功能。</translation>
 <translation id="1551884710160394169">免費軟體與共享軟體</translation>
 <translation id="1553152622374372421">冬季運動</translation>
-<translation id="1705567146636171298">更新 Brave</translation>
+<translation id="1705567146636171298">更新 AI Wize</translation>
 <translation id="1555130319947370107">藍色</translation>
 <translation id="1559231233244409191">紙板 (三層瓦楞紙)</translation>
 <translation id="1559447966090556585">要接收通知嗎？</translation>
@@ -314,7 +314,7 @@
 <translation id="1567040042588613346">這項政策運作正常，但與其他地方設定的值相同，並已取代該值。</translation>
 <translation id="1567405528131216114">新增「<ph name="TOPIC"/>」</translation>
 <translation id="1569487616857761740">輸入到期日</translation>
-<translation id="1385693425784118652">Brave 正在嘗試開啟 Windows Hello，以便在填入密碼時進行驗證。</translation>
+<translation id="1385693425784118652">AI Wize 正在嘗試開啟 Windows Hello，以便在填入密碼時進行驗證。</translation>
 <translation id="1572765991610098222"><ph name="WIDTH"/> x <ph name="HEIGHT"/> 吋</translation>
 <translation id="1574714699824202614">正在驗證付款方式</translation>
 <translation id="1576277203042721907">Shopping Insights</translation>
@@ -360,12 +360,12 @@
 <translation id="1995056549836388472">管理 AI Wize 設定</translation>
 <translation id="1652415888492971589">JIS B8</translation>
 <translation id="3549478477646243075">如要搭配 macOS 鑰匙圈使用密碼管理工具，請重新啟動 AI Wize 並允許存取鑰匙圈。重新啟動之後，會重新開啟所有分頁。</translation>
-<translation id="3848846802033604519">Brave 已簡化這個頁面，讓內容更易於閱讀。Brave 透過安全連線擷取原始頁面。</translation>
+<translation id="3848846802033604519">AI Wize 已簡化這個頁面，讓內容更易於閱讀。AI Wize 透過安全連線擷取原始頁面。</translation>
 <translation id="1656489000284462475">取件</translation>
 <translation id="1658111267661135323">電視節目和影片</translation>
 <translation id="1658918301167915956">藍牙裝置</translation>
 <translation id="1662550410081243962">儲存及填入付款方式</translation>
-<translation id="1838576226863399477">信用卡和地址資訊皆來自 Brave。你可以在<ph name="BEGIN_LINK"/>設定<ph name="END_LINK"/>頁面管理這些資訊。</translation>
+<translation id="1838576226863399477">信用卡和地址資訊皆來自 AI Wize。你可以在<ph name="BEGIN_LINK"/>設定<ph name="END_LINK"/>頁面管理這些資訊。</translation>
 <translation id="1664389769577564606">彈性凸版光硬化樹脂</translation>
 <translation id="1668071460721346172">接收驗證電子郵件</translation>
 <translation id="1671391448414634642">從現在起，系統會將<ph name="SOURCE_LANGUAGE"/>網頁翻譯成<ph name="TARGET_LANGUAGE"/>。</translation>
@@ -375,7 +375,7 @@
 <translation id="168693727862418163">這項政策的值未通過其結構定義的驗證，因此會遭到忽略。</translation>
 <translation id="168841957122794586">伺服器憑證含有防護力薄弱的加密編譯金鑰。</translation>
 <translation id="1689333818294560261">暱稱</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>管理資料的方式：<ph name="END_BOLD"/>Brave 會自動刪除 4 週以前的主題。隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你隨時可以在 AI Wize 設定中封鎖不想讓 AI Wize 與網站分享的主題，也可以關閉廣告主題設定。</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>管理資料的方式：<ph name="END_BOLD"/>AI Wize 會自動刪除 4 週以前的主題。隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你隨時可以在 AI Wize 設定中封鎖不想讓 AI Wize 與網站分享的主題，也可以關閉廣告主題設定。</translation>
 <translation id="1697532407822776718">大功告成！</translation>
 <translation id="4030336595318918117">你現在可以使用 AI Wize 帳戶中的地址</translation>
 <translation id="1700542542921501212">你可以使用「<ph name="SEARCH_ENGINE_NAME"/>」搜尋網路。</translation>
@@ -410,7 +410,7 @@
 <translation id="1736420071277903564">電腦</translation>
 <translation id="1741613555002899862">將 DnsOverHttpsMode 設為 <ph name="SECURE_DNS_MODE_SECURE"/> 時，必須指定有效的字串。</translation>
 <translation id="1743393865165844832">寢具與床用織物</translation>
-<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>我們使用這些資料的方式：<ph name="END_BOLD"/>Brave 會在你瀏覽內容時記錄感興趣的主題。系統已預先定義主題標籤，包括「藝術與娛樂」、「購物」和「運動」等。在此之後，你造訪的網站就可以要求 AI Wize 提供一些主題 (而非你的瀏覽記錄)，據此向你放送個人化廣告。</translation>
+<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>我們使用這些資料的方式：<ph name="END_BOLD"/>AI Wize 會在你瀏覽內容時記錄感興趣的主題。系統已預先定義主題標籤，包括「藝術與娛樂」、「購物」和「運動」等。在此之後，你造訪的網站就可以要求 AI Wize 提供一些主題 (而非你的瀏覽記錄)，據此向你放送個人化廣告。</translation>
 <translation id="1746113442205726301">圖片 Y 批次</translation>
 <translation id="1746531169546376413">0 度</translation>
 <translation id="1748225549612934682">請縮短文字，才能取得撰寫協助</translation>
@@ -427,7 +427,7 @@
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>嘗試執行 Windows 網路診斷<ph name="END_LINK"/>。</translation>
 <translation id="1777422078676229054">相紙 (典藏用)</translation>
 <translation id="1778646502362731194">JIS B0</translation>
-<translation id="3480410886581896628">Brave Smart Lock</translation>
+<translation id="3480410886581896628">AI Wize Smart Lock</translation>
 <translation id="8114214752558951503"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可管理 AI Wize 帳戶的資訊、隱私權和安全性</translation>
 <translation id="1793631236004319016">上次使用時間：<ph name="NUM_HOURS_MINUTES_SECONDS"/>前。</translation>
 <translation id="1798447301915465742"><ph name="MULTIPLE_ACTIONS_FOCUSED_FRIENDLY_MATCH_TEXT"/>，可執行多個動作，按下 Tab 鍵即可切換不同的動作</translation>
@@ -463,7 +463,7 @@
 <translation id="1854180393107901205">停止投放</translation>
 <translation id="1855370856221982654">拳擊</translation>
 <translation id="1862788842908766795">主管與管理階層工作</translation>
-<translation id="7675404561163771060">追蹤保護功能暫時無法使用。Brave 更新這項功能時，網站可能會暫時使用第三方 Cookie (除非你封鎖這類 Cookie)。<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">追蹤保護功能暫時無法使用。AI Wize 更新這項功能時，網站可能會暫時使用第三方 Cookie (除非你封鎖這類 Cookie)。<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
 <translation id="1863257867908022953">紙匣 12</translation>
 <translation id="1864927262126810325">來自 <ph name="SOURCE_NAME"/></translation>
 <translation id="186539747722034544">有線電視與衛星電視業者</translation>
@@ -474,7 +474,7 @@
 <translation id="1873899211667975540">搖滾音樂</translation>
 <translation id="1874224422119691492">你可以在 <ph name="SETTINGS"/> 中變更是否要使用螢幕鎖定功能填入密碼</translation>
 <translation id="1875025161375567525">相片匣</translation>
-<translation id="85321348617848915">Brave 表單</translation>
+<translation id="85321348617848915">AI Wize 表單</translation>
 <translation id="1876399092304384674">依日期分類</translation>
 <translation id="187918866476621466">開啟起始網頁</translation>
 <translation id="8632214058523487060">將卡片、加密安全碼和帳單地址儲存在 AI Wize 帳戶中，下次就能更快完成付款程序</translation>
@@ -504,8 +504,8 @@
 <translation id="1954847915560574887">A3 x 3</translation>
 <translation id="1956486093533522234">尋找、保護裝置或清除裝置資料</translation>
 <translation id="1958218078413065209">最高得分為 <ph name="SCORE"/>。</translation>
-<translation id="990584554013599191"><ph name="BEGIN_WHITEPAPER_LINK"/>將你造訪的部分網頁網址、特定的系統資訊以及部分網頁內容傳送<ph name="END_WHITEPAPER_LINK"/>給 Brave，協助我們改善所有使用者的網路安全。<ph name="BEGIN_PRIVACY_PAGE_LINK"/>隱私權政策<ph name="END_PRIVACY_PAGE_LINK"/></translation>
-<translation id="4215502005480745839">你的文字和網頁內容會傳送給 Brave，且可能會用於改善這項功能。
+<translation id="990584554013599191"><ph name="BEGIN_WHITEPAPER_LINK"/>將你造訪的部分網頁網址、特定的系統資訊以及部分網頁內容傳送<ph name="END_WHITEPAPER_LINK"/>給 AI Wize，協助我們改善所有使用者的網路安全。<ph name="BEGIN_PRIVACY_PAGE_LINK"/>隱私權政策<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="4215502005480745839">你的文字和網頁內容會傳送給 AI Wize，且可能會用於改善這項功能。
   <ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
 <translation id="1962204205936693436"><ph name="DOMAIN"/> 書籤</translation>
 <translation id="889162891089808318">你通常可以經由安全連線前往網站，但 AI Wize 目前無法使用安全連線。攻擊者可能會試圖竊聽或修改你的網路連線。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
@@ -575,7 +575,7 @@
 <translation id="2083256696566019397">每次造訪時允許</translation>
 <translation id="2085876078937250610">儲存…</translation>
 <translation id="2091887806945687916">音訊</translation>
-<translation id="4871965986998315786">Brave 正在嘗試關閉 Windows Hello，以便填入密碼。</translation>
+<translation id="4871965986998315786">AI Wize 正在嘗試關閉 Windows Hello，以便填入密碼。</translation>
 <translation id="2094505752054353250">網域不符</translation>
 <translation id="2094704029599359040">版本資訊</translation>
 <translation id="2099652385553570808">三釘 (左側)</translation>
@@ -622,7 +622,7 @@
 <translation id="2168151236314517198">系統管理員政策禁止列印此內容</translation>
 <translation id="2175630235841878061">無法下載超過 100 MB 的檔案</translation>
 <translation id="2176974405772725904">將地址儲存到帳戶</translation>
-<translation id="7453373354666409887">「更新 Brave」按鈕，啟動後即可透過 AI Wize 設定更新 Brave</translation>
+<translation id="7453373354666409887">「更新 AI Wize」按鈕，啟動後即可透過 AI Wize 設定更新 AI Wize</translation>
 <translation id="2181821976797666341">政策</translation>
 <translation id="2182170103603703676">洗碗機</translation>
 <translation id="2183608646556468874">電話號碼</translation>
@@ -706,7 +706,7 @@
 <translation id="2350796302381711542">要允許 <ph name="HANDLER_HOSTNAME"/> 取代 <ph name="REPLACED_HANDLER_TITLE"/> 開啟所有<ph name="PROTOCOL"/>連結嗎？</translation>
 <translation id="2353297238722298836">可使用攝影機和麥克風</translation>
 <translation id="2354001756790975382">其他書籤</translation>
-<translation id="2354430244986887761">Brave 安全瀏覽服務最近在 <ph name="SITE"/> <ph name="BEGIN_LINK"/>發現有害的應用程式<ph name="END_LINK"/>。</translation>
+<translation id="2354430244986887761">AI Wize 安全瀏覽服務最近在 <ph name="SITE"/> <ph name="BEGIN_LINK"/>發現有害的應用程式<ph name="END_LINK"/>。</translation>
 <translation id="2355395290879513365">攻擊者可能會看到你正在這個網站上瀏覽的圖片，並以修改圖片內容的方式讓你受騙。</translation>
 <translation id="2356070529366658676">詢問</translation>
 <translation id="2356926036049612643">V8 最佳化工具</translation>
@@ -721,13 +721,13 @@
 <translation id="2366689192918515749">肉品與海鮮</translation>
 <translation id="2367567093518048410">等級</translation>
 <translation id="23703388716193220">高爾夫球具</translation>
-<translation id="776356972507701422">根據你所在地區的法律，Brave 會要求選擇預設的搜尋引擎。這些是你所在地區最普遍使用的搜尋引擎，系統採隨機方式排列顯示。</translation>
+<translation id="776356972507701422">根據你所在地區的法律，AI Wize 會要求選擇預設的搜尋引擎。這些是你所在地區最普遍使用的搜尋引擎，系統採隨機方式排列顯示。</translation>
 <translation id="2378084239755710604">儲存內容資訊卡功能表已關閉。</translation>
 <translation id="2380886658946992094">Legal</translation>
 <translation id="5475992123321966556">在 AI Wize 設定中依個人需求調整無障礙工具</translation>
 <translation id="2384307209577226199">企業預設</translation>
 <translation id="238459632961158867">前往網站</translation>
-<translation id="5244533701344680487">前往 AI Wize 設定更新 Brave</translation>
+<translation id="5244533701344680487">前往 AI Wize 設定更新 AI Wize</translation>
 <translation id="2386255080630008482">伺服器憑證已遭撤銷。</translation>
 <translation id="239203817277685015">詳述</translation>
 <translation id="239293030466334554">敞篷車</translation>
@@ -764,7 +764,7 @@
 <translation id="6944854796979239513">儲存到 AI Wize 帳戶 (<ph name="USER_EMAIL"/>)</translation>
 <translation id="2482878487686419369">通知</translation>
 <translation id="248348093745724435">裝置政策</translation>
-<translation id="8381375318209119428">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會在你的裝置上安裝安裝有害軟體，以竊取或刪除密碼、相片、訊息或信用卡號碼等資料。Brave 強烈建議你不要造訪這個網站。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8381375318209119428">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會在你的裝置上安裝安裝有害軟體，以竊取或刪除密碼、相片、訊息或信用卡號碼等資料。AI Wize 強烈建議你不要造訪這個網站。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2491120439723279231">伺服器憑證含有錯誤。</translation>
 <translation id="2491414235131909199">擴充功能已封鎖這個網頁</translation>
 <translation id="2495083838625180221">JSON 剖析器</translation>
@@ -788,7 +788,7 @@
 <translation id="253493526287553278">查看促銷代碼詳情</translation>
 <translation id="2535659140340599600">{COUNT,plural, =1{和另外 1 個網域}other{和另外 # 個網域}}</translation>
 <translation id="2536110899380797252">新增地址</translation>
-<translation id="3140033400151786080">這部裝置的其他使用者不會看到你的活動，瀏覽活動記錄的隱私更有保障。無痕模式不會影響網站及其使用的服務 (包括 Brave) 收集資料的方式，而且下載內容和新增的書籤仍會保留在裝置上。</translation>
+<translation id="3140033400151786080">這部裝置的其他使用者不會看到你的活動，瀏覽活動記錄的隱私更有保障。無痕模式不會影響網站及其使用的服務 (包括 AI Wize) 收集資料的方式，而且下載內容和新增的書籤仍會保留在裝置上。</translation>
 <translation id="2539524384386349900">偵測</translation>
 <translation id="2542106216580219892">衝浪</translation>
 <translation id="2544546346215446551">管理員已重新啟動你的裝置</translation>
@@ -901,7 +901,7 @@
 <translation id="2765217105034171413">小</translation>
 <translation id="2770159525358613612">再次嘗試上傳檔案</translation>
 <translation id="277133753123645258">運送方式</translation>
-<translation id="7956239349290436105">Brave 會限制大多數網站使用第三方 Cookie，但允許這個網站使用第三方 Cookie，因為這個網站需要使用 Cookie 才能提供基本服務。前往「<ph name="LINK"/>」設定頁面。</translation>
+<translation id="7956239349290436105">AI Wize 會限制大多數網站使用第三方 Cookie，但允許這個網站使用第三方 Cookie，因為這個網站需要使用 Cookie 才能提供基本服務。前往「<ph name="LINK"/>」設定頁面。</translation>
 <translation id="277499241957683684">沒有裝置記錄</translation>
 <translation id="2775884851269838147">首刷頁面</translation>
 <translation id="2781692009645368755">Google Pay</translation>
@@ -913,7 +913,7 @@
 <translation id="2794629552137076216">玻璃 (磨光)</translation>
 <translation id="2799020568854403057">你要造訪的網站含有有害的應用程式</translation>
 <translation id="2799223571221894425">重新啟動</translation>
-<translation id="2803306138276472711">Brave 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到惡意軟體<ph name="END_LINK"/>。即使是平常可以安全使用的網站，有時也會遭到惡意軟體感染。</translation>
+<translation id="2803306138276472711">AI Wize 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到惡意軟體<ph name="END_LINK"/>。即使是平常可以安全使用的網站，有時也會遭到惡意軟體感染。</translation>
 <translation id="2807052079800581569">圖片 Y 位置</translation>
 <translation id="2808278141522721006">你可以前往「<ph name="SETTINGS"/>」開啟或關閉 Windows Hello</translation>
 <translation id="2814184336982254349">這份 PDF 無法存取。請按下搜尋鍵 + M 鍵開啟內容選單，然後開啟「擷取 PDF 中的文字」</translation>
@@ -957,7 +957,7 @@
 <translation id="2922350208395188000">無法檢查伺服器憑證。</translation>
 <translation id="2922792708490674">{0,plural, =1{禁止下載這個檔案}other{禁止下載這 <ph name="FILE_COUNT"/> 個檔案}}</translation>
 <translation id="2923275635648511531">防曬與助曬產品</translation>
-<translation id="3249101334307130799">Brave 設定</translation>
+<translation id="3249101334307130799">AI Wize 設定</translation>
 <translation id="2039679058572892861">「建立文件」按鈕，啟動後即可快速建立新的 AI Wize 文件</translation>
 <translation id="2925673989565098301">快遞方式</translation>
 <translation id="2928426578619531300">相關聯的使用者</translation>
@@ -992,7 +992,7 @@
 <translation id="6172169316494799304">為加快結帳速度，這張卡片的信用卡驗證碼會加密儲存在你的 AI Wize 帳戶中</translation>
 <translation id="2985398929374701810">請輸入有效的地址</translation>
 <translation id="2987034854559945715">找不到相符的功能</translation>
-<translation id="714850411804317247">Brave 會限制網站可用來追蹤瀏覽網站使用者的資訊量。你可以視需要在設定中調整保護等級。</translation>
+<translation id="714850411804317247">AI Wize 會限制網站可用來追蹤瀏覽網站使用者的資訊量。你可以視需要在設定中調整保護等級。</translation>
 <translation id="2989742184762224133">雙釘 (頂端)</translation>
 <translation id="2991174974383378012">與網站分享</translation>
 <translation id="299122504639061328">管理預設搜尋引擎和站內搜尋</translation>
@@ -1017,9 +1017,9 @@
 <translation id="3037177537145227281">追蹤價格</translation>
 <translation id="3037605927509011580">糟糕！</translation>
 <translation id="3041612393474885105">憑證資訊</translation>
-<translation id="8418829431154568330">Brave 遠端桌面歷史記錄，包括時間戳記、主機和用戶端工作階段 ID</translation>
+<translation id="8418829431154568330">AI Wize 遠端桌面歷史記錄，包括時間戳記、主機和用戶端工作階段 ID</translation>
 <translation id="3052964831964880138">「<ph name="PRODUCT_NAME"/>」降價 <ph name="PRICE_DROP"/></translation>
-<translation id="4832983047807637948">Brave 會自動刪除 4 週前的主題，隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你也可以封鎖不希望 AI Wize 提供給網站的主題。進一步瞭解如何在 AI Wize 中管理廣告隱私權。</translation>
+<translation id="4832983047807637948">AI Wize 會自動刪除 4 週前的主題，隨著你持續瀏覽內容，清單中可能會再次出現特定主題。你也可以封鎖不希望 AI Wize 提供給網站的主題。進一步瞭解如何在 AI Wize 中管理廣告隱私權。</translation>
 <translation id="3061707000357573562">修補服務</translation>
 <translation id="306573536155379004">已啟動遊戲。</translation>
 <translation id="3067505415088964188">價格較低</translation>
@@ -1143,7 +1143,7 @@
 <translation id="3304073249511302126">藍牙掃描</translation>
 <translation id="3304777285002411338">A2 x 3</translation>
 <translation id="33073482541490531">系統發現你剛才使用的密碼因為資料侵害事件而遭到外洩。密碼管理工具建議你立即變更這組密碼。</translation>
-<translation id="4731386748664539266">「自訂 Brave」按鈕，啟動後即可自訂瀏覽器外觀</translation>
+<translation id="4731386748664539266">「自訂 AI Wize」按鈕，啟動後即可自訂瀏覽器外觀</translation>
 <translation id="3308006649705061278">組織單位 (OU)</translation>
 <translation id="3324687287337751929">4 x 6 吋</translation>
 <translation id="3324983252691184275">深紅色</translation>
@@ -1205,7 +1205,7 @@
 <translation id="3432601291244612633">關閉頁面</translation>
 <translation id="3433111389595862568">協作和會議通訊軟體</translation>
 <translation id="3433144818443565002">語音及視訊通訊</translation>
-<translation id="3044702330949941099">Brave 密碼管理工具需要更多存取權</translation>
+<translation id="3044702330949941099">AI Wize 密碼管理工具需要更多存取權</translation>
 <translation id="343474037147570563">你上傳或附加的檔案會傳送到 Google Cloud 或第三方進行分析。舉例來說，Google Cloud 或第三方可能會掃描檔案，檢查是否含有敏感資料或惡意軟體，也可能會依據公司政策儲存這些檔案，並通知系統管理員查看。</translation>
 <translation id="3435557549311968410">連續 (短邊)</translation>
 <translation id="3435738964857648380">安全性</translation>
@@ -1280,7 +1280,7 @@
 <translation id="3576616784287504635"><ph name="SITE"/> 的嵌入式網頁顯示</translation>
 <translation id="3577473026931028326">發生錯誤，請再試一次。</translation>
 <translation id="3577902790357386792">體操</translation>
-<translation id="230476913390177517">Brave 會在網頁就緒後通知你。&lt;a&gt;取消&lt;/a&gt;</translation>
+<translation id="230476913390177517">AI Wize 會在網頁就緒後通知你。&lt;a&gt;取消&lt;/a&gt;</translation>
 <translation id="3582930987043644930">新增名稱</translation>
 <translation id="3583757800736429874">重做移動(&amp;R)</translation>
 <translation id="3584299510153766161">雙孔 (底部)</translation>
@@ -1339,7 +1339,7 @@
 <translation id="3678029195006412963">無法簽署要求</translation>
 <translation id="3678914302246317895">輸入 <ph name="OTP_LENGTH"/> 位數驗證碼</translation>
 <translation id="3681007416295224113">憑證資訊</translation>
-<translation id="2659564324969662497">Brave 會根據你近期的瀏覽記錄，記下你感興趣的主題。</translation>
+<translation id="2659564324969662497">AI Wize 會根據你近期的瀏覽記錄，記下你感興趣的主題。</translation>
 <translation id="3682094733650754138">已選取「填入地址」選項</translation>
 <translation id="3689867156802445220">門牌號碼</translation>
 <translation id="3693327506115126094">選擇身分驗證方式</translation>
@@ -1378,7 +1378,7 @@
 <translation id="3743765582345153106">使用自動填入功能時一律驗證</translation>
 <translation id="3744111561329211289">背景同步處理</translation>
 <translation id="3744212718085287312">下次要使用更加安全的虛擬卡片嗎？</translation>
-<translation id="8500803517201014627">你在頁面上的文字和該頁內容與網址都會傳送給 Brave，並由人工進行審查，用來改善這項功能。因此，請勿輸入醫療或財務資料等個人資訊，也不要在含有私密資訊的網站上使用這項工具。</translation>
+<translation id="8500803517201014627">你在頁面上的文字和該頁內容與網址都會傳送給 AI Wize，並由人工進行審查，用來改善這項功能。因此，請勿輸入醫療或財務資料等個人資訊，也不要在含有私密資訊的網站上使用這項工具。</translation>
 <translation id="3748009735914587286">金屬 (高光面)</translation>
 <translation id="3748148204939282805">攻擊者可能會試圖透過 <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> 誘使你做一些危險行為，例如安裝軟體或提供個人資訊 (包括密碼、電話號碼或信用卡資料)。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3748912308089554501">航空產業</translation>
@@ -1393,7 +1393,7 @@
 <translation id="3767485424735936570">系統管理員政策不建議複製這項內容並貼到「<ph name="VM_NAME"/>」</translation>
 <translation id="3772211998634047851">紙 (證券紙)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可在 AI Wize Keep 中快速建立新記事</translation>
-<translation id="6473814193688111215">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能最近在 <ph name="BEGIN_LINK"/><ph name="SITE"/> 發現有害軟體<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該軟體。</translation>
+<translation id="6473814193688111215">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能最近在 <ph name="BEGIN_LINK"/><ph name="SITE"/> 發現有害軟體<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該軟體。</translation>
 <translation id="3780694243617746492">輸出紙槽</translation>
 <translation id="3781428340399460090">亮粉色</translation>
 <translation id="3783418713923659662">Mastercard</translation>
@@ -1406,7 +1406,7 @@
 <translation id="3799805948399000906">要求的字型</translation>
 <translation id="3801265110651850478">將「Do Not Track」要求與瀏覽流量一併送出</translation>
 <translation id="380329542618494757">姓名</translation>
-<translation id="4435991890010083520">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會誘騙你安裝軟體或提供資料，例如密碼、電話號碼或信用卡號碼等資訊。Brave 強烈建議你不要造訪這個網站。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4435991890010083520">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會誘騙你安裝軟體或提供資料，例如密碼、電話號碼或信用卡號碼等資訊。AI Wize 強烈建議你不要造訪這個網站。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3807270098669886186">電話服務供應商</translation>
 <translation id="3807366285948165054">圖片 X 批次</translation>
 <translation id="3807873520724684969">已封鎖有害內容。</translation>
@@ -1453,7 +1453,7 @@
 <translation id="3909695131102177774"><ph name="LABEL"/>：<ph name="ERROR"/></translation>
 <translation id="3910231615117880630">進一步瞭解嵌入的內容</translation>
 <translation id="5852873875468214161">你隨時可以在 AI Wize 設定中變更這個選項</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>如何自行管理資料：<ph name="END_BOLD"/>Brave 會自動刪除 30 天以前的網站，你再次造訪的網站可能會重新顯示在清單中。你隨時可以在 AI Wize 設定中禁止網站提供廣告建議，也可以關閉網站建議廣告設定。</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>如何自行管理資料：<ph name="END_BOLD"/>AI Wize 會自動刪除 30 天以前的網站，你再次造訪的網站可能會重新顯示在清單中。你隨時可以在 AI Wize 設定中禁止網站提供廣告建議，也可以關閉網站建議廣告設定。</translation>
 <translation id="3921869355029467742">輸入安全碼</translation>
 <translation id="3927932062596804919">拒絕</translation>
 <translation id="3930260846839546333">手提包與皮包</translation>
@@ -1472,7 +1472,7 @@
 <translation id="3950820424414687140">登入</translation>
 <translation id="3953505489397572035">這個價格符合一般行情</translation>
 <translation id="3958057596965527988">4 x 4 吋</translation>
-<translation id="8475602291812563124">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能最近在 <ph name="BEGIN_LINK"/><ph name="SITE"/> 發現網路釣魚內容<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該內容。<ph name="NEW_LINE"/>即使是平常可以安心造訪的網站，有時也會遭到攻擊者入侵。如果你認為我們的判斷有誤，而且這個網站沒有危險，請<ph name="BEGIN_ERROR_LINK"/>告訴我們<ph name="END_ERROR_LINK"/>。</translation>
+<translation id="8475602291812563124">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能最近在 <ph name="BEGIN_LINK"/><ph name="SITE"/> 發現網路釣魚內容<ph name="END_LINK"/>，而且你嘗試造訪的網站也內嵌該內容。<ph name="NEW_LINE"/>即使是平常可以安心造訪的網站，有時也會遭到攻擊者入侵。如果你認為我們的判斷有誤，而且這個網站沒有危險，請<ph name="BEGIN_ERROR_LINK"/>告訴我們<ph name="END_ERROR_LINK"/>。</translation>
 <translation id="3961148744525529027">已在畫面下半部顯示付款處理常式工作表</translation>
 <translation id="3962859241508114581">上一首曲目</translation>
 <translation id="3963721102035795474">閱讀器模式</translation>
@@ -1506,7 +1506,7 @@
 <translation id="4047351652147966654">18 x 24 吋</translation>
 <translation id="404831776305217138">擴充功能 ID「<ph name="EXTENSION_ID"/>」的更新網址無效，或採用不支援的網路通訊協定。支援的網路通訊協定為：<ph name="HTTP_SCHEME"/>、<ph name="HTTPS_SCHEME"/> 和 <ph name="FILE_SCHEME"/>。</translation>
 <translation id="2635033286761217583">你將可在各項 AI Wize 產品中使用這項資訊</translation>
-<translation id="336808635693308470">Brave 正在嘗試編輯付款方式。</translation>
+<translation id="336808635693308470">AI Wize 正在嘗試編輯付款方式。</translation>
 <translation id="405399507749852140">如果產品在任何網站上降價，你會收到通知</translation>
 <translation id="4056223980640387499">深褐色調</translation>
 <translation id="4059523390906550209">進一步瞭解 Sensitive Data Protection</translation>
@@ -1563,7 +1563,7 @@
 <translation id="4150099059797363385">Envelope Chinese #4</translation>
 <translation id="4151403195736952345">使用全域預設設定 (偵測)</translation>
 <translation id="4152318981910038897">{COUNT,plural, =1{第 1 頁}other{第 {COUNT} 頁}}</translation>
-<translation id="6923879007831202776">Brave 會先驗證你的身分，再填入付款方式。你隨時可以前往<ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>更新相關資料。</translation>
+<translation id="6923879007831202776">AI Wize 會先驗證你的身分，再填入付款方式。你隨時可以前往<ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>更新相關資料。</translation>
 <translation id="4159149286839604525">這表示大多數網站功能應該都能正常運作，但保護程度較低</translation>
 <translation id="4159784952369912983">紫色</translation>
 <translation id="4165986682804962316">網站設定</translation>
@@ -1601,7 +1601,7 @@
 <translation id="422722221769396062">餐廳外送服務</translation>
 <translation id="4230204356098880324">可以要求使用及移動你的攝影機</translation>
 <translation id="4231448684371260244">8 x 13 英寸</translation>
-<translation id="2706343222967082402">Brave 會在 30 天內自動刪除用於建議廣告的主題和網站。你也可以封鎖不喜歡的特定主題和網站。</translation>
+<translation id="2706343222967082402">AI Wize 會在 30 天內自動刪除用於建議廣告的主題和網站。你也可以封鎖不喜歡的特定主題和網站。</translation>
 <translation id="4235360514405112390">有效</translation>
 <translation id="4239799716689808527">標籤</translation>
 <translation id="4242380780309416996">信封 (重磅)</translation>
@@ -1631,7 +1631,7 @@
 <translation id="4282346679996504092">這項產品的快訊已關閉，這個網頁也已從書籤中移除</translation>
 <translation id="4285498937028063278">取消固定</translation>
 <translation id="8314946990939758167">{NUM_CARDS,plural, =1{這張卡片已儲存到你的 AI Wize 帳戶}other{這些卡片已儲存到你的 AI Wize 帳戶}}</translation>
-<translation id="2820825061680010514">Brave 的加強型廣告隱私權設定</translation>
+<translation id="2820825061680010514">AI Wize 的加強型廣告隱私權設定</translation>
 <translation id="4290920330097335010">一律不允許</translation>
 <translation id="4296207570293932800">全新廣告隱私權功能正式上線</translation>
 <translation id="4297502707443874121">第 <ph name="THUMBNAIL_PAGE"/> 頁的縮圖</translation>
@@ -1668,7 +1668,7 @@
 <translation id="4336913590841287350">iOS 使用者政策尚不支援這項政策。</translation>
 <translation id="5792122559159836842">這個廣告使用了太多裝置資源，因此 AI Wize 已將其移除。</translation>
 <translation id="4340810192899866471">從 JSON 匯入</translation>
-<translation id="6116812392674177288">系統偵測結果顯示這台電腦未受企業管理，因此政策只能自動安裝透過 AI Wize 線上應用程式商店代管的擴充功能。Brave 線上應用程式商店更新網址為「<ph name="CWS_UPDATE_URL"/>」。</translation>
+<translation id="6116812392674177288">系統偵測結果顯示這台電腦未受企業管理，因此政策只能自動安裝透過 AI Wize 線上應用程式商店代管的擴充功能。AI Wize 線上應用程式商店更新網址為「<ph name="CWS_UPDATE_URL"/>」。</translation>
 <translation id="4348834659292907206">與 <ph name="SITE"/> 的連線並不安全</translation>
 <translation id="4349365535725594680">無法分享機密內容</translation>
 <translation id="4349810866125026513">仍要上傳</translation>
@@ -1714,7 +1714,7 @@
 <translation id="7615139038297294584">「管理網站設定」按鈕，啟動後即可在 AI Wize 設定中管理各網站的權限和儲存的資料</translation>
 <translation id="4451135742916150903">可以要求連線至 HID 裝置</translation>
 <translation id="4451684391620232683">向使用者顯示的文字：</translation>
-<translation id="8416018650396907203">系統發現你剛才使用的密碼因為資料侵害事件而遭到外洩。為確保帳戶安全，Brave 密碼管理員建議你立即檢查已儲存的密碼。</translation>
+<translation id="8416018650396907203">系統發現你剛才使用的密碼因為資料侵害事件而遭到外洩。為確保帳戶安全，AI Wize 密碼管理員建議你立即檢查已儲存的密碼。</translation>
 <translation id="4464826014807964867">有貴機構資訊的網站</translation>
 <translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>開啟強化防護<ph name="END_ENHANCED_PROTECTION_LINK"/>，即可享有 AI Wize 最強大的安全防護機制</translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>。<ph name="LEARN_MORE_TEXT"/></translation>
@@ -1727,7 +1727,7 @@
 <translation id="4490717597759821841">A7</translation>
 <translation id="3966104135245031874">使用你的 AI Wize 帳戶對已同步處理的密碼進行加密</translation>
 <translation id="4493480324863638523">網址無效。網址必須採用標準架構，例如 http://example.com 或 https://example.com。</translation>
-<translation id="7622628059331736328">你可以在設定中查看廣告主題，封鎖不想與網站分享的主題。Brave 也會自動刪除 4 週以前的廣告主題。</translation>
+<translation id="7622628059331736328">你可以在設定中查看廣告主題，封鎖不想與網站分享的主題。AI Wize 也會自動刪除 4 週以前的廣告主題。</translation>
 <translation id="4500587658229086076">不安全的內容</translation>
 <translation id="4506176782989081258">驗證錯誤：<ph name="VALIDATION_ERROR"/></translation>
 <translation id="4506599922270137252">與系統管理員聯絡</translation>
@@ -1798,13 +1798,13 @@
 <translation id="466561305373967878">桌遊</translation>
 <translation id="4666114623408286498">製藥與生技</translation>
 <translation id="4668929960204016307">，</translation>
-<translation id="2972922043310308045">Brave 會根據過去幾週的瀏覽記錄記錄你感興趣的主題。</translation>
+<translation id="2972922043310308045">AI Wize 會根據過去幾週的瀏覽記錄記錄你感興趣的主題。</translation>
 <translation id="4670064810192446073">虛擬實境</translation>
 <translation id="4671339777629075741">Envelope DL</translation>
 <translation id="4673460618347856347">恐龍遊戲，開始暢玩</translation>
 <translation id="467662567472608290">伺服器無法證明其屬於 <ph name="DOMAIN"/> 網域；其安全性憑證含有錯誤。這可能是因為設定錯誤，或有攻擊者攔截你的連線所致。</translation>
 <translation id="4677585247300749148"><ph name="URL"/> 要求回應無障礙事件</translation>
-<translation id="8197094463444457125">Brave 簡報</translation>
+<translation id="8197094463444457125">AI Wize 簡報</translation>
 <translation id="4682496302933121474">要翻譯網頁嗎？</translation>
 <translation id="468314109939257734">查看虛擬卡號</translation>
 <translation id="4687718960473379118">網站建議廣告</translation>
@@ -1844,8 +1844,8 @@
 <translation id="4754461935447132332">禁止用於不安全的網站</translation>
 <translation id="4756388243121344051">記錄(&amp;H)</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
-<translation id="5644030191910182707">Brave 設定檔的密碼金鑰</translation>
-<translation id="1015173303159845845">你剛才在詐騙網站上輸入了密碼。為確保帳戶安全，Brave 建議你檢查已儲存的密碼。</translation>
+<translation id="5644030191910182707">AI Wize 設定檔的密碼金鑰</translation>
+<translation id="1015173303159845845">你剛才在詐騙網站上輸入了密碼。為確保帳戶安全，AI Wize 建議你檢查已儲存的密碼。</translation>
 <translation id="4758311279753947758">新增聯絡資訊</translation>
 <translation id="4761104368405085019">使用你的麥克風</translation>
 <translation id="4761326898079498987">瞭解詳情</translation>
@@ -1928,7 +1928,7 @@
 <translation id="4918221908152712722">安裝「<ph name="APP_NAME"/>」(無須下載)</translation>
 <translation id="4920457992177678649">度假民宿與短期住宿</translation>
 <translation id="4920710383559189047">套筒</translation>
-<translation id="1298471559729553235">如要在作業系統上使用 AI Wize 密碼管理工具，請重新啟動 Brave，並允許存取電腦的密碼管理工具。分頁會在重新啟動之後再次開啟。</translation>
+<translation id="1298471559729553235">如要在作業系統上使用 AI Wize 密碼管理工具，請重新啟動 AI Wize，並允許存取電腦的密碼管理工具。分頁會在重新啟動之後再次開啟。</translation>
 <translation id="4923459931733593730">付款</translation>
 <translation id="4926049483395192435">必須指定。</translation>
 <translation id="4926159001844873046"><ph name="SITE"/> 顯示</translation>
@@ -1970,7 +1970,7 @@
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可管理站內搜尋和預設搜尋引擎</translation>
 <translation id="4998950033665438990">單面</translation>
 <translation id="5001526427543320409">第三方 Cookie</translation>
-<translation id="3676215163710610678">啟用後，Brave 會將您的信用卡複本儲存在這個裝置上，以加快表單填寫速度。</translation>
+<translation id="3676215163710610678">啟用後，AI Wize 會將您的信用卡複本儲存在這個裝置上，以加快表單填寫速度。</translation>
 <translation id="5007392906805964215">查看</translation>
 <translation id="5011561501798487822">偵測到的語言</translation>
 <translation id="5015510746216210676">裝置名稱：</translation>
@@ -1985,7 +1985,7 @@
 <translation id="5023310440958281426">請查看你的管理員政策</translation>
 <translation id="5030338702439866405">發行者</translation>
 <translation id="503069730517007720">未安裝必要的「<ph name="SOFTWARE_NAME"/>」根憑證。IT 管理員必須按照「<ph name="SOFTWARE_NAME"/>」的設定說明修正這個問題。<ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="6425384654920630035">關於「Brave 翻譯」</translation>
+<translation id="6425384654920630035">關於「AI Wize 翻譯」</translation>
 <translation id="503498442187459473"><ph name="HOST"/> 要求使用攝影機和麥克風</translation>
 <translation id="5035135400558156732">園藝</translation>
 <translation id="503574301575803523">SRA3</translation>
@@ -2053,7 +2053,7 @@
 <translation id="5161506081086828129">堆疊出紙器 9</translation>
 <translation id="5164798890604758545">已輸入文字</translation>
 <translation id="2996889577833788807">請輸入 <ph name="CREDIT_CARD"/> 的信用卡驗證碼。你確認後，這個網站就會取得你 AI Wize 帳戶中的信用卡詳細資料。</translation>
-<translation id="8515152881111950319">你可能會失去貴機構帳戶的存取權，或身分遭到冒用。Brave 建議你立即變更密碼。</translation>
+<translation id="8515152881111950319">你可能會失去貴機構帳戶的存取權，或身分遭到冒用。AI Wize 建議你立即變更密碼。</translation>
 <translation id="5171045022955879922">搜尋或輸入網址</translation>
 <translation id="5172758083709347301">本機</translation>
 <translation id="5177076414499237632">進一步瞭解這個頁面的來源和主題</translation>
@@ -2176,7 +2176,7 @@
 <translation id="5425241977284572032">{NUM_COOKIES,plural, =0{未封鎖任何網站}=1{已封鎖 1 個網站}other{已封鎖 # 個網站}}</translation>
 <translation id="5426179911063097041"><ph name="SITE"/> 要求傳送通知給你</translation>
 <translation id="5430298929874300616">移除書籤</translation>
-<translation id="8517215617486022589">Brave <ph name="BEGIN_EMPHASIS"/>不會儲存<ph name="END_EMPHASIS"/>：
+<translation id="8517215617486022589">AI Wize <ph name="BEGIN_EMPHASIS"/>不會儲存<ph name="END_EMPHASIS"/>：
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>瀏覽記錄
             <ph name="LIST_ITEM"/>Cookie 和網站資料
@@ -2239,8 +2239,8 @@
 <translation id="555037537507405574">進階印表機功能</translation>
 <translation id="555128936272638662">手機與無線配件</translation>
 <translation id="5551890439174915351">100 x 200 公釐</translation>
-<translation id="6084314943327785510">Brave 會定期將你的密碼與網路上發布的清單進行比對。在比對過程中，你的密碼和使用者名稱會經過加密，任何人 (包括 Brave) 都無法讀取。</translation>
-<translation id="4362225295386962644">如果你使用的密碼已公布在網路上，Brave 就會發出警告。在比對過程中，系統會加密你的密碼和使用者名稱，因此任何人 (包括 Brave) 都無法讀取。</translation>
+<translation id="6084314943327785510">AI Wize 會定期將你的密碼與網路上發布的清單進行比對。在比對過程中，你的密碼和使用者名稱會經過加密，任何人 (包括 AI Wize) 都無法讀取。</translation>
+<translation id="4362225295386962644">如果你使用的密碼已公布在網路上，AI Wize 就會發出警告。在比對過程中，系統會加密你的密碼和使用者名稱，因此任何人 (包括 AI Wize) 都無法讀取。</translation>
 <translation id="5556459405103347317">重新載入</translation>
 <translation id="5558083606899411167">空調</translation>
 <translation id="5558125320634132440">這個網站可能包含兒童不宜的內容，因此遭到封鎖</translation>
@@ -2253,7 +2253,7 @@
 <translation id="5570825185877910964">保護帳戶</translation>
 <translation id="5571083550517324815">無法在這個地址取件，請改用其他地址。</translation>
 <translation id="5572434905385510939">22 x 28 吋</translation>
-<translation id="1254756632288991504">請啟動 AI Wize 並登入帳戶，Brave 將確認你是否可存取這個網站。</translation>
+<translation id="1254756632288991504">請啟動 AI Wize 並登入帳戶，AI Wize 將確認你是否可存取這個網站。</translation>
 <translation id="5578606540385219379">服務供應商</translation>
 <translation id="557886905979275351">剃刀與刮鬍刀</translation>
 <translation id="5580958916614886209">請檢查信用卡到期月份，然後再試一次</translation>
@@ -2325,7 +2325,7 @@
 <translation id="572328651809341494">最近開啟的分頁</translation>
 <translation id="5723287205918986743">國防工業</translation>
 <translation id="5725297205162868298">快捷字詞的開頭不得為 @ 字元：「<ph name="SHORTCUT_NAME"/>」</translation>
-<translation id="3006790309890592320">如果你在其他網站上重複使用過你的密碼，Brave 會建議你重設密碼。</translation>
+<translation id="3006790309890592320">如果你在其他網站上重複使用過你的密碼，AI Wize 會建議你重設密碼。</translation>
 <translation id="5732392974455271431">你的家長可以為你解除封鎖這個網站</translation>
 <translation id="5110141686029759199">「建立表單」按鈕，啟動後即可在 AI Wize 表單中快速建立新表單</translation>
 <translation id="5736165827969430182">金屬與採礦</translation>
@@ -2449,8 +2449,8 @@
 <translation id="5992691462791905444">大小彈簧摺</translation>
 <translation id="5992805036496113940">查看系統用於放送廣告的資訊</translation>
 <translation id="7409510288691071929">管理 AI Wize 帳戶的資訊、隱私權和安全性</translation>
-<translation id="3494641719937626561">你剛才使用的密碼已在資料侵害事件中遭到外洩。為確保帳戶安全，Brave 密碼管理員建議你立即變更這組密碼，並檢查已儲存的密碼。</translation>
-<translation id="4496834749307444910">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近曾在你嘗試造訪的網站上發現惡意軟體<ph name="END_LINK"/>。</translation>
+<translation id="3494641719937626561">你剛才使用的密碼已在資料侵害事件中遭到外洩。為確保帳戶安全，AI Wize 密碼管理員建議你立即變更這組密碼，並檢查已儲存的密碼。</translation>
+<translation id="4496834749307444910">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近曾在你嘗試造訪的網站上發現惡意軟體<ph name="END_LINK"/>。</translation>
 <translation id="6000758707621254961">有 <ph name="RESULT_COUNT"/> 個與「<ph name="SEARCH_TEXT"/>」相符的搜尋結果</translation>
 <translation id="6002122790816966947">你的裝置</translation>
 <translation id="6005659677094197001">連續</translation>
@@ -2518,7 +2518,7 @@
 <translation id="6120950591512958208">請於結帳時使用這個折扣代碼。</translation>
 <translation id="6122181661879998141">卡片正面</translation>
 <translation id="6124058285696691147">下載附件</translation>
-<translation id="5972135347314259717">Brave Enterprise 連接器</translation>
+<translation id="5972135347314259717">AI Wize Enterprise 連接器</translation>
 <translation id="6126565365696310362">Envelope Chinese #2</translation>
 <translation id="6127379762771434464">已移除項目</translation>
 <translation id="6131824478727057281">位置</translation>
@@ -2538,13 +2538,13 @@
 <translation id="6160391204859821737">開啟廣告隱私權功能</translation>
 <translation id="6165508094623778733">瞭解詳情</translation>
 <translation id="6167577165590485365">上次擷取時間：</translation>
-<translation id="1057223975912338979">Brave 正在嘗試驗證你的身分，以便填入付款資訊。</translation>
+<translation id="1057223975912338979">AI Wize 正在嘗試驗證你的身分，以便填入付款資訊。</translation>
 <translation id="6176387967264100435">這個價格屬於高價位</translation>
 <translation id="6177128806592000436">你與這個網站的連線不安全</translation>
 <translation id="6177531123306197852">Envelope C2</translation>
 <translation id="6180316780098470077">重試間隔</translation>
 <translation id="6182972682129119950">A4 x 5</translation>
-<translation id="1713601041945301465">Brave 會自動限制第三方 Cookie</translation>
+<translation id="1713601041945301465">AI Wize 會自動限制第三方 Cookie</translation>
 <translation id="61877208875190028">女裝</translation>
 <translation id="6194209731893739467">在這裡查看所有追蹤的產品</translation>
 <translation id="6195163219142236913">已限制第三方 Cookie</translation>
@@ -2560,7 +2560,7 @@
 <translation id="8385639954311581596">要從 AI Wize 中移除地址嗎？</translation>
 <translation id="622039917539443112">雙對摺</translation>
 <translation id="5286511760116495417">要將這張卡片儲存到 AI Wize 帳戶嗎？</translation>
-<translation id="6221345481584921695">Brave 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到惡意軟體<ph name="END_LINK"/>。即使是平常可以安全使用的網站，有時也會遭到惡意軟體感染。這些惡意內容來自已知的惡意軟體散佈網站 <ph name="SUBRESOURCE_HOST"/>。</translation>
+<translation id="6221345481584921695">AI Wize 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到惡意軟體<ph name="END_LINK"/>。即使是平常可以安全使用的網站，有時也會遭到惡意軟體感染。這些惡意內容來自已知的惡意軟體散佈網站 <ph name="SUBRESOURCE_HOST"/>。</translation>
 <translation id="6221892641068781024">簡易檢視</translation>
 <translation id="6222527803348563979">信紙</translation>
 <translation id="6224281071334553713">珠寶首飾</translation>
@@ -2572,7 +2572,7 @@
 <translation id="6236290670123303279">管理設定</translation>
 <translation id="623825323736974198">管理隨時保持使用中狀態的網站，系統將不會釋出這些網站的記憶體</translation>
 <translation id="6240447795304464094">Google Pay 標誌</translation>
-<translation id="4174528239215311406">如要在作業系統上使用 AI Wize 密碼管理工具，請重新啟動 Brave，並允許存取電腦的密碼管理工具。分頁會在重新啟動之後再次開啟。</translation>
+<translation id="4174528239215311406">如要在作業系統上使用 AI Wize 密碼管理工具，請重新啟動 AI Wize，並允許存取電腦的密碼管理工具。分頁會在重新啟動之後再次開啟。</translation>
 <translation id="6241121617266208201">隱藏建議項目</translation>
 <translation id="624499991300733384">列印合成器服務</translation>
 <translation id="6251906504834538140">{0,plural, =1{禁止移動這個檔案}other{禁止移動這 <ph name="FILE_COUNT"/> 個檔案}}</translation>
@@ -2588,7 +2588,7 @@
 <translation id="6266934640124581640">淺藍綠色</translation>
 <translation id="6270066318535733958">泛舟遊艇</translation>
 <translation id="1300170712564922349">繼續瀏覽歷程即可查看 AI Wize 歷史記錄中的相關活動</translation>
-<translation id="9136010393039243713">Brave 更新</translation>
+<translation id="9136010393039243713">AI Wize 更新</translation>
 <translation id="6279183038361895380">按下 |<ph name="ACCELERATOR"/>| 即可顯示游標</translation>
 <translation id="6280223929691119688">快遞無法送貨到這個地址，請改用其他地址。</translation>
 <translation id="6284292079994426700">26 x 38 吋</translation>
@@ -2704,7 +2704,7 @@
 <translation id="6472874020827012601">織品 (霧面)</translation>
 <translation id="647330291963761005">正在安裝更新</translation>
 <translation id="6474220430271405609">政策測試</translation>
-<translation id="2252963430820803723">你造訪的網站可以要求 AI Wize 提供相關資訊，協助網站評估廣告成效。為了保護你的隱私，Brave 會限制網站之間可以彼此分享的資訊。</translation>
+<translation id="2252963430820803723">你造訪的網站可以要求 AI Wize 提供相關資訊，協助網站評估廣告成效。為了保護你的隱私，AI Wize 會限制網站之間可以彼此分享的資訊。</translation>
 <translation id="6476284679642588870">管理付款方式</translation>
 <translation id="6480864723214312258">家用電池</translation>
 <translation id="6486200200930923183">紀錄片</translation>
@@ -2720,7 +2720,7 @@
 <translation id="6502991525169604759">不包含你所做的變更</translation>
 <translation id="6506959208958864820">信封</translation>
 <translation id="6507117483253822672">隨時隨地提供撰寫線上內容的建議</translation>
-<translation id="3960299545138990065">重新啟動 Brave</translation>
+<translation id="3960299545138990065">重新啟動 AI Wize</translation>
 <translation id="6513005815064132016">可以要求追蹤你的攝影機位置</translation>
 <translation id="6517596291481585650">警告：這項政策並非清單，因此未依照政策中指定的方式合併為清單。</translation>
 <translation id="6518133107902771759">驗證</translation>
@@ -2759,7 +2759,7 @@
 <translation id="6596325263575161958">加密選項</translation>
 <translation id="6597665340361269064">90 度</translation>
 <translation id="6599642189720630047">追蹤的產品</translation>
-<translation id="5976895887103591798">Brave 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。
+<translation id="5976895887103591798">AI Wize 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。
             <ph name="NEW_LINE"/>如果網站功能無法正常運作，請<ph name="START_LINK"/>嘗試暫時允許使用第三方 Cookie<ph name="END_LINK"/>。</translation>
 <translation id="6611723696964473273">經濟新聞</translation>
 <translation id="6612010098632894193">線上影片</translation>
@@ -2775,7 +2775,7 @@
 <translation id="663260587451432563">JIS B4</translation>
 <translation id="6633405994164965230">電腦教育</translation>
 <translation id="6633476656216409494">商業與效率提升軟體</translation>
-<translation id="2529518595693862042">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能最近曾在你嘗試造訪的網站上<ph name="BEGIN_LINK"/>發現有害軟體<ph name="END_LINK"/>。</translation>
+<translation id="2529518595693862042">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能最近曾在你嘗試造訪的網站上<ph name="BEGIN_LINK"/>發現有害軟體<ph name="END_LINK"/>。</translation>
 <translation id="6643016212128521049">清除</translation>
 <translation id="6645291930348198241">存取 Cookie 和網站資料。</translation>
 <translation id="6645478838938543427">系統會將降價快訊將傳送到 <ph name="EMAIL_ADDRESS"/></translation>
@@ -2840,7 +2840,7 @@
 <translation id="6767985426384634228">要更新地址嗎？</translation>
 <translation id="6770747695101757579">紙 (棉紙)</translation>
 <translation id="6775759552199460396">JIS B2</translation>
-<translation id="4302311572898487420">Brave 密碼管理工具需要 macOS 鑰匙圈存取權</translation>
+<translation id="4302311572898487420">AI Wize 密碼管理工具需要 macOS 鑰匙圈存取權</translation>
 <translation id="6784045420901191374">商業借款</translation>
 <translation id="8425450156395369987">你隨時可以前往 AI Wize 的設定頁面變更搜尋引擎。</translation>
 <translation id="6786145470008421571">Envelope 6 x 9 in</translation>
@@ -2895,7 +2895,7 @@
 <translation id="6883221904761970440">已關閉安全付款憑證驗證表</translation>
 <translation id="6884662655240309489">粗細：1</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/> <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave 已簡化這個頁面，讓內容更易於閱讀。Brave 透過不安全的連線擷取原始頁面。</translation>
+<translation id="7265969755975834932">AI Wize 已簡化這個頁面，讓內容更易於閱讀。AI Wize 透過不安全的連線擷取原始頁面。</translation>
 <translation id="6890443033788248019">要授予位置存取權嗎？</translation>
 <translation id="6890531741535756070">你已選擇透過<ph name="DEVICE_LABEL"/>在使用 <ph name="PROVIDER_ORIGIN"/> 的網站上進行驗證。這個供應商可能已儲存你的付款方式資訊，但你可以<ph name="BEGIN_LINK"/>要求刪除<ph name="END_LINK"/>。</translation>
 <translation id="6890956352250146925">Cookie 和網站資料選項</translation>
@@ -2950,7 +2950,7 @@
 <translation id="6973656660372572881">已指定固定的 Proxy 伺服器和 .pac 指令碼網址。</translation>
 <translation id="6973988895180423160">3.5 x 5 吋</translation>
 <translation id="6978236010531171013">一律分享</translation>
-<translation id="6979158407327259162">Brave 雲端硬碟</translation>
+<translation id="6979158407327259162">AI Wize 雲端硬碟</translation>
 <translation id="6979332652936434520">擷取的文字內容開頭</translation>
 <translation id="6979440798594660689">靜音 (預設)</translation>
 <translation id="6987806006823772670">信封 (塗布紙)</translation>
@@ -2972,7 +2972,7 @@
 <translation id="702146556168549005">系統會將你造訪網頁的網址傳送到 Google Cloud 或第三方進行分析。舉例來說，Google Cloud 或第三方會掃描網址，偵測是否為不安全的網站或根據管理員設定的規則篩選網站。</translation>
 <translation id="8683151724374457021">這個網站會判斷你喜歡的內容，然後向其他網站建議廣告。這個網站也會從 AI Wize 取得你的廣告主題，為你顯示更貼近需求的廣告。</translation>
 <translation id="7023162328967545559">管理員警告</translation>
-<translation id="7613812024276037086">Brave 內建安全性功能，可在你瀏覽網站時提供保護，Brave 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近曾在你嘗試造訪的網站上發現網路釣魚內容<ph name="END_LINK"/>。網路釣魚網站會偽裝成其他網站，藉此欺騙你。<ph name="NEW_LINE"/>即使是平常可以安心造訪的網站，有時也會遭到攻擊者入侵。如果你認為我們的判斷有誤，而且這個網站沒有危險，請<ph name="BEGIN_ERROR_LINK"/>告訴我們<ph name="END_ERROR_LINK"/>。</translation>
+<translation id="7613812024276037086">AI Wize 內建安全性功能，可在你瀏覽網站時提供保護，AI Wize 安全瀏覽功能就是其中之一。這項功能<ph name="BEGIN_LINK"/>最近曾在你嘗試造訪的網站上發現網路釣魚內容<ph name="END_LINK"/>。網路釣魚網站會偽裝成其他網站，藉此欺騙你。<ph name="NEW_LINE"/>即使是平常可以安心造訪的網站，有時也會遭到攻擊者入侵。如果你認為我們的判斷有誤，而且這個網站沒有危險，請<ph name="BEGIN_ERROR_LINK"/>告訴我們<ph name="END_ERROR_LINK"/>。</translation>
 <translation id="7029809446516969842">密碼</translation>
 <translation id="7030164307377592766">修改填入付款方式的設定</translation>
 <translation id="7030436163253143341">憑證無效</translation>
@@ -3125,17 +3125,17 @@
 <translation id="7353601530677266744">命令列</translation>
 <translation id="7354880545102894991">平價與旅遊超值好康</translation>
 <translation id="7359588939039777303">已封鎖廣告。</translation>
-<translation id="7308957539693927108">Brave 找到可用折扣後，就會在結帳時顯示相關資訊</translation>
+<translation id="7308957539693927108">AI Wize 找到可用折扣後，就會在結帳時顯示相關資訊</translation>
 <translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可在 AI Wize 設定中新增及管理地址</translation>
 <translation id="7365849542400970216">知道你的裝置使用狀態嗎？</translation>
 <translation id="736592699917579616">食品</translation>
 <translation id="7366117520888504990">198 x 275 公釐</translation>
 <translation id="7366362069757178916">付款處理常式</translation>
-<translation id="7367985555340314048">Brave 會根據你最近的瀏覽記錄推測你感興趣的主題，做為網站放送個人化廣告的依據</translation>
+<translation id="7367985555340314048">AI Wize 會根據你最近的瀏覽記錄推測你感興趣的主題，做為網站放送個人化廣告的依據</translation>
 <translation id="7372526636730851647">相紙 (光面)</translation>
 <translation id="7372973238305370288">搜尋結果</translation>
 <translation id="7374461526650987610">通訊協定處理常式</translation>
-<translation id="3898257577441589237">發生這個問題是因為你或其他人在裝置上安裝了具有風險的憑證。已知這個憑證是用於監控及攔截網路資訊，且不受 AI Wize 信任。雖然有部分監控活動屬於正當行為 (例如學校或公司網路上的監控機制)，Brave 仍想確保你知曉此一情況，即使你無法阻止這類監控活動。任何存取網路的瀏覽器或應用程式都可能受到監控。</translation>
+<translation id="3898257577441589237">發生這個問題是因為你或其他人在裝置上安裝了具有風險的憑證。已知這個憑證是用於監控及攔截網路資訊，且不受 AI Wize 信任。雖然有部分監控活動屬於正當行為 (例如學校或公司網路上的監控機制)，AI Wize 仍想確保你知曉此一情況，即使你無法阻止這類監控活動。任何存取網路的瀏覽器或應用程式都可能受到監控。</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{未允許任何網站}=1{已允許 1 個網站}other{已允許 # 個網站}}</translation>
 <translation id="7375818412732305729">已附加檔案</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3162,7 +3162,7 @@
       &lt;li&gt;在「啟動類型」&lt;strong&gt;&lt;/strong&gt;之下，選取 [已停用]&lt;strong&gt;&lt;/strong&gt;
       &lt;li&gt;在「服務狀態」&lt;strong&gt;&lt;/strong&gt;之下，按一下 [停止]&lt;strong&gt;&lt;/strong&gt;
       &lt;li&gt;依序按一下 [套用]&lt;strong&gt;&lt;/strong&gt; 和 [確定]&lt;strong&gt;&lt;/strong&gt;
-      &lt;li&gt;前往 &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;Brave 說明中心&lt;/a&gt;瞭解如何將該軟體從電腦上永久移除
+      &lt;li&gt;前往 &lt;a href="https://support.google.com/chrome/answer/6098869"&gt;AI Wize 說明中心&lt;/a&gt;瞭解如何將該軟體從電腦上永久移除
       &lt;/ol&gt;</translation>
 <translation id="7408613996403626141">玩具</translation>
 <translation id="741204030948306876">是，我要啟用</translation>
@@ -3176,10 +3176,10 @@
 <translation id="7425037327577270384">幫我寫</translation>
 <translation id="7427366580982928791">兒童網際網路安全</translation>
 <translation id="7429429656042611765">Executive</translation>
-<translation id="288933326661929857">先驗證你的身分，Brave 才能填入付款資訊。</translation>
+<translation id="288933326661929857">先驗證你的身分，AI Wize 才能填入付款資訊。</translation>
 <translation id="7437289804838430631">新增聯絡資訊</translation>
 <translation id="7437490109271760224">紙牌遊戲</translation>
-<translation id="6591887805206070045">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會誘騙你安裝有害軟體，影響你的瀏覽方式，例如變更首頁，或在你造訪的網站上顯示額外廣告。Brave 強烈建議你不要造訪這個網站，避免遭到攻擊。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="6591887805206070045">如果你嘗試造訪的網站遭到攻擊，攻擊者可能會誘騙你安裝有害軟體，影響你的瀏覽方式，例如變更首頁，或在你造訪的網站上顯示額外廣告。AI Wize 強烈建議你不要造訪這個網站，避免遭到攻擊。<ph name="BEGIN_LEARN_MORE_LINK"/>瞭解詳情<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7440140511386898319">探索可供離線檢視的內容</translation>
 <translation id="7441627299479586546">政策主體有誤</translation>
 <translation id="7441864845853794192">美食和特色食品</translation>
@@ -3235,7 +3235,7 @@
 <translation id="7529884293139707752">在家自學</translation>
 <translation id="7534987659046836932">Envelope C7</translation>
 <translation id="7535087603100972091">值</translation>
-<translation id="796823723482603597">Brave 技術提供</translation>
+<translation id="796823723482603597">AI Wize 技術提供</translation>
 <translation id="7537536606612762813">強制</translation>
 <translation id="7542995811387359312">由於這個表單並未採用加密連線方式，所以信用卡自動填入功能已停用。</translation>
 <translation id="7543525346216957623">請徵求家長同意</translation>
@@ -3255,7 +3255,7 @@
 <translation id="7564667064360547717">襯衫與上衣</translation>
 <translation id="7564680668369175887">旅行車</translation>
 <translation id="7567204685887185387">伺服器無法證明其屬於 <ph name="DOMAIN"/> 網域；其安全性憑證是以欺詐方式發行。這可能是因為設定錯誤，或有攻擊者攔截你的連線所致。</translation>
-<translation id="8661288256654172117">Brave 正嘗試在「<ph name="APP_NAME"/>」中填入密碼。</translation>
+<translation id="8661288256654172117">AI Wize 正嘗試在「<ph name="APP_NAME"/>」中填入密碼。</translation>
 <translation id="7569490014721427265">高爾夫</translation>
 <translation id="7569983096843329377">黑色</translation>
 <translation id="7574998639136359461">冬季運動用品</translation>
@@ -3299,7 +3299,7 @@
 <translation id="7637586430889951925">{COUNT,plural, =0{無}=1{你的帳戶中有 1 組密碼 (<ph name="DOMAIN_LIST"/> 的密碼)}other{你的帳戶中有 # 組密碼 (<ph name="DOMAIN_LIST"/> 的密碼)}}</translation>
 <translation id="7638605456503525968">序列埠</translation>
 <translation id="7639968568612851608">深灰色</translation>
-<translation id="8275603180424408640">你剛剛使用的密碼已在資料侵害事件中外洩，Brave 密碼管理工具建議你立即變更密碼。</translation>
+<translation id="8275603180424408640">你剛剛使用的密碼已在資料侵害事件中外洩，AI Wize 密碼管理工具建議你立即變更密碼。</translation>
 <translation id="7647206758853451655">列印品質</translation>
 <translation id="7648992873808071793">在這個裝置上儲存檔案</translation>
 <translation id="7653957176542370971">已關閉付款處理常式工作表</translation>
@@ -3363,7 +3363,7 @@
 <translation id="7751019142333897329"><ph name="FIRST_STRING"/><ph name="SECOND_STRING"/></translation>
 <translation id="921286857694606205">自訂 AI Wize 中的字型大小和字體</translation>
 <translation id="7752995774971033316">未管理</translation>
-<translation id="1771750053794015966">更新開始後，Brave 將關閉分頁和應用程式</translation>
+<translation id="1771750053794015966">更新開始後，AI Wize 將關閉分頁和應用程式</translation>
 <translation id="7755287808199759310">你的家長可以為你解除封鎖這個網站</translation>
 <translation id="7755624218968747854">主卷</translation>
 <translation id="7758069387465995638">防火牆或防毒軟體可能封鎖了連線。</translation>
@@ -3382,13 +3382,13 @@
 <translation id="7785790577395078482">這台平板電腦</translation>
 <translation id="7786368602962652765">必填欄位沒有內容，請先填寫再儲存。</translation>
 <translation id="7786432318297177736">這些搜尋引擎是採隨機方式排列，你隨時可以前往設定頁面變更預設設定。</translation>
-<translation id="6865562781710080368">你造訪的網站可以要求 AI Wize 提供資訊，協助網站評估廣告成效。Brave 僅允許網站收集特定類型的資料，例如在一天中向使用者放送廣告的時段。</translation>
+<translation id="6865562781710080368">你造訪的網站可以要求 AI Wize 提供資訊，協助網站評估廣告成效。AI Wize 僅允許網站收集特定類型的資料，例如在一天中向使用者放送廣告的時段。</translation>
 <translation id="7791011319128895129">尚未發布</translation>
 <translation id="7791196057686275387">綑綁式裝訂</translation>
 <translation id="7791543448312431591">新增</translation>
 <translation id="7798389633136518089">由於這個政策並非透過雲端來源設定，因此遭到忽略。</translation>
 <translation id="7800304661137206267">連線採用 <ph name="CIPHER"/> 加密，並設有 <ph name="MAC"/> 訊息驗證及 <ph name="KX"/> 金鑰交換機制。</translation>
-<translation id="7022547472659133044">Brave 會根據你近期的瀏覽記錄，記下你感興趣的主題。此外，你造訪的網站可以判斷你喜歡的內容。在此之後，網站就能要求取得這項資訊，據此向你放送個人化廣告。你可以選擇要根據哪些主題和網站顯示廣告。</translation>
+<translation id="7022547472659133044">AI Wize 會根據你近期的瀏覽記錄，記下你感興趣的主題。此外，你造訪的網站可以判斷你喜歡的內容。在此之後，網站就能要求取得這項資訊，據此向你放送個人化廣告。你可以選擇要根據哪些主題和網站顯示廣告。</translation>
 <translation id="7802523362929240268">網站合法</translation>
 <translation id="7802989406998618639">請輸入<ph name="SIDE_OF_CARD"/>的 <ph name="NUMBER_OF_DIGITS"/> 位數安全碼，讓銀行驗證你的身分</translation>
 <translation id="780301667611848630">不用了，謝謝</translation>
@@ -3410,7 +3410,7 @@
 <translation id="784404208867107517">分類歷史記錄</translation>
 <translation id="7844689747373518809">{COUNT,plural, =0{無}=1{1 個應用程式：<ph name="EXAMPLE_APP_1"/>}=2{2 個應用程式：<ph name="EXAMPLE_APP_1"/>、<ph name="EXAMPLE_APP_2"/>}other{# 個應用程式：<ph name="EXAMPLE_APP_1"/>、<ph name="EXAMPLE_APP_2"/>、<ph name="AND_MORE"/>}}</translation>
 <translation id="7855695075675558090"><ph name="TOTAL_LABEL"/> <ph name="CURRENCY_CODE"/> <ph name="FORMATTED_TOTAL_AMOUNT"/></translation>
-<translation id="7162988054835087448">此後，你造訪的網站可要求 AI Wize 提供主題資料，做為放送個人化廣告的依據。Brave 最多會分享 3 個主題，同時也會保護你的瀏覽記錄和身分資訊。</translation>
+<translation id="7162988054835087448">此後，你造訪的網站可要求 AI Wize 提供主題資料，做為放送個人化廣告的依據。AI Wize 最多會分享 3 個主題，同時也會保護你的瀏覽記錄和身分資訊。</translation>
 <translation id="7860345425589240791">請重新輸入<ph name="SIDE_OF_CARD"/>的到期日和信用卡驗證碼</translation>
 <translation id="7862185352068345852">要離開網站嗎？</translation>
 <translation id="7865448901209910068">最佳速度</translation>
@@ -3432,7 +3432,7 @@
 <translation id="793209273132572360">要更新地址嗎？</translation>
 <translation id="7932579305932748336">塗布</translation>
 <translation id="79338296614623784">請輸入有效的電話號碼</translation>
-<translation id="8329449853370113380"><ph name="URL"/> 要求播放受保護的內容。Brave 會驗證你裝置的識別資訊。</translation>
+<translation id="8329449853370113380"><ph name="URL"/> 要求播放受保護的內容。AI Wize 會驗證你裝置的識別資訊。</translation>
 <translation id="7935318582918952113">DOM Distiller</translation>
 <translation id="7937163678541954811">為加快結帳速度，這張卡片的信用卡驗證碼會加密儲存在你的裝置中</translation>
 <translation id="7937554595067888181">到期日：<ph name="EXPIRATION_DATE_ABBR"/></translation>
@@ -3510,7 +3510,7 @@
 <translation id="8058603697124206642">不需要</translation>
 <translation id="8063875539456488183">儲存並追蹤價格</translation>
 <translation id="8066225060526005217">由 Cookie 設定管理</translation>
-<translation id="5442778523450464826">你剛才在詐騙網站上輸入了密碼。Brave 能夠幫助你。如要變更密碼並通知 AI Wize 你的帳戶可能面臨風險，請按一下 [保護帳戶]。</translation>
+<translation id="5442778523450464826">你剛才在詐騙網站上輸入了密碼。AI Wize 能夠幫助你。如要變更密碼並通知 AI Wize 你的帳戶可能面臨風險，請按一下 [保護帳戶]。</translation>
 <translation id="8070439594494267500">應用程式圖示</translation>
 <translation id="8070495475341517754">市區觀光</translation>
 <translation id="8075588646978457437">自黏紙</translation>
@@ -3684,7 +3684,7 @@
 <translation id="8398335999901363925">付款方式已顯示在整個畫面上，輕觸即可填入。</translation>
 <translation id="8398446215576328011">還原已套用的政策</translation>
 <translation id="8398790343843005537">搜尋你的手機</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{Brave 將於今天再次封鎖 Cookie}=1{Brave 將於明天再次封鎖 Cookie}other{Brave 將於 # 天後再次封鎖 Cookie}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{AI Wize 將於今天再次封鎖 Cookie}=1{AI Wize 將於明天再次封鎖 Cookie}other{AI Wize 將於 # 天後再次封鎖 Cookie}}</translation>
 <translation id="8403506619177967839">同人誌</translation>
 <translation id="15931837016421186">在 AI Wize 設定中管理要同步處理哪些資訊</translation>
 <translation id="8406071103346257942">停止使用螢幕鎖定功能填入密碼</translation>
@@ -3735,7 +3735,7 @@
 <translation id="8493948351860045254">釋出空間</translation>
 <translation id="8498891568109133222"><ph name="HOST_NAME"/> 的回應時間過長。</translation>
 <translation id="443150778270806272">你需要授予 AI Wize 存取權，才能在這個網站使用<ph name="PERMISSION"/></translation>
-<translation id="230699814587342492">Brave 密碼</translation>
+<translation id="230699814587342492">AI Wize 密碼</translation>
 <translation id="8503813439785031346">使用者名稱</translation>
 <translation id="8504928302600319133">電腦硬體</translation>
 <translation id="8507227106804027148">指令列</translation>
@@ -3747,7 +3747,7 @@
 <translation id="8521013008769249764">沙發與扶手椅</translation>
 <translation id="8521812709849134608">廚房流理台</translation>
 <translation id="8522180136695974431">信用報告與監控</translation>
-<translation id="1426902392270366682">Brave 可協助你保護 AI Wize 帳戶並變更密碼。</translation>
+<translation id="1426902392270366682">AI Wize 可協助你保護 AI Wize 帳戶並變更密碼。</translation>
 <translation id="8527228059738193856">揚聲器</translation>
 <translation id="1215802963054007211">清除瀏覽記錄、Cookie、快取以及其他 AI Wize 設定</translation>
 <translation id="853246364274116957">百老匯與音樂劇</translation>
@@ -3762,7 +3762,7 @@
 <translation id="8542014550340843547">三釘 (底部)</translation>
 <translation id="8542617028204211143">SRA0</translation>
 <translation id="8543181531796978784">您可以<ph name="BEGIN_ERROR_LINK"/>回報偵測問題<ph name="END_ERROR_LINK"/>。或者在您瞭解安全性風險後，仍然可以<ph name="BEGIN_LINK"/>前往這個不安全的網站<ph name="END_LINK"/>。</translation>
-<translation id="907470742420136113">Brave 正嘗試修改填入付款方式的設定。</translation>
+<translation id="907470742420136113">AI Wize 正嘗試修改填入付款方式的設定。</translation>
 <translation id="8544303911974837265">聚酯纖維</translation>
 <translation id="854548366864113872">高價選項</translation>
 <translation id="8546254312340305428">請提供要上傳的原因 (必填)</translation>
@@ -3795,7 +3795,7 @@
 <translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>我們使用的資料：<ph name="END_BOLD"/>你在這部裝置上透過 AI Wize 造訪的網站活動。</translation>
 <translation id="8601456038554914806">水上運動器材</translation>
 <translation id="8606726445206553943">使用您的 MIDI 裝置</translation>
-<translation id="5017966143250326204">廣告主題可協助網站向你顯示相關廣告，同時保護你的瀏覽記錄和身分。Brave 可以根據你近期的瀏覽記錄，記下你感興趣的主題。在此之後，你造訪的網站就可以要求 AI Wize 提供相關主題，據此向你放送個人化廣告。</translation>
+<translation id="5017966143250326204">廣告主題可協助網站向你顯示相關廣告，同時保護你的瀏覽記錄和身分。AI Wize 可以根據你近期的瀏覽記錄，記下你感興趣的主題。在此之後，你造訪的網站就可以要求 AI Wize 提供相關主題，據此向你放送個人化廣告。</translation>
 <translation id="8617269623452051934">裝置使用狀態</translation>
 <translation id="861775596732816396">粗細：4</translation>
 <translation id="8620276786115098679">Envelope Kaku 7</translation>
@@ -3846,7 +3846,7 @@
 <translation id="8726549941689275341">頁面大小：</translation>
 <translation id="8730621377337864115">完成</translation>
 <translation id="8731268612289859741">安全碼</translation>
-<translation id="2184048523283917559">你可以封鎖不想與網站分享的主題，Brave 也會自動刪除 4 週以前的主題。瞭解詳情</translation>
+<translation id="2184048523283917559">你可以封鎖不想與網站分享的主題，AI Wize 也會自動刪除 4 週以前的主題。瞭解詳情</translation>
 <translation id="8734529307927223492">你的 <ph name="DEVICE_TYPE"/> 是由 <ph name="MANAGER"/> 管理</translation>
 <translation id="8736059027199600831">30 x 40 吋</translation>
 <translation id="8737685506611670901">開啟<ph name="PROTOCOL"/>連結 (取代 <ph name="REPLACED_HANDLER_TITLE"/>)</translation>
@@ -3863,7 +3863,7 @@
 <translation id="8758885506338294482">電子競技</translation>
 <translation id="8759274551635299824">這張信用卡已過期</translation>
 <translation id="87601671197631245">這個網站的安全性設定過舊，因此你傳送給這個網站的的資訊 (例如密碼、訊息或信用卡資訊) 可能會外洩。</translation>
-<translation id="8761567432415473239">Brave 安全瀏覽最近在「<ph name="SITE"/>」<ph name="BEGIN_LINK"/>發現了有害程式<ph name="END_LINK"/>。</translation>
+<translation id="8761567432415473239">AI Wize 安全瀏覽最近在「<ph name="SITE"/>」<ph name="BEGIN_LINK"/>發現了有害程式<ph name="END_LINK"/>。</translation>
 <translation id="8763927697961133303">USB 裝置</translation>
 <translation id="8766943070169463815">已開啟安全付款憑證驗證表</translation>
 <translation id="8767765348545497220">關閉說明泡泡</translation>
@@ -3877,7 +3877,7 @@
 <translation id="8785658048882205566">摩托車</translation>
 <translation id="8790007591277257123">重做刪除(&amp;R)</translation>
 <translation id="8792272652220298572">塑膠 (光面)</translation>
-<translation id="5304100303568917877">你可能會失去 <ph name="ORG_NAME"/> 帳戶存取權，或身分遭到冒用。Brave 建議你立即變更密碼。</translation>
+<translation id="5304100303568917877">你可能會失去 <ph name="ORG_NAME"/> 帳戶存取權，或身分遭到冒用。AI Wize 建議你立即變更密碼。</translation>
 <translation id="8792626944327216835">麥克風</translation>
 <translation id="9156291179464624174"><ph name="ENROLLMENT_DOMAIN"/> 已為你的瀏覽器啟用 AI Wize Enterprise 連接器。這些連接器可以存取你的部分資料。</translation>
 <translation id="8798099450830957504">預設</translation>
@@ -3891,7 +3891,7 @@
 <translation id="8811470563853401328">要將地址儲存到帳戶嗎？</translation>
 <translation id="8813277370772331957">稍後提醒我</translation>
 <translation id="8814707942599948500">Envelope C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>，按下 Tab 鍵再按下 Enter 鍵即可透過 AI Wize 設定來更新 Brave</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>，按下 Tab 鍵再按下 Enter 鍵即可透過 AI Wize 設定來更新 AI Wize</translation>
 <translation id="882338992931677877">手動插槽</translation>
 <translation id="8830320733681313421">Hagaki (明信片)</translation>
 <translation id="8833007469711500369">洗衣機與烘衣機</translation>
@@ -3905,7 +3905,7 @@
 <translation id="885306012106043620">網球</translation>
 <translation id="8855742650226305367">舞蹈</translation>
 <translation id="7487066225574140895">與 AI Wize 分享</translation>
-<translation id="4764754838347156633">如果你在其他網站上重複使用過你的 <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> 密碼，Brave 會建議你重設密碼。</translation>
+<translation id="4764754838347156633">如果你在其他網站上重複使用過你的 <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> 密碼，AI Wize 會建議你重設密碼。</translation>
 <translation id="885906927438988819">如果拼字正確，<ph name="BEGIN_LINK"/>請嘗試執行 Windows 網路診斷<ph name="END_LINK"/>。</translation>
 <translation id="8863218129525348270">將卡片資訊儲存在裝置上，下次就能更快完成付款程序</translation>
 <translation id="8864939224504814334">套裝與上班服飾</translation>
@@ -3931,7 +3931,7 @@
 <translation id="8903921497873541725">放大</translation>
 <translation id="890493561996401738">移除建議按鈕，按一下 Enter 鍵即可移除「<ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/>」</translation>
 <translation id="8910898109640902752">8 x 10 英寸</translation>
-<translation id="4805806622840861220">重新啟動 Brave</translation>
+<translation id="4805806622840861220">重新啟動 AI Wize</translation>
 <translation id="8918062451146297192">虛擬卡片的信用卡驗證碼</translation>
 <translation id="8919740778133505789">跑車</translation>
 <translation id="8919895429178014996">隱藏所有項目</translation>
@@ -3959,7 +3959,7 @@
 <translation id="8971063699422889582">伺服器憑證已過期。</translation>
 <translation id="8975012916872825179">包括電話號碼、電子郵件地址和運送地址等資訊</translation>
 <translation id="8975263830901772334">你列印的檔案名稱</translation>
-<translation id="8978053250194585037">Brave 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到網路詐騙行為<ph name="END_LINK"/>。詐騙網站會偽裝成其他網站，藉此騙取你的資訊。</translation>
+<translation id="8978053250194585037">AI Wize 安全瀏覽功能最近在 <ph name="SITE"/> 上<ph name="BEGIN_LINK"/>偵測到網路詐騙行為<ph name="END_LINK"/>。詐騙網站會偽裝成其他網站，藉此騙取你的資訊。</translation>
 <translation id="8982884016487650216">PDF 載入完成</translation>
 <translation id="8983369100812962543">你現在可以調整應用程式大小</translation>
 <translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可在 AI Wize 中查看瀏覽記錄</translation>
@@ -4003,7 +4003,7 @@
 <translation id="9050666287014529139">通關密語</translation>
 <translation id="9051072642122229460">咖啡與濃縮咖啡機</translation>
 <translation id="9051260467258969162">請重新<ph name="BEGIN_LINK"/>登入<ph name="END_LINK"/>，再返回這個分頁取得寫入協助</translation>
-<translation id="104719866786855422">我們推出名為「廣告評估」的全新廣告隱私權功能。Brave 只會在網站之間分享相當有限的資訊 (例如：廣告的放送時間)，協助評估廣告成效。</translation>
+<translation id="104719866786855422">我們推出名為「廣告評估」的全新廣告隱私權功能。AI Wize 只會在網站之間分享相當有限的資訊 (例如：廣告的放送時間)，協助評估廣告成效。</translation>
 <translation id="9056953843249698117">商店</translation>
 <translation id="9062620674789239642">檔案可能已遭到移動、編輯或刪除。</translation>
 <translation id="9063398205799684336">Envelope Kaku 2</translation>
@@ -4028,7 +4028,7 @@
 <translation id="9096679202588811390">電視表演與節目</translation>
 <translation id="9101630580131696064">紙匣 1</translation>
 <translation id="9103537084693478942">影片軟體</translation>
-<translation id="6373940988468425649"><ph name="SITE"/> 通常使用加密方式保護您的資訊。但 AI Wize 這次嘗試連線到 <ph name="SITE"/> 時，該網站傳回了異常且錯誤的憑證。這可能是因為有攻擊者企圖偽裝成 <ph name="SITE"/>，或是受到 Wi-Fi 登入畫面影響而造成連線中斷。不過請放心，Brave 已及時停止連線，並未傳輸任何資料，因此您的資訊仍然安全無虞。</translation>
+<translation id="6373940988468425649"><ph name="SITE"/> 通常使用加密方式保護您的資訊。但 AI Wize 這次嘗試連線到 <ph name="SITE"/> 時，該網站傳回了異常且錯誤的憑證。這可能是因為有攻擊者企圖偽裝成 <ph name="SITE"/>，或是受到 Wi-Fi 登入畫面影響而造成連線中斷。不過請放心，AI Wize 已及時停止連線，並未傳輸任何資料，因此您的資訊仍然安全無虞。</translation>
 <translation id="9107467864910557787">你的瀏覽器是由 <ph name="MANAGER"/> 管理</translation>
 <translation id="91108059142052966">當畫面上出現機密內容，系統管理員政策就會停用與「<ph name="APPLICATION_TITLE"/>」分享螢幕畫面的功能</translation>
 <translation id="9114524666733003316">正在驗證信用卡...</translation>
@@ -4076,7 +4076,7 @@
 <translation id="9177283544810807743">這份 PDF 無法存取。系統正在運用 AI Wize AI 技術擷取文字</translation>
 <translation id="5129795253416930127">在 AI Wize 設定中管理付款和信用卡資訊</translation>
 <translation id="9179907736442194268">產品在任何網站上降價時都會通知你</translation>
-<translation id="9183302530794969518">Brave 文件</translation>
+<translation id="9183302530794969518">AI Wize 文件</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/> 使用了不支援的通訊協定。</translation>
 <translation id="918454845714257218">請確認<ph name="SIDE_OF_CARD"/>的安全碼，然後再試一次</translation>
 <translation id="7202091195027070644">「將 AI Wize 設為預設瀏覽器」按鈕，啟動後即可將 AI Wize 設為系統預設瀏覽器</translation>
@@ -4091,22 +4091,22 @@
 <translation id="92178312226016010">你正在追蹤這項產品。</translation>
 <translation id="9218430445555521422">設為預設</translation>
 <translation id="9219103736887031265">圖片</translation>
-<translation id="142389341645668510">自訂 Brave</translation>
+<translation id="142389341645668510">自訂 AI Wize</translation>
 <translation id="9222403027701923763">幼兒園與中小學教育 (K-12)</translation>
 <translation id="93020190163435405">實習</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385">要允許「<ph name="APP_NAME"/>」應用程式設定 Wi-Fi 網路嗎？</translation>
-<translation id="7486559383537872796">為避免失去 AI Wize 帳戶存取權，Brave 建議你立即變更密碼。系統會要求你登入帳戶。</translation>
+<translation id="7486559383537872796">為避免失去 AI Wize 帳戶存取權，AI Wize 建議你立即變更密碼。系統會要求你登入帳戶。</translation>
 <translation id="937457230470581909">動物園、水族館與保護區</translation>
 <translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>我們使用的資料：<ph name="END_BOLD"/>系統會根據你的近期瀏覽記錄 (即在這部裝置上使用 AI Wize 造訪的網站清單) 推測廣告主題。</translation>
 <translation id="937885410143139026">資料已傳送到管理控制台</translation>
 <translation id="939736085109172342">新增資料夾</translation>
 <translation id="940053046584497293">旅遊與交通</translation>
 <translation id="6588091288231158998">使用 AI Wize 帳戶中儲存的密碼和密碼金鑰</translation>
-<translation id="5444457503062019851">Brave 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。</translation>
+<translation id="5444457503062019851">AI Wize 會禁止網站使用第三方 Cookie 追蹤瀏覽網站的使用者。</translation>
 <translation id="945855313015696284">查看下方資訊並刪除所有無效的卡片</translation>
 <translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>；按下 Tab 鍵再按下 Enter 鍵即可在 AI Wize 協作平台中快速建立新網站</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{Brave 將於今天再次限制 Cookie}=1{Brave 將於明天再次限制 Cookie}other{Brave 將於 # 天後再次限制 Cookie}}</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{AI Wize 將於今天再次限制 Cookie}=1{AI Wize 將於明天再次限制 Cookie}other{AI Wize 將於 # 天後再次限制 Cookie}}</translation>
 <translation id="949314938206378263">你已要求造訪這個網站，家長可以透過 Family Link 回覆要求。</translation>
 <translation id="950736567201356821">三孔 (頂端)</translation>
 <translation id="961663415146723894">裝訂 (底部)</translation>
@@ -4153,7 +4153,7 @@
 <translation id="6417973700199526943">你已進入無痕模式</translation>
 <translation id="375424491626359494">當您關閉所有無痕式分頁後，您在其中瀏覽的網頁都不會保留在瀏覽器記錄、Cookie 儲存庫或搜尋記錄中。不過，您下載的檔案或建立的書籤全部都會保留下來。</translation>
 <translation id="8794378783472961468">不過，這並不意味著您可以完全隱形。使用無痕模式時，您的雇主和網際網路服務供應商仍然可以追蹤您的瀏覽記錄，您所造訪的網站也可能會記錄您的瀏覽行為。</translation>
-<translation id="6085043210649933880">Brave 的隱私模式</translation>
+<translation id="6085043210649933880">AI Wize 的隱私模式</translation>
 <translation id="3683567996395248272">無痕模式能做些什麼</translation>
 <translation id="5581758310848298360">關閉所有 AI Wize 隱私分頁後，您在這些分頁中的活動會從此裝置上移除，包括：
           <ph name="BEGIN_LIST"/>

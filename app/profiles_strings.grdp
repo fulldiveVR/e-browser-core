@@ -765,18 +765,18 @@
         Save your bookmarks, passwords and more with sync
       </message>
       <if expr="not use_titlecase">
-        <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Brave">
+        <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to AI Wize">
           Don't sign in
         </message>
-        <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice to sign in to Brave">
+        <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice to sign in to AI Wize">
           Sign in
         </message>
       </if>
       <if expr="use_titlecase">
-        <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice not to sign in to Brave">
+        <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice not to sign in to AI Wize">
           Don't Sign In
         </message>
-        <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice to sign in to Brave">
+        <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice to sign in to AI Wize">
           Sign In
         </message>
       </if>

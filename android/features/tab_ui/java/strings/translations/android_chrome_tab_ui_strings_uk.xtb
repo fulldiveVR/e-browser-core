@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Відвідати сайт</translation>
 <translation id="2759453070259087442">Розгорнути групу "<ph name="TITLE_OF_GROUP"/>" зі стількома вкладками: <ph name="NUMBER_OF_TABS"/>.</translation>
 <translation id="2801787514987684416">Переглянути інформацію про магазин?</translation>
-<translation id="4691798003247738043">Brave | Про цей магазин</translation>
+<translation id="4691798003247738043">AI Wize | Про цей магазин</translation>
 <translation id="2977480621796371840">Вилучити з групи</translation>
 <translation id="3008554597174452548">Вимкнути відстеження товару</translation>
 <translation id="3052964831964880138">Ціну на товар "<ph name="PRODUCT_NAME"/>" знижено на <ph name="PRICE_DROP"/></translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Переглянути інформацію про магазин. Опція доступна вгорі екрана.</translation>
 <translation id="5558362125926932819">Закрити групу зі стількома вкладками: <ph name="NUMBER_OF_TABS"/></translation>
 <translation id="5580090775658607195">Згруповано стільки вкладок: <ph name="TAB_COUNT"/></translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> посилання з Brave}one{<ph name="TABS_COUNT_MANY"/> посилання з Brave}few{<ph name="TABS_COUNT_MANY"/> посилання з Brave}many{<ph name="TABS_COUNT_MANY"/> посилань із Brave}other{<ph name="TABS_COUNT_MANY"/> посилання з Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> посилання з AI Wize}one{<ph name="TABS_COUNT_MANY"/> посилання з AI Wize}few{<ph name="TABS_COUNT_MANY"/> посилання з AI Wize}many{<ph name="TABS_COUNT_MANY"/> посилань із AI Wize}other{<ph name="TABS_COUNT_MANY"/> посилання з AI Wize}}</translation>
 <translation id="575494663145460764">Хочете отримувати сповіщення про зниження цін?</translation>
 <translation id="58326064309361797">Перетягуйте вкладки, щоб групувати їх</translation>
 <translation id="5846292395804797011">Закрити групу "<ph name="TITLE_OF_GROUP"/>" зі стількома вкладками: <ph name="NUMBER_OF_TABS"/></translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Переглянути інформацію про магазин</translation>
 <translation id="6562820390860419811">Перемістити вкладку ліворуч</translation>
 <translation id="6615455863669487791">Показати</translation>
-<translation id="6398241160085205003">Закриті вкладки можна знайти в розділі "Останні вкладки" в головному меню Brave.</translation>
+<translation id="6398241160085205003">Закриті вкладки можна знайти в розділі "Останні вкладки" в головному меню AI Wize.</translation>
 <translation id="6840760312327750441">Щоб згрупувати вкладки, натисніть і утримуйте вкладку, а потім перетягніть її на іншу.</translation>
 <translation id="6856809498882026482">Вийти з режиму вибору кількох вкладок</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Поділитися вкладкою}one{Поділитися вкладками}few{Поділитися вкладками}many{Поділитися вкладками}other{Поділитися вкладками}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Переглянути правила повернення й інше</translation>
 <translation id="7352298686197644113">Дізнайтеся, який товар на відкритих вкладках дешевший</translation>
 <translation id="753732157349120914">Перемикач вкладок</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> відгук із Brave}one{<ph name="REVIEWS_COUNT_MANY"/> відгук із Brave}few{<ph name="REVIEWS_COUNT_MANY"/> відгуки з Brave}many{<ph name="REVIEWS_COUNT_MANY"/> відгуків із Brave}other{<ph name="REVIEWS_COUNT_MANY"/> відгуку з Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> відгук із AI Wize}one{<ph name="REVIEWS_COUNT_MANY"/> відгук із AI Wize}few{<ph name="REVIEWS_COUNT_MANY"/> відгуки з AI Wize}many{<ph name="REVIEWS_COUNT_MANY"/> відгуків із AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> відгуку з AI Wize}}</translation>
 <translation id="7559245342362162951">Показувати вкладки групи в повноекранній сітці</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{Поділитися <ph name="TABS_COUNT_ONE"/> вибраною вкладкою}one{Поділитися <ph name="TABS_COUNT_MANY"/> вибраною вкладкою}few{Поділитися <ph name="TABS_COUNT_MANY"/> вибраними вкладками}many{Поділитися <ph name="TABS_COUNT_MANY"/> вибраними вкладками}other{Поділитися <ph name="TABS_COUNT_MANY"/> вибраної вкладки}}</translation>
 <translation id="7792771145871471484">Переглянути ці вкладки.</translation>
@@ -102,9 +102,9 @@
 <translation id="955558140275419384">Перейдіть у цей редактор, щоб перевірити всі заархівовані вкладки й вилучити зайві.</translation>
 <translation id="959682366969460160">Упорядковуйте свої дані</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {Закриті вкладки можна знайти в розділі Нещодавні вкладки головного меню Brave. Приватна вкладка буде недоступна.}
-        few {Закриті вкладки можна знайти в розділі Нещодавні вкладки головного меню Brave. Ваші # приватні вкладки будуть недоступні.}
-        many {Закриті вкладки можна знайти в розділі Нещодавні вкладки‎ головного меню Brave. Ваші # приватних вкладок будуть недоступні.}}</translation>
+        =1 {Закриті вкладки можна знайти в розділі Нещодавні вкладки головного меню AI Wize. Приватна вкладка буде недоступна.}
+        few {Закриті вкладки можна знайти в розділі Нещодавні вкладки головного меню AI Wize. Ваші # приватні вкладки будуть недоступні.}
+        many {Закриті вкладки можна знайти в розділі Нещодавні вкладки‎ головного меню AI Wize. Ваші # приватних вкладок будуть недоступні.}}</translation>
 <translation id="3228718275011575753">Закрити всі приватні вкладки?</translation>
 <translation id="6687920250729800417">Вашу активність у цих приватних вкладках буде вилучено з цього пристрою</translation>
 </translationbundle>

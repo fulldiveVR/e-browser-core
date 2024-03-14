@@ -21,7 +21,7 @@
 <translation id="266935134738038806">ጣቢያ ይጎብኙ</translation>
 <translation id="2759453070259087442">የ<ph name="TITLE_OF_GROUP"/> ትር ስብስብ በ<ph name="NUMBER_OF_TABS"/> ትሮች ያስፉ።</translation>
 <translation id="2801787514987684416">የመደብር መረጃ ይታይ?</translation>
-<translation id="4691798003247738043">Brave | ስለዚህ መደብር</translation>
+<translation id="4691798003247738043">AI Wize | ስለዚህ መደብር</translation>
 <translation id="2977480621796371840">ከቡድን አስወግድ</translation>
 <translation id="3008554597174452548">ምርቱን መከታተል አቁም</translation>
 <translation id="3052964831964880138"><ph name="PRODUCT_NAME"/> ላይ የ<ph name="PRICE_DROP"/> ዋጋ ቅናሽ</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">የመደብር መረጃን ይመልከቱ፣ አማራጩ ከማያ ገጹ አናት አጠገብ ይገኛል</translation>
 <translation id="5558362125926932819">የትር ቡድንን ከ<ph name="NUMBER_OF_TABS"/> ትሮች ጋር ይዝጉ</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> ትሮች ተሰብስበዋል</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> አገናኝ ከBrave}one{<ph name="TABS_COUNT_MANY"/> አገናኝ ከBrave}other{<ph name="TABS_COUNT_MANY"/> አገናኞች ከBrave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> አገናኝ ከAI Wize}one{<ph name="TABS_COUNT_MANY"/> አገናኝ ከAI Wize}other{<ph name="TABS_COUNT_MANY"/> አገናኞች ከAI Wize}}</translation>
 <translation id="575494663145460764">ለዋጋ ቅነሳዎች ማንቂያዎችን ያግኙ?</translation>
 <translation id="58326064309361797">ለመቦደን ትሮችን ይጎትቱ</translation>
 <translation id="5846292395804797011">የ<ph name="TITLE_OF_GROUP"/> ቡድንን ከ<ph name="NUMBER_OF_TABS"/> ትሮች ጋር ይዝጉ</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">የመደብር መረጃን ይመልከቱ</translation>
 <translation id="6562820390860419811">ትርን ወደ ግራ አንቀሳቅስ</translation>
 <translation id="6615455863669487791">አሳየኝ</translation>
-<translation id="6398241160085205003">የእርስዎን የተዘጉ ትሮች በBrave ዋና ምናሌ ስር የቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ።</translation>
+<translation id="6398241160085205003">የእርስዎን የተዘጉ ትሮች በAI Wize ዋና ምናሌ ስር የቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ።</translation>
 <translation id="6840760312327750441">ትሮችን ለመቦደን፣ ትርን ነካ አድርገው ይያዙ። በመቀጠል፣ ወደ ሌላ ትር ይጎትቱት።</translation>
 <translation id="6856809498882026482">ባለብዙ ምርጫ ሁነታን ደብቅ</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{ትርን አጋራ}one{ትርን አጋራ}other{ትሮችን አጋራ}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">የመመለሻ መመሪያን እና ሌሎችንም ይመልከቱ</translation>
 <translation id="7352298686197644113">በክፍት ትሮችዎ ውስጥ የትኛው ንጥል የተሻለ ዋጋ እንዳለው ይመልከቱ</translation>
 <translation id="753732157349120914">የትር መቀያየሪያ</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ግምገማ ከBrave}one{<ph name="REVIEWS_COUNT_MANY"/> ግምገማዎች ከBrave}other{<ph name="REVIEWS_COUNT_MANY"/> ግምገማዎች ከBrave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ግምገማ ከAI Wize}one{<ph name="REVIEWS_COUNT_MANY"/> ግምገማዎች ከAI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> ግምገማዎች ከAI Wize}}</translation>
 <translation id="7559245342362162951">የቡድን ትሮች በሙሉ ማያ ፍርግርግ አሳይ</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> የተመረጠ ትርን አጋራ}one{<ph name="TABS_COUNT_MANY"/> የተመረጠ ትርን አጋራ}other{<ph name="TABS_COUNT_MANY"/> የተመረጡ ትሮችን አጋራ}}</translation>
 <translation id="7792771145871471484">ጥቆማ ሐሳቦችን ይገምግሙ።</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">ይህንን አርታዒ በማስገባት የተዝረከረኩትን ለማስተካከል ሁሉንም በማህደር የተቀመጡ ትሮችን ይገምግሙ።</translation>
 <translation id="959682366969460160">ይደራጁ</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-        =1 {የተዘጉ ትሮችዎን በBrave ዋና ምናሌ ስር በቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ። የእርስዎ የግል ትር አይገኝም።}
-other {የተዘጉ ትሮችዎን በBrave ዋና ምናሌ ስር በቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ። የእርስዎ # የግል ትሮች አይገኙም።}}</translation>
+        =1 {የተዘጉ ትሮችዎን በAI Wize ዋና ምናሌ ስር በቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ። የእርስዎ የግል ትር አይገኝም።}
+other {የተዘጉ ትሮችዎን በAI Wize ዋና ምናሌ ስር በቅርብ ጊዜ ትሮች ውስጥ ማግኘት ይችላሉ። የእርስዎ # የግል ትሮች አይገኙም።}}</translation>
 <translation id="3228718275011575753">ሁሉም የግል ትሮች ይዘጉ?</translation>
 <translation id="6687920250729800417">በእነዚህ የግል ትሮች ውስጥ ያለዎት እንቅስቃሴ ከዚህ መሳሪያ ይወገዳል</translation>
 </translationbundle>

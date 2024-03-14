@@ -499,8 +499,8 @@
   <message name="IDS_OS_SETTINGS_TAG_IMPROVE_SEARCH_SUGGESTIONS" desc="Text for search result item which, when clicked, navigates the user to AI Wize services settings, with a toggle to enable/disable a feature which requests suggestions from the user's default search engine.">
     Improve search suggestions
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_MAKE_SEARCHES_AND_BROWSER_BETTER" desc="Text for search result item which, when clicked, navigates the user to AI Wize services settings, with a toggle to enable/disable a feature which sends URLs of pages the user has visited to Brave, which helps to improve search/browsing results.">
-    Send URLs of pages you visit to Brave
+  <message name="IDS_OS_SETTINGS_TAG_MAKE_SEARCHES_AND_BROWSER_BETTER" desc="Text for search result item which, when clicked, navigates the user to AI Wize services settings, with a toggle to enable/disable a feature which sends URLs of pages the user has visited to AI Wize, which helps to improve search/browsing results.">
+    Send URLs of pages you visit to AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_TAG_GOOGLE_DRIVE_SEARCH_SUGGESTIONS" desc="Text for search result item which, when clicked, navigates the user to AI Wize services settings, with a toggle to enable/disable a feature which provides suggestions to visit Google Drive items when the user types in the address bar.">
     Show Google Drive suggestions
@@ -837,14 +837,14 @@
   <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_QUICK_ANSWERS" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting Assistant show related info when the user right-clicks.">
     AI Wize Assistant quick answers
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok Brave' out loud. Alternate phrase for: 'Okay Brave', 'Hey Brave'">
-    AI Wize Assistant "Ok Brave"
+  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok AI Wize' out loud. Alternate phrase for: 'Okay AI Wize', 'Hey AI Wize'">
+    AI Wize Assistant "Ok AI Wize"
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE_ALT1" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok Brave' out loud. Alternate phrase for: 'Brave Assistant 'Ok Brave'', 'Hey Brave'">
-    Okay Brave
+  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE_ALT1" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok AI Wize' out loud. Alternate phrase for: 'AI Wize Assistant 'Ok AI Wize'', 'Hey AI Wize'">
+    Okay AI Wize
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE_ALT2" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok Brave' out loud. Alternate phrase for: 'Brave Assistant 'Ok Brave'', 'Okay Brave'">
-    Hey Brave
+  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_OK_GOOGLE_ALT2" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable letting users summon the Assistant by saying 'Ok AI Wize' out loud. Alternate phrase for: 'AI Wize Assistant 'Ok AI Wize'', 'Okay AI Wize'">
+    Hey AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_NOTIFICATIONS" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with a toggle to enable/disable Assistant notifications.">
     AI Wize Assistant Notifications
@@ -864,7 +864,7 @@
   <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_TURN_ON_ALT1" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with an option to turn functionality on. Alternate phrase for: 'Turn on AI Wize Assistant'">
     Enable AI Wize Assistant
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_TRAIN_VOICE_MODEL" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with an option to train a voice model to listen for commands such as 'Okay Brave' or 'Hey Brave'">
+  <message name="IDS_OS_SETTINGS_TAG_ASSISTANT_TRAIN_VOICE_MODEL" desc="Text for search result item which, when clicked, navigates the user to AI Wize Assistant settings, with an option to train a voice model to listen for commands such as 'Okay AI Wize' or 'Hey AI Wize'">
     Train AI Wize Assistant voice model
   </message>
 
@@ -1055,10 +1055,10 @@
   <message name="IDS_OS_SETTINGS_TAG_PRIVACY_VERIFIED_ACCESS" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable verified access.">
     Verified access
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_PRIVACY_CRASH_REPORTS" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable allowing usage statistics and crash reports to be sent to Brave. Alternate phrase for: 'Feedback reports'">
+  <message name="IDS_OS_SETTINGS_TAG_PRIVACY_CRASH_REPORTS" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable allowing usage statistics and crash reports to be sent to AI Wize. Alternate phrase for: 'Feedback reports'">
     Usage statistics and crash reports
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_PRIVACY_CRASH_REPORTS_ALT1" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable allowing usage statistics and crash reports to be sent to Brave. Alternate phrase for: 'Usage statistics and crash reports'">
+  <message name="IDS_OS_SETTINGS_TAG_PRIVACY_CRASH_REPORTS_ALT1" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable allowing usage statistics and crash reports to be sent to AI Wize. Alternate phrase for: 'Usage statistics and crash reports'">
     Feedback reports
   </message>
   <message name="IDS_OS_SETTINGS_TAG_PRIVACY_PERIPHERAL_DATA_ACCESS_PROTECTION" desc="Text for search result item which, when clicked, navigates the user to privacy settings, with a toggle to enable/disable peripheral data access protection. Alternate phrases include: 'PCIe', 'Thunderbolt', 'USB', 'USB4', 'USB-C'">
@@ -1482,8 +1482,8 @@
   <message name="IDS_OS_SETTINGS_TAG_A11Y_SWITCH_ACCESS_AUTO_SCAN_KEYBOARD" desc="Text for search result item which, when clicked, navigates the user to accessibility switch access settings, with a slider to set the auto-scan repeat rate.">
     Switch access keyboard auto-scan
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_A11Y_LABELS_FROM_GOOGLE" desc="Text for search result item which, when clicked, navigates the user to accessibility settings, with a toggle to enable/disable getting image descriptions from Brave.">
-    Get image descriptions from Brave
+  <message name="IDS_OS_SETTINGS_TAG_A11Y_LABELS_FROM_GOOGLE" desc="Text for search result item which, when clicked, navigates the user to accessibility settings, with a toggle to enable/disable getting image descriptions from AI Wize.">
+    Get image descriptions from AI Wize
   </message>
   <message name="IDS_OS_SETTINGS_TAG_A11Y_COLOR_CORRECTION" desc="Text for search result item which, when clicked, navigates the user to the accessibility settings, with a toggle to enable/disable color correction.">
     Color correction
@@ -1537,10 +1537,10 @@
   <message name="IDS_OS_SETTINGS_TAG_ABOUT_HELP" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link which opens the 'Help' app.">
     Help
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ABOUT_REPORT_ISSUE" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link which opens the 'Send feedback to Brave' app. Alternate phrase for: 'Report a bug'">
+  <message name="IDS_OS_SETTINGS_TAG_ABOUT_REPORT_ISSUE" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link which opens the 'Send feedback to AI Wize' app. Alternate phrase for: 'Report a bug'">
     Report an issue
   </message>
-  <message name="IDS_OS_SETTINGS_TAG_ABOUT_REPORT_ISSUE_ALT1" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link which opens the 'Send feedback to Brave' app. Alternate phrase for: 'Report an issue'">
+  <message name="IDS_OS_SETTINGS_TAG_ABOUT_REPORT_ISSUE_ALT1" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link which opens the 'Send feedback to AI Wize' app. Alternate phrase for: 'Report an issue'">
     Report a bug
   </message>
   <message name="IDS_OS_SETTINGS_TAG_ABOUT_TERMS_OF_SERVICE" desc="Text for search result item which, when clicked, navigates the user to 'About ChromeOS' settings, with a link to the Terms of Service.">

@@ -260,8 +260,8 @@
       </message>
       <message name="IDS_TAB_SELECTION_EDITOR_SHARE_SHEET_PREVIEW_MESSAGE" desc="When users click the menu item 'Share tab(s)' in the Tab Selection Editor Toolbar, a share sheet will pop up and this text is the preview message of the share sheet. [CHAR_LIMIT=27]">
         {TABS_COUNT, plural,
-          =1 {<ph name="TABS_COUNT_ONE">%1$d<ex>1</ex></ph> link from Brave}
-          other {<ph name="TABS_COUNT_MANY">%1$d<ex>8</ex></ph> links from Brave}
+          =1 {<ph name="TABS_COUNT_ONE">%1$d<ex>1</ex></ph> link from AI Wize}
+          other {<ph name="TABS_COUNT_MANY">%1$d<ex>8</ex></ph> links from AI Wize}
         }
       </message>
       <message name="IDS_TAB_SELECTION_EDITOR_SHARE_SHEET_PREVIEW_THUMBNAIL" desc="When users click the menu item 'Share tab(s)' in the Tab SelectionEditor Toolbar, a share sheet will pop up and this text is the name for the thumbnail of the share sheet preview. [CHAR_LIMIT=27]">
@@ -521,10 +521,10 @@
             =1 {(<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review)}
             other {(<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews)}}
       </message>
-      <message name="IDS_MERCHANT_VIEWER_MESSAGE_DESCRIPTION_REVIEWS_FROM_GOOGLE" desc="Alternative message description indicating that the reviews come from Brave.">
+      <message name="IDS_MERCHANT_VIEWER_MESSAGE_DESCRIPTION_REVIEWS_FROM_GOOGLE" desc="Alternative message description indicating that the reviews come from AI Wize.">
          {REVIEWS, plural,
-            =1 {<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review from Brave}
-            other {<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews from Brave}}
+            =1 {<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review from AI Wize}
+            other {<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews from AI Wize}}
       </message>
       <message name="IDS_MERCHANT_VIEWER_MESSAGE_RATING_NUMERICAL" desc="The rating of the merchant in numerical form.">
         <ph name="CURRENT_RATING">%1$.1f<ex>4.5</ex></ph>/<ph name="RATING_BASELINE">%2$d<ex>5</ex></ph>

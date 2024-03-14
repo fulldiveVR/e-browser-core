@@ -273,7 +273,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
       </message>
 
       <!-- Extensions -->
-      <message name="IDS_UNVETTED_EXTENSION_INSTALL_PROMPT_TITLE" desc="Titlebar of the extension or app installation prompt which was not vetted by Brave. Asks the user if they want to install a particular extension or app.">
+      <message name="IDS_UNVETTED_EXTENSION_INSTALL_PROMPT_TITLE" desc="Titlebar of the extension or app installation prompt which was not vetted by AI Wize. Asks the user if they want to install a particular extension or app.">
         AI Wize does not review extensions for security and safety. Install this extension only if you trust the developer.
       </message>
 
@@ -458,7 +458,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
       </if>
       <!-- Dev channel deprecation infobar -->
       <message name="IDS_DEV_CHANNEL_DEPRECATION_INFOBAR_MESSAGE" desc="The text label of dev channel deprecation announcement.">
-        Beginning on December 1, 2023, AI Wize Dev channel will no longer receive browser updates. We recommend users migrate to the Nightly, Beta, or Release versions of Brave.
+        Beginning on December 1, 2023, AI Wize Dev channel will no longer receive browser updates. We recommend users migrate to the Nightly, Beta, or Release versions of AI Wize.
       </message>
       <!-- Mac Menubar Menus -->
       <if expr="is_macosx">
@@ -543,7 +543,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
           Don't ask again
         </message>
         <message name="IDS_CRASH_REPORT_PERMISSION_ASK_DIALOG_CONTENT_TEXT" desc="The contents for crash report ask dialog">
-          Help improve Brave's product stability by automatically sending diagnostic reports when the AI Wize Browser crashes or freezes.
+          Help improve AI Wize's product stability by automatically sending diagnostic reports when the AI Wize Browser crashes or freezes.
         </message>
         <message name="IDS_CRASH_REPORT_PERMISSION_ASK_DIALOG_HEADER_TEXT" desc="The header text for crash report ask dialog">
           <ph name="BROWSER_NAME">$1<ex>AI Wize Browser</ex></ph> quit unexpectedly.
@@ -627,7 +627,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
         </message>
         <!-- web Discovery InfoBar -->
         <message name="IDS_WEB_DISCOVERY_INFOBAR_MESSAGE" desc="The text for web discovery infobar message">
-          Help improve <ph name="SEARCH_NAME">$1<ex>Brave Search</ex></ph> by sending anonymous usage data.  <ph name="MORE_INFO">$2<ex>More info</ex></ph>
+          Help improve <ph name="SEARCH_NAME">$1<ex>AI Wize Search</ex></ph> by sending anonymous usage data.  <ph name="MORE_INFO">$2<ex>More info</ex></ph>
         </message>
         <message name="IDS_WEB_DISCOVERY_INFOBAR_MESSAGE_BRAVE_SEARCH" desc="The text for brave search part in message">
           AI Wize Search
@@ -816,7 +816,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
 
       <!-- Stats -->
       <message name="IDS_BRAVE_STATS_USAGE_PING_SETTING" desc="Description that shows in settings for toggling stats usage pings">
-        Automatically send daily usage ping to Brave
+        Automatically send daily usage ping to AI Wize
       </message>
       <message name="IDS_BRAVE_STATS_USAGE_PING_SETTING_SUBITEM" desc="Description that shows under main toggle setting for usage pings">
         This private ping lets AI Wize estimate active users.
@@ -875,7 +875,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
         Learn more about IPFS and privacy
       </message>
       <message name="IDS_BRAVE_IPFS_INFOBAR_TEXT" desc="Text that promotes turning on autoredirect to the configured gateway setting">
-        This page is available on the IPFS network. Would you like to load IPFS pages using Brave's built-in support (via ipfs:// or ipns://)?
+        This page is available on the IPFS network. Would you like to load IPFS pages using AI Wize's built-in support (via ipfs:// or ipns://)?
       </message>
       <message name="IDS_BRAVE_IPFS_INFOBAR_APPROVE" desc="Turns on promoted setting">
         Always
@@ -935,13 +935,13 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
         Close
       </message>
 
-      <!-- Brave's copyright statement -->
+      <!-- AI Wize's copyright statement -->
       <message name="IDS_BRAVE_VERSION_UI_LICENSE" desc="The label below the copyright message, containing the URLs.">
         AI Wize is made available to you under the <ph name="BEGIN_LINK_MPL">&lt;a target="_blank" href="$1"&gt;</ph>Mozilla Public License 2.0<ph name="END_LINK_MPL">&lt;/a&gt;</ph> (MPL) and includes <ph name="BEGIN_LINK_OSS">&lt;a target="_blank" href="$2"&gt;</ph>open source software<ph name="END_LINK_OSS">&lt;/a&gt;</ph> under a variety of other licenses.
         You can read <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS">&lt;a target="_blank" href="$3"&gt;</ph>instructions on how to download and build for yourself<ph name="END_LINK_BUILD_INSTRUCTIONS">&lt;/a&gt;</ph> the specific <ph name="BEGIN_LINK_SOURCE_CODE">&lt;a target="_blank" href="$4"&gt;</ph>source code used to create this copy<ph name="END_LINK_SOURCE_CODE">&lt;/a&gt;</ph>.
       </message>
 
-      <!-- Brave's tab context menu -->
+      <!-- AI Wize's tab context menu -->
       <if expr="not use_titlecase">
         <message name="IDS_TAB_CXMENU_BOOKMARK_ALL_TABS" desc="The label of the tab context menu item for creating a bookmark folder containing an entry for each open tab.">
           Bookmark all tabs...
@@ -1124,7 +1124,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
         Ready for the best privacy online?
       </message>
       <message name="IDS_FIRSTRUN_DLG_CONTENTS_TEXT" desc="Text for FirstRun dialog contents">
-        Set AI Wize as your default browser to get Brave's privacy protections on every web page you open.
+        Set AI Wize as your default browser to get AI Wize's privacy protections on every web page you open.
       </message>
       <message name="IDS_FIRSTRUN_DLG_OK_BUTTON_LABEL" desc="Text for FirstRun dialog ok button">
         Set AI Wize as default
@@ -1362,7 +1362,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
       </if> <!-- enable_playlist_webui -->
 
       <if expr="enable_brave_player">
-        <message name="IDS_BRAVE_PLAYER_ACTION_VIEW" desc="A label for a button in the omnibox to open the 'Brave Player Page'">
+        <message name="IDS_BRAVE_PLAYER_ACTION_VIEW" desc="A label for a button in the omnibox to open the 'AI Wize Player Page'">
           AI Wize Player
         </message>
       </if> <!-- enable_brave_player -->

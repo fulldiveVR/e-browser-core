@@ -113,7 +113,7 @@
     You have <ph name="DAYS">$1<ex>80 days</ex></ph> left to claim
   </message>
   <message name="IDS_REWARDS_WIDGET_OPT_IN_HEADER" desc="">
-    Earn tokens for private ads you see in Brave
+    Earn tokens for private ads you see in AI Wize
   </message>
   <message name="IDS_REWARDS_WIDGET_OPT_IN_TEXT" desc="">
     Support content creators and use your tokens to buy gift cards, exchange for other currencies, and more.
@@ -157,7 +157,7 @@
     Refresh creator verification status
   </message>
   <message name="IDS_REWARDS_PANEL_PLATFORM_PUBLISHER_TITLE" desc="">
-    <ph name="NAME">$1<ex>Brave</ex></ph> on <ph name="PLATFORM">$2<ex>Twitter</ex></ph>
+    <ph name="NAME">$1<ex>AI Wize</ex></ph> on <ph name="PLATFORM">$2<ex>Twitter</ex></ph>
   </message>
   <message name="IDS_REWARDS_PANEL_ATTENTION" desc="">
     Attention
@@ -332,7 +332,7 @@
     Continue
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_HEADER" desc="">
-    Earn tokens for private ads you see in Brave
+    Earn tokens for private ads you see in AI Wize
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_TEXT" desc="">
     Use tokens to buy gift cards, exchange for other currencies, support content creators, and more.
@@ -430,7 +430,7 @@
     We’ve updated the Terms of Service for AI Wize Rewards. We’ve made these updates to clarify our terms and ensure they cover new features. If you continue to use AI Wize Rewards, you are agreeing to the updated Terms of Service. If you do not agree, you can <ph name="LINK_BEGIN">$1</ph>reset<ph name="LINK_END">$2</ph> AI Wize Rewards, which will disable the feature.
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_LINK_TEXT" desc="">
-    See <ph name="LINK_BEGIN">$1</ph>Brave Rewards Terms of Service<ph name="LINK_END">$2</ph>
+    See <ph name="LINK_BEGIN">$1</ph>AI Wize Rewards Terms of Service<ph name="LINK_END">$2</ph>
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_BUTTON_LABEL" desc="">
     I agree

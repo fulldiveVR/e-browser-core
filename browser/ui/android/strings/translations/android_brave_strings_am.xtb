@@ -13,13 +13,13 @@
 <translation id="7931127789630755251">በ AI Wize ውስጥ ለሚመለከቷቸው የግል ማስታወቂያዎች ቶክኖችን ያግኙ</translation>
 <translation id="7859066142771796818">የስጦታ ካርዶችን ለመግዛት፣ ለሌሎች ምንዛሬዎች ለመለዋወጥ፣ የይዘት ፈጣሪዎችን ለመደገፍ እና ሌሎች ቶክኖችን ይጠቀሙ።</translation>
 <translation id="3863981251715594911">እንዴት ይሰራል?</translation>
-<translation id="5547108999862247665">Brave ሽልማቶች እንዴት ነው የሚሰራው?</translation>
+<translation id="5547108999862247665">AI Wize ሽልማቶች እንዴት ነው የሚሰራው?</translation>
 <translation id="2965798296974325760">ሽልማቶችን መጠቀም ይጀምሩ</translation>
 <translation id="8220484609979012449">\n\nየእርስዎን Web3 wallet በመጠቀም አሁንም ይህን ለፈጠረ ሰው የክሪፕቶ አስተዋጽዖዎችን መላክ ይችላሉ።</translation>
 <translation id="6385969012847057348">ይህ ፈጣሪ <ph name="CUSTODIAN"/>አስተዋጾን መቀበል አይችልም።</translation>
 <translation id="6268134562674951939">በቂ የሆኑ ቶከኖች የሉዎትም።</translation>
 <translation id="4529874892536380156">ይህንን ወርሃዊ የሚደጋገም መዋጮ ያድርጉ።</translation>
-<translation id="5562948772940025260">የBrave Rewards ቀሪ ሒሳቦን በመጠቀም እስከ 1<ph name="AMOUNT"/> BAT ድረስ መላክ ይችላሉ።</translation>
+<translation id="5562948772940025260">የAI Wize Rewards ቀሪ ሒሳቦን በመጠቀም እስከ 1<ph name="AMOUNT"/> BAT ድረስ መላክ ይችላሉ።</translation>
 <translation id="5012991400231464322">ወርሐዊ መዋጮዎች</translation>
 <translation id="5907051927340164207">እርስዎ ቀድሞውኑ ወርሃዊ መዋጮዎችን ለዚህ ፈጣሪ እየላኩ ነው</translation>
 <translation id="4848906651275579475">አሁንም አስተዋጽዖን አሁን መላክ ይችላሉ እና ለእዚህ ፈጣሪ የሚያደርጉትን ወርሃዊ አስተዋጽኦዎችን ከ<ph name="MONTHLY_CONTRIBUTION"/> በማስወገድ መሰረዝ ይችላሉ።</translation>
@@ -30,19 +30,19 @@
 <translation id="3699420827646925694">ከ <ph name="CUSTODIAN"/>ወጥቷል</translation>
 <translation id="9038728316393235637">ወደ <ph name="CUSTODIAN"/> ግባ</translation>
 <translation id="7063168612616047608">የእርስዎን ተወዳጅ ፈጣሪዎች ስለደገፉ እናመሰግናለን</translation>
-<translation id="3796032246917966749">ለBrave ሽልማቶች ከ<ph name="CUSTODIAN"/> የወጡ ይመስላል። ለመቀጠል እንደገና ይግቡ።</translation>
-<translation id="5202112619925434373">ይህ ፈጣሪ በBrave ፈጣሪዎች ገና አልተረጋገጠም። አንዴ ከተረጋገጡ በኋላ መዋጮዎችን ለእነሱ መላክ ይችላሉ።<ph name="LEARN_MORE"/></translation>
+<translation id="3796032246917966749">ለAI Wize ሽልማቶች ከ<ph name="CUSTODIAN"/> የወጡ ይመስላል። ለመቀጠል እንደገና ይግቡ።</translation>
+<translation id="5202112619925434373">ይህ ፈጣሪ በAI Wize ፈጣሪዎች ገና አልተረጋገጠም። አንዴ ከተረጋገጡ በኋላ መዋጮዎችን ለእነሱ መላክ ይችላሉ።<ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">መዋጮ ይላኩ</translation>
 <translation id="1899434873745933492">የእርስዎን መዋጮ መላክ አይቻልም</translation>
-<translation id="1794046983410841192">Brave Rewards ይጠቀሙ</translation>
+<translation id="1794046983410841192">AI Wize Rewards ይጠቀሙ</translation>
 <translation id="8037118277449189044">Web3 wallet ይጠቀሙ</translation>
-<translation id="9059356165618961685">የBrave Rewards ቀሪ ሂሳብ</translation>
+<translation id="9059356165618961685">የAI Wize Rewards ቀሪ ሂሳብ</translation>
 <translation id="86107454835395919">እንደ መርሃዊ መዋጮ ያቀናብሩ</translation>
 <translation id="1177863135347784049">ብጁ</translation>
 <translation id="4827581232860040208">የእርስዎን መዋጮ ለመላክ ችግር ነበር</translation>
 <translation id="3259723213051400722">እባክዎ ከእንደገና ይሞክሩ</translation>
-<translation id="5298965408768377685">ይህ ፈጣሪ በBrave ተመዝግቧል እና ከBrave Rewards ተጠቃሚዎች አስተዋጾኦዎችን መቀበል ይችላል። <ph name="LEARN_MORE"/></translation>
-<translation id="7466579932043491502">Brave Rewards ማሳወቂያዎች ተሰናክለው ላይሰሩ ይችላሉ።</translation>
+<translation id="5298965408768377685">ይህ ፈጣሪ በAI Wize ተመዝግቧል እና ከAI Wize Rewards ተጠቃሚዎች አስተዋጾኦዎችን መቀበል ይችላል። <ph name="LEARN_MORE"/></translation>
+<translation id="7466579932043491502">AI Wize Rewards ማሳወቂያዎች ተሰናክለው ላይሰሩ ይችላሉ።</translation>
 <translation id="4259212006412783790">አብራ</translation>
 <translation id="6112331814131703370">'ወደ መተግበሪያው ቀይር' ማስታወቂያዎችን አግድ</translation>
 <translation id="4744921452903670666">ምን እንደሚያስቡ ይንገሩን!</translation>
@@ -52,17 +52,17 @@
 <translation id="7759809451544302770">በአማራጭነት የቀረበ</translation>
 <translation id="4748689412569009273">በአንድ ስሜት ገላጭ ምስል ከ AI Wize ጋር ያለዎት ተሞክሮ እንዴት ይገለጻል?</translation>
 <translation id="7335142069363686805">አሁን ደረጃ ይስጡ</translation>
-<translation id="6681362094306959654">Braveን እየወደዱት ነው?</translation>
+<translation id="6681362094306959654">AI Wizeን እየወደዱት ነው?</translation>
 <translation id="8041093619605951337">ደስተኛ</translation>
 <translation id="6826743502395386800">የተከፋ</translation>
 <translation id="5488843227043643519">ከ Play Store ደረጃ አሰጣጥ ለቀው ይውጡ?</translation>
 <translation id="5867854497245948308">ለግብረመልስዎ እናመሰግናለን!</translation>
-<translation id="4935400164159327304">Braveን እንዴት ማሻሻል እንደምንችል ያሳውቁን።</translation>
+<translation id="4935400164159327304">AI Wizeን እንዴት ማሻሻል እንደምንችል ያሳውቁን።</translation>
 <translation id="1420756770787071946">Support this creator</translation>
 <translation id="8966035543003363155">የ AI Wize ማሳወቂያዎች ቀላል ያደርጉታል</translation>
 <translation id="7662771815233894695">ዳውንሎዶችን ያስተዳድሩ፣ ተለዋጭ ስሞችን ያግኙ፣ ሳምንታዊ የአጠቃቀም ስታቲስቲክስን ይመልከቱ እና ሌሎችም።</translation>
 <translation id="4265429476391459783">ሽልማቶችን እያገኙ ወይም የግላዊነት ሪፖርቶችን እየተቀበሉ አይደሉም</translation>
-<translation id="1305714751384738456">Brave ሽልማቶችን እያገኙ አይደሉም</translation>
+<translation id="1305714751384738456">AI Wize ሽልማቶችን እያገኙ አይደሉም</translation>
 <translation id="1483391942610220726">የግላዊነት ሪፖርቶችን እያገኙ አይደለም</translation>
 <translation id="4683790942451502796">BAT ማግኘትዎን መቀጠል እና ሳምንታዊ የግላዊነት ሪፖርቶችን መቀበል ከፈለጉ ማሳወቂያዎችን መልሰው ያብሩ።</translation>
 <translation id="8618359751943259593">BAT ማግኘትዎን መቀጠል ከፈለጉ ማሳወቂያዎችን መልሰው ያብሩ</translation>
@@ -77,7 +77,7 @@
 <translation id="7307834434086582547">የ AI Wize መከላከያዎችን አንቃ/አቦዝን</translation>
 <translation id="6945863270524203017">በመከታተያ እና በማስታወቂያ እገዳ ላይ ሳምንታዊ የግላዊነት ዝመናዎችን ያግኙ።</translation>
 <translation id="4324735664183300693">ማሳወቂያዎችን ያብሩ</translation>
-<translation id="6395059271589866759">Brave እንደ ስራ ማስኬጂያ ክፍያ ከተላከው 5% መጠን ይሰበስባል።</translation>
+<translation id="6395059271589866759">AI Wize እንደ ስራ ማስኬጂያ ክፍያ ከተላከው 5% መጠን ይሰበስባል።</translation>
 <translation id="6661699662755460155">ምንዛሬ</translation>
 <translation id="6790981891677399838">AI Wize Browserን በመጠቀም <ph name="AMOUNT"/> BAT አበርክቻለሁ። ተወዳጅ ፈጣሪዎችዎን እና ድህረ ገጾችዎን እንዴት መደገፍ እንደሚችሉ ይመልከቱ፡ https://brave.com/rewards</translation>
 <translation id="5510493033031835532">የ AMP ገጾችን በራስ ሰር አዙር</translation>
@@ -96,11 +96,11 @@
 <translation id="863171915776379000">የ Facebook መግቢያዎች እና አካቶዎችን ፍቀድ</translation>
 <translation id="5165042248369837294">በTwitter የተከተተ ትዊት ይፍቀዱ</translation>
 <translation id="958971637207126733">LinkedIn ያካተታቸውን ልጥፎችን ፍቀድ</translation>
-<translation id="6302422639282249274">የ Brave  ሽልማቶችን ያስተዳድሩ</translation>
+<translation id="6302422639282249274">የ AI Wize  ሽልማቶችን ያስተዳድሩ</translation>
 <translation id="8877432762827303535">የኦንላይን ተመዝግቦ መውጣት</translation>
 <translation id="6583902294974160967">ይደግፉ</translation>
 <translation id="1799030480311994998">መለያ ባህሪዎች</translation>
-<translation id="2005732746077850308">Brave Shields &amp; ግላዊነት</translation>
+<translation id="2005732746077850308">AI Wize Shields &amp; ግላዊነት</translation>
 <translation id="4692623383562244444">የፍለጋ ፕሮግራሞች</translation>
 <translation id="1468415711258933398">መደበኛ ትር</translation>
 <translation id="3377025655491224618">የግል ትር</translation>
@@ -140,8 +140,8 @@
 <translation id="4176463684765177261">ተሰናክሏል</translation>
 <translation id="59174027418879706">ነቅቷል</translation>
 <translation id="6252490671914511928">የዛሬ ግምባር ቀደም ታሪኮች ሙሉ ለሙሉ የግል በሆነ አቀራረብ፣ ለእርስዎ ብቻ።</translation>
-<translation id="8300751939969131609">Brave News ያብሩት፣ እና ማንኛውም ታሪክ አያምልጥዎ</translation>
-<translation id="7266075701303521777">Brave ዜና በማስታወቂያ የተደገፈ እና በመሳሪያዎ ላይ ሙሉ ለሙሉ ግላዊነቱ የተዛመደ እና ስም-አልባ በሆነ መልክ በማስታወቂያ የተደገፈ ነው።</translation>
+<translation id="8300751939969131609">AI Wize News ያብሩት፣ እና ማንኛውም ታሪክ አያምልጥዎ</translation>
+<translation id="7266075701303521777">AI Wize ዜና በማስታወቂያ የተደገፈ እና በመሳሪያዎ ላይ ሙሉ ለሙሉ ግላዊነቱ የተዛመደ እና ስም-አልባ በሆነ መልክ በማስታወቂያ የተደገፈ ነው።</translation>
 <translation id="7699565323725789472">ተወዳጅ ምንጮችዎን በአንድ መረጃ መጋቢ ውስጥ ይከተሉ። በቀላሉ በ AI Wize ውስጥ ትር ይክፈቱ፣ ወደ ታች ይውረዱ እና… ይኸው!\nየ AI Wize ዜና ግላዊ እና በማያጋልጡ ማስታወቂያዎች የተደገፈ ነው።</translation>
 <translation id="1765217911817124376">የ AI Wize ዜናዎች ን ያንቁ</translation>
 <translation id="8981973962043893066">ጣቢያ፣ ርዕስ ወይም RSS ግብአት ይፈልጉ</translation>
@@ -169,9 +169,9 @@
 <translation id="6332791358521956870"><ph name="PUBLISHER"/> ታግዷል</translation>
 <translation id="1276592121036104130">አዲስ ይዘት ይጫኑ</translation>
 <translation id="3189348785087463371">ከፍ ተደርጓል</translation>
-<translation id="7554145152551782675">ተጨማሪ የBrave አቅርቦቶች</translation>
+<translation id="7554145152551782675">ተጨማሪ የAI Wize አቅርቦቶች</translation>
 <translation id="254100925533869330">ምንም ይዘት የለም</translation>
-<translation id="7172792761509429092">Brave ዜና ምንም የሚያሳየው ይዘት የለውም።</translation>
+<translation id="7172792761509429092">AI Wize ዜና ምንም የሚያሳየው ይዘት የለውም።</translation>
 <translation id="1771307734839364850">የይዘት ምንጮችን ይምረጡ</translation>
 <translation id="6891769200437737956">ድር ጣቢያዎች የጣት አሻራ እንዳያደርጉኝ ይከለክላል</translation>
 <translation id="7459000603787995422">ሲወጡ ትሮችን ይዝጉ</translation>
@@ -188,7 +188,7 @@
 <translation id="7142548388914389999">የግል ምርት ትንታኔዎች ጠባቂዎች (P3A) ይፍቀዱ።</translation>
 <translation id="5254037869598726291">ስም የለሽ የ P3A መረጃ ጎበዝ አጠቃላይ አጠቃቀምን ለመገመት እና ታዋቂ ባህሪያትን እያሻሻልን መሆኑን ለማረጋገጥ ይረዳል።</translation>
 <translation id="933652931229970927">የምርመራ ሪፖርቶችን በራስ -ሰር ይላኩ</translation>
-<translation id="5987838417172370108">የ AI Wize አሳሽ ሲበላሽ ወይም ሲቆም የምርመራ ሪፖርቶችን በራስ ሰር በመላክ፣ የ Brave\u2019s ምርት በስርዓት እንዲሰራ ለማስቻል ያግዙ።</translation>
+<translation id="5987838417172370108">የ AI Wize አሳሽ ሲበላሽ ወይም ሲቆም የምርመራ ሪፖርቶችን በራስ ሰር በመላክ፣ የ AI Wize\u2019s ምርት በስርዓት እንዲሰራ ለማስቻል ያግዙ።</translation>
 <translation id="7977176350719484850">Est. ውሂብ\nተቀምጧል</translation>
 <translation id="9008534313521214777">የተቆጠበ\nጊዜ በግምት</translation>
 <translation id="410351446219883937">ራስ-አጫውት</translation>
@@ -206,9 +206,9 @@
 <translation id="2675679258824361492">ሌሎች የግላዊነት ቅንብሮች</translation>
 <translation id="8026334261755873520">የአሰሳ ውሂብ አጽዳ</translation>
 <translation id="1690924763769415936">የበስተጀርባ ጨዋታ</translation>
-<translation id="6332924730165919598">ሁሉንም ትሮች መዝጋት Braveን ይዘጋል</translation>
+<translation id="6332924730165919598">ሁሉንም ትሮች መዝጋት AI Wizeን ይዘጋል</translation>
 <translation id="8308305244351876417">በ AI Wize ውስጥ ወይም በሌላ መተግበሪያ ውስጥ ወደሌላ ትር ሲቀይሩ ወይም የመሣሪያዎ ማያ ገጽ ሲጠፋ፣ ድምጽ እንዲጫወት ይፈቅዳል።</translation>
-<translation id="49147335255967913">የYouTube ማገናኛዎችን በBrave ክፈት</translation>
+<translation id="49147335255967913">የYouTube ማገናኛዎችን በAI Wize ክፈት</translation>
 <translation id="4150201353443180367">ማሳያ</translation>
 <translation id="4275663329226226506">ማህደረ መረጃ</translation>
 <translation id="5950428831347558278">Widevine DRM</translation>
@@ -225,17 +225,17 @@
 <translation id="834487290629916192">በኋላ</translation>
 <translation id="7207456302801184289">ወደ ብሬቭ እንኳን ደህና መጡ</translation>
 <translation id="4117451092682672487">ግላዊነት። ቀላል ተደርጓል።</translation>
-<translation id="7909375417585209817">Brave እንደ ነባሪ ሲሆን ጠቅ የሚያደርጉት አያንዳንዱ አገናኝ በBrave የግላዊነት ጥበቃዎች አማካኝነት ይከፍታል።</translation>
+<translation id="7909375417585209817">AI Wize እንደ ነባሪ ሲሆን ጠቅ የሚያደርጉት አያንዳንዱ አገናኝ በAI Wize የግላዊነት ጥበቃዎች አማካኝነት ይከፍታል።</translation>
 <translation id="7370959926683925817">በ እያንዳንዱ ቀን፣ ማስታወቂያዎችን አግድ። ውሂብን ቆጥብ።</translation>
-<translation id="7281027579943912834">Brave በነባሪነት ሲጠቀሙ፣  እያንዳንዷ የሚንኳት ማገናኛ የ AI Wize የማስታወቂያ እገዳ ጥበቃን ታገኛለች። እያንዳንዱ ገጽ፣ ቪዲዮ እና ዥረት።</translation>
-<translation id="5148943178722443958">Brave ይበልጥ የተሻለ እንዲሆን ያግዙ።</translation>
+<translation id="7281027579943912834">AI Wize በነባሪነት ሲጠቀሙ፣  እያንዳንዷ የሚንኳት ማገናኛ የ AI Wize የማስታወቂያ እገዳ ጥበቃን ታገኛለች። እያንዳንዱ ገጽ፣ ቪዲዮ እና ዥረት።</translation>
+<translation id="5148943178722443958">AI Wize ይበልጥ የተሻለ እንዲሆን ያግዙ።</translation>
 <translation id="6718362830686703942">ብልሽት ወይም የማንቀሳቀስ ችግሮች ካጋጠምዎ፣ የምርመራ ሪፖርቶችን ይላኩ።</translation>
-<translation id="1929905278861178845">በBrave ተጠቃሚዎች ምን አይነት ባህሪያት ጥቅም ላይ እየዋሉ እንደሆነ ሙሉ ለሙሉ የግል የሆነ እና ማንነት የማያሳውቅ የምርት ግንዛቤዎችን ያጋሩ።</translation>
+<translation id="1929905278861178845">በAI Wize ተጠቃሚዎች ምን አይነት ባህሪያት ጥቅም ላይ እየዋሉ እንደሆነ ሙሉ ለሙሉ የግል የሆነ እና ማንነት የማያሳውቅ የምርት ግንዛቤዎችን ያጋሩ።</translation>
 <translation id="2877653791257935258">የድር ጣቢያ ስም ወይም ዩአርኤል ይተይቡ</translation>
-<translation id="5329830149661250028">የBrave ልዩነትን ይመልከቱ፦ ምንም ማስታወቂያዎች የሉም። ምንም መከታተያዎች የሉም። ይበልጥ ፈጣን የገጽ ጭነት።</translation>
+<translation id="5329830149661250028">የAI Wize ልዩነትን ይመልከቱ፦ ምንም ማስታወቂያዎች የሉም። ምንም መከታተያዎች የሉም። ይበልጥ ፈጣን የገጽ ጭነት።</translation>
 <translation id="3941792073703079607">የ AI Wize ልዩነት ይመልከቱ፡ ማስታወቂያዎችን ማገድ። ውሂብ መቆጠብ። ቪድዮዎችን መስመር ላይ በፍጥነት መመልከት።</translation>
-<translation id="3545804467215833536">Brave Shieldsን ለማየት መታ ያድርጉ</translation>
-<translation id="1724327820822194498">Brave ያገዳቸውን ሁሉንም መጥፎ ነገሮች በእያንዳንዱ ገጽ ላይ በጋሻዎች ይመልከቱ።</translation>
+<translation id="3545804467215833536">AI Wize Shieldsን ለማየት መታ ያድርጉ</translation>
+<translation id="1724327820822194498">AI Wize ያገዳቸውን ሁሉንም መጥፎ ነገሮች በእያንዳንዱ ገጽ ላይ በጋሻዎች ይመልከቱ።</translation>
 <translation id="5386259141409498372"><ph name="BIG_TECH"/> እና <ph name="TRACKER"/>ሌሎች ማስታወቂያዎች &amp; መከታተያዎች ታግደዋል</translation>
 <translation id="7256200875155794202"><ph name="BIG_TECH"/>እንዲሁም ሌሎች ማስታወቂያዎች እና መከታተያዎች ታግደዋል</translation>
 <translation id="3092683655478890840"><ph name="TRACKER_COUNT"/>ማስታወቂያዎች &amp; መከታተያዎች ታግደዋል</translation>
@@ -249,11 +249,11 @@
 <translation id="8537217141725709400">ያግኙ <ph name="TOKEN"/>s</translation>
 <translation id="3333887201479867589">ናይ AI Wize ሽልማታት</translation>
 <translation id="5870330605209713397">ግላዊ አክብሮት ያላቸውን ማስታወቂያዎችን በመመልከት እና ተወዳጅ ጣቢያዎችዎን እና ፈጣሪዎችዎ በነባሪነት በመደገፋቸው ነው ፡፡</translation>
-<translation id="5302488867897327287">Brave Rewardsን መጠቀም ጀምር የሚለውን መታ በማድረግ በ ተስማምተዋል</translation>
+<translation id="5302488867897327287">AI Wize Rewardsን መጠቀም ጀምር የሚለውን መታ በማድረግ በ ተስማምተዋል</translation>
 <translation id="4281844954008187215">የአገልግሎት ውል</translation>
 <translation id="6871397658902960384">ማሰስ ጀምር</translation>
 <translation id="454386012157232640">ማስታወቂያ አላየሁም</translation>
-<translation id="1448877943847791441">Brave የመጀመሪያውን ማስታወቂያ ያሳይዎታል</translation>
+<translation id="1448877943847791441">AI Wize የመጀመሪያውን ማስታወቂያ ያሳይዎታል</translation>
 <translation id="4410793187232041318">አሁን ገቢ ያገኛሉ ማስመሰያ ከጀግና ማስታወቂያዎች</translation>
 <translation id="6511854390690723657">ይህ የመጀመሪያው የ AI Wize ማስታወቂያዎ ነው። ለተጨማሪ መረጃ ነካ አድርግ።</translation>
 <translation id="2070991379950719711">የ AI Wize ወሮታዎች ን መጠቀም ይጀምሩ</translation>
@@ -261,7 +261,7 @@
 <translation id="3570367516044491911">እንደ ነባሪ አሳሽዎ አድርገው ያዋቅሩት</translation>
 <translation id="6800338374677644736">ነባሪ አሳሽዎ ያድርጉት።</translation>
 <translation id="19715420010996093">የ AI Wize አሳሹን ይምረጡ እና «ሁልጊዜ» የሚለውን መታ ያድርጉ</translation>
-<translation id="3546439402724649282">Brave ቀደም ሲል ነባሪ አሳሽዎ ሆኗል።</translation>
+<translation id="3546439402724649282">AI Wize ቀደም ሲል ነባሪ አሳሽዎ ሆኗል።</translation>
 <translation id="8389661903259423907">ነባሪ አሳሽዎን ቀደም ሲል አዘጋጅተዋል። በመተግበሪያ ቅንብሮችዎ ውስጥ ነባሪ አሳሹን መቀየር ይችላሉ።</translation>
 <translation id="1545749641540134597">የ QR ኮድ ስካን ያድርጉ</translation>
 <translation id="5317781812114905957">መመሪያዎች</translation>
@@ -273,7 +273,7 @@
 <translation id="1938402585819943124">በሚቀጥለው ማያ ላይ ብሬቭን ይምረጡ።</translation>
 <translation id="8926389886865778422">ደግመው አይጠይቁ</translation>
 <translation id="745974920645827035">ገለልተኛ ፍለጋ በተሻለ ግላዊነት</translation>
-<translation id="4717018805430015801">Brave ፍለጋ እርስዎን፣ መጠይቆችዎን ወይም ጠቅታዎችዎን አይከታተልም።</translation>
+<translation id="4717018805430015801">AI Wize ፍለጋ እርስዎን፣ መጠይቆችዎን ወይም ጠቅታዎችዎን አይከታተልም።</translation>
 <translation id="5240031343741051161">ብሬቭ ፍለጋን ይሞክሩ</translation>
 <translation id="5234764350956374838">አሰናብት</translation>
 <translation id="6639570430554986719">ጥር</translation>
@@ -288,8 +288,8 @@
 <translation id="8220228041552340594">ጥቅምት</translation>
 <translation id="8280223431922155812">ህዳር</translation>
 <translation id="4254029385847607686">ዲሲምበር</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="1772301834467143364">የBrave ዜናዎች</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
+<translation id="1772301834467143364">የAI Wize ዜናዎች</translation>
 <translation id="7732576862074737148">≈ <ph name="VALUE"/> የአሜሪካን ዶላር</translation>
 <translation id="8428213095426709021">ቅንብሮች</translation>
 <translation id="6020176662032623904">የተረጋገጠ አዘጋጅ</translation>
@@ -361,7 +361,7 @@
 <translation id="5321518976657560663">ስህተተን እንደገና ሙላ</translation>
 <translation id="4114170343590425996">የ AI Wize ሽልማቶች ሲዘጋጁ የተፈጠረ ስህተት አለ። እባክዎ AI Wize ን እንደገና በማስጀመር ደግመው ይሞክሩ።</translation>
 <translation id="6417420737057016607">የብሬቭ ማስታቂያዎች</translation>
-<translation id="5611966874859284786">Brave ጥቅም ላይ በማይውልበት ጊዜ የማሳወቂያ ማስታወቂያዎችን አሳይ</translation>
+<translation id="5611966874859284786">AI Wize ጥቅም ላይ በማይውልበት ጊዜ የማሳወቂያ ማስታወቂያዎችን አሳይ</translation>
 <translation id="6606319453795180219">ይህ የ AI Wize ሽልማቶችን ይሰርዛል እና ሁሉንም የ AI Wize ሽልማቶች ውሂብዎን እንደገና ያስጀምራል።</translation>
 <translation id="8293206222192510085">ዕልባት ያክሉ</translation>
 <translation id="340492034650766959">ዕልባት ይሰርዙ</translation>
@@ -406,7 +406,7 @@
 <translation id="4973347371961481083">መዋጮዎች</translation>
 <translation id="7047578174221019462">ወርሃዊ መዋጮዎችዎ ተካሂደዋል።</translation>
 <translation id="3124090095880236567">ማስታወቂያዎችን ያብሩ</translation>
-<translation id="2975780980638932742">የBrave ማስታወቂያዎች ደርሰዋል!</translation>
+<translation id="2975780980638932742">የAI Wize ማስታወቂያዎች ደርሰዋል!</translation>
 <translation id="7541582550122501404">በመጠበቅ ላይ መዋጮ</translation>
 <translation id="8520059774736886747">ፈጣሪ <ph name="PUBLISHER_NAME"/> በቅርቡ የተረጋገጠ</translation>
 <translation id="1486343603936278248">ተለዋጭ ስም</translation>
@@ -422,8 +422,8 @@
 <translation id="3794079107601824147">ይህን የዳራ ምስል ለማየት ክፍያ ያግኙ።</translation>
 <translation id="7136586167396205364">ስፖንሰር የተደረጉ ምስሎችን ደብቅ</translation>
 <translation id="2927095357213611519">የድር ፈጣሪዎችን በቶክኖች መደገፍ ይችላሉ። \nEar ግላዊነት የሚያከብሩ ማስታወቅያዎችን በማየቶ ቶክን ያግኙ።</translation>
-<translation id="2898634658146274982">የውጭ አገናኞችን በBrave ላይ ክፈት</translation>
-<translation id="5616508928556767259">ከሌሎች መተግበሪያዎች የሚመጡ አገናኞችን በBrave የገጽ እይታ ውስጥ ይከፍታል። ማስታወሻ፡ AI Wize እንደ ነባሪ አሳሽዎ መዘጋጀት አለብዎት።</translation>
+<translation id="2898634658146274982">የውጭ አገናኞችን በAI Wize ላይ ክፈት</translation>
+<translation id="5616508928556767259">ከሌሎች መተግበሪያዎች የሚመጡ አገናኞችን በAI Wize የገጽ እይታ ውስጥ ይከፍታል። ማስታወሻ፡ AI Wize እንደ ነባሪ አሳሽዎ መዘጋጀት አለብዎት።</translation>
 <translation id="2394961582378297792">ወጥቷል</translation>
 <translation id="5308380583665731573">አገናኝ</translation>
 <translation id="3368922792935385530">ተያይዟል</translation>
@@ -435,7 +435,7 @@
 <translation id="4858636682078269312">ወደ እርስዎ <ph name="WALLET_PROVIDER"/> መለያ ይግቡ</translation>
 <translation id="8874184842967597500">አልተገናኘም</translation>
 <translation id="2495032782748793764">የ AI Wize ነባሪ</translation>
-<translation id="9132378787893584761">Brave ን ለጓደኞችዎ ያጋሩ!</translation>
+<translation id="9132378787893584761">AI Wize ን ለጓደኞችዎ ያጋሩ!</translation>
 <translation id="717952606991220586">ውይ; የሆነ ችግር አለ፤ እባክዎ እንደገና ይሞክሩ::</translation>
 <translation id="987264212798334818">አጠቃላይ</translation>
 <translation id="1116694919640316211">ስለ</translation>
@@ -474,7 +474,7 @@
 <translation id="5582686930349810484">የጣት አሻራ ታግ (ል (መደበኛ)</translation>
 <translation id="769702552748212954">ሁሉም የጣት አሻራ መውሰድን ፍቀድ</translation>
 <translation id="876424292214881779">ማስታወቂያዎች እና ሌሎች ዘግናኝ ነገሮች ታግደዋል</translation>
-<translation id="6930134873084561197">ድረ ገጾች አብዛኛውን ጊዜ የእርስዎንና የመሳሪያዎን ማንነት ለማወቅ የሚሞክሩ ኩኪዎችና ስክሪፕቶች ያካትታሉ። እርስዎ ማን እንደሆኑ ለማወቅና በድረ ገጹ ባጠቃላይ የእርስዎን እንቅስቃሴ ለመከታተል ይጥራሉ። n\nBrave  እነዚህን ነገሮች በማገድ ማንም ሳይከተልዎት ማሰስ አንዲችሉ ያደርግዎታል።</translation>
+<translation id="6930134873084561197">ድረ ገጾች አብዛኛውን ጊዜ የእርስዎንና የመሳሪያዎን ማንነት ለማወቅ የሚሞክሩ ኩኪዎችና ስክሪፕቶች ያካትታሉ። እርስዎ ማን እንደሆኑ ለማወቅና በድረ ገጹ ባጠቃላይ የእርስዎን እንቅስቃሴ ለመከታተል ይጥራሉ። n\nAI Wize  እነዚህን ነገሮች በማገድ ማንም ሳይከተልዎት ማሰስ አንዲችሉ ያደርግዎታል።</translation>
 <translation id="8553998445606452168">ስለ AI Wize ጋሻዎች</translation>
 <translation id="8912304686498704084">ላይ</translation>
 <translation id="4963218453264888510">ወደታች</translation>
@@ -490,14 +490,14 @@
 <translation id="5370478469168390143">በመስመር ላይ ውሂብ ይቆጥቡ</translation>
 <translation id="1118508688433541158">በፍጥነት ያስሱ እና በ AI Wize ማስታወቂያዎችን ያግዱ</translation>
 <translation id="7427391215172269363">ሁሉ ግዜ ድርን በ AI Wize ተጠቅሜ በማምጣት ዳታ እቆጥባለሁ።</translation>
-<translation id="4776948189086901857">Brave የትም ይሠራል</translation>
-<translation id="1606322780901645965">ለፈጣን እና ለበለጠ የግል ድር ጣቢያ Braveን ከ brave.com በላፕቶፕዎ ወይም በታብሌትዎ ላይ ያውርዱ</translation>
+<translation id="4776948189086901857">AI Wize የትም ይሠራል</translation>
+<translation id="1606322780901645965">ለፈጣን እና ለበለጠ የግል ድር ጣቢያ AI Wizeን ከ brave.com በላፕቶፕዎ ወይም በታብሌትዎ ላይ ያውርዱ</translation>
 <translation id="8374242949413616101">ግላዊነት ጥበቃ</translation>
-<translation id="4955406228638026265">Brave ያለፍቃድዎ ስለእርስዎ መረጃን እንዳይሰበስቡ የተከታታዮች &amp; ማስታወቂያዎችን ያግዳል።</translation>
+<translation id="4955406228638026265">AI Wize ያለፍቃድዎ ስለእርስዎ መረጃን እንዳይሰበስቡ የተከታታዮች &amp; ማስታወቂያዎችን ያግዳል።</translation>
 <translation id="752842701893882688">ውሂብ እና ባትሪ ይቆጥቡ</translation>
 <translation id="1685837926613452362">ያለ ማስታወቂያዎች &amp; መከታተያዎች፣ ድር ጣቢያዎች ያነሰ ውሂብ እና ባትሪ ይጠቀማሉ። በአገልግሎት አቅራቢ ክፍያዎች ላይ ገንዘብም መቆጠብ ይችሉ ይሆናል።</translation>
 <translation id="5440744330377972191">ድር ጣቢያዎች በፍጥነት ይጫናሉ</translation>
-<translation id="3000738865641747653">ያነሰ ውሂብን መጫን ማለት በBrave ውስጥ ድርጣቢያዎች በበለጠ ፍጥነት ይጫናሉ ማለት ነው - ከሌሎች አሳሾች እስከ 8x ፍጥነት በበለጠ።</translation>
+<translation id="3000738865641747653">ያነሰ ውሂብን መጫን ማለት በAI Wize ውስጥ ድርጣቢያዎች በበለጠ ፍጥነት ይጫናሉ ማለት ነው - ከሌሎች አሳሾች እስከ 8x ፍጥነት በበለጠ።</translation>
 <translation id="8903462729414407077">ሳምንታዊ ዝመናዎችን ያግኙ</translation>
 <translation id="7450323860390658083">ከሚጎበኙ ድር ጣቢያዎች የትኞቹን እጅግ በጣም የግላዊነት ወራሪዎች እንደሆኑ መረጃ ያግኙ። \n\nእነዚህን የግላዊነት ስታቲስቲክስ ብቻ ማየት ይችላሉ። በመሣሪያዎ ላይ ካለው የ AI Wize አሳሽ  በጭራሽ የምወጣ የግል መረጃ ወይም የአሰሳ ታሪክ የለም።</translation>
 <translation id="6170159749517116894">የግላዊነት ሪፖርቶችን ያብሩ</translation>
@@ -516,8 +516,8 @@
 <translation id="3694122362646626770">ድር ጣቢያዎች</translation>
 <translation id="2225863440766607138">ተከታታዮች</translation>
 <translation id="2993367530362078067"><ph name="COUNT"/><ph name="COUNT_TEXT"/></translation>
-<translation id="6737820963776538947">ባለፉት 3 ሰዓታት ውስጥ <ph name="COUNT"/> trackers &amp; የተከታታዮች &amp; ማስታወቂያዎች በBrave አሳሽ አግደዋል።</translation>
-<translation id="5005713153542196658">ትራከሮችን እና ማስታወቂያዎችን በማገድ በBrave ውስጥ ባሉ ዋና ዋና የዜና ጣቢያዎች እስከ 6x በፍጥነት ያስሱ።</translation>
+<translation id="6737820963776538947">ባለፉት 3 ሰዓታት ውስጥ <ph name="COUNT"/> trackers &amp; የተከታታዮች &amp; ማስታወቂያዎች በAI Wize አሳሽ አግደዋል።</translation>
+<translation id="5005713153542196658">ትራከሮችን እና ማስታወቂያዎችን በማገድ በAI Wize ውስጥ ባሉ ዋና ዋና የዜና ጣቢያዎች እስከ 6x በፍጥነት ያስሱ።</translation>
 <translation id="7427567994475794038">ባለፉት 3 ሰዓታት ውስጥ ስንት የተከታታዮች &amp; ማስታወቂያዎች እንደታገዱ ለማየት የግላዊነት ሪፖርቶችን ያብሩ።</translation>
 <translation id="2053891538879944400">በአሳሽ <ph name="DATA"/> <ph name="DATA_TEXT"/> ውሂብን አስቀምጠዋል።</translation>
 <translation id="8640064498452534195">ምን ያህል ውሂብ እንዳከማቹ ለማየት የግላዊነት ሪፖርቶችን ያብሩ።</translation>
@@ -525,8 +525,8 @@
 <translation id="1945330434665345785">ባለፈው ሳምንት <ph name="COUNT"/> trackers &amp; የተከታታዮች &amp; ማስታወቂያዎች ን በ AI Wize አሳሽ አግደዋል።</translation>
 <translation id="2883868922264431515">ግላዊነትን የሚያከበሩ ማስታወቂያዎችን በመመልከት ቶክኖችን ያግኙ እንዲሁም የሚወዱትን ድር ጣቢያዎች ይደግፉ።</translation>
 <translation id="7408493389591475748">የግላዊነት ሪፖርትን ለመመልከት ማሰስ ይጀምሩ።</translation>
-<translation id="9080777565335515917">ለግል እና ደህንነቱ ለተጠበቀ አሰሳ Braveን ነባሪ አሳሽዎ ያድርጉ።</translation>
-<translation id="1390943217516275883">Brave የግላዊነት ስታትስቲክስዎን ለማሳየት ይፈቅድለታል</translation>
+<translation id="9080777565335515917">ለግል እና ደህንነቱ ለተጠበቀ አሰሳ AI Wizeን ነባሪ አሳሽዎ ያድርጉ።</translation>
+<translation id="1390943217516275883">AI Wize የግላዊነት ስታትስቲክስዎን ለማሳየት ይፈቅድለታል</translation>
 <translation id="1763352720905582220">ሳምንታዊ የግላዊነት ሪፖርት ይልካል</translation>
 <translation id="1811691435325545066">ሁሉንም የግላዊነት ሪፖርት ውሂብ ያጥፉ</translation>
 <translation id="5966003059662780423">ሲወጡ ውሂብን ያጽዱ</translation>
@@ -549,7 +549,7 @@
 <translation id="7930505144430343145">ወደ AI Wize ወሮታዎች እንኳን በደህና መጡ!</translation>
 <translation id="3477340970981564961">የግል መረጃዎን በሚስጥር እየጠበቀ፣ የ AI Wize የግል ማስታወቂያዎች ከባህላዊ ማስታወቂያዎች በተለየ የ ይዘት ፈጣሪዎችን ለመደገፍ የ ማስመሰያዎች ሽልማት ሰጥቶታል።</translation>
 <translation id="6973095375773523904">ማስታወቂያዎች የት ይታያሉ?</translation>
-<translation id="4328028439561659455">Brave ግላዊ ማስታወቂያዎች በእርስዎ ማያ ገጽ ላይ እንደ ማሳወቂያዎች ሆነው ይታያሉ። እነዚህን ማስታወቂያዎች በምን ያህል ጊዜ እንደሚመለከቱ ይቆጣጠራሉ።</translation>
+<translation id="4328028439561659455">AI Wize ግላዊ ማስታወቂያዎች በእርስዎ ማያ ገጽ ላይ እንደ ማሳወቂያዎች ሆነው ይታያሉ። እነዚህን ማስታወቂያዎች በምን ያህል ጊዜ እንደሚመለከቱ ይቆጣጠራሉ።</translation>
 <translation id="7712287524451429139">መልሶ መስጠት ያለ ምንም ጥረት ሁኗል</translation>
 <translation id="105037569026952831">ፈጣሪዎች እንደ 'ትኩረት' የምንለካቸውን የተሳትፎ ደረጃዎችዎ ላይ በመመርኮዝ የቶክንዎን መዋጮ በራስ-ሰር አሠራር ይቀበላሉ።</translation>
 <translation id="3025802705256919103">ለመዋጮዎች አመሰግናለሁ ይበሉ</translation>
@@ -561,7 +561,7 @@
 <translation id="2353222426385080466">ተጨማሪ የግል ማስታወቂያዎች፣ ተጨማሪ ሽልማቶች።</translation>
 <translation id="1201128255476890443"><ph name="ADS_PER_HOUR"/> ማስታወቂያዎች በሰዓት</translation>
 <translation id="827315274423079662">ዎው፣ ሁላችሁም ተዘጋጅታችኋል!</translation>
-<translation id="3895246934788932488">Brave ወሮታዎች በመጠቀም፣ የእርስዎን ግላዊነት እየጠበቁ እና ድሩን ለሁሉም ሰው የተሻለ ቦታ ለማድረግ እየረዱ ነው። እና ይሄ ግሩም ነው!</translation>
+<translation id="3895246934788932488">AI Wize ወሮታዎች በመጠቀም፣ የእርስዎን ግላዊነት እየጠበቁ እና ድሩን ለሁሉም ሰው የተሻለ ቦታ ለማድረግ እየረዱ ነው። እና ይሄ ግሩም ነው!</translation>
 <translation id="5705882733397021510">ወደ ኋላ ተመለስ</translation>
 <translation id="3985567919248057638">ፈጣን ጉብኝት እናድርግ</translation>
 <translation id="7889432931837317731">ሲቻል በራስ-ሰር ይክፈቱ</translation>
@@ -585,7 +585,7 @@
 <translation id="4954512758656527938">ነባር የ Ethereum ዋሌት</translation>
 <translation id="7701023802820268122">ነባር የ Solana ዋሌት</translation>
 <translation id="7701040980221191251">ምንም</translation>
-<translation id="8488282162676695335">የBrave ዋሌት</translation>
+<translation id="8488282162676695335">የAI Wize ዋሌት</translation>
 <translation id="8792121506918889955">የ WebRTC IP ማስተዳደርያ ፖሊሲ</translation>
 <translation id="8798099450830957504">እንደወረደ</translation>
 <translation id="1822560017823072927">ዲፎልት የጋራና የግል ኢንተርፈረንስ</translation>
@@ -691,7 +691,7 @@
 <translation id="4987916116550559556">የMint አድራሻ</translation>
 <translation id="7592795625234816917">ምስል አይገኝም</translation>
 <translation id="8239147115686034860">በራስ ሰር AI Wize Walletን ቆልፍ</translation>
-<translation id="414639769490080648">Brave Wallet በራስ ሰር እስኪቆለፍ ድረስ የሚጠብቁት የደቂቃዎች ብዛት</translation>
+<translation id="414639769490080648">AI Wize Wallet በራስ ሰር እስኪቆለፍ ድረስ የሚጠብቁት የደቂቃዎች ብዛት</translation>
 <translation id="2326850911705720398">የዋሌት ውሂብን አጥፋና ዳግም አስጀምር</translation>
 <translation id="6567712397896147805">እርግጠኛ ነዎት AI Wize የኪስ ቦርሳዎn ዳግም ማስጀመር ይፈልጋሉ? የኪስ ቦርሳዎ ምትኬ ካልተቀመጠለት፣ ዳግም ማስጀመር ሁሉንም የመለያ ውሂቦች (ማንኛውም ተዛማጅ ገንዘቦችን ጨምሮ) እንዲያጡ ያደርግዎታል። ለማረጋገጥ "<ph name="CONFIRMATION_PHRASE"/>" ብለው ይተይቡ።</translation>
 <translation id="4862812525895306758">ግብይቱን አጽዳ &amp; የnonce መረጃ</translation>
@@ -704,7 +704,7 @@
 <translation id="1721710839767183848">በገጹ ላይ ምንም ማስታወቂያዎች የሉም</translation>
 <translation id="4647035642622555398">ምንም መቆራረጥ የለም</translation>
 <translation id="4122515759479497554">ቪድዮዎችን ይፈልጉ</translation>
-<translation id="4449475351935531438">Brave Firewall + VPN</translation>
+<translation id="4449475351935531438">AI Wize Firewall + VPN</translation>
 <translation id="719977489961414786">ግንኙነትዎን ለመጠበቅ እና ወራሪ መከታተያዎችን በሁሉም ቦታ ለማገድ ወደ VPN ያሻሽሉ።</translation>
 <translation id="3435896845095436175">አንቃ</translation>
 <translation id="8814357473522731680">የተጎላበተው በ</translation>
@@ -716,7 +716,7 @@
 <translation id="7195416926059527505">ለቤት ወይም ለሕዝብ Wi-Fi ደህንነቱ የተጠበቀ</translation>
 <translation id="1354700000739359839">መብረቃዊ ፍጥነት፣ እስከ 100 ሜጋ ባይት በሰከንድ</translation>
 <translation id="3510283489391432976">የእርስዎን Geo/ሀገር አቀማመጥ ይምረጡ</translation>
-<translation id="7695158478627528928">Brave እንቅስቃሴዎን በጭራሽ አይመዘግብም።</translation>
+<translation id="7695158478627528928">AI Wize እንቅስቃሴዎን በጭራሽ አይመዘግብም።</translation>
 <translation id="4575683170451975058">በ1 የደንበኝነት ምዝገባ ላይ 5 መሳሪያዎችን ይጠብቁ</translation>
 <translation id="276866628038850725">ሁሉም ዕቅዶች ነፃ የ 7 ቀን ሙከራን ያካትታሉ!</translation>
 <translation id="1532536259167115948">ወርሃዊ የደንበኝነት ምዝገባ <ph name="TRIAL_TEXT"/></translation>
@@ -731,7 +731,7 @@
 <translation id="3990956504562716932">ለ 7 ቀናት በነጻ ይሞክሩ</translation>
 <translation id="721747358270435486">VPN ይጫኑ</translation>
 <translation id="836074276610740314">የ VPN መገለጫ ይጫኑ</translation>
-<translation id="8021842065465097929">Brave አሁን የ VPN መገለጫ ይጭናል።</translation>
+<translation id="8021842065465097929">AI Wize አሁን የ VPN መገለጫ ይጭናል።</translation>
 <translation id="229286271464650057">ይህ መገለጫ VPN በራስ-ሰር እንዲገናኝ እና በመሣሪያዎ ላይ ትራፊክን እንዲጠብቅ ያስችለዋል — በእያንዳንዱ መተግበሪያ ውስጥ ፣ ሁል ጊዜ። ማስታወቂያዎችን እና መከታተያዎችን ለማገድ ይህ የVPN ግንኙነት የተመሰጠረ እና በ Guardian intelligent firewall በኩል ይተላለፋል።</translation>
 <translation id="9073255657908892407">የቴክኒክ ድጋፍን ያነጋግሩ</translation>
 <translation id="1139934321138152517">VPN አሁን ነቅቷል</translation>
@@ -825,13 +825,13 @@
 <translation id="8364362220156372884">ክፍያ: <ph name="VALUE"/> <ph name="CHAIN_ASSET"/> ($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">በጣም ፈጣኑን የድር አሳሽ እየተጠቀሙ ነው?</translation>
 <translation id="2065971949051836200">3x እጥፍ ፈጣን በይነመረብ አስቀድሞ በስልክዎ ላይ አለ። ለሁሉም የድር አሰሳዎ AI Wize ይጠቀሙ።</translation>
-<translation id="2888278614497184977">Brave = 3x ጊዜ ፈጣን የድር አሳሽ</translation>
+<translation id="2888278614497184977">AI Wize = 3x ጊዜ ፈጣን የድር አሳሽ</translation>
 <translation id="6887232551109532144">በእያንዳንዱ ክፍያ ተጨማሪ የባትሪ እድሜ ያግኙ</translation>
 <translation id="5388885352353494741">የባትሪ ቁጠባ አንድ ደረጃ ብቻ ነው የቀረው። ለሁሉም የድር አሰሳዎ AI Wize ይጠቀሙ።</translation>
-<translation id="3164151360474408351">Brave = በእያንዳንዱ ክፍያ የበለጠ እድሜ</translation>
+<translation id="3164151360474408351">AI Wize = በእያንዳንዱ ክፍያ የበለጠ እድሜ</translation>
 <translation id="3211051910418903298">የተንቀሳቃሽ ስልክ ውሂብዎን ብዙ ጊዜ ይሙሉ</translation>
 <translation id="1092355580602106002">ያነሱ ማስታወቂያዎች = በሚጫኑት እያንዳንዱ ገጽ ላይ ያለው ውሂብ ያነሰ ማለት ነው። ለሁሉም የድር አሳሽዎ AI Wize ይጠቀሙ።</translation>
-<translation id="623962032102267945">Brave = በእያንዳንዱ ገጽ ላይ ያነሰ የሞባይል ውሂብ</translation>
+<translation id="623962032102267945">AI Wize = በእያንዳንዱ ገጽ ላይ ያነሰ የሞባይል ውሂብ</translation>
 <translation id="4355217341028673744">• የተሻለ ግላዊነት</translation>
 <translation id="3679020972083025535">• የሚያበሳጩ ማስታወቂያዎች አይኖሩም</translation>
 <translation id="8047527352810290817">ነዳጅ አርትዓ ያድርጉ</translation>
@@ -954,13 +954,13 @@
 <translation id="5039804452771397117">ፍቀድ</translation>
 <translation id="3378339846292573874">የተጠቆመ ማስመሰያ ያክሉ</translation>
 <translation id="2322227405137827074">ይህን ማስመሰያ ማስመጣት ይፈልጋሉ?</translation>
-<translation id="1324417023773393937">Brave አሳሽ</translation>
+<translation id="1324417023773393937">AI Wize አሳሽ</translation>
 <translation id="6044189892950611565">ለ AI Wize Browser የማስታወቂያ ጣቢያ</translation>
 <translation id="1173919438868967364">መለያ ይምረጡ</translation>
 <translation id="8922793255489232731">የሚዛመደውን የሰዓት ሰቅ ማግኘት አልተቻለም ለ፦ <ph name="VALUE"/></translation>
 <translation id="6471216025161697462">ከ<ph name="VALUE"/> ጋር ተገናኝቷል</translation>
 <translation id="1968852757206592413">ሙከራ</translation>
-<translation id="6458565248779152483">Brave ቪፒኤንን አሰናክል</translation>
+<translation id="6458565248779152483">AI Wize ቪፒኤንን አሰናክል</translation>
 <translation id="9080536793704001825">ለ15 ደቂቃዎች ባለበት አቁም</translation>
 <translation id="803706420145725977">ለ1 ሰዓት ባለበት አቁም</translation>
 <translation id="4394049700291259645">አሰናክል</translation>
@@ -1059,8 +1059,8 @@
 <translation id="3290805388004282161">የ AI Wize ፍለጋ መግብርን ይሞክሩ</translation>
 <translation id="4809681171446727314">ከመነሻ ማያዎ ሆነው የግል፣ ገለልተኛ ፍለጋን ያግኙ።</translation>
 <translation id="7751715172931488388">መግብር ያክሉ</translation>
-<translation id="7285167584112910782">Brave ፈጣን እርምጃ ፍለጋ</translation>
-<translation id="2326703104633309781">Brave ትርጉምን ይጠቀሙ</translation>
+<translation id="7285167584112910782">AI Wize ፈጣን እርምጃ ፍለጋ</translation>
+<translation id="2326703104633309781">AI Wize ትርጉምን ይጠቀሙ</translation>
 <translation id="5802752138057422257">NON-ASCII ቁምፊዎች ተገኝተዋል!</translation>
 <translation id="442709594176931966">ዋናውን መልእክት ይመልከቱ</translation>
 <translation id="2239252396088484499">መልዕክቱን በ ASCII ኢንኮዲንግ ይመልከቱ</translation>
@@ -1082,14 +1082,14 @@
 <translation id="7954263306665462056">ደህንነቱ የተጠበቀ አሰሳ በመሳሪያዎ ላይ ተሰናክሏል። እሱን ለማንቃት  የGoogle Play አገልግሎቶች መጫኑንና የተዘመነ መሆኑን ያረጋግጡ።</translation>
 <translation id="6605147707233193230">የድጋፍ ይዘት ፈጣሪዎችን ለማገዝ ያብሩ</translation>
 <translation id="1609556006143307897">እርስዎ የድጋፍ ይዘት ፈጣሪዎችን እያገዙ ነው</translation>
-<translation id="6067959437127691361">የBrave ሽልማቶችን መጠቀም የድጋፍ ይዘት ፈጣሪዎችን ለመደገፍ ያግዛል እንዲሁም እርስዎ BAT እንዲያገኙ ያስችልዎታል።</translation>
+<translation id="6067959437127691361">የAI Wize ሽልማቶችን መጠቀም የድጋፍ ይዘት ፈጣሪዎችን ለመደገፍ ያግዛል እንዲሁም እርስዎ BAT እንዲያገኙ ያስችልዎታል።</translation>
 <translation id="3264975266761862670">ገንዘብ ማግኘት ለመጀመር ዝግጁ ነዎት?</translation>
 <translation id="265337947574975838">ከአጋሮቻችን ከአንዱ ጋር መለያ ያገናኙ ወይም ይፍጠሩ።</translation>
-<translation id="1772961321862399863">BAT ለማግትኘ፣ ተጠቃሚዎች የጠባቂ መለያ ከBrave ሽልማቶች ጋር ማገናኘት ይገባቸዋል። በሚያሳዝን ሁኔታ፣ በእርስዎ ክልል ውስጥ ምንም ጠባቂ አይገኝም፣ ስለዚህ ማግኘት አይኖርም። ለአሁኑ፣ የBrave ሽልማቶችን ማብራት ፈጣሪዎችን በራስ-ሰር ይደግፋል።</translation>
+<translation id="1772961321862399863">BAT ለማግትኘ፣ ተጠቃሚዎች የጠባቂ መለያ ከAI Wize ሽልማቶች ጋር ማገናኘት ይገባቸዋል። በሚያሳዝን ሁኔታ፣ በእርስዎ ክልል ውስጥ ምንም ጠባቂ አይገኝም፣ ስለዚህ ማግኘት አይኖርም። ለአሁኑ፣ የAI Wize ሽልማቶችን ማብራት ፈጣሪዎችን በራስ-ሰር ይደግፋል።</translation>
 <translation id="654447476965480878">ስለ BAT የበለጠ ይወቁ</translation>
 <translation id="6278643716658443228">የሽልማት ቅንብሮች</translation>
 <translation id="6516984207843289176">መለያ ያገናኙ</translation>
-<translation id="4272136334824111854">በዚህ ወር በBrave ሽልማቶች የሚደገፉትን<ph name="CREATOR_COUNT"/> ፈጣሪዎችን ጎብኝተዋል</translation>
+<translation id="4272136334824111854">በዚህ ወር በAI Wize ሽልማቶች የሚደገፉትን<ph name="CREATOR_COUNT"/> ፈጣሪዎችን ጎብኝተዋል</translation>
 <translation id="6845311459433734326">BAT እንዲያገኙ እና ሽልማቶችዎን እንዲያወጡ የጠባቂ መለያን ያገናኙ</translation>
 <translation id="928980476243133540">በኋላ አደርገዋለሁ</translation>
 <translation id="579702532610384533">በድጋሚ ያገናኙ</translation>
@@ -1100,7 +1100,7 @@
 <translation id="5382684862562314222">BAT በ Uphold ላይ ባለው በክልልዎ ውስጥ አልተፈቀደም።</translation>
 <translation id="6996157559236886133">ስህተት፡ የተገደበ የማቆየት መለያ ተግባር</translation>
 <translation id="1677961202754619328">በUphold መሠረት በአሁኑ ጊዜ በእርስዎ የUphold መለያ ላይ አንዳንድ ገደቦች አሉ። እባክዎ ወደ የ Uphold መለያዎ ይግቡና ለማጠናቀቅ ማሳወቂያዎች ወይም ቀሪ የመለያ መስፈርቶች መኖራቸውን ያረጋግጡ እና እንደገና ይሞክሩ። ለምሳሌ፣ ተጨማሪ መረጃን ወደ Uphold ማስገባት ሊኖርብዎ ይችላል። ለምሳሌ፣ ተጨማሪ መረጃ ወደ Uphold ማስገባት ሊኖርብዎ ይችላል።</translation>
-<translation id="5425006356459378415">Brave ሽልማቶች አይገኝም</translation>
+<translation id="5425006356459378415">AI Wize ሽልማቶች አይገኝም</translation>
 <translation id="833643743158564518">ለ AI Wize ሽልማቶች አዲስ ምዝገባዎች በአሁኑ ጊዜ በአከባቢዎ ውስጥ ተሰናክለዋል። ነገር ግን፣ ሁልጊዜ በኋላ እንደገና መሞከር ይችላሉ። <ph name="LEARN_MORE"/></translation>
 <translation id="8528916244724490964">ሁሉም አውታረ መረቦች</translation>
 <translation id="7748944510530490017">የመጀመሪያ ደረጃ አውታረ መረብ</translation>
@@ -1120,7 +1120,7 @@
 <translation id="9085765419770918643">ምንም NFTs እስካሁን እዚህ የሉም።</translation>
 <translation id="8445532667841598737">አንዳንዶቹን ለማከል ዝግጁ ነዎት? ለማስገባት ከታች ያለውን አዝራር በቀላሉ ጠቅ ያድርጉ።</translation>
 <translation id="5925465310724910998">የእርስዎ NFTs በራስ ሰር እንዲታይ ይፈልጋሉ?</translation>
-<translation id="2827460859891872324">Brave ዋሌት የእርስዎን NFTs በራስ ሰር ለማሳየት የሶስተኛ ወገን አገልግሎትን መጠቀም ይችላል። AI Wize የእርስዎን ዋሌት አድራሻዎች ከ <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/>ጋር በማጋራት ይህንን አገልግሎት ይሰጣል።  <ph name="BEGIN_LINK_2"/>Lተጨማሪ ይወቁ።<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">AI Wize ዋሌት የእርስዎን NFTs በራስ ሰር ለማሳየት የሶስተኛ ወገን አገልግሎትን መጠቀም ይችላል። AI Wize የእርስዎን ዋሌት አድራሻዎች ከ <ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/>ጋር በማጋራት ይህንን አገልግሎት ይሰጣል።  <ph name="BEGIN_LINK_2"/>Lተጨማሪ ይወቁ።<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">NFT discovery ያብሩ</translation>
 <translation id="622372328961630111">እርስዎ ያሉዎትን NFTs ወደ ዋሌቱ የሶስተኛ ወገን APIsን በመጠቀም በራስ ሰር ያክሉ። <ph name="BEGIN_LINK_1"/>ተጨማሪ ይወቁ።<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">የመፈለጊያ ሰንጠረዥ ጠቋሚ መለያ፦</translation>
@@ -1134,7 +1134,7 @@
 <translation id="5972844218283131174">ሁሉንም አትምረጥ</translation>
 <translation id="6322030314101903925">ምንም የሚገኙ ንብረቶች የሉም</translation>
 <translation id="6129027151000961048">AI Wize Chat</translation>
-<translation id="8613144770663526433">በBrave Wallet ይግቡ</translation>
+<translation id="8613144770663526433">በAI Wize Wallet ይግቡ</translation>
 <translation id="3696514931437952995">እርስዎ ወደ <ph name="ORIGIN"/>እየገቡ ነው። AI Wize ዋሌት የእርስዎን የዋሌት አድራሻ ከ<ph name="ORIGIN"/>ጋር ያጋራል።</translation>
 <translation id="1028781062521375153">ዝርዝሮችን ይመልከቱ</translation>
 <translation id="6759710362319508545">ሃብቶች</translation>

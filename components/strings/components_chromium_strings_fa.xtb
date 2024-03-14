@@ -6,9 +6,9 @@
 <translation id="7999989146447764333">‏گزارش خرابی در AI Wize موجود نیست.</translation>
 <translation id="1953231710324290369">‏درحال مشاهده یک صفحه AI Wize امن هستید</translation>
 <translation id="907470742420136113">‏Chromebook می‌خواهد تنظیمات تکمیل روش‌های پرداخت را اصلاح کند.</translation>
-<translation id="4847979153841887006">‏نشان‌واره Brave</translation>
-<translation id="336808635693308470">‏Brave می‌خواهد روش‌های پرداخت را ویرایش کند.</translation>
-<translation id="7932149101545999102">‏Brave با پروژه منبع باز <ph name="BEGIN_LINK_CHROMIUM"/>Brave <ph name="END_LINK_CHROMIUM"/> و سایر <ph name="BEGIN_LINK_OSS"/>نرم‌افزار منبع باز<ph name="END_LINK_OSS"/> امکان‌پذیر است.</translation>
+<translation id="4847979153841887006">‏نشان‌واره AI Wize</translation>
+<translation id="336808635693308470">‏AI Wize می‌خواهد روش‌های پرداخت را ویرایش کند.</translation>
+<translation id="7932149101545999102">‏AI Wize با پروژه منبع باز <ph name="BEGIN_LINK_CHROMIUM"/>AI Wize <ph name="END_LINK_CHROMIUM"/> و سایر <ph name="BEGIN_LINK_OSS"/>نرم‌افزار منبع باز<ph name="END_LINK_OSS"/> امکان‌پذیر است.</translation>
 <translation id="8746410156982274638">‏به
          منوی AI Wize  &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -33,7 +33,7 @@
 <translation id="585620188971323280">تنظیمات تکمیل روش‌های پرداخت را اصلاح کند.</translation>
 <translation id="2765022094254723779">‏ارائه AI Wize ازطریق <ph name="BEGIN_LINK_OSS"/>نرم‌افزارهای متن‌باز<ph name="END_LINK_OSS"/> دیگر نیز ممکن شده است.</translation>
 <translation id="9156965752763025780">‏دفعه بعدی که AI Wize را مجدداً راه‌اندازی می‌کنید، این تغییرات اعمال می‌شوند.</translation>
-<translation id="6477625882876869143">‏ارائه AI Wize ازطریق پروژه متن‌باز <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> ممکن شده است.</translation>
+<translation id="6477625882876869143">‏ارائه AI Wize ازطریق پروژه متن‌باز <ph name="BEGIN_LINK_CHROMIUM"/>AI Wize<ph name="END_LINK_CHROMIUM"/> ممکن شده است.</translation>
 <translation id="4068928808254189629">‏به
           منوی AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -47,5 +47,5 @@
 موارد برگزیده سیستم &gt; شبکه &gt; پیشرفته &gt; پراکسی‌ها
 بروید و علامت تمام پراکسی‌های انتخاب شده را بردارید.</translation>
 <translation id="4159376633403260073">‏درحال مشاهده یکی از صفحه‌های امن AI Wize for Testing هستید</translation>
-<translation id="88187049159266777">‏Brave به درستی خاموش نشده است.</translation>
+<translation id="88187049159266777">‏AI Wize به درستی خاموش نشده است.</translation>
 </translationbundle>

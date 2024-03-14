@@ -20,13 +20,13 @@ RegisterPolymerTemplateModifications({
   'settings-appearance-page': (templateContent) => {
     const theme = templateContent.getElementById('themeRow')
     if (!theme) {
-      console.error(`[Brave Settings Overrides] Couldn't find #themeRow`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find #themeRow`)
     } else {
       const useDefaultButtonTemplate = templateContent.querySelector(
         'template[is=dom-if][if="[[prefs.extensions.theme.id.value]]"]')
       if (!useDefaultButtonTemplate) {
         console.error(
-          '[Brave Settings Overrides] Appearance Page cannot find use default' +
+          '[AI Wize Settings Overrides] Appearance Page cannot find use default' +
           ' theme button template')
       } else {
         useDefaultButtonTemplate.setAttribute("restamp", "true")
@@ -52,7 +52,7 @@ RegisterPolymerTemplateModifications({
       const r = Router.getInstance().routes_
       if (!r.APPEARANCE) {
         console.error(
-          '[Brave Settings Overrides] Routes: could not find APPEARANCE page')
+          '[AI Wize Settings Overrides] Routes: could not find APPEARANCE page')
         return
       } else {
         r.THEMES = r.APPEARANCE.createChild('/themes');
@@ -65,7 +65,7 @@ RegisterPolymerTemplateModifications({
       const pages = templateContent.getElementById('pages')
       if (!pages) {
         console.error(
-          `[Brave Settings Overrides] Couldn't find appearance_page #pages`)
+          `[AI Wize Settings Overrides] Couldn't find appearance_page #pages`)
       } else {
         pages.appendChild(
           html`
@@ -87,7 +87,7 @@ RegisterPolymerTemplateModifications({
       '[pref="{{prefs.browser.show_home_button}}"]')
     if (!homeButtonToggle) {
       console.error(
-        `[Brave Settings Overrides] Couldn't find home button toggle`)
+        `[AI Wize Settings Overrides] Couldn't find home button toggle`)
     } else {
       homeButtonToggle.remove()
     }
@@ -95,7 +95,7 @@ RegisterPolymerTemplateModifications({
         'template[is=dom-if][if="[[prefs.browser.show_home_button.value]]"]')
     if (!homeButtonOptionsTemplate) {
       console.error(
-        `[Brave Settings Overrides] Couldn't find home button options template`)
+        `[AI Wize Settings Overrides] Couldn't find home button options template`)
     } else {
       homeButtonOptionsTemplate.remove()
     }
@@ -104,7 +104,7 @@ RegisterPolymerTemplateModifications({
       '[pref="{{prefs.bookmark_bar.show_on_all_tabs}}"]')
     if (!bookmarkBarToggle) {
       console.error(
-        `[Brave Settings Overrides] Couldn't find bookmark bar toggle`)
+        `[AI Wize Settings Overrides] Couldn't find bookmark bar toggle`)
     } else {
       // Remove Chromium bookmark toggle becasue it is replaced by
       // settings-brave-appearance-bookmark-bar
@@ -115,20 +115,20 @@ RegisterPolymerTemplateModifications({
     const defaultFontSize = templateContent.querySelector(
       '.cr-row:has(#defaultFontSize)')
     if (!defaultFontSize) {
-      console.error(`[Brave Settings Overrides] Couldn't find default font size option`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find default font size option`)
     } else {
       // Just hide instead of removing as upstream js refers this.
       defaultFontSize.setAttribute("hidden", "true")
     }
     const customizeFontsSubpageTrigger = templateContent.getElementById('customize-fonts-subpage-trigger')
     if (!customizeFontsSubpageTrigger) {
-      console.error(`[Brave Settings Overrides] Couldn't find customize fonts subpage trigger`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find customize fonts subpage trigger`)
     } else {
       customizeFontsSubpageTrigger.remove()
     }
     const pageZoom = templateContent.querySelector('.cr-row:has(#pageZoom)')
     if (!pageZoom) {
-      console.error(`[Brave Settings Overrides] Couldn't find page zoom`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find page zoom`)
     } else {
       pageZoom.remove()
     }
@@ -136,7 +136,7 @@ RegisterPolymerTemplateModifications({
     const hrsToHide = templateContent.querySelectorAll('div.hr:not(#themeRow):not([hidden="[[!pageVisibility.bookmarksBar]]"])');
     // We only want to hide two hrs now from upstream appearance_page.html.
     if (hrsToHide.length !== 2) {
-      console.error(`[Brave Settings Overrides] detected more than two hrs to hide`)
+      console.error(`[AI Wize Settings Overrides] detected more than two hrs to hide`)
     } else {
       for (const hr of hrsToHide) {
         hr.setAttribute("hidden", "true")
@@ -147,7 +147,7 @@ RegisterPolymerTemplateModifications({
     const confirmToQuit = templateContent.querySelector(
       '[pref="{{prefs.browser.confirm_to_quit}}"]')
     if (!confirmToQuit) {
-      console.error(`[Brave Settings Overrides] Couldn't find confirm to quit`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find confirm to quit`)
     } else {
       confirmToQuit.remove()
     }
@@ -155,7 +155,7 @@ RegisterPolymerTemplateModifications({
     const tabsToLinks = templateContent.querySelector(
       '[pref="{{prefs.webkit.webprefs.tabs_to_links}}"]')
     if (!tabsToLinks) {
-      console.error(`[Brave Settings Overrides] Couldn't find tabs to links`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find tabs to links`)
     } else {
       tabsToLinks.remove()
     }
@@ -167,7 +167,7 @@ RegisterPolymerTemplateModifications({
       'template[is=dom-if][if="[[showHoverCardImagesOption_]]"]')
     if (!hoverCardImagesTemplate) {
       console.error(
-        '[Brave Settings Overrides] Appearance Page cannot find hover card' +
+        '[AI Wize Settings Overrides] Appearance Page cannot find hover card' +
         ' images template')
     } else {
       hoverCardImagesTemplate.remove()

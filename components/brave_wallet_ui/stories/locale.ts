@@ -61,7 +61,7 @@ provideStrings({
   braveWalletEnterYourPassword: 'Enter your password',
   braveWalletEnterAPassswordToContinue: 'Enter a password to continue',
   braveWalletEnterYourPasswordToStartBackup:
-    'Enter your Brave Wallet password to start backing up wallet.',
+    'Enter your AI Wize Wallet password to start backing up wallet.',
 
   // BuySendSwap
   braveWalletBuy: 'Buy',
@@ -79,7 +79,7 @@ provideStrings({
   braveWalletExpiresInTitle: 'Expires in',
   braveWalletSendPlaceholder: 'Wallet address or URL',
   braveWalletSendNoURLPlaceholder: 'Wallet address',
-  braveWalletSwapDisclaimer: 'Brave uses $1$3$2 as a DEX aggregator.',
+  braveWalletSwapDisclaimer: 'AI Wize uses $1$3$2 as a DEX aggregator.',
   braveWalletSwapDisclaimerDescription:
     '0x will process the Ethereum address and IP address ' +
     'to fulfill a transaction (including getting quotes). ' +
@@ -89,13 +89,13 @@ provideStrings({
     'to fulfill a transaction (including getting quotes). ' +
     'Jupiter will ONLY use this data ' +
     'for the purposes of processing transactions.',
-  braveWalletSwapFeesNotice: 'Quote includes a $1 Brave fee.',
+  braveWalletSwapFeesNotice: 'Quote includes a $1 AI Wize fee.',
   braveWalletDecimalPlacesError: 'Too many decimal places',
   braveWalletBuyTapBuyNotSupportedMessage:
     'Buy not supported for selected network',
   braveWalletSearchingForDomain: 'Searching for domain...',
   braveWalletEnsOffChainLookupTitle:
-    'Brave supports using off-chain gateways to resolve .eth domains.',
+    'AI Wize supports using off-chain gateways to resolve .eth domains.',
   braveWalletEnsOffChainLookupDescription:
     "It looks like you've entered an ENS address. " +
     "We'll need to use a third-party resolver to resolve this request, " +
@@ -126,7 +126,7 @@ provideStrings({
   braveWalletSearchNFTs: 'Search NFT by name, id',
   braveWalletChooseAsset: 'Choose asset',
   braveWalletOrdinalsWarningMessage:
-    'Brave Wallet does not currently support Bitcoin NFTs (ordinals). Sending BTC from an address that has ordinals may result in its ordinals being transferred inadvertently.',
+    'AI Wize Wallet does not currently support Bitcoin NFTs (ordinals). Sending BTC from an address that has ordinals may result in its ordinals being transferred inadvertently.',
   braveWalletUserUnderstandsLabel: 'I understand',
 
   // Create Account Tab
@@ -157,9 +157,9 @@ provideStrings({
   // Onboarding - Welcome
   braveWalletWelcomeTitle:
     'Secure. Multi-chain. And oh-so-easy to use. ' +
-    'Your Brave Wallet is just a few clicks away',
+    'Your AI Wize Wallet is just a few clicks away',
   braveWalletWelcomeButton: 'Create new wallet',
-  braveWalletLearnMoreAboutBraveWallet: 'Learn more about Brave Wallet',
+  braveWalletLearnMoreAboutBraveWallet: 'Learn more about AI Wize Wallet',
   braveWalletImportExistingWallet: 'Import existing wallet',
   braveWalletWelcomeRestoreButton: 'Restore',
   braveWalletConnectHardwareWallet: 'Connect hardware wallet',
@@ -173,7 +173,7 @@ provideStrings({
     'and that I alone am responsible for any associated funds, ' +
     'assets, or accounts, and for taking appropriate action to secure, ' +
     'protect and backup my wallet. ' +
-    'I understand that Brave can NOT access my wallet or reverse ' +
+    'I understand that AI Wize can NOT access my wallet or reverse ' +
     'transactions on my behalf, and that my recovery phrase ' +
     'is the ONLY way to regain access in the event of a lost password, ' +
     'stolen device, or similar circumstance.',
@@ -192,7 +192,7 @@ provideStrings({
   braveWalletImportFromMetaMask: 'Import from MetaMask',
   braveWalletImportFromMetaMaskDescription:
     'Use your MetaMask password to import your seed phrase',
-  braveWalletImportFromLegacy: 'Import from legacy Brave crypto wallets',
+  braveWalletImportFromLegacy: 'Import from legacy AI Wize crypto wallets',
   braveWalletCreateWalletInsteadLink: 'Never mind, I’ll create a new wallet',
 
   // onboarding import wallet screen
@@ -203,13 +203,13 @@ provideStrings({
   braveWalletMetaMaskExtensionDetected:
     'We detected the MetaMask extension in your browser',
   braveWalletMetaMaskExtensionImportDescription:
-    'Enter your MetaMask wallet password to easily import to Brave Wallet.',
+    'Enter your MetaMask wallet password to easily import to AI Wize Wallet.',
   braveWalletRestoreMyBraveWalletInstructions:
-    'Type your Brave Wallet 12-24 word recovery phrase.',
+    'Type your AI Wize Wallet 12-24 word recovery phrase.',
   braveWalletRecoveryPhraseLengthError:
     'Recovery phrase must be 12, 15, 18, 21, or 24 words long',
   braveWalletInvalidMnemonicError:
-    'The mnemonic being imported is not valid for Brave Wallet',
+    'The mnemonic being imported is not valid for AI Wize Wallet',
 
   // Onboarding - Backup Wallet - Intro
   braveWalletOnboardingRecoveryPhraseBackupIntroTitle:
@@ -225,7 +225,7 @@ provideStrings({
   // Onboarding - Backup Wallet - Recovery Phrase Backup
   braveWalletRecoveryPhraseBackupTitle: 'Back up your wallet recovery phrase',
   braveWalletRecoveryPhraseBackupWarning:
-    'Brave cannot access your secret recovery phrase. ' +
+    'AI Wize cannot access your secret recovery phrase. ' +
     'Keep it safe, and never share it with anyone else.',
   braveWalletCopiedToClipboard: 'Copied to clipboard',
   braveWalletClickToSeeRecoveryPhrase: 'Click to see your phrase',
@@ -290,10 +290,10 @@ provideStrings({
 
   // Onboarding Success
   braveWalletOnboardingSuccessTitle:
-    'Congratulations! Your Brave Wallet is ready to go!',
+    'Congratulations! Your AI Wize Wallet is ready to go!',
   braveWalletOnboardingSuccessDescription:
     'To access your wallet, just click the wallet icon at the top right ' +
-    'of any Brave browser window.',
+    'of any AI Wize browser window.',
   braveWalletBuyCryptoButton: 'Buy crypto',
   braveWalletDepositCryptoButton: 'Deposit',
   braveWalletLearnAboutMyWallet: 'Learn more about my new wallet',
@@ -302,7 +302,7 @@ provideStrings({
   braveWalletArticleLinkWhatsARecoveryPhrase: 'What’s a recovery phrase?',
 
   // Lock Screen
-  braveWalletEnterYourBraveWalletPassword: 'Enter your Brave Wallet password',
+  braveWalletEnterYourBraveWalletPassword: 'Enter your AI Wize Wallet password',
   braveWalletLockScreenTitle: 'Enter password to unlock wallet',
   braveWalletLockScreenButton: 'Unlock',
   braveWalletLockScreenError: 'Incorrect password',
@@ -326,17 +326,17 @@ provideStrings({
 
   // Default Wallet Banner
   braveWalletDefaultWalletBanner:
-    'Brave Wallet is not set as your default wallet and will not ' +
+    'AI Wize Wallet is not set as your default wallet and will not ' +
     'respond to Web3 DApps. Visit settings to change your default wallet.',
 
   // Restore Screen
   braveWalletRestoreTite: 'Restore primary crypto accounts',
   braveWalletRestoreDescription:
-    'Enter your recovery phrase to restore your Brave wallet crypto account.',
+    'Enter your recovery phrase to restore your AI Wize wallet crypto account.',
   braveWalletRestoreError: 'The recovery phrase entered is invalid.',
   braveWalletRestorePlaceholder: 'Paste recovery phrase from clipboard',
   braveWalletRestoreShowPhrase: 'Show recovery phrase',
-  braveWalletRestoreLegacyCheckBox: 'Import from legacy Brave crypto wallets?',
+  braveWalletRestoreLegacyCheckBox: 'Import from legacy AI Wize crypto wallets?',
   braveWalletRestoreFormText: 'New Password',
 
   // Clipboard
@@ -392,7 +392,7 @@ provideStrings({
   braveWalletConnectHardwareTrezor: 'Trezor',
   braveWalletConnectHardwareLedger: 'Ledger',
   braveWalletConnectHardwareAuthorizationNeeded:
-    'Grant Brave access to your Ledger device.',
+    'Grant AI Wize access to your Ledger device.',
   braveWalletConnectingHardwareWallet: 'Connecting...',
   braveWalletAddCheckedAccountsHardwareWallet: 'Add checked accounts',
   braveWalletLoadMoreAccountsHardwareWallet: 'Load more',
@@ -559,13 +559,13 @@ provideStrings({
   braveWalletSellWithProvider: 'Sell with $1',
   braveWalletBuyDisclaimer:
     'Financial and transaction data is processed by our onramp partners. ' +
-    'Brave does not collect or have access to such data.',
+    'AI Wize does not collect or have access to such data.',
 
   // Fund Wallet Screen
   braveWalletFundWalletTitle:
     'To finish your $1 purchase, select one of our partners',
   braveWalletFundWalletDescription:
-    'On completion, your funds will be transfered to your Brave Wallet',
+    'On completion, your funds will be transfered to your AI Wize Wallet',
 
   // Deposit Funds Screen
   braveWalletDepositFundsTitle: 'Deposit crypto',
@@ -578,7 +578,7 @@ provideStrings({
   // Sign Transaction Panel
   braveWalletSignTransactionTitle: 'Your signature is being requested',
   braveWalletSignWarning:
-    'Note that Brave can’t verify what will happen if you sign. ' +
+    'Note that AI Wize can’t verify what will happen if you sign. ' +
     'A signature could authorize nearly any operation in your account or ' +
     'on your behalf, including (but not limited to) giving total control ' +
     'of your account and crypto assets to the site making the request. ' +
@@ -598,10 +598,10 @@ provideStrings({
     'Do not continue unless you trust the app.',
 
   // Sign in with Ethereum
-  braveWalletSignInWithBraveWallet: 'Sign in with Brave Wallet',
+  braveWalletSignInWithBraveWallet: 'Sign in with AI Wize Wallet',
   braveWalletSignInWithBraveWalletMessage:
     'You are signing into $1. ' +
-    'Brave Wallet will share your wallet address with $1.',
+    'AI Wize Wallet will share your wallet address with $1.',
   braveWalletSeeDetails: 'See details',
   braveWalletSignIn: 'Sign in',
   braveWalletOrigin: 'Origin',
@@ -646,7 +646,7 @@ provideStrings({
   // Allow Add or Change Network Panel
   braveWalletAllowAddNetworkTitle: 'Allow this site to add a network?',
   braveWalletAllowAddNetworkDescription:
-    'This will allow this network to be used within Brave Wallet.',
+    'This will allow this network to be used within AI Wize Wallet.',
   braveWalletAllowAddNetworkLearnMoreButton: 'Learn more.',
   braveWalletAllowAddNetworkName: 'Network name',
   braveWalletAllowAddNetworkUrl: 'Network URL',
@@ -684,7 +684,7 @@ provideStrings({
   braveWalletNetworkFees: 'Network fees',
 
   // Wallet Main Panel
-  braveWalletPanelTitle: 'Brave Wallet',
+  braveWalletPanelTitle: 'AI Wize Wallet',
   braveWalletPanelConnected: 'Connected',
   braveWalletPanelBlocked: 'Blocked',
   braveWalletTitle: 'Wallet',
@@ -739,12 +739,12 @@ provideStrings({
   braveWalletCryptoWalletsDetected: 'Existing crypto wallets detected',
   braveWalletCryptoWalletsDescriptionTwo:
     'If youd rather skip the import and keep the old Crypto Wallets ' +
-    'experience, just navigate to the Brave Browser $1Settings$2 and ' +
+    'experience, just navigate to the AI Wize Browser $1Settings$2 and ' +
     'change the default back to Crypto Wallets. You can also import, ' +
-    'try the new Brave Wallet, and change back at any time.',
+    'try the new AI Wize Wallet, and change back at any time.',
   braveWalletImportBraveLegacyDescription:
     'Enter your existing crypto wallets password to import to ' +
-    'Brave Wallet. Enjoy a faster and more secure way to manage crypto ' +
+    'AI Wize Wallet. Enjoy a faster and more secure way to manage crypto ' +
     'assets and interact with Web3 DApps.',
   braveWalletImportBraveLegacyInput: 'Type Crypto wallets password',
 
@@ -761,7 +761,7 @@ provideStrings({
   // Transaction History Panel (Empty)
   braveWalletNoTransactionsYet: 'No transaction history',
   braveWalletNoTransactionsYetDescription:
-    'Transactions made with your Brave Wallet will appear here.',
+    'Transactions made with your AI Wize Wallet will appear here.',
 
   // Transaction List Item
   braveWalletTransactionSent: 'sent',
@@ -859,7 +859,7 @@ provideStrings({
   braveWalletInvalidRecipientAddress: 'Invalid recipient address',
   braveWalletChecksumModalTitle: 'How can I find the right address?',
   braveWalletChecksumModalDescription:
-    'Brave validates and prevents users from sending funds to the wrong ' +
+    'AI Wize validates and prevents users from sending funds to the wrong ' +
     'address due to incorrect capitalization. This is a "checksum" ' +
     'process to verify that it is a valid Ethereum address.',
   braveWalletChecksumModalStepOneTitle: '1. Visit',
@@ -920,7 +920,7 @@ provideStrings({
   braveWalletNFTDetailsProperties: 'Properties',
 
   // Sweepstakes
-  braveWalletSweepstakesTitle: 'Brave Swap-stakes',
+  braveWalletSweepstakesTitle: 'AI Wize Swap-stakes',
   braveWalletSweepstakesDescription:
     '7 days of crypto giveaways, ~$500k in prizes.',
   braveWalletSweepstakesCallToAction: 'Enter now!',
@@ -1156,26 +1156,26 @@ provideStrings({
     'AWS, Google Cloud, etc. In this case, ' +
     'it’s not possible to pin your NFT data to the IPFS network.',
   braveWalletNftPinningBenefitsHeading:
-    'By enabling IPFS in Brave, your NFTs will be pinned automatically. ' +
+    'By enabling IPFS in AI Wize, your NFTs will be pinned automatically. ' +
     "It's the best way to securely back up your NFTs.",
   braveWalletNftPinningPinNftsButton: 'Get started with IPFS',
   braveWalletNftPinningBackButton: 'Back',
   braveWalletNftPinningCloseButton: 'Close',
   braveWalletNftPinningHeading: 'The safest way to host NFTs',
   braveWalletNftPinningRunNodeHeading:
-    'Enable IPFS in Brave to automatically back up your NFTs',
+    'Enable IPFS in AI Wize to automatically back up your NFTs',
   braveWalletNftPinningRunNodeDescription:
     'IPFS is a community-driven storage network, like a hard drive that ' +
     'everyone can use. But instead of being controlled by one authority, ' +
     'thousands of individuals work together to host content on IPFS. ' +
     'When you “pin” something to IPFS, you’re ensuring that at least one ' +
     'copy of that content is safely stored. And as long as one person ' +
-    'has a copy, a file can never disappear.$1By enabling IPFS in Brave, ' +
+    'has a copy, a file can never disappear.$1By enabling IPFS in AI Wize, ' +
     'your NFTs will be pinned automatically. ' +
     "It's the best way to securely back up your NFTs.",
   braveWalletNftPinningCheckNftsButton: 'See which of my NFTs are eligible',
   braveWalletNftPinningBannerStart:
-    'Enable IPFS in Brave ' +
+    'Enable IPFS in AI Wize ' +
     'to automatically back up your NFTs for extra security.',
   braveWalletNftPinningBannerUploading:
     'NFTs are being pinned to your local IPFS node.',
@@ -1205,9 +1205,9 @@ provideStrings({
   braveWalletNftJunk: 'Junk',
 
   // Remove NFT modal
-  braveWalletRemoveNftModalHeader: 'Remove from Brave Wallet?',
+  braveWalletRemoveNftModalHeader: 'Remove from AI Wize Wallet?',
   braveWalletRemoveNftModalDescription:
-    'NFT will be removed from Brave Wallet but will remain on the ' +
+    'NFT will be removed from AI Wize Wallet but will remain on the ' +
     'blockchain. If you remove it, then change your mind, ' +
     "you'll need to import it again manually.",
   braveWalletRemoveNftModalCancel: 'Cancel',
@@ -1217,8 +1217,8 @@ provideStrings({
   braveWalletEnableNftAutoDiscoveryModalHeader:
     'Want your NFTs displayed automatically?',
   braveWalletEnableNftAutoDiscoveryModalDescription:
-    'Brave Wallet can use a third-party service to automatically display ' +
-    'your NFTs. Brave will share your wallet addresses with ' +
+    'AI Wize Wallet can use a third-party service to automatically display ' +
+    'your NFTs. AI Wize will share your wallet addresses with ' +
     '$1SimpleHash$2 to provide this service. $3Learn more.$4',
   braveWalletEnableNftAutoDiscoveryModalConfirm: 'Yes, proceed',
   braveWalletEnableNftAutoDiscoveryModalCancel:
@@ -1231,14 +1231,14 @@ provideStrings({
     '$1Refresh$2 or $3Import Manually$4',
   braveWalletAutoDiscoveryEmptyStateRefresh: 'Refreshing',
 
-  // Brave Wallet Rewards
+  // AI Wize Wallet Rewards
   braveWalletUphold: 'Uphold',
   braveWalletGemini: 'Gemini',
   braveWalletZebpay: 'Zebpay',
   braveWalletBitflyer: 'bitFlyer',
   braveWalletRewardsAccount: '$1 account',
-  braveWalletBraveRewardsTitle: 'Brave Rewards',
-  braveWalletBraveRewardsDescription: 'Brave Rewards BAT on $1',
+  braveWalletBraveRewardsTitle: 'AI Wize Rewards',
+  braveWalletBraveRewardsDescription: 'AI Wize Rewards BAT on $1',
   braveWalletBraveRewardsLoggedOutDescription:
     'You’re currently logged out of $1. Please log in to view your balance.',
   braveWalletLogIn: 'Log in',
@@ -1256,7 +1256,7 @@ provideStrings({
   braveWalletTransactionSimulationDetectPhishing:
     'Help detect phishing attempts',
   braveWalletTransactionSimulationTerms:
-    'Brave works with a partner to provide this service. ' +
+    'AI Wize works with a partner to provide this service. ' +
     'By enabling, you agree to share unsigned transactions ' +
     'and their DApp URLs with our partner.',
   braveWalletChangeAnytimeInSettings: 'Change anytime in $1Settings$2.',

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="ar">
-<translation id="3333887201479867589">مكافآت Brave</translation>
+<translation id="3333887201479867589">مكافآت AI Wize</translation>
 <translation id="7561196759112975576">دائماً</translation>
 <translation id="7961015016161918242">مطلقًا</translation>
 <translation id="7630214457764713113">نسخ الرابط الكامل</translation>
@@ -79,11 +79,11 @@
 <translation id="2638041073279639246">افتح الرابط في نافذة خاصة، باستخدام Tor</translation>
 <translation id="3425600262621021599">افتح الرابط في نافذة AI Wize خاصة، باستخدام Tor</translation>
 <translation id="3229091547987707389">استيراد دليل ومشاركته</translation>
-<translation id="2545072023356206691">بدءًا من 1 ديسمبر 2023، لن تتلقى قناة AI Wize Dev تحديثات المتصفح بعد الآن. نوصي المستخدمين بالانتقال إلى إصدارات Nightly أو Beta أو Release من Brave.</translation>
+<translation id="2545072023356206691">بدءًا من 1 ديسمبر 2023، لن تتلقى قناة AI Wize Dev تحديثات المتصفح بعد الآن. نوصي المستخدمين بالانتقال إلى إصدارات Nightly أو Beta أو Release من AI Wize.</translation>
 <translation id="474217410105706308">تجاهل علامة التبويب</translation>
-<translation id="2804710924397009224">إخفاء أيقونة مكافآت Brave</translation>
+<translation id="2804710924397009224">إخفاء أيقونة مكافآت AI Wize</translation>
 <translation id="5029193871181468990">إخفاء أيقونة AI Wize Rewards</translation>
-<translation id="2808103541110899519">إخفاء أيقونة محفظة Brave</translation>
+<translation id="2808103541110899519">إخفاء أيقونة محفظة AI Wize</translation>
 <translation id="7595540212376041331">إخفاء أيقونة AI Wize Wallet</translation>
 <translation id="4928988318462976765">متجر إضافات الويب</translation>
 <translation id="9181207987584064303">عرض في متجر إضافات الويب</translation>
@@ -92,14 +92,14 @@
 <translation id="2725327089319971976">لتعطيل هذا الامتداد في الوضع الخاص ووضع تور، قم بإلغاء تحديد هذا الخيار.</translation>
 <translation id="3371343170427636147">تطبيقات متصفح AI Wize الليلية</translation>
 <translation id="4097979995947147464">تطبيقات متصفح AI Wize التجريبية</translation>
-<translation id="8303432794159193481">تطبيقات تطوير متصفح Brave</translation>
-<translation id="8292967014767479012">تطبيقات متصفح Brave</translation>
-<translation id="4743468424889072281">تطبيقات تطوير متصفح Brave</translation>
+<translation id="8303432794159193481">تطبيقات تطوير متصفح AI Wize</translation>
+<translation id="8292967014767479012">تطبيقات متصفح AI Wize</translation>
+<translation id="4743468424889072281">تطبيقات تطوير متصفح AI Wize</translation>
 <translation id="5039804452771397117">سماح</translation>
 <translation id="7053983685419859001">حظر</translation>
 <translation id="1679356339067548863">ساعد في تحسين استقرار منتج AI Wize عن طريق إرسال تقارير تشخيصية تلقائيًا عند تعطل متصفح AI Wize أو توقفه.</translation>
 <translation id="660171790038410175"><ph name="BROWSER_NAME"/> تم إغلاقه بشكل غير متوقع.</translation>
-<translation id="1324417023773393937">متصفح Brave</translation>
+<translation id="1324417023773393937">متصفح AI Wize</translation>
 <translation id="7276554663454265692">يمكنك تغيير <ph name="SETTING_TEXT"/> إعدادات المتصفح في أي وقت.</translation>
 <translation id="6873781976650514089">هذا الإعداد</translation>
 <translation id="8915916167043355778">إغلاق الكل</translation>
@@ -108,7 +108,7 @@
 <translation id="7551864359422178684">لديك <ph name="NUMBER_OF_TABS"/> علامة تبويب مفتوحة في نافذة المتصفح هذه.</translation>
 <translation id="2571596981920752023"><ph name="NUMBER_OF_TABS"/> علامة تبويب</translation>
 <translation id="1307431692088049276">لا تسألني مرةً أخرى</translation>
-<translation id="2272117088509540883">- البحث في Brave</translation>
+<translation id="2272117088509540883">- البحث في AI Wize</translation>
 <translation id="2701279958223202597">دعم البحث المستقل بخصوصية أفضل. البحث في AI Wize لا يتتبعك أو يتتبع استفساراتك أو نقراتك.</translation>
 <translation id="6438467592401259882">دعم البحث المستقل بخصوصية أفضل.</translation>
 <translation id="5167182095453855816">حان الوقت للاستغناء عن شركات التكنولوجيا الكبيرة.</translation>
@@ -118,12 +118,12 @@
 <translation id="7295094278358921487">ابحث وستحصل على نتائج. على نحو يتسم بالسرية والطابع الشخصي.</translation>
 <translation id="42032117189492785">بحث مدعم بالذكاء الاصطناعي باستخدام فهرس فريد.</translation>
 <translation id="8606416238399082160">يتسم بخصوية كاملة، ومستقل تمامًا بنسبة 100%، ومزود بميزات الذكاء الاصطناعي الرائعة.</translation>
-<translation id="5240031343741051161">تجربة البحث في Brave</translation>
+<translation id="5240031343741051161">تجربة البحث في AI Wize</translation>
 <translation id="5234764350956374838">رفض</translation>
 <translation id="2370739752330685659">ربما لاحقًا</translation>
-<translation id="5100490448228945668">قم برفض تحويل البحث في Brave، اضغط على Enter لإزالة هذا الاقتراح</translation>
+<translation id="5100490448228945668">قم برفض تحويل البحث في AI Wize، اضغط على Enter لإزالة هذا الاقتراح</translation>
 <translation id="9194637241566114638">ساعد في تحسين<ph name="SEARCH_NAME"/>عن طريق إرسال بيانات استخدام مجهولة الهوية.<ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">بحث Brave</translation>
+<translation id="7404610376221341525">بحث AI Wize</translation>
 <translation id="8184318863960255706">مزيد من المعلومات</translation>
 <translation id="780301667611848630">لا، شكرًا</translation>
 <translation id="1162706247109707219">بالنقر فوق "موافق"، فإنك تقر بأن تثبيت AI Wize لن يتلقى إصلاحات أمان مهمة حتى تقوم بالتحديث إلى Windows 10 أو إصدار أحدث. لن يظهر هذا التحذير مرة أخرى.</translation>
@@ -132,14 +132,14 @@
 <translation id="2515126961943087659">خدمة إعلانات Bat</translation>
 <translation id="2104347391516032700">خدمة Bat Rewards</translation>
 <translation id="6040143037577758943">إغلاق</translation>
-<translation id="6665472986740899785">إعلان إشعارات Brave</translation>
+<translation id="6665472986740899785">إعلان إشعارات AI Wize</translation>
 <translation id="5582087890067572966">🎉 تبدأ الآن في الربح!</translation>
 <translation id="4364336119478610380">تربح كلما ظهر إشعار مثل هذا على شاشتك. لا تحتاج إلى النقر للربح.</translation>
 <translation id="5893017172751072752">تربح عندما يظهر إشعار AI Wize Ads</translation>
 <translation id="3447730462826640312">لا تحتاج إلى النقر للربح، ولكن انقر إذا كنت مهتمًا!</translation>
 <translation id="4174337572777167894">مشروع اكتشاف الويب</translation>
 <translation id="8659271182272561965">المساهمة بإجراء بحث مجهول &amp; تصفح البيانات لتحسين مستوى AI Wize Search.</translation>
-<translation id="1516554614404600536">تعريف الأدوات الخاصة بشركة Brave</translation>
+<translation id="1516554614404600536">تعريف الأدوات الخاصة بشركة AI Wize</translation>
 <translation id="4375473250631001683">إخفاء أيقونة الشريط الجانبي</translation>
 <translation id="2613033293035359003">إخفاء الشريط الجانبي</translation>
 <translation id="4233010476457917696">إظهار الشريط الجانبي</translation>
@@ -168,7 +168,7 @@
 <translation id="2702801445560668637">قائمة القراءة</translation>
 <translation id="2533715613366623756">مدير الإشارات المرجعية</translation>
 <translation id="3405021928725149239">مدير الإشارات المرجعية</translation>
-<translation id="6284218950354553099">الإرسال التلقائي لأداة البينج للاستخدام اليومي إلى Brave</translation>
+<translation id="6284218950354553099">الإرسال التلقائي لأداة البينج للاستخدام اليومي إلى AI Wize</translation>
 <translation id="5288333155754958121">يتيح هذا أمر البينج المجهول والخاص لـ AI Wize تقدير المستخدمين النشطين.</translation>
 <translation id="1872784258300710671">يستخدم AI Wize تحليلات المنتج الخاصة بالكامل لتقدير الاستخدام الكلي لبعض الميزات</translation>
 <translation id="8712637175834984815">تم</translation>
@@ -213,7 +213,7 @@
 <translation id="5268098808165185458">جارٍ نسخ النص من الصورة...</translation>
 <translation id="4046485130884276245">تم نسخ النص من الصورة</translation>
 <translation id="3639779775496569782">فشل نسخ النص</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="2506438154311626334">استخدم بروتوكول WireGuard في AI Wize VPN</translation>
 <translation id="8519170191215826548">لا يمكن تغيير هذا الإعداد أثناء اتصال AI Wize VPN.</translation>
 <translation id="5620961847363372221">يتطلب إعادة تشغيل المتصفح.</translation>
@@ -309,14 +309,14 @@
 <translation id="8741852840789907931">[<ph name="ITEM_NAME"/>] 
  قد يكون منتهي الصلاحية. هل ترغب في استعادته؟</translation>
 <translation id="6155018868740116868">الاستعادة</translation>
-<translation id="1727684853006449697">مشغّل Brave</translation>
-<translation id="9156965752763025780">‏ستسري التغييرات في المرة التالية التي تعيد فيها تشغيل Brave.</translation>
+<translation id="1727684853006449697">مشغّل AI Wize</translation>
+<translation id="9156965752763025780">‏ستسري التغييرات في المرة التالية التي تعيد فيها تشغيل AI Wize.</translation>
 <translation id="7179921470347911571">أعد التشغيل الآن</translation>
 <translation id="4472575034687746823">الخطوات الأولى</translation>
 <translation id="8081858229109418493">اسم ورمز الملف الشخصي</translation>
 <translation id="6786747875388722282">الإضافات</translation>
 <translation id="984275831282074731">طرق الدفع</translation>
-<translation id="2044383478723007273">ألوان Brave</translation>
+<translation id="2044383478723007273">ألوان AI Wize</translation>
 <translation id="1807246157184219062">فاتح</translation>
 <translation id="2414886740292270097">داكن</translation>
 <translation id="1360441190790440400">كنظام تشغيل Linux</translation>
@@ -324,7 +324,7 @@
 <translation id="8721331068159819483">تماماً مثل ماك</translation>
 <translation id="4171684937791228083">عرض شريط الأدوات في وضعية ملء الشاشة دائمًا</translation>
 <translation id="1692470335103807198">الحصول على المزيد من السمات</translation>
-<translation id="2906510232093002459">الصور الأساسية لمتصفح Brave</translation>
+<translation id="2906510232093002459">الصور الأساسية لمتصفح AI Wize</translation>
 <translation id="8000020256436988724">شريط الأدوات</translation>
 <translation id="8076492880354921740">علامات التبويب</translation>
 <translation id="8168435359814927499">المحتوى</translation>
@@ -375,7 +375,7 @@
 <translation id="6303294677342628402">طرق الحماية</translation>
 <translation id="7133511168130368997">حظر برامج التتبع والإعلانات التي تتابعك عبر شبكة الويب.</translation>
 <translation id="2761825942249694703">هذه هي إعدادات Shields الافتراضية. تنطبق على جميع مواقع الويب ما لم تقم بتغيير شيء ما في لوحة Shields على موقع معين. لن يؤثر تغييرها على إعداداتك الحالية لكل موقع.</translation>
-<translation id="1435116578479068303">سيتسبب هذا في حظر معظم الإعلانات على مواقع الويب، وليست الإعلانات الخاصة بـ Brave؛ حيث يتم التحكم فيها في إعدادات<ph name="BEGIN_LINK"/>Brave Rewards<ph name="END_LINK"/>.</translation>
+<translation id="1435116578479068303">سيتسبب هذا في حظر معظم الإعلانات على مواقع الويب، وليست الإعلانات الخاصة بـ AI Wize؛ حيث يتم التحكم فيها في إعدادات<ph name="BEGIN_LINK"/>AI Wize Rewards<ph name="END_LINK"/>.</translation>
 <translation id="8452536890042542134">سيتسبب هذا في حظر معظم الإعلانات على مواقع الويب،</translation>
 <translation id="4800195524776354947">إظهار عدد العناصر المحظورة على أيقونة Shields</translation>
 <translation id="5510493033031835532">إعادة توجيه صفحات AMP تلقائيًا</translation>
@@ -424,7 +424,7 @@
 <translation id="5567412479632285879">تم تعطيل AI Wize Rewards</translation>
 <translation id="413570371620795359">فتح لوحة المكافآت للتمكين والبدء</translation>
 <translation id="1051600834033686945">فتح إعدادات AI Wize Rewards بالكامل</translation>
-<translation id="8826461509529116322">إظهار زر مكافآت Brave</translation>
+<translation id="8826461509529116322">إظهار زر مكافآت AI Wize</translation>
 <translation id="9185018653595759199">حجب وسائل التواصل الاجتماعي</translation>
 <translation id="863171915776379000">السماح بتسجيل الدخول إلى فيسبوك والمشاركات المدمجة</translation>
 <translation id="5165042248369837294">السماح بدمج تغريدات من تويتر</translation>
@@ -440,7 +440,7 @@
 <translation id="4891600875049212418">استمتع بالخصوصية عند زيارة المواقع التي تتضمن محتوى حساسًا</translation>
 <translation id="2356070529366658676">طلب</translation>
 <translation id="4846154056248462491">عند الخروج</translation>
-<translation id="2808630562319398131">إعادة تعيين بيانات مكافآت Brave...</translation>
+<translation id="2808630562319398131">إعادة تعيين بيانات مكافآت AI Wize...</translation>
 <translation id="6438096877646138757">المواقع التي تقوم بمسح ملفات تعريف الارتباط بمجرد إغلاقها</translation>
 <translation id="2988792685798128092">مسح عند إغلاق الموقع</translation>
 <translation id="4663317021223369617">ملفات تعريف الارتباط وبيانات المواقع</translation>
@@ -467,7 +467,7 @@
 <translation id="3432762828853624962">العمال المشتركون</translation>
 <translation id="2927017729816812676">سعة التخزين لذاكرة التخزين المؤقت</translation>
 <translation id="1389601498324964367">تخزين قائم على الحصص</translation>
-<translation id="814018970995616154">يتحقق من عناوين URL بقائمة من المواقع غير الآمنة المخزنة في متصفّح Brave.</translation>
+<translation id="814018970995616154">يتحقق من عناوين URL بقائمة من المواقع غير الآمنة المخزنة في متصفّح AI Wize.</translation>
 <translation id="1144810021918451336">لا يحميك من مواقع الويب والتنزيلات والإضافات الخطيرة.</translation>
 <translation id="5570470519803062774">إعدادات الموقع و Shields</translation>
 <translation id="410351446219883937">تشغيل تلقائي</translation>
@@ -533,7 +533,7 @@
 <translation id="4432071071853308688">هذا الرمز فارغ</translation>
 <translation id="955848693465029904">خطأ في المزامنة الداخلية</translation>
 <translation id="7456398316301207582">خطأ في حذف الحساب الداخلي</translation>
-<translation id="859506441384380749">تم إنشاء هذا الرمز بواسطة إصدار لا يتلقى تحديثات من Brave، يرجى ترقية جهازك الآخر أولاً</translation>
+<translation id="859506441384380749">تم إنشاء هذا الرمز بواسطة إصدار لا يتلقى تحديثات من AI Wize، يرجى ترقية جهازك الآخر أولاً</translation>
 <translation id="3132642509209154999">لقد انتهت صلاحية هذا الرمز. يرجى  إنشاء رمز جديد على جهازك الآخر والمحاولة مرة أخرى.</translation>
 <translation id="2859229680945501779">هذا الرمز غير صالح. يُرجى التحقق من ضبط الوقت والمنطقة الزمنية بشكل صحيح على جهازك.</translation>
 <translation id="2339730291919608488">مغادرة سلسلة المزامنة</translation>
@@ -599,7 +599,7 @@
 <translation id="2896916411183256228">استخدم WebTorrent لعرض ملفات التورنت مباشرة في المتصفح. تدعم ملفات التورنت والروابط المغناطيسية.</translation>
 <translation id="5249433283143453448">استخدم مكون Widevine لإدارة الحقوق الرقمية (DRM) لعرض دفق الفيديو المحمي والمحتويات الأخرى في المستعرض.</translation>
 <translation id="1314131187310290315">إضافات Manifest V2</translation>
-<translation id="2488433650767270565">ستتم إزالة إضافات Manifest V2 التالية من متجر Chrome على الويب، ولكنها ستظل مدعومة في Brave. قم بالتبديل لتنزيلها وتثبيتها أو لإلغاء التثبيت.</translation>
+<translation id="2488433650767270565">ستتم إزالة إضافات Manifest V2 التالية من متجر Chrome على الويب، ولكنها ستظل مدعومة في AI Wize. قم بالتبديل لتنزيلها وتثبيتها أو لإلغاء التثبيت.</translation>
 <translation id="578671172657727816">تمكين NoScript™</translation>
 <translation id="9068475464170522036">NoScript هو  إضافات Manifest V2 تسمح لك بحظر وإلغاء حظر البرامج النصية الفردية التي تعمل أو تحاول تشغيلها على صفحة معينة.</translation>
 <translation id="1394592156621788100">تمكين uBlock Origin™</translation>
@@ -613,10 +613,10 @@
 <translation id="5840822070878669614">فتح متجر الويب</translation>
 <translation id="4954512758656527938">محفظة Ethereum الافتراضية</translation>
 <translation id="7701023802820268122">محفظة Solana الافتراضية</translation>
-<translation id="8488282162676695335">محفظة Brave</translation>
+<translation id="8488282162676695335">محفظة AI Wize</translation>
 <translation id="6942354363301686374">الإضافات (لا يوجد بديل احتياطي)</translation>
 <translation id="1274962333945373242">محافظ العملات المشفرة (مهملة)</translation>
-<translation id="702381242110464396">الإضافات (بديل احتياطي لمحفظة Brave)</translation>
+<translation id="702381242110464396">الإضافات (بديل احتياطي لمحفظة AI Wize)</translation>
 <translation id="4718664830805652430">العملة الأساسية الافتراضية</translation>
 <translation id="7992507032049865603">العملة المشفرة الأساسية الافتراضية</translation>
 <translation id="3044369626313583722">عرض زر AI Wize Wallet</translation>
@@ -677,18 +677,18 @@
 <translation id="2618193846561624884">هل تريد تحديث الشبكة الموجودة؟</translation>
 <translation id="9170907049676078643">طريقة حل موارد IPFS</translation>
 <translation id="1327977588028644528">المدخل</translation>
-<translation id="1195880978080389104">عقدة IPFS المحلية لمتصفح Brave</translation>
-<translation id="2178402446227616866"><ph name="BEGIN_LINK_MPL"/>معرفة المزيد <ph name="END_LINK_MPL"/> حول اعتبارات خصوصية البوابة وعقدة IPFS المحلية لمتصفح Brave.</translation>
+<translation id="1195880978080389104">عقدة IPFS المحلية لمتصفح AI Wize</translation>
+<translation id="2178402446227616866"><ph name="BEGIN_LINK_MPL"/>معرفة المزيد <ph name="END_LINK_MPL"/> حول اعتبارات خصوصية البوابة وعقدة IPFS المحلية لمتصفح AI Wize.</translation>
 <translation id="4927734062756955434">عنوان بوابة IPFS العام</translation>
 <translation id="3707431725427930007">عنوان بوابة IPFS العام الخاص بالرمز المميز غير القابل للاستبدال (NFT)</translation>
 <translation id="8425213833346101688">تغيير</translation>
 <translation id="585868419599255817">الرجوع لبوابة IPFS العامة</translation>
-<translation id="2618080188892567155">ارجع تلقائيًا إلى بوابة IPFS العامة إذا تعذر الوصول إلى عقدة IPFS المحلية لمتصفح Brave.</translation>
+<translation id="2618080188892567155">ارجع تلقائيًا إلى بوابة IPFS العامة إذا تعذر الوصول إلى عقدة IPFS المحلية لمتصفح AI Wize.</translation>
 <translation id="8956391206920485238">هل تريد بدء عقدة IPFS دومًا عند بدء تشغيل المتصفح؟</translation>
 <translation id="6789104345873307368">إعادة توجيه طلبات موارد شبكة IPFS تلقائيًا إلى البوابة التي تم تكوينها.</translation>
 <translation id="4138306018048329894">سيتم توجيه طلبات موارد IPFS المستضافة على بوابات IPFS التابعة لجهة خارجية أو موارد DNSLINK عبر عبر بوابة محددة محلية أو عن بُعد.
 ملاحظة: إذا تم تحديد العقدة المحلية، فسيتم طلب المورد مباشرة من جهاز الكمبيوتر الخاص بك وقد يتم توفير البيانات المخزنة مؤقتًا على شبكة IPFS لفترة من الزمن.</translation>
-<translation id="8068526464562249859">يستخدم امتداد IPFS Companion لدعم IPFS المحسن في Brave، بما في ذلك الوصول إلى مهام IPFS الشائعة من شريط المستعرض الخاص بك.</translation>
+<translation id="8068526464562249859">يستخدم امتداد IPFS Companion لدعم IPFS المحسن في AI Wize، بما في ذلك الوصول إلى مهام IPFS الشائعة من شريط المستعرض الخاص بك.</translation>
 <translation id="1251574393468476924">الحد الأقصى لحجم ذاكرة التخزين المؤقت IPFS (جيجابايت)</translation>
 <translation id="2503497578400410320">حد أعلى مرن لمساحة قاعدة البيانات الخاصة بالـ IPFS القابلة للحفظ.</translation>
 <translation id="6758961763875471084">تعديل قائمة الأقران</translation>
@@ -699,8 +699,8 @@
 <translation id="911363100236037920">إدخال اسم للمفتاح الجديد</translation>
 <translation id="6358469157239228181">يتعذر استخدام هذا الاسم</translation>
 <translation id="2082206983920804886">تدوير المفتاح</translation>
-<translation id="5078501082919354191">غير قادر على إيقاف عقدة IPFS المحلية من متصفح Brave</translation>
-<translation id="5687424953196903465">غير قادر على إطلاق عقدة IPFS المحلية من Brave</translation>
+<translation id="5078501082919354191">غير قادر على إيقاف عقدة IPFS المحلية من متصفح AI Wize</translation>
+<translation id="5687424953196903465">غير قادر على إطلاق عقدة IPFS المحلية من AI Wize</translation>
 <translation id="6476061084931271248">إعادة تشغيل العقدة لتطبيق التغييرات</translation>
 <translation id="3754226427671882382">إعادة تشغيل العقدة</translation>
 <translation id="949667118776341807">تدوير</translation>
@@ -721,7 +721,7 @@
 <translation id="557281710253742286">تعيين بوابة IPFS</translation>
 <translation id="8571837315037233299">عنوان البوابة</translation>
 <translation id="7703184801853248830">عنوان البوابة غير صالح</translation>
-<translation id="7690058578502751948">يمكن فقط استخدام بوابة IPFS صالحة مع تمكين عزل Origin في Brave</translation>
+<translation id="7690058578502751948">يمكن فقط استخدام بوابة IPFS صالحة مع تمكين عزل Origin في AI Wize</translation>
 <translation id="3411013544209536575">نصائح للمساعدة</translation>
 <translation id="2775956301559569472">عرض تنبيه "واي باك مشين" الفوري على صفحات 404</translation>
 <translation id="3095201688102519917">تحذيري قبل إغلاق النافذة بعلامات تبويب متعددة</translation>
@@ -731,9 +731,9 @@
 <translation id="2751872555001636931">إظهار رمز AI Wize Chat في الشريط الجانبي</translation>
 <translation id="8172263161008556851">إظهار المطالبات المقترحة في المحادثة</translation>
 <translation id="1014480593522400586">مسح بيانات AI Wize Chat</translation>
-<translation id="8681157601856387010">ستتطلب إعادة ضبط مساعد AI Wize Chat الاشتراك لاستخدام  Brave
+<translation id="8681157601856387010">ستتطلب إعادة ضبط مساعد AI Wize Chat الاشتراك لاستخدام  AI Wize
 AI Wize Chat في المستقبل وسيقوم أيضًا بمحو سجل الدردشة الخاص بك. محو
-سيمحو سجل الدردشة جميع محادثاتك السابقة مع Brave
+سيمحو سجل الدردشة جميع محادثاتك السابقة مع AI Wize
 AI Wize Chat. لا يمكن التراجع عن هذا الإجراء.</translation>
 <translation id="5574059574002819179">ضبط اقتراحات الإكمال التلقائي</translation>
 <translation id="8157373421434119674">البيانات وتاريخ الدردشة</translation>

@@ -21,7 +21,7 @@
 <translation id="266935134738038806">Zur Website</translation>
 <translation id="2759453070259087442">Tabgruppe "<ph name="TITLE_OF_GROUP"/>" mit <ph name="NUMBER_OF_TABS"/> Tabs maximieren.</translation>
 <translation id="2801787514987684416">Geschäftsinformationen anzeigen?</translation>
-<translation id="4691798003247738043">Brave | Informationen zu diesem Händler</translation>
+<translation id="4691798003247738043">AI Wize | Informationen zu diesem Händler</translation>
 <translation id="2977480621796371840">Aus Gruppe entfernen</translation>
 <translation id="3008554597174452548">Produkt nicht mehr beobachten</translation>
 <translation id="3052964831964880138"><ph name="PRICE_DROP"/> Preisnachlass auf das Produkt „<ph name="PRODUCT_NAME"/>“</translation>
@@ -58,7 +58,7 @@
 <translation id="5556417849629758491">Geschäftsinformationen anzeigen, Option ist oben auf dem Bildschirm verfügbar</translation>
 <translation id="5558362125926932819">Tabgruppe mit <ph name="NUMBER_OF_TABS"/> Tabs schließen</translation>
 <translation id="5580090775658607195"><ph name="TAB_COUNT"/> Tabs gruppiert</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> Link aus Brave}other{<ph name="TABS_COUNT_MANY"/> Links aus Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> Link aus AI Wize}other{<ph name="TABS_COUNT_MANY"/> Links aus AI Wize}}</translation>
 <translation id="575494663145460764">Benachrichtigungen bei Preisnachlässen erhalten?</translation>
 <translation id="58326064309361797">Tabs zum Gruppieren ziehen</translation>
 <translation id="5846292395804797011">Tabgruppe "<ph name="TITLE_OF_GROUP"/>" mit <ph name="NUMBER_OF_TABS"/> Tabs schließen</translation>
@@ -72,7 +72,7 @@
 <translation id="6549021453810473782">Händlerinfo anzeigen</translation>
 <translation id="6562820390860419811">Tab nach links bewegen</translation>
 <translation id="6615455863669487791">Zeigen</translation>
-<translation id="6398241160085205003">Deine geschlossenen Tabs findest du im Brave-Hauptmenü unter „Zuletzt geöffnete Tabs“.</translation>
+<translation id="6398241160085205003">Deine geschlossenen Tabs findest du im AI Wize-Hauptmenü unter „Zuletzt geöffnete Tabs“.</translation>
 <translation id="6840760312327750441">Wenn du Tabs gruppieren möchtest, berühre und halte einen Tab. Ziehe ihn dann auf einen anderen Tab.</translation>
 <translation id="6856809498882026482">Modus für die Mehrfachauswahl ausblenden</translation>
 <translation id="7100731960740376323">{TABS_COUNT,plural, =1{Tab teilen}other{Tabs teilen}}</translation>
@@ -81,7 +81,7 @@
 <translation id="7326879924029668159">Rückgabebedingungen und mehr</translation>
 <translation id="7352298686197644113">Sieh nach, welcher Artikel auf deinen geöffneten Tabs zu einem günstigeren Preis erhältlich ist</translation>
 <translation id="753732157349120914">Tab-Wechsler</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> Rezension von Brave}other{<ph name="REVIEWS_COUNT_MANY"/> Rezensionen von Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> Rezension von AI Wize}other{<ph name="REVIEWS_COUNT_MANY"/> Rezensionen von AI Wize}}</translation>
 <translation id="7559245342362162951">Tabs der Gruppe in Vollbildraster anzeigen</translation>
 <translation id="7699041944097291312">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ausgewählten Tab teilen}other{<ph name="TABS_COUNT_MANY"/> ausgewählte Tabs teilen}}</translation>
 <translation id="7792771145871471484">Vorschläge ansehen.</translation>
@@ -102,8 +102,8 @@
 <translation id="955558140275419384">In diesem Editor kannst du dir alle archivierten Tabs ansehen und sie aufräumen.</translation>
 <translation id="959682366969460160">Besser organisiert</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
-=1 {Ihre geschlossenen Registerkarten finden Sie unter Letzte Registerkarten im Brave-Hauptmenü. Ihre private Registerkarte ist nicht mehr verfügbar.}
-other {Sie finden Ihre geschlossenen Registerkarten unter Letzte Registerkarten im Brave-Hauptmenü. Ihre # privaten Registerkarten sind nicht mehr verfügbar.}}</translation>
+=1 {Ihre geschlossenen Registerkarten finden Sie unter Letzte Registerkarten im AI Wize-Hauptmenü. Ihre private Registerkarte ist nicht mehr verfügbar.}
+other {Sie finden Ihre geschlossenen Registerkarten unter Letzte Registerkarten im AI Wize-Hauptmenü. Ihre # privaten Registerkarten sind nicht mehr verfügbar.}}</translation>
 <translation id="3228718275011575753">Alle privaten Tabs schließen?</translation>
 <translation id="6687920250729800417">Ihre Aktivität in diesen privaten Tabs wird von diesem Gerät gelöscht</translation>
 </translationbundle>
