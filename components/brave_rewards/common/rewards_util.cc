@@ -27,13 +27,7 @@ namespace brave_rewards {
 namespace {
 
 bool IsDisabledByPolicy(PrefService* prefs) {
-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-  DCHECK(prefs);
-  return prefs->IsManagedPreference(prefs::kDisabledByPolicy) &&
-         prefs->GetBoolean(prefs::kDisabledByPolicy);
-#else
-  return false;
-#endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+  return true;
 }
 
 bool IsDisabledByFeature() {
@@ -42,7 +36,7 @@ bool IsDisabledByFeature() {
     return true;
   }
 #endif  // BUILDFLAG(IS_ANDROID)
-  return false;
+  return true;
 }
 
 bool IsOFACSanctionedRegion(const std::string& country_code) {

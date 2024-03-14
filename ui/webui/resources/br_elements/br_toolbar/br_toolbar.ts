@@ -92,12 +92,12 @@ Polymer({
 
     shouldShowRewardsButton_: {
       type: Boolean,
-      value: true,
+      value: false,
     },
 
     isBraveWalletAllowed_: {
       type: Boolean,
-      value: true,
+      value: false,
     },
   },
 

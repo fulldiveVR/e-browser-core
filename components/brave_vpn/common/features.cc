@@ -14,11 +14,7 @@ namespace features {
 
 BASE_FEATURE(kBraveVPN,
              "BraveVPN",
-#if !BUILDFLAG(IS_LINUX)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
              base::FEATURE_DISABLED_BY_DEFAULT
-#endif
 );
 
 BASE_FEATURE(kBraveVPNLinkSubscriptionAndroidUI,
@@ -28,10 +24,10 @@ BASE_FEATURE(kBraveVPNLinkSubscriptionAndroidUI,
 #if BUILDFLAG(IS_WIN)
 BASE_FEATURE(kBraveVPNDnsProtection,
              "BraveVPNDnsProtection",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 BASE_FEATURE(kBraveVPNUseWireguardService,
              "BraveVPNUseWireguardService",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
 #if BUILDFLAG(IS_MAC)
 BASE_FEATURE(kBraveVPNEnableWireguardForOSX,

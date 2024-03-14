@@ -12,11 +12,11 @@ namespace brave_news::features {
 
 BASE_FEATURE(kBraveNewsCardPeekFeature,
              "BraveNewsCardPeek",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kBraveNewsFeedUpdate,
              "BraveNewsFeedUpdate",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 const base::FeatureParam<int> kBraveNewsMinBlockCards{&kBraveNewsFeedUpdate,
                                                       "min-block-cards", 1};
 

@@ -15,6 +15,10 @@
 namespace brave_wallet {
 
 bool IsAllowedForContext(content::BrowserContext* context) {
+  if(context) {
+    return false;
+  }
+
   if (!context || context->IsTor()) {
     return false;
   }

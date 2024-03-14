@@ -15,19 +15,19 @@ namespace features {
 #if defined(ARCH_CPU_X86_FAMILY) && defined(OFFICIAL_BUILD)
 BASE_FEATURE(kBraveRewards, "BraveRewards", base::FEATURE_DISABLED_BY_DEFAULT);
 #else
-BASE_FEATURE(kBraveRewards, "BraveRewards", base::FEATURE_ENABLED_BY_DEFAULT);
+BASE_FEATURE(kBraveRewards, "BraveRewards", base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
 #endif  // BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(ENABLE_GEMINI_WALLET)
 BASE_FEATURE(kGeminiFeature,
              "BraveRewardsGemini",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
 
 BASE_FEATURE(kVBatNoticeFeature,
              "BraveRewardsVBatNotice",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kVerboseLoggingFeature,
              "BraveRewardsVerboseLogging",

@@ -96,7 +96,7 @@
       kBraveVPNFeatureInternalName,                       \
       "Enable experimental Brave VPN",                    \
       "Experimental native VPN support",                  \
-      kOsMac | kOsWin,                                    \
+      kDeprecated,                                          \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPN), \
   })
 #if BUILDFLAG(IS_WIN)
@@ -106,7 +106,7 @@
       kBraveVPNWireguardFeatureInternalName,                                 \
       "Enable experimental WireGuard Brave VPN service",                     \
       "Experimental WireGuard VPN support. Deprecated.",                     \
-      kOsWin,                                                                \
+      kDeprecated,                                                             \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPNUseWireguardService), \
   })
 #define BRAVE_VPN_DNS_FEATURE_ENTRIES                                    \
@@ -115,7 +115,7 @@
       "Enable DoH for Brave VPN",                                        \
       "Override DoH settings with Cloudflare dns if necessary to avoid " \
       "leaking requests due to Smart Multi-Home Named Resolution",       \
-      kOsWin,                                                            \
+      kDeprecated,                                                         \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPNDnsProtection),   \
   })
 #elif BUILDFLAG(IS_MAC)
@@ -126,7 +126,7 @@
       kBraveVPNWireguardForOSXFeatureInternalName,                             \
       "Enable experimental WireGuard Brave VPN for OSX",                       \
       "Experimental WireGuard VPN support.",                                   \
-      kOsMac,                                                                  \
+      kDeprecated,                                                                  \
       FEATURE_VALUE_TYPE(brave_vpn::features::kBraveVPNEnableWireguardForOSX), \
   })
 #else  // BUILDFLAG(IS_MAC)
@@ -155,7 +155,7 @@
           "brave-speedreader",                                             \
           "Enable SpeedReader",                                            \
           "Enables faster loading of simplified article-style web pages.", \
-          kOsDesktop | kOsAndroid,                                         \
+          kDeprecated,                                         \
           FEATURE_VALUE_TYPE(speedreader::kSpeedreaderFeature),            \
       }))
 
@@ -191,7 +191,7 @@
           "Enable Gemini for Brave Rewards",                               \
           "Enables support for Gemini as an external wallet provider for " \
           "Brave",                                                         \
-          kOsDesktop,                                                      \
+          kDeprecated,                                                       \
           FEATURE_VALUE_TYPE(brave_rewards::features::kGeminiFeature),     \
       }))
 
@@ -211,7 +211,7 @@
           "enable-nft-pinning",                                               \
           "Enable NFT pinning",                                               \
           "Enable NFT pinning for Brave Wallet",                              \
-          kOsDesktop,                                                         \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletNftPinningFeature),         \
       },                                                                      \
@@ -220,7 +220,7 @@
           "Enable Brave Wallet",                                              \
           "Native cryptocurrency wallet support without the use of "          \
           "extensions",                                                       \
-          kOsDesktop | kOsAndroid,                                            \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kNativeBraveWalletFeature),             \
       },                                                                      \
@@ -228,7 +228,7 @@
           "brave-wallet-zcash",                                               \
           "Enable BraveWallet ZCash support",                                 \
           "Zcash support for native Brave Wallet",                            \
-          kOsDesktop | kOsAndroid,                                            \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletZCashFeature),              \
       },                                                                      \
@@ -236,7 +236,7 @@
           "brave-wallet-bitcoin",                                             \
           "Enable Brave Wallet Bitcoin support",                              \
           "Bitcoin support for native Brave Wallet",                          \
-          kOsDesktop | kOsAndroid,                                            \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletBitcoinFeature),            \
       },                                                                      \
@@ -245,7 +245,7 @@
           "Enable Ankr balances",                                             \
           "Enable usage of Ankr Advanced API for fetching balances in Brave " \
           "Wallet",                                                           \
-          kOsDesktop | kOsAndroid,                                            \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletAnkrBalancesFeature),       \
       },                                                                      \
@@ -254,7 +254,7 @@
           "Enable transaction simulations",                                   \
           "Enable usage of Blowfish API for running transaction simulations " \
           "in Brave Wallet",                                                  \
-          kOsDesktop | kOsAndroid,                                            \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(brave_wallet::features::                         \
                                  kBraveWalletTransactionSimulationsFeature),  \
       })
@@ -266,14 +266,14 @@
           "Brave News prompts on New Tab Page",                                \
           "Prompt Brave News via the top featured article peeking up from "    \
           "the bottom of the New Tab Page, after a short delay.",              \
-          kOsDesktop,                                                          \
+          kDeprecated,                                                        \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsCardPeekFeature), \
       },                                                                       \
       {                                                                        \
           "brave-news-feed-update",                                            \
           "Brave News Feed Update",                                            \
           "Use the updated Brave News feed",                                   \
-          kOsDesktop,                                                          \
+          kDeprecated,                                                         \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsFeedUpdate),      \
       })
 
@@ -285,7 +285,7 @@
       "Starts local collection for notification ad timing data. This data is " \
       "stored locally and automatically erased after one month. No data "      \
       "leaves the client.",                                                    \
-      kOsDesktop,                                                              \
+      kDeprecated,                                                             \
       FEATURE_VALUE_TYPE(brave_federated::features::kFederatedLearning),       \
   })
 
@@ -330,7 +330,7 @@
       "brave-commands",                                                       \
       "Brave Commands",                                                       \
       "Enable experimental page for viewing and executing commands in Brave", \
-      kOsWin | kOsMac | kOsLinux,                                             \
+      kDeprecated,                                                            \
       FEATURE_VALUE_TYPE(commands::features::kBraveCommands),                 \
   })
 #else
@@ -712,7 +712,7 @@
           "brave-rewards-vbat-notice",                                         \
           "Enable Brave Rewards VBAT notices",                                 \
           "Enables notices in the Brave Rewards UI about VBAT deadlines.",     \
-          kOsDesktop | kOsAndroid,                                             \
+          kDeprecated,                                                         \
           FEATURE_VALUE_TYPE(brave_rewards::features::kVBatNoticeFeature),     \
       },                                                                       \
       {                                                                        \
@@ -723,7 +723,7 @@
           "include information such as browsing history and credentials such " \
           "as passwords and access tokens depending on your activity. Please " \
           "do not share it unless asked to by Brave staff.",                   \
-          kOsDesktop | kOsAndroid,                                             \
+          kDeprecated,                                             \
           FEATURE_VALUE_TYPE(brave_rewards::features::kVerboseLoggingFeature), \
       },                                                                       \
       {                                                                        \
@@ -732,7 +732,7 @@
                                                                                \
           "Allows all custodial options to be selected in Brave Rewards, "     \
           "including those not supported for your Rewards country.",           \
-          kOsDesktop | kOsAndroid,                                             \
+          kDeprecated,                                             \
           FEATURE_VALUE_TYPE(brave_rewards::features::                         \
                                  kAllowUnsupportedWalletProvidersFeature),     \
       },                                                                       \
@@ -740,7 +740,7 @@
           "brave-rewards-allow-self-custody-providers",                        \
           "Enable Brave Rewards self-custody connection options",              \
           "Enables self-custody options to be selected in Brave Rewards.",     \
-          kOsDesktop | kOsAndroid,                                             \
+          kDeprecated,                                             \
           FEATURE_VALUE_TYPE(                                                  \
               brave_rewards::features::kAllowSelfCustodyProvidersFeature),     \
       },                                                                       \

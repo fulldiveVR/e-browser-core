@@ -14,24 +14,17 @@ namespace features {
 
 BASE_FEATURE(kNativeBraveWalletFeature,
              "NativeBraveWallet",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT
+);
 
 BASE_FEATURE(kBraveWalletNftPinningFeature,
              "BraveWalletNftPinning",
-#if BUILDFLAG(IS_ANDROID)
              base::FEATURE_DISABLED_BY_DEFAULT
-#else
-             base::FEATURE_ENABLED_BY_DEFAULT
-#endif
 );
 
 BASE_FEATURE(kBraveWalletBitcoinFeature,
              "BraveWalletBitcoin",
-#if BUILDFLAG(ENABLE_BITCOIN_BY_DEFAULT)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
              base::FEATURE_DISABLED_BY_DEFAULT
-#endif
 );
 const base::FeatureParam<int> kBitcoinRpcThrottle{&kBraveWalletBitcoinFeature,
                                                   "rpc_throttle", 2};
@@ -40,11 +33,7 @@ const base::FeatureParam<bool> kBitcoinTestnetDiscovery{
 
 BASE_FEATURE(kBraveWalletZCashFeature,
              "BraveWalletZCash",
-#if BUILDFLAG(ENABLE_ZCASH_BY_DEFAULT)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
              base::FEATURE_DISABLED_BY_DEFAULT
-#endif
 );
 
 BASE_FEATURE(kBraveWalletAnkrBalancesFeature,

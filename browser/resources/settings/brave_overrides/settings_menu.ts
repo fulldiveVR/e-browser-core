@@ -253,14 +253,17 @@ RegisterPolymerTemplateModifications({
     const privacyEl = getMenuElement(templateContent, '/privacy')
     shieldsEl.insertAdjacentElement('afterend', privacyEl)
 
-    // Add web3 item
-    const web3El = createMenuElement(
-      loadTimeData.getString('braveWeb3'),
-      '/web3',
-      'product-brave-wallet',
-      'wallet',
-    )
-    privacyEl.insertAdjacentElement('afterend', web3El)
+    var web3El = privacyEl
+    if(false) {
+      // Add web3 item
+      web3El = createMenuElement(
+        loadTimeData.getString('braveWeb3'),
+        '/web3',
+        'product-brave-wallet',
+        'wallet',
+      )
+      privacyEl.insertAdjacentElement('afterend', web3El)
+    }
 
     // Add leo item
     const leoAssistantEl = createMenuElement(
@@ -271,14 +274,17 @@ RegisterPolymerTemplateModifications({
     )
     web3El.insertAdjacentElement('afterend', leoAssistantEl)
 
-    // Add Sync item
-    const syncEl = createMenuElement(
-      loadTimeData.getString('braveSync'),
-      '/braveSync',
-      'product-sync',
-      'braveSync',
-    )
-    leoAssistantEl.insertAdjacentElement('afterend', syncEl)
+    var syncEl = leoAssistantEl
+    if(false) {
+        // Add Sync item
+      syncEl = createMenuElement(
+        loadTimeData.getString('braveSync'),
+        '/braveSync',
+        'product-sync',
+        'braveSync',
+      )
+      leoAssistantEl.insertAdjacentElement('afterend', syncEl)
+    }
 
     // Add search item
     const searchEl = getMenuElement(templateContent, '/search')

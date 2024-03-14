@@ -13,6 +13,9 @@ namespace brave_rewards {
 
 bool IsSupportedForProfile(Profile* profile, IsSupportedOptions options) {
   DCHECK(profile);
+  if(profile){
+    return false;
+  }
   return brave::IsRegularProfile(profile) &&
          IsSupported(profile->GetPrefs(), options);
 }
