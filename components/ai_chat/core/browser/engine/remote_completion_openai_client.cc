@@ -185,8 +185,6 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
 
-  LOG(ERROR) << "QueryPrompt: " << prompt;
-  
   headers.emplace(DecodeParam("@tsgnqhy`shnm"), DecodeParam("Ad`qdq\x1frj,yjaXvWad7FYxvE5EVgeuS2AkajEIPwVy1wbcYXOaJ4JiyqSo"));
   headers.emplace("Accept", "text/event-stream");
 

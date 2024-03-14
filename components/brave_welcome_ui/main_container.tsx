@@ -8,8 +8,8 @@ import * as React from 'react'
 import DataContext from './state/context'
 import { shouldPlayAnimations } from './state/hooks'
 import { ViewType } from './state/component_types'
+import { P3APhase, WelcomeBrowserProxyImpl } from './api/welcome_browser_proxy'
 
-import HelpImprove from './components/help-improve'
 import ImportInProgress from './components/import-in-progress'
 import Background from './components/background'
 import Welcome from './components/welcome'
@@ -50,7 +50,11 @@ function MainContainer () {
   }
 
   if (viewType === ViewType.HelpImprove) {
-    mainEl = <HelpImprove />
+    // mainEl = <HelpImprove />
+    WelcomeBrowserProxyImpl.getInstance().setP3AEnabled(false)
+    WelcomeBrowserProxyImpl.getInstance().setMetricsReportingEnabled(false)
+    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Finished)
+    window.open('chrome://newtab', '_self')
   }
 
   if (viewType === ViewType.DefaultBrowser) {
