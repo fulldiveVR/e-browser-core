@@ -20,7 +20,7 @@
 <translation id="4900351245762303149">Google Widevine'ı yükle</translation>
 <translation id="2313383941300459392">Google Widevine'ı etkinleştirmek için tarayıcıyı yeniden başlatın</translation>
 <translation id="8342816622062204340"><ph name="URL"/>, korumalı Google Widevine içeriklerini oynatmak istiyor. Bunun için Android sisteminin Widevine desteğine izin vermeniz gerekmektedir. Buna izin vererek, Google'ın kullanım şartlarını kabul etmiş olursunuz.</translation>
-<translation id="2200626478572277092">Bir web sayfasındaki medyaların oynatılması için bazen Widevine gerekir. Bu, Google sunucularından yüklenen bir Google eklentisidir ve Brave tarafından incelenemez. Yükleyerek, Google'ın kullanım koşullarını kabul etmiş sayılırsınız.</translation>
+<translation id="2200626478572277092">Bir web sayfasındaki medyaların oynatılması için bazen Widevine gerekir. Bu, Google sunucularından yüklenen bir Google eklentisidir ve AI Wize tarafından incelenemez. Yükleyerek, Google'ın kullanım koşullarını kabul etmiş sayılırsınız.</translation>
 <translation id="4931114810905682683"><ph name="LEARN_MORE_ABOUT_WIDEVINE"/>
 .
 Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
@@ -42,10 +42,10 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="7897433216002294926">Tor <ph name="COUNT"/></translation>
 <translation id="1970435562892104727">Bu, Tor'a sahip özel bir penceredir</translation>
 <translation id="1037341607922068025">Tor ile Özel Pencereyi Aç</translation>
-<translation id="496896260395129787">Bu Brave Sync hesabı, başka bir cihazdan silindi. Senkronizasyonu devre dışı bırakmak istemediyseniz <ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">Bu AI Wize Sync hesabı, başka bir cihazdan silindi. Senkronizasyonu devre dışı bırakmak istemediyseniz <ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>hesabı yeniden oluşturun</translation>
 <translation id="6965382102122355670">Tamam</translation>
-<translation id="3975865347033939965">Senkronizasyon hizmeti başlatılamadı, Brave Senkronizasyon çalışmıyor</translation>
+<translation id="3975865347033939965">Senkronizasyon hizmeti başlatılamadı, AI Wize Senkronizasyon çalışmıyor</translation>
 <translation id="4450893287417543264">Tekrar gösterme</translation>
 <translation id="4595286989346610620">Ayrıntıları kontrol edin</translation>
 <translation id="7691598647605453992">IPFS</translation>
@@ -65,7 +65,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="6925604404524625582">IPFS Anlık Görüntü Bağlantısını İçe Aktarın ve Kopyalayın</translation>
 <translation id="1434416574322382019">Yeni Tor ile Özel Pencere</translation>
 <translation id="4703780849509456860">Bağlantıyı Tor içeren Özel Pencereyle Aç</translation>
-<translation id="3488584642074079080">Tor ile Brave Özel Pencere Açma Linki</translation>
+<translation id="3488584642074079080">Tor ile AI Wize Özel Pencere Açma Linki</translation>
 <translation id="186554175479803110">Bir Dosyayı İçe Aktar ve Paylaş</translation>
 <translation id="3036649622769666520">Dosyaları Aç</translation>
 <translation id="4408880250587950158">Bir Dizini İçe Aktar ve Paylaş</translation>
@@ -88,14 +88,14 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="7595540212376041331">Brave Cüzdanı simgesini gizle</translation>
 <translation id="4928988318462976765">Web Uzantıları Mağazası</translation>
 <translation id="9181207987584064303">Web Uzantıları Mağazası'nda görüntüle</translation>
-<translation id="3161744659507801211">Uyarı: Brave uzantıların tarama geçmişinizi kaydetmesini engelleyemez.</translation>
+<translation id="3161744659507801211">Uyarı: AI Wize uzantıların tarama geçmişinizi kaydetmesini engelleyemez.</translation>
 <translation id="2162109630536601963">Uzantı ağ istemlerinde bulunursa, Tor veya gizli mod kullanmayacak.</translation>
 <translation id="2725327089319971976">Bu uzantıyı gizli modda ve Tor modunda devre dışı bırakmak için, bu seçeneğin seçimini kaldırın.</translation>
-<translation id="3371343170427636147">Brave Browser Gece Uygulamaları</translation>
-<translation id="4097979995947147464">Brave Browser Beta Uygulamaları</translation>
+<translation id="3371343170427636147">AI Wize Browser Gece Uygulamaları</translation>
+<translation id="4097979995947147464">AI Wize Browser Beta Uygulamaları</translation>
 <translation id="8303432794159193481">Brave Tarayıcı Geliştirme Uygulamaları</translation>
-<translation id="8292967014767479012">Brave Browser Uygulamaları</translation>
-<translation id="4743468424889072281">Brave Browser Geliştirme Uygulamaları</translation>
+<translation id="8292967014767479012">AI Wize Browser Uygulamaları</translation>
+<translation id="4743468424889072281">AI Wize Browser Geliştirme Uygulamaları</translation>
 <translation id="5039804452771397117">İzin ver</translation>
 <translation id="7053983685419859001">Engelle</translation>
 <translation id="1679356339067548863">Brave Tarayıcı çöktüğünde veya donduğunda tanı raporlarını otomatik olarak göndererek, Brave'in ürün stabilitesini iyileştirmeye yardımcı olun.</translation>
@@ -109,12 +109,12 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="7551864359422178684">Bu tarayıcı penceresinde <ph name="NUMBER_OF_TABS"/> açık sekmeniz var.</translation>
 <translation id="2571596981920752023"><ph name="NUMBER_OF_TABS"/> sekme</translation>
 <translation id="1307431692088049276">Bana tekrar sorma</translation>
-<translation id="2272117088509540883">- Brave Arama</translation>
-<translation id="2701279958223202597">Bağımsız aramayı daha fazla gizlilik ile destekleyin. Brave arama sizi, sorgularınızı, tıklamalarınızı izlemez.</translation>
+<translation id="2272117088509540883">- AI Wize Arama</translation>
+<translation id="2701279958223202597">Bağımsız aramayı daha fazla gizlilik ile destekleyin. AI Wize arama sizi, sorgularınızı, tıklamalarınızı izlemez.</translation>
 <translation id="6438467592401259882">Bağımsız aramayı daha fazla gizlilik ile destekleyin.</translation>
 <translation id="5167182095453855816">Teknolojinin büyük oyuncularını geride bırakmanın zamanı geldi.</translation>
 <translation id="45040495135337202">Brave sizi, aramalarınızı veya tıklamalarınızı izlemez. Hem de teknolojinin büyük oyuncularından %100 bağımsızdır.</translation>
-<translation id="6919364924256365253">Google'lamayın. Bing'e bakmayın. Brave size yeter.</translation>
+<translation id="6919364924256365253">Google'lamayın. Bing'e bakmayın. AI Wize size yeter.</translation>
 <translation id="3313148036097793884">Brave sizi, aramalarınızı veya tıklamalarınızı izlemez. Hem de %100 bağımsızdır.</translation>
 <translation id="7295094278358921487">Arayan aradığını bulur. Gizli bir şekilde.</translation>
 <translation id="42032117189492785">Benzersiz diziniyle YZ destekli arama</translation>
@@ -127,8 +127,8 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="7404610376221341525">Brave Arama</translation>
 <translation id="8184318863960255706">Daha fazla bilgi</translation>
 <translation id="780301667611848630">Hayır, teşekkürler</translation>
-<translation id="1162706247109707219">Tamam'a tıklayarak Brave kurulumunuzun Windows 10 ve üzerine güncellemesine kadar kritik güvenlik düzeltmesi ALMAYACAĞINI kabul etmiş olursunuz. Bu uyarı bir daha GÖSTERİLMEZ.</translation>
-<translation id="9164786361657554526">Tamam'a tıklayarak Brave kurulumunuzun macOS 10.15 ve üzerine güncellemesine kadar kritik güvenlik düzeltmesi ALMAYACAĞINI kabul etmiş olursunuz. Bu uyarı bir daha GÖSTERİLMEZ.</translation>
+<translation id="1162706247109707219">Tamam'a tıklayarak AI Wize kurulumunuzun Windows 10 ve üzerine güncellemesine kadar kritik güvenlik düzeltmesi ALMAYACAĞINI kabul etmiş olursunuz. Bu uyarı bir daha GÖSTERİLMEZ.</translation>
+<translation id="9164786361657554526">Tamam'a tıklayarak AI Wize kurulumunuzun macOS 10.15 ve üzerine güncellemesine kadar kritik güvenlik düzeltmesi ALMAYACAĞINI kabul etmiş olursunuz. Bu uyarı bir daha GÖSTERİLMEZ.</translation>
 <translation id="2770465223704140727">Listeden kaldır</translation>
 <translation id="2515126961943087659">Bat Reklam Servisi</translation>
 <translation id="2104347391516032700">BAT Ödülleri Hizmeti</translation>
@@ -216,7 +216,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="3639779775496569782">Metin kopyalama başarısız</translation>
 <translation id="3960619311638643872">Brave VPN</translation>
 <translation id="2506438154311626334">Brave VPN'de WireGuard protokolü kullanın</translation>
-<translation id="8519170191215826548">Bu ayar, Brave VPN bağlıyken değiştirilemez.</translation>
+<translation id="8519170191215826548">Bu ayar, AI Wize VPN bağlıyken değiştirilemez.</translation>
 <translation id="5620961847363372221">Tarayıcının yeniden başlatılmasını gerektirir.</translation>
 <translation id="4235920711083356755">VPN düğmesini göster</translation>
 <translation id="4070612712151038707">VPN düğmesini araç çubuğunda gösterir</translation>
@@ -310,7 +310,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="8741852840789907931">[<ph name="ITEM_NAME"/>] süresi dolmuş olabilir. Kurtarmak ister misiniz?</translation>
 <translation id="6155018868740116868">Kurtar</translation>
 <translation id="1727684853006449697">Brave Player</translation>
-<translation id="9156965752763025780">Değişiklikleriniz, Brave tekrar başlatıldığında geçerli olacak.</translation>
+<translation id="9156965752763025780">Değişiklikleriniz, AI Wize tekrar başlatıldığında geçerli olacak.</translation>
 <translation id="7179921470347911571">Şimdi Tekrar Başlat</translation>
 <translation id="4472575034687746823">Başlayın</translation>
 <translation id="8081858229109418493">Profil adı ve simgesi</translation>
@@ -342,7 +342,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="2858138569776157458">Popüler siteler</translation>
 <translation id="7859704718976024901">Gözatma Geçmişi</translation>
 <translation id="8820817407110198400">Yer imleri</translation>
-<translation id="7310387888625228830">Leo YZ Asistanı</translation>
+<translation id="7310387888625228830">AI Wize Chat YZ Asistanı</translation>
 <translation id="5222974844674487962">Brave Haberleri butonunu göster</translation>
 <translation id="383007806262310953">Yer işaretleri çubuğunu göster</translation>
 <translation id="4054323497808446566">Yer işaretleri çubuğu tüm sayfalarda görünür halde</translation>
@@ -375,7 +375,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="6303294677342628402">Kalkanlar</translation>
 <translation id="7133511168130368997">İnternet üzerinde sizi takip eden iz sürücüleri ve reklamları engelleyin.</translation>
 <translation id="2761825942249694703">Bunlar varsayılan Shields ayarlarıdır. Belirli bir site için Shields panelinden bir şeyi değiştirmediğiniz sürece tüm websitelere uygulanırlar. Bu ayarları değiştirmek, herbir site için ayrı olarak yaptığınız mevcut ayarlarınızı değiştirmez.</translation>
-<translation id="1435116578479068303">Bu işlem web sitelerindeki çoğu reklamı engeller ancak Brave Özel Reklamlar etkilenmez. Bunlar <ph name="BEGIN_LINK"/>Brave Ödülleri<ph name="END_LINK"/>ayarlarından kontrol edilir.</translation>
+<translation id="1435116578479068303">Bu işlem web sitelerindeki çoğu reklamı engeller ancak AI Wize Özel Reklamlar etkilenmez. Bunlar <ph name="BEGIN_LINK"/>Brave Ödülleri<ph name="END_LINK"/>ayarlarından kontrol edilir.</translation>
 <translation id="8452536890042542134">Bu işlem web sitelerindeki çoğu reklamı engelleyecek.</translation>
 <translation id="4800195524776354947">Engellenen öğelerin sayısını Kalkanlar ikonunda göster</translation>
 <translation id="5510493033031835532">AMP sayfalarını otomatik yönlendir</translation>
@@ -423,7 +423,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="3020183492814296499">Kısayollar</translation>
 <translation id="5567412479632285879">Brave Ödülleri devre dışı</translation>
 <translation id="413570371620795359">Etkinleştirmek ve başlamak için Ödüller panelini açın</translation>
-<translation id="1051600834033686945">Tüm Brave Ödülleri ayarlarını aç</translation>
+<translation id="1051600834033686945">Tüm AI Wize Ödülleri ayarlarını aç</translation>
 <translation id="8826461509529116322">Brave Ödülleri butonunu göster</translation>
 <translation id="9185018653595759199">Sosyal medya engelleme</translation>
 <translation id="863171915776379000">Facebook ile giriş yapmaya ve gömülü gönderilere izin ver</translation>
@@ -507,18 +507,18 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="7885157704277298658">Kopyalandı!</translation>
 <translation id="8802630444265810662">Eş zamanlama kodunuzu aktarmak için bir mobil cihazla taranacak bir QR kodu</translation>
 <translation id="6221331245829088299">QR kodunu görüntülerken bir hata oluştu, lütfen yenileyip tekrar deneyin.</translation>
-<translation id="298546024891487702">Başlamak için, senkronize etmeyi planladığınız tüm cihazlarda Brave uygulamasının kurulu olması gerekir. Onları bir araya getirmek için, tüm cihazlarınızı birbirine güvenli bir şekilde bağlamak için kullanacağınız bir senkronizasyon zinciri başlatın.</translation>
+<translation id="298546024891487702">Başlamak için, senkronize etmeyi planladığınız tüm cihazlarda AI Wize uygulamasının kurulu olması gerekir. Onları bir araya getirmek için, tüm cihazlarınızı birbirine güvenli bir şekilde bağlamak için kullanacağınız bir senkronizasyon zinciri başlatın.</translation>
 <translation id="6200528822592747640">Yeni bir Sync Chain başlat</translation>
 <translation id="5184726904895809379">Bir Sync Kodum var</translation>
 <translation id="8780295742023331191">Sync Kodunu Görüntüle</translation>
 <translation id="9017050385815017931">Telefon/Tablet</translation>
 <translation id="1736420071277903564">Bilgisayar</translation>
 <translation id="3407602902101449803">Sync Chain QR Kodu</translation>
-<translation id="8369686073965491869">Mobil cihazınızda, Ayarlar panelindeki Brave Sync'e gidin ve düğmeye tıklayın.</translation>
+<translation id="8369686073965491869">Mobil cihazınızda, Ayarlar panelindeki AI Wize Sync'e gidin ve düğmeye tıklayın.</translation>
 <translation id="6527776448555649991">“Sync Kodunu Tara”.</translation>
 <translation id="1400862780574843709">Aşağıdaki QR Kodunu taramak için kameranızı kullanın.</translation>
 <translation id="5086223971958279691">Sync Chain Kodu</translation>
-<translation id="2899261497479389619">Hedef bilgisayarınızda, ayarlardan Brave Sync'e gidin ve düğmeye tıklayın.</translation>
+<translation id="2899261497479389619">Hedef bilgisayarınızda, ayarlardan AI Wize Sync'e gidin ve düğmeye tıklayın.</translation>
 <translation id="4827439149833241990">“Bir Sync Kodum var”.</translation>
 <translation id="8299617838343103908">Aşağıda gösterilen senkronizasyon zinciri kodu kelimelerini girin.</translation>
 <translation id="4485276108749547761">Bu kodu bir parola gibi düşünün. Eğer birisi onu ele geçirirse, eşitlenen verinizi okuyabilir ve değiştirebilirler.</translation>
@@ -539,17 +539,17 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="2339730291919608488">Senkronizasyon Zincirinden Ayrıl</translation>
 <translation id="115699408012835975">Eş Zamanlamayı sıfırlarsanız, başka bir cihaza eş zamanlamada bulunmak için o cihazdan bir eş zamanlama kodunu tekrar girmeniz gerekecek. Devam etmek istediğinize emin misiniz?</translation>
 <translation id="6092564993102418148">Seçilen cihazı senkronizasyon zincirinden kaldırmak istediğinizden emin misiniz?</translation>
-<translation id="4400414577602898435">Uyarı: Bu, potansiyel olarak şifrelerinizi de içeren Brave verilerinizi bu kod kelimelerini üretmiş olan cihazla paylaşacaktır.
+<translation id="4400414577602898435">Uyarı: Bu, potansiyel olarak şifrelerinizi de içeren AI Wize verilerinizi bu kod kelimelerini üretmiş olan cihazla paylaşacaktır.
 
     Lütfen bu kod kelimelerinin size ait bir cihaz tarafından üretildiğinden emin olun.
 
     Bunu yapmak istediğinizden emin misiniz?</translation>
-<translation id="7443185843787879670">Brave, işletim sisteminizin güvenli depolama alanına erişemedi. Parolalar ve çerezler gibi verilerin güvenliğini sağlamak için kullanılan şey budur; Brave Sync'in tarayıcı profilinizi cihazlar arasında bağlaması da gereklidir. Bu, Brave Sync'in çalışmadığı anlamına gelir. Bu sorunu çözmek için lütfen <ph name="BEGIN_LINK_SYNC_GUIDE"/>Brave Sync sorun giderme kılavuzu<ph name="END_LINK_SYNC_GUIDE"/> bölümüne bakın.</translation>
-<translation id="6802736947576520626">Senkronizasyon şifreleme anahtarı, Brave Senkronizasyonunu ilk kurduğunuzda kullanılandan farklı görünüyor. Bunun için en kolay çözüm, sıfırlamak ve senkronize edilen diğer cihazlarınızdan birinde kullanılan parolayla senkronizasyon zincirine yeniden katılmaktır.</translation>
+<translation id="7443185843787879670">Brave, işletim sisteminizin güvenli depolama alanına erişemedi. Parolalar ve çerezler gibi verilerin güvenliğini sağlamak için kullanılan şey budur; AI Wize Sync'in tarayıcı profilinizi cihazlar arasında bağlaması da gereklidir. Bu, AI Wize Sync'in çalışmadığı anlamına gelir. Bu sorunu çözmek için lütfen <ph name="BEGIN_LINK_SYNC_GUIDE"/>Brave Sync sorun giderme kılavuzu<ph name="END_LINK_SYNC_GUIDE"/> bölümüne bakın.</translation>
+<translation id="6802736947576520626">Senkronizasyon şifreleme anahtarı, AI Wize Senkronizasyonunu ilk kurduğunuzda kullanılandan farklı görünüyor. Bunun için en kolay çözüm, sıfırlamak ve senkronize edilen diğer cihazlarınızdan birinde kullanılan parolayla senkronizasyon zincirine yeniden katılmaktır.</translation>
 <translation id="4889767840132638381">Sıfırla ve senkronizasyon zincirine yeniden katıl</translation>
 <translation id="1680065323266179640">Senkronizasyon hesabını sil</translation>
 <translation id="9064376100690171155">Hesabı kalıcı olarak sil</translation>
-<translation id="228906529296554286">Hesabınızı silmek, şifrelenmiş verilerinizi Brave sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır.</translation>
+<translation id="228906529296554286">Hesabınızı silmek, şifrelenmiş verilerinizi AI Wize sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır.</translation>
 <translation id="7578652532113583362">Ancak bu işlem, bu cihazlarda yerel olarak depolanan verileri silmez.</translation>
 <translation id="2516405584294312544">Silme işlemi kalıcıdır ve verileri kurtarmanın hiçbir yolu yoktur. Senkronizasyonu
     tekrar kullanmaya karar verirseniz, yeni bir hesap oluşturmanız ve tüm cihazları tek tek yeniden eklemeniz gerekecektir.</translation>
@@ -593,7 +593,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="6936835573742749135">CAPTCHA isteğinde bulunulamıyor. Daha sonra tekrar deneyin.</translation>
 <translation id="2653659639078652383">Gönder</translation>
 <translation id="1369311132025451972">.onion sitelerini otomatik olarak yeniden yönlendir</translation>
-<translation id="6214393847480015759">Tor pencerelerinde, Brave mevcut olduğu her durumda bir web sitesinin .onion versiyonuna otomatik olarak geçecektir.</translation>
+<translation id="6214393847480015759">Tor pencerelerinde, AI Wize mevcut olduğu her durumda bir web sitesinin .onion versiyonuna otomatik olarak geçecektir.</translation>
 <translation id="1294350054292274934">.onion adreslerini yalnızca Tor pencerelerinde çözümle</translation>
 <translation id="1258903596167452221">Onion hizmetleri Tor pencerelerinin dışında kullanılamayacak.</translation>
 <translation id="2896916411183256228">Torrentleri doğrudan tarayıcıda görüntülemek için WebTorrent'i kullanır. Torrent dosyalarını ve magnet bağlantılarını destekler.</translation>
@@ -726,13 +726,13 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="3095201688102519917">Çok sayıda sekmesi olan pencereleri kapatırken beni uyar</translation>
 <translation id="7120553802660696133">Son sekmeyi kapatırken pencereyi kapatın</translation>
 <translation id="7984721311211272523">Sekme hoparlör simgelerinden sessize alma işlevini devre dışı bırak</translation>
-<translation id="6129027151000961048">Leo</translation>
-<translation id="2751872555001636931">Kenar çubuğunda Leo simgesini göster</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
+<translation id="2751872555001636931">Kenar çubuğunda AI Wize Chat simgesini göster</translation>
 <translation id="8172263161008556851">Konuşmada önerilen istemleri göster</translation>
-<translation id="1014480593522400586">Leo verilerini temizle</translation>
-<translation id="8681157601856387010">Leo asistanını sıfırlamak, gelecekte Brave Leo'yu kullanabilmek için
+<translation id="1014480593522400586">AI Wize Chat verilerini temizle</translation>
+<translation id="8681157601856387010">AI Wize Chat asistanını sıfırlamak, gelecekte AI Wize AI Wize Chat'yu kullanabilmek için
 katılmanızı gerektirecek ve ayrıca sohbet geçmişinizi temizleyecektir.
-Sohbet geçmişinizin temizlenmesi Brave Leo ile yaptığınız geçmiş konuşmaların
+Sohbet geçmişinizin temizlenmesi AI Wize AI Wize Chat ile yaptığınız geçmiş konuşmaların
 tümünü silecektir. Bu eylem geri alınamaz.</translation>
 <translation id="5574059574002819179">Otomatik tamamlama önerilerini ayarla</translation>
 <translation id="8157373421434119674">Veri ve sohbet geçmişi</translation>

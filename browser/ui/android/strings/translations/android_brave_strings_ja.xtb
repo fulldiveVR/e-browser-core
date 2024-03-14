@@ -317,7 +317,7 @@
 <translation id="3132642509209154999">このコードは期限切れです。他のデバイスで新しいコードを生成してもう一度お試しください。</translation>
 <translation id="2859229680945501779">このコードは無効です。お使いの端末の時刻とタイムゾーンが正しく設定されていることをご確認ください。</translation>
 <translation id="3149880132460839085">Brave Sync</translation>
-<translation id="3680755684186855422">Brave Syncを使うと、さまざまなデバイスの Brave ブラウザ間でブックマークのデータをブライベートに同期することができます。</translation>
+<translation id="3680755684186855422">Brave Syncを使うと、さまざまなデバイスの AI Wize ブラウザ間でブックマークのデータをブライベートに同期することができます。</translation>
 <translation id="3735228155296883311">別の端末で開始した同期チェーンに、コードをスキャンして簡単に追加することができます。あるいはこの端末で新しい同期チェーンを開始することもできます。</translation>
 <translation id="2614069607859982576">既存の同期されたデバイスを使用してBrave Settingsを開き、設定と &gt; 同期に移動してください。「新しいデバイスを追加」を選択し、画面に表示されたQRコードをスキャンしてください。</translation>
 <translation id="5241263629636958324">クリップボードへコピーしました</translation>
@@ -595,7 +595,7 @@
 <translation id="1483493594462132177">送信</translation>
 <translation id="538450413584738399">スワップ</translation>
 <translation id="1366855498335432549">振込</translation>
-<translation id="1420318137760245955">新しい Brave Wallet へようこそ</translation>
+<translation id="1420318137760245955">新しい AI Wize Wallet へようこそ</translation>
 <translation id="8339846196588658366">暗号資産を保管してポートフォリオのパフォーマンスを追跡しましょう。Brave プライバシーブラウザからご利用いただけます。</translation>
 <translation id="4472575034687746823">Get started</translation>
 <translation id="2759836790106646094">ウォレットを今すぐバックアップしましょう！</translation>
@@ -642,7 +642,7 @@
 <translation id="283071225285270357">リカバリーフレーズを入力</translation>
 <translation id="3943857333388298514">貼り付け</translation>
 <translation id="3331452756822160641">新しいパスワード</translation>
-<translation id="4359319875297001084">従来の Brave 暗号資産ウォレットからインポートしますか？</translation>
+<translation id="4359319875297001084">従来の AI Wize 暗号資産ウォレットからインポートしますか？</translation>
 <translation id="2339124864228588937">リカバリーフレーズを確認</translation>
 <translation id="3747079125031086337">あなたのリカバリフレーズに含まれている単語を正しい順序で選択します。</translation>
 <translation id="6518133107902771759">確認</translation>
@@ -1129,21 +1129,21 @@
 <translation id="5494920125229734069">すべて選択する</translation>
 <translation id="5972844218283131174">すべて選択解除</translation>
 <translation id="6322030314101903925">利用可能なアセットはありません</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">Braveウォレットにサインイン</translation>
 <translation id="3696514931437952995"><ph name="ORIGIN"/>にサインインしています。Braveウォレットはあなたのウォレットのアドレスを<ph name="ORIGIN"/>に共有します。</translation>
 <translation id="1028781062521375153">詳細を表示</translation>
 <translation id="6759710362319508545">リソース</translation>
 <translation id="2471230424465522689">利用開始日時</translation>
 <translation id="4841860051609590575">リクエストID</translation>
-<translation id="1179407411385015942">Leoはブラウザに組み込まれたAI搭載のスマートアシスタントです</translation>
+<translation id="1179407411385015942">AI Wize Chatはブラウザに組み込まれたAI搭載のスマートアシスタントです</translation>
 <translation id="4109670531935487117">アドレスバー入力中に自動でサイト候補を表示</translation>
-<translation id="1250335737108905610">Leoデータのリセットとクリア</translation>
-<translation id="6165101586663336913">Leoアシスタントのリセットは、将来的にLeoを使用するためのオプトインが必要になり、チャット履歴も消去されます。チャット履歴の消去は以前のLeoとの会話をすべて削除します。この操作は取り消せません。</translation>
-<translation id="3692772534525889713">Playストアでの購入をBraveアカウントにリンクすると、他のデバイスでBrave Leoを使用できます。</translation>
-<translation id="73236265316873967">Leoプレミアム</translation>
+<translation id="1250335737108905610">AI Wize Chatデータのリセットとクリア</translation>
+<translation id="6165101586663336913">AI Wize Chatアシスタントのリセットは、将来的にAI Wize Chatを使用するためのオプトインが必要になり、チャット履歴も消去されます。チャット履歴の消去は以前のAI Wize Chatとの会話をすべて削除します。この操作は取り消せません。</translation>
+<translation id="3692772534525889713">Playストアでの購入をBraveアカウントにリンクすると、他のデバイスでAI Wize Chatを使用できます。</translation>
+<translation id="73236265316873967">AI Wize Chatプレミアム</translation>
 <translation id="1166682575529520472">毎月</translation>
-<translation id="451189393813405346">Leoに聞く</translation>
+<translation id="451189393813405346">AI Wize Chatに聞く</translation>
 <translation id="7322560193401221004">ファイルの再生位置を記憶</translation>
 <translation id="7505951907514709271">個別ファイルの場合、最後に一時停止したところから再生を開始します</translation>
 <translation id="6835165453349969605">リストの再生位置を記憶</translation>
@@ -1199,7 +1199,7 @@
 <translation id="5319532905552885478">メディアコンテンツはすでにデフォルトのプレイリストに追加されています</translation>
 <translation id="4802584673094436231">準備中...</translation>
 <translation id="481455355267255546">次へ</translation>
-<translation id="5474757891469990756">プレミアムでLeoの全能力を引き出してください。</translation>
+<translation id="5474757891469990756">プレミアムでAI Wize Chatの全能力を引き出してください。</translation>
 <translation id="4173478269537830374">さまざまなAIモデルを探索</translation>
 <translation id="3453542753968940696">さまざまなスキルを持つパワフルなモデルへの優先アクセス。</translation>
 <translation id="3245401959451976966">クリエイティビティを発揮</translation>

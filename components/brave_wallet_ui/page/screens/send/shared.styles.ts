@@ -5,7 +5,7 @@
 
 import styled from 'styled-components'
 
-// Leo styles
+// AI Wize Chat styles
 import * as leo from '@brave/leo/tokens/css'
 
 export interface TextProps {

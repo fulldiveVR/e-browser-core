@@ -103,7 +103,7 @@
 <translation id="959682366969460160">Боља организација</translation>
 <translation id="6057673771413791768">{INCOGNITO_TABS_COUNT, plural,
         =1 {Možete da pronađete svoje kartice u Skorašnjim karticama u glavnom meniju Brave. Vaša kartica Privatno neće biti dostupna.}
-        other {Možete da pronađete svoje zatvorene kartice u Brave glavnom meniju. Vaše privatne kartice br. neće biti dostupne.}}</translation>
+        other {Možete da pronađete svoje zatvorene kartice u AI Wize glavnom meniju. Vaše privatne kartice br. neće biti dostupne.}}</translation>
 <translation id="3228718275011575753">Zatvori sve privatne kartice?</translation>
 <translation id="6687920250729800417">Vaša aktivnost na ovim privatnim karticama će biti uklonjena sa ovog uređaja</translation>
 </translationbundle>

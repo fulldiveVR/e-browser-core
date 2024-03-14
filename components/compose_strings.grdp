@@ -88,7 +88,7 @@
     "reply yes to this wedding invite with excitement"
   </message>
   <message name="IDS_COMPOSE_INPUT_FOOTER" desc="Privacy disclaimer in the input dialog.">
-    Your text and page content are sent to Brave and may be used to improve this feature.
+    Your text and page content are sent to AI Wize and may be used to improve this feature.
   <ph name="BEGIN_LINK">&lt;a href=""&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_COMPOSE_SUBMIT_BUTTON" desc="The button to request Compose to generate text.">

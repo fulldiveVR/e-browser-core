@@ -13,13 +13,13 @@
 <translation id="7931127789630755251">Tjen tokener for private annonser du ser i Brave</translation>
 <translation id="7859066142771796818">Bruk tokener til å kjøpe gavekort, veksle til andre valutaer, støtte innholdsskapere med mer.</translation>
 <translation id="3863981251715594911">Hvordan fungerer den?</translation>
-<translation id="5547108999862247665">Hvordan fungerer Brave Rewards?</translation>
+<translation id="5547108999862247665">Hvordan fungerer AI Wize Rewards?</translation>
 <translation id="2965798296974325760">Begynn å bruke Rewards</translation>
 <translation id="8220484609979012449">\n\nDu kan fortsatt sende kryptobidrag til denne innholdsskaperen ved å bruke Web3-lommeboken din.</translation>
 <translation id="6385969012847057348">Denne innholdsskaperen kan ikke motta bidrag fra <ph name="CUSTODIAN"/>.</translation>
 <translation id="6268134562674951939">Du har ikke nok tokener</translation>
 <translation id="4529874892536380156">Gjør dette til et fast månedlig bidrag. Du kan kansellere det når som helst.</translation>
-<translation id="5562948772940025260">Du kan bare sende opptil <ph name="AMOUNT"/> BAT med Brave Rewards-saldoen din.</translation>
+<translation id="5562948772940025260">Du kan bare sende opptil <ph name="AMOUNT"/> BAT med AI Wize Rewards-saldoen din.</translation>
 <translation id="5012991400231464322">Månedlige bidrag</translation>
 <translation id="5907051927340164207">Du sender allerede månedlige bidrag til denne innholdsskaperen</translation>
 <translation id="4848906651275579475">Du kan fortsatt sende inn et bidrag nå, og du kan avbryte de månedlige bidragene dine til denne skaperen ved å fjerne dem fra <ph name="MONTHLY_CONTRIBUTION"/>.</translation>
@@ -30,18 +30,18 @@
 <translation id="3699420827646925694">Logget ut av <ph name="CUSTODIAN"/></translation>
 <translation id="9038728316393235637">Logg på <ph name="CUSTODIAN"/></translation>
 <translation id="7063168612616047608">Takk for at du støtter favoritt-innholdsskaperne dine</translation>
-<translation id="3796032246917966749">Du ser ut til å være logget ut av <ph name="CUSTODIAN"/> for Brave Rewards. Logg på igjen for å fortsette.</translation>
+<translation id="3796032246917966749">Du ser ut til å være logget ut av <ph name="CUSTODIAN"/> for AI Wize Rewards. Logg på igjen for å fortsette.</translation>
 <translation id="5202112619925434373">Denne skaperen er ikke verifisert av Brave-skapere ennå. Du vil kunne sende bidrag til skaperen når vedkommende har blitt verifisert. <ph name="LEARN_MORE"/></translation>
 <translation id="3733094367889291358">Send bidrag</translation>
 <translation id="1899434873745933492">Kan ikke sende bidraget</translation>
-<translation id="1794046983410841192">Bruk Brave Rewards</translation>
+<translation id="1794046983410841192">Bruk AI Wize Rewards</translation>
 <translation id="8037118277449189044">Bruk Web3-lommebok</translation>
 <translation id="9059356165618961685">Brave Rewards-saldo</translation>
 <translation id="86107454835395919">Angi som månedlig bidrag</translation>
 <translation id="1177863135347784049">Tilpasset</translation>
 <translation id="4827581232860040208">Det oppstod et problem ved sending av bidraget ditt.</translation>
 <translation id="3259723213051400722">Prøv på nytt.</translation>
-<translation id="5298965408768377685">Denne skaperen har registrert seg hos Brave og kan motta bidrag fra Brave Rewards-brukere. <ph name="LEARN_MORE"/></translation>
+<translation id="5298965408768377685">Denne skaperen har registrert seg hos AI Wize og kan motta bidrag fra AI Wize Rewards-brukere. <ph name="LEARN_MORE"/></translation>
 <translation id="7466579932043491502">Brave Rewards fungerer kanskje ikke mens varslinger er deaktivert.</translation>
 <translation id="4259212006412783790">SLÅ PÅ</translation>
 <translation id="6112331814131703370">Blokk varslinger om å bytte til appen</translation>
@@ -57,12 +57,12 @@
 <translation id="6826743502395386800">Trist</translation>
 <translation id="5488843227043643519">Vil du legge inn en vurdering i Play Store?</translation>
 <translation id="5867854497245948308">Takk for tilbakemeldingen!</translation>
-<translation id="4935400164159327304">Fortell oss hvordan vi kan gjøre Brave enda bedre.</translation>
+<translation id="4935400164159327304">Fortell oss hvordan vi kan gjøre AI Wize enda bedre.</translation>
 <translation id="1420756770787071946">Støtt denne skaperen</translation>
 <translation id="8966035543003363155">Brave-varsler gjør ting enklere</translation>
 <translation id="7662771815233894695">Administrer nedlastinger, tjen tokener, se ukentlig bruksstatistikk med mer.</translation>
 <translation id="4265429476391459783">Du tjener ikke opp Rewards eller mottar personvernrapporter</translation>
-<translation id="1305714751384738456">Du tjener ikke opp Brave Rewards</translation>
+<translation id="1305714751384738456">Du tjener ikke opp AI Wize Rewards</translation>
 <translation id="1483391942610220726">Du mottar ikke personvernrapporter</translation>
 <translation id="4683790942451502796">Slå på varsler igjen hvis du vil fortsette å tjene BAT og motta ukentlige personvernrapporter.</translation>
 <translation id="8618359751943259593">Slå på varsler igjen hvis du vil fortsette å tjene BAT.</translation>
@@ -71,10 +71,10 @@
 <translation id="1088637159642753509">Slå på enhetsvarslinger for å tjene Brave-belønninger og se personvernrapporter.</translation>
 <translation id="312404770066229090">Slå på enhetsvarsler for å tjene Brave-belønninger.</translation>
 <translation id="2241529840361230499">Slå på enhetsvarsler for å motta Brave-personvernrapporter.</translation>
-<translation id="4930155581888391118">Slå på varsler fra Brave for å tjene Brave-belønninger.</translation>
+<translation id="4930155581888391118">Slå på varsler fra AI Wize for å tjene Brave-belønninger.</translation>
 <translation id="325187916104529570">Åpne Innstillinger og slå på enhetsvarsler for Brave-annonser.</translation>
 <translation id="5744802588121897886">Slå på Brave-varsler</translation>
-<translation id="7307834434086582547">Aktiver eller deaktiver Brave Shields</translation>
+<translation id="7307834434086582547">Aktiver eller deaktiver AI Wize Shields</translation>
 <translation id="6945863270524203017">Få ukentlige personvernoppdateringer om blokkering av sporere og annonseblokkering.</translation>
 <translation id="4324735664183300693">Slå på varsler</translation>
 <translation id="6395059271589866759">Brave tar 5 % av det sendte beløpet som behandlingsgebyr.</translation>
@@ -96,7 +96,7 @@
 <translation id="863171915776379000">Tillat Facebook-innlogginger og innebygde innlegg</translation>
 <translation id="5165042248369837294">Tillatt innebygde tvitringer fra Twitter</translation>
 <translation id="958971637207126733">Tillat LinkedIn-innebygde innlegg</translation>
-<translation id="6302422639282249274">Administrer Brave Rewards</translation>
+<translation id="6302422639282249274">Administrer AI Wize Rewards</translation>
 <translation id="8877432762827303535">Utsjekking på nett</translation>
 <translation id="6583902294974160967">Støtte</translation>
 <translation id="1799030480311994998">Funksjoner</translation>
@@ -140,7 +140,7 @@
 <translation id="4176463684765177261">Deaktivert</translation>
 <translation id="59174027418879706">Aktivert</translation>
 <translation id="6252490671914511928">Dagens topphistorier i en helt privat strøm, kun til deg.</translation>
-<translation id="8300751939969131609">Slå på Brave News og gå aldri mer glipp av siste nytt</translation>
+<translation id="8300751939969131609">Slå på AI Wize News og gå aldri mer glipp av siste nytt</translation>
 <translation id="7266075701303521777">Brave-nyheter er annonsestøttet med helt private og anonymiserte annonser som samsvarer med enheten din.</translation>
 <translation id="7699565323725789472">Følg favorittkildene dine i én samlet feed. Bare åpne en fane i Brave, rull ned – og voilà!\nBrave News støttes av private, anonymiserte annonser.</translation>
 <translation id="1765217911817124376">Slå på Brave-nyheter</translation>
@@ -160,7 +160,7 @@
 <translation id="7461899062138731833">KILDER</translation>
 <translation id="6150420917380577651">Fant ingen feeder på <ph name="SEARCH_URL"/></translation>
 <translation id="4541978218358617681">Annonse</translation>
-<translation id="7823038307453615214">Vis Brave News</translation>
+<translation id="7823038307453615214">Vis AI Wize News</translation>
 <translation id="6527303717912515753">Del</translation>
 <translation id="1654539412343893324">Finn ut mer om dataene dine</translation>
 <translation id="2989805286512600854">Åpne i ny fane</translation>
@@ -186,7 +186,7 @@
 <translation id="6975864539539353406">Sletter cookies og andre nettstedsdata når du lukker nettsider</translation>
 <translation id="1680858055899097121">Ikke behold faner på tvers av surfeøkter</translation>
 <translation id="7142548388914389999">Tillat produktanalyse som ivaretar personvern (P3A)</translation>
-<translation id="5254037869598726291">Anonymisert P3A-informasjon hjelper Brave med å anslå den totale bruken, og sikrer at vi forbedrer populære funksjoner.</translation>
+<translation id="5254037869598726291">Anonymisert P3A-informasjon hjelper AI Wize med å anslå den totale bruken, og sikrer at vi forbedrer populære funksjoner.</translation>
 <translation id="933652931229970927">Send krasjrapporter automatisk</translation>
 <translation id="5987838417172370108">Bidra til å forbedre produktstabiliteten for Brave\u2019s ved å automatisk sende diagnoserapporter hvis Brave-nettleseren krasjer eller slutter å fungere.</translation>
 <translation id="7977176350719484850">Est. data\nlagret</translation>
@@ -218,24 +218,24 @@
 <translation id="6961369821791548622">Tillat (start på nytt nå)</translation>
 <translation id="2433507940547922241">Utseende</translation>
 <translation id="9040069796107003510">Brave Rewards-ikon</translation>
-<translation id="6333347122924254968">Vis Brave Rewards-ikonet i adresselinjen</translation>
+<translation id="6333347122924254968">Vis AI Wize Rewards-ikonet i adresselinjen</translation>
 <translation id="8495235435594442882">Aktiver verktøylinje nederst</translation>
-<translation id="6587448235155023666">Endringene trer i kraft neste gang du starter Brave på nytt</translation>
+<translation id="6587448235155023666">Endringene trer i kraft neste gang du starter AI Wize på nytt</translation>
 <translation id="8701563696941209024">START PÅ NYTT NÅ</translation>
 <translation id="834487290629916192">SENERE</translation>
 <translation id="7207456302801184289">Velkommen til Brave</translation>
 <translation id="4117451092682672487">Personvern. Helt enkelt.</translation>
-<translation id="7909375417585209817">Med Brave som standard åpnes alle linker du trykker på, med Braves personvernbeskyttelser.</translation>
+<translation id="7909375417585209817">Med AI Wize som standard åpnes alle linker du trykker på, med Braves personvernbeskyttelser.</translation>
 <translation id="7370959926683925817">Blokker reklame. Spar data. Hver dag.</translation>
-<translation id="7281027579943912834">Med Brave som standard, vil hver lenke du trykker på få Braves reklameblokkering. Alle sider, videoer og strømminger.</translation>
-<translation id="5148943178722443958">Bidra til å gjøre Brave bedre.</translation>
+<translation id="7281027579943912834">Med AI Wize som standard, vil hver lenke du trykker på få Braves reklameblokkering. Alle sider, videoer og strømminger.</translation>
+<translation id="5148943178722443958">Bidra til å gjøre AI Wize bedre.</translation>
 <translation id="6718362830686703942">Send diagnoserapporter hvis du opplever at systemet krasjer eller henger seg opp.</translation>
 <translation id="1929905278861178845">Send fullstendig privat og anonym produktinformasjon om hvilke funksjoner som brukes av Brave-brukerne.</translation>
 <translation id="2877653791257935258">Skriv inn et nettstedsnavn eller en nettadresse</translation>
 <translation id="5329830149661250028">Opplev forskjellen med Brave: Ingen annonser. Ingen sporere. Mye raskere sideinnlasting.</translation>
 <translation id="3941792073703079607">Sjekk ut Brave-forskjellen: Blokker reklame. Spar data. Strøm fortere.</translation>
-<translation id="3545804467215833536">Trykk for å vise Brave Shields</translation>
-<translation id="1724327820822194498">Se alt det kjipe Brave har blokkert, på alle sider, med Shields.</translation>
+<translation id="3545804467215833536">Trykk for å vise AI Wize Shields</translation>
+<translation id="1724327820822194498">Se alt det kjipe AI Wize har blokkert, på alle sider, med Shields.</translation>
 <translation id="5386259141409498372"><ph name="BIG_TECH"/> og <ph name="TRACKER"/> annonser og sporere er blokkert</translation>
 <translation id="7256200875155794202"><ph name="BIG_TECH"/> og andre annonsetjenester og sporere er blokkert</translation>
 <translation id="3092683655478890840"><ph name="TRACKER_COUNT"/> sporere er blokkert</translation>
@@ -254,13 +254,13 @@
 <translation id="6871397658902960384">Begynn å surfe</translation>
 <translation id="454386012157232640">Jeg så ingen annonse</translation>
 <translation id="1448877943847791441">Brave viser den første annonsen din om</translation>
-<translation id="4410793187232041318">Nå tjener du poletter fra Brave Ads.</translation>
+<translation id="4410793187232041318">Nå tjener du poletter fra AI Wize Ads.</translation>
 <translation id="6511854390690723657">Dette er din første Brave-annonse. Trykk for å finne ut mer.</translation>
 <translation id="2070991379950719711">Earn &amp; Gi</translation>
 <translation id="48520986898237073">Fortsett til lommeboken</translation>
 <translation id="3570367516044491911">Angi som standardnettleser</translation>
 <translation id="6800338374677644736">Sett som standardnettleser</translation>
-<translation id="19715420010996093">Velg Brave Browser og trykk på 'Alltid'</translation>
+<translation id="19715420010996093">Velg AI Wize Browser og trykk på 'Alltid'</translation>
 <translation id="3546439402724649282">Brave er allerede angitt som standardnettleser.</translation>
 <translation id="8389661903259423907">Du har allerede angitt en standardnettleser. Du kan endre standardnettleseren i appinnstillingene.</translation>
 <translation id="1545749641540134597">Skann QR-kode</translation>
@@ -269,8 +269,8 @@
 <translation id="2734870894159530879">Logg inn på <ph name="WALLET_PROVIDER"/> for å se saldoen din.</translation>
 <translation id="7658239707568436148">Avbryt</translation>
 <translation id="1201402288615127009">Neste</translation>
-<translation id="8481779960444041069">Sett Brave som standardnettleser for å forbedre sikkerheten</translation>
-<translation id="1938402585819943124">Velg Brave på det neste skjermbildet.</translation>
+<translation id="8481779960444041069">Sett AI Wize som standardnettleser for å forbedre sikkerheten</translation>
+<translation id="1938402585819943124">Velg AI Wize på det neste skjermbildet.</translation>
 <translation id="8926389886865778422">Ikke spør igjen</translation>
 <translation id="745974920645827035">Uavhengig søking med pedre personvern</translation>
 <translation id="4717018805430015801">Brave-søk sporer verken deg, det du spør om eller klikkene dine.</translation>
@@ -340,7 +340,7 @@
 <translation id="2590683710114839102">På datamaskinen din går du til Brave-innstillingene &gt; Synkronisering. Velg «Skriv inn en kode for synkroniseringskjede».</translation>
 <translation id="65315202420929965">Skann denne synkroniseringskoden</translation>
 <translation id="6764016175302339802">Behandle denne koden som et passord. Hvis noen får tak i den, kan vedkommende lese og endre de synkroniserte dataene dine.</translation>
-<translation id="6707003343517029414">På måldatamaskinen går du til Brave Sync i innstillingene og klikker på knappen «Jeg har en synkroniseringskode».\nSkriv inn synkroniseringskjede-kodeordene som vises under.</translation>
+<translation id="6707003343517029414">På måldatamaskinen går du til AI Wize Sync i innstillingene og klikker på knappen «Jeg har en synkroniseringskode».\nSkriv inn synkroniseringskjede-kodeordene som vises under.</translation>
 <translation id="2731921493694251495">Angi synkroniseringskjedekode</translation>
 <translation id="2175927920773552910">QR-kode</translation>
 <translation id="8653433343015102968">Kodeord</translation>
@@ -357,12 +357,12 @@
 <translation id="327726072512457161">Avslutt innstillinger</translation>
 <translation id="8050847734948770789">Aktiver Brave-belønninger</translation>
 <translation id="9187185473011056079">Jeg er med!</translation>
-<translation id="8185825081026121627">Få grunnleggende oppmerksomhetstoken for å se på Brave Rewards-annonser som bevarer personvernet.</translation>
+<translation id="8185825081026121627">Få grunnleggende oppmerksomhetstoken for å se på AI Wize Rewards-annonser som bevarer personvernet.</translation>
 <translation id="5321518976657560663">Tilbakestillingsfeil</translation>
-<translation id="4114170343590425996">En feil oppsto under tilbakestilling av Brave Rewards. Start Brave på nytt, og prøv igjen.</translation>
+<translation id="4114170343590425996">En feil oppsto under tilbakestilling av AI Wize Rewards. Start AI Wize på nytt, og prøv igjen.</translation>
 <translation id="6417420737057016607">Brave-annonser</translation>
-<translation id="5611966874859284786">Vis varslingsannonser når Brave ikke er i bruk</translation>
-<translation id="6606319453795180219">Dette medfører sletting av Brave Rewards og tilbakestilling av alle Brave Rewards-dataene dine</translation>
+<translation id="5611966874859284786">Vis varslingsannonser når AI Wize ikke er i bruk</translation>
+<translation id="6606319453795180219">Dette medfører sletting av AI Wize Rewards og tilbakestilling av alle AI Wize Rewards-dataene dine</translation>
 <translation id="8293206222192510085">Legg til bokmerke</translation>
 <translation id="340492034650766959">Slett bokmerke</translation>
 <translation id="2149973817440762519">Rediger bokmerke</translation>
@@ -381,7 +381,7 @@
 <translation id="2803313416453193357">Åpne mappe</translation>
 <translation id="8985635554450124959">Synkronisering kunne ikke konfigureres</translation>
 <translation id="7173114856073700355">Åpne Innstillinger</translation>
-<translation id="496896260395129787">Denne Brave Sync-kontoen ble slettet fra en annen enhet. Hvis du deaktiverte Sync ved en feil, kan du <ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">Denne AI Wize Sync-kontoen ble slettet fra en annen enhet. Hvis du deaktiverte Sync ved en feil, kan du <ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>opprette kontoen på nytt</translation>
 <translation id="4094590686212463338">Kunne ikke bli med på denne synkroniseringskjeden. Kjeden er slettet.</translation>
 <translation id="4908081302669157000">Telefonnumre, e-postadresser og adresser</translation>
@@ -418,12 +418,12 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="8643377320501056697">Vis toppnettsteder</translation>
 <translation id="7275773481201277457">Vis Brave-statistikk</translation>
 <translation id="8297488609722895137">Foto av <ph name="PHOTO_BY"/></translation>
-<translation id="4761229094276239865">Ved å trykke på 'Begynn å bruke Brave Rewards' samtykker du til <ph name="TERMS_OF_SERVICE"/>.</translation>
+<translation id="4761229094276239865">Ved å trykke på 'Begynn å bruke AI Wize Rewards' samtykker du til <ph name="TERMS_OF_SERVICE"/>.</translation>
 <translation id="3794079107601824147">Få betalt for å se dette bakgrunnsbildet.</translation>
 <translation id="7136586167396205364">Skjul sponsede bilder</translation>
 <translation id="2927095357213611519">Du kan støtte nettskapere med tokener.\nTjen tokener ved å se på annonser som respekterer personvernet.</translation>
 <translation id="2898634658146274982">Åpne eksterne linker i Brave</translation>
-<translation id="5616508928556767259">Åpner linker fra andre apper i en Brave-webvisning. Merk: Brave må være angitt som standardnettleser.</translation>
+<translation id="5616508928556767259">Åpner linker fra andre apper i en Brave-webvisning. Merk: AI Wize må være angitt som standardnettleser.</translation>
 <translation id="2394961582378297792">Logget ut</translation>
 <translation id="5308380583665731573">Koble til</translation>
 <translation id="3368922792935385530">Tilkoblet</translation>
@@ -435,14 +435,14 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="4858636682078269312">Logg på <ph name="WALLET_PROVIDER"/>-kontoen din</translation>
 <translation id="8874184842967597500">Ikke tilkoblet</translation>
 <translation id="2495032782748793764">Standardinnstilling for Brave</translation>
-<translation id="9132378787893584761">Del Brave med dine venner!</translation>
+<translation id="9132378787893584761">Del AI Wize med dine venner!</translation>
 <translation id="717952606991220586">Opp sann, noe er galt. Prøv igjen senere.</translation>
 <translation id="987264212798334818">Generelt</translation>
 <translation id="1116694919640316211">Info</translation>
 <translation id="7961015016161918242">Aldri</translation>
 <translation id="1275213816424141989">Kanskje senere</translation>
 <translation id="4406937629441301400">Få tokener ved å se på dette bildet og viderebetal til skapere. <ph name="LEARN_MORE"/></translation>
-<translation id="1992363542751124282">Tjen tokener for å se på dette bildet. Trykk på 'Begynn å bruke Brave Rewards' for å gjøre krav på andelen din.</translation>
+<translation id="1992363542751124282">Tjen tokener for å se på dette bildet. Trykk på 'Begynn å bruke AI Wize Rewards' for å gjøre krav på andelen din.</translation>
 <translation id="6632345639591919543">Du tjener tokener ved å se på dette bildet.\n<ph name="LEARN_MORE"/></translation>
 <translation id="1465733111003593696">Du får tokener ved å se på dette bildet.</translation>
 <translation id="7877201489035217175">Lær mer om sponsede bilder</translation>
@@ -475,29 +475,29 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="769702552748212954">Tillat all bruk av fingeravtrykk</translation>
 <translation id="876424292214881779">Annonser og andre ekle ting blokkert</translation>
 <translation id="6930134873084561197">Nettsteder inkluderer ofte informasjonskapsler og skript som prøver å identifisere deg og din enhet. De ønsker å finne ut av hvem du er, følge deg på nettet og spore det du gjør på alle nettsider. \n\nBrave blokkerer dette, slik at du kan surfe på nett uten å bli fulgt.</translation>
-<translation id="8553998445606452168">Om Brave Shields</translation>
+<translation id="8553998445606452168">Om AI Wize Shields</translation>
 <translation id="8912304686498704084">OPP</translation>
 <translation id="4963218453264888510">NED</translation>
 <translation id="7474113515179313724">Du blar nå gjennom denne nettsiden uten personvern fra Brave. Fungerer den ikke som den skal med Shields aktivert?</translation>
 <translation id="9055546041146396417">Hvis denne siden ikke ser ut til å fungere, prøv uten Shields.</translation>
 <translation id="1209739344687072997">Rapporter et nettsted som ikke fungerer</translation>
-<translation id="8510478288840333677">Gi utviklerne av Brave beskjed om at dette nettstedet ikke fungerer skikkelig med Shields:</translation>
+<translation id="8510478288840333677">Gi utviklerne av AI Wize beskjed om at dette nettstedet ikke fungerer skikkelig med Shields:</translation>
 <translation id="5429200298326665264">Merk: denne nettstedsadressen blir innsendt med ditt Brave-versjonsnummer og din IP-adresse (som ikke vil bli oppbevart).</translation>
 <translation id="5299848999918506028">Takk skal du ha!</translation>
-<translation id="76550953340008122">Takk for at du ga beskjed til utviklerne av Brave om at noe er galt med dette nettstedet. Vi skal gjøre vårt beste for å rette det!</translation>
+<translation id="76550953340008122">Takk for at du ga beskjed til utviklerne av AI Wize om at noe er galt med dette nettstedet. Vi skal gjøre vårt beste for å rette det!</translation>
 <translation id="650318023204990401">Avanserte kontroller</translation>
 <translation id="1275664486910646411">Vis toppsider i autofullfør</translation>
 <translation id="5370478469168390143">Lagre data på nett</translation>
 <translation id="1118508688433541158">Gå raskere fra side til side og blokker annonser med Brave</translation>
 <translation id="7427391215172269363">Hver dag sparer jeg data ved å surfe på nettet med Brave.</translation>
 <translation id="4776948189086901857">Brave fungerer overalt</translation>
-<translation id="1606322780901645965">Last ned Brave på brave.com på din bærbare PC eller nettbrett for et raskere og mer privat nett</translation>
+<translation id="1606322780901645965">Last ned AI Wize på brave.com på din bærbare PC eller nettbrett for et raskere og mer privat nett</translation>
 <translation id="8374242949413616101">Personvernbeskyttelse</translation>
 <translation id="4955406228638026265">Brave hindrer annonser &amp; trackere i å samle inn informasjon om deg uten ditt samtykke.</translation>
 <translation id="752842701893882688">Spar data og batteri</translation>
 <translation id="1685837926613452362">Uten annonser og sporingskapsler bruker nettsteder mindre data og batteri. Du kan til og med spare penger på operatørgebyrer.</translation>
 <translation id="5440744330377972191">Nettsteder lastes raskere</translation>
-<translation id="3000738865641747653">Mindre lasting av data betyr at nettsteder i Brave laster raskere – opptil 8x raskere enn andre nettlesere.</translation>
+<translation id="3000738865641747653">Mindre lasting av data betyr at nettsteder i AI Wize laster raskere – opptil 8x raskere enn andre nettlesere.</translation>
 <translation id="8903462729414407077">Få ukentlige oppdateringer</translation>
 <translation id="7450323860390658083">Hold deg informert om hvilke av nettstedene du besøker som er mest invaderende for personvernet.\n\nDet er bare du som kan se denne personvernstatistikken. Ingen personopplysninger eller historikk om nettleserbruk forlater noen gang Brave-nettleseren på enheten din.</translation>
 <translation id="6170159749517116894">Slå på personvernrapporter</translation>
@@ -517,7 +517,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="2225863440766607138">Trackere</translation>
 <translation id="2993367530362078067"><ph name="COUNT"/><ph name="COUNT_TEXT"/></translation>
 <translation id="6737820963776538947">Du har blokkert <ph name="COUNT"/> trackere &amp; annonser med Brave-nettleseren de siste 3 timene.</translation>
-<translation id="5005713153542196658">Få opptil 6 ganger raskere nettleserbruk på viktige nyhetsnettsteder i Brave ved å blokkere sporere og annonser.</translation>
+<translation id="5005713153542196658">Få opptil 6 ganger raskere nettleserbruk på viktige nyhetsnettsteder i AI Wize ved å blokkere sporere og annonser.</translation>
 <translation id="7427567994475794038">Slå på Personvernrapporter for å se hvor mange trackere og annonser som har blitt blokkert de siste 3 timene.</translation>
 <translation id="2053891538879944400">Du lagret <ph name="DATA"/> <ph name="DATA_TEXT"/> data med Brave-nettleseren.</translation>
 <translation id="8640064498452534195">Slå på Personvernrapporter for å se hvor mye data du har spart.</translation>
@@ -525,8 +525,8 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="1945330434665345785">Du blokkerte <ph name="COUNT"/> trackere &amp; annonser med Brave-nettleseren  forrige uke.</translation>
 <translation id="2883868922264431515">Tjen polletter ved å se annonser som repekterer personvernet ditt og støtt favorittnettstedene dine.</translation>
 <translation id="7408493389591475748">Begynn å bruke nettleseren for å se personvernrapportering</translation>
-<translation id="9080777565335515917">Sett Brave som din standardnettleser for privat og trygg weblesing.</translation>
-<translation id="1390943217516275883">Lar Brave vise statistikken din for personvern</translation>
+<translation id="9080777565335515917">Sett AI Wize som din standardnettleser for privat og trygg weblesing.</translation>
+<translation id="1390943217516275883">Lar AI Wize vise statistikken din for personvern</translation>
 <translation id="1763352720905582220">Sender en ukentlig personvernrapport</translation>
 <translation id="1811691435325545066">Slett alle personvernrapport-data</translation>
 <translation id="5966003059662780423">Fjern data ved lukking</translation>
@@ -546,7 +546,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="8804164990146287819">Personvernerklæring</translation>
 <translation id="8363792084628930008">Ved å slå på Rewards samtykker du i <ph name="TERMS_OF_SERVICE"/> og <ph name="PRIVACY_POLICY"/>.</translation>
 <translation id="185034574799484512">La oss ta en rask omvisning</translation>
-<translation id="7930505144430343145">Velkommen til Brave Rewards!</translation>
+<translation id="7930505144430343145">Velkommen til AI Wize Rewards!</translation>
 <translation id="3477340970981564961">Brave Private Ads belønner deg med polletter for å støtte innholdsskapere, i motsetning til tradisjonelle annonser – samtidig som den personlige informasjonen din beskyttes.</translation>
 <translation id="6973095375773523904">Hvor vises annonsene?</translation>
 <translation id="4328028439561659455">Brave-privatannonser vises som varslinger på skjerme din. Du bestemmer selv hvor ofte du ser disse annonsene.</translation>
@@ -561,7 +561,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="2353222426385080466">Flere private annonser, flere belønninger.</translation>
 <translation id="1201128255476890443"><ph name="ADS_PER_HOUR"/> belønninger per time</translation>
 <translation id="827315274423079662">Hurra, du er helt klar!</translation>
-<translation id="3895246934788932488">Ved å bruke Brave Rewards styrker du personvernet ditt og bidrar til å gjøre nettet til et bedre sted for alle. Det er bare fantastisk!</translation>
+<translation id="3895246934788932488">Ved å bruke AI Wize Rewards styrker du personvernet ditt og bidrar til å gjøre nettet til et bedre sted for alle. Det er bare fantastisk!</translation>
 <translation id="5705882733397021510">Gå tilbake</translation>
 <translation id="3985567919248057638">La oss ta en kjapp omvisning</translation>
 <translation id="7889432931837317731">Åpne automatisk når mulig</translation>
@@ -613,7 +613,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="8289942708804097960">Kjøp krypto med kreditt- eller debetkort.</translation>
 <translation id="841880029259839903">Send krypto eller overfør fra en konto til en annen.</translation>
 <translation id="151939837774436299">Bytt ut tokener og eiendeler.</translation>
-<translation id="5512897350309216422">Sett inn krypto i Brave Wallet.</translation>
+<translation id="5512897350309216422">Sett inn krypto i AI Wize Wallet.</translation>
 <translation id="1783600039044302171">Sikre kryptoen din med et passord</translation>
 <translation id="3726490322412361740">Angi passord</translation>
 <translation id="3038243139480464605">Bekreft passord</translation>
@@ -636,7 +636,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="5493402808936397665">Aktiver biometri for å raskt åpne lommeboken din uten bruk av passord.</translation>
 <translation id="8030647312184163932">Opplåsing med fingeravtrykk</translation>
 <translation id="4090490645603511157">Bruk biometri for raskt å låse opp lommeboken uten å skrive inn passordet ditt.</translation>
-<translation id="6901810042765869341">Angi gjenopprettingsfrasen for å gjenopprette Brave Wallet-kryptokontoen din.</translation>
+<translation id="6901810042765869341">Angi gjenopprettingsfrasen for å gjenopprette AI Wize Wallet-kryptokontoen din.</translation>
 <translation id="9120654436199628567">Gjenopprette kryptokonto</translation>
 <translation id="4811736040444856406">Vis gjenopprettingsfrase</translation>
 <translation id="283071225285270357">Angi gjenopprettingsfrasen</translation>
@@ -665,7 +665,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="5483736362376139517">1 år</translation>
 <translation id="6979737339423435258">Alle datoer</translation>
 <translation id="6284218950354553099">Automatisk ping dagsforbruk til Brave</translation>
-<translation id="5288333155754958121">Denne anonyme, private pingen gjør at Brave kan estimere antall aktive brukere.</translation>
+<translation id="5288333155754958121">Denne anonyme, private pingen gjør at AI Wize kan estimere antall aktive brukere.</translation>
 <translation id="3819257035322786455">Sikkerhetskopi</translation>
 <translation id="4608713693379664295">Primære kryptokontoer</translation>
 <translation id="4003821417160006384">Sekundære kontoer</translation>
@@ -693,7 +693,7 @@ Er du sikker på at du vil gjøre dette?</translation>
 <translation id="8239147115686034860">Lås Brave-lommeboken automatisk</translation>
 <translation id="414639769490080648">Antall minutter før Brave-lommeboken automatisk låses</translation>
 <translation id="2326850911705720398">Tilbakestill og fjern lommebokdata</translation>
-<translation id="6567712397896147805">Er du sikker på at du vil tilbakestille din Brave Wallet? Dersom lommeboken din ikke er sikkerhetskopiert, fører tilbakestilling til at du mister alle kontoopplysninger (deriblant eventuelle tilknyttede midler). Skriv «<ph name="CONFIRMATION_PHRASE"/>» for å bekrefte.</translation>
+<translation id="6567712397896147805">Er du sikker på at du vil tilbakestille din AI Wize Wallet? Dersom lommeboken din ikke er sikkerhetskopiert, fører tilbakestilling til at du mister alle kontoopplysninger (deriblant eventuelle tilknyttede midler). Skriv «<ph name="CONFIRMATION_PHRASE"/>» for å bekrefte.</translation>
 <translation id="4862812525895306758">Fjern transaksjons- og nonce-info</translation>
 <translation id="5693968582510626466">Sletting av transaksjoner kan være nyttig for utviklere eller ved sletting av tilstanden på en lokal server</translation>
 <translation id="5421107279168565467">Er du sikker på at du vil tilbakestille transaksjons- og nonce-informasjonen? Dette alternativet brukes primært av utviklere som kjører en lokal testserver. Skriv inn «<ph name="CONFIRMATION_PHRASE"/>» for å bekrefte valget.</translation>
@@ -826,13 +826,13 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="1165039591588034296">Feil</translation>
 <translation id="8364362220156372884">Avgift: <ph name="VALUE"/> <ph name="CHAIN_ASSET"/> ($<ph name="FIAT_VALUE"/>)</translation>
 <translation id="2561824823738097741">Bruker du den raskeste nettleseren?</translation>
-<translation id="2065971949051836200">Tre ganger raskere Internett er allerede på telefonen din. Bruk Brave for all nettsurfingen din.</translation>
+<translation id="2065971949051836200">Tre ganger raskere Internett er allerede på telefonen din. Bruk AI Wize for all nettsurfingen din.</translation>
 <translation id="2888278614497184977">Brave = Tre ganger raskere nettsurfing</translation>
 <translation id="6887232551109532144">Få lengre batterilevetid ved hver opplading</translation>
-<translation id="5388885352353494741">Batterisparing er bare et skritt unna. Bruk Brave for all nettsurfingen din.</translation>
+<translation id="5388885352353494741">Batterisparing er bare et skritt unna. Bruk AI Wize for all nettsurfingen din.</translation>
 <translation id="3164151360474408351">Brave = mer liv ved hver opplading</translation>
 <translation id="3211051910418903298">Fyll på mobildataen din sjeldnere</translation>
-<translation id="1092355580602106002">Færre annonser = mindre data på hver side du laster inn. Bruk Brave for all nettsurfingen din.</translation>
+<translation id="1092355580602106002">Færre annonser = mindre data på hver side du laster inn. Bruk AI Wize for all nettsurfingen din.</translation>
 <translation id="623962032102267945">Brave = mindre mobildata på hver side</translation>
 <translation id="4355217341028673744">• Bedre personvern</translation>
 <translation id="3679020972083025535">• Ingen plagsomme annonser</translation>
@@ -956,12 +956,12 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="8922793255489232731">Kunne ikke finne tidssonen for: <ph name="VALUE"/></translation>
 <translation id="6471216025161697462">Koblet til <ph name="VALUE"/></translation>
 <translation id="1968852757206592413">Prøveperiode</translation>
-<translation id="6458565248779152483">Deaktiver Brave VPN</translation>
+<translation id="6458565248779152483">Deaktiver AI Wize VPN</translation>
 <translation id="9080536793704001825">Paus i 15 minutter</translation>
 <translation id="803706420145725977">Paus i 1 time</translation>
 <translation id="4394049700291259645">Slå av</translation>
 <translation id="7733890291091968191">Vis Web3-varsler</translation>
-<translation id="1371627247679035769">\n\n\n\n#### Brave verken sporer deg eller vet hvordan du bruker appen vår, så vi vet ikke hvordan du har satt opp VPN-nettverket. Fortell oss om problemet du opplever, så gjør vi vårt beste for å løse det så raskt vi kan. ####\n\n</translation>
+<translation id="1371627247679035769">\n\n\n\n#### AI Wize verken sporer deg eller vet hvordan du bruker appen vår, så vi vet ikke hvordan du har satt opp VPN-nettverket. Fortell oss om problemet du opplever, så gjør vi vårt beste for å løse det så raskt vi kan. ####\n\n</translation>
 <translation id="3367162038532116157">\n\nVPN Vertsnavn\n <ph name="VALUE"/></translation>
 <translation id="6173438324126027458">\n\nAbonnementstype\n <ph name="VALUE"/></translation>
 <translation id="1478875290576741766">\n\nPlaystore-token\n <ph name="VALUE"/></translation>
@@ -992,7 +992,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="4450893287417543264">Ikke vis igjen</translation>
 <translation id="168154537623654021">Oppdaterer VPN-profilen ...</translation>
 <translation id="7457027586454688423">Skriv inn passordet til Brave-lommeboken din</translation>
-<translation id="4784306439879850873">Merk at Brave ikke kan verifisere hva som skjer hvis du signerer. En signatur kan autorisere praktisk talt enhver operasjon på kontoen din på dine vegne, inkludert (men ikke begrenset til) å gi total kontroll over kontoen din og kryptoressursene sine til nettstedet som kommer med forespørselen. Du må bare signere hvis du er sikker på at du vil utføre denne handlingen, og stoler på nettstedet som kommer med forespørselen.</translation>
+<translation id="4784306439879850873">Merk at AI Wize ikke kan verifisere hva som skjer hvis du signerer. En signatur kan autorisere praktisk talt enhver operasjon på kontoen din på dine vegne, inkludert (men ikke begrenset til) å gi total kontroll over kontoen din og kryptoressursene sine til nettstedet som kommer med forespørselen. Du må bare signere hvis du er sikker på at du vil utføre denne handlingen, og stoler på nettstedet som kommer med forespørselen.</translation>
 <translation id="3474375934783434676">Signer på egen risiko</translation>
 <translation id="7134370164002095282"><ph name="CURRENT"/> av <ph name="SIZE"/></translation>
 <translation id="756701799684433105">Godkjenn transaksjon</translation>
@@ -1039,7 +1039,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="77243237706803459">Initialiser mint 2</translation>
 <translation id="583281660410589416">Ukjent</translation>
 <translation id="5666264859501108700">Brave Rewards-regionen din er angitt som <ph name="COUNTRY_NAME"/></translation>
-<translation id="909076461795862330">Dessverre oppstod det en feil under forsøket på å konfigurere Brave Rewards. Prøv på nytt.</translation>
+<translation id="909076461795862330">Dessverre oppstod det en feil under forsøket på å konfigurere AI Wize Rewards. Prøv på nytt.</translation>
 <translation id="7352651011704765696">Noe gikk galt</translation>
 <translation id="7144878232160441200">Prøv på nytt</translation>
 <translation id="6040143037577758943">Lukk</translation>
@@ -1056,7 +1056,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="4809681171446727314">Få tilgang til private, uavhengige søk rett fra Hjem-skjermen.</translation>
 <translation id="7751715172931488388">Legg til widget</translation>
 <translation id="7285167584112910782">Brave-hurtigsøk</translation>
-<translation id="2326703104633309781">Bruk Brave Translate</translation>
+<translation id="2326703104633309781">Bruk AI Wize Translate</translation>
 <translation id="5802752138057422257">Ikke-ASCII-tegn funnet!</translation>
 <translation id="442709594176931966">Vis opprinnelig melding</translation>
 <translation id="2239252396088484499">Vis meldingen i ASCII-koding</translation>
@@ -1070,22 +1070,22 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="1908159733454294871">En sikkerhetsrisiko er oppdaget</translation>
 <translation id="4220693114674044366">Token-adresse</translation>
 <translation id="5658257029899993935">Link kjøpet til Brave-kontoen din</translation>
-<translation id="1187061015547219282">Link Play Store-kjøpet til Brave-kontoen din for å bruke Brave VPN på andre enheter.</translation>
+<translation id="1187061015547219282">Link Play Store-kjøpet til Brave-kontoen din for å bruke AI Wize VPN på andre enheter.</translation>
 <translation id="6662142137695589205">Link VPN-abonnementet ditt</translation>
-<translation id="2674077112509133024">Utvid Brave Firewall+VPN-beskyttelsen</translation>
+<translation id="2674077112509133024">Utvid AI Wize Firewall+VPN-beskyttelsen</translation>
 <translation id="6365389672683343144">Brave VPN-abonnementet kan sikre opptil 5 enheter – på tvers av Android, iOS og PC/Mac. Bare link Google Play-abonnementet til Brave-kontoen, så er du i gang.</translation>
 <translation id="6610899852831463073">Kan ikke aktivere Safe Browsing</translation>
 <translation id="7954263306665462056">Safe Browsing er deaktivert på enheten din. For å aktivere funksjonen må du kontrollere at Google Play-tjenester er installert og oppdatert.</translation>
 <translation id="6605147707233193230">Slå på for å støtte innholdsskapere</translation>
 <translation id="1609556006143307897">Du bidrar til å støtte innholdsskapere</translation>
-<translation id="6067959437127691361">Ved å bruke Brave rewards kan du støtte innholdsskapere samtidig som du tjener opp BAT.</translation>
+<translation id="6067959437127691361">Ved å bruke AI Wize rewards kan du støtte innholdsskapere samtidig som du tjener opp BAT.</translation>
 <translation id="3264975266761862670">Klar til å begynne å tjene?</translation>
 <translation id="265337947574975838">Koble til en konto, eller opprett en konto hos en av partnerne våre.</translation>
-<translation id="1772961321862399863">For å tjene opp BAT må brukerne tilknytte en partnerkonto til Brave Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så opptjening er ikke mulig. Per nå vil det å slå på Brave rewards automatisk støtte innholdsskapere.</translation>
+<translation id="1772961321862399863">For å tjene opp BAT må brukerne tilknytte en partnerkonto til AI Wize Rewards. Dessverre er det ingen partnere tilgjengelige i din region, så opptjening er ikke mulig. Per nå vil det å slå på AI Wize rewards automatisk støtte innholdsskapere.</translation>
 <translation id="654447476965480878">Les mer om opptjening av BAT</translation>
 <translation id="6278643716658443228">Rewards-innstillinger</translation>
 <translation id="6516984207843289176">Tilknytt konto</translation>
-<translation id="4272136334824111854">Denne måneden har du besøkt <ph name="CREATOR_COUNT"/> innholdsskapere som støttes av Brave Rewards.</translation>
+<translation id="4272136334824111854">Denne måneden har du besøkt <ph name="CREATOR_COUNT"/> innholdsskapere som støttes av AI Wize Rewards.</translation>
 <translation id="6845311459433734326">Koble til en partnerkonto så du kan tjene BAT og ta ut opptjente  belønninger</translation>
 <translation id="928980476243133540">Jeg gjør det senere</translation>
 <translation id="579702532610384533">Tilkoble på nytt</translation>
@@ -1116,7 +1116,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="9085765419770918643">Ingen NFT-er her ennå.</translation>
 <translation id="8445532667841598737">Klar til å legge til noen? Bare klikk nedenfor for å importere.</translation>
 <translation id="5925465310724910998">Vil du at NFT-ene dine skal vises automatisk?</translation>
-<translation id="2827460859891872324">Brave Wallet kan bruke en tredjepartstjeneste til å vise NFT-ene dine automatisk. Brave deler da lomebok-adressene dine med<ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> for å levere denne tjenesten. <ph name="BEGIN_LINK_2"/>Les mer.<ph name="END_LINK_2"/></translation>
+<translation id="2827460859891872324">Brave Wallet kan bruke en tredjepartstjeneste til å vise NFT-ene dine automatisk. AI Wize deler da lomebok-adressene dine med<ph name="BEGIN_LINK_1"/>SimpleHash<ph name="END_LINK_1"/> for å levere denne tjenesten. <ph name="BEGIN_LINK_2"/>Les mer.<ph name="END_LINK_2"/></translation>
 <translation id="7568430944629653319">Aktiver NFT-oppdagelse</translation>
 <translation id="622372328961630111">Legg automatisk til NFT-ene du eier, i lommeboken ved hjelp av tredjeparts-API-er. <ph name="BEGIN_LINK_1"/>Les mer.<ph name="END_LINK_1"/></translation>
 <translation id="7618347247876614969">Address Lookup Table-konto:</translation>
@@ -1129,21 +1129,21 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="5494920125229734069">Velg alle</translation>
 <translation id="5972844218283131174">Fjern avmerkingen på alle</translation>
 <translation id="6322030314101903925">Ingen tilgjengelige eiendeler</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8613144770663526433">Logg på med Brave-lommeboken</translation>
 <translation id="3696514931437952995">Du logger på <ph name="ORIGIN"/>. Brave-lommeboken vil dele lommebok-adressen din med <ph name="ORIGIN"/>.</translation>
 <translation id="1028781062521375153">Vis detaljer</translation>
 <translation id="6759710362319508545">Ressurser</translation>
 <translation id="2471230424465522689">Ikke før</translation>
 <translation id="4841860051609590575">Forespørsels-ID</translation>
-<translation id="1179407411385015942">Leo er en smartassistent drevet av kunstig intelligens, bygget inn direkte i nettleseren</translation>
+<translation id="1179407411385015942">AI Wize Chat er en smartassistent drevet av kunstig intelligens, bygget inn direkte i nettleseren</translation>
 <translation id="4109670531935487117">Vis forslag til autofullføring i adressefeltet</translation>
-<translation id="1250335737108905610">Tilbakestill og fjern Leo-data</translation>
-<translation id="6165101586663336913">Tilbakestilling av Leo-assistenten vil kreve at du velger å bruke Leo i fremtiden, og vil også slette chatloggen din. Sletting av chatloggen vil slette alle tidligere samtaler med Leo. Denne handlingen kan ikke angres.</translation>
-<translation id="3692772534525889713">Knytt Play Store-kjøpet til Brave-kontoen din for å bruke Brave Leo på andre enheter.</translation>
-<translation id="73236265316873967">Leo Premium</translation>
+<translation id="1250335737108905610">Tilbakestill og fjern AI Wize Chat-data</translation>
+<translation id="6165101586663336913">Tilbakestilling av AI Wize Chat-assistenten vil kreve at du velger å bruke AI Wize Chat i fremtiden, og vil også slette chatloggen din. Sletting av chatloggen vil slette alle tidligere samtaler med AI Wize Chat. Denne handlingen kan ikke angres.</translation>
+<translation id="3692772534525889713">Knytt Play Store-kjøpet til Brave-kontoen din for å bruke AI Wize AI Wize Chat på andre enheter.</translation>
+<translation id="73236265316873967">AI Wize Chat Premium</translation>
 <translation id="1166682575529520472">Månedlig</translation>
-<translation id="451189393813405346">Spør Leo</translation>
+<translation id="451189393813405346">Spør AI Wize Chat</translation>
 <translation id="7322560193401221004">Husk hvor du var i avspillingen</translation>
 <translation id="7505951907514709271">Gjenoppta avspillingen fra stedet du sist pauset den på, for enkeltfiler</translation>
 <translation id="6835165453349969605">Husk avspillingspunktet i avspillingslisten</translation>
@@ -1199,7 +1199,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="5319532905552885478">Medieinnholdet er allerede lagt til i standardspillelisten</translation>
 <translation id="4802584673094436231">Forbereder …</translation>
 <translation id="481455355267255546">Neste</translation>
-<translation id="5474757891469990756">Lås opp Leos fulle potensial med Premium:</translation>
+<translation id="5474757891469990756">Lås opp AI Wize Chats fulle potensial med Premium:</translation>
 <translation id="4173478269537830374">Utforsk ulike KI-modeller</translation>
 <translation id="3453542753968940696">Få prioritert tilgang til kraftige modeller med ulike ferdigheter.</translation>
 <translation id="3245401959451976966">Frigjør det kreative potensialet ditt</translation>

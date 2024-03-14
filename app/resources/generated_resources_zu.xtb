@@ -4706,7 +4706,7 @@ Lokhu kungafaka ulwazi mayelana nesofthiwe efakiwe, amafayela, ibhrawuza yakho, 
 <translation id="4576965832613128988"><ph name="WINDOW_TITLE"/> - Ithebhu engasebenzi</translation>
 <translation id="4579453506923101210">Khohlwa ifoni exhunyiwe</translation>
 <translation id="4579581181964204535">Ayikwazi ukusakaza ku-<ph name="HOST_NAME"/>.</translation>
-<translation id="7343272409020602342">Ngezaziso ze-browser, hamba <ph name="LINK_BEGIN"/>Kumasethingi e-Brave browser<ph name="LINK_END"/></translation>
+<translation id="7343272409020602342">Ngezaziso ze-browser, hamba <ph name="LINK_BEGIN"/>Kumasethingi e-AI Wize browser<ph name="LINK_END"/></translation>
 <translation id="4580389561674319558">Kubonakala kubo bonke oxhumana nabo</translation>
 <translation id="4580596421317071374">Amaphasiwedi alondolozwe ku-<ph name="GOOGLE_PASSWORD_MANAGER"/> kule divayisi.</translation>
 <translation id="4581774856936278355">Iphutha ngenkathi ibuyisa i-Linux</translation>
@@ -7561,7 +7561,7 @@ Unamaphasiwedi onakalisiwe angu-# ngokwengeziwe. Umphathi Wephasiwedi Ye-Brave u
 <translation id="6842749380892715807">Uhlu lwesayithi lwe-XML lugcinwe ukudawunilodwa ngomhla ka-<ph name="LAST_DATE_DOWNLOAD"/>.</translation>
 <translation id="6842868554183332230">Amasayithi avamise ukuthola uma usebenzisa ifoni yakho ukusetha ukutholakala kwakho kuma-app engxoxo</translation>
 <translation id="6843264316370513305">Ukulungisa Amaphutha Enethiwekhi</translation>
-<translation id="6843423766595476978">Ok Brave isethwe ngokuphelele</translation>
+<translation id="6843423766595476978">Ok AI Wize isethwe ngokuphelele</translation>
 <translation id="6843725295806269523">thulisa</translation>
 <translation id="6845038076637626672">Vula okwenziwe kukhulu</translation>
 <translation id="6845231585063669905">A kuya ku-Z</translation>
@@ -7748,7 +7748,7 @@ Unamaphasiwedi onakalisiwe angu-# ngokwengeziwe. Umphathi Wephasiwedi Ye-Brave u
 <translation id="6991665348624301627">Khetha indawo</translation>
 <translation id="6992554835374084304">Vula ukuhlola ukupela okuthuthukisiwe</translation>
 <translation id="6993000214273684335">Ithebhu isusiwe eqenjini elingaqanjwanga - <ph name="GROUP_CONTENTS"/></translation>
-<translation id="6993050154661569036">Ibuyekeza i-Brave browser</translation>
+<translation id="6993050154661569036">Ibuyekeza i-AI Wize browser</translation>
 <translation id="6995899638241819463">Iyakuxwayisa uma amaphasiwedi avezwe ekuphulweni kwedatha</translation>
 <translation id="6995984090981858039">Funda ulwazi lwedivayisi ye-ChromeOS nedatha</translation>
 <translation id="6996245928508281884">Vula i-Bluetooth yefoni yakho ne-Wi-Fi</translation>

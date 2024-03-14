@@ -84,7 +84,7 @@
 <translation id="1062407476771304334">Korvaa</translation>
 <translation id="1062628064301375934">Auta meitä tekemään internetistä yksityisempi</translation>
 <translation id="1066964438793906105">Tarkista haittaohjelmien varalta</translation>
-<translation id="3983904244054509097">Turvallisuuden parantamiseksi voit salata salasanat laitteella ennen niiden tallentamista Brave Salasanoihin.</translation>
+<translation id="3983904244054509097">Turvallisuuden parantamiseksi voit salata salasanat laitteella ennen niiden tallentamista AI Wize Salasanoihin.</translation>
 <translation id="5428209950370661546">Muut Brave-palvelut</translation>
 <translation id="106814709658156573">Ota sormenjälki käyttöön pyytämällä lasta koskettamaan sormenjälkitunnistinta, joka on näppäimistön vasemmassa alakulmassa. Lapsen sormenjälkidata tallennetaan turvallisesti vain tälle laitteelle (<ph name="DEVICE_TYPE"/>).</translation>
 <translation id="106855837688344862">Kosketustapahtumat</translation>
@@ -135,7 +135,7 @@
 <translation id="1097658378307015415">Aloita vierailijakäyttö ennen sisäänkirjautumista aktivoidaksesi verkon <ph name="NETWORK_ID"/>.</translation>
 <translation id="4235458114993854152">Näetkö Chromecastisi
     <ph name="BEGIN_LINK"/>
-    Brave Home ‑sovelluksessa<ph name="END_LINK"/>?</translation>
+    AI Wize Home ‑sovelluksessa<ph name="END_LINK"/>?</translation>
 <translation id="1099962274138857708">Kuva kopioitu laitteelta <ph name="DEVICE_NAME"/></translation>
 <translation id="1100504063505580045">Nykyinen kuvake</translation>
 <translation id="1102790815296970136">Katso "<ph name="PERSONALIZED_MEMORY_TITLE"/>" ja muita muistoja täällä</translation>
@@ -203,7 +203,7 @@
 <translation id="8525226238722561998">Braven Lisäsuojaus-ohjelma</translation>
 <translation id="1155545602507378023">Ei, vain tämä laite</translation>
 <translation id="1155816283571436363">Yhdistetään puhelimeen</translation>
-<translation id="3265387852639842086">Sulje Brave Haun sivupaneeli</translation>
+<translation id="3265387852639842086">Sulje AI Wize Haun sivupaneeli</translation>
 <translation id="1158080958325422608">Muuta isoiksi kirjaimiksi</translation>
 <translation id="1158238185437008462">Katso muistoja</translation>
 <translation id="1159879754517035595">Muokkaa laajennusasetuksia</translation>
@@ -230,7 +230,7 @@
 <translation id="1173332155861271669">Passpoint-palveluntarjoajan tiedot</translation>
 <translation id="1173894706177603556">Muuta nimeä</translation>
 <translation id="1174073918202301297">Pikanäppäin lisätty</translation>
-<translation id="4720923867206970346">Yhteytesi on aina suojattu, ellei Brave ilmoita toisin</translation>
+<translation id="4720923867206970346">Yhteytesi on aina suojattu, ellei AI Wize ilmoita toisin</translation>
 <translation id="7425564871384359440">Jos haluat poistaa selailutiedot kaikilta synkronoiduilta laitteiltasi ja Brave-tililtäsi, <ph name="BEGIN_LINK"/>siirry synronointiasetuksiin<ph name="END_LINK"/>.</translation>
 <translation id="1175131936083782305">Järjestelmänvalvoja on poistanut tämän ominaisuuden käytöstä.</translation>
 <translation id="1175364870820465910">Tulo&amp;sta...</translation>
@@ -447,7 +447,7 @@
 <translation id="1340527397989195812">Varmuuskopioi mediatiedostot laitteelta Tiedostot-sovelluksen avulla.</translation>
 <translation id="1341701348342335220">Hyvin tehty!</translation>
 <translation id="1341871421050612057">Synkronointi ei onnistu: <ph name="USERNAME"/></translation>
-<translation id="873343310451048603">Siirry Brave Salasanoihin ja tarkista vaarantuneet salasanat</translation>
+<translation id="873343310451048603">Siirry AI Wize Salasanoihin ja tarkista vaarantuneet salasanat</translation>
 <translation id="1343865611738742294">Anna Linux-sovelluksille USB-laitteiden käyttöoikeus. Linux ei muista USB-laitetta, kun se on poistettu.</translation>
 <translation id="1343920184519992513">Jatka siitä, mihin jäit, ja avaa tietyt sivut</translation>
 <translation id="1344141078024003905">Striimaat näyttöä. Voit keskeyttää tai lopettaa näytön striimauksen milloin tahansa.</translation>
@@ -461,7 +461,7 @@
 <translation id="1348966090521113558">Hiiren saavutettavuusasetukset</translation>
 <translation id="1350962700620017446"><ph name="EXTENSION_NAME"/> haluaa löytää ja käyttää dokumenttiskannereita.</translation>
 <translation id="1352834119074414157">Paketti saattaa olla rikki tai vaarantunut. Sulje tämä ikkuna ja lataa se uudelleen.</translation>
-<translation id="1353275871123211385">Lapsella on oltava vanhemman ylläpitämä Brave-tili, jotta tämä voi käyttää lapsilukkoasetuksia, kuten sovellusten hyväksyntää ja käyttöaikarajoituksia. Koulutili voidaan lisätä myöhemmin Brave Classroomin kaltaisten työkalujen käyttöä varten.</translation>
+<translation id="1353275871123211385">Lapsella on oltava vanhemman ylläpitämä Brave-tili, jotta tämä voi käyttää lapsilukkoasetuksia, kuten sovellusten hyväksyntää ja käyttöaikarajoituksia. Koulutili voidaan lisätä myöhemmin AI Wize Classroomin kaltaisten työkalujen käyttöä varten.</translation>
 <translation id="135389172849514421">Toimii offline-tilassa</translation>
 <translation id="1353980523955420967">PPD:tä ei löydy. Varmista, että Chromebook on verkossa, ja yritä uudelleen.</translation>
 <translation id="1354045473509304750">Hyväksy edelleen, että <ph name="HOST"/> voi käyttää ja liikuttaa kameraasi</translation>
@@ -497,11 +497,11 @@
 <translation id="1383597849754832576">Puhetiedostoja ei voi ladata. Yritä myöhemmin uudelleen.</translation>
 <translation id="1383861834909034572">Avautuu, kun valmis</translation>
 <translation id="1383876407941801731">Haku</translation>
-<translation id="6782559435608225642">Tarjoa Brave Kääntäjää muunkielisillä sivustoilla</translation>
+<translation id="6782559435608225642">Tarjoa AI Wize Kääntäjää muunkielisillä sivustoilla</translation>
 <translation id="1384959399684842514">Lataus keskeytettiin.</translation>
 <translation id="1388253969141979417">Mikrofonin käyttö sallittu</translation>
 <translation id="1388728792929436380"><ph name="DEVICE_TYPE"/> käynnistyy uudelleen, kun päivitykset ovat valmiit.</translation>
-<translation id="1390113502208199250">Sinun on palautettava laitteen tehdasasetukset, jotta voit käyttää Brave Education Upgrade ‐ominaisuuksia.</translation>
+<translation id="1390113502208199250">Sinun on palautettava laitteen tehdasasetukset, jotta voit käyttää AI Wize Education Upgrade ‐ominaisuuksia.</translation>
 <translation id="139013308650923562">Laitteellesi asennettujen fonttien käyttäminen sallittu</translation>
 <translation id="1390306150250850355"><ph name="APP_TYPE"/> esiasennettu laitteelle (<ph name="DEVICE_TYPE"/>)</translation>
 <translation id="1390548061267426325">Avaa tavallisella välilehdellä</translation>
@@ -521,7 +521,7 @@
 <translation id="139911022479327130">Avaa puhelimen lukitus ja vahvista henkilöllisyytesi</translation>
 <translation id="1399261165075500043">Google Playn käyttöehtoja ei voi ladata</translation>
 <translation id="1401216725754314428">Lue lisää aiheeseen liittyvistä sivustoista uudella välilehdellä</translation>
-<translation id="1401308693935339022">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
+<translation id="1401308693935339022">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
 <translation id="1402426911829176748">Yhdistetään laitteeseesi</translation>
 <translation id="1403222014593521787">Välityspalvelimeen ei saada yhteyttä</translation>
 <translation id="1405779994569073824">Kaatui</translation>
@@ -639,7 +639,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1485015260175968628">Se voi nyt:</translation>
 <translation id="1485141095922496924">Versio <ph name="PRODUCT_VERSION"/> (<ph name="PRODUCT_CHANNEL"/>) <ph name="PRODUCT_MODIFIER"/> <ph name="PRODUCT_VERSION_BITS"/></translation>
 <translation id="1485197926103629489">Microsoft 365 edellyttää, että tiedostot tallennetaan OneDriveen. Paikalliset tiedostot siirretään ja muiden sijaintien tiedostot kopioidaan. Tiedostot löytyvät Tiedostot-sovelluksen Microsoft OneDrive ‐kansiosta.</translation>
-<translation id="4562406559168301360">Kun kysyt kysymyksiä, Brave Assistant tarjoaa räätälöityjä vastauksia näytön perusteella</translation>
+<translation id="4562406559168301360">Kun kysyt kysymyksiä, AI Wize Assistant tarjoaa räätälöityjä vastauksia näytön perusteella</translation>
 <translation id="1486096554574027028">Hae salasanoista</translation>
 <translation id="1486486872607808064">Skannaa tämä QR-koodi sen laitteen kameralla, jolla haluat luoda avainkoodin tähän sovellukseen: <ph name="APP_NAME"/></translation>
 <translation id="1487335504823219454">Päällä – muokatut asetukset</translation>
@@ -695,7 +695,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1531734061664070992"><ph name="FIRST_SWITCH"/>, <ph name="SECOND_SWITCH"/> <ph name="THIRD_SWITCH"/></translation>
 <translation id="1533948060140843887">Ymmärrän, että lataus vahingoittaa tietokonettani</translation>
 <translation id="1535228823998016251">Äänekäs</translation>
-<translation id="6823651909636163674">Tämä opas auttaa sinua ymmärtämään valintojasi, jotta Brave toimii haluamallasi tavalla</translation>
+<translation id="6823651909636163674">Tämä opas auttaa sinua ymmärtämään valintojasi, jotta AI Wize toimii haluamallasi tavalla</translation>
 <translation id="1535753739390684432">Kuuntele tietty teksti ääneen luettuna. Valitse ensin Teksti puhuttuna ‐kuvake näytön alareunasta ja korosta sitten tekstiä.</translation>
 <translation id="1536754031901697553">Katkaistaan yhteyttä...</translation>
 <translation id="1537254971476575106">Koko näytön suurennus</translation>
@@ -706,7 +706,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1541346352678737112">Verkkoa ei löytynyt</translation>
 <translation id="154198613844929213">{0,plural, =0{Poistetaan nyt}=1{Poistetaan 1 sekunnin päästä}other{Poistetaan # sekunnin päästä}}</translation>
 <translation id="1542137295869176367">Kirjautumisdataasi ei voitu päivittää</translation>
-<translation id="1542524755306892917">Tämän avulla Brave Assistant voi tarjota räätälöityjä vastauksia, kun <ph name="SUPERVISED_USER_NAME"/> esittää kysymyksiä.</translation>
+<translation id="1542524755306892917">Tämän avulla AI Wize Assistant voi tarjota räätälöityjä vastauksia, kun <ph name="SUPERVISED_USER_NAME"/> esittää kysymyksiä.</translation>
 <translation id="1543284117603151572">Edgestä tuodut</translation>
 <translation id="1543538514740974167">Tule tänne nopeammin</translation>
 <translation id="1544588554445317666">Kokeile lyhyempää tiedoston nimeä tai tallenna toiseen kansioon</translation>
@@ -848,7 +848,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1632293440289326475">Laita Virransäästö päälle akunkeston parantamiseksi?</translation>
 <translation id="1632756664321977232">Rajaustyökalu</translation>
 <translation id="163309982320328737">Alkuperäinen merkkileveys on Full</translation>
-<translation id="5778813027254879911">Poista Brave Assistant käytöstä</translation>
+<translation id="5778813027254879911">Poista AI Wize Assistant käytöstä</translation>
 <translation id="1634224622052500893">Wi-Fi-verkko löydetty</translation>
 <translation id="1634783886312010422">Vaihdoitko tämän salasanan jo muualla (<ph name="WEBSITE"/>)?</translation>
 <translation id="1636212173818785548">OK</translation>
@@ -883,7 +883,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1651008383952180276">Kirjoita sama tunnuslause kahdesti.</translation>
 <translation id="1651609627703324721">Tällä välilehdellä esitetään VR-sisältöä kuulokemikrofoniin</translation>
 <translation id="1652326691684645429">Ota lähijakaminen käyttöön</translation>
-<translation id="3549478477646243075">Jos haluat käyttää Salasanoja macOS-avainnipun kanssa, käynnistä Brave uudelleen ja salli pääsy avainnippuun. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
+<translation id="3549478477646243075">Jos haluat käyttää Salasanoja macOS-avainnipun kanssa, käynnistä AI Wize uudelleen ja salli pääsy avainnippuun. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
 <translation id="1653958716132599769">Ryhmittele toisiinsa liittyvät välilehdet</translation>
 <translation id="1654580009054503925">Pyyntöjen näyttäminen kielletty</translation>
 <translation id="1656528038316521561">Taustan läpinäkyvyys</translation>
@@ -971,7 +971,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1723824996674794290">Uusi ikku&amp;na</translation>
 <translation id="1724801751621173132">Syöttötapa</translation>
 <translation id="1725562816265788801">Välilehden vieritys</translation>
-<translation id="1726294682426724172">Uusia ominaisuuksia ovat esimerkiksi Brave Kuvien Magic Eraser, joka poistaa häiriötekijät, ja parannetut videopuhelutyökalut.</translation>
+<translation id="1726294682426724172">Uusia ominaisuuksia ovat esimerkiksi AI Wize Kuvien Magic Eraser, joka poistaa häiriötekijät, ja parannetut videopuhelutyökalut.</translation>
 <translation id="1726503915437308071">Kursiivi</translation>
 <translation id="1729533290416704613">Määrittää myös omnibox-hakujen aloitussivun.</translation>
 <translation id="1730666151302379551">Salasana unohtunut</translation>
@@ -1067,7 +1067,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1802687198411089702">Tämä sivu ei vastaa. Voit odottaa sitä tai sulkea sen.</translation>
 <translation id="1803531841600994172">Kieli, johon käännetään</translation>
 <translation id="1803545009660609783">Kouluta uudelleen</translation>
-<translation id="5111958118389067813">Näet hyödyllisempiä tietoja tai ehdotuksia esimerkiksi Brave Haun sivupaneelissa</translation>
+<translation id="5111958118389067813">Näet hyödyllisempiä tietoja tai ehdotuksia esimerkiksi AI Wize Haun sivupaneelissa</translation>
 <translation id="1805545709333681504">Lisää vanha salasana</translation>
 <translation id="1805738995123446102">Taustavälilehti käyttää mikrofonia.</translation>
 <translation id="1805822111539868586">Tarkasta näkymät</translation>
@@ -1082,7 +1082,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
     <ph name="LINE_BREAKS2"/>
     Tämä ei vaikuta sovelluksiin tai sisältöön muilla laitteilla.</translation>
 <translation id="1809734401532861917">Lisää kirjanmerkit, salasanat ja muut asetukset tilille <ph name="USER_EMAIL_ADDRESS"/></translation>
-<translation id="2145951525304369600">Jos haluat käyttää tallennettuja salasanoja puhelimellasi, seuraa QR-koodia, lataa Brave iOS:lle ja kirjaudu sisään Brave-tilille.</translation>
+<translation id="2145951525304369600">Jos haluat käyttää tallennettuja salasanoja puhelimellasi, seuraa QR-koodia, lataa AI Wize iOS:lle ja kirjaudu sisään Brave-tilille.</translation>
 <translation id="1810366086647840386">Kuvan palvelin</translation>
 <translation id="1812027881030482584"><ph name="SITE_ETLD_PLUS_ONE"/> ei voi jatkaa tämän käyttöä: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="1812284620455788548"><ph name="TAB_NAME"/> striimataan</translation>
@@ -1155,7 +1155,7 @@ Sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä. Voit päättä
 <translation id="1861262398884155592">Tämä kansio on tyhjä</translation>
 <translation id="1862311223300693744">Oletko asentanut mitään erityisiä VPN-, välityspalvelin-, palomuuri- tai
     NAS-ohjelmistoja?</translation>
-<translation id="7675404561163771060">Seurannan esto on tilapäisesti poissa käytöstä Kun Brave päivittää ominaisuutta, sivustot voivat tilapäisesti käyttää kolmannen osapuolen evästeitä, ellet estä niitä. <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">Seurannan esto on tilapäisesti poissa käytöstä Kun AI Wize päivittää ominaisuutta, sivustot voivat tilapäisesti käyttää kolmannen osapuolen evästeitä, ellet estä niitä. <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
 <translation id="1863182668524159459">Sarjaportteja ei löytynyt</translation>
 <translation id="1864111464094315414">Kirjaudu</translation>
 <translation id="1864400682872660285">Viileä</translation>
@@ -1685,7 +1685,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2262477216570151239">Viive ennen toistoa</translation>
 <translation id="2263189956353037928">Kirjaudu ulos ja kirjaudu takaisin sisään</translation>
 <translation id="2263371730707937087">Näytön päivitysväli</translation>
-<translation id="7829329302663082098">Palautteesi auttaa meitä parantamaan Brave Castia, joten se on meille
+<translation id="7829329302663082098">Palautteesi auttaa meitä parantamaan AI Wize Castia, joten se on meille
     tärkeää. Jos tarvitset apua Cast-ongelmien korjaamiseen, siirry
     <ph name="BEGIN_LINK"/>ohjekeskukseen
     <ph name="END_LINK"/>.</translation>
@@ -1758,9 +1758,9 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="23030561267973084"><ph name="EXTENSION_NAME"/> on pyytänyt lisäoikeuksia.</translation>
 <translation id="2306794767168143227">Tallenna tälle laitteelle (<ph name="BRAND"/>)</translation>
 <translation id="2307462900900812319">Määritä verkko</translation>
-<translation id="2307553512430195144">Jos hyväksyt tämän, Brave Assistant odottaa lepotilassa, kunnes se kuulee sanat "Hey Brave" ja tunnistaa Voice Matchilla puhujaksi käyttäjän <ph name="SUPERVISED_USER_NAME"/>.
+<translation id="2307553512430195144">Jos hyväksyt tämän, AI Wize Assistant odottaa lepotilassa, kunnes se kuulee sanat "Hey Brave" ja tunnistaa Voice Matchilla puhujaksi käyttäjän <ph name="SUPERVISED_USER_NAME"/>.
     <ph name="BR"/>
-    Voice Matchin avulla Brave Assistant voi tunnistaa käyttäjän (<ph name="SUPERVISED_USER_NAME"/>) äänen laitteellasi (<ph name="DEVICE_TYPE"/>) ja erottaa hänet muista.
+    Voice Matchin avulla AI Wize Assistant voi tunnistaa käyttäjän (<ph name="SUPERVISED_USER_NAME"/>) äänen laitteellasi (<ph name="DEVICE_TYPE"/>) ja erottaa hänet muista.
     <ph name="BR"/>
     Assistant luo tallenteista yksilöllisen äänimallin, joka tallennetaan vain lapsen laitteille. Lapsen äänimalli voidaan lähettää väliaikaisesti Bravelle, jotta hänen äänensä voidaan tunnistaa tarkemmin
     <ph name="BR"/>
@@ -1834,7 +1834,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2359345697448000899">Hallinnoi laajennuksiasi valitsemalla Työkalut-valikosta Laajennukset.</translation>
 <translation id="2359556993567737338">Yhdistä Bluetooth-laite</translation>
 <translation id="2359808026110333948">Jatka</translation>
-<translation id="5184079355364489096">Saat yhteenvedon sivusta, samantyyppisiä hakuja ja muita hyödyllisiä tietoja sivusta, kun valitset yläpalkista Brave Haun sivupaneelin</translation>
+<translation id="5184079355364489096">Saat yhteenvedon sivusta, samantyyppisiä hakuja ja muita hyödyllisiä tietoja sivusta, kun valitset yläpalkista AI Wize Haun sivupaneelin</translation>
 <translation id="2361100938102002520">Olet lisäämässä ylläpidettyä profiilia tähän selaimeen. Järjestelmänvalvoja hallitsee profiilia ja pääsee sen dataan.</translation>
 <translation id="236117173274098341">Optimoi</translation>
 <translation id="2361340419970998028">Lähetetään palautetta…</translation>
@@ -1920,7 +1920,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2428939361789119025">Laita Wi-Fi pois päältä</translation>
 <translation id="2428978615149723410">nämä ostoskorit</translation>
 <translation id="2431027948063157455">Brave Assistantin lataaminen epäonnistui. Tarkista verkkoyhteys ja yritä uudelleen.</translation>
-<translation id="243179355394256322">Organisaatiosi sallii laitteiden rekisteröinnin vain valtuutetuille käyttäjille. Tällä käyttäjällä ei ole lupaa rekisteröidä laitteita. Varmista hallintakonsolin Käyttäjät-kohdasta, että käyttäjällä on lupa rekisteröidä Brave Meet ‑laitteita.</translation>
+<translation id="243179355394256322">Organisaatiosi sallii laitteiden rekisteröinnin vain valtuutetuille käyttäjille. Tällä käyttäjällä ei ole lupaa rekisteröidä laitteita. Varmista hallintakonsolin Käyttäjät-kohdasta, että käyttäjällä on lupa rekisteröidä AI Wize Meet ‑laitteita.</translation>
 <translation id="243275146591958220">Peru lataus</translation>
 <translation id="2433452467737464329">Lisää kyselyparametri URL-osoitteeseen, jos haluat päivittää sivun automaattisesti: chrome://network/?refresh=&lt;sec&gt;</translation>
 <translation id="2433507940547922241">Ulkoasu</translation>
@@ -2144,7 +2144,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2594832159966169099">Ylläpidä V8-suojausta</translation>
 <translation id="2129873093718581193">Hae Bravesta tai kirjoita URL-osoite</translation>
 <translation id="2597073208962000830">Lähijakaminen etsii lähellä olevia laitteita Bluetooth-haun avulla.</translation>
-<translation id="2024721991200132064">Uusi Brave saatavilla</translation>
+<translation id="2024721991200132064">Uusi AI Wize saatavilla</translation>
 <translation id="2599048253926156421">Käyttäjätunnus kopioitu leikepöydälle</translation>
 <translation id="2602501489742255173">Aloita pyyhkäisemällä ylös</translation>
 <translation id="2603115962224169880">Puhdista tietokone</translation>
@@ -2178,7 +2178,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2620215283731032047">Tiedostoa (<ph name="FILE_NAME"/>) ei voi ladata turvallisesti.</translation>
 <translation id="2620245777360407679">Hotspotiin yhdistetyt laitteet</translation>
 <translation id="2620436844016719705">Järjestelmä</translation>
-<translation id="6040544299680716440">Kouluta Brave Assistantin äänimalli</translation>
+<translation id="6040544299680716440">Kouluta AI Wize Assistantin äänimalli</translation>
 <translation id="26224892172169984">Älä anna sivustojen määrittää protokollien käsittelypalveluita</translation>
 <translation id="262373406453641243">Colemak</translation>
 <translation id="2624045385113367716">MIDI-laitteiden ohjaus ja uudelleenohjelmointi sallittu</translation>
@@ -2311,7 +2311,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2727712005121231835">Todellinen koko</translation>
 <translation id="2727744317940422214">Jotain meni pieleen. Lähetä palautetta ja lisää kuvaukseen #bruschetta. Virhekoodi on <ph name="ERROR"/>. Tyhjennys epäonnistui. Sinun on ehkä tehtävä se manuaalisesti.</translation>
 <translation id="8988766505821653206">Poista lisäksi selaustiedot (<ph name="URL"/>). Tämä saattaa kirjata sinut ulos Brave.comista. <ph name="LEARN_MORE"/></translation>
-<translation id="1880711225003762469">Brave etsii uusia tapoja vähentää seurantaa ja pitää sinut entistä paremmin turvassa selatessasi. Brave myös <ph name="ESTIMATE_INTERESTS_LINK"/> ja antaa sinun ylläpitää niitä. Avaamasi sivustot voivat sitten kysyä Bravelta kiinnostuksen kohteitasi näyttääkseen sinulle mainoksia.</translation>
+<translation id="1880711225003762469">Brave etsii uusia tapoja vähentää seurantaa ja pitää sinut entistä paremmin turvassa selatessasi. AI Wize myös <ph name="ESTIMATE_INTERESTS_LINK"/> ja antaa sinun ylläpitää niitä. Avaamasi sivustot voivat sitten kysyä Bravelta kiinnostuksen kohteitasi näyttääkseen sinulle mainoksia.</translation>
 <translation id="2729577602370119849">Käytä ja ylläpidä tulostimia helposti</translation>
 <translation id="2730029791981212295">Varmuuskopioidaan Linux-sovelluksia ja ‑tiedostoja</translation>
 <translation id="2730596696987224099">Valitse oma</translation>
@@ -2390,7 +2390,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2777251078198759550">Poista tämä säilö</translation>
 <translation id="2777525873368474674">Liitä linkki kuvaan</translation>
 <translation id="2778471504622896352">Etäsovellusten lisääminen Brave-käyttöjärjestelmän käynnistysohjelmaan</translation>
-<translation id="2779728796406650689">Tämän avulla Brave Assistant voi antaa räätälöityjä vastauksia, kun kysyt jotain.</translation>
+<translation id="2779728796406650689">Tämän avulla AI Wize Assistant voi antaa räätälöityjä vastauksia, kun kysyt jotain.</translation>
 <translation id="2781692009645368755">Google Pay</translation>
 <translation id="2781800772148653810">Laajennukset on sallittu tällä sivustolla</translation>
 <translation id="2782104745158847185">Virhe Linux-sovelluksen asennuksessa</translation>
@@ -2611,7 +2611,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2948300991547862301">Siirry kohtaan <ph name="PAGE_TITLE"/></translation>
 <translation id="29488703364906173">Nopea, yksinkertainen ja turvallinen verkkoselain, joka on suunniteltu nykypäivän verkon tarpeisiin.</translation>
 <translation id="2948873690143673075">Unohdetaanko tämä tilaus?</translation>
-<translation id="2949289451367477459">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen. <ph name="BEGIN_LINK1"/>Lue lisää<ph name="END_LINK1"/></translation>
+<translation id="2949289451367477459">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen. <ph name="BEGIN_LINK1"/>Lue lisää<ph name="END_LINK1"/></translation>
 <translation id="2950666755714083615">Kyllä kiitos</translation>
 <translation id="2953019166882260872">Liitä puhelin johdolla</translation>
 <translation id="2953210795988451570">Tietoturvapäivitykset ovat päättyneet. Päivitä uuteen Chromebookiin.</translation>
@@ -2637,7 +2637,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="2973324205039581528">Mykistä sivusto</translation>
 <translation id="2975761176769946178">URL-osoite vaaditaan</translation>
 <translation id="2976557544729462544">Jotkin laitteet edellyttävät datan käyttösuojan poistamista käytöstä, jotta ne toimivat oikein tai täydellä teholla.</translation>
-<translation id="2725393676899559475">Käytä Brave Hakua ja Braven älykkäitä ominaisuuksia selatessasi</translation>
+<translation id="2725393676899559475">Käytä AI Wize Hakua ja Braven älykkäitä ominaisuuksia selatessasi</translation>
 <translation id="2977480621796371840">Poista ryhmästä</translation>
 <translation id="2979639724566107830">Avaa uudessa ikkunassa</translation>
 <translation id="2979893796619951531">Poissulje sivusto</translation>
@@ -2837,7 +2837,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3132277757485842847">Menetimme yhteyden puhelimeesi. Varmista, että puhelin on lähellä, sen lukitus on avattu ja Bluetooth ja Wi-Fi ovat päällä.</translation>
 <translation id="3132896062549112541">Sääntö</translation>
 <translation id="3132996321662585180">Päivitä päivittäin</translation>
-<translation id="7825985227053490471">Laita synkronointi päälle, niin Brave voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
+<translation id="7825985227053490471">Laita synkronointi päälle, niin AI Wize voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
 <translation id="3134393957315651797">Valitse kokeilutila tälle kokeilulle: <ph name="EXPERIMENT_NAME"/>. Kokeilun kuvaus: <ph name="EXPERIMENT_DESCRIPTION"/></translation>
 <translation id="3139925690611372679">Keltainen oletusavatar</translation>
 <translation id="3141093262818886744">Avaa silti</translation>
@@ -2876,7 +2876,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3177430966804511955">Hallinnoi eristettyjä verkkosovelluksia (beta)</translation>
 <translation id="31774765611822736">Uusi välilehti vasemmalle</translation>
 <translation id="3177909033752230686">Sivun kieli:</translation>
-<translation id="3177914167275935955">Laitteesi sisältää Brave Education Upgraden, mutta käyttäjänimeäsi ei ole liitetty Brave for Education ‐tiliin. Luo Brave for Education ‐tili siirtymällä toisella laitteella osoitteeseen g.co/workspace/edusignup.</translation>
+<translation id="3177914167275935955">Laitteesi sisältää AI Wize Education Upgraden, mutta käyttäjänimeäsi ei ole liitetty AI Wize for Education ‐tiliin. Luo AI Wize for Education ‐tili siirtymällä toisella laitteella osoitteeseen g.co/workspace/edusignup.</translation>
 <translation id="3179982752812949580">Tekstin fontti</translation>
 <translation id="3180284704187420717">Tallenna esimerkiksi kirjanmerkit ja salasanat synkronoimalla</translation>
 <translation id="3201899458094819285">Selaussuoja (suojaa sinua ja laitettasi vaarallisilta sivustoilta)</translation>
@@ -2962,7 +2962,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3248902735035392926">Turvallisuudella on väliä. Käytä nyt hetki <ph name="BEGIN_LINK"/>laajennusten tarkistamiseen<ph name="END_LINK"/>.</translation>
 <translation id="3249323165366527554">Rekisteröidy ja kirjaudu nopeammin, kun <ph name="EMAIL"/>-sähköpostin salasana tallennetaan automaattisesti tänne:<ph name="GOOGLE_PASSWORD_MANAGER"/>.</translation>
 <translation id="3251119461199395237">Tiedostojen synkronointi</translation>
-<translation id="3251714896659475029">Salli, että <ph name="SUPERVISED_USER_NAME"/> voi käyttää Brave Assistantia sanomalla "Hey Brave"</translation>
+<translation id="3251714896659475029">Salli, että <ph name="SUPERVISED_USER_NAME"/> voi käyttää AI Wize Assistantia sanomalla "Hey Brave"</translation>
 <translation id="3251759466064201842">&lt;Ei osa varmennetta&gt;</translation>
 <translation id="325238099842880997">Määritä digitaaliset pelisäännöt, joiden avulla lapsesi voi pelata, tutkia ja oppia sekä tehdä koulutehtäviä kotona.</translation>
 <translation id="3253225298092156258">Ei saatavilla</translation>
@@ -3016,7 +3016,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3288047731229977326">Kehittäjätilassa olevat laajennukset voivat vahingoittaa tietokonettasi. Jos et ole kehittäjä, poista kehittäjätilassa olevat laajennukset käytöstä varmuuden vuoksi.</translation>
 <translation id="3289668031376215426">Automaattiset isot kirjaimet</translation>
 <translation id="3289856944988573801">Tarkista päivitykset Ethernetin tai Wi-Fin kautta.</translation>
-<translation id="5729822798455842061">Voit estää aiheet, joita et halua jakaa sivustoille. Brave myös poistaa yli neljä viikkoa vanhat aiheet automaattisesti.</translation>
+<translation id="5729822798455842061">Voit estää aiheet, joita et halua jakaa sivustoille. AI Wize myös poistaa yli neljä viikkoa vanhat aiheet automaattisesti.</translation>
 <translation id="3290249595466894471">Lähettää myös pienen näytteen sivuista, latauksista, laajennustoiminnasta ja järjestelmätiedoista auttaakseen löytämään uusia uhkia</translation>
 <translation id="3293181007446299124">Selaushistoriasi pysyy yksityisenä laitteellasi. Raportit lähetetään viiveellä henkilöllisyytesi suojaamiseksi.</translation>
 <translation id="3293644607209440645">Lähetä tämä sivu</translation>
@@ -3045,7 +3045,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
         <ph name="BREAK"/>
         Voit muuttaa asetuksia korttivalikossa. Lisää vaihtoehtoja löydät Yksilöi Bravea ‑osiosta.</translation>
 <translation id="3308134619352333507">Piilota painike</translation>
-<translation id="3308852433423051161">Ladataan Brave Assistantia…</translation>
+<translation id="3308852433423051161">Ladataan AI Wize Assistantia…</translation>
 <translation id="3309330461362844500">Varmenneprofiilin tunnus</translation>
 <translation id="3311445899360743395">Tähän sovellukseen liittyvä data saatetaan poistaa tältä laitteelta.</translation>
 <translation id="3312470654018965389">Määritetään Linux-säilöä</translation>
@@ -3416,7 +3416,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3617062258679844578">Klikkaa napauttamalla kosketuslevyä sen painamisen sijaan</translation>
 <translation id="3617891479562106823">Taustat eivät ole käytettävissä. Yritä myöhemmin uudelleen.</translation>
 <translation id="3618286417582819036">Tapahtui virhe</translation>
-<translation id="2934767186202458579"><ph name="RECIPIENT_NAME"/> voi nyt käyttää käyttäjätunnustasi ja salasanaasi, kun hän käyttää Brave Salasanoja. Pyydä häntä kirjautumaan sisään osoitteessa <ph name="WEBSITE"/>.</translation>
+<translation id="2934767186202458579"><ph name="RECIPIENT_NAME"/> voi nyt käyttää käyttäjätunnustasi ja salasanaasi, kun hän käyttää AI Wize Salasanoja. Pyydä häntä kirjautumaan sisään osoitteessa <ph name="WEBSITE"/>.</translation>
 <translation id="3619115746895587757">Cappuccino</translation>
 <translation id="3619294456800709762">Sivustot voivat siirtyä pikkuruututilaan automaattisesti</translation>
 <translation id="3620136223548713675">Maantieteellinen sijainti</translation>
@@ -3525,7 +3525,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3701515417135397388">Varoitus, jos salasana vaarantuu tietosuojaloukkauksessa</translation>
 <translation id="3702797829026927713"><ph name="BEGIN_PARAGRAPH1"/>Lisää sen jälleenmyyjän nimi ja kaupan numero, jolle tämä demolaite määritetään*. <ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Jos et tiedä kaupan numeroa, voit jatkaa demotilan asennusta kirjoittamalla "0000". <ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>* Huom. Brave käyttää näitä tietoja tunnistaakseen, mikä demotilan versio sopii laitteelle, ja demotilan käytön mittaamiseen.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>* Huom. AI Wize käyttää näitä tietoja tunnistaakseen, mikä demotilan versio sopii laitteelle, ja demotilan käytön mittaamiseen.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="3703166520839776970">Jos ongelma jatkuu, valitse alta Lisätietoja, niin <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> antaa lisäohjeita.</translation>
 <translation id="3703699162703116302">Tukipyyntö päivitetty</translation>
 <translation id="370415077757856453">JavaScript estetty</translation>
@@ -3566,7 +3566,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="372722114124766626">Vain kerran</translation>
 <translation id="3727332897090187514">Ei lisättyä muistiinpanoa</translation>
 <translation id="3727473233247516571">Siirtymisvälimuistissa oleva alakehys: <ph name="BACK_FORWARD_CACHE_PAGE_URL"/></translation>
-<translation id="8077319455765501118">Jos haluat käyttää Brave Salasanoja macOS-avainnipun kanssa, käynnistä Brave uudelleen ja salli pääsy avainnippuun. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
+<translation id="8077319455765501118">Jos haluat käyttää AI Wize Salasanoja macOS-avainnipun kanssa, käynnistä AI Wize uudelleen ja salli pääsy avainnippuun. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
 <translation id="3728188878314831180">Peilaa ilmoituksia puhelimestasi</translation>
 <translation id="3728681439294129328">Määritä verkko-osoite</translation>
 <translation id="3729506734996624908">Sallitut sivustot</translation>
@@ -3607,7 +3607,7 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="375636864092143889">Sivusto käyttää mikrofoniasi</translation>
 <translation id="3756485814916578707">Striimataan näyttöä</translation>
 <translation id="3756578970075173856">Aseta PIN-koodi</translation>
-<translation id="3756795331760037744">Salli Brave Assistantin käyttää lapsen (<ph name="SUPERVISED_USER_NAME"/>) näytöllä olevia tietoja auttamiseen</translation>
+<translation id="3756795331760037744">Salli AI Wize Assistantin käyttää lapsen (<ph name="SUPERVISED_USER_NAME"/>) näytöllä olevia tietoja auttamiseen</translation>
 <translation id="3756806135608816820">Sivustot voivat pyytää lupaa etsiä Bluetooth-laitteita</translation>
 <translation id="3757567010566591880">Irrota yläpalkista</translation>
 <translation id="3757733214359997190">Sivustoja ei löytynyt</translation>
@@ -3616,11 +3616,11 @@ Voit ylläpitää tilin asetuksia asentamalla laitteellesi Family Link ‑sovell
 <translation id="3759933321830434300">Estä joitain verkkosivujen osia</translation>
 <translation id="3760460896538743390">Tarkista &amp;taustasivu</translation>
 <translation id="3761556954875533505">Saako sivusto muokata tiedostoja?</translation>
-<translation id="1768338058980345433">Voit estää sivustot, joita et halua. Brave myös poistaa listalta automaattisesti yli 30 päivää vanhat sivustot.</translation>
+<translation id="1768338058980345433">Voit estää sivustot, joita et halua. AI Wize myös poistaa listalta automaattisesti yli 30 päivää vanhat sivustot.</translation>
 <translation id="3763549179847864476">Yksityisyysoppaan takaisin-painike</translation>
 <translation id="3764314093345384080">Koontiversion yksityiskohtaiset tiedot</translation>
 <translation id="3764583730281406327">{NUM_DEVICES,plural, =1{Käyttää USB-laitetta}other{Käyttää # USB-laitetta}}</translation>
-<translation id="2822415296462217623">Saako Brave etsiä alennuksia ostoskorisi sisällön perusteella?</translation>
+<translation id="2822415296462217623">Saako AI Wize etsiä alennuksia ostoskorisi sisällön perusteella?</translation>
 <translation id="3764974059056958214">{COUNT,plural, =1{Lähetetään (<ph name="ATTACHMENTS"/> → <ph name="DEVICE_NAME"/>)}other{Lähetetään (<ph name="ATTACHMENTS"/> → <ph name="DEVICE_NAME"/>)}}</translation>
 <translation id="3765055238058255342">tämäntyyppinen kortti</translation>
 <translation id="3765246971671567135">Esittelytilan offline-käytäntöjä ei voitu lukea.</translation>
@@ -3775,7 +3775,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="3873315167136380065">Jos haluat ottaa tämän käyttöön, <ph name="BEGIN_LINK"/>nollaa synkronointi<ph name="END_LINK"/> poistaaksesi synkronoinnin tunnuslauseen</translation>
 <translation id="3873423927483480833">Näytä PIN-koodit</translation>
 <translation id="3873915545594852654">ARC++:n kanssa tapahtui ongelma.</translation>
-<translation id="3412613348266550587">Laita Brave Assistant päälle</translation>
+<translation id="3412613348266550587">Laita AI Wize Assistant päälle</translation>
 <translation id="3875815154304214043"><ph name="APP_NAME"/> on asetettu avautumaan uuteen selainvälilehteen. Myös tuetut linkit avautuvat selaimessa. <ph name="BEGIN_LINK_LEARN_MORE"/>Lue lisää<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="3877075909000773256">Käyttäjän <ph name="USER_NAME"/> laitteen lähijakamisasetukset, jaetaan tilillä <ph name="USER_EMAIL"/>.</translation>
 <translation id="3878445208930547646">Tältä sivustolta ei saa kopioida</translation>
@@ -4093,7 +4093,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="4116704186509653070">Avaa uudelleen</translation>
 <translation id="4117714603282104018">Kosketuslevyn haptinen palaute</translation>
 <translation id="4118579674665737931">Käynnistä laite uudelleen ja yritä sen jälkeen uudelleen.</translation>
-<translation id="412022815379960229">Aloita muistojen tutkiskelu Brave Kuvista, kun olet kirjautunut sisään</translation>
+<translation id="412022815379960229">Aloita muistojen tutkiskelu AI Wize Kuvista, kun olet kirjautunut sisään</translation>
 <translation id="4120388883569225797">Tätä suojausavainta ei voi nollata</translation>
 <translation id="4120817667028078560">Polku on liian pitkä</translation>
 <translation id="4124823734405044952">Suojausavaimesi on nollattu</translation>
@@ -4112,7 +4112,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="4134838386867070505">Vaihe 1/4: Kuvaile ongelmaa</translation>
 <translation id="4135746311382563554">Braven ja ChromeOS:n lisäkäyttöehdot</translation>
 <translation id="4136203100490971508">Yövalo sammuu automaattisesti, kun aurinko nousee.</translation>
-<translation id="41365691917097717">Jatkamalla otat ADB-virheenkorjauksen käyttöön Android-sovellusten luomista ja testausta varten. Huomaa, että tämä sallii sellaisten Android-sovellusten asentamisen, joita Brave ei ole vahvistanut. Ominaisuuden käytöstä poistaminen edellyttää tehdasasetusten palautusta.</translation>
+<translation id="41365691917097717">Jatkamalla otat ADB-virheenkorjauksen käyttöön Android-sovellusten luomista ja testausta varten. Huomaa, että tämä sallii sellaisten Android-sovellusten asentamisen, joita AI Wize ei ole vahvistanut. Ominaisuuden käytöstä poistaminen edellyttää tehdasasetusten palautusta.</translation>
 <translation id="4137923333452716643">Korosta teksti, jonka haluat avata lukutilassa</translation>
 <translation id="4138267921960073861">Näytä käyttäjänimet ja kuvat kirjautumisruudulla</translation>
 <translation id="4138598238327913711">Kieliopin tarkistus tällä hetkellä käytettävissä vain englanniksi</translation>
@@ -4275,7 +4275,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="4275830172053184480">Käynnistä laite uudelleen</translation>
 <translation id="4277434192562187284">XML-määrityksen lähde</translation>
 <translation id="4278390842282768270">Sallittu</translation>
-<translation id="4278498748067682896">Käytät Kiosk &amp; Signage Upgrade ‑lisenssiä, joka sallii laitteen käyttämisen vain kioski- tai opastetilassa. Jos haluat käyttäjien kirjautuvan laitteelle, palaa takaisin ja rekisteröidy Brave Enterprise Upgraden avulla.</translation>
+<translation id="4278498748067682896">Käytät Kiosk &amp; Signage Upgrade ‑lisenssiä, joka sallii laitteen käyttämisen vain kioski- tai opastetilassa. Jos haluat käyttäjien kirjautuvan laitteelle, palaa takaisin ja rekisteröidy AI Wize Enterprise Upgraden avulla.</translation>
 <translation id="4278779213160967034">Tämä voi kulua muutama minuutti. Ladataan tiedostoja.</translation>
 <translation id="4279129444466079448">Voit asentaa tälle laitteelle enintään <ph name="PROFILE_LIMIT"/> eSIM-profiilia. Poista ensin jokin profiileista, niin voit lisätä uuden.</translation>
 <translation id="4280325816108262082">Laitteen yhteys katkeaa automaattisesti, kun laite sammutetaan tai sitä ei käytetä</translation>
@@ -4312,7 +4312,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="4305817255990598646">Vaihda</translation>
 <translation id="4306119971288449206">Sovellusten näyttämiseen tulee käyttää sisältötyyppiä <ph name="CONTENT_TYPE"/>.</translation>
 <translation id="4307992518367153382">Perustiedot</translation>
-<translation id="4309165024397827958">Salli laitteen sijainnin käyttäminen Android-sovelluksille ja ‑palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
+<translation id="4309165024397827958">Salli laitteen sijainnin käyttäminen Android-sovelluksille ja ‑palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
 <translation id="4309183709806093061">Jaa myös järjestelmän audio. Laite mykistetään palautteen estämiseksi.</translation>
 <translation id="4309420042698375243"><ph name="NUM_KILOBYTES"/> kt (<ph name="NUM_KILOBYTES_LIVE"/> kt live)</translation>
 <translation id="4310132194679586591">Avaa linkki valitsemalla sovellus laitteella</translation>
@@ -4618,7 +4618,7 @@ Tällaisia tietoja voivat olla esimerkiksi asennetut ohjelmistot, tiedostot, sel
 <translation id="8936733030396193625">Brave Assistantin äänisyöte</translation>
 <translation id="4547659257713117923">Ei välilehtiä muista laitteista</translation>
 <translation id="4547672827276975204">Aseta automaattisesti</translation>
-<translation id="6161402170488044025">Lisää käyttäjätunnuksesi tälle sivustolle, jotta Brave Salasanat voi tallentaa kirjautumistietosi</translation>
+<translation id="6161402170488044025">Lisää käyttäjätunnuksesi tälle sivustolle, jotta AI Wize Salasanat voi tallentaa kirjautumistietosi</translation>
 <translation id="4549791035683739768">Suojausavaimeesi ei ole tallennettu sormenjälkiä.</translation>
 <translation id="4550737096585299960">Yritä uudelleen muutaman minuutin kuluttua.</translation>
 <translation id="4550926046134589611">Jotkin tuetut linkit avautuvat edelleen tässä sovelluksessa: <ph name="APP_NAME"/>.</translation>
@@ -4881,7 +4881,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="4762718786438001384">Laitteen levytila kriittisellä tasolla</translation>
 <translation id="4762849514113423887">Virheellinen salasana. Yritä uudelleen.</translation>
 <translation id="4763408175235639573">Seuraavat evästeet asetettiin katsellessasi sivua</translation>
-<translation id="4763757134413542119"><ph name="USER_EMAIL"/> ei ole kelvollinen Brave for Education ‐tili. Ota yhteyttä järjestelmänvalvojaan. Jos olet järjestelmänvalvoja, voit ottaa organisaation käyttöön osoitteessa g.co/workspace/edusignup</translation>
+<translation id="4763757134413542119"><ph name="USER_EMAIL"/> ei ole kelvollinen AI Wize for Education ‐tili. Ota yhteyttä järjestelmänvalvojaan. Jos olet järjestelmänvalvoja, voit ottaa organisaation käyttöön osoitteessa g.co/workspace/edusignup</translation>
 <translation id="4765524037138975789">{MONTHS,plural, =1{Laite tallennetaan kuukaudeksi, ja seuraavalla kerralla voit luoda yhteyden ilman koodia. Järjestelmänvalvoja asettaa sen.}other{Laite tallennetaan {MONTHS} kuukaudeksi, ja seuraavalla kerralla voit luoda yhteyden ilman koodia. Järjestelmänvalvoja asettaa sen.}}</translation>
 <translation id="476563889641554689">Valitse Lensillä haettava alue</translation>
 <translation id="4766551476047591055">{MINUTES,plural, =0{Tarkistetaan julkista avainta ja eheyspalikkaa… Alle minuutti jäljellä}=1{Tarkistetaan julkista avainta ja eheyspalikkaa… 1 minuutti jäljellä}other{Tarkistetaan julkista avainta ja eheyspalikkaa… # minuuttia jäljellä}}</translation>
@@ -4973,7 +4973,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="4831226137013573603">mikrofonin mykistys</translation>
 <translation id="4833683849865011483">Tulostuspalvelimelta löytyi yksi tulostin</translation>
 <translation id="4836504898754963407">Sormenjälkien ylläpito</translation>
-<translation id="7528143959514158804">Vaihdetaanko takaisin Brave Hakuun?</translation>
+<translation id="7528143959514158804">Vaihdetaanko takaisin AI Wize Hakuun?</translation>
 <translation id="4837926214103741331">Sinulla ei ole tämän laitteen käyttölupaa. Pyydä laitteen omistajalta kirjautumislupa.</translation>
 <translation id="4837952862063191349">Jos haluat avata paikallisten tietojesi lukituksen ja palauttaa ne, anna vanhan laitteen <ph name="DEVICE_TYPE"/> salasana.</translation>
 <translation id="4838170306476614339">Katsele puhelimesi kuvia, mediaa ja ilmoituksia</translation>
@@ -5015,7 +5015,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="486635084936119914">Avaa tietyn tyyppiset tiedostot automaattisesti latauksen jälkeen.</translation>
 <translation id="4867272607148176509">Vanhemmat voivat hyväksyä tai estää sovelluksia, asettaa aikarajoituksia ja hallita selaamista. Oppilaitoksen tili voidaan lisätä myöhemmin, jotta voit käyttää useimpia koulumateriaaleja.</translation>
 <translation id="4867433544163083783">Tarkista nyt, voiko välilehdet järjestää</translation>
-<translation id="4868281708609571334">Opeta Brave Assistant tunnistamaan, kun <ph name="SUPERVISED_USER_NAME"/> puhuu</translation>
+<translation id="4868281708609571334">Opeta AI Wize Assistant tunnistamaan, kun <ph name="SUPERVISED_USER_NAME"/> puhuu</translation>
 <translation id="4868284252360267853">Valintaikkuna ei ole tällä hetkellä kohdistettuna. Kohdista valintaikkunaan painamalla Komento Vaihto A.</translation>
 <translation id="4869170227080975044">Lukea ChromeOS:n verkkotiedot.</translation>
 <translation id="4870724079713069532">Tällä sovelluksella voit avata ja muokata tuettuja tiedostoja Resurssienhallinnasta tai muista sovelluksista. Jos haluat valita, mitkä tiedostot avautuvat oletuksena tässä sovelluksessa, avaa <ph name="BEGIN_LINK"/>Windows-asetukset<ph name="END_LINK"/>.</translation>
@@ -5092,7 +5092,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="4918134162946436591">Näytä vihjepeitto</translation>
 <translation id="4918762404810341788">Kopioi ja avaa</translation>
 <translation id="4921348630401250116">Teksti puheeksi</translation>
-<translation id="1298471559729553235">Jos haluat käyttää Salasanoja käyttöjärjestelmäsi kanssa, käynnistä Brave uudelleen ja salli pääsy tietokoneesi Salasanoihin. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
+<translation id="1298471559729553235">Jos haluat käyttää Salasanoja käyttöjärjestelmäsi kanssa, käynnistä AI Wize uudelleen ja salli pääsy tietokoneesi Salasanoihin. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
 <translation id="492299503953721473">Poista Android-sovellukset</translation>
 <translation id="492363500327720082">Poistetaan: <ph name="APP_NAME"/>…</translation>
 <translation id="4924002401726507608">Lähetä palautetta</translation>
@@ -5165,7 +5165,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="6298472828264321822">Jos haluat poistaa selailutiedot kaikilta synkronoiduilta laitteiltasi ja Brave-tililtäsi, <ph name="BEGIN_LINK"/>kirjaudu sisään<ph name="END_LINK"/>.</translation>
 <translation id="8231468153901265517">Salasanaasi ei jaettu. Tarkista internetyhteytesi ja varmista, että olet kirjautunut Braveen. Yritä sitten uudelleen.</translation>
 <translation id="4985206706500620449">Olet sallinut kolmannen osapuolen evästeet tällä sivustolla</translation>
-<translation id="6814280300414171363">Voit valita synkronoitavan sisällön asetuksissa. Brave voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="6814280300414171363">Voit valita synkronoitavan sisällön asetuksissa. AI Wize voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
 <translation id="4986728572522335985">Tämä poistaa kaiken suojausavaimen datan, mukaan lukien sen PIN-koodin</translation>
 <translation id="4987944280765486504">Kun lataus on valmis, Chromebook käynnistyy kerran uudelleen ja voit jatkaa käyttöönottoa.</translation>
 <translation id="4988526792673242964">Sivut</translation>
@@ -5543,7 +5543,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="529175790091471945">Alusta tämä laite</translation>
 <translation id="529296195492126134">Lyhytkestoista tilaa ei tueta. Ota yhteyttä järjestelmänvalvojaasi.</translation>
 <translation id="5293170712604732402">Palauta kaikki asetukset alkuperäisiksi oletusasetuksiksi</translation>
-<translation id="5731649986150437468">Jos sivusto yrittää varastaa salasanaasi tai jos lataat haitallisen tiedoston, Brave voi myös lähettää Selaussuojan tarkistettavaksi URL-osoitteita, mukaan lukien osia sivujen sisällöstä.</translation>
+<translation id="5731649986150437468">Jos sivusto yrittää varastaa salasanaasi tai jos lataat haitallisen tiedoston, AI Wize voi myös lähettää Selaussuojan tarkistettavaksi URL-osoitteita, mukaan lukien osia sivujen sisällöstä.</translation>
 <translation id="5294097441441645251">On alettava pienellä kirjaimella tai alaviivalla</translation>
 <translation id="5295188371713072404">Laajennukset voivat pyytää pääsyä tälle sivustolle</translation>
 <translation id="5295349205180144885">Välilehtiryhmän nimi: <ph name="NAME"/></translation>
@@ -5605,7 +5605,7 @@ Loitonna painamalla Ctrl + Alt + kirkkauden vähennys.</translation>
 <translation id="5344128444027639014"><ph name="BATTERY_PERCENTAGE"/> % (oikea)</translation>
 <translation id="534449933710420173">Nimetön kansio</translation>
 <translation id="5345916423802287046">Käynnistä sovellus kun kirjaudut sisään</translation>
-<translation id="5305142070289640735">Laita Brave Assistant pois päältä</translation>
+<translation id="5305142070289640735">Laita AI Wize Assistant pois päältä</translation>
 <translation id="535123479159372765">Toiselta laitteelta kopioitu teksti</translation>
 <translation id="5352033265844765294">Aikaleimaus</translation>
 <translation id="5352257124367865087">Muuta sivustolupia</translation>
@@ -5770,7 +5770,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="5477089831058413614">Määritä hotspot: <ph name="DEVICE_TYPE"/></translation>
 <translation id="5481273127572794904">Useiden tiedostojen automaattinen lataaminen kielletty</translation>
 <translation id="5481941284378890518">Lisää lähellä olevia tulostimia</translation>
-<translation id="3389019465696070233">Kirjaudu sisään, niin Brave voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
+<translation id="3389019465696070233">Kirjaudu sisään, niin AI Wize voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
 <translation id="8126971123326806277">Kun asetus on päällä, avainkoodit luodaan iCloud-avainnippuun ja ovat saatavilla kaikilla Apple-laitteilla. Kun asetus on pois päältä, avainkoodit luodaan tämän laitteen Brave-profiiliin.</translation>
 <translation id="5484772771923374861">{NUM_DAYS,plural, =1{<ph name="MANAGER"/> edellyttää, että varmuuskopioit datasi ja palautat laitteen (<ph name="DEVICE_TYPE"/>) tänään. <ph name="LINK_BEGIN"/>Näytä tiedot<ph name="LINK_END"/>}other{<ph name="MANAGER"/> edellyttää, että varmuuskopioit datasi ja palautat laitteen (<ph name="DEVICE_TYPE"/>) {NUM_DAYS} päivän sisällä. <ph name="LINK_BEGIN"/>Lue lisää<ph name="LINK_END"/>}}</translation>
 <translation id="5485102783864353244">Lisää sovellus</translation>
@@ -6059,7 +6059,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="5705882733397021510">Takaisin</translation>
 <translation id="5707185214361380026">Laajennuksen lataaminen seuraavasta kohteesta epäonnistui:</translation>
 <translation id="5708171344853220004">Microsoftin päänimi</translation>
-<translation id="239760341987199724">Aseta Brave oletusselaimeksi</translation>
+<translation id="239760341987199724">Aseta AI Wize oletusselaimeksi</translation>
 <translation id="5711010025974903573">Palvelulokit</translation>
 <translation id="5711324642850167289">Mitkään sovellukset eivät saa käyttää mikrofonia</translation>
 <translation id="5711983031544731014">Avaaminen ei onnistu. Lisää salasana.</translation>
@@ -6099,7 +6099,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="5742787970423162234">Verkkosovellukset, joissa on parannettuja ominaisuuksia. <ph name="BEGIN_LINK_LEARN_MORE"/>Lue lisää<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="5743267941164890801">Sovelluksen uudempi versio on jo asennettu</translation>
 <translation id="5743501966138291117">PIN-koodin enimmäispituus on 12 merkkiä lukituksen automaattista avausta varten</translation>
-<translation id="1947639598318989608">Saako Brave etsiä personoituja alennuksia ostoskoriesi sisällölle?</translation>
+<translation id="1947639598318989608">Saako AI Wize etsiä personoituja alennuksia ostoskoriesi sisällölle?</translation>
 <translation id="5746169159649715125">Tallenna PDF-muodossa</translation>
 <translation id="5747785204778348146">Kehittäjä – epävakaa</translation>
 <translation id="5747809636523347288">Liitä ja avaa <ph name="URL"/></translation>
@@ -6107,7 +6107,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="5750288053043553775">0</translation>
 <translation id="5751345516399502412">Tarkista valmius yhteyden jakamiseen</translation>
 <translation id="5753570386948603678">Poista historiasta</translation>
-<translation id="5755022574660047665">muistoja Brave Kuvista</translation>
+<translation id="5755022574660047665">muistoja AI Wize Kuvista</translation>
 <translation id="5756163054456765343">Ohj&amp;ekeskus</translation>
 <translation id="5757187557809630523">seuraava kappale</translation>
 <translation id="5758631781033351321">Näet lukulistasi täällä</translation>
@@ -6334,7 +6334,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="5932209916647644605"><ph name="MANAGER"/> edellyttää, että <ph name="DEVICE_TYPE"/> päivitetään välittömästi.</translation>
 <translation id="5932224571077948991">Sivustolla on häiritseviä tai harhaanjohtavia mainoksia</translation>
 <translation id="59324397759951282">USB-laite (<ph name="MANUFACTURER_NAME"/>)</translation>
-<translation id="5932441198730183141">Sinulla ei ole tarpeeksi lisenssejä tämän Brave Meet ‑laitteen rekisteröintiin. Osta lisää lisenssejä myyntitiimiltä. Jos sinun ei mielestäsi pitäisi nähdä tätä viestiä, ota yhteyttä tukeen.</translation>
+<translation id="5932441198730183141">Sinulla ei ole tarpeeksi lisenssejä tämän AI Wize Meet ‑laitteen rekisteröintiin. Osta lisää lisenssejä myyntitiimiltä. Jos sinun ei mielestäsi pitäisi nähdä tätä viestiä, ota yhteyttä tukeen.</translation>
 <translation id="5932881020239635062">Sarjanumero</translation>
 <translation id="5933376509899483611">Aikavyöhyke</translation>
 <translation id="5933522550144185133"><ph name="APP_NAME"/> käyttää kameraa ja mikrofonia</translation>
@@ -6412,10 +6412,10 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="5993508466487156420">{NUM_SITES,plural, =1{1 sivuston tarkistus valmis}other{{NUM_SITES} sivuston tarkistus valmis}}</translation>
 <translation id="5997337190805127100">Lisätietoja sivustojen käyttöoikeuksista</translation>
 <translation id="5998458948782718639">Auta parantamaan automaattista täyttöä</translation>
-<translation id="7378272621879677055">Olet ottanut käyttöön kolmannen osapuolen evästeiden testauksen. Asetussivulla ei voi ohittaa tätä. Jos haluat ottaa kolmannen osapuolen evästeet uudelleen käyttöön, käynnistä Brave uudelleen niin, että ominaisuus ei ole käytössä.</translation>
+<translation id="7378272621879677055">Olet ottanut käyttöön kolmannen osapuolen evästeiden testauksen. Asetussivulla ei voi ohittaa tätä. Jos haluat ottaa kolmannen osapuolen evästeet uudelleen käyttöön, käynnistä AI Wize uudelleen niin, että ominaisuus ei ole käytössä.</translation>
 <translation id="5999630716831179808">Äänet</translation>
 <translation id="6000758707621254961"><ph name="RESULT_COUNT"/> tulosta: <ph name="SEARCH_TEXT"/></translation>
-<translation id="7244657448429919169">Kirjaudu sisään, niin Brave voi ehdottaa välilehtiryhmiä</translation>
+<translation id="7244657448429919169">Kirjaudu sisään, niin AI Wize voi ehdottaa välilehtiryhmiä</translation>
 <translation id="6001839398155993679">Aloita</translation>
 <translation id="6002122790816966947">Omat laitteet</translation>
 <translation id="6002210667729577411">Siirrä ryhmä uuteen ikkunaan</translation>
@@ -6426,7 +6426,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6006392003290068688"><ph name="PERMISSION_1"/> ja <ph name="PERMISSION_2"/> poistettu</translation>
 <translation id="6006484371116297560">Perinteinen</translation>
 <translation id="6007240208646052708">Puhehaku ei ole käytettävissä kielelläsi.</translation>
-<translation id="2626511583221319874">Kun tämä on päällä, Brave Kääntäjä tarjoaa sivustojen kääntämistä haluamallesi kielelle. Se voi myös kääntää sivustoja automaattisesti.</translation>
+<translation id="2626511583221319874">Kun tämä on päällä, AI Wize Kääntäjä tarjoaa sivustojen kääntämistä haluamallesi kielelle. Se voi myös kääntää sivustoja automaattisesti.</translation>
 <translation id="6011193465932186973">Sormenjälki</translation>
 <translation id="6011308810877101166">Paranna hakuehdotuksia</translation>
 <translation id="6011908034087870826">Lähetetään linkki: <ph name="DEVICE_NAME"/></translation>
@@ -6509,7 +6509,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6075075631258766703">Todenna puhelin</translation>
 <translation id="6075731018162044558">Hups! Järjestelmä ei voinut hankkia laitteelle pitkäaikaista API-käyttötunnusta.</translation>
 <translation id="6075907793831890935">Vaihtaa tietoja isäntää <ph name="HOSTNAME"/> käyttävän laitteen kanssa.</translation>
-<translation id="6076175485108489240">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen. <ph name="BEGIN_LINK1"/>Lue lisää<ph name="END_LINK1"/></translation>
+<translation id="6076175485108489240">Käytä sijaintia. Salli laitteen sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen. <ph name="BEGIN_LINK1"/>Lue lisää<ph name="END_LINK1"/></translation>
 <translation id="6076491747490570887">Kylmänharmaa</translation>
 <translation id="6076576896267434196">Laajennus (<ph name="EXTENSION_NAME"/>) haluaa pääsyn tilillesi</translation>
 <translation id="6077131872140550515">Poista ensisijaisista</translation>
@@ -6556,7 +6556,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6106167152849320869">Jos valitsit edellisessä vaiheessa diagnostiikka- ja käyttödatan lähettämisen, dataa kerätään asennetuista sovelluksista.</translation>
 <translation id="6108952804512516814">Luo tekoälyn avulla</translation>
 <translation id="6111718295497931251">Poista pääsy Google Driveen</translation>
-<translation id="2150860531873558613">Ota Brave Assistant käyttöön</translation>
+<translation id="2150860531873558613">Ota AI Wize Assistant käyttöön</translation>
 <translation id="6112727384379533756">Lisää tukipyyntö</translation>
 <translation id="6112931163620622315">Tarkista puhelimesi</translation>
 <translation id="8589850327914845460">Valitse oletushakukone Brave-selainta ja käynnistysohjelmaa (<ph name="DEVICE_TYPE"/>) varten</translation>
@@ -6687,7 +6687,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6208725777148613371">Tallennus kohteeseen <ph name="WEB_DRIVE"/> epäonnistui – <ph name="INTERRUPT_REASON"/></translation>
 <translation id="6209135795240627482">Sovellukset ja verkkosivustot, joilla on mikrofonilupa ja järjestelmäpalvelut voivat käyttää mikrofonia</translation>
 <translation id="6209838773933913227">Päivitetään osaa</translation>
-<translation id="6209908325007204267">Laitteesi sisältää Brave Enterprise ‑päivityksen, mutta käyttäjänimelläsi ei löydy Enterprise-tiliä. Luo Enterprise-tili siirtymällä osoitteeseen g.co/BraveEnterpriseAccount toisella laitteella.</translation>
+<translation id="6209908325007204267">Laitteesi sisältää AI Wize Enterprise ‑päivityksen, mutta käyttäjänimelläsi ei löydy Enterprise-tiliä. Luo Enterprise-tili siirtymällä osoitteeseen g.co/BraveEnterpriseAccount toisella laitteella.</translation>
 <translation id="6210282067670792090">Käytä tätä pikanäppäintä osoitepalkissa hakukoneiden ja sivustohaun pikakomentojen kanssa</translation>
 <translation id="621172521139737651">{COUNT,plural, =0{Avaa kaikki &amp;uudella välilehtiryhmällä}=1{Avaa &amp;uudella välilehtiryhmällä}other{Avaa kaikki ({COUNT}) &amp;uudella välilehtiryhmällä}}</translation>
 <translation id="6212039847102026977">Näytä verkkoyhteyksien lisäasetukset</translation>
@@ -6719,7 +6719,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="7946072537360476411">Braven käyttöehdot muuttuvat 31.3.</translation>
 <translation id="6234474535228214774">Odottaa asennusta</translation>
 <translation id="6235208551686043831">Laitteen kamera on mennyt päälle. Aseta eSIMin QR-koodi kameran eteen.</translation>
-<translation id="7933920059744288500">Voit valita Braven asetuksista, mitä selaindataa synkronoidaan. Voit muuttaa Brave-selaimesta asennettujen verkkosovellusten synkronointia <ph name="LINK_BEGIN"/>laiteasetuksista<ph name="LINK_END"/>. Brave voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="7933920059744288500">Voit valita Braven asetuksista, mitä selaindataa synkronoidaan. Voit muuttaa Brave-selaimesta asennettujen verkkosovellusten synkronointia <ph name="LINK_BEGIN"/>laiteasetuksista<ph name="LINK_END"/>. AI Wize voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
 <translation id="6237474966939441970">Näyttökynä muistiinpanosovellus</translation>
 <translation id="623755660902014047">Lukutila</translation>
 <translation id="6238767809035845642">Toiselta laitteelta jaettu teksti</translation>
@@ -6727,7 +6727,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6238982280403036866">JavaScriptin käyttö sallittu</translation>
 <translation id="6239558157302047471">Lataa kehys uudelleen</translation>
 <translation id="6240821072888636753">Kysy aina</translation>
-<translation id="4174528239215311406">Jos haluat käyttää Brave Salasanoja käyttöjärjestelmäsi kanssa, käynnistä Brave uudelleen ja salli pääsy tietokoneesi Salasanoihin. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
+<translation id="4174528239215311406">Jos haluat käyttää AI Wize Salasanoja käyttöjärjestelmäsi kanssa, käynnistä AI Wize uudelleen ja salli pääsy tietokoneesi Salasanoihin. Välilehdet avataan uudelleen uudelleenkäynnistyksen jälkeen.</translation>
 <translation id="6241530762627360640">Käyttää järjestelmäsi kanssa laitepariksi liitettyjen Bluetooth-laitteiden tietoja ja löytää lähellä olevia Bluetooth-laitteita.</translation>
 <translation id="6241844896329831164">Käyttöoikeutta ei tarvita</translation>
 <translation id="6242574558232861452">Tarkistetaan, noudatetaanko organisaatiosi tietosuojakäytäntöjä.</translation>
@@ -6820,7 +6820,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="630948338437014525">muistot</translation>
 <translation id="6309510305002439352">Mikrofoni poistettu käytöstä</translation>
 <translation id="6310141306111263820">eSIM-profiilia ei voitu asentaa. Pyydä apua operaattorilta.</translation>
-<translation id="6500340165622970282">Bravea ei voi käynnistää, koska profiilia avattaessa tapahtui virhe. Yritä käynnistää Brave uudelleen.</translation>
+<translation id="6500340165622970282">Bravea ei voi käynnistää, koska profiilia avattaessa tapahtui virhe. Yritä käynnistää AI Wize uudelleen.</translation>
 <translation id="6312567056350025599">{NUM_DAYS,plural, =1{Turvatarkistus suoritettiin 1 päivä sitten}other{Turvatarkistus suoritettiin {NUM_DAYS} päivää sitten}}</translation>
 <translation id="6312638141433622592">Tarjoa lukijatilaa, jos artikkeli tukee sitä</translation>
 <translation id="6313950457058510656">Laita yhteyden pikajakaminen pois päältä</translation>
@@ -6870,7 +6870,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6351178441572658285">Sovellusten kielet</translation>
 <translation id="6354918092619878358">SECG elliptinen käyrä secp256r1 (eli ANSI X9.62 prime256v1, NIST P-256)</translation>
 <translation id="635609604405270300">Pidä laite päällä</translation>
-<translation id="4817583816512767754">Salattuja tietojasi voi lukea vain tunnuslauseesi avulla. Tunnuslausetta ei lähetetä Bravelle eikä Brave tallenna sitä. Jos unohdat tunnuslauseesi tai haluat muokata tätä asetusta, <ph name="BEGIN_LINK"/>synkronointi on nollattava<ph name="END_LINK"/>.</translation>
+<translation id="4817583816512767754">Salattuja tietojasi voi lukea vain tunnuslauseesi avulla. Tunnuslausetta ei lähetetä Bravelle eikä AI Wize tallenna sitä. Jos unohdat tunnuslauseesi tai haluat muokata tätä asetusta, <ph name="BEGIN_LINK"/>synkronointi on nollattava<ph name="END_LINK"/>.</translation>
 <translation id="6356718524173428713">Siirry alaspäin sivulla vierittämällä ylöspäin</translation>
 <translation id="6356893102071098867">Tarkista, että olet valinnut oikean tilin</translation>
 <translation id="6357305427698525450">Jotkin tuetut linkit avautuvat edelleen näissä sovelluksissa: <ph name="APP_NAME"/> tai <ph name="APP_NAME_2"/>.</translation>
@@ -7081,7 +7081,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6532206849875187177">Suojaus ja sisäänkirjautuminen</translation>
 <translation id="6532527800157340614">Sisäänkirjautuminen epäonnistui, koska käyttötunnustasi ei voitu noutaa. Tarkista verkkoyhteys ja yritä uudelleen.</translation>
 <translation id="6532663472409656417">Yritys rekisteröity</translation>
-<translation id="2326703104633309781">Käytä Brave Kääntäjää</translation>
+<translation id="2326703104633309781">Käytä AI Wize Kääntäjää</translation>
 <translation id="65334502113648172">Pienennä tai laajenna näyttöaluetta nuolinäppäimillä. Voit liikkua näyttöalueella painamalla vaihto ja + ja käyttämällä sitten nuolinäppäimiä.</translation>
 <translation id="6535331821390304775"><ph name="ORIGIN"/> saa aina avata tällaiset linkit sovelluksessaan</translation>
 <translation id="653659894138286600">Skannaa asiakirjoja ja kuvia</translation>
@@ -7104,7 +7104,7 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6547854317475115430"><ph name="BEGIN_PARAGRAPH1"/>Braven sijaintipalvelut pyrkivät arvioimaan laitteen sijainnin esim. Wi-Fi- ja mobiiliverkkojen sekä anturien avulla.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Voit milloin tahansa laittaa Androidin sijainnin pois päältä laitteellasi: avaa Asetukset &gt; Sovellukset &gt; Google Play Kauppa &gt; Hallitse Android-asetuksia &gt; Suojaus ja sijainti &gt; Sijainti. Voit myös laittaa pois päältä Wi-Fi- ja mobiiliverkkojen sekä antureiden käytön Androidin sijainnin määrityksessä: laita samasta valikosta "Braven sijaintitietojen tarkkuus" pois päältä.<ph name="END_PARAGRAPH2"/></translation>
 <translation id="654871471440386944">Laitetaanko näppäimistöselaaminen päälle?</translation>
-<translation id="2892841437207418944">Avaa Brave Haun sivupaneeli</translation>
+<translation id="2892841437207418944">Avaa AI Wize Haun sivupaneeli</translation>
 <translation id="6549038875972762904">Valitse asetukset uudelleen</translation>
 <translation id="6550675742724504774">Asetukset</translation>
 <translation id="6550790536557204077"><ph name="MANAGER"/> <ph name="BEGIN_LINK"/>ylläpitää profiiliasi<ph name="END_LINK"/></translation>
@@ -7159,9 +7159,9 @@ Julkinen eksponentti (<ph name="PUBLIC_EXPONENT_NUM_BITS"/> bittiä):
 <translation id="6595322909015878027">Automaattinen siirtyminen pikkuruututilaan kielletty</translation>
 <translation id="5089633794744090226">{COUNT,plural, =1{Vaarantunut salasana vaihdettu onnistuneesti.
 
-Sinulla on vielä # vaarantunut salasana. Brave Salasanat suosittelee, että tarkistat sen heti.}other{Vaarantunut salasana vaihdettu onnistuneesti.
+Sinulla on vielä # vaarantunut salasana. AI Wize Salasanat suosittelee, että tarkistat sen heti.}other{Vaarantunut salasana vaihdettu onnistuneesti.
 
-Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että tarkistat salasanat heti.}}</translation>
+Sinulla on vielä # vaarantunutta salasanaa. AI Wize Salasanat suosittelee, että tarkistat salasanat heti.}}</translation>
 <translation id="6596325263575161958">Salausasetukset</translation>
 <translation id="6596816719288285829">IP-osoite</translation>
 <translation id="6596916244504302242">Päivitä tämä sivu, jotta voit ottaa päivitetyt laajennusasetukset käyttöön tällä sivustolla</translation>
@@ -7175,7 +7175,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6602956230557165253">Siirry vasemmalla ja oikealla nuolinäppäimellä.</translation>
 <translation id="6603185457265641428">Valitse, synkronoidaanko historia</translation>
 <translation id="6605847144724004692">Ei vielä käyttäjien arvioita</translation>
-<translation id="6606671997164410857">Näyttää siltä, että olet jo ottanut Brave Assistantin käyttöön toisella laitteella. Assistantista on vielä enemmän hyötyä, jos laitat näyttökontekstin päälle.</translation>
+<translation id="6606671997164410857">Näyttää siltä, että olet jo ottanut AI Wize Assistantin käyttöön toisella laitteella. Assistantista on vielä enemmän hyötyä, jos laitat näyttökontekstin päälle.</translation>
 <translation id="6607831829715835317">&amp;Lisää työkaluja</translation>
 <translation id="6607890859198268021">Tiliä (<ph name="USER_EMAIL"/>) hallinnoi jo <ph name="DOMAIN"/>. Jos haluat käyttää lapsilukkoa eri Brave-tilillä, kirjaudu ulos käyttöönoton jälkeen, ja valitse sitten kirjautumisnäytöltä Lisää henkilö.</translation>
 <translation id="6608166463665411119">Nollaa eSIM</translation>
@@ -7216,7 +7216,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6644846457769259194">Päivitetään laitetta (<ph name="PROGRESS_PERCENT"/>)</translation>
 <translation id="6646476869708241165">Laita Pikapari pois päältä</translation>
 <translation id="6646579314269804020">Jaa Wi-Fi-asetukset laitteiden välillä.</translation>
-<translation id="2730188427562924169">Lähettää osan URL-osoitteesta obfuskoituna Bravelle yksityisen palvelimen kautta, jolloin IP-osoitteesi piilotetaan. Jos sivusto yrittää varastaa salasanaasi tai jos lataat haitallisen tiedoston, Brave voi myös lähettää Bravelle URL-osoitteita, mukaan lukien osia sivujen sisällöstä</translation>
+<translation id="2730188427562924169">Lähettää osan URL-osoitteesta obfuskoituna Bravelle yksityisen palvelimen kautta, jolloin IP-osoitteesi piilotetaan. Jos sivusto yrittää varastaa salasanaasi tai jos lataat haitallisen tiedoston, AI Wize voi myös lähettää Bravelle URL-osoitteita, mukaan lukien osia sivujen sisällöstä</translation>
 <translation id="6647228709620733774">Netscape-varmenteen myöntäjän kumoamis-URL</translation>
 <translation id="6647690760956378579">Luonnollisen äänen esikuuntelu</translation>
 <translation id="6648911618876616409">Tärkeä päivitys on valmis asennettavaksi. Aloita kirjautumalla sisään.</translation>
@@ -7358,7 +7358,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6762861159308991328">Voit muuttaa linkkien avaamistapaa sovellusasetuksista</translation>
 <translation id="6764633064754857889">Esikatsele linkkiä</translation>
 <translation id="676560328519657314">Maksutapasi Google Payssa</translation>
-<translation id="3829555700225710632">Siirry Brave Salasanoihin</translation>
+<translation id="3829555700225710632">Siirry AI Wize Salasanoihin</translation>
 <translation id="6767566652486411142">Valitse toinen kieli…</translation>
 <translation id="6767639283522617719">Verkkotunnukseen liittyminen ei onnistu. Varmista, että organisaatioyksikön asetukset on määritetty oikein.</translation>
 <translation id="6768034047581882264">Suojaamattoman sisällön näyttäminen kielletty</translation>
@@ -7427,7 +7427,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6808039367995747522">Aseta suojausavain ja kosketa sitä, niin voit jatkaa</translation>
 <translation id="6808166974213191158">ChromeOS Flex ‑järjestelmän näköistiedoston kirjoittaja</translation>
 <translation id="6808193438228982088">Kettu</translation>
-<translation id="6809656734323672573">Jos hyväksyt tämän, Brave Assistant odottaa lepotilassa, kunnes se kuulee sanat "Hey Brave" ja tunnistaa Voice Matchilla puhujaksi sinut.
+<translation id="6809656734323672573">Jos hyväksyt tämän, AI Wize Assistant odottaa lepotilassa, kunnes se kuulee sanat "Hey Brave" ja tunnistaa Voice Matchilla puhujaksi sinut.
     <ph name="BR"/>
     Voice Matchin avulla Assistant osaa tunnistaa sinut ja erottaa sinut muista. Assistant luo tallenteista yksilöllisen äänimallin, joka tallennetaan vain laitteellesi. Äänimalli voidaan lähettää tilapäisesti Bravelle jotta äänesi voidaan tunnistaa paremmin.
     <ph name="BR"/>
@@ -7487,7 +7487,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6842749380892715807">XML-sivustoluettelot ladattiin viimeksi <ph name="LAST_DATE_DOWNLOAD"/>.</translation>
 <translation id="6842868554183332230">Sivustot havaitsevat yleensä, kun käytät laitetta aktiivisesti ja määrittävät sen perusteella saatavuutesi chat-sovelluksissa</translation>
 <translation id="6843264316370513305">Verkon virheenkorjaus</translation>
-<translation id="6843423766595476978">Hey Brave on valmiina</translation>
+<translation id="6843423766595476978">Hey AI Wize on valmiina</translation>
 <translation id="6843725295806269523">äänetön</translation>
 <translation id="6845038076637626672">Avaa suuressa koossa</translation>
 <translation id="6845231585063669905">A–Z</translation>
@@ -7582,13 +7582,13 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6921104647315081813">Tyhjennä toiminta</translation>
 <translation id="692114467174262153">Selaimen <ph name="ALTERNATIVE_BROWSER_NAME"/> avaaminen epäonnistui</translation>
 <translation id="692135145298539227">poista</translation>
-<translation id="6922128026973287222">Vähennä tiedonsiirtomäärää ja selaa nopeammin Brave Data Saverin avulla. Saat lisätietoja klikkaamalla.</translation>
+<translation id="6922128026973287222">Vähennä tiedonsiirtomäärää ja selaa nopeammin AI Wize Data Saverin avulla. Saat lisätietoja klikkaamalla.</translation>
 <translation id="6922745772873733498">Lisää PIN-koodi tulostaaksesi</translation>
 <translation id="6922763095098248079">Organisaatiosi ylläpitää laitettasi. Järjestelmänvalvojilla on pääsy kaikkien tämän laitteen profiilien dataan.</translation>
 <translation id="6923633482430812883">Virhe jaon käyttöönotossa. Varmista, että yhdistetty tiedostopalvelin tukee SMBv2:ta tai uudempaa.</translation>
 <translation id="6925127338315966709">Olet lisäämässä ylläpidettyä profiilia tähän selaimeen. Järjestelmänvalvoja hallitsee profiilia ja pääsee sen dataan. Järjestelmänvalvoja voi synkronoida kirjanmerkit, historian, salasanat ja muut asetukset tilillesi ja ylläpitää niitä.</translation>
 <translation id="6928650056523249512">Poista käyttämättömien sivustojen luvat automaattisesti</translation>
-<translation id="6929126689972602640">Koulutilit eivät tue lapsilukkotoimintojen käyttöä. Jos haluat lisätä koulutilin koulutehtävien tekemistä varten Brave Classroomin ja muiden sivustojen kautta, kirjaudu ensin sisään lapsen henkilökohtaisella tilillä. Voit lisätä koulutilin myöhemmin määrityksen aikana.</translation>
+<translation id="6929126689972602640">Koulutilit eivät tue lapsilukkotoimintojen käyttöä. Jos haluat lisätä koulutilin koulutehtävien tekemistä varten AI Wize Classroomin ja muiden sivustojen kautta, kirjaudu ensin sisään lapsen henkilökohtaisella tilillä. Voit lisätä koulutilin myöhemmin määrityksen aikana.</translation>
 <translation id="7557633564943867584">Okei Brave</translation>
 <translation id="6930161297841867798">{NUM_EXTENSIONS,plural, =1{Laajennus on hylätty}other{# laajennusta on hylätty}}</translation>
 <translation id="6931690462168617033">Klikkausherkkyys</translation>
@@ -7651,7 +7651,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6972754398087986839">Aloitusopas</translation>
 <translation id="697312151395002334">Ponnahdusikkunat tai uudelleenohjaukset sallittu</translation>
 <translation id="6973611239564315524">Päivitys Debian 10:een (Buster) saatavilla</translation>
-<translation id="5351075736722780148">Jos Brave on lisäksi oletushakukone, näet parempia ja asiayhteyteen sopivampia ehdotuksia</translation>
+<translation id="5351075736722780148">Jos AI Wize on lisäksi oletushakukone, näet parempia ja asiayhteyteen sopivampia ehdotuksia</translation>
 <translation id="697508444536771064">Sammuta Linux</translation>
 <translation id="6978121630131642226">Hakukoneet</translation>
 <translation id="6978717888677691380">Estämäsi sivustot</translation>
@@ -7731,7 +7731,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7030695672997239647">Klikkaa välilehteä kakkospainikkeella, valitse Lisää välilehti ryhmään ja valitse sitten Uusi ryhmä</translation>
 <translation id="7031608529463141342"><ph name="WINDOW_TITLE"/> – Sarjaportti yhdistetty</translation>
 <translation id="7033616203784997570">Syöte voi olla enintään 62 merkkiä</translation>
-<translation id="7034692021407794547">Järjestelmänvalvojan, jolla on Laskutuksen hallinta ‑lupa, täytyy ensin hyväksyä Brave Meet ‑laitteiston käyttöehdot hallintakonsolin kohdasta "Brave Meet ‑laitteisto".</translation>
+<translation id="7034692021407794547">Järjestelmänvalvojan, jolla on Laskutuksen hallinta ‑lupa, täytyy ensin hyväksyä AI Wize Meet ‑laitteiston käyttöehdot hallintakonsolin kohdasta "Brave Meet ‑laitteisto".</translation>
 <translation id="7036706669646341689">Linuxin käyttöön suositellaan <ph name="DISK_SIZE"/> vapaata tilaa. Lisää vapaata tilaa poistamalla laitteelta tiedostoja.</translation>
 <translation id="7037509989619051237">Esikatseltava teksti</translation>
 <translation id="7038632520572155338">Kytkimen käyttö</translation>
@@ -7898,7 +7898,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7189965711416741966">Sormenjälki lisätty</translation>
 <translation id="7191063546666816478">Jotkin tuetut linkit avautuvat edelleen näissä sovelluksissa: <ph name="APP_NAME"/>, <ph name="APP_NAME_2"/>, <ph name="APP_NAME_3"/> ja <ph name="NUMBER_OF_OTHER_APPS"/> muussa sovelluksessa.</translation>
 <translation id="7191159667348037">Tuntematon tulostin (USB)</translation>
-<translation id="2348760106555630118">Perheenjäsenesi voivat nyt käyttää käyttäjätunnustasi ja salasanaasi, kun he käyttävät Brave Salasanoja. Pyydä heitä kirjautumaan sisään osoitteessa <ph name="WEBSITE"/>.</translation>
+<translation id="2348760106555630118">Perheenjäsenesi voivat nyt käyttää käyttäjätunnustasi ja salasanaasi, kun he käyttävät AI Wize Salasanoja. Pyydä heitä kirjautumaan sisään osoitteessa <ph name="WEBSITE"/>.</translation>
 <translation id="7193051357671784796">Organisaatiosi lisäsi tämän sovelluksen. Suorita sovelluksen asennus loppuun käynnistämällä se uudelleen.</translation>
 <translation id="7193374945610105795">Sivustolla <ph name="ORIGIN"/> ei ole tallennettuja salasanoja</translation>
 <translation id="7193663868864659844">Lähetä palautetta ehdotetuista ryhmistä</translation>
@@ -7906,7 +7906,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7196107899576756066">{COUNT,plural, =1{1 lataus käynnissä}other{# latausta käynnissä}}</translation>
 <translation id="7196272782924897510">Käytetäänkö avainkoodia toiselta laitteelta?</translation>
 <translation id="7196913789568937443">Varmuuskopioi Google Driveen. Palauta dataa tai vaihda laitetta helposti milloin tahansa. Varmuuskopio sisältää sovellusdatan. Varmuuskopiot ladataan Braveen ja salataan Brave-tilisi salasanalla. <ph name="BEGIN_LINK1"/>Lue lisää<ph name="END_LINK1"/></translation>
-<translation id="96037229054033864">Käytä Brave Hakua ja Braven älykkäitä ratkaisuja selatessasi</translation>
+<translation id="96037229054033864">Käytä AI Wize Hakua ja Braven älykkäitä ratkaisuja selatessasi</translation>
 <translation id="719791532916917144">Pikanäppäin</translation>
 <translation id="7198503619164954386">Sinun täytyy käyttää yrityskäytössä olevaa laitetta</translation>
 <translation id="7199158086730159431">Pyydä ohj&amp;eita</translation>
@@ -8230,7 +8230,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="744341768939279100">Luo uusi profiili</translation>
 <translation id="744366959743242014">Ladataan dataa – tämä voi kestää muutaman sekunnin.</translation>
 <translation id="6470635120107893736">Käytä salasanojasi kaikkialla ollessasi kirjautuneena Brave-tilille</translation>
-<translation id="7444970023873202833">Käy läpi muita muistoja Brave Kuvissa</translation>
+<translation id="7444970023873202833">Käy läpi muita muistoja AI Wize Kuvissa</translation>
 <translation id="7444983668544353857">Poista <ph name="NETWORKDEVICE"/> käytöstä </translation>
 <translation id="7448430327655618736">asentaa sovellukset automaattisesti</translation>
 <translation id="7448664748118305024">Poista data, jota sivustot ovat tallentaneet laitteellesi, sulkiessasi kaikki ikkunat</translation>
@@ -8238,7 +8238,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="6147816961713837040">Lähettää osan URL-osoitteesta obfuskoituna Bravelle yksityisen palvelimen kautta, jolloin IP-osoitteesi piilotetaan</translation>
 <translation id="7453008956351770337">Valitsemalla tämän tulostimen annat seuraavalle laajennukselle tulostimesi käyttöoikeuden:</translation>
 <translation id="3699067418237091329">Tämä kirjaa sinut ulos useimmilta sivustoilta. Sinua ei kirjata ulos Brave-tililtäsi.</translation>
-<translation id="2603903950487685810">{NUM_EXTENSIONS,plural, =1{Tämä laajennus ei ehkä ole turvallinen. Brave suosittelee poistamaan sen.}other{Nämä laajennukset eivät välttämättä ole turvallisia. Brave suosittelee niiden poistamista.}}</translation>
+<translation id="2603903950487685810">{NUM_EXTENSIONS,plural, =1{Tämä laajennus ei ehkä ole turvallinen. AI Wize suosittelee poistamaan sen.}other{Nämä laajennukset eivät välttämättä ole turvallisia. AI Wize suosittelee niiden poistamista.}}</translation>
 <translation id="7454548535253569100">Portaali: <ph name="SUBFRAME_SITE"/></translation>
 <translation id="7454744349230173024">Organisaatio on laittanut salasanojen tallennuksen pois päältä</translation>
 <translation id="7455730275746867420">Hallitse ylimääräisiä säilöjä</translation>
@@ -8247,7 +8247,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7456774706094330779">Laajennettu esilataus</translation>
 <translation id="7456847797759667638">Avaa sijainti...</translation>
 <translation id="7457831169406914076">{COUNT,plural, =1{linkki}other{# linkkiä}}</translation>
-<translation id="8944680893327873975">Käyttää samaa oikolukua kuin Brave Haussa. Selaimeen kirjoittamasi teksti lähetetään Bravelle.</translation>
+<translation id="8944680893327873975">Käyttää samaa oikolukua kuin AI Wize Haussa. Selaimeen kirjoittamasi teksti lähetetään Bravelle.</translation>
 <translation id="7458715171471938198">Palautetaanko sovellukset?</translation>
 <translation id="7458933488302148148">Tarkista tallentamasi salasanat tietoturvan parantamiseksi ja selataksesi turvallisemmin</translation>
 <translation id="745988141575685751"><ph name="BEGIN_PARAGRAPH1"/>Antamalla ChromeOS-laitteiden lähettää raportteja automaattisesti voit auttaa meitä korjaamaan ja kehittämään ChromeOS:n ominaisuuksia. Raportteihin voi sisältyä esimerkiksi tietoja ChromeOS:n kaatumisista ja käytetyistä ominaisuuksista sekä tyypillisestä muistin käytöstä. Muuta sovellusten diagnostiikka- ja käyttödata (myös Android- ja verkkosovelluksista) kerätään, jos myös sovellusten synkronointi on päällä.<ph name="END_PARAGRAPH1"/>
@@ -8326,7 +8326,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7515998400212163428">Android</translation>
 <translation id="7516641972665276706">sivu alas</translation>
 <translation id="7516981202574715431"><ph name="APP_NAME"/> on keskeytetty</translation>
-<translation id="385431757934284424">Perheenjäsenesi ei voi vastaanottaa salasanoja tällä hetkellä. Pyydä häntä päivittämään Brave ja synkronoimaan salasanat.</translation>
+<translation id="385431757934284424">Perheenjäsenesi ei voi vastaanottaa salasanoja tällä hetkellä. Pyydä häntä päivittämään AI Wize ja synkronoimaan salasanat.</translation>
 <translation id="7518079994230200553">Vaihtoehto ei ole juuri nyt käytettävissä.</translation>
 <translation id="752098910262610337">Näytä pikakuvakkeet</translation>
 <translation id="7521430434164837205">Microsoft 365 ‑tiedostot</translation>
@@ -8544,7 +8544,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="7683834360226457448">Heikkonäköisten näyttötyökalut</translation>
 <translation id="7684212569183643648">Järjestelmänvalvojasi asentama</translation>
 <translation id="7684559058815332124">Siirry captive portal -kirjautumissivulle</translation>
-<translation id="1669729672557072907">Jos haluat luoda ja testata sovelluksia, ota käyttöön Android Debug Bridge (ADB). Huomaa, että tämä sallii sellaisten Android-sovellusten asentamisen, joita Brave ei ole vahvistanut. Ominaisuuden käytöstä poistaminen edellyttää tehdasasetusten palautusta.</translation>
+<translation id="1669729672557072907">Jos haluat luoda ja testata sovelluksia, ota käyttöön Android Debug Bridge (ADB). Huomaa, että tämä sallii sellaisten Android-sovellusten asentamisen, joita AI Wize ei ole vahvistanut. Ominaisuuden käytöstä poistaminen edellyttää tehdasasetusten palautusta.</translation>
 <translation id="7684913007876670600">Jos haluat nähdä sivusta yksinkertaistetun version, avaa sivupaneeli ja valitse Lukutila</translation>
 <translation id="7685049629764448582">JavaScriptin käyttämä muisti</translation>
 <translation id="7685087414635069102">PIN-koodi vaaditaan</translation>
@@ -8610,7 +8610,7 @@ Sinulla on vielä # vaarantunutta salasanaa. Brave Salasanat suosittelee, että 
 <translation id="773511996612364297">Aksenttimerkit</translation>
 <translation id="7737115349420013392"><ph name="DEVICE_NAME"/> lisätään laitepariksi…</translation>
 <translation id="7737203573077018777">Ohje vastaanotettu: <ph name="PROOF_OF_POSSESSION_INSTRUCTION_NAME"/></translation>
-<translation id="7737846262459425222">Voit muuttaa tätä koska tahansa valitsemalla Asetukset &gt; Brave Assistant &gt; Näyttökonteksti.</translation>
+<translation id="7737846262459425222">Voit muuttaa tätä koska tahansa valitsemalla Asetukset &gt; AI Wize Assistant &gt; Näyttökonteksti.</translation>
 <translation id="7737948071472253612">Kameran käyttö kielletty</translation>
 <translation id="77381465218432215">Näytä aksenttimerkit ja erikoismerkit</translation>
 <translation id="7740996059027112821">Vakio</translation>
@@ -8625,7 +8625,7 @@ Poista määritys painamalla määritettyä kytkintä tai näppäintä.</transla
 <translation id="7745554356330788383">Päivitä tämä sivu, jos haluat ottaa laajennuksen (<ph name="EXTENSION_NAME"/>) päivitetyt asetukset käyttöön tällä sivustolla</translation>
 <translation id="7745677556280361868">Poistetaanko tämä verkko Passpoint-tilaussivulta?</translation>
 <translation id="7746045113967198252">Suurentaa tai pienentää näytöllä olevia kohteita, esimerkiksi tekstiä. Löydät asetuksen myös myöhemmin valitsemalla Asetukset &gt; Laite &gt; Näytöt.</translation>
-<translation id="111001904428642151">Näet kohokohtia Brave Kuvat ‑kirjastosi kuvista ja videoista. Voit valita, mitä kohokohdissa näkyy, osoitteessa <ph name="BEGIN_LINK"/>photos.google.com/settings<ph name="END_LINK"/>.
+<translation id="111001904428642151">Näet kohokohtia AI Wize Kuvat ‑kirjastosi kuvista ja videoista. Voit valita, mitä kohokohdissa näkyy, osoitteessa <ph name="BEGIN_LINK"/>photos.google.com/settings<ph name="END_LINK"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
         Voit muuttaa kortin asetuksia korttivalikossa. Lisää vaihtoehtoja löydät Yksilöi Bravea ‑osiosta.</translation>
@@ -8717,7 +8717,7 @@ Poista määritys painamalla määritettyä kytkintä tai näppäintä.</transla
 <translation id="7805906048382884326">Sulje vinkki</translation>
 <translation id="7806722269368320106">Sovellus, asennetaan</translation>
 <translation id="7807067443225230855">Haku ja Assistant</translation>
-<translation id="7807117920154132308">Näyttää siltä, että <ph name="SUPERVISED_USER_NAME"/> on jo ottanut Brave Assistantin käyttöön toisella laitteella. <ph name="SUPERVISED_USER_NAME"/> voi saada Assistantista vieläkin enemmän irti, jos hän laittaa näyttökontekstin päälle tällä laitteella.</translation>
+<translation id="7807117920154132308">Näyttää siltä, että <ph name="SUPERVISED_USER_NAME"/> on jo ottanut AI Wize Assistantin käyttöön toisella laitteella. <ph name="SUPERVISED_USER_NAME"/> voi saada Assistantista vieläkin enemmän irti, jos hän laittaa näyttökontekstin päälle tällä laitteella.</translation>
 <translation id="7807711621188256451">Anna aina sivuston <ph name="HOST"/> käyttää kameraasi</translation>
 <translation id="7810202088502699111">Ponnahdusikkunat estettiin tällä sivulla.</translation>
 <translation id="7810367892333449285">Muodon pitää olla tällainen: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ osoite<ph name="LPA_2"/>$<ph name="LPA_3"/>valinnainen vastaavuustunnus<ph name="LPA_4"/></translation>
@@ -8744,7 +8744,7 @@ Poista määritys painamalla määritettyä kytkintä tai näppäintä.</transla
 <translation id="7829877209233347340">Pyydä vanhempaa kirjautumaan, jotta hän voi antaa luvan koulutilin lisäämiseen</translation>
 <translation id="7830833461614351956">Kopioidaanko <ph name="NUM_OF_FILES"/> tiedostoa tänne: <ph name="CLOUD_PROVIDER"/>?</translation>
 <translation id="7831754656372780761"><ph name="TAB_TITLE"/> <ph name="EMOJI_MUTING"/></translation>
-<translation id="8922794156890630895">Jos Brave löytää alennuksen, näet sen tällä sivulla</translation>
+<translation id="8922794156890630895">Jos AI Wize löytää alennuksen, näet sen tällä sivulla</translation>
 <translation id="7833720883933317473">Tässä näytetään tallennetut muokatut sanat.</translation>
 <translation id="7835178595033117206">Kirjanmerkki poistettu</translation>
 <translation id="7836577093182643605">Estämäsi aiheet, joita et halua jakaa sivustoille</translation>
@@ -8940,7 +8940,7 @@ Poista määritys painamalla määritettyä kytkintä tai näppäintä.</transla
 <translation id="7974566588408714340">Yritä uudelleen laajennuksella <ph name="EXTENSIONNAME"/></translation>
 <translation id="7974713334845253259">Oletusväri</translation>
 <translation id="7974936243149753750">Yliskannaus</translation>
-<translation id="7975504106303186033">Sinun on lisättävä tämä Brave Education ‑laite oppilaitostilille. Voit luoda uuden tilin osoitteessa g.co/workspace/edusignup.</translation>
+<translation id="7975504106303186033">Sinun on lisättävä tämä AI Wize Education ‑laite oppilaitostilille. Voit luoda uuden tilin osoitteessa g.co/workspace/edusignup.</translation>
 <translation id="7977451675950311423">Varoittaa, jos käytät salasanaa, joka on vaarantunut tietosuojaloukkauksen yhteydessä.</translation>
 <translation id="7978053509627908242">T&amp;allenna videokehys nimellä…</translation>
 <translation id="7978412674231730200">Yksityinen avain</translation>
@@ -8984,7 +8984,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8009225694047762179">Salasanojen hallinta</translation>
 <translation id="8011372169388649948"><ph name="BOOKMARK_TITLE"/> siirretty.</translation>
 <translation id="8012188750847319132">caps lock</translation>
-<translation id="5499063270485366718">Jos kuvalla ei ole hyödyllistä kuvausta, Brave yrittää luoda sellaisen. Kuvat lähetetään Bravelle kuvausten luomista varten.</translation>
+<translation id="5499063270485366718">Jos kuvalla ei ole hyödyllistä kuvausta, AI Wize yrittää luoda sellaisen. Kuvat lähetetään Bravelle kuvausten luomista varten.</translation>
 <translation id="8014154204619229810">Päivitysohjelma on käynnissä. Lataa sivu hetken kuluttua uudelleen ja tarkista tilanne.</translation>
 <translation id="8014206674403687691"><ph name="IDS_SHORT_PRODUCT_NAME"/> ei voi palautua aiemmin asennettuun versioon. Suorita laitteellesi Powerwash uudelleen.</translation>
 <translation id="8015565302826764056">{NUM_OF_FILES,plural, =1{1 tiedosto kopioitu}other{{NUM_OF_FILES} tiedostoa kopioitu}}</translation>
@@ -9024,7 +9024,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8044090981104134791">MIDI-laitteet sallittu</translation>
 <translation id="8044262338717486897"><ph name="LINUX_APP_NAME"/> ei vastaa.</translation>
 <translation id="8044899503464538266">Hidas</translation>
-<translation id="5462539695964427820">Synkronointi on keskeytetty Brave Hallintapaneelin kautta.</translation>
+<translation id="5462539695964427820">Synkronointi on keskeytetty AI Wize Hallintapaneelin kautta.</translation>
 <translation id="8045923671629973368">Anna sovellustunnus tai verkkokaupan URL-osoite.</translation>
 <translation id="804786196054284061">Käyttölupasopimus</translation>
 <translation id="8048728378294435881">Varmuuskopioi sisältösi ja käytä sitä millä tahansa laitteella</translation>
@@ -9039,7 +9039,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8052218774860457016">Ylläpidä selaimen synkronointia</translation>
 <translation id="8053278772142718589">PKCS #12 -tiedostot</translation>
 <translation id="8053390638574070785">Lataa tämä sivu uudelleen</translation>
-<translation id="7710563564676752739">Laita synkronointi päälle, niin Brave voi ehdottaa välilehtiryhmiä</translation>
+<translation id="7710563564676752739">Laita synkronointi päälle, niin AI Wize voi ehdottaa välilehtiryhmiä</translation>
 <translation id="8054517699425078995">Tämäntyyppinen tiedosto voi vahingoittaa laitettasi. Haluatko silti säilyttää tiedoston <ph name="FILE_NAME"/>?</translation>
 <translation id="8054563304616131773">Anna voimassa oleva sähköpostiosoite.</translation>
 <translation id="8054609631325628928">Näitä numeroita voi käyttää palvelun aktivointiin</translation>
@@ -9166,7 +9166,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="814870937590541483">Lisää Google Drive ‑tiedostojen toimintoja</translation>
 <translation id="8148760431881541277">Rajoita sisäänkirjautumista</translation>
 <translation id="8149564499626272569">Todenna puhelimella USB-johdon kautta</translation>
-<translation id="932155016683443951">Jos haluat käyttää tallennettuja salasanoja puhelimellasi, lataa Brave iOS:lle ja kirjaudu sisään Brave-tilille.</translation>
+<translation id="932155016683443951">Jos haluat käyttää tallennettuja salasanoja puhelimellasi, lataa AI Wize iOS:lle ja kirjaudu sisään Brave-tilille.</translation>
 <translation id="8151057139207656239">Koontiversion tiedot kopioitu</translation>
 <translation id="815114315010033526">Käytä QR-koodia</translation>
 <translation id="8151638057146502721">Määritä</translation>
@@ -9358,7 +9358,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8295450130892483256">Asenna Microsoft 365</translation>
 <translation id="8297292446125062288">HID-asetukset</translation>
 <translation id="8298429963694909221"><ph name="DEVICE_TYPE"/> voi nyt vastaanottaa ilmoituksia puhelimestasi. Jos <ph name="DEVICE_TYPE"/> ohittaa ilmoituksia, ne ohitetaan myös puhelimellasi. Varmista, että puhelin on lähellä, ja Bluetooth ja Wi-Fi ovat päällä.</translation>
-<translation id="1074485905526403616">Lisää pikakuvake Brave Salasanoihin</translation>
+<translation id="1074485905526403616">Lisää pikakuvake AI Wize Salasanoihin</translation>
 <translation id="8299319456683969623">Olet tällä hetkellä offline-tilassa.</translation>
 <translation id="8299951061833867575">Wi-FI, mobiilidata</translation>
 <translation id="8300011035382349091">Muokkaa välilehden kirjanmerkkiä</translation>
@@ -9434,7 +9434,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8356197132883132838"><ph name="TITLE"/> – <ph name="COUNT"/></translation>
 <translation id="8356409598322585307">Olet jo rekisteröinyt tämän laitteen. Sitä ei tarvitse rekisteröidä uudelleen.</translation>
 <translation id="8357388086258943206">Virhe asennettaessa Linuxia</translation>
-<translation id="3293878794303371084">Tästä oppaasta saat tietoa tärkeistä valinnoista, joita teet käyttäessäsi Bravea. Sen avulla voit tehdä valintoja, joiden avulla Brave toimii haluamallasi tavalla.</translation>
+<translation id="3293878794303371084">Tästä oppaasta saat tietoa tärkeistä valinnoista, joita teet käyttäessäsi Bravea. Sen avulla voit tehdä valintoja, joiden avulla AI Wize toimii haluamallasi tavalla.</translation>
 <translation id="8358685469073206162">Palautetaanko sivut?</translation>
 <translation id="8358912028636606457">Tämä laite ei tue välilehden äänten striimausta.</translation>
 <translation id="2921493528667739769">Tallenna Brave-tilillesi</translation>
@@ -9453,7 +9453,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8372441176515901959">Hylkää pyyntö</translation>
 <translation id="8373652277231415614">Crostinin jaetut hakemistot</translation>
 <translation id="8374243500935816406">Älä salli sivustojen hallinnoida ikkunoita kaikilla näytöillä</translation>
-<translation id="3274642499723400057">Kerro meille, mitä Brave Castin kanssa tapahtuu</translation>
+<translation id="3274642499723400057">Kerro meille, mitä AI Wize Castin kanssa tapahtuu</translation>
 <translation id="8376384591331888629">Mukaan lukien kolmannen osapuolen evästeet tällä sivustolla</translation>
 <translation id="8376451933628734023">Jos tämä verkkosovellus yrittää huijata sinua luulemaan, että se on jokin toinen sovellus, poista se.</translation>
 <translation id="8376532149031784008">Päivitetään sivua <ph name="DOMAIN"/>…</translation>
@@ -9495,7 +9495,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8399282673057829204">Katso salasana</translation>
 <translation id="839949601275221554">Laitteessa tapahtui virhe. Käynnistä laite uudelleen ja yritä uudelleen.</translation>
 <translation id="8401432541486058167">Ilmoita älykorttiisi liittyvä PIN-koodi.</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{Brave estää evästeet uudelleen tänään}=1{Brave estää evästeet uudelleen huomenna}other{# päivää ennen kuin Brave estää evästeet uudelleen}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{Brave estää evästeet uudelleen tänään}=1{Brave estää evästeet uudelleen huomenna}other{# päivää ennen kuin AI Wize estää evästeet uudelleen}}</translation>
 <translation id="1189449765746484728">Datasi Bravessa</translation>
 <translation id="8403807918453631441"><ph name="BRAND"/> voi tarkistaa salasanasi, kun tallennat niitä</translation>
 <translation id="8405046151008197676">Katso uusimman päivityksen parhaat palat</translation>
@@ -9505,8 +9505,8 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8410775397654368139">Google Play</translation>
 <translation id="8411043186249152291">koko näyttö</translation>
 <translation id="8412136526970428322">Sallittu: <ph name="PERMISSION"/> ja <ph name="COUNT"/> muuta</translation>
-<translation id="5806705481947132574">Laita historian synkronointi päälle asetuksista, niin Brave voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
-<translation id="5348884013239264115">Suojaa vaaralliseksi tiedettyjä sivustoja, latauksia ja laajennuksia vastaan. Kun käyt sivustolla, Brave lähettää osan URL-osoitteesta obfuskoituna Bravelle yksityisen palvelimen kautta, jolloin IP-osoitteesi piilotetaan. Jos sivusto tekee jotakin epäilyttävää, koko URL-osoitteet ja osia sivun sisällöstä lähetetään.</translation>
+<translation id="5806705481947132574">Laita historian synkronointi päälle asetuksista, niin AI Wize voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
+<translation id="5348884013239264115">Suojaa vaaralliseksi tiedettyjä sivustoja, latauksia ja laajennuksia vastaan. Kun käyt sivustolla, AI Wize lähettää osan URL-osoitteesta obfuskoituna Bravelle yksityisen palvelimen kautta, jolloin IP-osoitteesi piilotetaan. Jos sivusto tekee jotakin epäilyttävää, koko URL-osoitteet ja osia sivun sisällöstä lähetetään.</translation>
 <translation id="8413956290606243087">Haluatko aktivoida ChromeVoxin, Brave-käyttöjärjestelmän sisäänrakennetun näytönlukuohjelman?</translation>
 <translation id="8414249071344507766">Muistot on piilotettu kahdeksi päiväksi</translation>
 <translation id="8414396119627470038">Kirjaudu sisään: <ph name="SITE_ETLD_PLUS_ONE"/> (<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>)</translation>
@@ -9535,7 +9535,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8431190899827883166">Näytä kosketus</translation>
 <translation id="8433186206711564395">Verkkoasetukset</translation>
 <translation id="8434480141477525001">NaCl-vianetsintäportti</translation>
-<translation id="3380551973126785727">Kirjaudu sisään ja laita synkronointi päälle, niin Brave voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
+<translation id="3380551973126785727">Kirjaudu sisään ja laita synkronointi päälle, niin AI Wize voi ehdottaa välilehtiryhmiä ja pitää välilehdet järjestyksessä</translation>
 <translation id="8437209419043462667">USA</translation>
 <translation id="8438566539970814960">Paranna hakuja ja selausta</translation>
 <translation id="8439506636278576865">Tarjoudu kääntämään sivuja tälle kielelle</translation>
@@ -9690,7 +9690,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8557856025359704738">Seuraava lataus tehdään <ph name="NEXT_DATE_DOWNLOAD"/>.</translation>
 <translation id="37858739834762720">Brave-tilin salasana</translation>
 <translation id="8559858985063901027">Avainkoodit</translation>
-<translation id="5503308854539525011">Mainosten suoriutumisen mittaamiseksi Brave rajoittaa mainosten kautta jaettavan datan kokonaismäärää selaimen kautta</translation>
+<translation id="5503308854539525011">Mainosten suoriutumisen mittaamiseksi AI Wize rajoittaa mainosten kautta jaettavan datan kokonaismäärää selaimen kautta</translation>
 <translation id="8560327176991673955">{COUNT,plural, =0{Avaa kaikki uudessa ikku&amp;nassa}=1{Avaa uudessa ikku&amp;nassa}other{Avaa kaikki ({COUNT}) uudessa ikku&amp;nassa}}</translation>
 <translation id="8561206103590473338">Norsu</translation>
 <translation id="8561565784790166472">Harkitse tarkkaan ennen kuin jatkat</translation>
@@ -9960,7 +9960,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8763927697961133303">USB-laite</translation>
 <translation id="8766796754185931010">Kotoeri</translation>
 <translation id="8767069439158587614">Näytä kaikki haut: <ph name="QUERY_CLUSTER_NAME"/></translation>
-<translation id="4570609078116869893">Päivitä kaikkien käyttäjien Brave automaattisesti</translation>
+<translation id="4570609078116869893">Päivitä kaikkien käyttäjien AI Wize automaattisesti</translation>
 <translation id="876956356450740926">Käytä kehittäjän työkaluja, IDEjä ja muokkaustoimintoja. <ph name="LINK_BEGIN"/>Lue lisää<ph name="LINK_END"/></translation>
 <translation id="8770406935328356739">Laajennuksen juurihakemisto</translation>
 <translation id="8771300903067484968">Aloitussivun taustakuvaksi on palautettu oletustaustakuva.</translation>
@@ -10064,7 +10064,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8853586775156634952">Kortti tallennetaan vain tälle laitteelle</translation>
 <translation id="8854745870658584490">Pikavalintanäppäin</translation>
 <translation id="8855242995793521265">Se ei hidasta selainta tai laitetta merkittävästi.</translation>
-<translation id="8855977033756560989">Tämän Chromebook Enterprise ‑laitteen mukana tulee Brave Enterprise ‑päivitys. Rekisteröi tälle laitteelle Brave-järjestelmänvalvojan tili, jotta saat kaiken irti yritysominaisuuksista.</translation>
+<translation id="8855977033756560989">Tämän Chromebook Enterprise ‑laitteen mukana tulee AI Wize Enterprise ‑päivitys. Rekisteröi tälle laitteelle Brave-järjestelmänvalvojan tili, jotta saat kaiken irti yritysominaisuuksista.</translation>
 <translation id="8856028055086294840">Palauta sovelluksia ja sivuja</translation>
 <translation id="885701979325669005">Tallennus</translation>
 <translation id="885746075120788020">Tallentamasi asetukset ja toiminta ovat valmiina millä tahansa Brave-käyttöjärjestelmän laitteella, kun kirjaudut sisään Brave-tilillesi. Voit valita synkronoitavan sisällön asetuksissa.</translation>
@@ -10140,7 +10140,7 @@ Tallenna avaintiedosto suojattuun sijaintiin. Tarvitset sitä, jos haluat luoda 
 <translation id="8910987510378294980">Piilota laiteluettelo</translation>
 <translation id="2684652081942622950">Brave-tilisi avulla</translation>
 <translation id="8912810933860534797">Ota automaattinen skannaus käyttöön</translation>
-<translation id="4805806622840861220">Käynnistä Brave uudelleen</translation>
+<translation id="4805806622840861220">Käynnistä AI Wize uudelleen</translation>
 <translation id="8915307125957890427">Klikkaa välilehteä kakkospainikkeella, valitse Lisää välilehti ryhmään ja valitse sitten Uusi ryhmä</translation>
 <translation id="8915370057835397490">Ladataan ehdotusta</translation>
 <translation id="8917490105272468696">Kyllä</translation>
@@ -10254,7 +10254,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="8993853206419610596">Laajenna kaikki pyynnöt</translation>
 <translation id="8993945059918628059">Kosketa sormenjälkitunnistinta sormellasi. Sormenjälkidata tallennetaan turvallisesti vain laitteellesi (<ph name="DEVICE_TYPE"/>).</translation>
 <translation id="899403249577094719">Netscape-varmenteen URL-osoite</translation>
-<translation id="7113572760575285642">Tuttu Brave kaikkialla</translation>
+<translation id="7113572760575285642">Tuttu AI Wize kaikkialla</translation>
 <translation id="899671834467367922">Kirjaudu sisään toisena käyttäjänä, niin voit katsella ja tehdä muistiinpanoja tällä sivulla.</translation>
 <translation id="8998078711690114234">Tämäntyyppinen tiedosto voi olla vaarallinen. Tallenna tiedosto vain, jos <ph name="ORIGIN"/> on luotettava</translation>
 <translation id="8999027165951679951">Ei-aktiivinen välilehti: <ph name="MEMORY_SAVINGS"/> vapautettu</translation>
@@ -10283,7 +10283,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="9018218886431812662">Asennus valmis</translation>
 <translation id="901876615920222131">Avaa ryhmä uudelleen klikkaamalla sitä</translation>
 <translation id="9019062154811256702">Lukea ja muokata automaattisen täytön asetuksia.</translation>
-<translation id="9019894137004772119">Käytä sijaintia. Salli laitteesi sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
+<translation id="9019894137004772119">Käytä sijaintia. Salli laitteesi sijainnin käyttäminen sovelluksille ja palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
 <translation id="9019956081903586892">Oikeinkirjoitussanakirjan lataaminen epäonnistui</translation>
 <translation id="9020300839812600209">Lisää URL-osoite, niin näet, mitä Vanhojen selaimien tuki tekisi sille.</translation>
 <translation id="9020362265352758658">4x</translation>
@@ -10353,9 +10353,9 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="1028914248002145111">Tämä on valittu perustuen aiempaan toimintaasi Braven palveluissa. Voit nähdä datasi tai poistaa sitä ja muuttaa asetuksiasi osoitteessa <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
-        Katso, mitä dataa Brave kerää ja miksi, osoitteesta <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+        Katso, mitä dataa AI Wize kerää ja miksi, osoitteesta <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
 <translation id="9066782832737749352">Tekstistä puheeksi</translation>
-<translation id="9068298336633421551">Salli laitteen sijainnin käyttäminen Android-sovelluksille ja ‑palveluille, joilla on sijaintilupa. Brave voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
+<translation id="9068298336633421551">Salli laitteen sijainnin käyttäminen Android-sovelluksille ja ‑palveluille, joilla on sijaintilupa. AI Wize voi ajoittain kerätä sijaintitietoja ja käyttää niitä ei-yksilöivästi sijainnin tarkkuuden ja sijaintiin perustuvien palvelujen kehittämiseen.</translation>
 <translation id="9068598199622656904">Paina pikanäppäinyhdistelmän näppäimiä yksi kerrallaan sen sijaan, että painaisit kaikkia yhtä aikaa</translation>
 <translation id="9068878141610261315">Tiedostotyyppiä ei tueta</translation>
 <translation id="9069417381769492963">Hakuasi vastaavia kirjanmerkkejä ei ole</translation>
@@ -10374,7 +10374,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="9078546160009814724">Käyttäjätunnus: <ph name="USERNAME"/></translation>
 <translation id="9079267182985899251">Tätä vaihtoehtoa ei pian enää tueta. Jos haluat jakaa välilehden, avaa <ph name="GOOGLE_MEET"/>.</translation>
 <translation id="9080175821499742274">Muistinsäästö vapauttaa muistia ei-aktiivisilta välilehdiltä, jotta aktiiviset välilehdet ja muut sovellukset voivat käyttää sitä.</translation>
-<translation id="2512721839479084080">arvioi kiinnostuksen kohteesi – Brave voi arvioida kiinnostuksen kohteesi</translation>
+<translation id="2512721839479084080">arvioi kiinnostuksen kohteesi – AI Wize voi arvioida kiinnostuksen kohteesi</translation>
 <translation id="9082750838489080452">Sovellus: <ph name="APP_NAME"/></translation>
 <translation id="9084064520949870008">Avaa ikkunassa</translation>
 <translation id="9085256200913095638">Kopioi valittu välilehti</translation>
@@ -10429,7 +10429,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="9113469270512809735">Äskettäin suljetut kohteet päälle/pois</translation>
 <translation id="9114663181201435112">Kirjaudu sisään helposti</translation>
 <translation id="9115675100829699941">&amp;Kirjanmerkit</translation>
-<translation id="916115484239820348">Tämä asetus ei vaikuta Brave Kääntäjän tai Lensin saatavuuteen</translation>
+<translation id="916115484239820348">Tämä asetus ei vaikuta AI Wize Kääntäjän tai Lensin saatavuuteen</translation>
 <translation id="9116366756388192417">Valitse aihe</translation>
 <translation id="9116799625073598554">Muistiinpanosovellus</translation>
 <translation id="9117030152748022724">Sovellusvalinnat</translation>
@@ -10577,7 +10577,7 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="947329552760389097">Tutk&amp;i elementtejä</translation>
 <translation id="947526284350604411">Vastauksesi</translation>
 <translation id="947667444780368238"><ph name="ORIGIN"/> ei saa avata tämän kansion tiedostoja, koska se sisältää järjestelmätiedostoja</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{Brave rajoittaa evästeet uudelleen tänään}=1{Brave rajoittaa evästeet uudelleen huomenna}other{# päivää ennen kuin Brave rajoittaa evästeet uudelleen}}</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{Brave rajoittaa evästeet uudelleen tänään}=1{Brave rajoittaa evästeet uudelleen huomenna}other{# päivää ennen kuin AI Wize rajoittaa evästeet uudelleen}}</translation>
 <translation id="949807244219288032">Tämä välilehti on yhdistetty HID-laitteeseen</translation>
 <translation id="950079950995628542">Täältä: <ph name="PHONE_NAME"/></translation>
 <translation id="950307215746360464">Käyttöönotto-opas</translation>
@@ -10591,10 +10591,10 @@ Sivustoille ja sovelluksille myöntämäsi luvat saattavat koskea tätä tiliä.
 <translation id="960987915827980018">Noin tunti jäljellä</translation>
 <translation id="962802172452141067">Kirjanmerkkien kansiopuu</translation>
 <translation id="963000966785016697">Hae kuvaa: <ph name="VISUAL_SEARCH_PROVIDER"/></translation>
-<translation id="964286338916298286">IT-järjestelmänvalvojasi on poistanut Brave Goodies ‑tarjoukset käytöstä laitteellasi.</translation>
+<translation id="964286338916298286">IT-järjestelmänvalvojasi on poistanut AI Wize Goodies ‑tarjoukset käytöstä laitteellasi.</translation>
 <translation id="964439421054175458">{NUM_APLLICATIONS,plural, =1{Sovellus}other{Sovellukset}}</translation>
 <translation id="964790508619473209">Näytön asettelu</translation>
-<translation id="8302628777674731869">Ilmoita Brave Castiin liittyvästä ongelmasta</translation>
+<translation id="8302628777674731869">Ilmoita AI Wize Castiin liittyvästä ongelmasta</translation>
 <translation id="965470117154635268">{NUM_SITES,plural, =1{Tarkista 1 sivusto, jolta on lähetetty paljon ilmoituksia viime aikoina}other{Tarkista {NUM_SITES} sivustoa, joilta on lähetetty paljon ilmoituksia viime aikoina}}</translation>
 <translation id="966588271015727539">Valitse Bluetooth-pistekirjoitusnäyttö</translation>
 <translation id="966624321292940409">{NUM_PROFILES,plural, =1{&amp;Sulje tämä profiili}other{&amp;Sulje tämä profiili (# ikkunaa)}}</translation>

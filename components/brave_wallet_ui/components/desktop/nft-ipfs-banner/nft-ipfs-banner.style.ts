@@ -67,7 +67,7 @@ export const LearnMore = styled(WalletButton)`
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #aaa8f7; /* Leo theme value: Dark/Text/Interactive */
+  color: #aaa8f7; /* AI Wize Chat theme value: Dark/Text/Interactive */
   outline: none;
   border: none;
   background: transparent;
@@ -83,7 +83,7 @@ export const CloseButton = styled(WalletButton)`
   height: 16px;
   background-color: #6b7084;
   @media (prefers-color-scheme: dark) {
-    background-color: #8c90a1; /* Leo theme value: Icon/Default */
+    background-color: #8c90a1; /* AI Wize Chat theme value: Icon/Default */
   }
   -webkit-mask-image: url(${CloseIcon});
   mask-image: url(${CloseIcon});

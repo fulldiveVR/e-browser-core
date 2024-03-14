@@ -23,7 +23,7 @@ const BraveLeoAssistantPageBase =
 
 /**
  * 'settings-brave-leo-assistant-page' is the settings page containing
- * brave's Leo Assistant features.
+ * AI Wize Chat Assistant features.
  */
 class BraveLeoAssistantPageElement extends BraveLeoAssistantPageBase {
     static get is() {

@@ -1876,24 +1876,24 @@
 <translation id="1199355487114804640">Leisti / stabdyti</translation>
 <translation id="1689210457482459023">Sumažinti atkūrimo greitį</translation>
 <translation id="5872363163901278000">Padidinti atkūrimo greitį</translation>
-<translation id="6129027151000961048">„Leo“</translation>
+<translation id="6129027151000961048">„AI Wize Chat“</translation>
 <translation id="8637805148029768813">Šiuo metu apibendrinimo funkcija veikia tik tam tikruose straipsniuose ir kituose didelės apimties tinklalapiuose.</translation>
 <translation id="1223498995510244364">Apibendrinti</translation>
-<translation id="7491773233732232424">Apie „Leo“</translation>
-<translation id="5208096220706490232">„Brave Leo“ yra privatus išmanusis DI padėjėjas, padedantis geriau naudotis internetu. Ribota „Leo“ prieiga yra nemokama. „Brave Leo Premium“ siūlo daugiau modelių, didesnius limitus ir anksti suteikia prenumeratoriams prieigas prie naujų funkcijų. Numatytasis modelis visiems naudotojams šiuo metu yra „Mixtral 8x7B“. Daugiau informacijos rasite <ph name="LINK_BEFORE"/>Brave wiki<ph name="LINK_AFTER"/>.</translation>
-<translation id="7189603330209995455">Kai užduodate „Leo“ klausimą, pagal numatymą jis gali siųsti „Brave Leo“ ir naudoti jūsų žiūrimo tinklalapio turinį arba bet kurį jūsų paryškintą puslapyje turinį, kad galėtų atsakyti. Atsakymų tikslumas neužtikrinamas, juose gali būti netikslios, klaidinamos ar neteisingos informacijos. „Leo“ naudoja gautus iš „Brave Search“ duomenis, kad pagerintų atsako kokybę. Neteikite neatskleistinos ar privačios informacijos ir atsargiai vertinkite visus atsakymus, susijusius su sveikata, finansais, asmens saugumu ar panašia informacija. Galite bet kada koreguoti „Leo“ parinktis nuostatose. Eikite į nuostatas &gt; „Leo“.</translation>
-<translation id="3038772045018370764">„Leo“ nerenka identifikatorių, pvz., IP adreso, kuriuos galima susieti su jumis. Jokie duomenys nenaudojami DI modeliams mokyti ir DI modeliai nelaiko jokių asmens duomenų (išskyrus „Anthropic“, kuris laiko duomenis 30 dienų, o vėliau juos pašalina). Daugiau informacijos žr. <ph name="LINK_BEFORE"/>privatumo politikoje<ph name="LINK_AFTER"/>.</translation>
+<translation id="7491773233732232424">Apie „AI Wize Chat“</translation>
+<translation id="5208096220706490232">„AI Wize Chat“ yra privatus išmanusis DI padėjėjas, padedantis geriau naudotis internetu. Ribota „AI Wize Chat“ prieiga yra nemokama. „AI Wize Chat Premium“ siūlo daugiau modelių, didesnius limitus ir anksti suteikia prenumeratoriams prieigas prie naujų funkcijų. Numatytasis modelis visiems naudotojams šiuo metu yra „Mixtral 8x7B“. Daugiau informacijos rasite <ph name="LINK_BEFORE"/>Brave wiki<ph name="LINK_AFTER"/>.</translation>
+<translation id="7189603330209995455">Kai užduodate „AI Wize Chat“ klausimą, pagal numatymą jis gali siųsti „AI Wize Chat“ ir naudoti jūsų žiūrimo tinklalapio turinį arba bet kurį jūsų paryškintą puslapyje turinį, kad galėtų atsakyti. Atsakymų tikslumas neužtikrinamas, juose gali būti netikslios, klaidinamos ar neteisingos informacijos. „AI Wize Chat“ naudoja gautus iš „Brave Search“ duomenis, kad pagerintų atsako kokybę. Neteikite neatskleistinos ar privačios informacijos ir atsargiai vertinkite visus atsakymus, susijusius su sveikata, finansais, asmens saugumu ar panašia informacija. Galite bet kada koreguoti „AI Wize Chat“ parinktis nuostatose. Eikite į nuostatas &gt; „AI Wize Chat“.</translation>
+<translation id="3038772045018370764">„AI Wize Chat“ nerenka identifikatorių, pvz., IP adreso, kuriuos galima susieti su jumis. Jokie duomenys nenaudojami DI modeliams mokyti ir DI modeliai nelaiko jokių asmens duomenų (išskyrus „Anthropic“, kuris laiko duomenis 30 dienų, o vėliau juos pašalina). Daugiau informacijos žr. <ph name="LINK_BEFORE"/>privatumo politikoje<ph name="LINK_AFTER"/>.</translation>
 <translation id="7839853125981164613">Čia įveskite raginimą</translation>
 <translation id="4524675003624341892">Siūlyti klausimus…</translation>
 <translation id="4567071417854988869">Apibendrinti šį vaizdo įrašą</translation>
 <translation id="7921782882718083488">Apibendrinti šį puslapį</translation>
-<translation id="7932221068776853847">Atsijunkite, kad šio puslapio turinys nebebūtų siunčiamas „Leo“, ir pradėkite naują pokalbį</translation>
-<translation id="1167803637855350748">Prisijungiant prie „Leo“ kilo tinklo problema, patikrinkite ryšį ir bandykite dar kartą.</translation>
-<translation id="5095201428204952524">Šiuo metu „Leo“ per daug užimta. Pabandykite dar kartą po kelių minučių.</translation>
+<translation id="7932221068776853847">Atsijunkite, kad šio puslapio turinys nebebūtų siunčiamas „AI Wize Chat“, ir pradėkite naują pokalbį</translation>
+<translation id="1167803637855350748">Prisijungiant prie „AI Wize Chat“ kilo tinklo problema, patikrinkite ryšį ir bandykite dar kartą.</translation>
+<translation id="5095201428204952524">Šiuo metu „AI Wize Chat“ per daug užimta. Pabandykite dar kartą po kelių minučių.</translation>
 <translation id="7144878232160441200">Kartoti</translation>
-<translation id="2505565639170795978">Sveiki, aš Leo. Esu visiškai „Brave“ priglobiamas DI asistentas. Mane valdo „Llama 13B“ – našus ir daugeliui naudojimo atvejų pritaikomas „Meta“ sukurtas modelis.</translation>
-<translation id="8030558642460377506">Sveiki, aš esu „Leo“. Esu „Brave“ teikiamas, visapusę prieglobą naudojantis DI padėjėjas. Veikiu „Mixtral 8x7B“ pagrindu – šį modelį sukūrė „Mistral AI“ sudėtingesnėms užduotims vykyti.</translation>
-<translation id="2489317965865266353">Sveiki, aš Leo. Mane teikia „Brave“ ir naudoju „Claude Instant“ – „Anthropic“ sukurtą modelį, skirtą pokalbių ir teksto apdorojimo užduotims atlikti.</translation>
+<translation id="2505565639170795978">Sveiki, aš AI Wize Chat. Esu visiškai „Brave“ priglobiamas DI asistentas. Mane valdo „Llama 13B“ – našus ir daugeliui naudojimo atvejų pritaikomas „Meta“ sukurtas modelis.</translation>
+<translation id="8030558642460377506">Sveiki, aš esu „AI Wize Chat“. Esu „Brave“ teikiamas, visapusę prieglobą naudojantis DI padėjėjas. Veikiu „Mixtral 8x7B“ pagrindu – šį modelį sukūrė „Mistral AI“ sudėtingesnėms užduotims vykyti.</translation>
+<translation id="2489317965865266353">Sveiki, aš AI Wize Chat. Mane teikia „Brave“ ir naudoju „Claude Instant“ – „Anthropic“ sukurtą modelį, skirtą pokalbių ir teksto apdorojimo užduotims atlikti.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/>, sukurta <ph name="COMPANY_NAME"/></translation>
 <translation id="8944485226638699751">Apribota</translation>
 <translation id="6187065185557150870">Pokalbiai</translation>
@@ -1910,7 +1910,7 @@
 <translation id="2389665228467129817">Kalbėkitės ilgiau</translation>
 <translation id="8556044455877152001">USD $ <ph name="PRICE_VALUE"/> / mėn.</translation>
 <translation id="5151923271944811339">Perjungti į nemokamą modelį</translation>
-<translation id="5474757891469990756">Atskleiskite visas „Leo“ galimybes naudodamiesi „Premium“:</translation>
+<translation id="5474757891469990756">Atskleiskite visas „AI Wize Chat“ galimybes naudodamiesi „Premium“:</translation>
 <translation id="5552332211527367850">Pirmenybinė prieiga prie veiksmingų modelių naudojantis skirtingais įgūdžiais</translation>
 <translation id="5031778211368112461">Naudokitės geriau pritaikytais modeliais kūrybinėms užduotims atlikti ir turiniui generuoti.</translation>
 <translation id="298783097210745222">Gaukite tikslesnius detalesnių pokalbių atsakymus</translation>
@@ -1926,32 +1926,32 @@
 <translation id="8442999546461118871">Pasirinkite atsiliepimo temą</translation>
 <translation id="9018766373792005944">Apie ką jūsų atsiliepimas?</translation>
 <translation id="7355096922131918313">Pateikite atsiliepimą čia</translation>
-<translation id="3027575440738035995">„Leo Premium“ suteikia prieigą prie išplėstinio kalbos modelių rinkinio, pateikdamas dar išsamesnius atsakymus.<ph name="LINK_BEFORE"/>Sužinokite daugiau<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">„AI Wize Chat Premium“ suteikia prieigą prie išplėstinio kalbos modelių rinkinio, pateikdamas dar išsamesnius atsakymus.<ph name="LINK_BEFORE"/>Sužinokite daugiau<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">Nenaudinga</translation>
 <translation id="2976167228906046828">Neteisinga</translation>
 <translation id="1183055847065865059">Nesaugu / žalinga</translation>
 <translation id="7138678301420049075">Kitas</translation>
 <translation id="2313959174679245365">Nepavyko pateikti jūsų įvertinimo; patikrinkite interneto ryšį ir bandykite dar kartą</translation>
 <translation id="98413980871833152">Nepavyko pateikti jūsų atsiliepimo; patikrinkite interneto ryšį ir bandykite dar kartą</translation>
-<translation id="8742658901413346500">Šis pokalbis ilgas, ir „Leo“ netrukus gali pradėti šį tą pamiršti. Ilgesnius pokalbius galite gauti perėję prie „Premium“ modelio arba galite išvalyti pokalbį, kad jį nustatytumėte iš naujo.</translation>
+<translation id="8742658901413346500">Šis pokalbis ilgas, ir „AI Wize Chat“ netrukus gali pradėti šį tą pamiršti. Ilgesnius pokalbius galite gauti perėję prie „Premium“ modelio arba galite išvalyti pokalbį, kad jį nustatytumėte iš naujo.</translation>
 <translation id="7550152963854770123">Išvalyti pokalbius</translation>
-<translation id="7494736170250048402">Siųsti „Leo“ žinutę</translation>
-<translation id="4110772752544684964">Puslapis „Leo“ per ilgas. Pokalbyje gali trūkti tam tikro konteksto.</translation>
-<translation id="4370698775470316661">Šis pokalbis per ilgas ir negali tęstis. Gali būti kitų modelių, su kuriais „Leo“ gali palaikyti tikslumą ilgesniuose pokalbiuose.</translation>
+<translation id="7494736170250048402">Siųsti „AI Wize Chat“ žinutę</translation>
+<translation id="4110772752544684964">Puslapis „AI Wize Chat“ per ilgas. Pokalbyje gali trūkti tam tikro konteksto.</translation>
+<translation id="4370698775470316661">Šis pokalbis per ilgas ir negali tęstis. Gali būti kitų modelių, su kuriais „AI Wize Chat“ gali palaikyti tikslumą ilgesniuose pokalbiuose.</translation>
 <translation id="6291843235651817590">Bendrosios paskirties pokalbiai</translation>
 <translation id="8193130769524604031">Išplėstinės pokalbių užduotys</translation>
 <translation id="3185367320601718531">Pokalbis ir teksto generavimas</translation>
-<translation id="3965507912994218570">"Leo" nustatymai</translation>
-<translation id="1037324977127422019">Labas, aš Leo!</translation>
+<translation id="3965507912994218570">"AI Wize Chat" nustatymai</translation>
+<translation id="1037324977127422019">Labas, aš AI Wize Chat!</translation>
 <translation id="8930348081963284873">DI pagrįstas išmanusis asistentas, integruotas tiesiogiai į „Brave“.</translation>
 <translation id="3528849152231418380">Reikia pagalbos dėl svetainės?</translation>
 <translation id="1558192229187362674">Galiu padėti apibendrinti straipsnius, išplėsdamas svetainės turinį ir ne tik.</translation>
 <translation id="861953757568623294">Galiu padėti apibendrinti straipsnius, išplėsdamas svetainės turinį ir ne tik. Nežinote, kur pradėti? Pabandykite tai:</translation>
 <translation id="5642775487085641191">Norite tiesiog pabendrauti?</translation>
 <translation id="8857222718794549840">Klauskite manęs bet ko! Galime bendrauti kokiomis tik norite temomis. Aš nuolat mokausi ir tobulėju, kad galėčiau teikti geresnius atsakymus.</translation>
-<translation id="9051226419897869406">Privačiai kalbėkitės su „Brave Leo“</translation>
+<translation id="9051226419897869406">Privačiai kalbėkitės su „AI Wize Chat“</translation>
 <translation id="1173570303649278801">Atsakymui naudoti puslapio turinį</translation>
-<translation id="8599503173207256429">Įjunkite norėdami paklausti apie šį puslapį. Jo turinys bus nusiųstas „Brave“ Leo kartu su jūsų pranešimais.</translation>
+<translation id="8599503173207256429">Įjunkite norėdami paklausti apie šį puslapį. Jo turinys bus nusiųstas „Brave“ AI Wize Chat kartu su jūsų pranešimais.</translation>
 <translation id="318819763888864209">Visos prenumeratos atnaujinamos automatiškai, bet jas galima bet kada nutraukti iki atnaujinimo.</translation>
 <translation id="6303294677342628402">Skydai</translation>
 <translation id="8458987127502506209">Įgalinti „Brave“ skydus</translation>
@@ -2117,5 +2117,5 @@ Prijunkime jus!
     paspauskite „Tab“, tada „Enter“, kad pereitumėte į atidarytą skirtuką.</translation>
 <translation id="1538335063514960365">Atidarykite čia, paspauskite „Enter“, kad URL nuoroda būtų atidaryta dabartiniame skirtuke, o ne perjungta į
     esamą skirtuką</translation>
-<translation id="451189393813405346">Klausti „Leo“</translation>
+<translation id="451189393813405346">Klausti „AI Wize Chat“</translation>
 </translationbundle>

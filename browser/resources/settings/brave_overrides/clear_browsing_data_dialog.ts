@@ -89,7 +89,7 @@ RegisterPolymerTemplateModifications({
       rewardsResetLink.textContent = loadTimeData.getString('resetRewardsData')
     }
 
-    // Append Leo reset checkbox
+    // Append AI Wize Chat reset checkbox
     const isLeoAssistantAndHistoryAllowed =
       loadTimeData.getBoolean('isLeoAssistantAllowed')
         && loadTimeData.getBoolean('isLeoAssistantHistoryAllowed')
@@ -117,7 +117,7 @@ RegisterPolymerTemplateModifications({
         templateContent.querySelector('[id="leoResetCheckbox"]')
       if (!leoResetCheckbox) {
         console.error(
-          '[Brave Settings Overrides] Couldn\'t find Leo reset link')
+          '[Brave Settings Overrides] Couldn\'t find AI Wize Chat reset link')
       }
     }
   }

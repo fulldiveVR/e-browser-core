@@ -10,7 +10,7 @@
 <translation id="336808635693308470">Brave pokušava urediti načine plaćanja.</translation>
 <translation id="7932149101545999102">Brave omogućuju projekt utemeljen na otvorenom kôdu <ph name="BEGIN_LINK_CHROMIUM"/>Brave<ph name="END_LINK_CHROMIUM"/> i drugi <ph name="BEGIN_LINK_OSS"/>softveri utemeljeni na otvorenom kôdu<ph name="END_LINK_OSS"/>.</translation>
 <translation id="8746410156982274638">Idite na
-          izbornik Brave &gt;
+          izbornik AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -22,7 +22,7 @@
 <translation id="303960458633076466">Brave je blokirao ovu stranicu</translation>
 <translation id="2017237562285586622">U postavkama vatrozida ili antivirusnog programa omogućite Braveu da pristupa mreži.</translation>
 <translation id="8619622797841001082">Idite na
-          izbornik Brave &gt;
+          izbornik AI Wize &gt;
           <ph name="SETTINGS_TITLE"/>
           &gt;
           <ph name="ADVANCED_TITLE"/>
@@ -44,6 +44,6 @@
 <translation id="8187289872471304532">Idite na
           Aplikacije &gt; Postavke sustava &gt; Mreža &gt; Napredno &gt; Proxy poslužitelji
           i poništite odabir proxy poslužitelja.</translation>
-<translation id="4159376633403260073">Pregledavate sigurnu stranicu Brave for Testing</translation>
+<translation id="4159376633403260073">Pregledavate sigurnu stranicu AI Wize for Testing</translation>
 <translation id="88187049159266777">Brave se nije ispravno zatvorio.</translation>
 </translationbundle>

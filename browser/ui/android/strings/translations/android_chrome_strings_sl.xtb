@@ -22,12 +22,12 @@
 <translation id="1111673857033749125">Tu bodo prikazani zaznamki, shranjeni v drugih napravah.</translation>
 <translation id="1113597929977215864">Pokaži poenostavljen pogled</translation>
 <translation id="4470276443668654888">Plačilna sredstva in naslovi iz Googla Pay ne bodo šifrirani. Zgodovina brskanja v Chromu se ne bo sinhronizirala.
-Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni poslano Googlu in ga Brave ne hrani. Če pozabite geslo ali želite to nastavitev spremeniti, morate ponastaviti sinhronizacijo. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
+Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni poslano Googlu in ga AI Wize ne hrani. Če pozabite geslo ali želite to nastavitev spremeniti, morate ponastaviti sinhronizacijo. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Ne ščiti pred nevarnimi spletnimi mesti, prenosi in razširitvami. Še vedno boste deležni zaščite Varnega brskanja, kjer je na voljo, v drugih Googlovih storitvah, kot sta Gmail in Iskanje Brave.</translation>
 <translation id="1129510026454351943">Podrobnosti: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Ne ponudi prevajanja teh spletnih mest</translation>
 <translation id="1145536944570833626">Izbris obstoječih podatkov.</translation>
-<translation id="7083341910267693582">Aplikacija <ph name="APP_NAME"/> se bo odprla v Chromu. Če nadaljujete, se strinjate z <ph name="BEGIN_LINK1"/>Googlovimi pogoji storitve<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>dodatnimi pogoji storitve za Brave in Chrome OS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582">Aplikacija <ph name="APP_NAME"/> se bo odprla v Chromu. Če nadaljujete, se strinjate z <ph name="BEGIN_LINK1"/>Googlovimi pogoji storitve<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>dodatnimi pogoji storitve za AI Wize in Chrome OS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Uporaba gesla <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Preimenuj</translation>
 <translation id="7947699437047020219">Brave bo zahteval spletno mesto za mobilne naprave, ko je zaslon ozek</translation>
@@ -70,7 +70,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="1320912611264252795">Mape v postopku shranjevanja zaznamka, odprte pri polni višini</translation>
 <translation id="1327257854815634930">Zgodovina krmarjenja je odprta</translation>
 <translation id="6773423637732432200">Posodobitev Chroma ni mogoča. Več možnosti.</translation>
-<translation id="3169981355900570544">Bližnjice za funkcije Brave Chroma</translation>
+<translation id="3169981355900570544">Bližnjice za funkcije AI Wize Chroma</translation>
 <translation id="1344653310988386453">Vključite povezavo do označitve</translation>
 <translation id="1347468774581902829">Upravljanje dejavnosti</translation>
 <translation id="1360432990279830238">Odjava in izklop sinhronizacije?</translation>
@@ -131,7 +131,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="1710099199314114079">Preklopite med zavihki ali jih zaprite</translation>
 <translation id="1718835860248848330">Zadnja ura</translation>
 <translation id="1724977129262658800">Odklenite, če želite urediti geslo.</translation>
-<translation id="6493900814829428590">Brskanje in iskanje sta hitrejša, ko Brave vnaprej naloži strani, za katere meni, da jih boste morda obiskali.</translation>
+<translation id="6493900814829428590">Brskanje in iskanje sta hitrejša, ko AI Wize vnaprej naloži strani, za katere meni, da jih boste morda obiskali.</translation>
 <translation id="1749561566933687563">Sinhroniziranje zaznamkov</translation>
 <translation id="1750259112639922169">Skupina zavihkov – zavihki (<ph name="TAB_COUNT"/>)</translation>
 <translation id="17513872634828108">Odprti zavihki</translation>
@@ -166,7 +166,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="1944535645109964458">Ključi za dostop niso na voljo</translation>
 <translation id="1952172573699511566">Spletna mesta bodo besedilo prikazala v izbranem jeziku, če je mogoče.</translation>
 <translation id="1959679933317802873">Čakanje na vsebino</translation>
-<translation id="3968054912784331254">Posodobitve za Brave v tej različici Androida niso več podprte.</translation>
+<translation id="3968054912784331254">Posodobitve za AI Wize v tej različici Androida niso več podprte.</translation>
 <translation id="1963976881984600709">Standardna zaščita</translation>
 <translation id="1966710179511230534">Posodobite podrobnosti prijave.</translation>
 <translation id="197288927597451399">Obdrži</translation>
@@ -210,17 +210,17 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="218608176142494674">Deljenje z drugimi</translation>
 <translation id="2194856509914051091">Kaj morate upoštevati</translation>
 <translation id="22091350895006575">Dodajanje uporabniškega imena</translation>
-<translation id="4075202346699640887">Če odprete Brave brez zaklepanja profila, bodo shranjena gesla in plačilna sredstva odstranjena iz avtomobila. Z zaklepanjem profila poskrbite za varnost teh podatkov.</translation>
+<translation id="4075202346699640887">Če odprete AI Wize brez zaklepanja profila, bodo shranjena gesla in plačilna sredstva odstranjena iz avtomobila. Z zaklepanjem profila poskrbite za varnost teh podatkov.</translation>
 <translation id="2227444325776770048">Nadaljujte kot <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Prazno okno</translation>
 <translation id="223356358902285214">Dejavnost v spletu in aplikacijah</translation>
 <translation id="2234827758954819389">Vodnik po zasebnosti</translation>
 <translation id="2239812875700136898">Nadzirajte članke v možnostih za gumb Odkrivanja</translation>
 <translation id="2247789808226901522">Kartica je potekla</translation>
-<translation id="4808014761134300692">Gesla so šifrirana v napravi, preden se shranijo v Brave Upravitelju gesel.</translation>
+<translation id="4808014761134300692">Gesla so šifrirana v napravi, preden se shranijo v AI Wize Upravitelju gesel.</translation>
 <translation id="2249635629516220541">Prilagajanje podatkov, ki jih spletna mesta uporabljajo za prikazovanje oglasov.</translation>
 <translation id="2259659629660284697">Izvozi gesla …</translation>
-<translation id="8820144752830692527">V <ph name="BEGIN_LINK1"/>nastavitvah<ph name="END_LINK1"/> lahko kadar koli izberete, kaj želite sinhronizirati. Brave lahko prilagodi Iskanje Brave in druge storitve glede na vašo zgodovino.</translation>
+<translation id="8820144752830692527">V <ph name="BEGIN_LINK1"/>nastavitvah<ph name="END_LINK1"/> lahko kadar koli izberete, kaj želite sinhronizirati. AI Wize lahko prilagodi Iskanje AI Wize in druge storitve glede na vašo zgodovino.</translation>
 <translation id="781982477617612877">Če želite preveriti gesla, se prijavite v račun Brave</translation>
 <translation id="2278052315791335171">Če izbrišete to geslo, ne izbrišete računa na <ph name="SITE"/>.</translation>
 <translation id="2286841657746966508">Naslov za obračun storitev</translation>
@@ -268,9 +268,9 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="2546283357679194313">Piškotki in podatki o spletnih mestih</translation>
 <translation id="2567385386134582609">SLIKA</translation>
 <translation id="2567545343356994513">Hitrejša, še boljša zaščita proti nevarnim spletnim mestom, prenosom in razširitvam.</translation>
-<translation id="5079947353572974060">Ponudi pošiljanje strani v drugih jezikih v Brave Prevajalnik</translation>
+<translation id="5079947353572974060">Ponudi pošiljanje strani v drugih jezikih v AI Wize Prevajalnik</translation>
 <translation id="2571834852878229351">Ustvari lastno geslo</translation>
-<translation id="6995512410824092085">Preberite, kako Brave nastavite kot privzetega.</translation>
+<translation id="6995512410824092085">Preberite, kako AI Wize nastavite kot privzetega.</translation>
 <translation id="7242554556818074465">Če si želite ogledati zavihke iz naprav, v katerih uporabljate Brave, se prijavite v vseh napravah</translation>
 <translation id="8661556138616664061">Googlova vsebina za mlade ume</translation>
 <translation id="2324920234469020158">S tem bodo izbrisani piškotki, predpomnilnik in drugi podatki spletnih mest, ki se Chromu ne zdijo pomembni.</translation>
@@ -281,7 +281,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="2604446170045642109">V nastavitvah lahko izklopite temno temo za spletna mesta.</translation>
 <translation id="2612676031748830579">Številka kartice</translation>
 <translation id="2625189173221582860">Geslo kopirano</translation>
-<translation id="2634393460268044753">V Brave Varno brskanje pošilja URL-je spletnih mest, ki jih obiščete, in majhen vzorec vsebine strani, prenose, dejavnost razširitve in podatke o sistemu, da preveri, ali so škodljivi.</translation>
+<translation id="2634393460268044753">V AI Wize Varno brskanje pošilja URL-je spletnih mest, ki jih obiščete, in majhen vzorec vsebine strani, prenose, dejavnost razširitve in podatke o sistemu, da preveri, ali so škodljivi.</translation>
 <translation id="2642087927315268160">Razdelek na dnu zaslona za prijavo je zaprt.</translation>
 <translation id="2643064289437760082">Podatke merjenja oglasov lahko kadar koli izbrišete tako, da izbrišete podatke brskanja.</translation>
 <translation id="2647434099613338025">Dodaj jezik</translation>
@@ -293,7 +293,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="265156376773362237">Standardno vnaprejšnje nalaganje</translation>
 <translation id="2656405586795711023">Spletni programi</translation>
 <translation id="2669454659051515572">Prenesene datoteke lahko vidijo vsi, ki uporabljajo to napravo.</translation>
-<translation id="5806087344347665213">Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko Brave Googlu pošlje URL-je, vključno z delčki vsebine strani</translation>
+<translation id="5806087344347665213">Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko AI Wize Googlu pošlje URL-je, vključno z delčki vsebine strani</translation>
 <translation id="2702516483241149200">Novo: Delite povezavo, ki se pomakne do tega besedila.</translation>
 <translation id="3769942772151914580">Proaktivna sprotna zaščita pred nevarnimi spletnimi mesti, prenosi in razširitvami, ki temelji na podatkih brskanja, poslanih Googlu</translation>
 <translation id="2708226184420201102">Odpiranje v brskalniku <ph name="PRODUCT_NAME"/></translation>
@@ -326,10 +326,10 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="2870560284913253234">Spletno mesto</translation>
 <translation id="2871733351037274014">Vnaprejšnje nalaganje strani</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> želi, da odobrite to spletno mesto:</translation>
-<translation id="6756656512757374876">Preberite več o tem, <ph name="BEGIN_LINK"/>kako Brave zagotavlja zasebnost vaših podatkov<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Preberite več o tem, <ph name="BEGIN_LINK"/>kako AI Wize zagotavlja zasebnost vaših podatkov<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">O brskalniku Brave</translation>
 <translation id="2891154217021530873">Ustavi nalaganje strani</translation>
-<translation id="4013614219085422040">Brave lahko vašo zgodovino uporabi za prilagajanje Iskanja Brave in drugih Googlovih storitev</translation>
+<translation id="4013614219085422040">Brave lahko vašo zgodovino uporabi za prilagajanje Iskanja AI Wize in drugih Googlovih storitev</translation>
 <translation id="2894821468041866720">Ne upočasni delovanja brskalnika ali naprave.</translation>
 <translation id="2900528713135656174">Ustvarite dogodek</translation>
 <translation id="2901411048554510387">Prikaz predlogov za spletno mesto <ph name="WEBSITE_TITLE"/></translation>
@@ -339,7 +339,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="7339921667754113786">Googlovo okolje za obvestila</translation>
 <translation id="2912296070571964914">Upravljanje tem, ki vas zanimajo.</translation>
 <translation id="2923908459366352541">Ime je neveljavno</translation>
-<translation id="6355102470683871794">Shranjeni podatki aplikacije Brave <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Shranjeni podatki aplikacije AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">Tipkovnica se ne bo spremenila.</translation>
 <translation id="6537665929855787038">Obvestila v Chromu olajšajo stvari</translation>
 <translation id="2940075786175545812">Možnost odobritve ali neodobritve spletnega mesta</translation>
@@ -360,7 +360,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="2996291259634659425">Ustvarjanje gesla</translation>
 <translation id="2996809686854298943">URL je obvezen</translation>
 <translation id="2996932914629936323">Izbriše zgodovino iz vseh sinhroniziranih naprav.</translation>
-<translation id="2019027298133375428">Ko Googlovo spletno mesto zahteva zasebno vnaprejšnje nalaganje povezav na njegovi strani, Brave šifrira in vnaprej naloži strani prek Googlovih strežnikov brez piškotkov. S tem je skrita vaša identiteta na vnaprej naloženem mestu.</translation>
+<translation id="2019027298133375428">Ko Googlovo spletno mesto zahteva zasebno vnaprejšnje nalaganje povezav na njegovi strani, AI Wize šifrira in vnaprej naloži strani prek Googlovih strežnikov brez piškotkov. S tem je skrita vaša identiteta na vnaprej naloženem mestu.</translation>
 <translation id="5730179015008010982">URL-ji, ki jih obiščete, se pošljejo Googlu zaradi predvidevanja, katera spletna mesta boste morda obiskali, in zaradi prikaza dodatnih informacij o strani, ki ste jo obiskali</translation>
 <translation id="3016635187733453316">Naprava mora biti povezana z internetom</translation>
 <translation id="3026955690410463085">Vključi povezavo</translation>
@@ -374,12 +374,12 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="3038272154009688107">Ogled vseh spletnih mest</translation>
 <translation id="3046945242843292318">Naslednjič hitreje odprite to spletno mesto.</translation>
 <translation id="3055259925215945098">Zaznamek je bil premaknjen</translation>
-<translation id="4163313568284712797">Podatki o vaši uporabi Chroma se pošljejo Googlu, vendar niso povezani z vami.\n\nČe se Brave zruši, podrobnosti o zrušitvi morda vsebujejo nekatere osebne podatke.\n\nČe vklopite sinhronizacijo, meritve morda vključujejo tudi podatke o URL-jih, ki jih obiščete.</translation>
+<translation id="4163313568284712797">Podatki o vaši uporabi Chroma se pošljejo Googlu, vendar niso povezani z vami.\n\nČe se AI Wize zruši, podrobnosti o zrušitvi morda vsebujejo nekatere osebne podatke.\n\nČe vklopite sinhronizacijo, meritve morda vključujejo tudi podatke o URL-jih, ki jih obiščete.</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> zaznamek}one{<ph name="BOOKMARKS_COUNT_MANY"/> zaznamek}two{<ph name="BOOKMARKS_COUNT_MANY"/> zaznamka}few{<ph name="BOOKMARKS_COUNT_MANY"/> zaznamki}other{<ph name="BOOKMARKS_COUNT_MANY"/> zaznamkov}}</translation>
 <translation id="6153252609477956632">Članki na temo vaših zanimanj v Chromu</translation>
 <translation id="3066573403916685335">Premik dol</translation>
 <translation id="3070005020161560471">Samodejno prevedi</translation>
-<translation id="1094255666887095087">Aplikacija <ph name="APP_NAME"/> se bo odprla v Chromu. Če nadaljujete, se strinjate z <ph name="BEGIN_LINK1"/>Googlovimi pogoji storitve<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>dodatnimi pogoji storitve za Brave in Chrome OS<ph name="END_LINK2"/>. Uporablja se tudi <ph name="BEGIN_LINK3"/>pravilnik o zasebnosti<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087">Aplikacija <ph name="APP_NAME"/> se bo odprla v Chromu. Če nadaljujete, se strinjate z <ph name="BEGIN_LINK1"/>Googlovimi pogoji storitve<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>dodatnimi pogoji storitve za AI Wize in Chrome OS<ph name="END_LINK2"/>. Uporablja se tudi <ph name="BEGIN_LINK3"/>pravilnik o zasebnosti<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Strani lahko shranite, če želite brati pozneje ali brez povezave</translation>
 <translation id="3091010850649238832">Prikaz vsebine odložišča</translation>
 <translation id="821565628224723530">Nekatere slike so poslane Googlu zaradi izboljšanja opisov.</translation>
@@ -398,7 +398,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="1892217432793359605"><ph name="BEGIN_LINK1"/>Zgodovina iskanja<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>druge oblike dejavnosti<ph name="END_LINK2"/> se morda shranjujejo v računu Brave, ko ste prijavljeni. Izbrišete jih lahko kadar koli.</translation>
 <translation id="321773570071367578">Če ste pozabili geslo ali želite spremeniti to nastavitev, <ph name="BEGIN_LINK"/>ponastavite sinhronizacijo<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Če želite sinhronizirati gesla, potrdite, da ste to vi.</translation>
-<translation id="9210457680074341078">Če v računu Brave shranite tudi zaznamke, lahko v Chromu spremljate cene izdelkov in prejmete obvestilo, ko se cena zniža</translation>
+<translation id="9210457680074341078">Če v računu AI Wize shranite tudi zaznamke, lahko v Chromu spremljate cene izdelkov in prejmete obvestilo, ko se cena zniža</translation>
 <translation id="9047551989591319903">Brave kot varnostni ključ</translation>
 <translation id="3232754137068452469">Spletna aplikacija</translation>
 <translation id="3236059992281584593">Še 1 min</translation>
@@ -449,7 +449,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Najprej najstarejši</translation>
 <translation id="3507132249039706973">Standardna zaščita je vklopljena</translation>
-<translation id="8669829441518807650">Brez povezave. Brave ne more preveriti, ali so na voljo posodobitve.</translation>
+<translation id="8669829441518807650">Brez povezave. AI Wize ne more preveriti, ali so na voljo posodobitve.</translation>
 <translation id="3513704683820682405">Razširjena resničnost</translation>
 <translation id="3518985090088779359">Sprejmi in nadaljuj</translation>
 <translation id="3521388823983121502">Z računom ponudnika identitete <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ni mogoče nadaljevati</translation>
@@ -482,7 +482,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="3701515417135397388">Posvari, če je bilo geslo razkrito zaradi podatkovne kršitve</translation>
 <translation id="371230970611282515">Predvideva nevarne dogodke, preden se zgodijo, in vas opozarja nanje.</translation>
 <translation id="3714981814255182093">Odpiranje vrstice za iskanje</translation>
-<translation id="5805364706385912897">Ta stran uporablja preveč pomnilnika, zato jo je Brave zaustavil.</translation>
+<translation id="5805364706385912897">Ta stran uporablja preveč pomnilnika, zato jo je AI Wize zaustavil.</translation>
 <translation id="3720422586473670527">Ne, hvala</translation>
 <translation id="8397843425685839889">Vi in Brave</translation>
 <translation id="3737319253362202215">Nastavitve prevajanja</translation>
@@ -550,7 +550,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="4108314971463891922">Spremljaj</translation>
 <translation id="4108998448622696017">Zaznava nevarne dogodke, ko se zgodijo, in vas opozarja nanje.</translation>
 <translation id="4116038641877404294">Prenesite strani, če jih želite uporabljati brez povezave</translation>
-<translation id="37459938731864814">Tega gesla si vam ne bo treba zapomniti. Shranjeno bo v Brave Upravitelju gesel za račun <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Tega gesla si vam ne bo treba zapomniti. Shranjeno bo v AI Wize Upravitelju gesel za račun <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Potek za dovoljenja za obvestila je odprt pri polni višini</translation>
 <translation id="4126285640274188657">Podrobni podatki o strani</translation>
 <translation id="4135200667068010335">Seznam naprav, s katerimi želite deliti zavihek, je zaprt.</translation>
@@ -567,7 +567,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 zavihek v tej napravi}one{# zavihek v tej napravi}two{# zavihka v tej napravi}few{# zavihki v tej napravi}other{# zavihkov v tej napravi}}</translation>
 <translation id="4198423547019359126">Ni razpoložljivih mest za prenos</translation>
 <translation id="4202218894997543208">Teme, ki ste jih blokirali</translation>
-<translation id="1675646381334855139">Če omogočite piškotke, jih bo Brave morda uporabil za vnaprejšnje nalaganje.</translation>
+<translation id="1675646381334855139">Če omogočite piškotke, jih bo AI Wize morda uporabil za vnaprejšnje nalaganje.</translation>
 <translation id="4216511743389425832">Poslušanje te strani</translation>
 <translation id="4225725533026049334">Spremljano</translation>
 <translation id="4225895483398857530">Bližnjica do orodne vrstice</translation>
@@ -610,9 +610,9 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="4452548195519783679">Zaznamek ustvarjen v mapi <ph name="FOLDER_NAME"/></translation>
 <translation id="4461614516424362539">Če povežete drugo napravo s kodo QR, lahko uporabi ta telefon kot varnostni ključ. Če ga odstranite, boste morali optično prebrati kodo QR, če ga boste želeli znova povezati.</translation>
 <translation id="4478161224666880173">Na tem spletnem mestu lahko uporabite račun za <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>. Če želite nadaljevati, se prijavite v račun za <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="3133489217401741157">Nameščanje modula <ph name="MODULE"/> za Brave …</translation>
+<translation id="3133489217401741157">Nameščanje modula <ph name="MODULE"/> za AI Wize …</translation>
 <translation id="4484496141267039529">Ni povezave. Poskusite pozneje.</translation>
-<translation id="53119194224775367">Vsi podatki aplikacije Brave bodo trajno izbrisani, vključno z vsemi datotekami, nastavitvami, računi, zbirkami podatkov ipd.</translation>
+<translation id="53119194224775367">Vsi podatki aplikacije AI Wize bodo trajno izbrisani, vključno z vsemi datotekami, nastavitvami, računi, zbirkami podatkov ipd.</translation>
 <translation id="3966104135245031874">Šifriranje sinhroniziranih gesel z računom Brave</translation>
 <translation id="4491323382106587961">Izberite račun. Trenutno izbrano: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">Skrbnik je vklopil shranjevanje gesel</translation>
@@ -622,7 +622,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="451872707440238414">Poiščite zaznamke</translation>
 <translation id="1664855196866195614">Izbrani podatki so bili odstranjeni iz Chroma in sinhroniziranih naprav.
 
-V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejavnosti iz drugih Googlovih storitev, na <ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/>.</translation>
+V AI Wize Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejavnosti iz drugih Googlovih storitev, na <ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">zadnja ura</translation>
 <translation id="452750746583162491">Pregled sinhroniziranih podatkov</translation>
 <translation id="4532845899244822526">Izbira mape</translation>
@@ -671,7 +671,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Gesla so shranjena v Upravitelju gesel v tej napravi.</translation>
 <translation id="4766678251456904326">Dodajte račun v napravo</translation>
-<translation id="1996253762801922860">Uvajamo novo funkcijo za zasebnost pri oglaševanju, ki se imenuje merjenje oglasov. Brave deli samo zelo omejene podatke s spletnimi mesti in aplikacijami, na primer kdaj vam je bil oglas prikazan, da bi pomagal meriti uspešnost oglasov.</translation>
+<translation id="1996253762801922860">Uvajamo novo funkcijo za zasebnost pri oglaševanju, ki se imenuje merjenje oglasov. AI Wize deli samo zelo omejene podatke s spletnimi mesti in aplikacijami, na primer kdaj vam je bil oglas prikazan, da bi pomagal meriti uspešnost oglasov.</translation>
 <translation id="4769095993849849966">Novo ime datoteke</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> – izbrisano</translation>
 <translation id="4778653490315793244">Ničesar ni za prikaz</translation>
@@ -690,14 +690,14 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="4837753911714442426">Odpiranje možnosti za tiskanje strani</translation>
 <translation id="4842092870884894799">Prikaz pojavnega okna za ustvarjanje gesel</translation>
 <translation id="4842515939542199281">Če želite iskati z glasom, se dotaknite mikrofona.</translation>
-<translation id="6195403640086187022">Zaradi dodatne varnosti šifrirajte gesla v napravi, preden se shranijo v Brave Upravitelju gesel.</translation>
+<translation id="6195403640086187022">Zaradi dodatne varnosti šifrirajte gesla v napravi, preden se shranijo v AI Wize Upravitelju gesel.</translation>
 <translation id="4850886885716139402">Prikaži</translation>
 <translation id="4852014461738377247">Prijava …</translation>
 <translation id="4860895144060829044">Pokličite</translation>
 <translation id="4864369630010738180">Prijavljanje ...</translation>
-<translation id="5131234170665854056">Modula <ph name="MODULE"/> za Brave ni mogoče namestiti</translation>
+<translation id="5131234170665854056">Modula <ph name="MODULE"/> za AI Wize ni mogoče namestiti</translation>
 <translation id="4871568871368204250">Izklop sinhronizacije</translation>
-<translation id="2875466387677348954">Če je to izklopljeno, bodo še vedno prikazani predlogi, ki jih Brave zagotavlja lokalno</translation>
+<translation id="2875466387677348954">Če je to izklopljeno, bodo še vedno prikazani predlogi, ki jih AI Wize zagotavlja lokalno</translation>
 <translation id="4875775213178255010">Predlogi za vsebino</translation>
 <translation id="4878404682131129617">Vzpostavljanje tunela prek strežnika proxy ni uspelo</translation>
 <translation id="4880127995492972015">Prevedi …</translation>
@@ -737,7 +737,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="5039804452771397117">Dovoli</translation>
 <translation id="5040262127954254034">Zasebnost</translation>
 <translation id="504456571576643789">Kaj morate upoštevati</translation>
-<translation id="4858031288914533863">Ko ste prijavljeni, se v računu Brave morda shranjujejo <ph name="BEGIN_LINK1"/>druge oblike dejavnosti<ph name="END_LINK1"/>. Izbrišete jih lahko kadar koli.</translation>
+<translation id="4858031288914533863">Ko ste prijavljeni, se v računu AI Wize morda shranjujejo <ph name="BEGIN_LINK1"/>druge oblike dejavnosti<ph name="END_LINK1"/>. Izbrišete jih lahko kadar koli.</translation>
 <translation id="506254248375231072">Ni zavihkov</translation>
 <translation id="5062960805900435602">Obvestilo o združevanju gesel je zaprto</translation>
 <translation id="5081960376148623587">Izberite, ali želite vnaprej naložiti strani.</translation>
@@ -745,7 +745,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="509429900233858213">Napaka.</translation>
 <translation id="5097349930204431044">Spletna mesta, ki jih obiščete, lahko določijo, kaj vam je všeč, in vam med nadaljevanjem brskanja nato predlagajo oglase.</translation>
 <translation id="5099845111805573968">Ko enkrat izberete namizno spletno mesto, se nastavitev uporabi za spletno mesto ob vsakem obisku.</translation>
-<translation id="225414324447409614">Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko Brave pošlje URL-je, vključno z delčki vsebine strani, Varnemu brskanju.</translation>
+<translation id="225414324447409614">Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko AI Wize pošlje URL-je, vključno z delčki vsebine strani, Varnemu brskanju.</translation>
 <translation id="510275257476243843">Še 1 h</translation>
 <translation id="5115811374190515607">za <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Zanimanja</translation>
@@ -782,7 +782,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="5316947901395241499">Skrbnik je izklopil shranjevanje gesel</translation>
 <translation id="5317780077021120954">Shrani</translation>
 <translation id="989239400026154074">Brave priporoča Brave</translation>
-<translation id="7815000350132166985">Če omogočite piškotke, jih bo Brave morda uporabil za vnaprejšnje nalaganje</translation>
+<translation id="7815000350132166985">Če omogočite piškotke, jih bo AI Wize morda uporabil za vnaprejšnje nalaganje</translation>
 <translation id="1681635711794313507">Ker so vnaprej naložene strani šifrirane, spletno mesto s povezavo do teh strani pa je Googlovo spletno mesto, Googlovi strežniki ne prejmejo nobenega novega podatka ob zasebnem vnaprejšnjem nalaganju teh strani.</translation>
 <translation id="5329858041417644019">Vaš brskalnik ni upravljan</translation>
 <translation id="5342314432463739672">Zahteve za dovoljenja</translation>
@@ -799,7 +799,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="543338862236136125">Uredi geslo</translation>
 <translation id="5433691172869980887">Uporabniško ime kopirano</translation>
 <translation id="5438292632479953702">Znova prenesi</translation>
-<translation id="2766925507720001104">Opozori vas o nevarnih spletnih mestih, celo tistih, za katere Brave prej ni vedel, in sicer tako, da analizira več podatkov s spletnih mest kot standardna zaščita. Izberete lahko, da preskočite opozorila za Brave.</translation>
+<translation id="2766925507720001104">Opozori vas o nevarnih spletnih mestih, celo tistih, za katere AI Wize prej ni vedel, in sicer tako, da analizira več podatkov s spletnih mest kot standardna zaščita. Izberete lahko, da preskočite opozorila za Brave.</translation>
 <translation id="5441137934526263133">Ali spletno mesto ne deluje? Piškotki drugih spletnih mest so blokirani.</translation>
 <translation id="5441466871879044658">Prevedi v ta jezik</translation>
 <translation id="5441522332038954058">Premik na naslovno vrstico</translation>
@@ -817,7 +817,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="5517095782334947753">Iz računa <ph name="FROM_ACCOUNT"/> imate zaznamke, zgodovino, gesla in druge nastavitve.</translation>
 <translation id="5524843473235508879">Preusmeritev je bila blokirana.</translation>
 <translation id="5548606607480005320">Varnostno preverjanje</translation>
-<translation id="4362225295386962644">Ko uporabite geslo, vas Brave opozori, če je bilo objavljeno v spletu. Pri tem so vaša gesla in uporabniška imena šifrirana, da jih ne more prebrati nihče, vključno z Googlom.</translation>
+<translation id="4362225295386962644">Ko uporabite geslo, vas AI Wize opozori, če je bilo objavljeno v spletu. Pri tem so vaša gesla in uporabniška imena šifrirana, da jih ne more prebrati nihče, vključno z Googlom.</translation>
 <translation id="5555525474779371165">Izbira zaščite Varnega brskanja</translation>
 <translation id="5556459405103347317">Znova naloži</translation>
 <translation id="555816257274242153">Spremljanje cene je ustavljeno.</translation>
@@ -872,7 +872,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="5797521893972859201">Izbriše zgodovino, vključno s tisto v iskalnem polju.</translation>
 <translation id="5797949256525811424">Tema je blokirana.</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{Pred # uro}one{Pred # uro}two{Pred # urama}few{Pred # urami}other{Pred # urami}}</translation>
-<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> Brave LLC. Vse pravice pridržane.</translation>
+<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> AI Wize LLC. Vse pravice pridržane.</translation>
 <translation id="5814749351757353073">Bodite na tekočem s priljubljenimi spletnimi mesti</translation>
 <translation id="5822875253699806474">Za hitro vrnitev na že obiskana spletna mesta sinhronizirajte zavihke in zgodovino.</translation>
 <translation id="5829586821381540080">Shranjeno v mapo <ph name="FOLDER_NAME"/></translation>
@@ -895,10 +895,10 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="5916664084637901428">Vklopljeno</translation>
 <translation id="5919204609460789179">Posodobite izdelek <ph name="PRODUCT_NAME"/>, če želite začeti sinhronizacijo</translation>
 <translation id="5938820472109305350">Dodajanje: <ph name="INTEREST"/></translation>
-<translation id="6103327872225198548">Uporaba iskalnika Brave za iskanje</translation>
+<translation id="6103327872225198548">Uporaba iskalnika AI Wize za iskanje</translation>
 <translation id="5945035219773565305">Trenutno priporočilo:  <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Ogledovanje strani v živo</translation>
-<translation id="305870044889644984">Odpiranje centra za pomoč za Brave na nov. zavih.</translation>
+<translation id="305870044889644984">Odpiranje centra za pomoč za AI Wize na nov. zavih.</translation>
 <translation id="59577092665511740">Izberite račun.</translation>
 <translation id="5958275228015807058">Poiščite datoteke in strani v Prenosih</translation>
 <translation id="5958994127112619898">Poenostavi stran</translation>
@@ -925,7 +925,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="6070730414166672373">Vzpostavljanje stika z banko …</translation>
 <translation id="6085886413119427067">Določa, kako vzpostaviti povezavo s spletnimi mesti prek varne povezave</translation>
 <translation id="60923314841986378">Še <ph name="HOURS"/> h</translation>
-<translation id="4726571606794511368">Če je Brave tudi vaš privzeti iskalnik, vam bomo prikazovali boljše predloge, ki so primernejši kontekstu.</translation>
+<translation id="4726571606794511368">Če je AI Wize tudi vaš privzeti iskalnik, vam bomo prikazovali boljše predloge, ki so primernejši kontekstu.</translation>
 <translation id="6108923351542677676">Poteka nastavitev …</translation>
 <translation id="6112702117600201073">Osveževanje strani</translation>
 <translation id="6122831415929794347">Želite izklopiti varno brskanje?</translation>
@@ -938,11 +938,11 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="6140912465461743537">Država/regija</translation>
 <translation id="6150320133806434356">Zaznamek je shranjen</translation>
 <translation id="6154478581116148741">Vklopite zaklepanje zaslona v nastavitvah, če želite izvoziti gesla iz te naprave.</translation>
-<translation id="7087658909840709934">Vnaprej naloži strani, za katere Brave meni, da jih boste najverjetneje obiskali.</translation>
+<translation id="7087658909840709934">Vnaprej naloži strani, za katere AI Wize meni, da jih boste najverjetneje obiskali.</translation>
 <translation id="6186394685773237175">Najdeno ni bilo nobeno ogroženo geslo</translation>
 <translation id="6192907950379606605">Prenesi opise slik</translation>
 <translation id="6193448654517602979">Izberite zavihke</translation>
-<translation id="8367262879301982880">Gesla so shranjena v Brave Upravitelju gesel v tej napravi.</translation>
+<translation id="8367262879301982880">Gesla so shranjena v AI Wize Upravitelju gesel v tej napravi.</translation>
 <translation id="6202812185118613467">Če želite začeti sinhronizacijo, se znova prijavite</translation>
 <translation id="6205314730813004066">Zasebnost pri oglaševanju</translation>
 <translation id="6210748933810148297">Niste <ph name="EMAIL"/>?</translation>
@@ -951,7 +951,7 @@ V Brave Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejav
 <translation id="6232535412751077445">Če omogočite možnost »Ne sledi«, bo zahteva vključena v vaš promet brskanja. Učinek je odvisen od odziva spletnega mesta na zahtevo in od tega, kako si zahtevo razlaga.
 
 Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažejo oglase, ki ne temeljijo na drugih spletnih mestih, ki ste jih obiskali. Veliko spletnih mest bo še vedno zbiralo in uporabljalo vaše podatke o brskanju, na primer za izboljšanje varnosti, zagotavljanje vsebine, oglasov in priporočil ter za pridobivanje statističnih podatkov za poročanje.</translation>
-<translation id="3895383310037101583">Shranjevanje gesel v tej napravi v račun Brave z vklopom sinhronizacije</translation>
+<translation id="3895383310037101583">Shranjevanje gesel v tej napravi v račun AI Wize z vklopom sinhronizacije</translation>
 <translation id="6255794742848779505">Spreminjamo način shranjevanja gesel v tej napravi</translation>
 <translation id="6264376385120300461">Vseeno prenesi</translation>
 <translation id="6277522088822131679">Pri tiskanju strani je prišlo do težave. Poskusite znova.</translation>
@@ -976,7 +976,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6357653805084533597">Ta telefon lahko uporabite za prijavo v napravi, v kateri je prikazana ta koda QR.</translation>
 <translation id="6363990818884053551">Če želite začeti sinhronizacijo, potrdite, da ste to vi.</translation>
 <translation id="6364438453358674297">Ali želite odstraniti predlog iz zgodovine?</translation>
-<translation id="806493401838431801">Pogosteje vnaprej naloži strani, za katere Brave meni, da jih boste najverjetneje obiskali Ta nastavitev bo morda povzročila povečano uporabo podatkov.</translation>
+<translation id="806493401838431801">Pogosteje vnaprej naloži strani, za katere AI Wize meni, da jih boste najverjetneje obiskali Ta nastavitev bo morda povzročila povečano uporabo podatkov.</translation>
 <translation id="6382848304055775421">Izvažanje</translation>
 <translation id="6394791151443660613">Iskanje: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">POVEZAVA</translation>
@@ -987,7 +987,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6407224748847589805">Ni se mogoče povezati z računalnikom. Poskusite drugo možnost preverjanja.</translation>
 <translation id="6410883413783534063">Odprite zavihke, če želite obiskati različne strani hkrati</translation>
 <translation id="6411219469806822692">Višje se ni mogoče pomakniti. Poskusite začeti višje na strani.</translation>
-<translation id="7810992039564280750">Preveri URL-je, tako da jih primerja s seznamom spletnih mest, ki niso varna, shranjenim v Chromu. Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko Brave prav tako pošlje URL-je, vključno z delčki vsebine strani, Varnemu brskanju.</translation>
+<translation id="7810992039564280750">Preveri URL-je, tako da jih primerja s seznamom spletnih mest, ki niso varna, shranjenim v Chromu. Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko AI Wize prav tako pošlje URL-je, vključno z delčki vsebine strani, Varnemu brskanju.</translation>
 <translation id="641643625718530986">Tiskanje …</translation>
 <translation id="6422857128426228781">Spremljane izdelke boste našli tukaj.</translation>
 <translation id="6433501201775827830">Izbira iskalnika</translation>
@@ -1033,19 +1033,19 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6627583120233659107">Uredi mapo</translation>
 <translation id="6636623428211296678">Spodaj lahko raziščete več nastavitev ali zaključite zdaj.</translation>
 <translation id="2259649928554669581">Če vas zanima več nastavitev, povezanih z zasebnostjo, varnostjo in zbiranjem podatkov, si oglejte razdelka <ph name="BEGIN_LINK1"/>Sinhronizacija<ph name="END_LINK1"/> in <ph name="BEGIN_LINK2"/>Googlove storitve<ph name="END_LINK2"/>.</translation>
-<translation id="7939692063031538305">Zaradi izboljšanja aplikacije Brave Googlu pošlje podatke o uporabi in zrušitvah. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Zaradi izboljšanja aplikacije AI Wize Googlu pošlje podatke o uporabi in zrušitvah. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blokiraj ves čas</translation>
 <translation id="6641780377503683465">Odstranitev: <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Izbriši</translation>
 <translation id="6645629752388991326">Nadzirajte, katere naprave se lahko prijavo s to napravo kot varnostnim ključem.</translation>
-<translation id="2730188427562924169">Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP. Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko Brave Googlu prav tako pošlje URL-je, vključno z delčki vsebine strani.</translation>
+<translation id="2730188427562924169">Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP. Če vam spletno mesto poskusi ukrasti geslo ali ko prenašate škodljivo datoteko, lahko AI Wize Googlu prav tako pošlje URL-je, vključno z delčki vsebine strani.</translation>
 <translation id="7556503430569358637">URL-ji, ki jih obiščete, se pošljejo Googlu zaradi predvidevanja, katera spletna mesta boste morda obiskali.</translation>
 <translation id="6678472970290886941">Skrbnik lahko spremeni nastavitev brskalnika na daljavo. Dejavnost v tej napravi morda tudi upravljajo zunaj Chroma.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/> \u2026 in še <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}one{<ph name="CONTACT_PREVIEW"/> \u2026 in še <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}two{<ph name="CONTACT_PREVIEW"/> \u2026 in še <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}few{<ph name="CONTACT_PREVIEW"/> \u2026 in še <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/> \u2026 in še <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Predogled slike <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Geslo</translation>
 <translation id="6659594942844771486">Zavihek</translation>
-<translation id="9145803563102831353">Gesel, shranjenih v tej napravi, za zdaj ni mogoče uporabljati v Chromovih kanalih. Po Chromu 121 bodo gesla, shranjena v napravi za Brave in <ph name="CHROME_CHANNEL"/>, združena in jih bo mogoče uporabljati v obeh aplikacijah.</translation>
+<translation id="9145803563102831353">Gesel, shranjenih v tej napravi, za zdaj ni mogoče uporabljati v Chromovih kanalih. Po Chromu 121 bodo gesla, shranjena v napravi za AI Wize in <ph name="CHROME_CHANNEL"/>, združena in jih bo mogoče uporabljati v obeh aplikacijah.</translation>
 <translation id="666731172850799929">Odpri v: <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Kopiraj sliko</translation>
 <translation id="6672917148207387131">Dodajanje spletnega mesta <ph name="DOMAIN"/></translation>
@@ -1066,7 +1066,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6756507620369789050">Pošlji povratne informacije</translation>
 <translation id="6767294960381293877">Seznam naprav, s katerimi želite deliti zavihek, odprt pri polovični višini.</translation>
 <translation id="6770602306803890733">Izboljšuje varnost za vas in vse druge v spletu</translation>
-<translation id="8174975477247159780">Dodatni pogoji za Brave in Chrome OS</translation>
+<translation id="8174975477247159780">Dodatni pogoji za AI Wize in Chrome OS</translation>
 <translation id="6795633245022906657">Hitro odprite nov zavihek. To bližnjico lahko uredite v nastavitvah.</translation>
 <translation id="6802555630140434547">Okno bo zaprto.</translation>
 <translation id="6811034713472274749">Stran je pripravljena za ogled</translation>
@@ -1120,7 +1120,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7029809446516969842">Gesla</translation>
 <translation id="7030304022046916278">Pošlje URL-je Varnemu brskanju, da jih ta preveri.</translation>
 <translation id="7035701931849773472">Druge možnosti</translation>
-<translation id="5813862251770201080">Prijavite se v Brave z računom Brave.</translation>
+<translation id="5813862251770201080">Prijavite se v AI Wize z računom Brave.</translation>
 <translation id="7054588988317389591">Želite pridobiti opise slik?</translation>
 <translation id="7055152154916055070">Preusmeritev je preprečena:</translation>
 <translation id="7063006564040364415">Povezave s strežnikom za sinhronizacijo ni bilo mogoče vzpostaviti.</translation>
@@ -1157,15 +1157,15 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="4957342254208357193">Naprava Android morda vsebuje podobno nastavitev. Če je merjenje oglasov vklopljeno v Chromu in napravi Android, lahko podjetje meri uspešnost oglasa na spletnih mestih, ki jih obiščete, in v aplikacijah, ki jih uporabljate.</translation>
 <translation id="727288900855680735">Želite, da se <ph name="ONE_TIME_CODE"/> pošlje <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Blokirano spletno mesto</translation>
-<translation id="7949597606523411684">Brave samodejno izbriše teme, starejše od 4 tednov. Ko nadaljujete brskanje, se lahko na seznamu znova prikaže tema. Blokirate lahko tudi teme, za katere ne želite, da jih Brave deli s spletnimi mesti. Preberite več o <ph name="BEGIN_LINK"/>upravljanju zasebnosti pri oglaševanju v Chromu.<ph name="END_LINK"/></translation>
-<translation id="4561646469134805137">Med vnašanjem Brave pošlje vsebino naslovne vrstice ali iskalnega polja privzetemu iskalniku</translation>
+<translation id="7949597606523411684">Brave samodejno izbriše teme, starejše od 4 tednov. Ko nadaljujete brskanje, se lahko na seznamu znova prikaže tema. Blokirate lahko tudi teme, za katere ne želite, da jih AI Wize deli s spletnimi mesti. Preberite več o <ph name="BEGIN_LINK"/>upravljanju zasebnosti pri oglaševanju v Chromu.<ph name="END_LINK"/></translation>
+<translation id="4561646469134805137">Med vnašanjem AI Wize pošlje vsebino naslovne vrstice ali iskalnega polja privzetemu iskalniku</translation>
 <translation id="7289303553784750393">Če ste povezani v splet, vendar se težava ponavlja, lahko na <ph name="SITE_ETLD_PLUS_ONE"/> poskusite nadaljevati na druge načine.</translation>
 <translation id="7290209999329137901">Preimenovanje ni na voljo</translation>
 <translation id="7291910923717764901">Opisi slik so dodani za to stran</translation>
 <translation id="7293429513719260019">Izbira jezika</translation>
 <translation id="729975465115245577">V napravi ni aplikacije za shranjevanje datoteke z gesli.</translation>
 <translation id="7581648335850642193">Naprava Android morda vsebuje podobno nastavitev. Če je ta nastavitev vklopljena v Chromu in napravi Android, lahko podjetje meri uspešnost oglasa na spletnih mestih, ki jih obiščete, in v aplikacijah, ki jih uporabljate.</translation>
-<translation id="1382596880054356475">Brez povezave. Brave ne more preveriti vaših gesel.</translation>
+<translation id="1382596880054356475">Brez povezave. AI Wize ne more preveriti vaših gesel.</translation>
 <translation id="7313188324932846546">Dotaknite se, če želite nastaviti sinhronizacijo.</translation>
 <translation id="7324354302972299151">Pošlji zahtevo »Do Not Track«</translation>
 <translation id="7332075081379534664">Prijava je uspela</translation>
@@ -1189,11 +1189,11 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="5341476184053934779">Uporabnik računa Brave</translation>
 <translation id="741204030948306876">Da, sem za</translation>
 <translation id="7419565702166471774">Vedno dovoli varne povezave</translation>
-<translation id="7431991332293347422">Nadziranje, kako se zgodovina brskanja uporabi za prilagajanje Iskanja Brave in drugega</translation>
+<translation id="7431991332293347422">Nadziranje, kako se zgodovina brskanja uporabi za prilagajanje Iskanja AI Wize in drugega</translation>
 <translation id="7435356471928173109">Izklopil skrbnik</translation>
 <translation id="6234515504547364178">Odjava iz Chroma</translation>
 <translation id="6147816961713837040">Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP</translation>
-<translation id="3699067418237091329">Odjavi vas iz večine spletnih mest, vendar ne iz Brave Računa.</translation>
+<translation id="3699067418237091329">Odjavi vas iz večine spletnih mest, vendar ne iz AI Wize Računa.</translation>
 <translation id="7453810262525006706">Strnitev na pogled od strani</translation>
 <translation id="7454641608352164238">Ni dovolj prostora</translation>
 <translation id="7455988709578031708">Na podlagi zgodovine brskanja. Ta nastavitev je vklopljena.</translation>
@@ -1211,7 +1211,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7493994139787901920"><ph name="VERSION"/> (Posodobljeno: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Tema je bila znova dodana med potencialne teme.</translation>
 <translation id="7498271377022651285">Počakajte …</translation>
-<translation id="8156131600798538460">Če se želite odjaviti iz računa Brave na vseh spletnih mestih, <ph name="BEGIN_LINK1"/>se odjavite iz Chroma<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Če se želite odjaviti iz računa AI Wize na vseh spletnih mestih, <ph name="BEGIN_LINK1"/>se odjavite iz Chroma<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Posodobitve niso na voljo.</translation>
 <translation id="7507207699631365376">Oglejte si <ph name="BEGIN_LINK"/>pravilnik o zasebnosti<ph name="END_LINK"/> tega ponudnika</translation>
 <translation id="7514365320538308">Prenos</translation>
@@ -1231,7 +1231,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7596558890252710462">Operacijski sistem</translation>
 <translation id="7603168929588204083">Neveljaven datum</translation>
 <translation id="7605594153474022051">Sync isn't working</translation>
-<translation id="649070405679044769">V Brave ste prijavljeni kot</translation>
+<translation id="649070405679044769">V AI Wize ste prijavljeni kot</translation>
 <translation id="7612989789287281429">Prijavljamo vas …</translation>
 <translation id="7619072057915878432">Prenos datoteke <ph name="FILE_NAME"/> ni uspel zaradi napak v omrežju.</translation>
 <translation id="7207456302801184289">Dobrodošli v Chromu</translation>
@@ -1248,7 +1248,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7682724950699840886">Poskusite ta nasveta: poskrbite, da je v napravi dovolj prostora, ali poskusite znova izvoziti.</translation>
 <translation id="7686086654630106285">Več o oglasih, ki jih predlaga spletno mesto</translation>
 <translation id="2667018639405889513">Nekatere strani, ki jih obiskujete, so vnaprej naložene. Strani bodo morda vnaprej naložene prek Googlovih strežnikov, ko nanje vodi povezava z Googlovega spletnega mesta.</translation>
-<translation id="7795837497684113327">Naprava ni mogla odpreti Chroma. Če želite odpraviti težavo, prenesite najnovejšo posodobitev za Brave iz trgovine z aplikacijami.</translation>
+<translation id="7795837497684113327">Naprava ni mogla odpreti Chroma. Če želite odpraviti težavo, prenesite najnovejšo posodobitev za AI Wize iz trgovine z aplikacijami.</translation>
 <translation id="7691043218961417207">Raziščite vsebino, ki jo želite spremljati</translation>
 <translation id="7697383401610880082">Ročica za vlečenje</translation>
 <translation id="7698359219371678927">Ustvarite e-poštno sporočilo v aplikaciji <ph name="APP_NAME"/></translation>
@@ -1308,7 +1308,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7960972236129063347">Gumb za vrnitev na stran s podrobnimi podatki o strani</translation>
 <translation id="7961926449547174351">Onemogočili ste dostop do shrambe. Omogočite ga v nastavitvah.</translation>
 <translation id="7963646190083259054">Ponudnik:</translation>
-<translation id="2939504940637874963">Shranjena gesla lahko uporabljate v poljubni napravi. V Brave Upravitelju gesel so shranjena za račun <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Shranjena gesla lahko uporabljate v poljubni napravi. V AI Wize Upravitelju gesel so shranjena za račun <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Dodano na bralni seznam</translation>
 <translation id="7971136598759319605">Aktivna pred 1 dnevom</translation>
 <translation id="7975379999046275268">Predogled strani <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
@@ -1341,7 +1341,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="808747664143081553">Povezava z napravo je vzpostavljena.</translation>
 <translation id="8090732854597034573">Če potrebuješ pomoč, se obrni na starša.</translation>
 <translation id="8101414242770404289">Ni zavihkov za to obdobje: <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Če nadaljujete, se strinjate s <ph name="BEGIN_TOS_LINK"/>pogoji storitve<ph name="END_TOS_LINK"/>.\nZaradi izboljšanja aplikacije Brave Googlu pošlje podatke o uporabi in zrušitvah. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Če nadaljujete, se strinjate s <ph name="BEGIN_TOS_LINK"/>pogoji storitve<ph name="END_TOS_LINK"/>.\nZaradi izboljšanja aplikacije AI Wize Googlu pošlje podatke o uporabi in zrušitvah. <ph name="BEGIN_UMA_LINK"/>Upravljanje<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/><ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Zapiranje možnosti razvrščanja</translation>
 <translation id="2919733817273403520">Pomagajte izboljšati Chromove funkcije in njegovo delovanje</translation>
@@ -1362,14 +1362,14 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="8210770465353466621">Tukaj bodo prikazani zavihki</translation>
 <translation id="8215740705341534369">Stranski list</translation>
 <translation id="8218622182176210845">Upravljanje računa</translation>
-<translation id="4034729701971511794">Spletna mesta, ki jih ne želite, lahko blokirate. Brave prav tako s seznama samodejno izbriše spletna mesta, starejša od 30 dni. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Spletna mesta, ki jih ne želite, lahko blokirate. AI Wize prav tako s seznama samodejno izbriše spletna mesta, starejša od 30 dni. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Meni kartice vira</translation>
 <translation id="8236097722223016103">Dodajanje med zaznamke</translation>
 <translation id="8237871086242677046">Razdelek na dnu zaslona s podrobnimi podatki o strani</translation>
 <translation id="8243077599929149377">Dodajte uporabniško ime</translation>
 <translation id="8250920743982581267">Dokumenti</translation>
 <translation id="8255617931166444521">Spletna mesta smejo uporabljati piškotke samo za ogled dejavnosti brskanja samo na danem spletnem mestu.</translation>
-<translation id="2876689296031086375">Ker so vnaprej naložene strani šifrirane, Brave ne bo izvedel ničesar o vsebini vnaprej naložene strani. Googlovi strežniki bodo izvedeli, katera spletna mesta so zasebno vnaprej naložena. Ti podatki so uporabljeni samo za vnaprejšnje nalaganje strani in niso povezani z nobenimi podatki v vašem računu Brave.</translation>
+<translation id="2876689296031086375">Ker so vnaprej naložene strani šifrirane, AI Wize ne bo izvedel ničesar o vsebini vnaprej naložene strani. Googlovi strežniki bodo izvedeli, katera spletna mesta so zasebno vnaprej naložena. Ti podatki so uporabljeni samo za vnaprejšnje nalaganje strani in niso povezani z nobenimi podatki v vašem računu Brave.</translation>
 <translation id="8260126382462817229">Poskusite se znova prijaviti.</translation>
 <translation id="8261506727792406068">Izbriši</translation>
 <translation id="82619448491672958">Ogled drugih zavihkov</translation>
@@ -1380,7 +1380,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="829672787777123339">Povezovanje z napravo …</translation>
 <translation id="8310344678080805313">Standardni zavihki</translation>
 <translation id="831192587911042850">Doda trenutno spletno mesto na seznam spletnih mest, ki jih spremljate.</translation>
-<translation id="5665071699503384089">Teme, ki jih ne želite deliti s spletnimi mesti, lahko blokirate. Brave tudi samodejno izbriše vaše teme, starejše od štirih tednov. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Teme, ki jih ne želite deliti s spletnimi mesti, lahko blokirate. AI Wize tudi samodejno izbriše vaše teme, starejše od štirih tednov. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Nikoli ne prevedi spletnih mest</translation>
 <translation id="8348430946834215779">Kadar je le mogoče, uporabite HTTPS, pred nalaganjem spletnih mest, ki ga ne podpirajo, pa prejmete opozorilo.</translation>
 <translation id="8354977102499939946">Hitro iščite z glasom. To bližnjico lahko uredite v nastavitvah.</translation>
@@ -1391,11 +1391,11 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="7651600795135059130">Preveri URL-je, tako da jih primerja s seznamom spletnih mest, ki niso varna, shranjenim v Chromu.</translation>
 <translation id="8402673309244746971">Na vir za spremljanje</translation>
 <translation id="8413126021676339697">Prikaži celotno zgodovino</translation>
-<translation id="5348884013239264115">Ščiti pred spletnimi mesti, prenosi in razširitvami, za katere vemo, da so nevarni. Ko obiščete spletno mesto, Brave Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP. Če spletno mesto naredi kaj sumljivega, se pošljejo tudi celotni URL-ji in delčki vsebine strani.</translation>
+<translation id="5348884013239264115">Ščiti pred spletnimi mesti, prenosi in razširitvami, za katere vemo, da so nevarni. Ko obiščete spletno mesto, AI Wize Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP. Če spletno mesto naredi kaj sumljivega, se pošljejo tudi celotni URL-ji in delčki vsebine strani.</translation>
 <translation id="8414396119627470038">Prijavite se v storitev <ph name="SITE_ETLD_PLUS_ONE"/> s podatki za <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Vključi</translation>
 <translation id="8422250855136581222">V tej napravi ni zavihkov</translation>
-<translation id="5735840612282428689">Stran je bila poslana. Če si jo želite ogledati, odprite Brave v <ph name="DEVICE_TYPE"/>.</translation>
+<translation id="5735840612282428689">Stran je bila poslana. Če si jo želite ogledati, odprite AI Wize v <ph name="DEVICE_TYPE"/>.</translation>
 <translation id="8427875596167638501">Zavihek za predogled je napol odprt</translation>
 <translation id="8428213095426709021">Nastavitve</translation>
 <translation id="8430824733382774043">Deli samo posnetek zaslona</translation>
@@ -1428,7 +1428,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="8526855376374973824">Potek za dovoljenja za obvestila</translation>
 <translation id="8540136935098276800">Vnesite pravilno oblikovan URL</translation>
 <translation id="854522910157234410">Odpri to stran</translation>
-<translation id="5503308854539525011">Zaradi merjenja uspešnosti oglasov Brave omejuje skupno količino podatkov, ki jih spletna mesta lahko delijo v brskalniku.</translation>
+<translation id="5503308854539525011">Zaradi merjenja uspešnosti oglasov AI Wize omejuje skupno količino podatkov, ki jih spletna mesta lahko delijo v brskalniku.</translation>
 <translation id="8559990750235505898">Ponudi prevajanje strani v drugih jezikih</translation>
 <translation id="8560602726703398413">Poiščite svoj bralni seznam v zaznamkih</translation>
 <translation id="8562452229998620586">Shranjena gesla bodo prikazana tukaj.</translation>
@@ -1439,14 +1439,14 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="860043288473659153">Ime imetnika kartice</translation>
 <translation id="1673533133011266617">Prijava v Brave, zaprto.</translation>
 <translation id="860282621117673749">Opozorila glede znižanja cen</translation>
-<translation id="5784514951651328424">V Brave Računu so morda druge vrste zgodovine brskanja na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">V AI Wize Računu so morda druge vrste zgodovine brskanja na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Želite odpreti predlagani URL, naveden v preneseni vsebini?</translation>
 <translation id="8621068256433641644">telefonu</translation>
 <translation id="8636825310635137004">Če želite dostopati do zavihkov iz drugih naprav, vklopite sinhronizacijo.</translation>
 <translation id="864544049772947936">Upravljanje oken (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Predvideva nevarne dogodke, preden se zgodijo, in vas opozarja nanje</translation>
 <translation id="2734140769649165081">Podatke lahko izbrišete v Chromovih nastavitvah</translation>
-<translation id="7436978557885042606">Uporabljajte Brave po svoji meri</translation>
+<translation id="7436978557885042606">Uporabljajte AI Wize po svoji meri</translation>
 <translation id="8664979001105139458">Ime datoteke že obstaja</translation>
 <translation id="8676276370198826499">Registrirajte se na <ph name="SITE_ETLD_PLUS_ONE"/> z računom pri ponudniku <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Preverjanja prijave</translation>
@@ -1500,9 +1500,9 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="8987736167266086032">Nadaljujte, kjer ste ostali</translation>
 <translation id="8996847606757455498">Izberi drugega ponudnika:</translation>
 <translation id="8998289560386111590">Ni na voljo v vaši napravi</translation>
-<translation id="3275122921244685452">Prijavljate se z računom, ki ga upravlja <ph name="MANAGED_DOMAIN"/>, in nadzor nad podatki v Chromu predajate skrbniku. Vaši podatki bodo trajno povezani s tem računom. Če se odjavite iz Chroma, boste izbrisali podatke iz te naprave, vendar bodo še naprej shranjeni v Brave Računu.</translation>
+<translation id="3275122921244685452">Prijavljate se z računom, ki ga upravlja <ph name="MANAGED_DOMAIN"/>, in nadzor nad podatki v Chromu predajate skrbniku. Vaši podatki bodo trajno povezani s tem računom. Če se odjavite iz Chroma, boste izbrisali podatke iz te naprave, vendar bodo še naprej shranjeni v AI Wize Računu.</translation>
 <translation id="8998837250940831980">Zavihka ni bilo mogoče minimirati. Poskusite znova pozneje.</translation>
-<translation id="9012585441087414258">Ščiti pred spletnimi mesti, prenosi in razširitvami, za katere vemo, da so nevarni. Če se na strani zgodi kaj sumljivega, se URL-ji in delčki vsebine strani pošljejo v Brave Varno brskanje.</translation>
+<translation id="9012585441087414258">Ščiti pred spletnimi mesti, prenosi in razširitvami, za katere vemo, da so nevarni. Če se na strani zgodi kaj sumljivega, se URL-ji in delčki vsebine strani pošljejo v AI Wize Varno brskanje.</translation>
 <translation id="9019199799064251516">Želite nadaljevati brez zaklepanja profila za avtomobil?</translation>
 <translation id="9022774213089566801">Pogosto obiskano</translation>
 <translation id="9022871169049522985">Spletna mesta in oglaševalci lahko merijo uspešnost svojih oglasov.</translation>
@@ -1546,9 +1546,9 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="9209888181064652401">Ni mogoče klicati</translation>
 <translation id="9212845824145208577">Nižje se ni mogoče pomakniti. Poskusite začeti nižje na strani.</translation>
 <translation id="9219103736887031265">Slike</translation>
-<translation id="6946179564366058239">Ko spletno mesto zahteva zasebno vnaprejšnje nalaganje povezav na strani, Brave šifrira in vnaprej naloži strani prek Googlovih strežnikov brez piškotkov. S tem je skrita vaša identiteta na vnaprej naloženem mestu.</translation>
+<translation id="6946179564366058239">Ko spletno mesto zahteva zasebno vnaprejšnje nalaganje povezav na strani, AI Wize šifrira in vnaprej naloži strani prek Googlovih strežnikov brez piškotkov. S tem je skrita vaša identiteta na vnaprej naloženem mestu.</translation>
 <translation id="4596514158372210596">Odstranitev dejavnosti v Chromu iz Digitalne dobrobiti</translation>
-<translation id="2830145431802238213">Uporabite lahki način v Brave Chromu</translation>
+<translation id="2830145431802238213">Uporabite lahki način v AI Wize Chromu</translation>
 <translation id="928550791203542716">Spremljate <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Vsa gesla bodo prenesena v napravo in odstranjena iz brskalnika <ph name="CHROME_CHANNEL"/></translation>
 <translation id="938850635132480979">Napaka: <ph name="ERROR_CODE"/></translation>
@@ -1566,7 +1566,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="993520549480398880">Prav tako izbriši zaznamke, zgodovino in drugo iz tega avtomobila</translation>
 <translation id="996149300115483134">Meni kartice vira je zaprt</translation>
 <translation id="5186185447130319458">Način brez beleženja zgodovine</translation>
-<translation id="79269250264141507">Ko v naslovno vrstico ali iskalno polje vtipkate besedilo, Brave vneseno besedilo pošlje vašemu privzetemu iskalniku, da tako dobi boljše predloge. Ta funkcija je v zasebnem načinu izključena.</translation>
+<translation id="79269250264141507">Ko v naslovno vrstico ali iskalno polje vtipkate besedilo, AI Wize vneseno besedilo pošlje vašemu privzetemu iskalniku, da tako dobi boljše predloge. Ta funkcija je v zasebnem načinu izključena.</translation>
 <translation id="5711390076756601471">Ko zapustite Brave, zaklenite zasebne zavihke</translation>
 <translation id="1014490034578104945">Za ogled odprtih zasebnih zavihkov uporabite zaklepanje zaslona</translation>
 <translation id="5722020415664104421">Blokiraj med uporabo zasebnega</translation>
@@ -1583,7 +1583,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="4660964651149493586">Odkleni zasebno</translation>
 <translation id="5278260521317049275">Vklopite zasebno ključavnico</translation>
 <translation id="6302653771627628530">Zasebni zavihki se zaklenejo, ko zapustite Brave</translation>
-<translation id="3763131702135887799">Pomagajte izboljšati Brave za profile, ki ga uporabljajo tako kot vi</translation>
+<translation id="3763131702135887799">Pomagajte izboljšati AI Wize za profile, ki ga uporabljajo tako kot vi</translation>
 <translation id="4167670741834902166">Nov zavihek za način brez beleženja zgodovine</translation>
 <translation id="9148151251783962691">Če želite zasebno brskati v tej napravi, preizkusite možnost Zasebno</translation>
 <translation id="8355284051444779553">Če želite odpreti nov zavihek Zasebno, odprite meni</translation>

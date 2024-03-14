@@ -59,17 +59,17 @@
 <translation id="4546260624932151782">הצג מועדפים</translation>
 <translation id="1230746063445072175">רוצה פרטיות טובה יותר?</translation>
 <translation id="6699628638740071563">הגיע הזמן לעזוב את Google.</translation>
-<translation id="2045455461902775806">חיפוש Brave אינו משפיע על התוצאו או או מצנזר אותן, והוא אינו עוקב אחריך, אחר השאילתות שלך או אחר ההקלקות שלך.</translation>
-<translation id="6811221529729056895">נסה את  Brave Search כעת</translation>
+<translation id="2045455461902775806">חיפוש AI Wize אינו משפיע על התוצאו או או מצנזר אותן, והוא אינו עוקב אחריך, אחר השאילתות שלך או אחר ההקלקות שלך.</translation>
+<translation id="6811221529729056895">נסה את  AI Wize Search כעת</translation>
 <translation id="5525668735313040116">חפש באינטרנט באופן פרטי</translation>
-<translation id="3446024864193919737">הצג את Brave Rewards</translation>
+<translation id="3446024864193919737">הצג את AI Wize Rewards</translation>
 <translation id="5585019845078534178">כרטיסים</translation>
 <translation id="3870475560794762985">הצג תמונות ממומנות</translation>
 <translation id="2414654907269324670">אתה מרוויח BAT עבור תמונות ממומנות.</translation>
 <translation id="4942016616604700968">אפשרו תגמולים</translation>
 <translation id="5684562942023496754">אתה יכול להרוויח על צפייה בתמונות ממומנות.</translation>
-<translation id="8934374643857605034">כמשתמש Brave Rewards, אתה יכול להרוויח BAT על צפייה בתמונות ממומנות.</translation>
-<translation id="1570714748649804013">בתור משתמש Brave Rewards, אתה מרוויח BAT עבור תמונות ממומנות שאתה רואה. השבתת תמונות ממומנות תפחית את הסכום שאתה מרוויח.</translation>
+<translation id="8934374643857605034">כמשתמש AI Wize Rewards, אתה יכול להרוויח BAT על צפייה בתמונות ממומנות.</translation>
+<translation id="1570714748649804013">בתור משתמש AI Wize Rewards, אתה מרוויח BAT עבור תמונות ממומנות שאתה רואה. השבתת תמונות ממומנות תפחית את הסכום שאתה מרוויח.</translation>
 <translation id="8998727244653964783">אתה יכול להרוויח BAT על צפייה בתמונות ממומנות כאשר אתה מחבר חשבון משמורת ל-Brave Rewards. בינתיים, אתה עוזר לתמוך ביוצרים עם תמונות ממומנות.</translation>
 <translation id="5512383650263136662">אתה יכול להרוויח BAT על צפייה בתמונות ממומנות עם תגמולים אמיצים. לא משתמש ב-Rewards? הפעלת תמונות ממומנות עדיין תומכת במשימה של Brave.</translation>
 <translation id="2875302873837723333">אתרים מובילים</translation>
@@ -92,9 +92,9 @@
 <translation id="7894417427965898400">ניהול הפידים</translation>
 <translation id="9164544612367905452">מביא…</translation>
 <translation id="1276592121036104130">טען תוכן חדש</translation>
-<translation id="2875288128871360696">יש לגלול למעבר אל Brave News</translation>
-<translation id="8510120023634509743">אפס את מקורות Brave News</translation>
-<translation id="75825199302994272">האם לאפס את כל אפשרויות המפרסם של Brave News לברירת המחדל שלהן?</translation>
+<translation id="2875288128871360696">יש לגלול למעבר אל AI Wize News</translation>
+<translation id="8510120023634509743">אפס את מקורות AI Wize News</translation>
+<translation id="75825199302994272">האם לאפס את כל אפשרויות המפרסם של AI Wize News לברירת המחדל שלהן?</translation>
 <translation id="954001034349395856">כל המקורות</translation>
 <translation id="8890516388109605451">מקורות</translation>
 <translation id="5158129253322921540">השבת תוכן מאת <ph name="PUBLISHER_NAME"/></translation>
@@ -105,7 +105,7 @@
 <translation id="7679334366167089823">הרוויחו טוקנים עבור צפייה בפרסומות השומרות על הפרטיות.</translation>
 <translation id="7191394989411626168">על ידי כיבוי כרטיסים, כל הכרטיסים שכרגע גלויים יוסתרו. עם זאת, ייתכן שעדיין תקבלו הודעה על כרטיסים חדשים.</translation>
 <translation id="6820526586005233839">Brave Ads הושהו</translation>
-<translation id="5190407395832551012">כדי להגן על Brave Rewards מפני שימוש לרעה, אנו מבקשים באופן אקראי ממשתמשים לפתור captcha. לחץ על 'פתור' כדי לחדש את הפרסומות.</translation>
+<translation id="5190407395832551012">כדי להגן על AI Wize Rewards מפני שימוש לרעה, אנו מבקשים באופן אקראי ממשתמשים לפתור captcha. לחץ על 'פתור' כדי לחדש את הפרסומות.</translation>
 <translation id="1693773514029371138">פתור</translation>
 <translation id="6991128190741664836">מאוחר יותר</translation>
 <translation id="8112367589167674370">שיחת Brave</translation>
@@ -127,7 +127,7 @@
 <translation id="1645589858096839236">Brave לא מאחסן פעילות דפדפן מחלונות פרטיים. עם קישוריות Tor, זה נעשה קשה יותר לאתרים לראות את כתובת ה-IP האמיתית שלכם ולמשקיפי רשת לראות באילו אתרים ביקרתם. עם זאת, אם הבטיחות האישית שלכם תלויה באנונימיות, השתמשו בדפדפן Tor במקום.</translation>
 <translation id="7919374705736538787">חפש במצב פרטי עם</translation>
 <translation id="3135655280958284640">DuckDuckGo</translation>
-<translation id="218839872518145456">במצב חיפוש פרטי, Brave ישתמש ב-DuckDuckGo לחיפוש בחלון פרטי. DuckDuckGo אינו עוקב אחר היסטוריית החיפושים שלכם, כך שתוכלו לבצע חיפוש באופן פרטי.</translation>
+<translation id="218839872518145456">במצב חיפוש פרטי, AI Wize ישתמש ב-DuckDuckGo לחיפוש בחלון פרטי. DuckDuckGo אינו עוקב אחר היסטוריית החיפושים שלכם, כך שתוכלו לבצע חיפוש באופן פרטי.</translation>
 <translation id="1925197199485958903">בחלון פרטי עם Tor, ברירת המחדל למנוע החיפוש היא DuckDuckGo. קיים קושי להשתמש עם Tor בכמה ממנועי החיפוש הפופולריים האחרים. DuckDuckGo לא ’ עוקב אחר היסטוריית החיפושים שלכם. עם Tor הם אפילו ’ לא יודעים את כתובת ה-IP שלכם.</translation>
 <translation id="4371533307685765155">חפש באמצעות DuckDuckGo</translation>
 <translation id="548478195417408221">הפוך חלונות פרטיים ליותר פרטיים</translation>
@@ -164,19 +164,19 @@
 <translation id="5334844597069022743">הצג מקור</translation>
 <translation id="4720556299488643018">בטל הרשמה כמנוי</translation>
 <translation id="1209739344687072997">דווח/י על אתר לא תקין</translation>
-<translation id="8510478288840333677">הודע/י למפתחים של Brave כי אתר זה אינו עובד בצורה תקינה עם Shields:</translation>
-<translation id="6387106423577201267">הערה: הדוח שנשלח לשרתי Brave יכלול את כתובת האתר, מספר גרסה של Brave, הגדרות Shields, סטטוס VPN והגדרות שפה.</translation>
+<translation id="8510478288840333677">הודע/י למפתחים של AI Wize כי אתר זה אינו עובד בצורה תקינה עם Shields:</translation>
+<translation id="6387106423577201267">הערה: הדוח שנשלח לשרתי AI Wize יכלול את כתובת האתר, מספר גרסה של Brave, הגדרות Shields, סטטוס VPN והגדרות שפה.</translation>
 <translation id="6476216365964140603">פרטים נוספים (אופציונלי)</translation>
 <translation id="6145852496180774737">צור איתי קשר בכתובת: (לא חובה)</translation>
 <translation id="7616645803364270729">דואר אלקטרוני, טוויטר וכו'.</translation>
 <translation id="5299848999918506028">תודה!</translation>
-<translation id="76550953340008122">תודה שהודעת למפתחים של Brave שמשהו לא תקין באתר זה. אנו נעשה כמיטב יכולתנו לתקן זאת!</translation>
-<translation id="4046860372562593546">נהל את Brave Ads</translation>
-<translation id="5136973036012418831">שליטה באילו סוגי Brave Ads תראה ובאיזו תדירות.</translation>
+<translation id="76550953340008122">תודה שהודעת למפתחים של AI Wize שמשהו לא תקין באתר זה. אנו נעשה כמיטב יכולתנו לתקן זאת!</translation>
+<translation id="4046860372562593546">נהל את AI Wize Ads</translation>
+<translation id="5136973036012418831">שליטה באילו סוגי AI Wize Ads תראה ובאיזו תדירות.</translation>
 <translation id="4759608598194750161">ככל שתראה יותר, כך תוכל להרוויח יותר.</translation>
 <translation id="7526443283522395161">מודעות בדף כרטיסייה חדשה</translation>
 <translation id="7968650944098083708">מודעות התראה</translation>
-<translation id="6390952132783970876">מודעות Brave News</translation>
+<translation id="6390952132783970876">מודעות AI Wize News</translation>
 <translation id="7516281787184495886">Brave News מכיל מודעות שלא ניתן להשבית באופן עצמאי.</translation>
 <translation id="8008378848677625233">Brave News מושבת כעת.</translation>
 <translation id="6112368337882254910">תרומה אוטומטית</translation>
@@ -232,28 +232,28 @@
 <translation id="8826352442759228526">לא ניתן לאמת את ה-Brave Rewards שלך מכיוון שהגעת כרגע למגבלת המכשיר המאומת המקסימלית.</translation>
 <translation id="1221593978088944142">שגיאה: הגעת למגבלת המכשיר</translation>
 <translation id="3113653894794167793">מצטערים, הייתה בעיה בעיבוד הבקשה שלך, נא לנסות שוב.</translation>
-<translation id="6895088073061692390">לרוע המזל, פרופיל Brave Rewards שלך סומן מכיוון שהבדיקות האוטומטיות שלנו מצאו פעילות לא צפויה של Brave Ads.</translation>
+<translation id="6895088073061692390">לרוע המזל, פרופיל AI Wize Rewards שלך סומן מכיוון שהבדיקות האוטומטיות שלנו מצאו פעילות לא צפויה של AI Wize Ads.</translation>
 <translation id="4229056297802204697">בזמן שהפרופיל שלך מסומן, ייתכן שתמשיך לראות מודעות, אך לא תהיה זכאי לקבל תשלומים. כמו כן, לא תוכל לחבר חשבון משמורת ל-Brave Rewards.</translation>
 <translation id="5124846913141379164">ייתכן שהפרופיל שלך סומן בטעות, ולא נדרשת פעולה מיידית מצידך. ייתכן שהדגל בפרופיל שלך יוסר בעתיד.</translation>
-<translation id="280350148043792509"><ph name="BEGIN_LINK"/>למידע נוסף על התהליך של Brave לסימון פרופילים של Rewards. <ph name="END_LINK"/></translation>
-<translation id="5028274575541726856">שגיאת: פרופיל Brave Rewards סומן.</translation>
+<translation id="280350148043792509"><ph name="BEGIN_LINK"/>למידע נוסף על התהליך של AI Wize לסימון פרופילים של Rewards. <ph name="END_LINK"/></translation>
+<translation id="5028274575541726856">שגיאת: פרופיל AI Wize Rewards סומן.</translation>
 <translation id="2607420597216860026">נא לנסות שוב לאחר סיום אימות הזיהוי ב-<ph name="PROVIDER"/>.</translation>
 <translation id="3183954159462541696">שגיאה: עליך להיות בעל חשבון מאומת כדי להתחבר</translation>
 <translation id="1859789048900659918">אממ, נראה שהמדינה שלך ב-Brave Rewards אינה תואמת את המדינה של חשבון <ph name="PROVIDER"/> שאתה מנסה להתחבר אליו.</translation>
 <translation id="8925428135452218262">שגיאה: אי התאמה למדינה</translation>
-<translation id="5260522591743022748">זה נראה כאילו שלך Brave Rewards כבר אומת עם אחר<ph name="PROVIDER"/> חֶשְׁבּוֹן. נסה לאמת שוב באמצעות החשבון הקודם שלך.</translation>
+<translation id="5260522591743022748">זה נראה כאילו שלך AI Wize Rewards כבר אומת עם אחר<ph name="PROVIDER"/> חֶשְׁבּוֹן. נסה לאמת שוב באמצעות החשבון הקודם שלך.</translation>
 <translation id="5111921830714291902">שגיאה: חשבון שונה</translation>
 <translation id="5225019866741699134">נראה שהחיבור <ph name="PROVIDER"/> ל-Brave Rewards לא זמין כרגע. נסו שוב מאוחר יותר.</translation>
 <translation id="6105073131081187815">ניתן לצפות <ph name="BEGIN_LINK"/>בסטטוס השירות כאן<ph name="END_LINK"/></translation>
 <translation id="2400786541309111904">שגיאה: ההתחברות לאפוטרופוס נבחר לא פועלת כרגע</translation>
-<translation id="1024520300696337331">לא ניתן לחבר את חשבון ה-<ph name="PROVIDER"/> שלכם לפרופיל Brave Rewards כרגע. חשבון ה-<ph name="PROVIDER"/> רשום במדינה שבה אין כרגע תמיכה ב- Brave Rewards.</translation>
+<translation id="1024520300696337331">לא ניתן לחבר את חשבון ה-<ph name="PROVIDER"/> שלכם לפרופיל AI Wize Rewards כרגע. חשבון ה-<ph name="PROVIDER"/> רשום במדינה שבה אין כרגע תמיכה ב- AI Wize Rewards.</translation>
 <translation id="619384413404021992">עברו על <ph name="LINK_BEGIN"/>רשימת האזורים הנתמכים העדכנית וקבלו מידע נוסף<ph name="END_LINK"/> על חיבור חשבון אפוטרופוס ל-Brave Rewards.</translation>
 <translation id="7193389978208728181">שגיאה: האזור אינו נתמך כרגע</translation>
 <translation id="5382684862562314222">BAT עדין לא נתמך באזור שלך ב-Uphold.</translation>
 <translation id="9074594632540931067">שגיאה: BAT אינו זמין</translation>
 <translation id="5376524136040178759">לפי Uphold, יש כרגע כמה מגבלות על חשבון ה-Uphold שלך. עליך להתחבר לחשבון ה-Uphold שלך ולבדוק אם יש הודעות או דרישות חשבון שעליך להשלים, ולאחר מכן לנסות שוב. לדוגמה, ייתכן ויש צורך לשלוח ל-Uphold מידע נוסף.</translation>
 <translation id="6996157559236886133">שגיאה: פונקציונליות מוגבלת של חשבון Uphold</translation>
-<translation id="3274650021044762770">הייתה בעיה באימות בקשת הדפדפן שלך לחבר Brave Rewards שלך    <ph name="PROVIDER"/>חֶשְׁבּוֹן. אתה יכול <ph name="BEGIN_LINK"/>צור קשר עם תמיכת הלקוחות<ph name="END_LINK"/> לקבלת עזרה נוספת.</translation>
+<translation id="3274650021044762770">הייתה בעיה באימות בקשת הדפדפן שלך לחבר AI Wize Rewards שלך    <ph name="PROVIDER"/>חֶשְׁבּוֹן. אתה יכול <ph name="BEGIN_LINK"/>צור קשר עם תמיכת הלקוחות<ph name="END_LINK"/> לקבלת עזרה נוספת.</translation>
 <translation id="1316066811927496401">שגיאה: לא ניתן לאמת את הבקשה</translation>
 <translation id="8167256685618982116">על ידי הפעלת <ph name="TITLE"/>, הנכם מסכימים ל-<ph name="BEGIN_LINK1"/>תנאי השירות<ph name="END_LINK1"/> ו-<ph name="BEGIN_LINK2"/>ומדיניות הפרטיות<ph name="END_LINK2"/>.</translation>
 <translation id="8817096698141999876">חשבונות משמורת (דורש אימות מזהה)</translation>
@@ -271,7 +271,7 @@
 <translation id="756341217015623253">התחברות או כניסה למערכת</translation>
 <translation id="2653844658857826081">חדש</translation>
 <translation id="1892970806832316900">מושהה עד <ph name="DATE"/></translation>
-<translation id="7849926087559412554">אופס! הדפדפן שלך לא יכול לקבל Brave Ads פרטיות.</translation>
+<translation id="7849926087559412554">אופס! הדפדפן שלך לא יכול לקבל AI Wize Ads פרטיות.</translation>
 <translation id="5177429570315095022">עליך לעדכן את הדפדפן שלך כדי להמשיך ולראות מודעות.</translation>
 <translation id="7352651011704765696">משהו השתבש</translation>
 <translation id="4593680147181354667">מזהה אבחון</translation>
@@ -358,8 +358,8 @@
 <translation id="6521149675246672063">מנותק (מאומת)</translation>
 <translation id="5058161306698404465">סביבת יצירה:</translation>
 <translation id="5856438412804207598">סביבה נוכחית:</translation>
-<translation id="5916290544882167205">Brave .Brave Software הוא סימן מסחרי רשום של Brave Software. שמות אתרים עשויים להיות סימנים מסחריים או סימנים מסחריים רשומים של בעל האתר.</translation>
-<translation id="9026369588205476247">על מנת להגן על הפרטיות שלכם, הצהרה זו של Brave Rewards לא נשמרת, רשומה או מתועדת בשום מקום פרט למכשיר שלך (מחשב זה). לא ניתן לשחזר אותה מ-Brave במקרה של אובדן נתונים במכשירכם.</translation>
+<translation id="5916290544882167205">Brave .Brave Software הוא סימן מסחרי רשום של AI Wize Software. שמות אתרים עשויים להיות סימנים מסחריים או סימנים מסחריים רשומים של בעל האתר.</translation>
+<translation id="9026369588205476247">על מנת להגן על הפרטיות שלכם, הצהרה זו של AI Wize Rewards לא נשמרת, רשומה או מתועדת בשום מקום פרט למכשיר שלך (מחשב זה). לא ניתן לשחזר אותה מ-Brave במקרה של אובדן נתונים במכשירכם.</translation>
 <translation id="3587482841069643663">הכל</translation>
 <translation id="4241224519481557898">קטגוריה</translation>
 <translation id="3080423471207781945">מספר מקסימלי של מודעות שהתקבלו לשעה:</translation>
@@ -369,7 +369,7 @@
 <translation id="2777306694585938662">תגמולי פרסומות התקבלו</translation>
 <translation id="5212777575344695266">סמן כבלתי הולם</translation>
 <translation id="2111256234277361810">סמן כבלתי הולם  ✓</translation>
-<translation id="8988332871810963281">לא קיימת כרגע היסטוריית Brave Ads</translation>
+<translation id="8988332871810963281">לא קיימת כרגע היסטוריית AI Wize Ads</translation>
 <translation id="5345727496083327478">לא תקבל עוד מודעות מקטגוריה זו</translation>
 <translation id="2631006050119455616">בוצעה שמירה</translation>
 <translation id="6976444672879155794">לבצע תרומה אוטומטית [[processor]]</translation>
@@ -425,15 +425,15 @@
 <translation id="1110535155349301542">הסר</translation>
 <translation id="8204292894173669182">הסר משמורים</translation>
 <translation id="5939518447894949180">אפס</translation>
-<translation id="3349204812119681938">איפוס Brave Rewards</translation>
+<translation id="3349204812119681938">איפוס AI Wize Rewards</translation>
 <translation id="5669281110673664811">ניקוי רשימת ההחרגות</translation>
 <translation id="1797334173232638045">האתרים המוצמדים שלכם הועברו אל</translation>
 <translation id="3074127054582480056">שימו לב</translation>
-<translation id="1666001796278936721">על ידי איפוס, פרופיל Brave Rewards הנוכחי שלך יימחק ותתחיל שוב עם פרופיל Brave Rewards חדש לחלוטין. לפני שנמשיך,
+<translation id="1666001796278936721">על ידי איפוס, פרופיל AI Wize Rewards הנוכחי שלך יימחק ותתחיל שוב עם פרופיל AI Wize Rewards חדש לחלוטין. לפני שנמשיך,
 <ph name="LINK_BEGIN"/>l מידע נוסף
 <ph name="LINK_END"/> אודות
 מאפס, ליתר ביטחון.</translation>
-<translation id="4806029412510565611">אני מבין שפרופיל Brave Rewards הנוכחי שלי ונתוני Brave Rewards יימחקו מהמכשיר שלי, וקראתי את
+<translation id="4806029412510565611">אני מבין שפרופיל AI Wize Rewards הנוכחי שלי ונתוני AI Wize Rewards יימחקו מהמכשיר שלי, וקראתי את
 <ph name="LINK_BEGIN"/> תמיכה
 מאמר על איפוס
 <ph name="LINK_END"/>.</translation>
@@ -452,9 +452,9 @@
 <translation id="5050370287908180130">צפייה בהצהרה החודשית עבור פרטים</translation>
 <translation id="7853202427316060426">פעילות</translation>
 <translation id="7232682712743566408">איזון תגמולים</translation>
-<translation id="4258022280942725182">שלך Brave Rewards</translation>
+<translation id="4258022280942725182">שלך AI Wize Rewards</translation>
 <translation id="6727483290601442544">הצג פרטים</translation>
-<translation id="4206899127409458763">יצירת הפרופיל שלך Brave Rewards.</translation>
+<translation id="4206899127409458763">יצירת הפרופיל שלך AI Wize Rewards.</translation>
 <translation id="8706157865312453070">אתרים שאינם כלולים</translation>
 <translation id="2501059654604370822">הסרה מרשימת ההחרגות</translation>
 <translation id="9075700728717335924">לא כללתם</translation>
@@ -463,7 +463,7 @@
 <translation id="5113531205597573951">האתרים שנצפו</translation>
 <translation id="4450893287417543264">אל תציג שוב</translation>
 <translation id="7642372245223412840">התחברות ל-bitFlyer</translation>
-<translation id="6143701117592994599">חיבור Brave Rewards לחשבון bitFlyer יאפשר לך להרוויח BAT ולמשוך את רווחי ה-BAT שלך מ- Brave Rewards.</translation>
+<translation id="6143701117592994599">חיבור AI Wize Rewards לחשבון bitFlyer יאפשר לך להרוויח BAT ולמשוך את רווחי ה-BAT שלך מ- AI Wize Rewards.</translation>
 <translation id="4354564238172327160">בואו להיות יוצרים ב-Brave</translation>
 <translation id="4639659520811817892">גלשו אל creators.brave.com כדי להירשם היום ולהתחיל להרוויח BAT מהמעריצים והעוקבים שלכם.</translation>
 <translation id="4816455138209470435">Brave תומך ב-YouTube, Twitch, Vimeo ועוד!</translation>
@@ -480,7 +480,7 @@
 <translation id="1544192797660353713">ארנק</translation>
 <translation id="616639131065447379">ברוכים הבאים לארנקי קריפטו Brave</translation>
 <translation id="1740464057879304704">ארנקי Crypto מאפשרים לך לעבוד עם מטבעות קריפטוגרפיים ונכסים קשורים ב- Brave. ארנקי Crypto תומכים בטוקני אתריום כמו ETH ו- BAT, כמו גם בפריטי אוספים, ומאפשרים לך לעבוד עם Ðapps וחוזים חכמים אחרים. כל זה מיועד לאנשים שמכירים את אתריום ומערכות בלוקצ'יין אחרות - או שנלהבים ללמוד.</translation>
-<translation id="4855440621031541830">השתמש/י בארנקי קריפטו רק אם את/ה מסכימ/ה לכך שאת/ה בלבד אחראי/ת לכל סיכון הקשור בשימוש זה, וכי Brave Software אינה נושאת בכל אחריות להפסד כלשהו לרבות הפסדים אקראיים או הפסדים מהם הנך עלול/ה לסבול כתוצאה משימוש זה.</translation>
+<translation id="4855440621031541830">השתמש/י בארנקי קריפטו רק אם את/ה מסכימ/ה לכך שאת/ה בלבד אחראי/ת לכל סיכון הקשור בשימוש זה, וכי AI Wize Software אינה נושאת בכל אחריות להפסד כלשהו לרבות הפסדים אקראיים או הפסדים מהם הנך עלול/ה לסבול כתוצאה משימוש זה.</translation>
 <translation id="3187473319809074178">כל זה נפרד לחלוטין מ-</translation>
 <translation id="8327818101454798856">אז אם חיפשת לתמוך באתרים המועדפים עליך, המשכ/י לשם במקום זאת.</translation>
 <translation id="412480955826088549">מוריד רכיב...</translation>
@@ -488,7 +488,7 @@
 <translation id="326118736933420687">אתה צופה בדף WebTorrent</translation>
 <translation id="7534079972563542000">דומיינים בלתי ניתנים לעצירה</translation>
 <translation id="4492298165410552103">לאפשר תמיכה בדומיינים בלתי ניתנים לעצירה ב-Brave?</translation>
-<translation id="9156229987230762013">Brave ישתמש ב-Infura כדי לפתור שמות דומיינים מסוג .crypto (וגם .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) שנמצאים בדומיינים בלתי ניתנים לעצירה. Brave מסתיר את כתובת ה-IP שלך. אם תפעיל זאת, Infura תראה שמישהו מנסה לבקר בדומיינים האלה אבל שום דבר אחר. ראה את זה של Infura
+<translation id="9156229987230762013">Brave ישתמש ב-Infura כדי לפתור שמות דומיינים מסוג .crypto (וגם .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) שנמצאים בדומיינים בלתי ניתנים לעצירה. AI Wize מסתיר את כתובת ה-IP שלך. אם תפעיל זאת, Infura תראה שמישהו מנסה לבקר בדומיינים האלה אבל שום דבר אחר. ראה את זה של Infura
 <ph name="BEGIN_INFURA_TOU_LINK"/>
 תנאי שימוש
 <ph name="END_INFURA_TOU_LINK"/>
@@ -498,7 +498,7 @@
 <ph name="END_INFURA_PRIVACY_LINK"/></translation>
 <translation id="6513892817556267573">שירות רישום שמות Ethereum</translation>
 <translation id="4335039108389860301">לאפשר תמיכה ב-Ethereum Name Service (ENS) ב-Brave?</translation>
-<translation id="4609973808011229683">Brave ישתמש ב-Infura כדי לפתור שמות דומיינים מסוג .eth שנמצאים ב-Ethereum Name Service (ENS). Brave מסתיר את כתובת ה-IP שלך. אם תאפשר זאת, Infura תראה שמישהו מנסה לבקר בדומיינים .eth אלה אך שום דבר אחר. ראה את זה של Infura
+<translation id="4609973808011229683">Brave ישתמש ב-Infura כדי לפתור שמות דומיינים מסוג .eth שנמצאים ב-Ethereum Name Service (ENS). AI Wize מסתיר את כתובת ה-IP שלך. אם תאפשר זאת, Infura תראה שמישהו מנסה לבקר בדומיינים .eth אלה אך שום דבר אחר. ראה את זה של Infura
 <ph name="BEGIN_INFURA_TOU_LINK"/>
 תנאי שימוש
 <ph name="END_INFURA_TOU_LINK"/> and 
@@ -523,7 +523,7 @@
 <translation id="2468755552460246661">הדומיין חסום</translation>
 <translation id="6393849031898466746">ייתכן שאתר זה ינסה לעקוב אחריך באתרים אחרים</translation>
 <translation id="983774928604730749">Brave מנע את טעינת האתר הבא</translation>
-<translation id="8629537573456243518">מכיוון שביקשת לחסום באגרסיביות עוקבים ופרסומות, Brave חוסמת את האתר הזה לפני החיבור הראשון לרשת.</translation>
+<translation id="8629537573456243518">מכיוון שביקשת לחסום באגרסיביות עוקבים ופרסומות, AI Wize חוסמת את האתר הזה לפני החיבור הראשון לרשת.</translation>
 <translation id="2459038234784107183">אל תזהיר אותי לגבי אתר זה שוב</translation>
 <translation id="8242426110754782860">המשך</translation>
 <translation id="2501278716633472235">חזרה</translation>
@@ -532,7 +532,7 @@
 <translation id="8415427685483394219">האם תרצה לבקר באתר זה במצב Off-The-Record?</translation>
 <translation id="5754874269349119401">Brave רוצה להגן עליך בעת ביקור באתרים רגישים. אתרים שבהם אתה מבקר במצב Off-The-Record לא יופיעו בהיסטוריית הגלישה שלך, וקובצי Cookie לא יישמרו.</translation>
 <translation id="1307431692088049276">אל תשאלו אותי שוב</translation>
-<translation id="6329829767845427007">תוכל לשנות זאת מאוחר יותר בהגדרות Brave באיזור הפרטיות והאבטחה</translation>
+<translation id="6329829767845427007">תוכל לשנות זאת מאוחר יותר בהגדרות AI Wize באיזור הפרטיות והאבטחה</translation>
 <translation id="951201617124425694">המשך ל Off-The-Record</translation>
 <translation id="4087894168792701548">המשך בצורה רגילה</translation>
 <translation id="5874287397425241890">אתה גולש באתר זה במצב של Off-The-Record.</translation>
@@ -575,7 +575,7 @@
 <translation id="3373798179786163193">המשך עם השער הציבורי</translation>
 <translation id="1974060860693918893">מתקדם</translation>
 <translation id="9096577886148726047">הסתר מתקדם</translation>
-<translation id="182581792765792826">Brave אינו יכול לטעון את משאבי ה- IPFS המבוקשים משום שהצומת המקומי לא הופעל, או מכיוון שאין כרגע עמיתים מחוברים זמינים. אם תבחרו ב"המשך", Brave יעשה שימוש אוטומטי בשער הציבורי המוגדר כברירת מחדל בכל פעם שהשימוש בצומת IPFS המקומי נכשל. באפשרותכם לשנות התנהגות זו בכל עת בהגדרות Brave.</translation>
+<translation id="182581792765792826">Brave אינו יכול לטעון את משאבי ה- IPFS המבוקשים משום שהצומת המקומי לא הופעל, או מכיוון שאין כרגע עמיתים מחוברים זמינים. אם תבחרו ב"המשך", AI Wize יעשה שימוש אוטומטי בשער הציבורי המוגדר כברירת מחדל בכל פעם שהשימוש בצומת IPFS המקומי נכשל. באפשרותכם לשנות התנהגות זו בכל עת בהגדרות Brave.</translation>
 <translation id="8026038288183400906">העדפת IPFS</translation>
 <translation id="2058855456574089690">הגדירו את העדפות IPFS שלכם</translation>
 <translation id="4780526507945807546">השתמשו בצומת IPFS מקומי של Brave</translation>
@@ -591,7 +591,7 @@
 <translation id="1675751799495331928">חרגנו ממגבלת הניסיונות, נא לנסות שוב מאוחר יותר.</translation>
 <translation id="4499666752625407848">אירעה שגיאה במהלך העדכון.</translation>
 <translation id="62991515067726424">תוכן זה הועלה על פני פרוטוקול IPFS</translation>
-<translation id="7263366446813126341">מערכת הקבצים InterPlanetary (IPFS) היא רשת ציבורית לאחסון והעברת נתונים מעמית לעמית. תוכלו ללמוד פרטים נוספים על השילוב של Brave או קבעו תצורה להגדרות ה- IPFS שלכם בכל עת.</translation>
+<translation id="7263366446813126341">מערכת הקבצים InterPlanetary (IPFS) היא רשת ציבורית לאחסון והעברת נתונים מעמית לעמית. תוכלו ללמוד פרטים נוספים על השילוב של AI Wize או קבעו תצורה להגדרות ה- IPFS שלכם בכל עת.</translation>
 <translation id="3175567740517780285">הגדרות IPFS</translation>
 <translation id="8914505352873092008">עבור אל דף ההגדרות של IFPS</translation>
 <translation id="3465468510001693544">אבחון IPFS</translation>
@@ -635,18 +635,18 @@
 <translation id="6516984207843289176">חשבון מקושר</translation>
 <translation id="7415051511657673556"><ph name="BOLD_BEGIN"/>מוכן להתחיל להרוויח?
 <ph name="BOLD_END"/>התחבר או צור חשבון עם אחד מהשותפים שלנו.</translation>
-<translation id="1772961321862399863">כדי להרוויח BAT, המשתמשים חייבים לחבר חשבון משמורת ל-Brave Rewards. למרבה הצער, אין אפוטרופוס זמין באזור שלך, כך שהרווחים אינם זמינים. לעת עתה, הפעלת Brave Rewards תתמוך ביוצרים באופן אוטומטי.</translation>
-<translation id="902298128239575729">שלח טיפים עם Brave Rewards</translation>
+<translation id="1772961321862399863">כדי להרוויח BAT, המשתמשים חייבים לחבר חשבון משמורת ל-Brave Rewards. למרבה הצער, אין אפוטרופוס זמין באזור שלך, כך שהרווחים אינם זמינים. לעת עתה, הפעלת AI Wize Rewards תתמוך ביוצרים באופן אוטומטי.</translation>
+<translation id="902298128239575729">שלח טיפים עם AI Wize Rewards</translation>
 <translation id="6276721355724491595">תוכל לשלוח תרומות לפי דרישה ליוצרים האהובים עליך עם היתרה שלך ב-Brave Rewards ברגע שיהיה לך חשבון משמורת מחובר.</translation>
 <translation id="1149481926056509086">כדי לשלוח תרומות לפי דרישה, המשתמשים חייבים לחבר חשבון משמורת ל-Brave Rewards. למרבה הצער, אין אפוטרופוס זמין באזור שלך, ולכן השליחה אינה זמינה. בינתיים, אתה עדיין תומך באופן אוטומטי ביוצרים.</translation>
-<translation id="2584752537998444309">{PUBLISHER_COUNT, plural, =1 {החודש, ביקרת ביוצר אחד נתמך על ידי Brave Rewards} other {החודש, ביקרת ב-# יוצרים נתמכים על ידי Brave Rewards} }</translation>
+<translation id="2584752537998444309">{PUBLISHER_COUNT, plural, =1 {החודש, ביקרת ביוצר אחד נתמך על ידי AI Wize Rewards} other {החודש, ביקרת ב-# יוצרים נתמכים על ידי AI Wize Rewards} }</translation>
 <translation id="6067959437127691361">השימוש ב-Brave Rewards עוזר לתמוך ביוצרי תוכן, ומאפשר לך להרוויח BAT.</translation>
 <translation id="1187367336925051518"><ph name="MONTH"/> תגמולים:<ph name="AMOUNT"/></translation>
 <translation id="3274366539954332481">שֶׁלְךָ <ph name="MONTH"/> פרסומת פרסומות כבר כאן!</translation>
 <translation id="7861645265922445992">תבע תגמולים</translation>
 <translation id="9013419433042554094">תבע אסימונים</translation>
 <translation id="2359808026110333948">המשך</translation>
-<translation id="885805571521218129">זה משקף את טווח הרווחים המשוער שלך עבור Brave Ads החודש.</translation>
+<translation id="885805571521218129">זה משקף את טווח הרווחים המשוער שלך עבור AI Wize Ads החודש.</translation>
 <translation id="3863981251715594911">איך זה עובד?</translation>
 <translation id="4782365133987903299">יש לך <ph name="DAYS"/> נותר לתבוע</translation>
 <translation id="7931127789630755251">הרווח אסימונים עבור מודעות פרטיות שאתה רואה ב-Brave</translation>
@@ -660,7 +660,7 @@
 <translation id="2221902203895354376">מענק סמלי זמין!</translation>
 <translation id="2956070106555335453">סיכום</translation>
 <translation id="2369994359029526515">יוצר בלתי מאומת</translation>
-<translation id="3984338085370091436">היוצר הזה עדיין לא מאומת עם Brave Creators. תוכל לשלוח להם תרומות לאחר אימותן.</translation>
+<translation id="3984338085370091436">היוצר הזה עדיין לא מאומת עם AI Wize Creators. תוכל לשלוח להם תרומות לאחר אימותן.</translation>
 <translation id="6020176662032623904">יוצר מאומת</translation>
 <translation id="8635423276837443905">רענן את סטטוס האימות של היוצר</translation>
 <translation id="6633436087937398390"><ph name="NAME"/> ב-<ph name="PLATFORM"/></translation>
@@ -692,26 +692,26 @@
 <translation id="2429828319207652823">אירעה תקלה בעיבוד התרומה שלכם.</translation>
 <translation id="6390041270339783491">התרומה החודשית נכשלה</translation>
 <translation id="7047578174221019462">התרומות החודשיות שלך עובדו.</translation>
-<translation id="2529827670795983639">נראה כי אפשרות זו אינה פועלת, פרסומות Brave יישארו מושהות. צור אתנו קשר אם אתה זקוק לעזרה עם ה-captcha.</translation>
+<translation id="2529827670795983639">נראה כי אפשרות זו אינה פועלת, פרסומות AI Wize יישארו מושהות. צור אתנו קשר אם אתה זקוק לעזרה עם ה-captcha.</translation>
 <translation id="261607053214862521">חריגה ממספר הניסיונות המרבי המותר</translation>
 <translation id="2323171459178104277">נפתר!</translation>
-<translation id="1512837998731269583">פרסומות ורווחים לא יחודשו. תודה שעזרת לנו להגן על Brave Rewards ועל פרסומות מבוססות פרטיות.</translation>
+<translation id="1512837998731269583">פרסומות ורווחים לא יחודשו. תודה שעזרת לנו להגן על AI Wize Rewards ועל פרסומות מבוססות פרטיות.</translation>
 <translation id="3247549836099021862">פנה לתמיכה</translation>
 <translation id="5234764350956374838">סגור</translation>
 <translation id="7859066142771796818">השתמש באסימונים כדי לקנות כרטיסי מתנה, להחליף למטבעות אחרים, לתמוך ביוצרי תוכן ועוד.</translation>
 <translation id="5425006356459378415">Brave Rewards לא זמין</translation>
-<translation id="909076461795862330">לרוע המזל, אירעה שגיאה בעת ניסיון להגדיר את Brave Rewards. בבקשה נסה שוב.</translation>
+<translation id="909076461795862330">לרוע המזל, אירעה שגיאה בעת ניסיון להגדיר את AI Wize Rewards. בבקשה נסה שוב.</translation>
 <translation id="3180990265682133881">למרבה הצער, אירעה שגיאה בעת ניסיון להגדיר את המדינה שלך. בבקשה נסה שוב.</translation>
 <translation id="5931798071481566121">הרשמות חדשות ל-Brave Rewards מושבתות כעת באזורכם. עם זאת, תמיד אפשר לנסות שוב מאוחר יותר. <ph name="LINK_BEGIN"/>לפרטים נוספים<ph name="LINK_END"/></translation>
 <translation id="6439128034594289376">וואו! אתה מוכן!</translation>
 <translation id="6136350726756049410">עכשיו אתה יכול לקבל תגמול על צפייה במודעות. אתה עוזר להפוך את האינטרנט למקום טוב יותר עבור כולם. וזה מדהים!</translation>
-<translation id="5547108999862247665">כיצד פועלים Brave Rewards?</translation>
+<translation id="5547108999862247665">כיצד פועלים AI Wize Rewards?</translation>
 <translation id="3970520675790340955">בחר את המדינה שלך כדי שנוכל להראות לך את האפשרויות והמודעות הנכונות עבור האזור שלך.</translation>
 <translation id="6945221475159498467">בחר</translation>
 <translation id="3279158300746391749">לחץ על סמל <ph name="BAT_ICON"/> בשורת ה-URL כדי להתחיל.</translation>
 <translation id="8465790416279415448">המשך מהווה הסכמה ל-<ph name="TOS_LINK_BEGIN"/>תנאי השירות<ph name="TOS_LINK_END"/> ו-<ph name="PP_LINK_BEGIN"/>מדיניות הפרטיות<ph name="PP_LINK_END"/>.</translation>
-<translation id="1015443539415537847">מצטערים,  Brave Rewards לא זמין כרגע</translation>
-<translation id="5007776270364097327">לרוע המזל, נראה שאתם נמצאים באזור שבו Brave Rewards אינו זמין.</translation>
+<translation id="1015443539415537847">מצטערים,  AI Wize Rewards לא זמין כרגע</translation>
+<translation id="5007776270364097327">לרוע המזל, נראה שאתם נמצאים באזור שבו AI Wize Rewards אינו זמין.</translation>
 <translation id="4934459911359992410"><ph name="LINK_BEGIN"/>לפרטים נוספים<ph name="LINK_END"/></translation>
 <translation id="4214852687527104244">אל דאגה.</translation>
 <translation id="5027616819996705541">אתם עדיין יכולים לגלוש בפרטיות!</translation>
@@ -725,7 +725,7 @@
 <translation id="1483493594462132177">שלח</translation>
 <translation id="6632987674051304487">שלח עם<ph name="PROVIDER"/></translation>
 <translation id="4319632089378796037">השתמש בארנק Web3</translation>
-<translation id="4530198836725543997">יוצר זה נרשם ל-Brave ויכול לקבל תרומות ממשתמשי Brave Rewards.</translation>
+<translation id="4530198836725543997">יוצר זה נרשם ל-Brave ויכול לקבל תרומות ממשתמשי AI Wize Rewards.</translation>
 <translation id="4529874892536380156">הפוך זאת לטיפ מחזורי חודשי. אתה יכול לבטל אותו בכל עת.</translation>
 <translation id="1177863135347784049">מותאם אישית</translation>
 <translation id="5907051927340164207">אתה כבר שולח טיפים חודשיים ליוצר זה</translation>
@@ -739,7 +739,7 @@
 <translation id="4379244534135194459">אתה יכול גם לשלוח תרומות קריפטו ליוצר זה באמצעות ארנק Web3 שלך.</translation>
 <translation id="2718860759172031728">כנס ל <ph name="PROVIDER"/></translation>
 <translation id="6268134562674951939">אין לך מספיק אסימונים</translation>
-<translation id="5562948772940025260">אתה יכול לשלוח רק עד <ph name="AMOUNT"/>BAT באמצעות יתרת Brave Rewards שלך.</translation>
+<translation id="5562948772940025260">אתה יכול לשלוח רק עד <ph name="AMOUNT"/>BAT באמצעות יתרת AI Wize Rewards שלך.</translation>
 <translation id="4827581232860040208">הייתה בעיה בשליחת הטיפ שלך</translation>
 <translation id="3259723213051400722">יש לנסות שוב.</translation>
 <translation id="5379685283876547860">הטיפ נשלח!</translation>
@@ -770,7 +770,7 @@
 <translation id="1128992132632883337">אירעה שגיאת ניתוח תגובה</translation>
 <translation id="5382339341735118861">בעת עיבוד הבקשה אירעה שגיאה כללית</translation>
 <translation id="7123780456696055383">המשאב המבוקש אינו זמין</translation>
-<translation id="1680597601664421644">מסייע הזיכרון המיובא אינו תקף לגבי Brave Wallet</translation>
+<translation id="1680597601664421644">מסייע הזיכרון המיובא אינו תקף לגבי AI Wize Wallet</translation>
 <translation id="4641919696349069826">בקשה כבר נמצאת בביצוע</translation>
 <translation id="872806943696014633">חסרים נתוני עסקאות</translation>
 <translation id="7068183357903252127">יש לציין נתוני עסקה 'אל' או 'נתונים'</translation>
@@ -906,11 +906,11 @@
 <translation id="1018806299114415224">גבה כעת</translation>
 <translation id="1400709719911593089">Brave Wallet אינו מוגדר כארנק ברירת המחדל שלך ולא יגיב ל-DApps של Web3. עליך להיכנס להגדרות כדי לשנות את ארנק ברירת המחדל שלך.</translation>
 <translation id="4362717653795263052">שחזר חשבונות קריפטו עיקריים</translation>
-<translation id="3038077262567136741">הזן את ביטוי השחזור שלך כדי לשחזר את חשבון הקריפטו של ארנק Brave שלך.</translation>
+<translation id="3038077262567136741">הזן את ביטוי השחזור שלך כדי לשחזר את חשבון הקריפטו של ארנק AI Wize שלך.</translation>
 <translation id="955918646509748368">ביטוי השחזור שהוזן אינו תקין.</translation>
 <translation id="8107437138787377150">הדבק ביטוי שחזור מלוח העתקה</translation>
 <translation id="4811736040444856406">הצג ביטוי שחזור</translation>
-<translation id="4359319875297001084">לייבא מארנקי קריפטו Brave מדור קודם?</translation>
+<translation id="4359319875297001084">לייבא מארנקי קריפטו AI Wize מדור קודם?</translation>
 <translation id="3331452756822160641">סיסמה חדשה</translation>
 <translation id="8624315169751085215">העתק ללוח מודעות</translation>
 <translation id="6346952829206698721">הדבק מהלוח</translation>
@@ -1012,7 +1012,7 @@
 <translation id="3352959425838279177">קבלו Eter מ-faucet עבור <ph name="SELECTED_NETWORK"/></translation>
 <translation id="6449626816252815844">יש לבחור אמצעי תשלום</translation>
 <translation id="8009571545960303544">נדרשת חתימתך</translation>
-<translation id="5294062982587710720">שים לב כי Brave לא יכול לאמת מה יקרה אם תחתום. חתימה יכולה לאשר כמעט כל פעולה בחשבונך או בשמך, כולל (אך לא מוגבל ל)מתן שליטה מוחלטת בחשבונך ובנכסי הקריפטו לאתר המבקש את הבקשה. חתום רק אם אתה בטוח שאתה רוצה לבצע פעולה זו וסומך על האתר המבקש.</translation>
+<translation id="5294062982587710720">שים לב כי AI Wize לא יכול לאמת מה יקרה אם תחתום. חתימה יכולה לאשר כמעט כל פעולה בחשבונך או בשמך, כולל (אך לא מוגבל ל)מתן שליטה מוחלטת בחשבונך ובנכסי הקריפטו לאתר המבקש את הבקשה. חתום רק אם אתה בטוח שאתה רוצה לבצע פעולה זו וסומך על האתר המבקש.</translation>
 <translation id="3474375934783434676">הירשם על אחריותך בלבד</translation>
 <translation id="5488357322146334497">הודעה</translation>
 <translation id="3586931643579894722">הסתר פרטים</translation>
@@ -1089,8 +1089,8 @@
 <translation id="9139452553033760558">למשך שבוע</translation>
 <translation id="1658834457013045127">לנצח</translation>
 <translation id="2770851145415891830">זוהה ארנק קריפטו קיים</translation>
-<translation id="2237759620789871865">אם אתה מעדיף לדלג על הייבוא ולשמור על חוויית ה-Crypto Wallets הישנה, פשוט נווט להגדרות Brave Browser <ph name="LINK_BEFORE"/>ושנה את <ph name="LINK_AFTER"/>ברירת המחדל בחזרה ל-Crypto Wallets. תוכל גם לייבא, לנסות את ה-Brave Wallet החדש ולשנות בכל עת.</translation>
-<translation id="5590175005414413980">עליך להזין את סיסמת ארנק הקריפטו הנוכחית שלך כדי לייבא ארנק אל Brave Wallet, ולהנות מדרך מהירה ובטוחה יותר לנהל נכסי קריפטו ואינטראקציה עם DApps של Web3.</translation>
+<translation id="2237759620789871865">אם אתה מעדיף לדלג על הייבוא ולשמור על חוויית ה-Crypto Wallets הישנה, פשוט נווט להגדרות AI Wize Browser <ph name="LINK_BEFORE"/>ושנה את <ph name="LINK_AFTER"/>ברירת המחדל בחזרה ל-Crypto Wallets. תוכל גם לייבא, לנסות את ה-Brave Wallet החדש ולשנות בכל עת.</translation>
+<translation id="5590175005414413980">עליך להזין את סיסמת ארנק הקריפטו הנוכחית שלך כדי לייבא ארנק אל AI Wize Wallet, ולהנות מדרך מהירה ובטוחה יותר לנהל נכסי קריפטו ואינטראקציה עם DApps של Web3.</translation>
 <translation id="880619123281809987">הקלד את סיסמת ארנקי Crypto</translation>
 <translation id="6344138931392227467"><ph name="DEVICE_NAME"/> מחובר</translation>
 <translation id="7051244143160304048"><ph name="DEVICE_NAME"/> מנותק</translation>
@@ -1236,7 +1236,7 @@
 <translation id="5522073372365069684">לרכישה באמצעות Ramp</translation>
 <translation id="6153197326949684688">מכור עם<ph name="OFFRAMP_PROVIDER"/></translation>
 <translation id="7902920577183739843">קנה עם Sardine</translation>
-<translation id="3301984548406568819">הנתונים הפיננסיים והעסקאות מעובדים על ידי השותפים שלנו ב-onramp.  ואילו Brave  אינה אוספת או בעלת גישה לנתונים כאלה.</translation>
+<translation id="3301984548406568819">הנתונים הפיננסיים והעסקאות מעובדים על ידי השותפים שלנו ב-onramp.  ואילו AI Wize  אינה אוספת או בעלת גישה לנתונים כאלה.</translation>
 <translation id="6534275647567011533">רכישה עם Transak</translation>
 <translation id="5973390321030037823">רכישה עם Link</translation>
 <translation id="1932640759496708012">קנה עם Coinbase Pay</translation>
@@ -1301,7 +1301,7 @@
 <ph name="VALUE"/></translation>
 <translation id="4048336522751528394">החלף <ph name="MAKER"/> ל-
 <ph name="TAKER"/></translation>
-<translation id="8613144770663526433">היכנס עם Brave Wallet</translation>
+<translation id="8613144770663526433">היכנס עם AI Wize Wallet</translation>
 <translation id="8813165409788097898">אתה נכנס ל- <ph name="ORIGIN"/>Brave Wallet   ישתף את כתובת הארנק שלך עם<ph name="ORIGIN"/> .</translation>
 <translation id="1028781062521375153">ראה פרטים</translation>
 <translation id="3950820424414687140">כניסה</translation>
@@ -1398,7 +1398,7 @@
 <translation id="3890567288132019108">למידע נוסף על הפחתת סיכונים עם Rainbow Bridge</translation>
 <translation id="1792917191129448067">פתח את אפליקציית Rainbow Bridge</translation>
 <translation id="1522775706527775647">Bridge ל-Aurora</translation>
-<translation id="4903322403594141291">למידע נוסף על Brave Wallet</translation>
+<translation id="4903322403594141291">למידע נוסף על AI Wize Wallet</translation>
 <translation id="3875185448438395303">לפחות:</translation>
 <translation id="2029465635925899949">8 תווים</translation>
 <translation id="6697810017029555732">התאמה!</translation>
@@ -1428,7 +1428,7 @@
 <translation id="2781276194026093899">שְׁנִיָה</translation>
 <translation id="7992766987062040279">שְׁלִישִׁי</translation>
 <translation id="2295726992010694229">ה-</translation>
-<translation id="8241405611628876973">מזל טוב! ה- Brave Walle שלך מוכן לשימוש!</translation>
+<translation id="8241405611628876973">מזל טוב! ה- AI Wize Walle שלך מוכן לשימוש!</translation>
 <translation id="6828327990705355767">כדי לגשת לארנק שלך, פשוט לחץ על סמל הארנק בפינה השמאלית העליונה של כל חלון דפדפן Brave.</translation>
 <translation id="396152018598329740">כיצד להשתמש בארנק קריפטו?</translation>
 <translation id="7512061585041489067">מהו ארנק הקריפטו הטוב ביותר?</translation>
@@ -1457,10 +1457,10 @@
 <translation id="7781090633800450517">קראתי ואני מסכים ל<ph name="LINK_BEFORE"/>תנאי השימוש<ph name="LINK_AFTER"/></translation>
 <translation id="1422451606553326863">רכישת קריפטו</translation>
 <translation id="3887541341068007345">בודק תוספות ארנק...</translation>
-<translation id="3567994771568272606">יבוא מארנקי קריפטו של Brave מדור קודם</translation>
+<translation id="3567994771568272606">יבוא מארנקי קריפטו של AI Wize מדור קודם</translation>
 <translation id="8407091560429310499">בחר נכס</translation>
 <translation id="756590380936155533">כדי לסיים את רכישת <ph name="ASSET_TICKER"/> שלך, בחר אחד מהשותפים שלנו</translation>
-<translation id="7880860489474966219">בסיום, הכספים שלך יועברו ל- Brave Wallet שלך</translation>
+<translation id="7880860489474966219">בסיום, הכספים שלך יועברו ל- AI Wize Wallet שלך</translation>
 <translation id="6182661078713714878">הפקד קריפטו</translation>
 <translation id="3683305208314702347">הפקד <ph name="VALUE"/></translation>
 <translation id="5768739294929936862">הפקד אסימוני Solana או SPL</translation>
@@ -1508,12 +1508,12 @@
 <translation id="434502623875309667">פתרון כתובות דורש בקשות רשת אופ-צ'יין. להמשיך?</translation>
 <translation id="2779500703989728346">NFT</translation>
 <translation id="1893207255459018302">אין היסטוריית עסקאות</translation>
-<translation id="5356382676355994980">עסקאות שבוצעו עם ארנק Brave שלך יופיעו כאן.</translation>
+<translation id="5356382676355994980">עסקאות שבוצעו עם ארנק AI Wize שלך יופיעו כאן.</translation>
 <translation id="3033638954295674319">משהו השתבש בעת שליפת פרטי NFT. נסו שוב מאוחר יותר.</translation>
 <translation id="2612436523196658045">כתובת ETH תתורגם לכתובת Filecoin.</translation>
 <translation id="3282354360699748542">הכתובת <ph name="FILECOIN_ADDRESS"/> במרחב השמות של Filecoin תשמש עבור העסקה.</translation>
 <translation id="2540568096903252632">יש להזין סיסמה כדי להמשיך</translation>
-<translation id="3356580495013324916">הזינו את סיסמת Brave Wallet שלכם כדי להתחיל לגבות את הארנק.</translation>
+<translation id="3356580495013324916">הזינו את סיסמת AI Wize Wallet שלכם כדי להתחיל לגבות את הארנק.</translation>
 <translation id="7545441766078366279">אשר את <ph name="TOKEN"/></translation>
 <translation id="3115303896544539834">יתרת <ph name="TOKEN"/> לא מספקת</translation>
 <translation id="3453833142586986467">בחירת טוקן</translation>
@@ -1609,7 +1609,7 @@ CoinGecko</translation>
 <translation id="6657860743511185539">NFT יוסר מ-Brave Wallet אך יישאר בblockchain. אם תסירו אותו, ואז תשנו את דעתכם, יהיה צורך לייבאו שוב באופן ידני.</translation>
 <translation id="849880459530751909">ערוך NFT</translation>
 <translation id="5925465310724910998">רוצה שה-NFT שלך יוצגו באופן אוטומטי?</translation>
-<translation id="5400791731776892411">Brave Wallet יכול להשתמש בשירות של צד שלישי כדי להציג אוטומטית את ה-NFTs שלך. Brave ישתף את כתובות הארנק שלך עם <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> כדי לספק שירות זה. <ph name="BEFORE_URL"/>למידע נוסף.<ph name="AFTER_URL"/></translation>
+<translation id="5400791731776892411">Brave Wallet יכול להשתמש בשירות של צד שלישי כדי להציג אוטומטית את ה-NFTs שלך. AI Wize ישתף את כתובות הארנק שלך עם <ph name="BEFORE_UNDERLINE"/>SimpleHash<ph name="AFTER_UNDERLINE"/> כדי לספק שירות זה. <ph name="BEFORE_URL"/>למידע נוסף.<ph name="AFTER_URL"/></translation>
 <translation id="7661959661113971834">כן, המשך</translation>
 <translation id="4733761855978444079">לא תודה, אעשה זאת ידנית</translation>
 <translation id="353620741952662530">אין NFTs להצגה</translation>
@@ -1662,7 +1662,7 @@ CoinGecko</translation>
 <translation id="6951743416068151209">Tor Proxy URI</translation>
 <translation id="1671503397662036257">סטטוס חיבור Tor</translation>
 <translation id="6024292492796847324">התקדמות אתחול Tor</translation>
-<translation id="8300751939969131609">הפעל Brave News, ולא תפספס אף סיפור לעולם</translation>
+<translation id="8300751939969131609">הפעל AI Wize News, ולא תפספס אף סיפור לעולם</translation>
 <translation id="7758665172236842395">עקבו אחר המקורות המועדפים עליכם, בפיד יחיד. פשוט פותחים כרטיסייה ב-Brave, גוללים למטה ו... הנה!</translation>
 <translation id="2376542729617592331">Brave News ממומנת באמצעות מודעות פרטיות ואנונימיות. <ph name="LINK_START"/>לפרטים נוספים<ph name="LINK_END"/></translation>
 <translation id="1765217911817124376">הפעל את חדשות Brave</translation>
@@ -1831,12 +1831,12 @@ CoinGecko</translation>
 <translation id="9055778350624039365">הצג את לוח ארנק Brave</translation>
 <translation id="2548853975094084059">סגור את לוח ארנק Brave</translation>
 <translation id="3765209580429944524">הצג את לוח VPN של Brave</translation>
-<translation id="5989009326527614692">החלף את לחצן סרגל הכלים של Brave VPN</translation>
+<translation id="5989009326527614692">החלף את לחצן סרגל הכלים של AI Wize VPN</translation>
 <translation id="7334332308395652803">החלף את סמל מגש VPN של Brave</translation>
-<translation id="4326011033480357140">שלח משוב של Brave VPN</translation>
-<translation id="2345974803401546682">אודות Brave VPN</translation>
-<translation id="8934783170241943640">נהל את תכנית Brave VPN</translation>
-<translation id="6332027154313182926">החלף את Brave VPN</translation>
+<translation id="4326011033480357140">שלח משוב של AI Wize VPN</translation>
+<translation id="2345974803401546682">אודות AI Wize VPN</translation>
+<translation id="8934783170241943640">נהל את תכנית AI Wize VPN</translation>
+<translation id="6332027154313182926">החלף את AI Wize VPN</translation>
 <translation id="6539014233195996894">החלף את השתקת הלשונית</translation>
 <translation id="2682865834956428001">החלף את מיקום סרגל הצד</translation>
 <translation id="6105745639559695088">החלף סרגל צד</translation>
@@ -1901,24 +1901,24 @@ CoinGecko</translation>
 <translation id="1199355487114804640">נגן/השהה</translation>
 <translation id="1689210457482459023">הפחת את מהירות ההשמעה</translation>
 <translation id="5872363163901278000">הגבר את מהירות ההשמעה</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="8637805148029768813">תכונת הסיכום זמינה כרגע רק עבור מאמרים נבחרים ודפי אינטרנט ארוכים אחרים.</translation>
 <translation id="1223498995510244364">סכם</translation>
 <translation id="7491773233732232424">על ליאו</translation>
-<translation id="5208096220706490232">Brave Leo הוא עוזר חכם אישי המופעל באמצעות בינה מלאכותית המשפר את השימוש שלכם באינטרנט. השימוש ב-Leo ניתן ללא עלות עם גישה מוגבלת. גרסת Brave Leo Premium מציעה דגמים נוספים, אפשרויות נוספות ומאפשרת למנויים גישה מוקדמת לתכונות חדשות.מודל ברירת המחדל עבור כל המשתמשים הוא Mixtral 8x7B נכון לרגע זה. למידע נוסף ניתן לקרוא את <ph name="LINK_BEFORE"/>Brave wiki<ph name="LINK_AFTER"/>.</translation>
-<translation id="7189603330209995455">כברירת מחדל, כששואלים את Leo שאלה, הוא עשוי לשלוח את התוכן של דף הרשת שאתם צופים בו או של כל טקסט שאתם מדגישים בדף ל-Brave Leo ולעשות בהם שימוש. דיוק התגובה אינו מובטח ועשוי לכלול מידע לא מדויקף מטעה או לא נכון. Leo עושה שימוש בנתונים מחיפוש Brave כדי לשפר את איכות התגובה. אין לשלוח מידע רגיש או אישי ויש להתייחס לכל התשובות הקשורות לתחום הבריאות, הכלכלה, הבטיחות האישית או לתחומים דומים במשנה זהירות. באפשרותכם להתאים את אפשרויות Leo בהגדרות בכל עת. עברו אל 'הגדרות' ולאחר מכן אל 'Leo'.</translation>
-<translation id="3038772045018370764">Leo אינו אוסף מידע מזהה כגון כתובת IP שניתן לקשר אותה אליכם. לא נעשה שימוש בנתונים למקד את מודלי הבינה המלאכותית ונתונים אישיים אינם נשמרים על ידי מודלי הבינה המלאכותית (למעט Anthropic המחזיק בנתונים למשך 30 ימים לפני מחיקתם). יש לעיין <ph name="LINK_BEFORE"/>במדיניות הפרטיות<ph name="LINK_AFTER"/> למידע נוסף.</translation>
+<translation id="5208096220706490232">AI Wize Chat הוא עוזר חכם אישי המופעל באמצעות בינה מלאכותית המשפר את השימוש שלכם באינטרנט. השימוש ב-AI Wize Chat ניתן ללא עלות עם גישה מוגבלת. גרסת AI Wize AI Wize Chat Premium מציעה דגמים נוספים, אפשרויות נוספות ומאפשרת למנויים גישה מוקדמת לתכונות חדשות.מודל ברירת המחדל עבור כל המשתמשים הוא Mixtral 8x7B נכון לרגע זה. למידע נוסף ניתן לקרוא את <ph name="LINK_BEFORE"/>Brave wiki<ph name="LINK_AFTER"/>.</translation>
+<translation id="7189603330209995455">כברירת מחדל, כששואלים את AI Wize Chat שאלה, הוא עשוי לשלוח את התוכן של דף הרשת שאתם צופים בו או של כל טקסט שאתם מדגישים בדף ל-AI Wize Chat ולעשות בהם שימוש. דיוק התגובה אינו מובטח ועשוי לכלול מידע לא מדויקף מטעה או לא נכון. AI Wize Chat עושה שימוש בנתונים מחיפוש AI Wize כדי לשפר את איכות התגובה. אין לשלוח מידע רגיש או אישי ויש להתייחס לכל התשובות הקשורות לתחום הבריאות, הכלכלה, הבטיחות האישית או לתחומים דומים במשנה זהירות. באפשרותכם להתאים את אפשרויות AI Wize Chat בהגדרות בכל עת. עברו אל 'הגדרות' ולאחר מכן אל 'AI Wize Chat'.</translation>
+<translation id="3038772045018370764">AI Wize Chat אינו אוסף מידע מזהה כגון כתובת IP שניתן לקשר אותה אליכם. לא נעשה שימוש בנתונים למקד את מודלי הבינה המלאכותית ונתונים אישיים אינם נשמרים על ידי מודלי הבינה המלאכותית (למעט Anthropic המחזיק בנתונים למשך 30 ימים לפני מחיקתם). יש לעיין <ph name="LINK_BEFORE"/>במדיניות הפרטיות<ph name="LINK_AFTER"/> למידע נוסף.</translation>
 <translation id="7839853125981164613">הזינו כאן הנחייה</translation>
 <translation id="4524675003624341892">הצעת שאלות…</translation>
 <translation id="4567071417854988869">לסכם את הדף הזה</translation>
 <translation id="7921782882718083488">לסכם את הדף הזה</translation>
-<translation id="7932221068776853847">התנתק כדי להפסיק לשלוח את תוכן הדף הזה ל-Leo, ולהתחיל שיחה חדשה</translation>
-<translation id="1167803637855350748">הייתה בעיית רשת בחיבור ל-Leo, נא לבדוק את החיבור ולנסות שוב.</translation>
-<translation id="5095201428204952524">Leo עסוק מדי עכשיו. אנא נסו שוב בעוד מספר דקות.</translation>
+<translation id="7932221068776853847">התנתק כדי להפסיק לשלוח את תוכן הדף הזה ל-AI Wize Chat, ולהתחיל שיחה חדשה</translation>
+<translation id="1167803637855350748">הייתה בעיית רשת בחיבור ל-AI Wize Chat, נא לבדוק את החיבור ולנסות שוב.</translation>
+<translation id="5095201428204952524">AI Wize Chat עסוק מדי עכשיו. אנא נסו שוב בעוד מספר דקות.</translation>
 <translation id="7144878232160441200">נסה שוב</translation>
 <translation id="2505565639170795978">היי, אני ליאו. אני עוזר AI מתארח במלואו על ידי Brave. אני מופעל על ידי Llama 13B, מודל שנוצר על ידי Meta כדי להיות ביצועי וישים למקרי שימוש רבים.</translation>
-<translation id="8030558642460377506">היי, שמי Leo. אני עוזר המופעל על ידי בינה מלאכותית של Brave. אני מופעל על ידי Mixtral 8x7B, מודל שנוצר על ידי Mistral AI על מנת לטפל במשימות מתקדמות.</translation>
-<translation id="2489317965865266353">היי, אני ליאו. אני נשלח על ידי Brave ומופעל על ידי קלוד אינסטנט, מודל שנוצר על ידי Anthropic כדי להפעיל משימות שיחה ועיבוד טקסט.</translation>
+<translation id="8030558642460377506">היי, שמי AI Wize Chat. אני עוזר המופעל על ידי בינה מלאכותית של Brave. אני מופעל על ידי Mixtral 8x7B, מודל שנוצר על ידי Mistral AI על מנת לטפל במשימות מתקדמות.</translation>
+<translation id="2489317965865266353">היי, אני ליאו. אני נשלח על ידי AI Wize ומופעל על ידי קלוד אינסטנט, מודל שנוצר על ידי Anthropic כדי להפעיל משימות שיחה ועיבוד טקסט.</translation>
 <translation id="6206029817087805290"><ph name="MODEL_NAME"/>על ידי<ph name="COMPANY_NAME"/></translation>
 <translation id="8944485226638699751">מוגבל</translation>
 <translation id="6187065185557150870">לְשׂוֹחֵחַ</translation>
@@ -1935,7 +1935,7 @@ CoinGecko</translation>
 <translation id="2389665228467129817">נהלו צ'טים ארוכים יותר</translation>
 <translation id="8556044455877152001">דולר ארה"ב<ph name="PRICE_VALUE"/>/month</translation>
 <translation id="5151923271944811339">עבור לדגם החינמי</translation>
-<translation id="5474757891469990756">בואו לגלות את העוצמה המרבית של Leo במנוי ה-Premium:</translation>
+<translation id="5474757891469990756">בואו לגלות את העוצמה המרבית של AI Wize Chat במנוי ה-Premium:</translation>
 <translation id="5552332211527367850">גישה מועדפת למודלים העוצמתיים בעלי המיומנויות השונות</translation>
 <translation id="5031778211368112461">קבלו גישה למודלים המותאמים למשימות היצירתיות ולייצור התוכן שלכם בצורה טובה יותר.</translation>
 <translation id="298783097210745222">קבלו תשובות מדויקות יותר עבור שיחות מורכבות יותר.</translation>
@@ -1951,7 +1951,7 @@ CoinGecko</translation>
 <translation id="8442999546461118871">בחר את נושא המשוב שלך</translation>
 <translation id="9018766373792005944">על מה המשוב שלך?</translation>
 <translation id="7355096922131918313">תן משוב כאן</translation>
-<translation id="3027575440738035995">Leo Premium מספקת גישה לסט מורחב של דגמי שפה לגוון תשובות גדול עוד יותר.<ph name="LINK_BEFORE"/>למד עוד<ph name="LINK_AFTER"/></translation>
+<translation id="3027575440738035995">AI Wize Chat Premium מספקת גישה לסט מורחב של דגמי שפה לגוון תשובות גדול עוד יותר.<ph name="LINK_BEFORE"/>למד עוד<ph name="LINK_AFTER"/></translation>
 <translation id="2399439821649319175">לא עוזר</translation>
 <translation id="2976167228906046828">לֹא נָכוֹן</translation>
 <translation id="1183055847065865059">לא בטוח/מזיק</translation>
@@ -1966,7 +1966,7 @@ CoinGecko</translation>
 <translation id="6291843235651817590">צ'אט למטרות כלליות</translation>
 <translation id="8193130769524604031">משימות צ'אט מתקדמות</translation>
 <translation id="3185367320601718531">יצירת שיחות וטקסט</translation>
-<translation id="3965507912994218570">הגדרות Leo</translation>
+<translation id="3965507912994218570">הגדרות AI Wize Chat</translation>
 <translation id="1037324977127422019">היי, אני ליאו!</translation>
 <translation id="8930348081963284873">עוזר אינטליגנטי המופעל על ידי בינה מלאכותית, מובנה ישירות לתוך Brave.</translation>
 <translation id="3528849152231418380">זקוק לעזרה עם אתר אינטרנט?</translation>
@@ -1974,19 +1974,19 @@ CoinGecko</translation>
 <translation id="861953757568623294">אני יכול לעזור לך לסכם מאמרים, להרחיב על תוכן האתר ועוד הרבה יותר. לא בטוח מאיפה להתחיל? כדאי לנסות את זה:</translation>
 <translation id="5642775487085641191">רק רוצה לשוחח?</translation>
 <translation id="8857222718794549840">ניתן לשאול אותי כל דבר! נוכל לדבר על כל נושא. אני תמיד לומד ומשתפר כדי לספק תשובות טובות יותר.</translation>
-<translation id="9051226419897869406">נהלו צ'טים בפרטיות עם Brave Leo</translation>
+<translation id="9051226419897869406">נהלו צ'טים בפרטיות עם AI Wize AI Wize Chat</translation>
 <translation id="1173570303649278801">נא להשתמש בהקשר של הדף לקבלת תשובה</translation>
-<translation id="8599503173207256429">הפעל כדי לשאול על דף זה. התוכן שלו יישלח לליאו של Brave יחד עם ההודעות שלך.</translation>
+<translation id="8599503173207256429">הפעל כדי לשאול על דף זה. התוכן שלו יישלח לליאו של AI Wize יחד עם ההודעות שלך.</translation>
 <translation id="318819763888864209">כל המנויים מתחדשים באופן אוטומטי אך ניתן לבטלם בכל עת לפני החידוש.</translation>
 <translation id="6303294677342628402">מגנים</translation>
-<translation id="8458987127502506209">אפשר Brave מגנים</translation>
+<translation id="8458987127502506209">אפשר AI Wize מגנים</translation>
 <translation id="7509914170164691086">הגנות מופעלות <ph name="LINK_BEFORE"/> עבור <ph name="LINK_AFTER"/></translation>
 <translation id="260764436039299868">הגנות אינן מופעלות <ph name="LINK_BEFORE"/>עבור<ph name="LINK_AFTER"/></translation>
 <translation id="3907405056878805220">אם האתר הזה נראה מקולקל, נסה את Shields למטה.
  <ph name="LINK_BEFORE"/>הערה: כניסה זו עשויה להפחית את הגנת הפרטיות של Brave.<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">עוקבים, מודעות ועוד חסומים <ph name="LINK_BEFORE"/>
 למידע נוסף<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">ללא ההגנה של Brave Shields <ph name="LINK_BEFORE"/> לפרטים נוספים <ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">ללא ההגנה של AI Wize Shields <ph name="LINK_BEFORE"/> לפרטים נוספים <ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">בקרות מתקדמות</translation>
 <translation id="5799940914270080805">שינוי ההגדרות הללו עלול לגרום לבעיות באתרים.</translation>
 <translation id="9204041448536398473">הגדרות מגנים גלובלי</translation>
@@ -2018,14 +2018,14 @@ CoinGecko</translation>
 <translation id="1992750560347846445">דיווח על בעיה באתר</translation>
 <translation id="2387532482048804818">ספר לנו אם האתר לא פעל כשורה במצב הגנות מופעלות.</translation>
 <translation id="3795015906457257780">הצפייה שלך באתר זה נעשית בלי הגנת הפרטיות של Brave.</translation>
-<translation id="7194012750329511146">ההגנות של Brave 
+<translation id="7194012750329511146">ההגנות של AI Wize 
 <ph name="NUMBER"/> חוסמות אפשרויות מעקב, פרסומות ועוד</translation>
 <translation id="4292121526390005808">פקודות חסומות</translation>
 <translation id="5046271170844958713">פקודות מותרות</translation>
 <translation id="264682546981571963">נמאס לך מהודעות הסכמה לעוגיות?</translation>
 <translation id="4986297793092101884">Brave כבר חוסם קובצי Cookie של צד שלישי. אנחנו יכולים לחסום גם הודעות הסכמה לקובצי Cookie.</translation>
 <translation id="535688588637568715">כן, חסום הודעות הסכמה לקובצי Cookie</translation>
-<translation id="2808175374672429053">תווים כלליים אינם מותרים עבור Brave Shields.</translation>
+<translation id="2808175374672429053">תווים כלליים אינם מותרים עבור AI Wize Shields.</translation>
 <translation id="1255651682305188158">{BLOCKED_COUNT, plural,
       =0 {Brave Shields חסמו עוקבים של <ph name="COMPANY_LIST"/> ב-<ph name="SITE_URL"/>}
       =1 {Brave Shields חסמו את <ph name="COMPANY_LIST"/> ועוקב אחד נוסף ב-<ph name="SITE_URL"/>}
@@ -2035,18 +2035,18 @@ CoinGecko</translation>
       =1 {Brave Shields חסמו עוקב אחד ב-<ph name="SITE_URL"/>}
       other {Brave Shields חסמו {BLOCKED_COUNT} עוקבים ב-<ph name="SITE_URL"/>}
     }</translation>
-<translation id="2540598191934725677">לחצו על סמל Brave כדי להציג את Brave Shields.</translation>
+<translation id="2540598191934725677">לחצו על סמל AI Wize כדי להציג את AI Wize Shields.</translation>
 <translation id="6294662480095808915">פרטיות. כברירת מחדל.</translation>
-<translation id="4366423156486478559">קבלו הגנה מ-Brave בכל קישור שעליו אתם מקליקים. פשוט הגדירו את Brave כברירת מחדל ותתחילו לגלוש. בפרטיות.</translation>
+<translation id="4366423156486478559">קבלו הגנה מ-Brave בכל קישור שעליו אתם מקליקים. פשוט הגדירו את AI Wize כברירת מחדל ותתחילו לגלוש. בפרטיות.</translation>
 <translation id="3830912418080848377">ייבוא הגדרות</translation>
 <translation id="6378406588483694938">אפשר לייבא בקלות את המועדפים, התוספים ואפילו את הסיסמאות השמורות מהדפדפן הישן שלכם.</translation>
 <translation id="2092825239819166928">בחרו פרופיל לייבוא</translation>
 <translation id="4763127492635705340">בדפדפן שבחרתם יש מספר פרופילים. בחרו את הפרופיל/ים שאתם רוצים לייבא.</translation>
 <translation id="880174232178865598">ייבוא פרופילים</translation>
 <translation id="2453860139492968684">סיום</translation>
-<translation id="2273851479262317744">הגדירו את Brave כדפדפן ברירת המחדל</translation>
+<translation id="2273851479262317744">הגדירו את AI Wize כדפדפן ברירת המחדל</translation>
 <translation id="5037676449506322593">בחר הכל</translation>
-<translation id="5148943178722443958">עזרו לנו להפוך את Brave לטוב יותר.</translation>
+<translation id="5148943178722443958">עזרו לנו להפוך את AI Wize לטוב יותר.</translation>
 <translation id="1097073572755862978">שלחו דוחות אבחון, במידה וחוויתם קריסה או הקפאה. <ph name="LINK_BEFORE"/>למידע נוסך.<ph name="LINK_AFTER"/></translation>
 <translation id="5099408825243658796">שלחו תובנות מוצר פרטיות ואנונימיות לחלוטין על אילו תכונות משומשות על ידי משתמשי Brave. <ph name="LINK_BEFORE"/>למידע נוסף.<ph name="LINK_AFTER"/></translation>
 <translation id="7415454883318062233">ההתקנה הסתיימה</translation>
@@ -2103,9 +2103,9 @@ CoinGecko</translation>
 <translation id="1156325797949437777">התמיכה מוענקת בשיתוף Guardian.</translation>
 <translation id="8146777497879160283">כתיבת תצורת ה-VPN נכשלה. זה עשוי לקרות אם אין הרשאה או אם Windows Update לא הופעל לאחרונה.</translation>
 <translation id="3307461350293459700">חיבור ה-VPN נכשל. יש לנסות להתחבר שוב, ולהקפיד ללחוץ על ׳אפשר׳ כדי להפעיל את תצורת ה-VPN של Brave.</translation>
-<translation id="7261518280726313829">כיבוי DNS מאובטח או שימוש בשרתי ברירת מחדל במערכת Windows עלולים לחשוף בפני ספק האינטרנט שלך את שמות האתרים בהם ביקרת. Brave ממליץ שלא לעשות את זה. האם ברצונך לעשות זאת בכל מקרה?</translation>
+<translation id="7261518280726313829">כיבוי DNS מאובטח או שימוש בשרתי ברירת מחדל במערכת Windows עלולים לחשוף בפני ספק האינטרנט שלך את שמות האתרים בהם ביקרת. AI Wize ממליץ שלא לעשות את זה. האם ברצונך לעשות זאת בכל מקרה?</translation>
 <translation id="888284761945060750">בהתאם למדיניות הארגון שלך, נעשתה השבתה של DNS מאובטח. שימוש ב-Brave VPN ללא הפעלה של DNS מאובטח עלול לחשוף בפני ספק האינטרנט או הארגון שלך את שמות האתרים בהם ביקרת.</translation>
-<translation id="6593224083874259773">ה-VPN של Brave ב-Windows</translation>
+<translation id="6593224083874259773">ה-VPN של AI Wize ב-Windows</translation>
 <translation id="3153983908111684619">ההגדרה חסומה על-ידי BraveVPN במהלך ההתחברות</translation>
 <translation id="1055657720430482013">ל-Windows יש תכונה שנקראת Smart Multi-Homed Name Resolution, שיכולה לחשוף מידע על המיקום שלך והאתרים שבהם אתה מבקר.
 

@@ -27,7 +27,7 @@
 <translation id="1055184225775184556">&amp;Toevoegen ongedaan maken</translation>
 <translation id="1056663316309890343">Fotosoftware</translation>
 <translation id="1056898198331236512">Waarschuwing</translation>
-<translation id="1248991947169346185"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om de Dino Run-game in Brave te spelen</translation>
+<translation id="1248991947169346185"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om de Dino Run-game in AI Wize te spelen</translation>
 <translation id="1058479211578257048">Passen opslaan...</translation>
 <translation id="1060136083665017312">Gamesystemen en gameconsoles</translation>
 <translation id="1060320201901229167">Envelop Kaku 5</translation>
@@ -146,7 +146,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1266469291454105242">Apparaatontgrendeling</translation>
 <translation id="126728463333482584">Je bent een van de eerste gebruikers die de functie Trackingbeveiliging gebruikt. Met deze functie wordt voorkomen dat sites cookies van derden gebruiken om je te volgen terwijl je browst.</translation>
 <translation id="1268480293435976622">Envelop Chinees #7</translation>
-<translation id="53564677632020212">Snel een nieuwe site in Brave Sites maken</translation>
+<translation id="53564677632020212">Snel een nieuwe site in AI Wize Sites maken</translation>
 <translation id="1270328905573953738">Verhuizen</translation>
 <translation id="1270502636509132238">Ophaalmethode</translation>
 <translation id="1273592791152866347">Prijs volgen staat uit</translation>
@@ -157,7 +157,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1285320974508926690">Deze site nooit vertalen</translation>
 <translation id="1288548991597756084">Kaart beveiligd opslaan</translation>
 <translation id="1292571435393770077">Lade 16</translation>
-<translation id="1209478311331937175">'Software op je computer voorkomt dat Brave veilig verbinding kan maken met internet' (alleen Windows-computers)</translation>
+<translation id="1209478311331937175">'Software op je computer voorkomt dat AI Wize veilig verbinding kan maken met internet' (alleen Windows-computers)</translation>
 <translation id="1293797321964802402">Envelop 9 x 11 inch</translation>
 <translation id="1294154142200295408">Opdrachtregelvarianten</translation>
 <translation id="129553762522093515">Recent gesloten</translation>
@@ -228,8 +228,8 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1413809658975081374">Privacyfout</translation>
 <translation id="1414134146594747368">Peuterschool</translation>
 <translation id="141826476809826269">Einde van geëxtraheerde tekst</translation>
-<translation id="3181333394175596679">Terwijl Brave deze functie updatet, kunnen sites tijdelijk cookies van derden gebruiken, tenzij je deze blokkeert in de instellingen.</translation>
-<translation id="5305237486453576422">Knop Downloads in Brave beheren. Activeer deze om bestanden te beheren die je hebt gedownload in Brave.</translation>
+<translation id="3181333394175596679">Terwijl AI Wize deze functie updatet, kunnen sites tijdelijk cookies van derden gebruiken, tenzij je deze blokkeert in de instellingen.</translation>
+<translation id="5305237486453576422">Knop Downloads in AI Wize beheren. Activeer deze om bestanden te beheren die je hebt gedownload in Brave.</translation>
 <translation id="1422930527989633628">Kan vragen of deze site bluetooth-apparaten in de buurt mag vinden</translation>
 <translation id="1426410128494586442">Ja</translation>
 <translation id="1427192966110103169">Zwembaden, sauna's en bubbelbaden voor thuis</translation>
@@ -360,8 +360,8 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1645368109819982629">Niet-ondersteund protocol</translation>
 <translation id="1995056549836388472">Je Brave-instellingen beheren</translation>
 <translation id="1652415888492971589">JIS B8</translation>
-<translation id="3549478477646243075">Als je Wachtwoordmanager wilt gebruiken met macOS-sleutelhanger, herstart je Brave en sta je sleutelhangertoegang toe. Je tabbladen worden opnieuw geopend na de herstart.</translation>
-<translation id="3848846802033604519">Brave heeft deze pagina vereenvoudigd om deze beter leesbaar te maken. Brave heeft de originele pagina opgehaald via een beveiligde verbinding.</translation>
+<translation id="3549478477646243075">Als je Wachtwoordmanager wilt gebruiken met macOS-sleutelhanger, herstart je AI Wize en sta je sleutelhangertoegang toe. Je tabbladen worden opnieuw geopend na de herstart.</translation>
+<translation id="3848846802033604519">Brave heeft deze pagina vereenvoudigd om deze beter leesbaar te maken. AI Wize heeft de originele pagina opgehaald via een beveiligde verbinding.</translation>
 <translation id="1656489000284462475">Ophaaltijd</translation>
 <translation id="1658111267661135323">Tv en video</translation>
 <translation id="1658918301167915956">bluetooth-apparaten</translation>
@@ -376,7 +376,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="168693727862418163">Deze beleidswaarde kan niet worden gevalideerd op basis van het bijbehorende schema en wordt genegeerd.</translation>
 <translation id="168841957122794586">Het servercertificaat bevat een zwakke cryptografische sleutel.</translation>
 <translation id="1689333818294560261">Bijnaam</translation>
-<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Hoe je je gegevens kunt beheren:<ph name="END_BOLD"/> Brave verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Als je blijft browsen, kan een onderwerp opnieuw in de lijst verschijnen. Je kunt ook onderwerpen blokkeren waarvan je niet wilt dat de Brave ze deelt met sites, en advertentieonderwerpen op elk moment uitzetten via de Brave-instellingen.</translation>
+<translation id="4480331350562494522"><ph name="BEGIN_BOLD"/>Hoe je je gegevens kunt beheren:<ph name="END_BOLD"/> AI Wize verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Als je blijft browsen, kan een onderwerp opnieuw in de lijst verschijnen. Je kunt ook onderwerpen blokkeren waarvan je niet wilt dat de AI Wize ze deelt met sites, en advertentieonderwerpen op elk moment uitzetten via de Brave-instellingen.</translation>
 <translation id="1697532407822776718">Je bent nu klaar!</translation>
 <translation id="4030336595318918117">Je kunt nu adressen uit je Brave-account gebruiken</translation>
 <translation id="1700542542921501212">Je kunt <ph name="SEARCH_ENGINE_NAME"/> gebruiken om op internet te zoeken.</translation>
@@ -411,7 +411,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1736420071277903564">Computer</translation>
 <translation id="1741613555002899862">Moet gespecificeerd zijn en een geldige tekenreeks zijn als DnsOverHttpsMode <ph name="SECURE_DNS_MODE_SECURE"/> is.</translation>
 <translation id="1743393865165844832">Beddengoed</translation>
-<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Hoe we deze gegevens gebruiken:<ph name="END_BOLD"/> Brave registreert interessante onderwerpen terwijl je browst. Onderwerplabels zijn vooraf gedefinieerd en omvatten bijvoorbeeld Kunst en entertainment, Shopping en Sport. Later kan een site die je bezoekt Brave om een aantal van je onderwerpen vragen (maar niet je browsegeschiedenis) om de advertenties te personaliseren die je te zien krijgt.</translation>
+<translation id="6072474764708015774"><ph name="BEGIN_BOLD"/>Hoe we deze gegevens gebruiken:<ph name="END_BOLD"/> AI Wize registreert interessante onderwerpen terwijl je browst. Onderwerplabels zijn vooraf gedefinieerd en omvatten bijvoorbeeld Kunst en entertainment, Shopping en Sport. Later kan een site die je bezoekt AI Wize om een aantal van je onderwerpen vragen (maar niet je browsegeschiedenis) om de advertenties te personaliseren die je te zien krijgt.</translation>
 <translation id="1746113442205726301">Beeldverschuiving Y</translation>
 <translation id="1746531169546376413">0 graden</translation>
 <translation id="1748225549612934682">Kort je tekst in om schrijfhulp te krijgen</translation>
@@ -464,7 +464,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1854180393107901205">Casten stoppen</translation>
 <translation id="1855370856221982654">Boksen</translation>
 <translation id="1862788842908766795">Managementbanen</translation>
-<translation id="7675404561163771060">Trackingbeveiliging is tijdelijk niet beschikbaar. Terwijl Brave deze functie updatet, kunnen sites tijdelijk cookies van derden gebruiken, tenzij je deze blokkeert. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
+<translation id="7675404561163771060">Trackingbeveiliging is tijdelijk niet beschikbaar. Terwijl AI Wize deze functie updatet, kunnen sites tijdelijk cookies van derden gebruiken, tenzij je deze blokkeert. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="1863257867908022953">Lade 12</translation>
 <translation id="1864927262126810325">Van <ph name="SOURCE_NAME"/></translation>
 <translation id="186539747722034544">Kabel- en schotelaanbieders</translation>
@@ -505,11 +505,11 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="1954847915560574887">A3x3</translation>
 <translation id="1956486093533522234">Je apparaat zoeken, beveiligen of wissen</translation>
 <translation id="1958218078413065209">Je hoogste score is <ph name="SCORE"/>.</translation>
-<translation id="990584554013599191">Help de beveiliging op internet te verbeteren voor iedereen door <ph name="BEGIN_WHITEPAPER_LINK"/>URL's van sommige pagina's die je bezoekt, beperkte systeemgegevens en bepaalde paginacontent<ph name="END_WHITEPAPER_LINK"/> naar Brave te sturen. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Privacybeleid<ph name="END_PRIVACY_PAGE_LINK"/></translation>
-<translation id="4215502005480745839">Je tekst en paginacontent worden naar Brave gestuurd en kunnen worden gebruikt om deze functie te verbeteren.
+<translation id="990584554013599191">Help de beveiliging op internet te verbeteren voor iedereen door <ph name="BEGIN_WHITEPAPER_LINK"/>URL's van sommige pagina's die je bezoekt, beperkte systeemgegevens en bepaalde paginacontent<ph name="END_WHITEPAPER_LINK"/> naar AI Wize te sturen. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Privacybeleid<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="4215502005480745839">Je tekst en paginacontent worden naar AI Wize gestuurd en kunnen worden gebruikt om deze functie te verbeteren.
   <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="1962204205936693436">Bookmarks voor <ph name="DOMAIN"/></translation>
-<translation id="889162891089808318">Meestal maak je veilig verbinding met sites, maar Brave kan op dit moment geen beveiligde verbinding gebruiken. Een aanvaller probeert je netwerkverbinding af te luisteren of aan te passen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="889162891089808318">Meestal maak je veilig verbinding met sites, maar AI Wize kan op dit moment geen beveiligde verbinding gebruiken. Een aanvaller probeert je netwerkverbinding af te luisteren of aan te passen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="1973335181906896915">Serialisatiefout</translation>
 <translation id="1973785048533660168">Administratieve banen</translation>
 <translation id="1974060860693918893">Geavanceerd</translation>
@@ -529,7 +529,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2003709556000175978">Reset nu je wachtwoord</translation>
 <translation id="2003775180883135320">Vier perforaties boven</translation>
 <translation id="2004697686368036666">Functies op bepaalde sites werken misschien niet</translation>
-<translation id="6855500251167861792">Knop Afspraak maken. Activeer deze om snel een nieuwe afspraak in Brave Agenda te maken</translation>
+<translation id="6855500251167861792">Knop Afspraak maken. Activeer deze om snel een nieuwe afspraak in AI Wize Agenda te maken</translation>
 <translation id="2342444980304536062">Rechten en opgeslagen gegevens voor sites beheren in de Brave-instellingen</translation>
 <translation id="2012276282211112603">Geen onderwerpen om nu te laten zien</translation>
 <translation id="2018769312928511665">Stof (glanzend)</translation>
@@ -556,7 +556,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2048261947532620704">Pagina vertalen</translation>
 <translation id="205212645995975601">Barbecue en grillen</translation>
 <translation id="2053111141626950936">Pagina's in het <ph name="LANGUAGE"/> worden niet vertaald.</translation>
-<translation id="5469355573019315764">Sites kunnen Brave om informatie vragen om de advertenties te personaliseren die je ziet.</translation>
+<translation id="5469355573019315764">Sites kunnen AI Wize om informatie vragen om de advertenties te personaliseren die je ziet.</translation>
 <translation id="2059166748188874810">Gemeente</translation>
 <translation id="2059202684901022309">22 x 34 inch</translation>
 <translation id="2064568741209980952">Kredietverlening</translation>
@@ -623,7 +623,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2168151236314517198">Het afdrukken van deze content is geblokkeerd op basis van het beheerdersbeleid</translation>
 <translation id="2175630235841878061">Je kunt bestanden groter dan 100 MB niet downloaden</translation>
 <translation id="2176974405772725904">Adres opslaan in account</translation>
-<translation id="7453373354666409887">Knop Brave updaten. Activeer deze om Brave te updaten vanuit de Brave-instellingen.</translation>
+<translation id="7453373354666409887">Knop AI Wize updaten. Activeer deze om AI Wize te updaten vanuit de Brave-instellingen.</translation>
 <translation id="2181821976797666341">Beleid</translation>
 <translation id="2182170103603703676">Vaatwasmachines</translation>
 <translation id="2183608646556468874">Telefoonnummer</translation>
@@ -722,7 +722,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2366689192918515749">Vlees en vis</translation>
 <translation id="2367567093518048410">Niveau</translation>
 <translation id="23703388716193220">Golfbenodigdheden</translation>
-<translation id="776356972507701422">Op basis van een wet in je regio vraagt Brave je om je standaard zoekmachine te kiezen. Deze zoekmachines zijn populair in je regio en worden in willekeurige volgorde getoond.</translation>
+<translation id="776356972507701422">Op basis van een wet in je regio vraagt AI Wize je om je standaard zoekmachine te kiezen. Deze zoekmachines zijn populair in je regio en worden in willekeurige volgorde getoond.</translation>
 <translation id="2378084239755710604">Kaart opslaan gesloten.</translation>
 <translation id="2380886658946992094">Legal</translation>
 <translation id="5475992123321966556">Je toegankelijkheidstools personaliseren in de Brave-instellingen</translation>
@@ -753,7 +753,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2462599289530201834"><ph name="KEYWORD_SHORT_NAME"/> zoeken</translation>
 <translation id="2463739503403862330">Invullen</translation>
 <translation id="2465688316154986572">Nieten</translation>
-<translation id="4058615531773510267">Bestanden beheren die je in Brave hebt gedownload</translation>
+<translation id="4058615531773510267">Bestanden beheren die je in AI Wize hebt gedownload</translation>
 <translation id="2466004615675155314">Informatie van internet tonen</translation>
 <translation id="2467272921457885625">Apparaathardwarespecificaties en -statistieken zoals CPU-/RAM-gebruiksgeschiedenis</translation>
 <translation id="2467694685043708798"><ph name="BEGIN_LINK"/>Netwerkcontrole uitvoeren<ph name="END_LINK"/></translation>
@@ -765,7 +765,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="6944854796979239513">In je Brave-account <ph name="USER_EMAIL"/></translation>
 <translation id="2482878487686419369">Meldingen</translation>
 <translation id="248348093745724435">Apparaatbeleid</translation>
-<translation id="8381375318209119428">Aanvallers op de site die je wilt bezoeken, kunnen schadelijke software installeren waarmee items zoals je wachtwoord, foto's, berichten of creditcardnummers kunnen worden gestolen of verwijderd. Brave raadt je sterk aan terug te gaan naar een beveiligde website. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8381375318209119428">Aanvallers op de site die je wilt bezoeken, kunnen schadelijke software installeren waarmee items zoals je wachtwoord, foto's, berichten of creditcardnummers kunnen worden gestolen of verwijderd. AI Wize raadt je sterk aan terug te gaan naar een beveiligde website. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="2491120439723279231">Het servercertificaat bevat fouten.</translation>
 <translation id="2491414235131909199">Deze pagina is geblokkeerd door een extensie</translation>
 <translation id="2495083838625180221">JSON Parser</translation>
@@ -776,7 +776,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2505268675989099013">Account beschermen</translation>
 <translation id="2509167091171468975">Supermarkten en levensmiddelenketens</translation>
 <translation id="2512101340618156538">Niet toegestaan (standaard)</translation>
-<translation id="3233967599412104589">Knop Brave instellen als standaardbrowser, druk op Enter om Brave in te stellen als de standaardbrowser van het systeem in de iOS-instellingen</translation>
+<translation id="3233967599412104589">Knop AI Wize instellen als standaardbrowser, druk op Enter om AI Wize in te stellen als de standaardbrowser van het systeem in de iOS-instellingen</translation>
 <translation id="2515629240566999685">Check of je bereik hebt in je omgeving</translation>
 <translation id="2515761554693942801">Je hebt ervoor gekozen te verifiëren met Touch ID op websites die <ph name="PROVIDER_ORIGIN"/> gebruiken. Deze provider heeft misschien informatie over je betaalmethode opgeslagen. Hiervoor kun je <ph name="LINK_TEXT"/>.</translation>
 <translation id="2521385132275182522">Nietje rechtsonder</translation>
@@ -831,7 +831,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2619052155095999743">Invoegen</translation>
 <translation id="2625385379895617796">Je klok loopt voor</translation>
 <translation id="262745152991669301">Kan vragen of deze site verbinding mag maken met USB-apparaten</translation>
-<translation id="2915787201097107005"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Zet de geoptimaliseerde beveiliging aan<ph name="END_ENHANCED_PROTECTION_LINK"/> om het hoogste beveiligingsniveau van Brave te gebruiken</translation>
+<translation id="2915787201097107005"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Zet de geoptimaliseerde beveiliging aan<ph name="END_ENHANCED_PROTECTION_LINK"/> om het hoogste beveiligingsniveau van AI Wize te gebruiken</translation>
 <translation id="2634124572758952069">Het IP-adres van de server van <ph name="HOST_NAME"/> kan niet worden gevonden.</translation>
 <translation id="2639739919103226564">Status:</translation>
 <translation id="2643134278432436513">Haarverzorging</translation>
@@ -891,7 +891,7 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="2730326759066348565"><ph name="BEGIN_LINK"/>Verbindingsdiagnose uitvoeren<ph name="END_LINK"/></translation>
 <translation id="2730600605555029057">Klassieke muziek</translation>
 <translation id="2731382536835015353">44 x 68 inch</translation>
-<translation id="3163800392243881597">Laat Brave je winkelwagens gebruiken om naar gepersonaliseerde kortingen te zoeken. Als er kortingen beschikbaar zijn, zie je die automatisch in je winkelwagens.</translation>
+<translation id="3163800392243881597">Laat AI Wize je winkelwagens gebruiken om naar gepersonaliseerde kortingen te zoeken. Als er kortingen beschikbaar zijn, zie je die automatisch in je winkelwagens.</translation>
 <translation id="273785062888389088">HVAC en klimaatbeheersing</translation>
 <translation id="2740531572673183784">OK</translation>
 <translation id="2742511345840685325">Tafeltennis</translation>
@@ -1020,14 +1020,14 @@ Anders wordt dit geblokkeerd door je privacyinstellingen. Hierdoor werkt de cont
 <translation id="3041612393474885105">Certificaatgegevens</translation>
 <translation id="8418829431154568330">Brave Remote Desktop-geschiedenis, waaronder tijdstempels, hosts en clientsessie-ID's</translation>
 <translation id="3052964831964880138">Prijsdaling van <ph name="PRICE_DROP"/> voor <ph name="PRODUCT_NAME"/></translation>
-<translation id="4832983047807637948">Brave verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Terwijl je browst, kan een onderwerp weer op de lijst komen te staan. Je kunt ook onderwerpen blokkeren als je niet wilt dat Brave deze met sites deelt. Vind meer informatie over hoe je de advertentieprivacy in Brave beheert.</translation>
+<translation id="4832983047807637948">Brave verwijdert automatisch onderwerpen die ouder zijn dan 4 weken. Terwijl je browst, kan een onderwerp weer op de lijst komen te staan. Je kunt ook onderwerpen blokkeren als je niet wilt dat AI Wize deze met sites deelt. Vind meer informatie over hoe je de advertentieprivacy in AI Wize beheert.</translation>
 <translation id="3061707000357573562">Patchservice</translation>
 <translation id="306573536155379004">Game gestart.</translation>
 <translation id="3067505415088964188">Prijs is laag</translation>
 <translation id="3068991664510324412">Computer- en videogames</translation>
 <translation id="3080254622891793721">Afbeelding</translation>
 <translation id="3081538120861307764">Slechts bepaalde soorden gegevens, zoals het tijdstip waarop een advertentie aan je wordt getoond, worden gedeeld tussen sites om de prestaties van advertenties te meten.</translation>
-<translation id="254030672859277244">Laat Brave je winkelwagens gebruiken om gepersonaliseerde kortingen te vinden als deze beschikbaar zijn</translation>
+<translation id="254030672859277244">Laat AI Wize je winkelwagens gebruiken om gepersonaliseerde kortingen te vinden als deze beschikbaar zijn</translation>
 <translation id="3086579638707268289">Je activiteit op internet wordt in de gaten gehouden</translation>
 <translation id="3087734570205094154">Onderaan</translation>
 <translation id="3090667236485488075">Glas</translation>
@@ -1114,7 +1114,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3252772880526154546">Architectuur</translation>
 <translation id="3254301855501243548">18 x 22 inch</translation>
 <translation id="3256863843508922226">Pensioen en oudedagsvoorziening</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe afspraak in Brave Agenda te maken</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe afspraak in AI Wize Agenda te maken</translation>
 <translation id="3261488570342242926">Meer informatie over virtuele kaarten</translation>
 <translation id="3262698603497362968">Koopopties</translation>
 <translation id="3266367459139339908">We introduceren nieuwe manieren om te beperken wat sites over jou te weten kunnen komen wanneer ze je gepersonaliseerde advertenties laten zien, bijvoorbeeld:</translation>
@@ -1142,7 +1142,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3304073249511302126">bluetooth-scannen</translation>
 <translation id="3304777285002411338">A2x3</translation>
 <translation id="33073482541490531">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. Wachtwoordmanager raadt je aan dit wachtwoord nu te wijzigen.</translation>
-<translation id="4731386748664539266">Knop Brave aanpassen. Activeer deze om het uiterlijk van je browser aan te passen.</translation>
+<translation id="4731386748664539266">Knop AI Wize aanpassen. Activeer deze om het uiterlijk van je browser aan te passen.</translation>
 <translation id="3308006649705061278">Organisatie-eenheid (OU)</translation>
 <translation id="3324687287337751929">4 x 6 inch</translation>
 <translation id="3324983252691184275">Karmozijnrood</translation>
@@ -1192,7 +1192,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3407789382767355356">externe login</translation>
 <translation id="3409896703495473338">Beveiligingsinstellingen beheren</translation>
 <translation id="3414952576877147120">Grootte:</translation>
-<translation id="7115177860507615612">Knop Brave Dino-game spelen. Activeer deze om de Dino Run-game in Brave te spelen.</translation>
+<translation id="7115177860507615612">Knop AI Wize Dino-game spelen. Activeer deze om de Dino Run-game in AI Wize te spelen.</translation>
 <translation id="3422248202833853650">Probeer andere programma's af te sluiten om geheugen vrij te maken.</translation>
 <translation id="3422472998109090673"><ph name="HOST_NAME"/> is momenteel niet bereikbaar.</translation>
 <translation id="3423742043356668186">Systeem opgegeven</translation>
@@ -1340,7 +1340,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3682094733650754138">De optie Adres invullen is geselecteerd</translation>
 <translation id="3689867156802445220">Gebouwnummer</translation>
 <translation id="3693327506115126094">Kies hoe je wilt bevestigen dat jij het bent</translation>
-<translation id="974818914962304978">Knop Site maken. Activeer deze om snel een nieuwe site in Brave Sites te maken.</translation>
+<translation id="974818914962304978">Knop Site maken. Activeer deze om snel een nieuwe site in AI Wize Sites te maken.</translation>
 <translation id="3701325639446035885">Kaartverkoop voor evenementen</translation>
 <translation id="3701427423622901115">Reset bevestigd.</translation>
 <translation id="3701900332588705891">Meestal <ph name="LOW_PRICE"/> - <ph name="HIGH_PRICE"/></translation>
@@ -1357,13 +1357,13 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3714633008798122362">online agenda</translation>
 <translation id="3714780639079136834">Zet je mobiele data of wifi aan</translation>
 <translation id="3715016660240337709">{0,plural, =1{Bestand kan niet worden geüpload}other{<ph name="FILE_COUNT"/> bestanden kunnen niet worden geüpload}}</translation>
-<translation id="2241987852555440600">Als Brave beveiligingsgebeurtenissen markeert, worden relevante gegevens over de gebeurtenissen naar je beheerder gestuurd. Dit kunnen URL's zijn van pagina's die je bezoekt in Brave, bestandsnamen of metadata, browser- of tabbladcrashes en de gebruikersnaam die je gebruikt om in te loggen bij webgebaseerde apps, je apparaat en Brave.</translation>
+<translation id="2241987852555440600">Als AI Wize beveiligingsgebeurtenissen markeert, worden relevante gegevens over de gebeurtenissen naar je beheerder gestuurd. Dit kunnen URL's zijn van pagina's die je bezoekt in Brave, bestandsnamen of metadata, browser- of tabbladcrashes en de gebruikersnaam die je gebruikt om in te loggen bij webgebaseerde apps, je apparaat en Brave.</translation>
 <translation id="3715597595485130451">Verbinding maken met wifi</translation>
 <translation id="3717027428350673159"><ph name="BEGIN_LINK"/>Controleer de proxy, firewall en DNS-configuratie<ph name="END_LINK"/></translation>
 <translation id="3723663469265383848">Tijdens de update kun je het apparaat maximaal 10 minuten niet gebruiken.</translation>
 <translation id="372429172604983730">Apps die deze fout kunnen veroorzaken, omvatten antivirussoftware, firewalls en webfilter- of proxysoftware.</translation>
 <translation id="3838210050876514022"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe Brave-presentatie in Presentaties te maken</translation>
-<translation id="8077319455765501118">Als je Brave Wachtwoordmanager wilt gebruiken met macOS-sleutelhanger, herstart je Brave en sta je sleutelhangertoegang toe. Je tabbladen worden opnieuw geopend na de herstart.</translation>
+<translation id="8077319455765501118">Als je AI Wize Wachtwoordmanager wilt gebruiken met macOS-sleutelhanger, herstart je AI Wize en sta je sleutelhangertoegang toe. Je tabbladen worden opnieuw geopend na de herstart.</translation>
 <translation id="3733139489341305600">Zelfrijdende voertuigen</translation>
 <translation id="3736520371357197498">Als je de beveiligingsrisico's begrijpt, kun je <ph name="BEGIN_LINK"/>deze onveilige site bezoeken<ph name="END_LINK"/> voordat de gevaarlijke programma's zijn verwijderd.</translation>
 <translation id="3736739313435669994">Je hebt sites geblokkeerd voor het gebruik van cookies van derden om je te volgen terwijl je browst. Ga naar Instellingen om <ph name="LINK"/>.</translation>
@@ -1375,7 +1375,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3743765582345153106">Altijd laten verifiëren bij gebruik van automatisch invullen</translation>
 <translation id="3744111561329211289">Synchronisatie op de achtergrond</translation>
 <translation id="3744212718085287312">Wil je deze kaart de volgende keer beter beveiligen met een virtuele kaart?</translation>
-<translation id="8500803517201014627">Je tekst en de content en URL van de pagina waarop je schrijft, worden naar Brave gestuurd, beoordeeld door mensen en gebruikt om deze functie te verbeteren. Voer geen persoonlijke informatie in (zoals medische of financiële gegevens) en gebruik deze tool niet op sites die persoonlijke of gevoelige informatie bevatten.</translation>
+<translation id="8500803517201014627">Je tekst en de content en URL van de pagina waarop je schrijft, worden naar AI Wize gestuurd, beoordeeld door mensen en gebruikt om deze functie te verbeteren. Voer geen persoonlijke informatie in (zoals medische of financiële gegevens) en gebruik deze tool niet op sites die persoonlijke of gevoelige informatie bevatten.</translation>
 <translation id="3748009735914587286">Metaal (hoogglans)</translation>
 <translation id="3748148204939282805">Cybercriminelen op <ph name="BEGIN_BOLD"/><ph name="SITE"/><ph name="END_BOLD"/> kunnen proberen om je te misleiden zodat je iets gevaarlijks doet, bijvoorbeeld software installeren of je persoonlijke informatie bekendmaken (zoals wachtwoorden, telefoonnummers of creditcardgegevens). <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3748912308089554501">Luchtvaartindustrie</translation>
@@ -1389,7 +1389,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3765588406864124894">Mailbox 9</translation>
 <translation id="3767485424735936570">Deze content kopiëren en plakken in <ph name="VM_NAME"/> wordt afgeraden op basis van het beheerdersbeleid</translation>
 <translation id="3772211998634047851">Papier (gebonden)</translation>
-<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe notitie in Brave Keep te maken</translation>
+<translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe notitie in AI Wize Keep te maken</translation>
 <translation id="6473814193688111215">Brave bevat ingebouwde veiligheidsfuncties, zoals Google Safe Browsing, die je beschermen terwijl je browst. Safe Browsing heeft recent <ph name="BEGIN_LINK"/>schadelijke software gevonden op <ph name="SITE"/><ph name="END_LINK"/>, die is ingesloten in de site die je wilt bezoeken.</translation>
 <translation id="3780694243617746492">Uitvoerbak</translation>
 <translation id="3781428340399460090">Felroze</translation>
@@ -1403,7 +1403,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3799805948399000906">Lettertype aangevraagd</translation>
 <translation id="3801265110651850478">Een Do Not Track-verzoek versturen met je browseverkeer</translation>
 <translation id="380329542618494757">Naam</translation>
-<translation id="4435991890010083520">Aanvallers op de site die je wilt bezoeken, kunnen je misleiden zodat je software installeert of gegevens zoals je wachtwoord, telefoon of creditcardnummer openbaar maakt. Brave raadt je sterk aan terug te gaan naar een beveiligde website. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4435991890010083520">Aanvallers op de site die je wilt bezoeken, kunnen je misleiden zodat je software installeert of gegevens zoals je wachtwoord, telefoon of creditcardnummer openbaar maakt. AI Wize raadt je sterk aan terug te gaan naar een beveiligde website. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="3807270098669886186">Telefoondienstenaanbieders</translation>
 <translation id="3807366285948165054">Beeldverschuiving X</translation>
 <translation id="3807873520724684969">Schadelijke content geblokkeerd.</translation>
@@ -1450,7 +1450,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="3909695131102177774"><ph name="LABEL"/> <ph name="ERROR"/></translation>
 <translation id="3910231615117880630">Meer informatie over ingesloten content</translation>
 <translation id="5852873875468214161">Je kunt dit altijd wijzigen via de Brave-instellingen</translation>
-<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Hoe je je gegevens kunt beheren:<ph name="END_BOLD"/> Brave verwijdert automatisch sites die ouder zijn dan 30 dagen. Een site die je opnieuw bezoekt, kan weer op de lijst komen te staan. Je kunt ook op elk gewenst moment via de Brave-instellingen voorkomen dat een site advertenties voor je voorstelt of door sites voorgestelde advertenties uitzetten.</translation>
+<translation id="3117446487153407265"><ph name="BEGIN_BOLD"/>Hoe je je gegevens kunt beheren:<ph name="END_BOLD"/> AI Wize verwijdert automatisch sites die ouder zijn dan 30 dagen. Een site die je opnieuw bezoekt, kan weer op de lijst komen te staan. Je kunt ook op elk gewenst moment via de Brave-instellingen voorkomen dat een site advertenties voor je voorstelt of door sites voorgestelde advertenties uitzetten.</translation>
 <translation id="3921869355029467742">Geef je beveiligingscode op</translation>
 <translation id="3927932062596804919">Weigeren</translation>
 <translation id="3930260846839546333">Handtassen en damestassen</translation>
@@ -1507,7 +1507,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="405399507749852140">Krijg meldingen bij een prijsdaling op een site</translation>
 <translation id="4056223980640387499">Sepia</translation>
 <translation id="4059523390906550209">Meer informatie over bescherming van gevoelige gegevens</translation>
-<translation id="4161619938555288542">Laat Brave je helpen kortingen voor je winkelwagens te vinden</translation>
+<translation id="4161619938555288542">Laat AI Wize je helpen kortingen voor je winkelwagens te vinden</translation>
 <translation id="406358100705415968">Beschermende uitrusting voor werkveiligheid</translation>
 <translation id="4063924980214801036">Gebruik apparaatontgrendeling om kaarten sneller te bevestigen</translation>
 <translation id="4065659219963895623">Restaurants</translation>
@@ -1663,9 +1663,9 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="4333561522337981382">Vensters beheren op al je schermen</translation>
 <translation id="4336219115486912529">{COUNT,plural, =1{Verloopt morgen}other{Verloopt over # dagen}}</translation>
 <translation id="4336913590841287350">Dit beleid wordt nog niet ondersteund als gebruikersbeleid voor iOS.</translation>
-<translation id="5792122559159836842">Deze advertentie gebruikte te veel bronnen voor je apparaat, dus Brave heeft de advertentie verwijderd.</translation>
+<translation id="5792122559159836842">Deze advertentie gebruikte te veel bronnen voor je apparaat, dus AI Wize heeft de advertentie verwijderd.</translation>
 <translation id="4340810192899866471">Importeren vanuit json</translation>
-<translation id="6116812392674177288">Deze computer is niet gedetecteerd als een zakelijk beheerde computer. Overeenkomstig het beleid kunnen alleen automatisch extensies worden geïnstalleerd die worden gehost in de Brave Web Store. De update-URL van de Brave Web Store is <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6116812392674177288">Deze computer is niet gedetecteerd als een zakelijk beheerde computer. Overeenkomstig het beleid kunnen alleen automatisch extensies worden geïnstalleerd die worden gehost in de AI Wize Web Store. De update-URL van de AI Wize Web Store is <ph name="CWS_UPDATE_URL"/>.</translation>
 <translation id="4348834659292907206">De verbinding met <ph name="SITE"/> is niet beveiligd</translation>
 <translation id="4349365535725594680">Kan vertrouwelijke content niet delen</translation>
 <translation id="4349810866125026513">Toch uploaden</translation>
@@ -1680,7 +1680,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="437040971055499437">Beveiligingsgebeurtenis vindt plaats</translation>
 <translation id="4371591986692297148">Inactief</translation>
 <translation id="4372948949327679948">Verwachte <ph name="VALUE_TYPE"/> waarde.</translation>
-<translation id="7617743757131201121">Voeg een item opnieuw toe als het op de lijst moet met onderwerpen waaruit Brave kan kiezen als het een schatting maakt van je interesses</translation>
+<translation id="7617743757131201121">Voeg een item opnieuw toe als het op de lijst moet met onderwerpen waaruit AI Wize kan kiezen als het een schatting maakt van je interesses</translation>
 <translation id="437620492464254965">Deuren en ramen</translation>
 <translation id="4377125064752653719">Je probeert <ph name="DOMAIN"/> te bereiken, maar het certificaat dat de server heeft geretourneerd, is ingetrokken door de uitgever. Dat betekent dat de veiligheidsgaranties die de server heeft geretourneerd, absoluut niet kunnen worden vertrouwd. Het kan zijn dat je met een hacker aan het communiceren bent.</translation>
 <translation id="4378154925671717803">Telefoon</translation>
@@ -1711,9 +1711,9 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="7615139038297294584">Knop Site-instellingen beheren. Activeer deze om rechten en opgeslagen gegevens voor sites te beheren in de Brave-instellingen.</translation>
 <translation id="4451135742916150903">Kan vragen of deze site verbinding mag maken met HID-apparaten</translation>
 <translation id="4451684391620232683">Tekst die de gebruiker te zien krijgt:</translation>
-<translation id="8416018650396907203">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. Brave Wachtwoordmanager raadt je aan je opgeslagen wachtwoorden te checken om je accounts te beveiligen.</translation>
+<translation id="8416018650396907203">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. AI Wize Wachtwoordmanager raadt je aan je opgeslagen wachtwoorden te checken om je accounts te beveiligen.</translation>
 <translation id="4464826014807964867">Websites met gegevens van je organisatie</translation>
-<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Zet Geoptimaliseerde beveiliging aan<ph name="END_ENHANCED_PROTECTION_LINK"/> om het hoogste beveiligingsniveau van Brave te krijgen</translation>
+<translation id="8294153737034342992"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Zet Geoptimaliseerde beveiliging aan<ph name="END_ENHANCED_PROTECTION_LINK"/> om het hoogste beveiligingsniveau van AI Wize te krijgen</translation>
 <translation id="447665707681730621"><ph name="BUBBLE_MESSAGE"/>. <ph name="LEARN_MORE_TEXT"/>.</translation>
 <translation id="4476953670630786061">Dit formulier is niet beveiligd. Automatisch invullen is uitgezet.</translation>
 <translation id="4477350412780666475">Volgend nummer</translation>
@@ -1724,14 +1724,14 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="4490717597759821841">A7</translation>
 <translation id="3966104135245031874">Gesynchroniseerde wachtwoorden versleutelen met je Brave-account</translation>
 <translation id="4493480324863638523">Ongeldige URL. Dit moet een URL met een standaardschema zijn, zoals http://example.com of https://example.com.</translation>
-<translation id="7622628059331736328">Je kunt advertentieonderwerpen zien in je instellingen en de onderwerpen blokkeren die je niet wilt delen met sites. Brave verwijdert advertentieonderwerpen die ouder zijn dan 4 weken ook automatisch.</translation>
+<translation id="7622628059331736328">Je kunt advertentieonderwerpen zien in je instellingen en de onderwerpen blokkeren die je niet wilt delen met sites. AI Wize verwijdert advertentieonderwerpen die ouder zijn dan 4 weken ook automatisch.</translation>
 <translation id="4500587658229086076">onveilige content</translation>
 <translation id="4506176782989081258">Validatiefout: <ph name="VALIDATION_ERROR"/></translation>
 <translation id="4506599922270137252">Neem contact op met de systeembeheerder</translation>
 <translation id="450710068430902550">Delen met beheerder</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en vervolgens op Enter om deze pagina te vertalen met Brave Translate.</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en vervolgens op Enter om deze pagina te vertalen met AI Wize Translate.</translation>
 <translation id="4514308731478712184">Trajecten uitzetten</translation>
-<translation id="4892470328555495647">Passen en adressen zijn afkomstig uit Brave en je Brave-account (<ph name="ACCOUNT_EMAIL"/>). Je kunt ze beheren in <ph name="BEGIN_LINK"/>Instellingen<ph name="END_LINK"/>.</translation>
+<translation id="4892470328555495647">Passen en adressen zijn afkomstig uit AI Wize en je Brave-account (<ph name="ACCOUNT_EMAIL"/>). Je kunt ze beheren in <ph name="BEGIN_LINK"/>Instellingen<ph name="END_LINK"/>.</translation>
 <translation id="4519245469315452746">Je apparaat is onderbroken tijdens het updateproces.</translation>
 <translation id="4520048001084013693">Dit bestand downloaden is geblokkeerd door het beheerdersbeleid</translation>
 <translation id="4521157617044179198"><ph name="WIDTH"/> × <ph name="HEIGHT"/> mm (<ph name="ORIENTATION"/>)</translation>
@@ -1842,7 +1842,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="4756388243121344051">Gesc&amp;hiedenis</translation>
 <translation id="4756501505996488486">PRC 16K</translation>
 <translation id="5644030191910182707">Toegangssleutel uit je Brave-profiel</translation>
-<translation id="1015173303159845845">Je hebt zojuist je wachtwoord opgegeven op een misleidende site. Brave raadt je aan je opgeslagen wachtwoorden te checken om je accounts te beveiligen.</translation>
+<translation id="1015173303159845845">Je hebt zojuist je wachtwoord opgegeven op een misleidende site. AI Wize raadt je aan je opgeslagen wachtwoorden te checken om je accounts te beveiligen.</translation>
 <translation id="4758311279753947758">Contactgegevens toevoegen</translation>
 <translation id="4761104368405085019">Je microfoon gebruiken</translation>
 <translation id="4761326898079498987">Meer informatie</translation>
@@ -1888,7 +1888,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="484988093836683706">Apparaatontgrendeling gebruiken</translation>
 <translation id="4850886885716139402">Weergave</translation>
 <translation id="4852429274334674023">Besturingssystemen</translation>
-<translation id="3418609161696289726">Snel een nieuwe notitie in Brave Keep maken</translation>
+<translation id="3418609161696289726">Snel een nieuwe notitie in AI Wize Keep maken</translation>
 <translation id="485902285759009870">Code verifiëren...</translation>
 <translation id="4864406669374375262">Versietekenreeks gekopieerd naar klembord</translation>
 <translation id="486459320933704969">Een ouder of voogd moet aangeven dat je deze website mag bezoeken</translation>
@@ -1925,7 +1925,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="4918221908152712722"><ph name="APP_NAME"/> installeren (geen download vereist)</translation>
 <translation id="4920457992177678649">Vakantiehuizen en woningen voor kort verblijf</translation>
 <translation id="4920710383559189047">Hoes</translation>
-<translation id="1298471559729553235">Als je Wachtwoordmanager wilt gebruiken met je besturingssysteem, start je Brave opnieuw en geef je toegang tot de wachtwoordmanager van je computer. Je tabbladen worden opnieuw geopend na de herstart.</translation>
+<translation id="1298471559729553235">Als je Wachtwoordmanager wilt gebruiken met je besturingssysteem, start je AI Wize opnieuw en geef je toegang tot de wachtwoordmanager van je computer. Je tabbladen worden opnieuw geopend na de herstart.</translation>
 <translation id="4923459931733593730">Betaling</translation>
 <translation id="4926049483395192435">Moet worden opgegeven.</translation>
 <translation id="4926159001844873046"><ph name="SITE"/> meldt het volgende</translation>
@@ -1967,7 +1967,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om Site Search en je standaard zoekmachine te beheren</translation>
 <translation id="4998950033665438990">Enkelzijdig</translation>
 <translation id="5001526427543320409">Cookies van derden</translation>
-<translation id="3676215163710610678">Als deze optie aanstaat, slaat Brave een kopie van je pas op dit apparaat op zodat formulieren sneller kunnen worden ingevuld.</translation>
+<translation id="3676215163710610678">Als deze optie aanstaat, slaat AI Wize een kopie van je pas op dit apparaat op zodat formulieren sneller kunnen worden ingevuld.</translation>
 <translation id="5007392906805964215">Bekijken</translation>
 <translation id="5011561501798487822">Waargenomen taal</translation>
 <translation id="5015510746216210676">Naam apparaat:</translation>
@@ -1982,7 +1982,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5023310440958281426">Neem het beleid van je beheerder door</translation>
 <translation id="5030338702439866405">Verleend door</translation>
 <translation id="503069730517007720">Er is een rootcertificaat voor '<ph name="SOFTWARE_NAME"/>' vereist, maar niet geïnstalleerd. Je IT-beheerder moet de configuratie-instructies voor '<ph name="SOFTWARE_NAME"/>' raadplegen om dit probleem op te lossen. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="6425384654920630035">Over Brave Translate</translation>
+<translation id="6425384654920630035">Over AI Wize Translate</translation>
 <translation id="503498442187459473"><ph name="HOST"/> wil gebruikmaken van je camera en microfoon</translation>
 <translation id="5035135400558156732">Tuinieren</translation>
 <translation id="503574301575803523">SRA3</translation>
@@ -2050,7 +2050,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5161506081086828129">Stapeleenheid 9</translation>
 <translation id="5164798890604758545">Tekst wordt ingevoerd</translation>
 <translation id="2996889577833788807">Geef de CVC-code voor <ph name="CREDIT_CARD"/> op. Nadat je hebt bevestigd, worden de creditcardgegevens uit je Brave-account gedeeld met deze site.</translation>
-<translation id="8515152881111950319">Je kunt de toegang tot het account van je organisatie kwijtraken of slachtoffer worden van identiteitsdiefstal. Brave raadt je aan je wachtwoord nu te wijzigen.</translation>
+<translation id="8515152881111950319">Je kunt de toegang tot het account van je organisatie kwijtraken of slachtoffer worden van identiteitsdiefstal. AI Wize raadt je aan je wachtwoord nu te wijzigen.</translation>
 <translation id="5171045022955879922">Zoek of typ een URL</translation>
 <translation id="5172758083709347301">Computer</translation>
 <translation id="5177076414499237632">Meer informatie over de bron en het onderwerp van deze pagina</translation>
@@ -2237,7 +2237,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="555128936272638662">Mobiele en draadloze accessoires</translation>
 <translation id="5551890439174915351">100 x 200 mm</translation>
 <translation id="6084314943327785510">Brave vergelijkt periodiek je wachtwoorden met lijsten die online zijn gepubliceerd. Als dit wordt gedaan, zijn je wachtwoorden en gebruikersnamen versleuteld, zodat ze door niemand (inclusief Brave) kunnen worden gelezen.</translation>
-<translation id="4362225295386962644">Als je een wachtwoord gebruikt, waarschuwt Brave je als het online is gepubliceerd. Als dit wordt gedaan, zijn je wachtwoorden en gebruikersnamen versleuteld, zodat ze door niemand (ook niet Brave) kunnen worden gelezen.</translation>
+<translation id="4362225295386962644">Als je een wachtwoord gebruikt, waarschuwt AI Wize je als het online is gepubliceerd. Als dit wordt gedaan, zijn je wachtwoorden en gebruikersnamen versleuteld, zodat ze door niemand (ook niet Brave) kunnen worden gelezen.</translation>
 <translation id="5556459405103347317">Opnieuw laden</translation>
 <translation id="5558083606899411167">Airconditioners</translation>
 <translation id="5558125320634132440">Deze site is geblokkeerd omdat deze mogelijk niet-gezinsvriendelijke content bevat</translation>
@@ -2250,7 +2250,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5570825185877910964">Account beschermen</translation>
 <translation id="5571083550517324815">Kan niet ophalen van dit adres. Selecteer een ander adres.</translation>
 <translation id="5572434905385510939">22 x 28 inch</translation>
-<translation id="1254756632288991504">Start Brave en log in zodat Brave kan controleren of je deze site mag openen.</translation>
+<translation id="1254756632288991504">Start AI Wize en log in zodat AI Wize kan controleren of je deze site mag openen.</translation>
 <translation id="5578606540385219379">Serviceproviders</translation>
 <translation id="557886905979275351">Scheerapparaten en scheermessen</translation>
 <translation id="5580958916614886209">Controleer de vervalmaand en probeer het opnieuw</translation>
@@ -2267,7 +2267,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5610142619324316209">Controleer de verbinding</translation>
 <translation id="5610807607761827392">Je kunt passen en adressen beheren in <ph name="BEGIN_LINK"/>Instellingen<ph name="END_LINK"/>.</translation>
 <translation id="5611398002774823980">Opslaan in account</translation>
-<translation id="2012723355262040739">Deze pagina vertalen met Brave Translate</translation>
+<translation id="2012723355262040739">Deze pagina vertalen met AI Wize Translate</translation>
 <translation id="5612720917913232150"><ph name="URL"/> wil de locatie van je computer gebruiken</translation>
 <translation id="561669346091975195">Sciencefiction- en fantasyseries</translation>
 <translation id="5617949217645503996"><ph name="HOST_NAME"/> heeft je te vaak omgeleid.</translation>
@@ -2324,7 +2324,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5725297205162868298">De snelkoppeling mag niet beginnen met het teken @: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="3006790309890592320">Brave raadt je aan je wachtwoord opnieuw in te stellen als je het voor andere sites hebt hergebruikt.</translation>
 <translation id="5732392974455271431">Je ouders kunnen de blokkering van deze site opheffen</translation>
-<translation id="5110141686029759199">Knop Formulier maken. Activeer deze om snel een nieuw formulier in Brave Formulieren te maken.</translation>
+<translation id="5110141686029759199">Knop Formulier maken. Activeer deze om snel een nieuw formulier in AI Wize Formulieren te maken.</translation>
 <translation id="5736165827969430182">Metalen en mijnbouw</translation>
 <translation id="5576538372759072019">{NUM_CARDS,plural, =1{Pas opslaan in je Brave-account}other{Passen opslaan in je Brave-account}}</translation>
 <translation id="5738385766833540397">Beheren hoe je meldingen over prijsdalingen krijgt voor producten die je volgt</translation>
@@ -2446,7 +2446,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="5992691462791905444">Zizagvouw 2-slag oneven center</translation>
 <translation id="5992805036496113940">Informatie bekijken die wordt gebruikt om advertenties aan je te laten zien</translation>
 <translation id="7409510288691071929">Je gegevens, privacy en beveiliging beheren in je Brave-account</translation>
-<translation id="3494641719937626561">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. Brave Wachtwoordmanager raadt je aan dit wachtwoord nu te wijzigen en je opgeslagen wachtwoorden te checken om je account te beveiligen.</translation>
+<translation id="3494641719937626561">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. AI Wize Wachtwoordmanager raadt je aan dit wachtwoord nu te wijzigen en je opgeslagen wachtwoorden te checken om je account te beveiligen.</translation>
 <translation id="4496834749307444910">Brave bevat ingebouwde veiligheidsfuncties die je beschermen terwijl je browst, zoals Google Safe Browsing, dat <ph name="BEGIN_LINK"/>recent malware heeft gevonden<ph name="END_LINK"/> op de site die je wilt bezoeken.</translation>
 <translation id="6000758707621254961"><ph name="RESULT_COUNT"/> resultaten voor '<ph name="SEARCH_TEXT"/>'</translation>
 <translation id="6002122790816966947">Je apparaten</translation>
@@ -2486,7 +2486,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6052284303005792909">•</translation>
 <translation id="605237284704429106">IBAN invullen</translation>
 <translation id="3284406940349582552">Je kunt opgeslagen adressen gebruiken in meerdere Brave-producten. Dit adres is opgeslagen in je Brave-account (<ph name="ACCOUNT"/>).</translation>
-<translation id="5814871361966482530">In ons Privacybeleid vind je meer informatie over hoe Brave je gegevens beschermt.</translation>
+<translation id="5814871361966482530">In ons Privacybeleid vind je meer informatie over hoe AI Wize je gegevens beschermt.</translation>
 <translation id="6055888660316801977">Pagina waarop staat dat er geen overeenkomende inloggegevens zijn voor beveiligde betaling</translation>
 <translation id="6055982527635883756">Envelop (archief)</translation>
 <translation id="6058977677006700226">Je passen gebruiken op al je apparaten?</translation>
@@ -2568,11 +2568,11 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6236290670123303279">Instellingen beheren</translation>
 <translation id="623825323736974198">Beheer sites die altijd actief blijven en waarvoor geen geheugen vrijkomt</translation>
 <translation id="6240447795304464094">Google Pay-logo</translation>
-<translation id="4174528239215311406">Als je Brave Wachtwoordmanager wilt gebruiken met je besturingssysteem, start je Brave opnieuw en geef je toegang tot de wachtwoordmanager van je computer. Je tabbladen worden opnieuw geopend na de herstart.</translation>
+<translation id="4174528239215311406">Als je AI Wize Wachtwoordmanager wilt gebruiken met je besturingssysteem, start je AI Wize opnieuw en geef je toegang tot de wachtwoordmanager van je computer. Je tabbladen worden opnieuw geopend na de herstart.</translation>
 <translation id="6241121617266208201">Suggesties verbergen</translation>
 <translation id="624499991300733384">Print Compositor Service</translation>
 <translation id="6251906504834538140">{0,plural, =1{Bestand kan niet worden verplaatst}other{<ph name="FILE_COUNT"/> bestanden kunnen niet worden verplaatst}}</translation>
-<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om bestanden te beheren die je in Brave hebt gedownload</translation>
+<translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om bestanden te beheren die je in AI Wize hebt gedownload</translation>
 <translation id="6254436959401408446">Onvoldoende geheugen om deze pagina te openen</translation>
 <translation id="625463612687472648">Niet meer toestaan</translation>
 <translation id="6259156558325130047">&amp;Opnieuw volgorde wijzigen</translation>
@@ -2605,7 +2605,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6311410654831092784">Kaartpapier</translation>
 <translation id="6312113039770857350">Webpagina niet beschikbaar</translation>
 <translation id="6316226860534107313">Scooters en bromfietsen</translation>
-<translation id="1413891145337537586">Nieuw: Family Link-keuzes voor Brave zijn hier van toepassing</translation>
+<translation id="1413891145337537586">Nieuw: Family Link-keuzes voor AI Wize zijn hier van toepassing</translation>
 <translation id="63172326633386613">Toegankelijkheidsinstellingen beheren</translation>
 <translation id="6319249456820053699">Camera's en camcorders</translation>
 <translation id="6321917430147971392">Controleer je DNS-instellingen</translation>
@@ -2700,7 +2700,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6472874020827012601">Stof (mat)</translation>
 <translation id="647330291963761005">Updates installeren</translation>
 <translation id="6474220430271405609">Beleidstests</translation>
-<translation id="2252963430820803723">Sites die je bezoekt, kunnen Brave om informatie vragen zodat ze de prestaties van hun advertenties kunnen meten. Brave beschermt je privacy door te beperken welke informatie sites met elkaar kunnen delen.</translation>
+<translation id="2252963430820803723">Sites die je bezoekt, kunnen AI Wize om informatie vragen zodat ze de prestaties van hun advertenties kunnen meten. AI Wize beschermt je privacy door te beperken welke informatie sites met elkaar kunnen delen.</translation>
 <translation id="6476284679642588870">Betaalmethoden beheren</translation>
 <translation id="6480864723214312258">Huishoudbatterijen</translation>
 <translation id="6486200200930923183">Documentaires</translation>
@@ -2775,7 +2775,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6643016212128521049">Wissen</translation>
 <translation id="6645291930348198241">Toegang krijgen tot cookies en sitegegevens.</translation>
 <translation id="6645478838938543427">Meldingen over prijsdalingen worden naar <ph name="EMAIL_ADDRESS"/> gestuurd</translation>
-<translation id="6678472970290886941">Je beheerder kan je browserinstellingen op afstand wijzigen. Activiteit op dit apparaat kan ook buiten Brave worden beheerd.</translation>
+<translation id="6678472970290886941">Je beheerder kan je browserinstellingen op afstand wijzigen. Activiteit op dit apparaat kan ook buiten AI Wize worden beheerd.</translation>
 <translation id="6648524591329069940">Serif-lettertype</translation>
 <translation id="6649510485211003056">195 x 270 mm</translation>
 <translation id="6651270836885078973">Beheerd door:</translation>
@@ -2891,7 +2891,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="6883221904761970440">Blad voor beveiligde verificatie van betalingsgegevens is gesloten</translation>
 <translation id="6884662655240309489">Grootte 1</translation>
 <translation id="6886577214605505410"><ph name="LOCATION_TITLE"/> <ph name="SHORT_URL"/></translation>
-<translation id="7265969755975834932">Brave heeft deze pagina vereenvoudigd om deze beter leesbaar te maken. Brave heeft de originele pagina opgehaald via een niet-beveiligde verbinding.</translation>
+<translation id="7265969755975834932">Brave heeft deze pagina vereenvoudigd om deze beter leesbaar te maken. AI Wize heeft de originele pagina opgehaald via een niet-beveiligde verbinding.</translation>
 <translation id="6890443033788248019">Locatie toestaan?</translation>
 <translation id="6890531741535756070">Je hebt ervoor gekozen om te verifiëren met <ph name="DEVICE_LABEL"/> op websites die <ph name="PROVIDER_ORIGIN"/> gebruiken. Deze provider heeft misschien informatie over je betaalmethode opgeslagen. Je kunt een <ph name="BEGIN_LINK"/>verwijderingsverzoek indienen<ph name="END_LINK"/>.</translation>
 <translation id="6890956352250146925">Opties voor cookies en sitegegevens</translation>
@@ -2966,7 +2966,7 @@ Het kan langer dan normaal duren voordat je app wordt gestart.</translation>
 <translation id="7016992613359344582">Dit kunnen eenmalige of terugkerende kosten zijn die misschien niet duidelijk worden aangegeven.</translation>
 <translation id="701757816833614688">Design- en beeldende-kunstonderwijs</translation>
 <translation id="702146556168549005">URL's van pagina's die je bezoekt, worden voor analyse naar Google Cloud of derden gestuurd. Ze kunnen bijvoorbeeld worden gescand om onveilige websites op te sporen of websites te filteren op basis van regels die zijn ingesteld door de beheerder.</translation>
-<translation id="8683151724374457021">Deze site stelt vast wat je leuk vindt en stelt daarna advertenties voor op andere sites. Deze site krijgt ook je advertentieonderwerpen van Brave zodat de site je relevantere advertenties kan laten zien.</translation>
+<translation id="8683151724374457021">Deze site stelt vast wat je leuk vindt en stelt daarna advertenties voor op andere sites. Deze site krijgt ook je advertentieonderwerpen van AI Wize zodat de site je relevantere advertenties kan laten zien.</translation>
 <translation id="7023162328967545559">Beheerderswaarschuwing</translation>
 <translation id="7613812024276037086">Brave bevat ingebouwde veiligheidsfuncties die je beschermen terwijl je browst, zoals Google Safe Browsing, dat <ph name="BEGIN_LINK"/>recent phishing heeft gevonden<ph name="END_LINK"/> op de site die je wilt bezoeken. Phishingsites doen zich voor als een andere site om je te misleiden.<ph name="NEW_LINE"/>Ook sites die normaal gesproken veilig zijn, worden soms gehackt door aanvallers. <ph name="BEGIN_ERROR_LINK"/>Laat het ons weten<ph name="END_ERROR_LINK"/> als je denkt dat er een fout is gemaakt en dat deze site geen gevaar vormt.</translation>
 <translation id="7029809446516969842">Wachtwoorden</translation>
@@ -3121,7 +3121,7 @@ Aanvullende informatie:
 <translation id="7353601530677266744">Opdrachtregel</translation>
 <translation id="7354880545102894991">Goedkope en lastminutereizen</translation>
 <translation id="7359588939039777303">Advertenties geblokkeerd.</translation>
-<translation id="7308957539693927108">Als Brave beschikbare kortingen vindt, worden deze tijdens het afrekenen getoond</translation>
+<translation id="7308957539693927108">Als AI Wize beschikbare kortingen vindt, worden deze tijdens het afrekenen getoond</translation>
 <translation id="5417725730200908216"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om adressen toe te voegen en te beheren in de Brave-instellingen</translation>
 <translation id="7365849542400970216">Laten weten wanneer je dit apparaat gebruikt?</translation>
 <translation id="736592699917579616">Eten</translation>
@@ -3131,7 +3131,7 @@ Aanvullende informatie:
 <translation id="7372526636730851647">Foto (glanzend)</translation>
 <translation id="7372973238305370288">zoekresultaat</translation>
 <translation id="7374461526650987610">Protocolhandlers</translation>
-<translation id="3898257577441589237">Dit probleem doet zich voor als gevolg van een certificaat dat jij of iemand anders heeft geïnstalleerd op je apparaat. Het certificaat staat erom bekend dat het wordt gebruikt voor netwerkmonitoring en -onderschepping en wordt niet vertrouwd door Brave. Hoewel er ook legitieme certificaten bestaan, bijvoorbeeld op een school- of zakelijk netwerk, wil Brave zeker weten dat je begrijpt wat er gebeurt, ook als je het niet kunt tegenhouden. Monitoring kan plaatsvinden in elke browser of app met toegang tot internet.</translation>
+<translation id="3898257577441589237">Dit probleem doet zich voor als gevolg van een certificaat dat jij of iemand anders heeft geïnstalleerd op je apparaat. Het certificaat staat erom bekend dat het wordt gebruikt voor netwerkmonitoring en -onderschepping en wordt niet vertrouwd door Brave. Hoewel er ook legitieme certificaten bestaan, bijvoorbeeld op een school- of zakelijk netwerk, wil AI Wize zeker weten dat je begrijpt wat er gebeurt, ook als je het niet kunt tegenhouden. Monitoring kan plaatsvinden in elke browser of app met toegang tot internet.</translation>
 <translation id="7375532151824574023">{NUM_COOKIES,plural, =0{Geen sites toegestaan}=1{1 site toegestaan}other{# sites toegestaan}}</translation>
 <translation id="7375818412732305729">Bestand wordt bijgevoegd</translation>
 <translation id="7377249249140280793"><ph name="RELATIVE_DATE"/> - <ph name="FULL_DATE"/></translation>
@@ -3172,10 +3172,10 @@ Aanvullende informatie:
 <translation id="7425037327577270384">Help me met schrijven</translation>
 <translation id="7427366580982928791">Internetveiligheid van kinderen</translation>
 <translation id="7429429656042611765">Executive</translation>
-<translation id="288933326661929857">Laat verifiëren dat jij het bent zodat Brave je betalingsgegevens kan invullen.</translation>
+<translation id="288933326661929857">Laat verifiëren dat jij het bent zodat AI Wize je betalingsgegevens kan invullen.</translation>
 <translation id="7437289804838430631">Contactgegevens toevoegen</translation>
 <translation id="7437490109271760224">Kaartspellen</translation>
-<translation id="6591887805206070045">Aanvallers op de site die je wilt bezoeken, kunnen je misleiden zodat je schadelijke software installeert die van invloed is op de manier waarop je browst, bijvoorbeeld door je homepage te wijzigen of extra advertenties te tonen op sites die je bezoekt. Brave raadt je sterk aan terug te gaan naar een beveiligde website om schade te voorkomen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="6591887805206070045">Aanvallers op de site die je wilt bezoeken, kunnen je misleiden zodat je schadelijke software installeert die van invloed is op de manier waarop je browst, bijvoorbeeld door je homepage te wijzigen of extra advertenties te tonen op sites die je bezoekt. AI Wize raadt je sterk aan terug te gaan naar een beveiligde website om schade te voorkomen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7440140511386898319">Content bekijken wanneer je offline bent</translation>
 <translation id="7441627299479586546">Onjuist beleidsonderwerp</translation>
 <translation id="7441864845853794192">Gastronomische specialiteiten</translation>
@@ -3260,7 +3260,7 @@ Aanvullende informatie:
 <translation id="405970181812690156">Betaal op verschillende apparaten snel op sites en in apps met passen die je hebt opgeslagen via Brave.</translation>
 <translation id="7579442726219254162">Onbekende variabele <ph name="VARIABLE"/> in de beheerde configuratie van <ph name="APPLICATION_ID"/>.</translation>
 <translation id="7581199239021537589">Beeldverschuiving Y van zijde 2</translation>
-<translation id="4790068920551988473">Snel een nieuwe afspraak in Brave Agenda maken</translation>
+<translation id="4790068920551988473">Snel een nieuwe afspraak in AI Wize Agenda maken</translation>
 <translation id="7583969447617676942">Juridische dienstverlening</translation>
 <translation id="7586676035079382730">Meldingen niet toegestaan</translation>
 <translation id="7588460771338574392">Toegangssleutel van <ph name="PHONE_NAME"/></translation>
@@ -3273,12 +3273,12 @@ Aanvullende informatie:
 <translation id="759889825892636187"><ph name="HOST_NAME"/> kan dit verzoek momenteel niet verwerken.</translation>
 <translation id="7599089013883397081">Time-out bij downloaden</translation>
 <translation id="7600965453749440009"><ph name="LANGUAGE"/> nooit vertalen</translation>
-<translation id="8441931256884543961">Meestal kun je beveiligd verbinding maken met deze site, maar deze keer is het Brave niet gelukt. Een aanvaller probeert je netwerkverbinding af te luisteren of aan te passen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8441931256884543961">Meestal kun je beveiligd verbinding maken met deze site, maar deze keer is het AI Wize niet gelukt. Een aanvaller probeert je netwerkverbinding af te luisteren of aan te passen. <ph name="BEGIN_LEARN_MORE_LINK"/>Meer informatie<ph name="END_LEARN_MORE_LINK"/></translation>
 <translation id="7605377493722372900">Aanvallers op de site die je wilt bezoeken, kunnen schadelijke software installeren waarmee items zoals je wachtwoord, foto's, berichten of creditcardnummers kunnen worden gestolen of verwijderd.</translation>
 <translation id="7610193165460212391">Waarde <ph name="VALUE"/> is buiten bereik.</translation>
 <translation id="7613889955535752492">Vervaldatum: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
 <translation id="5704205738724476508"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en vervolgens op Enter om je wachtwoorden te beheren in de Brave-instellingen.</translation>
-<translation id="8565825862287624454">Je beheerder heeft Brave Enterprise Connectors voor je browser ingesteld. Deze connectors hebben toegang tot sommige van je gegevens.</translation>
+<translation id="8565825862287624454">Je beheerder heeft AI Wize Enterprise Connectors voor je browser ingesteld. Deze connectors hebben toegang tot sommige van je gegevens.</translation>
 <translation id="7617825962482469577">Envelop C7/C6</translation>
 <translation id="7619838219691048931">Eindblad</translation>
 <translation id="7625242817712715120">Op basis van het beheerdersbeleid wordt afgeraden deze content af te drukken</translation>
@@ -3295,7 +3295,7 @@ Aanvullende informatie:
 <translation id="7637586430889951925">{COUNT,plural, =0{Geen}=1{1 wachtwoord in je account (voor <ph name="DOMAIN_LIST"/>)}other{# wachtwoorden in je account (voor <ph name="DOMAIN_LIST"/>)}}</translation>
 <translation id="7638605456503525968">Seriële poorten</translation>
 <translation id="7639968568612851608">Donkergrijs</translation>
-<translation id="8275603180424408640">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. Brave Wachtwoordmanager raadt je aan je wachtwoord nu te wijzigen.</translation>
+<translation id="8275603180424408640">Het wachtwoord dat je net hebt gebruikt, is gevonden bij een gegevenslek. AI Wize Wachtwoordmanager raadt je aan je wachtwoord nu te wijzigen.</translation>
 <translation id="7647206758853451655">Afdrukkwaliteit</translation>
 <translation id="7648992873808071793">Bestanden op dit apparaat bewaren</translation>
 <translation id="7653957176542370971">Blad voor betalingshandler is gesloten</translation>
@@ -3348,7 +3348,7 @@ Aanvullende informatie:
 <translation id="7719791801330803993">Foto- en videosoftware</translation>
 <translation id="772128550427553158">De CVC-code staat op de voorkant van je kaart.</translation>
 <translation id="7724603315864178912">Knip</translation>
-<translation id="1296098648902562076">Snel een nieuw formulier in Brave Formulieren maken</translation>
+<translation id="1296098648902562076">Snel een nieuw formulier in AI Wize Formulieren maken</translation>
 <translation id="773466115871691567">Pagina's in het <ph name="SOURCE_LANGUAGE"/> altijd vertalen</translation>
 <translation id="7736959720849233795">Linkadres kopiëren</translation>
 <translation id="7740996059027112821">Standaard</translation>
@@ -3378,7 +3378,7 @@ Aanvullende informatie:
 <translation id="7785790577395078482">deze tablet</translation>
 <translation id="7786368602962652765">Een verplicht veld is leeg. Vul het in voordat je opslaat.</translation>
 <translation id="7786432318297177736">Deze zoekmachines worden in willekeurige volgorde getoond. Je kunt de standaard zoekmachine altijd wijzigen in de instellingen.</translation>
-<translation id="6865562781710080368">Sites die je bezoekt kunnen Brave om informatie vragen waarmee ze de prestaties van hun advertenties kunnen meten. Met Brave kunnen sites alleen bepaalde soorten gegevens verzamelen, zoals het tijdstip waarop je een advertentie te zien kreeg.</translation>
+<translation id="6865562781710080368">Sites die je bezoekt kunnen AI Wize om informatie vragen waarmee ze de prestaties van hun advertenties kunnen meten. Met AI Wize kunnen sites alleen bepaalde soorten gegevens verzamelen, zoals het tijdstip waarop je een advertentie te zien kreeg.</translation>
 <translation id="7791011319128895129">Niet uitgebracht</translation>
 <translation id="7791196057686275387">Bundelen</translation>
 <translation id="7791543448312431591">Toevoegen</translation>
@@ -3406,7 +3406,7 @@ Aanvullende informatie:
 <translation id="784404208867107517">Gegroepeerde geschiedenis</translation>
 <translation id="7844689747373518809">{COUNT,plural, =0{Geen}=1{1 app (<ph name="EXAMPLE_APP_1"/>)}=2{2 apps (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>)}other{# apps (<ph name="EXAMPLE_APP_1"/>, <ph name="EXAMPLE_APP_2"/>, <ph name="AND_MORE"/>)}}</translation>
 <translation id="7855695075675558090"><ph name="TOTAL_LABEL"/> <ph name="CURRENCY_CODE"/> <ph name="FORMATTED_TOTAL_AMOUNT"/></translation>
-<translation id="7162988054835087448">Later kan een site die je bezoekt Brave om relevante onderwerpen vragen om de advertenties te personaliseren die je te zien krijgt. Brave deelt maximaal 3 onderwerpen en beschermt je browsegeschiedenis en identiteit.</translation>
+<translation id="7162988054835087448">Later kan een site die je bezoekt AI Wize om relevante onderwerpen vragen om de advertenties te personaliseren die je te zien krijgt. AI Wize deelt maximaal 3 onderwerpen en beschermt je browsegeschiedenis en identiteit.</translation>
 <translation id="7860345425589240791">Geef je nieuwe vervaldatum en CVC op de <ph name="SIDE_OF_CARD"/> op</translation>
 <translation id="7862185352068345852">Site verlaten?</translation>
 <translation id="7865448901209910068">Beste snelheid</translation>
@@ -3464,7 +3464,7 @@ Aanvullende informatie:
 <translation id="7981129096182302364">Dance en electronic</translation>
 <translation id="798134797138789862">Kan vragen of deze site virtualreality-apparaten en -gegevens mag gebruiken</translation>
 <translation id="7983008347525536475">SUV's</translation>
-<translation id="8896585555528145662">Je kunt <ph name="SITE"/> op dit moment niet bezoeken, omdat de website gecodeerde verificatiegegevens heeft verzonden die niet door Brave kunnen worden verwerkt. Netwerkfouten en aanvallen zijn doorgaans tijdelijk, dus deze pagina werkt later waarschijnlijk correct.</translation>
+<translation id="8896585555528145662">Je kunt <ph name="SITE"/> op dit moment niet bezoeken, omdat de website gecodeerde verificatiegegevens heeft verzonden die niet door AI Wize kunnen worden verwerkt. Netwerkfouten en aanvallen zijn doorgaans tijdelijk, dus deze pagina werkt later waarschijnlijk correct.</translation>
 <translation id="7986319120639858961"><ph name="CARD_TITLE"/> <ph name="TIME"/> <ph name="BOOKMARKED"/> <ph name="TITLE"/> <ph name="DOMAIN"/></translation>
 <translation id="799149739215780103">Inbinden</translation>
 <translation id="7992044431894087211">Scherm delen met <ph name="APPLICATION_TITLE"/> is hervat</translation>
@@ -3480,12 +3480,12 @@ Aanvullende informatie:
 <translation id="8012647001091218357">We kunnen je ouders momenteel niet bereiken. Probeer het opnieuw.</translation>
 <translation id="8019861005170389898"><ph name="TRADITIONAL_TEXT"/> (<ph name="ADDITIONAL_TEXT"/>)</translation>
 <translation id="8022542098135319050">Reisbureaus en -services</translation>
-<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om Brave in te stellen als de standaardbrowser van het systeem</translation>
+<translation id="1625114571336329891"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om AI Wize in te stellen als de standaardbrowser van het systeem</translation>
 <translation id="8025119109950072390">Cybercriminelen op deze site proberen je mogelijk te misleiden om iets gevaarlijks te doen, zoals software installeren of je persoonlijke informatie bekendmaken (bijvoorbeeld wachtwoorden, telefoonnummers of creditcards).</translation>
 <translation id="8026334261755873520">Browsegegevens wissen</translation>
 <translation id="8027077570865220386">Lade 15</translation>
 <translation id="7586767711133020907">Knop Brave-veiligheidscheck uitvoeren. Activeer deze om een veiligheidscheck uit te voeren in de Brave-instellingen.</translation>
-<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuw formulier in Brave Formulieren te maken</translation>
+<translation id="814401020562419411"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuw formulier in AI Wize Formulieren te maken</translation>
 <translation id="8028960012888758725">Bijsnijden na taak</translation>
 <translation id="8032546467100845887">Transparantie</translation>
 <translation id="8034522405403831421">Deze pagina is in het <ph name="SOURCE_LANGUAGE"/>. Vertalen naar het <ph name="TARGET_LANGUAGE"/>?</translation>
@@ -3506,7 +3506,7 @@ Aanvullende informatie:
 <translation id="8058603697124206642">Niet vereist</translation>
 <translation id="8063875539456488183">Opslaan en prijs volgen</translation>
 <translation id="8066225060526005217">Beheerd door cookie-instellingen</translation>
-<translation id="5442778523450464826">Je hebt zojuist je wachtwoord opgegeven op een misleidende site. Brave kan je laten zien wat je nu kunt doen. Klik op 'Account beschermen' om je wachtwoord te wijzigen en Brave te laten weten dat je account mogelijk gevaar loopt.</translation>
+<translation id="5442778523450464826">Je hebt zojuist je wachtwoord opgegeven op een misleidende site. AI Wize kan je laten zien wat je nu kunt doen. Klik op 'Account beschermen' om je wachtwoord te wijzigen en AI Wize te laten weten dat je account mogelijk gevaar loopt.</translation>
 <translation id="8070439594494267500">App-icoon</translation>
 <translation id="8070495475341517754">Sightseeing</translation>
 <translation id="8075588646978457437">Zelfklevend papier</translation>
@@ -3680,7 +3680,7 @@ Aanvullende informatie:
 <translation id="8398335999901363925">Lijst met betaalmethoden die kunnen worden ingevuld via aanraking, is op volledige hoogte geopend.</translation>
 <translation id="8398446215576328011">Toegepast beleid terugzetten</translation>
 <translation id="8398790343843005537">Je telefoon zoeken</translation>
-<translation id="2222315002405295388">{COUNT,plural, =0{Brave blokkeert vandaag weer cookies}=1{Brave blokkeert morgen weer cookies}other{Nog # dagen totdat Brave weer cookies blokkeert}}</translation>
+<translation id="2222315002405295388">{COUNT,plural, =0{Brave blokkeert vandaag weer cookies}=1{Brave blokkeert morgen weer cookies}other{Nog # dagen totdat AI Wize weer cookies blokkeert}}</translation>
 <translation id="8403506619177967839">Fanfictie</translation>
 <translation id="15931837016421186">De informatie die je synchroniseert beheren in de Brave-instellingen</translation>
 <translation id="8406071103346257942">je schermvergrendeling niet meer te gebruiken om wachtwoorden in te vullen</translation>
@@ -3730,7 +3730,7 @@ Aanvullende informatie:
 <translation id="8490137692873530638">Stapeleenheid 10</translation>
 <translation id="8493948351860045254">Ruimte vrijmaken</translation>
 <translation id="8498891568109133222">Het duurt te lang voordat <ph name="HOST_NAME"/> reageert.</translation>
-<translation id="443150778270806272">Als je je <ph name="PERMISSION"/> op deze site wilt gebruiken, moet je Brave toegang geven</translation>
+<translation id="443150778270806272">Als je je <ph name="PERMISSION"/> op deze site wilt gebruiken, moet je AI Wize toegang geven</translation>
 <translation id="230699814587342492">Brave-wachtwoorden</translation>
 <translation id="8503813439785031346">Gebruikersnaam</translation>
 <translation id="8504928302600319133">Computerhardware</translation>
@@ -3753,7 +3753,7 @@ Aanvullende informatie:
 <translation id="8536234749087605613">Envelop (venster)</translation>
 <translation id="8539500321752640291">2 rechten toestaan?</translation>
 <translation id="8541158209346794904">Bluetooth-apparaat</translation>
-<translation id="3275395224965468352">Deze site krijgt je advertentieonderwerpen van Brave zodat de site je relevantere advertenties kan laten zien</translation>
+<translation id="3275395224965468352">Deze site krijgt je advertentieonderwerpen van AI Wize zodat de site je relevantere advertenties kan laten zien</translation>
 <translation id="8541579497401304453">Neem contact op met een bedrijf door een telefoongesprek te starten.</translation>
 <translation id="8542014550340843547">Drie nietjes onder</translation>
 <translation id="8542617028204211143">SRA0</translation>
@@ -3788,10 +3788,10 @@ Aanvullende informatie:
 <translation id="8590264442799989746"><ph name="HOST_NAME"/> en nog meer</translation>
 <translation id="8600271352425265729">Alleen deze keer</translation>
 <translation id="860043288473659153">Naam kaarthouder</translation>
-<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>Welke gegevens worden gebruikt:<ph name="END_BOLD"/> Je activiteit op een site die je op dit apparaat via Brave bezoekt.</translation>
+<translation id="5748651208190537252"><ph name="BEGIN_BOLD"/>Welke gegevens worden gebruikt:<ph name="END_BOLD"/> Je activiteit op een site die je op dit apparaat via AI Wize bezoekt.</translation>
 <translation id="8601456038554914806">Watersportbenodigdheden</translation>
 <translation id="8606726445206553943">Je MIDI-apparaten gebruiken</translation>
-<translation id="5017966143250326204">Met advertentieonderwerpen kunnen sites je relevante advertenties laten zien terwijl je browsegeschiedenis en identiteit worden beschermd. Brave stelt interessante onderwerpen vast op basis van je recente browsegeschiedenis. Later kan een app die je gebruikt relevante onderwerpen opvragen bij Brave om zo de advertenties te personaliseren die je te zien krijgt.</translation>
+<translation id="5017966143250326204">Met advertentieonderwerpen kunnen sites je relevante advertenties laten zien terwijl je browsegeschiedenis en identiteit worden beschermd. AI Wize stelt interessante onderwerpen vast op basis van je recente browsegeschiedenis. Later kan een app die je gebruikt relevante onderwerpen opvragen bij AI Wize om zo de advertenties te personaliseren die je te zien krijgt.</translation>
 <translation id="8617269623452051934">je apparaatgebruik</translation>
 <translation id="861775596732816396">Grootte 4</translation>
 <translation id="8620276786115098679">Envelop Kaku 7</translation>
@@ -3842,11 +3842,11 @@ Aanvullende informatie:
 <translation id="8726549941689275341">Paginagrootte:</translation>
 <translation id="8730621377337864115">Klaar</translation>
 <translation id="8731268612289859741">Beveiligingscode</translation>
-<translation id="2184048523283917559">Je kunt onderwerpen blokkeren die je niet wilt delen met sites. Brave verwijdert ook automatisch onderwerpen die ouder zijn dan 4 weken. Meer informatie</translation>
+<translation id="2184048523283917559">Je kunt onderwerpen blokkeren die je niet wilt delen met sites. AI Wize verwijdert ook automatisch onderwerpen die ouder zijn dan 4 weken. Meer informatie</translation>
 <translation id="8734529307927223492">Je <ph name="DEVICE_TYPE"/> wordt beheerd door <ph name="MANAGER"/></translation>
 <translation id="8736059027199600831">30 x 40 inch</translation>
 <translation id="8737685506611670901">Links voor <ph name="PROTOCOL"/> openen in plaats van <ph name="REPLACED_HANDLER_TITLE"/></translation>
-<translation id="6326805297893828864">Als je een beveiligde verbinding tot stand wilt brengen, moet je klok goed zijn ingesteld. Dit moet omdat de certificaten die deze websites gebruiken om zichzelf te identificeren, slechts gedurende bepaalde perioden geldig zijn. Aangezien de klok van je apparaat niet goed is ingesteld, kan Brave deze certificaten niet verifiëren.</translation>
+<translation id="6326805297893828864">Als je een beveiligde verbinding tot stand wilt brengen, moet je klok goed zijn ingesteld. Dit moet omdat de certificaten die deze websites gebruiken om zichzelf te identificeren, slechts gedurende bepaalde perioden geldig zijn. Aangezien de klok van je apparaat niet goed is ingesteld, kan AI Wize deze certificaten niet verifiëren.</translation>
 <translation id="8740359287975076522">Het &lt;abbr id="dnsDefinition"&gt;DNS-adres&lt;/abbr&gt; van <ph name="HOST_NAME"/> kan niet worden gevonden. Er wordt een diagnose van het probleem uitgevoerd.</translation>
 <translation id="8742371904523228557">Je code voor <ph name="ORIGIN"/> is<ph name="ONE_TIME_CODE"/>.</translation>
 <translation id="874918643257405732">Bookmark toevoegen voor dit tabblad</translation>
@@ -3869,13 +3869,13 @@ Aanvullende informatie:
 <translation id="877348612833018844">{0,plural, =1{Vertrouwelijk bestand verplaatsen?}other{Vertrouwelijke bestanden verplaatsen?}}</translation>
 <translation id="8775347646940100151">Papier (briefhoofd)</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="514805123051954646">Knop Pagina vertalen. Activeer deze om deze pagina te vertalen met Brave Translate.</translation>
+<translation id="514805123051954646">Knop Pagina vertalen. Activeer deze om deze pagina te vertalen met AI Wize Translate.</translation>
 <translation id="8785658048882205566">Motorfietsen</translation>
 <translation id="8790007591277257123">&amp;Opnieuw verwijderen</translation>
 <translation id="8792272652220298572">Plastic (glanzend)</translation>
-<translation id="5304100303568917877">Je kunt de toegang tot je account van <ph name="ORG_NAME"/> kwijtraken of slachtoffer worden van identiteitsdiefstal. Brave raadt je aan je wachtwoord nu te wijzigen.</translation>
+<translation id="5304100303568917877">Je kunt de toegang tot je account van <ph name="ORG_NAME"/> kwijtraken of slachtoffer worden van identiteitsdiefstal. AI Wize raadt je aan je wachtwoord nu te wijzigen.</translation>
 <translation id="8792626944327216835">microfoon</translation>
-<translation id="9156291179464624174"><ph name="ENROLLMENT_DOMAIN"/> heeft Brave Enterprise Connectors voor je browser aangezet. Deze connectors hebben toegang tot sommige van je gegevens.</translation>
+<translation id="9156291179464624174"><ph name="ENROLLMENT_DOMAIN"/> heeft AI Wize Enterprise Connectors voor je browser aangezet. Deze connectors hebben toegang tot sommige van je gegevens.</translation>
 <translation id="8798099450830957504">Standaard</translation>
 <translation id="8798739476508189189">Zoek je browserflags? Ga naar</translation>
 <translation id="8800034312320686233">Werkt de site niet?</translation>
@@ -3887,7 +3887,7 @@ Aanvullende informatie:
 <translation id="8811470563853401328">Adres opslaan in account?</translation>
 <translation id="8813277370772331957">Later herinneren</translation>
 <translation id="8814707942599948500">Envelop C8</translation>
-<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en vervolgens op Enter om Brave te updaten via je Brave-instellingen</translation>
+<translation id="7674607358106534914"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en vervolgens op Enter om AI Wize te updaten via je Brave-instellingen</translation>
 <translation id="882338992931677877">Handmatige sleuf</translation>
 <translation id="8830320733681313421">Hagaki (briefkaart)</translation>
 <translation id="8833007469711500369">Wasmachines en drogers</translation>
@@ -3958,7 +3958,7 @@ Aanvullende informatie:
 <translation id="8978053250194585037">Google Safe Browsing heeft onlangs <ph name="BEGIN_LINK"/>phishing gedetecteerd<ph name="END_LINK"/> op <ph name="SITE"/>. Phishingsites doen zich voor als een andere website om je te misleiden.</translation>
 <translation id="8982884016487650216">Pdf is geladen</translation>
 <translation id="8983369100812962543">Je kunt het formaat van de app nu aanpassen</translation>
-<translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om je browsegeschiedenis in Brave te bekijken</translation>
+<translation id="447219378802101672"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om je browsegeschiedenis in AI Wize te bekijken</translation>
 <translation id="8987663052629670333">Afdrukservices voor foto's</translation>
 <translation id="8987927404178983737">Maand</translation>
 <translation id="8989148748219918422"><ph name="ORGANIZATION"/> [<ph name="COUNTRY"/>]</translation>
@@ -3999,7 +3999,7 @@ Aanvullende informatie:
 <translation id="9050666287014529139">Wachtwoordzin</translation>
 <translation id="9051072642122229460">Koffie- en espressomachines</translation>
 <translation id="9051260467258969162"><ph name="BEGIN_LINK"/>Log opnieuw in<ph name="END_LINK"/> en kom daarna terug naar dit tabblad om schrijfhulp te krijgen</translation>
-<translation id="104719866786855422">We lanceren een nieuwe functie voor advertentieprivacy: advertentiemeting. Brave deelt alleen zeer beperkte informatie tussen sites, zoals wanneer een advertentie aan jou is getoond, zodat sites de prestaties van advertenties kunnen meten.</translation>
+<translation id="104719866786855422">We lanceren een nieuwe functie voor advertentieprivacy: advertentiemeting. AI Wize deelt alleen zeer beperkte informatie tussen sites, zoals wanneer een advertentie aan jou is getoond, zodat sites de prestaties van advertenties kunnen meten.</translation>
 <translation id="9056953843249698117">Winkel</translation>
 <translation id="9062620674789239642">Het bestand is mogelijk verplaatst, bewerkt of verwijderd.</translation>
 <translation id="9063398205799684336">Envelop Kaku 2</translation>
@@ -4020,15 +4020,15 @@ Aanvullende informatie:
 <translation id="9093723786115107672">Nachtkleding</translation>
 <translation id="9094544726794842788">Met Niet leuk open je een formulier waarmee je gedetailleerde feedback kunt sturen over waarom je deze resultaten niet leuk vindt</translation>
 <translation id="9095388113577226029">Meer talen...</translation>
-<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om Brave in te stellen als de standaardbrowser van het systeem in de iOS-instellingen</translation>
+<translation id="7650489975492745604"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om AI Wize in te stellen als de standaardbrowser van het systeem in de iOS-instellingen</translation>
 <translation id="9096679202588811390">Tv-programma's</translation>
 <translation id="9101630580131696064">Lade 1</translation>
 <translation id="9103537084693478942">Videosoftware</translation>
-<translation id="6373940988468425649"><ph name="SITE"/> gebruikt gewoonlijk versleuteling om je gegevens te beschermen. Toen Brave deze keer probeerde verbinding te maken met <ph name="SITE"/>, retourneerde de website ongewone en onjuiste inloggegevens. Dit gebeurt wanneer een aanvaller probeert zich als <ph name="SITE"/> voor te doen of wanneer een wifi-inlogscherm de verbinding heeft verbroken. Je gegevens zijn nog steeds beveiligd omdat Brave de verbinding heeft beëindigd voordat er gegevens konden worden uitgewisseld.</translation>
+<translation id="6373940988468425649"><ph name="SITE"/> gebruikt gewoonlijk versleuteling om je gegevens te beschermen. Toen AI Wize deze keer probeerde verbinding te maken met <ph name="SITE"/>, retourneerde de website ongewone en onjuiste inloggegevens. Dit gebeurt wanneer een aanvaller probeert zich als <ph name="SITE"/> voor te doen of wanneer een wifi-inlogscherm de verbinding heeft verbroken. Je gegevens zijn nog steeds beveiligd omdat AI Wize de verbinding heeft beëindigd voordat er gegevens konden worden uitgewisseld.</translation>
 <translation id="9107467864910557787">Je browser wordt beheerd door <ph name="MANAGER"/></translation>
 <translation id="91108059142052966">Op basis van het beheerdersbeleid wordt scherm delen met <ph name="APPLICATION_TITLE"/> uitgezet als er vertrouwelijke content zichtbaar is</translation>
 <translation id="9114524666733003316">Creditcard bevestigen...</translation>
-<translation id="3582535072753734287">Deze browser wordt niet beheerd door een bedrijf of andere organisatie. Activiteit op dit apparaat kan buiten Brave worden beheerd. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
+<translation id="3582535072753734287">Deze browser wordt niet beheerd door een bedrijf of andere organisatie. Activiteit op dit apparaat kan buiten AI Wize worden beheerd. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="7839260860373627374">Meer informatie over advertenties in Brave</translation>
 <translation id="2628864952962474930"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Druk op Tab en daarna op Enter om je reis te hervatten en relevante activiteit in je Brave-geschiedenis te bekijken.</translation>
 <translation id="9119042192571987207">Geüpload</translation>
@@ -4040,7 +4040,7 @@ Aanvullende informatie:
 <translation id="913552870853451045"><ph name="IDS_AUTOFILL_VIRTUAL_CARD_NAME_AND_LAST_FOUR_DIGITS"/>, virtuele kaart</translation>
 <translation id="9136861683332321024">Luxe voertuigen</translation>
 <translation id="9137013805542155359">Origineel bekijken</translation>
-<translation id="3480834636742786788">Start Brave en log in voordat je deze app gebruikt.</translation>
+<translation id="3480834636742786788">Start AI Wize en log in voordat je deze app gebruikt.</translation>
 <translation id="9138037198177304356">Meldingen toegestaan</translation>
 <translation id="9139318394846604261">Winkelen</translation>
 <translation id="9141013498910525015">Adressen beheren</translation>
@@ -4049,7 +4049,7 @@ Aanvullende informatie:
 <translation id="9148599396704355100">Prijs is laag</translation>
 <translation id="9150025764986957246">Je kunt bijvoorbeeld het volgende invoeren:</translation>
 <translation id="9150045010208374699">Je camera gebruiken</translation>
-<translation id="5874192512642998555">Je beheerder kan je browserinstellingen op afstand wijzigen. Activiteit op dit apparaat kan ook buiten Brave worden beheerd. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
+<translation id="5874192512642998555">Je beheerder kan je browserinstellingen op afstand wijzigen. Activiteit op dit apparaat kan ook buiten AI Wize worden beheerd. <ph name="BEGIN_LINK"/>Meer informatie<ph name="END_LINK"/></translation>
 <translation id="9154194610265714752">Bijgewerkt</translation>
 <translation id="9155211586651734179">Aangesloten audiorandapparaten</translation>
 <translation id="9155646082713385498">Tijdschriften</translation>
@@ -4075,7 +4075,7 @@ Aanvullende informatie:
 <translation id="9183302530794969518">Brave Documenten</translation>
 <translation id="9183425211371246419"><ph name="HOST_NAME"/> gebruikt een niet-ondersteund protocol.</translation>
 <translation id="918454845714257218">Check de code op de <ph name="SIDE_OF_CARD"/> en probeer het opnieuw</translation>
-<translation id="7202091195027070644">Knop Brave instellen als standaardbrowser. Activeer deze om Brave in te stellen als de standaardbrowser van het systeem.</translation>
+<translation id="7202091195027070644">Knop AI Wize instellen als standaardbrowser. Activeer deze om AI Wize in te stellen als de standaardbrowser van het systeem.</translation>
 <translation id="9187461866967718678">Extreme sporten</translation>
 <translation id="9191834167571392248">Perforatie linksonder</translation>
 <translation id="9192361865877479444">Metaal (mat)</translation>
@@ -4083,7 +4083,7 @@ Aanvullende informatie:
 <translation id="9205078245616868884">Je gegevens zijn versleuteld met je wachtwoordzin voor synchronisatie. Geef deze op om de synchronisatie te starten.</translation>
 <translation id="9207861905230894330">Kan artikel niet toevoegen.</translation>
 <translation id="9213433120051936369">Weergave aanpassen</translation>
-<translation id="2206050430829841793">Een app voorkomt dat Brave veilig verbinding kan maken met deze site</translation>
+<translation id="2206050430829841793">Een app voorkomt dat AI Wize veilig verbinding kan maken met deze site</translation>
 <translation id="92178312226016010">Je volgt dit product.</translation>
 <translation id="9218430445555521422">Instellen als standaard</translation>
 <translation id="9219103736887031265">Afbeeldingen</translation>
@@ -4092,17 +4092,17 @@ Aanvullende informatie:
 <translation id="93020190163435405">Stages</translation>
 <translation id="933712198907837967">Diners Club</translation>
 <translation id="934634059306213385">Toestaan dat de <ph name="APP_NAME"/>-app wifi-netwerken instelt?</translation>
-<translation id="7486559383537872796">Je kunt de toegang tot je Brave-account kwijtraken. Brave raadt je aan je wachtwoord nu te wijzigen. Je wordt gevraagd in te loggen op je account.</translation>
+<translation id="7486559383537872796">Je kunt de toegang tot je Brave-account kwijtraken. AI Wize raadt je aan je wachtwoord nu te wijzigen. Je wordt gevraagd in te loggen op je account.</translation>
 <translation id="937457230470581909">Dierentuinen, aquaria en natuurreservaten</translation>
-<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Welke gegevens worden gebruikt:<ph name="END_BOLD"/> Je advertentieonderwerpen zijn gebaseerd op je recente browsegeschiedenis. Dit is een lijst met sites die je via Brave op dit apparaat hebt bezocht.</translation>
+<translation id="1818627928653838301"><ph name="BEGIN_BOLD"/>Welke gegevens worden gebruikt:<ph name="END_BOLD"/> Je advertentieonderwerpen zijn gebaseerd op je recente browsegeschiedenis. Dit is een lijst met sites die je via AI Wize op dit apparaat hebt bezocht.</translation>
 <translation id="937885410143139026">Gegevens die naar de Beheerdersconsole zijn gestuurd</translation>
 <translation id="939736085109172342">Nieuwe map</translation>
 <translation id="940053046584497293">Reizen en transport</translation>
 <translation id="6588091288231158998">Wachtwoorden en toegangssleutels gebruiken die zijn opgeslagen in je Brave-account</translation>
 <translation id="5444457503062019851">Brave voorkomt dat sites cookies van derden gebruiken om je te volgen terwijl je browst.</translation>
 <translation id="945855313015696284">Controleer de informatie hieronder en verwijder alle ongeldige passen</translation>
-<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe site in Brave Sites te maken</translation>
-<translation id="7776043919629791284">{COUNT,plural, =0{Brave beperkt vandaag weer cookies}=1{Brave beperkt morgen weer cookies}other{# dagen tot Brave weer cookies beperkt}}</translation>
+<translation id="1283739678317676574"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, druk op Tab en daarna op Enter om snel een nieuwe site in AI Wize Sites te maken</translation>
+<translation id="7776043919629791284">{COUNT,plural, =0{Brave beperkt vandaag weer cookies}=1{Brave beperkt morgen weer cookies}other{# dagen tot AI Wize weer cookies beperkt}}</translation>
 <translation id="949314938206378263">Je hebt gevraagd of je deze site mag bezoeken. Je ouder kan reageren in Family Link.</translation>
 <translation id="950736567201356821">Drie perforaties boven</translation>
 <translation id="961663415146723894">Onder inbinden</translation>
@@ -4151,7 +4151,7 @@ Aanvullende informatie:
 <translation id="8794378783472961468">Je bent echter niet onzichtbaar. Met de privémodus worden je browsergeschiedenis en de websites die je bezoekt niet verborgen voor je werkgever of je internetprovider.</translation>
 <translation id="6085043210649933880">Privémodus in Brave</translation>
 <translation id="3683567996395248272">Wat mogelijk is in de privémodus</translation>
-<translation id="5581758310848298360">Wanneer u al uw Brave Private-tabbladen sluit, wordt uw activiteit van die tabbladen van dit apparaat verwijderd:
+<translation id="5581758310848298360">Wanneer u al uw AI Wize Private-tabbladen sluit, wordt uw activiteit van die tabbladen van dit apparaat verwijderd:
           <ph name="BEGIN_LIST"/>
             <ph name="LIST_ITEM"/>Browse-activiteit<ph name="END_LIST_ITEM"/>
             <ph name="LIST_ITEM"/>Zoekgeschiedenis<ph name="END_LIST_ITEM"/>
@@ -4191,11 +4191,11 @@ Aanvullende informatie:
     &lt;/ol&gt;
     &lt;h4&gt;Stap 2: Open the pagina in Prive modus (alleen voor computers)&lt;/h4&gt;
     &lt;p&gt;Open de pagina die je bezocht in het Prive venster.&lt;/p&gt;
-    &lt;p&gt;Als de pagina opent, en een Brave extensie niet goed werkt. Om het probleem te verhelpen, schakel de extensie uit.&lt;/p&gt;
+    &lt;p&gt;Als de pagina opent, en een AI Wize extensie niet goed werkt. Om het probleem te verhelpen, schakel de extensie uit.&lt;/p&gt;
     &lt;h4&gt;Stap 3: Werk je besturingssysteem bij&lt;/h4&gt;
     &lt;p&gt;Zorg dat je apparaat is bijgewerkt.&lt;/p&gt;
     &lt;h4&gt;Stap 4: Schakel tijdelijk je antivirus uit&lt;/h4&gt;
-    &lt;p&gt;Je ziet deze fout als je een antivirusprogramma hebt die  "HTTPS protection" of "HTTPS scanning" verschaft. Het antivirusprogramma verhindert Brave om beveiliging te verschaffen.&lt;/p&gt;
+    &lt;p&gt;Je ziet deze fout als je een antivirusprogramma hebt die  "HTTPS protection" of "HTTPS scanning" verschaft. Het antivirusprogramma verhindert AI Wize om beveiliging te verschaffen.&lt;/p&gt;
     &lt;p&gt;Om het probleem te verhelpen, schakel je antivirusprogramma uit. Als de pagina werkt na het uitschakelen van het programma, schakel dan dit programma uit als je beveiligde sites bezoekt.&lt;/p&gt;
     &lt;p&gt;Onthoud om je antivirusprogramma weer in te schakelen als je klaar bent.&lt;/p&gt;
     &lt;h4&gt;Stap 5: Verkrijg extra hulp&lt;/h4&gt;

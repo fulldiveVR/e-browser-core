@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the Brave AI product">
-    Leo
+  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the AI Wize AI product">
+    AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_SUMMARIZE_FAILED_LABEL" desc="Label for when summarization is not possible">
     The summarizer feature is currently available only for select articles and other long-form web pages.
@@ -13,16 +13,16 @@
     Summarize
   </message>
   <message name="IDS_CHAT_UI_ABOUT_TITLE" desc="A concise title that summarizes the purpose of AIChat">
-    About Leo
+    About AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION" desc="Outlining the functioning of AIChat (paragraph 1 of 3)">
-    Brave Leo is a private AI smart assistant that enhances your use of the Internet. Leo is free to use with limited access. Brave Leo Premium offers more models, higher limits and gives subscribers early access to new features. The default model for all users is currently Mixtral 8x7B. See the <ph name="LINK_BEFORE">$1</ph>Brave wiki<ph name="LINK_AFTER">$2</ph> for more details.
+    AI Wize AI Wize Chat is a private AI smart assistant that enhances your use of the Internet. AI Wize Chat is free to use with limited access. AI Wize AI Wize Chat Premium offers more models, higher limits and gives subscribers early access to new features. The default model for all users is currently Mixtral 8x7B. See the <ph name="LINK_BEFORE">$1</ph>Brave wiki<ph name="LINK_AFTER">$2</ph> for more details.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_2" desc="Outlining the functioning of AIChat (paragraph 2 of 3)">
-    By default, when you ask Leo a question it may send and use the content of the web page you are viewing or any text you highlight on a page to Brave Leo to provide a response. The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. Leo uses data from Brave Search to improve response quality. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust Leo’s options in Settings any time. Go to Settings > Leo.
+    By default, when you ask AI Wize Chat a question it may send and use the content of the web page you are viewing or any text you highlight on a page to AI Wize AI Wize Chat to provide a response. The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. AI Wize Chat uses data from AI Wize Search to improve response quality. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust AI Wize Chat’s options in Settings any time. Go to Settings > AI Wize Chat.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_3" desc="Outlining the functioning of AIChat (paragraph 3 of 3)">
-    Leo does not collect identifiers such as your IP address that can be linked to you. No data is used to train the AI models and no personal data is retained by the AI models (except for Anthropic that holds data for 30 days before deleting it). See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">$2</ph> for more information.
+    AI Wize Chat does not collect identifiers such as your IP address that can be linked to you. No data is used to train the AI models and no personal data is retained by the AI models (except for Anthropic that holds data for 30 days before deleting it). See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">$2</ph> for more information.
   </message>
   <message name="IDS_CHAT_UI_PLACEHOLDER_LABEL" desc="Placeholder text for an input box allowing users to send messages to the AI service">
     Enter a prompt here
@@ -37,25 +37,25 @@
     Summarize this page
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_WARNING" desc="Description about page content being sent to a remote LLM">
-     Disconnect to stop sending this page content to Leo, and start a new conversation
+     Disconnect to stop sending this page content to AI Wize Chat, and start a new conversation
   </message>
   <message name="IDS_CHAT_UI_ERROR_NETWORK" desc="An error presented when there is a network issue in the UI">
-     There was a network issue connecting to Leo, check your connection and try again.
+     There was a network issue connecting to AI Wize Chat, check your connection and try again.
   </message>
   <message name="IDS_CHAT_UI_ERROR_RATE_LIMIT" desc="An error presented when the user has exhausted the API request limit">
-    Leo is too busy right now. Please try again in a few minutes.
+    AI Wize Chat is too busy right now. Please try again in a few minutes.
   </message>
   <message name="IDS_CHAT_UI_RETRY_BUTTON_LABEL" desc="A button label to retry API again">
      Retry
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the default model">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Llama 13B, a model created by Meta to be performant and applicable to many use cases.
+    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by Brave. I'm powered by Llama 13B, a model created by Meta to be performant and applicable to many use cases.
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_EXPANDED" desc="AI Chat intro message for the expanded model">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks.
+    Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by Brave. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks.
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.
+    Hi, I'm AI Wize Chat. I'm proxied by AI Wize and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks.
   </message>
   <message name="IDS_CHAT_UI_MODEL_NAME_SYNTAX" desc="Sentence structure for model name">
     <ph name="MODEL_NAME">$1<ex>llama2-13b</ex></ph> by <ph name="COMPANY_NAME">$2<ex>Meta</ex></ph>
@@ -105,8 +105,8 @@
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_4" desc="A premium feature">
     Chat for longer
   </message>
-  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for Brave premium products">
-     Leo Premium
+  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for AI Wize premium products">
+     AI Wize Chat Premium
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_PRICING" desc="Price label to subscribe for Premium model">
     USD $ <ph name="PRICE_VALUE">$1<ex>15</ex></ph> /month
@@ -118,7 +118,7 @@
     Switch to the free model
   </message>
   <message name="IDS_CHAT_UI_UNLOCK_PREMIUM_TITLE" desc="A heading on prompt premium suggestion UI">
-    Unleash Leo's full powers with Premium:
+    Unleash AI Wize Chat's full powers with Premium:
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_1_DESC" desc="A premium feature that allows access to various models">
     Priority access to powerful models with different skills
@@ -133,7 +133,7 @@
     Get higher rate limits for longer conversations.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_DESCRIPTION" desc="Warning message when AI Chat Premium authentication is expired">
-    Your Brave account session has expired. Please visit your account page to refresh, then come back to use premium features.
+    Your AI Wize account session has expired. Please visit your account page to refresh, then come back to use premium features.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_ACTION" desc="Action to take when AI Chat Premium authentication is expired">
     Refresh
@@ -160,7 +160,7 @@
     Dislike answer
   </message>
   <message name="IDS_CHAT_UI_PROVIDE_FEEDBACK_TITLE" desc="Title for feedback provision section">
-    Provide Brave AI Feedback
+    Provide AI Wize AI Feedback
   </message>
   <message name="IDS_CHAT_UI_SELECT_FEEDBACK_TOPIC" desc="Prompt to select feedback topic">
     Select your feedback topic
@@ -172,7 +172,7 @@
     Provide feedback here
   </message>
   <message name="IDS_CHAT_UI_FEEDBACK_PREMIUM_NOTE" desc="Note about the benefits of a premium subscription">
-    Leo Premium provides access to an expanded set of language models for even greater answer nuance. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    AI Wize Chat Premium provides access to an expanded set of language models for even greater answer nuance. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_SUBMIT_BUTTON_LABEL" desc="Button label to submit data/form">
     Submit
@@ -199,22 +199,22 @@
     Your feedback could not be submitted, please check network connection and try again
   </message>
   <message name="IDS_CHAT_UI_ERROR_CONTEXT_LIMIT_REACHING" desc="An error message when the user's chat history is reaching to maximum threshold">
-    This conversation is long and Leo may start forgetting things soon. You can get longer conversations by switching to a premium model, or you can clear the chat to reset it.
+    This conversation is long and AI Wize Chat may start forgetting things soon. You can get longer conversations by switching to a premium model, or you can clear the chat to reset it.
   </message>
   <message name="IDS_CHAT_UI_CLEAR_CHAT_BUTTON_LABEL" desc="An button label for clearing chat history">
     Clear Chat
   </message>
   <message name="IDS_CHAT_UI_SEND_CHAT_BUTTON_LABEL" desc="An button label for sending a chat message">
-    Send message to Leo
+    Send message to AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_GOT_IT_BUTTON_LABEL" desc="An button label for dismissing a warning">
     Got it
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_TOO_LONG_WARNING" desc="A warning issued when the user is trying to summarize a long content page">
-    The page is too long for Leo. Some context could be missing from the conversation.
+    The page is too long for AI Wize Chat. Some context could be missing from the conversation.
   </message>
   <message name="IDS_CHAT_UI_CONVERSATION_END_ERROR" desc="An error issued when the user cannot continue chatting">
-    This conversation is too long and cannot continue. There may be other models available with which Leo is capable of maintaining accuracy for longer conversations.
+    This conversation is too long and cannot continue. There may be other models available with which AI Wize Chat is capable of maintaining accuracy for longer conversations.
   </message>
   <message name="IDS_CHAT_UI_CHAT_BASIC_SUBTITLE" desc="A description for default chat model">
     General purpose chat
@@ -226,10 +226,10 @@
     Conversation and text generation
   </message>
   <message name="IDS_CHAT_UI_LEO_SETTINGS_TOOLTIP_LABEL" desc="A label for leo settings tooltip">
-    Leo settings
+    AI Wize Chat settings
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_TITLE" desc="A title for welcome guide component presented for first time users">
-    Hi, I'm Leo!
+    Hi, I'm AI Wize Chat!
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users">
     An AI-powered intelligent assistant, built right into Brave.
@@ -250,22 +250,22 @@
     Ask me anything! We can talk about any topic you want. I'm always learning and improving to provide better answers.
   </message>
   <message name="IDS_CHAT_UI_PRIVACY_TITLE" desc="Title for privacy agreement modal.">
-    Chat Privately with Brave Leo
+    Chat Privately with AI Wize AI Wize Chat
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_LABEL" desc="Label for toggle that enabled/disabled contextual conversations.">
     Use page context for response
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_TOOLTIP_INFO" desc="Info tooltip for contextual toggle">
-    Toggle on to ask about this page. Its content will be sent to Brave Leo along with your messages.
+    Toggle on to ask about this page. Its content will be sent to AI Wize AI Wize Chat along with your messages.
   </message>
   <message name="IDS_CHAT_UI_SUBSCRIPTION_POLICY_INFO" desc="An info text that is shown below various subcription prices">
     All subscriptions are auto-renewed but can be cancelled at any time before renewal.
   </message>
   <message name="IDS_CHAT_UI_SEND_SITE_HOSTNAME_LABEL" desc="A checkbox label to opt-in or out for sending current tab's url">
-    Share the hostname of the page you are on (<ph name="HOST_NAME">$1<ex>www.example.com</ex></ph>) to help us make Leo better.
+    Share the hostname of the page you are on (<ph name="HOST_NAME">$1<ex>www.example.com</ex></ph>) to help us make AI Wize Chat better.
   </message>
-  <message name="IDS_AI_CHAT_CONTEXT_LEO_TOOLS" desc="The text label of Leo tools submenu in the context menu">
-    Leo AI tools
+  <message name="IDS_AI_CHAT_CONTEXT_LEO_TOOLS" desc="The text label of AI Wize Chat tools submenu in the context menu">
+    AI Wize Chat AI tools
   </message>
   <message name="IDS_AI_CHAT_CONTEXT_QUICK_ACTIONS" desc="The title of the context menu section for AI quick actions">
     Quick actions

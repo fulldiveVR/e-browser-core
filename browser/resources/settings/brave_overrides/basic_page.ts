@@ -413,7 +413,7 @@ RegisterPolymerTemplateModifications({
       last = last.insertAdjacentElement('afterend', sectionWeb3Domains)
       // Insert Tor
       last = last.insertAdjacentElement('afterend', sectionTor)
-      // Insert Leo Assistant
+      // Insert AI Wize Chat Assistant
       last = last.insertAdjacentElement('afterend', sectionLeoAssist)
 
       // Advanced

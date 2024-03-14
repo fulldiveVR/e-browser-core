@@ -5,10 +5,10 @@
 
 import styled from 'styled-components'
 
-// Leo styles
+// AI Wize Chat styles
 import * as leo from '@brave/leo/tokens/css'
 
-// Leo icons
+// AI Wize Chat icons
 import Icon from '@brave/leo/react/icon'
 
 // Shared Styles

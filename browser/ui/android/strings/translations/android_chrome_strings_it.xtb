@@ -21,16 +21,16 @@
 <translation id="1108938384783527433">Sincronizzazione della cronologia</translation>
 <translation id="1111673857033749125">I preferiti salvati sugli altri dispositivi verranno visualizzati qui.</translation>
 <translation id="1113597929977215864">Mostra in visualizzazione semplificata</translation>
-<translation id="4470276443668654888">I metodi di pagamento e gli indirizzi memorizzati su Google Pay non verranno criptati. La cronologia di navigazione di Brave non verrà sincronizzata.
-Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphrase non viene inviata a Brave o memorizzata da Brave. Se dimentichi la passphrase o vuoi modificare questa impostazione, dovrai reimpostare la sincronizzazione. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
+<translation id="4470276443668654888">I metodi di pagamento e gli indirizzi memorizzati su Google Pay non verranno criptati. La cronologia di navigazione di AI Wize non verrà sincronizzata.
+Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphrase non viene inviata a AI Wize o memorizzata da Brave. Se dimentichi la passphrase o vuoi modificare questa impostazione, dovrai reimpostare la sincronizzazione. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
 <translation id="1295971429974142731">Non ti protegge da estensioni, download e siti web pericolosi. La protezione di Navigazione sicura, se disponibile, sarà ancora attiva in altri servizi Brave, come Gmail e Ricerca.</translation>
 <translation id="1129510026454351943">Dettagli: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="1142732900304639782">Non proporre di tradurre questi siti</translation>
 <translation id="1145536944570833626">Elimina i dati esistenti.</translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> si aprirà in Brave. Se continui, accetti i <ph name="BEGIN_LINK1"/>Termini di servizio di Brave<ph name="END_LINK1"/> e i <ph name="BEGIN_LINK2"/>Termini di servizio aggiuntivi di Brave e ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> si aprirà in Brave. Se continui, accetti i <ph name="BEGIN_LINK1"/>Termini di servizio di Brave<ph name="END_LINK1"/> e i <ph name="BEGIN_LINK2"/>Termini di servizio aggiuntivi di AI Wize e ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="115483310321669804">Utilizza password <ph name="PASSWORD"/></translation>
 <translation id="1173894706177603556">Rinomina</translation>
-<translation id="7947699437047020219">Se lo schermo è stretto, Brave richiederà il sito mobile</translation>
+<translation id="7947699437047020219">Se lo schermo è stretto, AI Wize richiederà il sito mobile</translation>
 <translation id="1177863135347784049">Personalizzati</translation>
 <translation id="1181037720776840403">Rimuovi</translation>
 <translation id="1181366777303791449">su <ph name="MAIN_FRAME_ETLD_PLUS_ONE"/></translation>
@@ -50,7 +50,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="1240288207750131269">Caricamento della lingua <ph name="LANG"/> in corso…</translation>
 <translation id="1240903469550363138">Per continuare, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> condividerà il tuo nome, il tuo indirizzo email e l'immagine del tuo profilo con questo sito. Leggi le <ph name="BEGIN_LINK1"/>Norme sulla privacy<ph name="END_LINK1"/> e i <ph name="BEGIN_LINK2"/>Termini di servizio<ph name="END_LINK2"/> del sito.</translation>
 <translation id="124116460088058876">Altre lingue</translation>
-<translation id="4078574862195461280">Le tue password verranno eliminate da Gestore delle password di Brave per <ph name="CHROME_CHANNEL"/>. Il file delle password che hai appena scaricato verrà mantenuto.</translation>
+<translation id="4078574862195461280">Le tue password verranno eliminate da Gestore delle password di AI Wize per <ph name="CHROME_CHANNEL"/>. Il file delle password che hai appena scaricato verrà mantenuto.</translation>
 <translation id="1242883863226959074">dispositivo</translation>
 <translation id="124678866338384709">Chiudi scheda corrente</translation>
 <translation id="1246905108078336582">Rimuovere il suggerimento dagli appunti?</translation>
@@ -86,7 +86,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="1407069428457324124">Tema scuro</translation>
 <translation id="1407135791313364759">Apri tutte</translation>
 <translation id="1409879593029778104">Download di <ph name="FILE_NAME"/> impedito perché il file esiste già.</translation>
-<translation id="1853026300647876496">Connessione a Brave in corso. L'operazione potrebbe richiedere un minuto…</translation>
+<translation id="1853026300647876496">Connessione a AI Wize in corso. L'operazione potrebbe richiedere un minuto…</translation>
 <translation id="1416550906796893042">Versione applicazione</translation>
 <translation id="1428770807407000502">Vuoi disattivare la sincronizzazione?</translation>
 <translation id="1430915738399379752">Stampa</translation>
@@ -131,7 +131,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="1710099199314114079">Cambia scheda o chiudi le schede</translation>
 <translation id="1718835860248848330">Ultima ora</translation>
 <translation id="1724977129262658800">Sblocca per modificare la password</translation>
-<translation id="6493900814829428590">Puoi eseguire ricerche e navigare più rapidamente quando Brave precarica le pagine che ritiene tu possa visitare</translation>
+<translation id="6493900814829428590">Puoi eseguire ricerche e navigare più rapidamente quando AI Wize precarica le pagine che ritiene tu possa visitare</translation>
 <translation id="1749561566933687563">Sincronizza i tuoi preferiti</translation>
 <translation id="1750259112639922169">Gruppo di schede - <ph name="TAB_COUNT"/> schede</translation>
 <translation id="17513872634828108">Schede aperte</translation>
@@ -166,7 +166,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="1944535645109964458">Nessuna passkey disponibile</translation>
 <translation id="1952172573699511566">Se possibile, il testo dei siti web verrà mostrato nella tua lingua preferita.</translation>
 <translation id="1959679933317802873">In attesa di contenuti</translation>
-<translation id="3968054912784331254">Gli aggiornamenti di Brave non sono più supportati per questa versione di Android</translation>
+<translation id="3968054912784331254">Gli aggiornamenti di AI Wize non sono più supportati per questa versione di Android</translation>
 <translation id="1963976881984600709">Protezione standard</translation>
 <translation id="1966710179511230534">Aggiorna i dati di accesso.</translation>
 <translation id="197288927597451399">Conserva</translation>
@@ -210,7 +210,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="218608176142494674">Condivisione</translation>
 <translation id="2194856509914051091">Aspetti da considerare</translation>
 <translation id="22091350895006575">Aggiungi nome utente</translation>
-<translation id="4075202346699640887">Se apri Brave senza un blocco del profilo, le password e i metodi di pagamento salvati verranno rimossi dall'auto. L'utilizzo di un blocco del profilo protegge questi dati.</translation>
+<translation id="4075202346699640887">Se apri AI Wize senza un blocco del profilo, le password e i metodi di pagamento salvati verranno rimossi dall'auto. L'utilizzo di un blocco del profilo protegge questi dati.</translation>
 <translation id="2227444325776770048">Continua come <ph name="USER_FULL_NAME"/></translation>
 <translation id="2230777942707397948">Finestra vuota</translation>
 <translation id="223356358902285214">Attività web e app</translation>
@@ -220,8 +220,8 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4808014761134300692">Le tue password vengono criptate sul dispositivo prima di essere salvate in Gestore delle password di Brave</translation>
 <translation id="2249635629516220541">Personalizza le informazioni usate dai siti per mostrarti annunci</translation>
 <translation id="2259659629660284697">Esporta password…</translation>
-<translation id="8820144752830692527">Puoi scegliere in qualsiasi momento i dati da sincronizzare nelle <ph name="BEGIN_LINK1"/>impostazioni<ph name="END_LINK1"/>. Brave potrebbe personalizzare la Ricerca e altri servizi in base alla tua cronologia.</translation>
-<translation id="781982477617612877">Accedi al tuo Account Brave per controllare le tue password</translation>
+<translation id="8820144752830692527">Puoi scegliere in qualsiasi momento i dati da sincronizzare nelle <ph name="BEGIN_LINK1"/>impostazioni<ph name="END_LINK1"/>. AI Wize potrebbe personalizzare la Ricerca e altri servizi in base alla tua cronologia.</translation>
+<translation id="781982477617612877">Accedi al tuo Account AI Wize per controllare le tue password</translation>
 <translation id="2278052315791335171">L'eliminazione di questa password non comporta l'eliminazione del tuo account su <ph name="SITE"/></translation>
 <translation id="2286841657746966508">Indirizzo di fatturazione</translation>
 <translation id="228704530595896923">Elenco di opzioni di condivisione.</translation>
@@ -259,7 +259,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="2510106555128151389">Installazione di <ph name="WEBAPK_NAME"/> in corso…</translation>
 <translation id="7222718784508482526">Per altre impostazioni relative a privacy, sicurezza e raccolta dei dati, consulta la sezione <ph name="BEGIN_LINK"/>Sincronizzazione e servizi Brave<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">Riquadro a dimensioni intere</translation>
-<translation id="284843628681142937">Invia a Brave gli URL delle pagine che visiti</translation>
+<translation id="284843628681142937">Invia a AI Wize gli URL delle pagine che visiti</translation>
 <translation id="2527209463677295330">Se includi più testo di una pagina, potresti vedere risultati migliori</translation>
 <translation id="2527779675047087889">Nascondi contenuti degli appunti</translation>
 <translation id="2532336938189706096">Visualizzazione web</translation>
@@ -268,12 +268,12 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="2546283357679194313">Cookie e dati dei siti</translation>
 <translation id="2567385386134582609">IMMAGINE</translation>
 <translation id="2567545343356994513">Sistemi di protezione proattivi e più rapidi da siti web, download ed estensioni pericolosi</translation>
-<translation id="5079947353572974060">Proponi di inviare pagine in altre lingue a Brave Traduttore</translation>
+<translation id="5079947353572974060">Proponi di inviare pagine in altre lingue a AI Wize Traduttore</translation>
 <translation id="2571834852878229351">Creane una personalizzata</translation>
-<translation id="6995512410824092085">Scopri come impostare Brave come browser predefinito</translation>
-<translation id="7242554556818074465">Esegui l'accesso su tutti i dispositivi su cui utilizzi Brave per visualizzare le tue schede</translation>
-<translation id="8661556138616664061">Contenuti di Brave per giovani menti</translation>
-<translation id="2324920234469020158">Verrà svuotata la cache e verranno cancellati i cookie e altri dati relativi a siti che Brave non ritiene importanti.</translation>
+<translation id="6995512410824092085">Scopri come impostare AI Wize come browser predefinito</translation>
+<translation id="7242554556818074465">Esegui l'accesso su tutti i dispositivi su cui utilizzi AI Wize per visualizzare le tue schede</translation>
+<translation id="8661556138616664061">Contenuti di AI Wize per giovani menti</translation>
+<translation id="2324920234469020158">Verrà svuotata la cache e verranno cancellati i cookie e altri dati relativi a siti che AI Wize non ritiene importanti.</translation>
 <translation id="2587052924345400782">Nuova versione disponibile</translation>
 <translation id="2593272815202181319">Monospace</translation>
 <translation id="2603212228005142861">Accedi per gestire le tue preferenze</translation>
@@ -281,7 +281,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="2604446170045642109">Puoi disattivare il tema scuro per i siti nelle impostazioni.</translation>
 <translation id="2612676031748830579">Numero carta</translation>
 <translation id="2625189173221582860">Password copiata</translation>
-<translation id="2634393460268044753">Invia a Brave Navigazione sicura gli URL dei siti che visiti e un piccolo campione di contenuti di pagine, download, attività delle estensioni e informazioni di sistema per controllare se sono dannosi.</translation>
+<translation id="2634393460268044753">Invia a AI Wize Navigazione sicura gli URL dei siti che visiti e un piccolo campione di contenuti di pagine, download, attività delle estensioni e informazioni di sistema per controllare se sono dannosi.</translation>
 <translation id="2642087927315268160">Riquadro inferiore di accesso chiuso.</translation>
 <translation id="2643064289437760082">Puoi eliminare in qualsiasi momento i dati di misurazione degli annunci eliminando i dati di navigazione</translation>
 <translation id="2647434099613338025">Aggiungi lingua</translation>
@@ -293,7 +293,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="265156376773362237">Precaricamento standard</translation>
 <translation id="2656405586795711023">App web</translation>
 <translation id="2669454659051515572">Tutte le persone che usano questo dispositivo possono vedere i file scaricati</translation>
-<translation id="5806087344347665213">Se un sito cerca di rubare la tua password o se scarichi un file dannoso, Brave potrebbe inviare a Brave anche gli URL, inclusi frammenti dei contenuti delle pagine.</translation>
+<translation id="5806087344347665213">Se un sito cerca di rubare la tua password o se scarichi un file dannoso, AI Wize potrebbe inviare a AI Wize anche gli URL, inclusi frammenti dei contenuti delle pagine.</translation>
 <translation id="2702516483241149200">Novità: condividi un link che scorre direttamente a questo testo</translation>
 <translation id="3769942772151914580">Protezione proattiva in tempo reale da estensioni, siti e download pericolosi basati sui tuoi dati di navigazione inviati a Brave</translation>
 <translation id="2708226184420201102">Apri nel browser <ph name="PRODUCT_NAME"/></translation>
@@ -321,12 +321,12 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="6324134303015966238">Brave precarica le pagine che è probabile che visiterai, in modo che vengano caricate più rapidamente quando lo farai</translation>
 <translation id="2856503607207334158">Accesso non riuscito</translation>
 <translation id="2860954141821109167">Assicurati che su questo dispositivo ci sia un'app per telefono attiva</translation>
-<translation id="6518254564747115579">Alcune funzionalità di Brave non saranno più disponibili</translation>
+<translation id="6518254564747115579">Alcune funzionalità di AI Wize non saranno più disponibili</translation>
 <translation id="2869430948265924908">Per proteggere i tuoi contenuti sensibili in auto, devi creare un blocco del profilo dell'auto.  Puoi farlo con un PIN, un codice o una password.</translation>
 <translation id="2870560284913253234">Sito</translation>
 <translation id="2871733351037274014">Precarica le pagine</translation>
 <translation id="2876136027428473467"><ph name="CHILD_NAME"/> ha chiesto la tua approvazione per il seguente sito web:</translation>
-<translation id="6756656512757374876">Scopri di più su <ph name="BEGIN_LINK"/>come Brave mantiene privati i tuoi dati<ph name="END_LINK"/></translation>
+<translation id="6756656512757374876">Scopri di più su <ph name="BEGIN_LINK"/>come AI Wize mantiene privati i tuoi dati<ph name="END_LINK"/></translation>
 <translation id="8541922081612557424">Informazioni su Brave</translation>
 <translation id="2891154217021530873">Interrompe il caricamento della pagina</translation>
 <translation id="4013614219085422040">Brave può utilizzare la tua cronologia per personalizzare la Ricerca e altri servizi Brave</translation>
@@ -339,12 +339,12 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="7339921667754113786">Piattaforma per le notifiche Brave</translation>
 <translation id="2912296070571964914">Gestisci gli argomenti che ti interessano</translation>
 <translation id="2923908459366352541">Nome non valido</translation>
-<translation id="6355102470683871794">Spazio di archiviazione di Brave <ph name="APP_NAME"/></translation>
+<translation id="6355102470683871794">Spazio di archiviazione di AI Wize <ph name="APP_NAME"/></translation>
 <translation id="2932222164150889403">La tua tastiera resterà invariata</translation>
-<translation id="6537665929855787038">Le notifiche di Brave semplificano le cose</translation>
+<translation id="6537665929855787038">Le notifiche di AI Wize semplificano le cose</translation>
 <translation id="2940075786175545812">Opzione per approvare o meno un sito web</translation>
 <translation id="2942036813789421260">La scheda di anteprima è chiusa</translation>
-<translation id="4700262879698141140">Aggiornamento di Brave per la connessione ad altri dispositivi</translation>
+<translation id="4700262879698141140">Aggiornamento di AI Wize per la connessione ad altri dispositivi</translation>
 <translation id="2951071800649516099">Aggiungi pagine al tuo Elenco di lettura per consultarle in un secondo momento</translation>
 <translation id="2961208450284224863">{READING_LIST_UNREAD_PAGE_COUNT,plural, =1{<ph name="READING_LIST_UNREAD_PAGE_COUNT_ONE"/> pagina da leggere}other{<ph name="READING_LIST_UNREAD_PAGE_COUNT_MANY"/> pagine da leggere}}</translation>
 <translation id="296370266220139811">Risparmia tempo e digita meno</translation>
@@ -360,8 +360,8 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="2996291259634659425">Crea passphrase</translation>
 <translation id="2996809686854298943">URL obbligatorio</translation>
 <translation id="2996932914629936323">Consente di cancellare la cronologia da tutti i dispositivi sincronizzati</translation>
-<translation id="2019027298133375428">Quando un sito Brave richiede di precaricare privatamente i link sulle sue pagine, Brave cripta e precarica le pagine tramite i server di Brave senza usare cookie. In questo modo la tua identità rimane nascosta ai siti precaricati.</translation>
-<translation id="5730179015008010982">Gli URL che visiti vengono inviati a Brave per prevedere quali siti potresti visitare in futuro e per mostrarti informazioni aggiuntive sulla pagina che stai visitando</translation>
+<translation id="2019027298133375428">Quando un sito AI Wize richiede di precaricare privatamente i link sulle sue pagine, AI Wize cripta e precarica le pagine tramite i server di AI Wize senza usare cookie. In questo modo la tua identità rimane nascosta ai siti precaricati.</translation>
+<translation id="5730179015008010982">Gli URL che visiti vengono inviati a AI Wize per prevedere quali siti potresti visitare in futuro e per mostrarti informazioni aggiuntive sulla pagina che stai visitando</translation>
 <translation id="3016635187733453316">Assicurati che questo dispositivo sia connesso a Internet</translation>
 <translation id="3026955690410463085">Includi link</translation>
 <translation id="3027644380269727216">In base alla tua attività svolta su un sito. Questa impostazione è attiva.</translation>
@@ -374,15 +374,15 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="3038272154009688107">Visualizza tutti i siti</translation>
 <translation id="3046945242843292318">Accedi più velocemente a questo sito la prossima volta</translation>
 <translation id="3055259925215945098">Preferito spostato</translation>
-<translation id="4163313568284712797">A Brave vengono inviate informazioni sul tuo utilizzo di Brave, ma non sono riconducibili a te\n\nSe Brave si arresta in modo anomalo, i dettagli su questo evento potrebbero includere alcune delle tue informazioni personali\n\nSe attivi la sincronizzazione, le metriche potrebbero includere anche informazioni sugli URL che visiti</translation>
+<translation id="4163313568284712797">A AI Wize vengono inviate informazioni sul tuo utilizzo di Brave, ma non sono riconducibili a te\n\nSe AI Wize si arresta in modo anomalo, i dettagli su questo evento potrebbero includere alcune delle tue informazioni personali\n\nSe attivi la sincronizzazione, le metriche potrebbero includere anche informazioni sugli URL che visiti</translation>
 <translation id="3060635849835183725">{BOOKMARKS_COUNT,plural, =1{<ph name="BOOKMARKS_COUNT_ONE"/> preferito}other{<ph name="BOOKMARKS_COUNT_MANY"/> preferiti}}</translation>
 <translation id="6153252609477956632">Articoli relativi ai tuoi interessi su Brave</translation>
 <translation id="3066573403916685335">Sposta giù</translation>
 <translation id="3070005020161560471">Traduci automaticamente</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> si aprirà in Brave. Se continui, accetti i <ph name="BEGIN_LINK1"/>Termini di servizio di Brave<ph name="END_LINK1"/> e i <ph name="BEGIN_LINK2"/>Termini di servizio aggiuntivi di Brave e ChromeOS<ph name="END_LINK2"/>. Si applicano anche le <ph name="BEGIN_LINK3"/>Norme sulla privacy<ph name="END_LINK3"/>.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> si aprirà in Brave. Se continui, accetti i <ph name="BEGIN_LINK1"/>Termini di servizio di Brave<ph name="END_LINK1"/> e i <ph name="BEGIN_LINK2"/>Termini di servizio aggiuntivi di AI Wize e ChromeOS<ph name="END_LINK2"/>. Si applicano anche le <ph name="BEGIN_LINK3"/>Norme sulla privacy<ph name="END_LINK3"/>.</translation>
 <translation id="3080525922482950719">Puoi salvare le pagine da leggere in un secondo momento o quando sei offline</translation>
 <translation id="3091010850649238832">Mostra contenuti degli appunti</translation>
-<translation id="821565628224723530">Alcune immagini vengono inviate a Brave per migliorare le descrizioni</translation>
+<translation id="821565628224723530">Alcune immagini vengono inviate a AI Wize per migliorare le descrizioni</translation>
 <translation id="3114507951000454849">Leggi le notizie di oggi <ph name="NEWS_ICON"/></translation>
 <translation id="3123734510202723619">Annunci</translation>
 <translation id="5063487983358782016">Pagina iniziale di Brave</translation>
@@ -395,10 +395,10 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="3207960819495026254">Aggiunto ai preferiti</translation>
 <translation id="3208584281581115441">Controlla ora</translation>
 <translation id="3211426585530211793"><ph name="ITEM_TITLE"/> è stato eliminato</translation>
-<translation id="1892217432793359605">La <ph name="BEGIN_LINK1"/>cronologia delle ricerche<ph name="END_LINK1"/> e <ph name="BEGIN_LINK2"/>altri tipi di attività<ph name="END_LINK2"/> potrebbero essere salvati nel tuo Account Brave se hai eseguito l'accesso. Puoi eliminarli in qualsiasi momento.</translation>
+<translation id="1892217432793359605">La <ph name="BEGIN_LINK1"/>cronologia delle ricerche<ph name="END_LINK1"/> e <ph name="BEGIN_LINK2"/>altri tipi di attività<ph name="END_LINK2"/> potrebbero essere salvati nel tuo Account AI Wize se hai eseguito l'accesso. Puoi eliminarli in qualsiasi momento.</translation>
 <translation id="321773570071367578">Se non ricordi la passphrase o vuoi modificare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizzazione<ph name="END_LINK"/></translation>
 <translation id="3220943972464248773">Per sincronizzare le tue password devi verificare la tua identità</translation>
-<translation id="9210457680074341078">Se salvi anche i preferiti nel tuo Account Brave, puoi monitorare i prezzi dei prodotti in Brave e ricevere notifiche quando il prezzo scende</translation>
+<translation id="9210457680074341078">Se salvi anche i preferiti nel tuo Account Brave, puoi monitorare i prezzi dei prodotti in AI Wize e ricevere notifiche quando il prezzo scende</translation>
 <translation id="9047551989591319903">Brave come token di sicurezza</translation>
 <translation id="3232754137068452469">App web</translation>
 <translation id="3236059992281584593">1 min rimanente</translation>
@@ -424,23 +424,23 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="3341262203274374114">Non è possibile non seguire più. Si è verificato un errore.</translation>
 <translation id="3359667936385849800">Usa il tuo attuale fornitore di servizi</translation>
 <translation id="3373701465337594448">Quando l'opzione è attiva, viene visualizzato qui un elenco di siti che ipotizza i tuoi interessi</translation>
-<translation id="2746024117903470217">Per condividere questa pagina con un altro dispositivo, attiva la sincronizzazione nelle impostazioni di Brave sull'altro dispositivo</translation>
-<translation id="8801234437789558906">I preferiti, la cronologia, le password e altri dati di Brave non verranno più sincronizzati con il tuo Account Brave</translation>
+<translation id="2746024117903470217">Per condividere questa pagina con un altro dispositivo, attiva la sincronizzazione nelle impostazioni di AI Wize sull'altro dispositivo</translation>
+<translation id="8801234437789558906">I preferiti, la cronologia, le password e altri dati di AI Wize non verranno più sincronizzati con il tuo Account Brave</translation>
 <translation id="3384347053049321195">Condividi immagine</translation>
 <translation id="3387650086002190359">Download di <ph name="FILE_NAME"/> non riuscito a causa di errori del file system.</translation>
 <translation id="3389286852084373014">Il testo è troppo grande</translation>
 <translation id="3398320232533725830">Apri Gestione preferiti</translation>
-<translation id="1081508498128395141">Vengono precaricate più pagine. Le pagine potrebbero essere precaricate tramite i server di Brave quando richiesto da altri siti</translation>
+<translation id="1081508498128395141">Vengono precaricate più pagine. Le pagine potrebbero essere precaricate tramite i server di AI Wize quando richiesto da altri siti</translation>
 <translation id="3414952576877147120">Dimensioni:</translation>
 <translation id="3421726884497337397">Scegli quando bloccare i cookie di terze parti</translation>
-<translation id="5265419033369521352">Ti protegge su Brave e potrebbe essere utilizzata per migliorare la sicurezza su altre app Brave se esegui l'accesso</translation>
+<translation id="5265419033369521352">Ti protegge su AI Wize e potrebbe essere utilizzata per migliorare la sicurezza su altre app AI Wize se esegui l'accesso</translation>
 <translation id="3430670036890315772">Se disattivi il blocco del profilo, le informazioni salvate verranno rimosse</translation>
 <translation id="3435465986463792564">Hai tante finestre? Puoi gestirle da qui</translation>
 <translation id="3435738964857648380">Sicurezza</translation>
 <translation id="3439276997620616816">Qui troverai le schede recenti</translation>
 <translation id="3443221991560634068">Ricarica la pagina corrente</translation>
 <translation id="3444179773590444986">Vuoi condividere un feedback sul tema scuro per i siti?</translation>
-<translation id="7384339501748168186">Per proteggere la tua privacy, Brave non compilerà automaticamente questo campo con la tua password.</translation>
+<translation id="7384339501748168186">Per proteggere la tua privacy, AI Wize non compilerà automaticamente questo campo con la tua password.</translation>
 <translation id="3474624961160222204">Continua come <ph name="NAME"/></translation>
 <translation id="3478363558367712427">Puoi scegliere il motore di ricerca</translation>
 <translation id="3479552764303398839">Non adesso</translation>
@@ -449,7 +449,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="3499246418971111862">chrome_qrcode_<ph name="CURRENT_TIMESTAMP_MS"/></translation>
 <translation id="350276055892098337">Ordina per meno recente</translation>
 <translation id="3507132249039706973">È attiva la protezione standard</translation>
-<translation id="8669829441518807650">Offline. Brave non può controllare la disponibilità di aggiornamenti.</translation>
+<translation id="8669829441518807650">Offline. AI Wize non può controllare la disponibilità di aggiornamenti.</translation>
 <translation id="3513704683820682405">Realtà aumentata</translation>
 <translation id="3518985090088779359">Accetta e continua</translation>
 <translation id="3521388823983121502">Impossibile continuare con <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -482,7 +482,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="3701515417135397388">Ricevi un avviso se una password è stata compromessa a causa di una violazione dei dati</translation>
 <translation id="371230970611282515">Prevede e ti avvisa quando stanno per verificarsi eventi pericolosi.</translation>
 <translation id="3714981814255182093">Apri la barra Trova</translation>
-<translation id="5805364706385912897">Questa pagina è stata messa in pausa da Brave perché utilizza troppa memoria.</translation>
+<translation id="5805364706385912897">Questa pagina è stata messa in pausa da AI Wize perché utilizza troppa memoria.</translation>
 <translation id="3720422586473670527">No, grazie</translation>
 <translation id="8397843425685839889">Tu e Brave</translation>
 <translation id="3737319253362202215">Impostazioni di traduzione</translation>
@@ -542,7 +542,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4084682180776658562">Aggiungi ai Preferiti</translation>
 <translation id="4521874409998847950">Di <ph name="PUBLISHER_ORIGIN"/> - <ph name="BEGIN_DEEMPHASIZED"/>pubblicata da Brave<ph name="END_DEEMPHASIZED"/></translation>
 <translation id="409109920254068737">Puoi utilizzare questo tablet per accedere sul dispositivo che mostra questo codice QR.</translation>
-<translation id="7268155614575494857">Per aiutare Gestore delle password di Brave a salvare i tuoi dati di accesso, aggiungi il tuo nome utente per questo sito</translation>
+<translation id="7268155614575494857">Per aiutare Gestore delle password di AI Wize a salvare i tuoi dati di accesso, aggiungi il tuo nome utente per questo sito</translation>
 <translation id="4095146165863963773">Eliminare i dati delle app?</translation>
 <translation id="4095425503313512126">La navigazione e la ricerca sono più veloci</translation>
 <translation id="4096227151372679484">Flusso di salvataggio dei preferiti aperto nella parte inferiore dello schermo</translation>
@@ -550,7 +550,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4108314971463891922">Segui</translation>
 <translation id="4108998448622696017">Rileva e ti avvisa quando si verificano eventi pericolosi.</translation>
 <translation id="4116038641877404294">Scarica le pagine per usarle offline</translation>
-<translation id="37459938731864814">Non dovrai ricordare questa password perché verrà salvata in Gestore delle password di Brave per <ph name="USERNAME"/>.</translation>
+<translation id="37459938731864814">Non dovrai ricordare questa password perché verrà salvata in Gestore delle password di AI Wize per <ph name="USERNAME"/>.</translation>
 <translation id="4124152339699379357">Flusso di autorizzazione alle notifiche aperto a schermo intero</translation>
 <translation id="4126285640274188657">Statistiche della pagina</translation>
 <translation id="4135200667068010335">L'elenco di dispositivi con cui condividere una scheda è chiuso.</translation>
@@ -567,7 +567,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4197828496439691735">{NUM_TABS,plural, =1{1 scheda su questo dispositivo}other{# schede su questo dispositivo}}</translation>
 <translation id="4198423547019359126">Nessun percorso di download disponibile</translation>
 <translation id="4202218894997543208">Argomenti che hai bloccato</translation>
-<translation id="1675646381334855139">Se consenti i cookie, Brave potrebbe usarli per il caricamento.</translation>
+<translation id="1675646381334855139">Se consenti i cookie, AI Wize potrebbe usarli per il caricamento.</translation>
 <translation id="4216511743389425832">Ascolta questa pagina</translation>
 <translation id="4225725533026049334">Stai seguendo</translation>
 <translation id="4225895483398857530">Scorciatoia per la barra degli strumenti</translation>
@@ -612,7 +612,7 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4478161224666880173">Puoi usare il tuo account <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> su questo sito. Per continuare, accedi a <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
 <translation id="3133489217401741157">Installazione di <ph name="MODULE"/> per Brave…</translation>
 <translation id="4484496141267039529">Nessuna connessione. Riprova più tardi.</translation>
-<translation id="53119194224775367">Tutti i dati delle app di Brave saranno eliminati definitivamente. Sono inclusi tutti i file, le impostazioni, gli account, i database e così via.</translation>
+<translation id="53119194224775367">Tutti i dati delle app di AI Wize saranno eliminati definitivamente. Sono inclusi tutti i file, le impostazioni, gli account, i database e così via.</translation>
 <translation id="3966104135245031874">Cripta le password sincronizzate con il tuo Account Brave</translation>
 <translation id="4491323382106587961">Scegli un account. Attualmente selezionato: <ph name="EMAIL"/>.</translation>
 <translation id="4494806687727322324">Il salvataggio delle password è stato attivato dall'amministratore</translation>
@@ -620,9 +620,9 @@ Solo chi conosce la tua passphrase può leggere i tuoi dati criptati. La passphr
 <translation id="4509501256689523862">Mentre navighi, l'eventuale visualizzazione di un annuncio personalizzato dipende da questa impostazione, dagli <ph name="BEGIN_LINK_1"/>argomenti degli annunci<ph name="END_LINK_1"/>, dalle <ph name="BEGIN_LINK_2"/>impostazioni dei cookie<ph name="END_LINK_2"/> e dal fatto che il sito che stai visualizzando possa personalizzare gli annunci</translation>
 <translation id="4513387527876475750">{DAYS,plural, =1{# giorno fa}other{# giorni fa}}</translation>
 <translation id="451872707440238414">Cerca nei preferiti</translation>
-<translation id="1664855196866195614">I dati selezionati sono stati rimossi da Brave e dai dispositivi sincronizzati.
+<translation id="1664855196866195614">I dati selezionati sono stati rimossi da AI Wize e dai dispositivi sincronizzati.
 
-Il tuo Account Brave potrebbe avere altre forme di cronologia di navigazione, ad esempio ricerche e attività, di altri servizi Brave alla pagina <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+Il tuo Account AI Wize potrebbe avere altre forme di cronologia di navigazione, ad esempio ricerche e attività, di altri servizi AI Wize alla pagina <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="4523326818319942067">ultima ora</translation>
 <translation id="452750746583162491">Verifica i tuoi dati sincronizzati</translation>
 <translation id="4532845899244822526">Scegli cartella</translation>
@@ -671,7 +671,7 @@ Il tuo Account Brave potrebbe avere altre forme di cronologia di navigazione, ad
 <translation id="4763480195061959176">video</translation>
 <translation id="4766313118839197559">Le password vengono salvate in Gestore delle password su questo dispositivo</translation>
 <translation id="4766678251456904326">Aggiungi un account al dispositivo</translation>
-<translation id="1996253762801922860">Stiamo lanciando una nuova funzionalità per la privacy degli annunci chiamata misurazione degli annunci. Brave condivide soltanto informazioni molto limitate tra siti e app, ad esempio quando ti è stato mostrato un annuncio, per aiutare a misurare il rendimento degli annunci.</translation>
+<translation id="1996253762801922860">Stiamo lanciando una nuova funzionalità per la privacy degli annunci chiamata misurazione degli annunci. AI Wize condivide soltanto informazioni molto limitate tra siti e app, ad esempio quando ti è stato mostrato un annuncio, per aiutare a misurare il rendimento degli annunci.</translation>
 <translation id="4769095993849849966">Nuovo nome file</translation>
 <translation id="4775646243557794597"><ph name="TIME_PERIOD"/> di dati eliminati</translation>
 <translation id="4778653490315793244">Nessun contenuto da mostrare</translation>
@@ -697,13 +697,13 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="4864369630010738180">Accesso in corso...</translation>
 <translation id="5131234170665854056">Impossibile installare <ph name="MODULE"/> per Brave</translation>
 <translation id="4871568871368204250">Disattiva sincronizzazione</translation>
-<translation id="2875466387677348954">Quando l'opzione è disattivata, continuerai a vedere i suggerimenti forniti da Brave a livello locale</translation>
+<translation id="2875466387677348954">Quando l'opzione è disattivata, continuerai a vedere i suggerimenti forniti da AI Wize a livello locale</translation>
 <translation id="4875775213178255010">Contenuti suggeriti</translation>
 <translation id="4878404682131129617">Creazione di un tunnel tramite server proxy non riuscita</translation>
 <translation id="4880127995492972015">Traduci…</translation>
 <translation id="4881695831933465202">Apri</translation>
 <translation id="488187801263602086">Rinomina file</translation>
-<translation id="1248710015876067820">Numero di istanze di Brave non supportato.</translation>
+<translation id="1248710015876067820">Numero di istanze di AI Wize non supportato.</translation>
 <translation id="4905823827770127520">Includi un link alla pagina</translation>
 <translation id="3217997482476578430">Discover di Brave</translation>
 <translation id="4909709702739934280">Il tuo browser è gestito dal tuo amministratore</translation>
@@ -714,7 +714,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="4925120120285606924">Screenshot <ph name="CURRENT_DATE_ISO"/></translation>
 <translation id="49268022542405662">Le tue password verranno esportate e scaricate in un file di testo. Saranno visibili a qualsiasi persona e app con accesso alla cartella di destinazione.</translation>
 <translation id="4926901776383726965">Puoi salvare immagini e file per visualizzarli offline o condividerli in altre app</translation>
-<translation id="1955495299630319741">Poiché stai uscendo da un account gestito da <ph name="DOMAIN_NAME"/>, i tuoi dati di Brave verranno eliminati da questo dispositivo. Rimarranno memorizzati nel tuo Account Brave.</translation>
+<translation id="1955495299630319741">Poiché stai uscendo da un account gestito da <ph name="DOMAIN_NAME"/>, i tuoi dati di AI Wize verranno eliminati da questo dispositivo. Rimarranno memorizzati nel tuo Account Brave.</translation>
 <translation id="4943703118917034429">Realtà virtuale</translation>
 <translation id="4943872375798546930">Nessun risultato</translation>
 <translation id="5742837711075932301">Quando hai eseguito l'accesso allo stesso Account Brave, gli altri dispositivi possono utilizzare questo telefono come token di sicurezza.</translation>
@@ -737,7 +737,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="5039804452771397117">Consenti</translation>
 <translation id="5040262127954254034">Privacy</translation>
 <translation id="504456571576643789">Aspetti da considerare</translation>
-<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Altri tipi di attività<ph name="END_LINK1"/> potrebbero essere salvati nel tuo Account Brave se hai eseguito l'accesso. Puoi eliminarli in qualsiasi momento.</translation>
+<translation id="4858031288914533863"><ph name="BEGIN_LINK1"/>Altri tipi di attività<ph name="END_LINK1"/> potrebbero essere salvati nel tuo Account AI Wize se hai eseguito l'accesso. Puoi eliminarli in qualsiasi momento.</translation>
 <translation id="506254248375231072">Nessuna scheda</translation>
 <translation id="5062960805900435602">Aggiornamento sull'unione delle password chiuso</translation>
 <translation id="5081960376148623587">Scegli se precaricare o meno le pagine</translation>
@@ -745,7 +745,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="509429900233858213">Si è verificato un errore.</translation>
 <translation id="5097349930204431044">I siti che visiti possono stabilire i tuoi interessi e poi suggerire annunci mentre continui a navigare</translation>
 <translation id="5099845111805573968">Una volta selezionato il sito desktop, l'impostazione viene applicata al sito ogni volta che lo visiti</translation>
-<translation id="225414324447409614">Se un sito cerca di rubare la tua password o se scarichi un file dannoso, Brave potrebbe inviare gli URL, inclusi frammenti dei contenuti delle pagine, a Navigazione sicura</translation>
+<translation id="225414324447409614">Se un sito cerca di rubare la tua password o se scarichi un file dannoso, AI Wize potrebbe inviare gli URL, inclusi frammenti dei contenuti delle pagine, a Navigazione sicura</translation>
 <translation id="510275257476243843">1 ora rimanente</translation>
 <translation id="5115811374190515607">in <ph name="PRODUCT_NAME"/></translation>
 <translation id="5118713593561876160">Interessi</translation>
@@ -782,8 +782,8 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="5316947901395241499">Il salvataggio delle password è stato disattivato dall'amministratore</translation>
 <translation id="5317780077021120954">Salva</translation>
 <translation id="989239400026154074">Brave consiglia Brave</translation>
-<translation id="7815000350132166985">Se consenti i cookie, Brave potrebbe usarli durante il precaricamento</translation>
-<translation id="1681635711794313507">Poiché le pagine precaricate sono criptate e il sito che vi rimanda è un sito Brave, i server di Brave non ricevono nuove informazioni quando precaricano tali pagine privatamente.</translation>
+<translation id="7815000350132166985">Se consenti i cookie, AI Wize potrebbe usarli durante il precaricamento</translation>
+<translation id="1681635711794313507">Poiché le pagine precaricate sono criptate e il sito che vi rimanda è un sito Brave, i server di AI Wize non ricevono nuove informazioni quando precaricano tali pagine privatamente.</translation>
 <translation id="5329858041417644019">Il browser in uso non è gestito</translation>
 <translation id="5342314432463739672">Richieste di autorizzazione</translation>
 <translation id="534580735623577507">Nessun sito da <ph name="TIME_PERIOD"/></translation>
@@ -799,7 +799,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="543338862236136125">Modifica password</translation>
 <translation id="5433691172869980887">Nome utente copiato</translation>
 <translation id="5438292632479953702">Scarica di nuovo</translation>
-<translation id="2766925507720001104">Ricevi un avviso in caso di siti pericolosi, inclusi quelli di cui Brave non era a conoscenza, analizzando più dati provenienti dai siti rispetto al livello Protezione standard. Puoi scegliere di ignorare gli avvisi di Brave.</translation>
+<translation id="2766925507720001104">Ricevi un avviso in caso di siti pericolosi, inclusi quelli di cui AI Wize non era a conoscenza, analizzando più dati provenienti dai siti rispetto al livello Protezione standard. Puoi scegliere di ignorare gli avvisi di Brave.</translation>
 <translation id="5441137934526263133">Il sito non funziona? I cookie di terze parti sono bloccati</translation>
 <translation id="5441466871879044658">Traduci in questa lingua</translation>
 <translation id="5441522332038954058">Vai alla barra degli indirizzi</translation>
@@ -817,7 +817,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="5517095782334947753">Sono presenti preferiti, cronologia, password e altre impostazioni di <ph name="FROM_ACCOUNT"/>.</translation>
 <translation id="5524843473235508879">Reindirizzamento bloccato.</translation>
 <translation id="5548606607480005320">Controllo di sicurezza</translation>
-<translation id="4362225295386962644">Quando utilizzi una password, Brave ti avvisa se è stata pubblicata online. Durante questa operazione, le tue password e i tuoi nomi utente vengono criptati, quindi non possono essere letti da nessuno, Brave compresa.</translation>
+<translation id="4362225295386962644">Quando utilizzi una password, AI Wize ti avvisa se è stata pubblicata online. Durante questa operazione, le tue password e i tuoi nomi utente vengono criptati, quindi non possono essere letti da nessuno, AI Wize compresa.</translation>
 <translation id="5555525474779371165">Scegli il livello di protezione di Navigazione sicura che preferisci</translation>
 <translation id="5556459405103347317">Ricarica</translation>
 <translation id="555816257274242153">Monitoraggio del prezzo interrotto</translation>
@@ -872,7 +872,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="5797521893972859201">Cancella la cronologia, anche nella casella di ricerca</translation>
 <translation id="5797949256525811424">Argomento bloccato</translation>
 <translation id="5809361687334836369">{HOURS,plural, =1{# ora fa}other{# ore fa}}</translation>
-<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> Brave LLC Tutti i diritti riservati.</translation>
+<translation id="5311273890481188673">Copyright © <ph name="YEAR"/> AI Wize LLC Tutti i diritti riservati.</translation>
 <translation id="5814749351757353073">Rimani al passo con i tuoi siti preferiti</translation>
 <translation id="5822875253699806474">Per tornare rapidamente ai siti che hai visitato, sincronizza le tue schede e la cronologia</translation>
 <translation id="5829586821381540080">Salvato in <ph name="FOLDER_NAME"/></translation>
@@ -887,9 +887,9 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="5860033963881614850">Off</translation>
 <translation id="5860491529813859533">Attiva</translation>
 <translation id="5864419784173784555">In attesa di un altro download…</translation>
-<translation id="6538479075382111079">Invia automaticamente a Brave statistiche sull'utilizzo e report sugli arresti anomali</translation>
+<translation id="6538479075382111079">Invia automaticamente a AI Wize statistiche sull'utilizzo e report sugli arresti anomali</translation>
 <translation id="5869522115854928033">Password salvate</translation>
-<translation id="5604589745019948682">Per seguire un sito, aprilo, vai al menu Brave e tocca Segui.</translation>
+<translation id="5604589745019948682">Per seguire un sito, aprilo, vai al menu AI Wize e tocca Segui.</translation>
 <translation id="5879072387416556377">Ricevi suggerimenti migliori</translation>
 <translation id="5899667542927581604">Nessun foglio di passkey è stato chiuso</translation>
 <translation id="5916664084637901428">On</translation>
@@ -898,7 +898,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="6103327872225198548">Brave in uso per la ricerca</translation>
 <translation id="5945035219773565305">Consiglio corrente: <ph name="RECOMMENDATION"/></translation>
 <translation id="5951119116059277034">Visualizzazione della pagina attiva</translation>
-<translation id="305870044889644984">Apri Centro assistenza di Brave in nuova scheda</translation>
+<translation id="305870044889644984">Apri Centro assistenza di AI Wize in nuova scheda</translation>
 <translation id="59577092665511740">Scegli un account.</translation>
 <translation id="5958275228015807058">Puoi trovare i tuoi file e le tue pagine nella cartella Download</translation>
 <translation id="5958994127112619898">Pagina semplificata</translation>
@@ -925,7 +925,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="6070730414166672373">Contatto la tua banca…</translation>
 <translation id="6085886413119427067">Consente di stabilire come connettersi ai siti web tramite una connessione sicura</translation>
 <translation id="60923314841986378"><ph name="HOURS"/> ore rimanenti</translation>
-<translation id="4726571606794511368">Se Brave è anche il tuo motore di ricerca predefinito, riceverai suggerimenti migliori e pertinenti al contesto</translation>
+<translation id="4726571606794511368">Se AI Wize è anche il tuo motore di ricerca predefinito, riceverai suggerimenti migliori e pertinenti al contesto</translation>
 <translation id="6108923351542677676">Configurazione in corso…</translation>
 <translation id="6112702117600201073">Aggiornamento della pagina in corso</translation>
 <translation id="6122831415929794347">Disattivare la Navigazione sicura?</translation>
@@ -938,11 +938,11 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="6140912465461743537">Paese/regione</translation>
 <translation id="6150320133806434356">Segnalibro salvato</translation>
 <translation id="6154478581116148741">Attiva il blocco schermo in Impostazioni per esportare le tue password da questo dispositivo</translation>
-<translation id="7087658909840709934">Precarica le pagine che Brave ritiene tu possa visitare.</translation>
+<translation id="7087658909840709934">Precarica le pagine che AI Wize ritiene tu possa visitare.</translation>
 <translation id="6186394685773237175">Non sono state trovate password compromesse</translation>
 <translation id="6192907950379606605">Recupera descriz. immagini</translation>
 <translation id="6193448654517602979">Seleziona schede</translation>
-<translation id="8367262879301982880">Le password vengono salvate in Gestore delle password di Brave su questo dispositivo</translation>
+<translation id="8367262879301982880">Le password vengono salvate in Gestore delle password di AI Wize su questo dispositivo</translation>
 <translation id="6202812185118613467">Accedi di nuovo per avviare la sincronizzazione</translation>
 <translation id="6205314730813004066">Privacy per gli annunci</translation>
 <translation id="6210748933810148297">Non sei <ph name="EMAIL"/>?</translation>
@@ -951,7 +951,7 @@ Per cambiare questa impostazione, <ph name="BEGIN_LINK"/>reimposta la sincronizz
 <translation id="6232535412751077445">Se attivi l'opzione "Non tenere traccia", verrà inclusa una richiesta nel tuo traffico di navigazione. Gli effetti dipendono dall'eventuale risposta dei siti web alla richiesta e dall'interpretazione di quest'ultima.
 
 Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annunci non basati su altri siti web visitati. Molti siti web continueranno tuttavia a raccogliere e a utilizzare i dati di navigazione, ad esempio per aumentare la sicurezza, fornire contenuti, annunci e consigli, nonché per generare statistiche sui rapporti.</translation>
-<translation id="3895383310037101583">Attiva la sincronizzazione per salvare nel tuo Account Brave le password su questo dispositivo</translation>
+<translation id="3895383310037101583">Attiva la sincronizzazione per salvare nel tuo Account AI Wize le password su questo dispositivo</translation>
 <translation id="6255794742848779505">Stiamo cambiando la modalità di salvataggio delle password su questo dispositivo</translation>
 <translation id="6264376385120300461">Scarica comunque</translation>
 <translation id="6277522088822131679">Si è verificato un problema durante la stampa della pagina. Riprova.</translation>
@@ -976,18 +976,18 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="6357653805084533597">Puoi utilizzare questo telefono per accedere sul dispositivo che mostra questo codice QR.</translation>
 <translation id="6363990818884053551">Per avviare la sincronizzazione devi verificare la tua identità</translation>
 <translation id="6364438453358674297">Rimuovere il suggerimento dalla cronologia?</translation>
-<translation id="806493401838431801">Precarica più di frequente le pagine che Brave ritiene tu possa visitare. Questa impostazione potrebbe comportare un maggior utilizzo dei dati.</translation>
+<translation id="806493401838431801">Precarica più di frequente le pagine che AI Wize ritiene tu possa visitare. Questa impostazione potrebbe comportare un maggior utilizzo dei dati.</translation>
 <translation id="6382848304055775421">Esportazione in corso…</translation>
 <translation id="6394791151443660613">Cerca: <ph name="SEARCH_QUERY"/></translation>
 <translation id="6395288395575013217">LINK</translation>
 <translation id="6397616442223433927">Di nuovo online</translation>
-<translation id="8789425457808164956">Per inviare questa scheda a un altro dispositivo, accedi a Brave su quel dispositivo</translation>
+<translation id="8789425457808164956">Per inviare questa scheda a un altro dispositivo, accedi a AI Wize su quel dispositivo</translation>
 <translation id="6404511346730675251">Modifica preferito</translation>
 <translation id="6406506848690869874">Sincronizzazione</translation>
 <translation id="6407224748847589805">Impossibile connettersi al computer. Prova con un'altra opzione di verifica.</translation>
 <translation id="6410883413783534063">Apri più schede per visitare pagine diverse contemporaneamente</translation>
 <translation id="6411219469806822692">Non puoi scorrere più in alto di così. Prova a partire da un punto più in alto nella pagina.</translation>
-<translation id="7810992039564280750">Verifica gli URL con un elenco di siti non sicuri archiviati in Brave. Se un sito cerca di rubare la tua password o se scarichi un file dannoso, Brave potrebbe inviare anche gli URL, inclusi bit e contenuti di pagina, a Navigazione sicura.</translation>
+<translation id="7810992039564280750">Verifica gli URL con un elenco di siti non sicuri archiviati in Brave. Se un sito cerca di rubare la tua password o se scarichi un file dannoso, AI Wize potrebbe inviare anche gli URL, inclusi bit e contenuti di pagina, a Navigazione sicura.</translation>
 <translation id="641643625718530986">Stampa…</translation>
 <translation id="6422857128426228781">Qui troverai i tuoi prodotti monitorati</translation>
 <translation id="6433501201775827830">Scegli il motore di ricerca</translation>
@@ -998,7 +998,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="6447558397796644647">Impossibile trovare un preferito corrispondente. Controlla l'ortografia o aggiungi un nuovo preferito.</translation>
 <translation id="6459045781120991510">Sondaggi</translation>
 <translation id="6461962085415701688">Impossibile aprire il file.</translation>
-<translation id="9055113864158719823">Puoi vedere i siti che visiti in Brave e impostare dei timer per ciascuno di essi.\n\nBrave riceve informazioni sui siti per i quali imposti dei timer e sul tempo che trascorri a visitarli. Queste informazioni sono utilizzate al fine di migliorare Benessere digitale.</translation>
+<translation id="9055113864158719823">Puoi vedere i siti che visiti in AI Wize e impostare dei timer per ciascuno di essi.\n\nBrave riceve informazioni sui siti per i quali imposti dei timer e sul tempo che trascorri a visitarli. Queste informazioni sono utilizzate al fine di migliorare Benessere digitale.</translation>
 <translation id="6473086018775716761">Elenco di opzioni di condivisione aperto nella parte inferiore dello schermo.</translation>
 <translation id="6475951671322991020">Scarica video</translation>
 <translation id="6477928892249167417">Questi siti sembrano importanti per te:</translation>
@@ -1006,51 +1006,51 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="650224091954855786">{FILE_COUNT,plural, =1{File scaricato}other{# download completati}}</translation>
 <translation id="3960299545138990065">Riavvia Brave</translation>
 <translation id="6527303717912515753">Condividi</translation>
-<translation id="708829030563435351">I siti che visiti in Brave non verranno mostrati. Tutti i timer dei siti saranno eliminati.</translation>
+<translation id="708829030563435351">I siti che visiti in AI Wize non verranno mostrati. Tutti i timer dei siti saranno eliminati.</translation>
 <translation id="7723158744459952869">Brave ha impiegato troppo tempo a rispondere</translation>
 <translation id="6539092367496845964">Si è verificato un problema. Riprova più tardi.</translation>
 <translation id="6541983376925655882">{NUM_HOURS,plural, =1{Eseguito 1 ora fa}other{Eseguito # ore fa}}</translation>
 <translation id="6545017243486555795">Cancella tutti i dati</translation>
 <translation id="6546511553472444032">Potrebbe essere dannoso</translation>
-<translation id="6702167990458635422">Non ti protegge da estensioni, download e siti web pericolosi. Le impostazioni di Navigazione sicura di altri prodotti Brave rimarranno invariate.</translation>
+<translation id="6702167990458635422">Non ti protegge da estensioni, download e siti web pericolosi. Le impostazioni di Navigazione sicura di altri prodotti AI Wize rimarranno invariate.</translation>
 <translation id="6556542240154580383">{TAB_COUNT,plural, =1{<ph name="TAB_TITLE"/> e <ph name="TAB_COUNT_ONE"/> altra scheda verranno chiuse}other{<ph name="TAB_TITLE"/> e altre <ph name="TAB_COUNT_MANY"/> schede verranno chiuse}}</translation>
 <translation id="6560414384669816528">Ricerche con Sogou</translation>
 <translation id="656065428026159829">Mostra altri</translation>
 <translation id="6565959834589222080">Viene utilizzata la rete Wi-Fi quando è disponibile</translation>
 <translation id="4480935821314799946">Vedrai storie di <ph name="SITE_NAME"/> quando aprirai una nuova scheda. I siti che segui vengono salvati nel tuo Account Brave. Puoi gestirli nelle impostazioni di Discover.</translation>
 <translation id="6573096386450695060">Consenti sempre</translation>
-<translation id="5157964048453367290">Le schede aperte in Brave sugli altri dispositivi verranno visualizzate qui.</translation>
+<translation id="5157964048453367290">Le schede aperte in AI Wize sugli altri dispositivi verranno visualizzate qui.</translation>
 <translation id="6583199322650523874">Aggiungi la pagina corrente ai Preferiti</translation>
 <translation id="6588043302623806746">Usa DNS sicuro</translation>
 <translation id="6590471736817333463">Risparmia fino al 60% di dati</translation>
 <translation id="6590680911007613645">Assicurati che la password che stai salvando corrisponda a quella di <ph name="SITE"/></translation>
 <translation id="6593061639179217415">Sito desktop</translation>
 <translation id="6594347733515723558">Ordina e visualizza</translation>
-<translation id="2466982615210189224">Le immagini vengono inviate a Brave per migliorare le descrizioni.</translation>
+<translation id="2466982615210189224">Le immagini vengono inviate a AI Wize per migliorare le descrizioni.</translation>
 <translation id="663059986967017181">Copiata in Brave</translation>
 <translation id="661266467055912436">Migliora il livello di sicurezza per te e per chiunque sul Web.</translation>
-<translation id="8127050479140582768">Per inviare questa scheda a un altro dispositivo, accedi a Brave su entrambi i dispositivi</translation>
+<translation id="8127050479140582768">Per inviare questa scheda a un altro dispositivo, accedi a AI Wize su entrambi i dispositivi</translation>
 <translation id="6627583120233659107">Modifica cartella</translation>
 <translation id="6636623428211296678">Esamina altre impostazioni qui sotto oppure termina ora</translation>
 <translation id="2259649928554669581">Per altre impostazioni relative a privacy, sicurezza e raccolta dei dati, consulta le sezioni <ph name="BEGIN_LINK1"/>Sincronizzazione<ph name="END_LINK1"/> e <ph name="BEGIN_LINK2"/>Servizi Brave<ph name="END_LINK2"/></translation>
-<translation id="7939692063031538305">Per contribuire a migliorare l'app, Brave invia a Brave dati sull'utilizzo e sugli arresti anomali. <ph name="BEGIN_UMA_LINK"/>Gestisci<ph name="END_UMA_LINK"/></translation>
+<translation id="7939692063031538305">Per contribuire a migliorare l'app, AI Wize invia a AI Wize dati sull'utilizzo e sugli arresti anomali. <ph name="BEGIN_UMA_LINK"/>Gestisci<ph name="END_UMA_LINK"/></translation>
 <translation id="6640207029842583248">Blocca sempre</translation>
 <translation id="6641780377503683465">Rimuovi <ph name="INTEREST"/></translation>
 <translation id="6643016212128521049">Cancella</translation>
 <translation id="6645629752388991326">Controlla quali dispositivi possono eseguire l'accesso usando questo dispositivo come token di sicurezza.</translation>
-<translation id="2730188427562924169">Invia una parte offuscata dell'URL a Brave tramite un server di tutela della privacy che nasconde il tuo indirizzo IP. Se un sito cerca di rubare la tua password o se scarichi un file dannoso, Brave potrebbe inviare a Brave anche gli URL, inclusi frammenti dei contenuti delle pagine.</translation>
-<translation id="7556503430569358637">Gli URL che visiti vengono inviati a Brave per prevedere quali siti potresti visitare in futuro</translation>
+<translation id="2730188427562924169">Invia una parte offuscata dell'URL a AI Wize tramite un server di tutela della privacy che nasconde il tuo indirizzo IP. Se un sito cerca di rubare la tua password o se scarichi un file dannoso, AI Wize potrebbe inviare a AI Wize anche gli URL, inclusi frammenti dei contenuti delle pagine.</translation>
+<translation id="7556503430569358637">Gli URL che visiti vengono inviati a AI Wize per prevedere quali siti potresti visitare in futuro</translation>
 <translation id="6678472970290886941">L'amministratore può modificare da remoto la configurazione del browser. L'attività svolta su questo dispositivo potrebbe essere gestita anche al di fuori di Brave.</translation>
 <translation id="6648977384226967773">{CONTACT,plural, =1{<ph name="CONTACT_PREVIEW"/>\u2026 e altri <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}other{<ph name="CONTACT_PREVIEW"/>\u2026 e altri <ph name="NUMBER_OF_ADDITIONAL_CONTACTS"/>}}</translation>
 <translation id="6649642165559792194">Anteprima immagine <ph name="BEGIN_NEW"/>Novità<ph name="END_NEW"/></translation>
 <translation id="6657585470893396449">Password</translation>
 <translation id="6659594942844771486">Scheda</translation>
-<translation id="9145803563102831353">Al momento, le password salvate su questo dispositivo non possono essere utilizzate su tutti i canali Brave. Dopo la versione 121 di Brave, le password salvate sul dispositivo per Brave e <ph name="CHROME_CHANNEL"/> verranno unite e potranno essere utilizzate in entrambe le app.</translation>
+<translation id="9145803563102831353">Al momento, le password salvate su questo dispositivo non possono essere utilizzate su tutti i canali Brave. Dopo la versione 121 di Brave, le password salvate sul dispositivo per AI Wize e <ph name="CHROME_CHANNEL"/> verranno unite e potranno essere utilizzate in entrambe le app.</translation>
 <translation id="666731172850799929">Apri in <ph name="APP_NAME"/></translation>
 <translation id="6671495933530132209">Copia immagine</translation>
 <translation id="6672917148207387131">Aggiungi <ph name="DOMAIN"/></translation>
 <translation id="6674571176963658787">Per avviare la sincronizzazione devi inserire la tua passphrase</translation>
-<translation id="8581481290581777242">Eliminare i dati di Brave dal dispositivo?</translation>
+<translation id="8581481290581777242">Eliminare i dati di AI Wize dal dispositivo?</translation>
 <translation id="3683330416566109578">Accedi a questo sito e a Brave</translation>
 <translation id="3385384709865894288">Migliora Brave</translation>
 <translation id="670498945988402717">Eseguito ieri</translation>
@@ -1061,19 +1061,19 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7499197548870160669">Nell'Account Brave</translation>
 <translation id="6738516213925468394">I tuoi dati sono stati criptati con la tua <ph name="BEGIN_LINK"/>passphrase di sincronizzazione<ph name="END_LINK"/> in data <ph name="TIME"/>. Inseriscila per avviare la sincronizzazione.</translation>
 <translation id="6738867403308150051">Download in corso…</translation>
-<translation id="2275686406263739320">È normale che i siti che visiti memorizzino argomenti di tuo interesse per personalizzare la tua esperienza. I siti possono anche memorizzare su Brave informazioni relative ai tuoi interessi.</translation>
+<translation id="2275686406263739320">È normale che i siti che visiti memorizzino argomenti di tuo interesse per personalizzare la tua esperienza. I siti possono anche memorizzare su AI Wize informazioni relative ai tuoi interessi.</translation>
 <translation id="6751521182688001123">Apri rapidamente una nuova scheda. Tocca e tieni premuto per modificare questa scorciatoia.</translation>
 <translation id="6756507620369789050">Condividi feedback</translation>
 <translation id="6767294960381293877">Elenco di dispositivi con cui condividere una scheda aperto nella parte inferiore dello schermo.</translation>
 <translation id="6770602306803890733">Aumenta la sicurezza per te e per tutti gli utenti del Web</translation>
-<translation id="8174975477247159780">Termini di servizio aggiuntivi di Brave e ChromeOS</translation>
+<translation id="8174975477247159780">Termini di servizio aggiuntivi di AI Wize e ChromeOS</translation>
 <translation id="6795633245022906657">Apri rapidamente una nuova scheda. Per modificare questa scorciatoia, vai a Impostazioni.</translation>
 <translation id="6802555630140434547">La finestra verrà chiusa</translation>
 <translation id="6811034713472274749">La pagina è pronta per essere visualizzata</translation>
 <translation id="6813359536773993594">{FILE_COUNT,plural, =1{Immagini, 1 immagine nell'elenco}other{Immagini, # immagini nell'elenco}}</translation>
 <translation id="8418237809013783651">Accedi a Brave, foglio aperto.</translation>
 <translation id="6817747507826986771">Condividi rapidamente questa pagina. Tocca e tieni premuto per modificare questa scorciatoia.</translation>
-<translation id="118366698571543506">Accedi per poter usufruire dei tuoi dati Brave sui vari dispositivi</translation>
+<translation id="118366698571543506">Accedi per poter usufruire dei tuoi dati AI Wize sui vari dispositivi</translation>
 <translation id="6820686453637990663">CVC</translation>
 <translation id="6823561724060793716">Dalla barra degli indirizzi, puoi aprire le informazioni sulla pagina per vedere informazioni aggiuntive sulla pagina che stai visitando</translation>
 <translation id="6828070228333235514">Interrompi monitoraggio prezzo</translation>
@@ -1085,7 +1085,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="6850409657436465440">Il download è ancora in corso</translation>
 <translation id="6850830437481525139"><ph name="TAB_COUNT"/> schede chiuse</translation>
 <translation id="685340923442249391">{FILE_COUNT,plural, =1{File audio, 1 file audio nell'elenco}other{File audio, # file audio nell'elenco}}</translation>
-<translation id="4046835482356054431">Discover di Brave - disattivato</translation>
+<translation id="4046835482356054431">Discover di AI Wize - disattivato</translation>
 <translation id="686366188661646310">Vuoi eliminare la password?</translation>
 <translation id="6864459304226931083">Scarica immagine</translation>
 <translation id="6865313869410766144">Dati della compilazione automatica dei moduli</translation>
@@ -1101,7 +1101,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="6909589135458168665">Precarica le pagine</translation>
 <translation id="6910211073230771657">Eliminato</translation>
 <translation id="6918398787259831832">Se il problema persiste, <ph name="BEGIN_LINK"/>richiedi ulteriori informazioni<ph name="END_LINK"/> a <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/>.</translation>
-<translation id="5854472260286669100">Tutti i codici di sicurezza salvati sul dispositivo e nell'Account Brave verranno eliminati</translation>
+<translation id="5854472260286669100">Tutti i codici di sicurezza salvati sul dispositivo e nell'Account AI Wize verranno eliminati</translation>
 <translation id="6942665639005891494">Modifica in qualsiasi momento il percorso di download predefinito utilizzando l'opzione del menu Impostazioni</translation>
 <translation id="694267552845942083">Stai personalizzando le impostazioni di sincronizzazione. Per terminare l'attivazione della sincronizzazione, tocca il pulsante Conferma nella parte inferiore dello schermo. Torna indietro</translation>
 <translation id="6945221475159498467">Seleziona</translation>
@@ -1120,15 +1120,15 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7029809446516969842">Password</translation>
 <translation id="7030304022046916278">Invia gli URL a Navigazione sicura per controllarli</translation>
 <translation id="7035701931849773472">Altre opzioni</translation>
-<translation id="5813862251770201080">Accedi a Brave con il tuo Account Brave</translation>
+<translation id="5813862251770201080">Accedi a AI Wize con il tuo Account Brave</translation>
 <translation id="7054588988317389591">Vuoi recuperare le descrizioni delle immagini?</translation>
 <translation id="7055152154916055070">Reindirizzamento bloccato:</translation>
 <translation id="7063006564040364415">Impossibile collegarsi al server di sincronizzazione.</translation>
 <translation id="7071521146534760487">Gestisci account</translation>
 <translation id="707155805709242880">Scegli qui sotto i dati da sincronizzare</translation>
 <translation id="7077143737582773186">Scheda SD</translation>
-<translation id="2374582967527009647">Invia gli URL a Navigazione sicura per verificarli. Invia anche piccoli esempi di pagine, download, attività delle estensioni e informazioni di sistema per contribuire al rilevamento di nuove minacce. Quando hai effettuato l'accesso, collega temporaneamente questi dati al tuo Account Brave per proteggerti nelle app Brave.</translation>
-<translation id="5499149312981370855">Scegli se includere la cronologia di Brave per esperienze ancora più personalizzate nei servizi Brave</translation>
+<translation id="2374582967527009647">Invia gli URL a Navigazione sicura per verificarli. Invia anche piccoli esempi di pagine, download, attività delle estensioni e informazioni di sistema per contribuire al rilevamento di nuove minacce. Quando hai effettuato l'accesso, collega temporaneamente questi dati al tuo Account AI Wize per proteggerti nelle app Brave.</translation>
+<translation id="5499149312981370855">Scegli se includere la cronologia di AI Wize per esperienze ancora più personalizzate nei servizi Brave</translation>
 <translation id="8208853227947884571">Brave è aggiornato</translation>
 <translation id="7105047059074518658">Accedi per navigare più facilmente su più dispositivi</translation>
 <translation id="7106762743910369165">Il tuo browser è gestito dalla tua organizzazione</translation>
@@ -1144,28 +1144,28 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7177873915659574692">Impossibile creare il codice QR. L'URL contiene più di <ph name="CHARACTER_LIMIT"/> caratteri.</translation>
 <translation id="7180611975245234373">Aggiorna</translation>
 <translation id="7183693674623539380">Gruppo di schede - <ph name="TITLE_OF_GROUP"/></translation>
-<translation id="8355565210555500987">Ti protegge su Brave e potrebbe essere utilizzata per migliorare la sicurezza su altre app Brave se esegui l'accesso.</translation>
+<translation id="8355565210555500987">Ti protegge su AI Wize e potrebbe essere utilizzata per migliorare la sicurezza su altre app AI Wize se esegui l'accesso.</translation>
 <translation id="7191430249889272776">Scheda aperta in background.</translation>
 <translation id="7196215469483532480">Spiegazione della Guida alla privacy aperta a schermo intero</translation>
-<translation id="1014116676551114642">Contenuti di Brave per giovani menti - off</translation>
+<translation id="1014116676551114642">Contenuti di AI Wize per giovani menti - off</translation>
 <translation id="7207760545532569765">Ripristina <ph name="TAB_COUNT"/> schede come nuove schede in background.</translation>
 <translation id="7221869452894271364">Ricarica questa pagina</translation>
 <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 download in attesa}other{# download in attesa}}</translation>
 <translation id="72415438529550637">Il suggerimento per la password è chiuso.</translation>
-<translation id="8287068819750208230">Assicurati che in Brave sia attiva la sincronizzazione di <ph name="TARGET_DEVICE_NAME"/></translation>
+<translation id="8287068819750208230">Assicurati che in AI Wize sia attiva la sincronizzazione di <ph name="TARGET_DEVICE_NAME"/></translation>
 <translation id="7252076891734325316">Avvicina il telefono al computer</translation>
-<translation id="4957342254208357193">Il tuo dispositivo Android potrebbe includere un'impostazione simile. Se la misurazione degli annunci è attiva in Brave e sul tuo dispositivo Android, una società potrebbe essere in grado di misurare l'efficacia di un annuncio sui siti web che visiti e sulle app che utilizzi</translation>
+<translation id="4957342254208357193">Il tuo dispositivo Android potrebbe includere un'impostazione simile. Se la misurazione degli annunci è attiva in AI Wize e sul tuo dispositivo Android, una società potrebbe essere in grado di misurare l'efficacia di un annuncio sui siti web che visiti e sulle app che utilizzi</translation>
 <translation id="727288900855680735">Inviare <ph name="ONE_TIME_CODE"/> a <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Sito bloccato</translation>
-<translation id="7949597606523411684">Brave elimina automaticamente gli argomenti risalenti a più di 4 settimane prima della data corrente. Mentre continui a navigare, un argomento potrebbe riapparire nell'elenco. In alternativa, puoi bloccare gli argomenti che non vuoi che Brave condivida con i siti. Scopri di più sulla <ph name="BEGIN_LINK"/>gestione della privacy per gli annunci in Brave<ph name="END_LINK"/>.</translation>
-<translation id="4561646469134805137">Durante la digitazione, Brave invia i contenuti della barra degli indirizzi o della casella di ricerca al tuo motore di ricerca predefinito</translation>
+<translation id="7949597606523411684">Brave elimina automaticamente gli argomenti risalenti a più di 4 settimane prima della data corrente. Mentre continui a navigare, un argomento potrebbe riapparire nell'elenco. In alternativa, puoi bloccare gli argomenti che non vuoi che AI Wize condivida con i siti. Scopri di più sulla <ph name="BEGIN_LINK"/>gestione della privacy per gli annunci in Brave<ph name="END_LINK"/>.</translation>
+<translation id="4561646469134805137">Durante la digitazione, AI Wize invia i contenuti della barra degli indirizzi o della casella di ricerca al tuo motore di ricerca predefinito</translation>
 <translation id="7289303553784750393">Se sei online, ma il problema persiste, puoi provare altri metodi per continuare su <ph name="SITE_ETLD_PLUS_ONE"/>.</translation>
 <translation id="7290209999329137901">Impossibile rinominare</translation>
 <translation id="7291910923717764901">Descrizioni delle immagini aggiunte per questa pagina</translation>
 <translation id="7293429513719260019">Seleziona lingua</translation>
 <translation id="729975465115245577">Il tuo dispositivo non ha un'app per archiviare il file di password.</translation>
-<translation id="7581648335850642193">Il tuo dispositivo Android potrebbe includere un'impostazione simile. Se questa impostazione è attiva in Brave e sul tuo dispositivo Android, un'azienda potrebbe essere in grado di misurare l'efficacia di un annuncio sui siti web che visiti e nelle app che utilizzi.</translation>
-<translation id="1382596880054356475">Offline. Brave non può controllare le tue password.</translation>
+<translation id="7581648335850642193">Il tuo dispositivo Android potrebbe includere un'impostazione simile. Se questa impostazione è attiva in AI Wize e sul tuo dispositivo Android, un'azienda potrebbe essere in grado di misurare l'efficacia di un annuncio sui siti web che visiti e nelle app che utilizzi.</translation>
+<translation id="1382596880054356475">Offline. AI Wize non può controllare le tue password.</translation>
 <translation id="7313188324932846546">Tocca per configurare la sincronizzazione</translation>
 <translation id="7324354302972299151">Invia una richiesta "Do Not Track"</translation>
 <translation id="7332075081379534664">Accesso eseguito</translation>
@@ -1192,7 +1192,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7431991332293347422">Controlla la modalità di utilizzo della cronologia di navigazione per personalizzare la Ricerca e non solo</translation>
 <translation id="7435356471928173109">Disattivata dall'amministratore</translation>
 <translation id="6234515504547364178">Esci da Brave</translation>
-<translation id="6147816961713837040">Invia una parte offuscata dell'URL a Brave tramite un server di tutela della privacy che nasconde il tuo indirizzo IP</translation>
+<translation id="6147816961713837040">Invia una parte offuscata dell'URL a AI Wize tramite un server di tutela della privacy che nasconde il tuo indirizzo IP</translation>
 <translation id="3699067418237091329">Verrai disconnesso dalla maggior parte dei siti, ma non dal tuo Account Brave.</translation>
 <translation id="7453810262525006706">Comprimi in vista laterale</translation>
 <translation id="7454641608352164238">Spazio insufficiente</translation>
@@ -1211,7 +1211,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7493994139787901920"><ph name="VERSION"/> (Ultimo aggiornamento: <ph name="TIME_SINCE_UPDATE"/>)</translation>
 <translation id="7497755084107113646">Argomento aggiunto di nuovo agli argomenti potenziali</translation>
 <translation id="7498271377022651285">Attendi…</translation>
-<translation id="8156131600798538460">Per uscire dal tuo Account Brave su tutti i siti web, <ph name="BEGIN_LINK1"/>esci da Brave<ph name="END_LINK1"/>.</translation>
+<translation id="8156131600798538460">Per uscire dal tuo Account AI Wize su tutti i siti web, <ph name="BEGIN_LINK1"/>esci da Brave<ph name="END_LINK1"/>.</translation>
 <translation id="750228856503700085">Aggiornamenti non disponibili</translation>
 <translation id="7507207699631365376">Vedi le <ph name="BEGIN_LINK"/>norme sulla privacy<ph name="END_LINK"/> del fornitore di servizi</translation>
 <translation id="7514365320538308">Scarica</translation>
@@ -1221,7 +1221,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7523960634226602883">Cerca con la fotocamera usando Google Lens</translation>
 <translation id="7539698981064401140">Sincronizza schede e cronologia</translation>
 <translation id="7562080006725997899">Cancellazione dei dati di navigazione in corso</translation>
-<translation id="7814200940910057384">Dati di Brave cancellati</translation>
+<translation id="7814200940910057384">Dati di AI Wize cancellati</translation>
 <translation id="7577900504646297215">Gestisci interessi</translation>
 <translation id="757855969265046257">{FILES,plural, =1{<ph name="FILES_DOWNLOADED_ONE"/> file scaricato}other{<ph name="FILES_DOWNLOADED_MANY"/> file scaricati}}</translation>
 <translation id="7581273696622423628">Vai al sondaggio</translation>
@@ -1231,7 +1231,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7596558890252710462">Sistema operativo</translation>
 <translation id="7603168929588204083">Data non valida</translation>
 <translation id="7605594153474022051">La sincronizzazione non funziona</translation>
-<translation id="649070405679044769">Accesso effettuato a Brave come</translation>
+<translation id="649070405679044769">Accesso effettuato a AI Wize come</translation>
 <translation id="7612989789287281429">Accesso in corso…</translation>
 <translation id="7619072057915878432">Download di <ph name="FILE_NAME"/> non riuscito a causa di errori di rete.</translation>
 <translation id="7207456302801184289">Ti diamo il benvenuto in Brave</translation>
@@ -1247,8 +1247,8 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="766587987807204883">Qui vengono visualizzati gli articoli che potrai leggere anche offline</translation>
 <translation id="7682724950699840886">Prova i seguenti suggerimenti: assicurati di avere spazio sufficiente sul dispositivo e prova a esportare di nuovo.</translation>
 <translation id="7686086654630106285">Scopri di più sugli annunci suggeriti dai siti</translation>
-<translation id="2667018639405889513">Alcune delle pagine che visiti sono precaricate. Le pagine potrebbero essere precaricate tramite i server di Brave quando il sito che vi rimanda è un sito Brave</translation>
-<translation id="7795837497684113327">Impossibile aprire Brave sul dispositivo. Per risolvere il problema, scarica l'ultimo aggiornamento di Brave dallo store.</translation>
+<translation id="2667018639405889513">Alcune delle pagine che visiti sono precaricate. Le pagine potrebbero essere precaricate tramite i server di AI Wize quando il sito che vi rimanda è un sito Brave</translation>
+<translation id="7795837497684113327">Impossibile aprire AI Wize sul dispositivo. Per risolvere il problema, scarica l'ultimo aggiornamento di AI Wize dallo store.</translation>
 <translation id="7691043218961417207">Esplora i contenuti da seguire</translation>
 <translation id="7697383401610880082">Punto di trascinamento</translation>
 <translation id="7698359219371678927">Crea email in <ph name="APP_NAME"/></translation>
@@ -1267,7 +1267,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7774809984919390718">{PAYMENT_METHOD,plural, =1{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 e altri <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}other{<ph name="PAYMENT_METHOD_PREVIEW"/>\u2026 e altri <ph name="NUMBER_OF_ADDITIONAL_PAYMENT_METHODS"/>}}</translation>
 <translation id="5614774692683309331">Se hai eseguito l'accesso, ti protegge nei servizi Brave.</translation>
 <translation id="7778840695157240389">Ricontrolla più tardi se ci sono nuove notizie</translation>
-<translation id="7703329426540523149">Se hai eseguito l'accesso, collega temporaneamente questi dati al tuo Account Brave per proteggerti nelle app Brave</translation>
+<translation id="7703329426540523149">Se hai eseguito l'accesso, collega temporaneamente questi dati al tuo Account AI Wize per proteggerti nelle app Brave</translation>
 <translation id="7791543448312431591">Aggiungi</translation>
 <translation id="7798392620021911922"><ph name="TAB_COUNT"/> schede ripristinate</translation>
 <translation id="780301667611848630">No, grazie</translation>
@@ -1276,7 +1276,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Tutti i file, 1 file nell'elenco}other{Tutti i file, # file nell'elenco}}</translation>
 <translation id="7815484226266492798">Screenshot lungo</translation>
 <translation id="7821130663268546430">Puoi trovare tutte le schede aperte nel Selettore di schede</translation>
-<translation id="8439902729344548970">Se hai eseguito l'accesso, questi dati vengono collegati al tuo Account Brave per proteggerti nei servizi Brave, ad esempio aumentando la protezione in Gmail dopo un incidente di sicurezza.</translation>
+<translation id="8439902729344548970">Se hai eseguito l'accesso, questi dati vengono collegati al tuo Account AI Wize per proteggerti nei servizi Brave, ad esempio aumentando la protezione in Gmail dopo un incidente di sicurezza.</translation>
 <translation id="78270725016672455">Il computer chiede di registrare questo dispositivo per accedere a un sito</translation>
 <translation id="7844171778363018843">Nessun dato selezionato da sincronizzare</translation>
 <translation id="7068829570137757602">Servizi Brave</translation>
@@ -1308,7 +1308,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7960972236129063347">Pulsante Indietro in Statistiche pagine</translation>
 <translation id="7961926449547174351">Hai disattivato l'accesso allo spazio di archiviazione. Vai alle Impostazioni per attivarlo.</translation>
 <translation id="7963646190083259054">Fornitore:</translation>
-<translation id="2939504940637874963">Puoi usare le password salvate su qualsiasi dispositivo. Sono salvate in Gestore delle password di Brave per <ph name="ACCOUNT"/>.</translation>
+<translation id="2939504940637874963">Puoi usare le password salvate su qualsiasi dispositivo. Sono salvate in Gestore delle password di AI Wize per <ph name="ACCOUNT"/>.</translation>
 <translation id="7968014550143838305">Aggiunto all'elenco di lettura</translation>
 <translation id="7971136598759319605">Attivo 1 giorno fa</translation>
 <translation id="7975379999046275268">Anteprima pagina <ph name="BEGIN_NEW"/>Novità<ph name="END_NEW"/></translation>
@@ -1317,7 +1317,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7995059495660416932">Vedrai i contenuti non appena saranno disponibili</translation>
 <translation id="799576009106109668">Navigherai più velocemente perché i contenuti vengono caricati in modo proattivo in base alla pagina web che stai visitando</translation>
 <translation id="8004582292198964060">Browser</translation>
-<translation id="3325020657155065477">Cancella i tuoi dati di Brave anche da questo dispositivo</translation>
+<translation id="3325020657155065477">Cancella i tuoi dati di AI Wize anche da questo dispositivo</translation>
 <translation id="8015452622527143194">Ripristina le dimensioni predefinite della pagina</translation>
 <translation id="8026334261755873520">Cancella dati di navigazione</translation>
 <translation id="8027863900915310177">Scegli dove effettuare il download</translation>
@@ -1341,11 +1341,11 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="808747664143081553">Collegamento al dispositivo effettuato</translation>
 <translation id="8090732854597034573">Se hai bisogno di aiuto, rivolgiti al tuo genitore</translation>
 <translation id="8101414242770404289">Nessuna scheda da <ph name="TIME_PERIOD"/></translation>
-<translation id="3249150807062904185">Se continui, accetti i <ph name="BEGIN_TOS_LINK"/>Termini di servizio<ph name="END_TOS_LINK"/>.\nPer contribuire a migliorare l'app, Brave invia a Brave dati sull'utilizzo e sugli arresti anomali. <ph name="BEGIN_UMA_LINK"/>Gestisci<ph name="END_UMA_LINK"/></translation>
+<translation id="3249150807062904185">Se continui, accetti i <ph name="BEGIN_TOS_LINK"/>Termini di servizio<ph name="END_TOS_LINK"/>.\nPer contribuire a migliorare l'app, AI Wize invia a AI Wize dati sull'utilizzo e sugli arresti anomali. <ph name="BEGIN_UMA_LINK"/>Gestisci<ph name="END_UMA_LINK"/></translation>
 <translation id="8105893657415066307"><ph name="DESCRIPTION"/> <ph name="SEPARATOR"/> <ph name="FILE_SIZE"/></translation>
 <translation id="8107530384992929318">Chiudi opzioni di ordinamento</translation>
 <translation id="2919733817273403520">Contribuisci a migliorare le funzionalità e le prestazioni di Brave</translation>
-<translation id="4565206163201411670">Vuoi mostrare la tua attività di Brave in Benessere digitale?</translation>
+<translation id="4565206163201411670">Vuoi mostrare la tua attività di AI Wize in Benessere digitale?</translation>
 <translation id="8118117428362942925">Se hai bisogno di aiuto, rivolgiti al tuo genitore (<ph name="PARENT_NAME"/>)</translation>
 <translation id="8122623268651408616">Ordinamento per più recente</translation>
 <translation id="8127542551745560481">Modifica home page</translation>
@@ -1362,14 +1362,14 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="8210770465353466621">Qui troverai le tue schede</translation>
 <translation id="8215740705341534369">Riquadro laterale</translation>
 <translation id="8218622182176210845">Gestisci il tuo account</translation>
-<translation id="4034729701971511794">Puoi bloccare i siti indesiderati. Inoltre, Brave elimina automaticamente dall'elenco i siti risalenti a più di 30 giorni prima della data corrente. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
+<translation id="4034729701971511794">Puoi bloccare i siti indesiderati. Inoltre, AI Wize elimina automaticamente dall'elenco i siti risalenti a più di 30 giorni prima della data corrente. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
 <translation id="8223642481677794647">Menu scheda feed</translation>
 <translation id="8236097722223016103">Aggiungi ai preferiti</translation>
 <translation id="8237871086242677046">Riquadro inferiore Statistiche pagine</translation>
 <translation id="8243077599929149377">Aggiungi il tuo nome utente</translation>
 <translation id="8250920743982581267">Documenti</translation>
 <translation id="8255617931166444521">I siti possono utilizzare i cookie per vedere la tua attività di navigazione solo sul proprio sito</translation>
-<translation id="2876689296031086375">Poiché le pagine precaricate sono criptate, Brave non accederà ai contenuti di tali pagine. I server di Brave memorizzeranno quali siti vengono precaricati privatamente. Queste informazioni vengono utilizzate solo per precaricare le pagine e non sono collegate ad altri dati provenienti dal tuo Account Brave.</translation>
+<translation id="2876689296031086375">Poiché le pagine precaricate sono criptate, AI Wize non accederà ai contenuti di tali pagine. I server di AI Wize memorizzeranno quali siti vengono precaricati privatamente. Queste informazioni vengono utilizzate solo per precaricare le pagine e non sono collegate ad altri dati provenienti dal tuo Account Brave.</translation>
 <translation id="8260126382462817229">Prova ad accedere nuovamente</translation>
 <translation id="8261506727792406068">Elimina</translation>
 <translation id="82619448491672958">Vedi altre schede</translation>
@@ -1380,7 +1380,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="829672787777123339">Collegamento al dispositivo in corso…</translation>
 <translation id="8310344678080805313">Schede standard</translation>
 <translation id="831192587911042850">Consente di aggiungere il sito web corrente all'elenco di siti web che segui.</translation>
-<translation id="5665071699503384089">Puoi bloccare gli argomenti che non vuoi condividere con i siti. Inoltre, Brave elimina automaticamente gli argomenti più vecchi di 4 settimane. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
+<translation id="5665071699503384089">Puoi bloccare gli argomenti che non vuoi condividere con i siti. Inoltre, AI Wize elimina automaticamente gli argomenti più vecchi di 4 settimane. <ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
 <translation id="834313815369870491">Non tradurre mai i siti</translation>
 <translation id="8348430946834215779">Utilizza HTTPS quando possibile e ricevi un avviso prima di caricare i siti che non lo supportano</translation>
 <translation id="8354977102499939946">Cerca rapidamente con la tua voce. Per modificare questa scorciatoia, vai a Impostazioni.</translation>
@@ -1391,11 +1391,11 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="7651600795135059130">Controlla gli URL confrontandoli con un elenco di siti non sicuri memorizzato in Brave</translation>
 <translation id="8402673309244746971">Vai a Stai seguendo</translation>
 <translation id="8413126021676339697">Mostra cronologia completa</translation>
-<translation id="5348884013239264115">Protegge da siti, download ed estensioni noti per essere pericolosi. Quando visiti un sito, Brave invia una parte offuscata dell'URL a Brave tramite un server di tutela della privacy che nasconde il tuo indirizzo IP. Se un sito effettua attività sospette, vengono inviati anche URL completi e frammenti dei contenuti delle pagine.</translation>
+<translation id="5348884013239264115">Protegge da siti, download ed estensioni noti per essere pericolosi. Quando visiti un sito, AI Wize invia una parte offuscata dell'URL a AI Wize tramite un server di tutela della privacy che nasconde il tuo indirizzo IP. Se un sito effettua attività sospette, vengono inviati anche URL completi e frammenti dei contenuti delle pagine.</translation>
 <translation id="8414396119627470038">Accedi a <ph name="SITE_ETLD_PLUS_ONE"/> con <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8419244640277402268">Includi</translation>
 <translation id="8422250855136581222">Nessuna scheda su questo dispositivo</translation>
-<translation id="5735840612282428689">Pagina inviata. Per visualizzarla, apri Brave sul tuo <ph name="DEVICE_TYPE"/></translation>
+<translation id="5735840612282428689">Pagina inviata. Per visualizzarla, apri AI Wize sul tuo <ph name="DEVICE_TYPE"/></translation>
 <translation id="8427875596167638501">La scheda di anteprima è aperta nella parte inferiore dello schermo</translation>
 <translation id="8428213095426709021">Impostazioni</translation>
 <translation id="8430824733382774043">Condividi solo screenshot</translation>
@@ -1439,14 +1439,14 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="860043288473659153">Nome del titolare della carta</translation>
 <translation id="1673533133011266617">Accedi a Brave, foglio chiuso.</translation>
 <translation id="860282621117673749">Avvisi su cali di prezzo</translation>
-<translation id="5784514951651328424">Il tuo Account Brave potrebbe avere altre forme di cronologia di navigazione all'indirizzo <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="5784514951651328424">Il tuo Account AI Wize potrebbe avere altre forme di cronologia di navigazione all'indirizzo <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="8617240290563765734">Aprire l'URL consigliato specificato nei contenuti scaricati?</translation>
 <translation id="8621068256433641644">telefono</translation>
 <translation id="8636825310635137004">Attiva la sincronizzazione per trovare le tue schede degli altri dispositivi.</translation>
 <translation id="864544049772947936">Gestisci finestre (<ph name="INSTANCE_COUNTS"/>)</translation>
 <translation id="8645920082661222035">Prevede eventi pericolosi e ti avvisa prima che si verifichino</translation>
 <translation id="2734140769649165081">Puoi cancellare i dati nelle Impostazioni di Brave</translation>
-<translation id="7436978557885042606">Usa Brave a modo tuo</translation>
+<translation id="7436978557885042606">Usa AI Wize a modo tuo</translation>
 <translation id="8664979001105139458">Nome file già esistente</translation>
 <translation id="8676276370198826499">Registrati a <ph name="SITE_ETLD_PLUS_ONE"/> con <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
 <translation id="8676789164135894283">Verifiche degli accessi</translation>
@@ -1483,15 +1483,15 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="885480114717186641">Puoi richiedere il sito desktop di <ph name="HOST_NAME"/></translation>
 <translation id="8856607253650333758">Recupera descrizioni</translation>
 <translation id="8856931513242997049">Flusso di autorizzazione alle notifiche chiuso</translation>
-<translation id="1984646864943401749">Invia a Brave gli URL di alcune pagine visitate, informazioni limitate sul sistema e alcuni contenuti delle pagine per contribuire a scoprire le nuove minacce e proteggere tutti gli utenti del Web.</translation>
+<translation id="1984646864943401749">Invia a AI Wize gli URL di alcune pagine visitate, informazioni limitate sul sistema e alcuni contenuti delle pagine per contribuire a scoprire le nuove minacce e proteggere tutti gli utenti del Web.</translation>
 <translation id="8909135823018751308">Condividi…</translation>
 <translation id="2684652081942622950">Brave sync chain</translation>
 <translation id="8921980840204105660">Attiva la sincronizzazione per recuperare i preferiti dagli altri tuoi dispositivi</translation>
 <translation id="8922289737868596582">Usa il pulsante Altre opzioni per scaricare le pagine da usare offline</translation>
 <translation id="8924575305646776101"><ph name="BEGIN_LINK"/>Scopri di più<ph name="END_LINK"/></translation>
 <translation id="892496902842311796">La lingua <ph name="LANG"/> è pronta</translation>
-<translation id="1174893863889683998">Vuoi rimuovere la tua attività di Brave da Benessere digitale?</translation>
-<translation id="179413535815682755">In base alle tue impostazioni, Brave potrebbe anche inviare i cookie, l'URL corrente e la tua posizione</translation>
+<translation id="1174893863889683998">Vuoi rimuovere la tua attività di AI Wize da Benessere digitale?</translation>
+<translation id="179413535815682755">In base alle tue impostazioni, AI Wize potrebbe anche inviare i cookie, l'URL corrente e la tua posizione</translation>
 <translation id="8942627711005830162">Apri nell'altra finestra</translation>
 <translation id="8945143127965743188"><ph name="LANG"/>: impossibile scaricare questa lingua. Riprova più tardi.</translation>
 <translation id="8965591936373831584">in attesa</translation>
@@ -1502,7 +1502,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="8998289560386111590">Non disponibile sul tuo dispositivo</translation>
 <translation id="3275122921244685452">Stai per eseguire l'accesso con un account gestito da <ph name="MANAGED_DOMAIN"/> e consentire al relativo amministratore di avere il controllo dei tuoi dati di Brave. I tuoi dati verranno associati definitivamente a questo account. Se esci da Brave, i dati verranno eliminati da questo dispositivo, ma rimarranno memorizzati nel tuo Account Brave.</translation>
 <translation id="8998837250940831980">Impossibile ridurre a icona la scheda. Riprova più tardi.</translation>
-<translation id="9012585441087414258">Protegge da siti, download ed estensioni noti per essere pericolosi. Se una pagina esegue operazioni sospette, vengono inviati URL e frammenti dei contenuti delle pagine a Brave Navigazione sicura.</translation>
+<translation id="9012585441087414258">Protegge da siti, download ed estensioni noti per essere pericolosi. Se una pagina esegue operazioni sospette, vengono inviati URL e frammenti dei contenuti delle pagine a AI Wize Navigazione sicura.</translation>
 <translation id="9019199799064251516">Vuoi continuare senza blocco del profilo dell'auto?</translation>
 <translation id="9022774213089566801">Più visitati</translation>
 <translation id="9022871169049522985">Siti e inserzionisti possono misurare il rendimento dei propri annunci</translation>
@@ -1512,7 +1512,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="9055497320631373736">Sito aggiunto di nuovo ai siti potenziali</translation>
 <translation id="9063523880881406963">Disattiva Richiedi sito desktop</translation>
 <translation id="9065203028668620118">Modifica</translation>
-<translation id="5496925146144075335">I dati memorizzati che Brave non ritiene importanti (ad esempio siti senza impostazioni salvate o che non visiti spesso)</translation>
+<translation id="5496925146144075335">I dati memorizzati che AI Wize non ritiene importanti (ad esempio siti senza impostazioni salvate o che non visiti spesso)</translation>
 <translation id="9067341854474068781">Nessun foglio di passkey aperto a schermo intero</translation>
 <translation id="906781307897697745">in <ph name="PRODUCT_NAME"/></translation>
 <translation id="9069999660519089861">Nessuna pagina da leggere</translation>
@@ -1546,8 +1546,8 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="9209888181064652401">Impossibile effettuare chiamate</translation>
 <translation id="9212845824145208577">Non puoi scorrere più in basso di così. Prova a partire da un punto più in basso nella pagina.</translation>
 <translation id="9219103736887031265">Immagini</translation>
-<translation id="6946179564366058239">Quando un sito richiede di precaricare privatamente i link sulle sue pagine, Brave cripta e precarica le pagine tramite i server di Brave senza usare cookie. In questo modo la tua identità rimane nascosta ai siti precaricati.</translation>
-<translation id="4596514158372210596">Rimuovi la tua attività di Brave da Benessere digitale</translation>
+<translation id="6946179564366058239">Quando un sito richiede di precaricare privatamente i link sulle sue pagine, AI Wize cripta e precarica le pagine tramite i server di AI Wize senza usare cookie. In questo modo la tua identità rimane nascosta ai siti precaricati.</translation>
+<translation id="4596514158372210596">Rimuovi la tua attività di AI Wize da Benessere digitale</translation>
 <translation id="2830145431802238213">Usa la modalità Lite su Brave</translation>
 <translation id="928550791203542716">Stai seguendo <ph name="SITE_NAME"/></translation>
 <translation id="93533588269984624">Tutte le password verranno scaricate sul tuo dispositivo e rimosse da <ph name="CHROME_CHANNEL"/></translation>
@@ -1566,7 +1566,7 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="993520549480398880">Cancella anche preferiti, cronologia e altri dati da questa auto</translation>
 <translation id="996149300115483134">Menu scheda feed chiuso</translation>
 <translation id="5186185447130319458">Privato</translation>
-<translation id="79269250264141507">Quando digiti qualcosa nella barra degli indirizzi o nella casella di ricerca, Brave invia il testo digitato al tuo motore di ricerca predefinito per ottenere suggerimenti migliori. Questa opzione è disattivata nella modalità privata.</translation>
+<translation id="79269250264141507">Quando digiti qualcosa nella barra degli indirizzi o nella casella di ricerca, AI Wize invia il testo digitato al tuo motore di ricerca predefinito per ottenere suggerimenti migliori. Questa opzione è disattivata nella modalità privata.</translation>
 <translation id="5711390076756601471">Blocca le schede private quando esci da Brave</translation>
 <translation id="1014490034578104945">Usa il blocco schermo per vedere le schede private aperte</translation>
 <translation id="5722020415664104421">Blocca quando usi la modalità privata</translation>
@@ -1582,8 +1582,8 @@ Ad esempio, alcuni siti web potrebbero rispondere alla richiesta mostrando annun
 <translation id="5248610748197335423">Chiudi tutte le Schede private</translation>
 <translation id="4660964651149493586">Sblocca la modalità privata</translation>
 <translation id="5278260521317049275">Attiva il blocco Privato</translation>
-<translation id="6302653771627628530">Quando esci da Brave le schede private vengono bloccate</translation>
-<translation id="3763131702135887799">Aiuta Brave a migliorare per i profili che lo utilizzano come fai tu</translation>
+<translation id="6302653771627628530">Quando esci da AI Wize le schede private vengono bloccate</translation>
+<translation id="3763131702135887799">Aiuta AI Wize a migliorare per i profili che lo utilizzano come fai tu</translation>
 <translation id="4167670741834902166">Nuova Scheda privata</translation>
 <translation id="9148151251783962691">Per navigare in incognito su questo dispositivo, prova la modalità privata</translation>
 <translation id="8355284051444779553">Per aprire una scheda privata, apri il menu</translation>

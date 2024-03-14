@@ -111,7 +111,7 @@ function Main() {
         <div className={styles.logo}>
           <Icon name='product-brave-leo' />
           <div className={styles.logoTitle}>
-            <span>Leo</span>
+            <span>AI Wize Chat</span>
           </div>
           {context.isPremiumUser && <div className={styles.badgePremium}>PREMIUM</div>}
         </div>
