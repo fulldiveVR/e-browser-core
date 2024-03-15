@@ -28,7 +28,7 @@ export const defaultState: NewTab.State = {
   showRewards: false,
   showBraveTalk: false,
   showBitcoinDotCom: false,
-  hideAllWidgets: false,
+  hideAllWidgets: true,
   brandedWallpaperOptIn: false,
   isBrandedWallpaperNotificationDismissed: true,
   isBraveNewsOptedIn: false,

@@ -21,7 +21,7 @@ ExtensionFunction::ResponseAction BraveTalkIsSupportedFunction::Run() {
     return RespondNow(Error("Not available in Tor profile"));
   }
 
-  return RespondNow(WithArguments(true));
+  return RespondNow(WithArguments(false));  // fftf, was disabled
 }
 
 }  // namespace api

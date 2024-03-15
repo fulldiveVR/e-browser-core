@@ -70,7 +70,7 @@ export enum TabType {
   Cards = 'cards'
 }
 
-const tabTypes = Object.values(TabType)
+const tabTypes = Object.values(TabType).filter(t => t !== TabType.Cards)
 
 type TabMap<T> = { [P in TabType]: T }
 const tabIcons: TabMap<string> = {

@@ -357,9 +357,9 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kNewTabPageShowClock, true);
   registry->RegisterStringPref(kNewTabPageClockFormat, "");
   registry->RegisterBooleanPref(kNewTabPageShowStats, true);
-  registry->RegisterBooleanPref(kNewTabPageShowRewards, true);
-  registry->RegisterBooleanPref(kNewTabPageShowBraveTalk, true);
-  registry->RegisterBooleanPref(kNewTabPageHideAllWidgets, false);
+  registry->RegisterBooleanPref(kNewTabPageShowRewards, false);
+  registry->RegisterBooleanPref(kNewTabPageShowBraveTalk, false);
+  registry->RegisterBooleanPref(kNewTabPageHideAllWidgets, true);
 
 // Private New Tab Page
 #if !BUILDFLAG(IS_ANDROID)
