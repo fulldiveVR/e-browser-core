@@ -16,10 +16,10 @@ const callback = () => {
     const text = button.textContent || ''
     if (text === getLocale('addToChrome')) {
       button.textContent =
-        getLocale('addToBrave') || text.replace('Chrome', 'Brave')
+        getLocale('addToBrave') || text.replace('Chrome', 'AI Wize')
     } else if (text === getLocale('removeFromChrome')) {
       button.textContent =
-        getLocale('removeFromBrave') || text.replace('Chrome', 'Brave')
+        getLocale('removeFromBrave') || text.replace('Chrome', 'AI Wize')
     }
   }
 }
