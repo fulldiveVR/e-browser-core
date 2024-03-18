@@ -126,7 +126,7 @@ void SidebarItemsContentsView::OnThemeChanged() {
 
   for (size_t item_index = 0; item_index < items_num; ++item_index) {
     const auto item = items[item_index];
-    if (!sidebar::IsWebType(item)) {
+    if (!sidebar::IsWebType(item) && !sidebar::IsBuiltInWebType(item)) {
       continue;
     }
 
@@ -496,7 +496,7 @@ void SidebarItemsContentsView::UpdateItemViewStateAt(size_t index,
     item_view->SetActiveState(active);
   }
 
-  if (sidebar::IsBuiltInType(item)) {
+  if (sidebar::IsBuiltInType(item) && !sidebar::IsBuiltInWebType(item)) {
     for (const auto state : views::Button::kButtonStates) {
       auto color_state = state;
       if (active && state != views::Button::STATE_DISABLED) {
@@ -571,6 +571,8 @@ ui::ImageModel SidebarItemsContentsView::GetImageForBuiltInItems(
       return get_image_model(kLeoProductPlaylistIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kChatUI:
       return get_image_model(kLeoProductBraveLeoIcon, state);
+    case sidebar::SidebarItem::BuiltInItemType::kAiWize:
+      [[fallthrough]];
     case sidebar::SidebarItem::BuiltInItemType::kNone:
       NOTREACHED_NORETURN();
   }

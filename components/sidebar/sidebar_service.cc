@@ -440,6 +440,7 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // Use this order for picking active panel when panel is opened as
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
+      SidebarItem::BuiltInItemType::kAiWize,
       SidebarItem::BuiltInItemType::kChatUI,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,
@@ -628,6 +629,13 @@ SidebarItem SidebarService::GetBuiltInItemForType(
       } else {
         return SidebarItem();
       }
+    }
+    case SidebarItem::BuiltInItemType::kAiWize: {
+      return SidebarItem::Create(GURL("https://aiwize.com"),
+                                u"AI Wize",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiWize,
+                                 /* open_in_panel = */ false);
     }
     case SidebarItem::BuiltInItemType::kPlaylist: {
       if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {

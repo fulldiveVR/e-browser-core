@@ -53,6 +53,10 @@ bool IsWebType(const SidebarItem& item) {
   return item.type == SidebarItem::Type::kTypeWeb;
 }
 
+bool IsBuiltInWebType(const SidebarItem& item) {
+  return item.type == SidebarItem::Type::kTypeBuiltIn && item.url.SchemeIs(url::kHttpsScheme);
+}
+
 bool IsValidItem(const SidebarItem& item) {
   // Any type should have valid title.
   if (item.title.empty())
