@@ -24,6 +24,7 @@
 #include "brave/components/ai_chat/core/browser/constants.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/aiwize_llm/aiwize_llm_helper.h"
 #include "brave/components/constants/brave_services_key.h"
 #include "net/http/http_status_code.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
@@ -144,6 +145,11 @@ GURL GetEndpointUrl(const std::string& path) {
   DCHECK(!path.starts_with("/"));
 
   auto* hostname = "api.openai.com";
+
+  std::optional<std::string> hostname_llm = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
+  LOG(ERROR) << "hostname_llm: " << *hostname_llm;
+  DCHECK(hostname_llm);
+  DCHECK(hostname_llm->starts_with("http://"));
 
   GURL url{base::StrCat(
       {url::kHttpsScheme, url::kStandardSchemeSeparator, hostname, "/", path})};
