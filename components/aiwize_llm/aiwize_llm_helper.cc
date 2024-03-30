@@ -33,30 +33,46 @@ void AIWizeLLMHelper::StartService() {
   }
 
   base::FilePath exe_dir;
-  base::PathService::Get(base::DIR_EXE, &exe_dir);
+  base::PathService::Get(base::DIR_ASSETS, &exe_dir);
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
 
   LOG(ERROR) << "StartService, command_line: " << command_line.GetCommandLineString();
 
   base::LaunchOptions options;
+#if BUILDFLAG(IS_LINUX)
+  options.kill_on_parent_death = true;
+#endif
+#if BUILDFLAG(IS_WIN)
+  options.start_hidden = true;
+#endif
   process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options, host_llm_);
   LOG(ERROR) << "StartService: " << host_llm_;
 }
 
 void AIWizeLLMHelper::StopService() {
   LOG(ERROR) << "StopService";
-  if(process_){
+  if(process_) {
       process_->Terminate(0, true);
   }
   process_ = std::nullopt;
 }
 
-std::optional<std::string> AIWizeLLMHelper::GetHostLLM(){
+std::optional<std::string> AIWizeLLMHelper::GetHostLLM() {
   if(process_ && host_llm_.length() > 0) {
     return host_llm_;
   }
   
   return std::nullopt;
 }
+
+std::string AIWizeLLMHelper::GetInfoLLM() {
+  base::FilePath exe_dir;
+  base::PathService::Get(base::DIR_ASSETS, &exe_dir);
+  base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
+  std::wstring wide = command_line.GetCommandLineString();
+  std::string str( wide.begin(), wide.end() );
+  return str;
+}
+
 
 }  // namespace aiwize_llm

@@ -29,6 +29,7 @@ class AIWizeLLMHelper {
   void StopService();
   
   std::optional<std::string> GetHostLLM();
+  std::string GetInfoLLM();
 
   private:
    std::optional<base::Process> process_;
