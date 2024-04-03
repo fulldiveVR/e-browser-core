@@ -6,7 +6,7 @@
 
 namespace aiwize_llm {
 
-inline constexpr wchar_t kAIWizeLLMExecutable[] = L"aiwiz-browser-cli-windows-amd64.exe";
+inline constexpr wchar_t kAIWizeLLMExecutable[] = L"aiwize-windows-amd64.exe";
 
 }  // namespace aiwize_llm
 

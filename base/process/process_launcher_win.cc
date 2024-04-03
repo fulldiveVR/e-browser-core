@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 
+#include <windows.h>
+
 #include "base/files/file_util.h"
 #include "base/notreached.h"
 #include "base/process/launch.h"
@@ -84,33 +86,33 @@ std::optional<base::Process> ProcessLauncher::ReadAppOutput(
     base::CommandLine cmdline,
     base::LaunchOptions options,
     std::string &output) {
-  HANDLE out_read = nullptr;
-  HANDLE out_write = nullptr;
+  // HANDLE out_read = nullptr;
+  // HANDLE out_write = nullptr;
 
-  SECURITY_ATTRIBUTES sa_attr;
-  // Set the bInheritHandle flag so pipe handles are inherited.
-  sa_attr.nLength = sizeof(SECURITY_ATTRIBUTES);
-  sa_attr.bInheritHandle = TRUE;
-  sa_attr.lpSecurityDescriptor = nullptr;
+  // SECURITY_ATTRIBUTES sa_attr;
+  // // Set the bInheritHandle flag so pipe handles are inherited.
+  // sa_attr.nLength = sizeof(SECURITY_ATTRIBUTES);
+  // sa_attr.bInheritHandle = TRUE;
+  // sa_attr.lpSecurityDescriptor = nullptr;
 
-  // Create the pipe for the child process's STDOUT.
-  if (!CreatePipe(&out_read, &out_write, &sa_attr, 0)) {
-    NOTREACHED() << "Failed to create pipe";
-    return std::nullopt;
-  }
+  // // Create the pipe for the child process's STDOUT.
+  // if (!CreatePipe(&out_read, &out_write, &sa_attr, 0)) {
+  //   NOTREACHED() << "Failed to create pipe";
+  //   return std::nullopt;
+  // }
 
-  // Ensure we don't leak the handles.
-  base::win::ScopedHandle scoped_out_write(out_write);
+  // // Ensure we don't leak the handles.
+  // base::win::ScopedHandle scoped_out_write(out_write);
 
-  // Ensure the read handles to the pipes are not inherited.
-  if (!SetHandleInformation(out_read, HANDLE_FLAG_INHERIT, 0)) {
-    NOTREACHED() << "Failed to disabled pipe inheritance";
-    return std::nullopt;
-  }
+  // // Ensure the read handles to the pipes are not inherited.
+  // if (!SetHandleInformation(out_read, HANDLE_FLAG_INHERIT, 0)) {
+  //   NOTREACHED() << "Failed to disabled pipe inheritance";
+  //   return std::nullopt;
+  // }
 
-  options.stdin_handle = out_read;
-  options.stdout_handle = out_write;
-  options.stderr_handle = out_read;
+  // options.stdin_handle = out_read;
+  // options.stdout_handle = out_write;
+  // options.stderr_handle = out_read;
   options.inherit_mode = base::LaunchOptions::Inherit::kAll;
 
   base::Process process = base::LaunchProcess(cmdline, options);
@@ -118,18 +120,24 @@ std::optional<base::Process> ProcessLauncher::ReadAppOutput(
     return std::nullopt;
   }
 
-  scoped_out_write.Close();
+  // scoped_out_write.Close();
 
-  // Read output from the child process's pipe for STDOUT
-  const int kBufferSize = 1024;
-  char buffer[kBufferSize];
+  // // Read output from the child process's pipe for STDOUT
+  // const int kBufferSize = 1024;
+  // char buffer[kBufferSize];
 
-  DWORD bytes_read = 0;
-  BOOL success =
-      ::ReadFile(out_read, buffer, kBufferSize, &bytes_read, nullptr);
-  if (success && bytes_read > 0) {
-    output.append(buffer, bytes_read);
-  }
+  // LOG(ERROR) << "Try to read console output";
+  // for(int i=0; i < 5; i++){
+  //   DWORD bytes_read = 0;
+  //   BOOL success =
+  //       ::ReadFile(out_read, buffer, kBufferSize, &bytes_read, nullptr);
+  //   if (success && bytes_read > 0) {
+  //     output.append(buffer, bytes_read);
+  //     LOG(ERROR) << " >>> " << output;
+  //   }
+  //   LOG(ERROR) << "iteration " << i;
+  //   Sleep(100);
+  // }
 
   return process;
 }

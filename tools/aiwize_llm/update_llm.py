@@ -12,9 +12,9 @@ import argparse
 try:
   # Python 3.0 or later
   from urllib.error import HTTPError, URLError
-  from urllib.request import urlopen
+  from urllib.request import urlopen, Request
 except ImportError:
-  from urllib2 import urlopen, HTTPError, URLError
+  from urllib2 import urlopen, HTTPError, URLError, Request
 
 
 # Path constants. (All of these should be absolute paths.)
@@ -22,9 +22,8 @@ BASE_PATH = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__)
 
 THIS_DIR = os.path.abspath(os.path.dirname(__file__))
 
-URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST',
-    'https://files.dmiche.com/fulldive/aiwiz-browser-cli.zip')
-
+URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST', 'https://aiwize-browser.storage.googleapis.com/cli/aiwize-browser-cli.zip')
+AIWIZE_LLM_TOKEN = os.environ.get('AIWIZE_LLM_TOKEN', '')
 
 def DownloadUrl(url, output_file):
   """Download url into output_file."""
@@ -38,7 +37,10 @@ def DownloadUrl(url, output_file):
       sys.stdout.write('Downloading %s ' % url)
       sys.stdout.flush()
       
-      response = urlopen(url)
+      request = Request(url)
+      request.add_header('Authorization', "Bearer %s" % AIWIZE_LLM_TOKEN)
+
+      response = urlopen(request)
       total_size = int(response.headers.get('Content-Length').strip())
       bytes_done = 0
       dots_printed = 0

@@ -35,6 +35,11 @@ void AIWizeLLMHelper::StartService() {
   base::FilePath exe_dir;
   base::PathService::Get(base::DIR_ASSETS, &exe_dir);
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
+  command_line.AppendArg("server");
+  command_line.AppendArg("start");
+  command_line.AppendArg("--gpu");
+  command_line.AppendArg("--port");
+  command_line.AppendArg("22002");
 
   LOG(ERROR) << "StartService, command_line: " << command_line.GetCommandLineString();
 
@@ -46,6 +51,10 @@ void AIWizeLLMHelper::StartService() {
   options.start_hidden = true;
 #endif
   process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options, host_llm_);
+
+  if(process_) {
+    host_llm_ = "http://localhost:22002";
+  }
   LOG(ERROR) << "StartService: " << host_llm_;
 }
 

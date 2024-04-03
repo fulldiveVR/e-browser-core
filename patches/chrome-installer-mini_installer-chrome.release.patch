@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/chrome.release b/chrome/installer/mini_installer/chrome.release
-index 948fc15a146b85f8e4b91e677e54ac2ae77bbabe..896e68c90915c9fb7633316160469d53f0244c39 100644
+index 948fc15a146b85f8e4b91e677e54ac2ae77bbabe..92748a5106da212c6da4a161bfe40f79393b626e 100644
 --- a/chrome/installer/mini_installer/chrome.release
 +++ b/chrome/installer/mini_installer/chrome.release
 @@ -6,7 +6,7 @@
@@ -16,7 +16,7 @@ index 948fc15a146b85f8e4b91e677e54ac2ae77bbabe..896e68c90915c9fb7633316160469d53
  # Chrome version dir entries, sorted alphabetically.
  #
 +brave.exe.sig: %(VersionDir)s\
-+aiwiz-browser-cli-windows-amd64.exe: %(VersionDir)s\
++aiwize-windows-amd64.exe : %(VersionDir)s\
 +brave_vpn_helper.exe: %(VersionDir)s\
 +brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
 +tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\
