@@ -8,6 +8,9 @@ import tempfile
 import time
 import shutil
 import argparse
+import json
+from google.oauth2 import service_account
+from google.auth.transport.requests import Request as GoogleRequest
 
 try:
   # Python 3.0 or later
@@ -16,14 +19,20 @@ try:
 except ImportError:
   from urllib2 import urlopen, HTTPError, URLError, Request
 
-
 # Path constants. (All of these should be absolute paths.)
 BASE_PATH = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', '..')))
 
 THIS_DIR = os.path.abspath(os.path.dirname(__file__))
 
 URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST', 'https://aiwize-browser.storage.googleapis.com/cli/aiwize-browser-cli.zip')
-AIWIZE_LLM_TOKEN = os.environ.get('AIWIZE_LLM_TOKEN', '')
+AIWIZE_LLM_GCP_CREDENTIALS = os.environ.get('AIWIZE_LLM_GCP_CREDENTIALS', '')
+
+service_account_info = json.loads(AIWIZE_LLM_GCP_CREDENTIALS)
+credentials = service_account.Credentials.from_service_account_info(
+  service_account_info,
+  scopes=["https://www.googleapis.com/auth/devstorage.read_only"]
+)
+credentials.refresh(GoogleRequest())
 
 def DownloadUrl(url, output_file):
   """Download url into output_file."""
@@ -38,7 +47,7 @@ def DownloadUrl(url, output_file):
       sys.stdout.flush()
       
       request = Request(url)
-      request.add_header('Authorization', "Bearer %s" % AIWIZE_LLM_TOKEN)
+      request.add_header('Authorization', "Bearer %s" % credentials.token)
 
       response = urlopen(request)
       total_size = int(response.headers.get('Content-Length').strip())
@@ -80,7 +89,6 @@ def DownloadAndUnpack(url, output_dir):
   DownloadUrl(url, f)
   f.close()
   zip_path  = f.name
-  # zip_path = os.path.abspath("aiwiz-browser-cli.zip")
   EnsureDirExists(output_dir)
   print("zip_path:", zip_path)
   with zipfile.ZipFile(zip_path) as zip_ref:
