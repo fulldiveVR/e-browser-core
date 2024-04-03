@@ -73,6 +73,21 @@ if (!is_ios) {
 }
 
 if (is_win) {
+  action("fetch_aiwize_llm") {
+    script = "//brave/tools/aiwize_llm/update_llm.py"
+    outputs = [
+      "$root_out_dir/aiwize-windows-amd64.exe"
+    ]
+    args = [
+      "--output-path",
+      "$root_out_dir",
+      "--gen-path",
+      "$root_gen_dir",
+      "-n",
+      "aiwize-windows-amd64.exe"
+    ]
+  }
+
   packed_files_rc_file =
       "$root_out_dir/gen/chrome/installer/mini_installer/packed_delta_files.rc"
   action("delta_installer_archive") {
@@ -165,6 +180,12 @@ group("brave") {
     deps += [
       "//brave/components/version_info:generate_version",
       "//chrome",
+    ]
+  }
+  if (is_win) {
+    deps += [
+      "//brave/components/version_info:generate_version",
+      ":fetch_aiwize_llm",
     ]
   }
 }

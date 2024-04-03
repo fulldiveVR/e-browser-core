@@ -143,6 +143,8 @@ BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
 
   // early initialize misc metrics
   process_misc_metrics();
+
+  aiwize_llm_helper();
 }
 
 void BraveBrowserProcessImpl::Init() {
@@ -185,6 +187,7 @@ void BraveBrowserProcessImpl::StartTearDown() {
   brave_stats_updater_.reset();
   brave_referrals_service_.reset();
   BrowserProcessImpl::StartTearDown();
+  aiwize_llm_helper()->StopService();
 }
 
 void BraveBrowserProcessImpl::PostDestroyThreads() {
@@ -214,7 +217,6 @@ ProfileManager* BraveBrowserProcessImpl::profile_manager() {
 
 void BraveBrowserProcessImpl::StartBraveServices() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-
   resource_component();
 
   if (base::FeatureList::IsEnabled(net::features::kBraveHttpsByDefault)) {
@@ -245,6 +247,8 @@ void BraveBrowserProcessImpl::StartBraveServices() {
 
   brave_wallet::WalletDataFilesInstaller::GetInstance().SetDelegate(
       std::make_unique<brave_wallet::WalletDataFilesInstallerDelegateImpl>());
+
+  aiwize_llm_helper()->StartService();
 }
 
 brave_shields::AdBlockService* BraveBrowserProcessImpl::ad_block_service() {
@@ -448,6 +452,10 @@ brave_ads::BraveStatsHelper* BraveBrowserProcessImpl::ads_brave_stats_helper() {
     brave_stats_helper_ = std::make_unique<brave_ads::BraveStatsHelper>();
   }
   return brave_stats_helper_.get();
+}
+
+aiwize_llm::AIWizeLLMHelper* BraveBrowserProcessImpl::aiwize_llm_helper() {
+  return aiwize_llm::AIWizeLLMHelper::GetInstance();
 }
 
 brave_ads::ResourceComponent* BraveBrowserProcessImpl::resource_component() {

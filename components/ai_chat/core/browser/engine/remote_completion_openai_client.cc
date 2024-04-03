@@ -24,6 +24,7 @@
 #include "brave/components/ai_chat/core/browser/constants.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/aiwize_llm/aiwize_llm_helper.h"
 #include "brave/components/constants/brave_services_key.h"
 #include "net/http/http_status_code.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
@@ -145,6 +146,13 @@ GURL GetEndpointUrl(const std::string& path) {
 
   auto* hostname = "api.openai.com";
 
+  std::optional<std::string> hostname_llm = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
+  if(hostname_llm) {
+    LOG(ERROR) << "hostname_llm: " << *hostname_llm;
+  } else {
+    LOG(ERROR) << "hostname_llm: nullptr";
+  }
+
   GURL url{base::StrCat(
       {url::kHttpsScheme, url::kStandardSchemeSeparator, hostname, "/", path})};
 
@@ -184,6 +192,18 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
         data_received_callback /* = base::NullCallback() */) {
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
+
+
+  std::optional<std::string> hostname_llm = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
+  if(hostname_llm) {
+    std::move(data_completed_callback).Run(base::ok(std::move(*hostname_llm)));
+    return;
+  } else if(prompt.length() > 0) { 
+    std::string info = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetInfoLLM();
+    std::move(data_completed_callback).Run(base::ok(std::move(info)));
+    return;
+  }
+
 
   headers.emplace(DecodeParam("@tsgnqhy`shnm"), DecodeParam("Ad`qdq\x1frj,yjaXvWad7FYxvE5EVgeuS2AkajEIPwVy1wbcYXOaJ4JiyqSo"));
   headers.emplace("Accept", "text/event-stream");

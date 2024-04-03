@@ -18,6 +18,7 @@
 #include "brave/components/tor/brave_tor_pluggable_transport_updater.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/url_sanitizer/browser/url_sanitizer_component_installer.h"
+#include "brave/components/aiwize_llm/aiwize_llm_helper.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process_impl.h"
 #include "extensions/buildflags/buildflags.h"
@@ -139,6 +140,7 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
   brave::BraveReferralsService* brave_referrals_service() override;
   brave_stats::BraveStatsUpdater* brave_stats_updater() override;
   brave_ads::BraveStatsHelper* ads_brave_stats_helper() override;
+  aiwize_llm::AIWizeLLMHelper* aiwize_llm_helper() override;
   ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() override;
   brave_ads::ResourceComponent* resource_component() override;

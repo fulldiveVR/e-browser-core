@@ -19,6 +19,7 @@
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "extensions/buildflags/buildflags.h"
+#include "brave/components/aiwize_llm/aiwize_llm_helper.h"
 
 namespace brave {
 class BraveReferralsService;
@@ -134,6 +135,8 @@ class BraveBrowserProcess {
   virtual brave::BraveReferralsService* brave_referrals_service() = 0;
   virtual brave_stats::BraveStatsUpdater* brave_stats_updater() = 0;
   virtual brave_ads::BraveStatsHelper* ads_brave_stats_helper() = 0;
+  virtual aiwize_llm::AIWizeLLMHelper* aiwize_llm_helper() = 0;
+
   virtual ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() = 0;
 #if BUILDFLAG(ENABLE_SPEEDREADER)

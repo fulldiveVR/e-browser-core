@@ -99,6 +99,11 @@ hooks = [
     'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', '-U', '-t', 'third_party/cryptography', '--only-binary', 'cryptography', 'cryptography==37.0.4'],
   },
   {
+    'name': 'download_google_auth',
+    'pattern': '.',
+    'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', 'google-cloud-storage'],
+  },
+  {
     'name': 'wireguard_nt',
     'pattern': '.',
     'condition': 'checkout_win',
