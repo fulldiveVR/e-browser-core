@@ -27,8 +27,7 @@ class ProcessLauncher {
                                                   int timeout_sec);
 
   static std::optional<base::Process> ReadAppOutput(base::CommandLine cmdline,
-                                                  base::LaunchOptions options,
-                                                  std::string &output);
+                                                  base::LaunchOptions options);
 };
 
 }  // namespace brave

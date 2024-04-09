@@ -144,17 +144,10 @@ std::string FetchMessageFromDict(const base::Value::Dict& dict) {
 GURL GetEndpointUrl(const std::string& path) {
   DCHECK(!path.starts_with("/"));
 
-  auto* hostname = "api.openai.com";
-
-  std::optional<std::string> hostname_llm = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
-  if(hostname_llm) {
-    LOG(ERROR) << "hostname_llm: " << *hostname_llm;
-  } else {
-    LOG(ERROR) << "hostname_llm: nullptr";
-  }
+  std::string hostname = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
 
   GURL url{base::StrCat(
-      {url::kHttpsScheme, url::kStandardSchemeSeparator, hostname, "/", path})};
+      {url::kHttpScheme, url::kStandardSchemeSeparator, hostname, "/", path})};
 
   DCHECK(url.is_valid()) << "Invalid API Url: " << url.spec();
 
@@ -193,17 +186,7 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
 
-
-  std::optional<std::string> hostname_llm = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetHostLLM();
-  if(hostname_llm) {
-    std::move(data_completed_callback).Run(base::ok(std::move(*hostname_llm)));
-    return;
-  } else if(prompt.length() > 0) { 
-    std::string info = aiwize_llm::AIWizeLLMHelper::GetInstance()->GetInfoLLM();
-    std::move(data_completed_callback).Run(base::ok(std::move(info)));
-    return;
-  }
-
+  LOG(ERROR) << "api_url: " << api_url;
 
   headers.emplace(DecodeParam("@tsgnqhy`shnm"), DecodeParam("Ad`qdq\x1frj,yjaXvWad7FYxvE5EVgeuS2AkajEIPwVy1wbcYXOaJ4JiyqSo"));
   headers.emplace("Accept", "text/event-stream");
