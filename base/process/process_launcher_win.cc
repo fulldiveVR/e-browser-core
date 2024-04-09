@@ -84,8 +84,7 @@ std::optional<std::string> ProcessLauncher::ReadAppOutput(
 
 std::optional<base::Process> ProcessLauncher::ReadAppOutput(
     base::CommandLine cmdline,
-    base::LaunchOptions options,
-    std::string &output) {
+    base::LaunchOptions options) {
   // HANDLE out_read = nullptr;
   // HANDLE out_write = nullptr;
 

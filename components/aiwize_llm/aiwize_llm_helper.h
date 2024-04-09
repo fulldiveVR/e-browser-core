@@ -28,12 +28,12 @@ class AIWizeLLMHelper {
   void StartService();
   void StopService();
   
-  std::optional<std::string> GetHostLLM();
+  std::string GetHostLLM();
   std::string GetInfoLLM();
+  bool IsInProcess();
 
   private:
    std::optional<base::Process> process_;
-   std::string host_llm_;
 };
 
 }  // namespace aiwize_llm_helper

@@ -50,12 +50,9 @@ void AIWizeLLMHelper::StartService() {
 #if BUILDFLAG(IS_WIN)
   options.start_hidden = true;
 #endif
-  process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options, host_llm_);
+  process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options);
 
-  if(process_) {
-    host_llm_ = "http://localhost:22002";
-  }
-  LOG(ERROR) << "StartService: " << host_llm_;
+  LOG(ERROR) << "StartService: " << kAIWizeLLMHost;
 }
 
 void AIWizeLLMHelper::StopService() {
@@ -66,12 +63,12 @@ void AIWizeLLMHelper::StopService() {
   process_ = std::nullopt;
 }
 
-std::optional<std::string> AIWizeLLMHelper::GetHostLLM() {
-  if(process_ && host_llm_.length() > 0) {
-    return host_llm_;
-  }
-  
-  return std::nullopt;
+std::string AIWizeLLMHelper::GetHostLLM() {
+  return kAIWizeLLMHost;
+}
+
+bool AIWizeLLMHelper::IsInProcess() {
+  return process_ != std::nullopt;
 }
 
 std::string AIWizeLLMHelper::GetInfoLLM() {

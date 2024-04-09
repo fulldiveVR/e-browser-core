@@ -8,6 +8,10 @@ namespace aiwize_llm {
 
 inline constexpr wchar_t kAIWizeLLMExecutable[] = L"aiwize-windows-amd64.exe";
 
+inline constexpr char kAIWizeLLMHost[] = "localhost:22002/fastchat";
+inline constexpr char kAIWizeLLMInfo[] = "localhost:22002/_info";
+
+
 }  // namespace aiwize_llm
 
 #endif  // BRAVE_COMPONENTS_AIWIZE_LLM_AIWIZE_LLM_CONSTANTS_H_
