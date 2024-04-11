@@ -268,13 +268,21 @@ RegisterPolymerTemplateModifications({
     // Add leo item
     const leoAssistantEl = createMenuElement(
       loadTimeData.getString('leoAssistant'),
-      '/leo-assistant',
+      '/aiwize-chat',
       'product-brave-leo',
       'leoAssistant',
     )
     web3El.insertAdjacentElement('afterend', leoAssistantEl)
 
-    var syncEl = leoAssistantEl
+    const llmSettingsEl = createMenuElement(
+      loadTimeData.getString('settingsAIWizeLLM'),
+      '/aiwize-llm',
+      'product-brave-leo',
+      'llmSettings',
+    )
+    leoAssistantEl.insertAdjacentElement('afterend', llmSettingsEl)
+
+    var syncEl = llmSettingsEl
     if(false) {
         // Add Sync item
       syncEl = createMenuElement(
@@ -283,7 +291,7 @@ RegisterPolymerTemplateModifications({
         'product-sync',
         'braveSync',
       )
-      leoAssistantEl.insertAdjacentElement('afterend', syncEl)
+      llmSettingsEl.insertAdjacentElement('afterend', syncEl)
     }
 
     // Add search item

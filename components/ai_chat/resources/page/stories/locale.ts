@@ -17,6 +17,7 @@ provideStrings({
   errorNetworkLabel: 'There was a network issue connecting to AI Wize Chat, check your connection and try again.',
   errorRateLimit: 'AI Wize Chat is too busy right now. Please try again in a few minutes.',
   retryButtonLabel: 'Retry',
+  settingsButtonLabel: 'Open LLM Settings',
   dismissButtonLabel: 'Dismiss',
   'introMessage-0': `I'm here to help. What can I assist you with today?`,
   'introMessage-1': 'I have a vast base of knowledge and a large memory able to help with more complex challenges.',

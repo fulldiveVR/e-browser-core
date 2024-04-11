@@ -76,6 +76,7 @@
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/browser/ui/webui/settings/brave_settings_leo_assistant_handler.h"
+#include "brave/browser/ui/webui/settings/aiwize_llm_settings_handler.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #endif
@@ -101,6 +102,8 @@ BraveSettingsUI::BraveSettingsUI(content::WebUI* web_ui,
 #if BUILDFLAG(ENABLE_AI_CHAT)
   web_ui->AddMessageHandler(
       std::make_unique<settings::BraveLeoAssistantHandler>());
+  web_ui->AddMessageHandler(
+      std::make_unique<settings::AIWizeLLMSettingsHandler>());
 #endif
 #if BUILDFLAG(ENABLE_TOR)
   web_ui->AddMessageHandler(std::make_unique<BraveTorHandler>());

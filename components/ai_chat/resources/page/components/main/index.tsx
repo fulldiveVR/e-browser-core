@@ -70,6 +70,7 @@ function Main() {
       currentErrorElement = (
         <ErrorConnection
           onRetry={() => getPageHandlerInstance().pageHandler.retryAPIRequest()}
+          onSettingsLLM={() => getPageHandlerInstance().pageHandler.openSettingsLLM()}
         />
       )
     }

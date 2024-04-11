@@ -179,7 +179,7 @@ void AIChatUIPageHandler::OpenBraveLeoSettings() {
                                    ? active_chat_tab_helper_->web_contents()
                                    : web_contents();
 #if !BUILDFLAG(IS_ANDROID)
-  const GURL url("aiwize://settings/leo-assistant");
+  const GURL url("aiwize://settings/aiwize-chat");
   if (auto* browser = chrome::FindBrowserWithTab(contents_to_navigate)) {
     ShowSingletonTab(browser, url);
   } else {
@@ -189,6 +189,24 @@ void AIChatUIPageHandler::OpenBraveLeoSettings() {
   }
 #else
   ai_chat::ShowBraveLeoSettings(contents_to_navigate);
+#endif
+}
+
+void AIChatUIPageHandler::OpenSettingsLLM() {
+  auto* contents_to_navigate = (active_chat_tab_helper_)
+                                   ? active_chat_tab_helper_->web_contents()
+                                   : web_contents();
+#if !BUILDFLAG(IS_ANDROID)
+  const GURL url("aiwize://settings/aiwize-llm");
+  if (auto* browser = chrome::FindBrowserWithTab(contents_to_navigate)) {
+    ShowSingletonTab(browser, url);
+  } else {
+    contents_to_navigate->OpenURL({url, content::Referrer(),
+                                   WindowOpenDisposition::NEW_FOREGROUND_TAB,
+                                   ui::PAGE_TRANSITION_LINK, false});
+  }
+#else
+  ai_chat::ShowBraveLeoSettings(contents_to_navigate); // TODO: Changed for android in future.
 #endif
 }
 
