@@ -48,6 +48,9 @@
   <message name="IDS_CHAT_UI_RETRY_BUTTON_LABEL" desc="A button label to retry API again">
      Retry
   </message>
+  <message name="IDS_CHAT_UI_SETTINGS_BUTTON_LABEL" desc="A button label to open llm settings">
+     Open LLM Settings
+  </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the default model">
     Hi, I'm AI Wize Chat. I'm a fully hosted AI assistant by AI Wize. I'm powered by Llama 13B, a model created by Meta to be performant and applicable to many use cases.
   </message>

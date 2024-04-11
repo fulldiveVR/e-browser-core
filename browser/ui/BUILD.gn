@@ -240,6 +240,8 @@ source_set("ui") {
       sources += [
         "webui/settings/brave_settings_leo_assistant_handler.cc",
         "webui/settings/brave_settings_leo_assistant_handler.h",
+        "webui/settings/aiwize_llm_settings_handler.cc",
+        "webui/settings/aiwize_llm_settings_handler.h",
       ]
 
       deps += [ "//chrome/browser/favicon" ]

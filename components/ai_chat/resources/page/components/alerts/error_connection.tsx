@@ -11,6 +11,7 @@ import styles from './alerts.module.scss'
 
 interface PromptAutoSuggestionProps {
   onRetry?: () => void
+  onSettingsLLM?: () => void
 }
 
 function ErrorConnection (props: PromptAutoSuggestionProps) {
@@ -21,6 +22,13 @@ function ErrorConnection (props: PromptAutoSuggestionProps) {
         type='error'
       >
         {getLocale('errorNetworkLabel')}
+        <Button
+          slot='actions'
+          kind='filled'
+          onClick={props.onSettingsLLM}
+        >
+            {getLocale('settingsButtonLabel')}
+        </Button>
         <Button
           slot='actions'
           kind='filled'

@@ -23,6 +23,7 @@ base::span<const webui::LocalizedString> GetLocalizedStrings() {
       {"errorNetworkLabel", IDS_CHAT_UI_ERROR_NETWORK},
       {"errorRateLimit", IDS_CHAT_UI_ERROR_RATE_LIMIT},
       {"retryButtonLabel", IDS_CHAT_UI_RETRY_BUTTON_LABEL},
+      {"settingsButtonLabel", IDS_CHAT_UI_SETTINGS_BUTTON_LABEL},
       {"introMessage-chat-basic", IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC},
       {"introMessage-chat-leo-expanded",
        IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_EXPANDED},

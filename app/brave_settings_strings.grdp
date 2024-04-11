@@ -1453,6 +1453,17 @@
     Disable mute function in tab speaker icons
   </message>
 
+  <!-- Settings / AI Wize LLM -->
+  <message name="IDS_SETTINGS_AIWIZE_LLM" desc="Title for an item in the 'AI Wize LLM Settings' section of AI Wize Settings">
+    AI Wize LLM
+  </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_START_LABEL" desc="Title for start button in 'AI Wize LLM Settings' section">
+    Start AI Wize LLM
+  </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_START_CONFIRMATION_TEXT" desc="The confirmation window message for start llm">
+  Do you want start AI Wize LLM service? You must already have Desktop Docker running.
+  </message>
+
   <!-- Settings / AI Wize Chat Assistant -->
   <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'AI Wize Chat Assistant' section of AI Wize Settings">
     AI Wize Chat

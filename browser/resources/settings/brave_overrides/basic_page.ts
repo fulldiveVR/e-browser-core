@@ -25,6 +25,7 @@ import '../default_brave_shields_page/default_brave_shields_page.js'
 import '../getting_started_page/getting_started.js'
 import '../social_blocking_page/social_blocking_page.js'
 import '../brave_leo_assistant_page/brave_leo_assistant_page.js'
+import '../aiwize_llm_page/aiwize_llm_page.js'
 
 import {html, RegisterPolymerTemplateModifications, RegisterStyleOverride} from 'chrome://resources/brave/polymer_overriding.js'
 
@@ -295,6 +296,20 @@ RegisterPolymerTemplateModifications({
         }
       ))
 
+      const sectionAIWizeLLMSetting = document.createElement('template')
+      sectionAIWizeLLMSetting.setAttribute('is', 'dom-if')
+      sectionAIWizeLLMSetting.setAttribute('restamp', true)
+      sectionAIWizeLLMSetting
+        .setAttribute('if', '[[showPage_(pageVisibility.leoAssistant)]]')
+        sectionAIWizeLLMSetting.content.appendChild(createSectionElement(
+        'llmSettings',
+        'settingsAIWizeLLM',
+        'settings-aiwize-llm-page',
+        {
+          prefs: '{{prefs}}'
+        }
+      ))
+
       const sectionContent = document.createElement('template')
       sectionContent.setAttribute('is', 'dom-if')
       sectionContent.setAttribute('restamp', true)
@@ -415,6 +430,8 @@ RegisterPolymerTemplateModifications({
       last = last.insertAdjacentElement('afterend', sectionTor)
       // Insert AI Wize Chat Assistant
       last = last.insertAdjacentElement('afterend', sectionLeoAssist)
+      // Insert AI Wize LLM Settings
+      last = last.insertAdjacentElement('afterend', sectionAIWizeLLMSetting)
 
       // Advanced
       const advancedTemplate = templateContent.querySelector('template[if="[[showAdvancedSettings_(pageVisibility.advancedSettings)]]"]')
