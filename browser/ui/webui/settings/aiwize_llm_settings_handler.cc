@@ -28,6 +28,10 @@ void AIWizeLLMSettingsHandler::RegisterMessages() {
       "startAIWizeLLM",
       base::BindRepeating(&AIWizeLLMSettingsHandler::HandleStartAIWizeLLM,
                           base::Unretained(this)));
+  web_ui()->RegisterMessageCallback(
+      "stopAIWizeLLM",
+      base::BindRepeating(&AIWizeLLMSettingsHandler::HandleStartAIWizeLLM,
+                          base::Unretained(this)));
 }
 
 
@@ -42,6 +46,11 @@ void AIWizeLLMSettingsHandler::HandleStartAIWizeLLM(
     const base::Value::List& args) {
   aiwize_llm::AIWizeLLMHelper::GetInstance()->StopService();
   aiwize_llm::AIWizeLLMHelper::GetInstance()->StartService();
+}
+
+void AIWizeLLMSettingsHandler::HandleStopAIWizeLLM(
+    const base::Value::List& args) {
+  aiwize_llm::AIWizeLLMHelper::GetInstance()->StopService();
 }
 
 }  // namespace settings

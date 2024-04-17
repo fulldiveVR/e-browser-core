@@ -424,10 +424,16 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveLeoModelSubtitle-chat-claude-instant",
        IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE},
 
+      // AI Wize LLM
       {"settingsAIWizeLLM", IDS_SETTINGS_AIWIZE_LLM},
       {"aiWizeLLMStartLabel", IDS_SETTINGS_AIWIZE_LLM_START_LABEL},
+      {"aiWizeLLMStopLabel", IDS_SETTINGS_AIWIZE_LLM_STOP_LABEL},
       {"aiWizeLLMStartConfirmationText",
        IDS_SETTINGS_AIWIZE_LLM_START_CONFIRMATION_TEXT},
+      {"aiWizeLLMStopConfirmationText",
+       IDS_SETTINGS_AIWIZE_LLM_STOP_CONFIRMATION_TEXT},
+      {"aiWizeLLMUseGPULabel", IDS_SETTINGS_AIWIZE_LLM_USE_GPU_LABEL},
+      {"aiWizeLLMUseGPUDesc", IDS_SETTINGS_AIWIZE_LLM_USE_GPU_DESC},
 
       // New Tab Page
       {"braveNewTab", IDS_SETTINGS_NEW_TAB},

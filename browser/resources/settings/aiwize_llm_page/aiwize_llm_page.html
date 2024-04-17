@@ -11,8 +11,19 @@ You can obtain one at https://mozilla.org/MPL/2.0/. -->
   }
 
 </style>
-<div class="settings-box " on-click="onStartLLM_">
-    <div class="flex cr-padded-text start-llm">
-      <div>$i18n{aiWizeLLMStartLabel}</div>
-    </div>
+<div class="settings-box " on-click="onStartLLM_" hidden="[[isLLMStarted_()]]">
+  <div class="flex cr-padded-text start-llm">
+    <div>$i18n{aiWizeLLMStartLabel}</div>
+  </div>
 </div>
+<div class="settings-box " on-click="onStopLLM_" hidden="[[!isLLMStarted_()]]">
+  <div class="flex cr-padded-text start-llm">
+    <div>$i18n{aiWizeLLMStopLabel}</div>
+  </div>
+</div>
+<settings-toggle-button class="cr-row hr"
+  pref="{{prefs.aiwize_llm.use_gpu}}"
+  label="$i18n{aiWizeLLMUseGPULabel}"
+  sub-label="$i18n{aiWizeLLMUseGPUDesc}">
+</settings-toggle-button>
+

@@ -1,15 +1,12 @@
-/* Copyright (c) 2021 The Brave Authors. All rights reserved.
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at http://mozilla.org/MPL/2.0/. */
-
 #include "brave/components/aiwize_llm/aiwize_llm_helper.h"
 #include "brave/components/aiwize_llm/aiwize_llm_constants.h"
+#include "brave/components/aiwize_llm/pref_names.h"
 #include "base/logging.h"
 #include "base/command_line.h"
 #include "brave/base/process/process_launcher.h"
 #include "base/path_service.h"
 #include "base/no_destructor.h"
+#include "components/prefs/pref_service.h"
 
 namespace aiwize_llm {
 
@@ -21,6 +18,7 @@ AIWizeLLMHelper* AIWizeLLMHelper::GetInstance() {
 AIWizeLLMHelper::AIWizeLLMHelper() {
   LOG(ERROR) << "AIWizeLLMHelper(): " << kAIWizeLLMExecutable;
   process_ = std::nullopt;
+  use_gpu_ = true;
 }
 
 AIWizeLLMHelper::~AIWizeLLMHelper() = default;
@@ -37,7 +35,9 @@ void AIWizeLLMHelper::StartService() {
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
   command_line.AppendArg("server");
   command_line.AppendArg("start");
-  command_line.AppendArg("--gpu");
+  if(use_gpu_) {
+    command_line.AppendArg("--gpu");
+  }
   command_line.AppendArg("--port");
   command_line.AppendArg("22002");
 
@@ -61,6 +61,10 @@ void AIWizeLLMHelper::StopService() {
       process_->Terminate(0, true);
   }
   process_ = std::nullopt;
+}
+
+void AIWizeLLMHelper::SetUseGPU(bool value) {
+  use_gpu_ = value;
 }
 
 std::string AIWizeLLMHelper::GetHostLLM() {

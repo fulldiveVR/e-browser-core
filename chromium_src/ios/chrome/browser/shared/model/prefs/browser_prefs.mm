@@ -7,6 +7,7 @@
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
 #include "brave/components/brave_rewards/common/pref_registry.h"
+#include "brave/components/aiwize_llm/pref_registry.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
@@ -32,6 +33,8 @@ void BraveRegisterBrowserStatePrefs(
   brave_ads::RegisterProfilePrefs(registry);
   brave_rewards::RegisterProfilePrefs(registry);
   brave_rewards::RegisterProfilePrefsForMigration(registry);
+  aiwize_llm::RegisterAIWizeLLMPrefs(registry);
+  
   brave_sync::Prefs::RegisterProfilePrefs(registry);
   brave_wallet::RegisterProfilePrefs(registry);
   brave_wallet::RegisterProfilePrefsForMigration(registry);

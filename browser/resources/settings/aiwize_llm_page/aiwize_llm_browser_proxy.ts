@@ -5,6 +5,7 @@
 
  export interface AIWizeLLMBrowserProxy {
   startAIWizeLLM(): void
+  stopAIWizeLLM(): void
  }
 
  export class AIWizeLLMBrowserProxyImpl
@@ -14,9 +15,12 @@
      return instance || (instance = new AIWizeLLMBrowserProxyImpl())
    }
 
-  startAIWizeLLM() {
+   startAIWizeLLM() {
     chrome.send('startAIWizeLLM')
-  }
+   }
+   stopAIWizeLLM() {
+    chrome.send('stopAIWizeLLM')
+   }
  }
 
  let instance: AIWizeLLMBrowserProxyImpl|null = null

@@ -7,7 +7,10 @@ static_library("aiwize_llm") {
   sources = [
     "aiwize_llm_constants.h",
     "aiwize_llm_helper.h",
-    "aiwize_llm_helper.cc"
+    "aiwize_llm_helper.cc",
+    "pref_names.h",
+    "pref_registry.cc",
+    "pref_registry.h"
   ]
 
   deps = [

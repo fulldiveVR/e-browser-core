@@ -26,6 +26,7 @@ class AIWizeLLMSettingsHandler : public settings::SettingsPageUIHandler {
   // SettingsPageUIHandler overrides:
   void RegisterMessages() override;
   void HandleStartAIWizeLLM(const base::Value::List& args);
+  void HandleStopAIWizeLLM(const base::Value::List& args);
   
   void OnJavascriptAllowed() override;
   void OnJavascriptDisallowed() override;

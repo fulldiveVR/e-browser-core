@@ -8,6 +8,7 @@
 #include "brave/browser/brave_profile_prefs.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
 #include "brave/components/brave_rewards/common/pref_registry.h"
+#include "brave/components/aiwize_llm/pref_registry.h"
 #include "brave/components/constants/pref_names.h"
 #include "build/build_config.h"
 #include "chrome/common/pref_names.h"
@@ -27,6 +28,7 @@ void RegisterProfilePrefs(bool is_signin_profile,
 
   brave_ads::RegisterProfilePrefs(registry);
   brave_rewards::RegisterProfilePrefs(registry);
+  aiwize_llm::RegisterAIWizeLLMPrefs(registry);
 
   // Disable spell check service
   registry->SetDefaultPrefValue(

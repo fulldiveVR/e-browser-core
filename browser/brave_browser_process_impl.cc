@@ -23,6 +23,7 @@
 #include "brave/browser/profiles/brave_profile_manager.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/common/brave_channel_info.h"
+#include "brave/components/aiwize_llm/pref_names.h"
 #include "brave/components/brave_ads/browser/component_updater/resource_component.h"
 #include "brave/components/brave_component_updater/browser/brave_component_updater_delegate.h"
 #include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
@@ -162,6 +163,11 @@ void BraveBrowserProcessImpl::Init() {
   pref_change_registrar_.Add(
       kBraveDarkMode,
       base::BindRepeating(&BraveBrowserProcessImpl::OnBraveDarkModeChanged,
+                          base::Unretained(this)));
+
+  pref_change_registrar_.Add(
+      aiwize_llm::prefs::kUseGPU,
+      base::BindRepeating(&BraveBrowserProcessImpl::OnUseGPUChanged,
                           base::Unretained(this)));
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -371,6 +377,15 @@ void BraveBrowserProcessImpl::UpdateBraveDarkMode() {
 
 void BraveBrowserProcessImpl::OnBraveDarkModeChanged() {
   UpdateBraveDarkMode();
+}
+
+
+void BraveBrowserProcessImpl::OnUseGPUChanged() {
+  LOG(ERROR) << "OnUseGPUChanged()";
+  Profile* profile = profile_manager()->GetLastUsedProfile();
+  bool use_gpu = profile->GetPrefs()->GetBoolean(aiwize_llm::prefs::kUseGPU);
+  aiwize_llm_helper()->SetUseGPU(use_gpu);
+  // const PrefService* prefs = browser_->profile()->GetPrefs();
 }
 
 #if BUILDFLAG(ENABLE_TOR)

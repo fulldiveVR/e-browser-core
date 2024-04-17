@@ -301,7 +301,7 @@ RegisterPolymerTemplateModifications({
       sectionAIWizeLLMSetting.setAttribute('restamp', true)
       sectionAIWizeLLMSetting
         .setAttribute('if', '[[showPage_(pageVisibility.leoAssistant)]]')
-        sectionAIWizeLLMSetting.content.appendChild(createSectionElement(
+      sectionAIWizeLLMSetting.content.appendChild(createSectionElement(
         'llmSettings',
         'settingsAIWizeLLM',
         'settings-aiwize-llm-page',

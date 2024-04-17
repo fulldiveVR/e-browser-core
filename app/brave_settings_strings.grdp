@@ -1460,8 +1460,20 @@
   <message name="IDS_SETTINGS_AIWIZE_LLM_START_LABEL" desc="Title for start button in 'AI Wize LLM Settings' section">
     Start AI Wize LLM
   </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_STOP_LABEL" desc="Title for stop button in 'AI Wize LLM Settings' section">
+    Stop AI Wize LLM
+  </message>
   <message name="IDS_SETTINGS_AIWIZE_LLM_START_CONFIRMATION_TEXT" desc="The confirmation window message for start llm">
   Do you want start AI Wize LLM service? You must already have Desktop Docker running.
+  </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_STOP_CONFIRMATION_TEXT" desc="The confirmation window message for stop llm">
+  Do you want stop AI Wize LLM service?
+  </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_USE_GPU_LABEL">
+  Use GPU for LLM models.
+  </message>
+  <message name="IDS_SETTINGS_AIWIZE_LLM_USE_GPU_DESC">
+  If disabled the CPU will be used.
   </message>
 
   <!-- Settings / AI Wize Chat Assistant -->

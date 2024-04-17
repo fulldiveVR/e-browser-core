@@ -39,6 +39,7 @@ const std::map<BravePrepopulatedEngineID, const PrepopulatedEngine*>
     brave_engines_map = {
         {PREPOPULATED_ENGINE_ID_GOOGLE, &google},
         {PREPOPULATED_ENGINE_ID_YANDEX, &brave_yandex},
+        {PREPOPULATED_ENGINE_ID_AIWIZE, &aiwize},
         {PREPOPULATED_ENGINE_ID_BING, &brave_bing},
         {PREPOPULATED_ENGINE_ID_NAVER, &naver},
         {PREPOPULATED_ENGINE_ID_DAUM, &daum},

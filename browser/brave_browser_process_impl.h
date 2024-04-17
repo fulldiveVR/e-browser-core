@@ -164,6 +164,8 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
 
   void CreateProfileManager();
 
+  void OnUseGPUChanged();
+
 #if BUILDFLAG(ENABLE_TOR)
   void OnTorEnabledChanged();
 #endif

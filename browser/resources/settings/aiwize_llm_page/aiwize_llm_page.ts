@@ -37,11 +37,22 @@ class AIWizeLLMAssistantPageElement extends AIWizeLLMAssistantPageBase {
     browserProxy_: AIWizeLLMBrowserProxy =
       AIWizeLLMBrowserProxyImpl.getInstance()
 
-    onStartLLM_() {
-      const message = this.i18n('aiWizeLLMStartConfirmationText')
-      if(window.confirm(message)) {
-        this.browserProxy_.startAIWizeLLM()
+      onStartLLM_() {
+        const message = this.i18n('aiWizeLLMStartConfirmationText')
+        if(window.confirm(message)) {
+          this.browserProxy_.startAIWizeLLM()
+        }
       }
+
+      onStopLLM_() {
+        const message = this.i18n('aiWizeLLMStopConfirmationText')
+        if(window.confirm(message)) {
+          this.browserProxy_.stopAIWizeLLM()
+        }
+      }
+    
+    private isLLMStarted_() {
+      return true;
     }
 }
 
