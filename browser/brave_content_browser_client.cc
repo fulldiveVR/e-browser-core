@@ -38,6 +38,7 @@
 #include "brave/browser/skus/skus_service_factory.h"
 #include "brave/browser/ui/webui/skus_internals_ui.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/aiwize_llm/aiwize_llm_constants.h"
 #include "brave/components/brave_federated/features.h"
 #include "brave/components/brave_rewards/browser/rewards_protocol_navigation_throttle.h"
 #include "brave/components/brave_search/browser/brave_search_default_host.h"
@@ -1090,6 +1091,19 @@ bool BraveContentBrowserClient::HandleURLOverrideRewrite(
     replacements.SetHostStr(chrome::kChromeUISettingsHost);
     replacements.SetPathStr(kBraveSyncPath);
     *url = url->ReplaceComponents(replacements);
+    return true;
+  }
+
+  //  aiwize://dashboard => http://localhost:22002/system/ui/
+  if (url->host() == kDashboardLLMHost) {
+    GURL::Replacements replacements;
+    replacements.SetSchemeStr(url::kHttpScheme);
+    replacements.SetHostStr(aiwize_llm::kAIWizeLLMHost);
+    replacements.SetPortStr(aiwize_llm::kAIWizeLLMPort);
+    replacements.SetPathStr(kDashboardLLMPath);
+  
+    *url = url->ReplaceComponents(replacements);
+    LOG(ERROR) << url->spec();
     return true;
   }
 

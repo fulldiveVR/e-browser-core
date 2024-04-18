@@ -9,6 +9,8 @@
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "build/build_config.h"
 
+inline constexpr char kDashboardLLMHost[] = "dashboard";
+inline constexpr char kDashboardLLMPath[] = "system/ui";
 inline constexpr char kAdblockHost[] = "adblock";
 inline constexpr char kAdblockInternalsHost[] = "adblock-internals";
 inline constexpr char kAdblockJS[] = "brave_adblock.js";

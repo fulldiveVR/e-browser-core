@@ -37,6 +37,7 @@ void AIWizeLLMHelper::StartService() {
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
   command_line.AppendArg("server");
   command_line.AppendArg("start");
+  command_line.AppendArg("--init");
   command_line.AppendArg("--gpu");
   command_line.AppendArg("--port");
   command_line.AppendArg("22002");
@@ -52,7 +53,7 @@ void AIWizeLLMHelper::StartService() {
 #endif
   process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options);
 
-  LOG(ERROR) << "StartService: " << kAIWizeLLMHost;
+  LOG(ERROR) << "StartService: " << kAIWizeLLMAPI;
 }
 
 void AIWizeLLMHelper::StopService() {
@@ -64,7 +65,7 @@ void AIWizeLLMHelper::StopService() {
 }
 
 std::string AIWizeLLMHelper::GetHostLLM() {
-  return kAIWizeLLMHost;
+  return kAIWizeLLMAPI;
 }
 
 bool AIWizeLLMHelper::IsInProcess() {
