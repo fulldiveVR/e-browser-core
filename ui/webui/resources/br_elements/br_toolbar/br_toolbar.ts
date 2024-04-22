@@ -213,6 +213,7 @@ Polymer({
     this.settingsTitle = this.getLoadTimeDataString('brToolbarSettingsTitle')
     this.bookmarksTitle = this.getLoadTimeDataString('brToolbarBookmarksTitle')
     this.downloadsTitle = this.getLoadTimeDataString('brToolbarDownloadsTitle')
+    this.dashboardTitle = this.getLoadTimeDataString('brToolbarDashboardTitle')
     this.braveRewardsTitle = this.getLoadTimeDataString('brToolbarRewardsTitle')
     this.walletsTitle = this.getLoadTimeDataString('brToolbarWalletsTitle')
   },
