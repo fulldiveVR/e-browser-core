@@ -6,8 +6,9 @@
 import { getLocale } from './background/api/localeAPI'
 
 const config = { attributes: true, childList: true, subtree: true }
-
+console.log("test webstore mutable!!!!")
 const callback = () => {
+  console.log("test webstore mutable  222 !!!!")
   const buttonQueries = [
     'div.webstore-test-button-label', // https://chrome.google.com/webstore
     'button span[jsname]:not(:empty)' // https://chromewebstore.google.com/

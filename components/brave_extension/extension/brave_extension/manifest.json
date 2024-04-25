@@ -52,6 +52,17 @@
       ],
       "run_at": "document_start",
       "all_frames": true
+    },
+    {
+      "matches": [
+        "aiwize://dashboard/*",
+        "http://http://localhost:22002/system/ui/*"
+      ],
+      "js": [
+        "out/dashboard.bundle.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
     }
   ],
   "permissions": [
