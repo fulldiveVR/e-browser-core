@@ -222,5 +222,53 @@
   "removeFromChrome": {
     "message": "Remove from Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardSystem": {
+    "message": "System",
+    "description": "System Label"
+  },
+  "dashboardMemory": {
+    "message": "Memory",
+    "description": "Memory Label"
+  },
+  "dashboardDownloading": {
+    "message": "Downloading",
+    "description": "Downloading Label"
+  },
+  "dashboardParts": {
+    "message": "parts",
+    "description": "Parts Label"
+  },
+  "dashboardWillBeDownloaded": {
+    "message": "Will be downloaded",
+    "description": "Label"
+  },
+  "dashboardSaveButton": {
+    "message": " Save ",
+    "description": "Save Label"
+  },
+  "dashboardResetButton": {
+    "message": " Reset ",
+    "description": "Reset Label"
+  },
+  "dashboardStartButton": {
+    "message": " Start ",
+    "description": "Start Label"
+  },
+  "dashboardStopButton": {
+    "message": " Stop ",
+    "description": "Stop Label"
+  },
+  "dashboardRestartButton": {
+    "message": " Restart ",
+    "description": "Restart Label"
+  },
+  "dashboardModel": {
+    "message": "Model",
+    "description": "Model Label"
+  },
+  "dashboardCurrentModel": {
+    "message": "Current model",
+    "description": "Current model Label"
   }
 }

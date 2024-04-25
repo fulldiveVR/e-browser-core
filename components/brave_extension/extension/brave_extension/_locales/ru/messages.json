@@ -222,5 +222,53 @@
   "removeFromChrome": {
     "message": "Удалить из Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardSystem": {
+    "message": "Система",
+    "description": "System Label"
+  },
+  "dashboardMemory": {
+    "message": "Память",
+    "description": "Memory Label"
+  },
+  "dashboardDownloading": {
+    "message": "Загрузка",
+    "description": "Downloading Label"
+  },
+  "dashboardParts": {
+    "message": "частей",
+    "description": "Parts Label"
+  },
+  "dashboardWillBeDownloaded": {
+    "message": "Будет загружено",
+    "description": "Label"
+  },
+  "dashboardSaveButton": {
+    "message": " Сохранить ",
+    "description": "Save Label"
+  },
+  "dashboardResetButton": {
+    "message": " Сбросить ",
+    "description": "Reset Label"
+  },
+  "dashboardStartButton": {
+    "message": " Начать ",
+    "description": "Start Label"
+  },
+  "dashboardStopButton": {
+    "message": " Остановить ",
+    "description": "Stop Label"
+  },
+  "dashboardRestartButton": {
+    "message": " Перезапустить ",
+    "description": "Restart Label"
+  },
+  "dashboardModel": {
+    "message": "Модель",
+    "description": "Model Label"
+  },
+  "dashboardCurrentModel": {
+    "message": "Текущая модель",
+    "description": "Current model Label"
   }
 }
