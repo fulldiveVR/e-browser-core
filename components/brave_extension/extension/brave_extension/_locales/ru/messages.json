@@ -243,6 +243,10 @@
     "message": "Будет загружено",
     "description": "Label"
   },
+  "dashboardReadyToStart": {
+    "message": "Готово к старту",
+    "description": "Label"
+  },
   "dashboardSaveButton": {
     "message": " Сохранить ",
     "description": "Save Label"
@@ -270,5 +274,21 @@
   "dashboardCurrentModel": {
     "message": "Текущая модель",
     "description": "Current model Label"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Скачанные файлы",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Настройки",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "История",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Закладки",
+    "description": "Bookmarks Label"
   }
 }

@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome'dan kaldır",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "İndirilenler",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Ayarlar",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Geçmiş",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Yer işaretleri",
+    "description": "Bookmarks Label"
   }
 }

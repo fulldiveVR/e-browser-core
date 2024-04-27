@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Fjern fra Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Nedlastinger",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Innstillinger",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Logg",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bokmerker",
+    "description": "Bookmarks Label"
   }
 }

@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Pašalinti iš „Chrome“",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Atsisiuntimai",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Nustatymai",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Istorija",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Žymės",
+    "description": "Bookmarks Label"
   }
 }

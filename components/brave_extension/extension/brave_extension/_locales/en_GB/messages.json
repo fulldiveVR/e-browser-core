@@ -243,6 +243,10 @@
     "message": "Will be downloaded",
     "description": "Label"
   },
+  "dashboardReadyToStart": {
+    "message": "Ready to start",
+    "description": "Label"
+  },
   "dashboardSaveButton": {
     "message": " Save ",
     "description": "Save Label"
@@ -270,5 +274,21 @@
   "dashboardCurrentModel": {
     "message": "Current model",
     "description": "Current model Label"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Downloads",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Settings",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "History",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bookmarks",
+    "description": "Bookmarks Label"
   }
 }

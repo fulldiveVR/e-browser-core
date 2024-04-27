@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome నుండి తీసివేయండి",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "డౌన్‌లోడ్‌లు",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "హిస్టరీ",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "బుక్‌మార్క్‌లు",
+    "description": "Bookmarks Label"
   }
 }

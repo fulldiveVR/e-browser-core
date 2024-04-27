@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome から削除します",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "ダウンロード",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "設定",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "履歴",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "ブックマーク",
+    "description": "Bookmarks Label"
   }
 }

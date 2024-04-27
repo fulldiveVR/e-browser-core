@@ -222,5 +222,22 @@
   "removeFromChrome": {
     "message": "Verwijderen uit Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Aflaaie",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Instellings",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Geskiedenis",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Boekmerke",
+    "description": "Bookmarks Label"
   }
 }
+

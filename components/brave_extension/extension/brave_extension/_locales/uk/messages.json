@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Видалити з Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Завантаження",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Налаштування",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Історія",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Закладки",
+    "description": "Bookmarks Label"
   }
 }

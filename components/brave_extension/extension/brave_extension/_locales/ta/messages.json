@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome இலிருந்து அகற்று",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "பதிவிறக்கங்கள்",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "அமைப்புகள்",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "இதுவரை பார்த்தவை",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "புக்மார்க்குகள்",
+    "description": "Bookmarks Label"
   }
 }

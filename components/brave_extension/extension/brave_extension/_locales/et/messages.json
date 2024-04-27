@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome'ist eemaldamine",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Allalaadimised",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Seaded",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Ajalugu",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Järjehoidjad",
+    "description": "Bookmarks Label"
   }
 }

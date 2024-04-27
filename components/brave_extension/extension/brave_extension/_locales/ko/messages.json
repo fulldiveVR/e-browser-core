@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Chrome에서 삭제",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "다운로드",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "설정",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "방문 기록",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "북마크",
+    "description": "Bookmarks Label"
   }
 }

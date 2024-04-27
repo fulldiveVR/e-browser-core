@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Eltávolítás a Chrome-ból",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Letöltések",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Beállítások",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Előzmények",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Könyvjelzők",
+    "description": "Bookmarks Label"
   }
 }

@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Aus Chrome entfernen",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Downloads",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Einstellungen",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Verlauf",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Lesezeichen",
+    "description": "Bookmarks Label"
   }
 }

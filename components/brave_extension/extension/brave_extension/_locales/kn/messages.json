@@ -215,12 +215,20 @@
     "message": "AI Wize ನಿಂದ ತೆಗೆದುಹಾಕು",
     "description": "Message for removing an extension from AI Wize"
   },
-  "addToChrome": {
-    "message": "",
-    "description": "Message for adding an extension to Chrome"
+  "dashboardDownloadsTitle": {
+    "message": "ಡೌನ್‌ಲೋಡ್‌ಗಳು",
+    "description": "Downloads Label"
   },
-  "removeFromChrome": {
-    "message": "",
-    "description": "Message for removing an extension from Chrome"
+  "dashboardSettingsTitle": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "ಇತಿಹಾಸ",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು",
+    "description": "Bookmarks Label"
   }
 }

@@ -270,5 +270,21 @@
   "dashboardCurrentModel": {
     "message": "Current model",
     "description": "Current model Label"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Downloads",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Settings",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "History",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bookmarks",
+    "description": "Bookmarks Label"
   }
 }

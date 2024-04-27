@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Odstrani iz Chroma",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Prenosi",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Nastavitve",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Zgodovina",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Zaznamki",
+    "description": "Bookmarks Label"
   }
 }

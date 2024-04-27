@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Hapus dari Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Download",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Setelan",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Histori",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bookmark",
+    "description": "Bookmarks Label"
   }
 }

@@ -7,17 +7,30 @@ import { getLocale } from './background/api/localeAPI'
 const config = { attributes: true, childList: true, subtree: true }
 
 const callback = () => {
-  console.log("dashboard test mutable")
-  document.querySelectorAll('div.v-list-item-title,div.v-list-item-subtitle,div.v-card-title,label.v-field-label,span.v-btn__content').forEach(div => {
+  document.querySelectorAll('div.v-list-item-title,div.v-list-item-subtitle,div.v-card-title,label.v-field-label,span.v-btn__content,span.nav-item-text').forEach(div => {
     var text = div.textContent || '';
     var changed = false;
-    console.log(text)
     if (text === 'System') {
       changed = true;
       text = getLocale('dashboardSystem');
     } else if (text === 'Memory') {
       changed = true;
       text = getLocale('dashboardMemory');
+    } else if (text === 'Downloads') {
+      changed = true;
+      text = getLocale('dashboardDownloadsTitle');
+    } else if (text === 'Settings') {
+      changed = true;
+      text = getLocale('dashboardSettingsTitle');
+    } else if (text === 'History') {
+      changed = true;
+      text = getLocale('dashboardHistoryTitle');
+    } else if (text === 'Bookmarks') {
+      changed = true;
+      text = getLocale('dashboardBookmarksTitle');
+    } else if (text === 'Ready to start') {
+      changed = true;
+      text = getLocale('dashboardReadyToStart');
     } else if (text === 'Will be downloaded') {
       changed = true;
       text = getLocale('dashboardWillBeDownloaded');

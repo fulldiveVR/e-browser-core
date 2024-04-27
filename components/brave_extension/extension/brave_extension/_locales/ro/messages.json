@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Eliminați din Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Descărcări",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Setări",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Istoric",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Marcaje",
+    "description": "Bookmarks Label"
   }
 }
