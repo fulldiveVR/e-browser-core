@@ -73,6 +73,7 @@
       "chrome://newtab/*",
       "chrome://webcompat/*",
       "chrome://wallet/*",
+      "chrome://dashboard/*",
       "chrome://wallet-panel.top-chrome/*",
       "chrome://brave-shields.top-chrome/*",
       "chrome://rewards-panel.top-chrome/*",

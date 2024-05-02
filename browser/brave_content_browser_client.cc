@@ -1094,19 +1094,6 @@ bool BraveContentBrowserClient::HandleURLOverrideRewrite(
     return true;
   }
 
-  //  aiwize://dashboard => http://localhost:22002/system/ui/
-  if (url->host() == kDashboardLLMHost) {
-    GURL::Replacements replacements;
-    replacements.SetSchemeStr(url::kHttpScheme);
-    replacements.SetHostStr(aiwize_llm::kAIWizeLLMHost);
-    replacements.SetPortStr(aiwize_llm::kAIWizeLLMPort);
-    replacements.SetPathStr(kDashboardLLMPath);
-  
-    *url = url->ReplaceComponents(replacements);
-    LOG(ERROR) << url->spec();
-    return true;
-  }
-
 #if !BUILDFLAG(IS_ANDROID)
   // aiwize://adblock => aiwize://settings/shields/filters
   if (url->host() == kAdblockHost) {

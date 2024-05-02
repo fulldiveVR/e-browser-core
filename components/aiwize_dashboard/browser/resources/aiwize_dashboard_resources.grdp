@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <include name="IDR_AIWIZE_DASHBOARD_HTML" file="../aiwize_dashboard/browser/resources/aiwize_dashboard_page.html" type="BINDATA" />
+</grit-part>

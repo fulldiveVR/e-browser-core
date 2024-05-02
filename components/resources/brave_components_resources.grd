@@ -104,6 +104,7 @@
       <part file="../ai_chat/resources/page/ai_chat_ui_resources.grdp" />
       <part file="brave_wallet_resources.grdp" />
       <part file="../brave_player/browser/resources/brave_player_resources.grdp" />
+      <part file="../aiwize_dashboard/browser/resources/aiwize_dashboard_resources.grdp" />
     </includes>
   </release>
 </grit>

@@ -55,7 +55,7 @@
     },
     {
       "matches": [
-        "http://localhost:22002/system/ui/*"
+        "chrome://dashboard/*"
       ],
       "js": [
         "out/dashboard.bundle.js"

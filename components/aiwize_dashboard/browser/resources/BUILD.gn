@@ -1,0 +1,21 @@
+# Copyright (c) 2021 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# you can obtain one at http://mozilla.org/MPL/2.0/.
+
+import("//brave/components/common/typescript.gni")
+import("//ui/webui/resources/tools/generate_grd.gni")
+
+transpile_web_ui("aiwize_dashboard_webui") {
+  entry_points = [ [
+        "dashboard",
+        rebase_path("aiwize_dashboard_page.tsx"),
+      ] ]
+  resource_name = "aiwize_dashboard"
+}
+
+pack_web_resources("generated_resources") {
+  resource_name = "aiwize_dashboard"
+  output_dir = "$root_gen_dir/brave/components/aiwize_dashboard/browser/resources"
+  deps = [ ":aiwize_dashboard_webui" ]
+}

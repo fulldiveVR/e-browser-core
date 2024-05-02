@@ -1106,6 +1106,16 @@ source_set("ui") {
     ]
   }
 
+  if (!is_android) {
+    sources += [
+      "webui/aiwize_dashboard_page_ui.cc",
+      "webui/aiwize_dashboard_page_ui.h",
+    ]
+    deps += [
+     "//brave/components/aiwize_dashboard/browser/resources:generated_resources",
+    ]
+  }
+
   if (enable_playlist_webui) {
     sources += [
       "playlist/playlist_dialogs.cc",

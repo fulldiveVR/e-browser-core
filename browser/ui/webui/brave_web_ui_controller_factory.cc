@@ -71,6 +71,8 @@
 #include "brave/browser/ui/webui/ethereum_remote_client/ethereum_remote_client_ui.h"
 #endif
 
+#include "brave/browser/ui/webui/aiwize_dashboard_page_ui.h"
+
 #if BUILDFLAG(ENABLE_IPFS)
 #include "brave/browser/ipfs/ipfs_service_factory.h"
 #include "brave/components/ipfs/features.h"
@@ -124,6 +126,8 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
     return new IPFSUI(web_ui, url.host());
 #endif
 #if !BUILDFLAG(IS_ANDROID)
+  } else if (host == kAIWizeDashboardPageHost) {
+      return new AIWizeDashboardUI(web_ui);
   } else if (host == kWalletPageHost &&
              brave_wallet::IsAllowedForContext(profile)) {
     if (brave_wallet::IsNativeWalletEnabled()) {
@@ -259,6 +263,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
       (base::FeatureList::IsEnabled(brave_player::features::kBravePlayer) &&
        url.host_piece() == brave_player::kBravePlayerHost) ||
 #endif
+      url.host_piece() == kAIWizeDashboardPageHost ||
       url.host_piece() == kRewardsPageHost ||
       url.host_piece() == kRewardsInternalsHost) {
     return &NewWebUI;

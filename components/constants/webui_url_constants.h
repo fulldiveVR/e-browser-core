@@ -9,8 +9,6 @@
 #include "brave/components/ipfs/buildflags/buildflags.h"
 #include "build/build_config.h"
 
-inline constexpr char kDashboardLLMHost[] = "dashboard";
-inline constexpr char kDashboardLLMPath[] = "system/ui";
 inline constexpr char kAdblockHost[] = "adblock";
 inline constexpr char kAdblockInternalsHost[] = "adblock-internals";
 inline constexpr char kAdblockJS[] = "brave_adblock.js";
@@ -47,6 +45,8 @@ inline constexpr char kVPNPanelURL[] =
 inline constexpr char kVPNPanelHost[] = "vpn-panel.top-chrome";
 inline constexpr char kBraveUIWalletPageURL[] = "chrome://wallet/";
 inline constexpr char kWalletPageHost[] = "wallet";
+inline constexpr char kAIWizeDashboardPageURL[] = "aiwize://dashboard";
+inline constexpr char kAIWizeDashboardPageHost[] = "dashboard";
 inline constexpr char kExtensionSettingsURL[] = "aiwize://settings/extensions";
 inline constexpr char kWalletSettingsURL[] = "aiwize://settings/wallet";
 inline constexpr char kBraveSyncPath[] = "braveSync";
