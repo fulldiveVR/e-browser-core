@@ -36,6 +36,7 @@ namespace ai_chat {
 namespace {
 
 constexpr char kAIChatCompletionPath[] = "v1/chat/completions";
+constexpr char kAIChatModelPath[] = "system/models/current";
 
 std::string CreateApiParametersDict(
     const std::string& prompt,
@@ -153,18 +154,6 @@ GURL GetEndpointUrl(const std::string& path) {
 
   return url;
 }
-
-
-std::string DecodeParam(const std::string& text) {
-  int count = text.length();
-  std::string result = std::string(count, '\0');;
-
-  for (int i = 0; i < count; ++i) { 
-    result[i] = text[i] + 1;
-  }
-
-  return result;
-}
 }  // namespace
 
 // static
@@ -183,12 +172,31 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
     GenerationCompletedCallback data_completed_callback,
     GenerationDataCallback
         data_received_callback /* = base::NullCallback() */) {
+    const GURL api_url = GetEndpointUrl(kAIChatModelPath);
+    base::flat_map<std::string, std::string> headers;
+
+    headers.emplace("Accept", "text/plain");
+    headers.emplace("Content-Type", "text/plain");
+
+    auto on_complete = base::BindOnce(&RemoteCompletionOpenAIClient::OnModelQueryCompleted,
+                                      weak_ptr_factory_.GetWeakPtr(),
+                                      prompt, extra_stop_sequences, std::move(data_completed_callback), std::move(data_received_callback));
+
+    api_request_helper::APIRequestOptions  request_options;
+    request_options.max_body_size = 512;
+    api_request_helper_.Request("GET", api_url, "", "", std::move(on_complete), headers, request_options);
+}
+
+void RemoteCompletionOpenAIClient::QueryPromptInternal(
+    const std::string& model_name,
+    const std::string& prompt,
+    const std::vector<std::string>& extra_stop_sequences,
+    GenerationCompletedCallback data_completed_callback,
+    GenerationDataCallback
+        data_received_callback /* = base::NullCallback() */) {
   const GURL api_url = GetEndpointUrl(kAIChatCompletionPath);
   base::flat_map<std::string, std::string> headers;
 
-  LOG(ERROR) << "api_url: " << api_url;
-
-  headers.emplace(DecodeParam("@tsgnqhy`shnm"), DecodeParam("Ad`qdq\x1frj,yjaXvWad7FYxvE5EVgeuS2AkajEIPwVy1wbcYXOaJ4JiyqSo"));
   headers.emplace("Accept", "text/event-stream");
 
   const bool is_sse_enabled =
@@ -196,7 +204,7 @@ void RemoteCompletionOpenAIClient::QueryPrompt(
   // const bool is_sse_enabled =false;
 
   const std::string dict =
-      CreateApiParametersDict(prompt, model_name_, stop_sequences_,
+      CreateApiParametersDict(prompt, model_name, stop_sequences_,
                               std::move(extra_stop_sequences), is_sse_enabled);
 
   if (is_sse_enabled) {
@@ -278,5 +286,40 @@ void RemoteCompletionOpenAIClient::OnQueryCompleted(
   std::move(callback).Run(base::unexpected(std::move(error)));
   // std::move(callback).Run(base::ok(std::move("error final_url: ") + std::move(result.final_url().spec()) + std::move("          response_code:  ") +  std::to_string(result.response_code()) + std::move("          body:  ") +  std::move(result.body())));  // TODO: XXX
 }
+
+
+void RemoteCompletionOpenAIClient::OnModelQueryCompleted(
+    const std::string& prompt,
+    const std::vector<std::string>& stop_sequences,
+    GenerationCompletedCallback data_completed_callback,
+    GenerationDataCallback data_received_callback,
+    APIRequestResult result) {
+  const bool success = result.Is2XXResponseCode();
+
+  if (success) {
+    base::Value body = result.TakeBody();
+    if(body.is_string()) {
+      std::string& model_name = body.GetString();
+      if (!model_name.empty()) {
+        QueryPromptInternal(model_name, prompt, stop_sequences, std::move(data_completed_callback), std::move(data_received_callback));
+        return;
+      }
+    }
+  }
+
+  // Handle error
+  mojom::APIError error;
+
+  if (net::HTTP_TOO_MANY_REQUESTS == result.response_code()) {
+    error = mojom::APIError::RateLimitReached;
+  } else if (net::HTTP_REQUEST_ENTITY_TOO_LARGE == result.response_code()) {
+    error = mojom::APIError::ContextLimitReached;
+  } else {
+    error = mojom::APIError::ConnectionIssue;
+  }
+
+  std::move(data_completed_callback).Run(base::unexpected(std::move(error)));
+}
+
 
 }  // namespace ai_chat

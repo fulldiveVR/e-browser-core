@@ -52,10 +52,24 @@ class RemoteCompletionOpenAIClient : RemoteCompletionClient {
   void ClearAllQueries() override;
 
  private:
+  void QueryPromptInternal(
+      const std::string& model_name,
+      const std::string& prompt,
+      const std::vector<std::string>& stop_sequences,
+      GenerationCompletedCallback data_completed_callback,
+      GenerationDataCallback data_received_callback = base::NullCallback());
+
   void OnQueryDataReceived(EngineConsumer::GenerationDataCallback callback,
                            base::expected<base::Value, std::string> result);
+
   void OnQueryCompleted(EngineConsumer::GenerationCompletedCallback callback,
                         APIRequestResult result);
+
+  void OnModelQueryCompleted(const std::string& prompt,
+      const std::vector<std::string>& stop_sequences,
+      GenerationCompletedCallback data_completed_callback,
+      GenerationDataCallback data_received_callback,
+      APIRequestResult result);
 
   base::WeakPtrFactory<RemoteCompletionOpenAIClient> weak_ptr_factory_{this};
 };

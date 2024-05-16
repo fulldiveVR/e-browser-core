@@ -43,7 +43,8 @@ BASE_FEATURE(kUseBraveRustJSONSanitizer,
 const unsigned int kRetriesCountOnNetworkChange = 1;
 
 APIRequestResult ToAPIRequestResult(
-    std::unique_ptr<network::SimpleURLLoader> loader) {
+    std::unique_ptr<network::SimpleURLLoader> loader,
+    const std::string response_body) {
   auto response_code = -1;
   auto error_code = loader->NetError();
   auto final_url = loader->GetFinalURL();
@@ -64,7 +65,7 @@ APIRequestResult ToAPIRequestResult(
     }
   }
 
-  return APIRequestResult(response_code, base::Value(), std::move(headers),
+  return APIRequestResult(response_code, base::Value(response_body), std::move(headers),
                           error_code, final_url);
 }
 
@@ -420,7 +421,7 @@ void APIRequestHelper::URLLoaderHandler::OnResponse(
   // This shouldn't be called on a request with multiple decoding operations,
   // otherwise we need to modify this to use data_chunk_parsed_callback_.
   DCHECK_EQ(current_decoding_operation_count_, 0);
-  APIRequestResult result = ToAPIRequestResult(std::move(url_loader_));
+  APIRequestResult result = ToAPIRequestResult(std::move(url_loader_), *response_body);
 
   if (!response_body) {
     std::move(result_callback_).Run(std::move(result));
@@ -486,7 +487,7 @@ void APIRequestHelper::URLLoaderHandler::MaybeSendResult() {
   const bool decoding_is_complete = (current_decoding_operation_count_ == 0);
 
   if (request_is_finished_ && decoding_is_complete) {
-    std::move(result_callback_).Run(ToAPIRequestResult(std::move(url_loader_)));
+    std::move(result_callback_).Run(ToAPIRequestResult(std::move(url_loader_), ""));
   } else if (decoding_is_complete) {
     VLOG(3) << "Did not run URLLoaderHandler completion handler, still have "
             << current_decoding_operation_count_

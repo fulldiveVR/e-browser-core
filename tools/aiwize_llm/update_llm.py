@@ -22,8 +22,6 @@ except ImportError:
 # Path constants. (All of these should be absolute paths.)
 BASE_PATH = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', '..')))
 
-THIS_DIR = os.path.abspath(os.path.dirname(__file__))
-
 URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST', 'https://aiwize-browser.storage.googleapis.com/cli/aiwize-browser-cli.zip')
 AIWIZE_LLM_GCP_CREDENTIALS = os.environ.get('AIWIZE_LLM_GCP_CREDENTIALS', '')
 
@@ -115,7 +113,7 @@ def CopyFile(src, dst):
   shutil.copy(src, dst)
 
 
-def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list):
+def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str | None):
   out_path = os.path.normpath(os.path.join(BASE_PATH, output_path.removeprefix("//")))
   out_gen_path = os.path.normpath(os.path.join(os.path.join(BASE_PATH, gen_path.removeprefix("//")), "aiwize_llm"))
 
@@ -134,6 +132,9 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list):
       print('Exiting.')
       return 1
 
+  if sub_path != None:
+    out_gen_path = os.path.join(out_gen_path, sub_path)
+
   for file in names_list:
     file_src_path = os.path.join(out_gen_path, file)
     file_out_path = os.path.join(out_path, file)
@@ -141,6 +142,27 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list):
       os.remove(file_out_path)
     shutil.copy(file_src_path, file_out_path)
     print(f"{file} copied.")
+
+
+  print('Updating ui...')
+    
+  ui_src_path = os.path.join(out_gen_path, "aiwize-browser-cli-ui.zip")
+  ui_gen_path = os.path.join(out_gen_path, "ui")
+
+  if os.path.exists(ui_src_path):
+    print('Extraction ui...')
+    EnsureDirExists(ui_gen_path)
+    print("zip_path:", ui_src_path)
+    with zipfile.ZipFile(ui_src_path) as zip_ref:
+        zip_ref.extractall(ui_gen_path)
+
+    ui_index_html_path = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', 'components', 'aiwize_dashboard', 'browser', 'resources', 'aiwize_dashboard_page.html')))
+    CopyFile(os.path.join(ui_gen_path, "index.html"), ui_index_html_path)
+
+    ui_files = ['favicon.ico', 'index.css', 'index.js', 'materialdesignicons-webfont.eot', 'materialdesignicons-webfont.ttf', 'materialdesignicons-webfont.woff', 'materialdesignicons-webfont.woff2']
+    ui_resources_path = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', 'browser', 'resources', 'settings', 'aiwize_dashboard')))
+    for file in ui_files:
+      CopyFile(os.path.join(ui_gen_path, file), os.path.join(ui_resources_path, file))
 
   return 0
 
@@ -155,11 +177,16 @@ def main(args):
       '--gen-path',
       required=True
   )
+  parser.add_argument(
+      '--sub-path',
+      required=False,
+      default=None
+  )
   
   parser.add_argument('-n', '--names-list', nargs='+', required=True)
   options = parser.parse_args(args)
 
-  return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list)
+  return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path)
 
 
 if __name__ == '__main__':

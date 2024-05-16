@@ -45,6 +45,7 @@ generate_grd("build_grd") {
   grd_prefix = "brave_settings"
   out_grd = "$target_gen_dir/${grd_prefix}_resources.grd"
   input_files = [
+    "aiwize_dashboard/favicon.ico",
     "aiwize_dashboard/index.css",
     "aiwize_dashboard/index.js",
     "aiwize_dashboard/materialdesignicons-webfont.ttf",

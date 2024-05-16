@@ -83,6 +83,8 @@ if (is_win) {
       "$root_out_dir",
       "--gen-path",
       "$root_gen_dir",
+      "--sub-path",
+      "aiwize-browser-cli-lin-win",
       "-n",
       "aiwize-windows-amd64.exe"
     ]
@@ -176,16 +178,15 @@ if (is_win) {
 
 group("brave") {
   deps = [ "build/$target_os:brave" ]
+  if (is_win) {
+    deps += [
+      ":fetch_aiwize_llm",
+    ]
+  }
   if (!is_android && !is_ios) {
     deps += [
       "//brave/components/version_info:generate_version",
       "//chrome",
-    ]
-  }
-  if (is_win) {
-    deps += [
-      "//brave/components/version_info:generate_version",
-      ":fetch_aiwize_llm",
     ]
   }
 }
