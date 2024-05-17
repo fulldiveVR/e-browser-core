@@ -32,7 +32,7 @@ credentials = service_account.Credentials.from_service_account_info(
 )
 credentials.refresh(GoogleRequest())
 
-def DownloadUrl(url, output_file):
+def DownloadUrl(url, output_file) -> int:
   """Download url into output_file."""
   CHUNK_SIZE = 4096
   TOTAL_DOTS = 10
@@ -41,8 +41,7 @@ def DownloadUrl(url, output_file):
 
   while True:
     try:
-      sys.stdout.write('Downloading %s ' % url)
-      sys.stdout.flush()
+      print('Downloading %s ' % url)
       
       request = Request(url)
       request.add_header('Authorization', "Bearer %s" % credentials.token)
@@ -64,7 +63,7 @@ def DownloadUrl(url, output_file):
       if bytes_done != total_size:
         raise URLError("only got %d of %d bytes" % (bytes_done, total_size))
       print(' Done.')
-      return
+      return total_size
     except URLError as e:
       sys.stdout.write('\n')
       print(e)
@@ -82,9 +81,9 @@ def EnsureDirExists(path):
     os.makedirs(path)
 
 
-def DownloadAndUnpack(url, output_dir):
+def DownloadAndUnpack(url, output_dir) -> int:
   f = tempfile.NamedTemporaryFile(suffix='.zip',  mode='wb', delete=False)
-  DownloadUrl(url, f)
+  total_size: int = DownloadUrl(url, f)
   f.close()
   zip_path  = f.name
   EnsureDirExists(output_dir)
@@ -93,7 +92,33 @@ def DownloadAndUnpack(url, output_dir):
       zip_ref.extractall(output_dir)
       
   os.unlink(zip_path)
+  return total_size
 
+
+def CheckUpdateNeends(url: str, last_total_size: int) -> bool:
+  """Check file size for file by link."""
+  if last_total_size <= 0:
+    return True
+
+  num_retries = 3
+  retry_wait_s = 5  # Doubled at each retry.
+
+  while True:
+    try:
+      request = Request(url)
+      request.add_header('Authorization', "Bearer %s" % credentials.token)
+
+      response = urlopen(request)
+      total_size = int(response.headers.get('Content-Length').strip())
+      return last_total_size != total_size
+    except URLError as e:
+      print(e)
+      if num_retries == 0 or isinstance(e, HTTPError) and e.code == 404:
+        raise e
+      num_retries -= 1
+      print('Retrying in %d s ...' % retry_wait_s)
+      time.sleep(retry_wait_s)
+      retry_wait_s *= 2
 
 def RmTree(dir):
   """Delete dir."""
@@ -116,27 +141,49 @@ def CopyFile(src, dst):
 def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str | None):
   out_path = os.path.normpath(os.path.join(BASE_PATH, output_path.removeprefix("//")))
   out_gen_path = os.path.normpath(os.path.join(os.path.join(BASE_PATH, gen_path.removeprefix("//")), "aiwize_llm"))
-
-  files = [os.path.join(out_gen_path, name) for name in names_list]
-  files_not_exists = [x for x in files if not os.path.exists(x)]
-
-
-  if len(files_not_exists) > 0:
-    print('Downloading aiwize_llm')
-    
-    try:
-      DownloadAndUnpack(URL_AIWIZE_LLM_DIST, out_gen_path)
-      print('aiwize_llm unpacked')
-    except URLError:
-      print('Failed to download aiwize_llm')
-      print('Exiting.')
-      return 1
-
   if sub_path != None:
-    out_gen_path = os.path.join(out_gen_path, sub_path)
+    out_cli_path = os.path.join(out_gen_path, sub_path)
+  else:
+    out_cli_path = out_gen_path
+
+  last_update_info_path = os.path.join(out_gen_path, "last_update_info")
+
+  files = [os.path.join(out_cli_path, name) for name in names_list]
+  updateRequired = len([x for x in files if not os.path.exists(x)]) > 0
+
+  if not updateRequired:
+    last_total_size = -1
+    try:
+      f = open(last_update_info_path, "r")
+      last_total_size = int(f.read().strip())
+      f.close()
+    except Exception as e:
+      print(e)
+
+    updateRequired = CheckUpdateNeends(URL_AIWIZE_LLM_DIST, last_total_size)
+
+  if not updateRequired:
+    return 0
+
+  print('Downloading aiwize_llm')
+    
+  try:
+    last_total_size = DownloadAndUnpack(URL_AIWIZE_LLM_DIST, out_gen_path)
+    try:
+      f = open(last_update_info_path, "w")
+      f.write(f"{last_total_size}")
+      f.close()
+    except Exception as e:
+      print(e)
+
+    print('aiwize_llm unpacked')
+  except URLError:
+    print('Failed to download aiwize_llm')
+    print('Exiting.')
+    return 1
 
   for file in names_list:
-    file_src_path = os.path.join(out_gen_path, file)
+    file_src_path = os.path.join(out_cli_path, file)
     file_out_path = os.path.join(out_path, file)
     if os.path.exists(file_out_path):
       os.remove(file_out_path)
@@ -146,8 +193,8 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
 
   print('Updating ui...')
     
-  ui_src_path = os.path.join(out_gen_path, "aiwize-browser-cli-ui.zip")
-  ui_gen_path = os.path.join(out_gen_path, "ui")
+  ui_src_path = os.path.join(out_cli_path, "aiwize-browser-cli-ui.zip")
+  ui_gen_path = os.path.join(out_cli_path, "ui")
 
   if os.path.exists(ui_src_path):
     print('Extraction ui...')
@@ -187,7 +234,6 @@ def main(args):
   options = parser.parse_args(args)
 
   return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path)
-
 
 if __name__ == '__main__':
   sys.exit(main(sys.argv[1:]))
