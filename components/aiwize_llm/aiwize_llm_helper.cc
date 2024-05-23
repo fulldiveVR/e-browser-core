@@ -10,8 +10,13 @@
 #include "brave/base/process/process_launcher.h"
 #include "base/path_service.h"
 #include "base/no_destructor.h"
+#include "base/process/kill.h"
+#include "content/public/common/result_codes.h"
+#include "base/time/time.h"
 
 namespace aiwize_llm {
+
+const wchar_t kOllamaExe[] = L"ollama.exe";
 
 AIWizeLLMHelper* AIWizeLLMHelper::GetInstance() {
   static base::NoDestructor<AIWizeLLMHelper> instance;
@@ -19,15 +24,12 @@ AIWizeLLMHelper* AIWizeLLMHelper::GetInstance() {
 }
 
 AIWizeLLMHelper::AIWizeLLMHelper() {
-  LOG(ERROR) << "AIWizeLLMHelper(): " << kAIWizeLLMExecutable;
   process_ = std::nullopt;
 }
 
 AIWizeLLMHelper::~AIWizeLLMHelper() = default;
 
 void AIWizeLLMHelper::StartService() {
-  LOG(ERROR) << "AIWizeLLMHelper():StartService() ";
-
   if(process_) {
     return;
   }
@@ -52,16 +54,14 @@ void AIWizeLLMHelper::StartService() {
   options.start_hidden = true;
 #endif
   process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options);
-
-  LOG(ERROR) << "StartService: " << kAIWizeLLMAPI;
 }
 
 void AIWizeLLMHelper::StopService() {
-  LOG(ERROR) << "StopService";
   if(process_) {
       process_->Terminate(0, true);
   }
   process_ = std::nullopt;
+  base::CleanupProcesses(kOllamaExe, base::TimeDelta(), content::RESULT_CODE_NORMAL_EXIT, nullptr);
 }
 
 std::string AIWizeLLMHelper::GetHostLLM() {
