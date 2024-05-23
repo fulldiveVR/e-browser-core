@@ -26,10 +26,18 @@ AIWizeDashboardUI::AIWizeDashboardUI(content::WebUI* web_ui)
                               kAiwizeDashboardGeneratedSize,
                               IDR_AIWIZE_DASHBOARD_HTML,
                               true /*disable_trusted_types_csp*/);
+
+  source->AddResourcePath("index.js", IDR_AIWIZE_DASHBOARD_JS);
+  source->AddResourcePath("index.css", IDR_AIWIZE_DASHBOARD_CSS);
+  source->AddResourcePath("favicon.ico", IDR_AIWIZE_DASHBOARD_FAVICON);
+  source->AddResourcePath("materialdesignicons-webfont.ttf", IDR_AIWIZE_DASHBOARD_FONT1);
+  source->AddResourcePath("materialdesignicons-webfont.eot", IDR_AIWIZE_DASHBOARD_FONT2);
+  source->AddResourcePath("materialdesignicons-webfont.woff2", IDR_AIWIZE_DASHBOARD_FONT3);
+  source->AddResourcePath("materialdesignicons-webfont.woff", IDR_AIWIZE_DASHBOARD_FONT4);
+
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::StyleSrc,
-      std::string("style-src chrome://resources "
-                  "chrome://settings 'unsafe-inline';"));
+      std::string("style-src chrome://resources chrome://settings chrome://dashboard aiwize://dashboard 'unsafe-inline';"));
   
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::ConnectSrc,
@@ -37,8 +45,7 @@ AIWizeDashboardUI::AIWizeDashboardUI(content::WebUI* web_ui)
 
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::ScriptSrc,
-      std::string("script-src 'self' chrome://resources "
-                  "chrome://settings 'unsafe-inline';"));
+      std::string("script-src 'self' chrome://resources chrome://settings chrome://dashboard aiwize://dashboard 'unsafe-inline';"));
 }
 
 AIWizeDashboardUI::~AIWizeDashboardUI() = default;

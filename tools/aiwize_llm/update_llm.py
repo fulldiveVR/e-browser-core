@@ -203,11 +203,8 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
     with zipfile.ZipFile(ui_src_path) as zip_ref:
         zip_ref.extractall(ui_gen_path)
 
-    ui_index_html_path = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', 'components', 'aiwize_dashboard', 'browser', 'resources', 'aiwize_dashboard_page.html')))
-    CopyFile(os.path.join(ui_gen_path, "index.html"), ui_index_html_path)
-
-    ui_files = ['favicon.ico', 'index.css', 'index.js', 'materialdesignicons-webfont.eot', 'materialdesignicons-webfont.ttf', 'materialdesignicons-webfont.woff', 'materialdesignicons-webfont.woff2']
-    ui_resources_path = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', 'browser', 'resources', 'settings', 'aiwize_dashboard')))
+    ui_resources_path = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', 'components', 'aiwize_dashboard', 'browser', 'resources')))
+    ui_files = ['index.html', 'favicon.ico', 'index.css', 'index.js', 'materialdesignicons-webfont.eot', 'materialdesignicons-webfont.ttf', 'materialdesignicons-webfont.woff', 'materialdesignicons-webfont.woff2']
     for file in ui_files:
       CopyFile(os.path.join(ui_gen_path, file), os.path.join(ui_resources_path, file))
 

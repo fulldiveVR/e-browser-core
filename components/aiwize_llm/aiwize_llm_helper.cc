@@ -38,6 +38,7 @@ void AIWizeLLMHelper::StartService() {
   command_line.AppendArg("server");
   command_line.AppendArg("start");
   command_line.AppendArg("--init");
+  command_line.AppendArg("--gpu");
   command_line.AppendArg("--port");
   command_line.AppendArg("22002");
 
