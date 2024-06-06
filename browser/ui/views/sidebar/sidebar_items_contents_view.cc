@@ -571,6 +571,8 @@ ui::ImageModel SidebarItemsContentsView::GetImageForBuiltInItems(
       return get_image_model(kLeoProductPlaylistIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kChatUI:
       return get_image_model(kLeoProductBraveLeoIcon, state);
+    case sidebar::SidebarItem::BuiltInItemType::kAiWizeApps:
+      return get_image_model(kLeoAiwizeAppsIcon, state); // TODO fftf
     case sidebar::SidebarItem::BuiltInItemType::kAiWize:
       [[fallthrough]];
     case sidebar::SidebarItem::BuiltInItemType::kNone:

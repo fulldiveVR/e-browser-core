@@ -61,3 +61,4 @@ test_get_pkgs
 build/config/gclient_args.gni
 third_party/rust/target
 xcuserdata
+tools/aiwize_apps/apps_list.json

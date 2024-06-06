@@ -226,4 +226,8 @@
     "META": {"sizes": {"includes": [10]}},
     "includes": [61020],
   },
+  "<(SHARED_INTERMEDIATE_DIR)/brave/web-ui-aiwize_applications/aiwize_applications.grd": {
+    "META": {"sizes": {"includes": [10]}},
+    "includes": [61030],
+  },
 }

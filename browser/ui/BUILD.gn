@@ -1110,9 +1110,12 @@ source_set("ui") {
     sources += [
       "webui/aiwize_dashboard_page_ui.cc",
       "webui/aiwize_dashboard_page_ui.h",
+      "webui/aiwize_applications_page_ui.cc",
+      "webui/aiwize_applications_page_ui.h",
     ]
     deps += [
      "//brave/components/aiwize_dashboard/browser/resources:generated_resources",
+     "//brave/components/aiwize_applications/browser/resources:generated_resources",
     ]
   }
 

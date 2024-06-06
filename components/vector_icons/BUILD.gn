@@ -16,6 +16,7 @@ aggregate_vector_icons("brave_components_vector_icons") {
   # The Skia icon names are transformed to make them easier to use in Brave Core
   # `arrow-right.svg` becomes `leo_arrow_right.icon`
   leo_icons = [
+    "leo_aiwize_apps.icon",
     "leo_arrow_right.icon",
     "leo_arrow_small_right.icon",
     "leo_brave_icon_monochrome.icon",

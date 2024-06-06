@@ -1,6 +1,7 @@
 
 import json
- 
+import favicon
+
 result = {}
  
 with open("apps_list.json", "r") as jsonFile:
@@ -14,10 +15,34 @@ app = {
     "title": "AI Wize",
     "description": "AI Wize",
     "categories" : ["ai", "popular"],
-    "link": "https://aiwize.com/",
-    "icon": "aiwize://resources/brave-icons/product-brave-leo.svg"
+    "link": "https://aiwize.com/"
 }
 apps.append(app)
+
+def sortIcons(item):
+   return item.width * item.height
+
+def filterIcons(item):
+   return item.format == 'png'
+
+def fetchFavIcons(link: str) -> list:
+   print(f"fetchFavIcons: {link}")
+   if "adobe.com" in link or "marketo.com" in link:
+    return ["https://business.adobe.com/img/favicons/favicon-180.png"]
+
+   if "www.tokopedia.com" in link:
+    return []
+
+   try:
+    icons = favicon.get(url=link)
+    icons = list(filter(filterIcons, icons))
+    icons.sort(reverse=True, key=sortIcons)
+    print(icons)
+    return list(map(lambda x:x.url, icons))
+   except Exception as ex:
+        print(ex)
+
+   return []
 
 for item in items:
     title = item.get("name", None)
@@ -28,17 +53,23 @@ for item in items:
        print(f"Warning! {item}")
        exit
     if link:
+      icons = fetchFavIcons(link)
+      icon = None
+      if len(icons) > 0: 
+          icon = icons[0]
+      print(f"{title} - {icon}")
       app = {
           "id": item["id"],
           "title": title,
           "description": description,
           "categories" : categories,
-          "link": link
+          "link": link,
+          "icon": icon,
+          "icons": icons
       }
       apps.append(app)
 
-result["items"] = apps
+      result["items"] = apps
 
-print(result)
-with open("apps.json", "w") as jsonFile:
-    jsonFile.write(json.dumps(result))
+      with open("apps.json", "w") as jsonFile:
+        jsonFile.write(json.dumps(result, indent=2))

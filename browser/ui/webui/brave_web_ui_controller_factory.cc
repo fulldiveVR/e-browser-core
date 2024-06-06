@@ -72,6 +72,7 @@
 #endif
 
 #include "brave/browser/ui/webui/aiwize_dashboard_page_ui.h"
+#include "brave/browser/ui/webui/aiwize_applications_page_ui.h"
 
 #if BUILDFLAG(ENABLE_IPFS)
 #include "brave/browser/ipfs/ipfs_service_factory.h"
@@ -128,6 +129,8 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
 #if !BUILDFLAG(IS_ANDROID)
   } else if (host == kAIWizeDashboardPageHost) {
       return new AIWizeDashboardUI(web_ui);
+  } else if (host == kAIWizeApplicationsPageHost) {
+      return new AIWizeApplicationsUI(web_ui);
   } else if (host == kWalletPageHost &&
              brave_wallet::IsAllowedForContext(profile)) {
     if (brave_wallet::IsNativeWalletEnabled()) {
@@ -264,6 +267,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
        url.host_piece() == brave_player::kBravePlayerHost) ||
 #endif
       url.host_piece() == kAIWizeDashboardPageHost ||
+      url.host_piece() == kAIWizeApplicationsPageHost ||
       url.host_piece() == kRewardsPageHost ||
       url.host_piece() == kRewardsInternalsHost) {
     return &NewWebUI;

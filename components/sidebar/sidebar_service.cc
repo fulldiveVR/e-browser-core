@@ -67,6 +67,9 @@ SidebarItem::BuiltInItemType GetBuiltInItemTypeForLegacyURL(
   if (url == "chrome://history/")
     return SidebarItem::BuiltInItemType::kHistory;
 
+  if (url == "chrome://applications/")
+    return SidebarItem::BuiltInItemType::kAiWizeApps;
+
   NOTREACHED() << url;
   return SidebarItem::BuiltInItemType::kNone;
 }
@@ -441,6 +444,7 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
       SidebarItem::BuiltInItemType::kAiWize,
+      SidebarItem::BuiltInItemType::kAiWizeApps,
       SidebarItem::BuiltInItemType::kChatUI,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,
@@ -635,6 +639,13 @@ SidebarItem SidebarService::GetBuiltInItemForType(
                                 u"AI Wize",
                                  SidebarItem::Type::kTypeBuiltIn,
                                  SidebarItem::BuiltInItemType::kAiWize,
+                                 /* open_in_panel = */ false);
+    }
+    case SidebarItem::BuiltInItemType::kAiWizeApps: {
+      return SidebarItem::Create(GURL("aiwize://applications"),
+                                u"AI Wize Applications",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiWizeApps,
                                  /* open_in_panel = */ false);
     }
     case SidebarItem::BuiltInItemType::kPlaylist: {
