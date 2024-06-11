@@ -29,7 +29,7 @@ export default function IntroCard (props: Props) {
         </Card.Paragraph>
         <Card.Paragraph>
           {descriptionTwoTextParts.beforeTag}
-          <a href={'https://brave.com/privacy/browser/'}>
+          <a href={'https://aiwize.com/privacy/browser/'}>
             {descriptionTwoTextParts.duringTag}
           </a>
           {descriptionTwoTextParts.afterTag}

@@ -24,8 +24,8 @@ SHORTDESC="The web browser from Brave"
 FULLDESC="Browse faster by blocking ads and trackers that violate your privacy and cost you time and money."
 
 # Package maintainer information.
-MAINTNAME="Brave Software"
-MAINTMAIL="support@brave.com"
-PRODUCTURL="https://brave.com/"
+MAINTNAME="AI Wize"
+MAINTMAIL="support@aiwize.com"
+PRODUCTURL="https://aiwize.com/"
 VERSION=$(cat $OUTPUTDIR/version | tr -d 'v,')
 VERSIONFULL=$VERSION

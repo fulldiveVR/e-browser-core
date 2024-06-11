@@ -414,7 +414,7 @@ export function createHost (): Host {
     },
 
     openAdaptiveCaptchaSupport () {
-      openTab('https://support.brave.com/')
+      openTab('https://support.aiwize.com/')
     },
 
     openRewardsSettings () {

@@ -75,7 +75,7 @@ interface Props {
 
 const onClickLearnMore = () => {
   window.open(
-    'https://support.brave.com/hc/en-us/articles/4409513799693',
+    'https://support.aiwize.com/hc/en-us/articles/4409513799693',
     '_blank',
     'noreferrer'
   )

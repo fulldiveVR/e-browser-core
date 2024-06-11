@@ -42,7 +42,7 @@ const TermsOfUseText: React.FC<{}> = () => {
     <p key={text.duringTag}>
       {text.beforeTag}
       <LinkText
-        href='https://brave.com/terms-of-use/'
+        href='https://aiwize.com/terms-of-use/'
         target='_blank'
         rel='noopener noreferrer'
         onClick={

@@ -15,7 +15,7 @@
     Browse faster by blocking ads and trackers that violate your privacy and cost you time and money.
     </p>
   </description>
-  <url type="homepage">https://brave.com/</url>
+  <url type="homepage">https://aiwize.com/</url>
   <screenshots>
     <screenshot type="default">
       <image>https://www.brave.com/images/browser.png</image>
@@ -25,5 +25,5 @@
   <translation/>
   <developer_name>Brave Software</developer_name>
   <url type="bugtracker">https://github.com/brave/brave-browser/issues/</url>
-  <url type="help">https://support.brave.com/</url>
+  <url type="help">https://support.aiwize.com/</url>
 </component>

@@ -16,7 +16,7 @@ import formatMessage from '$web-common/formatMessage'
 import DataContext from '../../state/context'
 
 const WIKI_URL = "https://github.com/brave/brave-browser/wiki/Brave-Leo"
-const PRIVACY_URL = "https://brave.com/privacy/browser/#brave-leo"
+const PRIVACY_URL = "https://aiwize.com/privacy/browser/#brave-leo"
 
 function PrivacyMessage () {
   const context = React.useContext(DataContext)

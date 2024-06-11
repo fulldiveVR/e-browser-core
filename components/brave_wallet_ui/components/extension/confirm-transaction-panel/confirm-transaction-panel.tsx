@@ -84,7 +84,7 @@ const NftAssetIconWithPlaceholder = withPlaceholderIcon(NftIcon, ICON_CONFIG)
 
 const onClickLearnMore = () => {
   chrome.tabs.create(
-    { url: 'https://support.brave.com/hc/en-us/articles/5546517853325' },
+    { url: 'https://support.aiwize.com/hc/en-us/articles/5546517853325' },
     () => {
       if (chrome.runtime.lastError) {
         console.error('tabs.create failed: ' + chrome.runtime.lastError.message)

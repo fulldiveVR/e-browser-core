@@ -14,7 +14,7 @@ import { PageModal } from './page_modal'
 
 import * as style from './reset_modal.style'
 
-const supportURL = 'https://support.brave.com/hc/en-us/articles/10007969237901'
+const supportURL = 'https://support.aiwize.com/hc/en-us/articles/10007969237901'
 
 interface Props {
   onReset: () => void

@@ -14,7 +14,7 @@ _BRAVE_VALUES = {
   'build': 'brave',
   'app_name': 'Brave',
   'doc_url':
-    'https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy',
+    'https://support.aiwize.com/hc/en-us/articles/360039248271-Group-Policy',
   'frame_name': 'Brave Frame',
   'webview_name': 'Brave WebView',
   'win_config': {

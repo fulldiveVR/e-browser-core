@@ -30,4 +30,28 @@ def fetchImage(link: str | None) -> str | None:
     
     return None
 
+def convertImage(path: str | None) -> str | None:
+    if path == None: return None
+
+    try:
+        with open(path, "rb") as file:
+            img = Image.open(BytesIO(file.read()), formats=["png", "jpeg"])
+        width, height = img.size
+        print(f"{width}x{height}: {path}")
+        if width != height or width > 1024 or height > 1024 or width < 64 or height < 64:
+            return None
+        
+        img_byte_arr = BytesIO()
+        img.save(img_byte_arr, format='PNG')
+        img_byte_arr = img_byte_arr.getvalue()
+
+        return "data:image/png;base64," + base64.b64encode(img_byte_arr).decode("utf-8")
+    except Exception as ex:
+        print("exception", path, ex)
+        traceback.print_exc()
+    
+    return None
+
 print(fetchImage("https://www.apple.com/v/icloud/af/images/find-my/icon_find_my__dbzk8xw06y6a_large.jpg"))
+
+print(convertImage("./product_logo_128.png"))

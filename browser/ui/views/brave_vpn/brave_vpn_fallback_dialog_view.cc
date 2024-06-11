@@ -37,7 +37,7 @@ namespace brave_vpn {
 namespace {
 
 constexpr char kBraveVPNLearnMoreURL[] =
-    "https://support.brave.com/hc/en-us/articles/";
+    "https://support.aiwize.com/hc/en-us/articles/";
 
 constexpr int kChildSpacing = 16;
 constexpr int kPadding = 24;

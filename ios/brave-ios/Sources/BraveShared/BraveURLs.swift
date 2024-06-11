@@ -26,10 +26,10 @@ extension URL {
     public static let privacyFeatures = URL(string: "https://brave.com/privacy-features/")!
     public static let support = URL(string: "https://support.brave.com")!
     public static let p3aHelpArticle = URL(
-      string: "https://support.brave.com/hc/en-us/articles/9140465918093-What-is-P3A-in-Brave-"
+      string: "https://support.aiwize.com/hc/en-us/articles/9140465918093-What-is-P3A-in-Brave-"
     )!
     public static let braveVPNFaq = URL(
-      string: "https://support.brave.com/hc/en-us/articles/360045045952"
+      string: "https://support.aiwize.com/hc/en-us/articles/360045045952"
     )!
     public static let braveVPNLinkReceiptProd = URL(
       string: "https://account.brave.com/?intent=connect-receipt&product=vpn"
@@ -41,7 +41,7 @@ extension URL {
       string: "https://account.brave.software/?intent=connect-receipt&product=vpn"
     )!
     public static let safeBrowsingHelp = URL(
-      string: "https://support.brave.com/hc/en-us/articles/15222663599629-Safe-Browsing-in-Brave"
+      string: "https://support.aiwize.com/hc/en-us/articles/15222663599629-Safe-Browsing-in-Brave"
     )!
     public static let screenTimeHelp = URL(
       string: "https://support.apple.com/guide/security/secd8831e732/web"

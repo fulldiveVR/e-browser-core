@@ -138,7 +138,7 @@ export const ChecksumInfoModal = React.forwardRef<HTMLDivElement, Props>(
             >
               {getLocale('braveWalletChecksumModalNeedHelp')}{' '}
               <Link
-                href='https://support.brave.com/hc/en-us/articles/4415497656461-Brave-Wallet-FAQ'
+                href='https://support.aiwize.com/hc/en-us/articles/4415497656461-Brave-Wallet-FAQ'
                 target='_blank'
                 rel='noopener noreferrer'
               >
