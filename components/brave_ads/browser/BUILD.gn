@@ -56,7 +56,7 @@ static_library("browser") {
 
   public_deps = [ "//brave/components/brave_ads/core/mojom" ]
 
-  # TODO(https://github.com/brave/brave-browser/issues/24163)
+  # TODO(https://github.com/fulldiveVR/e-browser-core/issues/24163)
   check_includes = false
 
   sources += [

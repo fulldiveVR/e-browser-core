@@ -481,7 +481,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest, LayoutSanity) {
 
   // Test if every tabs are laid out inside tab strip region -------------------
   // This is a regression test for
-  // https://github.com/brave/brave-browser/issues/28084
+  // https://github.com/fulldiveVR/e-browser-core/issues/28084
   for (int i = 0; i < model->count(); i++) {
     auto* tab = GetTabAt(browser(), i);
     EXPECT_TRUE(GetBoundsInScreen(region_view, region_view->GetLocalBounds())
@@ -767,7 +767,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripDragAndDropBrowserTest,
   GetTabStrip(browser())->StopAnimating(
       true);  // Drag-and-drop doesn't start when animation is running.
   {
-    // Regression test for https://github.com/brave/brave-browser/issues/28488
+    // Regression test for https://github.com/fulldiveVR/e-browser-core/issues/28488
     // Check if the tab is positioned properly after drag-and-drop.
     auto* moved_tab = GetTabAt(browser(), 1);
     EXPECT_TRUE(GetBoundsInScreen(region_view, region_view->GetLocalBounds())
@@ -849,7 +849,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripDragAndDropBrowserTest, MAYBE_DragURL) {
 
   // Test if dragging a URL on browser cause a crash. When this happens, the
   // browser root view could try inserting a new tab with the given URL.
-  // https://github.com/brave/brave-browser/issues/28592
+  // https://github.com/fulldiveVR/e-browser-core/issues/28592
   auto* location_icon_view =
       browser_view()->GetLocationBarView()->location_icon_view();
   press_view(location_icon_view);
@@ -875,7 +875,7 @@ class VerticalTabStripWithScrollableTabBrowserTest
 
 IN_PROC_BROWSER_TEST_F(VerticalTabStripWithScrollableTabBrowserTest, Sanity) {
   // Make sure browser works with both vertical tab and scrollable tab strip
-  // https://github.com/brave/brave-browser/issues/28877
+  // https://github.com/fulldiveVR/e-browser-core/issues/28877
   ToggleVerticalTabStrip();
   Browser::Create(Browser::CreateParams(browser()->profile(), true));
 }

@@ -79,7 +79,7 @@ const getNPMConfig = (key, default_value = undefined) => {
         Log.warn(
           `Warning: ${key.replace(/-/g, '_')} and all other Brave-core related variables in .npmrc are ignored. Please migrate to src/brave/.env.\n` +
           'Internal wiki: https://github.com/brave/devops/wiki/%60.env%60-config-for-Brave-Developers\n' +
-          'Public wiki: https://github.com/brave/brave-browser/wiki/Build-configuration\n' +
+          'Public wiki: https://github.com/fulldiveVR/e-browser-core/wiki/Build-configuration\n' +
           'If the found variable is not related to Brave-core, please ignore this warning.'
         )
         break
@@ -540,7 +540,7 @@ Config.prototype.buildArgs = function () {
       // Include vaapi support
       // TODO: Consider setting use_vaapi_x11 instead of use_vaapi. Also
       // consider enabling it for x86 builds. See
-      // https://github.com/brave/brave-browser/issues/1024#issuecomment-1175397914
+      // https://github.com/fulldiveVR/e-browser-core/issues/1024#issuecomment-1175397914
       args.use_vaapi = true
 
     }
@@ -649,7 +649,7 @@ Config.prototype.buildArgs = function () {
     args.fatal_linker_warnings = !this.isComponentBuild()
     // DCHECK's crash on Static builds without allowing the debugger to continue
     // Can be removed when approprioate DCHECK's have been fixed:
-    // https://github.com/brave/brave-browser/issues/10334
+    // https://github.com/fulldiveVR/e-browser-core/issues/10334
     args.dcheck_always_on = this.isComponentBuild()
 
     if (!args.is_official_build) {
@@ -671,7 +671,7 @@ Config.prototype.buildArgs = function () {
     // This is currently being flipped on and off by the Chromium team to test
     // however it causes crashes for us at launch. Check `ios/features.gni`
     // in the future to see if this is no longer needed
-    // https://github.com/brave/brave-browser/issues/29934
+    // https://github.com/fulldiveVR/e-browser-core/issues/29934
     args.ios_partition_alloc_enabled = false
 
     args.ios_provider_target = "//brave/ios/browser/providers:brave_providers"

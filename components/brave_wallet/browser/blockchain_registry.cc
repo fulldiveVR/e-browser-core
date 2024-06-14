@@ -95,7 +95,7 @@ std::optional<std::string> ParseJsonFile(base::FilePath path,
   // We do not sanitize the result here via JsonSanitizer::Sanitize to optimize
   // the performance because we are processing data from our own CRX downloaded
   // via component updater, hence it is considered as trusted input.
-  // See https://github.com/brave/brave-browser/issues/30940 for details.
+  // See https://github.com/fulldiveVR/e-browser-core/issues/30940 for details.
   std::string json_content;
   const base::FilePath json_path = path.AppendASCII(filename);
   if (!base::ReadFileToString(json_path, &json_content)) {

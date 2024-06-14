@@ -196,7 +196,7 @@ void EthereumProviderImpl::AddEthereumChain(const std::string& json_payload,
   }
   // By https://eips.ethereum.org/EIPS/eip-3085 only chain id is required
   // we expect chain name and rpc urls as well at this time
-  // https://github.com/brave/brave-browser/issues/17637
+  // https://github.com/fulldiveVR/e-browser-core/issues/17637
   if (chain_id_lower.empty() || chain->rpc_endpoints.empty() ||
       chain->chain_name.empty()) {
     return RejectInvalidParams(std::move(id), std::move(callback));

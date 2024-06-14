@@ -228,7 +228,7 @@ void JSEthereumProvider::Install(bool install_ethereum_provider,
 
   // Non-function properties are readonly guaranteed by gin::Wrappable
   // send should be writable because of
-  // https://github.com/brave/brave-browser/issues/25078
+  // https://github.com/fulldiveVR/e-browser-core/issues/25078
   for (const std::string& method :
        {"request", "isConnected", "enable", "sendAsync"}) {
     SetOwnPropertyWritable(context, provider_object,
@@ -237,7 +237,7 @@ void JSEthereumProvider::Install(bool install_ethereum_provider,
 
   // Set isMetaMask to writable.
   // isMetaMask should be writable because of
-  // https://github.com/brave/brave-browser/issues/22213;
+  // https://github.com/fulldiveVR/e-browser-core/issues/22213;
   SetOwnPropertyWritable(context, provider_object,
                          gin::StringToV8(isolate, kIsMetaMask), true);
 

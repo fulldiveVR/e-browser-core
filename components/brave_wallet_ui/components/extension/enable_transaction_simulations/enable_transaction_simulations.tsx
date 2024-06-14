@@ -52,7 +52,7 @@ const TX_SIMULATION_FEATURE_BULLETS = [
 ].map((key) => <li key={key}>{getLocale(key)}</li>)
 
 const TX_SIMULATION_TERMS_LINK =
-  'https://github.com/brave/brave-browser/wiki/Transaction-Simulation'
+  'https://github.com/fulldiveVR/e-browser-core/wiki/Transaction-Simulation'
 
 export const EnableTransactionSimulations: React.FC = () => {
   // mutations

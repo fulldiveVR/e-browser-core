@@ -60,7 +60,7 @@ AcceleratorMapping ToAcceleratorMapping(NSMenuItem* item) {
 
     // We can't parse keyEquivalent into keycode properly when it's unicode
     // character. So before starting parsing, disable l10n for a while.
-    // https://github.com/brave/brave-browser/issues/31770
+    // https://github.com/fulldiveVR/e-browser-core/issues/31770
     if (keyEquivalentLocalizationEnabled) {
       // Setting this to NO will change allowsAutomaticKeyEquivalentMirroring to
       // NO too.

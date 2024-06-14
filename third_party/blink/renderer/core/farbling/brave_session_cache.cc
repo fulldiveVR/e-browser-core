@@ -198,7 +198,7 @@ BraveSessionCache::BraveSessionCache(ExecutionContext& context)
   base::StringToUint64(
       cmd_line->HasSwitch(kBraveSessionToken)
           ? cmd_line->GetSwitchValueASCII(kBraveSessionToken)
-          // https://github.com/brave/brave-browser/issues/22021
+          // https://github.com/fulldiveVR/e-browser-core/issues/22021
           : "23456",  // this is intentionally different from the test default
                       // of 12345 so we can still detect any switch issues in
                       // our farbling tests

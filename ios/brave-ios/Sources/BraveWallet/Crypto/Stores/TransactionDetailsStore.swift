@@ -119,7 +119,7 @@ class TransactionDetailsStore: ObservableObject, WalletObserverStore {
       let networksForCoin = await rpcService.allNetworks(coin: coin)
       guard let network = networksForCoin.first(where: { $0.chainId == transaction.chainId }) else {
         // Transactions should be removed if their network is removed
-        // https://github.com/brave/brave-browser/issues/30234
+        // https://github.com/fulldiveVR/e-browser-core/issues/30234
         assertionFailure(
           "The NetworkInfo for the transaction's chainId (\(transaction.chainId)) is unavailable"
         )

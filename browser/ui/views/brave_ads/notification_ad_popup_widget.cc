@@ -40,7 +40,7 @@ void NotificationAdPopupWidget::InitWidget(
     // this shadows are drawn by Widget.
     params.shadow_type = views::Widget::InitParams::ShadowType::kDrop;
 
-    // TODO(https://github.com/brave/brave-browser/issues/29744): Enable
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/29744): Enable
     // ZOrderLevel::kNormal for Linux when custom notification ad drawing
     // artifacts are fixed.
     params.z_order = ui::ZOrderLevel::kFloatingWindow;

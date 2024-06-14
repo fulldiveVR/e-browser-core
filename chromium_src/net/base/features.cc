@@ -23,7 +23,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kSplitHostCacheByNetworkIsolationKey, base::FEATURE_ENABLED_BY_DEFAULT},
     // It is necessary yet to make chromium storage partitioning compatible with
     // Brave ephemeral storage. For reference:
-    // https://github.com/brave/brave-browser/issues/26165
+    // https://github.com/fulldiveVR/e-browser-core/issues/26165
     {kSupportPartitionedBlobUrl, base::FEATURE_DISABLED_BY_DEFAULT},
     {kTpcdMetadataGrants, base::FEATURE_DISABLED_BY_DEFAULT},
     {kWaitForFirstPartySetsInit, base::FEATURE_DISABLED_BY_DEFAULT},

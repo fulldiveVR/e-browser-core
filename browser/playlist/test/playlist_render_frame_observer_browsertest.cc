@@ -127,7 +127,7 @@ class PlaylistRenderFrameObserverBrowserTest : public PlatformBrowserTest {
 
 #if BUILDFLAG(IS_ANDROID)
 // TODO(sko): Fix this test on Android.
-// https://github.com/brave/brave-browser/issues/24971
+// https://github.com/fulldiveVR/e-browser-core/issues/24971
 #define CheckNormalSites DISABLED_CheckNormalSites
 #else
 #define CheckNormalSites CheckNormalSites
@@ -139,7 +139,7 @@ IN_PROC_BROWSER_TEST_F(PlaylistRenderFrameObserverBrowserTest,
 
 #if BUILDFLAG(IS_ANDROID)
 // TODO(sko): Fix this test on Android.
-// https://github.com/brave/brave-browser/issues/24971
+// https://github.com/fulldiveVR/e-browser-core/issues/24971
 #define CheckYoutube DISABLED_CheckYoutube
 #else
 #define CheckYoutube CheckYoutube

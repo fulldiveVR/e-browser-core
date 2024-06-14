@@ -16,7 +16,7 @@ A place to define all specific terms and vocabulary for the Brave Ads component,
 | Catalog  | A collection of available campaigns, creative sets and creative instances.  |
 | Click  | Refers to a user interacting with an advertisement by clicking on the ad.  |
 | Click-through rate  | The percentage of ad impressions that result in clicks.  |
-| Confirmations  | Confirm events, i.e., views, without revealing to Brave the particular user involved. See [security and privacy model for ad confirmations](https://github.com/brave/brave-browser/wiki/Security-and-privacy-model-for-ad-confirmations).  |
+| Confirmations  | Confirm events, i.e., views, without revealing to Brave the particular user involved. See [security and privacy model for ad confirmations](https://github.com/fulldiveVR/e-browser-core/wiki/Security-and-privacy-model-for-ad-confirmations).  |
 | Contextual  | Contextual advertising targets ads based on the web page's content or the user's online activity context to deliver relevant and personalized advertisements.  |
 | Conversion  | When a user triggers an action, it is counted as a conversion. Conversions include making a purchase or signing up for a newsletter.  |
 | Creative instance  | A creative instance refers to a specific version or variation of an advertisement allowing advertisers to test different approaches, optimize performance, and effectively engage their target audience.  |
@@ -30,7 +30,7 @@ A place to define all specific terms and vocabulary for the Brave Ads component,
 | Issuers  | Refers to public keys used to sign privacy-preserving Blinded Tokens. See [challenge-bypass-ristretto](https://github.com/brave-intl/challenge-bypass-ristretto) and [privacy pass cryptographic protocol](https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf).  |
 | Multi-armed bandits  | Multi-armed bandits optimize the allocation of resources between different ad variations or strategies to maximize performance.  |
 | Non-Brave Rewards user  | Refers to a user who has not joined Brave Rewards and will not be rewarded BAT for viewing ads.  |
-| P2A  | Private Advertising Analytics. See [P2A](https://github.com/brave/brave-browser/wiki/Randomized-Response-for-Private-Advertising-Analytics).  |
+| P2A  | Private Advertising Analytics. See [P2A](https://github.com/fulldiveVR/e-browser-core/wiki/Randomized-Response-for-Private-Advertising-Analytics).  |
 | P3A  | Privacy-Preserving Product Analytics. See [P3A](https://brave.com/privacy-preserving-product-analytics-p3a/).  |
 | Pacing  | Rate at which an ad campaign uses up its pre-set number of impressions.  |
 | Page land  | A user's arrival on the advertiser's website, i.e., the pages after the user clicks on an ad, also known as site visits.  |

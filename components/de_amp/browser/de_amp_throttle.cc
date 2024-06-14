@@ -112,7 +112,7 @@ bool DeAmpThrottle::OpenCanonicalURL(const GURL& new_url,
 
   // If we've already navigated to the canonical URL last time, we
   // should stop De-AMPing. This is done to prevent redirect loops.
-  // https://github.com/brave/brave-browser/issues/22610
+  // https://github.com/fulldiveVR/e-browser-core/issues/22610
   bool new_url_same_as_last_committed =
       contents->GetController().GetLastCommittedEntry()
           ? contents->GetController().GetLastCommittedEntry()->GetURL() ==

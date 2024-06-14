@@ -17,7 +17,7 @@ namespace brave_federated {
 
 namespace {
 constexpr char kWikiUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Operational-Patterns";
+    "https://github.com/fulldiveVR/e-browser-core/wiki/Operational-Patterns";
 }  // namespace
 
 int GetCollectionSlot() {

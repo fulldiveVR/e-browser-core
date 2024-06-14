@@ -28,7 +28,7 @@
 
 namespace brave_ads {
 
-// TODO(https://github.com/brave/brave-browser/issues/24938): Reduce cognitive
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/24938): Reduce cognitive
 // complexity.
 CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
   CreativesInfo creatives;

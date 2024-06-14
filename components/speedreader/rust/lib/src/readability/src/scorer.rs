@@ -1120,7 +1120,7 @@ mod tests {
 
     #[test]
     fn test_validate_image_candidate_string() {
-        // Example based off https://github.com/brave/brave-browser/issues/18280
+        // Example based off https://github.com/fulldiveVR/e-browser-core/issues/18280
         assert_eq!(
             ImageCandidateError::URLFailedImageHeuristic,
             validate_image_candidate_string("data:image/svg+xml,%3Csvg%20xmlns%3D").unwrap_err()

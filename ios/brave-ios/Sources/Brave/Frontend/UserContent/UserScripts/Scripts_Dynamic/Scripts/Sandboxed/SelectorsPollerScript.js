@@ -441,7 +441,7 @@ window.__firefox__.execute(function($) {
    * So instead  * we call innerText on the root, and remove the contents of any
    * script or style nodes.
    *
-   * @see https://github.com/brave/brave-browser/issues/9955
+   * @see https://github.com/fulldiveVR/e-browser-core/issues/9955
    */
   const showsSignificantText = (elm) => {
     if (!isHTMLElement(elm)) {

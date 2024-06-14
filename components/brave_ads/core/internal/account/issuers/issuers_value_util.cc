@@ -93,7 +93,7 @@ std::optional<PublicKeyMap> ParsePublicKeys(const base::Value::Dict& dict) {
     }
     double associated_value_as_double;
     if (!base::StringToDouble(*associated_value, &associated_value_as_double)) {
-      // TODO(https://github.com/brave/brave-browser/issues/33546): Decouple
+      // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33546): Decouple
       // payment and confirmation issuer structs/parsing so that we do not need
       // to set the associated value to 0 when an "associatedValue" key has an
       // empty value.

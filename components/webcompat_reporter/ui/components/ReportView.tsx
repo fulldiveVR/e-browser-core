@@ -44,7 +44,7 @@ interface State {
   screenshotObjectUrl: string | null
 }
 
-const WEBCOMPAT_INFO_WIKI_URL = 'https://github.com/brave/brave-browser/wiki/Web-compatibility-reports'
+const WEBCOMPAT_INFO_WIKI_URL = 'https://github.com/fulldiveVR/e-browser-core/wiki/Web-compatibility-reports'
 
 export default class ReportView extends React.PureComponent<Props, State> {
   constructor (props: Props) {

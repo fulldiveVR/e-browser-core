@@ -4,7 +4,7 @@
 
 ### Changed API (28th July 2020)
 ##### Related issue
-[https://github.com/brave/brave-browser/issues/9870](https://github.com/brave/brave-browser/issues/9870)
+[https://github.com/fulldiveVR/e-browser-core/issues/9870](https://github.com/fulldiveVR/e-browser-core/issues/9870)
 ##### Description
 Moved bat-native-confirmations from rewards to ads process
 
@@ -29,7 +29,7 @@ With this PR we now pass `should_refresh`
 [https://github.com/brave/brave-core/pull/3918](https://github.com/brave/brave-core/pull/3918)
 ##### Description
 With this PR we completely changed the logic of how grants work. Instead of using anonize we now used blinded tokens.
-You can read more about what is done in this issue [https://github.com/brave/brave-browser/issues/6078](https://github.com/brave/brave-browser/issues/6078).
+You can read more about what is done in this issue [https://github.com/fulldiveVR/e-browser-core/issues/6078](https://github.com/fulldiveVR/e-browser-core/issues/6078).
 For `ClaimPromotion` Android should use the one with `promotion_id` param
 
 ##### Change

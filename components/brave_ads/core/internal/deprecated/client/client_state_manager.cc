@@ -483,7 +483,7 @@ void ClientStateManager::LoadCallback(InitializeCallback callback,
     SaveState();
   } else {
     if (!FromJson(*json)) {
-      // TODO(https://github.com/brave/brave-browser/issues/32066): Remove
+      // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066): Remove
       // migration failure dumps.
       base::debug::DumpWithoutCrashing();
 

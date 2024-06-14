@@ -269,7 +269,7 @@ void Database::ErrorCallback(const int error, sql::Statement* statement) {
   VLOG(0) << "Database error: " << db_.GetDiagnosticInfo(error, statement);
 
   {
-    // TODO(https://github.com/brave/brave-browser/issues/32066): Remove
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066): Remove
     // migration failure dumps.
     SCOPED_CRASH_KEY_NUMBER("BraveAdsSqlVersionInfo", "value",
                             database::kVersion);

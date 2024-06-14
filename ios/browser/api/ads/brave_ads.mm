@@ -104,11 +104,11 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
   dispatch_queue_t monitorQueue;
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33730): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33730): Unify Brave Ads
 // common operations.
 @property(nonatomic) BraveCommonOperations* commonOps;
 
-// TODO(https://github.com/brave/brave-browser/issues/33574): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33574): Unify Brave Ads
 // component updater.
 @property(nonatomic) dispatch_group_t componentUpdaterPrefsWriteGroup;
 @property(nonatomic) dispatch_queue_t componentUpdaterPrefsWriteThread;
@@ -265,7 +265,7 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
   if ([self isServiceRunning]) {
     dispatch_group_notify(
         self.componentUpdaterPrefsWriteGroup, dispatch_get_main_queue(), ^{
-          // TODO(https://github.com/brave/brave-browser/issues/32917):
+          // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32917):
           // Deprecate shutdown API call.
           self->ads->Shutdown(base::BindOnce(^(bool) {
             [self deallocAds];
@@ -1408,7 +1408,7 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
 - (void)getBrowsingHistory:(const int)max_count
                    forDays:(const int)days_ago
                   callback:(brave_ads::GetBrowsingHistoryCallback)callback {
-  // TODO(https://github.com/brave/brave-browser/issues/33681): Unify Brave Ads
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33681): Unify Brave Ads
   // browsing history.
   std::move(callback).Run({});
 }
@@ -1503,7 +1503,7 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
 
 - (void)getScheduledCaptcha:(const std::string&)payment_id
                    callback:(brave_ads::GetScheduledCaptchaCallback)callback {
-  // TODO(https://github.com/brave/brave-browser/issues/33794): Unify Brave Ads
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33794): Unify Brave Ads
   // adaptive captcha.
   std::move(callback).Run("");
 }
@@ -1533,13 +1533,13 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
 }
 
 - (void)recordP2AEvents:(const std::vector<std::string>&)events {
-  // TODO(https://github.com/brave/brave-browser/issues/33786): Unify Brave Ads
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33786): Unify Brave Ads
   // P3A analytics.
 }
 
 - (void)addFederatedLearningPredictorTrainingSample:
     (std::vector<brave_federated::mojom::CovariateInfoPtr>)training_sample {
-  // TODO(https://github.com/brave/brave-browser/issues/33787): Unify Brave Ads
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33787): Unify Brave Ads
   // federated learning.
 }
 
@@ -1549,7 +1549,7 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
       path == ntp_background_images::prefs::kNewTabPageShowBackgroundImage ||
       path == ntp_background_images::prefs::
                   kNewTabPageShowSponsoredImagesBackgroundImage) {
-    // TODO(https://github.com/brave/brave-browser/issues/33745): Decouple Brave
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33745): Decouple Brave
     // Rewards, News and New Tab Page prefs from core.
     return base::Value(/*enabled*/ true);
   }
@@ -1666,7 +1666,7 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
       }));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33470): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33470): Unify Brave Ads
 // new tab page ad serving.
 
 - (void)triggerNewTabPageAdEvent:(NSString*)wallpaperId
@@ -1793,16 +1793,16 @@ static NSString* const kComponentUpdaterMetadataPrefKey =
   ads->ToggleDislikeAd(brave_ads::AdContentToValue(ad_content));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/33788): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33788): Unify Brave Ads
 // like category.
 
-// TODO(https://github.com/brave/brave-browser/issues/33788): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33788): Unify Brave Ads
 // dislike category.
 
-// TODO(https://github.com/brave/brave-browser/issues/33789): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33789): Unify Brave Ads
 // save ad.
 
-// TODO(https://github.com/brave/brave-browser/issues/33790): Unify Brave Ads
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/33790): Unify Brave Ads
 // mark ad as inappropriate.
 
 #pragma mark - Ads client notifier

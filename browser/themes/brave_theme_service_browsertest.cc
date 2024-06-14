@@ -274,7 +274,7 @@ IN_PROC_BROWSER_TEST_F(BraveThemeServiceTest, ColorProviderTest) {
 
 #if BUILDFLAG(IS_WIN)
 // Some tests are failing for Windows x86 CI,
-// See https://github.com/brave/brave-browser/issues/22767
+// See https://github.com/fulldiveVR/e-browser-core/issues/22767
 #if defined(ARCH_CPU_X86)
 #define MAYBE_DarkModeChangeByRegTest DISABLED_DarkModeChangeByRegTest
 #else

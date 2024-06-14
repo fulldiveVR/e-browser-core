@@ -135,7 +135,7 @@ export const addressEndpoints = ({
         try {
           const { data: api, cache } = baseQuery(undefined)
 
-          // https://github.com/brave/brave-browser/issues/34796
+          // https://github.com/fulldiveVR/e-browser-core/issues/34796
           // name service URLs are case-insensitive, but backend currently
           // fails to resolve addresses for URLS containing capital letters
           const lowercaseURL = arg.url.toLowerCase()

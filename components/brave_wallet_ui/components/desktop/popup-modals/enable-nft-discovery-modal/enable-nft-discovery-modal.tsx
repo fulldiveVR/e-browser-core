@@ -33,7 +33,7 @@ interface Props {
 }
 
 const LEARN_MORE_LINK =
-  'https://github.com/brave/brave-browser/wiki/NFT-Discovery'
+  'https://github.com/fulldiveVR/e-browser-core/wiki/NFT-Discovery'
 
 export const EnableNftDiscoveryModal = ({ onConfirm, onCancel }: Props) => {
   // Selectors

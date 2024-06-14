@@ -142,8 +142,10 @@ void BraveBrowserMainParts::PostBrowserStart() {
       infobars::ContentInfoBarManager* infobar_manager =
           infobars::ContentInfoBarManager::FromWebContents(active_web_contents);
       if (profile && infobar_manager) {
+#if false
         BraveConfirmP3AInfoBarDelegate::Create(
             infobar_manager, g_browser_process->local_state());
+#endif
         SyncCannotRunInfoBarDelegate::Create(infobar_manager, profile, browser);
 
         BraveSyncAccountDeletedInfoBarDelegate::Create(active_web_contents,

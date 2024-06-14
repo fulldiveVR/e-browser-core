@@ -95,7 +95,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           sender: "Brave Privacy-Preserving Ad Analytics Uploader"
           description:
             "Report of anonymized usage statistics. For more info, see "
-            "https://github.com/brave/brave-browser/wiki/"
+            "https://github.com/fulldiveVR/e-browser-core/wiki/"
             "Randomized-Response-for-Private-Advertising-Analytics"
           trigger:
             "Reports are automatically generated on startup and at intervals "
@@ -144,7 +144,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           sender: "Brave Privacy-Preserving Ad Analytics Uploader"
           description:
             "Report of anonymized usage statistics. For more info, see "
-            "https://github.com/brave/brave-browser/wiki/"
+            "https://github.com/fulldiveVR/e-browser-core/wiki/"
             "Randomized-Response-for-Private-Advertising-Analytics"
           trigger:
             "Reports are automatically generated on startup and at intervals "

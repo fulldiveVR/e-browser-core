@@ -62,7 +62,7 @@ void MockFlags() {
 void MockShowNotificationAd(AdsClientMock& mock) {
   ON_CALL(mock, ShowNotificationAd)
       .WillByDefault(::testing::Invoke([](const NotificationAdInfo& ad) {
-        // TODO(https://github.com/brave/brave-browser/issues/29587): Decouple
+        // TODO(https://github.com/fulldiveVR/e-browser-core/issues/29587): Decouple
         // reminders from push notification ads.
         const bool is_reminder_valid = !ad.placement_id.empty() &&
                                        !ad.title.empty() && !ad.body.empty() &&

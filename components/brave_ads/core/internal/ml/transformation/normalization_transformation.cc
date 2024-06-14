@@ -19,7 +19,7 @@ std::unique_ptr<Data> NormalizationTransformation::Apply(
     const std::unique_ptr<Data>& input_data) const {
   CHECK(input_data);
 
-  // TODO(https://github.com/brave/brave-browser/issues/31180): Refactor
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/31180): Refactor
   // TextProcessing to make it more reliable.
   if (input_data->GetType() != DataType::kVector) {
     return {};

@@ -243,7 +243,7 @@ struct SwapCryptoView: View {
   var dexAggregator: DEXAggregator {
     // TODO(stephenheaps): Once LiFiQuote is supported, we need to
     // update this disclaimer to include LiFi description & privacy
-    // policy https://github.com/brave/brave-browser/issues/36436
+    // policy https://github.com/fulldiveVR/e-browser-core/issues/36436
     networkStore.defaultSelectedChain.coin == .sol ? .jupiter : .zeroX
   }
 
@@ -425,7 +425,7 @@ struct SwapCryptoView: View {
       .listRowBackground(Color(.secondaryBraveGroupedBackground))
     }
     Section(
-      //      MVP only supports market price swap. Ref: https://github.com/brave/brave-browser/issues/18307
+      //      MVP only supports market price swap. Ref: https://github.com/fulldiveVR/e-browser-core/issues/18307
       //
       //      header: Picker(Strings.Wallet.swapOrderTypeLabel, selection: $orderType) {
       //        Text(Strings.Wallet.swapMarketOrderType).tag(OrderType.market)

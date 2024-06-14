@@ -492,7 +492,7 @@ class CORE_EXPORT PageGraph : public GarbageCollected<PageGraph>,
   HashMap<MethodName, NodeJSBuiltin*> js_builtin_nodes_;
 
   using FingerprintingFilterNodes ALLOW_DISCOURAGED_TYPE(
-      "TODO(https://github.com/brave/brave-browser/issues/28238)") =
+      "TODO(https://github.com/fulldiveVR/e-browser-core/issues/28238)") =
       std::map<FingerprintingRule, NodeFingerprintingFilter*>;
 
   // Index structure for looking up filter nodes.

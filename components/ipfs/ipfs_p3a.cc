@@ -58,7 +58,7 @@ void RecordIPFSGatewaySetting(PrefService* prefs) {
 }
 
 // Was the IPFS local node installed? If so, is it still used?
-// https://github.com/brave/brave-browser/wiki/P3A#q44-was-the-ipfs-local-node-installed-if-so-is-it-still-used
+// https://github.com/fulldiveVR/e-browser-core/wiki/P3A#q44-was-the-ipfs-local-node-installed-if-so-is-it-still-used
 void RecordIPFSLocalNodeRetention(PrefService* prefs) {
   auto resolve_method = static_cast<IPFSResolveMethodTypes>(
       prefs->GetInteger(kIPFSResolveMethod));

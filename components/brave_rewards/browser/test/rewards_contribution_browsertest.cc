@@ -353,7 +353,7 @@ IN_PROC_BROWSER_TEST_F(RewardsContributionBrowserTest, TipWithVerifiedWallet) {
   contribution_->VerifyTip(amount, false, true);
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/12555): This test is known
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/12555): This test is known
 // to fail intermittently. The likely cause is that after waiting for tips to
 // reconcile, one or both of the generated fees may have already been removed
 // from the ExternalWallet data.

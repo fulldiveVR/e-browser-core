@@ -180,7 +180,7 @@ bool SubscriptionRenderFrameObserver::IsValueAllowed(
     const std::string& purchase_token) const {
   if (purchase_token.length() > 0) {
     // Don't allow " in purchase token.
-    // See https://github.com/brave/brave-browser/issues/27524
+    // See https://github.com/fulldiveVR/e-browser-core/issues/27524
     std::size_t found = purchase_token.find("\"");
     if (found == std::string::npos) {
       return true;

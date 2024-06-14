@@ -32,7 +32,7 @@ interface Props {
 
 // ToDo: We need to remove this this declaration once
 // `leo-option` includes a key prop for us to use.
-// https://github.com/brave/brave-browser/issues/30826
+// https://github.com/fulldiveVR/e-browser-core/issues/30826
 declare global {
   namespace JSX {
     interface IntrinsicElements {

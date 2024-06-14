@@ -32,6 +32,6 @@ extension Preferences {
 }
 
 public struct AIChatConstants {
-  static let braveLeoWikiURL = URL(string: "https://github.com/brave/brave-browser/wiki/Brave-Leo")!
+  static let braveLeoWikiURL = URL(string: "https://github.com/fulldiveVR/e-browser-core/wiki/Brave-Leo")!
   static let braveLeoPrivacyPolicyURL = URL(string: "https://brave.com/privacy/browser/#brave-leo")!
 }

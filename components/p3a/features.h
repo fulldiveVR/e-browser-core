@@ -12,12 +12,12 @@
 namespace p3a {
 namespace features {
 
-// See https://github.com/brave/brave-browser/issues/24338 for more info.
+// See https://github.com/fulldiveVR/e-browser-core/issues/24338 for more info.
 BASE_DECLARE_FEATURE(kConstellation);
-// See https://github.com/brave/brave-browser/issues/31718 for more info.
+// See https://github.com/fulldiveVR/e-browser-core/issues/31718 for more info.
 BASE_DECLARE_FEATURE(kConstellationEnclaveAttestation);
 
-// See https://github.com/brave/brave-browser/issues/34003 for more info.
+// See https://github.com/fulldiveVR/e-browser-core/issues/34003 for more info.
 // Disables JSON measurements for "typical" cadence.
 BASE_DECLARE_FEATURE(kTypicalJSONDeprecation);
 // Disables JSON measurements for all other cadences.

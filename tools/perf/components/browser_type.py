@@ -21,12 +21,12 @@ from components.perf_test_utils import (DownloadArchiveAndUnpack, DownloadFile,
 
 
 def _GetBraveDownloadUrl(tag: str, filename: str) -> str:
-  return ('https://github.com/brave/brave-browser/releases/download/' +
+  return ('https://github.com/fulldiveVR/e-browser-core/releases/download/' +
           f'{tag}/{filename}')
 
 
 def _GetChromiumDownloadUrl(version: str, filename: str) -> str:
-  return ('https://build-artifacts.brave.com/chromium-builds/' +
+  return ('https://build-artifacts.aiwize.com/chromium-builds/' +
           f'{version}/{filename}')
 
 

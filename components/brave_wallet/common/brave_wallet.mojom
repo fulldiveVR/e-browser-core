@@ -2098,7 +2098,7 @@ interface BraveWalletService {
 
   // TODO(darkdh): Move these bridging methods into EthereumProviderService when
   // we split EthereumProviderImpl into EthereumProviderHost and
-  // EthereumProviderService https://github.com/brave/brave-browser/issues/32313
+  // EthereumProviderService https://github.com/fulldiveVR/e-browser-core/issues/32313
 
   // These are used for UI notifying native when the user approve/reject SignMessage[Hardware]Request
   NotifySignMessageRequestProcessed(bool approved, int32 id, ByteArrayStringUnion? signature, string? error);

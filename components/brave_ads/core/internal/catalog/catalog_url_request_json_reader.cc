@@ -18,7 +18,7 @@
 
 namespace brave_ads::json::reader {
 
-// TODO(https://github.com/brave/brave-browser/issues/25987): Reduce cognitive
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/25987): Reduce cognitive
 // complexity.
 std::optional<CatalogInfo> ReadCatalog(const std::string& json) {
   rapidjson::Document document;

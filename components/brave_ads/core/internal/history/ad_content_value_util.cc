@@ -64,7 +64,7 @@ base::Value::Dict AdContentToValue(const AdContentInfo& ad_content) {
       .Set(kIsFlagged, ad_content.is_flagged);
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/24934): Reduce cognitive
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/24934): Reduce cognitive
 // complexity.
 AdContentInfo AdContentFromValue(const base::Value::Dict& dict) {
   AdContentInfo ad_content;

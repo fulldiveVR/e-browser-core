@@ -814,7 +814,7 @@ public class SwapTokenStore: ObservableObject, WalletObserverStore {
   ) async {
     self.state = .error(Strings.Wallet.unknownError)
     // TODO(stephenheaps): Handle `LiFiQuote`
-    // https://github.com/brave/brave-browser/issues/36436
+    // https://github.com/fulldiveVR/e-browser-core/issues/36436
   }
 
   @MainActor private func handleSwapQuoteError(_ swapError: BraveWallet.SwapErrorUnion) async {
@@ -840,7 +840,7 @@ public class SwapTokenStore: ObservableObject, WalletObserverStore {
       return
     }
     // TODO(stephenheaps): Handle `LiFiError`
-    // https://github.com/brave/brave-browser/issues/36436
+    // https://github.com/fulldiveVR/e-browser-core/issues/36436
     self.state = .error(Strings.Wallet.unknownError)
     self.clearAllAmount()
   }

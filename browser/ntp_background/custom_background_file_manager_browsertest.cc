@@ -115,7 +115,7 @@ IN_PROC_BROWSER_TEST_F(CustomBackgroundFileManagerBrowserTest,
 
 #if BUILDFLAG(IS_MAC) && defined(ARCH_CPU_ARM_FAMILY)
 // On Mac ARM CI node, this test is flaky because of timeout.
-// https://github.com/brave/brave-browser/issues/29762
+// https://github.com/fulldiveVR/e-browser-core/issues/29762
 #define MAYBE_SaveImageMultipleTimes DISABLED_SaveImageMultipleTimes
 #else
 #define MAYBE_SaveImageMultipleTimes SaveImageMultipleTimes

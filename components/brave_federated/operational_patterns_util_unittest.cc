@@ -159,7 +159,7 @@ TEST_F(BraveFederatedOperationalPatternsUtilTest, BuildCollectionPingPayload) {
   // Assert
   const std::string pattern =
       "{\"collection_id\":\"(.{32})\",\"collection_slot\":42,\"platform\":\"(.*"
-      ")\",\"wiki-link\":\"https://github.com/brave/brave-browser/wiki/"
+      ")\",\"wiki-link\":\"https://github.com/fulldiveVR/e-browser-core/wiki/"
       "Operational-Patterns\"}";
   EXPECT_TRUE(RE2::FullMatch(payload, pattern));
 }

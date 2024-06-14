@@ -22,7 +22,7 @@
 -Renderer/SubresourceFilterDnsAliasResourceLoaderBrowserTest.*
 
 # Probably failing because of feature changes - need to investigate
-# https://github.com/brave/brave-browser/issues/34185
+# https://github.com/fulldiveVR/e-browser-core/issues/34185
 -All/BrowserFrameColorProviderTest.*
 -All/PrefersColorSchemeTest.*
 -All/WebBluetoothPermissionsPolicyTest.*
@@ -61,7 +61,7 @@
 -WithOverrideParams/ReferrerOverrideTest.CrossOriginDowngradeNavigation/ParamCapReferrerToOriginOnCrossOrigin
 
 # Probably shouldn't be failing - need to investigate
-# https://github.com/brave/brave-browser/issues/34185
+# https://github.com/fulldiveVR/e-browser-core/issues/34185
 -All/FileSystemAccessPickerRequiresUserGestureTest.*
 -All/HostedAppJitTestBaseDefaultDisabled.JITDisabledTest
 -All/HostedAppJitTestBaseDefaultEnabled.JITDisabledTest
@@ -384,7 +384,7 @@
 
 # These tests fail because we intentionally disable direct/raw sockets via
 # policy::policy_prefs::kIsolatedAppsDeveloperModeAllowed. See
-# https://github.com/brave/brave-browser/issues/11546 for additional
+# https://github.com/fulldiveVR/e-browser-core/issues/11546 for additional
 # information.
 -All/BrowsingDataModelBrowserTest.IsolatedWebAppUsageInDefaultStoragePartitionModel/*
 -BorderlessIsolatedWebAppBrowserTest.*
@@ -1206,7 +1206,7 @@
 -WebAppProfileDeletionTest_WebContentsGracefulShutdown.DataRetrieverInstallabilityFetch
 
 # These tests DCHECK in views::View::ReorderChildLayers stemming from ViewShadow
-# c'tor. https://github.com/brave/brave-browser/issues/34103
+# c'tor. https://github.com/fulldiveVR/e-browser-core/issues/34103
 -All/BrowserFrameColorProviderTest.*
 
 # These tests hang trying to SetEmptyTestingFactory for
@@ -1255,7 +1255,7 @@
 -VisualQuerySuggestionsServiceBrowserTest.VisualQuerySuggestionsServiceEnabled
 
 # Fails because we customized PIP UI.
-# https://github.com/brave/brave-browser/issues/35263
+# https://github.com/fulldiveVR/e-browser-core/issues/35263
 -PictureInPicturePixelComparisonBrowserTest.VideoPlay
 
 # These tests fail because we disable lens::features::kLensStandalone

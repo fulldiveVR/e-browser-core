@@ -41,7 +41,7 @@ source_set("unit_tests") {
     "skus_utils_unittest.cc",
   ]
 
-  # Remove when linux fixed https://github.com/brave/brave-browser/issues/15817.
+  # Remove when linux fixed https://github.com/fulldiveVR/e-browser-core/issues/15817.
   if (is_win || is_mac) {
     sources += [ "skus_service_unittest.cc" ]
   }

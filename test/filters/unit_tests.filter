@@ -7,7 +7,7 @@
 
 # These tests crash due to TestingBraveBrowserProcess::greaselion_download_service()
 # having NOTREACHED which causes an immediate crash
-# https://github.com/brave/brave-browser/issues/25726
+# https://github.com/fulldiveVR/e-browser-core/issues/25726
 -All/AppLauncherHandlerTest.HandleClosedWhileUninstallingExtension/OSIntegrationSubManagers_Disabled
 -All/AppLauncherHandlerTest.HandleClosedWhileUninstallingExtension/OSIntegrationSubManagers_Enabled
 -All/AppLauncherHandlerTest.HandleClosedWhileUninstallingExtension/OSIntegrationSubManagers_SaveStateToDB
@@ -223,7 +223,7 @@
 
 # These tests crash when BraveExtensionManagement is initialized via a
 # TestExtensionSystem
-# https://github.com/brave/brave-browser/issues/25727
+# https://github.com/fulldiveVR/e-browser-core/issues/25727
 -AppHomePageHandlerTest.*
 -ChromeUsbDelegateExtensionRenderFrameFeatureDisabledTest.*
 -ChromeUsbDelegateExtensionRenderFrameFeatureEnabledTest.*
@@ -245,7 +245,7 @@
 
 # These tests fail because the error message contains "Brave" instead of
 # "Chrome" or "Chromium" (the string is hard-coded into the test)
-# https://github.com/brave/brave-browser/issues/25728
+# https://github.com/fulldiveVR/e-browser-core/issues/25728
 -All/SiteSettingsHandlerTest.ZoomLevels/*
 -DownloadItemModelTailoredWarningTest.GetBubbleUIInfoForTailoredWarning_SuspiciousArchive
 
@@ -255,7 +255,7 @@
 
 # This test fails because tab_next_close_button->GetBoundsInScreen().Contains(tab_center)
 # returns false instead of true
-# https://github.com/brave/brave-browser/issues/25729
+# https://github.com/fulldiveVR/e-browser-core/issues/25729
 -TabContainerTest.RemoveTabInGroupWithTabClosingMode
 
 # This test fails because the bounds of the tab group underline are slightly
@@ -863,7 +863,7 @@
 -OverlayWindowViewsTest.*
 -PageFreezerTest.*
 -PageInfoBubbleViewTest.*
--PageInfoTest.IncognitoPermissionsDontShowAsk # Change upstream logic for incognito windows. https://github.com/brave/brave-browser/issues/24720
+-PageInfoTest.IncognitoPermissionsDontShowAsk # Change upstream logic for incognito windows. https://github.com/fulldiveVR/e-browser-core/issues/24720
 -PdfPrinterHandlerGetCapabilityTest.*
 -PdfPrinterHandlerPosixTest.*
 -PeopleHandlerTest.*

@@ -38,7 +38,7 @@ class FontBrowserTest : public InProcessBrowserTest {
 
 IN_PROC_BROWSER_TEST_F(FontBrowserTest, FreetypeRegression) {
   // Loading this page on 1.50.121 on Linux crashed the tab.
-  // See https://github.com/brave/brave-browser/issues/29893
+  // See https://github.com/fulldiveVR/e-browser-core/issues/29893
   // and https://bugs.chromium.org/p/chromium/issues/detail?id=1434194
   const GURL url = https_server_.GetURL("/freetype-crash.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));

@@ -548,7 +548,7 @@ const util = {
     // However this is just a temp solution. This file is not
     // used in Chromium tests, so eventually we should find out what is the
     // difference in the way we run the tests. Follow up issue
-    // https://github.com/brave/brave-browser/issues/31641
+    // https://github.com/fulldiveVR/e-browser-core/issues/31641
     console.log('touch gsutil ChangeLog file...')
 
     const changeLogFile = path.join(

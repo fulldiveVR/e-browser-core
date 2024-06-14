@@ -163,13 +163,13 @@ class AdsServiceImpl : public AdsService,
   void NotifyRewardsWalletDidUpdate(
       brave_rewards::mojom::RewardsWalletPtr wallet);
 
-  // TODO(https://github.com/brave/brave-browser/issues/14666) Decouple idle
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/14666) Decouple idle
   // state business logic.
   void CheckIdleStateAfterDelay();
   void CheckIdleState();
   void ProcessIdleState(ui::IdleState idle_state, base::TimeDelta idle_time);
 
-  // TODO(https://github.com/brave/brave-browser/issues/23974) Decouple
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/23974) Decouple
   // notification ad business logic.
   bool CheckIfCanShowNotificationAds();
   bool ShouldShowCustomNotificationAds();
@@ -178,11 +178,11 @@ class AdsServiceImpl : public AdsService,
   void NotificationAdTimedOut(const std::string& placement_id);
   void CloseAllNotificationAds();
 
-  // TODO(https://github.com/brave/brave-browser/issues/26192) Decouple new
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/26192) Decouple new
   // tab page ad business logic.
   void PrefetchNewTabPageAdCallback(std::optional<base::Value::Dict> dict);
 
-  // TODO(https://github.com/brave/brave-browser/issues/26193) Decouple open
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/26193) Decouple open
   // new tab with ad business logic.
   void MaybeOpenNewTabWithAd();
   void OpenNewTabWithAd(const std::string& placement_id);
@@ -190,7 +190,7 @@ class AdsServiceImpl : public AdsService,
   void RetryOpeningNewTabWithAd(const std::string& placement_id);
   void OpenNewTabWithUrl(const GURL& url);
 
-  // TODO(https://github.com/brave/brave-browser/issues/14676) Decouple URL
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/14676) Decouple URL
   // request business logic.
   void URLRequestCallback(SimpleURLLoaderList::iterator url_loader_iter,
                           UrlRequestCallback callback,
@@ -321,19 +321,19 @@ class AdsServiceImpl : public AdsService,
                           int recent_day_range,
                           GetBrowsingHistoryCallback callback) override;
 
-  // TODO(https://github.com/brave/brave-browser/issues/14676) Decouple URL
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/14676) Decouple URL
   // request business logic.
   void UrlRequest(mojom::UrlRequestInfoPtr url_request,
                   UrlRequestCallback callback) override;
 
-  // TODO(https://github.com/brave/brave-browser/issues/26194) Decouple
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/26194) Decouple
   // load/save file business logic.
   void Save(const std::string& name,
             const std::string& value,
             SaveCallback callback) override;
   void Load(const std::string& name, LoadCallback callback) override;
 
-  // TODO(https://github.com/brave/brave-browser/issues/26195) Decouple load
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/26195) Decouple load
   // resources business logic.
   void LoadComponentResource(const std::string& id,
                              int version,
@@ -349,7 +349,7 @@ class AdsServiceImpl : public AdsService,
   void RunDBTransaction(mojom::DBTransactionInfoPtr transaction,
                         RunDBTransactionCallback callback) override;
 
-  // TODO(https://github.com/brave/brave-browser/issues/14666) Decouple P2A
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/14666) Decouple P2A
   // business logic.
   void RecordP2AEvents(const std::vector<std::string>& events) override;
 
@@ -402,7 +402,7 @@ class AdsServiceImpl : public AdsService,
 
   // Brave Ads Service starts count is needed to avoid possible double Brave
   // Ads initialization.
-  // TODO(https://github.com/brave/brave-browser/issues/30247): Refactor Brave
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/30247): Refactor Brave
   // Ads startup logic.
   size_t service_starts_count_ = 0;
 

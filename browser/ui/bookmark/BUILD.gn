@@ -4,7 +4,7 @@
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
 source_set("bookmark") {
-  # Remove when https://github.com/brave/brave-browser/issues/10654 is resolved.
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10654 is resolved.
   check_includes = false
   assert(!is_android)
   sources = [

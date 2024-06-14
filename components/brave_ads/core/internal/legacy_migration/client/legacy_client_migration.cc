@@ -49,7 +49,7 @@ void MigrateClientState(InitializeCallback callback) {
 
              ClientInfo client;
              if (!client.FromJson(*json)) {
-               // TODO(https://github.com/brave/brave-browser/issues/32066):
+               // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066):
                // Remove migration failure dumps.
                base::debug::DumpWithoutCrashing();
 
@@ -65,7 +65,7 @@ void MigrateClientState(InitializeCallback callback) {
                   base::BindOnce(
                       [](InitializeCallback callback, const bool success) {
                         if (!success) {
-                          // TODO(https://github.com/brave/brave-browser/issues/32066):
+                          // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066):
                           // Remove migration failure dumps.
                           base::debug::DumpWithoutCrashing();
 

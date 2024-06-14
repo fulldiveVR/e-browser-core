@@ -551,7 +551,7 @@ SimpleHashClient::ParseNFTsFromSimpleHash(const base::Value& json_value,
     }
 
     // is_erc1155 TODO(nvonpentz) Support ERC1155 tokens by parsing type above
-    // https://github.com/brave/brave-browser/issues/29304
+    // https://github.com/fulldiveVR/e-browser-core/issues/29304
     token->is_erc1155 = false;
 
     // is_nft

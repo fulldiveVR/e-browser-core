@@ -6,7 +6,7 @@
 import("//brave/components/brave_wayback_machine/buildflags/buildflags.gni")
 
 source_set("infobars") {
-  # Remove when https://github.com/brave/brave-browser/issues/10652 is resolved
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10652 is resolved
   check_includes = false
 
   sources = [
@@ -43,7 +43,7 @@ source_set("infobars") {
 }
 
 source_set("brave_sync_account_deleted_infobar") {
-  # Remove when https://github.com/brave/brave-browser/issues/10652 is resolved
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10652 is resolved
   check_includes = false
   sources = [
     "brave_sync_account_deleted_infobar.cc",

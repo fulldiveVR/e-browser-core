@@ -39,7 +39,7 @@ std::string_view GetPlatformName() {
 }
 
 bool IsSnapshotCheckingSupported() {
-  // TODO(https://github.com/brave/brave-browser/issues/17024): Add snapshots
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/17024): Add snapshots
   // checking support for MacOS.
 #if BUILDFLAG(IS_MAC)
   return false;

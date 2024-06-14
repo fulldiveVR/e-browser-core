@@ -586,7 +586,7 @@ void AdsServiceImpl::MaybeShowOnboardingNotification() {
 void AdsServiceImpl::ShowReminder(const mojom::ReminderType type) {
 #if !BUILDFLAG(IS_ANDROID)
   if (UserHasOptedInToNotificationAds() && CheckIfCanShowNotificationAds()) {
-    // TODO(https://github.com/brave/brave-browser/issues/29587): Decouple Brave
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/29587): Decouple Brave
     // Ads reminders from notification ads.
     ShowNotificationAd(BuildReminder(type));
   }
@@ -882,7 +882,7 @@ void AdsServiceImpl::NotificationAdTimedOut(const std::string& placement_id) {
 }
 
 void AdsServiceImpl::CloseAllNotificationAds() {
-  // TODO(https://github.com/brave/brave-browser/issues/25410): Temporary
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/25410): Temporary
   // solution until we refactor the shutdown business logic and investigate
   // calling `NotificationAdManager` to cleanup notification ads.
 

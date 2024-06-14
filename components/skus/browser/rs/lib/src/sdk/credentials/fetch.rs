@@ -218,7 +218,7 @@ where
                                         // 1. we upgraded from a browser version that did not
                                         //    persist request ids and there are multiple devices
                                         // 2. we accidentally re-used a request id due to
-                                        //    https://github.com/brave/brave-browser/issues/35742
+                                        //    https://github.com/fulldiveVR/e-browser-core/issues/35742
                                         self.client.upsert_time_limited_v2_item_creds_request_id(
                                             &item.id,
                                             &Uuid::new_v4().to_string(),

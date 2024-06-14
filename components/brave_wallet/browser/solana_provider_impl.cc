@@ -205,7 +205,7 @@ SolanaProviderImpl::GetDeserializedMessage(
   // Note: We cannot check Base58Encode(msg->Serialize()) is equal to the
   // original encoded message passed in because the order of accounts with the
   // same is_signer and is_writable value can be different between different
-  // implementation. See https://github.com/brave/brave-browser/issues/23542
+  // implementation. See https://github.com/fulldiveVR/e-browser-core/issues/23542
   // for more details.
 
   return std::make_pair(std::move(*msg), std::move(message_bytes));

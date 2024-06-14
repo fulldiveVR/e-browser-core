@@ -51,7 +51,7 @@ public abstract class BraveVpnParentActivity
     abstract void updateProfileView();
 
     // Pass @{code ActivityResultRegistry} reference explicitly to avoid crash
-    // https://github.com/brave/brave-browser/issues/31882
+    // https://github.com/fulldiveVR/e-browser-core/issues/31882
     ActivityResultLauncher<Intent> mIntentActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), getActivityResultRegistry(),
             result -> {

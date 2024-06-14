@@ -157,7 +157,7 @@ public class InAppPurchaseWrapper {
                 });
             } catch (IllegalStateException exc) {
                 // That prevents a crash that some users experience
-                // https://github.com/brave/brave-browser/issues/27751.
+                // https://github.com/fulldiveVR/e-browser-core/issues/27751.
                 // It's unknown what causes it, we tried to add retries, but it
                 // didn't help.
                 Log.e(TAG, "startBillingServiceConnection " + exc.getMessage());

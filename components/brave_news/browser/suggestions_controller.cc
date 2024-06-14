@@ -86,7 +86,7 @@ double GetVisitWeighting(const mojom::PublisherPtr& publisher,
     // many of them are missing bits and pieces. This is a simple middle ground
     // while we wait for them to be fixed.
     // Relevant issues: https://github.com/brave/news-aggregator/issues/58 and
-    // https://github.com/brave/brave-browser/issues/26092
+    // https://github.com/fulldiveVR/e-browser-core/issues/26092
     if (!base::StartsWith(host_name, "www.")) {
       it = visit_weightings.find("www." + host_name);
     }

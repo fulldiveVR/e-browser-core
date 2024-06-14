@@ -368,7 +368,7 @@ TEST(DebounceRuleUnitTest, UrlEncodedDestinationUrl) {
       )json";
   std::vector<std::unique_ptr<DebounceRule>> rules = StringToRules(contents);
 
-  // From https://github.com/brave/brave-browser/issues/22429
+  // From https://github.com/fulldiveVR/e-browser-core/issues/22429
   auto* tracker_url =
       "https://prf.hn/click/camref:1011l7xH5/"
       "pubref:cn-182c2c19daa548769cf89ef10d5a5af3-dtp/"
@@ -394,7 +394,7 @@ TEST(DebounceRuleUnitTest, CatchMultiplePathsForSameInclude) {
       )json";
   std::vector<std::unique_ptr<DebounceRule>> rules = StringToRules(contents);
 
-  // From https://github.com/brave/brave-browser/issues/22429
+  // From https://github.com/fulldiveVR/e-browser-core/issues/22429
   auto* tracker_url_1 =
       "https://www.anrdoezrs.net/links/123/type/dlg/sid/---/https://"
       "www.carhartt.com/product/123/nintendo-one";

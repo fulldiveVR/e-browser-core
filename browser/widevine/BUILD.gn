@@ -12,7 +12,7 @@ if (is_win) {
 assert(enable_widevine)
 
 source_set("widevine") {
-  # Remove when https://github.com/brave/brave-browser/issues/10644 is resolved
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10644 is resolved
   check_includes = false
   deps = [
     "//base",

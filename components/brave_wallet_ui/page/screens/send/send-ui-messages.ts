@@ -8,7 +8,7 @@ import { AddressMessageInfo } from '../../../constants/types'
 export const ENSOffchainLookupMessage: AddressMessageInfo = {
   title: 'braveWalletEnsOffChainLookupTitle',
   description: 'braveWalletEnsOffChainLookupDescription',
-  url: 'https://github.com/brave/brave-browser/wiki/ENS-offchain-lookup'
+  url: 'https://github.com/fulldiveVR/e-browser-core/wiki/ENS-offchain-lookup'
 }
 
 export const FailedChecksumMessage: AddressMessageInfo = {

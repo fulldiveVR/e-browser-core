@@ -48,7 +48,7 @@ void MigrateCallback(InitializeCallback callback,
   const std::optional<TransactionList> transactions =
       BuildTransactionsFromJson(*json);
   if (!transactions) {
-    // TODO(https://github.com/brave/brave-browser/issues/32066): Remove
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066): Remove
     // migration failure dumps.
     base::debug::DumpWithoutCrashing();
 
@@ -61,7 +61,7 @@ void MigrateCallback(InitializeCallback callback,
                       base::BindOnce(
                           [](InitializeCallback callback, const bool success) {
                             if (!success) {
-                              // TODO(https://github.com/brave/brave-browser/issues/32066):
+                              // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066):
                               // Remove migration failure dumps.
                               base::debug::DumpWithoutCrashing();
 

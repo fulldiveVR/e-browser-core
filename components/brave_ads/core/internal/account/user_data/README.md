@@ -26,7 +26,7 @@ Should only be included in the confirmation payload for users who have joined Br
 | platform  | no  | no  | Operating system.  |
 | rotating_hash  | yes  | no  | Privacy-preserving time-based rotating hash.  |
 | segment  | yes  | no  | Advertising taxonomy for the chosen ad.  |
-| studies  | no  | no  | User studies. See [Griffin](https://github.com/brave/brave-browser/wiki/Brave-Variations-(Griffin)).  |
+| studies  | no  | no  | User studies. See [Griffin](https://github.com/fulldiveVR/e-browser-core/wiki/Brave-Variations-(Griffin)).  |
 | systemTimestamp  | no  | yes  | Privacy-preserving [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) timestamp.  |
 | topSegment  | yes  | no  | Top user interest segment. |
 | versionNumber  | no  | no  | Browser version number.  |

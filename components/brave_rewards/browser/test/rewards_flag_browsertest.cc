@@ -28,7 +28,7 @@
 
 namespace brave_rewards {
 
-// TODO(https://github.com/brave/brave-browser/issues/23185): Move to unit tests
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/23185): Move to unit tests
 // for RewardsFlags type.
 class RewardsFlagBrowserTest : public InProcessBrowserTest {
  public:

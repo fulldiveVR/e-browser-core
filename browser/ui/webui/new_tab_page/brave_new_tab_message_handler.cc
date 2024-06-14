@@ -360,7 +360,7 @@ void BraveNewTabMessageHandler::HandleToggleAlternativeSearchEngineProvider(
   // Alternative search related code will not be used.
   // Cleanup "toggleAlternativePrivateSearchEngine" message handler when it's
   // deleted from NTP Webui.
-  // https://github.com/brave/brave-browser/issues/23493
+  // https://github.com/fulldiveVR/e-browser-core/issues/23493
   NOTREACHED();
 }
 

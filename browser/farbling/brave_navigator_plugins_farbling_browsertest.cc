@@ -91,7 +91,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
 }
 
 // Tests results of farbling known values
-// https://github.com/brave/brave-browser/issues/9435
+// https://github.com/fulldiveVR/e-browser-core/issues/9435
 IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
                        FarbleNavigatorPlugins) {
   // Farbling level: off
@@ -139,7 +139,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
 }
 
 // Tests that names of built-in plugins get farbled by default
-// https://github.com/brave/brave-browser/issues/10597
+// https://github.com/fulldiveVR/e-browser-core/issues/10597
 IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
                        FarbleNavigatorPluginsBuiltin) {
   // Farbling level: off
@@ -164,7 +164,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
 
 // Tests that names of built-in plugins that get farbled will reset to their
 // original names when fingerprinting is turned off
-// https://github.com/brave/brave-browser/issues/11278
+// https://github.com/fulldiveVR/e-browser-core/issues/11278
 IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
                        FarbleNavigatorPluginsReset) {
   // Farbling level: balanced (default)

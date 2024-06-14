@@ -317,7 +317,7 @@ const stripChildTagsFromText = (elm: HTMLElement, tagName: string, text: string)
  * So instead  * we call innerText on the root, and remove the contents of any
  * script or style nodes.
  *
- * @see https://github.com/brave/brave-browser/issues/9955
+ * @see https://github.com/fulldiveVR/e-browser-core/issues/9955
  */
 const showsSignificantText = (elm: Element): boolean => {
   if (!isHTMLElement(elm)) {

@@ -256,7 +256,7 @@ IN_PROC_BROWSER_TEST_F(BraveSchemeLoadBrowserTest,
 
 // Check renderer crash happened by observing related notification.
 // Some tests are failing for Windows x86 CI,
-// See https://github.com/brave/brave-browser/issues/22767
+// See https://github.com/fulldiveVR/e-browser-core/issues/22767
 #if BUILDFLAG(IS_WIN) && defined(ARCH_CPU_X86)
 #define MAYBE_CrashURLTest DISABLED_CrashURLTest
 #else

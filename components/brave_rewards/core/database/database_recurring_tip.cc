@@ -22,7 +22,7 @@ namespace database {
 
 namespace {
 
-// TODO(https://github.com/brave/brave-browser/issues/7144):
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/7144):
 //  rename to recurring_tip
 const char kTableName[] = "recurring_donation";
 

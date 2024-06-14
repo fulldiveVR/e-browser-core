@@ -12,7 +12,7 @@
 // the |mock_task_timer_|, the colleciton ping for that slot is sent.
 // Pings only contain the minimal amount of information necessary to analyse
 // client participation on population level. For more information see
-// https://github.com/brave/brave-browser/wiki/Operational-Patterns
+// https://github.com/fulldiveVR/e-browser-core/wiki/Operational-Patterns
 // ----------------------------------------------------------------------------
 
 #ifndef BRAVE_COMPONENTS_BRAVE_FEDERATED_OPERATIONAL_PATTERNS_H_

@@ -1575,7 +1575,7 @@ void RewardsDOMHandler::OnBrowserUpgradeRequiredToServeAds() {
 }
 
 void RewardsDOMHandler::OnIneligibleRewardsWalletToServeAds() {
-  // TODO(https://github.com/brave/brave-browser/issues/32201): Add isEligible
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32201): Add isEligible
   // UI.
 }
 

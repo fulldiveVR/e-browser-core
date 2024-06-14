@@ -223,32 +223,32 @@ IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, AddItemsToList) {
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_RemoveItemFromList) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_ThumbnailFailed) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_MediaDownloadFailed) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_ApiFunctions) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_CreateAndRemovePlaylist) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, RemoveAndRestoreLocalData) {
   // TODO(sko) Test the actual UI, once the spec and the implementation for it
-  // are done https://github.com/brave/brave-browser/issues/25829.
+  // are done https://github.com/fulldiveVR/e-browser-core/issues/25829.
 }
 
 IN_PROC_BROWSER_TEST_F(PlaylistBrowserTest, DISABLED_PlayWithoutLocalCache) {

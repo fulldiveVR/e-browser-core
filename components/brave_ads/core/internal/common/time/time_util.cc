@@ -15,7 +15,7 @@ namespace {
 
 bool g_from_local_exploded_failed_for_testing = false;
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CorrectLocalMidnightForDaylightSaving(const base::Time midnight,
                                                  int expected_day_of_month) {
@@ -34,7 +34,7 @@ base::Time CorrectLocalMidnightForDaylightSaving(const base::Time midnight,
   return corrected_midnight;
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CalculateBeginningOfMonth(const base::Time time) {
   base::Time::Exploded exploded;
@@ -47,7 +47,7 @@ base::Time CalculateBeginningOfMonth(const base::Time time) {
                                                /*expected_day_of_month=*/1);
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CalculateBeginningOfNextMonth(const base::Time time) {
   base::Time::Exploded exploded;
@@ -61,7 +61,7 @@ base::Time CalculateBeginningOfNextMonth(const base::Time time) {
                                                /*expected_day_of_month=*/1);
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CalculateEndOfPreviousMonth(const base::Time time) {
   base::Time adjusted_time = CalculateBeginningOfMonth(time);
@@ -69,14 +69,14 @@ base::Time CalculateEndOfPreviousMonth(const base::Time time) {
   return adjusted_time;
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CalculateBeginningOfPreviousMonth(const base::Time time) {
   const base::Time end_previous_month = CalculateEndOfPreviousMonth(time);
   return CalculateBeginningOfMonth(end_previous_month);
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time CalculateEndOfMonth(const base::Time time) {
   base::Time adjusted_time = CalculateBeginningOfNextMonth(time);
@@ -94,7 +94,7 @@ base::Time ToTimeFromChromeTimestamp(const int64_t timestamp) {
   return base::Time::FromDeltaSinceWindowsEpoch(base::Microseconds(timestamp));
 }
 
-// TODO(https://github.com/brave/brave-browser/issues/20169): Remove this
+// TODO(https://github.com/fulldiveVR/e-browser-core/issues/20169): Remove this
 // function when base::Time::FromLocalExploded for linux sandbox will be fixed.
 base::Time GetLocalMidnight(const base::Time time) {
   base::Time::Exploded exploded;

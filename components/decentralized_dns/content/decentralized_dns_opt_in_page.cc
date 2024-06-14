@@ -74,7 +74,7 @@ void DecentralizedDnsOptInPage::PopulateInterstitialStrings(
   const std::u16string infura_privacy_policy =
       u"https://consensys.net/privacy-policy/";
   const std::u16string sns_wiki_link =
-      u"https://github.com/brave/brave-browser/wiki/"
+      u"https://github.com/fulldiveVR/e-browser-core/wiki/"
       u"Resolve-Methods-for-Solana-Name-Service";
   const std::u16string sol_domain = base::ASCIIToUTF16(std::string(kSolDomain));
   const std::u16string eth_domain = base::ASCIIToUTF16(std::string(kEthDomain));

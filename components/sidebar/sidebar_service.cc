@@ -443,8 +443,8 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // Use this order for picking active panel when panel is opened as
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
-      SidebarItem::BuiltInItemType::kAiWize,
-      SidebarItem::BuiltInItemType::kAiWizeApps,
+      // SidebarItem::BuiltInItemType::kAiWize,
+      // SidebarItem::BuiltInItemType::kAiWizeApps,
       SidebarItem::BuiltInItemType::kChatUI,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,

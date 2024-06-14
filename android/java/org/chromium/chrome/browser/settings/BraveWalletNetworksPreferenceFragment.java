@@ -35,7 +35,7 @@ public class BraveWalletNetworksPreferenceFragment extends BravePreferenceFragme
         super.onCreate(savedInstanceState);
 
         // Pass @{code ActivityResultRegistry} reference explicitly to avoid crash
-        // https://github.com/brave/brave-browser/issues/31882
+        // https://github.com/fulldiveVR/e-browser-core/issues/31882
         mAddNetworkActivityResultLauncher =
                 registerForActivityResult(
                         new ActivityResultContracts.StartActivityForResult(),

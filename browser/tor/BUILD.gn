@@ -9,7 +9,7 @@ import("//extensions/buildflags/buildflags.gni")
 assert(enable_tor)
 
 source_set("tor") {
-  # Remove when https://github.com/brave/brave-browser/issues/10655 is resolved
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10655 is resolved
   check_includes = false
   visibility = [
     ":*",

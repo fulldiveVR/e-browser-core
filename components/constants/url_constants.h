@@ -19,9 +19,9 @@ inline constexpr char kImportDataHelpURL[] =
 inline constexpr char kCryptoWalletsLearnMoreURL[] =
     "https://support.aiwize.com/hc/en-us/articles/360034535452";
 inline constexpr char kPermissionPromptLearnMoreUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://github.com/fulldiveVR/e-browser-core/wiki/Web-API-Permissions";
 inline constexpr char kPermissionPromptHardwareAccessPrivacyRisksURL[] =
-    "https://github.com/brave/brave-browser/wiki/"
+    "https://github.com/fulldiveVR/e-browser-core/wiki/"
     "Privacy-risks-from-allowing-sites-to-access-hardware";
 inline constexpr char kSpeedreaderLearnMoreUrl[] =
     "https://support.aiwize.com/hc/en-us/articles/"

@@ -1324,7 +1324,7 @@ TEST_F(PlaylistServiceUnitTest, MigratePlaylistOrder) {
                              base::Value(*playlist->id)));
 
   // Remove a playlist from playlists pref and not from order pref.
-  // https://github.com/brave/brave-browser/issues/35500
+  // https://github.com/fulldiveVR/e-browser-core/issues/35500
   auto playlists_dict = prefs()->GetDict(kPlaylistsPref).Clone();
   EXPECT_TRUE(playlists_dict.Remove(playlist->id.value()));
   prefs()->SetDict(kPlaylistsPref, std::move(playlists_dict));

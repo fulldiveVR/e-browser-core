@@ -191,7 +191,7 @@ namespace {
 
 constexpr char kPageGraphVersion[] = "0.3.0";
 constexpr char kPageGraphUrl[] =
-    "https://github.com/brave/brave-browser/wiki/PageGraph";
+    "https://github.com/fulldiveVR/e-browser-core/wiki/PageGraph";
 
 PageGraph* GetPageGraphFromIsolate(v8::Isolate* isolate) {
   blink::LocalDOMWindow* window = blink::CurrentDOMWindow(isolate);

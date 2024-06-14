@@ -43,7 +43,7 @@ void BraveBrowserFrameViewWin::OnVerticalTabsPrefsChanged() {
       widget && (widget->IsMaximized() || widget->IsFullscreen())) {
     // In case the widget is maximized, the bounds of it doesn't change even
     // though prefs change. But we need to lay out window controls again.
-    // https://github.com/brave/brave-browser/issues/31971
+    // https://github.com/fulldiveVR/e-browser-core/issues/31971
 
     // As the LayoutManagerBase could have cached layout, we should call
     // InvalidateLayout() first.

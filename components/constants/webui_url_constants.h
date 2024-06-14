@@ -87,6 +87,6 @@ inline constexpr char kChatUIURL[] = "chrome-untrusted://chat/";
 inline constexpr char kChatUIHost[] = "chat";
 
 inline constexpr char16_t kTransactionSimulationLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/Transaction-Simulation";
+    u"https://github.com/fulldiveVR/e-browser-core/wiki/Transaction-Simulation";
 
 #endif  // BRAVE_COMPONENTS_CONSTANTS_WEBUI_URL_CONSTANTS_H_

@@ -33,7 +33,7 @@ namespace {
 void FailedToInitialize(InitializeCallback callback) {
   BLOG(0, "Failed to initialize ads");
 
-  // TODO(https://github.com/brave/brave-browser/issues/32066): Remove migration
+  // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066): Remove migration
   // failure dumps.
   base::debug::DumpWithoutCrashing();
 
@@ -368,7 +368,7 @@ void AdsImpl::MigrateConfirmationStateCallback(mojom::WalletInfoPtr wallet,
   if (wallet) {
     new_wallet = ToWallet(wallet->payment_id, wallet->recovery_seed);
     if (!new_wallet) {
-      // TODO(https://github.com/brave/brave-browser/issues/32066): Remove
+      // TODO(https://github.com/fulldiveVR/e-browser-core/issues/32066): Remove
       // migration failure dumps.
       base::debug::DumpWithoutCrashing();
 

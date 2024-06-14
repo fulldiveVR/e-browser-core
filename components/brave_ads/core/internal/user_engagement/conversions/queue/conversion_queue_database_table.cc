@@ -141,7 +141,7 @@ void GetCallback(GetConversionQueueCallback callback,
   for (const auto& record : command_response->result->get_records()) {
     const ConversionQueueItemInfo conversion_queue_item =
         GetFromRecord(&*record);
-    // TODO(https://github.com/brave/brave-browser/issues/33239): Validate all
+    // TODO(https://github.com/fulldiveVR/e-browser-core/issues/33239): Validate all
     // Brave Ads data when loading from database
     if (!conversion_queue_item.IsValid()) {
       SCOPED_CRASH_KEY_STRING256(

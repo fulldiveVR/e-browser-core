@@ -3,7 +3,7 @@ import("//extensions/buildflags/buildflags.gni")
 assert(enable_extensions)
 
 static_library("browser") {
-  # Remove when https://github.com/brave/brave-browser/issues/10649 is resolved
+  # Remove when https://github.com/fulldiveVR/e-browser-core/issues/10649 is resolved
   check_includes = false
   sources = [
     "magnet_protocol_handler.cc",

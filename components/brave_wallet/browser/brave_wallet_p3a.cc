@@ -255,7 +255,7 @@ void BraveWalletP3A::ReportTransactionSent(mojom::CoinType coin,
       histogram_name = kFilTransactionSentHistogramName;
       break;
     case mojom::CoinType::BTC:
-      // TODO(apaymyshev): https://github.com/brave/brave-browser/issues/28464
+      // TODO(apaymyshev): https://github.com/fulldiveVR/e-browser-core/issues/28464
       return;
     default:
       return;

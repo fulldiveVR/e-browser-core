@@ -107,7 +107,7 @@ export const addNewStackWidget = (state: NewTab.State) => {
 }
 
 // Replaces any stack widgets that were improperly removed
-// as a result of https://github.com/brave/brave-browser/issues/10067
+// as a result of https://github.com/fulldiveVR/e-browser-core/issues/10067
 export const replaceStackWidgets = (state: NewTab.State) => {
   const {
     showRewards,

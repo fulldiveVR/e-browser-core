@@ -437,7 +437,7 @@ IN_PROC_BROWSER_TEST_F(JSEthereumProviderBrowserTest, NonWritable) {
   }
   // window.ethereum.* (methods)
   // send should be writable because of
-  // https://github.com/brave/brave-browser/issues/25078
+  // https://github.com/fulldiveVR/e-browser-core/issues/25078
   for (const std::string& method :
        {"on", "emit", "removeListener", "removeAllListeners", "request",
         "isConnected", "enable", "sendAsync"}) {
@@ -475,7 +475,7 @@ IN_PROC_BROWSER_TEST_F(JSEthereumProviderBrowserTest, NonWritable) {
   }
 }
 
-// See https://github.com/brave/brave-browser/issues/22213 for details
+// See https://github.com/fulldiveVR/e-browser-core/issues/22213 for details
 IN_PROC_BROWSER_TEST_F(JSEthereumProviderBrowserTest, IsMetaMaskWritable) {
   const GURL url = https_server_.GetURL("/simple.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));

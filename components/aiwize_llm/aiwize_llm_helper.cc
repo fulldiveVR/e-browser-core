@@ -16,7 +16,10 @@
 
 namespace aiwize_llm {
 
+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
+#else
 const wchar_t kOllamaExe[] = L"ollama.exe";
+#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 
 AIWizeLLMHelper* AIWizeLLMHelper::GetInstance() {
   static base::NoDestructor<AIWizeLLMHelper> instance;
@@ -34,6 +37,8 @@ void AIWizeLLMHelper::StartService() {
     return;
   }
 
+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
+#else
   base::FilePath exe_dir;
   base::PathService::Get(base::DIR_ASSETS, &exe_dir);
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
@@ -54,14 +59,18 @@ void AIWizeLLMHelper::StartService() {
   options.start_hidden = true;
 #endif
   process_ = brave::ProcessLauncher::ReadAppOutput(command_line, options);
+#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 }
 
 void AIWizeLLMHelper::StopService() {
+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
+#else
   if(process_) {
       process_->Terminate(0, true);
   }
   process_ = std::nullopt;
   base::CleanupProcesses(kOllamaExe, base::TimeDelta(), content::RESULT_CODE_NORMAL_EXIT, nullptr);
+#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 }
 
 std::string AIWizeLLMHelper::GetHostLLM() {
@@ -73,12 +82,17 @@ bool AIWizeLLMHelper::IsInProcess() {
 }
 
 std::string AIWizeLLMHelper::GetInfoLLM() {
+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
+  char empty[] = "";
+  return empty;
+#else
   base::FilePath exe_dir;
   base::PathService::Get(base::DIR_ASSETS, &exe_dir);
   base::CommandLine command_line(exe_dir.Append(kAIWizeLLMExecutable));
   std::wstring wide = command_line.GetCommandLineString();
   std::string str( wide.begin(), wide.end() );
   return str;
+#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
 }
 
 
