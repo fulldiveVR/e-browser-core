@@ -188,6 +188,7 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
     if os.path.exists(file_out_path):
       os.remove(file_out_path)
     shutil.copy(file_src_path, file_out_path)
+    os.chmod(file_out_path, 0o755)
     print(f"{file} copied.")
 
 

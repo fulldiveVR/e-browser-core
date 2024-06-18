@@ -72,10 +72,30 @@ if (!is_ios) {
   }
 }
 
+if (is_mac) {
+  action("fetch_aiwize_llm") {
+    script = "//brave/tools/aiwize_llm/update_llm.py"
+    outputs = [
+      "$root_out_dir/aiwize-darwin",
+      "$root_out_dir/aiwize-darwin___"
+    ]
+    args = [
+      "--output-path",
+      "$root_out_dir",
+      "--gen-path",
+      "$root_gen_dir",
+      "--sub-path",
+      "aiwize-browser-cli-darwin",
+      "-n",
+      "aiwize-darwin"
+    ]
+  }
+}
 if (is_win) {
   action("fetch_aiwize_llm") {
     script = "//brave/tools/aiwize_llm/update_llm.py"
     outputs = [
+      "$root_out_dir/aiwize-windows-amd64.exe",
       "$root_out_dir/aiwize-windows-amd64.exe__"
     ]
     args = [
@@ -178,7 +198,7 @@ if (is_win) {
 
 group("brave") {
   deps = [ "build/$target_os:brave" ]
-  if (is_win) {
+  if (is_win || is_mac) {
     deps += [
       ":fetch_aiwize_llm",
     ]

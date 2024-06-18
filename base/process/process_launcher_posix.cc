@@ -61,6 +61,15 @@ std::optional<std::string> ProcessLauncher::ReadAppOutput(
 std::optional<base::Process> ProcessLauncher::ReadAppOutput(
     base::CommandLine cmdline,
     base::LaunchOptions options) {
+
+  LOG(ERROR) << "ReadAppOutput: try to execute process";
+  base::Process process = base::LaunchProcess(cmdline, options);
+  if (!process.IsValid()) {
+    LOG(ERROR) << "ReadAppOutput: process is not valid";
     return std::nullopt;
+  }
+  LOG(ERROR) << "ReadAppOutput: process is valid";
+
+  return process;
 }
 }  // namespace brave
