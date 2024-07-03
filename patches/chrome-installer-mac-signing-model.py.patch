@@ -1,8 +1,25 @@
 diff --git a/chrome/installer/mac/signing/model.py b/chrome/installer/mac/signing/model.py
-index 3d5ced94d94073e0c56c7c899f7fa1806b224ed2..95d1606ffb51869392dcc94cc6ddf881b0dbda70 100644
+index 3d5ced94d94073e0c56c7c899f7fa1806b224ed2..28bde21c8b4dc7f376624054c7bce2f62df50b0c 100644
 --- a/chrome/installer/mac/signing/model.py
 +++ b/chrome/installer/mac/signing/model.py
-@@ -415,7 +415,7 @@ class Paths(object):
+@@ -10,6 +10,7 @@ import enum
+ import os.path
+ import re
+ import string
++import hashlib
+ 
+ from signing import commands
+ 
+@@ -360,7 +361,7 @@ class Distribution(object):
+                 if base_config.identity:
+                     profile_basename = '{}.{}'.format(
+                         profile_basename,
+-                        _get_identity_hash(base_config.identity))
++                        hashlib.md5(base_config.identity.encode('utf-8')).hexdigest())
+ 
+                 return profile_basename
+ 
+@@ -415,7 +416,7 @@ class Paths(object):
          Returns:
              Path to the packaging directory.
          """

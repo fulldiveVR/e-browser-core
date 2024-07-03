@@ -1,0 +1,20 @@
+diff --git a/chrome/installer/mac/signing/driver.py b/chrome/installer/mac/signing/driver.py
+index 2ab9e2d839e7660351cbf5356757e2513df08d7a..2f7f40297c9f34b7f4549689ce57d5431001d785 100644
+--- a/chrome/installer/mac/signing/driver.py
++++ b/chrome/installer/mac/signing/driver.py
+@@ -149,6 +149,15 @@ def main(args):
+         'notarize',
+     ))
+ 
++    def _decode_params(args, names):
++        for name in names:
++            if name in args and args[name]:
++                args[name] = args[name].replace("#", " ")
++        return args
++
++
++    config_args = _decode_params(config_args, ['identity', 'installer_identity'])
++
+     def _create_invoker(config):
+         try:
+             return invoker_cls(args, config)
