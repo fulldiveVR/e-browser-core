@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Copyright (c) 2022 The Brave Authors. All rights reserved.
+# Copyright (c) 2022 The AI Wize Authors. All rights reserved.
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -275,22 +275,22 @@ def upload_translation_to_transifex(source_string_path, lang_code, filename,
 
 
 def braveify(string_value):
-    """Replace Chromium branded strings with Brave branded strings."""
-    return (string_value.replace('Chrome', 'Brave')
-            .replace('Chromium', 'Brave')
-            .replace('Google', 'Brave')
-            .replace('Brave Docs', 'Google Docs')
-            .replace('Brave Drive', 'Google Drive')
-            .replace('Brave Play', 'Google Play')
-            .replace('Brave Safe', 'Google Safe')
-            .replace('Sends URLs of some pages you visit to Brave',
+    """Replace Chromium branded strings with AI Wize branded strings."""
+    return (string_value.replace('Chrome', 'AI Wize')
+            .replace('Chromium', 'AI Wize')
+            .replace('Google', 'AI Wize')
+            .replace('AI Wize Docs', 'Google Docs')
+            .replace('AI Wize Drive', 'Google Drive')
+            .replace('AI Wize Play', 'Google Play')
+            .replace('AI Wize Safe', 'Google Safe')
+            .replace('Sends URLs of some pages you visit to AI Wize',
                      'Sends URLs of some pages you visit to Google')
-            .replace('Brave Account', 'Brave sync chain')
-            .replace('Brave Lens', 'Google Lens')
-            .replace('Bravebook', 'Chromebook')
-            .replace('Bravecast', 'Chromecast')
-            .replace('Brave Cloud', 'Google Cloud')
-            .replace('Brave Pay', 'Google Pay')
-            .replace('Brave Photos', 'Google Photos')
-            .replace('Brave Projects', 'Chromium Projects')
-            .replace('Brave Widevine', 'Google Widevine'))
+            .replace('AI Wize Account', 'AI Wize sync chain')
+            .replace('AI Wize Lens', 'Google Lens')
+            .replace('AI Wizebook', 'Chromebook')
+            .replace('AI Wizecast', 'Chromecast')
+            .replace('AI Wize Cloud', 'Google Cloud')
+            .replace('AI Wize Pay', 'Google Pay')
+            .replace('AI Wize Photos', 'Google Photos')
+            .replace('AI Wize Projects', 'Chromium Projects')
+            .replace('AI Wize Widevine', 'Google Widevine'))

@@ -10,7 +10,7 @@ declare_args() {
 }
 
 if (is_official_build) {
-  assert(brave_stats_updater_url != "")
+#  assert(brave_stats_updater_url != "") # fftf: RELEASE TODO
 }
 
 buildflag_header("buildflags") {

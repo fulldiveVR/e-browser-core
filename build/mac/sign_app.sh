@@ -75,12 +75,15 @@ if [ -d $DEST_DIR ]; then
   rm -rf $DEST_DIR/*
 fi
 
+encoded_identity=${MAC_SIGNING_IDENTIFIER// /#}
+
 # Invoke python script to do the signing.
-PARAMS="--input $SOURCE_DIR --output $DEST_DIR --identity $MAC_SIGNING_IDENTIFIER --disable-packaging"
+PARAMS="--input $SOURCE_DIR --output $DEST_DIR --identity $encoded_identity --disable-packaging"
 if [[ -z "${DEVELOPMENT}" ]]; then
   # Copy mac_provisioning_profile to the packaging_dir since that's where the
   # signing scripts expects to find it.
-  MAC_SIGNING_IDENTIFIER_LOWER=`echo "$MAC_SIGNING_IDENTIFIER" | tr '[:upper:]' '[:lower:]'`
+  MAC_SIGNING_IDENTIFIER_LOWER=`echo -n "$MAC_SIGNING_IDENTIFIER" | md5`
+
   PP_FILENAME_EXT=$(basename -- "$MAC_PROVISIONING_PROFILE")
   PP_EXT="${PP_FILENAME_EXT##*.}"
   PP_FILENAME="${PP_FILENAME_EXT%.*}"
@@ -96,3 +99,5 @@ else
 fi
 
 "${PKG_DIR}/sign_chrome.py" $PARAMS
+
+echo "App was signed!"

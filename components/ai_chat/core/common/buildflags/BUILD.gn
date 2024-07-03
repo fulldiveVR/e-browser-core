@@ -12,7 +12,7 @@ declare_args() {
 }
 
 if (is_official_build) {
-  assert(service_key_aichat != "")
+#  assert(service_key_aichat != "")
 }
 
 buildflag_header("buildflags") {

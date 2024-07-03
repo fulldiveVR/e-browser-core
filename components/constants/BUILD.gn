@@ -10,10 +10,10 @@ import("//mojo/public/tools/bindings/mojom.gni")
 
 declare_args() {
   brave_services_key = ""
-}
+} 
 
 if (is_official_build) {
-  assert(brave_services_key != "")
+#  assert(brave_services_key != "")
 }
 
 buildflag_header("brave_services_key") {

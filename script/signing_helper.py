@@ -88,6 +88,15 @@ def BraveModifyPartsForSigning(parts, config):
             verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
         parts['sparkle-framework'].options = full_hardened_runtime_options
 
+    parts['aiwize-darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/aiwize-darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'aiwize-darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['aiwize-darwin'].options = (
+        full_hardened_runtime_options
+    )
+
     # Overwrite to avoid TeamID mismatch with widevine dylib.
     parts['helper-app'].entitlements = 'helper-entitlements.plist'
     parts['helper-app'].options = (CodeSignOptions.RESTRICT
@@ -97,12 +106,12 @@ def BraveModifyPartsForSigning(parts, config):
     # Change privileged helper entry with hardcoded org.chromium.Chromium brand
     # since we don't override branding file for it yet and we don't use it.
     parts['privileged-helper'].path = re.sub(
-        r'com.brave.Browser(.*).UpdaterPrivilegedHelper',
+        r'com.AIWize.Browser(.*).UpdaterPrivilegedHelper',
         'org.chromium.Chromium.UpdaterPrivilegedHelper',
         parts['privileged-helper'].path,
         flags=re.VERBOSE)
     parts['privileged-helper'].identifier = re.sub(
-        r'com.brave.Browser(.*).UpdaterPrivilegedHelper',
+        r'com.AIWize.Browser(.*).UpdaterPrivilegedHelper',
         'org.chromium.Chromium.UpdaterPrivilegedHelper',
         parts['privileged-helper'].identifier)
 

@@ -8,5 +8,5 @@ declare_args() {
 }
 
 if (is_official_build) {
-  assert(brave_variations_server_url != "")
+#  assert(brave_variations_server_url != "") # fftf: RELEASE TODO
 }

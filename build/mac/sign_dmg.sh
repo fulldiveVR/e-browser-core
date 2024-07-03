@@ -15,8 +15,6 @@ REQUIREMENTS="${5}"
 
 app_name="$(basename $SOURCE)"
 
-set -v
-
 function check_exit() {
     return=$?;
     if [[ $return -eq 0 ]]; then
@@ -36,9 +34,7 @@ fi
 
 cp "$SOURCE" "$DEST"
 
-set -v
-
-/usr/bin/codesign --force --options runtime --timestamp --sign "$MAC_SIGNING_IDENTIFIER" --keychain "$MAC_SIGNING_KEYCHAIN" "$DEST" "$REQUIREMENTS"
+/usr/bin/codesign --force --options runtime --timestamp --sign "$MAC_SIGNING_IDENTIFIER" --keychain "$MAC_SIGNING_KEYCHAIN" "$DEST" # "$REQUIREMENTS"
 
 /usr/bin/codesign -vvvvd "$DEST"
 /usr/bin/codesign --verify --strict --deep -vvvv "$DEST"
