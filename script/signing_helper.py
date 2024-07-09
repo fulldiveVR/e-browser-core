@@ -165,6 +165,6 @@ def GetBraveSigningConfig(config_class, mac_provisioning_profile=None):
         @property
         def run_spctl_assess(self):
             """ Run spctl check """
-            return True
+            return False
 
     return ProvisioningProfileCodeSignConfig

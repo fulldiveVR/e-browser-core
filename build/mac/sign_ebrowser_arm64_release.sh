@@ -1,0 +1,1 @@
+./sign_ebrowser.sh "/Users/managerdark/e-browser/src/out" Release arm64 true
