@@ -25,13 +25,6 @@ BASE_PATH = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__)
 URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST', 'https://aiwize-browser.storage.googleapis.com/cli/aiwize-browser-cli.zip')
 AIWIZE_LLM_GCP_CREDENTIALS = os.environ.get('AIWIZE_LLM_GCP_CREDENTIALS', '')
 
-service_account_info = json.loads(AIWIZE_LLM_GCP_CREDENTIALS)
-credentials = service_account.Credentials.from_service_account_info(
-  service_account_info,
-  scopes=["https://www.googleapis.com/auth/devstorage.read_only"]
-)
-credentials.refresh(GoogleRequest())
-
 def DownloadUrl(url, output_file) -> int:
   """Download url into output_file."""
   CHUNK_SIZE = 4096
@@ -212,6 +205,14 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
   return 0
 
 def main(args):
+  global credentials
+  service_account_info = json.loads(AIWIZE_LLM_GCP_CREDENTIALS)
+  credentials = service_account.Credentials.from_service_account_info(
+    service_account_info,
+    scopes=["https://www.googleapis.com/auth/devstorage.read_only"]
+  )
+  credentials.refresh(GoogleRequest())
+
   parser = argparse.ArgumentParser()
   parser.add_argument(
       '--output-path',
@@ -233,5 +234,5 @@ def main(args):
 
   return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path)
 
-if __name__ == '__main__':
+if __name__ == '__main__' and len(AIWIZE_LLM_GCP_CREDENTIALS) > 10:
   sys.exit(main(sys.argv[1:]))

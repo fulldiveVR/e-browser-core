@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/upgrade_detector/upgrade_detector_impl.cc b/chrome/browser/upgrade_detector/upgrade_detector_impl.cc
+index 7f989b183b144223d9953c485d766dbfaefbc89c..2c58b1cc45a22b5304f3b517dfc0fe8b6b1e44dd 100644
+--- a/chrome/browser/upgrade_detector/upgrade_detector_impl.cc
++++ b/chrome/browser/upgrade_detector/upgrade_detector_impl.cc
+@@ -280,6 +280,8 @@ void UpgradeDetectorImpl::DetectOutdatedInstall() {
+ void UpgradeDetectorImpl::UpgradeDetected(UpgradeAvailable upgrade_available) {
+   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+ 
++  upgrade_available = UPGRADE_AVAILABLE_NONE; // TODO: remove fftf
++
+   set_upgrade_available(upgrade_available);
+   set_critical_update_acknowledged(false);
+ 
