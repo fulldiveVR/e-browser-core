@@ -77,6 +77,8 @@ if (is_mac) {
     script = "//brave/tools/aiwize_llm/update_llm.py"
     outputs = [
       "$root_out_dir/aiwize-darwin",
+      "$root_out_dir/ollama-darwin",
+      "$root_out_dir/ollama_llama_server_darwin",
       "$root_out_dir/aiwize-darwin___"
     ]
     args = [
@@ -86,6 +88,8 @@ if (is_mac) {
       "$root_gen_dir",
       "--sub-path",
       "aiwize-browser-cli-darwin",
+      "--darwin-ollama",
+      "True",
       "-n",
       "aiwize-darwin"
     ]

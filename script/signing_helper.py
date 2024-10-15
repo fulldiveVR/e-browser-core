@@ -96,6 +96,22 @@ def BraveModifyPartsForSigning(parts, config):
     parts['aiwize-darwin'].options = (
         full_hardened_runtime_options
     )
+    parts['ollama-darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/ollama-darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'ollama-darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['ollama-darwin'].options = (
+        full_hardened_runtime_options
+    )
+    parts['ollama_llama_server_darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/ollama_llama_server_darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'ollama_llama_server_darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['ollama_llama_server_darwin'].options = (
+        full_hardened_runtime_options
+    )
 
     # Overwrite to avoid TeamID mismatch with widevine dylib.
     parts['helper-app'].entitlements = 'helper-entitlements.plist'

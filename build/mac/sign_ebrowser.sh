@@ -38,6 +38,8 @@ codesign -s "${SIGNATURE}" -f -o runtime --timestamp --entitlements empty-entitl
 codesign -s "${SIGNATURE}" -f -o runtime --timestamp --entitlements empty-entitlements.plist "${SPARKLE_FRAMEWORK_PATH}/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate"
 
 codesign -s "${SIGNATURE}" -f -o runtime --timestamp "$FRAMEWORK_PATH/Versions/${CHROME_VERSION}/Resources/aiwize-darwin"
+codesign -s "${SIGNATURE}" -f -o runtime --timestamp "$FRAMEWORK_PATH/Versions/${CHROME_VERSION}/Resources/ollama-darwin"
+codesign -s "${SIGNATURE}" -f -o runtime --timestamp "$FRAMEWORK_PATH/Versions/${CHROME_VERSION}/Resources/ollama_llama_server_darwin"
 codesign -s "${SIGNATURE}" -f -o runtime --timestamp "$SIGNING_APP_PATH/Contents/Library/LaunchServices/org.chromium.Chromium.UpdaterPrivilegedHelper"
 
 codesign -s "${SIGNATURE}" -f -o runtime --timestamp --deep --strict "${HELPERS_PATH}/${APP_NAME} Helper (Alerts).app"

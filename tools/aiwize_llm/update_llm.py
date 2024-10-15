@@ -22,6 +22,7 @@ except ImportError:
 # Path constants. (All of these should be absolute paths.)
 BASE_PATH = os.path.join(os.path.abspath( os.path.join(os.path.dirname(__file__), '..', '..', '..')))
 
+OLLAMA_DARWIN = os.environ.get('OLLAMA_DARWIN', 'https://files.dmiche.com/ebrowser/ollama_darwin.zip')
 URL_AIWIZE_LLM_DIST = os.environ.get('URL_AIWIZE_LLM_DIST', 'https://aiwize-browser.storage.googleapis.com/cli/aiwize-browser-cli.zip')
 AIWIZE_LLM_GCP_CREDENTIALS = os.environ.get('AIWIZE_LLM_GCP_CREDENTIALS', '')
 
@@ -131,7 +132,7 @@ def CopyFile(src, dst):
   shutil.copy(src, dst)
 
 
-def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str | None):
+def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str | None, darwin_ollama: bool | None):
   out_path = os.path.normpath(os.path.join(BASE_PATH, output_path.removeprefix("//")))
   out_gen_path = os.path.normpath(os.path.join(os.path.join(BASE_PATH, gen_path.removeprefix("//")), "aiwize_llm"))
   if sub_path != None:
@@ -158,6 +159,30 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
   if not updateRequired:
     return 0
 
+  if darwin_ollama == "True":
+    print('Downloading ollama-darwin...')
+    
+    try:
+      last_total_size = DownloadAndUnpack(OLLAMA_DARWIN, out_gen_path)
+      print('ollama-darwin unpacked')
+
+      for file in ["ollama-darwin", "ollama_llama_server_darwin"]:
+        file_src_path = os.path.join(out_gen_path, file)
+        file_out_path = os.path.join(out_path, file)
+        if os.path.exists(file_out_path):
+          os.remove(file_out_path)
+        shutil.copy(file_src_path, file_out_path)
+        os.chmod(file_out_path, 0o755)
+        print(f"{file} copied.")
+
+        
+
+    except URLError:
+      print('Failed to download ollama-darwin')
+      print('Exiting.')
+      return 1
+
+
   print('Downloading aiwize_llm')
     
   try:
@@ -183,7 +208,6 @@ def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path:
     shutil.copy(file_src_path, file_out_path)
     os.chmod(file_out_path, 0o755)
     print(f"{file} copied.")
-
 
   print('Updating ui...')
     
@@ -228,11 +252,16 @@ def main(args):
       required=False,
       default=None
   )
+  parser.add_argument(
+      '--darwin-ollama',
+      required=False,
+      default=False
+  )
   
   parser.add_argument('-n', '--names-list', nargs='+', required=True)
   options = parser.parse_args(args)
 
-  return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path)
+  return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path, options.darwin_ollama)
 
 if __name__ == '__main__' and len(AIWIZE_LLM_GCP_CREDENTIALS) > 10:
   sys.exit(main(sys.argv[1:]))

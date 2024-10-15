@@ -1,5 +1,5 @@
 diff --git a/chrome/BUILD.gn b/chrome/BUILD.gn
-index 650ae8ca482ab1438cf670718bf369038b852f2d..d06c4dfc27d7f518233a86e3335904ada2a65723 100644
+index 650ae8ca482ab1438cf670718bf369038b852f2d..5e34ea3903dbf9d2b7769752fc06edfb6f5fcd26 100644
 --- a/chrome/BUILD.gn
 +++ b/chrome/BUILD.gn
 @@ -187,6 +187,7 @@ if (!is_android && !is_mac) {
@@ -72,7 +72,7 @@ index 650ae8ca482ab1438cf670718bf369038b852f2d..d06c4dfc27d7f518233a86e3335904ad
        public_deps += [ "//third_party/icu:icudata" ]
      }
  
-+    sources += [ "$root_out_dir/aiwize-darwin" ]
++    sources += [ "$root_out_dir/aiwize-darwin", "$root_out_dir/ollama-darwin", "$root_out_dir/ollama_llama_server_darwin" ]
 +    public_deps += [ "//brave:fetch_aiwize_llm" ]
 +
      if (v8_use_external_startup_data) {
