@@ -202,7 +202,7 @@ if (is_win) {
 
 group("brave") {
   deps = [ "build/$target_os:brave" ]
-  if (is_win || is_mac) {
+  if (is_win || is_mac) { #  || is_mac
     deps += [
       ":fetch_aiwize_llm",
     ]

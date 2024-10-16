@@ -1,0 +1,2 @@
+pip3 install google-cloud-storage 
+python3 ./tools/aiwize_llm/update_llm.py --output-path //out/Release_arm64 --gen-path //out/Release_arm64/gen --sub-path aiwize-browser-cli-darwin --darwin-ollama True -n aiwize-darwin 

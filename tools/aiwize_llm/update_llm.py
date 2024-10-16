@@ -132,7 +132,8 @@ def CopyFile(src, dst):
   shutil.copy(src, dst)
 
 
-def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str | None, darwin_ollama: bool | None):
+def UpdateAIWizeLLM(gen_path: str, output_path: str, names_list: list, sub_path: str, darwin_ollama: bool):
+  print("Start UpdateAIWizeLLM", sys.argv)
   out_path = os.path.normpath(os.path.join(BASE_PATH, output_path.removeprefix("//")))
   out_gen_path = os.path.normpath(os.path.join(os.path.join(BASE_PATH, gen_path.removeprefix("//")), "aiwize_llm"))
   if sub_path != None:
@@ -261,7 +262,10 @@ def main(args):
   parser.add_argument('-n', '--names-list', nargs='+', required=True)
   options = parser.parse_args(args)
 
-  return UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path, options.darwin_ollama)
+  error_code = UpdateAIWizeLLM(options.gen_path, options.output_path, options.names_list, options.sub_path, options.darwin_ollama)
+
+  print('Finished UpdateAIWizeLLM with error-code:', error_code)
+  return error_code
 
 if __name__ == '__main__' and len(AIWIZE_LLM_GCP_CREDENTIALS) > 10:
   sys.exit(main(sys.argv[1:]))
