@@ -86,7 +86,7 @@ export default function FeatureMenu() {
         </div>
       </leo-menu-item>
 
-      {!context.isPremiumUser &&
+      {!context.isPremiumUser && false &&
       <leo-menu-item onClick={context.goPremium}>
         <div className={classnames(styles.menuItemWithIcon, styles.menuItemMainItem)}>
           <Icon name='lock-open' />
