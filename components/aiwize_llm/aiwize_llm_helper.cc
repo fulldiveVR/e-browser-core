@@ -51,7 +51,7 @@ void AIWizeLLMHelper::StartService() {
   command_line.AppendArg("--port");
   command_line.AppendArg("22002");
   command_line.AppendArg("-O");
-  command_line.AppendArg(exe_dir.value());
+  command_line.AppendArg(exe_dir.AsUTF8Unsafe());
 
   LOG(ERROR) << "StartService, command_line: " << command_line.GetCommandLineString();
 
