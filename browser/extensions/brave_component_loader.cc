@@ -164,4 +164,13 @@ void BraveComponentLoader::AddWebTorrentExtension() {
   }
 }
 
+void BraveComponentLoader::AddAutopilotExtension() {
+  const base::CommandLine& command_line =
+      *base::CommandLine::ForCurrentProcess();
+    base::FilePath aiwize_autopilot_path(FILE_PATH_LITERAL(""));
+    aiwize_autopilot_path =
+        aiwize_autopilot_path.Append(FILE_PATH_LITERAL("aiwize_autopilot"));
+    Add(IDR_AIWIZE_AUTOPILOT, aiwize_autopilot_path);
+}
+
 }  // namespace extensions

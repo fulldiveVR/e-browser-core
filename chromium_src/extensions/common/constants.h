@@ -23,6 +23,11 @@ inline constexpr char brave_webtorrent_extension_filename[] =
 inline constexpr char brave_webtorrent_extension_filename2[] =
     "brave_webtorrent2.html";
 
+inline constexpr char aiwize_autopilot_extension_id[] =
+    "lgjmpdmojkpocjcopdikifhejkkjglh2";
+inline constexpr char aiwize_autopilot_extension_filename[] =
+    "aiwize_autopilot.html";
+
 inline constexpr char ipfs_companion_extension_id[] =
     "nibjojkomfdiaoajekhjakgkdhaomnch";
 inline constexpr char ipfs_companion_extension_name[] = "IPFS Companion";

@@ -230,4 +230,11 @@
     "META": {"sizes": {"includes": [10]}},
     "includes": [61030],
   },
+  "<(SHARED_INTERMEDIATE_DIR)/brave/web-ui-aiwize_autopilot/aiwize_autopilot.grd": {
+    "META": {"sizes": {"includes": [10]}},
+    "includes": [61040],
+  },
+  "brave/components/aiwize_autopilot/resources.grd": {
+    "includes": [61050],
+  },
 }

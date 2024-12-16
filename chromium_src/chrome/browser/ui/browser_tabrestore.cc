@@ -58,6 +58,13 @@ WebContents* AddRestoredTab(
       from_session_restore,
       navigations.at(selected_navigation).original_request_url());
 #endif
+  extensions::ExtensionService* service =
+    extensions::ExtensionSystem::Get(context)->extension_service();
+  if (service) {
+    extensions::ComponentLoader* loader = service->component_loader();
+    static_cast<extensions::BraveComponentLoader*>(loader)->
+      AddAutopilotExtension();
+  }
 
   return AddRestoredTab_ChromiumImpl(
       browser, navigations, tab_index, selected_navigation, extension_app_id,

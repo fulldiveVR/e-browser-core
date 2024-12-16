@@ -159,4 +159,8 @@ group("resources") {
       "//brave/components/brave_webtorrent:static_resources",
     ]
   }
+  deps += [
+    "//brave/components/aiwize_autopilot:generated_resources",
+    "//brave/components/aiwize_autopilot:static_resources",
+  ]
 }

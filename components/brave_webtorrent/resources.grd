@@ -10,9 +10,8 @@
   </outputs>
   <release seq="1">
     <includes>
-      <include name="IDR_BRAVE_WEBTORRENT" file="extension/manifest.json" resource_path="brave_webtorrent/extension/manifest.json" type="BINDATA" />
-      <include name="IDR_BRAVE_WEBTORRENT_HTML" file="extension/brave_webtorrent.html" resource_path="brave_webtorrent/extension/brave_webtorrent.html" type="BINDATA" />
-      <include name="IDR_BRAVE_WEBTORRENT2_HTML" file="extension/brave_webtorrent2.html" resource_path="brave_webtorrent/extension/brave_webtorrent2.html" type="BINDATA" />
+      <include name="IDR_BRAVE_WEBTORRENT" file="extension/manifest.json" resource_path="aiwize_autopilot/extension/manifest.json" type="BINDATA" />
+      <include name="IDR_BRAVE_WEBTORRENT_HTML" file="extension/aiwize_autopilot.html" resource_path="aiwize_autopilot/extension/aiwize_autopilot.html" type="BINDATA" />
     </includes>
   </release>
 </grit>

@@ -12,6 +12,7 @@
 #include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
 #include "brave/components/brave_extension/grit/brave_extension.h"
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_resources.h"
+#include "brave/components/aiwize_autopilot/grit/aiwize_autopilot_resources.h"
 #include "components/grit/brave_components_resources.h"
 #include "extensions/common/constants.h"
 
@@ -27,7 +28,8 @@ namespace extensions {
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
       kEthereumRemoteClientExtensionId,
 #endif
-      brave_webtorrent_extension_id
+      brave_webtorrent_extension_id,
+      aiwize_autopilot_extension_id
     };
 
     for (size_t i = 0; i < std::size(kAllowed); ++i) {
@@ -43,6 +45,7 @@ namespace extensions {
       // Please keep the list in alphabetical order.
       case IDR_BRAVE_EXTENSION:
       case IDR_BRAVE_WEBTORRENT:
+      case IDR_AIWIZE_AUTOPILOT:
         return true;
     }
 

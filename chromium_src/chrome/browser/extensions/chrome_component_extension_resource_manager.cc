@@ -13,6 +13,8 @@
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_generated_map.h"
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_resources_map.h"
 #endif
+#include "brave/components/aiwize_autopilot/grit/aiwize_autopilot_generated_map.h"
+#include "brave/components/aiwize_autopilot/grit/aiwize_autopilot_resources_map.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_WEBTORRENT)
 #define BRAVE_WEBTORRENT_RESOURCES                            \
