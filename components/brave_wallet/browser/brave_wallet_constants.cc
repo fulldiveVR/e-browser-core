@@ -34,20 +34,6 @@ const std::string GetSardineNetworkName(const std::string& chain_id) {
   }
 }
 
-const base::flat_map<std::string, std::string>& GetInfuraChainEndpoints() {
-  static base::NoDestructor<base::flat_map<std::string, std::string>> endpoints(
-      {{brave_wallet::mojom::kPolygonMainnetChainId,
-        "https://mainnet-polygon.brave.com/"},
-       {brave_wallet::mojom::kOptimismMainnetChainId,
-        "https://mainnet-optimism.brave.com/"},
-       {brave_wallet::mojom::kAuroraMainnetChainId,
-        "https://mainnet-aurora.brave.com/"},
-       {brave_wallet::mojom::kAvalancheMainnetChainId,
-        "https://mainnet-avalanche.wallet.brave.com/"}});
-
-  return *endpoints;
-}
-
 const base::flat_map<std::string, std::string>&
 GetEthBalanceScannerContractAddresses() {
   static base::NoDestructor<base::flat_map<std::string, std::string>>
@@ -62,7 +48,7 @@ GetEthBalanceScannerContractAddresses() {
             "0x08A8fDBddc160A7d5b957256b903dCAb1aE512C5"},
            // BSC, Optimism, and Arbitrum contract addresses pulled from
            // https://github.com/onyb/x/blob/75800edce88688dcfe59dd6b4a664087862369bb/core/evm/scanner/balances/EVMScanner.ts
-           {mojom::kBinanceSmartChainMainnetChainId,
+           {mojom::kBnbSmartChainMainnetChainId,
             "0x53242a975aa7c607e17138b0e0231162e3e68593"},
            {mojom::kOptimismMainnetChainId,
             "0x9e5076DF494FC949aBc4461F4E57592B81517D81"},
@@ -70,22 +56,6 @@ GetEthBalanceScannerContractAddresses() {
             "0xa3e7eb35e779f261ca604138d41d0258e995e97b"}});
 
   return *contract_addresses;
-}
-
-bool HasJupiterFeesForTokenMint(const std::string& mint) {
-  static std::vector<std::string> mints(
-      {"So11111111111111111111111111111111111111112",     // wSOL
-       "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",    // USDC
-       "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",    // USDT
-       "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",    // WETH (Wormhole)
-       "2FPyTwcZLUg1MDrwsyoP4D6s1tM7hAkHYRjkNb5w6Pxk",    // ETH (Sollet)
-       "9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E",    // BTC (Sollet)
-       "qfnqNqs3nCAHjnyCgLRDbBtq4p2MtHZxw8YjSyYhPoL",     // wWBTC (Wormhole)
-       "7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj",    // stSOL
-       "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",     // mSOL
-       "FYpdBuyAHSbdaAyD1sKkxyLWbAP8uUW9h6uvdhK74ij1"});  // DAI
-
-  return base::Contains(mints, mint);
 }
 
 const std::vector<std::string>& GetEthSupportedNftInterfaces() {
@@ -115,7 +85,7 @@ const base::flat_map<std::string, std::string>& GetAnkrBlockchains() {
       blockchains({{mojom::kArbitrumMainnetChainId, "arbitrum"},
                    {mojom::kAvalancheMainnetChainId, "avalanche"},
                    {mojom::kBaseMainnetChainId, "base"},
-                   {mojom::kBinanceSmartChainMainnetChainId, "bsc"},
+                   {mojom::kBnbSmartChainMainnetChainId, "bsc"},
                    {mojom::kMainnetChainId, "eth"},
                    {mojom::kFantomMainnetChainId, "fantom"},
                    {mojom::kFlareMainnetChainId, "flare"},
@@ -125,10 +95,37 @@ const base::flat_map<std::string, std::string>& GetAnkrBlockchains() {
                    {mojom::kPolygonZKEVMChainId, "polygon_zkevm"},
                    {mojom::kRolluxMainnetChainId, "rollux"},
                    {mojom::kSyscoinMainnetChainId, "syscoin"},
-                   {mojom::kZkSyncEraChainId, "zksync_era"},
-                   {mojom::kGoerliChainId, "eth_goerli"}});
+                   {mojom::kZkSyncEraChainId, "zksync_era"}});
 
   return *blockchains;
+}
+
+// See https://0x.org/docs/introduction/0x-cheat-sheet#allowanceholder-address
+std::optional<std::string> GetZeroExAllowanceHolderAddress(
+    const std::string& chain_id) {
+  // key = chain_id, value = allowance_holder_contract_address
+  static base::NoDestructor<std::map<std::string, std::string>>
+      allowance_holder_addresses(
+          {{mojom::kMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kArbitrumMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kAvalancheMainnetChainId, kZeroExAllowanceHolderShanghai},
+           {mojom::kBaseMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kBlastMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kBnbSmartChainMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kLineaChainId, kZeroExAllowanceHolderLondon},
+           {mojom::kOptimismMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kPolygonMainnetChainId, kZeroExAllowanceHolderCancun},
+           {mojom::kScrollChainId, kZeroExAllowanceHolderShanghai}});
+
+  auto allowance_holder_address_pair =
+      allowance_holder_addresses->find(chain_id.c_str());
+
+  if (allowance_holder_address_pair == allowance_holder_addresses->end()) {
+    // not found
+    return std::nullopt;
+  }
+
+  return allowance_holder_address_pair->second;
 }
 
 }  // namespace brave_wallet

@@ -9,7 +9,7 @@ import 'chrome://resources/cr_elements/cr_button/cr_button.js';
 import './add_wallet_network_dialog.js';
 import './wallet_networks_list.js';
 
-import {PrefsMixin} from 'chrome://resources/cr_components/settings_prefs/prefs_mixin.js';
+import {PrefsMixin} from '/shared/settings/prefs/prefs_mixin.js';
 import {I18nMixin} from 'chrome://resources/cr_elements/i18n_mixin.js';
 import {PolymerElement} from 'chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js';
 
@@ -32,6 +32,10 @@ class SettingsWalletNetworksSubpage extends SettingsWalletNetworksSubpageBase {
 
   static get properties() {
     return {
+      isZCashEnabled: {
+        type: Boolean,
+        value: false
+      },
       isBitcoinEnabled: {
         type: Boolean,
         value: false
@@ -52,6 +56,10 @@ class SettingsWalletNetworksSubpage extends SettingsWalletNetworksSubpageBase {
         type: Number,
         value: 0
       },
+      zecCoin: {
+        type: Number,
+        value: 133
+      }
     }
   }
 
@@ -59,6 +67,10 @@ class SettingsWalletNetworksSubpage extends SettingsWalletNetworksSubpageBase {
 
   ready() {
     super.ready()
+
+    this.browserProxy_.isZCashEnabled().then(val => {
+      this.isZCashEnabled = val
+    });
 
     this.browserProxy_.isBitcoinEnabled().then(val => {
       this.isBitcoinEnabled = val

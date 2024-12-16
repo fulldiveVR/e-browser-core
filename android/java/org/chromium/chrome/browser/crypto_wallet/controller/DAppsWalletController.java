@@ -26,8 +26,6 @@ import org.chromium.brave_wallet.mojom.KeyringService;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.crypto_wallet.AssetRatioServiceFactory;
 import org.chromium.chrome.browser.crypto_wallet.BraveWalletServiceFactory;
-import org.chromium.chrome.browser.crypto_wallet.JsonRpcServiceFactory;
-import org.chromium.chrome.browser.crypto_wallet.KeyringServiceFactory;
 import org.chromium.chrome.browser.crypto_wallet.modal.BraveWalletPanel;
 import org.chromium.chrome.browser.crypto_wallet.modal.DAppsDialog;
 import org.chromium.chrome.browser.crypto_wallet.util.Utils;
@@ -40,8 +38,7 @@ import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
 import org.chromium.url.GURL;
 
-public class DAppsWalletController
-        implements ConnectionErrorHandler, BraveWalletPanel.BraveWalletPanelServices {
+public class DAppsWalletController implements ConnectionErrorHandler {
     private static final String TAG = DAppsWalletController.class.getSimpleName();
     private FullscreenManager mFullscreenManager;
     private final Context mContext;
@@ -123,18 +120,19 @@ public class DAppsWalletController
         if (Utils.shouldShowCryptoOnboarding()) {
             showOnBoardingOrUnlock();
         } else {
-            mKeyringService.isLocked(isLocked -> {
-                if (isLocked) {
-                    showOnBoardingOrUnlock();
-                } else {
-                    boolean isFoundPendingDAppsTx = false;
-                    // TODO: check if pending dapps transaction are available and implement an
-                    // action accrodingly
-                    if (!isFoundPendingDAppsTx) {
-                        createAndShowWalletPanel();
-                    }
-                }
-            });
+            mKeyringService.isLocked(
+                    isLocked -> {
+                        if (isLocked) {
+                            showOnBoardingOrUnlock();
+                        } else {
+                            boolean isFoundPendingDAppsTx = false;
+                            // TODO: check if pending dapps transaction are available and implement
+                            // an action accrodingly
+                            if (!isFoundPendingDAppsTx) {
+                                createAndShowWalletPanel();
+                            }
+                        }
+                    });
         }
     }
 
@@ -143,7 +141,7 @@ public class DAppsWalletController
                 mVisibleUrl != null && !mVisibleUrl.getHost().equals(BRAVE_WALLET_HOST);
         mBraveWalletPanel =
                 new BraveWalletPanel(
-                        mAnchorViewHost, mDialogOrPanelDismissListener, this, showExpandButton);
+                        mAnchorViewHost, mDialogOrPanelDismissListener, showExpandButton);
         mBraveWalletPanel.showLikePopDownMenu();
         setupLifeCycleUpdater();
     }
@@ -154,37 +152,13 @@ public class DAppsWalletController
 
     private void showOnBoardingOrUnlock() {
         int dialogStyle = DAppsDialog.DAppsDialogStyle.BOTTOM;
-        if (mFullscreenManager != null && mFullscreenManager.getPersistentFullscreenMode()
+        if ((mFullscreenManager != null && mFullscreenManager.getPersistentFullscreenMode())
                 || shouldShowNotificationAtTop(mActivity)) {
             dialogStyle = DAppsDialog.DAppsDialogStyle.TOP;
         }
         mDAppsDialog =
                 DAppsDialog.newInstance(mContext, mDialogOrPanelDismissListener, dialogStyle);
         mDAppsDialog.showOnboarding(Utils.shouldShowCryptoOnboarding());
-    }
-
-    @Override
-    public AssetRatioService getAssetRatioService() {
-        assert mAssetRatioService != null;
-        return mAssetRatioService;
-    }
-
-    @Override
-    public BraveWalletService getBraveWalletService() {
-        assert mBraveWalletService != null;
-        return mBraveWalletService;
-    }
-
-    @Override
-    public KeyringService getKeyringService() {
-        assert mKeyringService != null;
-        return mKeyringService;
-    }
-
-    @Override
-    public JsonRpcService getJsonRpcService() {
-        assert mJsonRpcService != null;
-        return mJsonRpcService;
     }
 
     @Override
@@ -242,14 +216,14 @@ public class DAppsWalletController
         if (mKeyringService != null) {
             return;
         }
-        mKeyringService = KeyringServiceFactory.getInstance().getKeyringService(this);
+        mKeyringService = BraveWalletServiceFactory.getInstance().getKeyringService(this);
     }
 
     private void initJsonRpcService() {
         if (mJsonRpcService != null) {
             return;
         }
-        mJsonRpcService = JsonRpcServiceFactory.getInstance().getJsonRpcService(this);
+        mJsonRpcService = BraveWalletServiceFactory.getInstance().getJsonRpcService(this);
     }
 
     private void initBraveWalletService() {

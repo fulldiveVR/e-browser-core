@@ -12,7 +12,7 @@
 
 #include "base/gtest_prod_util.h"
 #include "base/memory/weak_ptr.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "content/public/renderer/render_frame.h"
 #include "content/public/renderer/render_frame_observer.h"
@@ -21,9 +21,6 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/mojom/brave_vpn.mojom.h"
-#endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #endif
 
 namespace brave_subscription {
@@ -59,6 +56,8 @@ class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
 
   bool EnsureConnected();
   void OnGetPurchaseToken(const std::string& purchase_token);
+  void OnGetPurchaseTokenOrderId(const std::string& purchase_token,
+                                 const std::string& order_id);
   std::string ExtractParam(const GURL& url, const std::string& name) const;
   bool IsValueAllowed(const std::string& purchase_token) const;
 
@@ -67,14 +66,14 @@ class SubscriptionRenderFrameObserver : public content::RenderFrameObserver {
 
   bool IsAllowed();
 
+  std::string GetPurchaseTokenJSString(const std::string& purchase_token);
+
   const int32_t world_id_;
   std::optional<Product> product_ = std::nullopt;
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   mojo::Remote<brave_vpn::mojom::ServiceHandler> vpn_service_;
 #endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
   mojo::Remote<ai_chat::mojom::IAPSubscription> ai_chat_subscription_;
-#endif
   base::WeakPtrFactory<SubscriptionRenderFrameObserver> weak_factory_{this};
 };
 

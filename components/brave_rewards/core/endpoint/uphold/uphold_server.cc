@@ -5,12 +5,11 @@
 
 #include "brave/components/brave_rewards/core/endpoint/uphold/uphold_server.h"
 
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-namespace brave_rewards::internal {
-namespace endpoint {
+namespace brave_rewards::internal::endpoint {
 
-UpholdServer::UpholdServer(RewardsEngineImpl& engine)
+UpholdServer::UpholdServer(RewardsEngine& engine)
     : get_capabilities_(engine),
       get_cards_(engine),
       get_card_(engine),
@@ -20,5 +19,4 @@ UpholdServer::UpholdServer(RewardsEngineImpl& engine)
 
 UpholdServer::~UpholdServer() = default;
 
-}  // namespace endpoint
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::endpoint

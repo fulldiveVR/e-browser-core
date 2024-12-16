@@ -49,10 +49,10 @@ namespace brave_wallet {
 
 AssetDiscoveryManager::AssetDiscoveryManager(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
-    BraveWalletService* wallet_service,
-    JsonRpcService* json_rpc_service,
-    KeyringService* keyring_service,
-    SimpleHashClient* simple_hash_client,
+    BraveWalletService& wallet_service,
+    JsonRpcService& json_rpc_service,
+    KeyringService& keyring_service,
+    SimpleHashClient& simple_hash_client,
     PrefService* prefs)
     : api_request_helper_(std::make_unique<APIRequestHelper>(
           GetAssetDiscoveryManagerNetworkTrafficAnnotationTag(),
@@ -132,16 +132,16 @@ AssetDiscoveryManager::GetNonFungibleSupportedChains() {
 
   // Add in all the user networks that are supported by SimpleHash
   auto custom_non_fungible_eth_chains =
-      CustomChainsExist(prefs_,
-                        {
-                            mojom::kArbitrumNovaChainId,
-                            mojom::kGnosisChainId,
-                            mojom::kGodwokenChainId,
-                            mojom::kPalmChainId,
-                            mojom::kPolygonZKEVMChainId,
-                            mojom::kZkSyncEraChainId,
-                        },
-                        mojom::CoinType::ETH);
+      wallet_service_->network_manager()->CustomChainsExist(
+          {
+              mojom::kArbitrumNovaChainId,
+              mojom::kGnosisChainId,
+              mojom::kGodwokenChainId,
+              mojom::kPalmChainId,
+              mojom::kPolygonZKEVMChainId,
+              mojom::kZkSyncEraChainId,
+          },
+          mojom::CoinType::ETH);
 
   for (auto custom_chain : custom_non_fungible_eth_chains) {
     // Only insert the chain if it does not exist in the set
@@ -161,8 +161,8 @@ void AssetDiscoveryManager::AddTask(
   auto non_fungible_supported_chains = GetNonFungibleSupportedChains();
 
   auto task = std::make_unique<AssetDiscoveryTask>(
-      api_request_helper_.get(), simple_hash_client_, wallet_service_,
-      json_rpc_service_, prefs_);
+      *api_request_helper_, *simple_hash_client_, *wallet_service_,
+      *json_rpc_service_, prefs_);
   auto callback = base::BindOnce(&AssetDiscoveryManager::FinishTask,
                                  weak_ptr_factory_.GetWeakPtr());
   auto* task_ptr = task.get();

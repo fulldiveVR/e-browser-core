@@ -15,6 +15,7 @@
 #include "brave/components/playlist/browser/playlist_constants.h"
 #include "brave/components/playlist/common/mojom/playlist.mojom.h"
 #include "chrome/grit/generated_resources.h"
+#include "components/grit/brave_components_strings.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/gfx/image/image.h"
 #include "ui/views/controls/button/button.h"
@@ -27,8 +28,8 @@ class ImageView;
 class ThumbnailView;
 
 class SelectableView : public views::Button {
+  METADATA_HEADER(SelectableView, views::Button)
  public:
-  METADATA_HEADER(SelectableView);
   using OnPressedCallback = base::RepeatingCallback<void(SelectableView&)>;
 
   SelectableView(const std::string& id,
@@ -45,7 +46,6 @@ class SelectableView : public views::Button {
   base::OnceCallback<void(const gfx::Image&)> GetThumbnailSetter();
 
   // views::Button:
-  int GetHeightForWidth(int width) const override;
   void OnThemeChanged() override;
 
  private:
@@ -192,7 +192,7 @@ class SelectableListView : public views::BoxLayoutView {
     on_selection_changed_.Run();
   }
 
-  raw_ptr<ThumbnailProvider> thumbnail_provider_;
+  raw_ptr<ThumbnailProvider, DanglingUntriaged> thumbnail_provider_;
 
   base::RepeatingCallback<void()> on_selection_changed_;
 

@@ -9,10 +9,10 @@
 #include "base/test/thread_test_helper.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/browser/test_filters_provider.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/content/test/test_filters_provider.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/localhost_permission/localhost_permission_component.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
@@ -43,9 +43,9 @@ using net::test_server::EmbeddedTestServer;
 
 namespace {
 
-const char kTestEmbeddingDomain[] = "a.com";
-const char kTestTargetPath[] = "/logo.png";
-const char kSimplePage[] = "/simple.html";
+constexpr char kTestEmbeddingDomain[] = "a.com";
+constexpr char kTestTargetPath[] = "/logo.png";
+constexpr char kSimplePage[] = "/simple.html";
 
 }  // namespace
 
@@ -71,7 +71,6 @@ class LocalhostAccessBrowserTest : public InProcessBrowserTest {
     // Embedding website server
     https_server_ = std::make_unique<net::EmbeddedTestServer>(
         net::test_server::EmbeddedTestServer::TYPE_HTTPS);
-    brave::RegisterPathProvider();
     base::FilePath test_data_dir;
     base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
     https_server_->ServeFilesFromDirectory(test_data_dir);
@@ -142,12 +141,11 @@ class LocalhostAccessBrowserTest : public InProcessBrowserTest {
 
   void AddAdblockRule(const std::string& rule) {
     source_provider_ =
-        std::make_unique<brave_shields::TestFiltersProvider>(rule, "");
+        std::make_unique<brave_shields::TestFiltersProvider>(rule);
 
     brave_shields::AdBlockService* ad_block_service =
         g_brave_browser_process->ad_block_service();
-    ad_block_service->UseSourceProvidersForTest(source_provider_.get(),
-                                                source_provider_.get());
+    ad_block_service->UseSourceProviderForTest(source_provider_.get());
     WaitForAdBlockServiceThreads();
   }
 
@@ -267,9 +265,9 @@ class LocalhostAccessBrowserTest : public InProcessBrowserTest {
   std::unique_ptr<net::EmbeddedTestServer> https_server_;
   std::unique_ptr<net::EmbeddedTestServer> localhost_server_;
   base::test::ScopedFeatureList feature_list_;
-  raw_ptr<Browser> current_browser_;
+  raw_ptr<Browser, DanglingUntriaged> current_browser_;
   std::unique_ptr<brave_shields::TestFiltersProvider> source_provider_;
-  raw_ptr<localhost_permission::LocalhostPermissionComponent>
+  raw_ptr<localhost_permission::LocalhostPermissionComponent, DanglingUntriaged>
       localhost_permission_component_;
 
  private:

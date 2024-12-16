@@ -16,14 +16,14 @@
 #include "brave/components/brave_news/api/publisher.h"
 #include "brave/components/brave_news/browser/channel_migrator.h"
 #include "brave/components/brave_news/common/brave_news.mojom.h"
-#include "brave/components/brave_news/common/pref_names.h"
+#include "brave/components/brave_news/common/subscriptions_snapshot.h"
 #include "url/gurl.h"
 
 namespace brave_news {
 
 std::optional<Publishers> ParseCombinedPublisherList(const base::Value& value) {
   if (!value.is_list()) {
-    LOG(ERROR) << "Publisher data expected to be a list";
+    LOG(ERROR) << "Publisher data expected to be a list: " << value;
     return std::nullopt;
   }
 
@@ -38,8 +38,8 @@ std::optional<Publishers> ParseCombinedPublisherList(const base::Value& value) {
     }
     auto& entry = *parsed_publisher;
 
-    GURL site_url = [&entry]() {
-      if (base::StartsWith(entry.site_url, "https://")) {
+    GURL site_url = [&entry] {
+      if (entry.site_url.starts_with("https://")) {
         return GURL(entry.site_url);
       } else {
         return GURL("https://" + entry.site_url);
@@ -109,37 +109,14 @@ std::optional<Publishers> ParseCombinedPublisherList(const base::Value& value) {
   return result;
 }
 
-void ParseDirectPublisherList(const base::Value::Dict& direct_feeds_pref_dict,
+void ParseDirectPublisherList(const std::vector<DirectFeed>& direct_feeds,
                               std::vector<mojom::PublisherPtr>* publishers) {
-  for (const auto&& [key, value] : direct_feeds_pref_dict) {
-    const base::Value::Dict* root = value.GetIfDict();
-    if (!root) {
-      // Handle unknown value type
-      LOG(ERROR) << "Found unknown dictionary pref value for"
-                    "Brave News direct feeds at the pref path: "
-                 << key;
-      // TODO(petemill): delete item from pref dict?
-      continue;
-    }
-    VLOG(1) << "Found direct feed in prefs: " << key;
-
-    GURL feed_source(*root->FindString(prefs::kBraveNewsDirectFeedsKeySource));
-    if (!feed_source.is_valid()) {
-      // This is worth error logging because we shouldn't
-      // get in to this state due to validation at the
-      // point of adding the item to prefs.
-      LOG(ERROR) << "Found invalid feed url for Brave News "
-                    "direct feeds pref at the path "
-                 << prefs::kBraveNewsDirectFeeds << " > "
-                 << prefs::kBraveNewsDirectFeedsKeySource;
-      // TODO(petemill): delete item from pref dict?
-      continue;
-    }
+  DVLOG(1) << __FUNCTION__;
+  for (const auto& feed : direct_feeds) {
     auto publisher = mojom::Publisher::New();
-    publisher->feed_source = feed_source;
-    publisher->publisher_id = key;
-    publisher->publisher_name =
-        *root->FindString(prefs::kBraveNewsDirectFeedsKeyTitle);
+    publisher->feed_source = feed.url;
+    publisher->publisher_id = feed.id;
+    publisher->publisher_name = feed.title;
     publisher->type = mojom::PublisherType::DIRECT_SOURCE;
     // This is always true for direct feeds, reserved property for
     // "combined source" feeds, and perhaps marking a direct feed

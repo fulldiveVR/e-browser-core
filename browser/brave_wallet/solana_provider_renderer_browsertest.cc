@@ -13,16 +13,14 @@
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "brave/browser/brave_content_browser_client.h"
-#include "brave/browser/brave_wallet/keyring_service_factory.h"
-#include "brave/browser/profiles/brave_renderer_updater.h"
-#include "brave/browser/profiles/brave_renderer_updater_factory.h"
+#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/brave_wallet_constants.h"
 #include "brave/components/brave_wallet/common/encoding_utils.h"
 #include "brave/components/brave_wallet/common/features.h"
-#include "brave/components/brave_wallet/common/solana_utils.h"
 #include "brave/components/brave_wallet/renderer/resource_helper.h"
 #include "brave/components/constants/brave_paths.h"
 #include "build/build_config.h"
@@ -33,6 +31,7 @@
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_strings.h"
+#include "content/public/browser/global_routing_id.h"
 #include "content/public/common/content_client.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
@@ -138,13 +137,13 @@ std::string VectorToArrayString(const std::vector<uint8_t>& vec) {
   return result;
 }
 
-std::string GetRequstObject(const std::string& method) {
-  return base::StringPrintf(R"({method: "%s", params: {}})", method.c_str());
+std::string GetRequstObject(std::string_view method) {
+  return content::JsReplace(R"({method: $1, params: {}})", method);
 }
 
-std::string NonWriteableScriptMethod(const std::string& provider,
-                                     const std::string& method) {
-  return base::StringPrintf(
+std::string NonWriteableScriptMethod(std::string_view provider,
+                                     std::string_view method) {
+  return absl::StrFormat(
       R"(new Promise(resolve => {
           window.%s.%s = "brave"
           if (typeof window.%s.%s === "function")
@@ -153,12 +152,12 @@ std::string NonWriteableScriptMethod(const std::string& provider,
             resolve(false);
           });
         )",
-      provider.c_str(), method.c_str(), provider.c_str(), method.c_str());
+      provider, method, provider, method);
 }
 
-std::string NonWriteableScriptProperty(const std::string& provider,
-                                       const std::string& property) {
-  return base::StringPrintf(
+std::string NonWriteableScriptProperty(std::string_view provider,
+                                       std::string_view property) {
+  return absl::StrFormat(
       R"(new Promise(resolve => {
           window.%s.%s = "brave"
           if (window.%s.%s === "brave")
@@ -167,11 +166,11 @@ std::string NonWriteableScriptProperty(const std::string& provider,
             resolve(true)
           });
         )",
-      provider.c_str(), property.c_str(), provider.c_str(), property.c_str());
+      provider, property, provider, property);
 }
 
-std::string NonConfigurableScript(const std::string& provider) {
-  return base::StringPrintf(
+std::string NonConfigurableScript(std::string_view provider) {
+  return absl::StrFormat(
       R"(try {
          Object.defineProperty(window, '%s', {
            writable: true,
@@ -180,11 +179,11 @@ std::string NonConfigurableScript(const std::string& provider) {
        window.%s = 42;
        typeof window.%s === 'object'
         )",
-      provider.c_str(), provider.c_str(), provider.c_str());
+      provider, provider, provider);
 }
 
-std::string ConnectScript(const std::string& args) {
-  return base::StringPrintf(
+std::string ConnectScript(std::string_view args) {
+  return absl::StrFormat(
       R"(async function connect() {
           try {
             const result = await window.braveSolana.connect(%s);
@@ -194,22 +193,22 @@ std::string ConnectScript(const std::string& args) {
           }
         }
         connect();)",
-      args.c_str());
+      args);
 }
 
 std::string CreateTransactionScript(const std::vector<uint8_t>& serialized_tx) {
   const std::string serialized_tx_str = VectorToArrayString(serialized_tx);
-  return base::StringPrintf(
+  return absl::StrFormat(
       R"((function() {
           %s
           return solanaWeb3.Transaction.from(new Uint8Array([%s]))
          })())",
-      g_provider_solana_web3_script->c_str(), serialized_tx_str.c_str());
+      *g_provider_solana_web3_script, serialized_tx_str);
 }
 
-std::string SignTransactionScript(const std::string& args) {
+std::string SignTransactionScript(std::string_view args) {
   const std::string signed_tx = VectorToArrayString(kSignedTx);
-  return base::StringPrintf(
+  return absl::StrFormat(
       R"(async function signTransaction() {
           try {
             const result = await window.braveSolana.signTransaction%s
@@ -222,12 +221,12 @@ std::string SignTransactionScript(const std::string& args) {
           }
         }
         signTransaction();)",
-      args.c_str(), signed_tx.c_str());
+      args, signed_tx);
 }
 
-std::string SignAllTransactionsScript(const std::string& args) {
+std::string SignAllTransactionsScript(std::string_view args) {
   const std::string signed_tx = VectorToArrayString(kSignedTx);
-  return base::StringPrintf(
+  return absl::StrFormat(
       R"(async function signAllTransactions() {
           try {
             const result = await window.braveSolana.signAllTransactions%s
@@ -242,13 +241,13 @@ std::string SignAllTransactionsScript(const std::string& args) {
           }
         }
         signAllTransactions();)",
-      args.c_str(), signed_tx.c_str());
+      args, signed_tx);
 }
 
-std::string SignAndSendTransactionScript(const std::string& args) {
-  const std::string expected_result = base::StringPrintf(
-      R"({ publicKey: "%s", signature: "%s"})", kTestPublicKey, kTestSignature);
-  return base::StringPrintf(
+std::string SignAndSendTransactionScript(std::string_view args) {
+  const std::string expected_result = content::JsReplace(
+      R"({ publicKey: $1, signature: $2})", kTestPublicKey, kTestSignature);
+  return absl::StrFormat(
       R"(async function signAndSendTransaction() {
           try {
             const result = await window.braveSolana.signAndSendTransaction%s
@@ -261,18 +260,18 @@ std::string SignAndSendTransactionScript(const std::string& args) {
           }
         }
         signAndSendTransaction();)",
-      args.c_str(), expected_result.c_str());
+      args, expected_result);
 }
 
-std::string SignMessageScript(const std::string& args) {
+std::string SignMessageScript(std::string_view args) {
   std::vector<uint8_t> signature(brave_wallet::kSolanaSignatureSize);
-  EXPECT_TRUE(brave_wallet::Base58Decode(std::string(kTestSignature),
-                                         &signature, signature.size()));
+  EXPECT_TRUE(
+      brave_wallet::Base58Decode(kTestSignature, &signature, signature.size()));
   const std::string signature_str = VectorToArrayString(signature);
-  const std::string expected_result = base::StringPrintf(
-      R"({ publicKey: "%s", signature: new Uint8Array([%s])})", kTestPublicKey,
-      signature_str.c_str());
-  return base::StringPrintf(
+  const std::string expected_result =
+      absl::StrFormat(R"({ publicKey: "%s", signature: new Uint8Array([%s])})",
+                      kTestPublicKey, signature_str);
+  return absl::StrFormat(
       R"(async function signMessage() {
           try {
             const result = await window.braveSolana.signMessage%s
@@ -285,13 +284,13 @@ std::string SignMessageScript(const std::string& args) {
           }
         }
         signMessage();)",
-      args.c_str(), expected_result.c_str());
+      args, expected_result);
 }
 
-std ::string RequestScript(const std::string& args) {
-  const std::string expected_result = base::StringPrintf(
-      R"({ publicKey: "%s", signature: "%s"})", kTestPublicKey, kTestSignature);
-  return base::StringPrintf(
+std ::string RequestScript(std::string_view args) {
+  const std::string expected_result = content::JsReplace(
+      R"({ publicKey: $1, signature: $2})", kTestPublicKey, kTestSignature);
+  return absl::StrFormat(
       R"(async function request() {
           try {
             const result = await window.braveSolana.request%s
@@ -306,7 +305,7 @@ std ::string RequestScript(const std::string& args) {
           }
         }
         request();)",
-      args.c_str(), expected_result.c_str());
+      args, expected_result);
 }
 
 class TestSolanaProvider final : public brave_wallet::mojom::SolanaProvider {
@@ -483,11 +482,11 @@ class TestBraveContentBrowserClient : public BraveContentBrowserClient {
   }
 
   TestSolanaProvider* GetProvider(content::RenderFrameHost* frame_host) {
-    if (!provider_map_.contains(frame_host)) {
+    if (!provider_map_.contains(frame_host->GetGlobalId())) {
       return nullptr;
     }
     return static_cast<TestSolanaProvider*>(
-        provider_map_.at(frame_host)->impl());
+        provider_map_.at(frame_host->GetGlobalId())->impl());
   }
   bool WaitForBinding(content::RenderFrameHost* render_frame_host,
                       base::OnceClosure callback) {
@@ -498,7 +497,7 @@ class TestBraveContentBrowserClient : public BraveContentBrowserClient {
     return true;
   }
   bool IsBound(content::RenderFrameHost* frame_host) {
-    return provider_map_.contains(frame_host);
+    return provider_map_.contains(frame_host->GetGlobalId());
   }
 
  private:
@@ -507,21 +506,21 @@ class TestBraveContentBrowserClient : public BraveContentBrowserClient {
       mojo::PendingReceiver<brave_wallet::mojom::SolanaProvider> receiver) {
     auto provider = mojo::MakeSelfOwnedReceiver(
         std::make_unique<TestSolanaProvider>(), std::move(receiver));
-    provider->set_connection_error_handler(
-        base::BindOnce(&TestBraveContentBrowserClient::OnDisconnect,
-                       weak_ptr_factory_.GetWeakPtr(), frame_host));
-    provider_map_[frame_host] = provider;
+    provider->set_connection_error_handler(base::BindOnce(
+        &TestBraveContentBrowserClient::OnDisconnect,
+        weak_ptr_factory_.GetWeakPtr(), frame_host->GetGlobalId()));
+    provider_map_[frame_host->GetGlobalId()] = provider;
     if (quit_on_binding_) {
       std::move(quit_on_binding_).Run();
     }
   }
-  void OnDisconnect(content::RenderFrameHost* frame_host) {
-    provider_map_.erase(frame_host);
+  void OnDisconnect(content::GlobalRenderFrameHostId frame_host_id) {
+    provider_map_.erase(frame_host_id);
   }
 
   base::OnceClosure quit_on_binding_;
   base::flat_map<
-      content::RenderFrameHost*,
+      content::GlobalRenderFrameHostId,
       mojo::SelfOwnedReceiverRef<brave_wallet::mojom::SolanaProvider>>
       provider_map_;
   base::WeakPtrFactory<TestBraveContentBrowserClient> weak_ptr_factory_{this};
@@ -532,12 +531,7 @@ class TestBraveContentBrowserClient : public BraveContentBrowserClient {
 class SolanaProviderRendererTest : public InProcessBrowserTest {
  public:
   SolanaProviderRendererTest()
-      : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
-    brave::RegisterPathProvider();
-    base::FilePath test_data_dir;
-    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
-    https_server_.ServeFilesFromDirectory(test_data_dir);
-  }
+      : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {}
 
   void SetUpCommandLine(base::CommandLine* command_line) override {
     InProcessBrowserTest::SetUpCommandLine(command_line);
@@ -560,6 +554,9 @@ class SolanaProviderRendererTest : public InProcessBrowserTest {
         browser()->profile()->GetPrefs(),
         brave_wallet::mojom::DefaultWallet::BraveWallet);
     content::SetBrowserClientForTesting(&test_content_browser_client_);
+    base::FilePath test_data_dir;
+    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
+    https_server_.ServeFilesFromDirectory(test_data_dir);
     mock_cert_verifier_.mock_cert_verifier()->set_default_result(net::OK);
     host_resolver()->AddRule("*", "127.0.0.1");
     ASSERT_TRUE(https_server_.Start());
@@ -591,6 +588,12 @@ class SolanaProviderRendererTest : public InProcessBrowserTest {
   void ReloadAndWaitForLoadStop(Browser* browser) {
     chrome::Reload(browser, WindowOpenDisposition::CURRENT_TAB);
     ASSERT_TRUE(content::WaitForLoadStop(web_contents(browser)));
+  }
+
+  brave_wallet::KeyringService* GetKeyringService() {
+    return brave_wallet::BraveWalletServiceFactory::GetServiceForContext(
+               browser()->profile())
+        ->keyring_service();
   }
 
  protected:
@@ -647,29 +650,23 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, ExtensionOverwrite) {
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest,
-                       DoNotAttachIfNoWalletCreated) {
-  auto* keyring_service =
-      brave_wallet::KeyringServiceFactory::GetServiceForContext(
-          browser()->profile());
-  keyring_service->Reset(false);
+                       AttachEvenIfNoWalletCreated) {
+  GetKeyringService()->Reset(false);
 
   brave_wallet::SetDefaultSolanaWallet(
       browser()->profile()->GetPrefs(),
       brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension);
   ReloadAndWaitForLoadStop(browser());
 
-  std::string command = "window.solana.isBraveWallet";
-  EXPECT_TRUE(content::EvalJs(web_contents(browser()), command)
-                  .error.find("Cannot read properties of undefined") !=
-              std::string::npos);
+  constexpr char kEvalIsBraveWallet[] = "window.solana.isBraveWallet";
+  EXPECT_TRUE(content::EvalJs(web_contents(browser())->GetPrimaryMainFrame(),
+                              kEvalIsBraveWallet)
+                  .ExtractBool());
   EXPECT_EQ(browser()->tab_strip_model()->GetTabCount(), 1);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, AttachIfWalletCreated) {
-  auto* keyring_service =
-      brave_wallet::KeyringServiceFactory::GetServiceForContext(
-          browser()->profile());
-  keyring_service->CreateWallet("password", base::DoNothing());
+  GetKeyringService()->CreateWallet("password", base::DoNothing());
 
   brave_wallet::SetDefaultSolanaWallet(
       browser()->profile()->GetPrefs(),

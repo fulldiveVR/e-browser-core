@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 
 namespace brave_ads {
 
@@ -25,12 +25,22 @@ class NewTabPageAdEventHandlerDelegate {
   // Invoked when the new tab page `ad` is clicked.
   virtual void OnDidFireNewTabPageAdClickedEvent(const NewTabPageAdInfo& ad) {}
 
-  // Invoked when the new tab page `ad` event fails for `placement_id`,
-  // `creative_instance_id` and `event_type`.
+  // Invoked when the new tab page video `ad` started playing.
+  virtual void OnDidFireNewTabPageAdMediaPlayEvent(const NewTabPageAdInfo& ad) {
+  }
+
+  // Invoked after playing 25% of the new tab page video `ad`.
+  virtual void OnDidFireNewTabPageAdMedia25Event(const NewTabPageAdInfo& ad) {}
+
+  // Invoked after playing 100% of the new tab page video `ad`.
+  virtual void OnDidFireNewTabPageAdMedia100Event(const NewTabPageAdInfo& ad) {}
+
+  // Invoked when the new tab page ad event fails for `placement_id`,
+  // `creative_instance_id` and `mojom_ad_event_type`.
   virtual void OnFailedToFireNewTabPageAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
-      const mojom::NewTabPageAdEventType event_type) {}
+      mojom::NewTabPageAdEventType mojom_ad_event_type) {}
 
  protected:
   virtual ~NewTabPageAdEventHandlerDelegate() = default;

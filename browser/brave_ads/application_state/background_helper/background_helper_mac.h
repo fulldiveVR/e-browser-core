@@ -8,7 +8,7 @@
 
 #include <memory>
 
-#include "brave/browser/brave_ads/application_state/background_helper/background_helper.h"
+#include "brave/components/brave_ads/browser/application_state/background_helper.h"
 
 namespace brave_ads {
 
@@ -16,9 +16,6 @@ class BackgroundHelperMac : public BackgroundHelper {
  public:
   BackgroundHelperMac(const BackgroundHelperMac&) = delete;
   BackgroundHelperMac& operator=(const BackgroundHelperMac&) = delete;
-
-  BackgroundHelperMac(BackgroundHelperMac&&) noexcept = delete;
-  BackgroundHelperMac& operator=(BackgroundHelperMac&&) noexcept = delete;
 
   ~BackgroundHelperMac() override;
 
@@ -28,7 +25,7 @@ class BackgroundHelperMac : public BackgroundHelper {
   BackgroundHelperMac();
 
  private:
-  // BackgroundHelper impl
+  // BackgroundHelper:
   bool IsForeground() const override;
 
   class BackgroundHelperDelegate;

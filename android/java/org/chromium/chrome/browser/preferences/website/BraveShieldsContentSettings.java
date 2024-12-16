@@ -10,6 +10,7 @@ import org.jni_zero.JNINamespace;
 import org.jni_zero.NativeMethods;
 
 import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +69,11 @@ public class BraveShieldsContentSettings {
         }
     }
 
+    /**
+     * A finalizer is required to ensure that the native object associated with this descriptor gets
+     * torn down, otherwise there would be a memory leak.
+     */
+    @SuppressWarnings("Finalize")
     @Override
     protected void finalize() {
         destroy();
@@ -78,10 +84,15 @@ public class BraveShieldsContentSettings {
             return;
         }
         BraveShieldsContentSettingsJni.get().destroy(mNativeBraveShieldsContentSettings);
+        mNativeBraveShieldsContentSettings = 0;
     }
 
-    static public void setShields(Profile profile, String host, String resourceIndentifier, boolean value,
-                                  boolean fromTopShields) {
+    public static void setShields(
+            Profile profile,
+            String host,
+            String resourceIndentifier,
+            boolean value,
+            boolean fromTopShields) {
         String setting_string = (value ? BLOCK_RESOURCE : ALLOW_RESOURCE);
         if (resourceIndentifier.equals(RESOURCE_IDENTIFIER_BRAVE_SHIELDS)) {
             BraveShieldsContentSettingsJni.get().setBraveShieldsEnabled(value, host, profile);
@@ -148,58 +159,91 @@ public class BraveShieldsContentSettings {
     }
 
     public static void setFingerprintingPref(String value) {
-        setShieldsValue(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FINGERPRINTING, value, false);
+        setShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FINGERPRINTING,
+                value,
+                false);
     }
 
     public static void setHttpsUpgradePref(String value) {
-        setShieldsValue(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_HTTPS_UPGRADE, value, false);
+        setShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_HTTPS_UPGRADE,
+                value,
+                false);
     }
 
     public static void setCookiesPref(String value) {
-        setShieldsValue(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_COOKIES, value, false);
+        setShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_COOKIES,
+                value,
+                false);
     }
 
     public static void setTrackersPref(String value) {
-        setShieldsValue(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_TRACKERS, value, false);
+        setShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_TRACKERS,
+                value,
+                false);
     }
 
     public static void setJavascriptPref(boolean value) {
-        setShields(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_JAVASCRIPTS, value, false);
+        setShields(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_JAVASCRIPTS,
+                value,
+                false);
     }
 
     public static void setForgetFirstPartyStoragePref(boolean value) {
-        setShields(Profile.getLastUsedRegularProfile(), "",
-                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FORGET_FIRST_PARTY_STORAGE, value,
+        setShields(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
+                BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FORGET_FIRST_PARTY_STORAGE,
+                value,
                 false);
     }
 
     public static boolean getJavascriptPref() {
-        return getShields(Profile.getLastUsedRegularProfile(), "",
+        return getShields(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
                 BraveShieldsContentSettings.RESOURCE_IDENTIFIER_JAVASCRIPTS);
     }
 
     public static String getTrackersPref() {
-        return getShieldsValue(Profile.getLastUsedRegularProfile(), "",
+        return getShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
                 BraveShieldsContentSettings.RESOURCE_IDENTIFIER_TRACKERS);
     }
 
     public static String getFingerprintingPref() {
-        return getShieldsValue(Profile.getLastUsedRegularProfile(), "",
+        return getShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
                 BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FINGERPRINTING);
     }
 
     public static String getHttpsUpgradePref() {
-        return getShieldsValue(Profile.getLastUsedRegularProfile(), "",
+        return getShieldsValue(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
                 BraveShieldsContentSettings.RESOURCE_IDENTIFIER_HTTPS_UPGRADE);
     }
 
     public static boolean getForgetFirstPartyStoragePref() {
-        return getShields(Profile.getLastUsedRegularProfile(), "",
+        return getShields(
+                ProfileManager.getLastUsedRegularProfile(),
+                "",
                 BraveShieldsContentSettings.RESOURCE_IDENTIFIER_FORGET_FIRST_PARTY_STORAGE);
     }
 
@@ -210,9 +254,9 @@ public class BraveShieldsContentSettings {
     }
 
     @CalledByNative
-    private void blockedEvent(int tabId, String block_type, String subresource) {
+    private void blockedEvent(int tabId, String blockType, String subresource) {
         for (BraveShieldsContentSettingsObserver observer : mBraveShieldsContentSettingsObservers) {
-            observer.blockEvent(tabId, block_type, subresource);
+            observer.blockEvent(tabId, blockType, subresource);
         }
     }
 

@@ -6,7 +6,6 @@
 #include "brave/components/brave_wallet/common/fil_address.h"
 
 #include <optional>
-#include <string_view>
 
 #include "base/logging.h"
 #include "base/strings/string_number_conversions.h"
@@ -93,6 +92,26 @@ bool FilAddress::operator!=(const FilAddress& other) const {
   return !IsEqual(other);
 }
 
+// static
+std::optional<mojom::FilecoinAddressProtocol>
+FilAddress::GetProtocolFromAddress(const std::string& address) {
+  if (address.size() < 2) {
+    return std::nullopt;
+  }
+  const char protocol_symbol = address[1];
+  switch (protocol_symbol) {
+    case '1': {
+      return mojom::FilecoinAddressProtocol::SECP256K1;
+    }
+    case '3': {
+      return mojom::FilecoinAddressProtocol::BLS;
+    }
+    default: {
+      return std::nullopt;
+    }
+  }
+}
+
 // Decodes Filecoin BLS/SECP256K addresses within rules.
 // https://spec.filecoin.io/appendix/address/#section-appendix.address.string
 // |------------|----------|---------|----------|
@@ -139,8 +158,7 @@ FilAddress FilAddress::FromAddress(const std::string& address) {
     return FilAddress();
   }
 
-  payload_decoded.erase(std::prev(payload_decoded.end(), kChecksumSize),
-                        payload_decoded.end());
+  payload_decoded.resize(payload_decoded.size() - kChecksumSize);
   return FilAddress::FromPayload(payload_decoded, protocol.value(), network);
 }
 
@@ -239,7 +257,7 @@ FilAddress FilAddress::FromPayload(const std::vector<uint8_t>& payload,
       return FilAddress();
     }
   } else {
-    NOTREACHED();
+    NOTREACHED() << protocol;
   }
   return FilAddress(payload, protocol, network);
 }

@@ -10,10 +10,10 @@
 #include <utility>
 
 #include "brave/browser/brave_rewards/rewards_util.h"
-#include "brave/browser/ui/views/bubble/brave_webui_bubble_manager.h"
 #include "brave/browser/ui/webui/brave_rewards/tip_panel_ui.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/views/bubble/webui_bubble_manager.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/location_bar/location_bar_view.h"
 #include "components/grit/brave_components_strings.h"
@@ -26,25 +26,24 @@ namespace brave_rewards {
 namespace {
 
 // `TipPanelBubbleManager` disables web contents caching for the tip panel.
-class TipPanelBubbleManager : public BraveWebUIBubbleManager<TipPanelUI> {
+class TipPanelBubbleManager : public WebUIBubbleManagerImpl<TipPanelUI> {
  public:
-  TipPanelBubbleManager(views::View* anchor_view, Profile* profile)
-      : BraveWebUIBubbleManager(anchor_view,
-                                profile,
-                                GURL(kBraveTipPanelURL),
-                                IDS_BRAVE_UI_BRAVE_REWARDS) {}
+  TipPanelBubbleManager(views::View* anchor_view,
+                        BrowserWindowInterface* browser_window_interface)
+      : WebUIBubbleManagerImpl(anchor_view,
+                               browser_window_interface,
+                               GURL(kBraveTipPanelURL),
+                               IDS_BRAVE_UI_BRAVE_REWARDS,
+                               /*force_load_on_create=*/false) {}
 
   ~TipPanelBubbleManager() override = default;
 
   // WebUIBubbleManager:
-
-  void MaybeInitPersistentRenderer() override {}
-
   base::WeakPtr<WebUIBubbleDialogView> CreateWebUIBubbleDialog(
       const std::optional<gfx::Rect>& anchor,
       views::BubbleBorder::Arrow arrow) override {
     set_cached_contents_wrapper(nullptr);
-    return BraveWebUIBubbleManager::CreateWebUIBubbleDialog(anchor, arrow);
+    return WebUIBubbleManagerImpl::CreateWebUIBubbleDialog(anchor, arrow);
   }
 };
 
@@ -90,7 +89,7 @@ void TipPanelBubbleHost::OnTipPanelRequested(const std::string& publisher_id) {
   // Create the bubble manager if necessary.
   if (!bubble_manager_) {
     bubble_manager_ = std::make_unique<TipPanelBubbleManager>(
-        GetAnchorView(&GetBrowser()), GetBrowser().profile());
+        GetAnchorView(&GetBrowser()), &GetBrowser());
   }
 
   // Notify the panel coordinator of the browser size, so that it can size

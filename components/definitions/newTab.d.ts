@@ -84,7 +84,7 @@ declare namespace NewTab {
     url: string
   }
 
-  export type StackWidget = 'rewards' | 'braveTalk' | 'bitcoinDotCom' | ''
+  export type StackWidget = 'rewards' | 'braveTalk' | 'braveVPN' | 'bitcoinDotCom' | ''
 
   export interface GridSitesState {
     removedSites: Site[]
@@ -121,6 +121,11 @@ declare namespace NewTab {
     showTopSites: boolean
     showRewards: boolean
     showBraveTalk: boolean
+    showBraveVPN: boolean
+    showSearchBox: boolean
+    lastUsedNtpSearchEngine: string
+    promptEnableSearchSuggestions: boolean
+    searchSuggestionsEnabled: boolean
     hideAllWidgets: boolean
     isBraveNewsOptedIn: boolean
     isBrandedWallpaperNotificationDismissed: boolean
@@ -135,12 +140,9 @@ declare namespace NewTab {
     searchPromotionEnabled: boolean
     featureCustomBackgroundEnabled: boolean
     isIncognito: boolean
-    useAlternativePrivateSearchEngine: boolean
-    showAlternativePrivateSearchEngineToggle: boolean
     torCircuitEstablished: boolean,
     torInitProgress: string,
     isTor: boolean
-    isQwant: boolean
     gridLayoutSize?: 'small'
     showGridSiteRemovedNotification?: boolean
     showBackgroundImage: boolean
@@ -156,7 +158,6 @@ declare namespace NewTab {
   export interface RewardsWidgetState {
     rewardsEnabled: boolean
     userType: string
-    isUnsupportedRegion: boolean
     declaredCountry: string
     balance?: number
     externalWallet?: RewardsExtension.ExternalWallet
@@ -165,11 +166,11 @@ declare namespace NewTab {
     adsAccountStatement: AdsAccountStatement
     dismissedNotifications: string[]
     needsBrowserUpgradeToServeAds: boolean
-    promotions: Promotion[]
     parameters: RewardsParameters
     totalContribution: number
     publishersVisitedCount: number
     selfCustodyInviteDismissed: boolean
+    isTermsOfServiceUpdateRequired: boolean
   }
 
   export const enum RewardsResult {
@@ -191,27 +192,7 @@ declare namespace NewTab {
     ads: number
     contribute: number
     monthly: number
-    grant: number
     tips: number
-  }
-
-  export enum PromotionTypes {
-    UGP = 0,
-    ADS = 1
-  }
-
-  export interface PromotionResponse {
-    result: number
-    promotions: Promotion[]
-  }
-
-  export interface Promotion {
-    type: PromotionTypes
-    promotionId: string
-    createdAt: number
-    claimableUntil?: number
-    expiresAt?: number
-    amount: number
   }
 
   export interface AdsAccountStatement {

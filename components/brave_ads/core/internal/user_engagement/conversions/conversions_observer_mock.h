@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/conversions_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,10 +19,6 @@ class ConversionsObserverMock : public ConversionsObserver {
 
   ConversionsObserverMock(const ConversionsObserverMock&) = delete;
   ConversionsObserverMock& operator=(const ConversionsObserverMock&) = delete;
-
-  ConversionsObserverMock(ConversionsObserverMock&&) noexcept = delete;
-  ConversionsObserverMock& operator=(ConversionsObserverMock&&) noexcept =
-      delete;
 
   ~ConversionsObserverMock() override;
 

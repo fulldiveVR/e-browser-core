@@ -5,116 +5,87 @@
 
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_events.h"
 
+#include "base/run_loop.h"
+#include "base/test/gmock_callback_support.h"
 #include "base/test/mock_callback.h"
-#include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/ad_units/ad_test_util.h"
+#include "brave/components/brave_ads/core/internal/common/test/test_base.h"
+#include "brave/components/brave_ads/core/internal/common/test/time_test_util.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_builder.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_events_database_table.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
+#include "brave/components/brave_ads/core/public/ad_units/ad_info.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
 namespace brave_ads {
 
-class BraveAdsAdEventsTest : public UnitTestBase {};
+class BraveAdsAdEventsTest : public test::TestBase {};
 
 TEST_F(BraveAdsAdEventsTest, RecordAdEvent) {
   // Arrange
-  const AdInfo ad = test::BuildAd(AdType::kNotificationAd,
-                                  /*should_use_random_uuids=*/true);
-  const AdEventInfo ad_event = BuildAdEvent(ad, ConfirmationType::kServed,
-                                            /*created_at=*/Now());
+  const AdInfo ad = test::BuildAd(mojom::AdType::kNotificationAd,
+                                  /*should_generate_random_uuids=*/true);
+  const AdEventInfo ad_event =
+      BuildAdEvent(ad, mojom::ConfirmationType::kServedImpression,
+                   /*created_at=*/test::Now());
 
   base::MockCallback<AdEventCallback> record_ad_event_callback;
   EXPECT_CALL(record_ad_event_callback, Run(/*success=*/true));
 
   // Act
-  RecordAdEvent(ad, ConfirmationType::kServed, record_ad_event_callback.Get());
+  RecordAdEvent(ad, mojom::ConfirmationType::kServedImpression,
+                record_ad_event_callback.Get());
 
   // Assert
+  base::RunLoop run_loop;
   base::MockCallback<database::table::GetAdEventsCallback> callback;
-  EXPECT_CALL(callback, Run(/*success=*/true, AdEventList{ad_event}));
+  EXPECT_CALL(callback, Run(/*success=*/true, AdEventList{ad_event}))
+      .WillOnce(base::test::RunOnceClosure(run_loop.QuitClosure()));
   const database::table::AdEvents database_table;
-  database_table.GetAll(callback.Get());
-}
-
-TEST_F(BraveAdsAdEventsTest, PurgeExpiredAdEvents) {
-  // Arrange
-  AdvanceClockTo(
-      TimeFromString("Tue, 19 Mar 2024 05:35:00",
-                     /*is_local=*/false));  // Happy 1st Birthday Rory!
-
-  const base::TimeDelta three_months =
-      base::Days(/*march*/ 31 + /*april*/ 30 + /*may*/ 31);
-  AdvanceClockBy(three_months);
-
-  base::MockCallback<AdEventCallback> record_ad_event_callback;
-  EXPECT_CALL(record_ad_event_callback, Run(/*success=*/true)).Times(3);
-
-  const AdInfo ad_1 = test::BuildAd(AdType::kNotificationAd,
-                                    /*should_use_random_uuids=*/true);
-  AdEventInfo ad_event_for_ad_1 =
-      BuildAdEvent(ad_1, ConfirmationType::kServed, /*created_at=*/Now());
-  ad_event_for_ad_1.placement_id = "WALDO.1";
-  RecordAdEvent(ad_event_for_ad_1, record_ad_event_callback.Get());
-
-  const AdInfo ad_2 = test::BuildAd(AdType::kNotificationAd,
-                                    /*should_use_random_uuids=*/true);
-  AdEventInfo ad_event_for_ad_2 =
-      BuildAdEvent(ad_2, ConfirmationType::kServed, /*created_at=*/Now());
-  ad_event_for_ad_2.placement_id = "WALDO.2";
-  RecordAdEvent(ad_event_for_ad_2, record_ad_event_callback.Get());
-
-  AdvanceClockBy(three_months);
-
-  const AdInfo ad_3 = test::BuildAd(AdType::kNotificationAd,
-                                    /*should_use_random_uuids=*/true);
-  AdEventInfo ad_event_for_ad_3 =
-      BuildAdEvent(ad_3, ConfirmationType::kServed, /*created_at=*/Now());
-  ad_event_for_ad_3.placement_id = "WALDO.3";
-  RecordAdEvent(ad_event_for_ad_3, record_ad_event_callback.Get());
-
-  base::MockCallback<AdEventCallback> purge_expired_ad_events_callback;
-  EXPECT_CALL(purge_expired_ad_events_callback, Run(/*success=*/true));
-
-  // Act
-  PurgeExpiredAdEvents(purge_expired_ad_events_callback.Get());
-
-  // Assert
-  base::MockCallback<database::table::GetAdEventsCallback> callback;
-  EXPECT_CALL(callback,
-              Run(/*success=*/true, AdEventList{{ad_event_for_ad_3}}));
-  const database::table::AdEvents database_table;
-  database_table.GetAll(callback.Get());
+  database_table.GetUnexpired(callback.Get());
+  run_loop.Run();
 }
 
 TEST_F(BraveAdsAdEventsTest, PurgeOrphanedAdEvents) {
   // Arrange
+  AdvanceClockTo(
+      test::TimeFromUTCString("Wed, 31 Jan 2024 16:28"));  // Hello Florrie!!!
+
   base::MockCallback<AdEventCallback> record_ad_event_callback;
   EXPECT_CALL(record_ad_event_callback, Run(/*success=*/true)).Times(4);
 
-  const AdInfo ad_1 = test::BuildAd(AdType::kNotificationAd,
-                                    /*should_use_random_uuids=*/true);
-  const AdEventInfo orphaned_ad_event_for_ad_1 =
-      BuildAdEvent(ad_1, ConfirmationType::kServed,
-                   /*created_at=*/Now());
-  RecordAdEvent(orphaned_ad_event_for_ad_1, record_ad_event_callback.Get());
+  // Ad event 1: This served impression ad event should be purged because it
+  // does not have an associated viewed impression ad event or matching ad type.
+  const AdInfo ad_1 = test::BuildAd(mojom::AdType::kNotificationAd,
+                                    /*should_generate_random_uuids=*/true);
+  const AdEventInfo ad_event_1 =
+      BuildAdEvent(ad_1, mojom::ConfirmationType::kServedImpression,
+                   /*created_at=*/test::Now());
+  RecordAdEvent(ad_event_1, record_ad_event_callback.Get());
 
-  const AdInfo ad_2 = test::BuildAd(AdType::kNotificationAd,
-                                    /*should_use_random_uuids=*/true);
-  const AdEventInfo ad_event_for_ad_2a =
-      BuildAdEvent(ad_2, ConfirmationType::kServed, /*created_at=*/Now());
-  RecordAdEvent(ad_event_for_ad_2a, record_ad_event_callback.Get());
-  const AdEventInfo ad_event_for_ad_2b =
-      BuildAdEvent(ad_2, ConfirmationType::kViewed, /*created_at=*/Now());
-  RecordAdEvent(ad_event_for_ad_2b, record_ad_event_callback.Get());
+  // Ad event 2: This served impression ad event should not be purged because it
+  // has an associated viewed impression ad event for the matching ad type.
+  const AdInfo ad_2 = test::BuildAd(mojom::AdType::kNotificationAd,
+                                    /*should_generate_random_uuids=*/true);
+  const AdEventInfo ad_event_2a =
+      BuildAdEvent(ad_2, mojom::ConfirmationType::kServedImpression,
+                   /*created_at=*/test::Now());
+  RecordAdEvent(ad_event_2a, record_ad_event_callback.Get());
+  const AdEventInfo ad_event_2b =
+      BuildAdEvent(ad_2, mojom::ConfirmationType::kViewedImpression,
+                   /*created_at=*/test::Now());
+  RecordAdEvent(ad_event_2b, record_ad_event_callback.Get());
 
-  const AdInfo ad_3 = test::BuildAd(AdType::kSearchResultAd,
-                                    /*should_use_random_uuids=*/true);
-  const AdEventInfo ad_event_for_ad_3 =
-      BuildAdEvent(ad_3, ConfirmationType::kServed, /*created_at=*/Now());
-  RecordAdEvent(ad_event_for_ad_3, record_ad_event_callback.Get());
+  // Ad event 3: This served impression ad event should not be purged because it
+  // has a mismatching ad type.
+  const AdInfo ad_3 = test::BuildAd(mojom::AdType::kSearchResultAd,
+                                    /*should_generate_random_uuids=*/true);
+  const AdEventInfo ad_event_3 =
+      BuildAdEvent(ad_3, mojom::ConfirmationType::kServedImpression,
+                   /*created_at=*/test::Now());
+  RecordAdEvent(ad_event_3, record_ad_event_callback.Get());
 
   base::MockCallback<AdEventCallback> purge_orphaned_ad_events_callback;
   EXPECT_CALL(purge_orphaned_ad_events_callback, Run(/*success=*/true));
@@ -124,12 +95,14 @@ TEST_F(BraveAdsAdEventsTest, PurgeOrphanedAdEvents) {
                         purge_orphaned_ad_events_callback.Get());
 
   // Assert
+  base::RunLoop run_loop;
   base::MockCallback<database::table::GetAdEventsCallback> callback;
   EXPECT_CALL(callback, Run(/*success=*/true,
-                            AdEventList{{ad_event_for_ad_2a, ad_event_for_ad_2b,
-                                         ad_event_for_ad_3}}));
+                            AdEventList{ad_event_2a, ad_event_2b, ad_event_3}))
+      .WillOnce(base::test::RunOnceClosure(run_loop.QuitClosure()));
   const database::table::AdEvents database_table;
-  database_table.GetAll(callback.Get());
+  database_table.GetUnexpired(callback.Get());
+  run_loop.Run();
 }
 
 }  // namespace brave_ads

@@ -5,12 +5,12 @@
 
 .form {
   border-radius: var(--leo-radius-m);
-  border: 1px solid var(--leo-color-divider-strong);
+  border: 1px solid var(--leo-color-divider-subtle);
   width: 100%;
   font: var(--leo-font-default-regular);
   color: var(--leo-color-text-primary);
   position: relative;
-  box-shadow: var(--leo-effect-elevation-01);
+  transition: all 0.2s ease-in-out;
 
   &:has(textarea:disabled) {
     border-color: var(--leo-color-divider-subtle);
@@ -21,10 +21,13 @@
     }
   }
 }
+.form:hover, .form:focus-visible{
+  box-shadow: var(--leo-effect-elevation-01);
+}
 
 .growWrap {
   display: grid;
-  grid-template-columns: calc(100% - 20px);
+  grid-template-columns: 1fr;
   max-height: 300px;
   overflow-y: auto;
 
@@ -47,7 +50,7 @@
 
   textarea,
   &::after {
-    padding: 10px var(--leo-spacing-xl);
+    padding: 12px var(--leo-spacing-xl) 8px var(--leo-spacing-xl);
     grid-area: 1 / 1 / 2 / 2;
   }
 
@@ -56,7 +59,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--leo-color-gray-20);
+    background: var(--leo-color-neutral-20);
     border-radius: var(--leo-spacing-m);
   }
 }
@@ -101,8 +104,22 @@
   color: var(--leo-color-systemfeedback-error-icon);
 }
 
-.actions {
-  position: absolute;
-  top: 2px;
-  right: var(--leo-spacing-m);
+.toolsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--leo-spacing-xl) 4px;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+}
+
+.actionsLabelContainer {
+  padding: 10px var(--leo-spacing-xl) 0 var(--leo-spacing-xl);
+}
+
+.slashIconActive {
+  --leo-icon-color: var(--leo-color-icon-interactive);
 }

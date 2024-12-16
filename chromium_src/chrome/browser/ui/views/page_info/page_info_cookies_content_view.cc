@@ -13,27 +13,28 @@
 
 void PageInfoCookiesContentView::SetCookieInfo(
     const CookiesNewInfo& cookie_info) {
-  SetCookieInfo_ChromiumImpl(cookie_info);
+  // We need to call SetCookieInfo with controls_visible = false, or the layout
+  // will DCHECK since we hide the cookie container. We can't copy the existing
+  // struct when doing this because its copy constructor is implicitly deleted,
+  // so we just copy over the only other setting that's relevant for us.
+  CookiesNewInfo mutable_cookie_info;
+  mutable_cookie_info.allowed_sites_count = cookie_info.allowed_sites_count;
+  mutable_cookie_info.controls_visible = false;
+  SetCookieInfo_ChromiumImpl(mutable_cookie_info);
 
-  // Remove cookies text and link to settings.
-  RemoveChildView(children()[0]);
+  // Hide cookies description and link to settings.
+  cookies_description_label_->SetVisible(false);
+  third_party_cookies_container_->SetVisible(false);
 
   // Remove separator.
   // cookies_buttons_container_view_'s children are:
-  // [0]: blocking_third_party_cookies_row_, which we set to invisible below
-  // [1]: separator
-  // [3]: on-site data button row, which we want to keep.
+  // [0]: separator
+  // [1]: on-site data button row, which we want to keep
   if (cookies_buttons_container_view_) {
-    if (cookies_buttons_container_view_->children().size() == 3u) {
+    if (cookies_buttons_container_view_->children().size() > 0) {
       cookies_buttons_container_view_->RemoveChildView(
-          cookies_buttons_container_view_->children()[1]);
+          cookies_buttons_container_view_->children()[0]);
     }
   }
-
-  // Hide 3P cookies toggle if shown.
-  if (blocking_third_party_cookies_row_) {
-    blocking_third_party_cookies_row_->SetVisible(false);
-  }
-
   PreferredSizeChanged();
 }

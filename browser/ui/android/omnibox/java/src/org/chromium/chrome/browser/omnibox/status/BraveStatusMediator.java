@@ -6,7 +6,6 @@
 package org.chromium.chrome.browser.omnibox.status;
 
 import android.content.Context;
-import android.content.res.Resources;
 
 import androidx.annotation.Nullable;
 
@@ -27,7 +26,6 @@ public class BraveStatusMediator extends StatusMediator {
 
     public BraveStatusMediator(
             PropertyModel model,
-            Resources resources,
             Context context,
             UrlBarEditingTextStateProvider urlBarEditingTextStateProvider,
             boolean isTablet,
@@ -35,14 +33,13 @@ public class BraveStatusMediator extends StatusMediator {
             PermissionDialogController permissionDialogController,
             OneshotSupplier<TemplateUrlService> templateUrlServiceSupplier,
             Supplier<Profile> profileSupplier,
-            PageInfoIPHController pageInfoIPHController,
+            PageInfoIphController pageInfoIphController,
             WindowAndroid windowAndroid,
             @Nullable
                     Supplier<MerchantTrustSignalsCoordinator>
                             merchantTrustSignalsCoordinatorSupplier) {
         super(
                 model,
-                resources,
                 context,
                 urlBarEditingTextStateProvider,
                 isTablet,
@@ -50,7 +47,7 @@ public class BraveStatusMediator extends StatusMediator {
                 permissionDialogController,
                 templateUrlServiceSupplier,
                 profileSupplier,
-                pageInfoIPHController,
+                pageInfoIphController,
                 windowAndroid,
                 merchantTrustSignalsCoordinatorSupplier);
     }

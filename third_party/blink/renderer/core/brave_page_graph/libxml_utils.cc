@@ -11,6 +11,7 @@
 #include <string_view>
 
 #include "base/numerics/safe_conversions.h"
+#include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversion_utils.h"
 #include "third_party/blink/renderer/platform/wtf/text/string_utf8_adaptor.h"
@@ -49,7 +50,10 @@ XmlUtf8String::XmlUtf8String(const String& str)
           StringUTF8Adaptor(
               str,
               WTF::kStrictUTF8ConversionReplacingUnpairedSurrogatesWithFFFD)
-              .AsStringPiece()) {}
+              .AsStringView()) {}
+
+XmlUtf8String::XmlUtf8String(int value)
+    : XmlUtf8String(base::NumberToString(value)) {}
 
 XmlUtf8String::~XmlUtf8String() {
   xmlFree(xml_string_);

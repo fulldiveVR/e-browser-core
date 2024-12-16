@@ -5,12 +5,11 @@
 
 #include "brave/components/brave_rewards/core/endpoint/gemini/gemini_server.h"
 
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-namespace brave_rewards::internal {
-namespace endpoint {
+namespace brave_rewards::internal::endpoint {
 
-GeminiServer::GeminiServer(RewardsEngineImpl& engine)
+GeminiServer::GeminiServer(RewardsEngine& engine)
     : post_account_(engine),
       post_balance_(engine),
       post_oauth_(engine),
@@ -18,5 +17,4 @@ GeminiServer::GeminiServer(RewardsEngineImpl& engine)
 
 GeminiServer::~GeminiServer() = default;
 
-}  // namespace endpoint
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::endpoint

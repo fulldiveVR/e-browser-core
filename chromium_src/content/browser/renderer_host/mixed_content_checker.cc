@@ -14,8 +14,7 @@ namespace content {
 // static
 bool MixedContentChecker::DoesOriginSchemeRestrictMixedContent(
     const url::Origin& origin) {
-  constexpr const char kOnion[] = ".onion";
-  if (base::EndsWith(origin.host(), kOnion) &&
+  if (origin.host().ends_with(".onion") &&
       (origin.scheme() == url::kHttpsScheme ||
        origin.scheme() == url::kHttpScheme ||
        origin.scheme() == url::kWsScheme ||

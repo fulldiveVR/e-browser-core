@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_SERVING_NOTIFICATION_AD_SERVING_DELEGATE_MOCK_H_
 
 #include "brave/components/brave_ads/core/internal/serving/notification_ad_serving_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,11 +19,6 @@ class NotificationAdServingDelegateMock : public NotificationAdServingDelegate {
       delete;
   NotificationAdServingDelegateMock& operator=(
       const NotificationAdServingDelegateMock&) = delete;
-
-  NotificationAdServingDelegateMock(
-      NotificationAdServingDelegateMock&&) noexcept = delete;
-  NotificationAdServingDelegateMock& operator=(
-      NotificationAdServingDelegateMock&&) noexcept = delete;
 
   ~NotificationAdServingDelegateMock() override;
 

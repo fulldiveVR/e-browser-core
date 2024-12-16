@@ -9,7 +9,8 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/account/account_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,9 +20,6 @@ class AccountObserverMock : public AccountObserver {
 
   AccountObserverMock(const AccountObserverMock&) = delete;
   AccountObserverMock& operator=(const AccountObserverMock&) = delete;
-
-  AccountObserverMock(AccountObserverMock&&) noexcept = delete;
-  AccountObserverMock& operator=(AccountObserverMock&&) noexcept = delete;
 
   ~AccountObserverMock() override;
 
@@ -34,8 +32,8 @@ class AccountObserverMock : public AccountObserver {
   MOCK_METHOD(void,
               OnFailedToProcessDeposit,
               (const std::string& creative_instance_id,
-               AdType ad_type,
-               ConfirmationType confirmation_type));
+               mojom::AdType mojom_ad_type,
+               mojom::ConfirmationType mojom_confirmation_type));
 };
 
 }  // namespace brave_ads

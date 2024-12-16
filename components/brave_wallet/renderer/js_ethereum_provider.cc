@@ -29,12 +29,14 @@
 #include "gin/handle.h"
 #include "gin/object_template_builder.h"
 #include "third_party/abseil-cpp/absl/base/macros.h"
-#include "third_party/blink/public/common/browser_interface_broker_proxy.h"
 #include "third_party/blink/public/mojom/devtools/console_message.mojom.h"
+#include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
+#include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"
 #include "third_party/blink/public/web/blink.h"
 #include "third_party/blink/public/web/web_local_frame.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "url/origin.h"
+
 namespace {
 
 constexpr char kBraveEthereum[] = "braveEthereum";
@@ -139,7 +141,7 @@ bool JSEthereumProvider::EnsureConnected() {
   }
 
   if (!ethereum_provider_.is_bound()) {
-    render_frame()->GetBrowserInterfaceBroker()->GetInterface(
+    render_frame()->GetBrowserInterfaceBroker().GetInterface(
         ethereum_provider_.BindNewPipeAndPassReceiver());
     ethereum_provider_->Init(receiver_.BindNewPipeAndPassRemote());
   }
@@ -151,7 +153,9 @@ bool JSEthereumProvider::EnsureConnected() {
 void JSEthereumProvider::Install(bool install_ethereum_provider,
                                  bool allow_overwrite_window_ethereum_provider,
                                  content::RenderFrame* render_frame) {
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  CHECK(render_frame);
+  v8::Isolate* isolate =
+      render_frame->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame->GetWebFrame()->MainWorldScriptContext();
@@ -189,13 +193,14 @@ void JSEthereumProvider::Install(bool install_ethereum_provider,
   // invocation: Function must be called on an object of type
   // JSEthereumProvider" error.
   blink::WebLocalFrame* web_frame = render_frame->GetWebFrame();
-  v8::Local<v8::Proxy> ethereum_proxy;
-  auto ethereum_proxy_handler_val =
-      ExecuteScript(web_frame, kEthereumProxyHandlerScript);
+  v8::Local<v8::Value> ethereum_proxy_handler_val;
+  if (!ExecuteScript(web_frame, kEthereumProxyHandlerScript)
+           .ToLocal(&ethereum_proxy_handler_val)) {
+    return;
+  }
   v8::Local<v8::Object> ethereum_proxy_handler_obj =
-      ethereum_proxy_handler_val.ToLocalChecked()
-          ->ToObject(context)
-          .ToLocalChecked();
+      ethereum_proxy_handler_val->ToObject(context).ToLocalChecked();
+  v8::Local<v8::Proxy> ethereum_proxy;
   if (!v8::Proxy::New(context, provider_object, ethereum_proxy_handler_obj)
            .ToLocal(&ethereum_proxy)) {
     return;
@@ -206,11 +211,11 @@ void JSEthereumProvider::Install(bool install_ethereum_provider,
                          gin::StringToV8(isolate, kBraveEthereum), true);
 
   // Set window.ethereumProvider
-  {
+  if (install_ethereum_provider) {
     v8::Local<v8::Value> ethereum_value =
         global->Get(context, gin::StringToV8(isolate, kEthereum))
             .ToLocalChecked();
-    if (install_ethereum_provider && ethereum_value->IsUndefined()) {
+    if (ethereum_value->IsUndefined()) {
       if (!allow_overwrite_window_ethereum_provider) {
         SetProviderNonWritable(context, global, ethereum_proxy,
                                gin::StringToV8(isolate, kEthereum), true);
@@ -275,7 +280,7 @@ const char* JSEthereumProvider::MetaMask::GetTypeName() {
 v8::Local<v8::Promise> JSEthereumProvider::MetaMask::IsUnlocked(
     v8::Isolate* isolate) {
   if (!ethereum_provider_.is_bound()) {
-    render_frame_->GetBrowserInterfaceBroker()->GetInterface(
+    render_frame_->GetBrowserInterfaceBroker().GetInterface(
         ethereum_provider_.BindNewPipeAndPassReceiver());
   }
 
@@ -440,24 +445,21 @@ v8::Local<v8::Promise> JSEthereumProvider::SendMethod(gin::Arguments* args) {
     return v8::Local<v8::Promise>();
   }
 
-  std::unique_ptr<base::Value> params;
+  base::Value::List params;
   if (args->Length() > 1) {
     v8::Local<v8::Value> arg2;
     if (!args->GetNext(&arg2)) {
       args->ThrowError();
       return v8::Local<v8::Promise>();
     }
-    params = content::V8ValueConverter::Create()->FromV8Value(
+    auto arg_params = content::V8ValueConverter::Create()->FromV8Value(
         arg2, isolate->GetCurrentContext());
-    if (!params || !params->is_list()) {
+    if (!arg_params || !arg_params->is_list()) {
       args->ThrowError();
       return v8::Local<v8::Promise>();
     }
-  } else {
-    // supported_single_arg_function
-    params = std::make_unique<base::Value>(base::Value::Type::LIST);
+    params = std::move(arg_params->GetList());
   }
-
   if (!EnsureConnected()) {
     return v8::Local<v8::Promise>();
   }
@@ -474,7 +476,7 @@ v8::Local<v8::Promise> JSEthereumProvider::SendMethod(gin::Arguments* args) {
 
   // There's no id in this format so we can just use 1
   ethereum_provider_->Send(
-      method, std::move(*params),
+      method, std::move(params),
       base::BindOnce(&JSEthereumProvider::OnRequestOrSendAsync,
                      weak_ptr_factory_.GetWeakPtr(), std::move(global_context),
                      nullptr, std::move(promise_resolver), isolate));
@@ -597,7 +599,8 @@ void JSEthereumProvider::FireEvent(const std::string& event,
   base::Value event_name(event);
   base::ValueView args_list[] = {event_name, event_args};
 
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame()->GetWebFrame()->MainWorldScriptContext();
@@ -670,7 +673,9 @@ void JSEthereumProvider::OnProviderRequested() {
 }
 
 void JSEthereumProvider::BindRequestProviderListener() {
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  CHECK(render_frame());
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame()->GetWebFrame()->MainWorldScriptContext();
@@ -691,7 +696,9 @@ void JSEthereumProvider::BindRequestProviderListener() {
 }
 
 void JSEthereumProvider::AnnounceProvider() {
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  CHECK(render_frame());
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame()->GetWebFrame()->MainWorldScriptContext();
@@ -711,7 +718,6 @@ void JSEthereumProvider::AnnounceProvider() {
            ->SetIntegrityLevel(isolate->GetCurrentContext(),
                                v8::IntegrityLevel::kFrozen)
            .ToChecked()) {
-    NOTREACHED();
     return;
   }
 
@@ -721,7 +727,6 @@ void JSEthereumProvider::AnnounceProvider() {
                     base::Value("info"), context),
                 std::move(info_object))
           .IsNothing()) {
-    NOTREACHED();
     return;
   }
 
@@ -734,7 +739,6 @@ void JSEthereumProvider::AnnounceProvider() {
                     base::Value("provider"), context),
                 provider)
           .IsNothing()) {
-    NOTREACHED();
     return;
   }
 
@@ -742,7 +746,6 @@ void JSEthereumProvider::AnnounceProvider() {
           ->SetIntegrityLevel(isolate->GetCurrentContext(),
                               v8::IntegrityLevel::kFrozen)
           .IsNothing()) {
-    NOTREACHED();
     return;
   }
 
@@ -753,7 +756,6 @@ void JSEthereumProvider::AnnounceProvider() {
                     base::Value("detail"), context),
                 std::move(detail))
           .IsNothing()) {
-    NOTREACHED();
     return;
   }
 

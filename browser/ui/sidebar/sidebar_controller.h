@@ -12,8 +12,8 @@
 
 #include "base/memory/raw_ptr.h"
 #include "base/scoped_observation.h"
-#include "brave/components/sidebar/sidebar_item.h"
-#include "brave/components/sidebar/sidebar_service.h"
+#include "brave/components/sidebar/browser/sidebar_item.h"
+#include "brave/components/sidebar/browser/sidebar_service.h"
 #include "ui/base/window_open_disposition.h"
 
 class BraveBrowser;
@@ -52,6 +52,8 @@ class SidebarController : public SidebarService::Observer {
       std::optional<size_t> index,
       WindowOpenDisposition disposition = WindowOpenDisposition::CURRENT_TAB);
   void AddItemWithCurrentTab();
+  void UpdateActiveItemState(std::optional<SidebarItem::BuiltInItemType>
+                                 active_panel_item = std::nullopt);
 
   // Ask panel item activation state change to SidePanelUI.
   void ActivatePanelItem(SidebarItem::BuiltInItemType panel_item);
@@ -88,7 +90,7 @@ class SidebarController : public SidebarService::Observer {
 
   raw_ptr<BraveBrowser> browser_ = nullptr;
   // Interface to view.
-  raw_ptr<Sidebar> sidebar_ = nullptr;
+  raw_ptr<Sidebar, DanglingUntriaged> sidebar_ = nullptr;
 
   std::unique_ptr<SidebarModel> sidebar_model_;
   base::ScopedObservation<SidebarService, SidebarService::Observer>

@@ -11,39 +11,20 @@
 #include "brave/components/brave_rewards/core/constants.h"
 #include "brave/components/brave_rewards/core/database/database.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
+#include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
 #include "brave/components/brave_rewards/core/wallet_provider/wallet_provider.h"
 
 namespace brave_rewards::internal::wallet {
 
-WalletBalance::WalletBalance(RewardsEngineImpl& engine) : engine_(engine) {}
+WalletBalance::WalletBalance(RewardsEngine& engine) : engine_(engine) {}
 
 WalletBalance::~WalletBalance() = default;
 
 void WalletBalance::Fetch(FetchBalanceCallback callback) {
-  auto tokens_callback =
-      base::BindOnce(&WalletBalance::OnGetUnblindedTokens,
-                     base::Unretained(this), std::move(callback));
-
-  engine_->database()->GetSpendableUnblindedTokensByBatchTypes(
-      {mojom::CredsBatchType::PROMOTION},
-      [callback = std::make_shared<decltype(tokens_callback)>(std::move(
-           tokens_callback))](std::vector<mojom::UnblindedTokenPtr> list) {
-        std::move(*callback).Run(std::move(list));
-      });
-}
-
-void WalletBalance::OnGetUnblindedTokens(
-    FetchBalanceCallback callback,
-    std::vector<mojom::UnblindedTokenPtr> tokens) {
-  double total = 0.0;
-  for (const auto& token : tokens) {
-    total += token->value;
-  }
-
   auto balance = mojom::Balance::New();
-  balance->total = total;
+  balance->total = 0;
   balance->wallets.emplace(constant::kWalletUnBlinded, balance->total);
 
   const auto wallet_type =
@@ -74,7 +55,8 @@ void WalletBalance::OnFetchExternalWalletBalance(const std::string& wallet_type,
     balance_ptr->wallets.emplace(wallet_type, balance);
     std::move(callback).Run(std::move(balance_ptr));
   } else {
-    BLOG(0, "Failed to fetch balance for " << wallet_type << " wallet!");
+    engine_->LogError(FROM_HERE)
+        << "Failed to fetch balance for " << wallet_type << " wallet";
     std::move(callback).Run(nullptr);
   }
 }

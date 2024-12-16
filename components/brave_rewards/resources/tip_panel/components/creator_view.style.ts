@@ -5,7 +5,7 @@
 
 import styled from 'styled-components'
 
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 
 import defaultBackgroundURL from '../assets/default_background.svg'
 
@@ -95,7 +95,7 @@ export const background = styled.div`
   z-index: -1;
   background:
     no-repeat top center/cover var(--creator-background-image-url),
-    ${leo.color.gray['10']};
+    ${leo.color.neutral['10']};
 
   &::before {
     content: '';

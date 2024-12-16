@@ -22,18 +22,13 @@ class NotificationAdPlatformBridge {
   NotificationAdPlatformBridge& operator=(const NotificationAdPlatformBridge&) =
       delete;
 
-  NotificationAdPlatformBridge(NotificationAdPlatformBridge&&) noexcept =
-      delete;
-  NotificationAdPlatformBridge& operator=(
-      NotificationAdPlatformBridge&&) noexcept = delete;
-
   ~NotificationAdPlatformBridge();
 
   void ShowNotificationAd(NotificationAd notification_ad);
   void CloseNotificationAd(const std::string& notification_id);
 
  private:
-  raw_ref<Profile> profile_;
+  const raw_ref<Profile> profile_;
 };
 
 }  // namespace brave_ads

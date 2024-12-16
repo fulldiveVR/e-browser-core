@@ -8,11 +8,13 @@
 
 #include <optional>
 #include <string>
+#include <string_view>
 #include <tuple>
 #include <vector>
 
 #include "base/containers/span.h"
 #include "base/values.h"
+#include "brave/components/brave_wallet/common/brave_wallet.mojom-forward.h"
 
 namespace brave_wallet {
 
@@ -27,12 +29,12 @@ std::optional<std::tuple<uint16_t, size_t>> CompactU16Decode(
 
 bool IsBase58EncodedSolanaPubkey(const std::string& key);
 
-bool Uint8ArrayDecode(const std::string& str,
+bool Uint8ArrayDecode(std::string_view str,
                       std::vector<uint8_t>* ret,
                       size_t len);
 
 std::optional<uint8_t> GetUint8FromStringDict(const base::Value::Dict& dict,
-                                              const std::string& key);
+                                              std::string_view key);
 
 // A compact-array is serialized as the array length, followed by each array
 // item. bytes_index will be increased by the bytes read (consumed) in this
@@ -41,9 +43,11 @@ std::optional<std::vector<uint8_t>> CompactArrayDecode(
     const std::vector<uint8_t>& bytes,
     size_t* bytes_index);
 
-bool IsValidCommitmentString(const std::string& commitment);
+bool IsValidCommitmentString(std::string_view commitment);
 
-bool IsValidEncodingString(const std::string& encoding);
+bool IsValidEncodingString(std::string_view encoding);
+
+bool IsSPLToken(const mojom::BlockchainTokenPtr& token);
 
 }  // namespace brave_wallet
 

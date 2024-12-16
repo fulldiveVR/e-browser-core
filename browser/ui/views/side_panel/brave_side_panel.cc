@@ -6,7 +6,9 @@
 #include "brave/browser/ui/views/side_panel/brave_side_panel.h"
 
 #include <optional>
+#include <utility>
 
+#include "base/check_is_test.h"
 #include "base/functional/bind.h"
 #include "base/ranges/algorithm.h"
 #include "brave/browser/ui/brave_browser.h"
@@ -14,27 +16,60 @@
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel_resize_widget.h"
-#include "brave/components/sidebar/constants.h"
-#include "brave/components/sidebar/pref_names.h"
+#include "brave/components/sidebar/browser/constants.h"
+#include "brave/components/sidebar/browser/pref_names.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_util.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/color/color_provider.h"
 #include "ui/views/background.h"
 #include "ui/views/border.h"
+#include "ui/views/view_class_properties.h"
+
+namespace {
+
+// ContentParentView is the parent view for views hosted in the
+// side panel.
+class ContentParentView : public views::View {
+  METADATA_HEADER(ContentParentView, views::View)
+
+ public:
+  ContentParentView() {
+    SetUseDefaultFillLayout(true);
+    SetBackground(
+        views::CreateThemedSolidBackground(kColorSidePanelBackground));
+    SetProperty(
+        views::kFlexBehaviorKey,
+        views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero,
+                                 views::MaximumFlexSizeRule::kUnbounded));
+  }
+
+  ~ContentParentView() override = default;
+};
+
+BEGIN_METADATA(ContentParentView)
+END_METADATA
+
+}  // namespace
 
 BraveSidePanel::BraveSidePanel(BrowserView* browser_view,
                                HorizontalAlignment horizontal_alignment)
     : browser_view_(browser_view) {
-  SetVisible(false);
-  side_panel_width_.Init(
-      sidebar::kSidePanelWidth, browser_view_->GetProfile()->GetPrefs(),
-      base::BindRepeating(&BraveSidePanel::OnSidePanelWidthChanged,
-                          base::Unretained(this)));
+  scoped_observation_.AddObservation(this);
 
-  OnSidePanelWidthChanged();
-  AddObserver(this);
+  SetVisible(false);
+  auto* prefs = browser_view_->GetProfile()->GetPrefs();
+  if (prefs->FindPreference(sidebar::kSidePanelWidth)) {
+    side_panel_width_.Init(
+        sidebar::kSidePanelWidth, prefs,
+        base::BindRepeating(&BraveSidePanel::OnSidePanelWidthChanged,
+                            base::Unretained(this)));
+    OnSidePanelWidthChanged();
+  } else {
+    CHECK_IS_TEST();
+  }
 
   if (BraveBrowser::ShouldUseBraveWebViewRoundedCorners(
           browser_view_->browser())) {
@@ -42,10 +77,17 @@ BraveSidePanel::BraveSidePanel(BrowserView* browser_view,
     SetBackground(
         views::CreateThemedSolidBackground(kColorSidebarPanelHeaderBackground));
   }
+
+  content_parent_view_ = AddChildView(std::make_unique<ContentParentView>());
+  content_parent_view_->SetVisible(false);
 }
 
 BraveSidePanel::~BraveSidePanel() {
-  RemoveObserver(this);
+  scoped_observation_.RemoveObservation(this);
+}
+
+void BraveSidePanel::UpdateWidthOnEntryChanged() {
+  // Do nothing.
 }
 
 void BraveSidePanel::SetHorizontalAlignment(HorizontalAlignment alignment) {
@@ -58,7 +100,7 @@ BraveSidePanel::HorizontalAlignment BraveSidePanel::GetHorizontalAlignment() {
 }
 
 bool BraveSidePanel::IsRightAligned() {
-  return horizontal_alignment_ == kHorizontalAlignRight;
+  return horizontal_alignment_ == HorizontalAlignment::kRight;
 }
 
 void BraveSidePanel::UpdateBorder() {
@@ -94,12 +136,16 @@ gfx::Size BraveSidePanel::GetMinimumSize() const {
   return gfx::Size(sidebar::kDefaultSidePanelWidth, 0);
 }
 
+bool BraveSidePanel::IsClosing() {
+  return false;
+}
+
 void BraveSidePanel::AddedToWidget() {
   resize_widget_ = std::make_unique<SidePanelResizeWidget>(
       this, static_cast<BraveBrowserView*>(browser_view_), this);
 }
 
-void BraveSidePanel::Layout() {
+void BraveSidePanel::Layout(PassKey) {
   if (children().empty()) {
     return;
   }
@@ -115,6 +161,10 @@ void BraveSidePanel::Layout() {
   }
 
   children()[0]->SetBoundsRect(GetContentsBounds());
+}
+
+double BraveSidePanel::GetAnimationValue() const {
+  return 1;
 }
 
 void BraveSidePanel::SetPanelWidth(int width) {
@@ -154,8 +204,46 @@ void BraveSidePanel::OnResize(int resize_amount, bool done_resizing) {
 }
 
 void BraveSidePanel::AddHeaderView(std::unique_ptr<views::View> view) {
-  // Do nothing.
+  // Need to keep here because SidePanelCoordinator referes this |view|'s
+  // child view(header_combobox_). We don't use this |header_view_|.
+  // So just keep it here.
+  header_view_ = std::move(view);
 }
 
-BEGIN_METADATA(BraveSidePanel, views::View)
+void BraveSidePanel::OnChildViewAdded(View* observed_view, View* child) {
+  if (observed_view != this) {
+    return;
+  }
+  if (!scoped_observation_.IsObservingSource(child)) {
+    scoped_observation_.AddObservation(child);
+  }
+}
+
+void BraveSidePanel::OnChildViewRemoved(View* observed_view, View* child) {
+  if (observed_view != this) {
+    return;
+  }
+  if (scoped_observation_.IsObservingSource(child)) {
+    scoped_observation_.RemoveObservation(child);
+  }
+}
+
+void BraveSidePanel::Open(bool animated) {
+  UpdateVisibility(/*should_be_open=*/true);
+}
+
+void BraveSidePanel::Close(bool animated) {
+  UpdateVisibility(/*should_be_open=*/false);
+}
+
+void BraveSidePanel::UpdateVisibility(bool should_be_open) {
+  state_ = should_be_open ? State::kOpen : State::kClosed;
+  SetVisible(should_be_open);
+}
+
+views::View* BraveSidePanel::GetContentParentView() {
+  return content_parent_view_;
+}
+
+BEGIN_METADATA(BraveSidePanel)
 END_METADATA

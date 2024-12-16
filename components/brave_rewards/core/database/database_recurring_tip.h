@@ -19,12 +19,11 @@ namespace database {
 
 class DatabaseRecurringTip : public DatabaseTable {
  public:
-  explicit DatabaseRecurringTip(RewardsEngineImpl& engine);
+  explicit DatabaseRecurringTip(RewardsEngine& engine);
   ~DatabaseRecurringTip() override;
 
   // DEPRECATED
-  void InsertOrUpdate(mojom::RecurringTipPtr info,
-                      LegacyResultCallback callback);
+  void InsertOrUpdate(mojom::RecurringTipPtr info, ResultCallback callback);
 
   void InsertOrUpdate(const std::string& publisher_id,
                       double amount,
@@ -39,8 +38,7 @@ class DatabaseRecurringTip : public DatabaseTable {
 
   void GetAllRecords(GetRecurringTipsCallback callback);
 
-  void DeleteRecord(const std::string& publisher_key,
-                    LegacyResultCallback callback);
+  void DeleteRecord(const std::string& publisher_key, ResultCallback callback);
 
  private:
   void OnGetAllRecords(GetRecurringTipsCallback callback,

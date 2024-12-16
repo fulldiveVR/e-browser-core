@@ -148,19 +148,31 @@ bool BravePrivacySandboxSettings::IsEventReportingDestinationAttested(
 bool BravePrivacySandboxSettings::IsSharedStorageAllowed(
     const url::Origin& top_frame_origin,
     const url::Origin& accessing_origin,
-    content::RenderFrameHost* console_frame) const {
+    std::string* out_debug_message,
+    content::RenderFrameHost* console_frame,
+    bool* out_block_is_site_setting_specific) const {
   return false;
 }
 
 bool BravePrivacySandboxSettings::IsSharedStorageSelectURLAllowed(
     const url::Origin& top_frame_origin,
-    const url::Origin& accessing_origin) const {
+    const url::Origin& accessing_origin,
+    std::string* out_debug_message,
+    bool* out_block_is_site_setting_specific) const {
+  return false;
+}
+
+bool BravePrivacySandboxSettings::IsFencedStorageReadAllowed(
+    const url::Origin& top_frame_origin,
+    const url::Origin& accessing_origin,
+    content::RenderFrameHost* console_frame) const {
   return false;
 }
 
 bool BravePrivacySandboxSettings::IsPrivateAggregationAllowed(
     const url::Origin& top_frame_origin,
-    const url::Origin& reporting_origin) const {
+    const url::Origin& reporting_origin,
+    bool* out_block_is_site_setting_specific) const {
   return false;
 }
 
@@ -187,13 +199,8 @@ bool BravePrivacySandboxSettings::IsCookieDeprecationLabelAllowedForContext(
   return false;
 }
 
-bool BravePrivacySandboxSettings::IsPrivacySandboxEnabled() const {
-  return false;
-}
-
 void BravePrivacySandboxSettings::SetAllPrivacySandboxAllowedForTesting() {}
 void BravePrivacySandboxSettings::SetTopicsBlockedForTesting() {}
-void BravePrivacySandboxSettings::SetPrivacySandboxEnabled(bool enabled) {}
 
 bool BravePrivacySandboxSettings::IsPrivacySandboxRestricted() const {
   return true;

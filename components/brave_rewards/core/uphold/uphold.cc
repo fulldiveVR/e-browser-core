@@ -8,17 +8,17 @@
 #include <memory>
 #include <utility>
 
+#include "base/strings/strcat.h"
 #include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
-#include "brave/components/brave_rewards/core/buildflags.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
-#include "brave/components/brave_rewards/core/uphold/uphold_util.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "brave/components/brave_rewards/core/wallet_provider/uphold/connect_uphold_wallet.h"
 #include "brave/components/brave_rewards/core/wallet_provider/uphold/uphold_transfer.h"
 
 namespace brave_rewards::internal::uphold {
 
-Uphold::Uphold(RewardsEngineImpl& engine)
+Uphold::Uphold(RewardsEngine& engine)
     : WalletProvider(engine), server_(engine) {
   connect_wallet_ = std::make_unique<ConnectUpholdWallet>(engine);
   transfer_ = std::make_unique<UpholdTransfer>(engine);
@@ -29,10 +29,16 @@ const char* Uphold::WalletType() const {
 }
 
 void Uphold::AssignWalletLinks(mojom::ExternalWallet& external_wallet) {
-  external_wallet.account_url = GetAccountUrl();
-  external_wallet.activity_url = external_wallet.address.empty()
-                                     ? ""
-                                     : GetActivityUrl(external_wallet.address);
+  auto url = engine_->Get<EnvironmentConfig>().uphold_oauth_url();
+
+  external_wallet.account_url = url.Resolve("/dashboard").spec();
+
+  if (!external_wallet.address.empty()) {
+    external_wallet.activity_url =
+        url.Resolve(base::StrCat({"/dashboard/cards/", external_wallet.address,
+                                  "/activity"}))
+            .spec();
+  }
 }
 
 void Uphold::FetchBalance(
@@ -50,7 +56,7 @@ void Uphold::FetchBalance(
 }
 
 std::string Uphold::GetFeeAddress() const {
-  return uphold::GetFeeAddress();
+  return engine_->Get<EnvironmentConfig>().uphold_fee_address();
 }
 
 void Uphold::CheckEligibility() {

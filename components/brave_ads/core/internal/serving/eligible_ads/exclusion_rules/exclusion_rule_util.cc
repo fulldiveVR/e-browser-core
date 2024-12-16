@@ -8,13 +8,13 @@
 #include "base/time/time.h"
 #include "brave/components/brave_ads/core/internal/common/ranges/algorithm.h"
 #include "brave/components/brave_ads/core/internal/creatives/creative_ad_info.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 
 namespace brave_ads {
 
 namespace {
 
-bool ShouldAlwaysRespectCap(const base::TimeDelta time_constraint,
-                            const size_t cap) {
+bool ShouldAlwaysRespectCap(base::TimeDelta time_constraint, size_t cap) {
   return time_constraint.is_zero() || cap == 0;
 }
 
@@ -22,9 +22,9 @@ bool ShouldAlwaysRespectCap(const base::TimeDelta time_constraint,
 
 bool DoesRespectCampaignCap(const CreativeAdInfo& creative_ad,
                             const AdEventList& ad_events,
-                            const ConfirmationType confirmation_type,
-                            const base::TimeDelta time_constraint,
-                            const size_t cap) {
+                            mojom::ConfirmationType mojom_confirmation_type,
+                            base::TimeDelta time_constraint,
+                            size_t cap) {
   if (ShouldAlwaysRespectCap(time_constraint, cap)) {
     return true;
   }
@@ -33,11 +33,47 @@ bool DoesRespectCampaignCap(const CreativeAdInfo& creative_ad,
 
   const size_t count = count_if_until(
       ad_events,
-      [&creative_ad, &confirmation_type, now,
+      [&creative_ad, mojom_confirmation_type, now,
        time_constraint](const AdEventInfo& ad_event) {
-        return ad_event.confirmation_type == confirmation_type &&
+        CHECK(ad_event.created_at);
+
+        return ad_event.confirmation_type == mojom_confirmation_type &&
                ad_event.campaign_id == creative_ad.campaign_id &&
-               now - ad_event.created_at < time_constraint;
+               now - *ad_event.created_at < time_constraint;
+      },
+      cap);
+
+  return count < cap;
+}
+
+bool DoesRespectCampaignCap(const CreativeAdInfo& creative_ad,
+                            const AdEventList& ad_events,
+                            mojom::ConfirmationType mojom_confirmation_type,
+                            size_t cap) {
+  return DoesRespectCampaignCap(creative_ad, ad_events, mojom_confirmation_type,
+                                base::TimeDelta::FiniteMax(), cap);
+}
+
+bool DoesRespectCreativeSetCap(const CreativeAdInfo& creative_ad,
+                               const AdEventList& ad_events,
+                               mojom::ConfirmationType mojom_confirmation_type,
+                               base::TimeDelta time_constraint,
+                               size_t cap) {
+  if (ShouldAlwaysRespectCap(time_constraint, cap)) {
+    return true;
+  }
+
+  const base::Time now = base::Time::Now();
+
+  const size_t count = count_if_until(
+      ad_events,
+      [&creative_ad, mojom_confirmation_type, now,
+       time_constraint](const AdEventInfo& ad_event) {
+        CHECK(ad_event.created_at);
+
+        return ad_event.confirmation_type == mojom_confirmation_type &&
+               ad_event.creative_set_id == creative_ad.creative_set_id &&
+               now - *ad_event.created_at < time_constraint;
       },
       cap);
 
@@ -46,9 +82,18 @@ bool DoesRespectCampaignCap(const CreativeAdInfo& creative_ad,
 
 bool DoesRespectCreativeSetCap(const CreativeAdInfo& creative_ad,
                                const AdEventList& ad_events,
-                               const ConfirmationType confirmation_type,
-                               const base::TimeDelta time_constraint,
-                               const size_t cap) {
+                               mojom::ConfirmationType mojom_confirmation_type,
+                               size_t cap) {
+  return DoesRespectCreativeSetCap(creative_ad, ad_events,
+                                   mojom_confirmation_type,
+                                   base::TimeDelta::FiniteMax(), cap);
+}
+
+bool DoesRespectCreativeCap(const CreativeAdInfo& creative_ad,
+                            const AdEventList& ad_events,
+                            mojom::ConfirmationType mojom_confirmation_type,
+                            base::TimeDelta time_constraint,
+                            size_t cap) {
   if (ShouldAlwaysRespectCap(time_constraint, cap)) {
     return true;
   }
@@ -57,11 +102,14 @@ bool DoesRespectCreativeSetCap(const CreativeAdInfo& creative_ad,
 
   const size_t count = count_if_until(
       ad_events,
-      [&creative_ad, &confirmation_type, now,
+      [&creative_ad, mojom_confirmation_type, now,
        time_constraint](const AdEventInfo& ad_event) {
-        return ad_event.confirmation_type == confirmation_type &&
-               ad_event.creative_set_id == creative_ad.creative_set_id &&
-               now - ad_event.created_at < time_constraint;
+        CHECK(ad_event.created_at);
+
+        return ad_event.confirmation_type == mojom_confirmation_type &&
+               ad_event.creative_instance_id ==
+                   creative_ad.creative_instance_id &&
+               now - *ad_event.created_at < time_constraint;
       },
       cap);
 
@@ -70,27 +118,10 @@ bool DoesRespectCreativeSetCap(const CreativeAdInfo& creative_ad,
 
 bool DoesRespectCreativeCap(const CreativeAdInfo& creative_ad,
                             const AdEventList& ad_events,
-                            const ConfirmationType confirmation_type,
-                            const base::TimeDelta time_constraint,
-                            const size_t cap) {
-  if (ShouldAlwaysRespectCap(time_constraint, cap)) {
-    return true;
-  }
-
-  const base::Time now = base::Time::Now();
-
-  const size_t count = count_if_until(
-      ad_events,
-      [&creative_ad, &confirmation_type, now,
-       time_constraint](const AdEventInfo& ad_event) {
-        return ad_event.confirmation_type == confirmation_type &&
-               ad_event.creative_instance_id ==
-                   creative_ad.creative_instance_id &&
-               now - ad_event.created_at < time_constraint;
-      },
-      cap);
-
-  return count < cap;
+                            mojom::ConfirmationType mojom_confirmation_type,
+                            size_t cap) {
+  return DoesRespectCreativeCap(creative_ad, ad_events, mojom_confirmation_type,
+                                base::TimeDelta::FiniteMax(), cap);
 }
 
 }  // namespace brave_ads

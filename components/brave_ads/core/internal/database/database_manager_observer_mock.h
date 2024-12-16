@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_DATABASE_DATABASE_MANAGER_OBSERVER_MOCK_H_
 
 #include "brave/components/brave_ads/core/internal/database/database_manager_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,10 +19,6 @@ class DatabaseManagerObserverMock : public DatabaseManagerObserver {
   DatabaseManagerObserverMock& operator=(const DatabaseManagerObserverMock&) =
       delete;
 
-  DatabaseManagerObserverMock(DatabaseManagerObserverMock&&) noexcept = delete;
-  DatabaseManagerObserverMock& operator=(
-      DatabaseManagerObserverMock&&) noexcept = delete;
-
   ~DatabaseManagerObserverMock() override;
 
   MOCK_METHOD(void, OnWillCreateOrOpenDatabase, ());
@@ -33,17 +29,13 @@ class DatabaseManagerObserverMock : public DatabaseManagerObserver {
 
   MOCK_METHOD(void, OnFailedToCreateOrOpenDatabase, ());
 
-  MOCK_METHOD(void,
-              OnWillMigrateDatabase,
-              (const int from_version, const int to_version));
+  MOCK_METHOD(void, OnWillMigrateDatabase, (int from_version, int to_version));
 
-  MOCK_METHOD(void,
-              OnDidMigrateDatabase,
-              (const int from_version, const int to_version));
+  MOCK_METHOD(void, OnDidMigrateDatabase, (int from_version, int to_version));
 
   MOCK_METHOD(void,
               OnFailedToMigrateDatabase,
-              (const int from_version, const int to_version));
+              (int from_version, int to_version));
 
   MOCK_METHOD(void, OnDatabaseIsReady, ());
 };

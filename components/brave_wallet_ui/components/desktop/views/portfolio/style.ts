@@ -4,7 +4,7 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 import Icon from '@brave/leo/react/icon'
 
 // Icons
@@ -14,7 +14,6 @@ import {
   NoTransactionsIconDark,
   NoTransactionsIconLight
 } from '../../../../assets/svg-icons/empty-state-icons'
-import Lines from '../../../../assets/svg-icons/portfolio_lines_background.svg'
 
 // Shared Styles
 import {
@@ -80,6 +79,7 @@ export const ButtonRow = styled.div<{
   margin: ${(p) => (p.noMargin ? '0px' : '20px 0px')};
   padding: 0px
     ${(p) => (p.horizontalPadding !== undefined ? p.horizontalPadding : 0)}px;
+  gap: 10px;
 `
 
 export const BalanceRow = styled.div<{ gap?: string }>`
@@ -123,7 +123,7 @@ export const PercentBubble = styled.div<{ isDown?: boolean }>`
   padding: 4px 8px;
   border-radius: 4px;
   background-color: ${(p) =>
-    p.isDown ? leo.color.red[10] : leo.color.green[10]};
+    p.isDown ? leo.color.red[20] : leo.color.green[20]};
   font-family: Poppins;
   font-size: 11px;
   line-height: 16px;
@@ -161,30 +161,6 @@ export const FilterTokenRow = styled.div<{
   margin-bottom: ${(p) => (p.isV2 ? '16px' : 0)};
 `
 
-export const BuySellBridgeButton = styled(WalletButton)<{
-  noBottomMargin?: boolean
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 14px;
-  height: 40px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 40px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  background-color: ${(p) => p.theme.palette.blurple500};
-  color: ${(p) => p.theme.palette.white};
-  border: none;
-  margin-bottom: ${(p) => (p.noBottomMargin ? 0 : 32)}px;
-  margin-right: 10px;
-`
-
 export const SelectTimelineWrapper = styled(Row)`
   @media screen and (max-width: ${layoutSmallWidth}px) {
     justify-content: flex-start;
@@ -194,13 +170,13 @@ export const SelectTimelineWrapper = styled(Row)`
   }
 `
 
-export const ControlsRow = styled(Row)`
-  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.02);
+export const ControlsRow = styled(Row)<{ controlsHidden?: boolean }>`
+  box-shadow: 0px -1px 1px ${leo.color.elevation.primary};
   border-radius: 16px 16px 0px 0px;
-  padding: 24px 16px;
+  padding: ${(p) => (p.controlsHidden ? '12px' : '24px 32px')};
   background-color: ${leo.color.container.background};
   @media screen and (max-width: ${layoutPanelWidth}px) {
-    padding: 16px;
+    padding: ${(p) => (p.controlsHidden ? '8px' : '16px')};
   }
 `
 
@@ -276,7 +252,7 @@ export const ControlBarWrapper = styled(Row)<{
   margin-bottom: 16px;
   @media screen and (max-width: ${layoutPanelWidth}px) {
     padding: ${(p) => (p.showSearchBar ? (p.isNFTView ? '2px' : '0px') : '4px')}
-      24px 0px 24px;
+      16px 0px 16px;
     margin-bottom: ${(p) => (p.showSearchBar ? 12 : 16)}px;
   }
 `
@@ -338,17 +314,6 @@ export const BalanceAndLineChartWrapper = styled(Column)`
   position: relative;
 `
 
-export const BackgroundWatermark = styled.div`
-  box-shadow: ${leo.color.page.background} 0px 50px 50px -30px inset;
-  width: 100%;
-  height: 100%;
-  background-image: url(${Lines});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  opacity: 0.6;
-  @media (prefers-color-scheme: dark) {
-    opacity: 0.2;
-  }
+export const ActivityWrapper = styled(Column)`
+  background-color: ${leo.color.container.background};
 `

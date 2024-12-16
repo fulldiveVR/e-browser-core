@@ -4,7 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 import Icon from '@brave/leo/react/icon'
 
 // Shared Styles
@@ -115,7 +115,8 @@ export const ErrorBox = styled.div`
   padding: 16px 25px;
   background-color: ${leo.color.systemfeedback.errorBackground};
   border-radius: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
 `
 
 export const ErrorDescriptionText = styled(Text)`

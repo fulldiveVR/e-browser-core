@@ -10,6 +10,7 @@
 #include <memory>
 
 #include "base/memory/raw_ptr.h"
+#include "base/memory/raw_ref.h"
 #include "base/scoped_observation.h"
 #include "brave/browser/ui/brave_ads/notification_ad.h"
 #include "ui/base/metadata/metadata_header_macros.h"
@@ -21,6 +22,10 @@
 #include "ui/views/widget/widget_observer.h"
 
 class Profile;
+
+namespace display {
+class Screen;
+}  // namespace display
 
 namespace gfx {
 class LinearAnimation;
@@ -46,19 +51,15 @@ class NotificationAdPopup : public views::WidgetDelegateView,
                             public views::WidgetObserver,
                             public gfx::AnimationDelegate,
                             public display::DisplayObserver {
+  METADATA_HEADER(NotificationAdPopup, views::WidgetDelegateView)
  public:
-  METADATA_HEADER(NotificationAdPopup);
-
-  NotificationAdPopup(Profile* profile,
+  NotificationAdPopup(Profile& profile,
                       const NotificationAd& notification_ad,
                       gfx::NativeWindow browser_native_window,
                       gfx::NativeView browser_native_view);
 
   NotificationAdPopup(const NotificationAdPopup&) = delete;
   NotificationAdPopup& operator=(const NotificationAdPopup&) = delete;
-
-  NotificationAdPopup(NotificationAdPopup&&) noexcept = delete;
-  NotificationAdPopup& operator=(NotificationAdPopup&&) noexcept = delete;
 
   ~NotificationAdPopup() override;
 
@@ -70,7 +71,7 @@ class NotificationAdPopup : public views::WidgetDelegateView,
 
   // display::DisplayObserver:
   void OnDisplayAdded(const display::Display& new_display) override;
-  void OnDisplayRemoved(const display::Display& old_display) override;
+  void OnDisplaysRemoved(const display::Displays& displays) override;
   void OnDisplayMetricsChanged(const display::Display& display,
                                uint32_t changed_metrics) override;
 
@@ -139,7 +140,7 @@ class NotificationAdPopup : public views::WidgetDelegateView,
 
   bool IsWidgetValid() const;
 
-  raw_ptr<Profile> profile_ = nullptr;  // NOT OWNED
+  const raw_ref<Profile> profile_;
 
   NotificationAd notification_ad_;
 
@@ -157,6 +158,9 @@ class NotificationAdPopup : public views::WidgetDelegateView,
 
   base::ScopedObservation<views::Widget, views::WidgetObserver>
       widget_observation_{this};
+
+  base::ScopedObservation<display::Screen, display::DisplayObserver>
+      screen_observation_{this};
 };
 
 }  // namespace brave_ads

@@ -5,23 +5,19 @@
 
 #include <utility>
 
-#include "brave/components/brave_rewards/core/common/callback_helpers.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/state/state_migration.h"
 
-using std::placeholders::_1;
-
 namespace {
 
-const int kCurrentVersionNumber = 14;
+constexpr int kCurrentVersionNumber = 14;
 
 }  // namespace
 
-namespace brave_rewards::internal {
-namespace state {
+namespace brave_rewards::internal::state {
 
-StateMigration::StateMigration(RewardsEngineImpl& engine)
+StateMigration::StateMigration(RewardsEngine& engine)
     : engine_(engine),
       v1_(engine),
       v2_(engine),
@@ -43,7 +39,8 @@ void StateMigration::Start(ResultCallback callback) {
 }
 
 void StateMigration::FreshInstall(ResultCallback callback) {
-  BLOG(1, "Fresh install, state version set to " << kCurrentVersionNumber);
+  engine_->Log(FROM_HERE) << "Fresh install, state version set to "
+                          << kCurrentVersionNumber;
   engine_->state()->SetVersion(kCurrentVersionNumber);
   std::move(callback).Run(mojom::Result::OK);
 }
@@ -56,8 +53,10 @@ void StateMigration::Migrate(ResultCallback callback) {
     current_version = 0;
   }
 
-  if (is_testing &&
-      current_version == state_migration_target_version_for_testing) {
+  auto& options = engine_->options();
+
+  if (options.is_testing &&
+      current_version == options.state_migration_target_version_for_testing) {
     return std::move(callback).Run(mojom::Result::OK);
   }
 
@@ -74,15 +73,15 @@ void StateMigration::Migrate(ResultCallback callback) {
 
   switch (new_version) {
     case 1: {
-      v1_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v1_.Migrate(std::move(migrate_callback));
       return;
     }
     case 2: {
-      v2_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v2_.Migrate(std::move(migrate_callback));
       return;
     }
     case 3: {
-      v3_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v3_.Migrate(std::move(migrate_callback));
       return;
     }
     case 4: {
@@ -90,39 +89,39 @@ void StateMigration::Migrate(ResultCallback callback) {
       return;
     }
     case 5: {
-      v5_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v5_.Migrate(std::move(migrate_callback));
       return;
     }
     case 6: {
-      v6_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v6_.Migrate(std::move(migrate_callback));
       return;
     }
     case 7: {
-      v7_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v7_.Migrate(std::move(migrate_callback));
       return;
     }
     case 8: {
-      v8_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v8_.Migrate(std::move(migrate_callback));
       return;
     }
     case 9: {
-      v9_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v9_.Migrate(std::move(migrate_callback));
       return;
     }
     case 10: {
-      v10_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v10_.Migrate(std::move(migrate_callback));
       return;
     }
     case 11: {
-      v11_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v11_.Migrate(std::move(migrate_callback));
       return;
     }
     case 12: {
-      v12_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v12_.Migrate(std::move(migrate_callback));
       return;
     }
     case 13: {
-      v13_.Migrate(ToLegacyCallback(std::move(migrate_callback)));
+      v13_.Migrate(std::move(migrate_callback));
       return;
     }
     case 14: {
@@ -131,21 +130,21 @@ void StateMigration::Migrate(ResultCallback callback) {
     }
   }
 
-  BLOG(0, "Migration version is not handled " << new_version);
-  NOTREACHED();
+  engine_->LogError(FROM_HERE)
+      << "Migration version is not handled " << new_version;
 }
 
 void StateMigration::OnMigration(ResultCallback callback,
                                  int version,
                                  mojom::Result result) {
   if (result != mojom::Result::OK) {
-    BLOG(0, "State: Error with migration from " << (version - 1) << " to "
-                                                << version);
+    engine_->LogError(FROM_HERE) << "State: Error with migration from "
+                                 << (version - 1) << " to " << version;
     std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
-  BLOG(1, "State: Migrated to version " << version);
+  engine_->Log(FROM_HERE) << "State: Migrated to version " << version;
   engine_->state()->SetVersion(version);
 
   // If the user did not previously have a state version and the initial
@@ -159,5 +158,4 @@ void StateMigration::OnMigration(ResultCallback callback,
   Migrate(std::move(callback));
 }
 
-}  // namespace state
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::state

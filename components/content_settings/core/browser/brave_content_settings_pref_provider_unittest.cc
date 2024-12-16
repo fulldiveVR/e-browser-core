@@ -13,7 +13,7 @@
 #include "base/json/values_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/values.h"
-#include "brave/components/brave_shields/common/brave_shield_constants.h"
+#include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/content_settings/core/browser/brave_content_settings_utils.h"
 #include "chrome/test/base/testing_profile.h"
@@ -37,11 +37,11 @@ namespace {
 constexpr char kUserProfilePluginsPath[] =
     "profile.content_settings.exceptions.plugins";
 
-const char kExpirationPath[] = "expiration";
-const char kLastModifiedPath[] = "last_modified";
-const char kSessionModelPath[] = "model";
-const char kSettingPath[] = "setting";
-const char kPerResourcePath[] = "per_resource";
+constexpr char kExpirationPath[] = "expiration";
+constexpr char kLastModifiedPath[] = "last_modified";
+constexpr char kSessionModelPath[] = "model";
+constexpr char kSettingPath[] = "setting";
+constexpr char kPerResourcePath[] = "per_resource";
 
 using GURLSourcePair = std::pair<GURL, ContentSettingsType>;
 
@@ -64,7 +64,7 @@ base::Value::Dict* InitializeCommonSettingsAndGetPerResourceDictionary(
                         base::NumberToString(last_modified_time_in_ms));
   dict->SetByDottedPath(
       kSessionModelPath,
-      static_cast<int>(content_settings::SessionModel::Durable));
+      static_cast<int>(content_settings::mojom::SessionModel::DURABLE));
 
   return dict->EnsureDict(kPerResourcePath);
 }
@@ -116,7 +116,7 @@ void CheckMigrationFromResourceIdentifierForDictionary(
   EXPECT_EQ(base::ValueToTime(settings_dict->Find(kLastModifiedPath)),
             expected_last_modified);
   EXPECT_EQ(GetSessionModelFromDictionary(*settings_dict, kSessionModelPath),
-            content_settings::SessionModel::Durable);
+            content_settings::mojom::SessionModel::DURABLE);
   EXPECT_EQ(actual_value, expected_setting_value);
 }
 
@@ -501,7 +501,8 @@ TEST_F(BravePrefProviderTest, MigrateFPShieldsSettings) {
       ContentSettingToValue(CONTENT_SETTING_BLOCK), {});
   std::vector<Rule> rules;
   auto rule_iterator = provider.GetRuleIterator(
-      ContentSettingsType::BRAVE_FINGERPRINTING_V2, false);
+      ContentSettingsType::BRAVE_FINGERPRINTING_V2, false,
+      content_settings::PartitionKey::WipGetDefault());
   while (rule_iterator && rule_iterator->HasNext()) {
     auto rule = rule_iterator->Next();
     EXPECT_NE(

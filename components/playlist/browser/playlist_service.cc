@@ -1,3 +1,4 @@
+
 /* Copyright (c) 2021 The Brave Authors. All rights reserved.
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -13,15 +14,15 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/json/json_reader.h"
-#include "base/json/json_writer.h"
+#include "base/functional/callback_helpers.h"
 #include "base/json/values_util.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_split.h"
-#include "base/strings/utf_string_conversions.h"
 #include "base/task/thread_pool.h"
-#include "base/token.h"
+#include "brave/components/playlist/browser/media_detector_component_manager.h"
+#include "brave/components/playlist/browser/playlist_background_web_contentses.h"
 #include "brave/components/playlist/browser/playlist_constants.h"
+#include "brave/components/playlist/browser/playlist_tab_helper.h"
 #include "brave/components/playlist/browser/pref_names.h"
 #include "brave/components/playlist/browser/type_converter.h"
 #include "brave/components/playlist/common/features.h"
@@ -29,7 +30,9 @@
 #include "components/prefs/scoped_user_pref_update.h"
 #include "components/user_prefs/user_prefs.h"
 #include "content/public/browser/browser_context.h"
+#include "content/public/browser/web_contents.h"
 #include "net/base/filename_util.h"
+#include "url/gurl.h"
 
 namespace playlist {
 namespace {
@@ -64,13 +67,16 @@ PlaylistService::PlaylistService(content::BrowserContext* context,
       base_dir_(context->GetPath().Append(kBaseDirName)),
       playlist_p3a_(local_state, browser_first_run_time),
       prefs_(user_prefs::UserPrefs::Get(context)) {
+  CHECK(base::FeatureList::IsEnabled(features::kPlaylist));
+
   media_file_download_manager_ =
       std::make_unique<PlaylistMediaFileDownloadManager>(context, this);
   thumbnail_downloader_ =
       std::make_unique<PlaylistThumbnailDownloader>(context, this);
-  download_request_manager_ =
-      std::make_unique<PlaylistDownloadRequestManager>(context, manager);
+  background_web_contentses_ =
+      std::make_unique<PlaylistBackgroundWebContentses>(context, this);
   playlist_streaming_ = std::make_unique<PlaylistStreaming>(context);
+  media_detector_component_manager_ = manager;
 
   enabled_pref_.Init(kPlaylistEnabledPref, prefs_.get(),
                      base::BindRepeating(&PlaylistService::OnEnabledPrefChanged,
@@ -88,11 +94,9 @@ PlaylistService::~PlaylistService() = default;
 
 void PlaylistService::Shutdown() {
   observers_.Clear();
-  streaming_observers_.Clear();
-  download_request_manager_.reset();
+  background_web_contentses_.reset();
   media_file_download_manager_.reset();
   thumbnail_downloader_.reset();
-  download_request_manager_.reset();
   task_runner_.reset();
   playlist_streaming_.reset();
 #if BUILDFLAG(IS_ANDROID)
@@ -103,7 +107,8 @@ void PlaylistService::Shutdown() {
 void PlaylistService::AddMediaFilesFromContentsToPlaylist(
     const std::string& playlist_id,
     content::WebContents* contents,
-    bool cache) {
+    bool cache,
+    base::OnceCallback<void(std::vector<mojom::PlaylistItemPtr>)> callback) {
   CHECK(*enabled_pref_) << "Playlist pref must be enabled";
 
   DCHECK(contents);
@@ -114,19 +119,20 @@ void PlaylistService::AddMediaFilesFromContentsToPlaylist(
   VLOG(2) << __func__
           << " download media from WebContents to playlist: " << playlist_id;
 
-  PlaylistDownloadRequestManager::Request request;
-  if (ShouldGetMediaFromBackgroundWebContents(contents)) {
-    request.url_or_contents = contents->GetVisibleURL().spec();
-  } else {
-    request.url_or_contents = contents->GetWeakPtr();
+  auto* tab_helper = PlaylistTabHelper::FromWebContents(contents);
+  CHECK(tab_helper);
+  const auto& found_items = tab_helper->found_items();
+  if (found_items.empty()) {
+    if (callback) {
+      return std::move(callback).Run({});
+    }
+    return;
   }
 
-  request.should_force_fake_ua = ShouldUseFakeUA(contents->GetVisibleURL());
-  request.callback = base::BindOnce(
-      &PlaylistService::AddMediaFilesFromItems, weak_factory_.GetWeakPtr(),
-      playlist_id.empty() ? GetDefaultSaveTargetListID() : playlist_id, cache,
-      base::NullCallback());
-  download_request_manager_->GetMediaFilesFromPage(std::move(request));
+  std::vector<mojom::PlaylistItemPtr> items;
+  base::ranges::transform(found_items, std::back_inserter(items),
+                          &mojom::PlaylistItemPtr::Clone);
+  AddMediaFiles(std::move(items), playlist_id, cache, std::move(callback));
 }
 
 bool PlaylistService::AddItemsToPlaylist(
@@ -347,6 +353,9 @@ void PlaylistService::AddMediaFilesFromItems(
   base::ranges::transform(filtered_items, std::back_inserter(ids),
                           [](const auto& item) { return item->id; });
   AddItemsToPlaylist(target_playlist_id, ids);
+  base::ranges::for_each(filtered_items, [&target_playlist_id](auto& item) {
+    item->parents.push_back(target_playlist_id);
+  });
 
   if (callback) {
     std::move(callback).Run(std::move(filtered_items));
@@ -358,25 +367,6 @@ void PlaylistService::NotifyPlaylistChanged(mojom::PlaylistEvent playlist_event,
   VLOG(2) << __func__ << ": params=" << playlist_event;
   for (auto& observer : observers_) {
     observer->OnEvent(playlist_event, playlist_id);
-  }
-}
-
-void PlaylistService::NotifyMediaFilesUpdated(
-    const GURL& url,
-    std::vector<mojom::PlaylistItemPtr> items) {
-  if (items.empty()) {
-    return;
-  }
-
-  DVLOG(2) << __FUNCTION__ << " Media files from " << url.spec()
-           << " were updated: count =>" << items.size();
-
-  for (auto& observer : observers_) {
-    std::vector<mojom::PlaylistItemPtr> cloned_items;
-    base::ranges::transform(
-        items, std::back_inserter(cloned_items),
-        [](const auto& item_ptr) { return item_ptr->Clone(); });
-    observer->OnMediaFilesUpdated(url, std::move(cloned_items));
   }
 }
 
@@ -402,6 +392,10 @@ void PlaylistService::DownloadMediaFile(const mojom::PlaylistItemPtr& item,
       update_media_src_and_retry_on_fail, std::move(callback));
 
   media_file_download_manager_->DownloadMediaFile(std::move(job));
+
+  for (auto& observer : observers_) {
+    observer->OnMediaFileDownloadScheduled(item->id);
+  }
 }
 
 base::FilePath PlaylistService::GetPlaylistItemDirPath(
@@ -409,34 +403,8 @@ base::FilePath PlaylistService::GetPlaylistItemDirPath(
   return base_dir_.AppendASCII(id);
 }
 
-void PlaylistService::ConfigureWebPrefsForBackgroundWebContents(
-    content::WebContents* web_contents,
-    blink::web_pref::WebPreferences* web_prefs) {
-  download_request_manager_->ConfigureWebPrefsForBackgroundWebContents(
-      web_contents, web_prefs);
-}
-
 base::WeakPtr<PlaylistService> PlaylistService::GetWeakPtr() {
   return weak_factory_.GetWeakPtr();
-}
-
-void PlaylistService::FindMediaFilesFromContents(
-    content::WebContents* contents,
-    FindMediaFilesFromContentsCallback callback) {
-  CHECK(*enabled_pref_) << "Playlist pref must be enabled";
-  DCHECK(contents);
-
-  PlaylistDownloadRequestManager::Request request;
-  auto current_url = contents->GetVisibleURL();
-  if (ShouldGetMediaFromBackgroundWebContents(contents)) {
-    request.url_or_contents = current_url.spec();
-  } else {
-    request.url_or_contents = contents->GetWeakPtr();
-  }
-
-  request.should_force_fake_ua = ShouldUseFakeUA(contents->GetVisibleURL());
-  request.callback = base::BindOnce(std::move(callback), current_url);
-  download_request_manager_->GetMediaFilesFromPage(std::move(request));
 }
 
 void PlaylistService::GetAllPlaylists(GetAllPlaylistsCallback callback) {
@@ -513,27 +481,22 @@ bool PlaylistService::HasPlaylistItem(const std::string& id) const {
   return prefs_->GetDict(kPlaylistItemsPref).FindDict(id);
 }
 
-void PlaylistService::AddMediaFilesFromPageToPlaylist(
-    const std::string& playlist_id,
-    const GURL& url,
-    bool can_cache) {
-  CHECK(*enabled_pref_) << "Playlist pref must be enabled";
+const std::string& PlaylistService::GetMediaSourceAPISuppressorScript() const {
+  return media_detector_component_manager_->GetMediaSourceAPISuppressorScript();
+}
 
-  VLOG(2) << __func__ << " " << playlist_id << " " << url;
-  PlaylistDownloadRequestManager::Request request;
-  request.url_or_contents = url.spec();
-  request.callback = base::BindOnce(
-      &PlaylistService::AddMediaFilesFromItems, weak_factory_.GetWeakPtr(),
-      playlist_id.empty() ? GetDefaultSaveTargetListID() : playlist_id,
-      /* cache= */ can_cache &&
-          prefs_->GetBoolean(playlist::kPlaylistCacheByDefault),
-      base::NullCallback()),
-  download_request_manager_->GetMediaFilesFromPage(std::move(request));
+std::string PlaylistService::GetMediaDetectorScript(const GURL& url) const {
+  return media_detector_component_manager_->GetMediaDetectorScript(url);
+}
+
+void PlaylistService::SetUpForTesting() const {
+  media_detector_component_manager_->SetUseLocalScript();
 }
 
 void PlaylistService::AddMediaFilesFromActiveTabToPlaylist(
     const std::string& playlist_id,
-    bool can_cache) {
+    bool can_cache,
+    AddMediaFilesFromActiveTabToPlaylistCallback callback) {
   DCHECK(delegate_);
 
   auto* contents = delegate_->GetActiveWebContents();
@@ -543,31 +506,45 @@ void PlaylistService::AddMediaFilesFromActiveTabToPlaylist(
 
   AddMediaFilesFromContentsToPlaylist(
       playlist_id, contents,
-      /* cache= */ can_cache && prefs_->GetBoolean(kPlaylistCacheByDefault));
+      /* cache= */ can_cache && prefs_->GetBoolean(kPlaylistCacheByDefault),
+      std::move(callback));
 }
 
-void PlaylistService::FindMediaFilesFromActiveTab(
-    FindMediaFilesFromActiveTabCallback callback) {
-  DCHECK(delegate_);
-
-  auto* contents = delegate_->GetActiveWebContents();
-  if (!contents) {
-    std::move(callback).Run({}, {});
+void PlaylistService::FindMediaFilesFromActiveTab() {
+  auto* web_contents = delegate_->GetActiveWebContents();
+  if (!web_contents) {
     return;
   }
 
-  FindMediaFilesFromContents(contents, std::move(callback));
+  auto* tab_helper = PlaylistTabHelper::FromWebContents(web_contents);
+  CHECK(tab_helper);
+
+  const auto url = web_contents->GetLastCommittedURL();
+
+  for (auto& observer : observers_) {
+    std::vector<mojom::PlaylistItemPtr> cloned_items;
+    base::ranges::transform(tab_helper->found_items(),
+                            std::back_inserter(cloned_items),
+                            &mojom::PlaylistItemPtr::Clone);
+    observer->OnMediaFilesUpdated(url, std::move(cloned_items));
+  }
 }
 
 void PlaylistService::AddMediaFiles(std::vector<mojom::PlaylistItemPtr> items,
                                     const std::string& playlist_id,
                                     bool can_cache,
                                     AddMediaFilesCallback callback) {
-  AddMediaFilesFromItems(
-      playlist_id,
-      /* cache= */ can_cache &&
-          prefs_->GetBoolean(playlist::kPlaylistCacheByDefault),
-      std::move(callback), std::move(items));
+  auto add_media_files_from_items = base::IgnoreArgs<GURL>(base::BindOnce(
+      &PlaylistService::AddMediaFilesFromItems, GetWeakPtr(), playlist_id,
+      can_cache && prefs_->GetBoolean(playlist::kPlaylistCacheByDefault),
+      std::move(callback)));
+
+  if (items.size() == 1 && items[0]->is_blob_from_media_source) {
+    background_web_contentses_->Add(items[0]->page_source,
+                                    std::move(add_media_files_from_items));
+  } else {
+    std::move(add_media_files_from_items).Run(GURL(), std::move(items));
+  }
 }
 
 void PlaylistService::RemoveItemFromPlaylist(const std::string& playlist_id,
@@ -667,11 +644,6 @@ void PlaylistService::ReorderPlaylist(const std::string& playlist_id,
   std::move(callback).Run(true);
 }
 
-content::WebContents* PlaylistService::GetBackgroundWebContentsForTesting() {
-  return download_request_manager_
-      ->GetBackgroundWebContentsForTesting();  // IN-TEST
-}
-
 std::string PlaylistService::GetDefaultSaveTargetListID() {
   auto id = prefs_->GetString(kPlaylistDefaultSaveTargetListID);
   if (!prefs_->GetDict(kPlaylistsPref).contains(id)) {
@@ -730,29 +702,6 @@ void PlaylistService::CreatePlaylistItem(const mojom::PlaylistItemPtr& item,
   playlist_p3a_.ReportNewUsage();
 }
 
-bool PlaylistService::ShouldGetMediaFromBackgroundWebContents(
-    content::WebContents* contents) const {
-  if (base::FeatureList::IsEnabled(features::kPlaylistFakeUA)) {
-    return true;
-  }
-
-  CHECK(contents);
-  const auto& url = contents->GetVisibleURL();
-
-  return ShouldUseFakeUA(url) ||
-         download_request_manager_->media_detector_component_manager()
-             ->ShouldHideMediaSrcAPI(url);
-}
-
-bool PlaylistService::ShouldUseFakeUA(const GURL& url) const {
-  if (base::FeatureList::IsEnabled(features::kPlaylistFakeUA)) {
-    return true;
-  }
-
-  return download_request_manager_->media_detector_component_manager()
-      ->ShouldUseFakeUA(url);
-}
-
 void PlaylistService::OnPlaylistItemDirCreated(
     mojom::PlaylistItemPtr item,
     base::OnceCallback<void(mojom::PlaylistItemPtr, bool)> callback,
@@ -783,9 +732,8 @@ void PlaylistService::SanitizeImage(
     base::OnceCallback<void(scoped_refptr<base::RefCountedBytes>)> callback) {
   if (!delegate_) {
     CHECK_IS_TEST();
-    auto bytes = base::MakeRefCounted<base::RefCountedBytes>(
-        reinterpret_cast<const unsigned char*>(image->data()), image->size());
-    std::move(callback).Run(bytes);
+    std::move(callback).Run(
+        new base::RefCountedBytes(base::as_byte_span(*image)));
     return;
   }
 
@@ -847,6 +795,7 @@ void PlaylistService::ResetAll() {
   // Resets all on-going downloads
   thumbnail_downloader_->CancelAllDownloadRequests();
   media_file_download_manager_->CancelAllDownloadRequests();
+  playlist_streaming_->ClearAllQueries();
 
   // Resets preference ---------------------------------------------------------
   prefs_->ClearPref(kPlaylistCacheByDefault);
@@ -945,13 +894,20 @@ void PlaylistService::RecoverLocalDataForItem(
         mojom::PlaylistItemPtr new_item =
             service->GetPlaylistItem(old_item->id);
         DCHECK(new_item);
-        DCHECK(!new_item->cached);
         DCHECK_EQ(new_item->media_source, old_item->media_source);
         DCHECK_EQ(new_item->media_path, old_item->media_path);
+        const bool was_cached = new_item->cached;
+        if (was_cached)
+          new_item->cached = false;
         new_item->media_source = found_items.front()->media_source;
-        new_item->media_path = new_item->media_path;
+        new_item->media_path = new_item->media_source;
         service->UpdatePlaylistItemValue(
             new_item->id, base::Value(ConvertPlaylistItemToValue(new_item)));
+
+        if (was_cached) {
+          service->NotifyPlaylistChanged(
+              mojom::PlaylistEvent::kItemLocalDataRemoved, new_item->id);
+        }
 
         service->RecoverLocalDataForItemImpl(
             std::move(new_item),
@@ -959,12 +915,9 @@ void PlaylistService::RecoverLocalDataForItem(
       },
       weak_factory_.GetWeakPtr(), item->Clone(), std::move(callback));
 
-  PlaylistDownloadRequestManager::Request request;
-  DCHECK(!item->page_source.spec().empty());
-  request.url_or_contents = item->page_source.spec();
-  request.should_force_fake_ua = ShouldUseFakeUA(item->page_source);
-  request.callback = std::move(update_media_src_and_recover);
-  download_request_manager_->GetMediaFilesFromPage(std::move(request));
+  background_web_contentses_->Add(
+      item->page_source,
+      base::IgnoreArgs<GURL>(std::move(update_media_src_and_recover)));
 }
 
 void PlaylistService::RemoveLocalDataForItemsInPlaylist(
@@ -1095,7 +1048,10 @@ void PlaylistService::OnMediaFileDownloadFinished(
         PlaylistMediaFileDownloadManager::DownloadResult,
         PlaylistMediaFileDownloadManager::DownloadFailureReason>& result) {
   DCHECK(item);
-  DCHECK(IsValidPlaylistItem(item->id));
+  if (!IsValidPlaylistItem(item->id)) {
+    // As this callback is async, the item could have been removed.
+    return;
+  }
 
   if (!result.has_value() &&
       result.error() !=
@@ -1146,7 +1102,7 @@ void PlaylistService::OnMediaFileDownloadFinished(
 
 void PlaylistService::OnEnabledPrefChanged() {
   if (!*enabled_pref_) {
-    download_request_manager_->ResetRequests();
+    background_web_contentses_->Reset();
     thumbnail_downloader_->CancelAllDownloadRequests();
     media_file_download_manager_->CancelAllDownloadRequests();
   }
@@ -1169,32 +1125,19 @@ void PlaylistService::AddObserver(
   observers_.Add(std::move(observer));
 }
 
-void PlaylistService::AddObserverForStreaming(
-    mojo::PendingRemote<mojom::PlaylistStreamingObserver> observer) {
-  streaming_observers_.Add(std::move(observer));
-}
-
-void PlaylistService::ClearObserverForStreaming() {
-  streaming_observers_.Clear();
-}
-
-void PlaylistService::OnMediaUpdatedFromContents(
-    content::WebContents* contents) {
+void PlaylistService::OnMediaDetected(
+    GURL url,
+    std::vector<mojom::PlaylistItemPtr> items) {
   if (!*enabled_pref_) {
     return;
   }
 
-  if (download_request_manager_->background_contents() != contents) {
-    return;
+  for (auto& observer : observers_) {
+    std::vector<mojom::PlaylistItemPtr> cloned_items;
+    base::ranges::transform(items, std::back_inserter(cloned_items),
+                            &mojom::PlaylistItemPtr::Clone);
+    observer->OnMediaFilesUpdated(url, std::move(cloned_items));
   }
-
-  // Try getting media files that are added dynamically after we've tried.
-  PlaylistDownloadRequestManager::Request request;
-  request.url_or_contents = contents->GetWeakPtr();
-  request.callback =
-      base::BindOnce(&PlaylistService::NotifyMediaFilesUpdated,
-                     weak_factory_.GetWeakPtr(), contents->GetVisibleURL());
-  download_request_manager_->GetMediaFilesFromPage(std::move(request));
 }
 
 void PlaylistService::OnMediaFileDownloadProgressed(
@@ -1226,7 +1169,7 @@ base::FilePath PlaylistService::GetMediaPathForPlaylistItemItem(
 }
 
 void PlaylistService::OnGetOrphanedPaths(
-    const std::vector<base::FilePath> orphaned_paths) {
+    const std::vector<base::FilePath>& orphaned_paths) {
   if (orphaned_paths.empty()) {
     VLOG(2) << __func__ << ": No orphaned playlist";
     return;
@@ -1327,9 +1270,18 @@ base::SequencedTaskRunner* PlaylistService::GetTaskRunner() {
   return task_runner_.get();
 }
 
-void PlaylistService::RequestStreamingQuery(const std::string& query_id,
-                                            const std::string& url,
-                                            const std::string& method) {
+void PlaylistService::RequestStreamingQuery(
+    const std::string& query_id,
+    const std::string& url,
+    const std::string& method,
+    mojo::PendingRemote<mojom::PlaylistStreamingObserver> streaming_observer) {
+  if (streaming_observer_.is_bound()) {
+    streaming_observer_.reset();
+  }
+
+  streaming_observer_.Bind(std::move(streaming_observer));
+  mojo::Remote<mojom::PlaylistStreamingObserver> observer;
+  observer.Bind(std::move(streaming_observer));
   playlist_streaming_->RequestStreamingQuery(
       query_id, url, method,
       base::BindOnce(&PlaylistService::OnResponseStarted,
@@ -1350,31 +1302,23 @@ void PlaylistService::CancelQuery(const std::string& query_id) {
 
 void PlaylistService::OnResponseStarted(const std::string& url,
                                         const int64_t content_length) {
-  for (auto& observer : streaming_observers_) {
-    observer->OnResponseStarted(url, content_length);
-  }
+  streaming_observer_->OnResponseStarted(url, content_length);
 }
 
-void PlaylistService::OnDataReceived(
-    data_decoder::DataDecoder::ValueOrError result) {
+void PlaylistService::OnDataReceived(api_request_helper::ValueOrError result) {
   if (!result.has_value()) {
     return;
   }
 
   std::vector<uint8_t> data_received(result.value().GetString().begin(),
                                      result.value().GetString().end());
-
-  for (auto& observer : streaming_observers_) {
-    observer->OnDataReceived(data_received);
-  }
+  streaming_observer_->OnDataReceived(data_received);
 }
 
 void PlaylistService::OnDataComplete(
     api_request_helper::APIRequestResult result) {
   if (result.Is2XXResponseCode()) {
-    for (auto& observer : streaming_observers_) {
-      observer->OnDataCompleted();
-    }
+    streaming_observer_->OnDataCompleted();
   }
 }
 

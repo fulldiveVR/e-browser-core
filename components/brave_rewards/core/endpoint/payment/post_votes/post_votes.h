@@ -37,16 +37,16 @@
 // {Empty}
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoint {
 namespace payment {
 
-using PostVotesCallback = std::function<void(const mojom::Result result)>;
+using PostVotesCallback = base::OnceCallback<void(const mojom::Result result)>;
 
 class PostVotes {
  public:
-  explicit PostVotes(RewardsEngineImpl& engine);
+  explicit PostVotes(RewardsEngine& engine);
   ~PostVotes();
 
   void Request(const credential::CredentialsRedeem& redeem,
@@ -61,7 +61,7 @@ class PostVotes {
 
   void OnRequest(PostVotesCallback callback, mojom::UrlResponsePtr response);
 
-  const raw_ref<RewardsEngineImpl> engine_;
+  const raw_ref<RewardsEngine> engine_;
 };
 
 }  // namespace payment

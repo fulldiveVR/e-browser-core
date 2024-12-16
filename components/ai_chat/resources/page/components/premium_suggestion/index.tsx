@@ -4,60 +4,92 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import * as React from 'react'
-import { getLocale } from '$web-common/locale'
 import Icon from '@brave/leo/react/icon'
 import Button from '@brave/leo/react/button'
 import formatMessage from '$web-common/formatMessage'
-import DataContext from '../../state/context'
+import { getLocale } from '$web-common/locale'
+import { useAIChat } from '../../state/ai_chat_context'
 import styles from './style.module.scss'
 
 interface PremiumSuggestionProps {
   title?: string
   description?: string
   secondaryActionButton?: React.ReactNode
-  verbose?: boolean
 }
 
+const featuresList = [
+  {
+    title: getLocale('premiumFeature_1'),
+    desc: getLocale('premiumFeature_1_desc'),
+    icon: 'widget-generic'
+  },
+  {
+    title: getLocale('premiumFeature_2'),
+    desc: getLocale('premiumFeature_2_desc'),
+    icon: 'idea'
+  },
+  {
+    title: getLocale('premiumFeature_3'),
+    desc: getLocale('premiumFeature_3_desc'),
+    icon: 'edit-pencil'
+  },
+  {
+    title: getLocale('premiumFeature_4'),
+    desc: getLocale('premiumFeature_4_desc'),
+    icon: 'message-bubble-comments'
+  }
+]
+
 function PremiumSuggestion(props: PremiumSuggestionProps) {
-  const context = React.useContext(DataContext)
+  const aiChatContext = useAIChat()
+  const buttonRef = React.useRef<HTMLButtonElement>()
 
   const pricingInfo = formatMessage(getLocale('premiumPricing'), {
     placeholders: {
-      $1: <data>15</data>
+      $1: <data>14.99</data>
     }
   })
 
+  React.useEffect(() => {
+    if (buttonRef.current === undefined) return
+    buttonRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
     <div className={styles.boxPremium}>
-      <h4>{props.title}</h4>
-      <p>{props.description}</p>
-      <ul className={styles.featuresListing}>
-        <li>
-          <Icon name='check-normal' />
-          <span>
-            {getLocale('premiumFeature_1')}
-            {props?.verbose && <p>{getLocale('premiumFeature_1_desc')}</p>}
-          </span>
-        </li>
-        <li>
-          <Icon name='check-normal' />
-          <span>
-            {getLocale('premiumFeature_2')}
-            {props?.verbose && (
-              <p>{getLocale('premiumFeature_2_desc')}</p>
-            )}
-          </span>
-        </li>
-        <li className={styles.priceList}>
-          <span>{getLocale('premiumLabel')}</span>
-          <span className={styles.price}>
-            {pricingInfo}
-          </span>
-        </li>
-      </ul>
-      <div className={styles.actionsBox}>
-        <Button onClick={context.goPremium}>
-          {getLocale('premiumButtonLabel')}
+      <div className={styles.header}>
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
+      </div>
+      <div className={styles.features}>
+        <ul>
+          {featuresList.map((entry, i) => {
+            return <li key={i}>
+              <div className={styles.icon}>
+                <Icon name={entry.icon} />
+              </div>
+              <span>
+                {entry.title}
+                <p>{entry.desc}</p>
+              </span>
+            </li>
+          })}
+        </ul>
+      </div>
+      {!aiChatContext.isMobile && (
+        <div className={styles.priceList}>
+          <button className={styles.priceButton} tabIndex={-1}>
+            <span className={styles.priceButtonLabel}>Monthly</span>
+            <span className={styles.price}>{pricingInfo}</span>
+          </button>
+          <div className={styles.subscriptionPolicy}>
+            {getLocale('subscriptionPolicyInfo')}
+          </div>
+        </div>
+      )}
+      <div className={styles.actions}>
+        <Button onClick={aiChatContext.goPremium} ref={buttonRef}>
+          {getLocale('upgradeButtonLabel')}
         </Button>
         {props.secondaryActionButton}
       </div>

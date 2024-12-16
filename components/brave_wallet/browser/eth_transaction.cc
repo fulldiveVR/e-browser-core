@@ -9,6 +9,7 @@
 #include <utility>
 
 #include "base/base64.h"
+#include "base/containers/to_vector.h"
 #include "base/logging.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
@@ -189,7 +190,7 @@ std::vector<uint8_t> EthTransaction::GetMessageToSign(uint256_t chain_id,
 
   const std::string message = RLPEncode(base::Value(std::move(list)));
   auto result = std::vector<uint8_t>(message.begin(), message.end());
-  return hash ? KeccakHash(result) : result;
+  return hash ? base::ToVector(KeccakHash(result)) : result;
 }
 
 std::string EthTransaction::GetSignedTransaction() const {
@@ -202,36 +203,23 @@ std::string EthTransaction::GetTransactionHash() const {
   DCHECK(IsSigned());
   DCHECK(nonce_);
 
-  return KeccakHash(RLPEncode(Serialize()));
+  return ToHex(KeccakHash(base::as_byte_span(RLPEncode(Serialize()))));
 }
 
-bool EthTransaction::ProcessVRS(const std::string& v,
-                                const std::string& r,
-                                const std::string& s) {
-  if (!base::StartsWith(v, "0x") || !base::StartsWith(r, "0x") ||
-      !base::StartsWith(s, "0x")) {
+bool EthTransaction::ProcessVRS(const std::vector<uint8_t>& v,
+                                const std::vector<uint8_t>& r,
+                                const std::vector<uint8_t>& s) {
+  if (r.empty() || s.empty() || v.empty()) {
     return false;
   }
-  uint256_t v_decoded;
-  if (!HexValueToUint256(v, &v_decoded)) {
+
+  if (!HexValueToUint256(ToHex(v), &v_)) {
     LOG(ERROR) << "Unable to decode v param";
     return false;
   }
 
-  std::vector<uint8_t> r_decoded;
-  if (!PrefixedHexStringToBytes(r, &r_decoded)) {
-    LOG(ERROR) << "Unable to decode r param";
-    return false;
-  }
-  std::vector<uint8_t> s_decoded;
-  if (!PrefixedHexStringToBytes(s, &s_decoded)) {
-    LOG(ERROR) << "Unable to decode s param";
-    return false;
-  }
-
-  r_ = r_decoded;
-  s_ = s_decoded;
-  v_ = v_decoded;
+  r_ = r;
+  s_ = s;
   return true;
 }
 

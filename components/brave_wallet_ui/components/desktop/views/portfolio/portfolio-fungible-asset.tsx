@@ -18,6 +18,9 @@ import {
 
 // constants
 import { emptyRewardsInfo } from '../../../../common/async/base-query-cache'
+import {
+  LOCAL_STORAGE_KEYS //
+} from '../../../../common/constants/local-storage-keys'
 
 // Utils
 import Amount from '../../../../utils/amount'
@@ -27,8 +30,10 @@ import {
   sortTransactionByDate
 } from '../../../../utils/tx-utils'
 import { getBalance } from '../../../../utils/balance-utils'
-import { computeFiatAmount } from '../../../../utils/pricing-utils'
-import { getPriceIdForToken } from '../../../../utils/api-utils'
+import {
+  computeFiatAmount,
+  getPriceIdForToken
+} from '../../../../utils/pricing-utils'
 import { networkSupportsAccount } from '../../../../utils/network-utils'
 import {
   auroraSupportedContractAddresses,
@@ -38,6 +43,7 @@ import { getLocale } from '../../../../../common/locale'
 import { makeNetworkAsset } from '../../../../options/asset-options'
 import { isRewardsAssetId } from '../../../../utils/rewards_utils'
 import {
+  makeAndroidFundWalletRoute,
   makeDepositFundsRoute,
   makeFundWalletRoute
 } from '../../../../utils/routes-utils'
@@ -47,9 +53,6 @@ import {
 
 // actions
 import { WalletPageActions } from '../../../../page/actions'
-
-// selectors
-import { WalletSelectors } from '../../../../common/selectors'
 
 // Components
 import {
@@ -61,17 +64,15 @@ import {
 import {
   BridgeToAuroraModal //
 } from '../../popup-modals/bridge-to-aurora-modal/bridge-to-aurora-modal'
+import {
+  EditTokenModal //
+} from '../../popup-modals/edit_token_modal/edit_token_modal'
 
 // Hooks
 import {
   useScopedBalanceUpdater //
 } from '../../../../common/hooks/use-scoped-balance-updater'
-import {
-  useIsBuySupported //
-} from '../../../../common/hooks/use-multi-chain-buy-assets'
-import {
-  useSafeWalletSelector //
-} from '../../../../common/hooks/use-safe-selector'
+import { useFindBuySupportedToken } from '../../../../common/hooks/use-multi-chain-buy-assets'
 import {
   useGetNetworkQuery,
   useGetTransactionsQuery,
@@ -79,16 +80,20 @@ import {
   useGetPriceHistoryQuery,
   useGetDefaultFiatCurrencyQuery,
   useGetRewardsInfoQuery,
-  useGetUserTokensRegistryQuery
+  useGetUserTokensRegistryQuery,
+  useUpdateUserAssetVisibleMutation
 } from '../../../../common/slices/api.slice'
 import { useAccountsQuery } from '../../../../common/slices/api.slice.extra'
 import {
   querySubscriptionOptions60s //
 } from '../../../../common/slices/constants'
+import {
+  useSyncedLocalStorage //
+} from '../../../../common/hooks/use_local_storage'
 
 // Styled Components
-import { BuySellBridgeButton, StyledWrapper, ButtonRow } from './style'
-import { Row, Column } from '../../../shared/style'
+import { StyledWrapper, ButtonRow } from './style'
+import { Row, Column, LeoSquaredButton } from '../../../shared/style'
 import {
   TokenDetailsModal //
 } from './components/token-details-modal/token-details-modal'
@@ -119,6 +124,8 @@ export const PortfolioFungibleAsset = () => {
   const [selectedTimeline, setSelectedTimeline] = React.useState<number>(
     getStoredPortfolioTimeframe
   )
+  const [showEditTokenModal, setShowEditTokenModal] =
+    React.useState<boolean>(false)
 
   // routing
   const history = useHistory()
@@ -129,8 +136,11 @@ export const PortfolioFungibleAsset = () => {
 
   // redux
   const dispatch = useDispatch()
-  const hidePortfolioBalances = useSafeWalletSelector(
-    WalletSelectors.hidePortfolioBalances
+
+  // Local-Storage
+  const [hidePortfolioBalances] = useSyncedLocalStorage(
+    LOCAL_STORAGE_KEYS.HIDE_PORTFOLIO_BALANCES,
+    false
   )
 
   // Queries
@@ -149,6 +159,9 @@ export const PortfolioFungibleAsset = () => {
     }
     return assetId ? userTokensRegistry?.entities[assetId] : undefined
   }, [isRewardsToken, rewardsToken, assetId, userTokensRegistry])
+
+  // mutations
+  const [updateUserAssetVisible] = useUpdateUserAssetVisibleMutation()
 
   // queries
   const { accounts } = useAccountsQuery()
@@ -177,15 +190,16 @@ export const PortfolioFungibleAsset = () => {
     )
   }, [selectedAssetsNetwork, accounts])
 
-  const { data: tokenBalancesRegistry } = useScopedBalanceUpdater(
-    selectedAssetFromParams && candidateAccounts && selectedAssetsNetwork
-      ? {
-          network: selectedAssetsNetwork,
-          accounts: candidateAccounts,
-          tokens: [selectedAssetFromParams]
-        }
-      : skipToken
-  )
+  const { data: tokenBalancesRegistry, isLoading: isLoadingBalances } =
+    useScopedBalanceUpdater(
+      selectedAssetFromParams && candidateAccounts && selectedAssetsNetwork
+        ? {
+            network: selectedAssetsNetwork,
+            accounts: candidateAccounts,
+            tokens: [selectedAssetFromParams]
+          }
+        : skipToken
+    )
 
   const tokenPriceIds = React.useMemo(
     () =>
@@ -209,8 +223,9 @@ export const PortfolioFungibleAsset = () => {
   )
 
   // custom hooks
-  const isAssetBuySupported =
-    useIsBuySupported(selectedAssetFromParams) && !isRewardsToken
+  const { foundAndroidBuyToken, foundMeldBuyToken } = useFindBuySupportedToken(
+    selectedAssetFromParams
+  )
 
   // memos
   /**
@@ -334,7 +349,7 @@ export const PortfolioFungibleAsset = () => {
     dispatch(WalletPageActions.updateNFTMetadata(undefined))
     dispatch(WalletPageActions.updateNftMetadataError(undefined))
     history.push(WalletRoutes.PortfolioAssets)
-  }, [])
+  }, [dispatch, history])
 
   const onOpenRainbowAppClick = React.useCallback(() => {
     chrome.tabs.create({ url: rainbowbridgeLink }, () => {
@@ -375,25 +390,41 @@ export const PortfolioFungibleAsset = () => {
     []
   )
 
-  const onHideAsset = React.useCallback(() => {
+  const onHideAsset = React.useCallback(async () => {
     if (!selectedAssetFromParams) return
-    dispatch(
-      WalletActions.setUserAssetVisible({
-        token: selectedAssetFromParams,
-        isVisible: false
-      })
-    )
+    await updateUserAssetVisible({
+      token: selectedAssetFromParams,
+      isVisible: false
+    }).unwrap()
     dispatch(WalletActions.refreshBalancesAndPriceHistory())
     if (showHideTokenModel) setShowHideTokenModal(false)
     if (showTokenDetailsModal) setShowTokenDetailsModal(false)
     history.push(WalletRoutes.PortfolioAssets)
-  }, [selectedAssetFromParams, showTokenDetailsModal])
+  }, [
+    dispatch,
+    history,
+    selectedAssetFromParams,
+    showHideTokenModel,
+    showTokenDetailsModal,
+    updateUserAssetVisible
+  ])
 
   const onSelectBuy = React.useCallback(() => {
-    if (selectedAssetFromParams) {
-      history.push(makeFundWalletRoute(getAssetIdKey(selectedAssetFromParams)))
+    if (foundAndroidBuyToken && selectedAssetFromParams) {
+      history.push(
+        makeAndroidFundWalletRoute(getAssetIdKey(selectedAssetFromParams))
+      )
+      return
     }
-  }, [selectedAssetFromParams])
+    if (foundMeldBuyToken) {
+      history.push(makeFundWalletRoute(foundMeldBuyToken))
+    }
+  }, [
+    history,
+    foundAndroidBuyToken,
+    foundMeldBuyToken,
+    selectedAssetFromParams
+  ])
 
   const onSelectDeposit = React.useCallback(() => {
     if (selectedAssetFromParams) {
@@ -401,7 +432,7 @@ export const PortfolioFungibleAsset = () => {
         makeDepositFundsRoute(getAssetIdKey(selectedAssetFromParams))
       )
     }
-  }, [selectedAssetFromParams])
+  }, [history, selectedAssetFromParams])
 
   React.useEffect(() => {
     setDontShowAuroraWarning(
@@ -434,7 +465,7 @@ export const PortfolioFungibleAsset = () => {
     <WalletPageWrapper
       wrapContentInBox={true}
       noCardPadding={true}
-      hideDivider={true}
+      useCardInPanel={true}
       cardHeader={
         <AssetDetailsHeader
           selectedTimeline={selectedTimeline}
@@ -443,6 +474,11 @@ export const PortfolioFungibleAsset = () => {
           onBack={goBack}
           onClickTokenDetails={() => setShowTokenDetailsModal(true)}
           onClickHideToken={() => setShowHideTokenModal(true)}
+          onClickEditToken={
+            selectedAssetFromParams?.contractAddress !== ''
+              ? () => setShowEditTokenModal(true)
+              : undefined
+          }
         />
       }
     >
@@ -461,33 +497,30 @@ export const PortfolioFungibleAsset = () => {
           src={`chrome-untrusted://line-chart-display${
             isLoadingGraphData ? '' : `?${encodedPriceData}`
           }`}
-          sandbox='allow-scripts'
+          sandbox='allow-scripts allow-same-origin'
         />
         <Row padding='0px 20px'>
           <ButtonRow>
-            {isAssetBuySupported && (
-              <BuySellBridgeButton
-                onClick={onSelectBuy}
-                noBottomMargin={true}
-              >
-                {getLocale('braveWalletBuy')}
-              </BuySellBridgeButton>
+            {(foundMeldBuyToken || foundAndroidBuyToken) && !isRewardsToken && (
+              <div>
+                <LeoSquaredButton onClick={onSelectBuy}>
+                  {getLocale('braveWalletBuy')}
+                </LeoSquaredButton>
+              </div>
             )}
             {isSelectedAssetDepositSupported && (
-              <BuySellBridgeButton
-                onClick={onSelectDeposit}
-                noBottomMargin={true}
-              >
-                {getLocale('braveWalletAccountsDeposit')}
-              </BuySellBridgeButton>
+              <div>
+                <LeoSquaredButton onClick={onSelectDeposit}>
+                  {getLocale('braveWalletAccountsDeposit')}
+                </LeoSquaredButton>
+              </div>
             )}
             {isSelectedAssetBridgeSupported && (
-              <BuySellBridgeButton
-                onClick={onBridgeToAuroraButton}
-                noBottomMargin={true}
-              >
-                {getLocale('braveWalletBridgeToAuroraButton')}
-              </BuySellBridgeButton>
+              <div>
+                <LeoSquaredButton onClick={onBridgeToAuroraButton}>
+                  {getLocale('braveWalletBridgeToAuroraButton')}
+                </LeoSquaredButton>
+              </div>
             )}
           </ButtonRow>
         </Row>
@@ -521,11 +554,17 @@ export const PortfolioFungibleAsset = () => {
           selectedAssetsNetwork && (
             <HideTokenModal
               selectedAsset={selectedAssetFromParams}
-              selectedAssetNetwork={selectedAssetsNetwork}
               onClose={onCloseHideTokenModal}
               onHideAsset={onHideAsset}
             />
           )}
+
+        {showEditTokenModal && selectedAssetFromParams && (
+          <EditTokenModal
+            onClose={() => setShowEditTokenModal(false)}
+            token={selectedAssetFromParams}
+          />
+        )}
 
         <Column
           padding='0px 24px 24px 24px'
@@ -537,6 +576,7 @@ export const PortfolioFungibleAsset = () => {
             selectedAsset={selectedAssetFromParams}
             selectedAssetTransactions={selectedAssetTransactions}
             tokenBalancesRegistry={tokenBalancesRegistry}
+            isLoadingBalances={isLoadingBalances}
             accounts={candidateAccounts}
             spotPriceRegistry={spotPriceRegistry}
           />

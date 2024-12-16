@@ -24,6 +24,7 @@
 #include "base/location.h"
 #include "base/mac/mac_util.h"
 #include "base/mac/scoped_ioobject.h"
+#include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
@@ -37,7 +38,7 @@
 namespace brave_ads {
 
 using IsValidMacAddressCallback =
-    base::RepeatingCallback<bool(const void* bytes, size_t size)>;
+    base::RepeatingCallback<bool(base::span<const uint8_t> bytes)>;
 
 namespace {
 
@@ -57,7 +58,7 @@ std::string FindBSDNameOfSystemDisk() {
 
   std::string root_bsd_name;
   for (int i = 0; i < count; i++) {
-    const struct statfs& volume = mounted_volumes[i];
+    const struct statfs& volume = UNSAFE_TODO(mounted_volumes[i]);
     if (std::string(volume.f_mntonname) == kRootDirectory) {
       root_bsd_name = std::string(volume.f_mntfromname);
       break;
@@ -69,7 +70,7 @@ std::string FindBSDNameOfSystemDisk() {
 }
 
 // Return the Volume UUID property of a BSD disk name (e.g. '/dev/disk1').
-// Returns an empty string if an error occured.
+// Returns an empty string if an error occurred.
 std::string GetVolumeUUIDFromBSDName(const std::string& bsd_name) {
   base::ScopedBlockingCall scoped_blocking_call(FROM_HERE,
                                                 base::BlockingType::MAY_BLOCK);
@@ -137,14 +138,12 @@ class MacAddressProcessor {
       return keep_going;
     }
 
-    const UInt8* mac_address = CFDataGetBytePtr(mac_address_data.get());
-    const size_t mac_address_size = CFDataGetLength(mac_address_data.get());
-    if (!is_valid_mac_address_callback_.Run(mac_address, mac_address_size)) {
+    auto mac_address_bytes = base::apple::CFDataToSpan(mac_address_data.get());
+    if (!is_valid_mac_address_callback_.Run(mac_address_bytes)) {
       return keep_going;
     }
 
-    mac_address_ =
-        base::ToLowerASCII(base::HexEncode(mac_address, mac_address_size));
+    mac_address_ = base::ToLowerASCII(base::HexEncode(mac_address_bytes));
 
     base::apple::ScopedCFTypeRef<CFStringRef> provider_class_string(
         static_cast<CFStringRef>(IORegistryEntryCreateCFProperty(
@@ -194,7 +193,7 @@ std::string GetMacAddress(
 
   MacAddressProcessor processor(std::move(is_valid_mac_address_callback));
   while (true) {
-    // NOTE: |service| should not be released.
+    // NOTE: `service` should not be released.
     const io_object_t service = IOIteratorNext(scoped_iterator.get());
     if (!service) {
       break;
@@ -204,9 +203,7 @@ std::string GetMacAddress(
     result = IORegistryEntryGetParentEntry(service, kIOServicePlane, &parent);
     if (result == KERN_SUCCESS) {
       const base::mac::ScopedIOObject<io_object_t> scoped_parent(parent);
-      const bool keep_going =
-          processor.ProcessNetworkController(scoped_parent.get());
-      if (!keep_going) {
+      if (!processor.ProcessNetworkController(scoped_parent.get())) {
         break;
       }
     }

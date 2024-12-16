@@ -24,9 +24,6 @@ class Timer final {
   Timer(const Timer&) = delete;
   Timer& operator=(const Timer&) = delete;
 
-  Timer(Timer&&) noexcept = delete;
-  Timer& operator=(Timer&&) noexcept = delete;
-
   ~Timer();
 
   // `location` provides basic info where the timer was posted from. Start a
@@ -45,7 +42,7 @@ class Timer final {
                               base::TimeDelta delay,
                               base::OnceClosure user_task);
 
-  // Returns true if the timer is running (i.e., not stopped).
+  // Returns `true` if the timer is running (i.e., not stopped).
   bool IsRunning() const;
 
   // Call this method to stop the timer. It is a no-op if the timer is not

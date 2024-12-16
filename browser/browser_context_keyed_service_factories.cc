@@ -6,23 +6,21 @@
 #include "brave/browser/browser_context_keyed_service_factories.h"
 
 #include "base/feature_list.h"
+#include "brave/browser/ai_chat/ai_chat_service_factory.h"
 #include "brave/browser/brave_adaptive_captcha/brave_adaptive_captcha_service_factory.h"
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_federated/brave_federated_service_factory.h"
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/brave_shields/ad_block_pref_service_factory.h"
+#include "brave/browser/brave_shields/brave_farbling_service_factory.h"
 #include "brave/browser/brave_wallet/asset_ratio_service_factory.h"
-#include "brave/browser/brave_wallet/bitcoin_wallet_service_factory.h"
 #include "brave/browser/brave_wallet/brave_wallet_ipfs_service_factory.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
-#include "brave/browser/brave_wallet/json_rpc_service_factory.h"
-#include "brave/browser/brave_wallet/keyring_service_factory.h"
+#include "brave/browser/brave_wallet/meld_integration_service_factory.h"
 #include "brave/browser/brave_wallet/notifications/wallet_notification_service_factory.h"
 #include "brave/browser/brave_wallet/simulation_service_factory.h"
 #include "brave/browser/brave_wallet/swap_service_factory.h"
-#include "brave/browser/brave_wallet/tx_service_factory.h"
-#include "brave/browser/brave_wallet/zcash_wallet_service_factory.h"
 #include "brave/browser/debounce/debounce_service_factory.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_service_factory.h"
 #include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
@@ -32,15 +30,15 @@
 #include "brave/browser/profiles/brave_renderer_updater_factory.h"
 #include "brave/browser/search_engines/search_engine_provider_service_factory.h"
 #include "brave/browser/search_engines/search_engine_tracker.h"
+#include "brave/browser/skus/skus_service_factory.h"
 #include "brave/browser/sync/brave_sync_alerts_service_factory.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/browser/webcompat_reporter/webcompat_reporter_service_factory.h"
+#include "brave/components/ai_chat/content/browser/model_service_factory.h"
 #include "brave/components/brave_perf_predictor/browser/named_third_party_registry_factory.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/commander/common/buildflags/buildflags.h"
-#include "brave/components/greaselion/browser/buildflags/buildflags.h"
-#include "brave/components/ipfs/buildflags/buildflags.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
@@ -50,16 +48,7 @@
 #include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
 #endif
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN) || BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/browser/skus/skus_service_factory.h"
-#endif
-
-#if BUILDFLAG(ENABLE_GREASELION)
-#include "brave/browser/greaselion/greaselion_service_factory.h"
-#endif
-
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/infobars/brave_global_infobar_service_factory.h"
 #include "brave/browser/ui/bookmark/bookmark_prefs_service_factory.h"
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
 #include "brave/browser/ui/tabs/features.h"
@@ -73,15 +62,6 @@
 
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
 #include "brave/browser/ethereum_remote_client/ethereum_remote_client_service_factory.h"
-#endif
-
-#if BUILDFLAG(ENABLE_IPFS)
-#include "brave/browser/ipfs/ipfs_service_factory.h"
-#endif
-
-#if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
-#include "brave/browser/brave_wallet/brave_wallet_auto_pin_service_factory.h"
-#include "brave/browser/brave_wallet/brave_wallet_pin_service_factory.h"
 #endif
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -124,9 +104,7 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   BraveRendererUpdaterFactory::GetInstance();
   SearchEngineProviderServiceFactory::GetInstance();
   misc_metrics::ProfileMiscMetricsServiceFactory::GetInstance();
-#if BUILDFLAG(ENABLE_GREASELION)
-  greaselion::GreaselionServiceFactory::GetInstance();
-#endif
+  BraveFarblingServiceFactory::GetInstance();
 #if BUILDFLAG(ENABLE_TOR)
   TorProfileServiceFactory::GetInstance();
 #endif
@@ -141,24 +119,17 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   ntp_background_images::NTPBackgroundImagesBridgeFactory::GetInstance();
 #endif
 
+  webcompat_reporter::WebcompatReporterServiceFactory::GetInstance();
+
   brave_news::BraveNewsControllerFactory::GetInstance();
   brave_wallet::AssetRatioServiceFactory::GetInstance();
-  brave_wallet::KeyringServiceFactory::GetInstance();
-  brave_wallet::JsonRpcServiceFactory::GetInstance();
+  brave_wallet::MeldIntegrationServiceFactory::GetInstance();
   brave_wallet::SwapServiceFactory::GetInstance();
   brave_wallet::SimulationServiceFactory::GetInstance();
 #if !BUILDFLAG(IS_ANDROID)
   brave_wallet::WalletNotificationServiceFactory::GetInstance();
 #endif
-  brave_wallet::TxServiceFactory::GetInstance();
   brave_wallet::BraveWalletServiceFactory::GetInstance();
-
-  if (brave_wallet::IsBitcoinEnabled()) {
-    brave_wallet::BitcoinWalletServiceFactory::GetInstance();
-  }
-  if (brave_wallet::IsZCashEnabled()) {
-    brave_wallet::ZCashWalletServiceFactory::GetInstance();
-  }
 
 #if !BUILDFLAG(IS_ANDROID)
   if (base::FeatureList::IsEnabled(commands::features::kBraveCommands)) {
@@ -176,21 +147,11 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   EthereumRemoteClientServiceFactory::GetInstance();
 #endif
 
-#if BUILDFLAG(ENABLE_IPFS)
-  ipfs::IpfsServiceFactory::GetInstance();
-#endif
   brave_wallet::BraveWalletIpfsServiceFactory::GetInstance();
-
-#if BUILDFLAG(ENABLE_IPFS_LOCAL_NODE)
-  brave_wallet::BraveWalletAutoPinServiceFactory::GetInstance();
-  brave_wallet::BraveWalletPinServiceFactory::GetInstance();
-#endif
 
   EphemeralStorageServiceFactory::GetInstance();
   PermissionLifetimeManagerFactory::GetInstance();
-#if BUILDFLAG(ENABLE_BRAVE_VPN) || BUILDFLAG(ENABLE_AI_CHAT)
   skus::SkusServiceFactory::GetInstance();
-#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   brave_vpn::BraveVpnServiceFactory::GetInstance();
 #endif
@@ -219,9 +180,8 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   speedreader::SpeedreaderServiceFactory::GetInstance();
 #endif
 
-#if !BUILDFLAG(IS_ANDROID)
-  BraveGlobalInfobarServiceFactory::GetInstance();
-#endif
+  ai_chat::AIChatServiceFactory::GetInstance();
+  ai_chat::ModelServiceFactory::GetInstance();
 }
 
 }  // namespace brave

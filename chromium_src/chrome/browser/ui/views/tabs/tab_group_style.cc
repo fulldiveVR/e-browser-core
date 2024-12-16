@@ -12,16 +12,23 @@
 
 #define TabGroupUnderline BraveTabGroupUnderline
 #define TabGroupStyle TabGroupStyle_ChromiumImpl
-#define ChromeRefresh2023TabGroupStyle \
-  ChromeRefresh2023TabGroupStyle_ChromiumImpl
 
 #include "src/chrome/browser/ui/views/tabs/tab_group_style.cc"
 
-#undef ChromeRefresh2023TabGroupStyle
 #undef TabGroupStyle
 #undef TabGroupUnderline
 
-const int TabGroupStyle::kStrokeThicknessForVerticalTabs = 4;
+bool TabGroupStyle::TabGroupUnderlineShouldBeHidden() const {
+  return false;
+}
+
+// Upstream currently hides the tab group underline in certain scenarios,
+// whereas we always show the underline.
+bool TabGroupStyle::TabGroupUnderlineShouldBeHidden(
+    const views::View* leading_view,
+    const views::View* trailing_view) const {
+  return false;
+}
 
 SkPath TabGroupStyle::GetUnderlinePath(gfx::Rect local_bounds) const {
   if (!ShouldShowVerticalTabs()) {
@@ -62,10 +69,19 @@ gfx::Insets TabGroupStyle::GetInsetsForHeaderChip(
     return insets;
   }
   if (!ShouldShowVerticalTabs()) {
-    insets.set_top(brave_tabs::kTabGroupTitleVerticalInset)
-        .set_bottom(brave_tabs::kTabGroupTitleVerticalInset);
+    return gfx::Insets::VH(brave_tabs::GetTabGroupTitleVerticalInset(),
+                           brave_tabs::GetTabGroupTitleHorizontalInset());
   }
   return insets;
+}
+
+gfx::Point TabGroupStyle::GetTitleChipOffset(
+    std::optional<int> text_height) const {
+  if (!tabs::features::HorizontalTabsUpdateEnabled()) {
+    return TabGroupStyle_ChromiumImpl::GetTitleChipOffset(text_height);
+  }
+  return gfx::Point(brave_tabs::kHorizontalTabInset,
+                    brave_tabs::kHorizontalTabVerticalSpacing);
 }
 
 bool TabGroupStyle::ShouldShowVerticalTabs() const {
@@ -76,7 +92,7 @@ float TabGroupStyle::GetEmptyChipSize() const {
   if (!tabs::features::HorizontalTabsUpdateEnabled()) {
     return TabGroupStyle_ChromiumImpl::GetEmptyChipSize();
   }
-  return brave_tabs::kEmptyGroupTitleSize;
+  return brave_tabs::GetHorizontalTabHeight();
 }
 
 int TabGroupStyle::GetChipCornerRadius() const {
@@ -84,9 +100,4 @@ int TabGroupStyle::GetChipCornerRadius() const {
     return TabGroupStyle_ChromiumImpl::GetChipCornerRadius();
   }
   return brave_tabs::kTabBorderRadius;
-}
-
-int ChromeRefresh2023TabGroupStyle::GetTabGroupOverlapAdjustment() {
-  return ChromeRefresh2023TabGroupStyle_ChromiumImpl::
-      GetTabGroupOverlapAdjustment();
 }

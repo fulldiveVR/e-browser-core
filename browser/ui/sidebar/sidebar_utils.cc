@@ -7,19 +7,23 @@
 
 #include <optional>
 
+#include "base/check_is_test.h"
+#include "base/command_line.h"
 #include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_model.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
+#include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/webui_url_constants.h"
-#include "brave/components/sidebar/constants.h"
-#include "brave/components/sidebar/pref_names.h"
-#include "brave/components/sidebar/sidebar_service.h"
+#include "brave/components/sidebar/browser/constants.h"
+#include "brave/components/sidebar/browser/pref_names.h"
+#include "brave/components/sidebar/common/features.h"
+#include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search/search.h"
 #include "chrome/browser/ui/browser.h"
-#include "chrome/browser/ui/side_panel/side_panel_entry_id.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry_id.h"
 #include "chrome/browser/ui/webui/new_tab_page/new_tab_page_ui.h"
 #include "chrome/browser/ui/webui/ntp/new_tab_ui.h"
 #include "chrome/common/webui_url_constants.h"
@@ -31,6 +35,7 @@
 namespace sidebar {
 
 using BuiltInItemType = SidebarItem::BuiltInItemType;
+using ShowSidebarOption = SidebarService::ShowSidebarOption;
 
 namespace {
 
@@ -136,15 +141,33 @@ SidePanelEntryId SidePanelIdFromSideBarItemType(BuiltInItemType type) {
     case BuiltInItemType::kHistory:
       [[fallthrough]];
     case BuiltInItemType::kNone:
-      // Add a new case for any new types which we want to support.
-      NOTREACHED() << "Asked for a panel Id from a sidebar item which should "
-                      "not have a panel Id, sending Reading List instead.";
-      return SidePanelEntryId::kReadingList;
+      break;
   }
+
+  NOTREACHED() << "Asked for a panel Id from a sidebar item which could "
+                  "not have a panel Id.";
+}
+
+std::optional<BuiltInItemType> BuiltInItemTypeFromSidePanelId(
+    SidePanelEntryId id) {
+  switch (id) {
+    case SidePanelEntryId::kReadingList:
+      return BuiltInItemType::kReadingList;
+    case SidePanelEntryId::kBookmarks:
+      return BuiltInItemType::kBookmarks;
+    case SidePanelEntryId::kPlaylist:
+      return BuiltInItemType::kPlaylist;
+    case SidePanelEntryId::kChatUI:
+      return BuiltInItemType::kChatUI;
+    default:
+      break;
+  }
+
+  return std::nullopt;
 }
 
 SidePanelEntryId SidePanelIdFromSideBarItem(const SidebarItem& item) {
-  DCHECK(item.open_in_panel);
+  CHECK(item.open_in_panel) << static_cast<int>(item.built_in_item_type);
   return SidePanelIdFromSideBarItemType(item.built_in_item_type);
 }
 
@@ -157,7 +180,8 @@ std::optional<SidebarItem> AddItemForSidePanelIdIfNeeded(Browser* browser,
   }
 
   for (const auto& item : hidden_default_items) {
-    if (id == sidebar::SidePanelIdFromSideBarItem(item)) {
+    // Only panel item could have panel id.
+    if (item.open_in_panel && id == sidebar::SidePanelIdFromSideBarItem(item)) {
       GetSidebarService(browser)->AddItem(item);
       return item;
     }
@@ -227,6 +251,28 @@ bool IsDisabledItemForGuest(SidebarItem::BuiltInItemType type) {
       break;
   }
   return false;
+}
+
+SidebarService::ShowSidebarOption GetDefaultShowSidebarOption(
+    version_info::Channel channel) {
+  if (!base::CommandLine::ForCurrentProcess()->HasSwitch(
+          switches::kDontShowSidebarOnNonStable) &&
+      channel != version_info::Channel::STABLE) {
+    return ShowSidebarOption::kShowAlways;
+  }
+
+  if (!g_browser_process) {
+    CHECK_IS_TEST();
+    return ShowSidebarOption::kShowAlways;
+  }
+
+  if (auto* local_state = g_browser_process->local_state()) {
+    return local_state->GetBoolean(kTargetUserForSidebarEnabledTest)
+               ? ShowSidebarOption::kShowAlways
+               : ShowSidebarOption::kShowNever;
+  }
+
+  return ShowSidebarOption::kShowNever;
 }
 
 }  // namespace sidebar

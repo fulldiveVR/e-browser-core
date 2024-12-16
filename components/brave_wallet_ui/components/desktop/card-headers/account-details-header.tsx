@@ -26,9 +26,11 @@ import { UISelectors } from '../../../common/selectors'
 
 // Utils
 import { reduceAddress } from '../../../utils/reduce-address'
-import { getPriceIdForToken } from '../../../utils/api-utils'
 import { getBalance } from '../../../utils/balance-utils'
-import { computeFiatAmount } from '../../../utils/pricing-utils'
+import {
+  computeFiatAmount,
+  getPriceIdForToken
+} from '../../../utils/pricing-utils'
 import { getAccountTypeDescription } from '../../../utils/account-utils'
 import { getLocale } from '../../../../common/locale'
 import Amount from '../../../utils/amount'
@@ -67,17 +69,18 @@ import {
   CopyIcon
 } from './account-details-header.style'
 import {
-  CircleButton,
-  ButtonIcon,
+  MenuButton,
+  MenuButtonIcon,
   MenuWrapper,
   HorizontalDivider
 } from './shared-card-headers.style'
 import { Row, Column, HorizontalSpace } from '../../shared/style'
+import { Button, ButtonIcon } from './shared-panel-headers.style'
 
 interface Props {
   account: BraveWallet.AccountInfo
   onClickMenuOption: (option: AccountModalTypes) => void
-  tokenBalancesRegistry: TokenBalancesRegistry | undefined
+  tokenBalancesRegistry: TokenBalancesRegistry | undefined | null
 }
 
 export const AccountDetailsHeader = (props: Props) => {
@@ -172,26 +175,43 @@ export const AccountDetailsHeader = (props: Props) => {
   ])
 
   const menuOptions = React.useMemo((): AccountButtonOptionsObjectType[] => {
+    let options = AccountDetailsMenuOptions
     // We are not able to remove a Derived account
     // so we filter out this option.
     if (account.accountId.kind === BraveWallet.AccountKind.kDerived) {
-      return AccountDetailsMenuOptions.filter(
+      options = options.filter(
         (option: AccountButtonOptionsObjectType) => option.id !== 'remove'
       )
     }
     // We are not able to fetch Private Keys for
     // a Hardware account so we filter out this option.
-    if (account.accountId.kind === BraveWallet.AccountKind.kHardware) {
-      return AccountDetailsMenuOptions.filter(
+    // BTC and ZEC are not yet supported.
+    if (
+      account.accountId.coin === BraveWallet.CoinType.BTC ||
+      account.accountId.coin === BraveWallet.CoinType.ZEC ||
+      account.accountId.kind === BraveWallet.AccountKind.kHardware
+    ) {
+      options = options.filter(
         (option: AccountButtonOptionsObjectType) => option.id !== 'privateKey'
       )
     }
-    return AccountDetailsMenuOptions
+    // We are currently not able to support viewing a
+    // BTC or ZEC account on a block explorer.
+    // Link to issue https://github.com/brave/brave-browser/issues/39699
+    if (
+      account.accountId.coin === BraveWallet.CoinType.BTC ||
+      account.accountId.coin === BraveWallet.CoinType.ZEC
+    ) {
+      options = options.filter(
+        (option: AccountButtonOptionsObjectType) => option.id !== 'explorer'
+      )
+    }
+    return options
   }, [account])
 
   const goBack = React.useCallback(() => {
     history.push(WalletRoutes.Accounts)
-  }, [])
+  }, [history])
 
   return (
     <Row
@@ -199,19 +219,29 @@ export const AccountDetailsHeader = (props: Props) => {
       justifyContent='space-between'
     >
       <Row width='unset'>
-        <CircleButton
-          size={28}
-          marginRight={16}
-          onClick={goBack}
-        >
-          <ButtonIcon
-            size={16}
-            name='arrow-left'
-          />
-        </CircleButton>
+        {isPanel ? (
+          <Row
+            width='unset'
+            margin='0px 12px 0px 0px'
+          >
+            <Button onClick={goBack}>
+              <ButtonIcon name='carat-left' />
+            </Button>
+          </Row>
+        ) : (
+          <MenuButton
+            marginRight={16}
+            onClick={goBack}
+          >
+            <MenuButtonIcon
+              size={16}
+              name='arrow-left'
+            />
+          </MenuButton>
+        )}
         <CreateAccountIcon
           account={account}
-          size='big'
+          size='huge'
           marginRight={8}
         />
         <Column alignItems='flex-start'>
@@ -263,11 +293,17 @@ export const AccountDetailsHeader = (props: Props) => {
           </>
         )}
         <MenuWrapper ref={accountDetailsMenuRef}>
-          <CircleButton
-            onClick={() => setShowAccountDetailsMenu((prev) => !prev)}
-          >
-            <ButtonIcon name='more-vertical' />
-          </CircleButton>
+          {isPanel ? (
+            <Button onClick={() => setShowAccountDetailsMenu((prev) => !prev)}>
+              <ButtonIcon name='more-vertical' />
+            </Button>
+          ) : (
+            <MenuButton
+              onClick={() => setShowAccountDetailsMenu((prev) => !prev)}
+            >
+              <MenuButtonIcon name='more-vertical' />
+            </MenuButton>
+          )}
           {showAccountDetailsMenu && (
             <AccountDetailsMenu
               options={menuOptions}

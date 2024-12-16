@@ -28,15 +28,11 @@ class NotificationAdPopupHandler final {
   NotificationAdPopupHandler& operator=(const NotificationAdPopupHandler&) =
       delete;
 
-  NotificationAdPopupHandler(NotificationAdPopupHandler&&) noexcept = delete;
-  NotificationAdPopupHandler& operator=(NotificationAdPopupHandler&&) noexcept =
-      delete;
-
   ~NotificationAdPopupHandler();
 
   // Show the notification popup view for the given `profile` and
   // `notification_ad`.
-  static void Show(Profile* profile,
+  static void Show(Profile& profile,
                    const NotificationAd& notification_ad,
                    gfx::NativeWindow browser_native_window,
                    gfx::NativeView browser_native_view);

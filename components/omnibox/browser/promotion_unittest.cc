@@ -28,6 +28,7 @@
 #include "components/omnibox/browser/test_scheme_classifier.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/testing_pref_service.h"
+#include "components/search_engines/search_engines_test_environment.h"
 #include "components/search_engines/template_url_data_util.h"
 #include "components/search_engines/template_url_service.h"
 #include "content/public/test/browser_task_environment.h"
@@ -88,44 +89,34 @@ class OmniboxPromotionTest : public testing::Test {
 
     scoped_default_locale_ =
         std::make_unique<brave_l10n::test::ScopedDefaultLocale>("en_US");
-
-    PrepareFieldTrialParamsForBannerTypeB();
   }
 
-  void PrepareFieldTrialParamsForBannerTypeB() {
-    constexpr char kPromotionTrial[] = "BraveSearchPromotionBannerStudy";
-    constexpr char kBannerTypeParamName[] = "banner_type";
-    constexpr char kBannerTypeExperiements[] = "banner_type_b";
-
-    std::map<std::string, std::string> params;
-    params[kBannerTypeParamName] = "type_B";
-    ASSERT_TRUE(base::AssociateFieldTrialParams(
-        kPromotionTrial, kBannerTypeExperiements, params));
-    base::FieldTrialList::CreateFieldTrial(kPromotionTrial,
-                                           kBannerTypeExperiements);
-  }
-
-  void CreateController(bool incognito) {
+  std::unique_ptr<AutocompleteController> CreateController(
+      search_engines::SearchEnginesTestEnvironment&
+          search_engines_test_environment,
+      bool incognito) {
     // Set non brave search provider to get promotion match.
     auto bing_data = TemplateURLDataFromPrepopulatedEngine(
         TemplateURLPrepopulateData::brave_bing);
     auto bing_template_url = std::make_unique<TemplateURL>(*bing_data);
-    auto template_url_service =
-        std::make_unique<TemplateURLService>(nullptr, 0);
+    auto* template_url_service =
+        search_engines_test_environment.template_url_service();
     template_url_service->Load();
     template_url_service->SetUserSelectedDefaultSearchProvider(
         bing_template_url.get());
 
     auto client_mock = std::make_unique<MockAutocompleteProviderClient>();
-    client_mock->set_template_url_service(std::move(template_url_service));
+    client_mock->set_template_url_service(template_url_service);
     ON_CALL(*client_mock, GetPrefs()).WillByDefault(Return(&pref_service_));
     ON_CALL(*client_mock, IsOffTheRecord()).WillByDefault(Return(incognito));
-    controller_ = std::make_unique<AutocompleteController>(
-        std::move(client_mock), AutocompleteProvider::TYPE_SEARCH);
-    controller_->providers_.push_back(
+    std::unique_ptr<AutocompleteController> controller =
+        std::make_unique<AutocompleteController>(
+            std::move(client_mock), AutocompleteProvider::TYPE_SEARCH);
+    controller->providers_.push_back(
         new DummyProvider(AutocompleteProvider::TYPE_SEARCH));
-    controller_->providers_.push_back(
+    controller->providers_.push_back(
         new DummyProvider(AutocompleteProvider::TYPE_BOOKMARK));
+    return controller;
   }
 
   ACMatches CreateTestMatches() {
@@ -141,8 +132,8 @@ class OmniboxPromotionTest : public testing::Test {
     return matches;
   }
 
-  bool HasPromotionMatch() {
-    for (const auto& match : controller_->result()) {
+  bool HasPromotionMatch(const AutocompleteController* controller) {
+    for (const auto& match : controller->result()) {
       if (IsBraveSearchPromotionMatch(match)) {
         return true;
       }
@@ -153,70 +144,51 @@ class OmniboxPromotionTest : public testing::Test {
   content::BrowserTaskEnvironment browser_task_environment_;
   TestSchemeClassifier classifier_;
   TestingPrefServiceSimple pref_service_;
-  std::unique_ptr<AutocompleteController> controller_;
   std::unique_ptr<brave_l10n::test::ScopedDefaultLocale> scoped_default_locale_;
 };
 
 // Promotion match should not be added for private profile.
 TEST_F(OmniboxPromotionTest, ProfileTest) {
   base::test::ScopedFeatureList feature_list;
-  feature_list.InitAndEnableFeature(
-      brave_search_conversion::features::kOmniboxButton);
-  CreateController(false);
+  feature_list.InitAndEnableFeatureWithParameters(
+      brave_search_conversion::features::kOmniboxBanner,
+      {{brave_search_conversion::features::kBannerTypeParamName, "type_B"}});
   AutocompleteInput input(u"brave", metrics::OmniboxEventProto::OTHER,
                           classifier_);
-  controller_->Start(input);
-  EXPECT_TRUE(HasPromotionMatch());
 
-  CreateController(true);
-  controller_->Start(input);
-  EXPECT_FALSE(HasPromotionMatch());
+  {
+    search_engines::SearchEnginesTestEnvironment
+        search_engines_test_environment;
+    auto controller = CreateController(search_engines_test_environment, false);
+    controller->Start(input);
+    EXPECT_TRUE(HasPromotionMatch(controller.get()));
+  }
+
+  {
+    search_engines::SearchEnginesTestEnvironment
+        search_engines_test_environment;
+    auto controller = CreateController(search_engines_test_environment, true);
+    controller->Start(input);
+    EXPECT_FALSE(HasPromotionMatch(controller.get()));
+  }
 }
 
 TEST_F(OmniboxPromotionTest, PromotionEntrySortTest) {
   constexpr int kTotalMatchCount = 6;
-  base::test::ScopedFeatureList feature_list_button;
 
-  // Test button type search conversion.
-  feature_list_button.InitAndEnableFeature(
-      brave_search_conversion::features::kOmniboxButton);
-
-  CreateController(false);
-  EXPECT_TRUE(controller_->result().empty());
   AutocompleteInput input(u"brave", metrics::OmniboxEventProto::OTHER,
                           classifier_);
-  controller_->Start(input);
-  EXPECT_EQ(static_cast<size_t>(kTotalMatchCount),
-            controller_->result().size());
   int promotion_match_count = 0;
-  for (const auto& match : controller_->result()) {
-    if (IsBraveSearchPromotionMatch(match)) {
-      promotion_match_count++;
-    }
-  }
-
-  // There is one button promotion entry.
-  EXPECT_EQ(1, promotion_match_count);
-
-  auto brave_search_conversion_match =
-      base::ranges::find_if(controller_->result(), IsBraveSearchPromotionMatch);
-  EXPECT_NE(brave_search_conversion_match, controller_->result().end());
-
-  // Located as second entry for button type.
-  EXPECT_EQ(1, std::distance(controller_->result().begin(),
-                             brave_search_conversion_match));
-
-  // Turn off button type and on banner type search conversion.
-  feature_list_button.Reset();
   base::test::ScopedFeatureList feature_list_banner;
-  feature_list_banner.InitAndEnableFeature(
-      brave_search_conversion::features::kOmniboxBanner);
+  feature_list_banner.InitAndEnableFeatureWithParameters(
+      brave_search_conversion::features::kOmniboxBanner,
+      {{brave_search_conversion::features::kBannerTypeParamName, "type_B"}});
 
-  CreateController(false);
-  EXPECT_TRUE(controller_->result().empty());
-  controller_->Start(input);
-  promotion_match_count = 0;
-  for (const auto& match : controller_->result()) {
+  search_engines::SearchEnginesTestEnvironment search_engines_test_environment;
+  auto controller = CreateController(search_engines_test_environment, false);
+  EXPECT_TRUE(controller->result().empty());
+  controller->Start(input);
+  for (const auto& match : controller->result()) {
     if (IsBraveSearchPromotionMatch(match)) {
       promotion_match_count++;
     }
@@ -225,19 +197,19 @@ TEST_F(OmniboxPromotionTest, PromotionEntrySortTest) {
   // There is one banner promotion entry.
   EXPECT_EQ(1, promotion_match_count);
 
-  brave_search_conversion_match =
-      base::ranges::find_if(controller_->result(), IsBraveSearchPromotionMatch);
-  EXPECT_NE(brave_search_conversion_match, controller_->result().end());
+  auto brave_search_conversion_match =
+      base::ranges::find_if(controller->result(), IsBraveSearchPromotionMatch);
+  EXPECT_NE(brave_search_conversion_match, controller->result().end());
 
   // Located as last entry for banner type.
-  EXPECT_EQ(kTotalMatchCount - 1, std::distance(controller_->result().begin(),
+  EXPECT_EQ(kTotalMatchCount - 1, std::distance(controller->result().begin(),
                                                 brave_search_conversion_match));
 
   feature_list_banner.Reset();
 
   // Check promotion match is not added when feature is off.
-  controller_->Start(input);
-  EXPECT_FALSE(HasPromotionMatch());
+  controller->Start(input);
+  EXPECT_FALSE(HasPromotionMatch(controller.get()));
 }
 
 TEST_F(OmniboxPromotionTest, AutocompleteResultTest) {
@@ -246,20 +218,10 @@ TEST_F(OmniboxPromotionTest, AutocompleteResultTest) {
 
   AutocompleteResult result;
   ACMatches matches = CreateTestMatches();
-  // Make 4th match as button type promotion and check that promotion is
-  // reordered at second.
-  matches[3].destination_url = GetPromoURL(input.text());
-  SetConversionTypeToMatch(ConversionType::kButton, &matches[3]);
-  result.AppendMatches(matches);
-  SortBraveSearchPromotionMatch(&result);
-  EXPECT_TRUE(IsBraveSearchPromotionMatch(*result.match_at(1)));
-
-  result.Reset();
-  matches = CreateTestMatches();
   // Make 3rd match as banner type promotion and check that promotion is
   // reordered at last.
   matches[2].destination_url = GetPromoURL(input.text());
-  SetConversionTypeToMatch(ConversionType::kBannerTypeA, &matches[2]);
+  SetConversionTypeToMatch(ConversionType::kBannerTypeB, &matches[2]);
   result.AppendMatches(matches);
   SortBraveSearchPromotionMatch(&result);
   EXPECT_TRUE(IsBraveSearchPromotionMatch(*result.match_at(3)));
@@ -267,11 +229,11 @@ TEST_F(OmniboxPromotionTest, AutocompleteResultTest) {
   result.Reset();
   matches = CreateTestMatches();
   matches[2].destination_url = GetPromoURL(input.text());
-  SetConversionTypeToMatch(ConversionType::kBannerTypeA, &matches[2]);
+  SetConversionTypeToMatch(ConversionType::kBannerTypeB, &matches[2]);
   result.AppendMatches(matches);
   // Make first match is not search query with default provider.
   result.begin()->type = AutocompleteMatchType::NAVSUGGEST;
-  // Check promotion match is deleted from |result| when
+  // Check promotion match is deleted from |result|.
   SortBraveSearchPromotionMatch(&result);
   for (const auto& match : result) {
     EXPECT_FALSE(IsBraveSearchPromotionMatch(match));

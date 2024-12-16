@@ -22,11 +22,13 @@ OBJC_EXPORT
 - (void)onHistoryUpdate;
 - (void)onAPIRequestInProgress:(bool)inProgress;
 - (void)onAPIResponseError:(AiChatAPIError)error;
-- (void)onModelChanged:(NSString*)modelKey;
+- (void)onModelChanged:(NSString*)modelKey
+             modelList:(NSArray<AiChatModel*>*)modelList;
 - (void)onSuggestedQuestionsChanged:(NSArray<NSString*>*)questions
                              status:(AiChatSuggestionGenerationStatus)status;
-- (void)onPageHasContent:(AiChatSiteInfo*)siteInfo;
-- (void)onConversationEntryPending;
+- (void)onPageHasContent:(AiChatSiteInfo*)siteInfo
+       shouldSendContent:(bool)shouldSendContent;
+- (void)onServiceStateChanged:(AiChatServiceState*)state;
 @end
 
 NS_ASSUME_NONNULL_END

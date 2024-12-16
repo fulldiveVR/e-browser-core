@@ -11,6 +11,7 @@
 #include "brave/browser/ui/tabs/brave_tab_layout_constants.h"
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
+#include "brave/components/vector_icons/vector_icons.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/tabs/tab_group_model.h"
 #include "chrome/browser/ui/tabs/tab_style.h"
@@ -57,6 +58,10 @@ void BraveTabGroupHeader::VisualsChanged() {
   title_->SetEnabledColor(GetGroupColor());
   title_->SetSubpixelRenderingEnabled(false);
 
+  if (!ShouldShowVerticalTabs()) {
+    title_->SetLineHeight(brave_tabs::kTabGroupLineHeight);
+  }
+
   auto font_list = title_->font_list();
   title_->SetFontList(font_list.DeriveWithWeight(gfx::Font::Weight::MEDIUM)
                           .DeriveWithSizeDelta(13 - font_list.GetFontSize()));
@@ -68,8 +73,28 @@ void BraveTabGroupHeader::VisualsChanged() {
     title_chip_->SetBackground(nullptr);
   }
 
+  // When the title is empty, upstream (127) ignores the top value returned from
+  // `GetInsetsForHeaderChip`, which throws off the header size. Adjust the
+  // vertical layout to maintain the group header height.
+  if (!title_->GetText().empty()) {
+    const gfx::Insets title_chip_insets =
+        group_style_->GetInsetsForHeaderChip(ShouldShowHeaderIcon());
+    title_chip_->SetSize(
+        {title_chip_->width(), title_->height() + 2 * title_chip_insets.top()});
+    title_->SetY(title_chip_insets.top());
+    if (ShouldShowHeaderIcon()) {
+      sync_icon_->SetY(title_chip_insets.top());
+    }
+  }
+
   if (ShouldShowVerticalTabs()) {
     LayoutTitleChipForVerticalTabs();
+  }
+
+  if (ShouldShowHeaderIcon()) {
+    sync_icon_->SetImage(ui::ImageModel::FromVectorIcon(
+        kLeoProductSyncIcon, SkColorSetA(GetGroupColor(), 0.6 * 255),
+        group_style_->GetSyncIconWidth()));
   }
 }
 
@@ -81,8 +106,8 @@ int BraveTabGroupHeader::GetDesiredWidth() const {
   return brave_tabs::kHorizontalTabInset * 2 + title_chip_->width();
 }
 
-void BraveTabGroupHeader::Layout() {
-  TabGroupHeader::Layout();
+void BraveTabGroupHeader::Layout(PassKey) {
+  LayoutSuperclass<TabGroupHeader>(this);
   if (ShouldShowVerticalTabs()) {
     LayoutTitleChipForVerticalTabs();
   }
@@ -143,5 +168,5 @@ std::optional<SkColor> BraveTabGroupHeader::GetChipBackgroundColor() const {
   return color_utils::AlphaBlend(GetGroupColor(), blend_background, alpha);
 }
 
-BEGIN_METADATA(BraveTabGroupHeader, TabGroupHeader)
+BEGIN_METADATA(BraveTabGroupHeader)
 END_METADATA

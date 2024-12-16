@@ -5,7 +5,7 @@
 import Flex from '$web-common/Flex'
 import { getLocale } from '$web-common/locale'
 import Icon from '@brave/leo/react/icon'
-import { radius, spacing } from '@brave/leo/tokens/css'
+import { radius, spacing } from '@brave/leo/tokens/css/variables'
 import * as React from 'react'
 import styled from 'styled-components'
 import Feed from '../../../../brave_news/browser/resources/Feed'
@@ -98,7 +98,7 @@ const LoadNewContentButton = styled(NewsButton)`
 export default function FeedV2() {
   const isSmall = useMediaQuery(isSmallQuery)
 
-  const { feedV2, setCustomizePage, refreshFeedV2, feedV2UpdatesAvailable, reportSessionStart } = useBraveNews()
+  const { feedV2, setCustomizePage, refreshFeedV2, feedV2UpdatesAvailable, reportViewCount, reportSessionStart } = useBraveNews()
   const ref = React.useRef<HTMLDivElement>()
 
   // Note: Whenever the feed is updated, if we're viewing the feed, scroll to
@@ -120,7 +120,7 @@ export default function FeedV2() {
       {feedV2UpdatesAvailable && <LoadNewContentButton onClick={refreshFeedV2}>
         {getLocale('braveNewsNewContentAvailable')}
       </LoadNewContentButton>}
-      <Feed feed={feedV2} onSessionStart={reportSessionStart} />
+      <Feed feed={feedV2} onViewCountChange={reportViewCount} onSessionStart={reportSessionStart} />
     </Flex>
 
     <ButtonsContainer>

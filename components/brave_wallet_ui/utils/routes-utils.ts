@@ -10,41 +10,52 @@ import {
   SendPageTabHashes,
   WalletOrigin,
   WalletCreationMode,
-  WalletImportMode
+  WalletImportMode,
+  NftDropdownOptionId,
+  MeldCryptoCurrency
 } from '../constants/types'
 import { LOCAL_STORAGE_KEYS } from '../common/constants/local-storage-keys'
+import { SUPPORT_LINKS } from '../common/constants/support_links'
 
 /**
  * Checks the provided route against a list of routes that we are OK with the
  * wallet opening to when the app is unlocked or when the panel is re-opened
  */
 export function isPersistableSessionRoute(
-  route?: string
+  route?: string,
+  isPanel?: boolean
 ): route is WalletRoutes {
   if (!route) {
     return false
   }
-  return (
+  const isPersistableInPanel =
     route.includes(WalletRoutes.Accounts) ||
-    route.includes(WalletRoutes.Activity) ||
     route.includes(WalletRoutes.Backup) ||
     route.includes(WalletRoutes.DepositFundsPageStart) ||
     route.includes(WalletRoutes.FundWalletPageStart) ||
     route.includes(WalletRoutes.PortfolioAssets) ||
     route.includes(WalletRoutes.PortfolioNFTs) ||
     route.includes(WalletRoutes.PortfolioNFTAsset) ||
+    route.includes(WalletRoutes.PortfolioActivity) ||
     route.includes(WalletRoutes.Market) ||
+    route.includes(WalletRoutes.Explore)
+  if (isPanel) {
+    return isPersistableInPanel
+  }
+  return (
+    isPersistableInPanel ||
     route.includes(WalletRoutes.Swap) ||
     route.includes(WalletRoutes.Send) ||
-    route.includes(WalletRoutes.LocalIpfsNode) ||
-    route.includes(WalletRoutes.InspectNfts)
+    route.includes(WalletRoutes.Bridge)
   )
 }
 
-export function getInitialSessionRoute(): WalletRoutes | undefined {
+export function getInitialSessionRoute(
+  isPanel?: boolean
+): WalletRoutes | undefined {
   const route =
     window.localStorage.getItem(LOCAL_STORAGE_KEYS.SAVED_SESSION_ROUTE) || ''
-  return isPersistableSessionRoute(route) ? route : undefined
+  return isPersistableSessionRoute(route, isPanel) ? route : undefined
 }
 
 export function getOnboardingTypeFromPath(
@@ -98,6 +109,24 @@ export const makeAccountTransactionRoute = (
 }
 
 export const makeFundWalletRoute = (
+  asset: Pick<MeldCryptoCurrency, 'chainId' | 'currencyCode'>,
+  account?: BraveWallet.AccountInfo
+) => {
+  const baseQueryParams = {
+    currencyCode: asset.currencyCode ?? '',
+    chainId: asset.chainId ?? ''
+  }
+
+  const params = new URLSearchParams(
+    account
+      ? { ...baseQueryParams, accountId: account.accountId.uniqueKey }
+      : baseQueryParams
+  )
+
+  return `${WalletRoutes.FundWalletPageStart}?${params.toString()}`
+}
+
+export const makeAndroidFundWalletRoute = (
   assetId: string,
   options?: {
     currencyCode?: string
@@ -205,10 +234,15 @@ export const makeSendRoute = (
     token: asset.contractAddress || asset.symbol.toUpperCase(),
     account: account.accountId.uniqueKey
   }
+
+  const tokenIdQueryParams = asset.tokenId
+    ? { ...baseQueryParams, tokenId: asset.tokenId }
+    : baseQueryParams
+
   const params = new URLSearchParams(
-    asset.tokenId
-      ? { ...baseQueryParams, tokenId: asset.tokenId }
-      : baseQueryParams
+    asset.isShielded
+      ? {...tokenIdQueryParams, isShielded: 'true'}
+      : tokenIdQueryParams
   )
 
   if (isNftTab) {
@@ -218,10 +252,83 @@ export const makeSendRoute = (
   return `${WalletRoutes.Send}?${params.toString()}${SendPageTabHashes.token}`
 }
 
+export const makeSwapOrBridgeRoute = ({
+  fromToken,
+  fromAccount,
+  toToken,
+  toAddress,
+  toCoin,
+  routeType
+}: {
+  fromToken: BraveWallet.BlockchainToken
+  fromAccount: BraveWallet.AccountInfo
+  toToken?: BraveWallet.BlockchainToken
+  toAddress?: string
+  toCoin?: BraveWallet.CoinType
+  routeType?: 'swap' | 'bridge'
+}) => {
+  const baseQueryParams = {
+    fromChainId: fromToken.chainId,
+    fromToken: fromToken.contractAddress || fromToken.symbol.toUpperCase(),
+    fromAccountId: fromAccount.accountId.uniqueKey,
+    toChainId: toToken ? toToken.chainId : fromToken.chainId,
+    toAddress: toAddress ?? fromAccount.accountId.address,
+    toCoin: toCoin ? toCoin.toString() : fromAccount.accountId.coin.toString()
+  }
+
+  const toTokenParam = toToken
+    ? toToken.contractAddress || toToken.symbol.toUpperCase()
+    : undefined
+
+  const params = new URLSearchParams(
+    toTokenParam
+      ? { ...baseQueryParams, toToken: toTokenParam }
+      : baseQueryParams
+  )
+
+  const route = routeType === 'bridge' ? WalletRoutes.Bridge : WalletRoutes.Swap
+
+  return `${route}?${params.toString()}`
+}
+
+export const makeTransactionDetailsRoute = (transactionId: string) => {
+  return WalletRoutes.PortfolioActivity + `#${transactionId}`
+}
+
 export const makePortfolioAssetRoute = (isNft: boolean, assetId: string) => {
   return (
     isNft ? WalletRoutes.PortfolioNFTAsset : WalletRoutes.PortfolioAsset
   ).replace(':assetId', assetId)
+}
+
+export const makePortfolioNftCollectionRoute = (
+  collectionName: string,
+  page?: number
+) => {
+  if (page) {
+    const params = new URLSearchParams({
+      page: page.toString()
+    })
+    return `${WalletRoutes.PortfolioNFTCollection.replace(
+      ':collectionName',
+      collectionName
+    )}?${params.toString()}`
+  }
+  return WalletRoutes.PortfolioNFTCollection.replace(
+    ':collectionName',
+    collectionName
+  )
+}
+
+export const makePortfolioNftsRoute = (
+  tab: NftDropdownOptionId,
+  page?: number
+) => {
+  const params = new URLSearchParams({
+    tab: tab,
+    page: page?.toString() || '1'
+  })
+  return `${WalletRoutes.PortfolioNFTs}?${params.toString()}`
 }
 
 // Tabs
@@ -250,4 +357,20 @@ export function openWalletSettings() {
 
 export function openNetworkSettings() {
   openTab('chrome://settings/wallet/networks')
+}
+
+export const openSupportTab = (key: keyof typeof SUPPORT_LINKS) => {
+  const url = SUPPORT_LINKS[key]
+  if (!url) {
+    console.error(`support link not found (${key})`)
+  }
+  chrome.tabs.create({ url }, () => {
+    if (chrome.runtime.lastError) {
+      console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
+    }
+  })
+}
+
+export const openAssociatedTokenAccountSupportArticleTab = () => {
+  openSupportTab('WhatIsTheAssociatedTokenAccountProgram')
 }

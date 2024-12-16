@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/common/platform/platform_helper.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,9 +19,6 @@ class PlatformHelperMock : public PlatformHelper {
 
   PlatformHelperMock(const PlatformHelperMock&) = delete;
   PlatformHelperMock& operator=(const PlatformHelperMock&) = delete;
-
-  PlatformHelperMock(PlatformHelperMock&&) noexcept = delete;
-  PlatformHelperMock& operator=(PlatformHelperMock&&) noexcept = delete;
 
   ~PlatformHelperMock() override;
 

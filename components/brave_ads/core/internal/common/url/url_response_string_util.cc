@@ -26,8 +26,8 @@ std::string HeadersToString(
   const std::string spaces(indent, ' ');
 
   for (const auto& [header, value] : headers) {
-    formatted_headers.push_back(base::StringPrintf(
-        "%s%s: %s", spaces.c_str(), header.c_str(), value.c_str()));
+    formatted_headers.push_back(base::ReplaceStringPlaceholders(
+        "$1$2: $3", {spaces, header, value}, nullptr));
   }
 
   return base::JoinString(formatted_headers, "\n");
@@ -35,17 +35,19 @@ std::string HeadersToString(
 
 }  // namespace
 
-std::string UrlResponseToString(const mojom::UrlResponseInfo& url_response) {
+std::string UrlResponseToString(
+    const mojom::UrlResponseInfo& mojom_url_response) {
   return base::StringPrintf(
       "URL Response:\n  URL: %s\n  Response "
       "Status Code: %d\n  Response: %s",
-      url_response.url.spec().c_str(), url_response.status_code,
-      url_response.body.c_str());
+      mojom_url_response.url.spec().c_str(), mojom_url_response.status_code,
+      mojom_url_response.body.c_str());
 }
 
 std::string UrlResponseHeadersToString(
-    const mojom::UrlResponseInfo& url_response) {
-  return base::StrCat({"  Headers:\n", HeadersToString(url_response.headers)});
+    const mojom::UrlResponseInfo& mojom_url_response) {
+  return base::StrCat(
+      {"  Headers:\n", HeadersToString(mojom_url_response.headers)});
 }
 
 }  // namespace brave_ads

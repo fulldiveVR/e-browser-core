@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_ACCOUNT_CONFIRMATIONS_CONFIRMATIONS_DELEGATE_MOCK_H_
 
 #include "brave/components/brave_ads/core/internal/account/confirmations/confirmations_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -17,10 +17,6 @@ class ConfirmationsDelegateMock : public ConfirmationDelegate {
 
   ConfirmationsDelegateMock(const ConfirmationsDelegateMock&) = delete;
   ConfirmationsDelegateMock& operator=(const ConfirmationsDelegateMock&) =
-      delete;
-
-  ConfirmationsDelegateMock(ConfirmationsDelegateMock&&) noexcept = delete;
-  ConfirmationsDelegateMock& operator=(ConfirmationsDelegateMock&&) noexcept =
       delete;
 
   ~ConfirmationsDelegateMock() override;

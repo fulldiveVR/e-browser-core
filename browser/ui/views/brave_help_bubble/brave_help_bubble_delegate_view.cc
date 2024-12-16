@@ -5,12 +5,14 @@
 
 #include "brave/browser/ui/views/brave_help_bubble/brave_help_bubble_delegate_view.h"
 
+#include <array>
 #include <utility>
 
 #include "base/strings/utf_string_conversions.h"
 #include "components/grit/brave_components_strings.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
+#include "ui/base/mojom/dialog_button.mojom.h"
 #include "ui/gfx/canvas.h"
 #include "ui/gfx/scoped_canvas.h"
 #include "ui/views/border.h"
@@ -100,7 +102,7 @@ class BorderWithArrow : public views::BubbleBorder {
                              BubbleArrowPart part) {
     constexpr size_t kNumPoints = 4;
     gfx::RectF bounds_f(bounds);
-    SkPoint points[kNumPoints];
+    std::array<SkPoint, kNumPoints> points;
     switch (GetBubbleArrowSide(arrow)) {
       case views::BubbleArrowSide::kRight:
         points[0] = {bounds_f.x(), bounds_f.y()};
@@ -136,7 +138,8 @@ class BorderWithArrow : public views::BubbleBorder {
         break;
     }
 
-    return SkPath::Polygon(points, kNumPoints, part == BubbleArrowPart::kFill);
+    return SkPath::Polygon(points.data(), kNumPoints,
+                           part == BubbleArrowPart::kFill);
   }
 };
 }  // namespace
@@ -145,7 +148,7 @@ BraveHelpBubbleDelegateView::BraveHelpBubbleDelegateView(
     View* anchor_view,
     const std::string& text)
     : BubbleDialogDelegateView(anchor_view, BubbleBorder::Arrow::TOP_CENTER) {
-  SetButtons(ui::DIALOG_BUTTON_NONE);
+  SetButtons(static_cast<int>(ui::mojom::DialogButton::kNone));
   set_shadow(BubbleBorder::Shadow::STANDARD_SHADOW);
   set_corner_radius(10);
   set_color(kBgColor);
@@ -207,5 +210,5 @@ void BraveHelpBubbleDelegateView::SetUpLabel(views::Label* label,
   label->SetHorizontalAlignment(gfx::HorizontalAlignment::ALIGN_LEFT);
 }
 
-BEGIN_METADATA(BraveHelpBubbleDelegateView, BubbleDialogDelegateView)
+BEGIN_METADATA(BraveHelpBubbleDelegateView)
 END_METADATA

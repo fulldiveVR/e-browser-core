@@ -10,6 +10,7 @@
 #include <optional>
 #include <string>
 
+#include "base/memory/raw_ref.h"
 #include "base/memory/weak_ptr.h"
 #include "base/observer_list.h"
 #include "base/time/time.h"
@@ -23,7 +24,7 @@ class ZCashRpc;
 
 class ZCashBlockTracker : public BlockTracker {
  public:
-  explicit ZCashBlockTracker(ZCashRpc* zcash_rpc);
+  explicit ZCashBlockTracker(ZCashRpc& zcash_rpc);
   ~ZCashBlockTracker() override;
   ZCashBlockTracker(const ZCashBlockTracker&) = delete;
   ZCashBlockTracker operator=(const ZCashBlockTracker&) = delete;
@@ -44,13 +45,13 @@ class ZCashBlockTracker : public BlockTracker {
   void GetBlockHeight(const std::string& chain_id);
   void OnGetLatestBlockForHeight(
       const std::string& chain_id,
-      base::expected<mojom::BlockIDPtr, std::string> latest_height);
+      base::expected<zcash::mojom::BlockIDPtr, std::string> latest_height);
 
   // <chain_id, block_height>
   std::map<std::string, uint32_t> latest_height_map_;
   base::ObserverList<Observer> observers_;
 
-  raw_ptr<ZCashRpc> zcash_rpc_ = nullptr;
+  const raw_ref<ZCashRpc, DanglingUntriaged> zcash_rpc_;
 
   base::WeakPtrFactory<ZCashBlockTracker> weak_ptr_factory_{this};
 };

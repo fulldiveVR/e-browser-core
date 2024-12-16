@@ -1,11 +1,11 @@
 diff --git a/components/permissions/android/BUILD.gn b/components/permissions/android/BUILD.gn
-index 942fa9862554105d50376b604d41519f5e2008cb..20d3c3898fe85092ba5402322634b5f8c3d1db73 100644
+index 70a66425ae822b3779e83627872c126cfcfd1d00..adc9dd37703b40998ec7622cc4b5d6ceaec97064 100644
 --- a/components/permissions/android/BUILD.gn
 +++ b/components/permissions/android/BUILD.gn
-@@ -138,6 +138,7 @@ android_library("java") {
+@@ -148,6 +148,7 @@ android_library("java") {
+     "//third_party/jni_zero:jni_zero_java",
      "//ui/android:ui_java",
    ]
- 
 +  sources += brave_components_permissions_java_sources deps += brave_components_permissions_java_deps
    resources_package = "org.chromium.components.permissions"
  }

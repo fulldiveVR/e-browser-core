@@ -8,7 +8,10 @@ import { BraveWallet } from '../../../constants/types'
 import { WalletApiEndpointBuilderParams } from '../api-base.slice'
 
 // utils
-import { handleEndpointError } from '../../../utils/api-utils'
+import {
+  getHasPendingRequests,
+  handleEndpointError
+} from '../../../utils/api-utils'
 import { getEntitiesListFromEntityState } from '../../../utils/entities.utils'
 import { storeCurrentAndPreviousPanel } from '../../../utils/local-storage-utils'
 
@@ -46,6 +49,28 @@ export const sitePermissionEndpoints = ({
       providesTags: ['ConnectedAccounts']
     }),
 
+    getIsPrivateWindow: query<boolean, void>({
+      queryFn: async (_, { endpoint }, extraOptions, baseQuery) => {
+        try {
+          const { data: api } = baseQuery(undefined)
+          const { braveWalletService } = api
+
+          const { isPrivateWindow } = await braveWalletService.isPrivateWindow()
+
+          return {
+            data: isPrivateWindow
+          }
+        } catch (error) {
+          return handleEndpointError(
+            endpoint,
+            'Failed to get private window status',
+            error
+          )
+        }
+      },
+      providesTags: ['IsPrivateWindow']
+    }),
+
     connectToSite: mutation<
       true,
       {
@@ -60,7 +85,12 @@ export const sitePermissionEndpoints = ({
 
           if (panelHandler) {
             panelHandler.connectToSite([arg.addressToConnect], arg.duration)
-            panelHandler.closeUI()
+
+            const hasPendingRequests = await getHasPendingRequests()
+
+            if (!hasPendingRequests) {
+              api.panelHandler?.closeUI()
+            }
           }
 
           return {
@@ -86,7 +116,12 @@ export const sitePermissionEndpoints = ({
           if (panelHandler) {
             storeCurrentAndPreviousPanel('main', undefined)
             panelHandler.cancelConnectToSite()
-            panelHandler.closeUI()
+
+            const hasPendingRequests = await getHasPendingRequests()
+
+            if (!hasPendingRequests) {
+              api.panelHandler?.closeUI()
+            }
           }
 
           return {

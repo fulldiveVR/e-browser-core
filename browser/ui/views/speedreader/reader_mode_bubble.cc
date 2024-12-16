@@ -16,6 +16,7 @@
 #include "chrome/browser/ui/views/location_bar/location_bar_bubble_delegate_view.h"
 #include "components/grit/brave_components_strings.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
+#include "ui/base/mojom/dialog_button.mojom.h"
 #include "ui/color/color_id.h"
 #include "ui/events/event.h"
 #include "ui/gfx/geometry/insets.h"
@@ -28,14 +29,14 @@ namespace {
 
 constexpr int kBubbleWidth = 256;
 
-constexpr const int kBoxLayoutChildSpacing = 16;
-constexpr const int kToggleLineHeight = 18;
-constexpr const int kToggleFontSize = 14;
+constexpr int kBoxLayoutChildSpacing = 16;
+constexpr int kToggleLineHeight = 18;
+constexpr int kToggleFontSize = 14;
 
-constexpr const int kNotesFontSize = 12;
-constexpr const int kNotesLineHeight = 16;
+constexpr int kNotesFontSize = 12;
+constexpr int kNotesLineHeight = 16;
 
-constexpr const int kCornerRadius = 8;
+constexpr int kCornerRadius = 8;
 
 }  // anonymous namespace
 
@@ -47,7 +48,7 @@ ReaderModeBubble::ReaderModeBubble(views::View* anchor_view,
       tab_helper_(tab_helper) {
   DCHECK(GetSpeedreaderService());
 
-  SetButtons(ui::DialogButton::DIALOG_BUTTON_NONE);
+  SetButtons(static_cast<int>(ui::mojom::DialogButton::kNone));
   set_margins(gfx::Insets(0));
 }
 
@@ -63,10 +64,12 @@ void ReaderModeBubble::Hide() {
   CloseBubble();
 }
 
-gfx::Size ReaderModeBubble::CalculatePreferredSize() const {
+gfx::Size ReaderModeBubble::CalculatePreferredSize(
+    const views::SizeBounds& available_size) const {
   return gfx::Size(
       kBubbleWidth,
-      LocationBarBubbleDelegateView::CalculatePreferredSize().height());
+      LocationBarBubbleDelegateView::CalculatePreferredSize(available_size)
+          .height());
 }
 
 bool ReaderModeBubble::ShouldShowCloseButton() const {
@@ -129,8 +132,20 @@ void ReaderModeBubble::Init() {
                               gfx::Insets::TLBR(24, 24, 0, 24), gfx::Insets());
     site_toggle_->SetCallback(base::BindRepeating(
         &ReaderModeBubble::OnSiteToggled, base::Unretained(this)));
-    site_toggle_->SetIsOn(
-        GetSpeedreaderService()->IsEnabledForSite(tab_helper_->web_contents()));
+    if (GetSpeedreaderService()->IsExplicitlyEnabledForSite(
+            tab_helper_->web_contents())) {
+      site_toggle_->SetIsOn(true);
+    } else if (GetSpeedreaderService()->IsExplicitlyDisabledForSite(
+                   tab_helper_->web_contents())) {
+      site_toggle_->SetIsOn(false);
+    } else {
+      DistillState state = tab_helper_->PageDistillState();
+      if (IsDistilledAutomatically(state)) {
+        site_toggle_->SetIsOn(true);
+      } else if (DistillStates::IsDistillable(state)) {
+        site_toggle_->SetIsOn(false);
+      }
+    }
   }
 
   // Always use speedreader for all sites
@@ -187,7 +202,7 @@ void ReaderModeBubble::OnAllSitesToggled(const ui::Event& event) {
   GetSpeedreaderService()->EnableForAllSites(on);
 }
 
-BEGIN_METADATA(ReaderModeBubble, LocationBarBubbleDelegateView)
+BEGIN_METADATA(ReaderModeBubble)
 END_METADATA
 
 }  // namespace speedreader

@@ -8,23 +8,30 @@
 #include "brave/browser/brave_rewards/rewards_prefs_util.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
 #include "brave/browser/misc_metrics/uptime_monitor.h"
-#include "brave/browser/search/ntp_utils.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
+#include "brave/components/ai_chat/core/browser/model_service.h"
+#include "brave/components/brave_adaptive_captcha/prefs_util.h"
 #include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
 #include "brave/components/brave_news/browser/brave_news_p3a.h"
+#include "brave/components/brave_news/common/p3a_pref_names.h"
+#include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_search_conversion/p3a.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_p3a.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
+#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/decentralized_dns/core/utils.h"
+#include "brave/components/ipfs/ipfs_prefs.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/p3a/star_randomness_meta.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/common/channel_info.h"
 #include "chrome/common/pref_names.h"
 #include "components/gcm_driver/gcm_buildflags.h"
 #include "components/translate/core/browser/translate_prefs.h"
@@ -32,11 +39,15 @@
 #include "third_party/widevine/cdm/buildflags.h"
 
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/search_engines/search_engine_provider_util.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #endif
 
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+#include "brave/components/brave_vpn/common/brave_vpn_utils.h"
+#endif
+
 #if BUILDFLAG(ENABLE_TOR)
+#include "brave/components/tor/pref_names.h"
 #include "brave/components/tor/tor_utils.h"
 #endif
 
@@ -64,11 +75,12 @@
 #endif
 
 #if defined(TOOLKIT_VIEWS)
-#include "brave/components/sidebar/pref_names.h"
+#include "brave/components/sidebar/browser/pref_names.h"
 #endif
 
 // This method should be periodically pruned of year+ old migrations.
-void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
+void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
+                                 const base::FilePath& profile_path) {
   DCHECK(profile_prefs);
   // BEGIN_MIGRATE_OBSOLETE_PROFILE_PREFS
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
@@ -78,20 +90,11 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
   gcm::MigrateGCMPrefs(profile_prefs);
 #endif
 
-  MigrateObsoleteProfilePrefs_ChromiumImpl(profile_prefs);
+  MigrateObsoleteProfilePrefs_ChromiumImpl(profile_prefs, profile_path);
 
   brave_sync::MigrateBraveSyncPrefs(profile_prefs);
 
-  // Added 12/2019.
-  dark_mode::MigrateBraveDarkModePrefs(profile_prefs);
-
 #if !BUILDFLAG(IS_ANDROID)
-  // Added 9/2020
-  new_tab_page::MigrateNewTabPagePrefs(profile_prefs);
-
-  // Added 06/2022
-  brave::MigrateSearchEngineProviderPrefs(profile_prefs);
-
   // Added 10/2022
   profile_prefs->ClearPref(kDefaultBrowserLaunchingCount);
 #endif
@@ -141,6 +144,11 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
   profile_prefs->ClearPref(kBraveSuggestedSiteSuggestionsEnabled);
 #endif
 
+  // Added 03/2024
+#if BUILDFLAG(ENABLE_TOR)
+  profile_prefs->ClearPref(tor::prefs::kAutoOnionRedirect);
+#endif
+
 #if defined(TOOLKIT_VIEWS)
   // Added May 2023
   if (profile_prefs->GetBoolean(sidebar::kSidebarAlignmentChangedTemporarily)) {
@@ -152,77 +160,7 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
   profile_prefs->ClearPref(sidebar::kSidebarAlignmentChangedTemporarily);
 #endif
 
-  brave_news::p3a::MigrateObsoleteProfilePrefs(profile_prefs);
-
-  // Added September 2023
-#if !BUILDFLAG(IS_IOS)
-  // TODO(https://github.com/brave/brave-browser/issues/33144): Remove after
-  // several browser releases.
-  constexpr const char* const kLegacyBraveP2AAdPrefs[] = {
-      "Brave.P2A.TotalAdOpportunities",
-      "Brave.P2A.AdOpportunitiesPerSegment.architecture",
-      "Brave.P2A.AdOpportunitiesPerSegment.artsentertainment",
-      "Brave.P2A.AdOpportunitiesPerSegment.automotive",
-      "Brave.P2A.AdOpportunitiesPerSegment.business",
-      "Brave.P2A.AdOpportunitiesPerSegment.careers",
-      "Brave.P2A.AdOpportunitiesPerSegment.cellphones",
-      "Brave.P2A.AdOpportunitiesPerSegment.crypto",
-      "Brave.P2A.AdOpportunitiesPerSegment.education",
-      "Brave.P2A.AdOpportunitiesPerSegment.familyparenting",
-      "Brave.P2A.AdOpportunitiesPerSegment.fashion",
-      "Brave.P2A.AdOpportunitiesPerSegment.folklore",
-      "Brave.P2A.AdOpportunitiesPerSegment.fooddrink",
-      "Brave.P2A.AdOpportunitiesPerSegment.gaming",
-      "Brave.P2A.AdOpportunitiesPerSegment.healthfitness",
-      "Brave.P2A.AdOpportunitiesPerSegment.history",
-      "Brave.P2A.AdOpportunitiesPerSegment.hobbiesinterests",
-      "Brave.P2A.AdOpportunitiesPerSegment.home",
-      "Brave.P2A.AdOpportunitiesPerSegment.law",
-      "Brave.P2A.AdOpportunitiesPerSegment.military",
-      "Brave.P2A.AdOpportunitiesPerSegment.other",
-      "Brave.P2A.AdOpportunitiesPerSegment.personalfinance",
-      "Brave.P2A.AdOpportunitiesPerSegment.pets",
-      "Brave.P2A.AdOpportunitiesPerSegment.realestate",
-      "Brave.P2A.AdOpportunitiesPerSegment.science",
-      "Brave.P2A.AdOpportunitiesPerSegment.sports",
-      "Brave.P2A.AdOpportunitiesPerSegment.technologycomputing",
-      "Brave.P2A.AdOpportunitiesPerSegment.travel",
-      "Brave.P2A.AdOpportunitiesPerSegment.weather",
-      "Brave.P2A.AdOpportunitiesPerSegment.untargeted",
-      "Brave.P2A.TotalAdImpressions",
-      "Brave.P2A.AdImpressionsPerSegment.architecture",
-      "Brave.P2A.AdImpressionsPerSegment.artsentertainment",
-      "Brave.P2A.AdImpressionsPerSegment.automotive",
-      "Brave.P2A.AdImpressionsPerSegment.business",
-      "Brave.P2A.AdImpressionsPerSegment.careers",
-      "Brave.P2A.AdImpressionsPerSegment.cellphones",
-      "Brave.P2A.AdImpressionsPerSegment.crypto",
-      "Brave.P2A.AdImpressionsPerSegment.education",
-      "Brave.P2A.AdImpressionsPerSegment.familyparenting",
-      "Brave.P2A.AdImpressionsPerSegment.fashion",
-      "Brave.P2A.AdImpressionsPerSegment.folklore",
-      "Brave.P2A.AdImpressionsPerSegment.fooddrink",
-      "Brave.P2A.AdImpressionsPerSegment.gaming",
-      "Brave.P2A.AdImpressionsPerSegment.healthfitness",
-      "Brave.P2A.AdImpressionsPerSegment.history",
-      "Brave.P2A.AdImpressionsPerSegment.hobbiesinterests",
-      "Brave.P2A.AdImpressionsPerSegment.home",
-      "Brave.P2A.AdImpressionsPerSegment.law",
-      "Brave.P2A.AdImpressionsPerSegment.military",
-      "Brave.P2A.AdImpressionsPerSegment.other",
-      "Brave.P2A.AdImpressionsPerSegment.personalfinance",
-      "Brave.P2A.AdImpressionsPerSegment.pets",
-      "Brave.P2A.AdImpressionsPerSegment.realestate",
-      "Brave.P2A.AdImpressionsPerSegment.science",
-      "Brave.P2A.AdImpressionsPerSegment.sports",
-      "Brave.P2A.AdImpressionsPerSegment.technologycomputing",
-      "Brave.P2A.AdImpressionsPerSegment.travel",
-      "Brave.P2A.AdImpressionsPerSegment.weather",
-      "Brave.P2A.AdImpressionsPerSegment.untargeted"};
-  for (const char* const pref : kLegacyBraveP2AAdPrefs) {
-    profile_prefs->ClearPref(pref);
-  }
-#endif
+  brave_news::p3a::prefs::MigrateObsoleteProfileNewsMetricsPrefs(profile_prefs);
 
   // Added 2023-09
   ntp_background_images::ViewCounterService::MigrateObsoleteProfilePrefs(
@@ -231,10 +169,24 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs) {
   // Added 2023-11
   brave_ads::MigrateObsoleteProfilePrefs(profile_prefs);
 
+  brave_shields::MigrateObsoleteProfilePrefs(profile_prefs);
+
 #if !BUILDFLAG(IS_ANDROID)
   // Added 2024-01
   brave_tabs::MigrateBraveProfilePrefs(profile_prefs);
 #endif  // !BUILDFLAG(IS_ANDROID)
+
+  // Added 2024-04
+  ai_chat::ModelService::MigrateProfilePrefs(profile_prefs);
+
+  // Added 2024-05
+  ipfs::ClearDeprecatedIpfsPrefs(profile_prefs);
+
+  // Added 2024-07
+  profile_prefs->ClearPref(kHangoutsEnabled);
+
+  // Added 2024-10
+  brave_adaptive_captcha::MigrateObsoleteProfilePrefs(profile_prefs);
 
   // END_MIGRATE_OBSOLETE_PROFILE_PREFS
 }
@@ -254,6 +206,11 @@ void MigrateObsoleteLocalStatePrefs(PrefService* local_state) {
 #if !BUILDFLAG(IS_ANDROID)
   // Added 10/2022
   local_state->ClearPref(kDefaultBrowserPromptEnabled);
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+  // Added 09/2024
+  brave_vpn::MigrateLocalStatePrefs(local_state);
 #endif
 
   misc_metrics::UptimeMonitor::MigrateObsoletePrefs(local_state);

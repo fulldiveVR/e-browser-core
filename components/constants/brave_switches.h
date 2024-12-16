@@ -24,10 +24,6 @@ inline constexpr char kDarkMode[] = "dark-mode";
 // in debug mode with auto-reloading.
 inline constexpr char kDisableBraveExtension[] = "disable-brave-extension";
 
-// Allows disabling the Brave Rewards extension.
-inline constexpr char kDisableBraveRewardsExtension[] =
-    "disable-brave-rewards-extension";
-
 // This switch disables update module(Sparkle).
 inline constexpr char kDisableBraveUpdate[] = "disable-brave-update";
 
@@ -47,14 +43,16 @@ inline constexpr char kDisableEncryptionWin[] = "disable-encryption-win";
 // Allows disabling the machine ID generation on Windows.
 inline constexpr char kDisableMachineId[] = "disable-machine-id";
 
-// Disables DOH using a runtime flag mainly for network audit
-inline constexpr char kDisableDnsOverHttps[] = "disable-doh";
-
 // Starts Brave in Tor mode.
 inline constexpr char kTor[] = "tor";
 
 // Override update feed url. Only valid on macOS.
 inline constexpr char kUpdateFeedURL[] = "update-feed-url";
+
+// Don't set kShowAlways for non-stable channel.
+// It's useful to test SidebarShowAlwaysOnStable w/o griffin.
+inline constexpr char kDontShowSidebarOnNonStable[] =
+    "dont-show-on-sidebar-non-stable";
 
 }  // namespace switches
 

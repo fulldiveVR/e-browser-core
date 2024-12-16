@@ -14,6 +14,10 @@
 #include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/redeem_confirmation_delegate.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 
+namespace base {
+class TimeDelta;
+}  // namespace base
+
 namespace brave_ads {
 
 struct ConfirmationInfo;
@@ -45,18 +49,22 @@ class RedeemRewardConfirmation final {
   static void CreateConfirmationCallback(
       RedeemRewardConfirmation redeem_confirmation,
       const ConfirmationInfo& confirmation,
-      const mojom::UrlResponseInfo& url_response);
+      const mojom::UrlResponseInfo& mojom_url_response);
 
+  static void FetchPaymentTokenAfter(
+      base::TimeDelta delay,
+      RedeemRewardConfirmation redeem_confirmation,
+      const ConfirmationInfo& confirmation);
   static void FetchPaymentToken(RedeemRewardConfirmation redeem_confirmation,
                                 const ConfirmationInfo& confirmation);
   static void FetchPaymentTokenCallback(
       RedeemRewardConfirmation redeem_confirmation,
       const ConfirmationInfo& confirmation,
-      const mojom::UrlResponseInfo& url_response);
+      const mojom::UrlResponseInfo& mojom_url_response);
   static base::expected<PaymentTokenInfo, std::tuple<std::string, bool>>
   HandleFetchPaymentTokenUrlResponse(
       const ConfirmationInfo& confirmation,
-      const mojom::UrlResponseInfo& url_response);
+      const mojom::UrlResponseInfo& mojom_url_response);
 
   void SuccessfullyRedeemedConfirmation(const ConfirmationInfo& confirmation);
   void FailedToRedeemConfirmation(const ConfirmationInfo& confirmation,

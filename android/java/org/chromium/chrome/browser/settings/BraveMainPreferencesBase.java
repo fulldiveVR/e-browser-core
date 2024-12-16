@@ -18,19 +18,21 @@ import androidx.preference.Preference;
 import org.chromium.base.BraveFeatureList;
 import org.chromium.base.ContextUtils;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveLaunchIntentDispatcher;
+import org.chromium.chrome.browser.accessibility.settings.BraveAccessibilitySettings;
+import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.homepage.settings.BraveHomepageSettings;
 import org.chromium.chrome.browser.notifications.BraveNotificationWarningDialog;
 import org.chromium.chrome.browser.notifications.BravePermissionUtils;
 import org.chromium.chrome.browser.notifications.permissions.BraveNotificationPermissionRationaleDialog;
 import org.chromium.chrome.browser.ntp_background_images.NTPBackgroundImagesBridge;
-import org.chromium.chrome.browser.ntp_background_images.util.NTPUtil;
+import org.chromium.chrome.browser.ntp_background_images.util.NTPImageUtil;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 import org.chromium.chrome.browser.partnercustomizations.CloseBraveManager;
+import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.privacy.settings.BravePrivacySettings;
-import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.rate.BraveRateDialogFragment;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
@@ -38,17 +40,17 @@ import org.chromium.chrome.browser.vpn.settings.VpnCalloutPreference;
 import org.chromium.chrome.browser.vpn.utils.BraveVpnPrefUtils;
 import org.chromium.chrome.browser.vpn.utils.BraveVpnUtils;
 import org.chromium.chrome.browser.widget.quickactionsearchandbookmark.utils.BraveSearchWidgetUtils;
-import org.chromium.components.browser_ui.accessibility.BraveAccessibilitySettings;
 import org.chromium.components.browser_ui.settings.ChromeBasePreference;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
+import org.chromium.components.user_prefs.UserPrefs;
 import org.chromium.ui.base.DeviceFormFactor;
 
 import java.util.HashMap;
 
 // This excludes some settings in main settings screen.
-public class BraveMainPreferencesBase
-        extends BravePreferenceFragment implements Preference.OnPreferenceChangeListener {
+public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
     // sections
     private static final String PREF_FEATURES_SECTION = "features_section";
     private static final String PREF_DISPLAY_SECTION = "display_section";
@@ -56,15 +58,12 @@ public class BraveMainPreferencesBase
     private static final String PREF_BASICS_SECTION = "basics_section";
     private static final String PREF_ADVANCED_SECTION = "advanced_section";
     private static final String PREF_ONLINE_CHECKOUT_SECTION = "online_checkout_section";
-    private static final String PREF_SEARCH_ENGINE_SECTION = "search_engine_section";
     private static final String PREF_SUPPORT_SECTION = "support_section";
     private static final String PREF_ABOUT_SECTION = "about_section";
 
     // prefs
 
     private static final String PREF_BRAVE_VPN_CALLOUT = "pref_vpn_callout";
-    private static final String PREF_STANDARD_SEARCH_ENGINE = "standard_search_engine";
-    private static final String PREF_PRIVATE_SEARCH_ENGINE = "private_search_engine";
     private static final String PREF_CLOSING_ALL_TABS_CLOSES_BRAVE =
             "closing_all_tabs_closes_brave";
     private static final String PREF_PRIVACY = "privacy";
@@ -77,6 +76,7 @@ public class BraveMainPreferencesBase
     private static final String PREF_NOTIFICATIONS = "notifications";
     private static final String PREF_PAYMENT_METHODS = "autofill_payment_methods";
     private static final String PREF_ADDRESSES = "autofill_addresses";
+    private static final String PREF_AUTOFILL_PRIVATE_WINDOW = "autofill_private_window";
     private static final String PREF_MEDIA = "media";
     private static final String PREF_APPEARANCE = "appearance";
     private static final String PREF_NEW_TAB_PAGE = "background_images";
@@ -182,6 +182,7 @@ public class BraveMainPreferencesBase
         removePreferenceIfPresent(MainSettings.PREF_SAFETY_CHECK);
         removePreferenceIfPresent(MainSettings.PREF_ACCOUNT_AND_GOOGLE_SERVICES_SECTION);
         removePreferenceIfPresent(MainSettings.PREF_GOOGLE_SERVICES);
+        removePreferenceIfPresent(MainSettings.PREF_HOME_MODULES_CONFIG);
         removePreferenceIfPresent(PREF_LANGUAGES);
         removePreferenceIfPresent(PREF_BASICS_SECTION);
         // removePreferenceIfPresent(MainSettings.PREF_HOMEPAGE);
@@ -203,11 +204,23 @@ public class BraveMainPreferencesBase
         // rearanges programmatically the order for the prefs from Brave and Chromium
         rearrangePreferenceOrders();
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M 
-            || (NTPUtil.isReferralEnabled() && NTPBackgroundImagesBridge.enableSponsoredImages())) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M
+                || (NTPImageUtil.isReferralEnabled()
+                        && NTPBackgroundImagesBridge.enableSponsoredImages())) {
             removePreferenceIfPresent(PREF_BACKGROUND_IMAGES);
         }
         setCustomTabPreference();
+        setAutofillPrivateWindowPreference();
+    }
+
+    private void setAutofillPrivateWindowPreference() {
+        boolean isAutofillPrivateWindow =
+                UserPrefs.get(getProfile()).getBoolean(BravePref.BRAVE_AUTOFILL_PRIVATE_WINDOWS);
+        Preference preference = findPreference(PREF_AUTOFILL_PRIVATE_WINDOW);
+        preference.setOnPreferenceChangeListener(this);
+        if (preference instanceof ChromeSwitchPreference) {
+            ((ChromeSwitchPreference) preference).setChecked(isAutofillPrivateWindow);
+        }
     }
 
     private void setCustomTabPreference() {
@@ -275,8 +288,7 @@ public class BraveMainPreferencesBase
             removePreferenceIfPresent(PREF_BRAVE_VPN);
         }
 
-        if (BraveConfig.AI_CHAT_ENABLED
-                && ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+        if (BraveLeoPrefUtils.isLeoEnabled()) {
             findPreference(PREF_BRAVE_LEO).setOrder(++firstSectionOrder);
         } else {
             removePreferenceIfPresent(PREF_BRAVE_LEO);
@@ -327,6 +339,7 @@ public class BraveMainPreferencesBase
 
         findPreference(PREF_PAYMENT_METHODS).setOrder(++onlineCheckoutSectionOrder);
         findPreference(PREF_ADDRESSES).setOrder(++onlineCheckoutSectionOrder);
+        findPreference(PREF_AUTOFILL_PRIVATE_WINDOW).setOrder(++onlineCheckoutSectionOrder);
 
         int supportSectionOrder = onlineCheckoutSectionOrder;
         findPreference(PREF_SUPPORT_SECTION).setOrder(++supportSectionOrder);
@@ -345,8 +358,6 @@ public class BraveMainPreferencesBase
             findPreference(MainSettings.PREF_DEVELOPER).setOrder(++aboutSectionOrder);
         }
         findPreference(PREF_ABOUT_CHROME).setOrder(++aboutSectionOrder);
-
-        int order = findPreference(PREF_CLOSING_ALL_TABS_CLOSES_BRAVE).getOrder();
 
         // We don't have home button on top toolbar at the moment
         if (!DeviceFormFactor.isTablet() && !BottomToolbarConfiguration.isBottomToolbarEnabled()) {
@@ -380,14 +391,15 @@ public class BraveMainPreferencesBase
         updatePreferenceIcon(PREF_ACCESSIBILITY, R.drawable.ic_accessibility);
         updatePreferenceIcon(PREF_PRIVACY, R.drawable.ic_privacy_reports);
         updatePreferenceIcon(PREF_ADDRESSES, R.drawable.ic_addresses);
+        updatePreferenceIcon(PREF_AUTOFILL_PRIVATE_WINDOW, R.drawable.ic_autofill);
         updatePreferenceIcon(PREF_NOTIFICATIONS, R.drawable.ic_notification);
         updatePreferenceIcon(MainSettings.PREF_DEVELOPER, R.drawable.ic_info);
         updatePreferenceIcon(MainSettings.PREF_HOMEPAGE, R.drawable.ic_homepage);
     }
 
     private void updateSearchEnginePreference() {
-        if (!TemplateUrlServiceFactory.getForProfile(Profile.getLastUsedRegularProfile())
-                        .isLoaded()) {
+        if (!TemplateUrlServiceFactory.getForProfile(ProfileManager.getLastUsedRegularProfile())
+                .isLoaded()) {
             ChromeBasePreference searchEnginePref =
                     (ChromeBasePreference) findPreference(PREF_BRAVE_SEARCH_ENGINES);
             searchEnginePref.setEnabled(false);
@@ -456,6 +468,9 @@ public class BraveMainPreferencesBase
         String key = preference.getKey();
         if (PREF_CLOSING_ALL_TABS_CLOSES_BRAVE.equals(key)) {
             CloseBraveManager.setClosingAllTabsClosesBraveEnabled((boolean) newValue);
+        } else if (PREF_AUTOFILL_PRIVATE_WINDOW.equals(key)) {
+            UserPrefs.get(getProfile())
+                    .setBoolean(BravePref.BRAVE_AUTOFILL_PRIVATE_WINDOWS, (boolean) newValue);
         }
 
         return true;

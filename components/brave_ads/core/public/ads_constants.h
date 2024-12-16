@@ -6,12 +6,21 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_ADS_CORE_PUBLIC_ADS_CONSTANTS_H_
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_PUBLIC_ADS_CONSTANTS_H_
 
-#include "brave/components/brave_ads/core/public/export.h"
+namespace brave_ads {
 
-namespace brave_ads::data::resource {
+inline constexpr char kDatabaseFilename[] = "database.sqlite";
 
-ADS_EXPORT extern const char kCatalogJsonSchemaFilename[];
+// TODO(https://github.com/brave/brave-browser/issues/39795): Transition away
+// from using JSON state to a more efficient data approach.
+inline constexpr char kClientJsonFilename[] = "client.json";
 
-}  // namespace brave_ads::data::resource
+// TODO(https://github.com/brave/brave-browser/issues/39795): Transition away
+// from using JSON state to a more efficient data approach.
+inline constexpr char kConfirmationsJsonFilename[] = "confirmations.json";
+
+inline constexpr char kCatalogJsonSchemaDataResourceName[] =
+    "catalog-schema.json";
+
+}  // namespace brave_ads
 
 #endif  // BRAVE_COMPONENTS_BRAVE_ADS_CORE_PUBLIC_ADS_CONSTANTS_H_

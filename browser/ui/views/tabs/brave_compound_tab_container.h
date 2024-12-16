@@ -16,8 +16,8 @@ class ScrollView;
 }  // namespace views
 
 class BraveCompoundTabContainer : public CompoundTabContainer {
+  METADATA_HEADER(BraveCompoundTabContainer, CompoundTabContainer)
  public:
-  METADATA_HEADER(BraveCompoundTabContainer);
 
   BraveCompoundTabContainer(TabContainerController& controller,
                             TabHoverCardController* hover_card_controller,
@@ -37,8 +37,9 @@ class BraveCompoundTabContainer : public CompoundTabContainer {
       base::RepeatingCallback<int()> available_width_callback) override;
   void TransferTabBetweenContainers(int from_model_index,
                                     int to_model_index) override;
-  void Layout() override;
-  gfx::Size CalculatePreferredSize() const override;
+  void Layout(PassKey) override;
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override;
   gfx::Size GetMinimumSize() const override;
   views::SizeBounds GetAvailableSize(const views::View* child) const override;
   Tab* AddTab(std::unique_ptr<Tab> tab,
@@ -59,7 +60,7 @@ class BraveCompoundTabContainer : public CompoundTabContainer {
   // BrowserRootView::DropTarget
   BrowserRootView::DropTarget* GetDropTarget(
       gfx::Point loc_in_local_coords) override;
-  BrowserRootView::DropIndex GetDropIndex(
+  std::optional<BrowserRootView::DropIndex> GetDropIndex(
       const ui::DropTargetEvent& event) override;
 
  private:
@@ -72,9 +73,9 @@ class BraveCompoundTabContainer : public CompoundTabContainer {
 
   int GetAvailableWidthConsideringScrollBar();
 
-  base::raw_ref<TabSlotController> tab_slot_controller_;
+  raw_ref<TabSlotController> tab_slot_controller_;
 
-  base::raw_ptr<views::ScrollView> scroll_view_ = nullptr;
+  raw_ptr<views::ScrollView, DanglingUntriaged> scroll_view_ = nullptr;
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_TABS_BRAVE_COMPOUND_TAB_CONTAINER_H_

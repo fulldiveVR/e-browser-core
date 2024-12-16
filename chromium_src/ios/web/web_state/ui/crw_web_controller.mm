@@ -4,7 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include "ios/web/web_state/ui/crw_web_controller.h"
-#include "net/base/mac/url_conversions.h"
+#include "net/base/apple/url_conversions.h"
 #include "url/gurl.h"
 
 #include <Webkit/Webkit.h>
@@ -76,6 +76,10 @@
 
 - (WKBackForwardList*)backForwardList {
   return (WKBackForwardList*)[[BackForwardList alloc] init];
+}
+
+- (NSString*)title {
+  return @"";
 }
 @end
 

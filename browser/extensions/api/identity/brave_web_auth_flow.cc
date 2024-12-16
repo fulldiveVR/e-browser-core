@@ -99,7 +99,6 @@ void BraveWebAuthFlow::OnAuthFlowFailure(WebAuthFlow::Failure failure) {
       break;
     default:
       NOTREACHED() << "Unexpected error from web auth flow: " << failure;
-      break;
   }
   if (web_auth_flow_) {
     web_auth_flow_.release()->DetachDelegateAndDelete();

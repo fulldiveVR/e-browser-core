@@ -3,15 +3,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import logging
 import re
 import json
 
-from typing import List, Optional
-
-import components.path_util as path_util
-
-from components.perf_test_utils import GetProcessOutput, GetFileAtRevision
+from typing import List
+import components.git_tools as git_tools
 
 
 class ChromiumVersion:
@@ -46,15 +42,11 @@ class BraveVersion:
       revision = version_str
       self._is_tag = False
 
-    git_hash = _GetGitHash(revision)
-    if git_hash is None:
-      _FetchRevision(revision)
-      git_hash = _GetGitHash(revision)
-      if git_hash is None:
-        raise RuntimeError(f'Bad git revision {revision}')
+    git_tools.EnsureRevision(revision)
+    git_hash = git_tools.GetGitHash(revision)
     self._git_hash = git_hash
 
-    content = GetFileAtRevision('package.json', self.git_hash)
+    content = git_tools.GetFileAtRevision('package.json', git_hash)
     assert content is not None
     package_json = json.loads(content)
 
@@ -63,8 +55,8 @@ class BraveVersion:
     else:
       self._last_tag = 'v' + package_json['version']
 
-    self._revision_number = _GetRevisionNumber(self.git_hash)
-    self._commit_date = _GetCommitDate(self.git_hash)
+    self._revision_number = git_tools.GetRevisionNumber(git_hash)
+    self._commit_date = git_tools.GetCommitDate(git_hash)
     self._chromium_version = ChromiumVersion(
         package_json['config']['projects']['chrome']['tag'])
 
@@ -76,13 +68,18 @@ class BraveVersion:
   def is_tag(self) -> bool:
     return self._is_tag
 
+  # Returns the revision in a human readable format:
+  # the last tag + the current commit
   def to_string(self) -> str:
     if self._is_tag:
       return self._last_tag
-    return f'{self._last_tag}_{self.git_hash[:8]}'
+    return f'{self._last_tag}+{self._git_hash[:8]}'
 
+  # Returns tag or git sha1 hash
   @property
-  def git_hash(self) -> str:
+  def git_revision(self) -> str:
+    if self._is_tag:
+      return self._last_tag
     return self._git_hash
 
   @property
@@ -100,43 +97,3 @@ class BraveVersion:
   # Returns a version like 108.1.48.1
   def combined_version(self) -> str:
     return f'{self._chromium_version.major()}.{self.last_tag[1:]}'
-
-
-def _FetchRevision(revision: str):
-  args = ['git', 'fetch', 'origin', revision]
-  logging.debug('Try to fetch %s', revision)
-  GetProcessOutput(args, cwd=path_util.GetBraveDir())
-
-
-def _GetCommitDate(revision: str) -> str:
-  _, output = GetProcessOutput(['git', 'show', '-s', '--format=%ci', revision],
-                               cwd=path_util.GetBraveDir(),
-                               check=True)
-  commit_date = output.rstrip().split('\n')[-1]
-  return commit_date
-
-
-def _GetGitHash(revision: str) -> Optional[str]:
-  result, git_hash_output = GetProcessOutput(
-      ['git', 'rev-list', '-n', '1', revision], cwd=path_util.GetBraveDir())
-  if not result:
-    return None
-  return git_hash_output.rstrip()
-
-
-def _GetRevisionNumber(revision: str) -> str:
-  """Returns the number of "primary" commits from the begging to `revision`.
-  Use this to get the commit from a revision number:
-  git rev-list --topo-order --first-parent --reverse origin/master
-  | head -n <rev_num> | tail -n 1 | git log -n 1 --stdin
-  """
-
-  rev_number_args = [
-      'git', 'rev-list', '--topo-order', '--first-parent', '--count', revision
-  ]
-
-  _, rev_number_output = GetProcessOutput(rev_number_args,
-                                          cwd=path_util.GetBraveDir(),
-                                          check=True)
-
-  return rev_number_output.rstrip()

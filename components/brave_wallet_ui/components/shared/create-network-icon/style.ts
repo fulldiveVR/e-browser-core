@@ -34,7 +34,14 @@ export const IconWrapper = styled.div<{
   padding: ${(p) => (p.externalProvider ? '2px' : '0px')};
 `
 
-export type IconSize = 'huge' | 'big' | 'small' | 'tiny' | 'extra-small'
+export type IconSize =
+  | 'massive'
+  | 'huge'
+  | 'big'
+  | 'medium'
+  | 'small'
+  | 'tiny'
+  | 'extra-small'
 
 interface IconProps extends AssetIconProps {
   size?: IconSize
@@ -43,10 +50,14 @@ interface IconProps extends AssetIconProps {
 
 function getNetworkIconWidthFromSize(size?: IconSize): string {
   switch (size) {
+    case 'massive':
+      return '64px'
     case 'huge':
       return '32px'
     case 'big':
       return '24px'
+    case 'medium':
+      return '18px'
     case 'small':
       return '15px'
     case 'tiny':

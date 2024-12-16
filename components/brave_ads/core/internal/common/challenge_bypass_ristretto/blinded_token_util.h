@@ -8,7 +8,7 @@
 
 #include <vector>
 
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/blinded_token.h"
 
 namespace brave_ads::cbr {
 
@@ -18,7 +18,7 @@ class Token;
 std::vector<BlindedToken> BlindTokens(const std::vector<Token>& tokens);
 
 std::vector<challenge_bypass_ristretto::BlindedToken> ToRawBlindedTokens(
-    const std::vector<BlindedToken>& tokens);
+    const std::vector<BlindedToken>& blinded_tokens);
 
 }  // namespace brave_ads::cbr
 

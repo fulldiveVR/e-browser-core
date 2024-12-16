@@ -9,18 +9,17 @@
 #include "base/strings/stringprintf.h"
 #include "brave/components/brave_rewards/core/database/database_sku_order_items.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
 namespace {
 
-const char kTableName[] = "sku_order_items";
+constexpr char kTableName[] = "sku_order_items";
 
 }  // namespace
 
-DatabaseSKUOrderItems::DatabaseSKUOrderItems(RewardsEngineImpl& engine)
+DatabaseSKUOrderItems::DatabaseSKUOrderItems(RewardsEngine& engine)
     : DatabaseTable(engine) {}
 
 DatabaseSKUOrderItems::~DatabaseSKUOrderItems() = default;
@@ -30,7 +29,7 @@ void DatabaseSKUOrderItems::InsertOrUpdateList(
     std::vector<mojom::SKUOrderItemPtr> list) {
   DCHECK(transaction);
   if (list.empty()) {
-    BLOG(1, "List is empty");
+    engine_->Log(FROM_HERE) << "List is empty";
     return;
   }
 
@@ -64,8 +63,8 @@ void DatabaseSKUOrderItems::GetRecordsByOrderId(
     const std::string& order_id,
     GetSKUOrderItemsCallback callback) {
   if (order_id.empty()) {
-    BLOG(1, "Order id is empty");
-    callback({});
+    engine_->Log(FROM_HERE) << "Order id is empty";
+    std::move(callback).Run({});
     return;
   }
 
@@ -105,8 +104,8 @@ void DatabaseSKUOrderItems::OnGetRecordsByOrderId(
     mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
-    callback({});
+    engine_->LogError(FROM_HERE) << "Response is wrong";
+    std::move(callback).Run({});
     return;
   }
 
@@ -123,15 +122,13 @@ void DatabaseSKUOrderItems::OnGetRecordsByOrderId(
     info->price = GetDoubleColumn(record_pointer, 4);
     info->name = GetStringColumn(record_pointer, 5);
     info->description = GetStringColumn(record_pointer, 6);
-    info->type =
-        static_cast<mojom::SKUOrderItemType>(GetIntColumn(record_pointer, 7));
+    info->type = SKUOrderItemTypeFromInt(GetIntColumn(record_pointer, 7));
     info->expires_at = GetInt64Column(record_pointer, 8);
 
     list.push_back(std::move(info));
   }
 
-  callback(std::move(list));
+  std::move(callback).Run(std::move(list));
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

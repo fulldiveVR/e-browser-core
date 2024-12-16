@@ -17,7 +17,7 @@
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/ui/webui/brave_webui_source.h"
-#include "brave/components/brave_ads/browser/ads_service.h"
+#include "brave/components/brave_ads/core/browser/service/ads_service.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_rewards/browser/rewards_service.h"
 #include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
@@ -58,8 +58,6 @@ class RewardsInternalsDOMHandler : public content::WebUIMessageHandler {
   void GetContributions(const base::Value::List& args);
   void OnGetContributions(
       std::vector<brave_rewards::mojom::ContributionInfoPtr> contributions);
-  void GetPromotions(const base::Value::List& args);
-  void OnGetPromotions(std::vector<brave_rewards::mojom::PromotionPtr> list);
   void GetPartialLog(const base::Value::List& args);
   void OnGetPartialLog(const std::string& log);
   void GetFulllLog(const base::Value::List& args);
@@ -101,10 +99,6 @@ void RewardsInternalsDOMHandler::RegisterMessages() {
   web_ui()->RegisterMessageCallback(
       "brave_rewards_internals.getContributions",
       base::BindRepeating(&RewardsInternalsDOMHandler::GetContributions,
-                          base::Unretained(this)));
-  web_ui()->RegisterMessageCallback(
-      "brave_rewards_internals.getPromotions",
-      base::BindRepeating(&RewardsInternalsDOMHandler::GetPromotions,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
       "brave_rewards_internals.getPartialLog",
@@ -268,42 +262,6 @@ void RewardsInternalsDOMHandler::OnGetContributions(
   CallJavascriptFunction("brave_rewards_internals.contributions", list);
 }
 
-void RewardsInternalsDOMHandler::GetPromotions(const base::Value::List& args) {
-  if (!rewards_service_) {
-    return;
-  }
-
-  AllowJavascript();
-
-  rewards_service_->GetAllPromotions(
-      base::BindOnce(&RewardsInternalsDOMHandler::OnGetPromotions,
-                     weak_ptr_factory_.GetWeakPtr()));
-}
-
-void RewardsInternalsDOMHandler::OnGetPromotions(
-    std::vector<brave_rewards::mojom::PromotionPtr> list) {
-  if (!IsJavascriptAllowed()) {
-    return;
-  }
-
-  base::Value::List promotions;
-  for (const auto& item : list) {
-    base::Value::Dict dict;
-    dict.Set("amount", item->approximate_value);
-    dict.Set("promotionId", item->id);
-    dict.Set("expiresAt", static_cast<double>(item->expires_at));
-    dict.Set("type", static_cast<int>(item->type));
-    dict.Set("status", static_cast<int>(item->status));
-    dict.Set("claimedAt", static_cast<double>(item->claimed_at));
-    dict.Set("legacyClaimed", item->legacy_claimed);
-    dict.Set("claimId", item->claim_id);
-    dict.Set("version", static_cast<int>(item->version));
-    promotions.Append(std::move(dict));
-  }
-
-  CallJavascriptFunction("brave_rewards_internals.promotions", promotions);
-}
-
 void RewardsInternalsDOMHandler::GetPartialLog(const base::Value::List& args) {
   if (!rewards_service_) {
     return;
@@ -388,13 +346,16 @@ void RewardsInternalsDOMHandler::OnGetExternalWallet(
     return;
   }
 
-  base::Value::Dict data;
-  if (wallet) {
-    data.Set("address", wallet->address);
-    data.Set("memberId", wallet->member_id);
-    data.Set("status", static_cast<int>(wallet->status));
-    data.Set("type", wallet->type);
+  if (!wallet) {
+    CallJavascriptFunction("brave_rewards_internals.onGetExternalWallet");
+    return;
   }
+
+  base::Value::Dict data;
+  data.Set("address", wallet->address);
+  data.Set("memberId", wallet->member_id);
+  data.Set("status", static_cast<int>(wallet->status));
+  data.Set("type", wallet->type);
 
   CallJavascriptFunction("brave_rewards_internals.onGetExternalWallet", data);
 }
@@ -434,7 +395,6 @@ void RewardsInternalsDOMHandler::OnGetEventLogs(
 void RewardsInternalsDOMHandler::GetAdDiagnostics(
     const base::Value::List& args) {
   if (!ads_service_) {
-    NOTREACHED();
     return;
   }
 

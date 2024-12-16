@@ -18,27 +18,26 @@ bool HasConfirmationTokens() {
 
 }  // namespace
 
+ConfirmationTokens& GetConfirmationTokens() {
+  return ConfirmationStateManager::GetInstance().GetConfirmationTokens();
+}
+
 std::optional<ConfirmationTokenInfo> MaybeGetConfirmationToken() {
   if (!HasConfirmationTokens()) {
     return std::nullopt;
   }
 
-  return ConfirmationStateManager::GetInstance()
-      .GetConfirmationTokens()
-      .GetToken();
+  return GetConfirmationTokens().Get();
 }
 
 void AddConfirmationTokens(const ConfirmationTokenList& confirmation_tokens) {
-  ConfirmationStateManager::GetInstance().GetConfirmationTokens().AddTokens(
-      confirmation_tokens);
+  GetConfirmationTokens().Add(confirmation_tokens);
 
   ConfirmationStateManager::GetInstance().SaveState();
 }
 
 bool RemoveConfirmationToken(const ConfirmationTokenInfo& confirmation_token) {
-  if (!ConfirmationStateManager::GetInstance()
-           .GetConfirmationTokens()
-           .RemoveToken(confirmation_token)) {
+  if (!GetConfirmationTokens().Remove(confirmation_token)) {
     return false;
   }
 
@@ -49,42 +48,33 @@ bool RemoveConfirmationToken(const ConfirmationTokenInfo& confirmation_token) {
 
 void RemoveConfirmationTokens(
     const ConfirmationTokenList& confirmation_tokens) {
-  ConfirmationStateManager::GetInstance().GetConfirmationTokens().RemoveTokens(
-      confirmation_tokens);
+  GetConfirmationTokens().Remove(confirmation_tokens);
 
   ConfirmationStateManager::GetInstance().SaveState();
 }
 
 void RemoveAllConfirmationTokens() {
-  ConfirmationStateManager::GetInstance()
-      .GetConfirmationTokens()
-      .RemoveAllTokens();
+  GetConfirmationTokens().RemoveAll();
 
   ConfirmationStateManager::GetInstance().SaveState();
 }
 
 bool ConfirmationTokenExists(const ConfirmationTokenInfo& confirmation_token) {
-  return ConfirmationStateManager::GetInstance()
-      .GetConfirmationTokens()
-      .TokenExists(confirmation_token);
+  return GetConfirmationTokens().Exists(confirmation_token);
 }
 
 bool ConfirmationTokensIsEmpty() {
-  return ConfirmationStateManager::GetInstance()
-      .GetConfirmationTokens()
-      .IsEmpty();
+  return GetConfirmationTokens().IsEmpty();
 }
 
 size_t ConfirmationTokenCount() {
-  return ConfirmationStateManager::GetInstance()
-      .GetConfirmationTokens()
-      .Count();
+  return GetConfirmationTokens().Count();
 }
 
 bool IsValid(const ConfirmationTokenInfo& confirmation_token) {
   return confirmation_token.unblinded_token.has_value() &&
          confirmation_token.public_key.has_value() &&
-         !confirmation_token.signature.empty();
+         !confirmation_token.signature_base64.empty();
 }
 
 }  // namespace brave_ads

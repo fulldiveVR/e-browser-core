@@ -14,8 +14,8 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/stringprintf.h"
 #include "brave/browser/net/brave_request_handler.h"
-#include "brave/components/brave_shields/browser/adblock_stub_response.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/content/browser/adblock_stub_response.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "content/public/browser/browser_context.h"
 #include "content/public/browser/browser_task_traits.h"
 #include "content/public/browser/browser_thread.h"
@@ -30,6 +30,7 @@
 #include "net/url_request/redirect_util.h"
 #include "net/url_request/url_request.h"
 #include "services/network/public/cpp/parsed_headers.h"
+#include "services/network/public/cpp/url_loader_factory_builder.h"
 #include "services/network/public/mojom/early_hints.mojom.h"
 #include "url/origin.h"
 
@@ -92,7 +93,7 @@ BraveProxyingURLLoaderFactory::InProgressRequest::InProgressRequest(
     uint64_t request_id,
     int32_t network_service_request_id,
     int render_process_id,
-    int frame_tree_node_id,
+    content::FrameTreeNodeId frame_tree_node_id,
     uint32_t options,
     const network::ResourceRequest& request,
     content::BrowserContext* browser_context,
@@ -464,13 +465,11 @@ void BraveProxyingURLLoaderFactory::InProgressRequest::ContinueToSendHeaders(
         removed_headers.begin(), removed_headers.end());
 
     for (auto& set_header : set_headers) {
-      std::string header_value;
-      if (request_.headers.GetHeader(set_header, &header_value)) {
-        pending_follow_redirect_params_->modified_headers.SetHeader(
-            set_header, header_value);
-      } else {
-        NOTREACHED();
-      }
+      std::optional<std::string> header_value =
+          request_.headers.GetHeader(set_header);
+      CHECK(header_value);
+      pending_follow_redirect_params_->modified_headers.SetHeader(
+          set_header, *header_value);
     }
 
     if (target_loader_.is_bound()) {
@@ -635,9 +634,8 @@ BraveProxyingURLLoaderFactory::BraveProxyingURLLoaderFactory(
     BraveRequestHandler& request_handler,
     content::BrowserContext* browser_context,
     int render_process_id,
-    int frame_tree_node_id,
-    mojo::PendingReceiver<network::mojom::URLLoaderFactory> receiver,
-    mojo::PendingRemote<network::mojom::URLLoaderFactory> target_factory,
+    content::FrameTreeNodeId frame_tree_node_id,
+    network::URLLoaderFactoryBuilder& factory_builder,
     scoped_refptr<RequestIDGenerator> request_id_generator,
     DisconnectCallback on_disconnect,
     scoped_refptr<base::SequencedTaskRunner> navigation_response_task_runner)
@@ -654,6 +652,8 @@ BraveProxyingURLLoaderFactory::BraveProxyingURLLoaderFactory(
   DCHECK(proxy_receivers_.empty());
   DCHECK(!target_factory_.is_bound());
 
+  auto [receiver, target_factory] = factory_builder.Append();
+
   target_factory_.Bind(std::move(target_factory));
   target_factory_.set_disconnect_handler(
       base::BindOnce(&BraveProxyingURLLoaderFactory::OnTargetFactoryError,
@@ -669,23 +669,18 @@ BraveProxyingURLLoaderFactory::BraveProxyingURLLoaderFactory(
 BraveProxyingURLLoaderFactory::~BraveProxyingURLLoaderFactory() = default;
 
 // static
-bool BraveProxyingURLLoaderFactory::MaybeProxyRequest(
+void BraveProxyingURLLoaderFactory::MaybeProxyRequest(
     content::BrowserContext* browser_context,
     content::RenderFrameHost* render_frame_host,
     int render_process_id,
-    mojo::PendingReceiver<network::mojom::URLLoaderFactory>* factory_receiver,
+    network::URLLoaderFactoryBuilder& factory_builder,
     scoped_refptr<base::SequencedTaskRunner> navigation_response_task_runner) {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-  auto proxied_receiver = std::move(*factory_receiver);
-  mojo::PendingRemote<network::mojom::URLLoaderFactory> target_factory_remote;
-  *factory_receiver = target_factory_remote.InitWithNewPipeAndPassReceiver();
-
   ResourceContextData::StartProxying(
       browser_context, render_process_id,
-      render_frame_host ? render_frame_host->GetFrameTreeNodeId() : 0,
-      std::move(proxied_receiver), std::move(target_factory_remote),
-      navigation_response_task_runner);
-  return true;
+      render_frame_host ? render_frame_host->GetFrameTreeNodeId()
+                        : content::FrameTreeNodeId(),
+      factory_builder, navigation_response_task_runner);
 }
 
 void BraveProxyingURLLoaderFactory::CreateLoaderAndStart(

@@ -9,14 +9,15 @@
 #include <optional>
 
 #include "base/functional/callback_helpers.h"
+#include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/ui/browser_commands.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/skus/common/features.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/app/chrome_command_ids.h"
-#include "chrome/browser/auth_notification_types.h"
 #include "chrome/browser/policy/configuration_policy_handler_list_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/profiles/profile_window.h"
@@ -25,7 +26,7 @@
 #include "chrome/browser/ui/browser_list.h"
 #include "chrome/browser/ui/browser_list_observer.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
-#include "chrome/browser/ui/views/frame/browser_view.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/policy/core/browser/browser_policy_connector.h"
@@ -34,7 +35,6 @@
 #include "components/policy/policy_constants.h"
 #include "components/prefs/pref_service.h"
 #include "components/sync/base/command_line_switches.h"
-#include "content/public/browser/notification_service.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/test_utils.h"
 
@@ -50,6 +50,16 @@
 #include "brave/components/brave_vpn/common/pref_names.h"
 #endif
 
+#if defined(TOOLKIT_VIEWS)
+#include "chrome/browser/ui/views/frame/browser_view.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_coordinator.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry_id.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry_key.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_enums.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
+#endif
+
 class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
  public:
   BraveBrowserCommandControllerTest() {
@@ -58,7 +68,6 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
         {skus::features::kSkusFeature, brave_vpn::features::kBraveVPN}, {});
 #endif
   }
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
   void SetUpInProcessBrowserTestFixture() override {
     InProcessBrowserTest::SetUpInProcessBrowserTestFixture();
     provider_.SetDefaultReturns(
@@ -67,6 +76,17 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
     policy::BrowserPolicyConnector::SetPolicyProviderForTesting(&provider_);
   }
 
+  void BlockAIChatByPolicy(bool value) {
+    policy::PolicyMap policies;
+    policies.Set(policy::key::kBraveAIChatEnabled,
+                 policy::POLICY_LEVEL_MANDATORY, policy::POLICY_SCOPE_MACHINE,
+                 policy::POLICY_SOURCE_PLATFORM, base::Value(!value), nullptr);
+    provider_.UpdateChromePolicy(policies);
+    EXPECT_EQ(ai_chat::IsAIChatEnabled(browser()->profile()->GetPrefs()),
+              !value);
+  }
+
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
   void BlockVPNByPolicy(bool value) {
     policy::PolicyMap policies;
     policies.Set(policy::key::kBraveVPNDisabled, policy::POLICY_LEVEL_MANDATORY,
@@ -153,11 +173,20 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
     EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_BRAVE_VPN_MENU));
     EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_BRAVE_VPN));
   }
+#endif
+
+#if defined(TOOLKIT_VIEWS)
+  void WaitForSidePanelClose() {
+    ASSERT_TRUE(base::test::RunUntil([&]() {
+      return browser()->GetBrowserView().unified_side_panel()->state() ==
+             SidePanel::State::kClosed;
+    }));
+  }
+#endif  // #if defined(TOOLKIT_VIEWS)
 
  private:
   policy::MockConfigurationPolicyProvider provider_;
   base::test::ScopedFeatureList scoped_feature_list_;
-#endif
 };
 
 // Regular window
@@ -230,6 +259,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
   EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
+  EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
 }
 
 // Create guest browser and test its brave commands status.
@@ -259,6 +289,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
   EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
+  EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
 }
 
 // Launch tor window and check its command status.
@@ -290,6 +321,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
   EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
+  EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
 
   // Check tor commands when tor is disabled.
   TorProfileServiceFactory::SetTorDisabled(true);
@@ -300,6 +332,20 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
       command_controller->IsCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR));
 }
 #endif
+
+IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
+                       ToggleAIChat_ControlledByPolicy) {
+  auto* command_controller = browser()->command_controller();
+  // Sanity check policy is enabled by default
+  EXPECT_TRUE(ai_chat::IsAIChatEnabled(browser()->profile()->GetPrefs()));
+  EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
+  // When AI Chat is blocked by policy, the commands should not be available
+  BlockAIChatByPolicy(true);
+  EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
+  // When AI Chat is unblocked by policy, the commands should become available
+  BlockAIChatByPolicy(false);
+  EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
+}
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsCloseTabsToLeft) {
@@ -394,3 +440,45 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
     EXPECT_EQ(group, tsm->GetTabGroupForTab(i));
   }
 }
+
+#if defined(TOOLKIT_VIEWS)
+IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
+                       BraveCommandsToggleAIChat) {
+  SidePanelEntryKey ai_chat_key =
+      SidePanelEntry::Key(SidePanelEntryId::kChatUI);
+  auto* side_panel_coordinator =
+      browser()->GetFeatures().side_panel_coordinator();
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return browser()->GetBrowserView().unified_side_panel()->state() ==
+           SidePanel::State::kClosed;
+  }));
+
+  // initially no panel is showing
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelShowing());
+  // after command, ai chat panel is showing
+  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  EXPECT_TRUE(side_panel_coordinator->IsSidePanelShowing());
+  EXPECT_TRUE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
+  // after command again, no panel is showing
+  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  WaitForSidePanelClose();
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelShowing());
+
+  // open a different side panel
+  SidePanelEntryKey bookmarks_key =
+      SidePanelEntry::Key(SidePanelEntryId::kBookmarks);
+  side_panel_coordinator->Toggle(bookmarks_key,
+                                 SidePanelOpenTrigger::kToolbarButton);
+  // after command, ai chat panel is showing
+  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  EXPECT_TRUE(side_panel_coordinator->IsSidePanelShowing());
+  EXPECT_TRUE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
+  // after command again, no panel is showing
+  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  WaitForSidePanelClose();
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
+  EXPECT_FALSE(side_panel_coordinator->IsSidePanelShowing());
+}
+#endif

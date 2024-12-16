@@ -9,15 +9,14 @@ import re
 import shutil
 import sys
 from distutils.dir_util import copy_tree
-from enum import Enum
-from typing import List, Optional, Tuple
+from typing import List, Optional
 
-import components.path_util as path_util
-from components.version import BraveVersion
+from components.field_trials import FieldTrialsMode
 from components.common_options import CommonOptions
 from components.perf_test_utils import (DownloadArchiveAndUnpack, DownloadFile,
                                         GetProcessOutput, ToBravePlatformName,
                                         ToChromiumPlatformName)
+from components.version import BraveVersion
 
 
 def _GetBraveDownloadUrl(tag: str, filename: str) -> str:
@@ -78,36 +77,27 @@ def _FixUpUnpackedBrowser(out_dir: str):
     GetProcessOutput(['xattr', '-cr', out_dir], check=True)
 
 
-class FieldTrialsMode(Enum):
-  NO_TRIALS = 1
-  GRIFFIN = 2
-  TESTING_FIELD_TRIALS = 3
-
-
 class BrowserType:
   _win_name: str
   _mac_name: str
   _channel: Optional[str] = None
   _extra_browser_args: List[str] = []
   _extra_benchmark_args: List[str] = []
-  _field_trials_mode: FieldTrialsMode
   _report_as_reference = False
 
   def __init__(self, win_name: str, mac_name: str, channel: Optional[str],
                extra_browser_args: List[str], extra_benchmark_args: List[str],
-               report_as_reference: bool, field_trials_mode: FieldTrialsMode):
+               report_as_reference: bool):
     self._win_name = win_name
     self._mac_name = mac_name
     self._channel = channel
     self._extra_browser_args = extra_browser_args
     self._extra_benchmark_args = extra_benchmark_args
     self._report_as_reference = report_as_reference
-    self._field_trials_mode = field_trials_mode
 
-    if field_trials_mode != FieldTrialsMode.TESTING_FIELD_TRIALS:
-      self.extra_browser_args.append('--disable-field-trial-config')
-    if field_trials_mode == FieldTrialsMode.NO_TRIALS:
-      self.extra_benchmark_args.append('--compatibility-mode=no-field-trials')
+  @property
+  def is_brave(self) -> bool:
+    return False
 
   @property
   def extra_browser_args(self) -> List[str]:
@@ -133,25 +123,12 @@ class BrowserType:
   def report_as_reference(self) -> bool:
     return self._report_as_reference
 
-  @property
-  def field_trials_mode(self) -> FieldTrialsMode:
-    return self._field_trials_mode
+  def GetDefaultFieldTrials(self) -> FieldTrialsMode:
+    return FieldTrialsMode.NO_TRIALS
 
   def DownloadBrowserBinary(self, url: Optional[str], version: BraveVersion,
                             out_dir: str, common_options: CommonOptions) -> str:
     raise NotImplementedError()
-
-  def MakeFieldTrials(self, version: Optional[BraveVersion], artifacts_dir: str,
-                      common_options: CommonOptions) -> Optional[str]:
-    if self.field_trials_mode != FieldTrialsMode.GRIFFIN:
-      return None
-    if version is None:
-      raise RuntimeError('version must be set to use Griffin trials')
-    if not common_options.variations_repo_dir:
-      raise RuntimeError('Set --variations-repo-dir to use Griffin trials')
-    return _MakeTestingFieldTrials(artifacts_dir, version,
-                                   common_options.variations_repo_dir,
-                                   'production')
 
   def GetBinaryPath(self, target_os: str) -> str:
     if target_os == 'windows':
@@ -168,12 +145,13 @@ class BrowserType:
 
 
 class BraveBrowserTypeImpl(BrowserType):
-  def __init__(self, channel: str,
-               field_trials_mode: Optional[FieldTrialsMode]):
-    if field_trials_mode is None:
-      field_trials_mode = FieldTrialsMode.GRIFFIN
-    super().__init__('brave', 'Brave Browser', channel, [], [], False,
-                     field_trials_mode)
+
+  def __init__(self, channel: str):
+    super().__init__('brave', 'Brave Browser', channel, [], [], False)
+
+  @property
+  def is_brave(self) -> bool:
+    return True
 
   def _GetWinInstallPath(self) -> str:
     app_name = 'Brave-Browser'
@@ -201,47 +179,25 @@ class BraveBrowserTypeImpl(BrowserType):
     if target_os == 'android':
       if url is None:
         url = _GetBraveDownloadUrl(tag, 'Bravearm64Universal.apk')
-      apk_filename = os.path.join(out_dir, os.pardir,
-                                  f'brave-{version.to_string()}.apk')
+      apk_filename = os.path.join(out_dir, f'brave-{version.to_string()}.apk')
       DownloadFile(url, apk_filename)
       return apk_filename
 
-    brave_platform = ToBravePlatformName(target_os)
-    url = _GetBraveDownloadUrl(tag, f'brave-{tag}-{brave_platform}.zip')
+    if url is None:
+      brave_platform = ToBravePlatformName(target_os)
+      url = _GetBraveDownloadUrl(tag, f'brave-{tag}-{brave_platform}.zip')
     DownloadArchiveAndUnpack(out_dir, url)
     _FixUpUnpackedBrowser(out_dir)
 
     return os.path.join(out_dir, self.GetBinaryPath(target_os))
 
-
-def _MakeTestingFieldTrials(artifacts_dir: str, version: BraveVersion,
-                            variations_repo_dir: str, branch: str) -> str:
-  combined_version: str = version.combined_version()
-  logging.debug('Generating trials for combined_version %s', combined_version)
-  target_path = os.path.join(artifacts_dir, 'fieldtrial_testing_config.json')
-
-  args = [
-      path_util.GetVpython3Path(),
-      'seed/fieldtrials_testing_config_generator.py', f'--output={target_path}',
-      f'--target-date={version.commit_date}', f'--target-branch={branch}',
-      f'--target-version={combined_version}', '--target-channel=NIGHTLY'
-  ]
-  GetProcessOutput(args, cwd=variations_repo_dir, check=True)
-  return target_path
-
+  def GetDefaultFieldTrials(self) -> FieldTrialsMode:
+    return FieldTrialsMode.GRIFFIN
 
 class ChromiumBrowserTypeImpl(BrowserType):
-  def __init__(self, field_trials_mode: Optional[FieldTrialsMode]):
-    if field_trials_mode is None:
-      field_trials_mode = FieldTrialsMode.NO_TRIALS
 
-    browser_args = []
-    if field_trials_mode == FieldTrialsMode.TESTING_FIELD_TRIALS:
-      browser_args = [
-          '--variations-override-country=us', '--fake-variations-channel=stable'
-      ]
-    super().__init__('chrome', 'Chromium', None, browser_args, [], True,
-                     field_trials_mode)
+  def __init__(self):
+    super().__init__('chrome', 'Chromium', None, [], [], True)
 
   def DownloadBrowserBinary(self, url: Optional[str], version: BraveVersion,
                             out_dir: str, common_options: CommonOptions) -> str:
@@ -266,18 +222,9 @@ class ChromiumBrowserTypeImpl(BrowserType):
 
 
 class ChromeBrowserTypeImpl(BrowserType):
-  def __init__(self, channel: str,
-               field_trials_mode: Optional[FieldTrialsMode]):
-    if field_trials_mode is None:
-      field_trials_mode = FieldTrialsMode.NO_TRIALS
 
-    browser_args = []
-    if field_trials_mode == FieldTrialsMode.TESTING_FIELD_TRIALS:
-      browser_args = [
-          '--variations-override-country=us', '--fake-variations-channel=stable'
-      ]
-    super().__init__('chrome', 'Google Chrome', channel, browser_args, [], True,
-                     field_trials_mode)
+  def __init__(self, channel: str):
+    super().__init__('chrome', 'Google Chrome', channel, [], [], True)
 
   def DownloadBrowserBinary(self, url: Optional[str], version: BraveVersion,
                             out_dir: str, common_options: CommonOptions) -> str:
@@ -322,36 +269,19 @@ class ChromeTestingBrowserTypeImpl(ChromeBrowserTypeImpl):
     return os.path.join(out_dir, self.GetBinaryPath(common_options.target_os))
 
 
-def ParseFieldTrialMode(
-    string_type: str) -> Tuple[str, Optional[FieldTrialsMode]]:
-  if not '.' in string_type:
-    return string_type, None
-  [browser, subtype] = string_type.split('.', 2)
-
-  if subtype == 'no-trials':
-    return browser, FieldTrialsMode.NO_TRIALS
-  if subtype == 'griffin':
-    return browser, FieldTrialsMode.GRIFFIN
-  if subtype == 'testing-field-trials':
-    return browser, FieldTrialsMode.TESTING_FIELD_TRIALS
-  raise RuntimeError('Bad browser type ' + string_type)
-
-
-def ParseBrowserType(string_type: str) -> BrowserType:
-  browser, field_trials_mode = ParseFieldTrialMode(string_type)
+def ParseBrowserType(browser: str) -> BrowserType:
   if browser == 'chrome-official':
-    return ChromeOfficialBrowserTypeImpl('SxS', field_trials_mode)
+    return ChromeOfficialBrowserTypeImpl('SxS')
 
   if browser == 'chromium':
-    return ChromiumBrowserTypeImpl(field_trials_mode)
+    return ChromiumBrowserTypeImpl()
 
   if browser == 'chrome':
-    return ChromeTestingBrowserTypeImpl('for Testing', field_trials_mode)
+    return ChromeTestingBrowserTypeImpl('for Testing')
 
   if browser == 'brave':
-    return BraveBrowserTypeImpl('Nightly', field_trials_mode)
-  if string_type.startswith('custom'):
-    return BrowserType(string_type, string_type, '', [], [], False,
-                       FieldTrialsMode.NO_TRIALS)
+    return BraveBrowserTypeImpl('Nightly')
+  if browser.startswith('custom'):
+    return BrowserType(browser, browser, '', [], [], False)
 
-  raise NotImplementedError(f"Unknown browser type {string_type}")
+  raise NotImplementedError(f"Unknown browser type {browser}")

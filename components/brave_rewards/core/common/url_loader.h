@@ -16,9 +16,9 @@ namespace brave_rewards::internal {
 
 // Responsible for dispatching URL network requests to the browser, and logging
 // both requests and responses.
-class URLLoader : public RewardsEngineHelper {
+class URLLoader : public RewardsEngineHelper, public WithHelperKey<URLLoader> {
  public:
-  explicit URLLoader(RewardsEngineImpl& engine);
+  explicit URLLoader(RewardsEngine& engine);
   ~URLLoader() override;
 
   enum class LogLevel {
@@ -47,6 +47,12 @@ class URLLoader : public RewardsEngineHelper {
   // Returns a value indicating whether the specified request header should be
   // logged when using the `kDetailed` log level.
   static bool ShouldLogRequestHeader(const std::string& header);
+
+  // Returns a value indicating whether the specified HTTP response code
+  // indicates success (i.e. is in the 200 range).
+  static bool IsSuccessCode(int http_status_code) {
+    return http_status_code >= 200 && http_status_code < 300;
+  }
 
  private:
   void LogRequest(const mojom::UrlRequest& request, LogLevel log_level);

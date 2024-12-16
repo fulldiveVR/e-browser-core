@@ -47,6 +47,10 @@ import { RewardsMenu } from '../wallet-menus/rewards_menu'
 import {
   BalanceDetailsModal //
 } from '../popup-modals/balance_details_modal/balance_details_modal'
+import {
+  EditTokenModal //
+} from '../popup-modals/edit_token_modal/edit_token_modal'
+import { ShieldedLabel } from '../../shared/shielded_label/shielded_label'
 
 // Styled Components
 import {
@@ -80,6 +84,7 @@ interface Props {
   isPanel?: boolean
   isAccountDetails?: boolean
   spotPrice: string
+  isGrouped?: boolean
 }
 
 const ICON_CONFIG = { size: 'medium', marginLeft: 0, marginRight: 8 } as const
@@ -94,7 +99,8 @@ export const PortfolioAssetItem = ({
   isPanel,
   spotPrice,
   account,
-  isAccountDetails
+  isAccountDetails,
+  isGrouped
 }: Props) => {
   // queries
   const { data: defaultFiatCurrency = 'usd' } = useGetDefaultFiatCurrencyQuery()
@@ -107,11 +113,10 @@ export const PortfolioAssetItem = ({
     )
 
   // state
-  const [assetNameSkeletonWidth, setAssetNameSkeletonWidth] = React.useState(0)
-  const [assetNetworkSkeletonWidth, setAssetNetworkSkeletonWidth] =
-    React.useState(0)
   const [showAssetMenu, setShowAssetMenu] = React.useState<boolean>(false)
   const [showBalanceDetailsModal, setShowBalanceDetailsModal] =
+    React.useState<boolean>(false)
+  const [showEditTokenModal, setShowEditTokenModal] =
     React.useState<boolean>(false)
 
   // refs
@@ -143,7 +148,7 @@ export const PortfolioAssetItem = ({
     return new Amount(assetBalance)
       .divideByDecimals(token.decimals)
       .times(spotPrice)
-  }, [spotPrice, assetBalance, token.chainId])
+  }, [spotPrice, assetBalance, token.decimals])
 
   const formattedFiatBalance = fiatBalance.formatAsFiat(defaultFiatCurrency)
 
@@ -168,7 +173,7 @@ export const PortfolioAssetItem = ({
         : tokensNetwork.chainName
     }
     return token.symbol
-  }, [tokensNetwork, token, isRewardsToken, externalProvider])
+  }, [isRewardsToken, tokensNetwork, isPanel, token.symbol, externalProvider])
 
   const network = isRewardsToken
     ? getNormalizedExternalRewardsNetwork(externalProvider)
@@ -181,18 +186,15 @@ export const PortfolioAssetItem = ({
   const showBalanceInfo =
     hasPendingBalance && account && token.coin === BraveWallet.CoinType.BTC
 
-  // effects
-  React.useEffect(() => {
-    // Random value between 100 & 250
-    // Set value only once
-    if (assetNameSkeletonWidth === 0) {
-      setAssetNameSkeletonWidth(unbiasedRandom(100, 250))
-    }
+  const assetNameSkeletonWidth = React.useMemo(
+    () => unbiasedRandom(100, 250),
+    []
+  )
 
-    if (assetNetworkSkeletonWidth === 0) {
-      setAssetNetworkSkeletonWidth(unbiasedRandom(100, 250))
-    }
-  }, [])
+  const assetNetworkSkeletonWidth = React.useMemo(
+    () => unbiasedRandom(100, 250),
+    []
+  )
 
   // render
   return (
@@ -200,9 +202,10 @@ export const PortfolioAssetItem = ({
       <Wrapper
         fullWidth={true}
         showBorder={isAccountDetails && showBalanceInfo}
+        isGrouped={isGrouped}
       >
         {token.visible && (
-          <HoverArea isPanel={isPanel}>
+          <HoverArea isGrouped={isGrouped}>
             <Button
               disabled={isLoading}
               rightMargin={10}
@@ -211,15 +214,9 @@ export const PortfolioAssetItem = ({
               <NameAndIcon>
                 <IconsWrapper>
                   {isNonFungibleToken ? (
-                    <NftIconWithPlaceholder
-                      asset={token}
-                      network={network}
-                    />
+                    <NftIconWithPlaceholder asset={token} />
                   ) : (
-                    <AssetIconWithPlaceholder
-                      asset={token}
-                      network={network}
-                    />
+                    <AssetIconWithPlaceholder asset={token} />
                   )}
                   {!isPanel &&
                     network &&
@@ -250,16 +247,19 @@ export const PortfolioAssetItem = ({
                     </>
                   ) : (
                     <>
-                      <AssetName
-                        textSize='14px'
-                        isBold={true}
-                        textAlign='left'
+                      <Row
+                        width='unset'
+                        gap='6px'
                       >
-                        {token.name}{' '}
-                        {token.isErc721 && token.tokenId
-                          ? '#' + new Amount(token.tokenId).toNumber()
-                          : ''}
-                      </AssetName>
+                        <AssetName
+                          textSize='14px'
+                          isBold={true}
+                          textAlign='left'
+                        >
+                          {token.isShielded ? 'Zcash' : token.name}
+                        </AssetName>
+                        {token.isShielded && <ShieldedLabel />}
+                      </Row>
                       <NetworkDescriptionText
                         textSize='12px'
                         isBold={false}
@@ -329,6 +329,11 @@ export const PortfolioAssetItem = ({
                       assetBalance={assetBalance}
                       asset={token}
                       account={account}
+                      onClickEditToken={
+                        token.contractAddress !== ''
+                          ? () => setShowEditTokenModal(true)
+                          : undefined
+                      }
                     />
                   )}
                 </>
@@ -372,6 +377,12 @@ export const PortfolioAssetItem = ({
           token={token}
           isLoadingBalances={isLoadingBitcoinBalances}
           balances={bitcoinBalances}
+        />
+      )}
+      {showEditTokenModal && (
+        <EditTokenModal
+          token={token}
+          onClose={() => setShowEditTokenModal(false)}
         />
       )}
     </>

@@ -9,18 +9,15 @@
 
 #include "base/containers/contains.h"
 
-namespace blink {
-namespace origin_trials {
+namespace blink::origin_trials {
 bool IsTrialValid_ChromiumImpl(std::string_view trial_name);
-}  // namespace origin_trials
-}  // namespace blink
+}  // namespace blink::origin_trials
 
 #define IsTrialValid IsTrialValid_ChromiumImpl
 #include "../gen/third_party/blink/common/origin_trials/origin_trials.cc"
 #undef IsTrialValid
 
-namespace blink {
-namespace origin_trials {
+namespace blink::origin_trials {
 
 bool IsTrialDisabledInBrave(std::string_view trial_name) {
   // When updating also update the array in the overload below.
@@ -32,7 +29,6 @@ bool IsTrialDisabledInBrave(std::string_view trial_name) {
       "FencedFrames",
       "Fledge",
       "Parakeet",
-      "PrivacySandboxAdsAPIs",
       "SignedExchangeSubresourcePrefetch",
       "SubresourceWebBundles",
       "TrustTokens",
@@ -54,10 +50,7 @@ bool IsTrialDisabledInBrave(blink::mojom::OriginTrialFeature feature) {
       {
           blink::mojom::OriginTrialFeature::kAdInterestGroupAPI,
           blink::mojom::OriginTrialFeature::kDigitalGoods,
-          blink::mojom::OriginTrialFeature::kFencedFrames,
-          blink::mojom::OriginTrialFeature::kFledge,
           blink::mojom::OriginTrialFeature::kParakeet,
-          blink::mojom::OriginTrialFeature::kPrivacySandboxAdsAPIs,
           blink::mojom::OriginTrialFeature::kPrivateStateTokens,
       };
 
@@ -71,5 +64,4 @@ bool IsTrialValid(std::string_view trial_name) {
   return IsTrialValid_ChromiumImpl(trial_name);
 }
 
-}  // namespace origin_trials
-}  // namespace blink
+}  // namespace blink::origin_trials

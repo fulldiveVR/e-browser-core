@@ -86,13 +86,11 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         creative_ad.daily_cap = campaign.daily_cap;
         creative_ad.priority = campaign.priority;
         creative_ad.pass_through_rate = campaign.pass_through_rate;
-        creative_ad.has_conversion = !creative_set.conversions.empty();
         creative_ad.per_day = creative_set.per_day;
         creative_ad.per_week = creative_set.per_week;
         creative_ad.per_month = creative_set.per_month;
         creative_ad.total_max = creative_set.total_max;
         creative_ad.value = creative_set.value;
-        creative_ad.embedding = creative_set.embedding;
         creative_ad.split_test_group = creative_set.split_test_group;
         creative_ad.dayparts = dayparts;
         creative_ad.geo_targets = geo_targets;
@@ -153,7 +151,6 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         creative_ad.daily_cap = campaign.daily_cap;
         creative_ad.priority = campaign.priority;
         creative_ad.pass_through_rate = campaign.pass_through_rate;
-        creative_ad.has_conversion = !creative_set.conversions.empty();
         creative_ad.per_day = creative_set.per_day;
         creative_ad.per_week = creative_set.per_week;
         creative_ad.per_month = creative_set.per_month;
@@ -222,7 +219,6 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         creative_ad.daily_cap = campaign.daily_cap;
         creative_ad.priority = campaign.priority;
         creative_ad.pass_through_rate = campaign.pass_through_rate;
-        creative_ad.has_conversion = !creative_set.conversions.empty();
         creative_ad.per_day = creative_set.per_day;
         creative_ad.per_week = creative_set.per_week;
         creative_ad.per_month = creative_set.per_month;
@@ -240,11 +236,14 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         CHECK(!creative.payload.wallpapers.empty());
         for (const auto& catalog_new_tab_page_ad_wallpaper :
              creative.payload.wallpapers) {
-          creative_ad.wallpapers.push_back(CreativeNewTabPageAdWallpaperInfo{
-              .image_url = catalog_new_tab_page_ad_wallpaper.image_url,
-              .focal_point = CreativeNewTabPageAdWallpaperFocalPointInfo{
-                  .x = catalog_new_tab_page_ad_wallpaper.focal_point.x,
-                  .y = catalog_new_tab_page_ad_wallpaper.focal_point.y}});
+          CreativeNewTabPageAdWallpaperInfo wallpaper;
+          wallpaper.image_url = catalog_new_tab_page_ad_wallpaper.image_url;
+          wallpaper.focal_point = CreativeNewTabPageAdWallpaperFocalPointInfo{
+              .x = catalog_new_tab_page_ad_wallpaper.focal_point.x,
+              .y = catalog_new_tab_page_ad_wallpaper.focal_point.y};
+          wallpaper.condition_matchers =
+              catalog_new_tab_page_ad_wallpaper.condition_matchers;
+          creative_ad.wallpapers.push_back(wallpaper);
         }
 
         // Segments
@@ -299,7 +298,6 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         creative_ad.daily_cap = campaign.daily_cap;
         creative_ad.priority = campaign.priority;
         creative_ad.pass_through_rate = campaign.pass_through_rate;
-        creative_ad.has_conversion = !creative_set.conversions.empty();
         creative_ad.per_day = creative_set.per_day;
         creative_ad.per_week = creative_set.per_week;
         creative_ad.per_month = creative_set.per_month;
@@ -367,6 +365,7 @@ CreativesInfo BuildCreatives(const CatalogInfo& catalog) {
         if (!creative_set_conversion.IsValid()) {
           BLOG(1, "Creative set id " << creative_set.id
                                      << " has an invalid conversion");
+
           continue;
         }
 

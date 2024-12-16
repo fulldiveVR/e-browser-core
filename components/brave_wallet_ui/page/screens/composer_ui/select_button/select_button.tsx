@@ -12,6 +12,7 @@ import { BraveWallet, SendPageTabHashes } from '../../../../constants/types'
 // Utils
 import { checkIfTokenNeedsNetworkIcon } from '../../../../utils/asset-utils'
 import Amount from '../../../../utils/amount'
+import { reduceInt } from '../../../../utils/string-utils'
 
 // Hooks
 import { useGetNetworkQuery } from '../../../../common/slices/api.slice'
@@ -29,18 +30,18 @@ import { NftIcon } from '../../../../components/shared/nft-icon/nft-icon'
 import {
   AssetIcon,
   NetworkIconWrapper,
-  Button,
-  ButtonIcon,
   IconsWrapper,
-  ButtonText
+  SelectButtonText
 } from './select_button.style'
 import { Row } from '../../../../components/shared/style'
+import { CaratIcon, Button } from '../shared_composer.style'
 
 interface Props {
   onClick: () => void
   token: BraveWallet.BlockchainToken | undefined
   selectedSendOption: SendPageTabHashes
   placeholderText: string
+  disabled?: boolean
 }
 
 const ICON_CONFIG = { size: 'big', marginLeft: 0, marginRight: 0 } as const
@@ -48,7 +49,8 @@ const AssetIconWithPlaceholder = withPlaceholderIcon(AssetIcon, ICON_CONFIG)
 const NftIconWithPlaceholder = withPlaceholderIcon(NftIcon, ICON_CONFIG)
 
 export const SelectButton = (props: Props) => {
-  const { onClick, token, selectedSendOption, placeholderText } = props
+  const { onClick, token, selectedSendOption, placeholderText, disabled } =
+    props
 
   // Queries
   const { data: tokensNetwork } = useGetNetworkQuery(token ?? skipToken)
@@ -57,9 +59,11 @@ export const SelectButton = (props: Props) => {
   const buttonText = React.useMemo(() => {
     if (selectedSendOption === SendPageTabHashes.nft) {
       const id = token?.tokenId
-        ? `#${new Amount(token?.tokenId).toNumber()}`
+        ? `#${reduceInt(new Amount(token?.tokenId).format())}`
         : ''
-      return token !== undefined ? `${token.name} ${id}` : placeholderText
+      return token !== undefined
+        ? `${token.name || token.symbol} ${id}`
+        : placeholderText
     }
     return token !== undefined ? token.symbol : placeholderText
   }, [selectedSendOption, token, placeholderText])
@@ -67,22 +71,16 @@ export const SelectButton = (props: Props) => {
   return (
     <Button
       onClick={onClick}
-      morePadding={token !== undefined}
-      isNFT={selectedSendOption === SendPageTabHashes.nft}
+      isPlaceholder={!token}
+      disabled={disabled}
     >
       <Row>
         {token && (
           <IconsWrapper>
             {token.isNft || token.isErc721 ? (
-              <NftIconWithPlaceholder
-                asset={token}
-                network={tokensNetwork}
-              />
+              <NftIconWithPlaceholder asset={token} />
             ) : (
-              <AssetIconWithPlaceholder
-                asset={token}
-                network={tokensNetwork}
-              />
+              <AssetIconWithPlaceholder asset={token} />
             )}
             {tokensNetwork &&
               checkIfTokenNeedsNetworkIcon(
@@ -98,16 +96,15 @@ export const SelectButton = (props: Props) => {
               )}
           </IconsWrapper>
         )}
-        <ButtonText
+        <SelectButtonText
           textSize='22px'
           isNFT={selectedSendOption === SendPageTabHashes.nft}
           textAlign='left'
-          isPlaceholder={!token}
         >
           {buttonText}
-        </ButtonText>
+        </SelectButtonText>
       </Row>
-      <ButtonIcon />
+      <CaratIcon />
     </Button>
   )
 }

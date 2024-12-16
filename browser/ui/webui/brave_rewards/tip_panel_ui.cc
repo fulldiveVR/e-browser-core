@@ -8,6 +8,7 @@
 #include <memory>
 #include <utility>
 
+#include "brave/browser/ui/webui/brave_rewards/rewards_web_ui_utils.h"
 #include "brave/browser/ui/webui/brave_rewards/tip_panel_handler.h"
 #include "brave/components/brave_rewards/resources/grit/brave_rewards_resources.h"
 #include "brave/components/brave_rewards/resources/grit/tip_panel_generated_map.h"
@@ -19,6 +20,7 @@
 #include "content/public/browser/web_contents.h"
 #include "content/public/browser/web_ui.h"
 #include "content/public/browser/web_ui_data_source.h"
+#include "content/public/common/url_constants.h"
 
 namespace brave_rewards {
 
@@ -71,15 +73,18 @@ static constexpr webui::LocalizedString kStrings[] = {
 }  // namespace
 
 TipPanelUI::TipPanelUI(content::WebUI* web_ui)
-    : MojoBubbleWebUIController(web_ui, true) {
+    : TopChromeWebUIController(web_ui, true) {
   auto* source = content::WebUIDataSource::CreateAndAdd(
       web_ui->GetWebContents()->GetBrowserContext(), kBraveTipPanelHost);
 
   source->AddLocalizedStrings(kStrings);
 
-  webui::SetupWebUIDataSource(
-      source, base::make_span(kTipPanelGenerated, kTipPanelGeneratedSize),
-      IDR_TIP_PANEL_HTML);
+  webui::SetupWebUIDataSource(source, kTipPanelGenerated, IDR_TIP_PANEL_HTML);
+
+  source->OverrideContentSecurityPolicy(
+      network::mojom::CSPDirectiveName::ImgSrc,
+      "img-src chrome://resources chrome://theme chrome://rewards-image "
+      "chrome://favicon2 blob: data: 'self';");
 }
 
 TipPanelUI::~TipPanelUI() = default;
@@ -99,6 +104,19 @@ void TipPanelUI::CreateHandler(
   handler_ = std::make_unique<TipPanelHandler>(std::move(panel),
                                                std::move(handler), embedder(),
                                                Profile::FromWebUI(web_ui()));
+}
+
+TipPanelUIConfig::TipPanelUIConfig()
+    : DefaultTopChromeWebUIConfig(content::kChromeUIScheme,
+                                  kBraveTipPanelHost) {}
+
+bool TipPanelUIConfig::IsWebUIEnabled(
+    content::BrowserContext* browser_context) {
+  return !ShouldBlockRewardsWebUI(browser_context, GURL(kBraveTipPanelURL));
+}
+
+bool TipPanelUIConfig::ShouldAutoResizeHost() {
+  return true;
 }
 
 }  // namespace brave_rewards

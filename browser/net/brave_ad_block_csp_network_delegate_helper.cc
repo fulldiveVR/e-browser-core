@@ -10,8 +10,8 @@
 
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/net/url_context.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/ad_block_service_helper.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/core/browser/ad_block_service_helper.h"
 #include "content/public/browser/browser_thread.h"
 #include "net/base/net_errors.h"
 #include "net/http/http_response_headers.h"
@@ -79,13 +79,9 @@ int OnHeadersReceived_AdBlockCspWork(
           new net::HttpResponseHeaders(response_headers->raw_headers());
     }
 
-    std::string original_csp_string;
-    std::optional<std::string> original_csp = std::nullopt;
-    if ((*override_response_headers)
-            ->GetNormalizedHeader("Content-Security-Policy",
-                                  &original_csp_string)) {
-      original_csp = std::optional<std::string>(original_csp_string);
-    }
+    std::optional<std::string> original_csp =
+        (*override_response_headers)
+            ->GetNormalizedHeader("Content-Security-Policy");
 
     (*override_response_headers)->RemoveHeader("Content-Security-Policy");
 

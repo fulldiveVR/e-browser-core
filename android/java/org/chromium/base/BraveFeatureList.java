@@ -13,6 +13,7 @@ public abstract class BraveFeatureList {
     public static final String USE_DEV_UPDATER_URL = "UseDevUpdaterUrl";
     public static final String FORCE_WEB_CONTENTS_DARK_MODE = "WebContentsForceDark";
     public static final String ENABLE_FORCE_DARK = "enable-force-dark";
+    public static final String ENABLE_PARALLEL_DOWNLOADING = "enable-parallel-downloading";
     public static final String BRAVE_SEARCH_OMNIBOX_BANNER = "BraveSearchOmniboxBanner";
     public static final String BRAVE_BACKGROUND_VIDEO_PLAYBACK = "BraveBackgroundVideoPlayback";
     public static final String BRAVE_BACKGROUND_VIDEO_PLAYBACK_INTERNAL =
@@ -31,5 +32,7 @@ public abstract class BraveFeatureList {
     public static final String AI_CHAT = "AIChat";
     public static final String BRAVE_SHOW_STRICT_FINGERPRINTING_MODE =
             "BraveShowStrictFingerprintingMode";
-    public static final String BRAVE_ZERO_DAY_FLAG_ANDROID = "BraveZeroDayFlagAndroid";
+    public static final String BRAVE_DAY_ZERO_EXPERIMENT = "BraveDayZeroExperiment";
+    public static final String BRAVE_FALLBACK_DOH_PROVIDER = "BraveFallbackDoHProvider";
+    public static final String BRAVE_BLOCK_ALL_COOKIES_TOGGLE = "BlockAllCookiesToggle";
 }

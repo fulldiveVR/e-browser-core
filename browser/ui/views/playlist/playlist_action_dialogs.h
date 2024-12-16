@@ -11,8 +11,8 @@
 #include <utility>
 #include <vector>
 
-#include "brave/browser/playlist/playlist_tab_helper_observer.h"
 #include "brave/browser/ui/views/playlist/selectable_list_view.h"
+#include "brave/components/playlist/browser/playlist_tab_helper_observer.h"
 #include "brave/components/playlist/common/mojom/playlist.mojom.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "components/constrained_window/constrained_window_views.h"
@@ -32,8 +32,8 @@ class PlaylistService;
 // Base class for playlist action dialogs. Responsible for creating widget
 // and anchoring.
 class PlaylistActionDialog : public views::DialogDelegateView {
+  METADATA_HEADER(PlaylistActionDialog, views::DialogDelegateView)
  public:
-  METADATA_HEADER(PlaylistActionDialog);
 
   template <class Dialog, typename... Args>
   static void Show(BrowserView* browser_view, Args&&... args) {
@@ -43,7 +43,7 @@ class PlaylistActionDialog : public views::DialogDelegateView {
 
     auto dialog = std::make_unique<Dialog>(typename Dialog::PassKey(),
                                            std::forward<Args>(args)...);
-    dialog->SetModalType(ui::ModalType::MODAL_TYPE_WINDOW);
+    dialog->SetModalType(ui::mojom::ModalType::kWindow);
     constrained_window::CreateBrowserModalDialogViews(
         std::move(dialog), browser_widget->GetNativeWindow())
         ->Show();
@@ -59,8 +59,8 @@ class PlaylistActionDialog : public views::DialogDelegateView {
 
 class PlaylistNewPlaylistDialog : public PlaylistActionDialog,
                                   public views::TextfieldController {
+  METADATA_HEADER(PlaylistNewPlaylistDialog, PlaylistActionDialog)
  public:
-  METADATA_HEADER(PlaylistNewPlaylistDialog);
 
   using PassKey = base::PassKey<PlaylistActionDialog>;
 
@@ -86,8 +86,8 @@ class PlaylistNewPlaylistDialog : public PlaylistActionDialog,
 class PlaylistMoveDialog : public PlaylistActionDialog,
                            public views::TextfieldController,
                            public playlist::PlaylistTabHelperObserver {
+  METADATA_HEADER(PlaylistMoveDialog, PlaylistActionDialog)
  public:
-  METADATA_HEADER(PlaylistMoveDialog);
 
   using PassKey = base::PassKey<PlaylistActionDialog>;
 
@@ -117,10 +117,6 @@ class PlaylistMoveDialog : public PlaylistActionDialog,
   void PlaylistTabHelperWillBeDestroyed() override;
   void OnSavedItemsChanged(
       const std::vector<playlist::mojom::PlaylistItemPtr>& items) override;
-  void OnFoundItemsChanged(
-      const std::vector<playlist::mojom::PlaylistItemPtr>& items) override {}
-  void OnAddedItemFromTabHelper(
-      const std::vector<playlist::mojom::PlaylistItemPtr>& items) override {}
 
  private:
   static constexpr int kContentsWidth = 464;
@@ -167,8 +163,8 @@ class PlaylistMoveDialog : public PlaylistActionDialog,
 };
 
 class PlaylistRemovePlaylistConfirmDialog : public PlaylistActionDialog {
+  METADATA_HEADER(PlaylistRemovePlaylistConfirmDialog, PlaylistActionDialog)
  public:
-  METADATA_HEADER(PlaylistRemovePlaylistConfirmDialog);
 
   using PassKey = base::PassKey<PlaylistActionDialog>;
 

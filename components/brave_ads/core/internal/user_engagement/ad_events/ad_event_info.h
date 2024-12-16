@@ -6,12 +6,12 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_USER_ENGAGEMENT_AD_EVENTS_AD_EVENT_INFO_H_
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_USER_ENGAGEMENT_AD_EVENTS_AD_EVENT_INFO_H_
 
+#include <optional>
 #include <string>
 #include <vector>
 
 #include "base/time/time.h"
-#include "brave/components/brave_ads/core/public/account/confirmations/confirmation_type.h"
-#include "brave/components/brave_ads/core/public/ad_units/ad_type.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 
 namespace brave_ads {
 
@@ -30,15 +30,16 @@ struct AdEventInfo final {
 
   [[nodiscard]] bool IsValid() const;
 
-  AdType type = AdType::kUndefined;
-  ConfirmationType confirmation_type = ConfirmationType::kUndefined;
+  mojom::AdType type = mojom::AdType::kUndefined;
+  mojom::ConfirmationType confirmation_type =
+      mojom::ConfirmationType::kUndefined;
   std::string placement_id;
   std::string creative_instance_id;
   std::string creative_set_id;
   std::string campaign_id;
   std::string advertiser_id;
   std::string segment;
-  base::Time created_at;
+  std::optional<base::Time> created_at;
 };
 
 using AdEventList = std::vector<AdEventInfo>;

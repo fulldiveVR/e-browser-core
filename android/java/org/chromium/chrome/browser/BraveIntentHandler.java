@@ -12,12 +12,11 @@ import android.text.TextUtils;
 import org.chromium.base.IntentUtils;
 import org.chromium.base.Log;
 import org.chromium.base.ThreadUtils;
-import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.content_public.browser.BrowserStartupController;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 
 public class BraveIntentHandler {
     private static final String TAG = "BraveIntentHandler";
@@ -38,6 +37,7 @@ public class BraveIntentHandler {
         String url = IntentHandler.getUrlFromVoiceSearchResult(intent);
         if (url == null) url = getUrlForCustomTab(intent);
         if (url == null) url = getUrlForWebapp(intent);
+        if (url == null) url = IntentHandler.getUrlFromShareIntent(intent);
         if (url == null) url = intent.getDataString();
         if (url == null) url = getUrlFromText(intent);
         if (url == null) url = getWebSearchUrl(intent);
@@ -65,32 +65,33 @@ public class BraveIntentHandler {
         }
 
         try {
-            return ThreadUtils.runOnUiThreadBlocking(new Callable<String>() {
-                @Override
-                public String call() {
-                    return TemplateUrlServiceFactory
-                            .getForProfile(Profile.getLastUsedRegularProfile())
-                            .getUrlForSearchQuery(query);
-                }
-            });
-        } catch (ExecutionException e) {
+            return ThreadUtils.runOnUiThreadBlocking(
+                    new Callable<String>() {
+                        @Override
+                        public String call() {
+                            return TemplateUrlServiceFactory.getForProfile(
+                                            ProfileManager.getLastUsedRegularProfile())
+                                    .getUrlForSearchQuery(query);
+                        }
+                    });
+        } catch (Exception e) {
             Log.e(TAG, "Could not retrieve search query: " + e);
         }
         return null;
     }
 
-    private static String getUrlForCustomTab(Intent intent) {
-        assert (false);
+    private static String getUrlForCustomTab(Intent unused_intent) {
+        assert false;
         return null;
     }
 
-    private static String getUrlForWebapp(Intent intent) {
-        assert (false);
+    private static String getUrlForWebapp(Intent unused_intent) {
+        assert false;
         return null;
     }
 
-    private static boolean isJavascriptSchemeOrInvalidUrl(String url) {
-        assert (false);
+    private static boolean isJavascriptSchemeOrInvalidUrl(String unused_url) {
+        assert false;
         return false;
     }
 }

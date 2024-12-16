@@ -1,13 +1,13 @@
 <!-- Add brave-browser issue below that this PR will resolve -->
-Resolves 
+Resolves
 
 <!-- CI-related labels that can be applied to this PR:
 * CI/run-audit-deps (1) - check for known npm/cargo vulnerabilities (audit_deps)
 * CI/run-network-audit (1) - run network-audit
 * CI/run-upstream-tests - run Chromium unit and browser tests on Linux and Windows (otherwise only on Linux)
-* CI/run-linux-arm64, CI/run-macos-arm64, CI/run-windows-arm64, CI/run-windows-x86 - run builds that would otherwise be skipped
+* CI/run-linux-arm64, CI/run-macos-x64, CI/run-windows-arm64, CI/run-windows-x86 - run builds that would otherwise be skipped
 * CI/skip - do not run CI builds (except noplatform)
-* CI/skip-linux-x64, CI/skip-android, CI/skip-macos-x64, CI/skip-ios, CI/skip-windows-x64 - skip CI builds for specific platforms
+* CI/skip-linux-x64, CI/skip-android, CI/skip-macos-arm64, CI/skip-ios, CI/skip-windows-x64 - skip CI builds for specific platforms
 * CI/skip-upstream-tests - do not run Chromium unit, or browser tests (otherwise only on Linux)
 * CI/skip-all-linters - do not run presubmit and lint checks
 * CI/storybook-url (1) - deploy storybook and provide a unique URL for each build
@@ -25,7 +25,7 @@ Resolves
 - [ ] Added appropriate labels (`QA/Yes` or `QA/No`; `release-notes/include` or `release-notes/exclude`; `OS/...`) to the associated issue
 - [ ] Checked the PR locally:
   * `npm run test -- brave_browser_tests`, `npm run test -- brave_unit_tests` [wiki](https://github.com/brave/brave-browser/wiki/Tests)
-  * `npm run lint`, `npm run presubmit` [wiki](https://github.com/brave/brave-browser/wiki/Presubmit-checks), `npm run gn_check`, `npm run tslint`
+  * `npm run presubmit` [wiki](https://github.com/brave/brave-browser/wiki/Presubmit-checks), `npm run gn_check`, `npm run tslint`
 - [ ] Ran `git rebase master` (if needed)
 
 ## Reviewer Checklist:

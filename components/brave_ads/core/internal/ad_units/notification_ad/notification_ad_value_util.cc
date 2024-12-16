@@ -5,19 +5,16 @@
 
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_value_util.h"
 
+#include "brave/components/brave_ads/core/public/ad_units/ad_type.h"
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_constants.h"
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_info.h"
 #include "url/gurl.h"
 
 namespace brave_ads {
 
-namespace {
-constexpr char kTypeKey[] = "type";
-}  // namespace
-
 base::Value::Dict NotificationAdToValue(const NotificationAdInfo& ad) {
   return base::Value::Dict()
-      .Set(kTypeKey, ToString(ad.type))
+      .Set(kNotificationAdTypeKey, ToString(ad.type))
       .Set(kNotificationAdPlacementIdKey, ad.placement_id)
       .Set(kNotificationAdCreativeInstanceIdKey, ad.creative_instance_id)
       .Set(kNotificationAdCreativeSetIdKey, ad.creative_set_id)
@@ -44,8 +41,8 @@ base::Value::List NotificationAdsToValue(
 NotificationAdInfo NotificationAdFromValue(const base::Value::Dict& dict) {
   NotificationAdInfo ad;
 
-  if (const auto* const value = dict.FindString(kTypeKey)) {
-    ad.type = ToAdType(*value);
+  if (const auto* const value = dict.FindString(kNotificationAdTypeKey)) {
+    ad.type = ToMojomAdType(*value);
   }
 
   if (const auto* const value =
@@ -95,9 +92,9 @@ base::circular_deque<NotificationAdInfo> NotificationAdsFromValue(
     const base::Value::List& list) {
   base::circular_deque<NotificationAdInfo> ads;
 
-  for (const auto& item : list) {
-    if (const auto* const item_dict = item.GetIfDict()) {
-      ads.push_back(NotificationAdFromValue(*item_dict));
+  for (const auto& value : list) {
+    if (const auto* const dict = value.GetIfDict()) {
+      ads.push_back(NotificationAdFromValue(*dict));
     }
   }
 

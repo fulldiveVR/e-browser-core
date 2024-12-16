@@ -61,8 +61,8 @@ inline constexpr char kShieldsStatsBadgeVisible[] =
 inline constexpr char kAdControlType[] = "brave.ad_default";
 inline constexpr char kGoogleLoginControlType[] = "brave.google_login_default";
 inline constexpr char kWebTorrentEnabled[] = "brave.webtorrent_enabled";
+// Deprecated
 inline constexpr char kHangoutsEnabled[] = "brave.hangouts_enabled";
-inline constexpr char kIPFSCompanionEnabled[] = "brave.ipfs_companion_enabled";
 inline constexpr char kNewTabPageShowClock[] = "brave.new_tab_page.show_clock";
 inline constexpr char kNewTabPageClockFormat[] =
     "brave.new_tab_page.clock_format";
@@ -71,6 +71,8 @@ inline constexpr char kNewTabPageShowRewards[] =
     "brave.new_tab_page.show_rewards";
 inline constexpr char kNewTabPageShowBraveTalk[] =
     "brave.new_tab_page.show_together";
+inline constexpr char kNewTabPageShowBraveVPN[] =
+    "brave.new_tab_page.show_brave_vpn";
 inline constexpr char kNewTabPageHideAllWidgets[] =
     "brave.new_tab_page.hide_all_widgets";
 inline constexpr char kNewTabPageShowsOptions[] =
@@ -123,17 +125,14 @@ inline constexpr char kSafetynetStatus[] = "safetynet.status";
 inline constexpr char kEnableWindowClosingConfirm[] =
     "brave.enable_window_closing_confirm";
 inline constexpr char kEnableClosingLastTab[] = "brave.enable_closing_last_tab";
+inline constexpr char kShowFullscreenReminder[] =
+    "brave.show_fullscreen_reminder";
 #endif
 
 inline constexpr char kDefaultBrowserLaunchingCount[] =
     "brave.default_browser.launching_count";
 
 // deprecated
-inline constexpr char kBraveThemeType[] = "brave.theme.type";
-inline constexpr char kUseOverriddenBraveThemeType[] =
-    "brave.theme.use_overridden_brave_theme_type";
-inline constexpr char kNewTabPageShowTopSites[] =
-    "brave.new_tab_page.show_top_sites";
 inline constexpr char kOtherBookmarksMigrated[] =
     "brave.other_bookmarks_migrated";
 

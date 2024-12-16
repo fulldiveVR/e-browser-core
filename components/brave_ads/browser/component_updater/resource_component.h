@@ -29,9 +29,6 @@ class ResourceComponent : public ResourceComponentRegistrarDelegate {
   ResourceComponent(const ResourceComponent&) = delete;
   ResourceComponent& operator=(const ResourceComponent&) = delete;
 
-  ResourceComponent(ResourceComponent&&) noexcept = delete;
-  ResourceComponent& operator=(ResourceComponent&&) noexcept = delete;
-
   ~ResourceComponent() override;
 
   void AddObserver(ResourceComponentObserver* observer);
@@ -40,7 +37,8 @@ class ResourceComponent : public ResourceComponentRegistrarDelegate {
   void RegisterComponentForCountryCode(const std::string& country_code);
   void RegisterComponentForLanguageCode(const std::string& language_code);
 
-  std::optional<base::FilePath> GetPath(const std::string& id, int version);
+  std::optional<base::FilePath> MaybeGetPath(const std::string& id,
+                                             int version);
 
  private:
   void LoadManifestCallback(const std::string& component_id,
@@ -52,7 +50,7 @@ class ResourceComponent : public ResourceComponentRegistrarDelegate {
                             const base::FilePath& install_dir,
                             const std::string& json);
 
-  void NotifyDidUpdateResourceComponent(const std::string& manifest_version,
+  void NotifyResourceComponentDidChange(const std::string& manifest_version,
                                         const std::string& id);
   void NotifyDidUnregisterResourceComponent(const std::string& id);
 
@@ -63,10 +61,12 @@ class ResourceComponent : public ResourceComponentRegistrarDelegate {
   void OnResourceComponentUnregistered(
       const std::string& component_id) override;
 
+  base::ObserverList<ResourceComponentObserver> observers_;
+
   ResourceComponentRegistrar country_resource_component_registrar_;
   ResourceComponentRegistrar language_resource_component_registrar_;
-  std::map<std::string, ResourceInfo> resources_;
-  base::ObserverList<ResourceComponentObserver> observers_;
+  std::map</*resource_key*/ std::string, ResourceInfo> resources_;
+
   base::WeakPtrFactory<ResourceComponent> weak_factory_{this};
 };
 

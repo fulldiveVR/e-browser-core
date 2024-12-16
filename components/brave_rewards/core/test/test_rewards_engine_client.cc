@@ -41,10 +41,7 @@ std::optional<std::string> FakeEncryption::DecryptString(
 }
 
 std::string FakeEncryption::Base64EncryptString(const std::string& value) {
-  std::string fake_encrypted = EncryptString(value);
-  std::string encoded;
-  base::Base64Encode(fake_encrypted, &encoded);
-  return encoded;
+  return base::Base64Encode(EncryptString(value));
 }
 
 std::optional<std::string> FakeEncryption::Base64DecryptString(
@@ -304,13 +301,6 @@ void TestRewardsEngineClient::GetClientCountryCode(
   GetStringState(state::kDeclaredGeo, std::move(callback));
 }
 
-void TestRewardsEngineClient::IsAutoContributeSupportedForClient(
-    IsAutoContributeSupportedForClientCallback callback) {
-  const auto country_code =
-      mojom::RewardsEngineClientAsyncWaiter(this).GetClientCountryCode();
-  std::move(callback).Run(country_code != "JP" && country_code != "IN");
-}
-
 void TestRewardsEngineClient::GetLegacyWallet(
     GetLegacyWalletCallback callback) {
   std::move(callback).Run("");
@@ -327,8 +317,6 @@ void TestRewardsEngineClient::GetClientInfo(GetClientInfoCallback callback) {
   info->os = mojom::OperatingSystem::UNDEFINED;
   std::move(callback).Run(std::move(info));
 }
-
-void TestRewardsEngineClient::UnblindedTokensReady() {}
 
 void TestRewardsEngineClient::ReconcileStampReset() {}
 
@@ -347,10 +335,6 @@ void TestRewardsEngineClient::Log(const std::string& file,
       logging::GetVlogLevelHelper(file.c_str(), strlen(file.c_str()));
   if (verbose_level <= vlog_level) {
     logging::LogMessage(file.c_str(), line, -verbose_level).stream() << message;
-  }
-
-  if (log_callback_) {
-    log_callback_.Run(message);
   }
 }
 
@@ -391,10 +375,6 @@ void TestRewardsEngineClient::AddSPLAccountBalanceResultForTesting(
     mojom::SolanaAccountBalancePtr balance) {
   spl_balance_results_.emplace_back(solana_address, token_mint_address,
                                     std::move(balance));
-}
-
-void TestRewardsEngineClient::SetLogCallbackForTesting(LogCallback callback) {
-  log_callback_ = std::move(callback);
 }
 
 }  // namespace brave_rewards::internal

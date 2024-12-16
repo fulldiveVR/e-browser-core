@@ -3,7 +3,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 import * as React from 'react'
-import { useDispatch } from 'react-redux'
 import { skipToken } from '@reduxjs/toolkit/query/react'
 
 // Hooks
@@ -18,8 +17,12 @@ import { BraveWallet, SignDataSteps } from '../../../constants/types'
 // Utils
 import { getLocale } from '../../../../common/locale'
 import { unicodeEscape, hasUnicode } from '../../../utils/string-utils'
-import { useGetNetworkQuery } from '../../../common/slices/api.slice'
-import { PanelActions } from '../../../panel/actions'
+import {
+  useGetIsTxSimulationOptInStatusQuery,
+  useGetNetworkQuery,
+  useProcessSignMessageRequestMutation,
+  useSignMessageHardwareMutation
+} from '../../../common/slices/api.slice'
 import { isHardwareAccount } from '../../../utils/account-utils'
 
 // Components
@@ -28,6 +31,12 @@ import { PanelTab } from '../panel-tab/index'
 import { CreateSiteOrigin } from '../../shared/create-site-origin/index'
 import { SignInWithEthereum } from './sign_in_with_ethereum'
 import { SignCowSwapOrder } from './cow_swap_order'
+import {
+  EthSignTypedData //
+} from './common/eth_sign_typed_data'
+import {
+  EvmMessageSimulationNotSupportedSheet //
+} from '../evm_message_simulation_not_supported_sheet/evm_message_simulation_not_supported_sheet'
 
 // Styled Components
 import {
@@ -58,15 +67,14 @@ import {
   URLText,
   WarningIcon
 } from '../shared-panel-styles'
-import {
-  EthSignTypedData //
-} from './common/eth_sign_typed_data'
 
 interface Props {
   signMessageData: BraveWallet.SignMessageRequest[]
   showWarning: boolean
 }
 
+// TODO: fix broken article link
+// https://github.com/brave/brave-browser/issues/39708
 const onClickLearnMore = () => {
   chrome.tabs.create(
     {
@@ -83,9 +91,6 @@ const onClickLearnMore = () => {
 export const SignPanel = (props: Props) => {
   const { signMessageData, showWarning } = props
 
-  // redux
-  const dispatch = useDispatch()
-
   // queries
   const { data: network } = useGetNetworkQuery(
     signMessageData[0]
@@ -95,6 +100,14 @@ export const SignPanel = (props: Props) => {
         }
       : skipToken
   )
+
+  const { data: simulationOptInStatus } = useGetIsTxSimulationOptInStatusQuery()
+  const isSimulationPermitted =
+    simulationOptInStatus === BraveWallet.BlowfishOptInStatus.kAllowed
+
+  // mutations
+  const [processSignMessageRequest] = useProcessSignMessageRequestMutation()
+  const [signMessageHardware] = useSignMessageHardwareMutation()
 
   // state
   const [signStep, setSignStep] = React.useState<SignDataSteps>(
@@ -111,13 +124,11 @@ export const SignPanel = (props: Props) => {
   const solanaSignTypedData = selectedQueueData.signData.solanaSignData
 
   // methods
-  const onCancel = () => {
-    dispatch(
-      PanelActions.signMessageProcessed({
-        approved: false,
-        id: signMessageData[0].id
-      })
-    )
+  const onCancel = async () => {
+    await processSignMessageRequest({
+      approved: false,
+      id: signMessageData[0].id
+    }).unwrap()
   }
 
   // custom hooks
@@ -153,25 +164,21 @@ export const SignPanel = (props: Props) => {
     setSelectedQueueData(signMessageData[signMessageQueueInfo.queueNumber])
   }
 
-  const onSign = () => {
+  const onSign = async () => {
     if (!account) {
       return
     }
 
     if (isHardwareAccount(account.accountId)) {
-      dispatch(
-        PanelActions.signMessageHardware({
-          account,
-          request: signMessageData[0]
-        })
-      )
+      await signMessageHardware({
+        account,
+        request: signMessageData[0]
+      }).unwrap()
     } else {
-      dispatch(
-        PanelActions.signMessageProcessed({
-          approved: true,
-          id: signMessageData[0].id
-        })
-      )
+      await processSignMessageRequest({
+        approved: true,
+        id: signMessageData[0].id
+      }).unwrap()
     }
   }
 
@@ -261,7 +268,7 @@ export const SignPanel = (props: Props) => {
               isSelected={true}
               text={
                 ethSignTypedData
-                  ? getLocale('braveWalletSignTransactionEIP712MessageTitle')
+                  ? getLocale('braveWalletDetails')
                   : getLocale('braveWalletSignTransactionMessageTitle')
               }
             />
@@ -306,6 +313,9 @@ export const SignPanel = (props: Props) => {
           )}
         </>
       )}
+
+      {isSimulationPermitted && <EvmMessageSimulationNotSupportedSheet />}
+
       <SignPanelButtonRow>
         <NavButton
           buttonType='secondary'

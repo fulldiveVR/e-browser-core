@@ -33,20 +33,20 @@ std::optional<TransformationPtr> LoadMappedTokenTransformation(
   }
 
   return std::make_unique<MappedTokensTransformation>(
-      mapped_token_transformation);
+      *mapped_token_transformation);
 }
 
 std::optional<TransformationVector> LoadTransformations(
-    const neural_text_classification::flat::Model* text_classification) {
+    const neural_text_classification::flat::Model* const text_classification) {
   CHECK(text_classification);
 
-  const auto* transformations = text_classification->transformations();
+  const auto* const transformations = text_classification->transformations();
   if (!transformations) {
     return std::nullopt;
   }
 
   TransformationVector transformations_vec;
-  for (const auto* transformation_entry : *transformations) {
+  for (const auto* const transformation_entry : *transformations) {
     if (!transformation_entry) {
       return std::nullopt;
     }
@@ -71,7 +71,7 @@ std::optional<TransformationVector> LoadTransformations(
       }
       case neural_text_classification::flat::TransformationType::
           TransformationType_NONE: {
-        NOTREACHED_NORETURN();
+        NOTREACHED();
       }
     }
     if (!transformation_ptr) {
@@ -85,14 +85,14 @@ std::optional<TransformationVector> LoadTransformations(
 
 }  // namespace
 
-std::optional<PipelineInfo> LoadNeuralPipeline(const uint8_t* data,
-                                               const size_t length) {
+std::optional<PipelineInfo> LoadNeuralPipeline(const uint8_t* const data,
+                                               size_t length) {
   flatbuffers::Verifier verifier(data, length);
   if (!neural_text_classification::flat::VerifyModelBuffer(verifier)) {
     return std::nullopt;
   }
 
-  const neural_text_classification::flat::Model* model =
+  const neural_text_classification::flat::Model* const model =
       neural_text_classification::flat::GetModel(data);
   if (!model) {
     return std::nullopt;
@@ -100,8 +100,8 @@ std::optional<PipelineInfo> LoadNeuralPipeline(const uint8_t* data,
 
   const std::string default_language_code =
       brave_l10n::GetISOLanguageCode(brave_l10n::GetDefaultLocaleString());
-  const auto* locale = model->locale();
-  if (!locale ||
+  const auto* const locale = model->locale();
+  if (locale == nullptr ||
       !base::EqualsCaseInsensitiveASCII(locale->str(), default_language_code)) {
     return std::nullopt;
   }
@@ -112,7 +112,7 @@ std::optional<PipelineInfo> LoadNeuralPipeline(const uint8_t* data,
     return std::nullopt;
   }
 
-  NeuralModel neural_model(model);
+  NeuralModel neural_model(*model);
   return PipelineInfo(locale->str(), std::move(*transformations), std::nullopt,
                       std::move(neural_model));
 }

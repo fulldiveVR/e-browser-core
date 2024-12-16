@@ -10,12 +10,14 @@
 namespace omnibox {
 
 OVERRIDE_FEATURE_DEFAULT_STATES({{
-    {kDocumentProviderNoSetting, base::FEATURE_DISABLED_BY_DEFAULT},
     {kDocumentProviderNoSyncRequirement, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kExpandedStateHeight, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kExpandedStateShape, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kOmniboxSteadyStateHeight, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kMlUrlScoring, base::FEATURE_DISABLED_BY_DEFAULT},
+#if BUILDFLAG(IS_ANDROID)
+    {kRetainOmniboxOnFocus, base::FEATURE_ENABLED_BY_DEFAULT},
+#endif
     {kRichAutocompletion, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kStarterPackExpansion, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kZeroSuggestPrefetching, base::FEATURE_DISABLED_BY_DEFAULT},
 }});
 
 BASE_FEATURE(kOmniboxTabSwitchByDefault,

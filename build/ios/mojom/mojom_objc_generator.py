@@ -324,14 +324,19 @@ class BaseListValueMojoTypemap(MojoTypemap):
     def IsMojoType(kind):
         return (mojom.IsStructKind(kind) and
                 kind.qualified_name == 'mojo_base.mojom.ListValue')
+
     def ObjCWrappedType(self):
         return "NSArray<MojoBaseValue*>*"
+
     def ExpectedCppType(self):
         return "base::Value"
+
     def DefaultObjCValue(self, default):
         return "@[]"
+
     def ObjCToCpp(self, accessor):
-        return "brave::BaseValueFromNSArray(%s)" % accessor
+        return "brave::BaseValueListFromNSArray(%s)" % accessor
+
     def CppToObjC(self, accessor):
         return "brave::NSArrayFromBaseValue(%s.Clone())" % accessor
 
@@ -481,8 +486,9 @@ class Generator(generator.Generator):
 
     def _GetObjCPropertyModifiers(self, kind, inside_union=False):
         modifiers = ['nonatomic']
-        if (mojom.IsArrayKind(kind) or mojom.IsStringKind(kind) or
-                mojom.IsMapKind(kind) or mojom.IsStructKind(kind)):
+        if (mojom.IsArrayKind(kind) or mojom.IsStringKind(kind)
+                or mojom.IsMapKind(kind) or mojom.IsStructKind(kind)
+                or mojom.IsUnionKind(kind)):
             modifiers.append('copy')
         if ((inside_union and mojom.IsObjectKind(kind))
                 or mojom.IsNullableKind(kind)):

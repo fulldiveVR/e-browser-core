@@ -1,13 +1,10 @@
 /**
- * Copyright (c) 2022 The Brave Authors. All rights reserved.
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at https://mozilla.org/MPL/2.0/.
+ * Copyright (c) 2022 The Brave Authors. All rights reserved. This Source Code Form is subject to
+ * the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with
+ * this file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-
 package org.chromium.chrome.browser.omnibox.suggestions;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -20,18 +17,21 @@ import org.chromium.chrome.browser.omnibox.suggestions.base.BaseSuggestionViewBi
 import org.chromium.chrome.browser.omnibox.suggestions.brave_leo.BraveLeoSuggestionViewBinder;
 import org.chromium.chrome.browser.omnibox.suggestions.brave_search.BraveSearchBannerViewBinder;
 import org.chromium.ui.ViewProvider;
-import org.chromium.ui.modelutil.MVCListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BraveAutocompleteCoordinator {
     public ViewProvider<SuggestionListViewHolder> createViewProvider(
-            Context context, MVCListAdapter.ModelList modelList) {
+            boolean forcePhoneStyleOmnibox) {
         ViewProvider<SuggestionListViewHolder> provider =
-                (ViewProvider<SuggestionListViewHolder>) BraveReflectionUtil.InvokeMethod(
-                        AutocompleteCoordinator.class, this, "createViewProvider", Context.class,
-                        context, MVCListAdapter.ModelList.class, modelList);
+                (ViewProvider<SuggestionListViewHolder>)
+                        BraveReflectionUtil.invokeMethod(
+                                AutocompleteCoordinator.class,
+                                this,
+                                "createViewProvider",
+                                boolean.class,
+                                forcePhoneStyleOmnibox);
 
         return new ViewProvider<SuggestionListViewHolder>() {
             private List<Callback<SuggestionListViewHolder>> mCallbacks = new ArrayList<>();

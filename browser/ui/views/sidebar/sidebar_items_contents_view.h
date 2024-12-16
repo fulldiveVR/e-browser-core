@@ -14,8 +14,8 @@
 #include "base/scoped_observation.h"
 #include "brave/browser/ui/sidebar/sidebar_model.h"
 #include "brave/browser/ui/views/sidebar/sidebar_button_view.h"
-#include "brave/components/sidebar/sidebar_item.h"
-#include "ui/base/models/simple_menu_model.h"
+#include "brave/components/sidebar/browser/sidebar_item.h"
+#include "ui/menus/simple_menu_model.h"
 #include "ui/views/context_menu_controller.h"
 #include "ui/views/controls/button/button.h"
 #include "ui/views/view.h"
@@ -37,8 +37,8 @@ class SidebarItemsContentsView : public views::View,
                                  public views::ContextMenuController,
                                  public views::WidgetObserver,
                                  public ui::SimpleMenuModel::Delegate {
+  METADATA_HEADER(SidebarItemsContentsView, views::View)
  public:
-  METADATA_HEADER(SidebarItemsContentsView);
   SidebarItemsContentsView(BraveBrowser* browser,
                            views::DragController* drag_controller);
   ~SidebarItemsContentsView() override;
@@ -47,13 +47,15 @@ class SidebarItemsContentsView : public views::View,
   SidebarItemsContentsView operator=(const SidebarItemsContentsView&) = delete;
 
   // views::View overrides:
-  gfx::Size CalculatePreferredSize() const override;
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override;
   void OnThemeChanged() override;
 
   // views::ContextMenuController overrides:
-  void ShowContextMenuForViewImpl(views::View* source,
-                                  const gfx::Point& point,
-                                  ui::MenuSourceType source_type) override;
+  void ShowContextMenuForViewImpl(
+      views::View* source,
+      const gfx::Point& point,
+      ui::mojom::MenuSourceType source_type) override;
 
   // views::WidgetObserver overrides:
   void OnWidgetDestroying(views::Widget* widget) override;

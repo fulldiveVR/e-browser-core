@@ -21,6 +21,7 @@ import { openWalletRouteTab } from '../../../utils/routes-utils'
 import { UISelectors } from '../../../common/selectors'
 import { useSafeUISelector } from '../../../common/hooks/use-safe-selector'
 import { useUnlockWalletMutation } from '../../../common/slices/api.slice'
+import getWalletAPIProxy from '../../../common/async/bridge'
 
 // Components
 import { PasswordInput } from '../../shared/password-input/password-input-v2'
@@ -33,9 +34,12 @@ import {
   PageIcon,
   InputColumn,
   UnlockButton,
-  InputLabel
+  InputLabel,
+  DoubleTapIcon,
+  AndroidLockScreenWrapper,
+  BraveLogo
 } from './style'
-import { VerticalSpace, Row } from '../../shared/style'
+import { VerticalSpace, Row, Text } from '../../shared/style'
 
 export const LockScreen = () => {
   // redux
@@ -66,7 +70,7 @@ export const LockScreen = () => {
     } else {
       setHasIncorrectPassword(true)
     }
-  }, [password, attemptUnlockWallet])
+  }, [attemptUnlockWallet, password, history])
 
   const handleKeyDown = React.useCallback(
     async (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -95,18 +99,44 @@ export const LockScreen = () => {
     } else {
       history.push(WalletRoutes.Restore)
     }
-  }, [isPanel])
+  }, [history, isPanel])
+
+  const onDoubleTap = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Event detail is two for double clicks.
+    if (e.detail === 2) {
+      getWalletAPIProxy().pageHandler?.unlockWalletUI()
+    }
+  }
 
   const isAndroid = loadTimeData.getBoolean('isAndroid') || false
 
   // render
+  if (isAndroid) {
+    return (
+      <AndroidLockScreenWrapper onClick={onDoubleTap}>
+        <DoubleTapIcon />
+        <Text
+          textSize='22px'
+          textColor='primary'
+        >
+          {getLocale('braveWalletDoubleTapScreen')}
+        </Text>
+        <Text
+          textSize='16px'
+          textColor='tertiary'
+        >
+          {getLocale('braveWalletUnlockAndroidDescription')}
+        </Text>
+      </AndroidLockScreenWrapper>
+    )
+  }
+
   return (
     <StyledWrapper>
+      {isPanel && <BraveLogo />}
       <PageIcon />
       <Title>{getLocale('braveWalletUnlockWallet')}</Title>
-      <Description textSize='16px'>
-        {getLocale('braveWalletLockScreenTitle')}
-      </Description>
+      <Description>{getLocale('braveWalletLockScreenTitle')}</Description>
       <InputColumn fullWidth={true}>
         <Row
           justifyContent='flex-start'
@@ -134,18 +164,16 @@ export const LockScreen = () => {
           onClick={unlockWallet}
           isDisabled={disabled}
           kind='filled'
-          size='large'
+          size={isPanel ? 'medium' : 'large'}
         >
           {getLocale('braveWalletLockScreenButton')}
         </UnlockButton>
-        {!isAndroid && (
-          <Button
-            onClick={onShowRestore}
-            kind='plain'
-          >
-            {getLocale('braveWalletWelcomeRestoreButton')}
-          </Button>
-        )}
+        <Button
+          onClick={onShowRestore}
+          kind='plain'
+        >
+          {getLocale('braveWalletWelcomeRestoreButton')}
+        </Button>
       </InputColumn>
     </StyledWrapper>
   )

@@ -18,7 +18,6 @@
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_context_util.h"
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_contribution.h"
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_network_util.h"
-#include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_promotion.h"
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_response.h"
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_util.h"
 #include "brave/components/brave_rewards/common/pref_names.h"
@@ -43,7 +42,6 @@ class RewardsP3ABrowserTest : public InProcessBrowserTest,
   RewardsP3ABrowserTest() {
     contribution_ =
         std::make_unique<test_util::RewardsBrowserTestContribution>();
-    promotion_ = std::make_unique<test_util::RewardsBrowserTestPromotion>();
     response_ = std::make_unique<test_util::RewardsBrowserTestResponse>();
     histogram_tester_ = std::make_unique<base::HistogramTester>();
   }
@@ -61,7 +59,6 @@ class RewardsP3ABrowserTest : public InProcessBrowserTest,
     ASSERT_TRUE(https_server_->Start());
 
     // Rewards service
-    brave::RegisterPathProvider();
     auto* profile = browser()->profile();
     rewards_service_ = static_cast<RewardsServiceImpl*>(
         RewardsServiceFactory::GetForProfile(profile));
@@ -75,7 +72,6 @@ class RewardsP3ABrowserTest : public InProcessBrowserTest,
     rewards_service_->SetEngineEnvForTesting();
 
     // Other
-    promotion_->Initialize(browser(), rewards_service_);
     contribution_->Initialize(browser(), rewards_service_);
 
     test_util::SetOnboardingBypassed(browser());
@@ -125,10 +121,9 @@ class RewardsP3ABrowserTest : public InProcessBrowserTest,
     }
   }
 
-  raw_ptr<RewardsServiceImpl> rewards_service_ = nullptr;
+  raw_ptr<RewardsServiceImpl, DanglingUntriaged> rewards_service_ = nullptr;
   std::unique_ptr<net::EmbeddedTestServer> https_server_;
   std::unique_ptr<test_util::RewardsBrowserTestContribution> contribution_;
-  std::unique_ptr<test_util::RewardsBrowserTestPromotion> promotion_;
   std::unique_ptr<test_util::RewardsBrowserTestResponse> response_;
   std::unique_ptr<base::HistogramTester> histogram_tester_;
 
@@ -170,18 +165,21 @@ IN_PROC_BROWSER_TEST_F(RewardsP3ABrowserTest, ToggleAdTypes) {
   TurnOnRewards();
 
   prefs->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds, false);
-  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName,
-                                       p3a::AdTypesEnabled::kNTP, 1);
+  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName, 5, 1);
 
   prefs->SetBoolean(ntp_background_images::prefs::
                         kNewTabPageShowSponsoredImagesBackgroundImage,
                     false);
-  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName,
-                                       p3a::AdTypesEnabled::kNone, 1);
+  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName, 4, 1);
 
   prefs->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds, true);
-  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName,
-                                       p3a::AdTypesEnabled::kNotification, 1);
+  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName, 6, 1);
+
+  prefs->SetBoolean(brave_ads::prefs::kOptedInToSearchResultAds, false);
+  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName, 2, 1);
+
+  prefs->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds, false);
+  histogram_tester_->ExpectBucketCount(p3a::kAdTypesEnabledHistogramName, 0, 1);
 }
 
 #if !BUILDFLAG(IS_ANDROID)

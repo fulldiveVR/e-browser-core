@@ -26,19 +26,19 @@
 // }
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoints {
 
 class PostConnectBitflyer final : public PostConnect {
  public:
-  PostConnectBitflyer(RewardsEngineImpl& engine, std::string&& linking_info);
+  PostConnectBitflyer(RewardsEngine& engine, std::string&& linking_info);
   ~PostConnectBitflyer() override;
 
  private:
   std::optional<std::string> Content() const override;
 
-  const char* Path() const override;
+  std::string Path(base::cstring_view payment_id) const override;
 
   std::string linking_info_;
 };

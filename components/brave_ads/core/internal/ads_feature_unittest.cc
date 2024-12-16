@@ -12,20 +12,6 @@
 
 namespace brave_ads {
 
-TEST(BraveAdsBraveAdsFeatureTest, ShouldLaunchAsInProcessService) {
-  // Arrange
-  const base::test::ScopedFeatureList scoped_feature_list(
-      kShouldLaunchBraveAdsAsAnInProcessServiceFeature);
-
-  // Act & Assert
-  EXPECT_TRUE(ShouldLaunchAsInProcessService());
-}
-
-TEST(BraveAdsBraveAdsFeatureTest, ShouldNotLaunchAsInProcessService) {
-  // Act & Assert
-  EXPECT_FALSE(ShouldLaunchAsInProcessService());
-}
-
 TEST(BraveAdsBraveAdsFeatureTest, ShouldAlwaysRunService) {
   // Arrange
   const base::test::ScopedFeatureList scoped_feature_list(
@@ -55,15 +41,16 @@ TEST(BraveAdsBraveAdsFeatureTest, ShouldNotAlwaysTriggerNewTabPageAdEvents) {
 }
 
 TEST(BraveAdsBraveAdsFeatureTest, ShouldSupportSearchResultAds) {
-  // Arrange
-  const base::test::ScopedFeatureList scoped_feature_list(
-      kShouldSupportSearchResultAdsFeature);
-
   // Act & Assert
   EXPECT_TRUE(ShouldSupportSearchResultAds());
 }
 
 TEST(BraveAdsBraveAdsFeatureTest, ShouldNotSupportSearchResultAds) {
+  // Arrange
+  base::test::ScopedFeatureList scoped_feature_list;
+  scoped_feature_list.InitAndDisableFeature(
+      kShouldSupportSearchResultAdsFeature);
+
   // Act & Assert
   EXPECT_FALSE(ShouldSupportSearchResultAds());
 }

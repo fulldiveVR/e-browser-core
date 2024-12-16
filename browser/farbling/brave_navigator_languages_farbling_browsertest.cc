@@ -11,13 +11,13 @@
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/extensions/brave_base_local_data_files_browsertest.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
-#include "brave/components/brave_shields/browser/brave_farbling_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/constants/pref_names.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/extensions/extension_browsertest.h"
+#include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
@@ -27,15 +27,10 @@
 #include "components/prefs/pref_service.h"
 #include "components/user_prefs/user_prefs.h"
 #include "content/public/browser/render_frame_host.h"
-#include "content/public/renderer/render_frame.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "content/public/test/content_mock_cert_verifier.h"
 #include "net/dns/mock_host_resolver.h"
-#include "third_party/blink/public/web/web_local_frame.h"
-#include "third_party/blink/renderer/core/frame/local_dom_window.h"
-#include "third_party/blink/renderer/core/frame/navigator.h"
-#include "third_party/blink/renderer/core/frame/navigator_language.h"
 
 using brave_shields::ControlType;
 using brave_shields::features::kBraveReduceLanguage;
@@ -43,8 +38,7 @@ using brave_shields::features::kBraveShowStrictFingerprintingMode;
 using content::TitleWatcher;
 
 namespace {
-const char kNavigatorLanguagesScript[] = "navigator.languages.toString()";
-const uint64_t kTestingSessionToken = 12345;
+constexpr char kNavigatorLanguagesScript[] = "navigator.languages.toString()";
 }  // namespace
 
 class BraveNavigatorLanguagesFarblingBrowserTest : public InProcessBrowserTest {
@@ -53,13 +47,6 @@ class BraveNavigatorLanguagesFarblingBrowserTest : public InProcessBrowserTest {
       : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
     feature_list_.InitWithFeatures(
         {kBraveReduceLanguage, kBraveShowStrictFingerprintingMode}, {});
-    brave::RegisterPathProvider();
-    base::FilePath test_data_dir;
-    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
-    https_server_.ServeFilesFromDirectory(test_data_dir);
-    https_server_.RegisterRequestMonitor(base::BindRepeating(
-        &BraveNavigatorLanguagesFarblingBrowserTest::MonitorHTTPRequest,
-        base::Unretained(this)));
   }
 
   BraveNavigatorLanguagesFarblingBrowserTest(
@@ -81,11 +68,12 @@ class BraveNavigatorLanguagesFarblingBrowserTest : public InProcessBrowserTest {
 
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
-
-    g_brave_browser_process->brave_farbling_service()
-        ->set_session_tokens_for_testing(kTestingSessionToken,
-                                         kTestingSessionToken);
-
+    base::FilePath test_data_dir;
+    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
+    https_server_.ServeFilesFromDirectory(test_data_dir);
+    https_server_.RegisterRequestMonitor(base::BindRepeating(
+        &BraveNavigatorLanguagesFarblingBrowserTest::MonitorHTTPRequest,
+        base::Unretained(this)));
     mock_cert_verifier_.mock_cert_verifier()->set_default_result(net::OK);
     host_resolver()->AddRule("*", "127.0.0.1");
     ASSERT_TRUE(https_server_.Start());
@@ -271,9 +259,9 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorLanguagesFarblingBrowserTest,
   // Farbling level: default
   // HTTP Accept-Language header should be farbled by domain.
   SetFingerprintingDefault(domain_b);
-  SetExpectedHTTPAcceptLanguage("la;q=0.7");
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b));
   SetExpectedHTTPAcceptLanguage("la;q=0.8");
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b));
+  SetExpectedHTTPAcceptLanguage("la;q=0.5");
   SetFingerprintingDefault(domain_d);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_d));
 
@@ -299,9 +287,9 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorLanguagesFarblingBrowserTest,
   // Farbling level: default
   // HTTP Accept-Language header should be farbled by domain.
   SetFingerprintingDefault(domain_b);
-  SetExpectedHTTPAcceptLanguage("zh-HK,zh;q=0.7");
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b));
   SetExpectedHTTPAcceptLanguage("zh-HK,zh;q=0.8");
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b));
+  SetExpectedHTTPAcceptLanguage("zh-HK,zh;q=0.5");
   SetFingerprintingDefault(domain_d);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_d));
 
@@ -336,7 +324,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorLanguagesFarblingBrowserTest,
   // even if fetch originated from a service worker.
   SetFingerprintingDefault(domain_b);
   SetAcceptLanguages("zh-HK,zh,la");
-  SetExpectedHTTPAcceptLanguage("zh-HK,zh;q=0.7");
+  SetExpectedHTTPAcceptLanguage("zh-HK,zh;q=0.8");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b_sw));
   std::u16string expected_title(u"LOADED");
   TitleWatcher watcher(web_contents(), expected_title);

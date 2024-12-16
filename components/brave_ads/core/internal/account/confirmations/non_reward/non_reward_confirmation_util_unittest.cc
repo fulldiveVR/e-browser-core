@@ -5,33 +5,28 @@
 
 #include "brave/components/brave_ads/core/internal/account/confirmations/non_reward/non_reward_confirmation_util.h"
 
-#include "base/test/mock_callback.h"
 #include "brave/components/brave_ads/core/internal/account/confirmations/confirmation_info.h"
 #include "brave/components/brave_ads/core/internal/account/confirmations/user_data_builder/confirmation_user_data_builder.h"
-#include "brave/components/brave_ads/core/internal/account/confirmations/user_data_builder/confirmation_user_data_builder_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/account/confirmations/user_data_builder/confirmation_user_data_builder_test_util.h"
 #include "brave/components/brave_ads/core/internal/account/transactions/transaction_info.h"
-#include "brave/components/brave_ads/core/internal/account/transactions/transaction_unittest_constants.h"
-#include "brave/components/brave_ads/core/internal/account/transactions/transactions_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/ad_units/ad_unittest_constants.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
-#include "brave/components/brave_ads/core/internal/settings/settings_unittest_util.h"
-#include "brave/components/brave_ads/core/public/account/confirmations/confirmation_type.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "brave/components/brave_ads/core/internal/account/transactions/transaction_test_constants.h"
+#include "brave/components/brave_ads/core/internal/account/transactions/transactions_test_util.h"
+#include "brave/components/brave_ads/core/internal/ad_units/ad_test_constants.h"
+#include "brave/components/brave_ads/core/internal/common/test/test_base.h"
+#include "brave/components/brave_ads/core/internal/common/test/time_test_util.h"
+#include "brave/components/brave_ads/core/internal/settings/settings_test_util.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
 namespace brave_ads {
 
-class BraveAdsNonRewardConfirmationUtilTest : public UnitTestBase {
+class BraveAdsNonRewardConfirmationUtilTest : public test::TestBase {
  protected:
   void SetUp() override {
-    UnitTestBase::SetUp();
+    test::TestBase::SetUp();
 
-    MockConfirmationUserData();
-
-    AdvanceClockTo(
-        TimeFromString("Mon, 8 Jul 1996 09:25:00", /*is_local=*/false));
+    test::MockConfirmationUserData();
   }
 };
 
@@ -40,25 +35,23 @@ TEST_F(BraveAdsNonRewardConfirmationUtilTest, BuildNonRewardConfirmation) {
   test::DisableBraveRewards();
 
   const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
+      /*value=*/0.01, mojom::AdType::kNotificationAd,
+      mojom::ConfirmationType::kViewedImpression,
+      /*should_generate_random_uuids=*/false);
 
-  // Act & Assert
-  base::MockCallback<BuildConfirmationUserDataCallback> callback;
-  EXPECT_CALL(callback, Run)
-      .WillOnce([&transaction](const UserDataInfo& user_data) {
-        ConfirmationInfo expected_confirmation;
-        expected_confirmation.transaction_id = kTransactionId;
-        expected_confirmation.creative_instance_id = kCreativeInstanceId;
-        expected_confirmation.type = ConfirmationType::kViewed;
-        expected_confirmation.ad_type = AdType::kNotificationAd;
-        expected_confirmation.created_at = Now();
+  // Act
+  const std::optional<ConfirmationInfo> confirmation =
+      BuildNonRewardConfirmation(transaction, /*user_data=*/{});
+  ASSERT_TRUE(confirmation);
 
-        EXPECT_EQ(expected_confirmation,
-                  BuildNonRewardConfirmation(transaction, user_data));
-      });
-
-  BuildConfirmationUserData(transaction, callback.Get());
+  // Assert
+  EXPECT_THAT(
+      *confirmation,
+      ::testing::FieldsAre(test::kTransactionId, test::kCreativeInstanceId,
+                           mojom::ConfirmationType::kViewedImpression,
+                           mojom::AdType::kNotificationAd,
+                           /*created_at*/ test::Now(),
+                           /*reward*/ std::nullopt, UserDataInfo{}));
 }
 
 TEST_F(BraveAdsNonRewardConfirmationUtilTest,
@@ -66,25 +59,32 @@ TEST_F(BraveAdsNonRewardConfirmationUtilTest,
   // Arrange
   test::DisableBraveRewards();
 
-  const TransactionInfo transaction;
+  // Act
+  const std::optional<ConfirmationInfo> confirmation =
+      BuildNonRewardConfirmation(/*transaction=*/{}, /*user_data=*/{});
+  ASSERT_TRUE(confirmation);
 
-  // Act & Assert
-  EXPECT_DEATH_IF_SUPPORTED(
-      BuildNonRewardConfirmation(transaction, /*user_data=*/{}),
-      "Check failed: transaction.IsValid*");
+  // Assert
+  EXPECT_DEATH_IF_SUPPORTED(*confirmation,
+                            "Check failed: transaction.IsValid*");
 }
 
 TEST_F(BraveAdsNonRewardConfirmationUtilTest,
        DISABLED_DoNotBuildNonRewardConfirmationForRewardsUser) {
   // Arrange
   const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
+      /*value=*/0.01, mojom::AdType::kNotificationAd,
+      mojom::ConfirmationType::kViewedImpression,
+      /*should_generate_random_uuids=*/false);
 
-  // Act & Assert
-  EXPECT_DEATH_IF_SUPPORTED(
-      BuildNonRewardConfirmation(transaction, /*user_data=*/{}),
-      "Check failed: !UserHasJoinedBraveRewards*");
+  // Act
+  const std::optional<ConfirmationInfo> confirmation =
+      BuildNonRewardConfirmation(transaction, /*user_data=*/{});
+  ASSERT_TRUE(confirmation);
+
+  // Assert
+  EXPECT_DEATH_IF_SUPPORTED(*confirmation,
+                            "Check failed: !UserHasJoinedBraveRewards*");
 }
 
 }  // namespace brave_ads

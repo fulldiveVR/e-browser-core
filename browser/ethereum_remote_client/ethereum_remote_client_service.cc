@@ -48,9 +48,6 @@ EthereumRemoteClientService::EthereumRemoteClientService(
 
 EthereumRemoteClientService::~EthereumRemoteClientService() = default;
 
-const size_t EthereumRemoteClientService::kNonceByteLength = 12;
-const size_t EthereumRemoteClientService::kSeedByteLength = 32;
-
 // Returns 32 bytes of output from HKDF-SHA256.
 // This is done so that ethereum-remote-client never actually directly has
 // access to the master seed, but it does have a deterministic seed.
@@ -99,7 +96,7 @@ bool EthereumRemoteClientService::OpenSeed(const std::string& cipher_seed,
 std::string EthereumRemoteClientService::GetRandomNonce() {
   // crypto::RandBytes is fail safe.
   uint8_t nonceBytes[kNonceByteLength];
-  crypto::RandBytes(nonceBytes, kNonceByteLength);
+  crypto::RandBytes(nonceBytes);
   return std::string(reinterpret_cast<char*>(nonceBytes), kNonceByteLength);
 }
 
@@ -107,7 +104,7 @@ std::string EthereumRemoteClientService::GetRandomNonce() {
 std::string EthereumRemoteClientService::GetRandomSeed() {
   // crypto::RandBytes is fail safe.
   uint8_t random_seed_bytes[kSeedByteLength];
-  crypto::RandBytes(random_seed_bytes, kSeedByteLength);
+  crypto::RandBytes(random_seed_bytes);
   return std::string(reinterpret_cast<char*>(random_seed_bytes),
                      kSeedByteLength);
 }
@@ -131,14 +128,8 @@ void EthereumRemoteClientService::SaveToPrefs(PrefService* prefs,
                                               const std::string& nonce) {
   // Store the seed in preferences, binary pref strings need to be
   // base64 encoded.  Base64 encoding is fail safe.
-  std::string base64_nonce;
-  std::string base64_cipher_seed;
-  base::Base64Encode(nonce, &base64_nonce);
-  base::Base64Encode(
-      base::MakeStringPiece(cipher_seed.begin(), cipher_seed.end()),
-      &base64_cipher_seed);
-  prefs->SetString(kERCAES256GCMSivNonce, base64_nonce);
-  prefs->SetString(kERCEncryptedSeed, base64_cipher_seed);
+  prefs->SetString(kERCAES256GCMSivNonce, base::Base64Encode(nonce));
+  prefs->SetString(kERCEncryptedSeed, base::Base64Encode(cipher_seed));
 }
 
 void EthereumRemoteClientService::ResetCryptoWallets() {

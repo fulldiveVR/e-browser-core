@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/new_tab_page_ads/new_tab_page_ad_event_handler_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -22,11 +22,6 @@ class NewTabPageAdEventHandlerDelegateMock
       const NewTabPageAdEventHandlerDelegateMock&) = delete;
   NewTabPageAdEventHandlerDelegateMock& operator=(
       const NewTabPageAdEventHandlerDelegateMock&) = delete;
-
-  NewTabPageAdEventHandlerDelegateMock(
-      NewTabPageAdEventHandlerDelegateMock&&) noexcept = delete;
-  NewTabPageAdEventHandlerDelegateMock& operator=(
-      NewTabPageAdEventHandlerDelegateMock&&) noexcept = delete;
 
   ~NewTabPageAdEventHandlerDelegateMock() override;
 
@@ -43,10 +38,22 @@ class NewTabPageAdEventHandlerDelegateMock
               (const NewTabPageAdInfo& ad));
 
   MOCK_METHOD(void,
+              OnDidFireNewTabPageAdMediaPlayEvent,
+              (const NewTabPageAdInfo& ad));
+
+  MOCK_METHOD(void,
+              OnDidFireNewTabPageAdMedia25Event,
+              (const NewTabPageAdInfo& ad));
+
+  MOCK_METHOD(void,
+              OnDidFireNewTabPageAdMedia100Event,
+              (const NewTabPageAdInfo& ad));
+
+  MOCK_METHOD(void,
               OnFailedToFireNewTabPageAdEvent,
               (const std::string& placement_id,
                const std::string& creative_instance_id,
-               const mojom::NewTabPageAdEventType event_type));
+               mojom::NewTabPageAdEventType mojom_ad_event_type));
 };
 
 }  // namespace brave_ads

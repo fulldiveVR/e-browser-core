@@ -11,7 +11,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/de_amp/common/features.h"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/blink/public/platform/web_isolated_world_info.h"
@@ -22,7 +22,7 @@ namespace cosmetic_filters {
 
 namespace {
 
-const char kSecurityOrigin[] = "chrome://cosmetic_filters";
+constexpr char kSecurityOrigin[] = "chrome://cosmetic_filters";
 
 void EnsureIsolatedWorldInitialized(int world_id) {
   static std::optional<int> last_used_world_id;

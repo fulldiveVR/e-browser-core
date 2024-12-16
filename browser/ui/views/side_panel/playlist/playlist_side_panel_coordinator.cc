@@ -50,8 +50,6 @@ void PlaylistSidePanelCoordinator::CreateAndRegisterEntry(
     SidePanelRegistry* global_registry) {
   global_registry->Register(std::make_unique<SidePanelEntry>(
       SidePanelEntry::Id::kPlaylist,
-      l10n_util::GetStringUTF16(IDS_SIDEBAR_PLAYLIST_ITEM_TITLE),
-      ui::ImageModel(),
       base::BindRepeating(&PlaylistSidePanelCoordinator::CreateWebView,
                           base::Unretained(this))));
 }
@@ -77,13 +75,13 @@ void PlaylistSidePanelCoordinator::LoadPlaylist(const std::string& playlist_id,
       {}, ui::PageTransition::PAGE_TRANSITION_AUTO_BOOKMARK, {}));
 }
 
-std::unique_ptr<views::View> PlaylistSidePanelCoordinator::CreateWebView() {
+std::unique_ptr<views::View> PlaylistSidePanelCoordinator::CreateWebView(
+    SidePanelEntryScope& scope) {
   const bool should_create_contents_wrapper = !contents_wrapper_;
   if (should_create_contents_wrapper) {
     contents_wrapper_ = std::make_unique<PlaylistContentsWrapper>(
         GURL(kPlaylistURL), GetBrowser().profile(),
         IDS_SIDEBAR_PLAYLIST_ITEM_TITLE,
-        /*webui_resizes_host=*/false,
         /*esc_closes_ui=*/false,
         static_cast<BrowserView*>(GetBrowser().window()), this);
     contents_wrapper_->ReloadWebContents();
@@ -93,7 +91,7 @@ std::unique_ptr<views::View> PlaylistSidePanelCoordinator::CreateWebView() {
   }
 
   auto web_view = std::make_unique<PlaylistSidePanelWebView>(
-      &GetBrowser(), base::DoNothing(), contents_wrapper_.get());
+      &GetBrowser(), scope, base::DoNothing(), contents_wrapper_.get());
   side_panel_web_view_ = web_view->GetWeakPtr();
 
   if (!should_create_contents_wrapper) {
@@ -120,7 +118,7 @@ void PlaylistSidePanelCoordinator::OnViewIsDeleting(views::View* view) {
 
 void PlaylistSidePanelCoordinator::DestroyWebContentsIfNeeded() {
   DCHECK(contents_wrapper_);
-  if (!contents_wrapper_->web_contents()->GetCurrentlyPlayingVideoCount()) {
+  if (!contents_wrapper_->web_contents()->IsCurrentlyAudible()) {
     contents_wrapper_.reset();
   }
 }

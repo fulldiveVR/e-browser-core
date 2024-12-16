@@ -5,6 +5,8 @@
 
 const path = require('path')
 const { spawn, spawnSync } = require('child_process')
+const readline = require('readline')
+const os = require('os')
 const config = require('./config')
 const fs = require('fs-extra')
 const crypto = require('crypto')
@@ -12,12 +14,17 @@ const l10nUtil = require('./l10nUtil')
 const Log = require('./logging')
 const assert = require('assert')
 const updateChromeVersion = require('./updateChromeVersion')
+const updateUnsafeBuffersPaths = require('./updateUnsafeBuffersPaths.js')
+const ActionGuard = require('./actionGuard')
+
+// Do not limit the number of listeners to avoid warnings from EventEmitter.
+process.setMaxListeners(0);
 
 const mergeWithDefault = (options) => {
   return Object.assign({}, config.defaultOptions, options)
 }
 
-async function applyPatches() {
+async function applyPatches(printPatchFailuresInJson) {
   const GitPatcher = require('./gitPatcher')
   Log.progressStart('apply patches')
   // Always detect if we need to apply patches, since user may have modified
@@ -28,24 +35,28 @@ async function applyPatches() {
   const catapultPatchesPath = path.join(patchesPath, 'third_party', 'catapult')
   const devtoolsFrontendPatchesPath = path.join(patchesPath, 'third_party', 'devtools-frontend', 'src')
   const ffmpegPatchesPath = path.join(patchesPath, 'third_party', 'ffmpeg')
+  const tflitePatchesPath = path.join(patchesPath, 'third_party', 'tflite', 'src')
 
   const chromiumRepoPath = config.srcDir
   const v8RepoPath = path.join(chromiumRepoPath, 'v8')
   const catapultRepoPath = path.join(chromiumRepoPath, 'third_party', 'catapult')
   const devtoolsFrontendRepoPath = path.join(chromiumRepoPath, 'third_party', 'devtools-frontend', 'src')
   const ffmpegRepoPath = path.join(chromiumRepoPath, 'third_party', 'ffmpeg')
+  const tfliteRepoPath = path.join(chromiumRepoPath, 'third_party', 'tflite', 'src')
 
   const chromiumPatcher = new GitPatcher(patchesPath, chromiumRepoPath)
   const v8Patcher = new GitPatcher(v8PatchesPath, v8RepoPath)
   const catapultPatcher = new GitPatcher(catapultPatchesPath, catapultRepoPath)
   const devtoolsFrontendPatcher = new GitPatcher(devtoolsFrontendPatchesPath, devtoolsFrontendRepoPath)
   const ffmpegPatcher = new GitPatcher(ffmpegPatchesPath, ffmpegRepoPath)
+  const tflitePatcher = new GitPatcher(tflitePatchesPath, tfliteRepoPath)
 
   const chromiumPatchStatus = await chromiumPatcher.applyPatches()
   const v8PatchStatus = await v8Patcher.applyPatches()
   const catapultPatchStatus = await catapultPatcher.applyPatches()
   const devtoolsFrontendPatchStatus = await devtoolsFrontendPatcher.applyPatches()
   const ffmpegPatchStatus = await ffmpegPatcher.applyPatches()
+  const tflitePatchStatus = await tflitePatcher.applyPatches()
 
   // Log status for all patches
   // Differentiate entries for logging
@@ -54,8 +65,12 @@ async function applyPatches() {
     s => s.path = path.join('third_party', 'catapult', s.path))
   devtoolsFrontendPatchStatus.forEach(
     s => s.path = path.join('third_party', 'devtools-frontend', 'src', s.path))
-  const allPatchStatus = [...chromiumPatchStatus, ...v8PatchStatus, ...catapultPatchStatus, ...devtoolsFrontendPatchStatus, ...ffmpegPatchStatus]
-  Log.allPatchStatus(allPatchStatus, 'Chromium')
+  const allPatchStatus = [...chromiumPatchStatus, ...v8PatchStatus, ...catapultPatchStatus, ...devtoolsFrontendPatchStatus, ...ffmpegPatchStatus, ...tflitePatchStatus]
+  if (printPatchFailuresInJson) {
+    Log.printFailedPatchesInJsonFormat(allPatchStatus, config.braveCoreDir)
+  } else {
+    Log.allPatchStatus(allPatchStatus, 'Chromium')
+  }
 
   const hasPatchError = allPatchStatus.some(p => p.error)
   // Exit on error in any patch
@@ -63,6 +78,8 @@ async function applyPatches() {
     Log.error('Exiting as not all patches were successful!')
     process.exit(1)
   }
+
+  await updateUnsafeBuffersPaths()
 
   updateChromeVersion()
   Log.progressFinish('apply patches')
@@ -77,7 +94,9 @@ const updateFileUTimesIfOverrideIsNewer = (original, override) => {
     const date = new Date()
     fs.utimesSync(original, date, date)
     console.log(original + ' is touched.')
+    return true
   }
+  return false
 }
 
 const deleteFileIfOverrideIsNewer = (original, override) => {
@@ -85,11 +104,13 @@ const deleteFileIfOverrideIsNewer = (original, override) => {
     try {
       fs.unlinkSync(original)
       console.log(original + ' has been deleted.')
+      return true
     } catch (err) {
       console.error('Unable to delete file: ' + original + ' error: ', err)
       process.exit(1)
     }
   }
+  return false
 }
 
 const getAdditionalGenLocation = () => {
@@ -136,24 +157,54 @@ const util = {
   },
 
   runAsync: (cmd, args = [], options = {}) => {
-    let { continueOnFail, verbose, ...cmdOptions } = options
-    if (verbose) {
+    let { continueOnFail, verbose, onStdErrLine, onStdOutLine, ...cmdOptions } = options
+    if (verbose !== false) {
       Log.command(cmdOptions.cwd, cmd, args)
     }
     return new Promise((resolve, reject) => {
       const prog = spawn(cmd, args, cmdOptions)
+      const signalsToForward = ['SIGINT', 'SIGTERM', 'SIGQUIT', 'SIGHUP']
+      const signalHandler = (s) => {
+        prog.kill(s)
+      }
+      signalsToForward.forEach((signal) => {
+        process.addListener(signal, signalHandler)
+      })
       let stderr = ''
       let stdout = ''
-      prog.stderr.on('data', data => {
-        stderr += data
-      })
-      prog.stdout.on('data', data => {
-        stdout += data
-      })
-      prog.on('close', statusCode => {
-        const hasFailed = statusCode !== 0
+      if (prog.stderr) {
+        if (onStdErrLine) {
+          readline.createInterface({
+            input: prog.stderr,
+            terminal: false
+          }).on('line', onStdErrLine)
+        } else {
+          prog.stderr.on('data', (data) => {
+            stderr += data
+          })
+        }
+      }
+      if (prog.stdout) {
+        if (onStdOutLine) {
+          readline.createInterface({
+            input: prog.stdout,
+            terminal: false
+          }).on('line', onStdOutLine)
+        } else {
+          prog.stdout.on('data', (data) => {
+            stdout += data
+          })
+        }
+      }
+      prog.on('close', (statusCode, signal) => {
+        signalsToForward.forEach((signal) => {
+          process.removeListener(signal, signalHandler)
+        })
+        const hasFailed = !signal && statusCode !== 0
         if (verbose && (!hasFailed || continueOnFail)) {
-          console.log(stdout)
+          if (stdout) {
+            console.log(stdout)
+          }
           if (stderr) {
             console.error(stderr)
           }
@@ -164,12 +215,15 @@ const util = {
           err.stdout = stdout
           reject(err)
           if (!continueOnFail) {
-            console.log(err.message)
-            console.log(stdout)
+            console.error(err.message)
+            console.error(stdout)
             console.error(stderr)
-            process.exit(1)
+            process.exit(statusCode)
           }
           return
+        } else if (signal) {
+          // If the process was killed by a signal, exit with the signal number.
+          process.exit(128 + os.constants.signals[signal])
         }
         resolve(stdout)
       })
@@ -290,6 +344,12 @@ const util = {
           config.getBraveLogoIconName()),
       path.join(config.srcDir, 'ui', 'webui', 'resources', 'images',
           'chrome_logo_dark.svg')])
+    // Replace webui bookmark svg icon.
+    fileMap.add([
+      path.join(config.braveCoreDir, 'node_modules', '@brave', 'leo', 'icons',
+          'browser-bookmark-normal.svg'),
+      path.join(config.srcDir, 'ui', 'webui', 'resources', 'images',
+          'icon_bookmark.svg')])
 
     let explicitSourceFiles = new Set()
     if (config.getTargetOS() === 'mac') {
@@ -390,8 +450,8 @@ const util = {
       const androidResTemplateDest = path.join(config.srcDir, 'chrome', 'android', 'java', 'res_template')
       const androidContentPublicResSource = path.join(config.braveCoreDir, 'content', 'public', 'android', 'java', 'res')
       const androidContentPublicResDest = path.join(config.srcDir, 'content', 'public', 'android', 'java', 'res')
-      const androidTouchtoFillResSource = path.join(config.braveCoreDir, 'browser', 'touch_to_fill', 'android', 'internal', 'java', 'res')
-      const androidTouchtoFillResDest = path.join(config.srcDir, 'chrome', 'browser', 'touch_to_fill', 'android', 'internal', 'java', 'res')
+      const androidTouchtoFillResSource = path.join(config.braveCoreDir, 'browser', 'touch_to_fill', 'password_manager', 'android', 'internal', 'java', 'res')
+      const androidTouchtoFillResDest = path.join(config.srcDir, 'chrome', 'browser', 'touch_to_fill', 'password_manager', 'android', 'internal', 'java', 'res')
       const androidToolbarResSource = path.join(config.braveCoreDir, 'browser', 'ui', 'android', 'toolbar', 'java', 'res')
       const androidToolbarResDest = path.join(config.srcDir, 'chrome', 'browser', 'ui', 'android', 'toolbar', 'java', 'res')
       const androidComponentsWidgetResSource = path.join(config.braveCoreDir, 'components', 'browser_ui', 'widget', 'android', 'java', 'res')
@@ -410,6 +470,8 @@ const util = {
       const androidBrowserUiOmniboxResDest = path.join(config.srcDir, 'chrome', 'browser', 'ui', 'android', 'omnibox', 'java', 'res')
       const androidBrowserPrivateResSource = path.join(config.braveCoreDir, 'browser', 'incognito', 'android', 'java', 'res')
       const androidBrowserPrivateResDest = path.join(config.srcDir, 'chrome', 'browser', 'incognito', 'android', 'java', 'res')
+      const androidBrowserHubInternalResSource = path.join(config.braveCoreDir, 'browser', 'hub', 'internal', 'android', 'res')
+      const androidBrowserHubInternalResDest = path.join(config.srcDir, 'chrome', 'browser', 'hub', 'internal', 'android', 'res')
 
       // Mapping for copying Brave's Android resource into chromium folder.
       const copyAndroidResourceMapping = {
@@ -428,7 +490,8 @@ const util = {
         [androidFeaturesTabUiResSource]: [androidFeaturesTabUiDest],
         [androidComponentsOmniboxResSource]: [androidComponentsOmniboxResDest],
         [androidBrowserUiOmniboxResSource]: [androidBrowserUiOmniboxResDest],
-        [androidBrowserPrivateResSource]: [androidBrowserPrivateResDest]
+        [androidBrowserPrivateResSource]: [androidBrowserPrivateResDest],
+        [androidBrowserHubInternalResSource]: [androidBrowserHubInternalResDest]
       }
 
       console.log('copy Android app icons and app resources')
@@ -455,13 +518,14 @@ const util = {
     Log.progressFinish('update branding')
   },
 
-  touchOverriddenChromiumSrcFiles: () => {
+  touchOverriddenFiles: () => {
     Log.progressStart('touch original files overridden by chromium_src')
 
     // Return true when original file of |file| should be touched.
     const applyFileFilter = (file) => {
       // Only include overridable files.
-      const supportedExts = ['.cc', '.h', '.json', '.mm', '.mojom', '.py', '.pdl'];
+      const supportedExts = ['.cc', '.css', '.h', '.html', '.icon', '.json',
+                             '.mm', '.mojom', '.pdl', '.py', '.ts', '.xml'];
       return supportedExts.includes(path.extname(file))
     }
 
@@ -470,58 +534,38 @@ const util = {
     const additionalGen = getAdditionalGenLocation()
 
     // Touch original files by updating mtime.
+    let isDirty = false
     const chromiumSrcDirLen = chromiumSrcDir.length
     sourceFiles.forEach(chromiumSrcFile => {
       const relativeChromiumSrcFile = chromiumSrcFile.slice(chromiumSrcDirLen)
       let overriddenFile = path.join(config.srcDir, relativeChromiumSrcFile)
       if (fs.existsSync(overriddenFile)) {
         // If overriddenFile is older than file in chromium_src, touch it to trigger rebuild.
-        updateFileUTimesIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
+        isDirty |= updateFileUTimesIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
       } else {
         // If the original file doesn't exist, assume that it's in the gen dir.
         overriddenFile = path.join(config.outputDir, 'gen', relativeChromiumSrcFile)
-        deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
+        isDirty |= deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
         // Also check the secondary gen dir, if exists
         if (!!additionalGen) {
           overriddenFile = path.join(config.outputDir, additionalGen, 'gen', relativeChromiumSrcFile)
-          deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
+          isDirty |= deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
         }
       }
     })
-    Log.progressFinish('touch original files overridden by chromium_src')
-  },
-
-  touchOverriddenVectorIconFiles: () => {
-    Log.progressStart('touch original vector icon files overridden by brave/vector_icons')
-
-    // Return true when original file of |file| should be touched.
-    const applyFileFilter = (file) => {
-      // Only includes icon files.
-      const ext = path.extname(file)
-      if (ext !== '.icon') { return false }
-      return true
-    }
-
-    const braveVectorIconsDir = path.join(config.srcDir, 'brave', 'vector_icons')
-    var braveVectorIconFiles = util.walkSync(braveVectorIconsDir, applyFileFilter)
-
-    // Touch original files by updating mtime.
-    const braveVectorIconsDirLen = braveVectorIconsDir.length
-    braveVectorIconFiles.forEach(braveVectorIconFile => {
-      var overriddenFile = path.join(config.srcDir, braveVectorIconFile.slice(braveVectorIconsDirLen))
-      if (fs.existsSync(overriddenFile)) {
-        // If overriddenFile is older than file in vector_icons, touch it to trigger rebuild.
-        updateFileUTimesIfOverrideIsNewer(overriddenFile, braveVectorIconFile)
+    if (isDirty && config.rbeService) {
+      // Cleanup Reproxy deps cache on chromium_src override change.
+      const reproxyCacheDir = `${config.rootDir}/.reproxy_cache`
+      if (fs.existsSync(reproxyCacheDir)) {
+        const cacheFileFilter = (file) => {
+          return file.endsWith('.cache') || file.endsWith('.cache.sha256')
+        }
+        for (const file of util.walkSync(reproxyCacheDir, cacheFileFilter)) {
+          fs.rmSync(file)
+        }
       }
-    })
-    Log.progressFinish('touch original vector icon files overridden by brave/vector_icons')
-  },
-
-  touchOverriddenFiles: () => {
-    Log.progressScope('touch overridden files', () => {
-      util.touchOverriddenChromiumSrcFiles()
-      util.touchOverriddenVectorIconFiles()
-    })
+    }
+    Log.progressFinish('touch original files overridden by chromium_src')
   },
 
   touchGsutilChangeLogFile: () => {
@@ -542,42 +586,7 @@ const util = {
     }
   },
 
-  // Chromium compares pre-installed midl files and generated midl files from IDL during the build to check integrity.
-  // Generated files during the build time and upstream pre-installed files are different because we use different IDL file.
-  // So, we should copy our pre-installed files to overwrite upstream pre-installed files.
-  // After checking, pre-installed files are copied to gen dir and they are used to compile.
-  // So, this copying in every build doesn't affect compile performance.
-  updateMidlFiles: () => {
-    Log.progressScope('update midl files', () => {
-      const files = fs.readdirSync(path.join(
-          config.braveCoreDir,
-          'win_build_output', 'midl'))
-      for (const file of files) {
-        const srcFile = path.join(config.braveCoreDir,
-            'win_build_output',
-            'midl', file)
-        const dstFile = path.join(config.srcDir,
-            'third_party',
-            'win_build_output', 'midl', file)
-        try {
-          const stat = fs.lstatSync(srcFile);
-          // only copy the directories here
-          // they each have a structure with x86/x64/arm64 versions of the files
-          if (stat.isDirectory()) {
-            fs.copySync(srcFile, dstFile)
-          }
-        } catch (e) {
-          throw new Error('error copying file \"' +
-              srcFile + "\"  to \"" +
-              dstFile + "\"", {
-                cause: e
-              })
-        }
-      }
-    })
-  },
-
-  buildNativeRedirectCC: (options = config.defaultOptions) => {
+  buildNativeRedirectCC: async () => {
     // Expected path to redirect_cc.
     const redirectCC = path.join(config.nativeRedirectCCDir, util.appendExeIfWin32('redirect_cc'))
 
@@ -589,64 +598,118 @@ const util = {
     }
 
     Log.progressStart('build redirect_cc')
-    gnArgs = {
+    const buildArgs = {
       'import("//brave/tools/redirect_cc/args.gni")': null,
       use_remoteexec: config.useRemoteExec,
       rbe_exec_root: config.rbeExecRoot,
-      rbe_bin_dir: config.realRewrapperDir,
+      reclient_bin_dir: config.realRewrapperDir,
       real_rewrapper: path.join(config.realRewrapperDir, 'rewrapper'),
     }
 
-    const buildArgsStr = util.buildArgsToString(gnArgs)
-    util.run('gn', ['gen', config.nativeRedirectCCDir, '--args="' + buildArgsStr + '"'], options)
-
-    util.buildTarget('brave/tools/redirect_cc', mergeWithDefault({outputDir: config.nativeRedirectCCDir}))
+    util.runGnGen(config.nativeRedirectCCDir, buildArgs)
+    await util.buildTargets(['brave/tools/redirect_cc'], mergeWithDefault({outputDir: config.nativeRedirectCCDir}))
     Log.progressFinish('build redirect_cc')
   },
 
-  runGnGen: (options) => {
-    const buildArgsStr = util.buildArgsToString(config.buildArgs())
-    const buildArgsFile = path.join(config.outputDir, 'brave_build_args.txt')
-    const buildNinjaFile = path.join(config.outputDir, 'build.ninja')
-    const gnArgsFile = path.join(config.outputDir, 'args.gn')
-    const prevBuildArgs = fs.existsSync(buildArgsFile) ?
-      fs.readFileSync(buildArgsFile) : undefined
-    const extraGnGenOptsFile = path.join(config.outputDir, 'brave_extra_gn_gen_opts.txt')
-    const prevExtraGnGenOpts = fs.existsSync(extraGnGenOptsFile) ?
-      fs.readFileSync(extraGnGenOptsFile) : undefined
-
-    const shouldRunGnGen = config.force_gn_gen ||
-      !fs.existsSync(buildNinjaFile) || !fs.existsSync(gnArgsFile) ||
-      !prevBuildArgs || prevBuildArgs != buildArgsStr ||
-      !prevExtraGnGenOpts || prevExtraGnGenOpts != config.extraGnGenOpts
-
-    if (shouldRunGnGen) {
-      // `gn gen` can modify args.gn even if it's failed.
-      // Therefore delete the file to make sure that args.gn and
-      // brave_build_args.txt are in sync.
-      if (prevBuildArgs)
-        fs.removeSync(buildArgsFile)
-
-      util.run('gn', ['gen', config.outputDir, '--args="' + buildArgsStr + '"', config.extraGnGenOpts], options)
-      fs.writeFileSync(buildArgsFile, buildArgsStr)
-      fs.writeFileSync(extraGnGenOptsFile, config.extraGnGenOpts)
+  runGnGen: (outputDir, buildArgs, extraGnGenOpts = [], options = config.defaultOptions) => {
+    // Store extraGnGenOpts in buildArgs as a comment to rerun gn gen on change.
+    assert(Array.isArray(extraGnGenOpts))
+    if (extraGnGenOpts.length) {
+      buildArgs[`# Extra gn gen options: ${extraGnGenOpts.join(' ')}`] = null
     }
-  },
 
-  generateNinjaFiles: (options = config.defaultOptions) => {
-    Log.progressScope('generate ninja files', () => {
-      util.buildNativeRedirectCC()
+    // Guard to check if gn gen was successful last time.
+    const gnGenGuard = new ActionGuard(path.join(outputDir, 'gn_gen.guard'))
 
-      if (config.getTargetOS() === 'win') {
-        util.updateMidlFiles()
+    gnGenGuard.run((wasInterrupted) => {
+      const doesBuildNinjaExist = fs.existsSync(path.join(outputDir, 'build.ninja'))
+      const hasBuildArgsUpdated = util.writeGnBuildArgs(outputDir, buildArgs)
+      const shouldCheck = config.isCI
+      const internalOpts = shouldCheck ? ['--check'] : []
+
+      const shouldRunGnGen =
+        config.force_gn_gen ||
+        !doesBuildNinjaExist ||
+        hasBuildArgsUpdated ||
+        shouldCheck ||
+        wasInterrupted
+
+      if (shouldRunGnGen) {
+        util.run('gn', ['gen', outputDir, ...extraGnGenOpts, ...internalOpts], options)
       }
-      util.runGnGen(options)
     })
   },
 
-  buildTarget: (target = config.buildTarget, options = config.defaultOptions) => {
+  writeGnBuildArgs: (outputDir, buildArgs) => {
+    // Generate build arguments in .gni format to be imported into args.gn. This
+    // approach enables customization of args.gn without the build scripts
+    // resetting it during each execution.
+    const generatedArgsContent = [
+      '# Do not edit, any changes will be lost on next build.',
+      '# To customize build args, use args.gn in the same directory.\n',
+      ...Object.entries(buildArgs).map(([arg, val]) => {
+        assert(typeof arg === 'string')
+        assert(val !== undefined)
+        if (val === null) {
+          // Output only arg, it may be a comment or an import statement.
+          return arg
+        }
+        return `${arg}=${JSON.stringify(val)}`
+      })
+    ].join('\n')
+
+    // Write the generated arguments to the args_generated.gni file. The file
+    // name is intentionally chosen to be close to args.gn.
+    const generatedArgsFilePath = path.join(outputDir, 'args_generated.gni')
+    const hasGeneratedArgsUpdated =
+      util.writeFileIfModified(generatedArgsFilePath, generatedArgsContent + '\n')
+    if (hasGeneratedArgsUpdated) {
+      Log.status(`${generatedArgsFilePath} has been updated`)
+    }
+
+    // Import args_generated.gni into args.gn.
+    const argsGnFilePath = path.join(outputDir, 'args.gn')
+    const generatedArgsImportLine =
+      `import("//${path.relative(config.srcDir, generatedArgsFilePath).replace(/\\/g, '/')}")`
+
+    // Check if the import statement from args_generated.gni is present in
+    // args.gn, even if the user has made modifications. This import statement
+    // can also be commented out, allowing the user to fully ignore generated
+    // arguments.
+    fs.ensureFileSync(argsGnFilePath)
+    const isArgsGnValid = fs
+      .readFileSync(argsGnFilePath, { encoding: 'utf-8' })
+      .includes(generatedArgsImportLine)
+
+    if (!isArgsGnValid) {
+      const argsGnContent = [
+        '# This file is user-editable. It won\'t be overwritten as long as it imports',
+        '# args_generated.gni, even if the import statement is commented out.\n',
+        generatedArgsImportLine,
+        '',
+        '# Put your extra args AFTER this line.',
+      ].join('\n')
+      fs.writeFileSync(argsGnFilePath, argsGnContent + '\n')
+      Log.status(`${argsGnFilePath} has been updated`)
+    }
+
+    return hasGeneratedArgsUpdated || !isArgsGnValid
+  },
+
+  generateNinjaFiles: async (options = config.defaultOptions) => {
+    await Log.progressScopeAsync('generate ninja files', async () => {
+      await util.buildNativeRedirectCC()
+
+      const extraGnGenOpts = config.extraGnGenOpts ? [config.extraGnGenOpts] : []
+      util.runGnGen(config.outputDir, config.buildArgs(), extraGnGenOpts, options)
+    })
+  },
+
+  buildTargets: async (targets = config.buildTargets, options = config.defaultOptions) => {
+    assert(Array.isArray(targets))
     const buildId = crypto.randomUUID()
-    const progressMessage = 'build ' + target + ' (id=' + buildId + ')'
+    const outputDir = options.outputDir || config.outputDir
+    const progressMessage = `build ${targets} (${path.basename(outputDir)}, id=${buildId})`
     Log.progressStart(progressMessage)
 
     let num_compile_failure = 1
@@ -654,7 +717,7 @@ const util = {
       num_compile_failure = 0
 
     let ninjaOpts = [
-      '-C', options.outputDir || config.outputDir, target,
+      '-C', outputDir, targets.join(' '),
       '-k', num_compile_failure,
       ...config.extraNinjaOpts
     ]
@@ -662,46 +725,62 @@ const util = {
     // Setting `AUTONINJA_BUILD_ID` allows tracing remote execution which helps
     // with debugging issues (e.g., slowness or remote-failures).
     options.env.AUTONINJA_BUILD_ID = buildId
-    Log.progressScope(`ninja ${target} ${config.buildConfig}`, () => {
-      util.run('autoninja', ninjaOpts, options)
-    })
+
+    // Collect build statistics into this variable to display in a separate TC
+    // block.
+    let buildStats = ''
+
+    if (config.isTeamcity) {
+      // Parse output to display the build status and exact failure location.
+      let hasError = false
+      let lastStatusTime = Date.now()
+      options.onStdOutLine = (line) => {
+        if (!hasError && line.startsWith('FAILED: ')) {
+          hasError = true
+        }
+        if (hasError) {
+          Log.error(line)
+        } else if (buildStats || /^(RBE Stats:|metric\s+count)\s+/.test(line)) {
+          buildStats += line + '\n'
+        } else {
+          console.log(line)
+          if (Date.now() - lastStatusTime > 5000) {
+            // Extract the status message from the ninja output.
+            const match = line.match(/^\[\d+ processes, (.+?) : .+?\s\]/);
+            if (match) {
+              lastStatusTime = Date.now()
+              Log.status(`build ${targets} ${match[1]}`)
+            }
+          }
+        }
+      }
+      options.onStdErrLine = options.onStdOutLine
+      options.stdio = 'pipe'
+    }
+
+    await util.runAsync('autoninja', ninjaOpts, options)
 
     Log.progressFinish(progressMessage)
+
+    if (config.isTeamcity && buildStats) {
+      Log.progressScope('report build stats', () => {
+        console.log(buildStats)
+      })
+    }
   },
 
-  generateXcodeWorkspace: (options = config.defaultOptions) => {
+  generateXcodeWorkspace: () => {
     console.log('generating Xcode workspace for "' + config.xcode_gen_target + '"...')
 
-    const args = util.buildArgsToString(config.buildArgs())
     const genScript = path.join(config.braveCoreDir, 'vendor', 'gn-project-generators', 'xcode.py')
 
     const genArgs = [
-      'gen', config.outputDir + "_Xcode",
-      '--args="' + args + '"',
       '--ide=json',
       '--json-ide-script="' + genScript + '"',
       '--filters="' + config.xcode_gen_target + '"'
     ]
 
-    util.run('gn', genArgs, options)
-  },
-
-  lint: (options = {}) => {
-    if (!options.base) {
-      options.base = 'origin/master'
-    }
-    let cmd_options = config.defaultOptions
-    cmd_options.cwd = config.braveCoreDir
-    cmd_options = mergeWithDefault(cmd_options)
-    util.run(
-        'vpython3',
-        [
-          '-vpython-spec=' + path.join(config.depotToolsDir, '.vpython3'),
-          path.join(
-              config.braveCoreDir, 'build', 'commands', 'scripts', 'lint.py'),
-          '--project_root=' + config.srcDir, '--base_branch=' + options.base
-        ],
-        cmd_options)
+    util.runGnGen(config.outputDir + "_Xcode", config.buildArgs(), genArgs)
   },
 
   presubmit: (options = {}) => {
@@ -722,7 +801,7 @@ const util = {
     if (options.all)
       args.push('--all')
     if (options.files)
-      args.push('--files', options.files)
+      args.push('--files', `"${options.files}"`)
     if (options.verbose) {
       args.push(...Array(options.verbose).fill('--verbose'))
     }
@@ -741,18 +820,16 @@ const util = {
     cmd_options = mergeWithDefault(cmd_options)
     cmd = 'git'
     args = ['cl', 'format', '--upstream=' + options.base]
+
+    // Keep in sync with CheckPatchFormatted presubmit check.
+    args.push('--python')
+    args.push('--no-rust-fmt')
+
     if (options.full)
       args.push('--full')
-    if (options.js)
-      args.push('--js')
-    if (options.python)
-      args.push('--python')
-    if (options.rust)
-      args.push('--rust-fmt')
-    else
-      args.push('--no-rust-fmt')
-    if (options.swift)
-      args.push('--swift-format')
+    if (options.diff)
+      args.push('--diff')
+
     util.run(cmd, args, cmd_options)
   },
 
@@ -772,26 +849,8 @@ const util = {
     util.run('gclient', args, options)
   },
 
-  applyPatches: () => {
-    return applyPatches()
-  },
-
-  buildArgsToString: (buildArgs) => {
-    let args = ''
-    for (let arg in buildArgs) {
-      let val = buildArgs[arg]
-      if (val !== null) {
-        if (typeof val === 'string') {
-          val = '"' + val + '"'
-        } else {
-          val = JSON.stringify(val)
-        }
-      }
-      args += val ? arg + '=' + val + ' ' : arg + ' '
-    }
-    // "D:\" should be escaped as \"D:\\\\\".
-    args = args.replace(/(\\+)(")/g,'$1$1$1$1$2')
-    return args.replace(/"/g,'\\"')
+  applyPatches: (printPatchFailuresInJson) => {
+    return applyPatches(printPatchFailuresInJson)
   },
 
   walkSync: (dir, filter = null, filelist = []) => {
@@ -815,7 +874,11 @@ const util = {
     if (!fs.existsSync(file)) {
       return default_value
     }
-    return fs.readJSONSync(file)
+    try {
+      return fs.readJSONSync(file)
+    } catch {
+      return default_value
+    }
   },
 
   writeJSON: (file, value) => {
@@ -878,6 +941,21 @@ const util = {
     }
     const excludeFileName = util.getGitInfoExcludeFileName(repoDir, true)
     fs.appendFileSync(excludeFileName, '\n' + exclusion)
+  },
+
+  fetchAndCheckoutRef: (repoDir, ref) => {
+    const options = { cwd: repoDir, stdio: 'inherit' }
+    util.run('git', ['fetch', 'origin', ref.replace(/^origin\//, '')], options)
+    util.run('git', ['-c', 'advice.detachedHead=false', 'checkout', 'FETCH_HEAD'], options)
+  },
+
+  writeFileIfModified: (filePath, content) => {
+    fs.ensureFileSync(filePath)
+    if (fs.readFileSync(filePath, { encoding: 'utf-8' }) !== content) {
+      fs.writeFileSync(filePath, content)
+      return true
+    }
+    return false
   },
 }
 

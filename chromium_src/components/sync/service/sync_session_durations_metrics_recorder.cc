@@ -36,10 +36,15 @@ void SyncSessionDurationsMetricsRecorder::OnRefreshTokensLoaded() {}
 void SyncSessionDurationsMetricsRecorder::
     OnErrorStateOfRefreshTokenUpdatedForAccount(
         const CoreAccountInfo& account_info,
-        const GoogleServiceAuthError& error) {}
-bool SyncSessionDurationsMetricsRecorder::IsSignedIn() const {
-  return false;
+        const GoogleServiceAuthError& error,
+        signin_metrics::SourceForRefreshTokenOperation token_operation_source) {
 }
+
+SyncSessionDurationsMetricsRecorder::SigninStatus
+SyncSessionDurationsMetricsRecorder::GetSigninStatus() const {
+  return SyncSessionDurationsMetricsRecorder::SigninStatus::kSignedOut;
+}
+
 bool SyncSessionDurationsMetricsRecorder::IsSyncing() const {
   return false;
 }

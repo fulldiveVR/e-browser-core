@@ -5,11 +5,12 @@
 import * as React from 'react'
 import { VariableSizeList as List } from 'react-window'
 import { useLocation } from 'react-router-dom'
-import AutoSizer from '@brave/react-virtualized-auto-sizer'
+import AutoSizer from 'react-virtualized-auto-sizer'
 import Button from '@brave/leo/react/button'
 
 // utils
 import { getLocale } from '../../../../../common/locale'
+import { getAssetIdKey } from '../../../../utils/asset-utils'
 
 // types
 import { BraveWallet, WalletRoutes } from '../../../../constants/types'
@@ -30,14 +31,10 @@ import { assetWatchListItemHeight } from '../../asset-watchlist-item/style'
 
 interface VirtualizedTokensListProps {
   tokenList: BraveWallet.BlockchainToken[]
-  isRemovable: (token: BraveWallet.BlockchainToken) => boolean
   onRemoveAsset: (token: BraveWallet.BlockchainToken) => void
   isAssetSelected: (token: BraveWallet.BlockchainToken) => boolean
   onClickAddCustomAsset: () => void
-  onCheckWatchlistItem: (
-    selected: boolean,
-    token: BraveWallet.BlockchainToken
-  ) => void
+  onCheckWatchlistItem: (token: BraveWallet.BlockchainToken) => void
 }
 
 interface ListItemProps extends Omit<VirtualizedTokensListProps, 'tokenList'> {
@@ -52,14 +49,7 @@ const getListItemKey = (
   index: number,
   tokenList: BraveWallet.BlockchainToken[]
 ) => {
-  const token = tokenList[index]
-  return `${
-    token.contractAddress //
-  }-${
-    token.symbol //
-  }-${
-    token.chainId //
-  }-${token.tokenId}`
+  return getAssetIdKey(tokenList[index])
 }
 
 const checkIsLastIndex = (
@@ -69,13 +59,21 @@ const checkIsLastIndex = (
   return index === tokenList.length - 1
 }
 
+const isRemovable = (token: BraveWallet.BlockchainToken): boolean => {
+  return (
+    // Native assets should not be removable.
+    token.contractAddress !== '' &&
+    // Any NFT should be removable.
+    (token.isErc721 || token.isErc1155 || token.isNft)
+  )
+}
+
 const ListItem = (props: ListItemProps) => {
   const {
     data,
     style,
     index,
     isLastIndex,
-    isRemovable,
     isAssetSelected,
     onCheckWatchlistItem,
     onClickAddCustomAsset,
@@ -135,7 +133,6 @@ export const VirtualizedVisibleAssetsList = (
 ) => {
   const {
     tokenList,
-    isRemovable,
     isAssetSelected,
     onCheckWatchlistItem,
     onClickAddCustomAsset,
@@ -161,13 +158,13 @@ export const VirtualizedVisibleAssetsList = (
     }
   }, [])
 
-  const getSize = React.useCallback((index) => {
+  const getSize = React.useCallback((index: number) => {
     return itemSizes.current[index] || assetWatchListItemHeight
   }, [])
 
   return (
     <AutoSizer style={VirtualListStyle}>
-      {function ({ width, height }) {
+      {function ({ width, height }: { width: number; height: number }) {
         return (
           <List
             ref={listRef}
@@ -181,7 +178,6 @@ export const VirtualizedVisibleAssetsList = (
             children={({ data, index, style }) => (
               <ListItem
                 data={data[index]}
-                isRemovable={isRemovable}
                 onRemoveAsset={onRemoveAsset}
                 isAssetSelected={isAssetSelected}
                 onCheckWatchlistItem={onCheckWatchlistItem}

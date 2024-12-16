@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/promoted_content_ads/promoted_content_ad_event_handler_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -22,11 +22,6 @@ class PromotedContentAdEventHandlerDelegateMock
       const PromotedContentAdEventHandlerDelegateMock&) = delete;
   PromotedContentAdEventHandlerDelegateMock& operator=(
       const PromotedContentAdEventHandlerDelegateMock&) = delete;
-
-  PromotedContentAdEventHandlerDelegateMock(
-      PromotedContentAdEventHandlerDelegateMock&&) noexcept = delete;
-  PromotedContentAdEventHandlerDelegateMock& operator=(
-      PromotedContentAdEventHandlerDelegateMock&&) noexcept = delete;
 
   ~PromotedContentAdEventHandlerDelegateMock() override;
 
@@ -46,7 +41,7 @@ class PromotedContentAdEventHandlerDelegateMock
               OnFailedToFirePromotedContentAdEvent,
               (const std::string& placement_id,
                const std::string& creative_instance_id,
-               const mojom::PromotedContentAdEventType event_type));
+               mojom::PromotedContentAdEventType mojom_ad_event_type));
 };
 
 }  // namespace brave_ads

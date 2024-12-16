@@ -13,6 +13,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/span.h"
+#include "base/containers/to_vector.h"
 #include "base/notreached.h"
 #include "base/ranges/algorithm.h"
 #include "brave/components/brave_wallet/common/brave_wallet_types.h"
@@ -62,14 +63,6 @@ std::optional<size_t> BytesToSize(Span32 data) {
   return static_cast<size_t>(result);
 }
 
-std::optional<Span32> ToSpan32(Span data) {
-  if (data.size() != kRowLength) {
-    return std::nullopt;
-  }
-
-  return Span32(data.data(), kRowLength);
-}
-
 Span ExtractRows(Span data, size_t row, size_t row_count) {
   if (data.size() % kRowLength) {
     return {};
@@ -86,7 +79,7 @@ Span ExtractRows(Span data, size_t row, size_t row_count) {
 }
 
 std::optional<Span32> ExtractRow(Span data, size_t row) {
-  return ToSpan32(ExtractRows(data, row, 1));
+  return ExtractRows(data, row, 1).to_fixed_extent<kRowLength>();
 }
 
 bool CheckPadding(Span data, size_t padded_data_size) {
@@ -102,7 +95,7 @@ std::optional<Span32> ExtractHeadFromTuple(Span data, size_t tuple_pos) {
 }
 
 EthAddress ExtractAddress(Span32 address_encoded) {
-  return EthAddress::FromBytes(address_encoded.subspan(12));
+  return EthAddress::FromBytes(address_encoded.subspan<12>());
 }
 
 }  // namespace
@@ -114,7 +107,7 @@ std::pair<Span, Span> ExtractFunctionSelectorAndArgsFromCall(Span data) {
   if ((data.size() - 4) % kRowLength) {
     return {};
   }
-  return {data.subspan(0, 4), data.subspan(4)};
+  return data.split_at<4>();
 }
 
 std::pair<std::optional<size_t>, Span> ExtractArrayInfo(Span data) {
@@ -129,7 +122,7 @@ std::pair<std::optional<size_t>, Span> ExtractArrayInfo(Span data) {
 }
 
 EthAddress ExtractAddress(Span address_encoded) {
-  auto span32 = ToSpan32(address_encoded);
+  auto span32 = address_encoded.to_fixed_extent<kRowLength>();
   if (!span32) {
     return EthAddress();
   }
@@ -167,8 +160,7 @@ std::optional<std::vector<uint8_t>> ExtractBytes(Span bytes_encoded) {
   if (!CheckPadding(padded_bytes_data, *bytes_len)) {
     return std::nullopt;
   }
-  Span bytes_result = padded_bytes_data.subspan(0, *bytes_len);
-  return std::vector<uint8_t>{bytes_result.begin(), bytes_result.end()};
+  return base::ToVector(padded_bytes_data.first(*bytes_len));
 }
 
 std::optional<std::string> ExtractString(Span string_encoded) {
@@ -194,8 +186,8 @@ std::optional<std::string> ExtractString(Span string_encoded) {
     return std::nullopt;
   }
 
-  Span string_result = padded_string_data.subspan(0, *string_len);
-  return std::string{string_result.begin(), string_result.end()};
+  return std::string(
+      base::as_string_view(padded_string_data.first(*string_len)));
 }
 
 std::optional<std::vector<std::string>> ExtractStringArray(Span string_array) {
@@ -360,31 +352,25 @@ std::optional<std::vector<uint8_t>> ExtractBytesFromTuple(Span data,
 
 std::optional<std::vector<uint8_t>>
 ExtractFixedBytesFromTuple(Span data, size_t fixed_size, size_t tuple_pos) {
-  if (fixed_size == 0 || fixed_size > 32) {
-    NOTREACHED();
-    return std::nullopt;
-  }
-
+  CHECK(fixed_size > 0 && fixed_size <= 32);
   // Head contains bytes itself.
   auto head = ExtractHeadFromTuple(data, tuple_pos);
   if (!head) {
     return std::nullopt;
   }
 
-  if (!CheckPadding(head->subspan(0), fixed_size)) {
+  if (!CheckPadding(*head, fixed_size)) {
     return std::nullopt;
   }
 
-  return std::vector<uint8_t>{head->begin(), head->begin() + fixed_size};
+  return base::ToVector(head->first(fixed_size));
 }
 
-// NOLINTNEXTLINE(runtime/references)
 size_t AppendEmptyRow(std::vector<uint8_t>& destination) {
   destination.resize(destination.size() + kRowLength, 0);
   return kRowLength;
 }
 
-// NOLINTNEXTLINE(runtime/references)
 size_t AppendRow(std::vector<uint8_t>& destination, uint256_t value) {
   // Append 32 bytes.
   destination.resize(destination.size() + kRowLength, 0);
@@ -393,7 +379,6 @@ size_t AppendRow(std::vector<uint8_t>& destination, uint256_t value) {
   return kRowLength;
 }
 
-// NOLINTNEXTLINE(runtime/references)
 size_t AppendRow(std::vector<uint8_t>& destination, Span32 value) {
   DCHECK_EQ(value.size(), kRowLength);
   // Append 32 bytes.
@@ -404,7 +389,6 @@ size_t AppendRow(std::vector<uint8_t>& destination, Span32 value) {
   return kRowLength;
 }
 
-// NOLINTNEXTLINE(runtime/references)
 size_t AppendBytesWithPadding(std::vector<uint8_t>& destination, Span bytes) {
   auto padded_size = PaddedSize(bytes.size());
   destination.resize(destination.size() + padded_size);
@@ -413,7 +397,6 @@ size_t AppendBytesWithPadding(std::vector<uint8_t>& destination, Span bytes) {
   return padded_size;
 }
 
-// NOLINTNEXTLINE(runtime/references)
 size_t AppendBytes(std::vector<uint8_t>& destination, Span bytes) {
   size_t total_added_bytes = 0;
   total_added_bytes += AppendRow(destination, bytes.size());
@@ -566,6 +549,74 @@ void TupleEncoder::EncodeTo(std::vector<uint8_t>& destination) const {
 
     bytes_added += AppendBytesWithPadding(destination, elements_[i].tail);
   }
+}
+
+Type::Type(TypeKind kind) : kind(kind), m(std::nullopt) {}
+Type::Type(TypeKind kind, size_t m) : kind(kind), m(m) {}
+Type::~Type() = default;
+Type::Type(Type&& other) noexcept
+    : kind(other.kind),
+      m(other.m),
+      array_type(std::move(other.array_type)),
+      tuple_types(std::move(other.tuple_types)) {}
+
+TypeBuilder::TypeBuilder(TypeKind kind) : type_{kind} {}
+TypeBuilder::TypeBuilder(TypeKind kind, size_t m) : type_{kind, m} {}
+
+TypeBuilder& TypeBuilder::SetArrayType(Type array_type) {
+  type_.array_type = std::make_unique<Type>(std::move(array_type));
+  return *this;
+}
+
+TypeBuilder& TypeBuilder::AddTupleType(Type tuple_type) {
+  type_.tuple_types.push_back(std::move(tuple_type));
+  return *this;
+}
+
+Type TypeBuilder::build() {
+  return std::move(type_);
+}
+
+TypeBuilder Array(size_t m) {
+  return TypeBuilder(TypeKind::kArray, m);
+}
+
+Type Address() {
+  return Type{TypeKind::kAddress};
+}
+
+Type Uint(size_t m) {
+  CHECK(m > 0 && m <= 256 && m % 8 == 0) << "Invalid M for uint<M> type: " << m;
+  return Type{TypeKind::kUintM, m};
+}
+
+Type Uint() {
+  return Type{TypeKind::kUintM, 256};
+}
+
+Type Bool() {
+  return Type{TypeKind::kBool};
+}
+
+Type Bytes() {
+  return Type{TypeKind::kBytes};
+}
+
+Type Bytes(size_t m) {
+  CHECK(m > 0 && m <= 32) << "Invalid M for bytes<M> type: " << m;
+  return Type{TypeKind::kBytes, m};
+}
+
+Type String() {
+  return Type{TypeKind::kString};
+}
+
+TypeBuilder Array() {
+  return TypeBuilder(TypeKind::kArray);
+}
+
+TypeBuilder Tuple() {
+  return TypeBuilder(TypeKind::kTuple);
 }
 
 }  // namespace brave_wallet::eth_abi

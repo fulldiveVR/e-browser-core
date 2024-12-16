@@ -16,7 +16,10 @@ RegisterStyleOverride(
   'settings-clear-browsing-data-dialog',
   html`
     <style>
-      #rewards-reset-data {
+      :host {
+        --body-container-height: 372px !important;
+      }
+      #reset-brave-rewards-data, #clear-brave-ads-data {
         display: block;
         margin-top: 10px;
       }
@@ -32,12 +35,12 @@ RegisterPolymerComponentReplacement(
 RegisterPolymerTemplateModifications({
   'settings-clear-browsing-data-dialog': (templateContent: HTMLTemplateElement) => {
     // Append On exit tab page.
-    const tabsElement = templateContent.querySelector('#tabs')
-    if (!tabsElement) {
-      console.error(`[Brave Settings Overrides] cannot find #tabs in clear-browsing-data-dialog`)
+    const pagesElement = templateContent.querySelector('#pages')
+    if (!pagesElement) {
+      console.error('[Settings] missing #pages in clear-browsing-data-dialog')
       return
     }
-    tabsElement.insertAdjacentHTML(
+    pagesElement.insertAdjacentHTML(
       'beforeend',
       getTrustedHTML`
         <settings-brave-clear-browsing-data-on-exit-page
@@ -47,9 +50,10 @@ RegisterPolymerTemplateModifications({
       `)
 
     // Append Save button.
-    const confirmButtonElement = templateContent.querySelector('#clearBrowsingDataConfirm')
+    const confirmButtonElement = templateContent.querySelector('#clearButton')
     if (!confirmButtonElement) {
-      console.error(`[Brave Settings Overrides] cannot find #clearBrowsingDataConfirm in clear-browsing-data-dialog`)
+      console.error(
+        '[Settings] missing #clearButton in clear-browsing-data-dialog')
       return
     }
     confirmButtonElement.insertAdjacentHTML(
@@ -64,27 +68,49 @@ RegisterPolymerTemplateModifications({
     const saveButton =
       templateContent.getElementById('saveOnExitSettingsConfirm')
     if (!saveButton) {
-      console.error('[Brave Settings Overrides] Couldn\'t find save button')
+      console.error('[Settings] missing save button')
     } else {
       saveButton.textContent = loadTimeData.getString('save')
     }
 
-    // Append rewards reset data link
+    // Append clear Brave Ads data link
     const body = templateContent.querySelector('[slot="body"]')
     if (!body) {
-      console.error(`[Brave Settings Overrides] cannot find 'slot="body"' in clear-browsing-data-dialog`)
+      console.error(
+        '[Settings] missing \'slot="body"\' in clear-browsing-data-dialog')
       return
     }
     body.insertAdjacentHTML(
       'beforeend',
       getTrustedHTML`
-        <a id="rewards-reset-data" href="chrome://rewards/#manage-wallet"></a>
+        <a id="clear-brave-ads-data"
+          href="chrome://settings/privacy"
+          onClick="[[onClearBraveAdsDataClickHandler_]]"
+          hidden="[[braveRewardsEnabled_]]">
+        </a>
+      `)
+    const clearBraveAdsLink =
+      templateContent.getElementById('clear-brave-ads-data')
+    if (!clearBraveAdsLink) {
+      console.error('[Settings] missing clear Brave Ads link')
+    } else {
+      clearBraveAdsLink.textContent =
+        loadTimeData.getString('clearBraveAdsData')
+    }
+
+    // Append reset Brave Rewards data link
+    body.insertAdjacentHTML(
+      'beforeend',
+      getTrustedHTML`
+        <a id="reset-brave-rewards-data"
+          href="chrome://rewards/#reset"
+          hidden="[[!braveRewardsEnabled_]]">
+        </a>
       `)
     const rewardsResetLink =
-      templateContent.getElementById('rewards-reset-data')
+      templateContent.getElementById('reset-brave-rewards-data')
     if (!rewardsResetLink) {
-      console.error(
-        '[Brave Settings Overrides] Couldn\'t find Rewards reset link')
+      console.error('[Settings] missing reset Brave Rewards link')
     } else {
       rewardsResetLink.textContent = loadTimeData.getString('resetRewardsData')
     }
@@ -97,8 +123,8 @@ RegisterPolymerTemplateModifications({
       const cacheCheckbox = templateContent
         .querySelector('[id="cacheCheckbox"]')
       if (!cacheCheckbox) {
-        console.error(`[Brave Settings Overrides] cannot find
-         'id="cacheCheckbox"' in clear-browsing-data-dialog`)
+        console.error(
+          '[Settings] missing cacheCheckbox in clear-browsing-data-dialog')
         return
       }
       cacheCheckbox.insertAdjacentHTML(
@@ -107,8 +133,8 @@ RegisterPolymerTemplateModifications({
         <settings-checkbox
           id="leoResetCheckbox"
           pref="{{prefs.browser.clear_data.brave_leo}}"
-          label="[[i18n('leoClearHistoryData')]]"
-          sub-label="[[i18n('leoClearHistoryDataSubLabel')]]"
+          label="[[i18n('aiChatClearHistoryData')]]"
+          sub-label="[[i18n('aiChatClearHistoryDataSubLabel')]]"
           disabled="[[clearingInProgress_]]"
           no-set-pref>
         </settings-checkbox>`)
@@ -116,8 +142,7 @@ RegisterPolymerTemplateModifications({
       const leoResetCheckbox =
         templateContent.querySelector('[id="leoResetCheckbox"]')
       if (!leoResetCheckbox) {
-        console.error(
-          '[Brave Settings Overrides] Couldn\'t find Leo reset link')
+        console.error('[Settings] missing Leo reset link')
       }
     }
   }

@@ -7,6 +7,7 @@
 
 #include "base/feature_list.h"
 #include "base/metrics/field_trial_params.h"
+#include "build/buildflag.h"
 
 namespace brave_news::features {
 
@@ -16,7 +17,13 @@ BASE_FEATURE(kBraveNewsCardPeekFeature,
 
 BASE_FEATURE(kBraveNewsFeedUpdate,
              "BraveNewsFeedUpdate",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+#if BUILDFLAG(IS_ANDROID)
+             base::FEATURE_DISABLED_BY_DEFAULT
+
+#else
+             base::FEATURE_ENABLED_BY_DEFAULT
+#endif
+);
 const base::FeatureParam<int> kBraveNewsMinBlockCards{&kBraveNewsFeedUpdate,
                                                       "min-block-cards", 1};
 
@@ -29,7 +36,7 @@ const base::FeatureParam<double> kBraveNewsPopScoreMin{
     &kBraveNewsFeedUpdate, "pop-score-fallback", 0.5};
 
 const base::FeatureParam<double> kBraveNewsInlineDiscoveryRatio{
-    &kBraveNewsFeedUpdate, "inline-discovery-ratio", 0.25};
+    &kBraveNewsFeedUpdate, "inline-discovery-ratio", 0.1};
 
 const base::FeatureParam<double> kBraveNewsSourceSubscribedBoost{
     &kBraveNewsFeedUpdate, "source-subscribed-boost", 1.0};

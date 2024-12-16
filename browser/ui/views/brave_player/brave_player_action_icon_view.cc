@@ -67,7 +67,7 @@ BravePlayerActionIconView::~BravePlayerActionIconView() = default;
 
 void BravePlayerActionIconView::OnExecuting(ExecuteSource execute_source) {
   CHECK(player_url_.is_valid());
-  chrome::AddTabAt(std::to_address(browser_), player_url_, /*index*/ -1,
+  chrome::AddTabAt(base::to_address(browser_), player_url_, /*index*/ -1,
                    /*foreground=*/true);
 }
 
@@ -84,7 +84,7 @@ const gfx::VectorIcon& BravePlayerActionIconView::GetVectorIcon() const {
   // We don't use vector icon because we need gradation effect.
   // TODO(sko) When Nala icon updates, try use vector icon and blending effect
   // to generate gradation effect.
-  NOTREACHED_NORETURN();
+  NOTREACHED();
 }
 
 void BravePlayerActionIconView::UpdateImpl() {
@@ -103,5 +103,5 @@ void BravePlayerActionIconView::UpdateBorder() {
       GetInsets()));
 }
 
-BEGIN_METADATA(BravePlayerActionIconView, PageActionIconView);
+BEGIN_METADATA(BravePlayerActionIconView);
 END_METADATA

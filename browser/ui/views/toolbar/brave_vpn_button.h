@@ -29,8 +29,8 @@ class Browser;
 
 class BraveVPNButton : public ToolbarButton,
                        public brave_vpn::BraveVPNServiceObserver {
+  METADATA_HEADER(BraveVPNButton, ToolbarButton)
  public:
-  METADATA_HEADER(BraveVPNButton);
 
   explicit BraveVPNButton(Browser* browser);
   ~BraveVPNButton() override;
@@ -52,6 +52,7 @@ class BraveVPNButton : public ToolbarButton,
   void UpdateColorsAndInsets() override;
   std::u16string GetTooltipText(const gfx::Point& p) const override;
   void OnThemeChanged() override;
+  void InkDropRippleAnimationEnded(views::InkDropState state) override;
 
   void SetVpnConnectionStateForTesting(
       brave_vpn::mojom::ConnectionState state) {
@@ -65,14 +66,18 @@ class BraveVPNButton : public ToolbarButton,
   std::unique_ptr<views::Border> GetBorder(SkColor border_color) const;
   void OnButtonPressed(const ui::Event& event);
   void UpdateButtonState();
+  SkColor GetIconColor();
+  SkColor GetBadgeColor();
+  const gfx::VectorIcon& GetBadgeIcon();
 
   bool is_error_state_ = false;
   bool is_connected_ = false;
   std::optional<brave_vpn::mojom::ConnectionState>
       connection_state_for_testing_;
-  raw_ptr<Browser> browser_ = nullptr;
-  raw_ptr<brave_vpn::BraveVpnService> service_ = nullptr;
+  raw_ptr<Browser, DanglingUntriaged> browser_ = nullptr;
+  raw_ptr<brave_vpn::BraveVpnService, DanglingUntriaged> service_ = nullptr;
   raw_ptr<views::MenuButtonController> menu_button_controller_ = nullptr;
+  base::WeakPtrFactory<BraveVPNButton> weak_ptr_factory_{this};
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_TOOLBAR_BRAVE_VPN_BUTTON_H_

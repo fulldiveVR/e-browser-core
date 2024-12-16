@@ -9,17 +9,13 @@
 
 #include "base/feature_list.h"
 #include "base/metrics/field_trial_params.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "build/build_config.h"
 
 namespace ai_chat::features {
 
 BASE_FEATURE(kAIChat,
              "AIChat",
-#if BUILDFLAG(ENABLE_AI_CHAT_FEATURE_FLAG)
              base::FEATURE_ENABLED_BY_DEFAULT
-#else
-             base::FEATURE_DISABLED_BY_DEFAULT
-#endif
 );
 const base::FeatureParam<std::string> kAIModelsDefaultKey{
     &kAIChat, "default_model", "chat-leo-expanded"};
@@ -29,6 +25,10 @@ const base::FeatureParam<bool> kFreemiumAvailable(&kAIChat,
                                                   "is_freemium_available",
                                                   true);
 const base::FeatureParam<bool> kAIChatSSE{&kAIChat, "ai_chat_sse", true};
+const base::FeatureParam<bool> kOmniboxOpensFullPage{
+    &kAIChat, "omnibox_opens_full_page", true};
+const base::FeatureParam<bool> kConversationAPIEnabled{
+    &kAIChat, "conversation_api", true};
 const base::FeatureParam<double> kAITemperature{&kAIChat, "temperature", 0.2};
 
 bool IsAIChatEnabled() {
@@ -36,11 +36,58 @@ bool IsAIChatEnabled() {
 }
 
 BASE_FEATURE(kAIChatHistory,
-             "kAIChatHistory",
+             "AIChatHistory",
+#if BUILDFLAG(IS_IOS)
              base::FEATURE_DISABLED_BY_DEFAULT);
+#else
+             base::FEATURE_ENABLED_BY_DEFAULT);
+#endif
 
 bool IsAIChatHistoryEnabled() {
   return base::FeatureList::IsEnabled(features::kAIChatHistory);
+}
+
+BASE_FEATURE(kCustomSiteDistillerScripts,
+             "CustomSiteDistillerScripts",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsCustomSiteDistillerScriptsEnabled() {
+  return base::FeatureList::IsEnabled(features::kCustomSiteDistillerScripts);
+}
+
+BASE_FEATURE(kContextMenuRewriteInPlace,
+             "AIChatContextMenuRewriteInPlace",
+             base::FEATURE_ENABLED_BY_DEFAULT);
+bool IsContextMenuRewriteInPlaceEnabled() {
+  return base::FeatureList::IsEnabled(features::kContextMenuRewriteInPlace);
+}
+
+BASE_FEATURE(kPageContentRefine,
+             "PageContentRefine",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsPageContentRefineEnabled() {
+  return base::FeatureList::IsEnabled(features::kPageContentRefine);
+}
+
+BASE_FEATURE(kAllowPrivateIPs,
+             "AllowPrivateIPs",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsAllowPrivateIPsEnabled() {
+  return base::FeatureList::IsEnabled(features::kAllowPrivateIPs);
+}
+
+BASE_FEATURE(kOpenAIChatFromBraveSearch,
+             "OpenAIChatFromBraveSearch",
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
+             base::FEATURE_ENABLED_BY_DEFAULT);
+#else
+             base::FEATURE_DISABLED_BY_DEFAULT);
+#endif
+
+bool IsOpenAIChatFromBraveSearchEnabled() {
+  return base::FeatureList::IsEnabled(features::kOpenAIChatFromBraveSearch);
 }
 
 }  // namespace ai_chat::features

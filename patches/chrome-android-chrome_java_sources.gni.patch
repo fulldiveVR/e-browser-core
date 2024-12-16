@@ -1,10 +1,9 @@
 diff --git a/chrome/android/chrome_java_sources.gni b/chrome/android/chrome_java_sources.gni
-index 3166a4441f07c98db1d812e8e32495f7c9022acd..34ee42598cea13474609d7202863187a2e6b0acc 100644
+index ec788ea2a0b111fd02a59dfe86b57b6e1deb990d..85cbecbecf8fe0bbc961095ef1982e28e500bc6a 100644
 --- a/chrome/android/chrome_java_sources.gni
 +++ b/chrome/android/chrome_java_sources.gni
-@@ -1225,3 +1225,4 @@ chrome_java_sources = [
-   "java/src/org/chromium/chrome/browser/webauth/authenticator/CableAuthenticatorUSBActivity.java",
-   "java/src/org/chromium/chrome/browser/webshare/ShareServiceImplementationFactory.java",
- ]
+@@ -1229,3 +1229,4 @@ if (enable_screen_capture) {
+     "java/src/org/chromium/chrome/browser/media/MediaCapturePickerItemViewBinder.java",
+   ]
+ }
 +chrome_java_sources -= ["java/src/org/chromium/chrome/browser/ntp/IncognitoNewTabPageView.java",]
-\ No newline at end of file

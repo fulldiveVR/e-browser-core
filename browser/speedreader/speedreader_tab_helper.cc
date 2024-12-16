@@ -10,8 +10,10 @@
 #include <string_view>
 #include <utility>
 
+#include "base/check_is_test.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
+#include "base/json/json_writer.h"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
@@ -19,6 +21,7 @@
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/speedreader/page_distiller.h"
 #include "brave/browser/speedreader/speedreader_service_factory.h"
+#include "brave/browser/ui/page_action/brave_page_action_icon_type.h"
 #include "brave/browser/ui/speedreader/speedreader_bubble_view.h"
 #include "brave/components/l10n/common/localization_util.h"
 #include "brave/components/speedreader/common/features.h"
@@ -35,6 +38,7 @@
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/browser/reload_type.h"
 #include "content/public/browser/web_contents.h"
+#include "third_party/blink/public/common/web_preferences/web_preferences.h"
 #include "ui/base/resource/resource_bundle.h"
 
 #if !BUILDFLAG(IS_ANDROID)
@@ -51,26 +55,24 @@ namespace speedreader {
 
 std::u16string GetSpeedreaderData(
     std::initializer_list<std::pair<std::string_view, int>> resources) {
-  std::u16string result = u"speedreaderData = {";
-
-  if (kSpeedreaderTTS.Get()) {
-    result += u"ttsEnabled: true,";
-  }
-
+  base::Value::Dict sr_data;
+  sr_data.Set("ttsEnabled", kSpeedreaderTTS.Get());
   for (const auto& r : resources) {
-    auto text = brave_l10n::GetLocalizedResourceUTF16String(r.second);
-    // Make sure that the text doesn't contain js injection
-    base::ReplaceChars(text, u"\"", u"\\\"", &text);
-    result += base::StrCat({base::UTF8ToUTF16(r.first), u": \"", text, u"\","});
+    sr_data.Set(r.first, brave_l10n::GetLocalizedResourceUTF16String(r.second));
   }
 
-  return result + u"}\n\n";
+  return base::StrCat(
+      {u"speedreaderData = ",
+       base::UTF8ToUTF16(base::WriteJson(sr_data).value_or("{}"))});
 }
 
-SpeedreaderTabHelper::SpeedreaderTabHelper(content::WebContents* web_contents)
+SpeedreaderTabHelper::SpeedreaderTabHelper(
+    content::WebContents* web_contents,
+    SpeedreaderRewriterService* rewriter_service)
     : content::WebContentsObserver(web_contents),
       content::WebContentsUserData<SpeedreaderTabHelper>(*web_contents),
-      PageDistiller(web_contents) {
+      PageDistiller(web_contents),
+      rewriter_service_(rewriter_service) {
   dom_distiller::AddObserver(web_contents, this);
   speedreader_service_observation_.Observe(GetSpeedreaderService());
   tts_player_observation_.Observe(speedreader::TtsPlayer::GetInstance());
@@ -84,9 +86,18 @@ SpeedreaderTabHelper::~SpeedreaderTabHelper() {
 // static
 void SpeedreaderTabHelper::MaybeCreateForWebContents(
     content::WebContents* contents) {
-  if (base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature)) {
-    SpeedreaderTabHelper::CreateForWebContents(contents);
+  if (!base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature)) {
+    return;
   }
+
+  auto* rewriter_service =
+      g_brave_browser_process->speedreader_rewriter_service();
+  if (!rewriter_service) {
+    CHECK_IS_TEST();
+    return;
+  }
+
+  SpeedreaderTabHelper::CreateForWebContents(contents, rewriter_service);
 }
 
 // static
@@ -282,14 +293,10 @@ void SpeedreaderTabHelper::ProcessNavigation(
     return;
   }
 
-  auto* rewriter_service =
-      g_brave_browser_process->speedreader_rewriter_service();
   auto* nav_entry = navigation_handle->GetNavigationEntry();
-
   const bool url_looks_readable =
-      rewriter_service && nav_entry &&
-      nav_entry->GetVirtualURL().SchemeIsHTTPOrHTTPS() &&
-      rewriter_service->URLLooksReadable(navigation_handle->GetURL());
+      nav_entry && nav_entry->GetVirtualURL().SchemeIsHTTPOrHTTPS() &&
+      rewriter_service_->URLLooksReadable(navigation_handle->GetURL());
 
   const bool enabled_for_site =
       GetSpeedreaderService()->IsEnabledForSite(navigation_handle->GetURL());
@@ -300,11 +307,24 @@ void SpeedreaderTabHelper::ProcessNavigation(
   TransitStateTo(DistillStates::DistillReverting(reason, false), true);
   TransitStateTo(DistillStates::ViewOriginal(), true);
 
-  if (url_looks_readable && enabled_for_site) {
-    // Speedreader enabled for this page.
-    TransitStateTo(DistillStates::Distilling(
-                       DistillStates::Distilling::Reason::kAutomatic),
-                   true);
+  if (enabled_for_site) {
+    // Check if url is pointed to the homepage, basically these pages aren't
+    // readable. We've got the same check in speedreader::IsURLLooksReadable
+    const bool homepage = !navigation_handle->GetURL().has_path() ||
+                          navigation_handle->GetURL().path_piece() == "/";
+
+    // Enable speedreader if the user explicitly enabled speedreader on the
+    // site.
+    const bool explicit_enabled_for_size =
+        !homepage && kSpeedreaderExplicitPref.Get() &&
+        GetSpeedreaderService()->GetEnabledForSiteSetting(
+            navigation_handle->GetURL());
+    if (url_looks_readable || explicit_enabled_for_size) {
+      // Speedreader enabled for this page.
+      TransitStateTo(DistillStates::Distilling(
+                         DistillStates::Distilling::Reason::kAutomatic),
+                     true);
+    }
   }
 }
 
@@ -330,9 +350,26 @@ void SpeedreaderTabHelper::UpdateUI() {
           ->ShowReaderModeToolbar();
     }
 
-    browser->window()->UpdatePageActionIcon(PageActionIconType::kReaderMode);
+    browser->window()->UpdatePageActionIcon(
+        brave::kSpeedreaderPageActionIconType);
   }
 #endif
+}
+
+void SpeedreaderTabHelper::ReadyToCommitNavigation(
+    content::NavigationHandle* navigation_handle) {
+  if (!navigation_handle->IsInPrimaryMainFrame()) {
+    return;
+  }
+
+  const bool is_distilled = DistillStates::IsDistilled(PageDistillState());
+
+  blink::web_pref::WebPreferences prefs =
+      web_contents()->GetOrCreateWebPreferences();
+  if (prefs.page_in_reader_mode != is_distilled) {
+    prefs.page_in_reader_mode = DistillStates::IsDistilled(PageDistillState());
+    web_contents()->SetWebPreferences(prefs);
+  }
 }
 
 void SpeedreaderTabHelper::DidStartNavigation(
@@ -365,14 +402,11 @@ void SpeedreaderTabHelper::DOMContentLoaded(
   }
   UpdateUI();
 
-  static base::NoDestructor<std::u16string> kSpeedreaderData(
-      GetSpeedreaderData({
-        {"showOriginalLinkText", IDS_READER_MODE_SHOW_ORIGINAL_PAGE_LINK},
-            {"minutesText", IDS_READER_MODE_MINUTES_TEXT},
+  static base::NoDestructor<std::u16string> kSpeedreaderData(GetSpeedreaderData(
+      {{"showOriginalLinkText", IDS_READER_MODE_SHOW_ORIGINAL_PAGE_LINK},
+       {"minutesText", IDS_READER_MODE_MINUTES_TEXT},
 #if defined(IDS_READER_MODE_TEXT_TO_SPEECH_PLAY_PAUSE)
-        {
-          "playButtonTitle", IDS_READER_MODE_TEXT_TO_SPEECH_PLAY_PAUSE
-        }
+       {"playButtonTitle", IDS_READER_MODE_TEXT_TO_SPEECH_PLAY_PAUSE}
 #endif
       }));
 
@@ -419,7 +453,11 @@ std::string SpeedreaderTabHelper::TakePageContent() {
 
 void SpeedreaderTabHelper::OnDistillComplete(DistillationResult result) {
   // Perform a state transition
-  TransitStateTo(DistillStates::Distilled(result));
+  Transit(distill_state_, DistillStates::Distilled(result));
+}
+
+void SpeedreaderTabHelper::OnDistilledDocumentSent() {
+  UpdateUI();
 
 #if BUILDFLAG(IS_ANDROID)
   // Attempt to reset page scale after a successful distillation.
@@ -441,7 +479,7 @@ void SpeedreaderTabHelper::OnReadingStart(content::WebContents* web_contents) {
     return;
   }
 
-  constexpr const char16_t kReading[] =
+  static constexpr char16_t kReading[] =
       uR"js( speedreaderUtils.setTtsReadingState($1) )js";
 
   const auto script = base::ReplaceStringPlaceholders(
@@ -464,7 +502,7 @@ void SpeedreaderTabHelper::OnReadingProgress(content::WebContents* web_contents,
       web_contents != this->web_contents()) {
     return;
   }
-  constexpr const char16_t kHighlight[] =
+  static constexpr char16_t kHighlight[] =
       uR"js( speedreaderUtils.highlightText($1, $2, $3) )js";
 
   const auto script = base::ReplaceStringPlaceholders(
@@ -534,15 +572,15 @@ void SpeedreaderTabHelper::OnResult(
 
 void SpeedreaderTabHelper::SetDocumentAttribute(const std::string& attribute,
                                                 const std::string& value) {
-  constexpr const char16_t kSetAttribute[] =
+  static constexpr char16_t kSetAttribute[] =
       uR"js(
     (function() {
       const attribute = '$1'
       const value = '$2'
       if (value == '') {
-        document.documentElement.removeAttribute(attribute)
+        document?.documentElement?.removeAttribute(attribute)
       } else {
-        document.documentElement.setAttribute(attribute, value)
+        document?.documentElement?.setAttribute(attribute, value)
       }
     })();
   )js";

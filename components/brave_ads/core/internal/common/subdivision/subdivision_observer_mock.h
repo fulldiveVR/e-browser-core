@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/common/subdivision/subdivision_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,10 +19,6 @@ class SubdivisionObserverMock : public SubdivisionObserver {
 
   SubdivisionObserverMock(const SubdivisionObserverMock&) = delete;
   SubdivisionObserverMock& operator=(const SubdivisionObserverMock&) = delete;
-
-  SubdivisionObserverMock(SubdivisionObserverMock&&) noexcept = delete;
-  SubdivisionObserverMock& operator=(SubdivisionObserverMock&&) noexcept =
-      delete;
 
   ~SubdivisionObserverMock() override;
 

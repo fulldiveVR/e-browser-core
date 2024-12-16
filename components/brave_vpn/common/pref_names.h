@@ -23,8 +23,19 @@ inline constexpr char kBraveVPNRegionListFetchedDate[] =
     "brave.brave_vpn.region_list_fetched_date";
 inline constexpr char kBraveVPNDeviceRegion[] =
     "brave.brave_vpn.device_region_name";
+
+// For backward-compatibility, v1's selected region name is preserved.
+// If user runs older brave with migrated profile, it could make crash as
+// region data list v1 doesn't have entry for v2's selected region name.
+// Retaining only this data only is sufficient for backward compatibility
+// because region list and timezone data are fetched again as v2 data becomes
+// invalid in old browser.
 inline constexpr char kBraveVPNSelectedRegion[] =
     "brave.brave_vpn.selected_region_name";
+inline constexpr char kBraveVPNSelectedRegionV2[] =
+    "brave.brave_vpn.selected_region_name_v2";
+inline constexpr char kBraveVPNRegionListVersion[] =
+    "brave.brave_vpn.region_list_version";
 #if BUILDFLAG(IS_WIN)
 inline constexpr char kBraveVpnShowDNSPolicyWarningDialog[] =
     "brave.brave_vpn.show_dns_policy_warning_dialog";
@@ -37,12 +48,22 @@ inline constexpr char kBraveVPNWireguardFallbackDialog[] =
 inline constexpr char kBraveVPNWireguardEnabled[] =
     "brave.brave_vpn.wireguard_enabled";
 #endif
+
+#if BUILDFLAG(IS_MAC)
+inline constexpr char kBraveVPNOnDemandEnabled[] =
+    "brave.brave_vpn.on_demand_enabled";
+#endif
+
 inline constexpr char kBraveVPNWireguardProfileCredentials[] =
     "brave.brave_vpn.wireguard.profile_credentials";
 inline constexpr char kBraveVPNEnvironment[] = "brave.brave_vpn.env";
 // Dict that has subscriber credential its expiration date.
 inline constexpr char kBraveVPNSubscriberCredential[] =
     "brave.brave_vpn.subscriber_credential";
+// Set the expiry of the last redeemed credential.
+// Useful in case redemption fails and person uses all credentials.
+inline constexpr char kBraveVPNLastCredentialExpiry[] =
+    "brave.brave_vpn.last_credential_expiry";
 
 // Time that session expired occurs.
 inline constexpr char kBraveVPNSessionExpiredDate[] =
@@ -64,6 +85,8 @@ inline constexpr char kBraveVPNUsedSecondDay[] =
     "brave.brave_vpn.used_second_day";
 inline constexpr char kBraveVPNDaysInMonthUsed[] =
     "brave.brave_vpn.days_in_month_used";
+inline constexpr char kBraveVPNWidgetUsageWeeklyStorage[] =
+    "brave.brave_vpn.widget_usage";
 }  // namespace prefs
 
 }  // namespace brave_vpn

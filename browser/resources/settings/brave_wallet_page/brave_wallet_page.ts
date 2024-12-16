@@ -8,7 +8,7 @@
 import 'chrome://resources/cr_elements/cr_input/cr_input.js';
 import './wallet_networks_subpage.js';
 
-import {PrefsMixin} from 'chrome://resources/cr_components/settings_prefs/prefs_mixin.js';
+import {PrefsMixin} from '/shared/settings/prefs/prefs_mixin.js';
 import {I18nMixin} from 'chrome://resources/cr_elements/i18n_mixin.js';
 import {WebUiListenerMixin} from 'chrome://resources/cr_elements/web_ui_listener_mixin.js';
 import {PolymerElement} from 'chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js';
@@ -40,36 +40,30 @@ class SettingsBraveWalletPage extends SettingsBraveWalletPageBase {
         type: Boolean
       },
 
-      isNftPinningEnabled_: {
-        type: Boolean
-      },
-
       isNetworkEditor_: {
         type: Number,
         value: false,
       },
 
-      shouldShowClearNftButton_: {
+      isTransactionSimulationsFeatureEnabled: {
         type: Boolean,
         value: false,
       },
 
-      shouldEnableClearNftButton_: {
+      isPrivateWindowsEnabled_: {
+        type: Object,
+        value() {
+          return {}
+        },
+      },
+
+      showRestartToast_: {
         type: Boolean,
         value: false,
       },
 
-      pinnedNftCount_: {
-        type: Number,
-        value: 0,
-      },
+
     }
-  }
-
-  static get observers(){
-    return [
-      'onShowOptionChanged_(prefs.brave.wallet.auto_pin_enabled.value)'
-    ]
   }
 
   browserProxy_ = BraveWalletBrowserProxyImpl.getInstance()
@@ -90,8 +84,19 @@ class SettingsBraveWalletPage extends SettingsBraveWalletPageBase {
     this.browserProxy_.getAutoLockMinutes().then(val => {
       this.$.walletAutoLockMinutes.value = val
     })
-    this.browserProxy_.isNftPinningEnabled().then(val => {
-      this.isNftPinningEnabled_ = val
+    this.browserProxy_.isTransactionSimulationsFeatureEnabled().then(val => {
+      this.isTransactionSimulationsFeatureEnabled = val
+    });
+    this.browserProxy_.getTransactionSimulationOptInStatusOptions()
+      .then(list => {
+        this.transaction_simulation_opt_in_options_ = list
+      });
+    this.browserProxy_.getWalletInPrivateWindowsEnabled().then((val) => {
+      this.isPrivateWindowsEnabled_ = {
+        key: '',
+        type: chrome.settingsPrivate.PrefType.BOOLEAN,
+        value: val,
+      }
     });
 
     this.cryptocurrency_list_ = [
@@ -161,16 +166,6 @@ class SettingsBraveWalletPage extends SettingsBraveWalletPageBase {
     this.currency_list_.every((x) => x.name = x.value);
   }
 
-  private onShowOptionChanged_() {
-    this.shouldShowClearNftButton_ =
-        !this.getPref('brave.wallet.auto_pin_enabled').value;
-
-    this.browserProxy_.getPinnedNftCount().then(val => {
-      this.pinnedNftCount_ = val
-      this.shouldEnableClearNftButton_ = this.pinnedNftCount_ > 0
-    })
-  }
-
   onBraveWalletEnabledChange_() {
     this.browserProxy_.setBraveWalletEnabled(this.$.braveWalletEnabled.checked);
   }
@@ -178,10 +173,6 @@ class SettingsBraveWalletPage extends SettingsBraveWalletPageBase {
   isNetworkEditorRoute() {
     const router = Router.getInstance();
     return (router.getCurrentRoute() == router.getRoutes().BRAVE_WALLET_NETWORKS);
-  }
-
-  getPinnedNftCount() {
-    return this.pinnedNftCount_;
   }
 
   /** @protected */
@@ -218,20 +209,39 @@ class SettingsBraveWalletPage extends SettingsBraveWalletPageBase {
     window.alert(this.i18n('walletResetTransactionInfoConfirmed'))
   }
 
-  onClearPinnedNftTapped_() {
-    if (this.pinnedNftCount_ == 0) {
-      return
+  onPrivateWindowsEnabled_() {
+    // Toggle the setting switch UI, but don't actually update the pref.
+    const pref = {
+      key: '',
+      type: chrome.settingsPrivate.PrefType.BOOLEAN,
+      value: !this.isPrivateWindowsEnabled_.value,
     }
-    var message = this.i18n('walletClearPinnedNftConfirmation')
-    if (window.prompt(message) !== this.i18n('walletResetConfirmationPhrase'))
-      return
-    this.browserProxy_.clearPinnedNft().then(val => {
-      this.onShowOptionChanged_()
-    })
+    this.isPrivateWindowsEnabled_ = pref
+    this.updateRestartToast_()
   }
 
-  onNftDiscoveryEnabledChange_() {
-    this.browserProxy_.setNftDiscoveryEnabled(this.$.enableNftDiscovery.checked)
+  updateRestartToast_() {
+    // Show restart toast if current private windows pref
+    // value does not match UI switch.
+    this.browserProxy_.getWalletInPrivateWindowsEnabled().then(enabled => {
+      if (enabled !== this.isPrivateWindowsEnabled_.value) {
+        this.showRestartToast_ = true
+      } else {
+        this.showRestartToast_ = false
+      }
+    });
+  }
+
+  applyPrefChangesAndRestart(e) {
+    this.browserProxy_.setWalletInPrivateWindowsEnabled(
+      this.isPrivateWindowsEnabled_.value
+    ).then(() => {
+        e.stopPropagation();
+        window.open("chrome://restart", "_self");
+      })
+      .catch((error) => {
+        console.error('Error setting Wallet in Private Windows:', error);
+      });
   }
 }
 

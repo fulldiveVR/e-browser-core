@@ -9,17 +9,20 @@
 #include <string>
 #include <utility>
 
+#include "base/check_deref.h"
 #include "base/memory/weak_ptr.h"
 #include "brave/browser/ui/brave_icon_with_badge_image_source.h"
-#include "brave/browser/ui/views/bubble/brave_webui_bubble_manager.h"
+#include "brave/browser/ui/webui/brave_shields/shields_panel_ui.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/l10n/common/localization_util.h"
+#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/omnibox/omnibox_theme.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/views/bubble/webui_bubble_manager.h"
 #include "chrome/browser/ui/views/chrome_layout_provider.h"
 #include "chrome/browser/ui/views/toolbar/toolbar_ink_drop_util.h"
 #include "components/grit/brave_components_resources.h"
@@ -43,6 +46,10 @@
 #include "ui/views/view_class_properties.h"
 #include "url/gurl.h"
 
+#if BUILDFLAG(ENABLE_SPEEDREADER)
+#include "brave/browser/speedreader/speedreader_tab_helper.h"
+#endif
+
 namespace {
 constexpr SkColor kBadgeBg = SkColorSetRGB(0x63, 0x64, 0x72);
 class BraveShieldsActionViewHighlightPathGenerator
@@ -64,16 +71,18 @@ class BraveShieldsActionViewHighlightPathGenerator
 DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(BraveShieldsActionView,
                                       kShieldsActionIcon);
 
-BraveShieldsActionView::BraveShieldsActionView(Profile& profile,
-                                               TabStripModel& tab_strip_model)
+BraveShieldsActionView::BraveShieldsActionView(
+    BrowserWindowInterface* browser_window_interface)
     : LabelButton(base::BindRepeating(&BraveShieldsActionView::ButtonPressed,
-                                      base::Unretained(this)),
+                                      base::Unretained(this),
+                                      browser_window_interface),
                   std::u16string()),
-      profile_(profile),
-      tab_strip_model_(tab_strip_model) {
+      profile_(CHECK_DEREF(browser_window_interface->GetProfile())),
+      tab_strip_model_(
+          CHECK_DEREF(browser_window_interface->GetTabStripModel())) {
   auto* web_contents = tab_strip_model_->GetActiveWebContents();
   if (web_contents) {
-    brave_shields::BraveShieldsDataController::FromWebContents(web_contents)
+    brave_shields::BraveShieldsTabHelper::FromWebContents(web_contents)
         ->AddObserver(this);
   }
 
@@ -88,7 +97,7 @@ BraveShieldsActionView::BraveShieldsActionView(Profile& profile,
   auto menu_button_controller = std::make_unique<views::MenuButtonController>(
       this,
       base::BindRepeating(&BraveShieldsActionView::ButtonPressed,
-                          base::Unretained(this)),
+                          base::Unretained(this), browser_window_interface),
       std::make_unique<views::Button::DefaultButtonControllerDelegate>(this));
   menu_button_controller_ = menu_button_controller.get();
   SetButtonController(std::move(menu_button_controller));
@@ -97,7 +106,7 @@ BraveShieldsActionView::BraveShieldsActionView(Profile& profile,
 BraveShieldsActionView::~BraveShieldsActionView() {
   auto* web_contents = tab_strip_model_->GetActiveWebContents();
   if (web_contents) {
-    brave_shields::BraveShieldsDataController::FromWebContents(web_contents)
+    brave_shields::BraveShieldsTabHelper::FromWebContents(web_contents)
         ->RemoveObserver(this);
   }
 }
@@ -152,15 +161,15 @@ BraveShieldsActionView::GetImageSource() {
 
   if (web_contents) {
     auto* shields_data_controller =
-        brave_shields::BraveShieldsDataController::FromWebContents(
-            web_contents);
+        brave_shields::BraveShieldsTabHelper::FromWebContents(web_contents);
 
     int count = shields_data_controller->GetTotalBlockedCount();
     if (count > 0) {
       badge_text = count > 99 ? "99+" : std::to_string(count);
     }
 
-    is_enabled = shields_data_controller->GetBraveShieldsEnabled();
+    is_enabled = shields_data_controller->GetBraveShieldsEnabled() &&
+                 !IsPageInReaderMode(web_contents);
 
     if (!badge_text.empty()) {
       badge = std::make_unique<IconWithBadgeImageSource::Badge>(
@@ -170,8 +179,10 @@ BraveShieldsActionView::GetImageSource() {
 
   image_source->SetIcon(gfx::Image(GetIconImage(is_enabled)));
 
-  if (is_enabled && profile_->GetPrefs()->GetBoolean(kShieldsStatsBadgeVisible))
+  if (is_enabled &&
+      profile_->GetPrefs()->GetBoolean(kShieldsStatsBadgeVisible)) {
     image_source->SetBadge(std::move(badge));
+  }
 
   return image_source;
 }
@@ -196,16 +207,17 @@ void BraveShieldsActionView::UpdateIconState() {
                 ui::ImageModel::FromImageSkia(icon));
 }
 
-void BraveShieldsActionView::ButtonPressed() {
+void BraveShieldsActionView::ButtonPressed(
+    BrowserWindowInterface* browser_window_interface) {
   auto* web_content = tab_strip_model_->GetActiveWebContents();
-  if (web_content && SchemeIsLocal(web_content->GetLastCommittedURL())) {
-    return;  // Do not show bubble if it's a local scheme
+  if (!ShouldShowBubble(web_content)) {
+    return;
   }
 
   if (!webui_bubble_manager_) {
-    webui_bubble_manager_ =
-        std::make_unique<BraveWebUIBubbleManager<ShieldsPanelUI>>(
-            this, &*profile_, GURL(kShieldsPanelURL), IDS_BRAVE_SHIELDS);
+    webui_bubble_manager_ = WebUIBubbleManager::Create<ShieldsPanelUI>(
+        this, browser_window_interface, GURL(kShieldsPanelURL),
+        IDS_BRAVE_SHIELDS);
   }
 
   if (webui_bubble_manager_->GetBubbleWidget()) {
@@ -216,11 +228,42 @@ void BraveShieldsActionView::ButtonPressed() {
   webui_bubble_manager_->ShowBubble();
 }
 
-bool BraveShieldsActionView::SchemeIsLocal(GURL url) {
-  return url.SchemeIs(url::kAboutScheme) || url.SchemeIs(url::kBlobScheme) ||
-         url.SchemeIs(url::kDataScheme) ||
-         url.SchemeIs(url::kFileSystemScheme) || url.SchemeIs(kMagnetScheme) ||
-         url.SchemeIs(kBraveUIScheme) || url.SchemeIs(content::kChromeUIScheme);
+bool BraveShieldsActionView::IsPageInReaderMode(
+    content::WebContents* web_contents) {
+  if (!web_contents) {
+    return false;
+  }
+#if BUILDFLAG(ENABLE_SPEEDREADER)
+  if (auto* speedreader_tab_helper =
+          speedreader::SpeedreaderTabHelper::FromWebContents(web_contents)) {
+    return speedreader::DistillStates::IsDistilled(
+        speedreader_tab_helper->PageDistillState());
+  }
+#endif
+  return false;
+}
+
+bool BraveShieldsActionView::ShouldShowBubble(
+    content::WebContents* web_contents) {
+  if (!web_contents) {
+    return false;
+  }
+  const GURL& url = web_contents->GetLastCommittedURL();
+
+  if (url.SchemeIs(url::kAboutScheme) || url.SchemeIs(url::kBlobScheme) ||
+      url.SchemeIs(url::kDataScheme) || url.SchemeIs(url::kFileSystemScheme) ||
+      url.SchemeIs(kMagnetScheme) || url.SchemeIs(kBraveUIScheme) ||
+      url.SchemeIs(content::kChromeUIScheme)) {
+    // Do not show bubble if it's a local scheme
+    return false;
+  }
+
+  if (IsPageInReaderMode(web_contents)) {
+    // Do not show bubble on speedreader pages.
+    return false;
+  }
+
+  return true;
 }
 
 std::unique_ptr<views::LabelButtonBorder>
@@ -237,8 +280,7 @@ std::u16string BraveShieldsActionView::GetTooltipText(
 
   if (web_contents) {
     auto* shields_data_controller =
-        brave_shields::BraveShieldsDataController::FromWebContents(
-            web_contents);
+        brave_shields::BraveShieldsTabHelper::FromWebContents(web_contents);
 
     int count = shields_data_controller->GetTotalBlockedCount();
 
@@ -286,13 +328,13 @@ void BraveShieldsActionView::OnTabStripModelChanged(
     const TabStripSelectionChange& selection) {
   if (selection.active_tab_changed()) {
     if (selection.new_contents) {
-      brave_shields::BraveShieldsDataController::FromWebContents(
+      brave_shields::BraveShieldsTabHelper::FromWebContents(
           selection.new_contents)
           ->AddObserver(this);
     }
 
     if (selection.old_contents) {
-      brave_shields::BraveShieldsDataController::FromWebContents(
+      brave_shields::BraveShieldsTabHelper::FromWebContents(
           selection.old_contents)
           ->RemoveObserver(this);
     }

@@ -14,7 +14,6 @@
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
-#include "components/prefs/pref_service.h"
 
 namespace brave_wallet {
 
@@ -28,8 +27,8 @@ struct DiscoveredBitcoinAccount;
 // transactions.
 class AccountDiscoveryManager {
  public:
-  AccountDiscoveryManager(JsonRpcService* rpc_service,
-                          KeyringService* keyring_service,
+  AccountDiscoveryManager(JsonRpcService& rpc_service,
+                          KeyringService& keyring_service,
                           BitcoinWalletService* bitcoin_wallet_service);
   ~AccountDiscoveryManager();
 
@@ -66,14 +65,18 @@ class AccountDiscoveryManager {
                                      uint64_t value,
                                      mojom::SolanaProviderError error,
                                      const std::string& error_message);
+  void DiscoverBitcoinAccount(mojom::KeyringId keyring_id,
+                              uint32_t account_index);
   void OnBitcoinDiscoverAccountsDone(
-      base::expected<DiscoveredBitcoinAccount, std::string> dicovered_account);
+      mojom::KeyringId keyring_id,
+      uint32_t account_index,
+      base::expected<DiscoveredBitcoinAccount, std::string> discovered_account);
 
   void ProcessDiscoveryResult(std::unique_ptr<DiscoveryContext> context,
                               bool result);
 
-  raw_ptr<brave_wallet::JsonRpcService> json_rpc_service_;
-  raw_ptr<brave_wallet::KeyringService> keyring_service_;
+  raw_ref<brave_wallet::JsonRpcService> json_rpc_service_;
+  raw_ref<brave_wallet::KeyringService> keyring_service_;
   raw_ptr<brave_wallet::BitcoinWalletService> bitcoin_wallet_service_;
 
   base::WeakPtrFactory<AccountDiscoveryManager> weak_ptr_factory_{this};

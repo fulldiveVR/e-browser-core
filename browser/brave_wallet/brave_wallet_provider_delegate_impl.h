@@ -39,6 +39,8 @@ class BraveWalletProviderDelegateImpl : public BraveWalletProviderDelegate,
 
   bool IsTabVisible() override;
   void ShowPanel() override;
+  void ShowWalletBackup() override;
+  void UnlockWallet() override;
   void WalletInteractionDetected() override;
   void ShowWalletOnboarding() override;
   void ShowAccountCreation(mojom::CoinType type) override;

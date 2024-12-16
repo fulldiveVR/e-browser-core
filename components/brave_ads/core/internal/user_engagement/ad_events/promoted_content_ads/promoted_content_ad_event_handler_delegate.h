@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 
 namespace brave_ads {
 
@@ -28,12 +28,12 @@ class PromotedContentAdEventHandlerDelegate {
   virtual void OnDidFirePromotedContentAdClickedEvent(
       const PromotedContentAdInfo& ad) {}
 
-  // Invoked when the promoted content `ad` event fails for `placement_id`,
-  // `creative_instance_id` and `event_type`.
+  // Invoked when the promoted content ad event fails for `placement_id`,
+  // `creative_instance_id` and `mojom_ad_event_type`.
   virtual void OnFailedToFirePromotedContentAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
-      const mojom::PromotedContentAdEventType event_type) {}
+      mojom::PromotedContentAdEventType mojom_ad_event_type) {}
 
  protected:
   virtual ~PromotedContentAdEventHandlerDelegate() = default;

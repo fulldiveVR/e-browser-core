@@ -3,7 +3,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import { Store } from '@reduxjs/toolkit'
 import { mapLimit } from 'async'
 
 // types
@@ -19,7 +18,8 @@ import {
   SendSolTransactionParams,
   SendZecTransactionParams,
   SerializableTransactionInfo,
-  SPLTransferFromParams
+  SPLTransferFromParams,
+  TransactionInfoLookup
 } from '../../../constants/types'
 import {
   UpdateUnapprovedTransactionGasFieldsType,
@@ -35,29 +35,36 @@ import { WalletApiEndpointBuilderParams } from '../api-base.slice'
 import { PanelActions } from '../../../panel/actions'
 
 // utils
-import { handleEndpointError } from '../../../utils/api-utils'
 import {
-  getAccountType,
-  findAccountByAccountId
+  getHasPendingRequests,
+  handleEndpointError,
+  navigateToConnectHardwareWallet
+} from '../../../utils/api-utils'
+import {
+  findAccountByAccountId,
+  isHardwareAccount
 } from '../../../utils/account-utils'
 import { makeSerializableTransaction } from '../../../utils/model-serialization-utils'
-import {
-  hasEIP1559Support,
-  getCoinFromTxDataUnion
-} from '../../../utils/network-utils'
+import { getCoinFromTxDataUnion } from '../../../utils/network-utils'
 import { TX_CACHE_TAGS } from '../../../utils/query-cache-utils'
-import {
-  sortTransactionByDate,
-  toTxDataUnion,
-  shouldReportTransactionP3A
-} from '../../../utils/tx-utils'
+import { sortTransactionByDate, toTxDataUnion } from '../../../utils/tx-utils'
 import {
   signLedgerEthereumTransaction,
   signLedgerFilecoinTransaction,
   signLedgerSolanaTransaction,
   dialogErrorFromLedgerErrorCode,
-  signTrezorTransaction
+  signTrezorTransaction,
+  signSolTransactionWithHardwareKeyring,
+  signLedgerBitcoinTransaction
 } from '../../async/hardware'
+import { getLocale } from '../../../../common/locale'
+
+interface ProcessSignSolTransactionsRequestPayload {
+  approved: boolean
+  id: number
+  hwSignatures: BraveWallet.SolanaSignature[]
+  error: string | null
+}
 
 export const transactionEndpoints = ({
   mutation,
@@ -161,6 +168,30 @@ export const transactionEndpoints = ({
               ...TX_CACHE_TAGS.IDS((res || []).map(({ id }) => id))
             ]
     }),
+
+    getTransaction: query<
+      SerializableTransactionInfo | null,
+      TransactionInfoLookup
+    >({
+      queryFn: async (arg, { endpoint }, extraOptions, baseQuery) => {
+        try {
+          const { data: api } = baseQuery(undefined)
+          const { transactionInfo: tx } =
+            await api.txService.getTransactionInfo(arg.coin, arg.id)
+          return {
+            data: tx ? makeSerializableTransaction(tx) : null
+          }
+        } catch (error) {
+          return handleEndpointError(
+            endpoint,
+            `Unable to get transaction (${arg.id})`,
+            error
+          )
+        }
+      },
+      providesTags: (res, err, arg) => (err ? [] : [TX_CACHE_TAGS.ID(arg.id)])
+    }),
+
     invalidateTransactionsCache: mutation<boolean, void>({
       queryFn: () => {
         return { data: true }
@@ -227,23 +258,34 @@ export const transactionEndpoints = ({
             })
     }),
 
+    /** works for SPL tokens and Solana compressed NFTs */
     sendSPLTransfer: mutation<{ success: boolean }, SPLTransferFromParams>({
       queryFn: async (payload, { endpoint }, extraOptions, baseQuery) => {
         try {
           const { solanaTxManagerProxy, txService } = baseQuery(undefined).data
 
           const { errorMessage: transferTxDataErrorMessage, txData } =
-            await solanaTxManagerProxy.makeTokenProgramTransferTxData(
-              payload.network.chainId,
-              payload.splTokenMintAddress,
-              payload.fromAccount.address,
-              payload.to,
-              BigInt(payload.value)
-            )
+            payload.isCompressedNft
+              ? await solanaTxManagerProxy.makeBubbleGumProgramTransferTxData(
+                  payload.network.chainId,
+                  payload.splTokenMintAddress,
+                  payload.fromAccount.address,
+                  payload.to
+                )
+              : await solanaTxManagerProxy.makeTokenProgramTransferTxData(
+                  payload.network.chainId,
+                  payload.splTokenMintAddress,
+                  payload.fromAccount.address,
+                  payload.to,
+                  BigInt(payload.value),
+                  payload.decimals
+                )
 
           if (!txData) {
             throw new Error(
-              `Failed making SPL transfer data: ${transferTxDataErrorMessage}`
+              `Failed making ${
+                payload.isCompressedNft ? 'Compressed NFT' : 'SPL'
+              } transfer data: ${transferTxDataErrorMessage}`
             )
           }
 
@@ -266,19 +308,25 @@ export const transactionEndpoints = ({
         } catch (error) {
           return handleEndpointError(
             endpoint,
-            `SPL Transfer failed:
+            `${
+              payload.isCompressedNft ? 'Compressed NFT' : 'SPL'
+            } Transfer failed:
                   to: ${payload.to}
                   value: ${payload.value}`,
             error
           )
         }
       },
-      invalidatesTags: (res, err, arg) =>
-        TX_CACHE_TAGS.LISTS({
+      invalidatesTags: (res, err, arg) => [
+        ...TX_CACHE_TAGS.LISTS({
           chainId: null,
           coin: arg.fromAccount.accountId.coin,
           fromAccountId: arg.fromAccount.accountId
-        })
+        }),
+        'TokenBalances',
+        'TokenBalancesForChainId',
+        'AccountTokenCurrentBalance'
+      ]
     }),
 
     sendSolanaSerializedTransaction: mutation<
@@ -332,6 +380,171 @@ export const transactionEndpoints = ({
           )
         }
       }
+    }),
+
+    getPendingSignSolTransactionsRequests: query<
+      BraveWallet.SignSolTransactionsRequest[],
+      void
+    >({
+      queryFn: async (arg, { endpoint }, extraOptions, baseQuery) => {
+        try {
+          const { data: api } = baseQuery(undefined)
+
+          const { requests } =
+            await api.braveWalletService.getPendingSignSolTransactionsRequests()
+
+          return {
+            data: requests
+          }
+        } catch (error) {
+          return handleEndpointError(
+            endpoint,
+            'Failed to get pending Sign-All-Transactions Requests',
+            error
+          )
+        }
+      },
+      providesTags: ['PendingSignSolTransactionsRequests']
+    }),
+
+    processSignSolTransactionsRequest: mutation<
+      /** success */
+      true,
+      ProcessSignSolTransactionsRequestPayload
+    >({
+      queryFn: async (arg, { endpoint }, extraOptions, baseQuery) => {
+        try {
+          const { data: api } = baseQuery(undefined)
+
+          await processSignSolTransactionsRequest(
+            api.braveWalletService,
+            arg,
+            api.panelHandler
+          )
+
+          return {
+            data: true
+          }
+        } catch (error) {
+          return handleEndpointError(
+            endpoint,
+            'Failed to Sign-All-Transactions',
+            error
+          )
+        }
+      },
+      invalidatesTags: ['PendingSignSolTransactionsRequests']
+    }),
+
+    processSignSolTransactionsRequestHardware: mutation<
+      { success: boolean; errorCode?: string | number },
+      {
+        request: BraveWallet.SignSolTransactionsRequest
+      }
+    >({
+      queryFn: async (arg, { endpoint, ...store }, extraOptions, baseQuery) => {
+        try {
+          const { data: api, cache } = baseQuery(undefined)
+          const { braveWalletService, panelHandler } = api
+
+          if (!isHardwareAccount(arg.request.fromAccountId)) {
+            const errorString = getLocale('braveWalletHardwareAccountNotFound')
+
+            braveWalletService.notifySignSolTransactionsRequestProcessed(
+              false,
+              arg.request.id,
+              [],
+              errorString
+            )
+
+            const hasPendingRequests = await getHasPendingRequests()
+
+            if (!hasPendingRequests) {
+              api.panelHandler?.closeUI()
+            }
+
+            return {
+              data: {
+                success: false,
+                errorCode: errorString
+              }
+            }
+          }
+
+          const accountsRegistry = await cache.getAccountsRegistry()
+          const info = findAccountByAccountId(
+            arg.request.fromAccountId,
+            accountsRegistry
+          )?.hardware
+
+          if (!info) {
+            throw new Error('No hardware account info')
+          }
+
+          if (panelHandler) {
+            navigateToConnectHardwareWallet(panelHandler, store)
+          }
+
+          // Send serialized requests to hardware keyring to sign.
+          const payload: ProcessSignSolTransactionsRequestPayload = {
+            approved: true,
+            id: arg.request.id,
+            hwSignatures: [],
+            error: null
+          }
+
+          for (const rawMessage of arg.request.rawMessages) {
+            const signed = await signSolTransactionWithHardwareKeyring(
+              info.vendor,
+              info.path,
+              Buffer.from(rawMessage),
+              () => {
+                // dismiss hardware connect screen
+                store.dispatch(PanelActions.navigateToMain())
+              }
+            )
+
+            if (!signed.success) {
+              if (signed.code && signed.code === 'unauthorized') {
+                store.dispatch(
+                  PanelActions.setHardwareWalletInteractionError(signed.code)
+                )
+                return {
+                  data: {
+                    success: false,
+                    errorCode: signed.code
+                  }
+                }
+              }
+              payload.approved = false
+              payload.hwSignatures = []
+              payload.error = signed.error
+              break
+            } else {
+              payload.hwSignatures?.push(signed.signature)
+            }
+          }
+
+          await processSignSolTransactionsRequest(
+            braveWalletService,
+            payload,
+            panelHandler
+          )
+
+          return {
+            data: {
+              success: true
+            }
+          }
+        } catch (error) {
+          return handleEndpointError(
+            endpoint,
+            'Failed to Sign-All-Transactions (Hardware)',
+            error
+          )
+        }
+      },
+      invalidatesTags: ['PendingSignSolTransactionsRequests']
     }),
 
     // BTC
@@ -390,7 +603,9 @@ export const transactionEndpoints = ({
           const { txService } = baseQuery(undefined).data
 
           const zecTxData: BraveWallet.ZecTxData = {
+            useShieldedPool: payload.useShieldedPool,
             to: payload.to,
+            memo: payload.memo,
             amount: BigInt(payload.value),
             fee: BigInt(0),
             inputs: [],
@@ -507,10 +722,7 @@ export const transactionEndpoints = ({
               fromAccount: payload.fromAccount,
               to: payload.contractAddress,
               value: payload.value,
-              gas: payload.gas,
-              gasPrice: payload.gasPrice,
-              maxPriorityFeePerGas: payload.maxPriorityFeePerGas,
-              maxFeePerGas: payload.maxFeePerGas,
+              gasLimit: payload.gasLimit,
               data
             },
             txService
@@ -601,10 +813,7 @@ export const transactionEndpoints = ({
               fromAccount: payload.fromAccount,
               to: payload.contractAddress,
               value: '0x0',
-              gas: payload.gas,
-              gasPrice: payload.gasPrice,
-              maxPriorityFeePerGas: payload.maxPriorityFeePerGas,
-              maxFeePerGas: payload.maxFeePerGas,
+              gasLimit: payload.gasLimit,
               data
             },
             txService
@@ -663,10 +872,7 @@ export const transactionEndpoints = ({
               fromAccount: payload.fromAccount,
               to: payload.contractAddress,
               value: '0x0',
-              gas: payload.gas,
-              gasPrice: payload.gasPrice,
-              maxPriorityFeePerGas: payload.maxPriorityFeePerGas,
-              maxFeePerGas: payload.maxFeePerGas,
+              gasLimit: payload.gasLimit,
               data
             },
             txService
@@ -719,6 +925,7 @@ export const transactionEndpoints = ({
               fromAccount: payload.fromAccount,
               to: payload.contractAddress,
               value: '0x0',
+              gasLimit: '',
               data
             },
             txService
@@ -771,14 +978,21 @@ export const transactionEndpoints = ({
                 ? ([
                     'UserBlockchainTokens', // refresh all user tokens
                     'AccountTokenCurrentBalance',
-                    'TokenSpotPrices'
+                    'TokenSpotPrices',
+                    'TokenBalances',
+                    'TokenBalancesForChainId',
+                    'AccountTokenCurrentBalance'
                   ] as const)
                 : [])
             ]
     }),
 
     approveTransaction: mutation<
-      { success: boolean },
+      {
+        success: boolean
+        errorUnion: BraveWallet.ProviderErrorUnion
+        errorMessage: string
+      },
       Pick<SerializableTransactionInfo, 'id' | 'chainId' | 'txType'> & {
         coinType: BraveWallet.CoinType
       }
@@ -786,7 +1000,7 @@ export const transactionEndpoints = ({
       queryFn: async (txInfo, { endpoint }, extraOptions, baseQuery) => {
         try {
           const api = baseQuery(undefined).data
-          const { txService, braveWalletP3A } = api
+          const { txService } = api
           const result: {
             status: boolean
             errorUnion: BraveWallet.ProviderErrorUnion
@@ -797,20 +1011,12 @@ export const transactionEndpoints = ({
             txInfo.id
           )
 
-          const error =
-            result.errorUnion.providerError ??
-            result.errorUnion.solanaProviderError
-
-          if (error && error !== BraveWallet.ProviderError.kSuccess) {
-            throw new Error(`${error}: ${result.errorMessage}`)
-          }
-
-          if (shouldReportTransactionP3A({ txInfo })) {
-            braveWalletP3A.reportTransactionSent(txInfo.coinType, true)
-          }
-
           return {
-            data: { success: true }
+            data: {
+              success: result.status,
+              errorMessage: result.errorMessage,
+              errorUnion: result.errorUnion
+            }
           }
         } catch (error) {
           return handleEndpointError(
@@ -857,46 +1063,51 @@ export const transactionEndpoints = ({
             navigateToConnectHardwareWallet(apiProxy.panelHandler, store)
           }
 
-          if (hardwareAccount.vendor === BraveWallet.LEDGER_HARDWARE_VENDOR) {
-            let success, error, code
+          if (hardwareAccount.vendor === BraveWallet.HardwareVendor.kLedger) {
+            let result
             switch (foundAccount.accountId.coin) {
               case BraveWallet.CoinType.ETH:
-                ;({ success, error, code } =
-                  await signLedgerEthereumTransaction(
-                    apiProxy,
-                    hardwareAccount.path,
-                    txInfo,
-                    foundAccount.accountId.coin
-                  ))
-                break
-              case BraveWallet.CoinType.FIL:
-                ;({ success, error, code } =
-                  await signLedgerFilecoinTransaction(
-                    apiProxy,
-                    txInfo,
-                    foundAccount.accountId.coin
-                  ))
-                break
-              case BraveWallet.CoinType.SOL:
-                ;({ success, error, code } = await signLedgerSolanaTransaction(
+                result = await signLedgerEthereumTransaction(
                   apiProxy,
                   hardwareAccount.path,
-                  txInfo,
-                  foundAccount.accountId.coin
-                ))
+                  txInfo.id
+                )
+                break
+              case BraveWallet.CoinType.FIL:
+                result = await signLedgerFilecoinTransaction(
+                  apiProxy,
+                  txInfo.id
+                )
+                break
+              case BraveWallet.CoinType.BTC:
+                result = await signLedgerBitcoinTransaction(apiProxy, txInfo.id)
+                break
+              case BraveWallet.CoinType.SOL:
+                result = await signLedgerSolanaTransaction(
+                  apiProxy,
+                  hardwareAccount.path,
+                  txInfo.id
+                )
                 break
               default:
                 await store.dispatch(PanelActions.navigateToMain())
                 throw new Error(`unsupported coin type for hardware approval`)
             }
-            if (success) {
-              store.dispatch(PanelActions.setSelectedTransactionId(txInfo.id))
-              store.dispatch(PanelActions.navigateTo('transactionDetails'))
+            if (result.success) {
+              store.dispatch(
+                PanelActions.setSelectedTransactionId({
+                  chainId: txInfo.chainId,
+                  coin: getCoinFromTxDataUnion(txInfo.txDataUnion),
+                  id: txInfo.id
+                })
+              )
+              store.dispatch(PanelActions.navigateTo('transactionStatus'))
               apiProxy.panelHandler?.setCloseOnDeactivate(true)
               return {
                 data: { success: true }
               }
             }
+            const { error, code } = result
 
             if (code !== undefined) {
               if (code === 'unauthorized') {
@@ -938,16 +1149,22 @@ export const transactionEndpoints = ({
               )
             }
           } else if (
-            hardwareAccount.vendor === BraveWallet.TREZOR_HARDWARE_VENDOR
+            hardwareAccount.vendor === BraveWallet.HardwareVendor.kTrezor
           ) {
-            const { success, error, deviceError } = await signTrezorTransaction(
+            const result = await signTrezorTransaction(
               apiProxy,
               hardwareAccount.path,
               txInfo
             )
-            if (success) {
-              store.dispatch(PanelActions.setSelectedTransactionId(txInfo.id))
-              store.dispatch(PanelActions.navigateTo('transactionDetails'))
+            if (result.success) {
+              store.dispatch(
+                PanelActions.setSelectedTransactionId({
+                  chainId: txInfo.chainId,
+                  coin: getCoinFromTxDataUnion(txInfo.txDataUnion),
+                  id: txInfo.id
+                })
+              )
+              store.dispatch(PanelActions.navigateTo('transactionStatus'))
               apiProxy.panelHandler?.setCloseOnDeactivate(true)
               // By default the focus is moved to the browser window
               // automatically when Trezor popup closed which triggers
@@ -965,14 +1182,14 @@ export const transactionEndpoints = ({
               }
             }
 
-            if (deviceError === 'deviceBusy') {
+            if (result.code === 'deviceBusy') {
               // do nothing as the operation is already in progress
               return {
                 data: { success: true }
               }
             }
 
-            console.log(error)
+            console.log(result.error)
             await apiProxy.txService.rejectTransaction(
               getCoinFromTxDataUnion(txInfo.txDataUnion),
               txInfo.chainId,
@@ -1386,14 +1603,22 @@ export const transactionEndpoints = ({
         try {
           const { solanaTxManagerProxy } = baseQuery(undefined).data
           const { errorMessage, fee } =
-            await solanaTxManagerProxy.getEstimatedTxFee(arg.chainId, arg.txId)
+            await solanaTxManagerProxy.getSolanaTxFeeEstimation(
+              arg.chainId,
+              arg.txId
+            )
 
           if (!fee) {
             throw new Error(errorMessage)
           }
 
+          const priorityFee =
+            (BigInt(fee.computeUnits) * BigInt(fee.feePerComputeUnit)) /
+            BigInt(BraveWallet.MICRO_LAMPORTS_PER_LAMPORT)
+          const totalFee = BigInt(fee.baseFee) + priorityFee
+
           return {
-            data: fee.toString()
+            data: totalFee.toString()
           }
         } catch (error) {
           return handleEndpointError(
@@ -1418,62 +1643,17 @@ async function sendEvmTransaction({
   payload: SendEthTransactionParams
   txService: BraveWallet.TxServiceRemote
 }): Promise<{ data: { success: boolean } }> {
-  /***
-   * Determine whether to create a legacy or EIP-1559
-   * transaction.
-   *
-   * isEIP1559 is true IFF:
-   *   - network supports EIP-1559
-   *
-   *     AND
-   *
-   *   - keyring supports EIP-1559
-   *     (ex: certain hardware wallets vendors)
-   *
-   *     AND
-   *
-   *   - payload: SendEthTransactionParams has NOT specified
-   *     legacy gas-pricing fields.
-   *
-   * In all other cases, fallback to legacy gas-pricing fields.
-   * For example, if network and keyring support EIP-1559, but
-   * the legacy gasPrice field is specified in the payload, then
-   * type-0 transaction should be created.
-   */
-  const isEIP1559 =
-    payload.gasPrice === undefined &&
-    hasEIP1559Support(getAccountType(payload.fromAccount), payload.network)
-
-  const txData: BraveWallet.TxData = {
-    nonce: '',
-    // Estimated by eth_tx_service
-    // if value is '' for legacy transactions
-    gasPrice: isEIP1559 ? '' : payload.gasPrice || '',
-    // Estimated by eth_tx_service if value is ''
-    gasLimit: payload.gas || '',
+  const params: BraveWallet.NewEvmTransactionParams = {
+    chainId: payload.network.chainId,
+    from: payload.fromAccount.accountId,
+    gasLimit: payload.gasLimit,
     to: payload.to,
     value: payload.value,
-    data: payload.data || [],
-    signOnly: false,
-    signedTransaction: ''
+    data: payload.data
   }
 
-  const txData1559: BraveWallet.TxData1559 = {
-    baseData: txData,
-    chainId: payload.network.chainId,
-    // Estimated by eth_tx_service if value is ''
-    maxPriorityFeePerGas: payload.maxPriorityFeePerGas || '',
-    // Estimated by eth_tx_service if value is ''
-    maxFeePerGas: payload.maxFeePerGas || '',
-    gasEstimation: undefined
-  }
-
-  const { errorMessage, success } = await txService.addUnapprovedTransaction(
-    isEIP1559
-      ? toTxDataUnion({ ethTxData1559: txData1559 })
-      : toTxDataUnion({ ethTxData: txData }),
-    payload.network.chainId,
-    payload.fromAccount.accountId
+  const { errorMessage, success } = await txService.addUnapprovedEvmTransaction(
+    params
   )
 
   if (!success && errorMessage) {
@@ -1489,19 +1669,21 @@ async function sendEvmTransaction({
   }
 }
 
-// panel internals
-function navigateToConnectHardwareWallet(
-  panelHandler: BraveWallet.PanelHandlerRemote,
-  store: Pick<Store, 'dispatch' | 'getState'>
+async function processSignSolTransactionsRequest(
+  braveWalletService: BraveWallet.BraveWalletServiceRemote,
+  arg: ProcessSignSolTransactionsRequestPayload,
+  panelHandler: BraveWallet.PanelHandlerRemote | undefined
 ) {
-  panelHandler.setCloseOnDeactivate(false)
+  braveWalletService.notifySignSolTransactionsRequestProcessed(
+    arg.approved,
+    arg.id,
+    arg.hwSignatures,
+    arg.error || null
+  )
 
-  const selectedPanel: string = store.getState()?.panel?.selectedPanel
+  const hasPendingRequests = await getHasPendingRequests()
 
-  if (selectedPanel === 'connectHardwareWallet') {
-    return
+  if (!hasPendingRequests) {
+    panelHandler?.closeUI()
   }
-
-  store.dispatch(PanelActions.navigateTo('connectHardwareWallet'))
-  store.dispatch(PanelActions.setHardwareWalletInteractionError(undefined))
 }

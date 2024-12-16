@@ -15,11 +15,11 @@ namespace brave_ads {
 
 void CashDeposit::GetValue(const std::string& creative_instance_id,
                            GetDepositCallback callback) {
-  database_table_.GetForCreativeInstanceId(
+  deposits_database_table_.GetForCreativeInstanceId(
       creative_instance_id,
       base::BindOnce(
-          [](GetDepositCallback callback, const bool success,
-             const std::optional<DepositInfo>& deposit) {
+          [](GetDepositCallback callback, bool success,
+             std::optional<DepositInfo> deposit) {
             if (!success || !deposit) {
               return std::move(callback).Run(/*success=*/false,
                                              /*value=*/0.0);

@@ -25,18 +25,16 @@
 #include "brave/common/brave_channel_info.h"
 #include "brave/components/brave_ads/browser/component_updater/resource_component.h"
 #include "brave/components/brave_component_updater/browser/brave_component_updater_delegate.h"
-#include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
 #include "brave/components/brave_referrals/browser/brave_referrals_service.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/ad_block_subscription_service_manager.h"
-#include "brave/components/brave_shields/browser/brave_farbling_service.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/content/browser/ad_block_subscription_service_manager.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_sync/network_time_helper.h"
 #include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/debounce/browser/debounce_component_installer.h"
-#include "brave/components/debounce/common/features.h"
+#include "brave/components/debounce/core/browser/debounce_component_installer.h"
+#include "brave/components/debounce/core/common/features.h"
 #include "brave/components/https_upgrade_exceptions/browser/https_upgrade_exceptions_service.h"
 #include "brave/components/localhost_permission/localhost_permission_component.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
@@ -44,6 +42,8 @@
 #include "brave/components/p3a/histograms_braveizer.h"
 #include "brave/components/p3a/p3a_config.h"
 #include "brave/components/p3a/p3a_service.h"
+#include "brave/components/webcompat/content/browser/webcompat_exceptions_service.h"
+#include "brave/components/webcompat/core/common/features.h"
 #include "brave/services/network/public/cpp/system_request_handler.h"
 #include "build/build_config.h"
 #include "chrome/browser/component_updater/component_updater_utils.h"
@@ -53,7 +53,6 @@
 #include "chrome/common/channel_info.h"
 #include "chrome/common/chrome_paths.h"
 #include "chrome/common/pref_names.h"
-#include "components/component_updater/component_updater_service.h"
 #include "components/component_updater/timer_update_scheduler.h"
 #include "content/public/browser/browser_thread.h"
 #include "content/public/browser/child_process_security_policy.h"
@@ -62,19 +61,10 @@
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "url/gurl.h"
 
-#if BUILDFLAG(ENABLE_GREASELION)
-#include "brave/components/greaselion/browser/greaselion_download_service.h"
-#endif
-
 #if BUILDFLAG(ENABLE_TOR)
 #include "brave/components/tor/brave_tor_client_updater.h"
 #include "brave/components/tor/brave_tor_pluggable_transport_updater.h"
 #include "brave/components/tor/pref_names.h"
-#endif
-
-#if BUILDFLAG(ENABLE_IPFS)
-#include "brave/components/ipfs/brave_ipfs_client_updater.h"
-#include "brave/components/ipfs/ipfs_constants.h"
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
@@ -84,7 +74,9 @@
 #if BUILDFLAG(IS_ANDROID)
 #include "chrome/browser/flags/android/chrome_feature_list.h"
 #else
+#include "brave/browser/search_engines/search_engine_provider_util.h"
 #include "brave/browser/ui/brave_browser_command_controller.h"
+#include "chrome/browser/first_run/first_run.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_list.h"
 #endif
@@ -95,10 +87,12 @@
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-#include "brave/components/brave_vpn/browser/connection/brave_vpn_os_connection_api.h"
-#if BUILDFLAG(IS_WIN)
-#include "brave/browser/brave_vpn/win/vpn_utils_win.h"
+#include "brave/browser/brave_vpn/vpn_utils.h"
+#include "brave/components/brave_vpn/browser/connection/brave_vpn_connection_manager.h"
 #endif
+
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
+#include "brave/browser/day_zero_browser_ui_expt/day_zero_browser_ui_expt_manager.h"
 #endif
 
 using brave_component_updater::BraveComponent;
@@ -149,15 +143,6 @@ BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
 
 void BraveBrowserProcessImpl::Init() {
   BrowserProcessImpl::Init();
-#if BUILDFLAG(ENABLE_IPFS)
-  content::ChildProcessSecurityPolicy::GetInstance()->RegisterWebSafeScheme(
-      ipfs::kIPFSScheme);
-  content::ChildProcessSecurityPolicy::GetInstance()->RegisterWebSafeScheme(
-      ipfs::kIPNSScheme);
-#endif
-  brave_component_updater::BraveOnDemandUpdater::GetInstance()
-      ->RegisterOnDemandUpdateCallback(
-          base::BindRepeating(&component_updater::BraveOnDemandUpdate));
   UpdateBraveDarkMode();
   pref_change_registrar_.Add(
       kBraveDarkMode,
@@ -171,6 +156,11 @@ void BraveBrowserProcessImpl::Init() {
                           base::Unretained(this)));
 #endif
 
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
+  day_zero_browser_ui_expt_manager_ =
+      DayZeroBrowserUIExptManager::Create(profile_manager());
+#endif
+
   InitSystemRequestHandlerCallback();
 
 #if !BUILDFLAG(IS_ANDROID)
@@ -179,13 +169,22 @@ void BraveBrowserProcessImpl::Init() {
     // suppressed it from previous os.
     local_state()->ClearPref(prefs::kSuppressUnsupportedOSWarning);
   }
+
+  brave::PrepareSearchSuggestionsConfig(local_state(),
+                                        first_run::IsChromeFirstRun());
 #endif
 }
 
 #if !BUILDFLAG(IS_ANDROID)
 void BraveBrowserProcessImpl::StartTearDown() {
+  brave_stats_helper_.reset();
   brave_stats_updater_.reset();
   brave_referrals_service_.reset();
+#if BUILDFLAG(BRAVE_P3A_ENABLED)
+  if (p3a_service_) {
+    p3a_service_->StartTeardown();
+  }
+#endif
   BrowserProcessImpl::StartTearDown();
 }
 
@@ -228,9 +227,12 @@ void BraveBrowserProcessImpl::StartBraveServices() {
     localhost_permission_component();
   }
 
-#if BUILDFLAG(ENABLE_GREASELION)
-  greaselion_download_service();
-#endif
+  if (base::FeatureList::IsEnabled(
+          webcompat::features::kBraveWebcompatExceptionsService)) {
+    webcompat::WebcompatExceptionsService::CreateInstance(
+        local_data_files_service());
+  }
+
   debounce_component_installer();
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
   request_otr_component_installer();
@@ -300,17 +302,6 @@ BraveBrowserProcessImpl::localhost_permission_component() {
   }
   return localhost_permission_component_.get();
 }
-
-#if BUILDFLAG(ENABLE_GREASELION)
-greaselion::GreaselionDownloadService*
-BraveBrowserProcessImpl::greaselion_download_service() {
-  if (!greaselion_download_service_) {
-    greaselion_download_service_ = greaselion::GreaselionDownloadServiceFactory(
-        local_data_files_service());
-  }
-  return greaselion_download_service_.get();
-}
-#endif
 
 debounce::DebounceComponentInstaller*
 BraveBrowserProcessImpl::debounce_component_installer() {
@@ -440,14 +431,15 @@ BraveBrowserProcessImpl::brave_referrals_service() {
 brave_stats::BraveStatsUpdater* BraveBrowserProcessImpl::brave_stats_updater() {
   if (!brave_stats_updater_) {
     brave_stats_updater_ = std::make_unique<brave_stats::BraveStatsUpdater>(
-        local_state(), g_browser_process->profile_manager());
+        local_state(), profile_manager());
   }
   return brave_stats_updater_.get();
 }
 
 brave_ads::BraveStatsHelper* BraveBrowserProcessImpl::ads_brave_stats_helper() {
   if (!brave_stats_helper_) {
-    brave_stats_helper_ = std::make_unique<brave_ads::BraveStatsHelper>();
+    brave_stats_helper_ = std::make_unique<brave_ads::BraveStatsHelper>(
+        local_state(), profile_manager());
   }
   return brave_stats_helper_.get();
 }
@@ -485,51 +477,18 @@ BraveBrowserProcessImpl::speedreader_rewriter_service() {
 }
 #endif  // BUILDFLAG(ENABLE_SPEEDREADER)
 
-#if BUILDFLAG(ENABLE_IPFS)
-ipfs::BraveIpfsClientUpdater* BraveBrowserProcessImpl::ipfs_client_updater() {
-  if (ipfs_client_updater_) {
-    return ipfs_client_updater_.get();
-  }
-
-  base::FilePath user_data_dir;
-  base::PathService::Get(chrome::DIR_USER_DATA, &user_data_dir);
-
-  ipfs_client_updater_ = ipfs::BraveIpfsClientUpdaterFactory(
-      brave_component_updater_delegate(), user_data_dir);
-  return ipfs_client_updater_.get();
-}
-#endif  // BUILDFLAG(ENABLE_IPFS)
-
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-brave_vpn::BraveVPNOSConnectionAPI*
-BraveBrowserProcessImpl::brave_vpn_os_connection_api() {
-  if (brave_vpn_os_connection_api_) {
-    return brave_vpn_os_connection_api_.get();
+brave_vpn::BraveVPNConnectionManager*
+BraveBrowserProcessImpl::brave_vpn_connection_manager() {
+  if (brave_vpn_connection_manager_) {
+    return brave_vpn_connection_manager_.get();
   }
 
-  // Currently, service installer only used on Windows.
-  // Installs registers IKEv2 service (for DNS) and our WireGuard impl.
-  // NOTE: Install only happens if person has purchased the product.
-  auto service_installer =
-#if BUILDFLAG(IS_WIN)
-      base::BindRepeating(&brave_vpn::InstallVpnSystemServices);
-#else
-      base::NullCallback();
-#endif
-
-  brave_vpn_os_connection_api_ = brave_vpn::CreateBraveVPNConnectionAPI(
-      shared_url_loader_factory(), local_state(), chrome::GetChannel(),
-      service_installer);
-  return brave_vpn_os_connection_api_.get();
+  brave_vpn_connection_manager_ = brave_vpn::CreateBraveVPNConnectionManager(
+      shared_url_loader_factory(), local_state());
+  return brave_vpn_connection_manager_.get();
 }
 #endif
-
-brave::BraveFarblingService* BraveBrowserProcessImpl::brave_farbling_service() {
-  if (!brave_farbling_service_) {
-    brave_farbling_service_ = std::make_unique<brave::BraveFarblingService>();
-  }
-  return brave_farbling_service_.get();
-}
 
 misc_metrics::ProcessMiscMetrics*
 BraveBrowserProcessImpl::process_misc_metrics() {

@@ -37,10 +37,10 @@ class VerticalTabStripRegionView : public views::View,
                                    public views::AnimationDelegateViews,
                                    public views::WidgetObserver,
                                    public FullscreenObserver,
-                                   public BrowserListObserver {
+                                   public BrowserListObserver,
+                                   public views::ContextMenuController {
+  METADATA_HEADER(VerticalTabStripRegionView, views::View)
  public:
-  METADATA_HEADER(VerticalTabStripRegionView);
-
   // We have a state machine which cycles like:
   //
   //               <hovered>          <pressed button>
@@ -92,11 +92,13 @@ class VerticalTabStripRegionView : public views::View,
   }
 
   void ResetExpandedWidth();
+  bool IsMenuShowing() const;
 
   // views::View:
-  gfx::Size CalculatePreferredSize() const override;
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override;
   gfx::Size GetMinimumSize() const override;
-  void Layout() override;
+  void Layout(PassKey) override;
   void OnThemeChanged() override;
   void OnMouseExited(const ui::MouseEvent& event) override;
   void OnMouseEntered(const ui::MouseEvent& event) override;
@@ -121,13 +123,21 @@ class VerticalTabStripRegionView : public views::View,
   // FullscreenObserver:
   void OnFullscreenStateChanged() override;
 
- private:
-  class MouseWatcher;
-  class HeaderView;
+  // views::ContextMenuController:
+  void ShowContextMenuForViewImpl(
+      views::View* source,
+      const gfx::Point& p,
+      ui::mojom::MenuSourceType source_type) override;
 
+  class HeaderView;
+  class MouseWatcher;
+
+ private:
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, VisualState);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest,
                            OriginalTabSearchButton);
+  FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, ExpandedState);
+  FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, ExpandedWidth);
 
   FullscreenController* GetFullscreenController() const;
   bool IsTabFullscreen() const;
@@ -136,10 +146,12 @@ class VerticalTabStripRegionView : public views::View,
 
   void SetState(State state);
 
+  void SetExpandedWidth(int dest_width);
+
   void UpdateStateAfterDragAndDropFinished(State original_state);
 
   void OnShowVerticalTabsPrefChanged();
-  void OnVerticalTabPositionChanged();
+  void OnBrowserPanelsMoved();
 
   void UpdateLayout(bool in_destruction = false);
 
@@ -149,6 +161,8 @@ class VerticalTabStripRegionView : public views::View,
 
   void OnCollapsedPrefChanged();
   void OnFloatingModePrefChanged();
+  void OnExpandedStatePerWindowPrefChanged();
+  void OnExpandedWidthPrefChanged();
 
   bool IsFloatingVerticalTabsEnabled() const;
   bool IsFloatingEnabledForBrowserFullscreen() const;
@@ -169,6 +183,11 @@ class VerticalTabStripRegionView : public views::View,
 
   std::u16string GetShortcutTextForNewTabButton(BrowserView* browser_view);
 
+  void OnMenuClosed();
+
+  views::LabelButton& GetToggleButtonForTesting();
+
+  raw_ptr<BrowserView> browser_view_ = nullptr;
   raw_ptr<Browser> browser_ = nullptr;
 
   raw_ptr<views::View> original_parent_of_region_view_ = nullptr;
@@ -189,11 +208,14 @@ class VerticalTabStripRegionView : public views::View,
   State state_ = State::kExpanded;
   State last_state_ = State::kExpanded;
 
+  BooleanPrefMember sidebar_side_;
   BooleanPrefMember show_vertical_tabs_;
   BooleanPrefMember collapsed_pref_;
+  BooleanPrefMember expanded_state_per_window_pref_;
   BooleanPrefMember floating_mode_pref_;
 
-  IntegerPrefMember expanded_width_;
+  IntegerPrefMember expanded_width_pref_;
+  int expanded_width_ = 220;
 
   base::OneShotTimer mouse_enter_timer_;
 
@@ -217,6 +239,8 @@ class VerticalTabStripRegionView : public views::View,
       fullscreen_observation_{this};
 
   BooleanPrefMember vertical_tab_on_right_;
+
+  std::unique_ptr<views::MenuRunner> menu_runner_;
 
   base::WeakPtrFactory<VerticalTabStripRegionView> weak_factory_{this};
 };

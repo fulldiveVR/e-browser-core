@@ -13,20 +13,17 @@
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
+#include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/skus/renderer/skus_utils.h"
 #include "build/build_config.h"
 #include "content/public/renderer/render_frame.h"
-#include "third_party/blink/public/common/browser_interface_broker_proxy.h"
+#include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
 #include "third_party/blink/public/platform/web_security_origin.h"
 #include "third_party/blink/public/web/web_local_frame.h"
 #include "url/url_util.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#endif
-
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/features.h"
 #endif
 
 namespace brave_subscription {
@@ -39,6 +36,7 @@ inline constexpr char kIntentParamTestValue[] = "connect-receipt-test";
 inline constexpr char kProductParamName[] = "product";
 inline constexpr char kProductVPNParamValue[] = "vpn";
 inline constexpr char kProductLeoParamValue[] = "leo";
+inline constexpr char kIntentParamValueLeo[] = "link-order";
 
 }  // namespace
 
@@ -54,22 +52,20 @@ bool SubscriptionRenderFrameObserver::EnsureConnected() {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   if (brave_vpn::IsBraveVPNFeatureEnabled() && product_ == Product::kVPN) {
     if (!vpn_service_.is_bound()) {
-      render_frame()->GetBrowserInterfaceBroker()->GetInterface(
+      render_frame()->GetBrowserInterfaceBroker().GetInterface(
           vpn_service_.BindNewPipeAndPassReceiver());
     }
     bound |= vpn_service_.is_bound();
   }
 #endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  if (ai_chat::features::IsAIChatHistoryEnabled() &&
-      product_ == Product::kLeo) {
+
+  if (ai_chat::features::IsAIChatEnabled() && product_ == Product::kLeo) {
     if (!ai_chat_subscription_.is_bound()) {
-      render_frame()->GetBrowserInterfaceBroker()->GetInterface(
+      render_frame()->GetBrowserInterfaceBroker().GetInterface(
           ai_chat_subscription_.BindNewPipeAndPassReceiver());
     }
     bound |= ai_chat_subscription_.is_bound();
   }
-#endif
   return bound;
 }
 
@@ -103,14 +99,29 @@ void SubscriptionRenderFrameObserver::DidCreateScriptContext(
     }
 #endif
   } else if (product_ == Product::kLeo) {
-#if BUILDFLAG(ENABLE_AI_CHAT)
     if (ai_chat_subscription_.is_bound()) {
-      ai_chat_subscription_->GetPurchaseToken(
-          base::BindOnce(&SubscriptionRenderFrameObserver::OnGetPurchaseToken,
-                         weak_factory_.GetWeakPtr()));
+      ai_chat_subscription_->GetPurchaseTokenOrderId(base::BindOnce(
+          &SubscriptionRenderFrameObserver::OnGetPurchaseTokenOrderId,
+          weak_factory_.GetWeakPtr()));
     }
-#endif
   }
+}
+
+std::string SubscriptionRenderFrameObserver::GetPurchaseTokenJSString(
+    const std::string& purchase_token) {
+  if (!IsValueAllowed(purchase_token)) {
+    return "";
+  }
+
+  std::string_view receipt_var_name;
+  if (product_ == Product::kVPN) {
+    receipt_var_name = "braveVpn.receipt";
+  } else if (product_ == Product::kLeo) {
+    receipt_var_name = "braveLeo.receipt";
+  }
+
+  return base::StrCat({"window.localStorage.setItem(\"", receipt_var_name,
+                       "\", \"", purchase_token, "\");"});
 }
 
 void SubscriptionRenderFrameObserver::OnGetPurchaseToken(
@@ -120,18 +131,24 @@ void SubscriptionRenderFrameObserver::OnGetPurchaseToken(
   }
   auto* frame = render_frame();
   if (frame) {
-    if (IsValueAllowed(purchase_token)) {
-      std::string_view receipt_var_name;
-      if (product_ == Product::kVPN) {
-        receipt_var_name = "braveVpn.receipt";
-      } else if (product_ == Product::kLeo) {
-        receipt_var_name = "braveLeo.receipt";
-      }
-      std::u16string set_local_storage = base::UTF8ToUTF16(
-          base::StrCat({"window.localStorage.setItem(\"", receipt_var_name,
-                        "\", \"", purchase_token, "\");"}));
-      frame->ExecuteJavaScript(set_local_storage);
+    std::string set_local_storage = GetPurchaseTokenJSString(purchase_token);
+    if (!set_local_storage.empty()) {
+      frame->ExecuteJavaScript(base::UTF8ToUTF16(set_local_storage));
     }
+  }
+}
+
+void SubscriptionRenderFrameObserver::OnGetPurchaseTokenOrderId(
+    const std::string& purchase_token,
+    const std::string& order_id) {
+  if (!IsAllowed()) {
+    return;
+  }
+  auto* frame = render_frame();
+  if (frame && !order_id.empty() && !purchase_token.empty()) {
+    frame->ExecuteJavaScript(base::UTF8ToUTF16(base::StrCat(
+        {"window.localStorage.setItem(\"braveLeo.orderId\", \"", order_id,
+         "\");", GetPurchaseTokenJSString(purchase_token)})));
   }
 }
 
@@ -140,8 +157,9 @@ std::string SubscriptionRenderFrameObserver::ExtractParam(
     const std::string& name) const {
   url::Component query(0, static_cast<int>(url.query_piece().length())), key,
       value;
-  while (url::ExtractQueryKeyValue(url.query_piece().data(), &query, &key,
-                                   &value)) {
+  std::string_view data =
+      url.query_piece().data() ? url.query_piece().data() : "";
+  while (url::ExtractQueryKeyValue(data, &query, &key, &value)) {
     std::string_view key_str = url.query_piece().substr(key.begin, key.len);
     if (key_str != name) {
       continue;
@@ -182,7 +200,8 @@ bool SubscriptionRenderFrameObserver::IsAllowed() {
   } else {
     product_ = std::nullopt;
   }
-  return (intent == kIntentParamValue || intent == kIntentParamTestValue) &&
+  return (intent == kIntentParamValue || intent == kIntentParamTestValue ||
+          intent == kIntentParamValueLeo) &&
          product_.has_value();
 }
 

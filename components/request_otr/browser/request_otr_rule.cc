@@ -23,13 +23,13 @@
 namespace {
 
 // request-otr.json keys
-const char kInclude[] = "include";
-const char kExclude[] = "exclude";
+constexpr char kInclude[] = "include";
+constexpr char kExclude[] = "exclude";
 
 // Removes trailing dot from |host_piece| if any.
 // Copied from extensions/common/url_pattern.cc
 std::string_view CanonicalizeHostForMatching(std::string_view host_piece) {
-  if (base::EndsWith(host_piece, ".")) {
+  if (host_piece.ends_with('.')) {
     host_piece.remove_suffix(1);
   }
   return host_piece;
@@ -94,8 +94,10 @@ RequestOTRRule::ParseRules(const std::string& contents) {
   if (!root) {
     return base::unexpected("Failed to parse request_otr configuration");
   }
-  std::vector<std::string> hosts;
-  std::vector<std::unique_ptr<RequestOTRRule>> rules;
+  std::pair<std::vector<std::unique_ptr<RequestOTRRule>>,
+            base::flat_set<std::string>>
+      result;
+  auto& [rules, hosts] = result;
   base::JSONValueConverter<RequestOTRRule> converter;
   for (base::Value& it : root->GetList()) {
     std::unique_ptr<RequestOTRRule> rule = std::make_unique<RequestOTRRule>();
@@ -104,17 +106,16 @@ RequestOTRRule::ParseRules(const std::string& contents) {
     }
     for (const URLPattern& pattern : rule->include_pattern_set()) {
       if (!pattern.host().empty()) {
-        const std::string etldp1 =
+        std::string etldp1 =
             RequestOTRRule::GetETLDForRequestOTR(pattern.host());
         if (!etldp1.empty()) {
-          hosts.push_back(std::move(etldp1));
+          hosts.insert(std::move(etldp1));
         }
       }
     }
     rules.push_back(std::move(rule));
   }
-  return std::pair<std::vector<std::unique_ptr<RequestOTRRule>>,
-                   base::flat_set<std::string>>(std::move(rules), hosts);
+  return result;
 }
 
 bool RequestOTRRule::ShouldBlock(const GURL& url) const {

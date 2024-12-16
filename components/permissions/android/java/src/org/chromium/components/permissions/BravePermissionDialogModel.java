@@ -26,7 +26,6 @@ import android.widget.TextView;
 
 import androidx.browser.customtabs.CustomTabsIntent;
 
-import org.chromium.base.ApiCompatibilityUtils;
 import org.chromium.base.IntentUtils;
 import org.chromium.ui.LayoutInflaterUtils;
 import org.chromium.ui.UiUtils;
@@ -101,17 +100,20 @@ class BravePermissionDialogModel {
         PropertyModel model =
                 new PropertyModel.Builder(ModalDialogProperties.ALL_KEYS)
                         .with(ModalDialogProperties.CONTROLLER, controller)
-                        .with(ModalDialogProperties.TITLE,
-                                context.getResources().getString(
-                                        R.string.widevine_permission_request_title))
+                        .with(
+                                ModalDialogProperties.TITLE,
+                                context.getResources()
+                                        .getString(R.string.widevine_permission_request_title))
                         .with(ModalDialogProperties.CUSTOM_VIEW, customView)
                         .with(ModalDialogProperties.POSITIVE_BUTTON_TEXT, primaryButtonText)
-                        .with(ModalDialogProperties.NEGATIVE_BUTTON_TEXT,
-                                delegate.getSecondaryButtonText())
+                        .with(
+                                ModalDialogProperties.NEGATIVE_BUTTON_TEXT,
+                                delegate.getNegativeButtonText())
                         .with(ModalDialogProperties.CONTENT_DESCRIPTION, messageText)
                         .with(ModalDialogProperties.FILTER_TOUCH_FOR_SECURITY, true)
                         .with(ModalDialogProperties.TOUCH_FILTERED_CALLBACK, touchFilteredCallback)
-                        .with(ModalDialogProperties.BUTTON_TAP_PROTECTION_PERIOD_MS,
+                        .with(
+                                ModalDialogProperties.BUTTON_TAP_PROTECTION_PERIOD_MS,
                                 UiUtils.PROMPT_INPUT_PROTECTION_SHORT_DELAY_MS)
                         .build();
 
@@ -134,8 +136,7 @@ class BravePermissionDialogModel {
         // Create a text label before the lifetime selector.
         TextView lifetimeOptionsText = new TextView(context);
         lifetimeOptionsText.setText(braveDelegate.getLifetimeOptionsText());
-        ApiCompatibilityUtils.setTextAppearance(
-                lifetimeOptionsText, R.style.TextAppearance_TextMedium_Primary);
+        lifetimeOptionsText.setTextAppearance(R.style.TextAppearance_TextMedium_Primary);
 
         LinearLayout.LayoutParams lifetimeOptionsTextLayoutParams =
                 new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);

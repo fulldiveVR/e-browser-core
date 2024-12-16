@@ -51,7 +51,6 @@ class AssetRatioService : public KeyedService, public mojom::AssetRatioService {
   // Get sell URL for off-ramps
   void GetSellUrl(mojom::OffRampProvider provider,
                   const std::string& chain_id,
-                  const std::string& address,
                   const std::string& symbol,
                   const std::string& amount,
                   const std::string& currency_code,
@@ -72,12 +71,12 @@ class AssetRatioService : public KeyedService, public mojom::AssetRatioService {
                       const uint8_t limit,
                       GetCoinMarketsCallback callback) override;
 
-  static GURL GetSardineBuyURL(const std::string network,
-                               const std::string address,
-                               const std::string symbol,
-                               const std::string amount,
-                               const std::string currency_code,
-                               const std::string auth_token);
+  static GURL GetSardineBuyURL(const std::string& network,
+                               const std::string& address,
+                               const std::string& symbol,
+                               const std::string& amount,
+                               const std::string& currency_code,
+                               const std::string& auth_token);
 
   static GURL GetPriceURL(const std::vector<std::string>& from_assets,
                           const std::vector<std::string>& to_assets,

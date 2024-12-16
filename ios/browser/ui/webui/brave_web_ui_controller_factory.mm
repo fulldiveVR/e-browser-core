@@ -13,13 +13,13 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/constants/webui_url_constants.h"
+#include "brave/ios/browser/ui/webui/ads/ads_internals_ui.h"
+#include "brave/ios/browser/ui/webui/skus/skus_internals_ui.h"
 #include "build/build_config.h"
 #include "components/prefs/pref_service.h"
+#include "ios/chrome/browser/shared/model/url/chrome_url_constants.h"
 #include "ios/components/webui/web_ui_url_constants.h"
 #include "url/gurl.h"
-
-#include "ios/chrome/browser/shared/model/browser_state/chrome_browser_state.h"
-#include "ios/chrome/browser/shared/model/url/chrome_url_constants.h"
 
 using web::WebUIIOS;
 using web::WebUIIOSController;
@@ -48,18 +48,22 @@ WebUIIOSFactoryFunction GetWebUIIOSFactoryFunction(const GURL& url) {
   }
 
   // TODO: Handle RewardsInternalUI, AdsInternalUI, AdblockInternalUI URLs here
-  // ChromeBrowserState* browser_state =
-  // ChromeBrowserState::FromWebUIIOS(web_ui);
+  // ProfileIOS* browser_state =
+  // ProfileIOS::FromWebUIIOS(web_ui);
 
   const std::string url_host = url.host();
   /*if (url_host == kAdblockInternalsHost) {
     return &NewWebUIIOS<BraveAdblockInternalsUI>;
-  } else if (url_host == kSkusInternalsHost) {
-    return &NewWebUIIOS<SkusInternalsUI>;
-  } else if (url_host == kRewardsInternalsHost &&
+  } if (url_host == kRewardsInternalsHost &&
              brave_rewards::IsSupportedForProfile(browser_state)) {
     return &NewWebUIIOS<BraveRewardsInternalsUI>;
   }*/
+
+  if (url_host == kAdsInternalsHost) {
+    return &NewWebUIIOS<AdsInternalsUI>;
+  } else if (url_host == kSkusInternalsHost) {
+    return &NewWebUIIOS<SkusInternalsUI>;
+  }
   return nullptr;
 }
 

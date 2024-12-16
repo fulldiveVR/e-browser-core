@@ -21,11 +21,20 @@ import {
 // components
 import { DividerLine } from '../../../extension/divider/index'
 import PopupModal from '..'
-import { HardwareWalletConnect } from './hardware-wallet-connect'
+import {
+  HardwareWalletConnect //
+} from '../../hardware-wallet-connect/hardware_wallet_connect'
 import { SelectAccountType } from './select-account-type/select-account-type'
 
 // style
 import { StyledWrapper } from './style'
+
+// selectors
+import { WalletSelectors } from '../../../../common/selectors'
+
+// hooks
+import { useSafeWalletSelector } from '../../../../common/hooks/use-safe-selector'
+import { useGetVisibleNetworksQuery } from '../../../../common/slices/api.slice'
 
 interface Params {
   accountTypeName: string
@@ -40,13 +49,21 @@ export const AddHardwareAccountModal = ({ onSelectAccountType }: Props) => {
   const history = useHistory()
   const { accountTypeName } = useParams<Params>()
 
+  const isBitcoinLedgerEnabled = useSafeWalletSelector(
+    WalletSelectors.isBitcoinLedgerEnabled
+  )
+
+  // queries
+  const { data: visibleNetworks = [] } = useGetVisibleNetworksQuery()
+
   // memos
   const createAccountOptions = React.useMemo(() => {
     return CreateAccountOptions({
-      isBitcoinEnabled: false, // No bitcoin hardware accounts by now.
+      visibleNetworks,
+      isBitcoinEnabled: isBitcoinLedgerEnabled,
       isZCashEnabled: false // No zcash hardware accounts by now.
     })
-  }, [])
+  }, [visibleNetworks, isBitcoinLedgerEnabled])
 
   const selectedAccountType: CreateAccountOptionsType | undefined =
     React.useMemo(() => {
@@ -58,7 +75,7 @@ export const AddHardwareAccountModal = ({ onSelectAccountType }: Props) => {
   // methods
   const closeModal = React.useCallback(() => {
     history.push(WalletRoutes.Accounts)
-  }, [])
+  }, [history])
 
   // render
   return (

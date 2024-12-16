@@ -9,41 +9,45 @@
 #include "brave/components/brave_wallet/common/buildflags.h"
 #include "build/build_config.h"
 
-namespace brave_wallet {
-namespace features {
+namespace brave_wallet::features {
 
 BASE_FEATURE(kNativeBraveWalletFeature,
              "NativeBraveWallet",
              base::FEATURE_ENABLED_BY_DEFAULT);
 
-BASE_FEATURE(kBraveWalletNftPinningFeature,
-             "BraveWalletNftPinning",
-#if BUILDFLAG(IS_ANDROID)
-             base::FEATURE_DISABLED_BY_DEFAULT
-#else
-             base::FEATURE_ENABLED_BY_DEFAULT
-#endif
-);
-
 BASE_FEATURE(kBraveWalletBitcoinFeature,
              "BraveWalletBitcoin",
-#if BUILDFLAG(ENABLE_BITCOIN_BY_DEFAULT)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
-             base::FEATURE_DISABLED_BY_DEFAULT
-#endif
-);
+             base::FEATURE_ENABLED_BY_DEFAULT);
 const base::FeatureParam<int> kBitcoinRpcThrottle{&kBraveWalletBitcoinFeature,
-                                                  "rpc_throttle", 2};
+                                                  "rpc_throttle", 1};
 const base::FeatureParam<bool> kBitcoinTestnetDiscovery{
     &kBraveWalletBitcoinFeature, "testnet_discovery", false};
 
+BASE_FEATURE(kBraveWalletBitcoinImportFeature,
+             "BraveWalletBitcoinImport",
+             base::FEATURE_ENABLED_BY_DEFAULT);
+
+BASE_FEATURE(kBraveWalletBitcoinLedgerFeature,
+             "BraveWalletBitcoinLedger",
+             base::FEATURE_ENABLED_BY_DEFAULT);
+
 BASE_FEATURE(kBraveWalletZCashFeature,
              "BraveWalletZCash",
-             base::FEATURE_DISABLED_BY_DEFAULT);
+#if BUILDFLAG(ENABLE_ZCASH_BY_DEFAULT)
+             base::FEATURE_ENABLED_BY_DEFAULT
+#else
+             base::FEATURE_DISABLED_BY_DEFAULT
+#endif
+);
+
+const base::FeatureParam<bool> kZCashShieldedTransactionsEnabled{
+    &kBraveWalletZCashFeature, "zcash_shielded_transactions_enabled", false};
 
 BASE_FEATURE(kBraveWalletAnkrBalancesFeature,
              "BraveWalletAnkrBalances",
              base::FEATURE_DISABLED_BY_DEFAULT);
-}  // namespace features
-}  // namespace brave_wallet
+
+BASE_FEATURE(kBraveWalletTransactionSimulationsFeature,
+             "BraveWalletTransactionSimulations",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+}  // namespace brave_wallet::features

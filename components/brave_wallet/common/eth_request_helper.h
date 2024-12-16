@@ -18,16 +18,13 @@ namespace brave_wallet {
 bool GetEthJsonRequestInfo(const std::string& json,
                            base::Value* id,
                            std::string* method,
-                           std::string* params);
+                           base::Value::List* params_list);
 
 mojom::TxDataPtr ParseEthTransactionParams(const std::string& json,
                                            std::string* from);
 mojom::TxData1559Ptr ParseEthTransaction1559Params(const std::string& json,
                                                    std::string* from);
-bool ShouldCreate1559Tx(mojom::TxData1559Ptr tx_data_1559,
-                        bool network_supports_eip1559,
-                        const std::vector<mojom::AccountInfoPtr>& account_infos,
-                        const mojom::AccountIdPtr& account_id);
+bool ShouldCreate1559Tx(const mojom::TxData1559& tx_data_1559);
 
 bool NormalizeEthRequest(const std::string& input_json,
                          std::string* output_json);
@@ -46,20 +43,15 @@ bool ParseEthGetEncryptionPublicKeyParams(const std::string& json,
 bool ParseEthDecryptParams(const std::string& json,
                            std::string* untrusted_encrypted_data_json,
                            std::string* address);
-bool ParseEthDecryptData(const std::string& json,
+bool ParseEthDecryptData(const base::Value& obj,
                          std::string* version,
                          std::vector<uint8_t>* nonce,
                          std::vector<uint8_t>* ephemeral_public_key,
                          std::vector<uint8_t>* ciphertext);
 
-bool ParseEthSignTypedDataParams(const std::string& json,
-                                 std::string* address,
-                                 std::string* message,
-                                 base::Value::Dict* domain,
-                                 EthSignTypedDataHelper::Version version,
-                                 std::vector<uint8_t>* domain_hash_out,
-                                 std::vector<uint8_t>* primary_hash_out,
-                                 mojom::EthSignTypedDataMetaPtr* meta_out);
+mojom::EthSignTypedDataPtr ParseEthSignTypedDataParams(
+    const base::Value::List& params_list,
+    EthSignTypedDataHelper::Version version);
 
 bool ParseSwitchEthereumChainParams(const std::string& json,
                                     std::string* chain_id);

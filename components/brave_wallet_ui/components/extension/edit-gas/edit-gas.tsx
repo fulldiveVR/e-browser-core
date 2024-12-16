@@ -20,8 +20,10 @@ import { Panel } from '../panel/index'
 import Amount from '../../../utils/amount'
 import { parseTransactionFeesWithoutPrices } from '../../../utils/tx-utils'
 import { makeNetworkAsset } from '../../../options/asset-options'
-import { getPriceIdForToken } from '../../../utils/api-utils'
-import { getTokenPriceAmountFromRegistry } from '../../../utils/pricing-utils'
+import {
+  getTokenPriceAmountFromRegistry,
+  getPriceIdForToken
+} from '../../../utils/pricing-utils'
 
 // Queries
 import {
@@ -138,17 +140,20 @@ export const EditGas = ({
     setGasPrice(event.target.value)
   }
 
-  const handleGasLimitInputChanged = ({
-    target: {
-      value,
-      validity: { valid }
-    }
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    if (valid) {
-      const val = new Amount(value).toNumber().toString()
-      setGasLimit(val)
-    }
-  }
+  const handleGasLimitInputChanged = React.useCallback(
+    ({
+      target: {
+        value,
+        validity: { valid }
+      }
+    }: React.ChangeEvent<HTMLInputElement>) => {
+      if (valid) {
+        const val = new Amount(value).toNumber().toString()
+        setGasLimit(val)
+      }
+    },
+    []
+  )
 
   const handleMaxPriorityFeePerGasInputChanged = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -287,7 +292,7 @@ export const EditGas = ({
         )}
       </>
     ),
-    [gasLimit, handleGasLimitInputChanged, spotPriceRegistry]
+    [gasLimit, handleGasLimitInputChanged]
   )
 
   const isZeroGasPrice = React.useMemo(() => {
@@ -296,7 +301,7 @@ export const EditGas = ({
       gasPrice !== '' &&
       new Amount(gasPrice).multiplyByDecimals(9).isZero()
     )
-  }, [gasPrice])
+  }, [gasPrice, isEIP1559Transaction])
 
   const isSaveButtonDisabled = React.useMemo(() => {
     if (gasLimit === '') {
@@ -331,7 +336,6 @@ export const EditGas = ({
     isEIP1559Transaction,
     gasPrice,
     maxFeePerGas,
-    baseFeePerGas,
     maxPriorityFeePerGas
   ])
 
@@ -379,7 +383,7 @@ export const EditGas = ({
                 {getLocale('braveWalletEditGasBaseFee')}
               </CurrentBaseText>
               <CurrentBaseText>
-                {`${new Amount(baseFeePerGas).divideByDecimals(9).format()} 
+                {`${new Amount(baseFeePerGas).divideByDecimals(9).format()}
                   ${getLocale('braveWalletEditGasGwei')}`}
               </CurrentBaseText>
             </CurrentBaseRow>
@@ -423,7 +427,6 @@ export const EditGas = ({
             {isCustomGasBelowBaseFee && (
               <Row margin={'16px 0px'}>
                 <Alert
-                  mode='simple'
                   type='error'
                 >
                   <Column

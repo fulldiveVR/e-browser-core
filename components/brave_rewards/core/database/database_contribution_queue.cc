@@ -11,35 +11,32 @@
 #include "brave/components/brave_rewards/core/common/time_util.h"
 #include "brave/components/brave_rewards/core/database/database_contribution_queue.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-using std::placeholders::_1;
-
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
 namespace {
 
-const char kTableName[] = "contribution_queue";
+constexpr char kTableName[] = "contribution_queue";
 
 }  // namespace
 
-DatabaseContributionQueue::DatabaseContributionQueue(RewardsEngineImpl& engine)
+DatabaseContributionQueue::DatabaseContributionQueue(RewardsEngine& engine)
     : DatabaseTable(engine), publishers_(engine) {}
 
 DatabaseContributionQueue::~DatabaseContributionQueue() = default;
 
 void DatabaseContributionQueue::InsertOrUpdate(mojom::ContributionQueuePtr info,
-                                               LegacyResultCallback callback) {
+                                               ResultCallback callback) {
   if (!info) {
-    BLOG(0, "Queue is null");
-    callback(mojom::Result::FAILED);
+    engine_->LogError(FROM_HERE) << "Queue is null";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
   if (info->id.empty()) {
-    BLOG(0, "Queue id is empty");
-    callback(mojom::Result::FAILED);
+    engine_->LogError(FROM_HERE) << "Queue id is empty";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -70,15 +67,15 @@ void DatabaseContributionQueue::InsertOrUpdate(mojom::ContributionQueuePtr info,
 }
 
 void DatabaseContributionQueue::OnInsertOrUpdate(
-    LegacyResultCallback callback,
+    ResultCallback callback,
     mojom::ContributionQueuePtr queue,
     mojom::DBCommandResponsePtr response) {
   CHECK(queue);
 
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is not ok");
-    callback(mojom::Result::FAILED);
+    engine_->LogError(FROM_HERE) << "Response is not ok";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -118,13 +115,13 @@ void DatabaseContributionQueue::OnGetFirstRecord(
     mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
-    callback(nullptr);
+    engine_->LogError(FROM_HERE) << "Response is wrong";
+    std::move(callback).Run(nullptr);
     return;
   }
 
   if (response->result->get_records().size() != 1) {
-    callback(nullptr);
+    std::move(callback).Run(nullptr);
     return;
   }
 
@@ -132,40 +129,35 @@ void DatabaseContributionQueue::OnGetFirstRecord(
 
   auto info = mojom::ContributionQueue::New();
   info->id = GetStringColumn(record, 0);
-  info->type = static_cast<mojom::RewardsType>(GetIntColumn(record, 1));
+  info->type = RewardsTypeFromInt(GetIntColumn(record, 1));
   info->amount = GetDoubleColumn(record, 2);
   info->partial = static_cast<bool>(GetIntColumn(record, 3));
 
-  auto shared_info =
-      std::make_shared<mojom::ContributionQueuePtr>(info->Clone());
-
-  auto publishers_callback =
-      std::bind(&DatabaseContributionQueue::OnGetPublishers, this, _1,
-                shared_info, callback);
-
-  publishers_.GetRecordsByQueueId(info->id, publishers_callback);
+  publishers_.GetRecordsByQueueId(
+      info->id, base::BindOnce(&DatabaseContributionQueue::OnGetPublishers,
+                               weak_factory_.GetWeakPtr(), info->Clone(),
+                               std::move(callback)));
 }
 
 void DatabaseContributionQueue::OnGetPublishers(
-    std::vector<mojom::ContributionQueuePublisherPtr> list,
-    std::shared_ptr<mojom::ContributionQueuePtr> shared_queue,
-    GetFirstContributionQueueCallback callback) {
-  if (!shared_queue) {
-    BLOG(0, "Queue is null");
-    callback(nullptr);
+    mojom::ContributionQueuePtr queue,
+    GetFirstContributionQueueCallback callback,
+    std::vector<mojom::ContributionQueuePublisherPtr> list) {
+  if (!queue) {
+    engine_->LogError(FROM_HERE) << "Queue is null";
+    std::move(callback).Run(nullptr);
     return;
   }
 
-  (*shared_queue)->publishers = std::move(list);
-  callback(std::move(*shared_queue));
+  queue->publishers = std::move(list);
+  std::move(callback).Run(std::move(queue));
 }
 
-void DatabaseContributionQueue::MarkRecordAsComplete(
-    const std::string& id,
-    LegacyResultCallback callback) {
+void DatabaseContributionQueue::MarkRecordAsComplete(const std::string& id,
+                                                     ResultCallback callback) {
   if (id.empty()) {
-    BLOG(1, "Id is empty");
-    callback(mojom::Result::FAILED);
+    engine_->Log(FROM_HERE) << "Id is empty";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -189,5 +181,4 @@ void DatabaseContributionQueue::MarkRecordAsComplete(
       base::BindOnce(&OnResultCallback, std::move(callback)));
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

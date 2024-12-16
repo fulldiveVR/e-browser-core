@@ -10,12 +10,13 @@
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/perf/brave_perf_switches.h"
+#include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_rewards/browser/rewards_service.h"
-#include "brave/components/brave_shields/browser/ad_block_component_service_manager.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/common/brave_shield_constants.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/core/browser/ad_block_component_service_manager.h"
+#include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/chrome_switches.h"
 #include "components/prefs/pref_service.h"
@@ -77,6 +78,11 @@ void MaybeEnableBraveFeatureForPerfTesting(Profile* profile) {
   // Speedreader
   profile->GetPrefs()->SetBoolean(speedreader::kSpeedreaderPrefEnabled, true);
 #endif
+
+  profile->GetPrefs()->SetTime(ai_chat::prefs::kLastAcceptedDisclaimer,
+                               base::Time::Now());
+  profile->GetPrefs()->SetBoolean(
+      ai_chat::prefs::kBraveChatAutocompleteProviderEnabled, true);
 
   // Adblock
   EnableAdblockCookieList(profile->GetWeakPtr());

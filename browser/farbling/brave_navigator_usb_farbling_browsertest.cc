@@ -9,8 +9,9 @@
 
 #include "base/path_service.h"
 #include "brave/browser/brave_content_browser_client.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
 #include "brave/components/constants/brave_paths.h"
+#include "brave/components/webcompat/core/common/features.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
@@ -161,6 +162,11 @@ class TestContentBrowserClient : public BraveContentBrowserClient {
 
 class BraveNavigatorUsbFarblingBrowserTest : public InProcessBrowserTest {
  public:
+  BraveNavigatorUsbFarblingBrowserTest() {
+    scoped_feature_list_.InitAndEnableFeature(
+        webcompat::features::kBraveWebcompatExceptionsService);
+  }
+
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
 
@@ -173,7 +179,6 @@ class BraveNavigatorUsbFarblingBrowserTest : public InProcessBrowserTest {
         net::test_server::EmbeddedTestServer::TYPE_HTTPS);
     content::SetupCrossSiteRedirector(https_server_.get());
 
-    brave::RegisterPathProvider();
     base::FilePath test_data_dir;
     base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
     https_server_->ServeFilesFromDirectory(test_data_dir);
@@ -256,6 +261,7 @@ class BraveNavigatorUsbFarblingBrowserTest : public InProcessBrowserTest {
   std::unique_ptr<TestContentBrowserClient> browser_content_client_;
   device::FakeUsbDeviceManager device_manager_;
   device::mojom::UsbDeviceInfoPtr fake_device_info_;
+  base::test::ScopedFeatureList scoped_feature_list_;
 };
 
 IN_PROC_BROWSER_TEST_F(BraveNavigatorUsbFarblingBrowserTest,
@@ -295,7 +301,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUsbFarblingBrowserTest,
 
   // Call getDevices again. The fake device is still included, but now its
   // serial number is farbled.
-  EXPECT_EQ(content::ListValueOf("dt9mTRQnb057d1a0"),
+  EXPECT_EQ(content::ListValueOf("7Co7GLs9e2bVSRQn"),
             EvalJs(web_contents(), kGetDevicesScript));
 
   // Do it all again, but on a different domain.
@@ -303,7 +309,21 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUsbFarblingBrowserTest,
   GURL url_z = https_server()->GetURL(domain_z, "/simple.html");
   SetFingerprintingDefault(domain_z);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_z));
-  EXPECT_EQ("Qv2Eh368mTRQv26G", EvalJs(web_contents(), kRequestDeviceScript));
+  EXPECT_EQ("wYMGiwgvf2jwgvfu", EvalJs(web_contents(), kRequestDeviceScript));
+
+  // Reload once more with farbling at default but enable a webcompat exception.
+  SetFingerprintingDefault(domain_b);
+  brave_shields::SetWebcompatEnabled(
+      content_settings(),
+      ContentSettingsType::BRAVE_WEBCOMPAT_USB_DEVICE_SERIAL_NUMBER, true,
+      GURL(url_b), nullptr);
+
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url_b));
+
+  // Call getDevices again. The fake device is still included, but now its
+  // serial number is not farbled.
+  EXPECT_EQ(content::ListValueOf(kTestDeviceSerialNumber),
+            EvalJs(web_contents(), kGetDevicesScript));
 }
 
 }  // namespace

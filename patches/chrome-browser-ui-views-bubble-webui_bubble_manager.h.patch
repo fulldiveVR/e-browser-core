@@ -1,12 +1,17 @@
 diff --git a/chrome/browser/ui/views/bubble/webui_bubble_manager.h b/chrome/browser/ui/views/bubble/webui_bubble_manager.h
-index 03554e2aa75c929c6410c4a48c5eee1e68abd89d..dbdd9a226633790f1b1950844a7c7471288b191d 100644
+index dbda307510db6bacf70a4eee109e48cdbee2ef4b..c2c3a9f1aa0175a4760c232ce0377d55c61f3753 100644
 --- a/chrome/browser/ui/views/bubble/webui_bubble_manager.h
 +++ b/chrome/browser/ui/views/bubble/webui_bubble_manager.h
-@@ -170,6 +170,7 @@ class WebUIBubbleManagerT : public WebUIBubbleManager {
+@@ -164,10 +164,12 @@ class WebUIBubbleManagerImpl : public WebUIBubbleManager {
  
-     auto bubble_view = std::make_unique<WebUIBubbleDialogView>(
-         anchor_view_, contents_wrapper, anchor, arrow);
-+    BRAVE_WEBUI_BUBBLE_MANAGER_T_CREATE_WEB_UI_BUBBLE_DIALOG
+  private:
+   // WebUIBubbleManager:
++ protected:
+   base::WeakPtr<WebUIBubbleDialogView> CreateWebUIBubbleDialog(
+       const std::optional<gfx::Rect>& anchor,
+       views::BubbleBorder::Arrow arrow) override;
+   WebUIContentsWrapper* GetContentsWrapper() override;
++ private:
  
-     // Register callback to emit histogram when the widget is created
-     if (bubble_init_start_time_) {
+   const raw_ptr<views::View> anchor_view_;
+   const raw_ptr<BrowserWindowInterface> browser_window_interface_;

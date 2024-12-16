@@ -18,10 +18,14 @@ export const mockSignMessageRequest: BraveWallet.SignMessageRequest = {
       message: ''
     },
     ethSignTypedData: {
-      domain: 'domain.com',
-      domainHash: 'domainHash',
-      message: 'message',
-      primaryHash: 'primary hash',
+      addressParam: '',
+      domainJson: 'domain.com',
+      domainHash: [1, 2, 3, 4],
+      messageJson: 'message',
+      typesJson: '',
+      primaryType: '',
+      chainId: '',
+      primaryHash: [4, 3, 2, 1],
       meta: {
         cowSwapOrder: {
           buyAmount: '100000',
@@ -64,12 +68,21 @@ export const mockSignMessageRequest: BraveWallet.SignMessageRequest = {
   chainId: BraveWallet.MAINNET_CHAIN_ID
 }
 
+export const mockSignMessageError: BraveWallet.SignMessageError = {
+  chainId: '1',
+  localizedErrMsg: 'This is an error message, unable to sign.',
+  type: 1,
+  id: '1',
+  originInfo: mockOriginInfo
+}
+
 export const mockAddChainRequest = {
   originInfo: mockOriginInfo,
   networkInfo: mockNetwork
 }
 
-export const mockGetEncryptionPublicKeyRequest = {
+export const mockGetEncryptionPublicKeyRequest: //
+BraveWallet.GetEncryptionPublicKeyRequest = {
   requestId: '',
   originInfo: mockOriginInfo,
   accountId: mockEthAccount.accountId

@@ -29,6 +29,22 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       state.userType = userTypeFromMojo(action.payload.userType)
       break
     }
+    case types.IS_TERMS_OF_SERVICE_UPDATE_REQUIRED: {
+      chrome.send('brave_rewards.isTermsOfServiceUpdateRequired')
+      break
+    }
+    case types.ON_IS_TERMS_OF_SERVICE_UPDATE_REQUIRED: {
+      state = {
+        ...state,
+        isUserTermsOfServiceUpdateRequired: action.payload.updateRequired
+      }
+      break
+    }
+    case types.ACCEPT_TERMS_OF_SERVICE_UPDATE: {
+      chrome.send('brave_rewards.acceptTermsOfServiceUpdate')
+      chrome.send('brave_rewards.isTermsOfServiceUpdateRequired')
+      break
+    }
     case types.GET_IS_AUTO_CONTRIBUTE_SUPPORTED: {
       chrome.send('brave_rewards.isAutoContributeSupported')
       break
@@ -222,6 +238,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       state.adsData.notificationAdsEnabled = adsData.notificationAdsEnabled
       state.adsData.newTabAdsEnabled = adsData.newTabAdsEnabled
       state.adsData.newsAdsEnabled = adsData.newsAdsEnabled
+      state.adsData.searchAdsEnabled = adsData.searchAdsEnabled
       break
     }
     case types.GET_ADS_HISTORY: {
@@ -238,7 +255,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_AD_THUMB_UP: {
-      chrome.send('brave_rewards.toggleAdThumbUp', [action.payload.adContent])
+      chrome.send('brave_rewards.toggleAdThumbUp', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_AD_THUMB_UP: {
@@ -246,7 +263,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_AD_THUMB_DOWN: {
-      chrome.send('brave_rewards.toggleAdThumbDown', [action.payload.adContent])
+      chrome.send('brave_rewards.toggleAdThumbDown', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_AD_THUMB_DOWN: {
@@ -254,7 +271,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_AD_OPT_IN: {
-      chrome.send('brave_rewards.toggleAdOptIn', [action.payload.categoryContent])
+      chrome.send('brave_rewards.toggleAdOptIn', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_AD_OPT_IN: {
@@ -262,7 +279,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_AD_OPT_OUT: {
-      chrome.send('brave_rewards.toggleAdOptOut', [action.payload.categoryContent])
+      chrome.send('brave_rewards.toggleAdOptOut', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_AD_OPT_OUT: {
@@ -270,7 +287,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_SAVED_AD: {
-      chrome.send('brave_rewards.toggleSavedAd', [action.payload.adContent])
+      chrome.send('brave_rewards.toggleSavedAd', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_SAVED_AD: {
@@ -278,7 +295,7 @@ const rewardsReducer: Reducer<Rewards.State | undefined> = (state: Rewards.State
       break
     }
     case types.TOGGLE_FLAGGED_AD: {
-      chrome.send('brave_rewards.toggleFlaggedAd', [action.payload.adContent])
+      chrome.send('brave_rewards.toggleFlaggedAd', [action.payload.adHistory])
       break
     }
     case types.ON_TOGGLE_FLAGGED_AD: {

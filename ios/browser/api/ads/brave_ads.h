@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 OBJC_EXPORT
 @protocol BraveAdsNotificationHandler
 @required
-/// Returns |true| if notification ads can be shown.
+/// Returns `true` if notification ads can be shown.
 - (BOOL)canShowNotificationAds;
-/// Show notification |ad|.
+/// Show notification `ad`.
 - (void)showNotificationAd:(NotificationAdIOS*)ad;
-/// Close the notification ad for the specified |placement_id|.
+/// Close the notification ad for the specified `placement_id`.
 - (void)closeNotificationAd:(NSString*)placementId;
 @end
 
@@ -49,16 +49,35 @@ OBJC_EXPORT
 
 #pragma mark -
 
-/// Returns |true| if ads are supported for the user's current country otherwise
-/// returns |false|.
+/// Returns `true` if ads are supported for the user's current country otherwise
+/// returns `false`.
 + (BOOL)isSupportedRegion;
 
-/// Returns |true| if the ads service is running otherwise returns |false|.
+/// Returns `true` if the ads service is running otherwise returns `false`.
 - (BOOL)isServiceRunning;
 
-/// Returns |true| if always run the ads service, even if Brave Private Ads are
+/// Returns `true` if always run the ads service, even if Brave Private Ads are
 /// disabled.
 + (BOOL)shouldAlwaysRunService;
+
+/// Returns `true` if search result ads are supported.
++ (BOOL)shouldSupportSearchResultAds;
+
+/// Returns `true` if should show Sponsored Images & Videos option in settings.
+/// This function will be deprecated once Sponsored Video is available globally.
+- (BOOL)shouldShowSponsoredImagesAndVideosSetting;
+
+/// Returns `true` if the user opted-in to search result ads.
+- (BOOL)isOptedInToSearchResultAds;
+
+/// Returns `true` if the privacy notice infobar should be displayed when a user
+/// clicks on a search result ad. This should be called before calling
+/// `triggerSearchResultAdEvent` for the click.
+- (BOOL)shouldShowSearchResultAdClickedInfoBar;
+
+/// Used to notify the ads service that the user has opted-in/opted-out to
+/// Brave News.
+- (void)notifyBraveNewsIsEnabledPreferenceDidChange:(BOOL)isEnabled;
 
 /// Whether or not Brave Ads is enabled and the user should receive
 /// notification-style ads and be rewarded for it
@@ -75,17 +94,9 @@ OBJC_EXPORT
 /// Returns false if the ad service is already running.
 - (void)shutdownService:(nullable void (^)())completion;
 
-#pragma mark - History
-
-/// Return true if the user has viewed ads in the previous cycle/month.
-- (BOOL)hasViewedAdsInPreviousCycle;
-
-/// Get a list of dates of when the user has viewed ads.
-- (NSArray<NSDate*>*)getAdsHistoryDates;
-
 #pragma mark - Ads
 
-// See |components/brave_ads/core/internal/ads_impl.h|.
+// See `components/brave_ads/core/internal/ads_impl.h`.
 
 - (void)getStatementOfAccounts:
     (void (^)(NSInteger adsReceived,
@@ -107,7 +118,9 @@ OBJC_EXPORT
                        eventType:(BraveAdsNewTabPageAdEventType)eventType
                       completion:(void (^)(BOOL success))completion;
 
-- (nullable NotificationAdIOS*)maybeGetNotificationAd:(NSString*)identifier;
+- (void)maybeGetNotificationAd:(NSString*)identifier
+                    completion:
+                        (void (^)(NotificationAdIOS* _Nullable))completion;
 
 - (void)triggerNotificationAdEvent:(NSString*)placementId
                          eventType:(BraveAdsNotificationAdEventType)eventType
@@ -119,31 +132,31 @@ OBJC_EXPORT
                                 (BraveAdsPromotedContentAdEventType)eventType
                            completion:(void (^)(BOOL success))completion;
 
+- (void)triggerSearchResultAdClickedEvent:(NSString*)placementId
+                               completion:(void (^)(BOOL success))completion;
+
+- (void)triggerSearchResultAdEvent:
+            (BraveAdsCreativeSearchResultAdInfo*)searchResultAd
+                         eventType:(BraveAdsSearchResultAdEventType)eventType
+                        completion:(void (^)(BOOL success))completion;
+
 - (void)purgeOrphanedAdEventsForType:(BraveAdsAdType)adType
                           completion:(void (^)(BOOL success))completion;
 
-- (void)toggleLikeAd:(NSString*)creativeInstanceId
-        advertiserId:(NSString*)advertiserId
-             segment:(NSString*)segment;
-
-- (void)toggleDislikeAd:(NSString*)creativeInstanceId
-           advertiserId:(NSString*)advertiserId
-                segment:(NSString*)segment;
+- (void)clearData:(void (^)())completion;
 
 #pragma mark - Ads client notifier
 
-// See |components/brave_ads/core/public/client/ads_client_notifier.h|.
+// See `components/brave_ads/core/public/ads_client/ads_client_notifier.h`.
 
 - (void)notifyRewardsWalletDidUpdate:(NSString*)paymentId
                           base64Seed:(NSString*)base64Seed;
 
 - (void)notifyTabTextContentDidChange:(NSInteger)tabId
-                                  url:(NSURL*)url
                         redirectChain:(NSArray<NSURL*>*)redirectChain
                                  text:(NSString*)text;
 
 - (void)notifyTabHtmlContentDidChange:(NSInteger)tabId
-                                  url:(NSURL*)url
                         redirectChain:(NSArray<NSURL*>*)redirectChain
                                  html:(NSString*)html;
 
@@ -152,9 +165,13 @@ OBJC_EXPORT
 - (void)notifyTabDidStopPlayingMedia:(NSInteger)tabId;
 
 - (void)notifyTabDidChange:(NSInteger)tabId
-                       url:(NSURL*)url
              redirectChain:(NSArray<NSURL*>*)redirectChain
+           isNewNavigation:(BOOL)isNewNavigation
+               isRestoring:(BOOL)isRestoring
                 isSelected:(BOOL)isSelected;
+
+- (void)notifyTabDidLoad:(NSInteger)tabId
+          httpStatusCode:(NSInteger)httpStatusCode;
 
 - (void)notifyDidCloseTab:(NSInteger)tabId;
 

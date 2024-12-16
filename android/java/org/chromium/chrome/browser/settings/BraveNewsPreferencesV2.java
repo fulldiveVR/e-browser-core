@@ -27,6 +27,8 @@ import com.airbnb.lottie.model.KeyPath;
 
 import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.ContextUtils;
+import org.chromium.base.supplier.ObservableSupplier;
+import org.chromium.base.supplier.ObservableSupplierImpl;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
 import org.chromium.brave_news.mojom.BraveNewsController;
@@ -41,16 +43,17 @@ import org.chromium.chrome.browser.preferences.BravePrefServiceBridge;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.util.BraveConstants;
 import org.chromium.chrome.browser.util.BraveTouchUtils;
-import org.chromium.components.browser_ui.settings.FragmentSettingsLauncher;
-import org.chromium.components.browser_ui.settings.SettingsLauncher;
+import org.chromium.components.browser_ui.settings.FragmentSettingsNavigation;
+import org.chromium.components.browser_ui.settings.SettingsNavigation;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
 
 import java.util.List;
 
 public class BraveNewsPreferencesV2 extends BravePreferenceFragment
-        implements BraveNewsPreferencesDataListener, ConnectionErrorHandler,
-                   FragmentSettingsLauncher {
+        implements BraveNewsPreferencesDataListener,
+                ConnectionErrorHandler,
+                FragmentSettingsNavigation {
     public static final String PREF_SHOW_OPTIN = "show_optin";
 
     private LinearLayout mParentLayout;
@@ -72,8 +75,10 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
     private boolean mIsPublisherAvailable;
     private BraveNewsController mBraveNewsController;
 
-    // SettingsLauncher injected from main Settings Activity.
-    private SettingsLauncher mSettingsLauncher;
+    // SettingsNavigation injected from main Settings Activity.
+    private SettingsNavigation mSettingsLauncher;
+
+    private final ObservableSupplierImpl<String> mPageTitle = new ObservableSupplierImpl<>();
 
     @Override
     public View onCreateView(
@@ -83,9 +88,7 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        if (getActivity() != null) {
-            getActivity().setTitle(R.string.brave_news_title);
-        }
+        mPageTitle.set(getString(R.string.brave_news_title));
 
         super.onActivityCreated(savedInstanceState);
 
@@ -117,6 +120,11 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
             setData();
             onClickViews();
         }
+    }
+
+    @Override
+    public ObservableSupplier<String> getPageTitle() {
+        return mPageTitle;
     }
 
     private void setData() {
@@ -251,7 +259,7 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
         Bundle fragmentArgs = new Bundle();
         fragmentArgs.putString(
                 BraveConstants.BRAVE_NEWS_PREFERENCES_TYPE, braveNewsPreferencesType.toString());
-        mSettingsLauncher.launchSettingsActivity(
+        mSettingsLauncher.startSettings(
                 getActivity(), BraveNewsPreferencesDetails.class, fragmentArgs);
     }
 
@@ -267,7 +275,10 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
     private void updateFollowerCount() {
         List<Publisher> followingPublisherList = BraveNewsUtils.getFollowingPublisherList();
         List<Channel> followingChannelList = BraveNewsUtils.getFollowingChannelList();
-        int followingCount = followingChannelList.size() + followingPublisherList.size();
+        int followingPublisherCount =
+                followingPublisherList != null ? followingPublisherList.size() : 0;
+        int followingChannelCount = followingChannelList != null ? followingChannelList.size() : 0;
+        int followingCount = followingPublisherCount + followingChannelCount;
         if (mLayoutFollowing != null && mTvFollowingCount != null) {
             mTvFollowingCount.setText(String.valueOf(followingCount));
             mLayoutFollowing.setVisibility(View.VISIBLE);
@@ -318,7 +329,7 @@ public class BraveNewsPreferencesV2 extends BravePreferenceFragment
     }
 
     @Override
-    public void setSettingsLauncher(SettingsLauncher settingsLauncher) {
+    public void setSettingsNavigation(SettingsNavigation settingsLauncher) {
         mSettingsLauncher = settingsLauncher;
     }
 

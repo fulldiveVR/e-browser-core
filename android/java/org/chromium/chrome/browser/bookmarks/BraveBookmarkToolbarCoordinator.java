@@ -15,22 +15,42 @@ import org.chromium.components.browser_ui.widget.selectable_list.SelectableListT
 import org.chromium.components.browser_ui.widget.selectable_list.SelectionDelegate;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 
+import java.util.function.BooleanSupplier;
+
 class BraveBookmarkToolbarCoordinator extends BookmarkToolbarCoordinator {
     // Overridden Chromium's BookmarkToolbarCoordinator.mToolbar
     private BookmarkToolbar mToolbar;
 
-    BraveBookmarkToolbarCoordinator(Context context,
+    BraveBookmarkToolbarCoordinator(
+            Context context,
             SelectableListLayout<BookmarkId> selectableListLayout,
-            SelectionDelegate selectionDelegate, SearchDelegate searchDelegate,
+            SelectionDelegate<BookmarkId> selectionDelegate,
+            SearchDelegate searchDelegate,
             DragReorderableRecyclerViewAdapter dragReorderableRecyclerViewAdapter,
-            boolean isDialogUi, OneshotSupplier<BookmarkDelegate> bookmarkDelegateSupplier,
-            BookmarkModel bookmarkModel, BookmarkOpener bookmarkOpener,
-            BookmarkUiPrefs bookmarkUiPrefs, ModalDialogManager modalDialogManager,
-            Runnable endSearchRunnable) {
-        super(context, selectableListLayout, selectionDelegate, searchDelegate,
-                dragReorderableRecyclerViewAdapter, isDialogUi, bookmarkDelegateSupplier,
-                bookmarkModel, bookmarkOpener, bookmarkUiPrefs, modalDialogManager,
-                endSearchRunnable);
+            boolean isDialogUi,
+            OneshotSupplier<BookmarkDelegate> bookmarkDelegateSupplier,
+            BookmarkModel bookmarkModel,
+            BookmarkOpener bookmarkOpener,
+            BookmarkUiPrefs bookmarkUiPrefs,
+            ModalDialogManager modalDialogManager,
+            Runnable endSearchRunnable,
+            BookmarkMoveSnackbarManager bookmarkMoveSnackbarManager,
+            BooleanSupplier incognitoEnabledSupplier) {
+        super(
+                context,
+                selectableListLayout,
+                selectionDelegate,
+                searchDelegate,
+                dragReorderableRecyclerViewAdapter,
+                isDialogUi,
+                bookmarkDelegateSupplier,
+                bookmarkModel,
+                bookmarkOpener,
+                bookmarkUiPrefs,
+                modalDialogManager,
+                endSearchRunnable,
+                bookmarkMoveSnackbarManager,
+                incognitoEnabledSupplier);
 
         if (mToolbar instanceof BraveBookmarkToolbar) {
             ((BraveBookmarkToolbar) mToolbar).setBraveBookmarkDelegate(bookmarkDelegateSupplier);

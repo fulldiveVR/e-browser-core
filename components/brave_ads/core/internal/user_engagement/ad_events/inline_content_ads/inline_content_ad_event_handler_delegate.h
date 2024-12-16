@@ -28,12 +28,12 @@ class InlineContentAdEventHandlerDelegate {
   virtual void OnDidFireInlineContentAdClickedEvent(
       const InlineContentAdInfo& ad) {}
 
-  // Invoked when the inline content `ad` event fails for `placement_id`,
-  // `creative_instance_id` and `event_type`.
+  // Invoked when the inline content ad event fails for `placement_id`,
+  // `creative_instance_id` and `mojom_ad_event_type`.
   virtual void OnFailedToFireInlineContentAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
-      const mojom::InlineContentAdEventType event_type) {}
+      mojom::InlineContentAdEventType mojom_ad_event_type) {}
 
  protected:
   virtual ~InlineContentAdEventHandlerDelegate() = default;

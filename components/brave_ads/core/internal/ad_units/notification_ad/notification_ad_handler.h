@@ -10,14 +10,14 @@
 
 #include "base/memory/raw_ref.h"
 #include "base/memory/weak_ptr.h"
-#include "brave/components/brave_ads/core/internal/browser/browser_manager_observer.h"
+#include "brave/components/brave_ads/core/internal/application_state/browser_manager_observer.h"
 #include "brave/components/brave_ads/core/internal/serving/notification_ad_serving.h"
 #include "brave/components/brave_ads/core/internal/serving/notification_ad_serving_delegate.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/notification_ads/notification_ad_event_handler.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/notification_ads/notification_ad_event_handler_delegate.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 #include "brave/components/brave_ads/core/public/ads_callback.h"
-#include "brave/components/brave_ads/core/public/client/ads_client_notifier_observer.h"
+#include "brave/components/brave_ads/core/public/ads_client/ads_client_notifier_observer.h"
 
 namespace base {
 class TimeDelta;
@@ -25,9 +25,7 @@ class TimeDelta;
 
 namespace brave_ads {
 
-class Account;
 class AntiTargetingResource;
-class EpsilonGreedyBanditProcessor;
 class SiteVisit;
 class SubdivisionTargeting;
 struct NotificationAdInfo;
@@ -37,32 +35,27 @@ class NotificationAdHandler final : public AdsClientNotifierObserver,
                                     public NotificationAdEventHandlerDelegate,
                                     public NotificationAdServingDelegate {
  public:
-  NotificationAdHandler(
-      Account& account,
-      SiteVisit& site_visit,
-      EpsilonGreedyBanditProcessor& epsilon_greedy_bandit_processor,
-      const SubdivisionTargeting& subdivision_targeting,
-      const AntiTargetingResource& anti_targeting_resource);
+  NotificationAdHandler(SiteVisit& site_visit,
+                        const SubdivisionTargeting& subdivision_targeting,
+                        const AntiTargetingResource& anti_targeting_resource);
 
   NotificationAdHandler(const NotificationAdHandler&) = delete;
   NotificationAdHandler& operator=(const NotificationAdHandler&) = delete;
 
-  NotificationAdHandler(NotificationAdHandler&&) noexcept = delete;
-  NotificationAdHandler& operator=(NotificationAdHandler&&) noexcept = delete;
-
   ~NotificationAdHandler() override;
 
   void TriggerEvent(const std::string& placement_id,
-                    mojom::NotificationAdEventType event_type,
+                    mojom::NotificationAdEventType mojom_ad_event_type,
                     TriggerAdEventCallback callback);
 
  private:
   void MaybeServeAtRegularIntervals();
 
-  void FireServedEventCallback(TriggerAdEventCallback callback,
-                               bool success,
-                               const std::string& placement_id,
-                               mojom::NotificationAdEventType event_type);
+  void FireServedEventCallback(
+      TriggerAdEventCallback callback,
+      bool success,
+      const std::string& placement_id,
+      mojom::NotificationAdEventType mojom_ad_event_type);
 
   // AdsClientNotifierObserver:
   void OnNotifyDidInitializeAds() override;
@@ -91,9 +84,7 @@ class NotificationAdHandler final : public AdsClientNotifierObserver,
   void OnDidFireNotificationAdTimedOutEvent(
       const NotificationAdInfo& ad) override;
 
-  const raw_ref<Account> account_;
   const raw_ref<SiteVisit> site_visit_;
-  const raw_ref<EpsilonGreedyBanditProcessor> epsilon_greedy_bandit_processor_;
 
   NotificationAdEventHandler event_handler_;
 

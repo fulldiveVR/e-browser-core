@@ -1,5 +1,5 @@
 diff --git a/components/safe_browsing/content/browser/safe_browsing_network_context.cc b/components/safe_browsing/content/browser/safe_browsing_network_context.cc
-index 05e440f325c121e4733b563fbb367dff7e38193a..85cc0e129e14679b7d1b909ae6c6e987ae6b5eab 100644
+index c336862d0fc92f2397ec27250a107160bbe08b8b..5372b981e6af3ab2de4f20cfacd7439505ca88cd 100644
 --- a/components/safe_browsing/content/browser/safe_browsing_network_context.cc
 +++ b/components/safe_browsing/content/browser/safe_browsing_network_context.cc
 @@ -81,8 +81,8 @@ class SafeBrowsingNetworkContext::SharedURLLoaderFactory

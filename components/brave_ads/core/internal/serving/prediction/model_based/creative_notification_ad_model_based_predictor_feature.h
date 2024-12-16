@@ -48,12 +48,7 @@ inline constexpr base::FeatureParam<double>
 inline constexpr base::FeatureParam<double>
     kNotificationAdLastSeenPredictorWeight{
         &kCreativeNotificationAdModelBasedPredictorFeature,
-        "last_seen_ad_predictor_weight", 1.0};
-
-inline constexpr base::FeatureParam<double>
-    kNotificationAdLastSeenAdvertiserPredictorWeight{
-        &kCreativeNotificationAdModelBasedPredictorFeature,
-        "last_seen_advertiser_predictor_weight", 1.0};
+        "last_seen_ad_predictor_weight", 0.0};
 
 }  // namespace brave_ads
 

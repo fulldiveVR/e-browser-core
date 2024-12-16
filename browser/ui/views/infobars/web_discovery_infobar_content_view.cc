@@ -5,6 +5,7 @@
 
 #include "brave/browser/ui/views/infobars/web_discovery_infobar_content_view.h"
 
+#include <array>
 #include <limits>
 #include <utility>
 #include <vector>
@@ -71,7 +72,8 @@ class InfoBarStyledLabel : public CustomStyledLabel {
     return gfx::Size(pref_size.width() * 0.55, pref_size.height());
   }
 
-  gfx::Size CalculatePreferredSize() const override {
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override {
     // Reset message label's width so that it can calculate preferred size
     // ignoring the current size. This will allow the label to grow bigger than
     // it is.
@@ -81,6 +83,8 @@ class InfoBarStyledLabel : public CustomStyledLabel {
   }
 
   void OnBoundsChanged(const gfx::Rect& previous_bounds) override {
+    CustomStyledLabel::OnBoundsChanged(previous_bounds);
+
     auto height = GetHeightForWidth(width());
     SetSize({width(), height});
     SetPosition({x(), (parent()->height() - height) / 2});
@@ -92,8 +96,8 @@ END_METADATA
 
 // TODO(simonhong): Use leo MdTextButton when it's stabilized.
 class OkButton : public views::LabelButton {
+  METADATA_HEADER(OkButton, views::LabelButton)
  public:
-  METADATA_HEADER(OkButton);
   explicit OkButton(PressedCallback callback, const std::u16string& text)
       : LabelButton(std::move(callback), text) {
     SetHorizontalAlignment(gfx::ALIGN_CENTER);
@@ -105,27 +109,29 @@ class OkButton : public views::LabelButton {
   OkButton& operator=(const OkButton&) = delete;
 
   void UpdateBackgroundColor() override {
-    constexpr SkColor kBgColor[][ButtonState::STATE_COUNT] = {
-        {
-            // Light theme.
-            SkColorSetRGB(0x4E, 0x32, 0xEE),  // normal
-            SkColorSetRGB(0x32, 0x2F, 0xB4),  // hover
-            SkColorSetRGB(0x4E, 0x32, 0xEE),  // focused
-            SkColorSetRGB(0xAC, 0xAF, 0xBB)   // disabled
-        },
-        {
-            // Dark theme.
-            SkColorSetRGB(0x4E, 0x32, 0xEE),  // normal
-            SkColorSetRGB(0x87, 0x84, 0xF4),  // hover
-            SkColorSetRGB(0x4E, 0x32, 0xEE),  // focused
-            SkColorSetRGB(0x58, 0x5C, 0x6D),  // disabled
-        }};
+    static constexpr auto kBgColor =
+        std::to_array<std::array<const SkColor, ButtonState::STATE_COUNT>>(
+            {{
+                 // Light theme.
+                 SkColorSetRGB(0x4E, 0x32, 0xEE),  // normal
+                 SkColorSetRGB(0x32, 0x2F, 0xB4),  // hover
+                 SkColorSetRGB(0x4E, 0x32, 0xEE),  // focused
+                 SkColorSetRGB(0xAC, 0xAF, 0xBB)   // disabled
+             },
+             {
+                 // Dark theme.
+                 SkColorSetRGB(0x4E, 0x32, 0xEE),  // normal
+                 SkColorSetRGB(0x87, 0x84, 0xF4),  // hover
+                 SkColorSetRGB(0x4E, 0x32, 0xEE),  // focused
+                 SkColorSetRGB(0x58, 0x5C, 0x6D),  // disabled
+             }});
 
-    const int theme =
+    bool is_dark_theme =
         ui::NativeTheme::GetInstanceForNativeUi()->ShouldUseDarkColors();
     SetBackground(CreateBackgroundFromPainter(
         views::Painter::CreateRoundRectWith1PxBorderPainter(
-            kBgColor[theme][GetVisualState()], SK_ColorTRANSPARENT, 100)));
+            kBgColor[is_dark_theme][GetVisualState()], SK_ColorTRANSPARENT,
+            100)));
   }
 
   void OnThemeChanged() override {
@@ -134,13 +140,13 @@ class OkButton : public views::LabelButton {
   }
 };
 
-BEGIN_METADATA(OkButton, views::LabelButton)
+BEGIN_METADATA(OkButton)
 END_METADATA
 
 // Subclassed for font setting.
 class NoThanksButton : public views::LabelButton {
+  METADATA_HEADER(NoThanksButton, views::LabelButton)
  public:
-  METADATA_HEADER(NoThanksButton);
   using views::LabelButton::LabelButton;
   NoThanksButton(const NoThanksButton&) = delete;
   NoThanksButton& operator=(const NoThanksButton&) = delete;
@@ -151,7 +157,7 @@ class NoThanksButton : public views::LabelButton {
   }
 };
 
-BEGIN_METADATA(NoThanksButton, views::LabelButton)
+BEGIN_METADATA(NoThanksButton)
 END_METADATA
 
 // Use image as background.
@@ -219,6 +225,14 @@ void WebDiscoveryInfoBarContentView::SwitchChildLayout() {
   // Not initialized yet.
   if (wide_layout_min_width_ == 0 || narrow_layout_preferred_width_ == 0)
     return;
+
+  // TODO(simonhong): This is workaround to prevent re-layout from narrow layout
+  // to wide layout at startup as we have a regression that StyledLabel doesn't
+  // do proper layout when its width is growing. With this workaround, we can
+  // show wdp infobar w/o wrong layout.
+  if (width() == 0) {
+    return;
+  }
 
   // There are three layout.
   // - Wide layout with wide border
@@ -498,5 +512,5 @@ void WebDiscoveryInfoBarContentView::CloseInfoBar() {
   delegate_->Close(false);
 }
 
-BEGIN_METADATA(WebDiscoveryInfoBarContentView, views::View)
+BEGIN_METADATA(WebDiscoveryInfoBarContentView)
 END_METADATA

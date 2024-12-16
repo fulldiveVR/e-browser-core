@@ -25,7 +25,6 @@ import {
 
 // Components
 import PopupModal from '../../../desktop/popup-modals'
-import { NavButton } from '../../../extension/buttons/nav-button/index'
 import {
   withPlaceholderIcon //
 } from '../../../shared/create-placeholder-icon/index'
@@ -42,11 +41,15 @@ import {
   ErrorIcon
 } from './sell-asset-modal.style'
 
-import { VerticalSpacer, Row, Column } from '../../../shared/style'
+import {
+  VerticalSpacer,
+  Row,
+  Column,
+  LeoSquaredButton
+} from '../../../shared/style'
 
 interface Props {
   selectedAsset: BraveWallet.BlockchainToken
-  selectedAssetsNetwork: BraveWallet.NetworkInfo | undefined | null
   sellAmount: string
   showSellModal: boolean
   sellAssetBalance: string
@@ -59,7 +62,6 @@ interface Props {
 export const SellAssetModal = (props: Props) => {
   const {
     selectedAsset,
-    selectedAssetsNetwork,
     sellAmount,
     showSellModal,
     sellAssetBalance,
@@ -147,10 +149,9 @@ export const SellAssetModal = (props: Props) => {
       title={`${getLocale('braveWalletSell')} ${selectedAsset.name}`}
       onClose={onCloseSellModal}
       width='512px'
-      borderRadius={16}
       ref={sellAssetModalRef}
-      headerPaddingVertical={24}
-      headerPaddingHorizontal={32}
+      headerPaddingVertical={'24px'}
+      headerPaddingHorizontal={'32px'}
     >
       <StyledWrapper>
         <Column fullWidth={true}>
@@ -206,10 +207,7 @@ export const SellAssetModal = (props: Props) => {
                 />
               </Row>
               <Row width='unset'>
-                <AssetIconWithPlaceholder
-                  asset={selectedAsset}
-                  network={selectedAssetsNetwork}
-                />
+                <AssetIconWithPlaceholder asset={selectedAsset} />
                 <Text
                   textSize='22px'
                   isBold={true}
@@ -238,17 +236,12 @@ export const SellAssetModal = (props: Props) => {
           )}
         </Column>
         <VerticalSpacer space={8} />
-        <NavButton
-          disabled={isSellButtonDisabled}
-          buttonType='primary'
-          minHeight='52px'
-          text={
-            // Ramp is hardcoded for now, but we can update with
-            // selectedProvider.name once we add more offramp providers.
-            getLocale('braveWalletSellWithProvider').replace('$1', 'Ramp')
-          }
-          onSubmit={openSellAssetLink}
-        />
+        <LeoSquaredButton
+          isDisabled={isSellButtonDisabled}
+          onClick={openSellAssetLink}
+        >
+          {getLocale('braveWalletSellWithProvider').replace('$1', 'Ramp')}
+        </LeoSquaredButton>
       </StyledWrapper>
     </PopupModal>
   )

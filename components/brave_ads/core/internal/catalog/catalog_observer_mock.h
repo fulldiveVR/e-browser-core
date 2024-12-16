@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_CATALOG_CATALOG_OBSERVER_MOCK_H_
 
 #include "brave/components/brave_ads/core/internal/catalog/catalog_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -18,14 +18,11 @@ class CatalogObserverMock : public CatalogObserver {
   CatalogObserverMock(const CatalogObserverMock&) = delete;
   CatalogObserverMock& operator=(const CatalogObserverMock&) = delete;
 
-  CatalogObserverMock(CatalogObserverMock&&) noexcept = delete;
-  CatalogObserverMock& operator=(CatalogObserverMock&&) noexcept = delete;
-
   ~CatalogObserverMock() override;
 
-  MOCK_METHOD(void, OnDidUpdateCatalog, (const CatalogInfo& catalog));
+  MOCK_METHOD(void, OnDidFetchCatalog, (const CatalogInfo& catalog));
 
-  MOCK_METHOD(void, OnFailedToUpdateCatalog, ());
+  MOCK_METHOD(void, OnFailedToFetchCatalog, ());
 };
 
 }  // namespace brave_ads

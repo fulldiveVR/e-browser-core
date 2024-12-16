@@ -45,17 +45,15 @@ TextClassificationProcessor::~TextClassificationProcessor() {
 }
 
 void TextClassificationProcessor::Process(const std::string& text) {
-  if (!resource_->IsInitialized()) {
-    return;
+  if (resource_->IsLoaded()) {
+    resource_->ClassifyPage(
+        text, base::BindOnce(&TextClassificationProcessor::ClassifyPageCallback,
+                             weak_factory_.GetWeakPtr()));
   }
-
-  resource_->ClassifyPage(
-      text, base::BindOnce(&TextClassificationProcessor::ClassifyPageCallback,
-                           weak_factory_.GetWeakPtr()));
 }
 
 void TextClassificationProcessor::ClassifyPageCallback(
-    const std::optional<TextClassificationProbabilityMap>& probabilities) {
+    base::optional_ref<const TextClassificationProbabilityMap> probabilities) {
   if (!probabilities) {
     return BLOG(0, "Text classification failed due to an invalid model");
   }
@@ -76,12 +74,10 @@ void TextClassificationProcessor::ClassifyPageCallback(
 ///////////////////////////////////////////////////////////////////////////////
 
 void TextClassificationProcessor::OnTextContentDidChange(
-    const int32_t /*tab_id*/,
+    int32_t /*tab_id*/,
     const std::vector<GURL>& redirect_chain,
     const std::string& text) {
-  if (redirect_chain.empty()) {
-    return;
-  }
+  CHECK(!redirect_chain.empty());
 
   const GURL& url = redirect_chain.back();
 

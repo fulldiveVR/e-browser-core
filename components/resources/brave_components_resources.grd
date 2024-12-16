@@ -81,6 +81,7 @@
         <include name="IDR_BRAVE_PRIVATE_TAB_TOR_IMG" file="../img/newtab/private-window-tor.svg" type="BINDATA" />
       </if>
 
+      <part file="../brave_ads/browser/resources/ads_internals_resources.grdp" />
       <part file="../brave_perf_predictor/resources/brave_perf_predictor_resources.grdp" />
       <part file="../playlist/browser/resources/playlist_resources.grdp" />
       <part file="../brave_news/browser/resources/news_resources.grdp" />
@@ -91,7 +92,6 @@
       <part file="brave_translate_resources.grdp" />
       <part file="speedreader_resources.grdp" />
       <part file="brave_flags_ui_resources.grdp" />
-      <part file="ipfs_resources.grdp" />
       <part file="domain_block_resources.grdp" />
       <part file="request_otr_resources.grdp" />
       <if expr="not is_ios">
@@ -101,9 +101,9 @@
         <part file="brave_shields_resources.grdp" />
         <part file="brave_private_new_tab_resources.grdp" />
       </if>
-      <part file="../ai_chat/resources/page/ai_chat_ui_resources.grdp" />
+      <part file="../ai_chat/resources/ai_chat_ui_resources.grdp" />
+      <part file="../ai_rewriter/resources/page/ai_rewriter_ui_resources.grdp" />
       <part file="brave_wallet_resources.grdp" />
-      <part file="../brave_player/browser/resources/brave_player_resources.grdp" />
     </includes>
   </release>
 </grit>

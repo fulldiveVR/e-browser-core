@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 
+#include "base/strings/cstring_view.h"
 #include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
 #include "brave/components/brave_rewards/common/mojom/rewards_core.mojom.h"
 #include "brave/components/brave_rewards/core/endpoints/request_builder.h"
@@ -17,7 +18,7 @@
 #include "brave/components/brave_rewards/core/endpoints/result_for.h"
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoints {
 
@@ -31,15 +32,16 @@ struct ResultFor<PostConnect> {
 
 class PostConnect : public RequestBuilder, public ResponseHandler<PostConnect> {
  public:
-  static Result ProcessResponse(const mojom::UrlResponse&);
+  static Result ProcessResponse(RewardsEngine& engine,
+                                const mojom::UrlResponse&);
   static mojom::ConnectExternalWalletResult ToConnectExternalWalletResult(
       const Result&);
 
-  explicit PostConnect(RewardsEngineImpl& engine);
+  explicit PostConnect(RewardsEngine& engine);
   ~PostConnect() override;
 
  protected:
-  virtual const char* Path() const = 0;
+  virtual std::string Path(base::cstring_view payment_id) const = 0;
 
  private:
   std::optional<std::string> Url() const override;

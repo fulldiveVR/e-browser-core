@@ -9,6 +9,8 @@
 
 #include "base/check_is_test.h"
 #include "base/command_line.h"
+#include "base/logging.h"
+#include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "brave/browser/themes/brave_dark_mode_utils_internal.h"
 #include "brave/components/constants/brave_switches.h"
@@ -27,11 +29,6 @@ namespace {
 
 bool g_is_test_ = false;
 bool g_system_dark_mode_enabled_in_test_ = false;
-
-void ClearBraveDarkModeProfilePrefs(PrefService* prefs) {
-  prefs->ClearPref(kBraveThemeType);
-  prefs->ClearPref(kUseOverriddenBraveThemeType);
-}
 
 dark_mode::BraveDarkModeType GetDarkModeTypeBasedOnChannel() {
   switch (chrome::GetChannel()) {
@@ -54,12 +51,16 @@ dark_mode::BraveDarkModeType GetDarkModeSwitchValue(
       command_line.GetSwitchValueASCII(switches::kDarkMode);
   std::string requested_dark_mode_value_lower =
       base::ToLowerASCII(requested_dark_mode_value);
-  if (requested_dark_mode_value_lower == "light")
-    return dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_LIGHT;
-  if (requested_dark_mode_value_lower == "dark")
-    return dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DARK;
+  DCHECK(requested_dark_mode_value_lower == "dark" ||
+         requested_dark_mode_value == "light");
 
-  NOTREACHED();
+  if (requested_dark_mode_value_lower == "light") {
+    return dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_LIGHT;
+  }
+  if (requested_dark_mode_value_lower == "dark") {
+    return dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DARK;
+  }
+
   return dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_LIGHT;
 }
 
@@ -67,37 +68,16 @@ dark_mode::BraveDarkModeType GetDarkModeSwitchValue(
 
 namespace dark_mode {
 
-void MigrateBraveDarkModePrefs(PrefService* prefs) {
-  auto* local_state = g_browser_process->local_state();
-  // If migration is done, local state doesn't have default value because
-  // they were explicitly set by primary prefs' value. After that, we don't
-  // need to try migration again and prefs from profiles are already cleared.
-  if (local_state->FindPreference(kBraveDarkMode)->IsDefaultValue()) {
-    local_state->SetInteger(kBraveDarkMode,
-                            prefs->GetInteger(kBraveThemeType));
-  }
-
-  // Clear deprecated prefs.
-  ClearBraveDarkModeProfilePrefs(prefs);
-}
-
 void RegisterBraveDarkModeLocalStatePrefs(PrefRegistrySimple* registry) {
   registry->RegisterIntegerPref(
       kBraveDarkMode,
       static_cast<int>(BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DEFAULT));
 }
 
-void RegisterBraveDarkModePrefsForMigration(
-    user_prefs::PrefRegistrySyncable* registry) {
-  registry->RegisterIntegerPref(
-      kBraveThemeType,
-      static_cast<int>(BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DEFAULT));
-  registry->RegisterBooleanPref(kUseOverriddenBraveThemeType, false);
-}
-
 bool SystemDarkModeEnabled() {
-  if (g_is_test_)
+  if (g_is_test_) {
     return g_system_dark_mode_enabled_in_test_;
+  }
 
 #if BUILDFLAG(IS_LINUX)
   return HasCachedSystemDarkModeType();
@@ -112,13 +92,15 @@ void SetUseSystemDarkModeEnabledForTest(bool enabled) {
 }
 
 std::string GetStringFromBraveDarkModeType(BraveDarkModeType type) {
+  DCHECK_NE(type, BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DEFAULT)
+      << "Didn't expect to encounter the default theme mode here - this was "
+         "previously a NOTREACHED";
   switch (type) {
     case BraveDarkModeType::BRAVE_DARK_MODE_TYPE_LIGHT:
       return "Light";
     case BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DARK:
       return "Dark";
     default:
-      NOTREACHED();
       return "Default";
   }
 }
@@ -144,8 +126,9 @@ BraveDarkModeType GetActiveBraveDarkModeType() {
   // allow override via cli flag
   const base::CommandLine& command_line =
       *base::CommandLine::ForCurrentProcess();
-  if (command_line.HasSwitch(switches::kDarkMode))
+  if (command_line.HasSwitch(switches::kDarkMode)) {
     return GetDarkModeSwitchValue(command_line);
+  }
 
   if (!g_browser_process || !g_browser_process->local_state()) {
     // In unittest, local_state() could not be initialzed.
@@ -156,8 +139,9 @@ BraveDarkModeType GetActiveBraveDarkModeType() {
   BraveDarkModeType type = static_cast<BraveDarkModeType>(
       g_browser_process->local_state()->GetInteger(kBraveDarkMode));
   if (type == BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DEFAULT) {
-    if (!SystemDarkModeEnabled())
+    if (!SystemDarkModeEnabled()) {
       return GetDarkModeTypeBasedOnChannel();
+    }
 
     return ui::NativeTheme::GetInstanceForNativeUi()->ShouldUseDarkColors()
                ? BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DARK
@@ -170,8 +154,9 @@ BraveDarkModeType GetBraveDarkModeType() {
   // allow override via cli flag
   const base::CommandLine& command_line =
       *base::CommandLine::ForCurrentProcess();
-  if (command_line.HasSwitch(switches::kDarkMode))
+  if (command_line.HasSwitch(switches::kDarkMode)) {
     return GetDarkModeSwitchValue(command_line);
+  }
 
   if (!g_browser_process || !g_browser_process->local_state()) {
     // In unittest, local_state() could not be initialzed.
@@ -182,8 +167,9 @@ BraveDarkModeType GetBraveDarkModeType() {
   BraveDarkModeType type = static_cast<BraveDarkModeType>(
       g_browser_process->local_state()->GetInteger(kBraveDarkMode));
   if (type == BraveDarkModeType::BRAVE_DARK_MODE_TYPE_DEFAULT) {
-    if (!SystemDarkModeEnabled())
+    if (!SystemDarkModeEnabled()) {
       return GetDarkModeTypeBasedOnChannel();
+    }
     return type;
   }
   return type;

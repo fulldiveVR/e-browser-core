@@ -11,6 +11,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
+#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/brave_wallet_constants.h"
 #include "brave/components/brave_wallet/common/encoding_utils.h"
 
@@ -74,10 +75,10 @@ bool IsBase58EncodedSolanaPubkey(const std::string& key) {
   return Base58Decode(key, &bytes, kSolanaPubkeySize);
 }
 
-bool Uint8ArrayDecode(const std::string& str,
+bool Uint8ArrayDecode(std::string_view str,
                       std::vector<uint8_t>* ret,
                       size_t len) {
-  if (!base::StartsWith(str, "[") || !base::EndsWith(str, "]")) {
+  if (!str.starts_with('[') || !str.ends_with(']')) {
     return false;
   }
   DCHECK(ret);
@@ -121,7 +122,7 @@ std::optional<std::vector<uint8_t>> CompactArrayDecode(
 }
 
 std::optional<uint8_t> GetUint8FromStringDict(const base::Value::Dict& dict,
-                                              const std::string& key) {
+                                              std::string_view key) {
   const std::string* string_value = dict.FindString(key);
   if (!string_value) {
     return std::nullopt;
@@ -137,14 +138,19 @@ std::optional<uint8_t> GetUint8FromStringDict(const base::Value::Dict& dict,
   return val;
 }
 
-bool IsValidCommitmentString(const std::string& commitment) {
+bool IsValidCommitmentString(std::string_view commitment) {
   return commitment == "processed" || commitment == "confirmed" ||
          commitment == "finalized";
 }
 
-bool IsValidEncodingString(const std::string& encoding) {
+bool IsValidEncodingString(std::string_view encoding) {
   return encoding == "base58" || encoding == "base64" ||
          encoding == "jsonParsed";
+}
+
+bool IsSPLToken(const mojom::BlockchainTokenPtr& token) {
+  return token->coin == mojom::CoinType::SOL &&
+         !token->contract_address.empty();
 }
 
 }  // namespace brave_wallet

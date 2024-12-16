@@ -59,7 +59,7 @@ void ScriptInjectorRenderFrameObserver::RequestAsyncExecuteScript(
   auto want_result = CheckIfWantResult(callback);
 
   render_frame()->GetWebFrame()->RequestExecuteScript(
-      world_id, base::make_span(&web_script_source, 1u), user_activation,
+      world_id, base::span_from_ref(web_script_source), user_activation,
       blink::mojom::EvaluationTiming::kAsynchronous,
       blink::mojom::LoadEventBlockingOption::kDoNotBlock,
       base::BindOnce(

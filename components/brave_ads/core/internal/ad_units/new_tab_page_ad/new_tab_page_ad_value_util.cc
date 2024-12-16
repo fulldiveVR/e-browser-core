@@ -9,14 +9,11 @@
 #include <string>
 #include <utility>
 
+#include "brave/components/brave_ads/core/public/ad_units/ad_type.h"
 #include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_constants.h"
 #include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_info.h"
 
 namespace brave_ads {
-
-namespace {
-constexpr char kTypeKey[] = "type";
-}  // namespace
 
 base::Value::Dict NewTabPageAdToValue(const NewTabPageAdInfo& ad) {
   base::Value::List wallpapers;
@@ -32,7 +29,7 @@ base::Value::Dict NewTabPageAdToValue(const NewTabPageAdInfo& ad) {
   }
 
   return base::Value::Dict()
-      .Set(kTypeKey, ToString(ad.type))
+      .Set(kNewTabPageAdTypeKey, ToString(ad.type))
       .Set(kNewTabPageAdPlacementIdKey, ad.placement_id)
       .Set(kNewTabPageAdCreativeInstanceIdKey, ad.creative_instance_id)
       .Set(kNewTabPageAdCreativeSetIdKey, ad.creative_set_id)
@@ -49,8 +46,8 @@ base::Value::Dict NewTabPageAdToValue(const NewTabPageAdInfo& ad) {
 NewTabPageAdInfo NewTabPageAdFromValue(const base::Value::Dict& dict) {
   NewTabPageAdInfo ad;
 
-  if (const auto* const value = dict.FindString(kTypeKey)) {
-    ad.type = ToAdType(*value);
+  if (const auto* const value = dict.FindString(kNewTabPageAdTypeKey)) {
+    ad.type = ToMojomAdType(*value);
   }
 
   if (const auto* const value = dict.FindString(kNewTabPageAdPlacementIdKey)) {

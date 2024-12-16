@@ -7,7 +7,7 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_CATALOG_CATALOG_URL_REQUEST_DELEGATE_MOCK_H_
 
 #include "brave/components/brave_ads/core/internal/catalog/catalog_url_request_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -19,20 +19,15 @@ class CatalogUrlRequestDelegateMock : public CatalogUrlRequestDelegate {
   CatalogUrlRequestDelegateMock& operator=(
       const CatalogUrlRequestDelegateMock&) = delete;
 
-  CatalogUrlRequestDelegateMock(CatalogUrlRequestDelegateMock&&) noexcept =
-      delete;
-  CatalogUrlRequestDelegateMock& operator=(
-      CatalogUrlRequestDelegateMock&&) noexcept = delete;
-
   ~CatalogUrlRequestDelegateMock() override;
 
-  MOCK_METHOD(void, OnWillFetchCatalog, (const base::Time fetch_at));
+  MOCK_METHOD(void, OnWillFetchCatalog, (base::Time fetch_at));
 
   MOCK_METHOD(void, OnDidFetchCatalog, (const CatalogInfo& catalog));
 
   MOCK_METHOD(void, OnFailedToFetchCatalog, ());
 
-  MOCK_METHOD(void, OnWillRetryFetchingCatalog, (const base::Time retry_at));
+  MOCK_METHOD(void, OnWillRetryFetchingCatalog, (base::Time retry_at));
 
   MOCK_METHOD(void, OnDidRetryFetchingCatalog, ());
 };

@@ -88,35 +88,18 @@ declare namespace chrome.braveRewards {
   const getUserType: (callback: (userType: string) => void) => void
   const getPublishersVisitedCount: (callback: (count: number) => void) => void
   const getRewardsParameters: (callback: (properties: RewardsExtension.RewardsParameters) => void) => {}
-  const updateMediaDuration: (tabId: number, publisherKey: string, duration: number, firstVisit: boolean) => {}
   const getPublisherInfo: (publisherKey: string, callback: (result: RewardsExtension.Result, properties: RewardsExtension.PublisherInfo) => void) => {}
-  const getPublisherPanelInfo: (publisherKey: string, callback: (result: RewardsExtension.Result, properties: RewardsExtension.PublisherInfo) => void) => {}
 
-  const setPublisherIdForTab: (tabId: number, publisherId: string) => void
   const getPublisherInfoForTab: (tabId: number, callback: (publisher?: RewardsExtension.PublisherInfo) => void) => void
 
-  const savePublisherInfo: (windowId: number, mediaType: string, url: string, publisherKey: string, publisherName: string, favIconUrl: string, callback: (result: RewardsExtension.Result) => void) => {}
   const tipSite: (tabId: number, publisherKey: string, entryPoint: RewardsExtension.TipDialogEntryPoint) => {}
-  const getPublisherData: (windowId: number, url: string, faviconUrl: string, publisherBlob: string | undefined) => {}
   const getBalanceReport: (month: number, year: number, callback: (properties: RewardsExtension.BalanceReport) => void) => {}
   const onPublisherData: {
     addListener: (callback: (windowId: number, publisher: RewardsExtension.Publisher) => void) => void
   }
-  const onPromotions: {
-    addListener: (callback: (result: RewardsExtension.Result, promotions: RewardsExtension.Promotion[]) => void) => void
-  }
-  const onPromotionFinish: {
-    addListener: (callback: (result: RewardsExtension.Result, promotion: RewardsExtension.Promotion) => void) => void
-  }
-  const includeInAutoContribution: (publisherKey: string, exclude: boolean) => {}
-  const fetchPromotions: (callback: (promotions: RewardsExtension.Promotion[]) => void) => {}
-  const claimPromotion: (promotionId: string, callback: (properties: RewardsExtension.Captcha) => void) => {}
-  const attestPromotion: (promotionId: string, solution: string, callback: (result: number, promotion?: RewardsExtension.Promotion) => void) => {}
   const getRewardsEnabled: (callback: (enabled: boolean) => void) => {}
   const getAdsAccountStatement: (callback: (success: boolean, adsAccountStatement: NewTab.AdsAccountStatement) => void) => {}
   const getWalletExists: (callback: (exists: boolean) => void) => {}
-  const setAutoContributeEnabled: (enabled: boolean) => {}
-  const getACEnabled: (callback: (enabled: boolean) => void) => {}
   const onPublisherListNormalized: {
     addListener: (callback: (properties: RewardsExtension.PublisherNormalized[]) => void) => void
   }
@@ -160,14 +143,6 @@ declare namespace chrome.braveRewards {
 
   const openRewardsPanel: () => void
 
-  const showRewardsSetup: () => void
-
-  const showGrantCaptcha: (grantId: string) => void
-
-  const onUnblindedTokensReady: {
-    addListener: (callback: () => void) => void
-  }
-
   const onCompleteReset: {
     addListener: (callback: (properties: { success: boolean }) => void) => void
   }
@@ -186,18 +161,21 @@ declare namespace chrome.braveRewards {
     addListener: (callback: () => void) => void
   }
 
+  const isTermsOfServiceUpdateRequired: (
+    callback: (updateRequired: boolean) => void
+  ) => void
+
+  const acceptTermsOfServiceUpdate: () => void
+
+  const onTermsOfServiceUpdateAccepted: {
+    addListener: (callback: () => void) => void
+  }
+
   const getScheduledCaptchaInfo: (
     callback: (scheduledCaptcha: RewardsExtension.ScheduledCaptcha) => void
   ) => void
 
   const updateScheduledCaptchaResult: (result: boolean) => void
-
-  interface RewardsPrefs {
-    autoContributeEnabled: boolean
-    autoContributeAmount: number
-  }
-
-  const getPrefs: (callback: (prefs: RewardsPrefs) => void) => void
 }
 
 declare namespace chrome.braveTalk {
@@ -224,10 +202,6 @@ declare namespace chrome.rewardsNotifications {
   }
 }
 
-declare namespace chrome.greaselion {
-  const isGreaselionExtension: (id: string, callback: (valid: boolean) => void) => {}
-}
-
 declare namespace chrome.braveNews {
   const onClearHistory: {
     addListener: (callback: () => any) => void
@@ -247,9 +221,9 @@ declare namespace chrome.windows {
   const getAllAsync: any
 }
 
-declare namespace chrome.braveShields {
-  const addSiteCosmeticFilter: (origin: string, cssSelector: string) => void
-  const openFilterManagementPage: () => void
+declare namespace cf_worker {
+  const addSiteCosmeticFilter: (selector: string) => void
+  const manageCustomFilters: () => void
 }
 
 declare namespace chrome.test {

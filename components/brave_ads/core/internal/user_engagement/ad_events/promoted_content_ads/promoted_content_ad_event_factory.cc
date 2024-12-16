@@ -14,13 +14,13 @@ namespace brave_ads {
 
 std::unique_ptr<AdEventInterface<PromotedContentAdInfo>>
 PromotedContentAdEventFactory::Build(
-    const mojom::PromotedContentAdEventType event_type) {
-  switch (event_type) {
-    case mojom::PromotedContentAdEventType::kServed: {
+    mojom::PromotedContentAdEventType mojom_ad_event_type) {
+  switch (mojom_ad_event_type) {
+    case mojom::PromotedContentAdEventType::kServedImpression: {
       return std::make_unique<PromotedContentAdEventServed>();
     }
 
-    case mojom::PromotedContentAdEventType::kViewed: {
+    case mojom::PromotedContentAdEventType::kViewedImpression: {
       return std::make_unique<PromotedContentAdEventViewed>();
     }
 

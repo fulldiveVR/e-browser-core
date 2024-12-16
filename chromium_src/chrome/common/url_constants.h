@@ -37,6 +37,10 @@ inline constexpr char kAutomaticSettingsResetLearnMoreURL[] =
 inline constexpr char kAdvancedProtectionDownloadLearnMoreURL[] =
     "https://support.brave.com/";
 
+// "Chrome Settings" URL for the appearance page.
+inline constexpr char kBrowserSettingsSearchEngineURL[] =
+    "chrome://settings/search";
+
 // "Learn more" URL for Battery Saver Mode.
 inline constexpr char kBatterySaverModeLearnMoreUrl[] =
     "https://support.brave.com/hc/en-us/articles/13380606172557";
@@ -82,7 +86,7 @@ inline constexpr char kChromeHelpViaMenuURL[] = "https://support.brave.com/";
 
 inline constexpr char kChromeHelpViaWebUIURL[] = "https://support.brave.com/";
 
-inline constexpr char kFirstPartySetsLearnMoreURL[] =
+inline constexpr char kRelatedWebsiteSetsLearnMoreURL[] =
     "https://support.brave.com/";
 
 // The isolated-app: scheme is used for Isolated Web Apps. A public explainer
@@ -162,6 +166,11 @@ inline constexpr char kCrashReasonFeedbackDisplayedURL[] =
     "https://support.brave.com/hc/en-us/articles/"
     "360018192251-How-do-I-fix-page-crashes-and-other-page-loading-errors-";
 
+// "Learn more" URL for the inactive tabs appearance setting.
+inline constexpr char16_t kDiscardRingTreatmentLearnMoreUrl[] =
+    u"https://support.brave.com/hc/en-us/articles/"
+    u"13383683902733-How-do-I-use-the-Memory-Saver-feature-in-Brave";
+
 // "Learn more" URL for the "Do not track" setting in the privacy section.
 inline constexpr char16_t kDoNotTrackLearnMoreURL[] =
     u"https://support.brave.com/hc/en-us/articles/"
@@ -214,6 +223,10 @@ inline constexpr char kGoogleAccountActivityControlsURL[] =
 inline constexpr char kGoogleAccountActivityControlsURLInPrivacyGuide[] =
     "https://support.brave.com/";
 
+// URL of the 'Linked services' section of the privacy settings page.
+inline constexpr char kGoogleAccountLinkedServicesURL[] =
+    "https://support.brave.com/";
+
 // URL of the Google Account.
 inline constexpr char kGoogleAccountURL[] = "https://support.brave.com/";
 
@@ -224,21 +237,29 @@ inline constexpr char kGoogleAccountChooserURL[] = "https://support.brave.com/";
 inline constexpr char kGoogleAccountDeviceActivityURL[] =
     "https://support.brave.com/";
 
+// URL of the two factor authentication setup required intersitial.
+inline constexpr char kGoogleTwoFactorIntersitialURL[] =
+    "https://support.brave.com/";
+
 // URL of the Google Password Manager.
 inline constexpr char kGooglePasswordManagerURL[] = "https://support.brave.com";
 
 // The URL for the "Learn more" link for the High Efficiency Mode.
-inline constexpr char kHighEfficiencyModeLearnMoreUrl[] =
+inline constexpr char kMemorySaverModeLearnMoreUrl[] =
     "https://support.brave.com/hc/en-us/articles/13383683902733";
 
 // The URL in the help text for the High Efficiency Mode tab discarding
 // exceptions add dialog.
-inline constexpr char16_t kHighEfficiencyModeTabDiscardingHelpUrl[] =
+inline constexpr char16_t kMemorySaverModeTabDiscardingHelpUrl[] =
     u"https://support.brave.com/";
 
 // The URL to the help center article of Incognito mode.
 inline constexpr char16_t kIncognitoHelpCenterURL[] =
     u"https://support.brave.com";
+
+// The URL for the Help Center page about IP Protection.
+inline constexpr char kIpProtectionHelpCenterURL[] =
+    "https://support.google.com/chrome?p=ip_protection";
 
 // The URL for the "Learn more" page for the usage/crash reporting option in the
 // first run dialog.
@@ -248,6 +269,9 @@ inline constexpr char kLearnMoreReportingURL[] =
 
 // The URL for the Help Center page about managing third-party cookies.
 inline constexpr char kManage3pcHelpCenterURL[] = "https://support.brave.com/";
+
+// The URL for the tab group sync help center page.
+inline constexpr char kTabGroupsLearnMoreURL[] = "https://support.brave.com/";
 
 // The URL for the Learn More page about policies and enterprise enrollment.
 inline constexpr char16_t kManagedUiLearnMoreUrl[] =
@@ -306,6 +330,14 @@ inline constexpr char16_t kPaymentMethodsURLForGPayWeb[] =
 inline constexpr char kAddressesAndPaymentMethodsLearnMoreURL[] =
     "https://support.brave.com";
 
+// Help URL for Autofill Prediction Improvements.
+inline constexpr char16_t kAutofillPredictionImprovementsLearnMoreURL[] =
+    u"https://support.brave.com";
+
+// "Learn more" URL for the performance intervention notification setting.
+inline constexpr char16_t kPerformanceInterventionLearnMoreUrl[] =
+    u"https://support.brave.com";
+
 // "Learn more" URL for the preloading section in Performance settings.
 inline constexpr char kPreloadingLearnMoreUrl[] = "https://support.brave.com";
 
@@ -341,6 +373,10 @@ inline constexpr char16_t kSafeBrowsingInChromeHelpCenterURL[] =
 inline constexpr char16_t kSafeBrowsingUseInChromeURL[] =
     u"https://support.brave.com/";
 
+// "Learn more" URL for Safety Check page.
+inline constexpr char16_t kSafetyHubHelpCenterURL[] =
+    u"https://support.brave.com/";
+
 // "Learn more" URL for safety tip bubble.
 inline constexpr char kSafetyTipHelpCenterURL[] =
     "https://support.brave.com/hc/en-us/articles/17550072876045-Lookalike-URLs";
@@ -373,6 +409,52 @@ inline constexpr char kSyncGoogleDashboardURL[] = "https://support.brave.com/";
 
 // The URL for the "Learn more" page for sync setup on the personal stuff page.
 inline constexpr char16_t kSyncLearnMoreURL[] = u"https://support.brave.com/";
+
+// The URL for the "Learn more" page for AI settings for managed users.
+inline constexpr char16_t kAiSettingsLearnMorePageManagedUrl[] =
+    u"https://support.brave.com/";
+
+// The URL for the "Learn more" page for Help me Write.
+inline constexpr char kComposeLearnMorePageURL[] = "https://support.brave.com/";
+
+// The URL for the "Learn more" page for Help me Write for managed users.
+inline constexpr char kComposeLearnMorePageManagedURL[] =
+    "https://support.brave.com/";
+
+// The URL for the "Learn more" links for pages related to History search.
+// TODO(crbug.com/328300718): Update help article URL.
+inline constexpr char kHistorySearchLearnMorePageURL[] =
+    "https://support.brave.com/";
+
+// The URL for the "Learn more" links for pages related to History search for
+// managed users.
+inline constexpr char kHistorySearchLearnMorePageManagedURL[] =
+    "https://support.brave.com/";
+
+// The URL for the Settings page to enable history search.
+inline constexpr char16_t kHistorySearchSettingURL[] =
+    u"chrome://settings/historySearch";
+
+// The URL for the Settings page to enable history search when
+// AiSettingsPageRefresh flag is enabled.
+inline constexpr char16_t kHistorySearchV2SettingURL[] =
+    u"chrome://settings/ai/historySearch";
+
+// The URL for the "Learn more" page for Wallpaper Search.
+inline constexpr char kWallpaperSearchLearnMorePageURL[] =
+    "https://support.brave.com/";
+
+// The URL for the "Learn more" page for Wallpaper Search for managed users.
+inline constexpr char kWallpaperSearchLearnMorePageManagedURL[] =
+    "https://support.brave.com/";
+
+// The URL for the "Learn more" page for Tab Organization.
+inline constexpr char kTabOrganizationLearnMorePageURL[] =
+    "https://support.brave.com/";
+
+// The URL for the "Learn more" page for Tab Organization for managed users.
+inline constexpr char kTabOrganizationLearnMorePageManagedURL[] =
+    "https://support.brave.com/";
 
 // The URL for the "Learn more" link in the enterprise disclaimer for managed
 // profile in the Signin Intercept bubble.
@@ -408,6 +490,14 @@ inline constexpr char16_t kWhoIsMyAdministratorHelpURL[] =
 // The URL for the "Learn more" link about CWS Enhanced Safe Browsing.
 inline constexpr char16_t kCwsEnhancedSafeBrowsingLearnMoreURL[] =
     u"https://support.brave.com/";
+
+// The URL path to online privacy policy.
+inline constexpr char kPrivacyPolicyOnlineURLPath[] =
+    "https://support.brave.com/";
+
+// The URL path to online privacy policy dark mode.
+inline constexpr char kPrivacyPolicyOnlineDarkModeURLPath[] =
+    "https://support.brave.com/";
 
 #if BUILDFLAG(IS_ANDROID)
 // "Learn more" URL for the enhanced playback notification dialog.

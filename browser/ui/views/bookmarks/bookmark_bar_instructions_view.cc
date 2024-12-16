@@ -69,9 +69,10 @@ BookmarkBarInstructionsView::BookmarkBarInstructionsView(Browser* browser)
   }
 }
 
-gfx::Size BookmarkBarInstructionsView::CalculatePreferredSize() const {
+gfx::Size BookmarkBarInstructionsView::CalculatePreferredSize(
+    const views::SizeBounds& available_size) const {
   int height = 0, width = 0;
-  for (auto* view : children()) {
+  for (views::View* view : children()) {
     gfx::Size pref = view->GetPreferredSize();
     height = std::max(pref.height(), height);
     width += pref.width();
@@ -81,20 +82,16 @@ gfx::Size BookmarkBarInstructionsView::CalculatePreferredSize() const {
   return gfx::Size(width + insets.width(), height + insets.height());
 }
 
-void BookmarkBarInstructionsView::Layout() {
+void BookmarkBarInstructionsView::Layout(PassKey) {
   int remaining_width = width();
   int x = 0;
-  for (auto* view : children()) {
+  for (views::View* view : children()) {
     gfx::Size pref = view->GetPreferredSize();
     int view_width = std::min(remaining_width, pref.width());
     view->SetBounds(x, 0, view_width, height());
     x += view_width + GetViewPadding();
     remaining_width = std::max(0, width() - x);
   }
-}
-
-const char* BookmarkBarInstructionsView::GetClassName() const {
-  return "BookmarkBarInstructionsView";
 }
 
 void BookmarkBarInstructionsView::OnThemeChanged() {
@@ -114,7 +111,7 @@ void BookmarkBarInstructionsView::LinkClicked() {
 void BookmarkBarInstructionsView::ShowContextMenuForViewImpl(
     views::View* source,
     const gfx::Point& point,
-    ui::MenuSourceType source_type) {
+    ui::mojom::MenuSourceType source_type) {
   // Do nothing here, we don't want to show the Bookmarks context menu when
   // the user right clicks on the "Import bookmarks now" link.
 }
@@ -131,7 +128,8 @@ void BookmarkBarInstructionsView::UpdateColors() {
 
   const ui::ColorProvider* cp = GetColorProvider();
   if (cp && import_link_) {
-    import_link_->SetEnabledColor(cp->GetColor(ui::kColorLinkForeground));
+    import_link_->SetEnabledColor(
+        cp->GetColor(kColorBookmarkBarInstructionsLink));
   }
 }
 

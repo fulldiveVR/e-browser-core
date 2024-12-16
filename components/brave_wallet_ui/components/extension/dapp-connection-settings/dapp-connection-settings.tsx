@@ -7,23 +7,25 @@ import * as React from 'react'
 import { skipToken } from '@reduxjs/toolkit/query/react'
 
 // Utils
-import { getPriceIdForToken } from '../../../utils/api-utils'
 import Amount from '../../../utils/amount'
 import { getBalance } from '../../../utils/balance-utils'
-import { computeFiatAmount } from '../../../utils/pricing-utils'
+import {
+  computeFiatAmount,
+  getPriceIdForToken
+} from '../../../utils/pricing-utils'
+import { getEntitiesListFromEntityState } from '../../../utils/entities.utils'
+import {
+  networkEntityAdapter //
+} from '../../../common/slices/entities/network.entity'
 
 // Proxies
 import getWalletPanelApiProxy from '../../../panel/wallet_panel_api_proxy'
-import { useApiProxy } from '../../../common/hooks/use-api-proxy'
-
-// Selectors
-import {
-  useUnsafeWalletSelector //
-} from '../../../common/hooks/use-safe-selector'
-import { WalletSelectors } from '../../../common/selectors'
 
 // Types
-import { BraveWallet } from '../../../constants/types'
+import {
+  BraveWallet,
+  DAppConnectionOptionsType
+} from '../../../constants/types'
 
 // Queries
 import {
@@ -32,7 +34,9 @@ import {
   useGetAccountInfosRegistryQuery,
   useGetTokenSpotPricesQuery,
   useGetDefaultFiatCurrencyQuery,
-  useGetActiveOriginConnectedAccountIdsQuery
+  useGetActiveOriginConnectedAccountIdsQuery,
+  useGetUserTokensRegistryQuery,
+  useGetActiveOriginQuery
 } from '../../../common/slices/api.slice'
 import {
   useSelectedAccountQuery //
@@ -66,16 +70,10 @@ import {
   OverlapForClick
 } from './dapp-connection-settings.style'
 
-export type DAppConnectionOptionsType = 'networks' | 'accounts' | 'main'
-
 export const DAppConnectionSettings = () => {
   // Selectors
   const { data: connectedAccounts = [] } =
     useGetActiveOriginConnectedAccountIdsQuery()
-  const activeOrigin = useUnsafeWalletSelector(WalletSelectors.activeOrigin)
-  const userVisibleTokensInfo = useUnsafeWalletSelector(
-    WalletSelectors.userVisibleTokensInfo
-  )
 
   // State
   const [showSettings, setShowSettings] = React.useState<boolean>(false)
@@ -90,16 +88,31 @@ export const DAppConnectionSettings = () => {
   const settingsMenuRef = React.useRef<HTMLDivElement>(null)
 
   // Queries
+  const { data: activeOrigin = { eTldPlusOne: '', originSpec: '' } } =
+    useGetActiveOriginQuery()
   const { currentData: selectedNetwork } = useGetSelectedChainQuery(undefined)
   const selectedCoin = selectedNetwork?.coin
   const { data: selectedAccount } = useSelectedAccountQuery()
   const { data: networks } = useGetVisibleNetworksQuery()
   const { data: defaultFiatCurrency } = useGetDefaultFiatCurrencyQuery()
+  const { data: userTokensRegistry } = useGetUserTokensRegistryQuery()
   const { data: accounts } = useGetAccountInfosRegistryQuery(undefined, {
     selectFromResult: (res) => ({
       data: selectAllAccountInfosFromQuery(res)
     })
   })
+
+  const fungibleTokensByChainId = React.useMemo(() => {
+    if (!userTokensRegistry || !selectedNetwork) {
+      return []
+    }
+    return getEntitiesListFromEntityState(
+      userTokensRegistry,
+      userTokensRegistry.fungibleVisibleTokenIdsByChainId[
+        networkEntityAdapter.selectId(selectedNetwork)
+      ]
+    )
+  }, [userTokensRegistry, selectedNetwork])
 
   const { data: tokenBalancesRegistry } = useBalancesFetcher({
     accounts,
@@ -107,11 +120,8 @@ export const DAppConnectionSettings = () => {
   })
 
   const tokenPriceIds = React.useMemo(
-    () =>
-      userVisibleTokensInfo
-        .filter((token) => !token.isErc721 && !token.isErc1155 && !token.isNft)
-        .map((token) => getPriceIdForToken(token)),
-    [userVisibleTokensInfo]
+    () => fungibleTokensByChainId.map(getPriceIdForToken),
+    [fungibleTokensByChainId]
   )
 
   const { data: spotPriceRegistry } = useGetTokenSpotPricesQuery(
@@ -121,17 +131,13 @@ export const DAppConnectionSettings = () => {
     querySubscriptionOptions60s
   )
 
-  // Proxies
-  const { braveWalletService } = useApiProxy()
-
   // Hooks
   useOnClickOutside(settingsMenuRef, () => setShowSettings(false), showSettings)
 
-  // Memos
-  const isChromeOrigin = React.useMemo(() => {
-    return activeOrigin.originSpec.startsWith('chrome')
-  }, [activeOrigin.originSpec])
+  // Computed
+  const isChromeOrigin = activeOrigin?.originSpec.startsWith('chrome')
 
+  // Memos
   const isConnected = React.useMemo((): boolean => {
     if (!selectedAccount || isPermissionDenied) {
       return false
@@ -150,13 +156,6 @@ export const DAppConnectionSettings = () => {
     isPermissionDenied
   ])
 
-  const fungibleTokensByChainId = React.useMemo(() => {
-    return userVisibleTokensInfo
-      .filter((asset) => asset.visible)
-      .filter((token) => token.chainId === selectedNetwork?.chainId)
-      .filter((token) => !token.isErc721 && !token.isErc1155 && !token.isNft)
-  }, [userVisibleTokensInfo, selectedNetwork?.chainId])
-
   // Methods
   const onSelectOption = React.useCallback(
     (option: DAppConnectionOptionsType) => {
@@ -169,7 +168,7 @@ export const DAppConnectionSettings = () => {
     (account: BraveWallet.AccountInfo) => {
       // Return an empty string to display a loading
       // skeleton while assets are populated.
-      if (userVisibleTokensInfo.length === 0) {
+      if (!userTokensRegistry) {
         return Amount.empty()
       }
       // Return a 0 balance if the account has no
@@ -198,7 +197,7 @@ export const DAppConnectionSettings = () => {
       return !reducedAmounts.isUndefined() ? reducedAmounts : Amount.empty()
     },
     [
-      userVisibleTokensInfo,
+      userTokensRegistry,
       fungibleTokensByChainId,
       tokenBalancesRegistry,
       spotPriceRegistry
@@ -233,8 +232,8 @@ export const DAppConnectionSettings = () => {
 
     if (selectedCoin) {
       ;(async () => {
-        await braveWalletService
-          .isPermissionDenied(selectedCoin)
+        await getWalletPanelApiProxy()
+          .braveWalletService.isPermissionDenied(selectedCoin)
           .then((result) => {
             if (subscribed) {
               setIsPermissionDenied(result.denied)
@@ -247,7 +246,7 @@ export const DAppConnectionSettings = () => {
     return () => {
       subscribed = false
     }
-  }, [braveWalletService, selectedCoin, activeOrigin])
+  }, [selectedCoin, activeOrigin])
 
   return (
     <>

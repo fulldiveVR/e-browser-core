@@ -9,7 +9,7 @@
 #include <cstdint>
 
 #include "brave/components/brave_ads/core/internal/user_engagement/site_visit/site_visit_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -20,22 +20,27 @@ class SiteVisitObserverMock : public SiteVisitObserver {
   SiteVisitObserverMock(const SiteVisitObserverMock&) = delete;
   SiteVisitObserverMock& operator=(const SiteVisitObserverMock&) = delete;
 
-  SiteVisitObserverMock(SiteVisitObserverMock&&) noexcept = delete;
-  SiteVisitObserverMock& operator=(SiteVisitObserverMock&&) noexcept = delete;
-
   ~SiteVisitObserverMock() override;
 
   MOCK_METHOD(void,
               OnMaybeLandOnPage,
-              (const AdInfo& ad, const base::Time maybe_at));
-
-  MOCK_METHOD(void, OnDidLandOnPage, (const AdInfo& ad));
-
-  MOCK_METHOD(void, OnDidNotLandOnPage, (const AdInfo& ad));
+              (const AdInfo& ad, base::TimeDelta after));
 
   MOCK_METHOD(void,
-              OnCanceledPageLand,
-              (const AdInfo& ad, const int32_t tab_id));
+              OnDidSuspendPageLand,
+              (int32_t tab_id, base::TimeDelta remaining_time));
+
+  MOCK_METHOD(void,
+              OnDidResumePageLand,
+              (int32_t tab_id, base::TimeDelta remaining_time));
+
+  MOCK_METHOD(void,
+              OnDidLandOnPage,
+              (int32_t tab_id, int http_status_code, const AdInfo& ad));
+
+  MOCK_METHOD(void, OnDidNotLandOnPage, (int32_t tab_id, const AdInfo& ad));
+
+  MOCK_METHOD(void, OnCanceledPageLand, (int32_t tab_id, const AdInfo& ad));
 };
 
 }  // namespace brave_ads

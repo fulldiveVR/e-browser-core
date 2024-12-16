@@ -7,17 +7,17 @@ import {RegisterPolymerTemplateModifications} from 'chrome://resources/brave/pol
 
 RegisterPolymerTemplateModifications({
   'settings-cookies-page': (templateContent) => {
-    const is3pcdRedesignEnabledTemplate = templateContent.
+    const isNot3pcdRedesignEnabledTemplate = templateContent.
       querySelector(
         'template[if*="!is3pcdRedesignEnabled_"]'
       )
-    if (!is3pcdRedesignEnabledTemplate) {
+    if (!isNot3pcdRedesignEnabledTemplate) {
       console.error(
         '[Brave Settings Overrides] Could not find template with ' +
         'if*=!is3pcdRedesignEnabledTemplate on cookies page.')
     } else {
       const blockThirdPartyIncognitoRadioButton =
-        is3pcdRedesignEnabledTemplate.content.
+        isNot3pcdRedesignEnabledTemplate.content.
           getElementById('blockThirdPartyIncognito')
       if (!blockThirdPartyIncognitoRadioButton) {
         console.error(
@@ -26,23 +26,30 @@ RegisterPolymerTemplateModifications({
       } else {
         blockThirdPartyIncognitoRadioButton.setAttribute('hidden', 'true')
       }
-    }
-    const preloadingLinkRowTemplate = templateContent.querySelector(
-        'template[is=dom-if][if="[[showPreloadingSubpage_]]"]')
-    if (!preloadingLinkRowTemplate) {
-      console.error(
-          '[Brave Settings Overrides] Could not find preloading template')
-      return
-    }
-    const networkPredictionLinkRow =
-        preloadingLinkRowTemplate.content.getElementById('preloadingLinkRow')
-    if (!networkPredictionLinkRow) {
-      console.error(
-          '[Brave Settings Overrides] Could not find preloadingLinkRow id ' +
+      const generalControls = isNot3pcdRedesignEnabledTemplate.content.
+          getElementById('generalControls')
+      if (!generalControls) {
+        console.error(
+          '[Brave Settings Overrides] Could not find generalControls id ' +
           'on cookies page.')
+      } else {
+        generalControls.setAttribute('hidden', 'true')
+      }
     }
-    else {
-      networkPredictionLinkRow.setAttribute('hidden', 'true')
+    const siteDataTrigger = templateContent.getElementById('site-data-trigger')
+    if (!siteDataTrigger) {
+      console.error(
+        '[Brave Settings Overrides] Could not find site-data-trigger id ' +
+        'on cookies page')
+    } else {
+      siteDataTrigger.setAttribute('hidden', 'true')
+    }
+    const doNotTrackToggle = templateContent.getElementById('doNotTrack')
+    if (!doNotTrackToggle) {
+      console.error(
+        '[Brave Settings Overrides] Could not find toggle id on cookies page')
+    } else {
+      doNotTrackToggle.setAttribute('hidden', 'true')
     }
   }
 })

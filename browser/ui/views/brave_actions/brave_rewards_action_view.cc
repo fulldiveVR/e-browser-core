@@ -13,10 +13,11 @@
 #include "brave/app/vector_icons/vector_icons.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/ui/brave_icon_with_badge_image_source.h"
-#include "brave/browser/ui/views/bubble/brave_webui_bubble_manager.h"
+#include "brave/browser/ui/webui/brave_rewards/rewards_page_top_ui.h"
 #include "brave/browser/ui/webui/brave_rewards/rewards_panel_ui.h"
 #include "brave/components/brave_rewards/browser/rewards_p3a.h"
 #include "brave/components/brave_rewards/browser/rewards_service.h"
+#include "brave/components/brave_rewards/common/features.h"
 #include "brave/components/brave_rewards/common/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/l10n/common/localization_util.h"
@@ -26,13 +27,14 @@
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/omnibox/omnibox_theme.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/views/bubble/webui_bubble_manager.h"
 #include "chrome/browser/ui/views/chrome_layout_provider.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/location_bar/location_bar_view.h"
 #include "components/grit/brave_components_strings.h"
 #include "components/prefs/pref_service.h"
+#include "extensions/common/constants.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
-#include "ui/base/models/simple_menu_model.h"
 #include "ui/color/color_provider_manager.h"
 #include "ui/gfx/canvas.h"
 #include "ui/gfx/geometry/rect.h"
@@ -40,6 +42,7 @@
 #include "ui/gfx/image/image_skia.h"
 #include "ui/gfx/paint_vector_icon.h"
 #include "ui/gfx/skia_util.h"
+#include "ui/menus/simple_menu_model.h"
 #include "ui/views/animation/ink_drop_impl.h"
 #include "ui/views/controls/button/label_button_border.h"
 #include "ui/views/controls/button/menu_button_controller.h"
@@ -171,23 +174,34 @@ class RewardsActionMenuModel : public ui::SimpleMenuModel,
   raw_ptr<PrefService> prefs_ = nullptr;
 };
 
+std::unique_ptr<WebUIBubbleManager> CreateBubbleManager(
+    views::View* anchor_view,
+    BrowserWindowInterface* browser_window_interface) {
+  if (base::FeatureList::IsEnabled(
+          brave_rewards::features::kNewRewardsUIFeature)) {
+    return WebUIBubbleManager::Create<brave_rewards::RewardsPageTopUI>(
+        anchor_view, browser_window_interface, GURL(kRewardsPageTopURL),
+        IDS_BRAVE_UI_BRAVE_REWARDS);
+  }
+  return WebUIBubbleManager::Create<brave_rewards::RewardsPanelUI>(
+      anchor_view, browser_window_interface, GURL(kBraveRewardsPanelURL),
+      IDS_BRAVE_UI_BRAVE_REWARDS);
+}
+
 }  // namespace
 
-BraveRewardsActionView::BraveRewardsActionView(Browser* browser)
+BraveRewardsActionView::BraveRewardsActionView(
+    BrowserWindowInterface* browser_window_interface)
     : ToolbarButton(
           base::BindRepeating(&BraveRewardsActionView::OnButtonPressed,
                               base::Unretained(this)),
           std::make_unique<RewardsActionMenuModel>(
-              browser->profile()->GetPrefs()),
+              browser_window_interface->GetProfile()->GetPrefs()),
           nullptr,
           false),
-      browser_(browser),
-      bubble_manager_(std::make_unique<BraveWebUIBubbleManager<RewardsPanelUI>>(
-          this,
-          browser_->profile(),
-          GURL(kBraveRewardsPanelURL),
-          IDS_BRAVE_UI_BRAVE_REWARDS)) {
-  DCHECK(browser_);
+      browser_window_interface_(browser_window_interface),
+      bubble_manager_(CreateBubbleManager(this, browser_window_interface)) {
+  DCHECK(browser_window_interface_);
 
   SetButtonController(std::make_unique<views::MenuButtonController>(
       this,
@@ -200,7 +214,7 @@ BraveRewardsActionView::BraveRewardsActionView(Browser* browser)
   SetAccessibleName(
       brave_l10n::GetLocalizedResourceUTF16String(IDS_BRAVE_UI_BRAVE_REWARDS));
 
-  auto* profile = browser_->profile();
+  auto* profile = browser_window_interface_->GetProfile();
 
   pref_change_registrar_.Init(profile->GetPrefs());
   pref_change_registrar_.Add(
@@ -211,8 +225,12 @@ BraveRewardsActionView::BraveRewardsActionView(Browser* browser)
       brave_rewards::prefs::kDeclaredGeo,
       base::BindRepeating(&BraveRewardsActionView::OnPreferencesChanged,
                           base::Unretained(this)));
+  pref_change_registrar_.Add(
+      brave_rewards::prefs::kTosVersion,
+      base::BindRepeating(&BraveRewardsActionView::OnPreferencesChanged,
+                          base::Unretained(this)));
 
-  browser_->tab_strip_model()->AddObserver(this);
+  browser_window_interface_->GetTabStripModel()->AddObserver(this);
 
   if (auto* rewards_service = GetRewardsService()) {
     rewards_service_observation_.Observe(rewards_service);
@@ -222,7 +240,8 @@ BraveRewardsActionView::BraveRewardsActionView(Browser* browser)
     notification_service_observation_.Observe(notification_service);
   }
 
-  panel_coordinator_ = RewardsPanelCoordinator::FromBrowser(browser_);
+  panel_coordinator_ = RewardsPanelCoordinator::FromBrowser(
+      browser_window_interface_->GetBrowserForMigrationOnly());
   if (panel_coordinator_) {
     panel_observation_.Observe(panel_coordinator_);
   }
@@ -263,7 +282,8 @@ gfx::Rect BraveRewardsActionView::GetAnchorBoundsInScreen() const {
   if (!GetVisible()) {
     // If the button is currently hidden, then anchor the bubble to the
     // location bar instead.
-    auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
+    auto* browser_view = BrowserView::GetBrowserViewForBrowser(
+        browser_window_interface_->GetBrowserForMigrationOnly());
     DCHECK(browser_view);
     return browser_view->GetLocationBarView()->GetAnchorBoundsInScreen();
   }
@@ -288,6 +308,11 @@ void BraveRewardsActionView::OnThemeChanged() {
 
   // Apply same ink drop effect with location bar's other icon views.
   auto* ink_drop = views::InkDrop::Get(this);
+
+  // It's based on Toolbar so need to clear toolbar's inkdrop config.
+  ink_drop->SetCreateRippleCallback(base::NullCallback());
+  ink_drop->SetCreateHighlightCallback(base::NullCallback());
+
   ink_drop->SetMode(views::InkDropHost::InkDropMode::ON);
   ink_drop->SetVisibleOpacity(kOmniboxOpacitySelected);
   ink_drop->SetHighlightOpacity(kOmniboxOpacityHovered);
@@ -371,11 +396,12 @@ void BraveRewardsActionView::OnPreferencesChanged(const std::string& key) {
 }
 
 content::WebContents* BraveRewardsActionView::GetActiveWebContents() {
-  return browser_->tab_strip_model()->GetActiveWebContents();
+  return browser_window_interface_->GetTabStripModel()->GetActiveWebContents();
 }
 
 brave_rewards::RewardsService* BraveRewardsActionView::GetRewardsService() {
-  return RewardsServiceFactory::GetForProfile(browser_->profile());
+  return RewardsServiceFactory::GetForProfile(
+      browser_window_interface_->GetProfile());
 }
 
 brave_rewards::RewardsNotificationService*
@@ -398,7 +424,7 @@ void BraveRewardsActionView::ToggleRewardsPanel() {
   }
 
   // Clear the default-on-start badge text when the user opens the panel.
-  auto* prefs = browser_->profile()->GetPrefs();
+  auto* prefs = browser_window_interface_->GetProfile()->GetPrefs();
   prefs->SetString(brave_rewards::prefs::kBadgeText, "");
 
   bubble_manager_->ShowBubble();
@@ -417,8 +443,9 @@ gfx::ImageSkia BraveRewardsActionView::GetRewardsIcon() {
 std::pair<std::string, SkColor>
 BraveRewardsActionView::GetBadgeTextAndBackground() {
   // 1. Display the default-on-start Rewards badge text, if specified.
-  std::string text_pref = browser_->profile()->GetPrefs()->GetString(
-      brave_rewards::prefs::kBadgeText);
+  std::string text_pref =
+      browser_window_interface_->GetProfile()->GetPrefs()->GetString(
+          brave_rewards::prefs::kBadgeText);
   if (!text_pref.empty()) {
     return {text_pref, brave::kBadgeNotificationBG};
   }
@@ -449,10 +476,18 @@ size_t BraveRewardsActionView::GetRewardsNotificationCount() {
 
   // Increment the notification count if the user has enabled Rewards but has
   // not declared a country.
-  auto* prefs = browser_->profile()->GetPrefs();
+  auto* prefs = browser_window_interface_->GetProfile()->GetPrefs();
   if (prefs->GetBoolean(brave_rewards::prefs::kEnabled) &&
       prefs->GetString(brave_rewards::prefs::kDeclaredGeo).empty()) {
     ++count;
+  }
+
+  // Increment the notification count if the user needs to accept an updated
+  // terms of service.
+  if (auto* service = GetRewardsService()) {
+    if (service->IsTermsOfServiceUpdateRequired()) {
+      ++count;
+    }
   }
 
   return count;

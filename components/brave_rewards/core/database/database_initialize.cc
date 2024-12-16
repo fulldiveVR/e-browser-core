@@ -7,13 +7,12 @@
 
 #include "brave/components/brave_rewards/core/database/database_initialize.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
 
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
-DatabaseInitialize::DatabaseInitialize(RewardsEngineImpl& engine)
+DatabaseInitialize::DatabaseInitialize(RewardsEngine& engine)
     : engine_(engine), migration_(engine) {}
 
 DatabaseInitialize::~DatabaseInitialize() = default;
@@ -36,12 +35,12 @@ void DatabaseInitialize::OnInitialize(ResultCallback callback,
                                       mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
+    engine_->LogError(FROM_HERE) << "Response is wrong";
     return std::move(callback).Run(mojom::Result::DATABASE_INIT_FAILED);
   }
 
   if (!response->result || !response->result->get_value()->is_int_value()) {
-    BLOG(0, "DB init failed");
+    engine_->LogError(FROM_HERE) << "DB init failed";
     return std::move(callback).Run(mojom::Result::DATABASE_INIT_FAILED);
   }
 
@@ -50,5 +49,4 @@ void DatabaseInitialize::OnInitialize(ResultCallback callback,
   migration_.Start(current_table_version, std::move(callback));
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

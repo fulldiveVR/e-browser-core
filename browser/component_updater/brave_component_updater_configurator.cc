@@ -32,6 +32,7 @@
 #include "components/update_client/crx_downloader_factory.h"
 #include "components/update_client/net/network_chromium.h"
 #include "components/update_client/patch/patch_impl.h"
+#include "components/update_client/persisted_data.h"
 #include "components/update_client/protocol_handler.h"
 #include "components/update_client/unzip/unzip_impl.h"
 #include "components/update_client/unzipper.h"
@@ -56,6 +57,11 @@ BraveConfigurator::BraveConfigurator(
     : configurator_impl_(ComponentUpdaterCommandLineConfigPolicy(cmdline),
                          false),
       pref_service_(raw_ref<PrefService>::from_ptr(pref_service)),
+      persisted_data_(update_client::CreatePersistedData(
+          base::BindRepeating(
+              [](PrefService* pref_service) { return pref_service; },
+              pref_service),
+          nullptr)),
       url_loader_factory_(std::move(url_loader_factory)) {}
 
 BraveConfigurator::~BraveConfigurator() = default;
@@ -95,7 +101,7 @@ std::vector<GURL> BraveConfigurator::PingUrl() const {
 }
 
 std::string BraveConfigurator::GetProdId() const {
-  return std::string();
+  return "BraveComponentUpdater";
 }
 
 base::Version BraveConfigurator::GetBrowserVersion() const {
@@ -164,25 +170,20 @@ BraveConfigurator::GetPatcherFactory() {
   return patch_factory_;
 }
 
-bool BraveConfigurator::EnabledDeltas() const {
-  return configurator_impl_.EnabledDeltas();
-}
-
 bool BraveConfigurator::EnabledBackgroundDownloader() const {
   return configurator_impl_.EnabledBackgroundDownloader();
 }
 
 bool BraveConfigurator::EnabledCupSigning() const {
-  return false;
+  return configurator_impl_.EnabledCupSigning();
 }
 
 PrefService* BraveConfigurator::GetPrefService() const {
-  return std::to_address(pref_service_);
+  return base::to_address(pref_service_);
 }
 
-update_client::ActivityDataService* BraveConfigurator::GetActivityDataService()
-    const {
-  return nullptr;
+update_client::PersistedData* BraveConfigurator::GetPersistedData() const {
+  return persisted_data_.get();
 }
 
 bool BraveConfigurator::IsPerUserInstall() const {
@@ -212,6 +213,10 @@ std::optional<base::FilePath> BraveConfigurator::GetCrxCachePath() const {
   return result ? std::optional<base::FilePath>(
                       path.AppendASCII("component_crx_cache"))
                 : std::nullopt;
+}
+
+bool BraveConfigurator::IsConnectionMetered() const {
+  return configurator_impl_.IsConnectionMetered();
 }
 
 }  // namespace component_updater

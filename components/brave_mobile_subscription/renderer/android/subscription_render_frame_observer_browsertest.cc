@@ -7,9 +7,8 @@
 
 #include "base/test/scoped_feature_list.h"
 #include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_vpn/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
+#include "brave/components/brave_vpn/common/features.h"
 #include "brave/components/skus/common/features.h"
 #include "content/public/common/isolated_world_ids.h"
 #include "content/public/test/content_mock_cert_verifier.h"
@@ -18,14 +17,14 @@
 
 namespace brave_subscription {
 
-class SubscriptionRenderFrameObserverBrowserTest :
-    public content::RenderViewTest {
+class SubscriptionRenderFrameObserverBrowserTest
+    : public content::RenderViewTest {
  public:
   SubscriptionRenderFrameObserverBrowserTest() {
     scoped_feature_list_.InitWithFeatures(
         {skus::features::kSkusFeature, brave_vpn::features::kBraveVPN,
-            ai_chat::features::kAIChatHistory
-        }, {});
+         ai_chat::features::kAIChat},
+        {});
   }
   ~SubscriptionRenderFrameObserverBrowserTest() override = default;
 
@@ -35,7 +34,7 @@ class SubscriptionRenderFrameObserverBrowserTest :
 
 TEST_F(SubscriptionRenderFrameObserverBrowserTest, IsAllowed) {
   SubscriptionRenderFrameObserver observer(GetMainRenderFrame(),
-                                  content::ISOLATED_WORLD_ID_GLOBAL);
+                                           content::ISOLATED_WORLD_ID_GLOBAL);
   // VPN
   LoadHTMLWithUrlOverride(
       R"(<html><body></body></html>)",
@@ -46,7 +45,7 @@ TEST_F(SubscriptionRenderFrameObserverBrowserTest, IsAllowed) {
   // Leo
   LoadHTMLWithUrlOverride(
       R"(<html><body></body></html>)",
-      "https://account.brave.com/?intent=connect-receipt&product=leo");
+      "https://account.brave.com/?intent=link-order&product=leo");
 
   EXPECT_TRUE(observer.IsAllowed());
   // http

@@ -48,8 +48,8 @@ impl TryFrom<http::Request<Vec<u8>>> for ffi::HttpRequest {
 
 impl From<ffi::HttpResponse<'_>> for Result<http::Response<Vec<u8>>, InternalError> {
     fn from(resp: ffi::HttpResponse<'_>) -> Self {
-        match resp.result {
-            ffi::SkusResult::Ok => {
+        match resp.result.code {
+            ffi::SkusResultCode::Ok => {
                 let mut response = http::Response::builder().status(resp.return_code);
 
                 for header in resp.headers {
@@ -85,7 +85,9 @@ impl From<ffi::HttpResponse<'_>> for Result<http::Response<Vec<u8>>, InternalErr
                         )
                     })?;
 
-                    response.headers_mut().ok_or(InternalError::BorrowFailed)?.insert(key, value);
+                    if let Some(headers) = response.headers_mut() {
+                        headers.insert(key, value);
+                    }
                 }
 
                 response
@@ -105,9 +107,17 @@ impl NativeClient {
     ) -> Result<http::Response<Vec<u8>>, InternalError> {
         let (tx, rx) = oneshot::channel();
         let context = Box::new(HttpRoundtripContext { tx, client: self.clone() });
+        let ctx = self
+                .inner
+                .lock().await
+                .ctx
+                .clone();
 
         let fetcher = ffi::shim_executeRequest(
-            &self.ctx.try_borrow().map_err(|_| InternalError::BorrowFailed)?.ctx,
+            &*ctx
+              .try_borrow()
+              .map_err(|_| InternalError::BorrowFailed)?
+            ,
             &req,
             |context, resp| {
                 let _ = context.tx.send(resp.into());

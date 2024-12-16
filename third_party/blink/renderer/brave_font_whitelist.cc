@@ -3,6 +3,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(crbug.com/ABC): Remove this and convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #include "brave/third_party/blink/renderer/brave_font_whitelist.h"
 
 #include <string_view>
@@ -1959,26 +1964,23 @@ base::span<const std::string_view> GetMainFontWhitelist() {
 #if BUILDFLAG(IS_LINUX)
   const auto distro = GetLinuxDistro();
   if (distro == LinuxDistro::kUbuntu2204) {
-    return base::make_span(kFontWhitelistUbuntu2204.begin(),
-                           kFontWhitelistUbuntu2204.end());
+    return kFontWhitelistUbuntu2204;
   } else if (distro == LinuxDistro::kUbuntu2004) {
-    return base::make_span(kFontWhitelistUbuntu2004.begin(),
-                           kFontWhitelistUbuntu2004.end());
+    return kFontWhitelistUbuntu2004;
   } else if (distro == LinuxDistro::kFedora32) {
-    return base::make_span(kFontWhitelistFedora32.begin(),
-                           kFontWhitelistFedora32.end());
+    return kFontWhitelistFedora32;
   } else {
-    return base::make_span(kFontWhitelist.begin(), kFontWhitelist.end());
+    return kFontWhitelist;
   }
 #else
-  return base::make_span(kFontWhitelist.begin(), kFontWhitelist.end());
+  return kFontWhitelist;
 #endif
 }
 
 bool AllowFontByFamilyName(const AtomicString& family_name,
                            WTF::String default_language) {
   auto fontWhitelist = GetMainFontWhitelist();
-  if (UNLIKELY(g_simulate_empty_font_whitelist_for_testing)) {
+  if (g_simulate_empty_font_whitelist_for_testing) [[unlikely]] {
     return false;
   }
   if (fontWhitelist.empty()) {
@@ -2014,48 +2016,45 @@ base::span<const std::string_view> GetAdditionalFontWhitelistByLocale(
   if (locale_language != "en" && locale_language != "la") {
     const auto distro = GetLinuxDistro();
     if (distro == LinuxDistro::kUbuntu2204) {
-      return base::make_span(kFontWhitelistUbuntu2204Languages.begin(),
-                             kFontWhitelistUbuntu2204Languages.end());
+      return kFontWhitelistUbuntu2204Languages;
     } else if (distro == LinuxDistro::kUbuntu2004) {
-      return base::make_span(kFontWhitelistUbuntu2004Languages.begin(),
-                             kFontWhitelistUbuntu2004Languages.end());
+      return kFontWhitelistUbuntu2004Languages;
     } else if (distro == LinuxDistro::kFedora32) {
-      return base::make_span(kFontWhitelistFedora32.begin(),
-                             kFontWhitelistFedora32.end());
+      return kFontWhitelistFedora32;
     }
   }
 #else
   if (locale_language == "ar" || locale_language == "fa" ||
       locale_language == "ur")
-    return base::make_span(kFontWhitelistAR.begin(), kFontWhitelistAR.end());
+    return kFontWhitelistAR;
   if (locale_language == "as")
-    return base::make_span(kFontWhitelistAS.begin(), kFontWhitelistAS.end());
+    return kFontWhitelistAS;
   if (locale_language == "iu")
-    return base::make_span(kFontWhitelistIU.begin(), kFontWhitelistIU.end());
+    return kFontWhitelistIU;
   if (locale_language == "hi" || locale_language == "mr")
-    return base::make_span(kFontWhitelistHI.begin(), kFontWhitelistHI.end());
+    return kFontWhitelistHI;
   if (locale_language == "am" || locale_language == "ti")
-    return base::make_span(kFontWhitelistAM.begin(), kFontWhitelistAM.end());
+    return kFontWhitelistAM;
   if (locale_language == "gu")
-    return base::make_span(kFontWhitelistGU.begin(), kFontWhitelistGU.end());
+    return kFontWhitelistGU;
   if (locale_language == "pa")
-    return base::make_span(kFontWhitelistPA.begin(), kFontWhitelistPA.end());
+    return kFontWhitelistPA;
   if (locale_language == "zh")
-    return base::make_span(kFontWhitelistZH.begin(), kFontWhitelistZH.end());
+    return kFontWhitelistZH;
   if (locale_language == "he")
-    return base::make_span(kFontWhitelistHE.begin(), kFontWhitelistHE.end());
+    return kFontWhitelistHE;
   if (locale_language == "ja")
-    return base::make_span(kFontWhitelistJA.begin(), kFontWhitelistJA.end());
+    return kFontWhitelistJA;
   if (locale_language == "kn")
-    return base::make_span(kFontWhitelistKN.begin(), kFontWhitelistKN.end());
+    return kFontWhitelistKN;
   if (locale_language == "km")
-    return base::make_span(kFontWhitelistKM.begin(), kFontWhitelistKM.end());
+    return kFontWhitelistKM;
   if (locale_language == "ko")
-    return base::make_span(kFontWhitelistKO.begin(), kFontWhitelistKO.end());
+    return kFontWhitelistKO;
   if (locale_language == "lo")
-    return base::make_span(kFontWhitelistLO.begin(), kFontWhitelistLO.end());
+    return kFontWhitelistLO;
   if (locale_language == "ml")
-    return base::make_span(kFontWhitelistML.begin(), kFontWhitelistML.end());
+    return kFontWhitelistML;
 #endif
   return kEmptyFontSet;
 }

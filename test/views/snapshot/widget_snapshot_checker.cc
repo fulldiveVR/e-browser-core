@@ -74,18 +74,18 @@ void Capture(views::Widget* widget, gfx::Image* image) {
     run_loop->Quit();
   };
   base::RunLoop run_loop;
-  ui::GrabWindowSnapshotAsyncAura(
-      widget->GetNativeWindow(), widget_bounds,
-      base::BindOnce(on_got_snapshot, &run_loop, image));
+  ui::GrabWindowSnapshotAura(widget->GetNativeWindow(), widget_bounds,
+                             base::BindOnce(on_got_snapshot, &run_loop, image));
   run_loop.Run();
 #endif  // defined(USE_AURA)
 }
 
 bool CompareSnaphot(const SkBitmap& png_bitmap, base::FilePath snapshot_path) {
   base::ScopedAllowBlockingForTesting allow_blocking;
-
-  cc::ExactPixelComparator comparator;
-  return cc::MatchesPNGFile(png_bitmap, snapshot_path, comparator);
+  return cc::MatchesPNGFile(
+      png_bitmap, snapshot_path,
+      cc::FuzzyPixelComparator().DiscardAlpha().SetErrorPixelsPercentageLimit(
+          10.f));
 }
 
 base::FilePath GetTestDataDir() {

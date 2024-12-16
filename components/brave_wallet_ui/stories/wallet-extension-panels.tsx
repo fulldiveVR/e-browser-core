@@ -10,8 +10,7 @@ import './locale'
 import {
   BraveWallet,
   SerializableTransactionInfo,
-  UIState,
-  WalletState
+  UIState
 } from '../constants/types'
 
 // Components
@@ -34,11 +33,9 @@ import {
   StyledExtensionWrapper,
   StyledWelcomPanel
 } from './style'
-import { LibContext } from '../common/context/lib.context'
 import WalletPanelStory from './wrappers/wallet-panel-story-wrapper'
 
 // mocks
-import * as MockedLib from '../common/async/__mocks__/lib'
 import {
   mockTransactionInfo,
   mockedErc20ApprovalTransaction
@@ -46,7 +43,6 @@ import {
 import { mockAccounts } from './mock-data/mock-wallet-accounts'
 import { mockDecryptRequest } from './mock-data/mock-encryption-key-payload'
 import { mockOriginInfo } from './mock-data/mock-origin-info'
-import { mockNewAssetOptions } from './mock-data/mock-asset-options'
 import { createMockStore } from '../utils/test-utils'
 import { deserializeTransaction } from '../utils/model-serialization-utils'
 import { WalletApiDataOverrides } from '../constants/testing_types'
@@ -71,7 +67,7 @@ const mockEthAccountId = (
       keyringId: BraveWallet.KeyringId.kDefault,
       kind: BraveWallet.AccountKind.kDerived,
       address: address,
-      bitcoinAccountIndex: 0,
+      accountIndex: 0,
       uniqueKey: `${address}_id`
     }
   }
@@ -114,7 +110,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: Date.now() * 1000 - 1000 * 60 * 5 },
       confirmedTime: { microseconds: Date.now() * 1000 - 1000 * 60 * 5 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     },
     {
       chainId: '',
@@ -151,7 +149,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     },
     {
       chainId: '',
@@ -188,7 +188,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     },
     {
       chainId: '',
@@ -225,7 +227,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     },
     {
       chainId: '',
@@ -262,7 +266,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     }
   ],
   [
@@ -301,7 +307,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     },
     {
       chainId: '',
@@ -338,7 +346,9 @@ const transactionDummyData: SerializableTransactionInfo[][] = [
       submittedTime: { microseconds: 0 },
       confirmedTime: { microseconds: 0 },
       originInfo: mockOriginInfo,
-      effectiveRecipient: ''
+      effectiveRecipient: '',
+      isRetriable: false,
+      swapInfo: undefined
     }
   ]
 ]
@@ -366,11 +376,6 @@ const transactionList = [
   ...transactionDummyData[1]
 ]
 
-const mockCustomStoreState: Partial<WalletState> = {
-  fullTokenList: mockNewAssetOptions,
-  activeOrigin: originInfo
-}
-
 const mockCustomUiState: Partial<UIState> = {
   selectedPendingTransactionId: mockTransactionInfo.id,
   transactionProviderErrorRegistry: {}
@@ -380,129 +385,95 @@ const mockApiData: WalletApiDataOverrides = {
   transactionInfos: transactionList.map(deserializeTransaction)
 }
 
-export const _ConfirmTransaction = () => {
-  const getERC20Allowance = () => Promise.resolve('0x15ddf09c97b0000')
-
-  return (
-    <Provider
-      store={createMockStore(
-        {
-          walletStateOverride: mockCustomStoreState,
-          uiStateOverride: mockCustomUiState
-        },
-        mockApiData
-      )}
-    >
-      <StyledExtensionWrapperLonger>
-        <LibContext.Provider
-          value={{
-            ...(MockedLib as any),
-            getERC20Allowance
-          }}
-        >
-          <ConfirmTransactionPanel />
-        </LibContext.Provider>
-      </StyledExtensionWrapperLonger>
-    </Provider>
-  )
-}
-
-_ConfirmTransaction.story = {
-  name: 'Confirm Transaction'
-}
-
-export const _ConfirmErcApproveTransaction = () => {
-  const getERC20Allowance = () => Promise.resolve('0x15ddf09c97b0000')
-
-  return (
-    <StyledExtensionWrapperLonger>
+export const _ConfirmTransaction = {
+  render: () => {
+    return (
       <Provider
         store={createMockStore(
           {
-            walletStateOverride: {
-              fullTokenList: mockNewAssetOptions
-            },
-            uiStateOverride: {
-              selectedPendingTransactionId: mockedErc20ApprovalTransaction.id
-            }
+            uiStateOverride: mockCustomUiState
           },
-          {
-            ...mockApiData,
-            transactionInfos: [
-              deserializeTransaction(mockedErc20ApprovalTransaction),
-              ...(mockApiData?.transactionInfos ?? [])
-            ]
-          }
+          mockApiData
         )}
       >
-        <LibContext.Provider
-          value={{
-            ...(MockedLib as any),
-            getERC20Allowance
-          }}
+        <StyledExtensionWrapperLonger>
+          <ConfirmTransactionPanel />
+        </StyledExtensionWrapperLonger>
+      </Provider>
+    )
+  }
+}
+
+export const _ConfirmErcApproveTransaction = {
+  render: () => {
+    return (
+      <StyledExtensionWrapperLonger>
+        <Provider
+          store={createMockStore(
+            {
+              uiStateOverride: {
+                selectedPendingTransactionId: mockedErc20ApprovalTransaction.id
+              }
+            },
+            {
+              ...mockApiData,
+              transactionInfos: [
+                deserializeTransaction(mockedErc20ApprovalTransaction),
+                ...(mockApiData?.transactionInfos ?? [])
+              ]
+            }
+          )}
         >
           <ConfirmTransactionPanel />
-        </LibContext.Provider>
-      </Provider>
-    </StyledExtensionWrapperLonger>
-  )
-}
-
-_ConfirmErcApproveTransaction.story = {
-  name: 'Confirm ERC20 Approval Transaction'
-}
-
-export const _ReadEncryptedMessage = () => {
-  return (
-    <StyledExtensionWrapperLonger>
-      <DecryptRequestPanel payload={mockDecryptRequest} />
-    </StyledExtensionWrapperLonger>
-  )
-}
-
-_ReadEncryptedMessage.story = {
-  name: 'Read Encrypted Message'
-}
-
-export const _ConnectWithSite = () => {
-  return (
-    <Provider store={store}>
-      <StyledExtensionWrapperLonger>
-        <ConnectWithSite
-          originInfo={originInfo}
-          accountsToConnect={mockAccounts}
-        />
+        </Provider>
       </StyledExtensionWrapperLonger>
-    </Provider>
-  )
+    )
+  }
 }
 
-_ConnectWithSite.story = {
-  name: 'Connect With Site'
+export const _ReadEncryptedMessage = {
+  render: () => {
+    return (
+      <StyledExtensionWrapperLonger>
+        <DecryptRequestPanel payload={mockDecryptRequest} />
+      </StyledExtensionWrapperLonger>
+    )
+  }
 }
 
-export const _SetupWallet = () => {
-  return (
-    <StyledWelcomPanel>
-      <WelcomePanel />
-    </StyledWelcomPanel>
-  )
+export const _ConnectWithSite = {
+  render: () => {
+    return (
+      <Provider store={store}>
+        <StyledExtensionWrapperLonger>
+          <ConnectWithSite
+            originInfo={originInfo}
+            accountsToConnect={mockAccounts}
+          />
+        </StyledExtensionWrapperLonger>
+      </Provider>
+    )
+  }
 }
 
-_SetupWallet.story = {
-  name: 'Setup New Wallet'
+export const _SetupWallet = {
+  render: () => {
+    return (
+      <StyledWelcomPanel>
+        <WelcomePanel />
+      </StyledWelcomPanel>
+    )
+  }
 }
 
-export const _AddSuggestedToken = () => {
-  return (
-    <StyledExtensionWrapper>
-      <WalletPanelStory>
-        <AddSuggestedTokenPanel />
-      </WalletPanelStory>
-    </StyledExtensionWrapper>
-  )
-}
-
-_AddSuggestedToken.story = {
-  name: 'Add Suggested Token'
+export const _AddSuggestedToken = {
+  render: () => {
+    return (
+      <StyledExtensionWrapper>
+        <WalletPanelStory>
+          <AddSuggestedTokenPanel />
+        </WalletPanelStory>
+      </StyledExtensionWrapper>
+    )
+  }
 }

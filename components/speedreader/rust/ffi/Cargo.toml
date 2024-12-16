@@ -3,9 +3,10 @@ name = "speedreader-ffi"
 version = "0.1.0"
 authors = ["Andrius Aucinas <aaucinas@brave.com>"]
 edition = "2018"
+license = "MPL-2.0"
 
 [dependencies]
-speedreader = { path = "../lib/" }
+speedreader = "1"
 libc = "0.2.107"
 
 [profile.release]
@@ -15,6 +16,3 @@ panic = "abort"
 name = "speedreader_ffi"
 path = "lib.rs"
 crate-type = ["rlib"]
-
-[patch.crates-io.kuchikiki]
-path = "../../../../third_party/rust/kuchikiki/v0_8/crate"

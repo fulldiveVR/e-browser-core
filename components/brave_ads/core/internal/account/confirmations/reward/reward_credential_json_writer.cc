@@ -14,7 +14,7 @@
 namespace brave_ads::json::writer {
 
 std::optional<std::string> WriteRewardCredential(
-    const std::optional<RewardInfo>& reward,
+    base::optional_ref<const RewardInfo> reward,
     const std::string& payload) {
   CHECK(!payload.empty());
 
@@ -23,7 +23,7 @@ std::optional<std::string> WriteRewardCredential(
   }
 
   const std::optional<base::Value::Dict> credential =
-      cbr::BuildCredential(reward->unblinded_token, payload);
+      cbr::MaybeBuildCredential(reward->unblinded_token, payload);
   if (!credential) {
     return std::nullopt;
   }

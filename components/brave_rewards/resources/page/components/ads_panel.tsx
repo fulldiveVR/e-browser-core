@@ -9,11 +9,7 @@ import { AdsHistory } from '../lib/types'
 import { useActions, useRewardsData } from '../lib/redux_hooks'
 import { LocaleContext, formatMessage } from '../../shared/lib/locale_context'
 import { getProviderPayoutStatus } from '../../shared/lib/provider_payout_status'
-
-import {
-  externalWalletFromExtensionData,
-  isExternalWalletProviderAllowed
-} from '../../shared/lib/external_wallet'
+import { externalWalletFromExtensionData } from '../../shared/lib/external_wallet'
 
 import {
   SettingsPanel,
@@ -61,11 +57,6 @@ export function AdsPanel () {
   const { adsData } = data
 
   const externalWallet = externalWalletFromExtensionData(data.externalWallet)
-
-  const canConnectAccount = data.externalWalletProviderList.some((provider) => {
-    const regionInfo = data.parameters.walletProviderRegions[provider] || null
-    return isExternalWalletProviderAllowed(data.currentCountryCode, regionInfo)
-  })
 
   const toggleModal = () => {
     if (data.modalAdsHistory) {
@@ -206,21 +197,6 @@ export function AdsPanel () {
   }
 
   function renderConnectAcount () {
-    if (!canConnectAccount) {
-      return (
-        <style.connectUnavailable>
-          <div>
-            {getString('connectAccountNoProviders')}
-          </div>
-          <div>
-            <NewTabLink href={urls.supportedWalletRegionsURL}>
-              {getString('learnMore')}
-            </NewTabLink>
-          </div>
-        </style.connectUnavailable>
-      )
-    }
-
     const onConnect = () => { actions.onModalConnectOpen() }
 
     return (
@@ -282,9 +258,11 @@ export function AdsPanel () {
               />
           }
         </style.paymentStatus>
-        <PanelItem label={getString('adsCurrentEarnings')}>
-          {renderEarnings()}
-        </PanelItem>
+        <style.earningsRow>
+          <PanelItem label={getString('adsCurrentEarnings')}>
+            {renderEarnings()}
+          </PanelItem>
+        </style.earningsRow>
         <PanelItem label={getString('adsPaymentDate')}>
           <MonthDay date={new Date(adsData.adsNextPaymentDate)} />
         </PanelItem>
@@ -349,7 +327,7 @@ export function AdsPanel () {
       flooredDate.setHours(0, 0, 0, 0)
       const flooredDateString = flooredDate.toLocaleDateString()
 
-      for (const { uuid, adContent, categoryContent } of history.adDetailRows) {
+      for (const { uuid, createdAt, adContent, categoryContent } of history.adDetailRows) {
         let { brand } = adContent
         if (brand.length > 50) {
           brand = brand.substring(0, 50) + '...'
@@ -362,19 +340,20 @@ export function AdsPanel () {
 
         const detailRow = {
           uuid,
+          createdAt,
           adContent: {
             ...adContent,
             brand,
             brandInfo,
-            onThumbUpPress: () => actions.toggleAdThumbUp(adContent),
-            onThumbDownPress: () => actions.toggleAdThumbDown(adContent),
-            onMenuSave: () => actions.toggleSavedAd(adContent),
-            onMenuFlag: () => actions.toggleFlaggedAd(adContent)
+            onThumbUpPress: () => actions.toggleAdThumbUp(detailRow),
+            onThumbDownPress: () => actions.toggleAdThumbDown(detailRow),
+            onMenuSave: () => actions.toggleSavedAd(detailRow),
+            onMenuFlag: () => actions.toggleFlaggedAd(detailRow)
           },
           categoryContent: {
             ...categoryContent,
-            onOptIn: () => actions.toggleAdOptIn(categoryContent),
-            onOptOut: () => actions.toggleAdOptOut(categoryContent)
+            onOptIn: () => actions.toggleAdOptIn(detailRow),
+            onOptOut: () => actions.toggleAdOptOut(detailRow)
           }
         }
 

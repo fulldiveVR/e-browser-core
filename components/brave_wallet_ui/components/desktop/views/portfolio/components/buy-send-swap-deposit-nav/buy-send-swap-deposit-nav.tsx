@@ -7,11 +7,12 @@ import * as React from 'react'
 import { useHistory } from 'react-router-dom'
 
 // Types
-import { NavOption, WalletRoutes } from '../../../../../../constants/types'
+import { NavOption } from '../../../../../../constants/types'
 
-// Selectors
-import { useSafeUISelector } from '../../../../../../common/hooks/use-safe-selector'
-import { UISelectors } from '../../../../../../common/selectors'
+// Hooks
+import {
+  useOnClickOutside //
+} from '../../../../../../common/hooks/useOnClickOutside'
 
 // Options
 import {
@@ -21,41 +22,45 @@ import {
 // Utils
 import { getLocale } from '../../../../../../../common/locale'
 
+// Components
+import {
+  PortfolioAccountMenu //
+} from '../../../../wallet-menus/portfolio_actions_more_menu'
+
 // Styled Components
 import {
   Button,
   ButtonIcon,
   ButtonText,
   ButtonWrapper,
-  ButtonsRow
+  ButtonsRow,
+  MoreMenuWrapper
 } from './buy-send-swap-deposit-nav.style'
 
 export const BuySendSwapDepositNav = () => {
   // Routing
   const history = useHistory()
 
-  // redux
-  const isPanel = useSafeUISelector(UISelectors.isPanel)
+  // state
+  const [showMoreMenu, setShowMoreMenu] = React.useState<boolean>(false)
+
+  // refs
+  const moreMenuRef = React.useRef<HTMLDivElement>(null)
+
+  // hooks
+  useOnClickOutside(moreMenuRef, () => setShowMoreMenu(false), showMoreMenu)
 
   // methods
   const onClick = React.useCallback(
     (option: NavOption) => {
-      // Redirect to full page view for buy page
-      // until we have a panel view for that page.
-      if (option.route === WalletRoutes.FundWalletPageStart && isPanel) {
-        chrome.tabs.create({
-          url: `brave://wallet${option.route}`
-        })
-      } else {
-        history.push(option.route)
-      }
+      history.push(option.route)
     },
-    [history, isPanel]
+    [history]
   )
 
   return (
     <ButtonsRow width='unset'>
-      {BuySendSwapDepositOptions.map((option) => (
+      {BuySendSwapDepositOptions.slice(0, 3).map((option) => (
         <ButtonWrapper key={option.id}>
           <Button onClick={() => onClick(option)}>
             <ButtonIcon name={option.icon} />
@@ -63,6 +68,13 @@ export const BuySendSwapDepositNav = () => {
           <ButtonText>{getLocale(option.name)}</ButtonText>
         </ButtonWrapper>
       ))}
+      <MoreMenuWrapper ref={moreMenuRef}>
+        <Button onClick={() => setShowMoreMenu(true)}>
+          <ButtonIcon name='more-horizontal' />
+        </Button>
+        <ButtonText>{getLocale('braveWalletButtonMore')}</ButtonText>
+        {showMoreMenu && <PortfolioAccountMenu onClick={onClick} />}
+      </MoreMenuWrapper>
     </ButtonsRow>
   )
 }

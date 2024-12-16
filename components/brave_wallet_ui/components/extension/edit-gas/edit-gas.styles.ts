@@ -4,7 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -158,7 +158,7 @@ const makeLongShadow = (color: string, size: string) => {
   let i = 4
   let shadow = `${i}px 0 0 ${size} ${color}`
 
-  for (; i < 300; i++) {
+  for (; i < 340; i++) {
     shadow = `${shadow}, ${i}px 0 0 ${size} ${color}`
   }
   return shadow

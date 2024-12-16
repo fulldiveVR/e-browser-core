@@ -8,26 +8,24 @@
 #include <utility>
 
 #include "base/json/json_writer.h"
-#include "base/strings/stringprintf.h"
+#include "base/strings/strcat.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/common/url_loader.h"
-#include "brave/components/brave_rewards/core/endpoint/payment/payment_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "net/http/http_status_code.h"
 
-namespace brave_rewards::internal {
-namespace endpoint {
-namespace payment {
+namespace brave_rewards::internal::endpoint::payment {
 
-PostTransactionGemini::PostTransactionGemini(RewardsEngineImpl& engine)
+PostTransactionGemini::PostTransactionGemini(RewardsEngine& engine)
     : engine_(engine) {}
 
 PostTransactionGemini::~PostTransactionGemini() = default;
 
 std::string PostTransactionGemini::GetUrl(const std::string& order_id) {
-  const std::string path =
-      base::StringPrintf("/v1/orders/%s/transactions/gemini", order_id.c_str());
-
-  return GetServerUrl(path);
+  return engine_->Get<EnvironmentConfig>()
+      .rewards_payment_url()
+      .Resolve(base::StrCat({"/v1/orders/", order_id, "/transactions/gemini"}))
+      .spec();
 }
 
 std::string PostTransactionGemini::GeneratePayload(
@@ -43,27 +41,27 @@ std::string PostTransactionGemini::GeneratePayload(
 
 mojom::Result PostTransactionGemini::CheckStatusCode(const int status_code) {
   if (status_code == net::HTTP_BAD_REQUEST) {
-    BLOG(0, "Invalid request");
+    engine_->LogError(FROM_HERE) << "Invalid request";
     return mojom::Result::FAILED;
   }
 
   if (status_code == net::HTTP_NOT_FOUND) {
-    BLOG(0, "Unrecognized transaction suffix");
+    engine_->LogError(FROM_HERE) << "Unrecognized transaction suffix";
     return mojom::Result::NOT_FOUND;
   }
 
   if (status_code == net::HTTP_CONFLICT) {
-    BLOG(0, "External transaction id already submitted");
+    engine_->LogError(FROM_HERE) << "External transaction id already submitted";
     return mojom::Result::FAILED;
   }
 
   if (status_code == net::HTTP_INTERNAL_SERVER_ERROR) {
-    BLOG(0, "Internal server error");
+    engine_->LogError(FROM_HERE) << "Internal server error";
     return mojom::Result::FAILED;
   }
 
   if (status_code != net::HTTP_CREATED && status_code != net::HTTP_OK) {
-    BLOG(0, "Unexpected HTTP status: " << status_code);
+    engine_->LogError(FROM_HERE) << "Unexpected HTTP status: " << status_code;
     return mojom::Result::FAILED;
   }
 
@@ -77,8 +75,9 @@ void PostTransactionGemini::Request(const mojom::SKUTransaction& transaction,
   request->content = GeneratePayload(transaction);
   request->content_type = "application/json; charset=utf-8";
   request->method = mojom::UrlMethod::POST;
-  BLOG(0, "External Transaction ID: " << transaction.external_transaction_id
-                                      << " for " << transaction.amount);
+  engine_->Log(FROM_HERE) << "External Transaction ID: "
+                          << transaction.external_transaction_id << " for "
+                          << transaction.amount;
 
   engine_->Get<URLLoader>().Load(
       std::move(request), URLLoader::LogLevel::kDetailed,
@@ -90,14 +89,12 @@ void PostTransactionGemini::OnRequest(PostTransactionGeminiCallback callback,
                                       mojom::UrlResponsePtr response) {
   DCHECK(response);
 
-  BLOG_IF(0, CheckStatusCode(response->status_code) != mojom::Result::OK,
-          "Error creating gemini transaction on the payment server");
-  BLOG_IF(0, CheckStatusCode(response->status_code) == mojom::Result::OK,
-          "Gemini transaction successful on the payment server");
+  if (CheckStatusCode(response->status_code) != mojom::Result::OK) {
+    engine_->Log(FROM_HERE)
+        << "Error creating gemini transaction on the payment server";
+  }
 
-  callback(CheckStatusCode(response->status_code));
+  std::move(callback).Run(CheckStatusCode(response->status_code));
 }
 
-}  // namespace payment
-}  // namespace endpoint
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::endpoint::payment

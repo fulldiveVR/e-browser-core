@@ -1,30 +1,32 @@
 diff --git a/chrome/browser/ui/BUILD.gn b/chrome/browser/ui/BUILD.gn
-index 085d8472a7e0ea68af55173a4857258701841a9d..04bcf6354b8c8fc32568d6e3ea877e523139ead8 100644
+index df9b0eed0776196f652070972b6feb11af354fc0..bdc8721371810010b0a670ecce68425da562c6f7 100644
 --- a/chrome/browser/ui/BUILD.gn
 +++ b/chrome/browser/ui/BUILD.gn
-@@ -707,6 +707,7 @@ static_library("ui") {
-     "//chrome/browser/safe_browsing",
-     "//chrome/browser/profiling_host",
+@@ -738,6 +738,7 @@ static_library("ui") {
+     "//chrome/browser/updates/announcement_notification:impl",
+     "//chrome/browser/prefs:impl",
    ]
-+  public_deps += [ "//brave/browser/ui" ] allow_circular_includes_from += [ "//brave/browser/ui" ]
++  import("//brave/browser/sources.gni") public_deps += [ "//brave/browser/ui" ] deps += brave_chrome_browser_ui_allow_circular_includes_from allow_circular_includes_from += brave_chrome_browser_ui_allow_circular_includes_from
  
    if (enable_vr && is_win) {
      deps += [ "//chrome/browser/vr:vr_base" ]
-@@ -4571,10 +4572,13 @@ static_library("ui") {
+@@ -3556,7 +3557,10 @@ static_library("ui") {
        ]
-       deps += [ "//chrome/updater/app/server/win:updater_legacy_idl_idl" ]
+       deps += [ "//chrome/updater/app/server/win:updater_legacy_idl" ]
      } else {
--      sources += [
--        "webui/help/version_updater_basic.cc",
--        "webui/help/version_updater_basic.h",
--      ]
+-      sources += [ "webui/help/version_updater_basic.cc" ]
 +      if (!is_official_build) {
 +        # In official build, //brave/browser/ui handles.
-+        sources += [
-+          "webui/help/version_updater_basic.cc",
-+          "webui/help/version_updater_basic.h",
-+        ]
++        sources += [ "webui/help/version_updater_basic.cc" ]
 +      }
      }
-   } else {  # 'OS!="win"
-     if (toolkit_views) {
+   }
+ 
+@@ -5676,6 +5680,7 @@ static_library("ui_public_dependencies") {
+     "//content/public/browser",
+     "//mojo/public/cpp/bindings",
+   ]
++  public_deps += [ "//brave/browser/ui:ui_public_dependencies" ]
+   if (!is_android) {
+     public_deps += [
+       "//build:branding_buildflags",

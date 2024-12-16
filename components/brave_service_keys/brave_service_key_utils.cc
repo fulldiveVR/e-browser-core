@@ -61,10 +61,8 @@ std::pair<std::string, std::string> CreateSignatureString(
     // For all the headers to sign, we expect their values to be be in the
     // headers flat_map and use the value there to add to the signature string.
     auto header = headers.find(header_to_sign);
-    if (header == headers.end()) {
-      NOTREACHED_NORETURN()
-          << "Can't sign over non-existent header " << header_to_sign;
-    }
+    CHECK(header != headers.end())
+        << "Can't sign over non-existent header " << header_to_sign;
     signature_string.append(
         base::StrCat({header_to_sign, ": ", header->second}));
   }
@@ -93,16 +91,10 @@ std::optional<std::pair<std::string, std::string>> GetAuthorizationHeader(
     return std::nullopt;
   }
 
-  // Create the authorization header.
-  std::string signature_digest_base64;
-  base::Base64Encode(
-      std::string(signature_digest.begin(), signature_digest.end()),
-      &signature_digest_base64);
-
-  const std::string value =
-      base::StrCat({"Signature keyId=\"", BUILDFLAG(BRAVE_SERVICES_KEY_ID),
-                    "\",algorithm=\"hs2019\",headers=\"", header_names,
-                    "\",signature=\"", signature_digest_base64, "\""});
+  const std::string value = base::StrCat(
+      {"Signature keyId=\"", BUILDFLAG(BRAVE_SERVICES_KEY_ID),
+       "\",algorithm=\"hs2019\",headers=\"", header_names, "\",signature=\"",
+       base::Base64Encode(signature_digest), "\""});
 
   return std::make_pair(net::HttpRequestHeaders::kAuthorization, value);
 }

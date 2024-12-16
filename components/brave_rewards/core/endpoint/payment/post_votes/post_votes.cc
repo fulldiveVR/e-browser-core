@@ -9,23 +9,23 @@
 
 #include "base/base64.h"
 #include "base/json/json_writer.h"
-#include "base/strings/stringprintf.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/common/url_loader.h"
 #include "brave/components/brave_rewards/core/credentials/credentials_util.h"
-#include "brave/components/brave_rewards/core/endpoint/payment/payment_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "net/http/http_status_code.h"
 
-namespace brave_rewards::internal {
-namespace endpoint {
-namespace payment {
+namespace brave_rewards::internal::endpoint::payment {
 
-PostVotes::PostVotes(RewardsEngineImpl& engine) : engine_(engine) {}
+PostVotes::PostVotes(RewardsEngine& engine) : engine_(engine) {}
 
 PostVotes::~PostVotes() = default;
 
 std::string PostVotes::GetUrl() {
-  return GetServerUrl("/v1/votes");
+  return engine_->Get<EnvironmentConfig>()
+      .rewards_payment_url()
+      .Resolve("/v1/votes")
+      .spec();
 }
 
 std::string PostVotes::GeneratePayload(
@@ -39,11 +39,10 @@ std::string PostVotes::GeneratePayload(
 
   std::string data_json;
   base::JSONWriter::Write(data, &data_json);
-  std::string data_encoded;
-  base::Base64Encode(data_json, &data_encoded);
+  std::string data_encoded = base::Base64Encode(data_json);
 
-  base::Value::List credentials =
-      credential::GenerateCredentials(redeem.token_list, data_encoded);
+  base::Value::List credentials = credential::GenerateCredentials(
+      *engine_, redeem.token_list, data_encoded);
 
   base::Value::Dict payload;
   payload.Set("vote", data_encoded);
@@ -56,17 +55,17 @@ std::string PostVotes::GeneratePayload(
 
 mojom::Result PostVotes::CheckStatusCode(const int status_code) {
   if (status_code == net::HTTP_BAD_REQUEST) {
-    BLOG(0, "Invalid request");
+    engine_->LogError(FROM_HERE) << "Invalid request";
     return mojom::Result::RETRY_SHORT;
   }
 
   if (status_code == net::HTTP_INTERNAL_SERVER_ERROR) {
-    BLOG(0, "Internal server error");
+    engine_->LogError(FROM_HERE) << "Internal server error";
     return mojom::Result::RETRY_SHORT;
   }
 
   if (status_code != net::HTTP_OK) {
-    BLOG(0, "Unexpected HTTP status: " << status_code);
+    engine_->LogError(FROM_HERE) << "Unexpected HTTP status: " << status_code;
     return mojom::Result::FAILED;
   }
 
@@ -90,9 +89,7 @@ void PostVotes::Request(const credential::CredentialsRedeem& redeem,
 void PostVotes::OnRequest(PostVotesCallback callback,
                           mojom::UrlResponsePtr response) {
   DCHECK(response);
-  callback(CheckStatusCode(response->status_code));
+  std::move(callback).Run(CheckStatusCode(response->status_code));
 }
 
-}  // namespace payment
-}  // namespace endpoint
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::endpoint::payment

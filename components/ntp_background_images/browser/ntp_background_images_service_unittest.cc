@@ -121,6 +121,34 @@ constexpr char kTestSponsoredImagesWithMultipleCampaigns[] = R"(
         ]
     })";
 
+constexpr char kTestSponsoredImagesWithMissingImageUrl[] = R"(
+    {
+        "schemaVersion": 1,
+        "campaignId": "fb7ee174-5430-4fb9-8e97-29bf14e8d828",
+        "logo": {
+          "imageUrl":  "logo.png",
+          "alt": "Technikke: For music lovers",
+          "destinationUrl": "https://www.brave.com/",
+          "companyName": "Technikke"
+        },
+        "wallpapers": [
+            {
+              "missing_imageUrl": "background-1.jpg",
+              "focalPoint": { "x": 696, "y": 691 }
+            },
+            {
+              "missing_imageUrl": "background-2.jpg",
+              "creativeInstanceId": "c0d61af3-3b85-4af4-a3cc-cf1b3dd40e70",
+              "logo": {
+                "imageUrl": "logo-2.png",
+                "alt": "logo2",
+                "companyName": "BAT",
+                "destinationUrl": "https://www.bat.com/"
+              }
+            }
+        ]
+    })";
+
 constexpr char kTestBackgroundImages[] = R"(
     {
       "schemaVersion": 1,
@@ -164,7 +192,7 @@ class TestObserver : public NTPBackgroundImagesService::Observer {
 
   raw_ptr<NTPBackgroundImagesData> bi_data_ = nullptr;
   bool on_bi_updated_ = false;
-  raw_ptr<NTPSponsoredImagesData> si_data_ = nullptr;
+  raw_ptr<NTPSponsoredImagesData, DanglingUntriaged> si_data_ = nullptr;
   bool on_si_updated_ = false;
   bool on_super_referral_ended_ = false;
 };
@@ -460,6 +488,29 @@ TEST_F(NTPBackgroundImagesServiceTest, MultipleCampaignsTest) {
   service_->RemoveObserver(&observer);
 }
 
+TEST_F(NTPBackgroundImagesServiceTest, SponsoredImageWithMissingImageUrlTest) {
+  Init();
+  TestObserver observer;
+  service_->AddObserver(&observer);
+
+  pref_service_.SetBoolean(kReferralCheckedForPromoCodeFile, true);
+  pref_service_.SetBoolean(kReferralInitialization, true);
+
+  observer.si_data_ = nullptr;
+  service_->si_images_data_.reset();
+  observer.on_si_updated_ = false;
+  service_->OnGetSponsoredComponentJsonData(
+      false, kTestSponsoredImagesWithMissingImageUrl);
+  // Mark this is not SR to get SI data.
+  service_->MarkThisInstallIsNotSuperReferralForever();
+
+  auto* si_data = service_->GetBrandedImagesData(false);
+  EXPECT_FALSE(si_data);
+  EXPECT_TRUE(observer.on_si_updated_);
+  EXPECT_TRUE(observer.si_data_->campaigns.empty());
+  EXPECT_TRUE(service_->si_images_data_->campaigns.empty());
+}
+
 #if BUILDFLAG(IS_LINUX)
 
 // Linux doesn't support referral service now.
@@ -475,7 +526,7 @@ TEST_F(NTPBackgroundImagesServiceTest, TestOnNonReferralService) {
 
 #else
 
-const char kTestMappingTable[] = R"(
+constexpr char kTestMappingTable[] = R"(
     {
         "schemaVersion": 1,
         "BRV003": {
@@ -490,8 +541,8 @@ const char kTestMappingTable[] = R"(
         }
     })";
 
-  // Super referral wallpaper json data.
-const char kTestSuperReferral[] = R"(
+// Super referral wallpaper json data.
+constexpr char kTestSuperReferral[] = R"(
     {
       "schemaVersion": 1,
       "themeName": "Technikke",

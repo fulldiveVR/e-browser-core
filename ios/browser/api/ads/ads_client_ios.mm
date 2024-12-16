@@ -7,8 +7,8 @@
 
 #include <optional>
 
+#include "base/values.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
-#include "brave/components/brave_federated/public/interfaces/brave_federated.mojom.h"
 #import "brave/ios/browser/api/ads/ads_client_bridge.h"
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
@@ -55,7 +55,7 @@ void AdsClientIOS::ShowNotificationAd(const brave_ads::NotificationAdInfo& ad) {
   [bridge_ showNotificationAd:ad];
 }
 
-bool AdsClientIOS::CanShowNotificationAds() {
+bool AdsClientIOS::CanShowNotificationAds() const {
   return [bridge_ canShowNotificationAds];
 }
 
@@ -63,30 +63,11 @@ void AdsClientIOS::CloseNotificationAd(const std::string& placement_id) {
   [bridge_ closeNotificationAd:placement_id];
 }
 
-void AdsClientIOS::CacheAdEventForInstanceId(
-    const std::string& id,
-    const std::string& ad_type,
-    const std::string& confirmation_type,
-    const base::Time time) const {
-  [bridge_ cacheAdEventForInstanceId:id
-                              adType:ad_type
-                    confirmationType:confirmation_type
-                                time:time];
-}
-
-std::vector<base::Time> AdsClientIOS::GetCachedAdEvents(
-    const std::string& ad_type,
-    const std::string& confirmation_type) const {
-  return [bridge_ getCachedAdEvents:ad_type confirmationType:confirmation_type];
-}
-
-void AdsClientIOS::ResetAdEventCacheForInstanceId(const std::string& id) const {
-  [bridge_ resetAdEventCacheForInstanceId:id];
-}
-
-void AdsClientIOS::UrlRequest(brave_ads::mojom::UrlRequestInfoPtr url_request,
-                              brave_ads::UrlRequestCallback callback) {
-  [bridge_ UrlRequest:std::move(url_request) callback:std::move(callback)];
+void AdsClientIOS::UrlRequest(
+    brave_ads::mojom::UrlRequestInfoPtr mojom_url_request,
+    brave_ads::UrlRequestCallback callback) {
+  [bridge_ UrlRequest:std::move(mojom_url_request)
+             callback:std::move(callback)];
 }
 
 void AdsClientIOS::Save(const std::string& name,
@@ -95,21 +76,20 @@ void AdsClientIOS::Save(const std::string& name,
   [bridge_ save:name value:value callback:std::move(callback)];
 }
 
-void AdsClientIOS::LoadComponentResource(const std::string& id,
-                                         const int version,
+void AdsClientIOS::LoadResourceComponent(const std::string& id,
+                                         int version,
                                          brave_ads::LoadFileCallback callback) {
-  [bridge_ loadComponentResource:id
+  [bridge_ loadResourceComponent:id
                          version:version
                         callback:std::move(callback)];
 }
 
-void AdsClientIOS::GetBrowsingHistory(
-    const int max_count,
-    const int days_ago,
-    brave_ads::GetBrowsingHistoryCallback callback) {
-  [bridge_ getBrowsingHistory:max_count
-                      forDays:days_ago
-                     callback:std::move(callback)];
+void AdsClientIOS::GetSiteHistory(int max_count,
+                                  int days_ago,
+                                  brave_ads::GetSiteHistoryCallback callback) {
+  [bridge_ getSiteHistory:max_count
+                  forDays:days_ago
+                 callback:std::move(callback)];
 }
 
 void AdsClientIOS::Load(const std::string& name,
@@ -121,30 +101,16 @@ std::string AdsClientIOS::LoadDataResource(const std::string& name) {
   return [bridge_ loadDataResource:name];
 }
 
-void AdsClientIOS::GetScheduledCaptcha(
-    const std::string& payment_id,
-    brave_ads::GetScheduledCaptchaCallback callback) {
-  [bridge_ getScheduledCaptcha:payment_id callback:std::move(callback)];
-}
-
-void AdsClientIOS::ShowScheduledCaptchaNotification(
-    const std::string& payment_id,
-    const std::string& captcha_id) {
-  [bridge_ showScheduledCaptchaNotification:payment_id captchaId:captcha_id];
+void AdsClientIOS::ShowScheduledCaptcha(const std::string& payment_id,
+                                        const std::string& captcha_id) {
+  [bridge_ showScheduledCaptcha:payment_id captchaId:captcha_id];
 }
 
 void AdsClientIOS::Log(const char* file,
-                       const int line,
-                       const int verbose_level,
+                       int line,
+                       int verbose_level,
                        const std::string& message) {
   [bridge_ log:file line:line verboseLevel:verbose_level message:message];
-}
-
-void AdsClientIOS::RunDBTransaction(
-    brave_ads::mojom::DBTransactionInfoPtr transaction,
-    brave_ads::RunDBTransactionCallback callback) {
-  [bridge_ runDBTransaction:std::move(transaction)
-                   callback:std::move(callback)];
 }
 
 void AdsClientIOS::SetProfilePref(const std::string& path, base::Value value) {
@@ -154,6 +120,10 @@ void AdsClientIOS::SetProfilePref(const std::string& path, base::Value value) {
 std::optional<base::Value> AdsClientIOS::GetProfilePref(
     const std::string& path) {
   return [bridge_ getProfilePref:path];
+}
+
+bool AdsClientIOS::FindProfilePref(const std::string& path) const {
+  return [bridge_ findProfilePref:path];
 }
 
 void AdsClientIOS::ClearProfilePref(const std::string& path) {
@@ -174,6 +144,10 @@ std::optional<base::Value> AdsClientIOS::GetLocalStatePref(
   return [bridge_ getLocalStatePref:path];
 }
 
+bool AdsClientIOS::FindLocalStatePref(const std::string& path) const {
+  return [bridge_ findLocalStatePref:path];
+}
+
 void AdsClientIOS::ClearLocalStatePref(const std::string& path) {
   [bridge_ clearLocalStatePref:path];
 }
@@ -182,12 +156,10 @@ bool AdsClientIOS::HasLocalStatePrefPath(const std::string& path) const {
   return [bridge_ hasLocalStatePrefPath:path];
 }
 
-void AdsClientIOS::RecordP2AEvents(const std::vector<std::string>& events) {
-  [bridge_ recordP2AEvents:events];
+base::Value::Dict AdsClientIOS::GetVirtualPrefs() const {
+  return [bridge_ getVirtualPrefs];
 }
 
-void AdsClientIOS::AddFederatedLearningPredictorTrainingSample(
-    std::vector<brave_federated::mojom::CovariateInfoPtr> training_sample) {
-  [bridge_
-      addFederatedLearningPredictorTrainingSample:std::move(training_sample)];
+void AdsClientIOS::RecordP2AEvents(const std::vector<std::string>& events) {
+  [bridge_ recordP2AEvents:events];
 }

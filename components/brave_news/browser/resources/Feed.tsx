@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import { spacing } from "@brave/leo/tokens/css";
+import { spacing } from "@brave/leo/tokens/css/variables";
 import { FeedItemV2, FeedV2, FeedV2Error } from "gen/brave/components/brave_news/common/brave_news.mojom.m";
 import * as React from 'react';
 import styled from "styled-components";
@@ -46,6 +46,7 @@ const FeedContainer = styled.div`
 
 interface Props {
   feed: FeedV2 | undefined;
+  onViewCountChange?: (newViews: number) => void;
   onSessionStart?: () => void;
 }
 
@@ -68,6 +69,8 @@ const HISTORY_CARD_COUNT = 'bn-card-count'
 
 const CARD_COUNT_ATTRIBUTE = 'data-news-card-count'
 
+const HOUR_MS = 60 * 60 * 1000;
+
 const saveScrollPos = (itemId: React.Key) => () => {
   setHistoryState({
     [HISTORY_SCROLL_DATA]: {
@@ -80,12 +83,12 @@ const saveScrollPos = (itemId: React.Key) => () => {
 }
 
 const errors = {
-  [FeedV2Error.ConnectionError]: <NotConnected/>,
+  [FeedV2Error.ConnectionError]: <NotConnected />,
   [FeedV2Error.NoArticles]: <NoArticles />,
   [FeedV2Error.NoFeeds]: <NoFeeds />
 }
 
-export default function Component({ feed, onSessionStart }: Props) {
+export default function Component({ feed, onViewCountChange, onSessionStart }: Props) {
   const [cardCount, setCardCount] = React.useState(getHistoryValue(HISTORY_CARD_COUNT, PAGE_SIZE));
 
   // Store the number of cards we've loaded in history - otherwise when we
@@ -120,6 +123,7 @@ export default function Component({ feed, onSessionStart }: Props) {
   // Create intersection observer & relevant state to measure
   // the amount of viewed cards in the session.
   const lastViewedCardCount = React.useRef(0);
+  const lastUsageTime = React.useRef<Date | null>(null);
   const viewDepthIntersectionObserver = React.useRef(new IntersectionObserver(entries => {
     const inViewCounts = entries
       .filter(e => e.intersectionRatio === 1)
@@ -127,6 +131,12 @@ export default function Component({ feed, onSessionStart }: Props) {
     if (!inViewCounts.length) {
       return;
     }
+    if (onSessionStart) {
+      if (!lastUsageTime.current || (new Date().getTime() - HOUR_MS) > lastUsageTime.current.getTime()) {
+        onSessionStart();
+      }
+    }
+    lastUsageTime.current = new Date();
     const largestCardCount = Math.max(...inViewCounts);
     // Ensure we only report increases in scroll depth
     // by comparing to the last scroll card count
@@ -134,18 +144,20 @@ export default function Component({ feed, onSessionStart }: Props) {
       return;
     }
     const newViews = largestCardCount - lastViewedCardCount.current;
-    if (!!onSessionStart && lastViewedCardCount.current === 0 && newViews > 0) {
-      onSessionStart();
-    }
     lastViewedCardCount.current = largestCardCount;
+    if (onViewCountChange) {
+      onViewCountChange(newViews);
+    }
+  }, {
+    threshold: 1
   }));
 
-  const registerViewDepthObservation = (element: HTMLElement | null) => {
+  const registerViewDepthObservation = React.useCallback((element: HTMLElement | null) => {
     if (!element) {
       return;
     }
     viewDepthIntersectionObserver.current.observe(element);
-  };
+  }, []);
 
   // Only observe the bottom card
   const setLastCardRef = React.useCallback((el: HTMLElement | null) => {
@@ -154,9 +166,16 @@ export default function Component({ feed, onSessionStart }: Props) {
 
     loadMoreObserver.current.observe(el);
   }, [])
+
   const cards = React.useMemo(() => {
     const count = Math.min(feed?.items.length ?? 0, cardCount)
     let currentCardCount = 0;
+    const setRefAtIndex = (index: number) => (element: HTMLElement | null) => {
+      const isLast = index === count - 1
+      if (isLast) setLastCardRef(element)
+      registerViewDepthObservation(element)
+    }
+
     return feed?.items.slice(0, count).map((item, index) => {
       let el: React.ReactNode
 
@@ -164,16 +183,16 @@ export default function Component({ feed, onSessionStart }: Props) {
         el = <Advert info={item.advert} />
       }
       else if (item.article) {
-        el = <Article info={item.article} />
+        el = <Article info={item.article} feedDepth={currentCardCount} />
       }
       else if (item.cluster) {
-        el = <Cluster info={item.cluster} />
+        el = <Cluster info={item.cluster} feedDepth={currentCardCount} />
       }
       else if (item.discover) {
         el = <Discover info={item.discover} />
       }
       else if (item.hero) {
-        el = <HeroArticle info={item.hero} />
+        el = <HeroArticle info={item.hero} feedDepth={currentCardCount} />
       } else {
         throw new Error("Invalid item!" + JSON.stringify(item))
       }
@@ -185,14 +204,11 @@ export default function Component({ feed, onSessionStart }: Props) {
       }
 
       const key = getKey(item, index)
-      return <>
-        <div className={CARD_CLASS} onClickCapture={saveScrollPos(key)} key={key} data-id={key} ref={index === count - 1 ? setLastCardRef : undefined}>
-          {el}
-        </div>
-        <div key={`${key}-counter`} {...{ [CARD_COUNT_ATTRIBUTE]: currentCardCount }} ref={registerViewDepthObservation} />
-      </>
+      return <div className={CARD_CLASS} onClickCapture={saveScrollPos(key)} key={key} data-id={key} {...{ [CARD_COUNT_ATTRIBUTE]: currentCardCount }} ref={setRefAtIndex(index)}>
+        {el}
+      </div>
     })
-  }, [cardCount, feed?.items])
+  }, [cardCount, feed?.items, registerViewDepthObservation])
 
   return <FeedContainer className={NEWS_FEED_CLASS}>
     {feed

@@ -3,6 +3,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(https://github.com/brave/brave-browser/issues/41661): Remove this and
+// convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #include "brave/browser/ui/webui/brave_settings_ui.h"
 
 #include <memory>
@@ -13,23 +19,28 @@
 #include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/browser/brave_wallet/brave_wallet_context_utils.h"
 #include "brave/browser/ntp_background/view_counter_service_factory.h"
-#include "brave/browser/resources/settings/grit/brave_settings_resources.h"
 #include "brave/browser/resources/settings/grit/brave_settings_resources_map.h"
 #include "brave/browser/resources/settings/shortcuts_page/grit/commands_generated_map.h"
 #include "brave/browser/shell_integrations/buildflags/buildflags.h"
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
+#include "brave/browser/ui/tabs/features.h"
 #include "brave/browser/ui/webui/navigation_bar_data_provider.h"
+#include "brave/browser/ui/webui/settings/brave_account_handler.h"
 #include "brave/browser/ui/webui/settings/brave_adblock_handler.h"
 #include "brave/browser/ui/webui/settings/brave_appearance_handler.h"
 #include "brave/browser/ui/webui/settings/brave_default_extensions_handler.h"
 #include "brave/browser/ui/webui/settings/brave_privacy_handler.h"
+#include "brave/browser/ui/webui/settings/brave_settings_leo_assistant_handler.h"
 #include "brave/browser/ui/webui/settings/brave_sync_handler.h"
 #include "brave/browser/ui/webui/settings/brave_wallet_handler.h"
 #include "brave/browser/ui/webui/settings/default_brave_shields_handler.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/browser/utils.h"
+#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/brave_sync/brave_sync_prefs.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_vpn/common/features.h"
 #include "brave/components/brave_wallet/common/features.h"
+#include "brave/components/commander/common/features.h"
 #include "brave/components/commands/common/commands.mojom.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
@@ -38,6 +49,7 @@
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/version_info/version_info.h"
 #include "build/build_config.h"
+#include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/webui/settings/metrics_reporting_handler.h"
 #include "components/sync/base/command_line_switches.h"
@@ -46,7 +58,6 @@
 #include "content/public/common/content_features.h"
 #include "extensions/buildflags/buildflags.h"
 #include "net/base/features.h"
-#include "third_party/blink/public/common/features.h"
 
 #if BUILDFLAG(ENABLE_PIN_SHORTCUT)
 #include "brave/browser/ui/webui/settings/pin_shortcut_handler.h"
@@ -74,20 +85,13 @@
 #include "brave/browser/ui/webui/settings/brave_tor_snowflake_extension_handler.h"
 #endif
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/browser/ui/webui/settings/brave_settings_leo_assistant_handler.h"
-#include "brave/components/ai_chat/core/common/features.h"
-#endif
-
 #if BUILDFLAG(ENABLE_PLAYLIST)
 #include "brave/components/playlist/common/features.h"
 #endif
 
 using ntp_background_images::ViewCounterServiceFactory;
 
-BraveSettingsUI::BraveSettingsUI(content::WebUI* web_ui,
-                                 const std::string& host)
-    : SettingsUI(web_ui) {
+BraveSettingsUI::BraveSettingsUI(content::WebUI* web_ui) : SettingsUI(web_ui) {
   web_ui->AddMessageHandler(
       std::make_unique<settings::MetricsReportingHandler>());
   web_ui->AddMessageHandler(std::make_unique<BravePrivacyHandler>());
@@ -97,10 +101,7 @@ BraveSettingsUI::BraveSettingsUI(content::WebUI* web_ui,
   web_ui->AddMessageHandler(std::make_unique<BraveSyncHandler>());
   web_ui->AddMessageHandler(std::make_unique<BraveWalletHandler>());
   web_ui->AddMessageHandler(std::make_unique<BraveAdBlockHandler>());
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  web_ui->AddMessageHandler(
-      std::make_unique<settings::BraveLeoAssistantHandler>());
-#endif
+  web_ui->AddMessageHandler(std::make_unique<BraveAccountHandler>());
 #if BUILDFLAG(ENABLE_TOR)
   web_ui->AddMessageHandler(std::make_unique<BraveTorHandler>());
 #endif
@@ -156,9 +157,6 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   html_source->AddBoolean(
       "isIdleDetectionFeatureEnabled",
       base::FeatureList::IsEnabled(features::kIdleDetection));
-  html_source->AddBoolean(
-      "isBraveWebSerialApiEnabled",
-      base::FeatureList::IsEnabled(blink::features::kBraveWebSerialAPI));
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   html_source->AddBoolean("isBraveVPNEnabled",
                           brave_vpn::IsBraveVPNEnabled(profile));
@@ -189,10 +187,6 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
       "areShortcutsSupported",
       base::FeatureList::IsEnabled(commands::features::kBraveCommands));
 
-  if (ShouldDisableCSPForTesting()) {
-    html_source->DisableContentSecurityPolicy();
-  }
-
   html_source->AddBoolean("shouldExposeElementsForTesting",
                           ShouldExposeElementsForTesting());
 
@@ -201,15 +195,10 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   html_source->AddBoolean("extensionsManifestV2Feature",
                           base::FeatureList::IsEnabled(kExtensionsManifestV2));
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
   html_source->AddBoolean("isLeoAssistantAllowed",
-                          ai_chat::features::IsAIChatEnabled());
+                          ai_chat::IsAIChatEnabled(profile->GetPrefs()));
   html_source->AddBoolean("isLeoAssistantHistoryAllowed",
                           ai_chat::features::IsAIChatHistoryEnabled());
-#else
-  html_source->AddBoolean("isLeoAssistantAllowed", false);
-  html_source->AddBoolean("isLeoAssistantHistoryAllowed", false);
-#endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
   html_source->AddBoolean(
@@ -218,12 +207,15 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 #else
   html_source->AddBoolean("isPlaylistAllowed", false);
 #endif
-}
-
-// static
-bool& BraveSettingsUI::ShouldDisableCSPForTesting() {
-  static bool disable_csp = false;
-  return disable_csp;
+  html_source->AddBoolean(
+      "showCommandsInOmnibox",
+      base::FeatureList::IsEnabled(features::kBraveCommandsInOmnibox));
+  html_source->AddBoolean(
+      "isSharedPinnedTabsEnabled",
+      base::FeatureList::IsEnabled(tabs::features::kBraveSharedPinnedTabs));
+  html_source->AddString(
+      "customSyncUrlAtStartup",
+      profile->GetPrefs()->GetString(brave_sync::kCustomSyncServiceUrl));
 }
 
 // static
@@ -237,4 +229,14 @@ void BraveSettingsUI::BindInterface(
   commands::AcceleratorServiceFactory::GetForContext(
       web_ui()->GetWebContents()->GetBrowserContext())
       ->BindInterface(std::move(pending_receiver));
+}
+
+void BraveSettingsUI::BindInterface(
+    mojo::PendingReceiver<ai_chat::mojom::AIChatSettingsHelper>
+        pending_receiver) {
+  auto assistant_handler = std::make_unique<settings::BraveLeoAssistantHandler>(
+      std::make_unique<ai_chat::AIChatSettingsHelper>(
+          web_ui()->GetWebContents()->GetBrowserContext()));
+  assistant_handler->BindInterface(std::move(pending_receiver));
+  web_ui()->AddMessageHandler(std::move(assistant_handler));
 }

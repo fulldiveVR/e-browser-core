@@ -9,6 +9,14 @@ import "brave/components/brave_rewards/common/mojom/rewards_database.mojom";
 import "mojo/public/mojom/base/time.mojom";
 import "mojo/public/mojom/base/values.mojom";
 
+struct RewardsEngineOptions {
+  Environment environment = Environment.kProduction;
+  bool is_testing = false;
+  int32 state_migration_target_version_for_testing = -1;
+  int32 reconcile_interval = 0;
+  int32 retry_interval = 0;
+};
+
 interface RewardsEngine {
   Initialize() => (Result result);
 
@@ -19,13 +27,11 @@ interface RewardsEngine {
 
   GetRewardsParameters() => (RewardsParameters properties);
 
-  GetAutoContributeProperties() => (AutoContributeProperties props);
+  FetchUICards() => (array<UICard>? cards);
 
   GetPublisherMinVisitTime() => (int32 min_visit_time);
 
   GetPublisherMinVisits() => (int32 min_visits);
-
-  GetAutoContributeEnabled() => (bool auto_contribute);
 
   GetReconcileStamp() => (uint64 reconcile_stamp);
 
@@ -53,30 +59,16 @@ interface RewardsEngine {
 
   RestorePublishers() => (Result result);
 
-  FetchPromotions() => (Result result, array<Promotion> promotion);
-
-  ClaimPromotion(string promotion_id, string payload)
-      => (Result result, string response);
-
-  AttestPromotion(string promotion_id, string solution)
-      => (Result result, Promotion? promotion);
-
   SetPublisherMinVisitTime(int32 duration_in_seconds);
 
   SetPublisherMinVisits(int32 visits);
 
-  SetAutoContributionAmount(double amount);
-
-  SetAutoContributeEnabled(bool enabled);
-
   GetBalanceReport(ActivityMonth month, int32 year)
-      => (Result result, BalanceReportInfo report);
+      => (Result result, BalanceReportInfo? report);
 
   GetPublisherActivityFromUrl(uint64 window_id,
                               VisitData visit_data,
                               string publisher_blob);
-
-  GetAutoContributionAmount() => (double contribution_amount);
 
   GetPublisherBanner(string publisher_id)
       => (PublisherBanner? banner);
@@ -110,11 +102,6 @@ interface RewardsEngine {
 
   StartContributionsForTesting();
 
-  UpdateMediaDuration(uint64 window_id,
-                      string publisher_key,
-                      uint64 duration,
-                      bool first_visit);
-
   IsPublisherRegistered(string publisher_id) => (bool registered);
 
   GetPublisherInfo(string publisher_key)
@@ -138,20 +125,7 @@ interface RewardsEngine {
   ConnectExternalWallet(string wallet_type, map<string, string> args)
       => (ConnectExternalWalletResult result);
 
-  GetTransactionReport(ActivityMonth month, int32 year)
-      => (array<TransactionReportInfo> list);
-
-  GetContributionReport(ActivityMonth month, int32 year)
-      => (array<ContributionReportInfo> list);
-
   GetAllContributions() => (array<ContributionInfo> list);
-
-  GetMonthlyReport(ActivityMonth month, int32 year)
-      => (Result result, MonthlyReportInfo report);
-
-  GetAllMonthlyReportIds() => (array<string> ids);
-
-  GetAllPromotions() => (map<string, Promotion> items);
 
   Shutdown() => (Result result);
 
@@ -241,17 +215,12 @@ interface RewardsEngineClient {
   GetClientCountryCode() => (string country_code);
 
   [Sync]
-  IsAutoContributeSupportedForClient() => (bool value);
-
-  [Sync]
   GetLegacyWallet() => (string wallet);
 
   ShowNotification(string type, array<string> args) => (Result result);
 
   [Sync]
   GetClientInfo() => (ClientInfo info);
-
-  UnblindedTokensReady();
 
   ReconcileStampReset();
 

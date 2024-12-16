@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import org.chromium.base.Callbacks.Callback1;
 import org.chromium.brave_wallet.mojom.AccountInfo;
 import org.chromium.brave_wallet.mojom.AssetRatioService;
 import org.chromium.brave_wallet.mojom.BlockchainRegistry;
@@ -27,15 +28,20 @@ import org.chromium.brave_wallet.mojom.SwapService;
 import org.chromium.brave_wallet.mojom.TransactionInfo;
 import org.chromium.brave_wallet.mojom.TxService;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.crypto_wallet.adapters.WalletCoinAdapter;
 import org.chromium.chrome.browser.crypto_wallet.model.CryptoAccountTypeInfo;
 import org.chromium.chrome.browser.crypto_wallet.util.PendingTxHelper;
-import org.chromium.mojo.bindings.Callbacks.Callback1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
+// Unused members, never read:
+// - mSolanaTxManagerProxy
+// - mSwapService
+// - mBlockchainRegistry
+// - mEthTxManagerProxy
+// - mAssetRatioService
+@SuppressWarnings("UnusedVariable")
 public class CryptoModel {
     private TxService mTxService;
     private final PendingTxHelper mPendingTxHelper;
@@ -48,19 +54,17 @@ public class CryptoModel {
     private AssetRatioService mAssetRatioService;
     private SwapService mSwapService;
     private CryptoSharedActions mCryptoSharedActions;
-    private CryptoSharedData mSharedData;
+    private final CryptoSharedData mSharedData;
     private final MutableLiveData<Integer> _mCoinTypeMutableLiveData =
             new MutableLiveData<>(CoinType.ETH);
-    public final LiveData<Integer> mCoinTypeMutableLiveData = _mCoinTypeMutableLiveData;
+    private final LiveData<Integer> mCoinTypeMutableLiveData = _mCoinTypeMutableLiveData;
 
     private final Object mLock = new Object();
     private Context mContext;
 
-    private NetworkModel mNetworkModel;
-    private PortfolioModel mPortfolioModel;
+    private final NetworkModel mNetworkModel;
 
     public LiveData<List<AccountInfo>> mAccountInfosFromKeyRingModel;
-    private TransactionsModel mTransactionsModel;
 
     public CryptoModel(Context context, TxService txService, KeyringService keyringService,
             BlockchainRegistry blockchainRegistry, JsonRpcService jsonRpcService,
@@ -80,17 +84,21 @@ public class CryptoModel {
         mCryptoSharedActions = cryptoSharedActions;
         mSharedData = new CryptoSharedDataImpl();
         mPendingTxHelper = new PendingTxHelper(mTxService, new AccountInfo[0], true, true);
-        mNetworkModel = new NetworkModel(
-                mBraveWalletService, mJsonRpcService, mSharedData, mCryptoSharedActions, context);
-        mPortfolioModel = new PortfolioModel(context, mTxService, mKeyringService,
-                mBlockchainRegistry, mJsonRpcService, mEthTxManagerProxy, mSolanaTxManagerProxy,
-                mBraveWalletService, mAssetRatioService, mSharedData);
+        mNetworkModel =
+                new NetworkModel(
+                        mBraveWalletService, mJsonRpcService, mSharedData, mCryptoSharedActions);
     }
 
-    public void resetServices(Context context, TxService mTxService, KeyringService mKeyringService,
-            BlockchainRegistry mBlockchainRegistry, JsonRpcService mJsonRpcService,
-            EthTxManagerProxy mEthTxManagerProxy, SolanaTxManagerProxy mSolanaTxManagerProxy,
-            BraveWalletService mBraveWalletService, AssetRatioService mAssetRatioService) {
+    public void resetServices(
+            Context context,
+            TxService mTxService,
+            KeyringService mKeyringService,
+            BlockchainRegistry mBlockchainRegistry,
+            JsonRpcService mJsonRpcService,
+            EthTxManagerProxy mEthTxManagerProxy,
+            SolanaTxManagerProxy mSolanaTxManagerProxy,
+            BraveWalletService mBraveWalletService,
+            AssetRatioService mAssetRatioService) {
         synchronized (mLock) {
             mContext = context;
             this.mTxService = mTxService;
@@ -103,14 +111,6 @@ public class CryptoModel {
             this.mAssetRatioService = mAssetRatioService;
             mPendingTxHelper.setTxService(mTxService);
             mNetworkModel.resetServices(mBraveWalletService, mJsonRpcService);
-            mPortfolioModel.resetServices(context, mTxService, mKeyringService, mBlockchainRegistry,
-                    mJsonRpcService, mEthTxManagerProxy, mSolanaTxManagerProxy, mBraveWalletService,
-                    mAssetRatioService);
-            if (mTransactionsModel != null) {
-                mTransactionsModel.resetServices(mContext, mTxService, mKeyringService,
-                        mBlockchainRegistry, mJsonRpcService, mEthTxManagerProxy,
-                        mSolanaTxManagerProxy, mBraveWalletService, mAssetRatioService);
-            }
         }
         init();
     }
@@ -161,14 +161,6 @@ public class CryptoModel {
                 allAccounts -> mPendingTxHelper.setAccountInfos(allAccounts.accounts));
     }
 
-    public LiveData<TransactionInfo> getSelectedPendingRequest() {
-        return mPendingTxHelper.mSelectedPendingRequest;
-    }
-
-    public LiveData<List<TransactionInfo>> getPendingTransactions() {
-        return mPendingTxHelper.mPendingTransactionInfoLd;
-    }
-
     public LiveData<List<TransactionInfo>> getAllTransactions() {
         return mPendingTxHelper.mTransactionInfoLd;
     }
@@ -209,59 +201,24 @@ public class CryptoModel {
         return mNetworkModel;
     }
 
-    public PortfolioModel getPortfolioModel() {
-        return mPortfolioModel;
-    }
-
-    public TransactionsModel createTransactionModel() {
-        if (mTransactionsModel == null) {
-            mTransactionsModel = new TransactionsModel(mContext, mTxService, mKeyringService,
-                    mBlockchainRegistry, mJsonRpcService, mEthTxManagerProxy, mSolanaTxManagerProxy,
-                    mBraveWalletService, mAssetRatioService, mSharedData);
-        }
-        return mTransactionsModel;
-    }
-
-    public UserAssetModel createUserAssetModel(WalletCoinAdapter.AdapterType type) {
-        return new UserAssetModel(
-                mBraveWalletService, mJsonRpcService, mBlockchainRegistry, mSharedData, type);
-    }
-
     public void updateCoinType() {
-        updateCoinType(null, null);
-    }
+        mKeyringService.getAllAccounts(
+                allAccounts -> {
+                    @CoinType.EnumType int coin = CoinType.ETH;
 
-    public void updateCoinType(Integer coin, Callback1<Integer> callback) {
-        if (coin == null) {
-            updateCoinType(null);
-        } else {
-            _mCoinTypeMutableLiveData.postValue(coin);
-            if (callback != null) {
-                callback.call(coin);
-            }
-        }
-    }
+                    // null selectedAccount may happen in tests.
+                    if (allAccounts.selectedAccount != null) {
+                        // Current coin is the coin of selected account.
+                        coin = allAccounts.selectedAccount.accountId.coin;
+                    }
 
-    public void updateCoinType(Callback1<Integer> callback) {
-        mKeyringService.getAllAccounts(allAccounts -> {
-            @CoinType.EnumType
-            int coin = CoinType.ETH;
-
-            // null selectedAccount may happen in tests.
-            if (allAccounts.selectedAccount != null) {
-                // Current coin is the coin of selected account.
-                coin = allAccounts.selectedAccount.accountId.coin;
-            }
-
-            _mCoinTypeMutableLiveData.postValue(coin);
-            if (callback != null) {
-                callback.call(coin);
-            }
-        });
+                    _mCoinTypeMutableLiveData.postValue(coin);
+                });
     }
 
     /**
      * Initialise the account observable via setter (to avoid dependency cycle)
+     *
      * @param accountInfosFromKeyRingModel from the keyrin model
      */
     public void setAccountInfosFromKeyRingModel(
@@ -318,10 +275,7 @@ public class CryptoModel {
 
         @Override
         public List<Integer> getSupportedCryptoCoins() {
-            return getSupportedCryptoAccountTypes()
-                    .stream()
-                    .map(CryptoAccountTypeInfo::getCoinType)
-                    .collect(Collectors.toList());
+            return Arrays.asList(CoinType.ETH, CoinType.SOL, CoinType.FIL, CoinType.BTC);
         }
 
         @Override

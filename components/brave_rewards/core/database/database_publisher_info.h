@@ -15,11 +15,10 @@ namespace database {
 
 class DatabasePublisherInfo : public DatabaseTable {
  public:
-  explicit DatabasePublisherInfo(RewardsEngineImpl& engine);
+  explicit DatabasePublisherInfo(RewardsEngine& engine);
   ~DatabasePublisherInfo() override;
 
-  void InsertOrUpdate(mojom::PublisherInfoPtr info,
-                      LegacyResultCallback callback);
+  void InsertOrUpdate(mojom::PublisherInfoPtr info, ResultCallback callback);
 
   void GetRecord(const std::string& publisher_key,
                  GetPublisherInfoCallback callback);

@@ -21,18 +21,39 @@ process.stdout.on('resize', setLineLength)
 const progressStyle = chalk.bold.inverse
 const statusStyle = chalk.green.italic
 const warningStyle = chalk.black.bgYellow
+const errorStyle = chalk.red
 
 const cmdDirStyle = chalk.blue
 const cmdCmdStyle = chalk.green
 const cmdArrowStyle = chalk.magenta
 
+// Track Teamcity progress scopes and finish them on unexpected exit.
+const progressScopes = []
+
 if (tsm) {
   tsm.autoFlowId = false
+  // Ensure that the output is not buffered when using Teamcity Service
+  // Messages. If it is buffered, console.log() output may not display in
+  // real-time, leading to a mix-up of service messages and external process
+  // outputs.
+  //
+  // This is a known Node.js fix for issues caused by *Sync functions blocking
+  // the event loop. Ideally, we should switch to async/await and wait for the
+  // "drain" event.
+  process.stdout._handle.setBlocking(true)
+  process.stderr._handle.setBlocking(true)
+
+  process.on('exit', () => {
+    while (progressScopes.length) {
+      tsm.blockClosed({ name: progressScopes.pop() })
+    }
+  })
 }
 
 function progressStart(message) {
   if (tsm) {
     tsm.blockOpened({ name: message })
+    progressScopes.push(message)
   } else {
     console.log(progressStyle(`${message}...`))
   }
@@ -40,6 +61,7 @@ function progressStart(message) {
 
 function progressFinish(message) {
   if (tsm) {
+    progressScopes.pop()
     tsm.blockClosed({ name: message })
   } else {
     console.log(progressStyle(`...${message} done`))
@@ -55,16 +77,37 @@ function progressScope(message, callable) {
   }
 }
 
-function status(message) {
-  console.log(statusStyle(message))
+async function progressScopeAsync(message, callable) {
+  progressStart(message)
+  try {
+    await callable()
+  } finally {
+    progressFinish(message)
+  }
+}
+
+function status(message, alreadyStyled = false) {
+  if (tsm) {
+    tsm.progressMessage(message)
+  } else {
+    console.log(alreadyStyled ? message : statusStyle(message))
+  }
 }
 
 function error(message) {
-  console.error(progressStyle(message))
+  if (tsm) {
+    tsm.message({text: message, status: 'ERROR'})
+  } else {
+    console.error(errorStyle(message))
+  }
 }
 
 function warn(message) {
-  console.error(warningStyle(message))
+  if (tsm) {
+    tsm.message({text: message, status: 'WARNING'})
+  } else {
+    console.error(warningStyle(message))
+  }
 }
 
 function updateStatus (projectUpdateStatus) {
@@ -78,7 +121,29 @@ function command (dir, cmd, args) {
   console.log(divider)
   if (dir)
     console.log(cmdDirStyle(dir))
-  console.log(`${cmdArrowStyle('>')} ${cmdCmdStyle(cmd)} ${args.join(' ')}`)
+  status(`${cmdArrowStyle('>')} ${cmdCmdStyle(cmd)} ${args.join(' ')}`, true)
+}
+
+function printFailedPatchesInJsonFormat(allPatchStatus, bravePath) {
+  const failedPatches = allPatchStatus.filter((patch) => patch.error)
+  if (!failedPatches.length) {
+    return;
+  }
+
+  const patchFailuresOutput = failedPatches.map(({path, patchPath}) => {
+    return {
+      // Trimming the patch path to be relative to the brave core repo. We skip
+      // the first character to avoid the trailing slash from the absolute
+      // path.
+      patchPath:
+        patchPath.replace(bravePath, '').substring(1),
+      path: path
+    }
+  })
+
+  console.log(chalk.red(`${failedPatches.length} Failed patches json breakdown:`))
+  console.log(JSON.stringify(patchFailuresOutput))
+  console.log(divider)
 }
 
 function allPatchStatus(allPatchStatus, patchGroupName) {
@@ -133,10 +198,12 @@ module.exports = {
   progressStart,
   progressFinish,
   progressScope,
+  progressScopeAsync,
   status,
   error,
   warn,
   command,
   updateStatus,
+  printFailedPatchesInJsonFormat,
   allPatchStatus
 }

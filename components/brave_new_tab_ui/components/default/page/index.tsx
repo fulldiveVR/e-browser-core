@@ -7,6 +7,7 @@ import * as React from 'react'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { requestAnimationFrameThrottle } from '../../../../common/throttle'
 import { defaultState } from '../../../storage/new_tab_storage'
+import { font, spacing } from '@brave/leo/tokens/css/variables'
 
 const breakpointLargeBlocks = '980px'
 const breakpointEveryBlock = '870px'
@@ -67,8 +68,8 @@ const StyledPage = styled('div') <PageProps>`
 
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: calc(100vh - var(--ntp-fixed-content-height));
   z-index: 6;
   width: 100%;
   display: grid;
@@ -109,7 +110,7 @@ const StyledPage = styled('div') <PageProps>`
   }
 `
 
-export const Page: React.FunctionComponent<PageProps> = (props) => {
+export const Page: React.FunctionComponent<React.PropsWithChildren<PageProps>> = (props) => {
   // Note(petemill): When we scroll to the bottom, if there's an
   // extra scroll area (Brave News) then we "sticky" the Page at
   // the bottom scroll and overlay the extra content on top.
@@ -212,7 +213,7 @@ export const GridItemSponsoredImageClickArea = styled.section<{ otherWidgetsHidd
 export const GridItemNotification = styled('section')`
   position: fixed;
   left: 50%;
-  top: 0;
+  top: 50px;
   transform: translateX(-50%);
 `
 
@@ -268,7 +269,7 @@ export const GridItemNavigation = styled('section')`
   }
 `
 
-export const GridItemNavigationBraveNews = styled('div') <{}>`
+export const GridItemPageFooter = styled('div') <{}>`
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -278,6 +279,10 @@ export const GridItemNavigationBraveNews = styled('div') <{}>`
   [data-show-news-prompt] & {
     bottom: 120px;
   }
+
+  display: flex;
+  flex-direction: column;
+  gap: ${spacing.l};
 `
 
 export const Footer = styled('footer') <{}>`
@@ -365,7 +370,6 @@ function getPageBackground(p: HasImageProps) {
 export const App = styled('div') <AppProps & HasImageProps>`
   --bg-opacity: ${p => p.imageHasLoaded ? 1 : 0};
   position: relative;
-  padding-top: var(--ntp-fixed-content-height, "0px");
   box-sizing: border-box;
   display: flex;
   flex: 1;
@@ -388,11 +392,7 @@ export const App = styled('div') <AppProps & HasImageProps>`
 export const Link = styled('a') <{}>`
   text-decoration: none;
   transition: color 0.15s ease, filter 0.15s ease;
-  color: rgba(255, 255, 255, 0.8);
-
-  &:hover {
-    color: rgba(255, 255, 255, 1);
-  }
+  color: white;
 `
 
 export const Label = styled('span') <{}>`
@@ -409,9 +409,8 @@ export const PhotoName = styled('div') <{}>`
   align-self: flex-end;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  font-size: 12px;
-  font-family: Poppins, sans-serif;
-  color: rgba(255, 255, 255, 0.6);
+  font: ${font.small.regular};
+  color: white;
   white-space: nowrap;
 `
 
@@ -427,21 +426,6 @@ interface IconButtonProps {
   clickDisabled?: boolean
   isClickMenu?: boolean
 }
-
-export const IconLink = styled('a') <{}>`
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: 8px;
-  cursor: pointer;
-  color: var(--override-readability-color, #ffffff);
-  opacity: 0.7;
-  transition: opacity 0.15s ease, filter 0.15s ease;
-
-  &:hover {
-    opacity: 0.95;
-  }
-`
 
 export const IconButton = styled('button') <IconButtonProps>`
   pointer-events: ${p => p.clickDisabled && 'none'};
@@ -478,9 +462,9 @@ export const IconButtonSideText = styled('label') <IconButtonSideTextProps>`
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  margin-right: ${p => p.textDirection === 'ltr' && '24px'};
-  margin-left: ${p => p.textDirection === 'rtl' && '24px'};
-  color: inherit;
+  padding-right: ${p => p.textDirection === 'ltr' && spacing.s};
+  padding-left: ${p => p.textDirection === 'rtl' && spacing.s};
+  color: white;
   cursor: pointer;
   user-select: none;
   width: max-content;
@@ -493,10 +477,17 @@ export const IconButtonSideText = styled('label') <IconButtonSideTextProps>`
   }
 
   > ${IconButton} {
-    margin-left: ${p => p.textDirection === 'ltr' && '0'};
-    margin-right: ${p => p.textDirection === 'rtl' && '0'};
+    --leo-icon-size: 14px;
+    margin: 0;
+    height: auto;
+    width: auto;
+    padding: 4px;
+    opacity: 1;
     /* No need to show the outline since the parent is handling it */
     outline: 0;
+    &:hover {
+      opacity: 1;
+    }
   }
 `
 
@@ -505,14 +496,10 @@ interface IconButtonContainerProps {
 }
 
 export const IconButtonContainer = styled('div') <IconButtonContainerProps>`
-  font-family: ${p => p.theme.fontFamily.heading};
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(var(--override-readability-color-rgb, 255, 255, 255), 0.8);
+  font: ${font.small.semibold};
+  color: var(--override-readability-color-rgb, 255, 255, 255);
   margin-right: ${p => p.textDirection === 'ltr' && '8px'};
   margin-left: ${p => p.textDirection === 'rtl' && '8px'};
-  border-right: ${p => p.textDirection === 'ltr' && '1px solid rgba(var(--override-readability-color-rgb, 255, 255, 255), 0.6)'};
-  border-left: ${p => p.textDirection === 'rtl' && '1px solid rgba(var(--override-readability-color-rgb, 255, 255, 255), 0.6)'};
 
   &:hover {
     color: ${p => p.color};

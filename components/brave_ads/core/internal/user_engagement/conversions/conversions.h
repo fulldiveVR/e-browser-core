@@ -7,17 +7,16 @@
 #define BRAVE_COMPONENTS_BRAVE_ADS_CORE_INTERNAL_USER_ENGAGEMENT_CONVERSIONS_CONVERSIONS_H_
 
 #include <cstdint>
-#include <optional>
 #include <string>
 #include <vector>
 
 #include "base/memory/weak_ptr.h"
 #include "base/observer_list.h"
+#include "brave/components/brave_ads/core/internal/creatives/conversions/creative_set_conversion_database_table.h"
 #include "brave/components/brave_ads/core/internal/creatives/conversions/creative_set_conversion_info.h"
 #include "brave/components/brave_ads/core/internal/tabs/tab_manager_observer.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
-#include "brave/components/brave_ads/core/internal/user_engagement/conversions/queue/conversion_queue.h"
-#include "brave/components/brave_ads/core/internal/user_engagement/conversions/queue/conversion_queue_delegate.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_events_database_table.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/resource/conversion_resource.h"
 
 class GURL;
@@ -28,16 +27,12 @@ class ConversionsObserver;
 struct ConversionInfo;
 struct VerifiableConversionInfo;
 
-class Conversions final : public ConversionQueueDelegate,
-                          public TabManagerObserver {
+class Conversions final : public TabManagerObserver {
  public:
   Conversions();
 
   Conversions(const Conversions&) = delete;
   Conversions& operator=(const Conversions&) = delete;
-
-  Conversions(Conversions&&) noexcept = delete;
-  Conversions& operator=(Conversions&&) noexcept = delete;
 
   ~Conversions() override;
 
@@ -73,27 +68,15 @@ class Conversions final : public ConversionQueueDelegate,
       const std::string& html,
       const CreativeSetConversionList& creative_set_conversions,
       const AdEventList& ad_events);
-  void Convert(
-      const AdEventInfo& ad_event,
-      const std::optional<VerifiableConversionInfo>& verifiable_conversion);
+  void Convert(const AdEventInfo& ad_event,
+               std::optional<VerifiableConversionInfo> verifiable_conversion);
   void ConvertCallback(
       const AdEventInfo& ad_event,
-      const std::optional<VerifiableConversionInfo>& verifiable_conversion,
+      std::optional<VerifiableConversionInfo> verifiable_conversion,
       bool success);
 
   void NotifyDidConvertAd(const ConversionInfo& conversion) const;
   void NotifyFailedToConvertAd(const std::string& creative_instance_id) const;
-
-  // ConversionQueueDelegate:
-  void OnDidAddConversionToQueue(const ConversionInfo& conversion) override;
-  void OnFailedToAddConversionToQueue(
-      const ConversionInfo& conversion) override;
-  void OnWillProcessConversionQueue(const ConversionInfo& conversion,
-                                    base::Time process_at) override;
-  void OnDidProcessConversionQueue(const ConversionInfo& conversion) override;
-  void OnFailedToProcessConversionQueue(
-      const ConversionInfo& conversion) override;
-  void OnDidExhaustConversionQueue() override;
 
   // TabManagerObserver:
   void OnHtmlContentDidChange(int32_t tab_id,
@@ -104,7 +87,10 @@ class Conversions final : public ConversionQueueDelegate,
 
   ConversionResource resource_;
 
-  ConversionQueue queue_;
+  const database::table::CreativeSetConversions
+      creative_set_conversions_database_table_;
+
+  const database::table::AdEvents ad_events_database_table_;
 
   base::WeakPtrFactory<Conversions> weak_factory_{this};
 };

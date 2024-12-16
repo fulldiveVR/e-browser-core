@@ -6,7 +6,7 @@
 #include "brave/components/brave_ads/browser/reminder/reminder_util.h"
 
 #include "base/notreached.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_constants.h"
 #include "brave/components/l10n/common/localization_util.h"
 #include "brave/grit/brave_generated_resources.h"
@@ -26,40 +26,33 @@ constexpr char kReminderNotificationAdTargetUrl[] =
 namespace {
 
 base::Value::Dict BuildClickedSameAdMultipleTimesReminder() {
-  base::Value::Dict dict;
-
-  dict.Set(kNotificationAdPlacementIdKey, kReminderNotificationAdPlacementId);
-  dict.Set(
-      kNotificationAdTitleKey,
-      brave_l10n::GetLocalizedResourceUTF16String(
-          IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_TITLE));
-  dict.Set(kNotificationAdBodyKey,
+  return base::Value::Dict()
+      .Set(kNotificationAdPlacementIdKey, kReminderNotificationAdPlacementId)
+      .Set(kNotificationAdTitleKey,
            brave_l10n::GetLocalizedResourceUTF16String(
-               IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_BODY));
-  dict.Set(kNotificationAdTargetUrlKey, kReminderNotificationAdTargetUrl);
-
-  return dict;
+               IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_TITLE))
+      .Set(kNotificationAdBodyKey,
+           brave_l10n::GetLocalizedResourceUTF16String(
+               IDS_BRAVE_ADS_NOTIFICATION_CLICKED_SAME_AD_MULTIPLE_TIMES_BODY))
+      .Set(kNotificationAdTargetUrlKey, kReminderNotificationAdTargetUrl);
 }
 
 base::Value::Dict BuildExternalWalletConnectedReminder() {
-  base::Value::Dict dict;
-
-  dict.Set(kNotificationAdPlacementIdKey, kReminderNotificationAdPlacementId);
-  dict.Set(kNotificationAdTitleKey,
+  return base::Value::Dict()
+      .Set(kNotificationAdPlacementIdKey, kReminderNotificationAdPlacementId)
+      .Set(kNotificationAdTitleKey,
            brave_l10n::GetLocalizedResourceUTF16String(
-               IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_TITLE));
-  dict.Set(kNotificationAdBodyKey,
+               IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_TITLE))
+      .Set(kNotificationAdBodyKey,
            brave_l10n::GetLocalizedResourceUTF16String(
-               IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_BODY));
-  dict.Set(kNotificationAdTargetUrlKey, kReminderNotificationAdTargetUrl);
-
-  return dict;
+               IDS_BRAVE_ADS_NOTIFICATION_EXTERNAL_WALLET_CONNECTED_BODY))
+      .Set(kNotificationAdTargetUrlKey, kReminderNotificationAdTargetUrl);
 }
 
 }  // namespace
 
-base::Value::Dict BuildReminder(const mojom::ReminderType type) {
-  switch (type) {
+base::Value::Dict BuildReminder(mojom::ReminderType mojom_reminder_type) {
+  switch (mojom_reminder_type) {
     case mojom::ReminderType::kClickedSameAdMultipleTimes: {
       return BuildClickedSameAdMultipleTimesReminder();
     }
@@ -69,7 +62,8 @@ base::Value::Dict BuildReminder(const mojom::ReminderType type) {
     }
   }
 
-  NOTREACHED_NORETURN() << "Unexpected value for mojom::ReminderType: " << type;
+  NOTREACHED() << "Unexpected value for mojom::ReminderType: "
+               << mojom_reminder_type;
 }
 
 bool IsReminder(const std::string& placement_id) {

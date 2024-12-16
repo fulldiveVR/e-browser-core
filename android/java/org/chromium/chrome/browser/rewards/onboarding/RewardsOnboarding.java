@@ -65,12 +65,10 @@ public class RewardsOnboarding implements BraveRewardsObserver {
     private BraveRewardsNativeWorker mBraveRewardsNativeWorker;
 
     private ChromeTabbedActivity mActivity;
-    private int mDeviceWidth;
 
     private static final String SUCCESS = "success";
 
     public RewardsOnboarding(View anchorView, int deviceWidth) {
-        mDeviceWidth = deviceWidth;
         mAnchorView = anchorView;
         mPopupWindow = new PopupWindow(anchorView.getContext());
         mPopupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -140,20 +138,21 @@ public class RewardsOnboarding implements BraveRewardsObserver {
         View responseCloseButton = mErrorLayout.findViewById(R.id.response_modal_close);
         responseCloseButton.setOnClickListener(v -> { mPopupWindow.dismiss(); });
 
-        mPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-            @Override
-            public void onDismiss() {
-                if (mBraveRewardsNativeWorker != null) {
-                    mBraveRewardsNativeWorker.RemoveObserver(RewardsOnboarding.this);
-                }
-            }
-        });
+        mPopupWindow.setOnDismissListener(
+                new PopupWindow.OnDismissListener() {
+                    @Override
+                    public void onDismiss() {
+                        if (mBraveRewardsNativeWorker != null) {
+                            mBraveRewardsNativeWorker.removeObserver(RewardsOnboarding.this);
+                        }
+                    }
+                });
 
         mPopupWindow.setWidth(deviceWidth);
         mPopupWindow.setContentView(mPopupView);
 
         mBraveRewardsNativeWorker = BraveRewardsNativeWorker.getInstance();
-        mBraveRewardsNativeWorker.AddObserver(this);
+        mBraveRewardsNativeWorker.addObserver(this);
     }
 
     public void showLikePopDownMenu() {
@@ -218,7 +217,7 @@ public class RewardsOnboarding implements BraveRewardsObserver {
         });
 
         mContinueButton.setOnClickListener(
-                (new View.OnClickListener() {
+                new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (!BravePermissionUtils.hasPermission(
@@ -229,14 +228,14 @@ public class RewardsOnboarding implements BraveRewardsObserver {
                             requestNotificationPermission();
                         }
                         if (mCountrySpinner != null) {
-                            mBraveRewardsNativeWorker.CreateRewardsWallet(
+                            mBraveRewardsNativeWorker.createRewardsWallet(
                                     sortedCountryMap.get(
                                             mCountrySpinner.getSelectedItem().toString()));
                             shouldShowContinueProgress(true);
                             mContinueButton.setText("");
                         }
                     }
-                }));
+                });
     }
 
     private void shouldShowContinueProgress(boolean shouldShow) {
@@ -259,22 +258,28 @@ public class RewardsOnboarding implements BraveRewardsObserver {
         TextView responseModalText =
                 mPopupView.findViewById(R.id.rewards_onboarding_error_description);
         TextView responseRewardsBtn = mPopupView.findViewById(R.id.response_action_btn);
+        TextView responseModalTitle = mPopupView.findViewById(R.id.rewards_onboarding_error_title);
         TextView responseErrorText = mPopupView.findViewById(R.id.response_error_text);
 
         String actionText = mPopupView.getContext().getString(R.string.retry_text);
         if (errorMessage.equals(BraveRewardsPanel.WALLET_GENERATION_DISABLED_ERROR)) {
-            String title = mPopupView.getContext().getString(
-                    R.string.wallet_generation_disabled_error_title);
-            String text = String.format(mPopupView.getContext().getString(
-                                                R.string.wallet_generation_disabled_error_text),
-                    mPopupView.getContext().getResources().getString(R.string.learn_more));
+            String title =
+                    mPopupView
+                            .getContext()
+                            .getString(R.string.wallet_generation_disabled_error_title);
+            String text =
+                    String.format(
+                            mPopupView
+                                    .getContext()
+                                    .getString(R.string.wallet_generation_disabled_error_text),
+                            mPopupView.getContext().getResources().getString(R.string.learn_more));
             SpannableString spannableWithLearnMore =
                     learnMoreSpannableString(mPopupView.getContext(), text);
             responseModalText.setMovementMethod(LinkMovementMethod.getInstance());
             responseModalText.setText(spannableWithLearnMore);
+            responseModalTitle.setText(title);
             actionText = mPopupView.getContext().getString(R.string.close_text);
         }
-
         responseRewardsBtn.setText(actionText);
         responseErrorText.setText(errorMessage);
     }

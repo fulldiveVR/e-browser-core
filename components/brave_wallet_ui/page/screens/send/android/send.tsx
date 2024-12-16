@@ -4,7 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
@@ -17,7 +17,6 @@ import 'emptykit.css'
 
 // Utils
 import { loadTimeData } from '../../../../../common/loadTimeData'
-import * as Lib from '../../../../common/async/lib'
 
 // actions
 import * as WalletActions from '../../../../common/actions/wallet_actions'
@@ -29,7 +28,6 @@ import {
   default as BraveCoreThemeProvider
 } from '../../../../../common/BraveCoreThemeProvider'
 import { SendScreen } from '../send_screen/send_screen'
-import { LibContext } from '../../../../common/context/lib.context'
 
 export function AndroidSendApp() {
   return (
@@ -39,13 +37,11 @@ export function AndroidSendApp() {
           dark={walletDarkTheme}
           light={walletLightTheme}
         >
-          <LibContext.Provider value={Lib}>
-            <Switch>
-              <Route>
-                <SendScreen isAndroid={true} />
-              </Route>
-            </Switch>
-          </LibContext.Provider>
+          <Switch>
+            <Route>
+              <SendScreen isAndroid={true} />
+            </Route>
+          </Switch>
         </BraveCoreThemeProvider>
       </BrowserRouter>
     </Provider>
@@ -54,8 +50,9 @@ export function AndroidSendApp() {
 
 function initialize() {
   initLocale(loadTimeData.data_)
-  store.dispatch(WalletActions.initialize({}))
-  render(AndroidSendApp(), document.getElementById('root'))
+  store.dispatch(WalletActions.initialize())
+  const root = createRoot(document.getElementById('root')!)
+  root.render(<AndroidSendApp />)
 }
 
 document.addEventListener('DOMContentLoaded', initialize)

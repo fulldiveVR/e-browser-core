@@ -4,12 +4,8 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 import LeoIcon from '@brave/leo/react/icon'
-import {
-  AssetIconProps,
-  AssetIconFactory
-} from '../../../../components/shared/style'
 
 export const Text = styled.span<{
   textSize?: '20px' | '18px' | '16px' | '14px' | '12px'
@@ -255,7 +251,19 @@ export const StyledLabel = styled.label`
   color: ${(p) => p.theme.color.text01};
 `
 
-export const AssetIcon = AssetIconFactory<AssetIconProps>({
-  width: '40px',
-  height: 'auto'
-})
+export const LPIcon = styled.div<{ icon: string; size?: string }>`
+  background-image: url(${(p) => p.icon});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: ${(p) => p.size ?? '20px'};
+  width: ${(p) => p.size ?? '20px'};
+  border-radius: ${leo.radius.full};
+`
+
+export const BankIcon = styled(LeoIcon).attrs({
+  name: 'bank'
+})<{ size?: string }>`
+  --leo-icon-size: ${(p) => p.size ?? '20px'};
+  color: ${leo.color.icon.default};
+`

@@ -5,8 +5,6 @@
 
 // @ts-nocheck TODO(petemill): Define types and remove ts-nocheck
 
-import '../brave_icons.html.js'
-
 import {RegisterPolymerTemplateModifications, RegisterStyleOverride} from 'chrome://resources/brave/polymer_overriding.js'
 import {html} from 'chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js'
 
@@ -22,14 +20,14 @@ function createMenuElement(title, href, iconName, pageVisibilitySection) {
   menuEl.setAttribute('role', 'menuitem')
   menuEl.setAttribute('class', 'cr-nav-menu-item')
 
-  const icon = document.createElement('iron-icon')
+  const icon = document.createElement('cr-icon')
   icon.setAttribute('icon', iconName)
   menuEl.appendChild(icon)
 
   const text = document.createTextNode(title)
   menuEl.appendChild(text)
-  const paperRippleChild = document.createElement('paper-ripple')
-  menuEl.appendChild(paperRippleChild)
+  const crRippleChild = document.createElement('cr-ripple')
+  menuEl.appendChild(crRippleChild)
   return menuEl
 }
 
@@ -54,18 +52,18 @@ RegisterStyleOverride(
   html`
     <style>
       :host {
-        --brave-settings-menu-margin-v: 30px;
-        --brave-settings-menu-padding: 30px;
-        --settings-nav-item-color: #424242 !important;
+        --brave-settings-menu-margin-v: 24px;
+        --brave-settings-menu-padding: 24px;
+        --settings-nav-item-color: var(--leo-color-text-primary) !important;
         position: sticky;
         top: var(--brave-settings-menu-margin-v);
-        margin: 0 var(--brave-settings-menu-margin) !important;
+        margin: 0 !important;
         max-height: calc(100vh - 56px - (var(--brave-settings-menu-margin-v) * 2) - (var(--brave-settings-menu-padding) * 2));
         min-width: 172px;
+        max-width: 250px;
         border-radius: 6px;
-        background-color: #fff;
         overflow-y: auto;
-        padding: 30px !important;
+        padding: 24px !important;
       }
 
       .cr-nav-menu-item {
@@ -75,8 +73,8 @@ RegisterStyleOverride(
         box-sizing: content-box !important;
         overflow: visible !important;
 
-        --iron-icon-width: 24px;
-        --iron-icon-height: 24px;
+        --iron-icon-width: 20px;
+        --iron-icon-height: 20px;
         --iron-icon-fill-color: currentColor;
       }
 
@@ -85,27 +83,26 @@ RegisterStyleOverride(
       }
 
       .cr-nav-menu-item[selected] {
-        --iron-icon-fill-color: var(--leo-gradient-icons-active);
+        --iron-icon-fill-color: var(--leo-color-icon-interactive);
 
-        color: var(--cr-link-color) !important;
+        color: var(--leo-color-text-interactive) !important;
         background: transparent !important;
       }
 
-      .cr-nav-menu-item paper-ripple {
+      .cr-nav-menu-item cr-ripple {
         display: none !important;
       }
 
       @media (prefers-color-scheme: dark) {
         :host {
-          --settings-nav-item-color: #F4F4F4 !important;
+          --settings-nav-item-color: var(--leo-color-text-primary) !important;
           border-color: transparent !important;
-          background-color: #161719;
         }
       }
 
       a[href] {
-        font-weight: 400 !important;
-        margin: 0 20px 20px 0 !important;
+        font-weight: 500 !important;
+        margin: 0 20px 24px 0 !important;
         margin-inline-start: 0 !important;
         margin-inline-end: 0 !important;
         padding-bottom: 0 !important;
@@ -120,22 +117,21 @@ RegisterStyleOverride(
         border-radius: 6px !important;
       }
 
-      a[href].iron-selected {
+      a[href].selected {
         color: #DB2F04;
-        font-weight: 400 !important;
       }
 
-      a:hover, iron-icon:hover {
-        color: #444DD0 !important;
+      a:hover, cr-icon:hover {
+        color: var(--leo-color-icon-interactive) !important;
       }
 
-      iron-icon, leo-icon {
+      cr-icon, leo-icon {
         margin-inline-end: 14px !important;
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
       }
 
-      a[href].iron-selected::before {
+      a[href].selected::before {
         content: "";
         position: absolute;
         top: 50%;
@@ -144,17 +140,18 @@ RegisterStyleOverride(
         display: block;
         height: 32px;
         width: 4px;
-        background: linear-gradient(96.98deg, #E51D00 0%, #E5007B 78.13%);
+        background: var(--leo-color-text-interactive);
         border-radius: 0px 2px 2px 0px;
       }
 
       @media (prefers-color-scheme: dark) {
-        a[href].iron-selected {
+        a[href].selected {
           color: #FB5930;
         }
 
-        a:hover, iron-icon:hover {
-          color: #A6ABE9 !important;
+        a:hover, cr-icon:hover {
+          --iron-icon-fill-color: var(--leo-color-icon-interactive) !important;
+          color: var(--leo-color-icon-interactive) !important;
         }
       }
 
@@ -170,7 +167,7 @@ RegisterStyleOverride(
         border: none !important;
       }
 
-      #advancedButton > iron-icon {
+      #advancedButton > cr-icon {
         margin-inline-end: 0 !important;
       }
 
@@ -183,17 +180,21 @@ RegisterStyleOverride(
         margin-bottom: 20px !important;
       }
 
+      #autofill {
+        margin-top: 20px !important;
+      }
+
       #about-menu {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        color: #c5c5d3 !important;
+        color: var(--leo-color-text-tertiary) !important;
         margin: 16px 0 0 0 !important;
       }
       .brave-about-graphic {
         flex: 0;
-        flex-basis: 30%;
+        flex-basis: var(--leo-spacing-3xl);
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -231,6 +232,15 @@ RegisterPolymerTemplateModifications({
     const appearanceBrowserEl = getMenuElement(templateContent, '/appearance')
     getStartedEl.insertAdjacentElement('afterend', appearanceBrowserEl)
 
+    // Add Content item
+    const contentEl = createMenuElement(
+      loadTimeData.getString('contentSettingsContentSection'),
+      '/braveContent',
+      'window-content',
+      'content',
+    )
+    appearanceBrowserEl.insertAdjacentElement('afterend', contentEl)
+
     // Add Shields item
     const shieldsEl = createMenuElement(
       loadTimeData.getString('braveShieldsTitle'),
@@ -238,7 +248,7 @@ RegisterPolymerTemplateModifications({
       'shield-done',
       'shields',
     )
-    appearanceBrowserEl.insertAdjacentElement('afterend', shieldsEl)
+    contentEl.insertAdjacentElement('afterend', shieldsEl)
 
     // Add privacy item
     const privacyEl = getMenuElement(templateContent, '/privacy')
@@ -256,7 +266,7 @@ RegisterPolymerTemplateModifications({
     // Add leo item
     const leoAssistantEl = createMenuElement(
       loadTimeData.getString('leoAssistant'),
-      '/leo-assistant',
+      '/leo-ai',
       'product-brave-leo',
       'leoAssistant',
     )
@@ -270,15 +280,6 @@ RegisterPolymerTemplateModifications({
       'braveSync',
     )
     leoAssistantEl.insertAdjacentElement('afterend', syncEl)
-
-    // Add Playlist item
-    const playlistEl = createMenuElement(
-      loadTimeData.getString('playlist'),
-      '/playlist',
-      'product-playlist',
-      'playlist',
-    )
-    leoAssistantEl.insertAdjacentElement('afterend', playlistEl)
 
     // Add search item
     const searchEl = getMenuElement(templateContent, '/search')
@@ -297,15 +298,6 @@ RegisterPolymerTemplateModifications({
     const autofillEl = getMenuElement(templateContent, '/autofill')
     const languagesEl = getMenuElement(templateContent, '/languages')
     languagesEl.insertAdjacentElement('beforebegin', autofillEl)
-    // Move HelpTips after downloads
-    const helpTipsEl = createMenuElement(
-      loadTimeData.getString('braveHelpTips'),
-      '/braveHelpTips',
-      'help-outline',
-      'braveHelpTips',
-    )
-    const downloadsEl = getMenuElement(templateContent, '/downloads')
-    downloadsEl.insertAdjacentElement('afterend', helpTipsEl)
     // Allow Accessibility to be removed :-(
     const a11yEl = getMenuElement(templateContent, '/accessibility')
     a11yEl.setAttribute('hidden', '[[!pageVisibility.a11y]')
@@ -327,6 +319,7 @@ RegisterPolymerTemplateModifications({
     const newAboutEl = document.createElement('a')
     newAboutEl.setAttribute('href', '/help')
     newAboutEl.setAttribute('id', aboutEl.id)
+    newAboutEl.setAttribute('role', 'menuitem')
 
     const graphicsEl = document.createElement('div')
     graphicsEl.setAttribute('class', 'brave-about-graphic')
@@ -334,8 +327,8 @@ RegisterPolymerTemplateModifications({
     // Use per-channel logo image.
     const icon = document.createElement('img')
     icon.setAttribute('srcset', 'chrome://theme/current-channel-logo@1x, chrome://theme/current-channel-logo@2x 2x')
-    icon.setAttribute('width', '24px')
-    icon.setAttribute('height', '24px')
+    icon.setAttribute('width', '20px')
+    icon.setAttribute('height', '20px')
 
     const metaEl = document.createElement('div')
     metaEl.setAttribute('class', 'brave-about-meta')

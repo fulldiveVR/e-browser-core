@@ -12,8 +12,11 @@
 #include "base/command_line.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/system/sys_info.h"
+#include "brave/browser/brave_browser_features.h"
 #include "brave/browser/brave_stats/brave_stats_updater_params.h"
 #include "brave/browser/brave_stats/buildflags.h"
+#include "brave/browser/brave_stats/features.h"
+#include "brave/browser/brave_stats/first_run_util.h"
 #include "brave/browser/brave_stats/switches.h"
 #include "brave/common/brave_channel_info.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
@@ -26,6 +29,7 @@
 #include "brave/components/rpill/common/rpill.h"
 #include "brave/components/version_info/version_info.h"
 #include "chrome/browser/browser_process.h"
+#include "chrome/browser/first_run/first_run.h"
 #include "chrome/browser/net/system_network_context_manager.h"
 #include "chrome/browser/profiles/profile_manager.h"
 #include "chrome/common/channel_info.h"
@@ -106,8 +110,14 @@ BraveStatsUpdater::BraveStatsUpdater(PrefService* pref_service,
     usage_server_ = BUILDFLAG(BRAVE_USAGE_SERVER);
   }
 
+  std::optional<std::string> day_zero_variant;
+  if (base::FeatureList::IsEnabled(::features::kBraveDayZeroExperiment)) {
+    day_zero_variant = ::features::kBraveDayZeroExperimentVariant.Get();
+  }
   general_browser_usage_p3a_ =
-      std::make_unique<misc_metrics::GeneralBrowserUsage>(pref_service);
+      std::make_unique<misc_metrics::GeneralBrowserUsage>(
+          pref_service, day_zero_variant, IsFirstRun(pref_service),
+          GetFirstRunTime(pref_service));
 
   if (profile_manager != nullptr) {
     g_browser_process->profile_manager()->AddObserver(this);
@@ -123,6 +133,11 @@ BraveStatsUpdater::~BraveStatsUpdater() {
 }
 
 void BraveStatsUpdater::Start() {
+  if (IsHeadlessOrAutomationMode() &&
+      !features::IsHeadlessClientRefcodeEnabled()) {
+    // Do not send usage pings if headless mode or automation mode are enabled.
+    return;
+  }
   // Startup timer, only initiated once we've checked for a promo
   // code.
   DCHECK(!server_ping_startup_timer_);

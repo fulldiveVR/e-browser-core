@@ -9,9 +9,10 @@
 #include <optional>
 #include <ostream>
 #include <string>
+#include <vector>
 
 #include "base/check.h"
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/signed_token.h"
 
 namespace brave_ads::cbr {
 
@@ -55,6 +56,8 @@ class SignedToken {
 };
 
 std::ostream& operator<<(std::ostream& os, const SignedToken& signed_token);
+
+using SignedTokenList = std::vector<SignedToken>;
 
 }  // namespace brave_ads::cbr
 

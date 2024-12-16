@@ -9,7 +9,8 @@
 #include "base/path_service.h"
 #include "base/strings/stringprintf.h"
 #include "base/test/bind.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
+#include "base/types/zip.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
@@ -18,7 +19,6 @@
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/content_settings/core/browser/host_content_settings_map.h"
-#include "content/public/browser/notification_service.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "content/public/test/content_mock_cert_verifier.h"
@@ -43,7 +43,6 @@ class BraveSiteHacksNetworkDelegateBrowserTest : public InProcessBrowserTest {
     mock_cert_verifier_.mock_cert_verifier()->set_default_result(net::OK);
     host_resolver()->AddRule("*", "127.0.0.1");
 
-    brave::RegisterPathProvider();
     base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir_);
     https_server_.ServeFilesFromDirectory(test_data_dir_);
     https_server_.AddDefaultHandlers(GetChromeTestDataDir());
@@ -138,7 +137,7 @@ class BraveSiteHacksNetworkDelegateBrowserTest : public InProcessBrowserTest {
     return navigation_url.ReplaceComponents(replacement);
   }
 
-  GURL landing_url(const std::string_view query, const GURL& landing_url) {
+  GURL landing_url(std::string_view query, const GURL& landing_url) {
     GURL::Replacements replacement;
     if (!query.empty()) {
       replacement.SetQueryStr(query);
@@ -212,13 +211,9 @@ class BraveSiteHacksNetworkDelegateBrowserTest : public InProcessBrowserTest {
   void NavigateToURLAndWaitForRedirects(Browser* browser,
                                         const GURL& original_url,
                                         const GURL& landing_url) {
-    ui_test_utils::UrlLoadObserver load_complete(
-        landing_url, content::NotificationService::AllSources());
+    ui_test_utils::UrlLoadObserver load_complete(landing_url);
     ASSERT_TRUE(ui_test_utils::NavigateToURL(browser, original_url));
-    EXPECT_EQ(contents(browser)->GetPrimaryMainFrame()->GetLastCommittedURL(),
-              original_url);
     load_complete.Wait();
-
     EXPECT_EQ(contents(browser)->GetLastCommittedURL(), landing_url);
   }
 
@@ -253,14 +248,15 @@ class BraveSiteHacksNetworkDelegateBrowserTest : public InProcessBrowserTest {
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterCrossSite) {
-  const std::string inputs[] = {"",
-                                "foo=bar",
-                                "fbclid=1",
-                                "fbclid=2&key=value",
-                                "key=value&fbclid=3",
-                                "mkt_tok=xyz&foo=bar",
-                                "mkt_tok=xyz&foo=bar&mkt_unsubscribe=1"};
-  const std::string outputs[] = {
+  static constexpr std::string_view kInputs[] = {
+      "",
+      "foo=bar",
+      "fbclid=1",
+      "fbclid=2&key=value",
+      "key=value&fbclid=3",
+      "mkt_tok=xyz&foo=bar",
+      "mkt_tok=xyz&foo=bar&mkt_unsubscribe=1"};
+  static constexpr std::string_view kOutputs[] = {
       // URLs without trackers should be untouched.
       "",
       "foo=bar",
@@ -274,15 +270,14 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
       "mkt_tok=xyz&foo=bar&mkt_unsubscribe=1",
   };
 
-  constexpr size_t input_count = std::size(inputs);
-  static_assert(input_count == std::size(outputs),
-                "Inputs and outputs must have the same number of elements.");
+  static_assert(std::size(kInputs) == std::size(kOutputs),
+                "kInputs and kOutputs must have the same number of elements.");
 
-  for (size_t i = 0; i < input_count; i++) {
+  for (auto [input, output] : base::zip(kInputs, kOutputs)) {
     NavigateToURLAndWaitForRedirects(
         browser(),
-        url(landing_url(inputs[i], simple_landing_url()), cross_site_url()),
-        landing_url(outputs[i], simple_landing_url()));
+        url(landing_url(input, simple_landing_url()), cross_site_url()),
+        landing_url(output, simple_landing_url()));
   }
 }
 
@@ -296,11 +291,11 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterShieldsDown) {
-  const std::string inputs[] = {
+  static constexpr std::string_view kInputs[] = {
       "", "foo=bar", "fbclid=1", "fbclid=2&key=value", "key=value&fbclid=3",
   };
 
-  for (const auto& input : inputs) {
+  for (auto input : kInputs) {
     const GURL dest_url = landing_url(input, simple_landing_url());
     brave_shields::SetBraveShieldsEnabled(content_settings(), false, dest_url);
     NavigateToURLAndWaitForRedirects(browser(), url(dest_url, cross_site_url()),
@@ -310,14 +305,14 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterSameSite) {
-  const std::string inputs[] = {
+  static constexpr std::string_view kInputs[] = {
       "fbclid=1",
       "fbclid=2&key=value",
       "key=value&fbclid=3",
   };
   // Same-site requests should be untouched.
 
-  for (const auto& input : inputs) {
+  for (auto input : kInputs) {
     NavigateToURLAndWaitForRedirects(
         browser(),
         url(landing_url(input, simple_landing_url()), same_site_url()),
@@ -327,40 +322,39 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterCrossSiteRedirect) {
-  const std::string inputs[] = {
+  static constexpr std::string_view kInputs[] = {
       "",
       "fbclid=1",
   };
-  const std::string outputs[] = {
+  static constexpr std::string_view kOutputs[] = {
       // URLs without trackers should be untouched.
       "",
       // URLs with trackers should have those removed.
       "",
   };
 
-  constexpr size_t input_count = sizeof(inputs) / sizeof(std::string);
-  static_assert(input_count == sizeof(outputs) / sizeof(std::string),
-                "Inputs and outputs must have the same number of elements.");
+  static_assert(std::size(kInputs) == std::size(kOutputs),
+                "kInputs and kOutputs must have the same number of elements.");
 
-  for (size_t i = 0; i < input_count; i++) {
+  for (auto [input, output] : base::zip(kInputs, kOutputs)) {
     // Same-site navigations to a cross-site redirect go through the query
     // filter.
     NavigateToURLAndWaitForRedirects(
         browser(),
-        url(landing_url(inputs[i], redirect_to_cross_site_landing_url()),
+        url(landing_url(input, redirect_to_cross_site_landing_url()),
             same_site_url()),
-        landing_url(outputs[i], simple_landing_url()));
+        landing_url(output, simple_landing_url()));
   }
 }
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterSameSiteRedirect) {
-  const std::string inputs[] = {
+  static constexpr std::string_view kInputs[] = {
       "",
       "fbclid=1",
   };
 
-  for (const auto& input : inputs) {
+  for (auto input : kInputs) {
     // Same-site navigations to a same-site redirect are exempted from the query
     // filter.
     NavigateToURLAndWaitForRedirects(
@@ -373,12 +367,12 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
                        QueryStringFilterDirectNavigation) {
-  const std::string inputs[] = {
+  static constexpr std::string_view kInputs[] = {
       "",
       "abc=1",
       "fbclid=1",
   };
-  const std::string outputs[] = {
+  static constexpr std::string_view kOutputs[] = {
       // URLs without trackers should be untouched.
       "",
       "abc=1",
@@ -386,16 +380,15 @@ IN_PROC_BROWSER_TEST_F(BraveSiteHacksNetworkDelegateBrowserTest,
       "",
   };
 
-  constexpr size_t input_count = std::size(inputs);
-  static_assert(input_count == std::size(outputs),
-                "Inputs and outputs must have the same number of elements.");
+  static_assert(std::size(kInputs) == std::size(kOutputs),
+                "kInputs and kOutputs must have the same number of elements.");
 
-  for (size_t i = 0; i < input_count; i++) {
+  for (const auto [input, output] : base::zip(kInputs, kOutputs)) {
     // Direct navigations go through the query filter.
-    GURL input = landing_url(inputs[i], simple_landing_url());
-    GURL output = landing_url(outputs[i], simple_landing_url());
-    ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), input));
-    EXPECT_EQ(contents(browser())->GetLastCommittedURL(), output);
+    ASSERT_TRUE(ui_test_utils::NavigateToURL(
+        browser(), landing_url(input, simple_landing_url())));
+    EXPECT_EQ(contents(browser())->GetLastCommittedURL(),
+              landing_url(output, simple_landing_url()));
   }
 }
 

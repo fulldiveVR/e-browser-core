@@ -6,7 +6,9 @@
 package org.chromium.chrome.browser;
 
 import org.chromium.chrome.browser.tab.Tab;
+import org.chromium.chrome.browser.util.TabUtils;
 import org.chromium.ui.OverscrollAction;
+import org.chromium.ui.base.BackGestureEventSwipeEdge;
 import org.chromium.ui.base.PageTransition;
 import org.chromium.url.GURL;
 
@@ -22,30 +24,15 @@ public class BraveSwipeRefreshHandler extends SwipeRefreshHandler {
 
     @Override
     public boolean start(
-            @OverscrollAction int type, float startX, float startY, boolean navigateForward) {
+            @OverscrollAction int type, @BackGestureEventSwipeEdge int initiatingEdge) {
         GURL url = mTab.getUrl();
         if (url.getScheme().equals("chrome-untrusted")
                 && url.getHost().equals("chat")
-                && getTransition(mTab) == PageTransition.FROM_API) {
+                && TabUtils.getTransition(mTab) == PageTransition.FROM_API) {
             mSwipeType = OverscrollAction.NONE;
             return false;
         }
 
-        return super.start(type, startX, startY, navigateForward);
-    }
-
-    private static int getTransition(Tab tab) {
-        if (tab != null
-                && tab.getWebContents() != null
-                && tab.getWebContents().getNavigationController() != null
-                && tab.getWebContents().getNavigationController().getVisibleEntry() != null) {
-            int transition =
-                    tab.getWebContents()
-                            .getNavigationController()
-                            .getVisibleEntry()
-                            .getTransition();
-            return transition;
-        }
-        return 0;
+        return super.start(type, initiatingEdge);
     }
 }

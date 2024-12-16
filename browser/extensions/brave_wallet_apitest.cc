@@ -14,6 +14,8 @@
 #include "brave/components/constants/pref_names.h"
 #include "chrome/browser/extensions/extension_apitest.h"
 #include "chrome/browser/extensions/extension_service.h"
+#include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/test/browser_test.h"
@@ -25,13 +27,11 @@ namespace {
 
 class BraveWalletExtensionApiTest : public ExtensionApiTest {
  public:
-  void SetUp() override {
-    brave::RegisterPathProvider();
+  void SetUpOnMainThread() override {
+    ExtensionApiTest::SetUpOnMainThread();
     base::PathService::Get(brave::DIR_TEST_DATA, &extension_dir_);
     extension_dir_ = extension_dir_.AppendASCII("extensions/api_test");
-    ExtensionApiTest::SetUp();
   }
-  void TearDown() override { ExtensionApiTest::TearDown(); }
   PrefService* GetPrefs() { return browser()->profile()->GetPrefs(); }
   base::FilePath extension_dir_;
 };

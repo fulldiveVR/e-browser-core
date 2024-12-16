@@ -23,11 +23,13 @@ import sys
 import os
 import tempfile
 
+import components.android_tools as android_tools
 import components.perf_config as perf_config
 import components.perf_test_runner as perf_test_runner
 import components.perf_test_utils as perf_test_utils
 import components.path_util as path_util
-import components.profile_updater as profile_updater
+import components.profile_tools as profile_tools
+import components.wpr_utils as wpr_utils
 
 from components.common_options import CommonOptions, PerfMode
 
@@ -77,19 +79,21 @@ def _RunUpdateProfile(config: perf_config.PerfConfig,
       perf_config.BenchmarkConfig({
           'name': 'brave_utils.online',
           'pageset-repeat': 5,
-          'stories': ['UpdateProfile']
+          'stories': ['UpdateProfile'],
+          'stories_exclude': [],
       })
   ]
 
   configurations = perf_test_runner.SpawnConfigurationsFromTargetList(
       options.targets, config.runners[0])
+  assert len(configurations) == 1
+  profile_tools.CleanupBrowserComponents(configurations[0], options)
   if not perf_test_runner.RunConfigurations(configurations, config.benchmarks,
                                             options):
     return 1
 
-  profile_updater.MakeUpdatedProfileArchive(configurations[0], options)
+  profile_tools.MakeUpdatedProfileArchive(configurations[0], options)
   return 0
-
 
 def main():
   parser = argparse.ArgumentParser(
@@ -99,12 +103,10 @@ def main():
       epilog=R'''
 To some launch tests locally:
 npm run perf_tests -- compare/compare_with_on_off_feature.json5
-     --variations-repo-dir=~/work/brave-variations
 
 On CI:
 npm run perf_tests -- smoke-brave.json5 v1.58.45
      --working-directory=e:\work\brave\src\out\100
-     --variations-repo-dir=e:\work\brave-variations
      --ci-mode
 ''')
   CommonOptions.add_parser_args(parser)
@@ -121,10 +123,15 @@ npm run perf_tests -- smoke-brave.json5 v1.58.45
     logging.info('Cleaning working directory %s', options.working_directory)
     shutil.rmtree(options.working_directory)
 
-  if not os.path.exists(options.working_directory):
-    os.mkdir(options.working_directory)
+  os.makedirs(options.working_directory, exist_ok=True)
+
   json_config = load_config(args.config, options)
   config = perf_config.PerfConfig(json_config)
+
+  if options.is_android:
+    if options.reboot_android:
+      android_tools.RebootAndroid()
+    android_tools.SetupAndroidDevice()
 
   if options.mode == PerfMode.RUN:
     if len(config.runners) != 1:
@@ -141,6 +148,9 @@ npm run perf_tests -- smoke-brave.json5 v1.58.45
 
   if options.mode == PerfMode.UPDATE_PROFILE:
     return _RunUpdateProfile(config, options)
+
+  if options.mode == PerfMode.RECORD_WPR:
+    return 0 if wpr_utils.record_wpr(config, options) else 1
 
   raise RuntimeError('Unknown mode')
 

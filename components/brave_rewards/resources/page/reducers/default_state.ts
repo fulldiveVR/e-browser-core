@@ -11,6 +11,7 @@ import * as Rewards from '../lib/types'
 export function defaultState (): Rewards.State {
   return {
     userType: 'unconnected',
+    isUserTermsOfServiceUpdateRequired: false,
     isAcSupported: false,
     enabledContribute: false,
     contributionMinTime: 8,
@@ -42,6 +43,7 @@ export function defaultState (): Rewards.State {
       notificationAdsEnabled: false,
       newTabAdsEnabled: false,
       newsAdsEnabled: false,
+      searchAdsEnabled: false,
       adsNextPaymentDate: 0,
       adsReceivedThisMonth: 0,
       adTypesReceivedThisMonth: {},
@@ -51,15 +53,9 @@ export function defaultState (): Rewards.State {
       adsMaxEarningsLastMonth: 0
     },
     adsHistory: [],
-    promotions: [],
     excludedList: [],
     externalWalletProviderList: [],
     balance: optional<number>(),
-    monthlyReport: {
-      month: -1,
-      year: -1
-    },
-    monthlyReportIds: [],
     currentCountryCode: '',
     parameters: {
       autoContributeChoice: 0,

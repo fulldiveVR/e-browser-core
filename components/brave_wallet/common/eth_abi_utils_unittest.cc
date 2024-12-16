@@ -3,6 +3,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(https://github.com/brave/brave-browser/issues/41661): Remove this and
+// convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #include "brave/components/brave_wallet/common/eth_abi_utils.h"
 
 #include <memory>
@@ -169,7 +175,7 @@ TEST(EthAbiUtilsTest, ExtractAddress) {
   {
     auto bytes = ToBytes(
         "000000000000000000000000c1735677a60884abbcf72295e88d47764beda282");
-    EXPECT_EQ(ExtractAddress(base::make_span(bytes)).ToHex(),
+    EXPECT_EQ(ExtractAddress(bytes).ToHex(),
               "0xc1735677a60884abbcf72295e88d47764beda282");
   }
 
@@ -191,13 +197,13 @@ TEST(EthAbiUtilsTest, ExtractAddress) {
     // Zero address.
     auto bytes = ToBytes(
         "0000000000000000000000000000000000000000000000000000000000000000");
-    EXPECT_EQ(ExtractAddress(base::make_span(bytes)).ToHex(),
+    EXPECT_EQ(ExtractAddress(bytes).ToHex(),
               "0x0000000000000000000000000000000000000000");
   }
 
   {  // Empty.
     auto bytes = std::vector<uint8_t>{};
-    EXPECT_TRUE(ExtractAddress(base::make_span(bytes)).IsEmpty());
+    EXPECT_TRUE(ExtractAddress(bytes).IsEmpty());
   }
 }
 

@@ -5,21 +5,19 @@
 
 #include "brave/ios/browser/api/web/web_state/web_state_native.h"
 
-#include "ios/chrome/browser/sessions/ios_chrome_session_tab_helper.h"
+#include "ios/chrome/browser/sessions/model/ios_chrome_session_tab_helper.h"
 #include "ios/chrome/browser/shared/model/browser/browser.h"
-#include "ios/chrome/browser/shared/model/browser_state/chrome_browser_state.h"
+#include "ios/chrome/browser/shared/model/profile/profile_ios.h"
 #include "ios/chrome/browser/shared/model/web_state_list/web_state_list.h"
 #include "ios/chrome/browser/shared/model/web_state_list/web_state_opener.h"
 #include "ios/chrome/browser/tabs/model/synced_window_delegate_browser_agent.h"
-
 #include "ios/web/public/session/crw_navigation_item_storage.h"
 #include "ios/web/public/session/crw_session_storage.h"
 #include "ios/web/public/thread/web_thread.h"
 #include "ios/web/public/web_state_observer.h"
 #include "ios/web/web_state/ui/crw_web_view_navigation_proxy.h"
 #include "ios/web/web_state/web_state_impl.h"
-
-#include "net/base/mac/url_conversions.h"
+#include "net/base/apple/url_conversions.h"
 #include "url/gurl.h"
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
@@ -40,13 +38,13 @@ NativeWebState::NativeWebState(Browser* browser, bool off_the_record)
       SyncedWindowDelegateBrowserAgent::FromBrowser(browser_)->GetSessionId();
 
   // Create BrowserState
-  ChromeBrowserState* browser_state = browser->GetBrowserState();
+  ProfileIOS* profile = browser->GetProfile();
   if (off_the_record) {
-    browser_state = browser_state->GetOffTheRecordChromeBrowserState();
+    profile = profile->GetOffTheRecordProfile();
   }
 
   // Create WebState with parameters
-  web::WebState::CreateParams create_params(browser_state);
+  web::WebState::CreateParams create_params(profile);
   create_params.last_active_time = base::Time::Now();
   auto web_state = web::WebState::Create(create_params);
   web_state->ForceRealized();
@@ -57,8 +55,9 @@ NativeWebState::NativeWebState(Browser* browser, bool off_the_record)
 
   // Insert the WebState into the Browser && Activate it
   browser_->GetWebStateList()->InsertWebState(
-      browser_->GetWebStateList()->count(), std::move(web_state),
-      WebStateList::INSERT_ACTIVATE, WebStateOpener());
+      std::move(web_state), WebStateList::InsertionParams::AtIndex(
+                                browser_->GetWebStateList()->count())
+                                .Activate());
 
   // Finally Set the WebState WindowID
   IOSChromeSessionTabHelper::FromWebState(web_state_)->SetWindowID(session_id_);

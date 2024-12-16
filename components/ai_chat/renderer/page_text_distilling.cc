@@ -6,23 +6,45 @@
 #include "brave/components/ai_chat/renderer/page_text_distilling.h"
 
 #include <iterator>
+#include <map>
+#include <memory>
 #include <optional>
 #include <queue>
 #include <string>
+#include <string_view>
+#include <type_traits>
 #include <utility>
 #include <vector>
 
+#include "base/compiler_specific.h"
 #include "base/containers/contains.h"
+#include "base/containers/fixed_flat_map.h"
+#include "base/containers/span.h"
+#include "base/functional/bind.h"
+#include "base/functional/callback.h"
+#include "base/memory/raw_ptr.h"
+#include "base/numerics/safe_math.h"
 #include "base/ranges/algorithm.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"
-#include "brave/components/ai_chat/core/common/mojom/page_content_extractor.mojom.h"
+#include "base/values.h"
+#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/resources/custom_site_distiller_scripts/grit/custom_site_distiller_scripts_generated.h"
 #include "content/public/renderer/render_frame.h"
+#include "net/base/registry_controlled_domains/registry_controlled_domain.h"
+#include "third_party/blink/public/mojom/script/script_evaluation_params.mojom-shared.h"
+#include "third_party/blink/public/platform/web_string.h"
+#include "third_party/blink/public/web/web_document.h"
 #include "third_party/blink/public/web/web_local_frame.h"
 #include "third_party/blink/public/web/web_script_source.h"
+#include "ui/accessibility/ax_enums.mojom-shared.h"
+#include "ui/accessibility/ax_mode.h"
 #include "ui/accessibility/ax_node.h"
+#include "ui/accessibility/ax_node_data.h"
 #include "ui/accessibility/ax_tree.h"
+#include "ui/accessibility/ax_tree_update.h"
+#include "ui/base/resource/resource_bundle.h"
 
 namespace ai_chat {
 
@@ -46,10 +68,10 @@ static const ax::mojom::Role kRolesToSkip[]{
     ax::mojom::Role::kComplementary,
     ax::mojom::Role::kContentInfo,
     ax::mojom::Role::kFooter,
-    ax::mojom::Role::kFooterAsNonLandmark,
     ax::mojom::Role::kImage,
     ax::mojom::Role::kLabelText,
     ax::mojom::Role::kNavigation,
+    ax::mojom::Role::kSectionFooter,
     /* input elements */
     ax::mojom::Role::kTextField,
     ax::mojom::Role::kTextFieldWithComboBox,
@@ -114,7 +136,7 @@ void AddTextNodesToVector(const ui::AXNode* node,
     return;
   }
 
-  for (const auto* child : node->children()) {
+  for (const ui::AXNode* child : node->children()) {
     AddTextNodesToVector(child, strings);
   }
 }
@@ -123,8 +145,24 @@ void AddTextNodesToVector(const ui::AXNode* node,
 
 void DistillPageText(
     content::RenderFrame* render_frame,
+    int32_t global_world_id,
     int32_t isolated_world_id,
     base::OnceCallback<void(const std::optional<std::string>&)> callback) {
+  if (ai_chat::features::IsCustomSiteDistillerScriptsEnabled()) {
+    std::string host =
+        render_frame->GetWebFrame()->GetSecurityOrigin().Host().Utf8();
+    std::optional<std::pair<std::string, bool>> site_script =
+        LoadSiteScriptForHost(host);
+
+    if (site_script.has_value()) {
+      int32_t world_id =
+          site_script->second ? global_world_id : isolated_world_id;
+      DistillPageTextViaSiteScript(render_frame, site_script->first, world_id,
+                                   std::move(callback));
+      return;
+    }
+  }
+
   auto snapshotter = render_frame->CreateAXTreeSnapshotter(
       ui::AXMode::kWebContents | ui::AXMode::kHTML | ui::AXMode::kScreenReader);
   ui::AXTreeUpdate snapshot;
@@ -174,7 +212,7 @@ void DistillPageText(
         };
 
     render_frame->GetWebFrame()->RequestExecuteScript(
-        isolated_world_id, base::make_span(&source, 1u),
+        isolated_world_id, base::span_from_ref(source),
         blink::mojom::UserActivationOption::kDoNotActivate,
         blink::mojom::EvaluationTiming::kAsynchronous,
         blink::mojom::LoadEventBlockingOption::kDoNotBlock,
@@ -186,6 +224,79 @@ void DistillPageText(
   }
 
   std::move(callback).Run(contents_text);
+}
+
+void DistillPageTextViaSiteScript(
+    content::RenderFrame* render_frame,
+    std::string_view script_content,
+    int32_t world_id,
+    base::OnceCallback<void(const std::optional<std::string>&)> callback) {
+  CHECK(ai_chat::features::IsCustomSiteDistillerScriptsEnabled());
+  // TODO (jonathansampson): Wrap scripts at build/transpile-time instead
+  // This produces an injected script that resembles the following:
+  // (() => {
+  //   function distillPrimaryColumn (level) { ... }
+  //   function distill(level) {
+  //     return distillPrimaryColumn(level);
+  //   }
+  //   return distill(3);
+  // })())
+  std::string script = absl::StrFormat(
+      R"((()=> {
+        %s
+        return distill(3);
+      })())",
+      script_content);
+
+  blink::WebScriptSource source =
+      blink::WebScriptSource(blink::WebString::FromUTF8(script));
+
+  auto on_script_executed =
+      [](base::OnceCallback<void(const std::optional<std::string>&)> callback,
+         std::optional<base::Value> value, base::TimeTicks start_time) {
+        if (value && value->is_string() && !value->GetString().empty()) {
+          std::move(callback).Run(value->GetString());
+        } else {
+          std::move(callback).Run({});
+        }
+      };
+
+  // Execute the combined script as a single source
+  render_frame->GetWebFrame()->RequestExecuteScript(
+      world_id, base::span_from_ref(source),
+      blink::mojom::UserActivationOption::kDoNotActivate,
+      blink::mojom::EvaluationTiming::kAsynchronous,
+      blink::mojom::LoadEventBlockingOption::kDoNotBlock,
+      base::BindOnce(on_script_executed, std::move(callback)),
+      blink::BackForwardCacheAware::kAllow,
+      blink::mojom::WantResultOption::kWantResult,
+      // Because we are using a promise to resolve the result, we will use the
+      // `kAwait` option to ensure the promise is resolved before the callback
+      // is invoked.
+      blink::mojom::PromiseResultOption::kAwait);
+}
+
+std::optional<std::pair<std::string, bool>> LoadSiteScriptForHost(
+    std::string_view host) {
+  static constexpr auto kHostToScriptResource =
+      base::MakeFixedFlatMap<std::string_view, std::pair<int, bool>>({
+          {"github.com",
+           {IDR_CUSTOM_SITE_DISTILLER_SCRIPTS_GITHUB_COM_BUNDLE_JS, false}},
+          {"x.com", {IDR_CUSTOM_SITE_DISTILLER_SCRIPTS_X_COM_BUNDLE_JS, true}},
+      });
+
+  auto it = kHostToScriptResource.find(
+      net::registry_controlled_domains::GetDomainAndRegistry(
+          host, net::registry_controlled_domains::INCLUDE_PRIVATE_REGISTRIES));
+
+  if (it == kHostToScriptResource.end()) {
+    return std::nullopt;
+  }
+
+  return std::make_optional(std::make_pair(
+      ui::ResourceBundle::GetSharedInstance().LoadDataResourceString(
+          it->second.first),
+      it->second.second));
 }
 
 }  // namespace ai_chat

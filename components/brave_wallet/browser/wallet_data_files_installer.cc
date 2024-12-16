@@ -11,6 +11,8 @@
 #include <utility>
 #include <vector>
 
+#include "base/compiler_specific.h"
+#include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
 #include "base/logging.h"
 #include "base/values.h"
@@ -22,6 +24,7 @@
 #include "brave/components/brave_wallet/common/common_utils.h"
 #include "components/component_updater/component_installer.h"
 #include "components/prefs/pref_service.h"
+#include "components/update_client/crx_update_item.h"
 #include "crypto/sha2.h"
 
 namespace brave_wallet {
@@ -38,8 +41,8 @@ const uint8_t kWalletDataFilesSha2Hash[] = {
     0x11, 0x2a, 0xa2, 0x38, 0x4f, 0x4,  0x24, 0x56, 0x5d, 0x81, 0x4c,
     0x49, 0xb8, 0x4c, 0x9d, 0x8e, 0xeb, 0xb3, 0xbd, 0x55, 0xdc, 0xf7,
     0xc0, 0x3e, 0x9b, 0x2a, 0xc2, 0xf5, 0x6a, 0x37, 0x71, 0x67};
-const char kWalletDataFilesDisplayName[] = "Brave Wallet data files";
-const char kComponentId[] = "bbckkcdiepaecefgfnibemejliemjnio";
+constexpr char kWalletDataFilesDisplayName[] = "Brave Wallet data files";
+constexpr char kComponentId[] = "bbckkcdiepaecefgfnibemejliemjnio";
 
 static_assert(std::size(kWalletDataFilesSha2Hash) == crypto::kSHA256Length,
               "Wrong hash length");
@@ -71,6 +74,7 @@ class WalletDataFilesInstallerPolicy
   void GetHash(std::vector<uint8_t>* hash) const override;
   std::string GetName() const override;
   update_client::InstallerAttributes GetInstallerAttributes() const override;
+  bool IsBraveComponent() const override;
 
   WalletDataFilesInstallerPolicy(const WalletDataFilesInstallerPolicy&) =
       delete;
@@ -119,8 +123,7 @@ base::FilePath WalletDataFilesInstallerPolicy::GetRelativeInstallDir() const {
 }
 
 void WalletDataFilesInstallerPolicy::GetHash(std::vector<uint8_t>* hash) const {
-  hash->assign(kWalletDataFilesSha2Hash,
-               kWalletDataFilesSha2Hash + std::size(kWalletDataFilesSha2Hash));
+  *hash = base::ToVector(kWalletDataFilesSha2Hash);
 }
 
 std::string WalletDataFilesInstallerPolicy::GetName() const {
@@ -130,6 +133,10 @@ std::string WalletDataFilesInstallerPolicy::GetName() const {
 update_client::InstallerAttributes
 WalletDataFilesInstallerPolicy::GetInstallerAttributes() const {
   return update_client::InstallerAttributes();
+}
+
+bool WalletDataFilesInstallerPolicy::IsBraveComponent() const {
+  return true;
 }
 
 std::optional<base::Version> GetLastInstalledWalletVersion() {
@@ -168,7 +175,7 @@ void WalletDataFilesInstaller::RegisterWalletDataFilesComponentInternal(
   installer->Register(
       cus, base::BindOnce([]() {
         brave_component_updater::BraveOnDemandUpdater::GetInstance()
-            ->OnDemandUpdate(kComponentId);
+            ->EnsureInstalled(kComponentId);
       }));
 }
 
@@ -209,14 +216,12 @@ void WalletDataFilesInstaller::OnComponentReady(const base::FilePath& path) {
 }
 
 void WalletDataFilesInstaller::OnEvent(
-    update_client::UpdateClient::Observer::Events event,
-    const std::string& id) {
-  if (id != kComponentId) {
+    const update_client::CrxUpdateItem& item) {
+  if (item.id != kComponentId) {
     return;
   }
 
-  if (event ==
-      update_client::UpdateClient::Observer::Events::COMPONENT_UPDATE_ERROR) {
+  if (item.state == update_client::ComponentState::kUpdateError) {
     if (install_callback_) {
       std::move(install_callback_).Run();
     }

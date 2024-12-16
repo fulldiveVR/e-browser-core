@@ -105,7 +105,7 @@ class P3AMessageManagerTest : public testing::Test,
 
           std::string response = "{}";
 
-          if (base::StartsWith(request.url.spec(), kTestStarRandomnessHost)) {
+          if (request.url.spec().starts_with(kTestStarRandomnessHost)) {
             MetricLogType log_type = ValidateURLAndGetMetricLogType(
                 request.url, kTestStarRandomnessHost);
 
@@ -116,14 +116,14 @@ class P3AMessageManagerTest : public testing::Test,
                    "}"});
             } else if (interceptor_invalid_response_from_randomness_non_json_) {
               response = "invalid response that is not json";
-            } else if (base::EndsWith(request.url.spec(), "/info")) {
+            } else if (request.url.spec().ends_with("/info")) {
               EXPECT_EQ(request.method, net::HttpRequestHeaders::kGetMethod);
               std::string next_epoch_time_str =
                   TimeFormatAsIso8601(next_epoch_time_);
               response = HandleInfoRequest(request, log_type, current_epoch_,
                                            next_epoch_time_str.c_str());
               info_request_made_[log_type] = true;
-            } else if (base::EndsWith(request.url.spec(), "/randomness")) {
+            } else if (request.url.spec().ends_with("/randomness")) {
               response = HandleRandomnessRequest(request, current_epoch_);
               url_loader_factory_.AddResponse(
                   request.url.spec(), response,
@@ -141,8 +141,8 @@ class P3AMessageManagerTest : public testing::Test,
           } else if (request.url == p3a_config_.p2a_json_upload_url) {
             EXPECT_EQ(request.method, net::HttpRequestHeaders::kPostMethod);
             StoreJsonMetricInMap(request, true);
-          } else if (base::StartsWith(request.url.spec(),
-                                      std::string(kTestStarUploadHost))) {
+          } else if (request.url.spec().starts_with(
+                         std::string(kTestStarUploadHost))) {
             std::string log_type_str = request.url.path();
             EXPECT_TRUE(base::TrimString(log_type_str, "/", &log_type_str));
             std::optional<MetricLogType> log_type =
@@ -161,7 +161,7 @@ class P3AMessageManagerTest : public testing::Test,
     message_manager_ = std::make_unique<MessageManager>(
         *local_state_, &p3a_config_, *this, "release", "2099-01-01");
 
-    message_manager_->Init(shared_url_loader_factory_);
+    message_manager_->Start(shared_url_loader_factory_);
 
     task_environment_.RunUntilIdle();
   }
@@ -188,8 +188,8 @@ class P3AMessageManagerTest : public testing::Test,
   std::vector<std::string> GetTestHistogramNames(MetricLogType log_type,
                                                  size_t p3a_count,
                                                  size_t p2a_count) {
-    const std::string_view* histogram_names_begin;
-    const std::string_view* histogram_names_end;
+    auto histogram_names_begin = kCollectedExpressHistograms.cbegin();
+    auto histogram_names_end = kCollectedExpressHistograms.cend();
     std::vector<std::string> result;
     size_t p3a_i = 0;
     size_t p2a_i = 0;
@@ -209,7 +209,7 @@ class P3AMessageManagerTest : public testing::Test,
       default:
         NOTREACHED();
     }
-    for (auto* histogram_name_i = histogram_names_begin;
+    for (auto histogram_name_i = histogram_names_begin;
          histogram_name_i != histogram_names_end; histogram_name_i++) {
       if (histogram_name_i->rfind(kP2APrefix, 0) == 0) {
         if (p2a_i < p2a_count) {
@@ -217,7 +217,7 @@ class P3AMessageManagerTest : public testing::Test,
           p2a_i++;
         }
       } else if (p3a_i < p3a_count &&
-                 (base::StartsWith(*histogram_name_i, "Brave.Core") ||
+                 (histogram_name_i->starts_with("Brave.Core") ||
                   log_type == MetricLogType::kExpress)) {
         result.push_back(std::string(*histogram_name_i));
         p3a_i++;
@@ -661,6 +661,7 @@ TEST_F(P3AMessageManagerTest, ShouldNotSendIfDisabled) {
     }
 
     local_state_->SetBoolean(kP3AEnabled, false);
+    message_manager_->Stop();
 
     task_environment_.FastForwardBy(
         base::Seconds(kUploadIntervalSeconds * 100));
@@ -678,6 +679,20 @@ TEST_F(P3AMessageManagerTest, ShouldNotSendIfDisabled) {
     EXPECT_EQ(points_requests_made_[log_type], 0U);
     EXPECT_EQ(p3a_constellation_sent_messages_[log_type].size(), 0U);
   }
+}
+
+TEST_F(P3AMessageManagerTest, ShouldNotSendIfStopped) {
+  InitFeatures(true);
+  SetUpManager();
+
+  message_manager_->Stop();
+
+  task_environment_.FastForwardBy(base::Seconds(kUploadIntervalSeconds * 100));
+
+  EXPECT_TRUE(points_requests_made_.empty());
+  EXPECT_TRUE(p3a_json_sent_metrics_.empty());
+  EXPECT_TRUE(p2a_json_sent_metrics_.empty());
+  EXPECT_TRUE(p3a_constellation_sent_messages_.empty());
 }
 
 }  // namespace p3a

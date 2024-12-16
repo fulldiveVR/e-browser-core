@@ -6,6 +6,7 @@
 #include <memory>
 
 #include "base/path_service.h"
+#include "base/strings/utf_string_conversions.h"
 #include "brave/components/constants/brave_paths.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
@@ -20,24 +21,16 @@
 
 namespace {
 
-const char kEmbeddedTestServerDirectory[] = "window_name";
-const char kWindowNameScript[] = "window.name";
-const char kLinkID[] = "clickme";
+constexpr char kEmbeddedTestServerDirectory[] = "window_name";
+constexpr char kWindowNameScript[] = "window.name";
+constexpr char kLinkID[] = "clickme";
 
 }  // namespace
 
 class BraveWindowNameBrowserTest : public InProcessBrowserTest {
  public:
   BraveWindowNameBrowserTest()
-      : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
-    https_server_.SetSSLConfig(net::EmbeddedTestServer::CERT_TEST_NAMES);
-    brave::RegisterPathProvider();
-    base::FilePath test_data_dir;
-    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
-    test_data_dir = test_data_dir.AppendASCII(kEmbeddedTestServerDirectory);
-    https_server_.ServeFilesFromDirectory(test_data_dir);
-    EXPECT_TRUE(https_server_.Start());
-  }
+      : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {}
 
   BraveWindowNameBrowserTest(const BraveWindowNameBrowserTest&) = delete;
   BraveWindowNameBrowserTest& operator=(const BraveWindowNameBrowserTest&) =
@@ -47,6 +40,12 @@ class BraveWindowNameBrowserTest : public InProcessBrowserTest {
 
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
+    https_server_.SetSSLConfig(net::EmbeddedTestServer::CERT_TEST_NAMES);
+    base::FilePath test_data_dir;
+    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
+    test_data_dir = test_data_dir.AppendASCII(kEmbeddedTestServerDirectory);
+    https_server_.ServeFilesFromDirectory(test_data_dir);
+    EXPECT_TRUE(https_server_.Start());
     host_resolver()->AddRule("*", "127.0.0.1");
   }
 
@@ -62,7 +61,7 @@ class BraveWindowNameBrowserTest : public InProcessBrowserTest {
     frame->ExecuteJavaScriptForTests(
         base::ASCIIToUTF16("document.getElementById('" + id + "').href='" +
                            href + "';\n"),
-        base::NullCallback());
+        base::NullCallback(), content::ISOLATED_WORLD_ID_GLOBAL);
   }
 
   void Click(const std::string& id) {
@@ -70,7 +69,7 @@ class BraveWindowNameBrowserTest : public InProcessBrowserTest {
     content::RenderFrameHost* frame = web_contents()->GetPrimaryMainFrame();
     frame->ExecuteJavaScriptForTests(
         base::ASCIIToUTF16("document.getElementById('" + id + "').click();\n"),
-        base::NullCallback());
+        base::NullCallback(), content::ISOLATED_WORLD_ID_GLOBAL);
     observer.WaitForNavigationFinished();
   }
 };

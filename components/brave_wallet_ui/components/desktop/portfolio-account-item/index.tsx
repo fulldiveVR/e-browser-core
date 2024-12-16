@@ -16,8 +16,10 @@ import { useOnClickOutside } from '../../../common/hooks/useOnClickOutside'
 // Utils
 import { reduceAddress } from '../../../utils/reduce-address'
 import Amount from '../../../utils/amount'
-import { getPriceIdForToken } from '../../../utils/api-utils'
-import { computeFiatAmount } from '../../../utils/pricing-utils'
+import {
+  computeFiatAmount,
+  getPriceIdForToken
+} from '../../../utils/pricing-utils'
 import { makeAccountRoute } from '../../../utils/routes-utils'
 import { getIsRewardsAccount } from '../../../utils/rewards_utils'
 import {
@@ -27,9 +29,10 @@ import { getLocale } from '../../../../common/locale'
 
 // Components
 import WithHideBalancePlaceholder from '../with-hide-balance-placeholder'
-import { CopyTooltip } from '../../shared/copy-tooltip/copy-tooltip'
 import { PortfolioAccountMenu } from '../wallet-menus/portfolio-account-menu'
 import { RewardsMenu } from '../wallet-menus/rewards_menu'
+import { PopupModal } from '../popup-modals/index'
+import { DepositModal } from '../popup-modals/account-settings-modal/account-settings-modal'
 
 // Styled Components
 import {
@@ -46,21 +49,19 @@ import { querySubscriptionOptions60s } from '../../../common/slices/constants'
 // Styled Components
 import {
   StyledWrapper,
-  AssetBalanceText,
-  AccountNameButton,
-  AccountAddressButton,
-  AccountAndAddress,
-  BalanceColumn,
-  FiatBalanceText,
-  NameAndIcon,
   AccountMenuWrapper,
   AccountMenuButton,
   AccountMenuIcon,
-  RightSide,
-  CopyIcon,
-  AddressAndButtonRow
+  AccountButton
 } from './style'
-import { BraveRewardsIndicator, VerticalSpacer } from '../../shared/style'
+import {
+  BraveRewardsIndicator,
+  VerticalSpacer,
+  Text,
+  Row,
+  Column,
+  VerticalDivider
+} from '../../shared/style'
 
 interface Props {
   account: BraveWallet.AccountInfo
@@ -91,9 +92,11 @@ export const PortfolioAccountItem = (props: Props) => {
 
   // State
   const [showAccountMenu, setShowAccountMenu] = React.useState<boolean>(false)
+  const [showDepositModal, setShowDepositModal] = React.useState<boolean>(false)
 
   // Refs
   const accountMenuRef = React.useRef<HTMLDivElement>(null)
+  const depositModalRef = React.useRef<HTMLDivElement>(null)
 
   // Memos & Computed
   const isRewardsAccount = getIsRewardsAccount(account.accountId)
@@ -143,64 +146,97 @@ export const PortfolioAccountItem = (props: Props) => {
   }, [history, account])
 
   const onViewAccountOnBlockExplorer = React.useCallback(
-    onClickViewOnBlockExplorer('address', account.address),
-    [account]
+    () => onClickViewOnBlockExplorer('address', account.address)(),
+    [account.address, onClickViewOnBlockExplorer]
   )
 
   const onHideAccountMenu = React.useCallback(() => {
     setShowAccountMenu(false)
   }, [])
 
+  const onShowDepositModal = () => {
+    setShowDepositModal(true)
+    setShowAccountMenu(false)
+  }
+
   // Hooks
   useOnClickOutside(accountMenuRef, onHideAccountMenu, showAccountMenu)
+  useOnClickOutside(
+    depositModalRef,
+    () => setShowDepositModal(false),
+    showDepositModal
+  )
 
   return (
-    <StyledWrapper>
-      <NameAndIcon>
-        <CreateAccountIcon
-          size='big'
-          marginRight={12}
-          account={account}
-          externalProvider={externalProvider}
-        />
-        <AccountAndAddress>
-          <AccountNameButton onClick={onSelectAccount}>
-            {account.name}
-          </AccountNameButton>
-          {isRewardsAccount && (
-            <>
-              <VerticalSpacer space='6px' />
-              <BraveRewardsIndicator>
-                {getLocale('braveWalletBraveRewardsTitle')}
-              </BraveRewardsIndicator>
-            </>
-          )}
-          {account.address && !isRewardsAccount && (
-            <AddressAndButtonRow>
-              <AccountAddressButton onClick={onSelectAccount}>
-                {reduceAddress(account.address)}
-              </AccountAddressButton>
-              <CopyTooltip text={account.address}>
-                <CopyIcon />
-              </CopyTooltip>
-            </AddressAndButtonRow>
-          )}
-        </AccountAndAddress>
-      </NameAndIcon>
-      <RightSide>
-        <BalanceColumn>
-          <WithHideBalancePlaceholder
-            size='small'
-            hideBalances={hideBalances ?? false}
+    <>
+      <StyledWrapper isRewardsAccount={isRewardsAccount}>
+        <AccountButton
+          onClick={onSelectAccount}
+          disabled={isRewardsAccount}
+        >
+          <Row width='unset'>
+            <CreateAccountIcon
+              size='huge'
+              marginRight={12}
+              account={account}
+              externalProvider={externalProvider}
+            />
+            <Column alignItems='flex-start'>
+              <Text
+                textSize='14px'
+                isBold={true}
+                textColor='primary'
+                textAlign='left'
+              >
+                {account.name}
+              </Text>
+              {isRewardsAccount && (
+                <>
+                  <VerticalSpacer space='6px' />
+                  <BraveRewardsIndicator>
+                    {getLocale('braveWalletBraveRewardsTitle')}
+                  </BraveRewardsIndicator>
+                </>
+              )}
+              {account.address && !isRewardsAccount && (
+                <Text
+                  textSize='12px'
+                  isBold={false}
+                  textColor='primary'
+                  textAlign='left'
+                >
+                  {reduceAddress(account.address)}
+                </Text>
+              )}
+            </Column>
+          </Row>
+          <Column
+            alignItems='flex-end'
+            margin='0px 12px 0px 0px'
           >
-            <AssetBalanceText>
-              {`${formattedAssetBalance} ${asset.symbol}`}
-            </AssetBalanceText>
-            <FiatBalanceText>
-              {fiatBalance.formatAsFiat(defaultFiatCurrency)}
-            </FiatBalanceText>
-          </WithHideBalancePlaceholder>
-        </BalanceColumn>
+            <WithHideBalancePlaceholder
+              size='small'
+              hideBalances={hideBalances ?? false}
+            >
+              <Text
+                textSize='14px'
+                isBold={true}
+                textColor='primary'
+                textAlign='right'
+              >
+                {`${formattedAssetBalance} ${asset.symbol}`}
+              </Text>
+              <Text
+                textSize='12px'
+                isBold={false}
+                textColor='secondary'
+                textAlign='right'
+              >
+                {fiatBalance.formatAsFiat(defaultFiatCurrency)}
+              </Text>
+            </WithHideBalancePlaceholder>
+          </Column>
+        </AccountButton>
         <AccountMenuWrapper ref={accountMenuRef}>
           <AccountMenuButton
             onClick={() => setShowAccountMenu((prev) => !prev)}
@@ -223,13 +259,32 @@ export const PortfolioAccountItem = (props: Props) => {
                       ? showSellModal
                       : undefined
                   }
+                  onClickDeposit={onShowDepositModal}
                 />
               )}
             </>
           )}
         </AccountMenuWrapper>
-      </RightSide>
-    </StyledWrapper>
+      </StyledWrapper>
+
+      {showDepositModal && (
+        <PopupModal
+          title={getLocale('braveWalletDepositCryptoButton')}
+          onClose={() => setShowDepositModal(false)}
+          ref={depositModalRef}
+        >
+          <VerticalDivider />
+          <Column
+            fullHeight={true}
+            fullWidth={true}
+            justifyContent='flex-start'
+            padding='20px 15px'
+          >
+            <DepositModal selectedAccount={account} />
+          </Column>
+        </PopupModal>
+      )}
+    </>
   )
 }
 

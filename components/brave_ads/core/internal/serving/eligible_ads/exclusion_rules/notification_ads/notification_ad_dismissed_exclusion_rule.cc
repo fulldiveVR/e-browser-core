@@ -8,6 +8,7 @@
 #include <iterator>
 #include <utility>
 
+#include "base/check.h"
 #include "base/ranges/algorithm.h"
 #include "base/strings/string_util.h"
 #include "base/time/time.h"
@@ -22,9 +23,10 @@ bool DoesRespectCap(const AdEventList& ad_events) {
   int count = 0;
 
   for (const auto& ad_event : ad_events) {
-    if (ad_event.confirmation_type == ConfirmationType::kClicked) {
+    if (ad_event.confirmation_type == mojom::ConfirmationType::kClicked) {
       count = 0;
-    } else if (ad_event.confirmation_type == ConfirmationType::kDismissed) {
+    } else if (ad_event.confirmation_type ==
+               mojom::ConfirmationType::kDismissed) {
       ++count;
       if (count >= 2) {
         // An ad was dismissed two or more times in a row without being clicked,
@@ -52,16 +54,19 @@ AdEventList FilterAdEvents(const AdEventList& ad_events,
   base::ranges::copy_if(
       ad_events, std::back_inserter(filtered_ad_events),
       [now, time_constraint, &creative_ad](const AdEventInfo& ad_event) {
-        return (ad_event.confirmation_type == ConfirmationType::kClicked ||
-                ad_event.confirmation_type == ConfirmationType::kDismissed) &&
-               ad_event.type == AdType::kNotificationAd &&
+        CHECK(ad_event.created_at);
+
+        return (ad_event.confirmation_type ==
+                    mojom::ConfirmationType::kClicked ||
+                ad_event.confirmation_type ==
+                    mojom::ConfirmationType::kDismissed) &&
+               ad_event.type == mojom::AdType::kNotificationAd &&
                ad_event.campaign_id == creative_ad.campaign_id &&
-               now - ad_event.created_at < time_constraint;
+               now - *ad_event.created_at < time_constraint;
       });
 
   return filtered_ad_events;
 }
-
 }  // namespace
 
 NotificationAdDismissedExclusionRule::NotificationAdDismissedExclusionRule(

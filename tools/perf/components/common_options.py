@@ -29,6 +29,7 @@ class PerfMode(Enum):
   RUN = 1
   COMPARE = 2
   UPDATE_PROFILE = 3
+  RECORD_WPR = 4
 
 class CommonOptions:
   mode: PerfMode = PerfMode.RUN
@@ -40,13 +41,20 @@ class CommonOptions:
   working_directory: str = ''
   target_os: str = PerfBenchmark.FixupTargetOS(sys.platform)
   target_arch: str = ''
+  reboot_android: bool = False
 
-  do_run_tests: bool = True
   do_report: bool = False
+  upload: bool = True
+  upload_branch: Optional[str] = None
   report_on_failure: bool = False
   local_run: bool = False
+  retry_count = 2
   targets: List[str] = []
   config: str = ''
+
+  @property
+  def is_android(self) -> bool:
+    return self.target_os == 'android'
 
   @classmethod
   def add_parser_args(cls, parser: argparse.ArgumentParser) -> None:
@@ -65,11 +73,11 @@ class CommonOptions:
     parser.add_argument(
         '--mode',
         type=str,
-        choices=['run', 'compare', 'update_profile'],
+        choices=['run', 'compare', 'update-profile', 'record-wpr'],
         help='The operating mode.' +
         '"run" is run the tests and report to the backend (the default).' +
         '"compare" is evaluate a few configurations with a local HTML output.' +
-        '"update_profile" is a tool to make an updated profile archive.')
+        '"update-profile" is a tool to update and upload profile archives.')
     parser.add_argument(
         '--working-directory',
         type=str,
@@ -88,6 +96,10 @@ class CommonOptions:
                         choices=['windows', 'mac', 'linux', 'android'])
     parser.add_argument('--target-arch', type=str, choices=['x64', 'arm64'])
     parser.add_argument(
+        '--reboot-android',
+        action='store_true',
+        help='Reboot the Android device before running the tests')
+    parser.add_argument(
         '--local-run',
         action='store_true',
         help='Store results locally as html, don\'t report to the dashboard')
@@ -103,18 +115,29 @@ class CommonOptions:
                         type=str,
                         help='(with config=auto) The name of machine on CI.'
                         'Used select the config by machine-id + chromium')
+    parser.add_argument('--retry-count',
+                        type=int,
+                        default=2,
+                        help='Number of retries for a failed benchmark')
     parser.add_argument('--no-report',
                         action='store_true',
                         help='[ci-mode] Don\'t to the dashboard')
     parser.add_argument(
-        '--report-only',
-        action='store_true',
-        help='[ci-mode] Don\'t run tests, only report the previous run'
-        'to the dashboard.')
-    parser.add_argument(
         '--report-on-failure',
         action='store_true',
         help='[ci-mode] Report to the dashboard despite test failures')
+    parser.add_argument(
+        '--upload',
+        action='store_true',
+        default=True,
+        help=(
+            '[For profile updating] Upload the updated profile to cloud storage'
+            + 'and push the changes to brave-core'))
+    parser.add_argument(
+        '--upload-branch',
+        type=str,
+        help=('[For profile updating] A target brave-core branch to push the ' +
+              'changes. update-profiles-<version> is used by default'))
 
     parser.add_argument('--more-help',
                         action='help',
@@ -135,8 +158,10 @@ class CommonOptions:
       options.mode = PerfMode.RUN
     elif args.mode == 'compare' or (args.mode is None and empty_target):
       options.mode = PerfMode.COMPARE
-    elif args.mode == 'update_profile':
+    elif args.mode == 'update-profile':
       options.mode = PerfMode.UPDATE_PROFILE
+    elif args.mode == 'record-wpr':
+      options.mode = PerfMode.RECORD_WPR
 
     options.verbose = args.verbose
     options.ci_mode = args.ci_mode
@@ -156,13 +181,19 @@ class CommonOptions:
       else:
         options.target_arch = 'x64'
 
+    options.reboot_android = args.reboot_android or args.ci_mode
+
     options.report_on_failure = args.report_on_failure
     if args.targets is not None:
       options.targets = args.targets.split(',')
 
     options.local_run = args.local_run or options.mode != PerfMode.RUN
-    options.do_run_tests = not args.report_only
+    if args.retry_count is not None:
+      options.retry_count = args.retry_count
+
     options.do_report = (not args.no_report and not args.local_run
                          and options.mode == PerfMode.RUN)
+    options.upload = args.upload
+    options.upload_branch = args.upload_branch
 
     return options

@@ -17,12 +17,13 @@ import { getLocale } from '../../../../../common/locale'
 import { Row } from '../../../shared/style'
 import {
   WarningCollapse,
-  WarningTitle,
+  AlertTitle,
   WarningsList,
   WarningCloseIcon,
   WarningButton,
   DismissButton,
-  FullWidth
+  FullWidth,
+  CollapseTitle
 } from './tx_warnings.styles'
 
 export function TxWarningBanner({
@@ -39,41 +40,37 @@ export function TxWarningBanner({
   return (
     <FullWidth>
       <Alert
-        type={isCritical ? 'error' : 'warning'}
-        mode='simple'
+        type={retrySimulation ? 'info' : isCritical ? 'error' : 'warning'}
       >
         <div slot='icon'>{/* No Icon */}</div>
 
-        {retrySimulation ? (
-          <WarningTitle isCritical={isCritical}>
-            {getLocale('braveWalletTransactionPreviewFailed')}{' '}
-            <Button
-              kind='plain'
-              onClick={retrySimulation}
-            >
-              {getLocale('braveWalletButtonRetry')}
-            </Button>
-          </WarningTitle>
-        ) : (
-          <WarningTitle
-            isBold
-            isCritical={isCritical}
-          >
-            {children}
-          </WarningTitle>
-        )}
-
-        {onDismiss && (
-          <div slot='actions'>
-            <WarningButton
-              kind='plain'
-              onClick={onDismiss}
-              isCritical={isCritical}
-            >
-              <WarningCloseIcon />
-            </WarningButton>
-          </div>
-        )}
+        <Row justifyContent='space-between'>
+          {retrySimulation ? (
+            <AlertTitle isInfo>
+              {getLocale('braveWalletTransactionPreviewFailed')}{' '}
+              <Button
+                kind='plain'
+                onClick={retrySimulation}
+              >
+                <u>{getLocale('braveWalletButtonRetry')}</u>
+              </Button>
+            </AlertTitle>
+          ) : (
+            <AlertTitle isCritical={isCritical}>{children}</AlertTitle>
+          )}
+          {onDismiss && (
+            <div>
+              <WarningButton
+                kind='plain'
+                onClick={onDismiss}
+                isInfo={!!retrySimulation}
+                isCritical={isCritical}
+              >
+                <WarningCloseIcon />
+              </WarningButton>
+            </div>
+          )}
+        </Row>
       </Alert>
     </FullWidth>
   )
@@ -83,8 +80,10 @@ export function TransactionWarnings({
   isWarningCollapsed,
   setIsWarningCollapsed,
   warnings,
-  onDismiss
+  onDismiss,
+  classifyAs
 }: {
+  classifyAs: 'risks' | 'issues'
   warnings: Array<Pick<BraveWallet.BlowfishWarning, 'message' | 'severity'>>
   isWarningCollapsed: boolean
   setIsWarningCollapsed?: React.Dispatch<React.SetStateAction<boolean>>
@@ -127,16 +126,16 @@ export function TransactionWarnings({
             : undefined
         }
       >
-        <WarningTitle
+        <CollapseTitle
           slot='title'
           isCritical={hasCriticalWarnings}
-          isBold
         >
-          {getLocale('braveWalletFoundRisks').replace(
-            '$1',
-            warnings.length.toString()
-          )}
-        </WarningTitle>
+          {getLocale(
+            classifyAs === 'risks'
+              ? 'braveWalletFoundRisks'
+              : 'braveWalletFoundIssues'
+          ).replace('$1', warnings.length.toString())}
+        </CollapseTitle>
 
         <div>
           <WarningsList>

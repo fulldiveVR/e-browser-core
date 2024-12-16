@@ -9,10 +9,12 @@
 
 #include "base/feature_list.h"
 #include "base/ranges/algorithm.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/renderer/page_content_extractor.h"
+#include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search/renderer/brave_search_render_frame_observer.h"
-#include "brave/components/brave_shields/common/features.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/cosmetic_filters/renderer/cosmetic_filters_js_render_frame_observer.h"
@@ -22,11 +24,15 @@
 #include "brave/components/skus/common/features.h"
 #include "brave/components/skus/renderer/skus_render_frame_observer.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
+#include "brave/renderer/brave_render_frame_observer.h"
 #include "brave/renderer/brave_render_thread_observer.h"
-#include "brave/renderer/brave_url_loader_throttle_provider_impl.h"
 #include "brave/renderer/brave_wallet/brave_wallet_render_frame_observer.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "chrome/renderer/chrome_render_thread_observer.h"
+#include "chrome/renderer/process_state.h"
+#include "chrome/renderer/url_loader_throttle_provider_impl.h"
+#include "components/feed/content/renderer/rss_link_reader.h"
+#include "content/public/common/isolated_world_ids.h"
 #include "content/public/renderer/render_thread.h"
 #include "third_party/blink/public/common/features.h"
 #include "third_party/blink/public/platform/web_runtime_features.h"
@@ -34,6 +40,11 @@
 #include "third_party/blink/public/web/web_script_controller.h"
 #include "third_party/widevine/cdm/buildflags.h"
 #include "url/gurl.h"
+
+#if BUILDFLAG(ENABLE_AI_REWRITER)
+#include "brave/components/ai_rewriter/common/features.h"
+#include "brave/components/ai_rewriter/renderer/ai_rewriter_agent.h"
+#endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
 #include "brave/components/speedreader/common/features.h"
@@ -55,10 +66,6 @@
 #if BUILDFLAG(ENABLE_WIDEVINE)
 #include "media/base/key_system_info.h"
 #include "third_party/widevine/cdm/widevine_cdm_common.h"
-#endif
-
-#if BUILDFLAG(ENABLE_AI_CHAT) && BUILDFLAG(IS_ANDROID)
-#include "brave/components/ai_chat/core/common/features.h"
 #endif
 
 namespace {
@@ -88,10 +95,15 @@ void BraveContentRendererClient::
   ChromeContentRendererClient::
       SetRuntimeFeaturesDefaultsBeforeBlinkInitialization();
 
+  blink::WebRuntimeFeatures::EnableFledge(false);
+  // Disable topics APIs because kBrowsingTopics feature is disabled
+  blink::WebRuntimeFeatures::EnableTopicsAPI(false);
+  blink::WebRuntimeFeatures::EnableTopicsDocumentAPI(false);
+  blink::WebRuntimeFeatures::EnableWebGPUExperimentalFeatures(false);
   blink::WebRuntimeFeatures::EnableWebNFC(false);
-  blink::WebRuntimeFeatures::EnableAnonymousIframe(false);
 
   // These features don't have dedicated WebRuntimeFeatures wrappers.
+  blink::WebRuntimeFeatures::EnableFeatureFromString("AdTagging", false);
   blink::WebRuntimeFeatures::EnableFeatureFromString("DigitalGoods", false);
   if (!base::FeatureList::IsEnabled(blink::features::kFileSystemAccessAPI)) {
     blink::WebRuntimeFeatures::EnableFeatureFromString("FileSystemAccessLocal",
@@ -99,10 +111,15 @@ void BraveContentRendererClient::
     blink::WebRuntimeFeatures::EnableFeatureFromString(
         "FileSystemAccessAPIExperimental", false);
   }
-  if (!base::FeatureList::IsEnabled(blink::features::kBraveWebSerialAPI)) {
-    blink::WebRuntimeFeatures::EnableFeatureFromString("Serial", false);
+  blink::WebRuntimeFeatures::EnableFeatureFromString("FledgeMultiBid", false);
+
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+  if (base::FeatureList::IsEnabled(
+          blink::features::kMiddleButtonClickAutoscroll)) {
+    blink::WebRuntimeFeatures::EnableFeatureFromString("MiddleClickAutoscroll",
+                                                       true);
   }
-  blink::WebRuntimeFeatures::EnableFeatureFromString("AdTagging", false);
+#endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 }
 
 BraveContentRendererClient::~BraveContentRendererClient() = default;
@@ -122,6 +139,10 @@ void BraveContentRendererClient::RenderThreadStarted() {
 void BraveContentRendererClient::RenderFrameCreated(
     content::RenderFrame* render_frame) {
   ChromeContentRendererClient::RenderFrameCreated(render_frame);
+  auto* rfo = new BraveRenderFrameObserver(render_frame);
+  auto* registry = rfo->registry();
+
+  new feed::RssLinkReader(render_frame, registry);
 
   if (base::FeatureList::IsEnabled(
           brave_shields::features::kBraveAdblockCosmeticFiltering)) {
@@ -149,16 +170,13 @@ void BraveContentRendererClient::RenderFrameCreated(
   }
 
   if (base::FeatureList::IsEnabled(skus::features::kSkusFeature) &&
-      !ChromeRenderThreadObserver::is_incognito_process()) {
+      !IsIncognitoProcess()) {
     new skus::SkusRenderFrameObserver(render_frame);
   }
 
 #if BUILDFLAG(IS_ANDROID)
-  if (brave_vpn::IsBraveVPNFeatureEnabled()
-#if BUILDFLAG(ENABLE_AI_CHAT)
-      || ai_chat::features::IsAIChatHistoryEnabled()
-#endif
-  ) {
+  if (brave_vpn::IsBraveVPNFeatureEnabled() ||
+      ai_chat::features::IsAIChatHistoryEnabled()) {
     new brave_subscription::SubscriptionRenderFrameObserver(
         render_frame, content::ISOLATED_WORLD_ID_GLOBAL);
   }
@@ -173,17 +191,34 @@ void BraveContentRendererClient::RenderFrameCreated(
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist) &&
-      !ChromeRenderThreadObserver::is_incognito_process()) {
-    new playlist::PlaylistRenderFrameObserver(render_frame,
-                                              ISOLATED_WORLD_ID_BRAVE_INTERNAL);
+      !IsIncognitoProcess()) {
+    new playlist::PlaylistRenderFrameObserver(
+        render_frame, base::BindRepeating([] {
+          return BraveRenderThreadObserver::GetDynamicParams().playlist_enabled;
+        }),
+        ISOLATED_WORLD_ID_BRAVE_INTERNAL);
+  }
+#endif
+
+  if (ai_chat::features::IsAIChatEnabled() && !IsIncognitoProcess()) {
+    new ai_chat::PageContentExtractor(render_frame, registry,
+                                      content::ISOLATED_WORLD_ID_GLOBAL,
+                                      ISOLATED_WORLD_ID_BRAVE_INTERNAL);
+  }
+
+#if BUILDFLAG(ENABLE_AI_REWRITER)
+  if (ai_rewriter::features::IsAIRewriterEnabled()) {
+    new ai_rewriter::AIRewriterAgent(render_frame, registry);
   }
 #endif
 }
 
-void BraveContentRendererClient::GetSupportedKeySystems(
+std::unique_ptr<media::KeySystemSupportRegistration>
+BraveContentRendererClient::GetSupportedKeySystems(
+    content::RenderFrame* render_frame,
     media::GetSupportedKeySystemsCB cb) {
-  ChromeContentRendererClient::GetSupportedKeySystems(
-      base::BindRepeating(&MaybeRemoveWidevineSupport, cb));
+  return ChromeContentRendererClient::GetSupportedKeySystems(
+      render_frame, base::BindRepeating(&MaybeRemoveWidevineSupport, cb));
 }
 
 void BraveContentRendererClient::RunScriptsAtDocumentStart(
@@ -207,18 +242,33 @@ void BraveContentRendererClient::RunScriptsAtDocumentStart(
   ChromeContentRendererClient::RunScriptsAtDocumentStart(render_frame);
 }
 
+void BraveContentRendererClient::RunScriptsAtDocumentEnd(
+    content::RenderFrame* render_frame) {
+#if BUILDFLAG(ENABLE_PLAYLIST)
+  if (base::FeatureList::IsEnabled(playlist::features::kPlaylist)) {
+    if (auto* playlist_observer =
+            playlist::PlaylistRenderFrameObserver::Get(render_frame)) {
+      playlist_observer->RunScriptsAtDocumentEnd();
+    }
+  }
+#endif
+
+  ChromeContentRendererClient::RunScriptsAtDocumentEnd(render_frame);
+}
+
 void BraveContentRendererClient::WillEvaluateServiceWorkerOnWorkerThread(
     blink::WebServiceWorkerContextProxy* context_proxy,
     v8::Local<v8::Context> v8_context,
     int64_t service_worker_version_id,
     const GURL& service_worker_scope,
-    const GURL& script_url) {
+    const GURL& script_url,
+    const blink::ServiceWorkerToken& service_worker_token) {
   brave_search_service_worker_holder_.WillEvaluateServiceWorkerOnWorkerThread(
       context_proxy, v8_context, service_worker_version_id,
       service_worker_scope, script_url);
   ChromeContentRendererClient::WillEvaluateServiceWorkerOnWorkerThread(
       context_proxy, v8_context, service_worker_version_id,
-      service_worker_scope, script_url);
+      service_worker_scope, script_url, service_worker_token);
 }
 
 void BraveContentRendererClient::WillDestroyServiceWorkerContextOnWorkerThread(
@@ -237,8 +287,8 @@ void BraveContentRendererClient::WillDestroyServiceWorkerContextOnWorkerThread(
 std::unique_ptr<blink::URLLoaderThrottleProvider>
 BraveContentRendererClient::CreateURLLoaderThrottleProvider(
     blink::URLLoaderThrottleProviderType provider_type) {
-  return std::make_unique<BraveURLLoaderThrottleProviderImpl>(
-      browser_interface_broker_.get(), provider_type, this);
+  return URLLoaderThrottleProviderImpl::Create(provider_type, this,
+                                               browser_interface_broker_.get());
 }
 
 bool BraveContentRendererClient::IsOnionAllowed() const {

@@ -39,6 +39,7 @@ class TxStorageDelegateImpl final : public TxStorageDelegate {
   const base::Value::Dict& GetTxs() const override;
   base::Value::Dict& GetTxs() override;
   void ScheduleWrite() override;
+  void DisableWritesForTesting(bool disable);
 
   // Only owner ex.TxService can clear data.
   void Clear();
@@ -75,9 +76,11 @@ class TxStorageDelegateImpl final : public TxStorageDelegate {
   // txs, once the limit is reached we will retire oldest entries.
   base::Value::Dict txs_;
 
+  bool disable_writes_for_testing_ = false;
+
   std::unique_ptr<value_store::ValueStoreFrontend> store_;
 
-  raw_ptr<PrefService> prefs_;
+  raw_ptr<PrefService, DanglingUntriaged> prefs_;
   base::WeakPtrFactory<TxStorageDelegateImpl> weak_factory_{this};
 };
 

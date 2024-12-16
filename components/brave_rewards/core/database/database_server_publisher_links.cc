@@ -8,19 +8,18 @@
 #include "base/strings/stringprintf.h"
 #include "brave/components/brave_rewards/core/database/database_server_publisher_links.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
 namespace {
 
-const char kTableName[] = "server_publisher_links";
+constexpr char kTableName[] = "server_publisher_links";
 
 }  // namespace
 
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
 DatabaseServerPublisherLinks::DatabaseServerPublisherLinks(
-    RewardsEngineImpl& engine)
+    RewardsEngine& engine)
     : DatabaseTable(engine) {}
 
 DatabaseServerPublisherLinks::~DatabaseServerPublisherLinks() = default;
@@ -75,8 +74,8 @@ void DatabaseServerPublisherLinks::GetRecord(
     const std::string& publisher_key,
     ServerPublisherLinksCallback callback) {
   if (publisher_key.empty()) {
-    BLOG(1, "Publisher key is empty");
-    callback({});
+    engine_->Log(FROM_HERE) << "Publisher key is empty";
+    std::move(callback).Run({});
     return;
   }
 
@@ -106,8 +105,8 @@ void DatabaseServerPublisherLinks::OnGetRecord(
     mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
-    callback({});
+    engine_->LogError(FROM_HERE) << "Response is wrong";
+    std::move(callback).Run({});
     return;
   }
 
@@ -119,8 +118,7 @@ void DatabaseServerPublisherLinks::OnGetRecord(
     links.insert(pair);
   }
 
-  callback(links);
+  std::move(callback).Run(links);
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

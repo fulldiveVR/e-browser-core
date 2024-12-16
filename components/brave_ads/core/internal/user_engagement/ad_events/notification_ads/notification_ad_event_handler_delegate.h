@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-shared.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 
 namespace brave_ads {
 
@@ -36,11 +36,11 @@ class NotificationAdEventHandlerDelegate {
   virtual void OnDidFireNotificationAdTimedOutEvent(
       const NotificationAdInfo& ad) {}
 
-  // Invoked when the notification `ad` event fails for `placement_id` and
-  // `event_type`.
+  // Invoked when the notification ad event fails for `placement_id` and
+  // `mojom_ad_event_type`.
   virtual void OnFailedToFireNotificationAdEvent(
       const std::string& placement_id,
-      const mojom::NotificationAdEventType event_type) {}
+      mojom::NotificationAdEventType mojom_ad_event_type) {}
 
  protected:
   virtual ~NotificationAdEventHandlerDelegate() = default;

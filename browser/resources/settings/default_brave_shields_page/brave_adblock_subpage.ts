@@ -9,8 +9,9 @@ import 'chrome://resources/cr_elements/cr_button/cr_button.js';
 import 'chrome://resources/cr_elements/icons.html.js';
 import './components/brave_adblock_subscribe_dropdown.js';
 import './components/brave_adblock_editor.js';
+import './components/brave_adblock_scriptlet_list.js';
 
-import {PrefsMixin} from 'chrome://resources/cr_components/settings_prefs/prefs_mixin.js';
+import {PrefsMixin} from '/shared/settings/prefs/prefs_mixin.js';
 import {I18nMixin} from 'chrome://resources/cr_elements/i18n_mixin.js';
 import {PolymerElement} from 'chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js';
 
@@ -18,6 +19,10 @@ import {BaseMixin} from '../base_mixin.js';
 
 import {BraveAdblockBrowserProxyImpl} from './brave_adblock_browser_proxy.js'
 import {getTemplate} from './brave_adblock_subpage.html.js'
+
+import { loadTimeData } from '../i18n_setup.js'
+
+import type {SettingsToggleButtonElement} from '../controls/settings_toggle_button.js';
 
 const AdBlockSubpageBase = PrefsMixin(I18nMixin(BaseMixin(PolymerElement)))
 
@@ -36,10 +41,17 @@ class AdBlockSubpage extends AdBlockSubpageBase {
       subscriptionList_: Array,
       customFilters_: String,
       subscribeUrl_: String,
+      listsUpdatingState_: String,
       hasListExpanded_: {
         type: Boolean,
         value: false
       },
+      cosmeticFilteringCustomScriptletsEnabled_: {
+        type: Boolean,
+        value: loadTimeData.getBoolean(
+          'cosmeticFilteringCustomScriptletsEnabled'
+        )
+      }
     }
   }
 
@@ -47,6 +59,9 @@ class AdBlockSubpage extends AdBlockSubpageBase {
 
   ready() {
     super.ready()
+
+    this.listsUpdatingState_ = ''
+
     this.browserProxy_.getRegionalLists().then(value => {
       this.filterList_ = value
     })
@@ -69,6 +84,20 @@ class AdBlockSubpage extends AdBlockSubpageBase {
     if (!this.hasListExpanded_) {
       this.hasListExpanded_ = true
     }
+  }
+
+  handleUpdateLists_() {
+    if (this.listsUpdatingState_ === 'updating') {
+      return
+    }
+
+    this.listsUpdatingState_ = 'updating'
+
+    this.browserProxy_.updateFilterLists().then(() => {
+      this.listsUpdatingState_ = 'updated'
+    }, () => {
+      this.listsUpdatingState_ = 'failed'
+    })
   }
 
   searchListBy_(title) {

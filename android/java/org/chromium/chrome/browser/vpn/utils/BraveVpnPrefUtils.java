@@ -1,17 +1,15 @@
-/**
- * Copyright (c) 2021 The Brave Authors. All rights reserved.
+/* Copyright (c) 2021 The Brave Authors. All rights reserved.
  * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 package org.chromium.chrome.browser.vpn.utils;
 
-
 import org.chromium.base.ContextUtils;
+import org.chromium.brave_vpn.mojom.BraveVpnConstants;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
-import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.vpn.models.BraveVpnPrefModel;
 import org.chromium.components.user_prefs.UserPrefs;
 
@@ -20,7 +18,6 @@ import java.util.Set;
 
 public class BraveVpnPrefUtils {
     private static final String PREF_BRAVE_VPN_CALLOUT = "brave_vpn_callout";
-    private static final String PREF_BRAVE_VPN_CALLOUT_SETTINGS = "brave_vpn_callout_settings";
     private static final String PREF_BRAVE_VPN_SUBSCRIPTION_PURCHASE =
             "brave_vpn_subscription_purchase";
     private static final String PREF_BRAVE_VPN_PAYMENT_STATE = "brave_vpn_payment_state";
@@ -29,18 +26,19 @@ public class BraveVpnPrefUtils {
     private static final String PREF_BRAVE_VPN_PURCHASE_TOKEN = "brave_vpn_purchase_token";
     private static final String PREF_BRAVE_VPN_PRODUCT_ID = "brave_vpn_product_id";
     private static final String PREF_BRAVE_VPN_PURCHASE_EXPIRY = "brave_vpn_purchase_expiry";
-    private static final String PREF_BRAVE_VPN_SERVER_REGIONS = "brave_vpn_server_regions";
     private static final String PREF_BRAVE_VPN_SERVER_CHANGE_LOCATION = "server_change_location";
+    private static final String PREF_BRAVE_VPN_SERVER_COUNTRY = "server_country";
+    private static final String PREF_BRAVE_VPN_SERVER_CONTINENT = "server_continent";
     private static final String PREF_BRAVE_VPN_SERVER_ISO_CODE = "server_iso_code";
     private static final String PREF_BRAVE_VPN_SERVER_NAME_PRETTY = "server_name_pretty";
+    private static final String PREF_BRAVE_VPN_SERVER_PRECISION = "server_precision";
+    private static final String VPN_AUTOMATIC_SERVER_SELECTION = "vpn_automatic_server_selection";
 
     private static final String PREF_BRAVE_VPN_RESET_CONFIGURATION =
             "brave_vpn_reset_configuration";
     private static final String PREF_EXCLUDED_PACKAGES = "excluded_packages";
 
     public static final String PREF_BRAVE_VPN_AUTOMATIC = "automatic";
-    public static final String PREF_BRAVE_VPN_LINK_SUBSCRIPTION_ON_STAGING =
-            "brave_vpn_link_subscription_on_staging";
     public static final String PREF_BRAVE_VPN_START = "brave_vpn_start";
 
     public static final String PREF_BRAVE_VPN_API_AUTH_TOKEN = "brave_vpn_api_auth_token";
@@ -53,25 +51,6 @@ public class BraveVpnPrefUtils {
     public static final String PREF_SESSION_START_TIME = "brave_vpn_session_start_time";
     public static final String PREF_SESSION_END_TIME = "brave_vpn_session_end_time";
     private static final String PREF_LINK_SUBSCRIPTION_DIALOG = "link_subscription_dialog";
-    private static final String PREF_VPN_ISO_CODE_UPGRADE = "vpn_iso_code_upgrade";
-
-    public static boolean isIsoCodeUpgradeDone() {
-        return ChromeSharedPreferences.getInstance().readBoolean(PREF_VPN_ISO_CODE_UPGRADE, false);
-    }
-
-    public static void setIsoCodeUpgrade(boolean newValue) {
-        ChromeSharedPreferences.getInstance().writeBoolean(PREF_VPN_ISO_CODE_UPGRADE, newValue);
-    }
-
-    public static boolean isLinkSubscriptionOnStaging() {
-        return ChromeSharedPreferences.getInstance()
-                .readBoolean(PREF_BRAVE_VPN_LINK_SUBSCRIPTION_ON_STAGING, false);
-    }
-
-    public static void setLinkSubscriptionOnStaging(boolean newValue) {
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(PREF_BRAVE_VPN_LINK_SUBSCRIPTION_ON_STAGING, newValue);
-    }
 
     public static boolean isLinkSubscriptionDialogShown() {
         return ChromeSharedPreferences.getInstance()
@@ -88,16 +67,6 @@ public class BraveVpnPrefUtils {
 
     public static void setCallout(boolean newValue) {
         ChromeSharedPreferences.getInstance().writeBoolean(PREF_BRAVE_VPN_CALLOUT, newValue);
-    }
-
-    public static boolean shouldShowCalloutSettings() {
-        return ChromeSharedPreferences.getInstance()
-                .readBoolean(PREF_BRAVE_VPN_CALLOUT_SETTINGS, true);
-    }
-
-    public static void setCalloutSettings(boolean newValue) {
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(PREF_BRAVE_VPN_CALLOUT_SETTINGS, newValue);
     }
 
     public static boolean isSubscriptionPurchase() {
@@ -128,6 +97,16 @@ public class BraveVpnPrefUtils {
                 .writeBoolean(PREF_BRAVE_VPN_RESET_CONFIGURATION, newValue);
     }
 
+    public static boolean isAutomaticServerSelection() {
+        return ChromeSharedPreferences.getInstance()
+                .readBoolean(VPN_AUTOMATIC_SERVER_SELECTION, false);
+    }
+
+    public static void setAutomaticServerSelection(boolean newValue) {
+        ChromeSharedPreferences.getInstance()
+                .writeBoolean(VPN_AUTOMATIC_SERVER_SELECTION, newValue);
+    }
+
     public static void setHostname(String value) {
         ChromeSharedPreferences.getInstance().writeString(PREF_BRAVE_VPN_HOSTNAME, value);
     }
@@ -147,10 +126,11 @@ public class BraveVpnPrefUtils {
 
     public static void setPurchaseToken(String value) {
         ChromeSharedPreferences.getInstance().writeString(PREF_BRAVE_VPN_PURCHASE_TOKEN, value);
-        UserPrefs.get(Profile.getLastUsedRegularProfile())
+        UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
                 .setString(BravePref.BRAVE_VPN_PURCHASE_TOKEN_ANDROID, value);
-        UserPrefs.get(Profile.getLastUsedRegularProfile())
-                .setString(BravePref.BRAVE_VPN_PACKAGE_ANDROID,
+        UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
+                .setString(
+                        BravePref.BRAVE_VPN_PACKAGE_ANDROID,
                         ContextUtils.getApplicationContext().getPackageName());
     }
 
@@ -160,7 +140,7 @@ public class BraveVpnPrefUtils {
 
     public static void setProductId(String value) {
         ChromeSharedPreferences.getInstance().writeString(PREF_BRAVE_VPN_PRODUCT_ID, value);
-        UserPrefs.get(Profile.getLastUsedRegularProfile())
+        UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
                 .setString(BravePref.BRAVE_VPN_PRODUCT_ID_ANDROID, value);
     }
 
@@ -176,35 +156,69 @@ public class BraveVpnPrefUtils {
         return ChromeSharedPreferences.getInstance().readLong(PREF_BRAVE_VPN_PURCHASE_EXPIRY, 0);
     }
 
-    public static String getServerRegion() {
+    public static String getRegionName() {
         return ChromeSharedPreferences.getInstance()
                 .readString(PREF_BRAVE_VPN_SERVER_CHANGE_LOCATION, PREF_BRAVE_VPN_AUTOMATIC);
     }
 
-    private static void setServerRegion(String newValue) {
+    private static void setRegionName(String newValue) {
         ChromeSharedPreferences.getInstance()
                 .writeString(PREF_BRAVE_VPN_SERVER_CHANGE_LOCATION, newValue);
     }
 
-    public static String getServerIsoCode() {
+    public static String getRegionCountry() {
+        String code =
+                ChromeSharedPreferences.getInstance().readString(PREF_BRAVE_VPN_SERVER_COUNTRY, "");
+        return code;
+    }
+
+    public static void setRegionCountry(String newValue) {
+        ChromeSharedPreferences.getInstance().writeString(PREF_BRAVE_VPN_SERVER_COUNTRY, newValue);
+    }
+
+    public static String getRegionContinent() {
+        String code =
+                ChromeSharedPreferences.getInstance()
+                        .readString(PREF_BRAVE_VPN_SERVER_CONTINENT, "");
+        return code;
+    }
+
+    public static void setRegionContinent(String newValue) {
+        ChromeSharedPreferences.getInstance()
+                .writeString(PREF_BRAVE_VPN_SERVER_CONTINENT, newValue);
+    }
+
+    public static String getRegionIsoCode() {
         String code =
                 ChromeSharedPreferences.getInstance()
                         .readString(PREF_BRAVE_VPN_SERVER_ISO_CODE, "");
         return code;
     }
 
-    public static void setServerIsoCode(String newValue) {
+    public static void setRegionIsoCode(String newValue) {
         ChromeSharedPreferences.getInstance().writeString(PREF_BRAVE_VPN_SERVER_ISO_CODE, newValue);
     }
 
-    public static String getServerNamePretty() {
+    public static String getRegionNamePretty() {
         return ChromeSharedPreferences.getInstance()
                 .readString(PREF_BRAVE_VPN_SERVER_NAME_PRETTY, "");
     }
 
-    public static void setServerNamePretty(String newValue) {
+    public static void setRegionNamePretty(String newValue) {
         ChromeSharedPreferences.getInstance()
                 .writeString(PREF_BRAVE_VPN_SERVER_NAME_PRETTY, newValue);
+    }
+
+    public static String getRegionPrecision() {
+        return ChromeSharedPreferences.getInstance()
+                .readString(
+                        PREF_BRAVE_VPN_SERVER_PRECISION,
+                        BraveVpnConstants.REGION_PRECISION_COUNTRY);
+    }
+
+    public static void setRegionPrecision(String newValue) {
+        ChromeSharedPreferences.getInstance()
+                .writeString(PREF_BRAVE_VPN_SERVER_PRECISION, newValue);
     }
 
     public static void setApiAuthToken(String value) {
@@ -262,9 +276,13 @@ public class BraveVpnPrefUtils {
     public static void setPrefModel(BraveVpnPrefModel braveVpnPrefModel) {
         setHostname(braveVpnPrefModel.getHostname());
         setHostnameDisplay(braveVpnPrefModel.getHostnameDisplay());
-        setServerRegion(braveVpnPrefModel.getServerRegion().getName());
-        setServerIsoCode(braveVpnPrefModel.getServerRegion().getCountryIsoCode());
-        setServerNamePretty(braveVpnPrefModel.getServerRegion().getNamePretty());
+        setRegionCountry(braveVpnPrefModel.getServerRegion().getCountry());
+        setRegionContinent(braveVpnPrefModel.getServerRegion().getContinent());
+        setRegionIsoCode(braveVpnPrefModel.getServerRegion().getCountryIsoCode());
+        setRegionName(braveVpnPrefModel.getServerRegion().getRegionName());
+        setRegionNamePretty(braveVpnPrefModel.getServerRegion().getRegionNamePretty());
+        setRegionPrecision(braveVpnPrefModel.getServerRegion().getRegionPrecision());
+        setAutomaticServerSelection(braveVpnPrefModel.getServerRegion().isAutoSelected());
         setPurchaseToken(braveVpnPrefModel.getPurchaseToken());
         setProductId(braveVpnPrefModel.getProductId());
         setSubscriberCredential(braveVpnPrefModel.getSubscriberCredential());

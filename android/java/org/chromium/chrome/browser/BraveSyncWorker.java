@@ -5,21 +5,18 @@
 
 package org.chromium.chrome.browser;
 
-import android.content.Context;
-
 import org.jni_zero.CalledByNative;
 import org.jni_zero.JNINamespace;
 import org.jni_zero.NativeMethods;
 
 import org.chromium.base.Callback;
-import org.chromium.base.ContextUtils;
+
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 @JNINamespace("chrome::android")
 public class BraveSyncWorker {
     private static final String TAG = "SYNC";
-
-    private Context mContext;
-    private String mDebug = "true";
 
     private long mNativeBraveSyncWorker;
 
@@ -46,6 +43,11 @@ public class BraveSyncWorker {
         }
     }
 
+    /**
+     * A finalizer is required to ensure that the native object associated with this descriptor gets
+     * torn down, otherwise there would be a memory leak.
+     */
+    @SuppressWarnings("Finalize")
     @Override
     protected void finalize() {
         destroy();
@@ -59,7 +61,6 @@ public class BraveSyncWorker {
     }
 
     public BraveSyncWorker() {
-        mContext = ContextUtils.getApplicationContext();
         init();
     }
 
@@ -101,6 +102,17 @@ public class BraveSyncWorker {
 
     public String getPureWordsFromTimeLimited(String timeLimitedWords) {
         return BraveSyncWorkerJni.get().getPureWordsFromTimeLimited(timeLimitedWords);
+    }
+
+    public LocalDateTime getNotAfterFromFromTimeLimitedWords(String timeLimitedWords) {
+        long unixTime =
+                BraveSyncWorkerJni.get().getNotAfterFromFromTimeLimitedWords(timeLimitedWords);
+        LocalDateTime notAfter = LocalDateTime.ofEpochSecond(unixTime, 0, ZoneOffset.UTC);
+        return notAfter;
+    }
+
+    public String getFormattedTimeDelta(long seconds) {
+        return BraveSyncWorkerJni.get().getFormattedTimeDelta(seconds);
     }
 
     public void requestSync() {
@@ -145,24 +157,43 @@ public class BraveSyncWorker {
         BraveSyncWorkerJni.get().setJoinSyncChainCallback(mNativeBraveSyncWorker, callback);
     }
 
+    public int getWordsCount(String words) {
+        return BraveSyncWorkerJni.get().getWordsCount(words);
+    }
+
     @NativeMethods
     interface Natives {
         void init(BraveSyncWorker caller);
+
         void destroy(long nativeBraveSyncWorker);
 
         String getSyncCodeWords(long nativeBraveSyncWorker);
+
         void requestSync(long nativeBraveSyncWorker);
 
         String getSeedHexFromWords(String passphrase);
+
         String getWordsFromSeedHex(String seedHex);
+
         String getQrDataJson(String seedHex);
+
         int getQrCodeValidationResult(String jsonQr);
+
         String getSeedHexFromQrJson(String jsonQr);
+
         int getWordsValidationResult(String timeLimitedWords);
+
         String getPureWordsFromTimeLimited(String timeLimitedWords);
+
         String getTimeLimitedWordsFromPure(String pureWords);
 
+        long getNotAfterFromFromTimeLimitedWords(String pureWords);
+
+        String getFormattedTimeDelta(long seconds);
+
         void saveCodeWords(long nativeBraveSyncWorker, String passphrase);
+
+        int getWordsCount(String words);
 
         void finalizeSyncSetup(long nativeBraveSyncWorker);
 

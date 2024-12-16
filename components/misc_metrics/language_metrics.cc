@@ -211,8 +211,8 @@ constexpr auto kOrderedLangCodes = base::MakeFixedFlatSet<std::string_view>(
     });
 
 constexpr LanguageSynonymPair kLanguageSynonyms[] = {
-    {"in", "id"}, {"iw", "he"}, {"ji", "yi"}, {"jw", "jv"}, {"mo", "ro"},
-};
+    {"in", "id"}, {"iw", "he"}, {"ji", "yi"},
+    {"jw", "jv"}, {"mo", "ro"}, {"gsw", "de"}};
 
 LanguageMetrics::LanguageMetrics(PrefService* profile_prefs)
     : profile_prefs_(profile_prefs) {
@@ -250,7 +250,7 @@ void LanguageMetrics::RecordLanguageMetric() {
   // if the language is not found in the list
   int answer = INT_MAX - 1;
 
-  auto* language_it = kOrderedLangCodes.find(primary_language);
+  const auto language_it = kOrderedLangCodes.find(primary_language);
   if (language_it != kOrderedLangCodes.end()) {
     answer = std::distance(kOrderedLangCodes.begin(), language_it);
   }

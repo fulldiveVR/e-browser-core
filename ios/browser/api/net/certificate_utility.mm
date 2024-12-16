@@ -3,6 +3,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(https://github.com/brave/brave-browser/issues/41661): Remove this and
+// convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #import "brave/ios/browser/api/net/certificate_utility.h"
 
 #include <limits>
@@ -72,10 +78,8 @@ namespace {
     return nil;
   }
 
-  bssl::UniquePtr<CRYPTO_BUFFER> cert_buffer(
-      net::x509_util::CreateCryptoBuffer(base::make_span(
-          CFDataGetBytePtr(cert_data.get()),
-          base::checked_cast<size_t>(CFDataGetLength(cert_data.get())))));
+  bssl::UniquePtr<CRYPTO_BUFFER> cert_buffer(net::x509_util::CreateCryptoBuffer(
+      base::apple::CFDataToSpan(cert_data.get())));
 
   if (!cert_buffer) {
     return nil;
@@ -98,10 +102,8 @@ namespace {
     return nil;
   }
 
-  bssl::UniquePtr<CRYPTO_BUFFER> cert_buffer(
-      net::x509_util::CreateCryptoBuffer(base::make_span(
-          CFDataGetBytePtr(cert_data.get()),
-          base::checked_cast<size_t>(CFDataGetLength(cert_data.get())))));
+  bssl::UniquePtr<CRYPTO_BUFFER> cert_buffer(net::x509_util::CreateCryptoBuffer(
+      base::apple::CFDataToSpan(cert_data.get())));
 
   if (!cert_buffer) {
     return nil;
@@ -197,18 +199,11 @@ namespace {
 
   // Check the Public Key Pins to see if the certificate chain is valid
   // For this, we use the verification result above
-  std::string failure_log;
-  net::NetworkAnonymizationKey network_anonymization_key =
-      net::NetworkAnonymizationKey::CreateTransient();
-
   net::TransportSecurityState::PKPStatus status =
       transport_security_state->CheckPublicKeyPins(
           net::HostPortPair(base::SysNSStringToUTF8(host), port),
           verify_result.is_issued_by_known_root,
-          verify_result.public_key_hashes, cert.get(),
-          verify_result.verified_cert.get(),
-          net::TransportSecurityState::ENABLE_PIN_REPORTS,
-          network_anonymization_key, &failure_log);
+          verify_result.public_key_hashes);
   switch (status) {
     case net::TransportSecurityState::PKPStatus::VIOLATED:
       return net::ERR_FAILED;

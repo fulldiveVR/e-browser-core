@@ -41,7 +41,7 @@
 // clang-format on
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoints {
 
@@ -72,14 +72,13 @@ struct ResultFor<GetWallet> {
 class GetWallet final : public RequestBuilder,
                         public ResponseHandler<GetWallet> {
  public:
-  static Result ProcessResponse(const mojom::UrlResponse& response);
+  static Result ProcessResponse(RewardsEngine& engine,
+                                const mojom::UrlResponse& response);
 
-  explicit GetWallet(RewardsEngineImpl& engine);
+  explicit GetWallet(RewardsEngine& engine);
   ~GetWallet() override;
 
  private:
-  std::string Path() const;
-
   std::optional<std::string> Url() const override;
   mojom::UrlMethod Method() const override;
   std::optional<std::vector<std::string>> Headers(

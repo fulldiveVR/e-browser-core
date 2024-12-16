@@ -57,12 +57,12 @@ public class BraveRewardsExternalWallet {
         return mUserName;
     }
 
-    public BraveRewardsExternalWallet(String json_external_wallet) throws JSONException {
-        fromJson (json_external_wallet);
+    public BraveRewardsExternalWallet(String jsonExternalWallet) throws JSONException {
+        fromJson(jsonExternalWallet);
     }
 
-    private void fromJson(String json_external_wallet) throws JSONException {
-        JSONObject jsonObj = new JSONObject(json_external_wallet);
+    private void fromJson(String jsonExternalWallet) throws JSONException {
+        JSONObject jsonObj = new JSONObject(jsonExternalWallet);
         mAccountUrl = jsonObj.getString(ACCOUNT_URL);
         mAddress = jsonObj.getString(ADDRESS);
         mStatus = jsonObj.getInt(STATUS);
@@ -92,13 +92,12 @@ public class BraveRewardsExternalWallet {
                 + '}';
     }
 
-    public static String WalletStatusToString(int status) {
+    public static String walletStatusToString(int status) {
         String value = "";
         Context context = ContextUtils.getApplicationContext();
-        switch (status){
+        switch (status) {
             case WalletStatus.NOT_CONNECTED:
-                value = context.getResources().getString(
-                    R.string.user_wallet_status_not_connected);
+                value = context.getResources().getString(R.string.user_wallet_status_not_connected);
                 break;
             case WalletStatus.CONNECTED:
                 value = context.getResources().getString(R.string.brave_ui_wallet_button_connected);

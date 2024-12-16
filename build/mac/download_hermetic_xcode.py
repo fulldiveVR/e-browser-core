@@ -14,7 +14,7 @@ from urllib.error import URLError  # pylint: disable=no-name-in-module,import-er
 import pkg_resources
 
 import deps
-from deps_config import DEPS_PACKAGES_URL, MAC_TOOLCHAIN_ROOT
+from deps_config import DEPS_PACKAGES_INTERNAL_URL, MAC_TOOLCHAIN_ROOT
 
 def LoadPList(path):
     """Loads Plist at |path| and returns it as a dictionary."""
@@ -22,11 +22,11 @@ def LoadPList(path):
         return plistlib.load(f)
 
 # This contains binaries from Xcode 14.3, along with the macOS 13.3 SDK
-XCODE_VERSION = '15.0'
+XCODE_VERSION = '16.1'
 HERMETIC_XCODE_BINARY = (
-    DEPS_PACKAGES_URL +
+    DEPS_PACKAGES_INTERNAL_URL +
     '/xcode-hermetic-toolchain/xcode-hermetic-toolchain-xcode-' +
-    XCODE_VERSION + '-sdk-14.0-13.3.tar.gz')
+    XCODE_VERSION + '-sdk-15.1-14.0.tar.gz')
 
 # The toolchain will not be downloaded if the minimum OS version is not met. 19
 # is the major version number for macOS 10.15. Xcode 13.2 13C90 only runs on

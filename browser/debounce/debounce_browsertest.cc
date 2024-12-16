@@ -11,26 +11,28 @@
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_content_browser_client.h"
 #include "brave/browser/extensions/brave_base_local_data_files_browsertest.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/browser/engine_test_observer.h"
-#include "brave/components/brave_shields/browser/test_filters_provider.h"
-#include "brave/components/debounce/browser/debounce_component_installer.h"
-#include "brave/components/debounce/common/features.h"
-#include "brave/components/debounce/common/pref_names.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/content/test/engine_test_observer.h"
+#include "brave/components/brave_shields/content/test/test_filters_provider.h"
+#include "brave/components/debounce/core/browser/debounce_component_installer.h"
+#include "brave/components/debounce/core/common/features.h"
+#include "brave/components/debounce/core/common/pref_names.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/interstitials/security_interstitial_page_test_utils.h"
+#include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
-#include "content/public/browser/notification_service.h"
 #include "content/public/common/content_client.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "net/base/url_util.h"
+#include "services/network/public/cpp/resource_request.h"
 #include "third_party/blink/public/common/loader/url_loader_throttle.h"
 
 namespace {
-const char kTestDataDirectory[] = "debounce-data";
+constexpr char kTestDataDirectory[] = "debounce-data";
 static base::NoDestructor<std::string> gLastSiteForCookies("");
 }  // namespace
 
@@ -91,11 +93,12 @@ class SpyContentBrowserClient : public BraveContentBrowserClient {
       content::BrowserContext* browser_context,
       const base::RepeatingCallback<content::WebContents*()>& wc_getter,
       content::NavigationUIData* navigation_ui_data,
-      int frame_tree_node_id) override {
+      content::FrameTreeNodeId frame_tree_node_id,
+      std::optional<int64_t> navigation_id) override {
     std::vector<std::unique_ptr<blink::URLLoaderThrottle>> throttles =
         BraveContentBrowserClient::CreateURLLoaderThrottles(
             request, browser_context, wc_getter, navigation_ui_data,
-            frame_tree_node_id);
+            frame_tree_node_id, navigation_id);
     throttles.push_back(std::make_unique<SpyThrottle>());
     return throttles;
   }
@@ -167,18 +170,17 @@ class DebounceBrowserTest : public BaseLocalDataFilesBrowserTest {
 
   void NavigateToURLAndWaitForRedirects(const GURL& original_url,
                                         const GURL& landing_url) {
-    ui_test_utils::UrlLoadObserver load_complete(
-        landing_url, content::NotificationService::AllSources());
+    ui_test_utils::UrlLoadObserver load_complete(landing_url);
     ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), original_url));
     load_complete.Wait();
     EXPECT_EQ(web_contents()->GetLastCommittedURL(), landing_url);
   }
 
   void InitAdBlockForDebounce() {
-    auto source_provider = std::make_unique<brave_shields::TestFiltersProvider>(
-        "||blocked.com^", "[]");
-    g_brave_browser_process->ad_block_service()->UseSourceProvidersForTest(
-        source_provider.get(), source_provider.get());
+    auto source_provider =
+        std::make_unique<brave_shields::TestFiltersProvider>("||blocked.com^");
+    g_brave_browser_process->ad_block_service()->UseSourceProviderForTest(
+        source_provider.get());
     source_providers_.push_back(std::move(source_provider));
     auto* engine =
         g_brave_browser_process->ad_block_service()->default_engine_.get();
@@ -410,6 +412,19 @@ IN_PROC_BROWSER_TEST_F(DebounceBrowserTest, ExcludePrivateRegistries) {
   GURL landing_url = embedded_test_server()->GetURL("z.com", "/");
   GURL original_url = add_redirect_param(base_url, landing_url);
   NavigateToURLAndWaitForRedirects(original_url, landing_url);
+}
+
+// Test that debouncing rule is skipped if the hostname of the new url as
+// extracted via our simple parser doesn't match the host as parsed via GURL
+IN_PROC_BROWSER_TEST_F(DebounceBrowserTest, IgnoreHostnameMismatch) {
+  ASSERT_TRUE(InstallMockExtension());
+  ToggleDebouncePref(true);
+  // The destination decodes to http://evil.com\\@apps.apple.com
+  // If you paste that in Chrome or Brave, the backslashes are changed
+  // to slashes and you end up on http://evil.com//@apps.apple.com
+  GURL original_url = embedded_test_server()->GetURL(
+      "simple.a.com", "/?url=http%3A%2F%2Fevil.com%5C%5C%40apps.apple.com");
+  NavigateToURLAndWaitForRedirects(original_url, original_url);
 }
 
 // Test that debounceable URLs on domain block list are debounced instead.

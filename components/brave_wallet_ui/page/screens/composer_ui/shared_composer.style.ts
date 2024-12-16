@@ -4,10 +4,20 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
+import Icon from '@brave/leo/react/icon'
+import Alert from '@brave/leo/react/alert'
+import LeoButton from '@brave/leo/react/button'
 
 // Shared Styles
-import { Column, WalletButton } from '../../../components/shared/style'
+import {
+  Column,
+  WalletButton,
+  Row,
+  AssetIconFactory,
+  AssetIconProps,
+  Text
+} from '../../../components/shared/style'
 import {
   layoutPanelWidth //
 } from '../../../components/desktop/wallet-page-wrapper/wallet-page-wrapper.style'
@@ -19,12 +29,12 @@ export const ToSectionWrapper = styled(Column)<{
   @media (prefers-color-scheme: dark) {
     --default-background: ${leo.color.container.highlight};
   }
-  padding: 0px 32px 32px 32px;
+  padding: 0px 24px 24px 24px;
   border-radius: 0px 0px 24px 24px;
   background-color: ${(p) => p.tokenColor ?? 'var(--default-background)'};
   @media screen and (max-width: ${layoutPanelWidth}px) {
     border-radius: 0px;
-    padding: 0px 0px 16px 0px;
+    padding: 0px 16px 16px 16px;
     height: 100%;
   }
 `
@@ -74,7 +84,7 @@ export const AmountInput = styled(Input)<{
 export const PresetButton = styled(WalletButton)`
   outline: none;
   border: none;
-  background-color: ${leo.color.gray[10]};
+  background-color: ${leo.color.neutral[10]};
   border-radius: 4px;
   font-family: Poppins;
   font-size: 10px;
@@ -82,7 +92,71 @@ export const PresetButton = styled(WalletButton)`
   font-weight: 700;
   line-height: normal;
   padding: 4px 6px;
-  color: ${leo.color.gray[50]};
+  color: ${leo.color.neutral[50]};
   text-transform: uppercase;
   cursor: pointer;
+`
+
+export const ReviewButtonRow = styled(Row)`
+  max-width: 360px;
+  @media screen and (max-width: ${layoutPanelWidth}px) {
+    max-width: unset;
+  }
+`
+
+export const AssetIcon = AssetIconFactory<AssetIconProps>({
+  width: '40px',
+  height: 'auto'
+})
+
+export const CaratIcon = styled(Icon).attrs({
+  name: 'carat-right'
+})`
+  --leo-icon-size: 24px;
+  color: inherit;
+  margin-left: 8px;
+`
+
+export const ButtonText = styled(Text)`
+  overflow: hidden;
+  color: inherit;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-weight: 500;
+`
+
+export const Button = styled(WalletButton)<{
+  isPlaceholder: boolean
+}>`
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px 0px;
+  color: ${(p) =>
+    p.isPlaceholder ? leo.color.text.tertiary : leo.color.text.primary};
+  white-space: nowrap;
+  :disabled {
+    cursor: not-allowed;
+  }
+  &:hover:not([disabled]) {
+    color: ${leo.color.text.interactive};
+  }
+`
+
+export const AlertMessage = styled(Alert)`
+  --leo-alert-center-width: 100%;
+  margin-bottom: 16px;
+`
+
+export const AlertMessageButton = styled(LeoButton)`
+  --leo-button-padding: 0px;
+`
+
+export const AlertMessageWrapper = styled(Row)`
+  flex-wrap: wrap;
 `

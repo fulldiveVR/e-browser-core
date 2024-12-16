@@ -10,15 +10,15 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "brave/components/brave_rewards/core/common/callback_helpers.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/common/request_signer.h"
 #include "brave/components/brave_rewards/core/common/url_loader.h"
-#include "brave/components/brave_rewards/core/endpoint/promotion/promotions_util.h"
 #include "brave/components/brave_rewards/core/wallet/wallet.h"
 #include "net/http/http_status_code.h"
 
 namespace brave_rewards::internal::endpoints {
 
-PostChallenges::PostChallenges(RewardsEngineImpl& engine)
+PostChallenges::PostChallenges(RewardsEngine& engine)
     : RewardsEngineHelper(engine) {}
 
 PostChallenges::~PostChallenges() = default;
@@ -27,7 +27,7 @@ void PostChallenges::Request(RequestCallback callback) {
   auto request = CreateRequest();
   if (!request) {
     DeferCallback(FROM_HERE, std::move(callback),
-                  base::unexpected(Error::kInvalidRequest));
+                  base::unexpected(Error::kFailedToCreateRequest));
     return;
   }
 
@@ -41,7 +41,10 @@ mojom::UrlRequestPtr PostChallenges::CreateRequest() {
   auto request = mojom::UrlRequest::New();
 
   request->method = mojom::UrlMethod::POST;
-  request->url = endpoint::promotion::GetServerUrl("/v3/wallet/challenges");
+  request->url = Get<EnvironmentConfig>()
+                     .rewards_grant_url()
+                     .Resolve("/v3/wallet/challenges")
+                     .spec();
   request->content_type = "application/json";
 
   auto rewards_wallet = engine().wallet()->GetWallet();
@@ -69,18 +72,9 @@ mojom::UrlRequestPtr PostChallenges::CreateRequest() {
 
 PostChallenges::Result PostChallenges::MapResponse(
     const mojom::UrlResponse& response) {
-  switch (response.status_code) {
-    case net::HTTP_CREATED:  // HTTP 201
-      break;
-    case net::HTTP_BAD_REQUEST:  // HTTP 400
-      LogError(FROM_HERE) << "Bad request";
-      return base::unexpected(Error::kInvalidRequest);
-    case net::HTTP_INTERNAL_SERVER_ERROR:  // HTTP 500
-      LogError(FROM_HERE) << "Server error";
-      return base::unexpected(Error::kUnexpectedError);
-    default:
-      LogError(FROM_HERE) << "Unexpected status code: " << response.status_code;
-      return base::unexpected(Error::kUnexpectedStatusCode);
+  if (!URLLoader::IsSuccessCode(response.status_code)) {
+    LogError(FROM_HERE) << "Unexpected status code: " << response.status_code;
+    return base::unexpected(Error::kUnexpectedStatusCode);
   }
 
   auto value = base::JSONReader::Read(response.body);

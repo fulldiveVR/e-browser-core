@@ -15,7 +15,7 @@ import { useOnClickOutside } from '../../../common/hooks/useOnClickOutside'
 import { openWalletRouteTab } from '../../../utils/routes-utils'
 
 // Components
-import { DefaultPanelMenu } from '../wallet-menus/default-panel-menu'
+import { WalletSettingsMenu } from '../wallet-menus/wallet_settings_menu'
 import {
   DAppConnectionSettings //
 } from '../../extension/dapp-connection-settings/dapp-connection-settings'
@@ -62,7 +62,7 @@ export const DefaultPanelHeader = (props: Props) => {
 
   return (
     <Row
-      padding='18px 16px'
+      padding='12px 16px'
       justifyContent='space-between'
     >
       <LeftRightContainer
@@ -81,9 +81,9 @@ export const DefaultPanelHeader = (props: Props) => {
         <DAppConnectionSettings />
         <MenuWrapper ref={settingsMenuRef}>
           <Button onClick={() => setShowSettingsMenu((prev) => !prev)}>
-            <ButtonIcon name='more-horizontal' />
+            <ButtonIcon name='more-vertical' />
           </Button>
-          {showSettingsMenu && <DefaultPanelMenu />}
+          {showSettingsMenu && <WalletSettingsMenu />}
         </MenuWrapper>
       </LeftRightContainer>
       {showSettingsMenu && <ClickAwayArea />}

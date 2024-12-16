@@ -9,7 +9,6 @@
 
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/run_loop.h"
 #include "base/strings/string_util.h"
 #include "base/test/bind.h"
 #include "base/test/task_environment.h"
@@ -23,7 +22,7 @@
 
 namespace {
 
-const char kTestVpnOrders[] = R"(
+constexpr char kTestVpnOrders[] = R"(
           {
               "credentials":
               {
@@ -247,16 +246,17 @@ class SkusServiceTestUnitTest : public testing::Test {
   }
 
   std::string GetCredentialsSummary(const std::string& domain) {
-    std::string result;
+    skus::mojom::SkusResultPtr result;
     bool callback_called = false;
     skus_service_->CredentialSummary(
-        domain, base::BindLambdaForTesting([&](const std::string& summary) {
+        domain,
+        base::BindLambdaForTesting([&](skus::mojom::SkusResultPtr summary) {
           callback_called = true;
-          result = summary;
+          result = std::move(summary);
         }));
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     EXPECT_TRUE(callback_called);
-    return result;
+    return result->message;
   }
 
   void Interceptor(const network::ResourceRequest& request) {
@@ -265,8 +265,9 @@ class SkusServiceTestUnitTest : public testing::Test {
   }
   PrefService* prefs() { return &prefs_; }
 
- private:
   base::test::TaskEnvironment task_environment_;
+
+ private:
   std::unique_ptr<skus::SkusServiceImpl> skus_service_;
   TestingPrefServiceSimple prefs_;
   network::TestURLLoaderFactory url_loader_factory_;

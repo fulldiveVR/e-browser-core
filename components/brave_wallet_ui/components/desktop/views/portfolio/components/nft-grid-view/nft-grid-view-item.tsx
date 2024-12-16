@@ -5,31 +5,30 @@
 
 import * as React from 'react'
 import { useDispatch } from 'react-redux'
-import { skipToken } from '@reduxjs/toolkit/query'
 
 // Types
 import { BraveWallet } from '../../../../../../constants/types'
+import {
+  LOCAL_STORAGE_KEYS //
+} from '../../../../../../common/constants/local-storage-keys'
 
 // hooks
 import {
-  useAssetManagement //
-} from '../../../../../../common/hooks/assets-management'
-import {
-  useGetIpfsGatewayTranslatedNftUrlQuery,
-  useRemoveUserTokenMutation, //
-  useUpdateNftSpamStatusMutation
+  useRemoveUserTokenMutation,
+  useUpdateNftSpamStatusMutation,
+  useUpdateUserAssetVisibleMutation
 } from '../../../../../../common/slices/api.slice'
+import {
+  useSyncedLocalStorage //
+} from '../../../../../../common/hooks/use_local_storage'
 
 // actions
 import { WalletActions } from '../../../../../../common/actions'
 
-// selectors
-import { useSafeWalletSelector } from '../../../../../../common/hooks/use-safe-selector'
-import { WalletSelectors } from '../../../../../../common/selectors'
-
 // Utils
 import { stripERC20TokenImageURL } from '../../../../../../utils/string-utils'
 import { getLocale } from '../../../../../../../common/locale'
+import { getAssetIdKey } from '../../../../../../utils/asset-utils'
 
 // components
 import { DecoratedNftIcon } from '../../../../../shared/nft-icon/decorated-nft-icon'
@@ -47,7 +46,8 @@ import {
   NFTSymbol,
   MoreButton,
   JunkMarker,
-  JunkIcon
+  JunkIcon,
+  WatchOnlyMarker
 } from './style'
 import { Row } from '../../../../../shared/style'
 
@@ -55,37 +55,38 @@ interface Props {
   token: BraveWallet.BlockchainToken
   isTokenHidden: boolean
   isTokenSpam: boolean
-  onSelectAsset: () => void
+  onSelectAsset: (token: BraveWallet.BlockchainToken) => void
+  isWatchOnly?: boolean
 }
 
-export const NFTGridViewItem = (props: Props) => {
-  const { token, isTokenHidden, isTokenSpam, onSelectAsset } = props
+export const NFTGridViewItem = ({
+  token,
+  isTokenHidden,
+  isTokenSpam,
+  onSelectAsset,
+  isWatchOnly
+}: Props) => {
   const tokenImageURL = stripERC20TokenImageURL(token.logo)
   const [showRemoveNftModal, setShowRemoveNftModal] =
     React.useState<boolean>(false)
 
   // redux
-  const showNetworkLogoOnNfts = useSafeWalletSelector(
-    WalletSelectors.showNetworkLogoOnNfts
+  const [showNetworkLogoOnNfts] = useSyncedLocalStorage<boolean>(
+    LOCAL_STORAGE_KEYS.SHOW_NETWORK_LOGO_ON_NFTS,
+    false
   )
 
   // state
   const [showMore, setShowMore] = React.useState<boolean>(false)
   const [showEditModal, setShowEditModal] = React.useState<boolean>(false)
 
-  // queries
-  const { data: remoteImage } = useGetIpfsGatewayTranslatedNftUrlQuery(
-    tokenImageURL || skipToken
-  )
-
   // hooks
   const dispatch = useDispatch()
-  const { addOrRemoveTokenInLocalStorage, addNftToDeletedNftsList } =
-    useAssetManagement()
 
   // mutations
   const [updateNftSpamStatus] = useUpdateNftSpamStatusMutation()
   const [removeUserToken] = useRemoveUserTokenMutation()
+  const [updateUserAssetVisible] = useUpdateUserAssetVisibleMutation()
 
   // methods
   const onToggleShowMore = React.useCallback(
@@ -105,39 +106,41 @@ export const NFTGridViewItem = (props: Props) => {
     setShowMore(false)
   }, [])
 
-  const onHideNft = React.useCallback(() => {
+  const onHideNft = React.useCallback(async () => {
     setShowMore(false)
-    addOrRemoveTokenInLocalStorage(token, 'remove')
-    dispatch(
-      WalletActions.refreshNetworksAndTokens({ skipBalancesRefresh: true })
-    )
-  }, [token, addOrRemoveTokenInLocalStorage])
+    await updateUserAssetVisible({
+      token,
+      isVisible: false
+    }).unwrap()
+  }, [token, updateUserAssetVisible])
 
   const onUnHideNft = React.useCallback(async () => {
     setShowMore(false)
-    addOrRemoveTokenInLocalStorage(token, 'add')
+    await updateUserAssetVisible({
+      token,
+      isVisible: true
+    }).unwrap()
     if (isTokenSpam) {
       // remove from spam
-      await updateNftSpamStatus({ token, status: false })
+      await updateNftSpamStatus({ token, isSpam: false })
     }
-    dispatch(
-      WalletActions.refreshNetworksAndTokens({ skipBalancesRefresh: true })
-    )
-  }, [token, addOrRemoveTokenInLocalStorage, isTokenSpam])
+  }, [updateUserAssetVisible, token, isTokenSpam, updateNftSpamStatus])
 
   const onUnSpam = async () => {
     setShowMore(false)
-    await updateNftSpamStatus({ token, status: false })
-    dispatch(
-      WalletActions.refreshNetworksAndTokens({ skipBalancesRefresh: true })
-    )
+    await updateNftSpamStatus({ token, isSpam: false })
+    dispatch(WalletActions.refreshNetworksAndTokens())
+  }
+
+  const onMarkAsSpam = async () => {
+    setShowMore(false)
+    await updateNftSpamStatus({ token, isSpam: true })
+    dispatch(WalletActions.refreshNetworksAndTokens())
   }
 
   const onConfirmDelete = async () => {
     setShowRemoveNftModal(false)
-
-    await removeUserToken(token)
-    addNftToDeletedNftsList(token)
+    await removeUserToken(getAssetIdKey(token)).unwrap()
   }
 
   return (
@@ -151,22 +154,30 @@ export const NFTGridViewItem = (props: Props) => {
           onHideNft={onHideNft}
           onUnHideNft={onUnHideNft}
           onUnSpam={onUnSpam}
+          onMarkAsSpam={onMarkAsSpam}
           onRemoveNft={() => {
             setShowMore(false)
             setShowRemoveNftModal(true)
           }}
           onClose={() => setShowMore(false)}
         />
-        <DIVForClickableArea onClick={onSelectAsset} />
+        <DIVForClickableArea onClick={() => onSelectAsset(token)} />
         {isTokenSpam && (
           <JunkMarker>
             {getLocale('braveWalletNftJunk')}
             <JunkIcon />
           </JunkMarker>
         )}
+        {isWatchOnly && (
+          <WatchOnlyMarker>
+            {
+              getLocale('braveWalletWatchOnly') //
+            }
+          </WatchOnlyMarker>
+        )}
         <IconWrapper>
           <DecoratedNftIcon
-            icon={remoteImage}
+            icon={tokenImageURL}
             responsive={true}
             chainId={token?.chainId}
             coinType={token?.coin}

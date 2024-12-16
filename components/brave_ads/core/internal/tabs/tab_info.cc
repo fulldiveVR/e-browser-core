@@ -11,10 +11,12 @@ namespace brave_ads {
 
 TabInfo::TabInfo() = default;
 
-TabInfo::TabInfo(const int32_t id,
+TabInfo::TabInfo(int32_t id,
+                 bool is_visible,
                  std::vector<GURL> redirect_chain,
-                 const bool is_playing_media)
+                 bool is_playing_media)
     : id(id),
+      is_visible(is_visible),
       redirect_chain(std::move(redirect_chain)),
       is_playing_media(is_playing_media) {}
 

@@ -85,6 +85,14 @@ void BraveWalletProviderDelegateImpl::ShowPanel() {
   ::brave_wallet::ShowPanel(web_contents_);
 }
 
+void BraveWalletProviderDelegateImpl::ShowWalletBackup() {
+  ::brave_wallet::ShowWalletBackup();
+}
+
+void BraveWalletProviderDelegateImpl::UnlockWallet() {
+  ::brave_wallet::UnlockWallet();
+}
+
 void BraveWalletProviderDelegateImpl::WalletInteractionDetected() {
   ::brave_wallet::WalletInteractionDetected(web_contents_);
 }

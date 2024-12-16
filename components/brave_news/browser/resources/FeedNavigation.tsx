@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 import Icon from '@brave/leo/react/icon';
-import { effect, font, radius, spacing } from '@brave/leo/tokens/css';
+import { effect, font, radius, spacing } from '@brave/leo/tokens/css/variables';
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { useInspectContext } from './context';
@@ -113,9 +113,16 @@ const Marker = <Icon name='arrow-small-right' className='marker' />
 const PlaceholderMarker = <Icon />
 
 export function Item(props: { id: FeedView, name: string }) {
-  const { feedView, setFeedView } = useBraveNews()
+  const { feedView, setFeedView, reportSidebarFilterUsage } = useBraveNews()
   const topLevel = ['all', 'following'].includes(props.id)
-  return <CustomButton selected={props.id === feedView} onClick={() => setFeedView(props.id)} bold={topLevel}>
+  return <CustomButton
+    selected={props.id === feedView}
+    onClick={() => {
+      setFeedView(props.id)
+      reportSidebarFilterUsage()
+    }}
+    bold={topLevel}
+  >
     {props.name}
   </CustomButton>
 }
@@ -146,9 +153,9 @@ export default function Sidebar() {
       <summary>
         {subscribedChannels.length ? Marker : PlaceholderMarker}
         {getLocale('braveNewsChannelsHeader')}
-        <AddButton size="tiny" onClick={e => {
+        <AddButton size="tiny" onClick={(event) => {
+          event.preventDefault()
           setCustomizePage('news')
-          e.stopPropagation()
         }}>
           <Icon name='plus-add' />
         </AddButton>
@@ -165,9 +172,9 @@ export default function Sidebar() {
       <summary>
         {subscribedPublisherIds.length ? Marker : PlaceholderMarker}
         {getLocale('braveNewsPublishersHeading')}
-        <AddButton size="tiny" onClick={e => {
+        <AddButton size="tiny" onClick={(event) => {
+          event.preventDefault()
           setCustomizePage('popular')
-          e.stopPropagation()
         }}>
           <Icon name='plus-add' />
         </AddButton>

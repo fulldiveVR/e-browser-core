@@ -10,26 +10,47 @@ import "./brave_clear_browsing_data_on_exit_page.js"
 import {loadTimeData} from "../i18n_setup.js"
 import {WebUiListenerMixin} from 'chrome://resources/cr_elements/web_ui_listener_mixin.js';
 import {SettingsClearBrowsingDataDialogElement} from '../clear_browsing_data_dialog/clear_browsing_data_dialog.js'
-import type {SettingsClearBrowsingDataDialogElement as BraveSettingsClearBrowsingDataDialogElement} from '../clear_browsing_data_dialog/clear_browsing_data_dialog.js'
+import type {SettingsClearBrowsingDataDialogElement as BraveSettingsClearBrowsingDataDialogElement}
+    from '../clear_browsing_data_dialog/clear_browsing_data_dialog.js'
+import {BraveClearBrowsingDataDialogBrowserProxy, BraveClearBrowsingDataDialogBrowserProxyImpl}
+    from './brave_clear_browsing_data_dialog_proxy.js'
 
 const BaseElement = WebUiListenerMixin(SettingsClearBrowsingDataDialogElement)
 export class BraveSettingsClearBrowsingDataDialogElement extends BaseElement {
+  braveRewardsEnabled_: Boolean = false;
+  onClearBraveAdsDataClickHandler_: (() => void) = () => {};
+
+  private clearDataBrowserProxy_ =
+      BraveClearBrowsingDataDialogBrowserProxyImpl.getInstance();
+  private onSelectedPageChangedCallback_: (() => void) | null = null;
+  private updateSaveButtonStateCallback_: (() => void) | null = null;
+  private saveOnExitSettingsCallback_: (() => void) | null = null;
+
   override ready() {
-    super.ready()
+    super.ready();
 
     // Append On exit tab to tab selector.
     this.tabsNames_.push(loadTimeData.getString('onExitPageTitle'));
 
     this.addWebUiListener(
       'update-counter-text', this.updateOnExitCountersText.bind(this));
+
+    this.addWebUiListener(
+      'brave-rewards-enabled-changed', (enabled: Boolean) => {
+      this.braveRewardsEnabled_ = enabled;
+    })
+
+    this.clearDataBrowserProxy_.getBraveRewardsEnabled().then((enabled) => {
+      this.braveRewardsEnabled_ = enabled;
+    })
   }
 
   override connectedCallback() {
-    super.connectedCallback()
+    super.connectedCallback();
 
-    this.onSelectedTabChangedCallback_ = this.onSelectedTabChanged_.bind(this);
-    this.$.tabs.addEventListener('selected-item-changed',
-      this.onSelectedTabChangedCallback_);
+    this.onSelectedPageChangedCallback_ = this.onSelectedPageChanged_.bind(this);
+    this.$.pages.addEventListener('iron-select',
+      this.onSelectedPageChangedCallback_);
 
     this.updateSaveButtonStateCallback_ = this.updateSaveButtonState_.bind(this);
     this.shadowRoot.querySelector('#on-exit-tab').addEventListener(
@@ -38,15 +59,17 @@ export class BraveSettingsClearBrowsingDataDialogElement extends BaseElement {
     this.saveOnExitSettingsCallback_ = this.saveOnExitSettings_.bind(this);
     this.shadowRoot.querySelector('#saveOnExitSettingsConfirm').addEventListener(
       'click', this.saveOnExitSettingsCallback_);
+
+    this.onClearBraveAdsDataClickHandler_ = this.clearBraveAdsData_.bind(this);
   }
 
   override disconnectedCallback() {
     super.disconnectedCallback()
 
-    if (this.onSelectedTabChangedCallback_) {
-      this.$.tabs.removeEventListener('selected-item-changed',
-        this.onSelectedTabChangedCallback_);
-      this.onSelectedTabChangedCallback_ = null;
+    if (this.onSelectedPageChangedCallback_) {
+      this.$.pages.removeEventListener('selected-item-changed',
+        this.onSelectedPageChangedCallback_);
+      this.onSelectedPageChangedCallback_ = null;
     }
 
     if (this.saveOnExitSettingsCallback_) {
@@ -60,11 +83,9 @@ export class BraveSettingsClearBrowsingDataDialogElement extends BaseElement {
         'click', this.saveOnExitSettingsCallback_);
       this.saveOnExitSettingsCallback_ = null;
     }
-  }
 
-  private onSelectedTabChangedCallback_: (() => void) | null = null
-  private updateSaveButtonStateCallback_: (() => void) | null = null
-  private saveOnExitSettingsCallback_: (() => void) | null = null
+    this.onClearBraveAdsDataClickHandler_ = () => {};
+  }
 
 /**
   * Updates the text of a browsing data counter corresponding to the given
@@ -84,14 +105,14 @@ export class BraveSettingsClearBrowsingDataDialogElement extends BaseElement {
    * Updates Clear and Save buttons visibility based on the selected tab.
    * @private
    */
-  onSelectedTabChanged_() {
-    const tab = this.$.tabs.selectedItem;
-    if (!tab) {
+  onSelectedPageChanged_() {
+    const page = this.$.pages.selectedItem;
+    if (!page) {
       return;
     }
-    const isOnExitTab = (tab.id === 'on-exit-tab');
-    this.$.clearBrowsingDataConfirm.hidden = isOnExitTab;
-    this.shadowRoot.querySelector('#saveOnExitSettingsConfirm').hidden = !isOnExitTab;
+    const isOnExitPage = (page.id === 'on-exit-tab');
+    this.$.clearButton.hidden = isOnExitPage;
+    this.shadowRoot.querySelector('#saveOnExitSettingsConfirm').hidden = !isOnExitPage;
   }
 
   /**
@@ -116,5 +137,15 @@ export class BraveSettingsClearBrowsingDataDialogElement extends BaseElement {
     if (!this.clearingInProgress_) {
       this.$.clearBrowsingDataDialog.close();
     }
+  }
+
+  /**
+   * Clears Brave Ads data.
+   * @private
+   */
+  clearBraveAdsData_(e: any) {
+    e.preventDefault();
+    this.clearDataBrowserProxy_.clearBraveAdsData();
+    this.$.clearBrowsingDataDialog.close();
   }
 }

@@ -14,14 +14,13 @@ import { useSafeUISelector } from '../../../common/hooks/use-safe-selector'
 import { UISelectors } from '../../../common/selectors'
 
 // utils
-import Amount from '../../../utils/amount'
 import { getLocale } from '../../../../common/locale'
 
 // Styled Components
 import {
-  CircleButton,
+  MenuButton,
   HeaderTitle,
-  ButtonIcon,
+  MenuButtonIcon,
   SendButton
 } from './shared-card-headers.style'
 import { Row } from '../../shared/style'
@@ -29,15 +28,13 @@ import { Row } from '../../shared/style'
 interface Props {
   assetName?: string
   tokenId?: string
-  showSendButton: boolean
   onBack: () => void
-  onSend: () => void
+  onSend?: () => void
 }
 
 export const NftAssetHeader = ({
   assetName,
   tokenId,
-  showSendButton,
   onBack,
   onSend
 }: Props) => {
@@ -54,21 +51,18 @@ export const NftAssetHeader = ({
         justifyContent='flex-start'
         margin='0px 6px 0px 0px'
       >
-        <CircleButton
-          size={28}
+        <MenuButton
           marginRight={16}
           onClick={onBack}
         >
-          <ButtonIcon
+          <MenuButtonIcon
             size={16}
             name='arrow-left'
           />
-        </CircleButton>
-        <HeaderTitle isPanel={isPanel}>
-          {assetName}&nbsp;{tokenId ? `#${new Amount(tokenId).toNumber()}` : ''}
-        </HeaderTitle>
+        </MenuButton>
+        <HeaderTitle isPanel={isPanel}>{assetName}</HeaderTitle>
       </Row>
-      {showSendButton && (
+      {onSend && (
         <SendButton onClick={onSend}>{getLocale('braveWalletSend')}</SendButton>
       )}
     </Row>

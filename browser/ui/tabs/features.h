@@ -19,7 +19,11 @@ BASE_DECLARE_FEATURE(kBraveSharedPinnedTabs);
 
 BASE_DECLARE_FEATURE(kBraveHorizontalTabsUpdate);
 
+BASE_DECLARE_FEATURE(kBraveCompactHorizontalTabs);
+
 BASE_DECLARE_FEATURE(kBraveVerticalTabScrollBar);
+
+BASE_DECLARE_FEATURE(kBraveSplitView);
 
 bool HorizontalTabsUpdateEnabled();
 

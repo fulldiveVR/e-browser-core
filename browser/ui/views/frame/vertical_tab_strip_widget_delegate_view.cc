@@ -51,11 +51,10 @@ VerticalTabStripWidgetDelegateView* VerticalTabStripWidgetDelegateView::Create(
 
   auto* delegate_view =
       new VerticalTabStripWidgetDelegateView(browser_view, host_view);
-  views::Widget::InitParams params;
+  views::Widget::InitParams params(views::Widget::InitParams::TYPE_CONTROL);
   params.delegate = delegate_view;
 
   params.parent = browser_view->GetWidget()->GetNativeView();
-  params.type = views::Widget::InitParams::TYPE_CONTROL;
   // We need this to pass the key events to the top level widget. i.e. we should
   // not get focus.
   params.activatable = views::Widget::InitParams::Activatable::kNo;
@@ -109,7 +108,7 @@ void VerticalTabStripWidgetDelegateView::ChildPreferredSizeChanged(
   host_->SetPreferredSize(region_view_->GetMinimumSize());
 
   // The position could be changed, so we should lay out again.
-  host_->parent()->Layout();
+  host_->parent()->DeprecatedLayoutImmediately();
 
   // Lay out the widget manually in case the host doesn't arrange it.
   UpdateWidgetBounds();
@@ -209,7 +208,7 @@ void VerticalTabStripWidgetDelegateView::UpdateWidgetBounds() {
   }
 
   if (need_to_call_layout) {
-    Layout();
+    DeprecatedLayoutImmediately();
   }
 
 #if BUILDFLAG(IS_MAC)
@@ -251,5 +250,5 @@ void VerticalTabStripWidgetDelegateView::UpdateClip() {
 }
 #endif
 
-BEGIN_METADATA(VerticalTabStripWidgetDelegateView, views::View)
+BEGIN_METADATA(VerticalTabStripWidgetDelegateView)
 END_METADATA

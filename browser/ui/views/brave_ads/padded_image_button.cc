@@ -48,7 +48,7 @@ PaddedImageButton::PaddedImageButton(PressedCallback callback)
   SetHasInkDropActionOnClick(true);
 }
 
-void PaddedImageButton::AdjustBorderInsetToFitHeight(const int height) {
+void PaddedImageButton::AdjustBorderInsetToFitHeight(int height) {
   views::Border* border = GetBorder();
   CHECK(border);
 
@@ -70,7 +70,7 @@ void PaddedImageButton::OnThemeChanged() {
       color_utils::GetColorWithMaxContrast(background_color));
 }
 
-BEGIN_METADATA(PaddedImageButton, views::ImageButton)
+BEGIN_METADATA(PaddedImageButton)
 END_METADATA
 
 }  // namespace brave_ads

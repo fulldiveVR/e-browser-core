@@ -10,22 +10,12 @@ import {
   TransactionProviderError
 } from '../../constants/types'
 
-export type IsEip1559Changed = {
-  chainId: string
-  isEip1559: boolean
-}
-
 export type UnapprovedTxUpdated = {
   txInfo: SerializableTransactionInfo
 }
 
 export type TransactionStatusChanged = {
   txInfo: SerializableTransactionInfo
-}
-
-export type SetUserAssetVisiblePayloadType = {
-  token: BraveWallet.BlockchainToken
-  isVisible: boolean
 }
 
 export type SwapParamsPayloadType = {
@@ -90,8 +80,3 @@ export interface RetryTransactionPayload {
 
 export type SpeedupTransactionPayload = RetryTransactionPayload
 export type CancelTransactionPayload = RetryTransactionPayload
-
-export type UpdateUsetAssetType = {
-  existing: BraveWallet.BlockchainToken
-  updated: BraveWallet.BlockchainToken
-}

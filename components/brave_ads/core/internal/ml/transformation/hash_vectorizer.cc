@@ -5,6 +5,7 @@
 
 #include "brave/components/brave_ads/core/internal/ml/transformation/hash_vectorizer.h"
 
+#include <cstdint>
 #include <utility>
 
 #include "third_party/zlib/zlib.h"
@@ -34,8 +35,7 @@ HashVectorizer::HashVectorizer() {
 
 HashVectorizer::~HashVectorizer() = default;
 
-HashVectorizer::HashVectorizer(const int bucket_count,
-                               std::vector<uint32_t> subgrams)
+HashVectorizer::HashVectorizer(int bucket_count, std::vector<uint32_t> subgrams)
     : substring_sizes_(std::move(subgrams)), bucket_count_(bucket_count) {}
 
 std::vector<uint32_t> HashVectorizer::GetSubstringSizes() const {

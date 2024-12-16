@@ -7,7 +7,7 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/color/brave_color_mixer.h"
-#include "brave/browser/ui/tabs/brave_vertical_tab_color_mixer.h"
+#include "brave/browser/ui/tabs/brave_tab_color_mixer.h"
 #endif
 
 #define AddTabStripColorMixer AddTabStripColorMixer_ChromiumImpl
@@ -33,8 +33,6 @@ void AddTabStripColorMixer(ui::ColorProvider* provider,
 #if !BUILDFLAG(IS_ANDROID)
   // Set vertical tab mixer after adding tab strip mixer because
   // vertical tab mixer uses tab strip mixer's color.
-  const bool is_dark = key.color_mode == ui::ColorProviderKey::ColorMode::kDark;
-  is_dark ? tabs::AddBraveVerticalTabDarkThemeColorMixer(provider, key)
-          : tabs::AddBraveVerticalTabLightThemeColorMixer(provider, key);
+  tabs::AddBraveTabThemeColorMixer(provider, key);
 #endif
 }

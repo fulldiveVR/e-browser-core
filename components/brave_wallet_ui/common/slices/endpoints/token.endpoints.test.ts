@@ -3,15 +3,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import { act, renderHook } from '@testing-library/react-hooks'
+import { act, renderHook, waitFor } from '@testing-library/react'
+
+// types
+import { BraveWallet } from '../../../constants/types'
 
 // utils
-import { mockWalletState } from '../../../stories/mock-data/mock-wallet-state'
 import {
   createMockStore,
   renderHookOptionsWithMockStore
 } from '../../../utils/test-utils'
 import { selectAllVisibleUserAssetsFromQueryResult } from '../entities/blockchain-token.entity'
+import { getAssetIdKey } from '../../../utils/asset-utils'
 
 // hooks
 import {
@@ -20,15 +23,21 @@ import {
   useRemoveUserTokenMutation
 } from '../api.slice'
 
+// mocks
+import {
+  mockMoonCatNFT,
+  mockNewAssetOptions
+} from '../../../stories/mock-data/mock-asset-options'
+
 const fetchTokensAndSetupStore = async () => {
   const store = createMockStore(
     {},
     {
-      userAssets: mockWalletState.userVisibleTokensInfo
+      userAssets: mockNewAssetOptions
     }
   )
 
-  const { result, waitForValueToChange, rerender } = renderHook(
+  const hook = renderHook(
     () =>
       useGetUserTokensRegistryQuery(undefined, {
         selectFromResult: (res) => ({
@@ -40,30 +49,34 @@ const fetchTokensAndSetupStore = async () => {
     renderHookOptionsWithMockStore(store)
   )
 
-  await waitForValueToChange(() => result.current.isLoading)
-  const { visibleTokens, isLoading, error } = result.current
-
-  expect(isLoading).toBe(false)
-  expect(error).not.toBeDefined()
-  expect(visibleTokens).toHaveLength(
-    mockWalletState.userVisibleTokensInfo.length
+  // load
+  await waitFor(() =>
+    expect(
+      !hook.result.current.isLoading && hook.result.current.visibleTokens.length
+    ).toBeTruthy()
   )
 
-  return { result, rerender, store }
+  const { visibleTokens, error, isLoading } = hook.result.current
+  expect(isLoading).toBe(false)
+  expect(error).not.toBeDefined()
+  expect(visibleTokens.length).toBeTruthy()
+
+  return { hook, store }
 }
 
 describe('token endpoints', () => {
   it('it should fetch tokens', async () => {
-    const { result } = await fetchTokensAndSetupStore()
-    const visibleTokens = result.current.visibleTokens
-    expect(visibleTokens).toHaveLength(
-      mockWalletState.userVisibleTokensInfo.length
+    const { hook } = await fetchTokensAndSetupStore()
+
+    expect(hook.result.current.visibleTokens).toHaveLength(
+      mockNewAssetOptions.length
     )
   })
 
   it('it should delete tokens', async () => {
-    const { result, store, rerender } = await fetchTokensAndSetupStore()
-    const visibleTokens = result.current.visibleTokens
+    const { hook, store } = await fetchTokensAndSetupStore()
+
+    const { visibleTokens } = hook.result.current
 
     const { result: mutationHook } = renderHook(
       () => useRemoveUserTokenMutation(),
@@ -72,19 +85,22 @@ describe('token endpoints', () => {
 
     const [removeToken] = mutationHook.current
 
-    await act(async () => {
-      await removeToken(visibleTokens[0]).unwrap()
-    })
-    act(rerender)
+    const tokenToRemove = visibleTokens.find((t) => t.contractAddress !== '')!
+    expect(tokenToRemove).toBeTruthy()
 
-    const { visibleTokens: newTokens } = result.current
+    await act(async () => {
+      await removeToken(getAssetIdKey(tokenToRemove)).unwrap()
+    })
+    act(hook.rerender)
+
+    const { visibleTokens: newTokens } = hook.result.current
 
     expect(newTokens).toHaveLength(visibleTokens.length - 1)
   })
 
-  it('it should add tokens', async () => {
-    const { result, store, rerender } = await fetchTokensAndSetupStore()
-    const visibleTokens = result.current.visibleTokens
+  it('it should add tokens to the registry', async () => {
+    const { hook, store } = await fetchTokensAndSetupStore()
+    const visibleTokens = hook.result.current.visibleTokens
 
     const { result: mutationHook } = renderHook(
       () => useAddUserTokenMutation(),
@@ -93,13 +109,28 @@ describe('token endpoints', () => {
 
     const [addToken] = mutationHook.current
 
+    const tokenToAdd: BraveWallet.BlockchainToken = {
+      ...mockMoonCatNFT,
+      isNft: false,
+      tokenId: '2'
+    }
+    const tokenToAddId = getAssetIdKey(tokenToAdd)
+
+    // add token
+    let res
     await act(async () => {
-      await addToken(visibleTokens[0]).unwrap()
+      res = await addToken(tokenToAdd).unwrap()
     })
-    act(rerender)
+    expect(res).toEqual({ id: tokenToAddId })
 
-    const { visibleTokens: newTokens } = result.current
+    // get updated list
+    act(hook.rerender)
+    const { visibleTokens: newTokens } = hook.result.current
 
+    // check new list
+    expect(
+      newTokens.find((t) => getAssetIdKey(t) === tokenToAddId)
+    ).toBeTruthy()
     expect(newTokens).toHaveLength(visibleTokens.length + 1)
   })
 })

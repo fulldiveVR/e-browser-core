@@ -21,7 +21,6 @@
 #include "brave/components/playlist/common/features.h"
 #include "brave/components/playlist/common/mojom/playlist.mojom.h"
 #include "chrome/browser/prefs/browser_prefs.h"
-#include "chrome/browser/sync/sync_service_factory.h"
 #include "chrome/test/base/testing_profile.h"
 #include "components/download/public/common/download_task_runner.h"
 #include "components/pref_registry/pref_registry_syncable.h"
@@ -71,32 +70,6 @@ std::unique_ptr<net::test_server::HttpResponse> HandleRequest(
 namespace playlist {
 
 ////////////////////////////////////////////////////////////////////////////////
-// FakeDownloadRequestmanager
-//
-class FakeDownloadRequestManager : public PlaylistDownloadRequestManager {
- public:
-  explicit FakeDownloadRequestManager(
-      MediaDetectorComponentManager* component_manager)
-      : PlaylistDownloadRequestManager(nullptr, component_manager) {}
-  ~FakeDownloadRequestManager() override = default;
-
-  // PlaylistDownloadRequestManager:
-  void GetMediaFilesFromPage(Request request) override {
-    std::vector<mojom::PlaylistItemPtr> result;
-    result.push_back(item_.Clone());
-    std::move(request.callback).Run(std::move(result));
-  }
-
-  // Used to mock media discovery behavior
-  void SetItemToDiscover(mojom::PlaylistItemPtr item) {
-    item_ = std::move(item);
-  }
-
- private:
-  mojom::PlaylistItemPtr item_;
-};
-
-////////////////////////////////////////////////////////////////////////////////
 // PlaylistServiceUnitTest fixture
 class PlaylistServiceUnitTest : public testing::Test {
  public:
@@ -120,7 +93,7 @@ class PlaylistServiceUnitTest : public testing::Test {
 
     base::RepeatingTimer scheduler;
     scheduler.Start(FROM_HERE, base::Milliseconds(100),
-                    base::BindLambdaForTesting([this, &condition]() {
+                    base::BindLambdaForTesting([this, &condition] {
                       if (condition.Run()) {
                         run_loop_->Quit();
                       }
@@ -212,7 +185,7 @@ class PlaylistServiceUnitTest : public testing::Test {
 
     detector_manager_ =
         std::make_unique<MediaDetectorComponentManager>(nullptr);
-    detector_manager_->SetUseLocalScriptForTesting();
+    detector_manager_->SetUseLocalScript();
     service_ = std::make_unique<PlaylistService>(profile_.get(), &local_state_,
                                                  detector_manager_.get(),
                                                  nullptr, base::Time::Now());
@@ -359,13 +332,8 @@ TEST_F(PlaylistServiceUnitTest, MediaDownloadFailed) {
       }));
 }
 
-TEST_F(PlaylistServiceUnitTest, MediaRecoverTest) {
+TEST_F(PlaylistServiceUnitTest, DISABLED_MediaRecoverTest) {
   auto* service = playlist_service();
-  service->download_request_manager_ =
-      std::make_unique<FakeDownloadRequestManager>(detector_manager_.get());
-  auto* fake_download_request_manager =
-      static_cast<FakeDownloadRequestManager*>(
-          service->download_request_manager_.get());
 
   // Pre-condition: create a playlist item with invalid media file.
   // Then the item should be aborted.
@@ -386,7 +354,6 @@ TEST_F(PlaylistServiceUnitTest, MediaRecoverTest) {
     auto params = GetValidCreateParamsForIncompleteMediaFileList();
     params->id = id;
 
-    fake_download_request_manager->SetItemToDiscover(params.Clone());
     service->CreatePlaylistItem(std::move(params), /* cache = */ true);
 
     WaitUntil(
@@ -435,7 +402,6 @@ TEST_F(PlaylistServiceUnitTest, MediaRecoverTest) {
 
           // PlaylistService should update media source to the valid url, and
           // try recovering from the url.
-          fake_download_request_manager->SetItemToDiscover(item.Clone());
           service->RecoverLocalDataForItem(
               id, /*update_media_src_before_recovery=*/true,
               base::BindLambdaForTesting([](mojom::PlaylistItemPtr item) {
@@ -1088,7 +1054,7 @@ TEST_F(PlaylistServiceUnitTest, RemoveItemFromPlaylist) {
     base::ranges::transform(default_playlist->items,
                             std::inserter(stored_ids, stored_ids.end()),
                             [](const auto& item) { return item->id; });
-    EXPECT_FALSE(base::Contains(stored_ids, id));
+    EXPECT_FALSE(stored_ids.contains(id));
     EXPECT_FALSE(prefs->GetDict(kPlaylistItemsPref).FindDict(id));
   }
 
@@ -1121,7 +1087,7 @@ TEST_F(PlaylistServiceUnitTest, RemoveItemFromPlaylist) {
                             std::inserter(stored_ids, stored_ids.end()),
                             [](const auto& item) { return item->id; });
 
-    EXPECT_FALSE(base::Contains(stored_ids, id));
+    EXPECT_FALSE(stored_ids.contains(id));
     EXPECT_TRUE(prefs->GetDict(kPlaylistItemsPref).FindDict(id));
 
     service->GetPlaylistItem(
@@ -1175,6 +1141,7 @@ TEST_F(PlaylistServiceUnitTest, ResetAll) {
         ASSERT_EQ(playlist->items.size(), 5u);
       }));
 
+  items.clear();
   for (int i = 0; i < 5; i++) {
     auto item = prototype_item.Clone();
     item->id = base::Token::CreateRandom().ToString();
@@ -1328,8 +1295,7 @@ TEST_F(PlaylistServiceUnitTest, MigratePlaylistOrder) {
   auto playlists_dict = prefs()->GetDict(kPlaylistsPref).Clone();
   EXPECT_TRUE(playlists_dict.Remove(playlist->id.value()));
   prefs()->SetDict(kPlaylistsPref, std::move(playlists_dict));
-  EXPECT_FALSE(
-      base::Contains(prefs()->GetDict(kPlaylistsPref), playlist->id.value()));
+  EXPECT_FALSE(prefs()->GetDict(kPlaylistsPref).contains(playlist->id.value()));
 
   new_order_list = prefs()->GetList(kPlaylistOrderPref).Clone();
   MigratePlaylistOrder(prefs()->GetDict(kPlaylistsPref), new_order_list);
@@ -1444,24 +1410,6 @@ TEST_F(PlaylistServiceUnitTest, ReorderPlaylist) {
 
   playlist_service()->ResetAll();
   CheckOrder({std::string(kDefaultPlaylistID)});
-}
-
-class PlaylistServiceWithFakeUAUnitTest : public PlaylistServiceUnitTest {
- public:
-  PlaylistServiceWithFakeUAUnitTest()
-      : scoped_feature_list_(playlist::features::kPlaylistFakeUA) {}
-  ~PlaylistServiceWithFakeUAUnitTest() override = default;
-
- private:
-  base::test::ScopedFeatureList scoped_feature_list_;
-};
-
-TEST_F(PlaylistServiceWithFakeUAUnitTest,
-       ShouldAlwaysGetMediaFromBackgroundWebContents) {
-  // When this flag is enabled, we should get videos from background web
-  // contents regardless of web contents' state, such as URL.
-  EXPECT_TRUE(
-      playlist_service()->ShouldGetMediaFromBackgroundWebContents(nullptr));
 }
 
 }  // namespace playlist

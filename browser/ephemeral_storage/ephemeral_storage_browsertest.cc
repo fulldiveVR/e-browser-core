@@ -17,8 +17,8 @@
 #include "base/time/time.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_service_factory.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_tab_helper.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
-#include "brave/components/brave_shields/common/brave_shield_constants.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/ephemeral_storage/ephemeral_storage_service.h"
 #include "chrome/browser/content_settings/cookie_settings_factory.h"
@@ -31,7 +31,6 @@
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/browser/browsing_data_remover.h"
-#include "content/public/browser/notification_types.h"
 #include "content/public/browser/storage_partition.h"
 #include "content/public/common/content_paths.h"
 #include "content/public/common/content_switches.h"
@@ -164,17 +163,32 @@ void HttpRequestMonitor::Clear() {
 }
 
 EphemeralStorageBrowserTest::EphemeralStorageBrowserTest()
-    : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
-  SetUpHttpsServer();
-}
+    : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {}
 
 EphemeralStorageBrowserTest::~EphemeralStorageBrowserTest() = default;
 
+void EphemeralStorageBrowserTest::SetUp() {
+  ASSERT_TRUE(https_server_.InitializeAndListen());
+  InProcessBrowserTest::SetUp();
+}
+
 void EphemeralStorageBrowserTest::SetUpOnMainThread() {
   InProcessBrowserTest::SetUpOnMainThread();
+  std::vector<base::FilePath> test_data_dirs(2);
+  base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dirs[0]);
+  base::PathService::Get(content::DIR_TEST_DATA, &test_data_dirs[1]);
 
-  host_resolver()->AddRule("*", "127.0.0.1");
+  https_server_.RegisterDefaultHandler(base::BindRepeating(
+      &HandleFileRequestWithCustomHeaders,
+      base::Unretained(&http_request_monitor_), test_data_dirs));
+  https_server_.AddDefaultHandlers(GetChromeTestDataDir());
+  content::SetupCrossSiteRedirector(&https_server_);
+  https_server_.StartAcceptingConnections();
+
   mock_cert_verifier_.mock_cert_verifier()->set_default_result(net::OK);
+
+  ASSERT_TRUE(embedded_test_server()->Start());
+  host_resolver()->AddRule("*", "127.0.0.1");
 
   a_site_ephemeral_storage_url_ =
       https_server_.GetURL("a.com", "/ephemeral_storage.html");
@@ -186,26 +200,11 @@ void EphemeralStorageBrowserTest::SetUpOnMainThread() {
       "a.com", "/ephemeral_storage_with_network_cookies.html");
 }
 
-void EphemeralStorageBrowserTest::SetUpHttpsServer() {
-  brave::RegisterPathProvider();
-  content::RegisterPathProvider();
-
-  std::vector<base::FilePath> test_data_dirs(2);
-  base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dirs[0]);
-  base::PathService::Get(content::DIR_TEST_DATA, &test_data_dirs[1]);
-
-  https_server_.RegisterDefaultHandler(base::BindRepeating(
-      &HandleFileRequestWithCustomHeaders,
-      base::Unretained(&http_request_monitor_), test_data_dirs));
-  https_server_.AddDefaultHandlers(GetChromeTestDataDir());
-  content::SetupCrossSiteRedirector(&https_server_);
-  ASSERT_TRUE(https_server_.Start());
-}
-
 void EphemeralStorageBrowserTest::SetUpCommandLine(
     base::CommandLine* command_line) {
   InProcessBrowserTest::SetUpCommandLine(command_line);
   mock_cert_verifier_.SetUpCommandLine(command_line);
+
   // Backgrounded renderer processes run at a lower priority, causing the
   // JS events to slow down. Disable backgrounding so that the tests work
   // properly.
@@ -419,7 +418,7 @@ void EphemeralStorageBrowserTest::SetCookieSetting(
 
 // Helper to load easy-to-use Indexed DB API.
 void EphemeralStorageBrowserTest::LoadIndexedDbHelper(RenderFrameHost* host) {
-  const char kLoadIndexMinScript[] =
+  static constexpr char kLoadIndexMinScript[] =
       "new Promise((resolve) => {"
       "  const script = document.createElement('script');"
       "  script.onload = () => {"
@@ -651,18 +650,10 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorageBrowserTest,
   EXPECT_EQ("a.com value", before_timeout.iframe_1.local_storage);
   EXPECT_EQ("a.com value", before_timeout.iframe_2.local_storage);
 
-  if (base::FeatureList::IsEnabled(
-          net::features::kThirdPartyStoragePartitioning)) {
-    // Session storage data is stored in a tab until its closed.
-    EXPECT_EQ("a.com value", before_timeout.main_frame.session_storage);
-    EXPECT_EQ("a.com value", before_timeout.iframe_1.session_storage);
-    EXPECT_EQ("a.com value", before_timeout.iframe_2.session_storage);
-  } else {
-    // keepalive does not apply to session storage
-    EXPECT_EQ("a.com value", before_timeout.main_frame.session_storage);
-    EXPECT_EQ(nullptr, before_timeout.iframe_1.session_storage);
-    EXPECT_EQ(nullptr, before_timeout.iframe_2.session_storage);
-  }
+  // Session storage data is stored in a tab until its closed.
+  EXPECT_EQ("a.com value", before_timeout.main_frame.session_storage);
+  EXPECT_EQ("a.com value", before_timeout.iframe_1.session_storage);
+  EXPECT_EQ("a.com value", before_timeout.iframe_2.session_storage);
 
   EXPECT_EQ("name=acom_simple; from=a.com", before_timeout.main_frame.cookies);
   EXPECT_EQ("name=bcom_simple; from=a.com", before_timeout.iframe_1.cookies);
@@ -883,6 +874,7 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorageBrowserTest,
       "b.com", "/set-cookie?name=bcom_ephemeral;path=/;SameSite=None;Secure");
   NavigateIframeToURL(web_contents, "third_party_iframe_a",
                       b_site_set_ephemeral_cookie_url);
+  iframe_a = content::ChildFrameAt(main_frame, 0);
   ASSERT_EQ("name=bcom_ephemeral", GetCookiesInFrame(iframe_a));
   ASSERT_EQ("name=bcom_ephemeral", GetCookiesInFrame(iframe_b));
 
@@ -1036,7 +1028,7 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorageBrowserTest,
                            frames[site_b_tab2][4]}},
   };
 
-  const char kTestMessage[] = "msg";
+  static constexpr char kTestMessage[] = "msg";
   for (const auto& test_case : kTestCases) {
     // RenderFrameHosts that were expected to sent something or receive
     // something. The set is used to skip RFHs in "expect received nothing"
@@ -1060,7 +1052,7 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorageBrowserTest,
 
     for (const auto& wc_frames : frames) {
       for (auto* rfh : wc_frames.second) {
-        if (!base::Contains(processed_rfhs, rfh)) {
+        if (!processed_rfhs.contains(rfh)) {
           SCOPED_TRACE(testing::Message()
                        << "WebContents URL: "
                        << wc_frames.first->GetLastCommittedURL()
@@ -1110,17 +1102,10 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorageBrowserTest,
   // Values in a.com (main) -> b.com -> a.com frame.
   ValuesFromFrame cross_site_acom_values =
       GetValuesFromFrame(third_party_nested_bcom_nested_acom);
-  if (base::FeatureList::IsEnabled(
-          net::features::kThirdPartyStoragePartitioning)) {
-    // a.com -> b.com -> a.com is considered third-party. Storage should be
-    // partitioned from the main frame.
-    EXPECT_EQ(nullptr, cross_site_acom_values.local_storage);
-    EXPECT_EQ(nullptr, cross_site_acom_values.session_storage);
-  } else {
-    // a.com -> b.com -> a.com is NOT considered third-party.
-    EXPECT_EQ("first-party-a.com", cross_site_acom_values.local_storage);
-    EXPECT_EQ("first-party-a.com", cross_site_acom_values.session_storage);
-  }
+  // a.com -> b.com -> a.com is considered third-party. Storage should be
+  // partitioned from the main frame.
+  EXPECT_EQ(nullptr, cross_site_acom_values.local_storage);
+  EXPECT_EQ(nullptr, cross_site_acom_values.session_storage);
   // Cookies are not partitioned via kThirdPartyStoragePartitioning feature.
   EXPECT_EQ("name=first-party-a.com", cross_site_acom_values.cookies);
 

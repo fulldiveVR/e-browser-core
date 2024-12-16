@@ -528,10 +528,6 @@ constexpr std::array<std::string_view, 502> kTopSites = {
 
 }  // namespace
 
-// As from autocomplete_provider.h:
-// Search Secondary Provider (suggestion)                              |  100++
-const int TopSitesProvider::kRelevance = 100;
-
 
 TopSitesProvider::TopSitesProvider(AutocompleteProviderClient* client)
     : AutocompleteProvider(AutocompleteProvider::TYPE_SEARCH), client_(client) {
@@ -553,7 +549,7 @@ void TopSitesProvider::Start(const AutocompleteInput& input,
   const std::string input_text =
       base::ToLowerASCII(base::UTF16ToUTF8(input.text()));
 
-  for (auto* i = kTopSites.begin();
+  for (auto i = kTopSites.begin();
        (i != kTopSites.end()) && (matches_.size() < provider_max_matches());
        ++i) {
     const std::string_view& current_site = *i;

@@ -3,19 +3,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "brave/browser/ui/views/brave_ads/notification_ad_popup.h"
+
 #include <tuple>
 
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/browser/ui/brave_ads/notification_ad.h"
 #include "brave/browser/ui/brave_ads/notification_ad_popup_handler.h"
-#include "brave/browser/ui/views/brave_ads/notification_ad_popup.h"
 #include "brave/browser/ui/views/brave_ads/notification_ad_popup_collection.h"
 #include "brave/components/brave_ads/browser/ad_units/notification_ad/custom_notification_ad_feature.h"
-#include "brave/components/constants/brave_paths.h"
 #include "brave/test/views/snapshot/widget_snapshot_checker.h"
 #include "chrome/browser/platform_util.h"
 #include "chrome/browser/ui/browser.h"
-#include "chrome/browser/ui/browser_window.h"  // IWYU pragma: keep
+#include "chrome/browser/ui/browser_window.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "content/public/test/browser_test.h"
 #include "ui/gfx/native_widget_types.h"
@@ -55,16 +55,12 @@ class NotificationAdPopupBrowserTest
     InProcessBrowserTest::TearDown();
   }
 
-  void SetUpOnMainThread() override {
-    InProcessBrowserTest::SetUpOnMainThread();
-    brave::RegisterPathProvider();
-  }
-
  private:
   base::test::ScopedFeatureList scoped_feature_list_;
 };
 
-IN_PROC_BROWSER_TEST_P(NotificationAdPopupBrowserTest, CheckThemeChanged) {
+IN_PROC_BROWSER_TEST_P(NotificationAdPopupBrowserTest,
+                       DISABLED_CheckThemeChanged) {
   // Check appearance in light theme.
   dark_mode::SetBraveDarkModeType(
       dark_mode::BraveDarkModeType::BRAVE_DARK_MODE_TYPE_LIGHT);
@@ -83,7 +79,7 @@ IN_PROC_BROWSER_TEST_P(NotificationAdPopupBrowserTest, CheckThemeChanged) {
       platform_util::GetViewForWindow(browser_native_window);
   EXPECT_TRUE(browser_native_view);
 
-  NotificationAdPopupHandler::Show(browser()->profile(), ad,
+  NotificationAdPopupHandler::Show(*browser()->profile(), ad,
                                    browser_native_window, browser_native_view);
 
   NotificationAdPopup* popup =

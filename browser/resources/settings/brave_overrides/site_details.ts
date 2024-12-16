@@ -5,21 +5,18 @@
 
 // @ts-nocheck TODO(petemill): Define types and remove ts-nocheck
 
-import {RegisterPolymerTemplateModifications,RegisterPolymerComponentReplacement} from 'chrome://resources/brave/polymer_overriding.js'
+import {RegisterPolymerTemplateModifications} from 'chrome://resources/brave/polymer_overriding.js'
+import {html} from 'chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js'
 import {getTrustedHTML} from 'chrome://resources/js/static_types.js'
-
 import {loadTimeData} from '../i18n_setup.js'
-import {BraveSiteDetailsElement} from '../brave_site_details/brave_site_details.js'
 
 import 'chrome://resources/brave/leo.bundle.js'
 
-RegisterPolymerComponentReplacement(
-  'site-details',
-  BraveSiteDetailsElement
-)
-
 RegisterPolymerTemplateModifications({
-  'site-details': (templateContent) => {
+  'site-details': (templateContent: HTMLTemplateElement) => {
+    // Add top-padding to subpage
+    templateContent.prepend(html`<style>#usage { padding-top: var(--leo-spacing-l); }</style>`.content)
+
     if (!loadTimeData.getBoolean('isIdleDetectionFeatureEnabled')) {
       const idleDetectionItem = templateContent.querySelector('[category="[[contentSettingsTypesEnum_.IDLE_DETECTION]]"]')
       if (!idleDetectionItem) {
@@ -105,6 +102,30 @@ RegisterPolymerTemplateModifications({
         }
         curChild++
       }
+      // AI Chat feature
+      const isOpenAIChatFromBraveSearchEnabled =
+        loadTimeData.getBoolean('isOpenAIChatFromBraveSearchEnabled')
+      if (isOpenAIChatFromBraveSearchEnabled) {
+        firstPermissionItem.insertAdjacentHTML(
+          'beforebegin',
+          getTrustedHTML`
+            <site-details-permission
+              category="[[contentSettingsTypesEnum_.BRAVE_OPEN_AI_CHAT]]"
+              icon="user">
+            </site-details-permission>
+          `)
+        const braveAIChatSettings = templateContent.
+          querySelector(`div.list-frame > site-details-permission:nth-child(${curChild})`)
+        if (!braveAIChatSettings) {
+          console.error(
+            '[Brave Settings Overrides] Couldn\'t find Brave AI chat settings')
+        }
+        else {
+          braveAIChatSettings.setAttribute(
+            'label', loadTimeData.getString('siteSettingsBraveOpenAIChat'))
+        }
+        curChild++
+      }
       const isNativeBraveWalletEnabled = loadTimeData.getBoolean('isNativeBraveWalletFeatureEnabled')
       if (isNativeBraveWalletEnabled) {
         firstPermissionItem.insertAdjacentHTML(
@@ -142,35 +163,16 @@ RegisterPolymerTemplateModifications({
           solanaSettings.setAttribute(
               'label', loadTimeData.getString('siteSettingsSolana'))
         }
+        const adPersonalization = templateContent.querySelector('#adPersonalization')
+        if (!adPersonalization) {
+          console.error('[Brave Settings Overrides] Could not find adPersonalization element to hide')
+        } else {
+          adPersonalization.remove()
+        }
       }
     }
 
     // In Chromium, the VR and AR icons are the same but we want to have separate ones.
     templateContent.querySelector('site-details-permission[icon="settings:vr-headset"]')?.setAttribute('icon', 'smartphone-hand')
-
-    const usageSection = templateContent.querySelector('div#usage')
-    if (!usageSection) {
-      console.error(`[Brave Settings Overrides] Couldn't find usageSection item`)
-    } else {
-      usageSection.insertAdjacentHTML(
-        'afterend',
-        getTrustedHTML`
-
-          <cr-link-row id="cookiesLink" on-click="onCookiesDetailClicked_">
-          </cr-link-row>
-
-        `)
-      const cookiesDetail =
-        templateContent.querySelector('#cookiesLink')
-      if (!cookiesDetail) {
-        console.error(
-          '[Brave Settings Overrides] Couldn\'t find cookies link')
-      } else {
-        cookiesDetail.setAttribute('label',
-            loadTimeData.getString('siteCookiesLinkLabel'))
-        cookiesDetail.setAttribute('sub-label',
-            loadTimeData.getString('siteCookiesLinkDesc'))
-      }
-    }
   }
 })

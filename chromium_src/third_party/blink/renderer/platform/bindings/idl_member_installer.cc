@@ -9,15 +9,13 @@
 
 #include "third_party/blink/public/common/features.h"
 
-namespace blink {
-
-namespace bindings {
+namespace blink::bindings {
 
 namespace {
 
 bool IsConnectionConfig(const IDLMemberInstaller::AttributeConfig& config) {
   constexpr std::string_view kConnection = "connection";
-  return kConnection == config.name;
+  return kConnection == config.property_name;
 }
 
 }  // namespace
@@ -67,6 +65,4 @@ PLATFORM_EXPORT void IDLMemberInstaller::BraveInstallAttributes<
   }
 }
 
-}  // namespace bindings
-
-}  // namespace blink
+}  // namespace blink::bindings

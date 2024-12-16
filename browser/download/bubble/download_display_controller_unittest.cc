@@ -10,9 +10,11 @@
 #include "chrome/browser/download/bubble/download_display_controller.h"
 
 #include "base/command_line.h"
+#include "base/containers/adapters.h"
 #include "base/files/file_path.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
+#include "base/ranges/algorithm.h"
 #include "base/time/time.h"
 #include "chrome/browser/download/bubble/download_bubble_display_info.h"
 #include "chrome/browser/download/bubble/download_bubble_ui_controller.h"
@@ -138,6 +140,8 @@ class FakeDownloadDisplay : public DownloadDisplay {
   void OpenSecuritySubpage(
       const offline_items_collection::ContentId&) override {}
 
+  void AnnounceAccessibleAlertNow(const std::u16string& alert_text) override {}
+
  private:
   bool shown_ = false;
   bool enabled_ = false;
@@ -250,12 +254,10 @@ class MockDownloadBubbleUpdateService : public DownloadBubbleUpdateService {
   void AddModel(ModelType type) { model_types_.push_back(type); }
 
   void RemoveLastDownload() {
-    for (auto reverse_it = model_types_.rbegin();
-         reverse_it != model_types_.rend(); ++reverse_it) {
-      if (*reverse_it == ModelType::kDownloadItem) {
-        model_types_.erase(std::next(reverse_it).base());
-        break;
-      }
+    auto it = base::ranges::find(base::Reversed(model_types_),
+                                 ModelType::kDownloadItem);
+    if (it != model_types_.rend()) {
+      model_types_.erase(std::prev(it.base()));
     }
   }
 
@@ -270,10 +272,9 @@ class MockDownloadBubbleUpdateService : public DownloadBubbleUpdateService {
   raw_ptr<Profile> profile_;
   DownloadBubbleDisplayInfo info_;
   std::vector<ModelType> model_types_;
-  const raw_ref<const std::vector<std::unique_ptr<StrictMockDownloadItem>>,
-                ExperimentalAsh>
+  const raw_ref<const std::vector<std::unique_ptr<StrictMockDownloadItem>>>
       download_items_;
-  const raw_ref<const OfflineItemList, ExperimentalAsh> offline_items_;
+  const raw_ref<const OfflineItemList> offline_items_;
 };
 
 class MockDownloadCoreService : public DownloadCoreService {
@@ -286,7 +287,7 @@ class MockDownloadCoreService : public DownloadCoreService {
               ());
   MOCK_METHOD(bool, HasCreatedDownloadManager, ());
   MOCK_METHOD(int, BlockingShutdownCount, (), (const));
-  MOCK_METHOD(void, CancelDownloads, ());
+  MOCK_METHOD(void, CancelDownloads, (CancelDownloadsTrigger trigger));
   MOCK_METHOD(void,
               SetDownloadManagerDelegateForTesting,
               (std::unique_ptr<ChromeDownloadManagerDelegate> delegate));

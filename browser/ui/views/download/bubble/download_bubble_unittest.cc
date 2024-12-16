@@ -15,7 +15,7 @@
 #include "content/public/test/browser_task_environment.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "ui/base/models/simple_menu_model.h"
+#include "ui/menus/simple_menu_model.h"
 #include "url/gurl.h"
 
 using download::DownloadItem;
@@ -34,7 +34,7 @@ const base::FilePath::CharType kDefaultDisplayFileName[] =
     FILE_PATH_LITERAL("foo.bar");
 
 // Default URL for a mock download item in DownloadItemModelTest.
-const char kDefaultURL[] = "http://example.com/foo.bar";
+constexpr char kDefaultURL[] = "http://example.com/foo.bar";
 }  // namespace
 
 class DownloadBubbleTest : public testing::Test {

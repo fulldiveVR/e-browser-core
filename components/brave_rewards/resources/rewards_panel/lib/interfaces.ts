@@ -10,7 +10,6 @@ import {
 } from '../../shared/lib/external_wallet'
 
 import { UserType } from '../../shared/lib/user_type'
-import { GrantInfo } from '../../shared/lib/grant_info'
 import { ProviderPayoutStatus } from '../../shared/lib/provider_payout_status'
 import { PublisherPlatform } from '../../shared/lib/publisher_platform'
 import { OnboardingResult } from '../../shared/components/onboarding'
@@ -25,6 +24,7 @@ export interface ExchangeInfo {
 
 export interface EarningsInfo {
   nextPaymentDate: number
+  adsReceivedThisMonth: number
   minEarningsThisMonth: number
   maxEarningsThisMonth: number
   minEarningsLastMonth: number
@@ -38,20 +38,8 @@ export interface PublisherInfo {
   icon: string
   platform: PublisherPlatform | null
   attentionScore: number
-  autoContributeEnabled: boolean
   monthlyTip: number
   supportedWalletProviders: ExternalWalletProvider[]
-}
-
-export type GrantCaptchaStatus = 'pending' | 'passed' | 'failed' | 'error'
-
-export interface GrantCaptchaInfo {
-  id: string
-  imageURL: string
-  hint: string
-  status: GrantCaptchaStatus
-  verifying: boolean
-  grantInfo: GrantInfo
 }
 
 export type AdaptiveCaptchaStatus =
@@ -66,13 +54,7 @@ export interface AdaptiveCaptchaInfo {
   status: AdaptiveCaptchaStatus
 }
 
-export interface Settings {
-  autoContributeEnabled: boolean
-  autoContributeAmount: number
-}
-
 export interface Options {
-  autoContributeAmounts: number[]
   externalWalletRegions: Map<string, ExternalWalletProviderRegionInfo>
   vbatDeadline: number | undefined
   vbatExpired: boolean
@@ -86,9 +68,7 @@ export interface HostState {
   rewardsEnabled: boolean
   requestedView: RequestedView | null
   balance: Optional<number>
-  settings: Settings
   options: Options
-  grantCaptchaInfo: GrantCaptchaInfo | null
   adaptiveCaptchaInfo: AdaptiveCaptchaInfo | null
   exchangeInfo: ExchangeInfo
   earningsInfo: EarningsInfo
@@ -105,6 +85,7 @@ export interface HostState {
   userType: UserType
   publishersVisitedCount: number
   selfCustodyInviteDismissed: boolean
+  isTermsOfServiceUpdateRequired: boolean
 }
 
 export type HostListener = (state: HostState) => void
@@ -116,14 +97,13 @@ export interface Host {
   openAdaptiveCaptchaSupport: () => void
   openRewardsSettings: () => void
   refreshPublisherStatus: () => void
-  setIncludeInAutoContribute: (include: boolean) => void
   sendTip: () => void
   handleExternalWalletAction: (action: ExternalWalletAction) => void
   handleNotificationAction: (action: NotificationAction) => void
   dismissNotification: (notification: Notification) => void
   dismissSelfCustodyInvite: () => void
-  solveGrantCaptcha: (solution: { x: number, y: number }) => void
-  clearGrantCaptcha: () => void
+  acceptTermsOfServiceUpdate: () => void
+  resetRewards: () => void
   clearAdaptiveCaptcha: () => void
   handleAdaptiveCaptchaResult: (result: AdaptiveCaptchaResult) => void
   closePanel: () => void

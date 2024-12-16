@@ -1,8 +1,8 @@
 diff --git a/build/config/android/BUILD.gn b/build/config/android/BUILD.gn
-index 6705999966004e8a8334c7941924f354eb864986..27660587aabcb974dbace6988a0d6d57fe0d29d2 100644
+index 9162edaf82c231bfd1e2cf9741ae698ba18a6880..115f45b3f043ab00b16fe06fbd6188b35787d5e2 100644
 --- a/build/config/android/BUILD.gn
 +++ b/build/config/android/BUILD.gn
-@@ -50,6 +50,7 @@ config("compiler") {
+@@ -53,6 +53,7 @@ config("compiler") {
      # segments to be mapped adjacently, which breakpad relies on.
      "-Wl,-z,max-page-size=$_max_page_size",
    ]

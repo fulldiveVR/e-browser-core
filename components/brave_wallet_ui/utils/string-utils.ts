@@ -10,8 +10,14 @@ import { loadTimeData } from '../../common/loadTimeData'
 export const stripChromeImageURL = (url?: string) =>
   url?.replace('chrome://image?', '')
 
-export const stripERC20TokenImageURL = (url?: string) =>
-  url?.replace('chrome://erc-token-images/', '')
+export const stripERC20TokenImageURL = <T extends string | undefined>(
+  url?: T
+): T => {
+  if (url) {
+    return url.replace('chrome://erc-token-images/', '') as T
+  }
+  return undefined as T
+}
 
 export const toProperCase = (value: string) =>
   value.replace(
@@ -57,7 +63,7 @@ export const getRampNetworkPrefix = (chainId: string, isOfframp?: boolean) => {
       return isOfframp ? 'ETH' : ''
     case BraveWallet.AVALANCHE_MAINNET_CHAIN_ID:
       return 'AVAXC'
-    case BraveWallet.BINANCE_SMART_CHAIN_MAINNET_CHAIN_ID:
+    case BraveWallet.BNB_SMART_CHAIN_MAINNET_CHAIN_ID:
       return 'BSC'
     case BraveWallet.POLYGON_MAINNET_CHAIN_ID:
       return 'MATIC'
@@ -72,6 +78,8 @@ export const getRampNetworkPrefix = (chainId: string, isOfframp?: boolean) => {
       return 'FANTOM'
     case BraveWallet.FILECOIN_MAINNET:
       return 'FILECOIN'
+    case BraveWallet.BITCOIN_MAINNET:
+      return isOfframp ? 'BTC' : ''
     default:
       return ''
   }
@@ -81,9 +89,8 @@ export const formatAsDouble = (value: string): string =>
   // Removes all characters except numbers, commas and decimals
   value.replace(/[^0-9.,]+/g, '')
 
-export const isValidateUrl = (url: string) => {
-  const re = /^\s*https?:\/\//
-  return re.test(url)
+export const isHttpsUrl = (url: string) => {
+  return url.startsWith('https://')
 }
 
 export function hasUnicode(str: string) {
@@ -175,4 +182,20 @@ export const isIpfs = (url?: string) => {
 
 export const getCid = (ipfsUrl: string) => {
   return ipfsUrl.replace(IPFS_PROTOCOL, '')
+}
+
+export const capitalizeFirstLetter = (input: string) => {
+  if (input.length === 0) return input
+  return input.charAt(0).toUpperCase() + input.slice(1)
+}
+
+export const reduceInt = (integerString: string) => {
+  if (integerString.length < 7) {
+    return integerString
+  }
+
+  const firstHalf = integerString.slice(0, 3)
+  const secondHalf = integerString.slice(-3)
+  const reduced = firstHalf.concat('...', secondHalf)
+  return reduced
 }

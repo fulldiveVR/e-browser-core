@@ -6,39 +6,40 @@
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_ad_model_based_predictor.h"
 
 #include "base/test/scoped_feature_list.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_time_util.h"
+#include "brave/components/brave_ads/core/internal/common/test/test_base.h"
+#include "brave/components/brave_ads/core/internal/common/test/time_test_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_info.h"
-#include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_test_util.h"
 #include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_notification_ad_model_based_predictor_feature.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/latent_interest/latent_interest_user_model_info.h"
 #include "brave/components/brave_ads/core/internal/serving/targeting/user_model/user_model_info.h"
-#include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_builder_test_util.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
 namespace brave_ads {
 
-class BraveAdsCreativeAdModelBasedPredictorTest : public UnitTestBase {};
+class BraveAdsCreativeAdModelBasedPredictorTest : public test::TestBase {};
 
 TEST_F(BraveAdsCreativeAdModelBasedPredictorTest, PredictCreativeAd) {
   // Arrange
   CreativeNotificationAdList creative_ads;
   const CreativeNotificationAdInfo creative_ad =
-      test::BuildCreativeNotificationAd(/*should_use_random_uuids=*/
+      test::BuildCreativeNotificationAd(/*should_generate_random_uuids=*/
                                         true);
   creative_ads.push_back(creative_ad);
 
   const UserModelInfo user_model{
       IntentUserModelInfo{SegmentList{"parent-child"}},
       LatentInterestUserModelInfo{SegmentList{"parent-child"}},
-      InterestUserModelInfo{SegmentList{"parent-child"},
-                            TextEmbeddingHtmlEventList{}}};
+      InterestUserModelInfo{SegmentList{"parent-child"}}};
 
   AdEventList ad_events;
   const AdEventInfo ad_event = test::BuildAdEvent(
-      creative_ad, AdType::kNotificationAd, ConfirmationType::kViewed, Now(),
-      /*should_use_random_uuids=*/true);
+      creative_ad, mojom::AdType::kNotificationAd,
+      mojom::ConfirmationType::kViewedImpression,
+      /*created_at=*/test::Now(), /*should_generate_random_uuids=*/true);
   ad_events.push_back(ad_event);
 
   // Act & Assert
@@ -57,25 +58,24 @@ TEST_F(BraveAdsCreativeAdModelBasedPredictorTest, DoNotPredictCreativeAd) {
        {"child_interest_segment_predictor_weight", "0.0"},
        {"parent_interest_segment_predictor_weight", "0.0"},
        {"untargeted_segment_predictor_weight", "0.0"},
-       {"last_seen_ad_predictor_weight", "0.0"},
-       {"last_seen_advertiser_predictor_weight", "0.0"}});
+       {"last_seen_ad_predictor_weight", "0.0"}});
 
   CreativeNotificationAdList creative_ads;
   const CreativeNotificationAdInfo creative_ad =
-      test::BuildCreativeNotificationAd(/*should_use_random_uuids=*/
+      test::BuildCreativeNotificationAd(/*should_generate_random_uuids=*/
                                         true);
   creative_ads.push_back(creative_ad);
 
   const UserModelInfo user_model{
       IntentUserModelInfo{SegmentList{"parent-child"}},
       LatentInterestUserModelInfo{SegmentList{"parent-child"}},
-      InterestUserModelInfo{SegmentList{"parent-child"},
-                            TextEmbeddingHtmlEventList{}}};
+      InterestUserModelInfo{SegmentList{"parent-child"}}};
 
   AdEventList ad_events;
   const AdEventInfo ad_event = test::BuildAdEvent(
-      creative_ad, AdType::kNotificationAd, ConfirmationType::kViewed, Now(),
-      /*should_use_random_uuids=*/true);
+      creative_ad, mojom::AdType::kNotificationAd,
+      mojom::ConfirmationType::kViewedImpression,
+      /*created_at=*/test::Now(), /*should_generate_random_uuids=*/true);
   ad_events.push_back(ad_event);
 
   // Act & Assert

@@ -28,8 +28,14 @@ bool Base58Decode(const std::string& str,
          (!strict || static_cast<int>(ret->size()) == len);
 }
 
-std::string Base58Encode(const std::vector<uint8_t>& bytes) {
-  return EncodeBase58(bytes);
+std::optional<std::vector<uint8_t>> Base58Decode(const std::string& str,
+                                                 int len,
+                                                 bool strict) {
+  std::vector<uint8_t> result;
+  if (Base58Decode(str, &result, len, strict)) {
+    return result;
+  }
+  return {};
 }
 
 std::string Base58Encode(base::span<const uint8_t> bytes) {

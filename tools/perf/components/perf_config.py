@@ -6,11 +6,13 @@
 # pylint: disable=too-few-public-methods
 
 import logging
+import os
 import re
 
 from typing import List, Optional, Dict, Tuple
 from enum import Enum
 
+from components.field_trials import FieldTrialsMode, ParseFieldTrialsMode
 from components.browser_type import BrowserType, ParseBrowserType
 from components.version import BraveVersion
 
@@ -36,6 +38,7 @@ class RunnerConfig:
   location: Optional[str] = None
   label: Optional[str] = None
   profile = 'clean'
+  field_trials: Optional[FieldTrialsMode] = None
   extra_browser_args: List[str] = []
   extra_benchmark_args: List[str] = []
   browser_type: BrowserType
@@ -53,6 +56,9 @@ class RunnerConfig:
         continue
       if key == 'browser-type':
         self.browser_type = ParseBrowserType(json[key])
+        continue
+      if key == 'field-trials':
+        self.field_trials = ParseFieldTrialsMode(json[key])
         continue
       if key == 'profile-rebase':
         self.profile_rebase = _ParseProfileRebaseType(json[key])
@@ -79,6 +85,9 @@ def ParseTarget(target: str) -> Tuple[Optional[BraveVersion], str]:
   location = m.group(2)
   logging.debug('Parsed version: %s, location : %s', version.to_string(),
                 location)
+  if location is not None:
+    if not location.startswith('https://') and not os.path.exists(location):
+      raise RuntimeError(f'Bad location {location} in target {target}')
   return version, location
 
 
@@ -88,6 +97,7 @@ class BenchmarkConfig:
   name: str
   pageset_repeat: int = 1
   stories: List[str]
+  stories_exclude: List[str]
 
   def __init__(self, json: Optional[dict] = None):
     if not json:
@@ -96,9 +106,8 @@ class BenchmarkConfig:
     self.name = json['name']
     if pageset_repeat := json.get('pageset-repeat'):
       self.pageset_repeat = pageset_repeat
-    self.stories = []
-    if story_list := json.get('stories'):
-      self.stories.extend(story_list)
+    self.stories = json.get('stories') or []
+    self.stories_exclude = json.get('stories-exclude') or []
 
 
 class PerfConfig:

@@ -16,8 +16,28 @@
 namespace brave_wallet::solana_ins_data_decoder {
 
 std::optional<SolanaInstructionDecodedData> Decode(
-    const std::vector<uint8_t>& data,
+    base::span<const uint8_t> data,
     const std::string& program_id);
+
+std::optional<uint8_t> DecodeUint8(base::span<const uint8_t> input,
+                                   size_t& offset);
+
+std::optional<uint32_t> DecodeUint32(base::span<const uint8_t> input,
+                                     size_t& offset);
+
+std::optional<std::string> DecodePublicKey(base::span<const uint8_t> input,
+                                           size_t& offset);
+
+std::optional<mojom::SolanaSystemInstruction> GetSystemInstructionType(
+    base::span<const uint8_t> data,
+    const std::string& program_id);
+
+std::optional<mojom::SolanaComputeBudgetInstruction>
+GetComputeBudgetInstructionType(const std::vector<uint8_t>& data,
+                                const std::string& program_id);
+
+bool IsCompressedNftTransferInstruction(const std::vector<uint8_t>& data,
+                                        const std::string& program_id);
 
 std::vector<InsParamPair> GetAccountParamsForTesting(
     std::optional<mojom::SolanaSystemInstruction> sys_ins_type,

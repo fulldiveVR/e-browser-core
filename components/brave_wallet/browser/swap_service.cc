@@ -5,16 +5,21 @@
 
 #include "brave/components/brave_wallet/browser/swap_service.h"
 
+#include <limits>
 #include <optional>
 #include <utility>
 
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_constants.h"
+#include "brave/components/brave_wallet/browser/json_rpc_response_parser.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/brave_wallet/browser/swap_request_helper.h"
 #include "brave/components/brave_wallet/browser/swap_response_parser.h"
+#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/buildflags.h"
+#include "brave/components/brave_wallet/common/hex_utils.h"
+#include "brave/components/constants/brave_services_key.h"
 #include "net/base/load_flags.h"
 #include "net/base/url_util.h"
 #include "net/http/http_request_headers.h"
@@ -46,130 +51,94 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
     )");
 }
 
-bool IsEVMNetworkSupported(const std::string& chain_id) {
-  return (chain_id == brave_wallet::mojom::kGoerliChainId ||
-          chain_id == brave_wallet::mojom::kMainnetChainId ||
-          chain_id == brave_wallet::mojom::kPolygonMainnetChainId ||
-          chain_id == brave_wallet::mojom::kBinanceSmartChainMainnetChainId ||
-          chain_id == brave_wallet::mojom::kAvalancheMainnetChainId ||
-          chain_id == brave_wallet::mojom::kFantomMainnetChainId ||
-          chain_id == brave_wallet::mojom::kCeloMainnetChainId ||
-          chain_id == brave_wallet::mojom::kOptimismMainnetChainId ||
-          chain_id == brave_wallet::mojom::kArbitrumMainnetChainId ||
-          chain_id == brave_wallet::mojom::kBaseMainnetChainId);
+}  // namespace
+
+namespace brave_wallet {
+
+namespace {
+
+// Ref: https://0x.org/docs/introduction/0x-cheat-sheet#-chain-support
+bool IsNetworkSupportedByZeroEx(const std::string& chain_id) {
+  return GetZeroExAllowanceHolderAddress(chain_id).has_value();
 }
 
-bool IsSolanaNetworkSupported(const std::string& chain_id) {
-  return chain_id == brave_wallet::mojom::kSolanaMainnet;
+bool IsNetworkSupportedByJupiter(const std::string& chain_id) {
+  return chain_id == mojom::kSolanaMainnet;
 }
 
-bool HasRFQTLiquidity(const std::string& chain_id) {
-  return (chain_id == brave_wallet::mojom::kMainnetChainId ||
-          chain_id == brave_wallet::mojom::kPolygonMainnetChainId);
+// Extracted from https://li.quest/v1/chains
+bool IsNetworkSupportedByLiFi(const std::string& chain_id) {
+  return (chain_id == mojom::kMainnetChainId ||
+          chain_id == mojom::kOptimismMainnetChainId ||
+          chain_id == mojom::kBnbSmartChainMainnetChainId ||
+          chain_id == mojom::kPolygonZKEVMChainId ||
+          chain_id == mojom::kAvalancheMainnetChainId ||
+          chain_id == mojom::kGnosisChainId ||
+          chain_id == mojom::kArbitrumMainnetChainId ||
+          chain_id == mojom::kPolygonMainnetChainId ||
+          chain_id == mojom::kZkSyncEraChainId ||
+          chain_id == mojom::kBaseMainnetChainId ||
+          chain_id == mojom::kFantomMainnetChainId ||
+          chain_id == mojom::kAuroraMainnetChainId ||
+          chain_id == mojom::kSolanaMainnet);
 }
 
-std::optional<double> GetFeePercentage(const std::string& chain_id) {
-  if (IsEVMNetworkSupported(chain_id)) {
-    return brave_wallet::k0xBuyTokenFeePercentage;
-  }
-
-  if (IsSolanaNetworkSupported(chain_id)) {
-    return brave_wallet::kSolanaBuyTokenFeePercentage;
-  }
-
-  return std::nullopt;
+bool IsNetworkSupportedBySquid(const std::string& chain_id) {
+  return (chain_id == mojom::kMainnetChainId ||
+          chain_id == mojom::kArbitrumMainnetChainId ||
+          chain_id == mojom::kAvalancheMainnetChainId ||
+          chain_id == mojom::kOptimismMainnetChainId ||
+          chain_id == mojom::kPolygonMainnetChainId ||
+          chain_id == mojom::kBaseMainnetChainId ||
+          chain_id == mojom::kLineaChainId ||
+          chain_id == mojom::kBnbSmartChainMainnetChainId ||
+          chain_id == mojom::kFantomMainnetChainId ||
+          chain_id == mojom::kMoonbeamChainId ||
+          chain_id == mojom::kCeloMainnetChainId ||
+          chain_id == mojom::kScrollChainId ||
+          chain_id == mojom::kFilecoinEthereumMainnetChainId ||
+          chain_id == mojom::kBlastMainnetChainId ||
+          chain_id == mojom::kImmutableZkEVMChainId);
 }
 
-std::string GetAffiliateAddress(const std::string& chain_id) {
-  if (IsEVMNetworkSupported(chain_id)) {
-    return brave_wallet::kAffiliateAddress;
+std::optional<std::string> EncodeChainId(const std::string& value) {
+  uint256_t val;
+  if (!HexValueToUint256(value, &val)) {
+    return std::nullopt;
   }
 
-  return "";
+  if (val > std::numeric_limits<uint64_t>::max()) {
+    return std::nullopt;
+  }
+
+  return base::NumberToString(static_cast<uint64_t>(val));
 }
 
-brave_wallet::mojom::BraveSwapFeeResponsePtr GetBraveFeeInternal(
-    const brave_wallet::mojom::BraveSwapFeeParamsPtr& params) {
-  const auto& percentage_fee = GetFeePercentage(params->chain_id);
-  if (!percentage_fee) {
-    return nullptr;
-  }
-
-  if (IsSolanaNetworkSupported(params->chain_id)) {
-    brave_wallet::mojom::BraveSwapFeeResponsePtr response =
-        brave_wallet::mojom::BraveSwapFeeResponse::New();
-
-    bool has_fees =
-        brave_wallet::HasJupiterFeesForTokenMint(params->output_token);
-
-    // Jupiter API v6 will take 20% of the platform fee charged by integrators.
-    // TODO(onyb): update the multipliers below during migration to Jupiter API
-    // v6.
-    auto protocol_fee_pct = percentage_fee.value() * 0.0;
-    auto brave_fee_pct = percentage_fee.value() * 1.0;
-    auto discount_on_brave_fee_pct = has_fees ? 0.0 : 100.0;
-    auto discount_on_prototcol_fee_pct = has_fees ? 0.0 : 100.0;
-
-    response->brave_fee_pct = base::NumberToString(brave_fee_pct);
-
-    response->discount_on_brave_fee_pct =
-        base::NumberToString(discount_on_brave_fee_pct);
-
-    response->protocol_fee_pct = base::NumberToString(
-        (100.0 - discount_on_prototcol_fee_pct) / 100.0 * protocol_fee_pct);
-
-    response->effective_fee_pct = base::NumberToString(
-        (100.0 - discount_on_brave_fee_pct) / 100.0 * brave_fee_pct);
-
-    // Jupiter swap fee is specified in basis points
-    response->fee_param =
-        base::NumberToString(static_cast<int>(percentage_fee.value() * 100.0));
-
-    response->discount_code =
-        has_fees ? brave_wallet::mojom::DiscountCode::kNone
-                 : brave_wallet::mojom::DiscountCode::kUnknownJupiterOutputMint;
-
-    response->has_brave_fee = has_fees;
-
-    return response;
-  }
-
-  if (IsEVMNetworkSupported(params->chain_id)) {
-    brave_wallet::mojom::BraveSwapFeeResponsePtr response =
-        brave_wallet::mojom::BraveSwapFeeResponse::New();
-
-    // We currently do not offer discounts on 0x Brave fees.
-    auto discount_on_brave_fee_pct = 0.0;
-
-    // This indicates the 0x Swap fee of 15 bps on select tokens. It should
-    // only be surfaced to the users if quote has a non-null zeroExFee field.
-    response->protocol_fee_pct =
-        base::NumberToString(brave_wallet::k0xProtocolFeePercentage);
-    response->brave_fee_pct = base::NumberToString(percentage_fee.value());
-    response->discount_on_brave_fee_pct =
-        base::NumberToString(discount_on_brave_fee_pct);
-
-    auto effective_fee_pct =
-        (100.0 - discount_on_brave_fee_pct) / 100.0 * percentage_fee.value();
-    response->effective_fee_pct = base::NumberToString(effective_fee_pct);
-
-    // 0x swap fee is specified as a multiplier
-    response->fee_param = base::NumberToString(effective_fee_pct / 100.0);
-
-    response->discount_code = brave_wallet::mojom::DiscountCode::kNone;
-    response->has_brave_fee = effective_fee_pct > 0.0;
-
-    return response;
-  }
-
-  return nullptr;
+mojom::SwapFeesPtr GetZeroSwapFee() {
+  mojom::SwapFeesPtr response = mojom::SwapFees::New();
+  response->fee_pct = "0";
+  response->discount_pct = "0";
+  response->effective_fee_pct = "0";
+  response->fee_param = "";
+  response->discount_code = mojom::SwapDiscountCode::kNone;
+  return response;
 }
 
-GURL Append0xSwapParams(const GURL& swap_url,
-                        const brave_wallet::mojom::SwapQuoteParams& params) {
+GURL AppendZeroExSwapParams(const GURL& swap_url,
+                            const mojom::SwapQuoteParams& params,
+                            const std::optional<std::string>& fee_param) {
   GURL url = swap_url;
+
+  if (!IsNetworkSupportedByZeroEx(params.from_chain_id)) {
+    return GURL();
+  }
+
+  if (auto chain_id = EncodeChainId(params.from_chain_id)) {
+    url = net::AppendQueryParameter(url, "chainId", chain_id.value());
+  }
+
   if (!params.from_account_id->address.empty()) {
-    url = net::AppendQueryParameter(url, "takerAddress",
+    url = net::AppendQueryParameter(url, "taker",
                                     params.from_account_id->address);
   }
   if (!params.from_amount.empty()) {
@@ -178,63 +147,20 @@ GURL Append0xSwapParams(const GURL& swap_url,
   if (!params.to_amount.empty()) {
     url = net::AppendQueryParameter(url, "buyAmount", params.to_amount);
   }
-  if (!params.to_token.empty()) {
-    url = net::AppendQueryParameter(url, "buyToken", params.to_token);
-  }
-  if (!params.from_token.empty()) {
-    url = net::AppendQueryParameter(url, "sellToken", params.from_token);
-  }
 
-  auto brave_swap_fee_params = brave_wallet::mojom::BraveSwapFeeParams::New();
-  brave_swap_fee_params->chain_id = params.from_chain_id;
-  brave_swap_fee_params->taker = params.from_account_id->address;
-  brave_swap_fee_params->input_token = params.from_token;
-  brave_swap_fee_params->output_token = params.to_token;
-  const auto& brave_fee = GetBraveFeeInternal(brave_swap_fee_params);
-  if (brave_fee && brave_fee->has_brave_fee) {
-    url = net::AppendQueryParameter(url, "buyTokenPercentageFee",
-                                    brave_fee->fee_param);
+  auto buy_token = params.to_token.empty() ? kNativeEVMAssetContractAddress
+                                           : params.to_token;
+  url = net::AppendQueryParameter(url, "buyToken", buy_token);
+  url = net::AppendQueryParameter(url, "sellToken",
+                                  params.from_token.empty()
+                                      ? kNativeEVMAssetContractAddress
+                                      : params.from_token);
+
+  if (fee_param.has_value() && !fee_param->empty()) {
+    url = net::AppendQueryParameter(url, "swapFeeBps", fee_param.value());
+    url = net::AppendQueryParameter(url, "swapFeeRecipient", kEVMFeeRecipient);
+    url = net::AppendQueryParameter(url, "swapFeeToken", buy_token);
   }
-
-  double slippage_percentage = 0.0;
-  if (base::StringToDouble(params.slippage_percentage, &slippage_percentage)) {
-    url = net::AppendQueryParameter(
-        url, "slippagePercentage",
-        base::StringPrintf("%.6f", slippage_percentage / 100));
-  }
-
-  url = net::AppendQueryParameter(url, "feeRecipient",
-                                  brave_wallet::kEVMFeeRecipient);
-
-  std::string affiliate_address = GetAffiliateAddress(params.from_chain_id);
-  if (!affiliate_address.empty()) {
-    url = net::AppendQueryParameter(url, "affiliateAddress", affiliate_address);
-  }
-  // TODO(onyb): custom gas_price is currently unused and may be removed in
-  // future.
-  // if (!params.gas_price.empty()) {
-  // url = net::AppendQueryParameter(url, "gasPrice", params.gas_price);
-  // }
-  return url;
-}
-
-GURL AppendJupiterQuoteParams(
-    const GURL& swap_url,
-    const brave_wallet::mojom::SwapQuoteParams& params) {
-  GURL url = swap_url;
-  if (!params.from_token.empty()) {
-    url = net::AppendQueryParameter(url, "inputMint", params.from_token);
-  }
-
-  if (!params.to_token.empty()) {
-    url = net::AppendQueryParameter(url, "outputMint", params.to_token);
-  }
-
-  if (!params.from_amount.empty()) {
-    url = net::AppendQueryParameter(url, "amount", params.from_amount);
-  }
-
-  url = net::AppendQueryParameter(url, "swapMode", "ExactIn");
 
   double slippage_percentage = 0.0;
   if (base::StringToDouble(params.slippage_percentage, &slippage_percentage)) {
@@ -243,15 +169,44 @@ GURL AppendJupiterQuoteParams(
         base::StringPrintf("%d", static_cast<int>(slippage_percentage * 100)));
   }
 
-  auto brave_swap_fee_params = brave_wallet::mojom::BraveSwapFeeParams::New();
-  brave_swap_fee_params->chain_id = params.from_chain_id;
-  brave_swap_fee_params->taker = params.from_account_id->address;
-  brave_swap_fee_params->input_token = params.from_token;
-  brave_swap_fee_params->output_token = params.to_token;
-  const auto& brave_fee = GetBraveFeeInternal(brave_swap_fee_params);
-  if (brave_fee && brave_fee->has_brave_fee) {
-    url =
-        net::AppendQueryParameter(url, "platformFeeBps", brave_fee->fee_param);
+  // TODO(onyb): custom gas_price is currently unused and may be removed in
+  // future.
+  // if (!params.gas_price.empty()) {
+  // url = net::AppendQueryParameter(url, "gasPrice", params.gas_price);
+  // }
+
+  return url;
+}
+
+GURL AppendJupiterQuoteParams(const GURL& swap_url,
+                              const mojom::SwapQuoteParams& params,
+                              const std::optional<std::string>& fee_param) {
+  GURL url = swap_url;
+  url = net::AppendQueryParameter(url, "inputMint",
+                                  params.from_token.empty()
+                                      ? kWrappedSolanaMintAddress
+                                      : params.from_token);
+  url = net::AppendQueryParameter(
+      url, "outputMint",
+      params.to_token.empty() ? kWrappedSolanaMintAddress : params.to_token);
+
+  if (!params.from_amount.empty()) {
+    url = net::AppendQueryParameter(url, "amount", params.from_amount);
+    url = net::AppendQueryParameter(url, "swapMode", "ExactIn");
+  } else if (!params.to_amount.empty()) {
+    url = net::AppendQueryParameter(url, "amount", params.to_amount);
+    url = net::AppendQueryParameter(url, "swapMode", "ExactOut");
+  }
+
+  double slippage_percentage = 0.0;
+  if (base::StringToDouble(params.slippage_percentage, &slippage_percentage)) {
+    url = net::AppendQueryParameter(
+        url, "slippageBps",
+        base::StringPrintf("%d", static_cast<int>(slippage_percentage * 100)));
+  }
+
+  if (fee_param.has_value() && !fee_param->empty()) {
+    url = net::AppendQueryParameter(url, "platformFeeBps", fee_param.value());
   }
 
   // TODO(onyb): append userPublicKey to get information on fees and ATA
@@ -260,28 +215,22 @@ GURL AppendJupiterQuoteParams(
   return url;
 }
 
-base::flat_map<std::string, std::string> Get0xAPIHeaders() {
-  std::string brave_zero_ex_api_key(BUILDFLAG(BRAVE_ZERO_EX_API_KEY));
-  if (brave_zero_ex_api_key.empty()) {
-    return {};
-  }
-  return {{brave_wallet::k0xAPIKeyHeader, std::move(brave_zero_ex_api_key)}};
+base::flat_map<std::string, std::string> GetHeaders() {
+  return {{kBraveServicesKeyHeader, BUILDFLAG(BRAVE_SERVICES_KEY)}};
+}
+
+base::flat_map<std::string, std::string> GetHeadersForZeroEx() {
+  auto headers = GetHeaders();
+  headers[kZeroExAPIVersionHeader] = kZeroExAPIVersion;
+  return headers;
 }
 
 }  // namespace
 
-namespace brave_wallet {
-
-GURL SwapService::base_url_for_test_;
-
 SwapService::SwapService(
-    scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
-    JsonRpcService* json_rpc_service)
-    : api_request_helper_(GetNetworkTrafficAnnotationTag(), url_loader_factory),
-      json_rpc_service_(json_rpc_service),
-      weak_ptr_factory_(this) {
-  DCHECK(json_rpc_service_);
-}
+    scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory)
+    : api_request_helper_(GetNetworkTrafficAnnotationTag(),
+                          url_loader_factory) {}
 
 SwapService::~SwapService() = default;
 
@@ -295,240 +244,342 @@ void SwapService::Bind(mojo::PendingReceiver<mojom::SwapService> receiver) {
   receivers_.Add(this, std::move(receiver));
 }
 
-void SwapService::SetBaseURLForTest(const GURL& base_url_for_test) {
-  base_url_for_test_ = base_url_for_test;
-}
-
 // static
-std::string SwapService::GetBaseSwapURL(const std::string& chain_id) {
-  if (!base_url_for_test_.is_empty()) {
-    return base_url_for_test_.spec();
-  }
-
-  if (chain_id == brave_wallet::mojom::kGoerliChainId) {
-    return brave_wallet::kGoerliSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kMainnetChainId) {
-    return brave_wallet::kSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kPolygonMainnetChainId) {
-    return brave_wallet::kPolygonSwapBaseAPIURL;
-  } else if (chain_id ==
-             brave_wallet::mojom::kBinanceSmartChainMainnetChainId) {
-    return brave_wallet::kBinanceSmartChainSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kAvalancheMainnetChainId) {
-    return brave_wallet::kAvalancheSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kFantomMainnetChainId) {
-    return brave_wallet::kFantomSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kCeloMainnetChainId) {
-    return brave_wallet::kCeloSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kOptimismMainnetChainId) {
-    return brave_wallet::kOptimismSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kArbitrumMainnetChainId) {
-    return brave_wallet::kArbitrumSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kSolanaMainnet) {
-    return brave_wallet::kSolanaSwapBaseAPIURL;
-  } else if (chain_id == brave_wallet::mojom::kBaseMainnetChainId) {
-    return brave_wallet::kBaseSwapBaseAPIURL;
-  }
-
-  return "";
-}
-
-// static
-GURL SwapService::GetZeroExQuoteURL(const mojom::SwapQuoteParams& params) {
-  const bool use_rfqt = HasRFQTLiquidity(params.from_chain_id);
-
-  // If chain has RFQ-T liquidity available, use the /quote endpoint for
-  // fetching the indicative price, since /price is often inaccurate. This is
-  // discouraged in 0x docs, particularly for RFQ-T trades, since it locks up
-  // the capital of market makers. However, the 0x team has approved us to do
-  // this, noting the inability of /price to discover optimal RFQ quotes. This
-  // should be considered a temporary workaround until 0x comes up with a
-  // solution.
-  std::string spec =
-      base::StringPrintf(use_rfqt ? "%sswap/v1/quote" : "%sswap/v1/price",
-                         GetBaseSwapURL(params.from_chain_id).c_str());
-  GURL url(spec);
-  url = Append0xSwapParams(url, params);
-  // That flag prevents an allowance validation by the 0x router. Disable it
-  // here and perform the validation on the client side.
-  url = net::AppendQueryParameter(url, "skipValidation", "true");
-
-  if (use_rfqt) {
-    url = net::AppendQueryParameter(url, "intentOnFilling", "false");
-  }
-
-  return url;
+GURL SwapService::GetZeroExQuoteURL(
+    const mojom::SwapQuoteParams& params,
+    const std::optional<std::string>& fee_param) {
+  auto url = GURL(kZeroExBaseAPIURL).Resolve("/swap/allowance-holder/price");
+  return AppendZeroExSwapParams(url, params, fee_param);
 }
 
 // static
 GURL SwapService::GetZeroExTransactionURL(
-    const mojom::SwapQuoteParams& params) {
-  std::string spec = base::StringPrintf(
-      "%sswap/v1/quote", GetBaseSwapURL(params.from_chain_id).c_str());
-  GURL url(spec);
-  url = Append0xSwapParams(url, params);
-
-  if (HasRFQTLiquidity(params.from_chain_id)) {
-    url = net::AppendQueryParameter(url, "intentOnFilling", "true");
-  }
-
-  return url;
+    const mojom::SwapQuoteParams& params,
+    const std::optional<std::string>& fee_param) {
+  auto url = GURL(kZeroExBaseAPIURL).Resolve("/swap/allowance-holder/quote");
+  return AppendZeroExSwapParams(url, params, fee_param);
 }
 
 // static
-GURL SwapService::GetJupiterQuoteURL(const mojom::SwapQuoteParams& params) {
-  std::string spec = base::StringPrintf(
-      "%sv6/quote", GetBaseSwapURL(params.from_chain_id).c_str());
-  GURL url(spec);
-  url = AppendJupiterQuoteParams(url, params);
+GURL SwapService::GetJupiterQuoteURL(
+    const mojom::SwapQuoteParams& params,
+    const std::optional<std::string>& fee_param) {
+  auto url = GURL(kJupiterBaseAPIURL).Resolve("/v6/quote");
+  url = AppendJupiterQuoteParams(url, params, fee_param);
 
   return url;
 }
 
 // static
 GURL SwapService::GetJupiterTransactionURL(const std::string& chain_id) {
-  std::string spec =
-      base::StringPrintf("%sv6/swap", GetBaseSwapURL(chain_id).c_str());
-  GURL url(spec);
-  return url;
+  return GURL(kJupiterBaseAPIURL).Resolve("/v6/swap");
+}
+
+// static
+GURL SwapService::GetLiFiQuoteURL() {
+  return GURL(kLiFiBaseAPIURL).Resolve("/v1/advanced/routes");
+}
+
+// static
+GURL SwapService::GetLiFiTransactionURL() {
+  return GURL(kLiFiBaseAPIURL).Resolve("/v1/advanced/stepTransaction");
+}
+
+// static
+GURL SwapService::GetLiFiStatusURL(const std::string& tx_hash) {
+  return GURL(kLiFiBaseAPIURL).Resolve("/v1/status?txHash=" + tx_hash);
+}
+
+// static
+GURL SwapService::GetSquidURL() {
+  return GURL(kSquidBaseAPIURL).Resolve("/v2/route");
 }
 
 void SwapService::IsSwapSupported(const std::string& chain_id,
                                   IsSwapSupportedCallback callback) {
-  std::move(callback).Run(IsEVMNetworkSupported(chain_id) ||
-                          IsSolanaNetworkSupported(chain_id));
+  std::move(callback).Run(IsNetworkSupportedByZeroEx(chain_id) ||
+                          IsNetworkSupportedByJupiter(chain_id) ||
+                          IsNetworkSupportedByLiFi(chain_id) ||
+                          IsNetworkSupportedBySquid(chain_id));
 }
 
+// Method to fetch a quote for a swap or a bridge transaction.
+//
+// If the provider is set to kAuto, the method will attempt to fetch a quote
+// based on the following priority:
+//   P1. LiFi, Jupiter
+//   P2. 0x, Squid
 void SwapService::GetQuote(mojom::SwapQuoteParamsPtr params,
                            GetQuoteCallback callback) {
-  // Cross-chain swaps are not supported.
-  if (params->from_chain_id != params->to_chain_id) {
-    std::move(callback).Run(
-        nullptr, nullptr,
-        l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_UNSUPPORTED_NETWORK));
-    return;
-  }
+  auto conversion_callback = base::BindOnce(&ConvertAllNumbersToString, "");
 
-  if (IsEVMNetworkSupported(params->from_chain_id)) {
-    auto internal_callback =
-        base::BindOnce(&SwapService::OnGetZeroExQuote,
-                       weak_ptr_factory_.GetWeakPtr(), std::move(callback));
+  auto has_zero_ex_support = params->from_chain_id == params->to_chain_id &&
+                             IsNetworkSupportedByZeroEx(params->from_chain_id);
+  auto has_jupiter_support = params->from_chain_id == params->to_chain_id &&
+                             IsNetworkSupportedByJupiter(params->from_chain_id);
+  auto has_lifi_support = IsNetworkSupportedByLiFi(params->from_chain_id) &&
+                          IsNetworkSupportedByLiFi(params->to_chain_id) &&
+                          // LiFi does not support ExactOut swaps.
+                          !params->from_amount.empty();
+  auto has_squid_support = IsNetworkSupportedBySquid(params->from_chain_id) &&
+                           IsNetworkSupportedBySquid(params->to_chain_id);
+
+  // If the provider is set to Auto, Solana swaps are served via Jupiter.
+  if ((params->provider == mojom::SwapProvider::kJupiter ||
+       params->provider == mojom::SwapProvider::kAuto) &&
+      has_jupiter_support) {
+    auto swap_fee = GetZeroSwapFee();
+    auto fee_param = swap_fee->fee_param;
+
+    auto internal_callback = base::BindOnce(
+        &SwapService::OnGetJupiterQuote, weak_ptr_factory_.GetWeakPtr(),
+        std::move(swap_fee), std::move(callback));
 
     api_request_helper_.Request(net::HttpRequestHeaders::kGetMethod,
-                                GetZeroExQuoteURL(*params), "", "",
-                                std::move(internal_callback), Get0xAPIHeaders(),
-                                {.auto_retry_on_network_change = true});
+                                GetJupiterQuoteURL(*params, fee_param), "", "",
+                                std::move(internal_callback), GetHeaders(), {},
+                                std::move(conversion_callback));
 
     return;
   }
 
-  if (IsSolanaNetworkSupported(params->from_chain_id)) {
-    auto internal_callback =
-        base::BindOnce(&SwapService::OnGetJupiterQuote,
-                       weak_ptr_factory_.GetWeakPtr(), std::move(callback));
+  // EVM swaps are served via LiFi if the provider is set to kLiFi or kAuto.
+  if ((params->provider == mojom::SwapProvider::kLiFi ||
+       params->provider == mojom::SwapProvider::kAuto) &&
+      has_lifi_support) {
+    auto swap_fee = GetZeroSwapFee();
+    auto fee_param = swap_fee->fee_param;
 
-    auto conversion_callback = base::BindOnce(&ConvertAllNumbersToString);
+    auto encoded_params = lifi::EncodeQuoteParams(std::move(params), fee_param);
+    if (!encoded_params) {
+      std::move(callback).Run(
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+      return;
+    }
 
-    base::flat_map<std::string, std::string> request_headers;
+    auto internal_callback = base::BindOnce(
+        &SwapService::OnGetLiFiQuote, weak_ptr_factory_.GetWeakPtr(),
+        std::move(swap_fee), std::move(callback));
+
     api_request_helper_.Request(
-        net::HttpRequestHeaders::kGetMethod, GetJupiterQuoteURL(*params), "",
-        "", std::move(internal_callback), request_headers,
-        {.auto_retry_on_network_change = true}, std::move(conversion_callback));
+        net::HttpRequestHeaders::kPostMethod, GetLiFiQuoteURL(),
+        *encoded_params, "application/json", std::move(internal_callback),
+        GetHeaders(), {}, std::move(conversion_callback));
+    return;
+  }
 
+  // EVM swaps are served via 0x only if the provider is set to kZeroEx.
+  if ((params->provider == mojom::SwapProvider::kZeroEx ||
+       params->provider == mojom::SwapProvider::kAuto) &&
+      has_zero_ex_support) {
+    auto swap_fee = GetZeroSwapFee();
+    auto fee_param = swap_fee->fee_param;
+
+    auto internal_callback = base::BindOnce(
+        &SwapService::OnGetZeroExQuote, weak_ptr_factory_.GetWeakPtr(),
+        params->from_chain_id, std::move(swap_fee), std::move(callback));
+
+    api_request_helper_.Request(net::HttpRequestHeaders::kGetMethod,
+                                GetZeroExQuoteURL(*params, fee_param), "", "",
+                                std::move(internal_callback),
+                                GetHeadersForZeroEx(), {},
+                                std::move(conversion_callback));
+
+    return;
+  }
+
+  if ((params->provider == mojom::SwapProvider::kSquid ||
+       params->provider == mojom::SwapProvider::kAuto) &&
+      has_squid_support) {
+    auto encoded_params = squid::EncodeQuoteParams(std::move(params));
+    if (!encoded_params) {
+      std::move(callback).Run(
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+      return;
+    }
+
+    auto swap_fee = GetZeroSwapFee();
+
+    auto internal_callback = base::BindOnce(
+        &SwapService::OnGetSquidQuote, weak_ptr_factory_.GetWeakPtr(),
+        std::move(swap_fee), std::move(callback));
+
+    api_request_helper_.Request(
+        net::HttpRequestHeaders::kPostMethod, GetSquidURL(), *encoded_params,
+        "application/json", std::move(internal_callback), GetHeaders(), {},
+        std::move(conversion_callback));
     return;
   }
 
   std::move(callback).Run(
-      nullptr, nullptr,
+      nullptr, nullptr, nullptr,
       l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_UNSUPPORTED_NETWORK));
 }
 
-void SwapService::OnGetZeroExQuote(GetQuoteCallback callback,
+void SwapService::OnGetZeroExQuote(const std::string& chain_id,
+                                   mojom::SwapFeesPtr swap_fee,
+                                   GetQuoteCallback callback,
                                    APIRequestResult api_request_result) {
   if (!api_request_result.Is2XXResponseCode()) {
     if (auto swap_error_response =
-            ParseZeroExErrorResponse(api_request_result.value_body())) {
+            zeroex::ParseErrorResponse(api_request_result.value_body())) {
       std::move(callback).Run(
-          nullptr,
+          nullptr, nullptr,
           mojom::SwapErrorUnion::NewZeroExError(std::move(swap_error_response)),
           "");
     } else {
       std::move(callback).Run(
-          nullptr, nullptr, l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
     }
     return;
   }
 
-  if (auto swap_response =
-          ParseZeroExQuoteResponse(api_request_result.value_body(), false)) {
+  if (auto swap_response = zeroex::ParseQuoteResponse(
+          api_request_result.value_body(), chain_id)) {
+    if (!swap_response->liquidity_available) {
+      std::move(callback).Run(
+          nullptr, nullptr,
+          mojom::SwapErrorUnion::NewZeroExError(mojom::ZeroExError::New(
+              "INSUFFICIENT_LIQUIDITY",
+              l10n_util::GetStringUTF8(
+                  IDS_BRAVE_WALLET_SWAP_INSUFFICIENT_LIQUIDITY),
+              true)),
+          "");
+      return;
+    }
+
     std::move(callback).Run(
         mojom::SwapQuoteUnion::NewZeroExQuote(std::move(swap_response)),
-        nullptr, "");
+        std::move(swap_fee), nullptr, "");
   } else {
-    std::move(callback).Run(nullptr, nullptr,
+    std::move(callback).Run(nullptr, nullptr, nullptr,
                             l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
   }
 }
 
-void SwapService::OnGetJupiterQuote(GetQuoteCallback callback,
+void SwapService::OnGetJupiterQuote(mojom::SwapFeesPtr swap_fee,
+                                    GetQuoteCallback callback,
                                     APIRequestResult api_request_result) {
   if (!api_request_result.Is2XXResponseCode()) {
     if (auto error_response =
-            ParseJupiterErrorResponse(api_request_result.value_body())) {
+            jupiter::ParseErrorResponse(api_request_result.value_body())) {
       std::move(callback).Run(
-          nullptr,
+          nullptr, nullptr,
           mojom::SwapErrorUnion::NewJupiterError(std::move(error_response)),
           "");
     } else {
       std::move(callback).Run(
-          nullptr, nullptr, l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
     }
     return;
   }
 
   if (auto swap_quote =
-          ParseJupiterQuoteResponse(api_request_result.value_body())) {
+          jupiter::ParseQuoteResponse(api_request_result.value_body())) {
     std::move(callback).Run(
-        mojom::SwapQuoteUnion::NewJupiterQuote(std::move(swap_quote)), nullptr,
-        "");
+        mojom::SwapQuoteUnion::NewJupiterQuote(std::move(swap_quote)),
+        std::move(swap_fee), nullptr, "");
   } else {
-    std::move(callback).Run(nullptr, nullptr,
+    std::move(callback).Run(nullptr, nullptr, nullptr,
+                            l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+  }
+}
+
+void SwapService::OnGetLiFiQuote(mojom::SwapFeesPtr swap_fee,
+                                 GetQuoteCallback callback,
+                                 APIRequestResult api_request_result) {
+  if (!api_request_result.Is2XXResponseCode()) {
+    if (auto error_response =
+            lifi::ParseErrorResponse(api_request_result.value_body())) {
+      std::move(callback).Run(
+          nullptr, nullptr,
+          mojom::SwapErrorUnion::NewLifiError(std::move(error_response)), "");
+    } else {
+      std::move(callback).Run(
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+    }
+    return;
+  }
+
+  if (auto quote = lifi::ParseQuoteResponse(api_request_result.value_body())) {
+    if (quote->routes.empty()) {
+      auto error_response = mojom::LiFiError::New();
+      error_response->code = mojom::LiFiErrorCode::kNotFoundError;
+      error_response->message =
+          l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_NO_ROUTES_FOUND);
+
+      std::move(callback).Run(
+          nullptr, nullptr,
+          mojom::SwapErrorUnion::NewLifiError(std::move(error_response)), "");
+      return;
+    }
+
+    std::move(callback).Run(
+        mojom::SwapQuoteUnion::NewLifiQuote(std::move(quote)),
+        std::move(swap_fee), nullptr, "");
+  } else {
+    std::move(callback).Run(nullptr, nullptr, nullptr,
+                            l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+  }
+}
+
+void SwapService::OnGetSquidQuote(mojom::SwapFeesPtr swap_fee,
+                                  GetQuoteCallback callback,
+                                  APIRequestResult api_request_result) {
+  if (!api_request_result.Is2XXResponseCode()) {
+    if (auto error_response =
+            squid::ParseErrorResponse(api_request_result.value_body())) {
+      std::move(callback).Run(
+          nullptr, nullptr,
+          mojom::SwapErrorUnion::NewSquidError(std::move(error_response)), "");
+    } else {
+      std::move(callback).Run(
+          nullptr, nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+    }
+    return;
+  }
+
+  if (auto quote = squid::ParseQuoteResponse(api_request_result.value_body())) {
+    std::move(callback).Run(
+        mojom::SwapQuoteUnion::NewSquidQuote(std::move(quote)),
+        std::move(swap_fee), nullptr, "");
+  } else {
+    std::move(callback).Run(nullptr, nullptr, nullptr,
                             l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
   }
 }
 
 void SwapService::GetTransaction(mojom::SwapTransactionParamsUnionPtr params,
                                  GetTransactionCallback callback) {
+  auto conversion_callback = base::BindOnce(&ConvertAllNumbersToString, "");
+
   if (params->is_zero_ex_transaction_params()) {
+    auto swap_fee = GetZeroSwapFee();
+
     auto internal_callback =
         base::BindOnce(&SwapService::OnGetZeroExTransaction,
                        weak_ptr_factory_.GetWeakPtr(), std::move(callback));
 
     api_request_helper_.Request(
         net::HttpRequestHeaders::kGetMethod,
-        GetZeroExTransactionURL(*params->get_zero_ex_transaction_params()), "",
-        "", std::move(internal_callback), Get0xAPIHeaders(),
-        {.auto_retry_on_network_change = true});
+        GetZeroExTransactionURL(*params->get_zero_ex_transaction_params(),
+                                swap_fee->fee_param),
+        "", "", std::move(internal_callback), GetHeadersForZeroEx(), {},
+        std::move(conversion_callback));
 
     return;
   }
 
   if (params->is_jupiter_transaction_params()) {
     auto& jupiter_transaction_params = params->get_jupiter_transaction_params();
-
-    auto brave_swap_fee_params = brave_wallet::mojom::BraveSwapFeeParams::New();
-    brave_swap_fee_params->chain_id = jupiter_transaction_params->chain_id;
-    brave_swap_fee_params->taker = jupiter_transaction_params->user_public_key;
-    brave_swap_fee_params->input_token =
-        jupiter_transaction_params->quote->input_mint;
-    brave_swap_fee_params->output_token =
-        jupiter_transaction_params->quote->output_mint;
-    const auto& brave_fee =
-        GetBraveFeeInternal(std::move(brave_swap_fee_params));
-    bool has_fee = brave_fee && brave_fee->has_brave_fee;
-
     auto encoded_params =
-        EncodeJupiterTransactionParams(*jupiter_transaction_params, has_fee);
+        jupiter::EncodeTransactionParams(*jupiter_transaction_params);
     if (!encoded_params) {
       std::move(callback).Run(
           nullptr, nullptr,
@@ -543,8 +594,55 @@ void SwapService::GetTransaction(mojom::SwapTransactionParamsUnionPtr params,
     api_request_helper_.Request(
         net::HttpRequestHeaders::kPostMethod,
         GetJupiterTransactionURL(jupiter_transaction_params->chain_id),
-        *encoded_params, "application/json", std::move(internal_callback), {},
-        {.auto_retry_on_network_change = true});
+        *encoded_params, "application/json", std::move(internal_callback),
+        GetHeaders(), {}, std::move(conversion_callback));
+
+    return;
+  }
+
+  if (params->is_lifi_transaction_params()) {
+    auto& lifi_transaction_params = params->get_lifi_transaction_params();
+
+    auto encoded_params =
+        lifi::EncodeTransactionParams(std::move(lifi_transaction_params));
+    if (!encoded_params) {
+      std::move(callback).Run(
+          nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+      return;
+    }
+
+    auto internal_callback =
+        base::BindOnce(&SwapService::OnGetLiFiTransaction,
+                       weak_ptr_factory_.GetWeakPtr(), std::move(callback));
+
+    api_request_helper_.Request(
+        net::HttpRequestHeaders::kPostMethod, GetLiFiTransactionURL(),
+        *encoded_params, "application/json", std::move(internal_callback),
+        GetHeaders(), {}, std::move(conversion_callback));
+
+    return;
+  }
+
+  if (params->is_squid_transaction_params()) {
+    auto& squid_transaction_params = params->get_squid_transaction_params();
+    auto encoded_params =
+        squid::EncodeTransactionParams(std::move(squid_transaction_params));
+    if (!encoded_params) {
+      std::move(callback).Run(
+          nullptr, nullptr,
+          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+      return;
+    }
+
+    auto internal_callback =
+        base::BindOnce(&SwapService::OnGetSquidTransaction,
+                       weak_ptr_factory_.GetWeakPtr(), std::move(callback));
+
+    api_request_helper_.Request(
+        net::HttpRequestHeaders::kPostMethod, GetSquidURL(), *encoded_params,
+        "application/json", std::move(internal_callback), GetHeaders(), {},
+        std::move(conversion_callback));
 
     return;
   }
@@ -558,7 +656,7 @@ void SwapService::OnGetZeroExTransaction(GetTransactionCallback callback,
                                          APIRequestResult api_request_result) {
   if (!api_request_result.Is2XXResponseCode()) {
     if (auto swap_error_response =
-            ParseZeroExErrorResponse(api_request_result.value_body())) {
+            zeroex::ParseErrorResponse(api_request_result.value_body())) {
       std::move(callback).Run(
           nullptr,
           mojom::SwapErrorUnion::NewZeroExError(std::move(swap_error_response)),
@@ -572,7 +670,7 @@ void SwapService::OnGetZeroExTransaction(GetTransactionCallback callback,
   }
 
   if (auto swap_response =
-          ParseZeroExQuoteResponse(api_request_result.value_body(), true)) {
+          zeroex::ParseTransactionResponse(api_request_result.value_body())) {
     std::move(callback).Run(mojom::SwapTransactionUnion::NewZeroExTransaction(
                                 std::move(swap_response)),
                             nullptr, "");
@@ -586,7 +684,7 @@ void SwapService::OnGetJupiterTransaction(GetTransactionCallback callback,
                                           APIRequestResult api_request_result) {
   if (!api_request_result.Is2XXResponseCode()) {
     if (auto error_response =
-            ParseJupiterErrorResponse(api_request_result.value_body())) {
+            jupiter::ParseErrorResponse(api_request_result.value_body())) {
       std::move(callback).Run(
           nullptr,
           mojom::SwapErrorUnion::NewJupiterError(std::move(error_response)),
@@ -600,7 +698,7 @@ void SwapService::OnGetJupiterTransaction(GetTransactionCallback callback,
   }
 
   if (auto swap_transaction =
-          ParseJupiterTransactionResponse(api_request_result.value_body())) {
+          jupiter::ParseTransactionResponse(api_request_result.value_body())) {
     std::move(callback).Run(
         mojom::SwapTransactionUnion::NewJupiterTransaction(*swap_transaction),
         nullptr, "");
@@ -610,15 +708,96 @@ void SwapService::OnGetJupiterTransaction(GetTransactionCallback callback,
   }
 }
 
-void SwapService::GetBraveFee(mojom::BraveSwapFeeParamsPtr params,
-                              GetBraveFeeCallback callback) {
-  if (auto response = GetBraveFeeInternal(std::move(params))) {
-    std::move(callback).Run(std::move(response), "");
+void SwapService::OnGetLiFiTransaction(GetTransactionCallback callback,
+                                       APIRequestResult api_request_result) {
+  if (!api_request_result.Is2XXResponseCode()) {
+    if (auto error_response =
+            lifi::ParseErrorResponse(api_request_result.value_body())) {
+      std::move(callback).Run(
+          nullptr,
+          mojom::SwapErrorUnion::NewLifiError(std::move(error_response)), "");
+    } else {
+      std::move(callback).Run(
+          nullptr, nullptr, l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+    }
+
     return;
   }
 
-  std::move(callback).Run(nullptr,
-                          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+  if (auto transaction =
+          lifi::ParseTransactionResponse(api_request_result.value_body())) {
+    std::move(callback).Run(
+        mojom::SwapTransactionUnion::NewLifiTransaction(std::move(transaction)),
+        nullptr, "");
+  } else {
+    std::move(callback).Run(nullptr, nullptr,
+                            l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+  }
+}
+
+void SwapService::OnGetSquidTransaction(GetTransactionCallback callback,
+                                        APIRequestResult api_request_result) {
+  if (!api_request_result.Is2XXResponseCode()) {
+    if (auto error_response =
+            squid::ParseErrorResponse(api_request_result.value_body())) {
+      std::move(callback).Run(
+          nullptr,
+          mojom::SwapErrorUnion::NewSquidError(std::move(error_response)), "");
+    } else {
+      std::move(callback).Run(
+          nullptr, nullptr, l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+    }
+
+    return;
+  }
+
+  if (auto transaction =
+          squid::ParseTransactionResponse(api_request_result.value_body())) {
+    std::move(callback).Run(mojom::SwapTransactionUnion::NewSquidTransaction(
+                                std::move(transaction)),
+                            nullptr, "");
+  } else {
+    std::move(callback).Run(nullptr, nullptr,
+                            l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+  }
+}
+
+void SwapService::GetLiFiStatus(const std::string& tx_hash,
+                                GetLiFiStatusCallback callback) {
+  auto conversion_callback = base::BindOnce(&ConvertAllNumbersToString, "");
+  auto internal_callback =
+      base::BindOnce(&SwapService::OnGetLiFiStatus,
+                     weak_ptr_factory_.GetWeakPtr(), std::move(callback));
+
+  api_request_helper_.Request(net::HttpRequestHeaders::kGetMethod,
+                              GetLiFiStatusURL(tx_hash), "", "",
+                              std::move(internal_callback), GetHeaders(), {},
+                              std::move(conversion_callback));
+}
+
+void SwapService::OnGetLiFiStatus(GetLiFiStatusCallback callback,
+                                  APIRequestResult api_request_result) {
+  if (!api_request_result.Is2XXResponseCode()) {
+    if (auto error_response =
+            lifi::ParseErrorResponse(api_request_result.value_body())) {
+      std::move(callback).Run(nullptr, std::move(error_response), "");
+      return;
+    } else {
+      std::move(callback).Run(
+          nullptr, nullptr, l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+      return;
+    }
+  }
+
+  if (auto status =
+          lifi::ParseStatusResponse(api_request_result.value_body())) {
+    std::move(callback).Run(std::move(status), nullptr, "");
+    return;
+  } else {
+    std::move(callback).Run(nullptr, nullptr,
+                            l10n_util::GetStringUTF8(IDS_WALLET_PARSING_ERROR));
+    return;
+  }
 }
 
 }  // namespace brave_wallet

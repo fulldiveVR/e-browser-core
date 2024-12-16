@@ -5,29 +5,44 @@
 
 #include "brave/components/ai_chat/core/browser/ai_chat_credential_manager.h"
 
+#include <compare>
 #include <optional>
+#include <ostream>
+#include <string_view>
+#include <type_traits>
 #include <utility>
 #include <vector>
 
-#include "base/i18n/time_formatting.h"
+#include "base/check.h"
+#include "base/functional/bind.h"
 #include "base/json/json_reader.h"
 #include "base/json/values_util.h"
+#include "base/numerics/clamped_math.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"
+#include "base/value_iterators.h"
+#include "base/values.h"
 #include "brave/brave_domains/service_domains.h"
-#include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom-shared.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "components/prefs/scoped_user_pref_update.h"
+#include "mojo/public/cpp/bindings/pending_remote.h"
+#include "mojo/public/cpp/bindings/struct_ptr.h"
 #include "net/cookies/cookie_inclusion_status.h"
 #include "net/cookies/cookie_util.h"
 #include "net/cookies/parsed_cookie.h"
+#include "url/url_canon.h"
 #include "url/url_util.h"
+
+#if BUILDFLAG(IS_ANDROID)
+#include "base/base64.h"
+#include "base/json/json_writer.h"
+#endif  // BUILDFLAG(IS_ANDROID)
 
 namespace {
 
-const char kLeoSkuHostnamePart[] = "leo";
+constexpr char kLeoSkuHostnamePart[] = "leo";
 
 }  // namespace
 
@@ -42,7 +57,7 @@ AIChatCredentialManager::AIChatCredentialManager(
 AIChatCredentialManager::~AIChatCredentialManager() = default;
 
 void AIChatCredentialManager::GetPremiumStatus(
-    mojom::PageHandler::GetPremiumStatusCallback callback) {
+    mojom::Service::GetPremiumStatusCallback callback) {
   base::Time now = base::Time::Now();
   // First check for a valid credential in the cache.
   bool credential_in_cache = false;
@@ -82,10 +97,10 @@ void AIChatCredentialManager::GetPremiumStatus(
 }
 
 void AIChatCredentialManager::OnCredentialSummary(
-    mojom::PageHandler::GetPremiumStatusCallback callback,
+    mojom::Service::GetPremiumStatusCallback callback,
     const std::string& domain,
     const bool credential_in_cache,
-    const std::string& summary_string) {
+    skus::mojom::SkusResultPtr summary) {
   mojom::PremiumInfoPtr premium_info = mojom::PremiumInfo::New();
   if (credential_in_cache) {
     premium_info->remaining_credential_count = 1;
@@ -93,7 +108,7 @@ void AIChatCredentialManager::OnCredentialSummary(
   premium_info->next_active_at = std::nullopt;
 
   std::string summary_string_trimmed;
-  base::TrimWhitespaceASCII(summary_string, base::TrimPositions::TRIM_ALL,
+  base::TrimWhitespaceASCII(summary->message, base::TrimPositions::TRIM_ALL,
                             &summary_string_trimmed);
   if (summary_string_trimmed.empty()) {
     if (credential_in_cache) {
@@ -107,7 +122,7 @@ void AIChatCredentialManager::OnCredentialSummary(
   }
 
   std::optional<base::Value> records_v = base::JSONReader::Read(
-      summary_string, base::JSONParserOptions::JSON_PARSE_RFC);
+      summary->message, base::JSONParserOptions::JSON_PARSE_RFC);
 
   if (!records_v || !records_v->is_dict()) {
     if (credential_in_cache) {
@@ -244,11 +259,10 @@ void AIChatCredentialManager::OnPrepareCredentialsPresentation(
     base::OnceCallback<void(std::optional<CredentialCacheEntry> credential)>
         callback,
     const std::string& domain,
-    const std::string& credential_as_cookie) {
+    skus::mojom::SkusResultPtr credential_as_cookie) {
   // Credential is returned in cookie format.
   net::CookieInclusionStatus status;
-  net::ParsedCookie credential_cookie(credential_as_cookie,
-                                      /*block_truncated=*/true, &status);
+  net::ParsedCookie credential_cookie(credential_as_cookie->message, &status);
   if (!credential_cookie.IsValid()) {
     std::move(callback).Run(std::nullopt);
     return;
@@ -299,6 +313,69 @@ void AIChatCredentialManager::PutCredentialInCache(
   base::Value::Dict& dict = update.Get();
   dict.Set(credential.credential, base::TimeToValue(credential.expires_at));
 }
+
+#if BUILDFLAG(IS_ANDROID)
+void AIChatCredentialManager::CreateOrderFromReceipt(
+    const std::string& purchase_token,
+    const std::string& package,
+    const std::string& subscription_id,
+    skus::mojom::SkusService::CreateOrderFromReceiptCallback callback) {
+  if (!EnsureMojoConnected()) {
+    std::move(callback).Run(
+        skus::mojom::SkusResult::New(skus::mojom::SkusResultCode::InvalidCall,
+                                     "EnsureMojoConnected Failed"));
+    return;
+  }
+  const std::string leo_sku_domain = brave_domains::GetServicesDomain(
+      kLeoSkuHostnamePart, brave_domains::ServicesEnvironment::STAGING);
+
+  base::Value::Dict request;
+  request.Set("type", "android");
+  request.Set("raw_receipt", purchase_token);
+  request.Set("package", package);
+  request.Set("subscription_id", subscription_id);
+
+  std::string request_json;
+  base::JSONWriter::Write(request, &request_json);
+
+  std::string encoded_request_json = base::Base64Encode(request_json);
+  skus_service_->CreateOrderFromReceipt(leo_sku_domain, encoded_request_json,
+                                        std::move(callback));
+}
+
+void AIChatCredentialManager::FetchOrderCredentials(
+    const std::string& order_id,
+    skus::mojom::SkusService::FetchOrderCredentialsCallback callback) {
+  if (!EnsureMojoConnected()) {
+    std::move(callback).Run(
+        skus::mojom::SkusResult::New(skus::mojom::SkusResultCode::InvalidCall,
+                                     "EnsureMojoConnected Failed"));
+    return;
+  }
+
+  const std::string leo_sku_domain = brave_domains::GetServicesDomain(
+      kLeoSkuHostnamePart, brave_domains::ServicesEnvironment::STAGING);
+
+  skus_service_->FetchOrderCredentials(leo_sku_domain, order_id,
+                                       std::move(callback));
+}
+
+void AIChatCredentialManager::RefreshOrder(
+    const std::string& order_id,
+    skus::mojom::SkusService::RefreshOrderCallback callback) {
+  if (!EnsureMojoConnected()) {
+    std::move(callback).Run(
+        skus::mojom::SkusResult::New(skus::mojom::SkusResultCode::InvalidCall,
+                                     "EnsureMojoConnected Failed"));
+    return;
+  }
+
+  const std::string leo_sku_domain = brave_domains::GetServicesDomain(
+      kLeoSkuHostnamePart, brave_domains::ServicesEnvironment::STAGING);
+
+  skus_service_->RefreshOrder(leo_sku_domain, order_id, std::move(callback));
+}
+#endif
 
 bool AIChatCredentialManager::EnsureMojoConnected() {
   // Bind if not bound yet

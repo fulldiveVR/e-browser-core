@@ -3,6 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // you can obtain one at http://mozilla.org/MPL/2.0/.
 
+#include "brave/browser/ui/webui/brave_wallet/wallet_panel_ui.h"
+
 #include <string>
 #include <string_view>
 
@@ -12,11 +14,10 @@
 #include "base/strings/stringprintf.h"
 #include "base/test/bind.h"
 #include "brave/browser/brave_wallet/asset_ratio_service_factory.h"
-#include "brave/browser/brave_wallet/json_rpc_service_factory.h"
-#include "brave/browser/brave_wallet/keyring_service_factory.h"
+#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
-#include "brave/browser/ui/webui/brave_wallet/wallet_panel_ui.h"
 #include "brave/components/brave_wallet/browser/asset_ratio_service.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
@@ -30,6 +31,7 @@
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "content/public/test/browser_test.h"
+#include "content/public/test/browser_test_utils.h"
 #include "content/public/test/test_utils.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
 #include "services/network/test/test_url_loader_factory.h"
@@ -96,7 +98,7 @@ std::string Select(const std::string& selector1, const std::string& selector2) {
                             selector1.c_str(), selector2.c_str());
 }
 
-void NonBlockingDelay(const base::TimeDelta& delay) {
+void NonBlockingDelay(base::TimeDelta delay) {
   base::RunLoop run_loop(base::RunLoop::Type::kNestableTasksAllowed);
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostDelayedTask(
       FROM_HERE, run_loop.QuitWhenIdleClosure(), delay);
@@ -136,30 +138,31 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
 
-    // Disabling CSP on webui pages so EvalJS could be run in main world.
-    BraveSettingsUI::ShouldDisableCSPForTesting() = true;
     BraveSettingsUI::ShouldExposeElementsForTesting() = true;
-    WalletPanelUI::ShouldDisableCSPForTesting() = true;
 
     auto* profile = browser()->profile();
 
     shared_url_loader_factory_ =
         base::MakeRefCounted<network::WeakWrapperSharedURLLoaderFactory>(
             &url_loader_factory_);
-    JsonRpcServiceFactory::GetServiceForContext(profile)
-        ->SetAPIRequestHelperForTesting(shared_url_loader_factory_);
+
+    brave_wallet_service_ =
+        BraveWalletServiceFactory::GetServiceForContext(profile);
+
+    brave_wallet_service_->json_rpc_service()->SetAPIRequestHelperForTesting(
+        shared_url_loader_factory_);
 
     AssetRatioServiceFactory::GetServiceForContext(profile)
         ->EnableDummyPricesForTesting();
 
-    KeyringServiceFactory::GetServiceForContext(profile)->CreateWallet(
-        "password_123", base::DoNothing());
+    brave_wallet_service_->keyring_service()->CreateWallet("password_123",
+                                                           base::DoNothing());
 
     SetEthChainIdInterceptor(
-        {GURL(kSomeEndpoint),
-         GetKnownChain(profile->GetPrefs(), mojom::kNeonEVMMainnetChainId,
-                       mojom::CoinType::ETH)
-             ->rpc_endpoints.front()},
+        {GURL(kSomeEndpoint), brave_wallet_service_->network_manager()
+                                  ->GetKnownChain(mojom::kNeonEVMMainnetChainId,
+                                                  mojom::CoinType::ETH)
+                                  ->rpc_endpoints.front()},
         mojom::kNeonEVMMainnetChainId);
 
     CreateWalletTab();
@@ -201,7 +204,7 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
   void SetEthChainIdInterceptor(const std::vector<GURL>& network_urls,
                                 const std::string& chain_id) {
     url_loader_factory_.SetInterceptor(base::BindLambdaForTesting(
-        [=](const network::ResourceRequest& request) {
+        [=, this](const network::ResourceRequest& request) {
           std::string_view request_string(request.request_body->elements()
                                               ->at(0)
                                               .As<network::DataElementBytes>()
@@ -220,8 +223,8 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
   void WaitForNeonEVMNetworkUrl(const GURL& url) {
     auto* prefs = browser()->profile()->GetPrefs();
 
-    if (GetNetworkURL(prefs, mojom::kNeonEVMMainnetChainId,
-                      mojom::CoinType::ETH) == url) {
+    if (brave_wallet_service()->network_manager()->GetNetworkURL(
+            mojom::kNeonEVMMainnetChainId, mojom::CoinType::ETH) == url) {
       return;
     }
 
@@ -229,10 +232,9 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
     PrefChangeRegistrar pref_change_registrar;
     pref_change_registrar.Init(prefs);
     pref_change_registrar.Add(
-        kBraveWalletCustomNetworks,
-        base::BindLambdaForTesting([&run_loop, &prefs, &url] {
-          if (GetNetworkURL(prefs, mojom::kNeonEVMMainnetChainId,
-                            mojom::CoinType::ETH) == url) {
+        kBraveWalletCustomNetworks, base::BindLambdaForTesting([&] {
+          if (brave_wallet_service()->network_manager()->GetNetworkURL(
+                  mojom::kNeonEVMMainnetChainId, mojom::CoinType::ETH) == url) {
             run_loop.Quit();
           }
         }));
@@ -242,9 +244,15 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
   content::WebContents* wallet() { return wallet_; }
   content::WebContents* settings() { return settings_; }
 
+  brave_wallet::BraveWalletService* brave_wallet_service() {
+    return brave_wallet_service_;
+  }
+
  private:
-  raw_ptr<content::WebContents> wallet_ = nullptr;
-  raw_ptr<content::WebContents> settings_ = nullptr;
+  raw_ptr<content::WebContents, DanglingUntriaged> wallet_ = nullptr;
+  raw_ptr<content::WebContents, DanglingUntriaged> settings_ = nullptr;
+  raw_ptr<brave_wallet::BraveWalletService, DanglingUntriaged>
+      brave_wallet_service_ = nullptr;
   network::TestURLLoaderFactory url_loader_factory_;
   scoped_refptr<network::SharedURLLoaderFactory> shared_url_loader_factory_;
 };
@@ -351,10 +359,10 @@ IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, CustomNetworkInSettings) {
 
 IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, SelectRpcEndpoint) {
   CreateSettingsTab();
-  auto* prefs = browser()->profile()->GetPrefs();
-
   auto known_neon_evm_rpc =
-      GetKnownChain(prefs, mojom::kNeonEVMMainnetChainId, mojom::CoinType::ETH)
+      brave_wallet_service()
+          ->network_manager()
+          ->GetKnownChain(mojom::kNeonEVMMainnetChainId, mojom::CoinType::ETH)
           ->rpc_endpoints.front();
   // Neon EVM rpc is from known info.
   WaitForNeonEVMNetworkUrl(known_neon_evm_rpc);

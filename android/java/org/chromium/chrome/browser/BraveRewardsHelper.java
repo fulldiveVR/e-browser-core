@@ -32,13 +32,17 @@ import androidx.annotation.Nullable;
 
 import org.jni_zero.CalledByNative;
 
+import org.chromium.base.Callback;
 import org.chromium.base.ContextUtils;
+import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.tab.Tab;
+import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.components.browser_ui.widget.RoundedIconGenerator;
 import org.chromium.components.favicon.IconType;
 import org.chromium.components.favicon.LargeIconBridge;
@@ -176,8 +180,9 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
         if (!hasRewardsOnboardingModalShown()
                 && (getNextRewardsOnboardingModalDate() > 0
                         && System.currentTimeMillis() > getNextRewardsOnboardingModalDate())
-                && shouldShowBraveRewardsOnboardingModal() && braveRewardsNativeWorker != null
-                && braveRewardsNativeWorker.IsSupported()) {
+                && shouldShowBraveRewardsOnboardingModal()
+                && braveRewardsNativeWorker != null
+                && braveRewardsNativeWorker.isSupported()) {
             if (isRewardsEnabled()) {
                 setRewardsOnboardingModalShown(true);
                 return false;
@@ -234,7 +239,7 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
     public BraveRewardsHelper(Tab tab) {
         mTab = tab;
         assert mTab != null;
-        mProfile = Profile.getLastUsedRegularProfile();
+        mProfile = ProfileManager.getLastUsedRegularProfile();
         if (sLargeIconBridge == null && mTab != null && mProfile != null) {
             sLargeIconBridge = new LargeIconBridge(mProfile);
         }
@@ -349,9 +354,9 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
         float r = 0;
 
         if (bitmap.getWidth() > bitmap.getHeight()) {
-            r = bitmap.getHeight() / 2;
+            r = bitmap.getHeight() / 2f;
         } else {
-            r = bitmap.getWidth() / 2;
+            r = bitmap.getWidth() / 2f;
         }
 
         paint.setAntiAlias(true);
@@ -425,13 +430,20 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
         return Integer.toString(currentTime.get(Calendar.YEAR));
     }
 
-  public static Tab currentActiveChromeTabbedActivityTab() {
-      ChromeTabbedActivity activity = BraveRewardsHelper.getChromeTabbedActivity();
-      if (activity == null || activity.getTabModelSelector() == null) {
-          return null;
-      }
-      return activity.getActivityTab();
-  }
+    public static Tab currentActiveChromeTabbedActivityTab() {
+        ChromeTabbedActivity activity = BraveRewardsHelper.getChromeTabbedActivity();
+        if (activity == null) {
+            return null;
+        }
+
+        ObservableSupplier<TabModelSelector> supplier = activity.getTabModelSelectorSupplier();
+        TabModelSelector selector = supplier.get();
+        if (selector == null) {
+            return null;
+        }
+
+        return activity.getActivityTab();
+    }
 
     /**
      * @param fadeout: can be null
@@ -503,32 +515,31 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
 
     /**
      * Expands touchable area of a small view
-      * @param parentView
-     * @param childView
-     * @param extraPadding: dp
+     *
+     * @param parentView Parent view.
+     * @param childView Child view.
+     * @param extraPadding Extra padding in dp.
      */
-  public static void expandTouchArea(final View parentView, final View childView, final int extraPadding) {
-        parentView.post(new Runnable() {
-            @Override
-            public void run() {
-                Rect rect = new Rect();
-                childView.getHitRect(rect);
+    public static void expandTouchArea(
+            final View parentView, final View childView, final int extraPadding) {
+        parentView.post(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        Rect rect = new Rect();
+                        childView.getHitRect(rect);
 
-                int pxPadding = dp2px(extraPadding);
-                rect.top -= pxPadding;
-                rect.left -= pxPadding;
-                rect.right += pxPadding;
-                rect.bottom += pxPadding;
-                parentView.setTouchDelegate(new TouchDelegate(rect, childView));
-            }
-        });
+                        int pxPadding = dp2px(extraPadding);
+                        rect.top -= pxPadding;
+                        rect.left -= pxPadding;
+                        rect.right += pxPadding;
+                        rect.bottom += pxPadding;
+                        parentView.setTouchDelegate(new TouchDelegate(rect, childView));
+                    }
+                });
     }
 
-    /**
-     * Converts DP into PX
-     * @param dp
-     * @return
-     */
+    /** Converts DP into PX */
     public static int dp2px(int dp) {
         DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
         float px = dp * (metrics.densityDpi / DP_PER_INCH_MDPI);
@@ -585,8 +596,38 @@ public class BraveRewardsHelper implements LargeIconBridge.LargeIconCallback {
         return textSpannableString;
     }
 
-    public static void setSpan(Context context, String text, SpannableString tosTextSS,
-            int stringId, ClickableSpan clickableSpan) {
+    public static SpannableString toSpannableString(
+            String text,
+            int colorRes,
+            int clickableSubstringResId,
+            Callback<Context> onSubstringClicked) {
+        Context context = ContextUtils.getApplicationContext();
+        Spanned textSpanned = spannedFromHtmlString(text);
+        SpannableString textSpannableString = new SpannableString(textSpanned.toString());
+
+        NoUnderlineClickableSpan substringClickableSpan =
+                new NoUnderlineClickableSpan(
+                        context,
+                        colorRes,
+                        (textView) -> {
+                            onSubstringClicked.onResult(context);
+                        });
+
+        setSpan(
+                context,
+                text,
+                textSpannableString,
+                clickableSubstringResId,
+                substringClickableSpan);
+        return textSpannableString;
+    }
+
+    public static void setSpan(
+            Context context,
+            String text,
+            SpannableString tosTextSS,
+            int stringId,
+            ClickableSpan clickableSpan) {
         String spanString = context.getResources().getString(stringId);
         int spanLength = spanString.length();
         int index = text.indexOf(spanString);

@@ -9,11 +9,12 @@
 #include <utility>
 
 #include "base/json/json_writer.h"
-#include "brave/components/brave_rewards/core/logging/logging.h"
+#include "base/strings/stringprintf.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
 namespace brave_rewards::internal::endpoints {
 
-PostConnectZebPay::PostConnectZebPay(RewardsEngineImpl& engine,
+PostConnectZebPay::PostConnectZebPay(RewardsEngine& engine,
                                      std::string&& linking_info)
     : PostConnect(engine), linking_info_(std::move(linking_info)) {}
 
@@ -21,7 +22,7 @@ PostConnectZebPay::~PostConnectZebPay() = default;
 
 std::optional<std::string> PostConnectZebPay::Content() const {
   if (linking_info_.empty()) {
-    BLOG(0, "linking_info_ is empty!");
+    engine_->LogError(FROM_HERE) << "linking_info_ is empty";
     return std::nullopt;
   }
 
@@ -30,15 +31,15 @@ std::optional<std::string> PostConnectZebPay::Content() const {
 
   std::string json;
   if (!base::JSONWriter::Write(content, &json)) {
-    BLOG(0, "Failed to write content to JSON!");
+    engine_->LogError(FROM_HERE) << "Failed to write content to JSON";
     return std::nullopt;
   }
 
   return json;
 }
 
-const char* PostConnectZebPay::Path() const {
-  return "/v3/wallet/zebpay/%s/claim";
+std::string PostConnectZebPay::Path(base::cstring_view payment_id) const {
+  return base::StringPrintf("/v3/wallet/zebpay/%s/claim", payment_id.c_str());
 }
 
 }  // namespace brave_rewards::internal::endpoints

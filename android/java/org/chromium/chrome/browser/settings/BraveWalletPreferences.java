@@ -16,12 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
+import org.chromium.base.supplier.ObservableSupplier;
+import org.chromium.base.supplier.ObservableSupplierImpl;
 import org.chromium.brave_wallet.mojom.DefaultWallet;
 import org.chromium.brave_wallet.mojom.KeyringService;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.app.domain.WalletModel;
-import org.chromium.chrome.browser.crypto_wallet.KeyringServiceFactory;
+import org.chromium.chrome.browser.crypto_wallet.BraveWalletServiceFactory;
 import org.chromium.chrome.browser.crypto_wallet.util.WalletConstants;
 import org.chromium.chrome.browser.util.TabUtils;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
@@ -36,11 +38,6 @@ public class BraveWalletPreferences extends BravePreferenceFragment
         implements ConnectionErrorHandler, Preference.OnPreferenceChangeListener {
     private static final String TAG = "WalletPreferences";
     private static final String PREF_BRAVE_WALLET_AUTOLOCK = "pref_brave_wallet_autolock";
-
-    /**
-     * @noinspection unused
-     */
-    private static final String PREF_BRAVE_WALLET_RESET = "pref_brave_wallet_reset";
 
     private static final String BRAVE_WALLET_WEB3_NOTIFICATION_SWITCH = "web3_notifications_switch";
     private static final String BRAVE_WALLET_WEB3_NFT_DISCOVERY_SWITCH =
@@ -63,6 +60,8 @@ public class BraveWalletPreferences extends BravePreferenceFragment
     private KeyringService mKeyringService;
     private WalletModel mWalletModel;
 
+    private final ObservableSupplierImpl<String> mPageTitle = new ObservableSupplierImpl<>();
+
     public static boolean getPrefWeb3NotificationsEnabled() {
         SharedPreferences sharedPreferences = ContextUtils.getAppSharedPreferences();
 
@@ -78,7 +77,7 @@ public class BraveWalletPreferences extends BravePreferenceFragment
             Log.e(TAG, "onCreatePreferences", e);
         }
 
-        requireActivity().setTitle(R.string.brave_ui_brave_wallet);
+        mPageTitle.set(getString(R.string.brave_ui_brave_wallet));
         SettingsUtils.addPreferencesFromResource(this, R.xml.brave_wallet_preferences);
 
         setUpNftDiscoveryPreference();
@@ -90,7 +89,7 @@ public class BraveWalletPreferences extends BravePreferenceFragment
                 mWalletModel
                         .getBraveWalletService()
                         .getDefaultEthereumWallet(
-                                (@DefaultWallet.EnumType Integer defaultEthereumWallet) ->
+                                (@DefaultWallet.EnumType int defaultEthereumWallet) ->
                                         setupDefaultWalletPreference(
                                                 mDefaultEthereumWallet, defaultEthereumWallet));
             }
@@ -103,7 +102,7 @@ public class BraveWalletPreferences extends BravePreferenceFragment
                 mWalletModel
                         .getBraveWalletService()
                         .getDefaultSolanaWallet(
-                                (@DefaultWallet.EnumType Integer defaultSolanaWallet) ->
+                                (@DefaultWallet.EnumType int defaultSolanaWallet) ->
                                         setupDefaultWalletPreference(
                                                 mDefaultSolanaWallet, defaultSolanaWallet));
             }
@@ -118,6 +117,11 @@ public class BraveWalletPreferences extends BravePreferenceFragment
         }
 
         initKeyringService();
+    }
+
+    @Override
+    public ObservableSupplier<String> getPageTitle() {
+        return mPageTitle;
     }
 
     private void setupDefaultWalletPreference(
@@ -214,7 +218,7 @@ public class BraveWalletPreferences extends BravePreferenceFragment
             return;
         }
 
-        mKeyringService = KeyringServiceFactory.getInstance().getKeyringService(this);
+        mKeyringService = BraveWalletServiceFactory.getInstance().getKeyringService(this);
     }
 
     private void refreshAutolockView() {

@@ -11,16 +11,19 @@
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar_utils.h"
+#include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/sidebar/sidebar_item_add_button.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
 #include "brave/components/l10n/common/localization_util.h"
-#include "brave/components/sidebar/sidebar_service.h"
+#include "brave/components/sidebar/browser/sidebar_service.h"
 #include "brave/components/vector_icons/vector_icons.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_command_controller.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/singleton_tabs.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
 #include "chrome/common/pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "ui/base/l10n/l10n_util.h"
@@ -86,13 +89,11 @@ void SidebarControlView::UpdateBackgroundAndBorder() {
   if (const ui::ColorProvider* color_provider = GetColorProvider()) {
     SetBackground(
         views::CreateSolidBackground(color_provider->GetColor(kColorToolbar)));
-    if (!BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_)) {
-      constexpr int kBorderThickness = 1;
-      SetBorder(views::CreateSolidSidedBorder(
-          gfx::Insets::TLBR(0, sidebar_on_left_ ? 0 : kBorderThickness, 0,
-                            sidebar_on_left_ ? kBorderThickness : 0),
-          color_provider->GetColor(kColorToolbarContentAreaSeparator)));
-    }
+    int border_thickness =
+        1 - BraveContentsViewUtil::GetRoundedCornersWebViewMargin(browser_);
+    SetBorder(views::CreateEmptyBorder(
+        gfx::Insets::TLBR(0, sidebar_on_left_ ? 0 : border_thickness, 0,
+                          sidebar_on_left_ ? border_thickness : 0)));
   }
 }
 
@@ -101,7 +102,7 @@ SidebarControlView::~SidebarControlView() = default;
 void SidebarControlView::ShowContextMenuForViewImpl(
     views::View* source,
     const gfx::Point& point,
-    ui::MenuSourceType source_type) {
+    ui::mojom::MenuSourceType source_type) {
   if (context_menu_runner_ && context_menu_runner_->IsRunning()) {
     return;
   }
@@ -173,8 +174,7 @@ void SidebarControlView::AddChildViews() {
       AddChildView(std::make_unique<SidebarItemsScrollView>(browser_));
   sidebar_items_view_->SetProperty(
       views::kFlexBehaviorKey,
-      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero,
-                               views::MaximumFlexSizeRule::kUnbounded)
+      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
           .WithOrder(2));
   sidebar_item_add_view_ = AddChildView(std::make_unique<SidebarItemAddButton>(
       browser_, brave_l10n::GetLocalizedResourceUTF16String(
@@ -270,5 +270,5 @@ void SidebarControlView::SetSidebarOnLeft(bool sidebar_on_left) {
   UpdateBackgroundAndBorder();
 }
 
-BEGIN_METADATA(SidebarControlView, views::View)
+BEGIN_METADATA(SidebarControlView)
 END_METADATA

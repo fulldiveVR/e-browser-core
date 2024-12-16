@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
+  <message name="IDS_APP_META_KEY" desc="The name of the Windows/Command/Meta key on Linux">
+    Meta
+  </message>
   <!--
     Please reuse existing strings as much as possible rather than adding new
     strings here.
@@ -127,6 +130,27 @@
   <message name="IDS_IDC_WINDOW_GROUP_TAB">
     Group tab
   </message>
+  <message name="IDS_IDC_WINDOW_TOGGLE_GROUP_EXPANDED">
+    Toggle group expanded
+  </message>
+  <message name="IDS_IDC_WINDOW_REMOVE_TAB_FROM_GROUP">
+    Remove tab from current group
+  </message>
+  <message name="IDS_IDC_WINDOW_UNGROUP_GROUP">
+    Ungroup current tab group
+  </message>
+  <message name="IDS_IDC_WINDOW_UNGROUP_ALL_TABS">
+    Ungroup all tabs
+  </message>
+  <message name="IDS_IDC_WINDOW_CLOSE_UNGROUPED_TABS">
+    Close ungrouped tabs
+  </message>
+  <message name="IDS_IDC_WINDOW_CLOSE_TABS_NOT_IN_CURRENT_GROUP">
+    Close tabs not in current group
+  </message>
+  <message name="IDS_IDC_WINDOW_GROUP_UNGROUPED_TABS">
+    Group ungrouped tabs
+  </message>
   <message name="IDS_IDC_SCROLL_TAB_TO_TOP">
     Scroll tab to top
   </message>
@@ -214,6 +238,10 @@
   <message name="IDS_IDC_IMPORT_SETTINGS">
     Import settings
   </message>
+
+  <message name="IDS_IDC_OPEN_FULL_PAGE_CHAT">
+    Open AI Chat
+  </message>
   <message name="IDS_IDC_EDIT_SEARCH_ENGINES">
     Edit search engines
   </message>
@@ -242,7 +270,7 @@
     Customize touch bar
   </message>
   <message name="IDS_IDC_TOGGLE_JAVASCRIPT_APPLE_EVENTS">
-    Toggle javascript apple events
+    Toggle JavaScript Apple Events
   </message>
   <message name="IDS_IDC_INSTALL_PWA">
     Install PWA
@@ -319,6 +347,9 @@
   <message name="IDS_IDC_LIVE_CAPTION">
     Toggle live captions
   </message>
+  <message name="IDS_IDC_TOGGLE_AI_CHAT">
+    Toggle Leo AI
+  </message>
   <message name="IDS_IDC_SHOW_BRAVE_WALLET_PANEL">
     Show Brave Wallet panel
   </message>
@@ -379,11 +410,17 @@
   <message name="IDS_IDC_BRAVE_BOOKMARK_BAR_NEVER">
     Hide bookmark bar
   </message>
+  <message name="IDS_IDC_EXPORT_ALL_BOOKMARKS">
+    Export all bookmarks
+  </message>
+  <message name="IDS_IDC_TOGGLE_ALL_BOOKMARKS_BUTTON_VISIBILITY">
+    Toggle All bookmarks button visibility
+  </message>
   <message name="IDS_IDC_TOGGLE_SHIELDS">
     Toggle shields
   </message>
   <message name="IDS_IDC_TOGGLE_JAVASCRIPT">
-    Toggle javascript
+    Toggle JavaScript
   </message>
   <message name="IDS_IDC_SHOW_PLAYLIST_BUBBLE">
     Show playlist bubble
@@ -394,9 +431,6 @@
   <message name="IDS_IDC_MOVE_GROUP_TO_NEW_WINDOW">
     Move group to new window
   </message>
-  <message name="IDS_IDC_CLOSE_DUPLICATE_TABS">
-    Close duplicate tabs
-  </message>
   <message name="IDS_IDC_TOGGLE_VERTICAL_TABS_EXPANDED">
     Toggle vertical tabs expanded
   </message>
@@ -405,6 +439,9 @@
   </message>
   <message name="IDS_IDC_BRAVE_SEND_TAB_TO_SELF">
     Send tab to self
+  </message>
+  <message name="IDS_IDC_SHOW_WAYBACK_MACHINE_BUBBLE">
+    Show Wayback Machine bubble
   </message>
 
   <!-- Commander composite commands -->
@@ -465,4 +502,45 @@
   <message name="IDS_SHORTCUTS_PAGE_ADD_SHORTCUT" desc="Text for the button to add a new shortcut">
     Add
   </message>
+
+  <if expr="use_titlecase">
+    <message name="IDS_IDC_COMMANDER">
+      Quick Commands
+    </message>
+    <message name="IDS_IDC_NEW_SPLIT_VIEW" desc="The label of the 'New Split View' tab context menu item">
+      New Split View
+    </message>
+    <message name="IDS_IDC_TILE_TABS" desc="The label of the 'Open in Split View' tab context menu item">
+      Open in Split View
+    </message>
+    <message name="IDS_IDC_BREAK_TILE" desc="The label of the 'Unsplit tabs' tab context menu item. This item exits split view and restore bounded tabs to separate state.">
+      Unsplit Tabs
+    </message>
+    <message name="IDS_IDC_SWAP_SPLIT_VIEW" desc="The label of the 'Swap split view' tab context menu item">
+      Swap Tab Positions
+    </message>
+    <message name="IDS_IDC_SHOW_APPS_PAGE" desc="The label of the 'Show Apps' menu item">
+      Show Apps
+    </message>
+  </if>
+  <if expr="not use_titlecase">
+    <message name="IDS_IDC_COMMANDER">
+      Quick commands
+    </message>
+    <message name="IDS_IDC_NEW_SPLIT_VIEW" desc="The label of the 'New Split View' tab context menu item">
+      New split view
+    </message>
+    <message name="IDS_IDC_TILE_TABS" desc="The label of the 'Open in split view' tab context menu item">
+      Open in split view
+    </message>
+    <message name="IDS_IDC_BREAK_TILE" desc="The label of the 'Unsplit tabs' tab context menu item. This item exits split view and restore bounded tabs to separate state.">
+      Unsplit tabs
+    </message>
+    <message name="IDS_IDC_SWAP_SPLIT_VIEW" desc="The label of the 'Swap split view' tab context menu item">
+      Swap tab positions
+    </message>
+    <message name="IDS_IDC_SHOW_APPS_PAGE" desc="The label of the 'Show Apps' menu item">
+      Show apps
+    </message>
+  </if>
 </grit-part>

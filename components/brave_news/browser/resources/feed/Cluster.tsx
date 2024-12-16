@@ -7,12 +7,13 @@ import { Cluster as Info, ClusterType } from 'gen/brave/components/brave_news/co
 import Card, { Title } from './Card';
 import Article from './Article';
 import styled from 'styled-components';
-import { icon, radius, spacing } from '@brave/leo/tokens/css';
+import { icon, radius, spacing } from '@brave/leo/tokens/css/variables';
 import { channelIcons } from '../shared/Icons';
 import { getTranslatedChannelName } from '../shared/channel';
 
 interface Props {
   info: Info
+  feedDepth?: number
 }
 
 const Container = styled(Card)`
@@ -35,7 +36,7 @@ const Container = styled(Card)`
   }
 `
 
-export default function Cluster({ info }: Props) {
+export default function Cluster({ info, feedDepth }: Props) {
   const groupName = info.type === ClusterType.CHANNEL
     ? getTranslatedChannelName(info.id)
     : info.id
@@ -45,7 +46,12 @@ export default function Cluster({ info }: Props) {
     </Title>
     {info.articles.map((a, i) => {
       const info: any = a.article || a.hero
-      return <Article key={i} info={info} hideChannel={info.type === ClusterType.CHANNEL} />
+      return <Article
+        key={i}
+        info={info}
+        hideChannel={info.type === ClusterType.CHANNEL}
+        feedDepth={feedDepth === undefined ? undefined : (feedDepth + i)}
+      />
     })}
   </Container>
 }

@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 
 import { WalletButton } from '../shared/style'
 import WarningTriangle from '../../assets/svg-icons/warning-triangle.svg'
@@ -46,14 +46,6 @@ export const AddressAndOrb = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-`
-
-export const AccountCircle = styled.div<Partial<StyleProps>>`
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
-  background-image: url(${(p) => p.orb});
-  background-size: cover;
 `
 
 export const AddressText = styled.span`

@@ -3,6 +3,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(https://github.com/brave/brave-browser/issues/41661): Remove this and
+// convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/logging.h"
@@ -17,11 +23,11 @@
 #include "chrome/installer/util/work_item.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_constants.h"
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_utils.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/install_utils.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_constants.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_utils.h"
+#include "brave/browser/brave_vpn/win/service_details.h"
 #include "brave/components/brave_vpn/browser/connection/ikev2/win/ras_utils.h"
-#include "brave/components/brave_vpn/common/wireguard/win/service_details.h"
 #endif
 #define UninstallProduct UninstallProduct_ChromiumImpl
 
@@ -90,7 +96,7 @@ InstallStatus UninstallProduct(const ModifyParams& modify_params,
     // TODO(bsclifton): move this to a method
     if (!InstallServiceWorkItem::DeleteService(
             brave_vpn::GetBraveVpnHelperServiceName(),
-            brave_vpn::kBraveVpnHelperRegistryStoragePath, {}, {})) {
+            brave_vpn::GetBraveVpnHelperRegistryStoragePath(), {}, {})) {
       LOG(WARNING) << "Failed to delete "
                    << brave_vpn::GetBraveVpnHelperServiceName();
     }

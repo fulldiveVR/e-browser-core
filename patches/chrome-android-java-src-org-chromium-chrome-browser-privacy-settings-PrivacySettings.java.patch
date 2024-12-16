@@ -1,8 +1,8 @@
 diff --git a/chrome/android/java/src/org/chromium/chrome/browser/privacy/settings/PrivacySettings.java b/chrome/android/java/src/org/chromium/chrome/browser/privacy/settings/PrivacySettings.java
-index 85177ad55395ad3737ef404c3c2056717fd55980..bde143913c6793d32a57a36817aa4eb1506fee0a 100644
+index e3b5027f95fba7619f4ff58cd51a343a9c105043..2744dd404dc879c9915eaac9aebf0df670a854f9 100644
 --- a/chrome/android/java/src/org/chromium/chrome/browser/privacy/settings/PrivacySettings.java
 +++ b/chrome/android/java/src/org/chromium/chrome/browser/privacy/settings/PrivacySettings.java
-@@ -54,7 +54,7 @@ import org.chromium.ui.text.NoUnderlineClickableSpan;
+@@ -55,7 +55,7 @@ import org.chromium.components.user_prefs.UserPrefs;
  import org.chromium.ui.text.SpanApplier;
  
  /** Fragment to keep track of the all the privacy related preferences. */
@@ -11,7 +11,7 @@ index 85177ad55395ad3737ef404c3c2056717fd55980..bde143913c6793d32a57a36817aa4eb1
          implements Preference.OnPreferenceChangeListener {
      private static final String PREF_CAN_MAKE_PAYMENT = "can_make_payment";
      private static final String PREF_PRELOAD_PAGES = "preload_pages";
-@@ -369,6 +369,7 @@ public class PrivacySettings extends ChromeBaseSettingsFragment
+@@ -428,6 +428,7 @@ public class PrivacySettings extends ChromeBaseSettingsFragment
      @Override
      public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
          menu.clear();
@@ -19,11 +19,12 @@ index 85177ad55395ad3737ef404c3c2056717fd55980..bde143913c6793d32a57a36817aa4eb1
          MenuItem help =
                  menu.add(Menu.NONE, R.id.menu_id_targeted_help, Menu.NONE, R.string.menu_help);
          help.setIcon(
-@@ -383,6 +384,6 @@ public class PrivacySettings extends ChromeBaseSettingsFragment
+@@ -442,7 +443,7 @@ public class PrivacySettings extends ChromeBaseSettingsFragment
                      .show(getActivity(), getString(R.string.help_context_privacy), null);
              return true;
          }
 -        return false;
 +        return super.onOptionsItemSelected(item);
      }
- }
+ 
+     @Override

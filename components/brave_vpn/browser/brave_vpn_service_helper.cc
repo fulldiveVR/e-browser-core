@@ -24,16 +24,6 @@
 #include "components/prefs/scoped_user_pref_update.h"
 
 namespace brave_vpn {
-
-mojom::RegionPtr GetRegionPtrWithNameFromRegionList(
-    const std::string& name,
-    const std::vector<mojom::Region> region_list) {
-  auto it = base::ranges::find(region_list, name, &mojom::Region::name);
-  if (it != region_list.end())
-    return it->Clone();
-  return mojom::RegionPtr();
-}
-
 bool IsValidCredentialSummary(const base::Value& summary) {
   DCHECK(summary.is_dict());
   const bool active = summary.GetDict().FindBool("active").value_or(false);
@@ -96,6 +86,7 @@ void SetSkusCredential(PrefService* local_prefs,
                 base::TimeToValue(expiration_time));
   local_prefs->SetDict(prefs::kBraveVPNSubscriberCredential,
                        std::move(cred_dict));
+  local_prefs->SetTime(prefs::kBraveVPNLastCredentialExpiry, expiration_time);
 }
 
 void SetSkusCredentialFetchingRetried(PrefService* local_prefs, bool retried) {

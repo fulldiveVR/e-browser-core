@@ -35,6 +35,10 @@ PermissionPromptDisposition MockPermissionLifetimePrompt::GetPromptDisposition()
   return PermissionPromptDisposition::ANCHORED_BUBBLE;
 }
 
+bool MockPermissionLifetimePrompt::IsAskPrompt() const {
+  return true;
+}
+
 void MockPermissionLifetimePrompt::ResetFactory() {
   factory_ = nullptr;
 }
@@ -46,6 +50,16 @@ std::optional<gfx::Rect> MockPermissionLifetimePrompt::GetViewBoundsInScreen()
 
 bool MockPermissionLifetimePrompt::ShouldFinalizeRequestAfterDecided() const {
   return true;
+}
+
+std::vector<permissions::ElementAnchoredBubbleVariant>
+MockPermissionLifetimePrompt::GetPromptVariants() const {
+  return {};
+}
+
+std::optional<feature_params::PermissionElementPromptPosition>
+MockPermissionLifetimePrompt::GetPromptPosition() const {
+  return std::nullopt;
 }
 
 }  // namespace permissions

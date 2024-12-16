@@ -11,11 +11,13 @@
 #include "ui/gfx/geometry/size.h"
 
 class BraveTabSearchButton : public TabSearchButton {
+  METADATA_HEADER(BraveTabSearchButton, TabSearchButton)
  public:
-  METADATA_HEADER(BraveTabSearchButton);
-
-  explicit BraveTabSearchButton(TabStripController* tab_strip_controller,
-                                Edge flat_edge);
+  explicit BraveTabSearchButton(
+      TabStripController* tab_strip_controller,
+      BrowserWindowInterface* browser_window_interface,
+      Edge fixed_flat_edge,
+      Edge animated_flat_edge);
   ~BraveTabSearchButton() override;
   BraveTabSearchButton(const BraveTabSearchButton&) = delete;
   BraveTabSearchButton& operator=(const BraveTabSearchButton&) = delete;
@@ -24,7 +26,6 @@ class BraveTabSearchButton : public TabSearchButton {
 
   // TabSearchButton:
   void UpdateColors() override;
-  gfx::Size CalculatePreferredSize() const override;
   int GetCornerRadius() const override;
 };
 

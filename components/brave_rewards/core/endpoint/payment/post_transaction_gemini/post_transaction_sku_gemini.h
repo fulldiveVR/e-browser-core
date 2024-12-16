@@ -43,17 +43,17 @@
 // }
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoint {
 namespace payment {
 
 using PostTransactionGeminiCallback =
-    std::function<void(const mojom::Result result)>;
+    base::OnceCallback<void(const mojom::Result result)>;
 
 class PostTransactionGemini {
  public:
-  explicit PostTransactionGemini(RewardsEngineImpl& engine);
+  explicit PostTransactionGemini(RewardsEngine& engine);
   ~PostTransactionGemini();
 
   void Request(const mojom::SKUTransaction& transaction,
@@ -69,7 +69,7 @@ class PostTransactionGemini {
   void OnRequest(PostTransactionGeminiCallback callback,
                  mojom::UrlResponsePtr response);
 
-  const raw_ref<RewardsEngineImpl> engine_;
+  const raw_ref<RewardsEngine> engine_;
 };
 
 }  // namespace payment

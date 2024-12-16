@@ -20,11 +20,10 @@ AdEventInfo& AdEventInfo::operator=(AdEventInfo&& other) noexcept = default;
 AdEventInfo::~AdEventInfo() = default;
 
 bool AdEventInfo::IsValid() const {
-  return type != AdType::kUndefined &&
-         confirmation_type != ConfirmationType::kUndefined &&
+  return type != mojom::AdType::kUndefined &&
+         confirmation_type != mojom::ConfirmationType::kUndefined &&
          !placement_id.empty() && !creative_instance_id.empty() &&
-         !creative_set_id.empty() && !campaign_id.empty() &&
-         !created_at.is_null();
+         !creative_set_id.empty() && !campaign_id.empty() && created_at;
 }
 
 }  // namespace brave_ads

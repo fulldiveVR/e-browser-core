@@ -11,12 +11,15 @@
 #include <utility>
 
 #include "base/base64.h"
+#include "base/compiler_specific.h"
+#include "base/containers/to_vector.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/ranges/algorithm.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
+#include "base/values.h"
 #include "brave/components/brave_wallet/common/eth_address.h"
 #include "brave/components/brave_wallet/common/eth_requests.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
@@ -101,8 +104,8 @@ brave_wallet::mojom::TxDataPtr ValueToTxData(
 }
 
 // null request ID when unspecified is expected
-const char kDefaultRequestIdWhenUnspecified[] = "1";
-const char kRequestJsonRPC[] = "2.0";
+constexpr char kDefaultRequestIdWhenUnspecified[] = "1";
+constexpr char kRequestJsonRPC[] = "2.0";
 
 }  // namespace
 
@@ -189,36 +192,15 @@ mojom::TxData1559Ptr ParseEthTransaction1559Params(const std::string& json,
   return tx_data;
 }
 
-bool ShouldCreate1559Tx(brave_wallet::mojom::TxData1559Ptr tx_data_1559,
-                        bool network_supports_eip1559,
-                        const std::vector<mojom::AccountInfoPtr>& account_infos,
-                        const mojom::AccountIdPtr& account_id) {
-  bool keyring_supports_eip1559 = true;
-  auto account_it = base::ranges::find_if(
-      account_infos, [&](const mojom::AccountInfoPtr& account) {
-        return account->account_id == account_id;
-      });
-
-  // Only ledger and trezor hardware keyrings support EIP-1559 at the moment.
-  if (account_it != account_infos.end() && (*account_it)->hardware &&
-      ((*account_it)->hardware->vendor != mojom::kLedgerHardwareVendor &&
-       (*account_it)->hardware->vendor != mojom::kTrezorHardwareVendor)) {
-    keyring_supports_eip1559 = false;
-  }
-
-  // Network or keyring without EIP1559 support.
-  if (!network_supports_eip1559 || !keyring_supports_eip1559) {
-    return false;
-  }
-
+bool ShouldCreate1559Tx(const mojom::TxData1559& tx_data_1559) {
   // Network with EIP1559 support and EIP1559 gas fields are specified.
-  if (tx_data_1559 && !tx_data_1559->max_priority_fee_per_gas.empty() &&
-      !tx_data_1559->max_fee_per_gas.empty()) {
+  if (!tx_data_1559.max_priority_fee_per_gas.empty() &&
+      !tx_data_1559.max_fee_per_gas.empty()) {
     return true;
   }
 
   // Network with EIP1559 support and legacy gas fields are specified.
-  if (tx_data_1559 && !tx_data_1559->base_data->gas_price.empty()) {
+  if (!tx_data_1559.base_data->gas_price.empty()) {
     return false;
   }
 
@@ -229,7 +211,7 @@ bool ShouldCreate1559Tx(brave_wallet::mojom::TxData1559Ptr tx_data_1559,
 bool GetEthJsonRequestInfo(const std::string& json,
                            base::Value* id,
                            std::string* method,
-                           std::string* params) {
+                           base::Value::List* params_list) {
   std::optional<base::Value> records_v =
       base::JSONReader::Read(json, base::JSON_PARSE_CHROMIUM_EXTENSIONS |
                                        base::JSONParserOptions::JSON_PARSE_RFC);
@@ -237,7 +219,7 @@ bool GetEthJsonRequestInfo(const std::string& json,
     return false;
   }
 
-  const base::Value::Dict* response_dict = records_v->GetIfDict();
+  base::Value::Dict* response_dict = records_v->GetIfDict();
   if (!response_dict) {
     return false;
   }
@@ -260,12 +242,16 @@ bool GetEthJsonRequestInfo(const std::string& json,
     *method = *found_method;
   }
 
-  if (params) {
-    const auto* found_params = response_dict->FindListByDottedPath(kParams);
-    if (!found_params) {
-      return false;
+  if (params_list) {
+    params_list->clear();
+    if (auto* found_params = response_dict->FindByDottedPath(kParams)) {
+      if (found_params->is_list()) {
+        *params_list = std::move(found_params->GetList());
+      } else if (!found_params->is_dict()) {
+        // dict is a valid type of params but we don't support it.
+        return false;
+      }
     }
-    base::JSONWriter::Write(*found_params, params);
   }
 
   return true;
@@ -423,8 +409,9 @@ bool ParseEthDecryptParams(const std::string& json,
   }
 
   // IsValidHexString guarantees at least 2 bytes and starts with 0x
-  if (!base::HexStringToString(untrusted_hex_json_str->data() + 2,
-                               &untrusted_json)) {
+  if (!base::HexStringToString(
+          base::as_string_view(*untrusted_hex_json_str).substr(2),
+          &untrusted_json)) {
     return false;
   }
 
@@ -466,96 +453,110 @@ bool ParsePersonalEcRecoverParams(const std::string& json,
   return true;
 }
 
-bool ParseEthSignTypedDataParams(const std::string& json,
-                                 std::string* address,
-                                 std::string* message_out,
-                                 base::Value::Dict* domain_out,
-                                 EthSignTypedDataHelper::Version version,
-                                 std::vector<uint8_t>* domain_hash_out,
-                                 std::vector<uint8_t>* primary_hash_out,
-                                 mojom::EthSignTypedDataMetaPtr* meta_out) {
-  if (!address || !message_out || !domain_out || !domain_hash_out ||
-      !primary_hash_out || !meta_out) {
-    return false;
+mojom::EthSignTypedDataPtr ParseEthSignTypedDataParams(
+    const base::Value::List& params_list,
+    EthSignTypedDataHelper::Version version) {
+  if (params_list.size() != 2) {
+    return nullptr;
   }
 
-  auto list = GetParamsList(json);
-  if (!list || list->size() != 2) {
-    return false;
+  const std::string* address_str = params_list[0].GetIfString();
+  if (!address_str) {
+    return nullptr;
   }
 
-  const std::string* address_str = (*list)[0].GetIfString();
-  const std::string* typed_data_str = (*list)[1].GetIfString();
-  if (!address_str || !typed_data_str) {
-    return false;
+  const std::string* typed_data_str = params_list[1].GetIfString();
+  if (!typed_data_str) {
+    return nullptr;
   }
 
+  // TODO(apaymyshev): support dict there per
+  // https://github.com/MetaMask/metamask-extension/issues/18462
   auto typed_data = base::JSONReader::Read(
       *typed_data_str,
       base::JSON_PARSE_CHROMIUM_EXTENSIONS | base::JSON_ALLOW_TRAILING_COMMAS);
   if (!typed_data) {
-    return false;
+    return nullptr;
   }
   auto* dict = typed_data->GetIfDict();
   if (!dict) {
-    return false;
+    return nullptr;
   }
 
   const std::string* primary_type = dict->FindString("primaryType");
   if (!primary_type) {
-    return false;
+    return nullptr;
   }
 
   auto* domain = dict->FindDict("domain");
   if (!domain) {
-    return false;
+    return nullptr;
   }
 
   const auto* message = dict->FindDict("message");
   if (!message) {
-    return false;
+    return nullptr;
   }
-
-  *address = *address_str;
 
   auto* types = dict->FindDict("types");
   if (!types) {
-    return false;
+    return nullptr;
   }
   std::unique_ptr<EthSignTypedDataHelper> helper =
-      EthSignTypedDataHelper::Create(std::move(*types), version);
+      EthSignTypedDataHelper::Create(types->Clone(), version);
   if (!helper) {
-    return false;
+    return nullptr;
   }
   auto domain_hash = helper->GetTypedDataDomainHash(*domain);
   if (!domain_hash) {
-    return false;
+    return nullptr;
   }
-
+  // TODO(apaymyshev): there might be no message hash
+  // https://github.com/trezor/trezor-firmware/blob/a1ab50017d55c9986fc4a11ddcaff86158804604/legacy/firmware/ethereum.c#L984-L986
+  // https://github.com/MetaMask/eth-sig-util/blob/66a8c0935c14d6ef80b583148d0c758c198a9c4a/src/index.ts#L345
+  // https://github.com/LedgerHQ/app-ethereum/blob/f0f20d1db69d82263f67ad3e2172fc4cea524d3a/src_features/signMessageEIP712/path.c#L414-L416
   auto primary_hash = helper->GetTypedDataPrimaryHash(*primary_type, *message);
   if (!primary_hash) {
-    return false;
+    return nullptr;
   }
+
+  mojom::EthSignTypedDataPtr result = mojom::EthSignTypedData::New();
+  result->address_param = *address_str;
 
   auto type_hash = base::HexEncode(helper->GetTypeHash(*primary_type));
   if (type_hash == kCowSwapTypeHash) {
-    *meta_out = ParseCowSwapOrder(*message);
+    result->meta = ParseCowSwapOrder(*message);
   } else {
-    *meta_out = nullptr;
+    result->meta = nullptr;
   }
 
-  *domain_hash_out = domain_hash->first;
-  *domain_out = std::move(domain_hash->second);
-
-  *primary_hash_out = primary_hash->first;
-  if (!base::JSONWriter::Write(std::move(primary_hash->second), message_out)) {
-    return false;
+  result->domain_hash = base::ToVector(domain_hash->first);
+  if (!base::JSONWriter::Write(domain_hash->second, &result->domain_json)) {
+    return nullptr;
   }
 
-  return true;
+  result->primary_hash = base::ToVector(primary_hash->first);
+  if (!base::JSONWriter::Write(primary_hash->second, &result->message_json)) {
+    return nullptr;
+  }
+
+  if (!base::JSONWriter::Write(*types, &result->types_json)) {
+    return nullptr;
+  }
+
+  result->primary_type = *primary_type;
+
+  auto chain_id = domain->FindDouble("chainId");
+  if (chain_id) {
+    result->chain_id = Uint256ValueToHex(uint256_t(uint64_t(*chain_id)));
+  }
+
+  DCHECK(!result->domain_hash.empty());
+  DCHECK(!result->primary_hash.empty());
+  return result;
 }
 
-bool ParseEthDecryptData(const std::string& json,
+bool ParseEthDecryptData(const base::Value& obj,
                          std::string* version,
                          std::vector<uint8_t>* nonce,
                          std::vector<uint8_t>* ephemeral_public_key,
@@ -566,12 +567,7 @@ bool ParseEthDecryptData(const std::string& json,
   //   "ephemPublicKey": "base64-string",
   //   "ciphertext":"base64-string"
   // }
-  auto obj = base::JSONReader::Read(json, base::JSON_PARSE_CHROMIUM_EXTENSIONS |
-                                              base::JSON_ALLOW_TRAILING_COMMAS);
-  if (!obj) {
-    return false;
-  }
-  auto* dict = obj->GetIfDict();
+  auto* dict = obj.GetIfDict();
   if (!dict) {
     return false;
   }
@@ -738,17 +734,18 @@ mojom::BlockchainTokenPtr ParseWalletWatchAssetParams(
   const std::string* image = options_dict->FindString("image");
   if (image) {
     GURL url = GURL(*image);
-    if (url.is_valid() && (url.SchemeIsHTTPOrHTTPS() ||
-                           base::StartsWith(*image, "data:image/"))) {
+    if (url.is_valid() &&
+        (url.SchemeIsHTTPOrHTTPS() || image->starts_with("data:image/"))) {
       logo = url.spec();
     }
   }
 
   return mojom::BlockchainToken::New(
       eth_addr.ToChecksumAddress(), *symbol /* name */, logo,
-      true /* is_erc20 */, false /* is_erc721 */, false /* is_erc1155 */,
+      false /* is_compressed */, true /* is_erc20 */, false /* is_erc721 */,
+      false /* is_erc1155 */, mojom::SPLTokenProgram::kUnsupported,
       false /* is_nft */, false /* is_spam */, *symbol, decimals, true, "", "",
-      base::ToLowerASCII(chain_id), mojom::CoinType::ETH);
+      base::ToLowerASCII(chain_id), mojom::CoinType::ETH, false);
 }
 
 // Parses param request objects from

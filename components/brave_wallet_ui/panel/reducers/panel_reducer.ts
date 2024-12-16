@@ -6,8 +6,13 @@
 import { createReducer } from 'redux-act'
 
 // types
-import { BraveWallet, PanelState, PanelTypes } from '../../constants/types'
-import { HardwareWalletResponseCodeType } from '../../common/hardware/types'
+import {
+  BraveWallet,
+  HardwareWalletResponseCodeType,
+  PanelState,
+  PanelTypes,
+  TransactionInfoLookup
+} from '../../constants/types'
 import * as PanelActions from '../actions/wallet_panel_actions'
 import { ShowConnectToSitePayload } from '../constants/action_types'
 
@@ -34,36 +39,8 @@ const defaultState: PanelState = {
   connectToSiteOrigin: defaultOriginInfo,
   selectedPanel,
   connectingAccounts: [],
-  addChainRequest: {
-    originInfo: defaultOriginInfo,
-    networkInfo: {
-      chainId: BraveWallet.MAINNET_CHAIN_ID,
-      chainName: 'Ethereum Mainnet',
-      activeRpcEndpointIndex: 0,
-      rpcEndpoints: [{ url: 'https://mainnet-infura.brave.com/' }],
-      blockExplorerUrls: [],
-      iconUrls: [],
-      symbol: 'ETH',
-      symbolName: 'Ethereum',
-      decimals: 18,
-      coin: BraveWallet.CoinType.ETH,
-      supportedKeyrings: [BraveWallet.KeyringId.kDefault],
-      isEip1559: true
-    }
-  },
-  signMessageData: [],
-  signAllTransactionsRequests: [],
-  signTransactionRequests: [],
-  getEncryptionPublicKeyRequest: undefined,
-  decryptRequest: undefined,
-  switchChainRequest: {
-    requestId: '',
-    originInfo: defaultOriginInfo,
-    chainId: ''
-  },
   hardwareWalletCode: undefined,
-  selectedTransactionId: undefined,
-  signMessageErrorData: []
+  selectedTransactionId: undefined
 }
 
 export const createPanelReducer = (initialState: PanelState) => {
@@ -90,82 +67,6 @@ export const createPanelReducer = (initialState: PanelState) => {
   )
 
   reducer.on(
-    PanelActions.addEthereumChain.type,
-    (state: any, request: BraveWallet.AddChainRequest) => {
-      return {
-        ...state,
-        addChainRequest: request
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.switchEthereumChain.type,
-    (state: any, request: BraveWallet.SwitchChainRequest) => {
-      return {
-        ...state,
-        switchChainRequest: request
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.getEncryptionPublicKey.type,
-    (state: any, request: BraveWallet.GetEncryptionPublicKeyRequest) => {
-      return {
-        ...state,
-        getEncryptionPublicKeyRequest: request
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.decrypt.type,
-    (state: any, request: BraveWallet.DecryptRequest) => {
-      return {
-        ...state,
-        decryptRequest: request
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.signMessage.type,
-    (state, payload: BraveWallet.SignMessageRequest[]) => {
-      return {
-        ...state,
-        signMessageData: payload
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.signTransaction.type,
-    (
-      state: PanelState,
-      payload: BraveWallet.SignTransactionRequest[]
-    ): PanelState => {
-      return {
-        ...state,
-        signTransactionRequests: payload
-      }
-    }
-  )
-
-  reducer.on(
-    PanelActions.signAllTransactions.type,
-    (
-      state: PanelState,
-      payload: BraveWallet.SignAllTransactionsRequest[]
-    ): PanelState => {
-      return {
-        ...state,
-        signAllTransactionsRequests: payload
-      }
-    }
-  )
-
-  reducer.on(
     PanelActions.setHardwareWalletInteractionError.type,
     (state: any, payload?: HardwareWalletResponseCodeType) => {
       return {
@@ -177,7 +78,10 @@ export const createPanelReducer = (initialState: PanelState) => {
 
   reducer.on(
     PanelActions.setSelectedTransactionId.type,
-    (state: PanelState, payload: string | undefined): PanelState => {
+    (
+      state: PanelState,
+      payload: TransactionInfoLookup | undefined
+    ): PanelState => {
       return {
         ...state,
         selectedTransactionId: payload
@@ -185,18 +89,6 @@ export const createPanelReducer = (initialState: PanelState) => {
     }
   )
 
-  reducer.on(
-    PanelActions.signMessageError.type,
-    (
-      state: PanelState,
-      payload: BraveWallet.SignMessageError[]
-    ): PanelState => {
-      return {
-        ...state,
-        signMessageErrorData: payload
-      }
-    }
-  )
   return reducer
 }
 

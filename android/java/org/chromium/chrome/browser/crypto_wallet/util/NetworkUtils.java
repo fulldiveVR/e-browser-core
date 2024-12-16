@@ -5,7 +5,6 @@
 
 package org.chromium.chrome.browser.crypto_wallet.util;
 
-import android.content.Context;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -14,8 +13,6 @@ import androidx.annotation.Nullable;
 import org.chromium.brave_wallet.mojom.BraveWalletConstants;
 import org.chromium.brave_wallet.mojom.CoinType;
 import org.chromium.brave_wallet.mojom.NetworkInfo;
-import org.chromium.chrome.R;
-import org.chromium.url.mojom.Url;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -23,11 +20,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NetworkUtils {
-    private static NetworkInfo sAllNetworksOption;
 
-    public static Comparator<NetworkInfo> sSortNetworkByPriority = (c1, c2) -> {
-        return Integer.compare(getCoinRank(c1.coin), getCoinRank(c2.coin));
-    };
+    public static Comparator<NetworkInfo> sSortNetworkByPriority =
+            Comparator.comparingInt(c -> getCoinRank(c.coin));
 
     // Solana first
     private static int getCoinRank(@CoinType.EnumType int coin) {
@@ -59,24 +54,17 @@ public class NetworkUtils {
         }
     }
 
-    public static NetworkInfo getAllNetworkOption(Context context) {
-        if (sAllNetworksOption == null) {
-            NetworkInfo allNetworkInfo = new NetworkInfo();
-            allNetworkInfo.blockExplorerUrls = new String[0];
-            allNetworkInfo.chainId = "all";
-            allNetworkInfo.chainName = context.getString(R.string.brave_wallet_network_filter_all);
-            allNetworkInfo.coin = 0;
-            allNetworkInfo.supportedKeyrings = new int[0];
-            allNetworkInfo.decimals = 0;
-            allNetworkInfo.iconUrls = new String[0];
-            allNetworkInfo.activeRpcEndpointIndex = 0;
-            allNetworkInfo.rpcEndpoints = new Url[0];
-            allNetworkInfo.symbol = "all";
-            allNetworkInfo.symbolName = "all";
-            allNetworkInfo.isEip1559 = false;
-            sAllNetworksOption = allNetworkInfo;
-        }
-        return sAllNetworksOption;
+    /**
+     * Returns {@code true} if two networks are equal.The comparison is done checking chain name,
+     * chain ID, coin, symbol and symbol name.
+     */
+    public static boolean areEqual(
+            @NonNull final NetworkInfo network1, @NonNull final NetworkInfo network2) {
+        return network1.chainName.equals(network2.chainName)
+                && network1.chainId.equals(network2.chainId)
+                && network1.coin == network2.coin
+                && network1.symbol.equals(network2.symbol)
+                && network1.symbolName.equals(network2.symbolName);
     }
 
     public static boolean isAllNetwork(@Nullable final NetworkInfo networkInfo) {
@@ -93,6 +81,7 @@ public class NetworkUtils {
 
     /**
      * Gets the network info object of given chainId and symbol.
+     *
      * @param networks All networks available.
      * @param chainId Chain Id of the network to be found.
      * @param coin Coin type of the network to be found.
@@ -104,7 +93,8 @@ public class NetworkUtils {
         if (networks.isEmpty() || TextUtils.isEmpty(chainId)) {
             return null;
         }
-        return JavaUtils.find(networks,
+        return JavaUtils.find(
+                networks,
                 networkInfo -> networkInfo.chainId.equals(chainId) && networkInfo.coin == coin);
     }
 

@@ -19,6 +19,10 @@
 
 namespace brave_wallet {
 
+// DEPRECATED 01/2024. For migration only.
+std::optional<mojom::CoinType> GetCoinTypeFromPrefKey_DEPRECATED(
+    std::string_view key);
+
 namespace {
 
 constexpr char kValueStoreDatabaseUMAClientName[] = "BraveWallet";
@@ -132,8 +136,16 @@ void TxStorageDelegateImpl::RunDBMigrations() {
 }
 
 void TxStorageDelegateImpl::ScheduleWrite() {
+  if (disable_writes_for_testing_) {
+    return;
+  }
+
   DCHECK(initialized_) << "storage is not initialized yet";
   store_->Set(kStorageTransactionsKey, base::Value(txs_.Clone()));
+}
+
+void TxStorageDelegateImpl::DisableWritesForTesting(bool disable) {
+  disable_writes_for_testing_ = disable;
 }
 
 void TxStorageDelegateImpl::Clear() {

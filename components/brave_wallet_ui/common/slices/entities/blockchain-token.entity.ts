@@ -19,7 +19,6 @@ import {
   GetBlockchainTokenIdArg
 } from '../../../utils/asset-utils'
 import { getEntitiesListFromEntityState } from '../../../utils/entities.utils'
-import { walletApi, WalletApiSliceStateFromRoot } from '../api.slice'
 
 export type BlockchainTokenEntityAdaptor =
   EntityAdapter<BraveWallet.BlockchainToken> & {
@@ -38,6 +37,7 @@ export type BlockchainTokenEntityAdaptorState = ReturnType<
   idsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   visibleTokenIds: string[]
   hiddenTokenIds: string[]
+  deletedTokenIds: string[]
   visibleTokenIdsByChainId: Record<string, string[]>
   visibleTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   hiddenTokenIdsByChainId: Record<string, string[]>
@@ -64,6 +64,10 @@ export type BlockchainTokenEntityAdaptorState = ReturnType<
   nonFungibleVisibleTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
   nonFungibleHiddenTokenIdsByChainId: Record<string, string[]>
   nonFungibleHiddenTokenIdsByCoinType: Record<BraveWallet.CoinType, EntityId[]>
+
+  // spam
+  spamTokenIds: string[]
+  nonSpamTokenIds: string[]
 }
 
 export const blockchainTokenEntityAdaptorInitialState: //
@@ -73,6 +77,7 @@ BlockchainTokenEntityAdaptorState = {
   idsByCoinType: {},
   visibleTokenIds: [],
   hiddenTokenIds: [],
+  deletedTokenIds: [],
   visibleTokenIdsByChainId: {},
   visibleTokenIdsByCoinType: {},
   hiddenTokenIdsByChainId: {},
@@ -96,28 +101,30 @@ BlockchainTokenEntityAdaptorState = {
   nonFungibleVisibleTokenIdsByChainId: {},
   nonFungibleVisibleTokenIdsByCoinType: {},
   nonFungibleHiddenTokenIdsByChainId: {},
-  nonFungibleHiddenTokenIdsByCoinType: {}
+  nonFungibleHiddenTokenIdsByCoinType: {},
+
+  spamTokenIds: [],
+  nonSpamTokenIds: []
 }
 
 export const combineTokenRegistries = (
   tokensRegistry: BlockchainTokenEntityAdaptorState,
   userTokensRegistry: BlockchainTokenEntityAdaptorState
 ): BlockchainTokenEntityAdaptorState => {
-  // TODO: hidden ids
   const chainIds = new Set(
     Object.keys(tokensRegistry.idsByChainId).concat(
       Object.keys(userTokensRegistry.idsByChainId)
     )
   )
   const coinTypes = new Set(
-    Object.keys(tokensRegistry.idsByCoinType).concat(
-      Object.keys(userTokensRegistry.idsByCoinType)
-    )
+    Object.keys(tokensRegistry.idsByCoinType)
+      .concat(Object.keys(userTokensRegistry.idsByCoinType))
+      .map(Number)
   )
 
-  const idsByCoinType: Record<string, string[]> = {}
-  const fungibleIdsByCoinType: Record<string, string[]> = {}
-  const nonFungibleIdsByCoinType: Record<string, string[]> = {}
+  const idsByCoinType: Record<string, EntityId[]> = {}
+  const fungibleIdsByCoinType: Record<string, EntityId[]> = {}
+  const nonFungibleIdsByCoinType: Record<string, EntityId[]> = {}
   const visibleTokenIdsByCoinType: Record<number, EntityId[]> = {}
   const hiddenTokenIdsByCoinType: Record<number, EntityId[]> = {}
   const fungibleVisibleTokenIdsByCoinType: Record<number, EntityId[]> = {}
@@ -346,6 +353,11 @@ export const combineTokenRegistries = (
     // use the tokens registry state to reduce amount of additions
     ...tokensRegistry,
 
+    // unmodified user registry ids
+    deletedTokenIds: userTokensRegistry.deletedTokenIds,
+    spamTokenIds: userTokensRegistry.spamTokenIds,
+    nonSpamTokenIds: userTokensRegistry.nonSpamTokenIds,
+
     // new combined grouping Ids
     visibleTokenIds,
     hiddenTokenIds,
@@ -384,37 +396,6 @@ export const combineTokenRegistries = (
   )
 }
 
-// Tokens Registry Selectors From Root
-const selectTokensRegistry = (state: WalletApiSliceStateFromRoot) => {
-  return (
-    walletApi.endpoints.getTokensRegistry.select()(state)?.data ??
-    blockchainTokenEntityAdaptorInitialState
-  )
-}
-
-export const {
-  selectAll: selectAllBlockchainTokens,
-  selectById: selectBlockchainTokenById,
-  selectEntities: selectBlockchainTokenEntities,
-  selectIds: selectBlockchainTokenIds,
-  selectTotal: selectTotalBlockchainTokens
-} = blockchainTokenEntityAdaptor.getSelectors(selectTokensRegistry)
-
-export const makeSelectAllBlockchainTokenIdsForChainId = () => {
-  return createDraftSafeSelector(
-    [selectTokensRegistry, (_, chainId: EntityId) => chainId],
-    (registry, chainId) => registry.idsByChainId[chainId]
-  )
-}
-
-export const makeSelectAllBlockchainTokensForChain = () => {
-  return createDraftSafeSelector(
-    [selectTokensRegistry, (_, chainId: EntityId) => chainId],
-    (registry, chainId) =>
-      getEntitiesListFromEntityState(registry, registry.idsByChainId[chainId])
-  )
-}
-
 // From Query Results
 const selectTokensRegistryFromQueryResult = (result: {
   data?: BlockchainTokenEntityAdaptorState
@@ -442,37 +423,6 @@ export const makeSelectAllBlockchainTokenIdsForChainIdFromQueryResult = () => {
 export const makeSelectAllBlockchainTokensForChainFromQueryResult = () => {
   return createDraftSafeSelector(
     [selectTokensRegistryFromQueryResult, (_, chainId: EntityId) => chainId],
-    (registry, chainId) =>
-      getEntitiesListFromEntityState(registry, registry.idsByChainId[chainId])
-  )
-}
-
-// User Assets Registry Selectors from Root State
-const selectUserAssetRegistry = (state: WalletApiSliceStateFromRoot) => {
-  return (
-    walletApi.endpoints.getUserTokensRegistry.select()(state)?.data ??
-    blockchainTokenEntityAdaptorInitialState
-  )
-}
-
-export const {
-  selectAll: selectAllUserAssets,
-  selectById: selectUserAssetById,
-  selectEntities: selectUserAssetEntities,
-  selectIds: selectUserAssetIds,
-  selectTotal: selectTotalUserAssets
-} = blockchainTokenEntityAdaptor.getSelectors(selectUserAssetRegistry)
-
-export const makeSelectUserAssetIdsForChainId = () => {
-  return createDraftSafeSelector(
-    [selectUserAssetRegistry, (_, chainId: EntityId) => chainId],
-    (registry, chainId) => registry.idsByChainId[chainId]
-  )
-}
-
-export const makeSelectAllUserAssetsForChain = () => {
-  return createDraftSafeSelector(
-    [selectUserAssetRegistry, (_, chainId: EntityId) => chainId],
     (registry, chainId) =>
       getEntitiesListFromEntityState(registry, registry.idsByChainId[chainId])
   )
@@ -546,3 +496,33 @@ export const selectAllVisibleUserAssetsFromQueryResult =
   createDraftSafeSelector([selectTokensRegistryFromQueryResult], (assets) =>
     getEntitiesListFromEntityState(assets, assets.visibleTokenIds)
   )
+
+/**
+ * Used to select only visible fungible tokens from
+ * useGetUserTokensRegistryQuery
+ */
+export const selectAllVisibleFungibleUserAssetsFromQueryResult =
+  createDraftSafeSelector([selectTokensRegistryFromQueryResult], (assets) =>
+    getEntitiesListFromEntityState(assets, assets.fungibleVisibleTokenIds)
+  )
+
+/**
+ * Used to select visible NFts from
+ * useGetUserTokensRegistryQuery
+ */
+export const selectAllVisibleUserNFTsFromQueryResult = createDraftSafeSelector(
+  [selectTokensRegistryFromQueryResult],
+  (assets) =>
+    getEntitiesListFromEntityState(assets, assets.nonFungibleVisibleTokenIds)
+)
+
+/**
+ * Used to select only hidden NFTs from useGetUserTokensRegistryQuery
+ */
+export const selectHiddenNftsFromQueryResult = createDraftSafeSelector(
+  [selectTokensRegistryFromQueryResult],
+  (assets) =>
+    getEntitiesListFromEntityState(assets, assets.hiddenTokenIds).filter(
+      (t) => t.isErc1155 || t.isErc721 || t.isNft
+    )
+)

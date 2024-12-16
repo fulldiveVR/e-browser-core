@@ -22,22 +22,27 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.chromium.base.supplier.ObservableSupplier;
+import org.chromium.base.supplier.ObservableSupplierImpl;
 import org.chromium.brave_shields.mojom.FilterListAndroidHandler;
 import org.chromium.brave_shields.mojom.SubscriptionInfo;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.settings.BravePreferenceFragment;
 import org.chromium.chrome.browser.settings.BraveSettingsActivity;
-import org.chromium.components.browser_ui.settings.FragmentSettingsLauncher;
-import org.chromium.components.browser_ui.settings.SettingsLauncher;
+import org.chromium.components.browser_ui.settings.FragmentSettingsNavigation;
+import org.chromium.components.browser_ui.settings.SettingsNavigation;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
 import org.chromium.mojo_base.mojom.Value;
+import org.chromium.ui.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ContentFilteringFragment extends BravePreferenceFragment
-        implements FragmentSettingsLauncher, BraveContentFilteringListener, ConnectionErrorHandler {
+        implements FragmentSettingsNavigation,
+                BraveContentFilteringListener,
+                ConnectionErrorHandler {
     private RecyclerView mRecyclerView;
 
     private ContentFilteringAdapter mAdapter;
@@ -46,12 +51,14 @@ public class ContentFilteringFragment extends BravePreferenceFragment
     private Value mFilterLists[];
     private MenuItem mEditItem;
     private MenuItem mDoneItem;
+    private MenuItem mUpdateFilterListItem;
     private boolean mIsMenuLoaded;
     private boolean mIsGetSubscriptionsLoaded;
 
-    // SettingsLauncher injected from main Settings Activity.
-    private SettingsLauncher mSettingsLauncher;
+    // SettingsNavigation injected from main Settings Activity.
+    private SettingsNavigation mSettingsLauncher;
     private ActivityResultLauncher<Intent> mAddCustomFilterResultLauncher;
+    private final ObservableSupplierImpl<String> mPageTitle = new ObservableSupplierImpl<>();
 
     @Override
     public View onCreateView(
@@ -61,12 +68,16 @@ public class ContentFilteringFragment extends BravePreferenceFragment
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        if (getActivity() != null) {
-            getActivity().setTitle(R.string.content_filters_title);
-        }
+        mPageTitle.set(getString(R.string.content_filters_title));
         super.onActivityCreated(savedInstanceState);
         setData();
     }
+
+    @Override
+    public ObservableSupplier<String> getPageTitle() {
+        return mPageTitle;
+    }
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -131,8 +142,9 @@ public class ContentFilteringFragment extends BravePreferenceFragment
         if (mSubscriptionFilterLists.size() > 0) {
             isEditSelected(false);
         }
-        Intent intent = mSettingsLauncher.createSettingsActivityIntent(
-                getActivity(), AddCustomFilterListsFragment.class.getName(), null);
+        Intent intent =
+                mSettingsLauncher.createSettingsIntent(
+                        getActivity(), AddCustomFilterListsFragment.class, null);
         mAddCustomFilterResultLauncher.launch(intent);
     }
 
@@ -154,8 +166,8 @@ public class ContentFilteringFragment extends BravePreferenceFragment
             isEditSelected(false);
         }
         Intent intent =
-                mSettingsLauncher.createSettingsActivityIntent(
-                        getActivity(), CreateCustomFiltersFragment.class.getName(), null);
+                mSettingsLauncher.createSettingsIntent(
+                        getActivity(), CreateCustomFiltersFragment.class, null);
         getActivity().startActivity(intent);
     }
 
@@ -176,7 +188,7 @@ public class ContentFilteringFragment extends BravePreferenceFragment
     }
 
     @Override
-    public void setSettingsLauncher(SettingsLauncher settingsLauncher) {
+    public void setSettingsNavigation(SettingsNavigation settingsLauncher) {
         mSettingsLauncher = settingsLauncher;
     }
 
@@ -204,6 +216,7 @@ public class ContentFilteringFragment extends BravePreferenceFragment
         inflater.inflate(R.menu.menu_custom_filter_list, menu);
         mEditItem = menu.findItem(R.id.menu_id_edit);
         mDoneItem = menu.findItem(R.id.menu_id_done);
+        mUpdateFilterListItem = menu.findItem(R.id.update_filter_list_id);
         mIsMenuLoaded = true;
         if (mIsGetSubscriptionsLoaded) {
             checkForEmptySubscriptionFilters(true);
@@ -219,6 +232,21 @@ public class ContentFilteringFragment extends BravePreferenceFragment
         } else if (id == R.id.menu_id_done) {
             isEditSelected(false);
             return true;
+        } else if (item.getItemId() == R.id.update_filter_list_id) {
+            if (mFilterListAndroidHandler != null) {
+                mFilterListAndroidHandler.updateFilterLists(
+                        isSuccess -> {
+                            if (isSuccess) {
+                                setData();
+                            }
+                            String message =
+                                    isSuccess
+                                            ? getString(R.string.update_filter_list_success_text)
+                                            : getString(R.string.update_filter_list_fail_text);
+                            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                        });
+            }
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -226,6 +254,7 @@ public class ContentFilteringFragment extends BravePreferenceFragment
     private void isEditSelected(boolean isEditable) {
         mDoneItem.setVisible(isEditable);
         mEditItem.setVisible(!isEditable);
+        mUpdateFilterListItem.setVisible(!isEditable);
         mAdapter.setEditable(isEditable);
     }
 

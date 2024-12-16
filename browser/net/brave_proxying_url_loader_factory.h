@@ -59,7 +59,7 @@ class BraveProxyingURLLoaderFactory
         uint64_t request_id,
         int32_t network_service_request_id,
         int render_process_id,
-        int frame_tree_node_id,
+        content::FrameTreeNodeId frame_tree_node_id,
         uint32_t options,
         const network::ResourceRequest& request,
         content::BrowserContext* browser_context,
@@ -127,7 +127,7 @@ class BraveProxyingURLLoaderFactory
     const int32_t network_service_request_id_;
 
     const int render_process_id_;
-    const int frame_tree_node_id_;
+    const content::FrameTreeNodeId frame_tree_node_id_;
     const uint32_t options_;
 
     raw_ptr<content::BrowserContext> browser_context_ = nullptr;
@@ -187,9 +187,8 @@ class BraveProxyingURLLoaderFactory
       BraveRequestHandler& request_handler,
       content::BrowserContext* browser_context,
       int render_process_id,
-      int frame_tree_node_id,
-      mojo::PendingReceiver<network::mojom::URLLoaderFactory> receiver,
-      mojo::PendingRemote<network::mojom::URLLoaderFactory> target_factory,
+      content::FrameTreeNodeId frame_tree_node_id,
+      network::URLLoaderFactoryBuilder& factory_builder,
       scoped_refptr<RequestIDGenerator> request_id_generator,
       DisconnectCallback on_disconnect,
       scoped_refptr<base::SequencedTaskRunner> navigation_response_task_runner);
@@ -200,11 +199,11 @@ class BraveProxyingURLLoaderFactory
 
   ~BraveProxyingURLLoaderFactory() override;
 
-  static bool MaybeProxyRequest(
+  static void MaybeProxyRequest(
       content::BrowserContext* browser_context,
       content::RenderFrameHost* render_frame_host,
       int render_process_id,
-      mojo::PendingReceiver<network::mojom::URLLoaderFactory>* factory_receiver,
+      network::URLLoaderFactoryBuilder& factory_builder,
       scoped_refptr<base::SequencedTaskRunner> navigation_response_task_runner);
 
   // network::mojom::URLLoaderFactory:
@@ -232,7 +231,7 @@ class BraveProxyingURLLoaderFactory
   const raw_ref<BraveRequestHandler> request_handler_;
   raw_ptr<content::BrowserContext> browser_context_ = nullptr;
   const int render_process_id_;
-  const int frame_tree_node_id_;
+  const content::FrameTreeNodeId frame_tree_node_id_;
 
   mojo::ReceiverSet<network::mojom::URLLoaderFactory> proxy_receivers_;
   mojo::Remote<network::mojom::URLLoaderFactory> target_factory_;

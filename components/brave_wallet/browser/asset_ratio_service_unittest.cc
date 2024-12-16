@@ -72,13 +72,10 @@ class AssetRatioServiceUnitTest : public testing::Test {
     return shared_url_loader_factory_;
   }
 
-  void SetInterceptor(const std::string& content,
-                      const std::string expected_header = "") {
+  void SetInterceptor(const std::string& content) {
     url_loader_factory_.SetInterceptor(base::BindLambdaForTesting(
-        [&, content, expected_header](const network::ResourceRequest& request) {
+        [&, content](const network::ResourceRequest& request) {
           url_loader_factory_.ClearResponses();
-          std::string header;
-          request.headers.GetHeader("Authorization", &header);
           url_loader_factory_.AddResponse(request.url.spec(), content);
         }));
   }
@@ -115,7 +112,6 @@ class AssetRatioServiceUnitTest : public testing::Test {
 
   void TestGetSellUrl(mojom::OffRampProvider off_ramp_provider,
                       const std::string& chain_id,
-                      const std::string& address,
                       const std::string& symbol,
                       const std::string& amount,
                       const std::string& currency_code,
@@ -123,7 +119,7 @@ class AssetRatioServiceUnitTest : public testing::Test {
                       std::optional<std::string> expected_error) {
     base::RunLoop run_loop;
     asset_ratio_service_->GetSellUrl(
-        off_ramp_provider, chain_id, address, symbol, amount, currency_code,
+        off_ramp_provider, chain_id, symbol, amount, currency_code,
         base::BindLambdaForTesting(
             [&](const std::string& url,
                 const std::optional<std::string>& error) {
@@ -136,9 +132,9 @@ class AssetRatioServiceUnitTest : public testing::Test {
 
  protected:
   std::unique_ptr<AssetRatioService> asset_ratio_service_;
+  base::test::TaskEnvironment task_environment_;
 
  private:
-  base::test::TaskEnvironment task_environment_;
   network::TestURLLoaderFactory url_loader_factory_;
   scoped_refptr<network::SharedURLLoaderFactory> shared_url_loader_factory_;
   data_decoder::test::InProcessDataDecoder in_process_data_decoder_;
@@ -148,7 +144,8 @@ TEST_F(AssetRatioServiceUnitTest, GetBuyUrlV1Ramp) {
   TestGetBuyUrlV1(mojom::OnRampProvider::kRamp, mojom::kMainnetChainId,
                   "0xdeadbeef", "USDC", "55000000", "USD",
                   "https://app.ramp.network/"
-                  "?userAddress=0xdeadbeef&swapAsset=USDC&fiatValue=55000000"
+                  "?enabledFlows=ONRAMP"
+                  "&userAddress=0xdeadbeef&swapAsset=USDC&fiatValue=55000000"
                   "&fiatCurrency=USD&hostApiKey="
                   "8yxja8782as5essk2myz3bmh4az6gpq4nte9n2gf",
                   std::nullopt);
@@ -182,13 +179,13 @@ TEST_F(AssetRatioServiceUnitTest, GetBuyUrlV1Sardine) {
 
 TEST_F(AssetRatioServiceUnitTest, GetSellUrl) {
   TestGetSellUrl(mojom::OffRampProvider::kRamp, mojom::kMainnetChainId,
-                 "0xdeadbeef", "ETH_BAT", "250", "USD",
+                 "ETH_BAT", "250", "USD",
                  "https://app.ramp.network/"
-                 "?userAddress=0xdeadbeef&enabledFlows=ONRAMP%2COFFRAMP"
-                 "&defaultFlow=OFFRAMP&swapAsset=ETH_BAT&offrampAsset=ETH_BAT"
+                 "?enabledFlows=OFFRAMP"
+                 "&swapAsset=ETH_BAT&offrampAsset=ETH_BAT"
                  "&swapAmount=250"
                  "&fiatCurrency=USD&hostApiKey="
-                 "8yxja8782as5essk2myz3bmh4az6gpq4nte9n2gf",
+                 "y57zqta99ohs7o2paf4ak6vpfb7wf8ubj9krwtwe",
                  std::nullopt);
 }
 
@@ -248,7 +245,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPrice) {
       base::BindOnce(&OnGetPrice, &callback_run, true,
                      std::move(expected_prices_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -278,7 +275,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceUppercase) {
       base::BindOnce(&OnGetPrice, &callback_run, true,
                      std::move(expected_prices_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -292,7 +289,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceError) {
       base::BindOnce(&OnGetPrice, &callback_run, false,
                      std::move(expected_prices_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -305,7 +302,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceUnexpectedResponse) {
       base::BindOnce(&OnGetPrice, &callback_run, false,
                      std::move(expected_prices_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -337,7 +334,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceHistory) {
       base::BindOnce(&OnGetPriceHistory, &callback_run, true,
                      std::move(expected_price_history_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -351,7 +348,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceHistoryError) {
       "bat", "usd", brave_wallet::mojom::AssetPriceTimeframe::OneDay,
       base::BindOnce(&OnGetPriceHistory, &callback_run, false,
                      std::move(expected_price_history_response)));
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -366,7 +363,7 @@ TEST_F(AssetRatioServiceUnitTest, GetPriceHistoryUnexpectedResponse) {
       base::BindOnce(&OnGetPriceHistory, &callback_run, false,
                      std::move(expected_price_history_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -446,7 +443,7 @@ TEST_F(AssetRatioServiceUnitTest, GetCoinMarkets) {
       base::BindOnce(&OnGetCoinMarkets, &callback_run, true,
                      std::move(expected_coin_markets_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 
@@ -461,7 +458,7 @@ TEST_F(AssetRatioServiceUnitTest, GetCoinMarketsUnexpectedResponse) {
       base::BindOnce(&OnGetCoinMarkets, &callback_run, false,
                      std::move(expected_coin_markets_response)));
 
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   EXPECT_TRUE(callback_run);
 }
 

@@ -13,12 +13,25 @@
 #include "base/environment.h"
 #include "base/json/json_writer.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_constants.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/common/eth_request_helper.h"
 #include "brave/components/brave_wallet/common/web3_provider_constants.h"
 #include "brave/components/constants/brave_services_key.h"
 #include "net/http/http_util.h"
 
 namespace brave_wallet {
+
+namespace {
+std::optional<std::string> EthGetBlockByNumberParamsForCache(
+    const base::Value::List& params_list) {
+  std::string cleaned_params;
+  if (!base::JSONWriter::Write(params_list, &cleaned_params)) {
+    return std::nullopt;
+  }
+  base::RemoveChars(cleaned_params, "\" []", &cleaned_params);
+  return cleaned_params;
+}
+}  // namespace
 
 namespace internal {
 
@@ -49,38 +62,32 @@ void AddKeyIfNotEmpty(base::Value::Dict* dict,
 }
 
 base::flat_map<std::string, std::string> MakeCommonJsonRpcHeaders(
-    const std::string& json_payload) {
-  base::flat_map<std::string, std::string> request_headers;
-  std::string id, method, params;
-  if (GetEthJsonRequestInfo(json_payload, nullptr, &method, &params)) {
+    const std::string& json_payload,
+    const GURL& network_url) {
+  auto request_headers = IsEndpointUsingBraveWalletProxy(network_url)
+                             ? MakeBraveServicesKeyHeaders()
+                             : base::flat_map<std::string, std::string>();
+
+  std::string id, method;
+  base::Value::List params_list;
+  // TODO(apaymyshev): `json_payload` should be `base::Value` so we don't have
+  // to parse it again.
+  if (GetEthJsonRequestInfo(json_payload, nullptr, &method, &params_list)) {
     if (net::HttpUtil::IsValidHeaderValue(method)) {
       request_headers["X-Eth-Method"] = method;
     }
     if (method == kEthGetBlockByNumber) {
-      std::string cleaned_params;
-      base::RemoveChars(params, "\" []", &cleaned_params);
-      if (net::HttpUtil::IsValidHeaderValue(cleaned_params)) {
-        request_headers["X-eth-get-block"] = cleaned_params;
+      auto cleaned_params = EthGetBlockByNumberParamsForCache(params_list);
+      if (cleaned_params &&
+          net::HttpUtil::IsValidHeaderValue(*cleaned_params)) {
+        request_headers["X-eth-get-block"] = std::move(*cleaned_params);
       }
     } else if (method == kEthBlockNumber) {
       request_headers["X-Eth-Block"] = "true";
     }
   }
 
-  std::unique_ptr<base::Environment> env(base::Environment::Create());
-  std::string brave_key(BUILDFLAG(BRAVE_SERVICES_KEY));
-  if (env->HasVar("BRAVE_SERVICES_KEY")) {
-    env->GetVar("BRAVE_SERVICES_KEY", &brave_key);
-  }
-  request_headers[kBraveServicesKeyHeader] = std::move(brave_key);
-
   return request_headers;
-}
-
-base::flat_map<std::string, std::string> MakeBraveServicesKeyHeaders() {
-  return {
-      {kBraveServicesKeyHeader, BUILDFLAG(BRAVE_SERVICES_KEY)},
-  };
 }
 
 std::string EncodeAnkrGetAccountBalancesParams(

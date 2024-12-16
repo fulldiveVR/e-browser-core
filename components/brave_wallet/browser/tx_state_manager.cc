@@ -121,15 +121,11 @@ bool TxStateManager::ValueToBaseTxMeta(const base::Value::Dict& value,
 }
 
 TxStateManager::TxStateManager(
-    PrefService* prefs,
-    TxStorageDelegate* delegate,
-    AccountResolverDelegate* account_resolver_delegate)
-    : prefs_(prefs),
-      delegate_(delegate),
+    TxStorageDelegate& delegate,
+    AccountResolverDelegate& account_resolver_delegate)
+    : delegate_(delegate),
       account_resolver_delegate_(account_resolver_delegate),
-      weak_factory_(this) {
-  DCHECK(delegate);
-}
+      weak_factory_(this) {}
 
 TxStateManager::~TxStateManager() = default;
 
@@ -142,7 +138,7 @@ bool TxStateManager::AddOrUpdateTx(const TxMeta& meta) {
   }
   bool is_add = false;
   {
-    ScopedTxsUpdate update(delegate_);
+    ScopedTxsUpdate update(*delegate_);
     is_add = update->Find(meta.id()) == nullptr;
     update->Set(meta.id(), meta.ToValue());
   }
@@ -182,7 +178,7 @@ bool TxStateManager::DeleteTx(const std::string& meta_id) {
     return false;
   }
   {
-    ScopedTxsUpdate update(delegate_);
+    ScopedTxsUpdate update(*delegate_);
     update->Remove(meta_id);
   }
   return true;
@@ -239,6 +235,10 @@ std::vector<std::unique_ptr<TxMeta>> TxStateManager::GetTransactionsByStatus(
 void TxStateManager::RetireTxByStatus(const std::string& chain_id,
                                       mojom::TransactionStatus status,
                                       size_t max_num) {
+  if (no_retire_for_testing_) {
+    return;
+  }
+
   if (status != mojom::TransactionStatus::Confirmed &&
       status != mojom::TransactionStatus::Rejected) {
     return;
@@ -272,107 +272,8 @@ void TxStateManager::RemoveObserver(TxStateManager::Observer* observer) {
   observers_.RemoveObserver(observer);
 }
 
-void TxStateManager::MigrateAddChainIdToTransactionInfo(PrefService* prefs) {
-  if (prefs->GetBoolean(kBraveWalletTransactionsChainIdMigrated)) {
-    return;
-  }
-  if (!prefs->HasPrefPath(kBraveWalletTransactions)) {
-    prefs->SetBoolean(kBraveWalletTransactionsChainIdMigrated, true);
-    return;
-  }
-
-  ScopedDictPrefUpdate txs_update(prefs, kBraveWalletTransactions);
-  auto& all_txs = txs_update.Get();
-
-  auto set_chain_id = [&](base::Value::Dict* tx_by_network_ids,
-                          const mojom::CoinType& coin) {
-    for (auto tnid : *tx_by_network_ids) {
-      auto chain_id = GetChainIdByNetworkId_DEPRECATED(prefs, coin, tnid.first);
-      if (!chain_id.has_value()) {
-        continue;
-      }
-
-      auto* txs = tnid.second.GetIfDict();
-
-      if (!txs || txs->empty()) {
-        return;
-      }
-      for (auto tx : *txs) {
-        auto* ptx = tx.second.GetIfDict();
-
-        if (!ptx) {
-          continue;
-        }
-
-        ptx->Set("chain_id", chain_id.value());
-      }
-    }
-  };
-
-  for (auto txs_coin_type : all_txs) {
-    auto coin = GetCoinTypeFromPrefKey_DEPRECATED(txs_coin_type.first);
-
-    if (!coin.has_value()) {
-      continue;
-    }
-
-    if (!txs_coin_type.second.is_dict()) {
-      continue;
-    }
-
-    set_chain_id(&txs_coin_type.second.GetDict(), coin.value());
-  }
-  prefs->SetBoolean(kBraveWalletTransactionsChainIdMigrated, true);
-}
-
-void TxStateManager::MigrateSolanaTransactionsForV0TransactionsSupport(
-    PrefService* prefs) {
-  if (prefs->GetBoolean(kBraveWalletSolanaTransactionsV0SupportMigrated)) {
-    return;
-  }
-
-  if (!prefs->HasPrefPath(kBraveWalletTransactions)) {
-    prefs->SetBoolean(kBraveWalletSolanaTransactionsV0SupportMigrated, true);
-    return;
-  }
-
-  // Get message dict via solana.network_name.tx_id.tx.message. (example path:
-  // solana.devnet.tx_id1.tx.message)
-  // Then update message using SolanaMessage::FromDeprecatedLegacyValue and
-  // SolanaMessage::ToValue.
-  ScopedDictPrefUpdate update(prefs, kBraveWalletTransactions);
-  base::Value::Dict* sol_txs = update.Get().FindDict(kSolanaPrefKey);
-  if (!sol_txs) {
-    prefs->SetBoolean(kBraveWalletSolanaTransactionsV0SupportMigrated, true);
-    return;
-  }
-
-  for (auto txs_by_networks : *sol_txs) {
-    if (!txs_by_networks.second.is_dict()) {
-      continue;
-    }
-
-    for (auto txs_by_ids : txs_by_networks.second.GetDict()) {
-      if (!txs_by_ids.second.is_dict()) {
-        continue;
-      }
-
-      auto* tx_message =
-          txs_by_ids.second.GetDict().FindDictByDottedPath("tx.message");
-      if (!tx_message) {
-        continue;
-      }
-
-      auto message = SolanaMessage::FromDeprecatedLegacyValue(*tx_message);
-      if (!message) {
-        continue;
-      }
-
-      *tx_message = message->ToValue();
-    }
-  }
-
-  prefs->SetBoolean(kBraveWalletSolanaTransactionsV0SupportMigrated, true);
+void TxStateManager::SetNoRetireForTesting(bool no_retire) {
+  no_retire_for_testing_ = no_retire;
 }
 
 }  // namespace brave_wallet

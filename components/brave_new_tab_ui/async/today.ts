@@ -24,18 +24,9 @@ function storeInHistoryState (data: Object) {
 
 const handler = new AsyncActionHandler()
 
-handler.on(Actions.interactionBegin.getType(), async () => {
-  console.debug('Brave News: Marking actual interaction begin')
-  getBraveNewsController().onInteractionSessionStarted()
-})
-
 handler.on<Actions.RefreshPayload>(
   Actions.refresh.getType(),
-  async (store, payload) => {
-    if (payload && payload.isFirstInteraction) {
-      console.debug('Brave News: Marking actual interaction begin')
-      getBraveNewsController().onInteractionSessionStarted()
-    }
+  async (store) => {
     try {
       console.debug('Brave News: Getting data...')
       const [{ feed }, { publishers }] = await Promise.all([
@@ -64,9 +55,6 @@ handler.on<Actions.ReadFeedItemPayload>(
   Actions.readFeedItem.getType(),
   async (store, payload) => {
     const state = store.getState() as ApplicationState
-    getBraveNewsController().onSessionCardVisitsCountChanged(
-      state.today.cardsVisited
-    )
     if (payload.isPromoted) {
       const promotedArticle = payload.item.promotedArticle
       if (!promotedArticle) {
@@ -137,8 +125,7 @@ handler.on<number>(
   Actions.feedItemViewedCountChanged.getType(),
   async (store, payload) => {
     const state = store.getState() as ApplicationState
-    getBraveNewsController().onSessionCardViewsCountChanged(
-      state.today.cardsViewed,
+    getBraveNewsController().onNewCardsViewed(
       state.today.cardsViewedDelta
     )
   }

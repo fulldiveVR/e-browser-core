@@ -42,8 +42,8 @@ class SidebarItemsScrollView : public views::View,
                                public views::BoundsAnimatorObserver,
                                public views::DragController,
                                public sidebar::SidebarModel::Observer {
+  METADATA_HEADER(SidebarItemsScrollView, views::View)
  public:
-  METADATA_HEADER(SidebarItemsScrollView);
   explicit SidebarItemsScrollView(BraveBrowser* browser);
   ~SidebarItemsScrollView() override;
 
@@ -51,9 +51,10 @@ class SidebarItemsScrollView : public views::View,
   SidebarItemsScrollView operator=(const SidebarItemsScrollView&) = delete;
 
   // views::View overrides:
-  void Layout() override;
+  void Layout(PassKey) override;
   void OnMouseEvent(ui::MouseEvent* event) override;
-  gfx::Size CalculatePreferredSize() const override;
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override;
   void OnThemeChanged() override;
   bool GetDropFormats(int* formats,
                       std::set<ui::ClipboardFormatType>* format_types) override;

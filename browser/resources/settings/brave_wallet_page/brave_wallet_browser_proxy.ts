@@ -37,17 +37,19 @@ export type NetworksList = {
   hiddenNetworks: string[]
 }
 
-export type SolanaProvider = {
+export type Option = {
   name: string
   value: number
 }
+
+export type SolanaProvider = Option
 
 export interface BraveWalletBrowserProxy {
   setBraveWalletEnabled(value: boolean): void
   getWeb3ProviderList(): Promise<string>
   getSolanaProviderOptions(): Promise<SolanaProvider[]>
+  getTransactionSimulationOptInStatusOptions(): Promise<Option[]>
   isNativeWalletEnabled(): Promise<boolean>
-  isNftPinningEnabled(): Promise<boolean>
   isBitcoinEnabled(): Promise<boolean>
   getAutoLockMinutes(): Promise<number>
   getNetworksList(coin: number): Promise<NetworksList>
@@ -59,8 +61,9 @@ export interface BraveWalletBrowserProxy {
   removeHiddenNetwork(chainId: string, coin: number): Promise<boolean>
   setDefaultNetwork(chainId: string, coin: number): Promise<boolean>
   resetTransactionInfo (): void
-  getPinnedNftCount(): Promise<number>
-  clearPinnedNft(): Promise<boolean>
+  isTransactionSimulationsFeatureEnabled(): Promise<boolean>
+  getWalletInPrivateWindowsEnabled(): Promise<boolean>
+  setWalletInPrivateWindowsEnabled(enabled: boolean): Promise<boolean>
 }
 
 export class BraveWalletBrowserProxyImpl implements BraveWalletBrowserProxy {
@@ -124,20 +127,29 @@ export class BraveWalletBrowserProxyImpl implements BraveWalletBrowserProxy {
     return sendWithPromise('getSolanaProviderOptions')
   }
 
-  isNftPinningEnabled() {
-    return sendWithPromise('isNftPinningEnabled')
-  }
 
   isBitcoinEnabled() {
     return sendWithPromise('isBitcoinEnabled')
   }
 
-  getPinnedNftCount() {
-    return sendWithPromise('getPinnedNftCount')
+  isZCashEnabled() {
+    return sendWithPromise('isZCashEnabled')
   }
 
-  clearPinnedNft() {
-    return sendWithPromise('clearPinnedNft')
+  getTransactionSimulationOptInStatusOptions() {
+    return sendWithPromise('getTransactionSimulationOptInStatusOptions')
+  }
+
+  isTransactionSimulationsFeatureEnabled() {
+    return sendWithPromise('isTransactionSimulationsFeatureEnabled')
+  }
+
+  getWalletInPrivateWindowsEnabled() {
+    return sendWithPromise('getWalletInPrivateWindowsEnabled')
+  }
+
+  setWalletInPrivateWindowsEnabled(value: boolean) {
+    return sendWithPromise('setWalletInPrivateWindowsEnabled', value)
   }
 
   static getInstance() {

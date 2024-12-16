@@ -12,30 +12,26 @@
 NS_ASSUME_NONNULL_BEGIN
 
 OBJC_EXPORT
+@interface AiChat : NSObject  // AiChat Namespace for Swift exports
+- (instancetype)init NS_UNAVAILABLE;
+@end
+
+OBJC_EXPORT
 @interface AIChat : NSObject
 @property(nonatomic) bool isAgreementAccepted;
 
 @property(nonatomic, readonly)
-    AiChatSuggestionGenerationStatus suggestionsStatus;
-
-@property(nonatomic, readonly) AiChatModel* currentModel;
-
-@property(nonatomic, readonly) NSArray<AiChatModel*>* models;
-
-@property(nonatomic, readonly)
     NSArray<AiChatConversationTurn*>* conversationHistory;
 
-@property(nonatomic, readonly) bool isRequestInProgress;
+@property(nonatomic, readonly) NSArray<AiChatActionGroup*>* slashActions;
 
-@property(nonatomic, readonly) NSArray<NSString*>* suggestedQuestions;
+@property(nonatomic) NSString* defaultModelKey;
 
-@property(nonatomic, readonly) bool hasPendingConversationEntry;
+- (void)createNewConversation;
 
-@property(nonatomic, readonly) AiChatAPIError currentAPIError;
+- (void)getState:(void (^_Nullable)(AiChatConversationState*))completion;
 
-@property(nonatomic, readonly) bool canShowPremiumPrompt;
-
-@property(nonatomic) bool shouldSendPageContents;
+- (void)setShouldSendPageContents:(bool)shouldSend;
 
 - (void)changeModel:(NSString*)modelKey;
 
@@ -43,25 +39,30 @@ OBJC_EXPORT
 
 - (void)submitSummarizationRequest;
 
-- (void)setConversationActive:(bool)is_conversation_active;
-
 - (void)retryAPIRequest;
 
 - (void)generateQuestions;
 
-- (void)clearConversationHistory;
+- (void)clearErrorAndGetFailedMessage:
+    (void (^_Nullable)(AiChatConversationTurn*))completion;
 
 - (void)getPremiumStatus:(void (^_Nullable)(AiChatPremiumStatus))completion;
 
+- (void)submitSelectedText:(NSString*)selectedText
+                actionType:(AiChatActionType)actionType;
+
 - (void)rateMessage:(bool)isLiked
-             turnId:(NSUInteger)turnId
+             turnId:(NSString*)turnId
          completion:
              (void (^_Nullable)(NSString* _Nullable identifier))completion;
 
 - (void)sendFeedback:(NSString*)category
             feedback:(NSString*)feedback
             ratingId:(NSString*)ratingId
+         sendPageUrl:(bool)sendPageUrl
           completion:(void (^_Nullable)(bool))completion;
+
+- (void)modifyConversation:(NSUInteger)turnId newText:(NSString*)newText;
 
 - (void)dismissPremiumPrompt;
 @end

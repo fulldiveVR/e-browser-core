@@ -5,18 +5,15 @@
 
 #include "brave/components/brave_ads/core/public/ad_units/inline_content_ad/inline_content_ad_value_util.h"
 
+#include "brave/components/brave_ads/core/public/ad_units/ad_type.h"
 #include "brave/components/brave_ads/core/public/ad_units/inline_content_ad/inline_content_ad_constants.h"
 #include "brave/components/brave_ads/core/public/ad_units/inline_content_ad/inline_content_ad_info.h"
 
 namespace brave_ads {
 
-namespace {
-constexpr char kTypeKey[] = "type";
-}  // namespace
-
 base::Value::Dict InlineContentAdToValue(const InlineContentAdInfo& ad) {
   return base::Value::Dict()
-      .Set(kTypeKey, ToString(ad.type))
+      .Set(kInlineContentAdTypeKey, ToString(ad.type))
       .Set(kInlineContentAdPlacementIdKey, ad.placement_id)
       .Set(kInlineContentAdCreativeInstanceIdKey, ad.creative_instance_id)
       .Set(kInlineContentAdCreativeSetIdKey, ad.creative_set_id)
@@ -34,8 +31,8 @@ base::Value::Dict InlineContentAdToValue(const InlineContentAdInfo& ad) {
 InlineContentAdInfo InlineContentAdFromValue(const base::Value::Dict& dict) {
   InlineContentAdInfo ad;
 
-  if (const auto* const value = dict.FindString(kTypeKey)) {
-    ad.type = ToAdType(*value);
+  if (const auto* const value = dict.FindString(kInlineContentAdTypeKey)) {
+    ad.type = ToMojomAdType(*value);
   }
 
   if (const auto* const value =
@@ -70,6 +67,7 @@ InlineContentAdInfo InlineContentAdFromValue(const base::Value::Dict& dict) {
   if (const auto* const value = dict.FindString(kInlineContentAdTitleKey)) {
     ad.title = *value;
   }
+
   if (const auto* const value =
           dict.FindString(kInlineContentAdDescriptionKey)) {
     ad.description = *value;

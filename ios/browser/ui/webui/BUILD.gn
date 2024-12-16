@@ -4,7 +4,6 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/build/config.gni")
-import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//build/config/features.gni")
 import("//mojo/public/tools/bindings/mojom.gni")
 
@@ -19,13 +18,16 @@ source_set("webui") {
   deps = [
     "//brave/components/constants",
     "//brave/components/webui",
+    "//brave/ios/browser/ui/webui/ads",
+    "//brave/ios/browser/ui/webui/skus",
     "//components/prefs",
     "//components/profile_metrics",
     "//components/resources",
     "//ios/chrome/browser/shared/model/browser_state",
+    "//ios/chrome/browser/shared/model/profile",
     "//ios/chrome/browser/shared/model/url:constants",
-    "//ios/chrome/browser/ui/webui",
-    "//ios/chrome/browser/ui/webui:webui_internal",
+    "//ios/chrome/browser/webui/ui_bundled:coordinator",
+    "//ios/chrome/browser/webui/ui_bundled:webui_internal",
     "//ios/components/webui:url_constants",
     "//ios/web/public/webui",
     "//services/network/public/cpp",

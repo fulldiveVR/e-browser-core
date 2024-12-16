@@ -5,7 +5,7 @@
 
 import styled from 'styled-components'
 import { WalletButton } from '../style'
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -69,8 +69,8 @@ export const LabelSummary = styled.span<{ isActive: boolean }>`
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: ${(p) =>
-    p.isActive ? leo.color.text.interactive : leo.color.gray['50']};
+    p.isActive ? leo.color.text.interactive : leo.color.neutral['50']};
   text-align: center;
   border: 1px solid
-    ${(p) => (p.isActive ? leo.color.primary['40'] : leo.color.gray['50'])};
+    ${(p) => (p.isActive ? leo.color.primary['40'] : leo.color.neutral['50'])};
 `

@@ -124,19 +124,21 @@ std::string ConstellationLogStore::staged_log_type() const {
   return GetUploadType(staged_entry_key_->histogram_name);
 }
 
+const std::string& ConstellationLogStore::staged_log_histogram_name() const {
+  DCHECK(staged_entry_key_);
+  return staged_entry_key_->histogram_name;
+}
+
 const std::string& ConstellationLogStore::staged_log_hash() const {
   NOTREACHED();
-  return staged_log_hash_;
 }
 
 const std::string& ConstellationLogStore::staged_log_signature() const {
   NOTREACHED();
-  return staged_log_signature_;
 }
 
 std::optional<uint64_t> ConstellationLogStore::staged_log_user_id() const {
   NOTREACHED();
-  return std::nullopt;
 }
 
 void ConstellationLogStore::StageNextLog() {

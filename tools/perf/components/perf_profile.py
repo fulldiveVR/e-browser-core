@@ -10,32 +10,19 @@ import shutil
 
 import components.path_util as path_util
 
-from components.perf_test_utils import GetFileAtRevision
+from components.cloud_storage import CloudFolder, DownloadFileFromCloudStorage
 from components.version import BraveVersion
+from components.git_tools import GetFileAtRevision
+from components.perf_test_utils import IsSha1Hash
+
 
 with path_util.SysPath(path_util.GetBraveScriptDir(), 0):
   from lib.util import extract_zip
 
-with path_util.SysPath(path_util.GetDepotToolsDir()):
-  import download_from_google_storage  # pylint: disable=import-error
-
-
-def DownloadFromGoogleStorage(sha1: str, output_path: str) -> None:
-  """Download a file from brave perf bucket.
-
-  To upload a file call:
-  upload_to_google_storage.py some_file.zip -b brave-telemetry
-  """
-  gsutil = download_from_google_storage.Gsutil(
-      download_from_google_storage.GSUTIL_DEFAULT_PATH)
-  gs_path = 'gs://' + path_util.GetBravePerfBucket() + '/' + sha1
-  logging.info('Download profile from %s to %s', gs_path, output_path)
-  exit_code = gsutil.call('cp', gs_path, output_path)
-  if exit_code:
-    raise RuntimeError(f'Failed to download: {gs_path}')
-
 
 def _GetProfileHash(profile: str, version: BraveVersion) -> str:
+  if IsSha1Hash(profile):  # the explicit profile hash
+    return profile
   sha1_filepath = os.path.join(path_util.GetBravePerfProfileDir(),
                                f'{profile}.zip.sha1')
   sha1_fallback_filepath = sha1_filepath + '.fallback'
@@ -45,7 +32,7 @@ def _GetProfileHash(profile: str, version: BraveVersion) -> str:
     raise RuntimeError(
         f'Unknown profile {profile}, file {sha1_filepath}[.fallback] not found')
 
-  sha1 = GetFileAtRevision(sha1_filepath, version.git_hash)
+  sha1 = GetFileAtRevision(sha1_filepath, version.git_revision)
   if sha1 is None:
     logging.info('Using the fallback profile %s', sha1_fallback_filepath)
     if not os.path.isfile(sha1_fallback_filepath):
@@ -58,7 +45,7 @@ def _GetProfileHash(profile: str, version: BraveVersion) -> str:
   if sha1 is None:
     raise RuntimeError(f'Bad sha1 for profile {profile}')
   sha1 = sha1.rstrip()
-  logging.debug('Use gs hash %s for profile %s', sha1, profile)
+  logging.debug('Use sha1 hash %s for profile %s', sha1, profile)
   return sha1
 
 
@@ -78,7 +65,7 @@ def GetProfilePath(profile: str, work_directory: str,
                             f'{profile}_{sha1}.zip')
 
     if not os.path.isfile(zip_path):
-      DownloadFromGoogleStorage(sha1, zip_path)
+      DownloadFileFromCloudStorage(CloudFolder.TEST_PROFILES, sha1, zip_path)
 
     profile_dir = os.path.join(work_directory, 'profiles', sha1)
 

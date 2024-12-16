@@ -5,40 +5,36 @@
 
 #include "brave/components/brave_ads/core/internal/ad_units/ad_handler.h"
 
+#include <optional>
 #include <utility>
 
-#include "brave/components/brave_ads/core/internal/account/account.h"
+#include "brave/components/brave_ads/core/internal/account/user_data/fixed/conversion_user_data.h"
+#include "brave/components/brave_ads/core/internal/account/user_data/fixed/page_land_user_data.h"
+#include "brave/components/brave_ads/core/internal/ads_core/ads_core_util.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
-#include "brave/components/brave_ads/core/internal/common/time/time_formatting_util.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/conversions/actions/conversion_action_types_util.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/conversion/conversion_info.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/conversions/conversion/conversion_util.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/site_visit/site_visit.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"  // IWYU pragma: keep
-#include "brave/components/brave_ads/core/public/account/confirmations/confirmation_type.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 #include "brave/components/brave_ads/core/public/ad_units/ad_info.h"
 
 namespace brave_ads {
 
-AdHandler::AdHandler(Account& account)
-    : account_(account),
-      purchase_intent_processor_(purchase_intent_resource_),
-      epsilon_greedy_bandit_resource_(catalog_),
+AdHandler::AdHandler()
+    : purchase_intent_processor_(purchase_intent_resource_),
       text_classification_processor_(text_classification_resource_),
-      text_embedding_processor_(text_embedding_resource_),
-      inline_content_ad_handler_(account,
-                                 site_visit_,
+      inline_content_ad_handler_(site_visit_,
                                  subdivision_targeting_,
                                  anti_targeting_resource_),
-      new_tab_page_ad_handler_(account,
-                               site_visit_,
+      new_tab_page_ad_handler_(site_visit_,
                                subdivision_targeting_,
                                anti_targeting_resource_),
-      notification_ad_handler_(account,
-                               site_visit_,
-                               epsilon_greedy_bandit_processor_,
+      notification_ad_handler_(site_visit_,
                                subdivision_targeting_,
                                anti_targeting_resource_),
-      promoted_content_ad_handler_(account, site_visit_),
-      search_result_ad_handler_(account, site_visit_) {
+      promoted_content_ad_handler_(site_visit_),
+      search_result_ad_handler_(site_visit_) {
   conversions_.AddObserver(this);
   site_visit_.AddObserver(this);
   subdivision_.AddObserver(&country_code_);
@@ -54,11 +50,11 @@ AdHandler::~AdHandler() {
 
 void AdHandler::TriggerNotificationAdEvent(
     const std::string& placement_id,
-    const mojom::NotificationAdEventType event_type,
+    mojom::NotificationAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
   CHECK(!placement_id.empty());
 
-  notification_ad_handler_.TriggerEvent(placement_id, event_type,
+  notification_ad_handler_.TriggerEvent(placement_id, mojom_ad_event_type,
                                         std::move(callback));
 }
 
@@ -70,23 +66,25 @@ void AdHandler::MaybeServeNewTabPageAd(
 void AdHandler::TriggerNewTabPageAdEvent(
     const std::string& placement_id,
     const std::string& creative_instance_id,
-    const mojom::NewTabPageAdEventType event_type,
+    mojom::NewTabPageAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
   CHECK(!placement_id.empty());
 
   new_tab_page_ad_handler_.TriggerEvent(placement_id, creative_instance_id,
-                                        event_type, std::move(callback));
+                                        mojom_ad_event_type,
+                                        std::move(callback));
 }
 
 void AdHandler::TriggerPromotedContentAdEvent(
     const std::string& placement_id,
     const std::string& creative_instance_id,
-    const mojom::PromotedContentAdEventType event_type,
+    mojom::PromotedContentAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
   CHECK(!placement_id.empty());
 
   promoted_content_ad_handler_.TriggerEvent(placement_id, creative_instance_id,
-                                            event_type, std::move(callback));
+                                            mojom_ad_event_type,
+                                            std::move(callback));
 }
 
 void AdHandler::MaybeServeInlineContentAd(
@@ -100,22 +98,35 @@ void AdHandler::MaybeServeInlineContentAd(
 void AdHandler::TriggerInlineContentAdEvent(
     const std::string& placement_id,
     const std::string& creative_instance_id,
-    const mojom::InlineContentAdEventType event_type,
+    mojom::InlineContentAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
   CHECK(!placement_id.empty());
 
   inline_content_ad_handler_.TriggerEvent(placement_id, creative_instance_id,
-                                          event_type, std::move(callback));
+                                          mojom_ad_event_type,
+                                          std::move(callback));
+}
+
+std::optional<mojom::CreativeSearchResultAdInfoPtr>
+AdHandler::MaybeGetSearchResultAd(const std::string& placement_id) {
+  return creative_ad_cache_.MaybeGet<mojom::CreativeSearchResultAdInfoPtr>(
+      placement_id);
 }
 
 void AdHandler::TriggerSearchResultAdEvent(
-    mojom::SearchResultAdInfoPtr ad_mojom,
-    const mojom::SearchResultAdEventType event_type,
+    mojom::CreativeSearchResultAdInfoPtr mojom_creative_ad,
+    mojom::SearchResultAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
-  CHECK(ad_mojom);
+  CHECK(mojom_creative_ad);
 
-  search_result_ad_handler_.TriggerEvent(std::move(ad_mojom), event_type,
-                                         std::move(callback));
+  if (mojom_ad_event_type ==
+      mojom::SearchResultAdEventType::kViewedImpression) {
+    creative_ad_cache_.MaybeAdd(mojom_creative_ad->placement_id,
+                                mojom_creative_ad->Clone());
+  }
+
+  search_result_ad_handler_.TriggerEvent(
+      std::move(mojom_creative_ad), mojom_ad_event_type, std::move(callback));
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -123,37 +134,62 @@ void AdHandler::TriggerSearchResultAdEvent(
 void AdHandler::OnDidConvertAd(const ConversionInfo& conversion) {
   CHECK(conversion.IsValid());
 
-  account_->Deposit(conversion.creative_instance_id, conversion.segment,
-                    conversion.ad_type, ConfirmationType::kConversion);
+  BLOG(1, "Converted " << ToString(conversion.action_type) << " "
+                       << ConversionTypeToString(conversion) << " for "
+                       << conversion.ad_type << " with creative instance id "
+                       << conversion.creative_instance_id
+                       << ", creative set id " << conversion.creative_set_id
+                       << ", campaign id " << conversion.campaign_id
+                       << " and advertiser id " << conversion.advertiser_id);
+
+  GetAccount().DepositWithUserData(conversion.creative_instance_id,
+                                   conversion.segment, conversion.ad_type,
+                                   mojom::ConfirmationType::kConversion,
+                                   BuildConversionUserData(conversion));
 }
 
-void AdHandler::OnMaybeLandOnPage(const AdInfo& ad, const base::Time maybe_at) {
+void AdHandler::OnMaybeLandOnPage(const AdInfo& ad, base::TimeDelta after) {
   CHECK(ad.IsValid());
 
-  BLOG(1, "Maybe land page for " << ad.target_url << " "
-                                 << FriendlyDateAndTime(maybe_at));
+  BLOG(1, "Maybe land on page for " << ad.target_url << " in " << after);
 }
 
-void AdHandler::OnDidLandOnPage(const AdInfo& ad) {
+void AdHandler::OnDidSuspendPageLand(int32_t tab_id,
+                                     base::TimeDelta remaining_time) {
+  BLOG(1, "Suspended page landing on tab id "
+              << tab_id << " with " << remaining_time << " remaining");
+}
+
+void AdHandler::OnDidResumePageLand(int32_t tab_id,
+                                    base::TimeDelta remaining_time) {
+  BLOG(1, "Resumed page landing on tab id " << tab_id << " and maybe land in "
+                                            << remaining_time);
+}
+
+void AdHandler::OnDidLandOnPage(int32_t tab_id,
+                                int32_t http_response_code,
+                                const AdInfo& ad) {
   CHECK(ad.IsValid());
 
-  BLOG(1, "Landed on page for " << ad.target_url);
+  BLOG(1, "Landed on page for " << ad.target_url << " on tab id " << tab_id);
 
-  account_->Deposit(ad.creative_instance_id, ad.segment, ad.type,
-                    ConfirmationType::kLanded);
+  GetAccount().DepositWithUserData(ad.creative_instance_id, ad.segment, ad.type,
+                                   mojom::ConfirmationType::kLanded,
+                                   BuildPageLandUserData(http_response_code));
 }
 
-void AdHandler::OnDidNotLandOnPage(const AdInfo& ad) {
+void AdHandler::OnDidNotLandOnPage(int32_t tab_id, const AdInfo& ad) {
   CHECK(ad.IsValid());
 
-  BLOG(1, "Did not land on page for " << ad.target_url);
+  BLOG(1,
+       "Did not land on page for " << ad.target_url << " on tab id " << tab_id);
 }
 
-void AdHandler::OnCanceledPageLand(const AdInfo& ad, int32_t tab_id) {
+void AdHandler::OnCanceledPageLand(int32_t tab_id, const AdInfo& ad) {
   CHECK(ad.IsValid());
 
   BLOG(1, "Canceled page land for creative instance id "
-              << ad.creative_instance_id << " with tab id " << tab_id);
+              << ad.creative_instance_id << " on tab id " << tab_id);
 }
 
 }  // namespace brave_ads

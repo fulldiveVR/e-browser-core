@@ -26,19 +26,19 @@
 // }
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoints {
 
 class PostConnectZebPay final : public PostConnect {
  public:
-  PostConnectZebPay(RewardsEngineImpl& engine, std::string&& linking_info);
+  PostConnectZebPay(RewardsEngine& engine, std::string&& linking_info);
   ~PostConnectZebPay() override;
 
  private:
   std::optional<std::string> Content() const override;
 
-  const char* Path() const override;
+  std::string Path(base::cstring_view payment_id) const override;
 
   std::string linking_info_;
 };

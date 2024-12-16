@@ -5,27 +5,28 @@
 
 import * as React from 'react'
 
+// components
 import { AllowAddChangeNetworkPanel } from '.'
 import { PanelWrapper } from '../../../panel/style'
+import {
+  WalletPanelStory //
+} from '../../../stories/wrappers/wallet-panel-story-wrapper'
 
-import { mockNetworks } from '../../../stories/mock-data/mock-networks'
-import { mockOriginInfo } from '../../../stories/mock-data/mock-origin-info'
-import WalletPanelStory from '../../../stories/wrappers/wallet-panel-story-wrapper'
+// mocks
+import { mockSwitchChainRequest } from '../../../stories/mock-data/mock-eth-requests'
 
-export const _AllowAddChangeNetwork = () => {
-  return (
-    <WalletPanelStory>
-      <PanelWrapper>
-        <AllowAddChangeNetworkPanel
-          originInfo={mockOriginInfo}
-          panelType='change'
-          networkPayload={mockNetworks[0]}
-        />
-      </PanelWrapper>
-    </WalletPanelStory>
-  )
+export const _AllowAddChangeNetwork = {
+  render: () => {
+    return (
+      <WalletPanelStory>
+        <PanelWrapper>
+          <AllowAddChangeNetworkPanel
+            switchChainRequest={mockSwitchChainRequest}
+          />
+        </PanelWrapper>
+      </WalletPanelStory>
+    )
+  }
 }
 
-_AllowAddChangeNetwork.storyName = 'Allow Add or Change Network'
-
-export default _AllowAddChangeNetwork
+export default { component: AllowAddChangeNetworkPanel }

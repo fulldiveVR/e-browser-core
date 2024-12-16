@@ -23,6 +23,8 @@ class Time;
 
 namespace brave_sync {
 
+inline constexpr char kCustomSyncServiceUrl[] = "brave_sync.sync_service_url";
+
 class Prefs {
  public:
   explicit Prefs(PrefService* pref_service);
@@ -45,14 +47,20 @@ class Prefs {
   bool IsFailedDecryptSeedNoticeDismissed() const;
   void DismissFailedDecryptSeedNotice();
 
+  enum class AddLeaveChainDetailBehaviour { kAdd, kIgnore };
   void AddLeaveChainDetail(const char* file, int line, const char* func);
   std::string GetLeaveChainDetails() const;
   void ClearLeaveChainDetails();
+  static size_t GetLeaveChainDetailsMaxLenForTests();
+  static std::string GetLeaveChainDetailsPathForTests();
+  void SetAddLeaveChainDetailBehaviourForTests(
+      AddLeaveChainDetailBehaviour add_leave_chain_detail_behaviour);
 
   void Clear();
 
  private:
   const raw_ref<PrefService> pref_service_;
+  AddLeaveChainDetailBehaviour add_leave_chain_detail_behaviour_;
 };
 
 void MigrateBraveSyncPrefs(PrefService* prefs);

@@ -67,8 +67,6 @@ class EphemeralStorageServiceTest : public testing::Test {
   ~EphemeralStorageServiceTest() override = default;
 
   void SetUp() override {
-    profile_.GetTestingPrefService()->registry()->RegisterListPref(
-        kFirstPartyStorageOriginsToCleanup);
     service_ = CreateEphemeralStorageService(&profile_, mock_delegate_,
                                              &mock_observer_);
   }
@@ -241,7 +239,8 @@ TEST_F(EphemeralStorageServiceForgetFirstPartyTest, CleanupFirstPartyStorage) {
       ScopedVerifyAndClearExpectations verify_observer(&mock_observer_);
       TLDEphemeralAreaKey key(ephemeral_domain, storage_partition_config);
       EXPECT_CALL(mock_observer_, OnCleanupTLDEphemeralArea(key));
-      EXPECT_CALL(*mock_delegate_, CleanupTLDEphemeralArea(key));
+      EXPECT_CALL(*mock_delegate_, CleanupTLDEphemeralArea(key))
+          .Times(test_case.shields_enabled);
       EXPECT_CALL(*mock_delegate_,
                   CleanupFirstPartyStorageArea(ephemeral_domain))
           .Times(test_case.should_cleanup);

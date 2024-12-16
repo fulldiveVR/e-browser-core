@@ -17,7 +17,7 @@ class LogManager;
 class PersonalDataManager;
 bool IsCreditCardUploadEnabled(
     const syncer::SyncService* sync_service,
-    const std::string& user_email,
+    const PrefService& pref_service,
     const std::string& user_country,
     AutofillMetrics::PaymentsSigninState signin_state_for_metrics,
     LogManager* log_manager) {
@@ -25,6 +25,7 @@ bool IsCreditCardUploadEnabled(
 }
 bool IsCreditCardMigrationEnabled(PersonalDataManager* personal_data_manager,
                                   syncer::SyncService* sync_service,
+                                  const PrefService& pref_service,
                                   bool is_test_mode,
                                   LogManager* log_manager) {
   return false;

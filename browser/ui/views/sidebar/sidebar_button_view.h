@@ -11,8 +11,8 @@
 #include "ui/views/controls/button/image_button.h"
 
 class SidebarButtonView : public views::ImageButton {
+  METADATA_HEADER(SidebarButtonView, views::ImageButton)
  public:
-  METADATA_HEADER(SidebarButtonView);
   static constexpr int kSidebarButtonSize = 32;
   static constexpr int kDefaultIconSize = 18;
   static constexpr int kExternalIconSize = 16;
@@ -26,7 +26,8 @@ class SidebarButtonView : public views::ImageButton {
 
   // views::ImageButton overrides:
   void OnThemeChanged() override;
-  gfx::Size CalculatePreferredSize() const override;
+  gfx::Size CalculatePreferredSize(
+      const views::SizeBounds& available_size) const override;
   std::u16string GetTooltipText(const gfx::Point& p) const override;
 };
 

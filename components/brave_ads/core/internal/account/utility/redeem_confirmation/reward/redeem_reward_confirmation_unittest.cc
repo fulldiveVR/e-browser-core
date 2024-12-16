@@ -9,30 +9,29 @@
 
 #include "base/memory/weak_ptr.h"
 #include "brave/components/brave_ads/core/internal/account/confirmations/confirmation_info.h"
+#include "brave/components/brave_ads/core/internal/account/confirmations/reward/reward_confirmation_test_util.h"
 #include "brave/components/brave_ads/core/internal/account/confirmations/reward/reward_confirmation_util.h"
-#include "brave/components/brave_ads/core/internal/account/issuers/issuers_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/account/tokens/confirmation_tokens/confirmation_tokens_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/account/tokens/token_generator_mock.h"
-#include "brave/components/brave_ads/core/internal/account/tokens/token_generator_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/account/transactions/transaction_unittest_constants.h"
-#include "brave/components/brave_ads/core/internal/account/transactions/transactions_unittest_util.h"
+#include "brave/components/brave_ads/core/internal/account/issuers/issuers_test_util.h"
+#include "brave/components/brave_ads/core/internal/account/tokens/confirmation_tokens/confirmation_tokens_test_util.h"
+#include "brave/components/brave_ads/core/internal/account/tokens/token_generator_test_util.h"
+#include "brave/components/brave_ads/core/internal/account/transactions/transaction_test_constants.h"
 #include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/redeem_confirmation_delegate_mock.h"
-#include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/redeem_reward_confirmation_unittest_util.h"
-#include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/url_request_builders/create_reward_confirmation_url_request_builder_unittest_constants.h"
+#include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/redeem_reward_confirmation_feature.h"
+#include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/redeem_reward_confirmation_test_util.h"
+#include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/url_request_builders/create_reward_confirmation_url_request_builder_test_constants.h"
 #include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/url_request_builders/create_reward_confirmation_url_request_builder_util.h"
 #include "brave/components/brave_ads/core/internal/account/utility/redeem_confirmation/reward/url_request_builders/fetch_payment_token_url_request_builder_util.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_base.h"
-#include "brave/components/brave_ads/core/internal/common/unittest/unittest_mock_util.h"
+#include "brave/components/brave_ads/core/internal/common/test/mock_test_util.h"
+#include "brave/components/brave_ads/core/internal/common/test/test_base.h"
+#include "brave/components/brave_ads/core/internal/common/test/test_constants.h"
 #include "net/http/http_status_code.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
 namespace brave_ads {
 
-class BraveAdsRedeemRewardConfirmationTest : public UnitTestBase {
+class BraveAdsRedeemRewardConfirmationTest : public test::TestBase {
  protected:
-  TokenGeneratorMock token_generator_mock_;
-
   RedeemConfirmationDelegateMock delegate_mock_;
   base::WeakPtrFactory<RedeemConfirmationDelegateMock>
       confirmation_delegate_weak_factory_{&delegate_mock_};
@@ -42,24 +41,20 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest, Redeem) {
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, test::BuildFetchPaymentTokenUrlResponseBody()}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -69,19 +64,17 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest, Redeem) {
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest, RetryRedeemingIfNoIssuers) {
   // Arrange
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/true);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/true);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -93,6 +86,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest, RetryRedeemingIfNoIssuers) {
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  EXPECT_FALSE(HasPendingTasks());
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -100,20 +95,16 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+  const test::URLResponseMap url_responses = {
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, test::BuildFetchPaymentTokenUrlResponseBody()}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -123,6 +114,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -130,24 +123,20 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_NOT_FOUND, net::GetHttpReasonPhrase(net::HTTP_NOT_FOUND)}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -159,6 +148,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -166,25 +157,21 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_BAD_REQUEST,
          net::GetHttpReasonPhrase(net::HTTP_BAD_REQUEST)}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -196,6 +183,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -203,24 +192,20 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_ACCEPTED, test::BuildFetchPaymentTokenUrlResponseBody()}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -232,6 +217,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -239,25 +226,21 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_INTERNAL_SERVER_ERROR,
          net::GetHttpReasonPhrase(net::HTTP_INTERNAL_SERVER_ERROR)}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -269,42 +252,42 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
-       RetryRedeemingIfInvalidJsonResponseBody) {
+       RetryRedeemingIfInvalidResponseBody) {
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
-       {{net::HTTP_OK, /*response_body=*/"{INVALID}"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
+       {{net::HTTP_OK, /*response_body=*/test::kMalformedJson}}}};
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
   EXPECT_CALL(delegate_mock_, OnDidRedeemConfirmation).Times(0);
 
   EXPECT_CALL(delegate_mock_,
-              OnFailedToRedeemConfirmation(::testing::_,
+              OnFailedToRedeemConfirmation(*confirmation,
                                            /*should_retry=*/true));
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -312,14 +295,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "createdAt" : "2020-04-20T10:27:11.717Z",
@@ -334,15 +318,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -354,6 +333,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -361,14 +342,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "393abadc-e9ae-4aac-a321-3307e0d527c6",
@@ -384,15 +366,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -404,6 +381,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -411,14 +390,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -427,15 +407,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
               "modifiedAt" : "2020-04-20T10:27:11.736Z",
               "creativeInstanceId" : "546fe7b0-5047-4f28-a11c-81f14edcf0f6"
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -447,6 +422,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -454,14 +431,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -476,15 +454,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -496,6 +469,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -503,14 +478,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -526,15 +502,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -546,6 +517,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -553,14 +526,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -575,15 +549,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -595,6 +564,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -602,14 +573,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -624,15 +596,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -644,6 +611,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -651,14 +620,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -674,15 +644,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -694,6 +659,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -701,14 +668,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -721,15 +689,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 "batchProof" : "FWTZ5fOYITYlMWMYaxg254QWs+Pmd0dHzoor0mzIlQ8tWHagc7jm7UVJykqIo+ZSM+iK29mPuWJxPHpG4HypBw=="
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -741,6 +704,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -748,14 +713,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -768,15 +734,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 "batchProof" : "FWTZ5fOYITYlMWMYaxg254QWs+Pmd0dHzoor0mzIlQ8tWHagc7jm7UVJykqIo+ZSM+iK29mPuWJxPHpG4HypBw=="
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -788,6 +749,8 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
 }
 
 TEST_F(BraveAdsRedeemRewardConfirmationTest,
@@ -795,14 +758,15 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
   // Arrange
   test::BuildAndSetIssuers();
 
-  test::MockTokenGenerator(token_generator_mock_, /*count=*/1);
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
 
-  const URLResponseMap url_responses = {
-      {BuildCreateRewardConfirmationUrlPath(
-           kTransactionId, kCreateRewardConfirmationCredential),
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
        {{net::HTTP_CREATED,
          test::BuildCreateRewardConfirmationUrlResponseBody()}}},
-      {BuildFetchPaymentTokenUrlPath(kTransactionId),
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
        {{net::HTTP_OK, /*response_body=*/R"(
             {
               "id" : "8b742869-6e4a-490c-ac31-31b49130098a",
@@ -818,15 +782,10 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
                 ]
               }
             })"}}}};
-  MockUrlResponses(ads_client_mock_, url_responses);
+  test::MockUrlResponses(ads_client_mock_, url_responses);
 
-  test::SetConfirmationTokens(/*count=*/1);
-
-  const TransactionInfo transaction = test::BuildUnreconciledTransaction(
-      /*value=*/0.01, ConfirmationType::kViewed,
-      /*should_use_random_uuids=*/false);
-  const std::optional<ConfirmationInfo> confirmation = BuildRewardConfirmation(
-      &token_generator_mock_, transaction, /*user_data=*/{});
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
   ASSERT_TRUE(confirmation);
 
   // Act & Assert
@@ -838,6 +797,36 @@ TEST_F(BraveAdsRedeemRewardConfirmationTest,
 
   RedeemRewardConfirmation::CreateAndRedeem(
       confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  FastForwardClockToNextPendingTask();
+}
+
+TEST_F(BraveAdsRedeemRewardConfirmationTest, FetchPaymentTokenAfter) {
+  // Arrange
+  test::BuildAndSetIssuers();
+
+  test::MockTokenGenerator(/*count=*/1);
+  test::RefillConfirmationTokens(/*count=*/1);
+
+  const test::URLResponseMap url_responses = {
+      {BuildCreateRewardConfirmationUrlPath(test::kTransactionId,
+                                            test::kCredentialBase64Url),
+       {{net::HTTP_CREATED,
+         test::BuildCreateRewardConfirmationUrlResponseBody()}}},
+      {BuildFetchPaymentTokenUrlPath(test::kTransactionId),
+       {{net::HTTP_OK, test::BuildFetchPaymentTokenUrlResponseBody()}}}};
+  test::MockUrlResponses(ads_client_mock_, url_responses);
+
+  const std::optional<ConfirmationInfo> confirmation =
+      test::BuildRewardConfirmation(/*should_generate_random_uuids=*/false);
+  ASSERT_TRUE(confirmation);
+
+  // Act & Assert
+  RedeemRewardConfirmation::CreateAndRedeem(
+      confirmation_delegate_weak_factory_.GetWeakPtr(), *confirmation);
+
+  EXPECT_EQ(kFetchPaymentTokenAfter.Get(), NextPendingTaskDelay());
+  EXPECT_EQ(1U, GetPendingTaskCount());
 }
 
 }  // namespace brave_ads

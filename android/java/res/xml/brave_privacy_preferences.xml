@@ -58,6 +58,11 @@
             android:title="@string/fingerprint_language_switch"
             android:summary="@string/fingerprint_language_switch_summary"
             android:defaultValue="false" />
+        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+            android:key="brave_shields_save_contact_info"
+            android:title="@string/brave_shields_save_contact_info_switch"
+            android:summary="@string/brave_shields_save_contact_info_switch_summary"
+            android:defaultValue="true" />
         <org.chromium.components.browser_ui.settings.ChromeBasePreference
             android:fragment="org.chromium.chrome.browser.shields.ContentFilteringFragment"
             android:key="content_filtering"
@@ -136,12 +141,6 @@
             app:dialog_entries="@array/requestOTRTexts"
             app:dialog_default_index="1" />
         <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-            android:key="ipfs_gateway"
-            android:order="25"
-            android:title="@string/ipfs_gateway_title"
-            android:summary="@string/ipfs_gateway_summary"
-            android:defaultValue="true" />
-        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
             android:key="block_cookie_consent_notices"
             android:order="25"
             android:title="@string/block_cookie_consent_notices_title"
@@ -167,24 +166,6 @@
             android:key="sns"
             android:order="25"
             android:title="@string/sns_title" />
-
-        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-            android:key="show_autocomplete_in_address_bar"
-            android:title="@string/show_autocomplete_in_address_bar"
-            android:summary="@string/show_autocomplete_in_address_bar_summary"
-            android:order="25"
-            android:persistent="false"/>
-        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-            android:key="search_suggestions"
-            android:title="@string/improve_search_suggestions_title"
-            android:summary="@string/improve_search_suggestions_summary"
-            android:persistent="false"
-            android:order="25"/>
-        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-            android:key="autocomplete_top_sites"
-            android:order="25"
-            android:title="@string/autocomplete_top_sites_title"
-            android:persistent="false"/>
         <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
             android:key="send_p3a_analytics"
             android:order="25"

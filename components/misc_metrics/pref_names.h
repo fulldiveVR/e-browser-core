@@ -19,6 +19,12 @@ inline constexpr char kMiscMetricsPagesLoadedCount[] =
     "brave.core_metrics.pages_loaded";
 inline constexpr char kMiscMetricsPagesReloadedCount[] =
     "brave.core_metrics.pages_reloaded";
+inline constexpr char kMiscMetricsInterstitialAllowDecisionCount[] =
+    "brave.misc_metrics.interstitial_allow_decisions";
+inline constexpr char kMiscMetricsFailedHTTPSUpgradeCount[] =
+    "brave.misc_metrics.failed_https_upgrades";
+inline constexpr char kMiscMetricsFailedHTTPSUpgradeMetricAddedTime[] =
+    "brave.misc_metrics.failed_https_upgrade_metric_added_time";
 inline constexpr char kMiscMetricsPrivacyHubViews[] =
     "brave.misc_metrics.privacy_hub_views";
 inline constexpr char kMiscMetricsOpenTabsStorage[] =
@@ -37,13 +43,15 @@ inline constexpr char kMiscMetricsTotalDnsRequestStorage[] =
     "brave.misc_metrics.total_dns_requests";
 inline constexpr char kMiscMetricsUpgradedDnsRequestStorage[] =
     "brave.misc_metrics.upgraded_dns_requests";
+inline constexpr char kMiscMetricsLastDohFallback[] =
+    "brave.misc_metrics.last_doh_fallback";
 
 inline constexpr char kDailyUptimesListPrefName[] =
     "daily_uptimes";  // DEPRECATED
 inline constexpr char kDailyUptimeSumPrefName[] =
     "brave.misc_metrics.uptime_sum";
 inline constexpr char kDailyUptimeFrameStartTimePrefName[] =
-    "brave.misc_metrics.uptime_frame_start_time";
+    "brave.misc_metrics.uptime_frame_start_time_v2";
 
 inline constexpr char kMiscMetricsTabSwitcherNewTabsStorage[] =
     "brave.misc_metrics.tab_switcher_new_tabs_storage";
@@ -53,6 +61,13 @@ inline constexpr char kMiscMetricsNewTabLocationBarEntriesStorage[] =
     "brave.misc_metrics.new_tab_location_bar_entries_storage";
 inline constexpr char kMiscMetricsTotalLocationBarEntriesStorage[] =
     "brave.misc_metrics.total_location_bar_entries_storage";
+
+inline constexpr char kMiscMetricsDayZeroVariantAtInstall[] =
+    "brave.misc_metrics.day_zero_variant_at_install";
+
+inline constexpr char kMiscMetricsNTPWidgetUsageStorage[] =
+    "brave.misc_metrics.ntp_widget_usage";
+
 }  // namespace misc_metrics
 
 #endif  // BRAVE_COMPONENTS_MISC_METRICS_PREF_NAMES_H_

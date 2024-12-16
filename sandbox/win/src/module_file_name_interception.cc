@@ -3,6 +3,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#ifdef UNSAFE_BUFFERS_BUILD
+// TODO(https://github.com/brave/brave-browser/issues/41661): Remove this and
+// convert code to safer constructs.
+#pragma allow_unsafe_buffers
+#endif
+
 #include "brave/sandbox/win/src/module_file_name_interception.h"
 
 #include <string.h>
@@ -62,7 +68,7 @@ template <template <class T> class FromTo, typename CharT>
 std::optional<DWORD> PatchFilenameImpl(CharT* filename,
                                        DWORD length,
                                        DWORD size) {
-  if (!base::EndsWith(base::BasicStringPiece<CharT>(filename, length),
+  if (!base::EndsWith(std::basic_string_view<CharT>(filename, length),
                       FromTo<CharT>::kBrave,
                       base::CompareCase::INSENSITIVE_ASCII)) {
     return std::nullopt;

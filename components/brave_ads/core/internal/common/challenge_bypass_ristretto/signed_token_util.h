@@ -8,14 +8,14 @@
 
 #include <vector>
 
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/signed_token.h"
 
 namespace brave_ads::cbr {
 
 class SignedToken;
 
 std::vector<challenge_bypass_ristretto::SignedToken> ToRawSignedTokens(
-    const std::vector<SignedToken>& tokens);
+    const std::vector<SignedToken>& signed_tokens);
 
 }  // namespace brave_ads::cbr
 

@@ -11,10 +11,10 @@
 # pylint: disable=no-name-in-module, too-few-public-methods
 # pytype: disable=import-error
 
-import json
 import logging
 import shutil
 import os
+import time
 
 from typing import Optional
 
@@ -23,18 +23,7 @@ from telemetry.page import page as page_module
 from telemetry import story
 from telemetry.core import android_platform
 
-
-def _CleanProfileCache(profile_dir: str):
-  shutil.rmtree(os.path.join(profile_dir, 'cache'), ignore_errors=True)
-  shutil.rmtree(os.path.join(profile_dir, 'Default', 'Cache'),
-                ignore_errors=True)
-  shutil.rmtree(os.path.join(profile_dir, 'Default', 'Code Cache'),
-                ignore_errors=True)
-  shutil.rmtree(os.path.join(profile_dir, 'Default', 'GPUCache'),
-                ignore_errors=True)
-  shutil.rmtree(os.path.join(profile_dir, 'component_crx_cache'),
-                ignore_errors=True)
-
+from components.path_util import GetPageSetsDataPath
 
 class _UpdateProfileSharedPageState(shared_page_state.SharedPageState):
   """ A special utility state to update a source profile.
@@ -69,7 +58,7 @@ class _UpdateProfileSharedPageState(shared_page_state.SharedPageState):
       else:
         # profile_type = 'exact' is used to update the profile
         pass
-      _CleanProfileCache(self._profile_dir)
+      time.sleep(5)
       self._profile_dir = None
 
     super()._StopBrowser()
@@ -120,6 +109,10 @@ class _UpdateProfilePage(page_module.Page):
       t.WaitForDocumentReadyStateToBeInteractiveOrBetter()
       t.EvaluateJavaScript(
           'chrome.settingsPrivate.setPref("session.restore_on_startup", 5)')
+      t.EvaluateJavaScript(
+          'chrome.settingsPrivate.setPref("intl.accept_languages", "en-US")')
+      t.EvaluateJavaScript(
+          'chrome.settingsPrivate.setPref("intl.selected_languages", "en-US")')
       action_runner.Wait(2)
 
 
@@ -129,6 +122,9 @@ class BravePerfUtilsStorySet(story.StorySet):
   See loading_desktop.py for details.
   """
 
-  def __init__(self, delay=10):
-    super().__init__(cloud_storage_bucket=story.PARTNER_BUCKET)
+  def __init__(self, delay: int, options):
+    platform = 'mobile' if options.os_name == 'android' else 'desktop'
+    archive_data_file = GetPageSetsDataPath('system_health_%s.json' % platform)
+    super().__init__(archive_data_file,
+                     cloud_storage_bucket=story.PARTNER_BUCKET)
     self.AddStory(_UpdateProfilePage(self, delay))

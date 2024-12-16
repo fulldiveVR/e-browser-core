@@ -3,10 +3,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "brave/browser/ui/views/frame/vertical_tab_strip_root_view.h"
+
 #include "brave/browser/ui/browser_commands.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/frame/vertical_tab_strip_region_view.h"
-#include "brave/browser/ui/views/frame/vertical_tab_strip_root_view.h"
 #include "brave/browser/ui/views/frame/vertical_tab_strip_widget_delegate_view.h"
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "chrome/browser/ui/views/frame/browser_non_client_frame_view.h"
@@ -14,11 +15,12 @@
 #include "chrome/browser/ui/views/tabs/tab_strip.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "content/public/test/browser_test.h"
+#include "testing/gtest/include/gtest/gtest.h"
 #include "ui/base/dragdrop/drag_drop_types.h"
 #include "ui/base/dragdrop/drop_target_event.h"
 #include "ui/base/dragdrop/mojom/drag_drop_types.mojom.h"
 #include "ui/base/dragdrop/os_exchange_data.h"
-#include "ui/compositor/layer_tree_owner.h"
+#include "ui/base/mojom/menu_source_type.mojom.h"
 
 class VerticalTabStripRootViewBrowserTest : public InProcessBrowserTest {
  public:
@@ -51,7 +53,7 @@ class VerticalTabStripRootViewBrowserTest : public InProcessBrowserTest {
 
   void ToggleVerticalTabStrip() {
     brave::ToggleVerticalTabStrip(browser());
-    browser_non_client_frame_view()->Layout();
+    browser_non_client_frame_view()->DeprecatedLayoutImmediately();
   }
 
   VerticalTabStripWidgetDelegateView* vtab_tab_strip_widget_delegate_view() {
@@ -62,17 +64,37 @@ class VerticalTabStripRootViewBrowserTest : public InProcessBrowserTest {
     }
     return nullptr;
   }
+
+  void StartAndFinishDrag(const ui::OSExchangeData& data,
+                          const gfx::Point& location,
+                          ui::mojom::DragOperation& out_drag_op) {
+    ui::DropTargetEvent event(data, gfx::PointF(location),
+                              gfx::PointF(location),
+                              ui::DragDropTypes::DRAG_COPY);
+    VerticalTabStripRootView* root_view = vtab_strip_root_view();
+    EXPECT_NE(nullptr, root_view);
+
+    base::RunLoop run_loop;
+    root_view->SetOnFilteringCompleteClosureForTesting(run_loop.QuitClosure());
+    root_view->OnDragEntered(event);
+
+    // At this point, the drag information will have been set, and a background
+    // task will have been posted to process the dragged URLs
+    // (`GetURLMimeTypes()` -> `FilterURLs()`). Ensure that all background
+    // processing is complete before checking the drag operation or invoking the
+    // drag callback.
+    run_loop.Run();
+
+    EXPECT_NE(ui::DragDropTypes::DRAG_NONE, root_view->OnDragUpdated(event));
+
+    auto drop_cb = root_view->GetDropCallback(event);
+    std::move(drop_cb).Run(event, out_drag_op,
+                           /*drag_image_layer_owner=*/nullptr);
+  }
 };
 
-#if BUILDFLAG(IS_WIN)
-// This test is flaky on Windows.
-#define MAYBE_DragAfterCurrentTab DISABLED_DragAfterCurrentTab
-#else
-#define MAYBE_DragAfterCurrentTab DragAfterCurrentTab
-#endif
-
 IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
-                       MAYBE_DragAfterCurrentTab) {
+                       DragAfterCurrentTab) {
   ToggleVerticalTabStrip();
 
   ASSERT_TRUE(tabs::utils::ShouldShowVerticalTabs(browser()));
@@ -90,17 +112,8 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
 
   // To drag after current tab.
   location.Offset(0, current_tab->height());
-  ui::DropTargetEvent event(data, gfx::PointF(location), gfx::PointF(location),
-                            ui::DragDropTypes::DRAG_COPY);
-
-  VerticalTabStripRootView* root_view = vtab_strip_root_view();
-
-  EXPECT_NE(root_view, nullptr);
-  root_view->OnDragUpdated(event);
-  auto drop_cb = root_view->GetDropCallback(event);
   ui::mojom::DragOperation output_drag_op = ui::mojom::DragOperation::kNone;
-  std::move(drop_cb).Run(event, output_drag_op,
-                         /*drag_image_layer_owner=*/nullptr);
+  StartAndFinishDrag(data, location, output_drag_op);
 
   EXPECT_EQ(output_drag_op, ui::mojom::DragOperation::kCopy);
   EXPECT_EQ(tab_strip_model->count(), 2);
@@ -111,14 +124,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
                   .EqualsIgnoringRef(url));
 }
 
-#if BUILDFLAG(IS_WIN)
-// This test is flaky on Windows.
-#define MAYBE_DragOnCurrentTab DISABLED_DragOnCurrentTab
-#else
-#define MAYBE_DragOnCurrentTab DragOnCurrentTab
-#endif
-IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
-                       MAYBE_DragOnCurrentTab) {
+IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest, DragOnCurrentTab) {
   ToggleVerticalTabStrip();
 
   ASSERT_TRUE(tabs::utils::ShouldShowVerticalTabs(browser()));
@@ -136,17 +142,8 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
 
   // To drag on the same tab.
   location.Offset(0, current_tab->height() / 2);
-  ui::DropTargetEvent event(data, gfx::PointF(location), gfx::PointF(location),
-                            ui::DragDropTypes::DRAG_COPY);
-
-  VerticalTabStripRootView* root_view = vtab_strip_root_view();
-
-  EXPECT_NE(root_view, nullptr);
-  root_view->OnDragUpdated(event);
-  auto drop_cb = root_view->GetDropCallback(event);
   ui::mojom::DragOperation output_drag_op = ui::mojom::DragOperation::kNone;
-  std::move(drop_cb).Run(event, output_drag_op,
-                         /*drag_image_layer_owner=*/nullptr);
+  StartAndFinishDrag(data, location, output_drag_op);
 
   EXPECT_EQ(output_drag_op, ui::mojom::DragOperation::kCopy);
   EXPECT_EQ(tab_strip_model->count(), 1);
@@ -155,4 +152,28 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
                   ->GetWebContentsAt(0)
                   ->GetURL()
                   .EqualsIgnoringRef(url));
+}
+
+// Flaky on Mac.
+#if BUILDFLAG(IS_MAC)
+#define MAYBE_ContextMenuInUnobscuredRegion \
+  DISABLED_ContextMenuInUnobscuredRegion
+#else
+#define MAYBE_ContextMenuInUnobscuredRegion ContextMenuInUnobscuredRegion
+#endif
+IN_PROC_BROWSER_TEST_F(VerticalTabStripRootViewBrowserTest,
+                       MAYBE_ContextMenuInUnobscuredRegion) {
+  ToggleVerticalTabStrip();
+
+  ASSERT_TRUE(tabs::utils::ShouldShowVerticalTabs(browser()));
+
+  auto* vtab_strip_root_view =
+      vtab_tab_strip_widget_delegate_view()->vertical_tab_strip_region_view();
+
+  EXPECT_FALSE(vtab_strip_root_view->IsMenuShowing());
+
+  vtab_strip_root_view->ShowContextMenuForView(
+      vtab_strip_root_view, gfx::Point(), ui::mojom::MenuSourceType::kMouse);
+
+  EXPECT_TRUE(vtab_strip_root_view->IsMenuShowing());
 }

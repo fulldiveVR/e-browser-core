@@ -14,8 +14,8 @@
 #include "brave/browser/speedreader/page_distiller.h"
 #include "brave/components/speedreader/common/speedreader.mojom.h"
 #include "brave/components/speedreader/common/speedreader_toolbar.mojom.h"
+#include "brave/components/speedreader/speedreader_delegate.h"
 #include "brave/components/speedreader/speedreader_service.h"
-#include "brave/components/speedreader/speedreader_throttle_delegate.h"
 #include "brave/components/speedreader/speedreader_util.h"
 #include "brave/components/speedreader/tts_player.h"
 #include "components/dom_distiller/content/browser/distillable_page_utils.h"
@@ -49,7 +49,7 @@ class SpeedreaderTabHelper
     : public content::WebContentsObserver,
       public content::WebContentsUserData<SpeedreaderTabHelper>,
       public PageDistiller,
-      public SpeedreaderThrottleDelegate,
+      public SpeedreaderDelegate,
       public mojom::SpeedreaderHost,
       public SpeedreaderService::Observer,
       public dom_distiller::DistillabilityObserver,
@@ -107,7 +107,8 @@ class SpeedreaderTabHelper
 
  private:
   friend class content::WebContentsUserData<SpeedreaderTabHelper>;
-  explicit SpeedreaderTabHelper(content::WebContents* web_contents);
+  explicit SpeedreaderTabHelper(content::WebContents* web_contents,
+                                SpeedreaderRewriterService* rewriter_service);
 
   void BindReceiver(
       mojo::PendingAssociatedReceiver<mojom::SpeedreaderHost> receiver);
@@ -125,6 +126,8 @@ class SpeedreaderTabHelper
   void UpdateUI();
 
   // content::WebContentsObserver:
+  void ReadyToCommitNavigation(
+      content::NavigationHandle* navigation_handle) override;
   void DidStartNavigation(
       content::NavigationHandle* navigation_handle) override;
   void DidRedirectNavigation(
@@ -136,11 +139,12 @@ class SpeedreaderTabHelper
   void OnVisibilityChanged(content::Visibility visibility) override;
   void WebContentsDestroyed() override;
 
-  // SpeedreaderThrottleDelegate:
+  // SpeedreaderDelegate:
   bool IsPageDistillationAllowed() override;
   bool IsPageContentPresent() override;
   std::string TakePageContent() override;
   void OnDistillComplete(DistillationResult result) override;
+  void OnDistilledDocumentSent() override;
 
   // speedreader::TtsPlayer::Observer:
   void OnReadingStart(content::WebContents* web_contents) override;
@@ -184,6 +188,8 @@ class SpeedreaderTabHelper
 
   DistillState distill_state_{DistillStates::ViewOriginal()};
 
+  const raw_ptr<SpeedreaderRewriterService> rewriter_service_ =
+      nullptr;  // NOT OWNED
   raw_ptr<SpeedreaderBubbleView> speedreader_bubble_ = nullptr;
 
   mojo::AssociatedReceiver<mojom::SpeedreaderHost> receiver_{this};

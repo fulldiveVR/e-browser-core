@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import { font, spacing } from "@brave/leo/tokens/css"
+import { font, spacing } from "@brave/leo/tokens/css/variables"
 import getBraveNewsController, { FeedItemMetadata, UserEnabled } from "../shared/api"
 import { channelIcons } from "../shared/Icons"
 import styled from "styled-components";
@@ -14,6 +14,8 @@ import Button from "@brave/leo/react/button";
 import Icon from "@brave/leo/react/icon";
 import { getLocale } from '$web-common/locale';
 import { getTranslatedChannelName } from "../shared/channel";
+import useRelativeTime from '$web-common/useRelativeTime'
+import { mojoTimeToJSDate } from '$web-common/mojomUtils'
 
 const MenuButton = styled(Button)`
   --leo-button-padding: 0;
@@ -41,15 +43,13 @@ const publisherDescription = (article: FeedItemMetadata) => {
 }
 
 export function MetaInfo(props: { article: FeedItemMetadata, hideChannel?: boolean }) {
+  const relativeTime = useRelativeTime(mojoTimeToJSDate(props.article.publishTime))
   const maybeChannel = !props.hideChannel && <>
     • {channelIcons[props.article.categoryName] ?? channelIcons.default} {getTranslatedChannelName(props.article.categoryName)}
   </>
 
-  const maybeTime = props.article.relativeTimeDescription && <>
-    • {props.article.relativeTimeDescription}
-  </>
   return <MetaInfoContainer>
-    {publisherDescription(props.article)} {maybeChannel} {maybeTime}
+    {publisherDescription(props.article)} {maybeChannel} • {relativeTime}
   </MetaInfoContainer>
 }
 

@@ -5,18 +5,23 @@
 
 package org.chromium.chrome.browser.brave_leo;
 
+import android.app.Activity;
 import android.content.Context;
 
 import org.jni_zero.CalledByNative;
 
+import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.settings.BraveLeoPreferences;
-import org.chromium.chrome.browser.settings.SettingsLauncherImpl;
-import org.chromium.components.browser_ui.settings.SettingsLauncher;
+import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
+import org.chromium.chrome.browser.util.TabUtils;
+import org.chromium.components.browser_ui.settings.SettingsNavigation;
 import org.chromium.content_public.browser.WebContents;
+import org.chromium.ui.base.WindowAndroid;
 
 /** Launches Brave Leo settings page or subscription. */
 public class BraveLeoSettingsLauncherHelper {
-    private static SettingsLauncher sLauncher;
+    private static final String ACCOUNT_PAGE_URL = "https://account.brave.com/";
+    private static SettingsNavigation sLauncher;
 
     @CalledByNative
     private static void showBraveLeoSettings(WebContents webContents) {
@@ -24,22 +29,49 @@ public class BraveLeoSettingsLauncherHelper {
         if (context == null) {
             return;
         }
-        getLauncher().launchSettingsActivity(context, BraveLeoPreferences.class);
+        getLauncher().startSettings(context, BraveLeoPreferences.class);
     }
 
     @CalledByNative
     private static void goPremium(WebContents webContents) {
-        // TODO(sergz): We need to uncomment that section when our backend can handle
-        // mobile subscription. It's commented to avoid Purchase happens on Google Play Store
-
-        // Activity activity = webContents.getTopLevelNativeWindow().getActivity().get();
-        // Intent braveLeoPlansIntent = new Intent(activity, BraveLeoPlansActivity.class);
-        // braveLeoPlansIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        // braveLeoPlansIntent.setAction(Intent.ACTION_VIEW);
-        // activity.startActivity(braveLeoPlansIntent);
+        BraveLeoUtils.goPremium(webContents.getTopLevelNativeWindow().getActivity().get());
     }
 
-    private static SettingsLauncher getLauncher() {
-        return sLauncher != null ? sLauncher : new SettingsLauncherImpl();
+    @CalledByNative
+    private static void managePremium(WebContents webContents) {
+        if (BraveLeoPrefUtils.getIsSubscriptionActive(Profile.fromWebContents(webContents))) {
+            BraveLeoUtils.openManageSubscription();
+        } else {
+            TabUtils.openURLWithBraveActivity(ACCOUNT_PAGE_URL);
+        }
+    }
+
+    @CalledByNative
+    private static void openURL(String url) {
+        TabUtils.openURLWithBraveActivity(url);
+    }
+
+    @CalledByNative
+    private static void handleVoiceRecognition(WebContents webContents, String conversationUuid) {
+        new BraveLeoVoiceRecognitionHandler(
+                        webContents.getTopLevelNativeWindow(), webContents, conversationUuid)
+                .startVoiceRecognition();
+    }
+
+    @CalledByNative
+    private static void closeActivity(WebContents webContents) {
+        WindowAndroid windowAndroid = webContents.getTopLevelNativeWindow();
+        if (windowAndroid == null) {
+            return;
+        }
+        Activity activity = windowAndroid.getActivity().get();
+        if (activity == null) {
+            return;
+        }
+        activity.finish();
+    }
+
+    private static SettingsNavigation getLauncher() {
+        return sLauncher != null ? sLauncher : SettingsNavigationFactory.createSettingsNavigation();
     }
 }

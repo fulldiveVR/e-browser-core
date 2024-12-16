@@ -31,7 +31,7 @@
 // clang-format on
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoints {
 
@@ -46,9 +46,10 @@ struct ResultFor<PostOAuthUphold> {
 class PostOAuthUphold final : public RequestBuilder,
                               public ResponseHandler<PostOAuthUphold> {
  public:
-  static Result ProcessResponse(const mojom::UrlResponse&);
+  static Result ProcessResponse(RewardsEngine& engine,
+                                const mojom::UrlResponse&);
 
-  PostOAuthUphold(RewardsEngineImpl& engine, const std::string& code);
+  PostOAuthUphold(RewardsEngine& engine, const std::string& code);
   ~PostOAuthUphold() override;
 
  private:

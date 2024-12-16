@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "brave/components/brave_ads/core/internal/tabs/tab_manager_observer.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -22,34 +22,33 @@ class TabManagerObserverMock : public TabManagerObserver {
   TabManagerObserverMock(const TabManagerObserverMock&) = delete;
   TabManagerObserverMock& operator=(const TabManagerObserverMock&) = delete;
 
-  TabManagerObserverMock(TabManagerObserverMock&&) noexcept = delete;
-  TabManagerObserverMock& operator=(TabManagerObserverMock&&) noexcept = delete;
-
   ~TabManagerObserverMock() override;
-
-  MOCK_METHOD(void, OnTabDidChangeFocus, (const int32_t tab_id));
-
-  MOCK_METHOD(void, OnTabDidChange, (const TabInfo& tab));
 
   MOCK_METHOD(void, OnDidOpenNewTab, (const TabInfo& tab));
 
+  MOCK_METHOD(void, OnTabDidLoad, (const TabInfo& tab, int http_status_code));
+
+  MOCK_METHOD(void, OnTabDidChangeFocus, (int32_t tab_id));
+
+  MOCK_METHOD(void, OnTabDidChange, (const TabInfo& tab));
+
   MOCK_METHOD(void,
               OnTextContentDidChange,
-              (const int32_t tab_id,
+              (int32_t tab_id,
                const std::vector<GURL>& redirect_chain,
                const std::string& text));
 
   MOCK_METHOD(void,
               OnHtmlContentDidChange,
-              (const int32_t tab_id,
+              (int32_t tab_id,
                const std::vector<GURL>& redirect_chain,
                const std::string& html));
 
-  MOCK_METHOD(void, OnDidCloseTab, (const int32_t tab_id));
+  MOCK_METHOD(void, OnDidCloseTab, (int32_t tab_id));
 
-  MOCK_METHOD(void, OnTabDidStartPlayingMedia, (const int32_t tab_id));
+  MOCK_METHOD(void, OnTabDidStartPlayingMedia, (int32_t tab_id));
 
-  MOCK_METHOD(void, OnTabDidStopPlayingMedia, (const int32_t tab_id));
+  MOCK_METHOD(void, OnTabDidStopPlayingMedia, (int32_t tab_id));
 };
 
 }  // namespace brave_ads

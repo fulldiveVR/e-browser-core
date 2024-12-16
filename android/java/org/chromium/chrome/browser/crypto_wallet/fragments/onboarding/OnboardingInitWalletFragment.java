@@ -11,11 +11,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentActivity;
 
 import org.chromium.base.Log;
@@ -25,16 +24,15 @@ import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ChromeTabbedActivity;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.app.helpers.Api33AndPlusBackPressHelper;
-import org.chromium.chrome.browser.crypto_wallet.util.Utils;
+import org.chromium.chrome.browser.crypto_wallet.activities.BraveWalletActivity;
 
-/**
- * Initial onboarding fragment to setup Brave Wallet.
- */
+/** Initial onboarding fragment to setup Brave Wallet. */
 public class OnboardingInitWalletFragment extends BaseOnboardingWalletFragment {
     private static final String TAG = "SetupWalletFragment";
 
     private boolean mRestartSetupAction;
     private boolean mRestartRestoreAction;
+    private boolean mButtonClicked;
 
     public OnboardingInitWalletFragment(boolean restartSetupAction, boolean restartRestoreAction) {
         mRestartSetupAction = restartSetupAction;
@@ -44,6 +42,7 @@ public class OnboardingInitWalletFragment extends BaseOnboardingWalletFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mButtonClicked = false;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             Api33AndPlusBackPressHelper.create(
                     this, (FragmentActivity) requireActivity(), () -> requireActivity().finish());
@@ -59,30 +58,58 @@ public class OnboardingInitWalletFragment extends BaseOnboardingWalletFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button setupCryptoButton = view.findViewById(R.id.btn_setup_crypto);
-        setupCryptoButton.setOnClickListener(v -> {
-            checkOnBraveActivity(true, false);
-            if (mOnNextPage != null) {
-                mOnNextPage.gotoCreationPage();
-            }
-        });
+        setAnimatedBackground(view.findViewById(R.id.setup_wallet_root));
 
-        TextView restoreButton = view.findViewById(R.id.btn_restore);
-        restoreButton.setOnClickListener(v -> {
-            checkOnBraveActivity(false, true);
-            if (mOnNextPage != null) {
-                mOnNextPage.gotoRestorePage(true);
-            }
-        });
-        PostTask.postTask(TaskTraits.UI_DEFAULT, () -> {
-            if (mRestartSetupAction) {
-                setupCryptoButton.performClick();
-            } else if (mRestartRestoreAction) {
-                restoreButton.performClick();
-            }
-            mRestartSetupAction = false;
-            mRestartRestoreAction = false;
-        });
+        CardView newWallet = view.findViewById(R.id.new_wallet_card_view);
+        newWallet.setOnClickListener(
+                v -> {
+                    if (mButtonClicked) {
+                        return;
+                    }
+                    mButtonClicked = true;
+
+                    checkOnBraveActivity(true, false);
+                    if (mOnNextPage != null) {
+                        // Add a little delay for a smooth ripple effect animation.
+                        PostTask.postDelayedTask(
+                                TaskTraits.UI_DEFAULT, () -> mOnNextPage.gotoCreationPage(), 200);
+                    }
+                });
+
+        CardView restoreWallet = view.findViewById(R.id.restore_wallet_card_view);
+        restoreWallet.setOnClickListener(
+                v -> {
+                    if (mButtonClicked) {
+                        return;
+                    }
+                    mButtonClicked = true;
+
+                    checkOnBraveActivity(false, true);
+                    if (mOnNextPage != null) {
+                        // Add a little delay for a smooth ripple effect animation.
+                        PostTask.postDelayedTask(
+                                TaskTraits.UI_DEFAULT,
+                                () -> mOnNextPage.gotoRestorePage(true),
+                                200);
+                    }
+                });
+        PostTask.postTask(
+                TaskTraits.UI_DEFAULT,
+                () -> {
+                    if (mRestartSetupAction) {
+                        newWallet.performClick();
+                    } else if (mRestartRestoreAction) {
+                        restoreWallet.performClick();
+                    }
+                    mRestartSetupAction = false;
+                    mRestartRestoreAction = false;
+                });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mButtonClicked = false;
     }
 
     @Override
@@ -104,9 +131,9 @@ public class OnboardingInitWalletFragment extends BaseOnboardingWalletFragment {
         } catch (BraveActivity.BraveActivityNotFoundException e) {
             Log.e(TAG, "checkOnBraveActivity " + e);
             Intent intent = new Intent(getActivity(), ChromeTabbedActivity.class);
-            intent.putExtra(Utils.RESTART_WALLET_ACTIVITY, true);
-            intent.putExtra(Utils.RESTART_WALLET_ACTIVITY_SETUP, setupAction);
-            intent.putExtra(Utils.RESTART_WALLET_ACTIVITY_RESTORE, restoreAction);
+            intent.putExtra(BraveWalletActivity.RESTART_WALLET_ACTIVITY, true);
+            intent.putExtra(BraveWalletActivity.RESTART_WALLET_ACTIVITY_SETUP, setupAction);
+            intent.putExtra(BraveWalletActivity.RESTART_WALLET_ACTIVITY_RESTORE, restoreAction);
             intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             intent.setAction(Intent.ACTION_VIEW);
             startActivity(intent);

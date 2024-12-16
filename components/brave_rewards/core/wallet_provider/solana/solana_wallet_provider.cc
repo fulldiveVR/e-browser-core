@@ -12,9 +12,9 @@
 #include "base/base64url.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/common/signer.h"
 #include "brave/components/brave_rewards/core/database/database.h"
-#include "brave/components/brave_rewards/core/endpoint/rewards/rewards_util.h"
 #include "brave/components/brave_rewards/core/global_constants.h"
 #include "brave/components/brave_rewards/core/logging/event_log_keys.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
@@ -22,7 +22,6 @@
 #include "brave/components/brave_rewards/core/wallet/wallet_util.h"
 #include "brave/components/brave_rewards/core/wallet_provider/linkage_checker.h"
 #include "net/base/url_util.h"
-#include "url/gurl.h"
 
 namespace brave_rewards::internal {
 
@@ -45,7 +44,7 @@ std::string UsernameFromAddress(const std::string& address) {
 
 }  // namespace
 
-SolanaWalletProvider::SolanaWalletProvider(RewardsEngineImpl& engine)
+SolanaWalletProvider::SolanaWalletProvider(RewardsEngine& engine)
     : RewardsEngineHelper(engine), WalletProvider(engine) {}
 
 SolanaWalletProvider::~SolanaWalletProvider() = default;
@@ -57,7 +56,8 @@ const char* SolanaWalletProvider::WalletType() const {
 void SolanaWalletProvider::AssignWalletLinks(
     mojom::ExternalWallet& external_wallet) {
   auto explorer_url =
-      GURL("https://solscan.io/account/").Resolve(external_wallet.address);
+      GURL("https://explorer.solana.com/address/")
+          .Resolve(base::StrCat({external_wallet.address, "/tokens"}));
   external_wallet.account_url = explorer_url.spec();
   external_wallet.activity_url = explorer_url.spec();
 }
@@ -77,7 +77,7 @@ void SolanaWalletProvider::FetchBalance(
 
 void SolanaWalletProvider::BeginLogin(
     BeginExternalWalletLoginCallback callback) {
-  post_challenges_.Request(
+  Get<endpoints::PostChallenges>().Request(
       base::BindOnce(&SolanaWalletProvider::OnPostChallengesResponse,
                      weak_factory_.GetWeakPtr(), std::move(callback)));
 }
@@ -109,13 +109,12 @@ void SolanaWalletProvider::OnPostChallengesResponse(
 
   std::string message =
       base::StrCat({base::ToLowerASCII(wallet->payment_id), ".", challenge_id});
-  auto signed_message =
-      signer->SignMessage(base::as_bytes(base::make_span(message)));
+  auto signed_message = signer->SignMessage(base::as_byte_span(message));
   std::string signature;
   base::Base64UrlEncode(
       signed_message, base::Base64UrlEncodePolicy::INCLUDE_PADDING, &signature);
 
-  GURL url(endpoint::rewards::GetServerUrl("/connect/"));
+  auto url = Get<EnvironmentConfig>().rewards_url().Resolve("/connect/");
   url = net::AppendOrReplaceQueryParameter(url, "msg", message);
   url = net::AppendOrReplaceQueryParameter(url, "sig", signature);
 

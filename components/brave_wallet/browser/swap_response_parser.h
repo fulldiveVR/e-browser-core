@@ -13,15 +13,44 @@
 
 namespace brave_wallet {
 
-mojom::ZeroExQuotePtr ParseZeroExQuoteResponse(const base::Value& json_value,
-                                               bool expect_transaction_data);
-mojom::ZeroExErrorPtr ParseZeroExErrorResponse(const base::Value& json_value);
+namespace zeroex {
 
-mojom::JupiterQuotePtr ParseJupiterQuoteResponse(const base::Value& json_value);
-std::optional<std::string> ParseJupiterTransactionResponse(
+mojom::ZeroExQuotePtr ParseQuoteResponse(const base::Value& json_value,
+                                         const std::string& chain_id);
+mojom::ZeroExTransactionPtr ParseTransactionResponse(
     const base::Value& json_value);
-mojom::JupiterErrorPtr ParseJupiterErrorResponse(const base::Value& json_value);
-std::optional<std::string> ConvertAllNumbersToString(const std::string& json);
+mojom::ZeroExErrorPtr ParseErrorResponse(const base::Value& json_value);
+
+}  // namespace zeroex
+
+namespace jupiter {
+
+mojom::JupiterQuotePtr ParseQuoteResponse(const base::Value& json_value);
+std::optional<std::string> ParseTransactionResponse(
+    const base::Value& json_value);
+mojom::JupiterErrorPtr ParseErrorResponse(const base::Value& json_value);
+
+}  // namespace jupiter
+
+namespace lifi {
+
+mojom::LiFiTransactionUnionPtr ParseTransactionResponse(
+    const base::Value& json_value);
+mojom::LiFiQuotePtr ParseQuoteResponse(const base::Value& json_value);
+mojom::LiFiErrorPtr ParseErrorResponse(const base::Value& json_value);
+mojom::LiFiStatusPtr ParseStatusResponse(const base::Value& json_value);
+
+}  // namespace lifi
+
+namespace squid {
+
+mojom::SquidQuotePtr ParseQuoteResponse(const base::Value& json_value);
+mojom::SquidErrorPtr ParseErrorResponse(const base::Value& json_value);
+mojom::SquidTransactionUnionPtr ParseTransactionResponse(
+    const base::Value& json_value);
+
+}  // namespace squid
+
 }  // namespace brave_wallet
 
 #endif  // BRAVE_COMPONENTS_BRAVE_WALLET_BROWSER_SWAP_RESPONSE_PARSER_H_

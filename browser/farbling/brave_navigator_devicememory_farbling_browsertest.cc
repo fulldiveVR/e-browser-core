@@ -10,11 +10,14 @@
 #include "base/test/thread_test_helper.h"
 #include "brave/browser/extensions/brave_base_local_data_files_browsertest.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_util.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/webcompat/core/common/features.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/extensions/extension_browsertest.h"
+#include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
@@ -29,18 +32,18 @@
 
 using brave_shields::ControlType;
 
-const char kDeviceMemoryScript[] = "navigator.deviceMemory * 1024";
+constexpr char kDeviceMemoryScript[] = "navigator.deviceMemory * 1024";
 
 class BraveDeviceMemoryFarblingBrowserTest : public InProcessBrowserTest {
  public:
   BraveDeviceMemoryFarblingBrowserTest()
       : https_server_(net::EmbeddedTestServer::TYPE_HTTPS) {
-    brave::RegisterPathProvider();
-    base::FilePath test_data_dir;
-    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
-    https_server_.SetSSLConfig(net::EmbeddedTestServer::CERT_TEST_NAMES);
-    https_server_.ServeFilesFromDirectory(test_data_dir);
-    EXPECT_TRUE(https_server_.Start());
+    scoped_feature_list_.InitWithFeatures(
+        {
+            brave_shields::features::kBraveShowStrictFingerprintingMode,
+            webcompat::features::kBraveWebcompatExceptionsService,
+        },
+        {});
   }
 
   BraveDeviceMemoryFarblingBrowserTest(
@@ -52,6 +55,11 @@ class BraveDeviceMemoryFarblingBrowserTest : public InProcessBrowserTest {
 
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
+    base::FilePath test_data_dir;
+    base::PathService::Get(brave::DIR_TEST_DATA, &test_data_dir);
+    https_server_.SetSSLConfig(net::EmbeddedTestServer::CERT_TEST_NAMES);
+    https_server_.ServeFilesFromDirectory(test_data_dir);
+    EXPECT_TRUE(https_server_.Start());
     host_resolver()->AddRule("*", "127.0.0.1");
   }
 
@@ -84,6 +92,9 @@ class BraveDeviceMemoryFarblingBrowserTest : public InProcessBrowserTest {
   content::WebContents* contents() {
     return browser()->tab_strip_model()->GetActiveWebContents();
   }
+
+ private:
+  base::test::ScopedFeatureList scoped_feature_list_;
 };
 
 // Tests results of farbling known values
@@ -109,10 +120,10 @@ IN_PROC_BROWSER_TEST_F(BraveDeviceMemoryFarblingBrowserTest,
   // Farbling level: default
   SetFingerprintingDefault(domain1);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url1));
-  EXPECT_EQ(2048, EvalJs(contents(), kDeviceMemoryScript));
+  EXPECT_EQ(4096, EvalJs(contents(), kDeviceMemoryScript));
   SetFingerprintingDefault(domain2);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url2));
-  EXPECT_EQ(4096, EvalJs(contents(), kDeviceMemoryScript));
+  EXPECT_EQ(512, EvalJs(contents(), kDeviceMemoryScript));
 
   // Farbling level: maximum
   BlockFingerprinting(domain1);
@@ -121,4 +132,18 @@ IN_PROC_BROWSER_TEST_F(BraveDeviceMemoryFarblingBrowserTest,
   AllowFingerprinting(domain2);
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url2));
   EXPECT_EQ(8192, EvalJs(contents(), kDeviceMemoryScript));
+
+  // Farbling level: default, but webcompat exception enabled
+  SetFingerprintingDefault(domain1);
+  brave_shields::SetWebcompatEnabled(
+      content_settings(), ContentSettingsType::BRAVE_WEBCOMPAT_DEVICE_MEMORY,
+      true, url1, nullptr);
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url1));
+  EXPECT_EQ(true_value, EvalJs(contents(), kDeviceMemoryScript));
+  SetFingerprintingDefault(domain2);
+  brave_shields::SetWebcompatEnabled(
+      content_settings(), ContentSettingsType::BRAVE_WEBCOMPAT_DEVICE_MEMORY,
+      true, url2, nullptr);
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url2));
+  EXPECT_EQ(true_value, EvalJs(contents(), kDeviceMemoryScript));
 }

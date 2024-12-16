@@ -7,6 +7,7 @@
 
 #include <string>
 
+#include "base/check_is_test.h"
 #include "base/time/time.h"
 #include "brave/browser/ui/brave_ads/notification_ad_delegate.h"
 #include "brave/browser/ui/views/brave_ads/bounds_util.h"
@@ -84,37 +85,29 @@ SkColor GetDarkModeBackgroundColor() {
 }  // namespace
 
 NotificationAdPopup::NotificationAdPopup(
-    Profile* profile,
+    Profile& profile,
     const NotificationAd& notification_ad,
     gfx::NativeWindow browser_native_window,
     gfx::NativeView browser_native_view)
     : profile_(profile),
       notification_ad_(notification_ad),
       animation_(std::make_unique<gfx::LinearAnimation>(this)) {
-  CHECK(profile_);
-
   CreatePopup(browser_native_window, browser_native_view);
 
   NotifyAccessibilityEvent(ax::mojom::Event::kAlert, true);
 
   display::Screen* screen = display::Screen::GetScreen();
   if (screen) {
-    screen->AddObserver(this);
+    screen_observation_.Observe(screen);
   }
 
   FadeIn();
 }
 
-NotificationAdPopup::~NotificationAdPopup() {
-  display::Screen* screen = display::Screen::GetScreen();
-  if (screen) {
-    screen->RemoveObserver(this);
-  }
-}
+NotificationAdPopup::~NotificationAdPopup() = default;
 
 // static
-void NotificationAdPopup::SetDisableFadeInAnimationForTesting(
-    const bool disable) {
+void NotificationAdPopup::SetDisableFadeInAnimationForTesting(bool disable) {
   g_disable_fade_in_animation_for_testing = disable;
 }
 
@@ -136,8 +129,7 @@ void NotificationAdPopup::OnDisplayAdded(const display::Display& new_display) {
   RecomputeAlignment();
 }
 
-void NotificationAdPopup::OnDisplayRemoved(
-    const display::Display& old_display) {
+void NotificationAdPopup::OnDisplaysRemoved(const display::Displays& displays) {
   // Called when `old_display` has been removed
   RecomputeAlignment();
 }
@@ -331,11 +323,11 @@ void NotificationAdPopup::CreatePopup(gfx::NativeWindow browser_native_window,
   notification_ad_view_ = container_view->AddChildView(
       NotificationAdViewFactory::Create(notification_ad_));
 
+  CreateWidgetView(browser_native_window, browser_native_view);
+
   const gfx::Point point(GetWidgetMargin().top(), GetWidgetMargin().left());
   container_view->SetPosition(point);
   container_view->SetSize(notification_ad_view_->size());
-
-  CreateWidgetView(browser_native_window, browser_native_view);
 }
 
 bool NotificationAdPopup::DidChangePopupPosition() const {
@@ -461,7 +453,9 @@ void NotificationAdPopup::CreateWidgetView(
   widget->InitWidget(this, widget_bounds, browser_native_window,
                      browser_native_view);
 
-  if (!g_disable_fade_in_animation_for_testing) {
+  if (g_disable_fade_in_animation_for_testing) {
+    CHECK_IS_TEST();
+  } else {
     widget->SetOpacity(0.0);
   }
   const gfx::Rect bounds = widget->GetWindowBoundsInScreen();
@@ -484,6 +478,7 @@ void NotificationAdPopup::CloseWidgetView() {
 
 void NotificationAdPopup::FadeIn() {
   if (g_disable_fade_in_animation_for_testing) {
+    CHECK_IS_TEST();
     return;
   }
 
@@ -537,7 +532,7 @@ bool NotificationAdPopup::IsWidgetValid() const {
   return GetWidget() && !GetWidget()->IsClosed();
 }
 
-BEGIN_METADATA(NotificationAdPopup, views::WidgetDelegateView)
+BEGIN_METADATA(NotificationAdPopup)
 END_METADATA
 
 }  // namespace brave_ads

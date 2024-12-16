@@ -21,20 +21,20 @@ const adBlockModeOptions = [
 
 const cookieBlockModeOptions = [
   { value: CookieBlockMode.BLOCKED, text: getLocale('braveShieldsCookiesBlockAll') },
-  { value: CookieBlockMode.CROSS_SITE_BLOCKED, text: getLocale('braveShieldsCrossCookiesBlocked') },
+  { value: CookieBlockMode.CROSS_SITE_BLOCKED, text: getLocale('braveShieldsThirdPartyCookiesBlocked') },
   { value: CookieBlockMode.ALLOW, text: getLocale('braveShieldsCookiesAllowedAll') }
 ]
 
 const fingerprintModeOptions = [
-  { value: FingerprintMode.STRICT, text: getLocale('braveShieldsFingerprintingBlockedAgg') },
-  { value: FingerprintMode.STANDARD, text: getLocale('braveShieldsFingerprintingBlockedStd') },
-  { value: FingerprintMode.ALLOW, text: getLocale('braveShieldsFingerprintingAllowAll') }
+  { value: FingerprintMode.STRICT_MODE, text: getLocale('braveShieldsFingerprintingBlockedAgg') },
+  { value: FingerprintMode.STANDARD_MODE, text: getLocale('braveShieldsFingerprintingBlockedStd') },
+  { value: FingerprintMode.ALLOW_MODE, text: getLocale('braveShieldsFingerprintingAllowAll') }
 ]
 
 const httpsUpgradeModeOptions = [
-  { value: HttpsUpgradeMode.STRICT, text: getLocale('braveShieldsHttpsUpgradeModeStrict') },
-  { value: HttpsUpgradeMode.STANDARD, text: getLocale('braveShieldsHttpsUpgradeModeStandard') },
-  { value: HttpsUpgradeMode.DISABLED, text: getLocale('braveShieldsHttpsUpgradeModeDisabled') }
+  { value: HttpsUpgradeMode.STRICT_MODE, text: getLocale('braveShieldsHttpsUpgradeModeStrict') },
+  { value: HttpsUpgradeMode.STANDARD_MODE, text: getLocale('braveShieldsHttpsUpgradeModeStandard') },
+  { value: HttpsUpgradeMode.DISABLED_MODE, text: getLocale('braveShieldsHttpsUpgradeModeDisabled') }
 ]
 
 function GlobalSettings () {
@@ -83,7 +83,7 @@ function AdvancedControlsContent () {
   }
 
   const handleFingerprintModeToggleChange = (isEnabled: boolean) => {
-    getPanelBrowserAPI().dataHandler.setFingerprintMode(isEnabled ? FingerprintMode.STANDARD : FingerprintMode.ALLOW)
+    getPanelBrowserAPI().dataHandler.setFingerprintMode(isEnabled ? FingerprintMode.STANDARD_MODE : FingerprintMode.ALLOW_MODE)
     if (getSiteSettings) getSiteSettings()
   }
 
@@ -111,8 +111,10 @@ function AdvancedControlsContent () {
 
   const adsListCount = siteBlockInfo?.adsList.length ?? 0
   const jsListCount = siteBlockInfo?.blockedJsList.length ?? 0
+  const invokedWebcompatListCount = siteBlockInfo?.invokedWebcompatList.length ?? 0
   const isHttpsByDefaultEnabled = loadTimeData.getBoolean('isHttpsByDefaultEnabled')
   const showStrictFingerprintingMode = loadTimeData.getBoolean('showStrictFingerprintingMode')
+  const isWebcompatExceptionsServiceEnabled = loadTimeData.getBoolean('isWebcompatExceptionsServiceEnabled')
   const isTorProfile = loadTimeData.getBoolean('isTorProfile')
   const isForgetFirstPartyStorageEnabled = loadTimeData.getBoolean(
     'isForgetFirstPartyStorageEnabled'
@@ -203,13 +205,22 @@ function AdvancedControlsContent () {
             <span>{getLocale('braveShieldsFingerprintingBlockedStd')}</span>
             <Toggle
               onChange={handleFingerprintModeToggleChange}
-              isOn={siteSettings?.fingerprintMode !== FingerprintMode.ALLOW}
+              isOn={siteSettings?.fingerprintMode !== FingerprintMode.ALLOW_MODE}
               size='sm'
               accessibleLabel={getLocale('braveShieldsFingerprintingBlockedStd')}
               disabled={siteBlockInfo?.isBraveShieldsManaged}
             />
             </label>}
-          </div>
+            </div>
+            <S.CountButton
+              title={invokedWebcompatListCount.toString()}
+              hidden={!isWebcompatExceptionsServiceEnabled}
+              aria-label={getLocale('braveShieldsFingerprintingBlockedStd')}
+              onClick={() => setViewType?.(ViewType.FingerprintList)}
+              disabled={invokedWebcompatListCount <= 0 || siteSettings?.fingerprintMode === FingerprintMode.ALLOW_MODE}
+            >
+              &gt;
+            </S.CountButton>
         </S.ControlGroup>
         <S.ControlGroup>
           <div className="col-2">

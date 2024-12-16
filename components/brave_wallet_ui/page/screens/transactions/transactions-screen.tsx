@@ -4,10 +4,13 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
-import { useHistory } from 'react-router'
+import { useHistory, useLocation } from 'react-router'
 
 // types
-import { BraveWallet } from '../../../constants/types'
+import {
+  BraveWallet,
+  SerializableTransactionInfo
+} from '../../../constants/types'
 
 // options
 import { AllNetworksOption } from '../../../options/network-filter-options'
@@ -50,18 +53,17 @@ import {
   ActivityPageHeader //
 } from '../../../components/desktop/card-headers/activity_page_header'
 import { SearchBar } from '../../../components/shared/search-bar'
+import {
+  TransactionDetailsModal //
+} from '../../../components/desktop/popup-modals/transaction_details_modal/transaction_details_modal'
 
 // styles
-import {
-  Column,
-  LoadingIcon,
-  Text,
-  VerticalSpacer
-} from '../../../components/shared/style'
+import { Column, Text, VerticalSpacer } from '../../../components/shared/style'
 import {
   LoadingSkeletonStyleProps,
   Skeleton
 } from '../../../components/shared/loading-skeleton/styles'
+import { EmptyTransactionsIcon } from './transaction-screen.styles'
 
 const txListItemSkeletonProps: LoadingSkeletonStyleProps = {
   width: '100%',
@@ -72,6 +74,8 @@ const txListItemSkeletonProps: LoadingSkeletonStyleProps = {
 export const TransactionsScreen: React.FC = () => {
   // routing
   const history = useHistory()
+  const { hash: selectedTransactionIdHash } = useLocation()
+  const selectedTransactionId = selectedTransactionIdHash.replace('#', '')
 
   // UI Selectors (safe)
   const isPanel = useSafeUISelector(UISelectors.isPanel)
@@ -156,6 +160,23 @@ export const TransactionsScreen: React.FC = () => {
           }
     )
 
+  const selectedTransaction = txsForSelectedChain.find(
+    (tx) => tx.id === selectedTransactionId
+  )
+
+  // Methods
+  const onClickTransaction = React.useCallback(
+    (
+      tx: Pick<BraveWallet.TransactionInfo | SerializableTransactionInfo, 'id'>
+    ): void => {
+      history.push(
+        window.location.pathname + window.location.search + '#' + tx.id
+      )
+    },
+    [history]
+  )
+
+  // Memos
   const combinedTokensList = React.useMemo(() => {
     return userTokensList.concat(knownTokensList)
   }, [userTokensList, knownTokensList])
@@ -193,39 +214,8 @@ export const TransactionsScreen: React.FC = () => {
     )
   }, [searchValue, searchableTransactions])
 
-  // render
-  if (isLoadingAccounts || isLoadingTxsList) {
+  const transactionsView = React.useMemo(() => {
     return (
-      <WalletPageWrapper
-        wrapContentInBox={true}
-        cardHeader={
-          <ActivityPageHeader
-            searchValue={searchValue}
-            onSearchValueChange={(e) => setSearchValue(e.target.value)}
-          />
-        }
-      >
-        <Column fullHeight>
-          <LoadingIcon
-            opacity={100}
-            size='50px'
-            color='interactive05'
-          />
-        </Column>
-      </WalletPageWrapper>
-    )
-  }
-
-  return (
-    <WalletPageWrapper
-      wrapContentInBox={true}
-      cardHeader={
-        <ActivityPageHeader
-          searchValue={searchValue}
-          onSearchValueChange={(e) => setSearchValue(e.target.value)}
-        />
-      }
-    >
       <>
         {isPanel && (
           <Column
@@ -241,7 +231,7 @@ export const TransactionsScreen: React.FC = () => {
             <VerticalSpacer space={24} />
           </Column>
         )}
-        {isLoadingTxsList ? (
+        {isLoadingAccounts || isLoadingTxsList ? (
           <Column
             fullHeight
             fullWidth
@@ -260,8 +250,9 @@ export const TransactionsScreen: React.FC = () => {
               <Column
                 fullHeight
                 gap={'24px'}
+                padding={isPanel ? '0px 0px 32px 0px' : '0px'}
               >
-                <VerticalSpacer space={14} />
+                <EmptyTransactionsIcon />
                 <Text
                   textSize='18px'
                   isBold
@@ -274,23 +265,29 @@ export const TransactionsScreen: React.FC = () => {
               </Column>
             )}
 
-            <Column
-              fullWidth={true}
-              fullHeight={true}
-              justifyContent='flex-start'
-            >
-              {filteredTransactions.map((tx, i) => (
-                <PortfolioTransactionItem
-                  key={tx.id}
-                  transaction={tx}
-                />
-              ))}
-            </Column>
+            {filteredTransactions.length !== 0 && (
+              <Column
+                fullWidth={true}
+                fullHeight={true}
+                justifyContent='flex-start'
+              >
+                {filteredTransactions.map((tx) => (
+                  <PortfolioTransactionItem
+                    key={tx.id}
+                    transaction={tx}
+                    onClick={onClickTransaction}
+                  />
+                ))}
+              </Column>
+            )}
 
             {txsForSelectedChain &&
               txsForSelectedChain.length !== 0 &&
               filteredTransactions.length === 0 && (
-                <Column fullHeight>
+                <Column
+                  fullHeight
+                  padding={isPanel ? '32px 0px 64px 0px' : '0px'}
+                >
                   <Text textSize='14px'>
                     {getLocale('braveWalletConnectHardwareSearchNothingFound')}
                   </Text>
@@ -299,6 +296,55 @@ export const TransactionsScreen: React.FC = () => {
           </>
         )}
       </>
+    )
+  }, [
+    filteredTransactions,
+    isLoadingTxsList,
+    isPanel,
+    onClickTransaction,
+    searchValue,
+    txsForSelectedChain,
+    isLoadingAccounts
+  ])
+
+  // render
+  if (isPanel) {
+    return (
+      <>
+        {transactionsView}
+        {selectedTransaction && (
+          <TransactionDetailsModal
+            onClose={() => {
+              // remove the transaction id from the URL hash
+              history.push(window.location.pathname + window.location.search)
+            }}
+            transaction={selectedTransaction}
+          />
+        )}
+      </>
+    )
+  }
+
+  return (
+    <WalletPageWrapper
+      wrapContentInBox={true}
+      cardHeader={
+        <ActivityPageHeader
+          searchValue={searchValue}
+          onSearchValueChange={(e) => setSearchValue(e.target.value)}
+        />
+      }
+    >
+      {transactionsView}
+      {selectedTransaction && (
+        <TransactionDetailsModal
+          onClose={() => {
+            // remove the transaction id from the URL hash
+            history.push(window.location.pathname + window.location.search)
+          }}
+          transaction={selectedTransaction}
+        />
+      )}
     </WalletPageWrapper>
   )
 }

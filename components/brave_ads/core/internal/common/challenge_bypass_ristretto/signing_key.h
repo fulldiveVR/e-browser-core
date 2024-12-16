@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/check.h"
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/signing_key.h"
 
 namespace brave_ads::cbr {
 
@@ -33,9 +33,6 @@ class SigningKey {
 
   SigningKey(const SigningKey&) = delete;
   SigningKey& operator=(const SigningKey&) = delete;
-
-  SigningKey(SigningKey&&) noexcept = delete;
-  SigningKey& operator=(SigningKey&&) noexcept = delete;
 
   ~SigningKey();
 

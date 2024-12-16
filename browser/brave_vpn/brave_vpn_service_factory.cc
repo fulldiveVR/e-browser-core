@@ -11,7 +11,6 @@
 #include "base/no_destructor.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_vpn/vpn_utils.h"
-#include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/skus/skus_service_factory.h"
 #include "brave/components/brave_vpn/browser/brave_vpn_service.h"
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
@@ -28,6 +27,7 @@
 #if BUILDFLAG(IS_WIN)
 #include "brave/browser/brave_vpn/dns/brave_vpn_dns_observer_factory_win.h"
 #include "brave/browser/brave_vpn/dns/brave_vpn_dns_observer_service_win.h"
+#include "brave/browser/brave_vpn/win/brave_vpn_service_delegate_win.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_observer_factory_win.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_observer_service_win.h"
 #endif
@@ -42,7 +42,7 @@ std::unique_ptr<KeyedService> BuildVpnService(
   }
 
 #if !BUILDFLAG(IS_ANDROID)
-  if (!g_brave_browser_process->brave_vpn_os_connection_api()) {
+  if (!g_brave_browser_process->brave_vpn_connection_manager()) {
     return nullptr;
   }
 #endif
@@ -61,24 +61,20 @@ std::unique_ptr<KeyedService> BuildVpnService(
 
   std::unique_ptr<BraveVpnService> vpn_service =
       std::make_unique<BraveVpnService>(
-          g_brave_browser_process->brave_vpn_os_connection_api(),
+          g_brave_browser_process->brave_vpn_connection_manager(),
           shared_url_loader_factory, local_state,
           user_prefs::UserPrefs::Get(context), callback);
 #if BUILDFLAG(IS_WIN)
-  if (brave_vpn::IsBraveVPNWireguardEnabled(g_browser_process->local_state())) {
-    auto* observer_service =
-        brave_vpn::BraveVpnWireguardObserverFactory::GetInstance()
-            ->GetServiceForContext(context);
-    if (observer_service) {
-      observer_service->Observe(vpn_service.get());
-    }
-  } else {
-    auto* observer_service =
-        brave_vpn::BraveVpnDnsObserverFactory::GetInstance()
-            ->GetServiceForContext(context);
-    if (observer_service) {
-      observer_service->Observe(vpn_service.get());
-    }
+  vpn_service->set_delegate(std::make_unique<BraveVPNServiceDelegateWin>());
+  if (auto* wg_observer_service =
+          brave_vpn::BraveVpnWireguardObserverFactory::GetInstance()
+              ->GetServiceForContext(context)) {
+    wg_observer_service->Observe(vpn_service.get());
+  }
+  if (auto* dns_observer_service =
+          brave_vpn::BraveVpnDnsObserverFactory::GetInstance()
+              ->GetServiceForContext(context)) {
+    dns_observer_service->Observe(vpn_service.get());
   }
 #endif
 
@@ -92,6 +88,16 @@ BraveVpnServiceFactory* BraveVpnServiceFactory::GetInstance() {
   static base::NoDestructor<BraveVpnServiceFactory> instance;
   return instance.get();
 }
+
+#if BUILDFLAG(IS_ANDROID)
+// static
+mojo::PendingRemote<brave_vpn::mojom::ServiceHandler>
+BraveVpnServiceFactory::GetForContext(content::BrowserContext* context) {
+  return static_cast<BraveVpnService*>(
+             GetInstance()->GetServiceForBrowserContext(context, true))
+      ->MakeRemote();
+}
+#endif  // BUILDFLAG(IS_ANDROID)
 
 // static
 BraveVpnService* BraveVpnServiceFactory::GetForProfile(Profile* profile) {
@@ -116,11 +122,8 @@ BraveVpnServiceFactory::BraveVpnServiceFactory()
           BrowserContextDependencyManager::GetInstance()) {
   DependsOn(skus::SkusServiceFactory::GetInstance());
 #if BUILDFLAG(IS_WIN)
-  if (brave_vpn::IsBraveVPNWireguardEnabled(g_browser_process->local_state())) {
-    DependsOn(brave_vpn::BraveVpnWireguardObserverFactory::GetInstance());
-  } else {
-    DependsOn(brave_vpn::BraveVpnDnsObserverFactory::GetInstance());
-  }
+  DependsOn(brave_vpn::BraveVpnWireguardObserverFactory::GetInstance());
+  DependsOn(brave_vpn::BraveVpnDnsObserverFactory::GetInstance());
 #endif
 }
 

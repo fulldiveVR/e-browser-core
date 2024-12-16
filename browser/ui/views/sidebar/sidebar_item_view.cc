@@ -64,8 +64,8 @@ void SidebarItemView::OnPaintBorder(gfx::Canvas* canvas) {
 }
 
 bool SidebarItemView::IsTriggerableEvent(const ui::Event& e) {
-  return e.type() == ui::ET_GESTURE_TAP ||
-         e.type() == ui::ET_GESTURE_TAP_DOWN ||
+  return e.type() == ui::EventType::kGestureTap ||
+         e.type() == ui::EventType::kGestureTapDown ||
          event_utils::IsPossibleDispositionEvent(e);
 }
 
@@ -87,5 +87,5 @@ void SidebarItemView::OnThemeChanged() {
   SetHighlighted(active_);
 }
 
-BEGIN_METADATA(SidebarItemView, SidebarButtonView)
+BEGIN_METADATA(SidebarItemView)
 END_METADATA

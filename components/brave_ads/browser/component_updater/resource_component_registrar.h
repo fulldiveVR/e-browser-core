@@ -9,6 +9,7 @@
 #include <optional>
 #include <string>
 
+#include "base/memory/raw_ref.h"
 #include "brave/components/brave_component_updater/browser/brave_component.h"
 
 namespace base {
@@ -30,10 +31,6 @@ class ResourceComponentRegistrar
   ResourceComponentRegistrar& operator=(const ResourceComponentRegistrar&) =
       delete;
 
-  ResourceComponentRegistrar(ResourceComponentRegistrar&&) noexcept = delete;
-  ResourceComponentRegistrar& operator=(ResourceComponentRegistrar&&) noexcept =
-      delete;
-
   ~ResourceComponentRegistrar() override;
 
   void RegisterResourceComponent(const std::string& resource_id);
@@ -46,7 +43,7 @@ class ResourceComponentRegistrar
 
   void OnComponentUnregistered(const std::string& component_id);
 
-  raw_ref<ResourceComponentRegistrarDelegate>
+  const raw_ref<ResourceComponentRegistrarDelegate>
       resource_component_registrar_delegate_;
   std::optional<std::string> resource_component_id_;
 };

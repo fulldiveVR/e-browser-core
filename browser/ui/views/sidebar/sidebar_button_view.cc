@@ -47,7 +47,8 @@ void SidebarButtonView::OnThemeChanged() {
       this, gfx::Insets::VH(0, kMargin), radii);
 }
 
-gfx::Size SidebarButtonView::CalculatePreferredSize() const {
+gfx::Size SidebarButtonView::CalculatePreferredSize(
+    const views::SizeBounds& available_size) const {
   return {kSidebarButtonSize + kMargin * 2, kSidebarButtonSize};
 }
 
@@ -55,5 +56,5 @@ std::u16string SidebarButtonView::GetTooltipText(const gfx::Point& p) const {
   return GetAccessibleName();
 }
 
-BEGIN_METADATA(SidebarButtonView, views::ImageButton)
+BEGIN_METADATA(SidebarButtonView)
 END_METADATA

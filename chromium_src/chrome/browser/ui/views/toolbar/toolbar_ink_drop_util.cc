@@ -11,16 +11,17 @@
 
 #undef ConfigureInkDropForToolbar
 
-void ConfigureInkDropForToolbar(views::Button* host) {
-  host->SetHasInkDropActionOnClick(true);
-  views::HighlightPathGenerator::Install(
-      host, std::make_unique<ToolbarButtonHighlightPathGenerator>());
-  views::InkDrop::Get(host)->SetMode(views::InkDropHost::InkDropMode::ON);
+void ConfigureInkDropForToolbar(
+    views::Button* host,
+    std::unique_ptr<views::HighlightPathGenerator> highlight_generator) {
+  if (!highlight_generator) {
+    highlight_generator =
+        std::make_unique<ToolbarButtonHighlightPathGenerator>();
+  }
 
-  const auto* cp = host->GetColorProvider();
-  const bool is_dark = cp && color_utils::IsDark(cp->GetColor(kColorToolbar));
-  views::InkDrop::Get(host)->SetVisibleOpacity(is_dark ? 0.4f : 0.1f);
-  views::InkDrop::Get(host)->SetHighlightOpacity(is_dark ? 0.25f : 0.05f);
-  views::InkDrop::Get(host)->SetBaseColorCallback(
-      base::BindRepeating(&GetToolbarInkDropBaseColor, host));
+  host->SetHasInkDropActionOnClick(true);
+  views::HighlightPathGenerator::Install(host, std::move(highlight_generator));
+  views::InkDrop::Get(host)->SetMode(views::InkDropHost::InkDropMode::ON);
+  CreateToolbarInkdropCallbacks(host, kColorToolbarInkDropHover,
+                                kColorToolbarInkDropRipple);
 }

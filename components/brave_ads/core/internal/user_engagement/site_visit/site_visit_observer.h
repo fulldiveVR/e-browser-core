@@ -17,18 +17,32 @@ struct AdInfo;
 
 class SiteVisitObserver : public base::CheckedObserver {
  public:
-  // Invoked if the user could land on a page for the given `ad` at `maybe_at`
-  // time.
-  virtual void OnMaybeLandOnPage(const AdInfo& ad, const base::Time maybe_at) {}
+  // Invoked when there is a possibility that the user will arrive at the
+  // landing page for the given `ad` `after` a period of time.
+  virtual void OnMaybeLandOnPage(const AdInfo& ad, base::TimeDelta after) {}
 
-  // Invoked when the landed on a page for the given `ad`.
-  virtual void OnDidLandOnPage(const AdInfo& ad) {}
+  // Invoked when the given `tab_id` for a page becomes occluded and will resume
+  // after `remaining_time` when the tab becomes visible.
+  virtual void OnDidSuspendPageLand(int32_t tab_id,
+                                    base::TimeDelta remaining_time) {}
 
-  // Invoked when the user did not land on the page for the given `ad`.
-  virtual void OnDidNotLandOnPage(const AdInfo& ad) {}
+  // Invoked when the given `tab_id` for a page becomes visible and may load
+  // after 'remaining_time'.
+  virtual void OnDidResumePageLand(int32_t tab_id,
+                                   base::TimeDelta remaining_time) {}
 
-  // Invoked when canceling a page land for the given `ad` and `tab_id`.
-  virtual void OnCanceledPageLand(const AdInfo& ad, const int32_t tab_id) {}
+  // Invoked when a user landed on the landing page associated with the given
+  // `tab_id`, `http_status_code`, and `ad`.
+  virtual void OnDidLandOnPage(int32_t tab_id,
+                               int http_status_code,
+                               const AdInfo& ad) {}
+
+  // Invoked when the user did not land on the landing page for the given
+  // `tab_id` and `ad`.
+  virtual void OnDidNotLandOnPage(int32_t tab_id, const AdInfo& ad) {}
+
+  // Invoked when canceling a page land for the given `tab_id` and `ad`.
+  virtual void OnCanceledPageLand(int32_t tab_id, const AdInfo& ad) {}
 };
 
 }  // namespace brave_ads

@@ -6,22 +6,17 @@
 #include "chrome/browser/ui/webui/chrome_untrusted_web_ui_configs.h"
 
 #include "base/feature_list.h"
+#include "brave/browser/ui/webui/ai_chat/ai_chat_untrusted_conversation_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/ledger/ledger_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/line_chart/line_chart_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/market/market_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/nft/nft_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/trezor/trezor_ui.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_player/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "content/public/browser/webui_config_map.h"
-
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/browser/ui/webui/ai_chat/ai_chat_ui.h"
-#include "brave/components/ai_chat/core/common/features.h"
-#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #if !BUILDFLAG(IS_ANDROID)
@@ -33,11 +28,6 @@
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 #include "brave/browser/ui/webui/playlist_ui.h"
 #include "brave/components/playlist/common/features.h"
-#endif
-
-#if BUILDFLAG(ENABLE_BRAVE_PLAYER)
-#include "brave/browser/ui/webui/brave_player_ui.h"
-#include "brave/components/brave_player/common/features.h"
 #endif
 
 #define RegisterChromeUntrustedWebUIConfigs \
@@ -76,17 +66,8 @@ void RegisterChromeUntrustedWebUIConfigs() {
 #endif  // BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 #endif  // !BUILDFLAG(IS_ANDROID)
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::features::IsAIChatEnabled()) {
     content::WebUIConfigMap::GetInstance().AddUntrustedWebUIConfig(
-        std::make_unique<UntrustedChatUIConfig>());
+        std::make_unique<AIChatUntrustedConversationUIConfig>());
   }
-#endif  // BUILDFLAG(ENABLE_AI_CHAT)
-
-#if BUILDFLAG(ENABLE_BRAVE_PLAYER)
-  if (base::FeatureList::IsEnabled(brave_player::features::kBravePlayer)) {
-    content::WebUIConfigMap::GetInstance().AddUntrustedWebUIConfig(
-        std::make_unique<UntrustedBravePlayerEmbedUIConfig>());
-  }
-#endif
 }

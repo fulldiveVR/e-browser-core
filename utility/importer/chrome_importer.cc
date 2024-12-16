@@ -54,10 +54,10 @@ namespace {
 // Most of below code is copied from os_crypt_win.cc
 #if BUILDFLAG(IS_WIN)
 // Contains base64 random key encrypted with DPAPI.
-const char kOsCryptEncryptedKeyPrefName[] = "os_crypt.encrypted_key";
+constexpr char kOsCryptEncryptedKeyPrefName[] = "os_crypt.encrypted_key";
 
 // Key prefix for a key encrypted with DPAPI.
-const char kDPAPIKeyPrefix[] = "DPAPI";
+constexpr char kDPAPIKeyPrefix[] = "DPAPI";
 
 bool DecryptStringWithDPAPI(const std::string& ciphertext,
                             std::string* plaintext) {
@@ -98,8 +98,7 @@ bool SetEncryptionKeyForPasswordImporting(
 
     base::Base64Decode(*base64_encrypted_key, &encrypted_key_with_header);
 
-    if (!base::StartsWith(encrypted_key_with_header, kDPAPIKeyPrefix,
-                          base::CompareCase::SENSITIVE)) {
+    if (!encrypted_key_with_header.starts_with(kDPAPIKeyPrefix)) {
       return false;
     }
     std::string encrypted_key =
@@ -381,15 +380,18 @@ void ChromeImporter::LoadFaviconData(
       if (!usage.favicon_url.is_valid())
         continue;  // Don't bother importing favicons with invalid URLs.
 
-      std::vector<unsigned char> data;
+      std::vector<uint8_t> data;
       s.ColumnBlobAsVector(1, &data);
       if (data.empty())
         continue;  // Data definitely invalid.
 
-      if (!importer::ReencodeFavicon(&data[0], data.size(), &usage.png_data))
+      auto decoded_data = importer::ReencodeFavicon(base::span(data));
+      if (!decoded_data) {
         continue;  // Unable to decode.
+      }
 
       usage.urls = entry.second;
+      usage.png_data = std::move(decoded_data).value();
       favicons->push_back(usage);
     }
     s.Reset(true);
@@ -463,7 +465,9 @@ void ChromeImporter::ImportPasswords(
   password_manager::LoginDatabase database(
       copy_password_file.copied_file_path(),
       password_manager::IsAccountStore(false));
-  if (!database.Init()) {
+  if (!database.Init(
+          /*on_undecryptable_passwords_removed=*/base::NullCallback(),
+          /*encryptor=*/nullptr)) {
     LOG(ERROR) << "LoginDatabase Init() failed";
     return;
   }

@@ -26,16 +26,15 @@ void BraveBookmarksSidePanelCoordinator::CreateAndRegisterEntry(
     SidePanelRegistry* global_registry) {
   global_registry->Register(std::make_unique<SidePanelEntry>(
       SidePanelEntry::Id::kBookmarks,
-      l10n_util::GetStringUTF16(IDS_BOOKMARK_MANAGER_TITLE),
-      ui::ImageModel::FromVectorIcon(omnibox::kStarIcon, ui::kColorIcon),
       base::BindRepeating(
           &BraveBookmarksSidePanelCoordinator::CreateBookmarksPanelView,
           base::Unretained(this))));
 }
 
 std::unique_ptr<views::View>
-BraveBookmarksSidePanelCoordinator::CreateBookmarksPanelView() {
-  return std::make_unique<BraveBookmarksSidePanelView>(&GetBrowser());
+BraveBookmarksSidePanelCoordinator::CreateBookmarksPanelView(
+    SidePanelEntryScope& scope) {
+  return std::make_unique<BraveBookmarksSidePanelView>(&GetBrowser(), scope);
 }
 
 BROWSER_USER_DATA_KEY_IMPL(BraveBookmarksSidePanelCoordinator);

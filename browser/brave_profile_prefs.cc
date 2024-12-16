@@ -7,19 +7,25 @@
 
 #include <string>
 
-#include "brave/browser/new_tab/new_tab_shows_options.h"
-
 #include "brave/browser/brave_shields/brave_shields_web_contents_observer.h"
 #include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
-#include "brave/browser/search/ntp_utils.h"
+#include "brave/browser/new_tab/new_tab_shows_options.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
+#include "brave/browser/ui/bookmark/brave_bookmark_prefs.h"
 #include "brave/browser/ui/omnibox/brave_omnibox_client_impl.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/browser/model_service.h"
+#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/common/pref_names.h"
+#include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_service.h"
 #include "brave/components/brave_ads/browser/analytics/p2a/p2a.h"
 #include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
+#include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
 #include "brave/components/brave_news/browser/brave_news_controller.h"
 #include "brave/components/brave_news/browser/brave_news_p3a.h"
+#include "brave/components/brave_news/browser/brave_news_pref_manager.h"
+#include "brave/components/brave_news/common/p3a_pref_names.h"
+#include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_perf_predictor/browser/p3a_bandwidth_savings_tracker.h"
 #include "brave/components/brave_perf_predictor/browser/perf_predictor_tab_helper.h"
 #include "brave/components/brave_rewards/common/pref_names.h"
@@ -27,17 +33,18 @@
 #include "brave/components/brave_search/browser/brave_search_default_host.h"
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search_conversion/utils.h"
-#include "brave/components/brave_shields/browser/brave_farbling_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_p3a.h"
-#include "brave/components/brave_shields/common/pref_names.h"
+#include "brave/components/brave_shields/content/browser/brave_farbling_service.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_p3a.h"
+#include "brave/components/brave_shields/core/common/pref_names.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
+#include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/brave_webtorrent/browser/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/de_amp/common/pref_names.h"
-#include "brave/components/debounce/browser/debounce_service.h"
-#include "brave/components/ipfs/buildflags/buildflags.h"
+#include "brave/components/debounce/core/browser/debounce_service.h"
+#include "brave/components/ipfs/ipfs_prefs.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
@@ -45,12 +52,12 @@
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
+#include "brave/components/webcompat_reporter/common/pref_names.h"
 #include "build/build_config.h"
 #include "chrome/browser/prefetch/pref_names.h"
 #include "chrome/browser/prefs/session_startup_pref.h"
 #include "chrome/browser/preloading/preloading_prefs.h"
 #include "chrome/browser/ui/webui/new_tab_page/ntp_pref_names.h"
-#include "chrome/common/channel_info.h"
 #include "chrome/common/pref_names.h"
 #include "components/content_settings/core/common/pref_names.h"
 #include "components/embedder_support/pref_names.h"
@@ -63,11 +70,10 @@
 #include "components/safe_browsing/core/common/safe_browsing_prefs.h"
 #include "components/search_engines/search_engines_pref_names.h"
 #include "components/signin/public/base/signin_pref_names.h"
+#include "components/spellcheck/browser/pref_names.h"
 #include "components/sync/base/pref_names.h"
 #include "extensions/buildflags/buildflags.h"
 #include "third_party/widevine/cdm/buildflags.h"
-
-#include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_service.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_WEBTORRENT)
 #include "brave/components/brave_webtorrent/browser/webtorrent_util.h"
@@ -80,10 +86,6 @@
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
 #include "brave/browser/ethereum_remote_client/ethereum_remote_client_constants.h"
 #include "brave/browser/ethereum_remote_client/pref_names.h"
-#endif
-
-#if BUILDFLAG(ENABLE_IPFS)
-#include "brave/components/ipfs/ipfs_service.h"
 #endif
 
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
@@ -106,16 +108,10 @@
 #endif
 
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/search_engines/search_engine_provider_util.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/components/brave_private_new_tab_ui/common/pref_names.h"
 #include "chrome/browser/ui/webui/bookmarks/bookmark_prefs.h"
 #include "chrome/browser/ui/webui/side_panel/bookmarks/bookmarks.mojom.h"
-#endif
-
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/ai_chat/core/common/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
@@ -123,8 +119,7 @@
 #endif
 
 #if defined(TOOLKIT_VIEWS)
-#include "brave/components/sidebar/pref_names.h"
-#include "brave/components/sidebar/sidebar_service.h"
+#include "brave/components/sidebar/browser/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
@@ -140,13 +135,7 @@ namespace brave {
 
 void RegisterProfilePrefsForMigration(
     user_prefs::PrefRegistrySyncable* registry) {
-  dark_mode::RegisterBraveDarkModePrefsForMigration(registry);
 #if !BUILDFLAG(IS_ANDROID)
-  new_tab_page::RegisterNewTabPagePrefsForMigration(registry);
-
-  // Added 06/2022
-  brave::RegisterSearchEngineProviderPrefsForMigration(registry);
-
   // Added 10/2022
   registry->RegisterIntegerPref(kDefaultBrowserLaunchingCount, 0);
 #endif
@@ -190,82 +179,12 @@ void RegisterProfilePrefsForMigration(
 
   brave_rewards::RegisterProfilePrefsForMigration(registry);
 
-  brave_news::p3a::RegisterProfilePrefsForMigration(registry);
+  brave_news::p3a::prefs::RegisterProfileNewsMetricsPrefsForMigration(registry);
 
   // Added May 2023
 #if defined(TOOLKIT_VIEWS)
   registry->RegisterBooleanPref(sidebar::kSidebarAlignmentChangedTemporarily,
                                 false);
-#endif
-
-  // Added September 2023
-#if !BUILDFLAG(IS_IOS)
-  // TODO(https://github.com/brave/brave-browser/issues/33144): Remove after
-  // several browser releases.
-  constexpr const char* const kLegacyBraveP2AAdPrefs[] = {
-      "Brave.P2A.TotalAdOpportunities",
-      "Brave.P2A.AdOpportunitiesPerSegment.architecture",
-      "Brave.P2A.AdOpportunitiesPerSegment.artsentertainment",
-      "Brave.P2A.AdOpportunitiesPerSegment.automotive",
-      "Brave.P2A.AdOpportunitiesPerSegment.business",
-      "Brave.P2A.AdOpportunitiesPerSegment.careers",
-      "Brave.P2A.AdOpportunitiesPerSegment.cellphones",
-      "Brave.P2A.AdOpportunitiesPerSegment.crypto",
-      "Brave.P2A.AdOpportunitiesPerSegment.education",
-      "Brave.P2A.AdOpportunitiesPerSegment.familyparenting",
-      "Brave.P2A.AdOpportunitiesPerSegment.fashion",
-      "Brave.P2A.AdOpportunitiesPerSegment.folklore",
-      "Brave.P2A.AdOpportunitiesPerSegment.fooddrink",
-      "Brave.P2A.AdOpportunitiesPerSegment.gaming",
-      "Brave.P2A.AdOpportunitiesPerSegment.healthfitness",
-      "Brave.P2A.AdOpportunitiesPerSegment.history",
-      "Brave.P2A.AdOpportunitiesPerSegment.hobbiesinterests",
-      "Brave.P2A.AdOpportunitiesPerSegment.home",
-      "Brave.P2A.AdOpportunitiesPerSegment.law",
-      "Brave.P2A.AdOpportunitiesPerSegment.military",
-      "Brave.P2A.AdOpportunitiesPerSegment.other",
-      "Brave.P2A.AdOpportunitiesPerSegment.personalfinance",
-      "Brave.P2A.AdOpportunitiesPerSegment.pets",
-      "Brave.P2A.AdOpportunitiesPerSegment.realestate",
-      "Brave.P2A.AdOpportunitiesPerSegment.science",
-      "Brave.P2A.AdOpportunitiesPerSegment.sports",
-      "Brave.P2A.AdOpportunitiesPerSegment.technologycomputing",
-      "Brave.P2A.AdOpportunitiesPerSegment.travel",
-      "Brave.P2A.AdOpportunitiesPerSegment.weather",
-      "Brave.P2A.AdOpportunitiesPerSegment.untargeted",
-      "Brave.P2A.TotalAdImpressions",
-      "Brave.P2A.AdImpressionsPerSegment.architecture",
-      "Brave.P2A.AdImpressionsPerSegment.artsentertainment",
-      "Brave.P2A.AdImpressionsPerSegment.automotive",
-      "Brave.P2A.AdImpressionsPerSegment.business",
-      "Brave.P2A.AdImpressionsPerSegment.careers",
-      "Brave.P2A.AdImpressionsPerSegment.cellphones",
-      "Brave.P2A.AdImpressionsPerSegment.crypto",
-      "Brave.P2A.AdImpressionsPerSegment.education",
-      "Brave.P2A.AdImpressionsPerSegment.familyparenting",
-      "Brave.P2A.AdImpressionsPerSegment.fashion",
-      "Brave.P2A.AdImpressionsPerSegment.folklore",
-      "Brave.P2A.AdImpressionsPerSegment.fooddrink",
-      "Brave.P2A.AdImpressionsPerSegment.gaming",
-      "Brave.P2A.AdImpressionsPerSegment.healthfitness",
-      "Brave.P2A.AdImpressionsPerSegment.history",
-      "Brave.P2A.AdImpressionsPerSegment.hobbiesinterests",
-      "Brave.P2A.AdImpressionsPerSegment.home",
-      "Brave.P2A.AdImpressionsPerSegment.law",
-      "Brave.P2A.AdImpressionsPerSegment.military",
-      "Brave.P2A.AdImpressionsPerSegment.other",
-      "Brave.P2A.AdImpressionsPerSegment.personalfinance",
-      "Brave.P2A.AdImpressionsPerSegment.pets",
-      "Brave.P2A.AdImpressionsPerSegment.realestate",
-      "Brave.P2A.AdImpressionsPerSegment.science",
-      "Brave.P2A.AdImpressionsPerSegment.sports",
-      "Brave.P2A.AdImpressionsPerSegment.technologycomputing",
-      "Brave.P2A.AdImpressionsPerSegment.travel",
-      "Brave.P2A.AdImpressionsPerSegment.weather",
-      "Brave.P2A.AdImpressionsPerSegment.untargeted"};
-  for (const char* const pref : kLegacyBraveP2AAdPrefs) {
-    registry->RegisterListPref(pref);
-  }
 #endif
 
   // Added 2023-09
@@ -277,6 +196,17 @@ void RegisterProfilePrefsForMigration(
 
   // Added 2023-11
   brave_ads::RegisterProfilePrefsForMigration(registry);
+
+  // Added 2024-04
+  ai_chat::prefs::RegisterProfilePrefsForMigration(registry);
+
+  brave_shields::RegisterShieldsP3AProfilePrefsForMigration(registry);
+
+  // Added 2024-05
+  ipfs::RegisterDeprecatedIpfsPrefs(registry);
+
+  // Added 2024-07
+  registry->RegisterBooleanPref(kHangoutsEnabled, false);
 }
 
 void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -300,7 +230,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 
   brave_shields::RegisterShieldsP3AProfilePrefs(registry);
 
-  brave_news::BraveNewsController::RegisterProfilePrefs(registry);
+  brave_news::prefs::RegisterProfilePrefs(registry);
 
   // TODO(shong): Migrate this to local state also and guard in ENABLE_WIDEVINE.
   // We don't need to display "don't ask widevine prompt option" in settings
@@ -326,17 +256,14 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
                                 true);
   registry->RegisterBooleanPref(brave_shields::prefs::kLinkedInEmbedControlType,
                                 false);
-
-#if BUILDFLAG(ENABLE_IPFS)
-  ipfs::IpfsService::RegisterProfilePrefs(registry);
-#endif
+  registry->RegisterBooleanPref(brave_shields::prefs::kAdBlockDeveloperMode,
+                                false);
 
   // WebTorrent
 #if BUILDFLAG(ENABLE_BRAVE_WEBTORRENT)
   webtorrent::RegisterProfilePrefs(registry);
 #endif
 
-  // wayback machine
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
   registry->RegisterBooleanPref(kBraveWaybackMachineEnabled, true);
 #endif
@@ -353,18 +280,25 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->SetDefaultPrefValue(ntp_tiles::prefs::kPopularSitesJsonPref,
                                 base::Value(base::Value::Type::LIST));
   // Disable NTP suggestions
-  feed::RegisterProfilePrefs(registry);
-  registry->RegisterBooleanPref(feed::prefs::kEnableSnippets, false);
-  registry->RegisterBooleanPref(feed::prefs::kArticlesListVisible, false);
+  // On Android we want to have enable_feed_v2 parameter enabled to
+  // provide linking with feed::FetchRssLinks at
+  // BraveNewsTabHelper::DOMContentLoaded, but kEnableSnippets and
+  // kArticlesListVisible must be defaulted to false to avoid failed assertion
+  // at BraveNewTabPage.initializeMainView. So override
+  // feed::prefs::RegisterFeedSharedProfilePrefs for Android only. Related
+  // Chromium's commit: d3500b942cde04737bc13021173b6ffa11aaf1b9.
+  registry->SetDefaultPrefValue(feed::prefs::kEnableSnippets,
+                                base::Value(false));
+  registry->SetDefaultPrefValue(feed::prefs::kArticlesListVisible,
+                                base::Value(false));
+  registry->SetDefaultPrefValue(feed::prefs::kEnableSnippetsByDse,
+                                base::Value(false));
 
   // Explicitly disable safe browsing extended reporting by default in case they
   // change it in upstream.
   registry->SetDefaultPrefValue(prefs::kSafeBrowsingScoutReportingEnabled,
                                 base::Value(false));
 #endif
-
-  // Hangouts
-  registry->RegisterBooleanPref(kHangoutsEnabled, true);
 
   // Restore last profile on restart
   registry->SetDefaultPrefValue(
@@ -422,16 +356,17 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kImportDialogExtensions, true);
   registry->RegisterBooleanPref(kImportDialogPayments, true);
 
-  // IPFS companion extension
-  registry->RegisterBooleanPref(kIPFSCompanionEnabled, false);
-
   // New Tab Page
-  registry->RegisterBooleanPref(kNewTabPageShowClock, true);
+  registry->RegisterBooleanPref(kNewTabPageShowClock, false);
   registry->RegisterStringPref(kNewTabPageClockFormat, "");
   registry->RegisterBooleanPref(kNewTabPageShowStats, true);
   registry->RegisterBooleanPref(kNewTabPageShowRewards, true);
   registry->RegisterBooleanPref(kNewTabPageShowBraveTalk, true);
   registry->RegisterBooleanPref(kNewTabPageHideAllWidgets, false);
+
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+  registry->RegisterBooleanPref(kNewTabPageShowBraveVPN, true);
+#endif
 
 // Private New Tab Page
 #if !BUILDFLAG(IS_ANDROID)
@@ -507,10 +442,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   tor::TorProfileService::RegisterProfilePrefs(registry);
 #endif
 
-#if defined(TOOLKIT_VIEWS)
-  sidebar::SidebarService::RegisterProfilePrefs(registry, chrome::GetChannel());
-#endif
-
 #if !BUILDFLAG(IS_ANDROID)
   BraveOmniboxClientImpl::RegisterProfilePrefs(registry);
   brave_ads::RegisterP2APrefs(registry);
@@ -521,6 +452,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
                                 base::Value(true));
   registry->RegisterBooleanPref(kEnableWindowClosingConfirm, true);
   registry->RegisterBooleanPref(kEnableClosingLastTab, true);
+  registry->RegisterBooleanPref(kShowFullscreenReminder, true);
 
   brave_tabs::RegisterBraveProfilePrefs(registry);
 
@@ -529,22 +461,16 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
       base::Value(static_cast<int>(side_panel::mojom::ViewType::kCompact)));
 #endif
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  if (ai_chat::features::IsAIChatEnabled()) {
-    ai_chat::prefs::RegisterProfilePrefs(registry);
-  }
-#endif
+  ai_chat::prefs::RegisterProfilePrefs(registry);
+  ai_chat::ModelService::RegisterProfilePrefs(registry);
 
   brave_search_conversion::RegisterPrefs(registry);
 
-  registry->SetDefaultPrefValue(prefs::kEnableMediaRouter, base::Value(false));
-
-  registry->RegisterBooleanPref(kEnableMediaRouterOnRestart, false);
-
-  // Disable Raw sockets API (see github.com/brave/brave-browser/issues/11546).
-  registry->SetDefaultPrefValue(
-      policy::policy_prefs::kIsolatedAppsDeveloperModeAllowed,
-      base::Value(false));
+  // Enabled by default after fixing
+  // https://github.com/brave/brave-browser/issues/18017
+  // kEnableMediaRouterOnRestart is used to remember the user's choice.
+  registry->SetDefaultPrefValue(prefs::kEnableMediaRouter, base::Value(true));
+  registry->RegisterBooleanPref(kEnableMediaRouterOnRestart, true);
 
   BraveFarblingService::RegisterProfilePrefs(registry);
 
@@ -555,6 +481,18 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
   request_otr::RequestOTRService::RegisterProfilePrefs(registry);
 #endif
+
+#if defined(TOOLKIT_VIEWS)
+  bookmarks::prefs::RegisterProfilePrefs(registry);
+#endif
+
+  brave_ads::RegisterProfilePrefs(registry);
+  brave_rewards::RegisterProfilePrefs(registry);
+
+  registry->SetDefaultPrefValue(prefs::kSearchSuggestEnabled,
+                                base::Value(false));
+
+  webcompat_reporter::prefs::RegisterProfilePrefs(registry);
 }
 
 }  // namespace brave

@@ -9,7 +9,7 @@
 #include <string>
 
 #include "brave/components/brave_ads/core/internal/account/utility/refill_confirmation_tokens/refill_confirmation_tokens_delegate.h"
-#include "testing/gmock/include/gmock/gmock.h"  // IWYU pragma: keep
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace brave_ads {
 
@@ -23,11 +23,6 @@ class RefillConfirmationTokensDelegateMock
   RefillConfirmationTokensDelegateMock& operator=(
       const RefillConfirmationTokensDelegateMock&) = delete;
 
-  RefillConfirmationTokensDelegateMock(
-      RefillConfirmationTokensDelegateMock&&) noexcept = delete;
-  RefillConfirmationTokensDelegateMock& operator=(
-      RefillConfirmationTokensDelegateMock&&) noexcept = delete;
-
   ~RefillConfirmationTokensDelegateMock() override;
 
   MOCK_METHOD(void, OnDidRefillConfirmationTokens, ());
@@ -36,7 +31,7 @@ class RefillConfirmationTokensDelegateMock
 
   MOCK_METHOD(void,
               OnWillRetryRefillingConfirmationTokens,
-              (const base::Time retry_at));
+              (base::Time retry_at));
   MOCK_METHOD(void, OnDidRetryRefillingConfirmationTokens, ());
 
   MOCK_METHOD(void,

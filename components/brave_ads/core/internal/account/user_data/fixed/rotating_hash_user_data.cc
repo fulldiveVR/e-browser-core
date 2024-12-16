@@ -15,20 +15,19 @@
 namespace brave_ads {
 
 namespace {
-constexpr char kRotatingHashKey[] = "rotating_hash";
+constexpr char kRotatingHashKey[] = "rotatingHash";
 }  // namespace
 
 base::Value::Dict BuildRotatingHashUserData(
     const TransactionInfo& transaction) {
-  base::Value::Dict user_data;
-
   if (!UserHasJoinedBraveRewards()) {
-    return user_data;
+    return {};
   }
 
-  const std::optional<std::string> rotating_hash =
-      BuildRotatingHash(transaction);
-  if (rotating_hash) {
+  base::Value::Dict user_data;
+
+  if (const std::optional<std::string> rotating_hash =
+          BuildRotatingHash(transaction)) {
     user_data.Set(kRotatingHashKey, *rotating_hash);
   }
 

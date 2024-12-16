@@ -14,25 +14,30 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import org.chromium.base.ThreadUtils;
 import org.chromium.base.jank_tracker.PlaceholderJankTracker;
 import org.chromium.base.supplier.ObservableSupplierImpl;
+import org.chromium.base.supplier.OneshotSupplierImpl;
+import org.chromium.base.test.BaseJUnit4ClassRunner;
 import org.chromium.base.test.util.Batch;
+import org.chromium.base.test.util.DisabledTest;
 import org.chromium.cc.input.BrowserControlsState;
+import org.chromium.chrome.browser.magic_stack.ModuleRegistry;
 import org.chromium.chrome.browser.share.ShareDelegate;
 import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.chrome.browser.tab.TabBuilder;
 import org.chromium.chrome.browser.tab.TabLaunchType;
 import org.chromium.chrome.browser.ui.RootUiCoordinator;
-import org.chromium.chrome.test.ChromeJUnit4ClassRunner;
+import org.chromium.chrome.browser.ui.edge_to_edge.EdgeToEdgeController;
 import org.chromium.chrome.test.ChromeTabbedActivityTestRule;
 import org.chromium.chrome.test.batch.BlankCTATabInitialStateRule;
 import org.chromium.components.browser_ui.util.BrowserControlsVisibilityDelegate;
 import org.chromium.content_public.browser.LoadUrlParams;
-import org.chromium.content_public.browser.test.util.TestThreadUtils;
 import org.chromium.ui.OverscrollAction;
+import org.chromium.ui.base.BackGestureEventSwipeEdge;
 import org.chromium.ui.base.PageTransition;
 
-@RunWith(ChromeJUnit4ClassRunner.class)
+@RunWith(BaseJUnit4ClassRunner.class)
 @Batch(Batch.PER_CLASS)
 public class BraveSwipeRefreshHandlerTest {
     @ClassRule
@@ -59,7 +64,6 @@ public class BraveSwipeRefreshHandlerTest {
                 () -> {},
                 rootUiCoordinator.getBottomSheetController(),
                 /* chromeActivityNativeDelegate= */ cta,
-                /* isCustomTab= */ true,
                 rootUiCoordinator.getBrowserControlsManager(),
                 cta.getFullscreenManager(),
                 /* tabCreatorManager= */ cta,
@@ -74,11 +78,15 @@ public class BraveSwipeRefreshHandlerTest {
                 new PlaceholderJankTracker(),
                 rootUiCoordinator.getToolbarManager()::getToolbar,
                 null,
-                null);
+                null,
+                rootUiCoordinator.getToolbarManager().getTabStripHeightSupplier(),
+                new OneshotSupplierImpl<ModuleRegistry>(),
+                new ObservableSupplierImpl<EdgeToEdgeController>());
     }
 
     @Test
     @SmallTest
+    @DisabledTest(message = "https://github.com/brave/brave-browser/issues/40851")
     public void denyRefreshForLeo() throws Exception {
         boolean refreshed =
                 loadUrlAttemptRefresh("chrome-untrusted://chat/", PageTransition.FROM_API);
@@ -87,6 +95,7 @@ public class BraveSwipeRefreshHandlerTest {
 
     @Test
     @SmallTest
+    @DisabledTest(message = "https://github.com/brave/brave-browser/issues/40851")
     public void allowRefreshForNonLeo() throws Exception {
         boolean refreshed = loadUrlAttemptRefresh("https://brave.com", PageTransition.TYPED);
         Assert.assertTrue(refreshed);
@@ -94,7 +103,7 @@ public class BraveSwipeRefreshHandlerTest {
 
     private boolean loadUrlAttemptRefresh(String url, int transition) throws Exception {
         boolean refreshed =
-                TestThreadUtils.runOnUiThreadBlocking(
+                ThreadUtils.runOnUiThreadBlocking(
                         () -> {
                             try {
                                 Tab tab =
@@ -112,7 +121,8 @@ public class BraveSwipeRefreshHandlerTest {
                                         (BraveSwipeRefreshHandler)
                                                 BraveSwipeRefreshHandler.from(tab);
                                 return braveSwipeRefreshHandler.start(
-                                        OverscrollAction.PULL_TO_REFRESH, 0, 0, false);
+                                        OverscrollAction.PULL_TO_REFRESH,
+                                        BackGestureEventSwipeEdge.LEFT);
                             } catch (Exception ex) {
                                 throw ex;
                             }

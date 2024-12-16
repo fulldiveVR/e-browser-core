@@ -7,8 +7,8 @@
 
 #include <cstdint>
 #include <limits>
+#include <string>
 
-#include "base/containers/contains.h"
 #include "base/logging.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
@@ -24,20 +24,20 @@ namespace {
 
 constexpr int kSuspendedMetricValue = std::numeric_limits<int>::max();
 
-std::string GetPrefPath(const std::string& name) {
+std::string GetPrefPath(std::string_view name) {
   return base::StrCat({prefs::kP2APrefPathPrefix, name});
 }
 
 bool ShouldRecordAndEmitP2AHistogramName(const PrefService* const prefs,
-                                         const std::string& name) {
+                                         std::string_view name) {
   CHECK(prefs);
 
-  return base::Contains(kP2AAllowedNames, name) &&
+  return kP2AAllowedNames.count(name) > 0 &&
          prefs->FindPreference(GetPrefPath(name)) != nullptr;
 }
 
-void EmitP2AHistogramName(const std::string& name, const uint64_t sum) {
-  CHECK(base::Contains(kP2AAllowedNames, name));
+void EmitP2AHistogramName(std::string_view name, uint64_t sum) {
+  CHECK(kP2AAllowedNames.count(name));
 
   const size_t* const iter =
       std::lower_bound(std::cbegin(kP2AAnswerIndexIntervals),
@@ -58,13 +58,12 @@ void EmitP2AHistogramName(const std::string& name, const uint64_t sum) {
 void RegisterP2APrefs(PrefRegistrySimple* registry) {
   CHECK(registry);
 
-  for (const char* const name : kP2AAllowedNames) {
+  for (auto name : kP2AAllowedNames) {
     registry->RegisterListPref(GetPrefPath(name));
   }
 }
 
-void RecordAndEmitP2AHistogramName(PrefService* prefs,
-                                   const std::string& name) {
+void RecordAndEmitP2AHistogramName(PrefService* prefs, std::string_view name) {
   CHECK(prefs);
 
   if (!ShouldRecordAndEmitP2AHistogramName(prefs, name)) {
@@ -85,7 +84,7 @@ void SuspendP2AHistograms() {
   const int exclusive_max =
       std::size(kP2AAnswerIndexIntervals) + /*answer_index=8*/ 1;
 
-  for (const char* const name : kP2AAllowedNames) {
+  for (auto name : kP2AAllowedNames) {
     base::UmaHistogramExactLinear(name, /*sample*/ kSuspendedMetricValue,
                                   exclusive_max);
   }

@@ -14,17 +14,23 @@
 #include "brave/browser/ui/sidebar/sidebar_model.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar_utils.h"
-#include "brave/components/sidebar/sidebar_service.h"
+#include "brave/components/sidebar/browser/pref_names.h"
+#include "brave/components/sidebar/browser/sidebar_service.h"
+#include "brave/components/sidebar/common/features.h"
 #include "chrome/browser/history/history_service_factory.h"
+#include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/browser_navigator.h"
 #include "chrome/browser/ui/browser_navigator_params.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
-#include "chrome/browser/ui/side_panel/side_panel_entry_id.h"
-#include "chrome/browser/ui/side_panel/side_panel_ui.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/singleton_tabs.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry_id.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
+#include "components/prefs/pref_service.h"
 
 namespace sidebar {
 
@@ -92,6 +98,12 @@ void SidebarController::ActivateItemAt(std::optional<size_t> index,
   // Only an item for panel can get activated.
   if (item.open_in_panel) {
     sidebar_model_->SetActiveIndex(index);
+
+    if (sidebar::features::kOpenOneShotLeoPanel.Get() &&
+        item.built_in_item_type == SidebarItem::BuiltInItemType::kChatUI) {
+      // Prevent one-time Leo panel open.
+      browser_->profile()->GetPrefs()->SetBoolean(kLeoPanelOneShotOpen, true);
+    }
     return;
   }
 
@@ -117,7 +129,7 @@ void SidebarController::ActivateItemAt(std::optional<size_t> index,
 void SidebarController::ActivatePanelItem(
     SidebarItem::BuiltInItemType panel_item) {
   // For panel item activation, SidePanelUI is the single source of truth.
-  auto* panel_ui = SidePanelUI::GetSidePanelUIForBrowser(browser_);
+  auto* panel_ui = browser_->GetFeatures().side_panel_ui();
   if (!panel_ui) {
     return;
   }
@@ -210,6 +222,18 @@ void SidebarController::AddItemWithCurrentTab() {
   GetSidebarService(browser_)->AddItem(
       SidebarItem::Create(url, title, SidebarItem::Type::kTypeWeb,
                           SidebarItem::BuiltInItemType::kNone, false));
+}
+
+void SidebarController::UpdateActiveItemState(
+    std::optional<SidebarItem::BuiltInItemType> active_panel_item) {
+  if (!active_panel_item) {
+    ActivateItemAt(std::nullopt);
+    return;
+  }
+
+  if (auto index = sidebar_model_->GetIndexOf(*active_panel_item)) {
+    ActivateItemAt(*index);
+  }
 }
 
 void SidebarController::SetSidebar(Sidebar* sidebar) {

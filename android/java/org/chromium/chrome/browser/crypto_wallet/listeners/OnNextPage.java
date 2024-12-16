@@ -11,17 +11,13 @@ package org.chromium.chrome.browser.crypto_wallet.listeners;
  * icons.
  */
 public interface OnNextPage {
-    void gotoNextPage();
+    void incrementPages(int pages);
 
-    void onboardingCompleted();
+    void showWallet(final boolean forceNewTab);
 
     void gotoCreationPage();
 
     void gotoRestorePage(final boolean isOnboarding);
-
-    boolean showBiometricPrompt();
-
-    void enableBiometricPrompt();
 
     void showCloseButton(final boolean show);
 

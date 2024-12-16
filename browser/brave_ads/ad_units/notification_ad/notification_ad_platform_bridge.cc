@@ -10,10 +10,11 @@
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/ui/brave_ads/notification_ad_delegate.h"
 #include "brave/browser/ui/brave_ads/notification_ad_popup_handler.h"
+#include "brave/components/brave_ads/core/browser/service/ads_service.h"
 #include "chrome/browser/platform_util.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
-#include "chrome/browser/ui/browser_window.h"  // IWYU pragma: keep
+#include "chrome/browser/ui/browser_window.h"
 #include "ui/gfx/native_widget_types.h"
 
 namespace brave_ads {
@@ -39,7 +40,6 @@ class PassThroughDelegate : public NotificationAdDelegate {
       : profile_(profile), notification_ad_(notification_ad) {}
 
   PassThroughDelegate(const PassThroughDelegate&) = delete;
-
   PassThroughDelegate& operator=(const PassThroughDelegate&) = delete;
 
   void OnShow() override {
@@ -49,7 +49,7 @@ class PassThroughDelegate : public NotificationAdDelegate {
     ads_service->OnNotificationAdShown(notification_ad_.id());
   }
 
-  void OnClose(const bool by_user) override {
+  void OnClose(bool by_user) override {
     AdsService* ads_service = AdsServiceFactory::GetForProfile(&*profile_);
     CHECK(ads_service);
 
@@ -67,7 +67,7 @@ class PassThroughDelegate : public NotificationAdDelegate {
   ~PassThroughDelegate() override = default;
 
  private:
-  raw_ref<Profile> profile_;
+  const raw_ref<Profile> profile_;
 
   NotificationAd notification_ad_;
 };
@@ -89,7 +89,7 @@ void NotificationAdPlatformBridge::ShowNotificationAd(
   const gfx::NativeWindow browser_native_window = GetBrowserNativeWindow();
   const gfx::NativeView browser_native_view =
       platform_util::GetViewForWindow(browser_native_window);
-  NotificationAdPopupHandler::Show(&*profile_, notification_ad,
+  NotificationAdPopupHandler::Show(*profile_, notification_ad,
                                    browser_native_window, browser_native_view);
 }
 

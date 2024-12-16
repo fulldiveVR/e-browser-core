@@ -8,10 +8,12 @@
 
 #include <cstdint>
 
-#include "build/build_config.h"  // IWYU pragma: keep
+#include "base/time/time.h"
+#include "build/build_config.h"
 
 namespace brave_ads {
 
+inline constexpr char kNotificationAdTypeKey[] = "type";
 inline constexpr char kNotificationAdPlacementIdKey[] = "uuid";
 inline constexpr char kNotificationAdCreativeInstanceIdKey[] =
     "creative_instance_id";
@@ -32,9 +34,11 @@ inline constexpr int64_t kDefaultBraveRewardsNotificationAdsPerHour = 2;
 
 // Default ad notification timeout in seconds.
 #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
-inline constexpr int kDefaultNotificationAdTimeout = 120;
+inline constexpr base::TimeDelta kDefaultNotificationAdTimeout =
+    base::Minutes(2);
 #else
-inline constexpr int kDefaultNotificationAdTimeout = 30;
+inline constexpr base::TimeDelta kDefaultNotificationAdTimeout =
+    base::Seconds(30);
 #endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
 
 // Do not fallback to custom notification ad by default

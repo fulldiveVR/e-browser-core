@@ -11,17 +11,18 @@
 
 #include "base/functional/callback_forward.h"
 #include "base/memory/raw_ref.h"
+#include "base/memory/weak_ptr.h"
 #include "brave/components/brave_rewards/core/rewards_callbacks.h"
 
 namespace brave_rewards::internal {
 
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace contribution {
 
 class ContributionTip {
  public:
-  explicit ContributionTip(RewardsEngineImpl& engine);
+  explicit ContributionTip(RewardsEngine& engine);
 
   ~ContributionTip();
 
@@ -43,7 +44,8 @@ class ContributionTip {
 
   void OnPendingTipSaved(mojom::Result result);
 
-  const raw_ref<RewardsEngineImpl> engine_;
+  const raw_ref<RewardsEngine> engine_;
+  base::WeakPtrFactory<ContributionTip> weak_factory_{this};
 };
 
 }  // namespace contribution

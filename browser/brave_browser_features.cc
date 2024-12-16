@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include "brave/browser/brave_browser_features.h"
+
 #include "build/build_config.h"
 
 namespace features {
@@ -23,6 +24,10 @@ BASE_FEATURE(kBraveCopyCleanLinkByDefault,
 #endif
 );
 
+BASE_FEATURE(kBraveCopyCleanLinkFromJs,
+             "BraveCopyCleanLinkFromJs",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
 // Disable download warnings for dangerous files when Safe Browsing is
 // disabled.
 BASE_FEATURE(kBraveOverrideDownloadDangerLevel,
@@ -34,5 +39,17 @@ BASE_FEATURE(kBraveOverrideDownloadDangerLevel,
 BASE_FEATURE(kBraveWebViewRoundedCorners,
              "brave-web-view-rounded-corners",
              base::FEATURE_DISABLED_BY_DEFAULT);
+
+// Enable "day zero" experiment modifications, for potential user
+// retention improvements.
+BASE_FEATURE(kBraveDayZeroExperiment,
+             "BraveDayZeroExperiment",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+// The variant of the "day zero" experiment. i.e. A, B, C, D, etc.
+const base::FeatureParam<std::string> kBraveDayZeroExperimentVariant{
+    &kBraveDayZeroExperiment,
+    /*name=*/"variant",
+    /*default_value=*/""};
 
 }  // namespace features

@@ -10,7 +10,6 @@
 #include <memory>
 #include <optional>
 #include <set>
-#include <tuple>
 #include <utility>
 #include <vector>
 
@@ -19,6 +18,7 @@
 #include "brave/components/brave_wallet/browser/account_resolver_delegate.h"
 #include "brave/components/brave_wallet/browser/blockchain_registry.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_constants.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/eip1559_transaction.h"
 #include "brave/components/brave_wallet/browser/eth_data_builder.h"
 #include "brave/components/brave_wallet/browser/eth_data_parser.h"
@@ -26,6 +26,7 @@
 #include "brave/components/brave_wallet/browser/eth_tx_meta.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
+#include "brave/components/brave_wallet/browser/network_manager.h"
 #include "brave/components/brave_wallet/browser/tx_service.h"
 #include "brave/components/brave_wallet/common/eth_address.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
@@ -109,32 +110,28 @@ bool EthTxManager::ValidateTxData1559(const mojom::TxData1559Ptr& tx_data,
   return true;
 }
 
-EthTxManager::EthTxManager(TxService* tx_service,
+EthTxManager::EthTxManager(TxService& tx_service,
                            JsonRpcService* json_rpc_service,
-                           KeyringService* keyring_service,
-                           PrefService* prefs,
-                           TxStorageDelegate* delegate,
-                           AccountResolverDelegate* account_resolver_delegate)
-    : TxManager(std::make_unique<EthTxStateManager>(prefs,
-                                                    delegate,
+                           KeyringService& keyring_service,
+                           TxStorageDelegate& delegate,
+                           AccountResolverDelegate& account_resolver_delegate)
+    : TxManager(std::make_unique<EthTxStateManager>(delegate,
                                                     account_resolver_delegate),
                 std::make_unique<EthBlockTracker>(json_rpc_service),
                 tx_service,
-                keyring_service,
-                prefs),
-      nonce_tracker_(std::make_unique<EthNonceTracker>(GetEthTxStateManager(),
+                keyring_service),
+      nonce_tracker_(std::make_unique<EthNonceTracker>(&GetEthTxStateManager(),
                                                        json_rpc_service)),
       pending_tx_tracker_(
-          std::make_unique<EthPendingTxTracker>(GetEthTxStateManager(),
+          std::make_unique<EthPendingTxTracker>(&GetEthTxStateManager(),
                                                 json_rpc_service,
                                                 nonce_tracker_.get())),
-      json_rpc_service_(json_rpc_service),
-      account_resolver_delegate_(account_resolver_delegate) {
-  GetEthBlockTracker()->AddObserver(this);
+      json_rpc_service_(json_rpc_service) {
+  GetEthBlockTracker().AddObserver(this);
 }
 
 EthTxManager::~EthTxManager() {
-  GetEthBlockTracker()->RemoveObserver(this);
+  GetEthBlockTracker().RemoveObserver(this);
 }
 
 void EthTxManager::AddUnapprovedTransaction(
@@ -155,6 +152,31 @@ void EthTxManager::AddUnapprovedTransaction(
     AddUnapproved1559Transaction(
         chain_id, std::move(tx_data_union->get_eth_tx_data_1559()), from,
         std::move(origin_val), std::move(callback));
+  }
+}
+
+void EthTxManager::AddUnapprovedEvmTransaction(
+    mojom::NewEvmTransactionParamsPtr params,
+    const std::optional<url::Origin>& origin,
+    AddUnapprovedEvmTransactionCallback callback) {
+  auto origin_val =
+      origin.value_or(url::Origin::Create(GURL("chrome://wallet")));
+
+  auto tx_data =
+      mojom::TxData::New("", "", params->gas_limit, params->to, params->value,
+                         params->data, false, std::nullopt);
+
+  if (!json_rpc_service_->network_manager()
+           ->IsEip1559Chain(params->chain_id)
+           .value_or(false)) {
+    AddUnapprovedTransaction(params->chain_id, std::move(tx_data), params->from,
+                             std::move(origin_val), std::move(callback));
+  } else {
+    auto tx_data_1559 = mojom::TxData1559::New(
+        std::move(tx_data), params->chain_id, "", "", nullptr);
+    AddUnapproved1559Transaction(params->chain_id, std::move(tx_data_1559),
+                                 params->from, std::move(origin_val),
+                                 std::move(callback));
   }
 }
 
@@ -287,7 +309,7 @@ void EthTxManager::ContinueAddUnapprovedTransaction(
   meta.set_status(mojom::TransactionStatus::Unapproved);
   meta.set_sign_only(sign_only);
   meta.set_chain_id(chain_id);
-  if (!tx_state_manager_->AddOrUpdateTx(meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(meta)) {
     std::move(callback).Run(
         false, "", l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
     return;
@@ -389,8 +411,7 @@ void EthTxManager::OnGetGasOracleForUnapprovedTransaction(
 void EthTxManager::GetNonceForHardwareTransaction(
     const std::string& tx_meta_id,
     GetNonceForHardwareTransactionCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!meta) {
     LOG(ERROR) << "No transaction found";
     std::move(callback).Run(std::nullopt);
@@ -411,24 +432,22 @@ void EthTxManager::GetNonceForHardwareTransaction(
   }
 }
 
-void EthTxManager::GetTransactionMessageToSign(
+void EthTxManager::GetEthTransactionMessageToSign(
     const std::string& tx_meta_id,
-    GetTransactionMessageToSignCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
+    GetEthTransactionMessageToSignCallback callback) {
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!meta) {
     VLOG(1) << __FUNCTION__ << "No transaction found with id:" << tx_meta_id;
-    std::move(callback).Run(nullptr);
+    std::move(callback).Run(std::nullopt);
     return;
   }
   uint256_t chain_id = 0;
   if (!HexValueToUint256(meta->chain_id(), &chain_id)) {
-    std::move(callback).Run(nullptr);
+    std::move(callback).Run(std::nullopt);
     return;
   }
-  auto message = meta->tx()->GetMessageToSign(chain_id, false);
-  auto encoded = brave_wallet::ToHex(message);
-  std::move(callback).Run(mojom::MessageToSignUnion::NewMessageStr(encoded));
+  std::move(callback).Run(base::ToLowerASCII(
+      base::HexEncode(meta->tx()->GetMessageToSign(chain_id, false))));
 }
 
 mojom::CoinType EthTxManager::GetCoinType() const {
@@ -442,28 +461,25 @@ void EthTxManager::OnGetNextNonceForHardware(
     uint256_t nonce) {
   if (!success) {
     meta->set_status(mojom::TransactionStatus::Error);
-    tx_state_manager_->AddOrUpdateTx(*meta);
+    tx_state_manager().AddOrUpdateTx(*meta);
     VLOG(1) << __FUNCTION__
             << "GetNextNonce failed for tx with meta:" << meta->id();
     std::move(callback).Run(std::nullopt);
     return;
   }
   meta->tx()->set_nonce(nonce);
-  if (!tx_state_manager_->AddOrUpdateTx(*meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*meta)) {
     std::move(callback).Run(std::nullopt);
     return;
   }
   std::move(callback).Run(Uint256ValueToHex(nonce));
 }
 
-void EthTxManager::ProcessHardwareSignature(
+void EthTxManager::ProcessEthHardwareSignature(
     const std::string& tx_meta_id,
-    const std::string& v,
-    const std::string& r,
-    const std::string& s,
-    ProcessHardwareSignatureCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
+    mojom::EthereumSignatureVRSPtr hw_signature,
+    ProcessEthHardwareSignatureCallback callback) {
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!meta) {
     VLOG(1) << __FUNCTION__ << "No transaction found with id" << tx_meta_id;
     std::move(callback).Run(
@@ -471,12 +487,13 @@ void EthTxManager::ProcessHardwareSignature(
         l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_TRANSACTION_NOT_FOUND));
     return;
   }
-  if (!meta->tx()->ProcessVRS(v, r, s)) {
+  if (!meta->tx()->ProcessVRS(hw_signature->v_bytes, hw_signature->r_bytes,
+                              hw_signature->s_bytes)) {
     VLOG(1) << __FUNCTION__
             << "Could not initialize a transaction with v,r,s for id:"
             << tx_meta_id;
     meta->set_status(mojom::TransactionStatus::Error);
-    tx_state_manager_->AddOrUpdateTx(*meta);
+    tx_state_manager().AddOrUpdateTx(*meta);
     std::move(callback).Run(
         false, mojom::ProviderError::kInternalError,
         l10n_util::GetStringUTF8(
@@ -484,7 +501,7 @@ void EthTxManager::ProcessHardwareSignature(
     return;
   }
   meta->set_status(mojom::TransactionStatus::Approved);
-  if (!tx_state_manager_->AddOrUpdateTx(*meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*meta)) {
     std::move(callback).Run(
         false, mojom::ProviderError::kInternalError,
         l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
@@ -501,7 +518,7 @@ void EthTxManager::ProcessHardwareSignature(
 }
 
 void EthTxManager::ContinueProcessHardwareSignature(
-    ProcessHardwareSignatureCallback callback,
+    ProcessEthHardwareSignatureCallback callback,
     bool status,
     mojom::ProviderErrorUnionPtr error_union,
     const std::string& error_message) {
@@ -512,8 +529,7 @@ void EthTxManager::ContinueProcessHardwareSignature(
 
 void EthTxManager::ApproveTransaction(const std::string& tx_meta_id,
                                       ApproveTransactionCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!meta) {
     LOG(ERROR) << "No transaction found";
     std::move(callback).Run(
@@ -544,7 +560,7 @@ void EthTxManager::OnGetNextNonce(std::unique_ptr<EthTxMeta> meta,
                                   uint256_t nonce) {
   if (!success) {
     meta->set_status(mojom::TransactionStatus::Error);
-    tx_state_manager_->AddOrUpdateTx(*meta);
+    tx_state_manager().AddOrUpdateTx(*meta);
     LOG(ERROR) << "GetNextNonce failed";
     std::move(callback).Run(
         false,
@@ -566,11 +582,20 @@ void EthTxManager::OnGetNextNonce(std::unique_ptr<EthTxMeta> meta,
   }
 
   meta->tx()->set_nonce(nonce);
-  DCHECK(!keyring_service_->IsLocked(mojom::kDefaultKeyringId));
-  keyring_service_->SignTransactionByDefaultKeyring(*meta->from(), meta->tx(),
+
+  if (keyring_service().IsLockedSync()) {
+    std::move(callback).Run(
+        false,
+        mojom::ProviderErrorUnion::NewProviderError(
+            mojom::ProviderError::kInternalError),
+        l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+    return;
+  }
+
+  keyring_service().SignTransactionByDefaultKeyring(*meta->from(), meta->tx(),
                                                     chain_id);
   meta->set_status(mojom::TransactionStatus::Approved);
-  if (!tx_state_manager_->AddOrUpdateTx(*meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*meta)) {
     std::move(callback).Run(
         false,
         mojom::ProviderErrorUnion::NewProviderError(
@@ -590,7 +615,7 @@ void EthTxManager::OnGetNextNonce(std::unique_ptr<EthTxMeta> meta,
   if (meta->sign_only()) {
     meta->set_status(mojom::TransactionStatus::Signed);
     meta->set_tx_hash(meta->tx()->GetTransactionHash());
-    if (!tx_state_manager_->AddOrUpdateTx(*meta)) {
+    if (!tx_state_manager().AddOrUpdateTx(*meta)) {
       std::move(callback).Run(
           false,
           mojom::ProviderErrorUnion::NewProviderError(
@@ -627,9 +652,9 @@ void EthTxManager::OnPublishTransaction(const std::string& chain_id,
                                         const std::string& tx_hash,
                                         mojom::ProviderError error,
                                         const std::string& error_message) {
-  std::unique_ptr<TxMeta> meta = tx_state_manager_->GetTx(tx_meta_id);
+  std::unique_ptr<TxMeta> meta = tx_state_manager().GetTx(tx_meta_id);
   if (!meta) {
-    DCHECK(false) << "Transaction should be found";
+    LOG(ERROR) << "Transaction should be found";
     std::move(callback).Run(
         false,
         mojom::ProviderErrorUnion::NewProviderError(
@@ -646,7 +671,7 @@ void EthTxManager::OnPublishTransaction(const std::string& chain_id,
     meta->set_status(mojom::TransactionStatus::Error);
   }
 
-  if (!tx_state_manager_->AddOrUpdateTx(*meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*meta)) {
     std::move(callback).Run(
         false,
         mojom::ProviderErrorUnion::NewProviderError(
@@ -842,7 +867,7 @@ void EthTxManager::MakeERC1155TransferFromData(
 }
 
 void EthTxManager::NotifyUnapprovedTxUpdated(TxMeta* meta) {
-  tx_service_->OnUnapprovedTxUpdated(meta->ToTransactionInfo());
+  tx_service().OnUnapprovedTxUpdated(meta->ToTransactionInfo());
 }
 
 void EthTxManager::SetGasPriceAndLimitForUnapprovedTransaction(
@@ -855,7 +880,7 @@ void EthTxManager::SetGasPriceAndLimitForUnapprovedTransaction(
     return;
   }
 
-  auto tx_meta = GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  auto tx_meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!tx_meta || tx_meta->status() != mojom::TransactionStatus::Unapproved) {
     std::move(callback).Run(false);
     return;
@@ -874,7 +899,7 @@ void EthTxManager::SetGasPriceAndLimitForUnapprovedTransaction(
   }
   tx_meta->tx()->set_gas_limit(value);
 
-  if (!tx_state_manager_->AddOrUpdateTx(*tx_meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*tx_meta)) {
     std::move(callback).Run(false);
     return;
   }
@@ -894,7 +919,7 @@ void EthTxManager::SetGasFeeAndLimitForUnapprovedTransaction(
     return;
   }
 
-  auto tx_meta = GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  auto tx_meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!tx_meta || tx_meta->status() != mojom::TransactionStatus::Unapproved ||
       tx_meta->tx()->type() != 2 /* Eip1559 */) {
     std::move(callback).Run(false);
@@ -922,7 +947,7 @@ void EthTxManager::SetGasFeeAndLimitForUnapprovedTransaction(
   }
   tx1559->set_gas_limit(value);
 
-  if (!tx_state_manager_->AddOrUpdateTx(*tx_meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*tx_meta)) {
     std::move(callback).Run(false);
     return;
   }
@@ -934,14 +959,14 @@ void EthTxManager::SetDataForUnapprovedTransaction(
     const std::string& tx_meta_id,
     const std::vector<uint8_t>& data,
     SetDataForUnapprovedTransactionCallback callback) {
-  auto tx_meta = GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  auto tx_meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!tx_meta || tx_meta->status() != mojom::TransactionStatus::Unapproved) {
     std::move(callback).Run(false);
     return;
   }
 
   tx_meta->tx()->set_data(data);
-  if (!tx_state_manager_->AddOrUpdateTx(*tx_meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*tx_meta)) {
     std::move(callback).Run(false);
     return;
   }
@@ -953,7 +978,7 @@ void EthTxManager::SetNonceForUnapprovedTransaction(
     const std::string& tx_meta_id,
     const std::string& nonce,
     SetNonceForUnapprovedTransactionCallback callback) {
-  auto tx_meta = GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  auto tx_meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!tx_meta || tx_meta->status() != mojom::TransactionStatus::Unapproved) {
     std::move(callback).Run(false);
     return;
@@ -969,7 +994,7 @@ void EthTxManager::SetNonceForUnapprovedTransaction(
     }
     tx_meta->tx()->set_nonce(nonce_uint);
   }
-  if (!tx_state_manager_->AddOrUpdateTx(*tx_meta)) {
+  if (!tx_state_manager().AddOrUpdateTx(*tx_meta)) {
     std::move(callback).Run(false);
     return;
   }
@@ -979,7 +1004,7 @@ void EthTxManager::SetNonceForUnapprovedTransaction(
 
 std::unique_ptr<EthTxMeta> EthTxManager::GetTxForTesting(
     const std::string& tx_meta_id) {
-  return GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  return GetEthTxStateManager().GetEthTx(tx_meta_id);
 }
 
 void EthTxManager::OnNewBlock(const std::string& chain_id,
@@ -1000,8 +1025,7 @@ void EthTxManager::SpeedupOrCancelTransaction(
     const std::string& tx_meta_id,
     bool cancel,
     SpeedupOrCancelTransactionCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
   if (!meta || meta->status() != mojom::TransactionStatus::Submitted) {
     std::move(callback).Run(
         false, "",
@@ -1141,12 +1165,19 @@ void EthTxManager::ContinueSpeedupOrCancel1559Transaction(
 
 void EthTxManager::RetryTransaction(const std::string& tx_meta_id,
                                     RetryTransactionCallback callback) {
-  std::unique_ptr<EthTxMeta> meta =
-      GetEthTxStateManager()->GetEthTx(tx_meta_id);
-  if (!meta || meta->status() != mojom::TransactionStatus::Error) {
+  std::unique_ptr<EthTxMeta> meta = GetEthTxStateManager().GetEthTx(tx_meta_id);
+
+  if (!meta || !meta->tx()) {
     std::move(callback).Run(
         false, "",
         l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_TRANSACTION_NOT_FOUND));
+    return;
+  }
+
+  if (!meta->IsRetriable()) {
+    std::move(callback).Run(
+        false, "",
+        l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_TRANSACTION_NOT_RETRIABLE));
     return;
   }
 
@@ -1260,12 +1291,12 @@ void EthTxManager::Reset() {
   pending_tx_tracker_->Reset();
 }
 
-EthTxStateManager* EthTxManager::GetEthTxStateManager() {
-  return static_cast<EthTxStateManager*>(tx_state_manager_.get());
+EthTxStateManager& EthTxManager::GetEthTxStateManager() {
+  return static_cast<EthTxStateManager&>(tx_state_manager());
 }
 
-EthBlockTracker* EthTxManager::GetEthBlockTracker() {
-  return static_cast<EthBlockTracker*>(block_tracker_.get());
+EthBlockTracker& EthTxManager::GetEthBlockTracker() {
+  return static_cast<EthBlockTracker&>(block_tracker());
 }
 
 }  // namespace brave_wallet

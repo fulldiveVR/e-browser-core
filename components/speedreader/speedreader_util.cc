@@ -147,7 +147,6 @@ bool Transit(State& state, const State& desired) {
   }
 
   NOTREACHED();
-  return false;
 }
 
 }  // namespace DistillStates

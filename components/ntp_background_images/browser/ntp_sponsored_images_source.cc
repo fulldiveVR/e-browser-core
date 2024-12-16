@@ -64,13 +64,7 @@ void NTPSponsoredImagesSource::StartDataRequest(
   }
 
   base::FilePath image_file_path = GetLocalFilePathFor(path);
-  if (image_file_path.empty()) {
-    content::GetUIThreadTaskRunner({})->PostTask(
-        FROM_HERE, base::BindOnce(std::move(callback),
-                                  scoped_refptr<base::RefCountedMemory>()));
-    return;
-  }
-
+  CHECK(!image_file_path.empty());
   GetImageFile(image_file_path, std::move(callback));
 }
 
@@ -90,10 +84,8 @@ void NTPSponsoredImagesSource::OnGotImageFile(
   if (!input)
     return;
 
-  scoped_refptr<base::RefCountedMemory> bytes;
-  bytes = new base::RefCountedBytes(
-      reinterpret_cast<const unsigned char*>(input->c_str()), input->length());
-  std::move(callback).Run(std::move(bytes));
+  std::move(callback).Run(
+      new base::RefCountedBytes(base::as_byte_span(*input)));
 }
 
 std::string NTPSponsoredImagesSource::GetMimeType(const GURL& url) {
@@ -109,8 +101,7 @@ std::string NTPSponsoredImagesSource::GetMimeType(const GURL& url) {
   } else if (file_path.MatchesExtension(FILE_PATH_LITERAL(".avif"))) {
     return "image/avif";
   } else {
-    NOTREACHED();
-    return "image/jpeg";
+    return "";
   }
 }
 
@@ -122,8 +113,7 @@ base::FilePath NTPSponsoredImagesSource::GetLocalFilePathFor(
     const std::string& path) {
   const bool is_super_referral_path = IsSuperReferralPath(path);
   auto* images_data = service_->GetBrandedImagesData(is_super_referral_path);
-  if (!images_data)
-    return base::FilePath();
+  CHECK(images_data);
 
   const auto basename_from_path =
       base::FilePath::FromUTF8Unsafe(path).BaseName();
@@ -148,8 +138,9 @@ base::FilePath NTPSponsoredImagesSource::GetLocalFilePathFor(
     }
   }
 
+  // Should give valid path always here because invalid |path| was
+  // already filtered by `IsValidPath()`.
   NOTREACHED();
-  return base::FilePath();
 }
 
 bool NTPSponsoredImagesSource::IsValidPath(const std::string& path) const {

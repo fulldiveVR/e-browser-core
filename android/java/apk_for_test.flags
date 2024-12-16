@@ -16,6 +16,9 @@
 -keep class org.chromium.brave_wallet.mojom.GasEstimation1559 { *; }
 -keep class org.chromium.brave_wallet.mojom.TxData1559 { *; }
 -keep class org.chromium.brave_wallet.mojom.NetworkInfo { *; }
+-keep class org.chromium.components.browser_ui.media.BraveMediaSessionHelper { *; }
+-keep class org.chromium.content_public.browser.MediaSessionObserver { *; }
+-keep class org.chromium.ui.ViewProvider { *; }
 
 -keep class org.chromium.chrome.browser.bookmarks.BookmarkBridge {
     *** mNativeBookmarkBridge;
@@ -40,8 +43,11 @@
 -keep class org.chromium.chrome.browser.ntp.NewTabPageLayout {
     *** mMvTilesContainerLayout;
     *** mLogoCoordinator;
+    *** mInitialTileNum;
     *** insertSiteSectionView(...);
-    *** isScrollableMvtEnabled(...);
+    *** setSearchProviderTopMargin(...);
+    *** setSearchProviderBottomMargin(...);
+    *** getLogoMargin(...);
 }
 
 -keep class org.chromium.chrome.browser.suggestions.tile.MostVisitedTilesMediator {
@@ -52,7 +58,6 @@
 
 -keep class org.chromium.chrome.browser.suggestions.tile.BraveMostVisitedTilesMediator {
     public <init>(...);
-    *** updateTilePlaceholderVisibility(...);
 }
 
 -keep class org.chromium.chrome.browser.ntp.NewTabPage {
@@ -61,8 +66,8 @@
     *** mNewTabPageLayout;
     *** mFeedSurfaceProvider;
     *** mToolbarSupplier;
-    *** mTabModelSelector;
     *** mBottomSheetController;
+    *** mTabStripHeightSupplier;
     *** updateSearchProviderHasLogo(...);
 }
 
@@ -93,6 +98,11 @@
     *** createAdapterIfNecessary(...);
 }
 
+-keep class org.chromium.components.browser_ui.site_settings.SiteSettingsCategory {
+    *** contentSettingsType(...);
+    *** preferenceKey(...);
+}
+
 -keep class org.chromium.base.CommandLineInitUtil {
     *** initCommandLine(...);
 }
@@ -115,12 +125,11 @@
     public <init>(...);
     *** mBottomControlsCoordinatorSupplier;
     *** mCallbackController;
-    *** mBrowserControlsSizer;
+    *** mBottomControlsStacker;
     *** mFullscreenManager;
     *** mActivityTabProvider;
     *** mAppThemeColorProvider;
     *** mScrimCoordinator;
-    *** mShowStartSurfaceSupplier;
     *** mMenuButtonCoordinator;
     *** mToolbarTabController;
     *** mLocationBar;
@@ -134,19 +143,18 @@
     *** mIncognitoStateProvider;
     *** mTabGroupUi;
     *** mBottomSheetController;
-    *** mActivityLifecycleDispatcher;
-    *** mIsWarmOnResumeSupplier;
     *** mTabContentManager;
     *** mTabCreatorManager;
-    *** mSnackbarManager;
+    *** mModalDialogManagerSupplier;
     *** mTabObscuringHandler;
+    *** mReadAloudControllerSupplier;
+    *** mTopUiThemeColorProvider;
     *** onOrientationChange(...);
     *** updateBookmarkButtonStatus(...);
     *** updateReloadState(...);
 }
 
 -keep class org.chromium.chrome.browser.toolbar.top.TopToolbarCoordinator {
-    *** mTabSwitcherModeCoordinator;
     *** mOptionalButtonController;
     *** mToolbarColorObserverManager;
     public <init>(...);
@@ -154,21 +162,6 @@
 
 -keep class org.chromium.chrome.browser.toolbar.top.BraveTopToolbarCoordinator {
     public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.toolbar.top.TabSwitcherModeTTCoordinator {
-    *** mActiveTabSwitcherToolbar;
-}
-
--keep class org.chromium.chrome.browser.toolbar.top.TabSwitcherModeTopToolbar {
-    *** mNewTabViewButton;
-    *** mNewTabImageButton;
-    *** mMenuButton;
-    *** mShouldShowNewTabVariation;
-    *** mIsIncognito;
-    *** updateNewTabButtonVisibility(...);
-    *** shouldShowIncognitoToggle(...);
-    *** getToolbarColorForCurrentState(...);
 }
 
 -keep class org.chromium.chrome.browser.download.MimeUtils {
@@ -197,12 +190,6 @@
 
 -keep class org.chromium.chrome.browser.tabmodel.BraveTabCreator {
     public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.bookmarks.BraveBookmarkUtils {
-    *** addOrEditBookmark(...);
-    *** showBookmarkManagerOnPhone(...);
-    *** isSpecialFolder(...);
 }
 
 -keep class org.chromium.chrome.browser.bookmarks.BookmarkUtils {
@@ -290,19 +277,11 @@
     <init>(...);
     *** mBottomControlsHeight;
     *** mModel;
-    *** mBrowserControlsSizer;
+    *** mBottomControlsStacker;
 }
 
 -keep class org.chromium.chrome.browser.toolbar.bottom.BraveBottomControlsMediator {
     <init>(...);
-}
-
--keep class org.chromium.chrome.browser.query_tiles.QueryTileSection {
-    *** getMaxRowsForMostVisitedTiles(...);
-}
-
--keep class org.chromium.chrome.browser.query_tiles.BraveQueryTileSection {
-    *** getMaxRowsForMostVisitedTiles(...);
 }
 
 -keep class org.chromium.chrome.browser.password_manager.settings.PasswordSettings {
@@ -325,16 +304,12 @@
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.settings.SettingsLauncherImpl {
-    public <init>(...);
+-keep class org.chromium.chrome.browser.settings.SettingsNavigationImpl {
+    <init>(...);
 }
 
 -keep class org.chromium.chrome.browser.settings.BraveSettingsLauncherImpl {
     public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.toolbar.IncognitoToggleTabLayout {
-    *** mIncognitoButtonIcon;
 }
 
 -keep class org.chromium.chrome.browser.tasks.tab_management.TabGroupUiCoordinator {
@@ -371,6 +346,8 @@
 
 -keep class org.chromium.chrome.browser.app.BraveActivity
 
+-keep class org.chromium.chrome.browser.media.BravePictureInPictureActivity
+
 -keep class org.chromium.chrome.browser.suggestions.tile.SuggestionsTileView
 
 -keep class org.chromium.chrome.browser.suggestions.tile.BraveTileView
@@ -379,10 +356,9 @@
 
 -keep class org.chromium.chrome.browser.toolbar.top.BraveToolbarLayoutImpl
 
--keep class org.chromium.chrome.browser.toolbar.top.ToolbarPhone
-
--keep class org.chromium.components.permissions.BravePermissionDialogModel {
-    *** getModel(...);
+-keep class org.chromium.chrome.browser.toolbar.top.ToolbarPhone {
+    *** mLocationBarBackgroundColorForNtp;
+    *** mToolbarBackgroundColorForNtp;
 }
 
 -keep class org.chromium.components.permissions.PermissionDialogModelFactory {
@@ -411,12 +387,6 @@
     *** mRootView;
 }
 
--keep class org.chromium.chrome.browser.feed.BraveFeedSurfaceCoordinator {
-    *** mScrollViewForPolicy;
-    *** mNtpHeader;
-    *** mRootView;
-}
-
 -keep class org.chromium.chrome.browser.feed.FeedSurfaceMediator {
     <init>(...);
     *** mCoordinator;
@@ -425,8 +395,6 @@
 
 -keep class org.chromium.chrome.browser.feed.BraveFeedSurfaceMediator {
     <init>(...);
-    *** mCoordinator;
-    *** mSnapScrollHelper;
 }
 
 -keep class org.chromium.chrome.browser.toolbar.menu_button.MenuButtonCoordinator {
@@ -473,10 +441,6 @@
     public <init>(...);
 }
 
--keep class org.chromium.components.browser_ui.site_settings.BraveContentSettingsResources {
-    *** getResourceItem(...);
-}
-
 -keep class org.chromium.components.browser_ui.site_settings.SiteSettings {
     public <init>(...);
 }
@@ -485,23 +449,12 @@
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.infobar.TranslateCompactInfoBar {
-    public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.infobar.BraveTranslateCompactInfoBarBase {
-    public <init>(...);
-}
-
 -keep class org.chromium.chrome.browser.tasks.tab_management.TabUiThemeProvider {
-    *** getTitleTextColor(...);
     *** getActionButtonTintList(...);
-    *** getCardViewBackgroundColor(...);
 }
 
--keep class org.chromium.chrome.browser.tasks.tab_management.BraveTabUiThemeProvider {
+-keep class org.chromium.chrome.browser.tab_ui.TabUiThemeUtils {
     *** getTitleTextColor(...);
-    *** getActionButtonTintList(...);
     *** getCardViewBackgroundColor(...);
 }
 
@@ -529,6 +482,29 @@
 }
 
 -keep class org.chromium.chrome.browser.omnibox.suggestions.BraveAutocompleteMediatorBase {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.multiwindow.MultiInstanceManagerApi31 {
+    *** mInstanceId;
+    moveTabAction(...);
+    handleMenuOrKeyboardAction(...);
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.multiwindow.BraveMultiInstanceManagerApi31 {
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.multiwindow.MultiWindowUtils {
+    *** shouldShowManageWindowsMenu(...);
+    *** isOpenInOtherWindowSupported(...);
+    *** isMoveToOtherWindowSupported(...);
+    *** canEnterMultiWindowMode(...);
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.multiwindow.BraveMultiWindowUtils {
     public <init>(...);
 }
 
@@ -578,7 +554,6 @@
     *** mIsTablet;
     *** mNativeInitialized;
     *** mIsLocationBarFocusedFromNtpScroll;
-    *** mShouldClearOmniboxOnFocus;
     *** mContext;
     *** mBrandedColorScheme;
     *** mAssistantVoiceSearchServiceSupplier;
@@ -591,11 +566,6 @@
 
 -keep class org.chromium.chrome.browser.omnibox.BraveLocationBarMediator {
     public <init>(...);
-    *** getOmniboxUmaClass(...);
-    *** getSaveOfflineButtonStateClass(...);
-    *** getLensControllerClass(...);
-    *** getLocaleManagerClass(...);
-    *** getPrivacyPreferencesManagerClass(...);
 }
 
 -keep class org.chromium.chrome.browser.omnibox.suggestions.DropdownItemViewInfoListBuilder {
@@ -614,10 +584,6 @@
     <init>(...);
 }
 
--keep class org.chromium.chrome.browser.ui.default_browser_promo.BraveDefaultBrowserPromoUtils {
-    *** prepareLaunchPromoIfNeeded(...);
-}
-
 -keep class org.chromium.chrome.browser.ui.default_browser_promo.DefaultBrowserPromoUtils {
     *** prepareLaunchPromoIfNeeded(...);
 }
@@ -629,7 +595,7 @@
     *** get(...);
 }
 
--keep class org.chromium.chrome.browser.partnercustomizations.CustomizationProviderDelegateImpl {
+-keep class org.chromium.chrome.browser.partnercustomizations.CustomizationProviderDelegateUpstreamImpl {
     public <init>(...);
 }
 
@@ -668,7 +634,7 @@
 }
 
 -keep class org.chromium.chrome.browser.tasks.ReturnToChromeUtil {
-    *** shouldShowTabSwitcher(...);
+    *** shouldShowNtpAsHomeSurfaceAtStartup(...);
 }
 
 -keep class org.chromium.chrome.browser.IntentHandler {
@@ -683,7 +649,7 @@
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.AppHooksImpl {
+-keep class org.chromium.chrome.browser.AppHooks {
     public <init>(...);
 }
 
@@ -691,27 +657,24 @@
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.flags.CachedFlag {
+-keep class org.chromium.components.cached_flags.CachedFlag {
     *** mDefaultValue;
     <init>(...);
 }
 
--keep class org.chromium.chrome.browser.flags.BraveCachedFlag {
+-keep class org.chromium.components.cached_flags.BraveCachedFlag {
     <init>(...);
 }
 
 -keep class org.chromium.chrome.browser.logo.LogoMediator {
+    <init>(...);
     *** mLogoModel;
     *** mShouldShowLogo;
-    public <init>(...);
     *** updateVisibility(...);
 }
 
 -keep class org.chromium.chrome.browser.logo.BraveLogoMediator {
-    *** mLogoModel;
-    *** mShouldShowLogo;
     public <init>(...);
-    *** updateVisibility(...);
 }
 
 -keep class org.chromium.chrome.browser.document.ChromeLauncherActivity {
@@ -786,12 +749,12 @@
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.tasks.tab_groups.TabGroupModelFilter {
+-keep class org.chromium.chrome.browser.tabmodel.TabGroupModelFilterImpl {
     *** mIsResetting;
     public <init>(...);
 }
 
--keep class org.chromium.chrome.browser.tasks.tab_groups.BraveTabGroupModelFilter {
+-keep class org.chromium.chrome.browser.tabmodel.BraveTabGroupModelFilter {
     public <init>(...);
 }
 
@@ -820,4 +783,120 @@
 
 -keep class org.chromium.chrome.browser.bookmarks.BraveBookmarkUiPrefs {
     <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.customtabs.features.partialcustomtab.PartialCustomTabBottomSheetStrategy {
+    public <init>(...);
+    *** mStopShowingSpinner;
+    *** mTab;
+}
+
+-keep class org.chromium.chrome.browser.customtabs.features.partialcustomtab.BravePartialCustomTabBottomSheetStrategy {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.compositor.layouts.ToolbarSwipeLayout {
+    public <init>(...);
+    *** mMoveToolbar;
+}
+
+-keep class org.chromium.chrome.browser.compositor.layouts.BraveToolbarSwipeLayout {
+    public <init>(...);
+}
+
+-keep class org.chromium.components.embedder_support.view.ContentView {
+    protected <init>(...);
+}
+
+-keep class org.chromium.components.embedder_support.view.BraveContentView {
+    protected <init>(...);
+}
+
+-keep class org.chromium.components.signin.SystemAccountManagerDelegate {
+    public <init>(...);
+}
+
+-keep class org.chromium.components.signin.BraveSystemAccountManagerDelegate {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.AutocompleteEditText {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.BraveAutocompleteEditText {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.suggestions.editurl.EditUrlSuggestionProcessor {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.suggestions.editurl.BraveEditUrlSuggestionProcessor {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.suggestions.editurl.BraveEditUrlSuggestionProcessorBase
+
+-keep class org.chromium.chrome.browser.password_manager.settings.ExportFlow {
+    public <init>(...);
+    *** runSharePasswordsIntent(...);
+    *** runCreateFileOnDiskIntent(...);
+}
+
+-keep class org.chromium.chrome.browser.password_manager.settings.BraveExportFlow {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.suggestions.tile.MostVisitedTilesLayout
+
+-keep class org.chromium.chrome.browser.suggestions.tile.BraveMostVisitedTilesLayoutBase
+
+-keep class org.chromium.chrome.browser.hub.HubManagerImpl {
+    *** ensureHubCoordinatorIsInitialized(...);
+}
+
+-keep class org.chromium.chrome.browser.ui.system.StatusBarColorController {
+    public <init>(...);
+    *** mBackgroundColorForNtp;
+}
+
+-keep class org.chromium.chrome.browser.ui.system.BraveStatusBarColorController {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.omnibox.styles.OmniboxResourceProvider {
+    *** getToolbarSidePaddingForNtp(...);
+}
+
+-keep class org.chromium.chrome.browser.notifications.NotificationPlatformBridge {
+    *** dispatchNotificationEvent(...);
+    *** prepareNotificationBuilder(...);
+}
+
+-keep class org.chromium.chrome.browser.tasks.tab_management.BraveTabSwitcherPaneBase
+
+-keep class org.chromium.chrome.browser.tasks.tab_management.TabSwitcherPane
+
+-keep class org.chromium.chrome.browser.tasks.tab_management.IncognitoTabSwitcherPane {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.tasks.tab_management.BraveIncognitoTabSwitcherPane {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.undo_tab_close_snackbar.UndoBarController {
+    *** showUndoBar(...);
+}
+
+-keep class org.chromium.chrome.browser.tabbed_mode.TabbedNavigationBarColorController {
+    *** mContext;
+    *** mTabModelSelector;
+}
+
+-keep class org.chromium.chrome.browser.tabbed_mode.BraveTabbedNavigationBarColorControllerBase
+
+-keep class org.chromium.chrome.browser.settings.SettingsIntentUtil {
+    *** createIntent(...);
 }

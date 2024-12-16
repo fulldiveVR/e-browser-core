@@ -4,11 +4,9 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
-import { useDispatch } from 'react-redux'
 
 // Types
 import { BraveWallet, SupportedTestNetworks } from '../../../constants/types'
-import { LOCAL_STORAGE_KEYS } from '../../../common/constants/local-storage-keys'
 
 // Components
 import NetworkFilterItem from './network-filter-item'
@@ -18,7 +16,6 @@ import { CreateNetworkIcon } from '../../shared/create-network-icon/index'
 import { useGetVisibleNetworksQuery } from '../../../common/slices/api.slice'
 
 // Utils
-import { WalletActions } from '../../../common/actions'
 import { getLocale } from '../../../../common/locale'
 
 // Options
@@ -50,7 +47,8 @@ interface Props {
   >
   isV2?: boolean
   disableAllAccountsOption?: boolean
-  onSelectNetwork?: (network: BraveWallet.NetworkInfo) => void
+  onSelectNetwork: (network: BraveWallet.NetworkInfo) => void
+  dropdownPosition?: 'left' | 'right'
 }
 
 export const NetworkFilterSelector = ({
@@ -59,19 +57,15 @@ export const NetworkFilterSelector = ({
   selectedNetwork = AllNetworksOption,
   isV2,
   selectedAccount,
-  disableAllAccountsOption
+  disableAllAccountsOption,
+  dropdownPosition
 }: Props) => {
   // state
   const [showNetworkFilter, setShowNetworkFilter] =
     React.useState<boolean>(false)
 
-  // redux
-  const dispatch = useDispatch()
-
   // queries
-  const { data: reduxNetworkList } = useGetVisibleNetworksQuery(undefined, {
-    skip: !!networkListSubset?.length
-  })
+  const { data: reduxNetworkList } = useGetVisibleNetworksQuery()
 
   const networks = networkListSubset?.length
     ? networkListSubset
@@ -134,20 +128,7 @@ export const NetworkFilterSelector = ({
 
   const onSelectAndClose = React.useCallback(
     (network: BraveWallet.NetworkInfo) => {
-      if (onSelectNetwork) {
-        onSelectNetwork(network)
-      } else {
-        const networkFilter = {
-          chainId: network.chainId,
-          coin: network.coin
-        }
-        window.localStorage.setItem(
-          LOCAL_STORAGE_KEYS.PORTFOLIO_NETWORK_FILTER_OPTION,
-          JSON.stringify(networkFilter)
-        )
-        dispatch(WalletActions.setSelectedNetworkFilter(networkFilter))
-      }
-
+      onSelectNetwork(network)
       hideNetworkFilter()
     },
     [onSelectNetwork, hideNetworkFilter]
@@ -174,7 +155,7 @@ export const NetworkFilterSelector = ({
       </DropDownButton>
 
       {showNetworkFilter && (
-        <DropDown>
+        <DropDown dropdownPosition={dropdownPosition}>
           {primaryNetworks.map((network: BraveWallet.NetworkInfo) => (
             <NetworkFilterItem
               key={`${network.chainId + network.chainName}`}

@@ -6,7 +6,6 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_REWARDS_BROWSER_REWARDS_SERVICE_IMPL_H_
 #define BRAVE_COMPONENTS_BRAVE_REWARDS_BROWSER_REWARDS_SERVICE_IMPL_H_
 
-#include <functional>
 #include <list>
 #include <map>
 #include <memory>
@@ -15,11 +14,9 @@
 #include <vector>
 
 #include "base/containers/flat_map.h"
-#include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
-#include "base/observer_list.h"
 #include "base/one_shot_event.h"
 #include "base/sequence_checker.h"
 #include "base/threading/sequence_bound.h"
@@ -31,13 +28,12 @@
 #include "brave/components/brave_rewards/browser/rewards_service.h"
 #include "brave/components/brave_rewards/common/mojom/rewards_engine.mojom.h"
 #include "brave/components/brave_rewards/common/rewards_flags.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
-#include "brave/components/greaselion/browser/buildflags/buildflags.h"
 #include "brave/components/services/bat_rewards/public/interfaces/rewards_engine_factory.mojom.h"
 #include "build/build_config.h"
-#include "chrome/browser/bitmap_fetcher/bitmap_fetcher_service.h"
 #include "components/prefs/pref_change_registrar.h"
-#include "content/public/browser/browser_thread.h"
+#include "content/public/browser/storage_partition.h"
 #include "mojo/public/cpp/bindings/associated_receiver.h"
 #include "mojo/public/cpp/bindings/associated_remote.h"
 #include "mojo/public/cpp/bindings/remote.h"
@@ -47,27 +43,20 @@
 #include "brave/components/safetynet/safetynet_check.h"
 #endif
 
-#if BUILDFLAG(ENABLE_GREASELION)
-#include "brave/components/greaselion/browser/greaselion_service.h"
-#endif
-
 namespace base {
 class OneShotTimer;
 class SequencedTaskRunner;
 }  // namespace base
 
-namespace leveldb {
-class DB;
-}  // namespace leveldb
-
+namespace favicon {
+class FaviconService;
+}  // namespace favicon
 namespace network {
 class SimpleURLLoader;
 }  // namespace network
 
-class Profile;
-
 namespace brave_wallet {
-class JsonRpcService;
+class BraveWalletService;
 }
 
 namespace brave_rewards {
@@ -92,23 +81,27 @@ using GetTestResponseCallback = base::RepeatingCallback<void(
     base::flat_map<std::string, std::string>* headers)>;
 
 using StopEngineCallback = base::OnceCallback<void(mojom::Result)>;
-
-class RewardsServiceImpl : public RewardsService,
-                           public mojom::RewardsEngineClient,
-#if BUILDFLAG(ENABLE_GREASELION)
-                           public greaselion::GreaselionService::Observer,
-#endif
-                           public base::SupportsWeakPtr<RewardsServiceImpl> {
+using RequestImageCallback = base::RepeatingCallback<int(
+    const GURL& url,
+    base::OnceCallback<void(const SkBitmap& bitmap)>,
+    const net::NetworkTrafficAnnotationTag& traffic_annotation)>;
+using CancelImageRequestCallback = base::RepeatingCallback<void(int)>;
+class RewardsServiceImpl final : public RewardsService,
+                                 public mojom::RewardsEngineClient {
  public:
-  RewardsServiceImpl(Profile* profile,
-#if BUILDFLAG(ENABLE_GREASELION)
-                     greaselion::GreaselionService* greaselion_service,
-#endif
-                     brave_wallet::JsonRpcService* wallet_rpc_service);
+  RewardsServiceImpl(PrefService* prefs,
+                     const base::FilePath& profile_path,
+                     favicon::FaviconService* favicon_service,
+                     RequestImageCallback request_image_callback,
+                     CancelImageRequestCallback cancel_image_request_callback,
+                     content::StoragePartition* storage_partition,
+                     brave_wallet::BraveWalletService* brave_wallet_service);
 
   RewardsServiceImpl(const RewardsServiceImpl&) = delete;
   RewardsServiceImpl& operator=(const RewardsServiceImpl&) = delete;
   ~RewardsServiceImpl() override;
+
+  static std::string UrlMethodToRequestType(mojom::UrlMethod method);
 
   // KeyedService:
   void Shutdown() override;
@@ -124,6 +117,10 @@ class RewardsServiceImpl : public RewardsService,
 
   void GetUserType(base::OnceCallback<void(mojom::UserType)> callback) override;
 
+  bool IsTermsOfServiceUpdateRequired() override;
+
+  void AcceptTermsOfServiceUpdate() override;
+
   std::string GetCountryCode() const override;
 
   void GetAvailableCountries(
@@ -131,17 +128,8 @@ class RewardsServiceImpl : public RewardsService,
 
   void GetRewardsParameters(GetRewardsParametersCallback callback) override;
 
-  void FetchPromotions(FetchPromotionsCallback callback) override;
+  void FetchUICards(FetchUICardsCallback callback) override;
 
-  void ClaimPromotion(
-      const std::string& promotion_id,
-      ClaimPromotionCallback callback) override;
-  void ClaimPromotion(
-      const std::string& promotion_id,
-      AttestPromotionCallback callback) override;
-  void AttestPromotion(const std::string& promotion_id,
-                       const std::string& solution,
-                       AttestPromotionCallback callback) override;
   void GetActivityInfoList(const uint32_t start,
                            const uint32_t limit,
                            mojom::ActivityInfoFilterPtr filter,
@@ -154,6 +142,7 @@ class RewardsServiceImpl : public RewardsService,
 
   void OnGetPublisherInfoList(GetPublisherInfoListCallback callback,
                               std::vector<mojom::PublisherInfoPtr> list);
+  void OnLoad(mojom::VisitDataPtr visit_data) override;
   void OnLoad(SessionID tab_id, const GURL& url) override;
   void OnUnload(SessionID tab_id) override;
   void OnShow(SessionID tab_id) override;
@@ -165,8 +154,6 @@ class RewardsServiceImpl : public RewardsService,
                  const GURL& first_party_url,
                  const GURL& referrer) override;
   void GetReconcileStamp(GetReconcileStampCallback callback) override;
-  void GetAutoContributeEnabled(
-      GetAutoContributeEnabledCallback callback) override;
   void GetPublisherMinVisitTime(
       GetPublisherMinVisitTimeCallback callback) override;
   void GetPublisherMinVisits(GetPublisherMinVisitsCallback callback) override;
@@ -175,13 +162,12 @@ class RewardsServiceImpl : public RewardsService,
       const uint32_t month,
       const uint32_t year,
       GetBalanceReportCallback callback) override;
-  void GetPublisherActivityFromUrl(
-      uint64_t window_id,
-      const std::string& url,
-      const std::string& favicon_url,
-      const std::string& publisher_blob) override;
-  void GetAutoContributionAmount(
-      GetAutoContributionAmountCallback callback) override;
+  void GetPublisherActivityFromVisitData(
+      mojom::VisitDataPtr visit_data) override;
+  void GetPublisherActivityFromUrl(uint64_t tab_id,
+                                   const std::string& url,
+                                   const std::string& favicon_url,
+                                   const std::string& publisher_blob) override;
   void GetPublisherBanner(const std::string& publisher_id,
                           GetPublisherBannerCallback callback) override;
   void OnPublisherBanner(GetPublisherBannerCallback callback,
@@ -202,12 +188,6 @@ class RewardsServiceImpl : public RewardsService,
 
   mojom::RewardsEngineOptionsPtr HandleFlags(const RewardsFlags& flags);
 
-  void IsAutoContributeSupported(
-      base::OnceCallback<void(bool)> callback) override;
-
-  void GetAutoContributeProperties(
-      GetAutoContributePropertiesCallback callback) override;
-
   void GetOneTimeTips(GetOneTimeTipsCallback callback) override;
   void RefreshPublisher(const std::string& publisher_key,
                         RefreshPublisherCallback callback) override;
@@ -225,14 +205,6 @@ class RewardsServiceImpl : public RewardsService,
 
   const RewardsNotificationService::RewardsNotificationsMap&
     GetAllNotifications() override;
-
-  void SetAutoContributionAmount(const double amount) const override;
-
-  void UpdateMediaDuration(
-      const uint64_t window_id,
-      const std::string& publisher_key,
-      const uint64_t duration,
-      const bool first_visit) override;
 
   void IsPublisherRegistered(const std::string& publisher_id,
                              base::OnceCallback<void(bool)> callback) override;
@@ -278,18 +250,12 @@ class RewardsServiceImpl : public RewardsService,
                              const std::string& query,
                              ConnectExternalWalletCallback) override;
 
-  void SetAutoContributeEnabled(bool enabled) override;
-
-  void GetMonthlyReport(
-      const uint32_t month,
-      const uint32_t year,
-      GetMonthlyReportCallback callback) override;
-
-  void GetAllMonthlyReportIds(GetAllMonthlyReportIdsCallback callback) override;
+  void ConnectExternalWallet(
+      const std::string& provider,
+      const base::flat_map<std::string, std::string>& args,
+      ConnectExternalWalletCallback callback) override;
 
   void GetAllContributions(GetAllContributionsCallback callback) override;
-
-  void GetAllPromotions(GetAllPromotionsCallback callback) override;
 
   void GetEventLogs(GetEventLogsCallback callback) override;
 
@@ -302,6 +268,8 @@ class RewardsServiceImpl : public RewardsService,
                      DecryptStringCallback callback) override;
 
   void GetRewardsWallet(GetRewardsWalletCallback callback) override;
+
+  base::WeakPtr<RewardsServiceImpl> AsWeakPtr();
 
   // Testing methods
   void SetEngineEnvForTesting();
@@ -316,13 +284,6 @@ class RewardsServiceImpl : public RewardsService,
   friend class RewardsFlagBrowserTest;
   using SimpleURLLoaderList =
       std::list<std::unique_ptr<network::SimpleURLLoader>>;
-
-#if BUILDFLAG(ENABLE_GREASELION)
-  void EnableGreaselion();
-
-  // GreaselionService::Observer:
-  void OnRulesReady(greaselion::GreaselionService* greaselion_service) override;
-#endif
 
   void InitPrefChangeRegistrar();
 
@@ -369,12 +330,7 @@ class RewardsServiceImpl : public RewardsService,
       brave_wallet::mojom::SolanaProviderError error,
       const std::string& error_message);
 
-  void StartNotificationTimers();
-  void StopNotificationTimers();
-  void OnNotificationTimerFired();
-
-  void MaybeShowNotificationTipsPaid();
-  void ShowNotificationTipsPaid(bool ac_enabled);
+  void ShowNotificationTipsPaid();
 
   void OnSetPublisherExclude(const std::string& publisher_key,
                              const bool exclude,
@@ -385,29 +341,9 @@ class RewardsServiceImpl : public RewardsService,
   void OnExternalWalletLoginStarted(BeginExternalWalletLoginCallback callback,
                                     mojom::ExternalWalletLoginParamsPtr params);
 
-  void OnClaimPromotion(ClaimPromotionCallback callback,
-                        const mojom::Result result,
-                        const std::string& response);
-
-  void AttestationAndroid(const std::string& promotion_id,
-                          AttestPromotionCallback callback,
-                          const mojom::Result result,
-                          const std::string& response);
-
-  void OnAttestationAndroid(
-      const std::string& promotion_id,
-      AttestPromotionCallback callback,
-      const std::string& nonce,
-      const bool token_received,
-      const std::string& token,
-      const bool attestation_passed);
-
   // mojom::RewardsEngineClient
   void OnReconcileComplete(mojom::Result result,
                            mojom::ContributionInfoPtr contribution) override;
-  void OnAttestPromotion(AttestPromotionCallback callback,
-                         const mojom::Result result,
-                         mojom::PromotionPtr promotion);
   void LoadLegacyState(LoadLegacyStateCallback callback) override;
   void LoadPublisherState(LoadPublisherStateCallback callback) override;
   void LoadURL(mojom::UrlRequestPtr request, LoadURLCallback callback) override;
@@ -418,7 +354,7 @@ class RewardsServiceImpl : public RewardsService,
   void SetPublisherMinVisits(int visits) const override;
   void OnPanelPublisherInfo(mojom::Result result,
                             mojom::PublisherInfoPtr info,
-                            uint64_t window_id) override;
+                            uint64_t tab_id) override;
   void FetchFavIcon(const std::string& url,
                     const std::string& favicon_key,
                     FetchFavIconCallback callback) override;
@@ -498,9 +434,6 @@ class RewardsServiceImpl : public RewardsService,
 
   void GetClientCountryCode(GetClientCountryCodeCallback callback) override;
 
-  void IsAutoContributeSupportedForClient(
-      IsAutoContributeSupportedForClientCallback callback) override;
-
   void PublisherListNormalized(
       std::vector<mojom::PublisherInfoPtr> list) override;
 
@@ -512,8 +445,6 @@ class RewardsServiceImpl : public RewardsService,
                         ShowNotificationCallback callback) override;
 
   void GetClientInfo(GetClientInfoCallback callback) override;
-
-  void UnblindedTokensReady() override;
 
   void ReconcileStampReset() override;
 
@@ -545,27 +476,20 @@ class RewardsServiceImpl : public RewardsService,
   void OnP3ADailyTimer();
 
   void OnRecordBackendP3AExternalWallet(bool delay_report,
+                                        bool search_result_optin_changed,
                                         mojom::ExternalWalletPtr wallet);
   void GetAllContributionsForP3A();
   void OnRecordBackendP3AStatsContributions(
       std::vector<mojom::ContributionInfoPtr> list);
-
-  void OnRecordBackendP3AStatsAC(bool ac_enabled);
+  void OnRecordBackendP3AStatsRecurringTips(
+      std::vector<mojom::PublisherInfoPtr> list);
 
   void OnGetBalanceReport(GetBalanceReportCallback callback,
                           const mojom::Result result,
                           mojom::BalanceReportInfoPtr report);
 
-  void OnGetMonthlyReport(GetMonthlyReportCallback callback,
-                          const mojom::Result result,
-                          mojom::MonthlyReportInfoPtr report);
-
   void OnRunDBTransaction(RunDBTransactionCallback callback,
                           mojom::DBCommandResponsePtr response);
-
-  void OnGetAllPromotions(
-      GetAllPromotionsCallback callback,
-      base::flat_map<std::string, mojom::PromotionPtr> promotions);
 
   void OnFilesDeletedForCompleteReset(SuccessCallback callback,
                                       const bool success);
@@ -585,14 +509,12 @@ class RewardsServiceImpl : public RewardsService,
   mojom::Environment GetDefaultServerEnvironmentForAndroid();
   safetynet_check::SafetyNetCheckRunner safetynet_check_runner_;
 #endif
-
-  raw_ptr<Profile> profile_ = nullptr;  // NOT OWNED
-#if BUILDFLAG(ENABLE_GREASELION)
-  raw_ptr<greaselion::GreaselionService> greaselion_service_ =
-      nullptr;  // NOT OWNED
-  bool greaselion_enabled_ = false;
-#endif
-  raw_ptr<brave_wallet::JsonRpcService> wallet_rpc_service_ = nullptr;
+  raw_ptr<PrefService> prefs_;                            // NOT OWNED
+  raw_ptr<favicon::FaviconService, DanglingUntriaged> favicon_service_;
+  const RequestImageCallback request_image_callback_;
+  const CancelImageRequestCallback cancel_image_request_callback_;
+  raw_ptr<content::StoragePartition> storage_partition_;  // NOT OWNED
+  raw_ptr<brave_wallet::BraveWalletService> brave_wallet_service_ = nullptr;
   mojo::AssociatedReceiver<mojom::RewardsEngineClient> receiver_;
   mojo::AssociatedRemote<mojom::RewardsEngine> engine_;
   mojo::Remote<mojom::RewardsEngineFactory> engine_factory_;
@@ -611,10 +533,7 @@ class RewardsServiceImpl : public RewardsService,
 
   std::unique_ptr<base::OneShotEvent> ready_;
   SimpleURLLoaderList url_loaders_;
-  std::map<std::string, BitmapFetcherService::RequestId>
-      current_media_fetchers_;
-  std::unique_ptr<base::OneShotTimer> notification_startup_timer_;
-  std::unique_ptr<base::RepeatingTimer> notification_periodic_timer_;
+  std::map<std::string, int> current_media_fetchers_;
   PrefChangeRegistrar profile_pref_change_registrar_;
 
   bool engine_for_testing_ = false;
@@ -629,6 +548,7 @@ class RewardsServiceImpl : public RewardsService,
   p3a::ConversionMonitor conversion_monitor_;
 
   SEQUENCE_CHECKER(sequence_checker_);
+  base::WeakPtrFactory<RewardsServiceImpl> weak_ptr_factory_{this};
 };
 
 }  // namespace brave_rewards

@@ -112,13 +112,6 @@ void ViewCounterModel::RegisterPageViewForBrandedImages() {
 }
 
 void ViewCounterModel::RegisterPageViewForBackgroundImages() {
-  // NTP BI component is not ready.
-  if (total_image_count_ == 0)
-    return;
-
-  if (!show_wallpaper_)
-    return;
-
   // We don't show NTP BI in SR mode.
   if (always_show_branded_wallpaper_)
     return;
@@ -129,12 +122,10 @@ void ViewCounterModel::RegisterPageViewForBackgroundImages() {
     return;
   }
 
-  // Increase background image index
-  current_wallpaper_image_index_++;
-  current_wallpaper_image_index_ %= total_image_count_;
+  RotateBackgroundWallpaperImageIndex();
 }
 
-void ViewCounterModel::IncreaseBackgroundWallpaperImageIndex() {
+void ViewCounterModel::RotateBackgroundWallpaperImageIndex() {
   // NTP BI component is not ready.
   if (total_image_count_ == 0)
     return;
@@ -142,9 +133,22 @@ void ViewCounterModel::IncreaseBackgroundWallpaperImageIndex() {
   if (!show_wallpaper_)
     return;
 
-  // Increase background image index
   current_wallpaper_image_index_++;
   current_wallpaper_image_index_ %= total_image_count_;
+}
+
+void ViewCounterModel::NextBrandedImage() {
+  campaigns_current_branded_image_index_[current_campaign_index_]++;
+  if (campaigns_current_branded_image_index_[current_campaign_index_] >=
+      campaigns_total_branded_image_count_[current_campaign_index_]) {
+    campaigns_current_branded_image_index_[current_campaign_index_] = 0;
+
+    current_campaign_index_++;
+    if (current_campaign_index_ >= total_campaign_count_) {
+      current_campaign_index_ = 0;
+      campaigns_current_branded_image_index_[current_campaign_index_] = 0;
+    }
+  }
 }
 
 void ViewCounterModel::MaybeResetBrandedWallpaperCount() {

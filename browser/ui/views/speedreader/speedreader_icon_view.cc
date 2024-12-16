@@ -26,13 +26,13 @@
 SpeedreaderIconView::SpeedreaderIconView(
     CommandUpdater* command_updater,
     IconLabelBubbleView::Delegate* icon_label_bubble_delegate,
-    PageActionIconView::Delegate* page_action_icon_delegate,
-    PrefService* pref_service)
+    PageActionIconView::Delegate* page_action_icon_delegate)
     : PageActionIconView(command_updater,
                          IDC_SPEEDREADER_ICON_ONCLICK,
                          icon_label_bubble_delegate,
                          page_action_icon_delegate,
-                         "SpeedReader") {
+                         "SpeedReader",
+                         /*ephemeral*/ false) {
   SetVisible(false);
 }
 
@@ -69,7 +69,8 @@ void SpeedreaderIconView::UpdateImpl() {
 }
 
 bool SpeedreaderIconView::OnMousePressed(const ui::MouseEvent& event) {
-  if (event.IsOnlyRightMouseButton() && event.type() == ui::ET_MOUSE_PRESSED) {
+  if (event.IsOnlyRightMouseButton() &&
+      event.type() == ui::EventType::kMousePressed) {
     auto* web_contents = GetWebContents();
     if (!web_contents) {
       return PageActionIconView::OnMousePressed(event);
@@ -128,5 +129,5 @@ speedreader::DistillState SpeedreaderIconView::GetDistillState() const {
   return {};
 }
 
-BEGIN_METADATA(SpeedreaderIconView, PageActionIconView)
+BEGIN_METADATA(SpeedreaderIconView)
 END_METADATA

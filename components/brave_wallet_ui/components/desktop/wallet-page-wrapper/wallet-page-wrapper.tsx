@@ -31,14 +31,14 @@ import {
   StaticBackground,
   BackgroundGradientWrapper,
   BackgroundGradientTopLayer,
-  BackgroundGradientMiddleLayer,
   BackgroundGradientBottomLayer,
   BlockForHeight,
   FeatureRequestButtonWrapper,
   CardHeaderWrapper,
   CardHeader,
   CardHeaderShadow,
-  CardHeaderContentWrapper
+  CardHeaderContentWrapper,
+  PortfolioBackgroundWatermark
 } from './wallet-page-wrapper.style'
 
 import { loadTimeData } from '../../../../common/loadTimeData'
@@ -50,11 +50,13 @@ export interface Props {
   hideNav?: boolean
   hideHeader?: boolean
   hideHeaderMenu?: boolean
-  hideDivider?: boolean
   cardHeader?: JSX.Element | undefined | null
   noMinCardHeight?: boolean
   noBorderRadius?: boolean
   useDarkBackground?: boolean
+  useCardInPanel?: boolean
+  useFullHeight?: boolean
+  isPortfolio?: boolean
   children?: React.ReactNode
 }
 
@@ -68,10 +70,12 @@ export const WalletPageWrapper = (props: Props) => {
     hideNav,
     hideHeader,
     hideHeaderMenu,
-    hideDivider,
     noMinCardHeight,
     noBorderRadius,
-    useDarkBackground
+    useDarkBackground,
+    useCardInPanel,
+    useFullHeight,
+    isPortfolio
   } = props
 
   const isAndroid = loadTimeData.getBoolean('isAndroid') || false
@@ -84,11 +88,12 @@ export const WalletPageWrapper = (props: Props) => {
   // State
   const [headerShadowOpacity, setHeaderShadowOpacity] =
     React.useState<number>(0)
-  const [headerDividerOpacity, setHeaderDividerOpacity] =
-    React.useState<number>(1)
   const [headerBackgroundOpacity, setHeaderBackgroundOpacity] =
     React.useState<number>(0)
   const [headerHeight, setHeaderHeight] = React.useState<number>(0)
+
+  // Computed
+  const shouldUsePanelCard = useCardInPanel && isPanel
 
   // Refs
   let scrollRef = React.useRef<HTMLDivElement | null>(null)
@@ -100,7 +105,7 @@ export const WalletPageWrapper = (props: Props) => {
     if (cardHeader) {
       setHeaderHeight(headerRef?.current?.clientHeight ?? 0)
     }
-  }, [headerRef?.current?.clientHeight, cardHeader])
+  }, [cardHeader, headerRef])
 
   const onScroll = React.useCallback(() => {
     const scrollPosition = scrollRef.current
@@ -112,7 +117,6 @@ export const WalletPageWrapper = (props: Props) => {
       // may not get calculated when scrolling fast.
       if (scrollTop === 0) {
         setHeaderShadowOpacity(0)
-        setHeaderDividerOpacity(1)
         setHeaderBackgroundOpacity(0)
         return
       }
@@ -125,12 +129,6 @@ export const WalletPageWrapper = (props: Props) => {
         // example: 0.00125 * 64 = 0.08
         setHeaderShadowOpacity((scrollTop / 8) * 0.01)
 
-        // Decreases dividerOpacity by 0.015625 until it reaches
-        // desired opacity of 0, or will increase dividerOpacity by
-        // 0.015625 until it reaches desired opacity of 1.
-        // example: 0.015625 * 64 = 1
-        setHeaderDividerOpacity((100 - (100 / 64) * scrollTop) * 0.01)
-
         // Increases backgroundOpacity by 0.015625 until it reaches
         // desired opacity of 1, or will decrease backgroundOpacity by
         // 0.015625 until it reaches desired opacity of 0.
@@ -139,14 +137,13 @@ export const WalletPageWrapper = (props: Props) => {
         return
       }
 
-      // Assures that shadowOpacity, dividerOpacity and backgroundOpacity are
+      // Assures that shadowOpacity and backgroundOpacity are
       // the expected values when scrollTop is greater than 64,
       // since some values may not get calculated when scrolling fast.
       setHeaderShadowOpacity(0.08)
-      setHeaderDividerOpacity(0)
       setHeaderBackgroundOpacity(1)
     }
-  }, [scrollRef.current])
+  }, [scrollRef])
 
   return (
     <>
@@ -154,18 +151,20 @@ export const WalletPageWrapper = (props: Props) => {
       {!isPanel && (
         <BackgroundGradientWrapper>
           <BackgroundGradientTopLayer />
-          <BackgroundGradientMiddleLayer />
           <BackgroundGradientBottomLayer />
         </BackgroundGradientWrapper>
       )}
       <Wrapper
         noPadding={noPadding}
-        isPanel={isPanel}
+        noTopPosition={isPanel || isAndroid}
       >
+        {isPanel && isPortfolio && <PortfolioBackgroundWatermark />}
         {isWalletCreated && !hideHeader && !isPanel && !isAndroid && (
           <TabHeader hideHeaderMenu={hideHeaderMenu} />
         )}
-        {isWalletCreated && !isWalletLocked && !hideNav && <WalletNav />}
+        {isWalletCreated && !isWalletLocked && !hideNav && (
+          <WalletNav isAndroid={isAndroid} />
+        )}
         {!isWalletLocked && (
           <FeatureRequestButtonWrapper>
             <FeatureRequestButton />
@@ -180,6 +179,7 @@ export const WalletPageWrapper = (props: Props) => {
             hideCardHeader={!cardHeader}
             headerHeight={headerHeight}
             hideNav={hideNav}
+            padding={useFullHeight ? '0px' : undefined}
           >
             {cardHeader && !isPanel && (
               <CardHeaderWrapper isPanel={isPanel}>
@@ -193,6 +193,9 @@ export const WalletPageWrapper = (props: Props) => {
               noMinCardHeight={noMinCardHeight}
               noBorderRadius={noBorderRadius}
               useDarkBackground={useDarkBackground}
+              useFullHeight={useFullHeight}
+              noBackground={isPanel && isPortfolio}
+              usePanelCard={shouldUsePanelCard}
             >
               {children}
             </ContainerCard>
@@ -205,13 +208,11 @@ export const WalletPageWrapper = (props: Props) => {
                 <CardHeader
                   shadowOpacity={headerShadowOpacity}
                   isPanel={isPanel}
-                  useDarkBackground={useDarkBackground}
+                  isAndroid={isAndroid}
+                  useDarkBackground={useDarkBackground || shouldUsePanelCard}
                   backgroundOpacity={headerBackgroundOpacity}
                 >
-                  <CardHeaderContentWrapper
-                    dividerOpacity={headerDividerOpacity}
-                    hideDivider={hideDivider}
-                  >
+                  <CardHeaderContentWrapper>
                     {cardHeader}
                   </CardHeaderContentWrapper>
                 </CardHeader>

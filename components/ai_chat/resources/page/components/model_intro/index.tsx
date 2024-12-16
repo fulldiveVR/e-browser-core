@@ -5,31 +5,35 @@
 
 import * as React from 'react'
 import Icon from '@brave/leo/react/icon'
+import Tooltip from '@brave/leo/react/tooltip'
+import Button from '@brave/leo/react/button'
 import formatMessage from '$web-common/formatMessage'
 import { getLocale } from '$web-common/locale'
-import * as mojom from '../../api/page_handler'
-import DataContext from '../../state/context'
+import * as Mojom from '../../../common/mojom'
+import { useAIChat } from '../../state/ai_chat_context'
+import { useConversation } from '../../state/conversation_context'
 import styles from './style.module.scss'
+import { getKeysForMojomEnum } from '$web-common/mojomUtils'
 
-function getCategoryName (category: mojom.ModelCategory) {
+function getCategoryName(category: Mojom.ModelCategory) {
   // To avoid problems when order of enum values change, we base the key
   // on the enum name rather than the number value, e.g. "CHAT" vs 0
-  const categoryKey = Object.keys(mojom.ModelCategory)[category]
+  const categoryKey = getKeysForMojomEnum(Mojom.ModelCategory)[category]
   const key = `modelCategory-${categoryKey.toLowerCase()}`
   return getLocale(key)
 }
 
-function getIntroMessage (model: mojom.Model) {
+function getIntroMessage(model: Mojom.Model) {
   const key = `introMessage-${model.key}`
   return getLocale(key)
 }
 
-export default function ModelIntro () {
-  const context = React.useContext(DataContext)
+export default function ModelIntro() {
+  const aiChatContext = useAIChat()
+  const conversationContext = useConversation()
 
-  const model = context.currentModel
+  const model = conversationContext.currentModel
   if (!model) {
-    console.error('Rendered ModelIntro when currentModel does not exist!')
     return <></>
   }
 
@@ -39,16 +43,59 @@ export default function ModelIntro () {
         <Icon name='product-brave-leo' />
       </div>
       <div className={styles.meta}>
-        <h4 className={styles.category}>{getCategoryName(model.category)}</h4>
+        <h4 className={styles.category}>
+          {conversationContext.isCurrentModelLeo
+            ? getCategoryName(model.options.leoModelOptions!.category)
+            : model.displayName}
+        </h4>
         <h3 className={styles.name}>
-          {formatMessage(getLocale('modelNameSyntax'), {
-            placeholders: {
-              $1: model.displayName,
-              $2: model.displayMaker
-            }
-          })}
+          {conversationContext.isCurrentModelLeo
+            ? formatMessage(getLocale('modelNameSyntax'), {
+                placeholders: {
+                  $1: model.displayName,
+                  $2: model.options.leoModelOptions!.displayMaker
+                }
+              })
+            : `${model.options.customModelOptions?.modelRequestName}`}
+          {conversationContext.isCurrentModelLeo && (
+            <Tooltip
+              mode='default'
+              className={styles.tooltip}
+              offset={4}
+            >
+              <div
+                slot='content'
+                className={styles.tooltipContent}
+              >
+                {formatMessage(getIntroMessage(model), {
+                  tags: {
+                    $1: (content) => {
+                      return (
+                        <a
+                          key={content}
+                          onClick={() =>
+                            aiChatContext.uiHandler?.openModelSupportUrl()
+                          }
+                          href='#'
+                          target='_blank'
+                        >
+                          {content}
+                        </a>
+                      )
+                    }
+                  }
+                })}
+              </div>
+              <Button
+                fab
+                kind='plain-faint'
+                className={styles.tooltipButton}
+              >
+                <Icon name='info-outline' />
+              </Button>
+            </Tooltip>
+          )}
         </h3>
-        <p className={styles.modelIntro}>{getIntroMessage(model)}</p>
       </div>
     </div>
   )

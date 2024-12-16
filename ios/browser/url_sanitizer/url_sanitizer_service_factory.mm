@@ -16,7 +16,7 @@
 #include "components/keyed_service/ios/browser_state_dependency_manager.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/browser_state/browser_state_otr_helper.h"
-#include "ios/chrome/browser/shared/model/browser_state/chrome_browser_state.h"
+#include "ios/chrome/browser/shared/model/profile/profile_ios.h"
 #include "ios/web/public/browser_state.h"
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
@@ -24,10 +24,10 @@
 #endif
 
 @implementation URLSanitizerServiceFactory
-+ (nullable id)serviceForBrowserState:(ChromeBrowserState*)browserState {
++ (nullable id)serviceForProfile:(ProfileIOS*)profile {
   // Create and start the local data file service and component installer
   brave::URLSanitizerService* urlSanitizer =
-      brave::URLSanitizerServiceFactory::GetServiceForState(browserState);
+      brave::URLSanitizerServiceFactory::GetServiceForState(profile);
   return [[URLSanitizerService alloc] initWithURLSanitizerService:urlSanitizer];
 }
 @end
@@ -36,9 +36,9 @@ namespace brave {
 
 // static
 brave::URLSanitizerService* URLSanitizerServiceFactory::GetServiceForState(
-    ChromeBrowserState* browser_state) {
+    ProfileIOS* profile) {
   return static_cast<brave::URLSanitizerService*>(
-      GetInstance()->GetServiceForBrowserState(browser_state, true));
+      GetInstance()->GetServiceForBrowserState(profile, true));
 }
 
 // static

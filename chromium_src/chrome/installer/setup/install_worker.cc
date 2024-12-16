@@ -3,6 +3,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#include "chrome/installer/setup/install_worker.h"
+
 #include <shlobj.h>
 
 #include "base/check.h"
@@ -36,16 +38,20 @@
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_constants.h"
+#include "brave/browser/brave_vpn/win/brave_vpn_helper/brave_vpn_helper_utils.h"
 #include "brave/browser/brave_vpn/win/brave_vpn_wireguard_service/install_utils.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_constants.h"
-#include "brave/components/brave_vpn/browser/connection/ikev2/win/brave_vpn_helper/brave_vpn_helper_utils.h"
+#include "brave/browser/brave_vpn/win/wireguard_utils_win.h"
 
 namespace {
 
 // delete `BraveVpnWireguardService` from services and remove the tray icon.
 bool UninstallBraveVPNWireguardService(const CallbackWorkItem&) {
-  return brave_vpn::UninstallBraveWireguardService() &&
-         brave_vpn::UninstallStatusTrayIcon();
+  // Safe to ignore result as this is being called during installation.
+  // If false is returned, it will abort the installation.
+  brave_vpn::UninstallBraveWireguardService() &&
+      brave_vpn::UninstallStatusTrayIcon();
+  return true;
 }
 
 // Brave 1.50.114+ would register `BraveVpnService` for system level installs.
@@ -60,7 +66,7 @@ void AddUninstallVpnServiceWorkItems() {
   // delete `BraveVpnService` from services
   if (!installer::InstallServiceWorkItem::DeleteService(
           brave_vpn::GetBraveVpnHelperServiceName(),
-          brave_vpn::kBraveVpnHelperRegistryStoragePath, {}, {})) {
+          brave_vpn::GetBraveVpnHelperRegistryStoragePath(), {}, {})) {
     VLOG(1) << "Failed to delete " << brave_vpn::GetBraveVpnHelperServiceName();
   }
 }
@@ -95,19 +101,20 @@ bool OneTimeVpnServiceCleanup(const base::FilePath& target_path,
   // Check registry for `ran` value.
   // Only run the clean up logic if this hasn't ran yet.
   base::win::RegKey key;
-  LONG rv = key.Create(HKEY_LOCAL_MACHINE,
-                       brave_vpn::kBraveVpnOneTimeServiceCleanupStoragePath,
-                       KEY_ALL_ACCESS);
+  LONG rv = key.Create(
+      HKEY_LOCAL_MACHINE,
+      brave_vpn::GetBraveVpnOneTimeServiceCleanupStoragePath().c_str(),
+      KEY_ALL_ACCESS);
   if (rv != ERROR_SUCCESS) {
     VLOG(1) << "Failed to open registry key:"
-            << brave_vpn::kBraveVpnOneTimeServiceCleanupStoragePath << "\n"
+            << brave_vpn::GetBraveVpnOneTimeServiceCleanupStoragePath() << "\n"
             << logging::SystemErrorCodeToString(rv);
     return false;
   }
 
   if (!key.Valid()) {
     VLOG(1) << "Registry key not valid:"
-            << brave_vpn::kBraveVpnOneTimeServiceCleanupStoragePath;
+            << brave_vpn::GetBraveVpnOneTimeServiceCleanupStoragePath();
     return false;
   }
 
@@ -133,17 +140,49 @@ bool OneTimeVpnServiceCleanup(const base::FilePath& target_path,
                       &cleanup_ran, REG_DWORD, sizeof(DWORD));
   if (rv != ERROR_SUCCESS) {
     VLOG(1) << "Failed to write registry key value: "
-            << brave_vpn::kBraveVpnOneTimeServiceCleanupStoragePath << ":"
+            << brave_vpn::GetBraveVpnOneTimeServiceCleanupStoragePath() << ":"
             << brave_vpn::kBraveVpnOneTimeServiceCleanupValue << "\n"
             << logging::SystemErrorCodeToString(rv);
   }
   return true;
 }
 
+void UpdateBraveVpn(const base::FilePath& target_path,
+                    const base::Version& new_version,
+                    WorkItemList* install_list) {
+  // When one time cleanup happens, we don't want to install the services at
+  // that time. Service will be installed at the time of purchase.
+  if (OneTimeVpnServiceCleanup(target_path, new_version, install_list)) {
+    return;
+  }
+
+  // If the VPN service is installed, we should update installed services to
+  // make it have latest executable path.
+  if (brave_vpn::IsBraveVPNHelperServiceInstalled()) {
+    install_list->AddCallbackWorkItem(
+        base::BindOnce(
+            [](const base::FilePath& target_path, const CallbackWorkItem&) {
+              return brave_vpn::InstallBraveVPNHelperService(target_path);
+            },
+            target_path.AppendASCII(new_version.GetString())),
+        base::DoNothing());
+  }
+
+  if (brave_vpn::wireguard::IsWireguardServiceInstalled()) {
+    install_list->AddCallbackWorkItem(
+        base::BindOnce(
+            [](const base::FilePath& target_path, const CallbackWorkItem&) {
+              return brave_vpn::InstallBraveWireguardService(target_path);
+            },
+            target_path.AppendASCII(new_version.GetString())),
+        base::DoNothing());
+  }
+}
+
 }  // namespace installer
 
-#define AddUpdateDowngradeVersionItem                               \
-  OneTimeVpnServiceCleanup(target_path, new_version, install_list); \
+#define AddUpdateDowngradeVersionItem                     \
+  UpdateBraveVpn(target_path, new_version, install_list); \
   AddUpdateDowngradeVersionItem
 
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)

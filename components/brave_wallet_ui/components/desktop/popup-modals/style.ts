@@ -3,8 +3,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 import styled from 'styled-components'
-import * as leo from '@brave/leo/tokens/css'
-import CloseIcon from '../../../assets/svg-icons/close.svg'
+import * as leo from '@brave/leo/tokens/css/variables'
+import Icon from '@brave/leo/react/icon'
+
+// Shared Styles
 import { WalletButton, Column, Row } from '../../shared/style'
 import { layoutPanelWidth } from '../wallet-page-wrapper/wallet-page-wrapper.style'
 
@@ -18,14 +20,13 @@ export const StyledWrapper = styled.div`
   top: 0;
   bottom: 0;
   position: fixed;
-  z-index: 100;
+  z-index: 30;
   background: rgba(33, 37, 41, 0.32);
   backdrop-filter: blur(16px);
 `
 
 export const Modal = styled.div<{
   width?: string
-  borderRadius?: number
   height?: string
 }>`
   display: flex;
@@ -37,30 +38,32 @@ export const Modal = styled.div<{
   max-height: 90vh;
   height: ${(p) => p.height ?? 'unset'};
   background-color: ${leo.color.container.background};
-  border-radius: ${(p) => (p.borderRadius ? p.borderRadius : 8)}px;
+  border-radius: ${leo.radius.xl};
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
+  overflow: hidden;
   @media screen and (max-width: ${layoutPanelWidth}px) {
     width: unset;
     min-width: unset;
     max-width: unset;
-    max-height: unset;
-    height: unset;
     position: absolute;
     border-radius: 16px 16px 0px 0px;
-    top: 32px;
     bottom: 0px;
     left: 0px;
     right: 0px;
   }
 `
 
+export const ModalContent = styled(Column)`
+  overflow-y: auto;
+`
+
 export const Header = styled.div<{
-  headerPaddingVertical?: number
-  headerPaddingHorizontal?: number
+  headerPaddingVertical?: string
+  headerPaddingHorizontal?: string
 }>`
-  --vertical-padding: ${(p) => p.headerPaddingVertical ?? 20}px;
-  --horizontal-padding: ${(p) => p.headerPaddingHorizontal ?? 20}px;
+  --vertical-padding: ${(p) => p.headerPaddingVertical ?? '20px'};
+  --horizontal-padding: ${(p) => p.headerPaddingHorizontal ?? '20px'};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,27 +73,38 @@ export const Header = styled.div<{
 `
 
 export const Title = styled.span`
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 26px;
-  color: ${(p) => p.theme.color.text01};
-  margin-right: 16px;
+  color: ${leo.color.text.primary};
+  font: ${leo.font.heading.h2};
+  @media screen and (max-width: ${layoutPanelWidth}px) {
+    font: ${leo.font.heading.h4};
+  }
 `
 
-export const CloseButton = styled(WalletButton)`
+export const HeaderButton = styled(WalletButton)`
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background-color: ${(p) => p.theme.color.interactive07};
-  -webkit-mask-image: url(${CloseIcon});
-  mask-image: url(${CloseIcon});
+  width: 24px;
+  height: 24px;
+  background-color: none;
+  background: none;
   outline: none;
   border: none;
+`
+
+export const CloseIcon = styled(Icon).attrs({
+  name: 'close'
+})`
+  --leo-icon-size: 24px;
+  color: ${leo.color.icon.default};
+`
+
+export const BackIcon = styled(Icon).attrs({
+  name: 'arrow-left'
+})`
+  --leo-icon-size: 24px;
+  color: ${leo.color.icon.default};
 `
 
 export const Divider = styled.div`

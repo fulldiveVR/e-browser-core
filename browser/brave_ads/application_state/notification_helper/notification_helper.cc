@@ -13,8 +13,6 @@
 #include "chrome/browser/notifications/notification_platform_bridge.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/chrome_features.h"
-#include "chrome/common/pref_names.h"
-#include "components/prefs/pref_service.h"
 
 #if BUILDFLAG(IS_ANDROID)
 #include "brave/browser/brave_ads/application_state/notification_helper/notification_helper_impl_android.h"
@@ -22,6 +20,8 @@
 
 #if BUILDFLAG(IS_LINUX)
 #include "brave/browser/brave_ads/application_state/notification_helper/notification_helper_impl_linux.h"
+#include "chrome/common/pref_names.h"
+#include "components/prefs/pref_service.h"
 #endif  // BUILDFLAG(IS_LINUX)
 
 #if BUILDFLAG(IS_MAC)
@@ -36,7 +36,6 @@
 namespace {
 
 bool SystemNotificationsEnabled(Profile* profile) {
-#if BUILDFLAG(ENABLE_SYSTEM_NOTIFICATIONS)
 #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
   return true;
 #elif BUILDFLAG(IS_WIN)
@@ -54,9 +53,6 @@ bool SystemNotificationsEnabled(Profile* profile) {
   return base::FeatureList::IsEnabled(features::kNativeNotifications) &&
          base::FeatureList::IsEnabled(features::kSystemNotifications);
 #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-#else
-  return false;
-#endif  // BUILDFLAG(ENABLE_SYSTEM_NOTIFICATIONS)
 }
 
 NotificationPlatformBridge* GetSystemNotificationPlatformBridge(
@@ -129,8 +125,7 @@ bool NotificationHelper::DoesSupportSystemNotifications() const {
   return does_support_system_notifications_;
 }
 
-void NotificationHelper::OnSystemNotificationPlatformBridgeReady(
-    const bool success) {
+void NotificationHelper::OnSystemNotificationPlatformBridgeReady(bool success) {
   does_support_system_notifications_ = success;
 }
 

@@ -6,7 +6,7 @@
 import styled from 'styled-components'
 
 // Leo styles
-import * as leo from '@brave/leo/tokens/css'
+import * as leo from '@brave/leo/tokens/css/variables'
 
 export interface TextProps {
   textSize?:
@@ -28,6 +28,9 @@ export interface TextProps {
     | 'warning'
     | 'primary'
     | 'secondary'
+    | 'tertiary'
+    | 'info'
+    | 'disabled'
   maintainHeight?: boolean
   textAlign?: 'left' | 'right'
 }
@@ -36,25 +39,35 @@ export const Text = styled.span<TextProps>`
   --primary: ${leo.color.text.primary};
   --secondary: ${leo.color.text.secondary};
   --tertiary: ${leo.color.text.tertiary};
+  --info: ${leo.color.systemfeedback.infoText};
+  --error: ${leo.color.systemfeedback.errorText};
+  --warning: ${leo.color.systemfeedback.warningText};
+  --disabled: ${leo.color.text.disabled};
   // ToDo: We should to remove these old color variables
   // in a refactor.
   --text01: ${(p) => p.theme.color.text01};
   --text02: ${(p) => p.theme.color.text02};
   --text03: ${(p) => p.theme.color.text03};
   --success: ${(p) => p.theme.color.successIcon};
-  --warning: ${leo.color.systemfeedback.warningText};
   --line-height: ${(p) =>
     p.textSize === '12px' ? '18px' : p.textSize === '22px' ? '24px' : '20px'};
   font-family: 'Poppins';
   color: ${(p) =>
-    p.textColor ? `var(--${p.textColor})` : p.theme.color.text01};
+    p.color ?? p.textColor ? `var(--${p.textColor})` : p.theme.color.text01};
   font-size: ${(p) => (p.textSize ? p.textSize : '18px')};
   font-weight: ${(p) => (p.isBold ? 500 : 400)};
   height: ${(p) => (p.maintainHeight ? 'var(--line-height)' : 'unset')};
   line-height: var(--line-height);
-  letter-spacing: 0.02em;
   text-align: ${(p) => (p.textAlign ? p.textAlign : 'center')};
   word-wrap: wrap;
+`
+
+export const TextWithOverflowEllipsis = styled(Text)<{ maxLines?: number }>`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: ${(p) => p.maxLines || '1'};
+  -webkit-box-orient: vertical;
 `
 
 export const StyledDiv = styled.div`

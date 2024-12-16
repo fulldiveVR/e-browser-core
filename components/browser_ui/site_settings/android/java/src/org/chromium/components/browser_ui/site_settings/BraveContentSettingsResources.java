@@ -22,11 +22,11 @@ public class BraveContentSettingsResources extends ContentSettingsResources {
                 int enabledSummary,
                 int disabledSummary,
                 int summaryOverrideForScreenReader) {
-            assert (false);
+            assert false;
         }
     }
 
-    protected static ResourceItem getResourceItem(int contentType, SiteSettingsDelegate delegate) {
+    protected static ResourceItem getResourceItem(int contentType) {
         switch (contentType) {
             case ContentSettingsType.AUTOPLAY:
                 return new ResourceItem(
@@ -58,13 +58,11 @@ public class BraveContentSettingsResources extends ContentSettingsResources {
         }
 
         return (ResourceItem)
-                BraveReflectionUtil.InvokeMethod(
+                BraveReflectionUtil.invokeMethod(
                         ContentSettingsResources.class,
                         null,
                         "getResourceItem",
                         int.class,
-                        contentType,
-                        SiteSettingsDelegate.class,
-                        delegate);
+                        contentType);
     }
 }

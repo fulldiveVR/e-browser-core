@@ -26,7 +26,8 @@
 #include "gin/converter.h"
 #include "gin/handle.h"
 #include "gin/object_template_builder.h"
-#include "third_party/blink/public/common/browser_interface_broker_proxy.h"
+#include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
+#include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"
 #include "third_party/blink/public/platform/web_string.h"
 #include "third_party/blink/public/web/blink.h"
 #include "third_party/blink/public/web/web_console_message.h"
@@ -92,43 +93,18 @@ JSSolanaProvider::JSSolanaProvider(content::RenderFrame* render_frame)
     : RenderFrameObserver(render_frame),
       v8_value_converter_(content::V8ValueConverter::Create()) {
   EnsureConnected();
-  v8_value_converter_->SetStrategy(&strategy_);
 }
 
 JSSolanaProvider::~JSSolanaProvider() = default;
 
 gin::WrapperInfo JSSolanaProvider::kWrapperInfo = {gin::kEmbedderNativeGin};
 
-// Convert Uint8Array to blob base::Value
-bool JSSolanaProvider::V8ConverterStrategy::FromV8ArrayBuffer(
-    v8::Local<v8::Object> value,
-    std::unique_ptr<base::Value>* out,
-    v8::Isolate* isolate) {
-  if (!value->IsTypedArray()) {
-    return false;
-  }
-  std::vector<uint8_t> bytes;
-  char* data = nullptr;
-  size_t data_length = 0;
-  gin::ArrayBufferView view;
-  if (gin::ConvertFromV8(isolate, value.As<v8::ArrayBufferView>(), &view)) {
-    data = reinterpret_cast<char*>(view.bytes());
-    data_length = view.num_bytes();
-    bytes.assign(data, data + data_length);
-  }
-  if (!bytes.size()) {
-    return false;
-  }
-  std::unique_ptr<base::Value> new_value = std::make_unique<base::Value>(bytes);
-  *out = std::move(new_value);
-
-  return true;
-}
-
 // static
 void JSSolanaProvider::Install(bool allow_overwrite_window_solana,
                                content::RenderFrame* render_frame) {
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  CHECK(render_frame);
+  v8::Isolate* isolate =
+      render_frame->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame->GetWebFrame()->MainWorldScriptContext();
@@ -161,13 +137,14 @@ void JSSolanaProvider::Install(bool allow_overwrite_window_solana,
   // Create a proxy to the actual JSSolanaProvider object which will be
   // exposed via window.braveSolana and window.solana.
   blink::WebLocalFrame* web_frame = render_frame->GetWebFrame();
-  v8::Local<v8::Proxy> solana_proxy;
-  auto solana_proxy_handler_val =
-      ExecuteScript(web_frame, kSolanaProxyHandlerScript);
+  v8::Local<v8::Value> solana_proxy_handler_val;
+  if (!ExecuteScript(web_frame, kSolanaProxyHandlerScript)
+           .ToLocal(&solana_proxy_handler_val)) {
+    return;
+  }
   v8::Local<v8::Object> solana_proxy_handler_obj =
-      solana_proxy_handler_val.ToLocalChecked()
-          ->ToObject(context)
-          .ToLocalChecked();
+      solana_proxy_handler_val->ToObject(context).ToLocalChecked();
+  v8::Local<v8::Proxy> solana_proxy;
   if (!v8::Proxy::New(context, provider_object, solana_proxy_handler_obj)
            .ToLocal(&solana_proxy)) {
     return;
@@ -236,7 +213,8 @@ void JSSolanaProvider::AccountChangedEvent(
   if (!render_frame()) {
     return;
   }
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   v8::Local<v8::Context> context =
       render_frame()->GetWebFrame()->MainWorldScriptContext();
@@ -253,7 +231,9 @@ void JSSolanaProvider::AccountChangedEvent(
 }
 
 void JSSolanaProvider::DisconnectEvent() {
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  CHECK(render_frame());
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
   FireEvent(kDisconnectEvent, std::vector<v8::Local<v8::Value>>());
 }
@@ -272,7 +252,7 @@ bool JSSolanaProvider::EnsureConnected() {
     return false;
   }
   if (!solana_provider_.is_bound()) {
-    render_frame()->GetBrowserInterfaceBroker()->GetInterface(
+    render_frame()->GetBrowserInterfaceBroker().GetInterface(
         solana_provider_.BindNewPipeAndPassReceiver());
     solana_provider_->Init(receiver_.BindNewPipeAndPassRemote());
   }
@@ -624,8 +604,11 @@ void JSSolanaProvider::WalletStandardInit(gin::Arguments* arguments) {
       {"(function() {", LoadDataResource(IDR_BRAVE_WALLET_STANDARD_JS),
        "return walletStandardBrave; })()"});
 
-  v8::Local<v8::Value> wallet_standard =
-      ExecuteScript(web_frame, wallet_standard_module_str).ToLocalChecked();
+  v8::Local<v8::Value> wallet_standard;
+  if (!ExecuteScript(web_frame, wallet_standard_module_str)
+           .ToLocal(&wallet_standard)) {
+    return;
+  }
   v8::Local<v8::Value> object;
   v8::Isolate* isolate = arguments->isolate();
   v8::Local<v8::Context> context = isolate->GetCurrentContext();
@@ -737,7 +720,7 @@ void JSSolanaProvider::OnSignMessage(
     const base::Value signature_value(signature_bytes);
     v8::Local<v8::Value> v8_signature =
         v8_value_converter_->ToV8Value(signature_value, context);
-    // From ArraryBuffer to Uint8Array
+    // From ArrayBuffer to Uint8Array
     v8_signature =
         v8::Uint8Array::New(v8::Local<v8::ArrayBuffer>::Cast(v8_signature), 0,
                             (kSolanaSignatureSize));
@@ -887,7 +870,8 @@ std::optional<std::string> JSSolanaProvider::GetSerializedMessage(
   if (!render_frame()) {
     return std::nullopt;
   }
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::Local<v8::Context> context = isolate->GetCurrentContext();
 
   v8::MaybeLocal<v8::Value> serialized_msg;
@@ -954,7 +938,8 @@ JSSolanaProvider::GetSignatures(v8::Local<v8::Value> transaction) {
   if (!render_frame()) {
     return std::nullopt;
   }
-  v8::Isolate* isolate = blink::MainThreadIsolate();
+  v8::Isolate* isolate =
+      render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::Local<v8::Context> context = isolate->GetCurrentContext();
 
   v8::Local<v8::Value> signatures;
@@ -1000,8 +985,10 @@ JSSolanaProvider::GetSignatures(v8::Local<v8::Value> transaction) {
       if (!pubkey_string) {
         return std::nullopt;
       }
-      sig_pubkey_pairs.push_back(
-          mojom::SignaturePubkeyPair::New(signature_blob, *pubkey_string));
+      sig_pubkey_pairs.push_back(mojom::SignaturePubkeyPair::New(
+          signature_blob ? mojom::SolanaSignature::New(*signature_blob)
+                         : mojom::SolanaSignaturePtr(),
+          *pubkey_string));
     }
   } else {  // Transaction
     for (uint32_t i = 0; i < signatures_count; ++i) {
@@ -1029,8 +1016,10 @@ JSSolanaProvider::GetSignatures(v8::Local<v8::Value> transaction) {
         return std::nullopt;
       }
 
-      sig_pubkey_pairs.push_back(
-          mojom::SignaturePubkeyPair::New(signature_blob, *pubkey_string));
+      sig_pubkey_pairs.push_back(mojom::SignaturePubkeyPair::New(
+          signature_blob ? mojom::SolanaSignature::New(*signature_blob)
+                         : mojom::SolanaSignaturePtr(),
+          *pubkey_string));
     }
   }
 
@@ -1065,14 +1054,13 @@ bool JSSolanaProvider::LoadSolanaWeb3ModuleIfNeeded(v8::Isolate* isolate) {
       {"(function() {", LoadDataResource(IDR_BRAVE_WALLET_SOLANA_WEB3_JS),
        "return solanaWeb3; })()"});
 
-  solana_web3_module_.Reset(
-      isolate,
-      ExecuteScript(render_frame()->GetWebFrame(), solana_web3_module_str)
-          .ToLocalChecked());
+  v8::Local<v8::Value> solana_web3_module;
   // loading SolanaWeb3 module failed
-  if (solana_web3_module_.IsEmpty()) {
+  if (!ExecuteScript(render_frame()->GetWebFrame(), solana_web3_module_str)
+           .ToLocal(&solana_web3_module)) {
     return false;
   }
+  solana_web3_module_.Reset(isolate, solana_web3_module);
   return true;
 }
 
@@ -1150,7 +1138,7 @@ v8::Local<v8::Value> JSSolanaProvider::CreateTransaction(
                                      versioned_transaction_module, kDeserialize,
                                      std::move(args));
   } else {
-    NOTREACHED_NORETURN();
+    NOTREACHED();
   }
 
   if (transaction.IsEmpty()) {

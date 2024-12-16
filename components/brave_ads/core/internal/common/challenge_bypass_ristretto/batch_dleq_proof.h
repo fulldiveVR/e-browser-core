@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "brave/third_party/challenge_bypass_ristretto_ffi/src/wrapper.h"
+#include "brave/components/challenge_bypass_ristretto/batch_dleq_proof.h"
 
 namespace brave_ads::cbr {
 
@@ -36,9 +36,6 @@ class BatchDLEQProof {
 
   BatchDLEQProof(const BatchDLEQProof&) = delete;
   BatchDLEQProof& operator=(const BatchDLEQProof&) = delete;
-
-  BatchDLEQProof(BatchDLEQProof&&) noexcept = delete;
-  BatchDLEQProof& operator=(BatchDLEQProof&&) noexcept = delete;
 
   ~BatchDLEQProof();
 

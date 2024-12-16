@@ -7,13 +7,11 @@
 
 #include <utility>
 
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-namespace brave_rewards::internal {
-namespace state {
+namespace brave_rewards::internal::state {
 
-StateMigrationV4::StateMigrationV4(RewardsEngineImpl& engine)
-    : engine_(engine) {}
+StateMigrationV4::StateMigrationV4(RewardsEngine& engine) : engine_(engine) {}
 
 StateMigrationV4::~StateMigrationV4() = default;
 
@@ -21,5 +19,4 @@ void StateMigrationV4::Migrate(ResultCallback callback) {
   engine_->client()->DeleteLog(std::move(callback));
 }
 
-}  // namespace state
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::state

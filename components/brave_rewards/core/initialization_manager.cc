@@ -7,20 +7,17 @@
 
 #include <utility>
 
-#include "brave/components/brave_rewards/core/api/api.h"
-#include "brave/components/brave_rewards/core/common/callback_helpers.h"
 #include "brave/components/brave_rewards/core/contribution/contribution.h"
 #include "brave/components/brave_rewards/core/database/database.h"
-#include "brave/components/brave_rewards/core/promotion/promotion.h"
+#include "brave/components/brave_rewards/core/parameters/rewards_parameters_provider.h"
 #include "brave/components/brave_rewards/core/publisher/publisher.h"
-#include "brave/components/brave_rewards/core/recovery/recovery.h"
 #include "brave/components/brave_rewards/core/state/state.h"
 #include "brave/components/brave_rewards/core/uphold/uphold.h"
 #include "brave/components/brave_rewards/core/wallet_provider/linkage_checker.h"
 
 namespace brave_rewards::internal {
 
-InitializationManager::InitializationManager(RewardsEngineImpl& engine)
+InitializationManager::InitializationManager(RewardsEngine& engine)
     : RewardsEngineHelper(engine) {}
 
 InitializationManager::~InitializationManager() = default;
@@ -52,9 +49,9 @@ void InitializationManager::Shutdown(ShutdownCallback callback) {
 
   client().ClearAllNotifications();
 
-  engine().database()->FinishAllInProgressContributions(ToLegacyCallback(
+  engine().database()->FinishAllInProgressContributions(
       base::BindOnce(&InitializationManager::OnContributionsFinished,
-                     weak_factory_.GetWeakPtr(), std::move(callback))));
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
 }
 
 void InitializationManager::OnDatabaseInitialized(InitializeCallback callback,
@@ -91,13 +88,10 @@ void InitializationManager::OnStateInitialized(InitializeCallback callback,
 
 void InitializationManager::InitializeHelpers() {
   engine().publisher()->SetPublisherServerListTimer();
-  engine().contribution()->SetAutoContributeTimer();
+  engine().contribution()->SetReconcileStampTimer();
   engine().contribution()->SetMonthlyContributionTimer();
-  engine().promotion()->Refresh(false);
   engine().contribution()->Initialize();
-  engine().promotion()->Initialize();
-  engine().api()->Initialize();
-  engine().recovery()->Check();
+  engine().Get<RewardsParametersProvider>().StartAutoUpdate();
   engine().uphold()->CheckEligibility();
   engine().Get<LinkageChecker>().CheckLinkage();
 }
@@ -108,9 +102,9 @@ void InitializationManager::OnContributionsFinished(ShutdownCallback callback,
     LogError(FROM_HERE) << "Error finalizing contributions";
   }
 
-  engine().database()->Close(ToLegacyCallback(
+  engine().database()->Close(
       base::BindOnce(&InitializationManager::OnDatabaseClosed,
-                     weak_factory_.GetWeakPtr(), std::move(callback))));
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
 }
 
 void InitializationManager::OnDatabaseClosed(ShutdownCallback callback,

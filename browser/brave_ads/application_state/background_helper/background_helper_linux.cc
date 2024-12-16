@@ -43,7 +43,7 @@ bool BackgroundHelperLinux::IsForeground() const {
   x11::Connection::Get()->GetPropertyAs(
       ui::GetX11RootWindow(), x11::GetAtom("_NET_ACTIVE_WINDOW"), &x11_window);
 
-  for (auto* browser : *BrowserList::GetInstance()) {
+  for (Browser* browser : *BrowserList::GetInstance()) {
     auto window =
         browser->window()->GetNativeWindow()->GetHost()->GetAcceleratedWidget();
     if (x11_window == static_cast<x11::Window>(window)) {
@@ -56,14 +56,14 @@ bool BackgroundHelperLinux::IsForeground() const {
 
 void BackgroundHelperLinux::OnBrowserSetLastActive(Browser* browser) {
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-      FROM_HERE,
-      base::BindOnce(&BackgroundHelperLinux::TriggerOnForeground, AsWeakPtr()));
+      FROM_HERE, base::BindOnce(&BackgroundHelperLinux::TriggerOnForeground,
+                                weak_ptr_factory_.GetWeakPtr()));
 }
 
 void BackgroundHelperLinux::OnBrowserNoLongerActive(Browser* browser) {
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-      FROM_HERE,
-      base::BindOnce(&BackgroundHelperLinux::TriggerOnBackground, AsWeakPtr()));
+      FROM_HERE, base::BindOnce(&BackgroundHelperLinux::TriggerOnBackground,
+                                weak_ptr_factory_.GetWeakPtr()));
 }
 
 }  // namespace brave_ads

@@ -5,8 +5,7 @@
 
 #include "src/v8/src/execution/isolate.cc"
 
-namespace v8 {
-namespace internal {
+namespace v8::internal {
 
 #if BUILDFLAG(ENABLE_BRAVE_PAGE_GRAPH)
 namespace {
@@ -25,7 +24,7 @@ GetExecutingScriptsImpl(Isolate* isolate, bool all, bool include_position) {
         continue;
       }
 
-      const int script_id = Script::cast(maybe_script)->id();
+      const int script_id = Cast<Script>(maybe_script)->id();
       if (script_id <= 0) {
         continue;
       }
@@ -66,5 +65,4 @@ std::vector<v8::page_graph::ExecutingScript> Isolate::GetAllExecutingScripts() {
 }
 #endif  // BUILDFLAG(ENABLE_BRAVE_PAGE_GRAPH)
 
-}  // namespace internal
-}  // namespace v8
+}  // namespace v8::internal

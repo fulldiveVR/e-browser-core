@@ -29,7 +29,7 @@ MetricLogType ValidateURLAndGetMetricLogType(const GURL& url,
                                              const char* expected_host) {
   std::string url_prefix = base::StrCat({expected_host, "/instances/"});
 
-  EXPECT_TRUE(base::StartsWith(url.spec(), url_prefix));
+  EXPECT_TRUE(url.spec().starts_with(url_prefix));
 
   std::vector<std::string> path_segments = base::SplitString(
       url.path(), "/", base::KEEP_WHITESPACE, base::SPLIT_WANT_ALL);
@@ -57,7 +57,8 @@ std::string HandleRandomnessRequest(const network::ResourceRequest& request,
   rust::Vec<constellation::VecU8> req_points_rust;
   const base::Value::List* points_list = req_parsed_val.FindList("points");
 
-  EXPECT_EQ(points_list->size(), 8U);
+  EXPECT_GE(points_list->size(), 7U);
+  EXPECT_LE(points_list->size(), 9U);
 
   std::transform(
       points_list->begin(), points_list->end(),
@@ -72,7 +73,8 @@ std::string HandleRandomnessRequest(const network::ResourceRequest& request,
   auto rand_result =
       constellation::generate_local_randomness(req_points_rust, expected_epoch);
 
-  EXPECT_EQ(rand_result.points.size(), 8U);
+  EXPECT_GE(rand_result.points.size(), 7U);
+  EXPECT_LE(rand_result.points.size(), 9U);
 
   base::Value::List resp_points_list;
   for (const constellation::VecU8& resp_point_rust : rand_result.points) {

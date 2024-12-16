@@ -30,9 +30,10 @@ namespace extensions {
       brave_webtorrent_extension_id
     };
 
-    for (size_t i = 0; i < std::size(kAllowed); ++i) {
-      if (extension_id == kAllowed[i])
+    for (const auto* id : kAllowed) {
+      if (extension_id == id) {
         return true;
+      }
     }
 
     return IsComponentExtensionAllowlisted_ChromiumImpl(extension_id);

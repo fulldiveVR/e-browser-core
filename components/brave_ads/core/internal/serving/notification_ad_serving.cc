@@ -5,9 +5,11 @@
 
 #include "brave/components/brave_ads/core/internal/serving/notification_ad_serving.h"
 
+#include <utility>
+
 #include "base/functional/bind.h"
 #include "base/time/time.h"
-#include "brave/components/brave_ads/core/internal/client/ads_client_util.h"
+#include "brave/components/brave_ads/core/internal/ads_client/ads_client_util.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
 #include "brave/components/brave_ads/core/internal/common/time/time_formatting_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/creative_notification_ad_info.h"
@@ -23,7 +25,10 @@
 #include "brave/components/brave_ads/core/internal/settings/settings.h"
 #include "brave/components/brave_ads/core/internal/targeting/behavioral/anti_targeting/resource/anti_targeting_resource.h"
 #include "brave/components/brave_ads/core/internal/targeting/geographical/subdivision/subdivision_targeting.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_event_info.h"
+#include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_events_database_table.h"
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_info.h"
+#include "brave/components/brave_ads/core/public/ads_client/ads_client.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 
 namespace brave_ads {
@@ -35,11 +40,11 @@ NotificationAdServing::NotificationAdServing(
       kNotificationAdServingVersion.Get(), subdivision_targeting,
       anti_targeting_resource);
 
-  AddAdsClientNotifierObserver(this);
+  GetAdsClient().AddObserver(this);
 }
 
 NotificationAdServing::~NotificationAdServing() {
-  RemoveAdsClientNotifierObserver(this);
+  GetAdsClient().RemoveObserver(this);
   delegate_ = nullptr;
 }
 
@@ -67,56 +72,77 @@ void NotificationAdServing::StopServingAdsAtRegularIntervals() {
 
 void NotificationAdServing::MaybeServeAd() {
   if (is_serving_) {
-    return BLOG(1, "Already serving notification ad");
+    return BLOG(1, "Notification ad not served: Already serving an ad");
   }
-
   is_serving_ = true;
 
-  const auto result = CanServeAd();
-  if (!result.has_value()) {
-    BLOG(1, result.error());
-    return FailedToServeAd();
-  }
-
-  BuildUserModel(base::BindOnce(&NotificationAdServing::BuildUserModelCallback,
-                                weak_factory_.GetWeakPtr()));
+  GetAdEvents();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
-base::expected<void, std::string> NotificationAdServing::CanServeAd() const {
+bool NotificationAdServing::CanServeAd(const AdEventList& ad_events) const {
   if (!base::FeatureList::IsEnabled(kNotificationAdServingFeature)) {
-    return base::unexpected("Notification ad not served: Feature is disabled");
+    BLOG(1, "Notification ad not served: Feature is disabled");
+    return false;
   }
 
   if (!IsSupported()) {
-    return base::unexpected("Notification ad not served: Unsupported version");
+    BLOG(1, "Notification ad not served: Unsupported version");
+    return false;
   }
 
-  if (!NotificationAdPermissionRules::HasPermission()) {
-    return base::unexpected(
-        "Notification ad not served: Not allowed due to permission rules");
+  if (!NotificationAdPermissionRules::HasPermission(ad_events)) {
+    BLOG(1, "Notification ad not served: Not allowed due to permission rules");
+    return false;
   }
 
-  return base::ok();
+  return true;
 }
 
-void NotificationAdServing::GetEligibleAds() {
-  BuildUserModel(base::BindOnce(&NotificationAdServing::BuildUserModelCallback,
+void NotificationAdServing::GetAdEvents() {
+  const database::table::AdEvents database_table;
+  database_table.Get(mojom::AdType::kNotificationAd,
+                     mojom::ConfirmationType::kServedImpression,
+                     /*time_window=*/base::Days(1),
+                     base::BindOnce(&NotificationAdServing::GetAdEventsCallback,
+                                    weak_factory_.GetWeakPtr()));
+}
+
+void NotificationAdServing::GetAdEventsCallback(bool success,
+                                                const AdEventList& ad_events) {
+  if (!success) {
+    BLOG(1, "Notification ad not served: Failed to get ad events");
+    return FailedToServeAd();
+  }
+
+  if (!CanServeAd(ad_events)) {
+    BLOG(1, "Notification ad not served: Not allowed");
+    return FailedToServeAd();
+  }
+
+  GetUserModel();
+}
+
+void NotificationAdServing::GetUserModel() {
+  BuildUserModel(base::BindOnce(&NotificationAdServing::GetUserModelCallback,
                                 weak_factory_.GetWeakPtr()));
 }
 
-void NotificationAdServing::BuildUserModelCallback(
-    const UserModelInfo& user_model) {
+void NotificationAdServing::GetUserModelCallback(UserModelInfo user_model) {
   NotifyOpportunityAroseToServeNotificationAd(user_model.interest.segments);
 
+  GetEligibleAds(std::move(user_model));
+}
+
+void NotificationAdServing::GetEligibleAds(UserModelInfo user_model) {
   eligible_ads_->GetForUserModel(
-      user_model,
-      base::BindOnce(&NotificationAdServing::GetEligibleAdsForUserModelCallback,
+      std::move(user_model),
+      base::BindOnce(&NotificationAdServing::GetEligibleAdsCallback,
                      weak_factory_.GetWeakPtr()));
 }
 
-void NotificationAdServing::GetEligibleAdsForUserModelCallback(
+void NotificationAdServing::GetEligibleAdsCallback(
     const CreativeNotificationAdList& creative_ads) {
   if (creative_ads.empty()) {
     BLOG(1, "Notification ad not served: No eligible ads found");
@@ -161,18 +187,17 @@ void NotificationAdServing::RetryServingAdAtNextInterval() {
   BLOG(1, "Maybe serve notification ad " << FriendlyDateAndTime(serve_ad_at));
 }
 
-base::Time NotificationAdServing::MaybeServeAdAfter(
-    const base::TimeDelta delay) {
+base::Time NotificationAdServing::MaybeServeAdAfter(base::TimeDelta delay) {
   SetServeAdAt(base::Time::Now() + delay);
 
   return timer_.Start(FROM_HERE, delay,
                       base::BindOnce(&NotificationAdServing::MaybeServeAd,
-                                     base::Unretained(this)));
+                                     weak_factory_.GetWeakPtr()));
 }
 
 void NotificationAdServing::ServeAd(const NotificationAdInfo& ad) {
   if (!ad.IsValid()) {
-    BLOG(1, "Failed to serve notification ad");
+    BLOG(1, "Notification ad not served: Invalid ad");
     return FailedToServeAd();
   }
 

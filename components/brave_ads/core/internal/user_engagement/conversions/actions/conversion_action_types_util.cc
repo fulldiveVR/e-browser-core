@@ -8,17 +8,18 @@
 #include "base/notreached.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/actions/conversion_action_types_constants.h"
+#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 
 namespace brave_ads {
 
 ConversionActionType ToConversionActionType(
-    const ConfirmationType confirmation_type) {
-  switch (confirmation_type) {
-    case ConfirmationType::kViewed: {
+    mojom::ConfirmationType mojom_confirmation_type) {
+  switch (mojom_confirmation_type) {
+    case mojom::ConfirmationType::kViewedImpression: {
       return ConversionActionType::kViewThrough;
     }
 
-    case ConfirmationType::kClicked: {
+    case mojom::ConfirmationType::kClicked: {
       return ConversionActionType::kClickThrough;
     }
 
@@ -27,12 +28,11 @@ ConversionActionType ToConversionActionType(
     }
   }
 
-  NOTREACHED_NORETURN() << "Unexpected value for ConfirmationType: "
-                        << base::to_underlying(confirmation_type);
+  NOTREACHED() << "Unexpected value for mojom::ConfirmationType: "
+               << base::to_underlying(mojom_confirmation_type);
 }
 
-ConversionActionType ToConversionActionType(
-    const std::string_view action_type) {
+ConversionActionType ToConversionActionType(std::string_view action_type) {
   if (action_type == kViewThroughConversionActionType) {
     return ConversionActionType::kViewThrough;
   }
@@ -41,10 +41,10 @@ ConversionActionType ToConversionActionType(
     return ConversionActionType::kClickThrough;
   }
 
-  NOTREACHED_NORETURN() << "Unexpected value for action_type: " << action_type;
+  NOTREACHED() << "Unexpected value for action_type: " << action_type;
 }
 
-std::string ToString(const ConversionActionType action_type) {
+std::string ToString(ConversionActionType action_type) {
   switch (action_type) {
     case ConversionActionType::kViewThrough: {
       return kViewThroughConversionActionType;
@@ -59,8 +59,8 @@ std::string ToString(const ConversionActionType action_type) {
     }
   }
 
-  NOTREACHED_NORETURN() << "Unexpected value for ConversionActionType: "
-                        << base::to_underlying(action_type);
+  NOTREACHED() << "Unexpected value for ConversionActionType: "
+               << base::to_underlying(action_type);
 }
 
 }  // namespace brave_ads

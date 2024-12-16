@@ -10,6 +10,16 @@ import { cacher } from '../../utils/query-cache-utils'
 
 import { baseQueryFunction } from '../async/base-query-cache'
 
+// TODO: These should eventually get refactored into a single tag with a type of
+// `'TokenBalances'` with various IDs to simplify clearing cached balances
+// across queries
+const balancesTags = [
+  'AccountTokenCurrentBalance',
+  'TokenBalancesForChainId',
+  'TokenBalances',
+  'HardwareAccountDiscoveryBalance'
+] as const
+
 /**
  * Creates an api to use as a base for adding endpoints
  * endpoints can be added via `.injectEndpoints(endpoints)`
@@ -20,13 +30,10 @@ export function createWalletApiBase() {
     baseQuery: baseQueryFunction,
     tagTypes: [
       ...cacher.defaultTags,
+      ...balancesTags,
       'AccountInfos',
-      'AccountTokenCurrentBalance',
-      'TokenBalancesForChainId',
-      'TokenBalances',
-      'HardwareAccountDiscoveryBalance',
       'DefaultFiatCurrency',
-      'ERC721Metadata',
+      'NftMetadata',
       'SolanaEstimatedFees',
       'GasEstimation1559',
       'KnownBlockchainTokens',
@@ -35,7 +42,7 @@ export function createWalletApiBase() {
       'PriceHistory',
       'PricesHistory',
       'Transactions',
-      'TransactionSimulationsEnabled',
+      'TransactionSimulationsOptIn',
       'UserBlockchainTokens',
       'NftDiscoveryEnabledStatus',
       'BraveRewards-Info',
@@ -49,7 +56,6 @@ export function createWalletApiBase() {
       'CoingeckoId',
       'AutoPinEnabled',
       'SimpleHashSpamNFTs',
-      'LocalIPFSNodeStatus',
       'TokenInfo',
       'EthTokenDecimals',
       'EthTokenSymbol',
@@ -59,7 +65,27 @@ export function createWalletApiBase() {
       'ConnectedAccounts',
       'DefaultEthWallet',
       'DefaultSolWallet',
-      'IsMetaMaskInstalled'
+      'IsMetaMaskInstalled',
+      'IsPrivateWindow',
+      'PendingAddChainRequests',
+      'PendingSwitchChainRequests',
+      'PendingDecryptRequest',
+      'PendingEncryptRequest',
+      'PendingSignSolTransactionsRequests',
+      'PinnableNftIds',
+      'PendingSignMessageRequests',
+      'PendingSignMessageErrors',
+      'ActiveOrigin',
+      'MeldFiatCurrencies',
+      'MeldCryptoCurrencies',
+      'DefaultCountryCode',
+      'MeldCountries',
+      'MeldServiceProviders',
+      'MeldCryptoQuotes',
+      'MeldPaymentMethods',
+      'MeldWidget',
+      'ZCashAccountInfo',
+      'IsShieldingAvailable'
     ],
     endpoints: ({ mutation, query }) => ({})
   })
@@ -68,7 +94,7 @@ export function createWalletApiBase() {
 export const ACCOUNT_TAG_IDS = {
   REGISTRY: 'REGISTRY',
   SELECTED: 'SELECTED'
-}
+} as const
 
 export const NETWORK_TAG_IDS = {
   HIDDEN: 'HIDDEN',
@@ -80,6 +106,10 @@ export const NETWORK_TAG_IDS = {
   SELECTED: 'SELECTED',
   SWAP_SUPPORTED: 'SWAP_SUPPORTED',
   VISIBLE: 'VISIBLE'
+} as const
+
+export const TOKEN_TAG_IDS = {
+  REGISTRY: 'REGISTRY'
 } as const
 
 export type WalletApiBase = ReturnType<typeof createWalletApiBase>

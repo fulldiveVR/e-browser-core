@@ -13,8 +13,10 @@ import { UISelectors } from '../../../common/selectors'
 // Utils
 import { getLocale } from '../../../../common/locale'
 import Amount from '../../../utils/amount'
-import { getPriceIdForToken } from '../../../utils/api-utils'
-import { getTokenPriceFromRegistry } from '../../../utils/pricing-utils'
+import {
+  getPriceIdForToken,
+  getTokenPriceFromRegistry
+} from '../../../utils/pricing-utils'
 import { BraveWallet } from '../../../constants/types'
 import {
   getIsRewardsToken,
@@ -23,6 +25,7 @@ import {
 import {
   externalWalletProviderFromString //
 } from '../../../../brave_rewards/resources/shared/lib/external_wallet'
+import { checkIfTokenNeedsNetworkIcon } from '../../../utils/asset-utils'
 
 // Queries
 import {
@@ -39,11 +42,13 @@ import useExplorer from '../../../common/hooks/explorer'
 // Components
 import withPlaceholderIcon from '../../shared/create-placeholder-icon'
 import { AssetDetailsMenu } from '../wallet-menus/asset-details-menu'
+import { CreateNetworkIcon } from '../../shared/create-network-icon'
+import { ShieldedLabel } from '../../shared/shielded_label/shielded_label'
 
 // Styled Components
 import {
-  CircleButton,
-  ButtonIcon,
+  MenuButton,
+  MenuButtonIcon,
   MenuWrapper,
   HorizontalDivider
 } from './shared-card-headers.style'
@@ -53,8 +58,11 @@ import {
   NetworkDescriptionText,
   PriceText,
   PercentChange,
-  UpDownIcon
+  UpDownIcon,
+  IconsWrapper,
+  NetworkIconWrapper
 } from './asset-details-header.style'
+import { Button, ButtonIcon } from './shared-panel-headers.style'
 import { Row, Column, HorizontalSpace } from '../../shared/style'
 import { Skeleton } from '../../shared/loading-skeleton/styles'
 
@@ -69,6 +77,7 @@ interface Props {
   onBack: () => void
   onClickTokenDetails: () => void
   onClickHideToken: () => void
+  onClickEditToken?: () => void
   isShowingMarketData?: boolean
   selectedTimeline: BraveWallet.AssetPriceTimeframe
 }
@@ -79,6 +88,7 @@ export const AssetDetailsHeader = (props: Props) => {
     onBack,
     onClickHideToken,
     onClickTokenDetails,
+    onClickEditToken,
     isShowingMarketData,
     selectedTimeline
   } = props
@@ -118,11 +128,18 @@ export const AssetDetailsHeader = (props: Props) => {
     onClickTokenDetails()
   }, [onClickTokenDetails])
 
+  const handleOnClickEditToken = React.useCallback(() => {
+    if (onClickEditToken) {
+      setShowAssetDetailsMenu(false)
+      onClickEditToken()
+    }
+  }, [onClickEditToken])
+
   const onClickViewOnExplorer = React.useCallback(() => {
     if (selectedAsset) {
       openExplorer('token', selectedAsset.contractAddress)()
     }
-  }, [selectedAsset])
+  }, [openExplorer, selectedAsset])
 
   const tokenPriceIds = React.useMemo(
     () => (selectedAsset ? [getPriceIdForToken(selectedAsset)] : []),
@@ -165,29 +182,50 @@ export const AssetDetailsHeader = (props: Props) => {
 
   return (
     <Row
-      padding={isPanel ? '12px 20px' : '24px 0px'}
+      padding={isPanel ? '20px 16px' : '24px 0px'}
       justifyContent='space-between'
     >
       <Row width='unset'>
-        <CircleButton
-          size={28}
-          marginRight={16}
-          onClick={onBack}
-        >
-          <ButtonIcon
-            size={16}
-            name='arrow-left'
-          />
-        </CircleButton>
+        {isPanel ? (
+          <Row
+            width='unset'
+            margin='0px 12px 0px 0px'
+          >
+            <Button onClick={onBack}>
+              <ButtonIcon name='carat-left' />
+            </Button>
+          </Row>
+        ) : (
+          <MenuButton
+            marginRight={16}
+            onClick={onBack}
+          >
+            <MenuButtonIcon
+              size={16}
+              name='arrow-left'
+            />
+          </MenuButton>
+        )}
         <Row
           width='unset'
           gap='8px'
         >
           {selectedAsset ? (
-            <AssetIconWithPlaceholder
-              asset={selectedAsset}
-              network={selectedAssetsNetwork}
-            />
+            <IconsWrapper>
+              <AssetIconWithPlaceholder asset={selectedAsset} />
+              {selectedAssetsNetwork &&
+                checkIfTokenNeedsNetworkIcon(
+                  selectedAssetsNetwork,
+                  selectedAsset.contractAddress
+                ) && (
+                  <NetworkIconWrapper>
+                    <CreateNetworkIcon
+                      network={selectedAssetsNetwork}
+                      marginRight={0}
+                    />
+                  </NetworkIconWrapper>
+                )}
+            </IconsWrapper>
           ) : (
             <Skeleton
               height={'40px'}
@@ -196,7 +234,17 @@ export const AssetDetailsHeader = (props: Props) => {
           )}
           <Column alignItems='flex-start'>
             {selectedAsset ? (
-              <AssetNameText>{selectedAsset?.name ?? ''}</AssetNameText>
+              <Row
+                width='unset'
+                gap='6px'
+              >
+                <AssetNameText>
+                  {selectedAsset.isShielded
+                    ? 'Zcash'
+                    : selectedAsset?.name ?? ''}
+                </AssetNameText>
+                {selectedAsset.isShielded && <ShieldedLabel />}
+              </Row>
             ) : (
               <Skeleton
                 height={'18px'}
@@ -255,21 +303,36 @@ export const AssetDetailsHeader = (props: Props) => {
           !selectedAsset.isNft &&
           !isRewardsToken && (
             <>
-              <HorizontalSpace space='16px' />
-              <HorizontalDivider />
-              <HorizontalSpace space='16px' />
+              {isPanel ? (
+                <HorizontalSpace space='12px' />
+              ) : (
+                <>
+                  <HorizontalSpace space='16px' />
+                  <HorizontalDivider />
+                  <HorizontalSpace space='16px' />
+                </>
+              )}
               <MenuWrapper ref={assetDetailsMenuRef}>
-                <CircleButton
-                  onClick={() => setShowAssetDetailsMenu((prev) => !prev)}
-                >
-                  <ButtonIcon name='more-vertical' />
-                </CircleButton>
+                {isPanel ? (
+                  <Button
+                    onClick={() => setShowAssetDetailsMenu((prev) => !prev)}
+                  >
+                    <ButtonIcon name='more-vertical' />
+                  </Button>
+                ) : (
+                  <MenuButton
+                    onClick={() => setShowAssetDetailsMenu((prev) => !prev)}
+                  >
+                    <MenuButtonIcon name='more-vertical' />
+                  </MenuButton>
+                )}
                 {showAssetDetailsMenu && (
                   <AssetDetailsMenu
                     assetSymbol={selectedAsset?.symbol ?? ''}
                     onClickHideToken={handleOnClickHideToken}
                     onClickTokenDetails={handleOnClickTokenDetails}
                     onClickViewOnExplorer={onClickViewOnExplorer}
+                    onClickEditToken={handleOnClickEditToken}
                   />
                 )}
               </MenuWrapper>

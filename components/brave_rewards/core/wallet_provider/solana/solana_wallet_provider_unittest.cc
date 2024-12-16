@@ -7,14 +7,11 @@
 #include <tuple>
 #include <utility>
 
-#include "brave/components/brave_rewards/core/endpoint/promotion/promotions_util.h"
-#include "brave/components/brave_rewards/core/endpoint/rewards/rewards_util.h"
+#include "brave/components/brave_rewards/core/common/environment_config.h"
 #include "brave/components/brave_rewards/core/state/state_keys.h"
 #include "brave/components/brave_rewards/core/test/rewards_engine_test.h"
 #include "brave/components/brave_rewards/core/wallet_provider/solana/solana_wallet_provider.h"
 #include "net/http/http_status_code.h"
-
-// npm run test -- brave_unit_tests --filter=RewardsSolanaWalletProviderTest*
 
 namespace brave_rewards::internal::wallet_provider {
 
@@ -28,6 +25,8 @@ class RewardsSolanaWalletProviderTest : public RewardsEngineTest {
     engine().SetState(state::kWalletBrave, std::move(json));
     InitializeEngine();
   }
+
+  EnvironmentConfig& config() { return engine().Get<EnvironmentConfig>(); }
 };
 
 TEST_F(RewardsSolanaWalletProviderTest, LinkingSuccess) {
@@ -36,11 +35,11 @@ TEST_F(RewardsSolanaWalletProviderTest, LinkingSuccess) {
   challenge_response->body =
       R"({"challengeId": "368d87a3-7749-4ebb-9f3a-2882c99078c7"})";
 
-  AddNetworkResultForTesting(
-      endpoint::promotion::GetServerUrl("/v3/wallet/challenges"),
+  client().AddNetworkResultForTesting(
+      config().rewards_grant_url().Resolve("/v3/wallet/challenges").spec(),
       mojom::UrlMethod::POST, std::move(challenge_response));
 
-  auto [login_params] =
+  auto login_params =
       WaitFor<mojom::ExternalWalletLoginParamsPtr>([this](auto callback) {
         engine().Get<SolanaWalletProvider>().BeginLogin(std::move(callback));
       });
@@ -48,11 +47,15 @@ TEST_F(RewardsSolanaWalletProviderTest, LinkingSuccess) {
   ASSERT_TRUE(login_params);
   EXPECT_EQ(
       login_params->url,
-      endpoint::rewards::GetServerUrl(
-          "/connect/?msg=fa5dea51-6af4-44ca-801b-07b6df3dcfe4.368d87a3-7749-"
-          "4ebb-9f3a-2882c99078c7&sig="
-          "RDI71F4GBIcSMeURXWpX3c9BIU5Uq1GEJn5bpWed8k9bcOqSuJFrShJwndGgBf-"
-          "kfPLoXM0T62VmGhhaY632DQ%3D%3D"));
+      config()
+          .rewards_url()
+          .Resolve(
+              "/connect/"
+              "?msg=fa5dea51-6af4-44ca-801b-07b6df3dcfe4.368d87a3-7749-"
+              "4ebb-9f3a-2882c99078c7&sig="
+              "RDI71F4GBIcSMeURXWpX3c9BIU5Uq1GEJn5bpWed8k9bcOqSuJFrShJwndGgBf-"
+              "kfPLoXM0T62VmGhhaY632DQ%3D%3D")
+          .spec());
   EXPECT_EQ(login_params->cookies["__Secure-CSRF_TOKEN"],
             "368d87a3-7749-4ebb-9f3a-2882c99078c7");
 
@@ -67,15 +70,17 @@ TEST_F(RewardsSolanaWalletProviderTest, LinkingSuccess) {
           }
       })";
 
-  AddNetworkResultForTesting(
-      endpoint::promotion::GetServerUrl(
-          "/v4/wallets/fa5dea51-6af4-44ca-801b-07b6df3dcfe4"),
+  client().AddNetworkResultForTesting(
+      config()
+          .rewards_grant_url()
+          .Resolve("/v4/wallets/fa5dea51-6af4-44ca-801b-07b6df3dcfe4")
+          .spec(),
       mojom::UrlMethod::GET, std::move(get_wallet_response));
 
   engine().Get<SolanaWalletProvider>().PollWalletStatus();
   task_environment().RunUntilIdle();
 
-  auto [external_wallet] =
+  auto external_wallet =
       WaitFor<mojom::ExternalWalletPtr>([this](auto callback) {
         engine().GetExternalWallet(std::move(callback));
       });
@@ -89,13 +94,13 @@ TEST_F(RewardsSolanaWalletProviderTest, LinkingSuccess) {
   solana_balance->amount = "1234";
   solana_balance->decimals = 2;
 
-  engine_client().AddSPLAccountBalanceResultForTesting(
+  client().AddSPLAccountBalanceResultForTesting(
       "4668ba96-7129-5e85-abdc-0c144ab7883c",
       "EPeUFDgHRxs9xxEPVaL6kfGQvCon7jmAWKVUHuux1Tpz",
       std::move(solana_balance));
 
   auto [balance_result, balance_value] =
-      WaitFor<mojom::Result, double>([this](auto callback) {
+      WaitForValues<mojom::Result, double>([this](auto callback) {
         engine().Get<SolanaWalletProvider>().FetchBalance(std::move(callback));
       });
 

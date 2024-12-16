@@ -15,6 +15,7 @@
 #include "base/types/expected.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
+#include "brave/components/brave_wallet/browser/network_manager.h"
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "components/grit/brave_components_strings.h"
@@ -56,17 +57,20 @@ class BitcoinRpcUnitTest : public testing::Test {
 
   void SetUp() override {
     brave_wallet::RegisterProfilePrefs(prefs_.registry());
+    network_manager_ = std::make_unique<NetworkManager>(&prefs_);
     bitcoin_rpc_ = std::make_unique<bitcoin_rpc::BitcoinRpc>(
-        &prefs_, shared_url_loader_factory_);
+        *network_manager_, shared_url_loader_factory_);
 
-    auto btc_mainnet =
-        GetKnownChain(&prefs_, mojom::kBitcoinMainnet, mojom::CoinType::BTC);
-    btc_mainnet->rpc_endpoints[0] = GURL(mainnet_rpc_url_);
-    AddCustomNetwork(&prefs_, *btc_mainnet);
-    auto btc_testnet =
-        GetKnownChain(&prefs_, mojom::kBitcoinTestnet, mojom::CoinType::BTC);
-    btc_testnet->rpc_endpoints[0] = GURL(testnet_rpc_url_);
-    AddCustomNetwork(&prefs_, *btc_testnet);
+    mainnet_rpc_url_ =
+        network_manager_
+            ->GetKnownChain(mojom::kBitcoinMainnet, mojom::CoinType::BTC)
+            ->rpc_endpoints.front()
+            .spec();
+    testnet_rpc_url_ =
+        network_manager_
+            ->GetKnownChain(mojom::kBitcoinTestnet, mojom::CoinType::BTC)
+            ->rpc_endpoints.front()
+            .spec();
   }
 
   std::string GetResponseString() const {
@@ -74,13 +78,14 @@ class BitcoinRpcUnitTest : public testing::Test {
   }
 
  protected:
-  std::string mainnet_rpc_url_ = "https://btc-mainnet.com/api/";
-  std::string testnet_rpc_url_ = "https://btc-testnet.com/api/";
+  std::string mainnet_rpc_url_;
+  std::string testnet_rpc_url_;
   uint32_t response_height_ = 0;
   base::test::TaskEnvironment task_environment_;
   sync_preferences::TestingPrefServiceSyncable prefs_;
   network::TestURLLoaderFactory url_loader_factory_;
   scoped_refptr<network::SharedURLLoaderFactory> shared_url_loader_factory_;
+  std::unique_ptr<NetworkManager> network_manager_;
   std::unique_ptr<bitcoin_rpc::BitcoinRpc> bitcoin_rpc_;
   data_decoder::test::InProcessDataDecoder in_process_data_decoder_;
 };
@@ -88,10 +93,13 @@ class BitcoinRpcUnitTest : public testing::Test {
 TEST_F(BitcoinRpcUnitTest, Throttling) {
   using GetChainHeightResult = base::expected<uint32_t, std::string>;
 
+  // For mainnet there is no throttling and always 5 requests.
   struct {
+    const bool mainnet;
     const char* param;
     const size_t expected_size;
-  } test_cases[] = {{"0", 5}, {"3", 3}, {"10", 5}};
+  } test_cases[] = {{true, "0", 5},  {true, "3", 5},  {true, "10", 5},
+                    {false, "0", 5}, {false, "3", 3}, {false, "10", 5}};
 
   for (auto& test_case : test_cases) {
     base::test::ScopedFeatureList feature_list;
@@ -103,22 +111,28 @@ TEST_F(BitcoinRpcUnitTest, Throttling) {
     base::MockCallback<bitcoin_rpc::BitcoinRpc::GetChainHeightCallback>
         callback;
 
-    const std::string req_url = mainnet_rpc_url_ + "blocks/tip/height";
+    const std::string req_url =
+        (test_case.mainnet ? mainnet_rpc_url_ : testnet_rpc_url_) +
+        "blocks/tip/height";
 
     url_loader_factory_.ClearResponses();
 
+    auto* chain_id =
+        (test_case.mainnet ? mojom::kBitcoinMainnet : mojom::kBitcoinTestnet);
+
     // GetChainHeight works.
     EXPECT_CALL(callback, Run(GetChainHeightResult(base::ok(123)))).Times(5);
-    bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-    bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-    bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-    bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-    bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-    base::RunLoop().RunUntilIdle();
+    bitcoin_rpc_->GetChainHeight(chain_id, callback.Get());
+    bitcoin_rpc_->GetChainHeight(chain_id, callback.Get());
+    bitcoin_rpc_->GetChainHeight(chain_id, callback.Get());
+    bitcoin_rpc_->GetChainHeight(chain_id, callback.Get());
+    bitcoin_rpc_->GetChainHeight(chain_id, callback.Get());
+    task_environment_.RunUntilIdle();
+
     EXPECT_EQ(url_loader_factory_.pending_requests()->size(),
               test_case.expected_size);
     url_loader_factory_.AddResponse(req_url, "123");
-    base::RunLoop().RunUntilIdle();
+    task_environment_.RunUntilIdle();
     testing::Mock::VerifyAndClearExpectations(&callback);
   }
 }
@@ -133,14 +147,14 @@ TEST_F(BitcoinRpcUnitTest, GetChainHeight) {
   EXPECT_CALL(callback, Run(GetChainHeightResult(base::ok(123))));
   url_loader_factory_.AddResponse(req_url, "123");
   bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // GetChainHeight works.
   EXPECT_CALL(callback, Run(GetChainHeightResult(base::ok(9999999))));
   url_loader_factory_.AddResponse(req_url, "9999999");
   bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
@@ -148,7 +162,7 @@ TEST_F(BitcoinRpcUnitTest, GetChainHeight) {
               Run(GetChainHeightResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, "some string");
   bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -157,7 +171,7 @@ TEST_F(BitcoinRpcUnitTest, GetChainHeight) {
   url_loader_factory_.AddResponse(req_url, "123",
                                   net::HTTP_INTERNAL_SERVER_ERROR);
   bitcoin_rpc_->GetChainHeight(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -165,7 +179,7 @@ TEST_F(BitcoinRpcUnitTest, GetChainHeight) {
   url_loader_factory_.AddResponse(testnet_rpc_url_ + "blocks/tip/height",
                                   "123");
   bitcoin_rpc_->GetChainHeight(mojom::kBitcoinTestnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
@@ -173,7 +187,7 @@ TEST_F(BitcoinRpcUnitTest, GetChainHeight) {
               Run(GetChainHeightResult(base::unexpected(InternalError()))));
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetChainHeight("0x123", callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 
@@ -199,7 +213,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
   EXPECT_CALL(callback, Run(GetFeeEstimatesResult(base::ok(estimates))));
   url_loader_factory_.AddResponse(req_url, estimates_json);
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
@@ -207,7 +221,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, "some string");
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Non-integer key fails.
@@ -215,7 +229,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, R"({"a": 1})");
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Non-double key fails.
@@ -223,7 +237,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, R"({"1": "a"})");
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Empty dict fails.
@@ -231,7 +245,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, R"({})");
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // List fails.
@@ -239,7 +253,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(ParsingError()))));
   url_loader_factory_.AddResponse(req_url, R"([{"1": 1}])");
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -248,7 +262,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
   url_loader_factory_.AddResponse(req_url, "123",
                                   net::HTTP_INTERNAL_SERVER_ERROR);
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinMainnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -256,7 +270,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
   url_loader_factory_.AddResponse(testnet_rpc_url_ + "fee-estimates",
                                   estimates_json);
   bitcoin_rpc_->GetFeeEstimates(mojom::kBitcoinTestnet, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
@@ -264,7 +278,7 @@ TEST_F(BitcoinRpcUnitTest, GetFeeEstimates) {
               Run(GetFeeEstimatesResult(base::unexpected(InternalError()))));
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetFeeEstimates("0x123", callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 
@@ -293,14 +307,14 @@ TEST_F(BitcoinRpcUnitTest, GetTransaction) {
               })));
   url_loader_factory_.AddResponse(req_url, tx_json);
   bitcoin_rpc_->GetTransaction(mojom::kBitcoinMainnet, txid, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
   EXPECT_CALL(callback, Run(MatchError(ParsingError())));
   url_loader_factory_.AddResponse(req_url, "some string");
   bitcoin_rpc_->GetTransaction(mojom::kBitcoinMainnet, txid, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -308,7 +322,7 @@ TEST_F(BitcoinRpcUnitTest, GetTransaction) {
   url_loader_factory_.AddResponse(req_url, tx_json,
                                   net::HTTP_INTERNAL_SERVER_ERROR);
   bitcoin_rpc_->GetTransaction(mojom::kBitcoinMainnet, txid, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -321,14 +335,14 @@ TEST_F(BitcoinRpcUnitTest, GetTransaction) {
   url_loader_factory_.ClearResponses();
   url_loader_factory_.AddResponse(testnet_rpc_url_ + "tx/" + txid, tx_json);
   bitcoin_rpc_->GetTransaction(mojom::kBitcoinTestnet, txid, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
   EXPECT_CALL(callback, Run(MatchError(InternalError())));
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetTransaction("0x123", txid, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid txid arg format fails.
@@ -336,7 +350,68 @@ TEST_F(BitcoinRpcUnitTest, GetTransaction) {
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetTransaction(mojom::kBitcoinMainnet, txid + "/",
                                callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+}
+
+TEST_F(BitcoinRpcUnitTest, GetTransactionRaw) {
+  base::MockCallback<bitcoin_rpc::BitcoinRpc::GetTransactionRawCallback>
+      callback;
+
+  const std::string txid =
+      "aa388f50b725767653e150ad8990ec11a2146d75acafbe492af08213849fe2c5";
+  const std::string req_url = mainnet_rpc_url_ + "tx/" + txid + "/hex";
+
+  const std::string tx_json = R"(010203)";
+
+  std::vector<uint8_t> tx_expected = {1, 2, 3};
+
+  // GetTransaction works.
+  EXPECT_CALL(callback,
+              Run(Truly([&](auto& arg) { return arg == tx_expected; })));
+  url_loader_factory_.AddResponse(req_url, tx_json);
+  bitcoin_rpc_->GetTransactionRaw(mojom::kBitcoinMainnet, txid, callback.Get());
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+
+  // Invalid value returned.
+  EXPECT_CALL(callback, Run(MatchError(ParsingError())));
+  url_loader_factory_.AddResponse(req_url, "some string");
+  bitcoin_rpc_->GetTransactionRaw(mojom::kBitcoinMainnet, txid, callback.Get());
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+
+  // HTTP Error returned.
+  EXPECT_CALL(callback, Run(MatchError(InternalError())));
+  url_loader_factory_.AddResponse(req_url, tx_json,
+                                  net::HTTP_INTERNAL_SERVER_ERROR);
+  bitcoin_rpc_->GetTransactionRaw(mojom::kBitcoinMainnet, txid, callback.Get());
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+
+  // Testnet works.
+  EXPECT_CALL(callback,
+              Run(Truly([&](auto& arg) { return arg == tx_expected; })));
+  url_loader_factory_.ClearResponses();
+  url_loader_factory_.AddResponse(testnet_rpc_url_ + "tx/" + txid + "/hex",
+                                  tx_json);
+  bitcoin_rpc_->GetTransactionRaw(mojom::kBitcoinTestnet, txid, callback.Get());
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+
+  // Invalid chain fails.
+  EXPECT_CALL(callback, Run(MatchError(InternalError())));
+  url_loader_factory_.ClearResponses();
+  bitcoin_rpc_->GetTransactionRaw("0x123", txid, callback.Get());
+  task_environment_.RunUntilIdle();
+  testing::Mock::VerifyAndClearExpectations(&callback);
+
+  // Invalid txid arg format fails.
+  EXPECT_CALL(callback, Run(MatchError(InternalError())));
+  url_loader_factory_.ClearResponses();
+  bitcoin_rpc_->GetTransactionRaw(mojom::kBitcoinMainnet, txid + "/",
+                                  callback.Get());
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 
@@ -380,7 +455,7 @@ TEST_F(BitcoinRpcUnitTest, GetAddressStats) {
   url_loader_factory_.AddResponse(req_url, address_json);
   bitcoin_rpc_->GetAddressStats(mojom::kBitcoinMainnet, address,
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
@@ -388,7 +463,7 @@ TEST_F(BitcoinRpcUnitTest, GetAddressStats) {
   url_loader_factory_.AddResponse(req_url, "[123]");
   bitcoin_rpc_->GetAddressStats(mojom::kBitcoinMainnet, address,
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -397,7 +472,7 @@ TEST_F(BitcoinRpcUnitTest, GetAddressStats) {
                                   net::HTTP_INTERNAL_SERVER_ERROR);
   bitcoin_rpc_->GetAddressStats(mojom::kBitcoinMainnet, address,
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -409,14 +484,14 @@ TEST_F(BitcoinRpcUnitTest, GetAddressStats) {
                                   address_json);
   bitcoin_rpc_->GetAddressStats(mojom::kBitcoinTestnet, address,
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
   EXPECT_CALL(callback, Run(MatchError(InternalError())));
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetAddressStats("0x123", address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid address arg format fails.
@@ -424,7 +499,7 @@ TEST_F(BitcoinRpcUnitTest, GetAddressStats) {
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetAddressStats(mojom::kBitcoinMainnet, address + "/",
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 
@@ -482,14 +557,14 @@ TEST_F(BitcoinRpcUnitTest, GetUtxoList) {
               })));
   url_loader_factory_.AddResponse(req_url, utxo_json);
   bitcoin_rpc_->GetUtxoList(mojom::kBitcoinMainnet, address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
   EXPECT_CALL(callback, Run(MatchError(ParsingError())));
   url_loader_factory_.AddResponse(req_url, "[123]");
   bitcoin_rpc_->GetUtxoList(mojom::kBitcoinMainnet, address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -497,7 +572,7 @@ TEST_F(BitcoinRpcUnitTest, GetUtxoList) {
   url_loader_factory_.AddResponse(req_url, utxo_json,
                                   net::HTTP_INTERNAL_SERVER_ERROR);
   bitcoin_rpc_->GetUtxoList(mojom::kBitcoinMainnet, address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -510,14 +585,14 @@ TEST_F(BitcoinRpcUnitTest, GetUtxoList) {
   url_loader_factory_.AddResponse(
       testnet_rpc_url_ + "address/" + address + "/utxo", utxo_json);
   bitcoin_rpc_->GetUtxoList(mojom::kBitcoinTestnet, address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
   EXPECT_CALL(callback, Run(MatchError(InternalError())));
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetUtxoList("0x123", address, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid address arg format fails.
@@ -525,7 +600,7 @@ TEST_F(BitcoinRpcUnitTest, GetUtxoList) {
   url_loader_factory_.ClearResponses();
   bitcoin_rpc_->GetUtxoList(mojom::kBitcoinMainnet, address + "/",
                             callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 
@@ -540,7 +615,7 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
   EXPECT_CALL(callback, Run(Truly([&](auto& arg) { return arg == txid; })));
   bitcoin_rpc_->PostTransaction(mojom::kBitcoinMainnet, {1, 2, 3},
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   auto request = url_loader_factory_.GetPendingRequest(0)->request;
   EXPECT_EQ(request.url, req_url);
   EXPECT_EQ(request.request_body->elements()
@@ -549,7 +624,7 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
                 .AsStringPiece(),
             "010203");
   url_loader_factory_.AddResponse(req_url, txid);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid value returned.
@@ -557,11 +632,11 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
   EXPECT_CALL(callback, Run(MatchError(ParsingError())));
   bitcoin_rpc_->PostTransaction(mojom::kBitcoinMainnet, {1, 2, 3},
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   request = url_loader_factory_.GetPendingRequest(0)->request;
   EXPECT_EQ(request.url, req_url);
   url_loader_factory_.AddResponse(req_url, "not valid txid");
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // HTTP Error returned.
@@ -569,12 +644,12 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
   EXPECT_CALL(callback, Run(MatchError(InternalError())));
   bitcoin_rpc_->PostTransaction(mojom::kBitcoinMainnet, {1, 2, 3},
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   request = url_loader_factory_.GetPendingRequest(0)->request;
   EXPECT_EQ(request.url, req_url);
   url_loader_factory_.AddResponse(req_url, txid,
                                   net::HTTP_INTERNAL_SERVER_ERROR);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Testnet works.
@@ -582,7 +657,7 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
   EXPECT_CALL(callback, Run(Truly([&](auto& arg) { return arg == txid; })));
   bitcoin_rpc_->PostTransaction(mojom::kBitcoinTestnet, {1, 2, 3},
                                 callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   request = url_loader_factory_.GetPendingRequest(0)->request;
   EXPECT_EQ(request.url, testnet_rpc_url_ + "tx");
   EXPECT_EQ(request.request_body->elements()
@@ -591,14 +666,14 @@ TEST_F(BitcoinRpcUnitTest, PostTransaction) {
                 .AsStringPiece(),
             "010203");
   url_loader_factory_.AddResponse(testnet_rpc_url_ + "tx", txid);
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 
   // Invalid chain fails.
   url_loader_factory_.ClearResponses();
   EXPECT_CALL(callback, Run(MatchError(InternalError())));
   bitcoin_rpc_->PostTransaction("0x123", {1, 2, 3}, callback.Get());
-  base::RunLoop().RunUntilIdle();
+  task_environment_.RunUntilIdle();
   testing::Mock::VerifyAndClearExpectations(&callback);
 }
 

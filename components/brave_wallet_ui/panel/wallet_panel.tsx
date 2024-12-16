@@ -4,7 +4,7 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { initLocale } from 'brave-ui'
@@ -14,13 +14,12 @@ import { loadTimeData } from '../../common/loadTimeData'
 import walletDarkTheme from '../theme/wallet-dark'
 import walletLightTheme from '../theme/wallet-light'
 import BraveCoreThemeProvider from '../../common/BraveCoreThemeProvider'
-import store, { walletPanelApiProxy } from './store'
+import store from './store'
 import * as WalletActions from '../common/actions/wallet_actions'
 import Container from './container'
-import { LibContext } from '../common/context/lib.context'
-import * as Lib from '../common/async/lib'
-import { ApiProxyContext } from '../common/context/api-proxy.context'
-import { removeDeprecatedLocalStorageKeys } from '../common/constants/local-storage-keys'
+import {
+  runLocalStorageMigrations //
+} from '../common/constants/local-storage-keys'
 setIconBasePath('chrome://resources/brave-icons')
 
 function App() {
@@ -31,7 +30,7 @@ function App() {
   }, [])
 
   React.useEffect(() => {
-    removeDeprecatedLocalStorageKeys()
+    runLocalStorageMigrations()
   }, [])
 
   return (
@@ -42,13 +41,9 @@ function App() {
           dark={walletDarkTheme}
           light={walletLightTheme}
         >
-          <ApiProxyContext.Provider value={walletPanelApiProxy}>
-            <LibContext.Provider value={Lib}>
-              <BrowserRouter>
-                <Container />
-              </BrowserRouter>
-            </LibContext.Provider>
-          </ApiProxyContext.Provider>
+          <BrowserRouter>
+            <Container />
+          </BrowserRouter>
         </BraveCoreThemeProvider>
       )}
     </Provider>
@@ -57,12 +52,9 @@ function App() {
 
 function initialize() {
   initLocale(loadTimeData.data_)
-  store.dispatch(
-    WalletActions.initialize({
-      skipBalancesRefresh: true
-    })
-  )
-  render(<App />, document.getElementById('mountPoint'))
+  const root = createRoot(document.getElementById('mountPoint')!)
+  root.render(<App />)
+  store.dispatch(WalletActions.initialize())
 }
 
 document.addEventListener('DOMContentLoaded', initialize)

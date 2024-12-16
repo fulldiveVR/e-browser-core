@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_inline_content_ad_model_based_predictor_feature.h"  // IWYU pragma: keep
+#include "brave/components/brave_ads/core/internal/serving/prediction/model_based/creative_inline_content_ad_model_based_predictor_feature.h"
 
 #include "base/test/scoped_feature_list.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -268,7 +268,7 @@ TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
 TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
      DefaultLastSeenAdPredictorWeight) {
   // Act & Assert
-  EXPECT_DOUBLE_EQ(1.0, kInlineContentAdLastSeenPredictorWeight.Get());
+  EXPECT_DOUBLE_EQ(0.0, kInlineContentAdLastSeenPredictorWeight.Get());
 }
 
 TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
@@ -279,39 +279,7 @@ TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
       kCreativeInlineContentAdModelBasedPredictorFeature);
 
   // Act & Assert
-  EXPECT_DOUBLE_EQ(1.0, kInlineContentAdLastSeenPredictorWeight.Get());
-}
-
-TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
-     LastSeenAdvertiserAdPredictorWeight) {
-  // Arrange
-  base::test::ScopedFeatureList scoped_feature_list;
-  scoped_feature_list.InitAndEnableFeatureWithParameters(
-      kCreativeInlineContentAdModelBasedPredictorFeature,
-      {{"last_seen_advertiser_predictor_weight", "0.5"}});
-
-  // Act & Assert
-  EXPECT_DOUBLE_EQ(0.5,
-                   kInlineContentAdLastSeenAdvertiserPredictorWeight.Get());
-}
-
-TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
-     DefaultLastSeenAdvertiserAdPredictorWeight) {
-  // Act & Assert
-  EXPECT_DOUBLE_EQ(1.0,
-                   kInlineContentAdLastSeenAdvertiserPredictorWeight.Get());
-}
-
-TEST(BraveAdsCreativeInlineContentAdModelBasedPredictorFeatureTest,
-     DefaultLastSeenAdvertiserAdPredictorWeightWhenDisabled) {
-  // Arrange
-  base::test::ScopedFeatureList scoped_feature_list;
-  scoped_feature_list.InitAndDisableFeature(
-      kCreativeInlineContentAdModelBasedPredictorFeature);
-
-  // Act & Assert
-  EXPECT_DOUBLE_EQ(1.0,
-                   kInlineContentAdLastSeenAdvertiserPredictorWeight.Get());
+  EXPECT_DOUBLE_EQ(0.0, kInlineContentAdLastSeenPredictorWeight.Get());
 }
 
 }  // namespace brave_ads

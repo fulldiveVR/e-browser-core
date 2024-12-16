@@ -14,17 +14,16 @@
 #include "base/strings/stringprintf.h"
 #include "brave/components/brave_rewards/core/constants.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 #include "brave/components/brave_rewards/core/state/state.h"
 
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
 namespace {
 
 // TODO(https://github.com/brave/brave-browser/issues/7144):
 //  rename to recurring_tip
-const char kTableName[] = "recurring_donation";
+constexpr char kTableName[] = "recurring_donation";
 
 void MapDatabaseResultToSuccess(base::OnceCallback<void(bool)> callback,
                                 mojom::DBCommandResponsePtr response) {
@@ -35,16 +34,16 @@ void MapDatabaseResultToSuccess(base::OnceCallback<void(bool)> callback,
 
 }  // namespace
 
-DatabaseRecurringTip::DatabaseRecurringTip(RewardsEngineImpl& engine)
+DatabaseRecurringTip::DatabaseRecurringTip(RewardsEngine& engine)
     : DatabaseTable(engine) {}
 
 DatabaseRecurringTip::~DatabaseRecurringTip() = default;
 
 void DatabaseRecurringTip::InsertOrUpdate(mojom::RecurringTipPtr info,
-                                          LegacyResultCallback callback) {
+                                          ResultCallback callback) {
   if (!info || info->publisher_key.empty()) {
-    BLOG(1, "Publisher key is empty");
-    callback(mojom::Result::FAILED);
+    engine_->Log(FROM_HERE) << "Publisher key is empty";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -76,13 +75,13 @@ void DatabaseRecurringTip::InsertOrUpdate(
     double amount,
     base::OnceCallback<void(bool)> callback) {
   if (publisher_id.empty()) {
-    BLOG(1, "Publisher ID is empty");
+    engine_->Log(FROM_HERE) << "Publisher ID is empty";
     std::move(callback).Run(false);
     return;
   }
 
   if (amount <= 0) {
-    BLOG(1, "Invalid contribution amount");
+    engine_->Log(FROM_HERE) << "Invalid contribution amount";
     std::move(callback).Run(false);
     return;
   }
@@ -233,8 +232,8 @@ void DatabaseRecurringTip::OnGetAllRecords(
     mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
-    callback({});
+    engine_->LogError(FROM_HERE) << "Response is wrong";
+    std::move(callback).Run({});
     return;
   }
 
@@ -249,8 +248,7 @@ void DatabaseRecurringTip::OnGetAllRecords(
     info->favicon_url = GetStringColumn(record_pointer, 3);
     info->weight = GetDoubleColumn(record_pointer, 4);
     info->reconcile_stamp = GetInt64Column(record_pointer, 5);
-    info->status =
-        static_cast<mojom::PublisherStatus>(GetInt64Column(record_pointer, 6));
+    info->status = PublisherStatusFromInt(GetInt64Column(record_pointer, 6));
     info->status_updated_at = GetInt64Column(record_pointer, 7);
     info->provider = GetStringColumn(record_pointer, 8);
 
@@ -263,14 +261,14 @@ void DatabaseRecurringTip::OnGetAllRecords(
     list.push_back(std::move(info));
   }
 
-  callback(std::move(list));
+  std::move(callback).Run(std::move(list));
 }
 
 void DatabaseRecurringTip::DeleteRecord(const std::string& publisher_key,
-                                        LegacyResultCallback callback) {
+                                        ResultCallback callback) {
   if (publisher_key.empty()) {
-    BLOG(1, "Publisher key is empty");
-    callback(mojom::Result::FAILED);
+    engine_->Log(FROM_HERE) << "Publisher key is empty";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -292,5 +290,4 @@ void DatabaseRecurringTip::DeleteRecord(const std::string& publisher_key,
       base::BindOnce(&OnResultCallback, std::move(callback)));
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

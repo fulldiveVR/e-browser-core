@@ -111,18 +111,17 @@
 // }
 
 namespace brave_rewards::internal {
-class RewardsEngineImpl;
+class RewardsEngine;
 
 namespace endpoint {
 namespace uphold {
 
 using GetMeCallback =
-    base::OnceCallback<void(mojom::Result result,
-                            const internal::uphold::User& user)>;
+    base::OnceCallback<void(mojom::Result result, internal::uphold::User user)>;
 
 class GetMe {
  public:
-  explicit GetMe(RewardsEngineImpl& engine);
+  explicit GetMe(RewardsEngine& engine);
   ~GetMe();
 
   void Request(const std::string& token, GetMeCallback callback);
@@ -137,7 +136,7 @@ class GetMe {
 
   void OnRequest(GetMeCallback callback, mojom::UrlResponsePtr response);
 
-  const raw_ref<RewardsEngineImpl> engine_;
+  const raw_ref<RewardsEngine> engine_;
 };
 
 }  // namespace uphold

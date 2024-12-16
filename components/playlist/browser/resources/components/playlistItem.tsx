@@ -7,7 +7,7 @@ import * as React from 'react'
 import styled, { css } from 'styled-components'
 import { useSelector } from 'react-redux'
 
-import { color, font, spacing } from '@brave/leo/tokens/css'
+import { color, font, spacing } from '@brave/leo/tokens/css/variables'
 import Icon from '@brave/leo/react/icon'
 
 import DefaultThumbnailIcon from '../assets/playlist-thumbnail-icon.svg'
@@ -178,7 +178,7 @@ const StyledCheckBox = styled(Icon)<{ checked: boolean }>`
   color: ${(p) => (p.checked ? color.icon.interactive : color.icon.default)};
 `
 
-function Thumbnail({
+function Thumbnail ({
   thumbnailUrl,
   isSelected,
   isPlaying,
@@ -211,7 +211,7 @@ function Thumbnail({
   )
 }
 
-export function PlaylistItem({
+export function PlaylistItem ({
   playlist,
   item,
   isEditing,
@@ -231,6 +231,7 @@ export function PlaylistItem({
 
   const [hovered, setHovered] = React.useState(false)
   const [showingMenu, setShowingMenu] = React.useState(false)
+  const [focused, setFocused] = React.useState(false)
 
   const cachingProgress = useSelector<
     ApplicationState,
@@ -252,6 +253,8 @@ export function PlaylistItem({
 
   return (
     <PlaylistItemContainer
+      onFocus={() => setFocused(true)}
+      onBlur={() => setFocused(false)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       isActive={(isEditing && isSelected) || isCurrentItem}
@@ -304,7 +307,7 @@ export function PlaylistItem({
         }
       </ItemInfoContainer>
       <ContextualMenuAnchorButton
-        visible={(hovered || showingMenu) && !isEditing}
+        visible={(hovered || focused || showingMenu) && !isEditing}
         items={[
           {
             name: getLocalizedString('bravePlaylistContextMenuMove'),
@@ -320,6 +323,8 @@ export function PlaylistItem({
                 iconName: 'cloud-off',
                 onClick: () => getPlaylistAPI().removeLocalData(id)
               }
+            : cachingProgress
+            ? undefined // TODO(sko) We may want to have "cancel caching".
             : {
                 name: getLocalizedString(
                   'bravePlaylistContextMenuKeepForOfflinePlaying'
@@ -352,7 +357,7 @@ export function PlaylistItem({
 }
 
 export const SortablePlaylistItem = React.forwardRef(
-  function SortablePlaylistItem(
+  function SortablePlaylistItem (
     props: Props,
     forwardedRef?: React.ForwardedRef<HTMLAnchorElement>
   ) {

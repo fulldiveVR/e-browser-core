@@ -18,12 +18,11 @@
 #include "brave/browser/playlist/playlist_service_factory.h"
 #include "brave/browser/search_engines/search_engine_tracker.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_ads/browser/ads_service.h"
+#include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_referrals/browser/brave_referrals_service.h"
 #include "brave/components/brave_search_conversion/p3a.h"
-#include "brave/components/brave_shields/browser/ad_block_service.h"
-#include "brave/components/brave_shields/browser/brave_shields_p3a.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "brave/components/brave_shields/content/browser/brave_shields_p3a.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/constants/pref_names.h"
@@ -44,6 +43,10 @@
 #include "components/prefs/pref_registry_simple.h"
 #include "third_party/widevine/cdm/buildflags.h"
 
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
+#include "brave/browser/day_zero_browser_ui_expt/day_zero_browser_ui_expt_manager.h"
+#endif
+
 #if BUILDFLAG(ENABLE_TOR)
 #include "brave/components/tor/tor_profile_service.h"
 #endif
@@ -52,20 +55,18 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/p3a/p3a_core_metrics.h"
+#include "brave/browser/search_engines/pref_names.h"
 #include "brave/browser/ui/whats_new/whats_new_util.h"
 #include "chrome/browser/first_run/first_run.h"
 #endif  // !BUILDFLAG(IS_ANDROID)
 
 #if defined(TOOLKIT_VIEWS)
 #include "brave/browser/onboarding/onboarding_tab_helper.h"
+#include "brave/components/sidebar/browser/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
-#endif
-
-#if BUILDFLAG(ENABLE_AI_CHAT)
-#include "brave/components/ai_chat/core/common/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
@@ -122,10 +123,14 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   BraveWindowTracker::RegisterPrefs(registry);
   dark_mode::RegisterBraveDarkModeLocalStatePrefs(registry);
   whats_new::RegisterLocalStatePrefs(registry);
+
+  registry->RegisterBooleanPref(kEnableSearchSuggestionsByDefault, false);
 #endif
 
 #if defined(TOOLKIT_VIEWS)
   onboarding::RegisterLocalStatePrefs(registry);
+  registry->RegisterBooleanPref(sidebar::kTargetUserForSidebarEnabledTest,
+                                false);
 #endif
 
 #if BUILDFLAG(ENABLE_CRASH_DIALOG)
@@ -146,12 +151,12 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   brave_vpn::RegisterLocalStatePrefs(registry);
 #endif
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
   ai_chat::prefs::RegisterLocalStatePrefs(registry);
-#endif
 
-#if BUILDFLAG(ENABLE_BRAVE_VPN) || BUILDFLAG(ENABLE_AI_CHAT)
   skus::RegisterLocalStatePrefs(registry);
+
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
+  DayZeroBrowserUIExptManager::RegisterLocalStatePrefs(registry);
 #endif
 
   registry->RegisterStringPref(::prefs::kBraveVpnDnsConfig, std::string());

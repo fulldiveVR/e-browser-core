@@ -25,6 +25,8 @@ namespace brave_ads {
 
 namespace {
 
+constexpr auto kInsideBorderInsets = gfx::Insets::TLBR(0, 0, 0, 2);
+
 constexpr int kMinimumButtonHeight = 44;
 
 constexpr int kInfoButtonIconDipSize = 40;
@@ -55,7 +57,7 @@ void NotificationAdControlButtonsView::UpdateContent() {
   UpdateInfoButton();
   UpdateCloseButton();
 
-  Layout();
+  DeprecatedLayoutImmediately();
   SchedulePaint();
 }
 
@@ -64,7 +66,7 @@ void NotificationAdControlButtonsView::UpdateContent() {
 void NotificationAdControlButtonsView::CreateView() {
   views::BoxLayout* box_layout =
       SetLayoutManager(std::make_unique<views::BoxLayout>(
-          views::BoxLayout::Orientation::kHorizontal));
+          views::BoxLayout::Orientation::kHorizontal, kInsideBorderInsets));
 
   box_layout->set_cross_axis_alignment(
       views::BoxLayout::CrossAxisAlignment::kStart);
@@ -118,7 +120,7 @@ void NotificationAdControlButtonsView::UpdateCloseButton() {
   close_button_->AdjustBorderInsetToFitHeight(kMinimumButtonHeight);
 }
 
-BEGIN_METADATA(NotificationAdControlButtonsView, views::View)
+BEGIN_METADATA(NotificationAdControlButtonsView)
 END_METADATA
 
 }  // namespace brave_ads

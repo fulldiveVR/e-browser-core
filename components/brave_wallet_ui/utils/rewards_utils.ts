@@ -26,11 +26,15 @@ export const getRewardsProviderName = (provider?: string) => {
 
   const capitalized = provider.charAt(0).toUpperCase() + provider.slice(1)
   const localeString = `braveWallet${capitalized}`
-  const foundLocale = getLocale(localeString)
-  // If getLocale returns the string it was passed, that means
-  // no localization string was found. So we return the
-  // provider in that case.
-  return foundLocale === localeString ? provider : foundLocale
+  try {
+    const foundLocale = getLocale(localeString)
+    // If getLocale returns the string it was passed, that means
+    // no localization string was found. So we return the
+    // provider in that case.
+    return foundLocale === localeString ? provider : foundLocale
+  } catch (error) {
+    return provider
+  }
 }
 
 export const getRewardsAccountName = (provider?: string) => {
@@ -64,7 +68,7 @@ export const getNormalizedExternalRewardsWallet = (
   return {
     accountId: {
       address: '0x',
-      bitcoinAccountIndex: 0,
+      accountIndex: 0,
       coin: BraveWallet.CoinType.ETH,
       keyringId: 0,
       kind: 0,
@@ -91,7 +95,6 @@ export const getNormalizedExternalRewardsNetwork = (
     supportedKeyrings: [],
     decimals: 0,
     iconUrls: [],
-    isEip1559: true,
     rpcEndpoints: [],
     symbol: externalRewardsProvider,
     symbolName: externalRewardsProvider
@@ -170,9 +173,11 @@ export const getRewardsBATToken = (
     name: 'Basic Attention Token',
     symbol: 'BAT',
     logo: 'chrome://erc-token-images/bat.png',
+    isCompressed: false,
     isErc20: true,
     isErc721: false,
     isErc1155: false,
+    splTokenProgram: BraveWallet.SPLTokenProgram.kUnsupported,
     isNft: false,
     isSpam: false,
     decimals: 18,
@@ -180,6 +185,7 @@ export const getRewardsBATToken = (
     tokenId: '',
     coingeckoId: '',
     coin: BraveWallet.CoinType.ETH,
+    isShielded: false,
     chainId: provider
   }
 }

@@ -19,12 +19,13 @@
 #include "base/test/values_test_util.h"
 #include "base/time/time.h"
 #include "base/values.h"
+#include "brave/components/brave_news/browser/brave_news_pref_manager.h"
 #include "brave/components/brave_news/browser/channels_controller.h"
 #include "brave/components/brave_news/browser/combined_feed_parsing.h"
-#include "brave/components/brave_news/common/brave_news.mojom-shared.h"
 #include "brave/components/brave_news/common/brave_news.mojom.h"
-#include "chrome/test/base/testing_profile.h"
-#include "content/public/test/browser_task_environment.h"
+#include "brave/components/brave_news/common/pref_names.h"
+#include "brave/components/brave_news/common/subscriptions_snapshot.h"
+#include "components/sync_preferences/testing_pref_service_syncable.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "url/mojom/url.mojom.h"
 
@@ -167,20 +168,25 @@ void PopulatePublishers(Publishers* publisher_list) {
 
 class BraveNewsFeedBuildingTest : public testing::Test {
  public:
-  BraveNewsFeedBuildingTest() = default;
+  BraveNewsFeedBuildingTest() {
+    prefs::RegisterProfilePrefs(pref_service_.registry());
+
+    pref_manager_ = std::make_unique<BraveNewsPrefManager>(pref_service_);
+  }
+
   BraveNewsFeedBuildingTest(const BraveNewsFeedBuildingTest&) = delete;
   BraveNewsFeedBuildingTest& operator=(const BraveNewsFeedBuildingTest&) =
       delete;
   ~BraveNewsFeedBuildingTest() override = default;
 
  protected:
-  content::BrowserTaskEnvironment browser_task_environment_;
-  TestingProfile profile_;
+  sync_preferences::TestingPrefServiceSyncable pref_service_;
+
+  std::unique_ptr<BraveNewsPrefManager> pref_manager_;
 };
 
 TEST_F(BraveNewsFeedBuildingTest, BuildFeed) {
-  ChannelsController::SetChannelSubscribedPref(profile_.GetPrefs(), "en_US",
-                                               "Top Sources", true);
+  pref_manager_->SetChannelSubscribed("en_US", "Top Sources", true);
 
   Publishers publisher_list;
   PopulatePublishers(&publisher_list);
@@ -192,7 +198,7 @@ TEST_F(BraveNewsFeedBuildingTest, BuildFeed) {
   mojom::Feed feed;
 
   ASSERT_TRUE(BuildFeed(feed_items, history_hosts, &publisher_list, &feed,
-                        profile_.GetPrefs()));
+                        pref_manager_->GetSubscriptions()));
   ASSERT_EQ(feed.pages.size(), 1u);
   // Validate featured article is top news
   ASSERT_TRUE(feed.featured_item->is_article());
@@ -235,8 +241,8 @@ TEST_F(BraveNewsFeedBuildingTest, DirectFeedsShouldAlwaysBeDisplayed) {
 
   auto feed_item = mojom::FeedItem::NewArticle(mojom::Article::New(
       mojom::FeedItemMetadata::New(
-          "Technology", base::Time::Now(), "Title", "Description",
-          GURL("https://example.com/article"),
+          "Technology", std::vector<std::string>(), base::Time::Now(), "Title",
+          "Description", GURL("https://example.com/article"),
           "7bb5d8b3e2eee9d317f0568dcb094850fdf2862b2ed6d583c62b2245ea507ab8",
           mojom::Image::NewPaddedImageUrl(
               GURL("https://example.com/article/image")),
@@ -261,7 +267,7 @@ TEST_F(BraveNewsFeedBuildingTest, RemovesUserDisabledItems) {
 
   auto feed_item = mojom::FeedItem::NewArticle(mojom::Article::New(
       mojom::FeedItemMetadata::New(
-          "Technology", base::Time::Now(),
+          "Technology", std::vector<std::string>(), base::Time::Now(),
           "Expecting First Transfer Talk: How a busy Deadline Day unfolded",
           "The transfer window is closed and Saul Niguez is on his way to "
           "Chelsea, while Antoine Griezmann is set to go back to Atletico "
@@ -297,7 +303,7 @@ TEST_F(BraveNewsFeedBuildingTest, IncludesUserEnabledItems) {
 
   auto feed_item = mojom::FeedItem::NewArticle(mojom::Article::New(
       mojom::FeedItemMetadata::New(
-          "Technology", base::Time::Now(),
+          "Technology", std::vector<std::string>(), base::Time::Now(),
           "Expecting First Transfer Talk: How a busy Deadline Day unfolded",
           "The transfer window is closed and Saul Niguez is on his way to "
           "Chelsea, while Antoine Griezmann is set to go back to Atletico "
@@ -332,8 +338,8 @@ TEST_F(BraveNewsFeedBuildingTest, ChannelIsUsed) {
 
   auto feed_item = mojom::FeedItem::NewArticle(mojom::Article::New(
       mojom::FeedItemMetadata::New(
-          "Technology", base::Time::Now(), "Title", "Description",
-          GURL("https://example.com/article"),
+          "Technology", std::vector<std::string>(), base::Time::Now(), "Title",
+          "Description", GURL("https://example.com/article"),
           "7bb5d8b3e2eee9d317f0568dcb094850fdf2862b2ed6d583c62b2245ea507ab8",
           mojom::Image::NewPaddedImageUrl(
               GURL("https://example.com/article/image")),
@@ -362,8 +368,7 @@ TEST_F(BraveNewsFeedBuildingTest, ChannelIsUsed) {
 }
 
 TEST_F(BraveNewsFeedBuildingTest, DuplicateItemsAreNotIncluded) {
-  ChannelsController::SetChannelSubscribedPref(profile_.GetPrefs(), "en_US",
-                                               "Top Sources", true);
+  pref_manager_->SetChannelSubscribed("en_US", "Top Sources", true);
 
   Publishers publisher_list;
   PopulatePublishers(&publisher_list);
@@ -377,7 +382,7 @@ TEST_F(BraveNewsFeedBuildingTest, DuplicateItemsAreNotIncluded) {
   mojom::Feed feed;
 
   ASSERT_TRUE(BuildFeed(feed_items, history_hosts, &publisher_list, &feed,
-                        profile_.GetPrefs()));
+                        pref_manager_->GetSubscriptions()));
   ASSERT_EQ(feed.pages.size(), 1u);
   ASSERT_EQ(feed.pages[0]->items.size(), 18u);
 }

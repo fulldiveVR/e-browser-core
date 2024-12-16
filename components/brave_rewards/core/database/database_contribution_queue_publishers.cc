@@ -10,19 +10,18 @@
 #include "brave/components/brave_rewards/core/common/time_util.h"
 #include "brave/components/brave_rewards/core/database/database_contribution_queue_publishers.h"
 #include "brave/components/brave_rewards/core/database/database_util.h"
-#include "brave/components/brave_rewards/core/rewards_engine_impl.h"
+#include "brave/components/brave_rewards/core/rewards_engine.h"
 
-namespace brave_rewards::internal {
-namespace database {
+namespace brave_rewards::internal::database {
 
 namespace {
 
-const char kTableName[] = "contribution_queue_publishers";
+constexpr char kTableName[] = "contribution_queue_publishers";
 
 }  // namespace
 
 DatabaseContributionQueuePublishers::DatabaseContributionQueuePublishers(
-    RewardsEngineImpl& engine)
+    RewardsEngine& engine)
     : DatabaseTable(engine) {}
 
 DatabaseContributionQueuePublishers::~DatabaseContributionQueuePublishers() =
@@ -31,10 +30,10 @@ DatabaseContributionQueuePublishers::~DatabaseContributionQueuePublishers() =
 void DatabaseContributionQueuePublishers::InsertOrUpdate(
     const std::string& id,
     std::vector<mojom::ContributionQueuePublisherPtr> list,
-    LegacyResultCallback callback) {
+    ResultCallback callback) {
   if (id.empty() || list.empty()) {
-    BLOG(1, "Empty data");
-    callback(mojom::Result::FAILED);
+    engine_->Log(FROM_HERE) << "Empty data";
+    std::move(callback).Run(mojom::Result::FAILED);
     return;
   }
 
@@ -66,8 +65,8 @@ void DatabaseContributionQueuePublishers::GetRecordsByQueueId(
     const std::string& queue_id,
     ContributionQueuePublishersListCallback callback) {
   if (queue_id.empty()) {
-    BLOG(1, "Queue id is empty");
-    callback({});
+    engine_->Log(FROM_HERE) << "Queue id is empty";
+    std::move(callback).Run({});
     return;
   }
 
@@ -101,8 +100,8 @@ void DatabaseContributionQueuePublishers::OnGetRecordsByQueueId(
     mojom::DBCommandResponsePtr response) {
   if (!response ||
       response->status != mojom::DBCommandResponse::Status::RESPONSE_OK) {
-    BLOG(0, "Response is wrong");
-    callback({});
+    engine_->LogError(FROM_HERE) << "Response is wrong";
+    std::move(callback).Run({});
     return;
   }
 
@@ -117,8 +116,7 @@ void DatabaseContributionQueuePublishers::OnGetRecordsByQueueId(
     list.push_back(std::move(info));
   }
 
-  callback(std::move(list));
+  std::move(callback).Run(std::move(list));
 }
 
-}  // namespace database
-}  // namespace brave_rewards::internal
+}  // namespace brave_rewards::internal::database

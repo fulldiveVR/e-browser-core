@@ -15,10 +15,10 @@
 #include "brave/components/brave_rewards/browser/rewards_service_impl.h"
 #include "brave/components/brave_rewards/browser/rewards_service_observer.h"
 #include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_context_helper.h"
-#include "brave/components/brave_rewards/browser/test/common/rewards_browsertest_util.h"
 #include "brave/components/brave_rewards/common/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
-#include "chrome/browser/ui/browser.h"
+
+class browser;
 
 namespace brave_rewards::test_util {
 
@@ -73,17 +73,7 @@ class RewardsBrowserTestContribution : public RewardsServiceObserver {
 
   std::vector<mojom::Result> GetMultipleACStatus();
 
-  void SetUpUpholdWallet(
-      RewardsServiceImpl* rewards_service,
-      const double balance,
-      const mojom::WalletStatus status = mojom::WalletStatus::kConnected);
-
-#if BUILDFLAG(ENABLE_GEMINI_WALLET)
-  void SetUpGeminiWallet(
-      RewardsServiceImpl* rewards_service,
-      const double balance,
-      const mojom::WalletStatus status = mojom::WalletStatus::kConnected);
-#endif
+  void StartProcessWithBalance(double balance);
 
   std::vector<mojom::Result> GetMultipleTipStatus();
 
@@ -130,8 +120,9 @@ class RewardsBrowserTestContribution : public RewardsServiceObserver {
   std::unique_ptr<base::RunLoop> wait_for_ac_completed_loop_;
   mojom::Result ac_reconcile_status_ = mojom::Result::FAILED;
 
-  raw_ptr<Browser> browser_ = nullptr;  // NOT OWNED
-  raw_ptr<RewardsServiceImpl> rewards_service_ = nullptr;  // NOT OWNED
+  raw_ptr<Browser, DanglingUntriaged> browser_ = nullptr;  // NOT OWNED
+  raw_ptr<RewardsServiceImpl, DanglingUntriaged> rewards_service_ =
+      nullptr;  // NOT OWNED
   std::unique_ptr<test_util::RewardsBrowserTestContextHelper> context_helper_;
 };
 

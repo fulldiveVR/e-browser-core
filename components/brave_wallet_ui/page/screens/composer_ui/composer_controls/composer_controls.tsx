@@ -4,43 +4,39 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
+
+// Constants
+import { SwapProviderMetadata } from '../../swap/constants/metadata'
+
+// Types
+import { BraveWallet } from '../../../../constants/types'
 
 // Hooks
 import { useOnClickOutside } from '../../../../common/hooks/useOnClickOutside'
 
-// Utils
-import { getLocale } from '../../../../../common/locale'
-
-// Types
-import { NavOption } from '../../../../constants/types'
-
-// Options
-import { SendSwapBridgeOptions } from '../../../../options/nav-options'
-
 // Styled Components
 import {
-  ComposerButton,
-  ComposerButtonMenu,
   FlipButton,
   FlipIcon,
-  SettingsButton,
-  SettingsIcon,
-  CaratIcon
+  ProvidersButton,
+  ProviderIcon
 } from './composer_controls.style'
 import { Row } from '../../../../components/shared/style'
 
 interface Props {
-  onFlipAssets?: () => void
-  onOpenSettings?: () => void
+  onFlipAssets: () => void
+  onOpenProviders: () => void
+  selectedProvider: BraveWallet.SwapProvider
+  flipAssetsDisabled?: boolean
 }
 
 export const ComposerControls = (props: Props) => {
-  const { onFlipAssets, onOpenSettings } = props
-
-  // Routing
-  const history = useHistory()
-  const { pathname: walletLocation } = useLocation()
+  const {
+    onFlipAssets,
+    onOpenProviders,
+    flipAssetsDisabled,
+    selectedProvider
+  } = props
 
   // State
   const [showComposerMenu, setShowComposerMenu] = React.useState<boolean>(false)
@@ -55,55 +51,20 @@ export const ComposerControls = (props: Props) => {
     showComposerMenu
   )
 
-  // Methods
-  const onChange = (option?: NavOption) => {
-    if (showComposerMenu && option) {
-      history.push(option.route)
-    }
-    setShowComposerMenu((prev) => !prev)
-  }
-
-  // Computed
-  const selectedOption = SendSwapBridgeOptions.find((option) =>
-    walletLocation.includes(option.route)
-  )
-
-  // Moves the selectedOption to the front of the list.
-  const buttonOptions = showComposerMenu
-    ? [
-        SendSwapBridgeOptions.find(
-          (option) => option.id === selectedOption?.id
-        ),
-        ...SendSwapBridgeOptions.filter(
-          (option) => option.id !== selectedOption?.id
-        )
-      ]
-    : [selectedOption]
-
   return (
     <Row>
       {onFlipAssets && (
-        <FlipButton onClick={onFlipAssets}>
+        <FlipButton
+          onClick={onFlipAssets}
+          disabled={flipAssetsDisabled}
+        >
           <FlipIcon />
         </FlipButton>
       )}
-      {buttonOptions ? (
-        <ComposerButtonMenu ref={buttonMenuRef}>
-          {buttonOptions.map((option, i) => (
-            <ComposerButton
-              key={option?.id}
-              onClick={() => onChange(option)}
-            >
-              {getLocale(option?.name ?? '')}
-              {i === 0 && <CaratIcon isOpen={showComposerMenu} />}
-            </ComposerButton>
-          ))}
-        </ComposerButtonMenu>
-      ) : null}
-      {onOpenSettings && (
-        <SettingsButton onClick={onOpenSettings}>
-          <SettingsIcon />
-        </SettingsButton>
+      {onOpenProviders && (
+        <ProvidersButton onClick={onOpenProviders}>
+          <ProviderIcon src={SwapProviderMetadata[selectedProvider]} />
+        </ProvidersButton>
       )}
     </Row>
   )

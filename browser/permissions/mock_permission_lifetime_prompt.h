@@ -7,6 +7,7 @@
 #define BRAVE_BROWSER_PERMISSIONS_MOCK_PERMISSION_LIFETIME_PROMPT_H_
 
 #include <optional>
+#include <vector>
 
 #include "base/memory/raw_ptr.h"
 #include "components/permissions/permission_prompt.h"
@@ -24,8 +25,13 @@ class MockPermissionLifetimePrompt : public PermissionPrompt {
   bool UpdateAnchor() override;
   TabSwitchingBehavior GetTabSwitchingBehavior() override;
   PermissionPromptDisposition GetPromptDisposition() const override;
+  bool IsAskPrompt() const override;
   std::optional<gfx::Rect> GetViewBoundsInScreen() const override;
   bool ShouldFinalizeRequestAfterDecided() const override;
+  std::vector<permissions::ElementAnchoredBubbleVariant> GetPromptVariants()
+      const override;
+  std::optional<feature_params::PermissionElementPromptPosition>
+  GetPromptPosition() const override;
 
   Delegate* delegate() { return delegate_; }
   void ResetFactory();

@@ -36,6 +36,8 @@ class PageMetricsTabHelper
   void DidFinishNavigation(
       content::NavigationHandle* navigation_handle) override;
 
+  bool CheckNavigationEvent(content::NavigationHandle* navigation_handle);
+
   raw_ptr<PageMetrics> page_metrics_;
 
   WEB_CONTENTS_USER_DATA_KEY_DECL();
