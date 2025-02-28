@@ -100,6 +100,7 @@ function getChromiumGnArgs() {
     is_official_build: true,
     ffmpeg_branding: 'Chrome',
     enable_widevine: true,
+    proprietary_codecs: true,
     ignore_missing_widevine_signing_cert: true,
     skip_secondary_abi_for_cq: true,
     ...config.extraGnArgs,
@@ -152,12 +153,6 @@ function buildChromiumRelease(buildOptions = {}) {
   if (chromiumConfig.extraHooks != undefined) {
     chromiumConfig.extraHooks()
   }
-
-  // A workaround for
-  // https://chromium-review.googlesource.com/c/chromium/src/+/6013664
-  const v8CompileFix = '1e3bed631cff17487775e33626121bfd5f0e664e'
-  util.runGit(config.srcDir, ['fetch', 'origin', v8CompileFix])
-  util.runGit(config.srcDir, ['cherry-pick', 'FETCH_HEAD'])
 
   util.runGnGen(config.outputDir, getChromiumGnArgs())
 

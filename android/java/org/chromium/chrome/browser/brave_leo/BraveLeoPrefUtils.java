@@ -66,11 +66,32 @@ public class BraveLeoPrefUtils {
                 && !prefService.getString(BravePref.BRAVE_CHAT_ORDER_ID_ANDROID).isEmpty()) {
             return;
         }
+        // It means we don't have a Play Store subscription anymore or
+        // we have a new one.
+        BraveLeoPrefUtils.resetSubscriptionLinkedStatus(profileToUse);
         prefService.setString(BravePref.BRAVE_CHAT_ORDER_ID_ANDROID, "");
         prefService.setString(BravePref.BRAVE_CHAT_PURCHASE_TOKEN_ANDROID, token);
         if (!token.isEmpty()) {
             createFetchOrder(profileToUse);
         }
+    }
+
+    public static boolean getIsHistoryEnabled() {
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.getIsHistoryEnabled profile is null");
+            return false;
+        }
+        return UserPrefs.get(profileToUse).getBoolean(BravePref.BRAVE_CHAT_STORAGE_ENABLED);
+    }
+
+    public static void setIsHistoryEnabled(boolean isEnabled) {
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.getIsHistoryEnabled profile is null");
+            return;
+        }
+        UserPrefs.get(profileToUse).setBoolean(BravePref.BRAVE_CHAT_STORAGE_ENABLED, isEnabled);
     }
 
     private static void createFetchOrder(Profile profileToUse) {
@@ -131,5 +152,21 @@ public class BraveLeoPrefUtils {
         // We want to fix that in the future.
         return WebsitePreferenceBridge.isCategoryEnabled(
                 profileToUse, ContentSettingsType.JAVASCRIPT);
+    }
+
+    public static boolean isSubscriptionLinked() {
+        Profile profileToUse = BraveLeoPrefUtils.getProfile();
+        if (profileToUse == null) {
+            Log.e(TAG, "BraveLeoPrefUtils.isSubscriptionLinked profile is null");
+            return false;
+        }
+
+        return UserPrefs.get(profileToUse)
+                        .getInteger(BravePref.BRAVE_CHAT_SUBSCRIPTION_LINK_STATUS_ANDROID)
+                != 0;
+    }
+
+    private static void resetSubscriptionLinkedStatus(Profile profile) {
+        UserPrefs.get(profile).setInteger(BravePref.BRAVE_CHAT_SUBSCRIPTION_LINK_STATUS_ANDROID, 0);
     }
 }

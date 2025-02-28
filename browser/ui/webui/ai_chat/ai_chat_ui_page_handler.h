@@ -53,6 +53,7 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
   void RefreshPremiumSession() override;
   void ManagePremium() override;
   void HandleVoiceRecognition(const std::string& conversation_uuid) override;
+  void ShowSoftKeyboard() override;
   void CloseUI() override;
   void SetChatUI(mojo::PendingRemote<mojom::ChatUI> chat_ui,
                  SetChatUICallback callback) override;
@@ -60,6 +61,8 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
       mojo::PendingReceiver<mojom::ConversationHandler> receiver,
       mojo::PendingRemote<mojom::ConversationUI> conversation_ui_handler)
       override;
+  void AssociateTab(mojom::TabDataPtr tab,
+                    const std::string& conversation_uuid) override;
   void NewConversation(
       mojo::PendingReceiver<mojom::ConversationHandler> receiver,
       mojo::PendingRemote<mojom::ConversationUI> conversation_ui_handler)
@@ -90,13 +93,14 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
 
   void GetFaviconImageDataForAssociatedContent(
       GetFaviconImageDataCallback callback,
-      mojom::SiteInfoPtr content_info,
+      mojom::AssociatedContentPtr content_info,
       bool should_send_page_contents);
 
   raw_ptr<AIChatTabHelper> active_chat_tab_helper_ = nullptr;
   raw_ptr<content::WebContents> owner_web_contents_ = nullptr;
   raw_ptr<favicon::FaviconService> favicon_service_ = nullptr;
   raw_ptr<Profile> profile_ = nullptr;
+  raw_ptr<AIChatMetrics> ai_chat_metrics_;
 
   base::CancelableTaskTracker favicon_task_tracker_;
 

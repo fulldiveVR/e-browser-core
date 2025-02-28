@@ -169,6 +169,7 @@ struct ReadabilityResult {
   var domain = ""
   var url = ""
   var content = ""
+  var documentLanguage = ""
   var title = ""
   var credits = ""
   var direction = "auto"
@@ -190,6 +191,9 @@ struct ReadabilityResult {
       }
       if let content = dict["content"] as? String {
         self.content = content
+      }
+      if let documentLanguage = dict["documentLanguage"] as? String {
+        self.documentLanguage = documentLanguage
       }
       if let title = dict["title"] as? String {
         self.title = title
@@ -214,6 +218,7 @@ struct ReadabilityResult {
     let domain = object["domain"].string
     let url = object["url"].string
     let content = object["content"].string
+    let documentLanguage = object["documentLanguage"].string
     let title = object["title"].string
     let credits = object["credits"].string
     let direction = object["dir"].string
@@ -226,6 +231,7 @@ struct ReadabilityResult {
     self.domain = domain!
     self.url = url!
     self.content = content!
+    self.documentLanguage = documentLanguage ?? ""
     self.title = title!
     self.credits = credits!
     self.direction = direction ?? "auto"
@@ -235,7 +241,8 @@ struct ReadabilityResult {
   /// Encode to a dictionary, which can then for example be json encoded
   func encode() -> [String: Any] {
     return [
-      "domain": domain, "url": url, "content": content, "title": title, "credits": credits,
+      "domain": domain, "url": url, "content": content, "documentLanguage": documentLanguage,
+      "title": title, "credits": credits,
       "dir": direction, "cspMetaTags": cspMetaTags,
     ]
   }
@@ -267,13 +274,8 @@ let readerModeNamespace = "window.__firefox__.reader"
 class ReaderModeScriptHandler: TabContentScript {
   weak var delegate: ReaderModeScriptHandlerDelegate?
 
-  fileprivate weak var tab: Tab?
   var state: ReaderModeState = ReaderModeState.unavailable
   fileprivate var originalURL: URL?
-
-  required init(tab: Tab) {
-    self.tab = tab
-  }
 
   static let scriptName = "ReaderModeScript"
   static let scriptId = UUID().uuidString
@@ -281,34 +283,26 @@ class ReaderModeScriptHandler: TabContentScript {
   static let scriptSandbox: WKContentWorld = .defaultClient
   static let userScript: WKUserScript? = nil
 
-  fileprivate func handleReaderPageEvent(_ readerPageEvent: ReaderPageEvent) {
+  fileprivate func handleReaderPageEvent(_ readerPageEvent: ReaderPageEvent, tab: Tab) {
     switch readerPageEvent {
     case .pageShow:
-      if let tab = tab {
-        delegate?.readerMode(self, didDisplayReaderizedContentForTab: tab)
-      }
+      delegate?.readerMode(self, didDisplayReaderizedContentForTab: tab)
     }
   }
 
-  fileprivate func handleReaderModeStateChange(_ state: ReaderModeState) {
+  fileprivate func handleReaderModeStateChange(_ state: ReaderModeState, tab: Tab) {
     self.state = state
-    guard let tab = tab else {
-      return
-    }
     delegate?.readerMode(self, didChangeReaderModeState: state, forTab: tab)
   }
 
-  fileprivate func handleReaderContentParsed(_ readabilityResult: ReadabilityResult) {
-    guard let tab = tab else {
-      return
-    }
+  fileprivate func handleReaderContentParsed(_ readabilityResult: ReadabilityResult, tab: Tab) {
     delegate?.readerMode(self, didParseReadabilityResult: readabilityResult, forTab: tab)
   }
 
-  func userContentController(
-    _ userContentController: WKUserContentController,
-    didReceiveScriptMessage message: WKScriptMessage,
-    replyHandler: (Any?, String?) -> Void
+  func tab(
+    _ tab: Tab,
+    receivedScriptMessage message: WKScriptMessage,
+    replyHandler: @escaping (Any?, String?) -> Void
   ) {
     defer { replyHandler(nil, nil) }
 
@@ -326,34 +320,32 @@ class ReaderModeScriptHandler: TabContentScript {
         switch messageType {
         case .pageEvent:
           if let readerPageEvent = ReaderPageEvent(rawValue: msg["Value"] as? String ?? "Invalid") {
-            handleReaderPageEvent(readerPageEvent)
+            handleReaderPageEvent(readerPageEvent, tab: tab)
           }
         case .stateChange:
           if let readerModeState = ReaderModeState(rawValue: msg["Value"] as? String ?? "Invalid") {
-            handleReaderModeStateChange(readerModeState)
+            handleReaderModeStateChange(readerModeState, tab: tab)
           }
         case .contentParsed:
           if let readabilityResult = ReadabilityResult(object: msg["Value"] as AnyObject?) {
-            handleReaderContentParsed(readabilityResult)
+            handleReaderContentParsed(readabilityResult, tab: tab)
           } else {
-            handleReaderModeStateChange(.unavailable)
+            handleReaderModeStateChange(.unavailable, tab: tab)
           }
         }
       }
     }
   }
 
-  var style: ReaderModeStyle = defaultReaderModeStyle {
-    didSet {
-      if state == ReaderModeState.active {
-        tab?.webView?.evaluateSafeJavaScript(
-          functionName: "\(readerModeNamespace).setStyle",
-          args: [style.encode()],
-          contentWorld: Self.scriptSandbox,
-          escapeArgs: false
-        ) { (object, error) -> Void in
-          return
-        }
+  func setStyle(_ style: ReaderModeStyle, in tab: Tab) {
+    if state == ReaderModeState.active {
+      tab.webView?.evaluateSafeJavaScript(
+        functionName: "\(readerModeNamespace).setStyle",
+        args: [style.encode()],
+        contentWorld: Self.scriptSandbox,
+        escapeArgs: false
+      ) { (object, error) -> Void in
+        return
       }
     }
   }

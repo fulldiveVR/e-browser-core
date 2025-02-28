@@ -366,6 +366,21 @@ class TabTrayController: AuthenticationController {
 
     shredButton.addTarget(self, action: #selector(shredButtonPressed), for: .touchUpInside)
     becomeFirstResponder()
+
+    NotificationCenter.default.do {
+      $0.addObserver(
+        self,
+        selector: #selector(sceneWillResignActiveNotification(_:)),
+        name: UIScene.willDeactivateNotification,
+        object: nil
+      )
+      $0.addObserver(
+        self,
+        selector: #selector(sceneDidBecomeActiveNotification(_:)),
+        name: UIScene.didActivateNotification,
+        object: nil
+      )
+    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -410,7 +425,10 @@ class TabTrayController: AuthenticationController {
 
     containerView.addSubview(contentStackView)
 
-    if FeatureList.kBraveShredFeature.enabled {
+    if FeatureList.kBraveShredFeature.enabled,
+      let url = tabManager.selectedTab?.url,
+      url.isShredAvailable
+    {
       tabTypeSelectorContainerView.addSubview(shredButton)
 
       shredButton.snp.makeConstraints {
@@ -770,6 +788,27 @@ class TabTrayController: AuthenticationController {
     }
   }
 
+  @objc func sceneWillResignActiveNotification(_ notification: NSNotification) {
+    guard let scene = notification.object as? UIScene, scene == currentScene else {
+      return
+    }
+
+    // If we are in the private mode info showing, hide any elements in the tab that we wouldn't want shown
+    // when the app is in the home switcher
+    if privateMode {
+      tabContentView.alpha = 0
+    }
+  }
+
+  @objc func sceneDidBecomeActiveNotification(_ notification: NSNotification) {
+    guard let scene = notification.object as? UIScene, scene == currentScene else {
+      return
+    }
+
+    // Re-show any components that might have been hidden
+    tabContentView.alpha = 1
+  }
+
   func toggleModeChanger() {
     tabTraySearchController.isActive = false
 
@@ -977,6 +1016,10 @@ extension TabTrayController: TabManagerDelegate {
     // Until then, the view is dismissed and takes the user directly to that tab.
     if tabManager.tabsForCurrentMode.count < 1 {
       dismiss(animated: true)
+    }
+
+    if BraveCore.FeatureList.kBraveShredFeature.enabled {
+      shredButton.isHidden = tabManager.selectedTab?.url?.isShredAvailable == false
     }
   }
 

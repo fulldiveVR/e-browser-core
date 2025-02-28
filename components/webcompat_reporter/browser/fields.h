@@ -21,12 +21,15 @@ inline constexpr char kLanguageFarblingField[] = "languageFarblingEnabled";
 inline constexpr char kBraveVPNEnabledField[] = "braveVPNEnabled";
 inline constexpr char kChannelField[] = "channel";
 inline constexpr char kVersionField[] = "version";
+inline constexpr char kCookiePolicyField[] = "cookie_policy";
+inline constexpr char kBlockScriptsField[] = "block_scripts";
 
 inline constexpr char kSiteURLField[] = "url";
 inline constexpr char kDomainField[] = "domain";
 inline constexpr char kDetailsField[] = "additionalDetails";
 inline constexpr char kContactField[] = "contactInfo";
 inline constexpr char kApiKeyField[] = "api_key";
+inline constexpr char kContactInfoSaveFlagField[] = "contactInfoSaveFlag";
 
 inline constexpr char kUISourceField[] = "ui_source";
 inline constexpr char kIsErrorPage[] = "isErrorPage";

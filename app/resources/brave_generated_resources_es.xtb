@@ -124,7 +124,6 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="6020553119523541665">Esta pestaña está activa en otra ventana</translation>
 <translation id="4987392683074136770">Si hace clic en esta pestaña, trasladará su contenido a esta ventana</translation>
 <translation id="8355523213948477234">Botón del menú de la vista dividida</translation>
-<translation id="2515126961943087659">Servicio de Anuncios Bat</translation>
 <translation id="2104347391516032700">Servicio de recompensas BAT</translation>
 <translation id="6040143037577758943">Cerrar</translation>
 <translation id="6665472986740899785">Anuncio de notificación de Brave</translation>
@@ -269,7 +268,7 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="55252794453047936">Mover contenido multimedia</translation>
 <translation id="4418985925423678811">Nueva lista de reproducción</translation>
 <translation id="385051799172605136">Volver</translation>
-<translation id="5317780077021120954">Save</translation>
+<translation id="5317780077021120954">Guardar</translation>
 <translation id="7930125899031086027">Crear y mover</translation>
 <translation id="2860159216666546928">Selecciona la carpeta a la que deseas mover este contenido multimedia</translation>
 <translation id="9130105487623071247">Nombre de la lista de reproducción</translation>
@@ -307,11 +306,11 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="6155018868740116868">Recuperar</translation>
 <translation id="2521960050170773751">Añadir contenido multimedia de la página</translation>
 <translation id="2301087142998134097"><ph name="SITE"/> desea abrir</translation>
-<translation id="7128982309566342232">Una página incrustada en <ph name="SITE"/> desea abrir</translation>
+<translation id="4828353184750597953">Una página incrustada en <ph name="SITE"/> desea abrir</translation>
 <translation id="1175012181261953767">Esta página desea abrir</translation>
 <translation id="7459546222322124545">Una página incrustada en esta página desea abrir</translation>
 <translation id="5836261838911560851"><ph name="SITE"/> desea guardar</translation>
-<translation id="5936788906460687941">Una página incrustada en <ph name="SITE"/> desea guardar</translation>
+<translation id="8813509417421129632">Una página incrustada en <ph name="SITE"/> desea guardar</translation>
 <translation id="7700010743463174379">Esta página desea guardar</translation>
 <translation id="6774238875569752630">Una página incrustada en esta página desea guardar</translation>
 <translation id="9156965752763025780">Tus cambios se aplicarán la próxima vez que reinicies Brave.</translation>
@@ -436,6 +435,7 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="3422250445565385437">Listas en proceso de actualización</translation>
 <translation id="1340263054776016283">Introduce la URL de la lista de filtros</translation>
 <translation id="8578397014396032341">Filtros de contenido</translation>
+<translation id="5327248766486351172">Nombre</translation>
 <translation id="3020183492814296499">Accesos directos</translation>
 <translation id="5567412479632285879">Las recompensas de Brave están desactivadas</translation>
 <translation id="413570371620795359">Abre el panel Recompensas para habilitarlas y empezar</translation>
@@ -505,7 +505,6 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="5794692721727586076">Chat de Leo AI</translation>
 <translation id="8115153008662981040">Los sitios pueden pedir que se abra el chat de Leo AI</translation>
 <translation id="1145070115730668595">No permitir que el sitio abra el chat de Leo AI</translation>
-<translation id="6414370348346025511">La protección estándar está activada.</translation>
 <translation id="5565355416171743213">Empezar a utilizar la sincronización</translation>
 <translation id="4332558599726753990">Configuración de Brave Sync</translation>
 <translation id="2187778349654214731">Para empezar, necesitarás tener Brave instalado en todos los dispositivos que quieres sincronizar. Después, conéctalos entre sí de manera segura con un código de sincronización.</translation>
@@ -573,12 +572,11 @@ Comprueba que un dispositivo tuyo haya generado estas palabras clave.
 <translation id="4094590686212463338">No se pudo unir esta cadena de sincronización y se ha eliminado.</translation>
 <translation id="4908081302669157000">Números de teléfono, correos electrónicos y direcciones</translation>
 <translation id="294985549514492876">Aplicaciones web (PWA)</translation>
+<translation id="7029809446516969842">Contraseñas</translation>
 <translation id="924029461438529367">Mostrar sugerencias de búsqueda</translation>
 <translation id="3128251601544028053">Cuando escribe en la barra de direcciones o en el cuadro de búsqueda, Brave envía lo escrito a su motor de búsqueda predeterminado para obtener mejores sugerencias. Esta función no está disponible en las ventanas privadas.</translation>
 <translation id="6285118765755298263">Indexar otros motores de búsqueda</translation>
 <translation id="919715748352669592">Indexa automáticamente los sitios web que siguen las especificaciones OpenSearch.</translation>
-<translation id="9195748375338942941">Ventana normal: motor de búsqueda usado en la barra de direcciones.</translation>
-<translation id="5324939009884545145">Ventana privada: motor de búsqueda usado en la barra de direcciones</translation>
 <translation id="6864914031231797928">Permitir el inicio de sesión con Google para obtener extensiones</translation>
 <translation id="7878791177459550035">El router multimedia hace posibles las transmisiones en el navegador.</translation>
 <translation id="2707635989000984973">Resolver los nombres de dominio de Unstoppable Domains</translation>
@@ -694,13 +692,7 @@ Comprueba que un dispositivo tuyo haya generado estas palabras clave.
 <translation id="8055509865174199683">Mostrar Leo en el menú contextual en sitios web</translation>
 <translation id="1529674267267221673">Leo aparecerá en el menú contextual cuando hagas clic con el botón derecho en un sitio web. Al hacerlo, Leo recibirá el contexto de la página web en cuestión.</translation>
 <translation id="8172263161008556851">Mostrar sugerencias en la conversación</translation>
-<translation id="1014480593522400586">Borrar datos de Leo</translation>
-<translation id="6803758564561896401">Si restablece el asistente de IA (Leo), será necesario que habilite Leo de Brave
-para poder usarlo en el futuro. El historial de chats se borrará al llevar a cabo dicha acción.
-Esto significa que se eliminarán todas las conversaciones que haya mantenido con Leo
-de forma irreversible.</translation>
 <translation id="5574059574002819179">Ajustar sugerencias de autocompletar</translation>
-<translation id="8157373421434119674">Historial de datos y chats</translation>
 <translation id="614530507403667291">Modelo predeterminado para conversaciones nuevas</translation>
 <translation id="8826914609353373601">Gestionar suscripción Premium</translation>
 <translation id="235457946228076038">Use su propio modelo</translation>
@@ -713,8 +705,9 @@ de forma irreversible.</translation>
 <translation id="6374563306438145841">Clave de API</translation>
 <translation id="8008271349880309090">El nombre del modelo tal y como aparece en el menú de selección de modelos</translation>
 <translation id="1355326130503900056">El nombre del modelo tal y como debe aparecer en la solicitud al marco de servicio, es decir, phi-3. Cabe recalcar que si este nombre no coincide exactamente con el que espera el marco servidor, la integración no se llevará a cabo.</translation>
-<translation id="3286410514484292784">La url en la que su marco de servicio atiende peticiones. Si no la sabe con certeza, consulte la documentación de la plataforma. Por ejemplo, en el caso de Ollama, se trata siempre de http://localhost:11434/v1/chat/completions</translation>
 <translation id="1058790648388035953">Existe la posibilidad de que algunos marcos de servicio exijan credenciales de autenticación a modo de clave de API o token de acceso. En ese caso, se añadirán al encabezado de la solicitud.</translation>
+<translation id="4335128003329183586">Tamaño del contexto</translation>
+<translation id="8794525422794607973">El número máximo de tokens que el modelo puede procesar en una sola interacción. Cada token es aproximadamente 3/4 de una palabra. Un tamaño de contexto mayor permite al modelo manejar conversaciones más largas. Los distintos modelos admiten distintos tamaños máximos de contextos.</translation>
 <translation id="217141195370578385">Brave no hace de proxy para estas solicitudes. Consulte los términos de privacidad del proveedor elegido.</translation>
 <translation id="2645532768679870478">Los terminales no locales deben emplear el protocolo HTTPS para llevar a cabo una transmisión segura de los datos.</translation>
 <translation id="8177205483022887785">Ha introducido una URL no válida. Introduzca una que sí lo sea.</translation>
@@ -724,6 +717,9 @@ de forma irreversible.</translation>
 <translation id="7435587476558117990">Vincule su LLM autohospedado u hospedado en un tercero con Leo y úselo en el mismo navegador.</translation>
 <translation id="1381050642750209119">Use cualquier marco compatible con los protocolos de chat de OpenAI (como, por ejemplo, Ollama).</translation>
 <translation id="2642905648178380593">Guardar modelo</translation>
+<translation id="6304169450064541679">Indicación del sistema</translation>
+<translation id="3081947790648024460">Instrucciones personalizadas y/o contexto dado al modelo para guiar sus respuestas en una dirección o estilo específicos. Utiliza %datetime% donde quieras que se inserte la fecha y hora actuales.</translation>
+<translation id="5688878061573389791">≈<ph name="TOKENS_COUNT"/> tokens</translation>
 <translation id="349846214503465941">Activar Lista de reproducción</translation>
 <translation id="7903608716704052878">Añadir archivos de forma automática para visualizarlos sin conexión</translation>
 <translation id="4193768184502613558">Esta opción guardará los archivos multimedia en caché de forma automática para que puedas reproducirlos sin conexión a Internet.</translation>

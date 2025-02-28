@@ -424,6 +424,9 @@ provideStrings({
   braveWalletCreateAccountBitcoinTestnetDescription: 'Store BTC Testnet assets',
   braveWalletCreateAccountZCashDescription: 'Store ZEC assets',
   braveWalletCreateAccountZCashTestnetDescription: 'Store ZEC Testnet assets',
+  braveWalletCreateAccountCardanoDescription: 'Store Cardano assets',
+  braveWalletCreateAccountCardanoTestnetDescription:
+    'Store Cardano Testnet assets',
   braveWalletCreateAccountFilecoinDescription: 'Store FIL asset',
   braveWalletCreateAccountFilecoinTestnetDescription: 'Store FIL Testnet asset',
   braveWalletFilecoinPrivateKeyProtocol: 'Private key $1',
@@ -1219,6 +1222,8 @@ provideStrings({
   braveWalletBTCTestnetAccountDescription: 'Bitcoin Testnet',
   braveWalletZECAccountDescription: 'Zcash Mainnet',
   braveWalletZECTestnetAccountDescription: 'Zcash Testnet',
+  braveWalletCardanoAccountDescription: 'Cardano Mainnet',
+  braveWalletCardanoTestnetAccountDescription: 'Cardano Testnet',
   braveWalletShowNetworkLogoOnNftsTitle: 'Network Logo',
   braveWalletShowNetworkLogoOnNftsDescription: 'Show network logo on NFTs',
   braveWalletShowSpamNftsTitle: 'Spam NFTs',
@@ -1321,19 +1326,6 @@ provideStrings({
 
   // Remove Account Modal
   braveWalletRemoveAccountModalTitle: 'Are you sure you want to remove "$1"?',
-
-  // Bridge to Aurora
-  braveWalletAuroraModalTitle: 'Open the Rainbow Bridge app?',
-  braveWalletAuroraModalDescription:
-    'Rainbow Bridge is an independent service that helps you bridge ' +
-    'assets across networks, and use your crypto on other networks ' +
-    'and DApp ecosystems. Bridging assets to other networks has some risks.',
-  braveWalletAuroraModalLearnMore: 'Learn more about using Rainbow Bridge',
-  braveWalletAuroraModalLearnMoreAboutRisk:
-    'Learn more about mitigating risk on Rainbow Bridge',
-  braveWalletAuroraModalDontShowAgain: "Don't show again",
-  braveWalletAuroraModalOPenButtonText: 'Open the Rainbow Bridge app',
-  braveWalletBridgeToAuroraButton: 'Bridge to Aurora',
 
   // Input field labels
   braveWalletInputLabelPassword: 'Password',
@@ -1541,5 +1533,28 @@ provideStrings({
     'Upgrading to a shielded account means that these transactions hide the sender, receiver and amount details.',
   braveWalletShielded: 'Shielded',
   braveWalletUnified: 'Unified',
-  braveWalletTransparent: 'Transparent'
+  braveWalletTransparent: 'Transparent',
+  braveWalletOutOfSyncTitle: 'Out of sync',
+  braveWalletOutOfSyncBlocksBehindTitle: 'Out of sync ($1 blocks behind)',
+  braveWalletOutOfSyncDescription:
+    'Sync your account to access the latest transactions and balance.',
+  braveWalletSyncAccountButton: 'Sync account',
+  braveWalletSyncAccountName: 'Sync $1',
+  braveWalletInitializing: 'Initializing...',
+  braveWalletProcessingBlock: 'Processing block:',
+  braveWalletBlocksLeft: '$1 left',
+  braveWalletBlocksOfBlocks: '$1 of $2',
+  braveWalletRanges: 'Ranges:',
+  braveWalletPause: 'Pause',
+  braveWalletSyncCompleteMessage:
+    'Sync complete. You may now close this window.',
+  braveWalletSyncStartedMessage:
+    'Please don’t close this window until sync finishes.',
+  braveWalletContinueUsingWallet: 'Continue using wallet in a new tab',
+  braveWalletShieldedAccountBirthdayBlock: 'Shielded account birthday block',
+  braveWalletAccountBirthdayTooLow: 'Account birthday must be greater than $1',
+  braveWalletAccountBirthdayTooHigh: 'Account birthday must be less than $1',
+  braveWalletBlocksBehind: '$1 blocks behind',
+  braveWalletAccountIsSyncing: 'Account is syncing',
+  braveWalletSyncing: 'Syncing'
 })

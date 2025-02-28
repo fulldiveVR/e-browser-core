@@ -5,12 +5,21 @@
 
 import("//brave/components/brave_wallet/common/config.gni")
 
+source_set("hd_key_common") {
+  sources = [
+    "hd_key_common.cc",
+    "hd_key_common.h",
+  ]
+}
+
 source_set("hd_key") {
   sources = [
     "hd_key.cc",
     "hd_key.h",
     "hd_key_ed25519.cc",
     "hd_key_ed25519.h",
+    "hd_key_ed25519_slip23.cc",
+    "hd_key_ed25519_slip23.h",
   ]
 
   visibility = [
@@ -28,7 +37,8 @@ source_set("hd_key") {
     "//third_party/boringssl",
   ]
 
-  public_deps = [ "//brave/components/brave_wallet/rust:rust_lib" ]
+  public_deps = [ ":hd_key_common" ]
+
   if (enable_orchard) {
     sources += [
       "hd_key_zip32.cc",

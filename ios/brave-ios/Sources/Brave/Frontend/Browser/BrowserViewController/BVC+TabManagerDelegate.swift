@@ -59,6 +59,7 @@ extension BrowserViewController: TabManagerDelegate {
         topToolbar.hideProgressBar()
       }
 
+      previous?.shownPromptAlert?.dismiss(animated: false)
       readerModeCache = ReaderModeScriptHandler.cache(for: tab)
       ReaderModeHandler.readerModeCache = readerModeCache
 
@@ -126,13 +127,15 @@ extension BrowserViewController: TabManagerDelegate {
       }
     }
 
-    displayPageZoom(visible: false)
+    clearPageZoomDialog()
     updateTabsBarVisibility()
     selected?.updatePullToRefreshVisibility()
 
-    topToolbar.locationView.loading = selected?.loading ?? false
-    updateBackForwardActionStatus(for: selected?.webView)
-    navigationToolbar.updateForwardStatus(selected?.canGoForward ?? false)
+    if let tab = selected {
+      topToolbar.locationView.loading = tab.loading
+      updateBackForwardActionStatus(for: tab)
+      navigationToolbar.updateForwardStatus(tab.canGoForward)
+    }
 
     let shouldShowPlaylistURLBarButton = selected?.url?.isPlaylistSupportedSiteURL == true
 
@@ -153,7 +156,20 @@ extension BrowserViewController: TabManagerDelegate {
         item: selected?.playlistItem
       )
     } else {
-      topToolbar.updateReaderModeState(ReaderModeState.unavailable)
+      topToolbar.updateReaderModeState(.unavailable)
+    }
+
+    if (selected?.getContentScript(
+      name: BraveTranslateScriptHandler.scriptName
+    ) as? BraveTranslateScriptHandler) != nil {
+      updateTranslateURLBar(tab: selected, state: selected?.translationState ?? .unavailable)
+      updatePlaylistURLBar(
+        tab: selected,
+        state: selected?.playlistItemState ?? .none,
+        item: selected?.playlistItem
+      )
+    } else {
+      topToolbar.updateTranslateButtonState(.unavailable)
     }
 
     updateScreenTimeUrl(tabManager.selectedTab?.url)
@@ -457,7 +473,10 @@ extension BrowserViewController: TabManagerDelegate {
 
     var closeAllTabMenuChildren: [UIAction] = []
 
-    if FeatureList.kBraveShredFeature.enabled {
+    if FeatureList.kBraveShredFeature.enabled,
+      let url = tabManager.selectedTab?.url,
+      url.isShredAvailable
+    {
       let shredDataAction = UIAction(
         title: Strings.Shields.shredSiteData,
         image: UIImage(braveSystemNamed: "leo.shred.data"),

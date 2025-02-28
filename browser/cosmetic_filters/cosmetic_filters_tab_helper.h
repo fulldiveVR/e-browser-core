@@ -31,7 +31,9 @@ class CosmeticFiltersTabHelper
 
  private:
   void AddSiteCosmeticFilter(const std::string& filter) override;
-  void ManageCustomFilters() override;
+  void GetElementPickerThemeInfo(
+      GetElementPickerThemeInfoCallback callback) override;
+  void ResetCosmeticFilterForCurrentHost() override;
 
   friend class content::WebContentsUserData<CosmeticFiltersTabHelper>;
 

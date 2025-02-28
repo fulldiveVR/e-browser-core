@@ -20,6 +20,12 @@ export function createModel(): AppModel {
   const locale = createLocaleContextForTesting(localeStrings)
   const stateManager = createStateManager<AppState>({
     ...defaultState(),
+    embedder: {
+      platform: 'desktop',
+      isAutoResizeBubble: false,
+      isBubble: false,
+      animatedBackgroundEnabled: false
+    },
     loading: false,
     paymentId: 'abc123',
     countryCode: 'US',
@@ -80,7 +86,7 @@ export function createModel(): AppModel {
           url: 'https://brave.com',
           platform: 'youtube'
         },
-        amount: 1.5,
+        amount: 0.025,
         nextContributionDate: Date.now()
       }
     ],

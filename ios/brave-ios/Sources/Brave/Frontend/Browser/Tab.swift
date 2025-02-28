@@ -4,6 +4,7 @@
 
 import BraveCore
 import BraveShields
+import BraveUI
 import BraveWallet
 import CertificateUtilities
 import Data
@@ -37,9 +38,9 @@ protocol TabContentScript: TabContentScriptLoader {
   func verifyMessage(message: WKScriptMessage) -> Bool
   func verifyMessage(message: WKScriptMessage, securityToken: String) -> Bool
 
-  func userContentController(
-    _ userContentController: WKUserContentController,
-    didReceiveScriptMessage message: WKScriptMessage,
+  @MainActor func tab(
+    _ tab: Tab,
+    receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   )
 }
@@ -240,7 +241,7 @@ class Tab: NSObject {
 
   var userActivity: NSUserActivity?
 
-  var webView: BraveWebView?
+  var webView: TabWebView?
   var tabDelegate: TabDelegate?
   weak var urlDidChangeDelegate: URLChangeDelegate?  // TODO: generalize this.
   var bars = [SnackBar]()
@@ -319,6 +320,7 @@ class Tab: NSObject {
   var isEditing = false
   var playlistItem: PlaylistInfo?
   var playlistItemState: PlaylistItemAddedState = .none
+  var translationState: TranslateURLBarButton.TranslateState = .unavailable
 
   /// The rewards reporting state which is filled during a page navigation.
   // It is reset to initial values when the page navigation is finished.
@@ -357,7 +359,7 @@ class Tab: NSObject {
 
   // There is no 'available macro' on props, we currently just need to store ownership.
   lazy var contentBlocker = ContentBlockerHelper(tab: self)
-  lazy var requestBlockingContentHelper = RequestBlockingContentScriptHandler(tab: self)
+  let requestBlockingContentHelper = RequestBlockingContentScriptHandler()
 
   /// The last title shown by this tab. Used by the tab tray to show titles for zombie tabs.
   var lastTitle: String?
@@ -397,7 +399,7 @@ class Tab: NSObject {
   // If this tab has been opened from another, its parent will point to the tab from which it was opened
   weak var parent: Tab?
 
-  fileprivate var contentScriptManager = TabContentScriptManager()
+  fileprivate let contentScriptManager = TabContentScriptManager()
   private var userScripts = Set<UserScriptManager.ScriptType>()
   private var customUserScripts = Set<UserScriptType>()
 
@@ -406,12 +408,15 @@ class Tab: NSObject {
   /// Any time a tab tries to make requests to display a Javascript Alert and we are not the active
   /// tab instance, queue it for later until we become foregrounded.
   fileprivate var alertQueue = [JSAlertInfo]()
+  weak var shownPromptAlert: UIAlertController?
 
   var nightMode: Bool {
     didSet {
       var isNightModeEnabled = false
 
-      if let fetchedTabURL = fetchedURL, nightMode {
+      if let fetchedTabURL = fetchedURL, nightMode,
+        !DarkReaderScriptHandler.isNightModeBlockedURL(fetchedTabURL)
+      {
         isNightModeEnabled = true
       }
 
@@ -427,8 +432,13 @@ class Tab: NSObject {
     }
   }
 
+  var translateHelper: BraveTranslateTabHelper?
+  private(set) lazy var leoTabHelper = BraveLeoScriptTabHelper(tab: self)
+
   /// Boolean tracking custom url-scheme alert presented
   var isExternalAppAlertPresented = false
+  var externalAppPopup: AlertPopupView?
+  var externalAppPopupContinuation: CheckedContinuation<Bool, Never>?
   var externalAppAlertCounter = 0
   var isExternalAppAlertSuppressed = false
   var externalAppURLDomain: String?
@@ -447,8 +457,10 @@ class Tab: NSObject {
     tabGeneratorAPI: BraveTabGeneratorAPI? = nil
   ) {
     self.configuration = configuration
-    self.favicon = Favicon.default
     self.id = id
+    self.type = type
+
+    self.favicon = Favicon.default
     rewardsId = UInt32.random(in: 1...UInt32.max)
     nightMode = Preferences.General.nightModeEnabled.value
     _syncTab = tabGeneratorAPI?.createBraveSyncTab(isOffTheRecord: type == .private)
@@ -462,15 +474,8 @@ class Tab: NSObject {
     }
 
     super.init()
-    self.type = type
-  }
 
-  weak var navigationDelegate: WKNavigationDelegate? {
-    didSet {
-      if let webView = webView {
-        webView.navigationDelegate = navigationDelegate
-      }
-    }
+    self.contentScriptManager.tab = self
   }
 
   /// A helper property that handles native to Brave Search communication.
@@ -505,7 +510,6 @@ class Tab: NSObject {
       }
       let webView = TabWebView(
         frame: .zero,
-        tab: self,
         configuration: configuration!,
         isPrivate: isPrivate
       )
@@ -518,7 +522,6 @@ class Tab: NSObject {
       // Turning off masking allows the web content to flow outside of the scrollView's frame
       // which allows the content appear beneath the toolbars in the BrowserViewController
       webView.scrollView.layer.masksToBounds = false
-      webView.navigationDelegate = navigationDelegate
 
       restore(webView, restorationData: self.sessionData)
 
@@ -536,6 +539,7 @@ class Tab: NSObject {
         .cookieBlocking: Preferences.Privacy.blockAllCookies.value,
         .mediaBackgroundPlay: Preferences.General.mediaAutoBackgrounding.value,
         .nightMode: Preferences.General.nightModeEnabled.value,
+        .braveTranslate: Preferences.Translate.translateEnabled.value != false,
       ]
 
       userScripts = Set(scriptPreferences.filter({ $0.value }).map({ $0.key }))
@@ -623,6 +627,7 @@ class Tab: NSObject {
 
   func deleteWebView() {
     contentScriptManager.uninstall(from: self)
+    translateHelper = nil
 
     if let webView = webView {
       webView.removeObserver(self, forKeyPath: KVOConstants.url.keyPath)
@@ -988,7 +993,7 @@ class Tab: NSObject {
     change: [NSKeyValueChangeKey: Any]?,
     context: UnsafeMutableRawPointer?
   ) {
-    guard let webView = object as? BraveWebView, webView == self.webView,
+    guard let webView = object as? TabWebView, webView == self.webView,
       let path = keyPath, path == KVOConstants.url.keyPath
     else {
       return assertionFailure("Unhandled KVO key: \(keyPath ?? "nil")")
@@ -1050,6 +1055,7 @@ extension Tab: TabWebViewDelegate {
 
 private class TabContentScriptManager: NSObject, WKScriptMessageHandlerWithReply {
   fileprivate var helpers = [String: TabContentScript]()
+  weak var tab: Tab?
 
   func uninstall(from tab: Tab) {
     helpers.forEach {
@@ -1058,22 +1064,20 @@ private class TabContentScriptManager: NSObject, WKScriptMessageHandlerWithReply
     }
   }
 
-  @objc func userContentController(
+  func userContentController(
     _ userContentController: WKUserContentController,
     didReceive message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
-    for helper in helpers.values {
-      let scriptMessageHandlerName = type(of: helper).messageHandlerName
-      if scriptMessageHandlerName == message.name {
-        helper.userContentController(
-          userContentController,
-          didReceiveScriptMessage: message,
-          replyHandler: replyHandler
-        )
-        return
-      }
+    guard let tab,
+      let helper = helpers.values.first(where: {
+        type(of: $0).messageHandlerName == message.name
+      })
+    else {
+      replyHandler(nil, nil)
+      return
     }
+    helper.tab(tab, receivedScriptMessage: message, replyHandler: replyHandler)
   }
 
   func addContentScript(
@@ -1127,18 +1131,74 @@ private protocol TabWebViewDelegate: AnyObject {
   func tabWebView(_ tabWebView: TabWebView, didSelectSearchWithBraveFor selectedText: String)
 }
 
-class TabWebView: BraveWebView, MenuHelperInterface {
+class TabWebView: WKWebView, MenuHelperInterface {
+  /// Stores last position when the webview was touched on.
+  private(set) var lastHitPoint = CGPoint(x: 0, y: 0)
+
+  private static var nonPersistentDataStore: WKWebsiteDataStore?
+  static func sharedNonPersistentStore() -> WKWebsiteDataStore {
+    if let dataStore = nonPersistentDataStore {
+      return dataStore
+    }
+
+    let dataStore = WKWebsiteDataStore.nonPersistent()
+    nonPersistentDataStore = dataStore
+    return dataStore
+  }
+
   fileprivate weak var delegate: TabWebViewDelegate?
-  private(set) weak var tab: Tab?
 
   init(
     frame: CGRect,
-    tab: Tab,
     configuration: WKWebViewConfiguration = WKWebViewConfiguration(),
     isPrivate: Bool = true
   ) {
-    self.tab = tab
-    super.init(frame: frame, configuration: configuration, isPrivate: isPrivate)
+    if isPrivate {
+      configuration.websiteDataStore = TabWebView.sharedNonPersistentStore()
+    } else {
+      configuration.websiteDataStore = WKWebsiteDataStore.default()
+    }
+
+    super.init(frame: frame, configuration: configuration)
+
+    isFindInteractionEnabled = true
+
+    customUserAgent = UserAgent.userAgentForIdiom()
+    if #available(iOS 16.4, *) {
+      isInspectable = true
+    }
+
+    updateBackgroundColor()
+    Preferences.General.nightModeEnabled.observe(from: self)
+  }
+
+  private func updateBackgroundColor() {
+    if Preferences.General.nightModeEnabled.value {
+      let color = UIColor(braveSystemName: .containerBackground)
+      backgroundColor = color
+      scrollView.backgroundColor = color
+      // WKWebView flashes white screen on load regardless of background colour assignments without
+      // setting `isOpaque` to false
+      isOpaque = false
+    } else {
+      backgroundColor = nil
+      scrollView.backgroundColor = nil
+      isOpaque = true
+    }
+  }
+
+  static func removeNonPersistentStore() {
+    TabWebView.nonPersistentDataStore = nil
+  }
+
+  @available(*, unavailable)
+  required init?(coder aDecoder: NSCoder) {
+    fatalError()
+  }
+
+  override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    lastHitPoint = point
+    return super.hitTest(point, with: event)
   }
 
   override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -1200,6 +1260,12 @@ class TabWebView: BraveWebView, MenuHelperInterface {
       let selectedText = result as? String
       callback(selectedText)
     }
+  }
+}
+
+extension TabWebView: PreferencesObserver {
+  func preferencesDidChange(for key: String) {
+    updateBackgroundColor()
   }
 }
 

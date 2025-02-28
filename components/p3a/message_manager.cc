@@ -10,6 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
+#include "base/json/values_util.h"
 #include "base/logging.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
@@ -26,6 +27,7 @@
 #include "components/metrics/log_store.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
+#include "components/prefs/scoped_user_pref_update.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 
 namespace p3a {
@@ -40,9 +42,11 @@ MessageManager::MessageManager(PrefService& local_state,
                                const P3AConfig* config,
                                Delegate& delegate,
                                std::string channel,
-                               std::string week_of_install)
+                               base::Time first_run_time)
     : local_state_(local_state), config_(config), delegate_(delegate) {
-  message_meta_.Init(&local_state, channel, week_of_install);
+  message_meta_.Init(&local_state, channel, first_run_time);
+
+  CleanupActivationDates();
 
   // Init log stores.
   for (MetricLogType log_type : kAllMetricLogTypes) {
@@ -145,6 +149,15 @@ void MessageManager::UpdateMetricValue(
   auto* json_log_store = json_log_stores_[log_type].get();
   if ((update_for_all || !*only_update_for_constellation) && json_log_store) {
     json_log_store->UpdateValue(std::string(histogram_name), bucket);
+  }
+  const auto* metric_config = GetMetricConfig(histogram_name);
+  if (metric_config && *metric_config &&
+      (*metric_config)->record_activation_date && bucket >= 1) {
+    // Record activation date for metric, for retention measurement purposes
+    ScopedDictPrefUpdate update(&*local_state_, kActivationDatesDictPref);
+    if (!update->contains(histogram_name)) {
+      update->Set(histogram_name, base::TimeToValue(base::Time::Now()));
+    }
   }
 }
 
@@ -311,11 +324,12 @@ void MessageManager::StartScheduledUpload(bool is_constellation,
       is_constellation
           ? constellation_send_log_stores_[log_type]->staged_log_type()
           : json_log_stores_[log_type]->staged_log_type();
-  const bool is_nebula = is_constellation
-                             ? p3a::kNebulaOnlyHistograms.contains(
-                                   constellation_send_log_stores_[log_type]
-                                       ->staged_log_histogram_name())
-                             : false;
+  bool is_nebula = false;
+  if (is_constellation) {
+    const auto* metric_config = GetMetricConfig(
+        constellation_send_log_stores_[log_type]->staged_log_histogram_name());
+    is_nebula = metric_config && *metric_config && (*metric_config)->nebula;
+  }
 
   VLOG(2) << logging_prefix << " - Uploading " << log.size() << " bytes";
   uploader_->UploadLog(log, upload_type, is_constellation, is_nebula, log_type);
@@ -352,9 +366,10 @@ void MessageManager::StartScheduledConstellationPrep(MetricLogType log_type) {
   const std::string log_key = log_store->staged_log_key();
   VLOG(2) << "MessageManager::StartScheduledConstellationPrep - Requesting "
              "randomness for histogram: "
-          << log_key;
+          << log_key << " " << log;
 
-  const bool is_nebula = p3a::kNebulaOnlyHistograms.contains(log_key);
+  const auto* metric_config = GetMetricConfig(log_key);
+  bool is_nebula = metric_config && *metric_config && (*metric_config)->nebula;
   if (is_nebula && !features::IsNebulaEnabled()) {
     // Do not report if Nebula feature is not enabled,
     // mark request as successful to avoid transmission.
@@ -394,12 +409,10 @@ std::string MessageManager::SerializeLog(std::string_view histogram_name,
   message_meta_.Update();
 
   if (is_constellation) {
-    const bool include_refcode =
-        p3a::kHistogramsWithRefcodeIncluded.contains(histogram_name);
-    const bool is_nebula = p3a::kNebulaOnlyHistograms.contains(histogram_name);
-    return GenerateP3AConstellationMessage(histogram_name, value, message_meta_,
-                                           upload_type, include_refcode,
-                                           is_nebula);
+    const auto* metric_config = GetMetricConfig(histogram_name);
+    return GenerateP3AConstellationMessage(
+        histogram_name, value, message_meta_, upload_type,
+        metric_config ? *metric_config : std::nullopt);
   } else {
     base::Value::Dict p3a_json_value = GenerateP3AMessageDict(
         histogram_name, value, log_type, message_meta_, upload_type);
@@ -408,6 +421,35 @@ std::string MessageManager::SerializeLog(std::string_view histogram_name,
     DCHECK(ok);
 
     return p3a_json_message;
+  }
+}
+
+const std::optional<MetricConfig>* MessageManager::GetMetricConfig(
+    std::string_view histogram_name) const {
+  const std::optional<MetricConfig>* metric_config = nullptr;
+
+  auto it = p3a::kCollectedTypicalHistograms.find(histogram_name);
+  if (it != p3a::kCollectedTypicalHistograms.end()) {
+    metric_config = &it->second;
+  } else if (it = p3a::kCollectedSlowHistograms.find(histogram_name);
+             it != p3a::kCollectedSlowHistograms.end()) {
+    metric_config = &it->second;
+  } else if (it = p3a::kCollectedExpressHistograms.find(histogram_name);
+             it != p3a::kCollectedExpressHistograms.end()) {
+    metric_config = &it->second;
+  }
+  return metric_config;
+}
+
+void MessageManager::CleanupActivationDates() {
+  ScopedDictPrefUpdate update(&*local_state_, kActivationDatesDictPref);
+
+  for (auto it = update->begin(); it != update->end();) {
+    if (!GetMetricConfig(it->first)) {
+      it = update->erase(it);
+    } else {
+      it++;
+    }
   }
 }
 
@@ -420,7 +462,9 @@ bool MessageManager::IsActualMetric(const std::string& histogram_name) const {
 
 bool MessageManager::IsEphemeralMetric(
     const std::string& histogram_name) const {
-  return p3a::kEphemeralHistograms.contains(histogram_name) ||
+  const auto* metric_config = GetMetricConfig(histogram_name);
+
+  return (metric_config && *metric_config && (*metric_config)->ephemeral) ||
          delegate_->GetDynamicMetricLogType(histogram_name).has_value();
 }
 

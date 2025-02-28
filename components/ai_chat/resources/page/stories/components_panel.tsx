@@ -23,60 +23,59 @@ import ACTIONS_LIST from './story_utils/actions'
 import styles from './style.module.scss'
 import StorybookConversationEntries from './story_utils/ConversationEntries'
 import { UntrustedConversationContext, UntrustedConversationReactContext } from '../../untrusted_conversation_frame/untrusted_conversation_context'
+import ErrorConnection from '../components/alerts/error_connection'
+import ErrorConversationEnd from '../components/alerts/error_conversation_end'
+import ErrorInvalidAPIKey from '../components/alerts/error_invalid_api_key'
+import ErrorInvalidEndpointURL from '../components/alerts/error_invalid_endpoint_url'
+import ErrorRateLimit from '../components/alerts/error_rate_limit'
+import ErrorServiceOverloaded from '../components/alerts/error_service_overloaded'
+import LongConversationInfo from '../components/alerts/long_conversation_info'
+import WarningPremiumDisconnected from '../components/alerts/warning_premium_disconnected'
+import Attachments from '../components/attachments'
+
+const eventTemplate: Mojom.ConversationEntryEvent = {
+  completionEvent: undefined,
+  pageContentRefineEvent: undefined,
+  searchQueriesEvent: undefined,
+  searchStatusEvent: undefined,
+  selectedLanguageEvent: undefined,
+  conversationTitleEvent: undefined,
+  sourcesEvent: undefined
+}
 
 function getCompletionEvent(text: string): Mojom.ConversationEntryEvent {
   return {
-    completionEvent: { completion: text },
-    pageContentRefineEvent: undefined,
-    searchQueriesEvent: undefined,
-    searchStatusEvent: undefined,
-    conversationTitleEvent: undefined,
-    selectedLanguageEvent: undefined
+    ...eventTemplate,
+    completionEvent: { completion: text }
   }
 }
 
 function getSearchEvent(queries: string[]): Mojom.ConversationEntryEvent {
   return {
-    completionEvent: undefined,
-    pageContentRefineEvent: undefined,
-    searchQueriesEvent: { searchQueries: queries },
-    searchStatusEvent: undefined,
-    conversationTitleEvent: undefined,
-    selectedLanguageEvent: undefined
+    ...eventTemplate,
+    searchQueriesEvent: { searchQueries: queries }
   }
 }
 
 function getSearchStatusEvent(): Mojom.ConversationEntryEvent {
   return {
-    completionEvent: undefined,
-    pageContentRefineEvent: undefined,
-    searchQueriesEvent: undefined,
-    searchStatusEvent: { isSearching: true },
-    selectedLanguageEvent: undefined,
-    conversationTitleEvent: undefined
+    ...eventTemplate,
+    searchStatusEvent: { isSearching: true }
+  }
+}
+
+function getWebSourcesEvent(sources: Mojom.WebSource[]): Mojom.ConversationEntryEvent {
+  return {
+    ...eventTemplate,
+    sourcesEvent: { sources }
   }
 }
 
 function getPageContentRefineEvent(): Mojom.ConversationEntryEvent {
   return {
-    completionEvent: undefined,
-    pageContentRefineEvent: { isRefining: true },
-    searchQueriesEvent: undefined,
-    searchStatusEvent: undefined,
-    selectedLanguageEvent: undefined,
-    conversationTitleEvent: undefined
+    ...eventTemplate,
+    pageContentRefineEvent: { isRefining: true }
   }
-}
-
-const associatedContentNone: Mojom.SiteInfo =  {
-  uuid: undefined,
-  contentType: Mojom.ContentType.PageContent,
-  isContentAssociationPossible: false,
-  contentUsedPercentage: 0,
-  isContentRefined: false,
-  title: undefined,
-  hostname: undefined,
-  url: undefined,
 }
 
 const CONVERSATIONS: Mojom.Conversation[] = [
@@ -85,7 +84,7 @@ const CONVERSATIONS: Mojom.Conversation[] = [
     uuid: '1',
     hasContent: true,
     updatedTime: { internalValue: BigInt('13278618001000000') },
-    associatedContent: associatedContentNone,
+    associatedContent: undefined,
     modelKey: undefined,
   },
   {
@@ -93,7 +92,7 @@ const CONVERSATIONS: Mojom.Conversation[] = [
     uuid: '2',
     hasContent: true,
     updatedTime: { internalValue: BigInt('13278618001000001') },
-    associatedContent: associatedContentNone,
+    associatedContent: undefined,
     modelKey: undefined,
   },
   {
@@ -101,7 +100,7 @@ const CONVERSATIONS: Mojom.Conversation[] = [
     uuid: '3',
     hasContent: true,
     updatedTime: { internalValue: BigInt('13278618001000002') },
-    associatedContent: associatedContentNone,
+    associatedContent: undefined,
     modelKey: undefined,
   }
 ]
@@ -111,8 +110,8 @@ const HISTORY: Mojom.ConversationTurn[] = [
     uuid: undefined,
     text: 'Summarize this page',
     characterType: Mojom.CharacterType.HUMAN,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
     actionType: Mojom.ActionType.SUMMARIZE_PAGE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -123,8 +122,8 @@ const HISTORY: Mojom.ConversationTurn[] = [
     uuid: undefined,
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
     actionType: Mojom.ActionType.UNSPECIFIED,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -136,7 +135,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'What is pointer compression?\n...and how does it work?\n    - tell me something interesting',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.QUERY,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -148,7 +147,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -160,7 +159,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -172,7 +171,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'What is taylor series?',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.QUERY,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -184,7 +183,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -196,7 +195,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'Write a hello world program in c++',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.QUERY,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -208,7 +207,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -220,7 +219,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'Summarize this excerpt',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.SUMMARIZE_SELECTED_TEXT,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: 'Pointer compression is a memory optimization technique where pointers (memory addresses) are stored in a compressed format to save memory. The basic idea is that since most pointers will be clustered together and point to objects allocated around the same time, you can store a compressed representation of the pointer and decompress it when needed. Some common ways this is done: Store an offset from a base pointer instead of the full pointer value Store increments/decrements from the previous pointer instead of the full value Use pointer tagging to store extra information in the low bits of the pointer Encode groups of pointers together The tradeoff is some extra CPU cost to decompress the pointers, versus saving memory. This technique is most useful in memory constrained environments.',
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -232,7 +231,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -244,7 +243,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'Shorten this selected text',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.SHORTEN,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: 'Pointer compression is a memory optimization technique where pointers are stored in a compressed format to save memory.',
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -256,11 +255,20 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
-    events: [getSearchStatusEvent(), getSearchEvent(['pointer compression', 'c++ language specification']), getCompletionEvent('Pointer compression is a memory optimization technique.')],
+    events: [
+      getSearchStatusEvent(),
+      getSearchEvent(['pointer compression', 'c++ language specification']),
+      getCompletionEvent('Pointer compression is a memory optimization technique.'),
+      getWebSourcesEvent([
+        { url: { url: 'https://www.example.com' }, title: 'Pointer Compression', faviconUrl: { url: 'https://www.example.com/favicon.ico' } },
+        { title: 'LTT Store', faviconUrl: { url: 'https://lttstore.com/favicon.ico' }, url: { url: 'https://lttstore.com' } },
+        { title: 'Tesla Model Y', faviconUrl: { url: 'https://www.tesla.com/favicon.ico' }, url: { url: 'https://www.tesla.com/modely' } }
+      ])
+    ],
     fromBraveSearchSERP: false
   },
   {
@@ -268,14 +276,14 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: 'Will an LTT store backpack fit in a Tesla Model Y frunk?',
     characterType: Mojom.CharacterType.HUMAN,
     actionType: Mojom.ActionType.SHORTEN,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: '',
     edits: [{
       uuid: undefined,
       text: 'Will it fit in a Tesla Model Y frunk?',
       characterType: Mojom.CharacterType.HUMAN,
       actionType: Mojom.ActionType.SHORTEN,
-      visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+      prompt: undefined,
       selectedText: '',
       createdTime: { internalValue: BigInt('13278618001000000') },
       edits: [],
@@ -291,7 +299,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     text: '',
     characterType: Mojom.CharacterType.ASSISTANT,
     actionType: Mojom.ActionType.UNSPECIFIED,
-    visibility: Mojom.ConversationTurnVisibility.VISIBLE,
+    prompt: undefined,
     selectedText: undefined,
     edits: [],
     createdTime: { internalValue: BigInt('13278618001000000') },
@@ -380,15 +388,14 @@ const SAMPLE_QUESTIONS = [
   'Why did google executives disregard this character in the company?'
 ]
 
-const SITE_INFO: Mojom.SiteInfo = {
-  uuid: undefined,
+const ASSOCIATED_CONTENT: Mojom.AssociatedContent = {
+  uuid: 'uuid',
   contentType: Mojom.ContentType.PageContent,
   title: 'Tiny Tweaks to Neurons Can Rewire Animal Motion',
   contentUsedPercentage: 40,
-  isContentAssociationPossible: true,
-  hostname: 'www.example.com',
   url: { url: 'https://www.example.com/a' },
   isContentRefined: false,
+  contentId: 1,
 }
 
 type CustomArgs = {
@@ -398,9 +405,10 @@ type CustomArgs = {
   inputText: string
   hasConversation: boolean
   editingConversationId: string | null
+  deletingConversationId: string | null
   visibleConversationListCount: number
   hasSuggestedQuestions: boolean
-  hasSiteInfo: boolean
+  hasAssociatedContent: boolean
   isFeedbackFormVisible: boolean
   isStorageNoticeDismissed: boolean
   canShowPremiumPrompt: boolean
@@ -417,6 +425,9 @@ type CustomArgs = {
   shouldShowLongConversationInfo: boolean
   shouldShowLongPageWarning: boolean
   shouldShowRefinedWarning: boolean
+  isGenerating: boolean
+  showAttachments: boolean
+  isNewConversation: boolean
 }
 
 const args: CustomArgs = {
@@ -425,8 +436,9 @@ const args: CustomArgs = {
   hasConversation: true,
   visibleConversationListCount: CONVERSATIONS.length,
   hasSuggestedQuestions: true,
-  hasSiteInfo: true,
+  hasAssociatedContent: true,
   editingConversationId: null,
+  deletingConversationId: null,
   isFeedbackFormVisible: false,
   isStorageNoticeDismissed: false,
   canShowPremiumPrompt: false,
@@ -445,6 +457,9 @@ const args: CustomArgs = {
   shouldShowLongConversationInfo: false,
   shouldShowLongPageWarning: false,
   shouldShowRefinedWarning: false,
+  isGenerating: false,
+  showAttachments: true,
+  isNewConversation: false,
 }
 
 const meta: Meta<CustomArgs> = {
@@ -468,6 +483,10 @@ const meta: Meta<CustomArgs> = {
     },
     visibleConversationListCount: {
       control: { type: 'number' }
+    },
+    deletingConversationId: {
+      options: CONVERSATIONS.map(conversation => conversation.uuid),
+      control: { type: 'select' }
     }
   },
   args,
@@ -476,23 +495,23 @@ const meta: Meta<CustomArgs> = {
       const [, setArgs] = useArgs()
       return (
         <StoryContext args={options.args} setArgs={setArgs}>
-          <Story/>
+          <Story />
         </StoryContext>
       )
     }
   ]
 }
 
-function StoryContext(props: React.PropsWithChildren<{args: CustomArgs, setArgs: (newArgs: Partial<CustomArgs>) => void}>) {
+function StoryContext(props: React.PropsWithChildren<{ args: CustomArgs, setArgs: (newArgs: Partial<CustomArgs>) => void }>) {
   const isSmall = useIsSmall()
 
   const options = { args: props.args }
   const { setArgs } = props
 
-  const siteInfo = options.args.hasSiteInfo ? SITE_INFO : new Mojom.SiteInfo()
+  const associatedContent = options.args.hasAssociatedContent ? ASSOCIATED_CONTENT : new Mojom.AssociatedContent()
   const suggestedQuestions = options.args.hasSuggestedQuestions
     ? SAMPLE_QUESTIONS
-    : siteInfo
+    : associatedContent
       ? [SAMPLE_QUESTIONS[0]]
       : []
 
@@ -522,6 +541,7 @@ function StoryContext(props: React.PropsWithChildren<{args: CustomArgs, setArgs:
     conversationEntriesComponent: StorybookConversationEntries,
     initialized: options.args.initialized,
     editingConversationId: options.args.editingConversationId,
+    deletingConversationId: options.args.deletingConversationId,
     visibleConversations,
     isStoragePrefEnabled: options.args.isStoragePrefEnabled,
     hasAcceptedAgreement: options.args.hasAcceptedAgreement,
@@ -534,37 +554,62 @@ function StoryContext(props: React.PropsWithChildren<{args: CustomArgs, setArgs:
     isHistoryFeatureEnabled: options.args.isHistoryEnabled,
     isStandalone: options.args.isStandalone,
     allActions: ACTIONS_LIST,
-    goPremium: () => {},
-    managePremium: () => {},
-    handleAgreeClick: () => {},
-    enableStoragePref: () => {},
-    dismissStorageNotice: () => {},
-    dismissPremiumPrompt: () => {},
-    userRefreshPremiumSession: () => {},
+    tabs: [{
+      id: 1,
+      contentId: 1,
+      url: { url: 'https://www.example.com' },
+      title: 'Example',
+    }, {
+      id: 2,
+      contentId: 2,
+      url: { url: 'https://topos.nz' },
+      title: 'NZ Topo',
+    }, {
+      id: 3,
+      contentId: 3,
+      url: { url: 'https://brave.com' },
+      title: 'Brave',
+    }, {
+      id: 4,
+      contentId: 4,
+      url: { url: 'https://search.brave.com' },
+      title: 'Brave Search',
+    }],
+    goPremium: () => { },
+    managePremium: () => { },
+    handleAgreeClick: () => { },
+    enableStoragePref: () => { },
+    dismissStorageNotice: () => { },
+    dismissPremiumPrompt: () => { },
+    userRefreshPremiumSession: () => { },
     setEditingConversationId: (id: string | null) => setArgs({ editingConversationId: id }),
+    setDeletingConversationId: (id: string | null) => setArgs({ deletingConversationId: id }),
     showSidebar: showSidebar,
     toggleSidebar: () => setShowSidebar(s => !s)
   }
 
   const activeChatContext: SelectedChatDetails = {
     selectedConversationId: CONVERSATIONS[0].uuid,
-    updateSelectedConversationId: () => {},
+    updateSelectedConversationId: () => { },
     callbackRouter: undefined!,
     conversationHandler: undefined!,
-    createNewConversation: () => {},
+    createNewConversation: () => { },
     isTabAssociated: options.args.isDefaultConversation
   }
 
   const inputText = options.args.inputText
 
   const conversationContext: ConversationContext = {
-    conversationUuid: CONVERSATIONS[1].uuid,
+    historyInitialized: true,
+    conversationUuid: options.args.isNewConversation
+      ? 'new-conversation'
+      : CONVERSATIONS[1].uuid,
     conversationHistory: options.args.hasConversation ? HISTORY : [],
-    associatedContentInfo: siteInfo,
+    associatedContentInfo: associatedContent,
     allModels: MODELS,
     currentModel,
     suggestedQuestions,
-    isGenerating: true,
+    isGenerating: options.args.isGenerating,
     suggestionStatus: Mojom.SuggestionGenerationStatus[options.args.suggestionStatus],
     currentError,
     apiHasError,
@@ -572,7 +617,7 @@ function StoryContext(props: React.PropsWithChildren<{args: CustomArgs, setArgs:
     shouldDisableUserInput: false,
     shouldShowLongPageWarning: options.args.shouldShowLongPageWarning,
     shouldShowLongConversationInfo: options.args.shouldShowLongConversationInfo,
-    shouldSendPageContents: siteInfo?.isContentAssociationPossible,
+    shouldSendPageContents: !!associatedContent,
     inputText,
     actionList: ACTIONS_LIST,
     selectedActionType: undefined,
@@ -582,19 +627,22 @@ function StoryContext(props: React.PropsWithChildren<{args: CustomArgs, setArgs:
     isCharLimitExceeded: inputText.length > 70,
     inputTextCharCountDisplay: `${inputText.length} / 70`,
     setInputText,
-    setCurrentModel: () => {},
+    setCurrentModel: () => { },
     switchToBasicModel,
-    generateSuggestedQuestions: () => {},
-    dismissLongConversationInfo: () => {},
-    updateShouldSendPageContents: () => {},
-    retryAPIRequest: () => {},
-    handleResetError: () => {},
-    submitInputTextToAPI: () => {},
-    resetSelectedActionType: () => {},
-    handleActionTypeClick: () => {},
-    setIsToolsMenuOpen: () => {},
-    handleFeedbackFormCancel: () => {},
-    handleFeedbackFormSubmit: () => {}
+    generateSuggestedQuestions: () => { },
+    dismissLongConversationInfo: () => { },
+    updateShouldSendPageContents: () => { },
+    retryAPIRequest: () => { },
+    handleResetError: () => { },
+    handleStopGenerating: async () => { },
+    submitInputTextToAPI: () => { },
+    resetSelectedActionType: () => { },
+    handleActionTypeClick: () => { },
+    setIsToolsMenuOpen: () => { },
+    handleFeedbackFormCancel: () => { },
+    handleFeedbackFormSubmit: () => { },
+    setShowAttachments: (show: boolean) => setArgs({ showAttachments: show }),
+    showAttachments: options.args.showAttachments,
   }
 
   const conversationEntriesContext: UntrustedConversationContext = {
@@ -635,6 +683,24 @@ export const _Panel: Story = {
   }
 }
 
+export const _Alerts = {
+  render: () => {
+    return (
+      <div className={`${styles.container} ${styles.containerAlerts}`}>
+        <ErrorConnection />
+        <ErrorConversationEnd />
+        <ErrorInvalidAPIKey />
+        <ErrorInvalidEndpointURL />
+        <ErrorRateLimit />
+        <ErrorRateLimit _testIsCurrentModelLeo={false} />
+        <ErrorServiceOverloaded />
+        <LongConversationInfo />
+        <WarningPremiumDisconnected />
+      </div>
+    )
+  }
+}
+
 export const _FeedbackForm = {
   render: () => {
     return (
@@ -654,6 +720,34 @@ export const _FullPage = {
     return (
       <div className={styles.containerFull}>
         <FullPage />
+      </div>
+    )
+  }
+}
+
+export const _NewFullpageConversation = {
+  args: {
+    isNewConversation: true,
+    isStandalone: true,
+    conversationUuid: undefined,
+    hasConversation: false,
+    hasSiteInfo: false,
+  },
+  render: () => {
+    return <div className={styles.container}>
+      <FullPage />
+    </div>
+  }
+}
+export const _AttachmentsPanel = {
+  args: {
+    isStandalone: true,
+    isDefaultConversation: false
+  },
+  render: () => {
+    return (
+      <div className={styles.container}>
+        <Attachments />
       </div>
     )
   }

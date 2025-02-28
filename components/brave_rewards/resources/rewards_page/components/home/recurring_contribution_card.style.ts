@@ -77,6 +77,7 @@ export const style = scoped.css`
     .amount {
       color: ${color.text.secondary};
       text-align: right;
+      text-wrap: nowrap;
     }
 
     .exchange-amount {
@@ -96,12 +97,6 @@ export const style = scoped.css`
       align-items: center;
       gap: 16px;
     }
-  }
-
-  .empty {
-    margin: 24px 0;
-    text-align: center;
-    color: ${color.text.secondary};
   }
 
   .show-all {

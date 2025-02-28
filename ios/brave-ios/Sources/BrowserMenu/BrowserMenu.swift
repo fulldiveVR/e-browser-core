@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveShared
 import BraveUI
 import DesignSystem
 import GuardianConnect
@@ -12,6 +13,7 @@ import SwiftUI
 public struct BrowserMenu: View {
   @ObservedObject var model: BrowserMenuModel
   var handlePresentation: (BrowserMenuPresentation) -> Void
+  var onShowAllActions: (() -> Void)?
 
   @State private var isEditMenuPresented = false
 
@@ -19,6 +21,7 @@ public struct BrowserMenu: View {
   /// available (such as when Display Zoom is enabled)
   @State private var isHorizontalSpaceRestricted: Bool = false
   @State private var activeActionHandlers: [Action.ID: Task<Void, Never>] = [:]
+  @State private var isAdditionalActionsVisible: Bool = false
 
   @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
@@ -112,6 +115,7 @@ public struct BrowserMenu: View {
         ActionsList(
           actions: listedActions,
           additionalActions: $model.hiddenActions,
+          isAdditionalActionsVisible: $isAdditionalActionsVisible,
           handler: { $action in
             handleAction($action)
           }
@@ -149,10 +153,28 @@ public struct BrowserMenu: View {
     }
     .background(Material.thick)
     .dynamicTypeSize(DynamicTypeSize.xSmall..<DynamicTypeSize.accessibility3)
-    // Not sure if this is needed
-    // .background(Color(braveSystemName: .materialThick))
-    .sheet(isPresented: $isEditMenuPresented) {
-      CustomizeMenuView(model: model)
+    .osAvailabilityModifiers { content in
+      // "Designed for iPad" VisionOS - FB16385402
+      //
+      // There is a bug unfortunately on "Designed for iPad" VisionOS apps in SwiftUI where a
+      // sheet presented on top of a popover will dismiss the popover before presenting the sheet
+      // (thus then dismissing the sheet since the underlying State/View hierarchy will dealloc)
+      //
+      // As a workaround, VisionOS will present a popover for the edit menu. The fixed frame
+      // is fine because iPad apps running on VisionOS have a fixed size (in both portrait and
+      // landscape forced orientations)
+      if ProcessInfo.processInfo.isiOSAppOnVisionOS {
+        content
+          .popover(isPresented: $isEditMenuPresented) {
+            CustomizeMenuView(model: model)
+              .frame(width: 600, height: 600)
+          }
+      } else {
+        content
+          .sheet(isPresented: $isEditMenuPresented) {
+            CustomizeMenuView(model: model)
+          }
+      }
     }
     .onGeometryChange(
       for: Bool.self,
@@ -161,6 +183,11 @@ public struct BrowserMenu: View {
         isHorizontalSpaceRestricted = newValue
       }
     )
+    .onChange(of: isAdditionalActionsVisible) { newValue in
+      if newValue {
+        onShowAllActions?()
+      }
+    }
   }
 }
 
@@ -229,9 +256,11 @@ private struct QuickActionsView: View {
               body: { _, state, _ in state = true }
             )
           )
-          .onTapGesture {
-            configuration.trigger()
-          }
+          .simultaneousGesture(
+            TapGesture().onEnded {
+              configuration.trigger()
+            }
+          )
           .labelStyle(_LabelStyle(isPressed: isPressed, traits: traits))
           .animation(isPressed ? nil : .default, value: isPressed)
       }
@@ -262,7 +291,15 @@ private struct QuickActionsView: View {
           .frame(width: iconFrameSize, height: iconFrameSize)
           .padding(.vertical, 12)
           .font(.system(size: iconFontSize))
-          .foregroundStyle(isEnabled ? Color(braveSystemName: .iconDefault) : .secondary)
+          .foregroundStyle(
+            isEnabled
+              ? Color(braveSystemName: .iconDefault)
+              // There's a SwiftUI bug on iPads where the items don't animate correctly due to using
+              // material hierarchical foreground styles so for this we fall back to the design
+              // system colors. This is also applied to the menu row label styles.
+              : (UIDevice.current.userInterfaceIdiom == .pad
+                ? Color(braveSystemName: .iconSecondary) : .secondary)
+          )
           .frame(maxWidth: .infinity)
           .background {
             Color(braveSystemName: .iosBrowserContainerHighlightIos)
@@ -283,7 +320,12 @@ private struct QuickActionsView: View {
         configuration.title
           .font(.caption2)
           .lineLimit(2)
-          .foregroundStyle(isEnabled ? Color(braveSystemName: .textPrimary) : .secondary)
+          .foregroundStyle(
+            isEnabled
+              ? Color(braveSystemName: .textPrimary)
+              : (UIDevice.current.userInterfaceIdiom == .pad
+                ? Color(braveSystemName: .textSecondary) : .secondary)
+          )
           .multilineTextAlignment(.center)
       }
       .opacity(isEnabled ? 1 : 0.7)
@@ -332,15 +374,18 @@ private struct ActionButton: View {
 private struct ActionsList: View {
   @Binding var actions: [Action]
   @Binding var additionalActions: [Action]
+  @Binding var isAdditionalActionsVisible: Bool
   var handler: (Binding<Action>) -> Void
 
   init(
     actions: Binding<[Action]>,
     additionalActions: Binding<[Action]>,
+    isAdditionalActionsVisible: Binding<Bool>,
     handler: @escaping (Binding<Action>) -> Void
   ) {
     self._actions = actions
     self._additionalActions = additionalActions
+    self._isAdditionalActionsVisible = isAdditionalActionsVisible
     self.handler = handler
   }
 
@@ -350,12 +395,12 @@ private struct ActionsList: View {
   ) {
     self._actions = .constant([action])
     self._additionalActions = .constant([])
+    self._isAdditionalActionsVisible = .constant(false)
     self.handler = { action in
       handler(action.wrappedValue)
     }
   }
 
-  @State private var isAdditionalActionsVisible: Bool = false
   @Environment(\.pixelLength) private var pixelLength
   @ScaledMetric private var badgeRadius = 8
 
@@ -458,9 +503,11 @@ private struct MenuRowButtonStyleModifier: ViewModifier {
             body: { _, state, _ in state = true }
           )
         )
-        .onTapGesture {
-          configuration.trigger()
-        }
+        .simultaneousGesture(
+          TapGesture().onEnded {
+            configuration.trigger()
+          }
+        )
         .hoverEffect()
         .background(
           Color(braveSystemName: .iosBrowserContainerHighlightIos).opacity(isPressed ? 1 : 0)
@@ -497,10 +544,20 @@ private struct MenuRowButtonStyleModifier: ViewModifier {
         configuration.icon
           .frame(width: iconFrameSize, height: iconFrameSize)
           .font(.system(size: iconFontSize))
-          .foregroundStyle(isEnabled ? Color(braveSystemName: .iconDefault) : .secondary)
+          .foregroundStyle(
+            isEnabled
+              ? Color(braveSystemName: .iconDefault)
+              : (UIDevice.current.userInterfaceIdiom == .pad
+                ? Color(braveSystemName: .iconSecondary) : .secondary)
+          )
         configuration.title
           .font(.body)
-          .foregroundStyle(isEnabled ? Color(braveSystemName: .textPrimary) : .secondary)
+          .foregroundStyle(
+            isEnabled
+              ? Color(braveSystemName: .textPrimary)
+              : (UIDevice.current.userInterfaceIdiom == .pad
+                ? Color(braveSystemName: .textSecondary) : .secondary)
+          )
       }
       .padding(.vertical, 12)
       .opacity(isEnabled ? 1 : 0.7)

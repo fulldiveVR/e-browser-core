@@ -16,7 +16,7 @@ namespace ai_chat::prefs {
 void RegisterProfilePrefs(PrefRegistrySimple* registry) {
   if (ai_chat::features::IsAIChatEnabled()) {
     registry->RegisterTimePref(kLastAcceptedDisclaimer, {});
-    registry->RegisterBooleanPref(kStorageEnabled, true);
+    registry->RegisterBooleanPref(kBraveChatStorageEnabled, true);
     registry->RegisterBooleanPref(kBraveChatAutocompleteProviderEnabled, true);
     registry->RegisterBooleanPref(kUserDismissedPremiumPrompt, false);
     registry->RegisterBooleanPref(kUserDismissedStorageNotice, false);
@@ -26,6 +26,8 @@ void RegisterProfilePrefs(PrefRegistrySimple* registry) {
     registry->RegisterStringPref(kBraveChatPackageNameAndroid, "");
     registry->RegisterStringPref(kBraveChatProductIdAndroid, "");
     registry->RegisterStringPref(kBraveChatOrderIdAndroid, "");
+    // 0 is not linked
+    registry->RegisterIntegerPref(kBraveChatSubscriptionLinkStatusAndroid, 0);
 #endif
     registry->RegisterBooleanPref(kBraveAIChatContextMenuEnabled, true);
     registry->RegisterBooleanPref(kBraveAIChatShowToolbarButton, true);

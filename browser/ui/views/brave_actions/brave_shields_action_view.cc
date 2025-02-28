@@ -253,7 +253,8 @@ bool BraveShieldsActionView::ShouldShowBubble(
   if (url.SchemeIs(url::kAboutScheme) || url.SchemeIs(url::kBlobScheme) ||
       url.SchemeIs(url::kDataScheme) || url.SchemeIs(url::kFileSystemScheme) ||
       url.SchemeIs(kMagnetScheme) || url.SchemeIs(kBraveUIScheme) ||
-      url.SchemeIs(content::kChromeUIScheme)) {
+      url.SchemeIs(content::kChromeUIScheme) ||
+      url.SchemeIs(extensions::kExtensionScheme)) {
     // Do not show bubble if it's a local scheme
     return false;
   }
@@ -274,7 +275,7 @@ BraveShieldsActionView::CreateDefaultBorder() const {
   return border;
 }
 
-std::u16string BraveShieldsActionView::GetTooltipText(
+std::u16string BraveShieldsActionView::GetRenderedTooltipText(
     const gfx::Point& p) const {
   auto* web_contents = tab_strip_model_->GetActiveWebContents();
 

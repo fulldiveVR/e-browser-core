@@ -65,6 +65,7 @@ program
   .option('--target_arch <target_arch>', 'target architecture')
   .option('--target_android_base <target_android_base>', 'target Android OS apk (classic, modern, mono)', 'classic')
   .option('--target_environment <target_environment>', 'target environment (device, catalyst, simulator)')
+  .option('--checkdeps_only', 'only run checkdeps')
   .arguments('[build_config]')
   .action(gnCheck)
 
@@ -188,15 +189,19 @@ program
 
 program
   .command('pull_l10n')
+  .option('--service <service>', 'Service to use: Transifex or Crowdin')
+  .option('--channel <channel>', 'Release|Beta|Nightly for Crowdin, Release for Transifex')
   .option('--grd_path <grd_path>', `Relative path to match end of full GRD path, e.g: 'generated_resources.grd'.`)
-  .option('--debug', `Dumps downloaded content for one language into TransifexCurrent.txt file in the temp directory.`)
+  .option('--debug', `Dumps downloaded content for one language into TransifexCurrent.txt or CrowdinCurrent.txt file in the temp directory.`)
   .action(pullL10n)
 
 program
   .command('push_l10n')
+  .option('--service <service>', 'Service to use: Transifex or Crowdin')
+  .option('--channel <channel>', 'Release|Beta|Nightly for Crowdin, Release for Transifex')
   .option('--grd_path <grd_path>', `Relative path to match end of full GRD path, e.g: 'generated_resources.grd'.`)
-  .option('--with_translations', 'Push local translations. WARNING: this will overwrite translations in Tansifex.')
-  .option('--with_missing_translations', 'Push local translations for strings that do not have translations in Transifex.')
+  .option('--with_translations', 'Push local translations. WARNING: this will overwrite translations in Transifex/Crowdin.')
+  .option('--with_missing_translations', 'Push local translations for strings that do not have translations in Transifex/Crowdin.')
   .action(pushL10n)
 
 program

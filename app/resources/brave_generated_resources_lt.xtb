@@ -114,7 +114,7 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="2370739752330685659">Gal vėliau</translation>
 <translation id="5100490448228945668">Atmesti „Brave“ paieškos konversiją; paspauskite „Enter“, kad šis pasiūlymas būtų pašalintas</translation>
 <translation id="6213208892248046484">Perjungti į „Brave“ Paiešką</translation>
-<translation id="9194637241566114638">Padėkite tobulinti <ph name="SEARCH_NAME"/> siųsdami anoniminius naudojimo duomenis  <ph name="MORE_INFO"/></translation>
+<translation id="9194637241566114638">Padėkite tobulinti <ph name="SEARCH_NAME"/> siųsdami anoniminius naudojimo duomenis <ph name="MORE_INFO"/></translation>
 <translation id="7404610376221341525">„Brave“ paieška</translation>
 <translation id="8184318863960255706">Daugiau informacijos</translation>
 <translation id="780301667611848630">Ačiū, ne</translation>
@@ -124,7 +124,6 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="6020553119523541665">Šis skirtukas yra aktyvus kitame lange</translation>
 <translation id="4987392683074136770">Spustelėjus šį skirtuką, jo turinys bus perkeltas į šį langą.</translation>
 <translation id="8355523213948477234">Padalyto rodinio meniu mygtukas</translation>
-<translation id="2515126961943087659">„Bat Ads“ paslauga</translation>
 <translation id="2104347391516032700">BAT atlygių paslauga</translation>
 <translation id="6040143037577758943">Uždaryti</translation>
 <translation id="6665472986740899785">„Brave“ reklamos pranešimas</translation>
@@ -132,6 +131,8 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="4364336119478610380">Jūs uždirbate, kai ekrane pasirodo toks pranešimas. Jums nereikia spustelėti, kad uždirbtumėte.</translation>
 <translation id="5893017172751072752">Jūs uždirbate kai pasirodo „Brave“ reklamos pranešimas</translation>
 <translation id="3447730462826640312">Jums nereikia spustelėti, kad uždirbtumėte, bet spustelėkite, jei jus tai domina!</translation>
+<translation id="5253166205743627564">Ačiū, kad remiate „Brave“ paiešką paspaudę privačią reklamą. Skirtingai nei technologijų milžinės, reklamų efektyvumą vertiname anonimiškai saugodami jūsų privatumą.</translation>
+<translation id="8748471354357836070">Sužinokite daugiau / atsisakymo parinktys</translation>
 <translation id="4174337572777167894">Žiniatinklio pažinimo projektas</translation>
 <translation id="8659271182272561965">Prisidėkite anonimiškais paieškos ir naršymo duomenimis bei padėkite patikslinti „Brave“ paieškos rezultatus.</translation>
 <translation id="1516554614404600536">„Brave“ patarimas apie įrankį</translation>
@@ -245,6 +246,8 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="2307973900865360088">Prisegti prie „Dock“ juostos</translation>
 <translation id="961012016278832836">„Microsoft Edge Legacy“</translation>
 <translation id="6436994631426134065">Importuota iš <ph name="BROWSER_NAME"/>.</translation>
+<translation id="5119173345047096771">„Mozilla Firefox“</translation>
+<translation id="6374077068638737855">„Iceweasel“</translation>
 <translation id="1386966479075994683">Išplėsti skirtukus</translation>
 <translation id="480565261566115689">Suskliausti skirtukus</translation>
 <translation id="7194343495483122559">Išplėsti skirtukus</translation>
@@ -307,11 +310,11 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="6155018868740116868">Atkurti</translation>
 <translation id="2521960050170773751">Pridėti mediją iš puslapio</translation>
 <translation id="2301087142998134097"><ph name="SITE"/> nori atsiverti</translation>
-<translation id="7128982309566342232">Įterptas puslapis <ph name="SITE"/> nori atsiverti</translation>
+<translation id="4828353184750597953">Norima atidaryti įterptąjį puslapį adresu <ph name="SITE"/></translation>
 <translation id="1175012181261953767">Šis puslapis nori atsiverti</translation>
 <translation id="7459546222322124545">Įterptas puslapis nori atsiverti šiame puslapyje</translation>
 <translation id="5836261838911560851"><ph name="SITE"/> nori įrašyti</translation>
-<translation id="5936788906460687941">Įterptas puslapis<ph name="SITE"/> nori įrašyti</translation>
+<translation id="8813509417421129632">Norima įrašyti įterptąjį puslapį adresu <ph name="SITE"/></translation>
 <translation id="7700010743463174379">Šis puslapis nori įrašyti</translation>
 <translation id="6774238875569752630">Įterptas puslapis nori įrašyti šiame puslapyje</translation>
 <translation id="9156965752763025780">Pakeitimai įsigalios kitą kartą iš naujo paleidus „Brave“.</translation>
@@ -436,6 +439,17 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="3422250445565385437">Sąrašai atnaujinami</translation>
 <translation id="1340263054776016283">Įvesti filtrų sąrašo URL</translation>
 <translation id="8578397014396032341">Turinio filtrai</translation>
+<translation id="6655190889273724601">Kūrėjo režimas</translation>
+<translation id="5289798532644323389">Leisti pridėti tinkintus filtrus ir scenarijus</translation>
+<translation id="9202707370720720635">Tinkinti scenarijai</translation>
+<translation id="5524306331330789642">Pridėti naują scenarijų</translation>
+<translation id="3865146371459790194">Redaguoti scenarijų</translation>
+<translation id="5327248766486351172">Pavadinimas</translation>
+<translation id="5584409054843451563">Ar tikrai norite ištrinti šį scenarijų? Jei šis scenarijus naudojamas kuriame nors tinkintame filtre, jis nebeveiks.</translation>
+<translation id="4545850500562727184">Scenarijus jau yra.</translation>
+<translation id="4877521822848390663">Netinkamas scenarijaus pavadinimas.</translation>
+<translation id="2718718846210516552">Scenarijus nerastas.</translation>
+<translation id="4088315951291671239">Neįklijuokite čia kodo, kurio nesuprantate ar neperžiūrėjote patys. Taip užpuolikai gali pavogti jūsų tapatybę arba perimti jūsų kompiuterio valdymą.</translation>
 <translation id="3020183492814296499">Spartieji klavišai</translation>
 <translation id="5567412479632285879">„Brave Rewards“ išjungta</translation>
 <translation id="413570371620795359">Atverkite skyrių „Rewards“, kad įjungtumėte ir pradėtumėte naudoti</translation>
@@ -505,7 +519,6 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="5794692721727586076">„Leo“ DI pokalbis</translation>
 <translation id="8115153008662981040">Interneto svetainės gali paprašyti atverti „Leo“ DI pokalbį</translation>
 <translation id="1145070115730668595">Neleisti interneto svetainei atverti „Leo“ DI pokalbio</translation>
-<translation id="6414370348346025511">Įjungta standartinė apsauga.</translation>
 <translation id="5565355416171743213">Pradėti naudotis sinchronizavimu</translation>
 <translation id="4332558599726753990">Sinchronizavimo konfigūravimas</translation>
 <translation id="2187778349654214731">Pradžiai reikės įdiegti „Brave“ į visus prietaisus, kuriuos norėsite sinchronizuoti. Tada saugiai juos susiekite naudodami sinchronizavimo kodą.</translation>
@@ -573,12 +586,15 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="4094590686212463338">Prie šios sinchronizavimo grandinės prisijungti nepavyko. Sinchronizavimo grandinė buvo ištrinta.</translation>
 <translation id="4908081302669157000">Telefono numeriai, el. pašto adresai ir adresai</translation>
 <translation id="294985549514492876">Saityno programos (PWA)</translation>
+<translation id="7029809446516969842">Slaptažodžiai</translation>
 <translation id="924029461438529367">Rodyti paieškos pasiūlymus</translation>
 <translation id="3128251601544028053">Užklausa, kurią įvedate adreso juostoje arba paieškos lauke, įrašytą informaciją „Brave“ perduoda numatytajai paieškos sistemai, kad gautų geresnių pasiūlymų. Ši funkcija išjungta naršant privačiuoju režimu.</translation>
 <translation id="6285118765755298263">Indeksuoti kitus ieškos modulius</translation>
 <translation id="919715748352669592">Automatiškai indeksuoja svetaines, kurios atitinka „OpenSearch“ specifikaciją.</translation>
-<translation id="9195748375338942941">Įprastinis langas – paieškos sistema naudojama adreso juostoje.</translation>
-<translation id="5324939009884545145">Privatus langas – paieškos sistema naudojama adreso juostoje</translation>
+<translation id="5522403133543437426">Paieškos sistema naudojama adreso juostoje.</translation>
+<translation id="280472502078788655">Paieškos sistema naudojama inkognito langų adreso juostoje.</translation>
+<translation id="7232120595886556478">Įprastas langas</translation>
+<translation id="1280261732441045146"><ph name="SEARCH_ENGINE_NAME"/> dabar yra jūsų numatytoji inkognito langų paieškos sitema</translation>
 <translation id="6864914031231797928">Leisti „Google“ prisijungti prie plėtinių</translation>
 <translation id="7878791177459550035">Medijos maršrutizatorius naršyklėje įgalina perdavimo funkciją.</translation>
 <translation id="2707635989000984973">Surasti „Unstoppable Domains“ domeną</translation>
@@ -694,13 +710,12 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="8055509865174199683">Rodyti „Leo“ svetainių kontekstiniame meniu</translation>
 <translation id="1529674267267221673">„Leo“ bus rodoma kontekstiniame meniu, kai svetainėje spustelėsite dešiniu pelės klavišu. Tai nusiųs kontekstą iš dabartinio tinklalapio į „Leo“.</translation>
 <translation id="8172263161008556851">Rodyti pranešimų siūlymus pokalbyje</translation>
-<translation id="1014480593522400586">Išvalyti „Leo“ duomenis</translation>
-<translation id="6803758564561896401">Iš naujo nustatę „Leo“ asistentą, ateityje turėsite prisijungti prie „Brave
-Leo“, taip pat bus išvalyta jūsų pokalbių istorija. Kai pašalinsite savo
-pokalbių istoriją, bus pašalinti visi ankstesni jūsų pokalbiai su „Brave
-Leo“. Šio veiksmo atšaukti negalima.</translation>
+<translation id="5781842473834867765">Saugoti mano pokalbių istoriją</translation>
+<translation id="1082960401708055995">Išjungus pokalbių saugojimą, visi anksčiau išsaugoti pokalbiai bus ištrinti visam laikui. Šio veiksmo atšaukti negalima.</translation>
+<translation id="6106701981952170121">Ištrinkite visus „Leo“ DI pokalbių duomenis</translation>
+<translation id="1335414530428321716">Iš naujo nustatę „Leo“ DI, ateityje turėsite prisijungti prie „Brave Leo“ DI, taip pat bus išvalyta jūsų pokalbių istorija. Išvalius pokalbių istoriją bus ištrinti visi ankstesni jūsų pokalbiai su „Brave Leo“ DI. Šio veiksmo atšaukti negalima.</translation>
 <translation id="5574059574002819179">Koreguoti automatinio užbaigimo pasiūlymus</translation>
-<translation id="8157373421434119674">Duomenų ir pokalbių istorija</translation>
+<translation id="7942415993090181327">Pokalbių istorija</translation>
 <translation id="614530507403667291">Numatytasis naujų pokalbių modelis</translation>
 <translation id="8826914609353373601">Tvarkykite premium prenumeratą</translation>
 <translation id="235457946228076038">Atsineškite savo modelį</translation>
@@ -713,17 +728,26 @@ Leo“. Šio veiksmo atšaukti negalima.</translation>
 <translation id="6374563306438145841">API raktas</translation>
 <translation id="8008271349880309090">Modelio pavadinimas, kuris bus rodomas modelio pasirinkimo meniu</translation>
 <translation id="1355326130503900056">Modelio pavadinimas, kaip jis turėtų būti rodomas užklausoje aptarnaujančiai sistemai, t. y. phi-3 (atminkite: jei šis pavadinimas nesutampa su pavadinimu, kurio tikisi aptarnaujanti sistema, integracija neveiks)</translation>
-<translation id="3286410514484292784">URL, kuriame jūsų aptarnaujanti sistema klausosi užklausų. Jei nesate tikri, patikrinkite aptarnaujančios sistemos dokumentaciją. Pavyzdžiui, „Ollama“ atveju tai visada yra http://localhost:11434/v1/chat/completions.</translation>
+<translation id="3213787232304349732">URL, kuriame jūsų aptarnaujanti sistema klausosi užklausų. Jei nesate tikri, patikrinkite aptarnaujančios sistemos dokumentaciją. Pavyzdžiui, „Ollama“ atveju tai visada yra http://localhost:11434/v1/chat/completions</translation>
 <translation id="1058790648388035953">Kai kurios aptarnaujančios sistemos gali reikalauti autentifikavimo duomenų, pavyzdžiui, API rakto arba prieigos žetono. Jie bus įtraukti į užklausos antraštę.</translation>
+<translation id="4335128003329183586">Konteksto dydis</translation>
+<translation id="8794525422794607973">Didžiausias žetonų skaičius, kurį modelis gali apdoroti per vieną sąveiką. Kiekvieną žetoną sudaro maždaug 3/4 žodžio. Daugiau konteksto leidžia modeliui apdoroti ilgesnius pokalbius. Skirtingi modeliai palaiko skirtingus didžiausius konteksto dydžius.</translation>
 <translation id="217141195370578385">„Brave“ nepatvirtina šių prašymų, perskaitykite pasirinkto paslaugų teikėjo privatumo sąlygas.</translation>
 <translation id="2645532768679870478">Saugiam duomenų perdavimui ne vietiniuose galiniuose taškuose turėtų būti naudojamas HTTPS protokolas.</translation>
 <translation id="8177205483022887785">Įvedėte netinkamą URL adresą. Įveskite tinkamą URL adresą.</translation>
+<translation id="6333402912272476257">Šis galinis taškas galimai nesaugus.</translation>
+<translation id="4025470490371933693">Privatūs IP neleidžiami</translation>
+<translation id="3670571614478401810">Atrodo, kad įvestas adresas yra iš privataus tinklo, pvz., maršrutizatoriaus arba vietinio serverio. „Brave“ juos blokuoja automatiškai, kad užtikrintų jūsų saugumą, bet galite įjungti, jei esate tikri, kad saugu.</translation>
+<translation id="4932437543207655965">Norėdami tęsti, eikite į brave://flags/, ieškokite „brave-ai-chat-allow-private-ips“ ir įjunkite šią funkciją. Įjungę galėsite galėsite naudoti privačius tinklo adresus „Leo“ nustatymuose.</translation>
 <translation id="5249539665306267943">Pridėti naują modelį</translation>
 <translation id="7265212806651512211">Dar neprijungėte modelio.</translation>
 <translation id="7304802428852949897">Jūsų modeliai</translation>
 <translation id="7435587476558117990">Prisijunkite savo arba trečiosios šalies prieglobos LLM prie „Leo“ ir naudokite jas naršyklėje.</translation>
 <translation id="1381050642750209119">Naudokite bet kurią su „OpenAI“ pokalbių protokolu suderinamą sistemą, pavyzdžiui, „Ollama“.</translation>
 <translation id="2642905648178380593">Įrašyti modelį</translation>
+<translation id="6304169450064541679">Sistemos raginimas</translation>
+<translation id="3081947790648024460">Asmeninės instrukcijos ir (arba) kontekstas, pateikiamas modeliui, kad jo atsakymai būtų nukreipti tam tikra linkme ar stiliumi. Vietoje, kurioje norite įterpti dabartinę datą ir laiką, naudokite %datetime%.</translation>
+<translation id="5688878061573389791">≈<ph name="TOKENS_COUNT"/> žetonai</translation>
 <translation id="349846214503465941">Įjungti grojaraštį</translation>
 <translation id="7903608716704052878">Automatiškai pridėti failus, kad būtų galima peržiūrėti neprisijungus</translation>
 <translation id="4193768184502613558">Pasirinkus šią parinktį, medijos failai automatiškai padedami į atmintinę, tad galite juos leisti neprisijungę prie interneto.</translation>

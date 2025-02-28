@@ -12,8 +12,8 @@
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "brave/browser/ui/tabs/split_view_browser_data_observer.h"
 #include "chrome/browser/ui/tabs/tab_style.h"
+#include "chrome/browser/ui/views/tabs/dragging/tab_drag_context.h"
 #include "chrome/browser/ui/views/tabs/tab_container_impl.h"
-#include "chrome/browser/ui/views/tabs/tab_drag_context.h"
 #include "ui/gfx/canvas.h"
 
 class BraveTabContainer : public TabContainerImpl,
@@ -61,6 +61,7 @@ class BraveTabContainer : public TabContainerImpl,
   // SplitViewBrowserDataObserver:
   void OnTileTabs(const TabTile& tile) override;
   void OnDidBreakTile(const TabTile& tile) override;
+  void OnSwapTabsInTile(const TabTile& tile) override;
 
  private:
   class DropArrow : public views::WidgetObserver {
@@ -120,6 +121,9 @@ class BraveTabContainer : public TabContainerImpl,
                           bool drop_before,
                           bool drop_in_group,
                           bool* is_beneath);
+
+  bool IsPinnedTabContainer() const;
+  void UpdateTabsBorderInTile(const TabTile& tile);
 
   base::flat_set<Tab*> closing_tabs_;
 

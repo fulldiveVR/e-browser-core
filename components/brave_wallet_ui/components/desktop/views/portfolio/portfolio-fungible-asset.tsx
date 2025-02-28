@@ -36,16 +36,17 @@ import {
 } from '../../../../utils/pricing-utils'
 import { networkSupportsAccount } from '../../../../utils/network-utils'
 import {
-  auroraSupportedContractAddresses,
-  getAssetIdKey
+  getAssetIdKey,
+  getDoesCoinSupportSwapOrBridge
 } from '../../../../utils/asset-utils'
 import { getLocale } from '../../../../../common/locale'
 import { makeNetworkAsset } from '../../../../options/asset-options'
 import { isRewardsAssetId } from '../../../../utils/rewards_utils'
 import {
-  makeAndroidFundWalletRoute,
   makeDepositFundsRoute,
-  makeFundWalletRoute
+  makeFundWalletRoute,
+  makeSendRoute,
+  makeSwapOrBridgeRoute
 } from '../../../../utils/routes-utils'
 import {
   getStoredPortfolioTimeframe //
@@ -62,11 +63,11 @@ import {
   AccountsAndTransactionsList //
 } from './components/accounts-and-transctions-list'
 import {
-  BridgeToAuroraModal //
-} from '../../popup-modals/bridge-to-aurora-modal/bridge-to-aurora-modal'
-import {
   EditTokenModal //
 } from '../../popup-modals/edit_token_modal/edit_token_modal'
+import {
+  PortfolioAssetActionButton //
+} from './components/portfolio_asset_action_button/portfolio_asset_action_button'
 
 // Hooks
 import {
@@ -93,7 +94,7 @@ import {
 
 // Styled Components
 import { StyledWrapper, ButtonRow } from './style'
-import { Row, Column, LeoSquaredButton } from '../../../shared/style'
+import { Row, Column } from '../../../shared/style'
 import {
   TokenDetailsModal //
 } from './components/token-details-modal/token-details-modal'
@@ -106,17 +107,10 @@ import {
 } from '../../wallet-page-wrapper/wallet-page-wrapper'
 import { AssetDetailsHeader } from '../../card-headers/asset-details-header'
 
-const rainbowbridgeLink = 'https://rainbowbridge.app'
-const bridgeToAuroraDontShowAgainKey = 'bridgeToAuroraDontShowAgain'
-
 const emptyPriceList: TokenPriceHistory[] = []
 
 export const PortfolioFungibleAsset = () => {
   // state
-  const [showBridgeToAuroraModal, setShowBridgeToAuroraModal] =
-    React.useState<boolean>(false)
-  const [dontShowAuroraWarning, setDontShowAuroraWarning] =
-    React.useState<boolean>(false)
   const [showTokenDetailsModal, setShowTokenDetailsModal] =
     React.useState<boolean>(false)
   const [showHideTokenModel, setShowHideTokenModal] =
@@ -223,7 +217,7 @@ export const PortfolioFungibleAsset = () => {
   )
 
   // custom hooks
-  const { foundAndroidBuyToken, foundMeldBuyToken } = useFindBuySupportedToken(
+  const { foundMeldBuyToken } = useFindBuySupportedToken(
     selectedAssetFromParams
   )
 
@@ -262,19 +256,9 @@ export const PortfolioFungibleAsset = () => {
       : skipToken,
     querySubscriptionOptions60s
   )
-
-  const isSelectedAssetBridgeSupported = React.useMemo(() => {
-    if (!selectedAssetFromParams) return false
-    const isBridgeAddress = auroraSupportedContractAddresses.includes(
-      selectedAssetFromParams.contractAddress.toLowerCase()
-    )
-    const isNativeAsset = selectedAssetFromParams.contractAddress === ''
-
-    return (
-      (isBridgeAddress || isNativeAsset) &&
-      selectedAssetFromParams.chainId === BraveWallet.MAINNET_CHAIN_ID
-    )
-  }, [selectedAssetFromParams])
+  const isSwapOrBridgeSupported =
+    selectedAssetFromParams &&
+    getDoesCoinSupportSwapOrBridge(selectedAssetFromParams.coin)
 
   const selectedAssetTransactions = React.useMemo(() => {
     const nativeAsset = makeNetworkAsset(selectedAssetsNetwork)
@@ -351,35 +335,6 @@ export const PortfolioFungibleAsset = () => {
     history.push(WalletRoutes.PortfolioAssets)
   }, [dispatch, history])
 
-  const onOpenRainbowAppClick = React.useCallback(() => {
-    chrome.tabs.create({ url: rainbowbridgeLink }, () => {
-      if (chrome.runtime.lastError) {
-        console.error('tabs.create failed: ' + chrome.runtime.lastError.message)
-      }
-    })
-    setShowBridgeToAuroraModal(false)
-  }, [])
-
-  const onBridgeToAuroraButton = React.useCallback(() => {
-    if (dontShowAuroraWarning) {
-      onOpenRainbowAppClick()
-    } else {
-      setShowBridgeToAuroraModal(true)
-    }
-  }, [dontShowAuroraWarning, onOpenRainbowAppClick])
-
-  const onDontShowAgain = React.useCallback((selected: boolean) => {
-    setDontShowAuroraWarning(selected)
-    localStorage.setItem(
-      bridgeToAuroraDontShowAgainKey,
-      JSON.stringify(selected)
-    )
-  }, [])
-
-  const onCloseAuroraModal = React.useCallback(() => {
-    setShowBridgeToAuroraModal(false)
-  }, [])
-
   const onCloseTokenDetailsModal = React.useCallback(
     () => setShowTokenDetailsModal(false),
     []
@@ -409,24 +364,13 @@ export const PortfolioFungibleAsset = () => {
     updateUserAssetVisible
   ])
 
-  const onSelectBuy = React.useCallback(() => {
-    if (foundAndroidBuyToken && selectedAssetFromParams) {
-      history.push(
-        makeAndroidFundWalletRoute(getAssetIdKey(selectedAssetFromParams))
-      )
-      return
-    }
+  const onClickBuy = React.useCallback(() => {
     if (foundMeldBuyToken) {
       history.push(makeFundWalletRoute(foundMeldBuyToken))
     }
-  }, [
-    history,
-    foundAndroidBuyToken,
-    foundMeldBuyToken,
-    selectedAssetFromParams
-  ])
+  }, [history, foundMeldBuyToken])
 
-  const onSelectDeposit = React.useCallback(() => {
+  const onClickDeposit = React.useCallback(() => {
     if (selectedAssetFromParams) {
       history.push(
         makeDepositFundsRoute(getAssetIdKey(selectedAssetFromParams))
@@ -434,13 +378,25 @@ export const PortfolioFungibleAsset = () => {
     }
   }, [history, selectedAssetFromParams])
 
-  React.useEffect(() => {
-    setDontShowAuroraWarning(
-      JSON.parse(
-        localStorage.getItem(bridgeToAuroraDontShowAgainKey) || 'false'
-      )
-    )
-  }, [])
+  const onClickSend = React.useCallback(() => {
+    if (selectedAssetFromParams) {
+      history.push(makeSendRoute(selectedAssetFromParams))
+    }
+  }, [history, selectedAssetFromParams])
+
+  const onClickSwapOrBridge = React.useCallback(
+    (routeType: 'swap' | 'bridge') => {
+      if (selectedAssetFromParams) {
+        history.push(
+          makeSwapOrBridgeRoute({
+            fromToken: selectedAssetFromParams,
+            routeType
+          })
+        )
+      }
+    },
+    [history, selectedAssetFromParams]
+  )
 
   // asset not found
   if (!selectedAssetFromParams && !isLoadingRewards && !isLoadingTokens) {
@@ -501,38 +457,41 @@ export const PortfolioFungibleAsset = () => {
         />
         <Row padding='0px 20px'>
           <ButtonRow>
-            {(foundMeldBuyToken || foundAndroidBuyToken) && !isRewardsToken && (
-              <div>
-                <LeoSquaredButton onClick={onSelectBuy}>
-                  {getLocale('braveWalletBuy')}
-                </LeoSquaredButton>
-              </div>
+            {foundMeldBuyToken && !isRewardsToken && (
+              <PortfolioAssetActionButton
+                text={getLocale('braveWalletBuy')}
+                icon='coins-alt1'
+                onClick={onClickBuy}
+              />
+            )}
+            <PortfolioAssetActionButton
+              text={getLocale('braveWalletSend')}
+              icon='send'
+              onClick={onClickSend}
+            />
+            {isSwapOrBridgeSupported && (
+              <>
+                <PortfolioAssetActionButton
+                  text={getLocale('braveWalletSwap')}
+                  icon='currency-exchange'
+                  onClick={() => onClickSwapOrBridge('swap')}
+                />
+                <PortfolioAssetActionButton
+                  text={getLocale('braveWalletBridge')}
+                  icon='web3-bridge'
+                  onClick={() => onClickSwapOrBridge('bridge')}
+                />
+              </>
             )}
             {isSelectedAssetDepositSupported && (
-              <div>
-                <LeoSquaredButton onClick={onSelectDeposit}>
-                  {getLocale('braveWalletAccountsDeposit')}
-                </LeoSquaredButton>
-              </div>
-            )}
-            {isSelectedAssetBridgeSupported && (
-              <div>
-                <LeoSquaredButton onClick={onBridgeToAuroraButton}>
-                  {getLocale('braveWalletBridgeToAuroraButton')}
-                </LeoSquaredButton>
-              </div>
+              <PortfolioAssetActionButton
+                text={getLocale('braveWalletAccountsDeposit')}
+                icon='money-bag-coins'
+                onClick={onClickDeposit}
+              />
             )}
           </ButtonRow>
         </Row>
-
-        {showBridgeToAuroraModal && (
-          <BridgeToAuroraModal
-            dontShowWarningAgain={dontShowAuroraWarning}
-            onClose={onCloseAuroraModal}
-            onOpenRainbowAppClick={onOpenRainbowAppClick}
-            onDontShowAgain={onDontShowAgain}
-          />
-        )}
 
         {showTokenDetailsModal &&
           selectedAssetFromParams &&

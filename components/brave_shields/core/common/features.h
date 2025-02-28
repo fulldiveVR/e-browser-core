@@ -35,12 +35,14 @@ BASE_DECLARE_FEATURE(kBraveReduceLanguage);
 BASE_DECLARE_FEATURE(kBraveShredFeature);
 BASE_DECLARE_FEATURE(kBraveShredCacheData);
 BASE_DECLARE_FEATURE(kBraveIOSDebugAdblock);
+BASE_DECLARE_FEATURE(kBraveIOSEnableFarblingPlugins);
 BASE_DECLARE_FEATURE(kBraveShowStrictFingerprintingMode);
 BASE_DECLARE_FEATURE(kCosmeticFilteringExtraPerfMetrics);
 BASE_DECLARE_FEATURE(kCosmeticFilteringJsPerformance);
 BASE_DECLARE_FEATURE(kCosmeticFilteringSyncLoad);
 BASE_DECLARE_FEATURE(kBlockAllCookiesToggle);
 BASE_DECLARE_FEATURE(kCosmeticFilteringCustomScriptlets);
+BASE_DECLARE_FEATURE(kBraveShieldsElementPicker);
 extern const base::FeatureParam<int> kComponentUpdateCheckIntervalMins;
 extern const base::FeatureParam<std::string>
     kCosmeticFilteringSubFrameFirstSelectorsPollingDelayMs;

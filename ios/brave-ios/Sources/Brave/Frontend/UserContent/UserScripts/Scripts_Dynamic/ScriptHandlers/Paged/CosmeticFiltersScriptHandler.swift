@@ -11,7 +11,7 @@ import os.log
 
 /// This handler receives a list of ids and selectors for a given frame for which it is then able to inject scripts and css rules in order to hide certain elements
 ///
-/// The ids and classes are collected in the `SelectorsPollerScript.js` file.
+/// The ids and classes are collected in the `content_cosmetic_ios.js` file.
 class CosmeticFiltersScriptHandler: TabContentScript {
   struct CosmeticFiltersDTO: Decodable {
     struct CosmeticFiltersDTOData: Decodable, Hashable {
@@ -24,25 +24,19 @@ class CosmeticFiltersScriptHandler: TabContentScript {
     let data: CosmeticFiltersDTOData
   }
 
-  static let scriptName = "SelectorsPollerScript"
+  static let scriptName = "content_cosmetic_ios"
   static let scriptId = UUID().uuidString
   static let messageHandlerName = "\(scriptName)_\(messageUUID)"
   static let scriptSandbox: WKContentWorld = .defaultClient
   static let userScript: WKUserScript? = nil
 
-  private weak var tab: Tab?
-
-  init(tab: Tab) {
-    self.tab = tab
-  }
-
-  func userContentController(
-    _ userContentController: WKUserContentController,
-    didReceiveScriptMessage message: WKScriptMessage,
+  func tab(
+    _ tab: Tab,
+    receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
     if !verifyMessage(message: message) {
-      assertionFailure("Invalid security token. Fix the `RequestBlocking.js` script")
+      assertionFailure("Invalid security token. Fix the `content_cosmetic_ios.js` script")
       replyHandler(nil, nil)
       return
     }
@@ -59,7 +53,7 @@ class CosmeticFiltersScriptHandler: TabContentScript {
       Task { @MainActor in
         let domain = Domain.getOrCreate(
           forUrl: frameURL,
-          persistent: self.tab?.isPrivate == true ? false : true
+          persistent: !tab.isPrivate
         )
         let cachedEngines = AdBlockGroupsManager.shared.cachedEngines(for: domain)
 
@@ -76,7 +70,7 @@ class CosmeticFiltersScriptHandler: TabContentScript {
               return nil
             }
 
-            return (selectors, cachedEngine.type.isAlwaysAggressive)
+            return await (selectors, cachedEngine.type.isAlwaysAggressive)
           } catch {
             Logger.module.error("\(error.localizedDescription)")
             return nil
@@ -93,6 +87,15 @@ class CosmeticFiltersScriptHandler: TabContentScript {
           }
         }
 
+        // cache blocked selectors
+        if let url = tab.url {
+          tab.contentBlocker.cacheSelectors(
+            for: url,
+            standardSelectors: standardSelectors,
+            aggressiveSelectors: aggressiveSelectors
+          )
+        }
+
         replyHandler(
           [
             "aggressiveSelectors": Array(aggressiveSelectors),
@@ -102,7 +105,7 @@ class CosmeticFiltersScriptHandler: TabContentScript {
         )
       }
     } catch {
-      assertionFailure("Invalid type of message. Fix the `RequestBlocking.js` script")
+      assertionFailure("Invalid type of message. Fix the `content_cosmetic_ios.js` script")
       replyHandler(nil, nil)
     }
   }

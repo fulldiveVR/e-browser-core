@@ -8,10 +8,9 @@ package org.brave.bytecode;
 import org.objectweb.asm.ClassVisitor;
 
 public class BraveClearBrowsingDataFragmentAdapter extends BraveClassVisitor {
-    static String sFragment =
-            "org/chromium/chrome/browser/browsing_data/ClearBrowsingDataFragmentAdvanced";
+    static String sFragment = "org/chromium/chrome/browser/browsing_data/ClearBrowsingDataFragment";
     static String sBraveFragment =
-            "org/chromium/chrome/browser/browsing_data/BraveClearBrowsingDataFragmentAdvanced";
+            "org/chromium/chrome/browser/browsing_data/BraveClearBrowsingDataFragment";
 
     public BraveClearBrowsingDataFragmentAdapter(ClassVisitor visitor) {
         super(visitor);

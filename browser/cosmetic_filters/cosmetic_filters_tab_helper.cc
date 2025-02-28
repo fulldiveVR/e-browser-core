@@ -11,17 +11,27 @@
 #include "base/strings/string_util.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/components/brave_shields/content/browser/ad_block_service.h"
+#include "content/public/browser/reload_type.h"
 #include "content/public/browser/web_contents.h"
 #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/brave_pages.h"
+#include "chrome/browser/themes/theme_service.h"
+#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
+#include "chrome/browser/ui/browser_window.h"
+#include "chrome/browser/ui/color/chrome_color_id.h"
+#include "ui/color/color_provider.h"
+#else
+#include "brave/browser/android/cosmetic_filters/cosmetic_filters_utils.h"
+#include "chrome/browser/flags/android/chrome_session_state.h"
 #endif  // !BUILDFLAG(IS_ANDROID)
 
 namespace cosmetic_filters {
 
 namespace {
+
 bool IsValidFilterText(std::string_view selector) {
   if (!base::IsStringUTF8(selector)) {
     return false;
@@ -78,14 +88,27 @@ void CosmeticFiltersTabHelper::AddSiteCosmeticFilter(
   }
 }
 
-void CosmeticFiltersTabHelper::ManageCustomFilters() {
+void CosmeticFiltersTabHelper::ResetCosmeticFilterForCurrentHost() {
+  const auto* sender_rfh = receivers_.GetCurrentTargetFrame();
+  CHECK(sender_rfh);
+  g_brave_browser_process->ad_block_service()->ResetCosmeticFilter(
+      sender_rfh->GetLastCommittedOrigin().host());
+  GetWebContents().GetController().Reload(content::ReloadType::NORMAL, true);
+}
+
+void CosmeticFiltersTabHelper::GetElementPickerThemeInfo(
+    GetElementPickerThemeInfoCallback callback) {
 #if !BUILDFLAG(IS_ANDROID)
-  Browser* browser = chrome::FindLastActive();
-  if (browser) {
-    brave::ShowBraveAdblock(browser);
-  }
+  auto& color_provider = GetWebContents().GetColorProvider();
+  std::move(callback).Run(
+      GetWebContents().GetColorMode() == ui::ColorProviderKey::ColorMode::kDark,
+      color_provider.GetColor(kColorSidePanelBadgeBackground));
 #else   // !BUILDFLAG(IS_ANDROID)
-  NOTIMPLEMENTED();
+  const auto dark_mode_state = chrome::android::GetDarkModeState();
+  std::move(callback).Run(
+      dark_mode_state == chrome::android::DarkModeState::kDarkModeSystem ||
+          dark_mode_state == chrome::android::DarkModeState::kDarkModeApp,
+      GetThemeBackgroundColor());
 #endif  // !BUILDFLAG(IS_ANDROID)
 }
 

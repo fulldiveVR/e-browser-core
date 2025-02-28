@@ -30,4 +30,17 @@ WebcompatReporterServiceDelegateImpl::GetChannelName() const {
   return std::nullopt;
 }
 
+std::optional<std::string>
+WebcompatReporterServiceDelegateImpl::GetCookiePolicy(
+    const std::optional<std::string>& current_url) const {
+  // we don't need to implement it for iOS, as we get it from the front-end part
+  return std::nullopt;
+}
+
+std::optional<std::string>
+WebcompatReporterServiceDelegateImpl::GetScriptBlockingFlag(
+    const std::optional<std::string>& current_url) const {
+  // we don't need to implement it for iOS, as we get it from the front-end part
+  return std::nullopt;
+}
 }  // namespace webcompat_reporter

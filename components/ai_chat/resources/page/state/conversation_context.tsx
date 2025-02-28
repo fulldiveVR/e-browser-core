@@ -4,6 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
+import { getLocale } from '$web-common/locale'
 import * as Mojom from '../../common/mojom'
 import useIsConversationVisible from '../hooks/useIsConversationVisible'
 import useSendFeedback, { defaultSendFeedbackState, SendFeedbackState } from './useSendFeedback'
@@ -22,9 +23,10 @@ export interface CharCountContext {
 }
 
 export type ConversationContext = SendFeedbackState & CharCountContext & {
+  historyInitialized: boolean
   conversationUuid?: string
   conversationHistory: Mojom.ConversationTurn[]
-  associatedContentInfo?: Mojom.SiteInfo
+  associatedContentInfo?: Mojom.AssociatedContent
   allModels: Mojom.Model[]
   currentModel?: Mojom.Model
   suggestedQuestions: string[]
@@ -51,6 +53,7 @@ export type ConversationContext = SendFeedbackState & CharCountContext & {
   updateShouldSendPageContents: (shouldSend: boolean) => void
   retryAPIRequest: () => void
   handleResetError: () => void
+  handleStopGenerating: () => Promise<void>
   setInputText: (text: string) => void
   submitInputTextToAPI: () => void
   resetSelectedActionType: () => void
@@ -58,6 +61,9 @@ export type ConversationContext = SendFeedbackState & CharCountContext & {
   setIsToolsMenuOpen: (isOpen: boolean) => void
   handleVoiceRecognition?: () => void
   conversationHandler?: Mojom.ConversationHandlerRemote
+
+  showAttachments: boolean
+  setShowAttachments: (show: boolean) => void
 }
 
 export const defaultCharCountContext: CharCountContext = {
@@ -67,6 +73,7 @@ export const defaultCharCountContext: CharCountContext = {
 }
 
 const defaultContext: ConversationContext = {
+  historyInitialized: false,
   conversationHistory: [],
   allModels: [],
   suggestedQuestions: [],
@@ -90,11 +97,14 @@ const defaultContext: ConversationContext = {
   updateShouldSendPageContents: () => { },
   retryAPIRequest: () => { },
   handleResetError: () => { },
+  handleStopGenerating: async () => { },
   setInputText: () => { },
   submitInputTextToAPI: () => { },
   resetSelectedActionType: () => { },
   handleActionTypeClick: () => { },
   setIsToolsMenuOpen: () => { },
+  showAttachments: false,
+  setShowAttachments: () => { },
   ...defaultSendFeedbackState,
   ...defaultCharCountContext
 }
@@ -152,7 +162,15 @@ export const ConversationReactContext =
 
 export function ConversationContextProvider(props: React.PropsWithChildren) {
   const [context, setContext] =
-    React.useState<ConversationContext>(defaultContext)
+    React.useState<ConversationContext>({
+      ...defaultContext,
+      setShowAttachments: (showAttachments: boolean) => {
+        setContext((value) => ({
+          ...value,
+          showAttachments
+        }))
+      }
+    })
 
   const aiChatContext = useAIChat()
   const { conversationHandler, callbackRouter, selectedConversationId, updateSelectedConversationId } = useActiveChat()
@@ -170,6 +188,10 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     }))
   }
 
+  React.useEffect(() => {
+    context.setShowAttachments(!!aiChatContext.isStandalone && !aiChatContext.visibleConversations.some(c => c.uuid === context.conversationUuid))
+  }, [context.conversationUuid])
+
   const getModelContext = (
     currentModelKey: string,
     allModels: Mojom.Model[]
@@ -186,7 +208,8 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
       const { conversationHistory } =
         await conversationHandler.getConversationHistory()
       setPartialContext({
-        conversationHistory
+        conversationHistory,
+        historyInitialized: true
       })
     }
 
@@ -198,7 +221,7 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
         currentModelKey,
         suggestedQuestions,
         suggestionStatus,
-        associatedContentInfo,
+        associatedContent,
         shouldSendContent,
         error
       } } = await conversationHandler.getState()
@@ -208,7 +231,7 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
         ...getModelContext(currentModelKey, models),
         suggestedQuestions,
         suggestionStatus,
-        associatedContentInfo,
+        associatedContentInfo: associatedContent,
         shouldSendPageContents: shouldSendContent,
         currentError: error
       })
@@ -257,7 +280,7 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
 
     id = callbackRouter.onAssociatedContentInfoChanged.addListener(
       (
-        associatedContentInfo: Mojom.SiteInfo,
+        associatedContentInfo: Mojom.AssociatedContent,
         shouldSendPageContents: boolean
       ) => {
         setPartialContext({
@@ -315,6 +338,33 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     updateSelectedConversationId(context.conversationUuid)
   }, [isVisible, updateSelectedConversationId])
 
+  // Update page title when conversation changes
+  React.useEffect(() => {
+    const originalTitle = document.title
+    const conversationTitle = aiChatContext.visibleConversations.find(c =>
+      c.uuid === context.conversationUuid
+    )?.title || getLocale('conversationListUntitled')
+
+    function setTitle(isPWA: boolean) {
+      if (isPWA) {
+        document.title = conversationTitle
+      } else {
+        document.title = `${getLocale('siteTitle')} - ${conversationTitle}`
+      }
+    }
+
+    const isPWAQuery = window.matchMedia('(display-mode: standalone)')
+    const handleChange = (e: MediaQueryListEvent) => setTitle(e.matches)
+    isPWAQuery.addEventListener('change', handleChange)
+
+    setTitle(isPWAQuery.matches)
+
+    return () => {
+      document.title = originalTitle
+      isPWAQuery.removeEventListener('change', handleChange)
+    }
+  }, [aiChatContext.visibleConversations, context.conversationUuid])
+
   const actionList = useActionMenu(context.inputText, aiChatContext.allActions)
 
   const shouldShowLongConversationInfo = React.useMemo(() => {
@@ -365,6 +415,12 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     })
   }
 
+  React.useEffect(() => {
+    try {
+      getAPI().metrics.onQuickActionStatusChange(!!context.selectedActionType)
+    } catch (e) {}
+  }, [context.selectedActionType])
+
   const handleActionTypeClick = (actionType: Mojom.ActionType) => {
     setPartialContext({
       selectedActionType: actionType
@@ -411,6 +467,10 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
       aiChatContext.dismissStorageNotice()
     }
 
+    if (aiChatContext.isStandalone) {
+      getAPI().metrics.onSendingPromptWithFullPage()
+    }
+
     if (context.selectedActionType) {
       conversationHandler.submitHumanConversationEntryWithAction(
         context.inputText,
@@ -447,6 +507,16 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     })
   }
 
+  const handleStopGenerating = async () => {
+    const { humanEntry } =
+      await conversationHandler.stopGenerationAndMaybeGetHumanEntry()
+    if (humanEntry) {
+      setPartialContext({
+        inputText: humanEntry.text
+      })
+    }
+  }
+
   const handleVoiceRecognition = () => {
     if (!context.conversationUuid) {
       console.error('No conversationUuid found')
@@ -470,6 +540,7 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
       setHasDismissedLongConversationInfo(true),
     retryAPIRequest: () => conversationHandler.retryAPIRequest(),
     handleResetError,
+    handleStopGenerating,
     // Experimentally don't cache model key locally, browser should notify of model change quickly
     setCurrentModel: (model) => conversationHandler.changeModel(model.key),
     generateSuggestedQuestions: () => conversationHandler.generateQuestions(),
@@ -478,6 +549,7 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     setInputText: (inputText) => setPartialContext({ inputText }),
     handleActionTypeClick,
     submitInputTextToAPI,
+    isGenerating: context.isGenerating,
     switchToBasicModel,
     setIsToolsMenuOpen: (isToolsMenuOpen) => setPartialContext({ isToolsMenuOpen }),
     handleVoiceRecognition,
@@ -493,4 +565,18 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
 
 export function useConversation() {
   return React.useContext(ConversationReactContext)
+}
+
+export function useIsNewConversation() {
+  const conversationContext = useConversation()
+  const aiChatContext = useAIChat()
+
+  // A conversation is new if it isn't in the list of visible conversations.
+  return !aiChatContext.visibleConversations.find(c => c.uuid === conversationContext.conversationUuid)
+}
+
+export function useSupportsAttachments() {
+  const aiChatContext = useAIChat()
+  const isNew = useIsNewConversation()
+  return aiChatContext.isStandalone && isNew
 }

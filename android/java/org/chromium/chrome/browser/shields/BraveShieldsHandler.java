@@ -26,6 +26,7 @@ import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Surface;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -48,12 +49,14 @@ import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.BraveRewardsNativeWorker;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.brave_stats.BraveStatsUtil;
+import org.chromium.chrome.browser.cosmetic_filters.BraveCosmeticFiltersUtils;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 import org.chromium.chrome.browser.preferences.website.BraveShieldsContentSettings;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.tab.Tab;
+import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
 import org.chromium.chrome.browser.util.ConfigurationUtils;
 import org.chromium.chrome.browser.webcompat_reporter.WebcompatReporterServiceFactory;
 import org.chromium.components.browser_ui.widget.ChromeDialog;
@@ -105,6 +108,7 @@ public class BraveShieldsHandler
     private OnCheckedChangeListener mBraveShieldsFingerprintingChangeListener;
 
     private View mPopupView;
+    private View mAnchorView;
     private LinearLayout mMainLayout;
     private LinearLayout mSecondaryLayout;
     private LinearLayout mAboutLayout;
@@ -129,6 +133,7 @@ public class BraveShieldsHandler
     private CheckBox mCheckBoxScreenshot;
     private EditText mEditTextDetails;
     private EditText mEditTextContact;
+    private TextView mTextContactInfoApopup;
     private View mDialogView;
     private Dialog mDialog;
     private ImageView mImageView;
@@ -296,8 +301,31 @@ public class BraveShieldsHandler
         }
         // mPopup.setBackgroundDrawable(mContext.getResources().getDrawable(android.R.drawable.picture_frame));
         // Set the location of the window on the screen
-        popupWindow.showAsDropDown(anchorView, 0, 0);
-        popupWindow.setAnimationStyle(R.style.EndIconMenuAnim);
+        mAnchorView = anchorView;
+        int mesuredHeight = 0;
+        if (BottomToolbarConfiguration.isToolbarBottomAnchored()) {
+            mPopupView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            mesuredHeight = mPopupView.getMeasuredHeight() + mAnchorView.getHeight();
+            mPopupView
+                    .getViewTreeObserver()
+                    .addOnGlobalLayoutListener(
+                            new ViewTreeObserver.OnGlobalLayoutListener() {
+                                @Override
+                                public void onGlobalLayout() {
+                                    // Get the new height of the popup view.
+                                    int newHeight =
+                                            mPopupView.getHeight() + mAnchorView.getHeight();
+
+                                    // Update the popup window's height.
+                                    popupWindow.update(mAnchorView, 0, -newHeight, width, height);
+                                }
+                            });
+        }
+        popupWindow.showAsDropDown(mAnchorView, 0, -1 * mesuredHeight);
+        popupWindow.setAnimationStyle(
+                BottomToolbarConfiguration.isToolbarTopAnchored()
+                        ? R.style.AnchoredPopupAnimEndTop
+                        : R.style.AnchoredPopupAnimEndBottom);
 
         // Turn off window animations for low end devices, and on Android M, which has built-in menu
         // animations.
@@ -506,11 +534,6 @@ public class BraveShieldsHandler
         setupMainSwitchClick(mShieldMainSwitch);
 
         initWebcompatReporterService();
-    }
-
-    private void shareStats() {
-        View shareStatsLayout = BraveStatsUtil.getLayout(R.layout.brave_stats_share_layout);
-        BraveStatsUtil.updateBraveShareStatsLayoutAndShare(shareStatsLayout);
     }
 
     private void setToggleView(boolean shouldShow) {
@@ -744,6 +767,29 @@ public class BraveShieldsHandler
         } else {
             fingerprintingSwitchLayout.setVisibility(View.GONE);
         }
+
+        Tab currentActiveTab = mIconFetcher.getTab();
+        final boolean isPrivateWindow =
+                currentActiveTab != null ? currentActiveTab.isIncognito() : false;
+
+        TextView blockElementsText =
+                mSecondaryLayout.findViewById(R.id.brave_shields_block_element_text);
+        blockElementsText.setVisibility(
+                !isPrivateWindow
+                                && ChromeFeatureList.isEnabled(
+                                        BraveFeatureList.BRAVE_SHIELDS_ELEMENT_PICKER)
+                        ? View.VISIBLE
+                        : View.GONE);
+        blockElementsText.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        hideBraveShieldsMenu();
+                        Tab currentActiveTab = mIconFetcher.getTab();
+                        BraveCosmeticFiltersUtils.launchContentPickerForWebContent(
+                                currentActiveTab);
+                    }
+                });
     }
 
     private void setUpAboutLayout() {
@@ -837,6 +883,8 @@ public class BraveShieldsHandler
                 });
         mEditTextDetails = mReportBrokenSiteLayout.findViewById(R.id.details_info_text);
         mEditTextContact = mReportBrokenSiteLayout.findViewById(R.id.contact_info_text);
+        mTextContactInfoApopup =
+                mReportBrokenSiteLayout.findViewById(R.id.contact_info_apopup_label);
 
         Button mSubmitButton = mReportBrokenSiteLayout.findViewById(R.id.btn_submit);
         mSubmitButton.setOnClickListener(
@@ -851,10 +899,12 @@ public class BraveShieldsHandler
                     }
                 });
         mWebcompatReporterHandler.getContactInfo(
-                contactInfo -> {
+                (contactInfo, contactInfoSaveFlag) -> {
                     if (contactInfo != null && !contactInfo.isEmpty()) {
                         mEditTextContact.setText(contactInfo);
                     }
+                    mTextContactInfoApopup.setVisibility(
+                            contactInfoSaveFlag ? View.VISIBLE : View.GONE);
                 });
     }
 

@@ -30,9 +30,14 @@ public abstract class BraveFeatureList {
     public static final String BRAVE_FORGET_FIRST_PARTY_STORAGE = "BraveForgetFirstPartyStorage";
     public static final String BRAVE_REQUEST_OTR_TAB = "BraveRequestOTRTab";
     public static final String AI_CHAT = "AIChat";
+    public static final String AI_CHAT_HISTORY = "AIChatHistory";
     public static final String BRAVE_SHOW_STRICT_FINGERPRINTING_MODE =
             "BraveShowStrictFingerprintingMode";
     public static final String BRAVE_DAY_ZERO_EXPERIMENT = "BraveDayZeroExperiment";
+    public static final String BRAVE_NEW_ANDROID_ONBOARDING = "NewAndroidOnboarding";
     public static final String BRAVE_FALLBACK_DOH_PROVIDER = "BraveFallbackDoHProvider";
     public static final String BRAVE_BLOCK_ALL_COOKIES_TOGGLE = "BlockAllCookiesToggle";
+    public static final String BRAVE_SHIELDS_ELEMENT_PICKER = "BraveShieldsElementPicker";
+    public static final String BRAVE_WEB_DISCOVERY_NATIVE = "BraveWebDiscoveryNative";
+    public static final String NEW_REWARDS_UI_FEATURE = "BraveRewardsNewRewardsUI";
 }

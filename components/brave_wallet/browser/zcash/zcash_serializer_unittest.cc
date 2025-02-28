@@ -22,6 +22,7 @@ namespace brave_wallet {
 
 TEST(ZCashSerializerTest, HashPrevouts) {
   ZCashTransaction zcash_transaciton;
+  zcash_transaciton.set_consensus_brach_id(0xc2d6d0b4);
 
   {
     ZCashTransaction::TxInput tx_input;
@@ -60,6 +61,7 @@ TEST(ZCashSerializerTest, HashPrevouts) {
 
 TEST(ZCashSerializerTest, HashOutputs) {
   ZCashTransaction zcash_transaciton;
+  zcash_transaciton.set_consensus_brach_id(0xc2d6d0b4);
 
   {
     ZCashTransaction::TxOutput tx_output;
@@ -84,6 +86,7 @@ TEST(ZCashSerializerTest, HashOutputs) {
 
 TEST(ZCashSerializerTest, HashSequences) {
   ZCashTransaction zcash_transaciton;
+  zcash_transaciton.set_consensus_brach_id(0xc2d6d0b4);
 
   {
     ZCashTransaction::TxInput tx_input;
@@ -110,6 +113,7 @@ TEST(ZCashSerializerTest, HashSequences) {
 
 TEST(ZCashSerializerTest, HashHeader) {
   ZCashTransaction zcash_transaciton;
+  zcash_transaciton.set_consensus_brach_id(0xc2d6d0b4);
   zcash_transaciton.set_expiry_height(10000);
   zcash_transaciton.set_locktime(1);
   EXPECT_EQ(
@@ -140,7 +144,7 @@ TEST(ZCashSerializerTest, HashTxIn) {
 // https://zcashblockexplorer.com/transactions/360d056309669faf0d7937f41581418be5e46b04e2cea0a7b14261d7bff1d825/raw
 TEST(ZCashSerializerTest, TxId_TransparentOnly) {
   ZCashTransaction tx;
-
+  tx.set_consensus_brach_id(0xc2d6d0b4);
   tx.set_expiry_height(2283846);
   tx.set_locktime(2283826);
 
@@ -198,11 +202,12 @@ TEST(ZCashSerializerTest, OrchardBundle) {
                             0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f,
                             0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17,
                             0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f}),
-      false);
+      mojom::KeyringId::kZCashMainnet);
 
   auto key_id = mojom::ZCashKeyId::New(0, 0, 0);
   auto address = keyring.GetTransparentAddress(*key_id)->address_string;
   ZCashTransaction tx;
+  tx.set_consensus_brach_id(0xc2d6d0b4);
   tx.set_expiry_height(1687144);
   tx.set_locktime(0);
 
@@ -237,7 +242,8 @@ TEST(ZCashSerializerTest, OrchardBundle) {
 
   OrchardBundleManager::OverrideRandomSeedForTesting(0);
   auto orchard_bundle_manager = OrchardBundleManager::Create(
-      std::vector<uint8_t>() /* Use empty orchard tree */, std::move(outputs));
+      std::vector<uint8_t>() /* Use empty orchard tree */,
+      OrchardSpendsBundle(), std::move(outputs));
 
   tx.orchard_part().digest = orchard_bundle_manager->GetOrchardDigest();
 

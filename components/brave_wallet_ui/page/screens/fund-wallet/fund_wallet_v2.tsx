@@ -205,7 +205,7 @@ export const FundWalletScreen = ({ isAndroid }: Props) => {
               <DropdownRow>
                 <Dropdown
                   value={selectedCountryCode}
-                  onChange={(detail) => onSelectCountry(detail.value as string)}
+                  onChange={(detail) => onSelectCountry(detail.value!)}
                   disabled={isFetchingFirstTimeQuotes || isLoadingCountries}
                 >
                   <div slot='value'>{selectedCountry?.name}</div>
@@ -222,9 +222,7 @@ export const FundWalletScreen = ({ isAndroid }: Props) => {
                 </Dropdown>
                 <Dropdown
                   value={selectedPaymentMethod.paymentMethod}
-                  onChange={(detail) =>
-                    onSelectPaymentMethod(detail.value as string)
-                  }
+                  onChange={(detail) => onSelectPaymentMethod(detail.value!)}
                   disabled={
                     isFetchingFirstTimeQuotes || isLoadingPaymentMethods
                   }
@@ -246,8 +244,10 @@ export const FundWalletScreen = ({ isAndroid }: Props) => {
                           <PaymentMethodIcon
                             src={
                               isStorybook
-                                ? logoUrl
-                                : `chrome://image?${logoUrl}`
+                                ? logoUrl ?? ''
+                                : `chrome://image?url=${encodeURIComponent(
+                                    logoUrl ?? ''
+                                  )}&staticEncode=true`
                             }
                           />
                           {paymentMethod.name}

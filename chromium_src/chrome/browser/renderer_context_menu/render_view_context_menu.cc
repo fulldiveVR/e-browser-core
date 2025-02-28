@@ -22,7 +22,6 @@
 #include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/grit/brave_theme_resources.h"
-#include "chrome/browser/autocomplete/autocomplete_classifier_factory.h"
 #include "chrome/browser/autocomplete/chrome_autocomplete_provider_client.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_list.h"
@@ -43,6 +42,7 @@
 #include "brave/browser/tor/tor_profile_service_factory.h"
 #endif
 
+#include "base/feature_list.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
@@ -55,6 +55,7 @@
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
+#include "brave/components/brave_shields/core/common/features.h"
 #include "components/grit/brave_components_strings.h"
 
 #if BUILDFLAG(ENABLE_AI_REWRITER)
@@ -71,14 +72,15 @@ namespace {
 
 AutocompleteMatch GetAutocompleteMatchForText(Profile* profile,
                                               const std::u16string& text) {
-  // `AutocompleteClassifierFactory` ultimately instantiates a
-  // `BraveAutocompleteSchemeClassifier` instance, as the substitution gets
-  // applied on the header for `ChromeAutocompleteSchemeClassifier`.
-  auto* classifier = AutocompleteClassifierFactory::GetForProfile(profile);
-  CHECK(classifier);
   AutocompleteMatch match;
-  classifier->Classify(text, false, false,
-                       metrics::OmniboxEventProto::INVALID_SPEC, &match, NULL);
+  AutocompleteClassifier classifier(
+      std::make_unique<AutocompleteController>(
+          std::make_unique<ChromeAutocompleteProviderClient>(profile),
+          AutocompleteClassifier::DefaultOmniboxProviders()),
+      std::make_unique<BraveAutocompleteSchemeClassifier>(profile));
+  classifier.Classify(text, false, false,
+                      metrics::OmniboxEventProto::INVALID_SPEC, &match, NULL);
+  classifier.Shutdown();
   return match;
 }
 
@@ -542,6 +544,12 @@ void BraveRenderViewContextMenu::ExecuteAIChatCommand(int command) {
   auto [action_type, p3a_action] = GetActionTypeAndP3A(command);
   auto selected_text = base::UTF16ToUTF8(params_.selection_text);
 
+  auto* ai_chat_metrics =
+      g_brave_browser_process->process_misc_metrics()->ai_chat_metrics();
+  if (ai_chat_metrics) {
+    ai_chat_metrics->OnQuickActionStatusChange(true);
+  }
+
   if (rewrite_in_place) {
     source_web_contents_->SetUserData(kAIChatRewriteDataKey,
                                       std::make_unique<AIChatRewriteData>());
@@ -592,9 +600,9 @@ void BraveRenderViewContextMenu::ExecuteAIChatCommand(int command) {
     conversation->SubmitSelectedText(selected_text, action_type);
   }
 
-  g_brave_browser_process->process_misc_metrics()
-      ->ai_chat_metrics()
-      ->RecordContextMenuUsage(p3a_action);
+  if (ai_chat_metrics) {
+    ai_chat_metrics->RecordContextMenuUsage(p3a_action);
+  }
 }
 
 void BraveRenderViewContextMenu::BuildAIChatMenu() {
@@ -705,15 +713,16 @@ void BraveRenderViewContextMenu::AppendDeveloperItems() {
                             shields_tab_helper->GetBraveShieldsEnabled() &&
                             shields_tab_helper->GetAdBlockMode() !=
                                 brave_shields::mojom::AdBlockMode::ALLOW;
-#if BUILDFLAG(IS_ANDROID)
-  // Content picker doesn't available for Android.
-  add_block_elements = false;
-#endif  // BUILDFLAG(IS_ANDROID)
   add_block_elements &=
       params_.selection_text.empty() || !params_.link_url.is_empty();
 
   const auto page_url = source_web_contents_->GetLastCommittedURL();
   add_block_elements &= page_url.SchemeIsHTTPOrHTTPS();
+  add_block_elements &= base::FeatureList::IsEnabled(
+      brave_shields::features::kBraveShieldsElementPicker);
+
+  const auto* profile = GetProfile();
+  add_block_elements &= profile && !profile->IsOffTheRecord();
   if (add_block_elements) {
     std::optional<size_t> inspect_index =
         menu_model_.GetIndexOfCommandId(IDC_CONTENT_CONTEXT_INSPECTELEMENT);
@@ -797,11 +806,21 @@ void BraveRenderViewContextMenu::InitMenu() {
   // Add Open Link in Split View
   if (CanOpenSplitViewForWebContents(source_web_contents_->GetWeakPtr()) &&
       params_.link_url.is_valid()) {
-    index = menu_model_.GetIndexOfCommandId(IDC_CONTENT_CONTEXT_OPENLINKNEWTAB);
+    // Reset our index
+    index.reset();
+
+    // Loop over menu_model_ items until we find the first separator
+    for (size_t i = 0; i < menu_model_.GetItemCount(); i++) {
+      if (menu_model_.GetTypeAt(i) == ui::MenuModel::ItemType::TYPE_SEPARATOR) {
+        index = i;
+        break;
+      }
+    }
+
     CHECK(index.has_value());
 
     menu_model_.InsertItemWithStringIdAt(
-        index.value() + 1, IDC_CONTENT_CONTEXT_OPENLINK_SPLIT_VIEW,
+        index.value(), IDC_CONTENT_CONTEXT_OPENLINK_SPLIT_VIEW,
         IDS_CONTENT_CONTEXT_SPLIT_VIEW);
   }
 }

@@ -21,7 +21,6 @@ class UserScriptManager {
   private var alwaysEnabledScripts: [ScriptType] {
     var scripts: [ScriptType] = [
       .faviconFetcher,
-      .rewardsReporting,
       .resourceDownloader,
       .nightMode,
     ]
@@ -113,7 +112,6 @@ class UserScriptManager {
   enum ScriptType: String, CaseIterable {
     case faviconFetcher
     case cookieBlocking
-    case rewardsReporting
     case mediaBackgroundPlay
     case playlistMediaSource
     case playlist
@@ -128,6 +126,7 @@ class UserScriptManager {
     case searchResultAd
     case youtubeQuality
     case braveLeoAIChat
+    case braveTranslate
 
     fileprivate var script: WKUserScript? {
       switch self {
@@ -159,9 +158,6 @@ class UserScriptManager {
       // Always enabled scripts
       case .faviconFetcher: return FaviconScriptHandler.userScript
       case .nightMode: return DarkReaderScriptHandler.userScript
-      case .rewardsReporting:
-        return Preferences.UserScript.rewardsReporting.value
-          ? RewardsReportingScriptHandler.userScript : nil
       case .playlist:
         return Preferences.UserScript.playlist.value ? PlaylistScriptHandler.userScript : nil
       case .resourceDownloader: return ResourceDownloadScriptHandler.userScript
@@ -172,6 +168,8 @@ class UserScriptManager {
           ? YoutubeQualityScriptHandler.userScript : nil
       case .braveLeoAIChat:
         return Preferences.UserScript.leo.value ? BraveLeoScriptHandler.userScript : nil
+      case .braveTranslate:
+        return Preferences.UserScript.translate.value ? BraveTranslateScriptHandler.userScript : nil
       }
     }
 

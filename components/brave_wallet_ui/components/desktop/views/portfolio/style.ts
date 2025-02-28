@@ -79,7 +79,7 @@ export const ButtonRow = styled.div<{
   margin: ${(p) => (p.noMargin ? '0px' : '20px 0px')};
   padding: 0px
     ${(p) => (p.horizontalPadding !== undefined ? p.horizontalPadding : 0)}px;
-  gap: 10px;
+  gap: 12px;
 `
 
 export const BalanceRow = styled.div<{ gap?: string }>`
@@ -170,13 +170,13 @@ export const SelectTimelineWrapper = styled(Row)`
   }
 `
 
-export const ControlsRow = styled(Row)<{ controlsHidden?: boolean }>`
+export const ControlsRow = styled(Row)`
   box-shadow: 0px -1px 1px ${leo.color.elevation.primary};
   border-radius: 16px 16px 0px 0px;
-  padding: ${(p) => (p.controlsHidden ? '12px' : '24px 32px')};
+  padding: 24px 32px;
   background-color: ${leo.color.container.background};
   @media screen and (max-width: ${layoutPanelWidth}px) {
-    padding: ${(p) => (p.controlsHidden ? '8px' : '16px')};
+    padding: 16px;
   }
 `
 
@@ -196,8 +196,10 @@ export const BalanceAndButtonsWrapper = styled(Column)`
 
 export const BalanceAndChangeWrapper = styled(Column)`
   position: relative;
+  margin-bottom: 24px;
   @media screen and (max-width: ${layoutSmallWidth}px) {
     align-items: flex-start;
+    margin-bottom: 0px;
   }
   @media screen and (max-width: ${layoutPanelWidth}px) {
     flex-direction: column;
@@ -314,6 +316,13 @@ export const BalanceAndLineChartWrapper = styled(Column)`
   position: relative;
 `
 
-export const ActivityWrapper = styled(Column)`
-  background-color: ${leo.color.container.background};
+export const ActivityWrapper = styled(Column)<{
+  isPanel: boolean
+}>`
+  padding: 0px 32px 32px 32px;
+  background-color: ${(p) =>
+    p.isPanel ? leo.color.container.background : 'transparent'};
+  @media screen and (max-width: ${layoutPanelWidth}px) {
+    padding: 0px 16px 16px 16px;
+  }
 `

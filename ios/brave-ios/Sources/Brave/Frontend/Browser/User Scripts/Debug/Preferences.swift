@@ -19,12 +19,6 @@ extension Preferences {
         default: true
       )
 
-    public static let rewardsReporting =
-      Option<Bool>(
-        key: "userscript.preferences.\(UserScriptManager.ScriptType.rewardsReporting.rawValue)",
-        default: true
-      )
-
     public static let mediaBackgroundPlay =
       Option<Bool>(
         key: "userscript.preferences.\(UserScriptManager.ScriptType.mediaBackgroundPlay.rawValue)",
@@ -89,6 +83,12 @@ extension Preferences {
     public static let leo =
       Option<Bool>(
         key: "userscript.preferences.\(UserScriptManager.ScriptType.braveLeoAIChat.rawValue)",
+        default: true
+      )
+
+    public static let translate =
+      Option<Bool>(
+        key: "userscript.preferences.\(UserScriptManager.ScriptType.braveTranslate.rawValue)",
         default: true
       )
   }

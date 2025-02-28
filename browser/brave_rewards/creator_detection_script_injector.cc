@@ -13,9 +13,9 @@
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
 #include "brave/browser/brave_rewards/rewards_util.h"
-#include "brave/components/brave_rewards/common/features.h"
-#include "brave/components/brave_rewards/common/pref_names.h"
-#include "brave/components/brave_rewards/common/publisher_utils.h"
+#include "brave/components/brave_rewards/core/features.h"
+#include "brave/components/brave_rewards/core/pref_names.h"
+#include "brave/components/brave_rewards/core/publisher_utils.h"
 #include "brave/components/brave_rewards/resources/grit/creator_detection_generated.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
@@ -30,10 +30,7 @@ namespace brave_rewards {
 namespace {
 
 constexpr auto kScriptMap = base::MakeFixedFlatMap<std::string_view, int>(
-    {{"github.com", IDR_CREATOR_DETECTION_GITHUB_BUNDLE_JS},
-     {"www.github.com", IDR_CREATOR_DETECTION_GITHUB_BUNDLE_JS},
-     {"gist.github.com", IDR_CREATOR_DETECTION_GITHUB_BUNDLE_JS},
-     {"reddit.com", IDR_CREATOR_DETECTION_REDDIT_BUNDLE_JS},
+    {{"reddit.com", IDR_CREATOR_DETECTION_REDDIT_BUNDLE_JS},
      {"www.reddit.com", IDR_CREATOR_DETECTION_REDDIT_BUNDLE_JS},
      {"twitch.tv", IDR_CREATOR_DETECTION_TWITCH_BUNDLE_JS},
      {"www.twitch.tv", IDR_CREATOR_DETECTION_TWITCH_BUNDLE_JS},

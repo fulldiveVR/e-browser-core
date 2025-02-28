@@ -153,10 +153,10 @@ class LivePlaylistWebLoader: UIView, PlaylistWebLoader {
     static let userScript: WKUserScript? = nil
     static let playlistProcessDocumentLoad = PlaylistScriptHandler.playlistProcessDocumentLoad
 
-    func userContentController(
-      _ userContentController: WKUserContentController,
-      didReceiveScriptMessage message: WKScriptMessage,
-      replyHandler: (Any?, String?) -> Void
+    func tab(
+      _ tab: Tab,
+      receivedScriptMessage message: WKScriptMessage,
+      replyHandler: @escaping (Any?, String?) -> Void
     ) {
       if !verifyMessage(message: message) {
         assertionFailure("Missing required security token.")
@@ -333,7 +333,9 @@ extension LivePlaylistWebLoader: WKNavigationDelegate {
       return (.cancel, preferences)
     }
 
-    if navigationAction.isInternalUnprivileged && navigationAction.navigationType != .backForward {
+    if navigationAction.request.isInternalUnprivileged
+      && navigationAction.navigationType != .backForward
+    {
       return (.cancel, preferences)
     }
 
@@ -472,6 +474,13 @@ extension LivePlaylistWebLoader: WKNavigationDelegate {
     }
 
     return .allow
+  }
+
+  func webView(
+    _ webView: WKWebView,
+    shouldAllowDeprecatedTLSFor challenge: URLAuthenticationChallenge
+  ) async -> Bool {
+    return false
   }
 
   nonisolated func webView(

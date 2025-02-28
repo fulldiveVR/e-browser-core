@@ -91,6 +91,9 @@ export function App() {
 
   function getClassNames() {
     const list: string[] = []
+    if (embedder.isAutoResizeBubble) {
+      list.push('is-auto-resize-bubble')
+    }
     if (embedder.isBubble) {
       list.push('is-bubble')
     }
@@ -175,17 +178,6 @@ export function App() {
     return null
   }
 
-  function renderMainView() {
-    switch (route) {
-      case routes.creators:
-        return <></>
-      case routes.explore:
-        return <ExploreView />
-      default:
-        return <HomeView />
-    }
-  }
-
   function renderContent() {
     if (loading) {
       return (
@@ -210,7 +202,12 @@ export function App() {
     return (
       <>
         <AppFrame>
-          {renderMainView()}
+          <div data-app-route={routes.home}>
+            <HomeView />
+          </div>
+          <div data-app-route={routes.explore}>
+            <ExploreView />
+          </div>
         </AppFrame>
         {renderModal()}
       </>

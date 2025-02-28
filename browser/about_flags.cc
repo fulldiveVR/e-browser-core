@@ -20,11 +20,13 @@
 #include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_feature.h"
 #include "brave/components/brave_ads/core/public/ads_feature.h"
 #include "brave/components/brave_component_updater/browser/features.h"
+#include "brave/components/brave_education/buildflags.h"
 #include "brave/components/brave_news/common/features.h"
-#include "brave/components/brave_rewards/common/buildflags/buildflags.h"
-#include "brave/components/brave_rewards/common/features.h"
+#include "brave/components/brave_rewards/core/buildflags/buildflags.h"
+#include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
+#include "brave/components/brave_wallet/common/buildflags.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/de_amp/common/features.h"
 #include "brave/components/debounce/core/common/features.h"
@@ -84,7 +86,29 @@
 #include "brave/browser/ui/webui/settings/brave_extensions_manifest_v2_handler.h"
 #endif
 
+#if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
+#include "brave/components/brave_education/features.h"
+#endif
+
 #define EXPAND_FEATURE_ENTRIES(...) __VA_ARGS__,
+
+const flags_ui::FeatureEntry::FeatureParam
+    kZCashShieldedTransactionsDisabled[] = {
+        {"zcash_shielded_transactions_enabled", "false"}};
+
+#if BUILDFLAG(ENABLE_ORCHARD)
+const flags_ui::FeatureEntry::FeatureParam kZCashShieldedTransactionsEnabled[] =
+    {{"zcash_shielded_transactions_enabled", "true"}};
+#endif  // BUILDFLAG(ENABLE_ORCHARD)
+
+const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
+    {"- Shielded support disabled", kZCashShieldedTransactionsDisabled,
+     std::size(kZCashShieldedTransactionsDisabled), nullptr},
+#if BUILDFLAG(ENABLE_ORCHARD)
+    {"- Shielded support enabled", kZCashShieldedTransactionsEnabled,
+     std::size(kZCashShieldedTransactionsEnabled), nullptr}
+#endif  // BUILDFLAG(ENABLE_ORCHARD)
+};
 
 #define SPEEDREADER_FEATURE_ENTRIES                                        \
   IF_BUILDFLAG(                                                            \
@@ -156,14 +180,11 @@
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kNativeBraveWalletFeature),             \
       },                                                                      \
-      {                                                                       \
-          "brave-wallet-zcash",                                               \
-          "Enable BraveWallet ZCash support",                                 \
-          "Zcash support for native Brave Wallet",                            \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(                                                 \
-              brave_wallet::features::kBraveWalletZCashFeature),              \
-      },                                                                      \
+      {"brave-wallet-zcash", "Enable BraveWallet ZCash support",              \
+       "Zcash support for native Brave Wallet", kOsDesktop | kOsAndroid,      \
+       FEATURE_WITH_PARAMS_VALUE_TYPE(                                        \
+           brave_wallet::features::kBraveWalletZCashFeature,                  \
+           kZCashFeatureVariations, "BraveWalletZCash")},                     \
       {                                                                       \
           "brave-wallet-bitcoin",                                             \
           "Enable Brave Wallet Bitcoin support",                              \
@@ -356,58 +377,67 @@
 #define BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY
 #endif
 
-#define BRAVE_AI_CHAT_FEATURE_ENTRIES                                         \
-  EXPAND_FEATURE_ENTRIES(                                                     \
-      {                                                                       \
-          "brave-ai-chat",                                                    \
-          "Brave AI Chat",                                                    \
-          "Summarize articles and engage in conversation with AI",            \
-          kOsWin | kOsMac | kOsLinux | kOsAndroid,                            \
-          FEATURE_VALUE_TYPE(ai_chat::features::kAIChat),                     \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-chat-history",                                            \
-          "Brave AI Chat History",                                            \
-          "Enables AI Chat History persistence and management",               \
-          kOsWin | kOsMac | kOsLinux | kOsAndroid,                            \
-          FEATURE_VALUE_TYPE(ai_chat::features::kAIChatHistory),              \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-host-specific-distillation",                              \
-          "Brave AI Host-Specific Distillation",                              \
-          "Enables support for host-specific distillation scripts",           \
-          kOsWin | kOsMac | kOsLinux,                                         \
-          FEATURE_VALUE_TYPE(ai_chat::features::kCustomSiteDistillerScripts), \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-chat-context-menu-rewrite-in-place",                      \
-          "Brave AI Chat Rewrite In Place From Context Menu",                 \
-          "Enables AI Chat rewrite in place feature from the context menu",   \
-          kOsDesktop,                                                         \
-          FEATURE_VALUE_TYPE(ai_chat::features::kContextMenuRewriteInPlace),  \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-chat-page-content-refine",                                \
-          "Brave AI Chat Page Content Refine",                                \
-          "Enable local text embedding for long page content in order to "    \
-          "find "                                                             \
-          "most relevant parts to the prompt within context limit.",          \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(ai_chat::features::kPageContentRefine),          \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-chat-allow-private-ips",                                  \
-          "Private IP Addresses for Custom Model Endpoints",                  \
-          "Permits the use of private IP addresses as model endpoint URLs",   \
-          kOsWin | kOsMac | kOsLinux | kOsAndroid,                            \
-          FEATURE_VALUE_TYPE(ai_chat::features::kAllowPrivateIPs),            \
-      },                                                                      \
-      {                                                                       \
-          "brave-ai-chat-open-leo-from-brave-search",                         \
-          "Open Leo AI Chat from Brave Search",                               \
-          "Enables opening Leo AI Chat from Brave Search",                    \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(ai_chat::features::kOpenAIChatFromBraveSearch),  \
+#define BRAVE_AI_CHAT_FEATURE_ENTRIES                                          \
+  EXPAND_FEATURE_ENTRIES(                                                      \
+      {                                                                        \
+          "brave-ai-chat",                                                     \
+          "Brave AI Chat",                                                     \
+          "Summarize articles and engage in conversation with AI",             \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kAIChat),                      \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-history",                                             \
+          "Brave AI Chat History",                                             \
+          "Enables AI Chat History persistence and management",                \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kAIChatHistory),               \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-host-specific-distillation",                               \
+          "Brave AI Host-Specific Distillation",                               \
+          "Enables support for host-specific distillation scripts",            \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kCustomSiteDistillerScripts),  \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-context-menu-rewrite-in-place",                       \
+          "Brave AI Chat Rewrite In Place From Context Menu",                  \
+          "Enables AI Chat rewrite in place feature from the context menu",    \
+          kOsDesktop,                                                          \
+          FEATURE_VALUE_TYPE(ai_chat::features::kContextMenuRewriteInPlace),   \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-page-content-refine",                                 \
+          "Brave AI Chat Page Content Refine",                                 \
+          "Enable local text embedding for long page content in order to "     \
+          "find "                                                              \
+          "most relevant parts to the prompt within context limit.",           \
+          kOsDesktop | kOsAndroid,                                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kPageContentRefine),           \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-allow-private-ips",                                   \
+          "Private IP Addresses for Custom Model Endpoints",                   \
+          "Permits the use of private IP addresses as model endpoint URLs",    \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kAllowPrivateIPs),             \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-open-leo-from-brave-search",                          \
+          "Open Leo AI Chat from Brave Search",                                \
+          "Enables opening Leo AI Chat from Brave Search",                     \
+          kOsDesktop | kOsAndroid,                                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kOpenAIChatFromBraveSearch),   \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-web-content-association-default",                     \
+          "Brave AI Chat Web Content Association Default",                     \
+          "For AI Chat Conversations which are associated with web content, "  \
+          "allow the toggle for sending page content to be set to enabled "    \
+          "when the conversation is created.",                                 \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kPageContextEnabledInitially), \
       })
 
 #if BUILDFLAG(ENABLE_AI_REWRITER)
@@ -461,6 +491,19 @@
       FEATURE_VALUE_TYPE(                                               \
           brave_shields::features::kCosmeticFilteringCustomScriptlets), \
   })
+
+#if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
+#define BRAVE_EDUCATION_FEATURE_ENTRIES                                       \
+  EXPAND_FEATURE_ENTRIES({                                                    \
+      "brave-show-getting-started-page",                                      \
+      "Show getting started pages",                                           \
+      "Show a getting started page after completing the Welcome UX.",         \
+      kOsDesktop,                                                             \
+      FEATURE_VALUE_TYPE(brave_education::features::kShowGettingStartedPage), \
+  })
+#else
+#define BRAVE_EDUCATION_FEATURE_ENTRIES
+#endif
 
 // Keep the last item empty.
 #define LAST_BRAVE_FEATURE_ENTRIES_ITEM
@@ -682,10 +725,20 @@
       },                                                                       \
       {                                                                        \
           "block-all-cookies-toggle",                                          \
-          "If the feature flag is on, we show the Block all Cookies toggle",   \
-          "If the feature flag is on, we show the Block all Cookies toggle",   \
+          "'Block all cookies' option in Shields global defaults",             \
+          "Shows the 'Block all cookies' toggle in Shields global defaults. "  \
+          "This global setting prevents all websites from storing cookies "    \
+          "on your device, but is also very likely to lead to site breakage.", \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_shields::features::kBlockAllCookiesToggle), \
+      },                                                                       \
+      {                                                                        \
+          "block-element-feature",                                             \
+          "Enable Block Element feature",                                      \
+          "Allows to block selected HTML element on the page",                 \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(                                                  \
+              brave_shields::features::kBraveShieldsElementPicker),            \
       },                                                                       \
       {                                                                        \
           "brave-super-referral",                                              \
@@ -1005,6 +1058,7 @@
   BRAVE_EXTENSIONS_MANIFEST_V2                                                 \
   BRAVE_WORKAROUND_NEW_WINDOW_FLASH                                            \
   BRAVE_ADBLOCK_CUSTOM_SCRIPTLETS                                              \
+  BRAVE_EDUCATION_FEATURE_ENTRIES                                              \
   LAST_BRAVE_FEATURE_ENTRIES_ITEM  // Keep it as the last item.
 namespace flags_ui {
 namespace {

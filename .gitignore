@@ -1,5 +1,10 @@
 .cache/clangd
-/vendor/*
+vendor/python-patch
+vendor/sparkle
+vendor/bat-native-tweetnacl
+vendor/gn-project-generators
+vendor/web-discovery-project
+vendor/depot_tools
 .DS_Store
 .brave_gclient_*
 .gclient_*
@@ -50,9 +55,11 @@ npm-debug.log
 .env*
 engflow.crt
 *.key
+!tools/crates/vendor/**/*.key
 privkey.pem
 *~
 CMakeLists.txt
+!tools/crates/vendor/**/CMakeLists.txt
 cmake-build-debug/
 coverage/
 /build/rustup/

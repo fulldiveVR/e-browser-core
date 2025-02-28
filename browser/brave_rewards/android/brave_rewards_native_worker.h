@@ -1,7 +1,7 @@
 /* Copyright (c) 2019 The Brave Authors. All rights reserved.
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at http://mozilla.org/MPL/2.0/. */
+ * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #ifndef BRAVE_BROWSER_BRAVE_REWARDS_ANDROID_BRAVE_REWARDS_NATIVE_WORKER_H_
 #define BRAVE_BROWSER_BRAVE_REWARDS_ANDROID_BRAVE_REWARDS_NATIVE_WORKER_H_
@@ -19,9 +19,9 @@
 #include "base/memory/weak_ptr.h"
 #include "base/scoped_observation.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
-#include "brave/components/brave_rewards/browser/rewards_notification_service_observer.h"
-#include "brave/components/brave_rewards/browser/rewards_service_observer.h"
-#include "brave/components/brave_rewards/common/mojom/rewards.mojom.h"
+#include "brave/components/brave_rewards/content/rewards_notification_service_observer.h"
+#include "brave/components/brave_rewards/content/rewards_service_observer.h"
+#include "brave/components/brave_rewards/core/mojom/rewards.mojom.h"
 
 namespace brave_rewards {
 class RewardsService;
@@ -112,8 +112,6 @@ class BraveRewardsNativeWorker
 
   void GetCurrentBalanceReport(JNIEnv* env);
 
-  void IncludeInAutoContribution(JNIEnv* env, uint64_t tabId, bool exclude);
-
   void RemovePublisherFromMap(JNIEnv* env, uint64_t tabId);
 
   void Donate(JNIEnv* env,
@@ -133,10 +131,6 @@ class BraveRewardsNativeWorker
       JNIEnv* env,
       const base::android::JavaParamRef<jstring>& publisher);
 
-  void GetAutoContributeProperties(JNIEnv* env);
-
-  bool IsAutoContributeEnabled(JNIEnv* env);
-
   void GetReconcileStamp(JNIEnv* env);
 
   void ResetTheWholeState(JNIEnv* env);
@@ -151,10 +145,6 @@ class BraveRewardsNativeWorker
   int GetAdsPerHour(JNIEnv* env);
 
   void SetAdsPerHour(JNIEnv* env, jint value);
-
-  void SetAutoContributionAmount(JNIEnv* env, jdouble value);
-
-  void GetAutoContributionAmount(JNIEnv* env);
 
   void GetExternalWallet(JNIEnv* env);
 
@@ -249,7 +239,6 @@ class BraveRewardsNativeWorker
 
   void OnRefreshPublisher(const brave_rewards::mojom::PublisherStatus status,
                           const std::string& publisher_key);
-  void SetAutoContributeEnabled(JNIEnv* env, bool isAutoContributeEnabled);
 
  private:
   std::string StdStrStrMapToJsonString(

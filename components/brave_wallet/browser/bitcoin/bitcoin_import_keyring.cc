@@ -10,12 +10,17 @@
 #include <utility>
 
 #include "base/check.h"
+#include "base/types/cxx23_to_underlying.h"
 #include "brave/components/brave_wallet/browser/internal/hd_key.h"
 #include "brave/components/brave_wallet/common/bitcoin_utils.h"
+#include "brave/components/brave_wallet/common/common_utils.h"
 
 namespace brave_wallet {
 
-BitcoinImportKeyring::BitcoinImportKeyring(bool testnet) : testnet_(testnet) {}
+BitcoinImportKeyring::BitcoinImportKeyring(mojom::KeyringId keyring_id)
+    : BitcoinBaseKeyring(keyring_id) {
+  CHECK(IsBitcoinImportKeyring(keyring_id_));
+}
 
 BitcoinImportKeyring::~BitcoinImportKeyring() = default;
 
@@ -29,10 +34,12 @@ bool BitcoinImportKeyring::AddAccount(uint32_t account,
     return false;
   }
 
-  if (testnet_ && parsed_key->version != ExtendedKeyVersion::kVprv) {
+  if (IsTestnet() &&
+      parsed_key->version != base::to_underlying(ExtendedKeyVersion::kVprv)) {
     return false;
   }
-  if (!testnet_ && parsed_key->version != ExtendedKeyVersion::kZprv) {
+  if (!IsTestnet() &&
+      parsed_key->version != base::to_underlying(ExtendedKeyVersion::kZprv)) {
     return false;
   }
 
@@ -53,7 +60,7 @@ mojom::BitcoinAddressPtr BitcoinImportKeyring::GetAddress(
   }
 
   return mojom::BitcoinAddress::New(
-      PubkeyToSegwitAddress(hd_key->GetPublicKeyBytes(), testnet_),
+      PubkeyToSegwitAddress(hd_key->GetPublicKeyBytes(), IsTestnet()),
       key_id.Clone());
 }
 
@@ -98,14 +105,11 @@ std::unique_ptr<HDKey> BitcoinImportKeyring::DeriveKey(
 
   DCHECK(key_id.change == 0 || key_id.change == 1);
 
-  auto key = account_key->DeriveNormalChild(key_id.change);
-  if (!key) {
-    return nullptr;
-  }
-
   // Mainnet - m/84'/0'/{account}'/{key_id.change}/{key_id.index}
   // Testnet - m/84'/1'/{account}'/{key_id.change}/{key_id.index}
-  return key->DeriveNormalChild(key_id.index);
+  return account_key->DeriveChildFromPath(
+      std::array{DerivationIndex::Normal(key_id.change),
+                 DerivationIndex::Normal(key_id.index)});
 }
 
 }  // namespace brave_wallet

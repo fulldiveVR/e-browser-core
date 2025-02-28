@@ -59,11 +59,14 @@ import {
   useSendFilTransactionMutation,
   useSendBtcTransactionMutation,
   useSendZecTransactionMutation,
-  useValidateUnifiedAddressQuery
+  useGetZCashTransactionTypeQuery
 } from '../../../../common/slices/api.slice'
 import {
   useAccountFromAddressQuery //
 } from '../../../../common/slices/api.slice.extra'
+import {
+  useIsAccountSyncing //
+} from '../../../../common/hooks/use_is_account_syncing'
 
 // Styled Components
 import { InputRow, ToText, ToRow } from './send.style'
@@ -107,20 +110,17 @@ export const SendScreen = React.memo((props: Props) => {
   const history = useHistory()
   const { hash } = useLocation()
   const selectedSendOption = (hash as SendPageTabHashes) || '#token'
+  const accountIdFromParams = query.get('account') ?? undefined
+  const chainIdFromParams = query.get('chainId') ?? undefined
+  const contractOrSymbolFromParams = query.get('token') ?? undefined
 
-  const { account: accountFromParams } = useAccountFromAddressQuery(
-    query.get('account') ?? undefined
-  )
+  const { account: accountFromParams } =
+    useAccountFromAddressQuery(accountIdFromParams)
 
   const { data: networks = [] } = useGetVisibleNetworksQuery()
   const networkFromParams = React.useMemo(
-    () =>
-      networks.find(
-        (network) =>
-          network.chainId === query.get('chainId') &&
-          network.coin === accountFromParams?.accountId.coin
-      ),
-    [networks, accountFromParams, query]
+    () => networks.find((network) => network.chainId === chainIdFromParams),
+    [networks, chainIdFromParams]
   )
 
   // State
@@ -160,15 +160,14 @@ export const SendScreen = React.memo((props: Props) => {
   })
 
   const {
-    data: zecAddressValidationResult = BraveWallet.ZCashAddressValidationResult
-      .Unknown
-  } = useValidateUnifiedAddressQuery(
+    data : getZCashTransactionTypeResult = { txType : null, error : null }
+  } = useGetZCashTransactionTypeQuery(
     networkFromParams?.coin === BraveWallet.CoinType.ZEC &&
-      isZCashShieldedTransactionsEnabled &&
       toAddressOrUrl
       ? {
+          testnet: networkFromParams.chainId === BraveWallet.Z_CASH_TESTNET,
+          use_shielded_pool: query.get('isShielded') === 'true',
           address: toAddressOrUrl,
-          testnet: networkFromParams.chainId === BraveWallet.Z_CASH_TESTNET
         }
       : skipToken
   )
@@ -178,8 +177,7 @@ export const SendScreen = React.memo((props: Props) => {
       return
     }
 
-    const contractOrSymbol = query.get('token')
-    if (!contractOrSymbol) {
+    if (!contractOrSymbolFromParams) {
       return
     }
 
@@ -191,18 +189,24 @@ export const SendScreen = React.memo((props: Props) => {
       tokenId
         ? token.chainId === networkFromParams.chainId &&
           token.contractAddress.toLowerCase() ===
-            contractOrSymbol.toLowerCase() &&
+            contractOrSymbolFromParams.toLowerCase() &&
           token.tokenId === tokenId &&
           token.isShielded === isShielded
         : (token.chainId === networkFromParams.chainId &&
             token.contractAddress.toLowerCase() ===
-              contractOrSymbol.toLowerCase()) ||
+              contractOrSymbolFromParams.toLowerCase()) ||
           (token.chainId === networkFromParams.chainId &&
             token.contractAddress === '' &&
-            token.symbol.toLowerCase() === contractOrSymbol.toLowerCase()) &&
-          token.isShielded === isShielded
+            token.symbol.toLowerCase() ===
+              contractOrSymbolFromParams.toLowerCase() &&
+            token.isShielded === isShielded)
     )
-  }, [userVisibleTokensInfo, query, networkFromParams])
+  }, [
+    userVisibleTokensInfo,
+    query,
+    networkFromParams,
+    contractOrSymbolFromParams
+  ])
 
   const { data: tokenBalancesRegistry, isLoading: isLoadingBalances } =
     useScopedBalanceUpdater(
@@ -214,6 +218,8 @@ export const SendScreen = React.memo((props: Props) => {
           }
         : skipToken
     )
+
+  const isAccountSyncing = useIsAccountSyncing(accountFromParams?.accountId)
 
   // memos & computed
   const sendAmountValidationError: AmountValidationErrorType | undefined =
@@ -257,6 +263,11 @@ export const SendScreen = React.memo((props: Props) => {
   const tokenColor = React.useMemo(() => {
     return getDominantColorFromImageURL(tokenFromParams?.logo ?? '')
   }, [tokenFromParams?.logo])
+
+  const needsAccountSelected =
+    accountIdFromParams === undefined &&
+    contractOrSymbolFromParams !== undefined &&
+    chainIdFromParams !== undefined
 
   // Methods
   const selectSendAsset = React.useCallback(
@@ -508,6 +519,13 @@ export const SendScreen = React.memo((props: Props) => {
     isModalShown: showSelectAddressModal
   } = useModal()
 
+  // Effects
+  React.useEffect(() => {
+    if (needsAccountSelected) {
+      openSelectTokenModal()
+    }
+  }, [needsAccountSelected, openSelectTokenModal])
+
   // render
   return (
     <>
@@ -589,9 +607,12 @@ export const SendScreen = React.memo((props: Props) => {
                 )}
                 {isZCashShieldedTransactionsEnabled &&
                   tokenFromParams?.coin === BraveWallet.CoinType.ZEC &&
+                  getZCashTransactionTypeResult &&
                   toAddressOrUrl &&
-                  zecAddressValidationResult ===
-                    BraveWallet.ZCashAddressValidationResult.ValidShielded && (
+                  (getZCashTransactionTypeResult.txType ===
+                    BraveWallet.ZCashTxType.kTransparentToOrchard ||
+                    getZCashTransactionTypeResult.txType ===
+                    BraveWallet.ZCashTxType.kOrchardToOrchard) && (
                     <AddMemo
                       memoText={memoText}
                       onUpdateMemoText={setMemoText}
@@ -610,13 +631,15 @@ export const SendScreen = React.memo((props: Props) => {
                     parseFloat(sendAmount) === 0 ||
                     Boolean(sendAmountValidationError) ||
                     (tokenFromParams?.coin === BraveWallet.CoinType.BTC &&
-                      !isWarningAcknowledged)
+                      !isWarningAcknowledged) ||
+                    isAccountSyncing
                   }
                 >
                   {getLocale(
                     getReviewButtonText(
                       sendAmountValidationError,
-                      insufficientFundsError
+                      insufficientFundsError,
+                      isAccountSyncing
                     )
                   ).replace('$1', CoinTypesMap[networkFromParams?.coin ?? 0])}
                 </LeoSquaredButton>
@@ -644,6 +667,8 @@ export const SendScreen = React.memo((props: Props) => {
           ref={selectTokenModalRef}
           onSelectAsset={selectSendAsset}
           onSelectSendOption={onSelectSendOption}
+          selectedFromToken={needsAccountSelected ? tokenFromParams : undefined}
+          needsAccount={needsAccountSelected}
           selectingFromOrTo='from'
           modalType='send'
         />
@@ -666,13 +691,17 @@ function ethToWeiAmount(
 
 function getReviewButtonText(
   sendAmountValidationError: string | undefined,
-  insufficientFundsError: boolean
+  insufficientFundsError: boolean,
+  isAccountSyncing?: boolean
 ) {
   if (sendAmountValidationError) {
     return 'braveWalletDecimalPlacesError'
   }
   if (insufficientFundsError) {
     return 'braveWalletNotEnoughFunds'
+  }
+  if (isAccountSyncing) {
+    return 'braveWalletAccountIsSyncing'
   }
 
   return 'braveWalletReviewSend'

@@ -66,7 +66,7 @@ class MessageManager : public MetricLogStore::Delegate {
                  const P3AConfig* config,
                  Delegate& delegate,
                  std::string channel,
-                 std::string week_of_install);
+                 base::Time first_run_time);
   ~MessageManager() override;
 
   MessageManager(const MessageManager&) = delete;
@@ -87,6 +87,9 @@ class MessageManager : public MetricLogStore::Delegate {
   void RemoveMetricValue(
       std::string_view histogram_name,
       std::optional<bool> only_update_for_constellation = std::nullopt);
+
+  const std::optional<MetricConfig>* GetMetricConfig(
+      std::string_view histogram_name) const;
 
  private:
   void StartScheduledUpload(bool is_constellation, MetricLogType log_type);
@@ -113,6 +116,8 @@ class MessageManager : public MetricLogStore::Delegate {
   void DoJsonRotation(MetricLogType log_type);
 
   void DoConstellationRotation(MetricLogType log_type);
+
+  void CleanupActivationDates();
 
   // MetricLogStore::Delegate
   std::string SerializeLog(std::string_view histogram_name,

@@ -36,9 +36,9 @@ class ReadabilityOperation: Operation {
       let configuration = WKWebViewConfiguration()
       self.tab = Tab(configuration: configuration)
       self.tab.createWebview()
-      self.tab.navigationDelegate = self
+      self.tab.webView?.navigationDelegate = self
 
-      let readerMode = ReaderModeScriptHandler(tab: self.tab)
+      let readerMode = ReaderModeScriptHandler()
       readerMode.delegate = self
       self.tab.addContentScript(
         readerMode,
@@ -99,6 +99,13 @@ extension ReadabilityOperation: WKNavigationDelegate {
       functionName: "\(readerModeNamespace).checkReadability",
       contentWorld: ReaderModeScriptHandler.scriptSandbox
     )
+  }
+
+  func webView(
+    _ webView: WKWebView,
+    shouldAllowDeprecatedTLSFor challenge: URLAuthenticationChallenge
+  ) async -> Bool {
+    return false
   }
 }
 

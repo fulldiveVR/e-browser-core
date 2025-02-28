@@ -9,13 +9,6 @@ import WebKit
 import os.log
 
 class BraveLeoScriptHandler: NSObject, TabContentScript {
-  fileprivate weak var tab: Tab?
-
-  init(tab: Tab) {
-    self.tab = tab
-    super.init()
-  }
-
   static let getMainArticle = "getMainArticle\(uniqueID)"
   static let getPDFDocument = "getPDFDocument\(uniqueID)"
 
@@ -44,10 +37,10 @@ class BraveLeoScriptHandler: NSObject, TabContentScript {
     )
   }()
 
-  func userContentController(
-    _ userContentController: WKUserContentController,
-    didReceiveScriptMessage message: WKScriptMessage,
-    replyHandler: (Any?, String?) -> Void
+  func tab(
+    _ tab: Tab,
+    receivedScriptMessage message: WKScriptMessage,
+    replyHandler: @escaping (Any?, String?) -> Void
   ) {
     defer { replyHandler(nil, nil) }
 
@@ -58,26 +51,44 @@ class BraveLeoScriptHandler: NSObject, TabContentScript {
   }
 }
 
-extension BraveLeoScriptHandler: AIChatJavascript {
+class BraveLeoScriptTabHelper: AIChatWebDelegate {
+  weak var tab: Tab?
 
-  @MainActor
-  static func getPageContentType(webView: WKWebView) async -> String? {
+  init(tab: Tab) {
+    self.tab = tab
+  }
+
+  var isLoading: Bool {
+    tab?.loading == true
+  }
+
+  var title: String? {
+    tab?.title
+  }
+
+  var url: URL? {
+    tab?.url
+  }
+
+  func getPageContentType() async -> String? {
+    guard let webView = tab?.webView else { return nil }
     return try? await webView.evaluateSafeJavaScriptThrowing(
       functionName: "document.contentType",
-      contentWorld: Self.scriptSandbox,
+      contentWorld: BraveLeoScriptHandler.scriptSandbox,
       escapeArgs: false,
       asFunction: false
     ) as? String
   }
 
   @MainActor
-  static func getMainArticle(webView: WKWebView) async -> String? {
+  func getMainArticle() async -> String? {
+    guard let webView = tab?.webView else { return nil }
     do {
       let articleText =
         try await webView.evaluateSafeJavaScriptThrowing(
-          functionName: "window.__firefox__.\(getMainArticle)",
-          args: [Self.scriptId],
-          contentWorld: Self.scriptSandbox,
+          functionName: "window.__firefox__.\(BraveLeoScriptHandler.getMainArticle)",
+          args: [BraveLeoScriptHandler.scriptId],
+          contentWorld: BraveLeoScriptHandler.scriptSandbox,
           asFunction: true
         ) as? String
       return articleText
@@ -88,7 +99,8 @@ extension BraveLeoScriptHandler: AIChatJavascript {
   }
 
   @MainActor
-  static func getPDFDocument(webView: WKWebView) async -> String? {
+  func getPDFDocument() async -> String? {
+    guard let webView = tab?.webView else { return nil }
     // po webView.perform(Selector("_methodDescription"))
     if webView.responds(to: Selector(("_dataForDisplayedPDF"))),
       let pdfData = webView.perform(Selector(("_dataForDisplayedPDF"))).takeUnretainedValue()
@@ -126,15 +138,16 @@ extension BraveLeoScriptHandler: AIChatJavascript {
 
       return window.btoa(binaryString.join(''));
       """,
-      contentWorld: Self.scriptSandbox
+      contentWorld: BraveLeoScriptHandler.scriptSandbox
     ) as? String
   }
 
   @MainActor
-  static func getPrintViewPDF(webView: WKWebView) async -> Data {
+  func getPrintViewPDF() async -> Data? {
+    guard let viewPrintFormatter = tab?.webView?.viewPrintFormatter() else { return nil }
     // No article text. Attempt to parse the page as a PDF/Image
     let render = UIPrintPageRenderer()
-    render.addPrintFormatter(webView.viewPrintFormatter(), startingAtPageAt: 0)
+    render.addPrintFormatter(viewPrintFormatter, startingAtPageAt: 0)
 
     let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)  // A4, 72 dpi
     let printable = page.insetBy(dx: 0, dy: 0)
