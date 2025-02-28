@@ -239,15 +239,12 @@ void BraveAppMenu::RecordMenuUsage(int command_id) {
     case IDC_NEW_WINDOW:
     case IDC_NEW_TAB:
     case IDC_NEW_INCOGNITO_WINDOW:
-    case IDC_NEW_OFFTHERECORD_WINDOW_TOR:
     case IDC_OPEN_GUEST_PROFILE:
       group = misc_metrics::MenuGroup::kTabWindow;
       break;
-    case IDC_SHOW_BRAVE_WALLET:
     case IDC_TOGGLE_AI_CHAT:
     case IDC_OPEN_FULL_PAGE_CHAT:
     case IDC_SHOW_BRAVE_SYNC:
-    case IDC_SHOW_BRAVE_REWARDS:
       group = misc_metrics::MenuGroup::kBraveFeatures;
       break;
     case IDC_SHOW_HISTORY:

@@ -113,9 +113,6 @@ class SearchEngineTracker : public KeyedService,
   // TemplateURLServiceObserver overrides:
   void OnTemplateURLServiceChanged() override;
 
-#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-  void RecordWebDiscoveryEnabledP3A();
-#endif
 
   base::ScopedObservation<TemplateURLService, TemplateURLServiceObserver>
       observer_{this};
@@ -133,9 +130,6 @@ class SearchEngineTracker : public KeyedService,
 
   raw_ptr<TemplateURLService> template_url_service_ = nullptr;
 
-#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-  PrefChangeRegistrar pref_change_registrar_;
-#endif
 };
 
 #endif  // BRAVE_BROWSER_SEARCH_ENGINES_SEARCH_ENGINE_TRACKER_H_

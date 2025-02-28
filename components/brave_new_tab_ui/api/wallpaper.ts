@@ -13,6 +13,3 @@ export function registerViewCount (): Promise<void> {
   return sendWithPromise('registerNewTabPageView')
 }
 
-export function brandedWallpaperLogoClicked (data: NewTab.BrandedWallpaper | undefined) {
-  chrome.send('brandedWallpaperLogoClicked', [data])
-}

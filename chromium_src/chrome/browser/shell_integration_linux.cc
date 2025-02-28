@@ -21,7 +21,7 @@ bool IsAnyBraveBrowserDefaultBrowser() {
   std::string browser;
   // We don't care about the return value here.
   base::GetAppOutput(base::CommandLine(argv), &browser);
-  return browser.find("brave-browser") != std::string::npos;
+  return browser.find("aiwize-browser") != std::string::npos;
 }
 
 DefaultWebClientState GetDefaultBrowser() {

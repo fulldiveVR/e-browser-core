@@ -27,7 +27,7 @@
 void TabHoverCardBubbleView_ChromiumImpl::BraveUpdateCardContent(
     const Tab* tab) {
   TabHoverCardBubbleView_ChromiumImpl::UpdateCardContent(tab);
-  // Replace chrome:// with brave://. Since this is purely in the UI we can
+  // Replace chrome:// with aiwize://. Since this is purely in the UI we can
   // just do a sub-string replacement instead of parsing into GURL.
   std::u16string domain = domain_label_->GetText();
   if (brave_utils::ReplaceChromeToBraveScheme(domain)) {

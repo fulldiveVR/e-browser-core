@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "L'extensió de Brave",
+    "message": "L'extensi\u00f3 de AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Estàs navegant en aquesta web sense les proteccions de privacitat i seguretat de Brave. No et funciona bé amb els Escuts activats?",
+    "message": "Est\u00e0s navegant en aquesta web sense les proteccions de privacitat i seguretat de AI Wize. No et funciona b\u00e9 amb els Escuts activats?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Informa d'una pàgina web inexistent",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Informa d'una p\u00e0gina web inexistent",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Elements bloquejats",
@@ -48,7 +48,7 @@
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "connexió actualitzada",
+    "message": "connexi\u00f3 actualitzada",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
@@ -64,7 +64,7 @@
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Rastrejadors i anuncis bloquejats (estàndard)",
+    "message": "Rastrejadors i anuncis bloquejats (est\u00e0ndard)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
@@ -76,11 +76,11 @@
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Connexió actualitzada a HTTPS",
+    "message": "Connexi\u00f3 actualitzada a HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Totes les seqüències d'ordres estan bloquejades",
+    "message": "Totes les seq\u00fc\u00e8ncies d'ordres estan bloquejades",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
@@ -100,7 +100,7 @@
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Empremtes dactilars bloquejades (estàndard)",
+    "message": "Empremtes dactilars bloquejades (est\u00e0ndard)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
@@ -112,19 +112,19 @@
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Intents d'identificació per empremta dactilar",
+    "message": "Intents d'identificaci\u00f3 per empremta dactilar",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Hi ha seqüències d'ordres en aquest lloc",
+    "message": "Hi ha seq\u00fc\u00e8ncies d'ordres en aquest lloc",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Seqüències d'ordres bloquejades",
+    "message": "Seq\u00fc\u00e8ncies d'ordres bloquejades",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Seqüències d'ordres permeses",
+    "message": "Seq\u00fc\u00e8ncies d'ordres permeses",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
@@ -148,7 +148,7 @@
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "S'ha permès un cop",
+    "message": "S'ha perm\u00e8s un cop",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
@@ -156,7 +156,7 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Cancel·la",
+    "message": "Cancel\u00b7la",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
@@ -168,7 +168,7 @@
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Canvia els paràmetres per defecte de l’escut global",
+    "message": "Canvia els par\u00e0metres per defecte de l\u2019escut global",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
@@ -180,7 +180,7 @@
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Vista avançada",
+    "message": "Vista avan\u00e7ada",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
@@ -188,15 +188,15 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sovint els llocs inclouen galetes i scripts que proven d'identificar-te a tu i al teu dispositiu (sovint incrustats en anuncis). Volen esbrinar qui ets i seguir-te a través de la xarxa, rastrejant el que fas a cada lloc. Brave bloca aquestes coses de manera que puguis navegar sense que et segueixin.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sovint els llocs inclouen galetes i scripts que proven d'identificar-te a tu i al teu dispositiu (sovint incrustats en anuncis). Volen esbrinar qui ets i seguir-te a trav\u00e9s de la xarxa, rastrejant el que fas a cada lloc. AI Wize bloca aquestes coses de manera que puguis navegar sense que et segueixin.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Rastrejadors entre dominis i altres coses inquietants bloquejades",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "En aquesta vista, canviar la configuració d'Escut pot afectar a la compatibilitat web d'aquest lloc.",
+    "message": "En aquesta vista, canviar la configuraci\u00f3 d'Escut pot afectar a la compatibilitat web d'aquest lloc.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,16 +204,16 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Saber més",
+    "message": "Saber m\u00e9s",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Afegeix a Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Afegeix a AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Suprimeix de Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Suprimeix de AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Afegeix a Chrome",
@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Suprimeix de Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Baixades",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Configuraci\u00f3",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historial",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Adreces d'inter\u00e8s",
+    "description": "Bookmarks Label"
   }
 }

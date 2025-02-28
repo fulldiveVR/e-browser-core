@@ -31,7 +31,7 @@ bool RewriteBugReportingURL(const GURL& request_url, GURL* new_url) {
   for (const auto& pair : pairs) {
     if (pair.first == "comment") {
       query += "&body=" + pair.second;
-      base::ReplaceSubstringsAfterOffset(&query, 0, "Chrome", "Brave");
+      base::ReplaceSubstringsAfterOffset(&query, 0, "Chrome", "AIWize");
     } else if (pair.first != "template" && pair.first != "labels") {
       return false;
     }

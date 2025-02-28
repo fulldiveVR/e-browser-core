@@ -8,7 +8,7 @@
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "päällä",
+    "message": "p\u00e4\u00e4ll\u00e4",
     "description": "Message for when shields is enabled"
   },
   "down": {
@@ -16,20 +16,20 @@
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "tällä sivustolla",
+    "message": "t\u00e4ll\u00e4 sivustolla",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Jos sivusto ei näytä toimivan oikein, kokeile ottaa suojaus pois käytöstä",
+    "message": "Jos sivusto ei n\u00e4yt\u00e4 toimivan oikein, kokeile ottaa suojaus pois k\u00e4yt\u00f6st\u00e4",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Selaat tätä sivustoa ilman Braven yksityisyys- ja tietoturvasuojia. Eikö se toimi oikein kilpien ollessa käytössä?",
+    "message": "Selaat t\u00e4t\u00e4 sivustoa ilman AI Wizen yksityisyys- ja tietoturvasuojia. Eik\u00f6 se toimi oikein kilpien ollessa k\u00e4yt\u00f6ss\u00e4?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Ilmoita toimimattomasta sivustosta",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Kohdetta estetty",
@@ -44,11 +44,11 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "yhteyksiä päivitetty",
+    "message": "yhteyksi\u00e4 p\u00e4ivitetty",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "yhteys päivitetty",
+    "message": "yhteys p\u00e4ivitetty",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
@@ -72,11 +72,11 @@
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Yhteys päivitetty HTTPS:ään",
+    "message": "Yhteys p\u00e4ivitetty HTTPS:\u00e4\u00e4n",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Yhteys päivitetty HTTPS:ään",
+    "message": "Yhteys p\u00e4ivitetty HTTPS:\u00e4\u00e4n",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -84,15 +84,15 @@
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Cross-site-evästeet estetty",
+    "message": "Cross-site-ev\u00e4steet estetty",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Evästeet estetty",
+    "message": "Ev\u00e4steet estetty",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Kaikki evästeet sallittu",
+    "message": "Kaikki ev\u00e4steet sallittu",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
@@ -100,23 +100,23 @@
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Sormenjälkitunnistus estetty (standardi)",
+    "message": "Sormenj\u00e4lkitunnistus estetty (standardi)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Sormenjälkitunnistus estetty (ankara, voi rikkoa sivustoja)",
+    "message": "Sormenj\u00e4lkitunnistus estetty (ankara, voi rikkoa sivustoja)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Salli kaikki sormenjälkitunnistaminen",
+    "message": "Salli kaikki sormenj\u00e4lkitunnistaminen",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Sormenjälkitunnistuksen asetusyritykset",
+    "message": "Sormenj\u00e4lkitunnistuksen asetusyritykset",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Tämän sivuston skriptit",
+    "message": "T\u00e4m\u00e4n sivuston skriptit",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
@@ -128,7 +128,7 @@
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Estä kaikki",
+    "message": "Est\u00e4 kaikki",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
@@ -136,7 +136,7 @@
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Estä",
+    "message": "Est\u00e4",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
@@ -164,7 +164,7 @@
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Käytä kerran",
+    "message": "K\u00e4yt\u00e4 kerran",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
@@ -176,51 +176,67 @@
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Estä elementti",
+    "message": "Est\u00e4 elementti",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Tarkennettu näkymä",
+    "message": "Tarkennettu n\u00e4kym\u00e4",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Pelkistetty näkymä",
+    "message": "Pelkistetty n\u00e4kym\u00e4",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sivustoihin sisältyy usein evästeitä ja komentosarjoja (usein mainoksiin upotettuina), jotka yrittävät tunnistaa sinut ja laitteesi. Ne yrittävät selvittää henkilöllisyytesi ja jäljittää sinua verkossa seuraamalla, mitä teet kaikilla vierailemillasi sivustoilla. Brave estää ne, jotta voit selata verkkoa ilman seuratuksi tulemista.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sivustoihin sis\u00e4ltyy usein ev\u00e4steit\u00e4 ja komentosarjoja (usein mainoksiin upotettuina), jotka yritt\u00e4v\u00e4t tunnistaa sinut ja laitteesi. Ne yritt\u00e4v\u00e4t selvitt\u00e4\u00e4 henkil\u00f6llisyytesi ja j\u00e4ljitt\u00e4\u00e4 sinua verkossa seuraamalla, mit\u00e4 teet kaikilla vierailemillasi sivustoilla. AI Wize est\u00e4\u00e4 ne, jotta voit selata verkkoa ilman seuratuksi tulemista.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Sivustojen välistä seurantasovellusta (cross-site trackers) ja muuta ikävää juttua estetty",
+    "message": "Sivustojen v\u00e4list\u00e4 seurantasovellusta (cross-site trackers) ja muuta ik\u00e4v\u00e4\u00e4 juttua estetty",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Shield-asetusten muuttaminen tässä näkymässä saattaa vaikuttaa tämän sivuston verkkoyhteensopivuuteen.",
+    "message": "Shield-asetusten muuttaminen t\u00e4ss\u00e4 n\u00e4kym\u00e4ss\u00e4 saattaa vaikuttaa t\u00e4m\u00e4n sivuston verkkoyhteensopivuuteen.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Ymmärretty",
+    "message": "Ymm\u00e4rretty",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Lisätietoja",
+    "message": "Lis\u00e4tietoja",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Lisää Braveiin",
-    "description": "Message for adding an extension to Brave"
+    "message": "Lis\u00e4\u00e4 AI Wizeiin",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Poista Bravesta",
-    "description": "Message for removing an extension from Brave"
+    "message": "Poista AI Wizesta",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Lisää Chromeen",
+    "message": "Lis\u00e4\u00e4 Chromeen",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
     "message": "Poista Chromesta",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Lataukset",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Asetukset",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historia",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Kirjanmerkit",
+    "description": "Bookmarks Label"
   }
 }

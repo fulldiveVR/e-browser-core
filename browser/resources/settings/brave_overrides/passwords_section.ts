@@ -9,7 +9,7 @@ RegisterPolymerTemplateModifications({
   'passwords-section': (templateContent) => {
     const checkPasswordsLinkRow = templateContent.querySelector('#checkPasswordsLinkRow')
     if (!checkPasswordsLinkRow) {
-      console.error('[Brave Settings Overrides] Could not find checkPasswordsLinkRow in passwords_section')
+      console.error('[AI Wize Settings Overrides] Could not find checkPasswordsLinkRow in passwords_section')
     } else {
       checkPasswordsLinkRow.remove()
     }

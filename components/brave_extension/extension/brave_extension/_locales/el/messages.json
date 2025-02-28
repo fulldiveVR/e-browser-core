@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Η Επέκταση Brave",
+    "message": "\u0397 \u0395\u03c0\u03ad\u03ba\u03c4\u03b1\u03c3\u03b7 AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Ασπίδες",
+    "message": "\u0391\u03c3\u03c0\u03af\u03b4\u03b5\u03c2",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "ενεργοποιημένο",
+    "message": "\u03b5\u03bd\u03b5\u03c1\u03b3\u03bf\u03c0\u03bf\u03b9\u03b7\u03bc\u03ad\u03bd\u03bf",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "απενεργοποιημένο",
+    "message": "\u03b1\u03c0\u03b5\u03bd\u03b5\u03c1\u03b3\u03bf\u03c0\u03bf\u03b9\u03b7\u03bc\u03ad\u03bd\u03bf",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "γι' αυτόν τον ιστότοπο",
+    "message": "\u03b3\u03b9' \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Αν μια ιστοσελίδα δείχνει να μη λειτουργεί, δοκιμάστε να απενεργοποιήσετε τις ασπίδες",
+    "message": "\u0391\u03bd \u03bc\u03b9\u03b1 \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1 \u03b4\u03b5\u03af\u03c7\u03bd\u03b5\u03b9 \u03bd\u03b1 \u03bc\u03b7 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b5\u03af, \u03b4\u03bf\u03ba\u03b9\u03bc\u03ac\u03c3\u03c4\u03b5 \u03bd\u03b1 \u03b1\u03c0\u03b5\u03bd\u03b5\u03c1\u03b3\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03b5\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03b1\u03c3\u03c0\u03af\u03b4\u03b5\u03c2",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Περιηγείστε σ' αυτόν τον ιστότοπο χωρίς τις προστασίες απορρήτου και ασφάλειας του Brave. Δεν λειτουργεί σωστά με τις Ασπίδες ενεργοποιημένες;",
+    "message": "\u03a0\u03b5\u03c1\u03b9\u03b7\u03b3\u03b5\u03af\u03c3\u03c4\u03b5 \u03c3' \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf \u03c7\u03c9\u03c1\u03af\u03c2 \u03c4\u03b9\u03c2 \u03c0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b5\u03c2 \u03b1\u03c0\u03bf\u03c1\u03c1\u03ae\u03c4\u03bf\u03c5 \u03ba\u03b1\u03b9 \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2 \u03c4\u03bf\u03c5 AI Wize. \u0394\u03b5\u03bd \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b5\u03af \u03c3\u03c9\u03c3\u03c4\u03ac \u03bc\u03b5 \u03c4\u03b9\u03c2 \u0391\u03c3\u03c0\u03af\u03b4\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03bf\u03c0\u03bf\u03b9\u03b7\u03bc\u03ad\u03bd\u03b5\u03c2;",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Αναφέρετε μη λειτουργούντα ιστότοπο",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u0391\u03bd\u03b1\u03c6\u03ad\u03c1\u03b5\u03c4\u03b5 \u03bc\u03b7 \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03bf\u03cd\u03bd\u03c4\u03b1 \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Αποκλεισμένα στοιχεία",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03ad\u03bd\u03b1 \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03b1",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Αποκλεισμένο στοιχείο",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03bf",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "και",
+    "message": "\u03ba\u03b1\u03b9",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "συνδέσεις αναβαθμίστηκαν",
+    "message": "\u03c3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2 \u03b1\u03bd\u03b1\u03b2\u03b1\u03b8\u03bc\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "σύνδεση αναβαθμίστηκε",
+    "message": "\u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7 \u03b1\u03bd\u03b1\u03b2\u03b1\u03b8\u03bc\u03af\u03c3\u03c4\u03b7\u03ba\u03b5",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Οι ιχνηλάτες μεταξύ ιστοτόπων αποκλείστηκαν",
+    "message": "\u039f\u03b9 \u03b9\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 \u03bc\u03b5\u03c4\u03b1\u03be\u03cd \u03b9\u03c3\u03c4\u03bf\u03c4\u03cc\u03c0\u03c9\u03bd \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Ιχνηλάτες & διαφημίσεις αποκλείστηκαν",
+    "message": "\u0399\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 & \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Ιχνηλάτες & διαφημίσεις αποκλείστηκαν (επιθετικό)",
+    "message": "\u0399\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 & \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd (\u03b5\u03c0\u03b9\u03b8\u03b5\u03c4\u03b9\u03ba\u03cc)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Ιχνηλάτες & διαφημίσεις αποκλείστηκαν (τυπικό)",
+    "message": "\u0399\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 & \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd (\u03c4\u03c5\u03c0\u03b9\u03ba\u03cc)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Να επιτρέπονται όλοι οι ιχνηλάτες & διαφημίσεις",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03cc\u03bb\u03bf\u03b9 \u03bf\u03b9 \u03b9\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 & \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Οι συνδέσεις αναβαθμίστηκαν σε HTTPS",
+    "message": "\u039f\u03b9 \u03c3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2 \u03b1\u03bd\u03b1\u03b2\u03b1\u03b8\u03bc\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd \u03c3\u03b5 HTTPS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Η σύνδεση αναβαθμίστηκε σε HTTPS",
+    "message": "\u0397 \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7 \u03b1\u03bd\u03b1\u03b2\u03b1\u03b8\u03bc\u03af\u03c3\u03c4\u03b7\u03ba\u03b5 \u03c3\u03b5 HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Αποκλείστηκαν δέσμες ενεργειών",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd \u03b4\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Τα cookies μεταξύ ιστοτόπων αποκλείστηκαν",
+    "message": "\u03a4\u03b1 cookies \u03bc\u03b5\u03c4\u03b1\u03be\u03cd \u03b9\u03c3\u03c4\u03bf\u03c4\u03cc\u03c0\u03c9\u03bd \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Τα cookies έχουν αποκλειστεί",
+    "message": "\u03a4\u03b1 cookies \u03ad\u03c7\u03bf\u03c5\u03bd \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03c4\u03b5\u03af",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Να επιτρέπονται όλα τα cookies",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03cc\u03bb\u03b1 \u03c4\u03b1 cookies",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Έγινε αποκλεισμός δακτυλικών αποτυπωμάτων",
+    "message": "\u0388\u03b3\u03b9\u03bd\u03b5 \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2 \u03b4\u03b1\u03ba\u03c4\u03c5\u03bb\u03b9\u03ba\u03ce\u03bd \u03b1\u03c0\u03bf\u03c4\u03c5\u03c0\u03c9\u03bc\u03ac\u03c4\u03c9\u03bd",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Αποκλεισμός δακτυλικών αποτυπωμάτων (τυπικό)",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2 \u03b4\u03b1\u03ba\u03c4\u03c5\u03bb\u03b9\u03ba\u03ce\u03bd \u03b1\u03c0\u03bf\u03c4\u03c5\u03c0\u03c9\u03bc\u03ac\u03c4\u03c9\u03bd (\u03c4\u03c5\u03c0\u03b9\u03ba\u03cc)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Αποκλεισμός δακτυλικών αποτυπωμάτων (αυστηρό, ενδέχεται να αποκόψει ιστότοπους)",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2 \u03b4\u03b1\u03ba\u03c4\u03c5\u03bb\u03b9\u03ba\u03ce\u03bd \u03b1\u03c0\u03bf\u03c4\u03c5\u03c0\u03c9\u03bc\u03ac\u03c4\u03c9\u03bd (\u03b1\u03c5\u03c3\u03c4\u03b7\u03c1\u03cc, \u03b5\u03bd\u03b4\u03ad\u03c7\u03b5\u03c4\u03b1\u03b9 \u03bd\u03b1 \u03b1\u03c0\u03bf\u03ba\u03cc\u03c8\u03b5\u03b9 \u03b9\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf\u03c5\u03c2)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Να επιτρέπονται όλα τα δακτυλικά αποτυπώματα",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03cc\u03bb\u03b1 \u03c4\u03b1 \u03b4\u03b1\u03ba\u03c4\u03c5\u03bb\u03b9\u03ba\u03ac \u03b1\u03c0\u03bf\u03c4\u03c5\u03c0\u03ce\u03bc\u03b1\u03c4\u03b1",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Προσπάθειες αποτύπωσης",
+    "message": "\u03a0\u03c1\u03bf\u03c3\u03c0\u03ac\u03b8\u03b5\u03b9\u03b5\u03c2 \u03b1\u03c0\u03bf\u03c4\u03cd\u03c0\u03c9\u03c3\u03b7\u03c2",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Δέσμες ενεργειών σε αυτήν την ιστοσελίδα",
+    "message": "\u0394\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Αποκλεισμένες δέσμες ενεργειών",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03ad\u03bd\u03b5\u03c2 \u03b4\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Επιτρεπόμενες δέσμες ενεργειών",
+    "message": "\u0395\u03c0\u03b9\u03c4\u03c1\u03b5\u03c0\u03cc\u03bc\u03b5\u03bd\u03b5\u03c2 \u03b4\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Αποκλεισμός όλων",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2 \u03cc\u03bb\u03c9\u03bd",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Να επιτρέπονται όλα",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03cc\u03bb\u03b1",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Αποκλεισμός",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Να επιτρέπεται",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03b5\u03c4\u03b1\u03b9",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Αποκλείστηκε μία φορά",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b5 \u03bc\u03af\u03b1 \u03c6\u03bf\u03c1\u03ac",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Επιτράπηκε μία φορά",
+    "message": "\u0395\u03c0\u03b9\u03c4\u03c1\u03ac\u03c0\u03b7\u03ba\u03b5 \u03bc\u03af\u03b1 \u03c6\u03bf\u03c1\u03ac",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Να επιτρέπονται οι δέσμες ενεργειών μία φορά",
+    "message": "\u039d\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bf\u03b9 \u03b4\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd \u03bc\u03af\u03b1 \u03c6\u03bf\u03c1\u03ac",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Ακύρωση",
+    "message": "\u0391\u03ba\u03cd\u03c1\u03c9\u03c3\u03b7",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Πίσω",
+    "message": "\u03a0\u03af\u03c3\u03c9",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Εφαρμόστε μία φορά",
+    "message": "\u0395\u03c6\u03b1\u03c1\u03bc\u03cc\u03c3\u03c4\u03b5 \u03bc\u03af\u03b1 \u03c6\u03bf\u03c1\u03ac",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Αλλάξτε τις προεπιλογές καθολικής ασπίδας",
+    "message": "\u0391\u03bb\u03bb\u03ac\u03be\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03c0\u03c1\u03bf\u03b5\u03c0\u03b9\u03bb\u03bf\u03b3\u03ad\u03c2 \u03ba\u03b1\u03b8\u03bf\u03bb\u03b9\u03ba\u03ae\u03c2 \u03b1\u03c3\u03c0\u03af\u03b4\u03b1\u03c2",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Διαχείριση προσαρμοσμένων φίλτρων",
+    "message": "\u0394\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7 \u03c0\u03c1\u03bf\u03c3\u03b1\u03c1\u03bc\u03bf\u03c3\u03bc\u03ad\u03bd\u03c9\u03bd \u03c6\u03af\u03bb\u03c4\u03c1\u03c9\u03bd",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Αποκλεισμός στοιχείου",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03b9\u03c3\u03bc\u03cc\u03c2 \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03bf\u03c5",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Προβολή για Προχωρημένους",
+    "message": "\u03a0\u03c1\u03bf\u03b2\u03bf\u03bb\u03ae \u03b3\u03b9\u03b1 \u03a0\u03c1\u03bf\u03c7\u03c9\u03c1\u03b7\u03bc\u03ad\u03bd\u03bf\u03c5\u03c2",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Απλή προβολή",
+    "message": "\u0391\u03c0\u03bb\u03ae \u03c0\u03c1\u03bf\u03b2\u03bf\u03bb\u03ae",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Οι ιστοσελίδες περιλαμβάνουν συχνά cookies και δέσμες ενεργειών που προσπαθούν να αναγνωρίσουν εσάς και τη συσκευή σας (συχνά ενσωματωμένα σε διαφημίσεις). Θέλουν να βρουν ποιος είστε και σας ακολουθούν στον ιστό — παρακολουθώντας τι κάνετε σε κάθε ιστοσελίδα. Το Brave αποκλείει αυτά τα πράγματα έτσι ώστε να μπορείτε να περιηγείστε χωρίς να σας ακολουθούν.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u039f\u03b9 \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b5\u03c2 \u03c0\u03b5\u03c1\u03b9\u03bb\u03b1\u03bc\u03b2\u03ac\u03bd\u03bf\u03c5\u03bd \u03c3\u03c5\u03c7\u03bd\u03ac cookies \u03ba\u03b1\u03b9 \u03b4\u03ad\u03c3\u03bc\u03b5\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03b5\u03b9\u03ce\u03bd \u03c0\u03bf\u03c5 \u03c0\u03c1\u03bf\u03c3\u03c0\u03b1\u03b8\u03bf\u03cd\u03bd \u03bd\u03b1 \u03b1\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03af\u03c3\u03bf\u03c5\u03bd \u03b5\u03c3\u03ac\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b7 \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ae \u03c3\u03b1\u03c2 (\u03c3\u03c5\u03c7\u03bd\u03ac \u03b5\u03bd\u03c3\u03c9\u03bc\u03b1\u03c4\u03c9\u03bc\u03ad\u03bd\u03b1 \u03c3\u03b5 \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03b9\u03c2). \u0398\u03ad\u03bb\u03bf\u03c5\u03bd \u03bd\u03b1 \u03b2\u03c1\u03bf\u03c5\u03bd \u03c0\u03bf\u03b9\u03bf\u03c2 \u03b5\u03af\u03c3\u03c4\u03b5 \u03ba\u03b1\u03b9 \u03c3\u03b1\u03c2 \u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03bf\u03cd\u03bd \u03c3\u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc \u2014 \u03c0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03ce\u03bd\u03c4\u03b1\u03c2 \u03c4\u03b9 \u03ba\u03ac\u03bd\u03b5\u03c4\u03b5 \u03c3\u03b5 \u03ba\u03ac\u03b8\u03b5 \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1. \u03a4\u03bf AI Wize \u03b1\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03b5\u03b9 \u03b1\u03c5\u03c4\u03ac \u03c4\u03b1 \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 \u03ad\u03c4\u03c3\u03b9 \u03ce\u03c3\u03c4\u03b5 \u03bd\u03b1 \u03bc\u03c0\u03bf\u03c1\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03c0\u03b5\u03c1\u03b9\u03b7\u03b3\u03b5\u03af\u03c3\u03c4\u03b5 \u03c7\u03c9\u03c1\u03af\u03c2 \u03bd\u03b1 \u03c3\u03b1\u03c2 \u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03bf\u03cd\u03bd.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Αποκλείστηκαν οι διατοποθεσιακοί ιχνηλάτες και άλλα ανατριχιαστικά πράγματα",
+    "message": "\u0391\u03c0\u03bf\u03ba\u03bb\u03b5\u03af\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd \u03bf\u03b9 \u03b4\u03b9\u03b1\u03c4\u03bf\u03c0\u03bf\u03b8\u03b5\u03c3\u03b9\u03b1\u03ba\u03bf\u03af \u03b9\u03c7\u03bd\u03b7\u03bb\u03ac\u03c4\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03ac\u03bb\u03bb\u03b1 \u03b1\u03bd\u03b1\u03c4\u03c1\u03b9\u03c7\u03b9\u03b1\u03c3\u03c4\u03b9\u03ba\u03ac \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Η αλλαγή των ρυθμίσεων Ασπίδων σ' αυτήν την προβολή μπορεί να επηρεάσει τη συμβατότητα με τον ιστό σ' αυτήν την ιστοσελίδα.",
+    "message": "\u0397 \u03b1\u03bb\u03bb\u03b1\u03b3\u03ae \u03c4\u03c9\u03bd \u03c1\u03c5\u03b8\u03bc\u03af\u03c3\u03b5\u03c9\u03bd \u0391\u03c3\u03c0\u03af\u03b4\u03c9\u03bd \u03c3' \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03b2\u03bf\u03bb\u03ae \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03b5\u03c0\u03b7\u03c1\u03b5\u03ac\u03c3\u03b5\u03b9 \u03c4\u03b7 \u03c3\u03c5\u03bc\u03b2\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1 \u03bc\u03b5 \u03c4\u03bf\u03bd \u03b9\u03c3\u03c4\u03cc \u03c3' \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03b9\u03c3\u03c4\u03bf\u03c3\u03b5\u03bb\u03af\u03b4\u03b1.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Κατάλαβα!",
+    "message": "\u039a\u03b1\u03c4\u03ac\u03bb\u03b1\u03b2\u03b1!",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Μάθετε περισσότερα",
+    "message": "\u039c\u03ac\u03b8\u03b5\u03c4\u03b5 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03b1",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Προσθήκη στο Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7 \u03c3\u03c4\u03bf AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Κατάργηση από το Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "\u039a\u03b1\u03c4\u03ac\u03c1\u03b3\u03b7\u03c3\u03b7 \u03b1\u03c0\u03cc \u03c4\u03bf AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "ΠΡΟΣΘΗΚH",
+    "message": "\u03a0\u03a1\u039f\u03a3\u0398\u0397\u039aH",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Κατάργηση από το Chrome",
+    "message": "\u039a\u03b1\u03c4\u03ac\u03c1\u03b3\u03b7\u03c3\u03b7 \u03b1\u03c0\u03cc \u03c4\u03bf Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u039b\u03ae\u03c8\u03b5\u03b9\u03c2",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u03a1\u03c5\u03b8\u03bc\u03af\u03c3\u03b5\u03b9\u03c2",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0399\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03cc",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u03a3\u03b5\u03bb\u03b9\u03b4\u03bf\u03b4\u03b5\u03af\u03ba\u03c4\u03b5\u03c2",
+    "description": "Bookmarks Label"
   }
 }

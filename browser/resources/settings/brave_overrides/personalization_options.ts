@@ -11,7 +11,7 @@ RegisterPolymerTemplateModifications({
   'settings-personalization-options': (templateContent) => {
     const metricsReportingControl = templateContent.getElementById('metricsReportingControl')
     if (!metricsReportingControl) {
-      console.error(`[Brave Settings Overrides] Couldn't find metricsReportingControl`)
+      console.error(`[AI Wize Settings Overrides] Couldn't find metricsReportingControl`)
     } else {
       // Removed because we need to locate metrics reportng option between ours at our settings-brave-personalization-options
       metricsReportingControl.remove()
@@ -20,11 +20,11 @@ RegisterPolymerTemplateModifications({
     // searchSugestToggle is moved to search engines section.
     const searchSuggestToggleTemplate = templateContent.querySelector('template[is="dom-if"][if="[[showSearchSuggestToggle_()]]"]')
     if (!searchSuggestToggleTemplate) {
-      console.error('[Brave Settings Overrides] Could not find searchSuggestToggle template')
+      console.error('[AI Wize Settings Overrides] Could not find searchSuggestToggle template')
     } else {
       const searchSuggestToggle = searchSuggestToggleTemplate.content.getElementById('searchSuggestToggle')
       if (!searchSuggestToggle) {
-        console.error('[Brave Settings Overrides] Could not find searchSuggestToggle id')
+        console.error('[AI Wize Settings Overrides] Could not find searchSuggestToggle id')
       } else {
         searchSuggestToggle.setAttribute('hidden', 'true')
       }

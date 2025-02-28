@@ -10,24 +10,15 @@
 #include "base/strings/string_util.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/brave_features_internal_names.h"
-#include "brave/browser/ethereum_remote_client/buildflags/buildflags.h"
-#include "brave/browser/ethereum_remote_client/features.h"
 #include "brave/browser/ui/brave_ui_features.h"
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
-#include "brave/components/brave_ads/browser/ad_units/notification_ad/custom_notification_ad_feature.h"
-#include "brave/components/brave_ads/core/public/ad_units/notification_ad/notification_ad_feature.h"
-#include "brave/components/brave_ads/core/public/ads_feature.h"
 #include "brave/components/brave_component_updater/browser/features.h"
 #include "brave/components/brave_education/buildflags.h"
 #include "brave/components/brave_news/common/features.h"
-#include "brave/components/brave_rewards/core/buildflags/buildflags.h"
-#include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/buildflags.h"
-#include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/de_amp/common/features.h"
 #include "brave/components/debounce/core/common/features.h"
 #include "brave/components/google_sign_in_permission/features.h"
@@ -36,7 +27,6 @@
 #include "brave/components/psst/common/features.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/skus/common/features.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/webcompat/core/common/features.h"
 #include "build/build_config.h"
 #include "chrome/browser/ui/ui_features.h"
@@ -58,9 +48,6 @@
 #include "brave/components/brave_vpn/common/features.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/common/features.h"
-#endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
 #include "brave/components/playlist/common/features.h"
@@ -96,36 +83,18 @@ const flags_ui::FeatureEntry::FeatureParam
     kZCashShieldedTransactionsDisabled[] = {
         {"zcash_shielded_transactions_enabled", "false"}};
 
-#if BUILDFLAG(ENABLE_ORCHARD)
-const flags_ui::FeatureEntry::FeatureParam kZCashShieldedTransactionsEnabled[] =
-    {{"zcash_shielded_transactions_enabled", "true"}};
-#endif  // BUILDFLAG(ENABLE_ORCHARD)
 
 const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
     {"- Shielded support disabled", kZCashShieldedTransactionsDisabled,
      std::size(kZCashShieldedTransactionsDisabled), nullptr},
-#if BUILDFLAG(ENABLE_ORCHARD)
-    {"- Shielded support enabled", kZCashShieldedTransactionsEnabled,
-     std::size(kZCashShieldedTransactionsEnabled), nullptr}
-#endif  // BUILDFLAG(ENABLE_ORCHARD)
 };
 
-#define SPEEDREADER_FEATURE_ENTRIES                                        \
-  IF_BUILDFLAG(                                                            \
-      ENABLE_SPEEDREADER,                                                  \
-      EXPAND_FEATURE_ENTRIES({                                             \
-          "brave-speedreader",                                             \
-          "Enable SpeedReader",                                            \
-          "Enables faster loading of simplified article-style web pages.", \
-          kOsDesktop | kOsAndroid,                                         \
-          FEATURE_VALUE_TYPE(speedreader::kSpeedreaderFeature),            \
-      }))
 
 #define REQUEST_OTR_FEATURE_ENTRIES                                           \
   IF_BUILDFLAG(                                                               \
       ENABLE_REQUEST_OTR,                                                     \
       EXPAND_FEATURE_ENTRIES({                                                \
-          "brave-request-otr-tab",                                            \
+          "aiwize-request-otr-tab",                                            \
           "Enable Request-OTR Tab",                                           \
           "Suggest going off-the-record when visiting potentially sensitive " \
           "URLs",                                                             \
@@ -137,9 +106,9 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
   IF_BUILDFLAG(                                                                \
       IS_WIN,                                                                  \
       EXPAND_FEATURE_ENTRIES({                                                 \
-          "brave-module-filename-patch",                                       \
+          "aiwize-module-filename-patch",                                       \
           "Enable Module Filename patch",                                      \
-          "Enables patching of executable's name from brave.exe to "           \
+          "Enables patching of executable's name from aiwize.exe to "           \
           "chrome.exe in sandboxed processes.",                                \
           kOsWin,                                                              \
           FEATURE_VALUE_TYPE(sandbox::policy::features::kModuleFileNamePatch), \
@@ -149,7 +118,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
   IF_BUILDFLAG(                                                            \
       IS_WIN,                                                              \
       EXPAND_FEATURE_ENTRIES({                                             \
-          "brave-workaround-new-window-flash",                             \
+          "aiwize-workaround-new-window-flash",                             \
           "Workaround a white flash on new window creation",               \
           "Enable workaround to prevent new windows being created with a " \
           "white background",                                              \
@@ -157,94 +126,26 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(::features::kBraveWorkaroundNewWindowFlash),  \
       }))
 
-#define BRAVE_REWARDS_GEMINI_FEATURE_ENTRIES                               \
-  IF_BUILDFLAG(                                                            \
-      ENABLE_GEMINI_WALLET,                                                \
-      EXPAND_FEATURE_ENTRIES({                                             \
-          "brave-rewards-gemini",                                          \
-          "Enable Gemini for Brave Rewards",                               \
-          "Enables support for Gemini as an external wallet provider for " \
-          "Brave",                                                         \
-          kOsDesktop,                                                      \
-          FEATURE_VALUE_TYPE(brave_rewards::features::kGeminiFeature),     \
-      }))
 
-#define BRAVE_NATIVE_WALLET_FEATURE_ENTRIES                                   \
-  EXPAND_FEATURE_ENTRIES(                                                     \
-      {                                                                       \
-          "native-brave-wallet",                                              \
-          "Enable Brave Wallet",                                              \
-          "Native cryptocurrency wallet support without the use of "          \
-          "extensions",                                                       \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(                                                 \
-              brave_wallet::features::kNativeBraveWalletFeature),             \
-      },                                                                      \
-      {"brave-wallet-zcash", "Enable BraveWallet ZCash support",              \
-       "Zcash support for native Brave Wallet", kOsDesktop | kOsAndroid,      \
-       FEATURE_WITH_PARAMS_VALUE_TYPE(                                        \
-           brave_wallet::features::kBraveWalletZCashFeature,                  \
-           kZCashFeatureVariations, "BraveWalletZCash")},                     \
-      {                                                                       \
-          "brave-wallet-bitcoin",                                             \
-          "Enable Brave Wallet Bitcoin support",                              \
-          "Bitcoin support for native Brave Wallet",                          \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(                                                 \
-              brave_wallet::features::kBraveWalletBitcoinFeature),            \
-      },                                                                      \
-      {                                                                       \
-          "brave-wallet-enable-ankr-balances",                                \
-          "Enable Ankr balances",                                             \
-          "Enable usage of Ankr Advanced API for fetching balances in Brave " \
-          "Wallet",                                                           \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(                                                 \
-              brave_wallet::features::kBraveWalletAnkrBalancesFeature),       \
-      },                                                                      \
-      {                                                                       \
-          "brave-wallet-enable-transaction-simulations",                      \
-          "Enable transaction simulations",                                   \
-          "Enable usage of Blowfish API for running transaction simulations " \
-          "in Brave Wallet",                                                  \
-          kOsDesktop | kOsAndroid,                                            \
-          FEATURE_VALUE_TYPE(brave_wallet::features::                         \
-                                 kBraveWalletTransactionSimulationsFeature),  \
-      })
 
 #define BRAVE_NEWS_FEATURE_ENTRIES                                             \
   EXPAND_FEATURE_ENTRIES(                                                      \
       {                                                                        \
-          "brave-news-peek",                                                   \
-          "Brave News prompts on New Tab Page",                                \
-          "Prompt Brave News via the top featured article peeking up from "    \
+          "aiwize-news-peek",                                                   \
+          "AI Wize News prompts on New Tab Page",                                \
+          "Prompt AI Wize News via the top featured article peeking up from "    \
           "the bottom of the New Tab Page, after a short delay.",              \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsCardPeekFeature), \
       },                                                                       \
       {                                                                        \
-          "brave-news-feed-update",                                            \
-          "Brave News Feed Update",                                            \
-          "Use the updated Brave News feed",                                   \
+          "aiwize-news-feed-update",                                            \
+          "AI Wize News Feed Update",                                            \
+          "Use the updated AI Wize News feed",                                   \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(brave_news::features::kBraveNewsFeedUpdate),      \
       })
 
-#define CRYPTO_WALLETS_FEATURE_ENTRIES                                      \
-  IF_BUILDFLAG(                                                             \
-      ETHEREUM_REMOTE_CLIENT_ENABLED,                                       \
-      EXPAND_FEATURE_ENTRIES({                                              \
-          "ethereum_remote-client_new-installs",                            \
-          "Enable Crypto Wallets option in settings",                       \
-          "Crypto Wallets extension is deprecated but with this option it " \
-          "can "                                                            \
-          "still be enabled in settings. If it was previously used, this "  \
-          "flag is "                                                        \
-          "ignored.",                                                       \
-          kOsDesktop,                                                       \
-          FEATURE_VALUE_TYPE(ethereum_remote_client::features::             \
-                                 kCryptoWalletsForNewInstallsFeature),      \
-      }))
 
 #define PLAYLIST_FEATURE_ENTRIES                                       \
   IF_BUILDFLAG(                                                        \
@@ -269,14 +170,14 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #define BRAVE_COMMANDS_FEATURE_ENTRIES                                      \
   EXPAND_FEATURE_ENTRIES(                                                   \
       {                                                                     \
-          "brave-commands",                                                 \
-          "Brave Commands",                                                 \
+          "aiwize-commands",                                                 \
+          "AI Wize Commands",                                                 \
           "Enable experimental page for viewing and executing commands in " \
-          "Brave",                                                          \
+          "AI Wize",                                                          \
           kOsWin | kOsMac | kOsLinux,                                       \
           FEATURE_VALUE_TYPE(commands::features::kBraveCommands),           \
       },                                                                    \
-      {"brave-commands-omnibox", "Brave Commands in Omnibox",               \
+      {"aiwize-commands-omnibox", "AI Wize Commands in Omnibox",               \
        "Enable quick commands in the omnibox", kOsWin | kOsMac | kOsLinux,  \
        FEATURE_VALUE_TYPE(features::kBraveCommandsInOmnibox)})
 #else
@@ -286,7 +187,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #if BUILDFLAG(IS_LINUX)
 #define BRAVE_CHANGE_ACTIVE_TAB_ON_SCROLL_EVENT_FEATURE_ENTRIES               \
   EXPAND_FEATURE_ENTRIES({                                                    \
-      "brave-change-active-tab-on-scroll-event",                              \
+      "aiwize-change-active-tab-on-scroll-event",                              \
       "Change active tab on scroll event",                                    \
       "Change the active tab when scroll events occur on tab strip.",         \
       kOsLinux,                                                               \
@@ -299,7 +200,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #if BUILDFLAG(IS_ANDROID)
 #define BRAVE_BACKGROUND_VIDEO_PLAYBACK_ANDROID                                \
   EXPAND_FEATURE_ENTRIES({                                                     \
-      "brave-background-video-playback",                                       \
+      "aiwize-background-video-playback",                                       \
       "Background video playback",                                             \
       "Enables play audio from video in background when tab is not active or " \
       "device screen is turned off. Try to switch to desktop mode if this "    \
@@ -310,7 +211,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
   })
 #define BRAVE_SAFE_BROWSING_ANDROID                                           \
   EXPAND_FEATURE_ENTRIES({                                                    \
-      "brave-safe-browsing",                                                  \
+      "aiwize-safe-browsing",                                                  \
       "Safe Browsing",                                                        \
       "Enables Google Safe Browsing for determining whether a URL has been "  \
       "marked as a known threat.",                                            \
@@ -326,28 +227,28 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #define BRAVE_TABS_FEATURE_ENTRIES                                         \
   EXPAND_FEATURE_ENTRIES(                                                  \
       {                                                                    \
-          "brave-shared-pinned-tabs",                                      \
+          "aiwize-shared-pinned-tabs",                                      \
           "Shared pinned tab",                                             \
           "Pinned tabs are shared across windows",                         \
           kOsWin | kOsMac | kOsLinux,                                      \
           FEATURE_VALUE_TYPE(tabs::features::kBraveSharedPinnedTabs),      \
       },                                                                   \
       {                                                                    \
-          "brave-horizontal-tabs-update",                                  \
+          "aiwize-horizontal-tabs-update",                                  \
           "Updated horizontal tabs design",                                \
           "Updates the look and feel or horizontal tabs",                  \
           kOsWin | kOsMac | kOsLinux,                                      \
           FEATURE_VALUE_TYPE(tabs::features::kBraveHorizontalTabsUpdate),  \
       },                                                                   \
       {                                                                    \
-          "brave-compact-horizontal-tabs",                                 \
+          "aiwize-compact-horizontal-tabs",                                 \
           "Compact horizontal tabs design",                                \
           "Reduces the height of horizontal tabs",                         \
           kOsWin | kOsMac | kOsLinux,                                      \
           FEATURE_VALUE_TYPE(tabs::features::kBraveCompactHorizontalTabs), \
       },                                                                   \
       {                                                                    \
-          "brave-vertical-tab-scroll-bar",                                 \
+          "aiwize-vertical-tab-scroll-bar",                                 \
           "Show scroll bar on vertical tab strip",                         \
           "Shows scroll bar on vertical tab strip when it overflows",      \
           kOsWin | kOsMac | kOsLinux,                                      \
@@ -380,36 +281,36 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #define BRAVE_AI_CHAT_FEATURE_ENTRIES                                          \
   EXPAND_FEATURE_ENTRIES(                                                      \
       {                                                                        \
-          "brave-ai-chat",                                                     \
-          "Brave AI Chat",                                                     \
+          "aiwize-ai-chat",                                                     \
+          "AI Wize AI Chat",                                                     \
           "Summarize articles and engage in conversation with AI",             \
           kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kAIChat),                      \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-history",                                             \
-          "Brave AI Chat History",                                             \
+          "aiwize-ai-chat-history",                                             \
+          "AI Wize AI Chat History",                                             \
           "Enables AI Chat History persistence and management",                \
           kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kAIChatHistory),               \
       },                                                                       \
       {                                                                        \
-          "brave-ai-host-specific-distillation",                               \
-          "Brave AI Host-Specific Distillation",                               \
+          "aiwize-ai-host-specific-distillation",                               \
+          "AI Wize AI Host-Specific Distillation",                               \
           "Enables support for host-specific distillation scripts",            \
           kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kCustomSiteDistillerScripts),  \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-context-menu-rewrite-in-place",                       \
-          "Brave AI Chat Rewrite In Place From Context Menu",                  \
+          "aiwize-ai-chat-context-menu-rewrite-in-place",                       \
+          "AI Wize AI Chat Rewrite In Place From Context Menu",                  \
           "Enables AI Chat rewrite in place feature from the context menu",    \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(ai_chat::features::kContextMenuRewriteInPlace),   \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-page-content-refine",                                 \
-          "Brave AI Chat Page Content Refine",                                 \
+          "aiwize-ai-chat-page-content-refine",                                 \
+          "AI Wize AI Chat Page Content Refine",                                 \
           "Enable local text embedding for long page content in order to "     \
           "find "                                                              \
           "most relevant parts to the prompt within context limit.",           \
@@ -417,22 +318,22 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(ai_chat::features::kPageContentRefine),           \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-allow-private-ips",                                   \
+          "aiwize-ai-chat-allow-private-ips",                                   \
           "Private IP Addresses for Custom Model Endpoints",                   \
           "Permits the use of private IP addresses as model endpoint URLs",    \
           kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kAllowPrivateIPs),             \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-open-leo-from-brave-search",                          \
-          "Open Leo AI Chat from Brave Search",                                \
-          "Enables opening Leo AI Chat from Brave Search",                     \
+          "aiwize-ai-chat-open-leo-from-aiwize-search",                          \
+          "Open AI Wize Chat from AI Wize Search",                                \
+          "Enables opening AI Wize Chat from AI Wize Search",                     \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kOpenAIChatFromBraveSearch),   \
       },                                                                       \
       {                                                                        \
-          "brave-ai-chat-web-content-association-default",                     \
-          "Brave AI Chat Web Content Association Default",                     \
+          "aiwize-ai-chat-web-content-association-default",                     \
+          "AI Wize AI Chat Web Content Association Default",                     \
           "For AI Chat Conversations which are associated with web content, "  \
           "allow the toggle for sending page content to be set to enabled "    \
           "when the conversation is created.",                                 \
@@ -443,9 +344,9 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #if BUILDFLAG(ENABLE_AI_REWRITER)
 #define BRAVE_AI_REWRITER                                     \
   EXPAND_FEATURE_ENTRIES({                                    \
-      "brave-ai-rewriter",                                    \
-      "Brave AI Rewriter",                                    \
-      "Enables the Brave AI rewriter dialog",                 \
+      "aiwize-ai-rewriter",                                    \
+      "AI Wize AI Rewriter",                                    \
+      "Enables the AI Wize AI rewriter dialog",                 \
       kOsWin | kOsMac | kOsLinux,                             \
       FEATURE_VALUE_TYPE(ai_rewriter::features::kAIRewriter), \
   })
@@ -456,8 +357,8 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #define BRAVE_OMNIBOX_FEATURES                                                \
   EXPAND_FEATURE_ENTRIES(                                                     \
       {                                                                       \
-          "brave-omnibox-tab-switch-by-default",                              \
-          "Brave Tab Switch by Default",                                      \
+          "aiwize-omnibox-tab-switch-by-default",                              \
+          "AI Wize Tab Switch by Default",                                      \
           "Prefer switching to already open tabs, rather than navigating in " \
           "a "                                                                \
           "new tab",                                                          \
@@ -465,8 +366,8 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(omnibox::kOmniboxTabSwitchByDefault),            \
       },                                                                      \
       {                                                                       \
-          "brave-history-more-search-results",                                \
-          "Brave More History",                                               \
+          "aiwize-history-more-search-results",                                \
+          "AI Wize More History",                                               \
           "Include more history in the omnibox search results",               \
           kOsWin | kOsLinux | kOsMac | kOsAndroid,                            \
           FEATURE_VALUE_TYPE(history::kHistoryMoreSearchResults),             \
@@ -475,17 +376,17 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #define BRAVE_EXTENSIONS_MANIFEST_V2                                        \
   IF_BUILDFLAG(ENABLE_EXTENSIONS,                                           \
                EXPAND_FEATURE_ENTRIES({                                     \
-                   "brave-extensions-manifest-v2",                          \
-                   "Brave Extensions manifest V2",                          \
-                   "Enables Brave support for some manifest V2 extensions", \
+                   "aiwize-extensions-manifest-v2",                          \
+                   "AI Wize Extensions manifest V2",                          \
+                   "Enables AI Wize support for some manifest V2 extensions", \
                    kOsDesktop,                                              \
                    FEATURE_VALUE_TYPE(kExtensionsManifestV2),               \
                }))
 
 #define BRAVE_ADBLOCK_CUSTOM_SCRIPTLETS                                 \
   EXPAND_FEATURE_ENTRIES({                                              \
-      "brave-adblock-custom-scriptlets",                                \
-      "Brave Adblock Custom Scriptlets",                                \
+      "aiwize-adblock-custom-scriptlets",                                \
+      "AI Wize Adblock Custom Scriptlets",                                \
       "Allows adding custom scriptlets from settings",                  \
       kOsDesktop | kOsAndroid,                                          \
       FEATURE_VALUE_TYPE(                                               \
@@ -495,7 +396,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
 #define BRAVE_EDUCATION_FEATURE_ENTRIES                                       \
   EXPAND_FEATURE_ENTRIES({                                                    \
-      "brave-show-getting-started-page",                                      \
+      "aiwize-show-getting-started-page",                                      \
       "Show getting started pages",                                           \
       "Show a getting started page after completing the Welcome UX.",         \
       kOsDesktop,                                                             \
@@ -519,7 +420,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(brave_component_updater::kUseDevUpdaterUrl),      \
       },                                                                       \
       {                                                                        \
-          "brave-ntp-branded-wallpaper-demo",                                  \
+          "aiwize-ntp-branded-wallpaper-demo",                                  \
           "New Tab Page Demo Branded Wallpaper",                               \
           "Force dummy data for the Branded Wallpaper New Tab Page "           \
           "Experience. View rate and user opt-in conditionals will still be "  \
@@ -529,14 +430,14 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               ntp_background_images::features::kBraveNTPBrandedWallpaperDemo), \
       },                                                                       \
       {                                                                        \
-          "brave-ntp-search-widget",                                           \
-          "Brave Search Widget on the NTP",                                    \
+          "aiwize-ntp-search-widget",                                           \
+          "AI Wize Search Widget on the NTP",                                    \
           "Enables searching directly from the New Tab Page",                  \
           kOsDesktop,                                                          \
           FEATURE_VALUE_TYPE(features::kBraveNtpSearchWidget),                 \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-cname-uncloaking",                                    \
+          "aiwize-adblock-cname-uncloaking",                                    \
           "Enable CNAME uncloaking",                                           \
           "Take DNS CNAME records into account when making network request "   \
           "blocking decisions.",                                               \
@@ -545,7 +446,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockCnameUncloaking),          \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-collapse-blocked-elements",                           \
+          "aiwize-adblock-collapse-blocked-elements",                           \
           "Collapse HTML elements with blocked source attributes",             \
           "Cause iframe and img elements to be collapsed if the URL of their " \
           "src attribute is blocked",                                          \
@@ -554,16 +455,16 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockCollapseBlockedElements),  \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-cookie-list-default",                                 \
+          "aiwize-adblock-cookie-list-default",                                 \
           "Treat 'Easylist-Cookie List' as a default list source",             \
           "Enables the 'Easylist-Cookie List' regional list if its toggle in " \
-          "brave://adblock hasn't otherwise been modified",                    \
+          "aiwize://adblock hasn't otherwise been modified",                    \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveAdblockCookieListDefault),        \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-cookie-list-opt-in",                                  \
+          "aiwize-adblock-cookie-list-opt-in",                                  \
           "Show an opt-in bubble for the 'Easylist-Cookie List' filter",       \
           "When enabled, a bubble will be displayed inviting the user to "     \
           "enable the 'Easylist-Cookie List' filter for blocking cookie "      \
@@ -573,7 +474,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockCookieListOptIn),          \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-cosmetic-filtering",                                  \
+          "aiwize-adblock-cosmetic-filtering",                                  \
           "Enable cosmetic filtering",                                         \
           "Enable support for cosmetic filtering",                             \
           kOsAll,                                                              \
@@ -581,7 +482,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockCosmeticFiltering),        \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-csp-rules",                                           \
+          "aiwize-adblock-csp-rules",                                           \
           "Enable support for CSP rules",                                      \
           "Applies additional CSP rules to pages for which a $csp rule has "   \
           "been loaded from a filter list",                                    \
@@ -589,27 +490,27 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(brave_shields::features::kBraveAdblockCspRules),  \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-default-1p-blocking",                                 \
+          "aiwize-adblock-default-1p-blocking",                                 \
           "Shields first-party network blocking",                              \
-          "Allow Brave Shields to block first-party network requests in "      \
+          "Allow AI Wize Shields to block first-party network requests in "      \
           "Standard blocking mode",                                            \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveAdblockDefault1pBlocking),        \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-mobile-notifications-list-default",                   \
+          "aiwize-adblock-mobile-notifications-list-default",                   \
           "Treat 'Fanboy's Mobile Notifications List' as a default list "      \
           "source",                                                            \
                                                                                \
           "Enables the 'Fanboy's Mobile Notifications List' regional list if " \
-          "its toggle in brave://adblock hasn't otherwise been modified",      \
+          "its toggle in aiwize://adblock hasn't otherwise been modified",      \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_shields::features::                         \
                                  kBraveAdblockMobileNotificationsListDefault), \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-procedural-filtering",                                \
+          "aiwize-adblock-procedural-filtering",                                \
           "Enable procedural filtering",                                       \
           "Enable support for procedural cosmetic filtering",                  \
           kOsAll,                                                              \
@@ -617,18 +518,18 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockProceduralFiltering),      \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-experimental-list-default",                           \
-          "Treat 'Brave Experimental Adblock Rules' as a default list "        \
+          "aiwize-adblock-experimental-list-default",                           \
+          "Treat 'AI Wize Experimental Adblock Rules' as a default list "        \
           "source",                                                            \
                                                                                \
-          "Enables the 'Brave Experimental Adblock Rules' regional list if "   \
-          "its toggle in brave://adblock hasn't otherwise been modified",      \
+          "Enables the 'AI Wize Experimental Adblock Rules' regional list if "   \
+          "its toggle in aiwize://adblock hasn't otherwise been modified",      \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveAdblockExperimentalListDefault),  \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-scriptlet-debug-logs",                                \
+          "aiwize-adblock-scriptlet-debug-logs",                                \
           "Enable debug logging for scriptlet injections",                     \
           "Enable console debugging for scriptlets injected by cosmetic "      \
           "filtering, exposing additional information that can be useful for " \
@@ -638,7 +539,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveAdblockScriptletDebugLogs),       \
       },                                                                       \
       {                                                                        \
-          "brave-dark-mode-block",                                             \
+          "aiwize-dark-mode-block",                                             \
           "Enable dark mode blocking fingerprinting protection",               \
           "Always report light mode when fingerprinting protections set to "   \
           "Strict",                                                            \
@@ -646,16 +547,16 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(brave_shields::features::kBraveDarkModeBlock),    \
       },                                                                       \
       {                                                                        \
-          "brave-domain-block",                                                \
+          "aiwize-domain-block",                                                \
           "Enable domain blocking",                                            \
           "Enable support for blocking domains with an interstitial page",     \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_shields::features::kBraveDomainBlock),      \
       },                                                                       \
       {                                                                        \
-          "brave-domain-block-1pes",                                           \
+          "aiwize-domain-block-1pes",                                           \
           "Enable domain blocking using First Party Ephemeral Storage",        \
-          "When visiting a blocked domain, Brave will try to enable "          \
+          "When visiting a blocked domain, AI Wize will try to enable "          \
           "Ephemeral Storage for a first party context, meaning neither "      \
           "cookies nor localStorage data will be persisted after a website "   \
           "is closed. Ephemeral Storage will be auto-enabled only if no data " \
@@ -664,21 +565,21 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(brave_shields::features::kBraveDomainBlock1PES),  \
       },                                                                       \
       {                                                                        \
-          "brave-debounce",                                                    \
+          "aiwize-debounce",                                                    \
           "Enable debouncing",                                                 \
           "Enable support for skipping top-level redirect tracking URLs",      \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(debounce::features::kBraveDebounce),              \
       },                                                                       \
       {                                                                        \
-          "brave-de-amp",                                                      \
+          "aiwize-de-amp",                                                      \
           "Enable De-AMP",                                                     \
           "Enable De-AMPing feature",                                          \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(de_amp::features::kBraveDeAMP),                   \
       },                                                                       \
       {                                                                        \
-          "brave-google-sign-in-permission",                                   \
+          "aiwize-google-sign-in-permission",                                   \
           "Enable Google Sign-In Permission Prompt",                           \
           "Enable permissioning access to legacy Google Sign-In",              \
           kOsAll,                                                              \
@@ -686,7 +587,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
                                  kBraveGoogleSignInPermission),                \
       },                                                                       \
       {                                                                        \
-          "brave-localhost-access-permission",                                 \
+          "aiwize-localhost-access-permission",                                 \
           "Enable Localhost access permission prompt",                         \
           "Enable permissioning access to localhost connections",              \
           kOsAll,                                                              \
@@ -694,14 +595,14 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveLocalhostAccessPermission),       \
       },                                                                       \
       {                                                                        \
-          "brave-psst",                                                        \
+          "aiwize-psst",                                                        \
           "Enable PSST (Privacy Site Settings Tool) feature",                  \
           "Enable PSST feature",                                               \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(psst::features::kBravePsst),                      \
       },                                                                       \
       {                                                                        \
-          "brave-extension-network-blocking",                                  \
+          "aiwize-extension-network-blocking",                                  \
           "Enable extension network blocking",                                 \
           "Enable blocking for network requests initiated by extensions",      \
           kOsAll,                                                              \
@@ -709,14 +610,14 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveExtensionNetworkBlocking),        \
       },                                                                       \
       {                                                                        \
-          "brave-reduce-language",                                             \
+          "aiwize-reduce-language",                                             \
           "Reduce language identifiability",                                   \
           "Reduce the identifiability of my language preferences",             \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(brave_shields::features::kBraveReduceLanguage),   \
       },                                                                       \
       {                                                                        \
-          "brave-cosmetic-filtering-sync-load",                                \
+          "aiwize-cosmetic-filtering-sync-load",                                \
           "Enable sync loading of cosmetic filter rules",                      \
           "Enable sync loading of cosmetic filter rules",                      \
           kOsAll,                                                              \
@@ -741,22 +642,22 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               brave_shields::features::kBraveShieldsElementPicker),            \
       },                                                                       \
       {                                                                        \
-          "brave-super-referral",                                              \
-          "Enable Brave Super Referral",                                       \
-          "Use custom theme for Brave Super Referral",                         \
+          "aiwize-super-referral",                                              \
+          "Enable AI Wize Super Referral",                                       \
+          "Use custom theme for AI Wize Super Referral",                         \
           flags_ui::kOsMac | flags_ui::kOsWin | flags_ui::kOsAndroid,          \
           FEATURE_VALUE_TYPE(ntp_background_images::features::                 \
                                  kBraveNTPSuperReferralWallpaper),             \
       },                                                                       \
       {                                                                        \
-          "brave-ephemeral-storage",                                           \
+          "aiwize-ephemeral-storage",                                           \
           "Enable Ephemeral Storage",                                          \
           "Use ephemeral storage for third-party frames",                      \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(net::features::kBraveEphemeralStorage),           \
       },                                                                       \
       {                                                                        \
-          "brave-ephemeral-storage-keep-alive",                                \
+          "aiwize-ephemeral-storage-keep-alive",                                \
           "Ephemeral Storage Keep Alive",                                      \
           "Keep ephemeral storage partitions alive for a specified time "      \
           "after all tabs for that origin are closed",                         \
@@ -764,7 +665,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(net::features::kBraveEphemeralStorageKeepAlive),  \
       },                                                                       \
       {                                                                        \
-          "brave-first-party-ephemeral-storage",                               \
+          "aiwize-first-party-ephemeral-storage",                               \
           "Enable First Party Ephemeral Storage",                              \
           "Enable support for First Party Ephemeral Storage using "            \
           "SESSION_ONLY cookie setting",                                       \
@@ -772,121 +673,12 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(net::features::kBraveFirstPartyEphemeralStorage), \
       },                                                                       \
       {                                                                        \
-          "brave-forget-first-party-storage",                                  \
+          "aiwize-forget-first-party-storage",                                  \
           "Enable First Party Storage Cleanup support",                        \
-          "Add cookie blocking mode which allows Brave to cleanup first "      \
+          "Add cookie blocking mode which allows AI Wize to cleanup first "      \
           "party storage (Cookies, DOM Storage) on website close",             \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(net::features::kBraveForgetFirstPartyStorage),    \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-verbose-logging",                                     \
-          "Enable Brave Rewards verbose logging",                              \
-          "Enables detailed logging of Brave Rewards system events to a log "  \
-          "file stored on your device. Please note that this log file could "  \
-          "include information such as browsing history and credentials such " \
-          "as passwords and access tokens depending on your activity. Please " \
-          "do not share it unless asked to by Brave staff.",                   \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(brave_rewards::features::kVerboseLoggingFeature), \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-allow-unsupported-wallet-providers",                  \
-          "Always show Brave Rewards custodial connection options",            \
-                                                                               \
-          "Allows all custodial options to be selected in Brave Rewards, "     \
-          "including those not supported for your Rewards country.",           \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(brave_rewards::features::                         \
-                                 kAllowUnsupportedWalletProvidersFeature),     \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-allow-self-custody-providers",                        \
-          "Enable Brave Rewards self-custody connection options",              \
-          "Enables self-custody options to be selected in Brave Rewards.",     \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_rewards::features::kAllowSelfCustodyProvidersFeature),     \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-new-rewards-ui",                                      \
-          "Show the new Rewards UI",                                           \
-          "Displays the new Rewards UI.",                                      \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(brave_rewards::features::kNewRewardsUIFeature),   \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-animated-background",                                 \
-          "Show an animated background on the Rewards UI",                     \
-          "Shows an animated background on the Rewards panel and page.",       \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_rewards::features::kAnimatedBackgroundFeature),            \
-      },                                                                       \
-      {                                                                        \
-          "brave-rewards-platform-creator-detection",                          \
-          "Detect Brave Creators on media platform sites",                     \
-          "Enables detection of Brave Creator pages on media platform sites.", \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_rewards::features::kPlatformCreatorDetectionFeature),      \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-run-brave-ads-service",                     \
-          "Should always run Brave Ads service",                               \
-          "Always run Brave Ads service to support triggering ad events when " \
-          "Brave Private Ads are disabled.",                                   \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::kShouldAlwaysRunBraveAdsServiceFeature),              \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-trigger-new-tab-page-ad-events",            \
-          "Should always trigger new tab page ad events",                      \
-          "Support triggering new tab page ad events if Brave Private Ads "    \
-          "are disabled. Requires "                                            \
-          "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature),  \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-support-search-result-ads",                        \
-          "Support Search Result Ads feature",                                 \
-          "Should be used in combination with "                                \
-          "#brave-ads-should-always-trigger-search-result-ad-events and "      \
-          "#brave-ads-should-always-run-brave-ads-service",                    \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(brave_ads::kShouldSupportSearchResultAdsFeature), \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-trigger-search-result-ad-events",           \
-          "Should always trigger search result ad events",                     \
-          "Support triggering search result ad events if Brave Private Ads "   \
-          "are disabled. Requires "                                            \
-          "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::                                                      \
-                  kShouldAlwaysTriggerBraveSearchResultAdEventsFeature),       \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-custom-push-notifications-ads",                           \
-          "Enable Brave Ads custom push notifications",                        \
-          "Enable Brave Ads custom push notifications to support rich media",  \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(brave_ads::kCustomNotificationAdFeature),         \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-allowed-to-fallback-to-custom-push-notification-ads",     \
-          "Allow Brave Ads to fallback from native to custom push "            \
-          "notifications",                                                     \
-          "Allow Brave Ads to fallback from native to custom push "            \
-          "notifications on operating systems which do not support native "    \
-          "notifications",                                                     \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::kAllowedToFallbackToCustomNotificationAdFeature),     \
       },                                                                       \
       {                                                                        \
           "file-system-access-api",                                            \
@@ -897,7 +689,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(blink::features::kFileSystemAccessAPI),           \
       },                                                                       \
       {                                                                        \
-          "brave-web-bluetooth-api",                                           \
+          "aiwize-web-bluetooth-api",                                           \
           "Web Bluetooth API",                                                 \
           "Enables the Web Bluetooth API, giving websites access to "          \
           "Bluetooth devices",                                                 \
@@ -933,7 +725,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               content_settings::kAllowIncognitoPermissionInheritance),         \
       },                                                                       \
       {                                                                        \
-          "brave-block-screen-fingerprinting",                                 \
+          "aiwize-block-screen-fingerprinting",                                 \
           "Block screen fingerprinting",                                       \
           "Prevents JavaScript and CSS from learning the user's screen "       \
           "dimensions or window position.",                                    \
@@ -942,15 +734,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
               blink::features::kBraveBlockScreenFingerprinting),               \
       },                                                                       \
       {                                                                        \
-          "brave-tor-windows-https-only",                                      \
-          "Use HTTPS-Only Mode in Private Windows with Tor",                   \
-          "Prevents Private Windows with Tor from making any insecure HTTP "   \
-          "connections without warning the user first.",                       \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(net::features::kBraveTorWindowsHttpsOnly),        \
-      },                                                                       \
-      {                                                                        \
-          "brave-round-time-stamps",                                           \
+          "aiwize-round-time-stamps",                                           \
           "Round time stamps",                                                 \
           "Prevents JavaScript from getting access to high-resolution clocks " \
           "by rounding all DOMHighResTimeStamps to the nearest millisecond.",  \
@@ -960,7 +744,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
       {                                                                        \
           "translate",                                                         \
           "Enable Chromium Translate feature",                                 \
-          "Should be used with brave-translate-go, see the description here.", \
+          "Should be used with aiwize-translate-go, see the description here.", \
           kOsDesktop | kOsAndroid,                                             \
           FEATURE_VALUE_TYPE(translate::kTranslate),                           \
       },                                                                       \
@@ -972,7 +756,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(blink::features::kRestrictEventSourcePool),       \
       },                                                                       \
       {                                                                        \
-          "brave-copy-clean-link-by-default",                                  \
+          "aiwize-copy-clean-link-by-default",                                  \
           "Override default copy hotkey with copy clean link",                 \
           "Sanitize url before copying, replaces default ctrl+c hotkey for "   \
           "url ",                                                              \
@@ -980,7 +764,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(features::kBraveCopyCleanLinkByDefault),          \
       },                                                                       \
       {                                                                        \
-          "brave-global-privacy-control-enabled",                              \
+          "aiwize-global-privacy-control-enabled",                              \
           "Enable Global Privacy Control",                                     \
           "Enable the Sec-GPC request header and the "                         \
           "navigator.globalPrivacyControl JS API",                             \
@@ -1004,16 +788,16 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(net::features::kBraveFallbackDoHProvider),        \
       },                                                                       \
       {                                                                        \
-          "brave-show-strict-fingerprinting-mode",                             \
+          "aiwize-show-strict-fingerprinting-mode",                             \
           "Show Strict Fingerprinting Mode",                                   \
           "Show Strict (aggressive) option for Fingerprinting Mode in "        \
-          "Brave Shields ",                                                    \
+          "AI Wize Shields ",                                                    \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveShowStrictFingerprintingMode),    \
       },                                                                       \
       {                                                                        \
-          "brave-override-download-danger-level",                              \
+          "aiwize-override-download-danger-level",                              \
           "Override download danger level",                                    \
           "Disables download warnings for files which are considered "         \
           "dangerous when Safe Browsing is disabled. Use at your own risks. "  \
@@ -1022,27 +806,23 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
           FEATURE_VALUE_TYPE(features::kBraveOverrideDownloadDangerLevel),     \
       },                                                                       \
       {                                                                        \
-          "brave-webcompat-exceptions-service",                                \
+          "aiwize-webcompat-exceptions-service",                                \
           "Allow feature exceptions for webcompat",                            \
-          "Disables Brave features for specific websites when they break "     \
+          "Disables AI Wize features for specific websites when they break "     \
           "website functionality.",                                            \
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               webcompat::features::kBraveWebcompatExceptionsService),          \
       },                                                                       \
       {                                                                        \
-          "brave-web-view-rounded-corners",                                    \
+          "aiwize-web-view-rounded-corners",                                    \
           "Use rounded corners on main content areas",                         \
           "Renders the main content area and sidebar panel with rounded "      \
           "corners, padding, and a drop shadow",                               \
           kOsWin | kOsLinux | kOsMac,                                          \
           FEATURE_VALUE_TYPE(features::kBraveWebViewRoundedCorners),           \
       })                                                                       \
-  BRAVE_NATIVE_WALLET_FEATURE_ENTRIES                                          \
   BRAVE_NEWS_FEATURE_ENTRIES                                                   \
-  CRYPTO_WALLETS_FEATURE_ENTRIES                                               \
-  BRAVE_REWARDS_GEMINI_FEATURE_ENTRIES                                         \
-  SPEEDREADER_FEATURE_ENTRIES                                                  \
   REQUEST_OTR_FEATURE_ENTRIES                                                  \
   BRAVE_MODULE_FILENAME_PATCH                                                  \
   PLAYLIST_FEATURE_ENTRIES                                                     \

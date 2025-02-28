@@ -11,18 +11,18 @@ RegisterPolymerTemplateModifications({
     let optionsTemplate: HTMLTemplateElement | null =
       templateContent.querySelector<HTMLTemplateElement>('template[is="dom-if"][if*="shouldShowOptionsSection_"]')
     if (!optionsTemplate) {
-      console.error('[Brave Extensions Overrides] Could not find optionsTemplate')
+      console.error('[AI Wize Extensions Overrides] Could not find optionsTemplate')
       return
     }
     let incognitoTemplate =
       optionsTemplate.content.querySelector<HTMLTemplateElement>('template[is="dom-if"][if*="shouldShowIncognitoOption_"]')
     if (!incognitoTemplate) {
-      console.error('[Brave Extensions Overrides] Could not find incognitoTemplate')
+      console.error('[AI Wize Extensions Overrides] Could not find incognitoTemplate')
       return
     }
     let incognitoWarningDiv = incognitoTemplate.content.querySelector<HTMLDivElement>('.section-content')
     if (!incognitoWarningDiv) {
-      console.error('[Brave Extensions Overrides] Could not find incognitoWarningDiv')
+      console.error('[AI Wize Extensions Overrides] Could not find incognitoWarningDiv')
       return
     }
     incognitoWarningDiv.innerText = loadTimeData.getString('privateInfoWarning')

@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "A Brave-bővítmény",
+    "message": "A AI Wize-b\u0151v\u00edtm\u00e9ny",
     "description": "The name of the extension."
   },
   "shields": {
@@ -20,127 +20,127 @@
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Ha úgy tűnik, hogy egy oldal nem működik, próbálja felfüggesztett védelemmel",
+    "message": "Ha \u00fagy t\u0171nik, hogy egy oldal nem m\u0171k\u00f6dik, pr\u00f3b\u00e1lja felf\u00fcggesztett v\u00e9delemmel",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "A Brave adatvédelmi és biztonsági beállítási nélkül böngészik ezen az oldalon. Nem működik megfelelően a Shields alatt?",
+    "message": "A AI Wize adatv\u00e9delmi \u00e9s biztons\u00e1gi be\u00e1ll\u00edt\u00e1si n\u00e9lk\u00fcl b\u00f6ng\u00e9szik ezen az oldalon. Nem m\u0171k\u00f6dik megfelel\u0151en a Shields alatt?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Nem működő oldal jelentése",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Nem m\u0171k\u00f6d\u0151 oldal jelent\u00e9se",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Tárgyak letiltva",
+    "message": "T\u00e1rgyak letiltva",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Tárgy letiltva",
+    "message": "T\u00e1rgy letiltva",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "és",
+    "message": "\u00e9s",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "kapcsolat bővítve",
+    "message": "kapcsolat b\u0151v\u00edtve",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "csatlakozás bővítve",
+    "message": "csatlakoz\u00e1s b\u0151v\u00edtve",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Letiltott webhelyközi nyomkövetők",
+    "message": "Letiltott webhelyk\u00f6zi nyomk\u00f6vet\u0151k",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Blokkolt követők és hirdetések",
+    "message": "Blokkolt k\u00f6vet\u0151k \u00e9s hirdet\u00e9sek",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Követők és reklámok letiltva (agresszív)",
+    "message": "K\u00f6vet\u0151k \u00e9s rekl\u00e1mok letiltva (agressz\u00edv)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Követők és reklámok letiltva (standard)",
+    "message": "K\u00f6vet\u0151k \u00e9s rekl\u00e1mok letiltva (standard)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Összes követő és reklám engedélyezése",
+    "message": "\u00d6sszes k\u00f6vet\u0151 \u00e9s rekl\u00e1m enged\u00e9lyez\u00e9se",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Kapcsolat HTTPS-re bővítve",
+    "message": "Kapcsolat HTTPS-re b\u0151v\u00edtve",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Kapcsolat HTTPS-re bővítve",
+    "message": "Kapcsolat HTTPS-re b\u0151v\u00edtve",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Blokkolt parancsfájlok",
+    "message": "Blokkolt parancsf\u00e1jlok",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Webhelyközi cookie-k letiltva",
+    "message": "Webhelyk\u00f6zi cookie-k letiltva",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Blokkolt sütik",
+    "message": "Blokkolt s\u00fctik",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Minden süti engedélyezett",
+    "message": "Minden s\u00fcti enged\u00e9lyezett",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Ujjlenyomat-olvasás letiltva",
+    "message": "Ujjlenyomat-olvas\u00e1s letiltva",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Ujjlenyomat-felismerés letiltva (standard)",
+    "message": "Ujjlenyomat-felismer\u00e9s letiltva (standard)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Ujjlenyomat-felismerés letiltva (szigorú, a webhelyek összeomolhatnak)",
+    "message": "Ujjlenyomat-felismer\u00e9s letiltva (szigor\u00fa, a webhelyek \u00f6sszeomolhatnak)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Minden ujjlenyomat-beállítás engedélyezése",
+    "message": "Minden ujjlenyomat-be\u00e1ll\u00edt\u00e1s enged\u00e9lyez\u00e9se",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Ujjlenyomatos azonosítási kísérletek",
+    "message": "Ujjlenyomatos azonos\u00edt\u00e1si k\u00eds\u00e9rletek",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Parancsfájlok ezen az oldalon",
+    "message": "Parancsf\u00e1jlok ezen az oldalon",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Blokkolt parancsfájlok",
+    "message": "Blokkolt parancsf\u00e1jlok",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Engedélyezett parancsfájlok",
+    "message": "Enged\u00e9lyezett parancsf\u00e1jlok",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Összes tiltása",
+    "message": "\u00d6sszes tilt\u00e1sa",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Összes engedélyezése",
+    "message": "\u00d6sszes enged\u00e9lyez\u00e9se",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Tiltás",
+    "message": "Tilt\u00e1s",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Engedélyezés",
+    "message": "Enged\u00e9lyez\u00e9s",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
@@ -148,15 +148,15 @@
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Egyszer engedélyezve",
+    "message": "Egyszer enged\u00e9lyezve",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Parancsfájlok engedélyezése egyszer",
+    "message": "Parancsf\u00e1jlok enged\u00e9lyez\u00e9se egyszer",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Mégse",
+    "message": "M\u00e9gse",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
@@ -164,15 +164,15 @@
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Egyszeri alkalmazás",
+    "message": "Egyszeri alkalmaz\u00e1s",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Globális pajzs alapbeállítások változtatása",
+    "message": "Glob\u00e1lis pajzs alapbe\u00e1ll\u00edt\u00e1sok v\u00e1ltoztat\u00e1sa",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Egyedi szűrők kezelése",
+    "message": "Egyedi sz\u0171r\u0151k kezel\u00e9se",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
@@ -180,47 +180,63 @@
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Speciális nézet",
+    "message": "Speci\u00e1lis n\u00e9zet",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Egyszerű nézet",
+    "message": "Egyszer\u0171 n\u00e9zet",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Az oldalak gyakran cookie-kat és parancsfájlokat tartalmaznak, amelyekkel megpróbálnak azonosítani téged és készülékedet (gyakran reklámokba ágyazva). Igyekeznek megtudni, hogy ki vagy, és mindenhova követnek az interneten - megfigyelve tevékenységedet minden oldalon. A Brave letiltja ezeket a dolgokat, így kíváncsi tekintetek nélkül böngészhetsz.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Az oldalak gyakran cookie-kat \u00e9s parancsf\u00e1jlokat tartalmaznak, amelyekkel megpr\u00f3b\u00e1lnak azonos\u00edtani t\u00e9ged \u00e9s k\u00e9sz\u00fcl\u00e9kedet (gyakran rekl\u00e1mokba \u00e1gyazva). Igyekeznek megtudni, hogy ki vagy, \u00e9s mindenhova k\u00f6vetnek az interneten - megfigyelve tev\u00e9kenys\u00e9gedet minden oldalon. A AI Wize letiltja ezeket a dolgokat, \u00edgy k\u00edv\u00e1ncsi tekintetek n\u00e9lk\u00fcl b\u00f6ng\u00e9szhetsz.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Letiltott webhelyközi követők és egyéb ijesztő dolgok",
+    "message": "Letiltott webhelyk\u00f6zi k\u00f6vet\u0151k \u00e9s egy\u00e9b ijeszt\u0151 dolgok",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "A pajzs beállítások változtatása ebben a nézetben, hatással lehet az oldal webkompatibilitására.",
+    "message": "A pajzs be\u00e1ll\u00edt\u00e1sok v\u00e1ltoztat\u00e1sa ebben a n\u00e9zetben, hat\u00e1ssal lehet az oldal webkompatibilit\u00e1s\u00e1ra.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Sikerült",
+    "message": "Siker\u00fclt",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Tudjon meg többet",
+    "message": "Tudjon meg t\u00f6bbet",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Hozzáadás a Brave-hez",
-    "description": "Message for adding an extension to Brave"
+    "message": "Hozz\u00e1ad\u00e1s a AI Wize-hez",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Eltávolítás a Brave-ból",
-    "description": "Message for removing an extension from Brave"
+    "message": "Elt\u00e1vol\u00edt\u00e1s a AI Wize-b\u00f3l",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Hozzáadás",
+    "message": "Hozz\u00e1ad\u00e1s",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Eltávolítás a Chrome-ból",
+    "message": "Elt\u00e1vol\u00edt\u00e1s a Chrome-b\u00f3l",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Let\u00f6lt\u00e9sek",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Be\u00e1ll\u00edt\u00e1sok",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "El\u0151zm\u00e9nyek",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "K\u00f6nyvjelz\u0151k",
+    "description": "Bookmarks Label"
   }
 }

@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "The Brave Extension",
+    "message": "The AI Wize Extension",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "You’re browsing this site without Brave’s privacy and security protections. Does it not work right with Shields up?",
+    "message": "You\u2019re browsing this site without AI Wize\u2019s privacy and security protections. Does it not work right with Shields up?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Report a broken site",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Items blocked",
@@ -88,7 +88,7 @@
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "കുക്കികളെ ബ്ലോക്ക് ചെയ്‌തു",
+    "message": "\u0d15\u0d41\u0d15\u0d4d\u0d15\u0d3f\u0d15\u0d33\u0d46 \u0d2c\u0d4d\u0d32\u0d4b\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d46\u0d2f\u0d4d\u200c\u0d24\u0d41",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
@@ -136,11 +136,11 @@
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "തടയുക",
+    "message": "\u0d24\u0d1f\u0d2f\u0d41\u0d15",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "അനുവദിക്കൂ",
+    "message": "\u0d05\u0d28\u0d41\u0d35\u0d26\u0d3f\u0d15\u0d4d\u0d15\u0d42",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
@@ -156,11 +156,11 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "റദ്ദാക്കൂ",
+    "message": "\u0d31\u0d26\u0d4d\u0d26\u0d3e\u0d15\u0d4d\u0d15\u0d42",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "പിന്നോട്ട് പോകുക",
+    "message": "\u0d2a\u0d3f\u0d28\u0d4d\u0d28\u0d4b\u0d1f\u0d4d\u0d1f\u0d4d \u0d2a\u0d4b\u0d15\u0d41\u0d15",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web — tracking what you do on every site. Brave blocks these things so that you can browse without being followed around.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web \u2014 tracking what you do on every site. AI Wize blocks these things so that you can browse without being followed around.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackers and other creepy things blocked",
@@ -200,27 +200,43 @@
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "വിജയകരം",
+    "message": "\u0d35\u0d3f\u0d1c\u0d2f\u0d15\u0d30\u0d02",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "കൂടുതലറിയുക",
+    "message": "\u0d15\u0d42\u0d1f\u0d41\u0d24\u0d32\u0d31\u0d3f\u0d2f\u0d41\u0d15",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave-ലേക്ക് ചേർക്കൂ",
-    "description": "Message for adding an extension to Brave"
+    "message": "Brave-\u0d32\u0d47\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d47\u0d7c\u0d15\u0d4d\u0d15\u0d42",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave-ൽ നിന്ന് നീക്കം ചെയ്യുക",
-    "description": "Message for removing an extension from Brave"
+    "message": "Brave-\u0d7d \u0d28\u0d3f\u0d28\u0d4d\u0d28\u0d4d \u0d28\u0d40\u0d15\u0d4d\u0d15\u0d02 \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d15",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chrome-ലേക്ക് ചേർക്കുക",
+    "message": "Chrome-\u0d32\u0d47\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d47\u0d7c\u0d15\u0d4d\u0d15\u0d41\u0d15",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome-ൽ നിന്ന് നീക്കംചെയ്യുക",
+    "message": "Chrome-\u0d7d \u0d28\u0d3f\u0d28\u0d4d\u0d28\u0d4d \u0d28\u0d40\u0d15\u0d4d\u0d15\u0d02\u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d15",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0d21\u0d4c\u0d23\u0d4d\u200d\u0d32\u0d4b\u0d21\u0d41\u0d15\u0d33\u0d4d\u200d",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u0d15\u0d4d\u0d30\u0d2e\u0d40\u0d15\u0d30\u0d23\u0d02",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0d1a\u0d30\u0d3f\u0d24\u0d4d\u0d30\u0d02",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bookmarks",
+    "description": "Bookmarks Label"
   }
 }

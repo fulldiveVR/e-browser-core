@@ -23,8 +23,6 @@ brave_settings_web_component_files = [
   "brave_clear_browsing_data_dialog/brave_clear_browsing_data_on_exit_page.ts",
   "brave_content_page/content.ts",
   "brave_content_page/playlist.ts",
-  "brave_content_page/speedreader.ts",
-  "brave_data_collection_page/brave_data_collection_page.ts",
   "brave_default_extensions_page/brave_default_extensions_page.ts",
   "brave_default_extensions_page/brave_extensions_manifest_v2_subpage.ts",
   "brave_new_tab_page/brave_new_tab_page.ts",
@@ -38,17 +36,9 @@ brave_settings_web_component_files = [
   "brave_sync_page/brave_sync_setup.ts",
   "brave_sync_page/brave_sync_subpage.ts",
   "brave_system_page/brave_performance_page.ts",
-  "brave_tor_page/brave_tor_bridges_dialog.ts",
-  "brave_tor_page/brave_tor_snowflake_install_failed_dialog.ts",
-  "brave_tor_page/brave_tor_subpage.ts",
   "brave_leo_assistant_page/brave_leo_assistant_page.ts",
   "brave_leo_assistant_page/model_list_section.ts",
   "brave_leo_assistant_page/model_config_ui.ts",
-  "brave_wallet_page/add_wallet_network_dialog.ts",
-  "brave_wallet_page/brave_wallet_page.ts",
-  "brave_wallet_page/wallet_networks_list.ts",
-  "brave_wallet_page/wallet_networks_subpage.ts",
-  "brave_web3_domains_page/brave_web3_domains_page.ts",
   "default_brave_shields_page/brave_adblock_subpage.ts",
   "default_brave_shields_page/components/brave_adblock_editor.ts",
   "default_brave_shields_page/components/brave_adblock_scriptlet_editor.ts",
@@ -66,7 +56,6 @@ brave_settings_non_web_component_files = [
   "brave_clear_browsing_data_dialog/brave_clear_browsing_data_dialog_proxy.ts",
   "brave_autofill_page/brave_autofill_page.ts",
   "brave_add_site_dialog/brave_add_site_dialog.ts",
-  "brave_data_collection_page/brave_data_collection_browser_proxy.ts",
   "brave_default_extensions_page/brave_default_extensions_browser_proxy.ts",
   "brave_new_tab_page/brave_new_tab_browser_proxy.ts",
   "brave_leo_assistant_page/brave_leo_assistant_browser_proxy.ts",
@@ -114,9 +103,6 @@ brave_settings_non_web_component_files = [
   "brave_routes.ts",
   "brave_search_engines_page/brave_search_engines_page_browser_proxy.ts",
   "brave_sync_page/brave_sync_browser_proxy.ts",
-  "brave_tor_page/brave_tor_browser_proxy.ts",
-  "brave_wallet_page/brave_wallet_browser_proxy.ts",
-  "brave_web3_domains_page/brave_web3_domains_browser_proxy.ts",
   "default_brave_shields_page/brave_adblock_browser_proxy.ts",
   "default_brave_shields_page/default_brave_shields_browser_proxy.ts",
   "getting_started_page/brave_account_browser_proxy.ts",
@@ -162,7 +148,6 @@ if (enable_pin_shortcut) {
 
 brave_settings_ts_definitions = [
   "//brave/components/definitions/chrome_brave_theme.d.ts",
-  "//brave/components/definitions/chrome_brave_wallet.d.ts",
 ]
 
 # Generate the list for inclusion via preprocess and exclusion for chromium's preprocess

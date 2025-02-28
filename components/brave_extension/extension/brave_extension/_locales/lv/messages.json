@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave paplašinājums",
+    "message": "AI Wize papla\u0161in\u0101jums",
     "description": "The name of the extension."
   },
   "shields": {
@@ -8,7 +8,7 @@
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "uz augšu",
+    "message": "uz aug\u0161u",
     "description": "Message for when shields is enabled"
   },
   "down": {
@@ -16,27 +16,27 @@
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "šajā vietnē",
+    "message": "\u0161aj\u0101 vietn\u0113",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Ja vietne šķiet bojāta, mēģiniet lietot aizsargus apakšā",
+    "message": "Ja vietne \u0161\u0137iet boj\u0101ta, m\u0113\u0123iniet lietot aizsargus apak\u0161\u0101",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Jūs pārskatāt šo vietni bez Brave privātuma un drošības aizsardzības. Vai ar ieslēgtu aizsardzību tā nedarbojas pareizi?",
+    "message": "J\u016bs p\u0101rskat\u0101t \u0161o vietni bez AI Wize priv\u0101tuma un dro\u0161\u012bbas aizsardz\u012bbas. Vai ar iesl\u0113gtu aizsardz\u012bbu t\u0101 nedarbojas pareizi?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Ziņot par bojātu vietni",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Zi\u0146ot par boj\u0101tu vietni",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Vienumi bloķēti",
+    "message": "Vienumi blo\u0137\u0113ti",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Vienums bloķēts",
+    "message": "Vienums blo\u0137\u0113ts",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
@@ -44,115 +44,115 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "savienojumi jaunināti",
+    "message": "savienojumi jaunin\u0101ti",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "savienojums jaunināts",
+    "message": "savienojums jaunin\u0101ts",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Bloķēti starpvietņu izsekotāji",
+    "message": "Blo\u0137\u0113ti starpviet\u0146u izsekot\u0101ji",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Bloķētie izsekotāji un reklāmas",
+    "message": "Blo\u0137\u0113tie izsekot\u0101ji un rekl\u0101mas",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Izsekotāji un reklāmas ir bloķēti (agresīvais režīms)",
+    "message": "Izsekot\u0101ji un rekl\u0101mas ir blo\u0137\u0113ti (agres\u012bvais re\u017e\u012bms)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Izsekotāji un reklāmas ir bloķēti (standarta režīms)",
+    "message": "Izsekot\u0101ji un rekl\u0101mas ir blo\u0137\u0113ti (standarta re\u017e\u012bms)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Atļaut visus izsekotājus un reklāmas",
+    "message": "At\u013caut visus izsekot\u0101jus un rekl\u0101mas",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Savienojumi jaunināti uz HTTPS",
+    "message": "Savienojumi jaunin\u0101ti uz HTTPS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Savienojums jaunināts uz HTTPS",
+    "message": "Savienojums jaunin\u0101ts uz HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Bloķētie skripti",
+    "message": "Blo\u0137\u0113tie skripti",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Bloķēti starpvietņu sīkfaili",
+    "message": "Blo\u0137\u0113ti starpviet\u0146u s\u012bkfaili",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Bloķētie sīkfaili",
+    "message": "Blo\u0137\u0113tie s\u012bkfaili",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Atļauti visi sīkfaili",
+    "message": "At\u013cauti visi s\u012bkfaili",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Pirkstu nospiedumu ņemšana bloķēta",
+    "message": "Pirkstu nospiedumu \u0146em\u0161ana blo\u0137\u0113ta",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Pirkstu nospiedumu ņemšana bloķēta (standarta režīms)",
+    "message": "Pirkstu nospiedumu \u0146em\u0161ana blo\u0137\u0113ta (standarta re\u017e\u012bms)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Pirkstu nospiedumu ņemšana bloķēta (stingrais režīms, var radīt vietņu darbības traucējumus)",
+    "message": "Pirkstu nospiedumu \u0146em\u0161ana blo\u0137\u0113ta (stingrais re\u017e\u012bms, var rad\u012bt viet\u0146u darb\u012bbas trauc\u0113jumus)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Atļaut visu identificējošās dokumenta ciparvirknes veidošanu",
+    "message": "At\u013caut visu identific\u0113jo\u0161\u0101s dokumenta ciparvirknes veido\u0161anu",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Identificējošās ciparvirknes veidošanas mēģinājumi",
+    "message": "Identific\u0113jo\u0161\u0101s ciparvirknes veido\u0161anas m\u0113\u0123in\u0101jumi",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Skripti šajā vietnē",
+    "message": "Skripti \u0161aj\u0101 vietn\u0113",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Bloķētie skripti",
+    "message": "Blo\u0137\u0113tie skripti",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Atļautie skripti",
+    "message": "At\u013cautie skripti",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Bloķēt visus",
+    "message": "Blo\u0137\u0113t visus",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Atļaut visus",
+    "message": "At\u013caut visus",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Bloķēt",
+    "message": "Blo\u0137\u0113t",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Atļaut",
+    "message": "At\u013caut",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Vienreiz bloķēta",
+    "message": "Vienreiz blo\u0137\u0113ta",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Vienreiz atļauta",
+    "message": "Vienreiz at\u013cauta",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Atļaut skriptus vienreiz",
+    "message": "At\u013caut skriptus vienreiz",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
@@ -160,7 +160,7 @@
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Doties atpakaļ",
+    "message": "Doties atpaka\u013c",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -168,35 +168,35 @@
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Mainīt globālos aizsarga noklusējuma iestatījumus",
+    "message": "Main\u012bt glob\u0101los aizsarga noklus\u0113juma iestat\u012bjumus",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Pārvaldīt pielāgotos filtrus",
+    "message": "P\u0101rvald\u012bt piel\u0101gotos filtrus",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Bloķēt elementu",
+    "message": "Blo\u0137\u0113t elementu",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Paplašinātais skatījums",
+    "message": "Papla\u0161in\u0101tais skat\u012bjums",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Vienkāršais skats",
+    "message": "Vienk\u0101r\u0161ais skats",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Vietnēs bieži ir iekļauti sīkfaili un skripti, kas mēģina identificēt jūs un jūsu ierīci (bieži iegulti reklāmās). Tie vēlas noskaidrot, kas jūs esat, un sekot jums visā tīmeklī — sekojot tam, ko jūs darāt katrā vietnē. Brave tos bloķē, lai jūs varētu veikt pārlūkošanu, netiekot izsekoti.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Vietn\u0113s bie\u017ei ir iek\u013cauti s\u012bkfaili un skripti, kas m\u0113\u0123ina identific\u0113t j\u016bs un j\u016bsu ier\u012bci (bie\u017ei iegulti rekl\u0101m\u0101s). Tie v\u0113las noskaidrot, kas j\u016bs esat, un sekot jums vis\u0101 t\u012bmekl\u012b \u2014 sekojot tam, ko j\u016bs dar\u0101t katr\u0101 vietn\u0113. AI Wize tos blo\u0137\u0113, lai j\u016bs var\u0113tu veikt p\u0101rl\u016bko\u0161anu, netiekot izsekoti.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Bloķēti starpvietņu izsekotāji un citas nejaukas lietas",
+    "message": "Blo\u0137\u0113ti starpviet\u0146u izsekot\u0101ji un citas nejaukas lietas",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Ekrāna iestatījumu maiņa šajā skatā var ietekmēt šīs vietnes saderību ar tīmekli.",
+    "message": "Ekr\u0101na iestat\u012bjumu mai\u0146a \u0161aj\u0101 skat\u0101 var ietekm\u0113t \u0161\u012bs vietnes sader\u012bbu ar t\u012bmekli.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,23 +204,39 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Uzzināt vairāk",
+    "message": "Uzzin\u0101t vair\u0101k",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Pievienot pārlūkam Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Pievienot p\u0101rl\u016bkam AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Noņemt no pārlūka Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "No\u0146emt no p\u0101rl\u016bka AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Pievienot Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Noņemt no pārlūka Chrome",
+    "message": "No\u0146emt no p\u0101rl\u016bka Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Lejupiel\u0101des",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Iestat\u012bjumi",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "V\u0113sture",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Gr\u0101matz\u012bmes",
+    "description": "Bookmarks Label"
   }
 }

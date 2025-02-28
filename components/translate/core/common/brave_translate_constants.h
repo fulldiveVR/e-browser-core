@@ -8,9 +8,9 @@
 
 namespace translate {
 
-inline constexpr char kBraveTranslateOrigin[] = "https://translate.brave.com";
+inline constexpr char kBraveTranslateOrigin[] = "https://translate.aiwize.com";
 inline constexpr char kBraveTranslateScriptURL[] =
-    "https://translate.brave.com/static/v1/element.js";
+    "https://translate.aiwize.com/static/v1/element.js";
 
 // The used version of translate static resources (js/css files).
 // Used in brave_translate.js as a replacement to /translate_static/ part in

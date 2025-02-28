@@ -14,7 +14,6 @@ declare_args() {
 }
 
 if (is_official_build) {
-  assert(brave_sync_endpoint != "")
 }
 
 buildflag_header("buildflags") {

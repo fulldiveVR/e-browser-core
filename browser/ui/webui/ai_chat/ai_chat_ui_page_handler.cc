@@ -47,15 +47,15 @@
 namespace {
 constexpr uint32_t kDesiredFaviconSizePixels = 32;
 constexpr char kURLRefreshPremiumSession[] =
-    "https://account.brave.com/?intent=recover&product=leo";
+    "https://account.aiwize.com/?intent=recover&product=leo";
 constexpr char kURLLearnMoreAboutStorage[] =
-    "https://support.brave.com/hc/en-us/articles/"
+    "https://support.aiwize.com/hc/en-us/articles/"
     "32663367857549-How-do-I-use-Chat-History-in-Brave-Leo";
 
 #if !BUILDFLAG(IS_ANDROID)
 constexpr char kURLGoPremium[] =
-    "https://account.brave.com/account/?intent=checkout&product=leo";
-constexpr char kURLManagePremium[] = "https://account.brave.com/";
+    "https://account.aiwize.com/account/?intent=checkout&product=leo";
+constexpr char kURLManagePremium[] = "https://account.aiwize.com/";
 #endif
 }  // namespace
 
@@ -181,7 +181,7 @@ void AIChatUIPageHandler::OpenAIChatSettings() {
       (active_chat_tab_helper_) ? active_chat_tab_helper_->web_contents()
                                 : owner_web_contents_.get();
 #if !BUILDFLAG(IS_ANDROID)
-  const GURL url("brave://settings/leo-ai");
+  const GURL url("aiwize://settings/leo-ai");
   if (auto* browser = chrome::FindBrowserWithTab(contents_to_navigate)) {
     ShowSingletonTab(browser, url);
   } else {

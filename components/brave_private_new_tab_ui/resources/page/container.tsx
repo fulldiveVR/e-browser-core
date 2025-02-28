@@ -6,13 +6,11 @@ import * as React from 'react'
 import { getLocale } from '$web-common/locale'
 import styled from 'styled-components'
 import getPageHandlerInstance from './api/brave_page_handler'
-import { loadTimeData } from '../../../common/loadTimeData'
 
 import BackgroundView from './components/background-view'
 import SearchBox from './components/search-box'
 import DisclaimerDialog from './components/disclaimer-dialog'
-import BadgeTor from './components/badge-tor'
-import { useTorObserver, useHasDisclaimerDismissed } from './hooks'
+import { useHasDisclaimerDismissed } from './hooks'
 
 const CenterView = styled.div`
   width: 100%;
@@ -49,9 +47,7 @@ const BadgePrivateWindow = styled.div`
 `
 
 function Container () {
-  const isWindowTor = loadTimeData.getBoolean('isWindowTor')
 
-  const { isConnected, progress, message, connectionStatus } = useTorObserver()
   const { hasDisclaimerDismissed } = useHasDisclaimerDismissed()
 
   let badgeElement = (
@@ -69,22 +65,6 @@ function Container () {
     </p>
   )
 
-  if (isWindowTor) {
-    badgeElement = (
-      <BadgeTor
-        isConnected={isConnected}
-        progress={progress ?? ''}
-        message={message ?? ''}
-        connectionStatus={connectionStatus}
-      />
-    )
-
-    dialogContent = (
-      <>
-        <p>{getLocale('headerTorText')}</p>
-      </>
-    )
-  }
 
   const handleSearchSubmit = (value: string, openNewTab: boolean) => {
     getPageHandlerInstance().pageHandler.goToBraveSearch(value, openNewTab)
@@ -96,7 +76,7 @@ function Container () {
   }
 
   return (
-    <BackgroundView isTor={isWindowTor}>
+    <BackgroundView >
       <BadgeBox>{badgeElement}</BadgeBox>
       <CenterView>
         <SearchBox onSubmit={handleSearchSubmit} />
@@ -104,7 +84,7 @@ function Container () {
       <DialogBox>
         {(hasDisclaimerDismissed != null) && (
           <DisclaimerDialog
-            title={isWindowTor ? getLocale('headerTorTitle') : getLocale('headerTitle')}
+            title={getLocale('headerTitle')}
             isOpen={!hasDisclaimerDismissed}
             onClose={handleDialogClose}
           >

@@ -70,6 +70,16 @@ class OAIAPIClient {
                         APIRequestResult result);
   void OnQueryDataReceived(GenerationDataCallback callback,
                            base::expected<base::Value, std::string> result);
+  void OnModelQueryCompleted(const mojom::CustomModelOptions& model_options,
+                             base::Value::List messages,
+                             GenerationDataCallback data_received_callback,
+                             GenerationCompletedCallback completed_callback,
+                             APIRequestResult result);
+  void PerformRequestInternal(const mojom::CustomModelOptions& model_options,
+                              base::Value::List messages,
+                              GenerationDataCallback data_received_callback,
+                              GenerationCompletedCallback completed_callback);
+  std::string model_name_;
 
   std::unique_ptr<api_request_helper::APIRequestHelper> api_request_helper_;
 

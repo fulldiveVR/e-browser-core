@@ -19,7 +19,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     r.MANAGE_PROFILE = r.GET_STARTED.createChild('/manageProfile')
     // We re-section people page into getStarted section (see people_page Brave
     // override), so we need to adjust the route accordingly in order for the
-    // direct navigation to brave://settings/importData to work.
+    // direct navigation to aiwize://settings/importData to work.
     if (r.IMPORT_DATA) {
       r.IMPORT_DATA.section = 'getStarted'
     }
@@ -39,13 +39,6 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
   if (pageVisibility.braveSync) {
     r.BRAVE_SYNC = r.BASIC.createSection('/braveSync', 'braveSync')
     r.BRAVE_SYNC_SETUP = r.BRAVE_SYNC.createChild('/braveSync/setup')
-  }
-  if (pageVisibility.braveWeb3) {
-    r.BRAVE_WEB3 = r.BASIC.createSection('/web3', 'web3')
-    if (pageVisibility.braveWallet) {
-      r.BRAVE_WALLET = r.BRAVE_WEB3.createSection('/wallet', 'wallet')
-      r.BRAVE_WALLET_NETWORKS = r.BRAVE_WALLET.createChild('/wallet/networks')
-    }
   }
   r.BRAVE_NEW_TAB = r.BASIC.createSection('/newTab', 'newTab')
 
@@ -86,12 +79,6 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     if (isOpenAIChatFromBraveSearchEnabled) {
       r.SITE_SETTINGS_BRAVE_OPEN_AI_CHAT =
         r.SITE_SETTINGS.createChild('braveOpenAIChat')
-    }
-    const isNativeBraveWalletFeatureEnabled =
-      loadTimeData.getBoolean('isNativeBraveWalletFeatureEnabled')
-    if (isNativeBraveWalletFeatureEnabled) {
-      r.SITE_SETTINGS_ETHEREUM = r.SITE_SETTINGS.createChild('ethereum')
-      r.SITE_SETTINGS_SOLANA = r.SITE_SETTINGS.createChild('solana')
     }
     r.SITE_SETTINGS_SHIELDS_STATUS = r.SITE_SETTINGS.createChild('braveShields')
     if (r.SITE_SETTINGS_ADS) {

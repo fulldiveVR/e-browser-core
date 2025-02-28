@@ -96,7 +96,7 @@ function addBraveStyleOverride(moduleName: string, styleOverrideModuleNames: str
     `${styleElement.getAttribute('include')} ${styleOverrideModuleNames.join(' ')}`
   )
   if (debug) {
-    console.log(`Brave Style Override added of "${styleOverrideModuleNames.join(' ')}" for ${moduleName}`, styleElement)
+    console.log(`AI Wize Style Override added of "${styleOverrideModuleNames.join(' ')}" for ${moduleName}`, styleElement)
     // TODO(petemill): Check if we can find each style override module
   }
 }
@@ -217,13 +217,13 @@ export function OverrideIronIcons(iconSetName: string, overridingIconSetName: st
   for (const chromiumIconName in iconOverrides) {
     const chromiumIcon = srcIconSet.querySelector(`#${chromiumIconName}`)
     if (!chromiumIcon) {
-      console.error(`[brave overrides] Could not find chromium icon '${chromiumIconName}' in iconset '${iconSetName}' for replacement!`)
+      console.error(`[AIWize overrides] Could not find chromium icon '${chromiumIconName}' in iconset '${iconSetName}' for replacement!`)
       continue
     }
     const braveIconName = iconOverrides[chromiumIconName]
     const braveIcon = overrideIconSet.querySelector(`#${braveIconName}`)
     if (!braveIcon) {
-      console.error(`[brave overrides] Could not find brave icon '${braveIconName}' in iconset '${overridingIconSetName}' for replacement!`)
+      console.error(`[AIWize overrides] Could not find brave icon '${braveIconName}' in iconset '${overridingIconSetName}' for replacement!`)
       continue
     }
     // replace

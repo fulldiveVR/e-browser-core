@@ -17,7 +17,7 @@ import { tabAssociatedChatId, useActiveChat } from '../../state/active_chat_cont
 
 const Logo = ({ isPremium }: { isPremium: boolean }) => <div className={styles.logo}>
   <Icon name='product-brave-leo' />
-  <div className={styles.logoTitle}>Leo AI</div>
+  <div className={styles.logoTitle}>AI Wize Chat</div>
   {isPremium && (
     <div className={styles.badgePremium}>PREMIUM</div>
   )}

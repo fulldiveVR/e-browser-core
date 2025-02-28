@@ -43,7 +43,7 @@ RegisterPolymerTemplateModifications({
     const checkupMenuItem = templateContent.querySelector('#checkup')
     if (!checkupMenuItem) {
       console.log(
-        `[Brave Password Manager Overrides] Could not find menu item 'checkup'`)
+        `[AI Wize Password Manager Overrides] Could not find menu item 'checkup'`)
     } else {
       checkupMenuItem.remove()
     }

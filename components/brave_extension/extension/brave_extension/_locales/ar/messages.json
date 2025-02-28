@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "امتداد Brave",
+    "message": "\u0627\u0645\u062a\u062f\u0627\u062f AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "طرق الحماية",
+    "message": "\u0637\u0631\u0642 \u0627\u0644\u062d\u0645\u0627\u064a\u0629",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "أعلى",
+    "message": "\u0623\u0639\u0644\u0649",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "أسفل",
+    "message": "\u0623\u0633\u0641\u0644",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "لهذا الموقع",
+    "message": "\u0644\u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "إذا تم كسر حجب الموقع، جرب طرق الحماية أدناه",
+    "message": "\u0625\u0630\u0627 \u062a\u0645 \u0643\u0633\u0631 \u062d\u062c\u0628 \u0627\u0644\u0645\u0648\u0642\u0639\u060c \u062c\u0631\u0628 \u0637\u0631\u0642 \u0627\u0644\u062d\u0645\u0627\u064a\u0629 \u0623\u062f\u0646\u0627\u0647",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "إنك تتصفح هذا الموقع دون حماية الخصوصية والأمن من Brave. ألا يعمل بشكل سليم أثناء تشغيل Shields؟",
+    "message": "\u0625\u0646\u0643 \u062a\u062a\u0635\u0641\u062d \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639 \u062f\u0648\u0646 \u062d\u0645\u0627\u064a\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629 \u0648\u0627\u0644\u0623\u0645\u0646 \u0645\u0646 AI Wize. \u0623\u0644\u0627 \u064a\u0639\u0645\u0644 \u0628\u0634\u0643\u0644 \u0633\u0644\u064a\u0645 \u0623\u062b\u0646\u0627\u0621 \u062a\u0634\u063a\u064a\u0644 Shields\u061f",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "الإبلاغ عن موقع إلكتروني معطل",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u0627\u0644\u0625\u0628\u0644\u0627\u063a \u0639\u0646 \u0645\u0648\u0642\u0639 \u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0645\u0639\u0637\u0644",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "العناصر المحجوبة",
+    "message": "\u0627\u0644\u0639\u0646\u0627\u0635\u0631 \u0627\u0644\u0645\u062d\u062c\u0648\u0628\u0629",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "العنصر المحجوب",
+    "message": "\u0627\u0644\u0639\u0646\u0635\u0631 \u0627\u0644\u0645\u062d\u062c\u0648\u0628",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "و",
+    "message": "\u0648",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "تم تحديث الاتصالات",
+    "message": "\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "تم تحديث الاتصال",
+    "message": "\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0627\u062a\u0635\u0627\u0644",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "تم حظر برامج التتبع عبر الموقع",
+    "message": "\u062a\u0645 \u062d\u0638\u0631 \u0628\u0631\u0627\u0645\u062c \u0627\u0644\u062a\u062a\u0628\u0639 \u0639\u0628\u0631 \u0627\u0644\u0645\u0648\u0642\u0639",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "تم حظر أدوات التتبع والإعلانات",
+    "message": "\u062a\u0645 \u062d\u0638\u0631 \u0623\u062f\u0648\u0627\u062a \u0627\u0644\u062a\u062a\u0628\u0639 \u0648\u0627\u0644\u0625\u0639\u0644\u0627\u0646\u0627\u062a",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "المتتبعات والإعلانات محجوبة (شديد)",
+    "message": "\u0627\u0644\u0645\u062a\u062a\u0628\u0639\u0627\u062a \u0648\u0627\u0644\u0625\u0639\u0644\u0627\u0646\u0627\u062a \u0645\u062d\u062c\u0648\u0628\u0629 (\u0634\u062f\u064a\u062f)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "المتتبعات والإعلانات محجوبة (قياسي)",
+    "message": "\u0627\u0644\u0645\u062a\u062a\u0628\u0639\u0627\u062a \u0648\u0627\u0644\u0625\u0639\u0644\u0627\u0646\u0627\u062a \u0645\u062d\u062c\u0648\u0628\u0629 (\u0642\u064a\u0627\u0633\u064a)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "السماح بجميع المتتبعات والإعلانات",
+    "message": "\u0627\u0644\u0633\u0645\u0627\u062d \u0628\u062c\u0645\u064a\u0639 \u0627\u0644\u0645\u062a\u062a\u0628\u0639\u0627\u062a \u0648\u0627\u0644\u0625\u0639\u0644\u0627\u0646\u0627\u062a",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "تم تحديث الاتصالات إلى بروتوكول HTTPS المحمي",
+    "message": "\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0625\u0644\u0649 \u0628\u0631\u0648\u062a\u0648\u0643\u0648\u0644 HTTPS \u0627\u0644\u0645\u062d\u0645\u064a",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "تم تحديث الاتصال إلى بروتوكول HTTPS المحمي",
+    "message": "\u062a\u0645 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0627\u062a\u0635\u0627\u0644 \u0625\u0644\u0649 \u0628\u0631\u0648\u062a\u0648\u0643\u0648\u0644 HTTPS \u0627\u0644\u0645\u062d\u0645\u064a",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "تم حجب النصوص",
+    "message": "\u062a\u0645 \u062d\u062c\u0628 \u0627\u0644\u0646\u0635\u0648\u0635",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "تم حظر ملفات تعريف الارتباط عبر المواقع",
+    "message": "\u062a\u0645 \u062d\u0638\u0631 \u0645\u0644\u0641\u0627\u062a \u062a\u0639\u0631\u064a\u0641 \u0627\u0644\u0627\u0631\u062a\u0628\u0627\u0637 \u0639\u0628\u0631 \u0627\u0644\u0645\u0648\u0627\u0642\u0639",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "تم حجب ملفات تعريف الارتباط",
+    "message": "\u062a\u0645 \u062d\u062c\u0628 \u0645\u0644\u0641\u0627\u062a \u062a\u0639\u0631\u064a\u0641 \u0627\u0644\u0627\u0631\u062a\u0628\u0627\u0637",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "تم السماح بجميع ملفات تعريف الارتباط",
+    "message": "\u062a\u0645 \u0627\u0644\u0633\u0645\u0627\u062d \u0628\u062c\u0645\u064a\u0639 \u0645\u0644\u0641\u0627\u062a \u062a\u0639\u0631\u064a\u0641 \u0627\u0644\u0627\u0631\u062a\u0628\u0627\u0637",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "تم حظر البصمات",
+    "message": "\u062a\u0645 \u062d\u0638\u0631 \u0627\u0644\u0628\u0635\u0645\u0627\u062a",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "حظر بصمات الأصابع (قياسي)",
+    "message": "\u062d\u0638\u0631 \u0628\u0635\u0645\u0627\u062a \u0627\u0644\u0623\u0635\u0627\u0628\u0639 (\u0642\u064a\u0627\u0633\u064a)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "حظر بصمات الأصابع (صارم، قد يفصل المواقع)",
+    "message": "\u062d\u0638\u0631 \u0628\u0635\u0645\u0627\u062a \u0627\u0644\u0623\u0635\u0627\u0628\u0639 (\u0635\u0627\u0631\u0645\u060c \u0642\u062f \u064a\u0641\u0635\u0644 \u0627\u0644\u0645\u0648\u0627\u0642\u0639)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "السماح بجميع عمليات أخذ البصمات",
+    "message": "\u0627\u0644\u0633\u0645\u0627\u062d \u0628\u062c\u0645\u064a\u0639 \u0639\u0645\u0644\u064a\u0627\u062a \u0623\u062e\u0630 \u0627\u0644\u0628\u0635\u0645\u0627\u062a",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "محاولات الدخول بالبصمة",
+    "message": "\u0645\u062d\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u062f\u062e\u0648\u0644 \u0628\u0627\u0644\u0628\u0635\u0645\u0629",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "النصوص في هذا الموقع",
+    "message": "\u0627\u0644\u0646\u0635\u0648\u0635 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "نصوص محجوبة",
+    "message": "\u0646\u0635\u0648\u0635 \u0645\u062d\u062c\u0648\u0628\u0629",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "النصوص المسموح بها",
+    "message": "\u0627\u0644\u0646\u0635\u0648\u0635 \u0627\u0644\u0645\u0633\u0645\u0648\u062d \u0628\u0647\u0627",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "حجب الكل",
+    "message": "\u062d\u062c\u0628 \u0627\u0644\u0643\u0644",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "السماح للكل",
+    "message": "\u0627\u0644\u0633\u0645\u0627\u062d \u0644\u0644\u0643\u0644",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "حجب",
+    "message": "\u062d\u062c\u0628",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "السماح",
+    "message": "\u0627\u0644\u0633\u0645\u0627\u062d",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "تم الحظر لمرة واحدة",
+    "message": "\u062a\u0645 \u0627\u0644\u062d\u0638\u0631 \u0644\u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "يسمح به مرة واحدة",
+    "message": "\u064a\u0633\u0645\u062d \u0628\u0647 \u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "السماح للبرامج النصية مرة واحدة",
+    "message": "\u0627\u0644\u0633\u0645\u0627\u062d \u0644\u0644\u0628\u0631\u0627\u0645\u062c \u0627\u0644\u0646\u0635\u064a\u0629 \u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "إلغاء",
+    "message": "\u0625\u0644\u063a\u0627\u0621",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "رجوع",
+    "message": "\u0631\u062c\u0648\u0639",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "التطبيق مرة واحدة",
+    "message": "\u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "تغيير الإعدادات الافتراضية الشاملة للحماية",
+    "message": "\u062a\u063a\u064a\u064a\u0631 \u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a \u0627\u0644\u0627\u0641\u062a\u0631\u0627\u0636\u064a\u0629 \u0627\u0644\u0634\u0627\u0645\u0644\u0629 \u0644\u0644\u062d\u0645\u0627\u064a\u0629",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "إدارة عوامل التصفية المخصصة",
+    "message": "\u0625\u062f\u0627\u0631\u0629 \u0639\u0648\u0627\u0645\u0644 \u0627\u0644\u062a\u0635\u0641\u064a\u0629 \u0627\u0644\u0645\u062e\u0635\u0635\u0629",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "عنصر الحظر",
+    "message": "\u0639\u0646\u0635\u0631 \u0627\u0644\u062d\u0638\u0631",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "عرض متقدم",
+    "message": "\u0639\u0631\u0636 \u0645\u062a\u0642\u062f\u0645",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "عرض مبسط",
+    "message": "\u0639\u0631\u0636 \u0645\u0628\u0633\u0637",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "غالبًا ما تتضمن المواقع ملفات تعريف الارتباط والبرامج النصية التي تحاول تحديد هويتك وجهازك (غالبًا ما تكون مضمنة في الإعلانات). إنهم يريدون معرفة ماهيتك ومتابعتك عبر شبكة الإنترنت - يتتبعون بذلك ما تفعله في كل موقع. يحجب Brave هذه الأشياء لكي تتمكن من التصفح دون التعرض للمتابعة.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u063a\u0627\u0644\u0628\u064b\u0627 \u0645\u0627 \u062a\u062a\u0636\u0645\u0646 \u0627\u0644\u0645\u0648\u0627\u0642\u0639 \u0645\u0644\u0641\u0627\u062a \u062a\u0639\u0631\u064a\u0641 \u0627\u0644\u0627\u0631\u062a\u0628\u0627\u0637 \u0648\u0627\u0644\u0628\u0631\u0627\u0645\u062c \u0627\u0644\u0646\u0635\u064a\u0629 \u0627\u0644\u062a\u064a \u062a\u062d\u0627\u0648\u0644 \u062a\u062d\u062f\u064a\u062f \u0647\u0648\u064a\u062a\u0643 \u0648\u062c\u0647\u0627\u0632\u0643 (\u063a\u0627\u0644\u0628\u064b\u0627 \u0645\u0627 \u062a\u0643\u0648\u0646 \u0645\u0636\u0645\u0646\u0629 \u0641\u064a \u0627\u0644\u0625\u0639\u0644\u0627\u0646\u0627\u062a). \u0625\u0646\u0647\u0645 \u064a\u0631\u064a\u062f\u0648\u0646 \u0645\u0639\u0631\u0641\u0629 \u0645\u0627\u0647\u064a\u062a\u0643 \u0648\u0645\u062a\u0627\u0628\u0639\u062a\u0643 \u0639\u0628\u0631 \u0634\u0628\u0643\u0629 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a - \u064a\u062a\u062a\u0628\u0639\u0648\u0646 \u0628\u0630\u0644\u0643 \u0645\u0627 \u062a\u0641\u0639\u0644\u0647 \u0641\u064a \u0643\u0644 \u0645\u0648\u0642\u0639. \u064a\u062d\u062c\u0628 AI Wize \u0647\u0630\u0647 \u0627\u0644\u0623\u0634\u064a\u0627\u0621 \u0644\u0643\u064a \u062a\u062a\u0645\u0643\u0646 \u0645\u0646 \u0627\u0644\u062a\u0635\u0641\u062d \u062f\u0648\u0646 \u0627\u0644\u062a\u0639\u0631\u0636 \u0644\u0644\u0645\u062a\u0627\u0628\u0639\u0629.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "تم حجب برامج التتبع عبر المواقع وغيرها من العناصر المريبة",
+    "message": "\u062a\u0645 \u062d\u062c\u0628 \u0628\u0631\u0627\u0645\u062c \u0627\u0644\u062a\u062a\u0628\u0639 \u0639\u0628\u0631 \u0627\u0644\u0645\u0648\u0627\u0642\u0639 \u0648\u063a\u064a\u0631\u0647\u0627 \u0645\u0646 \u0627\u0644\u0639\u0646\u0627\u0635\u0631 \u0627\u0644\u0645\u0631\u064a\u0628\u0629",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "قد يؤثر تغيير إعدادات Shield في طريقة العرض هذه على توافق الويب لهذا الموقع.",
+    "message": "\u0642\u062f \u064a\u0624\u062b\u0631 \u062a\u063a\u064a\u064a\u0631 \u0625\u0639\u062f\u0627\u062f\u0627\u062a Shield \u0641\u064a \u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u0639\u0631\u0636 \u0647\u0630\u0647 \u0639\u0644\u0649 \u062a\u0648\u0627\u0641\u0642 \u0627\u0644\u0648\u064a\u0628 \u0644\u0647\u0630\u0627 \u0627\u0644\u0645\u0648\u0642\u0639.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "تم",
+    "message": "\u062a\u0645",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "اكتشف المزيد",
+    "message": "\u0627\u0643\u062a\u0634\u0641 \u0627\u0644\u0645\u0632\u064a\u062f",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "‏إضافة إلى Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u200f\u0625\u0636\u0627\u0641\u0629 \u0625\u0644\u0649 AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "‏إزالة من Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "\u200f\u0625\u0632\u0627\u0644\u0629 \u0645\u0646 AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "‏إضافة إلى Chrome",
+    "message": "\u200f\u0625\u0636\u0627\u0641\u0629 \u0625\u0644\u0649 Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "‏الإزالة من Chrome",
+    "message": "\u200f\u0627\u0644\u0625\u0632\u0627\u0644\u0629 \u0645\u0646 Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0639\u0645\u0644\u064a\u0627\u062a \u0627\u0644\u062a\u0646\u0632\u064a\u0644",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0627\u0644\u0633\u062c\u0644",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0627\u0644\u0625\u0634\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u0631\u062c\u0639\u064a\u0629",
+    "description": "Bookmarks Label"
   }
 }

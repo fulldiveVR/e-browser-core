@@ -185,7 +185,7 @@ constexpr auto kDefaultEnginesByCountryIdMap =
 // - `SetDefaultSearchVersion` in `//brave/browser/profiles/profile_util.cc`
 // - `//brave/browser/profiles/brave_profile_manager.cc` where it is called
 //
-// If that person resets the profile using brave://settings/reset, we need to
+// If that person resets the profile using aiwize://settings/reset, we need to
 // set the default search engine back to what it was when the profile was
 // originally created. This way, a person doesn't get a new unexpected default
 // when they reset the profile; it goes back to the original value.

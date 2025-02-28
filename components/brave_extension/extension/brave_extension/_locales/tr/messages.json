@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave Eklentisi",
+    "message": "AI Wize Eklentisi",
     "description": "The name of the extension."
   },
   "shields": {
@@ -8,35 +8,35 @@
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "yukarı",
+    "message": "yukar\u0131",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "aşağı",
+    "message": "a\u015fa\u011f\u0131",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "bu site için",
+    "message": "bu site i\u00e7in",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Site çökmüş gözüküyorsa korumaları kapatmayı deneyin",
+    "message": "Site \u00e7\u00f6km\u00fc\u015f g\u00f6z\u00fck\u00fcyorsa korumalar\u0131 kapatmay\u0131 deneyin",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Bu siteyi Brave'in gizlilik ve güvenlik önlemleri olmadan ziyaret ediyorsunuz. Kalkanlar aktifken doğru çalışmıyor mu?",
+    "message": "Bu siteyi AI Wize'in gizlilik ve g\u00fcvenlik \u00f6nlemleri olmadan ziyaret ediyorsunuz. Kalkanlar aktifken do\u011fru \u00e7al\u0131\u015fm\u0131yor mu?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Arızalı bir siteyi bildir",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Ar\u0131zal\u0131 bir siteyi bildir",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Öğeler engellendi",
+    "message": "\u00d6\u011feler engellendi",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Öğe engellendi",
+    "message": "\u00d6\u011fe engellendi",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
@@ -44,15 +44,15 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "bağlantılar yükseltildi",
+    "message": "ba\u011flant\u0131lar y\u00fckseltildi",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "bağlantı yükseltildi",
+    "message": "ba\u011flant\u0131 y\u00fckseltildi",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Siteler arası iz sürücüler engellendi",
+    "message": "Siteler aras\u0131 iz s\u00fcr\u00fcc\u00fcler engellendi",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
@@ -60,23 +60,23 @@
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "İzleyiciler ve reklamlar engellendi (katı)",
+    "message": "\u0130zleyiciler ve reklamlar engellendi (kat\u0131)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "İzleyiciler ve reklamlar engellendi (standart)",
+    "message": "\u0130zleyiciler ve reklamlar engellendi (standart)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Tüm izleyici ve reklamlara izin ver",
+    "message": "T\u00fcm izleyici ve reklamlara izin ver",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Bağlantılar HTTPS'e yükseltildi",
+    "message": "Ba\u011flant\u0131lar HTTPS'e y\u00fckseltildi",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Bağlantı HTTPS'e yükseltildi",
+    "message": "Ba\u011flant\u0131 HTTPS'e y\u00fckseltildi",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -84,15 +84,15 @@
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Siteler arası çerezler engellendi",
+    "message": "Siteler aras\u0131 \u00e7erezler engellendi",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Çerezler engellendi",
+    "message": "\u00c7erezler engellendi",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Tüm çerezlere izin verildi",
+    "message": "T\u00fcm \u00e7erezlere izin verildi",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
@@ -104,15 +104,15 @@
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Parmak izi engelli (katı, siteleri kırabilir)",
+    "message": "Parmak izi engelli (kat\u0131, siteleri k\u0131rabilir)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Tüm parmak izlerine izin ver",
+    "message": "T\u00fcm parmak izlerine izin ver",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Parmak izi girişimleri",
+    "message": "Parmak izi giri\u015fimleri",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
@@ -124,11 +124,11 @@
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "İzin verilen komutlar",
+    "message": "\u0130zin verilen komutlar",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Tümünü engelle",
+    "message": "T\u00fcm\u00fcn\u00fc engelle",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
@@ -140,11 +140,11 @@
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "İzin Ver",
+    "message": "\u0130zin Ver",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Bir kereliğine engellendi",
+    "message": "Bir kereli\u011fine engellendi",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
@@ -152,15 +152,15 @@
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Script'lere bir kereliğine izin ver",
+    "message": "Script'lere bir kereli\u011fine izin ver",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "İptal",
+    "message": "\u0130ptal",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Geri dön",
+    "message": "Geri d\u00f6n",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -168,39 +168,39 @@
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Genel koruma varsayılanlarını değiştir",
+    "message": "Genel koruma varsay\u0131lanlar\u0131n\u0131 de\u011fi\u015ftir",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Özel filtreleri yönet",
+    "message": "\u00d6zel filtreleri y\u00f6net",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Öğeyi engelle",
+    "message": "\u00d6\u011feyi engelle",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Gelişmiş Görünüm",
+    "message": "Geli\u015fmi\u015f G\u00f6r\u00fcn\u00fcm",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Basit Görünüm",
+    "message": "Basit G\u00f6r\u00fcn\u00fcm",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Siteler sıklıkla sizi ve cihazınızı tanımayı deneyen çerezler ve kodlar içerir (sıklıkla reklamlara gömülü olarak). Kim olduğunuzu çözmek ve sizi web boyunca takip etmek isterler — her sitede ne yaptığınızı izleyerek. Brave bu şeyleri engeller, böylece takip edilmeden webde gezinebilirsiniz.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Siteler s\u0131kl\u0131kla sizi ve cihaz\u0131n\u0131z\u0131 tan\u0131may\u0131 deneyen \u00e7erezler ve kodlar i\u00e7erir (s\u0131kl\u0131kla reklamlara g\u00f6m\u00fcl\u00fc olarak). Kim oldu\u011funuzu \u00e7\u00f6zmek ve sizi web boyunca takip etmek isterler \u2014 her sitede ne yapt\u0131\u011f\u0131n\u0131z\u0131 izleyerek. AI Wize bu \u015feyleri engeller, b\u00f6ylece takip edilmeden webde gezinebilirsiniz.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Engellenen siteler arası izleyici ve diğer tekinsiz şeyler",
+    "message": "Engellenen siteler aras\u0131 izleyici ve di\u011fer tekinsiz \u015feyler",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Bu görünümde Koruma ayarlarını değiştirmek bu sitede web uyumluluğunu etkileyebilir.",
+    "message": "Bu g\u00f6r\u00fcn\u00fcmde Koruma ayarlar\u0131n\u0131 de\u011fi\u015ftirmek bu sitede web uyumlulu\u011funu etkileyebilir.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Anlaşıldı",
+    "message": "Anla\u015f\u0131ld\u0131",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
@@ -209,18 +209,34 @@
   },
   "addToBrave": {
     "message": "Brave'a ekle",
-    "description": "Message for adding an extension to Brave"
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave'dan kaldır",
-    "description": "Message for removing an extension from Brave"
+    "message": "Brave'dan kald\u0131r",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Chrome'a ekle",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome'dan kaldır",
+    "message": "Chrome'dan kald\u0131r",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0130ndirilenler",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Ayarlar",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Ge\u00e7mi\u015f",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Yer i\u015faretleri",
+    "description": "Bookmarks Label"
   }
 }

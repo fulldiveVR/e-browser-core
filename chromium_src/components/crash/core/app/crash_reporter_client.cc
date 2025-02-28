@@ -5,7 +5,7 @@
 
 #if defined(OFFICIAL_BUILD)
 #define BRAVE_CRASH_REPORTER_CLIENT_GET_UPLOAD_URL \
-  return "https://cr.brave.com";
+  return "https://cr.aiwize.com";
 #else
 #define BRAVE_CRASH_REPORTER_CLIENT_GET_UPLOAD_URL return std::string();
 #endif

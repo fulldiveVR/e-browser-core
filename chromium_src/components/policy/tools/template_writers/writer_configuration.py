@@ -11,38 +11,38 @@ def GetConfigurationForBuild(original_function, defines):
   return _merge_dicts(_BRAVE_VALUES, base)
 
 _BRAVE_VALUES = {
-  'build': 'brave',
-  'app_name': 'Brave',
+  'build': 'aiwize',
+  'app_name': 'AIWize',
   'doc_url':
-    'https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy',
-  'frame_name': 'Brave Frame',
-  'webview_name': 'Brave WebView',
+    'https://support.aiwize.com/hc/en-us/articles/360039248271-Group-Policy',
+  'frame_name': 'AIWize Frame',
+  'webview_name': 'AIWize WebView',
   'win_config': {
     'win': {
-      'reg_mandatory_key_name': 'Software\\Policies\\BraveSoftware\\Brave',
+      'reg_mandatory_key_name': 'Software\\Policies\\AIWizeSoftware\\AIWize',
       'reg_recommended_key_name':
-        'Software\\Policies\\BraveSoftware\\Brave\\Recommended',
-      'mandatory_category_path': ['Brave:Cat_Brave', 'brave'],
-      'recommended_category_path': ['Brave:Cat_Brave', 'brave_recommended'],
+        'Software\\Policies\\AIWizeSoftware\\AIWize\\Recommended',
+      'mandatory_category_path': ['AIWize:Cat_AIWize', 'aiwize'],
+      'recommended_category_path': ['AIWize:Cat_AIWize', 'aiwize_recommended'],
       'category_path_strings': {
-        'brave': 'Brave',
-        'brave_recommended':
-        'Brave - {doc_recommended}'
+        'aiwize': 'AIWize',
+        'aiwize_recommended':
+        'AIWize - {doc_recommended}'
       },
-      'namespace': 'BraveSoftware.Policies.Brave',
+      'namespace': 'AIWizeSoftware.Policies.AIWize',
     },
   },
-  # The string 'Brave' is defined in brave.adml for ADMX, but ADM doesn't
+  # The string 'AIWize' is defined in aiwize.adml for ADMX, but ADM doesn't
   # support external references, so we define this map here.
   'adm_category_path_strings': {
-    'Brave:Cat_Brave': 'Brave'
+    'AIWize:Cat_AIWize': 'AIWize'
   },
-  'admx_prefix': 'brave',
+  'admx_prefix': 'aiwize',
   'admx_using_namespaces': {
-    'Brave': 'BraveSoftware.Policies'  # prefix: namespace
+    'AIWize': 'AIWizeSoftware.Policies'  # prefix: namespace
   },
-  'linux_policy_path': '/etc/brave/policies/',
-  'bundle_id': 'com.brave.ios.core',
+  'linux_policy_path': '/etc/aiwize/policies/',
+  'bundle_id': 'com.aiwize.ios.core',
 }
 
 def _merge_dicts(src, dst):

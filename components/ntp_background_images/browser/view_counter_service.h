@@ -18,8 +18,6 @@
 #include "base/scoped_observation.h"
 #include "base/timer/wall_clock_timer.h"
 #include "base/values.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
-#include "brave/components/brave_ads/core/public/serving/targeting/condition_matcher/condition_matcher_util.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/components/ntp_background_images/browser/view_counter_model.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
@@ -30,9 +28,6 @@ class PrefService;
 
 class GURL;
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
 
 namespace content {
 class WebUIDataSource;
@@ -58,7 +53,6 @@ class ViewCounterService : public KeyedService,
  public:
   ViewCounterService(NTPBackgroundImagesService* background_images_service,
                      BraveNTPCustomBackgroundService* custom_background_service,
-                     brave_ads::AdsService* ads_service,
                      PrefService* prefs,
                      PrefService* local_state,
                      std::unique_ptr<NTPP3AHelper> ntp_p3a_helper,
@@ -83,10 +77,6 @@ class ViewCounterService : public KeyedService,
                                    const std::string& destination_url,
                                    const std::string& wallpaper_id);
 
-  void MaybeTriggerNewTabPageAdEvent(
-      const std::string& placement_id,
-      const std::string& creative_instance_id,
-      brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type);
 
   std::optional<base::Value::Dict> GetNextWallpaperForDisplay();
   std::optional<base::Value::Dict> GetCurrentWallpaperForDisplay();
@@ -98,8 +88,6 @@ class ViewCounterService : public KeyedService,
                const std::optional<std::string>& placement_id,
                const std::optional<std::string>& creative_instance_id,
                const std::optional<GURL>& target_url)> callback) const;
-  std::optional<brave_ads::ConditionMatcherMap> GetConditionMatchers(
-      const base::Value::Dict& dict);
   std::optional<base::Value::Dict>
   GetNextBrandedWallpaperWhichMatchesConditions();
   std::optional<base::Value::Dict> GetCurrentBrandedWallpaperFromAdInfo() const;
@@ -190,7 +178,6 @@ class ViewCounterService : public KeyedService,
   void UpdateP3AValues();
 
   raw_ptr<NTPBackgroundImagesService> background_images_service_ = nullptr;
-  raw_ptr<brave_ads::AdsService> ads_service_ = nullptr;
   raw_ptr<PrefService> prefs_ = nullptr;
   raw_ptr<PrefService> local_state_prefs_ = nullptr;
   bool is_supported_locale_ = false;

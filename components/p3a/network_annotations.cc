@@ -29,7 +29,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessRequestAnnotation() {
     policy {
       cookies_allowed: NO
       setting:
-        "Users can enable or disable it in brave://settings/privacy"
+        "Users can enable or disable it in aiwize://settings/privacy"
        policy_exception_justification:
          "Not implemented."
     })");
@@ -54,7 +54,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessServerInfoAnnotation() {
     policy {
       cookies_allowed: NO
       setting:
-        "Users can enable or disable it in brave://settings/privacy"
+        "Users can enable or disable it in aiwize://settings/privacy"
        policy_exception_justification:
          "Not implemented."
     })");
@@ -71,7 +71,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
             sender: "Brave Privacy-Preserving Product Analytics Uploader"
             description:
               "Report of anonymized usage statistics. For more info, see "
-              "https://brave.com/P3A"
+              "https://aiwize.com/P3A"
             trigger:
               "Reports are automatically generated on startup and at intervals "
               "while Brave is running."
@@ -84,7 +84,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           policy {
             cookies_allowed: NO
             setting:
-              "Users can enable or disable it in brave://settings/privacy"
+              "Users can enable or disable it in aiwize://settings/privacy"
              policy_exception_justification:
                "Not implemented."
           })");
@@ -110,7 +110,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           cookies_allowed: NO
           setting:
             "Users can enable or disable it by enabling or disabling Brave "
-            "rewards or ads in brave://rewards."
+            "rewards or ads in aiwize://rewards."
            policy_exception_justification:
              "Not implemented."
         })");
@@ -122,7 +122,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
             sender: "Brave Privacy-Preserving Product Analytics Uploader"
             description:
               "Report of anonymized usage statistics. For more info, see "
-              "https://brave.com/P3A"
+              "https://aiwize.com/P3A"
             trigger:
               "Reports are automatically generated on startup and at intervals "
               "while Brave is running."
@@ -133,7 +133,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           policy {
             cookies_allowed: NO
             setting:
-              "Users can enable or disable it in brave://settings/privacy"
+              "Users can enable or disable it in aiwize://settings/privacy"
              policy_exception_justification:
                "Not implemented."
           })");
@@ -157,7 +157,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation(
           cookies_allowed: NO
           setting:
             "Users can enable or disable it by enabling or disabling Brave "
-            "rewards or ads in brave://rewards."
+            "rewards or ads in aiwize://rewards."
            policy_exception_justification:
              "Not implemented."
         })");

@@ -4,7 +4,7 @@
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Afskærmning",
+    "message": "Afsk\u00e6rmning",
     "description": "The Shields feature name"
   },
   "up": {
@@ -20,16 +20,16 @@
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Hvis en side vises forkert, så prøv at slå afskærmning fra",
+    "message": "Hvis en side vises forkert, s\u00e5 pr\u00f8v at sl\u00e5 afsk\u00e6rmning fra",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Du er på denne side uden Braves privatlivs og sikkerhedsbeskyttende funktioner. Virker den ikke ordentligt med afskærmning?",
+    "message": "Du er p\u00e5 denne side uden AI Wizes privatlivs og sikkerhedsbeskyttende funktioner. Virker den ikke ordentligt med afsk\u00e6rmning?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Rapporter en side der ikke virker",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Emner blokeret",
@@ -104,7 +104,7 @@
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Fingeraftryk blokeret (streng, kan ødelægge sider) ",
+    "message": "Fingeraftryk blokeret (streng, kan \u00f8del\u00e6gge sider) ",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
@@ -112,11 +112,11 @@
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Fingeraftryksforsøg ",
+    "message": "Fingeraftryksfors\u00f8g ",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Scripts på denne side",
+    "message": "Scripts p\u00e5 denne side",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
@@ -144,15 +144,15 @@
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Blokeret én gang",
+    "message": "Blokeret \u00e9n gang",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Tilladt én gang",
+    "message": "Tilladt \u00e9n gang",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Tillad scripts én gang",
+    "message": "Tillad scripts \u00e9n gang",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
@@ -160,23 +160,23 @@
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Gå tilbage",
+    "message": "G\u00e5 tilbage",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Anvend én gang",
+    "message": "Anvend \u00e9n gang",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Ændr global skærmstandarder",
+    "message": "\u00c6ndr global sk\u00e6rmstandarder",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Administrér tilpassede filtre",
+    "message": "Administr\u00e9r tilpassede filtre",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Blokér element",
+    "message": "Blok\u00e9r element",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
@@ -188,39 +188,55 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Websteder inkluderer ofte cookies og scripts, der prøver at identificere dig og din enhed (ofte indlejret i annoncer). De vil regne ud, hvem du er og følge dig på tværs af nettet - spore, hvad du gør på ethvert websted. Brave blokerer disse ting, så du kan browse uden at blive fulgt rundt.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Websteder inkluderer ofte cookies og scripts, der pr\u00f8ver at identificere dig og din enhed (ofte indlejret i annoncer). De vil regne ud, hvem du er og f\u00f8lge dig p\u00e5 tv\u00e6rs af nettet - spore, hvad du g\u00f8r p\u00e5 ethvert websted. AI Wize blokerer disse ting, s\u00e5 du kan browse uden at blive fulgt rundt.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackere og andre uhyggelige ting er blokerede",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Ændring af Shield-indstillinger i denne visning kan påvirke webkompatibiliteten på dette websted.",
+    "message": "\u00c6ndring af Shield-indstillinger i denne visning kan p\u00e5virke webkompatibiliteten p\u00e5 dette websted.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Forstået",
+    "message": "Forst\u00e5et",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Lær mere",
+    "message": "L\u00e6r mere",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Føj til Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "F\u00f8j til AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Fjern fra Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Fjern fra AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Føj til Chrome",
+    "message": "F\u00f8j til Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
     "message": "Fjern fra Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Downloads",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Indstillinger",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historik",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bogm\u00e6rker",
+    "description": "Bookmarks Label"
   }
 }

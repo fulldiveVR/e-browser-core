@@ -6,7 +6,6 @@ import styled, { keyframes } from 'styled-components'
 
 import LionImage from './lion_logo.svg'
 import ImportImage from './welcome_import.svg'
-import RewardsImage from './welcome_rewards.svg'
 import SearchImage from './welcome_search.svg'
 import ShieldsImage from './welcome_shields.svg'
 import WelcomeImage from './welcome_bg.svg'
@@ -25,9 +24,6 @@ export const WelcomeImportImage = styled(BaseImage).attrs({ src: ImportImage })`
   height: 190px;
 `
 
-export const WelcomeRewardsImage = styled(BaseImage).attrs({ src: RewardsImage })`
-  height: 190px;
-`
 
 export const WelcomeSearchImage = styled(BaseImage).attrs({ src: SearchImage })`
   height: 190px;

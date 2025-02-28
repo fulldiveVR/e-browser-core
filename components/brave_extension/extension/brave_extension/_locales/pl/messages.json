@@ -1,18 +1,18 @@
 {
   "appName": {
-    "message": "Rozszerzenie Brave",
+    "message": "Rozszerzenie AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Tarcze są",
+    "message": "Tarcze s\u0105",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "włączone",
+    "message": "w\u0142\u0105czone",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "wyłączone",
+    "message": "wy\u0142\u0105czone",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
@@ -20,19 +20,19 @@
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Jeśli strona nie działa, spróbuj wyłączyć tarcze",
+    "message": "Je\u015bli strona nie dzia\u0142a, spr\u00f3buj wy\u0142\u0105czy\u0107 tarcze",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Przeglądasz tę witrynę bez zabezpieczeń prywatności Brave. Czy włączone tarcze Brave powodują nieprawidłowe działanie tej witryny?",
+    "message": "Przegl\u0105dasz t\u0119 witryn\u0119 bez zabezpiecze\u0144 prywatno\u015bci AI Wize. Czy w\u0142\u0105czone tarcze AI Wize powoduj\u0105 nieprawid\u0142owe dzia\u0142anie tej witryny?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Zgłoś uszkodzoną stronę",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Zg\u0142o\u015b uszkodzon\u0105 stron\u0119",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "zablokowanych elementów",
+    "message": "zablokowanych element\u00f3w",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
@@ -44,31 +44,31 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "połączenia zaktualizowane",
+    "message": "po\u0142\u0105czenia zaktualizowane",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "połączenie zaktualizowane",
+    "message": "po\u0142\u0105czenie zaktualizowane",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Zablokowane skrypty śledzące",
+    "message": "Zablokowane skrypty \u015bledz\u0105ce",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Zablokowane skrypty śledzące i reklamy",
+    "message": "Zablokowane skrypty \u015bledz\u0105ce i reklamy",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Zablokuj skrypty śledzące i reklamy (agresywnie)",
+    "message": "Zablokuj skrypty \u015bledz\u0105ce i reklamy (agresywnie)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Zablokuj skrypty śledzące i reklamy (standardowo)",
+    "message": "Zablokuj skrypty \u015bledz\u0105ce i reklamy (standardowo)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Zezwalaj na skrypty śledzące i reklamy",
+    "message": "Zezwalaj na skrypty \u015bledz\u0105ce i reklamy",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
@@ -96,23 +96,23 @@
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Zablokowano funkcję odcisku palca",
+    "message": "Zablokowano funkcj\u0119 odcisku palca",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Zablokuj rozpoznawanie urządzenia (standardowe)",
+    "message": "Zablokuj rozpoznawanie urz\u0105dzenia (standardowe)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Zablokuj rozpoznawanie urządzenia (ścisłe, strona może nie działać)",
+    "message": "Zablokuj rozpoznawanie urz\u0105dzenia (\u015bcis\u0142e, strona mo\u017ce nie dzia\u0142a\u0107)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Zezwalaj na rozpoznawanie urządzenia",
+    "message": "Zezwalaj na rozpoznawanie urz\u0105dzenia",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Próby rozpoznania urządzenia",
+    "message": "Pr\u00f3by rozpoznania urz\u0105dzenia",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
@@ -160,7 +160,7 @@
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Wróć",
+    "message": "Wr\u00f3\u0107",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -168,11 +168,11 @@
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Zmień domyślne ustawienie tarczy",
+    "message": "Zmie\u0144 domy\u015blne ustawienie tarczy",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Zarządzaj niestandardowymi filtrami",
+    "message": "Zarz\u0105dzaj niestandardowymi filtrami",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
@@ -188,15 +188,15 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Strony często zawierają pliki cookie i skrypty, które próbują zidentyfikować Ciebie i Twoje urządzenie (często wbudowane w reklamy). Chcą ustalić kim jesteś i śledzić Cię w Internecie - sprawdzać co robisz na każdej stronie. Brave blokuje te rzeczy, dzięki czemu możesz przeglądać witryny bez obserwowania Ciebie.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Strony cz\u0119sto zawieraj\u0105 pliki cookie i skrypty, kt\u00f3re pr\u00f3buj\u0105 zidentyfikowa\u0107 Ciebie i Twoje urz\u0105dzenie (cz\u0119sto wbudowane w reklamy). Chc\u0105 ustali\u0107 kim jeste\u015b i \u015bledzi\u0107 Ci\u0119 w Internecie - sprawdza\u0107 co robisz na ka\u017cdej stronie. AI Wize blokuje te rzeczy, dzi\u0119ki czemu mo\u017cesz przegl\u0105da\u0107 witryny bez obserwowania Ciebie.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Skrypty śledzące i inne przerażające rzeczy zostały zablokowane",
+    "message": "Skrypty \u015bledz\u0105ce i inne przera\u017caj\u0105ce rzeczy zosta\u0142y zablokowane",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Zmiana ustawień tarczy w tym widoku, może wpłynąć na poprawność wyświetlania tej strony.",
+    "message": "Zmiana ustawie\u0144 tarczy w tym widoku, mo\u017ce wp\u0142yn\u0105\u0107 na poprawno\u015b\u0107 wy\u015bwietlania tej strony.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,23 +204,39 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Dowiedz się więcej",
+    "message": "Dowiedz si\u0119 wi\u0119cej",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Dodaj do Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Dodaj do AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Usuń z Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Usu\u0144 z AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Dodaj do Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Usuń z Chrome",
+    "message": "Usu\u0144 z Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Pobrane pliki",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Ustawienia",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historia",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Zak\u0142adki",
+    "description": "Bookmarks Label"
   }
 }

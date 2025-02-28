@@ -35,9 +35,8 @@ class SidebarServiceFactory : public BrowserContextKeyedServiceFactory {
 
   // This is the default display order
   static constexpr SidebarItem::BuiltInItemType kDefaultBuiltInItemTypes[] = {
+      SidebarItem::BuiltInItemType::kAiWizeApps,
       SidebarItem::BuiltInItemType::kChatUI,
-      SidebarItem::BuiltInItemType::kBraveTalk,
-      SidebarItem::BuiltInItemType::kWallet,
       SidebarItem::BuiltInItemType::kBookmarks,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kHistory,

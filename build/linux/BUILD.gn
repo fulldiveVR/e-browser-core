@@ -15,7 +15,7 @@ copy("copy_exe") {
   ]
 
   outputs = [
-    "$root_out_dir/brave",
+    "$root_out_dir/aiwize",
   ]
 
   deps = [
@@ -29,7 +29,7 @@ copy("copy_sandbox") {
   ]
 
   outputs = [
-    "$root_out_dir/brave_sandbox",
+    "$root_out_dir/aiwize_sandbox",
   ]
 
   deps = [

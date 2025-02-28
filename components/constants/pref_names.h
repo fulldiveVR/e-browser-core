@@ -69,10 +69,6 @@ inline constexpr char kNewTabPageShowClock[] = "brave.new_tab_page.show_clock";
 inline constexpr char kNewTabPageClockFormat[] =
     "brave.new_tab_page.clock_format";
 inline constexpr char kNewTabPageShowStats[] = "brave.new_tab_page.show_stats";
-inline constexpr char kNewTabPageShowRewards[] =
-    "brave.new_tab_page.show_rewards";
-inline constexpr char kNewTabPageShowBraveTalk[] =
-    "brave.new_tab_page.show_together";
 inline constexpr char kNewTabPageShowBraveVPN[] =
     "brave.new_tab_page.show_brave_vpn";
 inline constexpr char kNewTabPageHideAllWidgets[] =

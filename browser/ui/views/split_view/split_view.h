@@ -15,16 +15,12 @@
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "brave/browser/ui/tabs/split_view_browser_data_observer.h"
 #include "brave/browser/ui/views/split_view/split_view_layout_manager.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/views/frame/scrim_view.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
 #include "ui/views/view.h"
 #include "ui/views/widget/widget_observer.h"
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
 namespace content {
 class WebContents;
@@ -44,9 +40,6 @@ class SplitViewSeparator;
 
 // Contains a pair of contents container view.
 class SplitView : public views::View,
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-                  public ReaderModeToolbarView::Delegate,
-#endif
                   public views::WidgetObserver,
                   public SplitViewBrowserDataObserver {
   METADATA_HEADER(SplitView, views::View)
@@ -93,14 +86,6 @@ class SplitView : public views::View,
     return secondary_contents_web_view_;
   }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  ReaderModeToolbarView* secondary_reader_mode_toolbar() {
-    return secondary_reader_mode_toolbar_;
-  }
-  void OnReaderModeToolbarActivate(ReaderModeToolbarView* toolbar) override;
-  void UpdateSecondaryReaderModeToolbarVisibility();
-  void UpdateSecondaryReaderModeToolbar();
-#endif
 
   void UpdateCornerRadius(const gfx::RoundedCornersF& corners);
 
@@ -125,7 +110,6 @@ class SplitView : public views::View,
  private:
   friend class SplitViewBrowserTest;
   friend class SplitViewLocationBarBrowserTest;
-  FRIEND_TEST_ALL_PREFIXES(SpeedReaderBrowserTest, SplitView);
 
   tabs::TabHandle GetActiveTabHandle() const;
   bool IsActiveWebContentsTiled(const TabTile& tile) const;
@@ -149,9 +133,6 @@ class SplitView : public views::View,
   raw_ptr<ContentsWebView> secondary_contents_web_view_ = nullptr;
   raw_ptr<ScrimView> secondary_contents_scrim_view_ = nullptr;
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  raw_ptr<ReaderModeToolbarView> secondary_reader_mode_toolbar_ = nullptr;
-#endif
 
   raw_ptr<SplitViewSeparator> split_view_separator_ = nullptr;
 

@@ -115,7 +115,6 @@ function AdvancedControlsContent () {
   const isHttpsByDefaultEnabled = loadTimeData.getBoolean('isHttpsByDefaultEnabled')
   const showStrictFingerprintingMode = loadTimeData.getBoolean('showStrictFingerprintingMode')
   const isWebcompatExceptionsServiceEnabled = loadTimeData.getBoolean('isWebcompatExceptionsServiceEnabled')
-  const isTorProfile = loadTimeData.getBoolean('isTorProfile')
   const isForgetFirstPartyStorageEnabled = loadTimeData.getBoolean(
     'isForgetFirstPartyStorageEnabled'
   )
@@ -152,7 +151,7 @@ function AdvancedControlsContent () {
             <span>{adsListCount > 99 ? '99+' : adsListCount}</span>
           </S.CountButton>
         </S.ControlGroup>
-        {(isHttpsByDefaultEnabled && !isTorProfile) && <S.ControlGroup>
+        {(isHttpsByDefaultEnabled) && <S.ControlGroup>
           <div className="col-2">
             <Select
               value={siteSettings?.httpsUpgradeMode}

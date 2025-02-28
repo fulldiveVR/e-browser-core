@@ -20,7 +20,7 @@ from components.version import BraveVersion
 
 
 def _GetBraveDownloadUrl(tag: str, filename: str) -> str:
-  return ('https://github.com/brave/brave-browser/releases/download/' +
+  return ('https://github.com/fulldiveVR/e-browser/releases/download/' +
           f'{tag}/{filename}')
 
 
@@ -147,18 +147,18 @@ class BrowserType:
 class BraveBrowserTypeImpl(BrowserType):
 
   def __init__(self, channel: str):
-    super().__init__('brave', 'Brave Browser', channel, [], [], False)
+    super().__init__('brave', 'AI Wize Browser', channel, [], [], False)
 
   @property
   def is_brave(self) -> bool:
     return True
 
   def _GetWinInstallPath(self) -> str:
-    app_name = 'Brave-Browser'
+    app_name = 'AIWize-Browser'
     if self.channel is not None:
       app_name += '-' + self.channel
     return os.path.join(os.path.expanduser('~'), 'AppData', 'Local',
-                        'BraveSoftware', app_name, 'Application')
+                        'AIWizeSoftware', app_name, 'Application')
 
   def DownloadBrowserBinary(self, url: Optional[str], version: BraveVersion,
                             out_dir: str, common_options: CommonOptions) -> str:
@@ -175,7 +175,7 @@ class BraveBrowserTypeImpl(BrowserType):
             tag, f'BraveBrowserStandaloneSilent{self.channel}Setup.exe')
       return _DownloadWinInstallerAndExtract(out_dir, url,
                                              self._GetWinInstallPath(),
-                                             'brave.exe')
+                                             'aiwize.exe')
     if target_os == 'android':
       if url is None:
         url = _GetBraveDownloadUrl(tag, 'Bravearm64Universal.apk')

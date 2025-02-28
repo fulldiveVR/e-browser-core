@@ -34,8 +34,6 @@ static_library("browser") {
       "ntp_background_images_source.h",
       "ntp_sponsored_image_source.cc",
       "ntp_sponsored_image_source.h",
-      "ntp_sponsored_rich_media_ad_event_handler.cc",
-      "ntp_sponsored_rich_media_ad_event_handler.h",
       "ntp_sponsored_rich_media_source.cc",
       "ntp_sponsored_rich_media_source.h",
       "ntp_sponsored_source_util.cc",
@@ -49,9 +47,7 @@ static_library("browser") {
 
   deps = [
     "//base",
-    "//brave/components/brave_ads/core",
     "//brave/components/brave_component_updater/browser",
-    "//brave/components/brave_rewards/core",
     "//brave/components/constants",
     "//brave/components/l10n/common",
     "//brave/components/ntp_background_images/buildflags",
@@ -75,7 +71,6 @@ static_library("browser") {
     deps += [ "//brave/extensions:common" ]
   } else {
     deps += [
-      "//brave/components/brave_ads/browser",
       "//brave/components/brave_referrals/browser",
       "//content/public/browser",
       "//content/public/common",
@@ -99,7 +94,6 @@ source_set("test_support") {
   deps = [
     ":browser",
     "//base",
-    "//brave/components/brave_ads/core/mojom",
     "//testing/gmock",
   ]
 

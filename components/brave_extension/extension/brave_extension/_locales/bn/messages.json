@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Brave এক্সটেনশন",
+    "message": "AI Wize \u098f\u0995\u09cd\u09b8\u099f\u09c7\u09a8\u09b6\u09a8",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "শিল্ড",
+    "message": "\u09b6\u09bf\u09b2\u09cd\u09a1",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "উপরে",
+    "message": "\u0989\u09aa\u09b0\u09c7",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "নীচে",
+    "message": "\u09a8\u09c0\u099a\u09c7",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "এই সাইটটির জন্য",
+    "message": "\u098f\u0987 \u09b8\u09be\u0987\u099f\u099f\u09bf\u09b0 \u099c\u09a8\u09cd\u09af",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "যদি কোনো সাইট অসম্পূর্ণ থাকে, তবে নীচে শিল্ডগুলি ব্যবহার করে দেখুন",
+    "message": "\u09af\u09a6\u09bf \u0995\u09cb\u09a8\u09cb \u09b8\u09be\u0987\u099f \u0985\u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u09a5\u09be\u0995\u09c7, \u09a4\u09ac\u09c7 \u09a8\u09c0\u099a\u09c7 \u09b6\u09bf\u09b2\u09cd\u09a1\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c7 \u09a6\u09c7\u0996\u09c1\u09a8",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "আপনি Brave-এর গোপনীয়তা এবং নিরাপত্তার সুরক্ষা ছাড়াই এই সাইটটি ব্রাউজ করছেন। এটি কি শিল্ড আপের সাথে ঠিকমত কাজ করে না?",
+    "message": "\u0986\u09aa\u09a8\u09bf AI Wize-\u098f\u09b0 \u0997\u09cb\u09aa\u09a8\u09c0\u09af\u09bc\u09a4\u09be \u098f\u09ac\u0982 \u09a8\u09bf\u09b0\u09be\u09aa\u09a4\u09cd\u09a4\u09be\u09b0 \u09b8\u09c1\u09b0\u0995\u09cd\u09b7\u09be \u099b\u09be\u09a1\u09bc\u09be\u0987 \u098f\u0987 \u09b8\u09be\u0987\u099f\u099f\u09bf \u09ac\u09cd\u09b0\u09be\u0989\u099c \u0995\u09b0\u099b\u09c7\u09a8\u0964 \u098f\u099f\u09bf \u0995\u09bf \u09b6\u09bf\u09b2\u09cd\u09a1 \u0986\u09aa\u09c7\u09b0 \u09b8\u09be\u09a5\u09c7 \u09a0\u09bf\u0995\u09ae\u09a4 \u0995\u09be\u099c \u0995\u09b0\u09c7 \u09a8\u09be?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "একটি ভাঙ্গা সাইটের প্রতিবেদন করুন",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u098f\u0995\u099f\u09bf \u09ad\u09be\u0999\u09cd\u0997\u09be \u09b8\u09be\u0987\u099f\u09c7\u09b0 \u09aa\u09cd\u09b0\u09a4\u09bf\u09ac\u09c7\u09a6\u09a8 \u0995\u09b0\u09c1\u09a8",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "ব্লক করা আইটেমসমূহ",
+    "message": "\u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u0986\u0987\u099f\u09c7\u09ae\u09b8\u09ae\u09c2\u09b9",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "ব্লক করা আইটেম",
+    "message": "\u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u0986\u0987\u099f\u09c7\u09ae",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "এবং",
+    "message": "\u098f\u09ac\u0982",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "সংযোগগুলি আপগ্রেড করা হয়েছে",
+    "message": "\u09b8\u0982\u09af\u09cb\u0997\u0997\u09c1\u09b2\u09bf \u0986\u09aa\u0997\u09cd\u09b0\u09c7\u09a1 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "সংযোগ আপগ্রেড করা হয়েছে",
+    "message": "\u09b8\u0982\u09af\u09cb\u0997 \u0986\u09aa\u0997\u09cd\u09b0\u09c7\u09a1 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "ক্রশ-সাইট ট্র্যাকারগুলি ব্লক করা হয়েছে",
+    "message": "\u0995\u09cd\u09b0\u09b6-\u09b8\u09be\u0987\u099f \u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "ট্র্যাকার ও বিজ্ঞাপনগুলি ব্লক করা হয়েছে",
+    "message": "\u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0 \u0993 \u09ac\u09bf\u099c\u09cd\u099e\u09be\u09aa\u09a8\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "ট্র্যাকারগুলি এবং বিজ্ঞাপনগুলি অবরুদ্ধ করা হয়েছে (আক্রমণাত্মক)",
+    "message": "\u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0\u0997\u09c1\u09b2\u09bf \u098f\u09ac\u0982 \u09ac\u09bf\u099c\u09cd\u099e\u09be\u09aa\u09a8\u0997\u09c1\u09b2\u09bf \u0985\u09ac\u09b0\u09c1\u09a6\u09cd\u09a7 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7 (\u0986\u0995\u09cd\u09b0\u09ae\u09a3\u09be\u09a4\u09cd\u09ae\u0995)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "ট্র্যাকারগুলি এবং বিজ্ঞাপনগুলি অবরুদ্ধ করা হয়েছে (মানক)",
+    "message": "\u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0\u0997\u09c1\u09b2\u09bf \u098f\u09ac\u0982 \u09ac\u09bf\u099c\u09cd\u099e\u09be\u09aa\u09a8\u0997\u09c1\u09b2\u09bf \u0985\u09ac\u09b0\u09c1\u09a6\u09cd\u09a7 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7 (\u09ae\u09be\u09a8\u0995)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "সমস্ত ট্র্যাকার এবং বিজ্ঞাপনকে অনুমোদন করুন",
+    "message": "\u09b8\u09ae\u09b8\u09cd\u09a4 \u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0 \u098f\u09ac\u0982 \u09ac\u09bf\u099c\u09cd\u099e\u09be\u09aa\u09a8\u0995\u09c7 \u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09a8 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "সংযোগগুলি HTTPS এ আপগ্রেড করা হয়েছে",
+    "message": "\u09b8\u0982\u09af\u09cb\u0997\u0997\u09c1\u09b2\u09bf HTTPS \u098f \u0986\u09aa\u0997\u09cd\u09b0\u09c7\u09a1 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "সংযোগ HTTPS এ আপগ্রেড করা হয়েছে",
+    "message": "\u09b8\u0982\u09af\u09cb\u0997 HTTPS \u098f \u0986\u09aa\u0997\u09cd\u09b0\u09c7\u09a1 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "স্ক্রিপ্টগুলি ব্লক করা হয়েছে",
+    "message": "\u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "ক্রশ-সাইট কুকিগুলি ব্লক করা হয়েছে",
+    "message": "\u0995\u09cd\u09b0\u09b6-\u09b8\u09be\u0987\u099f \u0995\u09c1\u0995\u09bf\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "কুকিগুলি ব্লক করা হয়েছে",
+    "message": "\u0995\u09c1\u0995\u09bf\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "সমস্ত কুকি অনুমোদন করা হয়েছে",
+    "message": "\u09b8\u09ae\u09b8\u09cd\u09a4 \u0995\u09c1\u0995\u09bf \u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09a8 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "আঙুলের ছাপ ব্লক করা হয়েছে",
+    "message": "\u0986\u0999\u09c1\u09b2\u09c7\u09b0 \u099b\u09be\u09aa \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "ফ্রিঙ্গারপ্রিন্টিং ব্লক করা হয়েছে (আদর্শ)",
+    "message": "\u09ab\u09cd\u09b0\u09bf\u0999\u09cd\u0997\u09be\u09b0\u09aa\u09cd\u09b0\u09bf\u09a8\u09cd\u099f\u09bf\u0982 \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7 (\u0986\u09a6\u09b0\u09cd\u09b6)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "ফ্রিঙ্গারপ্রিন্টিং ব্লক করা হয়েছে  (কঠোর, সাইটগুলিকে ভাঙ্গতে পারে)",
+    "message": "\u09ab\u09cd\u09b0\u09bf\u0999\u09cd\u0997\u09be\u09b0\u09aa\u09cd\u09b0\u09bf\u09a8\u09cd\u099f\u09bf\u0982 \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7  (\u0995\u09a0\u09cb\u09b0, \u09b8\u09be\u0987\u099f\u0997\u09c1\u09b2\u09bf\u0995\u09c7 \u09ad\u09be\u0999\u09cd\u0997\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "সমস্ত ফিঙ্গারপ্রিন্টিং এর অনুমতি দিন ",
+    "message": "\u09b8\u09ae\u09b8\u09cd\u09a4 \u09ab\u09bf\u0999\u09cd\u0997\u09be\u09b0\u09aa\u09cd\u09b0\u09bf\u09a8\u09cd\u099f\u09bf\u0982 \u098f\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09a6\u09bf\u09a8 ",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "আঙুলের ছাপ দেওয়ার প্রচেষ্টাগুলি",
+    "message": "\u0986\u0999\u09c1\u09b2\u09c7\u09b0 \u099b\u09be\u09aa \u09a6\u09c7\u0993\u09df\u09be\u09b0 \u09aa\u09cd\u09b0\u099a\u09c7\u09b7\u09cd\u099f\u09be\u0997\u09c1\u09b2\u09bf",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "এই সাইটটিতে থাকা স্ক্রিপ্টগুলি",
+    "message": "\u098f\u0987 \u09b8\u09be\u0987\u099f\u099f\u09bf\u09a4\u09c7 \u09a5\u09be\u0995\u09be \u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f\u0997\u09c1\u09b2\u09bf",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "ব্লক করা স্ক্রিপ্টগুলি",
+    "message": "\u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f\u0997\u09c1\u09b2\u09bf",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "অনুমোদিত স্ক্রিপ্টগুলি",
+    "message": "\u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09bf\u09a4 \u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f\u0997\u09c1\u09b2\u09bf",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "সমস্ত ব্লক করুন",
+    "message": "\u09b8\u09ae\u09b8\u09cd\u09a4 \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "সমস্ত অনুমোদন করুন",
+    "message": "\u09b8\u09ae\u09b8\u09cd\u09a4 \u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09a8 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "ব্লক করুন",
+    "message": "\u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "অনুমতি দিন",
+    "message": "\u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09a6\u09bf\u09a8",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "একবার ব্লক করা হয়েছে",
+    "message": "\u098f\u0995\u09ac\u09be\u09b0 \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "একবার অনুমোদিত করুন",
+    "message": "\u098f\u0995\u09ac\u09be\u09b0 \u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09bf\u09a4 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "স্ক্রিপ্টগুলিকে একবার অনুমতি দিন",
+    "message": "\u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f\u0997\u09c1\u09b2\u09bf\u0995\u09c7 \u098f\u0995\u09ac\u09be\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09a6\u09bf\u09a8",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "বাতিল করুন",
+    "message": "\u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "ফিরে যান",
+    "message": "\u09ab\u09bf\u09b0\u09c7 \u09af\u09be\u09a8",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "একবার প্রয়োগ করুন",
+    "message": "\u098f\u0995\u09ac\u09be\u09b0 \u09aa\u09cd\u09b0\u09df\u09cb\u0997 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "গ্লোবাল প্রতিরক্ষা ডিফল্টগুলি পরিবর্তন করুন",
+    "message": "\u0997\u09cd\u09b2\u09cb\u09ac\u09be\u09b2 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b0\u0995\u09cd\u09b7\u09be \u09a1\u09bf\u09ab\u09b2\u09cd\u099f\u0997\u09c1\u09b2\u09bf \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "কাস্টম ফিল্টারগুলো পরিচালনা করুন",
+    "message": "\u0995\u09be\u09b8\u09cd\u099f\u09ae \u09ab\u09bf\u09b2\u09cd\u099f\u09be\u09b0\u0997\u09c1\u09b2\u09cb \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u0995\u09b0\u09c1\u09a8",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "উপাদান অবরুদ্ধ করুন",
+    "message": "\u0989\u09aa\u09be\u09a6\u09be\u09a8 \u0985\u09ac\u09b0\u09c1\u09a6\u09cd\u09a7 \u0995\u09b0\u09c1\u09a8",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "উন্নত ভিউ",
+    "message": "\u0989\u09a8\u09cd\u09a8\u09a4 \u09ad\u09bf\u0989",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "সহজ ভিউ",
+    "message": "\u09b8\u09b9\u099c \u09ad\u09bf\u0989",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "সাইটগুলিতে প্রায়শই কুকিজ ও স্ক্রিপ্ট থাকে, এগুলি আপনাকে এবং আপনার ডিভাইস শনাক্ত করতে চেষ্টা করে (প্রায়শই বিজ্ঞাপনগুলিতে এম্বেড থাকে)। এগুলি আপনার পরিচয় জানার চেষ্টা করে এবং আপনি প্রতিটি সাইটে কী করেন তাতে নজর রেখে আপনাকে ওয়েবে অনুসরণ করে। Brave এই জিনিসগুলি ব্লক করে, এতে আপনি অনুসৃত না হয়েই ব্রাউজ করতে পারবেন।",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u09b8\u09be\u0987\u099f\u0997\u09c1\u09b2\u09bf\u09a4\u09c7 \u09aa\u09cd\u09b0\u09be\u09df\u09b6\u0987 \u0995\u09c1\u0995\u09bf\u099c \u0993 \u09b8\u09cd\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f \u09a5\u09be\u0995\u09c7, \u098f\u0997\u09c1\u09b2\u09bf \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u098f\u09ac\u0982 \u0986\u09aa\u09a8\u09be\u09b0 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09b6\u09a8\u09be\u0995\u09cd\u09a4 \u0995\u09b0\u09a4\u09c7 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c7 (\u09aa\u09cd\u09b0\u09be\u09df\u09b6\u0987 \u09ac\u09bf\u099c\u09cd\u099e\u09be\u09aa\u09a8\u0997\u09c1\u09b2\u09bf\u09a4\u09c7 \u098f\u09ae\u09cd\u09ac\u09c7\u09a1 \u09a5\u09be\u0995\u09c7)\u0964 \u098f\u0997\u09c1\u09b2\u09bf \u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09b0\u09bf\u099a\u09df \u099c\u09be\u09a8\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c7 \u098f\u09ac\u0982 \u0986\u09aa\u09a8\u09bf \u09aa\u09cd\u09b0\u09a4\u09bf\u099f\u09bf \u09b8\u09be\u0987\u099f\u09c7 \u0995\u09c0 \u0995\u09b0\u09c7\u09a8 \u09a4\u09be\u09a4\u09c7 \u09a8\u099c\u09b0 \u09b0\u09c7\u0996\u09c7 \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0993\u09df\u09c7\u09ac\u09c7 \u0985\u09a8\u09c1\u09b8\u09b0\u09a3 \u0995\u09b0\u09c7\u0964 AI Wize \u098f\u0987 \u099c\u09bf\u09a8\u09bf\u09b8\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09c7, \u098f\u09a4\u09c7 \u0986\u09aa\u09a8\u09bf \u0985\u09a8\u09c1\u09b8\u09c3\u09a4 \u09a8\u09be \u09b9\u09df\u09c7\u0987 \u09ac\u09cd\u09b0\u09be\u0989\u099c \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8\u0964",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "ক্রশ-সাইট ট্র্যাকার এবং অন্যান্য রোমাঞ্চকর জিনিসগুলি ব্লক করা হয়েছে",
+    "message": "\u0995\u09cd\u09b0\u09b6-\u09b8\u09be\u0987\u099f \u099f\u09cd\u09b0\u09cd\u09af\u09be\u0995\u09be\u09b0 \u098f\u09ac\u0982 \u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u09b0\u09cb\u09ae\u09be\u099e\u09cd\u099a\u0995\u09b0 \u099c\u09bf\u09a8\u09bf\u09b8\u0997\u09c1\u09b2\u09bf \u09ac\u09cd\u09b2\u0995 \u0995\u09b0\u09be \u09b9\u09df\u09c7\u099b\u09c7",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "এই ভিউতে শিল্ড সেটিংসে পরিবর্তন এই সাইটে ওয়েবের সুসঙ্গতা প্রভাবিত করতে পারে।",
+    "message": "\u098f\u0987 \u09ad\u09bf\u0989\u09a4\u09c7 \u09b6\u09bf\u09b2\u09cd\u09a1 \u09b8\u09c7\u099f\u09bf\u0982\u09b8\u09c7 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u098f\u0987 \u09b8\u09be\u0987\u099f\u09c7 \u0993\u09df\u09c7\u09ac\u09c7\u09b0 \u09b8\u09c1\u09b8\u0999\u09cd\u0997\u09a4\u09be \u09aa\u09cd\u09b0\u09ad\u09be\u09ac\u09bf\u09a4 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u0964",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "বুঝেছি",
+    "message": "\u09ac\u09c1\u099d\u09c7\u099b\u09bf",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "আরও জানুন",
+    "message": "\u0986\u09b0\u0993 \u099c\u09be\u09a8\u09c1\u09a8",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave-এ জুড়ুন",
-    "description": "Message for adding an extension to Brave"
+    "message": "Brave-\u098f \u099c\u09c1\u09dc\u09c1\u09a8",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave থেকে সরান",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a8",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chrome এ জুড়ুন",
+    "message": "Chrome \u098f \u099c\u09c1\u09dc\u09c1\u09a8",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome থেকে সরান",
+    "message": "Chrome \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a8",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u09b8\u09c7\u099f\u09bf\u0982\u09b8",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0987\u09a4\u09bf\u09b9\u09be\u09b8",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bookmarks",
+    "description": "Bookmarks Label"
   }
 }

@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Brave 擴充功能",
+    "message": "AI Wize \u64f4\u5145\u529f\u80fd",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "盾牌",
+    "message": "\u76fe\u724c",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "上",
+    "message": "\u4e0a",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "下",
+    "message": "\u4e0b",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "為此網站",
+    "message": "\u70ba\u6b64\u7db2\u7ad9",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "如果某個網站出現故障，請嘗試關閉盾牌",
+    "message": "\u5982\u679c\u67d0\u500b\u7db2\u7ad9\u51fa\u73fe\u6545\u969c\uff0c\u8acb\u5617\u8a66\u95dc\u9589\u76fe\u724c",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "您瀏覽此網站時沒有 Brave 的隱私與安全保護。盾牌開啟時無法正常運作嗎？",
+    "message": "\u60a8\u700f\u89bd\u6b64\u7db2\u7ad9\u6642\u6c92\u6709 AI Wize \u7684\u96b1\u79c1\u8207\u5b89\u5168\u4fdd\u8b77\u3002\u76fe\u724c\u958b\u555f\u6642\u7121\u6cd5\u6b63\u5e38\u904b\u4f5c\u55ce\uff1f",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "回報壞掉的網站",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u56de\u5831\u58de\u6389\u7684\u7db2\u7ad9",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "個已阻擋的項目",
+    "message": "\u500b\u5df2\u963b\u64cb\u7684\u9805\u76ee",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "個已阻擋的項目",
+    "message": "\u500b\u5df2\u963b\u64cb\u7684\u9805\u76ee",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "與",
+    "message": "\u8207",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "個已升級的連線",
+    "message": "\u500b\u5df2\u5347\u7d1a\u7684\u9023\u7dda",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "個已升級的連線",
+    "message": "\u500b\u5df2\u5347\u7d1a\u7684\u9023\u7dda",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "已封鎖跨站追蹤器",
+    "message": "\u5df2\u5c01\u9396\u8de8\u7ad9\u8ffd\u8e64\u5668",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "追蹤裝置和廣告已封鎖",
+    "message": "\u8ffd\u8e64\u88dd\u7f6e\u548c\u5ee3\u544a\u5df2\u5c01\u9396",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "追蹤器與廣告封鎖（積極）",
+    "message": "\u8ffd\u8e64\u5668\u8207\u5ee3\u544a\u5c01\u9396\uff08\u7a4d\u6975\uff09",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "追蹤器與廣告封鎖（標準）",
+    "message": "\u8ffd\u8e64\u5668\u8207\u5ee3\u544a\u5c01\u9396\uff08\u6a19\u6e96\uff09",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "允許所有追蹤器與廣告",
+    "message": "\u5141\u8a31\u6240\u6709\u8ffd\u8e64\u5668\u8207\u5ee3\u544a",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "條已升級到 HTTPS 的連線",
+    "message": "\u689d\u5df2\u5347\u7d1a\u5230 HTTPS \u7684\u9023\u7dda",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "條已升級到 HTTPS 的連線",
+    "message": "\u689d\u5df2\u5347\u7d1a\u5230 HTTPS \u7684\u9023\u7dda",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Script 被封鎖",
+    "message": "Script \u88ab\u5c01\u9396",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "已封鎖跨站 Cookie",
+    "message": "\u5df2\u5c01\u9396\u8de8\u7ad9 Cookie",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "被封鎖的 Cookie",
+    "message": "\u88ab\u5c01\u9396\u7684 Cookie",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "允許所有 Cookie",
+    "message": "\u5141\u8a31\u6240\u6709 Cookie",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "指紋已封鎖",
+    "message": "\u6307\u7d0b\u5df2\u5c01\u9396",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "封鎖指紋（標準）",
+    "message": "\u5c01\u9396\u6307\u7d0b\uff08\u6a19\u6e96\uff09",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "封鎖指紋（嚴格，可能會破壞網站）",
+    "message": "\u5c01\u9396\u6307\u7d0b\uff08\u56b4\u683c\uff0c\u53ef\u80fd\u6703\u7834\u58de\u7db2\u7ad9\uff09",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "允許所有指紋追蹤",
+    "message": "\u5141\u8a31\u6240\u6709\u6307\u7d0b\u8ffd\u8e64",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "指紋嘗試",
+    "message": "\u6307\u7d0b\u5617\u8a66",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "此網站的 Script",
+    "message": "\u6b64\u7db2\u7ad9\u7684 Script",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "封鎖 Script",
+    "message": "\u5c01\u9396 Script",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "允許 Script",
+    "message": "\u5141\u8a31 Script",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "全部封鎖",
+    "message": "\u5168\u90e8\u5c01\u9396",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "全部允許",
+    "message": "\u5168\u90e8\u5141\u8a31",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "封鎖",
+    "message": "\u5c01\u9396",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "允許",
+    "message": "\u5141\u8a31",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "封鎖一次",
+    "message": "\u5c01\u9396\u4e00\u6b21",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "允許一次",
+    "message": "\u5141\u8a31\u4e00\u6b21",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "允許指令碼一次",
+    "message": "\u5141\u8a31\u6307\u4ee4\u78bc\u4e00\u6b21",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "取消",
+    "message": "\u53d6\u6d88",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "回到",
+    "message": "\u56de\u5230",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "允許一次",
+    "message": "\u5141\u8a31\u4e00\u6b21",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "變更全域防護預設值",
+    "message": "\u8b8a\u66f4\u5168\u57df\u9632\u8b77\u9810\u8a2d\u503c",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "管理自訂過濾器",
+    "message": "\u7ba1\u7406\u81ea\u8a02\u904e\u6ffe\u5668",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "封鎖元素",
+    "message": "\u5c01\u9396\u5143\u7d20",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "進階檢視",
+    "message": "\u9032\u968e\u6aa2\u8996",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "簡易檢視",
+    "message": "\u7c21\u6613\u6aa2\u8996",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "網站經常包含試圖辨識您與您的裝置的 cookies 與指令碼（通常會嵌入到廣告中）。他們希望了解您的身份，並在網路上追蹤您，每個網站上都是。Brave 會阻擋這些事情，這樣您就可以不被追蹤地瀏覽網頁。",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u7db2\u7ad9\u7d93\u5e38\u5305\u542b\u8a66\u5716\u8fa8\u8b58\u60a8\u8207\u60a8\u7684\u88dd\u7f6e\u7684 cookies \u8207\u6307\u4ee4\u78bc\uff08\u901a\u5e38\u6703\u5d4c\u5165\u5230\u5ee3\u544a\u4e2d\uff09\u3002\u4ed6\u5011\u5e0c\u671b\u4e86\u89e3\u60a8\u7684\u8eab\u4efd\uff0c\u4e26\u5728\u7db2\u8def\u4e0a\u8ffd\u8e64\u60a8\uff0c\u6bcf\u500b\u7db2\u7ad9\u4e0a\u90fd\u662f\u3002AI Wize \u6703\u963b\u64cb\u9019\u4e9b\u4e8b\u60c5\uff0c\u9019\u6a23\u60a8\u5c31\u53ef\u4ee5\u4e0d\u88ab\u8ffd\u8e64\u5730\u700f\u89bd\u7db2\u9801\u3002",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "已封鎖跨頁面追蹤器與其他令人毛骨悚然的事物",
+    "message": "\u5df2\u5c01\u9396\u8de8\u9801\u9762\u8ffd\u8e64\u5668\u8207\u5176\u4ed6\u4ee4\u4eba\u6bdb\u9aa8\u609a\u7136\u7684\u4e8b\u7269",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "在此檢視中變更 Shield 設定可能會影響此網站的網路相容性。",
+    "message": "\u5728\u6b64\u6aa2\u8996\u4e2d\u8b8a\u66f4 Shield \u8a2d\u5b9a\u53ef\u80fd\u6703\u5f71\u97ff\u6b64\u7db2\u7ad9\u7684\u7db2\u8def\u76f8\u5bb9\u6027\u3002",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "我瞭解了",
+    "message": "\u6211\u77ad\u89e3\u4e86",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "更多資訊",
+    "message": "\u66f4\u591a\u8cc7\u8a0a",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "新增至 Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u65b0\u589e\u81f3 AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "從 Brave 中移除",
-    "description": "Message for removing an extension from Brave"
+    "message": "\u5f9e AI Wize \u4e2d\u79fb\u9664",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "加到 Chrome",
+    "message": "\u52a0\u5230 Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "從 Chrome 中移除",
+    "message": "\u5f9e Chrome \u4e2d\u79fb\u9664",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u4e0b\u8f09",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u8a2d\u5b9a",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u6b77\u53f2\u8a18\u9304",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u66f8\u7c64",
+    "description": "Bookmarks Label"
   }
 }

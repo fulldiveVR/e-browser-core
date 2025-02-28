@@ -74,6 +74,57 @@ if (!is_ios) {
   }
 }
 
+if (is_mac) {
+  action("fetch_aiwize_llm") {
+    script = "//brave/tools/aiwize_llm/update_llm.py"
+    outputs = [
+      "$root_out_dir/aiwize-darwin",
+      "$root_out_dir/ollama-darwin",
+      "$root_out_dir/ollama_llama_server_darwin",
+      "$root_out_dir/aiwize-darwin___"
+    ]
+    args = [
+      "--output-path",
+      "$root_out_dir",
+      "-n",
+      "aiwize-darwin",
+      "ollama-darwin",
+      "ollama_llama_server_darwin"
+    ]
+  }
+}
+if (is_win) {
+  action("fetch_aiwize_llm") {
+    script = "//brave/tools/aiwize_llm/update_llm.py"
+    outputs = [
+      "$root_out_dir/aiwize-windows-amd64.exe",
+      "$root_out_dir/aiwize-windows-amd64.exe__"
+    ]
+    args = [
+      "--output-path",
+      "$root_out_dir",
+      "-n",
+      "aiwize-windows-amd64.exe"
+    ]
+  }
+}
+
+if (is_linux) {
+  action("fetch_aiwize_llm") {
+    script = "//brave/tools/aiwize_llm/update_llm.py"
+    outputs = [
+      "$root_out_dir/aiwize-linux-amd64",
+      "$root_out_dir/aiwize-linux-amd64__"
+    ]
+    args = [
+      "--output-path",
+      "$root_out_dir",
+      "-n",
+      "aiwize-linux-amd64"
+    ]
+  }
+}
+
 if (is_win) {
   packed_files_rc_file =
       "$root_out_dir/gen/chrome/installer/mini_installer/packed_delta_files.rc"
@@ -132,8 +183,8 @@ if (is_win) {
       deps = [ "//chrome/installer/setup:setup" ]
     }
     sign("signed_brave_exe") {
-      sources = [ "$root_out_dir/brave.exe" ]
-      outputs = [ "$root_out_dir/presigned_binaries/brave.exe" ]
+      sources = [ "$root_out_dir/aiwize.exe" ]
+      outputs = [ "$root_out_dir/presigned_binaries/aiwize.exe" ]
       deps = [ "//brave/build/win:copy_exe" ]
     }
     sign("signed_chrome_dll") {
@@ -162,7 +213,12 @@ if (is_win) {
 }
 
 group("brave") {
-  deps = [ "build/$target_os:brave" ]
+  deps = [ "build/$target_os:brave" ] 
+  if (is_win || is_mac || is_linux) {
+    deps += [
+      ":fetch_aiwize_llm",
+    ]
+  }
   if (!is_android && !is_ios) {
     deps += [
       "//brave/components/version_info:generate_version",
@@ -629,28 +685,5 @@ action("audit_deps") {
 if (is_redirect_cc_build) {
   group("redirect_cc") {
     deps = [ "//brave/tools/redirect_cc" ]
-  }
-}
-if (is_win && enable_resource_allowlist_generation) {
-  # Merge chrome_resource_allowlist and wireguard resources allowlist to keep
-  # wireguard resources in pak files.
-  action("merge_allowlists") {
-    deps = [
-      "//brave/browser/brave_vpn/win/brave_vpn_wireguard_service:wireguard_resource_allowlist",
-      "//chrome:resource_allowlist",
-    ]
-
-    script = "//brave//resources/brave_allowlist.py"
-    source_allowlist = "$root_gen_dir/chrome/chrome_resource_allowlist.txt"
-    args = [
-      "--repack_allowlist",
-      rebase_path(source_allowlist, root_build_dir),
-      "--brave_allowlist",
-      rebase_path(wireguard_resource_allowlist_file, root_build_dir),
-      "--output",
-      rebase_path(brave_allowlist_file, root_build_dir),
-    ]
-
-    outputs = [ brave_allowlist_file ]
   }
 }

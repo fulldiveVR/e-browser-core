@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Brave Extension",
+    "message": "AI Wize Extension",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "シールドはこのサイトに対して",
+    "message": "\u30b7\u30fc\u30eb\u30c9\u306f\u3053\u306e\u30b5\u30a4\u30c8\u306b\u5bfe\u3057\u3066",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "有効",
+    "message": "\u6709\u52b9",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "無効",
+    "message": "\u7121\u52b9",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "になっています",
+    "message": "\u306b\u306a\u3063\u3066\u3044\u307e\u3059",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "ウェブサイトが正常に動作していないように見える場合は、シールドを無効にしてみてください。",
+    "message": "\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u304c\u6b63\u5e38\u306b\u52d5\u4f5c\u3057\u3066\u3044\u306a\u3044\u3088\u3046\u306b\u898b\u3048\u308b\u5834\u5408\u306f\u3001\u30b7\u30fc\u30eb\u30c9\u3092\u7121\u52b9\u306b\u3057\u3066\u307f\u3066\u304f\u3060\u3055\u3044\u3002",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Braveのプライバシーおよびセキュリティー保護が無効のまま、このサイトを閲覧しています。シールドを有効にすると、正しく機能しませんか？",
+    "message": "Brave\u306e\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u304a\u3088\u3073\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30fc\u4fdd\u8b77\u304c\u7121\u52b9\u306e\u307e\u307e\u3001\u3053\u306e\u30b5\u30a4\u30c8\u3092\u95b2\u89a7\u3057\u3066\u3044\u307e\u3059\u3002\u30b7\u30fc\u30eb\u30c9\u3092\u6709\u52b9\u306b\u3059\u308b\u3068\u3001\u6b63\u3057\u304f\u6a5f\u80fd\u3057\u307e\u305b\u3093\u304b\uff1f",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "サイト表示の不具合を報告",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u30b5\u30a4\u30c8\u8868\u793a\u306e\u4e0d\u5177\u5408\u3092\u5831\u544a",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "アイテムがブロックされました",
+    "message": "\u30a2\u30a4\u30c6\u30e0\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "アイテムがブロックされました",
+    "message": "\u30a2\u30a4\u30c6\u30e0\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "および",
+    "message": "\u304a\u3088\u3073",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "接続がアップグレードされました",
+    "message": "\u63a5\u7d9a\u304c\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "接続がアップグレードされました",
+    "message": "\u63a5\u7d9a\u304c\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "クロスサイトトラッキングをブロック",
+    "message": "\u30af\u30ed\u30b9\u30b5\u30a4\u30c8\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u3092\u30d6\u30ed\u30c3\u30af",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "トラッカーと広告がブロックされました",
+    "message": "\u30c8\u30e9\u30c3\u30ab\u30fc\u3068\u5e83\u544a\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "トラッカーと広告がブロックされました（強化モード）",
+    "message": "\u30c8\u30e9\u30c3\u30ab\u30fc\u3068\u5e83\u544a\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\uff08\u5f37\u5316\u30e2\u30fc\u30c9\uff09",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "トラッカーと広告がブロックされました（標準）",
+    "message": "\u30c8\u30e9\u30c3\u30ab\u30fc\u3068\u5e83\u544a\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\uff08\u6a19\u6e96\uff09",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "すべてのトラッカーと広告を許可",
+    "message": "\u3059\u3079\u3066\u306e\u30c8\u30e9\u30c3\u30ab\u30fc\u3068\u5e83\u544a\u3092\u8a31\u53ef",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "接続がHTTPSにアップグレードされました",
+    "message": "\u63a5\u7d9a\u304cHTTPS\u306b\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "接続がHTTPSにアップグレードされました",
+    "message": "\u63a5\u7d9a\u304cHTTPS\u306b\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "ブロックされたスクリプト",
+    "message": "\u30d6\u30ed\u30c3\u30af\u3055\u308c\u305f\u30b9\u30af\u30ea\u30d7\u30c8",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "クロスサイトクッキーをブロック",
+    "message": "\u30af\u30ed\u30b9\u30b5\u30a4\u30c8\u30af\u30c3\u30ad\u30fc\u3092\u30d6\u30ed\u30c3\u30af",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "クッキーをブロック",
+    "message": "\u30af\u30c3\u30ad\u30fc\u3092\u30d6\u30ed\u30c3\u30af",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "すべてのクッキーを許可",
+    "message": "\u3059\u3079\u3066\u306e\u30af\u30c3\u30ad\u30fc\u3092\u8a31\u53ef",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "フィンガープリントがブロックされました",
+    "message": "\u30d5\u30a3\u30f3\u30ac\u30fc\u30d7\u30ea\u30f3\u30c8\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "フィンガープリントがブロックされました（標準）",
+    "message": "\u30d5\u30a3\u30f3\u30ac\u30fc\u30d7\u30ea\u30f3\u30c8\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\uff08\u6a19\u6e96\uff09",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "フィンガープリントがブロックされました（強化モード、サイトの表示が崩れる可能性）",
+    "message": "\u30d5\u30a3\u30f3\u30ac\u30fc\u30d7\u30ea\u30f3\u30c8\u304c\u30d6\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\uff08\u5f37\u5316\u30e2\u30fc\u30c9\u3001\u30b5\u30a4\u30c8\u306e\u8868\u793a\u304c\u5d29\u308c\u308b\u53ef\u80fd\u6027\uff09",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "すべてのフィンガープリントを許可する",
+    "message": "\u3059\u3079\u3066\u306e\u30d5\u30a3\u30f3\u30ac\u30fc\u30d7\u30ea\u30f3\u30c8\u3092\u8a31\u53ef\u3059\u308b",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "フィンガープリント試行",
+    "message": "\u30d5\u30a3\u30f3\u30ac\u30fc\u30d7\u30ea\u30f3\u30c8\u8a66\u884c",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "このサイトのスクリプト",
+    "message": "\u3053\u306e\u30b5\u30a4\u30c8\u306e\u30b9\u30af\u30ea\u30d7\u30c8",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "ブロックされたスクリプト",
+    "message": "\u30d6\u30ed\u30c3\u30af\u3055\u308c\u305f\u30b9\u30af\u30ea\u30d7\u30c8",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "スクリプトを許可する",
+    "message": "\u30b9\u30af\u30ea\u30d7\u30c8\u3092\u8a31\u53ef\u3059\u308b",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "すべてブロックする",
+    "message": "\u3059\u3079\u3066\u30d6\u30ed\u30c3\u30af\u3059\u308b",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "すべて許可する",
+    "message": "\u3059\u3079\u3066\u8a31\u53ef\u3059\u308b",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "ブロック",
+    "message": "\u30d6\u30ed\u30c3\u30af",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "許可",
+    "message": "\u8a31\u53ef",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "一時的にブロック",
+    "message": "\u4e00\u6642\u7684\u306b\u30d6\u30ed\u30c3\u30af",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "一時的に許可",
+    "message": "\u4e00\u6642\u7684\u306b\u8a31\u53ef",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "スクリプトを一時的に許可",
+    "message": "\u30b9\u30af\u30ea\u30d7\u30c8\u3092\u4e00\u6642\u7684\u306b\u8a31\u53ef",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "キャンセル",
+    "message": "\u30ad\u30e3\u30f3\u30bb\u30eb",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "戻る",
+    "message": "\u623b\u308b",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "一時的に適用する",
+    "message": "\u4e00\u6642\u7684\u306b\u9069\u7528\u3059\u308b",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "シールドのデフォルト設定を変更する",
+    "message": "\u30b7\u30fc\u30eb\u30c9\u306e\u30c7\u30d5\u30a9\u30eb\u30c8\u8a2d\u5b9a\u3092\u5909\u66f4\u3059\u308b",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "カスタムフィルターの管理",
+    "message": "\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30eb\u30bf\u30fc\u306e\u7ba1\u7406",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "要素を指定してブロック",
+    "message": "\u8981\u7d20\u3092\u6307\u5b9a\u3057\u3066\u30d6\u30ed\u30c3\u30af",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "詳細表示",
+    "message": "\u8a73\u7d30\u8868\u793a",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "簡略表示",
+    "message": "\u7c21\u7565\u8868\u793a",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "通常、ウェブサイトはユーザーとデバイスの識別のためにクッキーとスクリプト（広告に組み込まれることがほとんどです）を使用します。ユーザーが誰なのかを把握し、ウェブ全体、あらゆるサイトでの行動を追跡しようとします。Brave はこれらのクッキーやスクリプトをブロックするため、ユーザーは行動を追跡されることなくインターネットを閲覧することが可能です。",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u901a\u5e38\u3001\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8\u306f\u30e6\u30fc\u30b6\u30fc\u3068\u30c7\u30d0\u30a4\u30b9\u306e\u8b58\u5225\u306e\u305f\u3081\u306b\u30af\u30c3\u30ad\u30fc\u3068\u30b9\u30af\u30ea\u30d7\u30c8\uff08\u5e83\u544a\u306b\u7d44\u307f\u8fbc\u307e\u308c\u308b\u3053\u3068\u304c\u307b\u3068\u3093\u3069\u3067\u3059\uff09\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\u30e6\u30fc\u30b6\u30fc\u304c\u8ab0\u306a\u306e\u304b\u3092\u628a\u63e1\u3057\u3001\u30a6\u30a7\u30d6\u5168\u4f53\u3001\u3042\u3089\u3086\u308b\u30b5\u30a4\u30c8\u3067\u306e\u884c\u52d5\u3092\u8ffd\u8de1\u3057\u3088\u3046\u3068\u3057\u307e\u3059\u3002AI Wize \u306f\u3053\u308c\u3089\u306e\u30af\u30c3\u30ad\u30fc\u3084\u30b9\u30af\u30ea\u30d7\u30c8\u3092\u30d6\u30ed\u30c3\u30af\u3059\u308b\u305f\u3081\u3001\u30e6\u30fc\u30b6\u30fc\u306f\u884c\u52d5\u3092\u8ffd\u8de1\u3055\u308c\u308b\u3053\u3068\u306a\u304f\u30a4\u30f3\u30bf\u30fc\u30cd\u30c3\u30c8\u3092\u95b2\u89a7\u3059\u308b\u3053\u3068\u304c\u53ef\u80fd\u3067\u3059\u3002",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "クロスサイトトラッカーおよびその他の不審な通信をブロックしました",
+    "message": "\u30af\u30ed\u30b9\u30b5\u30a4\u30c8\u30c8\u30e9\u30c3\u30ab\u30fc\u304a\u3088\u3073\u305d\u306e\u4ed6\u306e\u4e0d\u5be9\u306a\u901a\u4fe1\u3092\u30d6\u30ed\u30c3\u30af\u3057\u307e\u3057\u305f",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "この表示でシールドの設定を変更すると、サイトのウェブ互換性に影響を与える可能性があります。",
+    "message": "\u3053\u306e\u8868\u793a\u3067\u30b7\u30fc\u30eb\u30c9\u306e\u8a2d\u5b9a\u3092\u5909\u66f4\u3059\u308b\u3068\u3001\u30b5\u30a4\u30c8\u306e\u30a6\u30a7\u30d6\u4e92\u63db\u6027\u306b\u5f71\u97ff\u3092\u4e0e\u3048\u308b\u53ef\u80fd\u6027\u304c\u3042\u308a\u307e\u3059\u3002",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "閉じる",
+    "message": "\u9589\u3058\u308b",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "詳細情報",
+    "message": "\u8a73\u7d30\u60c5\u5831",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave に追加",
-    "description": "Message for adding an extension to Brave"
+    "message": "AI Wize \u306b\u8ffd\u52a0",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave から削除",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize \u304b\u3089\u524a\u9664",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chrome に追加",
+    "message": "Chrome \u306b\u8ffd\u52a0",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome から削除します",
+    "message": "Chrome \u304b\u3089\u524a\u9664\u3057\u307e\u3059",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u8a2d\u5b9a",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u5c65\u6b74",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u30d6\u30c3\u30af\u30de\u30fc\u30af",
+    "description": "Bookmarks Label"
   }
 }

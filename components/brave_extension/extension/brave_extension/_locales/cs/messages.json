@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "Rozšíření Brave",
+    "message": "Roz\u0161\u00ed\u0159en\u00ed AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Štíty ",
+    "message": "\u0160t\u00edty ",
     "description": "The Shields feature name"
   },
   "up": {
@@ -16,27 +16,27 @@
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "pro tuto stránku ",
+    "message": "pro tuto str\u00e1nku ",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Pokud se zdá, že je stránka pokažená, zkuste štíty vypnout",
+    "message": "Pokud se zd\u00e1, \u017ee je str\u00e1nka poka\u017een\u00e1, zkuste \u0161t\u00edty vypnout",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Tyto stránky si prohlížíte bez nastavení soukromí a bezpečnosti Brave. Nefunguje to s aktivní ochranou Shields správně?",
+    "message": "Tyto str\u00e1nky si prohl\u00ed\u017e\u00edte bez nastaven\u00ed soukrom\u00ed a bezpe\u010dnosti AI Wize. Nefunguje to s aktivn\u00ed ochranou Shields spr\u00e1vn\u011b?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Nahlásit porouchané stránky",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Nahl\u00e1sit porouchan\u00e9 str\u00e1nky",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Blokované položky",
+    "message": "Blokovan\u00e9 polo\u017eky",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Položka blokována",
+    "message": "Polo\u017eka blokov\u00e1na",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
@@ -44,95 +44,95 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "připojení aktualizována",
+    "message": "p\u0159ipojen\u00ed aktualizov\u00e1na",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "připojení aktualizováno",
+    "message": "p\u0159ipojen\u00ed aktualizov\u00e1no",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Trackery třetích stran blokovány",
+    "message": "Trackery t\u0159et\u00edch stran blokov\u00e1ny",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Blokované sledovací prvky a reklamy",
+    "message": "Blokovan\u00e9 sledovac\u00ed prvky a reklamy",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Sledování a reklamy blokovány (agresivní)",
+    "message": "Sledov\u00e1n\u00ed a reklamy blokov\u00e1ny (agresivn\u00ed)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Sledování a reklamy blokované (standardní)",
+    "message": "Sledov\u00e1n\u00ed a reklamy blokovan\u00e9 (standardn\u00ed)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Umožnit veškeré sledování a reklamy",
+    "message": "Umo\u017enit ve\u0161ker\u00e9 sledov\u00e1n\u00ed a reklamy",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "připojení aktualizována pro HTTPS",
+    "message": "p\u0159ipojen\u00ed aktualizov\u00e1na pro HTTPS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Připojení aktualizováno pro HTTPS",
+    "message": "P\u0159ipojen\u00ed aktualizov\u00e1no pro HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Skripty jsou blokovány ",
+    "message": "Skripty jsou blokov\u00e1ny ",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Soubory cookies třetích stran blokovány",
+    "message": "Soubory cookies t\u0159et\u00edch stran blokov\u00e1ny",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Soubory cookies jsou blokovány ",
+    "message": "Soubory cookies jsou blokov\u00e1ny ",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Všechny soubory cookies povoleny ",
+    "message": "V\u0161echny soubory cookies povoleny ",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Shromažďování otisků zařízení bylo zablokováno",
+    "message": "Shroma\u017e\u010fov\u00e1n\u00ed otisk\u016f za\u0159\u00edzen\u00ed bylo zablokov\u00e1no",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Získání otisku blokováno (standardně)",
+    "message": "Z\u00edsk\u00e1n\u00ed otisku blokov\u00e1no (standardn\u011b)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Získání otisku blokováno (přísně, může poškozovat stránky)",
+    "message": "Z\u00edsk\u00e1n\u00ed otisku blokov\u00e1no (p\u0159\u00edsn\u011b, m\u016f\u017ee po\u0161kozovat str\u00e1nky)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Povolit všechna získávání otisku",
+    "message": "Povolit v\u0161echna z\u00edsk\u00e1v\u00e1n\u00ed otisku",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Pokusy o získání otisku",
+    "message": "Pokusy o z\u00edsk\u00e1n\u00ed otisku",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Skripty na této stránce ",
+    "message": "Skripty na t\u00e9to str\u00e1nce ",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Blokované skripty ",
+    "message": "Blokovan\u00e9 skripty ",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Povolené skripty ",
+    "message": "Povolen\u00e9 skripty ",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Blokovat vše ",
+    "message": "Blokovat v\u0161e ",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Povolit vše ",
+    "message": "Povolit v\u0161e ",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
@@ -144,7 +144,7 @@
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Blokováno jednou",
+    "message": "Blokov\u00e1no jednou",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
@@ -156,23 +156,23 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Zrušit ",
+    "message": "Zru\u0161it ",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Zpět ",
+    "message": "Zp\u011bt ",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Použít jednou ",
+    "message": "Pou\u017e\u00edt jednou ",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Změnit obecná nastavení štítu",
+    "message": "Zm\u011bnit obecn\u00e1 nastaven\u00ed \u0161t\u00edtu",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Spravovat vlastní filtry",
+    "message": "Spravovat vlastn\u00ed filtry",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
@@ -180,23 +180,23 @@
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Pokročilé zobrazení",
+    "message": "Pokro\u010dil\u00e9 zobrazen\u00ed",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Jednoduché zobrazen",
+    "message": "Jednoduch\u00e9 zobrazen",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Na stránkách se často objevují cookies a skripty, které se snaží identifikovat vás a vaše zařízení (často jsou součástí reklam). Chtějí zjistit, kdo jste a sledovat vás na síti - stopovat tak vaši aktivitu na všech stránkách. Brave tyto věci blokuje, takže můžete brouzdat po internetu, aniž byste byli sledováni.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Na str\u00e1nk\u00e1ch se \u010dasto objevuj\u00ed cookies a skripty, kter\u00e9 se sna\u017e\u00ed identifikovat v\u00e1s a va\u0161e za\u0159\u00edzen\u00ed (\u010dasto jsou sou\u010d\u00e1st\u00ed reklam). Cht\u011bj\u00ed zjistit, kdo jste a sledovat v\u00e1s na s\u00edti - stopovat tak va\u0161i aktivitu na v\u0161ech str\u00e1nk\u00e1ch. AI Wize tyto v\u011bci blokuje, tak\u017ee m\u016f\u017eete brouzdat po internetu, ani\u017e byste byli sledov\u00e1ni.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Mezistránkové trackery a jiné podivnosti blokovány",
+    "message": "Mezistr\u00e1nkov\u00e9 trackery a jin\u00e9 podivnosti blokov\u00e1ny",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Změna nastavení ochrany v tomto zobrazení může ovlivnit webovou kompatibilitu na této stránce.",
+    "message": "Zm\u011bna nastaven\u00ed ochrany v tomto zobrazen\u00ed m\u016f\u017ee ovlivnit webovou kompatibilitu na t\u00e9to str\u00e1nce.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,23 +204,39 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Zjistit více ",
+    "message": "Zjistit v\u00edce ",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Přidat do prohlížeče Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "P\u0159idat do prohl\u00ed\u017ee\u010de AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
     "message": "Odstranit z Chromu",
-    "description": "Message for removing an extension from Brave"
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Přidat do Chromu",
+    "message": "P\u0159idat do Chromu",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
     "message": "Odstranit z Chromu",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Sta\u017een\u00e9 soubory",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Nastaven\u00ed",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historie",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Z\u00e1lo\u017eky",
+    "description": "Bookmarks Label"
   }
 }

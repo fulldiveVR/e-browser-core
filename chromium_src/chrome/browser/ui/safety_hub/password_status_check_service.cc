@@ -9,7 +9,7 @@
 #include "src/chrome/browser/ui/safety_hub/password_status_check_service.cc"
 #undef GetPasswordCardData
 
-// We hide the password card in brave://settings/safetyCheck, so we don't want
+// We hide the password card in aiwize://settings/safetyCheck, so we don't want
 // to return recommendations that involve that card
 base::Value::Dict PasswordStatusCheckService::GetPasswordCardData(
     bool signed_in) {

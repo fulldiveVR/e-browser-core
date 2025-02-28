@@ -1,7 +1,7 @@
 caption: Disable Tor Connectivity
 default: null
 desc: |-
-  Disable Tor connectivity in Brave.
+  Disable Tor connectivity in AIWize.
 
   Using Tor connectivity in Private Windows makes it more difficult for sites to see a user's true IP address and for network observers to see what sites they visit. This may be used for enhanced confidentiality and censorship resistance in Private Windows.
 
@@ -26,9 +26,9 @@ items:
 - caption: Allow the user to decide
   value: null
 owners:
-- clifton@brave.com
-- fmarier@brave.com
-- anthony@brave.com
+- clifton@aiwize.com
+- fmarier@aiwize.com
+- anthony@aiwize.com
 schema:
   type: boolean
 supported_on:

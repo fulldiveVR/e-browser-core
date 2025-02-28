@@ -63,6 +63,7 @@
     "contexts": ["webui"],
     "matches": [
       "chrome://welcome/*",
+      "chrome://dashboard/*",
       "chrome://settings/*",
       "chrome://newtab/*",
       "chrome://webcompat/*",

@@ -21,7 +21,7 @@ namespace {
 // seed and uploads it to a URL with the following template, where $1 is the
 // pull request number.
 constexpr char kVariationsPrTestSeedUrlTemplate[] =
-    "https://griffin.brave.com/pull/$1/seed";
+    "https://griffin.aiwize.com/pull/$1/seed";
 
 }  // namespace
 

@@ -23,7 +23,6 @@ export class ChromeEvent {
   }
 }
 
-export const rewardsInitialState: Rewards.ApplicationState = { rewardsData }
 
 export const adblockInitialState: AdBlock.ApplicationState = { adblockData }
 

@@ -13,7 +13,6 @@ import { newTabPrefManager } from '../../../hooks/usePref'
 import { initialGridSitesState } from '../../../storage/grid_sites_storage'
 import { defaultState } from '../../../storage/new_tab_storage'
 import * as Background from './backgroundWallpaper'
-import dummyBrandedWallpaper from './brandedWallpaper'
 
 const addonsChannel = addons.getChannel()
 
@@ -33,21 +32,7 @@ function generateTopSites(topSites: typeof defaultTopSitesData) {
   return staticTopSites
 }
 
-function shouldShowBrandedWallpaperData(shouldShow: boolean): NewTab.BrandedWallpaper | undefined {
-  if (!shouldShow) {
-    return undefined
-  }
-  return dummyBrandedWallpaper
-}
 
-function getWidgetStackOrder(firstWidget: string): NewTab.StackWidget[] {
-  switch (firstWidget) {
-    case 'braveTalk':
-      return ['rewards', 'braveTalk']
-    default:
-      return ['braveTalk', 'rewards']
-  }
-}
 
 /**
  * Guesses what the label for a settings key is. This is only accurate for the
@@ -69,9 +54,7 @@ const guessLabelForKey = (key: string) => key
 export const useNewTabData = (state: NewTab.State = defaultState) => {
   const result: NewTab.State = {
     ...state,
-    brandedWallpaper: shouldShowBrandedWallpaperData(
-      boolean('Show branded background image?', true)
-    ),
+    brandedWallpaper: undefined,
     brandedWallpaperOptIn: boolean('Show branded background image?', true),
     backgroundWallpaper: select(
       'Background',
@@ -92,13 +75,9 @@ export const useNewTabData = (state: NewTab.State = defaultState) => {
     showClock: boolean('Show clock?', true),
     clockFormat: select('Clock format?', ['', '12', '24'], ''),
     showTopSites: boolean('Show top sites?', true),
-    braveRewardsSupported: boolean('Brave Rewards supported?', true),
-    showRewards: boolean('Show rewards?', true),
-    showBraveTalk: boolean('Show Brave Talk?', true),
     showSearchBox: boolean('Show search box', true),
     promptEnableSearchSuggestions: boolean('Prompt to enable search suggestions', true),
     searchSuggestionsEnabled: boolean('Search suggestions enabled', false),
-    braveTalkSupported: boolean('Brave Talk supported?', true),
     hideAllWidgets: boolean('Hide all widgets?', false),
     isBraveNewsOptedIn: boolean('Brave News opted-in?', false),
     textDirection: select('Text direction', { ltr: 'ltr', rtl: 'rtl' }, 'ltr'),
@@ -108,7 +87,7 @@ export const useNewTabData = (state: NewTab.State = defaultState) => {
       httpsUpgradesStat: number('Number of HTTPS upgrades', 1337)
     },
     initialDataLoaded: true,
-    widgetStackOrder: getWidgetStackOrder(select('First widget', ['braveTalk', 'rewards'], 'rewards'))
+    widgetStackOrder: []
   }
 
   // On all updates, notify that the prefs might've changed. Listeners are

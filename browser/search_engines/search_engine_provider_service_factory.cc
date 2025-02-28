@@ -24,7 +24,6 @@
 #else
 #include "brave/browser/search_engines/normal_window_search_engine_provider_service.h"
 #include "brave/browser/search_engines/private_window_search_engine_provider_service.h"
-#include "brave/browser/search_engines/tor_window_search_engine_provider_service.h"
 #endif
 
 // static
@@ -61,9 +60,6 @@ SearchEngineProviderServiceFactory::BuildServiceInstanceForBrowserContext(
   }
 #else
   // Set search engine handler for tor or private profile.
-  if (profile->IsTor()) {
-    return std::make_unique<TorWindowSearchEngineProviderService>(profile);
-  }
 
   if (profile->IsIncognitoProfile()) {
     return std::make_unique<PrivateWindowSearchEngineProviderService>(profile);
