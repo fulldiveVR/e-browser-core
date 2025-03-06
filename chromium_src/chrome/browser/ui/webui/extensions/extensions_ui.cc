@@ -23,8 +23,6 @@ void BraveAddExtensionsResources(content::WebUIDataSource* source,
                              IDS_EXTENSIONS_BRAVE_PRIVATE_WARNING);
   source->AddLocalizedString("spanningInfoWarning",
                              IDS_EXTENSIONS_BRAVE_SPANNING_WARNING);
-  source->AddLocalizedString("privateAndTorInfoWarning",
-                             IDS_EXTENSIONS_BRAVE_PRIVATE_AND_TOR_WARNING);
 }
 
 }  // namespace

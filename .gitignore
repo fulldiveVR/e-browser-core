@@ -77,3 +77,5 @@ xcuserdata
 
 # buffer exclusion file generated locally during sync
 build/config/unsafe_buffers_paths.txt
+tools/aiwize_llm/data/aiwize*
+tools/aiwize_llm/data/ollama*

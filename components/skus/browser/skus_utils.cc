@@ -37,7 +37,7 @@ std::string GetDomain(const std::string& prefix,
   DCHECK(prefix == kProductTalk || prefix == kProductVPN);
 
   if (environment == kEnvProduction) {
-    return prefix + ".brave.com";
+    return prefix + ".tau-browser.ru";
   } else if (environment == kEnvStaging) {
     return prefix + ".bravesoftware.com";
   } else if (environment == kEnvDevelopment) {
@@ -50,7 +50,7 @@ std::string GetDomain(const std::string& prefix,
 std::string GetEnvironmentForDomain(const std::string& domain) {
   auto base_domain = net::registry_controlled_domains::GetDomainAndRegistry(
       domain, net::registry_controlled_domains::INCLUDE_PRIVATE_REGISTRIES);
-  if (base_domain == "brave.com")
+  if (base_domain == "tau-browser.ru")
     return kEnvProduction;
   if (base_domain == "bravesoftware.com")
     return kEnvStaging;

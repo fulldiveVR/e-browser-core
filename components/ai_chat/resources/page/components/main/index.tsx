@@ -7,7 +7,6 @@ import * as React from 'react'
 import AlertCenter from '@brave/leo/react/alertCenter'
 import Button from '@brave/leo/react/button'
 import Icon from '@brave/leo/react/icon'
-import { getLocale } from '$web-common/locale'
 import classnames from '$web-common/classnames'
 import * as Mojom from '../../../common/mojom'
 import { useConversation, useSupportsAttachments } from '../../state/conversation_context'
@@ -29,7 +28,6 @@ import { ConversationHeader } from '../header'
 import InputBox from '../input_box'
 import ModelIntro from '../model_intro'
 import PageContextToggle from '../page_context_toggle'
-import PremiumSuggestion from '../premium_suggestion'
 import PrivacyMessage from '../privacy_message'
 import SiteTitle from '../site_title'
 import { GenerateSuggestionsButton, SuggestedQuestion } from '../suggested_question'
@@ -57,25 +55,11 @@ function Main() {
   const [isConversationListOpen, setIsConversationsListOpen] = React.useState(false)
   const [isContentReady, setIsContentReady] = React.useState(false)
 
-  const shouldShowPremiumSuggestionForModel =
-    aiChatContext.hasAcceptedAgreement &&
-    !aiChatContext.isPremiumStatusFetching && // Avoid flash of content
-    !aiChatContext.isPremiumUser &&
-    conversationContext.currentModel?.options.leoModelOptions?.access === Mojom.ModelAccess.PREMIUM
 
   const shouldShowStorageNotice = aiChatContext.hasAcceptedAgreement &&
     aiChatContext.isHistoryFeatureEnabled &&
     aiChatContext.isStoragePrefEnabled && !aiChatContext.isStorageNoticeDismissed
 
-  const shouldShowPremiumSuggestionStandalone =
-    aiChatContext.hasAcceptedAgreement &&
-    !aiChatContext.isPremiumStatusFetching && // Avoid flash of content
-    !shouldShowPremiumSuggestionForModel && // Don't show 2 premium prompts
-    !conversationContext.apiHasError && // Don't show premium prompt and errors (rate limit error has its own premium prompt suggestion)
-    !shouldShowStorageNotice && // Don't show premium prompt and storage notice
-    aiChatContext.canShowPremiumPrompt &&
-    conversationContext.associatedContentInfo === null && // AssociatedContent request has finished and this is a standalone conversation
-    !aiChatContext.isPremiumUser
 
 
   const isLastTurnBraveSearchSERPSummary =
@@ -269,36 +253,6 @@ function Main() {
             {shouldShowStorageNotice && (
               <div className={styles.promptContainer}>
                 <NoticeConversationStorage />
-              </div>
-            )}
-            {shouldShowPremiumSuggestionForModel && (
-              <div className={styles.promptContainer}>
-                <PremiumSuggestion
-                  title={getLocale('unlockPremiumTitle')}
-                  secondaryActionButton={
-                    <Button
-                      kind='plain-faint'
-                      onClick={() => conversationContext.switchToBasicModel()}
-                    >
-                      {getLocale('switchToBasicModelButtonLabel')}
-                    </Button>
-                  }
-                />
-              </div>
-            )}
-            {shouldShowPremiumSuggestionStandalone && (
-              <div className={styles.promptContainer}>
-                <PremiumSuggestion
-                  title={getLocale('unlockPremiumTitle')}
-                  secondaryActionButton={
-                    <Button
-                      kind='plain-faint'
-                      onClick={() => aiChatContext.dismissPremiumPrompt()}
-                    >
-                      {getLocale('dismissButtonLabel')}
-                    </Button>
-                  }
-                />
               </div>
             )}
             {aiChatContext.isPremiumUserDisconnected && (!conversationContext.currentModel || isLeoModel(conversationContext.currentModel)) && (

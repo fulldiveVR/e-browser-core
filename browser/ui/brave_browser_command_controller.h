@@ -14,7 +14,6 @@
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "brave/browser/ui/tabs/split_view_browser_data_observer.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
 #include "components/prefs/pref_change_registrar.h"
@@ -49,9 +48,6 @@ class BraveBrowserCommandController : public chrome::BrowserCommandController,
       const BraveBrowserCommandController&) = delete;
   ~BraveBrowserCommandController() override;
 
-#if BUILDFLAG(ENABLE_TOR)
-  void UpdateCommandForTor();
-#endif
 
  protected:
   void TabChangedAt(content::WebContents* contents,
@@ -96,10 +92,8 @@ class BraveBrowserCommandController : public chrome::BrowserCommandController,
 #endif
 
   void InitBraveCommandState();
-  void UpdateCommandForBraveRewards();
   void UpdateCommandForWebcompatReporter();
   void UpdateCommandForBraveSync();
-  void UpdateCommandForBraveWallet();
   void UpdateCommandForSidebar();
   void UpdateCommandForAIChat();
   void UpdateCommandForBraveVPN();

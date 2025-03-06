@@ -12,8 +12,8 @@ import { Url } from 'gen/url/mojom/url.mojom.m.js'
 import { useAIChat } from '../../state/ai_chat_context'
 import styles from './style.module.scss'
 
-const WIKI_URL = "https://support.brave.com/hc/en-us/articles/26727364100493-What-are-the-differences-between-Leo-s-AI-Models"
-const PRIVACY_URL = "https://brave.com/privacy/browser/#brave-leo"
+const WIKI_URL = "https://support.tau-browser.ru/hc/en-us/articles/26727364100493-What-are-the-differences-between-Leo-s-AI-Models"
+const PRIVACY_URL = "https://tau-browser.ru/privacy/browser/#taubrowser-chat"
 
 function PrivacyMessage () {
   const context = useAIChat()

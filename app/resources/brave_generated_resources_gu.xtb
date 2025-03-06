@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="gu">
-<translation id="3333887201479867589">Brave Rewards</translation>
+<translation id="3333887201479867589">TauBrowser Rewards</translation>
 <translation id="7961015016161918242">ક્યારેય નહીં</translation>
 <translation id="7973394300052703468">નવી &amp;ખાનગી વિંડો</translation>
 <translation id="1209739344687072997">બ્રેક થયેલી સાઇટ અંગે રિપોર્ટ કરો</translation>
@@ -11,7 +11,7 @@
 <translation id="8926389886865778422">ફરિથી પુછશો નહીં</translation>
 <translation id="6965382102122355670">બરાબર, સમજાઇ ગયું</translation>
 <translation id="474217410105706308">ટૅબ મ્યૂટ કરો</translation>
-<translation id="2804710924397009224">Brave પુરસ્કારો ચિહ્ન છુપાવો</translation>
+<translation id="2804710924397009224">TauBrowser પુરસ્કારો ચિહ્ન છુપાવો</translation>
 <translation id="5039804452771397117">મંજૂરી આપો</translation>
 <translation id="7053983685419859001">અવરોધિત કરો</translation>
 <translation id="8915916167043355778">બધું બંધ કરો</translation>
@@ -40,7 +40,7 @@
 <translation id="2336228925368920074">બધા ટૅબ્સ બુકમાર્ક  કરો...</translation>
 <translation id="3785071023202624850">{NUM_TABS,plural, =1{ટૅબને મ્યૂટ કરો}one{ટૅબને મ્યૂટ કરો}other{ટૅબને મ્યૂટ કરો}}</translation>
 <translation id="2120478168904746065">{NUM_TABS,plural, =1{ટૅબને અનમ્યૂટ કરો}one{ટૅબને અનમ્યૂટ કરો}other{ટૅબને અનમ્યૂટ કરો}}</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">TauBrowser VPN</translation>
 <translation id="4378551569595875038">કનેક્ટિંગ...</translation>
 <translation id="3368922792935385530">કનેક્ટેડ</translation>
 <translation id="1536754031901697553">ડિસ્કનેક્ટ થઈ રહ્યું છે…</translation>
@@ -63,7 +63,7 @@
 <translation id="3040310857793999281">મ્યૂટ ટૉગલ કરો</translation>
 <translation id="7544853251252956727">શફલ કરો</translation>
 <translation id="7481312909269577407">ફોર્વર્ડ કરો</translation>
-<translation id="9156965752763025780">તમારા ફેરફારો તમે આગલી વખતે Brave ફરીથી લોંચ કરશો ત્યારે પ્રભાવમાં આવશે.</translation>
+<translation id="9156965752763025780">તમારા ફેરફારો તમે આગલી વખતે TauBrowser ફરીથી લોંચ કરશો ત્યારે પ્રભાવમાં આવશે.</translation>
 <translation id="1426410128494586442">હા</translation>
 <translation id="4250680216510889253">નહીં</translation>
 <translation id="2356070529366658676">કહો</translation>

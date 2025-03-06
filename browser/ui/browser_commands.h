@@ -22,17 +22,10 @@ namespace brave {
 
 bool HasSelectedURL(Browser* browser);
 void CleanAndCopySelectedURL(Browser* browser);
-void NewOffTheRecordWindowTor(Browser* browser);
-void NewOffTheRecordWindowTor(Profile* profile);
 
-void NewTorConnectionForSite(Browser*);
 
 void ToggleAIChat(Browser* browser);
 
-void ShowWalletBubble(Browser* browser);
-void ShowApproveWalletBubble(Browser* browser);
-void CloseWalletBubble(Browser* browser);
-void MaybeDistillAndShowSpeedreaderBubble(Browser* browser);
 void ShowBraveVPNBubble(Browser* browser);
 void ToggleBraveVPNButton(Browser* browser);
 void ToggleBraveVPNTrayIcon();

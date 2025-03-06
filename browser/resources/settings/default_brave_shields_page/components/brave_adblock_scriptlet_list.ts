@@ -61,8 +61,6 @@ class AdblockScriptletList extends AdblockScriptletListBase {
     super.ready()
 
     if (loadTimeData.getBoolean('shouldExposeElementsForTesting')) {
-      window.testing = window.testing || {}
-      window.testing[`adblockScriptletList`] = this.shadowRoot
     }
 
     this.isEditing_ = false

@@ -14,7 +14,7 @@ RegisterPolymerTemplateModifications({
     )
     if (!safeBrowsingReportingToggleSetting) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with ' +
+        '[TauBrowser Settings Overrides] Could not find template with ' +
         'if=[[!hideExtendedReportingRadioButton_]] on security page.'
       )
     } else {
@@ -22,7 +22,7 @@ RegisterPolymerTemplateModifications({
         content.getElementById('safeBrowsingReportingToggle')
       if (!safeBrowsingReportingToggle) {
         console.error(
-          '[Brave Settings Overrides] Could not find ' +
+          '[TauBrowser Settings Overrides] Could not find ' +
           ' safeBrowsingReportingToggle id on security page.')
       } else {
         safeBrowsingReportingToggle.setAttribute('hidden', 'true')
@@ -30,7 +30,7 @@ RegisterPolymerTemplateModifications({
     }
     const safeBrowsingEnhanced = templateContent.getElementById('safeBrowsingEnhanced')
     if (!safeBrowsingEnhanced) {
-      console.error('[Brave Settings Overrides] Could not find safeBrowsingEnhanced id on security page.')
+      console.error('[TauBrowser Settings Overrides] Could not find safeBrowsingEnhanced id on security page.')
     } else {
       safeBrowsingEnhanced.setAttribute('hidden', 'true')
     }
@@ -38,7 +38,7 @@ RegisterPolymerTemplateModifications({
       templateContent.getElementById('safeBrowsingStandard')
     if (!safeBrowsingStandard) {
       console.error(
-        '[Brave Settings Overrides] Could not find safeBrowsingStandard id ' +
+        '[TauBrowser Settings Overrides] Could not find safeBrowsingStandard id ' +
         'on security page.')
     } else {
       const passwordsLeakSettings = safeBrowsingStandard.
@@ -46,14 +46,14 @@ RegisterPolymerTemplateModifications({
           'template[is=dom-if][if="[[!enablePasswordLeakToggleMove_]]"]')
       if (!passwordsLeakSettings) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[TauBrowser Settings Overrides] Could not find template with ' +
           'if=[[!enablePasswordLeakToggleMove_]] on security page.')
       } else {
         const passwordsLeakToggleOld = passwordsLeakSettings.content.
           getElementById('passwordsLeakToggleOld')
         if (!passwordsLeakToggleOld) {
           console.error(
-            '[Brave Settings Overrides] Could not find passwordsLeakToggleOld ' +
+            '[TauBrowser Settings Overrides] Could not find passwordsLeakToggleOld ' +
             'on security page.')
         } else {
           passwordsLeakToggleOld.setAttribute('hidden', 'true')
@@ -70,13 +70,13 @@ RegisterPolymerTemplateModifications({
       )
       if (!enableHttpsFirstModeNewSettings) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[TauBrowser Settings Overrides] Could not find template with ' +
           'if=[[!enableHttpsFirstModeNewSettings]] on security page.')
       } else {
         const httpsOnlyModeToggle = enableHttpsFirstModeNewSettings.content.
           getElementById('httpsOnlyModeToggle')
         if (!httpsOnlyModeToggle) {
-          console.error('[Brave Settings Overrides] Could not find' +
+          console.error('[TauBrowser Settings Overrides] Could not find' +
             'httpsOnlyModeToggle on security page.')
         } else {
           httpsOnlyModeToggle.setAttribute('hidden', 'true')
@@ -85,7 +85,7 @@ RegisterPolymerTemplateModifications({
     }
     const link = templateContent.getElementById('advanced-protection-program-link')
     if (!link) {
-      console.error('[Brave Settings Overrides] Could not find advanced-protection-program-link id on security page.')
+      console.error('[TauBrowser Settings Overrides] Could not find advanced-protection-program-link id on security page.')
     } else {
       link.setAttribute('hidden', 'true')
     }
@@ -95,14 +95,14 @@ RegisterPolymerTemplateModifications({
     )
     if (!enableCertManagementUIV2) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[TauBrowser Settings Overrides] Could not find template with ' +
           'if=[[!enableCertManagementUIV2]] on security page.')
     } else {
       const chromeCertificates = enableCertManagementUIV2.content.
         getElementById('chromeCertificates')
       if (!chromeCertificates) {
         console.error(
-          '[Brave Settings Overrides] Could not find chromeCertificates id ' +
+          '[TauBrowser Settings Overrides] Could not find chromeCertificates id ' +
           'on security page.')
       } else {
         chromeCertificates.setAttribute('hidden', 'true')

@@ -161,7 +161,7 @@ void WelcomeDOMHandler::HandleOpenSettingsPage(const base::Value::List& args) {
   Browser* browser = chrome::FindBrowserWithProfile(profile_);
   if (browser) {
     content::OpenURLParams open_params(
-        GURL("brave://settings/privacy"), content::Referrer(),
+        GURL("tau://settings/privacy"), content::Referrer(),
         WindowOpenDisposition::NEW_BACKGROUND_TAB,
         ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
     browser->OpenURL(open_params, /*navigation_handle_callback=*/{});
@@ -183,7 +183,7 @@ void WelcomeDOMHandler::HandleEnableWebDiscovery(
     const base::Value::List& args) {
   DCHECK(profile_);
 #if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-  profile_->GetPrefs()->SetBoolean(kWebDiscoveryEnabled, true);
+  profile_->GetPrefs()->SetBoolean(kWebDiscoveryEnabled, false);
 #endif
 }
 

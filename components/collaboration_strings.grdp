@@ -6,10 +6,10 @@
     Collaborate in tab groups
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_DESCRIPTION" desc="The description of the collaboration signin screen." formatter_data="android_java">
-    Sign in to Brave to share and join tab groups, and work together on ideas
+    Sign in to TauBrowser to share and join tab groups, and work together on ideas
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_BOTTOM_SHEET_TITLE" desc="The title of the collaboration signin bottom sheet screen." formatter_data="android_java">
-    Sign in to Brave
+    Sign in to TauBrowser
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_BOTTOM_SHEET_DESCRIPTION" desc="The description of the collaboration signin bottom sheet screen." formatter_data="android_java">
     You’ll get to share, join, and collaborate in tab groups

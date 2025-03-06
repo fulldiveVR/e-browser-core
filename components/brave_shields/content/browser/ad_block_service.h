@@ -133,7 +133,7 @@ class AdBlockService {
   void AddUserCosmeticFilter(const std::string& filter);
   void ResetCosmeticFilter(const std::string& host);
 
-  // Methods for brave://adblock-internals.
+  // Methods for tau://adblock-internals.
   using GetDebugInfoCallback =
       base::OnceCallback<void(base::Value::Dict, base::Value::Dict)>;
   void GetDebugInfoAsync(GetDebugInfoCallback callback);

@@ -17,12 +17,9 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/task/sequenced_task_runner.h"
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/sparkle_buildflags.h"
 #include "brave/browser/translate/brave_translate_utils.h"
 #include "brave/browser/ui/brave_browser.h"
-#include "brave/browser/ui/brave_rewards/rewards_panel_coordinator.h"
-#include "brave/browser/ui/brave_rewards/tip_panel_coordinator.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/commands/accelerator_service.h"
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
@@ -34,7 +31,6 @@
 #include "brave/browser/ui/views/brave_actions/brave_actions_container.h"
 #include "brave/browser/ui/views/brave_actions/brave_shields_action_view.h"
 #include "brave/browser/ui/views/brave_help_bubble/brave_help_bubble_host_view.h"
-#include "brave/browser/ui/views/brave_rewards/tip_panel_bubble_host.h"
 #include "brave/browser/ui/views/brave_shields/cookie_list_opt_in_bubble_host.h"
 #include "brave/browser/ui/views/frame/brave_contents_layout_manager.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
@@ -47,11 +43,9 @@
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/browser/ui/views/toolbar/bookmark_button.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
-#include "brave/browser/ui/views/toolbar/wallet_button.h"
 #include "brave/browser/ui/views/window_closing_confirm_dialog_view.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/ui/color/nala/nala_color_id.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/app_mode/app_mode_utils.h"
@@ -99,11 +93,6 @@
 #include "brave/browser/ui/views/update_recommended_message_box_mac.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
-#include "brave/browser/ui/views/speedreader/reader_mode_bubble.h"
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
 #include "brave/browser/ui/views/wayback_machine_bubble_view.h"
@@ -231,21 +220,6 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
     : BrowserView(std::move(browser)) {
   const bool use_rounded_corners =
       BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_.get());
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  reader_mode_toolbar_ =
-      contents_container_->AddChildView(std::make_unique<ReaderModeToolbarView>(
-          browser_->profile(), use_rounded_corners));
-
-  views::View* border_view = nullptr;
-#if BUILDFLAG(ENABLE_GLIC)
-  border_view = glic_border();
-#endif
-
-  contents_container_->SetLayoutManager(
-      std::make_unique<BraveContentsLayoutManager>(
-          devtools_web_view(), contents_web_view(), contents_scrim_view(),
-          border_view, watermark_view_.get(), reader_mode_toolbar_));
-#endif
 
   if (use_rounded_corners) {
     // Collapse the separator line between the toolbar or bookmark bar and the
@@ -264,15 +238,7 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
   // Show the correct value in settings on initial start
   UpdateSearchTabsButtonState();
 
-  auto* rewards_service =
-      brave_rewards::RewardsServiceFactory::GetForProfile(browser_->profile());
-  if (rewards_service) {
-    brave_rewards::RewardsPanelCoordinator::CreateForBrowser(browser_.get());
-    brave_rewards::TipPanelCoordinator::CreateForBrowser(browser_.get(),
-                                                         rewards_service);
-  }
 
-  brave_rewards::TipPanelBubbleHost::MaybeCreateForBrowser(browser_.get());
 
   brave_shields::CookieListOptInBubbleHost::MaybeCreateForBrowser(
       browser_.get());
@@ -361,7 +327,7 @@ void BraveBrowserView::OnPreferenceChanged(const std::string& pref_name) {
 void BraveBrowserView::UpdateSideBarHorizontalAlignment() {
   DCHECK(sidebar_container_view_);
 
-  const bool on_left = !GetProfile()->GetPrefs()->GetBoolean(
+  const bool on_left = GetProfile()->GetPrefs()->GetBoolean(
       prefs::kSidePanelHorizontalAlignment);
 
   sidebar_container_view_->SetSidebarOnLeft(on_left);
@@ -387,9 +353,6 @@ BraveBrowserView::~BraveBrowserView() {
   }
 
   // Same as above.
-  if (brave_rewards::TipPanelBubbleHost::FromBrowser(browser_.get())) {
-    brave_rewards::TipPanelBubbleHost::RemoveFromBrowser(browser_.get());
-  }
 
   DCHECK(!tab_cycling_event_handler_);
 }
@@ -473,47 +436,6 @@ void BraveBrowserView::SetStarredState(bool is_starred) {
   }
 }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-
-speedreader::SpeedreaderBubbleView* BraveBrowserView::ShowSpeedreaderBubble(
-    speedreader::SpeedreaderTabHelper* tab_helper,
-    speedreader::SpeedreaderBubbleLocation location) {
-  views::View* anchor = nullptr;
-  views::BubbleBorder::Arrow arrow = views::BubbleBorder::NONE;
-  switch (location) {
-    case speedreader::SpeedreaderBubbleLocation::kLocationBar:
-      anchor = GetLocationBarView();
-      arrow = views::BubbleBorder::TOP_RIGHT;
-      break;
-    case speedreader::SpeedreaderBubbleLocation::kToolbar:
-      anchor = reader_mode_toolbar_->toolbar();
-      arrow = views::BubbleBorder::TOP_LEFT;
-      break;
-  }
-
-  auto* reader_mode_bubble =
-      new speedreader::ReaderModeBubble(anchor, tab_helper);
-  views::BubbleDialogDelegateView::CreateBubble(reader_mode_bubble);
-  reader_mode_bubble->SetArrow(arrow);
-  reader_mode_bubble->Show();
-  return reader_mode_bubble;
-}
-
-void BraveBrowserView::UpdateReaderModeToolbar() {
-  auto is_distilled = [](content::WebContents* web_contents) {
-    if (!web_contents) {
-      return false;
-    }
-    if (auto* th =
-            speedreader::SpeedreaderTabHelper::FromWebContents(web_contents)) {
-      return speedreader::DistillStates::IsDistilled(th->PageDistillState());
-    }
-    return false;
-  };
-  reader_mode_toolbar_->SetVisible(
-      is_distilled(browser()->tab_strip_model()->GetActiveWebContents()));
-}
-#endif  // BUILDFLAG(ENABLE_SPEEDREADER)
 
 void BraveBrowserView::ShowUpdateChromeDialog() {
 #if BUILDFLAG(ENABLE_SPARKLE)
@@ -563,19 +485,11 @@ void BraveBrowserView::ShowWaybackMachineBubble() {
 }
 #endif
 
-WalletButton* BraveBrowserView::GetWalletButton() {
-  return static_cast<BraveToolbarView*>(toolbar())->wallet_button();
-}
 
 void BraveBrowserView::NotifyDialogPositionRequiresUpdate() {
   GetBrowserViewLayout()->NotifyDialogPositionRequiresUpdate();
 }
 
-views::View* BraveBrowserView::GetWalletButtonAnchorView() {
-  return static_cast<BraveToolbarView*>(toolbar())
-      ->wallet_button()
-      ->GetAsAnchorView();
-}
 
 void BraveBrowserView::OnAcceleratorsChanged(
     const commands::Accelerators& changed) {
@@ -619,21 +533,8 @@ void BraveBrowserView::OnAcceleratorsChanged(
   }
 }
 
-void BraveBrowserView::CreateWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowWalletBubble();
-}
 
-void BraveBrowserView::CreateApproveWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowApproveWalletBubble();
-}
 
-void BraveBrowserView::CloseWalletBubble() {
-  if (GetWalletButton()) {
-    GetWalletButton()->CloseWalletBubble();
-  }
-}
 
 void BraveBrowserView::AddedToWidget() {
   BrowserView::AddedToWidget();
@@ -865,9 +766,6 @@ void BraveBrowserView::OnActiveTabChanged(content::WebContents* old_contents,
         /*passkey*/ {}, old_contents, new_contents);
   }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  UpdateReaderModeToolbar();
-#endif
 }
 
 void BraveBrowserView::UpdateContentsSeparatorVisibility() {

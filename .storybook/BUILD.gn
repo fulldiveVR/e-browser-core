@@ -4,7 +4,6 @@
 # you can obtain one at http://mozilla.org/MPL/2.0/.
 
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
-import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 
 group("storybook") {
   # Depend on any generated JS output that will
@@ -17,15 +16,10 @@ group("storybook") {
     "//brave/components/ai_chat/core/common/mojom:mojom_js",
     "//brave/components/brave_new_tab_ui:mojom_js",
     "//brave/components/brave_news/common:mojom_js",
-    "//brave/components/brave_rewards/core/mojom:mojom_js",
     "//brave/components/brave_shields/core/common:mojom_js",
     "//brave/components/brave_vpn/common/mojom:mojom_js",
-    "//brave/components/brave_wallet/common:mojom_js",
     "//mojo/public/js:bindings",
     "//mojo/public/js:resources",
   ]
 
-  if (enable_speedreader) {
-    deps += [ "//brave/components/speedreader/common:mojom_js" ]
-  }
 }

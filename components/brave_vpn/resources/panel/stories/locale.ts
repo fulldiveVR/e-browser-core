@@ -5,7 +5,7 @@
 import { provideStrings } from '../../../../../.storybook/locale'
 
 provideStrings({
-  braveVpn: 'Brave VPN',
+  braveVpn: 'TauBrowser VPN',
   braveVpnConnect: 'Connect',
   braveVpnConnecting: 'Connecting',
   braveVpnConnected: 'Connected',
@@ -18,7 +18,7 @@ provideStrings({
   braveVpnUnableConnectInfo:
     "$1 couldn't connect to the $2 server. Please try again or choose another country.",
   braveVpnBuy: 'Start 7-day free trial',
-  braveVpnPurchased: 'Already purchased Brave VPN?',
+  braveVpnPurchased: 'Already purchased TauBrowser VPN?',
   braveVpnPoweredBy: 'Powered by',
   braveVpnSettings: 'Settings',
   braveVpnSettingsPanelHeader: 'Settings',
@@ -50,7 +50,7 @@ provideStrings({
   braveVpnEditPaymentMethod: 'Edit payment method',
   braveVpnPaymentFailure: 'There was a problem with your payment',
   braveVpnPaymentFailureReason:
-    'Looks like your most recent payment for $1 did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method, or contact Brave support.',
+    'Looks like your most recent payment for $1 did not go through. Access to this subscription will pause until the payment issue is resolved. Try to edit your payment method, or contact TauBrowser support.',
   braveVpnSupportPanelBackButtonAriaLabel: 'Close support form',
   braveVpnSupportEmail: 'Your email address',
   braveVpnSupportEmailInputPlaceholder: 'Enter your email address',
@@ -78,11 +78,11 @@ provideStrings({
   braveVpnSupportNotes: 'Support provided in partnership with Guardian.',
   braveVpnSupportSubmit: 'Submit',
   braveVpnConnectNotAllowed:
-    'VPN connection failed. Please try connecting again, and be sure to click "Allow" to enable Brave\'s VPN configuration.',
+    'VPN connection failed. Please try connecting again, and be sure to click "Allow" to enable TauBrowser\'s VPN configuration.',
   braveVpnSessionExpiredTitle: 'Session expired',
   braveVpnSessionExpiredContent:
-    'Please log in to your $1Brave Account$2 to refresh your VPN session.',
-  braveVpnWidgetTitle: 'Brave VPN',
+    'Please log in to your $1TauBrowser Account$2 to refresh your VPN session.',
+  braveVpnWidgetTitle: 'TauBrowser VPN',
   braveVpnWidgetFeature3: 'Protect every app on your device',
   braveVpnOptimal: 'Optimal',
   braveVpnChangeRegion: 'Change',

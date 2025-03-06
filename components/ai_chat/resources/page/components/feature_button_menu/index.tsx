@@ -7,10 +7,8 @@ import * as React from 'react'
 import ButtonMenu from '@brave/leo/react/buttonMenu'
 import Button from '@brave/leo/react/button'
 import Icon from '@brave/leo/react/icon'
-import Label from '@brave/leo/react/label'
 import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
-import * as Mojom from '../../../common/mojom'
 import { useAIChat } from '../../state/ai_chat_context'
 import { useConversation } from '../../state/conversation_context'
 import styles from './style.module.scss'
@@ -67,17 +65,6 @@ export default function FeatureMenu(props: Props) {
                   {getLocale(`braveLeoModelSubtitle-${model.key}`)}
                 </p>
               </div>
-              {model.options.leoModelOptions?.access ===
-                Mojom.ModelAccess.PREMIUM &&
-                !aiChatContext.isPremiumUser && (
-                  <Label
-                    className={styles.modelLabel}
-                    mode={'outline'}
-                    color='blue'
-                  >
-                    {getLocale('modelPremiumLabelNonPremium')}
-                  </Label>
-                )}
             </div>
           </leo-menu-item>
         )
@@ -138,37 +125,7 @@ export default function FeatureMenu(props: Props) {
         <div className={styles.menuSeparator} />
       </>}
 
-      {!aiChatContext.isPremiumUser && (
-        <leo-menu-item onClick={aiChatContext.goPremium}>
-          <div
-            className={classnames(
-              styles.menuItemWithIcon,
-              styles.menuItemMainItem
-            )}
-          >
-            <Icon name='lock-open' />
-            <span className={styles.menuText}>
-              {getLocale('menuGoPremium')}
-            </span>
-          </div>
-        </leo-menu-item>
-      )}
 
-      {aiChatContext.isPremiumUser && (
-        <leo-menu-item onClick={aiChatContext.managePremium}>
-          <div
-            className={classnames(
-              styles.menuItemWithIcon,
-              styles.menuItemMainItem
-            )}
-          >
-            <Icon name='lock-open' />
-            <span className={styles.menuText}>
-              {getLocale('menuManageSubscription')}
-            </span>
-          </div>
-        </leo-menu-item>
-      )}
       {!aiChatContext.isStandalone && aiChatContext.isHistoryFeatureEnabled && (
         <>
           <leo-menu-item

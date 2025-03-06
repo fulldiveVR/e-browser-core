@@ -567,13 +567,13 @@ function StoryContext(props: React.PropsWithChildren<{ args: CustomArgs, setArgs
     }, {
       id: 3,
       contentId: 3,
-      url: { url: 'https://brave.com' },
+      url: { url: 'https://tau-browser.ru' },
       title: 'Brave',
     }, {
       id: 4,
       contentId: 4,
-      url: { url: 'https://search.brave.com' },
-      title: 'Brave Search',
+      url: { url: 'https://search.tau-browser.ru' },
+      title: 'TauBrowser Search',
     }],
     goPremium: () => { },
     managePremium: () => { },

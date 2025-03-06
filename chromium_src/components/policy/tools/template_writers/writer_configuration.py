@@ -11,38 +11,38 @@ def GetConfigurationForBuild(original_function, defines):
   return _merge_dicts(_BRAVE_VALUES, base)
 
 _BRAVE_VALUES = {
-  'build': 'brave',
-  'app_name': 'Brave',
+  'build': 'taubrowser',
+  'app_name': 'TauBrowser',
   'doc_url':
-    'https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy',
-  'frame_name': 'Brave Frame',
-  'webview_name': 'Brave WebView',
+    'https://support.tau-browser.ru/hc/en-us/articles/360039248271-Group-Policy',
+  'frame_name': 'TauBrowser Frame',
+  'webview_name': 'TauBrowser WebView',
   'win_config': {
     'win': {
-      'reg_mandatory_key_name': 'Software\\Policies\\BraveSoftware\\Brave',
+      'reg_mandatory_key_name': 'Software\\Policies\\TauTechnologies\\TauBrowser',
       'reg_recommended_key_name':
-        'Software\\Policies\\BraveSoftware\\Brave\\Recommended',
-      'mandatory_category_path': ['Brave:Cat_Brave', 'brave'],
-      'recommended_category_path': ['Brave:Cat_Brave', 'brave_recommended'],
+        'Software\\Policies\\TauTechnologies\\TauBrowser\\Recommended',
+      'mandatory_category_path': ['TauBrowser:Cat_TauBrowser', 'taubrowser'],
+      'recommended_category_path': ['TauBrowser:Cat_TauBrowser', 'taubrowser_recommended'],
       'category_path_strings': {
-        'brave': 'Brave',
-        'brave_recommended':
-        'Brave - {doc_recommended}'
+        'taubrowser': 'TauBrowser',
+        'taubrowser_recommended':
+        'TauBrowser - {doc_recommended}'
       },
-      'namespace': 'BraveSoftware.Policies.Brave',
+      'namespace': 'TauTechnologies.Policies.TauBrowser',
     },
   },
-  # The string 'Brave' is defined in brave.adml for ADMX, but ADM doesn't
+  # The string 'TauBrowser' is defined in taubrowser.adml for ADMX, but ADM doesn't
   # support external references, so we define this map here.
   'adm_category_path_strings': {
-    'Brave:Cat_Brave': 'Brave'
+    'TauBrowser:Cat_TauBrowser': 'TauBrowser'
   },
-  'admx_prefix': 'brave',
+  'admx_prefix': 'taubrowser',
   'admx_using_namespaces': {
-    'Brave': 'BraveSoftware.Policies'  # prefix: namespace
+    'TauBrowser': 'TauTechnologies.Policies'  # prefix: namespace
   },
-  'linux_policy_path': '/etc/brave/policies/',
-  'bundle_id': 'com.brave.ios.core',
+  'linux_policy_path': '/etc/taubrowser/policies/',
+  'bundle_id': 'com.taubrowser.ios.core',
 }
 
 def _merge_dicts(src, dst):

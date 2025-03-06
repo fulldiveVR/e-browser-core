@@ -91,16 +91,7 @@ void BraveAvatarToolbarButton::SetHighlight(
     const std::u16string& highlight_text,
     std::optional<SkColor> highlight_color) {
   std::u16string revised_highlight_text;
-  if (browser_->profile()->IsTor()) {
-    revised_highlight_text = brave_l10n::GetLocalizedResourceUTF16String(
-        IDS_TOR_AVATAR_BUTTON_LABEL);
-
-    if (delegate_->GetWindowCount() > 1) {
-      revised_highlight_text = l10n_util::GetStringFUTF16(
-          IDS_TOR_AVATAR_BUTTON_LABEL_COUNT,
-          base::NumberToString16(delegate_->GetWindowCount()));
-    }
-  } else if (browser_->profile()->IsIncognitoProfile()) {
+ if (browser_->profile()->IsIncognitoProfile()) {
     // We only want the icon and count for Incognito profiles.
     revised_highlight_text = std::u16string();
     if (delegate_->GetWindowCount() > 1) {

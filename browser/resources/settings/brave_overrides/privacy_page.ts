@@ -216,14 +216,14 @@ RegisterPolymerTemplateModifications({
     const pages = templateContent.getElementById('pages')
     if (!pages) {
       console.error(
-        `[Brave Settings Overrides] Couldn't find privacy_page #pages`)
+        `[TauBrowser Settings Overrides] Couldn't find privacy_page #pages`)
     } else {
       if (!loadTimeData.getBoolean('isIdleDetectionFeatureEnabled')) {
         const idleDetection = templateContent.querySelector(
           '[route-path="/content/idleDetection"]')
         if (!idleDetection) {
           console.error(
-            `[Brave Settings Overrides] Couldn't find idle detection template`)
+            `[TauBrowser Settings Overrides] Couldn't find idle detection template`)
         } else {
           idleDetection.content.firstElementChild.hidden = true
         }
@@ -244,18 +244,12 @@ RegisterPolymerTemplateModifications({
         InsertBraveOpenAIChatSubpage(pages)
       }
       InsertAutoplaySubpage(pages)
-      const isNativeBraveWalletEnabled =
-        loadTimeData.getBoolean('isNativeBraveWalletFeatureEnabled')
-      if (isNativeBraveWalletEnabled) {
-        InsertEthereumSubpage(pages)
-        InsertSolanaSubpage(pages)
-      }
       InsertShieldsSubpage(pages)
       const permissionsLinkRow =
         templateContent.getElementById('permissionsLinkRow')
       if (!permissionsLinkRow) {
         console.error(
-          '[Brave Settings Overrides] Couldn\'t find permissionsLinkRow')
+          '[TauBrowser Settings Overrides] Couldn\'t find permissionsLinkRow')
       } else {
         permissionsLinkRow.insertAdjacentHTML(
           'afterend',
@@ -268,7 +262,7 @@ RegisterPolymerTemplateModifications({
         templateContent.getElementById('thirdPartyCookiesLinkRow')
       if (!thirdPartyCookiesLinkRow) {
         console.error(
-          '[Brave Settings Overrides] Could not find ' +
+          '[TauBrowser Settings Overrides] Could not find ' +
           'thirdPartyCookiesLinkRow id on privacy page.')
       } else {
         thirdPartyCookiesLinkRow.setAttribute('hidden', 'true')
@@ -279,14 +273,14 @@ RegisterPolymerTemplateModifications({
         querySelector(`template[if*='isPrivacySandboxSettings3Enabled_']`)
       if (!privacySandboxSettings3Template) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[TauBrowser Settings Overrides] Could not find template with ' +
           'if*=isPrivacySandboxSettings3Enabled_ on privacy page.')
       } else {
         const privacySandboxLinkRow = privacySandboxSettings3Template.content.
           getElementById('privacySandboxLinkRow')
         if (!privacySandboxLinkRow) {
           console.error(
-            '[Brave Settings Overrides] Could not find privacySandboxLinkRow' +
+            '[TauBrowser Settings Overrides] Could not find privacySandboxLinkRow' +
             ' id on privacy page.')
         } else {
           privacySandboxLinkRow.setAttribute('hidden', 'true')
@@ -295,7 +289,7 @@ RegisterPolymerTemplateModifications({
           getElementById('privacySandboxLink')
         if (!privacySandboxLink) {
           console.error(
-            '[Brave Settings Overrides] Could not find privacySandboxLink id' +
+            '[TauBrowser Settings Overrides] Could not find privacySandboxLink id' +
             ' on privacy page.')
         } else {
           privacySandboxSettings3Template.setAttribute('hidden', 'true')
@@ -305,14 +299,14 @@ RegisterPolymerTemplateModifications({
         querySelector(`template[if*='isPrivacySandboxSettings4Enabled_']`)
       if (!privacySandboxSettings4Template) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[TauBrowser Settings Overrides] Could not find template with ' +
           'if*=isPrivacySandboxSettings4Enabled_ on privacy page.')
       } else {
         const privacySandboxLinkRow = privacySandboxSettings4Template.content.
           getElementById('privacySandboxLinkRow')
         if (!privacySandboxLinkRow) {
           console.error(
-            '[Brave Settings Overrides] Could not find privacySandboxLinkRow ' +
+            '[TauBrowser Settings Overrides] Could not find privacySandboxLinkRow ' +
             'id on privacy page.')
         } else {
           privacySandboxLinkRow.setAttribute('hidden', 'true')
@@ -324,14 +318,14 @@ RegisterPolymerTemplateModifications({
         templateContent.querySelector(`template[if*='isPrivacyGuideAvailable']`)
     if (!showPrivacyGuideEntryPointTemplate) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with' +
+        '[TauBrowser Settings Overrides] Could not find template with' +
         ' if*=isPrivacyGuideAvailable on privacy page.')
     } else {
       const privacyGuideLinkRow = showPrivacyGuideEntryPointTemplate.content.
         getElementById('privacyGuideLinkRow')
       if (!privacyGuideLinkRow) {
         console.error(
-          '[Brave Settings Overrides] Could not find privacyGuideLinkRow id' +
+          '[TauBrowser Settings Overrides] Could not find privacyGuideLinkRow id' +
           ' on privacy page.')
       } else {
         privacyGuideLinkRow.setAttribute('hidden', 'true')
@@ -342,7 +336,7 @@ RegisterPolymerTemplateModifications({
       `template[is=dom-if][route-path='/content/storageAccess'`)
     if (!sotrageAccessTemplate) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with' +
+        '[TauBrowser Settings Overrides] Could not find template with' +
         ' route-path=/content/storageAccess on privacy page.')
     } else {
       sotrageAccessTemplate.remove()

@@ -27,7 +27,7 @@ const searchEngineConfig = () => {
     return JSON.parse(localStorageValue);
   }
   return {
-    // Default to enabling Brave Search
+    // Default to enabling TauBrowser Search
     [braveSearchHost]: true
   };
 }
@@ -52,7 +52,7 @@ export function EngineContextProvider(props: React.PropsWithChildren<{}>) {
     }
 
     // If the last search engine we used has been disabled or doesn't exist in the config, return the first enabled
-    // one, or Brave Search.
+    // one, or TauBrowser Search.
     // Note: The key for `Google` is the empty string which is falsey so we need
     // to check for undefined here.
     if (last === undefined || !config[last]) {

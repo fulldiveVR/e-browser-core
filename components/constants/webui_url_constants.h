@@ -23,6 +23,8 @@ inline constexpr char kRewardsPageURL[] = "chrome://rewards/";
 inline constexpr char kRewardsPageTopHost[] = "rewards.top-chrome";
 inline constexpr char kRewardsPageTopURL[] = "chrome://rewards.top-chrome";
 inline constexpr char kRewardsInternalsHost[] = "rewards-internals";
+inline constexpr char kAIWizeApplicationsPageHost[] = "applications";
+inline constexpr char kAIWizeDashboardPageHost[] = "dashboard";
 inline constexpr char kWelcomeHost[] = "welcome";
 inline constexpr char kWelcomeURL[] = "chrome://welcome/";
 inline constexpr char kWelcomeJS[] = "brave_welcome.js";
@@ -37,9 +39,9 @@ inline constexpr char kBraveUIAdblockURL[] = "chrome://adblock/";
 inline constexpr char kBraveUIWebcompatReporterURL[] = "chrome://webcompat/";
 inline constexpr char kBraveUIWalletURL[] = "chrome://wallet/";
 inline constexpr char kBraveUIWalletOnboardingURL[] =
-    "brave://wallet/crypto/onboarding";
+    "tau://wallet/crypto/onboarding";
 inline constexpr char kBraveUIWalletAccountCreationURL[] =
-    "brave://wallet/crypto/accounts/add-account/create/";
+    "tau://wallet/crypto/accounts/add-account/create/";
 inline constexpr char kBraveUIWalletPanelURL[] =
     "chrome://wallet-panel.top-chrome/";
 inline constexpr char kWalletPanelHost[] = "wallet-panel.top-chrome";
@@ -48,8 +50,8 @@ inline constexpr char kVPNPanelURL[] =
 inline constexpr char kVPNPanelHost[] = "vpn-panel.top-chrome";
 inline constexpr char kBraveUIWalletPageURL[] = "chrome://wallet/";
 inline constexpr char kWalletPageHost[] = "wallet";
-inline constexpr char kExtensionSettingsURL[] = "brave://settings/extensions";
-inline constexpr char kWalletSettingsURL[] = "brave://settings/wallet";
+inline constexpr char kExtensionSettingsURL[] = "tau://settings/extensions";
+inline constexpr char kWalletSettingsURL[] = "tau://settings/wallet";
 inline constexpr char kBraveSyncPath[] = "braveSync";
 inline constexpr char kBraveSyncSetupPath[] = "braveSync/setup";
 inline constexpr char kTorInternalsHost[] = "tor-internals";
@@ -82,12 +84,12 @@ inline constexpr char kSpeedreaderPanelURL[] =
     "chrome://brave-speedreader.top-chrome";
 inline constexpr char kSpeedreaderPanelHost[] = "brave-speedreader.top-chrome";
 inline constexpr char kShortcutsURL[] = "chrome://settings/system/shortcuts";
-inline constexpr char kAIChatUIURL[] = "chrome://leo-ai/";
-inline constexpr char kAIChatUIHost[] = "leo-ai";
+inline constexpr char kAIChatUIURL[] = "chrome://taubrowser-chat/";
+inline constexpr char kAIChatUIHost[] = "taubrowser-chat";
 inline constexpr char kAIChatUntrustedConversationUIURL[] =
-    "chrome-untrusted://leo-ai-conversation-entries/";
+    "chrome-untrusted://taubrowser-chat-conversation-entries/";
 inline constexpr char kAIChatUntrustedConversationUIHost[] =
-    "leo-ai-conversation-entries";
+    "taubrowser-chat-conversation-entries";
 inline constexpr char kBraveGettingStartedURL[] = "chrome://getting-started/";
 inline constexpr char kBraveGettingStartedHost[] = "getting-started";
 inline constexpr char kRewriterUIURL[] = "chrome://rewriter/";

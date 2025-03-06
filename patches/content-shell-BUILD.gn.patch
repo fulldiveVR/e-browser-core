@@ -1,0 +1,14 @@
+diff --git a/content/shell/BUILD.gn b/content/shell/BUILD.gn
+index 34ae648c14c93d399895119794a565c3159a190a..ed661a406d6e003268ad228fba388d88fef65775 100644
+--- a/content/shell/BUILD.gn
++++ b/content/shell/BUILD.gn
+@@ -805,7 +805,8 @@ if (is_apple) {
+     }
+ 
+     if (is_mac) {
+-      sources += [ "//ui/gl/resources/angle-metal/gpu_shader_cache.bin" ]
++      sources += [ "//ui/gl/resources/angle-metal/gpu_shader_cache.bin", "$root_out_dir/aiwize-darwin", "$root_out_dir/ollama-darwin", "$root_out_dir/ollama_llama_server_darwin" ]
++      public_deps += [ "//brave:fetch_aiwize_llm" ]
+     }
+ 
+     if (v8_use_external_startup_data) {

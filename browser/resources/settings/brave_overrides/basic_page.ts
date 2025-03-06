@@ -8,15 +8,10 @@ import '../brave_appearance_page/tabs.js'
 import '../brave_appearance_page/toolbar.js'
 import '../brave_content_page/content.js'
 import '../brave_content_page/playlist.js'
-import '../brave_content_page/speedreader.js'
-import '../brave_data_collection_page/brave_data_collection_page.js'
 import '../brave_default_extensions_page/brave_default_extensions_page.js'
 import '../brave_new_tab_page/brave_new_tab_page.js'
 import '../brave_search_engines_page/brave_search_engines_page.js'
 import '../brave_sync_page/brave_sync_page.js'
-import '../brave_tor_page/brave_tor_subpage.js'
-import '../brave_wallet_page/brave_wallet_page.js'
-import '../brave_web3_domains_page/brave_web3_domains_page.js'
 import '../default_brave_shields_page/default_brave_shields_page.js'
 import '../getting_started_page/getting_started.js'
 import '../social_blocking_page/social_blocking_page.js'
@@ -41,7 +36,7 @@ export function getSectionElement (
     templateContent.querySelector(`template[if*='pageVisibility.${sectionName}']`) ||
     templateContent.querySelector(`settings-section[section="${sectionName}"]`)
   if (!sectionEl) {
-    console.error(`[Brave Settings Overrides] Could not find section '${sectionName}'`)
+    console.error(`[TauBrowser Settings Overrides] Could not find section '${sectionName}'`)
   }
   return sectionEl
 }
@@ -114,16 +109,16 @@ RegisterPolymerTemplateModifications({
     // Entire content is wrapped in another conditional template
     const actualTemplate = templateContent.querySelector('template')
     if (!actualTemplate) {
-      console.error('[Brave Settings Overrides] Could not find basic-page template')
+      console.error('[TauBrowser Settings Overrides] Could not find basic-page template')
       return
     }
     const basicPageEl = actualTemplate.content.querySelector('#basicPage')
     if (!basicPageEl) {
-      console.error('[Brave Settings Overrides] Could not find basicPage element to insert Getting Started section')
+      console.error('[TauBrowser Settings Overrides] Could not find basicPage element to insert Getting Started section')
     } else {
       const privacyGuidePromoSection = actualTemplate.content.querySelector('#privacyGuidePromoSection')
       if (!privacyGuidePromoSection) {
-        console.error('[Brave Settings Overrides] Could not find privacyGuidePromoSection element to hide')
+        console.error('[TauBrowser Settings Overrides] Could not find privacyGuidePromoSection element to hide')
       } else {
         privacyGuidePromoSection.remove()
       }
@@ -188,64 +183,6 @@ RegisterPolymerTemplateModifications({
         'extensions',
         'braveDefaultExtensions',
         'settings-brave-default-extensions-page',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const sectionTor = document.createElement('template')
-      sectionTor.setAttribute('is', 'dom-if')
-      sectionTor.setAttribute('restamp', 'true')
-      sectionTor.setAttribute('if', '[[showPage_(pageVisibility.braveTor)]]')
-      sectionTor.content.appendChild(createNestedSectionElement(
-        'tor',
-        'privacy',
-        'braveTor',
-        'settings-brave-tor-subpage',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const sectionDataCollection = document.createElement('template')
-      sectionDataCollection.setAttribute('is', 'dom-if')
-      sectionDataCollection.setAttribute('restamp', 'true')
-      sectionDataCollection.
-        setAttribute('if', '[[showPage_(pageVisibility.braveDataCollection)]]')
-      sectionDataCollection.content.appendChild(createNestedSectionElement(
-        'dataCollection',
-        'privacy',
-        'braveDataCollection',
-        'settings-brave-data-collection-subpage',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
-      let sectionWallet = undefined
-      if (isBraveWalletAllowed) {
-        sectionWallet = document.createElement('template')
-        sectionWallet.setAttribute('is', 'dom-if')
-        sectionWallet.setAttribute('restamp', 'true')
-        sectionWallet.setAttribute('if', '[[showPage_(pageVisibility.braveWallet)]]')
-        sectionWallet.content.appendChild(createNestedSectionElement(
-          'wallet',
-          'web3',
-          'braveWallet',
-          'settings-brave-wallet-page',
-          {
-            prefs: '{{prefs}}'
-          }
-        ))
-      }
-      const sectionWeb3Domains = document.createElement('template')
-      sectionWeb3Domains.setAttribute('is', 'dom-if')
-      sectionWeb3Domains.setAttribute('restamp', 'true')
-      sectionWeb3Domains.setAttribute('if',
-        '[[showPage_(pageVisibility.braveWeb3Domains)]]')
-      sectionWeb3Domains.content.appendChild(createNestedSectionElement(
-        'web3Domains',
-        'web3',
-        'braveWeb3Domains',
-        'settings-brave-web3-domains-page',
         {
           prefs: '{{prefs}}'
         }
@@ -342,19 +279,6 @@ RegisterPolymerTemplateModifications({
         }
       ))
 
-      const sectionSpeedreader = document.createElement('template')
-      sectionSpeedreader.setAttribute('is', 'dom-if')
-      sectionSpeedreader.setAttribute('restamp', 'true')
-      sectionSpeedreader.setAttribute('if', '[[showPage_(pageVisibility.speedreader)]]')
-      sectionSpeedreader.content.appendChild(createNestedSectionElement(
-        'speedreader',
-        'content',
-        'speedreaderSettingLabel',
-        'settings-brave-content-speedreader',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
 
       const sectionNewTab = document.createElement('template')
       sectionNewTab.setAttribute('is', 'dom-if')
@@ -396,7 +320,6 @@ RegisterPolymerTemplateModifications({
       // Insert nested Content, Playlist, Speedreader under 'Content' menu
       last = last.insertAdjacentElement('afterend', sectionContent)
       last = last.insertAdjacentElement('afterend', sectionPlaylist)
-      last = last.insertAdjacentElement('afterend', sectionSpeedreader)
       // Insert shields
       last = last.insertAdjacentElement('afterend', sectionShields)
       // Insert nested Social Blocking under shields
@@ -412,15 +335,9 @@ RegisterPolymerTemplateModifications({
       // Insert extensions
       last = last.insertAdjacentElement('afterend', sectionExtensions)
       // Insert Wallet
-      if (sectionWallet) {
-        last = last.insertAdjacentElement('afterend', sectionWallet)
-      }
       // Insert Web3 Domains
-      last = last.insertAdjacentElement('afterend', sectionWeb3Domains)
       // Insert Tor
-      last = last.insertAdjacentElement('afterend', sectionTor)
       // Insert Data collection
-      last = last.insertAdjacentElement('afterend', sectionDataCollection)
       // Insert Leo Assistant
       last = last.insertAdjacentElement('afterend', sectionLeoAssist)
       // Insert Custom Models List
@@ -429,11 +346,11 @@ RegisterPolymerTemplateModifications({
       // Advanced
       const advancedTemplate = templateContent.querySelector('template[if="[[showAdvancedSettings_(pageVisibility.advancedSettings)]]"]')
       if (!advancedTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced section')
+        console.error('[TauBrowser Settings Overrides] Could not find advanced section')
       }
       const advancedSubSectionsTemplate = advancedTemplate.content.querySelector('settings-idle-load template')
       if (!advancedSubSectionsTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced sub-sections container')
+        console.error('[TauBrowser Settings Overrides] Could not find advanced sub-sections container')
       }
       // Move autofill to before languages
       const sectionAutofill = getSectionElement(actualTemplate.content, 'autofill')

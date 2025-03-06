@@ -92,12 +92,7 @@ GURL ConvertURLToBuiltInItemURL(const GURL& url) {
   if (url == GURL(chrome::kChromeUIBookmarksURL))
     return GURL(chrome::kChromeUIBookmarksSidePanelURL);
 
-  if (url.host() == kBraveTalkHost)
-    return GURL(kBraveTalkURL);
 
-  if (url.SchemeIs(content::kChromeUIScheme) && url.host() == kWalletPageHost) {
-    return GURL(kBraveUIWalletPageURL);
-  }
   return url;
 }
 
@@ -134,11 +129,9 @@ SidePanelEntryId SidePanelIdFromSideBarItemType(BuiltInItemType type) {
       return SidePanelEntryId::kPlaylist;
     case BuiltInItemType::kChatUI:
       return SidePanelEntryId::kChatUI;
-    case BuiltInItemType::kWallet:
-      [[fallthrough]];
-    case BuiltInItemType::kBraveTalk:
-      [[fallthrough]];
     case BuiltInItemType::kHistory:
+      [[fallthrough]];
+    case BuiltInItemType::kAiWizeApps:
       [[fallthrough]];
     case BuiltInItemType::kNone:
       break;
@@ -266,13 +259,7 @@ SidebarService::ShowSidebarOption GetDefaultShowSidebarOption(
     return ShowSidebarOption::kShowAlways;
   }
 
-  if (auto* local_state = g_browser_process->local_state()) {
-    return local_state->GetBoolean(kTargetUserForSidebarEnabledTest)
-               ? ShowSidebarOption::kShowAlways
-               : ShowSidebarOption::kShowNever;
-  }
-
-  return ShowSidebarOption::kShowNever;
+  return ShowSidebarOption::kShowAlways;
 }
 
 }  // namespace sidebar

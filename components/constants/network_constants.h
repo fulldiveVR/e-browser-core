@@ -6,9 +6,9 @@
 #ifndef BRAVE_COMPONENTS_CONSTANTS_NETWORK_CONSTANTS_H_
 #define BRAVE_COMPONENTS_CONSTANTS_NETWORK_CONSTANTS_H_
 
-inline constexpr char kExtensionUpdaterDomain[] = "extensionupdater.brave.com";
+inline constexpr char kExtensionUpdaterDomain[] = "extensionupdater.tau-browser.ru";
 
-inline constexpr char kBraveProxyPattern[] = "https://*.brave.com/*";
+inline constexpr char kBraveProxyPattern[] = "https://*.tau-browser.ru/*";
 inline constexpr char kBraveSoftwareProxyPattern[] =
     "https://*.bravesoftware.com/*";
 
@@ -17,11 +17,11 @@ inline constexpr char kBraveUsageStandardPath[] = "/1/usage/brave-core";
 inline constexpr char kBraveReferralsInitPath[] = "/promo/initialize/nonua";
 inline constexpr char kBraveReferralsActivityPath[] = "/promo/activity";
 
-inline constexpr char kBraveSafeBrowsing2Proxy[] = "safebrowsing2.brave.com";
-inline constexpr char kBraveSafeBrowsingSslProxy[] = "sb-ssl.brave.com";
-inline constexpr char kBraveRedirectorProxy[] = "redirector.brave.com";
-inline constexpr char kBraveClients4Proxy[] = "clients4.brave.com";
-inline constexpr char kBraveStaticProxy[] = "static1.brave.com";
+inline constexpr char kBraveSafeBrowsing2Proxy[] = "safebrowsing2.tau-browser.ru";
+inline constexpr char kBraveSafeBrowsingSslProxy[] = "sb-ssl.tau-browser.ru";
+inline constexpr char kBraveRedirectorProxy[] = "redirector.tau-browser.ru";
+inline constexpr char kBraveClients4Proxy[] = "clients4.tau-browser.ru";
+inline constexpr char kBraveStaticProxy[] = "static1.tau-browser.ru";
 
 inline constexpr char kAutofillPrefix[] = "https://www.gstatic.com/autofill/*";
 inline constexpr char kClients4Prefix[] = "*://clients4.google.com/";

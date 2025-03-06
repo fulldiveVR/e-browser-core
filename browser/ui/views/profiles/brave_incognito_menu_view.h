@@ -29,8 +29,6 @@ class BraveIncognitoMenuView : public IncognitoMenuView {
   // Button actions.
   void OnExitButtonClicked() override;
 
-  void AddTorButton();
-  void OnTorProfileButtonClicked();
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_PROFILES_BRAVE_INCOGNITO_MENU_VIEW_H_

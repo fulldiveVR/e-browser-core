@@ -41,7 +41,7 @@
 
 namespace {
 constexpr char kURLLearnMoreBraveSearchLeo[] =
-    "https://support.brave.com/hc/en-us/articles/"
+    "https://support.tau-browser.ru/hc/en-us/articles/"
     "27586048343309-How-does-Leo-get-current-information";
 
 // Implments the interface to calls from the UI to the browser

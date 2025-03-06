@@ -37,8 +37,8 @@ const LIST_JS = [
 ]
 
 const LIST_ADS = [
-  { url: 'ads.brave.com' },
-  { url: 'ads2.brave.com' }
+  { url: 'ads.tau-browser.ru' },
+  { url: 'ads2.tau-browser.ru' }
 ]
 
 export default {
@@ -54,7 +54,7 @@ export default {
       // mock data
       const store = {
         siteBlockInfo: {
-          host: text('Host name', 'brave.com'),
+          host: text('Host name', 'tau-browser.ru'),
           totalBlockedResources: (LIST_ADS.length + LIST_JS.length),
           isBraveShieldsEnabled: boolean('Enable Shields', true),
           isBraveShieldsManaged: boolean('Shields Managed', false),
@@ -63,7 +63,7 @@ export default {
           allowedJsList: LIST_JS,
           httpRedirectsList: [],
           fingerprintsList: [],
-          faviconUrl: { url: 'https://brave.com/static-assets/images/brave-favicon.png' },
+          faviconUrl: { url: 'https://tau-browser.ru/static-assets/images/brave-favicon.png' },
           invokedWebcompatList: []
         },
         siteSettings: {

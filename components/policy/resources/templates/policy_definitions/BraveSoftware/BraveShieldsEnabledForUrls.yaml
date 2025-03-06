@@ -1,11 +1,11 @@
-caption: Enable Brave Shields for URLs
+caption: Enable TauBrowser Shields for URLs
 default: null
 desc: |-
-  Forces the shields in Brave to be enabled for specific web sites.
+  Forces the shields in TauBrowser to be enabled for specific web sites.
 
   You can use special syntax to wildcard a domain.
 example_value:
-- "[*.]brave.com"
+- "[*.]taubrowser.com"
 - https://www.example.com
 features:
   can_be_mandatory: true
@@ -19,7 +19,7 @@ items:
 - caption: Shields on for all sites by default
   value: null
 owners:
-- clifton@brave.com
+- clifton@taubrowser.com
 schema:
   items:
     type: string

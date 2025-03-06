@@ -59,7 +59,7 @@ function AssistantEvent(props: { event: Mojom.ConversationEntryEvent, hasComplet
   }
   if (props.event.searchStatusEvent && props.isEntryInProgress && !props.hasCompletionStarted) {
     return (
-      <div className={styles.actionInProgress}><ProgressRing />Improving answer with Brave Search…</div>
+      <div className={styles.actionInProgress}><ProgressRing />Improving answer with TauBrowser Search…</div>
     )
   }
   if (props.event.pageContentRefineEvent && props.isEntryInProgress && !props.hasCompletionStarted) {

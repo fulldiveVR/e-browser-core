@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the Brave AI product">
-    Leo AI
+  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the TauBrowser AI product">
+    TauBrowser Chat
   </message>
-  <message name="IDS_CHAT_UI_PWA_TITLE" translateable="false" desc="Title for the Brave AI product when installed">
-    Brave Leo AI
+  <message name="IDS_CHAT_UI_PWA_TITLE" translateable="false" desc="Title for the TauBrowser AI product when installed">
+    TauBrowser Chat
   </message>
   <message name="IDS_CHAT_UI_SUMMARIZE_FAILED_LABEL" desc="Label for when summarization is not possible">
     The summarizer feature is currently available only for select articles and other long-form web pages.
@@ -16,16 +16,16 @@
     Summarize
   </message>
   <message name="IDS_CHAT_UI_ABOUT_TITLE" desc="A concise title that summarizes the purpose of AIChat">
-    About Leo
+    About TauBrowser Chat
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION" desc="Outlining the functioning of AIChat (paragraph 1 of 3)">
-    Brave Leo is a private AI smart assistant that enhances your use of the Internet. Leo is free to use with limited access. Brave Leo Premium offers more models, higher limits and gives subscribers early access to new features. The default model will change from time to time. See the <ph name="LINK_BEFORE">$1</ph>Brave Help Center<ph name="LINK_AFTER">$2</ph> for more details.
+    TauBrowser Chat is a private AI smart assistant that enhances your use of the Internet. TauBrowser Chat is free to use with limited access. TauBrowser Chat Premium offers more models, higher limits and gives subscribers early access to new features. The default model will change from time to time. See the <ph name="LINK_BEFORE">$1</ph>TauBrowser Help Center<ph name="LINK_AFTER">$2</ph> for more details.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_2" desc="Outlining the functioning of AIChat (paragraph 2 of 3)">
-    By default, when you ask Leo a question it may send and use the content of the web page you are viewing or any text you highlight on a page to Brave Leo to provide a response. The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. Leo uses data from Brave Search to improve response quality. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust Leo’s options in Settings any time. Go to Settings > Leo.
+    By default, when you ask TauBrowser Chat a question it may send and use the content of the web page you are viewing or any text you highlight on a page to TauBrowser Chat to provide a response. The accuracy of responses is not guaranteed, and may include inaccurate, misleading, or false information. TauBrowser Chat uses data from TauBrowser Search to improve response quality. Don't submit sensitive or private info, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust TauBrowser Chat’s options in Settings any time. Go to Settings > TauBrowser Chat.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_3" desc="Outlining the functioning of AIChat (paragraph 3 of 3)">
-    Leo does not collect identifiers such as your IP address that can be linked to you. No data is used to train the AI models and no personal data is retained by the AI models (except for Anthropic that holds data for 30 days before deleting it). See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">$2</ph> for more information.
+    TauBrowser Chat does not collect identifiers such as your IP address that can be linked to you. No data is used to train the AI models and no personal data is retained by the AI models (except for Anthropic that holds data for 30 days before deleting it). See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">$2</ph> for more information.
   </message>
   <message name="IDS_CHAT_UI_INITIAL_PLACEHOLDER_LABEL" desc="Placeholder text for the initial input box on a new chat">
     How can I help you today?
@@ -43,13 +43,13 @@
     Summarize this page
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_WARNING" desc="Description about page content being sent to a remote LLM">
-     Disconnect to stop sending this page content to Leo, and start a new conversation
+     Disconnect to stop sending this page content to TauBrowser Chat, and start a new conversation
   </message>
   <message name="IDS_CUSTOM_MODEL_ENDPOINT_INVALID_ERROR" desc="An error presented when the model endpoint is invalid">
     This model has an invalid endpoint. Please check your configuration and try again.
   </message>
   <message name="IDS_CHAT_UI_ERROR_NETWORK" desc="An error presented when there is a network issue in the UI">
-     There was a network issue connecting to Leo, check your connection and try again.
+     There was a network issue connecting to TauBrowser Chat, check your connection and try again.
   </message>
   <message name="IDS_CHAT_UI_ERROR_RATE_LIMIT" desc="An error presented when the user has exhausted the API request limit">
     You've reached the premium rate limit. Please try again in a few hours.
@@ -70,22 +70,22 @@
      Configure
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the default model">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Llama 3.1 8B, a model created by Meta to be performant and applicable to many use cases. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm a fully hosted AI assistant by TauBrowser. I'm powered by Llama 3.1 8B, a model created by Meta to be performant and applicable to many use cases. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN" desc="AI Chat intro message for the qwen model">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Qwen 14B, a model created by Alibaba Cloud to be performant and applicable to many use cases. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm a fully hosted AI assistant by TauBrowser. I'm powered by Qwen 14B, a model created by Alibaba Cloud to be performant and applicable to many use cases. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_EXPANDED" desc="AI Chat intro message for the expanded model">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm a fully hosted AI assistant by TauBrowser. I'm powered by Mixtral 8x7B, a model created by Mistral AI to handle advanced tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm proxied by TauBrowser and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_HAIKU" desc="AI Chat intro message for the Claude Haiku model">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm proxied by TauBrowser and powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_LEO_CLAUDE_SONNET" desc="AI Chat intro message for the Claude Sonnet model">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    Hi, I'm TauBrowser Chat. I'm proxied by TauBrowser and powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_MODEL_NAME_SYNTAX" desc="Sentence structure for model name">
     <ph name="MODEL_NAME">$1<ex>llama2-13b</ex></ph> by <ph name="COMPANY_NAME">$2<ex>Meta</ex></ph>
@@ -127,7 +127,7 @@
      Response rate limit reached
   </message>
   <message name="IDS_CHAT_UI_RATE_LIMIT_REACHED_DESC" desc="A description to unlock premium features">
-    You've reached the rate limit for Leo. Unlock a higher response rate by subscribing to Premium, or try again soon.
+    You've reached the rate limit for TauBrowser Chat. Unlock a higher response rate by subscribing to Premium, or try again soon.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_1" desc="A premium feature">
     Explore different AI models
@@ -141,8 +141,8 @@
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_4" desc="A premium feature">
     Chat for longer
   </message>
-  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for Brave premium products">
-     Leo Premium
+  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for TauBrowser premium products">
+     TauBrowser Chat Premium
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_PRICING" desc="Price label to subscribe for Premium model">
     USD $ <ph name="PRICE_VALUE">$1<ex>14.99</ex></ph> /month
@@ -166,7 +166,7 @@
     Switch to the free model
   </message>
   <message name="IDS_CHAT_UI_UNLOCK_PREMIUM_TITLE" desc="A heading on prompt premium suggestion UI">
-    Unleash Leo's full powers with Premium:
+    Unleash TauBrowser Chat's full powers with Premium:
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_1_DESC" desc="A premium feature that allows access to various models">
     Priority access to powerful models with different skills.
@@ -181,7 +181,7 @@
     Get higher rate limits for longer conversations.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_DESCRIPTION" desc="Warning message when AI Chat Premium authentication is expired">
-    Your Brave account session has expired. Please visit your account page to refresh, then come back to use premium features.
+    Your TauBrowser account session has expired. Please visit your account page to refresh, then come back to use premium features.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_ACTION" desc="Action to take when AI Chat Premium authentication is expired">
     Refresh
@@ -211,7 +211,7 @@
     Sends rating, conversation, model, language, version, and premium status
   </message>
   <message name="IDS_CHAT_UI_PROVIDE_FEEDBACK_TITLE" desc="Title for feedback provision section">
-    Provide Brave AI Feedback
+    Provide TauBrowser AI Feedback
   </message>
   <message name="IDS_CHAT_UI_SELECT_FEEDBACK_TOPIC" desc="Prompt to select feedback topic">
     Select your feedback topic
@@ -223,7 +223,7 @@
     Provide feedback here
   </message>
   <message name="IDS_CHAT_UI_FEEDBACK_PREMIUM_NOTE" desc="Note about the benefits of a premium subscription">
-    Leo Premium provides access to an expanded set of language models for even greater answer nuance. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
+    TauBrowser Chat Premium provides access to an expanded set of language models for even greater answer nuance. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">$2</ph>
   </message>
   <message name="IDS_CHAT_UI_SUBMIT_BUTTON_LABEL" desc="Button label to submit data/form">
     Submit
@@ -274,7 +274,7 @@
     Your feedback could not be submitted, please check network connection and try again
   </message>
   <message name="IDS_CHAT_UI_ERROR_CONTEXT_LIMIT_REACHING" desc="An error message when the user's chat history is reaching to maximum threshold">
-    This conversation is long and Leo may start forgetting things soon. You can get longer conversations by switching to a premium model, or you can clear the chat to reset it.
+    This conversation is long and TauBrowser Chat may start forgetting things soon. You can get longer conversations by switching to a premium model, or you can clear the chat to reset it.
   </message>
   <message name="IDS_CHAT_UI_CLEAR_CHAT_BUTTON_LABEL" desc="A button label for clearing chat history">
     Clear conversation
@@ -301,7 +301,7 @@
     Show details
   </message>
   <message name="IDS_CHAT_UI_SEND_CHAT_BUTTON_LABEL" desc="A button label for sending a chat message">
-    Send message to Leo
+    Send message to TauBrowser Chat
   </message>
   <message name="IDS_CHAT_UI_STOP_GENERATION_BUTTON_LABEL" desc="A button label for stopping generation">
     Stop answering
@@ -310,19 +310,19 @@
     Got it
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_TOO_LONG_WARNING" desc="A warning issued when the user is trying to summarize a long content page">
-    The page is too long for Leo. Some context could be missing from the conversation. Leo was able to read <ph name="PERCENTAGE">$1<ex>75.5%</ex></ph> of the page's contents.
+    The page is too long for TauBrowser Chat. Some context could be missing from the conversation. TauBrowser Chat was able to read <ph name="PERCENTAGE">$1<ex>75.5%</ex></ph> of the page's contents.
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_REFINED_WARNING" desc="A warning issued when the page content has been refined">
-    The page content has been refined through extracting the most relevant information from the page because it was too long for Leo.
+    The page content has been refined through extracting the most relevant information from the page because it was too long for TauBrowser Chat.
   </message>
   <message name="IDS_CHAT_UI_PAGE_CONTENT_REFINED_IN_PROGRESS" desc="An indicator to show page content refined is in progress">
     Finding the relevant parts of the web page...
   </message>
   <message name="IDS_CHAT_UI_CONVERSATION_END_ERROR" desc="An error issued when the user cannot continue chatting">
-    This conversation is too long and cannot continue. There may be other models available with which Leo is capable of maintaining accuracy for longer conversations.
+    This conversation is too long and cannot continue. There may be other models available with which TauBrowser Chat is capable of maintaining accuracy for longer conversations.
   </message>
-  <message name="IDS_CHAT_UI_SEARCH_IN_PROGRESS" desc="Status to indicate that AI response is being enhaced with Brave Search">
-    Improving your answer with Brave Search…
+  <message name="IDS_CHAT_UI_SEARCH_IN_PROGRESS" desc="Status to indicate that AI response is being enhaced with TauBrowser Search">
+    Improving your answer with TauBrowser Search…
   </message>
   <message name="IDS_CHAT_UI_SEARCH_QUERIES" desc="AI Response status to indicate that search queries were used to enhance the response">
     Improved answer searching for <ph name="SEARCH_TERMS">$1<ex>"my first search engine query", "my second search engine query"</ex></ph>.
@@ -346,13 +346,13 @@
     Attachments
   </message>
   <message name="IDS_CHAT_UI_ATTACHMENTS_DESCRIPTION" desc="Description for the attachments section">
-    Add your browser tabs to give Leo more context for the conversation
+    Add your browser tabs to give TauBrowser Chat more context for the conversation
   </message>
   <message name="IDS_CHAT_UI_ATTACHMENTS_BROWSER_TABS_TITLE" desc="Title for the browser tabs section">
     Browser tabs
   </message>
   <message name="IDS_CHAT_UI_NOTICE_CONVERSATION_HISTORY_BODY" desc="Main text for the notice about conversation history">
-    Leo will now remember your conversations so you can go back to them. They are stored encrypted on your device, and you can delete them any time.
+    TauBrowser Chat will now remember your conversations so you can go back to them. They are stored encrypted on your device, and you can delete them any time.
   </message>
   <message name="IDS_CHAT_UI_NOTICE_CONVERSATION_HISTORY_EMPTY" desc="Main text for a notice that the conversation list is empty">
     Your conversation history will appear here once you start a conversation.
@@ -361,7 +361,7 @@
     History is disabled
   </message>
   <message name="IDS_CHAT_UI_NOTICE_CONVERSATION_HISTORY_DISABLED_PREF" desc="Main text for a notice that the conversation history preference is disabled">
-    In order to view your previous conversations with Leo, you need to enable conversation history.
+    In order to view your previous conversations with TauBrowser Chat, you need to enable conversation history.
   </message>
   <message name="IDS_CHAT_UI_NOTICE_CONVERSATION_HISTORY_DISABLED_PREF_BUTTON" desc="Button label to enable conversation history preference">
     Enable
@@ -385,13 +385,13 @@
       General purpose chat, coding, and more
   </message>
   <message name="IDS_CHAT_UI_LEO_SETTINGS_TOOLTIP_LABEL" desc="A label for leo settings tooltip">
-    Leo settings
+    TauBrowser Chat settings
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_TITLE" desc="A title for welcome guide component presented for first time users">
-    Hi, I'm Leo!
+    Hi, I'm TauBrowser Chat!
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users">
-    An AI-powered intelligent assistant, built right into Brave.
+    An AI-powered intelligent assistant, built right into TauBrowser.
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SITE_HELP_CARD_TITLE" desc="This is the title for a user prompt card designed to offer assistance with website-related tasks.">
     Need help with a website?
@@ -409,22 +409,22 @@
     Ask me anything! We can talk about any topic you want. I'm always learning and improving to provide better answers.
   </message>
   <message name="IDS_CHAT_UI_PRIVACY_TITLE" desc="Title for privacy agreement modal.">
-    Chat Privately with Brave Leo
+    Chat Privately with TauBrowser Chat
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_LABEL" desc="Label for toggle that enabled/disabled contextual conversations.">
     Shape answers based on the page's contents
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_TOOLTIP_INFO" desc="Info tooltip for contextual toggle">
-    Toggle on to ask about this page. Its content will be sent to Brave Leo along with your messages.
+    Toggle on to ask about this page. Its content will be sent to TauBrowser Chat along with your messages.
   </message>
   <message name="IDS_CHAT_UI_SUBSCRIPTION_POLICY_INFO" desc="An info text that is shown below various subcription prices">
     All subscriptions are auto-renewed but can be cancelled at any time before renewal.
   </message>
   <message name="IDS_CHAT_UI_SEND_SITE_HOSTNAME_LABEL" desc="A checkbox label to opt-in or out for sending current tab's url">
-    Share the hostname of the page you are on (<ph name="HOST_NAME">$1<ex>www.example.com</ex></ph>) to help us make Leo better.
+    Share the hostname of the page you are on (<ph name="HOST_NAME">$1<ex>www.example.com</ex></ph>) to help us make TauBrowser Chat better.
   </message>
-  <message name="IDS_AI_CHAT_CONTEXT_LEO_TOOLS" desc="The text label of Leo tools submenu in the context menu">
-    Leo AI tools
+  <message name="IDS_AI_CHAT_CONTEXT_LEO_TOOLS" desc="The text label of TauBrowser Chat tools submenu in the context menu">
+    TauBrowser Chat tools
   </message>
   <message name="IDS_AI_CHAT_CONTEXT_QUICK_ACTIONS" desc="The title of the context menu section for AI quick actions">
     Quick actions
@@ -492,10 +492,10 @@
   <message name="IDS_AI_CHAT_MAYBE_LATER_LABEL" desc="The button label that dismisses an error prompt">
     Maybe later
   </message>
-  <message name="IDS_AI_CHAT_LEO_TOOLS_BUTTON_LABEL" desc="The button label for Leo's slash tools">
-    Leo tools
+  <message name="IDS_AI_CHAT_LEO_TOOLS_BUTTON_LABEL" desc="The button label for TauBrowser Chat's slash tools">
+    TauBrowser Chat tools
   </message>
-  <message name="IDS_AI_CHAT_USE_MICROPHONE_BUTTON_LABEL" desc="The button label for Leo's microphone feature">
+  <message name="IDS_AI_CHAT_USE_MICROPHONE_BUTTON_LABEL" desc="The button label for TauBrowser Chat's microphone feature">
     Use microphone
   </message>
   <message name="IDS_AI_CHAT_MENU_TITLE_CUSTOM_MODELS" desc="The menu section label for custom models added by the user">

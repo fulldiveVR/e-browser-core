@@ -17,7 +17,7 @@
 namespace {
 
 constexpr char kChromeSchema[] = "chrome://";
-constexpr char kBraveSchema[] = "brave://";
+constexpr char kBraveSchema[] = "tau://";
 }  // namespace
 
 namespace TemplateURLStarterPackData {

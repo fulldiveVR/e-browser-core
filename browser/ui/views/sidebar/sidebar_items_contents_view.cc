@@ -153,14 +153,6 @@ void SidebarItemsContentsView::UpdateAllBuiltInItemsViewState() {
 
     // If browser window has tab that loads brave talk, brave talk panel icon
     // will use colored one for normal state also.
-    if (item.built_in_item_type ==
-        sidebar::SidebarItem::BuiltInItemType::kBraveTalk) {
-      UpdateItemViewStateAt(
-          item_index,
-          browser_->sidebar_controller()->DoesBrowserHaveOpenedTabForItem(
-              item));
-      continue;
-    }
 
     UpdateItemViewStateAt(item_index, item_index == active_index);
   }
@@ -548,14 +540,12 @@ ui::ImageModel SidebarItemsContentsView::GetImageForBuiltInItems(
   };
 
   switch (type) {
-    case sidebar::SidebarItem::BuiltInItemType::kWallet:
-      return get_image_model(kLeoProductBraveWalletIcon, state);
-    case sidebar::SidebarItem::BuiltInItemType::kBraveTalk:
-      return get_image_model(kLeoProductBraveTalkIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kBookmarks:
       return get_image_model(kLeoProductBookmarksIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kReadingList:
       return get_image_model(kLeoReadingListIcon, state);
+    case sidebar::SidebarItem::BuiltInItemType::kAiWizeApps:
+      return get_image_model(kLeoAiwizeAppsIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kHistory:
       return get_image_model(kLeoHistoryIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kPlaylist:

@@ -34,16 +34,16 @@ _UPDATE_HOSTS = [
 # representative. It makes sense to remove them some tests (i.e. jetstream)
 # and leave in others (i.e. system_health).
 _SERVICE_HOSTS = [
-    'redirector.brave.com',
-    'geo.ads.brave.com',
-    'static.ads.brave.com',
-    'rewards.brave.com',
-    'api.rewards.brave.com',
-    'grant.rewards.brave.com',
-    'collector.bsg.brave.com',
-    'star-randsrv.bsg.brave.com',
-    'p3a-json.brave.com',
-    'brave-today-cdn.brave.com',
+    'redirector.tau-browser.ru',
+    'geo.ads.tau-browser.ru',
+    'static.ads.tau-browser.ru',
+    'rewards.tau-browser.ru',
+    'api.rewards.tau-browser.ru',
+    'grant.rewards.tau-browser.ru',
+    'collector.bsg.tau-browser.ru',
+    'star-randsrv.bsg.tau-browser.ru',
+    'p3a-json.tau-browser.ru',
+    'brave-today-cdn.tau-browser.ru',
     'update.googleapis.com',
     'content-autofill.googleapis.com',
 ]

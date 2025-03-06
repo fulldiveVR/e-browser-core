@@ -67,7 +67,7 @@ constexpr char kGeolocationPermissionLearnMoreURL[] =
     "allow-apps-to-detect-the-location-of-your-mac-mh35873/mac";
 #else
     // Not used now. Set proper link when detailed bubble is enabled on linux.
-    "https://www.brave.com/";
+    "https://www.tau-browser.ru/";
 #endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)

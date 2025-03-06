@@ -21,14 +21,11 @@
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
-#include "brave/components/brave_rewards/core/rewards_util.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/commander/common/buildflags/buildflags.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
@@ -51,9 +48,6 @@
 #include "brave/components/brave_vpn/common/pref_names.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/common/features.h"
-#endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST_WEBUI)
 #include "brave/browser/playlist/playlist_service_factory.h"
@@ -64,9 +58,6 @@
 #include "brave/browser/ui/commander/commander_service.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/browser/tor/tor_profile_service_factory.h"
-#endif
 
 namespace {
 
@@ -211,20 +202,11 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   if (!is_guest_session) {
     // If Rewards is not supported due to OFAC sanctions we still want to show
     // the menu item.
-    if (brave_rewards::IsSupported(browser_->profile()->GetPrefs())) {
-      UpdateCommandForBraveRewards();
-    }
-    if (brave_wallet::IsAllowed(browser_->profile()->GetPrefs())) {
-      UpdateCommandForBraveWallet();
-    }
     if (syncer::IsSyncAllowedByFlag()) {
       UpdateCommandForBraveSync();
     }
   }
   UpdateCommandForWebcompatReporter();
-#if BUILDFLAG(ENABLE_TOR)
-  UpdateCommandForTor();
-#endif
   UpdateCommandForSidebar();
   UpdateCommandForBraveVPN();
   UpdateCommandForPlaylist();
@@ -264,11 +246,6 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   UpdateCommandEnabled(IDC_COPY_CLEAN_LINK, true);
   UpdateCommandEnabled(IDC_TOGGLE_TAB_MUTE, true);
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  if (base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature)) {
-    UpdateCommandEnabled(IDC_SPEEDREADER_ICON_ONCLICK, true);
-  }
-#endif
 
 #if BUILDFLAG(ENABLE_COMMANDER)
   UpdateCommandEnabled(IDC_COMMANDER, commander::IsEnabled());
@@ -290,7 +267,6 @@ void BraveBrowserCommandController::InitBraveCommandState() {
       IDC_CONFIGURE_SHORTCUTS,
       base::FeatureList::IsEnabled(commands::features::kBraveCommands));
 
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_TALK, true);
   UpdateCommandEnabled(IDC_TOGGLE_SHIELDS, true);
   UpdateCommandEnabled(IDC_TOGGLE_JAVASCRIPT, true);
 
@@ -323,24 +299,11 @@ void BraveBrowserCommandController::InitBraveCommandState() {
   }
 }
 
-void BraveBrowserCommandController::UpdateCommandForBraveRewards() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_REWARDS, true);
-}
 
 void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
   UpdateCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER, true);
 }
 
-#if BUILDFLAG(ENABLE_TOR)
-void BraveBrowserCommandController::UpdateCommandForTor() {
-  // Enable new tor connection only for tor profile.
-  UpdateCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE,
-                       browser_->profile()->IsTor());
-  UpdateCommandEnabled(
-      IDC_NEW_OFFTHERECORD_WINDOW_TOR,
-      !TorProfileServiceFactory::IsTorDisabled(browser_->profile()));
-}
-#endif
 
 void BraveBrowserCommandController::UpdateCommandForSidebar() {
   if (sidebar::CanUseSidebar(&*browser_)) {
@@ -481,11 +444,6 @@ void BraveBrowserCommandController::UpdateCommandForBraveSync() {
   UpdateCommandEnabled(IDC_SHOW_BRAVE_SYNC, true);
 }
 
-void BraveBrowserCommandController::UpdateCommandForBraveWallet() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_WALLET, true);
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_WALLET_PANEL, true);
-  UpdateCommandEnabled(IDC_CLOSE_BRAVE_WALLET_PANEL, true);
-}
 
 bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
     int id,
@@ -518,38 +476,17 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       }
       NewIncognitoWindow(browser_->profile()->GetOriginalProfile());
       break;
-    case IDC_SHOW_BRAVE_REWARDS:
-      brave::ShowBraveRewards(&*browser_);
-      break;
     case IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER:
       brave::ShowWebcompatReporter(&*browser_);
       break;
-    case IDC_NEW_OFFTHERECORD_WINDOW_TOR:
-      brave::NewOffTheRecordWindowTor(&*browser_);
-      break;
-    case IDC_NEW_TOR_CONNECTION_FOR_SITE:
-      brave::NewTorConnectionForSite(&*browser_);
-      break;
     case IDC_SHOW_BRAVE_SYNC:
       brave::ShowSync(&*browser_);
-      break;
-    case IDC_SHOW_BRAVE_WALLET:
-      brave::ShowBraveWallet(&*browser_);
       break;
     case IDC_TOGGLE_AI_CHAT:
       brave::ToggleAIChat(&*browser_);
       break;
     case IDC_OPEN_FULL_PAGE_CHAT:
       brave::ShowFullpageChat(&*browser_);
-      break;
-    case IDC_SPEEDREADER_ICON_ONCLICK:
-      brave::MaybeDistillAndShowSpeedreaderBubble(&*browser_);
-      break;
-    case IDC_SHOW_BRAVE_WALLET_PANEL:
-      brave::ShowWalletBubble(&*browser_);
-      break;
-    case IDC_CLOSE_BRAVE_WALLET_PANEL:
-      brave::CloseWalletBubble(&*browser_);
       break;
     case IDC_SHOW_BRAVE_VPN_PANEL:
       brave::ShowBraveVPNBubble(&*browser_);
@@ -593,9 +530,6 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       break;
     case IDC_CONFIGURE_SHORTCUTS:
       brave::ShowShortcutsPage(&*browser_);
-      break;
-    case IDC_SHOW_BRAVE_TALK:
-      brave::ShowBraveTalk(&*browser_);
       break;
     case IDC_TOGGLE_SHIELDS:
       brave::ToggleShieldsEnabled(&*browser_);

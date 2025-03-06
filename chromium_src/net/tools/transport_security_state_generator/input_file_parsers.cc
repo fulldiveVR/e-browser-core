@@ -17,7 +17,7 @@ namespace {
 constexpr std::string_view kBravePinsJson = R"brave_pins_json({
   "pinsets": [
     {
-      "name": "brave",
+      "name": "tau",
       "static_spki_hashes": [
         "AmazonRootCA1",
         "AmazonRootCA2",
@@ -37,99 +37,99 @@ constexpr std::string_view kBravePinsJson = R"brave_pins_json({
   ],
   "entries": [
     // Brave
-    { "name": "adblock-data.s3.brave.com", "pins": "brave"},
-    { "name": "ai-chat.bsg.brave.com", "pins": "brave"},
-    { "name": "brave-core-ext.s3.brave.com", "pins": "brave"},
-    { "name": "brave-today-cdn.brave.com", "pins": "brave"},
-    { "name": "clients4.brave.com", "pins": "brave"},
-    { "name": "componentupdater.brave.com", "pins": "brave"},
-    { "name": "crxdownload.brave.com", "pins": "brave"},
-    { "name": "devtools.brave.com", "pins": "brave"},
-    { "name": "dict.brave.com", "pins": "brave"},
-    { "name": "extensionupdater.brave.com", "pins": "brave"},
-    { "name": "feedback.brave.com", "pins": "brave"},
-    { "name": "gaia.brave.com", "pins": "brave"},
-    { "name": "go-updater.brave.com", "pins": "brave"},
-    { "name": "mobile-data.s3.brave.com", "pins": "brave"},
-    { "name": "pcdn.brave.com", "pins": "brave"},
-    { "name": "redirector.brave.com", "pins": "brave"},
-    { "name": "safebrowsing.brave.com", "pins": "brave"},
-    { "name": "safebrowsing2.brave.com", "pins": "brave"},
-    { "name": "sb-ssl.brave.com", "pins": "brave"},
-    { "name": "static.brave.com", "pins": "brave"},
-    { "name": "static1.brave.com", "pins": "brave"},
-    { "name": "sync-v2.brave.com", "pins": "brave"},
-    { "name": "sync-v2.brave.software", "pins": "brave"},
-    { "name": "sync-v2.bravesoftware.com", "pins": "brave"},
-    { "name": "tor.bravesoftware.com", "pins": "brave"},
-    { "name": "translate.brave.com", "pins": "brave"},
-    { "name": "translate-static.brave.com", "pins": "brave"},
-    { "name": "variations.brave.com", "pins": "brave"},
+    { "name": "adblock-data.s3.tau-browser.ru", "pins": "tau"},
+    { "name": "ai-chat.bsg.tau-browser.ru", "pins": "tau"},
+    { "name": "brave-core-ext.s3.tau-browser.ru", "pins": "tau"},
+    { "name": "brave-today-cdn.tau-browser.ru", "pins": "tau"},
+    { "name": "clients4.tau-browser.ru", "pins": "tau"},
+    { "name": "componentupdater.tau-browser.ru", "pins": "tau"},
+    { "name": "crxdownload.tau-browser.ru", "pins": "tau"},
+    { "name": "devtools.tau-browser.ru", "pins": "tau"},
+    { "name": "dict.tau-browser.ru", "pins": "tau"},
+    { "name": "extensionupdater.tau-browser.ru", "pins": "tau"},
+    { "name": "feedback.tau-browser.ru", "pins": "tau"},
+    { "name": "gaia.tau-browser.ru", "pins": "tau"},
+    { "name": "go-updater.tau-browser.ru", "pins": "tau"},
+    { "name": "mobile-data.s3.tau-browser.ru", "pins": "tau"},
+    { "name": "pcdn.tau-browser.ru", "pins": "tau"},
+    { "name": "redirector.tau-browser.ru", "pins": "tau"},
+    { "name": "safebrowsing.tau-browser.ru", "pins": "tau"},
+    { "name": "safebrowsing2.tau-browser.ru", "pins": "tau"},
+    { "name": "sb-ssl.tau-browser.ru", "pins": "tau"},
+    { "name": "static.tau-browser.ru", "pins": "tau"},
+    { "name": "static1.tau-browser.ru", "pins": "tau"},
+    { "name": "sync-v2.tau-browser.ru", "pins": "tau"},
+    { "name": "sync-v2.brave.software", "pins": "tau"},
+    { "name": "sync-v2.bravesoftware.com", "pins": "tau"},
+    { "name": "tor.bravesoftware.com", "pins": "tau"},
+    { "name": "translate.tau-browser.ru", "pins": "tau"},
+    { "name": "translate-static.tau-browser.ru", "pins": "tau"},
+    { "name": "variations.tau-browser.ru", "pins": "tau"},
 
     // P2A/P3A
-    { "name": "collector.bsg.brave.com", "pins": "brave"},
-    { "name": "p2a.brave.com", "pins": "brave"},
-    { "name": "p2a-json.brave.com", "pins": "brave"},
-    { "name": "p3a.brave.com", "pins": "brave"},
-    { "name": "p3a-creative.brave.com", "pins": "brave"},
-    { "name": "p3a-json.brave.com", "pins": "brave"},
-    { "name": "p3a.bravesoftware.com", "pins": "brave"},
-    { "name": "p3a-dev.bravesoftware.com", "pins": "brave"},
-    { "name": "star-randsrv.bsg.brave.com", "pins": "brave"},
+    { "name": "collector.bsg.tau-browser.ru", "pins": "tau"},
+    { "name": "p2a.tau-browser.ru", "pins": "tau"},
+    { "name": "p2a-json.tau-browser.ru", "pins": "tau"},
+    { "name": "p3a.tau-browser.ru", "pins": "tau"},
+    { "name": "p3a-creative.tau-browser.ru", "pins": "tau"},
+    { "name": "p3a-json.tau-browser.ru", "pins": "tau"},
+    { "name": "p3a.bravesoftware.com", "pins": "tau"},
+    { "name": "p3a-dev.bravesoftware.com", "pins": "tau"},
+    { "name": "star-randsrv.bsg.tau-browser.ru", "pins": "tau"},
 
     // Creators
-    { "name": "creators.basicattentiontoken.org", "pins": "brave"},
-    { "name": "creators.brave.com", "pins": "brave"},
-    { "name": "publishers.basicattentiontoken.org", "pins": "brave"},
-    { "name": "publishers.brave.com", "pins": "brave"},
+    { "name": "creators.basicattentiontoken.org", "pins": "tau"},
+    { "name": "creators.tau-browser.ru", "pins": "tau"},
+    { "name": "publishers.basicattentiontoken.org", "pins": "tau"},
+    { "name": "publishers.tau-browser.ru", "pins": "tau"},
 
     // Wallet
-    { "name": "goerli-infura.brave.com", "pins": "brave"},
-    { "name": "sepolia-infura.brave.com", "pins": "brave"},
-    { "name": "mainnet-infura.brave.com", "pins": "brave"},
-    { "name": "mainnet-beta-solana.brave.com", "pins": "brave"},
-    { "name": "mainnet-polygon.brave.com", "pins": "brave"},
+    { "name": "goerli-infura.tau-browser.ru", "pins": "tau"},
+    { "name": "sepolia-infura.tau-browser.ru", "pins": "tau"},
+    { "name": "mainnet-infura.tau-browser.ru", "pins": "tau"},
+    { "name": "mainnet-beta-solana.tau-browser.ru", "pins": "tau"},
+    { "name": "mainnet-polygon.tau-browser.ru", "pins": "tau"},
 
     // Rewards
-    { "name": "anonymous.ads.brave.com", "pins": "brave"},
-    { "name": "anonymous.ads.bravesoftware.com", "pins": "brave"},
-    { "name": "api.rewards.brave.com", "pins": "brave"},
-    { "name": "api.rewards.bravesoftware.com", "pins": "brave"},
-    { "name": "api.rewards.brave.software", "pins": "brave"},
-    { "name": "geo.ads.brave.com", "pins": "brave"},
-    { "name": "geo.ads.bravesoftware.com", "pins": "brave"},
-    { "name": "grant.rewards.brave.com", "pins": "brave"},
-    { "name": "grant.rewards.bravesoftware.com", "pins": "brave"},
-    { "name": "grant.rewards.brave.software", "pins": "brave"},
-    { "name": "mywallet.ads.brave.com", "pins": "brave"},
-    { "name": "mywallet.ads.bravesoftware.com", "pins": "brave"},
-    { "name": "payment.rewards.brave.com", "pins": "brave"},
-    { "name": "payment.rewards.bravesoftware.com", "pins": "brave"},
-    { "name": "payment.rewards.brave.software", "pins": "brave"},
-    { "name": "rewards.brave.com", "pins": "brave"},
-    { "name": "search.anonymous.brave.com", "pins": "brave"},
-    { "name": "search.anonymous.bravesoftware.com", "pins": "brave"},
-    { "name": "static.ads.brave.com", "pins": "brave"},
-    { "name": "static.ads.bravesoftware.com", "pins": "brave"},
+    { "name": "anonymous.ads.tau-browser.ru", "pins": "tau"},
+    { "name": "anonymous.ads.bravesoftware.com", "pins": "tau"},
+    { "name": "api.rewards.tau-browser.ru", "pins": "tau"},
+    { "name": "api.rewards.bravesoftware.com", "pins": "tau"},
+    { "name": "api.rewards.brave.software", "pins": "tau"},
+    { "name": "geo.ads.tau-browser.ru", "pins": "tau"},
+    { "name": "geo.ads.bravesoftware.com", "pins": "tau"},
+    { "name": "grant.rewards.tau-browser.ru", "pins": "tau"},
+    { "name": "grant.rewards.bravesoftware.com", "pins": "tau"},
+    { "name": "grant.rewards.brave.software", "pins": "tau"},
+    { "name": "mywallet.ads.tau-browser.ru", "pins": "tau"},
+    { "name": "mywallet.ads.bravesoftware.com", "pins": "tau"},
+    { "name": "payment.rewards.tau-browser.ru", "pins": "tau"},
+    { "name": "payment.rewards.bravesoftware.com", "pins": "tau"},
+    { "name": "payment.rewards.brave.software", "pins": "tau"},
+    { "name": "rewards.tau-browser.ru", "pins": "tau"},
+    { "name": "search.anonymous.tau-browser.ru", "pins": "tau"},
+    { "name": "search.anonymous.bravesoftware.com", "pins": "tau"},
+    { "name": "static.ads.tau-browser.ru", "pins": "tau"},
+    { "name": "static.ads.bravesoftware.com", "pins": "tau"},
 
     // Search
-    { "name": "search.brave.com", "pins": "brave"},
-    { "name": "cdn.search.brave.com", "pins": "brave"},
-    { "name": "fg.search.brave.com", "pins": "brave"},
-    { "name": "imgs.search.brave.com", "pins": "brave"},
-    { "name": "tiles.search.brave.com", "pins": "brave"},
-    { "name": "collector.wdp.brave.com", "pins": "brave"},
-    { "name": "patterns.wdp.brave.com", "pins": "brave"},
-    { "name": "quorum.wdp.brave.com", "pins": "brave"},
-    { "name": "star.wdp.brave.com", "pins": "brave"},
+    { "name": "search.tau-browser.ru", "pins": "tau"},
+    { "name": "cdn.search.tau-browser.ru", "pins": "tau"},
+    { "name": "fg.search.tau-browser.ru", "pins": "tau"},
+    { "name": "imgs.search.tau-browser.ru", "pins": "tau"},
+    { "name": "tiles.search.tau-browser.ru", "pins": "tau"},
+    { "name": "collector.wdp.tau-browser.ru", "pins": "tau"},
+    { "name": "patterns.wdp.tau-browser.ru", "pins": "tau"},
+    { "name": "quorum.wdp.tau-browser.ru", "pins": "tau"},
+    { "name": "star.wdp.tau-browser.ru", "pins": "tau"},
 
     // Premium
-    { "name": "account.brave.com", "pins": "brave"},
-    { "name": "account.bravesoftware.com", "pins": "brave"},
-    { "name": "account.brave.software", "pins": "brave"},
+    { "name": "account.tau-browser.ru", "pins": "tau"},
+    { "name": "account.bravesoftware.com", "pins": "tau"},
+    { "name": "account.brave.software", "pins": "tau"},
 
     // Test page using a CA outside of the pinset (expected to be blocked)
-    { "name": "ssl-pinning.someblog.org", "pins" : "brave"}
+    { "name": "ssl-pinning.someblog.org", "pins" : "tau"}
  ]})brave_pins_json";
 
 constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
@@ -147,104 +147,104 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "usage-ping.brave.com",
+      "name": "usage-ping.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
 
     // Brave
     {
-      "name": "adblock-data.s3.brave.com",
+      "name": "adblock-data.s3.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "ai-chat.bsg.brave.com",
+      "name": "ai-chat.bsg.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "brave-core-ext.s3.brave.com",
+      "name": "brave-core-ext.s3.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "brave-today-cdn.brave.com",
+      "name": "brave-today-cdn.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "clients4.brave.com",
+      "name": "clients4.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "componentupdater.brave.com",
+      "name": "componentupdater.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "crxdownload.brave.com",
+      "name": "crxdownload.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "devtools.brave.com",
+      "name": "devtools.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "dict.brave.com",
+      "name": "dict.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "extensionupdater.brave.com",
+      "name": "extensionupdater.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "feedback.brave.com",
+      "name": "feedback.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "gaia.brave.com",
+      "name": "gaia.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "go-updater.brave.com",
+      "name": "go-updater.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "mobile-data.s3.brave.com",
+      "name": "mobile-data.s3.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "p2a.brave.com",
+      "name": "p2a.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "p2a-json.brave.com",
+      "name": "p2a-json.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "p3a.brave.com",
+      "name": "p3a.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
     {
-      "name": "p3a-creative.brave.com",
+      "name": "p3a-creative.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
     {
-      "name": "p3a-json.brave.com",
+      "name": "p3a-json.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
@@ -259,42 +259,42 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "mode": "force-https"
     },
     {
-      "name": "pcdn.brave.com",
+      "name": "pcdn.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "redirector.brave.com",
+      "name": "redirector.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "safebrowsing.brave.com",
+      "name": "safebrowsing.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "safebrowsing2.brave.com",
+      "name": "safebrowsing2.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "sb-ssl.brave.com",
+      "name": "sb-ssl.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "static.brave.com",
+      "name": "static.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "static1.brave.com",
+      "name": "static1.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "sync-v2.brave.com",
+      "name": "sync-v2.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
@@ -314,17 +314,17 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "translate.brave.com",
+      "name": "translate.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "translate-static.brave.com",
+      "name": "translate-static.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "variations.brave.com",
+      "name": "variations.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -336,7 +336,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "creators.brave.com",
+      "name": "creators.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -346,41 +346,41 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "publishers.brave.com",
+      "name": "publishers.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
 
     // Wallet
     {
-      "name": "goerli-infura.brave.com",
+      "name": "goerli-infura.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "sepolia-infura.brave.com",
+      "name": "sepolia-infura.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "mainnet-infura.brave.com",
+      "name": "mainnet-infura.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "mainnet-beta-solana.brave.com",
+      "name": "mainnet-beta-solana.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "mainnet-polygon.brave.com",
+      "name": "mainnet-polygon.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
 
     // Rewards
     {
-      "name": "anonymous.ads.brave.com",
+      "name": "anonymous.ads.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -390,7 +390,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "api.rewards.brave.com",
+      "name": "api.rewards.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
@@ -405,7 +405,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "mode": "force-https"
     },
     {
-      "name": "geo.ads.brave.com",
+      "name": "geo.ads.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -415,7 +415,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "grant.rewards.brave.com",
+      "name": "grant.rewards.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
@@ -430,7 +430,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "mode": "force-https"
     },
     {
-      "name": "mywallet.ads.brave.com",
+      "name": "mywallet.ads.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -440,7 +440,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "payment.rewards.brave.com",
+      "name": "payment.rewards.tau-browser.ru",
       "policy": "custom",
       "mode": "force-https"
     },
@@ -455,12 +455,12 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "mode": "force-https"
     },
     {
-      "name": "rewards.brave.com",
+      "name": "rewards.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "search.anonymous.brave.com",
+      "name": "search.anonymous.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -470,7 +470,7 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
       "policy": "custom"
     },
     {
-      "name": "static.ads.brave.com",
+      "name": "static.ads.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
@@ -482,54 +482,54 @@ constexpr std::string_view kBraveHstsJson = R"brave_hsts_json({
 
     // Search
     {
-      "name": "search.brave.com",
+      "name": "search.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "cdn.search.brave.com",
+      "name": "cdn.search.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "fg.search.brave.com",
+      "name": "fg.search.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "imgs.search.brave.com",
+      "name": "imgs.search.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "tiles.search.brave.com",
+      "name": "tiles.search.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "collector.wdp.brave.com",
+      "name": "collector.wdp.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "patterns.wdp.brave.com",
+      "name": "patterns.wdp.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "quorum.wdp.brave.com",
+      "name": "quorum.wdp.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
     {
-      "name": "star.wdp.brave.com",
+      "name": "star.wdp.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },
 
     // Premium
     {
-      "name": "account.brave.com",
+      "name": "account.tau-browser.ru",
       "mode": "force-https",
       "policy": "custom"
     },

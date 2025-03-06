@@ -25,9 +25,6 @@
 #include "brave/components/brave_vpn/common/mojom/brave_vpn.mojom.h"  // nogncheck
 #endif
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
 
 namespace brave_news {
 class BraveNewsController;
@@ -49,7 +46,6 @@ class BraveNewTabUI : public ui::MojoWebUIController,
  public:
   BraveNewTabUI(content::WebUI* web_ui,
                 const std::string& name,
-                brave_ads::AdsService* ads_service,
                 PrefService* local_state,
                 p3a::P3AService* p3a_service,
                 ntp_background_images::NTPBackgroundImagesService*
@@ -91,8 +87,6 @@ class BraveNewTabUI : public ui::MojoWebUIController,
   std::unique_ptr<RealboxHandler> realbox_handler_;
   mojo::Receiver<brave_new_tab_page::mojom::PageHandlerFactory>
       page_factory_receiver_;
-  std::unique_ptr<ntp_background_images::NTPSponsoredRichMediaAdEventHandler>
-      rich_media_ad_event_handler_;
 
   WEB_UI_CONTROLLER_TYPE_DECL();
 };

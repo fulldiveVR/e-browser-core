@@ -22,7 +22,6 @@ class BraveVPNButton;
 
 class BraveBookmarkButton;
 class SidePanelButton;
-class WalletButton;
 
 class BraveToolbarView : public ToolbarView,
                          public ProfileAttributesStorage::Observer {
@@ -32,7 +31,6 @@ class BraveToolbarView : public ToolbarView,
   ~BraveToolbarView() override;
 
   BraveBookmarkButton* bookmark_button() const { return bookmark_; }
-  WalletButton* wallet_button() const { return wallet_; }
   SidePanelButton* side_panel_button() const { return side_panel_; }
   AIChatButton* ai_chat_button() const { return ai_chat_button_; }
 
@@ -69,7 +67,6 @@ class BraveToolbarView : public ToolbarView,
                            const std::u16string& profile_name) override;
 
   void UpdateAIChatButtonVisibility();
-  void UpdateWalletButtonVisibility();
 
   views::View* toolbar_divider_for_testing() { return toolbar_divider_; }
 
@@ -77,7 +74,6 @@ class BraveToolbarView : public ToolbarView,
   // Tracks the preference to determine whether bookmark editing is allowed.
   BooleanPrefMember edit_bookmarks_enabled_;
 
-  raw_ptr<WalletButton> wallet_ = nullptr;
   raw_ptr<SidePanelButton> side_panel_ = nullptr;
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -92,8 +88,6 @@ class BraveToolbarView : public ToolbarView,
   BooleanPrefMember show_ai_chat_button_;
   BooleanPrefMember hide_ai_chat_button_by_policy_;
 
-  BooleanPrefMember show_wallet_button_;
-  BooleanPrefMember wallet_private_window_enabled_;
 
   BooleanPrefMember location_bar_is_wide_;
 

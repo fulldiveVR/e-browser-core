@@ -18,7 +18,7 @@ BraveExtensionsBrowserAPIProvider::~BraveExtensionsBrowserAPIProvider() =
 void BraveExtensionsBrowserAPIProvider::RegisterExtensionFunctions(
     ExtensionFunctionRegistry* registry) {
   // Generated APIs from Brave.
-  api::BraveGeneratedFunctionRegistry::RegisterAll(registry);
+  api::TauBrowserGeneratedFunctionRegistry::RegisterAll(registry);
 }
 
 }  // namespace extensions

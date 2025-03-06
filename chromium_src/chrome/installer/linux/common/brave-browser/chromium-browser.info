@@ -6,29 +6,29 @@
 # chromium-browser packages for various platforms.
 
 # Base name of the package.
-PACKAGE="brave-browser"
+PACKAGE="taubrowser-browser"
 
 # Filename of the main executable (for generating launcher scripts, etc.)
-PROGNAME=brave
+PROGNAME=taubrowser
 
 # Base directory for package installation.
-INSTALLDIR=/opt/brave.com/brave
+INSTALLDIR=/opt/tau-browser.ru/taubrowser
 
 # Directory for device policy enrollments.
-ENROLLMENTDIR=/etc/brave/policies/enrollment
+ENROLLMENTDIR=/etc/taubrowser/policies/enrollment
 
 # Display string for desktop menu/icon.
-MENUNAME="Brave Web Browser"
+MENUNAME="TauBrowser Web Browser"
 
 # Brief package description.
-SHORTDESC="The web browser from Brave"
+SHORTDESC="The web browser from TauBrowser"
 
 # Detailed package description.
 FULLDESC="Browse faster by blocking ads and trackers that violate your privacy and cost you time and money."
 
 # Package maintainer information.
-MAINTNAME="Brave Software"
-MAINTMAIL="support@brave.com"
-PRODUCTURL="https://brave.com/"
+MAINTNAME="Tau Technologies"
+MAINTMAIL="support@tau-browser.ru"
+PRODUCTURL="https://tau-browser.ru/"
 VERSION=$(cat $OUTPUTDIR/version | tr -d 'v,')
 VERSIONFULL=$VERSION

@@ -9,7 +9,7 @@
     }
   ],
   "start_url": "/?source=pwa",
-  "id": "chrome://leo-ai/",
+  "id": "chrome://taubrowser-chat/",
   "display": "standalone",
-  "scope": "chrome://leo-ai/"
+  "scope": "chrome://taubrowser-chat/"
 }

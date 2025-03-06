@@ -13,7 +13,7 @@ RegisterPolymerTemplateModifications({
       )
     if (!isNot3pcdRedesignEnabledTemplate) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with ' +
+        '[TauBrowser Settings Overrides] Could not find template with ' +
         'if*=!is3pcdRedesignEnabledTemplate on cookies page.')
     } else {
       const blockThirdPartyIncognitoRadioButton =
@@ -21,7 +21,7 @@ RegisterPolymerTemplateModifications({
           getElementById('blockThirdPartyIncognito')
       if (!blockThirdPartyIncognitoRadioButton) {
         console.error(
-          '[Brave Settings Overrides] Could not find ' +
+          '[TauBrowser Settings Overrides] Could not find ' +
           'blockThirdPartyIncognito id on cookies page.')
       } else {
         blockThirdPartyIncognitoRadioButton.setAttribute('hidden', 'true')
@@ -30,7 +30,7 @@ RegisterPolymerTemplateModifications({
           getElementById('generalControls')
       if (!generalControls) {
         console.error(
-          '[Brave Settings Overrides] Could not find generalControls id ' +
+          '[TauBrowser Settings Overrides] Could not find generalControls id ' +
           'on cookies page.')
       } else {
         generalControls.setAttribute('hidden', 'true')
@@ -39,7 +39,7 @@ RegisterPolymerTemplateModifications({
     const siteDataTrigger = templateContent.getElementById('site-data-trigger')
     if (!siteDataTrigger) {
       console.error(
-        '[Brave Settings Overrides] Could not find site-data-trigger id ' +
+        '[TauBrowser Settings Overrides] Could not find site-data-trigger id ' +
         'on cookies page')
     } else {
       siteDataTrigger.setAttribute('hidden', 'true')
@@ -47,7 +47,7 @@ RegisterPolymerTemplateModifications({
     const doNotTrackToggle = templateContent.getElementById('doNotTrack')
     if (!doNotTrackToggle) {
       console.error(
-        '[Brave Settings Overrides] Could not find toggle id on cookies page')
+        '[TauBrowser Settings Overrides] Could not find toggle id on cookies page')
     } else {
       doNotTrackToggle.setAttribute('hidden', 'true')
     }

@@ -22,10 +22,6 @@
 #include "base/strings/string_split.h"
 #include "base/time/time.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
-#include "brave/components/brave_ads/core/public/ads_feature.h"
-#include "brave/components/brave_ads/core/public/user_engagement/site_visit/site_visit_feature.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_images_data.h"
 #include "brave/components/p3a/features.h"
 #include "brave/components/p3a/metric_log_type.h"
@@ -69,12 +65,9 @@ constexpr char kExpireTimeKey[] = "expiry_time";
 
 constexpr base::TimeDelta kCountExpiryTime = base::Days(30);
 
-constexpr base::TimeDelta kStartLandingCheckTime = base::Milliseconds(750);
 
 bool IsRewardsDisabled(PrefService* prefs) {
-  return !prefs->GetBoolean(brave_rewards::prefs::kEnabled) &&
-         !base::FeatureList::IsEnabled(
-             brave_ads::kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature);
+return false;
 }
 
 const char* GetCountDictPref(bool is_constellation) {
@@ -178,53 +171,6 @@ void NTPP3AHelperImpl::RecordView(const std::string& creative_instance_id,
   UpdateMetricCount(creative_instance_id, kCreativeViewEventKey);
 }
 
-void NTPP3AHelperImpl::RecordNewTabPageAdEvent(
-    brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type,
-    const std::string& creative_instance_id) {
-  if (!p3a_service_->IsP3AEnabled() || !IsRewardsDisabled(prefs_)) {
-    return;
-  }
-
-  switch (mojom_ad_event_type) {
-    case brave_ads::mojom::NewTabPageAdEventType::kServedImpression:
-    case brave_ads::mojom::NewTabPageAdEventType::kViewedImpression: {
-      // Served impressions are handled by the ads component. Viewed impressions
-      // are handled in `RecordView` which is called when a sponsored ad is be
-      // displayed.
-      NOTREACHED() << "Unexpected mojom::NewTabPageAdEventType: "
-                   << base::to_underlying(mojom_ad_event_type);
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kClicked: {
-      UpdateMetricCount(creative_instance_id, kCreativeClickEventKey);
-      landing_check_timer_.Start(
-          FROM_HERE, kStartLandingCheckTime,
-          base::BindOnce(&NTPP3AHelperImpl::OnLandingStartCheck,
-                         base::Unretained(this), creative_instance_id));
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kInteraction: {
-      UpdateMetricCount(creative_instance_id, kCreativeInteractionEventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMediaPlay: {
-      UpdateMetricCount(creative_instance_id, kCreativeMediaPlayEventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMedia25: {
-      UpdateMetricCount(creative_instance_id, kCreativeMedia25EventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMedia100: {
-      UpdateMetricCount(creative_instance_id, kCreativeMedia100EventKey);
-      break;
-    }
-  }
-}
 
 void NTPP3AHelperImpl::SetLastTabURL(const GURL& url) {
   last_tab_hostname_ = url.host();
@@ -476,11 +422,6 @@ void NTPP3AHelperImpl::OnLandingStartCheck(
   if (!last_tab_hostname_.has_value()) {
     return;
   }
-  landing_check_timer_.Start(
-      FROM_HERE, brave_ads::kPageLandAfter.Get(),
-      base::BindOnce(&NTPP3AHelperImpl::OnLandingEndCheck,
-                     base::Unretained(this), creative_instance_id,
-                     *last_tab_hostname_));
 }
 
 void NTPP3AHelperImpl::OnLandingEndCheck(

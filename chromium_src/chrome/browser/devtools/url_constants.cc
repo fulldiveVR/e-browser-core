@@ -5,6 +5,6 @@
 
 #include "chrome/browser/devtools/url_constants.h"
 
-constexpr char kRemoteFrontendDomain[] = "devtools.brave.com";
-constexpr char kRemoteFrontendBase[] = "https://devtools.brave.com/";
+constexpr char kRemoteFrontendDomain[] = "devtools.tau-browser.ru";
+constexpr char kRemoteFrontendBase[] = "https://devtools.tau-browser.ru/";
 constexpr char kRemoteFrontendPath[] = "serve_file";

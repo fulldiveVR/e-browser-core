@@ -12,7 +12,6 @@
 
 #include "base/files/file_path.h"
 #include "base/values.h"
-#include "brave/components/brave_ads/core/public/serving/targeting/condition_matcher/condition_matcher_util.h"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/rect.h"
 #include "url/gurl.h"
@@ -93,7 +92,6 @@ struct Creative {
   GURL url;
   base::FilePath file_path;
   gfx::Point focal_point;
-  brave_ads::ConditionMatcherMap condition_matchers;
   std::string background_color;
 
   std::string creative_instance_id;
@@ -146,14 +144,9 @@ struct NTPSponsoredImagesData {
 
   std::optional<base::Value::Dict> GetBackgroundAt(size_t campaign_index,
                                                    size_t creative_index) const;
-  std::optional<base::Value::Dict> GetBackground(
-      const brave_ads::NewTabPageAdInfo& ad_info);
 
   bool IsSuperReferral() const;
 
-  bool AdInfoMatchesSponsoredImage(const brave_ads::NewTabPageAdInfo& ad_info,
-                                   size_t campaign_index,
-                                   size_t creative_index) const;
 
   std::string url_prefix;
 

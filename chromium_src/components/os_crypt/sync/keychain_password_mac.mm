@@ -11,8 +11,8 @@
 
 namespace {
 
-constexpr char kBraveDefaultServiceName[] = "Brave Safe Storage";
-constexpr char kBraveDefaultAccountName[] = "Brave";
+constexpr char kBraveDefaultServiceName[] = "TauBrowser Safe Storage";
+constexpr char kBraveDefaultAccountName[] = "TauBrowser";
 
 KeychainPassword::KeychainNameType& GetBraveServiceName();
 KeychainPassword::KeychainNameType& GetBraveAccountName();

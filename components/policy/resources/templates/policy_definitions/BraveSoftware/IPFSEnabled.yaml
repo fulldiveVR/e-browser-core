@@ -9,10 +9,10 @@ features:
   dynamic_refresh: false
   per_profile: true
 owners:
-- clifton@brave.com
-- fmarier@brave.com
-- anthony@brave.com
-- vstruts@brave.com
+- clifton@taubrowser.com
+- fmarier@taubrowser.com
+- anthony@taubrowser.com
+- vstruts@taubrowser.com
 schema:
   type: boolean
 supported_on:
