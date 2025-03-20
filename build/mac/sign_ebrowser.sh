@@ -14,7 +14,7 @@ DST_ZIP_PATH="$BUILD_PATH/dist/taubrowser-v${APP_VERSION}-darwin-${ARCH_APP}.zip
 SIGNING_APP_PATH="$BUILD_PATH/dist/$APP_FILE"
 SIGNATURE="Developer ID Application: FullDive Corp. (7B7J6CN346)"
 
-PKG_PATH="$BUILD_PATH/Tau_Browser_Browser_Packaging"
+PKG_PATH="$BUILD_PATH/TauBrowser_Browser_Packaging"
 
 FRAMEWORK_PATH="$SIGNING_APP_PATH/Contents/Frameworks/${APP_NAME} Framework.framework"
 LIBRARIES_PATH="$FRAMEWORK_PATH/Versions/${CHROME_VERSION}/Libraries"
