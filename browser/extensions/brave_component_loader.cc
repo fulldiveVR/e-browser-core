@@ -17,6 +17,7 @@
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_resources.h"
 #include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/aiwize_agent/grit/aiwize_agent.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/extensions/extension_service.h"
 #include "chrome/browser/profiles/profile.h"
@@ -99,8 +100,26 @@ void BraveComponentLoader::AddDefaultComponentExtensions(
     bool skip_session_components) {
   ComponentLoader::AddDefaultComponentExtensions(skip_session_components);
   UpdateBraveExtension();
+  AddAIWizeAgentExtension();
 }
 
+
+void BraveComponentLoader::AddAIWizeAgentExtension() {
+  extensions::ExtensionRegistry* registry =
+      extensions::ExtensionRegistry::Get(profile_);
+  const Extension* current_extension =
+      registry->GetInstalledExtension(aiwize_agent_extension_id);
+
+  if (current_extension == nullptr) {
+    base::FilePath aiwize_agent_path(FILE_PATH_LITERAL(""));
+    aiwize_agent_path =
+        aiwize_agent_path.Append(FILE_PATH_LITERAL("aiwize_agent"));
+
+    const auto id = Add(IDR_AIWIZE_AGENT, aiwize_agent_path);
+    LOG(ERROR) << "AIWize agent installed";
+    CHECK_EQ(id, aiwize_agent_extension_id);
+  }
+}
 
 void BraveComponentLoader::AddWebTorrentExtension() {
   const base::CommandLine& command_line =

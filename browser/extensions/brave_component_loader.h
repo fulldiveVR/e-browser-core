@@ -35,6 +35,7 @@ class BraveComponentLoader : public ComponentLoader {
   void OnComponentRegistered(std::string extension_id);
 
   void AddWebTorrentExtension();
+  void AddAIWizeAgentExtension();
   void OnComponentReady(std::string extension_id,
                         bool allow_file_access,
                         const base::FilePath& install_dir,

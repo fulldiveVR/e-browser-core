@@ -8,6 +8,7 @@
 #include "brave/components/brave_extension/grit/brave_extension_generated_map.h"
 #include "brave/components/brave_extension/grit/brave_extension_resources_map.h"
 #include "brave/components/brave_webtorrent/browser/buildflags/buildflags.h"
+#include "brave/components/aiwize_agent/grit/aiwize_agent_resources_map.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_WEBTORRENT)
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_generated_map.h"
@@ -23,6 +24,7 @@
 #endif
 
 #define BRAVE_CHROME_COMPONENT_EXTENSION_RESOURCE_MANAGER_DATA_DATA \
+  AddComponentResourceEntries(kAiwizeAgent);                        \
   AddComponentResourceEntries(kBraveExtension);                     \
   AddComponentResourceEntries(kBraveExtensionGenerated);            \
   BRAVE_WEBTORRENT_RESOURCES

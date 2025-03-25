@@ -166,4 +166,7 @@
     "META": {"sizes": {"includes": [10]}},
     "includes": [35020],
   },
+  "brave/components/aiwize_agent/resources.grd": {
+    "includes": [35040],
+  },
 }
