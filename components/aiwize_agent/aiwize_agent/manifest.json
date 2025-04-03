@@ -3,9 +3,6 @@
   "name": "WIZE Agent",
   "description": "Your second brain and hands for web browsing. A browser extension that solves your problems.",
   "version": "0.9",
-  "options_ui": {
-    "page": "options.html"
-  },
   "action": {
     "default_icon": "icon.png",
     "default_title": "WIZE Agent"
@@ -18,7 +15,7 @@
     {
       "matches": ["<all_urls>"],
       "run_at": "document_end",
-      "js": ["js/vendor.js", "js/content_script.js"]
+      "js": ["js/vendor.js", "js/contentScript.js"]
     }
   ],
   "background": {
@@ -39,6 +36,5 @@
     "sidePanel",
     "debugger"
   ],
-  "host_permissions": ["<all_urls>"],
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoPL8PlsE85PcTzHIEjD6lVaFw4p+HapJcRxKkffpjaYQp+IXW31/PCxkiQSO3jMOWwtrj+k8pryVzrODzucW4wwKO4vcLxOa7q9sA/7AcSfdzyPZNbqa9Vy65wJZC/Atjj0XDM60rU0pejbEmgvFIfmzHXBhxJ2gqz8tQ0IjWwd/Xb2Ep+ASbjd25/AdJKnyiaV7cCZ4iCeES5ybVXmnBB9WGykFJdQ9ThKskk6hXPpMgK1djPXwAbly/IwxdCyq4tEQDxO/yoA08qvgIfcAnv869mP1mwTemsPKNhMHkOSJnEZhe3KOREFhE8AacOn4gLSyoseKP54zbj7eYRg2SQIDAQAB"
+  "host_permissions": ["<all_urls>"]
 }

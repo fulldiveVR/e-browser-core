@@ -12,13 +12,12 @@
     <includes>
       <include name="IDR_AIWIZE_AGENT" file="aiwize_agent/manifest.json" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_ICON" file="aiwize_agent/icon.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_OPTIONS" file="aiwize_agent/options.html" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_SIDE_PANEL" file="aiwize_agent/side_panel.html" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_STYLE" file="aiwize_agent/styles/App.css" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_STYLE" file="aiwize_agent/styles/sidePanel.css" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_JS_BACKGROUND" file="aiwize_agent/js/background.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_JS_CONTENT_SCRIPT" file="aiwize_agent/js/content_script.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_JS_CONTENT_SCRIPT" file="aiwize_agent/js/contentScript.js" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_JS_OPTIONS" file="aiwize_agent/js/options.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_JS_SIDE_PANEL" file="aiwize_agent/js/side_panel.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_JS_SIDE_PANEL" file="aiwize_agent/js/sidePanel.js" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_JS_VENDOR" file="aiwize_agent/js/vendor.js" type="BINDATA" />
       <include name="IDR_AIWIZE_AGENT_JS_VENDOR_LICENSE" file="aiwize_agent/js/vendor.js.LICENSE.txt" type="BINDATA" />
     </includes>
