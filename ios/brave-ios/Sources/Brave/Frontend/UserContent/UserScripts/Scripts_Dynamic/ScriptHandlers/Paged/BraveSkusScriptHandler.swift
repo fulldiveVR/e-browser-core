@@ -11,6 +11,7 @@ import BraveVPN
 import Foundation
 import Preferences
 import Shared
+import Web
 import WebKit
 import os.log
 
@@ -38,7 +39,7 @@ class BraveSkusScriptHandler: TabContentScript {
   }()
 
   func tab(
-    _ tab: Tab,
+    _ tab: some TabState,
     receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
@@ -82,7 +83,7 @@ class BraveSkusScriptHandler: TabContentScript {
 
   @MainActor
   private func processRequest(
-    tab: Tab,
+    tab: some TabState,
     message: WKScriptMessage,
     method: Method,
     for skusDomain: String

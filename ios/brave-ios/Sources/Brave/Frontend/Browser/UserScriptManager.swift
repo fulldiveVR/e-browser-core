@@ -7,6 +7,7 @@ import BraveWallet
 import Data
 import Preferences
 import Shared
+import Web
 import WebKit
 import os.log
 
@@ -169,7 +170,8 @@ class UserScriptManager {
       case .braveLeoAIChat:
         return Preferences.UserScript.leo.value ? BraveLeoScriptHandler.userScript : nil
       case .braveTranslate:
-        return Preferences.UserScript.translate.value ? BraveTranslateScriptHandler.userScript : nil
+        return Preferences.UserScript.translate.value && FeatureList.kBraveTranslateEnabled.enabled
+          ? BraveTranslateScriptHandler.userScript : nil
       }
     }
 
@@ -275,14 +277,17 @@ class UserScriptManager {
     }
   }
 
-  public func loadScripts(into webView: WKWebView, scripts: Set<ScriptType>) {
+  public func loadScripts(
+    into userContentController: WKUserContentController,
+    scripts: Set<ScriptType>
+  ) {
     if Preferences.UserScript.blockAllScripts.value {
       return
     }
 
     var scripts = scripts
 
-    webView.configuration.userContentController.do { scriptController in
+    userContentController.do { scriptController in
       scriptController.removeAllUserScripts()
 
       // Inject all base scripts
@@ -325,7 +330,7 @@ class UserScriptManager {
 
   // TODO: Get rid of this OR refactor wallet and domain scripts
   func loadCustomScripts(
-    into tab: Tab,
+    into tab: some TabState,
     userScripts: Set<ScriptType>,
     customScripts: Set<UserScriptType>
   ) {
@@ -333,10 +338,7 @@ class UserScriptManager {
       return
     }
 
-    guard let webView = tab.webView else {
-      Logger.module.info("Injecting Scripts into a Tab that has no WebView")
-      return
-    }
+    let userContentController = tab.configuration.userContentController
 
     let logComponents = [
       userScripts.sorted(by: { $0.rawValue < $1.rawValue }).map { scriptType in
@@ -349,9 +351,9 @@ class UserScriptManager {
     ContentBlockerManager.log.debug(
       "Loaded \(userScripts.count + customScripts.count) script(s): \n\(logComponents.joined(separator: "\n"))"
     )
-    loadScripts(into: webView, scripts: userScripts)
+    loadScripts(into: userContentController, scripts: userScripts)
 
-    webView.configuration.userContentController.do { scriptController in
+    userContentController.do { scriptController in
       // TODO: Somehow refactor wallet and get rid of this
       // Inject WALLET specific scripts
 

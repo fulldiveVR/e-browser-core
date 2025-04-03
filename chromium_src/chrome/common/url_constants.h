@@ -332,8 +332,16 @@ inline constexpr char16_t kPaymentMethodsURLForGPayWeb[] =
 inline constexpr char kAddressesAndPaymentMethodsLearnMoreURL[] =
     "https://support.brave.com";
 
+// The URL for the "Pay over time" support page.
+inline constexpr char16_t kPayOverTimeLearnMoreUrl[] =
+    u"https://support.brave.com";
+
 // Help URL for Autofill Prediction Improvements.
 inline constexpr char16_t kAutofillAiLearnMoreURL[] =
+    u"https://support.brave.com";
+
+// "Learn more" URL for the autofill show card benefits setting.
+inline constexpr char16_t kCardBenefitsLearnMoreURL[] =
     u"https://support.brave.com";
 
 // "Learn more" URL for the performance intervention notification setting.
@@ -458,7 +466,8 @@ inline constexpr char kWallpaperSearchLearnMorePageManagedURL[] =
 
 // The URL for the "Learn more" page for Tab Organization.
 inline constexpr char kTabOrganizationLearnMorePageURL[] =
-    "https://support.brave.com/";
+    "https://support.brave.com/hc/en-us/articles/"
+    "35200007195917-How-to-use-Tab-Focus-Mode";
 
 // The URL for the "Learn more" page for Tab Organization for managed users.
 inline constexpr char kTabOrganizationLearnMorePageManagedURL[] =

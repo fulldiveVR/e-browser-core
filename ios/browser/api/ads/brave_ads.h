@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class NotificationAdIOS, InlineContentAdIOS;
+@class NotificationAdIOS, InlineContentAdIOS, NewTabPageAdIOS;
 
 OBJC_EXPORT
 @protocol BraveAdsNotificationHandler
@@ -60,9 +60,6 @@ OBJC_EXPORT
 /// disabled.
 + (BOOL)shouldAlwaysRunService;
 
-/// Returns `true` if search result ads are supported.
-+ (BOOL)shouldSupportSearchResultAds;
-
 /// Returns `true` if should show Sponsored Images & Videos option in settings.
 /// This function will be deprecated once Sponsored Video is available globally.
 - (BOOL)shouldShowSponsoredImagesAndVideosSetting;
@@ -78,6 +75,10 @@ OBJC_EXPORT
 /// Used to notify the ads service that the user has opted-in/opted-out to
 /// Brave News.
 - (void)notifyBraveNewsIsEnabledPreferenceDidChange:(BOOL)isEnabled;
+
+/// Used to notify the ads service that the user has opted-in/opted-out to
+/// sponsored images.
+- (void)notifySponsoredImagesIsEnabledPreferenceDidChange:(BOOL)isEnabled;
 
 /// Whether or not Brave Ads is enabled and the user should receive
 /// notification-style ads and be rewarded for it
@@ -143,6 +144,14 @@ OBJC_EXPORT
                           completion:(void (^)(BOOL success))completion;
 
 - (void)clearData:(void (^)())completion;
+
+#pragma mark - New Tab Page Ad
+
+- (nullable NewTabPageAdIOS*)maybeGetPrefetchedNewTabPageAd;
+
+- (void)onFailedToPrefetchNewTabPageAd:(NSString*)placementId
+                    creativeInstanceId:(NSString*)creativeInstanceId
+    NS_SWIFT_NAME(onFailedToPrefetchNewTabPageAd(placementId:creativeInstanceId:));
 
 #pragma mark - Ads client notifier
 

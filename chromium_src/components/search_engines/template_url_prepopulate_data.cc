@@ -20,17 +20,17 @@
 
 // IMPORTANT! If you make changes to any of the search engine mappings below,
 // it's critical to also increment the value `kBraveCurrentDataVersion` in
-// `//brave/components/search_engines/brave_prepopulated_engines.cc`.
+// `//brave/components/search_engines/brave_prepopulated_engines.h`.
 
 namespace TemplateURLPrepopulateData {
 
 // This redeclaration of the upstream prototype for `GetPrepopulatedEngines` is
 // necessary, otherwise the translation unit fails to compile on calls for
 // `GetPrepopulatedEngines` where there's an expectation for the use of the
-// default value of the last arguent.
+// default value of the last argument.
 std::vector<std::unique_ptr<TemplateURLData>> GetPrepopulatedEngines_Unused(
-    PrefService* prefs,
-    search_engines::SearchEngineChoiceService* search_engine_choice_service);
+    PrefService& prefs,
+    CountryID country_id);
 
 }  // namespace TemplateURLPrepopulateData
 
@@ -97,6 +97,13 @@ constexpr BravePrepopulatedEngineID kBraveEnginesAUIE[] = {
     PREPOPULATED_ENGINE_ID_ECOSIA,
 };
 
+constexpr BravePrepopulatedEngineID kBraveEnginesJP[] = {
+    PREPOPULATED_ENGINE_ID_YAHOO_JP,  PREPOPULATED_ENGINE_ID_BRAVE,
+    PREPOPULATED_ENGINE_ID_GOOGLE,    PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+    PREPOPULATED_ENGINE_ID_QWANT,     PREPOPULATED_ENGINE_ID_BING,
+    PREPOPULATED_ENGINE_ID_STARTPAGE,
+};
+
 constexpr BravePrepopulatedEngineID kBraveEnginesKR[] = {
     PREPOPULATED_ENGINE_ID_BRAVE,
     PREPOPULATED_ENGINE_ID_NAVER,
@@ -146,6 +153,7 @@ constexpr auto kDefaultEnginesByCountryIdMap =
          {country_codes::CountryCharsToCountryID('I', 'E'), kBraveEnginesAUIE},
          {country_codes::CountryCharsToCountryID('I', 'T'),
           kBraveEnginesWithEcosia},
+         {country_codes::CountryCharsToCountryID('J', 'P'), kBraveEnginesJP},
          {country_codes::CountryCharsToCountryID('K', 'G'),
           kBraveEnginesWithYandex},
          {country_codes::CountryCharsToCountryID('K', 'R'), kBraveEnginesKR},
@@ -178,7 +186,7 @@ constexpr auto kDefaultEnginesByCountryIdMap =
 // A versioned map tracking the singular default search engine per-country.
 //
 // When a profile is created, the current value for `kBraveCurrentDataVersion`
-// in `//brave/components/search_engines/brave_prepopulated_engines.cc` is
+// in `//brave/components/search_engines/brave_prepopulated_engines.h` is
 // stored as a profile preference.
 //
 // See:
@@ -574,7 +582,68 @@ BravePrepopulatedEngineID GetDefaultSearchEngine(int country_id, int version) {
            PREPOPULATED_ENGINE_ID_YANDEX},
       });
 
-  if (version > 29) {
+  // Updated default for JP.
+  static constexpr auto kContentV31 =
+      base::MakeFixedFlatMap<int, BravePrepopulatedEngineID>({
+          {country_codes::CountryCharsToCountryID('A', 'M'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('A', 'R'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('A', 'T'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('A', 'U'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('A', 'Z'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('B', 'R'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('B', 'Y'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('C', 'A'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('D', 'E'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('E', 'S'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('F', 'R'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('G', 'B'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('I', 'N'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('I', 'T'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('J', 'P'),
+           PREPOPULATED_ENGINE_ID_YAHOO_JP},
+          {country_codes::CountryCharsToCountryID('K', 'G'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('K', 'R'),
+           PREPOPULATED_ENGINE_ID_NAVER},
+          {country_codes::CountryCharsToCountryID('K', 'Z'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('M', 'D'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('M', 'X'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('R', 'U'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('T', 'J'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('T', 'M'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+          {country_codes::CountryCharsToCountryID('U', 'S'),
+           PREPOPULATED_ENGINE_ID_BRAVE},
+          {country_codes::CountryCharsToCountryID('U', 'Z'),
+           PREPOPULATED_ENGINE_ID_YANDEX},
+      });
+
+  if (version > 30) {
+    const auto it = kContentV31.find(country_id);
+    if (it == kContentV31.end()) {
+      return default_v6;
+    }
+    return it->second;
+  } else if (version > 29) {
     const auto it = kContentV30.find(country_id);
     if (it == kContentV30.end()) {
       return default_v6;
@@ -683,8 +752,7 @@ GetBravePrepopulatedEnginesForCountryID(
   }
   DCHECK_GT(brave_engine_ids.size(), 0ul);
 
-  // Build a vector PrepopulatedEngines from BravePrepopulatedEngineIDs and
-  // also get the default engine index
+  // Build a vector PrepopulatedEngines from BravePrepopulatedEngineIDs.
   std::vector<const PrepopulatedEngine*> engines =
       GetEnginesFromEngineIDs(brave_engine_ids);
   DCHECK(engines.size() == brave_engine_ids.size());
@@ -720,8 +788,8 @@ int GetDataVersion(PrefService* prefs) {
 // Redefines function with the same name in Chromium. Modifies the function to
 // get search engines defined by Brave.
 std::vector<std::unique_ptr<TemplateURLData>> GetPrepopulatedEngines(
-    PrefService* prefs,
-    search_engines::SearchEngineChoiceService* search_engine_choice_service) {
+    PrefService& prefs,
+    CountryID country_id) {
   // If there is a set of search engines in the preferences file, it overrides
   // the built-in set.
   std::vector<std::unique_ptr<TemplateURLData>> t_urls =
@@ -731,15 +799,11 @@ std::vector<std::unique_ptr<TemplateURLData>> GetPrepopulatedEngines(
   }
 
   int version = kBraveCurrentDataVersion;
-  if (prefs && prefs->HasPrefPath(prefs::kBraveDefaultSearchVersion)) {
-    version = prefs->GetInteger(prefs::kBraveDefaultSearchVersion);
+  if (prefs.HasPrefPath(prefs::kBraveDefaultSearchVersion)) {
+    version = prefs.GetInteger(prefs::kBraveDefaultSearchVersion);
   }
 
-  return GetBravePrepopulatedEnginesForCountryID(
-      search_engine_choice_service
-          ? search_engine_choice_service->GetCountryId()
-          : country_codes::GetCountryIDFromPrefs(prefs),
-      version);
+  return GetBravePrepopulatedEnginesForCountryID(country_id, version);
 }
 
 // Redefines function with the same name in Chromium. Modifies the function to
@@ -761,23 +825,19 @@ std::vector<std::unique_ptr<TemplateURLData>> GetLocalPrepopulatedEngines(
 // Chromium picks Google (if on the list, otherwise the first prepopulated on
 // the list). We should return the default engine by country, or Brave.
 std::unique_ptr<TemplateURLData> GetPrepopulatedFallbackSearch(
-    PrefService* prefs,
-    search_engines::SearchEngineChoiceService* search_engine_choice_service) {
+    PrefService& prefs,
+    CountryID country_id) {
   std::vector<std::unique_ptr<TemplateURLData>> prepopulated_engines =
-      GetPrepopulatedEngines(prefs, search_engine_choice_service);
+      GetPrepopulatedEngines(prefs, country_id);
   if (prepopulated_engines.empty()) {
     return nullptr;
   }
 
   // Get the default engine (overridable by country) for this version
   int version = kBraveCurrentDataVersion;
-  if (prefs && prefs->HasPrefPath(prefs::kBraveDefaultSearchVersion)) {
-    version = prefs->GetInteger(prefs::kBraveDefaultSearchVersion);
+  if (prefs.HasPrefPath(prefs::kBraveDefaultSearchVersion)) {
+    version = prefs.GetInteger(prefs::kBraveDefaultSearchVersion);
   }
-
-  int country_id = search_engine_choice_service
-                       ? search_engine_choice_service->GetCountryId()
-                       : country_codes::GetCountryIDFromPrefs(prefs);
 
   BravePrepopulatedEngineID default_id =
       GetDefaultSearchEngine(country_id, version);
@@ -801,12 +861,11 @@ std::unique_ptr<TemplateURLData> GetPrepopulatedFallbackSearch(
   return std::move(prepopulated_engines[0]);
 }
 
-std::unique_ptr<TemplateURLData> GetPrepopulatedEngine(
-    PrefService* prefs,
-    search_engines::SearchEngineChoiceService* search_engine_choice_service,
-    int prepopulated_id) {
-  auto engines = TemplateURLPrepopulateData::GetPrepopulatedEngines(
-      prefs, search_engine_choice_service);
+std::unique_ptr<TemplateURLData> GetPrepopulatedEngine(PrefService& prefs,
+                                                       CountryID country_id,
+                                                       int prepopulated_id) {
+  auto engines =
+      TemplateURLPrepopulateData::GetPrepopulatedEngines(prefs, country_id);
   for (auto& engine : engines) {
     if (engine->prepopulate_id == prepopulated_id) {
       return std::move(engine);

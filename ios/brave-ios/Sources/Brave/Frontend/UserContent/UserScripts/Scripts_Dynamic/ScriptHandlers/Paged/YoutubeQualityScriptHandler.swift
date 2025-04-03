@@ -7,32 +7,18 @@ import BraveUI
 import Foundation
 import Preferences
 import Shared
+import Web
 import WebKit
 
-class YoutubeQualityScriptHandler: NSObject, TabContentScript {
+class YoutubeQualityScriptHandler: NSObject, TabContentScript, TabObserver {
   private var url: URL?
   private var urlObserver: NSObjectProtocol?
 
-  init(tab: Tab) {
-    self.url = tab.url
+  init(tab: some TabState) {
+    self.url = tab.visibleURL
     super.init()
 
-    urlObserver = tab.webView?.observe(
-      \.url,
-      options: [.new],
-      changeHandler: { [weak self] object, change in
-        guard let self = self, let url = change.newValue else { return }
-        if self.url?.withoutFragment != url?.withoutFragment {
-          self.url = url
-
-          object.evaluateSafeJavaScript(
-            functionName: "window.__firefox__.\(Self.refreshQuality)",
-            contentWorld: Self.scriptSandbox,
-            asFunction: true
-          )
-        }
-      }
-    )
+    tab.addObserver(self)
   }
 
   private static let refreshQuality = "refresh_youtube_quality_\(uniqueID)"
@@ -64,10 +50,10 @@ class YoutubeQualityScriptHandler: NSObject, TabContentScript {
     )
   }()
 
-  static func setEnabled(option: Preferences.Option<String>, for tab: Tab) {
+  static func setEnabled(option: Preferences.Option<String>, for tab: some TabState) {
     let enabled = canEnableHighQuality(option: option)
 
-    tab.webView?.evaluateSafeJavaScript(
+    tab.evaluateJavaScript(
       functionName: "window.__firefox__.\(Self.setQuality)",
       args: [enabled ? Self.highestQuality : "''"],
       contentWorld: Self.scriptSandbox,
@@ -77,7 +63,7 @@ class YoutubeQualityScriptHandler: NSObject, TabContentScript {
   }
 
   func tab(
-    _ tab: Tab,
+    _ tab: some TabState,
     receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
@@ -107,5 +93,24 @@ class YoutubeQualityScriptHandler: NSObject, TabContentScript {
 
       return qualityPreference == .on
     }
+  }
+
+  // MARK: - TabObserver
+
+  func tabDidUpdateURL(_ tab: some TabState) {
+    if url?.withoutFragment == tab.visibleURL?.withoutFragment {
+      return
+    }
+
+    url = tab.visibleURL
+    tab.evaluateJavaScript(
+      functionName: "window.__firefox__.\(Self.refreshQuality)",
+      contentWorld: Self.scriptSandbox,
+      asFunction: true
+    )
+  }
+
+  func tabWillBeDestroyed(_ tab: some TabState) {
+    tab.removeObserver(self)
   }
 }

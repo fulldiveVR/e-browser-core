@@ -70,6 +70,7 @@ brave_settings_non_web_component_files = [
   "brave_default_extensions_page/brave_default_extensions_browser_proxy.ts",
   "brave_new_tab_page/brave_new_tab_browser_proxy.ts",
   "brave_leo_assistant_page/brave_leo_assistant_browser_proxy.ts",
+  "brave_overrides/a11y_page.ts",
   "brave_overrides/all_sites.ts",
   "brave_overrides/about_page.ts",
   "brave_overrides/autofill_page.ts",
@@ -185,10 +186,13 @@ brave_settings_mojo_files = [
   # ai_chat.mojom depends on tab_tracker.mojom even though it isn't used on settings
   "$root_gen_dir/brave/components/ai_chat/core/common/mojom/tab_tracker.mojom-webui.ts",
   "$root_gen_dir/brave/components/ai_chat/core/common/mojom/untrusted_frame.mojom-webui.ts",
+  "$root_gen_dir/brave/components/brave_account/core/mojom/brave_account.mojom-webui.ts",
 ]
 
-brave_settings_mojo_files_deps =
-    [ "//brave/components/ai_chat/core/common/mojom:mojom_ts__generator" ]
+brave_settings_mojo_files_deps = [
+  "//brave/components/ai_chat/core/common/mojom:mojom_ts__generator",
+  "//brave/components/brave_account/core/mojom:mojom_ts__generator",
+]
 
 brave_settings_ts_deps = [
   "//third_party/lit/v3_0:build_ts",

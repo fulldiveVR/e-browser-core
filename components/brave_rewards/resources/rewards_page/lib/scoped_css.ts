@@ -14,6 +14,10 @@ class ScopedCSSAttribute {
     this[scopeAttributeName] = scopeName
   }
 
+  get scope() {
+    return this[scopeAttributeName]
+  }
+
   get selector() {
     return `[${scopeAttributeName}=${CSS.escape(this[scopeAttributeName])}]`
   }
@@ -37,5 +41,11 @@ export const scoped = {
       }
     `)
     return attr
+  }
+}
+
+export const global = {
+  css(callsite: TemplateStringsArray, ...values: any[]) {
+    addStyles((scopeID++).toString(36), String.raw(callsite, ...values))
   }
 }

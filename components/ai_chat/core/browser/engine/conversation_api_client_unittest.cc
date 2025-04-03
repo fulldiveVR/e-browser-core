@@ -64,6 +64,59 @@ using Ticket = api_request_helper::APIRequestHelper::Ticket;
 
 namespace ai_chat {
 
+namespace {
+
+const std::pair<std::vector<ConversationAPIClient::ConversationEvent>,
+                std::string>&
+GetMockEventsAndExpectedEventsBody() {
+  static base::NoDestructor<std::pair<
+      std::vector<ConversationAPIClient::ConversationEvent>, std::string>>
+      mock_events_and_expected_events_body{
+          std::vector<ConversationAPIClient::ConversationEvent>{
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::PageText,
+               {"This is a page about The Mandalorian."}},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::PageExcerpt,
+               {"The Mandalorian"}},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::ChatMessage,
+               {"Est-ce lié à une série plus large?"}},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::GetSuggestedTopicsForFocusTabs,
+               {"GetSuggestedTopicsForFocusTabs"}},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::DedupeTopics,
+               {"DedupeTopics"}},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::GetFocusTabsForTopic,
+               {"GetFocusTabsForTopics"},
+               "C++"},
+              {mojom::CharacterType::HUMAN,
+               ConversationAPIClient::UploadImage,
+               {"data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///"
+                "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                "data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///"
+                "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"}},
+          },
+          R"([
+      {"role": "user", "type": "pageText", "content": "This is a page about The Mandalorian."},
+      {"role": "user", "type": "pageExcerpt", "content": "The Mandalorian"},
+      {"role": "user", "type": "chatMessage", "content": "Est-ce lié à une série plus large?"},
+      {"role": "user", "type": "suggestFocusTopics", "content": "GetSuggestedTopicsForFocusTabs"},
+      {"role": "user", "type": "dedupeFocusTopics", "content": "DedupeTopics"},
+      {"role": "user", "type": "classifyTabs", "content": "GetFocusTabsForTopics", "topic": "C++"},
+      {"role": "user", "type": "uploadImage",
+       "content": ["data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+                   "data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"]
+      }
+    ])"};
+
+  return *mock_events_and_expected_events_body;
+}
+
+}  // namespace
+
 using ConversationEvent = ConversationAPIClient::ConversationEvent;
 
 class MockCallbacks {
@@ -198,18 +251,10 @@ TEST_F(ConversationAPIUnitTest, PerformRequest_PremiumHeaders) {
   //  - ConversationEvent is correctly formatted into JSON
   //  - completion response is parsed and passed through to the callbacks
   std::string expected_crediential = "unit_test_credential";
-  std::vector<ConversationAPIClient::ConversationEvent> events = {
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::PageText,
-       "This is a page about The Mandalorian."},
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::PageExcerpt,
-       "The Mandalorian"},
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::ChatMessage,
-       "Est-ce lié à une série plus large?"}};
-  std::string expected_events_body = R"([
-    {"role": "user", "type": "pageText", "content": "This is a page about The Mandalorian."},
-    {"role": "user", "type": "pageExcerpt", "content": "The Mandalorian"},
-    {"role": "user", "type": "chatMessage", "content": "Est-ce lié à une série plus large?"}
-  ])";
+  const std::vector<ConversationAPIClient::ConversationEvent>& events =
+      GetMockEventsAndExpectedEventsBody().first;
+  const std::string& expected_events_body =
+      GetMockEventsAndExpectedEventsBody().second;
   std::string expected_system_language = "en_KY";
   const brave_l10n::test::ScopedDefaultLocale scoped_default_locale(
       expected_system_language);
@@ -406,18 +451,10 @@ TEST_F(ConversationAPIUnitTest, PerformRequest_NonPremium) {
   //  - ConversationEvent is correctly formatted into JSON
   //  - completion response is parsed and passed through to the callbacks
   std::string expected_crediential = "unit_test_credential";
-  std::vector<ConversationAPIClient::ConversationEvent> events = {
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::PageText,
-       "This is a page about The Mandalorian."},
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::PageExcerpt,
-       "The Mandalorian"},
-      {mojom::CharacterType::HUMAN, ConversationAPIClient::ChatMessage,
-       "Est-ce lié à une série plus large?"}};
-  std::string expected_events_body = R"([
-    {"role": "user", "type": "pageText", "content": "This is a page about The Mandalorian."},
-    {"role": "user", "type": "pageExcerpt", "content": "The Mandalorian"},
-    {"role": "user", "type": "chatMessage", "content": "Est-ce lié à une série plus large?"}
-  ])";
+  const std::vector<ConversationAPIClient::ConversationEvent>& events =
+      GetMockEventsAndExpectedEventsBody().first;
+  const std::string& expected_events_body =
+      GetMockEventsAndExpectedEventsBody().second;
   std::string expected_system_language = "en_KY";
   const brave_l10n::test::ScopedDefaultLocale scoped_default_locale(
       expected_system_language);
@@ -544,6 +581,151 @@ TEST_F(ConversationAPIUnitTest, FailNoConversationEvents) {
   testing::Mock::VerifyAndClearExpectations(client_.get());
   testing::Mock::VerifyAndClearExpectations(mock_request_helper);
   testing::Mock::VerifyAndClearExpectations(credential_manager_.get());
+}
+
+TEST(ParseResponseEventTest, ParsesContentReceiptEvent) {
+  base::Value::Dict content_receipt_event;
+  content_receipt_event.Set("type", "contentReceipt");
+  content_receipt_event.Set("total_tokens", static_cast<int>(1234567890));
+  content_receipt_event.Set("trimmed_tokens", static_cast<int>(987654321));
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(content_receipt_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_content_receipt_event());
+  EXPECT_EQ(event->get_content_receipt_event()->total_tokens, 1234567890u);
+  EXPECT_EQ(event->get_content_receipt_event()->trimmed_tokens, 987654321u);
+
+  // Test with missing values (both missing)
+  // Should default to 0 when values are missing
+  base::Value::Dict missing_values_event;
+  missing_values_event.Set("type", "contentReceipt");
+  event = ConversationAPIClient::ParseResponseEvent(missing_values_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_content_receipt_event());
+  EXPECT_EQ(event->get_content_receipt_event()->total_tokens, 0u);
+  EXPECT_EQ(event->get_content_receipt_event()->trimmed_tokens, 0u);
+
+  // Test with missing trimmed_tokens only
+  base::Value::Dict missing_trimmed_event;
+  missing_trimmed_event.Set("type", "contentReceipt");
+  missing_trimmed_event.Set("total_tokens", static_cast<int>(12345));
+
+  // No trimmed_tokens set
+  event = ConversationAPIClient::ParseResponseEvent(missing_trimmed_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_content_receipt_event());
+  EXPECT_EQ(event->get_content_receipt_event()->total_tokens, 12345u);
+  EXPECT_EQ(event->get_content_receipt_event()->trimmed_tokens, 0u);
+
+  // Test with negative values
+  base::Value::Dict negative_values_event;
+  negative_values_event.Set("type", "contentReceipt");
+  negative_values_event.Set("total_tokens", static_cast<int>(-100));
+  negative_values_event.Set("trimmed_tokens", static_cast<int>(-200));
+  event = ConversationAPIClient::ParseResponseEvent(negative_values_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_content_receipt_event());
+  // Should default to 0 for negative values
+  EXPECT_EQ(event->get_content_receipt_event()->total_tokens, 0u);
+  EXPECT_EQ(event->get_content_receipt_event()->trimmed_tokens, 0u);
+
+  // Test with mixed values (one positive, one negative)
+  base::Value::Dict mixed_values_event;
+  mixed_values_event.Set("type", "contentReceipt");
+  mixed_values_event.Set("total_tokens", static_cast<int>(500));
+  mixed_values_event.Set("trimmed_tokens", static_cast<int>(-50));
+  event = ConversationAPIClient::ParseResponseEvent(mixed_values_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_content_receipt_event());
+  EXPECT_EQ(event->get_content_receipt_event()->total_tokens, 500u);
+  EXPECT_EQ(event->get_content_receipt_event()->trimmed_tokens, 0u);
+}
+
+TEST(ParseResponseEventTest, ParsesCompletionEvent) {
+  base::Value::Dict completion_event;
+  completion_event.Set("type", "completion");
+  completion_event.Set("completion", "Wherever I go, he goes");
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(completion_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_completion_event());
+  EXPECT_EQ(event->get_completion_event()->completion,
+            "Wherever I go, he goes");
+}
+
+TEST(ParseResponseEventTest, ParsesIsSearchingEvent) {
+  base::Value::Dict is_searching_event;
+  is_searching_event.Set("type", "isSearching");
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(is_searching_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_search_status_event());
+}
+
+TEST(ParseResponseEventTest, ParsesSearchQueriesEvent) {
+  base::Value::Dict search_queries_event;
+  search_queries_event.Set("type", "searchQueries");
+  base::Value::List queries;
+  queries.Append("query1");
+  queries.Append("query2");
+  search_queries_event.Set("queries", std::move(queries));
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(search_queries_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_search_queries_event());
+  EXPECT_EQ(event->get_search_queries_event()->search_queries.size(), 2u);
+  EXPECT_EQ(event->get_search_queries_event()->search_queries[0], "query1");
+  EXPECT_EQ(event->get_search_queries_event()->search_queries[1], "query2");
+}
+
+TEST(ParseResponseEventTest, ParsesConversationTitleEvent) {
+  base::Value::Dict conversation_title_event;
+  conversation_title_event.Set("type", "conversationTitle");
+  conversation_title_event.Set("title", "This is the way");
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(conversation_title_event);
+  ASSERT_TRUE(!!event);
+  ASSERT_TRUE(event->is_conversation_title_event());
+  EXPECT_EQ(event->get_conversation_title_event()->title, "This is the way");
+}
+
+TEST(ParseResponseEventTest, ParsesWebSourcesEvent) {
+  base::Value::Dict web_sources_event;
+  web_sources_event.Set("type", "webSources");
+  base::Value::List sources;
+
+  base::Value::Dict source1;
+  source1.Set("title", "Example Site");
+  source1.Set("url", "https://example.com/");
+  source1.Set("favicon", "https://imgs.search.brave.com/favicon.ico");
+  sources.Append(std::move(source1));
+
+  web_sources_event.Set("sources", std::move(sources));
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(web_sources_event);
+  ASSERT_FALSE(event.is_null());
+  ASSERT_TRUE(event->is_sources_event());
+  EXPECT_EQ(event->get_sources_event()->sources.size(), 1u);
+  EXPECT_EQ(event->get_sources_event()->sources[0]->title, "Example Site");
+  EXPECT_EQ(event->get_sources_event()->sources[0]->url.spec(),
+            "https://example.com/");
+  EXPECT_EQ(event->get_sources_event()->sources[0]->favicon_url.spec(),
+            "https://imgs.search.brave.com/favicon.ico");
+}
+
+TEST(ParseResponseEventTest, HandlesInvalidEvent) {
+  base::Value::Dict invalid_event;
+  invalid_event.Set("type", "unknownThisIsTheWayEvent");
+
+  mojom::ConversationEntryEventPtr event =
+      ConversationAPIClient::ParseResponseEvent(invalid_event);
+  ASSERT_TRUE(event.is_null());
 }
 
 }  // namespace ai_chat

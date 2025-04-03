@@ -21,6 +21,8 @@
 <translation id="303960458633076466">Այս էջն արգելափակվել է Brave-ի կողմից</translation>
 <translation id="2017237562285586622">Հրապատի կամ հակավիրուսային ծրագրի կարգավորումներում
        թույլատրեք Brave-ին միանալ ցանցին:</translation>
+<translation id="4949828774841497663">Գնացեք Հավելվածներ &gt; Համակարգի կարգավորումներ &gt; Ցանց, ընտրեք
+         ակտիվ ցանցը, սեղմեք Մանրամասներ... կոճակը և չեղարկեք ցանկացած                              պրոքսի սերվերի ընտրությունը։</translation>
 <translation id="8619622797841001082">Անցեք
           Brave-ի ընտրացանկ &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -29,6 +31,7 @@
           &gt;
           <ph name="PROXIES_TITLE"/>
           և համոզվեք, որ ընտրված է «առանց պրոքսի-սերվերի» կամ «անմիջական» կազմաձևումը:</translation>
+<translation id="6159073403999048272">Այս էջերը, որոնք նախատեսված են Brave-ի մշակողների համար, չեն կարող պարբերաբար փորձարկվել կամ մշակվել։ Միացնելու համար անցեք <ph name="BEGIN_LINK"/>chrome://chrome-urls<ph name="LINK_END"/> էջ, սեղմեք կոճակը՝ վրիպազերծման էջերը միացնելու համար, այնուհետև վերադարձեք այստեղ։</translation>
 <translation id="2765022094254723779">Brave-ը նաև աշխատում է այլ <ph name="BEGIN_LINK_OSS"/>բաց կոդով ծրագրակազմի<ph name="END_LINK_OSS"/> շնորհիվ։</translation>
 <translation id="9156965752763025780">Փոփոխություններն ուժի մեջ կմտնեն Brave-ը հաջորդ անգամ գործարկելիս:</translation>
 <translation id="8828443087767259398">Զուգակցումը շարունակելու համար Brave-ին հասանելի դարձրեք Bluetooth-ը։ <ph name="IDS_BLUETOOTH_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"/></translation>
@@ -41,9 +44,6 @@
           և ապանշեք «<ph name="NO_PREFETCH_DESCRIPTION"/>»-ը:
           Եթե խնդիրը չվերանա, խորհուրդ ենք տալիս կրկին ընտրել այս տարբերակը՝
           արդյունավետությունը բարձրացնելու համար:</translation>
-<translation id="8187289872471304532">Անցեք
-          Applications &gt; System Preferences &gt; Network &gt; Advanced &gt; Proxies
-          և ապընտեք բոլոր ընտրված պրոքսի-սերվերները:</translation>
 <translation id="4159376633403260073">Դուք դիտում եք Brave for Testing-ի անվտանգ էջ</translation>
 <translation id="88187049159266777">Brave-ը ճիշտ չի փակվել:</translation>
 </translationbundle>

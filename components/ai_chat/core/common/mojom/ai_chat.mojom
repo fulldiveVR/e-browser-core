@@ -17,6 +17,7 @@ enum CharacterType {
 
 enum APIError {
   None,
+  InternalError,
   ConnectionIssue,
   RateLimitReached,
   ContextLimitReached,
@@ -105,6 +106,13 @@ struct Conversation {
   bool has_content;
   // Model key, if different than default
   string? model_key;
+  // Indicates the total number of tokens for the conversation.
+  // This info is determined by the server side and applies to the whole conversation.
+  uint64 total_tokens;
+  // Indicates the number of tokens that were trimmed from the conversation.
+  // This info is determined by the server side and applies to the whole conversation.
+  // Things that can be trimmed include associated content(s) and server side things like search results.
+  uint64 trimmed_tokens;
 
   AssociatedContent? associated_content;
 };
@@ -180,8 +188,19 @@ struct SelectedLanguageEvent {
   string selected_language;
 };
 
+struct ContentReceiptEvent {
+  uint64 total_tokens;
+  uint64 trimmed_tokens;
+};
+
 struct ConversationTitleEvent {
   string title;
+};
+
+struct UploadedImage {
+  string filename;
+  uint32 filesize;
+  array<uint8> image_data;
 };
 
 // Events that occur during a conversation turn (only assistant for now)
@@ -195,6 +214,7 @@ union ConversationEntryEvent {
   // These events don't normally get added to the conversation entry
   // but are used in engine responses.
   SelectedLanguageEvent selected_language_event;
+  ContentReceiptEvent content_receipt_event;
   ConversationTitleEvent conversation_title_event;
 };
 
@@ -235,6 +255,10 @@ struct ConversationTurn {
   // instead of the original turn text when submitting the turn to the AI
   // engine or displaying the most recent text to users.
   array<ConversationTurn>? edits;
+
+  // Due to server limitation, we only support one image in one turn for the
+  // entire conversation. Each turns will share the same image.
+  array<UploadedImage>? uploaded_images;
 
   // Whether the turn was generated from Brave Search SERP.
   bool from_brave_search_SERP = false;
@@ -289,6 +313,8 @@ struct Model {
   string key;
   // display name, for users
   string display_name;
+  // whether accept image as input
+  bool vision_support;
 };
 
 struct ModelWithSubtitle {
@@ -383,6 +409,10 @@ interface AIChatUIHandler {
   ManagePremium();
   HandleVoiceRecognition(string conversation_uuid);
   ShowSoftKeyboard();
+  // use_media_capture is used on Android only currently. It could
+  // be used on desktop as well in the future when a camera support is added.
+  UploadImage(bool use_media_capture)
+      => (array<UploadedImage>? uploaded_images);
 
   // This might be a no-op if the UI isn't closeable
   CloseUI();
@@ -405,11 +435,6 @@ interface AIChatUIHandler {
   // be bound to the associated conversation, if this UI has a target
   NewConversation(pending_receiver<ConversationHandler> conversation,
       pending_remote<ConversationUI> conversation_ui);
-
-  // TODO(petemill): WebUI clients won't need this when they can
-  // request via FaviconSource URLs via trusted webui.
-  GetFaviconImageData(string conversation_uuid) => (
-      array<uint8>? favicon_image_data);
 };
 
 // UI-side handler for messages from the browser WebUI
@@ -448,6 +473,10 @@ struct ConversationEntriesState {
   // Whether the UI should represent that the user cannot submit new messages
   // or edits to the conversation.
   bool can_submit_user_entries;
+  // Indicates the total number of tokens for the conversation
+  uint64 total_tokens;
+  // Indicates the number of tokens that were trimmed from the conversation
+  uint64 trimmed_tokens;
 };
 
 // Browser-side handler for a Conversation
@@ -472,7 +501,8 @@ interface ConversationHandler {
   // are ready.
   GenerateQuestions();
 
-  SubmitHumanConversationEntry(string input);
+  SubmitHumanConversationEntry(
+      string input, array<UploadedImage>? uploaded_images);
   SubmitHumanConversationEntryWithAction(string input, ActionType action_type);
   ModifyConversation(uint32 turn_index, string new_text);
   SubmitSummarizationRequest();
@@ -531,7 +561,6 @@ interface UntrustedConversationUI {
   // to the most recent entry.
   OnConversationHistoryUpdate();
   OnEntriesUIStateChanged(ConversationEntriesState state);
-  OnFaviconImageDataChanged();
 };
 
 interface ConversationUI {
@@ -553,7 +582,6 @@ interface ConversationUI {
   // Associated page information has changed. If there is none then |associated_content|
   // will be |null|.
   OnAssociatedContentInfoChanged(AssociatedContent? associated_content, bool should_send_page_contents);
-  OnFaviconImageDataChanged();
   OnConversationDeleted();
 };
 

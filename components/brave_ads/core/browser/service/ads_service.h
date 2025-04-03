@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 
+#include "base/functional/callback_forward.h"
 #include "base/observer_list.h"
 #include "base/time/time.h"
 #include "brave/components/brave_ads/core/browser/service/ads_service_observer.h"
@@ -33,7 +34,7 @@ class AdsService : public KeyedService {
    public:
     virtual ~Delegate() = default;
 
-    virtual void InitNotificationHelper() = 0;
+    virtual void InitNotificationHelper(base::OnceClosure callback) = 0;
     virtual bool CanShowSystemNotificationsWhileBrowserIsBackgrounded() = 0;
     virtual bool DoesSupportSystemNotifications() = 0;
     virtual bool CanShowNotifications() = 0;
@@ -130,8 +131,7 @@ class AdsService : public KeyedService {
   virtual void PrefetchNewTabPageAd() = 0;
 
   // Called to get the prefetched new tab page ad for display.
-  virtual std::optional<NewTabPageAdInfo>
-  MaybeGetPrefetchedNewTabPageAdForDisplay() = 0;
+  virtual std::optional<NewTabPageAdInfo> MaybeGetPrefetchedNewTabPageAd() = 0;
 
   // Called when failing to prefetch a new tab page ad for the specified
   // `placement_id` and `creative_instance_id`.
@@ -142,7 +142,7 @@ class AdsService : public KeyedService {
   // Called to parse and save creative new tab page ads. The callback takes one
   // argument - `bool` is set to `true` if successful otherwise `false`.
   virtual void ParseAndSaveCreativeNewTabPageAds(
-      const base::Value::Dict& data,
+      base::Value::Dict dict,
       ParseAndSaveCreativeNewTabPageAdsCallback callback) = 0;
 
   // Called when a user views or interacts with a new tab page ad to trigger a

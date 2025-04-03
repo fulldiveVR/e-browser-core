@@ -148,6 +148,7 @@ brave_chrome_browser_deps = [
   "//brave/components/ai_chat/core/common/mojom",
   "//brave/components/ai_rewriter/common/buildflags",
   "//brave/components/body_sniffer",
+  "//brave/components/brave_account/core/mojom",
   "//brave/components/brave_adaptive_captcha",
   "//brave/components/brave_ads/browser",
   "//brave/components/brave_ads/core",
@@ -173,6 +174,7 @@ brave_chrome_browser_deps = [
   "//brave/components/brave_sync:features",
   "//brave/components/brave_sync:network_time_helper",
   "//brave/components/brave_sync:prefs",
+  "//brave/components/brave_user_agent/browser",
   "//brave/components/brave_vpn/common/buildflags",
   "//brave/components/brave_vpn/common/mojom",
   "//brave/components/brave_wallet/browser",
@@ -292,11 +294,15 @@ if (!is_android) {
   brave_chrome_browser_deps += [
     "//brave/browser/ui/ai_chat",
     "//brave/browser/ui/tabs:impl",
+    "//brave/browser/ui/webui/brave_new_tab_page_refresh",
+    "//brave/browser/ui/webui/brave_new_tab_page_refresh:mojom",
     "//brave/browser/ui/webui/brave_news_internals",
     "//brave/browser/user_education:features",
+    "//chrome/browser/regional_capabilities",
     "//components/feed:feature_list",
     "//components/feed/core/v2:feed_core_v2",
     "//components/feed/mojom:mojo_bindings",
+    "//components/regional_capabilities",
   ]
 }
 
@@ -633,4 +639,12 @@ if (is_android) {
     "//brave/browser/android/preferences",
     "//brave/browser/android:tab_features",
   ]
+}
+
+# TODO(https://github.com/brave/brave-browser/issues/43310):
+# brave_new_tab_page_ui.cc includes some headers (e.g. from
+# //brave/browser/new_tab) that are currently in the //chrome/browser target.
+if (!is_android) {
+  brave_chrome_browser_allow_circular_includes_from +=
+      [ "//brave/browser/ui/webui/brave_new_tab_page_refresh" ]
 }

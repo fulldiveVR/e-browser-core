@@ -123,6 +123,7 @@ export type StringKey =
   'contributeSendingText' |
   'contributeSuccessText' |
   'contributeSuccessTitle' |
+  'contributeTitle' |
   'contributeWeb3Label' |
   'contributeWeb3Subtext' |
   'countrySelectPlaceholder' |
@@ -191,6 +192,10 @@ export type StringKey =
   'tosUpdateRequiredText' |
   'tosUpdateRequiredTitle' |
   'unconnectedAdsViewedText' |
+  'unsupportedRegionText1' |
+  'unsupportedRegionText2' |
+  'unsupportedRegionText3' |
+  'unsupportedRegionTitle' |
   'viewStoreLink' |
   'wdpCheckboxLabel' |
   'wdpOptInText' |

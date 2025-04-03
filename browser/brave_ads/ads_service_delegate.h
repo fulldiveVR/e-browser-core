@@ -15,6 +15,7 @@
 #include "brave/components/brave_ads/core/browser/service/ads_service.h"
 #include "components/prefs/pref_service.h"
 #include "components/search_engines/search_engine_choice/search_engine_choice_service.h"
+#include "components/search_engines/template_url_prepopulate_data_resolver.h"
 
 class Profile;
 
@@ -49,7 +50,7 @@ class AdsServiceDelegate : public AdsService::Delegate {
   base::Value::Dict GetSkus() const;
 
   // AdsService::Delegate:
-  void InitNotificationHelper() override;
+  void InitNotificationHelper(base::OnceClosure callback) override;
   bool CanShowSystemNotificationsWhileBrowserIsBackgrounded() override;
   bool DoesSupportSystemNotifications() override;
   bool CanShowNotifications() override;
@@ -73,6 +74,7 @@ class AdsServiceDelegate : public AdsService::Delegate {
 
   const raw_ref<Profile> profile_;
   const raw_ptr<PrefService> local_state_ = nullptr;  // Not owned.
+  TemplateURLPrepopulateData::Resolver prepopulate_data_resolver_;
   search_engines::SearchEngineChoiceService search_engine_choice_service_;
   const raw_ref<brave_adaptive_captcha::BraveAdaptiveCaptchaService>
       adaptive_captcha_service_;

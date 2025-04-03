@@ -12,26 +12,45 @@ import Foundation
 import Preferences
 import Shared
 import SwiftUI
+import Web
 import WebKit
 import os.log
 
 extension BrowserViewController: TabManagerDelegate {
-  func tabManager(_ tabManager: TabManager, didSelectedTabChange selected: Tab?, previous: Tab?) {
+  func attachTabHelpers(to tab: some TabState) {
+    tab.browserData = .init(tab: tab, tabGeneratorAPI: braveCore.tabGeneratorAPI)
+    tab.browserData?.miscDelegate = self
+    tab.pullToRefresh = .init(tab: tab)
+    tab.playlist = .init(tab: tab)
+    SnackBarTabHelper.create(for: tab)
+    tab.braveUserAgentExceptions = braveCore.braveUserAgentExceptions
+    tab.translateHelper = .init(tab: tab, delegate: self)
+  }
+
+  func tabManager(
+    _ tabManager: TabManager,
+    didSelectedTabChange selected: (any TabState)?,
+    previous: (any TabState)?
+  ) {
     // Remove the old accessibilityLabel. Since this webview shouldn't be visible, it doesn't need it
     // and having multiple views with the same label confuses tests.
-    if let wv = previous?.webView {
-      toolbarVisibilityViewModel.endScrollViewObservation(wv.scrollView)
+    if let previous, previous.isWebViewCreated {
+      if let scrollView = previous.webViewProxy?.scrollView {
+        toolbarVisibilityViewModel.endScrollViewObservation(scrollView)
+      }
 
-      wv.endEditing(true)
-      wv.accessibilityLabel = nil
-      wv.accessibilityElementsHidden = true
-      wv.accessibilityIdentifier = nil
-      wv.removeFromSuperview()
+      previous.view.endEditing(true)
+      previous.view.accessibilityLabel = nil
+      previous.view.accessibilityElementsHidden = true
+      previous.view.accessibilityIdentifier = nil
+      previous.view.removeFromSuperview()
     }
 
-    toolbar?.setSearchButtonState(url: selected?.url)
-    if let tab = selected, let webView = tab.webView {
-      toolbarVisibilityViewModel.beginObservingScrollView(webView.scrollView)
+    toolbar?.setSearchButtonState(url: selected?.visibleURL)
+    if let tab = selected, case let webView = tab.view,
+      let scrollView = tab.webViewProxy?.scrollView
+    {
+      toolbarVisibilityViewModel.beginObservingScrollView(scrollView)
       toolbarVisibilityCancellable = toolbarVisibilityViewModel.objectWillChange
         .receive(on: DispatchQueue.main)
         .sink(receiveValue: { [weak self] in
@@ -46,9 +65,9 @@ extension BrowserViewController: TabManagerDelegate {
       updateURLBar()
       recordScreenTimeUsage(for: tab)
 
-      if let url = tab.url, !InternalURL.isValid(url: url) {
-        let previousEstimatedProgress = previous?.webView?.estimatedProgress ?? 1.0
-        let selectedEstimatedProgress = webView.estimatedProgress
+      if let url = tab.visibleURL, !InternalURL.isValid(url: url) {
+        let previousEstimatedProgress = previous?.estimatedProgress ?? 1.0
+        let selectedEstimatedProgress = tab.estimatedProgress
 
         // Progress should be updated only if there's a difference between tabs.
         // Otherwise we do nothing, so switching between fully loaded tabs won't show the animation.
@@ -82,46 +101,16 @@ extension BrowserViewController: TabManagerDelegate {
         }
       }
 
-      // This is a terrible workaround for a bad iOS 12 bug where PDF
-      // content disappears any time the view controller changes (i.e.
-      // the user taps on the tabs tray). It seems the only way to get
-      // the PDF to redraw is to either reload it or revisit it from
-      // back/forward list. To try and avoid hitting the network again
-      // for the same PDF, we revisit the current back/forward item and
-      // restore the previous scrollview zoom scale and content offset
-      // after a short 100ms delay. *facepalm*
-      //
-      // https://bugzilla.mozilla.org/show_bug.cgi?id=1516524
-      if tab.mimeType == MIMEType.pdf {
-        let previousZoomScale = webView.scrollView.zoomScale
-        let previousContentOffset = webView.scrollView.contentOffset
-
-        if let currentItem = webView.backForwardList.currentItem {
-          webView.go(to: currentItem)
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-          webView.scrollView.setZoomScale(previousZoomScale, animated: false)
-          webView.scrollView.setContentOffset(previousContentOffset, animated: false)
-        }
-      }
-
       webView.accessibilityLabel = Strings.webContentAccessibilityLabel
       webView.accessibilityIdentifier = "contentView"
       webView.accessibilityElementsHidden = false
-
-      if webView.url == nil {
-        // The web view can go gray if it was zombified due to memory pressure.
-        // When this happens, the URL is nil, so try restoring the page upon selection.
-        tab.reload()
-      }
     }
 
     updateToolbarUsingTabManager(tabManager)
     updateStatusBarOverlayColor()
 
     removeAllBars()
-    if let bars = selected?.bars {
+    if let bars = selected.flatMap(SnackBarTabHelper.from)?.bars {
       for bar in bars {
         showBar(bar, animated: true)
       }
@@ -129,17 +118,18 @@ extension BrowserViewController: TabManagerDelegate {
 
     clearPageZoomDialog()
     updateTabsBarVisibility()
-    selected?.updatePullToRefreshVisibility()
 
     if let tab = selected {
-      topToolbar.locationView.loading = tab.loading
+      topToolbar.locationView.loading = tab.isLoading
       updateBackForwardActionStatus(for: tab)
       navigationToolbar.updateForwardStatus(tab.canGoForward)
     }
 
-    let shouldShowPlaylistURLBarButton = selected?.url?.isPlaylistSupportedSiteURL == true
+    let shouldShowPlaylistURLBarButton = selected?.visibleURL?.isPlaylistSupportedSiteURL == true
 
-    if let readerMode = selected?.getContentScript(name: ReaderModeScriptHandler.scriptName)
+    if let readerMode = selected?.browserData?.getContentScript(
+      name: ReaderModeScriptHandler.scriptName
+    )
       as? ReaderModeScriptHandler,
       !shouldShowPlaylistURLBarButton
     {
@@ -159,21 +149,21 @@ extension BrowserViewController: TabManagerDelegate {
       topToolbar.updateReaderModeState(.unavailable)
     }
 
-    if (selected?.getContentScript(
-      name: BraveTranslateScriptHandler.scriptName
-    ) as? BraveTranslateScriptHandler) != nil {
-      updateTranslateURLBar(tab: selected, state: selected?.translationState ?? .unavailable)
+    if FeatureList.kBraveTranslateEnabled.enabled, let selectedTab = selected,
+      selectedTab.translateHelper != nil
+    {
+      updateTranslateURLBar(tab: selectedTab, state: selectedTab.translationState ?? .unavailable)
       updatePlaylistURLBar(
-        tab: selected,
-        state: selected?.playlistItemState ?? .none,
-        item: selected?.playlistItem
+        tab: selectedTab,
+        state: selectedTab.playlistItemState ?? .none,
+        item: selectedTab.playlistItem
       )
     } else {
       topToolbar.updateTranslateButtonState(.unavailable)
     }
 
-    updateScreenTimeUrl(tabManager.selectedTab?.url)
-    updateInContentHomePanel(selected?.url as URL?)
+    updateScreenTimeUrl(tabManager.selectedTab?.visibleURL)
+    updateInContentHomePanel(selected?.visibleURL as URL?)
 
     notificationsPresenter.removeNotification(with: WalletNotification.Constant.id)
     WalletProviderPermissionRequestsManager.shared.cancelAllPendingRequests(for: [.eth, .sol])
@@ -181,32 +171,42 @@ extension BrowserViewController: TabManagerDelegate {
     updateURLBarWalletButton()
   }
 
-  func tabManager(_ tabManager: TabManager, willAddTab tab: Tab) {
+  func tabManager(_ tabManager: TabManager, willAddTab tab: some TabState) {
   }
 
-  func tabManager(_ tabManager: TabManager, didAddTab tab: Tab) {
+  func tabManager(_ tabManager: TabManager, didAddTab tab: some TabState) {
     // If we are restoring tabs then we update the count once at the end
     if !tabManager.isRestoring {
       updateToolbarUsingTabManager(tabManager)
     }
-    tab.tabDelegate = self
+    tab.addObserver(self)
+    tab.addPolicyDecider(self)
+    tab.delegate = self
+    tab.downloadDelegate = self
+    tab.certificateStore = profile.certStore
+    attachTabHelpers(to: tab)
+
+    SnackBarTabHelper.from(tab: tab)?.delegate = self
+
     tab.walletKeyringService = BraveWallet.KeyringServiceFactory.get(privateMode: tab.isPrivate)
     updateTabsBarVisibility()
   }
 
-  func tabManager(_ tabManager: TabManager, willRemoveTab tab: Tab) {
-    tab.webView?.removeFromSuperview()
+  func tabManager(_ tabManager: TabManager, willRemoveTab tab: some TabState) {
+    tab.view.removeFromSuperview()
   }
 
-  func tabManager(_ tabManager: TabManager, didRemoveTab tab: Tab) {
+  func tabManager(_ tabManager: TabManager, didRemoveTab tab: some TabState) {
     updateToolbarUsingTabManager(tabManager)
     // tabDelegate is a weak ref (and the tab's webView may not be destroyed yet)
     // so we don't expcitly unset it.
     topToolbar.leaveOverlayMode(didCancel: true)
     updateTabsBarVisibility()
+    tab.removeObserver(self)
+    tab.removePolicyDecider(self)
 
     if !privateBrowsingManager.isPrivateBrowsing {
-      rewards.reportTabClosed(tabId: Int(tab.rewardsId))
+      rewards.reportTabClosed(tabId: Int(tab.rewardsId ?? 0))
     }
   }
 
@@ -474,7 +474,7 @@ extension BrowserViewController: TabManagerDelegate {
     var closeAllTabMenuChildren: [UIAction] = []
 
     if FeatureList.kBraveShredFeature.enabled,
-      let url = tabManager.selectedTab?.url,
+      let url = tabManager.selectedTab?.visibleURL,
       url.isShredAvailable
     {
       let shredDataAction = UIAction(
@@ -482,7 +482,7 @@ extension BrowserViewController: TabManagerDelegate {
         image: UIImage(braveSystemNamed: "leo.shred.data"),
         attributes: .destructive,
         handler: UIAction.deferredActionHandler { [weak self] _ in
-          guard let tab = self?.tabManager.selectedTab, let url = tab.url else { return }
+          guard let tab = self?.tabManager.selectedTab, let url = tab.visibleURL else { return }
           let alert = UIAlertController.shredDataAlert(url: url) { _ in
             self?.shredData(for: url, in: tab)
           }

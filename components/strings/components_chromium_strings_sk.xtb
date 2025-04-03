@@ -20,6 +20,7 @@
           a zrušte začiarknutie políčka „Používať server proxy pre sieť LAN".</translation>
 <translation id="303960458633076466">Táto stránka bola zablokovaná prehliadačom Brave</translation>
 <translation id="2017237562285586622">Prehliadaču Brave povoľte prístup k sieti v nastaveniach brány firewall alebo antivírusového softvéru.</translation>
+<translation id="4949828774841497663">Prejdite do sekcie Aplikácie &gt; Nastavenia systému &gt; Sieť, vyberte aktívnu sieť, kliknite na tlačidlo Podrobnosti… a zrušte výber všetkých vybraných proxy serverov.</translation>
 <translation id="8619622797841001082">Prejdite na
           ponuku Brave &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -28,6 +29,7 @@
           &gt;
           <ph name="PROXIES_TITLE"/>
           a uistite sa, že je vaša konfigurácia nastavená na hodnotu „žiadny server proxy" alebo „priame".</translation>
+<translation id="6159073403999048272">Tieto stránky môžu používať vývojári prehliadača Brave a nemusia byť aktívne udržiavané ani testované. Ak ich chcete povoliť, prejdite na <ph name="BEGIN_LINK"/>chrome://chrome-urls<ph name="LINK_END"/>, kliknutím na tlačidlo povoľte stránky ladenia a potom sa vráťte na túto stránku.</translation>
 <translation id="2765022094254723779">Prehliadač Brave je založený aj na inom <ph name="BEGIN_LINK_OSS"/>softvéri open source<ph name="END_LINK_OSS"/>.</translation>
 <translation id="9156965752763025780">Zmeny sa prejavia pri nasledujúcom reštartovaní prehliadača Brave.</translation>
 <translation id="8828443087767259398">Prehliadač Brave potrebuje prístup k rozhraniu Bluetooth, aby mohol pokračovať 
@@ -41,9 +43,6 @@
         a zrušte výber položky <ph name="NO_PREFETCH_DESCRIPTION"/>.
         Ak to problém nevyrieši, odporúčame túto možnosť vybrať,
         aby ste získali lepšiu výkonnosť.</translation>
-<translation id="8187289872471304532">Prejdite na možnosť
-          Aplikácie &gt; Systémové predvoľby &gt; Sieť &gt; Rozšírené nastavenia &gt; Servery proxy
-          a zrušte výber všetkých vybratých serverov proxy.</translation>
 <translation id="4159376633403260073">Prezeráte si zabezpečenú stránku Brave for Testing</translation>
 <translation id="88187049159266777">Brave nebol správne vypnutý.</translation>
 </translationbundle>

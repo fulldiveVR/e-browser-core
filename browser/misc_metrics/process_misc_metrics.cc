@@ -6,7 +6,7 @@
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 
 #include "brave/browser/misc_metrics/doh_metrics.h"
-#include "brave/browser/misc_metrics/uptime_monitor.h"
+#include "brave/browser/misc_metrics/uptime_monitor_impl.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
@@ -14,6 +14,7 @@
 #include "brave/browser/misc_metrics/vertical_tab_metrics.h"
 #include "brave/components/misc_metrics/menu_metrics.h"
 #include "brave/components/misc_metrics/new_tab_metrics.h"
+#include "brave/components/misc_metrics/split_view_metrics.h"
 #else
 #include "brave/components/misc_metrics/privacy_hub_metrics.h"
 #include "brave/components/misc_metrics/tab_metrics.h"
@@ -26,6 +27,7 @@ ProcessMiscMetrics::ProcessMiscMetrics(PrefService* local_state) {
   menu_metrics_ = std::make_unique<MenuMetrics>(local_state);
   new_tab_metrics_ = std::make_unique<NewTabMetrics>(local_state);
   vertical_tab_metrics_ = std::make_unique<VerticalTabMetrics>(local_state);
+  split_view_metrics_ = std::make_unique<SplitViewMetrics>(local_state);
 #else
   privacy_hub_metrics_ =
       std::make_unique<misc_metrics::PrivacyHubMetrics>(local_state);
@@ -33,7 +35,8 @@ ProcessMiscMetrics::ProcessMiscMetrics(PrefService* local_state) {
 #endif
   ai_chat_metrics_ = std::make_unique<ai_chat::AIChatMetrics>(local_state);
   doh_metrics_ = std::make_unique<misc_metrics::DohMetrics>(local_state);
-  uptime_monitor_ = std::make_unique<misc_metrics::UptimeMonitor>(local_state);
+  uptime_monitor_ =
+      std::make_unique<misc_metrics::UptimeMonitorImpl>(local_state);
 }
 
 ProcessMiscMetrics::~ProcessMiscMetrics() = default;
@@ -50,6 +53,10 @@ NewTabMetrics* ProcessMiscMetrics::new_tab_metrics() {
 VerticalTabMetrics* ProcessMiscMetrics::vertical_tab_metrics() {
   return vertical_tab_metrics_.get();
 }
+
+SplitViewMetrics* ProcessMiscMetrics::split_view_metrics() {
+  return split_view_metrics_.get();
+}
 #else
 PrivacyHubMetrics* ProcessMiscMetrics::privacy_hub_metrics() {
   return privacy_hub_metrics_.get();
@@ -60,7 +67,7 @@ TabMetrics* ProcessMiscMetrics::tab_metrics() {
 }
 #endif
 
-UptimeMonitor* ProcessMiscMetrics::uptime_monitor() {
+UptimeMonitorImpl* ProcessMiscMetrics::uptime_monitor() {
   return uptime_monitor_.get();
 }
 
@@ -73,13 +80,14 @@ void ProcessMiscMetrics::RegisterPrefs(PrefRegistrySimple* registry) {
   MenuMetrics::RegisterPrefs(registry);
   NewTabMetrics::RegisterPrefs(registry);
   VerticalTabMetrics::RegisterPrefs(registry);
+  SplitViewMetrics::RegisterPrefs(registry);
 #else
   PrivacyHubMetrics::RegisterPrefs(registry);
   TabMetrics::RegisterPrefs(registry);
 #endif
   ai_chat::AIChatMetrics::RegisterPrefs(registry);
   DohMetrics::RegisterPrefs(registry);
-  UptimeMonitor::RegisterPrefs(registry);
+  UptimeMonitorImpl::RegisterPrefs(registry);
 }
 
 }  // namespace misc_metrics

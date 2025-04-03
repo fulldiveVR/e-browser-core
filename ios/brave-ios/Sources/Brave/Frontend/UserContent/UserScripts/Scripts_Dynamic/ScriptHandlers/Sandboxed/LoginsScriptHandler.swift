@@ -8,6 +8,7 @@ import Preferences
 import Shared
 import Storage
 import SwiftyJSON
+import Web
 import WebKit
 import os.log
 
@@ -29,7 +30,7 @@ class LoginsScriptHandler: TabContentScript {
   static let userScript: WKUserScript? = nil
 
   func tab(
-    _ tab: Tab,
+    _ tab: some TabState,
     receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
@@ -82,7 +83,7 @@ class LoginsScriptHandler: TabContentScript {
     }
   }
 
-  private func updateORSaveCredentials(for url: URL, script: [String: Any], tab: Tab) {
+  private func updateORSaveCredentials(for url: URL, script: [String: Any], tab: some TabState) {
     guard let scriptCredentials = passwordAPI.fetchFromScript(url, script: script),
       let username = scriptCredentials.usernameValue,
       scriptCredentials.usernameElement != nil,
@@ -123,7 +124,7 @@ class LoginsScriptHandler: TabContentScript {
     }
   }
 
-  private func showAddPrompt(for login: PasswordForm, tab: Tab) {
+  private func showAddPrompt(for login: PasswordForm, tab: some TabState) {
     addSnackBarForPrompt(for: login, tab: tab, isUpdating: false) { [weak self] in
       guard let self = self else { return }
 
@@ -133,7 +134,7 @@ class LoginsScriptHandler: TabContentScript {
     }
   }
 
-  private func showUpdatePrompt(from old: PasswordForm, to new: PasswordForm, tab: Tab) {
+  private func showUpdatePrompt(from old: PasswordForm, to new: PasswordForm, tab: some TabState) {
     addSnackBarForPrompt(for: new, tab: tab, isUpdating: true) { [weak self] in
       guard let self = self else { return }
 
@@ -143,17 +144,18 @@ class LoginsScriptHandler: TabContentScript {
 
   private func addSnackBarForPrompt(
     for login: PasswordForm,
-    tab: Tab,
+    tab: some TabState,
     isUpdating: Bool,
     _ completion: @escaping () -> Void
   ) {
     guard let username = login.usernameValue else {
       return
     }
+    let snackBarTabHelper = SnackBarTabHelper.from(tab: tab)
 
     // Remove the existing prompt
     if let existingPrompt = self.snackBar {
-      tab.removeSnackbar(existingPrompt)
+      snackBarTabHelper?.removeSnackbar(existingPrompt)
     }
 
     let promptMessage = String(
@@ -174,7 +176,7 @@ class LoginsScriptHandler: TabContentScript {
         ? Strings.loginsHelperDontUpdateButtonTitle : Strings.loginsHelperDontSaveButtonTitle,
       accessibilityIdentifier: "UpdateLoginPrompt.dontSaveUpdateButton"
     ) { [unowned self] bar in
-      tab.removeSnackbar(bar)
+      snackBarTabHelper?.removeSnackbar(bar)
       self.snackBar = nil
       return
     }
@@ -184,7 +186,7 @@ class LoginsScriptHandler: TabContentScript {
         ? Strings.loginsHelperUpdateButtonTitle : Strings.loginsHelperSaveLoginButtonTitle,
       accessibilityIdentifier: "UpdateLoginPrompt.saveUpdateButton"
     ) { [unowned self] bar in
-      tab.removeSnackbar(bar)
+      snackBarTabHelper?.removeSnackbar(bar)
       self.snackBar = nil
 
       completion()
@@ -194,7 +196,7 @@ class LoginsScriptHandler: TabContentScript {
     snackBar?.addButton(saveORUpdate)
 
     if let bar = snackBar {
-      tab.addSnackbar(bar)
+      snackBarTabHelper?.addSnackbar(bar)
     }
   }
 
@@ -203,7 +205,7 @@ class LoginsScriptHandler: TabContentScript {
     logins: [PasswordForm],
     requestId: String,
     frameInfo: WKFrameInfo,
-    tab: Tab
+    tab: some TabState
   ) {
     let securityOrigin = frameInfo.securityOrigin
 
@@ -217,7 +219,7 @@ class LoginsScriptHandler: TabContentScript {
 
       // Check for current tab has a url to begin with
       // and the frame is not modified
-      guard let currentURL = tab.webView?.url,
+      guard let currentURL = tab.visibleURL,
         LoginsScriptHandler.checkIsSameFrame(
           url: currentURL,
           frameScheme: securityOrigin.protocol,
@@ -245,7 +247,7 @@ class LoginsScriptHandler: TabContentScript {
       return
     }
 
-    tab.webView?.evaluateSafeJavaScript(
+    tab.evaluateJavaScript(
       functionName: "window.__firefox__.logins.inject",
       args: [jsonString],
       contentWorld: LoginsScriptHandler.scriptSandbox,

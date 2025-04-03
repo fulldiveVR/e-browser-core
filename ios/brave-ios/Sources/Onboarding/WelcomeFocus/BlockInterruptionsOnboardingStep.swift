@@ -11,17 +11,16 @@ struct BlockInterruptionsGraphicView: View {
   @Environment(\.colorScheme) private var colorScheme
 
   var body: some View {
-    LottieView(
-      animation: .named(
+    LottieView {
+      try await DotLottieFile.named(
         colorScheme == .dark ? "novideo-ads-dark" : "novideo-ads-light",
         bundle: .module,
         subdirectory: "LottieAssets/\(Locale.current.region?.identifier == "JP" ? "ja" : "en")"
       )
-    )
+    }
     .resizable()
     .playing(loopMode: .loop)
-    .aspectRatio(contentMode: .fit)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .id(colorScheme)
   }
 }
 

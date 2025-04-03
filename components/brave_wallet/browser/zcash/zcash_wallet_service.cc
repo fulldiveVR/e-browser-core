@@ -13,6 +13,7 @@
 #include "base/check_is_test.h"
 #include "base/containers/span.h"
 #include "base/task/thread_pool.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_create_transparent_transaction_task.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_discover_next_unused_zcash_address_task.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_get_transparent_utxos_context.h"
@@ -20,7 +21,6 @@
 #include "brave/components/brave_wallet/browser/zcash/zcash_resolve_transaction_status_task.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_serializer.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_tx_meta.h"
-#include "brave/components/brave_wallet/common/btc_like_serializer_stream.h"
 #include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
 #include "brave/components/brave_wallet/common/zcash_utils.h"
@@ -28,6 +28,7 @@
 #include "ui/base/l10n/l10n_util.h"
 
 #if BUILDFLAG(ENABLE_ORCHARD)
+#include "brave/components/brave_wallet/browser/zcash/zcash_auto_sync_manager.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_create_orchard_to_orchard_transaction_task.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_create_transparent_to_orchard_transaction_task.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_get_zcash_chain_tip_status_task.h"
@@ -96,8 +97,8 @@ void ZCashWalletService::GetBalance(const std::string& chain_id,
                                     GetBalanceCallback callback) {
   auto& task = resolve_balance_tasks_.emplace_back(
       std::make_unique<ZCashResolveBalanceTask>(
-          base::PassKey<ZCashWalletService>(), *this, chain_id,
-          std::move(account_id),
+          base::PassKey<ZCashWalletService>(), *this,
+          CreateActionContext(account_id, chain_id),
           base::BindOnce(&ZCashWalletService::OnResolveBalanceResult,
                          weak_ptr_factory_.GetWeakPtr(), std::move(callback))));
   task->Start();
@@ -119,8 +120,7 @@ void ZCashWalletService::GetReceiverAddress(
   auto id = mojom::ZCashKeyId::New(account_id->account_index, 0, 0);
   auto addr = keyring_service_->GetZCashAddress(account_id, *id);
   if (!addr) {
-    std::move(callback).Run(
-        nullptr, l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+    std::move(callback).Run(nullptr, WalletInternalErrorMessage());
     return;
   }
   auto str_addr = addr->address_string;
@@ -286,8 +286,7 @@ void ZCashWalletService::OnRunDiscoveryDone(
       UpdateNextUnusedAddressForAccount(account_id, *item);
       result.push_back(item->Clone());
     } else {
-      std::move(callback).Run(base::unexpected(
-          l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+      std::move(callback).Run(base::unexpected(WalletInternalErrorMessage()));
       return;
     }
   }
@@ -317,7 +316,7 @@ void ZCashWalletService::DiscoverNextUnusedAddress(
   auto account_info = keyring_service_->GetZCashAccountInfo(account_id);
   if (!account_info) {
     return std::move(callback).Run(
-        base::unexpected(l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+        base::unexpected(WalletInternalErrorMessage()));
   }
   auto start_address =
       change ? account_info->next_transparent_change_address.Clone()
@@ -333,15 +332,13 @@ void ZCashWalletService::GetUtxos(const std::string& chain_id,
                                   GetUtxosCallback callback) {
   if (!IsZCashNetwork(chain_id)) {
     // Desktop frontend sometimes does that.
-    std::move(callback).Run(
-        base::unexpected(l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+    std::move(callback).Run(base::unexpected(WalletInternalErrorMessage()));
     return;
   }
 
   const auto& addresses = keyring_service_->GetZCashAddresses(account_id);
   if (!addresses) {
-    std::move(callback).Run(
-        base::unexpected(l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+    std::move(callback).Run(base::unexpected(WalletInternalErrorMessage()));
     return;
   }
 
@@ -413,7 +410,8 @@ void ZCashWalletService::AddObserver(
 }
 
 base::expected<mojom::ZCashTxType, mojom::ZCashAddressError>
-ZCashWalletService::GetTransactionType(bool testnet,
+ZCashWalletService::GetTransactionType(const mojom::AccountIdPtr& account_id,
+                                       bool testnet,
                                        bool use_shielded_pool,
                                        const std::string& addr) {
 #if BUILDFLAG(ENABLE_ORCHARD)
@@ -427,6 +425,10 @@ ZCashWalletService::GetTransactionType(bool testnet,
     }
 
     if (ValidateOrchardRecipientAddress(testnet, addr).has_value()) {
+      auto account_info = keyring_service_->GetZCashAccountInfo(account_id);
+      if (account_info && account_info->orchard_internal_address == addr) {
+        return base::ok(mojom::ZCashTxType::kShielding);
+      }
       return base::ok(mojom::ZCashTxType::kTransparentToOrchard);
     }
   }
@@ -440,11 +442,13 @@ ZCashWalletService::GetTransactionType(bool testnet,
 }
 
 void ZCashWalletService::GetTransactionType(
+    mojom::AccountIdPtr account_id,
     bool testnet,
     bool use_shielded_pool,
     const std::string& addr,
     GetTransactionTypeCallback callback) {
-  auto result = GetTransactionType(testnet, use_shielded_pool, addr);
+  auto result =
+      GetTransactionType(account_id, testnet, use_shielded_pool, addr);
   if (result.has_value()) {
     std::move(callback).Run(result.value(), mojom::ZCashAddressError::kNoError);
   } else {
@@ -462,8 +466,7 @@ void ZCashWalletService::OnSendTransactionResult(
     CHECK(tx_id_hex.starts_with("0x"));
     std::move(callback).Run(tx_id_hex.substr(2), std::move(tx), "");
   } else {
-    std::move(callback).Run(
-        "", std::move(tx), l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+    std::move(callback).Run("", std::move(tx), WalletInternalErrorMessage());
   }
 }
 
@@ -473,8 +476,7 @@ void ZCashWalletService::OnDiscoveryDoneForBalance(
     GetBalanceCallback callback,
     RunDiscoveryResult discovery_result) {
   if (!discovery_result.has_value()) {
-    std::move(callback).Run(
-        nullptr, l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+    std::move(callback).Run(nullptr, WalletInternalErrorMessage());
     return;
   }
   GetUtxos(chain_id, std::move(account_id),
@@ -610,6 +612,40 @@ void ZCashWalletService::ResetSyncState(mojom::AccountIdPtr account_id,
 }
 
 #if BUILDFLAG(ENABLE_ORCHARD)
+void ZCashWalletService::MaybeInitAutoSyncManagers() {
+  if (!IsZCashShieldedTransactionsEnabled()) {
+    return;
+  }
+  if (keyring_service_->IsLockedSync()) {
+    return;
+  }
+  const auto& accounts = keyring_service_->GetAllAccountInfos();
+  for (const auto& account : accounts) {
+    if (account->account_id->coin != mojom::CoinType::ZEC) {
+      continue;
+    }
+
+    if (!IsZCashMainnetKeyring(account->account_id->keyring_id)) {
+      continue;
+    }
+
+    auto account_info =
+        keyring_service_->GetZCashAccountInfo(account->account_id);
+    if (!account_info || !account_info->account_shield_birthday) {
+      continue;
+    }
+
+    if (auto_sync_managers_.contains(account->account_id)) {
+      continue;
+    }
+
+    auto async_manager = std::make_unique<ZCashAutoSyncManager>(
+        *this, CreateActionContext(account->account_id, mojom::kZCashMainnet));
+    async_manager->Start();
+    auto_sync_managers_[account->account_id.Clone()] = std::move(async_manager);
+  }
+}
+
 void ZCashWalletService::CreateShieldAllTransaction(
     const std::string& chain_id,
     mojom::AccountIdPtr account_id,
@@ -637,8 +673,7 @@ void ZCashWalletService::CreateOrchardToOrchardTransaction(
   auto receiver_addr =
       GetOrchardRawBytes(address_to, chain_id == mojom::kZCashTestnet);
   if (!receiver_addr) {
-    std::move(callback).Run(
-        base::unexpected(l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+    std::move(callback).Run(base::unexpected(WalletInternalErrorMessage()));
     return;
   }
 
@@ -662,8 +697,7 @@ void ZCashWalletService::CreateTransparentToOrchardTransaction(
   auto receiver_addr =
       GetOrchardRawBytes(address_to, chain_id == mojom::kZCashTestnet);
   if (!receiver_addr) {
-    std::move(callback).Run(
-        base::unexpected(l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR)));
+    std::move(callback).Run(base::unexpected(WalletInternalErrorMessage()));
     return;
   }
 
@@ -693,8 +727,7 @@ void ZCashWalletService::CreateShieldAllTransactionTaskDone(
     ShieldAllFundsCallback callback,
     base::expected<ZCashTransaction, std::string> transaction) {
   if (!transaction.has_value()) {
-    std::move(callback).Run(
-        std::nullopt, l10n_util::GetStringUTF8(IDS_WALLET_INTERNAL_ERROR));
+    std::move(callback).Run(std::nullopt, WalletInternalErrorMessage());
     return;
   }
   SignAndPostTransaction(
@@ -775,6 +808,9 @@ void ZCashWalletService::OnGetTreeStateForAccountBirthday(
   keyring_service_->SetZCashAccountBirthday(
       account_id, mojom::ZCashAccountShieldBirthday::New((*result)->height,
                                                          (*result)->hash));
+
+  MaybeInitAutoSyncManagers();
+
   std::move(callback).Run(std::nullopt);
 }
 
@@ -918,10 +954,15 @@ void ZCashWalletService::Unlocked() {
       RunDiscovery(account->account_id.Clone(), base::DoNothing());
     }
   }
+
+#if BUILDFLAG(ENABLE_ORCHARD)
+  MaybeInitAutoSyncManagers();
+#endif  // BUILDFLAG(ENABLE_ORCHARD)
 }
 
 void ZCashWalletService::Locked() {
 #if BUILDFLAG(ENABLE_ORCHARD)
+  auto_sync_managers_.clear();
   shield_sync_services_.clear();
 #endif  // BUILDFLAG(ENABLE_ORCHARD)
 }
@@ -937,9 +978,16 @@ void ZCashWalletService::Reset() {
 ZCashActionContext ZCashWalletService::CreateActionContext(
     const mojom::AccountIdPtr& account_id,
     const std::string chain_id) {
+#if BUILDFLAG(ENABLE_ORCHARD)
+  std::optional<OrchardAddrRawPart> internal_addr;
+  if (IsZCashShieldedTransactionsEnabled()) {
+    internal_addr = keyring_service_->GetOrchardRawBytes(
+        account_id, mojom::ZCashKeyId::New(account_id->account_index, 1, 0));
+  }
+#endif
   return ZCashActionContext(*zcash_rpc_,
 #if BUILDFLAG(ENABLE_ORCHARD)
-                            sync_state_,
+                            internal_addr, sync_state_,
 #endif
                             account_id.Clone(), chain_id);
 }

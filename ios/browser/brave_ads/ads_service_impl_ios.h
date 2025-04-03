@@ -7,13 +7,17 @@
 #define BRAVE_IOS_BROWSER_BRAVE_ADS_ADS_SERVICE_IMPL_IOS_H_
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
 #include "base/memory/weak_ptr.h"
+#include "base/types/optional_ref.h"
+#include "base/values.h"
 #include "brave/components/brave_ads/core/browser/service/ads_service.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 #include "brave/components/brave_ads/core/public/ads_callback.h"
+#include "brave/components/brave_ads/core/public/common/functional/once_closure_task_queue.h"
 #include "brave/components/brave_ads/core/public/service/ads_service_callback.h"
 
 class PrefService;
@@ -26,6 +30,7 @@ namespace brave_ads {
 
 class Ads;
 class AdsClient;
+struct NewTabPageAdInfo;
 
 class AdsServiceImplIOS : public AdsService {
  public:
@@ -83,14 +88,13 @@ class AdsServiceImplIOS : public AdsService {
       mojom::InlineContentAdEventType mojom_ad_event_type,
       TriggerAdEventCallback callback) override;
 
-  std::optional<NewTabPageAdInfo> MaybeGetPrefetchedNewTabPageAdForDisplay()
-      override;
+  std::optional<NewTabPageAdInfo> MaybeGetPrefetchedNewTabPageAd() override;
   void PrefetchNewTabPageAd() override;
   void OnFailedToPrefetchNewTabPageAd(
       const std::string& placement_id,
       const std::string& creative_instance_id) override;
   void ParseAndSaveCreativeNewTabPageAds(
-      const base::Value::Dict& data,
+      base::Value::Dict dict,
       ParseAndSaveCreativeNewTabPageAdsCallback callback) override;
   void TriggerNewTabPageAdEvent(
       const std::string& placement_id,
@@ -167,15 +171,28 @@ class AdsServiceImplIOS : public AdsService {
   void ClearAdsData(ClearDataCallback callback, bool success);
   void ClearAdsDataCallback(ClearDataCallback callback);
 
+  // TODO(https://github.com/brave/brave-browser/issues/26192) Decouple new
+  // tab page ad business logic.
+  void PrefetchNewTabPageAdCallback(
+      base::optional_ref<const NewTabPageAdInfo> new_tab_page_ad);
+  void OnParseAndSaveCreativeNewTabPageAdsCallback(
+      ParseAndSaveCreativeNewTabPageAdsCallback callback,
+      bool success);
+
   const raw_ptr<PrefService> prefs_ = nullptr;  // Not owned.
 
   const scoped_refptr<base::SequencedTaskRunner> file_task_runner_;
+
+  OnceClosureTaskQueue task_queue_;
 
   base::FilePath storage_path_;
   std::unique_ptr<AdsClient> ads_client_;
   mojom::SysInfoPtr mojom_sys_info_;
   mojom::BuildChannelInfoPtr mojom_build_channel_;
   mojom::WalletInfoPtr mojom_wallet_;
+
+  std::optional<NewTabPageAdInfo> prefetched_new_tab_page_ad_;
+  bool is_prefetching_new_tab_page_ad_ = false;
 
   std::unique_ptr<Ads> ads_;
 

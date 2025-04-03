@@ -333,6 +333,7 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="1336940801687497203">Atitinka „Windows“</translation>
 <translation id="8721331068159819483">Atitinka „MacOS“</translation>
 <translation id="4171684937791228083">Visada rodyti įrankių juostą viso ekrano režimu</translation>
+<translation id="5840822070878669614">Atverti internetinę parduotuvę</translation>
 <translation id="1692470335103807198">Gauti daugiau temų</translation>
 <translation id="2906510232093002459">„Brave“ numatytieji vaizdai</translation>
 <translation id="8000020256436988724">Įrankių juosta</translation>
@@ -407,6 +408,7 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="3570081523466826008">Pakeisti ryšius į HTTPS</translation>
 <translation id="3357319404342882895">Griežtai</translation>
 <translation id="8823559166155093873">Blokuoti slapukus</translation>
+<translation id="7093267802941377072">Parinktis „Blokuoti visus slapukus“ nebenaudojama. Norėdami sužinoti, kaip priverstinai įjungti šią parinktį, apsilankykite <ph name="BEGIN_LINK"/>mūsų pagalbos puslapyje<ph name="END_LINK"/></translation>
 <translation id="6196640612572343990">Blokuoti trečiosios šalies slapukus</translation>
 <translation id="5657156137487675418">Leisti visus slapukus</translation>
 <translation id="6883611015375728278">Blokuoti visus slapukus</translation>
@@ -496,6 +498,7 @@ Arba vėliau pakeiskite dalyje <ph name="SETTINGS_EXTENIONS_LINK"/>.</translatio
 <translation id="1389601498324964367">Kvotų valdoma saugykla</translation>
 <translation id="814018970995616154">Tikrina nesaugių svetainių sąrašą ir universaliuosius adresus, saugomus sistemoje „Brave“.</translation>
 <translation id="1144810021918451336">Neapsaugo nuo pavojingų svetainių, siuntų ir plėtinių.</translation>
+<translation id="4905744245455598930">Apsaugo nuo svetainių, atsisiuntimų ir plėtinių, kurie laikomi pavojingais.</translation>
 <translation id="5570470519803062774">Svetainės ir skydų nuostatos</translation>
 <translation id="410351446219883937">Leisti automatiškai</translation>
 <translation id="3512883292907992390">Leisti svetainėms automatiškai paleisti vaizdo įrašus</translation>
@@ -587,13 +590,14 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="4908081302669157000">Telefono numeriai, el. pašto adresai ir adresai</translation>
 <translation id="294985549514492876">Saityno programos (PWA)</translation>
 <translation id="7029809446516969842">Slaptažodžiai</translation>
-<translation id="924029461438529367">Rodyti paieškos pasiūlymus</translation>
-<translation id="3128251601544028053">Užklausa, kurią įvedate adreso juostoje arba paieškos lauke, įrašytą informaciją „Brave“ perduoda numatytajai paieškos sistemai, kad gautų geresnių pasiūlymų. Ši funkcija išjungta naršant privačiuoju režimu.</translation>
+<translation id="6011308810877101166">Pagerinti paieškos pasiūlymus</translation>
+<translation id="2332576387809612040">Kai funkcija įjungta, „Brave“ siunčia adreso juostoje arba paieškos laukelyje įvestą informaciją į numatytąjį paieškos variklį, kad gautumėte geresnių pasiūlymų. Kai funkcija išjungta, „Brave“ rodo tik jūsų įrenginyje sukurtus pasiūlymus. Privačiuose languose ši funkcija visada išjungta.</translation>
 <translation id="6285118765755298263">Indeksuoti kitus ieškos modulius</translation>
 <translation id="919715748352669592">Automatiškai indeksuoja svetaines, kurios atitinka „OpenSearch“ specifikaciją.</translation>
 <translation id="5522403133543437426">Paieškos sistema naudojama adreso juostoje.</translation>
 <translation id="280472502078788655">Paieškos sistema naudojama inkognito langų adreso juostoje.</translation>
 <translation id="7232120595886556478">Įprastas langas</translation>
+<translation id="6739674350896546324">„Private Windows“ skirta paieškos sistema</translation>
 <translation id="1280261732441045146"><ph name="SEARCH_ENGINE_NAME"/> dabar yra jūsų numatytoji inkognito langų paieškos sitema</translation>
 <translation id="6864914031231797928">Leisti „Google“ prisijungti prie plėtinių</translation>
 <translation id="7878791177459550035">Medijos maršrutizatorius naršyklėje įgalina perdavimo funkciją.</translation>
@@ -641,7 +645,6 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="188228077840632890">„AdGuard“ yra deklaracijos V2 plėtinys, teikiantis skelbimų blokavimo, tėvų kontrolės parinktis bei integracijos į kitus „AdGuard“ paslaugų pasiūlymus funkciją.</translation>
 <translation id="8137559199583651773">Tvarkyti plėtinius</translation>
 <translation id="7013485839273047434">Gauti daugiau plėtinių</translation>
-<translation id="5840822070878669614">Atverti internetinę parduotuvę</translation>
 <translation id="4954512758656527938">Numatytoji „Ethereum“ piniginė</translation>
 <translation id="7701023802820268122">Numatytoji „Solana“ piniginė</translation>
 <translation id="8488282162676695335">„Brave“ piniginė</translation>
@@ -671,6 +674,7 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="1561541094377237745">„Solana“ tinklai</translation>
 <translation id="7141438739990875547">„Bitcoin“ tinklai</translation>
 <translation id="1077567586443625607">„Zcash“ tinklai</translation>
+<translation id="1177180573354712438">„Cardano“ tinklai</translation>
 <translation id="3159419679550543837">Rodyti bandomuosius tinklus</translation>
 <translation id="3215569562674795548">Pridėti arba redaguoti naują tinklą</translation>
 <translation id="4418993400653250511">Grandinės ID</translation>
@@ -731,7 +735,7 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="3213787232304349732">URL, kuriame jūsų aptarnaujanti sistema klausosi užklausų. Jei nesate tikri, patikrinkite aptarnaujančios sistemos dokumentaciją. Pavyzdžiui, „Ollama“ atveju tai visada yra http://localhost:11434/v1/chat/completions</translation>
 <translation id="1058790648388035953">Kai kurios aptarnaujančios sistemos gali reikalauti autentifikavimo duomenų, pavyzdžiui, API rakto arba prieigos žetono. Jie bus įtraukti į užklausos antraštę.</translation>
 <translation id="4335128003329183586">Konteksto dydis</translation>
-<translation id="8794525422794607973">Didžiausias žetonų skaičius, kurį modelis gali apdoroti per vieną sąveiką. Kiekvieną žetoną sudaro maždaug 3/4 žodžio. Daugiau konteksto leidžia modeliui apdoroti ilgesnius pokalbius. Skirtingi modeliai palaiko skirtingus didžiausius konteksto dydžius.</translation>
+<translation id="3153779001670804829">Didžiausias žetonų skaičius, kurį modelis gali apdoroti per vieną sąveiką. Daugiau konteksto leidžia modeliui apdoroti ilgesnius pokalbius. Skirtingi modeliai palaiko skirtingus didžiausius konteksto dydžius.</translation>
 <translation id="217141195370578385">„Brave“ nepatvirtina šių prašymų, perskaitykite pasirinkto paslaugų teikėjo privatumo sąlygas.</translation>
 <translation id="2645532768679870478">Saugiam duomenų perdavimui ne vietiniuose galiniuose taškuose turėtų būti naudojamas HTTPS protokolas.</translation>
 <translation id="8177205483022887785">Įvedėte netinkamą URL adresą. Įveskite tinkamą URL adresą.</translation>
@@ -743,7 +747,7 @@ vėl naudoti sinchronizavimą, turėsite susikurti naują paskyrą ir pridėti �
 <translation id="7265212806651512211">Dar neprijungėte modelio.</translation>
 <translation id="7304802428852949897">Jūsų modeliai</translation>
 <translation id="7435587476558117990">Prisijunkite savo arba trečiosios šalies prieglobos LLM prie „Leo“ ir naudokite jas naršyklėje.</translation>
-<translation id="1381050642750209119">Naudokite bet kurią su „OpenAI“ pokalbių protokolu suderinamą sistemą, pavyzdžiui, „Ollama“.</translation>
+<translation id="8137606697798069075">Naudokite bet kurią su „OpenAI“ pokalbių protokolu suderinamą sistemą, pavyzdžiui, „Ollama“.<ph name="BEGIN_LINK"/> Sužinokite daugiau<ph name="END_LINK"/></translation>
 <translation id="2642905648178380593">Įrašyti modelį</translation>
 <translation id="6304169450064541679">Sistemos raginimas</translation>
 <translation id="3081947790648024460">Asmeninės instrukcijos ir (arba) kontekstas, pateikiamas modeliui, kad jo atsakymai būtų nukreipti tam tikra linkme ar stiliumi. Vietoje, kurioje norite įterpti dabartinę datą ir laiką, naudokite %datetime%.</translation>

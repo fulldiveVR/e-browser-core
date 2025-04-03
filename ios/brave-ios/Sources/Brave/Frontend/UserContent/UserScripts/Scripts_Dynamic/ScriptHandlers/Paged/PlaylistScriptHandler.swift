@@ -9,6 +9,7 @@ import Foundation
 import Playlist
 import Preferences
 import Shared
+import Web
 import WebKit
 import os.log
 
@@ -19,44 +20,28 @@ enum PlaylistItemAddedState {
 }
 
 protocol PlaylistScriptHandlerDelegate: NSObject {
-  func updatePlaylistURLBar(tab: Tab?, state: PlaylistItemAddedState, item: PlaylistInfo?)
-  func showPlaylistPopover(tab: Tab?)
-  func showPlaylistToast(tab: Tab?, state: PlaylistItemAddedState, item: PlaylistInfo?)
-  func showPlaylistAlert(tab: Tab?, state: PlaylistItemAddedState, item: PlaylistInfo?)
-  func showPlaylistOnboarding(tab: Tab?)
+  func updatePlaylistURLBar(
+    tab: (any TabState)?,
+    state: PlaylistItemAddedState,
+    item: PlaylistInfo?
+  )
+  func showPlaylistPopover(tab: (any TabState)?)
+  func showPlaylistToast(tab: (any TabState)?, state: PlaylistItemAddedState, item: PlaylistInfo?)
+  func showPlaylistAlert(tab: (any TabState)?, state: PlaylistItemAddedState, item: PlaylistInfo?)
+  func showPlaylistOnboarding(tab: (any TabState)?)
 }
 
-class PlaylistScriptHandler: NSObject, TabContentScript {
+class PlaylistScriptHandler: NSObject, TabContentScript, TabObserver {
   public weak var delegate: PlaylistScriptHandlerDelegate?
   private var url: URL?
-  private var urlObserver: NSObjectProtocol?
   private var asset: AVURLAsset?
   private static let queue = DispatchQueue(label: "com.playlisthelper.queue", qos: .userInitiated)
 
-  init(tab: Tab) {
-    self.url = tab.url
+  init(tab: some TabState) {
+    self.url = tab.visibleURL
     super.init()
 
-    urlObserver = tab.webView?.observe(
-      \.url,
-      options: [.new],
-      changeHandler: { [weak self, weak tab] _, change in
-        guard let self = self, let url = change.newValue else { return }
-        if self.url != url {
-          self.url = url
-          self.asset?.cancelLoading()
-          self.asset = nil
-
-          self.delegate?.updatePlaylistURLBar(tab: tab, state: .none, item: nil)
-        }
-      }
-    )
-
-    tab.webView?.addGestureRecognizer(
-      UILongPressGestureRecognizer(target: self, action: #selector(onLongPressedWebView(_:))).then {
-        $0.delegate = self
-      }
-    )
+    tab.addObserver(self)
   }
 
   deinit {
@@ -98,7 +83,7 @@ class PlaylistScriptHandler: NSObject, TabContentScript {
   }()
 
   func tab(
-    _ tab: Tab,
+    _ tab: some TabState,
     receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
@@ -126,7 +111,7 @@ class PlaylistScriptHandler: NSObject, TabContentScript {
   }
 
   private class func processPlaylistInfo(
-    tab: Tab,
+    tab: some TabState,
     handler: PlaylistScriptHandler,
     item: PlaylistInfo?
   ) {
@@ -149,8 +134,8 @@ class PlaylistScriptHandler: NSObject, TabContentScript {
     item = PlaylistInfo(
       name: item.name,
       src: item.src,
-      pageSrc: tab.webView?.url?.absoluteString ?? item.pageSrc,
-      pageTitle: tab.webView?.title ?? item.pageTitle,
+      pageSrc: tab.visibleURL?.absoluteString ?? item.pageSrc,
+      pageTitle: tab.title ?? item.pageTitle,
       mimeType: item.mimeType,
       duration: item.duration,
       lastPlayedOffset: 0.0,
@@ -209,7 +194,7 @@ class PlaylistScriptHandler: NSObject, TabContentScript {
     return await PlaylistMediaStreamer.loadAssetPlayability(asset: asset)
   }
 
-  private func updateItem(_ item: PlaylistInfo, detected: Bool, tab: Tab) {
+  private func updateItem(_ item: PlaylistInfo, detected: Bool, tab: some TabState) {
     if detected {
       self.delegate?.updatePlaylistURLBar(tab: tab, state: .existingItem, item: item)
     }
@@ -228,58 +213,25 @@ class PlaylistScriptHandler: NSObject, TabContentScript {
       }
     }
   }
-}
 
-extension PlaylistScriptHandler: UIGestureRecognizerDelegate {
-  @objc
-  func onLongPressedWebView(_ gestureRecognizer: UILongPressGestureRecognizer) {
-    if gestureRecognizer.state == .began,
-      let webView = gestureRecognizer.view as? TabWebView,
-      Preferences.Playlist.enableLongPressAddToPlaylist.value
-    {
+  // MARK: - TabObserver
 
-      // If this URL is blocked from Playlist support, do nothing
-      if url?.isPlaylistBlockedSiteURL == true {
-        return
-      }
+  func tabDidUpdateURL(_ tab: some TabState) {
+    url = tab.visibleURL
+    asset?.cancelLoading()
+    asset = nil
 
-      let touchPoint = gestureRecognizer.location(in: webView)
-
-      webView.evaluateSafeJavaScript(
-        functionName: "window.__firefox__.\(PlaylistScriptHandler.playlistLongPressed)",
-        args: [touchPoint.x, touchPoint.y, Self.scriptId],
-        contentWorld: Self.scriptSandbox,
-        asFunction: true
-      ) { _, error in
-
-        if let error = error {
-          Logger.module.error("Error executing onLongPressActivated: \(error.localizedDescription)")
-        }
-      }
-    }
+    delegate?.updatePlaylistURLBar(tab: tab, state: .none, item: nil)
   }
 
-  func gestureRecognizer(
-    _ gestureRecognizer: UIGestureRecognizer,
-    shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
-  ) -> Bool {
-    if otherGestureRecognizer.isKind(of: UILongPressGestureRecognizer.self) {
-      return true
-    }
-    return false
-  }
-
-  func gestureRecognizer(
-    _ gestureRecognizer: UIGestureRecognizer,
-    shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer
-  ) -> Bool {
-    return false
+  func tabWillBeDestroyed(_ tab: some TabState) {
+    tab.removeObserver(self)
   }
 }
 
 extension PlaylistScriptHandler {
   static func getCurrentTime(
-    webView: TabWebView,
+    tab: some TabState,
     nodeTag: String,
     completion: @escaping (Double) -> Void
   ) {
@@ -288,7 +240,7 @@ extension PlaylistScriptHandler {
       return
     }
 
-    webView.evaluateSafeJavaScript(
+    tab.evaluateJavaScript(
       functionName: "window.__firefox__.\(mediaCurrentTimeFromTag)",
       args: [nodeTag, Self.scriptId],
       contentWorld: Self.scriptSandbox,
@@ -311,10 +263,10 @@ extension PlaylistScriptHandler {
     }
   }
 
-  static func stopPlayback(tab: Tab?) {
+  static func stopPlayback(tab: (any TabState)?) {
     guard let tab = tab else { return }
 
-    tab.webView?.evaluateSafeJavaScript(
+    tab.evaluateJavaScript(
       functionName: "window.__firefox__.\(stopMediaPlayback)",
       args: [Self.scriptId],
       contentWorld: Self.scriptSandbox,
@@ -330,8 +282,10 @@ extension PlaylistScriptHandler {
 }
 
 extension PlaylistScriptHandler {
-  static func updatePlaylistTab(tab: Tab, item: PlaylistInfo?) {
-    if let handler = tab.getContentScript(name: Self.scriptName) as? PlaylistScriptHandler {
+  static func updatePlaylistTab(tab: some TabState, item: PlaylistInfo?) {
+    if let handler = tab.browserData?.getContentScript(name: Self.scriptName)
+      as? PlaylistScriptHandler
+    {
       Self.processPlaylistInfo(tab: tab, handler: handler, item: item)
     }
   }

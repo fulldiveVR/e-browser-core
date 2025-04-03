@@ -19,6 +19,10 @@ COMPONENT_EXPORT(AI_CHAT_COMMON)
 extern const base::FeatureParam<std::string> kAIModelsDefaultKey;
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 extern const base::FeatureParam<std::string> kAIModelsPremiumDefaultKey;
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+extern const base::FeatureParam<std::string> kAIModelsVisionDefaultKey;
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+extern const base::FeatureParam<std::string> kAIModelsPremiumVisionDefaultKey;
 
 // If true, certain freemium models are available to non-premium users. If
 // false, those models are premium-only.
@@ -39,6 +43,10 @@ COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsAIChatEnabled();
 COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChatHistory);
 
 COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsAIChatHistoryEnabled();
+
+COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChatFirst);
+
+COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsAIChatFirstEnabled();
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kCustomSiteDistillerScripts);
@@ -62,6 +70,10 @@ COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsOpenAIChatFromBraveSearchEnabled();
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kPageContextEnabledInitially);
 COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsPageContextEnabledInitially();
+
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+BASE_DECLARE_FEATURE(kTabOrganization);
+COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsTabOrganizationEnabled();
 
 }  // namespace ai_chat::features
 

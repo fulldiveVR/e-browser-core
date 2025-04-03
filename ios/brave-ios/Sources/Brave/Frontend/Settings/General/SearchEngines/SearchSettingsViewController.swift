@@ -4,6 +4,7 @@
 
 import Shared
 import UIKit
+import Web
 import os.log
 
 // MARK: - SearchEnginePickerDelegate
@@ -170,7 +171,9 @@ class SearchSettingsViewController: UITableViewController {
 
   // MARK: Internal
 
-  private func configureSearchEnginePicker(_ type: DefaultEngineType) -> SearchEnginePickerViewController {
+  private func configureSearchEnginePicker(
+    _ type: DefaultEngineType
+  ) -> SearchEnginePickerViewController {
     return SearchEnginePickerViewController(type: type, showCancel: false).then {
       // Order alphabetically, so that picker is always consistently ordered.
       // Every engine is a valid choice for the default engine, even the current default engine.

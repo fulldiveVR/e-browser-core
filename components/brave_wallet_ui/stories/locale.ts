@@ -1257,6 +1257,8 @@ provideStrings({
   braveWalletSwappingOrBridgingOnNetwork: '$1$5$2 on $3$6$4',
   braveWalletErrorAttemptingToTransactOnNetwork:
     'There was an error attempting to $1$5$2 on $3$6$4',
+  braveWalletShieldingAmount: 'Shielding $1$5$2',
+  braveWalletAmountHasBeenShielded: '$1$5$2 has been shielded',
   // Submitted
   braveWalletTransactionSubmittedTitle: 'Transaction submitted',
   braveWalletTransactionSignedTitle: 'Transaction signed',
@@ -1538,7 +1540,10 @@ provideStrings({
   braveWalletOutOfSyncBlocksBehindTitle: 'Out of sync ($1 blocks behind)',
   braveWalletOutOfSyncDescription:
     'Sync your account to access the latest transactions and balance.',
+  braveWalletZCashPendingBalanceTitle:
+    'Pending balance (more confirmations required): $1',
   braveWalletSyncAccountButton: 'Sync account',
+  braveWalletSyncAccountButtonInProgress: 'Syncing...',
   braveWalletSyncAccountName: 'Sync $1',
   braveWalletInitializing: 'Initializing...',
   braveWalletProcessingBlock: 'Processing block:',
@@ -1556,5 +1561,8 @@ provideStrings({
   braveWalletAccountBirthdayTooHigh: 'Account birthday must be less than $1',
   braveWalletBlocksBehind: '$1 blocks behind',
   braveWalletAccountIsSyncing: 'Account is syncing',
-  braveWalletSyncing: 'Syncing'
+  braveWalletSyncing: 'Syncing',
+  braveWalletReviewShield: 'Review shield',
+  braveWalletShielding: 'Shielding',
+  braveWalletShieldZEC: 'Shield ZEC'
 })

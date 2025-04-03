@@ -259,6 +259,8 @@ void TestBase::Mock() {
 
   MockBuildChannel(BuildChannelType::kRelease);
 
+  MockContentSettings();
+
   SetUpMocks();
 
   // Must be called after `SetUpMocks` because `SetupMocks` may call
@@ -308,7 +310,7 @@ void TestBase::SetUpIntegrationTest() {
                    base::BindOnce(&TestBase::SetUpIntegrationTestCallback,
                                   weak_factory_.GetWeakPtr()));
 
-  AdsClientNotifierWaiter(*this).WaitForAdsInitialization();
+  AdsClientNotifierWaiter(/*notifier=*/this).WaitForOnNotifyDidInitializeAds();
 }
 
 void TestBase::SetUpIntegrationTestCallback(bool success) {

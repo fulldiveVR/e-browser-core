@@ -7,6 +7,7 @@ import BraveCore
 import Favicon
 import Foundation
 import Shared
+import Web
 import WebKit
 import os.log
 
@@ -33,7 +34,7 @@ class FaviconScriptHandler: NSObject, TabContentScript {
   }()
 
   func tab(
-    _ tab: Tab,
+    _ tab: some TabState,
     receivedScriptMessage message: WKScriptMessage,
     replyHandler: @escaping (Any?, String?) -> Void
   ) {
@@ -55,9 +56,7 @@ class FaviconScriptHandler: NSObject, TabContentScript {
       tab.favicon = await FaviconFetcher.getIconFromCache(for: url) ?? Favicon.default
 
       // If this is an internal page, we don't fetch favicons for such pages from Brave-Core
-      guard !InternalURL.isValid(url: url),
-        !(InternalURL(url)?.isSessionRestore ?? false)
-      else {
+      guard !InternalURL.isValid(url: url) else {
         return
       }
 
@@ -75,7 +74,7 @@ class FaviconScriptHandler: NSObject, TabContentScript {
   }
 
   private static func updateFavicon(
-    tab: Tab?,
+    tab: (any TabState)?,
     url: URL,
     isPrivate: Bool,
     icon: UIImage?,

@@ -8,6 +8,7 @@
 #include <memory>
 
 #include "base/feature_list.h"
+#include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/components/brave_adaptive_captcha/server_util.h"
 #include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_rewards/resources/grit/brave_rewards_resources.h"
@@ -184,6 +185,7 @@ static constexpr webui::LocalizedString kStrings[] = {
     {"contributeSendingText", IDS_REWARDS_CONTRIBUTE_SENDING_TEXT},
     {"contributeSuccessText", IDS_REWARDS_CONTRIBUTE_SUCCESS_TEXT},
     {"contributeSuccessTitle", IDS_REWARDS_CONTRIBUTE_SUCCESS_TITLE},
+    {"contributeTitle", IDS_REWARDS_CONTRIBUTE_BUTTON_LABEL},
     {"contributeWeb3Label", IDS_REWARDS_CONTRIBUTE_WEB3LABEL},
     {"contributeWeb3Subtext", IDS_REWARDS_CONTRIBUTE_WEB3SUBTEXT},
     {"countrySelectPlaceholder", IDS_BRAVE_REWARDS_ONBOARDING_SELECT_COUNTRY},
@@ -265,6 +267,14 @@ static constexpr webui::LocalizedString kStrings[] = {
     {"tosUpdateLink", IDS_REWARDS_TOS_UPDATE_LINK_TEXT},
     {"tosUpdateRequiredText", IDS_REWARDS_TOS_UPDATE_TEXT},
     {"tosUpdateRequiredTitle", IDS_REWARDS_TOS_UPDATE_HEADING},
+    {"unsupportedRegionText1",
+     IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_SUBHEADER},
+    {"unsupportedRegionText2",
+     IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_TEXT_1},
+    {"unsupportedRegionText3",
+     IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_TEXT_2},
+    {"unsupportedRegionTitle",
+     IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_HEADER},
     {"viewStoreLink", IDS_REWARDS_VIEW_STORE_LINK},
     {"wdpCheckboxLabel", IDS_REWARDS_WDP_CHECKBOX_LABEL},
     {"wdpOptInText", IDS_REWARDS_WDP_OPT_IN_TEXT},
@@ -276,6 +286,7 @@ void CreateAndAddRewardsPageDataSource(content::WebUI& web_ui,
                                        const std::string& host) {
   auto* browser_context = web_ui.GetWebContents()->GetBrowserContext();
   auto* source = content::WebUIDataSource::CreateAndAdd(browser_context, host);
+  auto* profile = Profile::FromWebUI(&web_ui);
 
   webui::SetupWebUIDataSource(source, kRewardsPageGenerated,
                               IDR_NEW_BRAVE_REWARDS_PAGE_HTML);
@@ -310,10 +321,11 @@ void CreateAndAddRewardsPageDataSource(content::WebUI& web_ui,
       "animatedBackgroundEnabled",
       base::FeatureList::IsEnabled(features::kAnimatedBackgroundFeature));
 
+  source->AddBoolean("isUnsupportedRegion", !IsSupportedForProfile(profile));
+
   content::URLDataSource::Add(
-      browser_context,
-      std::make_unique<FaviconSource>(Profile::FromWebUI(&web_ui),
-                                      chrome::FaviconUrlFormat::kFavicon2));
+      browser_context, std::make_unique<FaviconSource>(
+                           profile, chrome::FaviconUrlFormat::kFavicon2));
 }
 
 }  // namespace brave_rewards

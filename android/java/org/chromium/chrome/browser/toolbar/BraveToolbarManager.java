@@ -5,6 +5,8 @@
 
 package org.chromium.chrome.browser.toolbar;
 
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.Configuration;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,8 +16,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.Callback;
 import org.chromium.base.CallbackController;
+import org.chromium.base.ContextUtils;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.ObservableSupplierImpl;
 import org.chromium.base.supplier.OneshotSupplier;
@@ -40,9 +44,11 @@ import org.chromium.chrome.browser.findinpage.FindToolbarManager;
 import org.chromium.chrome.browser.fullscreen.FullscreenManager;
 import org.chromium.chrome.browser.homepage.HomepageManager;
 import org.chromium.chrome.browser.layouts.LayoutStateProvider;
+import org.chromium.chrome.browser.layouts.LayoutType;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.merchant_viewer.MerchantTrustSignalsCoordinator;
 import org.chromium.chrome.browser.omnibox.LocationBar;
+import org.chromium.chrome.browser.preferences.ChromePreferenceKeys;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.readaloud.ReadAloudController;
 import org.chromium.chrome.browser.share.ShareDelegate;
@@ -85,7 +91,8 @@ import org.chromium.ui.modaldialog.ModalDialogManager;
 
 import java.util.List;
 
-public class BraveToolbarManager extends ToolbarManager {
+public class BraveToolbarManager extends ToolbarManager
+        implements OnSharedPreferenceChangeListener {
     private static final String TAG = "BraveToolbarManager";
 
     // To delete in bytecode, members from parent class will be used instead.
@@ -112,7 +119,6 @@ public class BraveToolbarManager extends ToolbarManager {
     private TabCreatorManager mTabCreatorManager;
     private Supplier<ModalDialogManager> mModalDialogManagerSupplier;
     private TabObscuringHandler mTabObscuringHandler;
-    private LayoutStateProvider.LayoutStateObserver mLayoutStateObserver;
     private LayoutStateProvider mLayoutStateProvider;
     private ObservableSupplier<ReadAloudController> mReadAloudControllerSupplier;
     private TopUiThemeColorProvider mTopUiThemeColorProvider;
@@ -137,6 +143,7 @@ public class BraveToolbarManager extends ToolbarManager {
             new OneshotSupplierImpl<>();
     private final DataSharingTabManager mDataSharingTabManager;
     private ObservableSupplier<TabModelSelector> mTabModelSelectorSupplier;
+    private LayoutStateProvider.LayoutStateObserver mLayoutStateObserver;
 
     public BraveToolbarManager(
             AppCompatActivity activity,
@@ -240,6 +247,8 @@ public class BraveToolbarManager extends ToolbarManager {
 
         if (isToolbarPhone()) {
             updateBraveBottomControlsVisibility();
+            mLayoutStateProviderSupplier.onAvailable(
+                    mCallbackController.makeCancelable(this::setLayoutStateProvider));
         }
 
         mBraveHomepageStateListener =
@@ -409,6 +418,8 @@ public class BraveToolbarManager extends ToolbarManager {
                             mActivity.findViewById(R.id.control_container),
                             closeAllTabsAction);
             mLocationBar.getContainerView().setAccessibilityTraversalBefore(R.id.bottom_toolbar);
+
+            ContextUtils.getAppSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         }
     }
 
@@ -424,12 +435,12 @@ public class BraveToolbarManager extends ToolbarManager {
 
     @Override
     public void destroy() {
+        if (mLayoutStateProvider != null && mLayoutStateObserver != null) {
+            mLayoutStateProvider.removeObserver(mLayoutStateObserver);
+            mLayoutStateObserver = null;
+        }
         super.destroy();
         HomepageManager.getInstance().removeListener(mBraveHomepageStateListener);
-        if (mLayoutStateProvider != null) {
-            mLayoutStateProvider.removeObserver(mLayoutStateObserver);
-            mLayoutStateProvider = null;
-        }
     }
 
     private void recordNewTabClick() {
@@ -528,5 +539,40 @@ public class BraveToolbarManager extends ToolbarManager {
     @Override
     public LocationBar getLocationBar() {
         return mLocationBar;
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(
+            SharedPreferences sharedPreferences, @Nullable String key) {
+        if (ChromePreferenceKeys.TOOLBAR_TOP_ANCHORED.equals(key)) {
+            if (sharedPreferences.getBoolean(
+                    BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY, true)) {
+                updateBraveBottomControlsVisibility();
+            }
+        }
+    }
+
+    private void setLayoutStateProvider(LayoutStateProvider layoutStateProvider) {
+        assert mLayoutStateObserver == null : "mLayoutStateObserver should be set only once";
+
+        mLayoutStateObserver =
+                new LayoutStateProvider.LayoutStateObserver() {
+                    @Override
+                    public void onStartedShowing(@LayoutType int layoutType) {
+                        if (layoutType == LayoutType.TAB_SWITCHER
+                                && BottomToolbarConfiguration.isToolbarBottomAnchored()) {
+                            BraveMenuButtonCoordinator.setMenuFromBottom(false);
+                        }
+                    }
+
+                    @Override
+                    public void onStartedHiding(@LayoutType int layoutType) {
+                        if (layoutType == LayoutType.TAB_SWITCHER
+                                && BottomToolbarConfiguration.isToolbarBottomAnchored()) {
+                            BraveMenuButtonCoordinator.setMenuFromBottom(true);
+                        }
+                    }
+                };
+        layoutStateProvider.addObserver(mLayoutStateObserver);
     }
 }

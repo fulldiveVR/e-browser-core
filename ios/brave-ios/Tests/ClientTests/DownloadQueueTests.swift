@@ -6,6 +6,7 @@
 import XCTest
 
 @testable import Brave
+@testable import Web
 
 class DownloadQueueTests: XCTestCase {
 
@@ -121,18 +122,9 @@ class DownloadQueueTests: XCTestCase {
     let (sut, delegate) = makeSUT()
     let download = Download()
 
-    sut.download(download, didDownloadBytes: 1000)
-    sut.download(download, didDownloadBytes: 1000)
-    sut.download(download, didDownloadBytes: 1000)
+    sut.downloadDidUpgradeProgress(download)
 
-    XCTAssertEqual(
-      delegate.receivedMessages,
-      [
-        .didDownloadCombinedBytes(bytes: 1000),
-        .didDownloadCombinedBytes(bytes: 2000),
-        .didDownloadCombinedBytes(bytes: 3000),
-      ]
-    )
+    XCTAssertEqual(delegate.receivedMessages, [.didUpdateProgress])
   }
 
   func test_downloadDidFinishDownloadingTo_whenDownloadsAreEmpty_doNothing() {
@@ -198,6 +190,12 @@ private func makeSUT() -> (sut: DownloadQueue, delegate: DownloadQueueDelegateSp
   return (sut, delegate)
 }
 
+extension Download {
+  convenience override init() {
+    self.init(suggestedFilename: "", originalURL: nil)
+  }
+}
+
 private class DownloadSpy: Download {
   enum Message {
     case resume
@@ -206,6 +204,10 @@ private class DownloadSpy: Download {
   }
 
   var receivedMessages: [Message] = []
+
+  init() {
+    super.init(suggestedFilename: "", originalURL: nil)
+  }
 
   override func resume() {
     receivedMessages.append(.resume)
@@ -228,7 +230,7 @@ private class DownloadQueueDelegateSpy: DownloadQueueDelegate {
   enum Message: Equatable {
     case didStartDownload
     case didCompleteWithError(error: DownloadQueueError?)
-    case didDownloadCombinedBytes(bytes: Int64)
+    case didUpdateProgress
     case didFinishDownloadingTo(location: URL)
   }
 
@@ -243,7 +245,7 @@ private class DownloadQueueDelegateSpy: DownloadQueueDelegate {
     didDownloadCombinedBytes combinedBytesDownloaded: Int64,
     combinedTotalBytesExpected: Int64?
   ) {
-    receivedMessages.append(.didDownloadCombinedBytes(bytes: combinedBytesDownloaded))
+    receivedMessages.append(.didUpdateProgress)
   }
 
   func downloadQueue(

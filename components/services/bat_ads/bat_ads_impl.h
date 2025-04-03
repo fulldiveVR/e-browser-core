@@ -23,7 +23,7 @@ namespace bat_ads {
 
 class BatAdsClientMojoBridge;
 
-class BatAdsImpl : public mojom::BatAds {
+class BatAdsImpl final : public mojom::BatAds {
  public:
   BatAdsImpl(const base::FilePath& service_path,
              mojo::PendingAssociatedRemote<mojom::BatAdsClient>
@@ -33,9 +33,6 @@ class BatAdsImpl : public mojom::BatAds {
 
   BatAdsImpl(const BatAdsImpl&) = delete;
   BatAdsImpl& operator=(const BatAdsImpl&) = delete;
-
-  BatAdsImpl(BatAdsImpl&& other) noexcept = delete;
-  BatAdsImpl& operator=(BatAdsImpl&& other) noexcept = delete;
 
   ~BatAdsImpl() override;
 
@@ -47,6 +44,8 @@ class BatAdsImpl : public mojom::BatAds {
   void SetBuildChannel(
       brave_ads::mojom::BuildChannelInfoPtr mojom_build_channel) override;
   void SetFlags(brave_ads::mojom::FlagsPtr mojom_flags) override;
+  void SetContentSettings(
+      brave_ads::mojom::ContentSettingsPtr mojom_content_settings) override;
 
   void Initialize(brave_ads::mojom::WalletInfoPtr mojom_wallet,
                   InitializeCallback callback) override;

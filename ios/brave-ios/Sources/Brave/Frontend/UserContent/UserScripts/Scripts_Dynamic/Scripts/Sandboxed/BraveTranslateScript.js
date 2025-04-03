@@ -3,52 +3,75 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-window.__firefox__ = window.__firefox__ || {};
-
-Object.defineProperty(window.__firefox__, "$<brave_translate_script>", {
-  enumerable: false,
-  configurable: false,
-  writable: true,
-  value: {
-    "translateScriptLoaded": false,
-    "useNativeNetworking": true,
-    "getPageSource": (function() {
-      return encodeURIComponent(document.documentElement.outerHTML);
-    }),
-    "getPageLanguage": (function() {
-      return document.documentElement.lang;
-    }),
-    "getRawPageSource": (function() {
-      return document.documentElement.outerText;
-    }),
-    "checkTranslate": (function() {
-      try {
-        if ((cr.googleTranslate.libReady || cr.googleTranslate.finished) && !cr.googleTranslate.readyCallback) {
+window.__firefox__.includeOnce("BraveTranslateScript", function($) {
+  var translateScriptLoaded = false;
+  
+  Object.defineProperty(window.__firefox__, "$<brave_translate_script>", {
+    enumerable: false,
+    configurable: false,
+    writable: false,
+    value: {
+      "useNativeNetworking": true,
+      "isTranslateScriptLoaded": (function() {
+        return translateScriptLoaded;
+      }),
+      "getPageSource": (function() {
+        return encodeURIComponent(document.documentElement.outerHTML);
+      }),
+      "getPageLanguage": (function() {
+        return document.documentElement.lang;
+      }),
+      "getMetaContentByHttpEquiv": (function(httpEquiv) {
+        for (const metaTag of document.getElementsByTagName('meta')) {
+          if (metaTag.httpEquiv && metaTag.httpEquiv.toLowerCase() === httpEquiv) {
+            return metaTag.content;
+          }
+        }
+        return "";
+      }),
+      "getRawPageSource": (function() {
+        return document.documentElement.outerText;
+      }),
+      "hasNoTranslate": (function() {
+        for (const metaTag of document.getElementsByTagName('meta')) {
+          if (metaTag.name === 'google') {
+            if (metaTag.content === 'notranslate' ||
+                metaTag.getAttribute('value') === 'notranslate') {
+              return true;
+            }
+          }
+        }
+        return false;
+      }),
+      "isSameLanguage": (function() {
+        let userLanguage = (navigator.language || navigator.userLanguage).split('-')[0];
+        let pageLanguage = document.documentElement.lang
+        return userLanguage == pageLanguage;
+      }),
+      "detectLanguage": (function() {
+        window.webkit.messageHandlers["LanguageDetectionTextCaptured"].postMessage({
+          "hasNoTranslate": window.__firefox__.$<brave_translate_script>.hasNoTranslate(),
+          "htmlLang": window.__firefox__.$<brave_translate_script>.getPageLanguage(),
+          "httpContentLanguage": window.__firefox__.$<brave_translate_script>.getMetaContentByHttpEquiv(),
+          "frameId": __gCrWeb && __gCrWeb.message && __gCrWeb.message.getFrameId ? __gCrWeb.message.getFrameId() : "",
+        });
+      }),
+      "loadTranslateScript": (function() {
+        return new Promise((resolve, reject) => {
+          if (translateScriptLoaded) {
+            return resolve();
+          }
+          
           window.webkit.messageHandlers["$<message_handler>"].postMessage({
-            "command": "ready"
-          });
-        }
-      } catch (error) {
-        cr.googleTranslate.onTranslateElementError(error);
-      }
-    }),
-    "loadTranslateScript": (function() {
-      return new Promise((resolve, reject) => {
-        if (window.__firefox__.$<brave_translate_script>.translateScriptLoaded) {
-          return resolve();
-        }
-        
-        window.webkit.messageHandlers["$<message_handler>"].postMessage({
-          "command": "load_brave_translate_script"
-        }).then((script) => {
-          try {
+            "command": "load_brave_translate_script"
+          }).then((script) => {
             cr.googleTranslate.readyCallback = () => {
               cr.googleTranslate.readyCallback = null;
               resolve();
             }
             
             new Function(script).call(window /*this*/);
-            window.__firefox__.$<brave_translate_script>.translateScriptLoaded = true;
+            translateScriptLoaded = true;
             
             if ((cr.googleTranslate.libReady || cr.googleTranslate.finished) && cr.googleTranslate.readyCallback) {
               cr.googleTranslate.readyCallback = null;
@@ -61,17 +84,13 @@ Object.defineProperty(window.__firefox__, "$<brave_translate_script>", {
                 resolve();
               }
             }, 3000);
-          } catch (error) {
-            cr.googleTranslate.onTranslateElementError(error);
+          }).catch((error) => {
             reject(error);
-          }
-        }).catch((error) => {
-          cr.googleTranslate.onTranslateElementError(error);
-          reject(error);
+          });
         });
-      });
-    })
-  }
+      })
+    }
+  });
 });
 
 
@@ -133,10 +152,10 @@ try {
       }
   };
 
-  const emptySvgDataUrl = 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg"/>');
-
   // Make replacements in loading .js files.
   function processJavascript(text) {
+      const emptySvgDataUrl = 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg"/>');
+    
       // Replace gen204 telemetry requests with loading an empty svg.
       text = text.replaceAll('"//"+po+"/gen204?"+Bo(b)', '"' + emptySvgDataUrl + '"');
 
@@ -148,6 +167,8 @@ try {
 
   // Make replacements in loading .css files.
   function processCSS(text) {
+      const emptySvgDataUrl = 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg"/>');
+    
       // Used in the injected elements, that are currently not visible. Replace it
       // to hide the loading error in devtools (because of CSP).
       text = text.replaceAll('//www.gstatic.com/images/branding/product/2x/translate_24dp.png', emptySvgDataUrl);
@@ -229,7 +250,7 @@ try {
             });
             
             Object.defineProperties(this, {
-              statusText: { value: "OK" }
+              statusText: { value: result.value.statusCode == 200 ? "OK" : "BAD REQUEST" }
             });
             
             Object.defineProperties(this, {
@@ -291,17 +312,17 @@ try {
       xhr.send();
   }
 
-  // The styles to hide root elements that are injected by the scripts in the DOM.
-  // Currently they are always invisible. The styles are added in case of changes
-  // in future versions.
-  const braveExtraStyles = `.goog-te-spinner-pos, #goog-gt-tt {display: none;}`
-
   // An overridden version of onLoadCSS from translate.js.
   // The differences:
   // 1. change url via rewriteUrl();
   // 2. process the loaded styles via processCSS().
   // 3. Add braveExtraStyles in the end.
   cr.googleTranslate.onLoadCSS = function(url) {
+      // The styles to hide root elements that are injected by the scripts in the DOM.
+      // Currently they are always invisible. The styles are added in case of changes
+      // in future versions.
+      const braveExtraStyles = `.goog-te-spinner-pos, #goog-gt-tt {display: none;}`
+    
       const xhr = new XMLHttpRequest();
       xhr.open('GET', rewriteUrl(url), true);
       xhr.onreadystatechange = function() {
@@ -324,4 +345,16 @@ try {
 
 
 // Brave Translate
-window.__firefox__.$<brave_translate_script>.loadTranslateScript();
+window.__firefox__.$<brave_translate_script>.loadTranslateScript().catch((error) => {
+  if (error !== "translateDisabled") {
+    cr.googleTranslate.onTranslateElementError(error);
+  }
+})
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    setTimeout(() => {
+      window.__firefox__.$<brave_translate_script>.detectLanguage();
+    }, 1000);
+  }
+});

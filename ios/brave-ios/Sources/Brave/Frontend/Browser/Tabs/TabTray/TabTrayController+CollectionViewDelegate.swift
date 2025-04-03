@@ -4,12 +4,15 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import UIKit
+import Web
 
 // MARK: UICollectionViewDelegate
 
 extension TabTrayController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    guard let tab = dataSource.itemIdentifier(for: indexPath) else { return }
+    guard let tabID = dataSource.itemIdentifier(for: indexPath), let tab = tabManager[tabID] else {
+      return
+    }
     tabManager.selectTab(tab)
 
     tabTraySearchController.isActive = false
@@ -44,7 +47,7 @@ extension TabTrayController: UICollectionViewDropDelegate {
   ) {
 
     guard let dragItem = coordinator.items.first?.dragItem,
-      let tab = dragItem.localObject as? Tab,
+      let tab = dragItem.localObject as? any TabState,
       let destinationIndexPath = coordinator.destinationIndexPath
     else { return }
 
@@ -62,12 +65,12 @@ extension TabTrayController: UICollectionViewDropDelegate {
 
     guard let localDragSession = session.localDragSession,
       let item = localDragSession.items.first,
-      let tab = item.localObject as? Tab
+      let tab = item.localObject as? any TabState
     else {
       return .init(operation: .forbidden)
     }
 
-    if dataSource.indexPath(for: tab) == nil {
+    if dataSource.indexPath(for: tab.id) == nil {
       return .init(operation: .cancel)
     }
 

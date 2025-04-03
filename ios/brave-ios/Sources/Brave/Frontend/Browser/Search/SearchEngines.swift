@@ -74,6 +74,21 @@ public class SearchEngines {
     setInitialDefaultEngine(engine.legacyName ?? engine.rawValue)
   }
 
+  public func updateYahooJPOrderIfNeeded() {
+    guard let region = locale.region?.identifier,
+      initialSearchEngines.yahooJapanEnabledRegions.contains(region),
+      DefaultEngineType.standard.option.value
+        != InitialSearchEngines.SearchEngineID.yahoojp.rawValue
+    else { return }
+    // Move Yahoo! JP to the second position (after the DSE)
+    if let oldIndex = orderedEngines.firstIndex(where: {
+      $0.engineID == InitialSearchEngines.SearchEngineID.yahoojp.rawValue
+    }) {
+      let yahooJP = orderedEngines.remove(at: oldIndex)
+      orderedEngines.insert(yahooJP, at: 1)
+    }
+  }
+
   private var loadingStream: AsyncStream<Void>?
 
   public func loadSearchEngines() async {
@@ -149,6 +164,11 @@ public class SearchEngines {
   func updateDefaultEngine(_ engine: String, forType type: DefaultEngineType) {
     let originalEngine = defaultEngine(forType: type)
     type.option.value = engine
+    if type == .standard {
+      Preferences.Search.userPickedDSEName.value = engine
+    } else {
+      Preferences.Search.userPickedPrivateDSEName.value = engine
+    }
 
     // The default engine is always enabled.
     guard let newDefaultEngine = defaultEngine(forType: type) else {
@@ -472,6 +492,7 @@ public class SearchEngines {
     case braveSearch = 8
     case naver = 9
     case daum = 10
+    case yahoojp = 11
 
     init(engine: OpenSearchEngine) {
       guard
@@ -493,6 +514,7 @@ public class SearchEngines {
       case .braveSearch: self = .braveSearch
       case .naver: self = .naver
       case .daum: self = .daum
+      case .yahoojp: self = .yahoojp
       }
     }
   }

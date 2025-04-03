@@ -9,18 +9,20 @@
 
 #include "base/feature_list.h"
 #include "base/metrics/field_trial_params.h"
+#include "brave/components/ai_chat/core/common/constants.h"
 #include "build/build_config.h"
 
 namespace ai_chat::features {
 
-BASE_FEATURE(kAIChat,
-             "AIChat",
-             base::FEATURE_ENABLED_BY_DEFAULT
-);
+BASE_FEATURE(kAIChat, "AIChat", base::FEATURE_ENABLED_BY_DEFAULT);
 const base::FeatureParam<std::string> kAIModelsDefaultKey{
     &kAIChat, "default_model", "chat-leo-expanded"};
 const base::FeatureParam<std::string> kAIModelsPremiumDefaultKey{
     &kAIChat, "default_premium_model", "chat-leo-expanded"};
+const base::FeatureParam<std::string> kAIModelsVisionDefaultKey{
+    &kAIChat, "default_vision_model", kClaudeHaikuModelKey};
+const base::FeatureParam<std::string> kAIModelsPremiumVisionDefaultKey{
+    &kAIChat, "default_vision_model", kClaudeSonnetModelKey};
 const base::FeatureParam<bool> kFreemiumAvailable(&kAIChat,
                                                   "is_freemium_available",
                                                   true);
@@ -47,9 +49,15 @@ bool IsAIChatHistoryEnabled() {
   return base::FeatureList::IsEnabled(features::kAIChatHistory);
 }
 
+BASE_FEATURE(kAIChatFirst, "AIChatFirst", base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsAIChatFirstEnabled() {
+  return base::FeatureList::IsEnabled(features::kAIChatFirst);
+}
+
 BASE_FEATURE(kCustomSiteDistillerScripts,
              "CustomSiteDistillerScripts",
-             base::FEATURE_DISABLED_BY_DEFAULT);
+             base::FEATURE_ENABLED_BY_DEFAULT);
 
 bool IsCustomSiteDistillerScriptsEnabled() {
   return base::FeatureList::IsEnabled(features::kCustomSiteDistillerScripts);
@@ -96,6 +104,14 @@ BASE_FEATURE(kPageContextEnabledInitially,
 
 bool IsPageContextEnabledInitially() {
   return base::FeatureList::IsEnabled(features::kPageContextEnabledInitially);
+}
+
+BASE_FEATURE(kTabOrganization,
+             "BraveTabOrganization",
+             base::FEATURE_ENABLED_BY_DEFAULT);
+
+bool IsTabOrganizationEnabled() {
+  return base::FeatureList::IsEnabled(features::kTabOrganization);
 }
 
 }  // namespace ai_chat::features

@@ -126,7 +126,6 @@ const Config = function () {
   this.internalDepsUrl = 'https://vhemnu34de4lf5cj6bx2wwshyy0egdxk.lambda-url.us-west-2.on.aws'
   this.defaultBuildConfig = getEnvConfig(['default_build_config']) || 'Component'
   this.buildConfig = this.defaultBuildConfig
-  this.signTarget = 'sign_app'
   this.buildTargets = ['brave']
   this.rootDir = rootDir
   this.isUniversalBinary = false
@@ -254,6 +253,7 @@ const Config = function () {
   this.service_key_aichat = getEnvConfig(['service_key_aichat']) || ''
   this.braveIOSDeveloperOptionsCode = getEnvConfig(['brave_ios_developer_options_code']) || ''
   this.service_key_stt = getEnvConfig(['service_key_stt']) || ''
+  this.skip_download_rust_toolchain_aux = getEnvConfig(['skip_download_rust_toolchain_aux']) || false
 }
 
 Config.prototype.isReleaseBuild = function () {
@@ -345,6 +345,7 @@ Config.prototype.buildArgs = function () {
     ffmpeg_branding: "Chrome",
     branding_path_component: "brave",
     branding_path_product: "brave",
+    enable_glic: false,
     enable_nacl: false,
     enable_widevine: true,
     // Our copy of signature_generator.py doesn't support --ignore_missing_cert:
@@ -418,9 +419,13 @@ Config.prototype.buildArgs = function () {
     sparkle_eddsa_private_key: this.sparkleEdDSAPrivateKey,
     sparkle_eddsa_public_key: this.sparkleEdDSAPublicKey,
     use_remoteexec: this.useRemoteExec,
+    use_reclient: this.useRemoteExec,
+    use_siso: false,
     use_libfuzzer: this.use_libfuzzer,
     enable_updater: this.isOfficialBuild(),
-    enable_update_notifications: this.isOfficialBuild(),
+    // Disable "Can't update Brave" notification on macOS until we have switched
+    // to Omaha 4 and have background updates:
+    enable_update_notifications: this.isOfficialBuild() && this.getTargetOS() !== 'mac',
     brave_services_production_domain: this.braveServicesProductionDomain,
     brave_services_staging_domain: this.braveServicesStagingDomain,
     brave_services_dev_domain: this.braveServicesDevDomain,
@@ -700,6 +705,7 @@ Config.prototype.buildArgs = function () {
     delete args.ffmpeg_branding
     delete args.branding_path_component
     delete args.branding_path_product
+    delete args.enable_glic
     delete args.enable_nacl
     delete args.enable_widevine
     delete args.enable_hangout_services_extension
@@ -882,7 +888,7 @@ Config.prototype.update = function (options) {
     }
   }
 
-  if (options.target_environment) {
+  if (this.targetOS === 'ios' && options.target_environment) {
     this.targetEnvironment = options.target_environment
   }
 
@@ -1036,7 +1042,7 @@ Object.defineProperty(Config.prototype, 'defaultOptions', {
     env = this.addPathToEnv(env, this.depotToolsDir, true)
     if (this.getTargetOS() === 'mac' && process.platform !== 'darwin') {
       const crossCompilePath = path.join(this.srcDir, 'brave', 'build', 'mac',
-                                         'cross-compile', 'path')
+                                         'cross_compile', 'path')
       env = this.addPathToEnv(env, crossCompilePath, true)
     }
     const pythonPaths = [
@@ -1135,6 +1141,10 @@ Object.defineProperty(Config.prototype, 'defaultOptions', {
     if (process.platform === 'win32') {
       // Disable vcvarsall.bat telemetry.
       env.VSCMD_SKIP_SENDTELEMETRY = '1'
+    }
+
+    if (this.isCI && this.skip_download_rust_toolchain_aux) {
+      env.SKIP_DOWNLOAD_RUST_TOOLCHAIN_AUX = '1'
     }
 
     // TeamCity displays only stderr on the "Build Problems" page when an error

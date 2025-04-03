@@ -7,7 +7,7 @@
 #include "brave/browser/brave_profile_prefs.h"
 #include "brave/browser/brave_rewards/rewards_prefs_util.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
-#include "brave/browser/misc_metrics/uptime_monitor.h"
+#include "brave/browser/misc_metrics/uptime_monitor_impl.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
 #include "brave/components/ai_chat/core/browser/model_service.h"
@@ -25,8 +25,8 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/decentralized_dns/core/utils.h"
 #include "brave/components/ipfs/ipfs_prefs.h"
-#include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
+#include "brave/components/ntp_background_images/common/view_counter_pref_registry.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/p3a/star_randomness_meta.h"
 #include "brave/components/tor/buildflags/buildflags.h"
@@ -163,8 +163,7 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   brave_news::p3a::prefs::MigrateObsoleteProfileNewsMetricsPrefs(profile_prefs);
 
   // Added 2023-09
-  ntp_background_images::ViewCounterService::MigrateObsoleteProfilePrefs(
-      profile_prefs);
+  ntp_background_images::MigrateObsoleteProfilePrefs(profile_prefs);
 
   // Added 2023-11
   brave_ads::MigrateObsoleteProfilePrefs(profile_prefs);
@@ -219,7 +218,7 @@ void MigrateObsoleteLocalStatePrefs(PrefService* local_state) {
   brave_vpn::MigrateLocalStatePrefs(local_state);
 #endif
 
-  misc_metrics::UptimeMonitor::MigrateObsoletePrefs(local_state);
+  misc_metrics::UptimeMonitorImpl::MigrateObsoletePrefs(local_state);
   brave_search_conversion::p3a::MigrateObsoleteLocalStatePrefs(local_state);
   brave_stats::MigrateObsoleteLocalStatePrefs(local_state);
   p3a::StarRandomnessMeta::MigrateObsoleteLocalStatePrefs(local_state);

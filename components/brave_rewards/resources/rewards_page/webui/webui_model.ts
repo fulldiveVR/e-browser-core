@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import { loadTimeData } from 'chrome://resources/js/load_time_data.js'
+import { debounce } from '$web-common/debounce'
 
 import {
   externalWalletFromExtensionData,
@@ -11,7 +12,7 @@ import {
   externalWalletProviderFromString
 } from '../../shared/lib/external_wallet'
 
-import { AppModel } from '../lib/app_model'
+import { AppModel, defaultModel } from '../lib/app_model'
 import { AppState, Notification, defaultState } from '../lib/app_state'
 import { RewardsPageProxy } from './rewards_page_proxy'
 import { createStateManager } from '../../shared/lib/state_manager'
@@ -49,7 +50,30 @@ function parseCreatorPlatform(value: string) {
   return ''
 }
 
+function openTab(url: string) {
+  window.open(url, '__blank', 'noopener noreferrer')
+}
+
+function createModelForUnsupportedRegion(): AppModel {
+  const stateManager = createStateManager<AppState>(defaultState())
+  stateManager.update({
+    loading: false,
+    isUnsupportedRegion: true
+  })
+  return {
+    ...defaultModel(),
+    getState: stateManager.getState,
+    addListener: stateManager.addListener,
+    openTab,
+    getString(key) { return loadTimeData.getString(key) }
+  }
+}
+
 export function createModel(): AppModel {
+  if (loadTimeData.getBoolean('isUnsupportedRegion')) {
+    return createModelForUnsupportedRegion()
+  }
+
   const searchParams = new URLSearchParams(location.search)
   const browserProxy = RewardsPageProxy.getInstance()
   const pageHandler = browserProxy.handler
@@ -124,21 +148,18 @@ export function createModel(): AppModel {
     stateManager.update({ selfCustodyInviteDismissed: inviteDismissed })
   }
 
+  // TODO(https://github.com/brave/brave-browser/issues/42702): Remove this
+  // after a listener is added for Ads initialization, or after the Ads service
+  // queues these calls during service restart.
+  function scheduleAdsInfoUpdate() {
+    setTimeout(() => { updateAdsInfo() }, 1000)
+  }
+
   async function updateAdsInfo() {
     let [{ statement }, { settings }] = await Promise.all([
       await pageHandler.getAdsStatement(),
       await pageHandler.getAdsSettings()
     ])
-
-    // TODO(https://github.com/brave/brave-browser/issues/42702): Remove this
-    // retry after a listener is added for Ads initialization, or after the Ads
-    // service queues these calls during service restart.
-    // If statement data was not returned, the Ads service might be restarting.
-    // Try again after a short delay.
-    if (!statement) {
-      await new Promise<void>((resolve) => setTimeout(resolve, 500))
-      statement = (await pageHandler.getAdsStatement()).statement
-    }
 
     if (statement && settings) {
       const { adTypeSummaryThisMonth } = statement
@@ -299,11 +320,12 @@ export function createModel(): AppModel {
     stateManager.update({ loading: false })
   }
 
-  browserProxy.callbackRouter.onRewardsStateUpdated.addListener(() => {
-    if (document.visibilityState === 'visible') {
-      loadData()
-    }
-  })
+  browserProxy.callbackRouter.onRewardsStateUpdated.addListener(
+    debounce(() => {
+      if (document.visibilityState === 'visible') {
+        loadData()
+      }
+    }, 60))
 
   // When displayed in a bubble, this page may be cached. In order to reset the
   // view state when the bubble is re-opened with cached contents, we update the
@@ -336,9 +358,9 @@ export function createModel(): AppModel {
     openTab(url) {
       if (isBubble) {
         pageHandler.openTab(url)
-        return
+      } else {
+        openTab(url)
       }
-      window.open(url, '_blank', 'noopener,noreferrer')
     },
 
     getString(key) {
@@ -352,6 +374,7 @@ export function createModel(): AppModel {
 
     async enableRewards(countryCode) {
       const { result } = await pageHandler.enableRewards(countryCode)
+      scheduleAdsInfoUpdate()
       switch (result) {
         case mojom.CreateRewardsWalletResult.kSuccess:
           updatePaymentId()
@@ -393,6 +416,7 @@ export function createModel(): AppModel {
     async connectExternalWallet(provider, args) {
       const ResultType = mojom.ConnectExternalWalletResult
       const { result } = await pageHandler.connectExternalWallet(provider, args)
+      scheduleAdsInfoUpdate()
       switch (result) {
         case ResultType.kSuccess:
           return 'success'

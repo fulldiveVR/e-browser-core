@@ -16,7 +16,7 @@ namespace TemplateURLPrepopulateData {
 
 // IMPORTANT! Make sure to bump this value if you make changes to the
 // engines below or add/remove engines.
-inline constexpr int kBraveCurrentDataVersion = 30;
+inline constexpr int kBraveCurrentDataVersion = 32;
 
 // The version is important to increment because Chromium will cache the list
 // of search engines that are shown. When the version is incremented, Chromium
@@ -41,12 +41,17 @@ enum BravePrepopulatedEngineID : unsigned int {
 
   // These engine IDs are already defined in prepopulated_engines.json
   PREPOPULATED_ENGINE_ID_GOOGLE = 1,
+  PREPOPULATED_ENGINE_ID_YAHOO_JP = 2,
   PREPOPULATED_ENGINE_ID_BING = 3,
   PREPOPULATED_ENGINE_ID_YANDEX = 15,
   PREPOPULATED_ENGINE_ID_NAVER = 67,
   PREPOPULATED_ENGINE_ID_DAUM = 68,
   PREPOPULATED_ENGINE_ID_ECOSIA = 101,
   // These engine IDs are not defined in Chromium
+  // When adding a new engine, also add it to kBraveAddedEngines in
+  // chromium_src/components/search_engines/
+  //   brave_template_url_prepopulate_data_unittest.cc, so that we would know if
+  // Chromium adds the same engine in the future.
   BRAVE_PREPOPULATED_ENGINES_START = 500,
   PREPOPULATED_ENGINE_ID_AMAZON = 500,  // No longer in defaults (2/2019).
   PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
@@ -61,7 +66,13 @@ enum BravePrepopulatedEngineID : unsigned int {
   PREPOPULATED_ENGINE_ID_SEARX,            // No longer in defaults (2/2019).
   PREPOPULATED_ENGINE_ID_SEMANTICSCHOLAR,  // No longer in defaults (2/2019).
   PREPOPULATED_ENGINE_ID_STACKOVERFLOW,    // No longer in defaults (2/2019).
-  PREPOPULATED_ENGINE_ID_STARTPAGE,
+
+  PREPOPULATED_ENGINE_ID_STARTPAGE,  // This ID was used before Chromium added
+                                     // startpage to their prepopulated engines
+                                     // (with id 113). We modify their engine
+                                     // to use our id so that we don't have to
+                                     // replace engines saved in user prefs.
+
   PREPOPULATED_ENGINE_ID_TWITTER,       // No longer in defaults (2/2019).
   PREPOPULATED_ENGINE_ID_WIKIPEDIA,     // No longer in defaults (2/2019).
   PREPOPULATED_ENGINE_ID_WOLFRAMALPHA,  // No longer in defaults (2/2019).
@@ -116,11 +127,12 @@ extern const PrepopulatedEngine duckduckgo_lite;
 #endif
 extern const PrepopulatedEngine brave_ecosia;
 extern const PrepopulatedEngine qwant;
-extern const PrepopulatedEngine startpage;
+extern const PrepopulatedEngine brave_startpage;
 extern const PrepopulatedEngine brave_yandex;
 extern const PrepopulatedEngine brave_search;
 extern const PrepopulatedEngine brave_search_tor;
 extern const PrepopulatedEngine brave_bing;
+extern const PrepopulatedEngine brave_yahoo_jp;
 
 const std::map<BravePrepopulatedEngineID, const PrepopulatedEngine*>&
 GetBraveEnginesMap();

@@ -197,6 +197,8 @@
 <translation id="1680858055899097121">Non rimanere nelle schede tra una sessione di navigazione e l'altra</translation>
 <translation id="7142548388914389999">Acconsenti all'analisi dei prodotti di tutela della privacy (P3A).</translation>
 <translation id="5254037869598726291">Le informazioni di analisi P3A rese anonime consentono a Brave di stimare l'utilizzo complessivo e ci aiutano a migliorare le funzioni più popolari.</translation>
+<translation id="4174337572777167894">Progetto Web Discovery</translation>
+<translation id="8659271182272561965">Contribuisci alla ricerca anonima e ai dati di navigazione per perfezionare la ricerca Brave.</translation>
 <translation id="933652931229970927">Invia automaticamente i rapporti di diagnostica</translation>
 <translation id="5987838417172370108">Contribuisci ad aumentare la stabilità di Brave inviando automaticamente i rapporti di diagnostica quando il browser di Brave si arresta in modo anomalo o resta bloccato.</translation>
 <translation id="7977176350719484850">Dati\nrisparmiati</translation>
@@ -233,7 +235,6 @@
 <translation id="6587448235155023666">I tuoi cambiamenti entreranno in vigore la prossima volta che rilancerai Brave</translation>
 <translation id="8701563696941209024">RILANCIA ORA</translation>
 <translation id="834487290629916192">PIÙ TARDI</translation>
-<translation id="7207456302801184289">Benvenuto in Brave</translation>
 <translation id="4117451092682672487">Privacy. In tutta semplicità.</translation>
 <translation id="7909375417585209817">Se Brave è il browser predefinito, tutti i link si aprono con le protezioni per la privacy di Brave.</translation>
 <translation id="7370959926683925817">Blocca gli annunci. Risparmia dati. Ogni giorno.</translation>
@@ -241,6 +242,9 @@
 <translation id="5148943178722443958">Contribuisci a migliorare Brave.</translation>
 <translation id="6718362830686703942">In caso di arresto anomalo o blocco, invia dei resoconti diagnostici.</translation>
 <translation id="8616157231067364693">Condividi informazioni di prodotto totalmente private e anonime per farci sapere quali sono le funzioni usate dagli utenti di Brave.</translation>
+<translation id="2888496576732880897">Aiuta Ricerca Brave a crescere</translation>
+<translation id="7044431516245362795">Unisciti al Web Discovery Project e aiutaci a migliorare la ricerca e indicizzazione dei risultati.<ph name="LEARN_MORE_START"/>Scopri di più<ph name="LEARN_MORE_END"/>.</translation>
+<translation id="7818938154803162778">Sì, partecipo</translation>
 <translation id="2877653791257935258">Digita il nome o l’URL di un sito web</translation>
 <translation id="5329830149661250028">Brave fa la differenza: zero annunci, zero tracker. Caricamento delle pagine velocissimo.</translation>
 <translation id="3941792073703079607">Scopri perché Brave è differente: Blocco degli annunci. Risparmio di dati. Streaming più veloce.</translation>
@@ -253,8 +257,6 @@
 <translation id="1377600615067678409">Salta per ora</translation>
 <translation id="6165508094623778733">Scopri di più</translation>
 <translation id="986879628471635371">Fase iniziale della risoluzione dei problemi</translation>
-<translation id="5808759341041733958">Scegli motore di ricerca predefinito</translation>
-<translation id="1331593888918588693">Puoi sempre cambiare le preferenze in seguito nelle impostazioni dell'app.</translation>
 <translation id="5806601733251372221">Scudi di Brave</translation>
 <translation id="8537217141725709400">Guadagna <ph name="TOKEN"/></translation>
 <translation id="3333887201479867589">Ricompense Brave</translation>
@@ -272,9 +274,6 @@
 <translation id="4225265925807365011">Ho una frase di recupero da 24 parole</translation>
 <translation id="3570367516044491911">Imposta come browser predefinito</translation>
 <translation id="6800338374677644736">Imposta come browser predefinito</translation>
-<translation id="19715420010996093">Scegli il browser Brave e premi su 'Sempre'</translation>
-<translation id="3546439402724649282">Brave è già impostato come browser predefinito.</translation>
-<translation id="8389661903259423907">Hai già impostato un browser predefinito. Puoi cambiare il browser predefinito nelle impostazioni della tua applicazione.</translation>
 <translation id="1545749641540134597">Scansiona Codice QR</translation>
 <translation id="5317781812114905957">Istruzioni</translation>
 <translation id="8515319483805157233">Per eseguire una ricerca con codice QR, allinea al centro il codice QR.</translation>
@@ -457,6 +456,7 @@ Confermi di voler procedere?</translation>
 <translation id="3624048886326677117">Blocca tracker e annunci (aggressivo)</translation>
 <translation id="7151914815476509258">Blocca tracker e annunci (standard)</translation>
 <translation id="7384778069178817075">Permetti tutti gli indicatori &amp; annunci</translation>
+<translation id="1173312143376149085"><ph name="BEGIN_LINK_0"/>L'opzione "Blocca tutti i cookie" è stata rimossa. Per sapere come forzare l'attivazione di questa opzione, visita<ph name="END_LINK_0"/> <ph name="BEGIN_LINK_1"/>la nostra pagina di assistenza<ph name="END_LINK_1"/>.</translation>
 <translation id="3763681089644577874">Blocca i cookie</translation>
 <translation id="614747795780742163">Impedisce ai siti web di memorizzare informazioni sulle visite precedenti</translation>
 <translation id="6883611015375728278">Blocca tutti i cookie</translation>
@@ -499,6 +499,7 @@ Confermi di voler procedere?</translation>
 <translation id="8459191579769999214">Visualizza screenshot</translation>
 <translation id="6476216365964140603">Dettagli aggiuntivi (facoltativo)</translation>
 <translation id="6145852496180774737">Contattami via: (facoltativo)</translation>
+<translation id="6367576083705149078">Se fornisci i dati di contatto, questi saranno memorizzati per future segnalazioni.</translation>
 <translation id="7616645803364270729">E-mail, Twitter ecc.</translation>
 <translation id="5299848999918506028">Grazie!</translation>
 <translation id="76550953340008122">Grazie, hai fatto notare agli sviluppatori di Brave che qualcosa non va su questo sito. Faremo del nostro meglio per rimediare!</translation>
@@ -543,7 +544,6 @@ Confermi di voler procedere?</translation>
 <translation id="1945330434665345785">Hai bloccato <ph name="COUNT"/> tracker &amp; ad con Brave browser la scorsa settimana.</translation>
 <translation id="2883868922264431515">Guadagna token guardando ad tutela-privacy e supporta i tuoi siti preferiti.</translation>
 <translation id="7408493389591475748">Comincia a navigare per visualizzare il report sulla privacy</translation>
-<translation id="9080777565335515917">Imposta Brave come browser di default per una navigazione privata e sicura.</translation>
 <translation id="1390943217516275883">Permette a Brave di mostrare le tue statistiche in tema di privacy</translation>
 <translation id="1763352720905582220">Inoltra un report settimanale sulla privacy</translation>
 <translation id="1811691435325545066">Cancella tutti i dati dei report sulla privacy</translation>
@@ -587,16 +587,6 @@ Confermi di voler procedere?</translation>
 <translation id="2977501775944575564">Download parallelo</translation>
 <translation id="6224180438946945617">Abilita il download parallelo per accelerare la velocità di download</translation>
 <translation id="8967385052772844086">Visualizza il rapporto completo sulla privacy</translation>
-<translation id="6864343534748973390">Più popolare</translation>
-<translation id="4608192160278975831">Privato e senza tracciamento</translation>
-<translation id="7208522820527289601">Privato e senza tracciamento, con sede nell'UE</translation>
-<translation id="1161008391729450974">I risultati di Google senza essere tracciati</translation>
-<translation id="7320542277711359296">Secondo più popolare</translation>
-<translation id="8295049095570748497">Un motore di ricerca leader in Russia</translation>
-<translation id="2642661895835126239">Pianta alberi, ed ha sede a Berlino</translation>
-<translation id="2422627462367776805">Portale web e motore di ricerca sudcoreano</translation>
-<translation id="177282784098234156">Privato, indipendente, incentrato sull’utente</translation>
-<translation id="1410130669636877548">Alcuni motori di ricerca proteggono la tua privacy meglio di altri quando effettui ricerche sul web.</translation>
 <translation id="3479552764303398839">Non adesso</translation>
 <translation id="7138272885617540195">Consenti ai link alle app di aprirsi nelle app al di fuori di Brave</translation>
 <translation id="4954512758656527938">Wallet Ethereum predefinito</translation>
@@ -856,7 +846,6 @@ Se non accetti questa richiesta, la VPN non si riconnetterà e la tua connession
 <translation id="590733288489975971">Premi di Brave Ads</translation>
 <translation id="1450735350187803276">Annunci visti questo mese</translation>
 <translation id="1767561995429774671">Contribuisci</translation>
-<translation id="7335371657242627509">Includi nel contributo automatico</translation>
 <translation id="6727102863431372879">Imposta</translation>
 <translation id="3074127054582480056">Attenzione</translation>
 <translation id="2280319752798785157">Contributo mensile</translation>
@@ -1242,4 +1231,5 @@ Se non accetti questa richiesta, la VPN non si riconnetterà e la tua connession
 <translation id="1336494649091412226">Vuoi davvero uscire da Brave?</translation>
 <translation id="2361906291514218784">IA di Leo</translation>
 <translation id="7942415993090181327">Cronologia delle chat</translation>
+<translation id="6859935199732075666">Mostra gli errori di Navigazione Sicura</translation>
 </translationbundle>

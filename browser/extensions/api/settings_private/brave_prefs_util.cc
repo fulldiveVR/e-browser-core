@@ -129,7 +129,7 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[kLocationBarIsWide] = settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[omnibox::kAutocompleteEnabled] =
       settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[omnibox::kTopSiteSuggestionsEnabled] =
+  (*s_brave_allowlist)[omnibox::kTopSuggestionsEnabled] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[omnibox::kHistorySuggestionsEnabled] =
       settings_api::PrefType::kBoolean;
@@ -255,6 +255,8 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatContextMenuEnabled] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatShowToolbarButton] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatTabOrganizationEnabled] =
       settings_api::PrefType::kBoolean;
 
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)

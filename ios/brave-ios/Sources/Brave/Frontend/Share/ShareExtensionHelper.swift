@@ -5,14 +5,15 @@
 import Foundation
 import Shared
 import UIKit
+import Web
 
 /// A helper class that aids in the creation of share sheets
 class ShareExtensionHelper {
   /// URL and Tab to be shared
   private let selectedURL: URL
-  private weak var selectedTab: Tab?
+  private weak var selectedTab: (any TabState)?
 
-  init(url: URL, tab: Tab?) {
+  init(url: URL, tab: (any TabState)?) {
     self.selectedURL = url
     self.selectedTab = tab
   }

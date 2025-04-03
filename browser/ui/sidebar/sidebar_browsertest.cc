@@ -607,7 +607,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, EventDetectWidgetTest) {
 
   auto* tab_strip_model = browser()->tab_strip_model();
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model->GetTabAtIndex(0)->GetHandle()));
@@ -941,7 +941,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, DisabledItemsTest) {
   for (const auto& item : model->GetAllSidebarItems()) {
     // Check disabled builtin items are not included in guest browser's items
     // list.
-    if (IsBuiltInType(item)) {
+    if (item.is_built_in_type()) {
       EXPECT_FALSE(IsDisabledItemForGuest(item.built_in_item_type));
     }
   }
@@ -953,7 +953,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, DisabledItemsTest) {
   for (const auto& item : model->GetAllSidebarItems()) {
     // Check disabled builtin items are not included in private browser's items
     // list.
-    if (IsBuiltInType(item)) {
+    if (item.is_built_in_type()) {
       EXPECT_FALSE(IsDisabledItemForPrivate(item.built_in_item_type));
     }
   }

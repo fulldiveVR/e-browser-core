@@ -296,6 +296,7 @@
 <translation id="1336940801687497203">ልክ እንደ Windows</translation>
 <translation id="8721331068159819483">ከ macOS ጋር ተመሳሳይ</translation>
 <translation id="4171684937791228083">በሙሉ ማያ ገጽ ሁልጊዜ የመሳሪያ አሞሌን አሳይ</translation>
+<translation id="5840822070878669614">Brave የድር መደብርን ይክፈቱ</translation>
 <translation id="1692470335103807198">ተጨማሪ ገጽታዎችን ያግኙ</translation>
 <translation id="2906510232093002459">የ Brave ነባሪ ምስሎች</translation>
 <translation id="8000020256436988724">የመሳሪያ አሞሌ</translation>
@@ -569,7 +570,6 @@
 <translation id="188228077840632890">AdGuard የማስታወቂያ እገዳን፣ የወላጅ ቁጥጥር አማራጮችን እና ከሌሎች የ AdGuard አገልግሎት አቅርቦቶች ጋር እንዲዋሃድ የሚያደርግ የ Maniifest V2 ቅጥያ ነው።</translation>
 <translation id="8137559199583651773">ቅጥያዎችን ያስተዳድሩ</translation>
 <translation id="7013485839273047434">ተጨማሪ ቅጥያዎችን ያግኙ</translation>
-<translation id="5840822070878669614">Brave የድር መደብርን ይክፈቱ</translation>
 <translation id="4954512758656527938">ነባር የ Ethereum ዋሌት</translation>
 <translation id="7701023802820268122">ነባር የ Solana ዋሌት</translation>
 <translation id="8488282162676695335">የBrave ዋሌት</translation>
@@ -638,7 +638,6 @@
 <translation id="8172263161008556851">በውይይቱ ውስጥ የተጠቆሙ ጥያቄዎችን አሳይ</translation>
 <translation id="5574059574002819179">በራስ-መጠናቀቅ የሚየስችሉ የአስተያየት ጥቆማዎችን ያስተካክሉ</translation>
 <translation id="614530507403667291">ነባሪ ሞዴል ለአዳዲስ ውይይቶች</translation>
-<translation id="8794525422794607973">ሞዴሉ በአንድ መስተጋብር ውስጥ ሊሰራ የሚችለው ከፍተኛው የቶከኖች ብዛት። እያንዳንዱ ቶክን በግምት የአንድን ቃል 3/4 ነው። ትልቅ የአውድ መጠን መኖሩ ሞዴሉ ረጅም ቃለ ምልልሶችን እንዲይዝ ያስችለዋል። የተለያዩ ሞዴሎች የተለያዩ ከፍተኛ የአውድ መጠኖችን ይደግፋሉ።</translation>
 <translation id="349846214503465941">የአጫዋች ዝርዝር አንቃ</translation>
 <translation id="7903608716704052878">ከመስመር ውጭ ለማየት ፋይሎችን በራስ-ሰር ያክሉ</translation>
 <translation id="4193768184502613558">ይህ አማራጭ ያለ በይነመረብ ግንኙነት ማጫወት እንዲችሉ የሚዲያ ፋይሎችን በራስ-ሰር ይሸጉጣል።</translation>

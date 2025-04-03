@@ -12,6 +12,7 @@ import { isLeoModel } from '../model_utils'
 import { tabAssociatedChatId, useActiveChat } from './active_chat_context'
 import { useAIChat } from './ai_chat_context'
 import getAPI from '../api'
+import { MAX_IMAGES } from '../../common/constants'
 
 const MAX_INPUT_CHAR = 2000
 const CHAR_LIMIT_THRESHOLD = MAX_INPUT_CHAR * 0.8
@@ -21,6 +22,8 @@ export interface CharCountContext {
   isCharLimitApproaching: boolean
   inputTextCharCountDisplay: string
 }
+
+export type UploadedImageData = Mojom.UploadedImage
 
 export type ConversationContext = SendFeedbackState & CharCountContext & {
   historyInitialized: boolean
@@ -32,8 +35,6 @@ export type ConversationContext = SendFeedbackState & CharCountContext & {
   suggestedQuestions: string[]
   isGenerating: boolean
   suggestionStatus: Mojom.SuggestionGenerationStatus
-  faviconUrl?: string
-  faviconCacheKey?: string
   currentError: Mojom.APIError | undefined
   apiHasError: boolean
   shouldDisableUserInput: boolean
@@ -64,6 +65,9 @@ export type ConversationContext = SendFeedbackState & CharCountContext & {
 
   showAttachments: boolean
   setShowAttachments: (show: boolean) => void
+  uploadImage: (useMediaCapture: boolean) => void
+  removeImage: (index: number) => void
+  pendingMessageImages: Mojom.UploadedImage[] | null
 }
 
 export const defaultCharCountContext: CharCountContext = {
@@ -105,6 +109,9 @@ const defaultContext: ConversationContext = {
   setIsToolsMenuOpen: () => { },
   showAttachments: false,
   setShowAttachments: () => { },
+  uploadImage: (useMediaCapture: boolean) => { },
+  removeImage: () => { },
+  pendingMessageImages: null,
   ...defaultSendFeedbackState,
   ...defaultCharCountContext
 }
@@ -187,10 +194,6 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
       ...partialContext
     }))
   }
-
-  React.useEffect(() => {
-    context.setShowAttachments(!!aiChatContext.isStandalone && !aiChatContext.visibleConversations.some(c => c.uuid === context.conversationUuid))
-  }, [context.conversationUuid])
 
   const getModelContext = (
     currentModelKey: string,
@@ -291,13 +294,6 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     )
     listenerIds.push(id)
 
-    id = callbackRouter.onFaviconImageDataChanged.addListener(() =>
-      setPartialContext({
-        faviconCacheKey: new Date().getTime().toFixed(0)
-      })
-    )
-    listenerIds.push(id)
-
     id = callbackRouter.onConversationDeleted.addListener(() => {
       // TODO(petemill): Show deleted UI
       console.debug('DELETED')
@@ -311,23 +307,6 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
       }
     }
   }, [conversationHandler, callbackRouter])
-
-  // Update favicon
-  React.useEffect(() => {
-    if (!context.conversationUuid || !aiChatContext.uiHandler) {
-      return
-    }
-    aiChatContext.uiHandler.getFaviconImageData(context.conversationUuid)
-      .then(({ faviconImageData }) => {
-        if (!faviconImageData) {
-          return
-        }
-        const blob = new Blob([new Uint8Array(faviconImageData)], { type: 'image/*' })
-        setPartialContext({
-          faviconUrl: URL.createObjectURL(blob)
-        })
-      })
-  }, [context.conversationUuid, context.faviconCacheKey])
 
   // Update the location when the visible conversation changes
   const isVisible = useIsConversationVisible(context.conversationUuid)
@@ -477,11 +456,14 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
         context.selectedActionType
       )
     } else {
-      conversationHandler.submitHumanConversationEntry(context.inputText)
+      conversationHandler.submitHumanConversationEntry(
+        context.inputText,
+        context.pendingMessageImages)
     }
 
     setPartialContext({
-      inputText: ''
+      inputText: '',
+      pendingMessageImages: null
     })
     resetSelectedActionType()
   }
@@ -525,6 +507,47 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     aiChatContext.uiHandler?.handleVoiceRecognition(context.conversationUuid)
   }
 
+  const uploadImage = (useMediaCapture: boolean) => {
+    aiChatContext.uiHandler?.uploadImage(useMediaCapture)
+    .then(({uploadedImages}) => {
+      if (uploadedImages) {
+        const totalUploadedImages = context.conversationHistory.reduce(
+          (total, turn) => total + (turn.uploadedImages?.length || 0),
+          0
+        )
+        const currentPendingImages = context.pendingMessageImages?.length || 0
+        const maxNewImages = MAX_IMAGES - totalUploadedImages - currentPendingImages
+        const newImages = uploadedImages.slice(0, Math.max(0, maxNewImages))
+
+        if (newImages.length > 0) {
+          setPartialContext({
+            pendingMessageImages: context.pendingMessageImages
+              ? [...context.pendingMessageImages, ...newImages]
+              : [...newImages]
+          })
+        }
+      }
+    })
+  }
+
+  const removeImage = (index: number) => {
+    if (!context.pendingMessageImages || context.pendingMessageImages.length === 0) {
+      return
+    }
+
+    if (context.pendingMessageImages.length === 1) {
+      setPartialContext({
+        pendingMessageImages: null
+      })
+    } else {
+      const updatedImages = [...context.pendingMessageImages]
+      updatedImages.splice(index, 1)
+      setPartialContext({
+        pendingMessageImages: updatedImages
+      })
+    }
+  }
+
   const store: ConversationContext = {
     ...context,
     ...sendFeedbackState,
@@ -553,6 +576,8 @@ export function ConversationContextProvider(props: React.PropsWithChildren) {
     switchToBasicModel,
     setIsToolsMenuOpen: (isToolsMenuOpen) => setPartialContext({ isToolsMenuOpen }),
     handleVoiceRecognition,
+    uploadImage,
+    removeImage,
     conversationHandler
   }
 

@@ -60,9 +60,10 @@ const std::map<BravePrepopulatedEngineID, const PrepopulatedEngine*>
         {PREPOPULATED_ENGINE_ID_DUCKDUCKGO_DE, &duckduckgo_de},
         {PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE, &duckduckgo_au_nz_ie},
         {PREPOPULATED_ENGINE_ID_QWANT, &qwant},
-        {PREPOPULATED_ENGINE_ID_STARTPAGE, &startpage},
+        {PREPOPULATED_ENGINE_ID_STARTPAGE, &brave_startpage},
         {PREPOPULATED_ENGINE_ID_ECOSIA, &brave_ecosia},
         {PREPOPULATED_ENGINE_ID_BRAVE, &brave_search},
+        {PREPOPULATED_ENGINE_ID_YAHOO_JP, &brave_yahoo_jp},
 };
 
 PrepopulatedEngine ModifyEngineParams(const PrepopulatedEngine& engine,
@@ -165,17 +166,16 @@ const PrepopulatedEngine qwant = MakeBravePrepopulatedEngine(
     SEARCH_ENGINE_QWANT,
     PREPOPULATED_ENGINE_ID_QWANT);
 
-const PrepopulatedEngine startpage = MakeBravePrepopulatedEngine(
-    u"Startpage",
-    u":sp",
-    "https://www.startpage.com/favicon.ico",
-    "https://www.startpage.com/do/"
-    "search?q={searchTerms}&segment=startpage.brave",
-    "UTF-8",
-    "https://www.startpage.com/cgi-bin/"
-    "csuggest?query={searchTerms}&limit=10&format=json",
-    SEARCH_ENGINE_OTHER,
-    PREPOPULATED_ENGINE_ID_STARTPAGE);
+const PrepopulatedEngine brave_startpage =
+    ModifyEngineParams(startpage,
+                       u"Startpage",
+                       u":sp",
+                       "https://www.startpage.com/do/"
+                       "search?q={searchTerms}&segment=startpage.brave",
+                       "https://www.startpage.com/cgi-bin/"
+                       "csuggest?query={searchTerms}&limit=10&format=json",
+                       nullptr,
+                       PREPOPULATED_ENGINE_ID_STARTPAGE);
 
 const PrepopulatedEngine brave_yandex =
     ModifyEngineParams(yandex_com,
@@ -235,6 +235,37 @@ const PrepopulatedEngine brave_bing = ModifyEngineParams(
     "https://www.bing.com/osjson.aspx?query={searchTerms}&language={language}",
     "https://www.bing.com/images/detail/search?iss=sbiupload#enterInsights",
     PREPOPULATED_ENGINE_ID_BING);
+
+const PrepopulatedEngine brave_yahoo_jp = ModifyEngineParams(
+    yahoo_jp,
+    u"Yahoo! JAPAN",
+    nullptr,  // keyword
+    // search url
+    "https://search.yahoo.co.jp/search?p={searchTerms}&ei={inputEncoding}&fr="
+#if BUILDFLAG(IS_ANDROID)
+    "brave-mobile_ext",
+#else
+    "brave-desktop_ext",
+#endif
+    // suggest url
+    "https://search.yahooapis.jp/AssistSearchService/V2/"
+    "webassistSearch?p={searchTerms}&appid="
+    "dj00aiZpPXVyZmc2WDgzWnA5SSZzPWNvbnN1bWVyc2VjcmV0Jng9MTE-"
+    "&output=fxjson&fr="
+#if BUILDFLAG(IS_ANDROID)
+    "brave-mobile_ext",
+#else
+    "brave-desktop_ext",
+#endif
+    // image url
+    "https://search.yahoo.co.jp/image/"
+    "search?p={searchTerms}&ei={inputEncoding}&fr="
+#if BUILDFLAG(IS_ANDROID)
+    "brave-mobile_ext",
+#else
+    "brave-desktop_ext",
+#endif
+    PREPOPULATED_ENGINE_ID_YAHOO_JP);
 
 const std::map<BravePrepopulatedEngineID, const PrepopulatedEngine*>&
 GetBraveEnginesMap() {

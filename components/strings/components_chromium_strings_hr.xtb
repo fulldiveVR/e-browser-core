@@ -20,6 +20,9 @@
           i poništite odabir potvrdnog okvira "Upotrijebi proxy poslužitelj za LAN".</translation>
 <translation id="303960458633076466">Brave je blokirao ovu stranicu</translation>
 <translation id="2017237562285586622">U postavkama vatrozida ili antivirusnog programa omogućite Braveu da pristupa mreži.</translation>
+<translation id="4949828774841497663">Idite na Aplikacije &gt; Postavke sustava &gt; Mreža, odaberite
+          aktivnu mrežu, kliknite gumb Pojedinosti... i poništite odabir svih proxyja
+          koji su možda odabrani.</translation>
 <translation id="8619622797841001082">Idite na
           izbornik Brave &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -28,6 +31,7 @@
           &gt;
           <ph name="PROXIES_TITLE"/>
           i provjerite je li konfiguracija postavljena na "bez proxyja" ili "izravno".</translation>
+<translation id="6159073403999048272">Te su stranice namijenjene razvojnim programerima Bravea i možda se ne održavaju ili testiraju aktivno. Da biste ih omogućili, otvorite <ph name="BEGIN_LINK"/>chrome://chrome-urls<ph name="LINK_END"/>, kliknite gumb za omogućivanje stranica za otklanjanje pogrešaka, a zatim se ponovo vratite na ovu stranicu.</translation>
 <translation id="2765022094254723779">Brave je omogućio i drugi <ph name="BEGIN_LINK_OSS"/>softver otvorenog izvornog koda<ph name="END_LINK_OSS"/>.</translation>
 <translation id="9156965752763025780">Promjene će početi vrijediti sljedeći put kad ponovo pokrenete Brave.</translation>
 <translation id="8828443087767259398">Brave treba pristup Bluetoothu za nastavak 
@@ -41,9 +45,6 @@
         pa poništite odabir stavke "<ph name="NO_PREFETCH_DESCRIPTION"/>".
         Ako se time ne riješi poteškoća, preporučujemo da ponovo odaberete tu opciju
         radi bolje izvedbe.</translation>
-<translation id="8187289872471304532">Idite na
-          Aplikacije &gt; Postavke sustava &gt; Mreža &gt; Napredno &gt; Proxy poslužitelji
-          i poništite odabir proxy poslužitelja.</translation>
 <translation id="4159376633403260073">Pregledavate sigurnu stranicu Brave for Testing</translation>
 <translation id="88187049159266777">Brave se nije ispravno zatvorio.</translation>
 </translationbundle>

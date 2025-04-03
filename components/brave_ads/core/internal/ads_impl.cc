@@ -5,7 +5,6 @@
 
 #include "brave/components/brave_ads/core/internal/ads_impl.h"
 
-#include <memory>
 #include <optional>
 #include <utility>
 
@@ -14,6 +13,7 @@
 #include "brave/components/brave_ads/core/internal/account/wallet/wallet_util.h"
 #include "brave/components/brave_ads/core/internal/ads_client/ads_client_util.h"
 #include "brave/components/brave_ads/core/internal/ads_core/ads_core_util.h"
+#include "brave/components/brave_ads/core/internal/ads_internals/ads_internals_util.h"
 #include "brave/components/brave_ads/core/internal/ads_notifier_manager.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/new_tab_page_ads/creative_new_tab_page_ads_database_util.h"
@@ -26,6 +26,7 @@
 #include "brave/components/brave_ads/core/internal/history/ad_history_manager.h"
 #include "brave/components/brave_ads/core/internal/legacy_migration/client/legacy_client_migration.h"
 #include "brave/components/brave_ads/core/internal/legacy_migration/confirmations/legacy_confirmation_migration.h"
+#include "brave/components/brave_ads/core/internal/legacy_migration/legacy_migration.h"
 #include "brave/components/brave_ads/core/internal/user_engagement/ad_events/ad_events.h"
 #include "brave/components/brave_ads/core/public/ads_client/ads_client.h"
 #include "brave/components/brave_ads/core/public/ads_constants.h"
@@ -42,7 +43,7 @@ AdsImpl::AdsImpl(AdsClient& ads_client,
 AdsImpl::~AdsImpl() = default;
 
 void AdsImpl::AddObserver(std::unique_ptr<AdsObserverInterface> observer) {
-  // `AdsNotifierManager` takes ownership of `ads_observer`.
+  // `AdsNotifierManager` takes ownership of `observer`.
   AdsNotifierManager::GetInstance().AddObserver(std::move(observer));
 }
 
@@ -62,6 +63,12 @@ void AdsImpl::SetFlags(mojom::FlagsPtr mojom_flags) {
   flags.did_override_from_command_line =
       mojom_flags->did_override_from_command_line;
   flags.environment_type = mojom_flags->environment_type;
+}
+
+void AdsImpl::SetContentSettings(
+    mojom::ContentSettingsPtr mojom_content_settings) {
+  auto& content_settings = GlobalState::GetInstance()->ContentSettings();
+  content_settings.allow_javascript = mojom_content_settings->allow_javascript;
 }
 
 void AdsImpl::Initialize(mojom::WalletInfoPtr mojom_wallet,
@@ -87,7 +94,7 @@ void AdsImpl::Shutdown(ShutdownCallback callback) {
 
   NotificationAdManager::GetInstance().RemoveAll(/*should_close=*/true);
 
-  std::move(callback).Run(/*success=*/true);
+  DatabaseManager::GetInstance().Shutdown(std::move(callback));
 }
 
 void AdsImpl::GetInternals(GetInternalsCallback callback) {
@@ -97,35 +104,7 @@ void AdsImpl::GetInternals(GetInternalsCallback callback) {
                                           std::move(callback)));
   }
 
-  database::table::CreativeSetConversions database_table;
-  database_table.GetActive(base::BindOnce(&AdsImpl::GetActiveCallback,
-                                          weak_factory_.GetWeakPtr(),
-                                          std::move(callback)));
-}
-
-void AdsImpl::GetActiveCallback(
-    GetInternalsCallback callback,
-    bool success,
-    const CreativeSetConversionList& creative_set_conversions) {
-  if (!success) {
-    BLOG(0, "Failed to get creative set conversions");
-    return std::move(callback).Run({});
-  }
-
-  base::Value::List list;
-  list.reserve(creative_set_conversions.size());
-  for (const auto& creative_set_conversion : creative_set_conversions) {
-    if (!creative_set_conversion.IsValid()) {
-      continue;
-    }
-
-    list.Append(base::Value::Dict()
-                    .Set("URL Pattern", creative_set_conversion.url_pattern)
-                    .Set("Expires At", creative_set_conversion.expire_at
-                                           ->InSecondsFSinceUnixEpoch()));
-  }
-
-  std::move(callback).Run(std::move(list));
+  BuildAdsInternals(std::move(callback));
 }
 
 void AdsImpl::GetDiagnostics(GetDiagnosticsCallback callback) {
@@ -178,16 +157,16 @@ void AdsImpl::TriggerInlineContentAdEvent(
 }
 
 void AdsImpl::ParseAndSaveCreativeNewTabPageAds(
-    base::Value::Dict data,
+    base::Value::Dict dict,
     ParseAndSaveCreativeNewTabPageAdsCallback callback) {
   if (task_queue_.should_queue()) {
     return task_queue_.Add(base::BindOnce(
         &AdsImpl::ParseAndSaveCreativeNewTabPageAds, weak_factory_.GetWeakPtr(),
-        std::move(data), std::move(callback)));
+        std::move(dict), std::move(callback)));
   }
 
   const bool success =
-      database::ParseAndSaveCreativeNewTabPageAds(std::move(data));
+      database::ParseAndSaveCreativeNewTabPageAds(std::move(dict));
 
   std::move(callback).Run(success);
 }
@@ -418,6 +397,18 @@ void AdsImpl::CreateOrOpenDatabaseCallback(mojom::WalletInfoPtr mojom_wallet,
     return FailedToInitialize(std::move(callback));
   }
 
+  MigrateState(base::BindOnce(&AdsImpl::MigrateStateCallback,
+                              weak_factory_.GetWeakPtr(),
+                              std::move(mojom_wallet), std::move(callback)));
+}
+
+void AdsImpl::MigrateStateCallback(mojom::WalletInfoPtr mojom_wallet,
+                                   InitializeCallback callback,
+                                   bool success) {
+  if (!success) {
+    return FailedToInitialize(std::move(callback));
+  }
+
   MigrateClientState(base::BindOnce(
       &AdsImpl::MigrateClientStateCallback, weak_factory_.GetWeakPtr(),
       std::move(mojom_wallet), std::move(callback)));
@@ -448,6 +439,7 @@ void AdsImpl::SuccessfullyInitialized(mojom::WalletInfoPtr mojom_wallet,
 
   GetAdsClient().NotifyPendingObservers();
 
+  // Flush any queued tasks that occurred during initialization.
   task_queue_.FlushAndStopQueueing();
 
   std::move(callback).Run(/*success=*/true);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grit latest_public_release="0" current_release="1" output_all_resource_defines="false">
+<grit latest_public_release="0" current_release="1">
   <outputs>
     <output filename="grit/brave_components_resources.h" type="rc_header">
       <emit emit_type='prepend'></emit>
@@ -88,6 +88,7 @@
       <part file="../skus/browser/resources/skus_internals_resources.grdp" />
       <if expr="not is_android">
         <part file="brave_blank_page_resources.grdp" />
+        <part file="brave_new_tab_page_resources.grdp" />
       </if>
       <part file="brave_translate_resources.grdp" />
       <part file="speedreader_resources.grdp" />

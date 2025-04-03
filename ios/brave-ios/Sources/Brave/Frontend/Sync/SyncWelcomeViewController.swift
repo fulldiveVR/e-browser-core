@@ -9,6 +9,7 @@ import Data
 import Preferences
 import Shared
 import UIKit
+import Web
 import os.log
 
 /// Sometimes during heavy operations we want to prevent user from navigating back, changing screen etc.
@@ -163,18 +164,19 @@ class SyncWelcomeViewController: SyncViewController {
     return button
   }()
 
+  private let braveCore: BraveCoreMain
   private let syncAPI: BraveSyncAPI
   private let syncProfileServices: BraveSyncProfileServiceIOS
 
   init(
-    syncAPI: BraveSyncAPI,
-    syncProfileServices: BraveSyncProfileServiceIOS,
+    braveCore: BraveCoreMain,
     tabManager: TabManager,
     windowProtection: WindowProtection?,
     isModallyPresented: Bool = false
   ) {
-    self.syncAPI = syncAPI
-    self.syncProfileServices = syncProfileServices
+    self.braveCore = braveCore
+    self.syncAPI = braveCore.syncAPI
+    self.syncProfileServices = braveCore.syncProfileService
     self.tabManager = tabManager
 
     super.init(windowProtection: windowProtection, isModallyPresented: isModallyPresented)
@@ -309,9 +311,12 @@ class SyncWelcomeViewController: SyncViewController {
     askForAuthentication(viewType: .sync) { [weak self] status, error in
       guard let self = self, status else { return }
 
-      let syncInternalsController = ChromeWebViewController(privateBrowsing: false).then {
+      let syncInternalsController = ChromeWebUIController(
+        braveCore: braveCore,
+        isPrivateBrowsing: false
+      ).then {
         $0.title = Strings.Sync.internalsTitle
-        $0.loadURL("brave://sync-internals")
+        $0.webView.load(URLRequest(url: URL(string: "brave://sync-internals")!))
       }
 
       navigationController?.pushViewController(syncInternalsController, animated: true)
@@ -328,8 +333,7 @@ class SyncWelcomeViewController: SyncViewController {
 
     let syncSettingsVC = SyncSettingsTableViewController(
       isModallyPresented: true,
-      syncAPI: syncAPI,
-      syncProfileService: syncProfileServices,
+      braveCoreMain: braveCore,
       tabManager: tabManager,
       windowProtection: windowProtection
     )

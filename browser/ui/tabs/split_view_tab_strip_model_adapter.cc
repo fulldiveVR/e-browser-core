@@ -14,6 +14,7 @@
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "chrome/browser/ui/tabs/tab_model.h"
+#include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
 #include "components/tab_groups/tab_group_id.h"
 
@@ -277,7 +278,9 @@ void SplitViewTabStripModelAdapter::TabPinnedStateChanged(
 }
 
 void SplitViewTabStripModelAdapter::TabGroupedStateChanged(
-    std::optional<tab_groups::TabGroupId> group,
+    TabStripModel* tab_strip_model,
+    std::optional<tab_groups::TabGroupId> old_group,
+    std::optional<tab_groups::TabGroupId> new_group,
     tabs::TabInterface* tab,
     int index) {
   if (!model_->ContainsIndex(index)) {
@@ -297,18 +300,18 @@ void SplitViewTabStripModelAdapter::TabGroupedStateChanged(
   }
 
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-      FROM_HERE,
-      base::BindOnce(
-          [](base::WeakPtr<SplitViewTabStripModelAdapter> adapter, TabTile tile,
-             const tabs::TabHandle& source,
-             std::optional<tab_groups::TabGroupId> group) {
-            if (!adapter) {
-              return;
-            }
+      FROM_HERE, base::BindOnce(
+                     [](base::WeakPtr<SplitViewTabStripModelAdapter> adapter,
+                        TabTile tile, const tabs::TabHandle& source,
+                        std::optional<tab_groups::TabGroupId> group) {
+                       if (!adapter) {
+                         return;
+                       }
 
-            adapter->SynchronizeGroupedState(tile, source, group);
-          },
-          weak_ptr_factory_.GetWeakPtr(), *tile, changed_tab_handle, group));
+                       adapter->SynchronizeGroupedState(tile, source, group);
+                     },
+                     weak_ptr_factory_.GetWeakPtr(), *tile, changed_tab_handle,
+                     new_group));
 }
 
 void SplitViewTabStripModelAdapter::OnTabRemoved(

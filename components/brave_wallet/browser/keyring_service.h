@@ -151,7 +151,7 @@ class KeyringService : public mojom::KeyringService {
       base::span<const uint8_t> message);
   std::optional<std::string> RecoverAddressByDefaultKeyring(
       base::span<const uint8_t> message,
-      base::span<const uint8_t> signature);
+      base::span<const uint8_t> eth_signature);
   bool GetPublicKeyFromX25519_XSalsa20_Poly1305ByDefaultKeyring(
       const mojom::AccountIdPtr& account_id,
       std::string* key);
@@ -247,6 +247,18 @@ class KeyringService : public mojom::KeyringService {
   std::optional<OrchardSpendingKey> GetOrchardSpendingKey(
       const mojom::AccountIdPtr& account_id);
 #endif
+
+  void UpdateNextUnusedAddressForCardanoAccount(
+      const mojom::AccountIdPtr& account_id,
+      std::optional<uint32_t> next_external_index,
+      std::optional<uint32_t> next_internal_index);
+  mojom::CardanoAccountInfoPtr GetCardanoAccountInfo(
+      const mojom::AccountIdPtr& account_id);
+  std::optional<std::vector<mojom::CardanoAddressPtr>> GetCardanoAddresses(
+      const mojom::AccountIdPtr& account_id);
+  mojom::CardanoAddressPtr GetCardanoAddress(
+      const mojom::AccountIdPtr& account_id,
+      const mojom::CardanoKeyIdPtr& payment_key_id);
 
   const std::vector<mojom::AccountInfoPtr>& GetAllAccountInfos();
   mojom::AccountInfoPtr FindAccount(const mojom::AccountIdPtr& account_id);

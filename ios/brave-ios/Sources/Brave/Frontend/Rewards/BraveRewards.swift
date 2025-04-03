@@ -11,6 +11,7 @@ import Foundation
 import Growth
 import Preferences
 import Shared
+import Web
 
 public class BraveRewards: PreferencesObserver {
 
@@ -48,10 +49,18 @@ public class BraveRewards: PreferencesObserver {
 
     ads.notifyBraveNewsIsEnabledPreferenceDidChange(Preferences.BraveNews.isEnabled.value)
     Preferences.BraveNews.isEnabled.observe(from: self)
+
+    ads.notifySponsoredImagesIsEnabledPreferenceDidChange(
+      Preferences.NewTabPage.backgroundMediaType.isSponsored
+    )
+    Preferences.NewTabPage.backgroundMediaTypeRaw.observe(from: self)
   }
 
   public func preferencesDidChange(for key: String) {
     ads.notifyBraveNewsIsEnabledPreferenceDidChange(Preferences.BraveNews.isEnabled.value)
+    ads.notifySponsoredImagesIsEnabledPreferenceDidChange(
+      Preferences.NewTabPage.backgroundMediaType.isSponsored
+    )
   }
 
   func startRewardsService(_ completion: (() -> Void)?) {
@@ -201,35 +210,41 @@ public class BraveRewards: PreferencesObserver {
 
   /// Notifies Brave Ads that the given tab did change
   func maybeNotifyTabDidChange(
-    tab: Tab,
+    tab: some TabState,
     isSelected: Bool
   ) {
-    guard !tab.redirectChain.isEmpty, !tab.isPrivate, ads.isServiceRunning() else {
+    guard !tab.redirectChain.isEmpty, !tab.isPrivate,
+      ads.isServiceRunning(),
+      let reportingState = tab.rewardsReportingState
+    else {
       // Don't notify `DidChange` for tabs that haven't finished loading, private tabs,
       // or when the ads service is not running.
       return
     }
 
     ads.notifyTabDidChange(
-      Int(tab.rewardsId),
+      Int(tab.rewardsId ?? 0),
       redirectChain: tab.redirectChain,
-      isNewNavigation: tab.rewardsReportingState.isNewNavigation,
-      isRestoring: tab.rewardsReportingState.wasRestored,
+      isNewNavigation: reportingState.isNewNavigation,
+      isRestoring: reportingState.wasRestored,
       isSelected: isSelected
     )
   }
 
   /// Notifies Brave Ads that the given tab did load
-  func maybeNotifyTabDidLoad(tab: Tab) {
-    guard !tab.redirectChain.isEmpty, !tab.isPrivate, ads.isServiceRunning() else {
+  func maybeNotifyTabDidLoad(tab: some TabState) {
+    guard !tab.redirectChain.isEmpty, !tab.isPrivate,
+      ads.isServiceRunning(),
+      let reportingState = tab.rewardsReportingState
+    else {
       // Don't notify `DidLoad` for tabs that haven't finished loading, private tabs,
       // or when the ads service is not running.
       return
     }
 
     ads.notifyTabDidLoad(
-      Int(tab.rewardsId),
-      httpStatusCode: tab.rewardsReportingState.httpStatusCode
+      Int(tab.rewardsId ?? 0),
+      httpStatusCode: reportingState.httpStatusCode
     )
   }
 
@@ -248,7 +263,7 @@ public class BraveRewards: PreferencesObserver {
 
   /// Report that a tab with a given id was updated
   func reportTabUpdated(
-    tab: Tab,
+    tab: some TabState,
     isSelected: Bool,
     isPrivate: Bool
   ) {
@@ -257,7 +272,7 @@ public class BraveRewards: PreferencesObserver {
       return
     }
 
-    let tabId = Int(tab.rewardsId)
+    let tabId = Int(tab.rewardsId ?? 0)
     if isSelected {
       tabRetrieved(tabId, url: url, html: nil)
     }
@@ -266,7 +281,7 @@ public class BraveRewards: PreferencesObserver {
   /// Report that a page has loaded in the current browser tab, and the
   /// text/HTML content is available for analysis.
   func reportLoadedPage(
-    tab: Tab,
+    tab: some TabState,
     htmlContent: String?,
     textContent: String?
   ) {
@@ -275,19 +290,19 @@ public class BraveRewards: PreferencesObserver {
       return
     }
 
-    let tabId = Int(tab.rewardsId)
+    let tabId = Int(tab.rewardsId ?? 0)
 
     tabRetrieved(tabId, url: url, html: htmlContent)
 
     // Don't notify about content changes if the ads service is not available, the
     // tab was restored, was a previously committed navigation, or an error page was displayed.
-    if ads.isServiceRunning() {
+    if ads.isServiceRunning(), let tabData = tab.browserData {
       let kHttpClientErrorResponseStatusCodeClass = 4
       let kHttpServerErrorResponseStatusCodeClass = 5
-      let responseStatusCodeClass = tab.rewardsReportingState.httpStatusCode / 100
+      let responseStatusCodeClass = tabData.rewardsReportingState.httpStatusCode / 100
 
-      if !tab.rewardsReportingState.wasRestored
-        && tab.rewardsReportingState.isNewNavigation
+      if !tabData.rewardsReportingState.wasRestored
+        && tabData.rewardsReportingState.isNewNavigation
         && responseStatusCodeClass != kHttpClientErrorResponseStatusCodeClass
         && responseStatusCodeClass != kHttpServerErrorResponseStatusCodeClass
       {
@@ -296,13 +311,13 @@ public class BraveRewards: PreferencesObserver {
         // changed with empty HTML to ensure that regular conversions are processed.
         ads.notifyTabHtmlContentDidChange(
           tabId,
-          redirectChain: tab.redirectChain,
+          redirectChain: tab.redirectChain ?? [],
           html: htmlContent ?? ""
         )
         if let textContent {
           ads.notifyTabTextContentDidChange(
             tabId,
-            redirectChain: tab.redirectChain,
+            redirectChain: tab.redirectChain ?? [],
             text: textContent
           )
         }

@@ -253,11 +253,6 @@ source_set("ui") {
       "tabs/shared_pinned_tab_service.h",
       "tabs/shared_pinned_tab_service_factory.cc",
       "tabs/shared_pinned_tab_service_factory.h",
-      "tabs/split_view_browser_data.cc",
-      "tabs/split_view_browser_data.h",
-      "tabs/split_view_browser_data_observer.h",
-      "tabs/split_view_tab_strip_model_adapter.cc",
-      "tabs/split_view_tab_strip_model_adapter.h",
       "toolbar/app_menu_icons.cc",
       "toolbar/app_menu_icons.h",
       "toolbar/bookmark_bar_sub_menu_model.cc",
@@ -358,6 +353,7 @@ source_set("ui") {
       "//base",
       "//brave/browser/ntp_background",
       "//brave/browser/profiles:util",
+      "//brave/browser/ui/tabs:split_view",
       "//brave/common",
       "//brave/components/constants",
       "//brave/components/misc_metrics",
@@ -659,6 +655,8 @@ source_set("ui") {
     }
 
     if (enable_brave_vpn) {
+      deps += [ "//brave/browser/ui/brave_vpn" ]
+
       if (is_win) {
         sources += [
           "views/brave_vpn/brave_vpn_dns_settings_notificiation_dialog_view.cc",
@@ -673,11 +671,7 @@ source_set("ui") {
 
         deps += [ "//brave/browser/brave_vpn/win:wireguard_utils" ]
       }
-
-      sources += [
-        "brave_vpn/brave_vpn_controller.cc",
-        "brave_vpn/brave_vpn_controller.h",
-      ]
+      sources += [ "brave_vpn/brave_vpn_controller.cc" ]
     }
 
     if (use_aura) {
@@ -808,6 +802,7 @@ source_set("ui") {
     "//brave/components/ai_chat/resources",
     "//brave/components/ai_chat/resources/custom_site_distiller_scripts:generated_resources",
     "//brave/components/ai_rewriter/common/buildflags",
+    "//brave/components/brave_account/core/mojom",
     "//brave/components/brave_adaptive_captcha",
     "//brave/components/brave_adblock_ui:generated_resources",
     "//brave/components/brave_adblock_ui/adblock_internals:generated_resources",
@@ -889,7 +884,6 @@ source_set("ui") {
     "//components/country_codes",
     "//components/favicon/content",
     "//components/favicon/core",
-    "//components/flags_ui",
     "//components/gcm_driver:gcm_buildflags",
     "//components/image_fetcher/core",
     "//components/infobars/content",
@@ -906,6 +900,7 @@ source_set("ui") {
     "//components/tab_groups",
     "//components/update_client",
     "//components/user_prefs",
+    "//components/webui/flags",
     "//content/public/browser",
     "//content/public/common",
     "//mojo/public/cpp/bindings",

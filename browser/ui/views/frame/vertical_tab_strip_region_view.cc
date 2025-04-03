@@ -240,8 +240,7 @@ class ShortcutBox : public views::View {
     const auto shortcut_font = shortcut_part->font_list();
     shortcut_part->SetFontList(shortcut_font.DeriveWithSizeDelta(
         kFontSize - shortcut_font.GetFontSize()));
-    shortcut_part->SetEnabledColorId(
-        kColorBraveVerticalTabNTBShortcutTextColor);
+    shortcut_part->SetEnabledColor(kColorBraveVerticalTabNTBShortcutTextColor);
     shortcut_part->SetBorder(views::CreateThemedRoundedRectBorder(
         /*thickness*/ 1, /*radius*/ 4, kColorBraveVerticalTabSeparator));
 
@@ -312,7 +311,7 @@ class VerticalTabNewTabButton : public BraveNewTabButton {
     const auto text_font = text_->font_list();
     text_->SetFontList(
         text_font.DeriveWithSizeDelta(kFontSize - text_font.GetFontSize()));
-    text_->SetEnabledColorId(kColorBraveVerticalTabNTBTextColor);
+    text_->SetEnabledColor(kColorBraveVerticalTabNTBTextColor);
 
     auto* spacer = AddChildView(std::make_unique<views::View>());
     spacer->SetProperty(
@@ -420,9 +419,7 @@ END_METADATA
 class VerticalTabStripScrollContentsView : public views::View {
   METADATA_HEADER(VerticalTabStripScrollContentsView, views::View)
  public:
-  VerticalTabStripScrollContentsView(VerticalTabStripRegionView* container,
-                                     TabStrip* tab_strip)
-      : container_(container), tab_strip_(tab_strip) {
+  VerticalTabStripScrollContentsView() {
     SetLayoutManager(std::make_unique<views::FillLayout>());
   }
   ~VerticalTabStripScrollContentsView() override = default;
@@ -433,25 +430,12 @@ class VerticalTabStripScrollContentsView : public views::View {
       return;
     }
 
-    if (in_preferred_size_changed_) {
-      return;
-    }
-
-    // Prevent reentrance caused by container_->Layout()
-    base::AutoReset<bool> in_preferred_size_change(&in_preferred_size_changed_,
-                                                   true);
-    container_->InvalidateLayout();
+    PreferredSizeChanged();
   }
 
   void OnPaintBackground(gfx::Canvas* canvas) override {
     canvas->DrawColor(GetColorProvider()->GetColor(kColorToolbar));
   }
-
- private:
-  raw_ptr<VerticalTabStripRegionView> container_ = nullptr;
-  raw_ptr<TabStrip> tab_strip_ = nullptr;
-
-  bool in_preferred_size_changed_ = false;
 };
 
 BEGIN_METADATA(VerticalTabStripScrollContentsView)
@@ -627,8 +611,7 @@ VerticalTabStripRegionView::VerticalTabStripRegionView(
           this),
       this, browser_));
   contents_view_ =
-      AddChildView(std::make_unique<VerticalTabStripScrollContentsView>(
-          this, original_region_view_->tab_strip_));
+      AddChildView(std::make_unique<VerticalTabStripScrollContentsView>());
   header_view_->toggle_button()->SetHighlighted(state_ == State::kExpanded);
   separator_ = AddChildView(std::make_unique<views::View>());
   separator_->SetBackground(

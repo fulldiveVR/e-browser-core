@@ -8,6 +8,7 @@ import SDWebImage
 import Shared
 import Storage
 import UIKit
+import Web
 
 class FaviconHandler {
   static let maximumFaviconSize = 1 * 1024 * 1024  // 1 MiB file size limit
@@ -23,9 +24,9 @@ class FaviconHandler {
     unregister(tabObservers)
   }
 
-  func loadFaviconURL(
+  @MainActor func loadFaviconURL(
     _ url: URL,
-    forTab tab: Tab
+    forTab tab: some TabState
   ) async throws -> Favicon {
     let favicon = try await FaviconFetcher.loadIcon(
       url: url,
@@ -38,8 +39,8 @@ class FaviconHandler {
 }
 
 extension FaviconHandler: TabEventHandler {
-  func tab(_ tab: Tab, didLoadPageMetadata metadata: PageMetadata) {
-    if let currentURL = tab.url {
+  func tab(_ tab: some TabState, didLoadPageMetadata metadata: PageMetadata) {
+    if let currentURL = tab.visibleURL {
       Task { @MainActor in
         if let favicon = await FaviconFetcher.getIconFromCache(for: currentURL) {
           tab.favicon = favicon

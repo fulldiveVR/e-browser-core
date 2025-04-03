@@ -167,14 +167,16 @@ class ConversationHandler : public mojom::ConversationHandler,
         std::optional<std::string_view> associated_content_value) {}
     virtual void OnConversationEntryRemoved(ConversationHandler* handler,
                                             std::string turn_uuid) {}
-    virtual void OnConversationEntryUpdated(ConversationHandler* handler,
-                                            mojom::ConversationTurnPtr entry) {}
 
     // Called when a mojo client connects or disconnects
     virtual void OnClientConnectionChanged(ConversationHandler* handler) {}
     virtual void OnConversationTitleChanged(
         const std::string& conversation_uuid,
         const std::string& title) {}
+    virtual void OnConversationTokenInfoChanged(
+        const std::string& conversation_uuid,
+        uint64_t total_tokens,
+        uint64_t trimmed_tokens) {}
     virtual void OnSelectedLanguageChanged(
         ConversationHandler* handler,
         const std::string& selected_language) {}
@@ -255,7 +257,10 @@ class ConversationHandler : public mojom::ConversationHandler,
   void GetModels(GetModelsCallback callback) override;
   void ChangeModel(const std::string& model_key) override;
   void GetIsRequestInProgress(GetIsRequestInProgressCallback callback) override;
-  void SubmitHumanConversationEntry(const std::string& input) override;
+  void SubmitHumanConversationEntry(
+      const std::string& input,
+      std::optional<std::vector<mojom::UploadedImagePtr>> uploaded_images)
+      override;
   void SubmitHumanConversationEntry(mojom::ConversationTurnPtr turn);
   void SubmitHumanConversationEntryWithAction(
       const std::string& input,
@@ -288,7 +293,6 @@ class ConversationHandler : public mojom::ConversationHandler,
                                   mojom::ActionType action_type,
                                   mojom::APIError error);
   void OnAssociatedContentTitleChanged();
-  void OnFaviconImageDataChanged();
   void OnUserOptedIn();
   size_t GetConversationHistorySize() override;
 
@@ -354,6 +358,8 @@ class ConversationHandler : public mojom::ConversationHandler,
   FRIEND_TEST_ALL_PREFIXES(PageContentRefineTest, LocalModelsUpdater);
   FRIEND_TEST_ALL_PREFIXES(PageContentRefineTest, TextEmbedder);
   FRIEND_TEST_ALL_PREFIXES(PageContentRefineTest, TextEmbedderInitialized);
+  FRIEND_TEST_ALL_PREFIXES(ConversationHandlerUnitTest_NoAssociatedContent,
+                           ContentReceipt);
 
   struct Suggestion {
     std::string title;
@@ -426,9 +432,10 @@ class ConversationHandler : public mojom::ConversationHandler,
   void OnAssociatedContentInfoChanged();
   void OnClientConnectionChanged();
   void OnConversationTitleChanged(std::string_view title);
+  void OnConversationTokenInfoChanged(uint64_t total_tokens,
+                                      uint64_t trimmed_tokens);
   void OnConversationUIConnectionChanged(mojo::RemoteSetElementId id);
   void OnSelectedLanguageChanged(const std::string& selected_language);
-  void OnAssociatedContentFaviconImageDataChanged();
   void OnAPIRequestInProgressChanged();
   void OnStateForConversationEntriesChanged();
 
@@ -442,6 +449,7 @@ class ConversationHandler : public mojom::ConversationHandler,
   // Any previously-generated suggested questions
   std::vector<Suggestion> suggestions_;
   std::string selected_language_;
+
   // Is a conversation engine request in progress (does not include
   // non-conversation engine requests.
   bool is_request_in_progress_ = false;

@@ -67,6 +67,7 @@ source_set("impl") {
     "//chrome/browser:browser_process",
     "//chrome/browser:browser_public_dependencies",
     "//chrome/browser:primitives",
+    "//chrome/browser/content_settings:content_settings_factory",
     "//chrome/browser/profiles:profile",
     "//chrome/browser/regional_capabilities",
     "//chrome/browser/ui",
@@ -146,11 +147,11 @@ source_set("browser_tests") {
   testonly = true
 
   sources = [
+    "ads_service_waiter.cc",
+    "ads_service_waiter.h",
     "analytics/p3a/brave_stats_helper_browsertest.cc",
     "application_state/notification_helper/notification_helper_impl_mock.cc",
     "application_state/notification_helper/notification_helper_impl_mock.h",
-    "test_ads_service_waiter.cc",
-    "test_ads_service_waiter.h",
   ]
 
   deps = [

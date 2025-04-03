@@ -47,6 +47,7 @@ var package = Package(
     .library(name: "CredentialProviderUI", targets: ["CredentialProviderUI"]),
     .library(name: "PlaylistUI", targets: ["PlaylistUI"]),
     .library(name: "BrowserMenu", targets: ["BrowserMenu"]),
+    .library(name: "Web", targets: ["Web"]),
     .executable(name: "LeoAssetCatalogGenerator", targets: ["LeoAssetCatalogGenerator"]),
     .plugin(name: "IntentBuilderPlugin", targets: ["IntentBuilderPlugin"]),
     .plugin(name: "LoggerPlugin", targets: ["LoggerPlugin"]),
@@ -363,7 +364,7 @@ var package = Package(
       ],
       plugins: ["LoggerPlugin"]
     ),
-    .target(name: "UserAgent", dependencies: ["Preferences"]),
+    .target(name: "UserAgent", dependencies: ["Preferences", "BraveCore"]),
     .target(
       name: "CredentialProviderUI",
       dependencies: ["BraveCore", "DesignSystem", "BraveShared", "Strings", "BraveUI"]
@@ -446,6 +447,15 @@ var package = Package(
         "GuardianConnect", "BraveWallet",
       ]
     ),
+    .target(
+      name: "Web",
+      dependencies: [
+        "BraveCore", "FaviconModels", "BraveShared", "Shared", "CertificateUtilities", "Storage",
+        "BraveStrings", "Strings",
+        .product(name: "OrderedCollections", package: "swift-collections"),
+      ],
+      plugins: ["LoggerPlugin"]
+    ),
     .testTarget(name: "BrowserMenuTests", dependencies: ["BrowserMenu"]),
     .plugin(name: "IntentBuilderPlugin", capability: .buildTool()),
     .plugin(name: "LoggerPlugin", capability: .buildTool()),
@@ -496,6 +506,7 @@ var braveTarget: PackageDescription.Target = .target(
     .product(name: "Collections", package: "swift-collections"),
     "PlaylistUI",
     "BrowserMenu",
+    "Web",
   ],
   exclude: [
     "Frontend/UserContent/UserScripts/AllFrames",
@@ -514,7 +525,6 @@ var braveTarget: PackageDescription.Target = .target(
     .copy("Assets/MainFrameAtDocumentEndSandboxed.js"),
     .copy("Assets/MainFrameAtDocumentStart.js"),
     .copy("Assets/MainFrameAtDocumentStartSandboxed.js"),
-    .copy("Assets/SessionRestore.html"),
     .copy("Assets/Fonts/FiraSans-Bold.ttf"),
     .copy("Assets/Fonts/FiraSans-BoldItalic.ttf"),
     .copy("Assets/Fonts/FiraSans-Book.ttf"),

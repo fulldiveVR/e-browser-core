@@ -75,6 +75,7 @@ net/proxy_resolution/ @brave/tor-reviewers
 # Chromium Extension API modifications
 chromium_src/**/extensions/**/*_features.json @brave/sec-team
 chromium_src/tools/json_schema_compiler/ @brave/sec-team
+common/extensions/api/ @brave/sec-team
 
 # Brave theme
 browser/themes @simonhong
@@ -100,7 +101,6 @@ browser/ui/webui/brave_wallet/ @brave/crypto-wallets-core
 browser/ui/views/wallet_bubble_focus_observer* @brave/crypto-wallets-core
 components/brave_wallet/ @brave/crypto-wallets-core
 components/brave_wallet/browser/brave_wallet_provider_delegate.h @brave/crypto-wallets-core @brave/crypto-wallets-ios
-components/brave_wallet/common/brave_wallet.mojom @brave/crypto-wallets-ios
 components/brave_wallet/resources/*.js @brave/crypto-wallets-core @brave/crypto-wallets-ios
 components/brave_wallet_ui/ @brave/crypto-wallets-front-end
 ios/browser/brave_wallet/ @brave/crypto-wallets-ios
@@ -148,6 +148,11 @@ third_party/boost @brave/deps-reviewers
 
 # Network auditor
 browser/net/brave_network_audit_allowed_lists.h @brave/sec-team
+browser/net/brave_network_audit_rewards_browsertest.cc @brave/sec-team
+browser/net/brave_network_audit_search_ad_browsertest.cc @brave/sec-team
+
+# Canary
+tools/cr/ @brave/chromium-rebase-team
 
 # iOS
 /ios/ @brave/ios
@@ -221,3 +226,6 @@ script/lib/l10n/requirements.txt @brave/sec-team
 
 # protected URLs (needs security review)
 components/skus/common/skus_utils.h @brave/sec-team
+
+# for brave_exec_script_allowlist
+build/dotfile_settings.gni @bridiver @goodov

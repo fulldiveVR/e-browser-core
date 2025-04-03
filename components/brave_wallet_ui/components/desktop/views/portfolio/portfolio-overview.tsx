@@ -59,6 +59,7 @@ import {
   getStoredPortfolioTimeframe //
 } from '../../../../utils/local-storage-utils'
 import { makePortfolioAssetRoute } from '../../../../utils/routes-utils'
+import { loadTimeData } from '../../../../../common/loadTimeData'
 
 // Options
 import {
@@ -122,6 +123,8 @@ import {
 } from '../../../../common/slices/entities/blockchain-token.entity'
 
 export const PortfolioOverview = () => {
+  const isAndroid = loadTimeData.getBoolean('isAndroid') || false
+
   // routing
   const history = useHistory()
   const location = useLocation()
@@ -160,8 +163,10 @@ export const PortfolioOverview = () => {
   )
   const [hidePortfolioGraph] = useSyncedLocalStorage(
     LOCAL_STORAGE_KEYS.IS_PORTFOLIO_OVERVIEW_GRAPH_HIDDEN,
-    false
+    true
   )
+
+  const isPortfolioGraphHidden = !isAndroid && hidePortfolioGraph
 
   // queries
   const { data: networks } = useGetVisibleNetworksQuery()
@@ -340,7 +345,8 @@ export const PortfolioOverview = () => {
     !isCollectionView &&
       visibleTokensForFilteredChains.length &&
       tokenBalancesRegistry &&
-      defaultFiat
+      defaultFiat &&
+      !isPortfolioGraphHidden
       ? {
           tokens: visibleTokensForFilteredChains,
           timeframe: selectedTimeframe,
@@ -546,42 +552,46 @@ export const PortfolioOverview = () => {
                     />
                   </Column>
                 )}
-                <Row
-                  alignItems='center'
-                  justifyContent='center'
-                  width='unset'
-                >
-                  {fiatValueChange !== '' ? (
-                    <>
-                      <FiatChange isDown={isPortfolioDown}>
-                        {hidePortfolioBalances
-                          ? '*****'
-                          : `${isPortfolioDown ? '' : '+'}${fiatValueChange}`}
-                      </FiatChange>
-                      <PercentBubble isDown={isPortfolioDown}>
-                        {hidePortfolioBalances
-                          ? '*****'
-                          : `${isPortfolioDown ? '' : '+'}${percentageChange}%`}
-                      </PercentBubble>
-                    </>
-                  ) : (
-                    <>
-                      <LoadingSkeleton
-                        width={55}
-                        height={24}
-                      />
-                      <HorizontalSpace space='8px' />
-                      <LoadingSkeleton
-                        width={55}
-                        height={24}
-                      />
-                    </>
-                  )}
-                </Row>
+                {!isPortfolioGraphHidden && (
+                  <Row
+                    alignItems='center'
+                    justifyContent='center'
+                    width='unset'
+                  >
+                    {fiatValueChange !== '' ? (
+                      <>
+                        <FiatChange isDown={isPortfolioDown}>
+                          {hidePortfolioBalances
+                            ? '*****'
+                            : `${isPortfolioDown ? '' : '+'}${fiatValueChange}`}
+                        </FiatChange>
+                        <PercentBubble isDown={isPortfolioDown}>
+                          {hidePortfolioBalances
+                            ? '*****'
+                            : `${
+                                isPortfolioDown ? '' : '+'
+                              }${percentageChange}%`}
+                        </PercentBubble>
+                      </>
+                    ) : (
+                      <>
+                        <LoadingSkeleton
+                          width={55}
+                          height={24}
+                        />
+                        <HorizontalSpace space='8px' />
+                        <LoadingSkeleton
+                          width={55}
+                          height={24}
+                        />
+                      </>
+                    )}
+                  </Row>
+                )}
               </BalanceAndChangeWrapper>
               <BuySendSwapDepositNav />
             </BalanceAndButtonsWrapper>
-            <ColumnReveal hideContent={hidePortfolioGraph}>
+            <ColumnReveal hideContent={isPortfolioGraphHidden}>
               <PortfolioOverviewChart
                 timeframe={selectedTimeframe}
                 onTimeframeChanged={setSelectedTimeframe}

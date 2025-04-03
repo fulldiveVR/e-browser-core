@@ -7,7 +7,7 @@
 brave_browser_misc_metrics_sources = [
   "//brave/browser/misc_metrics/profile_misc_metrics_service.cc",
   "//brave/browser/misc_metrics/profile_misc_metrics_service_factory.cc",
-  "//brave/browser/misc_metrics/uptime_monitor.cc",
+  "//brave/browser/misc_metrics/uptime_monitor_impl.cc",
 ]
 
 brave_browser_misc_metrics_deps = [
@@ -21,6 +21,16 @@ brave_browser_misc_metrics_deps = [
   "//components/keyed_service/core",
   "//content/public/browser",
 ]
+
+if (!is_android) {
+  brave_browser_misc_metrics_sources += [
+    "//brave/browser/misc_metrics/profile_new_tab_metrics.cc",
+    "//brave/browser/misc_metrics/profile_new_tab_metrics.h",
+  ]
+
+  brave_browser_misc_metrics_deps +=
+      [ "//brave/browser/misc_metrics:usage_clock" ]
+}
 
 brave_browser_misc_metrics_android_sources = [
   "//brave/browser/misc_metrics/misc_android_metrics.cc",

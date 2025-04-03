@@ -87,6 +87,13 @@ constexpr char16_t kLeoCustomModelsLearnMoreURL[] =
     u"https://support.brave.com/hc/en-us/articles/"
     u"34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo";
 
+constexpr char16_t kTabOrganizationLearnMoreURL[] =
+    u"https://support.brave.com/hc/en-us/articles/"
+    u"35200007195917-How-to-use-Tab-Focus-Mode";
+
+constexpr char16_t kLeoPrivacyPolicyURL[] =
+    u"https://brave.com/privacy/browser/#brave-leo";
+
 void BraveAddCommonStrings(content::WebUIDataSource* html_source,
                            Profile* profile) {
   webui::LocalizedString localized_strings[] = {
@@ -227,6 +234,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_SITE_SETTINGS_SHIELDS_DESCRIPTION},
       {"appearanceSettingsBraveTheme",
        IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_THEMES},
+      {"appearanceSettingsThemesGalleryUrl",
+       IDS_SETTINGS_APPEARANCE_SETTINGS_THEMES_GALLERY_URL},
+      {"appearanceSettingsOpenWebStore",
+       IDS_SETTINGS_APPEARANCE_SETTINGS_OPEN_WEB_STORE},
       {"appearanceSettingsShowBookmarksButton",
        IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_BOOKMARKS_BUTTON},
       {"appearanceSettingsLocationBarIsWide",
@@ -250,8 +261,8 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_NEVER_SHOW_BOOKMARK_BAR_DESC},
       {"appearanceSettingsShowAutocompleteInAddressBar",
        IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_AUTOCOMPLETE_IN_ADDRESS_BAR},
-      {"appearanceSettingsUseTopSiteSuggestions",
-       IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_TOP_SITES},
+      {"appearanceSettingsUseTopSuggestions",
+       IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_TOP_SUGGESTIONS},
       {"appearanceSettingsUseHistorySuggestions",
        IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_HISTORY},
       {"appearanceSettingsUseBookmarkSuggestions",
@@ -524,6 +535,8 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_LEO_ASSISTANT_SHOW_IN_CONTEXT_MENU_LABEL},
       {"braveLeoAssistantShowInContextMenuDesc",
        IDS_SETTINGS_LEO_ASSISTANT_SHOW_IN_CONTEXT_MENU_DESC},
+      {"braveLeoAssistantTabOrganizationLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_LABEL},
       {"braveLeoAssistantHistoryPreferenceLabel",
        IDS_SETTINGS_LEO_ASSISTANT_HISTORY_PREFERENCE_LABEL},
       {"braveLeoAssistantHistoryPreferenceConfirm",
@@ -570,6 +583,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_LEO_ASSISTANT_INPUT_MODEL_API_KEY},
       {"braveLeoAssistantInputModelLabelTooltipInfo",
        IDS_SETTINGS_LEO_ASSISTANT_INPUT_MODEL_LABEL_TOOLTIP_INFO},
+      {"braveLeoAssistantInputModelVisionSupport",
+       IDS_SETTINGS_LEO_ASSISTANT_INPUT_MODEL_VISION_SUPPORT},
+      {"braveLeoAssistantInputModelVisionSupportTooltipInfo",
+       IDS_SETTINGS_LEO_ASSISTANT_INPUT_MODEL_VISION_SUPPORT_TOOLTIP_INFO},
       {"braveLeoAssistantInputContextSizeLabel",
        IDS_SETTINGS_LEO_ASSISTANT_INPUT_CONTEXT_SIZE},
       {"braveLeoAssistantInputContextSizeTooltipInfo",
@@ -593,6 +610,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_LEO_ASSISTANT_YOUR_MODELS_TITLE},
       {"braveLeoAssistantYourModelsDesc1",
        IDS_SETTINGS_LEO_ASSISTANT_YOUR_MODELS_DESC_1},
+      {"braveLeoAssistantAboutLeoLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_LABEL},
+      {"braveLeoAssistantAboutLeoDesc1",
+       IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_1},
       {"braveLeoModelSectionTitle", IDS_CHAT_UI_MENU_TITLE_MODELS},
       {"braveLeoAssistantEndpointInvalidError",
        IDS_SETTINGS_LEO_ASSISTANT_ENDPOINT_INVALID_ERROR},
@@ -945,6 +966,14 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       "braveLeoAssistantInputDefaultContextSize",
       base::NumberToString16(ai_chat::kDefaultCustomModelContextSize));
 
+  html_source->AddString("braveLeoAssistantTabOrganizationDesc",
+                         l10n_util::GetStringFUTF16(
+                             IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_DESC,
+                             kTabOrganizationLearnMoreURL));
+
+  html_source->AddString("braveLeoAssistantTabOrganizationLearnMoreURL",
+                         kTabOrganizationLearnMoreURL);
+
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   html_source->AddString("webDiscoveryLearnMoreURL", kWebDiscoveryLearnMoreUrl);
 #endif
@@ -985,6 +1014,11 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       "braveLeoAssistantYourModelsDesc2",
       l10n_util::GetStringFUTF16(IDS_SETTINGS_LEO_ASSISTANT_YOUR_MODELS_DESC_2,
                                  kLeoCustomModelsLearnMoreURL));
+
+  html_source->AddString(
+      "braveLeoAssistantAboutLeoDesc2",
+      l10n_util::GetStringFUTF16(IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_2,
+                                 kLeoPrivacyPolicyURL));
 }  // NOLINT(readability/fn_size)
 
 void BraveAddResources(content::WebUIDataSource* html_source,

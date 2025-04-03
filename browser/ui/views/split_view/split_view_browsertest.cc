@@ -16,6 +16,9 @@
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/split_view/split_view_layout_manager.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/exclusive_access/exclusive_access_manager.h"
+#include "chrome/browser/ui/exclusive_access/fullscreen_controller.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/tabs/tab_strip.h"
@@ -30,9 +33,26 @@
 #include "ui/gfx/geometry/rect.h"
 #include "ui/gfx/geometry/skia_conversions.h"
 
+class SplitViewDisabledBrowserTest : public InProcessBrowserTest {
+ public:
+  SplitViewDisabledBrowserTest() {
+    scoped_features_.InitAndDisableFeature(tabs::features::kBraveSplitView);
+  }
+  ~SplitViewDisabledBrowserTest() override = default;
+
+ private:
+  base::test::ScopedFeatureList scoped_features_;
+};
+
+IN_PROC_BROWSER_TEST_F(SplitViewDisabledBrowserTest,
+                       SplitViewDisabledStateTest) {
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
+  EXPECT_FALSE(!!split_view_data);
+}
+
 class SplitViewBrowserTest : public InProcessBrowserTest {
  public:
-  SplitViewBrowserTest() : scoped_features_(tabs::features::kBraveSplitView) {}
+  SplitViewBrowserTest() = default;
   ~SplitViewBrowserTest() override = default;
 
   BraveBrowserView& browser_view() {
@@ -62,9 +82,6 @@ class SplitViewBrowserTest : public InProcessBrowserTest {
   SplitView& split_view() { return *browser_view().split_view_; }
 
   TabStripModel& tab_strip_model() { return *(browser()->tab_strip_model()); }
-
- private:
-  base::test::ScopedFeatureList scoped_features_;
 };
 
 IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
@@ -136,7 +153,7 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
 
   // When tiling tabs and one of them is the active tab,
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model().GetTabAtIndex(0)->GetHandle()));
@@ -151,7 +168,7 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
                        BreakingTileMakesSecondaryWebViewHidden) {
   // Given there were tiled tabs
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model().GetTabAtIndex(0)->GetHandle()));
@@ -171,7 +188,7 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
                        ActivateNonTiledTabShouldHideSecondaryWebView) {
   // Given there were tiled tabs and non tiled tab, and split view is visible
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model().GetTabAtIndex(0)->GetHandle()));
@@ -193,7 +210,7 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
   // Given there were tiled tabs and non tiled tab, and the non tiled tab is the
   // active tab
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model().GetTabAtIndex(0)->GetHandle()));
@@ -214,7 +231,7 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest,
                        SecondaryWebViewShouldHoldNonActiveTiledTab) {
   // Given that two tabs are tiled
   brave::NewSplitViewForTab(browser());
-  auto* split_view_data = SplitViewBrowserData::FromBrowser(browser());
+  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
   ASSERT_TRUE(split_view_data);
   ASSERT_TRUE(split_view_data->IsTabTiled(
       tab_strip_model().GetTabAtIndex(0)->GetHandle()));
@@ -354,4 +371,34 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest, SplitViewTabPathTest) {
                 GetLayoutConstant(TABSTRIP_TOOLBAR_OVERLAP) -
                 (brave_tabs::kHorizontalSplitViewTabVerticalSpacing * 2),
             mask_region.getBounds().height());
+}
+
+IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest, SplitViewFullscreenTest) {
+  brave::NewSplitViewForTab(browser());
+
+  // In split view tile, both contents are visible and have its border.
+  EXPECT_TRUE(browser_view().contents_container()->GetVisible());
+  EXPECT_TRUE(browser_view().contents_container()->GetBorder());
+  EXPECT_TRUE(secondary_contents_container().GetVisible());
+  EXPECT_TRUE(secondary_contents_container().GetBorder());
+
+  // Simulate tab-fullscreen state change.
+  FullscreenController* fullscreen_controller =
+      browser()->exclusive_access_manager()->fullscreen_controller();
+  fullscreen_controller->set_is_tab_fullscreen_for_testing(true);
+  split_view().OnFullscreenStateChanged();
+
+  // In tab full screen, only primary content is visible w/o border.
+  EXPECT_TRUE(browser_view().contents_container()->GetVisible());
+  EXPECT_FALSE(browser_view().contents_container()->GetBorder());
+  EXPECT_FALSE(secondary_contents_container().GetVisible());
+  EXPECT_FALSE(secondary_contents_container().GetBorder());
+
+  fullscreen_controller->set_is_tab_fullscreen_for_testing(false);
+  split_view().OnFullscreenStateChanged();
+
+  EXPECT_TRUE(browser_view().contents_container()->GetVisible());
+  EXPECT_TRUE(browser_view().contents_container()->GetBorder());
+  EXPECT_TRUE(secondary_contents_container().GetVisible());
+  EXPECT_TRUE(secondary_contents_container().GetBorder());
 }

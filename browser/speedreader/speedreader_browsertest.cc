@@ -274,6 +274,7 @@ class SpeedReaderBrowserTest : public InProcessBrowserTest {
  protected:
   base::test::ScopedFeatureList feature_list_;
   net::EmbeddedTestServer https_server_;
+  base::HistogramTester histogram_tester_;
 };
 
 IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, PRE_RestoreSpeedreaderPage) {
@@ -446,11 +447,18 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ClickingOnReaderButton) {
 
   EXPECT_FALSE(speedreader::DistillStates::IsDistilled(
       tab_helper()->PageDistillState()));
+
+  histogram_tester_.ExpectTotalCount(
+      speedreader::kSpeedreaderPageViewsHistogramName, 0);
+
   ClickReaderButton();
   EXPECT_TRUE(GetReaderButton()->GetVisible());
   EXPECT_TRUE(speedreader::DistillStates::IsDistilled(
       tab_helper()->PageDistillState()));
   EXPECT_TRUE(GetReaderButton()->GetVisible());
+
+  histogram_tester_.ExpectTotalCount(
+      speedreader::kSpeedreaderPageViewsHistogramName, 1);
 
   ClickReaderButton();
   EXPECT_TRUE(GetReaderButton()->GetVisible());
@@ -1078,15 +1086,25 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, SplitView) {
   WaitToolbarVisibility(toolbar, true);
   WaitToolbarVisibility(secondary_toolbar, false);
 
+  const auto get_target_secondary_location_bar_origin =
+      [&secondary_contents_container]() {
+        gfx::Point target_secondary_location_bar_origin =
+            secondary_contents_container->GetLocalBounds().origin();
+        target_secondary_location_bar_origin =
+            views::View::ConvertPointToScreen(
+                secondary_contents_container,
+                target_secondary_location_bar_origin);
+        target_secondary_location_bar_origin.Offset(
+            SplitView::kInactiveBorderThickness,
+            SplitView::kInactiveBorderThickness);
+        return target_secondary_location_bar_origin;
+      };
+
   // Change the active tab.
   browser()->tab_strip_model()->ActivateTabAt(1);
   WaitToolbarVisibility(toolbar, false);
   WaitToolbarVisibility(secondary_toolbar, true);
-
-  gfx::Point secondary_web_view_origin;
-  secondary_web_view_origin = views::View::ConvertPointToScreen(
-      secondary_contents_container, secondary_web_view_origin);
-  EXPECT_EQ(secondary_web_view_origin,
+  EXPECT_EQ(get_target_secondary_location_bar_origin(),
             secondary_location_bar_widget->GetWindowBoundsInScreen().origin());
 
   // Load a distillabe page in second tab.
@@ -1106,11 +1124,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, SplitView) {
   browser()->tab_strip_model()->ActivateTabAt(0);
   WaitToolbarVisibility(toolbar, true);
   WaitToolbarVisibility(secondary_toolbar, true);
-  secondary_web_view_origin =
-      secondary_contents_container->GetLocalBounds().origin();
-  secondary_web_view_origin = views::View::ConvertPointToScreen(
-      secondary_contents_container, secondary_web_view_origin);
-  EXPECT_EQ(secondary_web_view_origin,
+  EXPECT_EQ(get_target_secondary_location_bar_origin(),
             secondary_location_bar_widget->GetWindowBoundsInScreen().origin());
 
   browser()->tab_strip_model()->ActivateTabAt(2);
@@ -1120,11 +1134,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, SplitView) {
   browser()->tab_strip_model()->ActivateTabAt(0);
   WaitToolbarVisibility(toolbar, true);
   WaitToolbarVisibility(secondary_toolbar, true);
-  secondary_web_view_origin =
-      secondary_contents_container->GetLocalBounds().origin();
-  secondary_web_view_origin = views::View::ConvertPointToScreen(
-      secondary_contents_container, secondary_web_view_origin);
-  EXPECT_EQ(secondary_web_view_origin,
+  EXPECT_EQ(get_target_secondary_location_bar_origin(),
             secondary_location_bar_widget->GetWindowBoundsInScreen().origin());
 
   // Second tab is active. Show original content.

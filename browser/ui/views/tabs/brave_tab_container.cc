@@ -27,6 +27,8 @@
 #include "brave/ui/color/nala/nala_color_id.h"
 #include "cc/paint/paint_flags.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/tabs/features.h"
@@ -110,14 +112,16 @@ base::OnceClosure BraveTabContainer::LockLayout() {
 
 void BraveTabContainer::AddedToWidget() {
   TabContainerImpl::AddedToWidget();
-  auto* browser = tab_slot_controller_->GetBrowser();
-  if (!browser) {
+  auto* tab_strip =
+      static_cast<TabStrip*>(base::to_address(tab_slot_controller_));
+  if (!tab_strip->controller() || !tab_strip->GetBrowserWindowInterface()) {
     CHECK_IS_TEST();
     return;
   }
 
+  auto* browser_window_interface = tab_strip->GetBrowserWindowInterface();
   if (auto* split_view_data =
-          SplitViewBrowserData::FromBrowser(const_cast<Browser*>(browser))) {
+          browser_window_interface->GetFeatures().split_view_browser_data()) {
     if (!split_view_data_observation_.IsObserving()) {
       split_view_data_observation_.Observe(split_view_data);
     }
@@ -392,6 +396,10 @@ void BraveTabContainer::CompleteAnimationAndLayout() {
     return;
   }
 
+  if (tabs::utils::ShouldShowVerticalTabs(tab_slot_controller_->GetBrowser())) {
+    last_layout_size_ = size();
+  }
+
   TabContainerImpl::CompleteAnimationAndLayout();
 
   // Should force tabs to layout as they might not change bounds, which makes
@@ -411,8 +419,16 @@ void BraveTabContainer::PaintChildren(const views::PaintInfo& paint_info) {
 
   std::stable_sort(orderable_children.begin(), orderable_children.end());
 
-  if (auto* split_view_data = SplitViewBrowserData::FromBrowser(
-          tab_slot_controller_->GetBrowser())) {
+  auto* tab_strip =
+      static_cast<TabStrip*>(base::to_address(tab_slot_controller_));
+  if (!tab_strip->controller() || !tab_strip->GetBrowserWindowInterface()) {
+    CHECK_IS_TEST();
+    return;
+  }
+
+  auto* browser_window_interface = tab_strip->GetBrowserWindowInterface();
+  if (auto* split_view_data =
+          browser_window_interface->GetFeatures().split_view_browser_data()) {
     ui::PaintRecorder recorder(paint_info.context(),
                                paint_info.paint_recording_size(),
                                paint_info.paint_recording_scale_x(),
@@ -438,6 +454,23 @@ void BraveTabContainer::SetTabSlotVisibility() {
   }
 
   TabContainerImpl::SetTabSlotVisibility();
+}
+
+void BraveTabContainer::InvalidateIdealBounds() {
+  if (tabs::utils::ShouldShowVerticalTabs(tab_slot_controller_->GetBrowser())) {
+    last_layout_size_ = gfx::Size();
+  }
+
+  TabContainerImpl::InvalidateIdealBounds();
+}
+
+void BraveTabContainer::Layout(PassKey) {
+  if (tabs::utils::ShouldShowVerticalTabs(tab_slot_controller_->GetBrowser()) &&
+      last_layout_size_ == size()) {
+    return;
+  }
+
+  LayoutSuperclass<TabContainerImpl>(this);
 }
 
 std::optional<BrowserRootView::DropIndex> BraveTabContainer::GetDropIndex(
@@ -550,7 +583,8 @@ BraveTabContainer::DropArrow::DropArrow(const BrowserRootView::DropIndex& index,
   arrow_window_->Init(std::move(params));
   arrow_view_ =
       arrow_window_->SetContentsView(std::make_unique<views::ImageView>());
-  arrow_view_->SetImage(GetDropArrowImage(position_, beneath_));
+  arrow_view_->SetImage(
+      ui::ImageModel::FromImageSkia(*GetDropArrowImage(position_, beneath_)));
   scoped_observation_.Observe(arrow_window_.get());
 
   arrow_window_->Show();
@@ -569,7 +603,8 @@ void BraveTabContainer::DropArrow::SetBeneath(bool beneath) {
   }
 
   beneath_ = beneath;
-  arrow_view_->SetImage(GetDropArrowImage(position_, beneath));
+  arrow_view_->SetImage(
+      ui::ImageModel::FromImageSkia(*GetDropArrowImage(position_, beneath)));
 }
 
 void BraveTabContainer::DropArrow::SetWindowBounds(const gfx::Rect& bounds) {

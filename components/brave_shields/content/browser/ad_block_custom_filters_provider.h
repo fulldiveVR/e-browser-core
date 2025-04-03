@@ -13,6 +13,8 @@
 #include "base/sequence_checker.h"
 #include "brave/components/brave_component_updater/browser/dat_file_util.h"
 #include "brave/components/brave_shields/core/browser/ad_block_filters_provider.h"
+#include "brave/components/brave_shields/core/browser/adblock/rs/src/lib.rs.h"
+#include "third_party/rust/cxx/v1/cxx.h"
 
 using brave_component_updater::DATFileDataBuffer;
 
@@ -32,6 +34,8 @@ class AdBlockCustomFiltersProvider : public AdBlockFiltersProvider {
 
   void AddUserCosmeticFilter(const std::string& filter);
   void CreateSiteExemption(const std::string& host);
+
+  bool AreAnyBlockedElementsPresent(const std::string& host);
   void ResetCosmeticFilter(const std::string& host);
 
   std::string GetCustomFilters();

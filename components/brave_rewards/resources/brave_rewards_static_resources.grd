@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grit latest_public_release="0" current_release="1" output_all_resource_defines="false">
+<grit latest_public_release="0" current_release="1">
   <outputs>
     <output filename="grit/brave_rewards_resources.h" type="rc_header">
       <emit emit_type='prepend'></emit>
@@ -22,7 +22,7 @@
       <include name="IDR_NEW_BRAVE_REWARDS_PAGE_HTML" file="rewards_page/rewards_page.html" type="BINDATA" />
 
       <!-- WebUI Brave Rewards Internals resources -->
-      <include name="IDR_BRAVE_REWARDS_INTERNALS_HTML" file="internals/brave_rewards_internals.html" type="BINDATA" />
+      <include name="IDR_BRAVE_REWARDS_INTERNALS_HTML" file="rewards_internals/rewards_internals.html" type="BINDATA" />
 
       <if expr="not is_android">
         <include name="IDR_BRAVE_REWARDS_PANEL_HTML" file="rewards_panel/index.html" type="BINDATA" />

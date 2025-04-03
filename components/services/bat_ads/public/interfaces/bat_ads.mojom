@@ -148,11 +148,12 @@ interface BatAds {
   SetSysInfo(brave_ads.mojom.SysInfo mojom_sys_info);
   SetBuildChannel(brave_ads.mojom.BuildChannelInfo mojom_build_channel);
   SetFlags(brave_ads.mojom.Flags mojom_flags);
+  SetContentSettings(brave_ads.mojom.ContentSettings mojom_content_settings);
 
   Initialize(brave_ads.mojom.WalletInfo? mojom_wallet) => (bool success);
   Shutdown() => (bool success);
 
-  GetInternals() => (mojo_base.mojom.ListValue? value);
+  GetInternals() => (mojo_base.mojom.DictionaryValue? value);
 
   GetDiagnostics() => (mojo_base.mojom.ListValue? value);
 
@@ -213,11 +214,11 @@ interface BatAds {
 };
 
 interface AdsInternals {
+  CreateAdsInternalsPageHandler(pending_remote<AdsInternalsPage> page);
   GetAdsInternals() => (string response);
   ClearAdsData() => (bool success);
-  CreateAdsInternalsPageHandler(pending_remote<AdsInternalsPage> page);
 };
 
 interface AdsInternalsPage {
-  OnBraveRewardsEnabledChanged(bool enabled);
+  UpdateBraveRewardsEnabled(bool enabled);
 };

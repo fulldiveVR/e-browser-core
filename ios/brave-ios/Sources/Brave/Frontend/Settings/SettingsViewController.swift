@@ -22,6 +22,7 @@ import Static
 import SwiftUI
 import SwiftyJSON
 import UIKit
+import Web
 import WebKit
 
 extension TabBarVisibility: RepresentableOptionType {
@@ -48,6 +49,10 @@ extension Preferences.AutoCloseTabsOption: RepresentableOptionType {
 protocol SettingsDelegate: AnyObject {
   func settingsOpenURLInNewTab(_ url: URL)
   func settingsOpenURLs(_ urls: [URL], loadImmediately: Bool)
+
+  func settingsCreateFakeTabs()
+  func settingsCreateFakeBookmarks()
+  func settingsCreateFakeHistory()
 }
 
 class SettingsViewController: TableViewController {
@@ -434,17 +439,19 @@ class SettingsViewController: TableViewController {
       )
     )
 
-    section.rows.append(
-      Row(
-        text: Strings.BraveTranslate.settingsMenuTitle,
-        selection: { [unowned self] in
-          let translateSettings = UIHostingController(rootView: BraveTranslateSettingsView())
-          self.navigationController?.pushViewController(translateSettings, animated: true)
-        },
-        image: UIImage(braveSystemNamed: "leo.product.translate"),
-        accessory: .disclosureIndicator
+    if FeatureList.kBraveTranslateEnabled.enabled {
+      section.rows.append(
+        Row(
+          text: Strings.BraveTranslate.settingsMenuTitle,
+          selection: { [unowned self] in
+            let translateSettings = UIHostingController(rootView: BraveTranslateSettingsView())
+            self.navigationController?.pushViewController(translateSettings, animated: true)
+          },
+          image: UIImage(braveSystemNamed: "leo.product.translate"),
+          accessory: .disclosureIndicator
+        )
       )
-    )
+    }
 
     return section
   }
@@ -476,9 +483,7 @@ class SettingsViewController: TableViewController {
               }
 
               let syncSettingsViewController = SyncSettingsTableViewController(
-                syncAPI: syncAPI,
-                syncProfileService:
-                  syncProfileServices,
+                braveCoreMain: braveCore,
                 tabManager: tabManager,
                 windowProtection: windowProtection
               )
@@ -487,8 +492,7 @@ class SettingsViewController: TableViewController {
                 .pushViewController(syncSettingsViewController, animated: true)
             } else {
               let syncWelcomeViewController = SyncWelcomeViewController(
-                syncAPI: syncAPI,
-                syncProfileServices: syncProfileServices,
+                braveCore: braveCore,
                 tabManager: tabManager,
                 windowProtection: windowProtection
               )
@@ -1053,10 +1057,7 @@ class SettingsViewController: TableViewController {
         Row(
           text: Strings.privacyPolicy,
           selection: { [unowned self] in
-            // Show privacy policy
-            let privacy = SettingsContentViewController().then { $0.url = .brave.privacy }
-            privacy.navigationItem.title = Strings.privacyPolicy
-            self.navigationController?.pushViewController(privacy, animated: true)
+            settingsDelegate?.settingsOpenURLInNewTab(.brave.privacy)
           },
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self
@@ -1064,10 +1065,7 @@ class SettingsViewController: TableViewController {
         Row(
           text: Strings.termsOfUse,
           selection: { [unowned self] in
-            // Show terms of use
-            let toc = SettingsContentViewController().then { $0.url = .brave.termsOfUse }
-            toc.navigationItem.title = Strings.termsOfUse
-            self.navigationController?.pushViewController(toc, animated: true)
+            settingsDelegate?.settingsOpenURLInNewTab(.brave.termsOfUse)
           },
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self
@@ -1075,10 +1073,9 @@ class SettingsViewController: TableViewController {
         Row(
           text: Strings.settingsLicenses,
           selection: { [unowned self] in
-            let licenses = SettingsContentViewController().then {
-              $0.url = URL(string: "\(InternalURL.baseUrl)/\(AboutLicenseHandler.path)")
+            if let url = URL(string: "\(InternalURL.baseUrl)/\(AboutLicenseHandler.path)") {
+              settingsDelegate?.settingsOpenURLInNewTab(url)
             }
-            self.navigationController?.pushViewController(licenses, animated: true)
           },
           accessory: .disclosureIndicator
         ),
@@ -1261,8 +1258,23 @@ class SettingsViewController: TableViewController {
         Row(
           text: "Create 1000 Tabs",
           selection: { [unowned self] in
-            let urls = (0..<1000).map { URL(string: "https://search.brave.com/search?q=\($0)")! }
-            self.settingsDelegate?.settingsOpenURLs(urls, loadImmediately: false)
+            self.settingsDelegate?.settingsCreateFakeTabs()
+            self.dismiss(animated: true)
+          },
+          cellClass: ButtonCell.self
+        ),
+        Row(
+          text: "Create 1000 Bookmark Entries",
+          selection: { [unowned self] in
+            self.settingsDelegate?.settingsCreateFakeBookmarks()
+            self.dismiss(animated: true)
+          },
+          cellClass: ButtonCell.self
+        ),
+        Row(
+          text: "Create 1000 History Entries",
+          selection: { [unowned self] in
+            self.settingsDelegate?.settingsCreateFakeHistory()
             self.dismiss(animated: true)
           },
           cellClass: ButtonCell.self

@@ -13,7 +13,6 @@
 #include <utility>
 #include <vector>
 
-#include "base/containers/contains.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/test/gtest_util.h"
@@ -327,7 +326,7 @@ TEST(BraveWalletUtilsUnitTest, GenerateRandomHexString) {
     auto random_string = GenerateRandomHexString();
     EXPECT_EQ(64u, random_string.size());
     EXPECT_TRUE(std::ranges::all_of(random_string, base::IsHexDigit<char>));
-    EXPECT_FALSE(base::Contains(strings, random_string));
+    EXPECT_FALSE(strings.contains(random_string));
     strings.insert(random_string);
   }
 }
@@ -497,6 +496,11 @@ TEST(BraveWalletUtilsUnitTest, DefaultZCashShieldedAssets_FeatureDisabled) {
 #endif  // BUILDFLAG(ENABLE_ORCHARD)
 
 TEST(BraveWalletUtilsUnitTest, GetAllUserAssets) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "false"}});
+
   sync_preferences::TestingPrefServiceSyncable prefs;
   RegisterProfilePrefs(prefs.registry());
 
@@ -526,6 +530,11 @@ TEST(BraveWalletUtilsUnitTest, GetAllUserAssets) {
 }
 
 TEST(BraveWalletUtilsUnitTest, GetUserAsset) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "false"}});
+
   sync_preferences::TestingPrefServiceSyncable prefs;
   RegisterProfilePrefs(prefs.registry());
 
@@ -599,6 +608,11 @@ TEST(BraveWalletUtilsUnitTest, GetUserAsset) {
 }
 
 TEST(BraveWalletUtilsUnitTest, AddUserAsset) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "false"}});
+
   sync_preferences::TestingPrefServiceSyncable prefs;
   RegisterProfilePrefs(prefs.registry());
 
@@ -658,6 +672,11 @@ TEST(BraveWalletUtilsUnitTest, AddUserAsset) {
 }
 
 TEST(BraveWalletUtilsUnitTest, EnsureNativeTokenForNetwork) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "false"}});
+
   sync_preferences::TestingPrefServiceSyncable prefs;
   RegisterProfilePrefs(prefs.registry());
 
@@ -678,6 +697,11 @@ TEST(BraveWalletUtilsUnitTest, EnsureNativeTokenForNetwork) {
 }
 
 TEST(BraveWalletUtilsUnitTest, RemoveUserAsset) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "false"}});
+
   sync_preferences::TestingPrefServiceSyncable prefs;
   RegisterProfilePrefs(prefs.registry());
 

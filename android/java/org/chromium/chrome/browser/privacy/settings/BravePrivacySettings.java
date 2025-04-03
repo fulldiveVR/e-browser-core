@@ -20,7 +20,9 @@ import org.chromium.brave_shields.mojom.FilterListAndroidHandler;
 import org.chromium.brave_shields.mojom.FilterListConstants;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConfig;
+import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveLocalState;
+import org.chromium.chrome.browser.BraveRelaunchUtils;
 import org.chromium.chrome.browser.browsing_data.BraveClearBrowsingDataFragment;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.metrics.ChangeMetricsReportingStateCalledFrom;
@@ -43,7 +45,6 @@ import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.TextMessagePreference;
 import org.chromium.components.user_prefs.UserPrefs;
-import org.chromium.components.web_discovery.WebDiscoveryPrefs;
 import org.chromium.gms.ChromiumPlayServicesAvailability;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
@@ -68,6 +69,7 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
     private static final String PREF_PRIVACY_SANDBOX = "privacy_sandbox";
     private static final String PREF_HTTPS_FIRST_MODE_LEGACY = "https_first_mode_legacy";
     private static final String PREF_HTTPS_FIRST_MODE = "https_first_mode";
+    private static final String PREF_INCOGNITO_SCREENSHOT = "incognito_screenshot";
     private static final String PREF_INCOGNITO_LOCK = "incognito_lock";
     private static final String PREF_PHONE_AS_A_SECURITY_KEY = "phone_as_a_security_key";
     private static final String PREF_FINGERPRINT_LANGUAGE = "fingerprint_language";
@@ -98,7 +100,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
     public static final String PREF_FINGERPRINTING_PROTECTION2 = "fingerprinting_protection2";
     private static final String PREF_CLOSE_TABS_ON_EXIT = "close_tabs_on_exit";
     private static final String PREF_SEND_P3A = "send_p3a_analytics";
-    private static final String PREF_SEND_WEB_DISCOVERY = "send_web_discovery";
     private static final String PREF_SEND_CRASH_REPORTS = "send_crash_reports";
     private static final String PREF_BRAVE_STATS_USAGE_PING = "brave_stats_usage_ping";
     public static final String PREF_APP_LINKS = "app_links";
@@ -154,6 +155,7 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
         PREF_APP_LINKS,
         PREF_WEBRTC_POLICY,
         PREF_SAFE_BROWSING,
+        PREF_INCOGNITO_SCREENSHOT,
         PREF_INCOGNITO_LOCK,
         PREF_CAN_MAKE_PAYMENT,
         PREF_UNSTOPPABLE_DOMAINS,
@@ -168,7 +170,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
         PREF_PHONE_AS_A_SECURITY_KEY,
         PREF_CLOSE_TABS_ON_EXIT,
         PREF_SEND_P3A,
-        PREF_SEND_WEB_DISCOVERY,
         PREF_SEND_CRASH_REPORTS,
         PREF_BRAVE_STATS_USAGE_PING,
         PREF_USAGE_STATS,
@@ -197,7 +198,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
     private ChromeSwitchPreference mForgetFirstPartyStoragePref;
     private ChromeSwitchPreference mCloseTabsOnExitPref;
     private ChromeSwitchPreference mSendP3A;
-    private ChromeSwitchPreference mSendWebDiscovery;
     private ChromeSwitchPreference mSendCrashReports;
     private ChromeSwitchPreference mBraveStatsUsagePing;
     private ChromeSwitchPreference mBlockCookieConsentNoticesPref;
@@ -208,6 +208,7 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
     private ChromeSwitchPreference mSocialBlockingTwitter;
     private ChromeSwitchPreference mSocialBlockingLinkedin;
     private ChromeSwitchPreference mAppLinks;
+    private ChromeSwitchPreference mIncognitoScreenshot;
     private ChromeBasePreference mWebrtcPolicy;
     private ChromeSwitchPreference mClearBrowsingDataOnExit;
     private Preference mUstoppableDomains;
@@ -380,13 +381,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
         mSendP3A = (ChromeSwitchPreference) findPreference(PREF_SEND_P3A);
         mSendP3A.setOnPreferenceChangeListener(this);
 
-        if (BraveConfig.WEB_DISCOVERY_ENABLED) {
-            mSendWebDiscovery = (ChromeSwitchPreference) findPreference(PREF_SEND_WEB_DISCOVERY);
-            mSendWebDiscovery.setOnPreferenceChangeListener(this);
-        } else {
-            removePreferenceIfPresent(PREF_SEND_WEB_DISCOVERY);
-        }
-
         mSendCrashReports = (ChromeSwitchPreference) findPreference(PREF_SEND_CRASH_REPORTS);
         mSendCrashReports.setOnPreferenceChangeListener(this);
         mBraveStatsUsagePing = (ChromeSwitchPreference) findPreference(PREF_BRAVE_STATS_USAGE_PING);
@@ -422,10 +416,12 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
 
         mAppLinks = (ChromeSwitchPreference) findPreference(PREF_APP_LINKS);
         mAppLinks.setOnPreferenceChangeListener(this);
-
         boolean isAppLinksAllowed =
                 ChromeSharedPreferences.getInstance().readBoolean(PREF_APP_LINKS, true);
         mAppLinks.setChecked(isAppLinksAllowed);
+
+        mIncognitoScreenshot = (ChromeSwitchPreference) findPreference(PREF_INCOGNITO_SCREENSHOT);
+        mIncognitoScreenshot.setOnPreferenceChangeListener(this);
 
         mWebrtcPolicy = (ChromeBasePreference) findPreference(PREF_WEBRTC_POLICY);
 
@@ -610,9 +606,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
         } else if (PREF_SEND_P3A.equals(key)) {
             BraveLocalState.get().setBoolean(BravePref.P3A_ENABLED, (boolean) newValue);
             BraveLocalState.commitPendingWrite();
-        } else if (PREF_SEND_WEB_DISCOVERY.equals(key)) {
-            UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                    .setBoolean(WebDiscoveryPrefs.WEB_DISCOVERY_ENABLED, (boolean) newValue);
         } else if (PREF_SEND_CRASH_REPORTS.equals(key)) {
             UmaSessionStats.changeMetricsReportingConsent(
                     (boolean) newValue, ChangeMetricsReportingStateCalledFrom.UI_SETTINGS);
@@ -637,6 +630,10 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
             sharedPreferencesEditor.putBoolean(PREF_APP_LINKS, (boolean) newValue);
             ChromeSharedPreferences.getInstance()
                     .writeBoolean(BravePrivacySettings.PREF_APP_LINKS_RESET, false);
+        } else if (PREF_INCOGNITO_SCREENSHOT.equals(key)) {
+            BraveFeatureUtil.enableFeature(
+                    BraveFeatureList.BRAVE_INCOGNITO_SCREENSHOT, (boolean) newValue, false);
+            BraveRelaunchUtils.askForRelaunch(getActivity());
         } else if (PREF_BLOCK_TRACKERS_ADS.equals(key)) {
             if (newValue instanceof String) {
                 final String newStringValue = String.valueOf(newValue);
@@ -789,16 +786,6 @@ public class BravePrivacySettings extends PrivacySettings implements ConnectionE
             mSendP3A.setChecked(BraveLocalState.get().getBoolean(BravePref.P3A_ENABLED));
         } else {
             getPreferenceScreen().removePreference(mSendP3A);
-        }
-
-        if (mSendWebDiscovery != null) {
-            mSendWebDiscovery.setTitle(
-                    getActivity().getResources().getString(R.string.send_web_discovery_title));
-            mSendWebDiscovery.setSummary(
-                    getActivity().getResources().getString(R.string.send_web_discovery_summary));
-            mSendWebDiscovery.setChecked(
-                    UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                            .getBoolean(WebDiscoveryPrefs.WEB_DISCOVERY_ENABLED));
         }
 
         mSendCrashReports.setChecked(mPrivacyPrefManager.isUsageAndCrashReportingPermittedByUser());

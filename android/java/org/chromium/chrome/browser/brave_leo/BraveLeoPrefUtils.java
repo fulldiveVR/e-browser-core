@@ -11,9 +11,9 @@ import org.chromium.base.Log;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.preferences.BravePref;
+import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.profiles.Profile;
-import org.chromium.components.browser_ui.site_settings.WebsitePreferenceBridge;
-import org.chromium.components.content_settings.ContentSettingsType;
+import org.chromium.chrome.browser.settings.BraveLeoPreferences;
 import org.chromium.components.prefs.PrefService;
 import org.chromium.components.user_prefs.UserPrefs;
 
@@ -141,17 +141,7 @@ public class BraveLeoPrefUtils {
             return false;
         }
 
-        Profile profileToUse = BraveLeoPrefUtils.getProfile();
-        if (profileToUse == null) {
-            Log.e(TAG, "BraveLeoPrefUtils.isLeoEnabled profile is null");
-            // JS is enabled for most users
-            return true;
-        }
-
-        // Disables Leo when a global JAVASCRIPT toggle set to blocked.
-        // We want to fix that in the future.
-        return WebsitePreferenceBridge.isCategoryEnabled(
-                profileToUse, ContentSettingsType.JAVASCRIPT);
+        return true;
     }
 
     public static boolean isSubscriptionLinked() {
@@ -168,5 +158,10 @@ public class BraveLeoPrefUtils {
 
     private static void resetSubscriptionLinkedStatus(Profile profile) {
         UserPrefs.get(profile).setInteger(BravePref.BRAVE_CHAT_SUBSCRIPTION_LINK_STATUS_ANDROID, 0);
+    }
+
+    public static boolean shouldShowLeoQuickSearchEngine() {
+        return ChromeSharedPreferences.getInstance()
+                .readBoolean(BraveLeoPreferences.PREF_LEO_QUICK_SEARCH_ENGINE, true);
     }
 }

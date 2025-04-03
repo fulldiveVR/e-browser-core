@@ -54,6 +54,9 @@ inline constexpr char kBraveVPNOnDemandEnabled[] =
     "brave.brave_vpn.on_demand_enabled";
 #endif
 
+inline constexpr char kBraveVPNSmartProxyRoutingEnabled[] =
+    "brave.brave_vpn.smart_proxy_routing_enabled";
+
 inline constexpr char kBraveVPNWireguardProfileCredentials[] =
     "brave.brave_vpn.wireguard.profile_credentials";
 inline constexpr char kBraveVPNEnvironment[] = "brave.brave_vpn.env";
@@ -87,6 +90,8 @@ inline constexpr char kBraveVPNDaysInMonthUsed[] =
     "brave.brave_vpn.days_in_month_used";
 inline constexpr char kBraveVPNWidgetUsageWeeklyStorage[] =
     "brave.brave_vpn.widget_usage";
+inline constexpr char kBraveVPNConnectedMinutesWeeklyStorage[] =
+    "brave.brave_vpn.connected_minutes";
 }  // namespace prefs
 
 }  // namespace brave_vpn

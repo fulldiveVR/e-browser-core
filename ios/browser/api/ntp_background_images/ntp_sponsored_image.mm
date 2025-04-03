@@ -102,6 +102,7 @@
 @property(nonatomic, copy) NSString* creativeInstanceId;
 @property(nonatomic) NTPSponsoredImageLogo* logo;
 @property(nonatomic) CGRect viewBox;
+@property(nonatomic) BOOL shouldMetricsFallbackToP3A;
 @end
 
 @implementation NTPSponsoredImageBackground
@@ -111,7 +112,8 @@
                   backgroundColor:(NSString*)backgroundColor
                creativeInstanceId:(NSString*)creativeInstanceId
                              logo:(NTPSponsoredImageLogo*)logo
-                          viewBox:(CGRect)viewBox {
+                          viewBox:(CGRect)viewBox
+       shouldMetricsFallbackToP3A:(BOOL)shouldMetricsFallbackToP3A {
   if ((self = [super init])) {
     self.imagePath = imagePath;
     self.focalPoint = focalPoint;
@@ -119,6 +121,7 @@
     self.creativeInstanceId = creativeInstanceId;
     self.logo = logo;
     self.viewBox = viewBox;
+    self.shouldMetricsFallbackToP3A = shouldMetricsFallbackToP3A;
   }
   return self;
 }
@@ -136,12 +139,15 @@
   auto logo =
       [[NTPSponsoredImageLogo alloc] initWithLogo:sponsoredBackground.logo];
   auto viewBox = sponsoredBackground.viewbox.value_or(gfx::Rect()).ToCGRect();
+  const bool shouldMetricsFallbackToP3A =
+      sponsoredBackground.should_metrics_fallback_to_p3a;
   return [self initWithImagePath:imagePath
                       focalPoint:focalPoint
                  backgroundColor:backgroundColor
               creativeInstanceId:creativeInstanceId
                             logo:logo
-                         viewBox:viewBox];
+                         viewBox:viewBox
+      shouldMetricsFallbackToP3A:shouldMetricsFallbackToP3A];
 }
 
 @end

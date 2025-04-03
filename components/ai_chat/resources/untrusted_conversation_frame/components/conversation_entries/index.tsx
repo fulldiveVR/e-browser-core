@@ -9,6 +9,7 @@ import { getLocale } from '$web-common/locale'
 import useLongPress from '$web-common/useLongPress'
 import * as Mojom from '../../../common/mojom'
 import ActionTypeLabel from '../../../common/components/action_type_label'
+import UploadedImgItem from '../../../page/components/uploaded_img_item'
 import { useUntrustedConversationContext } from '../../untrusted_conversation_context'
 import AssistantReasoning from '../assistant_reasoning'
 import ContextActionsAssistant from '../context_actions_assistant'
@@ -18,15 +19,8 @@ import LongPageInfo from '../page_context_message/long_page_info'
 import AssistantResponse from '../assistant_response'
 import EditInput from '../edit_input'
 import EditIndicator from '../edit_indicator'
+import { getReasoningText } from './conversation_entries_utils'
 import styles from './style.module.scss'
-
-const getReasoningText = (text: string) => {
-  const startTag = `<think>`
-  const endTag = `</think>`
-  const startTagIndex = text.indexOf(startTag) + startTag.length
-  const endTagIndex = text.indexOf(endTag, startTagIndex)
-  return text.slice(startTagIndex, endTagIndex).trim()
-}
 
 function ConversationEntries() {
   const conversationContext = useUntrustedConversationContext()
@@ -63,6 +57,13 @@ function ConversationEntries() {
     return event?.completionEvent?.completion ?? ''
   }
 
+  const allAllowedLinks: string[] = conversationContext.conversationHistory
+    .flatMap(turn =>
+    turn.events?.flatMap(event =>
+      event.sourcesEvent?.sources?.map(source => source.url.url) || []
+    ) || []
+  )
+
   return (
     <>
       <div>
@@ -77,7 +78,8 @@ function ConversationEntries() {
           const showLongPageContentInfo =
             id === 1 &&
             isAIAssistant &&
-            (conversationContext.contentUsedPercentage ?? 100) < 100
+            ((conversationContext.contentUsedPercentage ?? 100) < 100 ||
+             (conversationContext.trimmedTokens > 0 && conversationContext.totalTokens > 0))
           const showEditInput = editInputId === id
           const showEditIndicator = !showEditInput && !!turn.edits?.length
           const latestEdit = turn.edits?.at(-1)
@@ -145,6 +147,7 @@ function ConversationEntries() {
                     <AssistantResponse
                       entry={latestTurn}
                       isEntryInProgress={isEntryInProgress}
+                      allowedLinks={allAllowedLinks}
                     />
                   )}
                   {isHuman && !turn.selectedText && !showEditInput && (
@@ -161,14 +164,23 @@ function ConversationEntries() {
                         <div className={styles.divToKeepGap} />
                       )}
                       <div className={styles.humanMessageBubble}>
-                        {latestTurnText}
-                        {latestEdit && (
-                          <div className={styles.editLabel}>
-                            <span className={styles.editLabelText}>
-                              {getLocale('editedLabel')}
-                            </span>
-                          </div>
-                        )}
+                        <div className={styles.humanTextRow}>
+                          {latestTurnText}
+                          {latestEdit && (
+                            <div className={styles.editLabel}>
+                              <span className={styles.editLabelText}>
+                                {getLocale('editedLabel')}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        {!!latestTurn.uploadedImages?.length &&
+                          latestTurn.uploadedImages.map((img) => (
+                            <UploadedImgItem
+                              key={img.filename}
+                              uploadedImage={img}
+                            />
+                          ))}
                       </div>
                     </>
                   )}

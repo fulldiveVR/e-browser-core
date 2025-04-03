@@ -13,7 +13,6 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/json/values_util.h"
 #include "base/metrics/histogram_functions.h"
@@ -23,7 +22,6 @@
 #include "base/time/time.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
-#include "brave/components/brave_ads/core/public/ads_feature.h"
 #include "brave/components/brave_ads/core/public/user_engagement/site_visit/site_visit_feature.h"
 #include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_images_data.h"
@@ -69,12 +67,8 @@ constexpr char kExpireTimeKey[] = "expiry_time";
 
 constexpr base::TimeDelta kCountExpiryTime = base::Days(30);
 
-constexpr base::TimeDelta kStartLandingCheckTime = base::Milliseconds(750);
-
-bool IsRewardsDisabled(PrefService* prefs) {
-  return !prefs->GetBoolean(brave_rewards::prefs::kEnabled) &&
-         !base::FeatureList::IsEnabled(
-             brave_ads::kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature);
+bool IsRewardsEnabled(PrefService* prefs) {
+  return prefs->GetBoolean(brave_rewards::prefs::kEnabled);
 }
 
 const char* GetCountDictPref(bool is_constellation) {
@@ -136,13 +130,13 @@ NTPP3AHelperImpl::NTPP3AHelperImpl(
           &NTPP3AHelperImpl::OnP3ARotation, base::Unretained(this)));
   if (ntp_background_images_service) {
     if (const auto* sr_data =
-            ntp_background_images_service->GetBrandedImagesData(
-                /*super_referral=*/true)) {
+            ntp_background_images_service->GetSponsoredImagesData(
+                /*super_referral=*/true, /*supports_rich_media=*/true)) {
       CheckLoadedCampaigns(*sr_data);
     }
     if (const auto* si_data =
-            ntp_background_images_service->GetBrandedImagesData(
-                /*super_referral=*/false)) {
+            ntp_background_images_service->GetSponsoredImagesData(
+                /*super_referral=*/false, /*supports_rich_media=*/true)) {
       CheckLoadedCampaigns(*si_data);
     }
     ntp_background_images_service_observation_.Observe(
@@ -172,7 +166,7 @@ void NTPP3AHelperImpl::RecordView(const std::string& creative_instance_id,
     UpdateCampaignMetric(campaign_id, kCampaignViewedEventKey);
   }
 
-  if (!IsRewardsDisabled(prefs_)) {
+  if (IsRewardsEnabled(prefs_)) {
     return;
   }
   UpdateMetricCount(creative_instance_id, kCreativeViewEventKey);
@@ -181,7 +175,7 @@ void NTPP3AHelperImpl::RecordView(const std::string& creative_instance_id,
 void NTPP3AHelperImpl::RecordNewTabPageAdEvent(
     brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type,
     const std::string& creative_instance_id) {
-  if (!p3a_service_->IsP3AEnabled() || !IsRewardsDisabled(prefs_)) {
+  if (!p3a_service_->IsP3AEnabled() || IsRewardsEnabled(prefs_)) {
     return;
   }
 
@@ -197,10 +191,7 @@ void NTPP3AHelperImpl::RecordNewTabPageAdEvent(
 
     case brave_ads::mojom::NewTabPageAdEventType::kClicked: {
       UpdateMetricCount(creative_instance_id, kCreativeClickEventKey);
-      landing_check_timer_.Start(
-          FROM_HERE, kStartLandingCheckTime,
-          base::BindOnce(&NTPP3AHelperImpl::OnLandingStartCheck,
-                         base::Unretained(this), creative_instance_id));
+      last_clicked_creative_instance_id_ = creative_instance_id;
       break;
     }
 
@@ -226,8 +217,10 @@ void NTPP3AHelperImpl::RecordNewTabPageAdEvent(
   }
 }
 
-void NTPP3AHelperImpl::SetLastTabURL(const GURL& url) {
-  last_tab_hostname_ = url.host();
+void NTPP3AHelperImpl::OnNavigationDidFinish(const GURL& url) {
+  last_url_ = url;
+
+  MaybeLand(url);
 }
 
 void NTPP3AHelperImpl::OnP3ARotation(p3a::MetricLogType log_type,
@@ -269,7 +262,7 @@ void NTPP3AHelperImpl::OnP3ARotation(p3a::MetricLogType log_type,
   }
   // Always send the creative total if ads are disabled (as per spec),
   // or send the total if there were outstanding events sent
-  if (IsRewardsDisabled(prefs_) || total_active_creatives > 0) {
+  if (!IsRewardsEnabled(prefs_) || total_active_creatives > 0) {
     RecordCreativeMetric(kCreativeTotalCountHistogramName,
                          total_active_creatives, is_constellation);
   }
@@ -386,6 +379,30 @@ void NTPP3AHelperImpl::CleanOldCampaignsAndCreatives() {
   }
 }
 
+void NTPP3AHelperImpl::MaybeLand(const GURL& url) {
+  if (!last_clicked_creative_instance_id_) {
+    // The user did not click on a new tab page ad, so there is no need to check
+    // for a page landing.
+    return;
+  }
+
+  page_land_timer_.Start(
+      FROM_HERE, brave_ads::kPageLandAfter.Get(),
+      base::BindOnce(&NTPP3AHelperImpl::MaybeLandCallback,
+                     base::Unretained(this),
+                     *last_clicked_creative_instance_id_, url));
+
+  last_clicked_creative_instance_id_.reset();
+}
+
+void NTPP3AHelperImpl::MaybeLandCallback(
+    const std::string& creative_instance_id,
+    const GURL& url) {
+  if (last_url_ && last_url_->host() == url.host()) {
+    UpdateMetricCount(creative_instance_id, kCreativeLandEventKey);
+  }
+}
+
 void NTPP3AHelperImpl::RecordCreativeMetric(const std::string& histogram_name,
                                             int count,
                                             bool is_constellation) {
@@ -469,28 +486,6 @@ void NTPP3AHelperImpl::UpdateCampaignMetric(const std::string& campaign_id,
   p3a_service_->RegisterDynamicMetric(histogram_name,
                                       p3a::MetricLogType::kExpress);
   base::UmaHistogramBoolean(histogram_name, true);
-}
-
-void NTPP3AHelperImpl::OnLandingStartCheck(
-    const std::string& creative_instance_id) {
-  if (!last_tab_hostname_.has_value()) {
-    return;
-  }
-  landing_check_timer_.Start(
-      FROM_HERE, brave_ads::kPageLandAfter.Get(),
-      base::BindOnce(&NTPP3AHelperImpl::OnLandingEndCheck,
-                     base::Unretained(this), creative_instance_id,
-                     *last_tab_hostname_));
-}
-
-void NTPP3AHelperImpl::OnLandingEndCheck(
-    const std::string& creative_instance_id,
-    const std::string& expected_hostname) {
-  if (!last_tab_hostname_.has_value() ||
-      last_tab_hostname_ != expected_hostname) {
-    return;
-  }
-  UpdateMetricCount(creative_instance_id, kCreativeLandEventKey);
 }
 
 void NTPP3AHelperImpl::OnSponsoredImagesDataDidUpdate(

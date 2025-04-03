@@ -23,8 +23,10 @@
 #include "brave/components/brave_shields/core/browser/ad_block_filters_provider.h"
 #include "brave/components/brave_shields/core/browser/ad_block_list_p3a.h"
 #include "brave/components/brave_shields/core/browser/ad_block_resource_provider.h"
+#include "brave/components/brave_shields/core/browser/adblock/rs/src/lib.rs.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "third_party/blink/public/mojom/loader/resource_load_info.mojom-shared.h"
+#include "third_party/rust/cxx/v1/cxx.h"
 #include "url/gurl.h"
 
 class AdBlockServiceTest;
@@ -132,6 +134,7 @@ class AdBlockService {
   void EnableTag(const std::string& tag, bool enabled);
   void AddUserCosmeticFilter(const std::string& filter);
   void ResetCosmeticFilter(const std::string& host);
+  bool AreAnyBlockedElementsPresent(const std::string& host);
 
   // Methods for brave://adblock-internals.
   using GetDebugInfoCallback =

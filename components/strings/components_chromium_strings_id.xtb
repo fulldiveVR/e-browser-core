@@ -21,6 +21,9 @@
 <translation id="303960458633076466">Halaman ini telah diblokir oleh Brave</translation>
 <translation id="2017237562285586622">Izinkan Brave untuk mengakses jaringan di setelan firewall atau antivirus
           Anda.</translation>
+<translation id="4949828774841497663">Buka Aplikasi &gt; Setelan Sistem &gt; Jaringan, pilih
+          jaringan aktif, klik tombol Detail..., dan batalkan pilihan proxy
+          yang mungkin telah dipilih.</translation>
 <translation id="8619622797841001082">Buka
           menu Brave &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -29,6 +32,7 @@
           &gt;
           <ph name="PROXIES_TITLE"/>
           dan pastikan konfigurasi Anda disetel ke "tanpa proxy" atau "langsung".</translation>
+<translation id="6159073403999048272">Halaman ini ditujukan untuk digunakan oleh developer Brave, dan mungkin tidak dikelola atau diuji secara aktif. Untuk mengaktifkannya, buka <ph name="BEGIN_LINK"/>chrome://chrome-urls<ph name="LINK_END"/>, klik tombol untuk mengaktifkan halaman debug, lalu buka lagi halaman ini.</translation>
 <translation id="2765022094254723779">Brave juga terwujud karena adanya <ph name="BEGIN_LINK_OSS"/>software open source<ph name="END_LINK_OSS"/> lainnya.</translation>
 <translation id="9156965752763025780">Perubahan Anda akan berlaku saat berikutnya Anda membuka Brave.</translation>
 <translation id="8828443087767259398">Brave memerlukan akses Bluetooth untuk melanjutkan 
@@ -42,9 +46,6 @@
           dan batalkan pilihan "<ph name="NO_PREFETCH_DESCRIPTION"/>."
           Jika hal ini tidak menyelesaikan masalah, sebaiknya pilih lagi opsi ini
           untuk meningkatkan kinerja.</translation>
-<translation id="8187289872471304532">Buka
-          Aplikasi &gt; Preferensi Sistem &gt; Jaringan &gt; Lanjutan &gt; Proxy
-          dan hapus centang proxy apa pun yang telah dipilih.</translation>
 <translation id="4159376633403260073">Anda melihat halaman Brave for Testing yang aman</translation>
 <translation id="88187049159266777">Brave tidak menutup dengan benar.</translation>
 </translationbundle>

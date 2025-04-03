@@ -16,7 +16,6 @@
 #include "base/strings/strcat.h"
 #include "base/threading/thread_restrictions.h"
 #include "base/trace_event/trace_event.h"
-#include "brave/components/brave_shields/adblock/rs/src/lib.rs.h"
 #include "brave/components/brave_shields/content/browser/ad_block_custom_filters_provider.h"
 #include "brave/components/brave_shields/content/browser/ad_block_engine.h"
 #include "brave/components/brave_shields/content/browser/ad_block_localhost_filters_provider.h"
@@ -28,6 +27,7 @@
 #include "brave/components/brave_shields/core/browser/ad_block_filter_list_catalog_provider.h"
 #include "brave/components/brave_shields/core/browser/ad_block_filters_provider_manager.h"
 #include "brave/components/brave_shields/core/browser/ad_block_service_helper.h"
+#include "brave/components/brave_shields/core/browser/adblock/rs/src/lib.rs.h"
 #include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_shields/core/common/pref_names.h"
@@ -391,6 +391,11 @@ void AdBlockService::EnableTag(const std::string& tag, bool enabled) {
 void AdBlockService::AddUserCosmeticFilter(const std::string& filter) {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
   custom_filters_provider_->AddUserCosmeticFilter(filter);
+}
+
+bool AdBlockService::AreAnyBlockedElementsPresent(const std::string& host) {
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+  return custom_filters_provider_->AreAnyBlockedElementsPresent(host);
 }
 
 void AdBlockService::ResetCosmeticFilter(const std::string& host) {

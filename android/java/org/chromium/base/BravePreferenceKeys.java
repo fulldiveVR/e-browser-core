@@ -89,9 +89,12 @@ public final class BravePreferenceKeys {
     public static final String BRAVE_QUICK_SEARCH_ENGINES_FEATURE = "quick_search_engines_feature";
     public static final String BRAVE_QUICK_SEARCH_ENGINES_PREVIOUS_DSE =
             "quick_search_engines_previous_dse";
+    public static final String MIGRATE_YAHOO_JP_QSE = "migrate_yahoo_jp_qse";
 
     public static final String BRAVE_SAFE_BROWSING_ERRORS =
             "org.chromium.brave.browser.Brave_SAFE_BROWSING_ERRORS";
+
+    public static final String DEFAULT_SEARCH_ENGINE_CHANGED = "default_search_engine_changed";
 
     /*
      * Checks if preference key is used in Brave.

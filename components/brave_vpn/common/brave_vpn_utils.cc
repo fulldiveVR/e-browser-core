@@ -53,9 +53,13 @@ void RegisterVPNLocalStatePrefs(PrefRegistrySimple* registry) {
 #if BUILDFLAG(IS_MAC)
   registry->RegisterBooleanPref(prefs::kBraveVPNOnDemandEnabled, false);
 #endif
+  registry->RegisterBooleanPref(prefs::kBraveVPNSmartProxyRoutingEnabled,
+                                false);
   registry->RegisterListPref(prefs::kBraveVPNWidgetUsageWeeklyStorage);
+  registry->RegisterListPref(prefs::kBraveVPNConnectedMinutesWeeklyStorage);
 }
 
+#if !BUILDFLAG(IS_ANDROID)
 // Region name map between v1 and v2. Some region from region list v2
 // uses different name with v1. If previously selected region name
 // uses different with v2, we can't proper region with it. So, map
@@ -80,7 +84,6 @@ constexpr auto kV1ToV2Map =
          {"us-west", "na-usa"},     {"eu-ua", "eu-ua"},
          {"eu-en", "eu-en"}});
 
-#if !BUILDFLAG(IS_ANDROID)
 void MigrateFromV1ToV2(PrefService* local_prefs) {
   const auto selected_region_v1 =
       local_prefs->GetString(prefs::kBraveVPNSelectedRegion);
@@ -103,23 +106,6 @@ void MigrateFromV1ToV2(PrefService* local_prefs) {
 #endif
 
 }  // namespace
-
-std::string_view GetMigratedNameIfNeeded(PrefService* local_prefs,
-                                         const std::string& name) {
-  if (local_prefs->GetInteger(prefs::kBraveVPNRegionListVersion) == 1) {
-    return name;
-  }
-
-  auto it = kV1ToV2Map.find(name);
-  // |kV1ToV2Map| doesn't include newly supported timezone names.
-  // Use |name| in that case.
-  // TODO(simonhong): Need to check this new name is aligned with
-  // v2 region list data.
-  if (it == kV1ToV2Map.end()) {
-    return name;
-  }
-  return it->second;
-}
 
 bool IsBraveVPNWireguardEnabled(PrefService* local_state) {
   if (!IsBraveVPNFeatureEnabled()) {
@@ -261,12 +247,15 @@ std::string GetBraveVPNEntryName(version_info::Channel channel) {
 }
 
 std::string GetManageUrl(const std::string& env) {
-  if (env == skus::kEnvProduction)
+  if (env == skus::kEnvProduction) {
     return brave_vpn::kManageUrlProd;
-  if (env == skus::kEnvStaging)
+  }
+  if (env == skus::kEnvStaging) {
     return brave_vpn::kManageUrlStaging;
-  if (env == skus::kEnvDevelopment)
+  }
+  if (env == skus::kEnvDevelopment) {
     return brave_vpn::kManageUrlDev;
+  }
 
   NOTREACHED() << "All env handled above.";
 }
@@ -317,29 +306,34 @@ void MigrateLocalStatePrefs(PrefService* local_prefs) {
 bool HasValidSubscriberCredential(PrefService* local_prefs) {
   const base::Value::Dict& sub_cred_dict =
       local_prefs->GetDict(prefs::kBraveVPNSubscriberCredential);
-  if (sub_cred_dict.empty())
+  if (sub_cred_dict.empty()) {
     return false;
+  }
 
   const std::string* cred = sub_cred_dict.FindString(kSubscriberCredentialKey);
   const base::Value* expiration_time_value =
       sub_cred_dict.Find(kSubscriberCredentialExpirationKey);
 
-  if (!cred || !expiration_time_value)
+  if (!cred || !expiration_time_value) {
     return false;
+  }
 
-  if (cred->empty())
+  if (cred->empty()) {
     return false;
+  }
 
   auto expiration_time = base::ValueToTime(expiration_time_value);
-  if (!expiration_time || expiration_time < base::Time::Now())
+  if (!expiration_time || expiration_time < base::Time::Now()) {
     return false;
+  }
 
   return true;
 }
 
 std::string GetSubscriberCredential(PrefService* local_prefs) {
-  if (!HasValidSubscriberCredential(local_prefs))
+  if (!HasValidSubscriberCredential(local_prefs)) {
     return "";
+  }
   const base::Value::Dict& sub_cred_dict =
       local_prefs->GetDict(prefs::kBraveVPNSubscriberCredential);
   const std::string* cred = sub_cred_dict.FindString(kSubscriberCredentialKey);

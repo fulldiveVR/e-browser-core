@@ -12,6 +12,7 @@ import Data
 import Foundation
 import Growth
 import Preferences
+import Web
 import os
 
 @MainActor class AdvancedShieldsSettings: ObservableObject {
@@ -257,7 +258,7 @@ import os
 
     // Reset Webkit configuration to remove data from memory
     if clearAffectsTabs {
-      self.tabManager.resetConfiguration()
+      self.tabManager.reset()
       // Unlock the folders to allow clearing of data.
       await _toggleFolderAccessForBlockCookies(locked: false)
     }

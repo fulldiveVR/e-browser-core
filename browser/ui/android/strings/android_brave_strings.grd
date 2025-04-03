@@ -2,7 +2,7 @@
 <!--
 This file contains all "about" strings.  It is set to NOT be translated, in translation_expectations.pyl.  en-US only.
 -->
-<grit current_release="1" latest_public_release="0" output_all_resource_defines="false">
+<grit current_release="1" latest_public_release="0">
   <outputs>
     <output filename="values-af/android_brave_strings.xml" lang="af" type="android" />
     <output filename="values-am/android_brave_strings.xml" lang="am" type="android" />
@@ -504,8 +504,8 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_SHOW_SEARCH_SUGGESTIONS_TITLE" desc="Title for a switch in Settings that controls URL and search autocompletion and informs the user about the data shared by this feature.">
         Show search suggestions
       </message>
-      <message name="IDS_AUTOCOMPLETE_TOP_SITES_TITLE" desc="The label for settings switch controlling whether or not top sites show up in autocomplete">
-        Show top sites suggestions
+      <message name="IDS_AUTOCOMPLETE_TOP_SUGGESTIONS_TITLE" desc="The label for settings switch controlling whether or not top suggestions show up in autocomplete">
+        Show top suggestions
       </message>
       <message name="IDS_INDEX_OTHER_SEARCH_ENGINES_TITLE" desc="Title for the settings related to index other search engines">
         Index other search engines
@@ -883,8 +883,11 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_SHOW_BRAVE_REWARDS_ICON_SUMMARY" desc="Summary for preference that hides or shows Brave Rewards icon.">
         Show Brave Rewards icon in address bar
       </message>
-      <message name="IDS_BOTTOM_TOOLBAR_ENABLE" desc="Menu item for enabling the bottom toolbar.">
-        Enable bottom toolbar
+      <message name="IDS_BOTTOM_TOOLBAR_TITLE" desc="Menu item for enabling the bottom navigation toolbar.">
+        Enable bottom navigation toolbar
+      </message>
+      <message name="IDS_BRAVE_BOTTOM_NAVIGATION_TOOLBAR_DISABLED_SUMMARY" desc="Summary for disabled state of the bottom navigation toolbar.">
+        This setting is disabled when the bottom address bar position is selected
       </message>
       <message name="IDS_SETTINGS_REQUIRE_RELAUNCH_NOTICE" desc="Text for message asked about browser relaunch to apply new settings">
         Your changes will take effect the next time you relaunch Brave
@@ -963,12 +966,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_TROUBLESHOOTING_ONBOARDING" desc="Text for trouble shooting page for onboarding">
         Troubleshooting onboarding
       </message>
-      <message name="IDS_CHOOSE_DEFAULT_SEARCH_ENGINE" desc="Title Text for search engine page for onboarding">
-        Choose default search engine
-      </message>
-      <message name="IDS_SEARCH_ENGINE_TEXT" desc="Text for search engine page for onboarding">
-        You can always change your preference later in app settings.
-      </message>
       <message name="IDS_BRAVE_SHIELDS_ONBOARDING_TITLE" desc="Title for brave shield page">
         Brave Shields
       </message>
@@ -1019,15 +1016,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_MENU_SET_DEFAULT_BROWSER" desc="Title for set default browser menu item">
         Set as Default Browser
-      </message>
-      <message name="IDS_BRAVE_SET_DEFAULT_BROWSER_DIALOG_TEXT" desc="Dialog for setting default browser">
-        Select Brave Browser and tap 'Always'
-      </message>
-      <message name="IDS_BRAVE_ALREADY_SET_AS_DEFAULT_BROWSER" desc="Toast message for those whom have already set Brave as default browser">
-        Brave is already set as your default browser.
-      </message>
-      <message name="IDS_BRAVE_DEFAULT_BROWSER_GO_TO_SETTINGS" desc="Toast message for those without 7.0 to go to settings to change default browser">
-        You've already set a default browser. You may change the default browser in your app settings.
       </message>
       <message name="IDS_SCAN_QR_CODE" desc="Title for scan qr code dialog from addressbar">
         Scan QR Code
@@ -1709,6 +1697,9 @@ Are you sure you want to do this?
       <message name="IDS_ADVANCED_CONTROLS" desc="Title for toggle section.">
         Advanced controls
       </message>
+      <message name="IDS_SHOW_ALL_BLOCKED_ELEMENTS" desc="Text for show all block elements button.">
+        Clear all blocked elements
+      </message>
       <message name="IDS_UPDATE_NOTIFICATION_TITLE" desc="Title of notification on application update.">
         Save Data Online
       </message>
@@ -1828,9 +1819,6 @@ Are you sure you want to do this?
       </message>
       <message name="IDS_START_BROWSING_TO_SEE" desc="Brave stats empty text">
         Start browsing to see privacy reporting
-      </message>
-      <message name="IDS_SET_BRAVE_AS_YOUR" desc="Deafult browser notification text">
-        Set Brave as your default browser for private and secure browsing.
       </message>
       <message name="IDS_ALLOWS_BRAVE_TO_SHOW" desc="Brave stats pref summary text">
         Allows Brave to show your privacy statistics
@@ -1966,39 +1954,6 @@ Are you sure you want to do this?
       </message>
       <message name="IDS_VIEW_FULL_PRIVACY_REPORT" desc="Shields privacy report text">
         View full Privacy Report
-      </message>
-      <message name="IDS_GOOGLE_DESC" desc="Onboarding SE text">
-        Most popular
-      </message>
-      <message name="IDS_DDG_DESC" desc="Onboarding SE text">
-        Private and no tracking
-      </message>
-      <message name="IDS_QWANT_DESC" desc="Onboarding SE text">
-        Private and no tracking, EU-based
-      </message>
-      <message name="IDS_STARTPAGE_DESC" desc="Onboarding SE text">
-        Google results without trackers
-      </message>
-      <message name="IDS_BING_DESC" desc="Onboarding SE text">
-        Second most popular
-      </message>
-      <message name="IDS_YANDEX_DESC" desc="Onboarding SE text">
-        A leading search engine in Russia
-      </message>
-      <message name="IDS_ECOSIA_DESC" desc="Onboarding SE text">
-        Plants trees, based in Berlin
-      </message>
-      <message name="IDS_DAUM_DESC" desc="Onboarding SE text">
-        South Korean web portal &amp; search
-      </message>
-      <message name="IDS_NAVER_DESC" desc="Onboarding SE text">
-        South Korean web portal &amp; search
-      </message>
-      <message name="IDS_BRAVE_DESC" desc="Onboarding SE text">
-        Private, independent, user-first
-      </message>
-      <message name="IDS_ONBOARDING_SE_TEXT" desc="Onboarding SE title text">
-        Some search engines protect your privacy better than others when you search the web.
       </message>
       <message name="IDS_NOT_NOW" desc="Set default browser modal button text">
         Not now
@@ -3695,6 +3650,12 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     <message name="IDS_LEO_AUTOCOMPLETE_PREF" desc="Title for Leo Autocomplete suggestions.">
       Show autocomplete suggestions in address bar
     </message>
+    <message name="IDS_LEO_QUICK_SEARCH_ENGINE_PREF" desc="Title for Leo Quick Search Engine preference.">
+      Show in quick search engines bar
+    </message>
+    <message name="IDS_LEO_QUICK_SEARCH_ENGINE_SUMMARY" desc="Summary for Leo Quick Search Engine preference.">
+      Enables a shortcut to launch Leo from the quick search engines bar.
+    </message>
     <message name="IDS_LEO_RESET_DATA" desc="Title for Leo Reset and clear data option.">
       Delete all Leo AI conversation data
     </message>
@@ -4132,6 +4093,12 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <message name="IDS_SAFEBROWSING_ERRORS_PREF" desc="A preferences to show Safe Browsing errors">
       Show Safe Browsing errors
+    </message>
+    <message name="IDS_PRIVATE_TAB_SCREENSHOT_TITLE" desc="A title to show private tab screenshot">
+      Allow screenshots in private tabs
+    </message>
+    <message name="IDS_PRIVATE_TAB_SCREENSHOT_SUMMARY" desc="A summary to show private tab screenshot">
+      If allowed, private tabs will also be visible when multiple apps are open.
     </message>
   </messages>
   </release>

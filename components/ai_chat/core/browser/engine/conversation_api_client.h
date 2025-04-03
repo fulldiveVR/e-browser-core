@@ -63,6 +63,10 @@ class ConversationAPIClient {
     RequestSummary,
     RequestRewrite,
     SuggestedActions,
+    UploadImage,
+    GetSuggestedTopicsForFocusTabs,
+    DedupeTopics,
+    GetFocusTabsForTopic,
     // TODO(petemill):
     // - Search in-progress?
     // - Sources?
@@ -74,7 +78,17 @@ class ConversationAPIClient {
   struct ConversationEvent {
     mojom::CharacterType role;
     ConversationEventType type;
-    std::string content;
+    std::vector<std::string> content;
+    std::string topic;  // Used in GetFocusTabsForTopic event.
+
+    ConversationEvent(mojom::CharacterType,
+                      ConversationEventType,
+                      const std::vector<std::string>&,
+                      const std::string& = "");
+    ConversationEvent();
+    ~ConversationEvent();
+    ConversationEvent(const ConversationEvent&);
+    ConversationEvent& operator=(const ConversationEvent&);
   };
 
   ConversationAPIClient(
@@ -93,6 +107,9 @@ class ConversationAPIClient {
       GenerationCompletedCallback completed_callback);
 
   void ClearAllQueries();
+
+  static mojom::ConversationEntryEventPtr ParseResponseEvent(
+      base::Value::Dict& response_event);
 
  protected:
   std::string CreateJSONRequestBody(

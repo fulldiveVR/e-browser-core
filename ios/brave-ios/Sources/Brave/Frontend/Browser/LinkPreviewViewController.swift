@@ -5,16 +5,17 @@
 import Data
 import Shared
 import UIKit
+import Web
 import WebKit
 
 class LinkPreviewViewController: UIViewController {
 
   private let url: URL
-  private weak var parentTab: Tab?
-  private var currentTab: Tab?
+  private weak var parentTab: (any TabState)?
+  private var currentTab: (any TabState)?
   private weak var browserController: BrowserViewController?
 
-  init(url: URL, for tab: Tab, browserController: BrowserViewController) {
+  init(url: URL, for tab: some TabState, browserController: BrowserViewController) {
     self.url = url
     self.parentTab = tab
     self.browserController = browserController
@@ -26,25 +27,26 @@ class LinkPreviewViewController: UIViewController {
 
   override func viewDidLoad() {
     guard let parentTab = parentTab,
-      let tabWebView = parentTab.webView
+      let browserController
     else {
       return
     }
 
-    currentTab = Tab(
-      configuration: tabWebView.configuration,
-      type: parentTab.isPrivate ? .private : .regular,
-      tabGeneratorAPI: nil
-    ).then {
-      $0.tabDelegate = browserController
-      $0.createWebview()
-      $0.webView?.navigationDelegate = browserController
-      $0.webView?.scrollView.layer.masksToBounds = true
-    }
+    let tab = TabStateFactory.create(
+      with: .init(
+        initialConfiguration: parentTab.configuration,
+        braveCore: browserController.braveCore
+      )
+    )
+    tab.miscDelegate = browserController
+    tab.createWebView()
+    tab.addPolicyDecider(browserController)
+    tab.delegate = browserController
+    tab.downloadDelegate = browserController
+    tab.webViewProxy?.scrollView?.layer.masksToBounds = true
+    self.currentTab = tab
 
-    guard let currentTab = currentTab,
-      let webView = currentTab.webView
-    else {
+    guard let currentTab = currentTab else {
       return
     }
 
@@ -54,18 +56,20 @@ class LinkPreviewViewController: UIViewController {
     Task(priority: .userInitiated) {
       let ruleLists = await AdBlockGroupsManager.shared.ruleLists(for: domain)
       for ruleList in ruleLists {
-        webView.configuration.userContentController.add(ruleList)
+        currentTab.configuration.userContentController.add(ruleList)
       }
     }
 
-    webView.frame = view.bounds
-    view.addSubview(webView)
+    currentTab.view.frame = view.bounds
+    view.addSubview(currentTab.view)
 
-    webView.load(URLRequest(url: url))
+    currentTab.loadRequest(URLRequest(url: url))
   }
 
   deinit {
-    self.currentTab?.webView?.navigationDelegate = nil
+    if let browserController {
+      currentTab?.removePolicyDecider(browserController)
+    }
     self.currentTab = nil
   }
 }

@@ -21,6 +21,9 @@
 <translation id="303960458633076466">Den här sidan har blockerats av Brave</translation>
 <translation id="2017237562285586622">Tillåt att Brave får åtkomst till nätverket i inställningarna för brandväggen eller
         antivirusprogrammet.</translation>
+<translation id="4949828774841497663">Öppna Program &gt; Systeminställningar &gt; Nätverk, välj det
+          aktiva nätverket, klicka på knappen Information … och avmarkera
+          eventuella proxyservrar.</translation>
 <translation id="8619622797841001082">Öppna
           Brave-menyn &gt;
           <ph name="SETTINGS_TITLE"/>
@@ -29,6 +32,7 @@
           &gt;
           <ph name="PROXIES_TITLE"/>
           och kontrollera att "ingen proxy" eller "direkt" har angetts i konfigurationen</translation>
+<translation id="6159073403999048272">Dessa sidor är avsedda för Brave-utvecklare och kanske inte underhålls eller testas aktivt. Om du vill aktivera dem navigerar du till <ph name="BEGIN_LINK"/>chrome://chrome-urls<ph name="LINK_END"/>, klickar på knappen för att aktivera felsökningssidor och navigerar sedan till den här sidan igen.</translation>
 <translation id="2765022094254723779">Brave möjliggörs även av andra <ph name="BEGIN_LINK_OSS"/>program med öppen källkod<ph name="END_LINK_OSS"/>.</translation>
 <translation id="9156965752763025780">Ändringarna tillämpas nästa gång du startar om Brave.</translation>
 <translation id="8828443087767259398">Brave behöver åtkomst för Bluetooth för att fortsätta 
@@ -42,9 +46,6 @@
         och avmarkera <ph name="NO_PREFETCH_DESCRIPTION"/>.
         Om det inte hjälper rekommenderar vi att du markerar det
         här alternativet igen så att funktionaliteten förbättras.</translation>
-<translation id="8187289872471304532">Öppna
-          Program &gt; Systeminställningar &gt; Nätverk &gt; Avancerat &gt; Proxyservrar
-          och avmarkera alla proxyservrar.</translation>
 <translation id="4159376633403260073">Du visar en säker Brave for Testing-sida</translation>
 <translation id="88187049159266777">Brave stängdes inte ordentligt.</translation>
 </translationbundle>

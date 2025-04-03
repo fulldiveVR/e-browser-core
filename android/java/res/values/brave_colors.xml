@@ -58,7 +58,6 @@
     <color name="onboarding_orange">#fb542b</color>
     <color name="onboarding_gray">#84889c</color>
     <color name="onboarding_black">#1e2029</color>
-    <color name="onboarding_radio_button_active">#f0f1ff</color>
 
     <color name="onboarding_timer_color">#4f30ab</color>
 
@@ -429,4 +428,19 @@
     <color name="schemes_surface_container_highest">#c7c7cc</color>
 
     <color name="open_yt_dialog_bg">#FFFFFF</color>
+
+    <!-- Address Bar preference Colors -->
+    <color name="address_bar_preference_header_background_light">#EFF0FF</color>
+    <color name="address_bar_preference_header_background_dark">#000B89</color>
+    <color name="address_bar_preference_header_primary_light">#4551D1</color>
+    <color name="address_bar_preference_header_primary_dark">#828CFF</color>
+
+    <!-- Empty state icon Colors -->
+    <color name="empty_state_icon_bg_color">#EFF0FF</color>
+    <color name="empty_state_icon_bg_background_color">#EFF0FF</color>
+    <color name="empty_state_icon_bg_foreground_color">#EFF0FF</color>
+    <color name="empty_state_icon_color">#4551D1</color>
+    <color name="empty_state_icon_tabswitcher_bg_color">#EFF0FF</color>
+    <color name="empty_state_tab_border_color">#4551D1</color>
+    <color name="empty_state_tab_group_border_color">#4551D1</color>
 </resources>

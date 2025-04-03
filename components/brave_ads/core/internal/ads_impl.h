@@ -12,12 +12,11 @@
 #include "base/memory/weak_ptr.h"
 #include "base/values.h"
 #include "brave/components/brave_ads/core/internal/account/tokens/token_generator_interface.h"
-#include "brave/components/brave_ads/core/internal/common/functional/once_closure_task_queue.h"
-#include "brave/components/brave_ads/core/internal/creatives/conversions/creative_set_conversion_info.h"
 #include "brave/components/brave_ads/core/internal/global_state/global_state.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 #include "brave/components/brave_ads/core/public/ads.h"
 #include "brave/components/brave_ads/core/public/ads_callback.h"
+#include "brave/components/brave_ads/core/public/common/functional/once_closure_task_queue.h"
 #include "brave/components/brave_ads/core/public/service/ads_service_callback.h"
 
 namespace base {
@@ -47,6 +46,8 @@ class AdsImpl final : public Ads {
   void SetSysInfo(mojom::SysInfoPtr mojom_sys_info) override;
   void SetBuildChannel(mojom::BuildChannelInfoPtr mojom_build_channel) override;
   void SetFlags(mojom::FlagsPtr mojom_flags) override;
+  void SetContentSettings(
+      mojom::ContentSettingsPtr mojom_content_settings) override;
 
   void Initialize(mojom::WalletInfoPtr mojom_wallet,
                   InitializeCallback callback) override;
@@ -70,7 +71,7 @@ class AdsImpl final : public Ads {
       TriggerAdEventCallback callback) override;
 
   void ParseAndSaveCreativeNewTabPageAds(
-      base::Value::Dict data,
+      base::Value::Dict dict,
       ParseAndSaveCreativeNewTabPageAdsCallback callback) override;
   void MaybeServeNewTabPageAd(MaybeServeNewTabPageAdCallback callback) override;
   void TriggerNewTabPageAdEvent(
@@ -126,6 +127,11 @@ class AdsImpl final : public Ads {
   void CreateOrOpenDatabaseCallback(mojom::WalletInfoPtr mojom_wallet,
                                     InitializeCallback callback,
                                     bool success);
+
+  void MigrateStateCallback(mojom::WalletInfoPtr mojom_wallet,
+                            InitializeCallback callback,
+                            bool success);
+
   void FailedToInitialize(InitializeCallback callback);
   void SuccessfullyInitialized(mojom::WalletInfoPtr mojom_wallet,
                                InitializeCallback callback);
@@ -144,10 +150,6 @@ class AdsImpl final : public Ads {
   void LoadConfirmationStateCallback(mojom::WalletInfoPtr mojom_wallet,
                                      InitializeCallback callback,
                                      bool success);
-  void GetActiveCallback(
-      GetInternalsCallback callback,
-      bool success,
-      const CreativeSetConversionList& creative_set_conversions);
 
   bool is_initialized_ = false;
 

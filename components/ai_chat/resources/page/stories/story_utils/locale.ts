@@ -33,7 +33,6 @@ provideStrings({
   dismissButtonLabel: 'Dismiss',
   'introMessage-0': `I'm here to help. What can I assist you with today? $1Learn more$2`,
   'introMessage-1': 'I have a vast base of knowledge and a large memory able to help with more complex challenges. $1Learn more$2',
-  modelNameSyntax: '$1 by $2',
   modelFreemiumLabelNonPremium: 'Limited',
   modelPremiumLabelNonPremium: 'Premium',
   'modelCategory-chat': 'Chat',
@@ -97,6 +96,7 @@ provideStrings({
   braveLeoChatLeoExpandedSubtitle: 'Advanced and accurate chat',
   braveLeoChatClaudeInstantSubtitle: 'Strength in creative tasks',
   pageContentTooLongWarning: 'The page is too long for Leo. Some context could be missing from the conversation. Leo was able to read $1 of the page\'s contents.',
+  trimmedTokensWarning: 'Some context could be missing from the conversation. Leo was able to retain $1 of the conversation.',
   errorConversationEnd: 'This conversation is too long and cannot continue. There may be other models available with which Leo is capable of maintaining accuracy for longer conversations.',
   searchInProgress: 'Improving your answer with Brave Search…',
   searchQueries: 'Improved answer searching for $1.',
@@ -121,6 +121,11 @@ provideStrings({
   maybeLaterLabel: 'Maybe later',
   menuManageSubscription: 'Manage subscription',
   toolsMenuButtonLabel: 'Leo tools',
+  attachmentMenuButtonLabel: 'Attachment',
+  uploadFileButtonLabel: 'Upload file...',
+  takeAPictureButtonLabel: 'Take a picture...',
+  screenshotButtonLabel: 'Screenshot',
+  currentTabContentsButtonLabel: 'Current tab contents',
   sendChatButtonLabel: 'Send message to Leo',
   useMicButtonLabel: 'Use microphone',
   menuTitleCustomModels: 'Custom models',
@@ -134,5 +139,11 @@ provideStrings({
   reasoningLabel: 'Reasoning...',
   reasoningCompleteLabel: 'Reasoning complete',
   hideDetailsButtonLabel: 'Hide details',
-  showDetailsButtonLabel: 'Show details'
+  showDetailsButtonLabel: 'Show details',
+  openLabel: 'Open',
+  openExternalLink: 'Open external link?',
+  openExternalLinkInfo:
+    'Leo AI wants to open a website in a new tab. ' +
+    'Do you want to continue?',
+  openExternalLinkCheckboxLabel: 'Open links without asking me again',
 })

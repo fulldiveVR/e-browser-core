@@ -20,7 +20,7 @@ class UserAgentTests: XCTestCase {
   let desktopUARegex: (String) -> Bool = { ua in
     let range = ua.range(
       of:
-        "^Mozilla/5\\.0 \\(Macintosh; Intel Mac OS X [0-9_]+\\) AppleWebKit/[0-9\\.]+ \\(KHTML, like Gecko\\) Version/[0-9\\.]+ Safari/[0-9\\.]+$",
+        "^Mozilla/5\\.0 \\(Macintosh; Intel Mac OS X [0-9_]+\\) AppleWebKit/[0-9\\.]+ \\(KHTML, like Gecko\\) Brave/[0-9\\.]+ Version/[0-9\\.]+ Safari/[0-9\\.]+$",
       options: .regularExpression
     )
     return range != nil
@@ -34,7 +34,7 @@ class UserAgentTests: XCTestCase {
 
     let range = ua.range(
       of:
-        "^Mozilla/5\\.0 \(cpuPart) AppleWebKit/[0-9\\.]+ \\(KHTML, like Gecko\\) Version/[0-9\\.]+ Mobile/[A-Za-z0-9]+ Safari/[0-9\\.]+$",
+        "^Mozilla/5\\.0 \(cpuPart) AppleWebKit/[0-9\\.]+ \\(KHTML, like Gecko\\) Brave/[0-9\\.]+ Mobile/[A-Za-z0-9]+ Safari/[0-9\\.]+$",
       options: .regularExpression
     )
     return range != nil
@@ -51,11 +51,7 @@ class UserAgentTests: XCTestCase {
     let webView = WKWebView(frame: .zero)
     webView.customUserAgent = UserAgent.userAgentForIdiom()
 
-    webView.evaluateSafeJavaScript(
-      functionName: "navigator.userAgent",
-      contentWorld: .page,
-      asFunction: false
-    ) { result, error in
+    webView.evaluateJavaScript("navigator.userAgent") { result, error in
       let userAgent = result as! String
       if !self.mobileUARegex(userAgent) || self.desktopUARegex(userAgent) {
         XCTFail("User agent did not match expected pattern! \(userAgent)")
@@ -74,23 +70,14 @@ class UserAgentTests: XCTestCase {
     let webView = WKWebView(frame: .zero)
     let wkWebView = WKWebView()
 
-    webView.evaluateSafeJavaScript(
-      functionName: "navigator.userAgent",
-      args: [],
-      contentWorld: .page,
-      asFunction: false
-    ) { result, error in
+    webView.evaluateJavaScript("navigator.userAgent") { result, error in
 
       guard let braveFirstPartOfUA = (result as? String)?.components(separatedBy: "Gecko") else {
         XCTFail("Could not unwrap BraveWebView UA")
         return
       }
 
-      wkWebView.evaluateSafeJavaScript(
-        functionName: "navigator.userAgent",
-        contentWorld: .page,
-        asFunction: false
-      ) { wkResult, wkError in
+      wkWebView.evaluateJavaScript("navigator.userAgent") { wkResult, wkError in
         guard
           let wkWebViewFirstPartOfUA = (result as? String)?
             .components(separatedBy: "Gecko")

@@ -32,7 +32,7 @@ extension URL {
       switch internalURL.urlType {
       case .errorPage:
         return internalURL.originalURLFromErrorPage
-      case .web3Page, .sessionRestorePage, .aboutHomePage:
+      case .web3Page, .aboutHomePage:
         return internalURL.extractedUrlParam
       case .blockedPage:
         return decodeEmbeddedInternalURL(for: .blocked)
@@ -68,7 +68,7 @@ extension URL {
     }
 
     if let internalUrl = InternalURL(self),
-      internalUrl.isSessionRestore || internalUrl.isWeb3URL || internalUrl.isHTTPBlockedPage
+      internalUrl.isWeb3URL || internalUrl.isHTTPBlockedPage
         || internalUrl.isBlockedPage
     {
       return internalUrl.extractedUrlParam?.displayURL
@@ -187,24 +187,24 @@ extension URL {
   }
 
   public var strippingBlobURLAuth: URL {
-    if self.scheme == "blob",
-      var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
-    {
-      components.scheme = nil
+    guard self.scheme == "blob" else { return self }
 
-      if let newURL = components.url {
-        if var newComponents = URLComponents(url: newURL, resolvingAgainstBaseURL: true) {
-          newComponents.user = nil
-          newComponents.password = nil
-          newComponents.scheme = newURL.scheme
+    let blobURLString = self.absoluteString.dropFirst("blob:".count)
 
-          if let url = newComponents.url, let result = URL(string: "blob:\(url.absoluteString)") {
-            return result
-          }
-        }
-      }
+    guard let innerURL = URL(string: String(blobURLString)),
+      var components = URLComponents(url: innerURL, resolvingAgainstBaseURL: true)
+    else {
+      return self
     }
-    return self
+
+    components.user = nil
+    components.password = nil
+
+    guard let cleanedInnerURL = components.url else {
+      return self
+    }
+
+    return URL(string: "blob:\(cleanedInnerURL.absoluteString)") ?? self
   }
 
   /// Matches what `window.origin` would return in javascript.
@@ -280,7 +280,6 @@ extension InternalURL {
   enum URLType {
     case blockedPage
     case httpBlockedPage
-    case sessionRestorePage
     case errorPage
     case readerModePage
     case aboutHomePage
@@ -310,10 +309,6 @@ extension InternalURL {
 
     if isReaderModePage {
       return .readerModePage
-    }
-
-    if isSessionRestore {
-      return .sessionRestorePage
     }
 
     if isAboutHomeURL {

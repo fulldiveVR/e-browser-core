@@ -7,20 +7,21 @@
 
 #include "base/strings/string_util.h"
 #include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/brave_ads/core/public/ads_feature.h"
 #include "brave/components/brave_component_updater/browser/features.h"
 #include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
+#include "brave/components/brave_user_agent/common/features.h"
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/de_amp/common/features.h"
 #include "brave/components/debounce/core/common/features.h"
 #include "brave/components/ntp_background_images/browser/features.h"
 #include "brave/components/skus/common/features.h"
+#include "brave/ios/browser/api/translate/features.h"
 #include "brave/ios/browser/playlist/features.h"
 #include "brave/ios/browser/ui/browser_menu/features.h"
 #include "build/build_config.h"
-#include "components/flags_ui/feature_entry_macros.h"
-#include "components/flags_ui/flags_state.h"
+#include "components/webui/flags/feature_entry_macros.h"
+#include "components/webui/flags/flags_state.h"
 #include "net/base/features.h"
 
 #define EXPAND_FEATURE_ENTRIES(...) __VA_ARGS__,
@@ -177,6 +178,27 @@
           FEATURE_VALUE_TYPE(brave::features::kModernBrowserMenuEnabled),      \
       },                                                                       \
       {                                                                        \
+          "brave-translate-enabled",                                           \
+          "Use Brave Translate",                                               \
+          "Enables page translation",                                          \
+          flags_ui::kOsIos,                                                    \
+          FEATURE_VALUE_TYPE(brave::features::kBraveTranslateEnabled),         \
+      },                                                                       \
+      {                                                                        \
+          "brave-translate-apple-enabled",                                     \
+          "Use Apple Offline Translate",                                       \
+          "Enables page translation using Apple APIs",                         \
+          flags_ui::kOsIos,                                                    \
+          FEATURE_VALUE_TYPE(brave::features::kBraveAppleTranslateEnabled),    \
+      },                                                                       \
+      {                                                                        \
+          "use-brave-user-agent",                                              \
+          "Use Brave user agent",                                              \
+          "Includes Brave version information in the user agent",              \
+          flags_ui::kOsIos,                                                    \
+          FEATURE_VALUE_TYPE(brave_user_agent::features::kUseBraveUserAgent),  \
+      },                                                                       \
+      {                                                                        \
           "brave-ntp-branded-wallpaper-demo",                                  \
           "New Tab Page Demo Branded Wallpaper",                               \
           "Force dummy data for the Branded Wallpaper New Tab Page "           \
@@ -218,36 +240,6 @@
           "do not share it unless asked to by Brave staff.",                   \
           flags_ui::kOsIos,                                                    \
           FEATURE_VALUE_TYPE(brave_rewards::features::kVerboseLoggingFeature), \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-run-brave-ads-service",                     \
-          "Should always run Brave Ads service",                               \
-          "Always run Brave Ads service to support triggering ad events when " \
-          "Brave Private Ads are disabled.",                                   \
-          flags_ui::kOsIos,                                                    \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::kShouldAlwaysRunBraveAdsServiceFeature),              \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-trigger-new-tab-page-ad-events",            \
-          "Should always trigger new tab page ad events",                      \
-          "Support triggering new tab page ad events if Brave Private Ads "    \
-          "are disabled. Requires "                                            \
-          "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
-          flags_ui::kOsIos,                                                    \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::kShouldAlwaysTriggerBraveNewTabPageAdEventsFeature),  \
-      },                                                                       \
-      {                                                                        \
-          "brave-ads-should-always-trigger-search-result-ad-events",           \
-          "Should always trigger search result ad events",                     \
-          "Support triggering search result ad events if Brave Private Ads "   \
-          "are disabled. Requires "                                            \
-          "#brave-ads-should-always-run-brave-ads-service to be enabled.",     \
-          flags_ui::kOsIos,                                                    \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_ads::                                                      \
-                  kShouldAlwaysTriggerBraveSearchResultAdEventsFeature),       \
       })                                                                       \
   BRAVE_SHIELDS_FEATURE_ENTRIES                                                \
   BRAVE_NATIVE_WALLET_FEATURE_ENTRIES                                          \

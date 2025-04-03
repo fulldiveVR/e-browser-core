@@ -7,6 +7,7 @@ import Foundation
 import Preferences
 import Shared
 import UIKit
+import Web
 
 enum TabBarVisibility: Int, CaseIterable {
   case never
@@ -173,6 +174,26 @@ extension Preferences {
     /// How many times Brave Search websites has asked the user to check whether Brave Search can be set as a default
     static let braveSearchDefaultBrowserPromptCount =
       Option<Int>(key: "search.brave-search-default-website-prompt", default: 0)
+    /// Whether we should override DSE to Yahoo! JAPAN search engine for Japan region
+    public static let shouldOverrideDSEForJapanRegion = Option<Bool>(
+      key: "search.should-override-dse-jp-region",
+      default: true
+    )
+    /// Whether or not Yahoo! JAPAN search engine phase one has been completed
+    public static let yahooJPPhaseOneCompleted = Option<Bool>(
+      key: "search.yahoo-jp-phase-one-completed",
+      default: false
+    )
+    /// User picked DSE name for normal mode
+    public static let userPickedDSEName = Option<String?>(
+      key: "search.user-picked-dse-name",
+      default: nil
+    )
+    /// User picked DSE name for private mode
+    public static let userPickedPrivateDSEName = Option<String?>(
+      key: "search.user-picked-private-dse-name",
+      default: nil
+    )
   }
 
   final public class BraveSearch {
@@ -362,9 +383,8 @@ extension Preferences {
     /// Determines whether Brave Translate is enabled
     /// - true = Enabled
     /// - false = Disabled
-    /// - nil = Onboarding dismissed, state unknown
     public static let translateEnabled =
-      Option<Bool?>(key: "brave-translate.enabled", default: nil)
+      Option<Bool>(key: "brave-translate.enabled", default: true)
 
     /// Determines whether to show Brave Translate onboarding.
     public static let translateURLBarOnboardingCount =

@@ -5,6 +5,7 @@
 import Favicon
 import Foundation
 import Storage
+import Web
 
 /// A handler can be a plain old swift object. It does not need to extend any
 /// other object, but can.
@@ -58,25 +59,25 @@ import Storage
 ///    i) a case to map the event to the event label (var label)
 ///   ii) a case to map the event to the event handler (func handle:with:)
 protocol TabEventHandler {
-  func tab(_ tab: Tab, didChangeURL url: URL)
-  func tab(_ tab: Tab, didLoadPageMetadata metadata: PageMetadata)
-  func tab(_ tab: Tab, didLoadFavicon favicon: Favicon?)
-  func tabDidGainFocus(_ tab: Tab)
-  func tabDidLoseFocus(_ tab: Tab)
-  func tabDidClose(_ tab: Tab)
-  func tabDidChangeContentBlockerStatus(_ tab: Tab)
+  func tab(_ tab: some TabState, didChangeURL url: URL)
+  func tab(_ tab: some TabState, didLoadPageMetadata metadata: PageMetadata)
+  func tab(_ tab: some TabState, didLoadFavicon favicon: Favicon?)
+  func tabDidGainFocus(_ tab: some TabState)
+  func tabDidLoseFocus(_ tab: some TabState)
+  func tabDidClose(_ tab: some TabState)
+  func tabDidChangeContentBlockerStatus(_ tab: some TabState)
 }
 
 // Provide default implmentations, because we don't want to litter the code with
 // empty methods, and `@objc optional` doesn't really work very well.
 extension TabEventHandler {
-  func tab(_ tab: Tab, didChangeURL url: URL) {}
-  func tab(_ tab: Tab, didLoadPageMetadata metadata: PageMetadata) {}
-  func tab(_ tab: Tab, didLoadFavicon favicon: Favicon?) {}
-  func tabDidGainFocus(_ tab: Tab) {}
-  func tabDidLoseFocus(_ tab: Tab) {}
-  func tabDidClose(_ tab: Tab) {}
-  func tabDidChangeContentBlockerStatus(_ tab: Tab) {}
+  func tab(_ tab: some TabState, didChangeURL url: URL) {}
+  func tab(_ tab: some TabState, didLoadPageMetadata metadata: PageMetadata) {}
+  func tab(_ tab: some TabState, didLoadFavicon favicon: Favicon?) {}
+  func tabDidGainFocus(_ tab: some TabState) {}
+  func tabDidLoseFocus(_ tab: some TabState) {}
+  func tabDidClose(_ tab: some TabState) {}
+  func tabDidChangeContentBlockerStatus(_ tab: some TabState) {}
 }
 
 enum TabEventLabel: String {
@@ -117,7 +118,7 @@ enum TabEvent {
     }
   }
 
-  func handle(_ tab: Tab, with handler: TabEventHandler) {
+  func handle(_ tab: some TabState, with handler: TabEventHandler) {
     switch self {
     case .didChangeURL(let url):
       handler.tab(tab, didChangeURL: url)
@@ -168,7 +169,7 @@ extension TabEventHandler {
   func registerFor(_ tabEvents: TabEventLabel..., queue: OperationQueue? = nil) -> TabObservers {
     return tabEvents.map { eventType in
       center.addObserver(forName: eventType.name, object: nil, queue: queue) { notification in
-        guard let tab = notification.object as? Tab,
+        guard let tab = notification.object as? any TabState,
           let event = notification.userInfo?["payload"] as? TabEvent
         else {
           return

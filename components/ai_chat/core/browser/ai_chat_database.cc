@@ -55,6 +55,20 @@ bool MigrateFrom1To2(sql::Database* db) {
   return statement.is_valid() && statement.Run();
 }
 
+bool MigrateFrom2To3(sql::Database* db) {
+  static constexpr char kAddTotalTokenColumnQuery[] =
+      "ALTER TABLE conversation ADD COLUMN total_tokens INTEGER DEFAULT 0";
+  static constexpr char kAddTrimmedTokenColumnQuery[] =
+      "ALTER TABLE conversation ADD COLUMN trimmed_tokens INTEGER DEFAULT 0";
+  sql::Statement total_tokens_statement(
+      db->GetUniqueStatement(kAddTotalTokenColumnQuery));
+  sql::Statement trimmed_tokens_statement(
+      db->GetUniqueStatement(kAddTrimmedTokenColumnQuery));
+  return total_tokens_statement.is_valid() &&
+         trimmed_tokens_statement.is_valid() && total_tokens_statement.Run() &&
+         trimmed_tokens_statement.Run();
+}
+
 void SerializeWebSourcesEvent(const mojom::WebSourcesEventPtr& mojom_event,
                               store::WebSourcesEventProto* proto_event) {
   proto_event->clear_sources();
@@ -111,7 +125,7 @@ constexpr int kLowestSupportedDatabaseVersion = 1;
 constexpr int kCompatibleDatabaseVersionNumber = 1;
 
 // Current version of the database. Increase if breaking changes are made.
-constexpr int kCurrentDatabaseVersion = 2;
+constexpr int kCurrentDatabaseVersion = 3;
 
 AIChatDatabase::AIChatDatabase(const base::FilePath& db_file_path,
                                os_crypt_async::Encryptor encryptor)
@@ -135,17 +149,20 @@ bool AIChatDatabase::LazyInit(bool re_init) {
 sql::InitStatus AIChatDatabase::InitInternal() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
   if (!GetDB().is_open() && !GetDB().Open(db_file_path_)) {
+    DVLOG(0) << "Failed to open database at " << db_file_path_.value();
     return sql::InitStatus::INIT_FAILURE;
   }
 
   if (sql::MetaTable::RazeIfIncompatible(
           &GetDB(), kLowestSupportedDatabaseVersion, kCurrentDatabaseVersion) ==
       sql::RazeIfIncompatibleResult::kFailed) {
+    DVLOG(0) << "Failed to raze incompatible database";
     return sql::InitStatus::INIT_FAILURE;
   }
 
   sql::Transaction transaction(&GetDB());
   if (!transaction.Begin()) {
+    DVLOG(0) << "Failed to begin transaction: " << GetDB().GetErrorMessage();
     return sql::InitStatus::INIT_FAILURE;
   }
 
@@ -157,7 +174,7 @@ sql::InitStatus AIChatDatabase::InitInternal() {
   }
 
   if (meta_table.GetCompatibleVersionNumber() > kCurrentDatabaseVersion) {
-    LOG(ERROR) << "AIChat database version is too new.";
+    DVLOG(0) << "AIChat database version is too new.";
     return sql::InitStatus::INIT_TOO_NEW;
   }
 
@@ -168,17 +185,31 @@ sql::InitStatus AIChatDatabase::InitInternal() {
 
   if (meta_table.GetVersionNumber() < kCurrentDatabaseVersion) {
     bool migration_success = true;
-    if (meta_table.GetVersionNumber() == 1) {
+    int current_version = meta_table.GetVersionNumber();
+    if (current_version == 1) {
       migration_success = MigrateFrom1To2(&GetDB());
-      migration_success = meta_table.SetCompatibleVersionNumber(
-                              kCompatibleDatabaseVersionNumber) &&
-                          meta_table.SetVersionNumber(kCurrentDatabaseVersion);
+      if (migration_success) {
+        migration_success = meta_table.SetCompatibleVersionNumber(
+                                kCompatibleDatabaseVersionNumber) &&
+                            meta_table.SetVersionNumber(2);
+      }
+      current_version = 2;
+    }
+    if (migration_success && current_version == 2) {
+      migration_success = MigrateFrom2To3(&GetDB());
+      if (migration_success) {
+        migration_success = meta_table.SetCompatibleVersionNumber(
+                                kCompatibleDatabaseVersionNumber) &&
+                            meta_table.SetVersionNumber(3);
+      }
+      current_version = 3;
     }
     // Migration unsuccessful, raze the database and re-init
     if (!migration_success) {
       if (db_.Raze()) {
         return InitInternal();
       }
+      DVLOG(0) << "Init failure after unsuccessful migration and raze";
       return sql::InitStatus::INIT_FAILURE;
     }
   }
@@ -195,10 +226,12 @@ std::vector<mojom::ConversationPtr> AIChatDatabase::GetAllConversations() {
   if (!LazyInit()) {
     return {};
   }
+
   // All conversation metadata, associated content and most
   // and most recent entry date. 1 row for each associated content.
   static constexpr char kQuery[] =
       "SELECT conversation.uuid, conversation.title, conversation.model_key,"
+      "  conversation.total_tokens, conversation.trimmed_tokens,"
       "  last_activity_date.date,"
       "  associated_content.uuid, associated_content.title,"
       "  associated_content.url, associated_content.content_type,"
@@ -240,6 +273,8 @@ std::vector<mojom::ConversationPtr> AIChatDatabase::GetAllConversations() {
     conversation->title =
         DecryptOptionalColumnToString(statement, index++).value_or("");
     conversation->model_key = GetOptionalString(statement, index++);
+    conversation->total_tokens = statement.ColumnInt(index++);
+    conversation->trimmed_tokens = statement.ColumnInt(index++);
     conversation->updated_time = statement.ColumnTime(index++);
     conversation->has_content = true;
 
@@ -323,7 +358,7 @@ std::vector<mojom::ConversationTurnPtr> AIChatDatabase::GetConversationEntries(
 
     auto entry = mojom::ConversationTurn::New(
         entry_uuid, character_type, action_type, text, prompt, selected_text,
-        std::nullopt, date, std::nullopt, false);
+        std::nullopt, date, std::nullopt, std::nullopt, false);
 
     // events
     struct Event {
@@ -412,6 +447,29 @@ std::vector<mojom::ConversationTurnPtr> AIChatDatabase::GetConversationEntries(
       }
     }
 
+    // Uploaded images
+    sql::Statement uploaded_file_statement(
+        GetDB().GetUniqueStatement("SELECT filename, filesize, data"
+                                   " FROM conversation_entry_uploaded_files"
+                                   " WHERE conversation_entry_uuid=?"
+                                   " ORDER BY file_order ASC"));
+    uploaded_file_statement.BindString(0, entry_uuid);
+
+    while (uploaded_file_statement.Step()) {
+      auto filename = DecryptColumnToString(uploaded_file_statement, 0);
+      int64_t filesize = uploaded_file_statement.ColumnInt64(1);
+      auto decrypted_image_str =
+          DecryptColumnToString(uploaded_file_statement, 2);
+      base::span<const uint8_t> image_bytes =
+          base::as_byte_span(decrypted_image_str);
+      std::vector<uint8_t> image_data(image_bytes.begin(), image_bytes.end());
+      if (!entry->uploaded_images) {
+        entry->uploaded_images = std::vector<mojom::UploadedImagePtr>{};
+      }
+      entry->uploaded_images->emplace_back(mojom::UploadedImage::New(
+          std::move(filename), filesize, std::move(image_data)));
+    }
+
     // root entry or edited entry
     if (editing_entry_id.has_value()) {
       DVLOG(4) << "Collected edit entry for " << editing_entry_id.value()
@@ -481,8 +539,9 @@ bool AIChatDatabase::AddConversation(mojom::ConversationPtr conversation,
   }
 
   static constexpr char kInsertConversationQuery[] =
-      "INSERT INTO conversation(uuid, title, model_key) "
-      "VALUES(?, ?, ?)";
+      "INSERT INTO conversation(uuid, title, model_key, total_tokens, "
+      "trimmed_tokens) "
+      "VALUES(?, ?, ?, ?, ?)";
   sql::Statement statement(
       GetDB().GetUniqueStatement(kInsertConversationQuery));
   CHECK(statement.is_valid());
@@ -491,6 +550,8 @@ bool AIChatDatabase::AddConversation(mojom::ConversationPtr conversation,
 
   BindAndEncryptOptionalString(statement, 1, conversation->title);
   BindOptionalString(statement, 2, conversation->model_key);
+  statement.BindInt64(3, conversation->total_tokens);
+  statement.BindInt64(4, conversation->trimmed_tokens);
 
   if (!statement.Run()) {
     DVLOG(0) << "Failed to execute 'conversation' insert statement: "
@@ -773,6 +834,33 @@ bool AIChatDatabase::AddConversationEntry(
     }
   }
 
+  if (entry->uploaded_images.has_value()) {
+    for (size_t i = 0; i < entry->uploaded_images->size(); ++i) {
+      const mojom::UploadedImagePtr& uploaded_image =
+          entry->uploaded_images->at(i);
+      sql::Statement uploaded_file_statement(GetDB().GetCachedStatement(
+          SQL_FROM_HERE,
+          "INSERT INTO conversation_entry_uploaded_files"
+          "(file_order, filename, filesize, data,"
+          " conversation_entry_uuid)"
+          " VALUES(?, ?, ?, ?, ?)"));
+      CHECK(uploaded_file_statement.is_valid());
+      uploaded_file_statement.BindInt(0, static_cast<int>(i));
+      if (!BindAndEncryptString(uploaded_file_statement, 1,
+                                uploaded_image->filename)) {
+        return false;
+      }
+      uploaded_file_statement.BindInt64(2, uploaded_image->filesize);
+      if (!BindAndEncryptString(
+              uploaded_file_statement, 3,
+              base::as_string_view(base::span(uploaded_image->image_data)))) {
+        return false;
+      }
+      uploaded_file_statement.BindString(4, entry->uuid.value());
+      uploaded_file_statement.Run();
+    }
+  }
+
   if (!transaction.Commit()) {
     DVLOG(0) << "Transaction commit failed with reason: "
              << db_.GetErrorMessage();
@@ -801,6 +889,30 @@ bool AIChatDatabase::UpdateConversationTitle(std::string_view conversation_uuid,
     return false;
   }
   statement.BindString(1, conversation_uuid);
+
+  return statement.Run();
+}
+
+bool AIChatDatabase::UpdateConversationTokenInfo(
+    std::string_view conversation_uuid,
+    uint64_t total_tokens,
+    uint64_t trimmed_tokens) {
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+  DVLOG(4) << __func__ << " for " << conversation_uuid << " with total_tokens "
+           << total_tokens << " and trimed_tokens " << trimmed_tokens;
+  if (!LazyInit()) {
+    return false;
+  }
+
+  static constexpr char kUpdateConversationTokenInfoQuery[] =
+      "UPDATE conversation SET total_tokens=?, trimmed_tokens=? WHERE uuid=?";
+  sql::Statement statement(GetDB().GetCachedStatement(
+      SQL_FROM_HERE, kUpdateConversationTokenInfoQuery));
+  CHECK(statement.is_valid());
+
+  statement.BindInt64(0, total_tokens);
+  statement.BindInt64(1, trimmed_tokens);
+  statement.BindString(2, conversation_uuid);
 
   return statement.Run();
 }
@@ -869,6 +981,17 @@ bool AIChatDatabase::DeleteConversation(std::string_view conversation_uuid) {
     CHECK(delete_conversation_entry_statement.is_valid());
     delete_conversation_entry_statement.BindString(0, conversation_entry_uuid);
     if (!delete_conversation_entry_statement.Run()) {
+      return false;
+    }
+
+    static constexpr char kDeleteUploadedFilesQuery[] =
+        "DELETE FROM conversation_entry_uploaded_files "
+        " WHERE conversation_entry_uuid=?";
+    sql::Statement delete_uploaded_images_statement(
+        GetDB().GetUniqueStatement(kDeleteUploadedFilesQuery));
+    CHECK(delete_uploaded_images_statement.is_valid());
+    delete_uploaded_images_statement.BindString(0, conversation_entry_uuid);
+    if (!delete_uploaded_images_statement.Run()) {
       return false;
     }
   }
@@ -979,6 +1102,23 @@ bool AIChatDatabase::DeleteConversationEntry(
     }
   }
 
+  // Delete from conversation_entry_uploaded_files
+  {
+    static constexpr char kQuery[] =
+        "DELETE FROM conversation_entry_uploaded_files WHERE "
+        "conversation_entry_uuid=?";
+    sql::Statement delete_statement(GetDB().GetUniqueStatement(kQuery));
+    CHECK(delete_statement.is_valid());
+    delete_statement.BindString(0, conversation_entry_uuid);
+    if (!delete_statement.Run()) {
+      DLOG(ERROR) << "Failed to delete from "
+                     "conversation_entry_uploaded_files for conversation "
+                     "entry uuid: "
+                  << conversation_entry_uuid;
+      return false;
+    }
+  }
+
   // Delete from conversation_entry
   {
     static constexpr char kQuery[] =
@@ -987,8 +1127,8 @@ bool AIChatDatabase::DeleteConversationEntry(
     CHECK(delete_statement.is_valid());
     delete_statement.BindString(0, conversation_entry_uuid);
     if (!delete_statement.Run()) {
-      LOG(ERROR) << "Failed to delete from conversation_entry for id: "
-                 << conversation_entry_uuid;
+      DLOG(ERROR) << "Failed to delete from conversation_entry for id: "
+                  << conversation_entry_uuid;
       return false;
     }
   }
@@ -1122,7 +1262,9 @@ bool AIChatDatabase::CreateSchema() {
       "uuid TEXT PRIMARY KEY NOT NULL,"
       // Encrypted conversation title string
       "title BLOB,"
-      "model_key TEXT)";
+      "model_key TEXT,"
+      "total_tokens INTEGER NOT NULL,"
+      "trimmed_tokens INTEGER NOT NULL)";
   CHECK(GetDB().IsSQLValid(kCreateConversationTableQuery));
   if (!GetDB().Execute(kCreateConversationTableQuery)) {
     return false;
@@ -1222,6 +1364,22 @@ bool AIChatDatabase::CreateSchema() {
       ")";
   CHECK(GetDB().IsSQLValid(kCreateWebSourcesTableQuery));
   if (!GetDB().Execute(kCreateWebSourcesTableQuery)) {
+    return false;
+  }
+
+  static constexpr char kCreateUploadedFilesTableQuery[] =
+      "CREATE TABLE IF NOT EXISTS conversation_entry_uploaded_files("
+      "conversation_entry_uuid INTEGER NOT NULL,"
+      "file_order INTEGER NOT NULL,"
+      // encrypted filename
+      "filename BLOB NOT NULL,"
+      "filesize INTEGER NOT NULL,"
+      // encrypted file byte data
+      "data BLOB NOT NULL,"
+      "PRIMARY KEY(conversation_entry_uuid, file_order)"
+      ")";
+  CHECK(GetDB().IsSQLValid(kCreateUploadedFilesTableQuery));
+  if (!GetDB().Execute(kCreateUploadedFilesTableQuery)) {
     return false;
   }
 

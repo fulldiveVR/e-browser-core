@@ -52,6 +52,8 @@ inline constexpr char kDailyUptimeSumPrefName[] =
     "brave.misc_metrics.uptime_sum";
 inline constexpr char kDailyUptimeFrameStartTimePrefName[] =
     "brave.misc_metrics.uptime_frame_start_time_v2";
+inline constexpr char kWeeklyUptimeStoragePrefName[] =
+    "brave.misc_metrics.weekly_uptime_storage";
 
 inline constexpr char kMiscMetricsTabSwitcherNewTabsStorage[] =
     "brave.misc_metrics.tab_switcher_new_tabs_storage";
@@ -69,6 +71,9 @@ inline constexpr char kMiscMetricsLastDayZeroReport[] =
 
 inline constexpr char kMiscMetricsNTPWidgetUsageStorage[] =
     "brave.misc_metrics.ntp_widget_usage";
+
+inline constexpr char kMiscMetricsSplitViewUsageStorage[] =
+    "brave.misc_metrics.split_view_usage";
 
 }  // namespace misc_metrics
 

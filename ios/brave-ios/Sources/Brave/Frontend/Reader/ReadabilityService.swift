@@ -3,6 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import Foundation
+import Web
 import WebKit
 
 enum ReadabilityOperationResult {
@@ -14,7 +15,7 @@ enum ReadabilityOperationResult {
 class ReadabilityOperation: Operation {
   private var url: URL
   private var semaphore: DispatchSemaphore
-  private var tab: Tab!
+  private var tab: (any TabState)!
   private var readerModeCache: ReaderModeCache
   var result: ReadabilityOperationResult?
 
@@ -33,14 +34,15 @@ class ReadabilityOperation: Operation {
     // and WebKit are not safe from other threads.
 
     DispatchQueue.main.async {
-      let configuration = WKWebViewConfiguration()
-      self.tab = Tab(configuration: configuration)
-      self.tab.createWebview()
-      self.tab.webView?.navigationDelegate = self
+      let tab = TabStateFactory.create(with: .init(braveCore: nil))
+      tab.browserData = .init(tab: tab, tabGeneratorAPI: nil)
+      tab.createWebView()
+      tab.addObserver(self)
+      self.tab = tab
 
       let readerMode = ReaderModeScriptHandler()
       readerMode.delegate = self
-      self.tab.addContentScript(
+      self.tab.browserData?.addContentScript(
         readerMode,
         name: ReaderModeScriptHandler.scriptName,
         contentWorld: ReaderModeScriptHandler.scriptSandbox
@@ -79,33 +81,17 @@ class ReadabilityOperation: Operation {
   }
 }
 
-extension ReadabilityOperation: WKNavigationDelegate {
-  func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+extension ReadabilityOperation: TabObserver {
+  func tab(_ tab: some TabState, didFailNavigationWithError error: any Error) {
     result = ReadabilityOperationResult.error(error as NSError)
     semaphore.signal()
   }
 
-  func webView(
-    _ webView: WKWebView,
-    didFailProvisionalNavigation navigation: WKNavigation!,
-    withError error: Error
-  ) {
-    result = ReadabilityOperationResult.error(error as NSError)
-    semaphore.signal()
-  }
-
-  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    webView.evaluateSafeJavaScript(
+  func tabDidFinishNavigation(_ tab: some TabState) {
+    tab.evaluateJavaScript(
       functionName: "\(readerModeNamespace).checkReadability",
       contentWorld: ReaderModeScriptHandler.scriptSandbox
     )
-  }
-
-  func webView(
-    _ webView: WKWebView,
-    shouldAllowDeprecatedTLSFor challenge: URLAuthenticationChallenge
-  ) async -> Bool {
-    return false
   }
 }
 
@@ -113,20 +99,22 @@ extension ReadabilityOperation: ReaderModeScriptHandlerDelegate {
   func readerMode(
     _ readerMode: ReaderModeScriptHandler,
     didChangeReaderModeState state: ReaderModeState,
-    forTab tab: Tab
+    forTab tab: some TabState
   ) {
   }
 
-  func readerMode(_ readerMode: ReaderModeScriptHandler, didDisplayReaderizedContentForTab tab: Tab)
-  {
+  func readerMode(
+    _ readerMode: ReaderModeScriptHandler,
+    didDisplayReaderizedContentForTab tab: some TabState
+  ) {
   }
 
   func readerMode(
     _ readerMode: ReaderModeScriptHandler,
     didParseReadabilityResult readabilityResult: ReadabilityResult,
-    forTab tab: Tab
+    forTab tab: some TabState
   ) {
-    guard tab == self.tab else {
+    guard tab === self.tab else {
       return
     }
 
