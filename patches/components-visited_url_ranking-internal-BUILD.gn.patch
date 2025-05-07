@@ -1,0 +1,12 @@
+diff --git a/components/visited_url_ranking/internal/BUILD.gn b/components/visited_url_ranking/internal/BUILD.gn
+index 2ff1970d48a6594806bd48e7f639885a574eca5d..bdcfe23b9dc43cbce92a91ddb24f9b3d3d16a3d7 100644
+--- a/components/visited_url_ranking/internal/BUILD.gn
++++ b/components/visited_url_ranking/internal/BUILD.gn
+@@ -113,6 +113,7 @@ source_set("test_support") {
+     "//testing/gmock",
+     "//testing/gtest",
+   ]
++  import("//brave/components/sync_device_info/sources.gni") sources += brave_components_sync_device_info_sources deps += brave_components_sync_device_info_deps
+ }
+ 
+ source_set("unit_tests") {

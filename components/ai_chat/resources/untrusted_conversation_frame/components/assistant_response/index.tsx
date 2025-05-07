@@ -52,14 +52,31 @@ function AssistantEvent(props: {
   event: Mojom.ConversationEntryEvent,
   hasCompletionStarted: boolean,
   isEntryInProgress: boolean,
-  allowedLinks: string[]
+  allowedLinks: string[],
+  isLeoModel: boolean
 }) {
-  if (props.event.completionEvent) {
+  const { allowedLinks, event, isEntryInProgress, isLeoModel } = props;
+
+  if (event.completionEvent) {
+    const numberedLinks =
+      allowedLinks.length > 0
+        ? allowedLinks.map((url: string, index: number) =>
+                           `[${index + 1}]: ${url}`).join('\n') + '\n\n'
+        : '';
+
+    // Replaces 2 consecutive citations with a separator so that
+    // they will both render as links.
+    const completion =
+      event.completionEvent.completion.replace(/(\[\d+\])(?=\[\d+\])/g,
+                                               '$1\u200B')
+    const fullText = `${numberedLinks}${completion}`;
+
     return (
       <MarkdownRenderer
-        shouldShowTextCursor={props.isEntryInProgress}
-        text={props.event.completionEvent.completion}
-        allowedLinks={props.allowedLinks}
+        shouldShowTextCursor={isEntryInProgress}
+        text={fullText}
+        allowedLinks={allowedLinks}
+        disableLinkRestrictions={!isLeoModel}
       />
     )
   }
@@ -88,7 +105,8 @@ function AssistantEvent(props: {
 export default function AssistantResponse(props: {
   entry: Mojom.ConversationTurn,
   isEntryInProgress: boolean,
-  allowedLinks: string[]
+  allowedLinks: string[],
+  isLeoModel: boolean
 }) {
   // Extract certain events which need to render at specific locations (e.g. end of the events)
   const searchQueriesEvent = props.entry.events?.find(event => event.searchQueriesEvent)?.searchQueriesEvent
@@ -106,6 +124,7 @@ export default function AssistantResponse(props: {
         hasCompletionStarted={hasCompletionStarted}
         isEntryInProgress={props.isEntryInProgress}
         allowedLinks={props.allowedLinks}
+        isLeoModel={props.isLeoModel}
       />
     )
   }

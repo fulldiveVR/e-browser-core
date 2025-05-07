@@ -95,7 +95,7 @@ struct AIChatDefaultModelView: View {
             Text(model.displayName)
               .foregroundStyle(Color(braveSystemName: .textPrimary))
 
-            Text(modelPurpose(for: model))
+            Text(model.purposeDescription)
               .font(.footnote)
               .foregroundStyle(Color(braveSystemName: .textSecondary))
           }
@@ -130,25 +130,5 @@ struct AIChatDefaultModelView: View {
     )
     .buttonStyle(.plain)
     .listRowBackground(Color(.secondaryBraveGroupedBackground))
-  }
-
-  private func modelPurpose(for model: AiChat.Model) -> String {
-    guard let modelKey = AIChatModelKey(rawValue: model.key) else {
-      return model.displayName
-    }
-
-    switch modelKey {
-    case .chatBasic:
-      return Strings.AIChat.introMessageLlamaModelPurposeDescription
-
-    case .chatExpanded:
-      return Strings.AIChat.introMessageMixtralModelPurposeDescription
-
-    case .chatClaudeHaiku:
-      return Strings.AIChat.introMessageClaudeHaikuModelPurposeDescription
-
-    case .chatClaudeSonnet:
-      return Strings.AIChat.introMessageClaudeSonnetModelPurposeDescription
-    }
   }
 }

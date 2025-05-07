@@ -8,11 +8,12 @@ module.exports = {
   'extends': ['standard-with-typescript', 'prettier'],
   'ignorePatterns': [
     '.storybook/*',
-    'build/*',
     'browser/*',
     'ui/webui/resources/*',
     '*.js',
     '*.d.ts',
+    'tools/chromium_src/lit_mangler/*.ts',
+    '!build/**/*.js', // check brave/build/ js files
     '!components/playlist/resources/media_detector/*.js' /* allow js scripts which will be bundled into playlist */
   ],
   'env': {
@@ -68,6 +69,8 @@ module.exports = {
     ],
     'object-shorthand': 0,
     'n/no-callback-literal': 0,
+    'no-template-curly-in-string': 0,
+    '@typescript-eslint/array-type': 0,
     '@typescript-eslint/await-thenable': 0,
     '@typescript-eslint/consistent-generic-constructors': 0,
     '@typescript-eslint/ban-ts-comment': 0,

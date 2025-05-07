@@ -9,6 +9,7 @@ import {
   TopSitesState,
   TopSitesActions,
   TopSite,
+  TopSitesListKind,
   defaultTopSitesState } from '../models/top_sites'
 
 export function initializeTopSites(
@@ -20,9 +21,9 @@ export function initializeTopSites(
 
     showTopSites: true,
 
-    topSitesListKind: 'custom',
+    topSitesListKind: TopSitesListKind.kCustom,
 
-    topSites: [...Array(12).keys()].flatMap((i) => {
+    topSites: [...Array(11).keys()].flatMap((i) => {
       return [
         {
           title: 'Brave',

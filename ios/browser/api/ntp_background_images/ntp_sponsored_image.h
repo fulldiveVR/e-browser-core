@@ -16,12 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 OBJC_EXPORT
 @interface NTPSponsoredImageData : NSObject
 @property(readonly) NSArray<NTPSponsoredImageCampaign*>* campaigns;
+@property(readonly, nullable) NSNumber* gracePeriod;
 @property(readonly) BOOL isSuperReferral;
 @property(readonly, nullable) NSString* themeName;
 @property(readonly, nullable) NSArray<NTPSponsoredImageTopSite*>* topSites;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)
     initWithCampaigns:(NSArray<NTPSponsoredImageCampaign*>*)campaigns
+          gracePeriod:(nullable NSNumber*)gracePeriod
       isSuperReferral:(BOOL)isSuperReferral
             themeName:(nullable NSString*)themeName
              topSites:(nullable NSArray<NTPSponsoredImageTopSite*>*)topSites
@@ -43,18 +45,14 @@ OBJC_EXPORT
 @interface NTPSponsoredImageBackground : NSObject
 @property(readonly) NSURL* imagePath;
 @property(readonly) CGPoint focalPoint;
-@property(readonly) NSString* backgroundColor;
 @property(readonly) NSString* creativeInstanceId;
 @property(readonly) NTPSponsoredImageLogo* logo;
-@property(readonly) CGRect viewBox;
 @property(readonly) BOOL shouldMetricsFallbackToP3A;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithImagePath:(NSURL*)imagePath
                        focalPoint:(CGPoint)focalPoint
-                  backgroundColor:(NSString*)backgroundColor
                creativeInstanceId:(NSString*)creativeInstanceId
                              logo:(NTPSponsoredImageLogo*)logo
-                          viewBox:(CGRect)viewBox
        shouldMetricsFallbackToP3A:(BOOL)shouldMetricsFallbackToP3A
     NS_DESIGNATED_INITIALIZER;
 @end

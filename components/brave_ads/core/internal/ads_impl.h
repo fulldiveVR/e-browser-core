@@ -41,7 +41,7 @@ class AdsImpl final : public Ads {
   ~AdsImpl() override;
 
   // Ads:
-  void AddObserver(std::unique_ptr<AdsObserverInterface> observer) override;
+  void AddObserver(std::unique_ptr<AdsObserver> observer) override;
 
   void SetSysInfo(mojom::SysInfoPtr mojom_sys_info) override;
   void SetBuildChannel(mojom::BuildChannelInfoPtr mojom_build_channel) override;
@@ -70,13 +70,14 @@ class AdsImpl final : public Ads {
       mojom::InlineContentAdEventType mojom_ad_event_type,
       TriggerAdEventCallback callback) override;
 
-  void ParseAndSaveCreativeNewTabPageAds(
+  void ParseAndSaveNewTabPageAds(
       base::Value::Dict dict,
-      ParseAndSaveCreativeNewTabPageAdsCallback callback) override;
+      ParseAndSaveNewTabPageAdsCallback callback) override;
   void MaybeServeNewTabPageAd(MaybeServeNewTabPageAdCallback callback) override;
   void TriggerNewTabPageAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
+      bool should_metrics_fallback_to_p3a,
       mojom::NewTabPageAdEventType mojom_ad_event_type,
       TriggerAdEventCallback callback) override;
 

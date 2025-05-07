@@ -339,7 +339,8 @@ public struct AIChatView: View {
           speechRecognizer: speechRecognizer,
           isShowingSlashTools: $isShowingSlashTools,
           slashToolsOption: $slashToolsOption,
-          focusedField: $focusedField
+          focusedField: $focusedField,
+          messageCount: model.conversationHistory.count
         ) { prompt in
           hasSeenIntro.value = true
 
@@ -597,6 +598,38 @@ public struct AIChatView: View {
       .padding()
     } else {
       switch model.apiError {
+      case .internalError:
+        AIChatGenericErrorView(title: Strings.AIChat.internalErrorViewTitle) {
+          if !model.conversationHistory.isEmpty {
+            model.retryLastRequest()
+          }
+        }
+        .padding()
+
+      case .invalidApiKey:
+        AIChatGenericErrorView(title: Strings.AIChat.invalidApiKeyErrorViewTitle) {
+          if !model.conversationHistory.isEmpty {
+            model.retryLastRequest()
+          }
+        }
+        .padding()
+
+      case .invalidEndpointUrl:
+        AIChatGenericErrorView(title: Strings.AIChat.invalidEndpointErrorViewTitle) {
+          if !model.conversationHistory.isEmpty {
+            model.retryLastRequest()
+          }
+        }
+        .padding()
+
+      case .serviceOverloaded:
+        AIChatGenericErrorView(title: Strings.AIChat.serviceOverloadedErrorViewTitle) {
+          if !model.conversationHistory.isEmpty {
+            model.retryLastRequest()
+          }
+        }
+        .padding()
+
       case .connectionIssue:
         AIChatNetworkErrorView {
           if !model.conversationHistory.isEmpty {
@@ -750,7 +783,7 @@ struct AIChatView_Preview: PreviewProvider {
                   events: nil,
                   createdTime: Date.now,
                   edits: nil,
-                  uploadedImages: nil,
+                  uploadedFiles: nil,
                   fromBraveSearchSerp: false
                 ),
               isEntryInProgress: false,
@@ -805,7 +838,8 @@ struct AIChatView_Preview: PreviewProvider {
         speechRecognizer: SpeechRecognizer(),
         isShowingSlashTools: .constant(false),
         slashToolsOption: .constant(nil),
-        focusedField: $focusedField
+        focusedField: $focusedField,
+        messageCount: 0
       ) {
         print("Prompt Submitted: \($0)")
       }

@@ -32,6 +32,7 @@
 #include <memory>
 #include <string>
 #include <utility>
+#include <variant>
 
 #include "base/compiler_specific.h"
 #include "net/base/io_buffer.h"
@@ -45,13 +46,13 @@ constexpr size_t kSOCKSAuthUsernamePasswordResponseLen = 2;
 
 HostPortPair ToLegacyDestinationEndpoint(
     const TransportSocketParams::Endpoint& endpoint) {
-  if (absl::holds_alternative<url::SchemeHostPort>(endpoint)) {
+  if (std::holds_alternative<url::SchemeHostPort>(endpoint)) {
     return HostPortPair::FromSchemeHostPort(
-        absl::get<url::SchemeHostPort>(endpoint));
+        std::get<url::SchemeHostPort>(endpoint));
   }
 
-  DCHECK(absl::holds_alternative<HostPortPair>(endpoint));
-  return absl::get<HostPortPair>(endpoint);
+  DCHECK(std::holds_alternative<HostPortPair>(endpoint));
+  return std::get<HostPortPair>(endpoint);
 }
 
 }  // namespace
@@ -136,9 +137,8 @@ int SOCKS5ClientSocketAuth::Authenticate(
         DCHECK_EQ(OK, rv);
         DCHECK_LT(0u, buffer_left_);
         iobuf_ = base::MakeRefCounted<IOBufferWithSize>(buffer_left_);
-        UNSAFE_TODO(memcpy(iobuf_->data(),
-                           &buffer_.data()[buffer_.size() - buffer_left_],
-                           buffer_left_));
+        iobuf_->span().copy_from_nonoverlapping(
+            base::as_byte_span(buffer_).last(buffer_left_));
         next_state_ = STATE_WRITE_COMPLETE;
         net_log.BeginEvent(NetLogEventType::SOCKS5_AUTH_WRITE);
         rv = transport_socket_->Write(iobuf_.get(), buffer_left_, callback,

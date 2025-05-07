@@ -18,7 +18,7 @@ export function Contributions() {
 
   function renderContribution(contribution: ContributionInfo) {
     return (
-      <div className='content-card'>
+      <div key={contribution.id} className='content-card'>
         <h4>{contribution.id}</h4>
         <section>
           <div className='key-value-list'>
@@ -58,7 +58,7 @@ export function Contributions() {
             <tbody>
             {
               contribution.publishers.map((publisher) => (
-                <tr>
+                <tr key={publisher.id}>
                   <td>{publisher.id}</td>
                   <td>{publisher.totalAmount}</td>
                   <td>{publisher.contributedAmount}</td>
@@ -74,7 +74,11 @@ export function Contributions() {
 
   return (
     <div data-css-scope={style.scope}>
-      {contributions.map(renderContribution)}
+      {
+        contributions.length > 0
+            ? contributions.map(renderContribution)
+            : <p>No contributions</p>
+      }
     </div>
   )
 }

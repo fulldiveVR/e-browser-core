@@ -131,20 +131,9 @@ class PlaylistScriptHandler: NSObject, TabContentScript, TabObserver {
 
     // Copy the item but use the web-view's title and location instead, if available
     // This is due to a iFrames security
-    item = PlaylistInfo(
-      name: item.name,
-      src: item.src,
-      pageSrc: tab.visibleURL?.absoluteString ?? item.pageSrc,
-      pageTitle: tab.title ?? item.pageTitle,
-      mimeType: item.mimeType,
-      duration: item.duration,
-      lastPlayedOffset: 0.0,
-      detected: item.detected,
-      dateAdded: item.dateAdded,
-      tagId: item.tagId,
-      order: item.order,
-      isInvisible: item.isInvisible
-    )
+    item.pageSrc = tab.visibleURL?.absoluteString ?? item.pageSrc
+    item.pageTitle = tab.title ?? item.pageTitle
+    item.lastPlayedOffset = 0.0
 
     Self.queue.async { [weak handler] in
       guard let handler = handler else { return }
@@ -202,7 +191,14 @@ class PlaylistScriptHandler: NSObject, TabContentScript, TabObserver {
     PlaylistItem.updateItem(item) { [weak self] in
       guard let self = self else { return }
 
-      Logger.module.debug("Playlist Item Updated")
+      // We need to use the Database version of this object
+      // because when the fallback streamer updates the object, it uses the database ID.
+      // When the download starts, it uses the database ID.
+      // If we suddenly change the ID, downloads and updates get out of wack
+      var item = item
+
+      // Use the ID that it was saved as in the database, rather than the Javascript ID
+      item.tagId = $0
 
       if let delegate = self.delegate {
         if detected {

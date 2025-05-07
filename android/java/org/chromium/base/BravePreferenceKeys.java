@@ -5,6 +5,9 @@
 
 package org.chromium.base;
 
+import org.chromium.build.annotations.NullMarked;
+
+@NullMarked
 public final class BravePreferenceKeys {
     public static final String BRAVE_TOOLBAR_TOP_ANCHORED = "Chrome.Toolbar.TopAnchored";
     public static final String BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY =
@@ -79,7 +82,7 @@ public final class BravePreferenceKeys {
 
     public static final String BRAVE_IN_APP_UPDATE_TIMING = "in_app_update_timing";
 
-    public static final String DAY_ZERO_EXPT_FLAG = "day_zero_expt_flag";
+    public static final String DAY_ZERO_EXPT_VARIANT = "day_zero_expt_variant";
 
     public static final String SHOW_UNDO_WHEN_TABS_CLOSED = "show_undo_when_tabs_closed";
 
@@ -95,6 +98,9 @@ public final class BravePreferenceKeys {
             "org.chromium.brave.browser.Brave_SAFE_BROWSING_ERRORS";
 
     public static final String DEFAULT_SEARCH_ENGINE_CHANGED = "default_search_engine_changed";
+
+    public static final String BRAVE_DEFAULT_SEARCH_ENGINE_MIGRATED_JP =
+            "brave_default_search_engine_migrated_jp";
 
     /*
      * Checks if preference key is used in Brave.

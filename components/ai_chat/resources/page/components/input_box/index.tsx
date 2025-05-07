@@ -32,9 +32,11 @@ type Props = Pick<
   | 'isGenerating'
   | 'handleStopGenerating'
   | 'uploadImage'
+  | 'getScreenshots'
   | 'pendingMessageImages'
   | 'removeImage'
   | 'conversationHistory'
+  | 'associatedContentInfo'
 > &
   Pick<AIChatContext, 'isMobile' | 'hasAcceptedAgreement'>
 
@@ -50,6 +52,9 @@ function InputBox(props: InputBoxProps) {
   }
 
   const querySubmitted = React.useRef(false)
+  const attachmentWrapperRef = React.useRef<HTMLDivElement>(null)
+  const [attachmentWrapperHeight, setAttachmentWrapperHeight] =
+    React.useState(0)
 
   const handleSubmit = () => {
     querySubmitted.current = true
@@ -92,6 +97,21 @@ function InputBox(props: InputBoxProps) {
     }
   }
 
+  const updateAttachmentWrapperHeight = () => {
+    let { height } = attachmentWrapperRef?.current?.getBoundingClientRect() ?? {
+      height: 0
+    }
+    setAttachmentWrapperHeight(height)
+  }
+
+  React.useEffect(() => {
+    // Update the height of the attachment wrapper when
+    // pendingMessageImages changes.
+    if (props.context?.pendingMessageImages) {
+      updateAttachmentWrapperHeight()
+    }
+  }, [props.context.pendingMessageImages])
+
   return (
     <form className={styles.form}>
       {props.context.selectedActionType && (
@@ -104,14 +124,21 @@ function InputBox(props: InputBoxProps) {
         </div>
       )}
       {props.context.pendingMessageImages && (
-        <div className={styles.attachmentWrapper}>
-          {props.context.pendingMessageImages.map((img, i) =>
+        <div
+          className={classnames({
+            [styles.attachmentWrapper]: true,
+            [styles.attachmentWrapperScrollStyles]:
+              attachmentWrapperHeight >= 240
+          })}
+          ref={attachmentWrapperRef}
+        >
+          {props.context.pendingMessageImages.map((img, i) => (
             <UploadedImgItem
               key={img.filename}
               uploadedImage={img}
               removeImage={() => props.context.removeImage(i)}
             />
-          )}
+          ))}
         </div>
       )}
       <div
@@ -146,6 +173,7 @@ function InputBox(props: InputBoxProps) {
           <Button
             fab
             kind='plain-faint'
+            size='large'
             onClick={(e) =>
               {
                 e.preventDefault()
@@ -175,7 +203,9 @@ function InputBox(props: InputBoxProps) {
           )}
           <AttachmentButtonMenu
             uploadImage={props.context.uploadImage}
+            getScreenshots={props.context.getScreenshots}
             conversationHistory={props.context.conversationHistory}
+            associatedContentInfo={props.context.associatedContentInfo}
             isMobile={props.context.isMobile}
           />
         </div>

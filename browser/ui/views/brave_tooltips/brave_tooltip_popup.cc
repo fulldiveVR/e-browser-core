@@ -76,6 +76,10 @@ BraveTooltipPopup::BraveTooltipPopup(std::unique_ptr<BraveTooltip> tooltip)
 }
 
 BraveTooltipPopup::~BraveTooltipPopup() {
+  // To cleanup widget related stuffs.
+  // This will fire OnWidgetDestroyed() notification.
+  widget_.reset();
+
   display::Screen* screen = display::Screen::GetScreen();
   if (screen) {
     screen->RemoveObserver(this);
@@ -273,13 +277,11 @@ gfx::Point BraveTooltipPopup::GetDefaultOriginForSize(const gfx::Size& size) {
 
 gfx::Rect BraveTooltipPopup::CalculateBounds(bool use_default_origin) {
   DCHECK(tooltip_view_);
-  gfx::Size size = tooltip_view_->size();
-  size.set_height(kTooltipSize.height());
-  DCHECK(!size.IsEmpty());
 
-  const gfx::Point origin =
-      use_default_origin ? GetDefaultOriginForSize(size) : widget_origin_;
-  return gfx::Rect(origin, size);
+  const gfx::Point origin = use_default_origin
+                                ? GetDefaultOriginForSize(kTooltipSize)
+                                : widget_origin_;
+  return gfx::Rect(origin, kTooltipSize);
 }
 
 void BraveTooltipPopup::RecomputeAlignment() {
@@ -311,6 +313,7 @@ void BraveTooltipPopup::CreateWidgetView() {
   // The widget instance is owned by its NativeWidget. For more details see
   // ui/views/widget/widget.h
   views::Widget::InitParams params(
+      views::Widget::InitParams::CLIENT_OWNS_WIDGET,
       views::Widget::InitParams::TYPE_WINDOW_FRAMELESS);
   params.delegate = this;
   params.z_order = ui::ZOrderLevel::kFloatingWindow;
@@ -318,9 +321,9 @@ void BraveTooltipPopup::CreateWidgetView() {
   params.shadow_type = views::Widget::InitParams::ShadowType::kNone;
   params.bounds = CalculateBounds(true);
 
-  views::Widget* widget = new views::Widget();
-  widget->set_focus_on_creation(false);
-  widget_observation_.Observe(widget);
+  widget_ = std::make_unique<views::Widget>();
+  widget_->set_focus_on_creation(false);
+  widget_observation_.Observe(widget_.get());
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
   // We want to ensure that this toast always goes to the native desktop,
@@ -328,11 +331,11 @@ void BraveTooltipPopup::CreateWidgetView() {
   // there
   if (!params.parent) {
     DCHECK(!params.native_widget);
-    params.native_widget = new views::DesktopNativeWidgetAura(widget);
+    params.native_widget = new views::DesktopNativeWidgetAura(widget_.get());
   }
 #endif
 
-  widget->Init(std::move(params));
+  widget_->Init(std::move(params));
 }
 
 void BraveTooltipPopup::CloseWidgetView() {

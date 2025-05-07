@@ -53,7 +53,6 @@ class WeakTabManagerDelegate {
 // TabManager must extend NSObjectProtocol in order to implement WKNavigationDelegate
 class TabManager: NSObject {
   fileprivate var delegates = [WeakTabManagerDelegate]()
-  fileprivate let tabEventHandlers: [TabEventHandler]
   weak var stateDelegate: TabManagerStateDelegate?
 
   /// Internal url to access the new tab page.
@@ -130,7 +129,6 @@ class TabManager: NSObject {
     self.tabGeneratorAPI = tabGeneratorAPI
     self.historyAPI = historyAPI
     self.privateBrowsingManager = privateBrowsingManager
-    self.tabEventHandlers = TabEventHandlers.create(with: prefs)
     super.init()
 
     Preferences.Shields.blockImages.observe(from: self)
@@ -268,10 +266,11 @@ class TabManager: NSObject {
     }
   }
 
-  private class func resetConfiguration(
-    _ configuration: WKWebViewConfiguration,
-    isPrivate: Bool = false
-  ) {
+  private static var defaultConfiguration = getNewConfiguration(isPrivate: false)
+  private static var privateConfiguration = getNewConfiguration(isPrivate: true)
+
+  private class func getNewConfiguration(isPrivate: Bool = false) -> WKWebViewConfiguration {
+    let configuration: WKWebViewConfiguration = .init()
     configuration.processPool = WKProcessPool()
     configuration.preferences.javaScriptCanOpenWindowsAutomatically = !Preferences.General
       .blockPopups.value
@@ -281,8 +280,6 @@ class TabManager: NSObject {
     // and pages that don't want the URL highlighted!
     configuration.dataDetectorTypes = [.phoneNumber]
     configuration.userContentController = WKUserContentController()
-    configuration.preferences = WKPreferences()
-    configuration.preferences.javaScriptCanOpenWindowsAutomatically = false
     configuration.preferences.isFraudulentWebsiteWarningEnabled =
       Preferences.Shields.googleSafeBrowsing.value
     configuration.allowsInlineMediaPlayback = true
@@ -296,11 +293,14 @@ class TabManager: NSObject {
         forURLScheme: InternalURL.scheme
       )
     }
+
+    return configuration
   }
 
   func reset() {
+    Self.defaultConfiguration = Self.getNewConfiguration(isPrivate: false)
+    Self.privateConfiguration = Self.getNewConfiguration(isPrivate: true)
     for tab in allTabs {
-      Self.resetConfiguration(tab.configuration, isPrivate: tab.isPrivate)
       if tab.isWebViewCreated {
         tab.deleteWebView()
       }
@@ -374,11 +374,8 @@ class TabManager: NSObject {
       SessionTab.setSelected(tabId: tabId)
     }
 
-    previous?.isVisible = false
-
     UIImpactFeedbackGenerator(style: .light).vibrate()
     selectedTab?.createWebView()
-    selectedTab?.isVisible = true
 
     if let selectedTab = selectedTab,
       selectedTab.visibleURL == nil
@@ -390,10 +387,10 @@ class TabManager: NSObject {
 
     delegates.forEach { $0.get()?.tabManager(self, didSelectedTabChange: tab, previous: previous) }
     if let tab = previous {
-      TabEvent.post(.didLoseFocus, for: tab)
+      tab.isVisible = false
     }
     if let tab = selectedTab {
-      TabEvent.post(.didGainFocus, for: tab)
+      tab.isVisible = true
     }
 
     if let tabID = tab?.id {
@@ -546,8 +543,7 @@ class TabManager: NSObject {
     assert(Thread.isMainThread)
 
     let tabId = id ?? UUID()
-    let initialConfiguration = WKWebViewConfiguration()
-    Self.resetConfiguration(initialConfiguration, isPrivate: isPrivate)
+    let initialConfiguration = isPrivate ? Self.privateConfiguration : Self.defaultConfiguration
     let tab = TabStateFactory.create(
       with: .init(
         id: tabId,
@@ -973,6 +969,7 @@ class TabManager: NSObject {
         // reaches zero and destroys all its data.
 
         Self.nonPersistentDataStore = nil
+        Self.privateConfiguration = Self.getNewConfiguration(isPrivate: true)
       }
     }
 
@@ -1035,7 +1032,6 @@ class TabManager: NSObject {
     assert(count == prevCount - 1, "Make sure the tab count was actually removed")
 
     delegates.forEach { $0.get()?.tabManager(self, didRemoveTab: tab) }
-    TabEvent.post(.didClose, for: tab)
 
     if currentTabs.isEmpty {
       addTab(isPrivate: tab.isPrivate)
@@ -1173,23 +1169,28 @@ class TabManager: NSObject {
     delegates.forEach { $0.get()?.tabManagerDidRemoveAllTabs(self, toast: nil) }
   }
 
-  @MainActor func removeAllForCurrentMode(isActiveTabIncluded: Bool = true) {
+  @MainActor func removeAllTabsForPrivateMode(isPrivate: Bool, isActiveTabIncluded: Bool = true) {
     isBulkDeleting = true
 
-    if isActiveTabIncluded {
-      removeTabs(tabsForCurrentMode)
-    } else {
-      let tabsToDelete = tabsForCurrentMode.filter {
-        guard let currentTab = selectedTab else { return false }
-        return currentTab.id != $0.id
-      }
-      removeTabs(tabsToDelete)
+    var tabsToDelete = tabs(isPrivate: isPrivate)
+    if !isActiveTabIncluded, let selectedTab,
+      let index = tabsToDelete.firstIndex(where: { $0.id == selectedTab.id })
+    {
+      tabsToDelete.remove(at: index)
     }
+    removeTabs(tabsToDelete)
 
     isBulkDeleting = false
     // No change needed here regarding to isActiveTabIncluded
     // Toast value is nil and TabsBarViewController is updating the from current tabs
     delegates.forEach { $0.get()?.tabManagerDidRemoveAllTabs(self, toast: nil) }
+  }
+
+  @MainActor func removeAllForCurrentMode(isActiveTabIncluded: Bool = true) {
+    removeAllTabsForPrivateMode(
+      isPrivate: privateBrowsingManager.isPrivateBrowsing,
+      isActiveTabIncluded: isActiveTabIncluded
+    )
   }
 
   func getIndex(_ tab: some TabState) -> Int? {
@@ -1619,10 +1620,6 @@ extension WKWebsiteDataStore {
     types.insert("_WKWebsiteDataTypeAdClickAttributions")
     types.insert("_WKWebsiteDataTypePrivateClickMeasurements")
     types.insert("_WKWebsiteDataTypeAlternativeServices")
-    if #unavailable(iOS 17) {
-      types.insert("_WKWebsiteDataTypeMediaKeys")
-      types.insert("_WKWebsiteDataTypeSearchFieldRecentSearches")
-    }
     return types
   }
 }

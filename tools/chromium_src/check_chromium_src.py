@@ -23,7 +23,7 @@ import argparse
 import re
 import os
 import sys
-
+import brave_chromium_utils
 # Look for potential problems in chromium_src overrides.
 
 BRAVE_SRC = os.path.abspath(
@@ -247,8 +247,19 @@ class ChromiumSrcOverridesChecker:
                 # Found #undef of the target
                 found['undef'] = (found['def_position'] >= 0
                                   and match.start() > found['def_position'])
-            else:
-                # Found internal use of the target
+            elif re.fullmatch(r'^[A-Z0-9]+(?:_[A-Z0-9]+)*$', target):
+                # Flag as found in the override file.
+                # As can be noticed in the regex above, only SHOUTY_CASE
+                # defines are considered for this check. This is an incidental
+                # assumption that anything named as SHOUTY_CASE is a macro that
+                # could either occur in the override file or in the original.
+                # When it comes to all the other defines, we assume they are
+                # actual references to symbols in the original file.
+                # To summarise, a SHOUTY_CASE define appearing in the override
+                # file means that it could be consumed internally. A non
+                # SHOUTY_CASE define appearing in the override file is
+                # expected, and should be ignored, as it still has to appear
+                # in the original file.
                 found['other'] = True
 
         display_override_filepath = os.path.join('chromium_src',
@@ -318,7 +329,8 @@ class ChromiumSrcOverridesChecker:
                 # Report ERROR if target can't be found in the original file.
                 with open(original_filepath, mode='r', encoding='utf-8') as \
                     original_file:
-                    if target not in strip_comments(original_file.read()):
+                    if not re.search(rf"\b{re.escape(target)}\b",
+                                     strip_comments(original_file.read())):
                         display_override_filepath = os.path.join(
                             'chromium_src', override_filepath)
                         if not used_internally:
@@ -349,7 +361,14 @@ class ChromiumSrcOverridesChecker:
             display_override_filepath = os.path.join('chromium_src',
                                                      override_filepath)
             if not os.path.isfile(original_filepath):
-                if self.gen_buildir is None:
+                additional_extensions = (
+                    brave_chromium_utils.get_additional_extensions())
+                if any(
+                        override_filepath.endswith(ext)
+                        and os.path.isfile(original_filepath.replace(ext, ''))
+                        for ext in additional_extensions):
+                    original_filepath_found = True
+                elif self.gen_buildir is None:
                     # When invoked from presubmit there's no gen_dir, so we can
                     # try to at least check that the include in the override is
                     # consistent with overriding a generated file.

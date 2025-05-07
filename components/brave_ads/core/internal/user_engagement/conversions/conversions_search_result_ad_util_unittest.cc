@@ -3,6 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "base/test/scoped_feature_list.h"
 #include "brave/components/brave_ads/core/internal/ad_units/ad_test_util.h"
 #include "brave/components/brave_ads/core/internal/common/test/test_base.h"
 #include "brave/components/brave_ads/core/internal/common/test/time_test_util.h"
@@ -12,6 +13,7 @@
 #include "brave/components/brave_ads/core/internal/user_engagement/conversions/conversions_util.h"
 #include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
 #include "brave/components/brave_ads/core/public/ad_units/ad_info.h"
+#include "brave/components/brave_ads/core/public/ads_feature.h"
 
 // npm run test -- brave_unit_tests --filter=BraveAds*
 
@@ -49,7 +51,7 @@ TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
 }
 
 TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
-       AllowedToConvertAdClickedEvent) {
+       AllowedToConvertClickedAdEvent) {
   // Arrange
   const AdInfo ad = test::BuildAd(mojom::AdType::kSearchResultAd,
                                   /*should_generate_random_uuids=*/false);
@@ -61,7 +63,7 @@ TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
 }
 
 TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
-       NotAllowedToConvertAdClickedEventIfOptedOutOfSearchResultAds) {
+       NotAllowedToConvertClickedAdEventIfOptedOutOfSearchResultAds) {
   // Arrange
   test::OptOutOfSearchResultAds();
 
@@ -75,7 +77,7 @@ TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
 }
 
 TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
-       NotAllowedToConvertAdNonViewedOrClickedEvents) {
+       NotAllowedToConvertNonViewedOrClickedAdEvents) {
   // Arrange
   const AdInfo ad = test::BuildAd(mojom::AdType::kSearchResultAd,
                                   /*should_generate_random_uuids=*/false);
@@ -111,8 +113,11 @@ TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
 }
 
 TEST_F(BraveAdsConversionsSearchResultAdUtilTest,
-       AllowedToConvertAdClickedEventForNonRewardsUser) {
+       AllowedToConvertClickedAdEventForNonRewardsUser) {
   // Arrange
+  const base::test::ScopedFeatureList scoped_feature_list(
+      {kShouldAlwaysTriggerBraveSearchResultAdEventsFeature});
+
   test::DisableBraveRewards();
 
   const AdInfo ad = test::BuildAd(mojom::AdType::kSearchResultAd,

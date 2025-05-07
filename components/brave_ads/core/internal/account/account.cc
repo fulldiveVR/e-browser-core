@@ -53,7 +53,7 @@ void Account::RemoveObserver(AccountObserver* const observer) {
 
 void Account::SetWallet(const std::string& payment_id,
                         const std::string& recovery_seed_base64) {
-  const std::optional<WalletInfo> wallet =
+  std::optional<WalletInfo> wallet =
       CreateWalletFromRecoverySeed(payment_id, recovery_seed_base64);
   if (!wallet) {
     BLOG(0, "Failed to initialize wallet");
@@ -197,11 +197,14 @@ void Account::InitializeConfirmations() {
 }
 
 void Account::MaybeInitializeUserRewards() {
-  if (!wallet_) {
+  if (user_rewards_) {
+    // Already initialized.
     return;
   }
 
-  if (user_rewards_ || !UserHasJoinedBraveRewards()) {
+  if (!UserHasJoinedBraveRewardsAndConnectedWallet()) {
+    // No-op if the user has not joined Brave Rewards and connected a wallet,
+    // as rewards can only be earned when connected.
     return;
   }
 
@@ -211,10 +214,12 @@ void Account::MaybeInitializeUserRewards() {
   // Brave Rewards because the associated data and the `Ads` instance will be
   // destroyed.
 
+  if (!HasWallet()) {
+    return;
+  }
+
   user_rewards_ = std::make_unique<UserRewards>(*wallet_);
-
   user_rewards_->FetchIssuers();
-
   user_rewards_->MaybeRedeemPaymentTokens();
 }
 

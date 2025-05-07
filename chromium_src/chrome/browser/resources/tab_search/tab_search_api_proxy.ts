@@ -12,6 +12,8 @@ export interface BraveTabSearchApiProxy extends TabSearchApiProxy {
   getFocusTabs: (topic: string) => Promise<{ windowCreated: boolean, error: Error | null }>
   undoFocusTabs: () => Promise<void>
   openLeoGoPremiumPage: () => void
+  setTabFocusEnabled: () => void
+  getTabFocusShowFRE: () => Promise<{ showFRE: boolean }>
 }
 
 export class BraveTabSearchApiProxyImpl extends TabSearchApiProxyImpl implements BraveTabSearchApiProxy {
@@ -29,6 +31,14 @@ export class BraveTabSearchApiProxyImpl extends TabSearchApiProxyImpl implements
 
   openLeoGoPremiumPage() {
     this.handler.openLeoGoPremiumPage()
+  }
+
+  setTabFocusEnabled() {
+    this.handler.setTabFocusEnabled()
+  }
+
+  getTabFocusShowFRE() {
+    return this.handler.getTabFocusShowFRE()
   }
 }
 

@@ -10,6 +10,7 @@
 #include "base/strings/stringprintf.h"
 #include "base/time/time_delta_from_string.h"
 #include "base/uuid.h"
+#include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_feature.h"
 #include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_info.h"
 #include "brave/components/brave_ads/core/public/common/url/url_util.h"
 #include "brave/components/constants/webui_url_constants.h"
@@ -36,11 +37,6 @@ constexpr char kWallpaperKey[] = "wallpaper";
 constexpr char kImageWallpaperRelativeUrlKey[] = "relativeUrl";
 constexpr char kImageWallpaperFocalPointXKey[] = "focalPoint.x";
 constexpr char kImageWallpaperFocalPointYKey[] = "focalPoint.y";
-constexpr char kImageWallpaperViewBoxXKey[] = "viewBox.x";
-constexpr char kImageWallpaperViewBoxYKey[] = "viewBox.y";
-constexpr char kImageWallpaperViewBoxWidthKey[] = "viewBox.width";
-constexpr char kImageWallpaperViewBoxHeightKey[] = "viewBox.height";
-constexpr char kImageWallpaperBackgroundColorKey[] = "backgroundColor";
 constexpr char kImageWallpaperButtonImageRelativeUrlKey[] =
     "button.image.relativeUrl";
 constexpr char kRichMediaWallpaperRelativeUrlKey[] = "relativeUrl";
@@ -159,8 +155,8 @@ NTPSponsoredImagesData::NTPSponsoredImagesData(
     grace_period = base::TimeDeltaFromString(*value);
   }
 
-  if (const base::Value::List* campaigns_value = dict.FindList(kCampaignsKey)) {
-    ParseCampaigns(*campaigns_value, installed_dir);
+  if (const base::Value::List* const value = dict.FindList(kCampaignsKey)) {
+    ParseCampaigns(*value, installed_dir);
   }
 
   ParseSuperReferrals(dict, installed_dir);
@@ -217,9 +213,13 @@ std::optional<Campaign> NTPSponsoredImagesData::MaybeParseCampaign(
   campaign.campaign_id = *campaign_id;
 
   bool should_metrics_fallback_to_p3a = false;
-  if (const std::string* const metrics = dict.FindString(kCampaignMetricsKey)) {
-    // Metrics (optional, if not provided, the default is to send
-    // confirmations).
+  if (!brave_ads::kShouldSupportNewTabPageAdConfirmationsForNonRewards.Get()) {
+    // If we don't support confirmations, we should always fallback to P3A.
+    should_metrics_fallback_to_p3a = true;
+  } else if (const std::string* metrics =
+                 dict.FindString(kCampaignMetricsKey)) {
+    // Metrics (optional). If not provided, the default behavior is to send
+    // confirmations.
     should_metrics_fallback_to_p3a = *metrics == "p3a";
   }
 
@@ -337,28 +337,6 @@ std::optional<Campaign> NTPSponsoredImagesData::MaybeParseCampaign(
                 .value_or(0);
         creative.focal_point = {focal_point_x, focal_point_y};
 
-        // View box (optional, only used on iOS).
-        const int view_box_x =
-            wallpaper_dict->FindIntByDottedPath(kImageWallpaperViewBoxXKey)
-                .value_or(0);
-        const int view_box_y =
-            wallpaper_dict->FindIntByDottedPath(kImageWallpaperViewBoxYKey)
-                .value_or(0);
-        const int view_box_width =
-            wallpaper_dict->FindIntByDottedPath(kImageWallpaperViewBoxWidthKey)
-                .value_or(0);
-        const int view_box_height =
-            wallpaper_dict->FindIntByDottedPath(kImageWallpaperViewBoxHeightKey)
-                .value_or(0);
-        creative.viewbox = {view_box_x, view_box_y, view_box_width,
-                            view_box_height};
-
-        // Background color (optional, only used on iOS).
-        if (const std::string* const background_color =
-                wallpaper_dict->FindString(kImageWallpaperBackgroundColorKey)) {
-          creative.background_color = *background_color;
-        }
-
         // Button.
         const std::string* const button_image_relative_url =
             wallpaper_dict->FindStringByDottedPath(
@@ -380,8 +358,7 @@ std::optional<Campaign> NTPSponsoredImagesData::MaybeParseCampaign(
         creative.wallpaper_type = WallpaperType::kRichMedia;
 
         const std::string* const relative_url =
-            wallpaper_dict->FindStringByDottedPath(
-                kRichMediaWallpaperRelativeUrlKey);
+            wallpaper_dict->FindString(kRichMediaWallpaperRelativeUrlKey);
         if (!relative_url) {
           // Relative url is required.
           continue;

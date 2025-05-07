@@ -329,6 +329,7 @@ export interface SendBtcTransactionParams extends BaseTransactionParams {
 
 export interface SendZecTransactionParams extends BaseTransactionParams {
   useShieldedPool: boolean
+  sendingMaxAmount: boolean
   memo: number[] | undefined
 }
 
@@ -562,6 +563,7 @@ export enum WalletRoutes {
   PortfolioAssets = '/crypto/portfolio/assets',
   PortfolioNFTs = '/crypto/portfolio/nfts',
   PortfolioNFTCollection = '/crypto/portfolio/collections/:collectionName',
+  PortfolioNFTCollectionsStart = '/crypto/portfolio/collections/',
   PortfolioNFTAsset = '/crypto/portfolio/nfts/' + ':assetId',
   PortfolioAsset = '/crypto/portfolio/assets/' + ':assetId',
   PortfolioActivity = '/crypto/portfolio/activity',
@@ -582,6 +584,13 @@ export enum WalletRoutes {
 
   // dev zcash screen
   DevZCash = '/dev-zcash',
+
+  // panel connection screen
+  Connections = '/crypto/connections',
+
+  // Roots
+  Root = '/',
+  CryptoRoot = '/crypto',
 
   // Hashes
   AccountsHash = '#accounts',
@@ -895,6 +904,7 @@ export type NavIDTypes =
   | 'bridge'
   | 'explore'
   | 'web3'
+  | 'connections'
 
 export type AccountPageTabs =
   (typeof AccountPageTabs)[keyof typeof AccountPageTabs]

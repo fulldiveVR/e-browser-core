@@ -26,7 +26,6 @@ deps = {
     "url": "https://github.com/fanquake/libdmg-hfsplus.git@1cc791e4173da9cb0b0cc16c5a1aaa25d5eb5efa",
     "condition": 'checkout_mac and host_os != "mac" and checkout_dmg_tool',
   },
-  "third_party/rapidjson/src": "https://github.com/Tencent/rapidjson.git@06d58b9e848c650114556a23294d0b6440078c61",
   "third_party/reclient_configs/src": "https://github.com/EngFlow/reclient-configs.git@21c8fe69ff771956c179847b8c1d9fd216181967",
   'third_party/android_deps/libs/com_google_android_play_core': {
       'packages': [
@@ -91,7 +90,7 @@ hooks = [
     'pattern': '.',
     'condition': 'checkout_mac',
     'action': ['vpython3', 'build/download_dep.py',
-               'omaha4/BraveUpdater-132.1.76.11.zip',
+               'omaha4/BraveUpdater-136.1.79.71.zip',
                '//third_party/updater/chrome_mac_universal_prod/cipd'],
   },
   {
@@ -113,14 +112,6 @@ hooks = [
     # cryptography will be used. Second, we cannot update pip in vpython3 on at
     # least macOS due to permission issues.
     'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', '-U', '-t', 'third_party/cryptography', '--only-binary', 'cryptography', 'cryptography==37.0.4'],
-  },
-  {
-    # Installing these dependencies as we need these tools to be able to run in
-    # the CI, and vpython provides a good way to avoid pip install calls when
-    # in sensitive contexts.
-    'name': 'update_cr_tools_pip',
-    'pattern': '.',
-    'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', '-r', 'tools/cr/requirements.txt'],
   },
   {
     'name': 'wireguard_nt',

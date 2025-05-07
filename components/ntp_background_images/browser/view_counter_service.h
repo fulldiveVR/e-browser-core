@@ -31,6 +31,11 @@ class PrefService;
 
 class GURL;
 
+namespace base {
+class Time;
+class TimeDelta;
+}  // namespace base
+
 namespace brave_ads {
 class AdsService;
 }  // namespace brave_ads
@@ -89,6 +94,7 @@ class ViewCounterService : public KeyedService,
   void MaybeTriggerNewTabPageAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
+      const bool should_metrics_fallback_to_p3a,
       brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type);
 
   std::optional<base::Value::Dict> GetNextWallpaperForDisplay();
@@ -177,11 +183,15 @@ class ViewCounterService : public KeyedService,
   void OnSponsoredContentDidUpdate(const base::Value::Dict& data) override;
   void OnSuperReferralCampaignDidEnd() override;
 
-  void ParseAndSaveCreativeNewTabPageAdsCallback(bool success);
+  void ParseAndSaveNewTabPageAdsCallback(bool success);
 
   void ResetNotificationState();
+  bool IsShowBackgroundImageOptedIn() const;
   bool IsSponsoredImagesWallpaperOptedIn() const;
   bool IsSuperReferralWallpaperOptedIn() const;
+
+  base::Time GracePeriodEndAt(base::TimeDelta grace_period) const;
+  bool HasGracePeriodEnded(const NTPSponsoredImagesData* images_data) const;
 
   // Do we have a sponsored or referral wallpaper to show and has the user
   // opted-in to showing it at some time.

@@ -196,7 +196,9 @@ function syncChromium(program) {
     // being passed to gclient.
     if (util.runGit(config.srcDir, ['rev-parse', requiredChromiumRef], true) ==
         null) {
-      util.runGit(config.srcDir, ['fetch', 'origin', requiredChromiumRef])
+      util.runGit(
+          config.srcDir,
+          ['fetch', 'origin', requiredChromiumRef + ':' + requiredChromiumRef])
     }
     util.runGit(config.srcDir, ['reset', '--hard', requiredChromiumRef])
   }
@@ -220,7 +222,7 @@ async function checkInternalDepsEndpoint() {
       `${config.internalDepsUrl}/windows-hermetic-toolchain/test.txt`,
       { method: 'HEAD', signal: AbortSignal.timeout(5000), redirect: 'manual' }
     )
-    return response.status == 302
+    return response.status === 302
   } catch (error) {
     return false
   }

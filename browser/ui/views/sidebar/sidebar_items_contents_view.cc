@@ -16,8 +16,8 @@
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "brave/app/vector_icons/vector_icons.h"
-#include "brave/browser/brave_browser_process.h"
-#include "brave/browser/misc_metrics/process_misc_metrics.h"
+#include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
+#include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/color/brave_color_id.h"
@@ -30,7 +30,6 @@
 #include "brave/browser/ui/views/sidebar/sidebar_item_view.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
 #include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/l10n/common/localization_util.h"
 #include "brave/components/playlist/common/features.h"
 #include "brave/components/sidebar/browser/pref_names.h"
 #include "brave/components/sidebar/browser/sidebar_item.h"
@@ -43,6 +42,7 @@
 #include "chrome/browser/ui/views/event_utils.h"
 #include "components/prefs/pref_service.h"
 #include "ui/base/default_style.h"
+#include "ui/base/l10n/l10n_util.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/base/resource/resource_bundle.h"
 #include "ui/base/window_open_disposition_utils.h"
@@ -185,14 +185,11 @@ void SidebarItemsContentsView::ShowContextMenuForViewImpl(
     icon_color = color_provider->GetColor(kColorSidebarButtonBase);
   }
   context_menu_model_->AddItemWithIcon(
-      kItemEdit,
-      brave_l10n::GetLocalizedResourceUTF16String(
-          IDS_SIDEBAR_ITEM_CONTEXT_MENU_EDIT),
+      kItemEdit, l10n_util::GetStringUTF16(IDS_SIDEBAR_ITEM_CONTEXT_MENU_EDIT),
       ui::ImageModel::FromVectorIcon(kSidebarEditIcon, icon_color, 14));
   context_menu_model_->AddItemWithIcon(
       kItemRemove,
-      brave_l10n::GetLocalizedResourceUTF16String(
-          IDS_SIDEBAR_ITEM_CONTEXT_MENU_REMOVE),
+      l10n_util::GetStringUTF16(IDS_SIDEBAR_ITEM_CONTEXT_MENU_REMOVE),
       ui::ImageModel::FromVectorIcon(kSidebarTrashIcon, icon_color));
   context_menu_runner_ = std::make_unique<views::MenuRunner>(
       context_menu_model_.get(), views::MenuRunner::CONTEXT_MENU,
@@ -515,10 +512,16 @@ void SidebarItemsContentsView::OnItemPressed(const views::View* item,
   if (item_model.open_in_panel) {
     if (item_model.built_in_item_type ==
         sidebar::SidebarItem::BuiltInItemType::kChatUI) {
-      ai_chat::AIChatMetrics* metrics =
-          g_brave_browser_process->process_misc_metrics()->ai_chat_metrics();
-      CHECK(metrics);
-      metrics->HandleOpenViaEntryPoint(ai_chat::EntryPoint::kSidebar);
+      auto* profile_metrics =
+          misc_metrics::ProfileMiscMetricsServiceFactory::GetServiceForContext(
+              browser_->profile());
+      if (profile_metrics) {
+        auto* ai_chat_metrics = profile_metrics->GetAIChatMetrics();
+        if (ai_chat_metrics) {
+          ai_chat_metrics->HandleOpenViaEntryPoint(
+              ai_chat::EntryPoint::kSidebar);
+        }
+      }
     }
     controller->ActivatePanelItem(item_model.built_in_item_type);
     return;

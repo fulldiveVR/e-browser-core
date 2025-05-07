@@ -6,7 +6,7 @@
 const path = require('path')
 const fs = require('fs-extra')
 const GitPatcher = require('./gitPatcher')
-const { runAsync, runGitAsync } = require('./util')
+const { runGitAsync } = require('./util')
 const os = require('os')
 
 const dirPrefixTmp = 'brave-browser-test-git-apply-'
@@ -80,7 +80,7 @@ describe('Apply Patches', function () {
       console.warn(`Test cleanup: could not remove directory at ${patchPath}`)
     }
   })
-  
+
   test('applies simple patch to unmodified original', async function () {
     validate()
     const affectedPaths = await gitPatcher.applyPatches()
@@ -172,6 +172,27 @@ describe('Apply Patches', function () {
     expect(status[0].patchPath).toBe(testFile1PatchPath)
     expect(status[0].path).toBeUndefined()
     expect(status[0].error).toBeDefined()
+  })
+
+  test('handles non-JSON patchinfo file', async function () {
+    validate()
+
+    // Make a patchinfo file with non-JSON content
+    const patchInfoPath = testFile1PatchPath.replace('.patch', '.patchinfo')
+    await fs.writeFile(patchInfoPath, 'non-JSON content', writeReadFileOptions)
+
+    // Apply patches and check that the patch was applied
+    const status = await gitPatcher.applyPatches()
+    expect(status).toHaveLength(1)
+    expect(status[0].path).toBe(file1Name)
+    expect(status[0].error).toBeUndefined()
+    expect(status[0].reason).toBe(
+      GitPatcher.patchApplyReasons.PATCH_INFO_OUTDATED
+    )
+
+    // Verify the file content
+    const finalContent = await fs.readFile(testFile1Path, writeReadFileOptions)
+    expect(finalContent).toBe(file1ModifiedContent)
   })
 
   test('handles no patch dir', async function () {

@@ -189,7 +189,7 @@ void CreativeSearchResultAdTabHelper::MaybeHandleCreativeAdViewedEvent(
 
 void CreativeSearchResultAdTabHelper::MaybeHandleCreativeAdViewedEventCallback(
     mojom::CreativeSearchResultAdInfoPtr creative_search_result_ad,
-    const base::Value value) {
+    base::Value value) {
   const bool is_visible = value.is_bool() && value.GetBool();
   if (!is_visible) {
     // If the ad is not visible, we should not trigger the viewed event.
@@ -213,7 +213,7 @@ void CreativeSearchResultAdTabHelper::MaybeHandleCreativeAdClickedEvent(
     return;
   }
 
-  const std::optional<std::string> placement_id =
+  std::optional<std::string> placement_id =
       MaybeExtractCreativeAdPlacementIdFromUrl(url);
   if (!placement_id || placement_id->empty()) {
     // The URL does not contain a placement id.

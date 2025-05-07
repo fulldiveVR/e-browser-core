@@ -24,6 +24,7 @@
 #include "brave/components/brave_ads/core/internal/settings/settings.h"
 #include "brave/components/brave_ads/core/internal/targeting/behavioral/anti_targeting/resource/anti_targeting_resource.h"
 #include "brave/components/brave_ads/core/internal/targeting/geographical/subdivision/subdivision_targeting.h"
+#include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_feature.h"
 #include "brave/components/brave_ads/core/public/ads_client/ads_client.h"
 #include "brave/components/brave_ads/core/public/ads_constants.h"
 
@@ -150,7 +151,7 @@ void EligibleNewTabPageAdsV2::FilterAndMaybePredictCreativeAd(
   // For each bucket of prioritized ads attempt to predict the most suitable ad
   // for the user in priority order.
   for (const auto& [priority, prioritized_eligible_creative_ads] : buckets) {
-    const std::optional<CreativeNewTabPageAdInfo> predicted_creative_ad =
+    std::optional<CreativeNewTabPageAdInfo> predicted_creative_ad =
         MaybePredictCreativeAd(prioritized_eligible_creative_ads, user_model,
                                ad_events);
     if (!predicted_creative_ad) {
@@ -176,9 +177,15 @@ void EligibleNewTabPageAdsV2::ApplyConditionMatcher(
   TRACE_EVENT(kTraceEventCategory, "ApplyConditionMatcher", "creative_ads",
               creative_ads.size());
 
-  std::erase_if(creative_ads, [this](
-                                  const CreativeNewTabPageAdInfo& creative_ad) {
-    return !MatchConditions(&pref_provider_, creative_ad.condition_matchers);
+  std::erase_if(creative_ads, [](const CreativeNewTabPageAdInfo& creative_ad) {
+    const bool does_match_conditions =
+        MatchConditions(creative_ad.condition_matchers);
+    if (!does_match_conditions) {
+      BLOG(1, "creativeInstanceId " << creative_ad.creative_instance_id
+                                    << " does not match conditions");
+    }
+
+    return !does_match_conditions;
   });
 }
 
@@ -192,11 +199,11 @@ void EligibleNewTabPageAdsV2::FilterIneligibleCreativeAds(
 
   ApplyConditionMatcher(creative_ads);
 
-  if (UserHasJoinedBraveRewards()) {
+  if (kShouldFrequencyCapNewTabPageAdsForNonRewards.Get() ||
+      UserHasJoinedBraveRewards()) {
     NewTabPageAdExclusionRules exclusion_rules(
         ad_events, *subdivision_targeting_, *anti_targeting_resource_,
         site_history);
-
     ApplyExclusionRules(creative_ads, last_served_ad_, &exclusion_rules);
   }
 

@@ -20,6 +20,7 @@ import AssistantResponse from '../assistant_response'
 import EditInput from '../edit_input'
 import EditIndicator from '../edit_indicator'
 import { getReasoningText } from './conversation_entries_utils'
+import { getImageFiles } from '../../../common/conversation_history_utils'
 import styles from './style.module.scss'
 
 function ConversationEntries() {
@@ -111,6 +112,9 @@ function ConversationEntries() {
             }
           }
 
+          const imageFiles =
+            getImageFiles(latestTurn.uploadedFiles) || []
+
           return (
             <div
               key={id}
@@ -148,6 +152,7 @@ function ConversationEntries() {
                       entry={latestTurn}
                       isEntryInProgress={isEntryInProgress}
                       allowedLinks={allAllowedLinks}
+                      isLeoModel={conversationContext.isLeoModel}
                     />
                   )}
                   {isHuman && !turn.selectedText && !showEditInput && (
@@ -174,13 +179,16 @@ function ConversationEntries() {
                             </div>
                           )}
                         </div>
-                        {!!latestTurn.uploadedImages?.length &&
-                          latestTurn.uploadedImages.map((img) => (
-                            <UploadedImgItem
-                              key={img.filename}
-                              uploadedImage={img}
-                            />
-                          ))}
+                        {imageFiles.length > 0 &&
+                          <div className={styles.uploadedImages}>
+                            {imageFiles.map((img) => (
+                              <UploadedImgItem
+                                key={img.filename}
+                                uploadedImage={img}
+                              />
+                            ))}
+                          </div>
+                        }
                       </div>
                     </>
                   )}

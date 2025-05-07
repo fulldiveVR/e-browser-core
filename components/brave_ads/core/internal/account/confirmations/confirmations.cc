@@ -38,8 +38,8 @@ void Confirmations::Confirm(const TransactionInfo& transaction,
                         << transaction.id << " and creative instance id "
                         << transaction.creative_instance_id);
 
-  const std::optional<ConfirmationInfo> confirmation =
-      UserHasJoinedBraveRewards()
+  std::optional<ConfirmationInfo> confirmation =
+      UserHasJoinedBraveRewardsAndConnectedWallet()
           ? BuildRewardConfirmation(transaction, std::move(user_data))
           : BuildNonRewardConfirmation(transaction, std::move(user_data));
   if (!confirmation) {
@@ -96,7 +96,7 @@ void Confirmations::OnDidProcessConfirmationQueue(
 
 void Confirmations::OnFailedToProcessConfirmationQueue(
     const ConfirmationInfo& confirmation) {
-  BLOG(1, "Failed to process "
+  BLOG(0, "Failed to process "
               << confirmation.type << " confirmation for "
               << confirmation.ad_type << " with transaction id "
               << confirmation.transaction_id << " and creative instance id "

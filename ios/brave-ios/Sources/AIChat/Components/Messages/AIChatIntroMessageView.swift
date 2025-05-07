@@ -13,46 +13,6 @@ struct AIChatIntroMessageView: View {
 
   var model: AiChat.Model
 
-  private var modelDescription: String {
-    guard let modelKey = AIChatModelKey(rawValue: model.key) else {
-      return model.displayName
-    }
-
-    switch modelKey {
-    case .chatBasic:
-      return Strings.AIChat.introMessageLlamaModelDescription
-
-    case .chatExpanded:
-      return Strings.AIChat.introMessageMixtralModelDescription
-
-    case .chatClaudeHaiku:
-      return Strings.AIChat.introMessageClaudeHaikuModelDescription
-
-    case .chatClaudeSonnet:
-      return Strings.AIChat.introMessageClaudeSonnetModelDescription
-    }
-  }
-
-  private var introMessage: String {
-    guard let modelKey = AIChatModelKey(rawValue: model.key) else {
-      return String(format: Strings.AIChat.introMessageGenericMessageDescription, model.displayName)
-    }
-
-    switch modelKey {
-    case .chatBasic:
-      return Strings.AIChat.introMessageLlamaMessageDescription
-
-    case .chatExpanded:
-      return Strings.AIChat.introMessageMixtralMessageDescription
-
-    case .chatClaudeHaiku:
-      return Strings.AIChat.introMessageClaudeHaikuMessageDescription
-
-    case .chatClaudeSonnet:
-      return Strings.AIChat.introMessageClaudeSonnetMessageDescription
-    }
-  }
-
   var body: some View {
     VStack(alignment: .leading, spacing: 0.0) {
       AIChatProductIcon(containerShape: Circle(), padding: 9.0)
@@ -68,7 +28,7 @@ struct AIChatIntroMessageView: View {
         .fixedSize(horizontal: false, vertical: true)
 
       HStack(alignment: .firstTextBaseline) {
-        Text(modelDescription)
+        Text(model.displayName)
           .font(.footnote)
           .foregroundStyle(Color(braveSystemName: .textTertiary))
           .multilineTextAlignment(.leading)
@@ -98,7 +58,7 @@ struct AIChatIntroMessageView: View {
             backgroundColor: UIColor(braveSystemName: .containerBackground)
           ) {
             VStack {
-              Text(introMessage)
+              Text(model.introMessage)
                 .font(.footnote)
                 .foregroundStyle(Color(braveSystemName: .textPrimary))
                 .fixedSize(horizontal: false, vertical: true)
@@ -140,7 +100,6 @@ struct AIChatIntroMessageView_Previews: PreviewProvider {
             leoModelOptions: .init(
               name: "Mixtral-8x7b",
               displayMaker: "Powerful, fast and adaptive",
-              engineType: .llamaRemote,
               category: .chat,
               access: .basicAndPremium,
               maxAssociatedContentLength: 9000,

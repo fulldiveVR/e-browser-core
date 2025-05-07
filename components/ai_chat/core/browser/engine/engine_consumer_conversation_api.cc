@@ -196,14 +196,26 @@ void EngineConsumerConversationAPI::GenerateAssistantResponse(
   }
   // history
   for (const auto& message : conversation_history) {
-    if (message->uploaded_images) {
-      std::vector<std::string> images;
-      for (const auto& uploaded_image : message->uploaded_images.value()) {
-        images.emplace_back(GetImageDataURL(uploaded_image->image_data));
+    if (message->uploaded_files) {
+      std::vector<std::string> uploaded_images;
+      std::vector<std::string> screenshot_images;
+      for (const auto& uploaded_file : message->uploaded_files.value()) {
+        if (uploaded_file->type == mojom::UploadedFileType::kScreenshot) {
+          screenshot_images.emplace_back(GetImageDataURL(uploaded_file->data));
+        } else if (uploaded_file->type == mojom::UploadedFileType::kImage) {
+          uploaded_images.emplace_back(GetImageDataURL(uploaded_file->data));
+        }
       }
-      conversation.push_back({mojom::CharacterType::HUMAN,
-                              ConversationEventType::UploadImage,
-                              std::move(images)});
+      if (!uploaded_images.empty()) {
+        conversation.push_back({mojom::CharacterType::HUMAN,
+                                ConversationEventType::UploadImage,
+                                std::move(uploaded_images)});
+      }
+      if (!screenshot_images.empty()) {
+        conversation.push_back({mojom::CharacterType::HUMAN,
+                                ConversationEventType::PageScreenshot,
+                                std::move(screenshot_images)});
+      }
     }
     if (message->selected_text.has_value() &&
         !message->selected_text->empty()) {
@@ -295,6 +307,8 @@ void EngineConsumerConversationAPI::ProcessTabChunks(
     base::OnceCallback<void(std::vector<GenerationResult>)> merge_callback,
     const std::string& topic) {
   CHECK(event_type == ConversationEventType::GetSuggestedTopicsForFocusTabs ||
+        event_type ==
+            ConversationEventType::GetSuggestedAndDedupeTopicsForFocusTabs ||
         event_type == ConversationEventType::GetFocusTabsForTopic);
 
   // Split tab into chunks of 75
@@ -328,6 +342,14 @@ void EngineConsumerConversationAPI::ProcessTabChunks(
 void EngineConsumerConversationAPI::MergeSuggestTopicsResults(
     GetSuggestedTopicsCallback callback,
     std::vector<GenerationResult> results) {
+  if (results.size() == 1) {
+    // No need to dedupe topics if there is only one result.
+    std::move(callback).Run(
+        EngineConsumerConversationAPI::GetStrArrFromTabOrganizationResponses(
+            results));
+    return;
+  }
+
   // Merge the result and send another request to dedupe topics.
   DedupeTopics(GetStrArrFromTabOrganizationResponses(results),
                std::move(callback));
@@ -336,8 +358,12 @@ void EngineConsumerConversationAPI::MergeSuggestTopicsResults(
 void EngineConsumerConversationAPI::GetSuggestedTopics(
     const std::vector<Tab>& tabs,
     GetSuggestedTopicsCallback callback) {
+  auto event_type =
+      tabs.size() > kChunkSize
+          ? ConversationEventType::GetSuggestedTopicsForFocusTabs
+          : ConversationEventType::GetSuggestedAndDedupeTopicsForFocusTabs;
   ProcessTabChunks(
-      tabs, ConversationEventType::GetSuggestedTopicsForFocusTabs,
+      tabs, event_type,
       base::BindOnce(&EngineConsumerConversationAPI::MergeSuggestTopicsResults,
                      weak_ptr_factory_.GetWeakPtr(), std::move(callback)),
       "" /* topic */);

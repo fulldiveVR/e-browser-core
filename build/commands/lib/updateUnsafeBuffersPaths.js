@@ -36,14 +36,13 @@ async function updateUnsafeBuffersPaths() {
     '-brave/third_party/argon2/',
     '-brave/third_party/ethash/',
     '-brave/third_party/bitcoin-core/',
-    '-brave/third_party/rapidjson/',
     '-brave/vendor/bat-native-tweetnacl/'
   ];
 
   updatedPathLines = bufferPathLines.filter(
       (line) => line.startsWith('-') || line.startsWith('+'));
   updatedPathLines = updatedPathLines.map(
-      (line) => {return line.slice(0, 1) + 'src/' + line.slice(1)});
+      (line) => { return line.slice(0, 1) + 'src/' + line.slice(1) });
 
   const updatedContents =
       [...bufferPathLines, ...updatedPathLines, ''].join('\n');

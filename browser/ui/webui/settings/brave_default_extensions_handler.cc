@@ -17,11 +17,11 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wallet/browser/tx_service.h"
+#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_webtorrent/grit/brave_webtorrent_resources.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/decentralized_dns/core/constants.h"
 #include "brave/components/decentralized_dns/core/utils.h"
-#include "brave/components/l10n/common/localization_util.h"
 #include "chrome/browser/about_flags.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/extensions/component_loader.h"
@@ -45,6 +45,7 @@
 #include "extensions/browser/extension_system.h"
 #include "extensions/common/constants.h"
 #include "extensions/common/feature_switch.h"
+#include "ui/base/l10n/l10n_util.h"
 #include "ui/shell_dialogs/selected_file_info.h"
 
 #if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED)
@@ -70,17 +71,16 @@ base::Value::Dict MakeSelectValue(T value, const std::u16string& name) {
 
 base::Value::List GetResolveMethodList() {
   base::Value::List list;
-  list.Append(MakeSelectValue(ResolveMethodTypes::ASK,
-                              brave_l10n::GetLocalizedResourceUTF16String(
-                                  IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ASK)));
+  list.Append(MakeSelectValue(
+      ResolveMethodTypes::ASK,
+      l10n_util::GetStringUTF16(IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ASK)));
   list.Append(
       MakeSelectValue(ResolveMethodTypes::DISABLED,
-                      brave_l10n::GetLocalizedResourceUTF16String(
+                      l10n_util::GetStringUTF16(
                           IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_DISABLED)));
-  list.Append(
-      MakeSelectValue(ResolveMethodTypes::ENABLED,
-                      brave_l10n::GetLocalizedResourceUTF16String(
-                          IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ENABLED)));
+  list.Append(MakeSelectValue(
+      ResolveMethodTypes::ENABLED,
+      l10n_util::GetStringUTF16(IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ENABLED)));
 
   return list;
 }
@@ -89,15 +89,15 @@ base::Value::List GetEnsOffchainResolveMethodList() {
   base::Value::List list;
   list.Append(MakeSelectValue(
       EnsOffchainResolveMethod::kAsk,
-      brave_l10n::GetLocalizedResourceUTF16String(
+      l10n_util::GetStringUTF16(
           IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_ASK)));
   list.Append(MakeSelectValue(
       EnsOffchainResolveMethod::kDisabled,
-      brave_l10n::GetLocalizedResourceUTF16String(
+      l10n_util::GetStringUTF16(
           IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_DISABLED)));
   list.Append(MakeSelectValue(
       EnsOffchainResolveMethod::kEnabled,
-      brave_l10n::GetLocalizedResourceUTF16String(
+      l10n_util::GetStringUTF16(
           IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_ENABLED)));
 
   return list;
@@ -133,6 +133,15 @@ void BraveDefaultExtensionsHandler::RegisterMessages() {
       "setBraveWalletEnabled",
       base::BindRepeating(&BraveDefaultExtensionsHandler::SetBraveWalletEnabled,
                           base::Unretained(this)));
+#endif
+
+#if BUILDFLAG(ENABLE_ORCHARD)
+  if (brave_wallet::IsZCashShieldedTransactionsEnabled()) {
+    web_ui()->RegisterMessageCallback(
+        "resetZCashSyncState",
+        base::BindRepeating(&BraveDefaultExtensionsHandler::ResetZCashSyncState,
+                            base::Unretained(this)));
+  }
 #endif
 
   // TODO(petemill): If anything outside this handler is responsible for causing
@@ -198,6 +207,22 @@ void BraveDefaultExtensionsHandler::GetRestartNeeded(
   AllowJavascript();
   ResolveJavascriptCallback(args[0], base::Value(IsRestartNeeded()));
 }
+
+#if BUILDFLAG(ENABLE_ORCHARD)
+void BraveDefaultExtensionsHandler::ResetZCashSyncState(
+    const base::Value::List& args) {
+  auto* brave_wallet_service =
+      brave_wallet::BraveWalletServiceFactory::GetServiceForContext(profile_);
+  if (!brave_wallet_service) {
+    return;
+  }
+  auto* zcash_wallet_service = brave_wallet_service->GetZcashWalletService();
+  if (!zcash_wallet_service) {
+    return;
+  }
+  zcash_wallet_service->Reset();
+}
+#endif
 
 void BraveDefaultExtensionsHandler::ResetWallet(const base::Value::List& args) {
   auto* brave_wallet_service =

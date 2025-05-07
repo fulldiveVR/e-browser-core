@@ -82,19 +82,15 @@ extension BrowserViewController {
     }
 
     // Toogle Reader Mode Activity
-    // If the reader mode button is occluded due to a secure content state warning add it as an activity
-    if let tab = tabManager.selectedTab, tab.visibleSecureContentState.shouldDisplayWarning {
-      if tab.readerModeAvailableOrActive == true {
-        activities.append(
-          BasicMenuActivity(
-            activityType: .toggleReaderMode,
-            callback: { [weak self] in
-              self?.toggleReaderMode()
-            }
-          )
+    if let tab = tabManager.selectedTab, tab.readerModeAvailableOrActive == true {
+      activities.append(
+        BasicMenuActivity(
+          activityType: .toggleReaderMode,
+          callback: { [weak self] in
+            self?.toggleReaderMode()
+          }
         )
-      }
-      // Any other buttons on the leading side of the location view should be added here as well
+      )
     }
 
     // Translate Activity
@@ -183,7 +179,7 @@ extension BrowserViewController {
       )
 
       // Add Feed To Brave News Activity
-      if Preferences.BraveNews.isEnabled.value, let metadata = tab?.pageMetadata,
+      if Preferences.BraveNews.isEnabled.value, let metadata = tab?.pageMetadataHelper?.metadata,
         !metadata.feeds.isEmpty
       {
         let feeds: [RSSFeedLocation] = metadata.feeds.compactMap { feed in

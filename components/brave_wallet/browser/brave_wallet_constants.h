@@ -614,7 +614,7 @@ inline constexpr webui::LocalizedString kLocalizedStrings[] = {
      IDS_BRAVE_WALLET_AUTHORIZE_HARDWARE_WALLET},
     {"braveWalletConnectHardwareWallet",
      IDS_BRAVE_WALLET_CONNECT_HARDWARE_WALLET},
-    {"braveWallectConnectHardwareDescription",
+    {"braveWalletConnectHardwareDescription",
      IDS_BRAVE_WALLET_CONNECT_HARDWARE_WALLET_DESCRIPTION},
     {"braveWalletImportHardwareWalletDescription",
      IDS_BRAVE_WALLET_IMPORT_HARDWARE_WALLET_DESCRIPTION},
@@ -818,6 +818,8 @@ inline constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWalletNotConnected", IDS_BRAVE_WALLET_NOT_CONNECTED},
     {"braveWalletConnectedAccounts", IDS_BRAVE_WALLET_CONNECTED_ACCOUNTS},
     {"braveWalletAvailableAccounts", IDS_BRAVE_WALLET_AVAILABLE_ACCOUNTS},
+    {"braveWalletConnections", IDS_BRAVE_WALLET_CONNECTIONS},
+    {"braveWalletUnblock", IDS_BRAVE_WALLET_UNBLOCK},
     {"braveWalletSitePermissionsNewAccount",
      IDS_BRAVE_WALLET_SITE_PERMISSIONS_NEW_ACCOUNT},
     {"braveWalletPanelBlocked", IDS_BRAVE_WALLET_PANEL_BLOCKED},
@@ -1631,6 +1633,7 @@ inline constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWalletClearFilters", IDS_BRAVE_WALLET_CLEAR_FILTERS},
     {"braveWalletShowMore", IDS_BRAVE_WALLET_SHOW_MORE},
     {"braveWalletDetails", IDS_BRAVE_WALLET_DETAILS},
+    {"braveWalletVerified", IDS_BRAVE_WALLET_VERIFIED},
     {"braveWalletSwitchToShieldedAccount",
      IDS_BRAVE_WALLET_SWITCH_TO_SHIELDED_ACCOUNT},
     {"braveWalletShieldAccount", IDS_BRAVE_WALLET_SHIELD_ACCOUNT},
@@ -1672,7 +1675,11 @@ inline constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWalletSyncing", IDS_BRAVE_WALLET_SYNCING},
     {"braveWalletReviewShield", IDS_BRAVE_WALLET_REVIEW_SHIELD},
     {"braveWalletShielding", IDS_BRAVE_WALLET_SHIELDING},
-    {"braveWalletShieldZEC", IDS_BRAVE_WALLET_SHIELD_ZEC}};
+    {"braveWalletShieldZEC", IDS_BRAVE_WALLET_SHIELD_ZEC},
+    {"braveWalletPageNotFoundTitle", IDS_BRAVE_WALLET_PAGE_NOT_FOUND_TITLE},
+    {"braveWalletPageNotFoundDescription",
+     IDS_BRAVE_WALLET_PAGE_NOT_FOUND_DESCRIPTION},
+    {"braveWalletGoToPortfolio", IDS_BRAVE_WALLET_GO_TO_PORTFOLIO}};
 
 // 0x swap constants
 inline constexpr char kZeroExBaseAPIURL[] = "https://api.0x.wallet.brave.com";

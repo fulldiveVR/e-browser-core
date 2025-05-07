@@ -66,13 +66,14 @@ class BatAdsImpl final : public mojom::BatAds {
       brave_ads::mojom::InlineContentAdEventType mojom_ad_event_type,
       TriggerInlineContentAdEventCallback callback) override;
 
-  void ParseAndSaveCreativeNewTabPageAds(
+  void ParseAndSaveNewTabPageAds(
       base::Value::Dict data,
-      ParseAndSaveCreativeNewTabPageAdsCallback callback) override;
+      ParseAndSaveNewTabPageAdsCallback callback) override;
   void MaybeServeNewTabPageAd(MaybeServeNewTabPageAdCallback callback) override;
   void TriggerNewTabPageAdEvent(
       const std::string& placement_id,
       const std::string& creative_instance_id,
+      bool should_metrics_fallback_to_p3a,
       brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type,
       TriggerNewTabPageAdEventCallback callback) override;
 

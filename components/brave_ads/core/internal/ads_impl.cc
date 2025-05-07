@@ -16,7 +16,6 @@
 #include "brave/components/brave_ads/core/internal/ads_internals/ads_internals_util.h"
 #include "brave/components/brave_ads/core/internal/ads_notifier_manager.h"
 #include "brave/components/brave_ads/core/internal/common/logging_util.h"
-#include "brave/components/brave_ads/core/internal/creatives/new_tab_page_ads/creative_new_tab_page_ads_database_util.h"
 #include "brave/components/brave_ads/core/internal/creatives/notification_ads/notification_ad_manager.h"
 #include "brave/components/brave_ads/core/internal/database/database_maintenance.h"
 #include "brave/components/brave_ads/core/internal/database/database_manager.h"
@@ -42,7 +41,7 @@ AdsImpl::AdsImpl(AdsClient& ads_client,
 
 AdsImpl::~AdsImpl() = default;
 
-void AdsImpl::AddObserver(std::unique_ptr<AdsObserverInterface> observer) {
+void AdsImpl::AddObserver(std::unique_ptr<AdsObserver> observer) {
   // `AdsNotifierManager` takes ownership of `observer`.
   AdsNotifierManager::GetInstance().AddObserver(std::move(observer));
 }
@@ -79,7 +78,7 @@ void AdsImpl::Initialize(mojom::WalletInfoPtr mojom_wallet,
                                     TRACE_ID_LOCAL(this));
 
   if (is_initialized_) {
-    BLOG(1, "Already initialized ads");
+    BLOG(0, "Already initialized ads");
     return FailedToInitialize(std::move(callback));
   }
 
@@ -156,19 +155,17 @@ void AdsImpl::TriggerInlineContentAdEvent(
                                              std::move(callback));
 }
 
-void AdsImpl::ParseAndSaveCreativeNewTabPageAds(
+void AdsImpl::ParseAndSaveNewTabPageAds(
     base::Value::Dict dict,
-    ParseAndSaveCreativeNewTabPageAdsCallback callback) {
+    ParseAndSaveNewTabPageAdsCallback callback) {
   if (task_queue_.should_queue()) {
     return task_queue_.Add(base::BindOnce(
-        &AdsImpl::ParseAndSaveCreativeNewTabPageAds, weak_factory_.GetWeakPtr(),
+        &AdsImpl::ParseAndSaveNewTabPageAds, weak_factory_.GetWeakPtr(),
         std::move(dict), std::move(callback)));
   }
 
-  const bool success =
-      database::ParseAndSaveCreativeNewTabPageAds(std::move(dict));
-
-  std::move(callback).Run(success);
+  GetAdHandler().ParseAndSaveNewTabPageAds(std::move(dict),
+                                           std::move(callback));
 }
 
 void AdsImpl::MaybeServeNewTabPageAd(MaybeServeNewTabPageAdCallback callback) {
@@ -184,14 +181,18 @@ void AdsImpl::MaybeServeNewTabPageAd(MaybeServeNewTabPageAdCallback callback) {
 void AdsImpl::TriggerNewTabPageAdEvent(
     const std::string& placement_id,
     const std::string& creative_instance_id,
+    bool should_metrics_fallback_to_p3a,
     mojom::NewTabPageAdEventType mojom_ad_event_type,
     TriggerAdEventCallback callback) {
   if (task_queue_.should_queue()) {
     return task_queue_.Add(base::BindOnce(
         &AdsImpl::TriggerNewTabPageAdEvent, weak_factory_.GetWeakPtr(),
-        placement_id, creative_instance_id, mojom_ad_event_type,
-        std::move(callback)));
+        placement_id, creative_instance_id, should_metrics_fallback_to_p3a,
+        mojom_ad_event_type, std::move(callback)));
   }
+
+  UpdateP3aMetricsFallbackState(creative_instance_id,
+                                should_metrics_fallback_to_p3a);
 
   GetAdHandler().TriggerNewTabPageAdEvent(placement_id, creative_instance_id,
                                           mojom_ad_event_type,

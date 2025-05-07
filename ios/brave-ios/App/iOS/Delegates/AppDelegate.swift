@@ -12,6 +12,7 @@ import BraveShields
 import BraveStore
 import BraveVPN
 import BraveWallet
+import BraveWidgetsModels
 import Combine
 import CoreSpotlight
 import Data
@@ -217,6 +218,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Still need to insert Yahoo! JAPAN in the engine list during `InitialSearchEngines` initialization
       // but not override the current DSE value
       Preferences.Search.shouldOverrideDSEForJapanRegion.value = false
+    } else if Preferences.Search.yahooJPPhaseOneCompleted.value {
+      Preferences.Search.shouldOverrideDSEForJapanRegion.value = false
     }
 
     Preferences.General.isFirstLaunch.value = false
@@ -229,11 +232,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if Preferences.Search.defaultEngineName.value == nil {
         AppState.shared.profile.searchEngines.searchEngineSetup()
         Preferences.Search.yahooJPPhaseOneCompleted.value = true
-      } else if !Preferences.Search.yahooJPPhaseOneCompleted.value {
+        Preferences.Search.yahooJPPhaseTwoCompleted.value = true
+      }
+      if !Preferences.Search.yahooJPPhaseOneCompleted.value {
         // Upgrade from existed version which has a DSE set. Need to insert Yahoo! JAPAN into
         // the correct position of the ordered search engines list
         AppState.shared.profile.searchEngines.updateYahooJPOrderIfNeeded()
         Preferences.Search.yahooJPPhaseOneCompleted.value = true
+      }
+      if !Preferences.Search.yahooJPPhaseTwoCompleted.value {
+        AppState.shared.profile.searchEngines.updateDSEToYahooJPIfNeeded()
+        Preferences.Search.yahooJPPhaseTwoCompleted.value = true
       }
     }
 
@@ -256,6 +265,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       Preferences.Search.shouldShowSuggestionsOptIn.value =
         !AppState.shared.profile.searchEngines.isBraveSearchDefaultRegion
+
+      if UIDevice.isIpad {
+        Preferences.General.toolbarShortcutButton.value = WidgetShortcut.bookmarks.rawValue
+      }
     }
 
     if Preferences.URP.referralLookupOutstanding.value == nil {

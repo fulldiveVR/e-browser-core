@@ -9,6 +9,7 @@
 
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_browser_process.h"
+#include "brave/browser/brave_news/brave_news_controller_factory.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/ntp_background/brave_ntp_custom_background_service_factory.h"
@@ -22,14 +23,15 @@
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/top_sites_facade.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/vpn_facade.h"
 #include "brave/browser/ui/webui/brave_rewards/rewards_page_handler.h"
+#include "brave/components/brave_news/browser/brave_news_controller.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_rich_media_ad_event_handler.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search_engines/template_url_service_factory.h"
-#include "chrome/browser/ui/tabs/public/tab_interface.h"
 #include "chrome/browser/ui/webui/searchbox/realbox_handler.h"
+#include "components/tab_collections/public/tab_interface.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
@@ -48,7 +50,7 @@ using brave_new_tab_page_refresh::VPNFacade;
 }  // namespace
 
 BraveNewTabPageUI::BraveNewTabPageUI(content::WebUI* web_ui)
-    : ui::MojoWebUIController(web_ui) {
+    : ui::MojoWebUIController(web_ui, /* enable_chrome_send = */ true) {
   NewTabPageInitializer(*web_ui).Initialize();
 }
 
@@ -118,6 +120,16 @@ void BraveNewTabPageUI::BindInterface(
       brave_rewards::RewardsServiceFactory::GetForProfile(profile),
       brave_ads::AdsServiceFactory::GetForProfile(profile), nullptr,
       profile->GetPrefs());
+}
+
+void BraveNewTabPageUI::BindInterface(
+    mojo::PendingReceiver<brave_news::mojom::BraveNewsController> receiver) {
+  auto* profile = Profile::FromWebUI(web_ui());
+  auto* brave_news_controller =
+      brave_news::BraveNewsControllerFactory::GetForBrowserContext(profile);
+  if (brave_news_controller) {
+    brave_news_controller->Bind(std::move(receiver));
+  }
 }
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)

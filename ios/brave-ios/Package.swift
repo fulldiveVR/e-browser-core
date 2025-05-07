@@ -10,7 +10,7 @@ import PackageDescription
 var package = Package(
   name: "Brave",
   defaultLocalization: "en",
-  platforms: [.iOS(.v16), .macOS(.v13)],
+  platforms: [.iOS(.v17), .macOS(.v14)],
   products: [
     .library(name: "Brave", targets: ["Brave"]),
     .library(name: "Shared", targets: ["Shared"]),
@@ -333,6 +333,7 @@ var package = Package(
         .copy("LottieAssets/onboarding-rewards.json"),
         .copy("LottieAssets/playlist-confetti.json"),
         .copy("WelcomeFocus/Resources/LottieAssets"),
+        .copy("WelcomeFocus/Resources/Videos"),
         .copy("WelcomeFocus/Resources/Fonts/Poppins-SemiBold.ttf"),
         .copy("WelcomeFocus/Resources/Fonts/Poppins-Medium.ttf"),
         .copy("WelcomeFocus/Resources/Fonts/Poppins-Regular.ttf"),

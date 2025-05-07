@@ -297,6 +297,9 @@ class SettingsViewController: TableViewController {
                   self.settingsDelegate?.settingsOpenURLInNewTab(url)
                   self.dismiss(animated: true)
                 },
+                dismiss: { [unowned self] in
+                  self.navigationController?.popViewController(animated: true)
+                },
                 onDismiss: { [weak self] in
                   self?.navigationController?.setNavigationBarHidden(false, animated: false)
                 }
@@ -379,15 +382,7 @@ class SettingsViewController: TableViewController {
         Row(
           text: Strings.braveRewardsSettingsTitle,
           selection: { [unowned self] in
-            let rewardsVC = BraveRewardsSettingsViewController(rewards)
-            rewardsVC.walletTransferLearnMoreTapped = { [weak self] in
-              guard let self = self else { return }
-              self.dismiss(animated: true) {
-                self.presentingViewController?.dismiss(animated: true) {
-                  self.settingsDelegate?.settingsOpenURLInNewTab(.brave.rewardsOniOS)
-                }
-              }
-            }
+            let rewardsVC = BraveRewardsSettingsViewController(rewards: rewards)
             self.navigationController?.pushViewController(rewardsVC, animated: true)
           },
           image: UIImage(braveSystemNamed: "leo.product.bat-outline"),
@@ -758,7 +753,15 @@ class SettingsViewController: TableViewController {
         text: Strings.NTP.settingsTitle,
         selection: { [unowned self] in
           self.navigationController?.pushViewController(
-            NTPTableViewController(rewards),
+            NTPTableViewController(
+              rewards: rewards,
+              linkTapped: { [unowned self] request in
+                self.tabManager.addTabAndSelect(
+                  request,
+                  isPrivate: false
+                )
+              }
+            ),
             animated: true
           )
         },

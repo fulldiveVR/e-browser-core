@@ -9,18 +9,28 @@ import {
   VPNState,
   VPNActions,
   defaultVPNState,
-  defaultVPNActions } from '../models/vpn'
+  defaultVPNActions,
+  ConnectionState } from '../models/vpn'
 
 export function initializeVPN(store: Store<VPNState>): VPNActions {
   store.update({
     ...defaultVPNState(),
     vpnFeatureEnabled: true,
     showVpnWidget: true,
-    vpnPurchased: false,
-    vpnConnectionState: 'connecting',
+    vpnPurchased: true,
+    vpnConnectionState: ConnectionState.CONNECTED,
     vpnConnectionRegion: {
+      name: '',
+      continent: '',
+      countryIsoCode: '',
+      regionPrecision: '',
+      cities: [],
+      latitude: 0,
+      longitude: 0,
+      serverCount: 0,
+      isAutomatic: false,
       country: 'Brazil',
-      name: 'Rio de Janeiro'
+      namePretty: 'Rio de Janeiro'
     }
   })
 
@@ -35,10 +45,10 @@ export function initializeVPN(store: Store<VPNState>): VPNActions {
       store.update((state) => {
         return {
           vpnConnectionState:
-            state.vpnConnectionState === 'connected' ||
-            state.vpnConnectionState === 'connecting'
-                ? 'disconnected'
-                : 'connected'
+            state.vpnConnectionState === ConnectionState.CONNECTED ||
+            state.vpnConnectionState === ConnectionState.CONNECTING
+                ? ConnectionState.DISCONNECTED
+                : ConnectionState.CONNECTED
         }
       })
     }

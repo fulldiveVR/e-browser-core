@@ -24,9 +24,7 @@
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/ai_chat/resources/grit/ai_chat_ui_generated_map.h"
 #include "brave/components/constants/webui_url_constants.h"
-#include "brave/components/l10n/common/localization_util.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/ui/tabs/tab_model.h"
 #include "chrome/browser/ui/webui/favicon_source.h"
 #include "components/favicon_base/favicon_url_parser.h"
 #include "components/grit/brave_components_resources.h"
@@ -36,11 +34,13 @@
 #include "content/public/browser/web_ui_controller.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/common/url_constants.h"
+#include "ui/base/l10n/l10n_util.h"
 #include "ui/webui/mojo_web_ui_controller.h"
 #include "ui/webui/webui_util.h"
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "chrome/browser/ui/browser.h"
+#include "chrome/browser/ui/tabs/tab_model.h"
 #else
 #include "chrome/browser/ui/android/tab_model/tab_model.h"
 #include "chrome/browser/ui/android/tab_model/tab_model_list.h"
@@ -82,8 +82,7 @@ AIChatUI::AIChatUI(content::WebUI* web_ui)
   source->AddResourcePath("pwa_icon.svg", IDR_AI_CHAT_UI_PWA_ICON);
 
   for (const auto& str : ai_chat::GetLocalizedStrings()) {
-    source->AddString(str.name,
-                      brave_l10n::GetLocalizedResourceUTF16String(str.id));
+    source->AddString(str.name, l10n_util::GetStringUTF16(str.id));
   }
 
   constexpr bool kIsMobile = BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS);

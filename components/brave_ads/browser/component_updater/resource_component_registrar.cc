@@ -32,24 +32,26 @@ void ResourceComponentRegistrar::RegisterResourceComponent(
     const std::string& resource_id) {
   CHECK(!resource_id.empty());
 
-  const std::optional<ComponentInfo> component = GetComponentInfo(resource_id);
+  std::optional<ComponentInfo> component = GetComponentInfo(resource_id);
   if (!component) {
     return VLOG(1) << "Ads resource not supported for " << resource_id;
   }
 
-  if (resource_component_id_ &&
-      resource_component_id_ != component->id.data()) {
+  if (resource_component_id_ && resource_component_id_ != component->id) {
     Unregister();
     OnComponentUnregistered(*resource_component_id_);
   }
-  resource_component_id_ = component->id.data();
+  resource_component_id_ = component->id;
+
+  const std::string resource_component_public_key{component->public_key};
 
   const std::string component_name =
       base::ReplaceStringPlaceholders(kComponentName, {resource_id}, nullptr);
 
   VLOG(1) << "Registering " << component_name << " with id " << component->id;
 
-  Register(component_name, component->id.data(), component->public_key.data());
+  Register(component_name, *resource_component_id_,
+           resource_component_public_key);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

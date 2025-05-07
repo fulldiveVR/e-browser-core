@@ -2517,6 +2517,23 @@ mojom::CardanoAddressPtr KeyringService::GetCardanoAddress(
                                      *payment_key_id);
 }
 
+std::optional<std::array<uint8_t, kCardanoSignatureSize>>
+KeyringService::SignMessageByCardanoKeyring(
+    const mojom::AccountIdPtr& account_id,
+    const mojom::CardanoKeyIdPtr& key_id,
+    base::span<const uint8_t> message) {
+  CHECK(IsCardanoAccount(account_id));
+  CHECK(key_id);
+
+  auto* cardano_keyring = GetKeyring<CardanoHDKeyring>(account_id->keyring_id);
+  if (!cardano_keyring) {
+    return std::nullopt;
+  }
+
+  return cardano_keyring->SignMessage(account_id->account_index, *key_id,
+                                      message);
+}
+
 void KeyringService::UpdateNextUnusedAddressForBitcoinAccount(
     const mojom::AccountIdPtr& account_id,
     std::optional<uint32_t> next_receive_index,
@@ -2611,17 +2628,27 @@ void KeyringService::UpdateNextUnusedAddressForZCashAccount(
   auto accounts = GetDerivedAccountsForKeyring(profile_prefs_, keyring_id);
   for (auto& account : accounts) {
     if (account_id == account.GetAccountId()) {
+      bool account_changed = false;
       if (next_receive_index) {
+        account_changed =
+            account_changed ||
+            account.bitcoin_next_receive_address_index != *next_receive_index;
         account.bitcoin_next_receive_address_index = *next_receive_index;
       }
       if (next_change_index) {
+        account_changed =
+            account_changed ||
+            account.bitcoin_next_change_address_index != *next_change_index;
         account.bitcoin_next_change_address_index = *next_change_index;
       }
-      SetDerivedAccountsForKeyring(profile_prefs_, keyring_id, accounts);
-      NotifyAccountsChanged();
-      return;
+      if (account_changed) {
+        SetDerivedAccountsForKeyring(profile_prefs_, keyring_id, accounts);
+        NotifyAccountsChanged();
+        return;
+      }
     }
   }
+  return;
 }
 
 mojom::BitcoinAccountInfoPtr KeyringService::GetBitcoinAccountInfo(

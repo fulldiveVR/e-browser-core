@@ -206,6 +206,8 @@ public class BrowserViewController: UIViewController {
   var activeButtonToast: Toast?
   /// An infobar displaying a privacy notice when a search result ad is clicked
   var searchResultAdClickedInfoBar: SearchResultAdClickedInfoBar?
+  /// An infobar displaying a privacy notice when a new tab takeover is viewed
+  var newTabTakeoverInfoBar: NewTabTakeoverInfoBar?
   /// A boolean to determine If AddToListActivity should be added
   var addToPlayListActivityItem: (enabled: Bool, item: PlaylistInfo?)?
   /// A boolean to determine if OpenInPlaylistActivity should be shown
@@ -1390,6 +1392,7 @@ public class BrowserViewController: UIViewController {
         var shouldEvaluateKeyboardConstraints = false
         var activeKeyboardHeight: CGFloat = 0
         var searchEngineSettingsDismissed = false
+        var clearRecentSearchAlertDismissed = false
 
         if let keyboardHeight = keyboardState?.intersectionHeightForView(self.view) {
           activeKeyboardHeight = keyboardHeight
@@ -1398,14 +1401,25 @@ public class BrowserViewController: UIViewController {
         if let presentedNavigationController = presentedViewController
           as? ModalSettingsNavigationController,
           let presentedRootController = presentedNavigationController.viewControllers.first,
-          presentedRootController is SearchSettingsViewController
+          presentedRootController is SearchQuickEnginesViewController
         {
           searchEngineSettingsDismissed = true
         }
 
+        if let alertController = presentedViewController
+          as? UIAlertController,
+          alertController.preferredStyle == .actionSheet,
+          let action = alertController.actions.first,
+          action.title == Strings.recentSearchClearAlertButton
+        {
+          clearRecentSearchAlertDismissed = true
+        }
+
         shouldEvaluateKeyboardConstraints =
           (activeKeyboardHeight > 0)
-          && (presentedViewController == nil || searchEngineSettingsDismissed)
+          && (presentedViewController == nil
+            || searchEngineSettingsDismissed
+            || clearRecentSearchAlertDismissed)
 
         if shouldEvaluateKeyboardConstraints {
           var offset = -activeKeyboardHeight
@@ -1893,7 +1907,7 @@ public class BrowserViewController: UIViewController {
     browser.tabManager.addTabsForURLs([url], zombie: false, isPrivate: isPrivate)
   }
 
-  public func switchToTabForURLOrOpen(_ url: URL, isPrivate: Bool = false, isPrivileged: Bool) {
+  public func switchToTabForURLOrOpen(_ url: URL, isPrivate: Bool, isPrivileged: Bool) {
     popToBVC(isAnimated: false)
 
     if let tab = tabManager.getTabForURL(url, isPrivate: isPrivate) {
@@ -2148,8 +2162,6 @@ public class BrowserViewController: UIViewController {
           tabManager.saveTab(tab)
         }
       }
-
-      TabEvent.post(.didChangeURL(url), for: tab)
     }
 
     tabsBar.reloadDataAndRestoreSelectedTab(isAnimated: false)
@@ -2574,16 +2586,23 @@ extension BrowserViewController: SearchViewControllerDelegate {
     self.topToolbar.setLocation(suggestion, search: true)
   }
 
-  func presentSearchSettingsController() {
-    let settingsNavigationController = SearchSettingsViewController(
+  func presentQuickSearchEnginesViewController() {
+    let quickSearchEnginesViewController = SearchQuickEnginesViewController(
       profile: profile,
-      privateBrowsingManager: privateBrowsingManager
+      isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing
     )
-    let navController = ModalSettingsNavigationController(
-      rootViewController: settingsNavigationController
+    quickSearchEnginesViewController.navigationItem.leftBarButtonItem =
+      UIBarButtonItem(
+        title: Strings.close,
+        style: .done,
+        target: self,
+        action: #selector(dismissQuickSearchEngines)
+      )
+    quickSearchEnginesViewController.delegate = searchController
+    let navVC = ModalSettingsNavigationController(
+      rootViewController: quickSearchEnginesViewController
     )
-
-    self.present(navController, animated: true, completion: nil)
+    self.present(navVC, animated: true, completion: nil)
   }
 
   func searchViewController(
@@ -2610,6 +2629,13 @@ extension BrowserViewController: SearchViewControllerDelegate {
       return false
     }
     return true
+  }
+
+  @objc private func dismissQuickSearchEngines() {
+    dismiss(animated: true) { [weak self] in
+      self?.updateViewConstraints()
+      self?.searchController?.layoutSearchEngineScrollView()
+    }
   }
 }
 
@@ -2856,6 +2882,26 @@ extension BrowserViewController: NewTabPageDelegate {
         arrowDirection: .any
       )
     }
+  }
+
+  func showNewTabTakeoverInfoBarIfNeeded() {
+    if !rewards.ads.shouldShowNewTabTakeoverInfoBar() {
+      return
+    }
+    rewards.ads.recordNewTabTakeoverInfobarWasShown()
+
+    let newTabTakeoverInfoBar = NewTabTakeoverInfoBar(
+      tabManager: self.tabManager,
+      onLinkPressed: { [weak self] in
+        guard let self else { return }
+        self.rewards.ads.suppressNewTabTakeoverInfobar()
+      },
+      onClosePressed: { [weak self] in
+        guard let self else { return }
+        self.rewards.ads.suppressNewTabTakeoverInfobar()
+      }
+    )
+    self.show(toast: newTabTakeoverInfoBar, duration: nil)
   }
 }
 

@@ -60,6 +60,10 @@ brave/components/brave_ads/core/internal/security/**/*.cc @brave/ads-client
 brave/components/brave_ads/core/internal/security/**/*.h @brave/ads-client
 brave/components/brave_ads/core/internal/security/**/*.mm @brave/ads-client
 
+# Brave l10n components are deprecated. Use Chromium's functionality
+# unless no equivalent is available.
+brave/components/l10n/ @tmancey @bridiver
+
 # Network
 browser/net/ @iefremov
 chromium_src/chrome/browser/net/profile_network_context_service.cc @brave/sec-team
@@ -72,10 +76,21 @@ browser/ui/webui/settings/brave_tor*.* @brave/tor-reviewers
 components/tor/ @brave/tor-reviewers
 net/proxy_resolution/ @brave/tor-reviewers
 
+# New tab page
+browser/resources/brave_new_tab_page_refresh @brave/brave-core-ntp
+browser/ui/webui/brave_new_tab_page_refresh @brave/brave-core-ntp
+
 # Chromium Extension API modifications
 chromium_src/**/extensions/**/*_features.json @brave/sec-team
 chromium_src/tools/json_schema_compiler/ @brave/sec-team
 common/extensions/api/ @brave/sec-team
+
+# chromium_src Typescript and CSS overrides
+chromium_src/**/*.css @brave/chromium-src-web-reviewers
+chromium_src/**/*.ts @brave/chromium-src-web-reviewers
+
+# Lit Mangling
+tools/chromium_src/lit_mangler/ @brave/chromium-src-web-reviewers
 
 # Brave theme
 browser/themes @simonhong
@@ -170,13 +185,16 @@ android/java/res @deeppandya
 android/java/org/chromium/chrome/browser/preferences/BravePrefServiceBridge.java @AlexeyBarabash @samartnik @SergeyZhukovsky
 
 # GitHub configuration
-/.github/ @brave/devops-team
-/.github/CODEOWNERS @brave/devops-team @bsclifton
+/.github/ @bridiver @cdesouza-chromium
+/.github/CODEOWNERS @bridiver @bsclifton
 /.github/PULL_REQUEST_TEMPLATE.md @bsclifton
 
 
 # Semgrep configuration
 /.semgrepignore @thypon
+
+# Deprecated android util directory
+android/java/org/chromium/chrome/browser/util @bridiver
 
 # These rules are last to take precedence over directory rules.Do not add any
 # new rules below this line without checking with @bridiver

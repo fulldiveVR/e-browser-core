@@ -369,10 +369,15 @@ const util = {
       explicitSourceFiles[iconDest] = iconSource
 
       // Set proper branding file.
-      let branding_file_name = 'BRANDING'
+      let brandingFileName = 'BRANDING'
       if (config.channel)
-        branding_file_name = branding_file_name + '.' + config.channel
-      const brandingSource = path.join(braveAppDir, 'theme', 'brave', branding_file_name)
+        brandingFileName = brandingFileName + '.' + config.channel
+      const brandingSource = path.join(
+        braveAppDir,
+        'theme',
+        'brave',
+        brandingFileName
+      )
       const brandingDest = path.join(chromeAppDir, 'theme', 'brave', 'BRANDING')
       explicitSourceFiles[brandingDest] = brandingSource
     }
@@ -395,8 +400,11 @@ const util = {
       for (let sourceFile of sourceFiles) {
         const destinationFile = path.join(output, path.relative(source, sourceFile))
         sourceFile = explicitSourceFiles[destinationFile] || sourceFile
-        if (!fs.existsSync(destinationFile) ||
-            util.calculateFileChecksum(sourceFile) != util.calculateFileChecksum(destinationFile)) {
+        if (
+          !fs.existsSync(destinationFile) ||
+          util.calculateFileChecksum(sourceFile) !==
+            util.calculateFileChecksum(destinationFile)
+        ) {
           fs.copySync(sourceFile, destinationFile)
           console.log(sourceFile + ' copied to ' + destinationFile)
         }
@@ -514,7 +522,11 @@ const util = {
         for (const destPath of destPaths) {
           for (const androidSourceFile of androidSourceFiles) {
             let destinationFile = path.join(destPath, path.relative(sourcePath, androidSourceFile))
-            if (!fs.existsSync(destinationFile) || util.calculateFileChecksum(androidSourceFile) != util.calculateFileChecksum(destinationFile)) {
+            if (
+              !fs.existsSync(destinationFile) ||
+              util.calculateFileChecksum(androidSourceFile) !==
+                util.calculateFileChecksum(destinationFile)
+            ) {
               fs.copySync(androidSourceFile, destinationFile)
             }
             braveOverwrittenFiles.add(destinationFile);
@@ -538,7 +550,7 @@ const util = {
     }
 
     const chromiumSrcDir = path.join(config.srcDir, 'brave', 'chromium_src')
-    var sourceFiles = util.walkSync(chromiumSrcDir, applyFileFilter)
+    const sourceFiles = util.walkSync(chromiumSrcDir, applyFileFilter)
     const additionalGen = getAdditionalGenLocation()
 
     // Touch original files by updating mtime.
@@ -547,6 +559,18 @@ const util = {
     sourceFiles.forEach(chromiumSrcFile => {
       const relativeChromiumSrcFile = chromiumSrcFile.slice(chromiumSrcDirLen)
       let overriddenFile = path.join(config.srcDir, relativeChromiumSrcFile)
+
+      const additionalExtensions = [
+        // .lit_mangler.ts files are used to modify the upstream .html.ts file at
+        // build time.
+        '.lit_mangler.ts',
+      ]
+
+      const additionalExtension = additionalExtensions.find(key => overriddenFile.endsWith(key))
+      if (additionalExtension) {
+        overriddenFile = overriddenFile.substring(0, overriddenFile.length - additionalExtension.length)
+      }
+
       if (fs.existsSync(overriddenFile)) {
         // If overriddenFile is older than file in chromium_src, touch it to trigger rebuild.
         isDirty |= updateFileUTimesIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
@@ -555,7 +579,7 @@ const util = {
         overriddenFile = path.join(config.outputDir, 'gen', relativeChromiumSrcFile)
         isDirty |= deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
         // Also check the secondary gen dir, if exists
-        if (!!additionalGen) {
+        if (additionalGen) {
           overriddenFile = path.join(config.outputDir, additionalGen, 'gen', relativeChromiumSrcFile)
           isDirty |= deleteFileIfOverrideIsNewer(overriddenFile, chromiumSrcFile)
         }
@@ -609,12 +633,16 @@ const util = {
     const buildArgs = {
       'import("//brave/tools/redirect_cc/args.gni")': null,
       use_remoteexec: config.useRemoteExec,
+      use_reclient: config.useRemoteExec,
+      use_siso: false,
       rbe_exec_root: config.rbeExecRoot,
       reclient_bin_dir: config.realRewrapperDir,
       real_rewrapper: path.join(config.realRewrapperDir, 'rewrapper'),
     }
 
-    util.runGnGen(config.nativeRedirectCCDir, buildArgs)
+    util.runGnGen(config.nativeRedirectCCDir, buildArgs, [
+      '--root-target=//brave/tools/redirect_cc'
+    ])
     await util.buildTargets(['brave/tools/redirect_cc'], mergeWithDefault({outputDir: config.nativeRedirectCCDir}))
     Log.progressFinish('build redirect_cc')
   },
@@ -720,13 +748,13 @@ const util = {
     const progressMessage = `build ${targets} (${path.basename(outputDir)}, id=${buildId})`
     Log.progressStart(progressMessage)
 
-    let num_compile_failure = 1
+    let numCompileFailure = 1
     if (config.ignore_compile_failure)
-      num_compile_failure = 0
+      numCompileFailure = 0
 
     let ninjaOpts = [
-      '-C', outputDir, targets.join(' '),
-      '-k', num_compile_failure,
+      '-C', outputDir, ...targets,
+      '-k', numCompileFailure,
       ...config.extraNinjaOpts
     ]
 
@@ -799,9 +827,9 @@ const util = {
     // 'gerrit.host' from their brave checkout.
     util.runGit(
         config.braveCoreDir, ['config', '--unset-all', 'gerrit.host'], true)
-    let cmd_options = config.defaultOptions
-    cmd_options.cwd = config.braveCoreDir
-    cmd_options = mergeWithDefault(cmd_options)
+    let cmdOptions = config.defaultOptions
+    cmdOptions.cwd = config.braveCoreDir
+    cmdOptions = mergeWithDefault(cmdOptions)
     cmd = 'git'
     // --upload mode is similar to `git cl upload`. Non-upload mode covers less
     // checks.
@@ -819,18 +847,18 @@ const util = {
     }
 
     if (options.fix) {
-      cmd_options.env.PRESUBMIT_FIX = '1'
+      cmdOptions.env.PRESUBMIT_FIX = '1'
     }
-    util.run(cmd, args, cmd_options)
+    util.run(cmd, args, cmdOptions)
   },
 
   format: (options = {}) => {
     if (!options.base) {
       options.base = 'origin/master'
     }
-    let cmd_options = config.defaultOptions
-    cmd_options.cwd = config.braveCoreDir
-    cmd_options = mergeWithDefault(cmd_options)
+    let cmdOptions = config.defaultOptions
+    cmdOptions.cwd = config.braveCoreDir
+    cmdOptions = mergeWithDefault(cmdOptions)
     cmd = 'git'
     args = ['cl', 'format', '--upstream=' + options.base]
 
@@ -843,13 +871,17 @@ const util = {
     if (options.diff)
       args.push('--diff')
 
-    util.run(cmd, args, cmd_options)
+    util.run(cmd, args, cmdOptions)
   },
 
   massRename: (options = {}) => {
-    let cmd_options = config.defaultOptions
-    cmd_options.cwd = config.braveCoreDir
-    util.run('python3', [path.join(config.srcDir, 'tools', 'git', 'mass-rename.py')], cmd_options)
+    let cmdOptions = config.defaultOptions
+    cmdOptions.cwd = config.braveCoreDir
+    util.run(
+      'python3',
+      [path.join(config.srcDir, 'tools', 'git', 'mass-rename.py')],
+      cmdOptions
+    )
   },
 
   runGClient: (args, options = {}, gClientFile = config.gClientFile) => {
@@ -883,14 +915,14 @@ const util = {
     return input
   },
 
-  readJSON: (file, default_value = undefined) => {
+  readJSON: (file, defaultValue = undefined) => {
     if (!fs.existsSync(file)) {
-      return default_value
+      return defaultValue
     }
     try {
       return fs.readJSONSync(file)
     } catch {
-      return default_value
+      return defaultValue
     }
   },
 

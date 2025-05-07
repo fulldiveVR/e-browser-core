@@ -47,8 +47,7 @@ InlineContentAdServing::~InlineContentAdServing() {
 void InlineContentAdServing::MaybeServeAd(
     const std::string& dimensions,
     MaybeServeInlineContentAdCallback callback) {
-  const std::optional<TabInfo> tab =
-      TabManager::GetInstance().MaybeGetVisible();
+  std::optional<TabInfo> tab = TabManager::GetInstance().MaybeGetVisible();
   if (!tab) {
     BLOG(1, "Inline content ad not served: No visible tab found");
     return FailedToServeAd(dimensions, std::move(callback));
@@ -99,7 +98,7 @@ void InlineContentAdServing::GetAdEventsCallback(
     bool success,
     const AdEventList& ad_events) {
   if (!success) {
-    BLOG(1, "Inline content ad not served: Failed to get ad events");
+    BLOG(0, "Inline content ad not served: Failed to get ad events");
     return FailedToServeAd(dimensions, std::move(callback));
   }
 
@@ -190,7 +189,7 @@ void InlineContentAdServing::ServeAd(
     const InlineContentAdInfo& ad,
     MaybeServeInlineContentAdCallback callback) const {
   if (!ad.IsValid()) {
-    BLOG(1, "Inline content ad not served: Invalid ad");
+    BLOG(0, "Inline content ad not served: Invalid ad");
     return FailedToServeAd(ad.dimensions, std::move(callback));
   }
 

@@ -15,7 +15,6 @@ import CaretSVG from '../svg/caret'
 import {
   useUntrustedConversationContext //
 } from '../../untrusted_conversation_context'
-import OpenExternalLinkModal from '../open_external_link_modal'
 
 const removeReasoning = (text: string) => {
   return text.includes('<think>') ? text.split('</think>')[1] : text
@@ -84,75 +83,53 @@ function CursorDecorator(props: CursorDecoratorProps) {
   )
 }
 
-const IGNORE_EXTERNAL_LINK_WARNING_KEY = 'IGNORE_EXTERNAL_LINK_WARNING'
-
 interface RenderLinkProps {
   a: React.ComponentProps<'a'>
   allowedLinks?: string[]
+  disableLinkRestrictions?: boolean
 }
 
 export function RenderLink(props: RenderLinkProps) {
-  const { a, allowedLinks } = props
+  const { a, allowedLinks, disableLinkRestrictions} = props
   const { href, children } = a
-
-  // State
-  const [showWarning, setShowWarning] = React.useState(false)
-
-  // Local storage
-  const ignoreExternalLinkWarning = JSON.parse(
-    localStorage.getItem(IGNORE_EXTERNAL_LINK_WARNING_KEY) ?? 'false'
-  )
 
   // Context
   const context = useUntrustedConversationContext()
 
   // Computed
-  const isLinkAllowed =
-    allowedLinks?.some((link) => href?.startsWith(link)) ?? false
+  const isHttps = href?.toLowerCase().startsWith('https://')
+  const isLinkAllowed = isHttps && (disableLinkRestrictions ||
+    (allowedLinks?.some((link) => href?.startsWith(link)) ?? false))
 
-  // Methods
-  const openExternalLink = () => {
-    if (href) {
+  const handleLinkClicked = React.useCallback(() => {
+    if (href && isLinkAllowed) {
       const mojomUrl = new Url()
       mojomUrl.url = href
-      context.uiHandler?.openURLFromResponse(mojomUrl)
+      context.parentUiFrame?.userRequestedOpenGeneratedUrl(mojomUrl)
     }
-  }
-
-  const handleLinkClicked = () => {
-    if (!ignoreExternalLinkWarning) {
-      setShowWarning(true)
-      return
-    }
-    openExternalLink()
-  }
-
-  const handleOpenClicked = (ingnoreChecked: boolean) => {
-    if (ingnoreChecked) {
-      localStorage.setItem(IGNORE_EXTERNAL_LINK_WARNING_KEY, 'true')
-    }
-    setShowWarning(false)
-    openExternalLink()
-  }
+  }, [context, href])
 
   if (!isLinkAllowed) {
     return <span>{children}</span>
   }
 
+  const isCitation = typeof children === 'string' && /^\d+$/.test(children)
+
   return (
-    <>
-      <button
-        className={styles.conversationLink}
-        onClick={handleLinkClicked}
-      >
-        {children}
-      </button>
-      <OpenExternalLinkModal
-        isOpen={showWarning}
-        onOpen={handleOpenClicked}
-        onClose={() => setShowWarning(false)}
-      />
-    </>
+    <a
+      // While we preventDefault, we still need to pass the href
+      // here so we can continue to show link previews.
+      href={href}
+      className={`${styles.conversationLink}${
+        isCitation ? ` ${styles.citation}` : ''
+      }`}
+      onClick={(e) => {
+        e.preventDefault()
+        handleLinkClicked()
+      }}
+    >
+      {children}
+    </a>
   )
 }
 
@@ -160,6 +137,7 @@ interface MarkdownRendererProps {
   text: string
   shouldShowTextCursor: boolean
   allowedLinks?: string[]
+  disableLinkRestrictions?: boolean
 }
 
 export default function MarkdownRenderer(mainProps: MarkdownRendererProps) {
@@ -231,6 +209,7 @@ export default function MarkdownRenderer(mainProps: MarkdownRendererProps) {
             <RenderLink
               a={props}
               allowedLinks={mainProps.allowedLinks}
+              disableLinkRestrictions={mainProps.disableLinkRestrictions}
             />
           )
         }}

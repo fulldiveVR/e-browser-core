@@ -76,9 +76,9 @@ extension Preferences {
       default: false
     )
     /// Specifies whether the bookmark button is present on toolbar
-    static let toolbarShortcutButton = Option<Int?>(
+    public static let toolbarShortcutButton = Option<Int?>(
       key: "general.show-bookmark-toolbar-shortcut",
-      default: UIDevice.isIpad ? WidgetShortcut.bookmarks.rawValue : nil
+      default: nil
     )
     /// Controls whether or not media should continue playing in the background
     static let mediaAutoBackgrounding = Option<Bool>(
@@ -184,6 +184,11 @@ extension Preferences {
       key: "search.yahoo-jp-phase-one-completed",
       default: false
     )
+    /// Whether or not Yahoo! JAPAN search engine phase two has been completed
+    public static let yahooJPPhaseTwoCompleted = Option<Bool>(
+      key: "search.yahoo-jp-phase-two-completed",
+      default: false
+    )
     /// User picked DSE name for normal mode
     public static let userPickedDSEName = Option<String?>(
       key: "search.user-picked-dse-name",
@@ -237,7 +242,8 @@ extension Preferences {
     /// Enables the Apple's Screen Time feature.
     public static let screenTimeEnabled = Option<Bool>(
       key: "privacy.screentime-toggle",
-      default: AppConstants.buildChannel != .release && !ProcessInfo.processInfo.isiOSAppOnVisionOS
+      default: Preferences.DebugFlag.enableScreenTimeByDefault
+        ?? (AppConstants.buildChannel != .release && !ProcessInfo.processInfo.isiOSAppOnVisionOS)
     )
 
   }

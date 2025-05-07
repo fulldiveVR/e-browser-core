@@ -400,6 +400,9 @@ extension BrowserViewController: TopToolbarDelegate {
       guard let orignalURL = internalURL.url.strippedInternalURL else { return }
       url = orignalURL
     }
+    if !url.isWebPage(includeDataURIs: false) {
+      return
+    }
 
     weak var weakPopover: PopoverController?
     let popover = PopoverController(
@@ -666,6 +669,23 @@ extension BrowserViewController: TopToolbarDelegate {
     }
   }
 
+  func topToolbarDidPressPasteAndGoButton(_ urlBar: TopToolbarView) {
+    if UIPasteboard.general.hasStrings || UIPasteboard.general.hasURLs,
+      let searchQuery = UIPasteboard.general.string
+        ?? UIPasteboard.general.url?.absoluteString
+    {
+      self.topToolbar.setLocation(searchQuery, search: false)
+      self.topToolbar(self.topToolbar, didEnterText: searchQuery)
+
+      if let fixupURL = URIFixup.getURL(searchQuery) {
+        finishEditingAndSubmit(fixupURL)
+        return
+      }
+
+      self.submitSearchText(searchQuery)
+    }
+  }
+
   func stopVoiceSearch(searchQuery: String? = nil) {
     voiceSearchViewController?.dismiss(animated: true) {
       if let query = searchQuery {
@@ -717,7 +737,6 @@ extension BrowserViewController: TopToolbarDelegate {
     guard let searchController = searchController else { return }
     searchController.setupSearchEngineList()
     searchController.searchDelegate = self
-    searchController.profile = self.profile
 
     searchLoader = SearchLoader(
       historyAPI: braveCore.historyAPI,
@@ -759,8 +778,12 @@ extension BrowserViewController: TopToolbarDelegate {
 
   private func displayFavoritesController() {
     if favoritesController == nil {
+      let dse = profile.searchEngines.defaultEngine(
+        forType: privateBrowsingManager.isPrivateBrowsing ? .privateMode : .standard
+      )
       let favoritesController = FavoritesViewController(
         privateBrowsingManager: privateBrowsingManager,
+        defaultSearchEngine: dse,
         bookmarkAction: { [weak self] bookmark, action in
           self?.handleFavoriteAction(favorite: bookmark, action: action)
         },
@@ -784,13 +807,28 @@ extension BrowserViewController: TopToolbarDelegate {
             }
 
             switch searchType {
-            case .text, .website:
+            case .text:
               if let text = recentSearch.text {
                 self.topToolbar.setLocation(text, search: false)
                 self.topToolbar(self.topToolbar, didEnterText: text)
 
                 if shouldSubmitSearch {
                   submitSearch(text)
+                }
+              }
+            case .website:
+              if let text = recentSearch.text {
+                self.topToolbar.setLocation(text, search: false)
+                self.topToolbar(self.topToolbar, didEnterText: text)
+
+                if shouldSubmitSearch {
+                  if let urlString = recentSearch.websiteUrl,
+                    let url = URL(string: urlString)
+                  {
+                    finishEditingAndSubmit(url)
+                  } else {
+                    submitSearch(text)
+                  }
                 }
               }
             case .qrCode:
@@ -809,17 +847,6 @@ extension BrowserViewController: TopToolbarDelegate {
                   submitSearch(websiteUrl)
                 }
               }
-            }
-          } else if UIPasteboard.general.hasStrings || UIPasteboard.general.hasURLs,
-            let searchQuery = UIPasteboard.general.string
-              ?? UIPasteboard.general.url?.absoluteString
-          {
-
-            self.topToolbar.setLocation(searchQuery, search: false)
-            self.topToolbar(self.topToolbar, didEnterText: searchQuery)
-
-            if shouldSubmitSearch {
-              submitSearch(searchQuery)
             }
           }
         }
