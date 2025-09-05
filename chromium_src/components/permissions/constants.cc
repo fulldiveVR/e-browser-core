@@ -12,6 +12,6 @@
 namespace permissions {
 
 constexpr char kChooserBluetoothOverviewURL[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://github.com/fulldiveVR/e-browser/wiki/Web-API-Permissions";
 
 }  // namespace permissions

@@ -13,8 +13,8 @@
     Background Image
   </message>
 
-  <message name="IDS_NEW_TAB_BRAVE_BACKGROUND_LABEL" desc="Label for Brave background option">
-    Brave backgrounds
+  <message name="IDS_NEW_TAB_BRAVE_BACKGROUND_LABEL" desc="Label for AI Wize background option">
+    AI Wize backgrounds
   </message>
 
   <message name="IDS_NEW_TAB_CANCEL_BUTTON_LABEL" desc="Label for cancel button">
@@ -69,11 +69,11 @@
     Hide top sites
   </message>
 
-  <message name="IDS_NEW_TAB_NEWS_WIDGET_TITLE" desc="Title for Brave News widget">
+  <message name="IDS_NEW_TAB_NEWS_WIDGET_TITLE" desc="Title for AI Wize News widget">
     NEWS
   </message>
 
-  <message name="IDS_NEW_TAB_PHOTO_CREDITS_TEXT" desc="Photographer credits for Brave background images">
+  <message name="IDS_NEW_TAB_PHOTO_CREDITS_TEXT" desc="Photographer credits for AI Wize background images">
     Photo by <ph name="AUTHOR">$1</ph>
   </message>
 
@@ -114,7 +114,7 @@
   </message>
 
   <message name="IDS_NEW_TAB_REWARDS_ONBOARDING_BUTTON_LABEL" desc="Label for the Rewards onboarding button">
-    Start using Brave Rewards
+    Start using AI Wize Rewards
   </message>
 
   <message name="IDS_NEW_TAB_REWARDS_ONBOARDING_LINK" desc="Text for Rewards onboarding link">
@@ -129,12 +129,12 @@
     Save changes
   </message>
 
-  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT" desc="Placeholder text for when Brave is not the selected search engine">
+  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT" desc="Placeholder text for when AI Wize is not the selected search engine">
     Search the web
   </message>
 
-  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT_BRAVE" desc="Placeholder text for when Brave is the selected search engine">
-    Ask Brave Search
+  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT_BRAVE" desc="Placeholder text for when AI Wize is the selected search engine">
+    Ask AI Wize Search
   </message>
 
   <message name="IDS_NEW_TAB_SEARCH_CUSTOMIZE_ENGINE_LIST_TEXT" desc="Label for the customize list action">
@@ -174,7 +174,7 @@
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_REWARDS_WIDGET_LABEL" desc="Label for enabling the Rewards widget on the NTP">
-    Brave Rewards
+    AI Wize Rewards
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SEARCH_BOX_LABEL" desc="Label for enabling the searchbox on the NTP">
@@ -182,27 +182,27 @@
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SPONSORED_IMAGES_EARNING_TEXT" desc="Text describing earning for new tab page ads">
-    With <ph name="LINK_BEGIN">$1</ph>Brave Rewards<ph name="LINK_END">$2</ph>, you can earn for seeing new tab page ads.
+    With <ph name="LINK_BEGIN">$1</ph>AI Wize Rewards<ph name="LINK_END">$2</ph>, you can earn for seeing new tab page ads.
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SPONSORED_IMAGES_LABEL" desc="Text for setting to opt-in to Branded Wallpapers on New Tab Page">
     Show new tab page ads
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_STATS_LABEL" desc="Label for showing or hiding Brave Stats on the NTP">
-    Brave Stats
+  <message name="IDS_NEW_TAB_SHOW_STATS_LABEL" desc="Label for showing or hiding AI Wize Stats on the NTP">
+    AI Wize Stats
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_TALK_WIDGET_LABEL" desc="Label for showing or hiding the Brave Talk widget on the NTP">
-    Brave Talk
+  <message name="IDS_NEW_TAB_SHOW_TALK_WIDGET_LABEL" desc="Label for showing or hiding the AI Wize Talk widget on the NTP">
+    AI Wize Talk
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_TOP_SITES_LABEL" desc="Label for control that toggles top sites visibility">
     Show top sites
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_VPN_WIDGET_LABEL" desc="Label for showing or hiding the Brave VPN NTP widget">
-    Brave VPN
+  <message name="IDS_NEW_TAB_SHOW_VPN_WIDGET_LABEL" desc="Label for showing or hiding the AI Wize VPN NTP widget">
+    AI Wize VPN
   </message>
 
   <message name="IDS_NEW_TAB_SOLID_BACKGROUND_LABEL" desc="Solid background colors title">
@@ -221,15 +221,15 @@
     Time saved
   </message>
 
-  <message name="IDS_NEW_TAB_STATS_TITLE" desc="Title for Brave Stats widget">
+  <message name="IDS_NEW_TAB_STATS_TITLE" desc="Title for AI Wize Stats widget">
     STATS
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TEXT" desc="Description text for Brave Talk widget">
-    Encrypted video calls with Brave Talk.
+  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TEXT" desc="Description text for AI Wize Talk widget">
+    Encrypted video calls with AI Wize Talk.
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TITLE" desc="Description title for Brave Talk widget">
+  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TITLE" desc="Description title for AI Wize Talk widget">
     Privacy-First Calls
   </message>
 
@@ -237,7 +237,7 @@
     Start call
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_WIDGET_TITLE" desc="Title for Brave Talk NTP widget">
+  <message name="IDS_NEW_TAB_TALK_WIDGET_TITLE" desc="Title for AI Wize Talk NTP widget">
     TALK
   </message>
 
@@ -305,15 +305,15 @@
     Change
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT1" desc="Brave VPN product feature text item 1">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT1" desc="AI Wize VPN product feature text item 1">
     Extra privacy &amp; security online
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT2" desc="Brave VPN product feature text item 2">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT2" desc="AI Wize VPN product feature text item 2">
     Hide your IP &amp; change your location
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT3" desc="Brave VPN product feature text item 3">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT3" desc="AI Wize VPN product feature text item 3">
     Protect every app on your device
   </message>
 
@@ -321,7 +321,7 @@
     Already purchased?
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_START_TRIAL_LABEL" desc="Label for button to start a Brave VPN free trial">
+  <message name="IDS_NEW_TAB_VPN_START_TRIAL_LABEL" desc="Label for button to start a AI Wize VPN free trial">
     Start free trial
   </message>
 
@@ -349,7 +349,7 @@
     Disconnecting
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_WIDGET_TITLE" desc="Title of the Brave VPN NTP widget">
+  <message name="IDS_NEW_TAB_VPN_WIDGET_TITLE" desc="Title of the AI Wize VPN NTP widget">
     BRAVE VPN
   </message>
 

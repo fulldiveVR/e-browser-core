@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Aiwize Browser Extension",
+  "version": "1.1.3",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoPL8PlsE85PcTzHIEjD6lVaFw4p+HapJcRxKkffpjaYQp+IXW31/PCxkiQSO3jMOWwtrj+k8pryVzrODzucW4wwKO4vcLxOa7q9sA/7AcSfdzyPZNbqa9Vy65wJZC/Atjj0XDM60rU0pejbEmgvFIfmzHXBhxJ2gqz8tQ0IjWwd/Xb2Ep+ASbjd25/AdJKnyiaV7cCZ4iCeES5ybVXmnBB9WGykFJdQ9ThKskk6hXPpMgK1djPXwAbly/IwxdCyq4tEQDxO/yoA08qvgIfcAnv869mP1mwTemsPKNhMHkOSJnEZhe3KOREFhE8AacOn4gLSyoseKP54zbj7eYRg2SQIDAQAB",
+  "description": "Scrape context from pages and allow to inject it and wize teams documents into input fields",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://*/*",
+    "https://*/*",
+    "file://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "externally_connectable": {
+    "ids": ["*"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "aiwize-browser-extension.html",
+        "aiwize-browser-extension.js",
+        "images/*.gif",
+        "images/*.jpg",
+        "images/*.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+   "incognito": "not_allowed"
+}

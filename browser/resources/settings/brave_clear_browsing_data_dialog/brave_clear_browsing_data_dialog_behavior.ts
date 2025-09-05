@@ -23,7 +23,6 @@ import {
 
 export class BraveSettingsClearBrowsingDataDialogElement
 extends SettingsClearBrowsingDataDialogElement {
-  declare braveRewardsEnabled_: boolean
   declare onClearBraveAdsDataClickHandler_: ((e: Event) => void)
 
   private clearDataBrowserProxy_: BraveClearBrowsingDataDialogBrowserProxy =
@@ -38,10 +37,6 @@ extends SettingsClearBrowsingDataDialogElement {
   static override get properties() {
     return {
       ...SettingsClearBrowsingDataDialogElement.properties,
-      braveRewardsEnabled_: {
-        type: Boolean,
-        value: false,
-      },
       onClearBraveAdsDataClickHandler_: {
         type: Function,
         value: () => {},
@@ -59,14 +54,7 @@ extends SettingsClearBrowsingDataDialogElement {
       'browsing-data-counter-text-update',
       this.updateOnExitCountersText_.bind(this))
 
-    this.addWebUiListener(
-      'brave-rewards-enabled-changed', (enabled: boolean) => {
-      this.braveRewardsEnabled_ = enabled
-    })
 
-    this.clearDataBrowserProxy_.getBraveRewardsEnabled().then((enabled) => {
-      this.braveRewardsEnabled_ = enabled
-    })
   }
 
   override connectedCallback() {

@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="uz">
-<translation id="3333887201479867589">Brave Mukofotlar</translation>
+<translation id="3333887201479867589">AI Wize Mukofotlar</translation>
 <translation id="7961015016161918242">Hech qachon</translation>
 <translation id="1209739344687072997">Nosoz sayt haqida xabar qilish</translation>
 <translation id="7630214457764713113">Toza havolani nusxalash</translation>
 <translation id="6406506848690869874">Sinxronlash</translation>
 <translation id="1544192797660353713">Hamyon</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="1990886731975529483">Google Widevine oʻrnatish va ishga tushirish</translation>
 <translation id="4900351245762303149">Google Widevine oʻrnatish</translation>
 <translation id="8342816622062204340"><ph name="URL"/> himoyalangan Google Widevine kontentini ijro etmoqchi. Buning uchun Android tizimining Widevine dastaklash ruxsatini berishingiz kerak. Siz ruxsat berish orqali Google foydalanish shartlari uchun rozilik berasiz.</translation>
@@ -22,13 +22,13 @@
 <translation id="4870911314065352661">Barcha varaqlar yopilsinmi?</translation>
 <translation id="2370739752330685659">Balki keyinroq</translation>
 <translation id="9194637241566114638">Anonim foydalanish maʼlumotlarini yuborish orqali <ph name="SEARCH_NAME"/> rivojlanishiga yordam bering. <ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">Brave Qidiruv</translation>
+<translation id="7404610376221341525">AI Wize Qidiruv</translation>
 <translation id="8184318863960255706">Batafsil</translation>
 <translation id="780301667611848630">Kerak emas</translation>
 <translation id="4450893287417543264">Boshqa koʻrsatilmasin</translation>
 <translation id="8748471354357836070">Batafsil / tanlovlarni bekor qilish</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Brave Qidiruv xizmatini yaxshilash uchun qidiruv va tashriflar haqidagi ayrim anonim maʼlumotlarni taqdim etish.</translation>
+<translation id="8659271182272561965">AI Wize Qidiruv xizmatini yaxshilash uchun qidiruv va tashriflar haqidagi ayrim anonim maʼlumotlarni taqdim etish.</translation>
 <translation id="7400418766976504921">URL</translation>
 <translation id="5916664084637901428">Yoniq</translation>
 <translation id="5860033963881614850">Oʻchiq</translation>
@@ -39,10 +39,10 @@
 <translation id="8712637175834984815">Tushunarli</translation>
 <translation id="8428213095426709021">Sozlamalar</translation>
 <translation id="5234764350956374838">Rad etish</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="4759238208242260848">Yuklanmalar</translation>
 <translation id="2702801445560668637">Mutolaa roʻyxati</translation>
-<translation id="8722651357687610395">Brave'ni birlamchi qilib sozlash</translation>
+<translation id="8722651357687610395">AI Wize'ni birlamchi qilib sozlash</translation>
 <translation id="9130105487623071247">Pleylist nomi</translation>
 <translation id="9065203028668620118">Tahrirlash</translation>
 <translation id="3596306474342941843">Pleylistni oʻchirish</translation>
@@ -81,20 +81,20 @@
 <translation id="5317780077021120954">Saqlash</translation>
 <translation id="8823559166155093873">Cookie fayllarni bloklash</translation>
 <translation id="933652931229970927">Diagnostika hisobotlarini avtomatik yuborish</translation>
-<translation id="1679356339067548863">Brave Brauzer ishlamay qolganda yoki muzlaganda diagnostika hisobotlarini avtomatik yuborish orqali Brave mahsulotining barqarorligini oshirishga yordam bering.</translation>
+<translation id="1679356339067548863">AI Wize Brauzer ishlamay qolganda yoki muzlaganda diagnostika hisobotlarini avtomatik yuborish orqali AI Wize mahsulotining barqarorligini oshirishga yordam bering.</translation>
 <translation id="2356070529366658676">Soʻrash</translation>
 <translation id="3858860766373142691">Nomi</translation>
 <translation id="1181037720776840403">Olib tashlash</translation>
 <translation id="4332558599726753990">Sinxronlashni sozlash</translation>
-<translation id="298546024891487702">Boshlash uchun sinxronlashni rejalagan barcha qurilmalaringizga Brave brauzerini oʻrnatishingiz kerak. Qurilmalaringizni birlashtirish uchun ularni bir-biriga xavfsiz ulashga ishlatadigan sinxronlash zanjirini boshlang.</translation>
+<translation id="298546024891487702">Boshlash uchun sinxronlashni rejalagan barcha qurilmalaringizga AI Wize brauzerini oʻrnatishingiz kerak. Qurilmalaringizni birlashtirish uchun ularni bir-biriga xavfsiz ulashga ishlatadigan sinxronlash zanjirini boshlang.</translation>
 <translation id="2055363275850890030">Maxfiy oyna</translation>
 <translation id="6786747875388722282">Kengaytmalar</translation>
 <translation id="5249433283143453448">Himoyalangan video translatsiyasi va boshqa kontentni brauzerda koʻrish uchun Widevine raqamli huquqlarni boshqarish (DRM) tarkibiy qismidan foydalanish.</translation>
-<translation id="8488282162676695335">Brave Hamyon</translation>
+<translation id="8488282162676695335">AI Wize Hamyon</translation>
 <translation id="2653659639078652383">Yuborish</translation>
 <translation id="5781842473834867765">Suhbatlar tarixini saqlash</translation>
-<translation id="6106701981952170121">Barcha Leo AI suhbat maʼlumotlarini oʻchirish</translation>
-<translation id="2361906291514218784">Leo AI</translation>
+<translation id="6106701981952170121">Barcha AI Wize Chat suhbat maʼlumotlarini oʻchirish</translation>
+<translation id="2361906291514218784">AI Wize Chat</translation>
 <translation id="614530507403667291">Yangi suhbatlar uchun odatiy model</translation>
 <translation id="1907126221851170941">Model qoʻshish</translation>
 <translation id="154702742922788359">Ochiq rejim</translation>

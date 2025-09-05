@@ -7,7 +7,6 @@
 #include "brave/browser/ui/views/location_bar/brave_star_view.h"
 #include "brave/browser/ui/views/page_action/wayback_machine_action_icon_view.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/page_action/page_action_icon_type.h"
 #include "chrome/browser/ui/views/page_action/page_action_icon_view.h"
 
@@ -18,12 +17,6 @@ constexpr bool kSupportsPlaylistActionIconView = true;
 constexpr bool kSupportsPlaylistActionIconView = false;
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/views/speedreader/speedreader_icon_view.h"
-constexpr bool kSupportsSpeedreaderActionIconView = true;
-#else
-constexpr bool kSupportsSpeedreaderActionIconView = false;
-#endif
 
 // Circumvent creation of CookieControlsIconView in
 // PageActionIconController::Init's switch statement by injecting a case
@@ -45,14 +38,6 @@ constexpr bool kSupportsSpeedreaderActionIconView = false;
                                    params.command_updater, params.browser,     \
                                    params.icon_label_bubble_delegate,          \
                                    params.page_action_icon_delegate));         \
-    break;                                                                     \
-  case brave::kSpeedreaderPageActionIconType:                                  \
-    if constexpr (kSupportsSpeedreaderActionIconView) {                        \
-      add_page_action_icon(                                                    \
-          type, std::make_unique<SpeedreaderIconView>(                         \
-                    params.command_updater, params.icon_label_bubble_delegate, \
-                    params.page_action_icon_delegate));                        \
-    }                                                                          \
     break;                                                                     \
   case brave::kUndefinedPageActionIconType
 

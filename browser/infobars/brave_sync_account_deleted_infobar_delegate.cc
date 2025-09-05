@@ -33,7 +33,7 @@ void BraveSyncAccountDeletedInfoBarDelegate::Create(
     return;
   }
 
-  // If we already are on brave://settings/braveSync/setup page, don't show
+  // If we already are on aiwize://settings/braveSync/setup page, don't show
   // informer
   if (!active_web_contents || active_web_contents->GetURL() ==
                                   chrome::GetSettingsUrl(kBraveSyncSetupPath)) {

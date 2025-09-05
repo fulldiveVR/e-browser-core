@@ -105,7 +105,7 @@ function ConversationEntries(props: ConversationEntriesProps) {
         // Additional height is added here to address the issue where the
         // button menu's get cut off when the conversation is short since
         // they cant be rendered outside of the iframe.
-        // See https://github.com/brave/brave-browser/issues/46042
+        // See https://github.com/fulldiveVR/e-browser/issues/46042
         const additionalHeight = Math.max(0, 500 - height)
         document.body.style.setProperty(
           '--iframe-additional-margin-for-menus',
@@ -126,7 +126,7 @@ function ConversationEntries(props: ConversationEntriesProps) {
     <iframe
       sandbox='allow-scripts allow-same-origin'
       allow='clipboard-write'
-      src={'chrome-untrusted://leo-ai-conversation-entries/' + conversationContext.conversationUuid}
+      src={'chrome-untrusted://aiwize-chat-conversation-entries/' + conversationContext.conversationUuid}
       ref={iframeRef}
       onLoad={() => setHasLoaded(true)}
     />

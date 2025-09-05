@@ -1,0 +1,23 @@
+# Copyright (c) 2025 AI Wize Authors. All rights reserved.
+
+
+source_set("split_view2") {
+  sources = [
+    "split_view2_layout_manager.cc",
+    "split_view2_layout_manager.h",
+  ]
+
+  deps = [
+    "//base",
+    "//brave/browser/ui:brave_tab_features",
+    "//brave/components/vector_icons",
+    "//cc",
+    "//chrome/browser/ui/color:mixers",
+    "//components/omnibox/browser",
+    "//components/prefs",
+    "//content/public/browser",
+    "//ui/base",
+    "//ui/gfx",
+    "//ui/views",
+  ]
+}

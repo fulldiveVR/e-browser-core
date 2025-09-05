@@ -60,9 +60,9 @@ class BraveAccountUIBase {
   static inline constexpr char16_t kBraveAccountSelfCustodyLearnMoreURL[] =
       u"https://search.brave.com";
   static inline constexpr char16_t kBraveAccountTermsOfServiceURL[] =
-      u"https://brave.com/terms-of-use/";
+      u"https://aiwize.com/terms-of-use/";
   static inline constexpr char16_t kBraveAccountPrivacyAgreementURL[] =
-      u"https://brave.com/privacy/browser/";
+      u"https://aiwize.com/privacy/browser/";
 
   void SetupWebUIDataSource(WebUIDataSource* source) {
     source->OverrideContentSecurityPolicy(

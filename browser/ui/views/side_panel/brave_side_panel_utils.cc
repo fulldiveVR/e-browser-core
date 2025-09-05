@@ -15,6 +15,12 @@
 #include "components/user_prefs/user_prefs.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/views/widget/widget.h"
+#include "brave/browser/ui/webui/ai_combiner_panel_page_ui.h"
+#include "brave/components/constants/webui_url_constants.h"
+
+using SidePanelWebUIViewT_AICombinerPanel = SidePanelWebUIViewT<AICombinerPanelUI>;
+BEGIN_TEMPLATE_METADATA(SidePanelWebUIViewT_AICombinerPanel, SidePanelWebUIViewT)
+END_METADATA
 
 using SidePanelWebUIViewT_AIChatUI = SidePanelWebUIViewT<AIChatUI>;
 BEGIN_TEMPLATE_METADATA(SidePanelWebUIViewT_AIChatUI, SidePanelWebUIViewT)
@@ -74,6 +80,22 @@ std::unique_ptr<views::View> CreateAIChatSidePanelWebView(
   return web_view;
 }
 
+std::unique_ptr<views::View> CreateAICombinerPanelSidePanelWebView(
+    base::WeakPtr<Profile> profile,
+    SidePanelEntryScope& scope) {
+  CHECK(profile);
+
+  auto web_view = std::make_unique<SidePanelWebUIViewT<AICombinerPanelUI>>(
+      scope, base::RepeatingClosure(), base::DoNothing(),
+      std::make_unique<WebUIContentsWrapperT<AICombinerPanelUI>>(
+          GURL(kAiCombinerPanelPageURL), profile.get(),
+          IDS_COMBINER_PANEL_UI_TITLE,
+          /*esc_closes_ui=*/false));
+
+  web_view->ShowUI();
+  return web_view;
+}
+
 }  // namespace
 
 namespace brave {
@@ -93,6 +115,11 @@ void RegisterContextualSidePanel(SidePanelRegistry* registry,
                             Profile::FromBrowserContext(context)->GetWeakPtr()),
         SidePanelEntry::kSidePanelDefaultContentWidth));
   }
+  registry->Register(std::make_unique<SidePanelEntry>(
+    SidePanelEntry::Key(SidePanelEntry::Id::kAiCombinerPanel),
+    base::BindRepeating(&CreateAICombinerPanelSidePanelWebView,
+                        Profile::FromBrowserContext(context)->GetWeakPtr()),
+        SidePanelEntry::kSidePanelDefaultContentWidth));
 }
 
 }  // namespace brave

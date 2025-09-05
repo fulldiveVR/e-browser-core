@@ -11,7 +11,7 @@ RegisterPolymerTemplateModifications({
       templateContent.querySelector('#downloadedFavicon')
     if (!downloadedFavicon) {
       throw new Error(
-        `[Brave Password Manager Overrides] Could not find '#downloadedFavicon'`
+        `[AI Wize Password Manager Overrides] Could not find '#downloadedFavicon'`
       )
     } else {
       downloadedFavicon.removeAttribute('auto-src')

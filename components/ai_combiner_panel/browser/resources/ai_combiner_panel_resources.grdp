@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <include name="IDR_AI_COMBINER_PANEL_HTML" file="../ai_combiner_panel/browser/resources/index.html" type="BINDATA" />
+</grit-part>

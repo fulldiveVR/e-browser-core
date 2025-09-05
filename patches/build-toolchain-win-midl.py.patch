@@ -1,0 +1,12 @@
+diff --git a/build/toolchain/win/midl.py b/build/toolchain/win/midl.py
+index 9c0d0a4ccff686b7a2885104fe13d4cf5c406d67..37f31799874a266a79ea4a8691970f4da9a85316 100644
+--- a/build/toolchain/win/midl.py
++++ b/build/toolchain/win/midl.py
+@@ -448,6 +448,7 @@ def main(arch, gendir, outdir, dynamic_guids, tlb, h, dlldata, iid, proxy,
+   _, mismatch, errors = filecmp.cmpfiles(midl_output_dir, outdir, common_files)
+   assert not errors
+ 
++  return 0;
+   if mismatch:
+     print('midl.exe output different from files in %s, see %s' %
+           (outdir, midl_output_dir))

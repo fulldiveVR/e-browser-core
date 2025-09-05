@@ -77,4 +77,17 @@ std::optional<std::string> ProcessLauncher::ReadAppOutput(
   }
 }
 
+std::optional<base::Process> ProcessLauncher::ExecuteProcess(
+    base::CommandLine cmdline,
+    base::LaunchOptions options) {
+  
+  options.inherit_mode = base::LaunchOptions::Inherit::kAll;
+
+  base::Process process = base::LaunchProcess(cmdline, options);
+  if (!process.IsValid()) {
+    return std::nullopt;
+  }
+
+  return process;
+}
 }  // namespace brave

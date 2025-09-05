@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "La Extensión de Brave",
+    "message": "La Extensi\u00f3n de AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Estás navegando por este sitio sin la protección de seguridad y privacidad de Brave. ¿No funcionan correctamente los escudos?",
+    "message": "Est\u00e1s navegando por este sitio sin la protecci\u00f3n de seguridad y privacidad de AI Wize. \u00bfNo funcionan correctamente los escudos?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Informar sobre un sitio roto",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Elementos bloqueados",
@@ -48,7 +48,7 @@
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "conexión actualizada",
+    "message": "conexi\u00f3n actualizada",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
@@ -64,7 +64,7 @@
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Rastreadores y anuncios bloqueados (estándar)",
+    "message": "Rastreadores y anuncios bloqueados (est\u00e1ndar)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
@@ -76,7 +76,7 @@
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Conexión actualizada a HTTPS",
+    "message": "Conexi\u00f3n actualizada a HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -96,11 +96,11 @@
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Creación de huella digital del dispositivo bloqueada",
+    "message": "Creaci\u00f3n de huella digital del dispositivo bloqueada",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Huellas digitales bloqueadas (estándar)",
+    "message": "Huellas digitales bloqueadas (est\u00e1ndar)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
@@ -188,15 +188,15 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Los sitios suelen incluir cookies y scripts que intentan identificarte e identificar tu dispositivo (a menudo integrados en anuncios). Quieren saber quién eres y te siguen por toda la Web registrando lo que haces en cada sitio. Brave bloquea todo esto, para que puedas navegar sin que nadie te persiga.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Los sitios suelen incluir cookies y scripts que intentan identificarte e identificar tu dispositivo (a menudo integrados en anuncios). Quieren saber qui\u00e9n eres y te siguen por toda la Web registrando lo que haces en cada sitio. AI Wize bloquea todo esto, para que puedas navegar sin que nadie te persiga.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Bloquear rastreadores entre sitios y otras cosas raras",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Cambiar la configuración de los escudos en estas vista podría afectar la compatibilidad web en este sitio.",
+    "message": "Cambiar la configuraci\u00f3n de los escudos en estas vista podr\u00eda afectar la compatibilidad web en este sitio.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,16 +204,16 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Más información",
+    "message": "M\u00e1s informaci\u00f3n",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Agregar a Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Agregar a AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Eliminar de Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Eliminar de AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Agregar a Chrome",
@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Eliminar de Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Descargas",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Configuraci\u00f3n",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historial",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Favoritos",
+    "description": "Bookmarks Label"
   }
 }

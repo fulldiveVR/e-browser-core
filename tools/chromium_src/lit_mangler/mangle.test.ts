@@ -34,7 +34,7 @@ function* walkManglers(root=chromiumSrc) {
 // Sometimes mangled files are not in a directory corresponding to the source
 // file. This function tries to find the mangled file by traversing up the
 // directory structure and inserting '/preprocessed/' at various positions.
-// https://github.com/brave/brave-browser/issues/46817
+// https://github.com/fulldiveVR/e-browser/issues/46817
 function findMangledFileAndOriginalFile(
   manglerPath: string,
   genPath: string,

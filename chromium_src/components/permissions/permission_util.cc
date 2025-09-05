@@ -47,8 +47,6 @@
     return ContentSettingsType::BRAVE_REFERRERS;                 \
   case PermissionType::BRAVE_COOKIES:                            \
     return ContentSettingsType::BRAVE_COOKIES;                   \
-  case PermissionType::BRAVE_SPEEDREADER:                        \
-    return ContentSettingsType::BRAVE_SPEEDREADER;               \
   case PermissionType::BRAVE_ETHEREUM:                           \
     return ContentSettingsType::BRAVE_ETHEREUM;                  \
   case PermissionType::BRAVE_SOLANA:                             \
@@ -150,8 +148,6 @@ PermissionType PermissionUtil::ContentSettingsTypeToPermissionType(
       return PermissionType::BRAVE_REFERRERS;
     case ContentSettingsType::BRAVE_COOKIES:
       return PermissionType::BRAVE_COOKIES;
-    case ContentSettingsType::BRAVE_SPEEDREADER:
-      return PermissionType::BRAVE_SPEEDREADER;
     case ContentSettingsType::BRAVE_ETHEREUM:
       return PermissionType::BRAVE_ETHEREUM;
     case ContentSettingsType::BRAVE_SOLANA:

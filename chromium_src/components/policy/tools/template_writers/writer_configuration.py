@@ -17,28 +17,28 @@ def GetConfigurationForBuild(original_function, defines):
 
 
 _BRAVE_VALUES = {
-    'build': 'brave',
-    'app_name': 'Brave',
-    'doc_url': 'https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy',
-    'frame_name': 'Brave Frame',
-    'webview_name': 'Brave WebView',
+    'build': 'aiwize',
+    'app_name': 'AIWize',
+    'doc_url': 'https://support.aiwize.com/hc/en-us/articles/360039248271-Group-Policy',
+    'frame_name': 'AIWize Frame',
+    'webview_name': 'AIWize WebView',
     'win_config': {
         'win': {
-            'reg_mandatory_key_name': 'Software\\Policies\\BraveSoftware\\Brave',
-            'reg_recommended_key_name': 'Software\\Policies\\BraveSoftware\\Brave\\Recommended',
-            'mandatory_category_path': ['Cat_Brave', 'brave'],
-            'recommended_category_path': ['Cat_Brave', 'brave_recommended'],
+            'reg_mandatory_key_name': 'Software\\Policies\\AIWizeSoftware\\AIWize',
+            'reg_recommended_key_name': 'Software\\Policies\\AIWizeSoftware\\AIWize\\Recommended',
+            'mandatory_category_path': ['Cat_AIWize', 'aiwize'],
+            'recommended_category_path': ['Cat_AIWize', 'aiwize_recommended'],
             'category_path_strings': {
-                'Cat_Brave': 'Brave Software',
-                'brave': 'Brave',
-                'brave_recommended': 'Brave - {doc_recommended}'
+                'Cat_AIWize': 'AIWize Software',
+                'aiwize': 'AIWize',
+                'aiwize_recommended': 'AIWize - {doc_recommended}'
             },
-            'namespace': 'BraveSoftware.Policies.Brave',
+            'namespace': 'AIWizeSoftware.Policies.AIWize',
         },
     },
-    'admx_prefix': 'brave',
-    'linux_policy_path': '/etc/brave/policies/',
-    'bundle_id': 'com.brave.ios.core',
+    'admx_prefix': 'aiwize',
+    'linux_policy_path': '/etc/aiwize/policies/',
+    'bundle_id': 'com.aiwize.ios.core',
 }
 
 def _merge_dicts(src, dst):

@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "„Brave“ plėtiniai",
+    "message": "\u201eBrave\u201c pl\u0117tiniai",
     "description": "The name of the extension."
   },
   "shields": {
@@ -8,35 +8,35 @@
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "aukštyn",
+    "message": "auk\u0161tyn",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "žemyn",
+    "message": "\u017eemyn",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "šioje svetainėje",
+    "message": "\u0161ioje svetain\u0117je",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Jei svetainė atrodo neveikianti, pabandykite nuleisti skydus",
+    "message": "Jei svetain\u0117 atrodo neveikianti, pabandykite nuleisti skydus",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Šioje svetainėje naršote be „Brave“ privatumo ir saugumo apsaugos. Ar ji tinkamai veikia padidinus skydų apsaugą?",
+    "message": "\u0160ioje svetain\u0117je nar\u0161ote be \u201eBrave\u201c privatumo ir saugumo apsaugos. Ar ji tinkamai veikia padidinus skyd\u0173 apsaug\u0105?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Pranešti apie neveikiančią svetainę",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Prane\u0161ti apie neveikian\u010di\u0105 svetain\u0119",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Užblokuoti elementai",
+    "message": "U\u017eblokuoti elementai",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Užblokuotas elementas",
+    "message": "U\u017eblokuotas elementas",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
@@ -44,19 +44,19 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "atnaujinti ryšiai",
+    "message": "atnaujinti ry\u0161iai",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "atnaujintas ryšys",
+    "message": "atnaujintas ry\u0161ys",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Kelių svetainių sekikliai užblokuoti",
+    "message": "Keli\u0173 svetaini\u0173 sekikliai u\u017eblokuoti",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Sekikliai ir reklamos užblokuoti",
+    "message": "Sekikliai ir reklamos u\u017eblokuoti",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
@@ -72,39 +72,39 @@
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Ryšiai pakeisti į HTTPS",
+    "message": "Ry\u0161iai pakeisti \u012f HTTPS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Ryšys pakeistas į HTTPS",
+    "message": "Ry\u0161ys pakeistas \u012f HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Užblokuoti scenarijai",
+    "message": "U\u017eblokuoti scenarijai",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Kelių svetainių slapukai užblokuoti",
+    "message": "Keli\u0173 svetaini\u0173 slapukai u\u017eblokuoti",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Slapukai užblokuoti",
+    "message": "Slapukai u\u017eblokuoti",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Leidžiami visi slapukai",
+    "message": "Leid\u017eiami visi slapukai",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Kontrolinių kodų kūrimas užblokuotas",
+    "message": "Kontrolini\u0173 kod\u0173 k\u016brimas u\u017eblokuotas",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Kontrolinių kodų kūrimas blokuojamas (standartiškai)",
+    "message": "Kontrolini\u0173 kod\u0173 k\u016brimas blokuojamas (standarti\u0161kai)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Kontrolinių kodų kūrimas blokuojamas (griežtai, gali neveikti svetainės)",
+    "message": "Kontrolini\u0173 kod\u0173 k\u016brimas blokuojamas (grie\u017etai, gali neveikti svetain\u0117s)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
@@ -112,19 +112,19 @@
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Kontrolinių kodų kūrimo bandymai",
+    "message": "Kontrolini\u0173 kod\u0173 k\u016brimo bandymai",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Scenarijai šioje svetainėje",
+    "message": "Scenarijai \u0161ioje svetain\u0117je",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Užblokuoti scenarijai",
+    "message": "U\u017eblokuoti scenarijai",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Leidžiami scenarijai",
+    "message": "Leid\u017eiami scenarijai",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
@@ -144,31 +144,31 @@
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Blokuojama vieną kartą",
+    "message": "Blokuojama vien\u0105 kart\u0105",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Leidžiama vieną kartą",
+    "message": "Leid\u017eiama vien\u0105 kart\u0105",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Leisti scenarijus vieną kartą",
+    "message": "Leisti scenarijus vien\u0105 kart\u0105",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Atšaukti",
+    "message": "At\u0161aukti",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Grįžti",
+    "message": "Gr\u012f\u017eti",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Taikyti vieną kartą",
+    "message": "Taikyti vien\u0105 kart\u0105",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Keisti globaliojo skydo numatytąsias nuostatas",
+    "message": "Keisti globaliojo skydo numatyt\u0105sias nuostatas",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
@@ -176,11 +176,11 @@
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Blokuoti elementą",
+    "message": "Blokuoti element\u0105",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Išplėstinis rodinys",
+    "message": "I\u0161pl\u0117stinis rodinys",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
@@ -188,15 +188,15 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Svetainėse dažnai yra slapukų ir scenarijų, kurie bando identifikuoti jus ir jūsų įrenginį (dažnai būna įdėti reklamose). Jie nori išsiaiškinti, kas jūs, ir sekti jus žiniatinklyje – stebėti, ką veikiate kiekvienoje svetainėje. „Brave“ blokuoja šiuos dalykus, kad galėtumėte naršyti nesekami.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Svetain\u0117se da\u017enai yra slapuk\u0173 ir scenarij\u0173, kurie bando identifikuoti jus ir j\u016bs\u0173 \u012frengin\u012f (da\u017enai b\u016bna \u012fd\u0117ti reklamose). Jie nori i\u0161siai\u0161kinti, kas j\u016bs, ir sekti jus \u017einiatinklyje \u2013 steb\u0117ti, k\u0105 veikiate kiekvienoje svetain\u0117je. \u201eBrave\u201c blokuoja \u0161iuos dalykus, kad gal\u0117tum\u0117te nar\u0161yti nesekami.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Kelių svetainių sekikliai ir kiti baisūs dalykai užblokuoti",
+    "message": "Keli\u0173 svetaini\u0173 sekikliai ir kiti bais\u016bs dalykai u\u017eblokuoti",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Skydo nuostatų keitimas šiame rodinyje gali paveikti žiniatinklio suderinamumą šioje svetainėje.",
+    "message": "Skydo nuostat\u0173 keitimas \u0161iame rodinyje gali paveikti \u017einiatinklio suderinamum\u0105 \u0161ioje svetain\u0117je.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,23 +204,39 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Sužinokite daugiau",
+    "message": "Su\u017einokite daugiau",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Pridėti prie „Brave“",
-    "description": "Message for adding an extension to Brave"
+    "message": "Prid\u0117ti prie \u201eBrave\u201c",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Pašalinti iš „Brave“",
-    "description": "Message for removing an extension from Brave"
+    "message": "Pa\u0161alinti i\u0161 \u201eBrave\u201c",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Pridėt į „Chrome“",
+    "message": "Prid\u0117t \u012f \u201eChrome\u201c",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Pašalinti iš „Chrome“",
+    "message": "Pa\u0161alinti i\u0161 \u201eChrome\u201c",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Atsisiuntimai",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Nustatymai",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Istorija",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u017dym\u0117s",
+    "description": "Bookmarks Label"
   }
 }

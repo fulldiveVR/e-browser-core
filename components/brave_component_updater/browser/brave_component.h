@@ -18,14 +18,6 @@
 
 class PrefService;
 
-namespace brave_ads {
-class ResourceComponentRegistrar;
-}
-
-namespace tor {
-class BraveTorPluggableTransportUpdater;
-class BraveTorClientUpdater;
-}  // namespace tor
 
 namespace brave_component_updater {
 
@@ -86,9 +78,6 @@ class COMPONENT_EXPORT(BRAVE_COMPONENT_UPDATER) BraveComponent {
   Delegate* delegate();
 
  private:
-  friend class brave_ads::ResourceComponentRegistrar;
-  friend class tor::BraveTorPluggableTransportUpdater;
-  friend class tor::BraveTorClientUpdater;
   friend class LocalDataFilesService;
 
   explicit BraveComponent(Delegate* delegate);

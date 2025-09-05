@@ -14,7 +14,7 @@ RegisterPolymerTemplateModifications({
     )
     if (!safeBrowsingReportingToggleSetting) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with ' +
+        '[AI Wize Settings Overrides] Could not find template with ' +
         'if=[[!hideExtendedReportingRadioButton_]] on security page.'
       )
     } else {
@@ -22,7 +22,7 @@ RegisterPolymerTemplateModifications({
         content.getElementById('safeBrowsingReportingToggle')
       if (!safeBrowsingReportingToggle) {
         console.error(
-          '[Brave Settings Overrides] Could not find ' +
+          '[AI Wize Settings Overrides] Could not find ' +
           ' safeBrowsingReportingToggle id on security page.')
       } else {
         safeBrowsingReportingToggle.setAttribute('hidden', 'true')
@@ -31,7 +31,7 @@ RegisterPolymerTemplateModifications({
     const safeBrowsingEnhanced = templateContent.
       getElementById('safeBrowsingEnhanced')
     if (!safeBrowsingEnhanced) {
-      console.error('[Brave Settings Overrides] Could not find ' +
+      console.error('[AI Wize Settings Overrides] Could not find ' +
                     'safeBrowsingEnhanced id on security page.')
     } else {
       safeBrowsingEnhanced.setAttribute('hidden', 'true')
@@ -40,7 +40,7 @@ RegisterPolymerTemplateModifications({
       getElementById('safeBrowsingStandard')
     if (!safeBrowsingStandard) {
       console.error(
-        '[Brave Settings Overrides] Could not find safeBrowsingStandard id ' +
+        '[AI Wize Settings Overrides] Could not find safeBrowsingStandard id ' +
         'on security page.')
     } else {
         // We don't want to show the separator or arrow icon for this
@@ -51,7 +51,7 @@ RegisterPolymerTemplateModifications({
       getElementById('passwordsLeakToggle')
     if (!passwordsLeakToggle) {
       console.error(
-        '[Brave Settings Overrides] Could not find passwordsLeakToggle id ' +
+        '[AI Wize Settings Overrides] Could not find passwordsLeakToggle id ' +
         'on security page.')
     } else {
       passwordsLeakToggle.setAttribute('hidden', 'true')
@@ -63,13 +63,13 @@ RegisterPolymerTemplateModifications({
       )
       if (!enableHttpsFirstModeNewSettings) {
         console.error(
-          '[Brave Settings Overrides] Could not find template with ' +
+          '[AI Wize Settings Overrides] Could not find template with ' +
           'if=[[!enableHttpsFirstModeNewSettings]] on security page.')
       } else {
         const httpsOnlyModeToggle = enableHttpsFirstModeNewSettings.content.
           getElementById('httpsOnlyModeToggle')
         if (!httpsOnlyModeToggle) {
-          console.error('[Brave Settings Overrides] Could not find ' +
+          console.error('[AI Wize Settings Overrides] Could not find ' +
                         'httpsOnlyModeToggle on security page.')
         } else {
           httpsOnlyModeToggle.setAttribute('hidden', 'true')
@@ -79,7 +79,7 @@ RegisterPolymerTemplateModifications({
     const link = templateContent.
       getElementById('advancedProtectionProgramLink')
     if (!link) {
-      console.error('[Brave Settings Overrides] Could not find ' +
+      console.error('[AI Wize Settings Overrides] Could not find ' +
                     'advancedProtectionProgramLink id on security page.')
     } else {
       link.setAttribute('hidden', 'true')

@@ -201,7 +201,7 @@ ui::Accelerator FromCodesString(const std::string& value) {
   // Not sure why, but some clients are encountering empty accelerators. If we
   // encounter one in the wild, just return an empty accelerator instead of
   // crashing:
-  // https://github.com/brave/brave-browser/issues/31419
+  // https://github.com/fulldiveVR/e-browser/issues/31419
   if (parts.empty()) {
     return ui::Accelerator();
   }

@@ -27,6 +27,9 @@
 #include "net/http/http_request_headers.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
+#include "brave/components/aiwize_llm/aiwize_llm_constants.h"
+#include "net/http/http_status_code.h"
+#include "url/url_constants.h"
 
 namespace ai_chat {
 
@@ -59,13 +62,13 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
 std::string CreateJSONRequestBody(
     base::Value::List messages,
     const bool is_sse_enabled,
-    const mojom::CustomModelOptions& model_options) {
+    const std::string model_name) {
   base::Value::Dict dict;
 
   dict.Set("messages", std::move(messages));
   dict.Set("stream", is_sse_enabled);
   dict.Set("temperature", 0.7);
-  dict.Set("model", model_options.model_request_name);
+  dict.Set("model", model_name);
 
   std::string json;
   base::JSONWriter::Write(dict, &json);
@@ -76,6 +79,7 @@ std::string CreateJSONRequestBody(
 
 OAIAPIClient::OAIAPIClient(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory) {
+  model_name_ = "";
   api_request_helper_ = std::make_unique<api_request_helper::APIRequestHelper>(
       GetNetworkTrafficAnnotationTag(), url_loader_factory);
 }
@@ -96,10 +100,85 @@ void OAIAPIClient::PerformRequest(
     return;
   }
 
+
+  std::string model_name = model_options.model_request_name;
+  if (model_options.model_request_name.compare(
+          aiwize_llm::kAIWizeLLMCustomModel) == 0) {
+    if (model_name_.length() == 0) {
+      GURL url{base::StrCat({url::kHttpScheme, url::kStandardSchemeSeparator,
+                             aiwize_llm::kAIWizeLLMAPI,
+                             aiwize_llm::kAIChatModelPath})};
+
+      base::flat_map<std::string, std::string> headers;
+      headers.emplace("Accept", "application/json");
+
+      auto on_complete = base::BindOnce(
+          &OAIAPIClient::OnModelQueryCompleted, weak_ptr_factory_.GetWeakPtr(),
+          model_options, std::move(messages), std::move(data_received_callback),
+          std::move(completed_callback));
+
+      api_request_helper_->Request("GET", url, "", "application/json",
+                                   std::move(on_complete), headers, {});
+      return;
+    }
+    model_name = model_name_;
+  }
+  PerformRequestInternal(model_options, std::move(messages),
+                         std::move(data_received_callback),
+                         std::move(completed_callback));
+}
+
+
+void OAIAPIClient::OnModelQueryCompleted(
+    const mojom::CustomModelOptions& model_options,
+    base::Value::List messages,
+    GenerationDataCallback data_received_callback,
+    GenerationCompletedCallback completed_callback,
+    api_request_helper::APIRequestResult result) {
+  const bool success = result.Is2XXResponseCode();
+  std::string model_name = "";
+
+  if (success) {
+    if (result.value_body().is_dict()) {
+      const std::string* value =
+          result.value_body().GetDict().FindString("currentModel");
+      if (value) {
+        model_name = *value;
+      }
+    }
+
+    if (!model_name.empty()) {
+      model_name_ = model_name;
+      PerformRequestInternal(model_options, std::move(messages),
+                             std::move(data_received_callback),
+                             std::move(completed_callback));
+      return;
+    }
+  }
+
+  // Handle error
+  mojom::APIError error;
+
+  if (net::HTTP_TOO_MANY_REQUESTS == result.response_code()) {
+    error = mojom::APIError::RateLimitReached;
+  } else if (net::HTTP_REQUEST_ENTITY_TOO_LARGE == result.response_code()) {
+    error = mojom::APIError::ContextLimitReached;
+  } else {
+    error = mojom::APIError::ConnectionIssue;
+  }
+
+  std::move(completed_callback).Run(base::unexpected(std::move(error)));
+}
+
+void OAIAPIClient::PerformRequestInternal(
+    const mojom::CustomModelOptions& model_options,
+    base::Value::List messages,
+    GenerationDataCallback data_received_callback,
+    GenerationCompletedCallback completed_callback) {
   const bool is_sse_enabled =
       ai_chat::features::kAIChatSSE.Get() && !data_received_callback.is_null();
   const std::string request_body =
-      CreateJSONRequestBody(std::move(messages), is_sse_enabled, model_options);
+      CreateJSONRequestBody(std::move(messages), is_sse_enabled, model_name_);
   base::flat_map<std::string, std::string> headers;
   if (!model_options.api_key.empty()) {
     headers.emplace("Authorization",
@@ -134,7 +213,7 @@ void OAIAPIClient::PerformRequest(
 // code. As such, during SSE, this method will run the callback with either a
 // completion (which could be an empty string), or an error. We aim to provide
 // more information to the user/UI when invalid payloads are received. That
-// effort is tracked here: https://github.com/brave/brave-browser/issues/43536
+// effort is tracked here: https://github.com/fulldiveVR/e-browser/issues/43536
 void OAIAPIClient::OnQueryCompleted(
     GenerationCompletedCallback callback,
     api_request_helper::APIRequestResult result) {

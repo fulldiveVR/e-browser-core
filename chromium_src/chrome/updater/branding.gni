@@ -1,4 +1,4 @@
-# Copyright (c) 2023 The Brave Authors. All rights reserved.
+# Copyright (c) 2023 The AI Wize Authors. All rights reserved.
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -14,26 +14,26 @@
 import("//build/util/branding.gni")
 
 brave_updater_branding = {
-  browser_name = "Brave"
+  browser_name = "AIWize"
   browser_product_name = chrome_product_full_name
   crash_product_name = "BraveUpdater"
-  keystone_app_name = "BraveSoftwareUpdate"
-  keystone_bundle_identifier = "com.brave.Keystone"
-  mac_browser_bundle_identifier = "com.brave.Browser"
-  mac_updater_bundle_identifier = "com.brave.BraveUpdater"
+  keystone_app_name = "AIWizeSoftwareUpdate"
+  keystone_bundle_identifier = "com.aiwize.Keystone"
+  mac_browser_bundle_identifier = "com.aiwize.Browser"
+  mac_updater_bundle_identifier = "com.aiwize.BraveUpdater"
   privileged_helper_bundle_name = "BraveUpdaterPrivilegedHelper"
-  privileged_helper_name = "com.brave.Browser.UpdaterPrivilegedHelper"
+  privileged_helper_name = "com.aiwize.Browser.UpdaterPrivilegedHelper"
   updater_app_icon_path = "//brave/app/theme/chromium/mac/app.icns"
-  updater_company_full_name = "Brave Software, Inc"
-  updater_company_short_name = "BraveSoftware"
-  updater_company_short_name_uppercase = "BRAVESOFTWARE"
-  updater_copyright = "Copyright 2024 The Brave Authors. All rights reserved."
+  updater_company_full_name = "AI Wize Software, Inc"
+  updater_company_short_name = "AIWizeSoftware"
+  updater_company_short_name_uppercase = "AIWIZESOFTWARE"
+  updater_copyright = "Copyright 2024 The AI Wize Authors. All rights reserved."
   updater_product_full_name = "BraveUpdater"
-  mac_team_identifier = "KL8N8XSYF4"
+  mac_team_identifier = "7B7J6CN346"
   grdfile_name = "brave_strings"
 
   # The following values come from our Omaha 3 implementation:
-  legacy_service_name_prefix = "brave"
+  legacy_service_name_prefix = "aiwize"
   UpdaterLegacyLibGUID = "6FF4F468-0B5A-4878-ACEB-86263DAAD877"
   GoogleUpdate3WebUserClassGUID = "2F78AECB-0A7F-4474-89D5-C325293DE960"
   GoogleUpdate3WebSystemClassGUID = "00B16F95-319A-4F01-AC81-CE69B8F4E387"
@@ -85,6 +85,6 @@ brave_updater_branding = {
   declare_args() {
     # Omaha 4 update server:
     update_check_url =
-        "https://updates.bravesoftware.com/non-stable/service/update2/json"
+        "https://updates.aiwize.com/non-stable/service/update2/json"
   }
 }

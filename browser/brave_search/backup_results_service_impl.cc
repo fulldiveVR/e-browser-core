@@ -50,7 +50,7 @@ constexpr net::NetworkTrafficAnnotationTag kNetworkTrafficAnnotationTag =
       policy {
         cookies_allowed: YES
         setting:
-          "You can enable or disable these features on brave://settings/search "
+          "You can enable or disable these features on aiwize://settings/search "
           "and https://search.brave.com/settings"
         policy_exception_justification:
           "Not implemented."

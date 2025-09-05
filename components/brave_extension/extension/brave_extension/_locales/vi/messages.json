@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Phần mở rộng Brave",
+    "message": "Ph\u1ea7n m\u1edf r\u1ed9ng AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Lá chắn",
+    "message": "L\u00e1 ch\u1eafn",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "lên",
+    "message": "l\u00ean",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "không hoạt động",
+    "message": "kh\u00f4ng ho\u1ea1t \u0111\u1ed9ng",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "cho trang này",
+    "message": "cho trang n\u00e0y",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Nếu trang web hiển thị lỗi, hãy thử tắt lá chắn",
+    "message": "N\u1ebfu trang web hi\u1ec3n th\u1ecb l\u1ed7i, h\u00e3y th\u1eed t\u1eaft l\u00e1 ch\u1eafn",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Bạn đang duyệt qua trang web này mà không sử dụng biện pháp bảo vệ quyền riêng tư và bảo mật của Brave. Trang web có không hoạt động đúng cách khi bạn bật Shields không?",
+    "message": "B\u1ea1n \u0111ang duy\u1ec7t qua trang web n\u00e0y m\u00e0 kh\u00f4ng s\u1eed d\u1ee5ng bi\u1ec7n ph\u00e1p b\u1ea3o v\u1ec7 quy\u1ec1n ri\u00eang t\u01b0 v\u00e0 b\u1ea3o m\u1eadt c\u1ee7a AI Wize. Trang web c\u00f3 kh\u00f4ng ho\u1ea1t \u0111\u1ed9ng \u0111\u00fang c\u00e1ch khi b\u1ea1n b\u1eadt Shields kh\u00f4ng?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Báo cáo trang web bị hỏng",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "B\u00e1o c\u00e1o trang web b\u1ecb h\u1ecfng",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Mục đã chặn",
+    "message": "M\u1ee5c \u0111\u00e3 ch\u1eb7n",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Mục đã chặn",
+    "message": "M\u1ee5c \u0111\u00e3 ch\u1eb7n",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "và",
+    "message": "v\u00e0",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "kết nối đã được nâng cấp",
+    "message": "k\u1ebft n\u1ed1i \u0111\u00e3 \u0111\u01b0\u1ee3c n\u00e2ng c\u1ea5p",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "kết nối đã được nâng cấp",
+    "message": "k\u1ebft n\u1ed1i \u0111\u00e3 \u0111\u01b0\u1ee3c n\u00e2ng c\u1ea5p",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Đã chặn các bộ theo dõi trên mọi website",
+    "message": "\u0110\u00e3 ch\u1eb7n c\u00e1c b\u1ed9 theo d\u00f5i tr\u00ean m\u1ecdi website",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Trình theo dõi và quảng cáo bị chặn",
+    "message": "Tr\u00ecnh theo d\u00f5i v\u00e0 qu\u1ea3ng c\u00e1o b\u1ecb ch\u1eb7n",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Trình theo dõi và quảng cáo đã bị chặn (tích cực)",
+    "message": "Tr\u00ecnh theo d\u00f5i v\u00e0 qu\u1ea3ng c\u00e1o \u0111\u00e3 b\u1ecb ch\u1eb7n (t\u00edch c\u1ef1c)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Trình theo dõi và quảng cáo đã bị chặn (tiêu chuẩn)",
+    "message": "Tr\u00ecnh theo d\u00f5i v\u00e0 qu\u1ea3ng c\u00e1o \u0111\u00e3 b\u1ecb ch\u1eb7n (ti\u00eau chu\u1ea9n)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Cho phép tất cả trình theo dõi và quảng cáo",
+    "message": "Cho ph\u00e9p t\u1ea5t c\u1ea3 tr\u00ecnh theo d\u00f5i v\u00e0 qu\u1ea3ng c\u00e1o",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Kết nối đã được nâng cấp lên HPPTS",
+    "message": "K\u1ebft n\u1ed1i \u0111\u00e3 \u0111\u01b0\u1ee3c n\u00e2ng c\u1ea5p l\u00ean HPPTS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Kết nối đã được nâng cấp lên HPPTS",
+    "message": "K\u1ebft n\u1ed1i \u0111\u00e3 \u0111\u01b0\u1ee3c n\u00e2ng c\u1ea5p l\u00ean HPPTS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Đã chặn kịch bản",
+    "message": "\u0110\u00e3 ch\u1eb7n k\u1ecbch b\u1ea3n",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Đã chặn cookie trên mọi website",
+    "message": "\u0110\u00e3 ch\u1eb7n cookie tr\u00ean m\u1ecdi website",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Đã chặn cookie",
+    "message": "\u0110\u00e3 ch\u1eb7n cookie",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Đã cho phép toàn bộ cookie",
+    "message": "\u0110\u00e3 cho ph\u00e9p to\u00e0n b\u1ed9 cookie",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Đã chặn tính năng tạo dấu vân tay",
+    "message": "\u0110\u00e3 ch\u1eb7n t\u00ednh n\u0103ng t\u1ea1o d\u1ea5u v\u00e2n tay",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Vân tay bị chặn (tiêu chuẩn)",
+    "message": "V\u00e2n tay b\u1ecb ch\u1eb7n (ti\u00eau chu\u1ea9n)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Vân tay bị chặn (chặt chẽ, có thể khiến các website bị lỗi)",
+    "message": "V\u00e2n tay b\u1ecb ch\u1eb7n (ch\u1eb7t ch\u1ebd, c\u00f3 th\u1ec3 khi\u1ebfn c\u00e1c website b\u1ecb l\u1ed7i)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Cho phép tất cả vân tay",
+    "message": "Cho ph\u00e9p t\u1ea5t c\u1ea3 v\u00e2n tay",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Ý định theo dõi dấu vân tay",
+    "message": "\u00dd \u0111\u1ecbnh theo d\u00f5i d\u1ea5u v\u00e2n tay",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Các script trên trang web này",
+    "message": "C\u00e1c script tr\u00ean trang web n\u00e0y",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Các script đã bị chặn",
+    "message": "C\u00e1c script \u0111\u00e3 b\u1ecb ch\u1eb7n",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Script được cho phép",
+    "message": "Script \u0111\u01b0\u1ee3c cho ph\u00e9p",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Chặn tất cả",
+    "message": "Ch\u1eb7n t\u1ea5t c\u1ea3",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Cho phép toàn bộ",
+    "message": "Cho ph\u00e9p to\u00e0n b\u1ed9",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Chặn",
+    "message": "Ch\u1eb7n",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Cho phép",
+    "message": "Cho ph\u00e9p",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Bị chặn một lần",
+    "message": "B\u1ecb ch\u1eb7n m\u1ed9t l\u1ea7n",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Được cho phép một lần",
+    "message": "\u0110\u01b0\u1ee3c cho ph\u00e9p m\u1ed9t l\u1ea7n",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Cho phép các tập lệnh script một lần",
+    "message": "Cho ph\u00e9p c\u00e1c t\u1eadp l\u1ec7nh script m\u1ed9t l\u1ea7n",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Hủy",
+    "message": "H\u1ee7y",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Quay lại",
+    "message": "Quay l\u1ea1i",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Áp dụng một lần",
+    "message": "\u00c1p d\u1ee5ng m\u1ed9t l\u1ea7n",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Thay đổi cài đặt mặc định tổng thể của khiên",
+    "message": "Thay \u0111\u1ed5i c\u00e0i \u0111\u1eb7t m\u1eb7c \u0111\u1ecbnh t\u1ed5ng th\u1ec3 c\u1ee7a khi\u00ean",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Quản lý bộ lọc tùy chỉnh",
+    "message": "Qu\u1ea3n l\u00fd b\u1ed9 l\u1ecdc t\u00f9y ch\u1ec9nh",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Chặn thành phần",
+    "message": "Ch\u1eb7n th\u00e0nh ph\u1ea7n",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Dạng xem Nâng cao",
+    "message": "D\u1ea1ng xem N\u00e2ng cao",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Dạng xem Đơn giản",
+    "message": "D\u1ea1ng xem \u0110\u01a1n gi\u1ea3n",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Các trang thường có cookie và tập lệnh tìm cách xác định danh tính của bạn và thiết bị của bạn (thường được nhúng trong quảng cáo). Họ muốn tìm hiểu xem bạn là ai và theo dõi bạn trên mạng - theo dõi hoạt động của bạn trên mọi trang. Brave chặn những thứ này để bạn có thể lướt web mà không bị theo dõi.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "C\u00e1c trang th\u01b0\u1eddng c\u00f3 cookie v\u00e0 t\u1eadp l\u1ec7nh t\u00ecm c\u00e1ch x\u00e1c \u0111\u1ecbnh danh t\u00ednh c\u1ee7a b\u1ea1n v\u00e0 thi\u1ebft b\u1ecb c\u1ee7a b\u1ea1n (th\u01b0\u1eddng \u0111\u01b0\u1ee3c nh\u00fang trong qu\u1ea3ng c\u00e1o). H\u1ecd mu\u1ed1n t\u00ecm hi\u1ec3u xem b\u1ea1n l\u00e0 ai v\u00e0 theo d\u00f5i b\u1ea1n tr\u00ean m\u1ea1ng - theo d\u00f5i ho\u1ea1t \u0111\u1ed9ng c\u1ee7a b\u1ea1n tr\u00ean m\u1ecdi trang. AI Wize ch\u1eb7n nh\u1eefng th\u1ee9 n\u00e0y \u0111\u1ec3 b\u1ea1n c\u00f3 th\u1ec3 l\u01b0\u1edbt web m\u00e0 kh\u00f4ng b\u1ecb theo d\u00f5i.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Trình theo dõi chéo và những thứ nguy hiểm khác đã bị chặn",
+    "message": "Tr\u00ecnh theo d\u00f5i ch\u00e9o v\u00e0 nh\u1eefng th\u1ee9 nguy hi\u1ec3m kh\u00e1c \u0111\u00e3 b\u1ecb ch\u1eb7n",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Thay đổi cài đặt Shield trong chế độ xem này có thể ảnh hưởng đến tính tương thích web trên trang này.",
+    "message": "Thay \u0111\u1ed5i c\u00e0i \u0111\u1eb7t Shield trong ch\u1ebf \u0111\u1ed9 xem n\u00e0y c\u00f3 th\u1ec3 \u1ea3nh h\u01b0\u1edfng \u0111\u1ebfn t\u00ednh t\u01b0\u01a1ng th\u00edch web tr\u00ean trang n\u00e0y.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Bỏ qua",
+    "message": "B\u1ecf qua",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Tìm hiểu thêm",
+    "message": "T\u00ecm hi\u1ec3u th\u00eam",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Thêm vào Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Th\u00eam v\u00e0o AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Xóa khỏi Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "X\u00f3a kh\u1ecfi AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Thêm vào Chrome",
+    "message": "Th\u00eam v\u00e0o Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Xóa khỏi Chrome",
+    "message": "X\u00f3a kh\u1ecfi Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "T\u1ec7p \u0111\u00e3 t\u1ea3i xu\u1ed1ng",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "C\u00e0i \u0111\u1eb7t",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Nh\u1eadt k\u00fd",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "D\u1ea5u trang",
+    "description": "Bookmarks Label"
   }
 }

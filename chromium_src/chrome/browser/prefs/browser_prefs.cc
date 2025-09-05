@@ -6,15 +6,12 @@
 #include "base/check.h"
 #include "brave/browser/brave_local_state_prefs.h"
 #include "brave/browser/brave_profile_prefs.h"
-#include "brave/browser/brave_rewards/rewards_prefs_util.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
 #include "brave/browser/misc_metrics/uptime_monitor_impl.h"
 #include "brave/browser/ntp_background/ntp_p3a_helper_impl.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
 #include "brave/components/ai_chat/core/browser/model_service.h"
-#include "brave/components/brave_adaptive_captcha/prefs_util.h"
-#include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
 #include "brave/components/brave_news/browser/brave_news_p3a.h"
 #include "brave/components/brave_news/common/p3a_pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
@@ -22,10 +19,7 @@
 #include "brave/components/brave_shields/core/browser/brave_shields_p3a.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
-#include "brave/components/brave_wallet/browser/keyring_service.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/decentralized_dns/core/utils.h"
 #include "brave/components/ipfs/ipfs_prefs.h"
 #include "brave/components/l10n/common/prefs.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
@@ -33,7 +27,6 @@
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/p3a/metric_log_store.h"
 #include "brave/components/p3a/rotation_scheduler.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/channel_info.h"
 #include "chrome/common/pref_names.h"
@@ -51,10 +44,6 @@
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/pref_names.h"
-#include "brave/components/tor/tor_utils.h"
-#endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
 #include "brave/browser/widevine/widevine_utils.h"
@@ -117,7 +106,6 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   profile_prefs->ClearPref(kBraveSearchVisitCount);
 #endif
 
-  brave_wallet::MigrateObsoleteProfilePrefs(profile_prefs);
 
   // Added 05/2021
   profile_prefs->ClearPref(kBraveNewsIntroDismissed);
@@ -125,7 +113,6 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   profile_prefs->ClearPref(prefs::kNetworkPredictionOptions);
 
   // Added 01/2022
-  brave_rewards::MigrateObsoleteProfilePrefs(profile_prefs);
 
   // Added 05/2022
   translate::ClearMigrationBraveProfilePrefs(profile_prefs);
@@ -157,9 +144,6 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
 #endif
 
   // Added 03/2024
-#if BUILDFLAG(ENABLE_TOR)
-  profile_prefs->ClearPref(tor::prefs::kAutoOnionRedirect);
-#endif
 
 #if defined(TOOLKIT_VIEWS)
   // Added May 2023
@@ -178,7 +162,6 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   ntp_background_images::MigrateObsoleteProfilePrefs(profile_prefs);
 
   // Added 2023-11
-  brave_ads::MigrateObsoleteProfilePrefs(profile_prefs);
 
   brave_shields::MigrateObsoleteProfilePrefs(profile_prefs);
 
@@ -197,7 +180,6 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   profile_prefs->ClearPref(kHangoutsEnabled);
 
   // Added 2024-10
-  brave_adaptive_captcha::MigrateObsoleteProfilePrefs(profile_prefs);
 
 #if BUILDFLAG(IS_ANDROID)
   // Added 27/11/2024: https://github.com/brave/brave-core/pull/26719
@@ -218,12 +200,7 @@ void MigrateObsoleteLocalStatePrefs(PrefService* local_state) {
   // BEGIN_MIGRATE_OBSOLETE_LOCAL_STATE_PREFS
   MigrateObsoleteLocalStatePrefs_ChromiumImpl(local_state);
 
-#if BUILDFLAG(ENABLE_TOR)
-  // Added 4/2021.
-  tor::MigrateLastUsedProfileFromLocalStatePrefs(local_state);
-#endif
 
-  decentralized_dns::MigrateObsoleteLocalStatePrefs(local_state);
 
 #if !BUILDFLAG(IS_ANDROID)
   // Added 10/2022

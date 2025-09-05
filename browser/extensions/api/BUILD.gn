@@ -9,12 +9,10 @@ import("//tools/json_schema_compiler/json_schema_api.gni")
 function_registration("generated_api_registration") {
   sources = brave_extensions_api_schema_sources
   impl_dir = "//brave/browser/extensions/api/"
-  bundle_name = "Brave"
+  bundle_name = "AIWize"
   root_namespace = brave_extensions_api_root_namespace
 
   deps = [
-    "//brave/components/brave_ads/core/mojom",
-    "//brave/components/brave_rewards/core/mojom",
     "//extensions/browser",
     "//extensions/common",
   ]

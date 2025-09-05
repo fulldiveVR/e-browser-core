@@ -63,8 +63,5 @@ bool BraveExtensionsClient::IsScriptableURL(const GURL& url,
   return ChromeExtensionsClient::IsScriptableURL(url, error);
 }
 
-const GURL& BraveExtensionsClient::GetWebstoreUpdateURL() const {
-  return webstore_update_url_;
-}
 
 }  // namespace extensions

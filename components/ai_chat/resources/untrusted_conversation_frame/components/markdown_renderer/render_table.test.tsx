@@ -137,10 +137,10 @@ describe('Table Rendering', () => {
       const markdown = `
 | Name | Website |
 |------|---------|
-| John | [Brave](https://brave.com) |
+| John | [Brave](https://aiwize.com) |
       `.trim()
 
-      renderMarkdown(markdown, { allowedLinks: ['https://brave.com'] })
+      renderMarkdown(markdown, { allowedLinks: ['https://aiwize.com'] })
 
       const link = screen.getByText('Brave')
       expect(link).toBeInTheDocument()

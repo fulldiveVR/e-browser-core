@@ -31,11 +31,6 @@ ui::ImageModel BraveAvatarToolbarButtonDelegate::GetAvatarIcon(
     SkColor icon_color,
     const ui::ColorProvider& color_provider) const {
   const auto location_bar_icon_size = GetLayoutConstant(LOCATION_BAR_ICON_SIZE);
-  if (browser_->profile()->IsTor()) {
-    return ui::ImageModel::FromVectorIcon(kLeoProductTorIcon,
-                                          SkColorSetRGB(0x3C, 0x82, 0x3C),
-                                          location_bar_icon_size);
-  }
 
   if (browser_->profile()->IsIncognitoProfile()) {
     return ui::ImageModel::FromVectorIcon(
@@ -52,9 +47,6 @@ ui::ImageModel BraveAvatarToolbarButtonDelegate::GetAvatarIcon(
 }
 
 std::u16string BraveAvatarToolbarButtonDelegate::GetAvatarTooltipText() const {
-  if (browser_->profile()->IsTor()) {
-    return l10n_util::GetStringUTF16(IDS_TOR_AVATAR_BUTTON_TOOLTIP_TEXT);
-  }
 
   return AvatarToolbarButtonDelegate::GetAvatarTooltipText();
 }

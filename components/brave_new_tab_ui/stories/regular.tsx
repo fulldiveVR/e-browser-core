@@ -13,10 +13,7 @@ import NewTabPage from '../containers/newTab'
 import { getActionsForDispatch } from '../api/getActions'
 import store from '../store'
 import { useNewTabData, getGridSitesData } from './default/data/storybookState'
-import { onChangeColoredBackground, onUseBraveBackground, onShowBrandedImageChanged } from './default/data/backgroundWallpaper'
-import getTodayState from './default/data/todayStorybookState'
-import getBraveVPNState from './default/data/braveVPNStorybookState'
-import getBraveNewsDisplayAd from './default/data/getBraveNewsDisplayAd'
+import { onChangeColoredBackground, onUseBraveBackground } from './default/data/backgroundWallpaper'
 import { getDataUrl, getUnpaddedAsDataUrl } from '../../common/privateCDN'
 import { images, updateImages } from '../data/backgrounds'
 
@@ -65,22 +62,14 @@ export const Regular = () => {
   const state = store.getState()
   const newTabData = useNewTabData(state.newTabData)
   const gridSitesData = getGridSitesData(state.gridSitesData)
-  const todayState = getTodayState()
-  const braveVPNState = getBraveVPNState()
 
   return (
     <NewTabPage
       newTabData={newTabData}
-      todayData={todayState}
-      braveVPNData={braveVPNState}
       gridSitesData={gridSitesData}
       actions={getActions()}
       saveShowBackgroundImage={doNothing}
-      saveShowRewards={doNothing}
-      saveShowBraveTalk={doNothing}
-      saveBrandedWallpaperOptIn={onShowBrandedImageChanged}
       saveSetAllStackWidgets={doNothing}
-      getBraveNewsDisplayAd={getBraveNewsDisplayAd}
       setBraveBackground={onUseBraveBackground}
       chooseNewCustomBackgroundImage={doNothing}
       setCustomImageBackground={doNothing}

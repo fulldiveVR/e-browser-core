@@ -16,17 +16,17 @@
 namespace brave {
 
 std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
-  // Replace Chrome -> Brave.
+  // Replace Chrome -> AI Wize.
   constexpr std::string_view kChromeHeader = "Chrome URLs";
-  constexpr std::string_view kBraveHeader = "Brave URLs";
+  constexpr std::string_view kBraveHeader = "AI Wize URLs";
   constexpr std::string_view kChromePagesHeader = "List of Chrome URLs";
-  constexpr std::string_view kBravePagesHeader = "List of Brave URLs";
+  constexpr std::string_view kBravePagesHeader = "List of AI Wize URLs";
   constexpr std::string_view kChromeInternalPagesHeader =
       "List of chrome://internals pages";
   constexpr std::string_view kBraveInternalPagesHeader =
-      "List of brave://internals pages";
+      "List of aiwize://internals pages";
   constexpr std::string_view kChromeURLList = ">chrome://";
-  constexpr std::string_view kBraveURLList = ">brave://";
+  constexpr std::string_view kBraveURLList = ">aiwize://";
 
   RE2::GlobalReplace(&chrome_urls, kChromeHeader, kBraveHeader);
   RE2::GlobalReplace(&chrome_urls, kChromePagesHeader, kBravePagesHeader);
@@ -38,7 +38,7 @@ std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
   auto html_lines = base::SplitStringPiece(
       chrome_urls, "\n", base::KEEP_WHITESPACE, base::SPLIT_WANT_ALL);
   constexpr auto kURLsToRemove = base::MakeFixedFlatSet<std::string_view>({
-      "brave://memories",
+      "aiwize://memories",
   });
   // URLs in html should be sorted so it's okay to iterate over sorted
   // kURLsToRemove.

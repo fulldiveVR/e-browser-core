@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="ka">
-<translation id="3333887201479867589">Brave Rewards</translation>
+<translation id="3333887201479867589">AI Wize Rewards</translation>
 <translation id="7961015016161918242">არასდროს</translation>
 <translation id="1209739344687072997">შეტყობინება ხარვეზის შესახებ</translation>
 <translation id="7630214457764713113">სუფთა ბმულის კოპირება</translation>
@@ -19,14 +19,14 @@
 <translation id="4870911314065352661">ნამდვილად გსურთ ყველა ჩანართის დახურვა?</translation>
 <translation id="2370739752330685659">მოგვიანებით</translation>
 <translation id="9194637241566114638">დაგვეხმარეთ <ph name="SEARCH_NAME"/> -ს გაუმჯობესებაში ანონიმური გამოყენების მონაცემების გამოგზავნით. <ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">Brave ძებნა</translation>
+<translation id="7404610376221341525">AI Wize ძებნა</translation>
 <translation id="8184318863960255706">დეტალურად</translation>
 <translation id="6965382102122355670">OK</translation>
 <translation id="780301667611848630">არა, გმადლობთ</translation>
 <translation id="4450893287417543264">აღარ აჩვენო</translation>
 <translation id="8748471354357836070">გაიგეთ მეტი / არჩევის შესაძლებლობა</translation>
 <translation id="4174337572777167894">ვებ-ძიების პროექტი</translation>
-<translation id="8659271182272561965">ანონიმური ძიებისა &amp; და ბრაუზინგის მონაცემების შეტანა Brave ძებნის გასაუმჯობესებლად.</translation>
+<translation id="8659271182272561965">ანონიმური ძიებისა &amp; და ბრაუზინგის მონაცემების შეტანა AI Wize ძებნის გასაუმჯობესებლად.</translation>
 <translation id="7400418766976504921">URL</translation>
 <translation id="5916664084637901428">ჩართულია</translation>
 <translation id="5860033963881614850">გამორთულია</translation>
@@ -37,10 +37,10 @@
 <translation id="8712637175834984815">გასაგებია</translation>
 <translation id="8428213095426709021">პარამეტრები</translation>
 <translation id="5234764350956374838">გაუქმება</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="4759238208242260848">გადმოწერილი ფაილები</translation>
 <translation id="2702801445560668637">საკითხავი სია</translation>
-<translation id="8722651357687610395">Brave-ის ნაგულისხმევ ბრაუზერად დაყენება</translation>
+<translation id="8722651357687610395">AI Wize-ის ნაგულისხმევ ბრაუზერად დაყენება</translation>
 <translation id="9130105487623071247">ფლეილისთის სახელი</translation>
 <translation id="9065203028668620118">რედაქტირება</translation>
 <translation id="3596306474342941843">ფლეილისთის წაშლა</translation>
@@ -79,21 +79,21 @@
 <translation id="5317780077021120954">შენახვა</translation>
 <translation id="8823559166155093873">ქუქების დაბლოკვა</translation>
 <translation id="933652931229970927">დიაგნოსტიკური ანგარიშების ავტომატურად გაგზავნა</translation>
-<translation id="1679356339067548863">დაეხმარეთ Brave-ს პროდუქტების სტაბილურობის გაუმჯობესებაში დიაგნოსტიკური რეპორტების ავტომატური გაგზავნით, როდესაც Brave ბრაუზერი გაითიშება ან გაიყინება.</translation>
+<translation id="1679356339067548863">დაეხმარეთ AI Wize-ს პროდუქტების სტაბილურობის გაუმჯობესებაში დიაგნოსტიკური რეპორტების ავტომატური გაგზავნით, როდესაც AI Wize ბრაუზერი გაითიშება ან გაიყინება.</translation>
 <translation id="2356070529366658676">კითხვა</translation>
 <translation id="3858860766373142691">სახელი</translation>
 <translation id="1181037720776840403">წაშლა</translation>
 <translation id="4332558599726753990">სინქრონიზაციის დაყენება</translation>
-<translation id="298546024891487702">პირველ რიგში, Brave უნდა დააინსტალიროთ ყველა იმ მოწყობილობაზე, რომლის სინქრონიზაციასაც გეგმავთ. შემდეგ შექმენით სინქრონიზაციის ჯაჭვი, რომელიც საშუალებას მოგცემთ უსაფრთხოდ დაუკავშიროთ ყველა მოწყობილობა.</translation>
+<translation id="298546024891487702">პირველ რიგში, AI Wize უნდა დააინსტალიროთ ყველა იმ მოწყობილობაზე, რომლის სინქრონიზაციასაც გეგმავთ. შემდეგ შექმენით სინქრონიზაციის ჯაჭვი, რომელიც საშუალებას მოგცემთ უსაფრთხოდ დაუკავშიროთ ყველა მოწყობილობა.</translation>
 <translation id="2055363275850890030">პირადი ფანჯარა</translation>
 <translation id="6786747875388722282">გაფართოებები</translation>
 <translation id="5249433283143453448">Widevine-ის ციფრული უფლებების მართვის (DRM) კომპონენტის გამოყენება, ბრაუზერში დაცული სტრიმინგის ვიდეოებისა და სხვა კონტენტის სანახავად.</translation>
-<translation id="8488282162676695335">Brave საფულე</translation>
+<translation id="8488282162676695335">AI Wize საფულე</translation>
 <translation id="2653659639078652383">გაგზავნა</translation>
-<translation id="6129027151000961048">Leo</translation>
+<translation id="6129027151000961048">AI Wize Chat</translation>
 <translation id="5781842473834867765">მიმოწერების ისტორიის შენახვა</translation>
-<translation id="6106701981952170121">Leo AI მიმოწერების მონაცემების წაშლა</translation>
-<translation id="2361906291514218784">Leo AI</translation>
+<translation id="6106701981952170121">AI Wize Chat მიმოწერების მონაცემების წაშლა</translation>
+<translation id="2361906291514218784">AI Wize Chat</translation>
 <translation id="614530507403667291">ნაგულისხმევი მოდელი ახალი საუბრებისთვის</translation>
 <translation id="1907126221851170941">მოდელის დამატება</translation>
 <translation id="154702742922788359">ღია რეჟიმი</translation>

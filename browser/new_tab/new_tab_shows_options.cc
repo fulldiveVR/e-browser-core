@@ -26,7 +26,7 @@ GURL GetNewTabPageURL(Profile* profile) {
   DCHECK(profile);
 
   if (!profile->IsRegularProfile()) {
-    return GURL();
+    return GURL(kHomeNewTabURL);
   }
 
   auto* prefs = profile->GetPrefs();
@@ -35,15 +35,15 @@ GURL GetNewTabPageURL(Profile* profile) {
       prefs->GetInteger(kNewTabPageShowsOptions));
   if (option == NewTabPageShowsOptions::kHomepage) {
     if (prefs->GetBoolean(prefs::kHomePageIsNewTabPage)) {
-      return GURL();
+      return GURL(kHomeNewTabURL);
     }
     return GURL(prefs->GetString(prefs::kHomePage));
   } else if (option == NewTabPageShowsOptions::kBlankpage) {
     // NewTab route will handle for blank page.
-    return GURL();
+    return GURL(kHomeNewTabURL);
   } else {
     DCHECK_EQ(NewTabPageShowsOptions::kDashboard, option);
-    return GURL();
+    return GURL(kHomeNewTabURL);
   }
 }
 

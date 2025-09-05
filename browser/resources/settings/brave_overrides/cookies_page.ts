@@ -21,14 +21,14 @@ RegisterPolymerTemplateModifications({
       )
     if (!isNot3pcdRedesignEnabledTemplate) {
       console.error(
-        '[Brave Settings Overrides] Could not find template with ' +
+        '[AI Wize Settings Overrides] Could not find template with ' +
         'if*=!is3pcdRedesignEnabledTemplate on cookies page.')
     } else {
       const generalControls = isNot3pcdRedesignEnabledTemplate.content.
           getElementById('generalControls')
       if (!generalControls) {
         console.error(
-          '[Brave Settings Overrides] Could not find generalControls id ' +
+          '[AI Wize Settings Overrides] Could not find generalControls id ' +
           'on cookies page.')
       } else {
         generalControls.setAttribute('hidden', 'true')
@@ -38,7 +38,7 @@ RegisterPolymerTemplateModifications({
       getElementById('additionalProtections')
     if (!additionalProtections) {
       console.error(
-        '[Brave Settings Overrides] Could not find additionalProtections ' +
+        '[AI Wize Settings Overrides] Could not find additionalProtections ' +
         'id on cookies page.')
     } else {
       additionalProtections.setAttribute('hidden', 'true')
@@ -46,7 +46,7 @@ RegisterPolymerTemplateModifications({
     const siteDataTrigger = templateContent.getElementById('site-data-trigger')
     if (!siteDataTrigger) {
       console.error(
-        '[Brave Settings Overrides] Could not find site-data-trigger id ' +
+        '[AI Wize Settings Overrides] Could not find site-data-trigger id ' +
         'on cookies page')
     } else {
       siteDataTrigger.setAttribute('hidden', 'true')
@@ -54,7 +54,7 @@ RegisterPolymerTemplateModifications({
     const doNotTrackToggle = templateContent.getElementById('doNotTrack')
     if (!doNotTrackToggle) {
       console.error(
-        '[Brave Settings Overrides] Could not find toggle id on cookies page')
+        '[AI Wize Settings Overrides] Could not find toggle id on cookies page')
     } else {
       doNotTrackToggle.setAttribute('hidden', 'true')
     }
@@ -66,13 +66,13 @@ const BraveSettingsCookiePageBehavior = {
     const siteList = this.shadowRoot!.getElementById('allow3pcExceptionsList')
     if (!siteList) {
       throw new Error(
-        '[Brave Settings Overrides] Could not find allow3pcExceptionsList'
+        '[AI Wize Settings Overrides] Could not find allow3pcExceptionsList'
       )
     }
     const listHeader = siteList.shadowRoot!.getElementById('listHeader')
     if (!listHeader) {
       throw new Error(
-        '[Brave Settings Overrides] Could not find allow3pcExceptionsList'
+        '[AI Wize Settings Overrides] Could not find allow3pcExceptionsList'
       )
     }
     const wrapper = document.createElement('div')

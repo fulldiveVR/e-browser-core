@@ -23,7 +23,7 @@ std::optional<std::string> ProcessLauncher::ReadAppOutput(
     base::CommandLine cmdline,
     base::LaunchOptions options,
     int timeout_sec) {
-  std::array<int, 2> pipe_fd;
+  int pipe_fd[2];
   if (pipe(pipe_fd) < 0) {
     return std::nullopt;
   }
@@ -57,6 +57,18 @@ std::optional<std::string> ProcessLauncher::ReadAppOutput(
   } else {
     return std::nullopt;
   }
+}
+
+std::optional<base::Process> ProcessLauncher::ExecuteProcess(
+    base::CommandLine cmdline,
+    base::LaunchOptions options) {
+
+  base::Process process = base::LaunchProcess(cmdline, options);
+  if (!process.IsValid()) {
+    return std::nullopt;
+  }
+
+  return process;
 }
 
 }  // namespace brave

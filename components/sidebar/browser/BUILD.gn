@@ -24,7 +24,6 @@ static_library("browser") {
     "//base",
     "//brave/components/ai_chat/core/browser",
     "//brave/components/ai_chat/core/common",
-    "//brave/components/brave_wallet/common",
     "//brave/components/constants:constants",
     "//brave/components/l10n/common",
     "//brave/components/resources:strings",

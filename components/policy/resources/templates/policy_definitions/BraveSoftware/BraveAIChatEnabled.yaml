@@ -1,7 +1,7 @@
 caption: Disable AI Chat
 default: null
 desc: |-
-  Disable AI Chat in Brave.
+  Disable AI Chat in AIWize.
 
   The smart AI assistant built right into your browser. Ask questions, summarize pages, create new content, and more. Privately.
 
@@ -26,9 +26,9 @@ items:
 - caption: Allow the user to decide
   value: null
 owners:
-- bbondy@brave.com
-- peter@brave.com
-- clifton@brave.com
+- bbondy@aiwize.com
+- peter@aiwize.com
+- clifton@aiwize.com
 schema:
   type: boolean
 supported_on:

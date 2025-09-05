@@ -1,178 +1,178 @@
 {
   "appName": {
-    "message": "የ Brave የቀጠለ ",
+    "message": "\u12e8 AI Wize \u12e8\u1240\u1320\u1208 ",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "መከላከያዎች",
+    "message": "\u1218\u12a8\u120b\u12a8\u12eb\u12ce\u127d",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "ላይ",
+    "message": "\u120b\u12ed",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "ወደታች",
+    "message": "\u12c8\u12f0\u1273\u127d",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "ለዚህ ገፅ",
+    "message": "\u1208\u12da\u1205 \u1308\u1345",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "ገፁ ተሰብሮ ከሆነ መከላከያዎችን በማውረድ ይሞክሩ ",
+    "message": "\u1308\u1341 \u1270\u1230\u1265\u122e \u12a8\u1206\u1290 \u1218\u12a8\u120b\u12a8\u12eb\u12ce\u127d\u1295 \u1260\u121b\u12cd\u1228\u12f5 \u12ed\u121e\u12ad\u1229 ",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "ይህን ገፅ ያለ Brave ግላዊነት እና ደህንነት ጥበቃዎች እያሰሱ ነው። ጋሻዎቹ ወደላይ ቢሆኑ በትክክል አይሰራም?",
+    "message": "\u12ed\u1205\u1295 \u1308\u1345 \u12eb\u1208 AI Wize \u130d\u120b\u12ca\u1290\u1275 \u12a5\u1293 \u12f0\u1205\u1295\u1290\u1275 \u1325\u1260\u1243\u12ce\u127d \u12a5\u12eb\u1230\u1231 \u1290\u12cd\u1362 \u130b\u123b\u12ce\u1279 \u12c8\u12f0\u120b\u12ed \u1262\u1206\u1291 \u1260\u1275\u12ad\u12ad\u120d \u12a0\u12ed\u1230\u122b\u121d?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "የተሰበረ ገጽን ሪፖርት ያድርጉ",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u12e8\u1270\u1230\u1260\u1228 \u1308\u133d\u1295 \u122a\u1356\u122d\u1275 \u12eb\u12f5\u122d\u1309",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "ንጥሎች ታግደዋል",
+    "message": "\u1295\u1325\u120e\u127d \u1273\u130d\u12f0\u12cb\u120d",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "ንጥል ታግዷል",
+    "message": "\u1295\u1325\u120d \u1273\u130d\u12f7\u120d",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "እና",
+    "message": "\u12a5\u1293",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "ግንኙነቶች ተሻሽሏል",
+    "message": "\u130d\u1295\u1299\u1290\u1276\u127d \u1270\u123b\u123d\u120f\u120d",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "ግንኙነት ተሻሽሏል",
+    "message": "\u130d\u1295\u1299\u1290\u1275 \u1270\u123b\u123d\u120f\u120d",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "ድረ ገጽ ተሻጋሪ ተከታታዮች ታግደዋል",
+    "message": "\u12f5\u1228 \u1308\u133d \u1270\u123b\u130b\u122a \u1270\u12a8\u1273\u1273\u12ee\u127d \u1273\u130d\u12f0\u12cb\u120d",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "ተከታታዮች እና ማስታወቂያዎች ታግደዋል",
+    "message": "\u1270\u12a8\u1273\u1273\u12ee\u127d \u12a5\u1293 \u121b\u1235\u1273\u12c8\u1242\u12eb\u12ce\u127d \u1273\u130d\u12f0\u12cb\u120d",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "ተከታታዮች እና ማስታወቂያዎች ታግደዋል (ሃይል የሚጠቀም)",
+    "message": "\u1270\u12a8\u1273\u1273\u12ee\u127d \u12a5\u1293 \u121b\u1235\u1273\u12c8\u1242\u12eb\u12ce\u127d \u1273\u130d\u12f0\u12cb\u120d (\u1203\u12ed\u120d \u12e8\u121a\u1320\u1240\u121d)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "ተከታታዮች እና ማስታወቂያዎች ታግደዋል (ስታንዳርድ)",
+    "message": "\u1270\u12a8\u1273\u1273\u12ee\u127d \u12a5\u1293 \u121b\u1235\u1273\u12c8\u1242\u12eb\u12ce\u127d \u1273\u130d\u12f0\u12cb\u120d (\u1235\u1273\u1295\u12f3\u122d\u12f5)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "ሁሉንም ተከታታዮች እና ማስታወቂያዎች ፍቀድ",
+    "message": "\u1201\u1209\u1295\u121d \u1270\u12a8\u1273\u1273\u12ee\u127d \u12a5\u1293 \u121b\u1235\u1273\u12c8\u1242\u12eb\u12ce\u127d \u134d\u1240\u12f5",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "ግንኙነቶች ወደ HTTPS ተሻሽለዋል",
+    "message": "\u130d\u1295\u1299\u1290\u1276\u127d \u12c8\u12f0 HTTPS \u1270\u123b\u123d\u1208\u12cb\u120d",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "ግንኙነት ወደ HTTPS ተሻሽሏል",
+    "message": "\u130d\u1295\u1299\u1290\u1275 \u12c8\u12f0 HTTPS \u1270\u123b\u123d\u120f\u120d",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "ስክሪፕቱ ታግዷል",
+    "message": "\u1235\u12ad\u122a\u1355\u1271 \u1273\u130d\u12f7\u120d",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "ድረ ገጽ ተሻጋሪ ኩኪዎች ታግደዋል",
+    "message": "\u12f5\u1228 \u1308\u133d \u1270\u123b\u130b\u122a \u12a9\u12aa\u12ce\u127d \u1273\u130d\u12f0\u12cb\u120d",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "ኩኪዎች ታግደዋል ",
+    "message": "\u12a9\u12aa\u12ce\u127d \u1273\u130d\u12f0\u12cb\u120d ",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "ሁሉም ኩኪዎች ተፈቅደዋል ",
+    "message": "\u1201\u1209\u121d \u12a9\u12aa\u12ce\u127d \u1270\u1348\u1245\u12f0\u12cb\u120d ",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "የጣት አሻራ ታግዷል",
+    "message": "\u12e8\u1323\u1275 \u12a0\u123b\u122b \u1273\u130d\u12f7\u120d",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "የጣት አሻራ ታግ (ል (መደበኛ)",
+    "message": "\u12e8\u1323\u1275 \u12a0\u123b\u122b \u1273\u130d (\u120d (\u1218\u12f0\u1260\u129b)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "የጣት አሻራ ታግ (ል (ጥብቅ ፣ ጣቢያዎችን ሊሰብር ይችላል)",
+    "message": "\u12e8\u1323\u1275 \u12a0\u123b\u122b \u1273\u130d (\u120d (\u1325\u1265\u1245 \u1363 \u1323\u1262\u12eb\u12ce\u127d\u1295 \u120a\u1230\u1265\u122d \u12ed\u127d\u120b\u120d)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "ሁሉም የጣት አሻራ መውሰድን ፍቀድ",
+    "message": "\u1201\u1209\u121d \u12e8\u1323\u1275 \u12a0\u123b\u122b \u1218\u12cd\u1230\u12f5\u1295 \u134d\u1240\u12f5",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "የጣት አሻራ የመውሰድ ሙከራዎች",
+    "message": "\u12e8\u1323\u1275 \u12a0\u123b\u122b \u12e8\u1218\u12cd\u1230\u12f5 \u1219\u12a8\u122b\u12ce\u127d",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "በዚህ ገፅ ላይ ያሉ ስክሪፕቶች",
+    "message": "\u1260\u12da\u1205 \u1308\u1345 \u120b\u12ed \u12eb\u1209 \u1235\u12ad\u122a\u1355\u1276\u127d",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": " የታገዱ ስክሪፕቶች",
+    "message": "\u00a0\u12e8\u1273\u1308\u12f1 \u1235\u12ad\u122a\u1355\u1276\u127d",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "የተፈቀደላቸው ስክሪፕቶች",
+    "message": "\u12e8\u1270\u1348\u1240\u12f0\u120b\u1278\u12cd \u1235\u12ad\u122a\u1355\u1276\u127d",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "ሁሉንም አግድ",
+    "message": "\u1201\u1209\u1295\u121d \u12a0\u130d\u12f5",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "ሁሉንም ፍቀድ",
+    "message": "\u1201\u1209\u1295\u121d \u134d\u1240\u12f5",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "አግድ",
+    "message": "\u12a0\u130d\u12f5",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "ፍቀድ",
+    "message": "\u134d\u1240\u12f5",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "አንዴ የታገደ ",
+    "message": "\u12a0\u1295\u12f4 \u12e8\u1273\u1308\u12f0 ",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "አንዴ የተፈቀደ ",
+    "message": "\u12a0\u1295\u12f4 \u12e8\u1270\u1348\u1240\u12f0 ",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "ስክሪፕቶችን አንዴ ፍቀድ ",
+    "message": "\u1235\u12ad\u122a\u1355\u1276\u127d\u1295 \u12a0\u1295\u12f4 \u134d\u1240\u12f5 ",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "አቋርጥ",
+    "message": "\u12a0\u124b\u122d\u1325",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "ወደ ኋላ ተመለስ",
+    "message": "\u12c8\u12f0 \u128b\u120b \u1270\u1218\u1208\u1235",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "አንድ ግዜ ብቻ ተግብር",
+    "message": "\u12a0\u1295\u12f5 \u130d\u12dc \u1265\u127b \u1270\u130d\u1265\u122d",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "አለም አቀፍ የራስ ሰር መከላከያዎችን ለውጥ",
+    "message": "\u12a0\u1208\u121d \u12a0\u1240\u134d \u12e8\u122b\u1235 \u1230\u122d \u1218\u12a8\u120b\u12a8\u12eb\u12ce\u127d\u1295 \u1208\u12cd\u1325",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "ብጁ ማጣሪያዎችን ያቀናብሩ",
+    "message": "\u1265\u1301 \u121b\u1323\u122a\u12eb\u12ce\u127d\u1295 \u12eb\u1240\u1293\u1265\u1229",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
@@ -180,40 +180,40 @@
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "የላቀ እይታ",
+    "message": "\u12e8\u120b\u1240 \u12a5\u12ed\u1273",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "ቀላል እይታ",
+    "message": "\u1240\u120b\u120d \u12a5\u12ed\u1273",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "ድረ ገጾች አብዛኛውን ጊዜ ኩኪዎችና ስክሪፕቶች የሚጠቀሙ ሲሆን እንርሱ ደግሞ የእርስዎንና የመሳሪያዎን ማንነት ለማወቅ ይሞክራሉ (አብዛኛውን ጊዜ ከማስታወቂያ ጋር የተጣመሩ ናቸው)። እርስዎ ማን እንደሆኑ ለማወቅና በድረ ገጹ ባጠቃላይ የእርስዎን እንቅስቃሴ ይከታተላሉ። Brave እነዚህን ነገሮች በማገድ ማንም ሳይከተልዎት ማሰስ አንዲችሉ ያደርግዎታል።",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u12f5\u1228 \u1308\u133e\u127d \u12a0\u1265\u12db\u129b\u12cd\u1295 \u130a\u12dc \u12a9\u12aa\u12ce\u127d\u1293 \u1235\u12ad\u122a\u1355\u1276\u127d \u12e8\u121a\u1320\u1240\u1219 \u1232\u1206\u1295 \u12a5\u1295\u122d\u1231 \u12f0\u130d\u121e \u12e8\u12a5\u122d\u1235\u12ce\u1295\u1293 \u12e8\u1218\u1233\u122a\u12eb\u12ce\u1295 \u121b\u1295\u1290\u1275 \u1208\u121b\u12c8\u1245 \u12ed\u121e\u12ad\u122b\u1209 (\u12a0\u1265\u12db\u129b\u12cd\u1295 \u130a\u12dc \u12a8\u121b\u1235\u1273\u12c8\u1242\u12eb \u130b\u122d \u12e8\u1270\u1323\u1218\u1229 \u1293\u1278\u12cd)\u1362 \u12a5\u122d\u1235\u12ce \u121b\u1295 \u12a5\u1295\u12f0\u1206\u1291 \u1208\u121b\u12c8\u1245\u1293 \u1260\u12f5\u1228 \u1308\u1339 \u1263\u1320\u1243\u120b\u12ed \u12e8\u12a5\u122d\u1235\u12ce\u1295 \u12a5\u1295\u1245\u1235\u1243\u1234 \u12ed\u12a8\u1273\u1270\u120b\u1209\u1362 AI Wize \u12a5\u1290\u12da\u1205\u1295 \u1290\u1308\u122e\u127d \u1260\u121b\u1308\u12f5 \u121b\u1295\u121d \u1233\u12ed\u12a8\u1270\u120d\u12ce\u1275 \u121b\u1230\u1235 \u12a0\u1295\u12f2\u127d\u1209 \u12eb\u12f0\u122d\u130d\u12ce\u1273\u120d\u1362",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "ድረ ገጽ ተሻጋሪ ዱካ ተከታታዮችና ሌሎች አዋኪ ነገሮች ታግደዋል",
+    "message": "\u12f5\u1228 \u1308\u133d \u1270\u123b\u130b\u122a \u12f1\u12ab \u1270\u12a8\u1273\u1273\u12ee\u127d\u1293 \u120c\u120e\u127d \u12a0\u12cb\u12aa \u1290\u1308\u122e\u127d \u1273\u130d\u12f0\u12cb\u120d",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "በዚህ እይታ ውስጥ የጋሻ ቅንብሮችን መቀየር በዚህ ድረ ገጽ ላይ የድር ተስማሚነትን ሊጎዳ ይችላል።",
+    "message": "\u1260\u12da\u1205 \u12a5\u12ed\u1273 \u12cd\u1235\u1325 \u12e8\u130b\u123b \u1245\u1295\u1265\u122e\u127d\u1295 \u1218\u1240\u12e8\u122d \u1260\u12da\u1205 \u12f5\u1228 \u1308\u133d \u120b\u12ed \u12e8\u12f5\u122d \u1270\u1235\u121b\u121a\u1290\u1275\u1295 \u120a\u130e\u12f3 \u12ed\u127d\u120b\u120d\u1362",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "ገባኝ",
+    "message": "\u1308\u1263\u129d",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "የበለጠ ይወቁ",
+    "message": "\u12e8\u1260\u1208\u1320 \u12ed\u12c8\u1241",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "ወደ Brave ያክሉ",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u12c8\u12f0 AI Wize \u12eb\u12ad\u1209",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "&#4776;Brave &#4768;&#4661;&#4808;&#4877;&#4853;",
-    "description": "Message for removing an extension from Brave"
+    "message": "&#4776;AI Wize &#4768;&#4661;&#4808;&#4877;&#4853;",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Add to Chrome",
@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Remove from Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u12e8\u12c8\u1228\u12f1",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u1245\u1295\u1265\u122e\u127d",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u1273\u122a\u12ad",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u12d5\u120d\u1263\u1276\u127d",
+    "description": "Bookmarks Label"
   }
 }

@@ -7,7 +7,7 @@
 
 """
 On Android the `--output' switch to `npm run test', which produces xunit
-reports, doesn't work (https://github.com/brave/brave-browser/issues/15595).
+reports, doesn't work (https://github.com/fulldiveVR/e-browser/issues/15595).
 
 This script reads json on stdin (`--json-results-file') and prints xunit xml
 on stdout.

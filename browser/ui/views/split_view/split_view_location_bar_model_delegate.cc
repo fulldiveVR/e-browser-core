@@ -7,6 +7,7 @@
 
 #include "brave/browser/ui/views/split_view/split_view_location_bar.h"
 #include "chrome/common/url_constants.h"
+#include "brave/components/constants/webui_url_constants.h"
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/common/url_constants.h"
 
@@ -28,7 +29,7 @@ bool SplitViewLocationBarModelDelegate::ShouldDisplayURL() const {
     // We don't want to hide chrome://newtab url for this location bar.
     const auto is_ntp = [](const GURL& url) {
       return url.SchemeIs(content::kChromeUIScheme) &&
-             url.host() == chrome::kChromeUINewTabHost;
+             (url.host() == chrome::kChromeUINewTabHost || url.host() == kHomeNewTabURL);
     };
     if (is_ntp(entry->GetVirtualURL()) || is_ntp(entry->GetURL())) {
       return true;

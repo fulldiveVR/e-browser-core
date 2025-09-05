@@ -22,7 +22,7 @@ declare_args() {
   sparkle_eddsa_private_key = ""
   sparkle_eddsa_public_key = ""
 
-  brave_product_name = "brave"
+  brave_product_name = "aiwize"
   brave_exe = ""
   brave_version_major = ""
   brave_version_minor = ""
@@ -109,7 +109,7 @@ if (is_win) {
   if (target_cpu == "x86") {
     _arch = "32"
   }
-  brave_installer_exe = "brave_installer.exe"
+  brave_installer_exe = "aiwize_installer.exe"
   brave_stub_installer_exe =
       "BraveBrowser$_channel" + "Setup$_arch$brave_underline_full_version.exe"
   brave_untagged_stub_installer_exe =
@@ -144,7 +144,7 @@ if (is_win) {
     brave_product_dir_name_suffix = "-Development"
   }
   brave_product_dir_name =
-      "BraveSoftware/Brave-Browser$brave_product_dir_name_suffix"
+      "AIWizeSoftware/AIWize-Browser$brave_product_dir_name_suffix"
 
   if (base_sparkle_update_url == "") {
     base_sparkle_update_url =

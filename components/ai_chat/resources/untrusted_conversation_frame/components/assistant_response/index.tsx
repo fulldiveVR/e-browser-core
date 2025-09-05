@@ -91,7 +91,7 @@ function AssistantEvent(props: {
   }
   if (props.event.searchStatusEvent && props.isEntryInProgress && !props.hasCompletionStarted) {
     return (
-      <div className={styles.actionInProgress}><ProgressRing />Improving answer with Brave Search…</div>
+      <div className={styles.actionInProgress}><ProgressRing />Improving answer with AI Wize Search…</div>
     )
   }
   // TODO(petemill): Consider displaying in-progress queries if the API

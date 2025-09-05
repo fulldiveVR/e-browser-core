@@ -14,13 +14,9 @@
 #include "base/functional/callback_helpers.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
 #include "brave/browser/ai_chat/ai_chat_utils.h"
-#include "brave/browser/brave_ads/creatives/search_result_ad/creative_search_result_ad_tab_helper.h"
-#include "brave/browser/brave_ads/tabs/ads_tab_helper.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_news/brave_news_tab_helper.h"
-#include "brave/browser/brave_rewards/rewards_tab_helper.h"
 #include "brave/browser/brave_shields/brave_shields_web_contents_observer.h"
-#include "brave/browser/brave_wallet/brave_wallet_tab_helper.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_tab_helper.h"
 #include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
@@ -32,8 +28,6 @@
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/psst/browser/content/psst_tab_helper.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
@@ -75,14 +69,7 @@
 #include "brave/components/brave_wayback_machine/brave_wayback_machine_tab_helper.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/onion_location_tab_helper.h"
-#include "brave/components/tor/tor_tab_helper.h"
-#endif
 
 #if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
 #include "brave/browser/web_discovery/web_discovery_tab_helper.h"
@@ -124,7 +111,6 @@ void AttachTabHelpers(content::WebContents* web_contents) {
   }
 #endif
 
-  brave_rewards::RewardsTabHelper::CreateForWebContents(web_contents);
 
   content::BrowserContext* context = web_contents->GetBrowserContext();
   if (ai_chat::IsAllowedForContext(context)) {
@@ -173,24 +159,13 @@ void AttachTabHelpers(content::WebContents* web_contents) {
   brave_perf_predictor::PerfPredictorTabHelper::CreateForWebContents(
       web_contents);
 
-  brave_ads::AdsTabHelper::CreateForWebContents(web_contents);
-  brave_ads::CreativeSearchResultAdTabHelper::MaybeCreateForWebContents(
-      web_contents);
   psst::PsstTabHelper::MaybeCreateForWebContents(
       web_contents, ISOLATED_WORLD_ID_BRAVE_INTERNAL);
 #if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
   web_discovery::WebDiscoveryTabHelper::MaybeCreateForWebContents(web_contents);
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  speedreader::SpeedreaderTabHelper::MaybeCreateForWebContents(web_contents);
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-  tor::TorTabHelper::MaybeCreateForWebContents(
-      web_contents, web_contents->GetBrowserContext()->IsTor());
-  tor::OnionLocationTabHelper::CreateForWebContents(web_contents);
-#endif
 
   BraveNewsTabHelper::MaybeCreateForWebContents(web_contents);
 
@@ -204,7 +179,6 @@ void AttachTabHelpers(content::WebContents* web_contents) {
         web_contents);
   }
 
-  brave_wallet::BraveWalletTabHelper::CreateForWebContents(web_contents);
 
   if (!web_contents->GetBrowserContext()->IsOffTheRecord()) {
     ntp_background_images::NTPTabHelper::CreateForWebContents(web_contents);

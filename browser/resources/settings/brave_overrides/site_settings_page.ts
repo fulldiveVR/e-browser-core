@@ -153,44 +153,6 @@ RegisterPolymerComponentReplacement(
               lists.permissionsAdvanced.splice(currentIndex, 0,
                 AIChatItem)
             }
-            const isNativeBraveWalletEnabled =
-              loadTimeData.getBoolean('isNativeBraveWalletFeatureEnabled')
-            const isCardanoDappSupportFeatureEnabled = 
-              loadTimeData.getBoolean('isCardanoDappSupportFeatureEnabled')
-            if (isNativeBraveWalletEnabled) {
-              currentIndex++
-              const ethereumItem = {
-                route: routes.SITE_SETTINGS_ETHEREUM,
-                id: ContentSettingsTypes.ETHEREUM,
-                label: 'siteSettingsEthereum',
-                icon: 'ethereum-on',
-                enabledLabel: 'siteSettingsEthereumAsk',
-                disabledLabel: 'siteSettingsEthereumBlock'
-              }
-              lists.permissionsAdvanced.splice(currentIndex, 0, ethereumItem)
-              currentIndex++
-              const solanaItem = {
-                route: routes.SITE_SETTINGS_SOLANA,
-                id: ContentSettingsTypes.SOLANA,
-                label: 'siteSettingsSolana',
-                icon: 'solana-on',
-                enabledLabel: 'siteSettingsSolanaAsk',
-                disabledLabel: 'siteSettingsSolanaBlock'
-              }
-              lists.permissionsAdvanced.splice(currentIndex, 0, solanaItem)
-              if (isCardanoDappSupportFeatureEnabled) {
-                currentIndex++
-                const cardanoItem = {
-                  route: routes.SITE_SETTINGS_CARDANO,
-                  id: ContentSettingsTypes.CARDANO,
-                  label: 'siteSettingsCardano',
-                  icon: 'cardano-on',
-                  enabledLabel: 'siteSettingsCardanoAsk',
-                  disabledLabel: 'siteSettingsCardanoBlock'
-                }
-                lists.permissionsAdvanced.splice(currentIndex, 0, cardanoItem)
-              }
-            }
           }
         }
         (lists as any).shieldsBasic = [

@@ -53,7 +53,7 @@ bool MaybeChangeReferrer(bool allow_referrers,
 
   // Cap the referrer to "strict-origin-when-cross-origin". More restrictive
   // policies should be already applied.
-  // See https://github.com/brave/brave-browser/issues/13464
+  // See https://github.com/fulldiveVR/e-browser/issues/13464
   url::Origin current_referrer_origin = url::Origin::Create(current_referrer);
   *output_referrer = Referrer::SanitizeForRequest(
       target_url,

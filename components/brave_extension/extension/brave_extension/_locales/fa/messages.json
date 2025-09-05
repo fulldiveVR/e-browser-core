@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "افزونه Brave",
+    "message": "\u0627\u0641\u0632\u0648\u0646\u0647 AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "سپر ایمنی",
+    "message": "\u0633\u067e\u0631 \u0627\u06cc\u0645\u0646\u06cc",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "بالا",
+    "message": "\u0628\u0627\u0644\u0627",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "پایین",
+    "message": "\u067e\u0627\u06cc\u06cc\u0646",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "برای این سایت",
+    "message": "\u0628\u0631\u0627\u06cc \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "اگر سایتی خراب به نظر می‌رسد، سپر ایمنی را غیرفعال کنید",
+    "message": "\u0627\u06af\u0631 \u0633\u0627\u06cc\u062a\u06cc \u062e\u0631\u0627\u0628 \u0628\u0647 \u0646\u0638\u0631 \u0645\u06cc\u200c\u0631\u0633\u062f\u060c \u0633\u067e\u0631 \u0627\u06cc\u0645\u0646\u06cc \u0631\u0627 \u063a\u06cc\u0631\u0641\u0639\u0627\u0644 \u06a9\u0646\u06cc\u062f",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "بدون محافظ حریم خصوصی و امنیتی Brave این سایت را مرور می‌کنید. آیا این سایت با فعال بودن «سپر امنیتی» به‌درستی کار نمی‌کند؟",
+    "message": "\u0628\u062f\u0648\u0646 \u0645\u062d\u0627\u0641\u0638 \u062d\u0631\u06cc\u0645 \u062e\u0635\u0648\u0635\u06cc \u0648 \u0627\u0645\u0646\u06cc\u062a\u06cc AI Wize \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a \u0631\u0627 \u0645\u0631\u0648\u0631 \u0645\u06cc\u200c\u06a9\u0646\u06cc\u062f. \u0622\u06cc\u0627 \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a \u0628\u0627 \u0641\u0639\u0627\u0644 \u0628\u0648\u062f\u0646 \u00ab\u0633\u067e\u0631 \u0627\u0645\u0646\u06cc\u062a\u06cc\u00bb \u0628\u0647\u200c\u062f\u0631\u0633\u062a\u06cc \u06a9\u0627\u0631 \u0646\u0645\u06cc\u200c\u06a9\u0646\u062f\u061f",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "گزارش خرابی سایت",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u06af\u0632\u0627\u0631\u0634 \u062e\u0631\u0627\u0628\u06cc \u0633\u0627\u06cc\u062a",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "موارد مسدودشده",
+    "message": "\u0645\u0648\u0627\u0631\u062f \u0645\u0633\u062f\u0648\u062f\u0634\u062f\u0647",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "مورد مسدودشده",
+    "message": "\u0645\u0648\u0631\u062f \u0645\u0633\u062f\u0648\u062f\u0634\u062f\u0647",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "و",
+    "message": "\u0648",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "اتصال‌ها ارتقا پیدا کردند",
+    "message": "\u0627\u062a\u0635\u0627\u0644\u200c\u0647\u0627 \u0627\u0631\u062a\u0642\u0627 \u067e\u06cc\u062f\u0627 \u06a9\u0631\u062f\u0646\u062f",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "اتصال ارتقا پیدا کرد",
+    "message": "\u0627\u062a\u0635\u0627\u0644 \u0627\u0631\u062a\u0642\u0627 \u067e\u06cc\u062f\u0627 \u06a9\u0631\u062f",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "ردیاب‌های بین سایتی مسدود شدند",
+    "message": "\u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627\u06cc \u0628\u06cc\u0646 \u0633\u0627\u06cc\u062a\u06cc \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0646\u062f",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "ردیاب‌ها و آگهی‌ها مسدود شده‌اند",
+    "message": "\u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627 \u0648 \u0622\u06af\u0647\u06cc\u200c\u0647\u0627 \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0647\u200c\u0627\u0646\u062f",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "ردیاب‌ها و آگهی‌ها مسدود شده‌اند (تهاجمی)",
+    "message": "\u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627 \u0648 \u0622\u06af\u0647\u06cc\u200c\u0647\u0627 \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0647\u200c\u0627\u0646\u062f (\u062a\u0647\u0627\u062c\u0645\u06cc)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "ردیاب‌ها و آگهی‌ها مسدود شده‌اند (استاندارد)",
+    "message": "\u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627 \u0648 \u0622\u06af\u0647\u06cc\u200c\u0647\u0627 \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0647\u200c\u0627\u0646\u062f (\u0627\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u062f)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "مجاز بودن همه ردیاب‌ها و آگهی‌ها",
+    "message": "\u0645\u062c\u0627\u0632 \u0628\u0648\u062f\u0646 \u0647\u0645\u0647 \u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627 \u0648 \u0622\u06af\u0647\u06cc\u200c\u0647\u0627",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "اتصال‌ها به HTTPS ارتقا داده شدند",
+    "message": "\u0627\u062a\u0635\u0627\u0644\u200c\u0647\u0627 \u0628\u0647 HTTPS \u0627\u0631\u062a\u0642\u0627 \u062f\u0627\u062f\u0647 \u0634\u062f\u0646\u062f",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "اتصال به HTTPS ارتقا پیدا کرد",
+    "message": "\u0627\u062a\u0635\u0627\u0644 \u0628\u0647 HTTPS \u0627\u0631\u062a\u0642\u0627 \u067e\u06cc\u062f\u0627 \u06a9\u0631\u062f",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "اسکریپت‌ها مسدود شدند",
+    "message": "\u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627 \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0646\u062f",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "کوکی‌های بین سایتی مسدود شدند",
+    "message": "\u06a9\u0648\u06a9\u06cc\u200c\u0647\u0627\u06cc \u0628\u06cc\u0646 \u0633\u0627\u06cc\u062a\u06cc \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0646\u062f",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "کوکی‌ها مسدود شدند",
+    "message": "\u06a9\u0648\u06a9\u06cc\u200c\u0647\u0627 \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0646\u062f",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "همه کوکی‌ها مجاز هستند",
+    "message": "\u0647\u0645\u0647 \u06a9\u0648\u06a9\u06cc\u200c\u0647\u0627 \u0645\u062c\u0627\u0632 \u0647\u0633\u062a\u0646\u062f",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "اثر انگشت مسدود شده است",
+    "message": "\u0627\u062b\u0631 \u0627\u0646\u06af\u0634\u062a \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0647 \u0627\u0633\u062a",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "تشخیص اثر انگشت مسدود شد (استاندارد)",
+    "message": "\u062a\u0634\u062e\u06cc\u0635 \u0627\u062b\u0631 \u0627\u0646\u06af\u0634\u062a \u0645\u0633\u062f\u0648\u062f \u0634\u062f (\u0627\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u062f)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "تشخیص اثر انگشت مسدود شد (شدید، ممکن است منجر به خرابی سایت‌ها شود)",
+    "message": "\u062a\u0634\u062e\u06cc\u0635 \u0627\u062b\u0631 \u0627\u0646\u06af\u0634\u062a \u0645\u0633\u062f\u0648\u062f \u0634\u062f (\u0634\u062f\u06cc\u062f\u060c \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a \u0645\u0646\u062c\u0631 \u0628\u0647 \u062e\u0631\u0627\u0628\u06cc \u0633\u0627\u06cc\u062a\u200c\u0647\u0627 \u0634\u0648\u062f)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "مجاز بودن انواع انگشت‌نگاری",
+    "message": "\u0645\u062c\u0627\u0632 \u0628\u0648\u062f\u0646 \u0627\u0646\u0648\u0627\u0639 \u0627\u0646\u06af\u0634\u062a\u200c\u0646\u06af\u0627\u0631\u06cc",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "تلاش‌های تشخیص اثر انگشت",
+    "message": "\u062a\u0644\u0627\u0634\u200c\u0647\u0627\u06cc \u062a\u0634\u062e\u06cc\u0635 \u0627\u062b\u0631 \u0627\u0646\u06af\u0634\u062a",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "اسکریپت‌های این سایت",
+    "message": "\u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627\u06cc \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "اسکریپت‌های مسدود",
+    "message": "\u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627\u06cc \u0645\u0633\u062f\u0648\u062f",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "اسکریپت‌های مجاز",
+    "message": "\u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627\u06cc \u0645\u062c\u0627\u0632",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "مسدود کردن همه",
+    "message": "\u0645\u0633\u062f\u0648\u062f \u06a9\u0631\u062f\u0646 \u0647\u0645\u0647",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "مجاز کردن همه",
+    "message": "\u0645\u062c\u0627\u0632 \u06a9\u0631\u062f\u0646 \u0647\u0645\u0647",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "مسدود کردن",
+    "message": "\u0645\u0633\u062f\u0648\u062f \u06a9\u0631\u062f\u0646",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "مجاز",
+    "message": "\u0645\u062c\u0627\u0632",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "یک‌بار مسدود",
+    "message": "\u06cc\u06a9\u200c\u0628\u0627\u0631 \u0645\u0633\u062f\u0648\u062f",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "یک‌بار مجاز",
+    "message": "\u06cc\u06a9\u200c\u0628\u0627\u0631 \u0645\u062c\u0627\u0632",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "یک‌بار مجاز کردن اسکریپت‌ها",
+    "message": "\u06cc\u06a9\u200c\u0628\u0627\u0631 \u0645\u062c\u0627\u0632 \u06a9\u0631\u062f\u0646 \u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "لغو",
+    "message": "\u0644\u063a\u0648",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "برگشت",
+    "message": "\u0628\u0631\u06af\u0634\u062a",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "یک‌بار اعمال شود",
+    "message": "\u06cc\u06a9\u200c\u0628\u0627\u0631 \u0627\u0639\u0645\u0627\u0644 \u0634\u0648\u062f",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "تغییر پیش‌فرض‌های سپرایمنی جهانی",
+    "message": "\u062a\u063a\u06cc\u06cc\u0631 \u067e\u06cc\u0634\u200c\u0641\u0631\u0636\u200c\u0647\u0627\u06cc \u0633\u067e\u0631\u0627\u06cc\u0645\u0646\u06cc \u062c\u0647\u0627\u0646\u06cc",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "مدیریت فیلترهای سفارشی",
+    "message": "\u0645\u062f\u06cc\u0631\u06cc\u062a \u0641\u06cc\u0644\u062a\u0631\u0647\u0627\u06cc \u0633\u0641\u0627\u0631\u0634\u06cc",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "عنصر قفل",
+    "message": "\u0639\u0646\u0635\u0631 \u0642\u0641\u0644",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "نمای پیشرفته",
+    "message": "\u0646\u0645\u0627\u06cc \u067e\u06cc\u0634\u0631\u0641\u062a\u0647",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "نمای ساده",
+    "message": "\u0646\u0645\u0627\u06cc \u0633\u0627\u062f\u0647",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "سایت‌ها اغلب شامل کوکی‌ها و اسکریپت‌هایی می‌شوند که درتلاش هستند شما و دستگاهتان را شناسایی کنند (اغلب در آگهی‌های جاسازی شده‌اند). آن‌ها می‌خواهند با ردیابی آنچه در سایت‌ها انجام می‌دهید، شما را شناسایی و در سراسر وب دنبال کنند. Brave این موارد را مسدود می‌کند تا بتوانید بدون اینکه در همه جا دنبال شوید مرور انجام دهید.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u0633\u0627\u06cc\u062a\u200c\u0647\u0627 \u0627\u063a\u0644\u0628 \u0634\u0627\u0645\u0644 \u06a9\u0648\u06a9\u06cc\u200c\u0647\u0627 \u0648 \u0627\u0633\u06a9\u0631\u06cc\u067e\u062a\u200c\u0647\u0627\u06cc\u06cc \u0645\u06cc\u200c\u0634\u0648\u0646\u062f \u06a9\u0647 \u062f\u0631\u062a\u0644\u0627\u0634 \u0647\u0633\u062a\u0646\u062f \u0634\u0645\u0627 \u0648 \u062f\u0633\u062a\u06af\u0627\u0647\u062a\u0627\u0646 \u0631\u0627 \u0634\u0646\u0627\u0633\u0627\u06cc\u06cc \u06a9\u0646\u0646\u062f (\u0627\u063a\u0644\u0628 \u062f\u0631 \u0622\u06af\u0647\u06cc\u200c\u0647\u0627\u06cc \u062c\u0627\u0633\u0627\u0632\u06cc \u0634\u062f\u0647\u200c\u0627\u0646\u062f). \u0622\u0646\u200c\u0647\u0627 \u0645\u06cc\u200c\u062e\u0648\u0627\u0647\u0646\u062f \u0628\u0627 \u0631\u062f\u06cc\u0627\u0628\u06cc \u0622\u0646\u0686\u0647 \u062f\u0631 \u0633\u0627\u06cc\u062a\u200c\u0647\u0627 \u0627\u0646\u062c\u0627\u0645 \u0645\u06cc\u200c\u062f\u0647\u06cc\u062f\u060c \u0634\u0645\u0627 \u0631\u0627 \u0634\u0646\u0627\u0633\u0627\u06cc\u06cc \u0648 \u062f\u0631 \u0633\u0631\u0627\u0633\u0631 \u0648\u0628 \u062f\u0646\u0628\u0627\u0644 \u06a9\u0646\u0646\u062f. AI Wize \u0627\u06cc\u0646 \u0645\u0648\u0627\u0631\u062f \u0631\u0627 \u0645\u0633\u062f\u0648\u062f \u0645\u06cc\u200c\u06a9\u0646\u062f \u062a\u0627 \u0628\u062a\u0648\u0627\u0646\u06cc\u062f \u0628\u062f\u0648\u0646 \u0627\u06cc\u0646\u06a9\u0647 \u062f\u0631 \u0647\u0645\u0647 \u062c\u0627 \u062f\u0646\u0628\u0627\u0644 \u0634\u0648\u06cc\u062f \u0645\u0631\u0648\u0631 \u0627\u0646\u062c\u0627\u0645 \u062f\u0647\u06cc\u062f.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "ردیاب‌های بین سایتی و سایر موارد غیرعادی مسدود شدند",
+    "message": "\u0631\u062f\u06cc\u0627\u0628\u200c\u0647\u0627\u06cc \u0628\u06cc\u0646 \u0633\u0627\u06cc\u062a\u06cc \u0648 \u0633\u0627\u06cc\u0631 \u0645\u0648\u0627\u0631\u062f \u063a\u06cc\u0631\u0639\u0627\u062f\u06cc \u0645\u0633\u062f\u0648\u062f \u0634\u062f\u0646\u062f",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "ممکن است تغییر تنظیمات «سپرایمنی» در این نما، بر سازگاری وب در این سایت تأثیر بگذارد.",
+    "message": "\u0645\u0645\u06a9\u0646 \u0627\u0633\u062a \u062a\u063a\u06cc\u06cc\u0631 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u00ab\u0633\u067e\u0631\u0627\u06cc\u0645\u0646\u06cc\u00bb \u062f\u0631 \u0627\u06cc\u0646 \u0646\u0645\u0627\u060c \u0628\u0631 \u0633\u0627\u0632\u06af\u0627\u0631\u06cc \u0648\u0628 \u062f\u0631 \u0627\u06cc\u0646 \u0633\u0627\u06cc\u062a \u062a\u0623\u062b\u06cc\u0631 \u0628\u06af\u0630\u0627\u0631\u062f.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "متوجه شدم",
+    "message": "\u0645\u062a\u0648\u062c\u0647 \u0634\u062f\u0645",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "بیشتر بدانید",
+    "message": "\u0628\u06cc\u0634\u062a\u0631 \u0628\u062f\u0627\u0646\u06cc\u062f",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "‏افزودن به Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u200f\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "‏حذف از Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "\u200f\u062d\u0630\u0641 \u0627\u0632 AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "‏افزودن به Chrome",
+    "message": "\u200f\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "‏حذف از Chrome",
+    "message": "\u200f\u062d\u0630\u0641 \u0627\u0632 Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0628\u0633\u062a\u0646 \u0628\u0631\u06af\u0647\u200c\u0647\u0627\u06cc \u062e\u0635\u0648\u0635\u06cc",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0633\u0627\u0628\u0642\u0647",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0646\u0634\u0627\u0646\u06a9\u200c\u0647\u0627",
+    "description": "Bookmarks Label"
   }
 }

@@ -10,9 +10,6 @@
 #include <vector>
 
 #include "base/check.h"
-#include "brave/browser/brave_ads/ads_service_factory.h"
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
-#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/perf/brave_perf_features_processor.h"
 #include "brave/browser/profiles/profile_util.h"
@@ -25,7 +22,6 @@
 #include "brave/components/ntp_background_images/browser/ntp_p3a_util.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile_attributes_entry.h"
@@ -42,9 +38,6 @@
 #include "brave/browser/gcm_driver/brave_gcm_channel_status.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/tor_constants.h"
-#endif
 
 using brave_shields::ControlType;
 using content::BrowserThread;
@@ -124,7 +117,7 @@ void BraveProfileManager::InitProfileUserPrefs(Profile* profile) {
     pref_service->SetBoolean(kEnableMediaRouterOnRestart, enabled);
   } else {
     // For Desktop, kEnableMediaRouterOnRestart is used to track the current
-    // state of the media router switch in brave://settings/extensions. The
+    // state of the media router switch in aiwize://settings/extensions. The
     // value of kEnableMediaRouter is only updated to match
     // kEnableMediaRouterOnRestart on restart
     auto enabled = pref_service->GetBoolean(kEnableMediaRouterOnRestart);
@@ -145,9 +138,6 @@ void BraveProfileManager::DoFinalInitForServices(Profile* profile,
   ProfileManager::DoFinalInitForServices(profile, go_off_the_record);
   if (!do_final_services_init_)
     return;
-  brave_ads::AdsServiceFactory::GetForProfile(profile);
-  brave_rewards::RewardsServiceFactory::GetForProfile(profile);
-  brave_wallet::BraveWalletServiceFactory::GetServiceForContext(profile);
 #if !BUILDFLAG(USE_GCM_FROM_PLATFORM)
   gcm::BraveGCMChannelStatus* status =
       gcm::BraveGCMChannelStatus::GetForProfile(profile);
@@ -172,16 +162,6 @@ bool BraveProfileManager::IsAllowedProfilePath(
 bool BraveProfileManager::LoadProfileByPath(const base::FilePath& profile_path,
                                             bool incognito,
                                             ProfileLoadedCallback callback) {
-#if BUILDFLAG(ENABLE_TOR)
-  // Prevent legacy tor session profile to be loaded so we won't hit
-  // DCHECK(!GetProfileAttributesWithPath(...)). Workaround for legacy tor guest
-  // profile won't work because when AddProfile to storage we will hit
-  // DCHECK(user_data_dir_ == profile_path.DirName()), legacy tor session
-  // profile was not under user_data_dir like legacy tor guest profile did.
-  if (profile_path.BaseName().value() == tor::kTorProfileDir) {
-    return false;
-  }
-#endif
   return ProfileManager::LoadProfileByPath(profile_path, incognito,
                                            std::move(callback));
 }

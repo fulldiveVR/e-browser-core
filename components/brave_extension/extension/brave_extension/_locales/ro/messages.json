@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Extensia Brave",
+    "message": "Extensia AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
@@ -20,16 +20,16 @@
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Dacă un site pare că nu funcționează, încercați să dezactivați scuturile",
+    "message": "Dac\u0103 un site pare c\u0103 nu func\u021bioneaz\u0103, \u00eencerca\u021bi s\u0103 dezactiva\u021bi scuturile",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Navigați pe acest site fără protecțiile Brave pentru confidențialitate și securitate. Nu funcționează corect cu Scuturile activate?",
+    "message": "Naviga\u021bi pe acest site f\u0103r\u0103 protec\u021biile AI Wize pentru confiden\u021bialitate \u0219i securitate. Nu func\u021bioneaz\u0103 corect cu Scuturile activate?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Raportați un site nefuncțional",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "Raporta\u021bi un site nefunc\u021bional",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Articole blocate",
@@ -40,7 +40,7 @@
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "și",
+    "message": "\u0219i",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
@@ -48,7 +48,7 @@
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "conexiune actualizată",
+    "message": "conexiune actualizat\u0103",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
@@ -56,19 +56,19 @@
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Urmărirea și reclamele sunt blocate",
+    "message": "Urm\u0103rirea \u0219i reclamele sunt blocate",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Șabloane de urmărire și reclame blocate (agresive)",
+    "message": "\u0218abloane de urm\u0103rire \u0219i reclame blocate (agresive)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Șabloane de urmărire și reclame blocate (standard)",
+    "message": "\u0218abloane de urm\u0103rire \u0219i reclame blocate (standard)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Permiteți toate șabloanele și reclamele",
+    "message": "Permite\u021bi toate \u0219abloanele \u0219i reclamele",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
@@ -76,7 +76,7 @@
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Conexiune actualizată la HTTPS",
+    "message": "Conexiune actualizat\u0103 la HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -100,19 +100,19 @@
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Folosirea amprentei este blocată (standard)",
+    "message": "Folosirea amprentei este blocat\u0103 (standard)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Folosirea amprentei este blocată (strict, poate sparge site-urile)",
+    "message": "Folosirea amprentei este blocat\u0103 (strict, poate sparge site-urile)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Permite toată amprentarea",
+    "message": "Permite toat\u0103 amprentarea",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Încercări de amprentare",
+    "message": "\u00cencerc\u0103ri de amprentare",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
@@ -136,7 +136,7 @@
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Blochează",
+    "message": "Blocheaz\u0103",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
@@ -144,31 +144,31 @@
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Blocate o dată",
+    "message": "Blocate o dat\u0103",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Permise o dată",
+    "message": "Permise o dat\u0103",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Permiteți scripturile o dată",
+    "message": "Permite\u021bi scripturile o dat\u0103",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Anulează",
+    "message": "Anuleaz\u0103",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Înapoi",
+    "message": "\u00cenapoi",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Se aplică o dată",
+    "message": "Se aplic\u0103 o dat\u0103",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Modifică setările implicite ale scutului global",
+    "message": "Modific\u0103 set\u0103rile implicite ale scutului global",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
@@ -176,51 +176,67 @@
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Blocați elementul",
+    "message": "Bloca\u021bi elementul",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Vizualizare avansată",
+    "message": "Vizualizare avansat\u0103",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Vizualizare simplă",
+    "message": "Vizualizare simpl\u0103",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Site-urile includ deseori fișiere cookie și scripturi care încearcă să vă identifice pe dumneavoastră și pe dispozitivul dumneavoastră (care sunt de obicei încorporate în reclame). Acestea vor să afle cine sunteți și să vă urmărească pe tot Internetul, urmărind ce faceți pe fiecare site. Brave blochează aceste fișiere și scripturi pentru ca dvs. să navigați fără a fi urmărit.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Site-urile includ deseori fi\u0219iere cookie \u0219i scripturi care \u00eencearc\u0103 s\u0103 v\u0103 identifice pe dumneavoastr\u0103 \u0219i pe dispozitivul dumneavoastr\u0103 (care sunt de obicei \u00eencorporate \u00een reclame). Acestea vor s\u0103 afle cine sunte\u021bi \u0219i s\u0103 v\u0103 urm\u0103reasc\u0103 pe tot Internetul, urm\u0103rind ce face\u021bi pe fiecare site. AI Wize blocheaz\u0103 aceste fi\u0219iere \u0219i scripturi pentru ca dvs. s\u0103 naviga\u021bi f\u0103r\u0103 a fi urm\u0103rit.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Urmăritori trans-site și alte lucruri sinistre blocate",
+    "message": "Urm\u0103ritori trans-site \u0219i alte lucruri sinistre blocate",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Modificarea setărilor Shield în această vizualizare poate afecta compatibilitatea cu Internetul pe acest site.",
+    "message": "Modificarea set\u0103rilor Shield \u00een aceast\u0103 vizualizare poate afecta compatibilitatea cu Internetul pe acest site.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Am înțeles",
+    "message": "Am \u00een\u021beles",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Aflați mai multe",
+    "message": "Afla\u021bi mai multe",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Adăugați la Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Ad\u0103uga\u021bi la AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Eliminați din Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Elimina\u021bi din AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Adaugă în Chrome",
+    "message": "Adaug\u0103 \u00een Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Eliminați din Chrome",
+    "message": "Elimina\u021bi din Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Desc\u0103rc\u0103ri",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Set\u0103ri",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Istoric",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Marcaje",
+    "description": "Bookmarks Label"
   }
 }

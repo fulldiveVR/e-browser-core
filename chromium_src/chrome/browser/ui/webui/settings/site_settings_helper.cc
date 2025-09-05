@@ -26,7 +26,6 @@
   {ContentSettingsType::BRAVE_SHIELDS, brave_shields::kBraveShields}, \
   {ContentSettingsType::BRAVE_REFERRERS, nullptr},                    \
   {ContentSettingsType::BRAVE_COOKIES, nullptr},                      \
-  {ContentSettingsType::BRAVE_SPEEDREADER, nullptr},                  \
   {ContentSettingsType::BRAVE_ETHEREUM, "ethereum"},                  \
   {ContentSettingsType::BRAVE_SOLANA, "solana"},                      \
   {ContentSettingsType::BRAVE_GOOGLE_SIGN_IN, "googleSignIn"},        \

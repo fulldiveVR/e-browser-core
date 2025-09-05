@@ -24,8 +24,6 @@
     return "brave_referrers";                           \
   case PermissionName::BRAVE_COOKIES:                   \
     return "brave_cookies";                             \
-  case PermissionName::BRAVE_SPEEDREADER:               \
-    return "brave_speedreader";                         \
   case PermissionName::BRAVE_ETHEREUM:                  \
     return "brave_ethereum";                            \
   case PermissionName::BRAVE_SOLANA:                    \

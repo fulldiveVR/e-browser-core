@@ -8,8 +8,8 @@
 #include "base/logging.h"
 
 #define BRAVE_KEY_STORAGE_LINUX                             \
-  const char KeyStorageLinux::kFolderName[] = "Brave Keys"; \
-  const char KeyStorageLinux::kKey[] = "Brave Safe Storage";
+  const char KeyStorageLinux::kFolderName[] = "AI Wize Keys"; \
+  const char KeyStorageLinux::kKey[] = "AI Wize Safe Storage";
 
 #define BRAVE_KEY_STORAGE_LINUX_CREATE_SERVICE                          \
   if (use_backend && config.store.empty() &&                            \
@@ -35,7 +35,7 @@
 
 // clang-format off
 #define BRAVE_KEY_STORAGE_LINUX_CREATE_SERVICE_INTERNAL                       \
-  static const base::NoDestructor<std::string> kDefaultApplicationName("brave");
+  static const base::NoDestructor<std::string> kDefaultApplicationName("aiwize");
 // clang-format on
 
 #include "src/components/os_crypt/sync/key_storage_linux.cc"

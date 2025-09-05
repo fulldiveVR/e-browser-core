@@ -19,15 +19,5 @@ BraveWindowFrameGraphic::~BraveWindowFrameGraphic() = default;
 
 void BraveWindowFrameGraphic::Paint(gfx::Canvas* canvas,
                                     const gfx::Rect& frame_bounds) {
-  if (!is_tor_window_)
-    return;
 
-  constexpr int kGraphicWidth = 360;
-  constexpr int kGraphicHeight = 70;
-  auto& bundle = ui::ResourceBundle::GetSharedInstance();
-  canvas->DrawImageInt(*bundle.GetImageSkiaNamed(IDR_TOR_WINDOW_FRAME_GRAPHIC),
-                       0, 0, kGraphicWidth, kGraphicHeight,
-                       frame_bounds.width() - kGraphicWidth, 0,
-                       kGraphicWidth, kGraphicHeight,
-                       false);
 }

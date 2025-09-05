@@ -55,7 +55,7 @@ interface State {
   hideViewScreenshotLink: boolean
 }
 
-const WEBCOMPAT_INFO_WIKI_URL = 'https://github.com/brave/brave-browser/wiki/Web-compatibility-reports'
+const WEBCOMPAT_INFO_WIKI_URL = 'https://github.com/fulldiveVR/e-browser/wiki/Web-compatibility-reports'
 
 export default class ReportView extends React.PureComponent<Props, State> {
   private handleKeyPress: (e: KeyboardEvent) => void;

@@ -14,11 +14,9 @@ import { BackgroundProvider } from '../context/background_context'
 import { SearchProvider } from '../context/search_context'
 import { TopSitesProvider } from '../context/top_sites_context'
 import { VpnProvider } from '../context/vpn_context'
-import { RewardsProvider } from '../context/rewards_context'
 
 import { createNewTabHandler } from './new_tab_handler'
 import { createBackgroundHandler } from './background_handler'
-import { createRewardsHandler } from './rewards_handler'
 import { createSearchHandler } from './search_handler'
 import { createTopSitesHandler } from './top_sites_handler'
 import { createVpnHandler } from './vpn_handler'
@@ -36,9 +34,7 @@ function StorybookAppProvider(props: { children: React.ReactNode }) {
           <SearchProvider createHandler={createSearchHandler}>
             <TopSitesProvider createHandler={createTopSitesHandler}>
               <VpnProvider createHandler={createVpnHandler}>
-                <RewardsProvider createHandler={createRewardsHandler}>
-                  {props.children}
-                </RewardsProvider>
+                <div />
               </VpnProvider>
             </TopSitesProvider>
           </SearchProvider>

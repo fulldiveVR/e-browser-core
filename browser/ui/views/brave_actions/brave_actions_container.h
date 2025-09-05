@@ -16,13 +16,8 @@
 
 class BraveActionViewController;
 class BraveActionsContainerTest;
-class BraveRewardsActionView;
 class BraveShieldsActionView;
-class RewardsBrowserTest;
 
-namespace policy {
-FORWARD_DECLARE_TEST(BraveRewardsPolicyTest, RewardsIconIsHidden);
-}
 
 namespace views {
 class Button;
@@ -53,19 +48,14 @@ class BraveActionsContainer : public views::View {
   BraveShieldsActionView* GetShieldsActionView() { return shields_action_btn_; }
 
  private:
-  FRIEND_TEST_ALL_PREFIXES(policy::BraveRewardsPolicyTest, RewardsIconIsHidden);
   friend class ::BraveActionsContainerTest;
-  friend class ::RewardsBrowserTest;
 
-  bool ShouldShowBraveRewardsAction() const;
-  void AddActionViewForRewards();
   void AddActionViewForShields();
 
   void UpdateVisibility();
   gfx::Size GetActionSize() const;
 
   // Brave Rewards preferences change observers callback.
-  void OnBraveRewardsPreferencesChanged();
 
   bool should_hide_ = false;
 
@@ -75,10 +65,8 @@ class BraveActionsContainer : public views::View {
   raw_ptr<BrowserWindowInterface> browser_window_interface_ = nullptr;
 
   raw_ptr<BraveShieldsActionView> shields_action_btn_ = nullptr;
-  raw_ptr<BraveRewardsActionView> rewards_action_btn_ = nullptr;
 
   // Listen for Brave Rewards preferences changes.
-  BooleanPrefMember show_brave_rewards_button_;
 
   base::WeakPtrFactory<BraveActionsContainer> weak_ptr_factory_{this};
 };

@@ -9,11 +9,8 @@
 #include <utility>
 
 #include "base/no_destructor.h"
-#include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/ntp_background/ntp_p3a_helper_impl.h"
-#include "brave/components/brave_ads/core/browser/service/ads_service.h"
-#include "brave/components/brave_ads/core/public/ads_util.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_source.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_image_source.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_rich_media_source.h"
@@ -51,7 +48,6 @@ ViewCounterServiceFactory::ViewCounterServiceFactory()
     : BrowserContextKeyedServiceFactory(
           "ViewCounterService",
           BrowserContextDependencyManager::GetInstance()) {
-  DependsOn(brave_ads::AdsServiceFactory::GetInstance());
 #if BUILDFLAG(ENABLE_CUSTOM_BACKGROUND)
   DependsOn(BraveNTPCustomBackgroundServiceFactory::GetInstance());
 #endif
@@ -70,10 +66,7 @@ ViewCounterServiceFactory::BuildServiceInstanceForBrowserContext(
   if (auto* service =
           g_brave_browser_process->ntp_background_images_service()) {
     Profile* profile = Profile::FromBrowserContext(browser_context);
-    brave_ads::AdsService* const ads_service =
-        brave_ads::AdsServiceFactory::GetForProfile(profile);
-    const bool is_supported_locale =
-        ads_service ? brave_ads::IsSupportedRegion() : false;
+    const bool is_supported_locale = false;
 
     content::URLDataSource::Add(
         browser_context, std::make_unique<NTPBackgroundImagesSource>(service));
@@ -99,7 +92,7 @@ ViewCounterServiceFactory::BuildServiceInstanceForBrowserContext(
 #else
         nullptr,
 #endif
-        ads_service, profile->GetPrefs(), g_browser_process->local_state(),
+        profile->GetPrefs(), g_browser_process->local_state(),
         std::move(ntp_p3a_helper), is_supported_locale);
   }
 

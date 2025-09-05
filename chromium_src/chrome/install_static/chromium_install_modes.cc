@@ -11,12 +11,12 @@
 
 namespace install_static {
 
-const wchar_t kCompanyPathName[] = L"BraveSoftware";
+const wchar_t kCompanyPathName[] = L"AIWizeSoftware";
 
 #if defined(OFFICIAL_BUILD)
-const wchar_t kProductPathName[] = L"Brave-Browser";
+const wchar_t kProductPathName[] = L"AIWize-Browser";
 #else
-const wchar_t kProductPathName[] = L"Brave-Browser-Development";
+const wchar_t kProductPathName[] = L"AIWize-Browser-Development";
 #endif
 
 const size_t kProductPathNameLength = _countof(kProductPathName) - 1;

@@ -1,7 +1,7 @@
 caption: Disable Speedreader
 default: null
 desc: |-
-  Disable Speedreader in Brave.
+  Disable Speedreader in AIWize.
 
   Speedreader is a feature that provides a clutter-free reading experience by automatically cleaning up articles and simplifying page layouts.
 
@@ -26,8 +26,8 @@ items:
 - caption: Allow the user to decide
   value: null
 owners:
-- bbondy@brave.com
-- clifton@brave.com
+- bbondy@aiwize.com
+- clifton@aiwize.com
 schema:
   type: boolean
 supported_on:

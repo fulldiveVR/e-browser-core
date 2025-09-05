@@ -18,7 +18,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
 #if BUILDFLAG(IS_ANDROID)
     // This flag will be removed eventually, so we should move LoginDb related
     // code to brave-core if we want to keep it. The follow up issue is created
-    // for this: https://github.com/brave/brave-browser/issues/47419
+    // for this: https://github.com/fulldiveVR/e-browser/issues/47419
     {kLoginDbDeprecationAndroid, base::FEATURE_DISABLED_BY_DEFAULT},
 #endif  // BUILDFLAG(IS_ANDROID)
 }});

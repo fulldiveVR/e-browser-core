@@ -3,7 +3,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-import { NewTabPageAdEventType } from 'gen/brave/components/brave_ads/core/mojom/brave_ads.mojom.m.js'
 
 import {
   BraveBackground,
@@ -13,7 +12,6 @@ import {
 
 export {
   BraveBackground,
-  NewTabPageAdEventType,
   SponsoredImageBackground,
   SelectedBackgroundType
 }
@@ -92,7 +90,6 @@ export interface BackgroundActions {
   removeCustomBackground: (background: string) => Promise<void>
   notifySponsoredImageLoadError: () => void
   notifySponsoredImageLogoClicked: () => void
-  notifySponsoredRichMediaEvent: (type: NewTabPageAdEventType) => void
 }
 
 function chooseRandom<T>(list: T[], randomValue: number): T | null {

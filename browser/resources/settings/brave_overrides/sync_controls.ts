@@ -11,7 +11,7 @@ RegisterPolymerTemplateModifications({
     let paymentIntegrationToggle =
       templateContent.querySelector('cr-toggle[checked="{{syncPrefs.paymentsSynced}}"]')
     if (!paymentIntegrationToggle) {
-      console.error('[Brave Settings Overrides] Could not find sync control payment toggle')
+      console.error('[AI Wize Settings Overrides] Could not find sync control payment toggle')
       return
     }
     paymentIntegrationToggle.parentElement.remove()

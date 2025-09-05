@@ -45,7 +45,7 @@ int GetIconIndexForFileType() {
   GetProgIdEntries(app_info, entries);
 
 // Give BraveXXFile prog id for some file type.(ex, .pdf or .svg) instead of
-// BraveHTML.
+// AIWizeHTML.
 #define BRAVE_GET_APP_EXT_REGISTRATION_ENTRIES                         \
   if (installer::ShouldUseFileTypeProgId(ext)) {                       \
     entries->push_back(std::make_unique<RegistryEntry>(                \
@@ -54,7 +54,7 @@ int GetIconIndexForFileType() {
   }
 
 // Give BraveXXFile prog id for some file type.(ex, .pdf or .svg) instead of
-// BraveHTML.
+// AIWizeHTML.
 #define BRAVE_GET_SHELL_INTEGRATION_ENTRIES                               \
   const std::wstring file_ext = ShellUtil::kPotentialFileAssociations[i]; \
   if (installer::ShouldUseFileTypeProgId(file_ext)) {                     \

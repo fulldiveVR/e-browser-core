@@ -154,12 +154,12 @@ export class SettingsBravePersonalizationOptions extends SettingsBravePersonaliz
         toggle.setAttribute('class', toggleClass + ' hr')
       } else {
         console.log(
-          '[Brave Settings Overrides] Could not find doNotTrack toggle',
+          '[AI Wize Settings Overrides] Could not find doNotTrack toggle',
         )
       }
     } else {
       console.log(
-        '[Brave Settings Overrides] Could not find element with id doNotTrack',
+        '[AI Wize Settings Overrides] Could not find element with id doNotTrack',
       )
     }
 

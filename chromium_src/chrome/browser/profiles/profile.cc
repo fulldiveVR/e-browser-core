@@ -6,10 +6,9 @@
 #include "brave/chromium_src/chrome/browser/profiles/profile.h"
 
 #include "base/strings/string_util.h"
-#include "brave/components/tor/tor_constants.h"
 #include "components/search_engines/search_engine_choice/search_engine_choice_utils.h"
 
-#define BRAVE_ALLOWS_BROWSER_WINDOWS *this == TorID() ||
+#define BRAVE_ALLOWS_BROWSER_WINDOWS
 
 #define IsIncognitoProfile IsIncognitoProfile_ChromiumImpl
 #define IsPrimaryOTRProfile IsPrimaryOTRProfile_ChromiumImpl
@@ -24,12 +23,9 @@ const char kSearchBackupResultsOTRProfileIDPrefix[] =
 }  // namespace
 
 // static
-const Profile::OTRProfileID Profile::OTRProfileID::TorID() {
-  return OTRProfileID(tor::kTorProfileID);
-}
 
 bool Profile::IsTor() const {
-  return IsOffTheRecord() && GetOTRProfileID() == OTRProfileID::TorID();
+  return false;
 }
 
 bool Profile::IsIncognitoProfile() const {

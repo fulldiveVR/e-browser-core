@@ -29,8 +29,6 @@ BraveOpaqueBrowserFrameView::BraveOpaqueBrowserFrameView(
     BrowserView* browser_view,
     OpaqueBrowserFrameViewLayout* layout)
     : OpaqueBrowserFrameView(frame, browser_view, layout) {
-  frame_graphic_ = std::make_unique<BraveWindowFrameGraphic>(
-      browser_view->browser()->profile());
 }
 
 BraveOpaqueBrowserFrameView::~BraveOpaqueBrowserFrameView() = default;
@@ -47,7 +45,6 @@ void BraveOpaqueBrowserFrameView::OnPaint(gfx::Canvas* canvas) {
                         layout()->FrameEdgeInsets(false).top()));
     canvas->ClipRect(bounds_to_frame_graphic);
   }
-  frame_graphic_->Paint(canvas, bounds_to_frame_graphic);
 }
 
 int BraveOpaqueBrowserFrameView::NonClientHitTest(const gfx::Point& point) {

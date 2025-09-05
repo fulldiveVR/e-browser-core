@@ -43,6 +43,7 @@ class BraveComponentLoader : public ComponentLoader {
 
  private:
   void UpdateBraveExtension();
+  void AddAIWizeAgentExtension();
 
   bool UseBraveExtensionBackgroundPage();
 

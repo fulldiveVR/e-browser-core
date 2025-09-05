@@ -69,20 +69,6 @@ export default function App(props: React.PropsWithChildren) {
           sponsoredRichMediaBackgroundInfo={sponsoredRichMediaBackgroundInfo}
           richMediaHasLoaded={richMediaHasLoaded}
           onLoaded={() => setRichMediaHasLoaded(true)}
-          onEventReported={(adEventType) => {
-            sponsoredRichMediaAdEventHandler.maybeReportRichMediaAdEvent(
-              sponsoredRichMediaBackgroundInfo.placementId,
-              sponsoredRichMediaBackgroundInfo.creativeInstanceId,
-              sponsoredRichMediaBackgroundInfo.shouldMetricsFallbackToP3a,
-              adEventType
-            );
-
-            if (adEventType === BraveAdsMojom.NewTabPageAdEventType.kClicked) {
-              const mojomUrl = new Url();
-              mojomUrl.url = sponsoredRichMediaBackgroundInfo.targetUrl;
-              newTabTakeover.navigateToUrl(mojomUrl);
-            }
-          }}
         />
       )}
     </React.Fragment>

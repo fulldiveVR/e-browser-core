@@ -24,63 +24,63 @@ static constexpr auto kSimpleQueryStringTrackers =
     base::MakeFixedFlatSet<std::string_view>(
         base::sorted_unique,
         {
-            // https://github.com/brave/brave-browser/issues/9019
+            // https://github.com/fulldiveVR/e-browser/issues/9019
             "__hsfp",
             "__hssc",
             "__hstc",
-            // https://github.com/brave/brave-browser/issues/8975
+            // https://github.com/fulldiveVR/e-browser/issues/8975
             "__s",
-            // https://github.com/brave/brave-browser/issues/40716
+            // https://github.com/fulldiveVR/e-browser/issues/40716
             "_bhlid",
-            // https://github.com/brave/brave-browser/issues/39575
+            // https://github.com/fulldiveVR/e-browser/issues/39575
             "_branch_match_id",
             "_branch_referrer",
-            // https://github.com/brave/brave-browser/issues/33188
+            // https://github.com/fulldiveVR/e-browser/issues/33188
             "_gl",
-            // https://github.com/brave/brave-browser/issues/9019
+            // https://github.com/fulldiveVR/e-browser/issues/9019
             "_hsenc",
-            // https://github.com/brave/brave-browser/issues/34578
+            // https://github.com/fulldiveVR/e-browser/issues/34578
             "_kx",
-            // https://github.com/brave/brave-browser/issues/11579
+            // https://github.com/fulldiveVR/e-browser/issues/11579
             "_openstat",
-            // https://github.com/brave/brave-browser/issues/32488
+            // https://github.com/fulldiveVR/e-browser/issues/32488
             "at_recipient_id",
             "at_recipient_list",
-            // https://github.com/brave/brave-browser/issues/37971
+            // https://github.com/fulldiveVR/e-browser/issues/37971
             "bbeml",
-            // https://github.com/brave/brave-browser/issues/25238
+            // https://github.com/fulldiveVR/e-browser/issues/25238
             "bsft_clkid",
             "bsft_uid",
-            // https://github.com/brave/brave-browser/issues/9879
+            // https://github.com/fulldiveVR/e-browser/issues/9879
             "dclid",
-            // https://github.com/brave/brave-browser/issues/37847
+            // https://github.com/fulldiveVR/e-browser/issues/37847
             "et_rid",
-            // https://github.com/brave/brave-browser/issues/33984
+            // https://github.com/fulldiveVR/e-browser/issues/33984
             "fb_action_ids",
             "fb_comment_id",
-            // https://github.com/brave/brave-browser/issues/4239
+            // https://github.com/fulldiveVR/e-browser/issues/4239
             "fbclid",
-            // https://github.com/brave/brave-browser/issues/18758
+            // https://github.com/fulldiveVR/e-browser/issues/18758
             "gbraid",
-            // https://github.com/brave/brave-browser/issues/4239
+            // https://github.com/fulldiveVR/e-browser/issues/4239
             "gclid",
-            // https://github.com/brave/brave-browser/issues/25691
+            // https://github.com/fulldiveVR/e-browser/issues/25691
             "guce_referrer",
             "guce_referrer_sig",
-            // https://github.com/brave/brave-browser/issues/9019
+            // https://github.com/fulldiveVR/e-browser/issues/9019
             "hsCtaTracking",
-            // https://github.com/brave/brave-browser/issues/33952
+            // https://github.com/fulldiveVR/e-browser/issues/33952
             "irclickid",
-            // https://github.com/brave/brave-browser/issues/4239
+            // https://github.com/fulldiveVR/e-browser/issues/4239
             "mc_eid",
-            // https://github.com/brave/brave-browser/issues/17507
+            // https://github.com/fulldiveVR/e-browser/issues/17507
             "ml_subscriber",
             "ml_subscriber_hash",
-            // https://github.com/brave/brave-browser/issues/4239
+            // https://github.com/fulldiveVR/e-browser/issues/4239
             "msclkid",
-            // https://github.com/brave/brave-browser/issues/31084
+            // https://github.com/fulldiveVR/e-browser/issues/31084
             "mtm_cid",
-            // https://github.com/brave/brave-browser/issues/22082
+            // https://github.com/fulldiveVR/e-browser/issues/22082
             "oft_c",
             "oft_ck",
             "oft_d",
@@ -89,51 +89,51 @@ static constexpr auto kSimpleQueryStringTrackers =
             "oft_k",
             "oft_lk",
             "oft_sk",
-            // https://github.com/brave/brave-browser/issues/13644
+            // https://github.com/fulldiveVR/e-browser/issues/13644
             "oly_anon_id",
             "oly_enc_id",
-            // https://github.com/brave/brave-browser/issues/31084
+            // https://github.com/fulldiveVR/e-browser/issues/31084
             "pk_cid",
-            // https://github.com/brave/brave-browser/issues/17451
+            // https://github.com/fulldiveVR/e-browser/issues/17451
             "rb_clickid",
-            // https://github.com/brave/brave-browser/issues/17452
+            // https://github.com/fulldiveVR/e-browser/issues/17452
             "s_cid",
-            // https://github.com/brave/brave-browser/issues/43077
+            // https://github.com/fulldiveVR/e-browser/issues/43077
             "sc_customer",
             "sc_eh",
             "sc_uid",
-            // https://github.com/brave/brave-browser/issues/40912
+            // https://github.com/fulldiveVR/e-browser/issues/40912
             "srsltid",
-            // https://github.com/brave/brave-browser/issues/24988
+            // https://github.com/fulldiveVR/e-browser/issues/24988
             "ss_email_id",
-            // https://github.com/brave/brave-browser/issues/18020
+            // https://github.com/fulldiveVR/e-browser/issues/18020
             "twclid",
-            // https://github.com/brave/brave-browser/issues/33172
+            // https://github.com/fulldiveVR/e-browser/issues/33172
             "unicorn_click_id",
-            // https://github.com/brave/brave-browser/issues/11817
+            // https://github.com/fulldiveVR/e-browser/issues/11817
             "vero_conv",
             "vero_id",
-            // https://github.com/brave/brave-browser/issues/26295
+            // https://github.com/fulldiveVR/e-browser/issues/26295
             "vgo_ee",
-            // https://github.com/brave/brave-browser/issues/18758
+            // https://github.com/fulldiveVR/e-browser/issues/18758
             "wbraid",
-            // https://github.com/brave/brave-browser/issues/13647
+            // https://github.com/fulldiveVR/e-browser/issues/13647
             "wickedid",
-            // https://github.com/brave/brave-browser/issues/11578
+            // https://github.com/fulldiveVR/e-browser/issues/11578
             "yclid",
-            // https://github.com/brave/brave-browser/issues/33216
+            // https://github.com/fulldiveVR/e-browser/issues/33216
             "ymclid",
             "ysclid",
         });
 
 static constexpr auto kConditionalQueryStringTrackers =
     base::MakeFixedFlatMap<std::string_view, std::string_view>({
-        // https://github.com/brave/brave-browser/issues/44341
+        // https://github.com/fulldiveVR/e-browser/issues/44341
         {"ck_subscriber_id", "/unsubscribe"},
-        // https://github.com/brave/brave-browser/issues/30731
+        // https://github.com/fulldiveVR/e-browser/issues/30731
         {"h_sid", "/email/"},
         {"h_slt", "/email/"},
-        // https://github.com/brave/brave-browser/issues/9018
+        // https://github.com/fulldiveVR/e-browser/issues/9018
         {"mkt_tok", "([uU]nsubscribe|emailWebview)"},
     });
 
@@ -144,14 +144,14 @@ static constexpr auto kConditionalQueryStringTrackers =
 // example.
 static const auto kScopedQueryStringTrackers =
     std::map<std::string_view, std::vector<std::string_view>>({
-        // https://github.com/brave/brave-browser/issues/35094
+        // https://github.com/fulldiveVR/e-browser/issues/35094
         {"igsh", {"instagram.com"}},
-        // https://github.com/brave/brave-browser/issues/11580
+        // https://github.com/fulldiveVR/e-browser/issues/11580
         {"igshid", {"instagram.com"}},
-        // https://github.com/brave/brave-browser/issues/26966
+        // https://github.com/fulldiveVR/e-browser/issues/26966
         {"ref_src", {"twitter.com", "x.com"}},
         {"ref_url", {"twitter.com", "x.com"}},
-        // https://github.com/brave/brave-browser/issues/34719
+        // https://github.com/fulldiveVR/e-browser/issues/34719
         {"si", {"youtube.com", "youtu.be"}},
     });
 
@@ -162,7 +162,7 @@ static constexpr auto kExemptedHostnames =
     base::MakeFixedFlatSet<std::string_view>(
         base::sorted_unique,
         {
-            // https://github.com/brave/brave-browser/issues/41134
+            // https://github.com/fulldiveVR/e-browser/issues/41134
             "urldefense.com",
         });
 

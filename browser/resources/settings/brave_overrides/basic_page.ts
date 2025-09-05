@@ -8,15 +8,10 @@ import '../brave_appearance_page/tabs.js'
 import '../brave_appearance_page/toolbar.js'
 import '../brave_content_page/content.js'
 import '../brave_content_page/playlist.js'
-import '../brave_content_page/speedreader.js'
-import '../brave_data_collection_page/brave_data_collection_page.js'
 import '../brave_default_extensions_page/brave_default_extensions_page.js'
 import '../brave_new_tab_page/brave_new_tab_page.js'
 import '../brave_search_engines_page/brave_search_engines_page.js'
 import '../brave_sync_page/brave_sync_page.js'
-import '../brave_tor_page/brave_tor_subpage.js'
-import '../brave_wallet_page/brave_wallet_page.js'
-import '../brave_web3_domains_page/brave_web3_domains_page.js'
 import '../default_brave_shields_page/default_brave_shields_page.js'
 import '../getting_started_page/getting_started.js'
 import '../social_blocking_page/social_blocking_page.js'
@@ -24,10 +19,6 @@ import '../brave_leo_assistant_page/brave_leo_assistant_page.js'
 import '../brave_leo_assistant_page/model_list_section.js'
 import '../brave_survey_panelist_page/brave_survey_panelist_page.js'
 
-// <if expr="enable_containers">
-import '../brave_content_page/containers.js'
-import { ContainersStrings } from '../brave_generated_resources_webui_strings.js'
-// </if>
 
 import {
   html,
@@ -47,7 +38,7 @@ export function getSectionElement (
     templateContent.querySelector(`template[if*='pageVisibility_.${sectionName}']`) ||
     templateContent.querySelector(`settings-section[section="${sectionName}"]`)
   if (!sectionEl) {
-    console.error(`[Brave Settings Overrides] Could not find section '${sectionName}'`)
+    console.error(`[AI Wize Settings Overrides] Could not find section '${sectionName}'`)
   }
   return sectionEl
 }
@@ -120,16 +111,16 @@ RegisterPolymerTemplateModifications({
     // Entire content is wrapped in another conditional template
     const actualTemplate = templateContent.querySelector('template')
     if (!actualTemplate) {
-      console.error('[Brave Settings Overrides] Could not find basic-page template')
+      console.error('[AI Wize Settings Overrides] Could not find basic-page template')
       return
     }
     const basicPageEl = actualTemplate.content.querySelector('#basicPage')
     if (!basicPageEl) {
-      console.error('[Brave Settings Overrides] Could not find basicPage element to insert Getting Started section')
+      console.error('[AI Wize Settings Overrides] Could not find basicPage element to insert Getting Started section')
     } else {
       const privacyGuidePromoSection = actualTemplate.content.querySelector('#privacyGuidePromoSection')
       if (!privacyGuidePromoSection) {
-        console.error('[Brave Settings Overrides] Could not find privacyGuidePromoSection element to hide')
+        console.error('[AI Wize Settings Overrides] Could not find privacyGuidePromoSection element to hide')
       } else {
         privacyGuidePromoSection.remove()
       }
@@ -196,64 +187,6 @@ RegisterPolymerTemplateModifications({
           prefs: '{{prefs}}'
         }
       ))
-      const sectionTor = document.createElement('template')
-      sectionTor.setAttribute('is', 'dom-if')
-      sectionTor.setAttribute('restamp', 'true')
-      sectionTor.setAttribute('if', '[[showPage_(pageVisibility_.braveTor)]]')
-      sectionTor.content.appendChild(createNestedSectionElement(
-        'tor',
-        'privacy',
-        'braveTor',
-        'settings-brave-tor-subpage',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const sectionDataCollection = document.createElement('template')
-      sectionDataCollection.setAttribute('is', 'dom-if')
-      sectionDataCollection.setAttribute('restamp', 'true')
-      sectionDataCollection.
-        setAttribute('if', '[[showPage_(pageVisibility_.braveDataCollection)]]')
-      sectionDataCollection.content.appendChild(createNestedSectionElement(
-        'dataCollection',
-        'privacy',
-        'braveDataCollection',
-        'settings-brave-data-collection-subpage',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
-      let sectionWallet = undefined
-      if (isBraveWalletAllowed) {
-        sectionWallet = document.createElement('template')
-        sectionWallet.setAttribute('is', 'dom-if')
-        sectionWallet.setAttribute('restamp', 'true')
-        sectionWallet.setAttribute('if', '[[showPage_(pageVisibility_.braveWallet)]]')
-        sectionWallet.content.appendChild(createNestedSectionElement(
-          'wallet',
-          'web3',
-          'braveWallet',
-          'settings-brave-wallet-page',
-          {
-            prefs: '{{prefs}}'
-          }
-        ))
-      }
-      const sectionWeb3Domains = document.createElement('template')
-      sectionWeb3Domains.setAttribute('is', 'dom-if')
-      sectionWeb3Domains.setAttribute('restamp', 'true')
-      sectionWeb3Domains.setAttribute('if',
-        '[[showPage_(pageVisibility_.braveWeb3Domains)]]')
-      sectionWeb3Domains.content.appendChild(createNestedSectionElement(
-        'web3Domains',
-        'web3',
-        'braveWeb3Domains',
-        'settings-brave-web3-domains-page',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
       const sectionSync = document.createElement('template')
       sectionSync.setAttribute('is', 'dom-if')
       sectionSync.setAttribute('restamp', 'true')
@@ -289,33 +222,6 @@ RegisterPolymerTemplateModifications({
           prefs: '{{prefs}}'
         }
       ))
-      const sectionLeoAssist = document.createElement('template')
-      sectionLeoAssist.setAttribute('is', 'dom-if')
-      sectionLeoAssist.setAttribute('restamp', 'true')
-      sectionLeoAssist
-        .setAttribute('if', '[[showPage_(pageVisibility_.leoAssistant)]]')
-      sectionLeoAssist.content.appendChild(createSectionElement(
-        'leoAssistant',
-        'leoAssistant',
-        'settings-brave-leo-assistant-page',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
-      const sectionLeoCustomModels = document.createElement('template')
-      sectionLeoCustomModels.setAttribute('is', 'dom-if')
-      sectionLeoCustomModels.setAttribute('restamp', 'true')
-      sectionLeoCustomModels
-        .setAttribute('if', '[[showPage_(pageVisibility_.leoAssistant)]]')
-      sectionLeoCustomModels.content.appendChild(createNestedSectionElement(
-        'leoAssistant',
-        'leoAssistant',
-        'braveLeoAssistantByomLabel',
-        'model-list-section',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
 
       const sectionContent = document.createElement('template')
       sectionContent.setAttribute('is', 'dom-if')
@@ -345,21 +251,6 @@ RegisterPolymerTemplateModifications({
         }
       ))
 
-      // <if expr="enable_containers">
-      const sectionContainers = document.createElement('template')
-      sectionContainers.setAttribute('is', 'dom-if')
-      sectionContainers.setAttribute('restamp', 'true')
-      sectionContainers.setAttribute('if', '[[showPage_(pageVisibility_.containers)]]')
-      sectionContainers.content.appendChild(createNestedSectionElement(
-        'containers',
-        'content',
-        ContainersStrings.SETTINGS_CONTAINERS_SECTION_LABEL,
-        'settings-brave-content-containers',
-        {
-          prefs: '{{prefs}}',
-        }
-      ))
-      // </if>
 
       const sectionPlaylist = document.createElement('template')
       sectionPlaylist.setAttribute('is', 'dom-if')
@@ -375,19 +266,6 @@ RegisterPolymerTemplateModifications({
         }
       ))
 
-      const sectionSpeedreader = document.createElement('template')
-      sectionSpeedreader.setAttribute('is', 'dom-if')
-      sectionSpeedreader.setAttribute('restamp', 'true')
-      sectionSpeedreader.setAttribute('if', '[[showPage_(pageVisibility_.speedreader)]]')
-      sectionSpeedreader.content.appendChild(createNestedSectionElement(
-        'speedreader',
-        'content',
-        'speedreaderSettingLabel',
-        'settings-brave-content-speedreader',
-        {
-          prefs: '{{prefs}}'
-        }
-      ))
 
       const sectionNewTab = document.createElement('template')
       sectionNewTab.setAttribute('is', 'dom-if')
@@ -429,11 +307,7 @@ RegisterPolymerTemplateModifications({
       // Insert nested Content, Containers, Playlist, Speedreader under
       // 'Content' menu
       last = last.insertAdjacentElement('afterend', sectionContent)
-      // <if expr="enable_containers">
-      last = last.insertAdjacentElement('afterend', sectionContainers)
-      // </if>
       last = last.insertAdjacentElement('afterend', sectionPlaylist)
-      last = last.insertAdjacentElement('afterend', sectionSpeedreader)
       // Insert shields
       last = last.insertAdjacentElement('afterend', sectionShields)
       // Insert nested Social Blocking under shields
@@ -449,30 +323,22 @@ RegisterPolymerTemplateModifications({
       // Insert extensions
       last = last.insertAdjacentElement('afterend', sectionExtensions)
       // Insert Wallet
-      if (sectionWallet) {
-        last = last.insertAdjacentElement('afterend', sectionWallet)
-      }
       // Insert Web3 Domains
-      last = last.insertAdjacentElement('afterend', sectionWeb3Domains)
       // Insert Tor
-      last = last.insertAdjacentElement('afterend', sectionTor)
       // Insert Data collection
-      last = last.insertAdjacentElement('afterend', sectionDataCollection)
       // Insert Leo Assistant
-      last = last.insertAdjacentElement('afterend', sectionLeoAssist)
       // Insert Surevy Panelist
       last = last.insertAdjacentElement('afterend', sectionSurveyPanelist)
       // Insert Custom Models List
-      last.insertAdjacentElement('afterend', sectionLeoCustomModels)
 
       // Advanced
       const advancedTemplate = templateContent.querySelector('template[if="[[showAdvancedSettings_(pageVisibility_.advancedSettings)]]"]')
       if (!advancedTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced section')
+        console.error('[AI Wize Settings Overrides] Could not find advanced section')
       }
       const advancedSubSectionsTemplate = advancedTemplate.content.querySelector('settings-idle-load template')
       if (!advancedSubSectionsTemplate) {
-        console.error('[Brave Settings Overrides] Could not find advanced sub-sections container')
+        console.error('[AI Wize Settings Overrides] Could not find advanced sub-sections container')
       }
       // Move autofill to before languages
       const sectionAutofill = getSectionElement(actualTemplate.content, 'autofill')

@@ -15,14 +15,10 @@
 #include "base/task/thread_pool.h"
 #include "brave/components/brave_shields/content/browser/ad_block_service.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/browser/connection/brave_vpn_connection_manager.h"
 #endif
-namespace tor {
-class BraveTorClientUpdater;
-}
 
 // static
 TestingBraveBrowserProcess* TestingBraveBrowserProcess::GetGlobal() {
@@ -105,16 +101,6 @@ TestingBraveBrowserProcess::local_data_files_service() {
   return nullptr;
 }
 
-#if BUILDFLAG(ENABLE_TOR)
-tor::BraveTorClientUpdater* TestingBraveBrowserProcess::tor_client_updater() {
-  return nullptr;
-}
-
-tor::BraveTorPluggableTransportUpdater*
-TestingBraveBrowserProcess::tor_pluggable_transport_updater() {
-  return nullptr;
-}
-#endif
 
 
 p3a::P3AService* TestingBraveBrowserProcess::p3a_service() {
@@ -131,26 +117,13 @@ TestingBraveBrowserProcess::brave_stats_updater() {
   return nullptr;
 }
 
-brave_ads::BraveStatsHelper*
-TestingBraveBrowserProcess::ads_brave_stats_helper() {
-  return nullptr;
-}
 
 ntp_background_images::NTPBackgroundImagesService*
 TestingBraveBrowserProcess::ntp_background_images_service() {
   return nullptr;
 }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-speedreader::SpeedreaderRewriterService*
-TestingBraveBrowserProcess::speedreader_rewriter_service() {
-  return nullptr;
-}
-#endif
 
-brave_ads::ResourceComponent* TestingBraveBrowserProcess::resource_component() {
-  return nullptr;
-}
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 brave_vpn::BraveVPNConnectionManager*

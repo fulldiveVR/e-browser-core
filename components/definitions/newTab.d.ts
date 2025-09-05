@@ -86,7 +86,7 @@ declare namespace NewTab {
     url: string
   }
 
-  export type StackWidget = 'rewards' | 'braveTalk' | 'braveVPN' | 'bitcoinDotCom' | ''
+  export type StackWidget = 'braveVPN' | ''
 
   export interface GridSitesState {
     removedSites: Site[]
@@ -98,16 +98,9 @@ declare namespace NewTab {
     showEmptyPage: boolean
   }
 
-  export interface RewardsState {
-    rewardsState: RewardsWidgetState
-  }
 
   export interface PersistentState {
-    braveRewardsSupported: boolean
-    braveTalkSupported: boolean
-    bitcoinDotComSupported: boolean
     showEmptyPage: boolean
-    rewardsState: RewardsWidgetState
     currentStackWidget: StackWidget
     removedStackWidgets: StackWidget[]
     widgetStackOrder: StackWidget[]
@@ -121,8 +114,6 @@ declare namespace NewTab {
     showClock: boolean
     clockFormat: string
     showTopSites: boolean
-    showRewards: boolean
-    showBraveTalk: boolean
     showBraveVPN: boolean
     showSearchBox: boolean
     lastUsedNtpSearchEngine: string
@@ -159,45 +150,8 @@ declare namespace NewTab {
     customImageBackgrounds: ImageBackground[]
   }
 
-  export interface RewardsWidgetState {
-    rewardsEnabled: boolean
-    userType: string
-    declaredCountry: string
-    balance?: number
-    externalWallet?: RewardsExtension.ExternalWallet
-    externalWalletProviders?: string[]
-    report?: RewardsBalanceReport
-    adsAccountStatement: AdsAccountStatement
-    dismissedNotifications: string[]
-    needsBrowserUpgradeToServeAds: boolean
-    parameters: RewardsParameters
-    totalContribution: number
-    publishersVisitedCount: number
-    selfCustodyInviteDismissed: boolean
-    isTermsOfServiceUpdateRequired: boolean
-  }
 
-  export const enum RewardsResult {
-    OK = 0,
-    FAILED = 1,
-    NO_PUBLISHER_STATE = 2,
-    NO_LEGACY_STATE = 3,
-    INVALID_PUBLISHER_STATE = 4,
-    CAPTCHA_FAILED = 6,
-    NO_PUBLISHER_LIST = 7,
-    TOO_MANY_RESULTS = 8,
-    NOT_FOUND = 9,
-    REGISTRATION_VERIFICATION_FAILED = 10,
-    BAD_REGISTRATION_RESPONSE = 11,
-    WALLET_CORRUPT = 17
-  }
 
-  export interface RewardsBalanceReport {
-    ads: number
-    contribute: number
-    monthly: number
-    tips: number
-  }
 
   export interface AdsAccountStatement {
     nextPaymentDate: number
@@ -210,14 +164,6 @@ declare namespace NewTab {
 
   export type ProviderPayoutStatus = 'off' | 'processing' | 'complete'
 
-  export interface RewardsParameters {
-    rate: number
-    monthlyTipChoices: number[]
-    payoutStatus?: Record<string, ProviderPayoutStatus>
-    walletProviderRegions?: Record<string, { allow: string[], block: string[] } | undefined>
-    vbatDeadline: number | undefined
-    vbatExpired: boolean
-  }
 
   export interface DefaultSuperReferralTopSite {
     pinnedIndex: number

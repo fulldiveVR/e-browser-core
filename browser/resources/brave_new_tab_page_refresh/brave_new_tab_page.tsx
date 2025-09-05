@@ -12,8 +12,6 @@ import { BackgroundProvider } from './context/background_context'
 import { SearchProvider } from './context/search_context'
 import { TopSitesProvider } from './context/top_sites_context'
 import { VpnProvider } from './context/vpn_context'
-import { RewardsProvider } from './context/rewards_context'
-import { NewsProvider } from './context/news_context'
 
 import { App } from './components/app'
 
@@ -26,11 +24,7 @@ function AppProvider(props: { children: React.ReactNode }) {
         <SearchProvider name='search'>
           <TopSitesProvider name='topSites'>
             <VpnProvider name='vpn'>
-              <RewardsProvider name='rewards'>
-                <NewsProvider>
-                  {props.children}
-                </NewsProvider>
-              </RewardsProvider>
+              <div />
             </VpnProvider>
           </TopSitesProvider>
         </SearchProvider>

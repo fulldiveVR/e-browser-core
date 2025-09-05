@@ -21,9 +21,6 @@
 #include "base/strings/string_split.h"
 #include "base/time/time.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom.h"
-#include "brave/components/brave_ads/core/public/user_engagement/site_visit/site_visit_feature.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_images_data.h"
 #include "brave/components/p3a/metric_log_type.h"
 #include "brave/components/p3a/p3a_service.h"
@@ -64,7 +61,7 @@ constexpr char kExpireTimeKey[] = "expiry_time";
 constexpr base::TimeDelta kCountExpiryTime = base::Days(30);
 
 bool IsRewardsEnabled(PrefService* prefs) {
-  return prefs->GetBoolean(brave_rewards::prefs::kEnabled);
+  return false;
 }
 
 std::string BuildCreativeHistogramName(const std::string& creative_instance_id,
@@ -164,50 +161,6 @@ void NTPP3AHelperImpl::RecordView(const std::string& creative_instance_id,
   UpdateMetricCount(creative_instance_id, kCreativeViewEventKey);
 }
 
-void NTPP3AHelperImpl::RecordNewTabPageAdEvent(
-    brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type,
-    const std::string& creative_instance_id) {
-  if (!p3a_service_->IsP3AEnabled() || IsRewardsEnabled(prefs_)) {
-    return;
-  }
-
-  switch (mojom_ad_event_type) {
-    case brave_ads::mojom::NewTabPageAdEventType::kServedImpression:
-    case brave_ads::mojom::NewTabPageAdEventType::kViewedImpression: {
-      // Served impressions are handled by the ads component. Viewed impressions
-      // are handled in `RecordView` which is called when a sponsored ad is be
-      // displayed.
-      NOTREACHED() << "Unexpected mojom::NewTabPageAdEventType: "
-                   << base::to_underlying(mojom_ad_event_type);
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kClicked: {
-      UpdateMetricCount(creative_instance_id, kCreativeClickEventKey);
-      last_clicked_creative_instance_id_ = creative_instance_id;
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kInteraction: {
-      UpdateMetricCount(creative_instance_id, kCreativeInteractionEventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMediaPlay: {
-      UpdateMetricCount(creative_instance_id, kCreativeMediaPlayEventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMedia25: {
-      UpdateMetricCount(creative_instance_id, kCreativeMedia25EventKey);
-      break;
-    }
-
-    case brave_ads::mojom::NewTabPageAdEventType::kMedia100: {
-      UpdateMetricCount(creative_instance_id, kCreativeMedia100EventKey);
-      break;
-    }
-  }
-}
 
 void NTPP3AHelperImpl::OnNavigationDidFinish(const GURL& url) {
   last_url_ = url;
@@ -369,19 +322,6 @@ void NTPP3AHelperImpl::CleanOldCampaignsAndCreatives() {
 }
 
 void NTPP3AHelperImpl::MaybeLand(const GURL& url) {
-  if (!last_clicked_creative_instance_id_) {
-    // The user did not click on a new tab page ad, so there is no need to check
-    // for a page landing.
-    return;
-  }
-
-  page_land_timer_.Start(
-      FROM_HERE, brave_ads::kPageLandAfter.Get(),
-      base::BindOnce(&NTPP3AHelperImpl::MaybeLandCallback,
-                     base::Unretained(this),
-                     *last_clicked_creative_instance_id_, url));
-
-  last_clicked_creative_instance_id_.reset();
 }
 
 void NTPP3AHelperImpl::MaybeLandCallback(

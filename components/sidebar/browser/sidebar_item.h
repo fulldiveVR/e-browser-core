@@ -20,15 +20,15 @@ struct SidebarItem {
   // items.
   enum class BuiltInItemType {
     kNone = 0,
-    kBraveTalk,
-    kWallet,
     kBookmarks,
     kReadingList,
     kHistory,
     kPlaylist,
     kChatUI,
     // When adding new item, dont' forget to update kBuiltInItemLast.
-    kBuiltInItemLast = kChatUI,
+    kAiWizeApps,
+    kAiCombinerPanel,
+    kBuiltInItemLast = kAiCombinerPanel,
   };
 
   static SidebarItem Create(const std::u16string& title,

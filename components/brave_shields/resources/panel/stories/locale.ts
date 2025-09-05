@@ -5,14 +5,14 @@
 import { provideStrings } from '../../../../../.storybook/locale'
 
 provideStrings({
-  braveShields: 'Brave Shields',
+  braveShields: 'AI Wize Shields',
   braveShieldsStandalone: 'Shields',
-  braveShieldsEnable: 'Enable Brave Shields',
+  braveShieldsEnable: 'Enable AI Wize Shields',
   braveShieldsUp: '$1Shields are UP$1 for $2',
   braveShieldsDown: '$1Shields are DOWN$1 for $2',
-  braveShieldsBroken: 'If this site seems broken, try Shields down. $1Note: this may reduce Brave\'s privacy protections.$1',
+  braveShieldsBroken: 'If this site seems broken, try Shields down. $1Note: this may reduce AI Wize\'s privacy protections.$1',
   braveShieldsBlockedNote: 'Trackers, ads, and more blocked $1Learn more$1',
-  braveShieldsNOTBlockedNote: 'Not protected by Brave Shields $1Learn more$1',
+  braveShieldsNOTBlockedNote: 'Not protected by AI Wize Shields $1Learn more$1',
   braveShieldsAdvancedCtrls: 'Advanced controls',
   braveShieldSettingsDescription: 'Changing these settings might break sites.',
   braveShieldsGlobalSettingsTitle: 'Global Shield settings',
@@ -39,7 +39,7 @@ provideStrings({
   braveShieldsFingerprintingAllowAll: 'Allow fingerprinting',
   braveShieldsReportSite: 'Report site',
   braveShieldsReportSiteDesc: 'Tell us if the site wasn\'t working properly with Shields up.',
-  braveShieldsDownDesc: 'You are viewing this site without Brave\'s privacy protection',
+  braveShieldsDownDesc: 'You are viewing this site without AI Wize\'s privacy protection',
   braveShieldsBlockedScriptsLabel: 'Blocked scripts',
   braveShieldsManaged: 'Settings managed by organization',
   braveShieldsAllowScriptOnce: 'Allow',

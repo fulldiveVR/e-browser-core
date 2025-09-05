@@ -30,8 +30,7 @@ bool IsPrivateProfile(content::WebContents* web_contents) {
     return false;
   }
   return (profile_metrics::GetBrowserProfileType(profile) ==
-          profile_metrics::BrowserProfileType::kIncognito) ||
-         profile->IsTor();
+          profile_metrics::BrowserProfileType::kIncognito) ;
 }
 
 }  // namespace

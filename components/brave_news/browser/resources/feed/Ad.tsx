@@ -71,7 +71,7 @@ export const useVisibleFor = (callback: () => void, timeout: number) => {
   }
 }
 
-const adTargetUrlAllowedSchemes = ['https:', 'chrome:', 'brave:']
+const adTargetUrlAllowedSchemes = ['https:', 'chrome:', 'aiwize:']
 
 export default function Advert(props: Props) {
   const [advert, setAdvert] = React.useState<DisplayAd | null | undefined>(undefined)

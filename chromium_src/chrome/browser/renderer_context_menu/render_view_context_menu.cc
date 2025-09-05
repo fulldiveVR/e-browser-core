@@ -25,7 +25,6 @@
 #include "brave/browser/ui/browser_dialogs.h"
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/grit/brave_theme_resources.h"
 #include "chrome/browser/autocomplete/chrome_autocomplete_provider_client.h"
 #include "chrome/browser/profiles/profile.h"
@@ -43,10 +42,6 @@
 #include "ui/gfx/paint_vector_icon.h"
 #include "url/origin.h"
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/browser/tor/tor_profile_manager.h"
-#include "brave/browser/tor/tor_profile_service_factory.h"
-#endif
 
 #include "base/feature_list.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
@@ -146,47 +141,6 @@ void RenderViewContextMenu::RegisterMenuShownCallbackForTesting(
 
 namespace {
 
-#if BUILDFLAG(ENABLE_TOR)
-bool HasAlreadyOpenedTorWindow(Profile* profile) {
-  for (Browser* browser : *BrowserList::GetInstance()) {
-    if (browser->profile()->IsTor() &&
-        browser->profile()->GetOriginalProfile() == profile) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-// Modified OnProfileCreated() in render_view_context_menu.cc
-// to handle additional |use_new_tab| param.
-void OnTorProfileCreated(const GURL& link_url,
-                         bool use_new_tab,
-                         Browser* browser) {
-  CHECK(browser);
-  /* |ui::PAGE_TRANSITION_TYPED| is used rather than
-     |ui::PAGE_TRANSITION_LINK| since this ultimately opens the link in
-     another browser. This parameter is used within the tab strip model of
-     the browser it opens in implying a link from the active tab in the
-     destination browser which is not correct. */
-  NavigateParams nav_params(browser, link_url, ui::PAGE_TRANSITION_TYPED);
-  if (use_new_tab) {
-    nav_params.disposition = WindowOpenDisposition::NEW_FOREGROUND_TAB;
-  } else {
-    // Stop current loading to show tab throbber wait spinning till tor is
-    // initialized.
-    if (auto* contents = browser->tab_strip_model()->GetActiveWebContents()) {
-      contents->Stop();
-      nav_params.disposition = WindowOpenDisposition::CURRENT_TAB;
-    }
-  }
-  nav_params.referrer =
-      content::Referrer(GURL(), network::mojom::ReferrerPolicy::kStrictOrigin);
-  nav_params.window_action = NavigateParams::SHOW_WINDOW;
-  Navigate(&nav_params);
-}
-
-#endif
 
 #if BUILDFLAG(ENABLE_TEXT_RECOGNITION)
 void OnGetImageForTextCopy(base::WeakPtr<content::WebContents> web_contents,
@@ -401,17 +355,7 @@ bool BraveRenderViewContextMenu::IsCommandIdEnabled(int id) const {
       // allows non text types
       return IsPasteAndMatchStyleEnabled();
     case IDC_CONTENT_CONTEXT_OPENLINKTOR:
-#if BUILDFLAG(ENABLE_TOR)
-      if (TorProfileServiceFactory::IsTorDisabled(GetProfile())) {
-        return false;
-      }
-
-      return params_.link_url.is_valid() &&
-             IsURLAllowedInIncognito(params_.link_url) &&
-             !GetProfile()->IsTor();
-#else
       return false;
-#endif
     case IDC_AI_CHAT_CONTEXT_SUMMARIZE_TEXT:
     case IDC_AI_CHAT_CONTEXT_LEO_TOOLS:
     case IDC_AI_CHAT_CONTEXT_EXPLAIN:
@@ -469,16 +413,6 @@ void BraveRenderViewContextMenu::ExecuteCommand(int id, int event_flags) {
       // Replace works just like Paste, but it doesn't trigger onpaste handlers
       source_web_contents_->Replace(result);
     }; break;
-#if BUILDFLAG(ENABLE_TOR)
-    case IDC_CONTENT_CONTEXT_OPENLINKTOR: {
-      const bool has_tor_window = HasAlreadyOpenedTorWindow(GetProfile());
-      Browser* tor_browser =
-          TorProfileManager::SwitchToTorProfile(GetProfile());
-      if (tor_browser) {
-        OnTorProfileCreated(params_.link_url, has_tor_window, tor_browser);
-      }
-    } break;
-#endif
 #if BUILDFLAG(ENABLE_TEXT_RECOGNITION)
     case IDC_CONTENT_CONTEXT_COPY_TEXT_FROM_IMAGE:
       CopyTextFromImage();
@@ -531,12 +465,7 @@ void BraveRenderViewContextMenu::CopyTextFromImage() {
 #endif
 
 bool BraveRenderViewContextMenu::IsAIChatEnabled() const {
-  return !params_.selection_text.empty() &&
-         ai_chat::IsAIChatEnabled(GetProfile()->GetPrefs()) &&
-         GetProfile()->IsRegularProfile() &&
-         GetProfile()->GetPrefs()->GetBoolean(
-             ai_chat::prefs::kBraveAIChatContextMenuEnabled) &&
-         !IsInProgressiveWebApp();
+  return false;
 }
 
 void BraveRenderViewContextMenu::ExecuteAIChatCommand(int command) {
@@ -787,14 +716,14 @@ void BraveRenderViewContextMenu::AppendDeveloperItems() {
 #if BUILDFLAG(ENABLE_CONTAINERS)
 void BraveRenderViewContextMenu::OnContainerSelected(
     const containers::mojom::ContainerPtr& container) {
-  // TODO(https://github.com/brave/brave-browser/issues/47118)
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/47118)
   // Open |params_.link_url| in the selected container.
   NOTIMPLEMENTED();
 }
 
 base::flat_set<std::string>
 BraveRenderViewContextMenu::GetCurrentContainerIds() {
-  // TODO(https://github.com/brave/brave-browser/issues/47118) If the tab is in
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/47118) If the tab is in
   // a container, return the container ID.
   NOTIMPLEMENTED();
   return {};
@@ -829,24 +758,6 @@ void BraveRenderViewContextMenu::InitMenu() {
   }
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-  // Add Open Link with Tor
-  if (!TorProfileServiceFactory::IsTorDisabled(GetProfile()) &&
-      content_type_->SupportsGroup(ContextMenuContentType::ITEM_GROUP_LINK) &&
-      !params_.link_url.is_empty()) {
-    const Browser* browser = GetBrowser();
-    const bool is_app = browser && browser->is_type_app();
-
-    index = menu_model_.GetIndexOfCommandId(
-        IDC_CONTENT_CONTEXT_OPENLINKOFFTHERECORD);
-    DCHECK(index.has_value());
-
-    menu_model_.InsertItemWithStringIdAt(
-        index.value() + 1, IDC_CONTENT_CONTEXT_OPENLINKTOR,
-        is_app ? IDS_CONTENT_CONTEXT_OPENLINKTOR_INAPP
-               : IDS_CONTENT_CONTEXT_OPENLINKTOR);
-  }
-#endif
   if (!params_.link_url.is_empty() && params_.link_url.SchemeIsHTTPOrHTTPS()) {
     std::optional<size_t> link_index =
         menu_model_.GetIndexOfCommandId(IDC_CONTENT_CONTEXT_COPYLINKLOCATION);

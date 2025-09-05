@@ -121,8 +121,8 @@ describe('formatString', () => {
   it('should be possible to mix text and React nodes', () => {
     assert.deepEqual(formatString('$1Shields are UP/$1 for $2', {
       $1: (content) => <span>{content}</span>,
-      $2: 'brave.com'
-    }), <><span>Shields are UP</span> for {"brave.com"}</>)
+      $2: 'aiwize.com'
+    }), <><span>Shields are UP</span> for {"aiwize.com"}</>)
   })
 
   it('should be possible to only replace some keys', () => {
@@ -133,18 +133,18 @@ describe('formatString', () => {
 
   it('should be possible to only replace some keys out of order', () => {
     assert.deepEqual(formatString('$1Shields are UP/$1 for $2', {
-      $2: "brave.com",
-    }), "$1Shields are UP/$1 for brave.com")
+      $2: "aiwize.com",
+    }), "$1Shields are UP/$1 for aiwize.com")
   })
 
   it('one of everything', () => {
     assert.deepEqual(formatString('$1Shields are UP/$1 for $2 (count: $3) $4nz/$4', {
       $1: (content) => <span>{content}</span>,
-      $2: "brave.com",
+      $2: "aiwize.com",
       $3: <span>over 9000</span>,
       $4: code => code.toUpperCase()
     }), <>
-      <span>Shields are UP</span> for {"brave.com"} (count: <span>over 9000</span>) {"NZ"}
+      <span>Shields are UP</span> for {"aiwize.com"} (count: <span>over 9000</span>) {"NZ"}
     </>)
   })
 
@@ -158,13 +158,13 @@ describe('formatString', () => {
   it('should not break for Czech shields', () => {
     assert.deepEqual(formatString('$1Štíty pro $2 jsou zapnuty/$1', {
       $1: content => <b>{content}</b>,
-      $2: 'brave.com'
-    }), <><b>Štíty pro brave.com jsou zapnuty</b></>)
+      $2: 'aiwize.com'
+    }), <><b>Štíty pro aiwize.com jsou zapnuty</b></>)
 
     assert.deepEqual(formatString('$1Štíty pro $2 jsou vypnuty/$1', {
       $1: content => <b>{content}</b>,
-      $2: 'brave.com'
-    }), <><b>Štíty pro brave.com jsou vypnuty</b></>)
+      $2: 'aiwize.com'
+    }), <><b>Štíty pro aiwize.com jsou vypnuty</b></>)
   })
 
   it('should be possible to nest tags', () => {

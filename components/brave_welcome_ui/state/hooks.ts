@@ -88,11 +88,11 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
             ViewType.ImportSelectTheme : ViewType.ImportSelectBrowser
       },
       [ViewType.ImportSelectTheme]: {
-        forward: ViewType.HelpWDP
+        forward: ViewType.HelpImprove
       },
       [ViewType.ImportSelectBrowser]: {
         forward: currentSelectedBrowserProfiles && currentSelectedBrowserProfiles.length > 1 ? ViewType.ImportSelectProfile : ViewType.ImportInProgress,
-        skip: ViewType.HelpWDP,
+        skip: ViewType.HelpImprove,
       },
       [ViewType.ImportSelectProfile]: {
         forward: ViewType.ImportInProgress,
@@ -103,12 +103,9 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
         fail: ViewType.ImportFailed,
       },
       [ViewType.ImportSucceeded]: {
-        forward: ViewType.HelpWDP
+        forward: ViewType.HelpImprove
       },
       [ViewType.ImportFailed]: {
-        forward: ViewType.HelpWDP
-      },
-      [ViewType.HelpWDP]: {
         forward: ViewType.HelpImprove
       },
       [ViewType.HelpImprove]: {

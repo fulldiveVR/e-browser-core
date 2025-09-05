@@ -18,7 +18,7 @@ inline constexpr char kUniversalQAModelName[] =
     "universal_sentence_encoder_qa_with_metadata.tflite";
 
 // Added 2025-05
-// TODO(https://github.com/brave/brave-browser/issues/46336): Move this
+// TODO(https://github.com/fulldiveVR/e-browser/issues/46336): Move this
 // migration
 void MigrateDeprecatedLocalModelsComponent(
     component_updater::ComponentUpdateService* cus);

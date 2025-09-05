@@ -86,15 +86,6 @@ RegisterPolymerTemplateModifications({
         '[Settings] missing \'slot="body"\' in clear-browsing-data-dialog')
       return
     }
-    body.insertAdjacentHTML(
-      'beforeend',
-      getTrustedHTML`
-        <a id="clear-brave-ads-data"
-          href="chrome://settings/privacy"
-          onClick="[[onClearBraveAdsDataClickHandler_]]"
-          hidden="[[braveRewardsEnabled_]]">
-        </a>
-      `)
     const clearBraveAdsLink =
       templateContent.getElementById('clear-brave-ads-data')
     if (!clearBraveAdsLink) {
@@ -104,22 +95,6 @@ RegisterPolymerTemplateModifications({
         loadTimeData.getString('clearBraveAdsData')
     }
 
-    // Append reset Brave Rewards data link
-    body.insertAdjacentHTML(
-      'beforeend',
-      getTrustedHTML`
-        <a id="reset-brave-rewards-data"
-          href="chrome://rewards/#reset"
-          hidden="[[!braveRewardsEnabled_]]">
-        </a>
-      `)
-    const rewardsResetLink =
-      templateContent.getElementById('reset-brave-rewards-data')
-    if (!rewardsResetLink) {
-      console.error('[Settings] missing reset Brave Rewards link')
-    } else {
-      rewardsResetLink.textContent = loadTimeData.getString('resetRewardsData')
-    }
 
     // Append Leo reset checkbox
     const isLeoAssistantAndHistoryAllowed =

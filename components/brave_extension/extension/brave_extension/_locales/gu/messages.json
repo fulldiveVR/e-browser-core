@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "The Brave Extension",
+    "message": "The AI Wize Extension",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "શિલ્ડ્સ",
+    "message": "\u0ab6\u0abf\u0ab2\u0acd\u0aa1\u0acd\u0ab8",
     "description": "The Shields feature name"
   },
   "up": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "You’re browsing this site without Brave’s privacy and security protections. Does it not work right with Shields up?",
+    "message": "You\u2019re browsing this site without AI Wize\u2019s privacy and security protections. Does it not work right with Shields up?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "બ્રેક થયેલી સાઇટ અંગે રિપોર્ટ કરો",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u0aac\u0acd\u0ab0\u0ac7\u0a95 \u0aa5\u0aaf\u0ac7\u0ab2\u0ac0 \u0ab8\u0abe\u0a87\u0a9f \u0a85\u0a82\u0a97\u0ac7 \u0ab0\u0abf\u0aaa\u0acb\u0ab0\u0acd\u0a9f \u0a95\u0ab0\u0acb",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Items blocked",
@@ -56,7 +56,7 @@
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "ટ્રેકર્સ અને જાહેરાત બ્લોક કરે",
+    "message": "\u0a9f\u0acd\u0ab0\u0ac7\u0a95\u0ab0\u0acd\u0ab8 \u0a85\u0aa8\u0ac7 \u0a9c\u0abe\u0ab9\u0ac7\u0ab0\u0abe\u0aa4 \u0aac\u0acd\u0ab2\u0acb\u0a95 \u0a95\u0ab0\u0ac7",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
@@ -68,7 +68,7 @@
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "તમામ ટ્રેકર્સ અને જાહેરાતોને મંજૂરી આપો",
+    "message": "\u0aa4\u0aae\u0abe\u0aae \u0a9f\u0acd\u0ab0\u0ac7\u0a95\u0ab0\u0acd\u0ab8 \u0a85\u0aa8\u0ac7 \u0a9c\u0abe\u0ab9\u0ac7\u0ab0\u0abe\u0aa4\u0acb\u0aa8\u0ac7 \u0aae\u0a82\u0a9c\u0ac2\u0ab0\u0ac0 \u0a86\u0aaa\u0acb",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
@@ -88,7 +88,7 @@
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "કુકી અવરોધિત",
+    "message": "\u0a95\u0ac1\u0a95\u0ac0 \u0a85\u0ab5\u0ab0\u0acb\u0aa7\u0abf\u0aa4",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
@@ -136,11 +136,11 @@
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "અવરોધિત કરો",
+    "message": "\u0a85\u0ab5\u0ab0\u0acb\u0aa7\u0abf\u0aa4 \u0a95\u0ab0\u0acb",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "મંજૂરી આપો",
+    "message": "\u0aae\u0a82\u0a9c\u0ac2\u0ab0\u0ac0 \u0a86\u0aaa\u0acb",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
@@ -156,11 +156,11 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "રદ કરો",
+    "message": "\u0ab0\u0aa6 \u0a95\u0ab0\u0acb",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "પાછા જાઓ",
+    "message": "\u0aaa\u0abe\u0a9b\u0abe \u0a9c\u0abe\u0a93",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web — tracking what you do on every site. Brave blocks these things so that you can browse without being followed around.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web \u2014 tracking what you do on every site. AI Wize blocks these things so that you can browse without being followed around.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackers and other creepy things blocked",
@@ -200,27 +200,43 @@
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "સમજાઈ ગયું",
+    "message": "\u0ab8\u0aae\u0a9c\u0abe\u0a88 \u0a97\u0aaf\u0ac1\u0a82",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "વધુ જાણો",
+    "message": "\u0ab5\u0aa7\u0ac1 \u0a9c\u0abe\u0aa3\u0acb",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave માં ઉમેરો",
-    "description": "Message for adding an extension to Brave"
+    "message": "AI Wize \u0aae\u0abe\u0a82 \u0a89\u0aae\u0ac7\u0ab0\u0acb",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave માંથી દૂર કરો",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize \u0aae\u0abe\u0a82\u0aa5\u0ac0 \u0aa6\u0ac2\u0ab0 \u0a95\u0ab0\u0acb",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chrome માં ઉમેરો",
+    "message": "Chrome \u0aae\u0abe\u0a82 \u0a89\u0aae\u0ac7\u0ab0\u0acb",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome માંથી દૂર કરો",
+    "message": "Chrome \u0aae\u0abe\u0a82\u0aa5\u0ac0 \u0aa6\u0ac2\u0ab0 \u0a95\u0ab0\u0acb",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0aa1\u0abe\u0a89\u0aa8\u0ab2\u0acb\u0aa1\u0acd\u0ab8",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u0ab8\u0ac7\u0a9f\u0abf\u0a82\u0a97",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0a87\u0aa4\u0abf\u0ab9\u0abe\u0ab8",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0aac\u0ac1\u0a95\u0aae\u0abe\u0ab0\u0acd\u0a95",
+    "description": "Bookmarks Label"
   }
 }

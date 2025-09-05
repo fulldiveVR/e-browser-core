@@ -8,9 +8,9 @@
 # file that folks expect for administering Brave via Windows group policy.
 #
 # For more info, see:
-# https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy
+# https://support.aiwize.com/hc/en-us/articles/360039248271-Group-Policy
 # and
-# https://github.com/brave/brave-browser/issues/26502
+# https://github.com/fulldiveVR/e-browser/issues/26502
 #
 # NOTE: There are assets on other platforms but we don't currently use them.
 #

@@ -11,26 +11,14 @@
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/common/webui_url_constants.h"
 
-#define ReloadBypassingCache ReloadBypassingCache_ChromiumImpl
 #define GetReadingListModel GetReadingListModel_ChromiumImpl
 #define kChromeUISplitViewNewTabPageURL kChromeUINewTabURL
 #include "src/chrome/browser/ui/browser_commands.cc"
 #undef kChromeUISplitViewNewTabPageURL
-#undef ReloadBypassingCache
 #undef GetReadingListModel
 
 namespace chrome {
 
-void ReloadBypassingCache(Browser* browser, WindowOpenDisposition disposition) {
-  Profile* profile = browser->profile();
-  DCHECK(profile);
-  // NewTorConnectionForSite will do hard reload after obtaining new identity
-  if (profile->IsTor()) {
-    brave::NewTorConnectionForSite(browser);
-  } else {
-    ReloadBypassingCache_ChromiumImpl(browser, disposition);
-  }
-}
 
 ReadingListModel* GetReadingListModel(Browser* browser) {
   return nullptr;

@@ -6,20 +6,17 @@
 import { Reducer } from 'redux'
 
 // Constants
-import { types, DismissBrandedWallpaperNotificationPayload } from '../constants/new_tab_types'
+import { types } from '../constants/new_tab_types'
 import { Stats } from '../api/stats'
 
 // API
 import * as backgroundAPI from '../api/background'
 import { InitialData } from '../api/initialData'
 import { registerViewCount } from '../api/wallpaper'
-import * as preferencesAPI from '../api/preferences'
 import * as storage from '../storage/new_tab_storage'
 import { setMostVisitedSettings } from '../api/topSites'
 
 // Utils
-import { handleWidgetPrefsChange } from './stack_widget_reducer'
-import { NewTabAdsData } from '../api/newTabAdsData'
 import { Background, CustomBackground } from '../api/background'
 
 let sideEffectState: NewTab.State = storage.load()
@@ -41,8 +38,6 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         initialDataLoaded: true,
         ...initialDataPayload.preferences,
         stats: initialDataPayload.stats,
-        braveRewardsSupported: initialDataPayload.braveRewardsSupported,
-        braveTalkSupported: initialDataPayload.braveTalkSupported,
         searchPromotionEnabled: initialDataPayload.searchPromotionEnabled,
         customImageBackgrounds: initialDataPayload.customImageBackgrounds
       }
@@ -66,15 +61,8 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
       }
 
       // It's super referral when background is false and it's not sponsored.
-      if (state.brandedWallpaper && !state.brandedWallpaper.isSponsored) {
-        // Update feature flag if this is super referral wallpaper.
-        state = {
-          ...state,
-          featureFlagBraveNTPSponsoredImagesWallpaper: false
-        }
-      }
       // Set default if we can't get both.
-      if (!state.backgroundWallpaper && !state.brandedWallpaper) {
+      if (!state.backgroundWallpaper) {
         state.backgroundWallpaper = backgroundAPI.randomBackgroundImage()
       }
       console.timeStamp('reducer initial data received')
@@ -162,44 +150,13 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
       }
       break
 
-    case types.NEW_TAB_ADS_DATA_UPDATED:
-      const newTabAdsData = payload as NewTabAdsData
-      state.rewardsState.needsBrowserUpgradeToServeAds = newTabAdsData.needsBrowserUpgradeToServeAds
-      break
 
-    case types.NEW_TAB_DISMISS_BRANDED_WALLPAPER_NOTIFICATION:
-      const { isUserAction } = payload as DismissBrandedWallpaperNotificationPayload
-      // Save persisted data.
-      preferencesAPI.saveIsBrandedWallpaperNotificationDismissed(true)
-      // Only change current data if user explicitly took an action (e.g. clicked
-      // on the "Close notification Button" - x).
-      if (isUserAction) {
-        state = {
-          ...state,
-          isBrandedWallpaperNotificationDismissed: true
-        }
-      }
-      break
 
     case types.NEW_TAB_PREFERENCES_UPDATED:
       const preferences = payload as NewTab.Preferences
       const newState = {
         ...state,
         ...preferences
-      }
-      // We don't want to update dismissed status of branded wallpaper notification
-      // since this can happen automatically when the notification is counted as
-      // 'viewed', but we want to keep showing it until the page is navigated away from
-      // or refreshed.
-      newState.isBrandedWallpaperNotificationDismissed = state.isBrandedWallpaperNotificationDismissed
-      // Remove branded wallpaper when opting out or turning wallpapers off
-      const hasTurnedBrandedWallpaperOff = !preferences.brandedWallpaperOptIn && state.brandedWallpaper
-      const hasTurnedWallpaperOff = !preferences.showBackgroundImage && state.showBackgroundImage
-      // We always show SR images regardless of background options state.
-      const isSuperReferral = state.brandedWallpaper && !state.brandedWallpaper.isSponsored
-      if (!isSuperReferral &&
-          (hasTurnedBrandedWallpaperOff || (state.brandedWallpaper && hasTurnedWallpaperOff))) {
-        newState.brandedWallpaper = undefined
       }
       // Get a new wallpaper image if turning that feature on
       const shouldChangeBackgroundImage =
@@ -208,7 +165,6 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         newState.backgroundWallpaper = backgroundAPI.randomBackgroundImage()
       }
       // Handle updated widget prefs
-      state = handleWidgetPrefsChange(newState, state)
       break
 
     case types.SET_MOST_VISITED_SITES: {

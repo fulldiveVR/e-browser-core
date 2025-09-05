@@ -13,14 +13,10 @@
 #include "base/path_service.h"
 #include "brave/browser/browsing_data/brave_clear_browsing_data.h"
 #include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
-#include "brave/components/brave_rewards/core/rewards_flags.h"
-#include "brave/components/brave_rewards/core/rewards_util.h"
 #include "brave/components/brave_sync/features.h"
 #include "brave/components/constants/brave_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/ipfs/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
@@ -36,22 +32,7 @@
 #include "extensions/buildflags/buildflags.h"
 #include "media/base/media_switches.h"
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_extended_info_handler.h"
-#include "components/sessions/content/content_serialized_navigation_driver.h"
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include <string>
-#include "base/files/file_util.h"
-#include "brave/components/tor/tor_constants.h"
-#include "chrome/browser/browser_process_impl.h"
-#include "chrome/browser/profiles/profile_attributes_init_params.h"
-#include "chrome/browser/profiles/profile_attributes_storage.h"
-#include "chrome/browser/profiles/profile_manager.h"
-#include "chrome/browser/profiles/profile_metrics.h"
-#include "components/account_id/account_id.h"
-#endif
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/infobars/brave_confirm_p3a_infobar_delegate.h"
@@ -83,15 +64,6 @@ int ChromeBrowserMainParts::PreMainMessageLoopRun() {
 }
 
 void ChromeBrowserMainParts::PreBrowserStart() {
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  // Register() must be called after the SerializedNavigationDriver is
-  // initialized, but before any calls to
-  // ContentSerializedNavigationBuilder::ToNavigationEntries()
-  //
-  // TODO(keur): Can we DCHECK the latter condition?
-  DCHECK(sessions::ContentSerializedNavigationDriver::GetInstance());
-  speedreader::SpeedreaderExtendedInfoHandler::Register();
-#endif
 
   ChromeBrowserMainParts_ChromiumImpl::PreBrowserStart();
 }
@@ -99,43 +71,6 @@ void ChromeBrowserMainParts::PreBrowserStart() {
 void ChromeBrowserMainParts::PostBrowserStart() {
   ChromeBrowserMainParts_ChromiumImpl::PostBrowserStart();
 
-#if BUILDFLAG(ENABLE_TOR)
-  ProfileManager* profile_manager = g_browser_process->profile_manager();
-  base::FilePath tor_legacy_path =
-      profile_manager->user_data_dir().Append(tor::kTorProfileDir);
-
-  // Delete Tor legacy profile if exists.
-  if (base::PathExists(tor_legacy_path)) {
-    // Add tor legacy path into profile attributes storage first if nonexist
-    // because we will hit DCHECK(!GetProfileAttributesWithPath(...))  in
-    // ProfileInfoCache::DeleteProfileFromCache when we trying to delete it
-    // without this being added into the storage first.
-    ProfileAttributesStorage& storage =
-        profile_manager->GetProfileAttributesStorage();
-    ProfileAttributesEntry* entry =
-        storage.GetProfileAttributesWithPath(tor_legacy_path);
-    if (!entry) {
-      ProfileAttributesInitParams params;
-      params.profile_path = tor_legacy_path;
-      storage.AddProfile(std::move(params));
-    }
-
-    profile_manager->GetDeleteProfileHelper().MaybeScheduleProfileForDeletion(
-        tor_legacy_path, base::DoNothing(),
-        ProfileMetrics::DELETE_PROFILE_SETTINGS);
-  }
-  for (Profile* profile : profile_manager->GetLoadedProfiles()) {
-    const base::FilePath tor_legacy_session_path =
-        profile->GetPath()
-            .Append(brave::kSessionProfileDir)
-            .Append(tor::kTorProfileDir);
-    if (base::PathExists(tor_legacy_session_path)) {
-      profile_manager->GetDeleteProfileHelper().MaybeScheduleProfileForDeletion(
-          tor_legacy_session_path, base::DoNothing(),
-          ProfileMetrics::DELETE_PROFILE_SETTINGS);
-    }
-  }
-#endif
 
 #if !BUILDFLAG(IS_ANDROID)
   Browser* browser = chrome::FindLastActive();

@@ -1,7 +1,7 @@
-caption: Disable Brave Shields for URLs
+caption: Disable AIWize Shields for URLs
 default: null
 desc: |-
-  Forces the shields in Brave to be disabled for specific web sites.
+  Forces the shields in AIWize to be disabled for specific web sites.
 
   You can use special syntax to wildcard a domain.
 example_value:
@@ -19,7 +19,7 @@ items:
 - caption: Shields on for all sites by default
   value: null
 owners:
-- clifton@brave.com
+- clifton@aiwize.com
 schema:
   items:
     type: string

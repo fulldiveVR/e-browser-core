@@ -210,7 +210,7 @@ void BraveAppMenu::RunMenu(views::MenuButtonController* host) {
 void BraveAppMenu::ExecuteCommand(int command_id, int mouse_event_flags) {
   // Suspect that the entry is null but can't imagine which command causes it.
   // See
-  // https://github.com/brave/brave-browser/issues/37862#issuecomment-2078553575
+  // https://github.com/fulldiveVR/e-browser/issues/37862#issuecomment-2078553575
   if (!IsBookmarkCommand(command_id) && !IsTabGroupsCommand(command_id) &&
       command_id != IDC_CREATE_NEW_TAB_GROUP && command_id != IDC_EDIT_MENU &&
       command_id != IDC_ZOOM_MENU &&
@@ -249,15 +249,12 @@ void BraveAppMenu::RecordMenuUsage(int command_id) {
     case IDC_NEW_WINDOW:
     case IDC_NEW_TAB:
     case IDC_NEW_INCOGNITO_WINDOW:
-    case IDC_NEW_OFFTHERECORD_WINDOW_TOR:
     case IDC_OPEN_GUEST_PROFILE:
       group = misc_metrics::MenuGroup::kTabWindow;
       break;
-    case IDC_SHOW_BRAVE_WALLET:
     case IDC_TOGGLE_AI_CHAT:
     case IDC_OPEN_FULL_PAGE_CHAT:
     case IDC_SHOW_BRAVE_SYNC:
-    case IDC_SHOW_BRAVE_REWARDS:
       group = misc_metrics::MenuGroup::kBraveFeatures;
       break;
     case IDC_SHOW_HISTORY:

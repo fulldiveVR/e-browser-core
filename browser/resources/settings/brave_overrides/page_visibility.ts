@@ -46,7 +46,6 @@ function getPageVisibility () {
     return {
       ...chromiumPageVisibility,
       braveSync: false,
-      braveWallet: false,
       braveWeb3: false,
       // <if expr="enable_containers">
       containers: false,
@@ -58,7 +57,6 @@ function getPageVisibility () {
       playlist: false,
       shields: true,
       socialBlocking: true,
-      speedreader: false,
       surveyPanelist: false,
     }
   }
@@ -81,7 +79,6 @@ function getPageVisibility () {
     privacy: alwaysTrueProxy,
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
-    braveWallet: loadTimeData.getBoolean('isBraveWalletAllowed'),
     leoAssistant: loadTimeData.getBoolean('isLeoAssistantAllowed'),
     surveyPanelist: loadTimeData.getBoolean('isSurveyPanelistAllowed'),
     // <if expr="enable_containers">
@@ -89,8 +86,6 @@ function getPageVisibility () {
     // </if>
     content: alwaysTrueProxy,
     playlist: loadTimeData.getBoolean('isPlaylistAllowed'),
-    speedreader: loadTimeData.getBoolean('isSpeedreaderFeatureEnabled') &&
-                 !loadTimeData.getBoolean('isSpeedreaderDisabledByPolicy'),
   }
   // Proxy so we can respond to any other property
   return new Proxy(staticProps, {

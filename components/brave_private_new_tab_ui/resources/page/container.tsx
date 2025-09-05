@@ -6,19 +6,11 @@ import * as React from 'react'
 import { getLocale } from '$web-common/locale'
 import styled from 'styled-components'
 import getPageHandlerInstance from './api/brave_page_handler'
-import { loadTimeData } from '../../../common/loadTimeData'
 
 import BackgroundView from './components/background-view'
-import SearchBox from './components/search-box'
 import DisclaimerDialog from './components/disclaimer-dialog'
-import BadgeTor from './components/badge-tor'
-import { useTorObserver, useHasDisclaimerDismissed } from './hooks'
+import { useHasDisclaimerDismissed } from './hooks'
 
-const CenterView = styled.div`
-  width: 100%;
-  max-width: 640px;
-  padding: 0 24px 120px 24px;
-`
 
 const DialogBox = styled.div`
   position: absolute;
@@ -49,9 +41,7 @@ const BadgePrivateWindow = styled.div`
 `
 
 function Container () {
-  const isWindowTor = loadTimeData.getBoolean('isWindowTor')
 
-  const { isConnected, progress, message, connectionStatus } = useTorObserver()
   const { hasDisclaimerDismissed } = useHasDisclaimerDismissed()
 
   let badgeElement = (
@@ -64,31 +54,10 @@ function Container () {
   let dialogContent = (
     <p>
       {getLocale('headerText1')}
-      {' '}
-      {getLocale('headerText2')}
     </p>
   )
 
-  if (isWindowTor) {
-    badgeElement = (
-      <BadgeTor
-        isConnected={isConnected}
-        progress={progress ?? ''}
-        message={message ?? ''}
-        connectionStatus={connectionStatus}
-      />
-    )
 
-    dialogContent = (
-      <>
-        <p>{getLocale('headerTorText')}</p>
-      </>
-    )
-  }
-
-  const handleSearchSubmit = (value: string, openNewTab: boolean) => {
-    getPageHandlerInstance().pageHandler.goToBraveSearch(value, openNewTab)
-  }
 
   const handleDialogClose = () => {
     if (hasDisclaimerDismissed) return
@@ -96,15 +65,12 @@ function Container () {
   }
 
   return (
-    <BackgroundView isTor={isWindowTor}>
+    <BackgroundView >
       <BadgeBox>{badgeElement}</BadgeBox>
-      <CenterView>
-        <SearchBox onSubmit={handleSearchSubmit} />
-      </CenterView>
       <DialogBox>
         {(hasDisclaimerDismissed != null) && (
           <DisclaimerDialog
-            title={isWindowTor ? getLocale('headerTorTitle') : getLocale('headerTitle')}
+            title={getLocale('headerTitle')}
             isOpen={!hasDisclaimerDismissed}
             onClose={handleDialogClose}
           >

@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/ui/views/side_panel/side_panel_prefs.cc b/chrome/browser/ui/views/side_panel/side_panel_prefs.cc
+index 2c6ba6c527498a158ee71d75fb0b3c2d2d941b9d..e7bc8b787cf01669e024f233a55ce03d548e2df4 100644
+--- a/chrome/browser/ui/views/side_panel/side_panel_prefs.cc
++++ b/chrome/browser/ui/views/side_panel/side_panel_prefs.cc
+@@ -19,7 +19,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+   // TODO(dljames): Add enum values kAlternateSide / kDefaultSide that will
+   // replace false and true respectively.
+   registry->RegisterBooleanPref(prefs::kSidePanelHorizontalAlignment,
+-                                !base::i18n::IsRTL());
++                                base::i18n::IsRTL());
+   registry->RegisterBooleanPref(prefs::kGoogleSearchSidePanelEnabled, true);
+   registry->RegisterDictionaryPref(prefs::kSidePanelIdToWidth);
+ }

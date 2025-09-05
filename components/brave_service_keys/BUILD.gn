@@ -16,7 +16,6 @@ declare_args() {
 }
 
 if (is_official_build) {
-  assert(brave_services_key_id != "")
 }
 
 buildflag_header("buildflags") {

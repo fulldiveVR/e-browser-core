@@ -11,7 +11,7 @@
 namespace p3a {
 namespace features {
 
-// See https://github.com/brave/brave-browser/issues/31718 for more info.
+// See https://github.com/fulldiveVR/e-browser/issues/31718 for more info.
 BASE_DECLARE_FEATURE(kConstellationEnclaveAttestation);
 
 bool IsConstellationEnclaveAttestationEnabled();

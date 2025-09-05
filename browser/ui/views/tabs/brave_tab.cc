@@ -60,7 +60,7 @@ void BraveTab::ActiveStateChanged() {
 
   // This should be called whenever the active state changes
   // see comment on UpdateEnabledForMuteToggle();
-  // https://github.com/brave/brave-browser/issues/23476/
+  // https://github.com/fulldiveVR/e-browser/issues/23476/
   alert_indicator_button_->UpdateEnabledForMuteToggle();
 }
 

@@ -18,7 +18,7 @@ void ProfileAttributesEntry::BraveMigrateObsoleteProfileAttributes() {
       static_cast<int>(profiles::GetDefaultAvatarIconCount() -
                        profiles::kBraveDefaultAvatarIconsCount);
   // Added 25 July 2024
-  // see https://github.com/brave/brave-browser/issues/40005
+  // see https://github.com/fulldiveVR/e-browser/issues/40005
   //
   // Brave originally allowed folks to pick the Chromium profile icons.
   // We then removed those in favor of our own branded icons in 0.70.x (2019).

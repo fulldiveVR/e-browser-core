@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "The Brave Extension",
+    "message": "The AI Wize Extension",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "You’re browsing this site without Brave’s privacy and security protections. Does it not work right with Shields up?",
+    "message": "You\u2019re browsing this site without AI Wize\u2019s privacy and security protections. Does it not work right with Shields up?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Report a broken site",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Items blocked",
@@ -88,7 +88,7 @@
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "కుక్కీలు బ్లాక్ చేయబడ్డాయి",
+    "message": "\u0c15\u0c41\u0c15\u0c4d\u0c15\u0c40\u0c32\u0c41 \u0c2c\u0c4d\u0c32\u0c3e\u0c15\u0c4d \u0c1a\u0c47\u0c2f\u0c2c\u0c21\u0c4d\u0c21\u0c3e\u0c2f\u0c3f",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
@@ -136,11 +136,11 @@
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "నిరోధించు",
+    "message": "\u0c28\u0c3f\u0c30\u0c4b\u0c27\u0c3f\u0c02\u0c1a\u0c41",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "అనుమతించు",
+    "message": "\u0c05\u0c28\u0c41\u0c2e\u0c24\u0c3f\u0c02\u0c1a\u0c41",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
@@ -156,11 +156,11 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "రద్దు చెయ్యి",
+    "message": "\u0c30\u0c26\u0c4d\u0c26\u0c41 \u0c1a\u0c46\u0c2f\u0c4d\u0c2f\u0c3f",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "వెనుకకు వెళ్ళు",
+    "message": "\u0c35\u0c46\u0c28\u0c41\u0c15\u0c15\u0c41 \u0c35\u0c46\u0c33\u0c4d\u0c33\u0c41",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web — tracking what you do on every site. Brave blocks these things so that you can browse without being followed around.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web \u2014 tracking what you do on every site. AI Wize blocks these things so that you can browse without being followed around.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackers and other creepy things blocked",
@@ -200,27 +200,43 @@
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "అర్థమైంది",
+    "message": "\u0c05\u0c30\u0c4d\u0c25\u0c2e\u0c48\u0c02\u0c26\u0c3f",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "మరింత తెలుసుకోండి",
+    "message": "\u0c2e\u0c30\u0c3f\u0c02\u0c24 \u0c24\u0c46\u0c32\u0c41\u0c38\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Braveకు జోడించండి",
-    "description": "Message for adding an extension to Brave"
+    "message": "Brave\u0c15\u0c41 \u0c1c\u0c4b\u0c21\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave నుండి తీసివేయండి",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize \u0c28\u0c41\u0c02\u0c21\u0c3f \u0c24\u0c40\u0c38\u0c3f\u0c35\u0c47\u0c2f\u0c02\u0c21\u0c3f",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chromeకి జోడించండి",
+    "message": "Chrome\u0c15\u0c3f \u0c1c\u0c4b\u0c21\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome నుండి తీసివేయండి",
+    "message": "Chrome \u0c28\u0c41\u0c02\u0c21\u0c3f \u0c24\u0c40\u0c38\u0c3f\u0c35\u0c47\u0c2f\u0c02\u0c21\u0c3f",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0c21\u0c4c\u0c28\u0c4d\u200c\u0c32\u0c4b\u0c21\u0c4d\u200c\u0c32\u0c41",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u0c38\u0c46\u0c1f\u0c4d\u0c1f\u0c3f\u0c02\u0c17\u0c4d\u200c\u0c32\u0c41",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0c39\u0c3f\u0c38\u0c4d\u0c1f\u0c30\u0c40",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0c2c\u0c41\u0c15\u0c4d\u200c\u0c2e\u0c3e\u0c30\u0c4d\u0c15\u0c4d\u200c\u0c32\u0c41",
+    "description": "Bookmarks Label"
   }
 }

@@ -1,226 +1,242 @@
 {
   "appName": {
-    "message": "Розширення Brave",
+    "message": "\u0420\u043e\u0437\u0448\u0438\u0440\u0435\u043d\u043d\u044f AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Щити",
+    "message": "\u0429\u0438\u0442\u0438",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "увімкнено",
+    "message": "\u0443\u0432\u0456\u043c\u043a\u043d\u0435\u043d\u043e",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "вимкнено",
+    "message": "\u0432\u0438\u043c\u043a\u043d\u0435\u043d\u043e",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "для цього сайту",
+    "message": "\u0434\u043b\u044f \u0446\u044c\u043e\u0433\u043e \u0441\u0430\u0439\u0442\u0443",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Якщо сайт виглядає пошкодженим, спробуйте вимкнути щити",
+    "message": "\u042f\u043a\u0449\u043e \u0441\u0430\u0439\u0442 \u0432\u0438\u0433\u043b\u044f\u0434\u0430\u0454 \u043f\u043e\u0448\u043a\u043e\u0434\u0436\u0435\u043d\u0438\u043c, \u0441\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0432\u0438\u043c\u043a\u043d\u0443\u0442\u0438 \u0449\u0438\u0442\u0438",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Ви переглядаєте цей сайт без захисту приватності та безпеки Brave. Він не працює належним чином з увімкненими щитами?",
+    "message": "\u0412\u0438 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0454\u0442\u0435 \u0446\u0435\u0439 \u0441\u0430\u0439\u0442 \u0431\u0435\u0437 \u0437\u0430\u0445\u0438\u0441\u0442\u0443 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u0456 \u0442\u0430 \u0431\u0435\u0437\u043f\u0435\u043a\u0438 AI Wize. \u0412\u0456\u043d \u043d\u0435 \u043f\u0440\u0430\u0446\u044e\u0454 \u043d\u0430\u043b\u0435\u0436\u043d\u0438\u043c \u0447\u0438\u043d\u043e\u043c \u0437 \u0443\u0432\u0456\u043c\u043a\u043d\u0435\u043d\u0438\u043c\u0438 \u0449\u0438\u0442\u0430\u043c\u0438?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "Повідомити про пошкоджений сайт",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u041f\u043e\u0432\u0456\u0434\u043e\u043c\u0438\u0442\u0438 \u043f\u0440\u043e \u043f\u043e\u0448\u043a\u043e\u0434\u0436\u0435\u043d\u0438\u0439 \u0441\u0430\u0439\u0442",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "Елементів заблоковано",
+    "message": "\u0415\u043b\u0435\u043c\u0435\u043d\u0442\u0456\u0432 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "Елемент заблоковано",
+    "message": "\u0415\u043b\u0435\u043c\u0435\u043d\u0442 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "та",
+    "message": "\u0442\u0430",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "з’єднань оновлено",
+    "message": "\u0437\u2019\u0454\u0434\u043d\u0430\u043d\u044c \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "з’єднання оновлено",
+    "message": "\u0437\u2019\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Стеження між сайтами заблоковано",
+    "message": "\u0421\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u043c\u0456\u0436 \u0441\u0430\u0439\u0442\u0430\u043c\u0438 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Стеження та реклама блокуються",
+    "message": "\u0421\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0430 \u0431\u043b\u043e\u043a\u0443\u044e\u0442\u044c\u0441\u044f",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Стеження та реклама блокуються (агресивно)",
+    "message": "\u0421\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0430 \u0431\u043b\u043e\u043a\u0443\u044e\u0442\u044c\u0441\u044f (\u0430\u0433\u0440\u0435\u0441\u0438\u0432\u043d\u043e)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Стеження та реклама блокуються (стандартно)",
+    "message": "\u0421\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0430 \u0431\u043b\u043e\u043a\u0443\u044e\u0442\u044c\u0441\u044f (\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u043e)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Дозволити стеження та рекламу",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u0438 \u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u0442\u0430 \u0440\u0435\u043a\u043b\u0430\u043c\u0443",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "З’єднання оновлені до HTTPS",
+    "message": "\u0417\u2019\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u0456 \u0434\u043e HTTPS",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "З’єднання оновлено до HTTPS",
+    "message": "\u0417\u2019\u0454\u0434\u043d\u0430\u043d\u043d\u044f \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043e \u0434\u043e HTTPS",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
-    "message": "Скрипти заблоковано",
+    "message": "\u0421\u043a\u0440\u0438\u043f\u0442\u0438 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Сторонні файли cookie блокуються",
+    "message": "\u0421\u0442\u043e\u0440\u043e\u043d\u043d\u0456 \u0444\u0430\u0439\u043b\u0438 cookie \u0431\u043b\u043e\u043a\u0443\u044e\u0442\u044c\u0441\u044f",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "Файли cookie блокуються",
+    "message": "\u0424\u0430\u0439\u043b\u0438 cookie \u0431\u043b\u043e\u043a\u0443\u044e\u0442\u044c\u0441\u044f",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Всі файли cookie дозволено",
+    "message": "\u0412\u0441\u0456 \u0444\u0430\u0439\u043b\u0438 cookie \u0434\u043e\u0437\u0432\u043e\u043b\u0435\u043d\u043e",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Зчитування цифрового відбитка блокується",
+    "message": "\u0417\u0447\u0438\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0433\u043e \u0432\u0456\u0434\u0431\u0438\u0442\u043a\u0430 \u0431\u043b\u043e\u043a\u0443\u0454\u0442\u044c\u0441\u044f",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Зчитування цифрового відбитка блокується (стандартно)",
+    "message": "\u0417\u0447\u0438\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0433\u043e \u0432\u0456\u0434\u0431\u0438\u0442\u043a\u0430 \u0431\u043b\u043e\u043a\u0443\u0454\u0442\u044c\u0441\u044f (\u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u043e)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Зчитування цифрового відбитка блокується (посилено, може пошкодити сайти)",
+    "message": "\u0417\u0447\u0438\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0433\u043e \u0432\u0456\u0434\u0431\u0438\u0442\u043a\u0430 \u0431\u043b\u043e\u043a\u0443\u0454\u0442\u044c\u0441\u044f (\u043f\u043e\u0441\u0438\u043b\u0435\u043d\u043e, \u043c\u043e\u0436\u0435 \u043f\u043e\u0448\u043a\u043e\u0434\u0438\u0442\u0438 \u0441\u0430\u0439\u0442\u0438)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Дозволити зчитування цифрового відбитка",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u0438 \u0437\u0447\u0438\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0433\u043e \u0432\u0456\u0434\u0431\u0438\u0442\u043a\u0430",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Спроби зчитування цифрового відбитка",
+    "message": "\u0421\u043f\u0440\u043e\u0431\u0438 \u0437\u0447\u0438\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0433\u043e \u0432\u0456\u0434\u0431\u0438\u0442\u043a\u0430",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Скрипти на цьому сайті",
+    "message": "\u0421\u043a\u0440\u0438\u043f\u0442\u0438 \u043d\u0430 \u0446\u044c\u043e\u043c\u0443 \u0441\u0430\u0439\u0442\u0456",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "Заблоковані скрипти",
+    "message": "\u0417\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u0456 \u0441\u043a\u0440\u0438\u043f\u0442\u0438",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Дозволені скрипти",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0435\u043d\u0456 \u0441\u043a\u0440\u0438\u043f\u0442\u0438",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "Блокувати все",
+    "message": "\u0411\u043b\u043e\u043a\u0443\u0432\u0430\u0442\u0438 \u0432\u0441\u0435",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Дозволити все",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u0438 \u0432\u0441\u0435",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "Блокувати",
+    "message": "\u0411\u043b\u043e\u043a\u0443\u0432\u0430\u0442\u0438",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Дозволити",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u0438",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Заблоковано один раз",
+    "message": "\u0417\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e \u043e\u0434\u0438\u043d \u0440\u0430\u0437",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Дозволено один раз",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0435\u043d\u043e \u043e\u0434\u0438\u043d \u0440\u0430\u0437",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Дозволити скрипти один раз",
+    "message": "\u0414\u043e\u0437\u0432\u043e\u043b\u0438\u0442\u0438 \u0441\u043a\u0440\u0438\u043f\u0442\u0438 \u043e\u0434\u0438\u043d \u0440\u0430\u0437",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "Скасувати",
+    "message": "\u0421\u043a\u0430\u0441\u0443\u0432\u0430\u0442\u0438",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "Назад",
+    "message": "\u041d\u0430\u0437\u0430\u0434",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Застосувати один раз",
+    "message": "\u0417\u0430\u0441\u0442\u043e\u0441\u0443\u0432\u0430\u0442\u0438 \u043e\u0434\u0438\u043d \u0440\u0430\u0437",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Змінити глобальні налаштування щитів",
+    "message": "\u0417\u043c\u0456\u043d\u0438\u0442\u0438 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u0456 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0449\u0438\u0442\u0456\u0432",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
-    "message": "Керувати користувацькими фільтрами",
+    "message": "\u041a\u0435\u0440\u0443\u0432\u0430\u0442\u0438 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0446\u044c\u043a\u0438\u043c\u0438 \u0444\u0456\u043b\u044c\u0442\u0440\u0430\u043c\u0438",
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "Блокувати елемент",
+    "message": "\u0411\u043b\u043e\u043a\u0443\u0432\u0430\u0442\u0438 \u0435\u043b\u0435\u043c\u0435\u043d\u0442",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Розширене подання",
+    "message": "\u0420\u043e\u0437\u0448\u0438\u0440\u0435\u043d\u0435 \u043f\u043e\u0434\u0430\u043d\u043d\u044f",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Просте подання",
+    "message": "\u041f\u0440\u043e\u0441\u0442\u0435 \u043f\u043e\u0434\u0430\u043d\u043d\u044f",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Сайти часто містять файли cookie та скрипти, які намагаються ідентифікувати вас і ваш пристрій (часто вбудовані в рекламу). Вони хочуть сформувати ваш профіль і потім переслідувати вас в інтернеті, збираючи дані про вашу діяльність на кожному сайті. Brave блокує такі елементи, щоб ви могли переглядати сайти без стеження.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "\u0421\u0430\u0439\u0442\u0438 \u0447\u0430\u0441\u0442\u043e \u043c\u0456\u0441\u0442\u044f\u0442\u044c \u0444\u0430\u0439\u043b\u0438 cookie \u0442\u0430 \u0441\u043a\u0440\u0438\u043f\u0442\u0438, \u044f\u043a\u0456 \u043d\u0430\u043c\u0430\u0433\u0430\u044e\u0442\u044c\u0441\u044f \u0456\u0434\u0435\u043d\u0442\u0438\u0444\u0456\u043a\u0443\u0432\u0430\u0442\u0438 \u0432\u0430\u0441 \u0456 \u0432\u0430\u0448 \u043f\u0440\u0438\u0441\u0442\u0440\u0456\u0439 (\u0447\u0430\u0441\u0442\u043e \u0432\u0431\u0443\u0434\u043e\u0432\u0430\u043d\u0456 \u0432 \u0440\u0435\u043a\u043b\u0430\u043c\u0443). \u0412\u043e\u043d\u0438 \u0445\u043e\u0447\u0443\u0442\u044c \u0441\u0444\u043e\u0440\u043c\u0443\u0432\u0430\u0442\u0438 \u0432\u0430\u0448 \u043f\u0440\u043e\u0444\u0456\u043b\u044c \u0456 \u043f\u043e\u0442\u0456\u043c \u043f\u0435\u0440\u0435\u0441\u043b\u0456\u0434\u0443\u0432\u0430\u0442\u0438 \u0432\u0430\u0441 \u0432 \u0456\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0456, \u0437\u0431\u0438\u0440\u0430\u044e\u0447\u0438 \u0434\u0430\u043d\u0456 \u043f\u0440\u043e \u0432\u0430\u0448\u0443 \u0434\u0456\u044f\u043b\u044c\u043d\u0456\u0441\u0442\u044c \u043d\u0430 \u043a\u043e\u0436\u043d\u043e\u043c\u0443 \u0441\u0430\u0439\u0442\u0456. AI Wize \u0431\u043b\u043e\u043a\u0443\u0454 \u0442\u0430\u043a\u0456 \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0438, \u0449\u043e\u0431 \u0432\u0438 \u043c\u043e\u0433\u043b\u0438 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0442\u0438 \u0441\u0430\u0439\u0442\u0438 \u0431\u0435\u0437 \u0441\u0442\u0435\u0436\u0435\u043d\u043d\u044f.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Стеження між сайтами й інші елементи заблоковано",
+    "message": "\u0421\u0442\u0435\u0436\u0435\u043d\u043d\u044f \u043c\u0456\u0436 \u0441\u0430\u0439\u0442\u0430\u043c\u0438 \u0439 \u0456\u043d\u0448\u0456 \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0438 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Зміна налаштувань щитів у цьому поданні може вплинути на вебсумісність цього сайту.",
+    "message": "\u0417\u043c\u0456\u043d\u0430 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u044c \u0449\u0438\u0442\u0456\u0432 \u0443 \u0446\u044c\u043e\u043c\u0443 \u043f\u043e\u0434\u0430\u043d\u043d\u0456 \u043c\u043e\u0436\u0435 \u0432\u043f\u043b\u0438\u043d\u0443\u0442\u0438 \u043d\u0430 \u0432\u0435\u0431\u0441\u0443\u043c\u0456\u0441\u043d\u0456\u0441\u0442\u044c \u0446\u044c\u043e\u0433\u043e \u0441\u0430\u0439\u0442\u0443.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "Зрозуміло",
+    "message": "\u0417\u0440\u043e\u0437\u0443\u043c\u0456\u043b\u043e",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Докладніше",
+    "message": "\u0414\u043e\u043a\u043b\u0430\u0434\u043d\u0456\u0448\u0435",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Додати в Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "\u0414\u043e\u0434\u0430\u0442\u0438 \u0432 AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Видалити з Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "\u0412\u0438\u0434\u0430\u043b\u0438\u0442\u0438 \u0437 AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Додати в Chrome",
+    "message": "\u0414\u043e\u0434\u0430\u0442\u0438 \u0432 Chrome",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Видалити з Chrome",
+    "message": "\u0412\u0438\u0434\u0430\u043b\u0438\u0442\u0438 \u0437 Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0435\u043d\u043d\u044f",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u041d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0406\u0441\u0442\u043e\u0440\u0456\u044f",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0417\u0430\u043a\u043b\u0430\u0434\u043a\u0438",
+    "description": "Bookmarks Label"
   }
 }

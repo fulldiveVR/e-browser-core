@@ -1,0 +1,38 @@
+static_library("browser") {
+  sources = [
+    "screenshotter.cc",
+    "screenshotter.h",
+  ]
+
+  deps = [
+    "//base",
+    "//brave/components/ai_chat/core/browser",
+    "//brave/components/ai_chat/core/common",
+    "//brave/components/ai_chat/core/common/mojom",
+    "//brave/components/api_request_helper",
+    "//brave/components/brave_stats/browser",
+    "//brave/components/constants",
+    "//brave/components/resources:strings_grit",
+    "//brave/components/text_recognition/common/buildflags",
+    "//components/favicon/content",
+    "//components/favicon/core",
+    "//components/keyed_service/content:content",
+    "//components/paint_preview/browser",
+    "//components/paint_preview/common",
+    "//components/paint_preview/public",
+    "//components/prefs",
+    "//components/strings:components_strings_grit",
+    "//components/user_prefs",
+    "//content/public/browser",
+    "//net/traffic_annotation",
+    "//pdf:buildflags",
+    "//services/data_decoder/public/cpp",
+    "//services/network/public/cpp",
+    "//services/service_manager/public/cpp",
+    "//services/strings:strings_grit",
+    "//ui/accessibility:ax_base",
+    "//ui/base",
+    "//url",
+    "//ui/gfx",
+  ]
+}

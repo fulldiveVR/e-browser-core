@@ -11,7 +11,6 @@
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/strings/strcat.h"
-#include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/browser/new_tab/new_tab_shows_options.h"
 #include "brave/browser/ntp_background/brave_ntp_custom_background_service_factory.h"
 #include "brave/browser/resources/brave_new_tab_page_refresh/grit/brave_new_tab_page_refresh_generated_map.h"
@@ -140,8 +139,6 @@ void NewTabPageInitializer::AddLoadTimeValues() {
       GetSearchDefaultHost(
           RegionalCapabilitiesServiceFactory::GetForProfile(profile)));
 
-  source_->AddBoolean("rewardsFeatureEnabled",
-                      brave_rewards::IsSupportedForProfile(profile));
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   bool vpn_feature_enabled = brave_vpn::IsBraveVPNEnabled(prefs);
@@ -155,8 +152,6 @@ void NewTabPageInitializer::AddLoadTimeValues() {
   source_->AddBoolean(
       "newsFeatureEnabled",
       !prefs->GetBoolean(brave_news::prefs::kBraveNewsDisabledByPolicy));
-  source_->AddBoolean("talkFeatureEnabled",
-                      !prefs->GetBoolean(kBraveTalkDisabledByPolicy));
 }
 
 void NewTabPageInitializer::AddStrings() {
@@ -190,20 +185,6 @@ void NewTabPageInitializer::AddStrings() {
       {"photoCreditsText", IDS_NEW_TAB_PHOTO_CREDITS_TEXT},
       {"randomizeBackgroundLabel", IDS_NEW_TAB_RANDOMIZE_BACKGROUND_LABEL},
       {"removeTopSiteLabel", IDS_NEW_TAB_REMOVE_TOP_SITE_LABEL},
-      {"rewardsAdsViewedTooltip", IDS_REWARDS_ADS_VIEWED_TOOLTIP},
-      {"rewardsBalanceTitle", IDS_NEW_TAB_REWARDS_BALANCE_TITLE},
-      {"rewardsConnectButtonLabel", IDS_NEW_TAB_REWARDS_CONNECT_BUTTON_LABEL},
-      {"rewardsConnectText", IDS_NEW_TAB_REWARDS_CONNECT_TEXT},
-      {"rewardsConnectTitle", IDS_NEW_TAB_REWARDS_CONNECT_TITLE},
-      {"rewardsFeatureText1", IDS_REWARDS_ONBOARDING_TEXT_ITEM_1},
-      {"rewardsFeatureText2", IDS_REWARDS_ONBOARDING_TEXT_ITEM_2},
-      {"rewardsLoginButtonLabel", IDS_NEW_TAB_REWARDS_LOGIN_BUTTON_LABEL},
-      {"rewardsLoginText", IDS_NEW_TAB_REWARDS_LOGIN_TEXT},
-      {"rewardsLoginTitle", IDS_NEW_TAB_REWARDS_LOGIN_TITLE},
-      {"rewardsOnboardingButtonLabel",
-       IDS_NEW_TAB_REWARDS_ONBOARDING_BUTTON_LABEL},
-      {"rewardsOnboardingLink", IDS_NEW_TAB_REWARDS_ONBOARDING_LINK},
-      {"rewardsWidgetTitle", IDS_NEW_TAB_REWARDS_WIDGET_TITLE},
       {"saveChangesButtonLabel", IDS_NEW_TAB_SAVE_CHANGES_BUTTON_LABEL},
       {"searchAskLeoDescription", IDS_OMNIBOX_ASK_LEO_DESCRIPTION},
       {"searchBoxPlaceholderText", IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT},
@@ -276,15 +257,14 @@ void NewTabPageInitializer::AddStrings() {
       {"widgetSettingsTitle", IDS_NEW_TAB_WIDGET_SETTINGS_TITLE}};
 
   source_->AddLocalizedStrings(kStrings);
-  source_->AddLocalizedStrings(webui::kBraveNewsStrings);
+  source_->AddLocalizedStrings(webui::kAIStrings);
 }
 
 void NewTabPageInitializer::AddPluralStrings() {
   auto handler = std::make_unique<PluralStringHandler>();
   handler->AddLocalizedString("BRAVE_NEWS_SOURCE_COUNT",
                               IDS_BRAVE_NEWS_SOURCE_COUNT);
-  handler->AddLocalizedString("rewardsConnectedAdsViewedText",
-                              IDS_REWARDS_CONNECTED_ADS_VIEWED_TEXT);
+
   web_ui_->AddMessageHandler(std::move(handler));
 }
 

@@ -16,7 +16,7 @@ import getPanelBrowserAPI from '../../api/panel_browser_api'
 import { useIsExpanded } from '../../state/hooks'
 
 const handleLearnMoreClick = () => {
-  chrome.tabs.create({ url: 'https://brave.com/privacy-features/', active: true })
+  chrome.tabs.create({ url: 'https://aiwize.com/privacy-features/', active: true })
 }
 
 function MainPanel () {

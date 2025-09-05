@@ -27,6 +27,8 @@ include_rules += [
   "+brave/components/ai_chat/core/common",
   "+brave/components/ai_chat/core/browser",
   "+brave/components/ai_rewriter/common",
+  "+brave/components/ai_combiner",
+  "+brave/components/ai_combiner/content/browser",
   "+brave/components/brave_account",
   "+brave/components/brave_ads/browser",
   "+brave/components/brave_ads/core/public",

@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave-tillägget",
+    "message": "Brave-till\u00e4gget",
     "description": "The name of the extension."
   },
   "shields": {
@@ -16,7 +16,7 @@
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "för den här webbplatsen",
+    "message": "f\u00f6r den h\u00e4r webbplatsen",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Du besöker den här webbplatsen utan Braves sekretess- och säkerhetsskydd. Fungerar den inte korrekt med Shields?",
+    "message": "Du bes\u00f6ker den h\u00e4r webbplatsen utan AI Wizes sekretess- och s\u00e4kerhetsskydd. Fungerar den inte korrekt med Shields?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Rapportera en trasig webbplats",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Punkter blockerade",
@@ -52,7 +52,7 @@
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "Cross-site-spårare blockerade",
+    "message": "Cross-site-sp\u00e5rare blockerade",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
@@ -60,15 +60,15 @@
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Spårare och annonser blockerade (aggressivt)",
+    "message": "Sp\u00e5rare och annonser blockerade (aggressivt)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Spårare och annonser blockerade (standard)",
+    "message": "Sp\u00e5rare och annonser blockerade (standard)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Tillåt alla spårare och annonser",
+    "message": "Till\u00e5t alla sp\u00e5rare och annonser",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
@@ -84,7 +84,7 @@
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "Kakor för flera webbplatser blockerade",
+    "message": "Kakor f\u00f6r flera webbplatser blockerade",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
@@ -92,7 +92,7 @@
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "Alla kakor tillåts",
+    "message": "Alla kakor till\u00e5ts",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
@@ -100,23 +100,23 @@
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Fingeravtrycksläsning hindrad (standard)",
+    "message": "Fingeravtrycksl\u00e4sning hindrad (standard)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
-    "message": "Fingeravtrycksläsning hindrad (strikt, kan bryta sajter)",
+    "message": "Fingeravtrycksl\u00e4sning hindrad (strikt, kan bryta sajter)",
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Tillåt att alla fingeravtryck tas",
+    "message": "Till\u00e5t att alla fingeravtryck tas",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Försök att ta fingeravtryck",
+    "message": "F\u00f6rs\u00f6k att ta fingeravtryck",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "Skript på den här webbplatse",
+    "message": "Skript p\u00e5 den h\u00e4r webbplatse",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
@@ -124,7 +124,7 @@
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "Tillåtna skript",
+    "message": "Till\u00e5tna skript",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
@@ -132,7 +132,7 @@
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "Tillåt alla",
+    "message": "Till\u00e5t alla",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
@@ -140,19 +140,19 @@
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "Tillåt",
+    "message": "Till\u00e5t",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "Blockerad en gång",
+    "message": "Blockerad en g\u00e5ng",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "Tillåten en gång",
+    "message": "Till\u00e5ten en g\u00e5ng",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
-    "message": "Tillåt skript en gång",
+    "message": "Till\u00e5t skript en g\u00e5ng",
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
@@ -164,11 +164,11 @@
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "Tillämpa en gång",
+    "message": "Till\u00e4mpa en g\u00e5ng",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Ändra globala standardinställningar för Shields",
+    "message": "\u00c4ndra globala standardinst\u00e4llningar f\u00f6r Shields",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
@@ -188,15 +188,15 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Det finns ofta kakor och skript på webbplatser som försöker identifiera dig och din enhet (ofta inbäddade i annonser). De vill ta reda på vem du är och följer och spårar dig på internet och vad du gör på olika webbplatser. Med Brave blockerar du de funktionerna så att du kan surfa i fred.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Det finns ofta kakor och skript p\u00e5 webbplatser som f\u00f6rs\u00f6ker identifiera dig och din enhet (ofta inb\u00e4ddade i annonser). De vill ta reda p\u00e5 vem du \u00e4r och f\u00f6ljer och sp\u00e5rar dig p\u00e5 internet och vad du g\u00f6r p\u00e5 olika webbplatser. Med AI Wize blockerar du de funktionerna s\u00e5 att du kan surfa i fred.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
-    "message": "Spårningsprogram på flera webbplatser och andra läbbiga grejer har blockerats",
+    "message": "Sp\u00e5rningsprogram p\u00e5 flera webbplatser och andra l\u00e4bbiga grejer har blockerats",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Om du ändrar skyddsinställningarna i den här vyn kan det påverka webbplatskompatibiliteten.",
+    "message": "Om du \u00e4ndrar skyddsinst\u00e4llningarna i den h\u00e4r vyn kan det p\u00e5verka webbplatskompatibiliteten.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -204,23 +204,39 @@
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "Läs mer",
+    "message": "L\u00e4s mer",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Lägg till i Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "L\u00e4gg till i AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Ta bort från Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Ta bort fr\u00e5n AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Lägg till",
+    "message": "L\u00e4gg till",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Ta bort från Chrome",
+    "message": "Ta bort fr\u00e5n Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Nedladdningar",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Inst\u00e4llningar",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Historik",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Bokm\u00e4rken",
+    "description": "Bookmarks Label"
   }
 }

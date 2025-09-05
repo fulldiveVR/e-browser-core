@@ -71,4 +71,10 @@ void BraveBrowserActions::InitializeBrowserActions() {
                         kActionSidePanelShowChatUI, browser, false)
             .Build());
   }
+
+  root_action_item_->AddChild(
+      SidePanelAction(SidePanelEntryId::kAiCombinerPanel, IDS_COMBINER_PANEL_UI_TITLE,
+                      IDS_COMBINER_PANEL_UI_TITLE, kLeoAiCombinerPanelIcon,
+                      kActionSidePanelShowAiCombinerPanel, browser, false)
+          .Build());
 }

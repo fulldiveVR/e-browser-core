@@ -41,8 +41,6 @@
 #include "brave/components/debounce/core/browser/debounce_service.h"
 #include "brave/components/query_filter/utils.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/url_sanitizer/browser/url_sanitizer_service.h"
 #include "chrome/browser/bookmarks/bookmark_html_writer.h"
 #include "chrome/browser/browser_process.h"
@@ -87,17 +85,7 @@
 #include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_service_factory.h"
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
-#include "brave/components/speedreader/speedreader_service.h"
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/browser/tor/tor_profile_manager.h"
-#include "brave/browser/tor/tor_profile_service_factory.h"
-#include "brave/components/tor/tor_profile_service.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
@@ -222,48 +210,9 @@ class BookmarksExportListener : public ui::SelectFileDialog::Listener {
   scoped_refptr<ui::SelectFileDialog> file_selector_;
 };
 
-void NewOffTheRecordWindowTor(Browser* browser) {
-  CHECK(browser);
-  NewOffTheRecordWindowTor(browser->profile());
-}
 
-void NewOffTheRecordWindowTor(Profile* profile) {
-  CHECK(profile);
-  if (profile->IsTor()) {
-    chrome::OpenEmptyWindow(profile);
-    return;
-  }
 
-  TorProfileManager::SwitchToTorProfile(profile);
-}
 
-void NewTorConnectionForSite(Browser* browser) {
-#if BUILDFLAG(ENABLE_TOR)
-  Profile* profile = browser->profile();
-  DCHECK(profile);
-  tor::TorProfileService* service =
-      TorProfileServiceFactory::GetForContext(profile);
-  DCHECK(service);
-  WebContents* current_tab = browser->tab_strip_model()->GetActiveWebContents();
-  if (!current_tab) {
-    return;
-  }
-  service->SetNewTorCircuit(current_tab);
-#endif
-}
-
-void MaybeDistillAndShowSpeedreaderBubble(Browser* browser) {
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  WebContents* contents = browser->tab_strip_model()->GetActiveWebContents();
-  if (!contents) {
-    return;
-  }
-  if (auto* tab_helper =
-          speedreader::SpeedreaderTabHelper::FromWebContents(contents)) {
-    tab_helper->ProcessIconClick();
-  }
-#endif  // BUILDFLAG(ENABLE_SPEEDREADER)
-}
 
 void ShowBraveVPNBubble(Browser* browser) {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -323,24 +272,8 @@ void ToggleAIChat(Browser* browser) {
 #endif
 }
 
-void ShowWalletBubble(Browser* browser) {
-#if defined(TOOLKIT_VIEWS)
-  static_cast<BraveBrowserView*>(browser->window())->CreateWalletBubble();
-#endif
-}
 
-void ShowApproveWalletBubble(Browser* browser) {
-#if defined(TOOLKIT_VIEWS)
-  static_cast<BraveBrowserView*>(browser->window())
-      ->CreateApproveWalletBubble();
-#endif
-}
 
-void CloseWalletBubble(Browser* browser) {
-#if defined(TOOLKIT_VIEWS)
-  static_cast<BraveBrowserView*>(browser->window())->CloseWalletBubble();
-#endif
-}
 
 void CopySanitizedURL(Browser* browser, const GURL& url) {
   if (!browser || !browser->profile()) {
@@ -1056,7 +989,7 @@ void NewSplitViewForTab(Browser* browser,
                                 : tab_index + 1;
 
   if (!url.is_valid()) {
-    chrome::AddTabAt(browser, GURL("chrome://newtab"), new_tab_index,
+    chrome::AddTabAt(browser, GURL("chrome://home"), new_tab_index,
                      /*foreground*/ true);
   } else {
     chrome::AddTabAt(browser, url, new_tab_index,

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AI Combiner Right</title>
+  </head>
+
+  <body>
+    <div id="app">Connecting...</div>
+    <script>
+      (function () {
+        const moduleUrl = 'http://localhost:22003/right/panel';
+        const appDiv = document.getElementById('app');
+        const poll = async () => {
+          try {
+            const res = await fetch(moduleUrl, { method: 'HEAD', cache: 'no-store' });
+            if (res.ok) {
+              const script = document.createElement('script');
+              script.type = 'module';
+              script.crossOrigin = 'anonymous';
+              script.src = moduleUrl;
+              document.head.appendChild(script);
+              appDiv.textContent = '';
+            } else {
+              setTimeout(poll, 1000);
+            }
+          } catch {
+            setTimeout(poll, 1000);
+          }
+        };
+        poll();
+
+        // Prevent pinch-to-zoom (trackpad pinch or Ctrl+wheel)
+        const disableZoom = (e) => {
+          if (e.ctrlKey) {
+            e.preventDefault();
+          }
+        };
+        window.addEventListener('wheel', disableZoom, { passive: false });
+
+        // Prevent Safari-specific gesture zoom events
+        ['gesturestart', 'gesturechange', 'gestureend'].forEach((evt) => {
+          window.addEventListener(evt, (e) => e.preventDefault(), { passive: false });
+        });
+      })();
+    </script>
+  </body>
+</html>

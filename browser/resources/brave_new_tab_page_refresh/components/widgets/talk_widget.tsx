@@ -30,7 +30,7 @@ export function TalkWidget() {
         <div className='actions'>
           <Button
             size='small'
-            onClick={() => openLink('https://talk.brave.com/widget')}
+            onClick={() => openLink('https://talk.aiwize.com/widget')}
           >
             {getString('talkStartCallLabel')}
           </Button>

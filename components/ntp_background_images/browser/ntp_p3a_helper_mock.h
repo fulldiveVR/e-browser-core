@@ -8,7 +8,6 @@
 
 #include <string>
 
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 #include "brave/components/ntp_background_images/browser/ntp_p3a_helper.h"
 #include "testing/gmock/include/gmock/gmock.h"
 
@@ -31,11 +30,6 @@ class NTPP3AHelperMock : public NTPP3AHelper {
                const std::string& campaign_id),
               (override));
 
-  MOCK_METHOD(void,
-              RecordNewTabPageAdEvent,
-              (brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type,
-               const std::string& creative_instance_id),
-              (override));
 
   MOCK_METHOD(void, OnNavigationDidFinish, (const GURL& url), (override));
 };

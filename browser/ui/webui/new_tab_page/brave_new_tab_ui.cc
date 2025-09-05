@@ -23,14 +23,12 @@
 #include "brave/browser/ui/webui/new_tab_page/brave_new_tab_message_handler.h"
 #include "brave/browser/ui/webui/new_tab_page/brave_new_tab_page_handler.h"
 #include "brave/browser/ui/webui/new_tab_page/top_sites_message_handler.h"
-#include "brave/components/brave_ads/core/browser/service/ads_service.h"
 #include "brave/components/brave_new_tab/resources/grit/brave_new_tab_generated_map.h"
 #include "brave/components/brave_news/browser/brave_news_controller.h"
 #include "brave/components/brave_news/common/features.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/misc_metrics/new_tab_metrics.h"
 #include "brave/components/ntp_background_images/browser/ntp_custom_images_source.h"
-#include "brave/components/ntp_background_images/browser/ntp_sponsored_rich_media_ad_event_handler.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "brave/components/ntp_background_images/common/url_constants.h"
 #include "chrome/browser/profiles/profile.h"
@@ -63,7 +61,6 @@ using ntp_background_images::NTPCustomImagesSource;
 BraveNewTabUI::BraveNewTabUI(
     content::WebUI* web_ui,
     const std::string& name,
-    brave_ads::AdsService* ads_service,
     ntp_background_images::ViewCounterService* view_counter_service,
     regional_capabilities::RegionalCapabilitiesService* regional_capabilities)
     : ui::MojoWebUIController(
@@ -114,13 +111,7 @@ BraveNewTabUI::BraveNewTabUI(
                          prefs::kNtpCustomBackgroundDict));
 
   // Let frontend know about feature flags
-  source->AddBoolean("featureFlagBraveNewsPromptEnabled",
-                     base::FeatureList::IsEnabled(
-                         brave_news::features::kBraveNewsCardPeekFeature));
 
-  source->AddBoolean(
-      "featureFlagBraveNewsFeedV2Enabled",
-      base::FeatureList::IsEnabled(brave_news::features::kBraveNewsFeedUpdate));
 
   source->AddBoolean(
       "featureFlagSearchWidget",
@@ -159,15 +150,8 @@ BraveNewTabUI::BraveNewTabUI(
   source->AddString("ntpNewTabTakeoverRichMediaUrl",
                     kNTPNewTabTakeoverRichMediaUrl);
 
-  ntp_background_images::NTPP3AHelper* ntp_p3a_helper = nullptr;
-  if (view_counter_service != nullptr) {
-    ntp_p3a_helper = view_counter_service->GetP3AHelper();
-  }
-  rich_media_ad_event_handler_ = std::make_unique<
-      ntp_background_images::NTPSponsoredRichMediaAdEventHandler>(
-      ads_service, ntp_p3a_helper);
 
-  source->AddLocalizedStrings(webui::kBraveNewsStrings);
+  source->AddLocalizedStrings(webui::kAIStrings);
 
   // Add a SanitizedImageSource to allow fetching images for Brave News.
   content::URLDataSource::Add(profile,
@@ -238,8 +222,6 @@ void BraveNewTabUI::CreatePageHandler(
       web_ui()->GetWebContents());
   g_brave_browser_process->process_misc_metrics()->new_tab_metrics()->Bind(
       std::move(pending_new_tab_metrics));
-  rich_media_ad_event_handler_->Bind(
-      std::move(pending_rich_media_ad_event_handler));
 }
 
 WEB_UI_CONTROLLER_TYPE_IMPL(BraveNewTabUI)

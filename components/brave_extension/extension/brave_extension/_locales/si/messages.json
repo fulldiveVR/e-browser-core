@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave දිගුව",
+    "message": "AI Wize දිගුව",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "ඔබ මෙම අඩවිය Brave පෞද්ගලිකත්වය සහ ආරක්‍ෂාව නැතිව පිරික්සයි. පලිහ සක්‍රිය විට අඩවිය නිවැරදිව ක්‍රීයා නොකරයිද?",
+    "message": "ඔබ මෙම අඩවිය AI Wize පෞද්ගලිකත්වය සහ ආරක්‍ෂාව නැතිව පිරික්සයි. පලිහ සක්‍රිය විට අඩවිය නිවැරදිව ක්‍රීයා නොකරයිද?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "කැඩුණු අඩවියක් වාර්තා කරන්න",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "අථක අවහිරයි",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "ඔබ සහ ඔබගේ උපාංගය හඳුනා ගැනීමට උත්සාහ කරන දත්තකඩ සහ අත්පත් අඩවි වලට නිතර ඇතුළත් කරයි (බොහෝ විට දැන්වීම් තුළට කාවද්දා ඇත). ඔවුන්ට වුවමනා වන්නේ ඔබ කවුරුන්ද සොයා බැලීම සහ වියමන පුරා ඔබව ලුහුබැඳීමයි — සෑම අඩවියකම ඔබ කරන දෑ නිරීක්ෂණය කරයි. Brave මෙම දේවල් අවහිර කරයි එවිට ලුහුබැඳීම් මගහැර පිරික්සීමට හැකිය.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "ඔබ සහ ඔබගේ උපාංගය හඳුනා ගැනීමට උත්සාහ කරන දත්තකඩ සහ අත්පත් අඩවි වලට නිතර ඇතුළත් කරයි (බොහෝ විට දැන්වීම් තුළට කාවද්දා ඇත). ඔවුන්ට වුවමනා වන්නේ ඔබ කවුරුන්ද සොයා බැලීම සහ වියමන පුරා ඔබව ලුහුබැඳීමයි — සෑම අඩවියකම ඔබ කරන දෑ නිරීක්ෂණය කරයි. AI Wize මෙම දේවල් අවහිර කරයි එවිට ලුහුබැඳීම් මගහැර පිරික්සීමට හැකිය.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "හරස්-අඩවි ලුහුබැඳීම් හා වෙනත් භයානක දෑ අවහිරයි",
@@ -208,12 +208,12 @@
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave වෙත එක් කරන්න",
-    "description": "Message for adding an extension to Brave"
+    "message": "AI Wize වෙත එක් කරන්න",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave වෙතින් ඉවත් කරන්න",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize වෙතින් ඉවත් කරන්න",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Add to Chrome",

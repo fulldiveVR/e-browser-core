@@ -25,6 +25,12 @@ inline constexpr char kRewardsPageURL[] = "chrome://rewards/";
 inline constexpr char kRewardsPageTopHost[] = "rewards.top-chrome";
 inline constexpr char kRewardsPageTopURL[] = "chrome://rewards.top-chrome";
 inline constexpr char kRewardsInternalsHost[] = "rewards-internals";
+inline constexpr char kAIWizeApplicationsPageHost[] = "applications";
+inline constexpr char kAIWizeDashboardPageHost[] = "dashboard";
+inline constexpr char kAiCombinerChatPageHost[] = "ai-combiner-chat";
+inline constexpr char kAiCombinerPanelPageHost[] = "ai-combiner-panel";
+inline constexpr char kAiCombinerPanelPageURL[] = "chrome://ai-combiner-panel";
+inline constexpr char kHomeNewTabURL[] = "chrome://home";
 inline constexpr char kWelcomeHost[] = "welcome";
 inline constexpr char kWelcomeURL[] = "chrome://welcome/";
 inline constexpr char kWelcomeJS[] = "brave_welcome.js";
@@ -34,9 +40,9 @@ inline constexpr char kBraveUIAdblockURL[] = "chrome://adblock/";
 inline constexpr char kBraveUIWebcompatReporterURL[] = "chrome://webcompat/";
 inline constexpr char kBraveUIWalletURL[] = "chrome://wallet/";
 inline constexpr char kBraveUIWalletOnboardingURL[] =
-    "brave://wallet/crypto/onboarding";
+    "aiwize://wallet/crypto/onboarding";
 inline constexpr char kBraveUIWalletAccountCreationURL[] =
-    "brave://wallet/crypto/accounts/add-account/create/";
+    "aiwize://wallet/crypto/accounts/add-account/create/";
 inline constexpr char kBraveUIWalletPanelURL[] =
     "chrome://wallet-panel.top-chrome/";
 inline constexpr char kWalletPanelHost[] = "wallet-panel.top-chrome";
@@ -45,8 +51,8 @@ inline constexpr char kVPNPanelURL[] =
 inline constexpr char kVPNPanelHost[] = "vpn-panel.top-chrome";
 inline constexpr char kBraveUIWalletPageURL[] = "chrome://wallet/";
 inline constexpr char kWalletPageHost[] = "wallet";
-inline constexpr char kExtensionSettingsURL[] = "brave://settings/extensions";
-inline constexpr char kWalletSettingsURL[] = "brave://settings/wallet";
+inline constexpr char kExtensionSettingsURL[] = "aiwize://settings/extensions";
+inline constexpr char kWalletSettingsURL[] = "aiwize://settings/wallet";
 inline constexpr char kBraveSyncPath[] = "braveSync";
 inline constexpr char kBraveSyncSetupPath[] = "braveSync/setup";
 inline constexpr char kTorInternalsHost[] = "tor-internals";
@@ -79,20 +85,20 @@ inline constexpr char kSpeedreaderPanelURL[] =
     "chrome://brave-speedreader.top-chrome";
 inline constexpr char kSpeedreaderPanelHost[] = "brave-speedreader.top-chrome";
 inline constexpr char kShortcutsURL[] = "chrome://settings/system/shortcuts";
-inline constexpr char kAIChatUIURL[] = "chrome://leo-ai/";
-inline constexpr char kAIChatUIHost[] = "leo-ai";
-inline constexpr char kAIChatSettingsURL[] = "brave://settings/leo-ai/";
+inline constexpr char kAIChatUIURL[] = "chrome://aiwize-chat/";
+inline constexpr char kAIChatUIHost[] = "aiwize-chat";
+inline constexpr char kAIChatSettingsURL[] = "aiwize://settings/aiwize-chat/";
 inline constexpr char kAIChatUntrustedConversationUIURL[] =
-    "chrome-untrusted://leo-ai-conversation-entries/";
+    "chrome-untrusted://aiwize-chat-conversation-entries/";
 inline constexpr char kAIChatUntrustedConversationUIHost[] =
-    "leo-ai-conversation-entries";
+    "aiwize-chat-conversation-entries";
 inline constexpr char kBraveGettingStartedURL[] = "chrome://getting-started/";
 inline constexpr char kBraveGettingStartedHost[] = "getting-started";
 inline constexpr char kRewriterUIURL[] = "chrome://rewriter/";
 inline constexpr char kRewriterUIHost[] = "rewriter";
 
 inline constexpr char16_t kTransactionSimulationLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/Transaction-Simulation";
+    u"https://github.com/fulldiveVR/e-browser/wiki/Transaction-Simulation";
 
 inline constexpr char kNTPNewTabTakeoverRichMediaUrl[] =
     "chrome-untrusted://new-tab-takeover/";

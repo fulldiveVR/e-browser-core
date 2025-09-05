@@ -101,7 +101,7 @@ class ConversationAPIClient {
     Content content;
 
     // Optional structured properties:
-    // TODO(https://github.com/brave/brave-browser/issues/47623): Consider
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/47623): Consider
     // refactoring to multiple variants so we can properly type-check fields
     // that are mandatory for certain event types.
 

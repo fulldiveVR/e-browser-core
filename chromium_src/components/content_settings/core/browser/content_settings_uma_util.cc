@@ -37,7 +37,6 @@ static_assert(static_cast<int>(ContentSettingsType::kMaxValue) <
   {ContentSettingsType::BRAVE_SHIELDS, brave_value(5)},                   \
   {ContentSettingsType::BRAVE_REFERRERS, brave_value(6)},                 \
   {ContentSettingsType::BRAVE_COOKIES, brave_value(7)},                   \
-  {ContentSettingsType::BRAVE_SPEEDREADER, brave_value(8)},               \
   {ContentSettingsType::BRAVE_ETHEREUM, brave_value(9)},                  \
   {ContentSettingsType::BRAVE_SOLANA, brave_value(10)},                   \
   {ContentSettingsType::BRAVE_GOOGLE_SIGN_IN, brave_value(11)},           \

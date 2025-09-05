@@ -10,7 +10,7 @@ namespace translate {
 namespace switches {
 
 // A test switch to disable the redirection for the translation requests to
-// translate.brave.com.
+// translate.aiwize.com.
 inline constexpr char kBraveTranslateUseGoogleEndpoint[] =
     "use-google-translate-endpoint";
 

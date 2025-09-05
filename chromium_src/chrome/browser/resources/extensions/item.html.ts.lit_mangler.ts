@@ -10,7 +10,7 @@ mangle(
     const name = element.querySelector('#name-and-version')
     if (!name) {
       throw new Error(
-        '[Brave Extensions Overrides] '
+        '[AI Wize Extensions Overrides] '
           + 'Could not find element. Has the ID changed?',
       )
     }

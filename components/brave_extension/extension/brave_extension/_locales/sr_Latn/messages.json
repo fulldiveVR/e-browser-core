@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave dodatak",
+    "message": "AI Wize dodatak",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Pregledate ovaj sajt bez Brave-ove zaštite privatnosti i bezbednosti. Da li sajt ne funkcioniše ispravno sa uključenim štitovima?",
+    "message": "Pregledate ovaj sajt bez AI Wize-ove zaštite privatnosti i bezbednosti. Da li sajt ne funkcioniše ispravno sa uključenim štitovima?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Prijavite da sajt ne funkcioniše",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Stavke su blokirane",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sajtovi često uključuju kolačiće i skripte koji pokušavaju da identifikuju vas i vaš uređaj (često su ugrađeni u oglase). Žele da utvrde ko ste i da vas prate vas na vebu – da prate šta radite na svakom sajtu. Brave blokira te stvari, tako da možete da pregledate veb, a da pritom ne budete praćeni.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sajtovi često uključuju kolačiće i skripte koji pokušavaju da identifikuju vas i vaš uređaj (često su ugrađeni u oglase). Žele da utvrde ko ste i da vas prate vas na vebu – da prate šta radite na svakom sajtu. AI Wize blokira te stvari, tako da možete da pregledate veb, a da pritom ne budete praćeni.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Praćenje na više sajtova i ostale jezive stvari su blokirane",
@@ -208,12 +208,12 @@
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Dodaj u Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Dodaj u AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Ukloni iz Brave-a",
-    "description": "Message for removing an extension from Brave"
+    "message": "Ukloni iz AI Wize-a",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Add to Chrome",

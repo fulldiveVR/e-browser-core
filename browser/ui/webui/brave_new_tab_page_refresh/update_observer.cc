@@ -49,9 +49,7 @@ UpdateObserver::UpdateObserver(PrefService& pref_service,
   AddPrefListener(brave_perf_predictor::prefs::kBandwidthSavedBytes,
                   Source::kShieldsStats);
 
-  AddPrefListener(kNewTabPageShowBraveTalk, Source::kTalk);
 
-  AddPrefListener(kNewTabPageShowRewards, Source::kRewards);
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   AddPrefListener(kNewTabPageShowBraveVPN, Source::kVPN);

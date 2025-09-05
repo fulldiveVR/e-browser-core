@@ -44,7 +44,7 @@ void NetworkTimeHelper::GetNetworkTime(GetNetworkTimeCallback cb) {
   }
 
   // TODO(alexeybarabash): redo it using mojo interface
-  // https://github.com/brave/brave-browser/issues/43738
+  // https://github.com/fulldiveVR/e-browser/issues/43738
   ui_task_runner_->PostTask(
       FROM_HERE, base::BindOnce(&NetworkTimeHelper::GetNetworkTimeOnUIThread,
                                 base::Unretained(this), std::move(cb)));

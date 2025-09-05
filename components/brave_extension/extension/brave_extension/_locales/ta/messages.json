@@ -1,82 +1,82 @@
 {
   "appName": {
-    "message": "பிரேவ் நீட்டிப்பு",
+    "message": "\u0baa\u0bbf\u0bb0\u0bc7\u0bb5\u0bcd \u0ba8\u0bc0\u0b9f\u0bcd\u0b9f\u0bbf\u0baa\u0bcd\u0baa\u0bc1",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "கவசங்கள்",
+    "message": "\u0b95\u0bb5\u0b9a\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
     "description": "The Shields feature name"
   },
   "up": {
-    "message": "செயலில்",
+    "message": "\u0b9a\u0bc6\u0baf\u0bb2\u0bbf\u0bb2\u0bcd",
     "description": "Message for when shields is enabled"
   },
   "down": {
-    "message": "முடக்கத்தில்",
+    "message": "\u0bae\u0bc1\u0b9f\u0b95\u0bcd\u0b95\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd",
     "description": "Message for when shields is disabled"
   },
   "forThisSite": {
-    "message": "இத்தளத்திற்கு",
+    "message": "\u0b87\u0ba4\u0bcd\u0ba4\u0bb3\u0ba4\u0bcd\u0ba4\u0bbf\u0bb1\u0bcd\u0b95\u0bc1",
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "தளம் உடைந்ததாக தோன்றினால், கவசங்களை அமர்த்திப்பார்",
+    "message": "\u0ba4\u0bb3\u0bae\u0bcd \u0b89\u0b9f\u0bc8\u0ba8\u0bcd\u0ba4\u0ba4\u0bbe\u0b95 \u0ba4\u0bcb\u0ba9\u0bcd\u0bb1\u0bbf\u0ba9\u0bbe\u0bb2\u0bcd, \u0b95\u0bb5\u0b9a\u0b99\u0bcd\u0b95\u0bb3\u0bc8 \u0b85\u0bae\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bbf\u0baa\u0bcd\u0baa\u0bbe\u0bb0\u0bcd",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "You’re browsing this site without Brave’s privacy and security protections. Does it not work right with Shields up?",
+    "message": "You\u2019re browsing this site without AI Wize\u2019s privacy and security protections. Does it not work right with Shields up?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
-    "message": "உடைந்த தளத்தைப் புகாரளி",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "message": "\u0b89\u0b9f\u0bc8\u0ba8\u0bcd\u0ba4 \u0ba4\u0bb3\u0ba4\u0bcd\u0ba4\u0bc8\u0baa\u0bcd \u0baa\u0bc1\u0b95\u0bbe\u0bb0\u0bb3\u0bbf",
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
-    "message": "உருப்படிகள் தடுக்கப்பட்டன",
+    "message": "\u0b89\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0b9f\u0bbf\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the main blocked resources text when there is more than one ad/track/script blocked (plural)"
   },
   "itemBlocked": {
-    "message": "உருப்படி தடுக்கப்பட்டது",
+    "message": "\u0b89\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0b9f\u0bbf \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1",
     "description": "Message for the main blocked resources text when there is one ad/track/script blocked (singular)"
   },
   "and": {
-    "message": "மற்றும்",
+    "message": "\u0bae\u0bb1\u0bcd\u0bb1\u0bc1\u0bae\u0bcd",
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "இணைப்புகள் தரமுயர்த்தப்பட்டன",
+    "message": "\u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd \u0ba4\u0bb0\u0bae\u0bc1\u0baf\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "இணைப்பு தரமுயர்த்தப்பட்டது",
+    "message": "\u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bc1 \u0ba4\u0bb0\u0bae\u0bc1\u0baf\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
-    "message": "குறுக்கு-தள தடமிகள் தடுக்கப்பட்டன",
+    "message": "\u0b95\u0bc1\u0bb1\u0bc1\u0b95\u0bcd\u0b95\u0bc1-\u0ba4\u0bb3 \u0ba4\u0b9f\u0bae\u0bbf\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "தடமிகள் & விளம்பரங்கள் தடுக்கப்பட்டன",
+    "message": "\u0ba4\u0b9f\u0bae\u0bbf\u0b95\u0bb3\u0bcd & \u0bb5\u0bbf\u0bb3\u0bae\u0bcd\u0baa\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "தடமிகள் & விளம்பரங்கள் தடு (கடுமையான)",
+    "message": "\u0ba4\u0b9f\u0bae\u0bbf\u0b95\u0bb3\u0bcd & \u0bb5\u0bbf\u0bb3\u0bae\u0bcd\u0baa\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1 (\u0b95\u0b9f\u0bc1\u0bae\u0bc8\u0baf\u0bbe\u0ba9)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "தடமிகள் & விளம்பரங்கள் தடுக்கப்பட்டன (தரநிலை)",
+    "message": "\u0ba4\u0b9f\u0bae\u0bbf\u0b95\u0bb3\u0bcd & \u0bb5\u0bbf\u0bb3\u0bae\u0bcd\u0baa\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9 (\u0ba4\u0bb0\u0ba8\u0bbf\u0bb2\u0bc8)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "தடமிகள் & விளம்பரங்களை அனுமதி",
+    "message": "\u0ba4\u0b9f\u0bae\u0bbf\u0b95\u0bb3\u0bcd & \u0bb5\u0bbf\u0bb3\u0bae\u0bcd\u0baa\u0bb0\u0b99\u0bcd\u0b95\u0bb3\u0bc8 \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "இணைப்புகள் HTTPS-க்கு தரமுயர்த்தப்பட்டன",
+    "message": "\u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd HTTPS-\u0b95\u0bcd\u0b95\u0bc1 \u0ba4\u0bb0\u0bae\u0bc1\u0baf\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "இணைப்பு HTTPS-க்கு தரமுயர்த்தப்பட்டது",
+    "message": "\u0b87\u0ba3\u0bc8\u0baa\u0bcd\u0baa\u0bc1 HTTPS-\u0b95\u0bcd\u0b95\u0bc1 \u0ba4\u0bb0\u0bae\u0bc1\u0baf\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -84,15 +84,15 @@
     "description": "Message for the scripts blocked row label"
   },
   "thirdPartyCookiesBlocked": {
-    "message": "குறுக்கு-தள நினைவிகளை தடு",
+    "message": "\u0b95\u0bc1\u0bb1\u0bc1\u0b95\u0bcd\u0b95\u0bc1-\u0ba4\u0bb3 \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bbf\u0b95\u0bb3\u0bc8 \u0ba4\u0b9f\u0bc1",
     "description": "Message for the option in the cookies select field to block all 3rd party cookies"
   },
   "allCookiesBlocked": {
-    "message": "நினைவிகள் தடுக்கப்பட்டன",
+    "message": "\u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bbf\u0b95\u0bb3\u0bcd \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the option in the cookies select field to block all cookies"
   },
   "allCookiesAllowed": {
-    "message": "எல்லா நினைவிகளும் அனுமதிக்கப்பட்டன",
+    "message": "\u0b8e\u0bb2\u0bcd\u0bb2\u0bbe \u0ba8\u0bbf\u0ba9\u0bc8\u0bb5\u0bbf\u0b95\u0bb3\u0bc1\u0bae\u0bcd \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba9",
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
@@ -112,43 +112,43 @@
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "கைரேகையிடுதல் முயற்சிகள்",
+    "message": "\u0b95\u0bc8\u0bb0\u0bc7\u0b95\u0bc8\u0baf\u0bbf\u0b9f\u0bc1\u0ba4\u0bb2\u0bcd \u0bae\u0bc1\u0baf\u0bb1\u0bcd\u0b9a\u0bbf\u0b95\u0bb3\u0bcd",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
-    "message": "இத்திளத்திலுள்ள சிறுநிரல்கள்",
+    "message": "\u0b87\u0ba4\u0bcd\u0ba4\u0bbf\u0bb3\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bc1\u0bb3\u0bcd\u0bb3 \u0b9a\u0bbf\u0bb1\u0bc1\u0ba8\u0bbf\u0bb0\u0bb2\u0bcd\u0b95\u0bb3\u0bcd",
     "description": "Message for the script resources blocked panel"
   },
   "blockedScripts": {
-    "message": "தடுக்கப்பட்ட சிறுநிரல்கள்",
+    "message": "\u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0b9a\u0bbf\u0bb1\u0bc1\u0ba8\u0bbf\u0bb0\u0bb2\u0bcd\u0b95\u0bb3\u0bcd",
     "description": "Message for the script resources blocked"
   },
   "allowedScripts": {
-    "message": "அனுமதிக்கப்பட்ட சிறுநிரல்கள்",
+    "message": "\u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0b9a\u0bbf\u0bb1\u0bc1\u0ba8\u0bbf\u0bb0\u0bb2\u0bcd\u0b95\u0bb3\u0bcd",
     "description": "Message for the script resources allowed"
   },
   "blockAll": {
-    "message": "அனைத்தையும் தடு",
+    "message": "\u0b85\u0ba9\u0bc8\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0ba4\u0b9f\u0bc1",
     "description": "Message for the resources blocked *block all* option"
   },
   "allowAll": {
-    "message": "அனைத்தையும் அனுமதி",
+    "message": "\u0b85\u0ba9\u0bc8\u0ba4\u0bcd\u0ba4\u0bc8\u0baf\u0bc1\u0bae\u0bcd \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf",
     "description": "Message for the resources blocked *allow all* option"
   },
   "block": {
-    "message": "தடு",
+    "message": "\u0ba4\u0b9f\u0bc1",
     "description": "Message for the resources blocked *block* option"
   },
   "allow": {
-    "message": "அனுமதி",
+    "message": "\u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf",
     "description": "Message for the resources blocked *allow* option"
   },
   "blockedOnce": {
-    "message": "ஒருமுறை தடுக்கப்பட்டது",
+    "message": "\u0b92\u0bb0\u0bc1\u0bae\u0bc1\u0bb1\u0bc8 \u0ba4\u0b9f\u0bc1\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1",
     "description": "Message for the resources blocked *blocked once* option"
   },
   "allowedOnce": {
-    "message": "ஒருமுறை அனுமதிக்கப்பட்டது",
+    "message": "\u0b92\u0bb0\u0bc1\u0bae\u0bc1\u0bb1\u0bc8 \u0b85\u0ba9\u0bc1\u0bae\u0ba4\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bcd\u0b9f\u0ba4\u0bc1",
     "description": "Message for the resources blocked *allowed once* option"
   },
   "allowScriptsOnce": {
@@ -156,15 +156,15 @@
     "description": "Message for the shortcut in the main interface to allow all scripts once"
   },
   "cancel": {
-    "message": "ரத்துசெய்",
+    "message": "\u0bb0\u0ba4\u0bcd\u0ba4\u0bc1\u0b9a\u0bc6\u0baf\u0bcd",
     "description": "Message for the button inside the static list of resources blocked to cancel the operation"
   },
   "goBack": {
-    "message": "திரும்பிச் செல்",
+    "message": "\u0ba4\u0bbf\u0bb0\u0bc1\u0bae\u0bcd\u0baa\u0bbf\u0b9a\u0bcd \u0b9a\u0bc6\u0bb2\u0bcd",
     "description": "Message for the button inside the static list of resources blocked to go back from the current screen"
   },
   "applyOnce": {
-    "message": "ஒருமுறை விண்ணப்பி",
+    "message": "\u0b92\u0bb0\u0bc1\u0bae\u0bc1\u0bb1\u0bc8 \u0bb5\u0bbf\u0ba3\u0bcd\u0ba3\u0baa\u0bcd\u0baa\u0bbf",
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
@@ -176,20 +176,20 @@
     "description": "Message for context menu that opens a page for adding, editing, and removing custom cosmetic filters"
   },
   "elementPickerMode": {
-    "message": "அங்கத்தைத் தடு",
+    "message": "\u0b85\u0b99\u0bcd\u0b95\u0ba4\u0bcd\u0ba4\u0bc8\u0ba4\u0bcd \u0ba4\u0b9f\u0bc1",
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "மேம்பட்ட பார்வை",
+    "message": "\u0bae\u0bc7\u0bae\u0bcd\u0baa\u0b9f\u0bcd\u0b9f \u0baa\u0bbe\u0bb0\u0bcd\u0bb5\u0bc8",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "எளிய பார்வை",
+    "message": "\u0b8e\u0bb3\u0bbf\u0baf \u0baa\u0bbe\u0bb0\u0bcd\u0bb5\u0bc8",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web — tracking what you do on every site. Brave blocks these things so that you can browse without being followed around.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sites often include cookies and scripts which try to identify you and your device (often embedded into ads). They want to work out who you are and follow you across the web \u2014 tracking what you do on every site. AI Wize blocks these things so that you can browse without being followed around.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Cross-site trackers and other creepy things blocked",
@@ -200,27 +200,43 @@
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
-    "message": "புரிந்தது",
+    "message": "\u0baa\u0bc1\u0bb0\u0bbf\u0ba8\u0bcd\u0ba4\u0ba4\u0bc1",
     "description": "Message for the button that confirms the advanced view"
   },
   "learnMore": {
-    "message": "மேலும் அறிக",
+    "message": "\u0bae\u0bc7\u0bb2\u0bc1\u0bae\u0bcd \u0b85\u0bb1\u0bbf\u0b95",
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Brave இல் சேர்",
-    "description": "Message for adding an extension to Brave"
+    "message": "AI Wize \u0b87\u0bb2\u0bcd \u0b9a\u0bc7\u0bb0\u0bcd",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Brave இலிருந்து அகற்று",
-    "description": "Message for removing an extension from Brave"
+    "message": "AI Wize \u0b87\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0b85\u0b95\u0bb1\u0bcd\u0bb1\u0bc1",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
-    "message": "Chrome இல் சேர்",
+    "message": "Chrome \u0b87\u0bb2\u0bcd \u0b9a\u0bc7\u0bb0\u0bcd",
     "description": "Message for adding an extension to Chrome"
   },
   "removeFromChrome": {
-    "message": "Chrome இலிருந்து அகற்று",
+    "message": "Chrome \u0b87\u0bb2\u0bbf\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0b85\u0b95\u0bb1\u0bcd\u0bb1\u0bc1",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "\u0baa\u0ba4\u0bbf\u0bb5\u0bbf\u0bb1\u0b95\u0bcd\u0b95\u0b99\u0bcd\u0b95\u0bb3\u0bcd",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "\u0b85\u0bae\u0bc8\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bb3\u0bcd",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "\u0b87\u0ba4\u0bc1\u0bb5\u0bb0\u0bc8 \u0baa\u0bbe\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0bb5\u0bc8",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "\u0baa\u0bc1\u0b95\u0bcd\u0bae\u0bbe\u0bb0\u0bcd\u0b95\u0bcd\u0b95\u0bc1\u0b95\u0bb3\u0bcd",
+    "description": "Bookmarks Label"
   }
 }

@@ -27,7 +27,7 @@ test('WebSourcesEvent shows chrome-untrusted:// favicon URL as-is', () => {
 })
 
 test('WebSourcesEvent sanitizes non-chrome-untrusted favicon URL', () => {
-  const faviconUrl = 'https://imgs.search.brave.com/favicon.ico'
+  const faviconUrl = 'https://imgs.search.aiwize.com/favicon.ico'
 
   render(
     <WebSourcesEvent
@@ -43,7 +43,7 @@ test('WebSourcesEvent sanitizes non-chrome-untrusted favicon URL', () => {
 
   const img = screen.getByRole('img')
   expect(img).toHaveAttribute('src',
-      '//image?url=https%3A%2F%2Fimgs.search.brave.com%2Ffavicon.ico')
+      '//image?url=https%3A%2F%2Fimgs.search.aiwize.com%2Ffavicon.ico')
 })
 
 test('Unhidden WebSourcesEvent has index citation number', () => {

@@ -1,17 +1,17 @@
-caption: Disable Brave Wallet
+caption: Disable AIWize Wallet
 default: null
 desc: |-
-  Disable Brave Wallet in Brave.
+  Disable AIWize Wallet in AIWize.
 
-  The secure, built-in crypto wallet that supercharges your browser for Web3. Get the security you trust from Brave without the hassle and risks of third-party extensions. Manage tokens, swap, bridge, and connect to decentralized applications. Supports Ethereum+EVM, Bitcoin, Solana, Filecoin, and Zcash. Get all the features of leading browser wallets in one secure and convenient place.
+  The secure, built-in crypto wallet that supercharges your browser for Web3. Get the security you trust from AIWize without the hassle and risks of third-party extensions. Manage tokens, swap, bridge, and connect to decentralized applications. Supports Ethereum+EVM, Bitcoin, Solana, Filecoin, and Zcash. Get all the features of leading browser wallets in one secure and convenient place.
 
-            If this policy is set to true, Brave Wallet will always be disabled.
+            If this policy is set to true, AIWize Wallet will always be disabled.
 
-            If this policy is set to false, Brave Wallet will always be enabled.
+            If this policy is set to false, AIWize Wallet will always be enabled.
 
             If you set this policy, users cannot change or override it.
 
-            If this policy is left unset, Brave Wallet will be enabled by default.
+            If this policy is left unset, AIWize Wallet will be enabled by default.
 example_value: true
 features:
   can_be_mandatory: true
@@ -19,16 +19,16 @@ features:
   dynamic_refresh: false
   per_profile: true
 items:
-- caption: Enable Brave Wallet
+- caption: Enable AIWize Wallet
   value: false
-- caption: Disable Brave Wallet
+- caption: Disable AIWize Wallet
   value: true
 - caption: Allow the user to decide
   value: null
 owners:
-- james@brave.com
-- ddaniel@brave.com
-- clifton@brave.com
+- james@aiwize.com
+- ddaniel@aiwize.com
+- clifton@aiwize.com
 schema:
   type: boolean
 supported_on:

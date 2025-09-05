@@ -15,7 +15,6 @@
 #include "brave/browser/ui/webui/side_panel/customize_chrome/customize_toolbar/brave_action.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "chrome/browser/ui/webui/util/image_util.h"
 #include "components/prefs/pref_service.h"
 #include "components/user_prefs/user_prefs.h"
@@ -127,9 +126,6 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
     brave_actions.push_back(kShowAIChatAction);
   }
 
-  if (brave_wallet::IsNativeWalletEnabled()) {
-    brave_actions.push_back(kShowWalletAction);
-  }
 
   for (const auto& brave_action : brave_actions) {
     // Find the anchor action.

@@ -8,7 +8,7 @@
 
 namespace ntp_background_images {
 
-// TODO(https://github.com/brave/brave-browser/issues/45926): Decouple New Tab
+// TODO(https://github.com/fulldiveVR/e-browser/issues/45926): Decouple New Tab
 // Takeover infobar from ntp_background_images component.
 
 inline constexpr int kNewTabTakeoverInfobarRemainingDisplayCountThreshold = 5;

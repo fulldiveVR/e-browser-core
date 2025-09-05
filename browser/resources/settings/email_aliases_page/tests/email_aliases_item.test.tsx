@@ -22,9 +22,9 @@ Object.assign(navigator, {
 describe('AliasItem', () => {
 
   const mockAlias: Alias = {
-    email: 'test1@brave.com',
+    email: 'test1@aiwize.com',
     note: 'Test Alias 1',
-    domains: ['brave.com']
+    domains: ['aiwize.com']
   }
 
   beforeEach(() => {
@@ -60,7 +60,7 @@ describe('AliasItem', () => {
 
     // Check if clipboard API was called
     expect(navigator.clipboard.writeText)
-      .toHaveBeenCalledWith('test1@brave.com')
+      .toHaveBeenCalledWith('test1@aiwize.com')
   })
 
   it('copies email when clicking alias label', () => {
@@ -78,7 +78,7 @@ describe('AliasItem', () => {
 
     // Check if clipboard API was called
     expect(navigator.clipboard.writeText)
-      .toHaveBeenCalledWith('test1@brave.com')
+      .toHaveBeenCalledWith('test1@aiwize.com')
   })
 
   it('handles delete functionality', async () => {

@@ -24,7 +24,7 @@ export function createSearchHandler(store: Store<SearchState>): SearchActions {
       prepopulateId: BigInt(0),
       name: 'Brave',
       keyword: '',
-      host: 'search.brave.com',
+      host: 'search.aiwize.com',
       faviconUrl: ''
     }, {
       prepopulateId: BigInt(1),
@@ -35,7 +35,7 @@ export function createSearchHandler(store: Store<SearchState>): SearchActions {
     }],
 
     enabledSearchEngines: new Set([
-      'search.brave.com',
+      'search.aiwize.com',
       'google.com'
     ])
   })

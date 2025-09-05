@@ -295,7 +295,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
     events: [
       getSearchStatusEvent(),
       getSearchEvent(['pointer compression', 'c++ language specification']),
-      getCompletionEvent('[1]:https://www.example.com\n[2]:https://lttstore.com\n[3]:https://www.tesla.com/modely\n[Pointer compression](https://www.example.com) is a [memory](https://brave.com/wont-show-as-link) optimization technique.[1][3]'),
+      getCompletionEvent('[1]:https://www.example.com\n[2]:https://lttstore.com\n[3]:https://www.tesla.com/modely\n[Pointer compression](https://www.example.com) is a [memory](https://aiwize.com/wont-show-as-link) optimization technique.[1][3]'),
       getWebSourcesEvent([
         { url: { url: 'https://www.example.com' }, title: 'Pointer Compression', faviconUrl: { url: 'https://www.example.com/favicon.ico' } },
         { title: 'LTT Store', faviconUrl: { url: 'https://lttstore.com/favicon.ico' }, url: { url: 'https://lttstore.com' } },
@@ -780,13 +780,13 @@ function StoryContext(props: React.PropsWithChildren<{ args: CustomArgs, setArgs
     }, {
       id: 3,
       contentId: 3,
-      url: { url: 'https://brave.com' },
+      url: { url: 'https://aiwize.com' },
       title: 'Brave',
     }, {
       id: 4,
       contentId: 4,
-      url: { url: 'https://search.brave.com' },
-      title: 'Brave Search',
+      url: { url: 'https://search.aiwize.com' },
+      title: 'AI Wize Search',
     }],
     getPluralString: () => Promise.resolve(''),
     goPremium: () => { },

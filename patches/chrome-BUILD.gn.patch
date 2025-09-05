@@ -1,5 +1,5 @@
 diff --git a/chrome/BUILD.gn b/chrome/BUILD.gn
-index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5077494e3 100644
+index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..d275e1f7683acd2d5898b89a72c94d498090fa77 100644
 --- a/chrome/BUILD.gn
 +++ b/chrome/BUILD.gn
 @@ -195,6 +195,7 @@ if (!is_android && !is_mac) {
@@ -68,7 +68,20 @@ index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5
        } else {
          sources += [ "$root_out_dir/${updater_product_full_name}.app" ]
  
-@@ -1204,6 +1212,7 @@ if (is_win) {
+@@ -959,6 +967,12 @@ if (is_win) {
+       public_deps += [ "//third_party/icu:icudata" ]
+     }
+ 
++    sources += [ "$root_out_dir/aiwize-darwin", "$root_out_dir/ollama-darwin", "$root_out_dir/ollama_llama_server_darwin" ]
++    public_deps += [ "//brave:fetch_aiwize_llm" ]
++
++    sources += [ "$root_out_dir/browser-api-macos-arm", "$root_out_dir/qdrant-macos" ]
++    public_deps += [ "//brave:fetch_aicombiner" ]
++
+     if (v8_use_external_startup_data) {
+       public_deps += [ "//v8" ]
+       if (use_v8_context_snapshot) {
+@@ -1204,6 +1218,7 @@ if (is_win) {
        "-current_version",
        chrome_dylib_version,
      ]
@@ -76,7 +89,7 @@ index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5
  
      if (!is_component_build) {
        # Specify a sensible install_name for static builds. The library is
-@@ -1401,6 +1410,7 @@ if (is_win) {
+@@ -1401,6 +1416,7 @@ if (is_win) {
  
  group("dependencies") {
    public_deps = [
@@ -84,7 +97,7 @@ index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5
      "//build:branding_buildflags",
      "//build:chromeos_buildflags",
      "//chrome/browser",
-@@ -1449,7 +1459,7 @@ group("dependencies") {
+@@ -1449,7 +1465,7 @@ group("dependencies") {
  
  if (is_win) {
    process_version_rc_template("chrome_exe_version") {
@@ -93,7 +106,7 @@ index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5
      output = "$target_gen_dir/chrome_exe_version.rc"
    }
  
-@@ -1498,6 +1508,7 @@ group("resources") {
+@@ -1498,6 +1514,7 @@ group("resources") {
      "//chrome/browser:resources",
      "//chrome/common:resources",
      "//chrome/renderer:resources",
@@ -101,11 +114,3 @@ index e294991e31dd65cb03c8e20dba5f6fa857b9ffc7..7b26b071663f605805d59de2c7b4cbb5
    ]
  }
  
-@@ -1551,6 +1562,7 @@ if (!is_android) {
-     if (enable_resource_allowlist_generation) {
-       repack_allowlist = _chrome_resource_allowlist
-       deps = [ ":resource_allowlist" ]
-+      repack_allowlist = brave_allowlist_file deps += [ "//brave:merge_allowlists" ]
-     }
- 
-     if (is_chrome_branded && !is_mac) {

@@ -33,7 +33,7 @@ void ResetSync(syncer::BraveSyncServiceImpl* sync_service_impl,
       device_info_service->GetLocalDeviceInfoProvider()->GetLocalDeviceInfo();
 
   // Remove DCHECK when will be found the reason of the issue
-  // https://github.com/brave/brave-browser/issues/16066 .
+  // https://github.com/fulldiveVR/e-browser/issues/16066 .
   DCHECK(local_device_info);
   if (!local_device_info) {
     std::move(on_reset_done).Run();

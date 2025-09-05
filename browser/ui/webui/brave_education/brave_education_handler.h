@@ -17,7 +17,7 @@
 #include "mojo/public/cpp/bindings/remote.h"
 #include "ui/webui/mojo_web_ui_controller.h"
 
-// Page handler for brave://getting-started
+// Page handler for aiwize://getting-started
 class BraveEducationHandler : public brave_education::mojom::PageHandler {
  public:
   BraveEducationHandler(

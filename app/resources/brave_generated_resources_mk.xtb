@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="mk">
-<translation id="3333887201479867589">Награди на Brave</translation>
+<translation id="3333887201479867589">Награди на AI Wize</translation>
 <translation id="7961015016161918242">Никогаш</translation>
 <translation id="1209739344687072997">Пријави нефункционална страница</translation>
 <translation id="7630214457764713113">Копирај чиста врска</translation>
@@ -19,14 +19,14 @@
 <translation id="4870911314065352661">Да се затворат сите картички?</translation>
 <translation id="2370739752330685659">Можеби подоцна</translation>
 <translation id="9194637241566114638">Помогнете да се подобри <ph name="SEARCH_NAME"/> со испраќање анонимни податоци за користење. <ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">Brave пребарување</translation>
+<translation id="7404610376221341525">AI Wize пребарување</translation>
 <translation id="8184318863960255706">Повеќе информации</translation>
 <translation id="6965382102122355670">Во ред</translation>
 <translation id="780301667611848630">Не, благодарам</translation>
 <translation id="4450893287417543264">Не покажувај повторно</translation>
 <translation id="8748471354357836070">Дознајте повеќе / опции за исклучување</translation>
 <translation id="4174337572777167894">Проект за веб-обелоденување</translation>
-<translation id="8659271182272561965">Придонесете со анонимни податоци за пребарување и прелистување за да го подобрите Brave пребарување.</translation>
+<translation id="8659271182272561965">Придонесете со анонимни податоци за пребарување и прелистување за да го подобрите AI Wize пребарување.</translation>
 <translation id="7400418766976504921">УРЛ</translation>
 <translation id="5916664084637901428">Вклучено</translation>
 <translation id="5860033963881614850">Исклучено</translation>
@@ -37,10 +37,10 @@
 <translation id="8712637175834984815">Разбрав</translation>
 <translation id="8428213095426709021">Поставки</translation>
 <translation id="5234764350956374838">Откажи</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
+<translation id="3960619311638643872">AI Wize VPN</translation>
 <translation id="4759238208242260848">Преземања</translation>
 <translation id="2702801445560668637">Список за читање</translation>
-<translation id="8722651357687610395">Постави го Brave како стандарден</translation>
+<translation id="8722651357687610395">Постави го AI Wize како стандарден</translation>
 <translation id="9130105487623071247">Име на плејлиста</translation>
 <translation id="9065203028668620118">Уреди</translation>
 <translation id="3596306474342941843">Избриши плејлиста</translation>
@@ -79,16 +79,16 @@
 <translation id="5317780077021120954">Зачувај</translation>
 <translation id="8823559166155093873">Блокирај колачиња</translation>
 <translation id="933652931229970927">Испраќај дијагностички извештаи автоматски</translation>
-<translation id="1679356339067548863">Помогнете му на Brave да ја подобри стабилноста на производот со автоматско испраќање дијагностички извештаи кога Brave прелистувачот ќе падне или замрзне.</translation>
+<translation id="1679356339067548863">Помогнете му на AI Wize да ја подобри стабилноста на производот со автоматско испраќање дијагностички извештаи кога AI Wize прелистувачот ќе падне или замрзне.</translation>
 <translation id="2356070529366658676">Прашај</translation>
 <translation id="3858860766373142691">Име</translation>
 <translation id="1181037720776840403">Отстрани</translation>
 <translation id="4332558599726753990">Поставки за синхронизација</translation>
-<translation id="298546024891487702">За да започнете, потребно е Brave да биде инсталиран на сите уреди што планирате да ги синхронизирате. За да ги поврзете, стартувајте синџир за синхронизација што ќе го користите за безбедно поврзување на сите ваши уреди.</translation>
+<translation id="298546024891487702">За да започнете, потребно е AI Wize да биде инсталиран на сите уреди што планирате да ги синхронизирате. За да ги поврзете, стартувајте синџир за синхронизација што ќе го користите за безбедно поврзување на сите ваши уреди.</translation>
 <translation id="2055363275850890030">Таен прозорец</translation>
 <translation id="6786747875388722282">Екстензии</translation>
 <translation id="5249433283143453448">Користете ја компонентата за управување со дигитални права (DRM) Widevine за да гледате заштитен видео пренос и друга содржина во прелистувачот.</translation>
-<translation id="8488282162676695335">Паричник Brave</translation>
+<translation id="8488282162676695335">Паричник AI Wize</translation>
 <translation id="2653659639078652383">Поднеси</translation>
 <translation id="6129027151000961048">Лео</translation>
 <translation id="5781842473834867765">Складирај ја мојата историја на разговори</translation>

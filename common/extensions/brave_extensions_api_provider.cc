@@ -44,12 +44,12 @@ void BraveExtensionsAPIProvider::AddAPIJSONSources(
 }
 
 bool BraveExtensionsAPIProvider::IsAPISchemaGenerated(const std::string& name) {
-  return api::BraveGeneratedSchemas::IsGenerated(name);
+  return api::AIWizeGeneratedSchemas::IsGenerated(name);
 }
 
 std::string_view BraveExtensionsAPIProvider::GetAPISchema(
     const std::string& name) {
-  return api::BraveGeneratedSchemas::Get(name);
+  return api::AIWizeGeneratedSchemas::Get(name);
 }
 
 void BraveExtensionsAPIProvider::RegisterPermissions(

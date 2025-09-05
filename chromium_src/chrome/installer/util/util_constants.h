@@ -7,7 +7,7 @@
 #define BRAVE_CHROMIUM_SRC_CHROME_INSTALLER_UTIL_UTIL_CONSTANTS_H_
 
 #define kGoogleUpdateIsMachineEnvVar                               \
-  kGoogleUpdateIsMachineEnvVar[] = "BraveSoftwareUpdateIsMachine"; \
+  kGoogleUpdateIsMachineEnvVar[] = "AIWizeSoftwareUpdateIsMachine"; \
   inline constexpr char kGoogleUpdateIsMachineEnvVar_UnUsed
 
 #include "src/chrome/installer/util/util_constants.h"  // IWYU pragma: export

@@ -5,11 +5,11 @@
 
 import '$web-common/strings'
 
-import { BraveNewsStrings } from 'gen/components/grit/brave_components_webui_strings'
+import { AIStrings } from 'gen/components/grit/brave_components_webui_strings'
 
 declare global {
   // Expose the BraveNewsStrings enum on the global `S` enum.
   interface Strings {
-    BraveNewsStrings: typeof BraveNewsStrings
+    BraveNewsStrings: typeof AIStrings
   }
 }

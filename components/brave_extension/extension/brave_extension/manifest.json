@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Brave",
+  "name": "AI Wize",
   "manifest_version": 2,
   "description": "__MSG_appName__",
   "default_locale": "en_US",
@@ -19,6 +19,16 @@
     "persistent": true
   },
   "content_scripts": [
+    {
+      "matches": [
+        "chrome://dashboard/*"
+      ],
+      "js": [
+        "out/dashboard.bundle.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
     {
       "matches": [
         "https://chrome.google.com/webstore/*",

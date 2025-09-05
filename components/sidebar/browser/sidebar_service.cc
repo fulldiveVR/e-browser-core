@@ -22,7 +22,6 @@
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/l10n/common/locale_util.h"
@@ -51,14 +50,7 @@ SidebarItem::BuiltInItemType GetBuiltInItemTypeForLegacyURL(
   // A previous version of prefs used the URL even for built-in items, and not
   // the |SidebarItem::BuiltInItemType|. Therefore, this list should not
   // need to be updated.
-  if (url == "https://together.brave.com/" ||
-      url == "https://talk.brave.com/") {
-    return SidebarItem::BuiltInItemType::kBraveTalk;
-  }
 
-  if (url == "chrome://wallet/") {
-    return SidebarItem::BuiltInItemType::kWallet;
-  }
 
   if (url == "chrome://sidebar-bookmarks.top-chrome/" ||
       url == "chrome://bookmarks/") {
@@ -68,6 +60,12 @@ SidebarItem::BuiltInItemType GetBuiltInItemTypeForLegacyURL(
   if (url == "chrome://history/") {
     return SidebarItem::BuiltInItemType::kHistory;
   }
+
+  if (url == "chrome://applications/")
+    return SidebarItem::BuiltInItemType::kAiWizeApps;
+
+  if (url == "chrome://ai-combiner-panel/")
+    return SidebarItem::BuiltInItemType::kAiCombinerPanel;
 
   NOTREACHED() << url;
 }
@@ -154,10 +152,6 @@ void SidebarService::MigratePrefSidebarBuiltInItemsToHidden() {
   }
   // Only include items that were known prior to this migration
   std::vector<SidebarItem> built_in_items_to_hide;
-  built_in_items_to_hide.push_back(
-      GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBraveTalk));
-  built_in_items_to_hide.push_back(
-      GetBuiltInItemForType(SidebarItem::BuiltInItemType::kWallet));
   built_in_items_to_hide.push_back(
       GetBuiltInItemForType(SidebarItem::BuiltInItemType::kBookmarks));
 
@@ -447,6 +441,8 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
       SidebarItem::BuiltInItemType::kChatUI,
+      SidebarItem::BuiltInItemType::kAiCombinerPanel,
+      SidebarItem::BuiltInItemType::kAiWizeApps,
       SidebarItem::BuiltInItemType::kReadingList,
       SidebarItem::BuiltInItemType::kBookmarks,
       SidebarItem::BuiltInItemType::kPlaylist};
@@ -593,26 +589,19 @@ std::vector<SidebarItem> SidebarService::GetDefaultSidebarItems() const {
 SidebarItem SidebarService::GetBuiltInItemForType(
     SidebarItem::BuiltInItemType type) const {
   switch (type) {
-    case SidebarItem::BuiltInItemType::kBraveTalk:
-      if (!prefs_->GetBoolean(kBraveTalkDisabledByPolicy)) {
-        return SidebarItem::Create(
-            GURL(kBraveTalkURL),
-            l10n_util::GetStringUTF16(IDS_SIDEBAR_BRAVE_TALK_ITEM_TITLE),
-            SidebarItem::Type::kTypeBuiltIn,
-            SidebarItem::BuiltInItemType::kBraveTalk,
-            /* open_in_panel = */ false);
-      }
-      return SidebarItem();
-    case SidebarItem::BuiltInItemType::kWallet: {
-      if (brave_wallet::IsAllowed(prefs_)) {
-        return SidebarItem::Create(
-            GURL("chrome://wallet/"),
-            l10n_util::GetStringUTF16(IDS_SIDEBAR_WALLET_ITEM_TITLE),
-            SidebarItem::Type::kTypeBuiltIn,
-            SidebarItem::BuiltInItemType::kWallet,
-            /* open_in_panel = */ false);
-      }
-      return SidebarItem();
+    case SidebarItem::BuiltInItemType::kAiCombinerPanel: {
+      return SidebarItem::Create(GURL("chrome://ai-combiner-panel"),
+                                 u"AI Combiner Panel",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiCombinerPanel,
+                                 /* open_in_panel = */ true);
+    }
+    case SidebarItem::BuiltInItemType::kAiWizeApps: {
+      return SidebarItem::Create(GURL("chrome://applications"),
+                                 u"AI Wize Applications",
+                                 SidebarItem::Type::kTypeBuiltIn,
+                                 SidebarItem::BuiltInItemType::kAiWizeApps,
+                                 /* open_in_panel = */ false);
     }
     case SidebarItem::BuiltInItemType::kBookmarks:
       return SidebarItem::Create(
@@ -655,14 +644,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
       return SidebarItem();
     }
     case SidebarItem::BuiltInItemType::kChatUI: {
-      if (ai_chat::IsAIChatEnabled(prefs_)) {
-        return SidebarItem::Create(l10n_util::GetStringUTF16(IDS_CHAT_UI_TITLE),
-                                   SidebarItem::Type::kTypeBuiltIn,
-                                   SidebarItem::BuiltInItemType::kChatUI,
-                                   /* open_in_panel = */ true);
-      } else {
-        return SidebarItem();
-      }
+     return SidebarItem();
     }
     case SidebarItem::BuiltInItemType::kNone:
       break;

@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "A Extensão Brave",
+    "message": "A Extens\u00e3o AI Wize",
     "description": "The name of the extension."
   },
   "shields": {
-    "message": "Proteções",
+    "message": "Prote\u00e7\u00f5es",
     "description": "The Shields feature name"
   },
   "up": {
@@ -20,16 +20,16 @@
     "description": "Partial string for the phrase `shields is up *for this site*`"
   },
   "enabledMessage": {
-    "message": "Se um site aparecer quebrado, tente desativar as proteções",
+    "message": "Se um site aparecer quebrado, tente desativar as prote\u00e7\u00f5es",
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Você está navegando neste site sem as proteções de privacidade e segurança do Brave. Ele não funciona corretamente com o Shields?",
+    "message": "Voc\u00ea est\u00e1 navegando neste site sem as prote\u00e7\u00f5es de privacidade e seguran\u00e7a do AI Wize. Ele n\u00e3o funciona corretamente com o Shields?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Relate um site quebrado",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AI Wize developers"
   },
   "itemsBlocked": {
     "message": "Itens bloqueados",
@@ -44,11 +44,11 @@
     "description": "Message for the `and` conjunction. Used to connect grammatically the `item blocked and connection upgrades` and its variant phrases"
   },
   "connectionsUpgraded": {
-    "message": "upgrade das conexões realizado",
+    "message": "upgrade das conex\u00f5es realizado",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and more than one connection upgrade (plural)"
   },
   "connectionUpgraded": {
-    "message": "upgrade da conexão realizado",
+    "message": "upgrade da conex\u00e3o realizado",
     "description": "Message for the main blocked resources text when there is at least one ad/track/script blocked and one connection upgrade (singular)"
   },
   "thirdPartyTrackersBlocked": {
@@ -56,27 +56,27 @@
     "description": "Message for the scripts blocked row label"
   },
   "readOnlyAdsTrackersBlocking": {
-    "message": "Rastreadores e anúncios bloqueados",
+    "message": "Rastreadores e an\u00fancios bloqueados",
     "description": "Message for the option in the ads and trackers blocking select field in read only view"
   },
   "aggressiveAdsTrackersBlocking": {
-    "message": "Rastreadores e anúncios bloqueados (agressivo)",
+    "message": "Rastreadores e an\u00fancios bloqueados (agressivo)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with aggressive heuristics"
   },
   "standardAdsTrackersBlocking": {
-    "message": "Rastreadores e anúncios bloqueados (padrão)",
+    "message": "Rastreadores e an\u00fancios bloqueados (padr\u00e3o)",
     "description": "Message for the option in the ads and trackers blocking select field to block ads and trackers with standard heuristics"
   },
   "allowAdsTrackers": {
-    "message": "Permitir todos os rastreadores e anúncios.",
+    "message": "Permitir todos os rastreadores e an\u00fancios.",
     "description": "Message for the option in the ads and trackers blocking select field to allow all ads and trackers"
   },
   "connectionsUpgradedHTTPS": {
-    "message": "Upgrade das conexões para HTTPS realizado",
+    "message": "Upgrade das conex\u00f5es para HTTPS realizado",
     "description": "Message for the connections upgraded row label and for the main blocked resources text when there is more than one connection upgraded (plural) and no other ads/trackers blocked"
   },
   "connectionUpgradedHTTPS": {
-    "message": "Upgrade da conexão para HTTPS realizado",
+    "message": "Upgrade da conex\u00e3o para HTTPS realizado",
     "description": "Message for the main blocked resources text when there is one connection upgraded (singular) and no other ads/trackers blocked"
   },
   "scriptsBlocked": {
@@ -96,11 +96,11 @@
     "description": "Message for the option in the cookies select field to allow all cookies"
   },
   "readOnlyFingerprinting": {
-    "message": "Impressão digital bloqueada.",
+    "message": "Impress\u00e3o digital bloqueada.",
     "description": "Message for the option in the fingerprinting field in read only view"
   },
   "standardFingerprinting": {
-    "message": "Biometria bloqueada (padrão)",
+    "message": "Biometria bloqueada (padr\u00e3o)",
     "description": "Message for the option in the fingerprinting select field to block all 3rd party recognition attempts"
   },
   "strictFingerprinting": {
@@ -108,11 +108,11 @@
     "description": "Message for the option in the fingerprinting select field to block all fingerprinting attempts"
   },
   "allowAllFingerprinting": {
-    "message": "Permitir todas as impressões digitais",
+    "message": "Permitir todas as impress\u00f5es digitais",
     "description": "Message for the option in the fingerprinting select field to allow all fingerprinting attempts"
   },
   "deviceRecognitionAttempts": {
-    "message": "Tentativas de impressão digital",
+    "message": "Tentativas de impress\u00e3o digital",
     "description": "Message for the fingerprinting attempts blocked panel"
   },
   "scriptsOnThisSite": {
@@ -168,7 +168,7 @@
     "description": "Message for action in dynamic list of resources blocked to *apply once*"
   },
   "changeDefaults": {
-    "message": "Alterar padrões da proteção global",
+    "message": "Alterar padr\u00f5es da prote\u00e7\u00e3o global",
     "description": "Message for the button action linking to the settings page"
   },
   "manageCustomFilters": {
@@ -180,23 +180,23 @@
     "description": "Message for context menu that enables the element picker UI to apply cosmetic filter rules to the page."
   },
   "advancedView": {
-    "message": "Visualização Avançada",
+    "message": "Visualiza\u00e7\u00e3o Avan\u00e7ada",
     "description": "Message for the advanced view option"
   },
   "simpleView": {
-    "message": "Exibição Simples",
+    "message": "Exibi\u00e7\u00e3o Simples",
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Sites geralmente incluem cookies e scripts que tentam identificar você e seu aparelho (geralmente embutidos em anúncios). Eles querem descobrir quem você é e segui-lo pela internet — rastreando o que você faz em todos os sites. O Brave bloqueia essas coisas para que você possa navegar sem ser perseguido.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Sites geralmente incluem cookies e scripts que tentam identificar voc\u00ea e seu aparelho (geralmente embutidos em an\u00fancios). Eles querem descobrir quem voc\u00ea \u00e9 e segui-lo pela internet \u2014 rastreando o que voc\u00ea faz em todos os sites. O AI Wize bloqueia essas coisas para que voc\u00ea possa navegar sem ser perseguido.",
+    "description": "Message in read-only view explaining what AI Wize Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Rastreadores cross-site e outras coisas assustadoras foram bloqueados",
     "description": "Message for the main trackers count in Shields simple view"
   },
   "webCompatWarning": {
-    "message": "Mudar as configurações de Escudo nesta visualização pode afetar a compatibilidade neste site.",
+    "message": "Mudar as configura\u00e7\u00f5es de Escudo nesta visualiza\u00e7\u00e3o pode afetar a compatibilidade neste site.",
     "description": "Message for web compat warning when switching from simple to advanced view"
   },
   "gotIt": {
@@ -208,12 +208,12 @@
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Adicionar ao Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Adicionar ao AI Wize",
+    "description": "Message for adding an extension to AI Wize"
   },
   "removeFromBrave": {
-    "message": "Remover do Brave Software Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Remover do AI Wize Software AI Wize",
+    "description": "Message for removing an extension from AI Wize"
   },
   "addToChrome": {
     "message": "Usar no Chrome",
@@ -222,5 +222,21 @@
   "removeFromChrome": {
     "message": "Remover do Google Chrome",
     "description": "Message for removing an extension from Chrome"
+  },
+  "dashboardDownloadsTitle": {
+    "message": "Downloads",
+    "description": "Downloads Label"
+  },
+  "dashboardSettingsTitle": {
+    "message": "Configura\u00e7\u00f5es",
+    "description": "Settings Label"
+  },
+  "dashboardHistoryTitle": {
+    "message": "Hist\u00f3rico",
+    "description": "History Label"
+  },
+  "dashboardBookmarksTitle": {
+    "message": "Favoritos",
+    "description": "Bookmarks Label"
   }
 }

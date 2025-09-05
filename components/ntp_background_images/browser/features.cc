@@ -13,7 +13,7 @@ BASE_FEATURE(kBraveNTPBrandedWallpaperDemo,
              "BraveNTPBrandedWallpaperDemoName",
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// TODO(https://github.com/brave/brave-browser/issues/44403): Remove super
+// TODO(https://github.com/fulldiveVR/e-browser/issues/44403): Remove super
 // referrals.
 BASE_FEATURE(kBraveNTPSuperReferralWallpaper,
              "BraveNTPSuperReferralWallpaperName",

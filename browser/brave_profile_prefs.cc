@@ -16,9 +16,6 @@
 #include "brave/components/ai_chat/core/browser/model_service.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
-#include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_service.h"
-#include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
 #include "brave/components/brave_news/browser/brave_news_controller.h"
 #include "brave/components/brave_news/browser/brave_news_p3a.h"
 #include "brave/components/brave_news/browser/brave_news_pref_manager.h"
@@ -26,8 +23,6 @@
 #include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_perf_predictor/browser/p3a_bandwidth_savings_tracker.h"
 #include "brave/components/brave_perf_predictor/browser/perf_predictor_tab_helper.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
-#include "brave/components/brave_rewards/core/pref_registry.h"
 #include "brave/components/brave_search/browser/brave_search_default_host.h"
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search_conversion/utils.h"
@@ -36,7 +31,6 @@
 #include "brave/components/brave_shields/core/common/pref_names.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/containers/buildflags/buildflags.h"
@@ -49,8 +43,6 @@
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/components/webcompat_reporter/common/pref_names.h"
 #include "build/build_config.h"
@@ -84,13 +76,7 @@
 #include "brave/browser/gcm_driver/brave_gcm_utils.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_service.h"
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/tor_profile_service.h"
-#endif
 
 #if BUILDFLAG(IS_ANDROID)
 #include "components/feed/core/common/pref_names.h"
@@ -226,7 +212,7 @@ void OverrideDefaultPrefValues(user_prefs::PrefRegistrySyncable* registry) {
                                 base::Value(false));
 
   // Enabled by default after fixing
-  // https://github.com/brave/brave-browser/issues/18017
+  // https://github.com/fulldiveVR/e-browser/issues/18017
   registry->SetDefaultPrefValue(prefs::kEnableMediaRouter, base::Value(true));
 
   // Disable @aimode search keyword
@@ -243,7 +229,6 @@ void RegisterProfilePrefsForMigration(
   // Added 10/2022
   registry->RegisterIntegerPref(kDefaultBrowserLaunchingCount, 0);
 #endif
-  brave_wallet::RegisterProfilePrefsForMigration(registry);
 
   // Restore "Other Bookmarks" migration
   registry->RegisterBooleanPref(kOtherBookmarksMigrated, false);
@@ -279,9 +264,7 @@ void RegisterProfilePrefsForMigration(
 #endif
 
   // Added Feb 2023
-  registry->RegisterBooleanPref(brave_rewards::prefs::kShowButton, true);
 
-  brave_rewards::RegisterProfilePrefsForMigration(registry);
 
   brave_news::p3a::prefs::RegisterProfileNewsMetricsPrefsForMigration(registry);
 
@@ -298,7 +281,6 @@ void RegisterProfilePrefsForMigration(
   brave_sync::Prefs::RegisterProfilePrefsForMigration(registry);
 
   // Added 2023-11
-  brave_ads::RegisterProfilePrefsForMigration(registry);
 
   // Added 2024-04
   ai_chat::prefs::RegisterProfilePrefsForMigration(registry);
@@ -343,7 +325,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // TODO(shong): Migrate this to local state also and guard in ENABLE_WIDEVINE.
   // We don't need to display "don't ask widevine prompt option" in settings
   // if widevine is disabled.
-  // F/u issue: https://github.com/brave/brave-browser/issues/7000
+  // F/u issue: https://github.com/fulldiveVR/e-browser/issues/7000
   registry->RegisterBooleanPref(kAskEnableWidvine, true);
 
   // Default Brave shields
@@ -372,8 +354,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kBraveWaybackMachineDisabledByPolicy, false);
 #endif
 
-  brave_adaptive_captcha::BraveAdaptiveCaptchaService::RegisterProfilePrefs(
-      registry);
 
 #if BUILDFLAG(IS_ANDROID)
   registry->RegisterBooleanPref(kDesktopModeEnabled, false);
@@ -386,14 +366,12 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // Importer: selected data types
   registry->RegisterBooleanPref(kImportDialogExtensions, true);
   registry->RegisterBooleanPref(kImportDialogPayments, true);
+  registry->RegisterBooleanPref(kSplitView2Visible, false);
 
   // New Tab Page
   registry->RegisterBooleanPref(kNewTabPageShowClock, false);
   registry->RegisterStringPref(kNewTabPageClockFormat, "");
   registry->RegisterBooleanPref(kNewTabPageShowStats, true);
-  registry->RegisterBooleanPref(kNewTabPageShowRewards, true);
-  registry->RegisterBooleanPref(kNewTabPageShowBraveTalk, true);
-  registry->RegisterBooleanPref(kBraveTalkDisabledByPolicy, false);
   registry->RegisterBooleanPref(kNewTabPageHideAllWidgets, false);
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -414,7 +392,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 #endif
 
   // Brave Wallet
-  brave_wallet::RegisterProfilePrefs(registry);
 
   // Brave Search
   if (brave_search::IsDefaultAPIEnabled()) {
@@ -443,16 +420,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterDictionaryPref(kWebDiscoveryCTAState);
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  speedreader::SpeedreaderService::RegisterProfilePrefs(registry);
-#endif
 
   de_amp::RegisterProfilePrefs(registry);
   debounce::DebounceService::RegisterProfilePrefs(registry);
 
-#if BUILDFLAG(ENABLE_TOR)
-  tor::TorProfileService::RegisterProfilePrefs(registry);
-#endif
 
 #if !BUILDFLAG(IS_ANDROID)
   BraveOmniboxClientImpl::RegisterProfilePrefs(registry);
@@ -488,8 +459,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   bookmarks::prefs::RegisterProfilePrefs(registry);
 #endif
 
-  brave_ads::RegisterProfilePrefs(registry);
-  brave_rewards::RegisterProfilePrefs(registry);
 
   webcompat_reporter::prefs::RegisterProfilePrefs(registry);
 
