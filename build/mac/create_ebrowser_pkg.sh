@@ -1,5 +1,6 @@
 HOME_PATH="/Users/managerdark"
 APP_NAME="AI Wize Browser"
+APP_VERSION="1.82.2"
 SIGNATURE="Developer ID Installer: FullDive Corp. (7B7J6CN346)"
 KEYCHAIN="$HOME_PATH/Library/Keychains/login.keychain-db"
 BUILD_PATH="/Users/managerdark/brave-browser/src/out/Release_arm64"
@@ -8,7 +9,7 @@ UNSIGNED_PATH="$DIST_PATH/unsigned"
 APP_PATH="$DIST_PATH/$APP_NAME.app"
 PKG_PATH="$DIST_PATH/$APP_NAME.pkg"
 PKG_ROOT="/Users/managerdark/brave-browser/src/brave/build/mac/pkg_root"
-DST_ZIP_PATH="$DIST_PATH/aiwize_installer.zip"
+DST_ZIP_PATH="$DIST_PATH/aiwize_installer-v${APP_VERSION}.zip"
 
 if [ -d "$UNSIGNED_PATH" ]; then 
     rm -Rf "$UNSIGNED_PATH";
